@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheda di Allenamento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    .global-info {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .global-info label {
+      display: block;
+      margin-top: 5px;
+    }
+    #timerDisplay {
+      font-size: 18px;
+      margin-top: 5px;
+      text-align: center;
+    }
+    h1, h2, h3 {
+      text-align: center;
+    }
+    .exercise-block {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .exercise-block input[type="number"],
+    .exercise-block input[type="text"] {
+      width: 100px;
+      padding: 5px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .exercise-block button {
+      padding: 5px 10px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .exercise-block button:hover {
+      background-color: #0056b3;
+    }
+    .image-box {
+      margin-top: 15px;
+      text-align: center;
+    }
+    .image-box img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: none;
+    }
+    .descrizione-box {
+      margin-top: 10px;
+    }
+    .descrizione-box textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    .session-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .session-table th, .session-table td {
+      border: 1px solid #ccc;
+      padding: 5px;
+      text-align: center;
+    }
+    .session-table select,
+    .session-table input[type="text"],
+    .session-table input[type="checkbox"] {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    /* Tabella descrizioni manuale */
+    table#descrizioniTable {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+    }
+    #descrizioniTable, #descrizioniTable th, #descrizioniTable td {
+      border: 1px solid #ccc;
+    }
+    #descrizioniTable th, #descrizioniTable td {
+      padding: 8px;
+      text-align: left;
+    }
+    #descrizioniTable th {
+      background: #eaeaea;
+    }
+  </style>
+</head>
+<body>
+  <!-- Box globale per informazioni e timer -->
+  <div class="global-info">
+    <label>Data Allenamento:
+      <input type="date" id="workoutDate" onchange="saveField(this)">
+    </label>
+    <label>Tipo Allenamento:
+      <input type="text" id="workoutType" placeholder="Tipo allenamento" onchange="saveField(this)">
+    </label>
+    <label>Timer (secondi):
+      <input type="number" id="timerInput" placeholder="Secondi" style="width:80px;" onchange="saveField(this)">
+    </label>
+    <button onclick="startTimer()">Start Timer</button>
+    <div id="timerDisplay">00:00</div>
+  </div>
+  
+  <div class="container">
+    <h1>Scheda di allenamento</h1>
+    
+    <!-- Esercizio 1 -->
+    <div class="exercise-block" id="esercizio1">
+      <h3>Esercizio 1</h3>
+      <input type="number" id="numeroInput1" min="1" max="200" placeholder="Numero" onchange="saveField(this)">
+      <button onclick="caricaEsercizio(1)">Carica esercizio</button>
+      <div class="image-box">
+        <img id="immagineEsercizio1" src="" alt="Esercizio 1">
+      </div>
+      <div class="descrizione-box">
+        <textarea id="descrizione1" rows="2" placeholder="Descrizione" readonly></textarea>
+      </div>
+    <!-- Tabella Sessioni per Esercizio 1: 6 righe -->
+      <table class="session-table">
+        <thead>
+          <tr>
+            <th>Eseguiti</th>
+            <th>Ripetizioni</th>
+            <th>Peso</th>
+            <th>Min</th>
+            <th>Sec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Riga 1 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row1_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 2 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row2_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 3 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row3_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 4 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row4_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 5 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row5_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 6 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row6_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_sec" onchange="saveField(this)"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Esercizio 2 -->
+    <div class="exercise-block" id="esercizio2">
+      <h3>Esercizio 2</h3>
+      <input type="number" id="numeroInput2" min="1" max="200" placeholder="Numero" onchange="saveField(this)">
+      <button onclick="caricaEsercizio(2)">Carica esercizio</button>
+      <div class="image-box">
+        <img id="immagineEsercizio2" src="" alt="Esercizio 2">
+      </div>
+      <div class="descrizione-box">
+        <textarea id="descrizione2" rows="2" placeholder="Descrizione" readonly></textarea>
+      </div>
+      <!-- Tabella Sessioni per Esercizio 2 (ripeti struttura identica a ex1, sostituendo ex2_...) -->
+    <table class="session-table">
+        <thead>
+          <tr>
+            <th>Eseguiti</th>
+            <th>Ripetizioni</th>
+            <th>Peso</th>
+            <th>Min</th>
+            <th>Sec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Riga 1 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row1_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 2 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row2_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 3 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row3_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 4 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row4_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 5 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row5_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 6 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row6_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_sec" onchange="saveField(this)"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Esercizio 3 -->
+    <div class="exercise-block" id="esercizio3">
+      <h3>Esercizio 3</h3>
+      <input type="number" id="numeroInput3" min="1" max="200" placeholder="Numero" onchange="saveField(this)">
+      <button onclick="caricaEsercizio(3)">Carica esercizio</button>
+      <div class="image-box">
+        <img id="immagineEsercizio3" src="" alt="Esercizio 3">
+      </div>
+      <div class="descrizione-box">
+        <textarea id="descrizione3" rows="2" placeholder="Descrizione" readonly></textarea>
+      </div>
+      <!-- Tabella Sessioni per Esercizio 3 -->
+     <table class="session-table">
+        <thead>
+          <tr>
+            <th>Eseguiti</th>
+            <th>Ripetizioni</th>
+            <th>Peso</th>
+            <th>Min</th>
+            <th>Sec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Riga 1 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row1_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 2 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row2_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 3 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row3_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 4 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row4_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 5 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row5_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 6 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row6_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_sec" onchange="saveField(this)"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Esercizio 4 -->
+    <div class="exercise-block" id="esercizio4">
+      <h3>Esercizio 4</h3>
+      <input type="number" id="numeroInput4" min="1" max="200" placeholder="Numero" onchange="saveField(this)">
+      <button onclick="caricaEsercizio(4)">Carica esercizio</button>
+      <div class="image-box">
+        <img id="immagineEsercizio4" src="" alt="Esercizio 4">
+      </div>
+      <div class="descrizione-box">
+        <textarea id="descrizione4" rows="2" placeholder="Descrizione" readonly></textarea>
+      </div>
+      <!-- Tabella Sessioni per Esercizio 4 -->
+     <table class="session-table">
+        <thead>
+          <tr>
+            <th>Eseguiti</th>
+            <th>Ripetizioni</th>
+            <th>Peso</th>
+            <th>Min</th>
+            <th>Sec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Riga 1 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row1_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 2 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row2_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 3 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row3_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 4 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row4_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 5 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row5_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 6 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row6_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_sec" onchange="saveField(this)"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Esercizio 5 -->
+    <div class="exercise-block" id="esercizio5">
+      <h3>Esercizio 5</h3>
+      <input type="number" id="numeroInput5" min="1" max="200" placeholder="Numero" onchange="saveField(this)">
+      <button onclick="caricaEsercizio(5)">Carica esercizio</button>
+      <div class="image-box">
+        <img id="immagineEsercizio5" src="" alt="Esercizio 5">
+      </div>
+      <div class="descrizione-box">
+        <textarea id="descrizione5" rows="2" placeholder="Descrizione" readonly></textarea>
+      </div>
+      <!-- Tabella Sessioni per Esercizio 5 -->
+     <table class="session-table">
+        <thead>
+          <tr>
+            <th>Eseguiti</th>
+            <th>Ripetizioni</th>
+            <th>Peso</th>
+            <th>Min</th>
+            <th>Sec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Riga 1 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row1_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 2 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row2_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 3 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row3_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 4 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row4_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 5 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row5_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 6 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row6_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_sec" onchange="saveField(this)"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Esercizio 6 -->
+    <div class="exercise-block" id="esercizio6">
+      <h3>Esercizio 6</h3>
+      <input type="number" id="numeroInput6" min="1" max="200" placeholder="Numero" onchange="saveField(this)">
+      <button onclick="caricaEsercizio(6)">Carica esercizio</button>
+      <div class="image-box">
+        <img id="immagineEsercizio6" src="" alt="Esercizio 6">
+      </div>
+      <div class="descrizione-box">
+        <textarea id="descrizione6" rows="2" placeholder="Descrizione" readonly></textarea>
+      </div>
+      <!-- Tabella Sessioni per Esercizio 6 -->
+     <table class="session-table">
+        <thead>
+          <tr>
+            <th>Eseguiti</th>
+            <th>Ripetizioni</th>
+            <th>Peso</th>
+            <th>Min</th>
+            <th>Sec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Riga 1 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row1_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row1_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row1_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 2 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row2_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row2_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row2_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 3 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row3_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row3_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row3_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 4 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row4_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row4_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row4_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 5 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row5_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row5_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row5_sec" onchange="saveField(this)"></td>
+          </tr>
+          <!-- Riga 6 -->
+          <tr>
+            <td><input type="checkbox" id="ex1_row6_eseguiti" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_ripetizioni" min="0" max="20" onchange="saveField(this)"></td>
+            <td><input type="number" id="ex1_row6_peso" min="0" max="100" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_min" onchange="saveField(this)"></td>
+            <td><input type="text" id="ex1_row6_sec" onchange="saveField(this)"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Tabella Descrizioni Manuale -->
+    <h2>Tabella Descrizioni</h2>
+    <table id="descrizioniTable">
+      <tr>
+        <th>Numero</th>
+        <th>Descrizione</th>
+      </tr>
+      <!-- Esempi – modifica o aggiungi righe manualmente -->
+      <tr>
+        <td>001</td>
+        <td>Pettorali alla panca</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>Tricipiti alle parallele</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>Schiena alla lat machine</td>
+      </tr>
+      <!-- Aggiungi altre righe fino a 200 secondo necessità -->
+    </table>
+  </div>
+  
+  <script>
+    // Funzione per formattare il numero a 3 cifre (es. 1 ➜ "001")
+    function padNumber(num, size) {
+      let s = num.toString();
+      while(s.length < size) {
+        s = "0" + s;
+      }
+      return s;
+    }
+    
+    // Funzione per cercare la descrizione nella tabella tramite il numero formattato (colonna 0)
+    function getDescrizioneByNumero(numeroFormattato) {
+      var table = document.getElementById("descrizioniTable");
+      // La prima riga è l'intestazione
+      for (var i = 1; i < table.rows.length; i++) {
+        var rowNumero = table.rows[i].cells[0].textContent.trim();
+        if (rowNumero === numeroFormattato) {
+          return table.rows[i].cells[1].textContent.trim();
+        }
+      }
+      return "Descrizione non trovata";
+    }
+    
+    // Funzione per caricare immagine e descrizione per un esercizio
+    function caricaEsercizio(index) {
+      var inputElement = document.getElementById("numeroInput" + index);
+      var numero = parseInt(inputElement.value, 10);
+      
+      if (isNaN(numero) || numero < 1 || numero > 200) {
+        alert("Inserisci un numero valido (1-200) per l'esercizio " + index);
+        return;
+      }
+      
+      var numeroFormattato = padNumber(numero, 3);
+      
+      // Imposta l'immagine dalla cartella "esercizi"
+      var imagePath = "esercizi/" + numeroFormattato + ".jpg";
+      var imgElement = document.getElementById("immagineEsercizio" + index);
+      imgElement.src = imagePath;
+      imgElement.alt = "Esercizio " + numeroFormattato;
+      imgElement.style.display = "block";
+      
+      // Recupera la descrizione dalla tabella basata sul numero formattato
+      var descrizione = getDescrizioneByNumero(numeroFormattato);
+      document.getElementById("descrizione" + index).value = descrizione;
+    }
+    
+    // Funzione per salvare ogni campo in localStorage quando viene modificato
+    function saveField(el) {
+      if(el.type === "checkbox") {
+        localStorage.setItem(el.id, el.checked);
+      } else {
+        localStorage.setItem(el.id, el.value);
+      }
+    }
+    
+    // Funzione per caricare i dati salvati da localStorage
+    function loadFields() {
+      // Global info
+      var globalIds = ["workoutDate", "workoutType", "timerInput"];
+      globalIds.forEach(function(id) {
+        var el = document.getElementById(id);
+        if(el) {
+          var saved = localStorage.getItem(id);
+          if(saved !== null) {
+            if(el.type === "checkbox") {
+              el.checked = (saved === "true");
+            } else {
+              el.value = saved;
+            }
+          }
+        }
+      });
+      
+      // Per ogni esercizio (1-6)
+      for (var i = 1; i <= 6; i++) {
+        var numInput = document.getElementById("numeroInput" + i);
+        if(numInput) {
+          var savedVal = localStorage.getItem(numInput.id);
+          if(savedVal !== null) {
+            numInput.value = savedVal;
+          }
+        }
+        // Carica le sessioni per 6 righe e 5 colonne per ciascun esercizio
+        for (var row = 1; row <= 6; row++) {
+          var fields = ["eseguiti", "ripetizioni", "peso", "min", "sec"];
+          fields.forEach(function(field) {
+            var fid = "ex" + i + "_row" + row + "_" + field;
+            var el = document.getElementById(fid);
+            if(el) {
+              var savedVal = localStorage.getItem(fid);
+              if(savedVal !== null) {
+                if(el.type === "checkbox") {
+                  el.checked = (savedVal === "true");
+                } else {
+                  el.value = savedVal;
+                }
+              }
+            }
+          });
+        }
+      }
+      
+      // Se il numero è già presente, carica anche l'immagine e la descrizione
+      for(var i = 1; i <= 6; i++){
+        var numInput = document.getElementById("numeroInput" + i);
+        if(numInput && numInput.value) {
+          caricaEsercizio(i);
+        }
+      }
+      
+      // Timer: se esiste il timerTarget in localStorage, avvia il conto alla rovescia
+      if(localStorage.getItem("timerTarget")) {
+        startTimer(true);
+      }
+    }
+    
+    // Timer
+    var timerInterval = null;
+    
+    function startTimer(resume) {
+      if(!resume) {
+        var seconds = parseInt(document.getElementById("timerInput").value, 10);
+        if(isNaN(seconds) || seconds <= 0) {
+          alert("Inserisci un numero valido di secondi per il timer.");
+          return;
+        }
+        var targetTime = new Date().getTime() + seconds * 1000;
+        localStorage.setItem("timerTarget", targetTime);
+      }
+      
+      if(timerInterval) {
+        clearInterval(timerInterval);
+      }
+      
+      timerInterval = setInterval(function(){
+        var target = parseInt(localStorage.getItem("timerTarget"), 10);
+        var now = new Date().getTime();
+        var diff = target - now;
+        if(diff <= 0) {
+          clearInterval(timerInterval);
+          localStorage.removeItem("timerTarget");
+          document.getElementById("timerDisplay").textContent = "00:00";
+        } else {
+          var minutes = Math.floor(diff / (60 * 1000));
+          var seconds = Math.floor((diff % (60 * 1000)) / 1000);
+          document.getElementById("timerDisplay").textContent = 
+            (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+        }
+      }, 1000);
+    }
+    
+    window.onload = function() {
+      loadFields();
+    }
+  </script>
+</body>
+</html>
+
