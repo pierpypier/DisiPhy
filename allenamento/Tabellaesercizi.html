@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabella Esercizi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    .global-info {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .global-info label {
+      display: block;
+      margin-top: 5px;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    /* Tabella descrizioni manuale */
+    table#descrizioniTable {
+      width: 90%;
+      border-collapse: collapse;
+      margin-top: 40px;
+    }
+    #descrizioniTable, #descrizioniTable th, #descrizioniTable td {
+      border: 1px solid #ccc;
+    }
+    #descrizioniTable th, #descrizioniTable td {
+      padding: 8px;
+      text-align: left;
+    }
+    #descrizioniTable th {
+      background: #eaeaea;
+    }
+  </style>
+
+</head>
+<body>
+    
+    <!-- Tabella Descrizioni Manuale -->
+<H2>Tabella Descrizione Esercizi</H2>
+    <table id="descrizioniTable">
+
+      <tr>
+        <th>Numero</th>
+        <th>Esercizio</th>
+        <th>Descrizione</th>
+      </tr>
+      <!-- Esempi – modifica o aggiungi righe manualmente -->
+      <tr>
+        <td>001</td>
+        <th><img src="anteprime/t001.jpg"></th>
+        <td>ADDOME - Plank Classico</td>
+      </tr>
+
+      <tr>
+        <td>002</td>
+        <th><img src="anteprime/t002.jpg"></th>
+        <td>ADDOME - Leg lift</td>
+      </tr>
+
+      <tr>
+        <td>003</td>
+        <th><img src="anteprime/t003.jpg"></th>
+        <td>ADDOME - Crunch classico</td>
+      </tr>
+      <!-- Aggiungi altre righe fino a 200 secondo necessità -->
+
+      <tr>
+        <td>004</td>
+        <th><img src="anteprime/t004.jpg"></th>
+        <td>ADDOME - Leg lift alle parallele</td>
+      </tr>
+
+      <tr>
+        <td>005</td>
+        <th><img src="anteprime/t005.jpg"></th>
+        <td>TRICIPITI - Parallele</td>
+      </tr>
+
+      <tr>
+        <td>006</td>
+        <th><img src="anteprime/t006.jpg"></th>
+        <td>TRICIPITI - French press con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>007</td>
+        <th><img src="anteprime/t007.jpg"></th>
+        <td>TRICIPITI - French press con manubri</td>
+      </tr>
+
+      <tr>
+        <td>008</td>
+        <th><img src="anteprime/t008.jpg"></th>
+        <td>TRICIPITI - Pull Up con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>009</td>
+        <th><img src="anteprime/t009.jpg"></th>
+        <td>TRICIPITI - Pull Up con manubri</td>
+      </tr>
+
+      <tr>
+        <td>010</td>
+        <th><img src="anteprime/t010.jpg"></th>
+        <td>TRICIPITI - Lat Machine</td>
+      </tr>
+
+      <tr>
+        <td>011</td>
+        <th><img src="anteprime/t011.jpg"></th>
+        <td>TRICIPITI - Piegamenti alla panca</td>
+      </tr>
+
+      <tr>
+        <td>012</td>
+        <th><img src="anteprime/t012.jpg"></th>
+        <td>TRICIPITI - Manubri</td>
+      </tr>
+
+      <tr>
+        <td>013</td>
+        <th><img src="anteprime/t013.jpg"></th>
+        <td>TRICIPITI - Manubrio singolo</td>
+      </tr>
+
+      <tr>
+        <td>014</td>
+        <th><img src="anteprime/t014.jpg"></th>
+        <td>TRICIPITI - Manubrio singolo</td>
+      </tr>
+
+      <tr>
+        <td>015</td>
+        <th><img src="anteprime/t015.jpg"></th>
+        <td>TRICIPITI - Parallele</td>
+      </tr>
+
+      <tr>
+        <td>016</td>
+        <th><img src="anteprime/t016.jpg"></th>
+        <td>TRICIPITI - Piegamenti sulle braccia apertura stretta</td>
+      </tr>
+
+      <tr>
+        <td>017</td>        
+        <th><img src="anteprime/t017.jpg"></th>
+        <td>TRICIPITI - Pull Up con Kettelbell</td>
+      </tr>
+
+      <tr>
+        <td>018</td>
+        <th><img src="anteprime/t018.jpg"></th>
+        <td>TRICIPITI - Pull Up con manubri</td>
+      </tr>
+
+      <tr>
+        <td>019</td>
+        <th><img src="anteprime/t019.jpg"></th>
+        <td>SPALLE - Pull Up con manubri</td>
+      </tr>
+
+      <tr>
+        <td>020</td>
+        <th><img src="anteprime/t020.jpg"></th>
+        <td>SPALLE - Alzate laterali con manubri</td>
+      </tr>
+
+      <tr>
+        <td>021</td>
+        <th><img src="anteprime/t021.jpg"></th>
+        <td>SPALLE - Croci con manubri posteriori</td>
+      </tr>
+
+      <tr>
+        <td>022</td>
+        <th><img src="anteprime/t022.jpg"></th>
+        <td>SPALLE - Alzate al mento con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>023</td>
+        <th><img src="anteprime/t023.jpg"></th>
+        <td>SPALLE - Alzate al mento con manubri</td>
+      </tr>
+
+      <tr>
+        <td>024</td>        
+        <th><img src="anteprime/t024.jpg"></th>
+        <td>SPALLE - Arnold press con manubri</td>
+      </tr>
+
+      <tr>
+        <td>025</td>
+        <th><img src="anteprime/t025.jpg"></th>
+        <td>SPALLE - Arnold press con manubri</td>
+      </tr>
+
+      <tr>
+        <td>026</td>
+        <th><img src="anteprime/t026.jpg"></th>
+        <td>SPALLE - Alzate frontali con manubri</td>
+      </tr>
+
+      <tr>
+        <td>027</td>
+        <th><img src="anteprime/t027.jpg"></th>
+        <td>SPALLE - Croci posteriori con manubri</td>
+      </tr>
+
+      <tr>
+        <td>028</td>
+        <th><img src="anteprime/t028.jpg"></th>
+        <td>SPALLE - Alzata laterale alternata con manubri</td>
+      </tr>
+
+      <tr>
+        <td>029</td>
+        <th><img src="anteprime/t029.jpg"></th>
+        <td>PETTORALI - Alzate dal basso con manubrio (o cavi)</td>
+      </tr>
+
+      <tr>
+        <td>030</td>
+        <th><img src="anteprime/t030.jpg"></th>
+        <td>PETTORALI - Pull Over con manubrio</td>
+      </tr>
+
+      <tr>
+        <td>031</td>
+        <th><img src="anteprime/t031.jpg"></th>
+        <td>PETTORALI - Pull Over</td>
+      </tr>
+
+      <tr>
+        <td>032</td>
+        <th><img src="anteprime/t032.jpg"></th>
+        <td>PETTORALI - Piegamenti sulle braccia</td>
+      </tr>
+
+      <tr>
+        <td>033</td>
+        <th><img src="anteprime/t033.jpg"></th>
+        <td>PETTORALI - Croci su panca con manubri</td>
+      </tr>
+
+      <tr>
+        <td>034</td>
+        <th><img src="anteprime/t034.jpg"></th>
+        <td>PETTORALI - Pull Up su panca con manubri</td>
+      </tr>
+
+      <tr>
+        <td>035</td>
+        <th><img src="anteprime/t035.jpg"></th>
+        <td>GAMBE - Squat con kettelbell</td>
+      </tr>
+
+      <tr>
+        <td>036</td>
+        <th><img src="anteprime/t036.jpg"></th>
+        <td>GAMBE - Sumo squat con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>037</td>
+        <th><img src="anteprime/t037.jpg"></th>
+        <td>GAMBE - Piegamenti con manubri</td>
+      </tr>
+
+      <tr>
+        <td>038</td>
+        <th><img src="anteprime/t038.jpg"></th>
+        <td>GAMBE - Affondi con manubri</td>
+      </tr>
+
+      <tr>
+        <td>039</td>
+        <th><img src="anteprime/t039.jpg"></th>
+        <td>GAMBE - Step Up con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>040</td>
+        <th><img src="anteprime/t040.jpg"></th>
+        <td>GAMBE - Sumo squat con Kettelbell</td>
+      </tr>
+
+      <tr>
+        <td>041</td>
+        <th><img src="anteprime/t041.jpg"></th>
+        <td>GAMBE - Sumo squat con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>042</td>
+        <th><img src="anteprime/t042.jpg"></th>
+        <td>GAMBE - Sumo squat con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>043</td>
+        <th><img src="anteprime/t043.jpg"></th>
+        <td>GAMBE - Piegamenti su panca</td>
+      </tr>
+
+      <tr>
+        <td>044</td>
+        <th><img src="anteprime/t044.jpg"></th>
+        <td>GAMBE - Piegamenti con manubri</td>
+      </tr>
+
+      <tr>
+        <td>045</td>
+        <th><img src="anteprime/t045.jpg"></th>
+        <td>GLUTEI - Stacchi con kettelbell o manubri</td>
+      </tr>
+
+      <tr>
+        <td>046</td>
+        <th><img src="anteprime/t046.jpg"></th>
+        <td>GAMBE - Squat corpo libero</td>
+      </tr>
+
+      <tr>
+        <td>047</td>
+        <th><img src="anteprime/t047.jpg"></th>
+        <td>GAMBE - Stacchi con manubri</td>
+      </tr>
+
+      <tr>
+        <td>048</td>
+        <th><img src="anteprime/t048.jpg"></th>
+        <td>GAMBE - Polpacci con manubrio</td>
+      </tr>
+
+      <tr>
+        <td>049</td>
+        <th><img src="anteprime/t049.jpg"></th>
+        <td>GAMBE - Sumo squat con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>050</td>
+        <th><img src="anteprime/t050.jpg"></th>
+        <td>GAMBE - Squat con manubrio</td>
+      </tr>
+
+      <tr>
+        <td>051</td>
+        <th><img src="anteprime/t051.jpg"></th>
+        <td>GAMBE - Squat con kettelbell</td>
+      </tr>
+
+      <tr>
+        <td>052</td>
+        <th><img src="anteprime/t052.jpg"></th>
+        <td>GAMBE - Sumo Squat con kettelbell</td>
+      </tr>
+
+      <tr>
+        <td>053</td>
+        <th><img src="anteprime/t053.jpg"></th>
+        <td>GAMBE - Squat con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>054</td>
+        <th><img src="anteprime/t054.jpg"></th>
+        <td>GAMBE - Sumo Squat rislzato con manubrio</td>
+      </tr>
+
+      <tr>
+        <td>055</td>
+        <th><img src="anteprime/t055.jpg"></th>
+        <td>GAMBE - Squat con manubrio</td>
+      </tr>
+
+      <tr>
+        <td>056</td>
+        <th><img src="anteprime/t056.jpg"></th>
+        <td>GAMBE - Squat con manubrio</td>
+      </tr>
+
+      <tr>
+        <td>057</td>
+        <th><img src="anteprime/t057.jpg"></th>
+        <td>GAMBE - Squat con manubri</td>
+      </tr>
+
+      <tr>
+        <td>058</td>
+        <th><img src="anteprime/t058.jpg"></th>
+        <td>GAMBE - Squat con manubrio</td>
+      </tr>
+
+      <tr>
+        <td>059</td>
+        <th><img src="anteprime/t059.jpg"></th>
+        <td>GAMBE - Squat con manubrio</td>
+      </tr>
+
+      <tr>
+        <td>060</td>
+        <th><img src="anteprime/t060.jpg"></th>
+        <td>GAMBE - Squat con manubri</td>
+      </tr>
+
+      <tr>
+        <td>061</td>
+        <th><img src="anteprime/t061.jpg"></th>
+        <td>GAMBE - Squat con manubrio</td>
+      </tr>
+
+      <tr>
+        <td>062</td>
+        <th><img src="anteprime/t062.jpg"></th>
+        <td>GAMBE - Squat con manubri</td>
+      </tr>
+
+    <tr>
+        <td>092</td>
+        <th><img src="anteprime/t092.jpg"></th>
+        <td>GAMBE - Interno coscia con molla</td>
+      </tr>
+
+      <tr>
+        <td>063</td>
+        <th><img src="anteprime/t063.jpg"></th>
+        <td>DORSO - Rematore con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>064</td>
+        <th><img src="anteprime/t064.jpg"></th>
+        <td>DORSO - Rematore con manubri</td>
+      </tr>
+
+      <tr>
+        <td>065</td>
+        <th><img src="anteprime/t065.jpg"></th>
+        <td>DORSO - Trazioni Sbarra presa frontale</td>
+      </tr>
+
+      <tr>
+        <td>066</td>
+        <th><img src="anteprime/t066.jpg"></th>
+        <td>DORSO - Trazioni Sbarra presa frontale</td>
+      </tr>
+
+      <tr>
+        <td>067</td>
+        <th><img src="anteprime/t067.jpg"></th>
+        <td>DORSO - Rematore con manubri</td>
+      </tr>
+
+      <tr>
+        <td>068</td>
+        <th><img src="anteprime/t068.jpg"></th>
+        <td>DORSO - Trazioni alle parallele</td>
+      </tr>
+
+      <tr>
+        <td>069</td>
+        <th><img src="anteprime/t069.jpg"></th>
+        <td>DORSO - Trazioni alla sbarra presa stretta retro</td>
+      </tr>
+
+      <tr>
+        <td>070</td>
+        <th><img src="anteprime/t070.jpg"></th>
+        <td>BICIPITI - Curl con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>071</td>
+        <th><img src="anteprime/t071.jpg"></th>
+        <td>BICIPITI - Curl con manubri alternati</td>
+      </tr>
+
+      <tr>
+        <td>072</td>
+        <th><img src="anteprime/t072.jpg"></th>
+        <td>BICIPITI - Curl con manubrio singolo</td>
+      </tr>
+
+      <tr>
+        <td>073</td>
+        <th><img src="anteprime/t073.jpg"></th>
+        <td>BICIPITI - Curl con bilanciere presa larga</td>
+      </tr>
+
+      <tr>
+        <td>074</td>
+        <th><img src="anteprime/t074.jpg"></th>
+        <td>BICIPITI - Curl con manubri</td>
+      </tr>
+
+      <tr>
+        <td>075</td>
+        <th><img src="anteprime/t075.jpg"></th>
+        <td>BICIPITI - Curl manubrio singolo isolato</td>
+      </tr>
+
+      <tr>
+        <td>076</td>
+        <th><img src="anteprime/t076.jpg"></th>
+        <td>BICIPITI - Curl manubri alternati panca 90°</td>
+      </tr>
+
+      <tr>
+        <td>077</td>
+        <th><img src="anteprime/t077.jpg"></th>
+        <td>BICIPITI - Curl con Kettelbell presa doppia</td>
+      </tr>
+
+      <tr>
+        <td>078</td>
+        <th><img src="anteprime/t078.jpg"></th>
+        <td>BICIPITI - Curl con Kettelbell presa singola</td>
+      </tr>
+
+      <tr>
+        <td>079</td>
+        <th><img src="anteprime/t079.jpg"></th>
+        <td>BICIPITI - Curl con elastici</td>
+      </tr>
+
+      <tr>
+        <td>080</td>
+        <th><img src="anteprime/t080.jpg"></th>
+        <td>BICIPITI - Curl con manubri panca 45°</td>
+      </tr>
+
+      <tr>
+        <td>081</td>
+        <th><img src="anteprime/t081.jpg"></th>
+        <td>Combinato: BICIPITI - DORSO curl + rematore con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>082</td>
+        <th><img src="anteprime/t082.jpg"></th>
+        <td>Combinato: SPALLE - GAMBE Pull up + Squat con manubri</td>
+      </tr>
+
+      <tr>
+        <td>083</td>
+        <th><img src="anteprime/t083.jpg"></th>
+        <td>Combinato: BICIPITI - TRICIPITI Con manubri</td>
+      </tr>
+
+      <tr>
+        <td>084</td>
+        <th><img src="anteprime/t084.jpg"></th>
+        <td>Combinato: PALLE - GAMBE Alzate al mento + piegamenti con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>085</td>
+        <th><img src="anteprime/t085.jpg"></th>
+        <td>Combinato: BICIPITI - GAMBE Curl + Piegamenti con manubri</td>
+      </tr>
+
+      <tr>
+        <td>086</td>
+        <th><img src="anteprime/t086.jpg"></th>
+        <td>Combinato: SPALLE - TRICIPITI Alzate laterali + pull up manubri</td>
+      </tr>
+
+      <tr>
+        <td>087</td>
+        <th><img src="anteprime/t087.jpg"></th>
+        <td>Combinato: SPALLE - TRICIPITI Alzate laterali + french press manubri</td>
+      </tr>
+
+      <tr>
+        <td>088</td>
+        <th><img src="anteprime/t088.jpg"></th>
+        <td>Combinato: ADDOME - PETTORALI Piegamenti + Plank</td>
+      </tr>
+
+      <tr>
+        <td>089</td>
+        <th><img src="anteprime/t089.jpg"></th>
+        <td>Combinato: SPALLE - DORSALI pull up + rematore con manubri</td>
+      </tr>
+
+      <tr>
+        <td>090</td>
+        <th><img src="anteprime/t090.jpg"></th>
+        <td>Combinato: BICIPITI - GAMBE Curl + squat con bilanciere</td>
+      </tr>
+
+      <tr>
+        <td>091</td>
+        <th><img src="anteprime/t091.jpg"></th>
+        <td>Combinato: SPALLE - DORSALI Alzate al mento+ rematore con bilanciere</td>
+      </tr>
+
+
+    </table>
+  </div>
+  
+  
+</body>
+</html>
+
+
