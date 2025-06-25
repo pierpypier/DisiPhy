@@ -100,14 +100,13 @@ background: #000;
 <body>
   <img id="slide" src="img/slide1.jpg" alt="Slide 1">
 
-  <div id="nav">
-    <button id="prev">Indietro</button>
-    <button id="next">Avanti</button>
-  </div>
   <!-- Bottoni di navigazione -->
   <div class="nav-buttons">
-    <button onclick="location.href='tessere3.html'">Tessere 3</button>
-    <button onclick="location.href='tessere4.html'">Tessere 4</button>
+    <button id="prev">Indietro</button>
+    <button id="centerTiles">Reset</button>
+    <button id="next">Avanti</button>
+    <button onclick="location.href='tessere3.html'">2</button>
+    <button onclick="location.href='tessere4.html'">3</button>
   </div>
 
   <!-- Tessera 001 -->
@@ -119,15 +118,15 @@ background: #000;
   </div>
 
   <!-- Tessera 002 -->
-  <div class="draggable" id="tile002" data-id="002" style="top:50px; left:50px;">
-    <img src="tessere/002.gif" draggable="false" alt="002">
+  <div class="draggable" id="tile002" data-id="002" style="resize: both; overflow: auto; top:50px; left:50px;">
+    <img src="tessere/002.jpg" draggable="false" alt="002">
     <div class="caption">
       <textarea placeholder=""></textarea>
     </div>
   </div>
 
   <!-- Tessera 003 -->
-  <div class="draggable" id="tile003" data-id="003" style="top:50px; left:50px;">
+  <div class="draggable" id="tile003" data-id="003" style="resize: both; overflow: auto; top:50px; left:50px;">
     <img src="tessere/003.gif" draggable="false" alt="003">
     <div class="caption">
       <textarea placeholder=""></textarea>
@@ -135,9 +134,31 @@ background: #000;
   </div>
  
   <!-- Tessera 004 -->
-  <div class="draggable" id="tile004" data-id="004" style="top:50px; left:50px;">
+  <div class="draggable" id="tile004" data-id="004" style="resize: both; overflow: auto; top:50px; left:50px;">
     <img src="tessere/004.jpg" draggable="false" alt="004">
     <div class="caption">
+      <textarea placeholder=""></textarea>
+    </div>
+  </div>
+
+  <!-- Tessera 005 -->
+  <div class="draggable" id="tile005" data-id="005" style="resize: both; overflow: auto; top:50px; left:50px;">
+       <div class="caption">
+      <textarea placeholder=""></textarea>
+    </div>
+  </div>
+
+  <!-- Tessera 006 -->
+  <div class="draggable" id="tile006" data-id="006" style="resize: both; overflow: auto; top:50px; left:50px;">
+    <img src="tessere/006.gif" draggable="false" alt="006">
+   <div class="caption">
+      <textarea placeholder=""></textarea>
+    </div>
+  </div>
+
+  <!-- Tessera 008 -->
+  <div class="draggable" id="tile008" data-id="008" style="resize: both; overflow: auto; top:50px; left:50px;">
+       <div class="caption">
       <textarea placeholder=""></textarea>
     </div>
   </div>
@@ -235,6 +256,34 @@ background: #000;
     })();
   </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 1) Seleziono tutte le tessere in base alla tua classe
+  const tiles     = document.querySelectorAll('.draggable');
+  const centerBtn = document.getElementById('centerTiles');
+
+  // 2) Funzione per centrare tutte le tessere
+  function centerAllTiles() {
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    tiles.forEach(tile => {
+      // Forzo position absolute (se non già)
+      tile.style.position = 'absolute';
+
+      // Dimensioni attuali
+      const { width, height } = tile.getBoundingClientRect();
+
+      // Calcolo i nuovi left/top perché siano al centro
+      tile.style.left = `${(vw - width) / 2}px`;
+      tile.style.top  = `${(vh - height) / 2}px`;
+    });
+  }
+
+  // 3) Associo il click al bottone
+  centerBtn.addEventListener('click', centerAllTiles);
+});
+</script>
 
 </body>
 </html>
