@@ -71,6 +71,17 @@ background: #000;
       touch-action: none;
       width: 120px;
       text-align: center;
+
+  resize: both;
+  overflow: hidden;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE10+ */
+}
+.draggable::-webkit-scrollbar {
+  display: none;               /* Chrome/Safari */
+}
+
+
     }
     .draggable:active { cursor: grabbing; }
     .draggable img {
@@ -110,7 +121,7 @@ background: #000;
   </div>
 
   <!-- Tessera 001 -->
-  <div class="draggable" id="tile001" data-id="001" style="resize: both; overflow: auto; top:50px; left:50px;">
+  <div class="draggable" id="tile001" data-id="001" style="top:50px; left:50px;">
     <img src="tessere/001.gif" draggable="false" alt="001">
     <div class="caption">
       <textarea placeholder=""></textarea>
@@ -118,7 +129,7 @@ background: #000;
   </div>
 
   <!-- Tessera 002 -->
-  <div class="draggable" id="tile002" data-id="002" style="resize: both; overflow: auto; top:50px; left:50px;">
+  <div class="draggable" id="tile002" data-id="002" style="top:50px; left:50px;">
     <img src="tessere/002.jpg" draggable="false" alt="002">
     <div class="caption">
       <textarea placeholder=""></textarea>
@@ -126,7 +137,7 @@ background: #000;
   </div>
 
   <!-- Tessera 003 -->
-  <div class="draggable" id="tile003" data-id="003" style="resize: both; overflow: auto; top:50px; left:50px;">
+  <div class="draggable" id="tile003" data-id="003" style="top:50px; left:50px;">
     <img src="tessere/003.gif" draggable="false" alt="003">
     <div class="caption">
       <textarea placeholder=""></textarea>
@@ -134,7 +145,7 @@ background: #000;
   </div>
  
   <!-- Tessera 004 -->
-  <div class="draggable" id="tile004" data-id="004" style="resize: both; overflow: auto; top:50px; left:50px;">
+  <div class="draggable" id="tile004" data-id="004" style="top:50px; left:50px;">
     <img src="tessere/004.jpg" draggable="false" alt="004">
     <div class="caption">
       <textarea placeholder=""></textarea>
@@ -142,14 +153,14 @@ background: #000;
   </div>
 
   <!-- Tessera 005 -->
-  <div class="draggable" id="tile005" data-id="005" style="resize: both; overflow: auto; top:50px; left:50px;">
+  <div class="draggable" id="tile005" data-id="005" style="top:50px; left:50px;">
        <div class="caption">
       <textarea placeholder=""></textarea>
     </div>
   </div>
 
   <!-- Tessera 006 -->
-  <div class="draggable" id="tile006" data-id="006" style="resize: both; overflow: auto; top:50px; left:50px;">
+  <div class="draggable" id="tile006" data-id="006" style="top:50px; left:50px;">
     <img src="tessere/006.gif" draggable="false" alt="006">
    <div class="caption">
       <textarea placeholder=""></textarea>
@@ -157,7 +168,7 @@ background: #000;
   </div>
 
   <!-- Tessera 008 -->
-  <div class="draggable" id="tile008" data-id="008" style="resize: both; overflow: auto; top:50px; left:50px;">
+  <div class="draggable" id="tile008" data-id="008" style="top:50px; left:50px;">
        <div class="caption">
       <textarea placeholder=""></textarea>
     </div>
