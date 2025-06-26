@@ -192,6 +192,10 @@ background: #000;
         if (x !== null && y !== null) {
           el.style.left = x + "px";
           el.style.top  = y + "px";
+const w = localStorage.getItem("width_" + id);
+const h = localStorage.getItem("height_" + id);
+if (w) el.style.width  = w;
+if (h) el.style.height = h;
         }
 
         // Ripristina testo
@@ -226,6 +230,9 @@ background: #000;
           el.releasePointerCapture(e.pointerId);
           localStorage.setItem("posX_" + id, parseInt(el.style.left));
           localStorage.setItem("posY_" + id, parseInt(el.style.top));
+  const style = window.getComputedStyle(el);
+  localStorage.setItem("width_"  + id, style.width);
+  localStorage.setItem("height_" + id, style.height);
         });
         el.addEventListener("pointercancel", e => {
           dragging = false;
