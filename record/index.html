@@ -1,1 +1,348 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Record attività</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f4f4f4;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:10px;
+}
+
+h1{
+    text-align:center;
+}
+
+/* TIMER */
+
+.timer-box{
+    text-align:center;
+    margin:20px 0;
+}
+
+.timer-input{
+    font-size:20px;
+    width:120px;
+    padding:6px;
+    text-align:center;
+}
+
+.start-btn{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:green;
+    color:white;
+    font-size:18px;
+    border:none;
+    margin-left:10px;
+    cursor:pointer;
+}
+
+.start-btn:active{
+    transform:scale(0.95);
+}
+
+/* IMAGE */
+
+.record-image{
+    width:100%;
+    max-height:250px;
+    object-fit:cover;
+    border:3px solid #ccc;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    margin-bottom:15px;
+}
+
+.image-select{
+    width:100%;
+    padding:8px;
+    margin-bottom:10px;
+}
+
+/* RECORD */
+
+.record{
+    background:white;
+    padding:10px;
+    border-radius:8px;
+}
+
+.record.completed{
+    background:#d4edda;
+    border-left:6px solid green;
+    transition:0.3s;
+}
+
+.separator{
+    height:2px;
+    background:#ccc;
+    margin:10px 0;
+}
+
+textarea{
+    width:100%;
+    min-height:60px;
+    resize:vertical;
+    padding:5px;
+}
+
+.row{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:5px;
+}
+
+.status{
+    font-weight:bold;
+    margin-top:5px;
+}
+
+#timerDisplay{
+    margin-top:10px;
+    font-size:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.start-btn{
+    width:70px;
+    height:70px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>record attività</h1>
+
+<div class="timer-box">
+
+<input type="number" id="timerSeconds" class="timer-input" placeholder="secondi">
+
+<button class="start-btn" onclick="startTimer()">Start</button>
+
+<div id="timerDisplay"></div>
+
+</div>
+
+<select id="imageSelect" class="image-select"></select>
+
+<img id="mainImage" class="record-image" src="rimage/r001.jpg">
+
+<div id="records"></div>
+
+</div>
+
+<audio id="alarm" src="rsound/rdri.mp3"></audio>
+
+<script>
+
+/* TIMER */
+
+let timerInterval;
+
+function startTimer(){
+
+    let seconds = parseInt(document.getElementById("timerSeconds").value);
+    if(!seconds) return;
+
+    localStorage.setItem("timerSeconds", seconds);
+
+    let display = document.getElementById("timerDisplay");
+
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(()=>{
+
+        seconds--;
+        display.innerText = seconds + " sec";
+
+        if(seconds <= 0){
+            clearInterval(timerInterval);
+            display.innerText = "Tempo finito";
+            document.getElementById("alarm").play();
+        }
+
+    },1000);
+}
+
+/* IMAGE MENU */
+
+let select = document.getElementById("imageSelect");
+
+for(let i=1;i<=100;i++){
+
+    let num = i.toString().padStart(3,'0');
+
+    let option = document.createElement("option");
+    option.value = "rimage/r"+num+".jpg";
+    option.text = "r"+num;
+
+    select.appendChild(option);
+}
+
+select.onchange = function(){
+
+    document.getElementById("mainImage").src = this.value;
+    localStorage.setItem("selectedImage", this.value);
+}
+
+/* RECORD CREATION */
+
+let container = document.getElementById("records");
+
+for(let i=1;i<=30;i++){
+
+    let div = document.createElement("div");
+    div.className = "record";
+
+    div.innerHTML = `
+
+        <input type="checkbox" id="flag${i}"> completato
+
+        <textarea id="desc${i}" placeholder="descrizione attività"></textarea>
+
+        <div class="row">
+
+            <input type="date" id="date${i}">
+            <span id="day${i}"></span>
+            <input type="time" id="time${i}">
+
+        </div>
+
+        <div class="status" id="status${i}">da eseguire</div>
+
+    `;
+
+    container.appendChild(div);
+
+    let sep = document.createElement("div");
+    sep.className = "separator";
+    container.appendChild(sep);
+}
+
+/* DAY AUTO + FLAG */
+
+for(let i=1;i<=30;i++){
+
+    let dateField = document.getElementById("date"+i);
+    let flagField = document.getElementById("flag"+i);
+
+    dateField.onchange = function(){
+
+        let d = new Date(this.value);
+
+        let days = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
+
+        document.getElementById("day"+i).innerText = days[d.getDay()];
+
+        saveData();
+    }
+
+    flagField.onchange = function(){
+
+        let record = this.closest(".record");
+
+        if(this.checked){
+
+            document.getElementById("status"+i).innerText = "completato";
+            record.classList.add("completed");
+
+        }else{
+
+            document.getElementById("status"+i).innerText = "da eseguire";
+            record.classList.remove("completed");
+        }
+
+        saveData();
+    }
+}
+
+/* SAVE DATA */
+
+function saveData(){
+
+    let data = {};
+
+    for(let i=1;i<=30;i++){
+
+        data["flag"+i] = document.getElementById("flag"+i).checked;
+        data["desc"+i] = document.getElementById("desc"+i).value;
+        data["date"+i] = document.getElementById("date"+i).value;
+        data["time"+i] = document.getElementById("time"+i).value;
+        data["status"+i] = document.getElementById("status"+i).innerText;
+        data["day"+i] = document.getElementById("day"+i).innerText;
+    }
+
+    localStorage.setItem("records", JSON.stringify(data));
+}
+
+/* LOAD DATA */
+
+function loadData(){
+
+    let data = JSON.parse(localStorage.getItem("records"));
+
+    if(data){
+
+        for(let i=1;i<=30;i++){
+
+            document.getElementById("flag"+i).checked = data["flag"+i];
+            document.getElementById("desc"+i).value = data["desc"+i];
+            document.getElementById("date"+i).value = data["date"+i];
+            document.getElementById("time"+i).value = data["time"+i];
+            document.getElementById("status"+i).innerText = data["status"+i];
+            document.getElementById("day"+i).innerText = data["day"+i];
+
+            let record = document.getElementById("flag"+i).closest(".record");
+
+            if(data["flag"+i]){
+                record.classList.add("completed");
+            }
+        }
+    }
+
+    let img = localStorage.getItem("selectedImage");
+    if(img){
+        document.getElementById("mainImage").src = img;
+        select.value = img;
+    }
+
+    let timer = localStorage.getItem("timerSeconds");
+    if(timer){
+        document.getElementById("timerSeconds").value = timer;
+    }
+}
+
+/* AUTO SAVE */
+
+document.addEventListener("input", saveData);
+
+loadData();
+
+</script>
+
+</body>
+  </html>
