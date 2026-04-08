@@ -1,1 +1,386 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Record attività</title>
 
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f4f4f4;
+}
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:10px;
+}
+h1{
+    text-align:center;
+}
+
+/* TIMER */
+.timer-box{
+    text-align:center;
+    margin:20px 0;
+}
+.timer-input{
+    font-size:20px;
+    width:120px;
+    padding:6px;
+    text-align:center;
+}
+.start-btn{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:green;
+    color:white;
+    font-size:18px;
+    border:none;
+    margin-left:10px;
+    cursor:pointer;
+}
+.start-btn:active{
+    transform:scale(0.95);
+}
+
+/* IMAGE */
+.record-image{
+    width:100%;
+    max-height:250px;
+    object-fit:cover;
+    border:3px solid #ccc;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    margin-bottom:10px;
+}
+.image-select{
+    width:100%;
+    padding:6px;
+    margin-bottom:10px;
+}
+
+/* RECORD */
+.record{
+    background:white;
+    padding:10px;
+    border-radius:8px;
+}
+.record.completed{
+    background:#d4edda;
+    border-left:6px solid green;
+}
+.record.pending{
+    background:#ffe5e5;
+    border-left:6px solid #cc0000;
+}
+.separator{
+    height:2px;
+    background:#ccc;
+    margin:10px 0;
+}
+textarea{
+    width:100%;
+    min-height:60px;
+    resize:vertical;
+    padding:5px;
+}
+.row{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:5px;
+}
+.status{
+    font-weight:bold;
+    margin-top:5px;
+}
+#timerDisplay{
+    margin-top:10px;
+    font-size:20px;
+}
+
+@media(max-width:600px){
+.start-btn{
+    width:70px;
+    height:70px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>record attività</h1>
+
+<div class="timer-box">
+<input type="number" id="timerSeconds" class="timer-input" placeholder="secondi">
+<button class="start-btn" onclick="startTimer()">Start</button>
+<div id="timerDisplay"></div>
+</div>
+
+<div id="records"></div>
+
+</div>
+
+<audio id="alarm" src="rsound/rdri.mp3"></audio>
+
+<script>
+
+/* CONFIG */
+const TOTAL_RECORDS = 99;
+const TOTAL_IMAGES = 999;
+
+/* TIMER */
+let timerInterval;
+
+function startTimer(){
+
+    let seconds = parseInt(document.getElementById("timerSeconds").value);
+    if(!seconds) return;
+
+    localStorage.setItem("timerSeconds", seconds);
+
+    let display = document.getElementById("timerDisplay");
+
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(()=>{
+
+        seconds--;
+        display.innerText = seconds + " sec";
+
+        if(seconds <= 0){
+            clearInterval(timerInterval);
+            display.innerText = "Tempo finito";
+            document.getElementById("alarm").play();
+        }
+
+    },1000);
+}
+
+/* CREAZIONE RECORD */
+
+let container = document.getElementById("records");
+
+for(let i=1;i<=TOTAL_RECORDS;i++){
+
+    let div = document.createElement("div");
+    div.className = "record";
+
+    /* MENU IMMAGINE */
+
+    let selectImg = document.createElement("select");
+    selectImg.id = "imgSelect"+i;
+    selectImg.className = "image-select";
+
+    for(let j=1;j<=TOTAL_IMAGES;j++){
+
+        let num = j.toString().padStart(3,'0');
+
+        let option = document.createElement("option");
+        option.value = "rimage/r"+num+".jpg";
+        option.text = "r"+num;
+
+        selectImg.appendChild(option);
+    }
+
+    div.appendChild(selectImg);
+
+    /* IMMAGINE */
+
+    let img = document.createElement("img");
+    img.id = "img"+i;
+    img.className = "record-image";
+    img.src = "rimage/r001.jpg";
+    img.loading = "lazy";
+
+    div.appendChild(img);
+
+    /* FLAG */
+
+    let flag = document.createElement("input");
+    flag.type = "checkbox";
+    flag.id = "flag"+i;
+
+    div.appendChild(flag);
+    div.appendChild(document.createTextNode(" completato"));
+
+    /* DESCRIZIONE */
+
+    let textarea = document.createElement("textarea");
+    textarea.id = "desc"+i;
+    textarea.placeholder = "descrizione attività";
+
+    div.appendChild(textarea);
+
+    /* DATA ORA */
+
+    let row = document.createElement("div");
+    row.className = "row";
+
+    let dateInput = document.createElement("input");
+    dateInput.type = "date";
+    dateInput.id = "date"+i;
+
+    let daySpan = document.createElement("span");
+    daySpan.id = "day"+i;
+
+    let timeInput = document.createElement("input");
+    timeInput.type = "time";
+    timeInput.id = "time"+i;
+
+    row.appendChild(dateInput);
+    row.appendChild(daySpan);
+    row.appendChild(timeInput);
+
+    div.appendChild(row);
+
+    /* STATUS */
+
+    let status = document.createElement("div");
+    status.className = "status";
+    status.id = "status"+i;
+    status.innerText = "da eseguire";
+
+    div.appendChild(status);
+
+    container.appendChild(div);
+
+    let sep = document.createElement("div");
+    sep.className = "separator";
+    container.appendChild(sep);
+
+    /* EVENTO MENU IMMAGINE */
+
+    selectImg.onchange = function(){
+
+        img.src = this.value;
+        saveData();
+    }
+}
+
+/* COLORI */
+
+function updateRecordColor(i){
+
+    let record = document.getElementById("flag"+i).closest(".record");
+    let flag = document.getElementById("flag"+i).checked;
+    let text = document.getElementById("desc"+i).value.trim();
+
+    record.classList.remove("completed");
+    record.classList.remove("pending");
+
+    if(flag){
+
+        record.classList.add("completed");
+        document.getElementById("status"+i).innerText = "completato";
+
+    }else if(text.length>0){
+
+        record.classList.add("pending");
+        document.getElementById("status"+i).innerText = "da eseguire";
+
+    }else{
+
+        document.getElementById("status"+i).innerText = "da eseguire";
+    }
+}
+
+/* EVENTI */
+
+for(let i=1;i<=TOTAL_RECORDS;i++){
+
+    let dateField = document.getElementById("date"+i);
+    let flagField = document.getElementById("flag"+i);
+    let descField = document.getElementById("desc"+i);
+
+    dateField.onchange = function(){
+
+        let d = new Date(this.value);
+
+        let days = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
+
+        document.getElementById("day"+i).innerText = days[d.getDay()];
+
+        updateRecordColor(i);
+        saveData();
+    }
+
+    flagField.onchange = function(){
+
+        updateRecordColor(i);
+        saveData();
+    }
+
+    descField.oninput = function(){
+
+        updateRecordColor(i);
+        saveData();
+    }
+}
+
+/* SAVE */
+
+function saveData(){
+
+    let data = {};
+
+    for(let i=1;i<=TOTAL_RECORDS;i++){
+
+        data["flag"+i] = document.getElementById("flag"+i).checked;
+        data["desc"+i] = document.getElementById("desc"+i).value;
+        data["date"+i] = document.getElementById("date"+i).value;
+        data["time"+i] = document.getElementById("time"+i).value;
+        data["day"+i] = document.getElementById("day"+i).innerText;
+        data["img"+i] = document.getElementById("img"+i).src;
+    }
+
+    localStorage.setItem("records", JSON.stringify(data));
+}
+
+/* LOAD */
+
+function loadData(){
+
+    let data = JSON.parse(localStorage.getItem("records"));
+
+    if(data){
+
+        for(let i=1;i<=TOTAL_RECORDS;i++){
+
+            document.getElementById("flag"+i).checked = data["flag"+i];
+            document.getElementById("desc"+i).value = data["desc"+i];
+            document.getElementById("date"+i).value = data["date"+i];
+            document.getElementById("time"+i).value = data["time"+i];
+            document.getElementById("day"+i).innerText = data["day"+i];
+
+            if(data["img"+i]){
+                document.getElementById("img"+i).src = data["img"+i];
+                document.getElementById("imgSelect"+i).value = data["img"+i];
+            }
+
+            updateRecordColor(i);
+        }
+    }
+
+    let timer = localStorage.getItem("timerSeconds");
+
+    if(timer){
+        document.getElementById("timerSeconds").value = timer;
+    }
+}
+
+document.addEventListener("input", saveData);
+
+loadData();
+
+</script>
+
+</body>
+  </html>
