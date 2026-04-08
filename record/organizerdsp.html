@@ -131,7 +131,7 @@ textarea{
 <div class="container">
 
 <h1>AGENDA ATTIVITÀ</h1>
-   <br><br> <button onclick="resetData()" class="reset-btn">Reset record</button>
+   <br><br> <button class="reset-btn" onclick="resetData()">Reset record</button>
 
 <div class="timer-box">
 <input type="number" id="timerSeconds" class="timer-input" placeholder="secondi">
@@ -358,14 +358,8 @@ function saveData(){
 
     localStorage.setItem("records", JSON.stringify(data));
 }
-/* RESET */
-function resetData(){
 
-    localStorage.removeItem("recordData");
-
-    location.reload();
-}
-    
+   
 /* LOAD */
 
 function loadData(){
@@ -391,6 +385,16 @@ function loadData(){
         }
     }
 
+/* RESET */
+function resetData(){
+
+    localStorage.removeItem("records");
+    localStorage.removeItem("timerSeconds");
+    localStorage.removeItem("selectedImage");
+
+    location.reload();
+}
+    
     let timer = localStorage.getItem("timerSeconds");
 
     if(timer){
