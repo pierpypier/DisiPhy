@@ -389,8 +389,21 @@ function loadData(){
 function resetData(){
 
     localStorage.removeItem("records");
-    localStorage.removeItem("timerSeconds");
-    localStorage.removeItem("selectedImage");
+
+    // svuota tutti i campi manualmente
+    for(let i=1;i<=TOTAL_RECORDS;i++){
+
+        document.getElementById("flag"+i).checked = false;
+        document.getElementById("desc"+i).value = "";
+        document.getElementById("date"+i).value = "";
+        document.getElementById("time"+i).value = "";
+        document.getElementById("day"+i).innerText = "";
+        document.getElementById("img"+i).src = "rimage/r001.jpg";
+        document.getElementById("imgSelect"+i).value = "rimage/r001.jpg";
+
+        document.getElementById("record"+i).classList.remove("completed");
+        document.getElementById("record"+i).classList.remove("filled");
+    }
 
     location.reload();
 }
