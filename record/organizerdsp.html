@@ -81,6 +81,16 @@ h1{
     height:2px;
     background:#ccc;
     margin:10px 0;
+
+ .reset-btn{
+    background:#cc0000;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    margin-bottom:10px;
+ }   
+    
 }
 textarea{
     width:100%;
@@ -121,6 +131,7 @@ textarea{
 <div class="container">
 
 <h1>AGENDA ATTIVITÀ</h1>
+   <br><br> <button onclick="resetData()" class="reset-btn">Reset record</button>
 
 <div class="timer-box">
 <input type="number" id="timerSeconds" class="timer-input" placeholder="secondi">
@@ -347,7 +358,14 @@ function saveData(){
 
     localStorage.setItem("records", JSON.stringify(data));
 }
+/* RESET */
+function resetData(){
 
+    localStorage.removeItem("recordData");
+
+    location.reload();
+}
+    
 /* LOAD */
 
 function loadData(){
