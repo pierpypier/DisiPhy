@@ -130,7 +130,7 @@ function updateRecordState(i){
 function updateRecordDay(i){
   const dateEl=document.getElementById("date"+i);
   const dayEl=document.getElementById("day"+i);
-  if(dateEl.value){ const dt=new Date(dateEl.value); const days=["  Domenica ","  Lunedì  ","  Martedì  ","  Mercoledì  ","__Giovedì__","  Venerdì  ","  Sabato  "]; dayEl.innerText=days[dt.getDay()]; }
+  if(dateEl.value){ const dt=new Date(dateEl.value); const days=[" |    Domenica    | "," |    Lunedì    | "," |    Martedì    | "," |    Mercoledì    | "," |    Giovedì    | "," |    Venerdì    | "," |    Sabato    | "]; dayEl.innerText=days[dt.getDay()]; }
   else{ dayEl.innerText=""; }
 }
 
