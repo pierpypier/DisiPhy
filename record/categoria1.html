@@ -5,128 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Record Attività - Categoria 1</title>
 <style>
-/* ===== CSS ===== */
-body {
-    font-family: Arial, sans-serif;
-    margin: 10px;
-    padding: 0;
-    background: #f9f9f9;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.timer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-#timerInput {
-    width: 80px;
-    padding: 5px;
-    font-size: 16px;
-}
-
-.start-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-}
-
-#timerDisplay {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.category-block {
-    background: #f4f4f4;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.category-item {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-
-.category-item button {
-    background: #0077cc;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    min-width: 110px;
-}
-
-.category-item textarea {
-    flex: 1;
-    min-height: 35px;
-    resize: vertical;
-    font-size: 16px;
-}
-
-.record {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-    background: #fff;
-}
-
-.record.completed {
-    background-color: #a0e5a0; /* verde completato */
-}
-
-.record.filled {
-    background-color: #f8d7da; /* rosso chiaro compilato */
-}
-
-.record img {
-    width: 100%;
-    max-width: 150px;
-    display: block;
-    margin-bottom: 5px;
-    border: 2px solid #ccc;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    border-radius: 5px;
-}
-
-textarea.desc {
-    width: 100%;
-    min-height: 50px;
-    resize: vertical;
-    font-size: 16px;
-}
-
-.separator {
-    height: 2px;
-    background: #ccc;
-    margin: 10px 0;
-}
-
-@media (max-width: 600px) {
-    .category-item {
-        flex-direction: column;
-    }
-    .start-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 14px;
-    }
-    textarea.desc {
-        font-size: 14px;
-    }
+body { font-family: Arial,sans-serif; margin:10px; padding:0; background:#f9f9f9; }
+h1 { text-align:center; margin-bottom:20px; }
+.timer-container { display:flex; justify-content:center; align-items:center; gap:10px; margin-bottom:20px; }
+#timerInput { width:80px; padding:5px; font-size:16px; }
+.start-btn { width:60px; height:60px; border-radius:50%; border:none; background:#4CAF50; color:white; font-size:16px; }
+#timerDisplay { font-size:18px; font-weight:bold; }
+.category-block { background:#f4f4f4; padding:10px; border-radius:10px; margin-bottom:20px; }
+.category-item { display:flex; gap:10px; margin-bottom:8px; }
+.category-item button { background:#0077cc; color:white; border:none; padding:8px 12px; border-radius:8px; min-width:110px; }
+.category-item textarea { flex:1; min-height:35px; resize:vertical; font-size:16px; }
+.record { border:1px solid #ccc; border-radius:5px; margin-bottom:10px; padding:10px; background:#fff; font-size:16px; }
+.record.completed { background-color:#a0e5a0; }
+.record.filled { background-color:#f8d7da; }
+.record img { width:100%; display:block; margin-bottom:5px; border:2px solid #ccc; box-shadow:2px 2px 5px rgba(0,0,0,0.3); border-radius:5px; }
+textarea.desc { width:100%; min-height:50px; resize:vertical; font-size:16px; }
+input[type="date"], input[type="time"] { font-size:16px; }
+.separator { height:2px; background:#ccc; margin:10px 0; }
+@media(max-width:600px){ 
+  .category-item{flex-direction:column;} 
+  .start-btn{width:50px;height:50px;font-size:14px;} 
+  textarea.desc{font-size:14px;} 
 }
 </style>
 </head>
@@ -135,255 +34,159 @@ textarea.desc {
 <h1>Record Attività - Categoria 1</h1>
 
 <div class="timer-container">
-    <input type="number" id="timerInput" placeholder="Secondi" min="1">
-    <button id="startTimer" class="start-btn">Start</button>
-    <span id="timerDisplay">00:00</span>
-    <audio id="timerSound" src="rsound/rdri.mp3"></audio>
+<input type="number" id="timerInput" placeholder="Secondi" min="1">
+<button id="startTimer" class="start-btn">Start</button>
+<span id="timerDisplay">00:00</span>
+<audio id="timerSound" src="rsound/rdri.mp3"></audio>
 </div>
 
 <div class="category-block">
-    <div class="category-item">
-        <button onclick="goCategory(1)">Categoria 1</button>
-        <textarea id="catName1"></textarea>
-    </div>
-    <div class="category-item">
-        <button onclick="goCategory(2)">Categoria 2</button>
-        <textarea id="catName2"></textarea>
-    </div>
-    <div class="category-item">
-        <button onclick="goCategory(3)">Categoria 3</button>
-        <textarea id="catName3"></textarea>
-    </div>
+<div class="category-item"><button onclick="goCategory(1)">Categoria 1</button><textarea id="catName1"></textarea></div>
+<div class="category-item"><button onclick="goCategory(2)">Categoria 2</button><textarea id="catName2"></textarea></div>
+<div class="category-item"><button onclick="goCategory(3)">Categoria 3</button><textarea id="catName3"></textarea></div>
 </div>
 
 <div id="recordsContainer"></div>
 
 <script>
-// ---------- CONFIGURAZIONE ----------
-const CATEGORY = "categoria1";
-const STORAGE_KEY = "records_" + CATEGORY;
-const TIMER_KEY = "timer_" + CATEGORY;
-const TOTAL_RECORDS = 99;
-const TOTAL_IMAGES = 999;
+// CONFIGURAZIONE
+const CATEGORY="categoria1", STORAGE_KEY="records_"+CATEGORY, TIMER_KEY="timer_"+CATEGORY;
+const TOTAL_RECORDS=99, TOTAL_IMAGES=999;
+const recordsContainer=document.getElementById("recordsContainer");
 
-const recordsContainer = document.getElementById("recordsContainer");
+// NAVIGAZIONE
+function goCategory(n){window.location.href="categoria"+n+".html";}
 
-// ---------- FUNZIONI NAVIGAZIONE ----------
-function goCategory(n){
-    window.location.href = "categoria" + n + ".html";
+// CREAZIONE RECORD DINAMICA
+for(let i=1;i<=TOTAL_RECORDS;i++){
+  const recordDiv=document.createElement("div");
+  recordDiv.className="record"; recordDiv.id="record"+i;
+
+  // selezione immagine
+  let imgSelect=document.createElement("select"); imgSelect.id="imgSelect"+i;
+  for(let j=1;j<=TOTAL_IMAGES;j++){ 
+    let numStr=j.toString().padStart(3,'0'); 
+    let opt=document.createElement("option"); 
+    opt.value=`rimage/r${numStr}.jpg`; 
+    opt.text=`r${numStr}.jpg`; 
+    imgSelect.appendChild(opt); 
+  }
+  let imgElem=document.createElement("img"); imgElem.id="img"+i; imgElem.src="rimage/r001.jpg"; imgElem.loading="lazy";
+
+  // altri campi
+  let flag=document.createElement("input"); flag.type="checkbox"; flag.id="flag"+i;
+  let desc=document.createElement("textarea"); desc.id="desc"+i; desc.className="desc"; desc.placeholder="descrizione attività";
+  let date=document.createElement("input"); date.type="date"; date.id="date"+i;
+  let daySpan=document.createElement("span"); daySpan.id="day"+i;
+  let time=document.createElement("input"); time.type="time"; time.id="time"+i;
+  let statusDiv=document.createElement("div"); statusDiv.id="status"+i; statusDiv.innerText="Da eseguire";
+  let sep=document.createElement("div"); sep.className="separator";
+
+  // append
+  recordDiv.appendChild(imgSelect); 
+  recordDiv.appendChild(imgElem); 
+  recordDiv.appendChild(document.createElement("br"));
+  recordDiv.appendChild(flag); 
+  recordDiv.appendChild(document.createTextNode(" Completato"));
+  recordDiv.appendChild(desc); 
+  recordDiv.appendChild(date); 
+  recordDiv.appendChild(daySpan); 
+  recordDiv.appendChild(time); 
+  recordDiv.appendChild(statusDiv); 
+  recordDiv.appendChild(sep);
+  recordsContainer.appendChild(recordDiv);
+
+  // eventi
+  imgSelect.addEventListener("change",()=>{ imgElem.src=imgSelect.value; saveData(); });
+  flag.addEventListener("change",()=>{ updateRecordState(i); saveData(); });
+  desc.addEventListener("input",()=>{ updateRecordState(i); saveData(); });
+  date.addEventListener("change",()=>{ updateRecordDay(i); saveData(); });
 }
 
-// ---------- CREAZIONE RECORD DINAMICA ----------
-for (let i = 1; i <= TOTAL_RECORDS; i++) {
-    const recordDiv = document.createElement("div");
-    recordDiv.className = "record";
-    recordDiv.id = "record" + i;
+// FUNZIONI STATO E DATA
+function updateRecordState(i){
+  const record=document.getElementById("record"+i);
+  const flag=document.getElementById("flag"+i).checked;
+  const desc=document.getElementById("desc"+i).value.trim();
+  const status=document.getElementById("status"+i);
 
-    // GENERAZIONE SELECT IMMAGINI DINAMICA
-    let imgSelect = document.createElement("select");
-    imgSelect.id = "imgSelect" + i;
-    for (let j = 1; j <= TOTAL_IMAGES; j++) {
-        let numStr = j.toString().padStart(3, '0');
-        let opt = document.createElement("option");
-        opt.value = `rimage/r${numStr}.jpg`;
-        opt.text = `r${numStr}.jpg`;
-        imgSelect.appendChild(opt);
-    }
-
-    let imgElem = document.createElement("img");
-    imgElem.id = "img" + i;
-    imgElem.src = "rimage/r001.jpg";
-    imgElem.loading = "lazy";
-
-    let flag = document.createElement("input");
-    flag.type = "checkbox";
-    flag.id = "flag" + i;
-
-    let desc = document.createElement("textarea");
-    desc.id = "desc" + i;
-    desc.className = "desc";
-    desc.placeholder = "descrizione attività";
-
-    let date = document.createElement("input");
-    date.type = "date";
-    date.id = "date" + i;
-
-    let daySpan = document.createElement("span");
-    daySpan.id = "day" + i;
-
-    let time = document.createElement("input");
-    time.type = "time";
-    time.id = "time" + i;
-
-    let statusDiv = document.createElement("div");
-    statusDiv.id = "status" + i;
-    statusDiv.innerText = "Da eseguire";
-
-    let sep = document.createElement("div");
-    sep.className = "separator";
-
-    // Append elementi al record
-    recordDiv.appendChild(imgSelect);
-    recordDiv.appendChild(imgElem);
-    recordDiv.appendChild(document.createElement("br"));
-    recordDiv.appendChild(flag);
-    recordDiv.appendChild(document.createTextNode(" Completato"));
-    recordDiv.appendChild(desc);
-    recordDiv.appendChild(date);
-    recordDiv.appendChild(daySpan);
-    recordDiv.appendChild(time);
-    recordDiv.appendChild(statusDiv);
-    recordDiv.appendChild(sep);
-
-    recordsContainer.appendChild(recordDiv);
-
-    // ---------- EVENT LISTENER ----------
-    imgSelect.addEventListener("change", function () {
-        imgElem.src = this.value;
-        saveData();
-    });
-
-    flag.addEventListener("change", function () {
-        updateRecordState(i);
-        saveData();
-    });
-
-    desc.addEventListener("input", function () {
-        updateRecordState(i);
-        saveData();
-    });
-
-    date.addEventListener("change", function () {
-        updateRecordDay(i);
-        saveData();
-    });
+  if(flag){ 
+    record.classList.add("completed"); 
+    record.classList.remove("filled"); 
+    status.innerText="Completato"; 
+  }
+  else if(desc!==""){ 
+    record.classList.add("filled"); 
+    record.classList.remove("completed"); 
+    status.innerText="Da eseguire"; 
+  }
+  else{ 
+    record.classList.remove("filled"); 
+    record.classList.remove("completed"); 
+    status.innerText="Da eseguire"; 
+  }
 }
 
-// ---------- FUNZIONI STATO E DATA ----------
-function updateRecordState(i) {
-    const record = document.getElementById("record" + i);
-    const flag = document.getElementById("flag" + i).checked;
-    const desc = document.getElementById("desc" + i).value.trim();
-    const status = document.getElementById("status" + i);
-    if (flag) {
-        record.classList.add("completed");
-        record.classList.remove("filled");
-        status.innerText = "Completato";
-    } else if (desc !== "") {
-        record.classList.add("filled");
-        record.classList.remove("completed");
-        status.innerText = "Da eseguire";
-    } else {
-        record.classList.remove("filled");
-        record.classList.remove("completed");
-        status.innerText = "Da eseguire";
-    }
+function updateRecordDay(i){
+  const dateEl=document.getElementById("date"+i);
+  const dayEl=document.getElementById("day"+i);
+  if(dateEl.value){ const dt=new Date(dateEl.value); const days=["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"]; dayEl.innerText=days[dt.getDay()]; }
+  else{ dayEl.innerText=""; }
 }
 
-function updateRecordDay(i) {
-    const dateEl = document.getElementById("date" + i);
-    const dayEl = document.getElementById("day" + i);
-    if (dateEl.value) {
-        const dt = new Date(dateEl.value);
-        const days = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
-        dayEl.innerText = days[dt.getDay()];
-    } else {
-        dayEl.innerText = "";
-    }
+// SALVATAGGIO E CARICAMENTO
+function saveData(){ 
+  let data={}; 
+  for(let i=1;i<=TOTAL_RECORDS;i++){ 
+    data["flag"+i]=document.getElementById("flag"+i).checked; 
+    data["desc"+i]=document.getElementById("desc"+i).value; 
+    data["date"+i]=document.getElementById("date"+i).value; 
+    data["time"+i]=document.getElementById("time"+i).value; 
+    data["day"+i]=document.getElementById("day"+i).innerText; 
+    data["img"+i]=document.getElementById("img"+i).src; 
+  } 
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(data)); 
+}
+function loadData(){ 
+  let data=JSON.parse(localStorage.getItem(STORAGE_KEY)); 
+  if(data){ 
+    for(let i=1;i<=TOTAL_RECORDS;i++){ 
+      document.getElementById("flag"+i).checked=data["flag"+i]||false; 
+      document.getElementById("desc"+i).value=data["desc"+i]||""; 
+      document.getElementById("date"+i).value=data["date"+i]||""; 
+      document.getElementById("time"+i).value=data["time"+i]||""; 
+      document.getElementById("day"+i).innerText=data["day"+i]||""; 
+      document.getElementById("img"+i).src=data["img"+i]||"rimage/r001.jpg"; 
+      updateRecordState(i); 
+    } 
+  } 
 }
 
-// ---------- SALVATAGGIO E CARICAMENTO ----------
-function saveData() {
-    let data = {};
-    for (let i = 1; i <= TOTAL_RECORDS; i++) {
-        data["flag" + i] = document.getElementById("flag" + i).checked;
-        data["desc" + i] = document.getElementById("desc" + i).value;
-        data["date" + i] = document.getElementById("date" + i).value;
-        data["time" + i] = document.getElementById("time" + i).value;
-        data["day" + i] = document.getElementById("day" + i).innerText;
-        data["img" + i] = document.getElementById("img" + i).src;
-    }
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+// CATEGORIE
+function saveCategoryNames(){ 
+  localStorage.setItem("categoryNames",JSON.stringify({c1:document.getElementById("catName1").value, c2:document.getElementById("catName2").value, c3:document.getElementById("catName3").value})); 
 }
-
-function loadData() {
-    let data = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if (data) {
-        for (let i = 1; i <= TOTAL_RECORDS; i++) {
-            document.getElementById("flag" + i).checked = data["flag" + i] || false;
-            document.getElementById("desc" + i).value = data["desc" + i] || "";
-            document.getElementById("date" + i).value = data["date" + i] || "";
-            document.getElementById("time" + i).value = data["time" + i] || "";
-            document.getElementById("day" + i).innerText = data["day" + i] || "";
-            document.getElementById("img" + i).src = data["img" + i] || "rimage/r001.jpg";
-            updateRecordState(i);
-        }
-    }
+function loadCategoryNames(){ 
+  let names=JSON.parse(localStorage.getItem("categoryNames")); 
+  if(names){ 
+    document.getElementById("catName1").value=names.c1||""; 
+    document.getElementById("catName2").value=names.c2||""; 
+    document.getElementById("catName3").value=names.c3||""; 
+  } 
 }
+document.getElementById("catName1").oninput=saveCategoryNames;
+document.getElementById("catName2").oninput=saveCategoryNames;
+document.getElementById("catName3").oninput=saveCategoryNames;
 
-// ---------- CATEGORIE NAMES ----------
-function saveCategoryNames(){
-    localStorage.setItem("categoryNames", JSON.stringify({
-        c1: document.getElementById("catName1").value,
-        c2: document.getElementById("catName2").value,
-        c3: document.getElementById("catName3").value
-    }));
-}
+// TIMER
+let timerSeconds=parseInt(localStorage.getItem(TIMER_KEY))||0;
+let timerInterval=null;
+function updateTimerDisplay(){ let min=Math.floor(timerSeconds/60); let sec=timerSeconds%60; document.getElementById("timerDisplay").innerText=`${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`; }
+function startTimer(){ if(timerInterval) clearInterval(timerInterval); timerInterval=setInterval(()=>{ if(timerSeconds>0){ timerSeconds--; updateTimerDisplay(); localStorage.setItem(TIMER_KEY,timerSeconds); } else{ clearInterval(timerInterval); document.getElementById("timerSound").play(); } },1000); }
+document.getElementById("startTimer").addEventListener("click",()=>{ let inputSec=parseInt(document.getElementById("timerInput").value); if(!isNaN(inputSec)&&inputSec>0){ timerSeconds=inputSec; localStorage.setItem(TIMER_KEY,timerSeconds); updateTimerDisplay(); startTimer(); } });
 
-function loadCategoryNames(){
-    let names = JSON.parse(localStorage.getItem("categoryNames"));
-    if(names){
-        document.getElementById("catName1").value = names.c1 || "";
-        document.getElementById("catName2").value = names.c2 || "";
-        document.getElementById("catName3").value = names.c3 || "";
-    }
-}
-
-document.getElementById("catName1").oninput = saveCategoryNames;
-document.getElementById("catName2").oninput = saveCategoryNames;
-document.getElementById("catName3").oninput = saveCategoryNames;
-
-// ---------- TIMER ----------
-let timerSeconds = parseInt(localStorage.getItem(TIMER_KEY)) || 0;
-let timerInterval = null;
-
-function updateTimerDisplay(){
-    let min = Math.floor(timerSeconds/60);
-    let sec = timerSeconds % 60;
-    document.getElementById("timerDisplay").innerText = 
-        `${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`;
-}
-
-function startTimer(){
-    if(timerInterval) clearInterval(timerInterval);
-    timerInterval = setInterval(()=>{
-        if(timerSeconds>0){
-            timerSeconds--;
-            updateTimerDisplay();
-            localStorage.setItem(TIMER_KEY,timerSeconds);
-        } else {
-            clearInterval(timerInterval);
-            document.getElementById("timerSound").play();
-        }
-    },1000);
-}
-
-document.getElementById("startTimer").addEventListener("click",function(){
-    let inputSec = parseInt(document.getElementById("timerInput").value);
-    if(!isNaN(inputSec) && inputSec>0){
-        timerSeconds = inputSec;
-        localStorage.setItem(TIMER_KEY,timerSeconds);
-        updateTimerDisplay();
-        startTimer();
-    }
-});
-
-// ---------- INIZIALIZZAZIONE ----------
-window.onload = function(){
-    loadCategoryNames();
-    loadData();
-    updateTimerDisplay();
-};
+// INIZIALIZZAZIONE
+window.onload=function(){ loadCategoryNames(); loadData(); updateTimerDisplay(); };
 </script>
 </body>
 </html>
