@@ -2,295 +2,370 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>Dashboard Operativa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Attività</title>
 
 <style>
 body{
-  font-family: Arial;
+  font-family:Arial;
   margin:0;
-  padding:20px;
-}
-
-/* ---------------- CATEGORIE ---------------- */
-
-#catBar{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-bottom:15px;
-}
-
-.cat-btn{
-  background:#1e66ff;
-  color:white;
-  border:none;
-  padding:8px 12px;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-.cat-btn.active{
-  background:#0d3fb8;
-}
-
-.cat-add{
-  background:#444;
-  color:white;
-  border:none;
-  padding:8px 12px;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-/* ---------------- DASHBOARD RECORD ---------------- */
-
-.record{
-  border:1px solid #ddd;
   padding:10px;
-  margin-bottom:10px;
+  background:#f4f4f4;
 }
 
-/* textarea stabile */
-textarea{
-  width:100%;
-  min-height:60px;
-}
+h1{text-align:center;}
 
-/* ---------------- TIMER ---------------- */
-
+/* TIMER */
 .timer{
   display:flex;
   gap:10px;
   align-items:center;
-  margin-top:20px;
+  justify-content:center;
+  margin-bottom:15px;
 }
 
 .timer input{
   width:80px;
-  padding:6px;
+  padding:5px;
 }
 
-.btn-start,
-.btn-reset{
+.timer span b{
+  font-size:28px;
+}
+
+.start, .reset{
+  color:white;
   border:none;
-  padding:10px 16px;
+  padding:10px 14px;
   border-radius:999px;
   cursor:pointer;
+}
+
+.start{ background:#2ecc71; }
+.reset{ background:#7f8c8d; }
+
+/* CATEGORIE */
+#catBar{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.catBtn{
+  background:#3498db;
   color:white;
-}
-
-.btn-start{
-  background:green;
-}
-
-.btn-reset{
-  background:#777;
-}
-
-#display{
-  font-size:24px;
-  font-weight:bold;
-}
-
-/* ---------------- IMMAGINI ---------------- */
-
-#imageGrid{
-  display:grid;
-  grid-template-columns:repeat(10, 1fr);
-  gap:4px;
-  margin-top:20px;
-  max-height:300px;
-  overflow:auto;
-}
-
-.img-item{
-  width:100%;
-  aspect-ratio:1/1;
-  background:#eee;
+  border:none;
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
   display:flex;
   align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  font-size:10px;
+  gap:6px;
 }
 
-.img-item.selected{
-  outline:3px solid blue;
+.catDelete{
+  background:transparent;
+  border:none;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
 }
+
+/* RECORD */
+.record{
+  background:white;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.record textarea{
+  width:100%;
+  font-size:18px;
+  margin-top:5px;
+}
+
+.record img{
+  width:100%;
+  border-radius:6px;
+  margin-top:8px;
+}
+
+/* STATI */
+.empty{background:white;}
+.partial{background:#ffe5e5;}
+.done{background:#e5ffe5;}
+
+.row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.small{font-size:14px;}
+
+button{cursor:pointer;}
 </style>
 </head>
 
 <body>
 
-<!-- ================= CATEGORIE ================= -->
-<div id="catBar"></div>
+<h1>Dashboard Attività</h1>
 
-<!-- ================= RECORD ================= -->
-<div id="dashboard"></div>
-
-<!-- ================= TIMER ================= -->
+<!-- TIMER -->
 <div class="timer">
-  <input type="number" id="secInput" placeholder="sec">
-  <button class="btn-start" onclick="startTimer()">Start</button>
-  <button class="btn-reset" onclick="resetTimer()">Reset</button>
-  <span id="display">0</span>
+<input type="number" id="secInput" placeholder="sec">
+
+<button class="start" onclick="startTimer()">Start</button>
+<button class="reset" onclick="resetTimer()">Reset</button>
+
+<span id="display"><b>0</b></span>
 </div>
 
-<!-- ================= IMMAGINI ================= -->
-<div id="imageGrid"></div>
+<audio id="beep" src="rsound/rdri.mp3"></audio>
+
+<!-- CATEGORIE -->
+<div id="catBar"></div>
+
+<!-- ADD -->
+<div style="text-align:center;margin-bottom:10px;">
+<button onclick="addRecord()">+ Record</button>
+</div>
+
+<!-- LISTA -->
+<div id="list"></div>
 
 <script>
 
-/* ================= STATE ================= */
-
+let storageKey="dashboard_attivita";
 let catKey="dashboard_categories";
-let selectedCategory="Tutte";
 
 let timer=null;
 let remaining=0;
 
-/* ================= CATEGORIE ================= */
+let filter="Tutti";
 
-function getCategories(){
-  return JSON.parse(localStorage.getItem(catKey)) || [];
-}
-
-function saveCategories(c){
-  localStorage.setItem(catKey, JSON.stringify(c));
-}
-
-function renderCategories(){
-
-  let bar=document.getElementById("catBar");
-  bar.innerHTML="";
-
-  // categoria fissa
-  bar.innerHTML+=`
-    <button class="cat-btn ${selectedCategory==='Tutte'?'active':''}"
-      onclick="setCategory('Tutte')">Tutte</button>
-  `;
-
-  let cats=getCategories();
-
-  cats.forEach(c=>{
-    bar.innerHTML+=`
-      <button class="cat-btn ${selectedCategory===c?'active':''}"
-        onclick="setCategory('${c}')">${c}</button>
-      <button class="cat-add" onclick="removeCategory('${c}')">x</button>
-    `;
-  });
-
-  bar.innerHTML+=`
-    <button class="cat-add" onclick="addCategory()">+</button>
-  `;
-}
-
-function setCategory(c){
-  selectedCategory=c;
-  renderCategories();
-}
-
-function addCategory(){
-  let name=prompt("Nome categoria:");
-  if(!name) return;
-
-  let cats=getCategories();
-  if(!cats.includes(name)){
-    cats.push(name);
-    saveCategories(cats);
-  }
-  renderCategories();
-}
-
-function removeCategory(c){
-  let cats=getCategories().filter(x=>x!==c);
-  saveCategories(cats);
-
-  if(selectedCategory===c){
-    selectedCategory="Tutte";
-  }
-
-  renderCategories();
-}
-
-/* ================= DASHBOARD (placeholder base) ================= */
-
-function renderDashboard(){
-  let d=document.getElementById("dashboard");
-  d.innerHTML="";
-
-  d.innerHTML=`
-    <div class="record">
-      <textarea placeholder="scrivi..."></textarea>
-    </div>
-  `;
-}
-
-/* ================= TIMER ================= */
-
+/* ---------------- TIMER ---------------- */
 function startTimer(){
-
   if(timer) return;
 
-  remaining=parseInt(secInput.value||0);
+  const input = document.getElementById("secInput");
+  const display = document.getElementById("display");
+  const beep = document.getElementById("beep");
 
-  timer=setInterval(()=>{
+  remaining = parseInt(input.value || 0);
 
-    if(remaining<=0){
+  timer = setInterval(() => {
+    if(remaining <= 0){
       clearInterval(timer);
-      timer=null;
-      display.innerHTML="0";
+      timer = null;
+      beep.play().catch(()=>{});
       return;
     }
 
-    display.innerHTML=remaining;
+    display.innerHTML = "<b>" + remaining + "</b>";
     remaining--;
-
   },1000);
 }
 
 function resetTimer(){
   clearInterval(timer);
   timer=null;
-  display.innerHTML="0";
+  remaining=0;
+  document.getElementById("display").innerHTML="<b>0</b>";
 }
 
-/* ================= IMMAGINI 999 ================= */
+/* ---------------- CATEGORIE ---------------- */
+function getCategories(){
+  let cats = JSON.parse(localStorage.getItem(catKey));
+  if(!cats || !cats.length){
+    cats = ["Lavoro","Personale","Famiglia"];
+    localStorage.setItem(catKey, JSON.stringify(cats));
+  }
+  return cats;
+}
 
-let selectedImages=new Set();
+function saveCategories(cats){
+  localStorage.setItem(catKey, JSON.stringify(cats));
+}
 
-function renderImages(){
+function renderCategories(){
+  const bar = document.getElementById("catBar");
+  const cats = getCategories();
 
-  let grid=document.getElementById("imageGrid");
-  grid.innerHTML="";
+  let html = `<button class="catBtn" onclick="setFilter('Tutti')">Tutti</button>`;
 
-  for(let i=1;i<=999;i++){
+  html += cats.map(c => `
+    <div class="catBtn">
+      <span onclick="setFilter('${c}')">${c}</span>
+      <button class="catDelete" onclick="deleteCategory('${c}')">×</button>
+    </div>
+  `).join("");
 
-    grid.innerHTML+=`
-      <div class="img-item ${selectedImages.has(i)?'selected':''}"
-        onclick="toggleImg(${i})">
-        ${i}
+  html += `<button class="catBtn" onclick="addCategory()">+</button>`;
+
+  bar.innerHTML = html;
+}
+
+function addCategory(){
+  let name = prompt("Nome categoria:");
+  if(!name) return;
+
+  let cats = getCategories();
+  if(!cats.includes(name)){
+    cats.push(name);
+  }
+
+  saveCategories(cats);
+  renderCategories();
+}
+
+function deleteCategory(cat){
+  let cats = getCategories().filter(c => c !== cat);
+  saveCategories(cats);
+  renderCategories();
+}
+
+/* ---------------- DATA ---------------- */
+function getData(){
+  return JSON.parse(localStorage.getItem(storageKey)||"[]");
+}
+
+function saveData(data){
+  localStorage.setItem(storageKey, JSON.stringify(data));
+}
+
+/* ---------------- RECORD ---------------- */
+function addRecord(){
+  let data = getData();
+
+  const cats = getCategories();
+
+  data.push({
+    id: Date.now(),
+    cat: filter === "Tutti" ? (cats[0] || "") : filter,
+    img: "r001.jpg",
+    text: "",
+    done: false,
+    date: "",
+    time: ""
+  });
+
+  saveData(data);
+  render();
+}
+
+function deleteRecord(id){
+  let data = getData().filter(r => r.id !== id);
+  saveData(data);
+  render();
+}
+
+function update(id, field, value){
+  let data = getData();
+  let r = data.find(x => x.id === id);
+
+  if(!r) return;
+
+  r[field] = value;
+
+  saveData(data);
+  render();
+}
+
+/* ---------------- COLOR ---------------- */
+function getClass(r){
+  if(r.done) return "done";
+  if(r.text.trim() !== "") return "partial";
+  return "empty";
+}
+
+/* ---------------- RENDER ---------------- */
+function render(){
+
+  let list = document.getElementById("list");
+  list.innerHTML = "";
+
+  let data = getData();
+
+  data
+  .filter(r => filter === "Tutti" || r.cat === filter)
+  .sort((a,b)=>{
+    let da = new Date((a.date||"1970-01-01")+"T"+(a.time||"00:00"));
+    let db = new Date((b.date||"1970-01-01")+"T"+(b.time||"00:00"));
+    return db - da;
+  })
+  .forEach(r => {
+
+    let div = document.createElement("div");
+    div.className = "record " + getClass(r);
+
+    div.innerHTML = `
+      <div class="row">
+
+        <select onchange="update(${r.id},'cat',this.value)">
+          ${getCategories().map(c =>
+            `<option value="${c}" ${r.cat===c?"selected":""}>${c}</option>`
+          ).join("")}
+        </select>
+
+        <select onchange="updateImg(${r.id},this.value)">
+          ${Array.from({length:999},(_,i)=>{
+            const val = `r${String(i+1).padStart(3,'0')}.jpg`;
+            return `<option value="${val}" ${r.img===val?"selected":""}>
+              ${i+1}
+            </option>`;
+          }).join("")}
+        </select>
+
+        <button onclick="deleteRecord(${r.id})">🗑</button>
+
+      </div>
+
+      <img loading="lazy" src="rimage/${r.img}">
+
+      <input type="checkbox" ${r.done?"checked":""}
+        onchange="update(${r.id},'done',this.checked)">
+
+      <textarea
+        placeholder="descrizione attività"
+        onblur="update(${r.id},'text',this.value)"
+      >${r.text}</textarea>
+
+      <div class="small">
+        data <input type="date" value="${r.date}"
+          onchange="update(${r.id},'date',this.value)">
+
+        ora <input type="time" value="${r.time}"
+          onchange="update(${r.id},'time',this.value)">
       </div>
     `;
-  }
+
+    list.appendChild(div);
+  });
 }
 
-function toggleImg(i){
-  if(selectedImages.has(i)){
-    selectedImages.delete(i);
-  }else{
-    selectedImages.add(i);
-  }
-  renderImages();
+/* ---------------- IMAGE ---------------- */
+function updateImg(id,val){
+  let data = getData();
+  let r = data.find(x => x.id === id);
+  if(!r) return;
+
+  r.img = val;
+
+  saveData(data);
+  render();
 }
 
-/* ================= INIT ================= */
-
+/* INIT */
 renderCategories();
-renderDashboard();
-renderImages();
+render();
 
 </script>
 
 </body>
-  </html>
+</html>
