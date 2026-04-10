@@ -107,11 +107,6 @@ h1{text-align:center;}
 }
 
 .small{font-size:14px;}
-.day{
-  font-weight:bold;
-  margin-top:4px;
-  color:#555;
-}
 
 button{cursor:pointer;}
 </style>
@@ -136,10 +131,12 @@ button{cursor:pointer;}
 <!-- CATEGORIE -->
 <div id="catBar"></div>
 
+<!-- ADD -->
 <div style="text-align:center;margin-bottom:10px;">
 <button onclick="addRecord()">+ Record</button>
 </div>
 
+<!-- LISTA -->
 <div id="list"></div>
 
 <script>
@@ -156,21 +153,21 @@ let filter="Tutti";
 function startTimer(){
   if(timer) return;
 
-  const input=document.getElementById("secInput");
-  const display=document.getElementById("display");
-  const beep=document.getElementById("beep");
+  const input = document.getElementById("secInput");
+  const display = document.getElementById("display");
+  const beep = document.getElementById("beep");
 
-  remaining=parseInt(input.value||0);
+  remaining = parseInt(input.value || 0);
 
-  timer=setInterval(()=>{
-    if(remaining<=0){
+  timer = setInterval(() => {
+    if(remaining <= 0){
       clearInterval(timer);
-      timer=null;
+      timer = null;
       beep.play().catch(()=>{});
       return;
     }
 
-    display.innerHTML="<b>"+remaining+"</b>";
+    display.innerHTML = "<b>" + remaining + "</b>";
     remaining--;
   },1000);
 }
@@ -184,65 +181,53 @@ function resetTimer(){
 
 /* ---------------- CATEGORIE ---------------- */
 function getCategories(){
-  let cats=JSON.parse(localStorage.getItem(catKey));
+  let cats = JSON.parse(localStorage.getItem(catKey));
   if(!cats || !cats.length){
-    cats=["Lavoro","Personale","Famiglia"];
-    localStorage.setItem(catKey,JSON.stringify(cats));
+    cats = ["Lavoro","Personale","Famiglia"];
+    localStorage.setItem(catKey, JSON.stringify(cats));
   }
   return cats;
 }
 
 function saveCategories(cats){
-  localStorage.setItem(catKey,JSON.stringify(cats));
-}
-
-function setFilter(f){
-  filter=f;
-  render();
-}
-
-function addCategory(){
-  let name=prompt("Nome categoria:");
-  if(!name) return;
-
-  let cats=getCategories();
-  if(!cats.includes(name)){
-    cats.push(name);
-  }
-
-  saveCategories(cats);
-  renderCategories();
-  render();
-}
-
-function deleteCategory(cat){
-  let cats=getCategories().filter(c=>c!==cat);
-  saveCategories(cats);
-
-  if(filter===cat){
-    filter="Tutti";
-  }
-
-  renderCategories();
-  render();
+  localStorage.setItem(catKey, JSON.stringify(cats));
 }
 
 function renderCategories(){
-  const bar=document.getElementById("catBar");
-  const cats=getCategories();
+  const bar = document.getElementById("catBar");
+  const cats = getCategories();
 
-  let html=`<button class="catBtn" onclick="setFilter('Tutti')">Tutti</button>`;
+  let html = `<button class="catBtn" onclick="setFilter('Tutti')">Tutti</button>`;
 
-  html+=cats.map(c=>`
+  html += cats.map(c => `
     <div class="catBtn">
       <span onclick="setFilter('${c}')">${c}</span>
       <button class="catDelete" onclick="deleteCategory('${c}')">×</button>
     </div>
   `).join("");
 
-  html+=`<button class="catBtn" onclick="addCategory()">+</button>`;
+  html += `<button class="catBtn" onclick="addCategory()">+</button>`;
 
-  bar.innerHTML=html;
+  bar.innerHTML = html;
+}
+
+function addCategory(){
+  let name = prompt("Nome categoria:");
+  if(!name) return;
+
+  let cats = getCategories();
+  if(!cats.includes(name)){
+    cats.push(name);
+  }
+
+  saveCategories(cats);
+  renderCategories();
+}
+
+function deleteCategory(cat){
+  let cats = getCategories().filter(c => c !== cat);
+  saveCategories(cats);
+  renderCategories();
 }
 
 /* ---------------- DATA ---------------- */
@@ -251,22 +236,23 @@ function getData(){
 }
 
 function saveData(data){
-  localStorage.setItem(storageKey,JSON.stringify(data));
+  localStorage.setItem(storageKey, JSON.stringify(data));
 }
 
 /* ---------------- RECORD ---------------- */
 function addRecord(){
-  let data=getData();
-  let cats=getCategories();
+  let data = getData();
+
+  const cats = getCategories();
 
   data.push({
-    id:Date.now(),
-    cat: filter==="Tutti" ? (cats[0]||"") : filter,
-    img:"r001.jpg",
-    text:"",
-    done:false,
-    date:"",
-    time:""
+    id: Date.now(),
+    cat: filter === "Tutti" ? (cats[0] || "") : filter,
+    img: "r001.jpg",
+    text: "",
+    done: false,
+    date: "",
+    time: ""
   });
 
   saveData(data);
@@ -274,84 +260,65 @@ function addRecord(){
 }
 
 function deleteRecord(id){
-  let data=getData().filter(r=>r.id!==id);
+  let data = getData().filter(r => r.id !== id);
   saveData(data);
   render();
 }
 
-function update(id,field,value){
-  let data=getData();
-  let r=data.find(x=>x.id===id);
+function update(id, field, value){
+  let data = getData();
+  let r = data.find(x => x.id === id);
+
   if(!r) return;
 
-  r[field]=value;
+  r[field] = value;
 
   saveData(data);
   render();
-}
-
-/* ---------------- GIORNO SETTIMANA ---------------- */
-function getWeekDay(dateStr){
-  if(!dateStr) return "";
-
-  const days=["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
-  const d=new Date(dateStr);
-
-  return days[d.getDay()];
 }
 
 /* ---------------- COLOR ---------------- */
 function getClass(r){
   if(r.done) return "done";
-  if(r.text.trim()!=="") return "partial";
+  if(r.text.trim() !== "") return "partial";
   return "empty";
-}
-
-/* ---------------- IMAGE ---------------- */
-function updateImg(id,val){
-  let data=getData();
-  let r=data.find(x=>x.id===id);
-  if(!r) return;
-
-  r.img=val;
-
-  saveData(data);
-  render();
 }
 
 /* ---------------- RENDER ---------------- */
 function render(){
 
-  let list=document.getElementById("list");
-  list.innerHTML="";
+  let list = document.getElementById("list");
+  list.innerHTML = "";
 
-  let data=getData();
+  let data = getData();
 
   data
-  .filter(r=>filter==="Tutti" || r.cat===filter)
-  .sort((a,b=>{
-    let da=new Date((a.date||"1970-01-01")+"T"+(a.time||"00:00"));
-    let db=new Date((b.date||"1970-01-01")+"T"+(b.time||"00:00"));
-    return db-da;
-  }))
-  .forEach(r=>{
+  .filter(r => filter === "Tutti" || r.cat === filter)
+  .sort((a,b)=>{
+    let da = new Date((a.date||"1970-01-01")+"T"+(a.time||"00:00"));
+    let db = new Date((b.date||"1970-01-01")+"T"+(b.time||"00:00"));
+    return db - da;
+  })
+  .forEach(r => {
 
-    let div=document.createElement("div");
-    div.className="record "+getClass(r);
+    let div = document.createElement("div");
+    div.className = "record " + getClass(r);
 
-    div.innerHTML=`
+    div.innerHTML = `
       <div class="row">
 
         <select onchange="update(${r.id},'cat',this.value)">
-          ${getCategories().map(c=>
+          ${getCategories().map(c =>
             `<option value="${c}" ${r.cat===c?"selected":""}>${c}</option>`
           ).join("")}
         </select>
 
         <select onchange="updateImg(${r.id},this.value)">
           ${Array.from({length:999},(_,i)=>{
-            const val=`r${String(i+1).padStart(3,'0')}.jpg`;
-            return `<option value="${val}" ${r.img===val?"selected":""}>${i+1}</option>`;
+            const val = `r${String(i+1).padStart(3,'0')}.jpg`;
+            return `<option value="${val}" ${r.img===val?"selected":""}>
+              ${i+1}
+            </option>`;
           }).join("")}
         </select>
 
@@ -364,13 +331,14 @@ function render(){
       <input type="checkbox" ${r.done?"checked":""}
         onchange="update(${r.id},'done',this.checked)">
 
-      <textarea onblur="update(${r.id},'text',this.value)">${r.text}</textarea>
+      <textarea
+        placeholder="descrizione attività"
+        onblur="update(${r.id},'text',this.value)"
+      >${r.text}</textarea>
 
       <div class="small">
         data <input type="date" value="${r.date}"
           onchange="update(${r.id},'date',this.value)">
-
-        <div class="day">${getWeekDay(r.date)}</div>
 
         ora <input type="time" value="${r.time}"
           onchange="update(${r.id},'time',this.value)">
@@ -379,6 +347,18 @@ function render(){
 
     list.appendChild(div);
   });
+}
+
+/* ---------------- IMAGE ---------------- */
+function updateImg(id,val){
+  let data = getData();
+  let r = data.find(x => x.id === id);
+  if(!r) return;
+
+  r.img = val;
+
+  saveData(data);
+  render();
 }
 
 /* INIT */
