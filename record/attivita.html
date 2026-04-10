@@ -10,7 +10,7 @@ body{
   font-family:Arial;
   margin:0;
   padding:10px;
-  background:#f5f5f5;
+  background:#f4f4f4;
 }
 
 h1{text-align:center;}
@@ -21,37 +21,53 @@ h1{text-align:center;}
   gap:10px;
   align-items:center;
   justify-content:center;
-  margin-bottom:20px;
+  margin-bottom:15px;
 }
 
 .timer input{
   width:80px;
+  padding:5px;
 }
 
-.timer span{
-  font-size:26px;
-  min-width:60px;
-  text-align:center;
+.timer span b{
+  font-size:28px;
 }
 
-/* FILTRI */
-.filters{
+.start{
+  background:#2ecc71;
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:6px;
+}
+
+.reset{
+  background:#7f8c8d;
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:6px;
+}
+
+/* CATEGORIE */
+#catBar{
   display:flex;
+  gap:8px;
   justify-content:center;
-  gap:10px;
-  margin-bottom:15px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
 }
 
-.filters button{
-  padding:8px 12px;
+#catBar button{
+  padding:6px 10px;
 }
 
 /* RECORD */
 .record{
   background:white;
-  border-radius:8px;
   padding:10px;
   margin-bottom:10px;
+  border-radius:8px;
   box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
@@ -63,10 +79,14 @@ h1{text-align:center;}
 
 .record img{
   width:100%;
-  margin-top:8px;
   border-radius:6px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+  margin-top:8px;
 }
+
+/* STATI */
+.empty{background:white;}
+.partial{background:#ffe5e5;}
+.done{background:#e5ffe5;}
 
 .row{
   display:flex;
@@ -78,11 +98,6 @@ h1{text-align:center;}
 .small{
   font-size:14px;
 }
-
-/* COLORI STATO */
-.empty{background:#fff;}
-.partial{background:#ffe5e5;}
-.done{background:#e5ffe5;}
 
 button{
   cursor:pointer;
@@ -97,24 +112,21 @@ button{
 <!-- TIMER -->
 <div class="timer">
 <input type="number" id="secInput" placeholder="sec">
-<button onclick="startTimer()">Start</button>
-<button onclick="resetTimer()">Reset</button>
+
+<button class="start" onclick="startTimer()">Start</button>
+<button class="reset" onclick="resetTimer()">Reset</button>
+
 <span id="display"><b>0</b></span>
 </div>
 
 <audio id="beep" src="rsound/rdri.mp3"></audio>
 
-<!-- FILTRI -->
-<div class="filters">
-<button onclick="setFilter('all')">Tutte</button>
-<button onclick="setFilter('1')">Cat 1</button>
-<button onclick="setFilter('2')">Cat 2</button>
-<button onclick="setFilter('3')">Cat 3</button>
-</div>
+<!-- CATEGORIE -->
+<div id="catBar"></div>
 
 <!-- ADD -->
 <div style="text-align:center;margin-bottom:10px;">
-<button onclick="addRecord()">+ Nuovo Record</button>
+<button onclick="addRecord()">+ Record</button>
 </div>
 
 <!-- LISTA -->
@@ -123,8 +135,11 @@ button{
 <script>
 
 let storageKey="dashboard_attivita";
+let catKey="dashboard_categories";
+
 let timer=null;
 let remaining=0;
+
 let filter="all";
 
 /* ---------------- TIMER ---------------- */
@@ -153,7 +168,39 @@ function resetTimer(){
   display.innerHTML="<b>0</b>";
 }
 
-/* ---------------- FILTER ---------------- */
+/* ---------------- CATEGORIE ---------------- */
+function getCategories(){
+  return JSON.parse(localStorage.getItem(catKey)) || ["Lavoro","Personale","Famiglia"];
+}
+
+function saveCategories(cats){
+  localStorage.setItem(catKey,JSON.stringify(cats));
+}
+
+function renderCategories(){
+  let bar=document.getElementById("catBar");
+  bar.innerHTML="";
+
+  let cats=getCategories();
+
+  cats.forEach(c=>{
+    bar.innerHTML+=`<button onclick="setFilter('${c}')">${c}</button>`;
+  });
+
+  bar.innerHTML+=`<button onclick="addCategory()">+</button>`;
+}
+
+function addCategory(){
+  let name=prompt("Nome categoria:");
+  if(!name) return;
+
+  let cats=getCategories();
+  cats.push(name);
+
+  saveCategories(cats);
+  renderCategories();
+}
+
 function setFilter(f){
   filter=f;
   render();
@@ -168,13 +215,13 @@ function saveData(data){
   localStorage.setItem(storageKey,JSON.stringify(data));
 }
 
-/* ---------------- ADD ---------------- */
+/* ---------------- RECORD ---------------- */
 function addRecord(){
   let data=getData();
 
   data.push({
     id:Date.now(),
-    cat:"1",
+    cat:getCategories()[0],
     img:"r001.jpg",
     text:"",
     done:false,
@@ -186,17 +233,14 @@ function addRecord(){
   render();
 }
 
-/* ---------------- DELETE ---------------- */
 function deleteRecord(id){
   let data=getData().filter(r=>r.id!==id);
   saveData(data);
   render();
 }
 
-/* ---------------- UPDATE ---------------- */
 function update(id,field,value){
   let data=getData();
-
   let r=data.find(x=>x.id===id);
   r[field]=value;
 
@@ -213,13 +257,19 @@ function getClass(r){
 
 /* ---------------- RENDER ---------------- */
 function render(){
+
   let list=document.getElementById("list");
   list.innerHTML="";
 
   let data=getData();
 
   data
-  .filter(r=>filter==="all" || r.cat===filter)
+  .filter(r => filter==="all" || r.cat===filter)
+  .sort((a,b)=>{
+    let da=new Date((a.date||"1970-01-01")+"T"+(a.time||"00:00"));
+    let db=new Date((b.date||"1970-01-01")+"T"+(b.time||"00:00"));
+    return db-da;
+  })
   .forEach(r=>{
 
     let div=document.createElement("div");
@@ -229,9 +279,9 @@ function render(){
       <div class="row">
 
         <select onchange="update(${r.id},'cat',this.value)">
-          <option value="1" ${r.cat=="1"?"selected":""}>Cat 1</option>
-          <option value="2" ${r.cat=="2"?"selected":""}>Cat 2</option>
-          <option value="3" ${r.cat=="3"?"selected":""}>Cat 3</option>
+          ${getCategories().map(c=>
+            `<option value="${c}" ${r.cat===c?"selected":""}>${c}</option>`
+          ).join("")}
         </select>
 
         <select onchange="updateImg(${r.id},this.value)">
@@ -249,19 +299,19 @@ function render(){
       <img loading="lazy" src="rimage/${r.img}">
 
       <input type="checkbox" ${r.done?"checked":""}
-      onchange="update(${r.id},'done',this.checked)">
+        onchange="update(${r.id},'done',this.checked)">
 
       <textarea
         placeholder="descrizione attività"
-        oninput="update(${r.id},'text',this.value)"
+        onblur="update(${r.id},'text',this.value)"
       >${r.text}</textarea>
 
       <div class="small">
         data <input type="date" value="${r.date}"
-        onchange="update(${r.id},'date',this.value)">
+          onchange="update(${r.id},'date',this.value)">
 
         ora <input type="time" value="${r.time}"
-        onchange="update(${r.id},'time',this.value)">
+          onchange="update(${r.id},'time',this.value)">
       </div>
     `;
 
@@ -274,14 +324,16 @@ function updateImg(id,val){
   let data=getData();
   let r=data.find(x=>x.id===id);
   r.img=val;
+
   saveData(data);
   render();
 }
 
 /* INIT */
+renderCategories();
 render();
 
 </script>
 
 </body>
-  </html>
+</html>
