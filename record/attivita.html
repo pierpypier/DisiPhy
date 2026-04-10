@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda attività</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f3f3f3;
+}
+
+h1{
+    text-align:center;
+}
+
+/* ===== BOX ===== */
+.box{
+    background:#fff;
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+}
+
+/* ===== TIMER ===== */
+.btn{
+    border:none;
+    padding:8px 16px;
+    border-radius:999px;
+    color:#fff;
+    margin:5px;
+    cursor:pointer;
+}
+
+.start{background:green;}
+.reset{background:red;}
+
+/* ===== CATEGORIE ===== */
+.cat-btn{
+    background:#1e66ff;
+    color:#fff;
+    border:none;
+    margin:3px;
+    padding:6px 10px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* ===== RECORD ===== */
+.record{
+    background:#fff;
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.record.done{background:#d6f8d6;}
+.record.filled{background:#ffe1e1;}
+
+textarea{
+    width:100%;
+    min-height:60px;
+    resize:vertical;
+}
+
+img{
+    width:100px;
+    display:block;
+    margin-top:5px;
+}
+
+.small{
+    font-size:12px;
+    color:#444;
+    margin-top:3px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Agenda attività</h1>
+
+<!-- ================= TIMER ================= -->
+<div class="box">
+    <input type="number" id="sec" placeholder="secondi">
+    <button class="btn start" id="startBtn">Start</button>
+    <button class="btn reset" id="resetBtn">Reset</button>
+    <div id="count">0</div>
+</div>
+
+<!-- ================= CATEGORIE ================= -->
+<div class="box">
+    <input id="newCat" placeholder="nuova categoria">
+    <button id="addCat">Aggiungi</button>
+    <div id="cats"></div>
+</div>
+
+<!-- ================= RECORD ================= -->
+<div class="box">
+    <button id="addRec">+ Nuovo record</button>
+    <div id="list"></div>
+</div>
+
+<audio id="beep" src="rsound/rdri.mp3"></audio>
+
+<script>
+
+/* =========================
+   STORAGE
+========================= */
+const K_CAT="cats_db";
+const K_REC="recs_db";
+
+let cats=JSON.parse(localStorage.getItem(K_CAT))||["Tutti"];
+let recs=JSON.parse(localStorage.getItem(K_REC))||[];
+
+let filter="Tutti";
+
+/* =========================
+   SAVE
+========================= */
+function save(){
+    localStorage.setItem(K_CAT,JSON.stringify(cats));
+    localStorage.setItem(K_REC,JSON.stringify(recs));
+}
+
+/* =========================
+   WEEKDAY FIX (CRITICO)
+========================= */
+function getWeekday(dateStr){
+    if(!dateStr) return "";
+    const d=new Date(dateStr);
+    if(isNaN(d.getTime())) return "";
+    return ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"][d.getDay()];
+}
+
+/* =========================
+   CATEGORIE
+========================= */
+function renderCats(){
+    const box=document.querySelector("#cats");
+    box.innerHTML="";
+
+    cats.forEach(c=>{
+        const wrap=document.createElement("div");
+
+        const b=document.createElement("button");
+        b.className="cat-btn";
+        b.textContent=c;
+
+        b.onclick=()=>{
+            filter=c;
+            renderRecs();
+        };
+
+        wrap.appendChild(b);
+
+        if(c!=="Tutti"){
+            const del=document.createElement("button");
+            del.textContent="x";
+            del.onclick=()=>{
+                cats=cats.filter(x=>x!==c);
+                save();
+                renderCats();
+                renderRecs();
+            };
+            wrap.appendChild(del);
+        }
+
+        box.appendChild(wrap);
+    });
+}
+
+document.querySelector("#addCat").onclick=()=>{
+    const v=document.querySelector("#newCat").value.trim();
+    if(v && !cats.includes(v)){
+        cats.push(v);
+        save();
+        renderCats();
+    }
+};
+
+/* =========================
+   RECORD
+========================= */
+function newRecord(){
+    recs.push({
+        id:Date.now(),
+        cat:"Tutti",
+        img:1,
+        text:"",
+        done:false,
+        date:"1900-01-01",
+        time:"08:00"
+    });
+    save();
+    renderRecs();
+}
+
+document.querySelector("#addRec").onclick=newRecord;
+
+/* =========================
+   RENDER RECORDS
+========================= */
+function renderRecs(){
+    const box=document.querySelector("#list");
+    box.innerHTML="";
+
+    recs
+    .filter(r=>filter==="Tutti"||r.cat===filter)
+    .forEach(r=>{
+
+        const div=document.createElement("div");
+        div.className="record";
+
+        if(r.done) div.classList.add("done");
+        if(r.text && r.text.trim()!=="") div.classList.add("filled");
+
+        /* categoria */
+        const sel=document.createElement("select");
+        cats.forEach(c=>{
+            const o=document.createElement("option");
+            o.value=c;
+            o.textContent=c;
+            if(c===r.cat) o.selected=true;
+            sel.appendChild(o);
+        });
+
+        sel.onchange=e=>{
+            r.cat=e.target.value;
+            save();
+        };
+
+        /* immagine */
+        const img=document.createElement("img");
+
+        function setImg(){
+            const n=String(r.img||1).padStart(3,"0");
+            img.src="rimage/r"+n+".jpg";
+        }
+
+        const imgIn=document.createElement("input");
+        imgIn.type="number";
+        imgIn.min=1;
+        imgIn.max=999;
+        imgIn.value=r.img;
+
+        imgIn.oninput=e=>{
+            r.img=e.target.value;
+            setImg();
+            save();
+        };
+
+        setImg();
+
+        /* descrizione */
+        const txt=document.createElement("textarea");
+        txt.placeholder="descrizione attività";
+        txt.value=r.text;
+
+        txt.oninput=e=>{
+            r.text=e.target.value;
+            save();
+            renderRecs();
+        };
+
+        /* done */
+        const chk=document.createElement("input");
+        chk.type="checkbox";
+        chk.checked=r.done;
+
+        chk.onchange=e=>{
+            r.done=e.target.checked;
+            save();
+            renderRecs();
+        };
+
+        /* DATA + WEEKDAY (FIX GARANTITO) */
+        const date=document.createElement("input");
+        date.type="date";
+        date.value=r.date;
+
+        const wd=document.createElement("div");
+        wd.className="small";
+        wd.textContent=getWeekday(r.date);
+
+        date.oninput=e=>{
+            r.date=e.target.value;
+            wd.textContent=getWeekday(r.date);
+            save();
+        };
+
+        /* ORA */
+        const time=document.createElement("input");
+        time.type="time";
+        time.value=r.time;
+
+        time.oninput=e=>{
+            r.time=e.target.value;
+            save();
+        };
+
+        /* delete record */
+        const del=document.createElement("button");
+        del.textContent="Elimina";
+        del.onclick=()=>{
+            recs=recs.filter(x=>x.id!==r.id);
+            save();
+            renderRecs();
+        };
+
+        div.append(sel,imgIn,img,txt,chk,date,wd,time,del);
+        box.appendChild(div);
+    });
+}
+
+/* =========================
+   TIMER
+========================= */
+let t=null;
+let r=0;
+
+function startTimer(){
+    const input=document.querySelector("#sec");
+    r=parseInt(input.value||0);
+
+    const out=document.querySelector("#count");
+    const beep=document.querySelector("#beep");
+
+    clearInterval(t);
+
+    t=setInterval(()=>{
+        out.textContent=r;
+
+        if(r<=0){
+            clearInterval(t);
+            beep.play();
+            return;
+        }
+        r--;
+    },1000);
+}
+
+function resetTimer(){
+    clearInterval(t);
+    document.querySelector("#count").textContent="0";
+}
+
+document.querySelector("#startBtn").onclick=startTimer;
+document.querySelector("#resetBtn").onclick=resetTimer;
+
+/* =========================
+   INIT
+========================= */
+renderCats();
+renderRecs();
+
+</script>
+
+</body>
+</html>
