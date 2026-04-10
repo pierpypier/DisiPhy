@@ -3,340 +3,387 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agenda attività</title>
+<title>Dashboard Attività</title>
 
 <style>
-/* =========================
-   STILE GENERALE
-========================= */
 body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f4f4f4;
+  font-family:Arial;
+  margin:0;
+  padding:10px;
+  background:#f4f4f4;
 }
 
-h1{
-    text-align:center;
-    margin:10px 0;
+h1{text-align:center;}
+
+/* TIMER */
+.timer{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:15px;
 }
 
-/* =========================
-   TIMER
-========================= */
-#timerBox{
-    background:#fff;
-    padding:10px;
-    margin:10px;
-    border-radius:10px;
+.timer input{
+  width:80px;
+  padding:5px;
 }
 
-#countdown{
-    font-size:22px;
-    margin-top:5px;
+.timer span b{
+  font-size:28px;
 }
 
-button{
-    cursor:pointer;
+.start, .reset{
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:999px;
+  cursor:pointer;
 }
 
-/* pulsanti arrotondati */
-.btn{
-    border:none;
-    padding:8px 16px;
-    border-radius:50px;
-    margin:5px;
-    color:#fff;
+.start{ background:#2ecc71; }
+.reset{ background:#7f8c8d; }
+
+/* CATEGORIE */
+#catBar{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:10px;
 }
 
-.btn-start{ background:green; }
-.btn-reset{ background:red; }
-
-/* =========================
-   CATEGORIE
-========================= */
-#catBox{
-    background:#fff;
-    margin:10px;
-    padding:10px;
-    border-radius:10px;
+.catBtn{
+  background:#3498db;
+  color:white;
+  border:none;
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
 }
 
-.cat-btn{
-    background:#1e66ff;
-    color:#fff;
-    border:none;
-    padding:6px 10px;
-    margin:3px;
-    border-radius:6px;
+.catDelete{
+  background:transparent;
+  border:none;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-/* =========================
-   RECORD
-========================= */
+/* RECORD */
 .record{
-    background:#fff;
-    margin:10px;
-    padding:10px;
-    border-radius:10px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  background:white;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
-.record.done{
-    background:#d4f8d4;
+.record textarea{
+  width:100%;
+  font-size:18px;
+  margin-top:5px;
 }
 
-.record.texted{
-    background:#ffd6d6;
+.record img{
+  width:100%;
+  border-radius:6px;
+  margin-top:8px;
 }
 
-textarea{
-    width:100%;
-    min-height:60px;
-    resize:vertical;
+/* STATI */
+.empty{background:white;}
+.partial{background:#ffe5e5;}
+.done{background:#e5ffe5;}
+
+.row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
 }
 
-/* ========================= */
-img{
-    max-width:120px;
-    display:block;
-    margin-top:5px;
+.small{font-size:14px;}
+.day{
+  font-weight:bold;
+  margin-top:4px;
+  color:#555;
 }
+
+button{cursor:pointer;}
 </style>
 </head>
 
 <body>
 
-<h1>Agenda attività</h1>
+<h1>Dashboard Attività</h1>
 
-<!-- ================= TIMER ================= -->
-<div id="timerBox">
-    <input type="number" id="secInput" placeholder="secondi">
-    <button class="btn btn-start" id="startBtn">Start</button>
-    <button class="btn btn-reset" id="resetBtn">Reset</button>
-    <div id="countdown">0</div>
+<!-- TIMER -->
+<div class="timer">
+<input type="number" id="secInput" placeholder="sec">
+
+<button class="start" onclick="startTimer()">Start</button>
+<button class="reset" onclick="resetTimer()">Reset</button>
+
+<span id="display"><b>0</b></span>
 </div>
 
-<!-- ================= CATEGORIE ================= -->
-<div id="catBox">
-    <input type="text" id="newCat" placeholder="nuova categoria">
-    <button id="addCat">Aggiungi</button>
-    <div id="catList"></div>
+<audio id="beep" src="rsound/rdri.mp3"></audio>
+
+<!-- CATEGORIE -->
+<div id="catBar"></div>
+
+<div style="text-align:center;margin-bottom:10px;">
+<button onclick="addRecord()">+ Record</button>
 </div>
 
-<!-- ================= RECORD ================= -->
-<div id="recordBox"></div>
-
-<audio id="alarm" src="rsound/rdri.mp3"></audio>
+<div id="list"></div>
 
 <script>
-/* =========================================================
-   STORAGE KEYS
-========================================================= */
-const LS_CAT = "categorie_v1";
-const LS_REC = "record_v1";
 
-/* =========================================================
-   INIT DATA
-========================================================= */
-let categories = JSON.parse(localStorage.getItem(LS_CAT)) || ["Tutti"];
-let records = JSON.parse(localStorage.getItem(LS_REC)) || [];
+let storageKey="dashboard_attivita";
+let catKey="dashboard_categories";
 
-let activeFilter = "Tutti";
+let timer=null;
+let remaining=0;
 
-/* =========================================================
-   SALVATAGGIO
-========================================================= */
-function save(){
-    localStorage.setItem(LS_CAT, JSON.stringify(categories));
-    localStorage.setItem(LS_REC, JSON.stringify(records));
-}
+let filter="Tutti";
 
-/* =========================================================
-   CATEGORIE UI
-========================================================= */
-function renderCategories(){
-    const box = document.querySelector("#catList");
-    box.innerHTML = "";
-
-    categories.forEach(cat=>{
-        const btn = document.createElement("button");
-        btn.className = "cat-btn";
-        btn.textContent = cat;
-
-        btn.onclick = ()=>{
-            activeFilter = cat;
-            renderRecords();
-        };
-
-        box.appendChild(btn);
-    });
-}
-
-/* aggiunta categoria */
-document.querySelector("#addCat").addEventListener("click", ()=>{
-    const val = document.querySelector("#newCat").value.trim();
-    if(val && !categories.includes(val)){
-        categories.push(val);
-        save();
-        renderCategories();
-    }
-});
-
-/* =========================================================
-   RECORD
-========================================================= */
-function weekday(dateStr){
-    const days = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
-    const d = new Date(dateStr);
-    return isNaN(d) ? "" : days[d.getDay()];
-}
-
-function renderRecords(){
-    const box = document.querySelector("#recordBox");
-    box.innerHTML = "";
-
-    records
-    .filter(r => activeFilter === "Tutti" || r.cat === activeFilter)
-    .forEach((r, i)=>{
-
-        const div = document.createElement("div");
-        div.className = "record";
-
-        if(r.done) div.classList.add("done");
-        if(r.text && r.text.length>0) div.classList.add("texted");
-
-        /* categoria */
-        const sel = document.createElement("select");
-        categories.forEach(c=>{
-            const o = document.createElement("option");
-            o.value = c;
-            o.textContent = c;
-            if(c === r.cat) o.selected = true;
-            sel.appendChild(o);
-        });
-
-        sel.onchange = e=>{
-            r.cat = e.target.value;
-            save(); renderRecords();
-        };
-
-        /* immagine */
-        const img = document.createElement("img");
-        img.src = "rimage/r" + String(r.img).padStart(3,"0") + ".jpg";
-
-        const imgSel = document.createElement("input");
-        imgSel.type = "number";
-        imgSel.min = 1;
-        imgSel.max = 999;
-        imgSel.value = r.img;
-
-        imgSel.oninput = e=>{
-            r.img = e.target.value;
-            img.src = "rimage/r" + String(r.img).padStart(3,"0") + ".jpg";
-            save();
-        };
-
-        /* descrizione */
-        const txt = document.createElement("textarea");
-        txt.placeholder = "descrizione attività";
-        txt.value = r.text || "";
-
-        txt.oninput = e=>{
-            r.text = e.target.value;
-            save(); renderRecords();
-        };
-
-        /* checkbox done */
-        const chk = document.createElement("input");
-        chk.type = "checkbox";
-        chk.checked = r.done;
-
-        chk.onchange = e=>{
-            r.done = e.target.checked;
-            save(); renderRecords();
-        };
-
-        /* data */
-        const date = document.createElement("input");
-        date.type = "date";
-        date.value = r.date || "";
-
-        const weekdayDiv = document.createElement("div");
-        weekdayDiv.textContent = weekday(r.date);
-
-        date.onchange = e=>{
-            r.date = e.target.value;
-            weekdayDiv.textContent = weekday(r.date);
-            save();
-        };
-
-        /* ora */
-        const time = document.createElement("input");
-        time.type = "time";
-        time.value = r.time || "";
-
-        time.onchange = e=>{
-            r.time = e.target.value;
-            save();
-        };
-
-        div.append(sel, imgSel, img, txt, chk, date, weekdayDiv, time);
-        box.appendChild(div);
-    });
-}
-
-/* aggiungi record demo */
-if(records.length === 0){
-    records.push({
-        cat:"Tutti",
-        img:1,
-        text:"",
-        done:false,
-        date:"",
-        time:""
-    });
-}
-
-/* =========================================================
-   TIMER
-========================================================= */
-let timer = null;
-let remaining = 0;
-
+/* ---------------- TIMER ---------------- */
 function startTimer(){
-    const input = document.querySelector("#secInput");
-    remaining = parseInt(input.value);
+  if(timer) return;
 
-    const display = document.querySelector("#countdown");
-    const alarm = document.querySelector("#alarm");
+  const input=document.getElementById("secInput");
+  const display=document.getElementById("display");
+  const beep=document.getElementById("beep");
 
-    clearInterval(timer);
+  remaining=parseInt(input.value||0);
 
-    timer = setInterval(()=>{
-        display.textContent = remaining;
+  timer=setInterval(()=>{
+    if(remaining<=0){
+      clearInterval(timer);
+      timer=null;
+      beep.play().catch(()=>{});
+      return;
+    }
 
-        if(remaining <= 0){
-            clearInterval(timer);
-            alarm.play();
-        }
-        remaining--;
-    },1000);
+    display.innerHTML="<b>"+remaining+"</b>";
+    remaining--;
+  },1000);
 }
 
 function resetTimer(){
-    clearInterval(timer);
-    document.querySelector("#countdown").textContent = "0";
+  clearInterval(timer);
+  timer=null;
+  remaining=0;
+  document.getElementById("display").innerHTML="<b>0</b>";
 }
 
-/* DOM queries dirette nei listener */
-document.querySelector("#startBtn").addEventListener("click", startTimer);
-document.querySelector("#resetBtn").addEventListener("click", resetTimer);
+/* ---------------- CATEGORIE ---------------- */
+function getCategories(){
+  let cats=JSON.parse(localStorage.getItem(catKey));
+  if(!cats || !cats.length){
+    cats=["Lavoro","Personale","Famiglia"];
+    localStorage.setItem(catKey,JSON.stringify(cats));
+  }
+  return cats;
+}
 
-/* =========================================================
-   INIT
-========================================================= */
+function saveCategories(cats){
+  localStorage.setItem(catKey,JSON.stringify(cats));
+}
+
+function setFilter(f){
+  filter=f;
+  render();
+}
+
+function addCategory(){
+  let name=prompt("Nome categoria:");
+  if(!name) return;
+
+  let cats=getCategories();
+  if(!cats.includes(name)){
+    cats.push(name);
+  }
+
+  saveCategories(cats);
+  renderCategories();
+  render();
+}
+
+function deleteCategory(cat){
+  let cats=getCategories().filter(c=>c!==cat);
+  saveCategories(cats);
+
+  if(filter===cat){
+    filter="Tutti";
+  }
+
+  renderCategories();
+  render();
+}
+
+function renderCategories(){
+  const bar=document.getElementById("catBar");
+  const cats=getCategories();
+
+  let html=`<button class="catBtn" onclick="setFilter('Tutti')">Tutti</button>`;
+
+  html+=cats.map(c=>`
+    <div class="catBtn">
+      <span onclick="setFilter('${c}')">${c}</span>
+      <button class="catDelete" onclick="deleteCategory('${c}')">×</button>
+    </div>
+  `).join("");
+
+  html+=`<button class="catBtn" onclick="addCategory()">+</button>`;
+
+  bar.innerHTML=html;
+}
+
+/* ---------------- DATA ---------------- */
+function getData(){
+  return JSON.parse(localStorage.getItem(storageKey)||"[]");
+}
+
+function saveData(data){
+  localStorage.setItem(storageKey,JSON.stringify(data));
+}
+
+/* ---------------- RECORD ---------------- */
+function addRecord(){
+  let data=getData();
+  let cats=getCategories();
+
+  data.push({
+    id:Date.now(),
+    cat: filter==="Tutti" ? (cats[0]||"") : filter,
+    img:"r001.jpg",
+    text:"",
+    done:false,
+    date:"",
+    time:""
+  });
+
+  saveData(data);
+  render();
+}
+
+function deleteRecord(id){
+  let data=getData().filter(r=>r.id!==id);
+  saveData(data);
+  render();
+}
+
+function update(id,field,value){
+  let data=getData();
+  let r=data.find(x=>x.id===id);
+  if(!r) return;
+
+  r[field]=value;
+
+  saveData(data);
+  render();
+}
+
+/* ---------------- GIORNO SETTIMANA ---------------- */
+function getWeekDay(dateStr){
+  if(!dateStr) return "";
+
+  const days=["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
+  const d=new Date(dateStr);
+
+  return days[d.getDay()];
+}
+
+/* ---------------- COLOR ---------------- */
+function getClass(r){
+  if(r.done) return "done";
+  if(r.text.trim()!=="") return "partial";
+  return "empty";
+}
+
+/* ---------------- IMAGE ---------------- */
+function updateImg(id,val){
+  let data=getData();
+  let r=data.find(x=>x.id===id);
+  if(!r) return;
+
+  r.img=val;
+
+  saveData(data);
+  render();
+}
+
+/* ---------------- RENDER ---------------- */
+function render(){
+
+  let list=document.getElementById("list");
+  list.innerHTML="";
+
+  let data=getData();
+
+  data
+  .filter(r=>filter==="Tutti" || r.cat===filter)
+  .sort((a,b=>{
+    let da=new Date((a.date||"1970-01-01")+"T"+(a.time||"00:00"));
+    let db=new Date((b.date||"1970-01-01")+"T"+(b.time||"00:00"));
+    return db-da;
+  }))
+  .forEach(r=>{
+
+    let div=document.createElement("div");
+    div.className="record "+getClass(r);
+
+    div.innerHTML=`
+      <div class="row">
+
+        <select onchange="update(${r.id},'cat',this.value)">
+          ${getCategories().map(c=>
+            `<option value="${c}" ${r.cat===c?"selected":""}>${c}</option>`
+          ).join("")}
+        </select>
+
+        <select onchange="updateImg(${r.id},this.value)">
+          ${Array.from({length:999},(_,i)=>{
+            const val=`r${String(i+1).padStart(3,'0')}.jpg`;
+            return `<option value="${val}" ${r.img===val?"selected":""}>${i+1}</option>`;
+          }).join("")}
+        </select>
+
+        <button onclick="deleteRecord(${r.id})">🗑</button>
+
+      </div>
+
+      <img loading="lazy" src="rimage/${r.img}">
+
+      <input type="checkbox" ${r.done?"checked":""}
+        onchange="update(${r.id},'done',this.checked)">
+
+      <textarea onblur="update(${r.id},'text',this.value)">${r.text}</textarea>
+
+      <div class="small">
+        data <input type="date" value="${r.date}"
+          onchange="update(${r.id},'date',this.value)">
+
+        <div class="day">${getWeekDay(r.date)}</div>
+
+        ora <input type="time" value="${r.time}"
+          onchange="update(${r.id},'time',this.value)">
+      </div>
+    `;
+
+    list.appendChild(div);
+  });
+}
+
+/* INIT */
 renderCategories();
-renderRecords();
+render();
 
 </script>
 
