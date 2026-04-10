@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attività 3</title>
 
+<style>
+body{font-family:Arial;background:#fff;margin:0;padding:10px;}
+h1{text-align:center;}
+
+.timer-box{display:flex;flex-direction:column;align-items:center;margin-bottom:20px;}
+.timer-display{font-size:28px;margin:10px;}
+
+.start-btn{width:70px;height:70px;border-radius:50%;background:green;color:#fff;border:none;}
+
+.category{display:flex;align-items:center;gap:10px;margin:5px 0;}
+textarea{font-size:18px;width:100%;}
+
+.record{border-top:1px solid #ccc;padding:10px;margin-top:10px;}
+.record.white{background:#fff;}
+.record.red{background:#ffe5e5;}
+.record.green{background:#e5ffe5;}
+
+img{width:100%;max-height:200px;object-fit:cover;border:1px solid #ccc;box-shadow:0 2px 5px rgba(0,0,0,0.2);}
+
+.plus-btn{width:100%;padding:15px;font-size:18px;margin-top:10px;}
+</style>
+</head>
+
+<body>
+
+<h1>Attività - 3</h1>
+
+<div class="timer-box">
+<input type="number" id="secondsInput">
+<button class="start-btn" onclick="startTimer()">Start</button>
+<div class="timer-display" id="display">0</div>
+<audio id="alarm" src="rsound/rdri.mp3"></audio>
+</div>
+
+<div class="category">
+<button onclick="go('attivita1.html')">Attività 1</button>
+<textarea id="cat1"></textarea>
+</div>
+
+<div class="category">
+<button onclick="go('attivita2.html')">Attività 2</button>
+<textarea id="cat2"></textarea>
+</div>
+
+<div class="category">
+<button onclick="go('attivita3.html')">Attività 3</button>
+<textarea id="cat3"></textarea>
+</div>
+
+<div id="records"></div>
+<button class="plus-btn" onclick="addRecord()">+ Record</button>
+
+<script>
+let storageKey="records_attivita3";
+
+function startTimer(){
+let sec=parseInt(document.getElementById("secondsInput").value);
+let d=document.getElementById("display");
+let a=document.getElementById("alarm");
+let t=setInterval(()=>{
+if(sec<=0){clearInterval(t);a.play();return;}
+d.innerText=sec;
+sec--;
+},1000);
+}
+
+function go(p){location.href=p;}
+
+function load(){
+let data=JSON.parse(localStorage.getItem(storageKey)||"[]");
+data.forEach(r=>createRecord(r));
+}
+
+function save(){
+let all=[];
+document.querySelectorAll(".record").forEach(r=>{
+all.push({
+img:r.querySelector("select").value,
+text:r.querySelector("textarea").value,
+date:r.querySelector(".date").value,
+time:r.querySelector(".time").value,
+done:r.querySelector(".done").checked
+});
+});
+localStorage.setItem(storageKey,JSON.stringify(all));
+}
+
+function createRecord(data={}){
+let div=document.createElement("div");
+div.className="record";
+
+div.innerHTML=`
+<select onchange="updateImage(this)">
+${Array.from({length:999},(_,i)=>`<option value="r${String(i+1).padStart(3,'0')}.jpg">${i+1}</option>`).join("")}
+</select>
+
+<img src="rimage/${data.img||'r001.jpg'}">
+
+<input type="checkbox" class="done" onchange="save()">
+
+<textarea placeholder="descrizione attività">${data.text||""}</textarea>
+
+<div>data <input type="date" class="date"> ora <input type="time" class="time"></div>
+`;
+
+document.getElementById("records").appendChild(div);
+save();
+}
+
+function updateImage(sel){
+sel.parentElement.querySelector("img").src="rimage/"+sel.value;
+save();
+}
+
+function addRecord(){createRecord();}
+
+load();
+</script>
+
+</body>
+  </html>
