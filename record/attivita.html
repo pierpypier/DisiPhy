@@ -7,16 +7,13 @@
 
 <style>
 body{
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     margin:0;
     background:#f3f3f3;
 }
 
-h1{
-    text-align:center;
-}
+h1{text-align:center;}
 
-/* ===== BOX ===== */
 .box{
     background:#fff;
     margin:10px;
@@ -24,20 +21,34 @@ h1{
     border-radius:10px;
 }
 
-/* ===== TIMER ===== */
-.btn{
-    border:none;
-    padding:8px 16px;
-    border-radius:999px;
-    color:#fff;
-    margin:5px;
-    cursor:pointer;
+.record{
+    background:#fff;
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    transition:0.2s;
 }
 
-.start{background:green;}
-.reset{background:red;}
+/* COMPLETATO */
+.record.done{
+    background:#c8f7c5;
+}
 
-/* ===== CATEGORIE ===== */
+.done-label{
+    font-weight:bold;
+    color:green;
+    margin-top:5px;
+}
+
+/* IMMAGINE 90% */
+.record img{
+    width:90%;
+    display:block;
+    margin:8px auto;
+}
+
+/* CATEGORIE */
 .cat-btn{
     background:#1e66ff;
     color:#fff;
@@ -45,37 +56,23 @@ h1{
     margin:3px;
     padding:6px 10px;
     border-radius:6px;
+}
+
+/* TIMER */
+.btn{
+    border:none;
+    padding:8px 16px;
+    border-radius:999px;
+    color:#fff;
     cursor:pointer;
 }
-
-/* ===== RECORD ===== */
-.record{
-    background:#fff;
-    margin:10px;
-    padding:10px;
-    border-radius:10px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
-}
-
-.record.done{background:#d6f8d6;}
-.record.filled{background:#ffe1e1;}
+.start{background:green;}
+.reset{background:red;}
 
 textarea{
     width:100%;
     min-height:60px;
     resize:vertical;
-}
-
-img{
-    width:100px;
-    display:block;
-    margin-top:5px;
-}
-
-.small{
-    font-size:12px;
-    color:#444;
-    margin-top:3px;
 }
 </style>
 </head>
@@ -84,236 +81,115 @@ img{
 
 <h1>Agenda attività</h1>
 
-<!-- ================= TIMER ================= -->
-<div class="box">
-    <input type="number" id="sec" placeholder="secondi">
-    <button class="btn start" id="startBtn">Start</button>
-    <button class="btn reset" id="resetBtn">Reset</button>
-    <div id="count">0</div>
+<div class="box" id="timer">
+<input id="sec" type="number">
+<button class="btn start" id="start">Start</button>
+<button class="btn reset" id="reset">Reset</button>
+<div id="out">0</div>
 </div>
 
-<!-- ================= CATEGORIE ================= -->
+<div class="box" id="cats"></div>
+
 <div class="box">
-    <input id="newCat" placeholder="nuova categoria">
-    <button id="addCat">Aggiungi</button>
-    <div id="cats"></div>
+<button id="add">+ record</button>
+<div id="list"></div>
 </div>
 
-<!-- ================= RECORD ================= -->
-<div class="box">
-    <button id="addRec">+ Nuovo record</button>
-    <div id="list"></div>
-</div>
-
-<audio id="beep" src="rsound/rdri.mp3"></audio>
+<audio id="sound" src="rsound/rdri.mp3"></audio>
 
 <script>
 
-/* =========================
-   STORAGE
-========================= */
-const K_CAT="cats_db";
-const K_REC="recs_db";
-
-let cats=JSON.parse(localStorage.getItem(K_CAT))||["Tutti"];
-let recs=JSON.parse(localStorage.getItem(K_REC))||[];
-
-let filter="Tutti";
+let recs=[];
 
 /* =========================
-   SAVE
+   CREATE RECORD
 ========================= */
-function save(){
-    localStorage.setItem(K_CAT,JSON.stringify(cats));
-    localStorage.setItem(K_REC,JSON.stringify(recs));
-}
-
-/* =========================
-   WEEKDAY FIX (CRITICO)
-========================= */
-function getWeekday(dateStr){
-    if(!dateStr) return "";
-    const d=new Date(dateStr);
-    if(isNaN(d.getTime())) return "";
-    return ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"][d.getDay()];
-}
-
-/* =========================
-   CATEGORIE
-========================= */
-function renderCats(){
-    const box=document.querySelector("#cats");
-    box.innerHTML="";
-
-    cats.forEach(c=>{
-        const wrap=document.createElement("div");
-
-        const b=document.createElement("button");
-        b.className="cat-btn";
-        b.textContent=c;
-
-        b.onclick=()=>{
-            filter=c;
-            renderRecs();
-        };
-
-        wrap.appendChild(b);
-
-        if(c!=="Tutti"){
-            const del=document.createElement("button");
-            del.textContent="x";
-            del.onclick=()=>{
-                cats=cats.filter(x=>x!==c);
-                save();
-                renderCats();
-                renderRecs();
-            };
-            wrap.appendChild(del);
-        }
-
-        box.appendChild(wrap);
-    });
-}
-
-document.querySelector("#addCat").onclick=()=>{
-    const v=document.querySelector("#newCat").value.trim();
-    if(v && !cats.includes(v)){
-        cats.push(v);
-        save();
-        renderCats();
-    }
-};
-
-/* =========================
-   RECORD
-========================= */
-function newRecord(){
-    recs.push({
+function createRecord(){
+    const r={
         id:Date.now(),
         cat:"Tutti",
-        img:1,
+        img:0,
         text:"",
         done:false,
         date:"1900-01-01",
         time:"08:00"
-    });
-    save();
-    renderRecs();
+    };
+
+    recs.push(r);
+    render();
 }
 
-document.querySelector("#addRec").onclick=newRecord;
-
 /* =========================
-   RENDER RECORDS
+   RENDER
 ========================= */
-function renderRecs(){
+function render(){
     const box=document.querySelector("#list");
     box.innerHTML="";
 
-    recs
-    .filter(r=>filter==="Tutti"||r.cat===filter)
-    .forEach(r=>{
+    recs.forEach(r=>{
 
         const div=document.createElement("div");
         div.className="record";
 
         if(r.done) div.classList.add("done");
-        if(r.text && r.text.trim()!=="") div.classList.add("filled");
 
-        /* categoria */
+        /* IMMAGINE DROPDOWN 0-999 */
         const sel=document.createElement("select");
-        cats.forEach(c=>{
+
+        for(let i=0;i<=999;i++){
             const o=document.createElement("option");
-            o.value=c;
-            o.textContent=c;
-            if(c===r.cat) o.selected=true;
+            o.value=i;
+            o.textContent=i;
+            if(i==r.img) o.selected=true;
             sel.appendChild(o);
-        });
+        }
 
-        sel.onchange=e=>{
-            r.cat=e.target.value;
-            save();
-        };
-
-        /* immagine */
         const img=document.createElement("img");
 
         function setImg(){
-            const n=String(r.img||1).padStart(3,"0");
-            img.src="rimage/r"+n+".jpg";
+            img.src="rimage/r"+String(r.img).padStart(3,"0")+".jpg";
         }
 
-        const imgIn=document.createElement("input");
-        imgIn.type="number";
-        imgIn.min=1;
-        imgIn.max=999;
-        imgIn.value=r.img;
-
-        imgIn.oninput=e=>{
+        sel.onchange=e=>{
             r.img=e.target.value;
             setImg();
-            save();
         };
 
         setImg();
 
-        /* descrizione */
+        /* DESCRIZIONE (FIX: NO RE-RENDER) */
         const txt=document.createElement("textarea");
         txt.placeholder="descrizione attività";
         txt.value=r.text;
 
         txt.oninput=e=>{
             r.text=e.target.value;
-            save();
-            renderRecs();
+            div.style.background = r.text.trim() ? "#ffe1e1" : "#fff";
         };
 
-        /* done */
+        /* CHECK COMPLETATO */
         const chk=document.createElement("input");
         chk.type="checkbox";
         chk.checked=r.done;
 
-        chk.onchange=e=>{
-            r.done=e.target.checked;
-            save();
-            renderRecs();
-        };
+        const label=document.createElement("div");
 
-        /* DATA + WEEKDAY (FIX GARANTITO) */
-        const date=document.createElement("input");
-        date.type="date";
-        date.value=r.date;
+        function updateDone(){
+            r.done=chk.checked;
 
-        const wd=document.createElement("div");
-        wd.className="small";
-        wd.textContent=getWeekday(r.date);
+            if(r.done){
+                div.classList.add("done");
+                label.textContent="COMPLETATO";
+            }else{
+                div.classList.remove("done");
+                label.textContent="";
+            }
+        }
 
-        date.oninput=e=>{
-            r.date=e.target.value;
-            wd.textContent=getWeekday(r.date);
-            save();
-        };
+        chk.onchange=updateDone;
+        updateDone();
 
-        /* ORA */
-        const time=document.createElement("input");
-        time.type="time";
-        time.value=r.time;
-
-        time.oninput=e=>{
-            r.time=e.target.value;
-            save();
-        };
-
-        /* delete record */
-        const del=document.createElement("button");
-        del.textContent="Elimina";
-        del.onclick=()=>{
-            recs=recs.filter(x=>x.id!==r.id);
-            save();
-            renderRecs();
-        };
-
-        div.append(sel,imgIn,img,txt,chk,date,wd,time,del);
+        div.append(sel,img,txt,chk,label);
         box.appendChild(div);
     });
 }
@@ -321,43 +197,35 @@ function renderRecs(){
 /* =========================
    TIMER
 ========================= */
-let t=null;
+let t;
 let r=0;
 
-function startTimer(){
-    const input=document.querySelector("#sec");
-    r=parseInt(input.value||0);
-
-    const out=document.querySelector("#count");
-    const beep=document.querySelector("#beep");
+document.querySelector("#start").onclick=()=>{
+    r=parseInt(document.querySelector("#sec").value||0);
 
     clearInterval(t);
 
     t=setInterval(()=>{
-        out.textContent=r;
+        document.querySelector("#out").textContent=r;
 
         if(r<=0){
             clearInterval(t);
-            beep.play();
+            document.querySelector("#sound").play();
             return;
         }
         r--;
     },1000);
-}
+};
 
-function resetTimer(){
+document.querySelector("#reset").onclick=()=>{
     clearInterval(t);
-    document.querySelector("#count").textContent="0";
-}
+    document.querySelector("#out").textContent=0;
+};
 
-document.querySelector("#startBtn").onclick=startTimer;
-document.querySelector("#resetBtn").onclick=resetTimer;
+/* INIT */
+document.querySelector("#add").onclick=createRecord;
 
-/* =========================
-   INIT
-========================= */
-renderCats();
-renderRecs();
+createRecord();
 
 </script>
 
