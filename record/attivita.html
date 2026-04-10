@@ -33,16 +33,21 @@ h1{text-align:center;}
   font-size:28px;
 }
 
-.start, .reset{
+.start{
+  background:#2ecc71;
   color:white;
   border:none;
   padding:10px 14px;
-  border-radius:999px;
-  cursor:pointer;
+  border-radius:6px;
 }
 
-.start{ background:#2ecc71; }
-.reset{ background:#7f8c8d; }
+.reset{
+  background:#7f8c8d;
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:6px;
+}
 
 /* CATEGORIE */
 #catBar{
@@ -53,24 +58,8 @@ h1{text-align:center;}
   margin-bottom:10px;
 }
 
-.catBtn{
-  background:#3498db;
-  color:white;
-  border:none;
+#catBar button{
   padding:6px 10px;
-  border-radius:6px;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  gap:6px;
-}
-
-.catDelete{
-  background:transparent;
-  border:none;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
 }
 
 /* RECORD */
@@ -106,9 +95,13 @@ h1{text-align:center;}
   align-items:center;
 }
 
-.small{font-size:14px;}
+.small{
+  font-size:14px;
+}
 
-button{cursor:pointer;}
+button{
+  cursor:pointer;
+}
 </style>
 </head>
 
@@ -147,27 +140,23 @@ let catKey="dashboard_categories";
 let timer=null;
 let remaining=0;
 
-let filter="Tutti";
+let filter="all";
 
 /* ---------------- TIMER ---------------- */
 function startTimer(){
   if(timer) return;
 
-  const input = document.getElementById("secInput");
-  const display = document.getElementById("display");
-  const beep = document.getElementById("beep");
+  remaining=parseInt(secInput.value||0);
 
-  remaining = parseInt(input.value || 0);
-
-  timer = setInterval(() => {
-    if(remaining <= 0){
+  timer=setInterval(()=>{
+    if(remaining<=0){
       clearInterval(timer);
-      timer = null;
-      beep.play().catch(()=>{});
+      timer=null;
+      beep.play();
       return;
     }
 
-    display.innerHTML = "<b>" + remaining + "</b>";
+    display.innerHTML="<b>"+remaining+"</b>";
     remaining--;
   },1000);
 }
@@ -176,58 +165,45 @@ function resetTimer(){
   clearInterval(timer);
   timer=null;
   remaining=0;
-  document.getElementById("display").innerHTML="<b>0</b>";
+  display.innerHTML="<b>0</b>";
 }
 
 /* ---------------- CATEGORIE ---------------- */
 function getCategories(){
-  let cats = JSON.parse(localStorage.getItem(catKey));
-  if(!cats || !cats.length){
-    cats = ["Lavoro","Personale","Famiglia"];
-    localStorage.setItem(catKey, JSON.stringify(cats));
-  }
-  return cats;
+  return JSON.parse(localStorage.getItem(catKey)) || ["Lavoro","Personale","Famiglia"];
 }
 
 function saveCategories(cats){
-  localStorage.setItem(catKey, JSON.stringify(cats));
+  localStorage.setItem(catKey,JSON.stringify(cats));
 }
 
 function renderCategories(){
-  const bar = document.getElementById("catBar");
-  const cats = getCategories();
+  let bar=document.getElementById("catBar");
+  bar.innerHTML="";
 
-  let html = `<button class="catBtn" onclick="setFilter('Tutti')">Tutti</button>`;
+  let cats=getCategories();
 
-  html += cats.map(c => `
-    <div class="catBtn">
-      <span onclick="setFilter('${c}')">${c}</span>
-      <button class="catDelete" onclick="deleteCategory('${c}')">×</button>
-    </div>
-  `).join("");
+  cats.forEach(c=>{
+    bar.innerHTML+=`<button onclick="setFilter('${c}')">${c}</button>`;
+  });
 
-  html += `<button class="catBtn" onclick="addCategory()">+</button>`;
-
-  bar.innerHTML = html;
+  bar.innerHTML+=`<button onclick="addCategory()">+</button>`;
 }
 
 function addCategory(){
-  let name = prompt("Nome categoria:");
+  let name=prompt("Nome categoria:");
   if(!name) return;
 
-  let cats = getCategories();
-  if(!cats.includes(name)){
-    cats.push(name);
-  }
+  let cats=getCategories();
+  cats.push(name);
 
   saveCategories(cats);
   renderCategories();
 }
 
-function deleteCategory(cat){
-  let cats = getCategories().filter(c => c !== cat);
-  saveCategories(cats);
-  renderCategories();
+function setFilter(f){
+  filter=f;
+  render();
 }
 
 /* ---------------- DATA ---------------- */
@@ -236,23 +212,21 @@ function getData(){
 }
 
 function saveData(data){
-  localStorage.setItem(storageKey, JSON.stringify(data));
+  localStorage.setItem(storageKey,JSON.stringify(data));
 }
 
 /* ---------------- RECORD ---------------- */
 function addRecord(){
-  let data = getData();
-
-  const cats = getCategories();
+  let data=getData();
 
   data.push({
-    id: Date.now(),
-    cat: filter === "Tutti" ? (cats[0] || "") : filter,
-    img: "r001.jpg",
-    text: "",
-    done: false,
-    date: "",
-    time: ""
+    id:Date.now(),
+    cat:getCategories()[0],
+    img:"r001.jpg",
+    text:"",
+    done:false,
+    date:"",
+    time:""
   });
 
   saveData(data);
@@ -260,18 +234,15 @@ function addRecord(){
 }
 
 function deleteRecord(id){
-  let data = getData().filter(r => r.id !== id);
+  let data=getData().filter(r=>r.id!==id);
   saveData(data);
   render();
 }
 
-function update(id, field, value){
-  let data = getData();
-  let r = data.find(x => x.id === id);
-
-  if(!r) return;
-
-  r[field] = value;
+function update(id,field,value){
+  let data=getData();
+  let r=data.find(x=>x.id===id);
+  r[field]=value;
 
   saveData(data);
   render();
@@ -280,46 +251,45 @@ function update(id, field, value){
 /* ---------------- COLOR ---------------- */
 function getClass(r){
   if(r.done) return "done";
-  if(r.text.trim() !== "") return "partial";
+  if(r.text.trim()!=="") return "partial";
   return "empty";
 }
 
 /* ---------------- RENDER ---------------- */
 function render(){
 
-  let list = document.getElementById("list");
-  list.innerHTML = "";
+  let list=document.getElementById("list");
+  list.innerHTML="";
 
-  let data = getData();
+  let data=getData();
 
   data
-  .filter(r => filter === "Tutti" || r.cat === filter)
+  .filter(r => filter==="all" || r.cat===filter)
   .sort((a,b)=>{
-    let da = new Date((a.date||"1970-01-01")+"T"+(a.time||"00:00"));
-    let db = new Date((b.date||"1970-01-01")+"T"+(b.time||"00:00"));
-    return db - da;
+    let da=new Date((a.date||"1970-01-01")+"T"+(a.time||"00:00"));
+    let db=new Date((b.date||"1970-01-01")+"T"+(b.time||"00:00"));
+    return db-da;
   })
-  .forEach(r => {
+  .forEach(r=>{
 
-    let div = document.createElement("div");
-    div.className = "record " + getClass(r);
+    let div=document.createElement("div");
+    div.className="record "+getClass(r);
 
-    div.innerHTML = `
+    div.innerHTML=`
       <div class="row">
 
         <select onchange="update(${r.id},'cat',this.value)">
-          ${getCategories().map(c =>
+          ${getCategories().map(c=>
             `<option value="${c}" ${r.cat===c?"selected":""}>${c}</option>`
           ).join("")}
         </select>
 
         <select onchange="updateImg(${r.id},this.value)">
-          ${Array.from({length:999},(_,i)=>{
-            const val = `r${String(i+1).padStart(3,'0')}.jpg`;
-            return `<option value="${val}" ${r.img===val?"selected":""}>
-              ${i+1}
-            </option>`;
-          }).join("")}
+          ${Array.from({length:20},(_,i)=>
+            `<option value="r${String(i+1).padStart(3,'0')}.jpg">
+              r${String(i+1).padStart(3,'0')}
+            </option>`
+          ).join("")}
         </select>
 
         <button onclick="deleteRecord(${r.id})">🗑</button>
@@ -351,11 +321,9 @@ function render(){
 
 /* ---------------- IMAGE ---------------- */
 function updateImg(id,val){
-  let data = getData();
-  let r = data.find(x => x.id === id);
-  if(!r) return;
-
-  r.img = val;
+  let data=getData();
+  let r=data.find(x=>x.id===id);
+  r.img=val;
 
   saveData(data);
   render();
