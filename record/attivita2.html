@@ -1,1 +1,286 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attività 2</title>
 
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f4f4;
+}
+
+h1{
+    text-align:center;
+    padding:10px;
+}
+
+/* TIMER */
+.timer-box{
+    background:#fff;
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.start-btn{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:green;
+    color:#fff;
+    border:none;
+    font-size:16px;
+}
+
+/* CATEGORIE */
+.categorie{
+    background:#fff;
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+}
+
+/* RECORD */
+.record{
+    background:#fff;
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+.record.red{ background:#ffe5e5; }
+.record.green{ background:#e5ffe5; }
+
+textarea{
+    width:100%;
+    font-size:18px;
+}
+
+input, select{
+    font-size:16px;
+}
+
+img{
+    width:100%;
+    margin-top:5px;
+    border:1px solid #ccc;
+}
+
+.sep{
+    height:2px;
+    background:#ccc;
+    margin:10px 0;
+}
+
+/* pulsante + */
+.addBtn{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#007bff;
+    color:#fff;
+    border:none;
+    font-size:30px;
+    margin:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Attività - 2</h1>
+
+<!-- TIMER -->
+<div class="timer-box">
+    <input type="number" id="secInput" placeholder="secondi">
+    <button class="start-btn" onclick="startTimer()">Start</button>
+    <div id="display">0</div>
+</div>
+
+<audio id="endSound" src="rsound/rdri.mp3"></audio>
+
+<!-- CATEGORIE -->
+<div class="categorie">
+    <textarea id="cat1"></textarea>
+    <textarea id="cat2"></textarea>
+    <textarea id="cat3"></textarea>
+</div>
+
+<!-- ADD -->
+<button class="addBtn" onclick="addRecord()">+</button>
+
+<!-- RECORDS -->
+<div id="records"></div>
+
+<script>
+
+/* ================= TIMER ================= */
+let timer;
+
+function startTimer(){
+    let sec = document.getElementById("secInput").value;
+    let d = document.getElementById("display");
+
+    timer = setInterval(()=>{
+        sec--;
+        d.innerText = sec;
+        localStorage.setItem("timer_attivita2", sec);
+
+        if(sec <= 0){
+            clearInterval(timer);
+            document.getElementById("endSound").play();
+        }
+    },1000);
+}
+
+/* ================= CATEGORIE ================= */
+["cat1","cat2","cat3"].forEach(id=>{
+    let el = document.getElementById(id);
+
+    el.value = localStorage.getItem(id) || "";
+
+    el.addEventListener("input",()=>{
+        localStorage.setItem(id, el.value);
+    });
+});
+
+/* ================= STORAGE ================= */
+let records = JSON.parse(localStorage.getItem("records_attivita2") || "[]");
+
+/* select immagini */
+function buildSelect(){
+    let sel = document.createElement("select");
+
+    let opt0 = document.createElement("option");
+    opt0.text = "immagine";
+    opt0.value = "";
+    sel.appendChild(opt0);
+
+    for(let i=1;i<=999;i++){
+        let n = "r" + String(i).padStart(3,"0") + ".jpg";
+        let opt = document.createElement("option");
+        opt.value = n;
+        opt.text = n;
+        sel.appendChild(opt);
+    }
+
+    return sel;
+}
+
+/* record */
+function createRecord(data = {}){
+
+    let div = document.createElement("div");
+    div.className = "record";
+
+    let sel = buildSelect();
+    let img = document.createElement("img");
+
+    let txt = document.createElement("textarea");
+    txt.placeholder = "descrizione attività";
+
+    let date = document.createElement("input");
+    date.type = "date";
+
+    let time = document.createElement("input");
+    time.type = "time";
+
+    let weekday = document.createElement("div");
+
+    let check = document.createElement("input");
+    check.type = "checkbox";
+
+    let state = document.createElement("div");
+
+    function update(){
+        if(check.checked){
+            div.classList.add("green");
+            div.classList.remove("red");
+            state.innerText = "Completato";
+        }else if(txt.value.length > 0){
+            div.classList.add("red");
+            div.classList.remove("green");
+            state.innerText = "Da eseguire";
+        }else{
+            div.classList.remove("red","green");
+            state.innerText = "";
+        }
+    }
+
+    sel.onchange = ()=>{
+        img.src = "rimage/" + sel.value;
+        save();
+    };
+
+    txt.oninput = ()=>{ update(); save(); };
+    check.onchange = ()=>{ update(); save(); };
+
+    date.onchange = ()=>{
+        let d = new Date(date.value);
+        weekday.innerText = d.toLocaleDateString("it-IT",{weekday:"long"});
+        save();
+    };
+
+    div.append(sel,img,txt,date,time,weekday,check,state);
+    document.getElementById("records").appendChild(div);
+
+    return {div,sel,txt,date,time,check,img,weekday};
+}
+
+/* save */
+function saveAll(){
+    let arr = [];
+
+    document.querySelectorAll(".record").forEach(r=>{
+        arr.push({
+            img:r.querySelector("select").value,
+            text:r.querySelector("textarea").value,
+            date:r.querySelector("input[type=date]").value,
+            time:r.querySelector("input[type=time]").value,
+            check:r.querySelector("input[type=checkbox]").checked
+        });
+    });
+
+    localStorage.setItem("records_attivita2", JSON.stringify(arr));
+}
+
+/* load */
+function load(){
+    records.forEach(r=>{
+        let rec = createRecord();
+
+        rec.sel.value = r.img || "";
+        rec.txt.value = r.text || "";
+        rec.date.value = r.date || "";
+        rec.time.value = r.time || "";
+        rec.check.checked = r.check || false;
+
+        if(rec.sel.value){
+            rec.img.src = "rimage/" + rec.sel.value;
+        }
+
+        rec.date.dispatchEvent(new Event("change"));
+    });
+}
+
+/* add */
+function addRecord(){
+    createRecord();
+    saveAll();
+}
+
+load();
+
+/* timer restore */
+document.getElementById("display").innerText =
+localStorage.getItem("timer_attivita2") || 0;
+
+</script>
+
+</body>
+</html>
