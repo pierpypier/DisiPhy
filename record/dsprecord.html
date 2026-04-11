@@ -7,121 +7,128 @@
 
 <style>
 body{
-    margin:0;
-    font-family:Arial;
-    background:#f4f6f8;
+margin:0;
+font-family:Arial;
+background:#f4f6f8;
 }
 
 .container{
-    width:95%;
-    max-width:1000px;
-    margin:auto;
+width:95%;
+max-width:1000px;
+margin:auto;
 }
 
 .title{
-    text-align:center;
-    color:#1e5bd8;
-    font-size:28px;
-    font-weight:bold;
-    padding:15px;
+text-align:center;
+color:#1e5bd8;
+font-size:28px;
+font-weight:bold;
+padding:15px;
 }
 
 .panel{
-    background:white;
-    padding:12px;
-    border-radius:10px;
-    margin-bottom:15px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    align-items:center;
+background:white;
+padding:12px;
+margin-bottom:15px;
+border-radius:10px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+align-items:center;
 }
 
 .row{
-    display:flex;
-    width:100%;
-    gap:10px;
-    align-items:center;
+display:flex;
+width:100%;
+gap:10px;
+align-items:center;
 }
 
 .row input{
-    flex:1;
-    padding:6px;
+flex:1;
+padding:6px;
 }
 
-.timer input{ width:90px; }
+/* TIMER */
+.timer input{width:90px}
 
 .btnStart{
-    background:green;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:20px;
+background:green;
+color:white;
+border:none;
+border-radius:20px;
+padding:10px 15px;
 }
 
 .btnReset{
-    background:red;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:20px;
+background:red;
+color:white;
+border:none;
+border-radius:20px;
+padding:10px 15px;
 }
 
+.countdown{
+font-weight:bold;
+}
+
+/* RECORD */
 .record{
-    background:white;
-    padding:12px;
-    margin-bottom:15px;
-    border-radius:10px;
+background:white;
+padding:12px;
+margin-bottom:15px;
+border-radius:10px;
 }
 
 .record textarea{
-    width:100%;
-    font-size:18px;
-    font-weight:bold;
-    resize:vertical;
+width:100%;
+font-size:18px;
+font-weight:bold;
+resize:vertical;
 }
 
 .record img{
-    width:95%;
-    display:block;
-    margin:auto;
+width:95%;
+display:block;
+margin:auto;
 }
 
 .smallRow{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+align-items:center;
 }
 
 .sep{
-    height:2px;
-    background:#ddd;
-    margin-top:10px;
+height:2px;
+background:#ddd;
+margin-top:10px;
 }
 
 .bottom{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin:20px;
+display:flex;
+justify-content:center;
+gap:10px;
+margin:20px;
 }
 
 .add{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    background:gray;
-    color:white;
-    font-size:26px;
-    border:none;
+width:55px;
+height:55px;
+border-radius:50%;
+background:gray;
+color:white;
+font-size:26px;
+border:none;
 }
 
 .sort{
-    background:blue;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:20px;
+background:blue;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:20px;
 }
 </style>
 </head>
@@ -133,7 +140,7 @@ body{
 <div class="title">TITOLO PAGINA</div>
 
 <!-- TIMER -->
-<div class="panel">
+<div class="panel timer">
 <input type="number" id="minuti" placeholder="minuti">
 <button class="btnStart" onclick="startTimer()">START</button>
 <button class="btnReset" onclick="resetTimer()">RESET</button>
@@ -142,6 +149,7 @@ body{
 
 <!-- CATEGORIE -->
 <div class="panel">
+
 <div class="row">
 <input value="TUTTI" disabled>
 <button onclick="setFilter('TUTTI')">→</button>
@@ -161,10 +169,13 @@ body{
 <input id="c3" placeholder="Categoria 3" oninput="saveCats()">
 <button onclick="setFilter(c3.value)">→</button>
 </div>
+
 </div>
 
+<!-- RECORDS -->
 <div id="records"></div>
 
+<!-- BOTTOM -->
 <div class="bottom">
 <button class="add" onclick="addRecord()">+</button>
 <button class="sort" onclick="sortRecords()">ORDINA</button>
@@ -177,25 +188,24 @@ body{
 /* ================= STATE ================= */
 let records = JSON.parse(localStorage.getItem("records") || "[]");
 let cats = JSON.parse(localStorage.getItem("cats") || '{"c1":"","c2":"","c3":""}');
-let filterCat = "TUTTI";
+let filterCat="TUTTI";
 
-/* init categorie */
-c1.value = cats.c1;
-c2.value = cats.c2;
-c3.value = cats.c3;
+/* INIT CATS */
+c1.value=cats.c1;
+c2.value=cats.c2;
+c3.value=cats.c3;
 
-/* ================= SAVE ================= */
+/* SAVE */
 function save(){
-    localStorage.setItem("records", JSON.stringify(records));
-    localStorage.setItem("cats", JSON.stringify(cats));
+localStorage.setItem("records",JSON.stringify(records));
+localStorage.setItem("cats",JSON.stringify(cats));
 }
 
-/* ================= CATEGORIE ================= */
 function saveCats(){
-    cats.c1 = c1.value;
-    cats.c2 = c2.value;
-    cats.c3 = c3.value;
-    save();
+cats.c1=c1.value;
+cats.c2=c2.value;
+cats.c3=c3.value;
+save();
 }
 
 /* ================= TIMER ================= */
@@ -203,171 +213,157 @@ let timer;
 let sec=0;
 
 function startTimer(){
-    sec = (parseInt(minuti.value)||0)*60;
-    clearInterval(timer);
+sec=(parseInt(minuti.value)||0)*60;
+clearInterval(timer);
 
-    timer = setInterval(()=>{
-        if(sec<=0){
-            clearInterval(timer);
-            new Audio("rsound/rdri.mp3").play();
-            return;
-        }
+timer=setInterval(()=>{
+if(sec<=0){
+clearInterval(timer);
+new Audio("rsound/rdri.mp3").play();
+return;
+}
 
-        sec--;
-        countdown.textContent =
-        String(Math.floor(sec/60)).padStart(2,"0")+":"+
-        String(sec%60).padStart(2,"0");
+sec--;
+countdown.textContent=
+String(Math.floor(sec/60)).padStart(2,"0")+":"+
+String(sec%60).padStart(2,"0");
 
-    },1000);
+},1000);
 }
 
 function resetTimer(){
-    clearInterval(timer);
-    countdown.textContent="00:00";
+clearInterval(timer);
+countdown.textContent="00:00";
 }
 
-/* ================= RECORD CREATION ================= */
+/* ================= ADD RECORD ================= */
 function addRecord(){
 
-    const r = {
-        cat:"TUTTI",
-        img:"001",
-        text:"",
-        date:"",
-        time:"",
-        done:false,
-        del:false
-    };
+records.push({
+cat:"TUTTI",
+img:"001",
+text:"",
+date:"",
+time:"",
+done:false,
+del:false
+});
 
-    records.push(r);
-    save();
-
-    const el = createRecordElement(r, records.length-1);
-    document.getElementById("records").appendChild(el);
+save();
+render();
 }
 
-/* ================= IMAGE SELECT ================= */
-function imgSelect(val,i){
-    let sel = document.createElement("select");
-
-    for(let k=1;k<=999;k++){
-        let n = String(k).padStart(3,"0");
-        let opt = document.createElement("option");
-        opt.value = n;
-        opt.textContent = "r"+n+".jpg";
-        if(val==n) opt.selected=true;
-        sel.appendChild(opt);
-    }
-
-    sel.onchange = () => {
-        records[i].img = sel.value;
-        save();
-        renderAll();
-    };
-
-    return sel;
+/* ================= IMAGE ================= */
+function imgOptions(val){
+let html="";
+for(let i=1;i<=999;i++){
+let n=String(i).padStart(3,"0");
+html+=`<option value="${n}" ${val==n?"selected":""}>r${n}.jpg</option>`;
 }
-
-/* ================= CREATE DOM RECORD ================= */
-function createRecordElement(r,i){
-
-    const div = document.createElement("div");
-    div.className="record";
-
-    const ta = document.createElement("textarea");
-    ta.value = r.text;
-    ta.oninput = () => {
-        records[i].text = ta.value;
-        save();
-        div.style.background = ta.value ? "#ffd6d6":"white";
-    };
-
-    const img = document.createElement("img");
-    img.src = "rimage/r"+r.img+".jpg";
-
-    const date = document.createElement("input");
-    date.type="date";
-    date.value=r.date;
-    date.onchange=()=>{records[i].date=date.value; save();};
-
-    const time = document.createElement("input");
-    time.type="time";
-    time.value=r.time;
-    time.onchange=()=>{records[i].time=time.value; save();};
-
-    const done = document.createElement("input");
-    done.type="checkbox";
-    done.checked=r.done;
-    done.onchange=()=>{
-        records[i].done=done.checked;
-        save();
-        div.style.background = done.checked ? "#d6ffd6":"white";
-    };
-
-    const del = document.createElement("input");
-    del.type="checkbox";
-    del.onchange=()=>{records[i].del=del.checked; save();};
-
-    const btn = document.createElement("button");
-    btn.textContent="cancella";
-    btn.onclick=()=>{
-        if(records[i].del){
-            records.splice(i,1);
-            save();
-            renderAll();
-        }
-    };
-
-    div.appendChild(imgSelect(r.img,i));
-    div.appendChild(img);
-    div.appendChild(ta);
-    div.appendChild(date);
-    div.appendChild(time);
-    div.appendChild(done);
-    div.appendChild(del);
-    div.appendChild(btn);
-
-    return div;
-}
-
-/* ================= RENDER ALL ================= */
-function renderAll(){
-
-    const container = document.getElementById("records");
-    container.innerHTML="";
-
-    records.forEach((r,i)=>{
-
-        if(filterCat!=="TUTTI" && r.cat!==filterCat) return;
-
-        const el = createRecordElement(r,i);
-        container.appendChild(el);
-    });
+return html;
 }
 
 /* ================= FILTER ================= */
 function setFilter(c){
-    filterCat=c||"TUTTI";
-    renderAll();
+filterCat=c||"TUTTI";
+render();
+}
+
+/* ================= DELETE ================= */
+function remove(i){
+if(records[i].del){
+records.splice(i,1);
+save();
+render();
+}
 }
 
 /* ================= SORT ================= */
 function sortRecords(){
-    records.sort((a,b)=>
-        new Date(a.date||"9999-01-01")-new Date(b.date||"9999-01-01")
-    );
-    save();
-    renderAll();
+records.sort((a,b)=>
+new Date(a.date||"9999-01-01")-new Date(b.date||"9999-01-01")
+);
+save();
+render();
+}
+
+/* ================= RENDER STABILE ================= */
+function render(){
+
+let box=document.getElementById("records");
+box.innerHTML="";
+
+records.forEach((r,i)=>{
+
+if(filterCat!=="TUTTI" && r.cat!==filterCat) return;
+
+let bg=r.done?"#d6ffd6":(r.text?"#ffd6d6":"white");
+
+let weekday=r.date?
+new Date(r.date).toLocaleDateString("it-IT",{weekday:"long"}):"";
+
+box.innerHTML+=`
+<div class="record" style="background:${bg}">
+
+<select onchange="records[${i}].cat=this.value;save()">
+<option ${r.cat=="TUTTI"?"selected":""}>TUTTI</option>
+<option>${c1.value||""}</option>
+<option>${c2.value||""}</option>
+<option>${c3.value||""}</option>
+</select>
+
+<select onchange="records[${i}].img=this.value;save()">
+${imgOptions(r.img)}
+</select>
+
+<img src="rimage/r${r.img}.jpg">
+
+<textarea oninput="records[${i}].text=this.value;save()">${r.text}</textarea>
+
+<div class="smallRow">
+
+<input type="date" value="${r.date}"
+onchange="records[${i}].date=this.value;save()">
+
+<div>${weekday||"giorno"}</div>
+
+<input type="time" value="${r.time}"
+onchange="records[${i}].time=this.value;save()">
+
+</div>
+
+<label>
+<input type="checkbox"
+onchange="records[${i}].done=this.checked;save();render()"
+${r.done?"checked":""}>
+<b>${r.done?"completato":"da fare"}</b>
+</label>
+
+<label>
+<input type="checkbox"
+onchange="records[${i}].del=this.checked;save()"
+${r.del?"checked":""}>
+da eliminare
+</label>
+
+<button onclick="remove(${i})">cancella</button>
+
+<div class="sep"></div>
+
+</div>`;
+});
+
+save();
 }
 
 /* ================= INIT ================= */
 if(records.length===0){
-    addRecord();
+addRecord();
 }else{
-    renderAll();
+render();
 }
 
 </script>
 
 </body>
-    </html>
+</html>
