@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DSP Record - Dashboard Attività</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --success:#dff7e6;
+      --danger:#ffe6e6;
+      --shadow:0 6px 18px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,Arial;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:24px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+    .title-bar{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .page-title{
+      font-size:20px;
+      font-weight:700;
+      color:var(--accent);
+    }
+
+    /* CATEGORIE */
+    .control-card{
+      width:100%;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:16px;
+      margin-bottom:16px;
+    }
+    .category-row{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-bottom:10px;
+      flex-wrap:wrap;
+    }
+    .category-label{
+      min-width:80px;
+      font-weight:700;
+      color:var(--muted);
+    }
+    .category-input{
+      flex:1;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid #e6e9ef;
+      font-size:15px;
+    }
+    .cat-btn{
+      background:#e6eefc;
+      color:var(--accent);
+      border-radius:10px;
+      padding:8px 10px;
+      border:none;
+      cursor:pointer;
+      font-weight:900;
+    }
+    .cat-btn-all{
+      background:#1e88e5;
+      color:#fff;
+      border-radius:10px;
+      padding:8px 10px;
+      border:none;
+      cursor:pointer;
+      font-weight:900;
+    }
+
+    /* RECORD */
+    .records-wrap{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .record{
+      width:95%;
+      margin:0 auto;
+      background:var(--card);
+      border-radius:12px;
+      padding:14px;
+      box-shadow:var(--shadow);
+      transition:background 0.2s ease;
+    }
+    .record.red-bg{background:var(--danger);}
+    .record.green-bg{background:var(--success);}
+    .record-top{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .select{
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid #e6e9ef;
+      background:#fff;
+      font-size:14px;
+    }
+    .img-preview{
+      width:100%;
+      max-height:220px;
+      object-fit:cover;
+      border-radius:8px;
+      margin-top:10px;
+    }
+    .desc{
+      width:100%;
+      margin-top:10px;
+      font-size:18px;
+      font-weight:700;
+      padding:10px;
+      border-radius:8px;
+      border:1px solid #e6e9ef;
+      resize:vertical;
+      min-height:60px;
+    }
+    .meta-row{
+      display:flex;
+      gap:10px;
+      margin-top:10px;
+      flex-wrap:wrap;
+    }
+    .input{
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid #e6e9ef;
+      font-size:14px;
+    }
+    .weekday{
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px dashed #d1d5db;
+      background:#fff;
+      min-width:140px;
+      text-align:center;
+      color:var(--muted);
+      font-weight:600;
+    }
+    .flags{
+      display:flex;
+      gap:12px;
+      margin-top:10px;
+      flex-wrap:wrap;
+    }
+    .flag{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      font-weight:700;
+      color:var(--muted);
+    }
+    .delete-btn{
+      background:#9ca3af;
+      color:#fff;
+      border-radius:10px;
+      padding:8px 12px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      margin-top:10px;
+    }
+    .separator{
+      height:1px;
+      background:#e6e9ef;
+      margin-top:12px;
+    }
+
+    /* PULSANTI FINALI */
+    .actions{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      margin-top:8px;
+      margin-bottom:40px;
+    }
+    .create-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#6b7280;
+      color:#fff;
+      font-size:28px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:none;
+      cursor:pointer;
+    }
+    .sort-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:var(--accent);
+      color:#fff;
+      font-weight:900;
+      border:none;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- TITOLO -->
+    <div class="title-bar">
+      <div class="page-title">AGENDA ORGANIZER </div>
+      <div class="small">Record controllo attività</div>
+    </div>
+
+    <!-- CATEGORIE -->
+    <div class="control-card" id="controlCard">
+      <div class="category-row">
+        <div class="category-label">TUTTI</div>
+        <div class="muted">i records</div>
+        <button class="cat-btn-all" data-filter="TUTTI">→ MOSTRA TUTTI</button>
+      </div>
+
+      <div class="category-row">
+        <div class="category-label">Categoria 1</div>
+        <input id="cat1" class="category-input" type="text" placeholder="1• ">
+        <button class="cat-btn" data-filter-index="1">→</button>
+      </div>
+
+      <div class="category-row">
+        <div class="category-label">Categoria 2</div>
+        <input id="cat2" class="category-input" type="text" placeholder="2• ">
+        <button class="cat-btn" data-filter-index="2">→</button>
+      </div>
+
+      <div class="category-row">
+        <div class="category-label">Categoria 3</div>
+        <input id="cat3" class="category-input" type="text" placeholder="3• ">
+        <button class="cat-btn" data-filter-index="3">→</button>
+      </div>
+    </div>
+
+    <!-- RECORD -->
+    <div class="records-wrap" id="recordsWrap"></div>
+
+    <!-- PULSANTI FINALI -->
+    <div class="actions">
+      <button id="createRecord" class="create-btn">+</button>
+      <button id="sortRecords" class="sort-btn">↓</button>
+    </div>
+
+  </div>
+
+<script>
+/* ============================
+   LOCAL STORAGE KEYS
+============================ */
+const LS = {
+  categories:"dsp_categories_v1",
+  records:"dsp_records_v1"
+};
+
+/* ============================
+   STATO
+============================ */
+let state = {
+  categories:["TUTTI","Categoria 1","Categoria 2","Categoria 3"],
+  records:[]
+};
+
+/* ============================
+   CARICA STATO
+============================ */
+function loadState(){
+  const c = localStorage.getItem(LS.categories);
+  const r = localStorage.getItem(LS.records);
+  if(c) state.categories = JSON.parse(c);
+  if(r) state.records = JSON.parse(r);
+
+  if(state.records.length === 0){
+    state.records.push({
+      id:Date.now(),
+      category:"TUTTI",
+      image:"r001.jpg",
+      description:"Esempio attività",
+      date:"",
+      time:"",
+      completed:false,
+      toDelete:false
+    });
+    saveState();
+  }
+}
+
+/* ============================
+   SALVA STATO
+============================ */
+function saveState(){
+  localStorage.setItem(LS.categories,JSON.stringify(state.categories));
+  localStorage.setItem(LS.records,JSON.stringify(state.records));
+}
+
+/* ============================
+   CREA RECORD DOM
+============================ */
+function buildRecord(rec){
+  const wrap=document.createElement("div");
+  wrap.className="record";
+  wrap.dataset.id=rec.id;
+
+  if(rec.description.trim()!=="") wrap.classList.add("red-bg");
+  if(rec.completed) wrap.classList.add("green-bg");
+
+  /* TOP */
+  const top=document.createElement("div");
+  top.className="record-top";
+
+  const selCat=document.createElement("select");
+  selCat.className="select";
+  state.categories.forEach(c=>{
+    const o=document.createElement("option");
+    o.value=c; o.textContent=c;
+    if(c===rec.category) o.selected=true;
+    selCat.appendChild(o);
+  });
+  selCat.onchange=()=>{
+    rec.category=selCat.value;
+    saveState();
+  };
+  top.appendChild(selCat);
+
+  const selImg=document.createElement("select");
+  selImg.className="select";
+  for(let i=1;i<=999;i++){
+    const n=String(i).padStart(3,"0");
+    const f=`r${n}.jpg`;
+    const o=document.createElement("option");
+    o.value=f; o.textContent=f;
+    if(f===rec.image) o.selected=true;
+    selImg.appendChild(o);
+  }
+  top.appendChild(selImg);
+
+  wrap.appendChild(top);
+
+  /* IMMAGINE */
+  const img=document.createElement("img");
+  img.className="img-preview";
+  img.src=`rimage/${rec.image}`;
+  selImg.onchange=()=>{
+    rec.image=selImg.value;
+    img.src=`rimage/${rec.image}`;
+    saveState();
+  };
+  wrap.appendChild(img);
+
+  /* DESCRIZIONE */
+  const desc=document.createElement("textarea");
+  desc.className="desc";
+  desc.value=rec.description;
+  desc.oninput=()=>{
+    rec.description=desc.value;
+    wrap.classList.toggle("red-bg",desc.value.trim()!=="");
+    if(rec.completed) wrap.classList.add("green-bg");
+    saveState();
+  };
+  wrap.appendChild(desc);
+
+  /* META */
+  const meta=document.createElement("div");
+  meta.className="meta-row";
+
+  const date=document.createElement("input");
+  date.type="date";
+  date.className="input";
+  date.value=rec.date;
+  date.onchange=()=>{
+    rec.date=date.value;
+    weekday.textContent=rec.date?weekdayName(rec.date):"inserisci data";
+    saveState();
+  };
+  meta.appendChild(date);
+
+  const weekday=document.createElement("div");
+  weekday.className="weekday";
+  weekday.textContent=rec.date?weekdayName(rec.date):"inserisci data";
+  meta.appendChild(weekday);
+
+  const time=document.createElement("input");
+  time.type="time";
+  time.className="input";
+  time.value=rec.time;
+  time.onchange=()=>{
+    rec.time=time.value;
+    saveState();
+  };
+  meta.appendChild(time);
+
+  wrap.appendChild(meta);
+
+  /* FLAGS */
+  const flags=document.createElement("div");
+  flags.className="flags";
+
+  const f1=document.createElement("label");
+  f1.className="flag";
+  const chk1=document.createElement("input");
+  chk1.type="checkbox";
+  chk1.checked=rec.completed;
+  const t1=document.createElement("span");
+  t1.textContent=rec.completed?"completato":"da fare";
+  chk1.onchange=()=>{
+    rec.completed=chk1.checked;
+    t1.textContent=chk1.checked?"completato":"da fare";
+    wrap.classList.toggle("green-bg",chk1.checked);
+    if(!chk1.checked && rec.description.trim()!=="") wrap.classList.add("red-bg");
+    saveState();
+  };
+  f1.appendChild(chk1); f1.appendChild(t1);
+  flags.appendChild(f1);
+
+  const f2=document.createElement("label");
+  f2.className="flag";
+  const chk2=document.createElement("input");
+  chk2.type="checkbox";
+  chk2.checked=rec.toDelete;
+  chk2.onchange=()=>{
+    rec.toDelete=chk2.checked;
+    saveState();
+  };
+  const t2=document.createElement("span");
+  t2.textContent="da eliminare";
+  f2.appendChild(chk2); f2.appendChild(t2);
+  flags.appendChild(f2);
+
+  wrap.appendChild(flags);
+
+  /* CANCELLA */
+  const del=document.createElement("button");
+  del.className="delete-btn";
+  del.textContent="CANCELLA";
+  del.onclick=()=>{
+    if(rec.toDelete){
+      state.records=state.records.filter(r=>r.id!==rec.id);
+      saveState();
+      wrap.remove();
+    } else {
+      del.animate([{transform:"scale(1)"},{transform:"scale(1.1)"},{transform:"scale(1)"}],{duration:200});
+    }
+  };
+  wrap.appendChild(del);
+
+  wrap.appendChild(document.createElement("div")).className="separator";
+
+  return wrap;
+}
+
+/* ============================
+   WEEKDAY
+============================ */
+function weekdayName(d){
+  const dd=new Date(d+"T00:00:00");
+  return ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"][dd.getDay()];
+}
+
+/* ============================
+   RENDER
+============================ */
+function render(){
+  const wrap=document.getElementById("recordsWrap");
+  wrap.innerHTML="";
+  state.records.forEach(r=>wrap.appendChild(buildRecord(r)));
+
+  document.getElementById("cat1").value=state.categories[1];
+  document.getElementById("cat2").value=state.categories[2];
+  document.getElementById("cat3").value=state.categories[3];
+}
+
+/* ============================
+   EVENTI
+============================ */
+document.getElementById("createRecord").onclick=()=>{
+  const r={
+    id:Date.now(),
+    category:"TUTTI",
+    image:"r001.jpg",
+    description:"",
+    date:"",
+    time:"",
+    completed:false,
+    toDelete:false
+  };
+  state.records.unshift(r);
+  saveState();
+  render();
+};
+
+document.getElementById("sortRecords").onclick=()=>{
+  state.records.sort((a,b)=>{
+    if(!a.date && !b.date) return 0;
+    if(!a.date) return 1;
+    if(!b.date) return -1;
+    return new Date(a.date+"T"+(a.time||"00:00")) - new Date(b.date+"T"+(b.time||"00:00"));
+  });
+  saveState();
+  render();
+};
+
+document.getElementById("controlCard").onclick=e=>{
+  const btn=e.target.closest("button");
+  if(!btn) return;
+
+  if(btn.dataset.filter==="TUTTI"){
+    document.querySelectorAll(".record").forEach(el=>el.style.display="");
+    return;
+  }
+
+  if(btn.dataset.filterIndex){
+    const idx=parseInt(btn.dataset.filterIndex);
+    const cat=state.categories[idx];
+    document.querySelectorAll(".record").forEach(el=>{
+      const rec=state.records.find(r=>r.id==el.dataset.id);
+      el.style.display=(rec.category===cat)?"":"none";
+    });
+  }
+};
+
+["cat1","cat2","cat3"].forEach((id,i)=>{
+  document.getElementById(id).oninput=()=>{
+    state.categories[i+1]=document.getElementById(id).value.trim()||`Categoria ${i+1}`;
+    saveState();
+    render();
+  };
+});
+
+/* ============================
+   START
+============================ */
+loadState();
+render();
+</script>
+
+</body>
+  </html>
