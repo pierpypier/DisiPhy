@@ -2,203 +2,90 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>dsprecord</title>
+<title>test dsprecord</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#f4f6f8}
-.container{width:95%;max-width:1000px;margin:auto}
-
-.title{
-text-align:center;
-color:#1e5bd8;
-font-size:28px;
-font-weight:bold;
-padding:15px;
-}
-
-.panel{
-background:#fff;
-padding:12px;
-margin-bottom:15px;
-border-radius:10px;
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-align-items:center;
-}
-
-.record{
-background:#fff;
-padding:12px;
-margin-bottom:15px;
-border-radius:10px;
-}
-
-.record textarea{
-width:100%;
-font-size:18px;
-font-weight:bold;
-}
-
-.record img{
-width:95%;
-display:block;
-margin:auto;
-}
-
-.bottom{
-display:flex;
-justify-content:center;
-gap:10px;
-margin:20px;
-}
-
-.add{
-width:55px;height:55px;border-radius:50%;
-background:gray;color:white;font-size:26px;border:none;
-}
-
-.sort{
-background:blue;color:white;border:none;
-padding:10px 15px;border-radius:20px;
-}
+body{font-family:Arial;margin:0;padding:20px;background:#f4f6f8}
+.box{background:white;padding:10px;margin-bottom:10px;border-radius:8px}
+button{padding:8px 12px}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<h2 style="color:blue">TEST DSPRECORD</h2>
 
-<div class="title">TITOLO PAGINA</div>
-
-<div class="panel">
-<input type="number" id="minuti" placeholder="minuti">
-<button onclick="startTimer()">START</button>
-<button onclick="resetTimer()">RESET</button>
-<div id="countdown">00:00</div>
+<!-- CATEGORIE -->
+<div class="box">
+<input id="c1" placeholder="Categoria 1">
+<input id="c2" placeholder="Categoria 2">
+<input id="c3" placeholder="Categoria 3">
 </div>
 
+<!-- RECORDS -->
 <div id="records"></div>
 
-<div class="bottom">
-<button class="add" onclick="addRecord()">+</button>
-<button class="sort" onclick="sortRecords()">ORDINA</button>
-</div>
-
-</div>
+<button onclick="addRecord()">+ NUOVO RECORD</button>
 
 <script>
 
-/* ================= STATE ================= */
+/* ===== DATA ===== */
 let records = JSON.parse(localStorage.getItem("records") || "[]");
 
-/* ================= SAVE ================= */
+/* ===== SAVE ===== */
 function save(){
 localStorage.setItem("records", JSON.stringify(records));
 }
 
-/* ================= ADD ================= */
+/* ===== ADD RECORD ===== */
 function addRecord(){
 
-const r = {
-text:"",
-date:"",
-done:false
-};
+records.push({
+text:""
+});
 
-records.push(r);
 save();
+render();
 
-createRecordDOM(r, records.length - 1);
 }
 
-/* ================= CREATE SINGLE RECORD ================= */
-function createRecordDOM(r, i){
-
-const box = document.getElementById("records");
-
-const div = document.createElement("div");
-div.className = "record";
-
-/* TEXT */
-const ta = document.createElement("textarea");
-ta.value = r.text;
-ta.oninput = () => {
-records[i].text = ta.value;
-save();
-};
-
-/* DELETE */
-const del = document.createElement("button");
-del.textContent = "cancella";
-del.onclick = () => {
-records.splice(i,1);
-save();
-renderAll();
-};
-
-div.appendChild(ta);
-div.appendChild(del);
-
-box.appendChild(div);
-}
-
-/* ================= FULL RENDER (SAFE) ================= */
-function renderAll(){
+/* ===== RENDER ===== */
+function render(){
 
 const box = document.getElementById("records");
 box.innerHTML = "";
 
-records.forEach((r,i)=>{
-createRecordDOM(r,i);
-});
+for(let i=0;i<records.length;i++){
 
-}
+const div = document.createElement("div");
+div.className="box";
 
-/* ================= SORT ================= */
-function sortRecords(){
-records.sort((a,b)=>
-new Date(a.date||"9999-01-01") - new Date(b.date||"9999-01-01")
-);
+const input = document.createElement("input");
+input.value = records[i].text;
+
+input.oninput = function(){
+records[i].text = this.value;
 save();
-renderAll();
+};
+
+const del = document.createElement("button");
+del.innerText="X";
+del.onclick = function(){
+records.splice(i,1);
+save();
+render();
+};
+
+div.appendChild(input);
+div.appendChild(del);
+box.appendChild(div);
+
 }
 
-/* ================= TIMER ================= */
-let timer;
-let sec=0;
-
-function startTimer(){
-sec = (parseInt(minuti.value)||0)*60;
-clearInterval(timer);
-
-timer=setInterval(()=>{
-if(sec<=0){
-clearInterval(timer);
-new Audio("rsound/rdri.mp3").play();
-return;
 }
 
-sec--;
-countdown.textContent =
-String(Math.floor(sec/60)).padStart(2,"0")+":"+
-String(sec%60).padStart(2,"0");
-
-},1000);
-}
-
-function resetTimer(){
-clearInterval(timer);
-countdown.textContent="00:00";
-}
-
-/* ================= INIT ================= */
-if(records.length===0){
-addRecord();
-}else{
-renderAll();
-}
+/* ===== INIT ===== */
+render();
 
 </script>
 
