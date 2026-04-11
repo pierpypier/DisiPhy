@@ -2,83 +2,316 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>RECORD FIX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dsprecord</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#f4f6f8;
+}
+
+.container{
+width:95%;
+max-width:1000px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+color:#1e5bd8;
+font-size:28px;
+font-weight:bold;
+padding:15px;
+}
+
+.panel{
+background:white;
+padding:10px;
+margin:10px 0;
+border-radius:10px;
+}
+
+.row{
+display:flex;
+gap:10px;
+align-items:center;
+flex-wrap:wrap;
+margin:5px 0;
+}
+
+.record{
+background:white;
+padding:12px;
+margin:12px 0;
+border-radius:10px;
+}
+
+textarea{
+width:100%;
+font-size:18px;
+font-weight:bold;
+resize:vertical;
+}
+
+img{
+width:95%;
+display:block;
+margin:auto;
+}
+
+button{
+padding:6px 10px;
+border-radius:6px;
+border:1px solid #ccc;
+cursor:pointer;
+}
+
+.addBtn{
+background:#888;
+color:white;
+border:none;
+border-radius:50%;
+width:55px;
+height:55px;
+font-size:26px;
+}
+
+.sortBtn{
+background:blue;
+color:white;
+border:none;
+border-radius:20px;
+padding:10px 15px;
+}
+</style>
 </head>
 
-<body style="font-family:Arial;padding:20px">
+<body>
 
-<h2>TEST CREAZIONE RECORD</h2>
+<div class="container">
 
-<button onclick="addRecord()">+ CREA RECORD</button>
+<div class="title">DSP RECORD</div>
 
+<!-- TIMER -->
+<div class="panel">
+<div class="row">
+<input type="number" id="minuti" placeholder="minuti">
+<button onclick="startTimer()">START</button>
+<button onclick="resetTimer()">RESET</button>
+<div id="countdown">00:00</div>
+</div>
+</div>
+
+<!-- CATEGORIE -->
+<div class="panel">
+
+<div class="row">
+<input value="TUTTI" disabled>
+<button onclick="setFilter('TUTTI')">→</button>
+</div>
+
+<div class="row">
+<input id="c1" placeholder="Categoria 1" oninput="saveCats()">
+<button onclick="setFilter(c1.value)">→</button>
+</div>
+
+<div class="row">
+<input id="c2" placeholder="Categoria 2" oninput="saveCats()">
+<button onclick="setFilter(c2.value)">→</button>
+</div>
+
+<div class="row">
+<input id="c3" placeholder="Categoria 3" oninput="saveCats()">
+<button onclick="setFilter(c3.value)">→</button>
+</div>
+
+</div>
+
+<!-- RECORDS -->
 <div id="box"></div>
+
+<div class="row" style="justify-content:center">
+<button class="addBtn" onclick="addRecord()">+</button>
+<button class="sortBtn" onclick="sortRecords()">ORDINA</button>
+</div>
+
+</div>
 
 <script>
 
 /* ================= STATE ================= */
 let records = JSON.parse(localStorage.getItem("records") || "[]");
+let cats = JSON.parse(localStorage.getItem("cats") || '{"c1":"","c2":"","c3":""}');
+let filter = "TUTTI";
+
+/* init cats */
+c1.value = cats.c1;
+c2.value = cats.c2;
+c3.value = cats.c3;
 
 /* ================= SAVE ================= */
 function save(){
 localStorage.setItem("records", JSON.stringify(records));
+localStorage.setItem("cats", JSON.stringify(cats));
 }
 
-/* ================= ADD ================= */
+/* ================= TIMER ================= */
+let timer;
+let sec = 0;
+
+function startTimer(){
+sec = (parseInt(minuti.value)||0)*60;
+clearInterval(timer);
+
+timer = setInterval(()=>{
+if(sec<=0){
+clearInterval(timer);
+new Audio("rsound/rdri.mp3").play();
+return;
+}
+
+sec--;
+countdown.textContent =
+String(Math.floor(sec/60)).padStart(2,"0")+":"+
+String(sec%60).padStart(2,"0");
+
+},1000);
+}
+
+function resetTimer(){
+clearInterval(timer);
+countdown.textContent="00:00";
+}
+
+/* ================= RECORD ================= */
 function addRecord(){
 
-const newRecord = {
-text: "nuovo record"
-};
+records.push({
+cat:"TUTTI",
+img:"001",
+text:"",
+date:"",
+time:"",
+done:false,
+del:false
+});
 
-records.push(newRecord);
 save();
-
-/* IMPORTANTE: render subito */
 render();
-
 }
 
-/* ================= RENDER ================= */
+/* ================= FILTER ================= */
+function setFilter(f){
+filter = f || "TUTTI";
+render();
+}
+
+/* ================= IMAGE ================= */
+function imgOptions(val){
+let out="";
+for(let i=1;i<=999;i++){
+let n = String(i).padStart(3,"0");
+out += `<option value="${n}" ${val==n?"selected":""}>r${n}.jpg</option>`;
+}
+return out;
+}
+
+/* ================= SORT ================= */
+function sortRecords(){
+records.sort((a,b)=>
+new Date(a.date||"9999-01-01") - new Date(b.date||"9999-01-01")
+);
+save();
+render();
+}
+
+/* ================= REMOVE ================= */
+function remove(i){
+if(records[i].del){
+records.splice(i,1);
+save();
+render();
+}
+}
+
+/* ================= RENDER (STABILE) ================= */
 function render(){
 
 const box = document.getElementById("box");
 box.innerHTML = "";
 
-for(let i = 0; i < records.length; i++){
+records.forEach((r,i)=>{
 
-const div = document.createElement("div");
-div.style.margin = "10px 0";
-div.style.padding = "10px";
-div.style.border = "1px solid #ccc";
+if(filter!=="TUTTI" && r.cat!==filter) return;
 
-const input = document.createElement("input");
-input.value = records[i].text;
+let bg = r.done ? "#d6ffd6" : (r.text ? "#ffd6d6" : "white");
 
-input.oninput = function(){
-records[i].text = this.value;
+let weekday = r.date ?
+new Date(r.date).toLocaleDateString("it-IT",{weekday:"long"}) : "";
+
+box.innerHTML += `
+<div class="record" style="background:${bg}">
+
+<div class="row">
+<select onchange="records[${i}].cat=this.value;save()">
+<option ${r.cat=="TUTTI"?"selected":""}>TUTTI</option>
+<option>${c1.value||""}</option>
+<option>${c2.value||""}</option>
+<option>${c3.value||""}</option>
+</select>
+
+<select onchange="records[${i}].img=this.value;save()">
+${imgOptions(r.img)}
+</select>
+</div>
+
+<img src="rimage/r${r.img}.jpg">
+
+<textarea oninput="records[${i}].text=this.value;save()">${r.text}</textarea>
+
+<div class="row">
+<input type="date" value="${r.date}"
+onchange="records[${i}].date=this.value;save()">
+
+<div>${weekday||""}</div>
+
+<input type="time" value="${r.time}"
+onchange="records[${i}].time=this.value;save()">
+</div>
+
+<div class="row">
+<label>
+<input type="checkbox"
+onchange="records[${i}].done=this.checked;save();render()"
+${r.done?"checked":""}>
+<b>${r.done?"completato":"da fare"}</b>
+</label>
+
+<label>
+<input type="checkbox"
+onchange="records[${i}].del=this.checked;save()"
+${r.del?"checked":""}>
+da eliminare
+</label>
+
+<button onclick="remove(${i})">cancella</button>
+</div>
+
+</div>
+`;
+});
+
 save();
-};
-
-const del = document.createElement("button");
-del.innerText = "X";
-
-del.onclick = function(){
-records.splice(i,1);
-save();
-render();
-};
-
-div.appendChild(input);
-div.appendChild(del);
-
-box.appendChild(div);
-
-}
-
 }
 
 /* ================= INIT ================= */
+if(records.length===0){
+addRecord();
+}else{
 render();
+}
 
 </script>
 
