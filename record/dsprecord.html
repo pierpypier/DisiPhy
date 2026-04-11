@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dsprecord</title>
+
+<style>
+
+/* ===============================
+   STILE GENERALE PAGINA
+   =============================== */
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f8;
+}
+
+.container{
+    width:95%;
+    max-width:900px;
+    margin:auto;
+}
+
+/* ===============================
+   TITOLO
+   =============================== */
+
+.title{
+    text-align:center;
+    color:#1e5bd8;
+    font-size:28px;
+    font-weight:bold;
+    padding:20px;
+}
+
+/* ===============================
+   TIMER
+   =============================== */
+
+.timer{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:15px;
+}
+
+.timer input{
+    padding:8px;
+    width:80px;
+}
+
+.btnStart{
+    background:green;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.btnReset{
+    background:red;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.countdown{
+    font-weight:bold;
+    font-size:18px;
+}
+
+/* ===============================
+   CONTROLLO CATEGORIE
+   =============================== */
+
+.control{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom:15px;
+}
+
+.catRow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:8px;
+}
+
+.catRow input{
+    flex:1;
+    padding:8px;
+}
+
+.filterBtn{
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+/* ===============================
+   RECORD
+   =============================== */
+
+.record{
+    width:95%;
+    margin:auto;
+    background:white;
+    padding:10px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.record img{
+    width:95%;
+    display:block;
+    margin:auto;
+}
+
+.record textarea{
+    width:95%;
+    font-size:18px;
+    font-weight:bold;
+    resize:vertical;
+}
+
+.rowData{
+    display:flex;
+    gap:5px;
+    flex-wrap:wrap;
+}
+
+.sep{
+    height:2px;
+    background:#ccc;
+    margin-top:10px;
+}
+
+/* ===============================
+   BOTTONI
+   =============================== */
+
+.bottomBtns{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+.addBtn{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:gray;
+    color:white;
+    font-size:24px;
+    border:none;
+}
+
+.sortBtn{
+    background:blue;
+    color:white;
+    border-radius:50%;
+    padding:15px;
+    border:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">TITOLO PAGINA</div>
+
+<!-- TIMER -->
+<div class="timer">
+
+<input type="number" id="minutes" placeholder="minuti">
+
+<button class="btnStart" onclick="startTimer()">START</button>
+
+<button class="btnReset" onclick="resetTimer()">RESET</button>
+
+<div class="countdown" id="countdown">00:00</div>
+
+</div>
+
+<!-- CONTROLLO CATEGORIE -->
+<div class="control">
+
+<div class="catRow">
+<input value="TUTTI" disabled>
+<button class="filterBtn" onclick="filterCategory('TUTTI')">→</button>
+</div>
+
+<div class="catRow">
+<input id="cat1" placeholder="Categoria 1">
+<button class="filterBtn" onclick="filterCategory(cat1.value)">→</button>
+</div>
+
+<div class="catRow">
+<input id="cat2" placeholder="Categoria 2">
+<button class="filterBtn" onclick="filterCategory(cat2.value)">→</button>
+</div>
+
+<div class="catRow">
+<input id="cat3" placeholder="Categoria 3">
+<button class="filterBtn" onclick="filterCategory(cat3.value)">→</button>
+</div>
+
+</div>
+
+<!-- RECORDS -->
+<div id="records"></div>
+
+<!-- BOTTONI -->
+<div class="bottomBtns">
+<button class="addBtn" onclick="createRecord()">+</button>
+<button class="sortBtn" onclick="sortRecords()">ORDINA</button>
+</div>
+
+</div>
+
+<script>
+
+/* ===============================
+   LOCAL STORAGE
+   =============================== */
+
+let records = JSON.parse(localStorage.getItem("records")) || [];
+let categories = JSON.parse(localStorage.getItem("categories")) || ["TUTTI","","",""];
+
+function save(){
+    localStorage.setItem("records",JSON.stringify(records));
+    localStorage.setItem("categories",JSON.stringify(categories));
+}
+
+/* ===============================
+   TIMER
+   =============================== */
+
+let timer;
+let seconds=0;
+
+function startTimer(){
+    let min = document.getElementById("minutes").value;
+    seconds = min*60;
+
+    timer=setInterval(()=>{
+        if(seconds<=0){
+            clearInterval(timer);
+            new Audio("rsound/rdri.mp3").play();
+            return;
+        }
+        seconds--;
+        let m=Math.floor(seconds/60);
+        let s=seconds%60;
+        document.getElementById("countdown").innerText=
+        String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+    },1000);
+}
+
+function resetTimer(){
+    clearInterval(timer);
+    document.getElementById("countdown").innerText="00:00";
+}
+
+/* ===============================
+   CREAZIONE MENU IMMAGINI
+   =============================== */
+
+function imageMenu(selected){
+    let menu='<select>';
+    for(let i=1;i<=999;i++){
+        let num=String(i).padStart(3,"0");
+        let sel = selected==num?"selected":"";
+        menu+=`<option value="${num}" ${sel}>r${num}.jpg</option>`;
+    }
+    menu+='</select>';
+    return menu;
+}
+
+/* ===============================
+   CREAZIONE RECORD
+   =============================== */
+
+function createRecord(){
+
+    records.push({
+        category:"TUTTI",
+        image:"001",
+        text:"",
+        date:"",
+        time:"",
+        completed:false,
+        delete:false
+    });
+
+    save();
+    render();
+}
+
+/* ===============================
+   RENDER
+   =============================== */
+
+function render(){
+
+    let div=document.getElementById("records");
+    div.innerHTML="";
+
+    records.forEach((r,i)=>{
+
+        let giorno="";
+
+        if(r.date){
+            let d=new Date(r.date);
+            giorno=d.toLocaleDateString("it-IT",{weekday:"long"});
+        }
+
+        let bg="white";
+
+        if(r.text) bg="#ffd6d6";
+        if(r.completed) bg="#d6ffd6";
+
+        div.innerHTML+=`
+
+        <div class="record" style="background:${bg}">
+
+        Categoria:
+        <select onchange="records[${i}].category=this.value;save()">
+        <option ${r.category=="TUTTI"?"selected":""}>TUTTI</option>
+        <option>${cat1.value}</option>
+        <option>${cat2.value}</option>
+        <option>${cat3.value}</option>
+        </select>
+
+        Immagine:
+        ${imageMenu(r.image)}
+
+        <img src="rimage/r${r.image}.jpg">
+
+        <textarea onchange="records[${i}].text=this.value;save();render()">${r.text}</textarea>
+
+        <div class="rowData">
+
+        <input type="date" value="${r.date}"
+        onchange="records[${i}].date=this.value;save();render()">
+
+        <div>${giorno || "inserisci data"}</div>
+
+        <input type="time" value="${r.time}"
+        onchange="records[${i}].time=this.value;save()">
+
+        </div>
+
+        <br>
+
+        <input type="checkbox"
+        ${r.completed?"checked":""}
+        onchange="records[${i}].completed=this.checked;save();render()">
+
+        <b>${r.completed?"completato":"da fare"}</b>
+
+        <br>
+
+        <input type="checkbox"
+        ${r.delete?"checked":""}
+        onchange="records[${i}].delete=this.checked;save()">
+
+        <b>da eliminare</b>
+
+        <br><br>
+
+        <button onclick="deleteRecord(${i})">cancella</button>
+
+        <div class="sep"></div>
+
+        </div>
+        `;
+    });
+
+    save();
+}
+
+/* ===============================
+   ELIMINA RECORD
+   =============================== */
+
+function deleteRecord(i){
+
+    if(records[i].delete){
+        records.splice(i,1);
+        save();
+        render();
+    }else{
+        alert("Attiva prima il flag da eliminare");
+    }
+}
+
+/* ===============================
+   FILTRO
+   =============================== */
+
+function filterCategory(cat){
+
+    let div=document.getElementById("records");
+
+    if(cat=="TUTTI"){
+        render();
+        return;
+    }
+
+    div.innerHTML="";
+
+    records.forEach((r,i)=>{
+        if(r.category==cat){
+            div.innerHTML+=r.text;
+        }
+    });
+}
+
+/* ===============================
+   ORDINAMENTO
+   =============================== */
+
+function sortRecords(){
+
+    records.sort((a,b)=>{
+        return new Date(a.date)-new Date(b.date);
+    });
+
+    save();
+    render();
+}
+
+/* ===============================
+   CATEGORIE
+   =============================== */
+
+cat1.oninput=()=>{
+    categories[1]=cat1.value;
+    save();
+    render();
+}
+
+cat2.oninput=()=>{
+    categories[2]=cat2.value;
+    save();
+    render();
+}
+
+cat3.oninput=()=>{
+    categories[3]=cat3.value;
+    save();
+    render();
+}
+
+/* ===============================
+   AVVIO
+   =============================== */
+
+if(records.length==0){
+    createRecord();
+}
+
+render();
+
+</script>
+</body>
+</html>
