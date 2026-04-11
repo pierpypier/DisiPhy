@@ -2,97 +2,85 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>DEBUG DSPRECORD</title>
+<title>RECORD FIX</title>
 </head>
 
 <body style="font-family:Arial;padding:20px">
 
-<h2>DEBUG LOCALSTORAGE</h2>
+<h2>TEST CREAZIONE RECORD</h2>
 
-<input id="testInput" placeholder="scrivi qualcosa">
-<button onclick="saveTest()">SALVA</button>
-<button onclick="loadTest()">CARICA</button>
+<button onclick="addRecord()">+ CREA RECORD</button>
 
-<p id="output"></p>
-
-<hr>
-
-<h3>RECORD TEST</h3>
-
-<button onclick="addRecord()">+ RECORD</button>
-
-<div id="records"></div>
+<div id="box"></div>
 
 <script>
 
-/* ===================== TEST LOCALSTORAGE ===================== */
-
-function saveTest(){
-    const val = document.getElementById("testInput").value;
-    localStorage.setItem("test", val);
-    document.getElementById("output").innerText = "SALVATO: " + val;
-}
-
-function loadTest(){
-    const val = localStorage.getItem("test");
-    document.getElementById("output").innerText = "CARICATO: " + val;
-}
-
-/* ===================== RECORD SYSTEM ===================== */
-
+/* ================= STATE ================= */
 let records = JSON.parse(localStorage.getItem("records") || "[]");
 
-function saveRecords(){
-    localStorage.setItem("records", JSON.stringify(records));
+/* ================= SAVE ================= */
+function save(){
+localStorage.setItem("records", JSON.stringify(records));
 }
 
+/* ================= ADD ================= */
 function addRecord(){
 
-    records.push({
-        text:""
-    });
+const newRecord = {
+text: "nuovo record"
+};
 
-    saveRecords();
-    render();
+records.push(newRecord);
+save();
+
+/* IMPORTANTE: render subito */
+render();
+
 }
 
+/* ================= RENDER ================= */
 function render(){
 
-    const box = document.getElementById("records");
-    box.innerHTML = "";
+const box = document.getElementById("box");
+box.innerHTML = "";
 
-    for(let i=0;i<records.length;i++){
+for(let i = 0; i < records.length; i++){
 
-        const div = document.createElement("div");
-        div.style.margin = "10px 0";
+const div = document.createElement("div");
+div.style.margin = "10px 0";
+div.style.padding = "10px";
+div.style.border = "1px solid #ccc";
 
-        const input = document.createElement("input");
-        input.value = records[i].text;
+const input = document.createElement("input");
+input.value = records[i].text;
 
-        input.oninput = function(){
-            records[i].text = this.value;
-            saveRecords();
-        };
+input.oninput = function(){
+records[i].text = this.value;
+save();
+};
 
-        const btn = document.createElement("button");
-        btn.innerText = "X";
-        btn.onclick = function(){
-            records.splice(i,1);
-            saveRecords();
-            render();
-        };
+const del = document.createElement("button");
+del.innerText = "X";
 
-        div.appendChild(input);
-        div.appendChild(btn);
+del.onclick = function(){
+records.splice(i,1);
+save();
+render();
+};
 
-        box.appendChild(div);
-    }
+div.appendChild(input);
+div.appendChild(del);
+
+box.appendChild(div);
+
 }
 
-/* INIT */
+}
+
+/* ================= INIT ================= */
 render();
 
 </script>
 
 </body>
-  </html>
+</html>
