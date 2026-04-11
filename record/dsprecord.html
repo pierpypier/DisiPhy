@@ -6,120 +6,91 @@
 <title>dsprecord</title>
 
 <style>
-
-/* ===============================
-   STILE GENERALE PAGINA
-   =============================== */
-
 body{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, sans-serif;
     background:#f4f6f8;
 }
 
 .container{
     width:95%;
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
 }
 
-/* ===============================
-   TITOLO
-   =============================== */
-
 .title{
     text-align:center;
-    color:#1e5bd8;
     font-size:28px;
     font-weight:bold;
-    padding:20px;
-}
-
-/* ===============================
-   TIMER
-   =============================== */
-
-.timer{
-    background:white;
+    color:#1e5bd8;
     padding:15px;
-    border-radius:10px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
-    display:flex;
-    align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:15px;
 }
 
+.panel{
+    background:white;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
+}
+
+/* TIMER */
 .timer input{
-    padding:8px;
-    width:80px;
+    width:90px;
+    padding:6px;
 }
 
 .btnStart{
     background:green;
     color:white;
     border:none;
-    padding:10px 15px;
     border-radius:20px;
-    cursor:pointer;
+    padding:10px 15px;
 }
 
 .btnReset{
     background:red;
     color:white;
     border:none;
-    padding:10px 15px;
     border-radius:20px;
-    cursor:pointer;
+    padding:10px 15px;
 }
 
 .countdown{
     font-weight:bold;
-    font-size:18px;
 }
 
-/* ===============================
-   CONTROLLO CATEGORIE
-   =============================== */
-
-.control{
-    background:white;
-    padding:15px;
-    border-radius:10px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
-    margin-bottom:15px;
-}
-
-.catRow{
+/* CATEGORIE */
+.row{
     display:flex;
-    align-items:center;
     gap:10px;
-    margin-bottom:8px;
+    align-items:center;
+    width:100%;
 }
 
-.catRow input{
+.row input{
     flex:1;
-    padding:8px;
+    padding:6px;
 }
 
-.filterBtn{
-    padding:8px 12px;
-    cursor:pointer;
-}
-
-/* ===============================
-   RECORD
-   =============================== */
-
+/* RECORD */
 .record{
-    width:95%;
-    margin:auto;
     background:white;
-    padding:10px;
+    padding:12px;
     border-radius:10px;
     margin-bottom:15px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+.record textarea{
+    width:100%;
+    font-size:18px;
+    font-weight:bold;
+    resize:vertical;
 }
 
 .record img{
@@ -128,54 +99,43 @@ body{
     margin:auto;
 }
 
-.record textarea{
-    width:95%;
-    font-size:18px;
-    font-weight:bold;
-    resize:vertical;
-}
-
-.rowData{
+.smallRow{
     display:flex;
-    gap:5px;
     flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
 }
 
 .sep{
     height:2px;
-    background:#ccc;
+    background:#ddd;
     margin-top:10px;
 }
 
-/* ===============================
-   BOTTONI
-   =============================== */
-
-.bottomBtns{
+.bottom{
     display:flex;
-    gap:10px;
     justify-content:center;
-    margin-bottom:40px;
+    gap:10px;
+    margin:20px 0;
 }
 
-.addBtn{
-    width:50px;
-    height:50px;
+.add{
+    width:55px;
+    height:55px;
     border-radius:50%;
     background:gray;
     color:white;
-    font-size:24px;
+    font-size:26px;
     border:none;
 }
 
-.sortBtn{
+.sort{
     background:blue;
     color:white;
-    border-radius:50%;
-    padding:15px;
     border:none;
+    border-radius:20px;
+    padding:10px 15px;
 }
-
 </style>
 </head>
 
@@ -186,299 +146,254 @@ body{
 <div class="title">TITOLO PAGINA</div>
 
 <!-- TIMER -->
-<div class="timer">
-
-<input type="number" id="minutes" placeholder="minuti">
-
+<div class="panel timer">
+<input type="number" id="minuti" placeholder="minuti">
 <button class="btnStart" onclick="startTimer()">START</button>
-
 <button class="btnReset" onclick="resetTimer()">RESET</button>
-
 <div class="countdown" id="countdown">00:00</div>
-
 </div>
 
-<!-- CONTROLLO CATEGORIE -->
-<div class="control">
+<!-- CATEGORIE -->
+<div class="panel" id="catPanel">
 
-<div class="catRow">
+<div class="row">
 <input value="TUTTI" disabled>
-<button class="filterBtn" onclick="filterCategory('TUTTI')">→</button>
+<button onclick="setFilter('TUTTI')">→</button>
 </div>
 
-<div class="catRow">
-<input id="cat1" placeholder="Categoria 1">
-<button class="filterBtn" onclick="filterCategory(cat1.value)">→</button>
+<div class="row">
+<input id="c1" placeholder="Categoria 1" oninput="saveCats()">
+<button onclick="setFilter(c1.value)">→</button>
 </div>
 
-<div class="catRow">
-<input id="cat2" placeholder="Categoria 2">
-<button class="filterBtn" onclick="filterCategory(cat2.value)">→</button>
+<div class="row">
+<input id="c2" placeholder="Categoria 2" oninput="saveCats()">
+<button onclick="setFilter(c2.value)">→</button>
 </div>
 
-<div class="catRow">
-<input id="cat3" placeholder="Categoria 3">
-<button class="filterBtn" onclick="filterCategory(cat3.value)">→</button>
+<div class="row">
+<input id="c3" placeholder="Categoria 3" oninput="saveCats()">
+<button onclick="setFilter(c3.value)">→</button>
 </div>
 
 </div>
 
-<!-- RECORDS -->
 <div id="records"></div>
 
-<!-- BOTTONI -->
-<div class="bottomBtns">
-<button class="addBtn" onclick="createRecord()">+</button>
-<button class="sortBtn" onclick="sortRecords()">ORDINA</button>
+<div class="bottom">
+<button class="add" onclick="addRecord()">+</button>
+<button class="sort" onclick="sortRecords()">ORDINA</button>
 </div>
 
 </div>
 
 <script>
 
-/* ===============================
-   LOCAL STORAGE
-   =============================== */
+/* ===================== STORAGE ===================== */
+let records = JSON.parse(localStorage.getItem("records") || "[]");
+let cats = JSON.parse(localStorage.getItem("cats") || '{"c1":"","c2":"","c3":""}');
+let filterCat = "TUTTI";
 
-let records = JSON.parse(localStorage.getItem("records")) || [];
-let categories = JSON.parse(localStorage.getItem("categories")) || ["TUTTI","","",""];
-
+/* ===================== SAVE ===================== */
 function save(){
-    localStorage.setItem("records",JSON.stringify(records));
-    localStorage.setItem("categories",JSON.stringify(categories));
+    localStorage.setItem("records", JSON.stringify(records));
 }
 
-/* ===============================
-   TIMER
-   =============================== */
+function saveCats(){
+    cats.c1 = c1.value;
+    cats.c2 = c2.value;
+    cats.c3 = c3.value;
+    localStorage.setItem("cats", JSON.stringify(cats));
+    render();
+}
 
+/* ===================== INIT CATS ===================== */
+c1.value = cats.c1;
+c2.value = cats.c2;
+c3.value = cats.c3;
+
+/* ===================== TIMER ===================== */
 let timer;
-let seconds=0;
+let sec = 0;
 
 function startTimer(){
-    let min = document.getElementById("minutes").value;
-    seconds = min*60;
+    sec = (parseInt(minuti.value)||0)*60;
+    clearInterval(timer);
 
-    timer=setInterval(()=>{
-        if(seconds<=0){
+    timer = setInterval(()=>{
+        if(sec<=0){
             clearInterval(timer);
             new Audio("rsound/rdri.mp3").play();
             return;
         }
-        seconds--;
-        let m=Math.floor(seconds/60);
-        let s=seconds%60;
-        document.getElementById("countdown").innerText=
+
+        sec--;
+
+        let m = Math.floor(sec/60);
+        let s = sec%60;
+
+        countdown.textContent =
         String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+
     },1000);
 }
 
 function resetTimer(){
     clearInterval(timer);
-    document.getElementById("countdown").innerText="00:00";
+    countdown.textContent="00:00";
 }
 
-/* ===============================
-   CREAZIONE MENU IMMAGINI
-   =============================== */
-
-function imageMenu(selected){
-    let menu='<select>';
-    for(let i=1;i<=999;i++){
-        let num=String(i).padStart(3,"0");
-        let sel = selected==num?"selected":"";
-        menu+=`<option value="${num}" ${sel}>r${num}.jpg</option>`;
-    }
-    menu+='</select>';
-    return menu;
-}
-
-/* ===============================
-   CREAZIONE RECORD
-   =============================== */
-
-function createRecord(){
-
+/* ===================== RECORD ===================== */
+function addRecord(){
     records.push({
-        category:"TUTTI",
-        image:"001",
+        cat:"TUTTI",
+        img:"001",
         text:"",
         date:"",
         time:"",
-        completed:false,
-        delete:false
+        done:false,
+        del:false
     });
-
     save();
     render();
 }
 
-/* ===============================
-   RENDER
-   =============================== */
+/* ===================== IMAGE (CACHE MENU 1–999) ===================== */
+let imgCache = "";
 
+function buildImgOptions(){
+    if(imgCache) return imgCache;
+
+    let html = "";
+    for(let i=1;i<=999;i++){
+        let n = String(i).padStart(3,"0");
+        html += `<option value="${n}">r${n}.jpg</option>`;
+    }
+    imgCache = html;
+    return html;
+}
+
+function imgSelect(val,i){
+    return `
+    <select onchange="changeImg(this.value,${i})">
+        ${buildImgOptions().replace(`value="${val}"`,`value="${val}" selected`)}
+    </select>`;
+}
+
+function changeImg(v,i){
+    records[i].img = v;
+    save();
+    updateOnly(i);
+}
+
+/* ===================== UPDATE SINGLE RECORD ===================== */
+function updateOnly(i){
+    save();
+    render();
+}
+
+/* ===================== FILTER ===================== */
+function setFilter(c){
+    filterCat = c || "TUTTI";
+    render();
+}
+
+/* ===================== DELETE ===================== */
+function remove(i){
+    if(records[i].del){
+        records.splice(i,1);
+        save();
+        render();
+    }
+}
+
+/* ===================== SORT ===================== */
+function sortRecords(){
+    records.sort((a,b)=>{
+        return new Date(a.date||"9999-01-01") - new Date(b.date||"9999-01-01");
+    });
+    save();
+    render();
+}
+
+/* ===================== RENDER CORE ===================== */
 function render(){
 
-    let div=document.getElementById("records");
-    div.innerHTML="";
+    let div = document.getElementById("records");
+    div.innerHTML = "";
 
     records.forEach((r,i)=>{
 
-        let giorno="";
+        if(filterCat!=="TUTTI" && r.cat!==filterCat) return;
 
-        if(r.date){
-            let d=new Date(r.date);
-            giorno=d.toLocaleDateString("it-IT",{weekday:"long"});
-        }
+        let bg = r.done ? "#d6ffd6" : (r.text ? "#ffd6d6" : "white");
 
-        let bg="white";
+        let weekday = r.date ?
+        new Date(r.date).toLocaleDateString("it-IT",{weekday:"long"}) : "";
 
-        if(r.text) bg="#ffd6d6";
-        if(r.completed) bg="#d6ffd6";
+        let catOptions =
+        `<option ${r.cat=="TUTTI"?"selected":""}>TUTTI</option>
+         <option>${cats.c1||""}</option>
+         <option>${cats.c2||""}</option>
+         <option>${cats.c3||""}</option>`;
 
-        div.innerHTML+=`
-
+        div.innerHTML += `
         <div class="record" style="background:${bg}">
 
-        Categoria:
-        <select onchange="records[${i}].category=this.value;save()">
-        <option ${r.category=="TUTTI"?"selected":""}>TUTTI</option>
-        <option>${cat1.value}</option>
-        <option>${cat2.value}</option>
-        <option>${cat3.value}</option>
+        <select onchange="records[${i}].cat=this.value;save()">
+            ${catOptions}
         </select>
 
-        Immagine:
-        ${imageMenu(r.image)}
+        ${imgSelect(r.img,i)}
 
-        <img src="rimage/r${r.image}.jpg">
+        <img src="rimage/r${r.img}.jpg">
 
-        <textarea onchange="records[${i}].text=this.value;save();render()">${r.text}</textarea>
+        <textarea oninput="records[${i}].text=this.value;save()">${r.text}</textarea>
 
-        <div class="rowData">
+        <div class="smallRow">
 
         <input type="date" value="${r.date}"
-        onchange="records[${i}].date=this.value;save();render()">
+        onchange="records[${i}].date=this.value;save()">
 
-        <div>${giorno || "inserisci data"}</div>
+        <div>${weekday||"giorno"}</div>
 
         <input type="time" value="${r.time}"
         onchange="records[${i}].time=this.value;save()">
 
         </div>
 
-        <br>
-
+        <label>
         <input type="checkbox"
-        ${r.completed?"checked":""}
-        onchange="records[${i}].completed=this.checked;save();render()">
+        onchange="records[${i}].done=this.checked;save();render()"
+        ${r.done?"checked":""}>
+        <b>${r.done?"completato":"da fare"}</b>
+        </label>
 
-        <b>${r.completed?"completato":"da fare"}</b>
-
-        <br>
-
+        <label>
         <input type="checkbox"
-        ${r.delete?"checked":""}
-        onchange="records[${i}].delete=this.checked;save()">
+        onchange="records[${i}].del=this.checked;save()"
+        ${r.del?"checked":""}>
+        da eliminare
+        </label>
 
-        <b>da eliminare</b>
-
-        <br><br>
-
-        <button onclick="deleteRecord(${i})">cancella</button>
+        <button onclick="remove(${i})">cancella</button>
 
         <div class="sep"></div>
 
-        </div>
-        `;
+        </div>`;
     });
 
     save();
 }
 
-/* ===============================
-   ELIMINA RECORD
-   =============================== */
-
-function deleteRecord(i){
-
-    if(records[i].delete){
-        records.splice(i,1);
-        save();
-        render();
-    }else{
-        alert("Attiva prima il flag da eliminare");
-    }
-}
-
-/* ===============================
-   FILTRO
-   =============================== */
-
-function filterCategory(cat){
-
-    let div=document.getElementById("records");
-
-    if(cat=="TUTTI"){
-        render();
-        return;
-    }
-
-    div.innerHTML="";
-
-    records.forEach((r,i)=>{
-        if(r.category==cat){
-            div.innerHTML+=r.text;
-        }
-    });
-}
-
-/* ===============================
-   ORDINAMENTO
-   =============================== */
-
-function sortRecords(){
-
-    records.sort((a,b)=>{
-        return new Date(a.date)-new Date(b.date);
-    });
-
-    save();
+/* ===================== INIT ===================== */
+if(records.length===0){
+    addRecord();
+}else{
     render();
 }
-
-/* ===============================
-   CATEGORIE
-   =============================== */
-
-cat1.oninput=()=>{
-    categories[1]=cat1.value;
-    save();
-    render();
-}
-
-cat2.oninput=()=>{
-    categories[2]=cat2.value;
-    save();
-    render();
-}
-
-cat3.oninput=()=>{
-    categories[3]=cat3.value;
-    save();
-    render();
-}
-
-/* ===============================
-   AVVIO
-   =============================== */
-
-if(records.length==0){
-    createRecord();
-}
-
-render();
 
 </script>
+
 </body>
 </html>
