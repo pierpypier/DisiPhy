@@ -2,92 +2,97 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>test dsprecord</title>
-
-<style>
-body{font-family:Arial;margin:0;padding:20px;background:#f4f6f8}
-.box{background:white;padding:10px;margin-bottom:10px;border-radius:8px}
-button{padding:8px 12px}
-</style>
+<title>DEBUG DSPRECORD</title>
 </head>
 
-<body>
+<body style="font-family:Arial;padding:20px">
 
-<h2 style="color:blue">TEST DSPRECORD</h2>
+<h2>DEBUG LOCALSTORAGE</h2>
 
-<!-- CATEGORIE -->
-<div class="box">
-<input id="c1" placeholder="Categoria 1">
-<input id="c2" placeholder="Categoria 2">
-<input id="c3" placeholder="Categoria 3">
-</div>
+<input id="testInput" placeholder="scrivi qualcosa">
+<button onclick="saveTest()">SALVA</button>
+<button onclick="loadTest()">CARICA</button>
 
-<!-- RECORDS -->
+<p id="output"></p>
+
+<hr>
+
+<h3>RECORD TEST</h3>
+
+<button onclick="addRecord()">+ RECORD</button>
+
 <div id="records"></div>
-
-<button onclick="addRecord()">+ NUOVO RECORD</button>
 
 <script>
 
-/* ===== DATA ===== */
+/* ===================== TEST LOCALSTORAGE ===================== */
+
+function saveTest(){
+    const val = document.getElementById("testInput").value;
+    localStorage.setItem("test", val);
+    document.getElementById("output").innerText = "SALVATO: " + val;
+}
+
+function loadTest(){
+    const val = localStorage.getItem("test");
+    document.getElementById("output").innerText = "CARICATO: " + val;
+}
+
+/* ===================== RECORD SYSTEM ===================== */
+
 let records = JSON.parse(localStorage.getItem("records") || "[]");
 
-/* ===== SAVE ===== */
-function save(){
-localStorage.setItem("records", JSON.stringify(records));
+function saveRecords(){
+    localStorage.setItem("records", JSON.stringify(records));
 }
 
-/* ===== ADD RECORD ===== */
 function addRecord(){
 
-records.push({
-text:""
-});
+    records.push({
+        text:""
+    });
 
-save();
-render();
-
+    saveRecords();
+    render();
 }
 
-/* ===== RENDER ===== */
 function render(){
 
-const box = document.getElementById("records");
-box.innerHTML = "";
+    const box = document.getElementById("records");
+    box.innerHTML = "";
 
-for(let i=0;i<records.length;i++){
+    for(let i=0;i<records.length;i++){
 
-const div = document.createElement("div");
-div.className="box";
+        const div = document.createElement("div");
+        div.style.margin = "10px 0";
 
-const input = document.createElement("input");
-input.value = records[i].text;
+        const input = document.createElement("input");
+        input.value = records[i].text;
 
-input.oninput = function(){
-records[i].text = this.value;
-save();
-};
+        input.oninput = function(){
+            records[i].text = this.value;
+            saveRecords();
+        };
 
-const del = document.createElement("button");
-del.innerText="X";
-del.onclick = function(){
-records.splice(i,1);
-save();
-render();
-};
+        const btn = document.createElement("button");
+        btn.innerText = "X";
+        btn.onclick = function(){
+            records.splice(i,1);
+            saveRecords();
+            render();
+        };
 
-div.appendChild(input);
-div.appendChild(del);
-box.appendChild(div);
+        div.appendChild(input);
+        div.appendChild(btn);
 
+        box.appendChild(div);
+    }
 }
 
-}
-
-/* ===== INIT ===== */
+/* INIT */
 render();
 
 </script>
 
 </body>
-</html>
+  </html>
