@@ -20,12 +20,13 @@ body{
 
 .title{
     text-align:center;
+    color:#1e5bd8;
     font-size:28px;
     font-weight:bold;
-    color:#1e5bd8;
     padding:15px;
 }
 
+/* ===== PANEL ===== */
 .panel{
     background:white;
     padding:12px;
@@ -38,11 +39,20 @@ body{
     align-items:center;
 }
 
-/* TIMER */
-.timer input{
-    width:90px;
+.row{
+    display:flex;
+    gap:10px;
+    width:100%;
+    align-items:center;
+}
+
+.row input{
+    flex:1;
     padding:6px;
 }
+
+/* ===== TIMER ===== */
+.timer input{ width:90px; }
 
 .btnStart{
     background:green;
@@ -64,20 +74,7 @@ body{
     font-weight:bold;
 }
 
-/* CATEGORIE */
-.row{
-    display:flex;
-    gap:10px;
-    align-items:center;
-    width:100%;
-}
-
-.row input{
-    flex:1;
-    padding:6px;
-}
-
-/* RECORD */
+/* ===== RECORD ===== */
 .record{
     background:white;
     padding:12px;
@@ -150,11 +147,11 @@ body{
 <input type="number" id="minuti" placeholder="minuti">
 <button class="btnStart" onclick="startTimer()">START</button>
 <button class="btnReset" onclick="resetTimer()">RESET</button>
-<div class="countdown" id="countdown">00:00</div>
+<div id="countdown">00:00</div>
 </div>
 
 <!-- CATEGORIE -->
-<div class="panel" id="catPanel">
+<div class="panel">
 
 <div class="row">
 <input value="TUTTI" disabled>
@@ -194,23 +191,24 @@ let records = JSON.parse(localStorage.getItem("records") || "[]");
 let cats = JSON.parse(localStorage.getItem("cats") || '{"c1":"","c2":"","c3":""}');
 let filterCat = "TUTTI";
 
+/* ===================== INIT CATS ===================== */
+c1.value = cats.c1;
+c2.value = cats.c2;
+c3.value = cats.c3;
+
 /* ===================== SAVE ===================== */
 function save(){
     localStorage.setItem("records", JSON.stringify(records));
+    localStorage.setItem("cats", JSON.stringify(cats));
 }
 
 function saveCats(){
     cats.c1 = c1.value;
     cats.c2 = c2.value;
     cats.c3 = c3.value;
-    localStorage.setItem("cats", JSON.stringify(cats));
+    save();
     render();
 }
-
-/* ===================== INIT CATS ===================== */
-c1.value = cats.c1;
-c2.value = cats.c2;
-c3.value = cats.c3;
 
 /* ===================== TIMER ===================== */
 let timer;
@@ -226,7 +224,6 @@ function startTimer(){
             new Audio("rsound/rdri.mp3").play();
             return;
         }
-
         sec--;
 
         let m = Math.floor(sec/60);
@@ -234,7 +231,6 @@ function startTimer(){
 
         countdown.textContent =
         String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
-
     },1000);
 }
 
@@ -243,8 +239,11 @@ function resetTimer(){
     countdown.textContent="00:00";
 }
 
-/* ===================== RECORD ===================== */
+/* ===================== ADD RECORD (FIX DEFINITIVO) ===================== */
 function addRecord(){
+
+    filterCat = "TUTTI"; // garantisce visibilità immediata
+
     records.push({
         cat:"TUTTI",
         img:"001",
@@ -254,40 +253,26 @@ function addRecord(){
         done:false,
         del:false
     });
+
     save();
     render();
 }
 
-/* ===================== IMAGE (CACHE MENU 1–999) ===================== */
-let imgCache = "";
-
-function buildImgOptions(){
-    if(imgCache) return imgCache;
-
-    let html = "";
-    for(let i=1;i<=999;i++){
-        let n = String(i).padStart(3,"0");
-        html += `<option value="${n}">r${n}.jpg</option>`;
-    }
-    imgCache = html;
-    return html;
-}
-
+/* ===================== IMAGE ===================== */
 function imgSelect(val,i){
-    return `
-    <select onchange="changeImg(this.value,${i})">
-        ${buildImgOptions().replace(`value="${val}"`,`value="${val}" selected`)}
-    </select>`;
+    let html = `<select onchange="changeImg(this.value,${i})">`;
+
+    for(let k=1;k<=999;k++){
+        let n = String(k).padStart(3,"0");
+        html += `<option value="${n}" ${val==n?"selected":""}>r${n}.jpg</option>`;
+    }
+
+    html += `</select>`;
+    return html;
 }
 
 function changeImg(v,i){
     records[i].img = v;
-    save();
-    updateOnly(i);
-}
-
-/* ===================== UPDATE SINGLE RECORD ===================== */
-function updateOnly(i){
     save();
     render();
 }
@@ -316,7 +301,7 @@ function sortRecords(){
     render();
 }
 
-/* ===================== RENDER CORE ===================== */
+/* ===================== RENDER STABILE ===================== */
 function render(){
 
     let div = document.getElementById("records");
@@ -331,11 +316,11 @@ function render(){
         let weekday = r.date ?
         new Date(r.date).toLocaleDateString("it-IT",{weekday:"long"}) : "";
 
-        let catOptions =
-        `<option ${r.cat=="TUTTI"?"selected":""}>TUTTI</option>
-         <option>${cats.c1||""}</option>
-         <option>${cats.c2||""}</option>
-         <option>${cats.c3||""}</option>`;
+        let catOptions = `
+        <option ${r.cat=="TUTTI"?"selected":""}>TUTTI</option>
+        <option>${cats.c1||""}</option>
+        <option>${cats.c2||""}</option>
+        <option>${cats.c3||""}</option>`;
 
         div.innerHTML += `
         <div class="record" style="background:${bg}">
