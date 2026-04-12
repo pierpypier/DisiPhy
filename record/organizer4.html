@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DSP Record - Dashboard Attività</title>
+  <title>DSP Organizer 2.4 by Pier Paolo Mannoni</title>
   <style>
     :root{
       --bg:#f6f8fb;
@@ -46,7 +46,7 @@
       background:var(--card);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
-      padding:16px;
+      padding:8px;
       margin-bottom:16px;
     }
     .category-row{
@@ -243,8 +243,8 @@
       display:flex;
       gap:12px;
       justify-content:center;
-      margin-top:8px;
-      margin-bottom:40px;
+      margin-top:12px;
+      margin-bottom:18px;
       align-items:center;
     }
     .create-btn{
@@ -293,15 +293,15 @@
 
     <!-- TITOLO -->
     <div class="title-bar">
-      <div class="page-title">TITOLO PAGINA</div>
-      <div class="small">Dashboard leggera per record attività</div>
+      <div class="page-title">ORGANIZER 2.4</div>
+      <div class="small">Gestionale attività</div>
     </div>
 
     <!-- CATEGORIE -->
     <div class="control-card" id="controlCard">
       <div class="category-row">
         <div class="category-label">TUTTI</div>
-        <div class="muted">TUTTI</div>
+        <div class="muted">visualizza tutti i record</div>
         <button class="cat-btn-all" data-filter="TUTTI">→</button>
       </div>
 
@@ -324,14 +324,15 @@
       </div>
     </div>
 
-    <!-- RECORD -->
-    <div class="records-wrap" id="recordsWrap"></div>
-
     <!-- PULSANTI FINALI -->
     <div class="actions">
       <button id="createRecord" class="create-btn">+</button>
       <button id="sortRecords" class="sort-btn" aria-label="Ordina per data">↓</button>
     </div>
+    
+    <!-- RECORD -->
+    <div class="records-wrap" id="recordsWrap"></div>
+
 
   </div>
 
