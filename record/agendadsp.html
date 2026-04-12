@@ -125,8 +125,6 @@
       border-radius:8px;
       margin-top:10px;
     }
-
-
     .desc{
       width:100%;
       margin-top:10px;
@@ -138,50 +136,6 @@
       resize:vertical;
       min-height:60px;
     }
-
-/* Wrapper per la textarea con resizer più grande */
-.desc-wrapper{
-  position:relative;
-  display:block;
-}
-
-/* Disabilitiamo il resize nativo per usare il nostro handle */
-.desc{
-  resize: none; /* disabilita il triangolino nativo */
-  box-sizing:border-box;
-}
-
-/* Maniglia di ridimensionamento personalizzata */
-.resizer{
-  position:absolute;
-  width:28px;              /* dimensione maniglia più comoda */
-  height:28px;
-  right:8px;
-  bottom:8px;
-  border-radius:6px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(0,0,0,0.06));
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  cursor: se-resize;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  user-select:none;
-  -webkit-user-select:none;
-  touch-action:none;
-}
-
-/* Icona a righe dentro la maniglia (più visibile) */
-.resizer::before{
-  content: "";
-  width:12px;
-  height:12px;
-  background-image: linear-gradient(135deg, rgba(0,0,0,0.35) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.35) 75%, transparent 75%, transparent);
-  background-size:6px 6px;
-  opacity:0.9;
-  border-radius:2px;
-}
-
-
     .meta-row{
       display:flex;
       gap:10px;
@@ -424,98 +378,17 @@ function buildRecord(rec){
   };
   wrap.appendChild(img);
 
-  /* DESCRIZIONE con resizer personalizzato */
-  // Wrapper che contiene la textarea e la maniglia
-  const descWrapper = document.createElement('div');
-  descWrapper.className = 'desc-wrapper';
-
-  // Textarea (ora senza resize nativo)
-  const desc = document.createElement('textarea');
-  desc.className = 'desc';
-  desc.placeholder = 'Descrizione attività...';
-  desc.value = rec.description || '';
-
-  // Applica altezza salvata (se presente nello stato)
-  if(rec.height){
-    desc.style.height = rec.height + 'px';
-  } else {
-    desc.style.minHeight = '60px';
-  }
-
-  // Maniglia di ridimensionamento (visibile e grande)
-  const resizer = document.createElement('div');
-  resizer.className = 'resizer';
-  resizer.title = 'Ridimensiona';
-
-  // Variabili per il drag
-  let startY = 0;
-  let startH = 0;
-  let dragging = false;
-
-  // Funzione che applica e salva l'altezza
-  function applyHeight(newH){
-    // Limiti ragionevoli
-    const minH = 40;
-    const maxH = window.innerHeight - 120;
-    const h = Math.max(minH, Math.min(maxH, newH));
-    desc.style.height = h + 'px';
-  }
-
-  // Mouse events
-  resizer.addEventListener('mousedown', (e) => {
-    e.preventDefault();
-    dragging = true;
-    startY = e.clientY;
-    startH = desc.getBoundingClientRect().height;
-    document.documentElement.style.cursor = 'se-resize';
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if(!dragging) return;
-    const dy = e.clientY - startY;
-    applyHeight(startH + dy);
-  });
-
-  document.addEventListener('mouseup', () => {
-    if(!dragging) return;
-    dragging = false;
-    document.documentElement.style.cursor = '';
-    // salva altezza nel record
-    const idx = state.records.findIndex(r => r.id === rec.id);
-    if(idx >= 0){
-      state.records[idx].height = parseInt(desc.getBoundingClientRect().height, 10);
-      saveState();
-    }
-  });
-
-  // Touch events (mobile)
-  resizer.addEventListener('touchstart', (e) => {
-    e.preventDefault();
-    dragging = true;
-    startY = e.touches[0].clientY;
-    startH = desc.getBoundingClientRect().height;
-  }, {passive:false});
-
-  document.addEventListener('touchmove', (e) => {
-    if(!dragging) return;
-    const dy = e.touches[0].clientY - startY;
-    applyHeight(startH + dy);
-  }, {passive:false});
-
-  document.addEventListener('touchend', () => {
-    if(!dragging) return;
-    dragging = false;
-    const idx = state.records.findIndex(r => r.id === rec.id);
-    if(idx >= 0){
-      state.records[idx].height = parseInt(desc.getBoundingClientRect().height, 10);
-      saveState();
-    }
-  });
-
-  // Inserisci elementi nel DOM
-  descWrapper.appendChild(desc);
-  descWrapper.appendChild(resizer);
-  wrapper.appendChild(descWrapper);
+  /* DESCRIZIONE */
+  const desc=document.createElement("textarea");
+  desc.className="desc";
+  desc.value=rec.description;
+  desc.oninput=()=>{
+    rec.description=desc.value;
+    wrap.classList.toggle("red-bg",desc.value.trim()!=="");
+    if(rec.completed) wrap.classList.add("green-bg");
+    saveState();
+  };
+  wrap.appendChild(desc);
 
   /* META */
   const meta=document.createElement("div");
@@ -692,4 +565,4 @@ render();
 </script>
 
 </body>
-        </html>
+  </html>
