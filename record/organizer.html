@@ -1,412 +1,777 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Organizer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DSP Record - Dashboard Attività</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --success:#dff7e6;
+      --danger:#ffe6e6;
+      --shadow:0 6px 18px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,Arial;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:24px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+    .title-bar{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .page-title{
+      font-size:20px;
+      font-weight:700;
+      color:var(--accent);
+    }
 
-<style>
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    padding:0;
-    background:#f4f4f4;
-}
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:10px;
-}
-h1{
-    text-align:center;
-}
+    /* CATEGORIE */
+    .control-card{
+      width:100%;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:16px;
+      margin-bottom:16px;
+    }
+    .category-row{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-bottom:10px;
+      flex-wrap:wrap;
+    }
+    .category-label{
+      min-width:80px;
+      font-weight:700;
+      color:var(--muted);
+    }
+    .category-input{
+      flex:1;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid #e6e9ef;
+      font-size:15px;
+    }
+    .cat-btn{
+      background:#e6eefc;
+      color:var(--accent);
+      border-radius:10px;
+      padding:10px 14px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      font-size:18px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:44px;
+      min-height:44px;
+    }
+    .cat-btn-all{
+      background:#1e88e5;
+      color:#fff;
+      border-radius:10px;
+      padding:10px 14px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      font-size:18px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:44px;
+      min-height:44px;
+    }
 
-/* TIMER */
-.timer-box{
-    text-align:center;
-    margin:20px 0;
-}
-.timer-input{
-    font-size:20px;
-    width:120px;
-    padding:6px;
-    text-align:center;
-}
-.start-btn{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    background:green;
-    color:white;
-    font-size:18px;
-    border:none;
-    margin-left:10px;
-    cursor:pointer;
-}
-.start-btn:active{
-    transform:scale(0.95);
-}
+    /* RECORD */
+    .records-wrap{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .record{
+      width:95%;
+      margin:0 auto;
+      background:var(--card);
+      border-radius:12px;
+      padding:14px;
+      box-shadow:var(--shadow);
+      transition:background 0.2s ease;
+    }
+    .record.red-bg{background:var(--danger);}
+    .record.green-bg{background:var(--success);}
+    .record-top{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .select{
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid #e6e9ef;
+      background:#fff;
+      font-size:14px;
+    }
+    .img-preview{
+      width:100%;
+      max-height:220px;
+      object-fit:cover;
+      border-radius:8px;
+      margin-top:10px;
+    }
 
-/* IMAGE */
-.record-image{
-    width:100%;
-    max-height:250px;
-    object-fit:cover;
-    border:3px solid #ccc;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-    margin-bottom:10px;
-}
-.image-select{
-    width:100%;
-    padding:6px;
-    margin-bottom:10px;
-}
+    /* TEXTAREA: disabilitiamo il resize nativo e usiamo la maniglia */
+    .desc-wrapper {
+      position: relative;
+      display: block;
+    }
+    .desc{
+      width:100%;
+      margin-top:10px;
+      font-size:18px;
+      font-weight:700;
+      padding:12px;
+      border-radius:8px;
+      border:1px solid #e6e9ef;
+      resize: none; /* disabilita il resize nativo */
+      box-sizing: border-box;
+      min-height:60px;
+      background:transparent;
+      overflow:auto;
+    }
 
-/* RECORD */
-.record{
-    background:white;
-    padding:10px;
-    border-radius:8px;
-}
-.record.completed{
-    background:#d4edda;
-    border-left:6px solid green;
-}
-.record.pending{
-    background:#ffe5e5;
-    border-left:6px solid #cc0000;
-}
-.separator{
-    height:2px;
-    background:#ccc;
-    margin:10px 0;
-}
-textarea{
-    width:95%;
-    min-height:40px;
-    resize:vertical;
-    padding:5px;
-    border-radius:8px;
-    border:1px solid #ccc;
-    font-size:16px;
-    line-height:1.5;
-}
-.row{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-top:5px;
-}
-.status{
-    font-weight:bold;
-    margin-top:5px;
-}
-#timerDisplay{
-    margin-top:10px;
-    font-size:20px;
-}
+    .meta-row{
+      display:flex;
+      gap:10px;
+      margin-top:10px;
+      flex-wrap:wrap;
+    }
+    .input{
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid #e6e9ef;
+      font-size:14px;
+    }
+    .weekday{
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px dashed #d1d5db;
+      background:#fff;
+      min-width:140px;
+      text-align:center;
+      color:var(--muted);
+      font-weight:600;
+    }
+    .flags{
+      display:flex;
+      gap:12px;
+      margin-top:10px;
+      flex-wrap:wrap;
+    }
+    .flag{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      font-weight:700;
+      color:var(--muted);
+    }
+    .delete-btn{
+      background:#9ca3af;
+      color:#fff;
+      border-radius:10px;
+      padding:8px 12px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      margin-top:10px;
+    }
+    .separator{
+      height:1px;
+      background:#e6e9ef;
+      margin-top:12px;
+    }
 
-.agendaBar{
-    display:block;
-    width:100%;
-    background:#0077cc;
-    color:white;
-    text-align:center;
-    font-size:16px;
-    font-weight:bold;
-    padding:12px 0;
-    text-decoration:none;
-    margin:10px 0 15px 0;
-    border-radius:8px;
-}
+    /* MANIGLIA DI RIDIMENSIONAMENTO (visibile e comoda) */
+    .resizer {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(0,0,0,0.06));
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      cursor: ns-resize;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+      z-index: 5;
+    }
+    .resizer::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background-image: linear-gradient(135deg, rgba(0,0,0,0.35) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.35) 75%, transparent 75%, transparent);
+      background-size: 6px 6px;
+      border-radius: 2px;
+      opacity: 0.9;
+    }
 
-.agendaBar:hover{
-    background:#155bb5;
-}
+    /* PULSANTI FINALI */
+    .actions{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      margin-top:8px;
+      margin-bottom:40px;
+      align-items:center;
+    }
+    .create-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#6b7280;
+      color:#fff;
+      font-size:28px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:none;
+      cursor:pointer;
+    }
+    .sort-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#16a34a; /* verde */
+      color:#ffffff;     /* freccia bianca */
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      box-shadow:var(--shadow);
+      padding:0;
+    }
+    .sort-btn:hover{ filter: brightness(0.95); }
 
-    
-@media(max-width:600px){
-.start-btn{
-    width:70px;
-    height:70px;
-}
-}
-</style>
+    /* RESPONSIVE */
+    @media (max-width:640px){
+      .weekday{min-width:120px}
+      .cat-btn, .cat-btn-all{font-size:16px; padding:8px 12px}
+    }
+
+    .muted{color:var(--muted); font-weight:600}
+    .small{font-size:13px; color:var(--muted)}
+  </style>
 </head>
-
 <body>
+  <div class="container">
 
-<div class="container">
+    <!-- TITOLO -->
+    <div class="title-bar">
+      <div class="page-title">TITOLO PAGINA</div>
+      <div class="small">Dashboard leggera per record attività</div>
+    </div>
 
-<h1>AGENDA</h1>
-    <a href="categoria1.html" class="agendaBar">ATTIVITÀ CATEGORIA 1</a>
-    <a href="categoria2.html" class="agendaBar">ATTIVITÀ CATEGORIA 2</a>
-    <a href="categoria3.html" class="agendaBar">ATTIVITÀ CATEGORIA 3</a>
-    
-<div class="timer-box">
-<input type="number" id="timerSeconds" class="timer-input" placeholder="secondi">
-<button class="start-btn" onclick="startTimer()">Start</button>
-<div id="timerDisplay"></div>
-</div>
+    <!-- CATEGORIE -->
+    <div class="control-card" id="controlCard">
+      <div class="category-row">
+        <div class="category-label">TUTTI</div>
+        <div class="muted">TUTTI</div>
+        <button class="cat-btn-all" data-filter="TUTTI">→</button>
+      </div>
 
-<div id="records"></div>
+      <div class="category-row">
+        <div class="category-label">Categoria 1</div>
+        <input id="cat1" class="category-input" type="text" placeholder="Categoria 1">
+        <button class="cat-btn" data-filter-index="1">→</button>
+      </div>
 
-</div>
+      <div class="category-row">
+        <div class="category-label">Categoria 2</div>
+        <input id="cat2" class="category-input" type="text" placeholder="Categoria 2">
+        <button class="cat-btn" data-filter-index="2">→</button>
+      </div>
 
-<audio id="alarm" src="rsound/rdri.mp3"></audio>
+      <div class="category-row">
+        <div class="category-label">Categoria 3</div>
+        <input id="cat3" class="category-input" type="text" placeholder="Categoria 3">
+        <button class="cat-btn" data-filter-index="3">→</button>
+      </div>
+    </div>
+
+    <!-- RECORD -->
+    <div class="records-wrap" id="recordsWrap"></div>
+
+    <!-- PULSANTI FINALI -->
+    <div class="actions">
+      <button id="createRecord" class="create-btn">+</button>
+      <button id="sortRecords" class="sort-btn" aria-label="Ordina per data">↓</button>
+    </div>
+
+  </div>
 
 <script>
+/* ============================
+   LOCAL STORAGE KEYS
+============================ */
+const LS = {
+  categories:"dsp_categories_v1",
+  records:"dsp_records_v1"
+};
 
-/* CONFIG */
-const TOTAL_RECORDS = 99;
-const TOTAL_IMAGES = 999;
+/* ============================
+   STATO
+============================ */
+let state = {
+  categories:["TUTTI","Categoria 1","Categoria 2","Categoria 3"],
+  records:[]
+};
 
-/* TIMER */
-let timerInterval;
+/* ============================
+   CARICA STATO
+============================ */
+function loadState(){
+  const c = localStorage.getItem(LS.categories);
+  const r = localStorage.getItem(LS.records);
+  if(c) state.categories = JSON.parse(c);
+  if(r) state.records = JSON.parse(r);
 
-function startTimer(){
+  if(!state.records || state.records.length === 0){
+    state.records = [{
+      id:Date.now().toString(),
+      category:"TUTTI",
+      image:"r001.jpg",
+      description:"Esempio attività",
+      date:"",
+      time:"",
+      completed:false,
+      toDelete:false
+    }];
+    saveState();
+  }
+}
 
-    let seconds = parseInt(document.getElementById("timerSeconds").value);
-    if(!seconds) return;
+/* ============================
+   SALVA STATO
+============================ */
+function saveState(){
+  localStorage.setItem(LS.categories,JSON.stringify(state.categories));
+  localStorage.setItem(LS.records,JSON.stringify(state.records));
+}
 
-    localStorage.setItem("timerSeconds", seconds);
+/* ============================
+   CREA RECORD DOM
+   Nota: la textarea viene inserita dentro .desc-wrapper;
+   la maniglia di resize viene aggiunta separatamente tramite initResizers()
+============================ */
+function buildRecord(rec){
+  const wrap=document.createElement("div");
+  wrap.className="record";
+  wrap.dataset.id=rec.id;
 
-    let display = document.getElementById("timerDisplay");
+  if(rec.description && rec.description.trim()!=="") wrap.classList.add("red-bg");
+  if(rec.completed) wrap.classList.add("green-bg");
 
-    clearInterval(timerInterval);
+  /* TOP */
+  const top=document.createElement("div");
+  top.className="record-top";
 
-    timerInterval = setInterval(()=>{
+  const selCat=document.createElement("select");
+  selCat.className="select";
+  state.categories.forEach(c=>{
+    const o=document.createElement("option");
+    o.value=c; o.textContent=c;
+    if(c===rec.category) o.selected=true;
+    selCat.appendChild(o);
+  });
+  selCat.addEventListener('change', () => {
+    const idx = state.records.findIndex(r => r.id === rec.id);
+    if(idx >= 0){
+      state.records[idx].category = selCat.value;
+      saveState();
+    }
+  });
+  top.appendChild(selCat);
 
-        seconds--;
-        display.innerText = seconds + " sec";
+  const selImg=document.createElement("select");
+  selImg.className="select";
+  for(let i=1;i<=999;i++){
+    const n=String(i).padStart(3,"0");
+    const f=`r${n}.jpg`;
+    const o=document.createElement("option");
+    o.value=f; o.textContent=f;
+    if(f===rec.image) o.selected=true;
+    selImg.appendChild(o);
+  }
+  top.appendChild(selImg);
 
-        if(seconds <= 0){
-            clearInterval(timerInterval);
-            display.innerText = "Tempo finito";
-            document.getElementById("alarm").play();
+  wrap.appendChild(top);
+
+  /* IMMAGINE */
+  const img=document.createElement("img");
+  img.className="img-preview";
+  img.src=`rimage/${rec.image}`;
+  selImg.addEventListener('change', () => {
+    const idx = state.records.findIndex(r => r.id === rec.id);
+    if(idx >= 0){
+      state.records[idx].image = selImg.value;
+      saveState();
+      img.src = `rimage/${selImg.value}`;
+    }
+  });
+  wrap.appendChild(img);
+/* DESCRIZIONE (inserita dentro wrapper; la maniglia viene aggiunta da initResizers) */
+  const descWrapper = document.createElement('div');
+  descWrapper.className = 'desc-wrapper';
+
+  const desc = document.createElement("textarea");
+  desc.className="desc";
+  desc.placeholder = 'Descrizione attività...';
+  desc.value = rec.description || '';
+
+  // Salvataggio immediato alla digitazione (manteniamo comportamento esistente)
+  desc.addEventListener('input', () => {
+    const idx = state.records.findIndex(r => r.id === rec.id);
+    if(idx >= 0){
+      state.records[idx].description = desc.value;
+      // Aggiorna classi direttamente
+      if(desc.value.trim() !== ''){
+        wrap.classList.add('red-bg');
+      } else {
+        wrap.classList.remove('red-bg');
+      }
+      if(state.records[idx].completed){
+        wrap.classList.remove('red-bg');
+        wrap.classList.add('green-bg');
+      }
+      saveState();
+    }
+  });
+
+  descWrapper.appendChild(desc);
+  wrap.appendChild(descWrapper);
+
+  /* META */
+  const meta=document.createElement("div");
+  meta.className="meta-row";
+
+  const date=document.createElement("input");
+  date.type="date";
+  date.className="input";
+  date.value=rec.date || '';
+  date.addEventListener('change', () => {
+    const idx = state.records.findIndex(r => r.id === rec.id);
+    if(idx >= 0){
+      state.records[idx].date = date.value;
+      weekday.textContent = date.value ? weekdayName(date.value) : 'inserisci data';
+      saveState();
+    }
+  });
+  meta.appendChild(date);
+
+  const weekday=document.createElement("div");
+  weekday.className="weekday";
+  weekday.textContent = rec.date ? weekdayName(rec.date) : 'inserisci data';
+  meta.appendChild(weekday);
+
+  const time=document.createElement("input");
+  time.type="time";
+  time.className="input";
+  time.value=rec.time || '';
+  time.addEventListener('change', () => {
+    const idx = state.records.findIndex(r => r.id === rec.id);
+    if(idx >= 0){
+      state.records[idx].time = time.value;
+      saveState();
+    }
+  });
+  meta.appendChild(time);
+
+  wrap.appendChild(meta);
+
+  /* FLAGS */
+  const flags=document.createElement("div");
+  flags.className="flags";
+
+  const f1=document.createElement("label");
+  f1.className="flag";
+  const chk1=document.createElement("input");
+  chk1.type="checkbox";
+  chk1.checked=!!rec.completed;
+  const t1=document.createElement("span");
+  t1.textContent=rec.completed?"completato":"da fare";
+  chk1.addEventListener('change', () => {
+    const idx = state.records.findIndex(r => r.id === rec.id);
+    if(idx >= 0){
+      state.records[idx].completed = chk1.checked;
+      t1.textContent = chk1.checked ? "completato" : "da fare";
+      if(chk1.checked){
+        wrap.classList.remove('red-bg');
+        wrap.classList.add('green-bg');
+      } else {
+        wrap.classList.remove('green-bg');
+        if(state.records[idx].description && state.records[idx].description.trim() !== ''){
+          wrap.classList.add('red-bg');
         }
+      }
+      saveState();
+    }
+  });
+  f1.appendChild(chk1); f1.appendChild(t1);
+  flags.appendChild(f1);
 
-    },1000);
+  const f2=document.createElement("label");
+  f2.className="flag";
+  const chk2=document.createElement("input");
+  chk2.type="checkbox";
+  chk2.checked=!!rec.toDelete;
+  chk2.addEventListener('change', () => {
+    const idx = state.records.findIndex(r => r.id === rec.id);
+    if(idx >= 0){
+      state.records[idx].toDelete = chk2.checked;
+      saveState();
+    }
+  });
+  const t2=document.createElement("span");
+  t2.textContent="da eliminare";
+  f2.appendChild(chk2); f2.appendChild(t2);
+  flags.appendChild(f2);
+
+  wrap.appendChild(flags);
+
+  /* CANCELLA */
+  const del=document.createElement("button");
+  del.className="delete-btn";
+  del.textContent="CANCELLA";
+  del.addEventListener('click', () => {
+    const idx = state.records.findIndex(r => r.id === rec.id);
+    if(idx >= 0 && state.records[idx].toDelete){
+      state.records.splice(idx,1);
+      saveState();
+      wrap.remove();
+    } else {
+      del.animate([{transform:"scale(1)"},{transform:"scale(1.05)"},{transform:"scale(1)"}],{duration:200});
+    }
+  });
+  wrap.appendChild(del);
+
+  wrap.appendChild(document.createElement("div")).className="separator";
+
+  return wrap;
 }
 
-/* CREAZIONE RECORD */
-
-let container = document.getElementById("records");
-
-for(let i=1;i<=TOTAL_RECORDS;i++){
-
-    let div = document.createElement("div");
-    div.className = "record";
-
-    /* MENU IMMAGINE */
-
-    let selectImg = document.createElement("select");
-    selectImg.id = "imgSelect"+i;
-    selectImg.className = "image-select";
-
-    for(let j=1;j<=TOTAL_IMAGES;j++){
-
-        let num = j.toString().padStart(3,'0');
-
-        let option = document.createElement("option");
-        option.value = "rimage/r"+num+".jpg";
-        option.text = "r"+num;
-
-        selectImg.appendChild(option);
-    }
-
-    div.appendChild(selectImg);
-
-    /* IMMAGINE */
-
-    let img = document.createElement("img");
-    img.id = "img"+i;
-    img.className = "record-image";
-    img.src = "rimage/r001.jpg";
-    img.loading = "lazy";
-
-    div.appendChild(img);
-
-    /* FLAG */
-
-    let flag = document.createElement("input");
-    flag.type = "checkbox";
-    flag.id = "flag"+i;
-
-    div.appendChild(flag);
-    div.appendChild(document.createTextNode(" completato"));
-
-    /* DESCRIZIONE */
-
-    let textarea = document.createElement("textarea");
-    textarea.id = "desc"+i;
-    textarea.placeholder = "descrizione attività";
-
-    div.appendChild(textarea);
-
-    /* DATA ORA */
-
-    let row = document.createElement("div");
-    row.className = "row";
-
-    let dateInput = document.createElement("input");
-    dateInput.type = "date";
-    dateInput.id = "date"+i;
-
-    let daySpan = document.createElement("span");
-    daySpan.id = "day"+i;
-
-    let timeInput = document.createElement("input");
-    timeInput.type = "time";
-    timeInput.id = "time"+i;
-
-    row.appendChild(dateInput);
-    row.appendChild(daySpan);
-    row.appendChild(timeInput);
-
-    div.appendChild(row);
-
-    /* STATUS */
-
-    let status = document.createElement("div");
-    status.className = "status";
-    status.id = "status"+i;
-    status.innerText = "da eseguire";
-
-    div.appendChild(status);
-
-    container.appendChild(div);
-
-    let sep = document.createElement("div");
-    sep.className = "separator";
-    container.appendChild(sep);
-
-    /* EVENTO MENU IMMAGINE */
-
-    selectImg.onchange = function(){
-
-        img.src = this.value;
-        saveData();
-    }
+/* ============================
+   WEEKDAY
+============================ */
+function weekdayName(d){
+  const dd=new Date(d+"T00:00:00");
+  return ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"][dd.getDay()];
 }
 
-/* COLORI */
+/* ============================
+   RENDER
+============================ */
+function render(){
+  const wrap=document.getElementById("recordsWrap");
+  wrap.innerHTML="";
+  state.records.forEach(r=>wrap.appendChild(buildRecord(r)));
 
-function updateRecordColor(i){
+  document.getElementById("cat1").value = state.categories[1] || '';
+  document.getElementById("cat2").value = state.categories[2] || '';
+  document.getElementById("cat3").value = state.categories[3] || '';
 
-    let record = document.getElementById("flag"+i).closest(".record");
-    let flag = document.getElementById("flag"+i).checked;
-    let text = document.getElementById("desc"+i).value.trim();
-
-    record.classList.remove("completed");
-    record.classList.remove("pending");
-
-    if(flag){
-
-        record.classList.add("completed");
-        document.getElementById("status"+i).innerText = "completato";
-
-    }else if(text.length>0){
-
-        record.classList.add("pending");
-        document.getElementById("status"+i).innerText = "da eseguire";
-
-    }else{
-
-        document.getElementById("status"+i).innerText = "da eseguire";
-    }
+  // Inizializza i resizer per le textarea appena renderizzate
+  if(window.initResizers) window.initResizers();
 }
 
-/* EVENTI */
+/* ============================
+   RESIZER MINIMO (CSS + JS)
+   - Avvolge ogni .desc in .desc-wrapper (già fatto in buildRecord)
+   - Aggiunge .resizer e gestisce drag mouse/touch
+   - Non salva l'altezza (comportamento richiesto)
+============================ */
+(function(){
+  function initResizers() {
+    const textareas = Array.from(document.querySelectorAll('.desc'));
+    textareas.forEach(textarea => {
+      // Se è già stato avvolto con resizer, salta
+      const parent = textarea.parentElement;
+      if(parent && parent.classList.contains('desc-wrapper') && parent.querySelector('.resizer')) return;
 
-for(let i=1;i<=TOTAL_RECORDS;i++){
+      // Se il wrapper non esiste (in teoria buildRecord lo crea), crealo
+      let wrapper = textarea.parentElement;
+      if(!wrapper || !wrapper.classList.contains('desc-wrapper')){
+        wrapper = document.createElement('div');
+        wrapper.className = 'desc-wrapper';
+        textarea.parentNode.insertBefore(wrapper, textarea);
+        wrapper.appendChild(textarea);
+      }
 
-    let dateField = document.getElementById("date"+i);
-    let flagField = document.getElementById("flag"+i);
-    let descField = document.getElementById("desc"+i);
+      // Crea resizer se non esiste
+      let resizer = wrapper.querySelector('.resizer');
+      if(!resizer){
+        resizer = document.createElement('div');
+        resizer.className = 'resizer';
+        resizer.title = 'Ridimensiona';
+        wrapper.appendChild(resizer);
+      }
 
-    dateField.onchange = function(){
+      // Imposta altezza iniziale basata sul contenuto per evitare "salti"
+      if(!textarea.style.height || textarea.style.height === '0px'){
+        textarea.style.height = textarea.scrollHeight + 'px';
+      }
 
-        let d = new Date(this.value);
+      // Variabili per il drag
+      let dragging = false;
+      let startY = 0;
+      let startH = 0;
 
-        let days = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
+      function applyHeight(h){
+        const minH = 40;
+        const maxH = window.innerHeight - 120;
+        const newH = Math.max(minH, Math.min(maxH, h));
+        textarea.style.height = newH + 'px';
+      }
 
-        document.getElementById("day"+i).innerText = days[d.getDay()];
+      // Mouse events
+      resizer.addEventListener('mousedown', (ev) => {
+        ev.preventDefault();
+        dragging = true;
+        startY = ev.clientY;
+        startH = textarea.getBoundingClientRect().height;
+        document.documentElement.style.cursor = 'ns-resize';
+      });
 
-        updateRecordColor(i);
-        saveData();
-    }
+      document.addEventListener('mousemove', (ev) => {
+        if(!dragging) return;
+        const dy = ev.clientY - startY;
+        applyHeight(startH + dy);
+      });
 
-    flagField.onchange = function(){
+      document.addEventListener('mouseup', () => {
+        if(!dragging) return;
+        dragging = false;
+        document.documentElement.style.cursor = '';
+      });
 
-        updateRecordColor(i);
-        saveData();
-    }
+      // Touch events
+      resizer.addEventListener('touchstart', (ev) => {
+        ev.preventDefault();
+        dragging = true;
+        startY = ev.touches[0].clientY;
+        startH = textarea.getBoundingClientRect().height;
+      }, {passive:false});
 
-    descField.oninput = function(){
+      document.addEventListener('touchmove', (ev) => {
+        if(!dragging) return;
+        const dy = ev.touches[0].clientY - startY;
+        applyHeight(startH + dy);
+      }, {passive:false});
 
-        updateRecordColor(i);
-        saveData();
-    }
-}
+      document.addEventListener('touchend', () => {
+        if(!dragging) return;
+        dragging = false;
+      });
+    });
+  }
 
-/* SAVE */
+  // Esponi la funzione globalmente per poterla richiamare dopo render/creazione record
+  window.initResizers = initResizers;
 
-function saveData(){
+  // Inizializza al caricamento DOM
+  document.addEventListener('DOMContentLoaded', initResizers);
+})();
 
-    let data = {};
+/* ============================
+   EVENTI
+============================ */
+document.getElementById("createRecord").addEventListener('click', () => {
+  const r={
+    id:Date.now().toString(),
+    category:"TUTTI",
+    image:"r001.jpg",
+    description:"",
+    date:"",
+    time:"",
+    completed:false,
+    toDelete:false
+  };
+  state.records.unshift(r);
+  saveState();
+  render();
+});
 
-    for(let i=1;i<=TOTAL_RECORDS;i++){
+document.getElementById("sortRecords").addEventListener('click', () => {
+  state.records.sort((a,b)=>{
+    if(!a.date && !b.date) return 0;
+    if(!a.date) return 1;
+    if(!b.date) return -1;
+    return new Date(a.date+"T"+(a.time||"00:00")) - new Date(b.date+"T"+(b.time||"00:00"));
+  });
+  saveState();
+  render();
+});
 
-        data["flag"+i] = document.getElementById("flag"+i).checked;
-        data["desc"+i] = document.getElementById("desc"+i).value;
-        data["date"+i] = document.getElementById("date"+i).value;
-        data["time"+i] = document.getElementById("time"+i).value;
-        data["day"+i] = document.getElementById("day"+i).innerText;
-        data["img"+i] = document.getElementById("img"+i).src;
-    }
+document.getElementById("controlCard").addEventListener('click', (e) => {
+  const btn = e.target.closest("button");
+  if(!btn) return;
 
-    localStorage.setItem("records", JSON.stringify(data));
-}
+  if(btn.dataset.filter === "TUTTI"){
+    document.querySelectorAll(".record").forEach(el=>el.style.display="");
+    return;
+  }
 
-/* LOAD */
+  if(btn.dataset.filterIndex){
+    const idx = parseInt(btn.dataset.filterIndex,10);
+    const cat = state.categories[idx] || '';
+    document.querySelectorAll(".record").forEach(el=>{
+      const rec = state.records.find(r=>r.id==el.dataset.id);
+      el.style.display = (rec && rec.category === cat) ? "" : "none";
+    });
+  }
+});
 
-function loadData(){
+["cat1","cat2","cat3"].forEach((id,i)=>{
+  const el = document.getElementById(id);
+  el.addEventListener('input', () => {
+    state.categories[i+1] = el.value.trim() || `Categoria ${i+1}`;
+    saveState();
+    render();
+  });
+});
 
-    let data = JSON.parse(localStorage.getItem("records"));
-
-    if(data){
-
-        for(let i=1;i<=TOTAL_RECORDS;i++){
-
-            document.getElementById("flag"+i).checked = data["flag"+i];
-            document.getElementById("desc"+i).value = data["desc"+i];
-            document.getElementById("date"+i).value = data["date"+i];
-            document.getElementById("time"+i).value = data["time"+i];
-            document.getElementById("day"+i).innerText = data["day"+i];
-
-            if(data["img"+i]){
-                document.getElementById("img"+i).src = data["img"+i];
-                document.getElementById("imgSelect"+i).value = data["img"+i];
-            }
-
-            updateRecordColor(i);
-        }
-    }
-
-    let timer = localStorage.getItem("timerSeconds");
-
-    if(timer){
-        document.getElementById("timerSeconds").value = timer;
-    }
-}
-
-document.addEventListener("input", saveData);
-
-loadData();
-
+/* ============================
+   START
+============================ */
+loadState();
+render();
 </script>
 
 </body>
-  </html>
+</html>
+    
+    
