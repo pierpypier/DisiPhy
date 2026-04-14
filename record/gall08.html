@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CATEGORIA 08 TEMPO LIBERO E SPORT</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:28px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">04 PERSONALE</div>
+        <div class="subtitle">Categoria copertine</div>
+      </div>
+      <div class="subtitle">creator DSP</div>
+    </div>
+
+    <div class="card">
+      <div class="grid">
+       
+        
+        <!-- Torna all'organizer -->
+        <a class="item" href="organizer4.html" title="Apri organizer 4.0">
+          <div class="thumb" aria-hidden="true">
+            <img src="rimage/tz040.jpg" alt="Anteprima layout Organizer 4.0" loading="lazy" decoding="async" width="480" height="800">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'ORGANIZER</div>
+            <div class="desc">Vai alla versione 4.0</div>
+          </div>
+        </a>
+  <!-- Fine Versione 4 -->
+           
+   <!-- Torna alle opzioni -->
+        <!-- ropz -->
+ <a class="item" href="dashconsolle.html" title="Torna alle opzioni">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/opz.jpg" alt="opz" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALLE OPZIONI</div>
+            <div class="desc">Per personalizzare o cambiare categoria</div>
+          </div>
+ </a>
+
+
+      </div>
+
+       <div class="name">CATALOGO IMMAGINI CATEGORIA 04 PERSONALE</div>
+      <div class="note">Galleria delle immagini disponibili per l'applicazione della copertina dei records</div>
+
+   <!-- galleria immagine per i record -->
+
+
+
+<!-- r400 -->
+<div class="thumbsel" aria-hidden="true">
+  <img src="rimage/r400.jpg" alt="r400" loading="lazy" decoding="async" width="100" height="200">
+</div>
+<div class="meta">
+  <div class="name">r400</div>
+  <div class="desc">Immagine per copertina records</div>
+</div>
+
+
+  
+      
+    <!-- fine galleria immagine per i record -->  
+      
+    </div> 
+    
+    <footer>
+      Organizer per la gestione delle attività. Created for DSP by Pier Paolo Mannoni
+    </footer>
+
+  </div>
+</body>
+  </html>
