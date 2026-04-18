@@ -246,17 +246,26 @@
 
     @media print {
 
+  /* Sfondo bianco e colori corretti */
   body {
     background: #ffffff !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  /* Nascondi pulsanti e controlli */
+  /* Nascondi TUTTI i pulsanti e controlli */
   .controls,
+  .btn,
   .delete-btn,
+  .flag input,
   .handle,
-  #emptyNote {
+  .nav
+  #printBtn {
+    display: none !important;
+  }
+
+  /* Nascondi anche le etichette dei flag */
+  .flag {
     display: none !important;
   }
 
@@ -267,17 +276,18 @@
     page-break-inside: avoid;
   }
 
-  /* Mantieni la textarea leggibile */
+  /* Textarea pulita */
   .desc {
     border: none !important;
     background: #ffffff !important;
     box-shadow: none !important;
   }
 
-  /* Impagina meglio la pagina */
+  /* Impostazioni pagina */
   @page {
     margin: 18mm;
   }
+    }
     }
   </style>
 </head>
