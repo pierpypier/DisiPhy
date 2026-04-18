@@ -50,6 +50,63 @@
     }
     .subtitle{ font-size:14px; color:var(--muted); font-weight:600; }
 
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 6px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+    /* fine stile barra di navigazione */
+
+    
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 20px;
+  }
+
+  .nav-item img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+
+
+
+    
     /* Pulsanti principali */
     .controls{
       display:flex;
@@ -197,7 +254,27 @@
           <div class="title">Checklist</div>
           <div class="subtitle">Organizza le tue attività</div>
         </div>
+  
+        /* barra di navigazione */
+<nav class="nav">
+  <a href="organizer4.html" class="nav-item">
+    <img src="orga4.png" alt="Organizer">
+    <span>Organizer</span>
+  </a>
 
+  <a href="check01.html" class="nav-item">
+    <img src="check01.png" alt="Checklist">
+    <span>Checklist</span>
+  </a>
+
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="opzioni.png" alt="Opzioni">
+    <span>Opzioni</span>
+  </a>
+</nav>
+        
+    /* fine barra di navigazione */
+        
         <div class="controls" aria-hidden="false">
           <button id="createBtn" class="btn" title="Crea nuova voce">Crea</button>
           <button id="sortBtn" class="btn alt" title="Ordina: incompleti sopra, completati sotto">Ordina</button>
