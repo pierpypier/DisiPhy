@@ -339,6 +339,43 @@
 
     .muted{color:var(--muted); font-weight:600}
     .small{font-size:13px; color:var(--muted)}
+ 
+  @media print {
+
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Nascondi pulsanti e controlli */
+  .controls,
+  .delete-btn,
+  .handle,
+  #emptyNote {
+    display: none !important;
+  }
+
+  /* Rimuovi ombre e bordi troppo marcati */
+  .item {
+    box-shadow: none !important;
+    border: 1px solid #cccccc !important;
+    page-break-inside: avoid;
+  }
+
+  /* Mantieni la textarea leggibile */
+  .desc {
+    border: none !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  /* Impagina meglio la pagina */
+  @page {
+    margin: 18mm;
+  }
+}
+  
   </style>
 </head>
 <body>
@@ -408,6 +445,8 @@
     <div class="actions">
       <button id="createRecord" class="create-btn">+</button>
       <button id="sortRecords" class="sort-btn" aria-label="Ordina per data">↓</button>
+    
+    <button id="printBtn" class="btn alt" title="Esporta in PDF">PDF</button>
     </div>
     
     <!-- RECORD -->
@@ -851,6 +890,11 @@ document.getElementById("controlCard").addEventListener('click', (e) => {
 ============================ */
 loadState();
 render();
+
+document.getElementById('printBtn').addEventListener('click', () => {
+  window.print();
+});
+  
 </script>
 
 </body>
