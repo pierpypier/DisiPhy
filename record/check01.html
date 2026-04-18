@@ -242,6 +242,43 @@
       .handle{ display:none; }
       .delete-btn{ margin-left:0; }
     }
+
+
+    @media print {
+
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Nascondi pulsanti e controlli */
+  .controls,
+  .delete-btn,
+  .handle,
+  #emptyNote {
+    display: none !important;
+  }
+
+  /* Rimuovi ombre e bordi troppo marcati */
+  .item {
+    box-shadow: none !important;
+    border: 1px solid #cccccc !important;
+    page-break-inside: avoid;
+  }
+
+  /* Mantieni la textarea leggibile */
+  .desc {
+    border: none !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  /* Impagina meglio la pagina */
+  @page {
+    margin: 18mm;
+  }
+    }
   </style>
 </head>
 <body>
@@ -281,6 +318,8 @@
         <div class="controls" aria-hidden="false">
           <button id="createBtn" class="btn" title="Crea nuova voce">Crea</button>
           <button id="sortBtn" class="btn alt" title="Ordina: incompleti sopra, completati sotto">Ordina</button>
+      <button id="printBtn" class="btn alt" title="Esporta in PDF">PDF</button>
+        
         </div>
       </div>
 
@@ -533,6 +572,11 @@ document.getElementById('sortBtn').addEventListener('click', () => {
 /* ---------- Inizializzazione ---------- */
 loadState();
 render();
+
+document.getElementById('printBtn').addEventListener('click', () => {
+  window.print();
+});
+  
 </script>
 </body>
 </html>
