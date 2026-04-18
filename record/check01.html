@@ -158,6 +158,15 @@
       border: 1px solid #e6e9ef;
     }
 
+.item.dragging {
+  opacity: 0.4;
+}
+
+.item.drag-over {
+  border: 2px dashed var(--accent);
+}
+
+    
     /* Textarea auto-resize */
     .desc{
       width:100%;
@@ -401,7 +410,7 @@ function buildItem(item){
   const wrap = document.createElement('div');
   wrap.className = 'item';
   wrap.dataset.id = item.id;
-
+wrap.draggable = true;
   // applica classe completed se necessario
   if (item.done) wrap.classList.add('completed');
 
@@ -583,6 +592,59 @@ render();
 
 document.getElementById('printBtn').addEventListener('click', () => {
   window.print();
+});
+
+
+/* ---------- Drag & Drop per riordinare ---------- */
+
+let draggedEl = null;
+
+listEl.addEventListener('dragstart', (e) => {
+  const item = e.target.closest('.item');
+  if (!item) return;
+  draggedEl = item;
+  item.classList.add('dragging');
+});
+
+listEl.addEventListener('dragend', (e) => {
+  const item = e.target.closest('.item');
+  if (!item) return;
+  item.classList.remove('dragging');
+  draggedEl = null;
+  saveState();
+});
+
+listEl.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  const item = e.target.closest('.item');
+  if (!item || item === draggedEl) return;
+
+  item.classList.add('drag-over');
+
+  const bounding = item.getBoundingClientRect();
+  const offset = e.clientY - bounding.top;
+
+  const shouldInsertBefore = offset < bounding.height / 2;
+
+  if (shouldInsertBefore) {
+    listEl.insertBefore(draggedEl, item);
+  } else {
+    listEl.insertBefore(draggedEl, item.nextSibling);
+  }
+});
+
+listEl.addEventListener('dragleave', (e) => {
+  const item = e.target.closest('.item');
+  if (item) item.classList.remove('drag-over');
+});
+
+listEl.addEventListener('drop', () => {
+  document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+
+  // aggiorna ordine nello stato
+  const newOrder = [...document.querySelectorAll('.item')].map(el => el.dataset.id);
+  state.items.sort((a, b) => newOrder.indexOf(a.id) - newOrder.indexOf(b.id));
+  saveState();
 });
   
 </script>
