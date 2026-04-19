@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Strumenti Web</title>
+
+<style>
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --accent:#1e88e5;
+  --muted:#6b7280;
+  --danger:#ef4444;
+  --shadow:0 8px 24px rgba(20,30,50,0.06);
+  --radius:12px;
+  --max-width:980px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+  padding:28px;
+  display:flex;
+  justify-content:center;
+  color:#0f172a;
+}
+.container{ width:100%; max-width:var(--max-width); }
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px;
+  margin-bottom:18px;
+}
+
+.title-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+.title{
+  font-size:20px;
+  font-weight:800;
+  color:var(--accent);
+}
+.subtitle{ font-size:14px; color:var(--muted); font-weight:600; }
+
+.controls{
+  display:flex;
+  gap:12px;
+}
+.btn{
+  padding:10px 14px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+  color:#fff;
+  background:var(--accent);
+  box-shadow:var(--shadow);
+}
+.btn.alt{ background:var(--muted); }
+
+.list-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.item{
+  background:#fff;
+  border-radius:10px;
+  border:1px solid #eef2f7;
+  padding:12px;
+  box-shadow:0 6px 18px rgba(20,30,50,0.04);
+  transition:transform .12s ease;
+}
+.item:hover{ transform:translateY(-4px); }
+
+.item.dragging{ opacity:0.4; }
+.item.drag-over{ border:2px dashed var(--accent); }
+
+.row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+input[type="text"]{
+  flex:1;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  font-size:15px;
+  font-weight:600;
+}
+
+.go-btn{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(20,30,50,0.08);
+}
+
+.meta{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.flag{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-weight:700;
+  color:var(--muted);
+}
+.flag input{
+  width:18px;
+  height:18px;
+  accent-color:var(--accent);
+}
+
+.delete-btn{
+  margin-left:auto;
+  background:var(--danger);
+  color:#fff;
+  border:none;
+  padding:8px 10px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:800;
+}
+.delete-btn.disabled{
+  opacity:0.4;
+  cursor:not-allowed;
+}
+
+.handle{
+  opacity:0.6;
+  font-size:14px;
+  margin-left:8px;
+}
+
+.empty{
+  text-align:center;
+  color:var(--muted);
+  padding:18px;
+  border-radius:10px;
+  border:1px dashed #e6e9ef;
+  background:linear-gradient(180deg, rgba(230,236,255,0.4), rgba(250,250,250,0.4));
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <div class="card">
+    <div class="title-row">
+      <div>
+        <div class="title">Strumenti Web</div>
+        <div class="subtitle">Colleziona e apri rapidamente i tuoi link</div>
+      </div>
+
+      <div class="controls">
+        <button id="createBtn" class="btn">Crea</button>
+      </div>
+    </div>
+
+    <div id="list" class="list-wrap"></div>
+
+    <div id="emptyNote" class="empty" style="display:none;">
+      Nessuno strumento. Premi <strong>Crea</strong> per aggiungerne uno.
+    </div>
+  </div>
+
+</div>
+
+<script>
+const LS_KEY = "webtools_v1";
+let state = { items: [] };
+
+function loadState(){
+  const raw = localStorage.getItem(LS_KEY);
+  if(raw) state = JSON.parse(raw);
+}
+function saveState(){
+  localStorage.setItem(LS_KEY, JSON.stringify(state));
+}
+
+function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
+
+const listEl = document.getElementById("list");
+const emptyNote = document.getElementById("emptyNote");
+
+function render(){
+  listEl.innerHTML = "";
+  if(state.items.length === 0){
+    emptyNote.style.display = "";
+    return;
+  }
+  emptyNote.style.display = "none";
+
+  state.items.forEach(item => listEl.appendChild(buildItem(item)));
+}
+
+function buildItem(item){
+  const wrap = document.createElement("div");
+  wrap.className = "item";
+  wrap.dataset.id = item.id;
+  wrap.draggable = true;
+
+  // INPUTS
+  const row1 = document.createElement("div");
+  row1.className = "row";
+
+  const cat = document.createElement("input");
+  cat.type = "text";
+  cat.placeholder = "Categoria";
+  cat.value = item.category || "";
+
+  const url = document.createElement("input");
+  url.type = "text";
+  url.placeholder = "https://...";
+  url.value = item.url || "";
+
+  const title = document.createElement("input");
+  title.type = "text";
+  title.placeholder = "Titolo";
+  title.value = item.title || "";
+
+  row1.appendChild(cat);
+  row1.appendChild(url);
+  row1.appendChild(title);
+
+  // GO BUTTON
+  const goBtn = document.createElement("button");
+  goBtn.className = "go-btn";
+  goBtn.textContent = "VAI";
+  goBtn.addEventListener("click", () => {
+    if(url.value.trim()) window.open(url.value.trim(), "_blank");
+  });
+
+  row1.appendChild(goBtn);
+  wrap.appendChild(row1);
+
+  // META: delete flag + delete button
+  const meta = document.createElement("div");
+  meta.className = "meta";
+
+  const flag = document.createElement("label");
+  flag.className = "flag";
+
+  const chk = document.createElement("input");
+  chk.type = "checkbox";
+  chk.checked = !!item.toDelete;
+
+  const txt = document.createElement("span");
+  txt.textContent = "da eliminare";
+
+  flag.appendChild(chk);
+  flag.appendChild(txt);
+  meta.appendChild(flag);
+
+  const delBtn = document.createElement("button");
+  delBtn.className = "delete-btn";
+  delBtn.textContent = "ELIMINA";
+  if(!item.toDelete) delBtn.classList.add("disabled");
+
+  delBtn.addEventListener("click", () => {
+    if(!chk.checked){
+      delBtn.animate([{transform:"scale(1)"},{transform:"scale(1.1)"},{transform:"scale(1)"}],{duration:200});
+      return;
+    }
+    state.items = state.items.filter(i => i.id !== item.id);
+    saveState();
+    render();
+  });
+
+  chk.addEventListener("change", () => {
+    item.toDelete = chk.checked;
+    if(chk.checked) delBtn.classList.remove("disabled");
+    else delBtn.classList.add("disabled");
+    saveState();
+  });
+
+  meta.appendChild(delBtn);
+
+  const handle = document.createElement("div");
+  handle.className = "handle";
+  handle.textContent = "≡";
+  meta.appendChild(handle);
+
+  wrap.appendChild(meta);
+
+  // SAVE ON INPUT
+  [cat, url, title].forEach(input => {
+    input.addEventListener("input", () => {
+      item.category = cat.value;
+      item.url = url.value;
+      item.title = title.value;
+      saveState();
+    });
+  });
+
+  return wrap;
+}
+
+// CREATE NEW
+document.getElementById("createBtn").addEventListener("click", () => {
+  const newItem = { id: uid(), category:"", url:"", title:"", toDelete:false };
+  state.items.unshift(newItem);
+  saveState();
+  render();
+});
+
+// DRAG & DROP
+let draggedEl = null;
+
+listEl.addEventListener("dragstart", e => {
+  const item = e.target.closest(".item");
+  if(!item) return;
+  draggedEl = item;
+  item.classList.add("dragging");
+});
+
+listEl.addEventListener("dragend", e => {
+  const item = e.target.closest(".item");
+  if(item) item.classList.remove("dragging");
+  draggedEl = null;
+  saveState();
+});
+
+listEl.addEventListener("dragover", e => {
+  e.preventDefault();
+  const item = e.target.closest(".item");
+  if(!item || item === draggedEl) return;
+
+  item.classList.add("drag-over");
+
+  const rect = item.getBoundingClientRect();
+  const offset = e.clientY - rect.top;
+
+  if(offset < rect.height/2){
+    listEl.insertBefore(draggedEl, item);
+  } else {
+    listEl.insertBefore(draggedEl, item.nextSibling);
+  }
+});
+
+listEl.addEventListener("dragleave", e => {
+  const item = e.target.closest(".item");
+  if(item) item.classList.remove("drag-over");
+});
+
+listEl.addEventListener("drop", () => {
+  document.querySelectorAll(".drag-over").forEach(el => el.classList.remove("drag-over"));
+
+  const newOrder = [...document.querySelectorAll(".item")].map(el => el.dataset.id);
+  state.items.sort((a,b) => newOrder.indexOf(a.id) - newOrder.indexOf(b.id));
+  saveState();
+});
+
+loadState();
+render();
+</script>
+</body>
+  </html>
