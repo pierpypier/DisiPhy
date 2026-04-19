@@ -348,6 +348,23 @@
     }
     .sort-btn:hover{ filter: brightness(0.95); }
 
+        .stampa-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#16a34a; /* verde */
+      color:#ffffff;     /* freccia bianca */
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      box-shadow:var(--shadow);
+      padding:0;
+        }
+
     /* RESPONSIVE */
     @media (max-width:640px){
       .weekday{min-width:120px}
@@ -379,6 +396,7 @@
     .delete-btn,
     .create-btn,
     .sort-btn,
+    .stampa-btn,
   #emptyNote {
     display: none !important;
   }
@@ -473,7 +491,7 @@
       <button id="createRecord" class="create-btn">+</button>
       <button id="sortRecords" class="sort-btn" aria-label="Ordina per data">↓</button>
     
-    <button id="printBtn" class="cat-btn-all" title="Esporta in PDF">PRINT</button>
+    <button id="printBtn" class="stampa-btn" title="Esporta in PDF">PRINT</button>
     </div>
     
     <!-- RECORD -->
