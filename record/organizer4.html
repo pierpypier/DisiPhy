@@ -36,7 +36,7 @@
       margin:0;
       font-family:Inter,Arial;
       background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
-      padding:20px;
+      padding:24px;
       display:flex;
       justify-content:center;
     }
@@ -44,29 +44,6 @@
       width:100%;
       max-width:var(--max-width);
     }
-
-card{
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px;
-      margin-bottom:18px;
-    }
-
-    .title{
-      font-size:18px;
-      font-weight:800;
-      color:var(--accent);
-    }
-    
-    .header{
-      display:flex;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:12px;
-      margin-bottom:12px;
-    }
-    
     .title-bar{
       display:flex;
       justify-content:space-between;
@@ -118,8 +95,8 @@ card{
   }
 
   .nav-item img {
-    width: 60px;
-    height: 60px;
+    width: 52px;
+    height: 52px;
   }
 
   .nav-item span {
@@ -452,39 +429,32 @@ card{
        <!-- barra navigazione -->
 <nav class="nav">
 
-  <a href="organizer4.html" class="nav-item">
-    <img src="rimage/orga4.png" alt="Organizer">
-    <span> AGENDA </span>
-  </a>
-  
+
   <a href="check01.html" class="nav-item">
     <img src="rimage/check02.png" alt="Checklist">
-    <span> LISTA </span>
+    <span>CHECKLIST</span>
   </a>
 
   <a href="strweb.html" class="nav-item">
     <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
-    <span>  WEB  </span>
+    <span>WEB</span>
   </a>
   
   <a href="dashconsolle.html" class="nav-item">
     <img src="rimage/opzioni.png" alt="Opzioni">
     <span>OPZIONI</span>
   </a>
-  
 </nav>
         
 <!-- fine barra navigazione -->
 
     <!-- TITOLO -->
-    <div class="control-card" id="controlCard">
-      
     <div class="title-bar">
-      <div class="page-title">ORGANIZER 4.0</div>
+      <div class="page-title">ORGANIZER</div>
       <div class="small"></div>
-    </div>
+
    
-     </div>   
+    </div>
 
     <!-- CATEGORIE -->
     <div class="control-card" id="controlCard">
@@ -801,7 +771,7 @@ function render(){
   if(window.initResizers) window.initResizers();
 }
 
-/* ============================
+  /* ============================
    RESIZER MINIMO (CSS + JS)
    - Avvolge ogni .desc in .desc-wrapper (già fatto in buildRecord)
    - Aggiunge .resizer e gestisce drag mouse/touch
@@ -972,4 +942,7 @@ document.getElementById('printBtn').addEventListener('click', () => {
 </body>
 </html>
     
-    
+
+
+
+  
