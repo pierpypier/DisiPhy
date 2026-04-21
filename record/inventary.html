@@ -1,1 +1,303 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inventario (versione minimale)</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --danger:#ef4444;
+      --radius:10px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:28px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .inv-container{ width:100%; max-width:var(--max-width); }
 
+    .inv-card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:16px;
+      margin-bottom:18px;
+      box-shadow:0 8px 24px rgba(20,30,50,0.06);
+    }
+
+    .inv-header{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+    .inv-title{ font-size:20px; font-weight:800; color:var(--accent); }
+    .inv-subtitle{ font-size:13px; color:var(--muted); }
+
+    .inv-controls{ display:flex; gap:8px; align-items:center; }
+
+    .inv-btn{
+      padding:8px 12px;
+      border-radius:8px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      color:#fff;
+      background:var(--accent);
+    }
+    .inv-btn.alt{ background:var(--muted); }
+    .inv-btn.warn{ background:var(--danger); }
+
+    .inv-form{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:10px; }
+    .inv-input{ padding:8px; border-radius:8px; border:1px solid #e6e9ef; font-size:14px; }
+    .inv-input.text{ flex:1; min-width:160px; }
+    .inv-input.small{ width:120px; }
+    .inv-preview{ width:56px; height:56px; border-radius:8px; background:#f3f6fb; display:flex; align-items:center; justify-content:center; overflow:hidden; border:1px dashed #e6e9ef; }
+
+    .inv-list{ display:flex; flex-direction:column; gap:10px; margin-top:8px; }
+    .inv-item{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:10px; border-radius:8px; border:1px solid #eef2f7; background:#fff;
+    }
+    .inv-thumb{ width:64px; height:64px; border-radius:6px; overflow:hidden; background:#f7fafc; display:flex; align-items:center; justify-content:center; border:1px solid #eef2f7; }
+    .inv-meta{ flex:1; display:flex; flex-direction:column; gap:6px; }
+    .inv-row{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+    .inv-name{ font-weight:800; }
+    .inv-desc{ color:var(--muted); font-size:13px; }
+    .inv-qty{ font-weight:800; padding:6px 8px; border-radius:8px; background:linear-gradient(180deg,#fff,#fbfdff); border:1px solid #eef2f7; }
+
+    .inv-actions{ display:flex; gap:8px; align-items:center; }
+    .inv-empty{ text-align:center; color:var(--muted); padding:18px; border-radius:8px; border:1px dashed #e6e9ef; background:linear-gradient(180deg, rgba(230,236,255,0.4), rgba(250,250,250,0.4)); }
+
+    @media (max-width:720px){
+      .inv-form{ flex-direction:column; align-items:stretch; }
+      .inv-preview{ width:48px; height:48px; }
+      .inv-thumb{ width:56px; height:56px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="inv-container">
+    <div class="inv-card">
+      <div class="inv-header">
+        <div>
+          <div class="inv-title">Inventario</div>
+          <div class="inv-subtitle">Versione minimale — salvataggio in localStorage</div>
+        </div>
+        <div class="inv-controls">
+          <button id="inv-filterBtn" class="inv-btn alt">Mostra tutti</button>
+          <button id="inv-printBtn" class="inv-btn">Stampa</button>
+        </div>
+      </div>
+
+      <div class="inv-card" style="margin-bottom:12px;">
+        <div style="font-weight:800; color:var(--muted); margin-bottom:8px;">Aggiungi articolo</div>
+        <div class="inv-form">
+          <div id="inv-filePreview" class="inv-preview">IMG</div>
+          <input id="inv-fileInput" class="inv-input small" type="file" accept="image/*" />
+          <input id="inv-nameInput" class="inv-input text" type="text" placeholder="Nome articolo" />
+          <input id="inv-unitInput" class="inv-input small" type="text" placeholder="Unità (pz, ml...)" />
+          <input id="inv-qtyInput" class="inv-input small" type="number" min="0" value="0" />
+          <button id="inv-addBtn" class="inv-btn">Aggiungi</button>
+        </div>
+        <div>
+          <input id="inv-descInput" class="inv-input" type="text" placeholder="Descrizione breve (opzionale)" style="width:100%" />
+        </div>
+      </div>
+
+      <div id="inv-list" class="inv-list"></div>
+      <div id="inv-empty" class="inv-empty" style="display:none;">Nessun articolo. Aggiungi il primo articolo.</div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const LS_KEY = 'inv_inventory_v1';
+      let state = { items: [], filterPositive: false };
+
+      // DOM
+      const fileInput = document.getElementById('inv-fileInput');
+      const filePreview = document.getElementById('inv-filePreview');
+      const nameInput = document.getElementById('inv-nameInput');
+      const descInput = document.getElementById('inv-descInput');
+      const unitInput = document.getElementById('inv-unitInput');
+      const qtyInput = document.getElementById('inv-qtyInput');
+      const addBtn = document.getElementById('inv-addBtn');
+      const filterBtn = document.getElementById('inv-filterBtn');
+      const printBtn = document.getElementById('inv-printBtn');
+      const listEl = document.getElementById('inv-list');
+      const emptyEl = document.getElementById('inv-empty');
+
+      let currentDataUrl = '';
+
+      // util
+      function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+      function saveState(){ localStorage.setItem(LS_KEY, JSON.stringify(state)); }
+      function loadState(){ const raw = localStorage.getItem(LS_KEY); if(raw) state = JSON.parse(raw); }
+
+      function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+      // image -> dataURL (minimal)
+      fileInput.addEventListener('change', (e) => {
+        const f = e.target.files && e.target.files[0];
+        if(!f){ currentDataUrl = ''; filePreview.textContent = 'IMG'; return; }
+        const reader = new FileReader();
+        reader.onload = () => {
+          currentDataUrl = reader.result;
+          filePreview.innerHTML = `<img src="${currentDataUrl}" style="width:100%;height:100%;object-fit:cover;">`;
+        };
+        reader.readAsDataURL(f);
+      });
+
+      // add item
+      addBtn.addEventListener('click', () => {
+        const name = nameInput.value.trim();
+        if(!name){
+          nameInput.animate([{transform:'translateY(0)'},{transform:'translateY(-4px)'},{transform:'translateY(0)'}],{duration:220});
+          return;
+        }
+        const item = {
+          id: uid(),
+          image: currentDataUrl || '',
+          name,
+          desc: descInput.value.trim(),
+          unit: unitInput.value.trim(),
+          qty: Number(qtyInput.value) || 0
+        };
+        state.items.unshift(item);
+        saveState();
+        render();
+
+        // reset form
+        currentDataUrl = '';
+        filePreview.textContent = 'IMG';
+        fileInput.value = '';
+        nameInput.value = '';
+        descInput.value = '';
+        unitInput.value = '';
+        qtyInput.value = 0;
+      });
+
+      // delete item
+      function deleteItem(id){
+        state.items = state.items.filter(i => i.id !== id);
+        saveState();
+        render();
+      }
+
+      // render list
+      function buildItemNode(item){
+        const wrap = document.createElement('div');
+        wrap.className = 'inv-item';
+        wrap.dataset.id = item.id;
+
+        const thumb = document.createElement('div');
+        thumb.className = 'inv-thumb';
+        if(item.image){
+          thumb.innerHTML = `<img src="${item.image}" style="width:100%;height:100%;object-fit:cover;">`;
+        } else {
+          thumb.textContent = 'IMG';
+        }
+
+        const meta = document.createElement('div');
+        meta.className = 'inv-meta';
+
+        const row1 = document.createElement('div');
+        row1.className = 'inv-row';
+        const name = document.createElement('div');
+        name.className = 'inv-name';
+        name.innerHTML = escapeHtml(item.name);
+        const qty = document.createElement('div');
+        qty.className = 'inv-qty';
+        qty.textContent = `${item.qty} ${item.unit || ''}`;
+        row1.appendChild(name);
+        row1.appendChild(qty);
+
+        const desc = document.createElement('div');
+        desc.className = 'inv-desc';
+        desc.innerHTML = escapeHtml(item.desc || '');
+
+        const actions = document.createElement('div');
+        actions.className = 'inv-actions';
+        const del = document.createElement('button');
+        del.className = 'inv-btn warn';
+        del.textContent = 'Elimina';
+        del.addEventListener('click', () => deleteItem(item.id));
+        actions.appendChild(del);
+
+        meta.appendChild(row1);
+        meta.appendChild(desc);
+        meta.appendChild(actions);
+
+        wrap.appendChild(thumb);
+        wrap.appendChild(meta);
+        return wrap;
+      }
+
+      function render(){
+        listEl.innerHTML = '';
+        const items = state.filterPositive ? state.items.filter(i => Number(i.qty) > 0) : state.items;
+        if(items.length === 0){
+          emptyEl.style.display = '';
+          return;
+        }
+        emptyEl.style.display = 'none';
+        items.forEach(it => listEl.appendChild(buildItemNode(it)));
+      }
+
+      // filter toggle
+      filterBtn.addEventListener('click', () => {
+        state.filterPositive = !state.filterPositive;
+        filterBtn.textContent = state.filterPositive ? 'Mostra solo > 0' : 'Mostra tutti';
+        saveState();
+        render();
+      });
+
+      // print filtered
+      printBtn.addEventListener('click', () => {
+        const items = state.filterPositive ? state.items.filter(i => Number(i.qty) > 0) : state.items;
+        const win = window.open('', '_blank');
+        if(!win) { alert('Popup bloccato: abilita i popup per stampare.'); return; }
+        const html = `
+          <html><head><title>Stampa Inventario</title>
+          <style>
+            body{font-family:Arial,Helvetica,sans-serif;padding:20px;color:#111}
+            .row{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+            img{width:72px;height:72px;object-fit:cover;border:1px solid #eee;border-radius:6px}
+            .meta{display:flex;flex-direction:column}
+            .name{font-weight:800}
+            .qty{font-weight:700;color:#333}
+          </style>
+          </head><body>
+          <h2>Inventario</h2>
+          ${items.map(i => `
+            <div class="row">
+              <div>${i.image ? `<img src="${i.image}">` : `<div style="width:72px;height:72px;background:#f3f6fb;border-radius:6px;border:1px solid #eee"></div>`}</div>
+              <div class="meta">
+                <div class="name">${escapeHtml(i.name)}</div>
+                <div>${escapeHtml(i.desc || '')}</div>
+                <div class="qty">${i.qty} ${escapeHtml(i.unit || '')}</div>
+              </div>
+            </div>
+          `).join('')}
+          <script>window.onload=()=>{window.print();}</script>
+          </body></html>`;
+        win.document.write(html);
+        win.document.close();
+      });
+
+      // init
+      document.addEventListener('DOMContentLoaded', () => {
+        loadState();
+        // ensure button label matches saved state
+        filterBtn.textContent = state.filterPositive ? 'Mostra solo > 0' : 'Mostra tutti';
+        render();
+      });
+    })();
+  </script>
+</body>
+</html>
