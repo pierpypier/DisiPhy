@@ -121,6 +121,57 @@
     .btn.alt{ background:var(--muted); }
     .btn.small{ padding:8px 10px; font-size:14px; border-radius:8px; }
 
+
+.create-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#6b7280;
+      color:#fff;
+      font-size:28px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:none;
+      cursor:pointer;
+    }
+    .sort-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#227A7B; /* colore bottone */
+      color:#ffffff;     /* freccia bianca */
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      box-shadow:var(--shadow);
+      padding:0;
+    }
+    .sort-btn:hover{ filter: brightness(0.95); }
+
+        .stampa-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#9BA695; /* colore */
+      color:#ffffff;     /* freccia bianca */
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:14px;
+      box-shadow:var(--shadow);
+      padding:0;
+        }
+    
+    
+    
     
     /* Lista */
     .list-wrap{
@@ -339,9 +390,9 @@
         
         
         <div class="controls" aria-hidden="false">
-          <button id="createBtn" class="btn" title="Crea nuova voce">NUOVO</button>
-          <button id="sortBtn" class="btn alt" title="Ordina: incompleti sopra, completati sotto">ORDINA</button>
-      <button id="printBtn" class="btn alt" title="Esporta in PDF">STAMPA</button>
+          <button id="createBtn" class="create-btn" title="Crea nuova voce">NUOVO</button>
+          <button id="sortBtn" class="sort-btn" title="Ordina: incompleti sopra, completati sotto">ORDINA</button>
+      <button id="printBtn" class="stampa-btn" title="Esporta in PDF">STAMPA</button>
         
         </div>
       </div>
