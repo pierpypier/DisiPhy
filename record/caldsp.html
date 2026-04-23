@@ -142,6 +142,11 @@ title-bar {
     <img src="rimage/orga4.png" alt="Organizer">
     <span> AGENDA </span>
   </a>
+
+<a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span>DATARIO</span>
+    </a>
   
   <a href="check01.html" class="nav-item">
     <img src="rimage/check02.png" alt="Checklist">
@@ -162,19 +167,10 @@ title-bar {
         
 <!-- fine barra navigazione -->
     
-
-    <!-- TITOLO -->
-    <div class="title-bar">
-      <div class="page-title">AGENDA ORGANIZER</div>
-      <div class="small">Gestione Attività</div>
-
-   
-    </div>
-  
   
   <div class="calcard">
     <header class="calheader">
-      <h1 class="calh1">Calendario impegni</h1>
+      <h1 class="calh1">CALENDARIO</h1>
       <div class="calcontrols">
         <div class="calnav-year-month">
           <button id="calPrevYear" class="calbtn-icon" title="Anno precedente">«</button>
@@ -192,7 +188,7 @@ title-bar {
       <div id="calGrid" class="calgrid"></div>
     </div>
 
-    <div class="callegend calsmall">Sabato e Domenica in rosso; i giorni con impegni mostrano un flag.</div>
+    <div class="callegend calsmall">Impegni e appuntamenti</div>
 
     <div class="calevents-panel">
       <div class="calevents-list calcard" style="flex:1">
@@ -210,9 +206,9 @@ title-bar {
         <textarea id="calInputDesc" placeholder="Breve descrizione..."></textarea>
         <div style="display:flex;gap:8px;align-items:center">
           <button id="calAddEventBtn" class="calbtn">Aggiungi impegno</button>
-          <button id="calClearForm" class="calbtn secondary">Pulisci</button>
+          <button id="calClearForm" class="calbtn secondary">Cancella</button>
         </div>
-        <div style="margin-top:10px" class="calsmall">Tutti gli impegni sono salvati localmente nel browser.</div>
+        <div style="margin-top:10px" class="calsmall">Calendario attività</div>
       </div>
     </div>
   </div>
