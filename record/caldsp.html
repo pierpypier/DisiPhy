@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Organizer — Calendario</title>
+<style>
+  :root{
+    --cal-bg:#f7f7fb;
+    --cal-card:#ffffff;
+    --cal-accent:#2b6cb0; /* colore principale adattabile */
+    --cal-muted:#666666;
+    --cal-weekend:#d9534f;
+    --cal-completed:#2f9e44;
+    --cal-flag:#ffb400;
+  }
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:16px;background:var(--cal-bg);color:#111}
+  .calcontainer{max-width:980px;margin:0 auto}
+  .calcard{background:var(--cal-card);border-radius:8px;padding:14px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .calheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .calh1{font-size:18px;margin:0}
+  .calcontrols{display:flex;gap:8px;align-items:center}
+  .calbtn{background:var(--cal-accent);color:#fff;border:0;padding:8px 10px;border-radius:6px;cursor:pointer}
+  .calbtn.secondary{background:#eee;color:#111}
+  .calcalendar{display:grid;grid-template-rows:auto 1fr;gap:8px}
+  .calweekdays{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-weight:600;color:var(--cal-muted)}
+  .calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .calday{
+    min-height:80px;padding:8px;border-radius:6px;background:linear-gradient(180deg,#fff,#fbfbff);
+    border:1px solid rgba(0,0,0,.04);position:relative;overflow:hidden;
+  }
+  .calday.calother-month{opacity:.35}
+  .calnum{font-weight:700}
+  .calday.calweekend .calnum{color:var(--cal-weekend)}
+  .calflag{position:absolute;top:8px;right:8px;width:10px;height:10px;border-radius:2px;background:var(--cal-flag);box-shadow:0 0 0 3px rgba(255,180,0,.12)}
+  .calevents-count{position:absolute;left:8px;bottom:8px;font-size:12px;color:var(--cal-muted)}
+  .calday.calselected{outline:3px solid rgba(43,108,176,.12)}
+  .caltoday-badge{position:absolute;left:8px;top:8px;font-size:11px;background:#e6f0ff;color:var(--cal-accent);padding:2px 6px;border-radius:12px}
+  .calevents-panel{margin-top:12px;display:flex;gap:12px;align-items:flex-start}
+  .calevents-list{flex:1}
+  .calevent{display:flex;align-items:center;gap:8px;padding:8px;border-radius:6px;border:1px solid rgba(0,0,0,.04);margin-bottom:8px;background:#fff}
+  .calevent .calmeta{flex:1}
+  .caltime{font-weight:700;color:var(--cal-muted);margin-right:8px}
+  .calevent.calcompleted{background:linear-gradient(180deg,#e9f7ec,#e6f7ea);border-color:rgba(47,158,68,.12)}
+  .caldesc{color:#222}
+  .calactions{display:flex;gap:6px}
+  .calform{width:320px;padding:12px;border-radius:6px;border:1px solid rgba(0,0,0,.04);background:#fff}
+  label{display:block;font-size:13px;margin-bottom:6px;color:var(--cal-muted)}
+  input[type="date"], input[type="time"], input[type="text"], textarea, select{
+    width:100%;padding:8px;border-radius:6px;border:1px solid #ddd;margin-bottom:10px;font-size:14px;
+  }
+  textarea{resize:vertical;min-height:60px}
+  .calsmall{font-size:13px;color:var(--cal-muted)}
+  .calnav-year-month{display:flex;gap:6px;align-items:center}
+  .calmonth-title{font-weight:700;font-size:16px}
+  .calbtn-icon{background:#fff;color:var(--cal-accent);border:1px solid rgba(43,108,176,.12);padding:6px;border-radius:6px}
+  .callegend{margin-top:8px;font-size:13px;color:var(--cal-muted)}
+  @media (max-width:880px){ .calevents-panel{flex-direction:column} .calform{width:100%} .calday{min-height:72px} }
+</style>
+</head>
+<body>
+<div class="calcontainer">
+  <div class="calcard">
+    <header class="calheader">
+      <h1 class="calh1">Calendario impegni</h1>
+      <div class="calcontrols">
+        <div class="calnav-year-month">
+          <button id="calPrevYear" class="calbtn-icon" title="Anno precedente">«</button>
+          <button id="calPrevMonth" class="calbtn-icon" title="Mese precedente">‹</button>
+          <div id="calMonthLabel" class="calmonth-title" style="padding:6px 10px;border-radius:6px;background:#f1f5f9">Aprile 2026</div>
+          <button id="calNextMonth" class="calbtn-icon" title="Mese successivo">›</button>
+          <button id="calNextYear" class="calbtn-icon" title="Anno successivo">»</button>
+        </div>
+        <button id="calTodayBtn" class="calbtn secondary" style="margin-left:8px">Oggi</button>
+      </div>
+    </header>
+
+    <div class="calcalendar">
+      <div id="calWeekdays" class="calweekdays"></div>
+      <div id="calGrid" class="calgrid"></div>
+    </div>
+
+    <div class="callegend calsmall">Sabato e Domenica in rosso; i giorni con impegni mostrano un flag.</div>
+
+    <div class="calevents-panel">
+      <div class="calevents-list calcard" style="flex:1">
+        <h3 style="margin-top:0">Impegni per <span id="calSelectedDayLabel">—</span></h3>
+        <div id="calEventsContainer" style="min-height:60px"></div>
+      </div>
+
+      <div class="calform calcard">
+        <h3 style="margin-top:0">Nuovo impegno</h3>
+        <label>Data</label>
+        <input id="calInputDate" type="date" />
+        <label>Ora</label>
+        <input id="calInputTime" type="time" />
+        <label>Descrizione <span class="calsmall">(clicca per espandere)</span></label>
+        <textarea id="calInputDesc" placeholder="Breve descrizione..."></textarea>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button id="calAddEventBtn" class="calbtn">Aggiungi impegno</button>
+          <button id="calClearForm" class="calbtn secondary">Pulisci</button>
+        </div>
+        <div style="margin-top:10px" class="calsmall">Tutti gli impegni sono salvati localmente nel browser.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================
+   Config e stato
+============================ */
+const CAL_LS_EVENTS_KEY = 'cal_events_v1';
+let calState = {
+  viewYear: new Date().getFullYear(),
+  viewMonth: new Date().getMonth(), // 0-11
+  selectedDate: null, // 'YYYY-MM-DD'
+  events: [] // {id, date:'YYYY-MM-DD', time:'HH:MM', desc, completed}
+};
+
+/* ============================
+   Utilità
+============================ */
+function calYmd(date){
+  const y = date.getFullYear();
+  const m = String(date.getMonth()+1).padStart(2,'0');
+  const d = String(date.getDate()).padStart(2,'0');
+  return `${y}-${m}-${d}`;
+}
+function calParseYMD(s){
+  const [y,m,d] = s.split('-').map(Number);
+  return new Date(y,m-1,d);
+}
+function calUid(){ return 'ce'+Math.random().toString(36).slice(2,9); }
+
+/* ============================
+   Persistenza
+============================ */
+function calLoadEvents(){
+  try {
+    const raw = localStorage.getItem(CAL_LS_EVENTS_KEY);
+    calState.events = raw ? JSON.parse(raw) : [];
+  } catch(e){
+    console.error('Errore caricamento eventi', e);
+    calState.events = [];
+  }
+}
+function calSaveEvents(){
+  try {
+    localStorage.setItem(CAL_LS_EVENTS_KEY, JSON.stringify(calState.events));
+  } catch(e){
+    console.error('Errore salvataggio eventi', e);
+    alert('Errore salvataggio: spazio locale esaurito o permessi negati.');
+  }
+}
+
+/* ============================
+   Rendering calendario
+   settimana inizia di lunedì
+============================ */
+const calWeekdaysLabels = ['Lun','Mar','Mer','Gio','Ven','Sab','Dom'];
+const calWeekdaysContainer = document.getElementById('calWeekdays');
+const calGrid = document.getElementById('calGrid');
+const calMonthLabel = document.getElementById('calMonthLabel');
+const calSelectedDayLabel = document.getElementById('calSelectedDayLabel');
+const calEventsContainer = document.getElementById('calEventsContainer');
+
+function calRenderWeekdays(){
+  calWeekdaysContainer.innerHTML = '';
+  calWeekdaysLabels.forEach(w => {
+    const el = document.createElement('div');
+    el.textContent = w;
+    calWeekdaysContainer.appendChild(el);
+  });
+}
+
+function calFirstDayIndexOfMonth(year, month){
+  const d = new Date(year, month, 1).getDay(); // 0..6 (Sun..Sat)
+  return (d + 6) % 7; // Mon=0 ... Sun=6
+}
+function calDaysInMonth(year, month){
+  return new Date(year, month+1, 0).getDate();
+}
+function calEventsCountForDate(ymdStr){
+  return calState.events.filter(e => e.date === ymdStr).length;
+}
+
+function calRenderCalendar(){
+  calGrid.innerHTML = '';
+  const year = calState.viewYear;
+  const month = calState.viewMonth;
+  calMonthLabel.textContent = new Date(year, month, 1).toLocaleString('it-IT', {month:'long', year:'numeric'});
+  const firstIdx = calFirstDayIndexOfMonth(year, month);
+  const daysThis = calDaysInMonth(year, month);
+  const prevMonthDays = firstIdx;
+  const prevMonth = month === 0 ? 11 : month - 1;
+  const prevYear = month === 0 ? year - 1 : year;
+  const prevDaysCount = calDaysInMonth(prevYear, prevMonth);
+  const totalCells = 42;
+  for(let i=0;i<totalCells;i++){
+    const cell = document.createElement('div');
+    cell.className = 'calday calcard';
+    let cellDate, other=false;
+    if(i < prevMonthDays){
+      const dayNum = prevDaysCount - prevMonthDays + 1 + i;
+      cellDate = new Date(prevYear, prevMonth, dayNum);
+      other = true;
+      cell.classList.add('calother-month');
+    } else if(i < prevMonthDays + daysThis){
+      const dayNum = i - prevMonthDays + 1;
+      cellDate = new Date(year, month, dayNum);
+    } else {
+      const dayNum = i - (prevMonthDays + daysThis) + 1;
+      const nextMonth = (month + 1) % 12;
+      const nextYear = month === 11 ? year + 1 : year;
+      cellDate = new Date(nextYear, nextMonth, dayNum);
+      other = true;
+      cell.classList.add('calother-month');
+    }
+
+    const ymdStr = calYmd(cellDate);
+    const dayNumEl = document.createElement('div');
+    dayNumEl.className = 'calnum';
+    dayNumEl.textContent = cellDate.getDate();
+    cell.appendChild(dayNumEl);
+
+    const today = new Date();
+    if(ymdStr === calYmd(today)){
+      const tb = document.createElement('div');
+      tb.className = 'caltoday-badge';
+      tb.textContent = 'Oggi';
+      cell.appendChild(tb);
+    }
+
+    const weekdayIndex = (cellDate.getDay() + 6) % 7; // 0..6 Mon..Sun
+    if(weekdayIndex >= 5) cell.classList.add('calweekend');
+
+    const cnt = calEventsCountForDate(ymdStr);
+    if(cnt > 0){
+      const flag = document.createElement('div');
+      flag.className = 'calflag';
+      cell.appendChild(flag);
+      const ec = document.createElement('div');
+      ec.className = 'calevents-count';
+      ec.textContent = cnt + (cnt === 1 ? ' impegno' : ' impegni');
+      cell.appendChild(ec);
+    }
+
+    cell.addEventListener('click', () => {
+      calState.selectedDate = ymdStr;
+      calRenderCalendar();
+      calRenderEventsForSelectedDay();
+    });
+
+    if(calState.selectedDate === ymdStr){
+      cell.classList.add('calselected');
+    }
+
+    calGrid.appendChild(cell);
+  }
+}
+
+/* ============================
+   Render impegni per giorno
+============================ */
+function calRenderEventsForSelectedDay(){
+  const sel = calState.selectedDate || calYmd(new Date());
+  calSelectedDayLabel.textContent = new Date(sel).toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  const list = calState.events.filter(e => e.date === sel).sort((a,b) => (a.time||'') > (b.time||'') ? 1 : -1);
+  calEventsContainer.innerHTML = '';
+  if(list.length === 0){
+    calEventsContainer.innerHTML = '<div class="calsmall">Nessun impegno per questo giorno.</div>';
+    return;
+  }
+  list.forEach(ev => {
+    const el = document.createElement('div');
+    el.className = 'calevent' + (ev.completed ? ' calcompleted' : '');
+    const meta = document.createElement('div');
+    meta.className = 'calmeta';
+    const time = document.createElement('span');
+    time.className = 'caltime';
+    time.textContent = ev.time || '--:--';
+    const desc = document.createElement('div');
+    desc.className = 'caldesc';
+    desc.textContent = ev.desc || '(nessuna descrizione)';
+    meta.appendChild(time);
+    meta.appendChild(desc);
+
+    const actions = document.createElement('div');
+    actions.className = 'calactions';
+
+    const chk = document.createElement('input');
+    chk.type = 'checkbox';
+    chk.checked = !!ev.completed;
+    chk.title = 'Segna come completato';
+    chk.addEventListener('change', () => {
+      ev.completed = chk.checked;
+      calSaveEvents();
+      calRenderCalendar();
+      calRenderEventsForSelectedDay();
+    });
+
+    const del = document.createElement('button');
+    del.textContent = 'Elimina';
+    del.className = 'calbtn secondary';
+    del.addEventListener('click', () => {
+      if(!confirm('Eliminare questo impegno?')) return;
+      calState.events = calState.events.filter(x => x.id !== ev.id);
+      calSaveEvents();
+      calRenderCalendar();
+      calRenderEventsForSelectedDay();
+    });
+
+    actions.appendChild(chk);
+    actions.appendChild(del);
+
+    el.appendChild(meta);
+    el.appendChild(actions);
+    calEventsContainer.appendChild(el);
+  });
+}
+
+/* ============================
+   Form gestione impegni
+============================ */
+const calInputDate = document.getElementById('calInputDate');
+const calInputTime = document.getElementById('calInputTime');
+const calInputDesc = document.getElementById('calInputDesc');
+const calAddEventBtn = document.getElementById('calAddEventBtn');
+const calClearFormBtn = document.getElementById('calClearForm');
+
+calAddEventBtn.addEventListener('click', () => {
+  const dateVal = calInputDate.value;
+  if(!dateVal){ alert('Seleziona una data'); return; }
+  const timeVal = calInputTime.value || '';
+  const descVal = calInputDesc.value.trim();
+  const newEv = { id: calUid(), date: dateVal, time: timeVal, desc: descVal, completed:false };
+  calState.events.push(newEv);
+  calSaveEvents();
+  calState.selectedDate = dateVal;
+  calRenderCalendar();
+  calRenderEventsForSelectedDay();
+  calInputTime.value = '';
+  calInputDesc.value = '';
+});
+
+calClearFormBtn.addEventListener('click', () => {
+  calInputDate.value = '';
+  calInputTime.value = '';
+  calInputDesc.value = '';
+});
+
+/* ============================
+   Navigazione mese/anno e init
+============================ */
+document.getElementById('calPrevMonth').addEventListener('click', () => {
+  calState.viewMonth--;
+  if(calState.viewMonth < 0){ calState.viewMonth = 11; calState.viewYear--; }
+  calRenderCalendar();
+});
+document.getElementById('calNextMonth').addEventListener('click', () => {
+  calState.viewMonth++;
+  if(calState.viewMonth > 11){ calState.viewMonth = 0; calState.viewYear++; }
+  calRenderCalendar();
+});
+document.getElementById('calPrevYear').addEventListener('click', () => { calState.viewYear--; calRenderCalendar(); });
+document.getElementById('calNextYear').addEventListener('click', () => { calState.viewYear++; calRenderCalendar(); });
+document.getElementById('calTodayBtn').addEventListener('click', () => {
+  const now = new Date();
+  calState.viewYear = now.getFullYear();
+  calState.viewMonth = now.getMonth();
+  calState.selectedDate = calYmd(now);
+  calRenderCalendar();
+  calRenderEventsForSelectedDay();
+});
+
+/* ============================
+   Avvio
+============================ */
+function calInit(){
+  calRenderWeekdays();
+  calLoadEvents();
+  calState.selectedDate = calState.selectedDate || calYmd(new Date());
+  const d = calParseYMD(calState.selectedDate);
+  calState.viewYear = d.getFullYear();
+  calState.viewMonth = d.getMonth();
+  calRenderCalendar();
+  calRenderEventsForSelectedDay();
+}
+calInit();
+</script>
+</body>
+</html>
