@@ -70,9 +70,9 @@
   body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:16px;background:var(--cal-bg);color:#111}
   .calcontainer{max-width:980px;margin:0 auto}
   .calcard{background:var(--cal-card);border-radius:8px;padding:14px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-  .calheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-  .calh1{font-size:18px; margin:0}
-  .calcontrols{display:flex;gap:8px;align-items:center}
+  .calheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap}
+  .calh1{font-size:18px; margin:0;flex: 0 0 100%;}
+  .calcontrols{display:flex;gap:8px;align-items:center;flex: 0 0 100%;}
   .calbtn{background:var(--cal-accent);color:#fff;border:0;padding:8px 10px;border-radius:6px;cursor:pointer}
   .calbtn.secondary{background:#eee;color:#111}
   .calcalendar{display:grid;grid-template-rows:auto 1fr;gap:8px}
