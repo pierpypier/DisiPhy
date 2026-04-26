@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checklist - Agenda</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --success:#000000;
+      --danger:#4f4f4f;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{ width:100%; max-width:var(--max-width); }
+
+    /* Header / titolo */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:10px;
+      margin-bottom:18px;
+    }
+    .title-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:20px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{ font-size:14px; color:var(--muted); font-weight:600; }
+
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 20px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+} 
+    /* fine stile barra di navigazione */
+
+/* Mini barra di navigazione sotto l'header principale */
+.mini-nav{
+  display:flex;
+  gap:8px;
+  justify-content:flex-start;
+  align-items:center;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+.mini-nav-item{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px 10px;
+  border-radius:8px;
+  text-decoration:none;
+  color:var(--accent);
+  background:transparent;
+  font-weight:800;
+  border:1px solid transparent;
+  transition: background .12s ease, color .12s ease, transform .08s ease;
+}
+.mini-nav-item:hover{
+  background:rgba(30,136,229,0.06);
+  transform:translateY(-1px);
+}
+.mini-nav-item.active{
+  background:var(--accent);
+  color:#fff;
+  box-shadow:var(--shadow);
+  border-color:rgba(0,0,0,0.04);
+}
+
+/* Responsive: centra su schermi piccoli */
+@media (max-width:640px){
+  .mini-nav{ justify-content:center; gap:6px; }
+  .mini-nav-item{ padding:6px 8px; font-size:13px; }
+}
+  
+
+
+
+
+  
+    /* Pulsanti principali */
+    .controls{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .btn{
+      padding:10px 14px;
+      border-radius:10px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      color:#fff;
+      background:var(--accent);
+      box-shadow:var(--shadow);
+    }
+    .btn.alt{ background:var(--muted); }
+    .btn.small{ padding:8px 10px; font-size:14px; border-radius:8px; }
+
+
+.create-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#6b7280;
+      color:#fff;
+      font-size:28px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:none;
+      cursor:pointer;
+    }
+    .sort-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#227A7B; /* colore bottone */
+      color:#ffffff;     /* freccia bianca */
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      box-shadow:var(--shadow);
+      padding:0;
+    }
+    .sort-btn:hover{ filter: brightness(0.95); }
+
+        .stampa-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#9BA695; /* colore */
+      color:#ffffff;     /* freccia bianca */
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:14px;
+      box-shadow:var(--shadow);
+      padding:0;
+        }
+    
+    
+    
+    
+    /* Lista */
+    .list-wrap{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:8px;
+    }
+
+    .item{
+      background: #E3DCC9;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      padding:12px;
+      box-shadow: 0 6px 18px rgba(20,30,50,0.04);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease, box-shadow .12s ease;
+      position:relative;
+    }
+    .item:hover{ transform: translateY(-4px); }
+
+    /* evidenzia item completato */
+    .item.completed {
+      background: #C3D2BF;
+      border-color: #d1f7df;
+      box-shadow: 0 6px 18px rgba(16,128,64,0.04);
+    }
+
+    /* mantieni la textarea bianca anche su item completato */
+    .item.completed .desc {
+      background: #ffffff !important;
+      border: 1px solid #e6e9ef;
+    }
+
+.item.dragging {
+  opacity: 0.4;
+}
+
+.item.drag-over {
+  border: 2px dashed var(--accent);
+}
+
+    
+    /* Textarea auto-resize */
+    .desc{
+      width:100%;
+      font-size:16px;
+      font-weight:700;
+      padding:10px;
+      border-radius:8px;
+      border:1px solid #e6e9ef;
+      box-sizing:border-box;
+      resize:none;
+      min-height:48px;
+      background:#ffffff;
+      color:inherit;
+      overflow:hidden;
+    }
+
+    .meta{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-top:10px;
+      flex-wrap:wrap;
+    }
+    .flag{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      font-weight:700;
+      color:var(--muted);
+    }
+    .flag input[type="checkbox"]{
+      width:18px;
+      height:18px;
+      accent-color: var(--accent);
+      cursor:pointer;
+    }
+    .status{
+      font-weight:800;
+      color:var(--muted);
+    }
+    .status.done{ color: var(--success); }
+    .status.todo{ color: var(--danger); }
+
+    /* Delete button */
+    .delete-btn{
+      margin-left:auto;
+      background:#ef4444;
+      color:#fff;
+      border:none;
+      padding:8px 10px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:800;
+      box-shadow:0 6px 18px rgba(239,68,68,0.08);
+    }
+    .delete-btn.disabled{
+      opacity:0.45;
+      transform:scale(0.98);
+      cursor:not-allowed;
+    }
+
+    /* Piccola icona per trascinamento visivo (non funzionale) */
+    .handle{
+      margin-left:8px;
+      opacity:0.6;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    /* Empty state */
+    .empty{
+      text-align:center;
+      color:var(--muted);
+      padding:18px;
+      border-radius:10px;
+      border:1px dashed #e6e9ef;
+      background:linear-gradient(180deg, rgba(230,236,255,0.4), rgba(250,250,250,0.4));
+    }
+
+    @media (max-width:640px){
+      .title-row{ flex-direction:column; align-items:flex-start; gap:8px; }
+      .handle{ display:none; }
+      .delete-btn{ margin-left:0; }
+    }
+
+
+    @media print {
+
+  /* Sfondo bianco e colori corretti */
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Nascondi TUTTI i pulsanti e controlli */
+  .controls,
+  .btn,
+  .delete-btn,
+  .flag input,
+  .handle,
+  .nav,
+  .nav-item img,
+  #printBtn {
+    display: none !important;
+  }
+
+
+
+  /* Rimuovi ombre e bordi troppo marcati */
+  .item {
+    box-shadow: none !important;
+    border: 1px solid #cccccc !important;
+    page-break-inside: avoid;
+  }
+
+  /* Textarea pulita */
+  .desc {
+    border: none !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  /* Impostazioni pagina */
+  @page {
+    margin: 18mm;
+  }
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- barra navigazione -->
+<nav class="nav">
+  
+  <a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> AGENDA </span>
+  </a>
+  
+<a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span>DATARIO</span>
+    </a>
+
+
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span> LISTA </span>
+  </a>
+
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span>  WEB  </span>
+  </a>
+  
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span>OPZIONI</span>
+  </a>
+  
+</nav>
+        
+<!-- fine barra navigazione -->
+
+    <!-- Header -->
+    <div class="card">
+      <div class="title-row">
+
+
+        
+        <div>
+<nav class="mini-nav" aria-label="Seleziona lista">
+  <a class="mini-nav-item" href="check01.html">Lista 1</a>
+  <a class="mini-nav-item" href="check02.html">Lista 2</a>
+  <a class="mini-nav-item" href="check03.html">Lista 3</a> <!-- attiva -->
+  <a class="mini-nav-item" href="check04.html">Lista 4</a>
+  <a class="mini-nav-item active" href="check05.html">Lista 5</a>
+</nav>
+          <div class="title">CHECKLIST</div>
+          <div class="subtitle">Gestione attività</div>
+
+          <!-- Campo Tema della lista (AGGIUNTO) -->
+          <div style="margin-top:8px; width:100%; max-width:520px;">
+            <label for="temaLista" style="font-weight:800; color:var(--muted); display:block; margin-bottom:6px;">Tema della lista</label>
+            <input id="temaLista" type="text" placeholder="Scrivi il tema della lista..." style="width:100%; padding:10px; border-radius:8px; border:1px solid #e6e9ef; font-weight:700;">
+          </div>
+        </div>
+
+        
+        
+        
+        <div class="controls" aria-hidden="false">
+          <button id="createBtn" class="create-btn" title="Crea nuova voce">+</button>
+          <button id="sortBtn" class="sort-btn" title="Ordina: incompleti sopra, completati sotto">↓</button>
+      <button id="printBtn" class="stampa-btn" title="Esporta in PDF">PRINT</button>
+        
+        </div>
+      </div>
+
+      <!-- Lista -->
+      <div id="list" class="list-wrap" aria-live="polite"></div>
+
+      <!-- Empty note -->
+      <div id="emptyNote" class="empty" style="display:none;">
+        Nessuna voce. Premi <strong>Nuovo</strong> per aggiungere un elemento alla checklist.
+      </div>
+    </div>
+
+  </div>
+
+<script>
+/*
+  Checklist con salvataggio in localStorage.
+  Modifiche principali:
+  - Salvataggio per-pagina: la chiave di localStorage è unica per file (es. checklist_check01)
+  - Aggiunta proprietà "theme" nello stato per salvare il tema/titolo della lista
+  - Input per il tema sincronizzato con lo stato
+*/
+
+/* ---------- Identificatore pagina e chiave LS per-pagina ---------- */
+// Ottiene il nome del file corrente (es. check01.html) e crea un id pagina (es. check01)
+const pageFile = location.pathname.split('/').pop() || 'check01.html';
+const pageId = pageFile.replace('.html','');
+
+// Chiave unica per questa pagina
+const LS_KEY = 'checklist_' + pageId;
+
+/* ---------- Stato e storage (ora per-pagina) ---------- */
+let state = {
+  theme: '',      // tema/titolo della lista
+  items: []       // {id, text, done, toDelete}
+};
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem(LS_KEY);
+    if(raw) state = JSON.parse(raw);
+  }catch(e){
+    console.warn('Errore caricamento stato', e);
+  }
+}
+
+function saveState(){
+  try{
+    localStorage.setItem(LS_KEY, JSON.stringify(state));
+  }catch(e){
+    console.warn('Errore salvataggio stato', e);
+  }
+}
+
+/* ---------- Utility ---------- */
+function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+
+/* ---------- DOM references ---------- */
+const listEl = document.getElementById('list');
+const emptyNote = document.getElementById('emptyNote');
+const temaInput = document.getElementById('temaLista');
+const titleEl = document.querySelector('.title');
+
+/* ---------- Inizializzazione tema (ripristino e listener) ---------- */
+function initTheme(){
+  if(!temaInput) return;
+  // ripristina dal state (che è caricato da loadState)
+  temaInput.value = state.theme || '';
+  // mostra il tema come titolo se presente
+  if(titleEl) titleEl.textContent = state.theme || 'CHECKLIST';
+
+  // salva tema nello stato quando l'utente scrive
+  temaInput.addEventListener('input', () => {
+    state.theme = temaInput.value;
+    saveState();
+    if(titleEl) titleEl.textContent = state.theme || 'CHECKLIST';
+  });
+}
+
+/* ---------- Rendering ---------- */
+function render(){
+  listEl.innerHTML = '';
+  if(!state.items || state.items.length === 0){
+    emptyNote.style.display = '';
+    return;
+  } else {
+    emptyNote.style.display = 'none';
+  }
+
+  state.items.forEach(item => {
+    listEl.appendChild(buildItem(item));
+  });
+}
+
+/* Crea il DOM per una voce */
+function buildItem(item){
+  const wrap = document.createElement('div');
+  wrap.className = 'item';
+  wrap.dataset.id = item.id;
+  wrap.draggable = true;
+  // applica classe completed se necessario
+  if (item.done) wrap.classList.add('completed');
+
+  // Textarea
+  const ta = document.createElement('textarea');
+  ta.className = 'desc';
+  ta.placeholder = 'Inserisci testo...';
+  ta.value = item.text || '';
+  // auto-resize iniziale
+  ta.style.height = 'auto';
+  ta.style.height = (ta.scrollHeight) + 'px';
+
+  // Salvataggio debounced
+  let debounce;
+  ta.addEventListener('input', () => {
+    // auto-resize
+    ta.style.height = 'auto';
+    ta.style.height = (ta.scrollHeight) + 'px';
+
+    clearTimeout(debounce);
+    debounce = setTimeout(() => {
+      const idx = state.items.findIndex(i => i.id === item.id);
+      if(idx >= 0){
+        state.items[idx].text = ta.value;
+        saveState();
+      }
+    }, 300);
+
+    // Aggiorna status visivo in tempo reale
+    const statusEl = wrap.querySelector('.status');
+    if(statusEl && !wrap.querySelector('input[data-role="done"]').checked){
+      statusEl.textContent = ta.value.trim() ? 'da eseguire' : 'da eseguire';
+    }
+  });
+
+  wrap.appendChild(ta);
+
+  // Meta row: flag completato + flag da eliminare + delete button
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+
+  // Flag completato
+  const flagDone = document.createElement('label');
+  flagDone.className = 'flag';
+  const chkDone = document.createElement('input');
+  chkDone.type = 'checkbox';
+  chkDone.dataset.role = 'done';
+  chkDone.checked = !!item.done;
+  const status = document.createElement('div');
+  status.className = 'status';
+  status.textContent = chkDone.checked ? 'completato' : (ta.value.trim() ? 'da eseguire' : 'da eseguire');
+
+  function updateStatusVisual(){
+    if(chkDone.checked){
+      status.classList.remove('todo');
+      status.classList.add('done');
+      status.textContent = 'completato';
+    } else {
+      status.classList.remove('done');
+      status.classList.add('todo');
+      status.textContent = ta.value.trim() ? 'da eseguire' : 'da eseguire';
+    }
+  }
+  updateStatusVisual();
+
+  chkDone.addEventListener('change', () => {
+    const idx = state.items.findIndex(i => i.id === item.id);
+    if(idx >= 0){
+      state.items[idx].done = chkDone.checked;
+      saveState();
+      updateStatusVisual();
+      if (chkDone.checked) wrap.classList.add('completed');
+      else wrap.classList.remove('completed');
+    }
+  });
+
+  flagDone.appendChild(chkDone);
+  flagDone.appendChild(status);
+  meta.appendChild(flagDone);
+
+  // Flag da eliminare
+  const flagDel = document.createElement('label');
+  flagDel.className = 'flag';
+  const chkDel = document.createElement('input');
+  chkDel.type = 'checkbox';
+  chkDel.dataset.role = 'todelete';
+  chkDel.checked = !!item.toDelete;
+  const delText = document.createElement('div');
+  delText.className = 'status';
+  delText.style.fontWeight = '700';
+  delText.textContent = chkDel.checked ? 'da eliminare' : 'da eliminare';
+
+  chkDel.addEventListener('change', () => {
+    const idx = state.items.findIndex(i => i.id === item.id);
+    if(idx >= 0){
+      state.items[idx].toDelete = chkDel.checked;
+      saveState();
+      // aggiorna aspetto del pulsante elimina
+      const delBtn = wrap.querySelector('.delete-btn');
+      if(delBtn){
+        if(chkDel.checked) delBtn.classList.remove('disabled');
+        else delBtn.classList.add('disabled');
+      }
+    }
+  });
+
+  flagDel.appendChild(chkDel);
+  flagDel.appendChild(delText);
+  meta.appendChild(flagDel);
+
+  // Delete button (cancella solo se toDelete è true)
+  const delBtn = document.createElement('button');
+  delBtn.className = 'delete-btn';
+  delBtn.type = 'button';
+  delBtn.textContent = 'ELIMINA';
+  if(!item.toDelete) delBtn.classList.add('disabled');
+
+  delBtn.addEventListener('click', () => {
+    const idx = state.items.findIndex(i => i.id === item.id);
+    if(idx < 0) return;
+    if(!state.items[idx].toDelete){
+      // piccolo feedback visivo se non è marcato per eliminazione
+      delBtn.animate([{transform:'scale(1)'},{transform:'scale(1.05)'},{transform:'scale(1)'}],{duration:180});
+      return;
+    }
+    // rimuovi elemento
+    state.items.splice(idx,1);
+    saveState();
+    render();
+  });
+
+  // Handle visivo (non funzionale)
+  const handle = document.createElement('div');
+  handle.className = 'handle';
+  handle.textContent = '≡';
+
+  // Append elementi meta
+  meta.appendChild(delBtn);
+  meta.appendChild(handle);
+
+  wrap.appendChild(meta);
+
+  return wrap;
+}
+
+/* ---------- Azioni ---------- */
+document.getElementById('createBtn').addEventListener('click', () => {
+  const newItem = {
+    id: uid(),
+    text: '',
+    done: false,
+    toDelete: false
+  };
+  // aggiungi in cima
+  state.items.unshift(newItem);
+  saveState();
+  render();
+
+  // metti focus sulla nuova textarea
+  requestAnimationFrame(() => {
+    const el = document.querySelector(`.item[data-id="${newItem.id}"] .desc`);
+    if(el) el.focus();
+  });
+});
+
+document.getElementById('sortBtn').addEventListener('click', () => {
+  // Ordina: incompleti prima, completati dopo; mantiene ordine relativo
+  state.items.sort((a,b) => {
+    if(a.done === b.done) return 0;
+    return a.done ? 1 : -1;
+  });
+  saveState();
+  render();
+});
+
+/* ---------- Inizializzazione ---------- */
+loadState();    // carica dallo storage specifico per pagina
+initTheme();    // inizializza input tema e listener
+render();       // render iniziale
+
+document.getElementById('printBtn').addEventListener('click', () => {
+  window.print();
+});
+
+
+/* ---------- Drag & Drop per riordinare ---------- */
+
+let draggedEl = null;
+
+listEl.addEventListener('dragstart', (e) => {
+  const item = e.target.closest('.item');
+  if (!item) return;
+  draggedEl = item;
+  item.classList.add('dragging');
+});
+
+listEl.addEventListener('dragend', (e) => {
+  const item = e.target.closest('.item');
+  if (!item) return;
+  item.classList.remove('dragging');
+  draggedEl = null;
+  saveState();
+});
+
+listEl.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  const item = e.target.closest('.item');
+  if (!item || item === draggedEl) return;
+
+  item.classList.add('drag-over');
+
+  const bounding = item.getBoundingClientRect();
+  const offset = e.clientY - bounding.top;
+
+  const shouldInsertBefore = offset < bounding.height / 2;
+
+  if (shouldInsertBefore) {
+    listEl.insertBefore(draggedEl, item);
+  } else {
+    listEl.insertBefore(draggedEl, item.nextSibling);
+  }
+});
+
+listEl.addEventListener('dragleave', (e) => {
+  const item = e.target.closest('.item');
+  if (item) item.classList.remove('drag-over');
+});
+
+listEl.addEventListener('drop', () => {
+  document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+
+  // aggiorna ordine nello stato
+  const newOrder = [...document.querySelectorAll('.item')].map(el => el.dataset.id);
+  state.items.sort((a, b) => newOrder.indexOf(a.id) - newOrder.indexOf(b.id));
+  saveState();
+});
+  
+</script>
+</body>
+</html>
