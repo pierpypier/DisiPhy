@@ -101,6 +101,40 @@ input[type="text"]{
   font-weight:600;
 }
 
+/* Categoria: testo color #227A7B */
+input.cat-input{
+  color: #227A7B;
+  border: 1px solid #d7e9e9;
+  background: #ffffff;
+  font-weight:700;
+}
+input.cat-input::placeholder{ color: rgba(34,122,123,0.45); }
+
+/* URL: testo color #E3DCC9 */
+input.url-input{
+  color: #E3DCC9;
+  border: 1px solid #e9e3d6;
+  background: #ffffff;
+  font-weight:600;
+}
+input.url-input::placeholder{ color: rgba(227,220,201,0.6); }
+
+/* verde chiaro per l'input Titolo (colore richiesto #C3D2BF) */
+input.title-input{
+  background: #C3D2BF;
+  border: 1px solid #AFC6A8;
+  color: #0b3b18;
+  font-weight:700;
+  border-radius:8px;
+  padding:10px;
+}
+
+/* stato focus più evidente */
+input.title-input:focus{
+  outline: 3px solid rgba(195,210,191,0.28);
+  box-shadow: 0 4px 12px rgba(46,160,67,0.06);
+}
+
 .go-btn{
   background:var(--accent);
   color:#fff;
@@ -210,6 +244,11 @@ input[type="text"]{
     font-size: 12px;
   }
 }
+
+/* riduci animazioni per utenti che preferiscono movimento ridotto */
+@media (prefers-reduced-motion: reduce){
+  .item, .nav-item img { transition: none; animation: none; }
+}
     
     /* fine stile barra di navigazione */
 
@@ -222,18 +261,19 @@ input[type="text"]{
 <div class="container">
   
 <!-- barra navigazione -->
-<nav class="nav">
+<nav class="nav" aria-label="Navigazione principale">
   
 <a href="organizer4.html" class="nav-item">
     <img src="rimage/orga4.png" alt="Organizer">
     <span> AGENDA </span>
   </a>
-
+  
 <a href="caldsp.html" class="nav-item">
     <img src="rimage/calicon.png" alt="Calendario dsp">
     <span>DATARIO</span>
     </a>
-  
+
+
   <a href="check01.html" class="nav-item">
     <img src="rimage/check02.png" alt="Checklist">
     <span> LISTA </span>
@@ -267,7 +307,7 @@ input[type="text"]{
       </div>
     </div>
 
-    <div id="list" class="list-wrap"></div>
+    <div id="list" class="list-wrap" role="list"></div>
 
     <div id="emptyNote" class="empty" style="display:none;">
       Nessuno strumento. Premi <strong>Crea</strong> per aggiungerne uno.
@@ -281,11 +321,21 @@ const LS_KEY = "webtools_v1";
 let state = { items: [] };
 
 function loadState(){
-  const raw = localStorage.getItem(LS_KEY);
-  if(raw) state = JSON.parse(raw);
+  try {
+    const raw = localStorage.getItem(LS_KEY);
+    if(raw) state = JSON.parse(raw);
+  } catch (err) {
+    console.warn("Errore parsing stato, resetto.", err);
+    state = { items: [] };
+    saveState();
+  }
 }
 function saveState(){
-  localStorage.setItem(LS_KEY, JSON.stringify(state));
+  try {
+    localStorage.setItem(LS_KEY, JSON.stringify(state));
+  } catch (err) {
+    console.error("Impossibile salvare lo stato:", err);
+  }
 }
 
 function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
@@ -301,7 +351,9 @@ function render(){
   }
   emptyNote.style.display = "none";
 
-  state.items.forEach(item => listEl.appendChild(buildItem(item)));
+  const frag = document.createDocumentFragment();
+  state.items.forEach(item => frag.appendChild(buildItem(item)));
+  listEl.appendChild(frag);
 }
 
 function buildItem(item){
@@ -309,6 +361,7 @@ function buildItem(item){
   wrap.className = "item";
   wrap.dataset.id = item.id;
   wrap.draggable = true;
+  wrap.setAttribute("role","listitem");
 
   // INPUTS
   const row1 = document.createElement("div");
@@ -318,16 +371,22 @@ function buildItem(item){
   cat.type = "text";
   cat.placeholder = "Categoria";
   cat.value = item.category || "";
+  cat.className = "cat-input";
+  cat.setAttribute("aria-label","Categoria");
 
   const url = document.createElement("input");
   url.type = "text";
   url.placeholder = "https://...";
   url.value = item.url || "";
+  url.className = "url-input";
+  url.setAttribute("aria-label","URL");
 
   const title = document.createElement("input");
   title.type = "text";
   title.placeholder = "Titolo";
   title.value = item.title || "";
+  title.className = "title-input";
+  title.setAttribute("aria-label","Titolo");
 
   row1.appendChild(cat);
   row1.appendChild(url);
@@ -337,8 +396,16 @@ function buildItem(item){
   const goBtn = document.createElement("button");
   goBtn.className = "go-btn";
   goBtn.textContent = "VAI";
+  goBtn.title = "Apri link in nuova scheda";
   goBtn.addEventListener("click", () => {
-    if(url.value.trim()) window.open(url.value.trim(), "_blank");
+    const u = url.value.trim();
+    if(!u) return;
+    try {
+      const parsed = new URL(u.includes("://") ? u : "https://"+u);
+      window.open(parsed.href, "_blank", "noopener,noreferrer");
+    } catch {
+      alert("URL non valido");
+    }
   });
 
   row1.appendChild(goBtn);
@@ -354,6 +421,7 @@ function buildItem(item){
   const chk = document.createElement("input");
   chk.type = "checkbox";
   chk.checked = !!item.toDelete;
+  chk.setAttribute("aria-label","Segna per eliminazione");
 
   const txt = document.createElement("span");
   txt.textContent = "da eliminare";
@@ -389,6 +457,8 @@ function buildItem(item){
   const handle = document.createElement("div");
   handle.className = "handle";
   handle.textContent = "≡";
+  handle.setAttribute("tabindex","0");
+  handle.setAttribute("aria-grabbed","false");
   meta.appendChild(handle);
 
   wrap.appendChild(meta);
@@ -401,6 +471,39 @@ function buildItem(item){
       item.title = title.value;
       saveState();
     });
+
+    // basic URL validation on blur for the url field
+    if(input === url){
+      input.addEventListener("blur", () => {
+        const v = input.value.trim();
+        if(!v) return;
+        try { new URL(v.includes("://") ? v : "https://"+v); input.setCustomValidity(""); }
+        catch { input.setCustomValidity("URL non valido"); input.reportValidity(); }
+      });
+    }
+  });
+
+  // allow dragging only when starting from the handle (reduces accidental drags)
+  handle.addEventListener("mousedown", () => {
+    wrap.draggable = true;
+  });
+  handle.addEventListener("keydown", (e) => {
+    // keyboard move: Ctrl + ArrowUp / ArrowDown to reorder
+    if(e.ctrlKey && (e.key === "ArrowUp" || e.key === "ArrowDown")){
+      e.preventDefault();
+      const idx = state.items.findIndex(i => i.id === item.id);
+      if(idx === -1) return;
+      const swapWith = e.key === "ArrowUp" ? idx - 1 : idx + 1;
+      if(swapWith < 0 || swapWith >= state.items.length) return;
+      const tmp = state.items[swapWith];
+      state.items[swapWith] = state.items[idx];
+      state.items[idx] = tmp;
+      saveState();
+      render();
+      // restore focus on the same item
+      const el = document.querySelector(`.item[data-id="${item.id}"] .handle`);
+      if(el) el.focus();
+    }
   });
 
   return wrap;
@@ -422,6 +525,10 @@ listEl.addEventListener("dragstart", e => {
   if(!item) return;
   draggedEl = item;
   item.classList.add("dragging");
+  if(e.dataTransfer){
+    e.dataTransfer.effectAllowed = "move";
+    try { e.dataTransfer.setData("text/plain", item.dataset.id); } catch {}
+  }
 });
 
 listEl.addEventListener("dragend", e => {
