@@ -111,7 +111,7 @@
   textarea{resize:vertical;min-height:60px}
   .calsmall{font-size:13px;color:var(--cal-muted)}
   .calnav-year-month{display:flex;gap:6px;align-items:center}
-  .calmonth-title{font-weight:700;font-size:16px}
+  .calmonth-title{font-weight:700;font-size:16px; margin:3px}
   .calbtn-icon{background:#fff;color:var(--cal-accent);border:1px solid rgba(43,108,176,.12);padding:6px;border-radius:6px}
   .callegend{margin-top:8px;font-size:13px;color:var(--cal-muted)}
   @media (max-width:880px){ .calevents-panel{flex-direction:column} .calform{width:100%} .calday{min-height:72px} }
@@ -160,17 +160,17 @@
     <header class="calheader">
         <div class="calh1cont">
       <h1 class="calh1">DATARIO - Calendario attività</h1>
-        <button id="calTodayBtn" class="calbtn secondary" style="margin:1px 5px 10px 1px">Oggi</button>
+        <button id="calTodayBtn" class="calbtn secondary" style="margin:1px 5px 10px 1px">Oggi <div id="calMonthLabel" class="calmonth-title" style="padding:6px 10px;border-radius:6px;background:#f1f5f9">Aprile 2026</div></button>
 
           
         </div>
       <div class="calcontrols">
         <div class="calnav-year-month">
-          <button id="calPrevYear" class="calbtn-icon" title="Anno precedente">««</button>
-          <button id="calPrevMonth" class="calbtn-icon" title="Mese precedente">‹ ‹ VAI</button>
-          <div id="calMonthLabel" class="calmonth-title" style="padding:6px 10px;border-radius:6px;background:#f1f5f9">Aprile 2026</div>
-          <button id="calNextMonth" class="calbtn-icon" title="Mese successivo">VAI › ›</button>
-          <button id="calNextYear" class="calbtn-icon" title="Anno successivo">»»</button>
+          <button id="calPrevYear" class="calbtn-icon" title="Anno precedente">«« ANNO</button>
+          <button id="calPrevMonth" class="calbtn-icon" title="Mese precedente">‹‹ MESE SUCCESSIVO</button>
+         
+          <button id="calNextMonth" class="calbtn-icon" title="Mese successivo">MESE PRECEDENTE ››</button>
+          <button id="calNextYear" class="calbtn-icon" title="Anno successivo">ANNO »»</button>
         </div>
 
       </div>
