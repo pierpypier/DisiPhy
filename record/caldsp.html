@@ -15,6 +15,11 @@
     --cal-flag:#ffb400;
   }
 
+/* 1. Il Reset Universale */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+  
     /* stile barra di navigazione */
 .nav {
   display: flex;
@@ -68,7 +73,7 @@
   
   
   body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:16px;background:var(--cal-bg);color:#111}
-  .calcontainer{max-width:980px;margin:0 auto}
+  .calcontainer{max-width:980px; width: 100%; margin:0 auto;overflow-x: hidden}
   .calcard{background:var(--cal-card);border-radius:8px;padding:14px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
   .calheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap}
   .calh1cont{flex: 0 0 100%; margin:2}
