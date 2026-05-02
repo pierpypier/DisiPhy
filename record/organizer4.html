@@ -114,9 +114,6 @@
     
     /* fine stile barra di navigazione */
 
-    
-
-    
     /* CATEGORIE */
     .control-card{
       width:100%;
@@ -132,6 +129,8 @@
       align-items:center;
       margin-bottom:10px;
       flex-wrap:wrap;
+      /* Modifica richiesta: allineamento a destra */
+      justify-content: flex-end;
     }
     .category-label{
       min-width:10px;
@@ -140,11 +139,17 @@
     }
     .category-input{
       flex:1;
-        max-width:240px;
+      max-width:240px;
       padding:10px 12px;
       border-radius:10px;
       border:1px solid #e6e9ef;
       font-size:15px;
+    }
+    /* Stile specifico per l'input "all" non editabile */
+    .category-input[readonly] {
+      background-color: #f9fafb;
+      color: var(--muted);
+      cursor: default;
     }
     .cat-btn{
       background:#e6eefc;
@@ -215,7 +220,6 @@
       margin-top:10px;
     }
 
-    /* TEXTAREA: disabilitiamo il resize nativo e usiamo la maniglia */
     .desc-wrapper {
       position: relative;
       display: block;
@@ -229,7 +233,7 @@
       border-radius:8px;
       border:1px solid #e6e9ef;
       box-shadow: 0 1px 0 rgba(0,0,0,0.03);
-      resize: none; /* disabilita il resize nativo */
+      resize: none; 
       box-sizing: border-box;
       min-height:60px;
       background: #ffffff !important;
@@ -287,7 +291,6 @@
       margin-top:12px;
     }
 
-    /* MANIGLIA DI RIDIMENSIONAMENTO (visibile e comoda) */
     .resizer {
       position: absolute;
       right: 8px;
@@ -316,7 +319,6 @@
       opacity: 0.9;
     }
 
-    /* PULSANTI FINALI */
     .actions{
       display:flex;
       gap:12px;
@@ -342,8 +344,8 @@
       width:56px;
       height:56px;
       border-radius:50%;
-      background:#227A7B; /* colore bottone */
-      color:#ffffff;     /* freccia bianca */
+      background:#227A7B; 
+      color:#ffffff;     
       font-weight:800;
       border:none;
       cursor:pointer;
@@ -356,12 +358,12 @@
     }
     .sort-btn:hover{ filter: brightness(0.95); }
 
-        .stampa-btn{
+    .stampa-btn{
       width:56px;
       height:56px;
       border-radius:50%;
-      background:#9BA695; /* colore */
-      color:#ffffff;     /* freccia bianca */
+      background:#9BA695; 
+      color:#ffffff;     
       font-weight:800;
       border:none;
       cursor:pointer;
@@ -371,59 +373,37 @@
       font-size:14px;
       box-shadow:var(--shadow);
       padding:0;
-        }
+    }
 
-    /* RESPONSIVE */
     @media (max-width:640px){
       .weekday{min-width:120px}
       .cat-btn, .cat-btn-all{font-size:16px; padding:8px 12px}
+      /* Uniformiamo max-width input su mobile */
+      .category-input { max-width: 180px; }
     }
 
     .muted{color:var(--muted); font-weight:600}
     .small{font-size:13px; color:var(--muted)}
  
   @media print {
-
   body {
     background: #ffffff !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-
-  /* Nascondi pulsanti e controlli */
-  .controls,
-  .delete-btn,
-  .handle,
-    .nav,
-    .control-card,
-    .category-row,
-    .category-label,
-    .category-input,
-    .cat-btn,
-    .cat-btn-all,
-    .delete-btn,
-    .create-btn,
-    .sort-btn,
-    .stampa-btn,
-  #emptyNote {
+  .controls, .delete-btn, .handle, .nav, .control-card, .category-row, .category-label, .category-input, .cat-btn, .cat-btn-all, .delete-btn, .create-btn, .sort-btn, .stampa-btn, #emptyNote {
     display: none !important;
   }
-
-  /* Rimuovi ombre e bordi troppo marcati */
   .item {
     box-shadow: none !important;
     border: 1px solid #cccccc !important;
     page-break-inside: avoid;
   }
-
-  /* Mantieni la textarea leggibile */
   .desc {
     border: none !important;
     background: #ffffff !important;
     box-shadow: none !important;
   }
-
-  /* Impagina meglio la pagina */
   @page {
     margin: 18mm;
   }
@@ -436,50 +416,40 @@
     
 <!-- barra navigazione -->
 <nav class="nav">
-
   <a href="organizer4.html" class="nav-item">
     <img src="rimage/orga4.png" alt="Organizer">
     <span> AGENDA </span>
   </a>
-
     <a href="caldsp.html" class="nav-item">
     <img src="rimage/calicon.png" alt="Calendario dsp">
     <span>DATARIO</span>
     </a>
-  
   <a href="check01.html" class="nav-item">
     <img src="rimage/check02.png" alt="Checklist">
     <span> LISTA </span>
   </a>
-
   <a href="strweb.html" class="nav-item">
     <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
-    <span>  WEB  </span>
+    <span>   WEB   </span>
   </a>
-  
   <a href="dashconsolle.html" class="nav-item">
     <img src="rimage/opzioni.png" alt="Opzioni">
     <span>OPZIONI</span>
   </a>
-  
 </nav>
-        
 <!-- fine barra navigazione -->
-    
-
+        
     <!-- TITOLO -->
     <div class="title-bar">
       <div class="page-title">AGENDA ORGANIZER</div>
       <div class="small">Gestione Attività</div>
-
-   
     </div>
 
-    <!-- CATEGORIE -->
+    <!-- CATEGORIE (Modificato con allineamento a destra e input "all" uniforme) -->
     <div class="control-card" id="controlCard">
       <div class="category-row">
-        <div class="category-label">all</div>
-        <div class="muted">visualizza tutti i record in agenda</div>
+        <div class="category-label">→</div>
+        <input class="category-input" type="text" value="visualizza tutti i record" readonly>
         <button class="cat-btn-all" data-filter="TUTTI">→</button>
       </div>
 
@@ -506,36 +476,25 @@
     <div class="actions">
       <button id="createRecord" class="create-btn">+</button>
       <button id="sortRecords" class="sort-btn" aria-label="Ordina per data">↓</button>
-    
-    <button id="printBtn" class="stampa-btn" title="Esporta in PDF">PRINT</button>
+      <button id="printBtn" class="stampa-btn" title="Esporta in PDF">PRINT</button>
     </div>
     
     <!-- RECORD -->
     <div class="records-wrap" id="recordsWrap"></div>
 
-
   </div>
 
 <script>
-/* ============================
-   LOCAL STORAGE KEYS
-============================ */
 const LS = {
   categories:"dsp_categories_v1",
   records:"dsp_records_v1"
 };
 
-/* ============================
-   STATO
-============================ */
 let state = {
   categories:["TUTTI","Categoria 1","Categoria 2","Categoria 3"],
   records:[]
 };
 
-/* ============================
-   CARICA STATO
-============================ */
 function loadState(){
   const c = localStorage.getItem(LS.categories);
   const r = localStorage.getItem(LS.records);
@@ -557,19 +516,11 @@ function loadState(){
   }
 }
 
-/* ============================
-   SALVA STATO
-============================ */
 function saveState(){
   localStorage.setItem(LS.categories,JSON.stringify(state.categories));
   localStorage.setItem(LS.records,JSON.stringify(state.records));
 }
 
-/* ============================
-   CREA RECORD DOM
-   Nota: la textarea viene inserita dentro .desc-wrapper;
-   la maniglia di resize viene aggiunta separatamente tramite initResizers()
-============================ */
 function buildRecord(rec){
   const wrap=document.createElement("div");
   wrap.className="record";
@@ -578,7 +529,6 @@ function buildRecord(rec){
   if(rec.description && rec.description.trim()!=="") wrap.classList.add("red-bg");
   if(rec.completed) wrap.classList.add("green-bg");
 
-  /* TOP */
   const top=document.createElement("div");
   top.className="record-top";
 
@@ -610,10 +560,8 @@ function buildRecord(rec){
     selImg.appendChild(o);
   }
   top.appendChild(selImg);
-
   wrap.appendChild(top);
 
-  /* IMMAGINE */
   const img=document.createElement("img");
   img.className="img-preview";
   img.src=`rimage/${rec.image}`;
@@ -626,21 +574,17 @@ function buildRecord(rec){
     }
   });
   wrap.appendChild(img);
-/* DESCRIZIONE (inserita dentro wrapper; la maniglia viene aggiunta da initResizers) */
+
   const descWrapper = document.createElement('div');
   descWrapper.className = 'desc-wrapper';
-
   const desc = document.createElement("textarea");
   desc.className="desc";
   desc.placeholder = 'Descrizione attività...';
   desc.value = rec.description || '';
-
-  // Salvataggio immediato alla digitazione (manteniamo comportamento esistente)
   desc.addEventListener('input', () => {
     const idx = state.records.findIndex(r => r.id === rec.id);
     if(idx >= 0){
       state.records[idx].description = desc.value;
-      // Aggiorna classi direttamente
       if(desc.value.trim() !== ''){
         wrap.classList.add('red-bg');
       } else {
@@ -653,14 +597,11 @@ function buildRecord(rec){
       saveState();
     }
   });
-
   descWrapper.appendChild(desc);
   wrap.appendChild(descWrapper);
 
-  /* META */
   const meta=document.createElement("div");
   meta.className="meta-row";
-
   const date=document.createElement("input");
   date.type="date";
   date.className="input";
@@ -674,12 +615,10 @@ function buildRecord(rec){
     }
   });
   meta.appendChild(date);
-
   const weekday=document.createElement("div");
   weekday.className="weekday";
   weekday.textContent = rec.date ? weekdayName(rec.date) : 'inserisci data';
   meta.appendChild(weekday);
-
   const time=document.createElement("input");
   time.type="time";
   time.className="input";
@@ -692,13 +631,10 @@ function buildRecord(rec){
     }
   });
   meta.appendChild(time);
-
   wrap.appendChild(meta);
 
-  /* FLAGS */
   const flags=document.createElement("div");
   flags.className="flags";
-
   const f1=document.createElement("label");
   f1.className="flag";
   const chk1=document.createElement("input");
@@ -725,7 +661,6 @@ function buildRecord(rec){
   });
   f1.appendChild(chk1); f1.appendChild(t1);
   flags.appendChild(f1);
-
   const f2=document.createElement("label");
   f2.className="flag";
   const chk2=document.createElement("input");
@@ -742,10 +677,8 @@ function buildRecord(rec){
   t2.textContent="da eliminare";
   f2.appendChild(chk2); f2.appendChild(t2);
   flags.appendChild(f2);
-
   wrap.appendChild(flags);
 
-  /* CANCELLA */
   const del=document.createElement("button");
   del.className="delete-btn";
   del.textContent="CANCELLA";
@@ -760,23 +693,15 @@ function buildRecord(rec){
     }
   });
   wrap.appendChild(del);
-
   wrap.appendChild(document.createElement("div")).className="separator";
-
   return wrap;
 }
 
-/* ============================
-   WEEKDAY
-============================ */
 function weekdayName(d){
   const dd=new Date(d+"T00:00:00");
   return ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"][dd.getDay()];
 }
 
-/* ============================
-   RENDER
-============================ */
 function render(){
   const wrap=document.getElementById("recordsWrap");
   wrap.innerHTML="";
@@ -786,25 +711,16 @@ function render(){
   document.getElementById("cat2").value = state.categories[2] || '';
   document.getElementById("cat3").value = state.categories[3] || '';
 
-  // Inizializza i resizer per le textarea appena renderizzate
   if(window.initResizers) window.initResizers();
 }
 
-  /* ============================
-   RESIZER MINIMO (CSS + JS)
-   - Avvolge ogni .desc in .desc-wrapper (già fatto in buildRecord)
-   - Aggiunge .resizer e gestisce drag mouse/touch
-   - Non salva l'altezza (comportamento richiesto)
-============================ */
 (function(){
   function initResizers() {
     const textareas = Array.from(document.querySelectorAll('.desc'));
     textareas.forEach(textarea => {
-      // Se è già stato avvolto con resizer, salta
       const parent = textarea.parentElement;
       if(parent && parent.classList.contains('desc-wrapper') && parent.querySelector('.resizer')) return;
 
-      // Se il wrapper non esiste (in teoria buildRecord lo crea), crealo
       let wrapper = textarea.parentElement;
       if(!wrapper || !wrapper.classList.contains('desc-wrapper')){
         wrapper = document.createElement('div');
@@ -813,7 +729,6 @@ function render(){
         wrapper.appendChild(textarea);
       }
 
-      // Crea resizer se non esiste
       let resizer = wrapper.querySelector('.resizer');
       if(!resizer){
         resizer = document.createElement('div');
@@ -822,12 +737,10 @@ function render(){
         wrapper.appendChild(resizer);
       }
 
-      // Imposta altezza iniziale basata sul contenuto per evitare "salti"
       if(!textarea.style.height || textarea.style.height === '0px'){
         textarea.style.height = textarea.scrollHeight + 'px';
       }
 
-      // Variabili per il drag
       let dragging = false;
       let startY = 0;
       let startH = 0;
@@ -839,7 +752,6 @@ function render(){
         textarea.style.height = newH + 'px';
       }
 
-      // Mouse events
       resizer.addEventListener('mousedown', (ev) => {
         ev.preventDefault();
         dragging = true;
@@ -860,7 +772,6 @@ function render(){
         document.documentElement.style.cursor = '';
       });
 
-      // Touch events
       resizer.addEventListener('touchstart', (ev) => {
         ev.preventDefault();
         dragging = true;
@@ -880,17 +791,10 @@ function render(){
       });
     });
   }
-
-  // Esponi la funzione globalmente per poterla richiamare dopo render/creazione record
   window.initResizers = initResizers;
-
-  // Inizializza al caricamento DOM
   document.addEventListener('DOMContentLoaded', initResizers);
 })();
 
-/* ============================
-   EVENTI
-============================ */
 document.getElementById("createRecord").addEventListener('click', () => {
   const r={
     id:Date.now().toString(),
@@ -946,22 +850,12 @@ document.getElementById("controlCard").addEventListener('click', (e) => {
   });
 });
 
-/* ============================
-   START
-============================ */
 loadState();
 render();
 
 document.getElementById('printBtn').addEventListener('click', () => {
   window.print();
 });
-  
 </script>
-
 </body>
 </html>
-    
-
-
-
-  
