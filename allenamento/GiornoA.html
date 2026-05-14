@@ -43,6 +43,7 @@
     }
     #timerDisplay {
       font-size: 28px;
+      font-weight:700;
       margin-top: 5px;
       text-align: center;
     }
@@ -162,13 +163,10 @@
 <body>
   <!-- Box globale per informazioni e timer -->
   <div class="global-info">
-    <label>Data Allenamento:
+    <label>Data:
       <input type="date" id="workoutDate" onchange="saveField(this)">
     </label>
-    <label>Nome:
-      <input type="text" id="workoutType" placeholder="il tuo nome" onchange="saveField(this)">
-    </label>
-    <label>Timer (secondi):
+    <label>Imposta:
       <input type="number" id="timerInput" placeholder="Secondi" style="width:80px;" onchange="saveField(this)">
     </label>
     <button onclick="startTimer()" class="timer-btn">Start Timer</button>
