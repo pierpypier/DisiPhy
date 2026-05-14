@@ -15,21 +15,34 @@
       max-width: 900px;
       margin: auto;
     }
-    .global-info {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #fff;
-      padding: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-      z-index: 1000;
-    }
+/* Global info: sempre 2 colonne, layout compatto e prevenzione overflow */
+.global-info {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 24px);
+  max-width: var(--max-width);
+  background: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(10,20,40,0.08);
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* due colonne sempre */
+  gap: 8px 12px;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-end;    /* allinea il contenuto a destra della cella */
+  padding-right: 1px;           /* piccolo spazio interno verso il centro */
+  padding-left: 100px;           /* piccolo spazio interno verso il centro */
+}
     .global-info label {
       display: block;
-      margin-top: 5px;
+      margin-top: 2px;
     }
     #timerDisplay {
-      font-size: 18px;
+      font-size: 28px;
       margin-top: 5px;
       text-align: center;
     }
