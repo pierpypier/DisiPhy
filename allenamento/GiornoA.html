@@ -42,9 +42,9 @@
       margin-top: 2px;
     }
     #timerDisplay {
-      font-size: 50px;
+      font-size: 60px;
       font-weight:700;
-      margin: 5px 30px;
+      margin: 5px;
       text-align: center;
     }
 
@@ -169,8 +169,8 @@
     <label>Imposta:
       <input type="number" id="timerInput" placeholder="Secondi" style="width:80px;" onchange="saveField(this)">
     </label>
-    <button onclick="startTimer()" class="timer-btn">Start Timer</button>
     <div id="timerDisplay">00:00</div>
+    <button onclick="startTimer()" class="timer-btn">Start Timer</button>
     <audio id="alarmAudio" src="timeend.mp3" preload="auto"></audio>
   </div>
 
