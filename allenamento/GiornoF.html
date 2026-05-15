@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Allenamento F</title>
   <style>
+
+
+  :root{
+    --cal-bg:#f4f6f8;
+    --cal-card:#ffffff;
+    --cal-dark-blue:#0b3b5c;
+    --cal-blue:#1e6fb8;
+    --cal-white:#ffffff;
+    --cal-muted:#6b7280;
+    --cal-sep:#d1d5db;
+    --cal-text:#111827;
+  }
+    
     body {
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
@@ -157,6 +170,80 @@
     #descrizioniTable th {
       background: #eaeaea;
     }
+
+  /* BLOCCO 1 (uguale a schedahome) */
+  .calblock1 .caltitle{
+    background:var(--cal-dark-blue);
+    color:var(--cal-white);
+    padding:18px;
+    border-radius:8px;
+    font-weight:800;
+    font-size:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+
+
+  /* pulsante blu aggiuntivo che collega a schedahome.html */
+  .calblock1 .home-cta{
+    display:flex;
+    justify-content:center;
+    margin:8px 0 12px 0;
+  }
+  .home-cta a{
+    background:var(--cal-blue);
+    color:var(--cal-white);
+    padding:10px 18px;
+    border-radius:10px;
+    font-weight:800;
+    text-decoration:none;
+    box-shadow:0 8px 18px rgba(30,111,184,0.16);
+    font-size:16px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .home-cta a:hover{ transform:translateY(-2px); transition:transform .12s ease; }
+
+  .calblock1 .calbuttons{ margin-top:6px; display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+
+  .calbtn-circle{
+    background:var(--cal-blue);
+    color:var(--cal-white);
+    border:0;
+    min-width:60px;
+    min-height:60px;
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:28px;
+    cursor:pointer;
+    box-shadow:0 6px 12px rgba(30,111,184,0.18);
+    transition:transform .12s ease, box-shadow .12s ease, opacity .12s;
+    text-decoration:none;
+  }
+  .calbtn-circle:active{ transform:translateY(1px) scale(.995); }
+  .calbtn-circle:hover{ box-shadow:0 10px 20px rgba(30,111,184,0.22); }
+
+  .calbtn-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(60px, 1fr));
+    gap:14px;
+    width:100%;
+    max-width:520px;
+    margin:0 auto;
+  }
+
+  .calseparator{ height:1px; background:var(--cal-sep); margin:6px 0 6px 0; border-radius:2px; }
+
+
+    
   </style>
 </head>
 <body>
