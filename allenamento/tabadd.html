@@ -126,62 +126,63 @@
 
   .calseparator{ height:1px; background:var(--cal-sep); margin:6px 0 6px 0; border-radius:2px; }
 
-  /* BLOCCO 2 (nuovo) - griglia con left column stacked (code + image) e right column testo centrato verticalmente */
-  .exercise-list{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-  }
+    /* Nuovo Blocco 2: lista di elementi con griglia */
+    .block-2 .list{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
 
-  .exercise-row{
-    display:grid;
-    grid-template-columns:120px 1fr; /* left column fixed, right flexible */
-    gap:12px;
-    align-items:center; /* vertical centering of right content relative to left column */
-    padding:12px;
-    border-radius:8px;
-    background:var(--cal-card);
-    border:1px solid rgba(0,0,0,0.04);
-  }
+    .list-item{
+      display:grid;
+      grid-template-columns:120px 1fr;
+      gap:12px;
+      align-items:center;
+      padding:10px;
+      border-radius:8px;
+      background:linear-gradient(180deg, #ffffff, #fbfdff);
+      border:1px solid rgba(0,0,0,0.04);
+    }
 
-  /* Left column: number above image stacked */
-  .exercise-left{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:8px;
-  }
+    /* Colonna sinistra: numero e immagine impilate */
+    .left-col{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:8px;
+    }
 
-  .exercise-left .code{
-    font-weight:800;
-    font-size:14px;
-    color:var(--cal-dark-blue);
-  }
+    .left-col .code{
+      font-weight:700;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
 
-  .exercise-left img{
-    max-width:100px; /* requested max width */
-    width:100%;
-    height:auto;
-    border-radius:6px;
-    object-fit:cover;
-    display:block;
-    border:1px solid #e6e9ee;
-    background:#f3f4f6;
-  }
+    .left-col img{
+      display:block;
+      max-width:100px;
+      width:100%;
+      height:auto;
+      border-radius:6px;
+      object-fit:cover;
+    }
 
-  /* Right column: text centered vertically and occupying remaining width */
-  .exercise-right{
-    display:flex;
-    align-items:center; /* vertical center */
-    padding:6px 8px;
-    min-height:64px;
-  }
+    /* Colonna destra: riquadro testo, centrato verticalmente */
+    .right-col{
+      display:flex;
+      align-items:center; /* centra verticalmente rispetto alla riga */
+      height:100%;
+    }
 
-  .exercise-right .title{
-    font-weight:800;
-    font-size:16px;
-    color:var(--cal-text);
-  }
+    .right-col .title{
+      width:100%;
+      padding:12px;
+      background:#f0f6fb;
+      border-radius:8px;
+      font-weight:700;
+      color:#0b3b66;
+      box-sizing:border-box;
+    }
 
   /* BLOCCO 3 (identico a schedahome) */
   .calblock3 .calcatalog{
@@ -271,32 +272,32 @@
 
     <div class="calseparator" role="separator" aria-hidden="true"></div>
 
-    <!-- BLOCCO 2: sostituito come richiesto (due righe) -->
-    <section class="calcard" aria-labelledby="exercises-title">
-      <h2 id="exercises-title" style="margin:0 0 12px 0;font-size:18px">Esercizi Addominali</h2>
+    <!-- Nuovo Blocco 2 (sostituisce completamente il precedente) -->
+    <section class="block block-2" id="block2">
+      <div class="list">
 
-      <div class="exercise-list">
-        <!-- Prima riga: 001 + t001.jpg e testo a destra -->
-        <div class="exercise-row" role="group" aria-label="001 Addominali - Plank classico">
-          <div class="exercise-left" aria-hidden="false">
+        <!-- Primo elemento: 001 + t001.jpg e testo Addominali - Plank classico -->
+        <article class="list-item">
+          <div class="left-col" aria-hidden="false">
             <div class="code">001</div>
-            <img src="/anteprime/t001.jpg" alt="t001 Addominali" loading="lazy">
+            <img src="/anteprime/t001.jpg" alt="Anteprima 001">
           </div>
-          <div class="exercise-right">
+          <div class="right-col">
             <div class="title">Addominali - Plank classico</div>
           </div>
-        </div>
+        </article>
 
-        <!-- Seconda riga: 002 + t002.jpg e testo a destra -->
-        <div class="exercise-row" role="group" aria-label="002 Addominali - Crunch classico">
-          <div class="exercise-left" aria-hidden="false">
+        <!-- Secondo elemento: 002 + t002.jpg e testo Addominali - crunch classico -->
+        <article class="list-item">
+          <div class="left-col" aria-hidden="false">
             <div class="code">002</div>
-            <img src="/anteprime/t002.jpg" alt="t002 Addominali" loading="lazy">
+            <img src="/anteprime/t002.jpg" alt="Anteprima 002">
           </div>
-          <div class="exercise-right">
-            <div class="title">Addominali - Crunch classico</div>
+          <div class="right-col">
+            <div class="title">Addominali - crunch classico</div>
           </div>
-        </div>
+        </article>
+
       </div>
     </section>
 
