@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tab Add</title>
+  <style>
+    :root{
+      --bg:#f5f6f8;
+      --card:#ffffff;
+      --accent:#0b3b66; /* blu scuro per il pulsante */
+      --muted:#666;
+      --gap:16px;
+    }
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:#111;
+      line-height:1.4;
+      padding:20px;
+    }
+
+    .container{
+      max-width:980px;
+      margin:0 auto;
+    }
+
+    .block{
+      background:var(--card);
+      border-radius:10px;
+      padding:18px;
+      box-shadow:0 1px 3px rgba(0,0,0,0.06);
+      margin-bottom:20px;
+    }
+
+    /* Blocco 1 */
+    .block-1 h2{
+      margin:0 0 12px 0;
+      font-size:1.25rem;
+    }
+
+    .btn-schedahome{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 18px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:0.95rem;
+      border:0;
+      cursor:pointer;
+    }
+
+    /* Nuovo Blocco 2: lista di elementi con griglia */
+    .block-2 .list{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .list-item{
+      display:grid;
+      grid-template-columns:120px 1fr;
+      gap:12px;
+      align-items:center;
+      padding:10px;
+      border-radius:8px;
+      background:linear-gradient(180deg, #ffffff, #fbfdff);
+      border:1px solid rgba(0,0,0,0.04);
+    }
+
+    /* Colonna sinistra: numero e immagine impilate */
+    .left-col{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:8px;
+    }
+
+    .left-col .code{
+      font-weight:700;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .left-col img{
+      display:block;
+      max-width:100px;
+      width:100%;
+      height:auto;
+      border-radius:6px;
+      object-fit:cover;
+    }
+
+    /* Colonna destra: riquadro testo, centrato verticalmente */
+    .right-col{
+      display:flex;
+      align-items:center; /* centra verticalmente rispetto alla riga */
+      height:100%;
+    }
+
+    .right-col .title{
+      width:100%;
+      padding:12px;
+      background:#f0f6fb;
+      border-radius:8px;
+      font-weight:700;
+      color:#0b3b66;
+      box-sizing:border-box;
+    }
+
+    /* Blocco 3 invariato (esempio di contenuto) */
+    .block-3 h3{
+      margin:0 0 8px 0;
+      font-size:1.1rem;
+    }
+
+    /* Responsive: riduci la colonna sinistra su schermi piccoli */
+    @media (max-width:520px){
+      .list-item{
+        grid-template-columns:90px 1fr;
+      }
+      .left-col img{
+        max-width:80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Blocco 1 -->
+    <section class="block block-1" id="block1">
+      <h2>Blocco 1 Titolo</h2>
+
+      <!-- Pulsante blu scuro rettangolare con bordo arrotondato e font bianco in grassetto -->
+      <a class="btn-schedahome" href="schedahome.html">Vai a Schedahome</a>
+
+      <!-- Eventuali altri contenuti del blocco 1 -->
+    </section>
+
+    <!-- Nuovo Blocco 2 (sostituisce completamente il precedente) -->
+    <section class="block block-2" id="block2">
+      <div class="list">
+
+        <!-- Primo elemento: 001 + t001.jpg e testo Addominali - Plank classico -->
+        <article class="list-item">
+          <div class="left-col" aria-hidden="false">
+            <div class="code">001</div>
+            <img src="/anteprime/t001.jpg" alt="Anteprima 001">
+          </div>
+          <div class="right-col">
+            <div class="title">Addominali - Plank classico</div>
+          </div>
+        </article>
+
+        <!-- Secondo elemento: 002 + t002.jpg e testo Addominali - crunch classico -->
+        <article class="list-item">
+          <div class="left-col" aria-hidden="false">
+            <div class="code">002</div>
+            <img src="/anteprime/t002.jpg" alt="Anteprima 002">
+          </div>
+          <div class="right-col">
+            <div class="title">Addominali - crunch classico</div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Blocco 3 invariato -->
+    <section class="block block-3" id="block3">
+      <h3>Blocco 3 Titolo</h3>
+      <p>Contenuto del blocco 3 rimane invariato come richiesto. Inserisci qui il contenuto esistente.</p>
+    </section>
+
+  </div>
+</body>
+      </html>
