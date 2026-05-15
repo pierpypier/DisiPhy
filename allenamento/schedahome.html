@@ -8,26 +8,23 @@
   :root{
     --cal-bg: #f4f6f8;
     --cal-card: #ffffff;
-    --cal-dark-blue: #0b3b5c; /* sfondo titolo */
-    --cal-blue: #1e6fb8;      /* colore pulsanti */
+    --cal-dark-blue: #0b3b5c;
+    --cal-blue: #1e6fb8;
     --cal-white: #ffffff;
     --cal-muted: #6b7280;
     --cal-sep: #d1d5db;
-    --cal-black: #000000;
     --cal-text: #111827;
     --cal-note-bg: #0b0b0b;
     --cal-note-text: #ffffff;
   }
 
-  /* Reset e base */
   *{box-sizing:border-box}
   body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:var(--cal-bg);color:var(--cal-text);-webkit-font-smoothing:antialiased}
   .calcontainer{max-width:1200px;margin:0 auto;padding:18px;min-height:100vh;display:flex;flex-direction:column;gap:18px}
 
-  /* Card wrapper */
   .calcard{background:var(--cal-card);border-radius:10px;padding:14px;box-shadow:0 6px 18px rgba(11,59,92,0.06)}
 
-  /* BLOCCO 1 - header + controls */
+  /* BLOCCO 1 */
   .calblock1 .caltitle{
     background:var(--cal-dark-blue);
     color:var(--cal-white);
@@ -41,13 +38,7 @@
     text-align:center;
   }
 
-  .calblock1 .calbuttons{
-    margin-top:12px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-    justify-content:center;
-  }
+  .calblock1 .calbuttons{ margin-top:12px; display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
 
   .calbtn-circle{
     background:var(--cal-blue);
@@ -71,7 +62,6 @@
   .calbtn-circle:active{transform:translateY(1px) scale(.995)}
   .calbtn-circle:hover{box-shadow:0 10px 20px rgba(30,111,184,0.22)}
 
-  /* arrange 2 rows x 3 columns */
   .calbtn-grid{
     display:grid;
     grid-template-columns:repeat(3, minmax(60px, 1fr));
@@ -81,106 +71,31 @@
     margin:0 auto;
   }
 
-  /* separator */
-  .calseparator{
-    height:1px;
-    background:var(--cal-sep);
-    margin:6px 0 6px 0;
-    border-radius:2px;
-  }
+  .calseparator{ height:1px; background:var(--cal-sep); margin:6px 0 6px 0; border-radius:2px; }
 
-  /* BLOCCO 2 - notes */
-  .calblock2 .calnotes-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:12px;
-  }
+  /* BLOCCO 2 */
+  .calblock2 .calnotes-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; }
 
-  .calnote{
-    background:transparent;
-    border-radius:8px;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    min-height:160px;
-  }
+  .calnote{ background:transparent; border-radius:8px; overflow:hidden; display:flex; flex-direction:column; min-height:160px; }
 
-  .calnote .calnote-title{
-    background:var(--cal-note-bg);
-    color:var(--cal-note-text);
-    font-weight:800;
-    padding:10px 12px;
-    font-size:15px;
-  }
+  .calnote .calnote-title{ background:var(--cal-note-bg); color:var(--cal-note-text); font-weight:800; padding:10px 12px; font-size:15px; }
 
-  .calnote .calnote-body{
-    padding:10px;
-    background:#fff;
-    flex:1;
-    display:flex;
-    flex-direction:column;
-  }
+  .calnote .calnote-body{ padding:10px; background:#fff; flex:1; display:flex; flex-direction:column; }
 
-  /* textarea container to allow custom resize handle */
-  .calnote .calnote-textwrap{
-    position:relative;
-    flex:1;
-    min-height:80px;
-    display:flex;
-  }
+  .calnote .calnote-textwrap{ position:relative; flex:1; min-height:80px; display:flex; }
 
-  .calnote textarea{
-    width:100%;
-    height:100%;
-    resize:both;
-    padding:10px;
-    border:1px solid #e5e7eb;
-    border-radius:6px;
-    font-size:14px;
-    line-height:1.4;
-    font-family:inherit;
-    color:var(--cal-text);
-    background:#fff;
-    outline:none;
-  }
+  .calnote textarea{ width:100%; height:100%; resize:both; padding:10px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; line-height:1.4; font-family:inherit; color:var(--cal-text); background:#fff; outline:none; }
 
-  /* custom "three lines" resize handle in bottom-right corner */
-  .calnote .calnote-textwrap::after{
-    content: "";
-    position: absolute;
-    right:8px;
-    bottom:8px;
-    width:18px;
-    height:18px;
-    pointer-events:none;
-    background: linear-gradient(transparent 50%, rgba(0,0,0,0.06) 50%);
-    border-radius:2px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  /* draw three small horizontal lines */
-  .calnote .calnote-textwrap::before{
-    content: "";
-    position:absolute;
-    right:10px;
-    bottom:10px;
-    width:12px;
-    height:12px;
-    background:
-      linear-gradient(#9ca3af 0 0) 0 0/12px 2px,
-      linear-gradient(#9ca3af 0 0) 0 5px/8px 2px,
-      linear-gradient(#9ca3af 0 0) 0 10px/4px 2px;
-    background-repeat:no-repeat;
-    pointer-events:none;
-    opacity:0.9;
-  }
+  .calnote .calnote-textwrap::after{ content: ""; position: absolute; right:8px; bottom:8px; width:18px; height:18px; pointer-events:none; background: linear-gradient(transparent 50%, rgba(0,0,0,0.06) 50%); border-radius:2px; display:flex; align-items:center; justify-content:center; }
+  .calnote .calnote-textwrap::before{ content: ""; position:absolute; right:10px; bottom:10px; width:12px; height:12px; background: linear-gradient(#9ca3af 0 0) 0 0/12px 2px, linear-gradient(#9ca3af 0 0) 0 5px/8px 2px, linear-gradient(#9ca3af 0 0) 0 10px/4px 2px; background-repeat:no-repeat; pointer-events:none; opacity:0.9; }
 
-  /* BLOCCO 3 - catalogo immagini */
+  /* BLOCCO 3 - CATALOGO: 2 colonne x 4 righe, immagini quadrate */
   .calblock3 .calcatalog{
     display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:12px;
+    grid-template-columns:repeat(2, 1fr); /* 2 colonne */
+    grid-auto-rows: auto;
+    gap:14px;
+    align-items:start;
   }
 
   .calcard-item{
@@ -193,42 +108,67 @@
     text-decoration:none;
     color:inherit;
     border:1px solid #e6e9ee;
+    transition:transform .12s ease, box-shadow .12s ease;
   }
 
-  .calcard-item img{
+  .calcard-item:hover{ transform:translateY(-4px); box-shadow:0 12px 30px rgba(2,6,23,0.06); }
+
+  /* square image using aspect-ratio; fallback wrapper ensures square in older browsers */
+  .calcard-item .img-wrap{
     width:100%;
-    height:140px;
+    position:relative;
+    background:#f3f4f6;
+  }
+  .calcard-item .img-wrap::before{
+    content:"";
+    display:block;
+    padding-top:100%; /* fallback to force square ratio */
+  }
+  .calcard-item img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
     object-fit:cover;
     display:block;
+    border-bottom:1px solid rgba(0,0,0,0.04);
+  }
+  /* modern browsers: prefer aspect-ratio */
+  @supports (aspect-ratio: 1 / 1) {
+    .calcard-item .img-wrap{ padding-top:0; aspect-ratio:1/1; }
+    .calcard-item img{ position:static; width:100%; height:100%; }
   }
 
   .calcard-item .calcard-caption{
-    padding:10px;
+    padding:12px;
     font-weight:700;
     text-align:center;
     background:#fff;
+    font-size:15px;
   }
 
   /* responsive adjustments */
   @media (max-width:980px){
     .calnote .calnote-textwrap::before{ right:8px; bottom:8px; }
-    .calcard-item img{ height:120px; }
+    .calcard-item img{ height:auto; }
   }
 
   @media (max-width:820px){
     .calbtn-grid{ max-width:420px; grid-template-columns:repeat(3, 1fr) }
     .calblock2 .calnotes-grid{ grid-template-columns:repeat(2, 1fr) }
-    .calblock3 .calcatalog{ grid-template-columns:repeat(2, 1fr) }
+    .calblock3 .calcatalog{ grid-template-columns:repeat(2, 1fr) } /* keep 2 columns on tablet */
   }
 
   @media (max-width:520px){
     .calbtn-grid{ grid-template-columns:repeat(3, 1fr); gap:10px }
     .calblock2 .calnotes-grid{ grid-template-columns:1fr }
-    .calblock3 .calcatalog{ grid-template-columns:1fr }
-    .calcard-item img{ height:160px; }
+    .calblock3 .calcatalog{ grid-template-columns:repeat(2, 1fr); gap:10px } /* keep 2 columns on small phones if space allows */
   }
 
-  /* small helpers */
+  @media (max-width:360px){
+    .calblock3 .calcatalog{ grid-template-columns:1fr; }
+  }
+
   .calcenter{display:flex;align-items:center;justify-content:center}
   .calmuted{color:var(--cal-muted);font-size:13px}
   a.calbtn-circle{display:inline-flex}
@@ -261,7 +201,6 @@
       <h2 id="notes-title" style="margin:0 0 12px 0;font-size:18px">Appunti giornalieri</h2>
 
       <div class="calnotes-grid" id="calNotesGrid">
-        <!-- Six note blocks: Giorno A..F -->
         <div class="calnote" data-day="A">
           <div class="calnote-title">GIORNO A</div>
           <div class="calnote-body">
@@ -316,11 +255,6 @@
           </div>
         </div>
       </div>
-
-      <div style="margin-top:12px;display:flex;gap:8px;align-items:center;justify-content:flex-end">
-        <button id="calExportNotes" class="calbtn-circle" style="width:auto;height:auto;border-radius:8px;padding:8px 12px;font-size:14px;min-width:unset;min-height:unset">Esporta</button>
-        <button id="calClearNotes" class="calbtn-circle" style="width:auto;height:auto;border-radius:8px;padding:8px 12px;font-size:14px;min-width:unset;min-height:unset;background:#ef4444">Pulisci</button>
-      </div>
     </section>
 
     <div class="calseparator" role="separator" aria-hidden="true"></div>
@@ -331,42 +265,42 @@
 
       <div class="calcatalog" id="calCatalog">
         <a class="calcard-item" href="tabadd.html" aria-label="Addominali">
-          <img src="/anteprime/antadd.jpg" alt="Addominali">
+          <div class="img-wrap"><img src="/anteprime/antadd.jpg" alt="Addominali" loading="lazy"></div>
           <div class="calcard-caption">Addominali</div>
         </a>
 
         <a class="calcard-item" href="tabpet.html" aria-label="Pettorali">
-          <img src="/anteprime/antpet.jpg" alt="Pettorali">
+          <div class="img-wrap"><img src="/anteprime/antpet.jpg" alt="Pettorali" loading="lazy"></div>
           <div class="calcard-caption">Pettorali</div>
         </a>
 
         <a class="calcard-item" href="tabdor.html" aria-label="Dorsali">
-          <img src="/anteprime/antdor.jpg" alt="Dorsali">
+          <div class="img-wrap"><img src="/anteprime/antdor.jpg" alt="Dorsali" loading="lazy"></div>
           <div class="calcard-caption">Dorsali</div>
         </a>
 
         <a class="calcard-item" href="tabbic.html" aria-label="Bicipiti">
-          <img src="/anteprime/antbic.jpg" alt="Bicipiti">
+          <div class="img-wrap"><img src="/anteprime/antbic.jpg" alt="Bicipiti" loading="lazy"></div>
           <div class="calcard-caption">Bicipiti</div>
         </a>
 
         <a class="calcard-item" href="tabtri.html" aria-label="Tricipiti">
-          <img src="/anteprime/anttri.jpg" alt="Tricipiti">
+          <div class="img-wrap"><img src="/anteprime/anttri.jpg" alt="Tricipiti" loading="lazy"></div>
           <div class="calcard-caption">Tricipiti</div>
         </a>
 
         <a class="calcard-item" href="tabspa.html" aria-label="Spalle">
-          <img src="/anteprime/antspa.jpg" alt="Spalle">
+          <div class="img-wrap"><img src="/anteprime/antspa.jpg" alt="Spalle" loading="lazy"></div>
           <div class="calcard-caption">Spalle</div>
         </a>
 
         <a class="calcard-item" href="tabgam.html" aria-label="Gambe">
-          <img src="/anteprime/antgam.jpg" alt="Gambe">
+          <div class="img-wrap"><img src="/anteprime/antgam.jpg" alt="Gambe" loading="lazy"></div>
           <div class="calcard-caption">Gambe</div>
         </a>
 
         <a class="calcard-item" href="tabris.html" aria-label="Riscaldamento">
-          <img src="/anteprime/antris.jpg" alt="Riscaldamento">
+          <div class="img-wrap"><img src="/anteprime/antris.jpg" alt="Riscaldamento" loading="lazy"></div>
           <div class="calcard-caption">Riscaldamento</div>
         </a>
       </div>
@@ -406,8 +340,6 @@ function saveNotes(){
       obj[day] = t.value;
     });
     localStorage.setItem(CAL_NOTES_KEY, JSON.stringify(obj));
-    // small visual feedback (optional)
-    // console.log('Note salvate');
   } catch(e){
     console.error('Errore salvataggio note', e);
     alert('Impossibile salvare le note: spazio locale esaurito o permessi negati.');
@@ -420,39 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.calnote textarea').forEach(t => {
     t.addEventListener('input', () => saveNotesDebounced());
-  });
-
-  // Export notes as JSON file (simple download)
-  const exportBtn = document.getElementById('calExportNotes');
-  exportBtn.addEventListener('click', () => {
-    try {
-      const raw = localStorage.getItem(CAL_NOTES_KEY) || '{}';
-      const blob = new Blob([raw], {type: 'application/json'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'notes_cal.json';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-    } catch(e){
-      console.error('Errore esportazione', e);
-      alert('Errore durante l\'esportazione.');
-    }
-  });
-
-  // Clear notes (with confirmation)
-  const clearBtn = document.getElementById('calClearNotes');
-  clearBtn.addEventListener('click', () => {
-    if(!confirm('Vuoi cancellare tutte le note? Operazione irreversibile.')) return;
-    try {
-      localStorage.removeItem(CAL_NOTES_KEY);
-      document.querySelectorAll('.calnote textarea').forEach(t => t.value = '');
-    } catch(e){
-      console.error('Errore pulizia note', e);
-      alert('Errore durante la pulizia delle note.');
-    }
   });
 
   // Accessibility: keyboard focus styles for circular buttons
