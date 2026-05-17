@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DSP Allenamento</title>
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#1e88e5">
+
+<!-- Android / Chrome -->
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="anteprime/schedaall192.png">
+
+<!-- Favicon -->
+<link rel="icon" href="anteprime/schedaall192.png">
+<style>
+  :root{
+    --cal-bg: #f4f6f8;
+    --cal-card: #ffffff;
+    --cal-dark-blue: #0b3b5c;
+    --cal-blue: #1e6fb8;
+    --cal-white: #ffffff;
+    --cal-muted: #6b7280;
+    --cal-sep: #d1d5db;
+    --cal-text: #111827;
+    --cal-note-bg: #0b3b5c;
+    --cal-note-text: #ffffff;
+  }
+
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:var(--cal-bg);color:var(--cal-text);-webkit-font-smoothing:antialiased}
+  .calcontainer{max-width:1200px;margin:0 auto;padding:18px;min-height:100vh;display:flex;flex-direction:column;gap:18px}
+
+  .calcard{background:var(--cal-card);border-radius:10px;padding:14px;box-shadow:0 6px 18px rgba(11,59,92,0.06)}
+
+  /* BLOCCO 1 */
+  .calblock1 .caltitle{
+    background:var(--cal-dark-blue);
+    color:var(--cal-white);
+    padding:18px;
+    border-radius:8px;
+    font-weight:800;
+    font-size:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+
+  /* banner image between title and buttons */
+  .calblock1 .banner-wrap{
+    width:100%;
+    margin:10px 0; /* 10px sopra e sotto come richiesto */
+    display:block;
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .calblock1 .banner-wrap img{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:cover;
+  }
+
+  .calblock1 .calbuttons{ margin-top:12px; display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+
+  .calbtn-circle{
+    background:var(--cal-blue);
+    color:var(--cal-white);
+    border:0;
+    min-width:60px;
+    min-height:60px;
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:28px;
+    cursor:pointer;
+    box-shadow:0 6px 12px rgba(30,111,184,0.18);
+    transition:transform .12s ease, box-shadow .12s ease, opacity .12s;
+    text-decoration:none;
+  }
+  .calbtn-circle:active{transform:translateY(1px) scale(.995)}
+  .calbtn-circle:hover{box-shadow:0 10px 20px rgba(30,111,184,0.22)}
+
+  .calbtn-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(60px, 1fr));
+    gap:14px;
+    width:100%;
+    max-width:520px;
+    margin:0 auto;
+  }
+
+  .calseparator{ height:1px; background:var(--cal-sep); margin:6px 0 6px 0; border-radius:2px; }
+
+  /* BLOCCO 2 */
+ /* --- Aggiornamento maniglia e resize verticale --- */
+
+  .calblock2 .calnotes-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; }
+
+  .calnote{ background:transparent; border-radius:8px; overflow:hidden; display:flex; flex-direction:column; min-height:160px; }
+
+  .calnote .calnote-title{ background:var(--cal-note-bg); color:var(--cal-note-text); font-weight:800; padding:10px 12px; font-size:15px; }
+
+  .calnote .calnote-body{ padding:10px; background:#fff; flex:1; display:flex; flex-direction:column; }
+
+
+/* wrapper: spazio per la maniglia */
+.calnote .calnote-textwrap{
+  position:relative;
+  flex:1;
+  min-height:80px;
+  display:flex;
+  padding-bottom:26px; /* spazio per la maniglia */
+  box-sizing:border-box;
+}
+
+/* textarea: solo verticale e box-sizing per altezza controllata */
+.calnote textarea{
+  width:100%;
+  height:100%;
+  resize:vertical;
+  padding:10px;
+  border:1px solid #e5e7eb;
+  border-radius:6px;
+  font-size:14px;
+  line-height:1.4;
+  font-family:inherit;
+  color:var(--cal-text);
+  background:#fff;
+  outline:none;
+  box-sizing:border-box;
+  margin:0;
+  min-height:60px; /* fallback minimo */
+}
+
+/* rimuove le vecchie decorazioni native se presenti */
+.calnote .calnote-textwrap::after,
+.calnote .calnote-textwrap::before{
+  display:none;
+}
+
+/* maniglia visibile e comoda */
+.calnote .calnote-textwrap .resize-handle{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:8px;
+  width:48px;
+  height:20px;
+  border-radius:8px;
+  background:linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.02));
+  box-shadow:0 1px 0 rgba(255,255,255,0.6) inset, 0 2px 6px rgba(0,0,0,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:ns-resize;
+  z-index:20;
+  touch-action:none;
+  user-select:none;
+}
+
+/* trattino indicatore dentro la maniglia */
+.calnote .calnote-textwrap .resize-handle::before{
+  content:"";
+  width:24px;
+  height:3px;
+  background:linear-gradient(90deg,#9ca3af,#6b7280);
+  border-radius:2px;
+  opacity:0.95;
+}
+
+/* stato focus per accessibilità */
+.calnote .calnote-textwrap .resize-handle:focus{
+  outline:2px solid rgba(59,130,246,0.35);
+  outline-offset:2px;
+}
+
+/* piccolo adattamento per schermi stretti */
+@media (max-width:420px){
+  .calnote .calnote-textwrap .resize-handle{ width:40px; height:18px; bottom:6px; }
+  .calnote .calnote-textwrap{ padding-bottom:22px; }
+}
+
+
+  /* BLOCCO 3 - CATALOGO: 2 colonne x 4 righe, immagini quadrate */
+  .calblock3 .calcatalog{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr); /* 2 colonne */
+    grid-auto-rows: auto;
+    gap:14px;
+    align-items:start;
+  }
+
+  .calcard-item{
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    text-decoration:none;
+    color:inherit;
+    border:1px solid #e6e9ee;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+
+  .calcard-item:hover{ transform:translateY(-4px); box-shadow:0 12px 30px rgba(2,6,23,0.06); }
+
+  .calcard-item .img-wrap{
+    width:100%;
+    position:relative;
+    background:#f3f4f6;
+  }
+  .calcard-item .img-wrap::before{
+    content:"";
+    display:block;
+    padding-top:100%; /* fallback to force square ratio */
+  }
+  .calcard-item img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    border-bottom:1px solid rgba(0,0,0,0.04);
+  }
+  @supports (aspect-ratio: 1 / 1) {
+    .calcard-item .img-wrap{ padding-top:0; aspect-ratio:1/1; }
+    .calcard-item img{ position:static; width:100%; height:100%; }
+  }
+
+  .calcard-item .calcard-caption{
+    padding:12px;
+    font-weight:700;
+    text-align:center;
+    background:#fff;
+    font-size:15px;
+  }
+
+  /* responsive adjustments */
+  @media (max-width:980px){
+    .calnote .calnote-textwrap::before{ right:8px; bottom:8px; }
+    .calcard-item img{ height:auto; }
+  }
+
+  @media (max-width:820px){
+    .calbtn-grid{ max-width:420px; grid-template-columns:repeat(3, 1fr) }
+    .calblock2 .calnotes-grid{ grid-template-columns:repeat(2, 1fr) }
+    .calblock3 .calcatalog{ grid-template-columns:repeat(2, 1fr) } /* keep 2 columns on tablet */
+  }
+
+  @media (max-width:520px){
+    .calbtn-grid{ grid-template-columns:repeat(3, 1fr); gap:10px }
+    .calblock2 .calnotes-grid{ grid-template-columns:1fr }
+    .calblock3 .calcatalog{ grid-template-columns:repeat(2, 1fr); gap:10px } /* keep 2 columns on small phones if space allows */
+  }
+
+  @media (max-width:360px){
+    .calblock3 .calcatalog{ grid-template-columns:1fr; }
+  }
+
+  .calcenter{display:flex;align-items:center;justify-content:center}
+  .calmuted{color:var(--cal-muted);font-size:13px}
+  a.calbtn-circle{display:inline-flex}
+</style>
+</head>
+<script>
+// Maniglia automatica per .calnote .calnote-textwrap
+(function(){
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.calnote .calnote-textwrap').forEach(function(wrap){
+      if (wrap.querySelector('.resize-handle')) return;
+      var textarea = wrap.querySelector('textarea');
+      if (!textarea) return;
+
+      // crea maniglia
+      var handle = document.createElement('div');
+      handle.className = 'resize-handle';
+      handle.setAttribute('role','separator');
+      handle.setAttribute('aria-orientation','vertical');
+      handle.setAttribute('tabindex','0');
+      handle.setAttribute('aria-label','Ridimensiona altezza nota');
+      wrap.appendChild(handle);
+
+      var startY = 0;
+      var startH = 0;
+      var dragging = false;
+      var minH = 60;   // altezza minima in px
+      var maxH = 800;  // altezza massima in px
+
+      function down(e){
+        e.preventDefault();
+        dragging = true;
+        startY = (e.touches ? e.touches[0].clientY : e.clientY);
+        startH = textarea.getBoundingClientRect().height;
+        document.addEventListener('mousemove', move);
+        document.addEventListener('mouseup', up);
+        document.addEventListener('touchmove', move, {passive:false});
+        document.addEventListener('touchend', up);
+      }
+
+      function move(e){
+        if (!dragging) return;
+        e.preventDefault();
+        var y = (e.touches ? e.touches[0].clientY : e.clientY);
+        var dy = y - startY;
+        var newH = Math.min(maxH, Math.max(minH, startH + dy));
+        textarea.style.height = newH + 'px';
+      }
+
+      function up(){
+        dragging = false;
+        document.removeEventListener('mousemove', move);
+        document.removeEventListener('mouseup', up);
+        document.removeEventListener('touchmove', move);
+        document.removeEventListener('touchend', up);
+      }
+
+      // supporto tastiera per accessibilità
+      handle.addEventListener('keydown', function(e){
+        var step = e.shiftKey ? 40 : 10;
+        var curH = textarea.getBoundingClientRect().height;
+        if (e.key === 'ArrowUp' || e.key === 'PageUp'){
+          e.preventDefault();
+          textarea.style.height = Math.max(minH, curH - step) + 'px';
+        } else if (e.key === 'ArrowDown' || e.key === 'PageDown'){
+          e.preventDefault();
+          textarea.style.height = Math.min(maxH, curH + step) + 'px';
+        } else if (e.key === 'Home'){
+          e.preventDefault();
+          textarea.style.height = minH + 'px';
+        } else if (e.key === 'End'){
+          e.preventDefault();
+          textarea.style.height = maxH + 'px';
+        }
+      });
+
+      handle.addEventListener('mousedown', down);
+      handle.addEventListener('touchstart', down, {passive:false});
+    });
+  });
+})();
+</script>
+
+<body>
+  <div class="calcontainer">
+
+    <!-- BLOCCO 1 -->
+    <section class="calcard calblock1" aria-labelledby="cal-title">
+      <div id="cal-title" class="caltitle">HOME ALLENAMENTO</div>
+
+      <!-- Banner image 'copall.jpg' (same folder as schedahome) -->
+      <div class="banner-wrap" aria-hidden="false">
+        <img src="copall.jpg" alt="Banner scheda allenamento" loading="lazy">
+      </div>
+
+      <div class="calbuttons calcenter" style="flex-direction:column">
+        <div class="calbtn-grid" role="navigation" aria-label="Seleziona giorno allenamento">
+          <a class="calbtn-circle" href="GiornoA.html" aria-label="Giorno A">A</a>
+          <a class="calbtn-circle" href="GiornoB.html" aria-label="Giorno B">B</a>
+          <a class="calbtn-circle" href="GiornoC.html" aria-label="Giorno C">C</a>
+
+          <a class="calbtn-circle" href="GiornoD.html" aria-label="Giorno D">D</a>
+          <a class="calbtn-circle" href="GiornoE.html" aria-label="Giorno E">E</a>
+          <a class="calbtn-circle" href="GiornoF.html" aria-label="Giorno F">F</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="calseparator" role="separator" aria-hidden="true"></div>
+
+    <!-- BLOCCO 2 -->
+    <section class="calcard calblock2" aria-labelledby="notes-title">
+      <h2 id="notes-title" style="margin:0 0 12px 0;font-size:18px">Appunti e Note</h2>
+
+      <div class="calnotes-grid" id="calNotesGrid">
+        <div class="calnote" data-day="A">
+          <div class="calnote-title">SESSIONE A</div>
+          <div class="calnote-body">
+            <div class="calnote-textwrap">
+              <textarea data-day="A" placeholder="Note per Giorno A"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="calnote" data-day="B">
+          <div class="calnote-title">SESSIONE B</div>
+          <div class="calnote-body">
+            <div class="calnote-textwrap">
+              <textarea data-day="B" placeholder="Note per Giorno B"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="calnote" data-day="C">
+          <div class="calnote-title">SESSIONE C</div>
+          <div class="calnote-body">
+            <div class="calnote-textwrap">
+              <textarea data-day="C" placeholder="Note per Giorno C"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="calnote" data-day="D">
+          <div class="calnote-title">SESSIONE D</div>
+          <div class="calnote-body">
+            <div class="calnote-textwrap">
+              <textarea data-day="D" placeholder="Note per Giorno D"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="calnote" data-day="E">
+          <div class="calnote-title">SESSIONE E</div>
+          <div class="calnote-body">
+            <div class="calnote-textwrap">
+              <textarea data-day="E" placeholder="Note per Giorno E"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="calnote" data-day="F">
+          <div class="calnote-title">SESSIONE F</div>
+          <div class="calnote-body">
+            <div class="calnote-textwrap">
+              <textarea data-day="F" placeholder="Note per Giorno F"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="calseparator" role="separator" aria-hidden="true"></div>
+
+    <!-- BLOCCO 3 -->
+    <section class="calcard calblock3" aria-labelledby="catalog-title">
+      <h2 id="catalog-title" style="margin:0 0 12px 0;font-size:18px">CATALOGO ESERCIZI</h2>
+
+      <div class="calcatalog" id="calCatalog">
+        <a class="calcard-item" href="tabadd.html" aria-label="Addominali">
+          <div class="img-wrap"><img src="anteprime/antadd.jpg" alt="Addominali" loading="lazy"></div>
+          <div class="calcard-caption">Addominali</div>
+        </a>
+
+        <a class="calcard-item" href="tabpet.html" aria-label="Pettorali">
+          <div class="img-wrap"><img src="anteprime/antpet.jpg" alt="Pettorali" loading="lazy"></div>
+          <div class="calcard-caption">Pettorali</div>
+        </a>
+
+        <a class="calcard-item" href="tabdor.html" aria-label="Dorsali">
+          <div class="img-wrap"><img src="anteprime/antdor.jpg" alt="Dorsali" loading="lazy"></div>
+          <div class="calcard-caption">Dorsali</div>
+        </a>
+
+        <a class="calcard-item" href="tabbic.html" aria-label="Bicipiti">
+          <div class="img-wrap"><img src="anteprime/antbic.jpg" alt="Bicipiti" loading="lazy"></div>
+          <div class="calcard-caption">Bicipiti</div>
+        </a>
+
+        <a class="calcard-item" href="tabtri.html" aria-label="Tricipiti">
+          <div class="img-wrap"><img src="anteprime/anttri.jpg" alt="Tricipiti" loading="lazy"></div>
+          <div class="calcard-caption">Tricipiti</div>
+        </a>
+
+        <a class="calcard-item" href="tabspa.html" aria-label="Spalle">
+          <div class="img-wrap"><img src="anteprime/antspa.jpg" alt="Spalle" loading="lazy"></div>
+          <div class="calcard-caption">Spalle</div>
+        </a>
+
+        <a class="calcard-item" href="tabgam.html" aria-label="Gambe">
+          <div class="img-wrap"><img src="anteprime/antgam.jpg" alt="Gambe" loading="lazy"></div>
+          <div class="calcard-caption">Gambe</div>
+        </a>
+
+        <a class="calcard-item" href="tabris.html" aria-label="Riscaldamento">
+          <div class="img-wrap"><img src="anteprime/antris.jpg" alt="Riscaldamento" loading="lazy"></div>
+          <div class="calcard-caption">COMBINATI e AEROBICA</div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+<script>
+/* LocalStorage key for notes */
+const CAL_NOTES_KEY = 'cal_notes_v1';
+
+/* Load saved notes into textareas */
+function loadNotes(){
+  try {
+    const raw = localStorage.getItem(CAL_NOTES_KEY);
+    const data = raw ? JSON.parse(raw) : {};
+    document.querySelectorAll('.calnote textarea').forEach(t => {
+      const day = t.getAttribute('data-day');
+      if(data && data[day] !== undefined) t.value = data[day];
+    });
+  } catch(e){
+    console.error('Errore caricamento note', e);
+  }
+}
+
+/* Save all notes (debounced) */
+let _saveTimer = null;
+function saveNotesDebounced(delay = 600){
+  if(_saveTimer) clearTimeout(_saveTimer);
+  _saveTimer = setTimeout(saveNotes, delay);
+}
+function saveNotes(){
+  try {
+    const obj = {};
+    document.querySelectorAll('.calnote textarea').forEach(t => {
+      const day = t.getAttribute('data-day');
+      obj[day] = t.value;
+    });
+    localStorage.setItem(CAL_NOTES_KEY, JSON.stringify(obj));
+  } catch(e){
+    console.error('Errore salvataggio note', e);
+    alert('Impossibile salvare le note: spazio locale esaurito o permessi negati.');
+  }
+}
+
+/* Attach input listeners to textareas */
+document.addEventListener('DOMContentLoaded', () => {
+  loadNotes();
+
+  document.querySelectorAll('.calnote textarea').forEach(t => {
+    t.addEventListener('input', () => saveNotesDebounced());
+  });
+
+  // Accessibility: keyboard focus styles for circular buttons
+  document.querySelectorAll('.calbtn-circle').forEach(b => {
+    b.addEventListener('keydown', (ev) => {
+      if(ev.key === 'Enter' || ev.key === ' ') b.click();
+    });
+  });
+});
+
+/* Optional: autosave on page unload */
+window.addEventListener('beforeunload', saveNotes);
+</script>
+</body>
+          </html>
