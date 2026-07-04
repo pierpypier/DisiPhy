@@ -22,12 +22,56 @@
     color: #111;
   }
 
-  /* Navigazione (Stesso stile delle altre pagine) */
-  .nav { display: flex; justify-content: center; gap: 5px; padding: 10px 0; }
-  .nav-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #000; font-size: 14px; transition: opacity 0.2s ease; }
-  .nav-item img { width: 84px; height: 84px; margin-bottom: 1px; transition: transform 0.2s ease; }
-  .nav-item:hover img { transform: scale(1.05); }
-  @media (max-width: 600px) { .nav-item img { width: 60px; height: 60px; } }
+  /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 20px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
 
   /* Contenitore Principale */
   .container { max-width: 980px; width: 100%; margin: 0 auto; }
@@ -52,7 +96,7 @@
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
     transition: opacity 0.2s;
   }
   .btn:hover { opacity: 0.9; }
@@ -90,43 +134,58 @@
 </head>
 <body>
 
-<div class="container">
-  <nav class="nav">
-    <a href="organizer4.html" class="nav-item">
-      <img src="rimage/orga4.png" alt="Agenda">
-      <span>AGENDA</span>
-    </a>
+<!-- barra navigazione -->
+<nav class="nav">
+  <a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> AGENDA </span>
+  </a>
     <a href="caldsp.html" class="nav-item">
-      <img src="rimage/calicon.png" alt="Datario">
-      <span>DATARIO</span>
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span>DATARIO</span>
     </a>
-    <a href="check01.html" class="nav-item">
-      <img src="rimage/check02.png" alt="Checklist">
-      <span>LISTA</span>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span> LISTA </span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span>   WEB   </span>
+  </a>
+
+    <a href="orgcanv.html" class="nav-item">
+      <img src="rimage/orgcanv.png" alt="Lavagna" onerror="this.src='rimage/orgcanv.png'"> <span>CANVA</span>
     </a>
-    <a href="strweb.html" class="nav-item">
-      <img src="rimage/webicon.png" alt="Web">
-      <span>WEB</span>
-    </a>
-    <a href="lavagna.html" class="nav-item">
-      <img src="rimage/lavagna.png" alt="Lavagna" onerror="this.src='rimage/orga4.png'"> <span>LAVAGNA</span>
-    </a>
-  </nav>
+
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span>OPZIONI</span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+
+
+
+
+
+
+
+
 
   <div class="card">
     <header class="header">
-      <h1>LAVAGNA - Appunti a mano libera</h1>
+      <h1>LAVAGNA</h1>
     </header>
 
     <div class="toolbar">
       <button id="btnDraw" class="btn active">✏️ Disegna</button>
       <button id="btnErase" class="btn secondary">🧽 Gomma</button>
-      <button id="btnClear" class="btn danger">🗑️ Svuota Tutto</button>
-      <button id="btnPrint" class="btn secondary" style="margin-left: auto;">🖨️ Stampa PDF</button>
+      <button id="btnClear" class="btn danger">🗑️ Svuota</button>
+      <button id="btnPrint" class="btn secondary" style="margin-left: auto;">🖨️ Print</button>
     </div>
 
     <div class="canvas-container">
-      <canvas id="board" width="1000" height="600"></canvas>
+      <canvas id="board" width="1000" height="1000"></canvas>
     </div>
   </div>
 </div>
