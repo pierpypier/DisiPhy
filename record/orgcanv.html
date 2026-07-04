@@ -80,20 +80,27 @@
   /* Intestazione e Toolbar */
   .header h1 { font-size: 22px; color: #155a8a; margin: 0 0 15px 0; }
   
-  .toolbar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
-  position: sticky;
-  top: 0; /* La blocca al margine superiore */
-  z-index: 100; /* Assicura che stia "sopra" al canvas e agli altri elementi */
-  background: var(--cal-card); /* Sfondo bianco per coprire il disegno quando ci scorri sotto */
-  padding: 10px; /* Un po' di respiro interno */
-  border-radius: 8px; /* Smussa gli angoli */
-  box-shadow: 0 4px 6px -2px rgba(0,0,0,0.1); /* Aggiunge una leggera ombra per farla risaltare sul foglio */
+.toolbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+  /* --- REGOLE PER IL BLOCCO ANTI-ZOOM --- */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* Sta sopra a tutto, anche alla navigazione */
+  background: rgba(255, 255, 255, 0.95); /* Sfondo bianco quasi opaco */
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Ombra per staccarla dal disegno */
+  
+  /* Questo dice al browser da quale punto calcolare i ridimensionamenti */
+  transform-origin: top left;
+  will-change: transform;
 }
+
 
   .btn {
     background: var(--cal-accent);
@@ -360,6 +367,38 @@ btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
     window.print(); // Apre l'interfaccia di stampa di sistema
   });
 
+// --- BLOCCO ANTI-ZOOM PER LA BARRA STRUMENTI ---
+
+const toolbar = document.querySelector('.toolbar');
+
+function keepToolbarFixed() {
+  // Se il browser non supporta questa API (molto raro oggi), si ferma
+  if (!window.visualViewport) return;
+  
+  const vv = window.visualViewport;
+  
+  // Calcola l'inverso dello zoom: se zoomi 2x, rimpicciolisce la barra a 0.5x
+  const scale = 1 / vv.scale;
+  
+  // Trova le coordinate esatte dell'angolo in alto a sinistra della TUA visuale sul vetro
+  const x = vv.offsetLeft;
+  const y = vv.pageTop;
+  
+  // Sposta e ridimensiona la barra in tempo reale mentre zoomi
+  toolbar.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+}
+
+// Innesca il calcolo ogni volta che scorri o fai pinch-to-zoom
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('scroll', keepToolbarFixed);
+  window.visualViewport.addEventListener('resize', keepToolbarFixed);
+  // Avviala subito una volta per posizionarla all'apertura
+  keepToolbarFixed();
+}
+
+
+
+  
   // --- Inizializzazione ---
   window.addEventListener('load', loadCanvas);
 
