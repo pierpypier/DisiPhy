@@ -179,12 +179,13 @@
     <div class="toolbar">
       <button id="btnDraw" class="btn active">✏️ </button>
       <button id="btnErase" class="btn secondary">🧽 </button>
+      <button id="btnNone" class="btn secondary">✋</button>
       <button id="btnClear" class="btn danger">🗑️ </button>
       <button id="btnPrint" class="btn secondary" style="margin-left: auto;">🖨️ </button>
     </div>
 
     <div class="canvas-container">
-      <canvas id="board" width="1000" height="1900"></canvas>
+      <canvas id="board" width="1000" height="1900" style="touch-action: none"></canvas>
     </div>
   </div>
 </div>
@@ -199,6 +200,7 @@
   // Strumenti UI
   const btnDraw = document.getElementById('btnDraw');
   const btnErase = document.getElementById('btnErase');
+  const btnNone = document.getElementById('btnNone');
   const btnClear = document.getElementById('btnClear');
   const btnPrint = document.getElementById('btnPrint');
 
@@ -253,6 +255,7 @@
 
   function startPosition(e) {
     // Impedisci comportamenti di default (es. scrolling su mobile)
+    if(currentMode === 'none') return;
     if(e.type === 'touchstart') e.preventDefault(); 
     
     isDrawing = true;
@@ -271,7 +274,7 @@
   }
 
   function draw(e) {
-    if (!isDrawing) return;
+    if (!isDrawing || currentMode === 'none') return;
     if (e.type === 'touchmove') e.preventDefault();
     
     const pos = getCoordinates(e);
@@ -308,21 +311,34 @@
 
   // --- Controlli Bottoni ---
 
-  btnDraw.addEventListener('click', () => {
-    currentMode = 'draw';
-    btnDraw.classList.add('active');
-    btnErase.classList.remove('active');
-    btnDraw.classList.remove('secondary');
-    btnErase.classList.add('secondary');
+  function setActiveTool(mode, activeBtn) {
+  currentMode = mode;
+  
+  // Resetta l'aspetto di tutti i bottoni
+  [btnDraw, btnErase, btnNone].forEach(btn => {
+    btn.classList.remove('active');
+    btn.classList.add('secondary');
   });
+  
+  // Attiva solo il bottone cliccato
+  activeBtn.classList.add('active');
+  activeBtn.classList.remove('secondary');
 
-  btnErase.addEventListener('click', () => {
-    currentMode = 'erase';
-    btnErase.classList.add('active');
-    btnDraw.classList.remove('active');
-    btnErase.classList.remove('secondary');
-    btnDraw.classList.add('secondary');
-  });
+  // Seleziona il cursore e sblocca/blocca lo zoom (touch-action)
+  if (mode === 'none') {
+    canvas.style.touchAction = 'auto'; // Sblocca lo zoom e lo scroll
+    canvas.style.cursor = 'grab';
+  } else {
+    canvas.style.touchAction = 'none'; // Blocca per poter disegnare
+    canvas.style.cursor = 'crosshair';
+  }
+}
+
+// Associa la funzione ai click
+btnDraw.addEventListener('click', () => setActiveTool('draw', btnDraw));
+btnErase.addEventListener('click', () => setActiveTool('erase', btnErase));
+btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
+
 
   btnClear.addEventListener('click', () => {
     if (confirm("Vuoi cancellare tutto il disegno?")) {
