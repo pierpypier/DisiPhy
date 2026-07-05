@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Organizer — Tessere Interattive</title>
+  <style>
+    :root {
+      --cal-bg: #f7f7fb;
+      --cal-card: #ffffff;
+      --cal-accent: #2b6cb0;
+      --cal-muted: #666666;
+    }
+
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--cal-bg);
+      color: #111;
+      padding: 16px;
+      padding-bottom: 60px;
+    }
+
+    /* Stile barra di navigazione */
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 5px 0;
+      margin-bottom: 20px;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-item img {
+      width: 84px;
+      height: 84px;
+      margin-bottom: 1px;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-item:hover img { transform: scale(1.05); }
+    .nav-item:hover { opacity: 0.85; }
+
+    @media (max-width: 600px) {
+      .nav { gap: 10px; }
+      .nav-item img { width: 60px; height: 60px; }
+      .nav-item span { font-size: 12px; }
+    }
+
+    /* Contenitore Principale */
+    .container { max-width: 980px; width: 100%; margin: 0 auto; }
+    .card { background: var(--cal-card); border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.06); margin-bottom: 20px; text-align: center; position: relative; }
+
+    /* Visualizzatore Slide */
+    #slide {
+      width: 100%;
+      max-height: 70vh;
+      height: auto;
+      object-fit: contain;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      background: #fafafa;
+    }
+
+    /* Toolbar comandi */
+    .toolbar-slides {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: #f8fafc;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .btn {
+      background: var(--cal-accent);
+      color: #fff;
+      border: 0;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn.secondary { background: #edf2f7; color: #4a5568; border: 1px solid #cbd5e0; }
+    .btn.danger { background: #d9534f; color: #fff; }
+    .btn.success { background: #2f855a; color: #fff; }
+    .btn:disabled {
+      color: #a0aec0;
+      border-color: #e2e8f0;
+      background: #edf2f7;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 4px;
+      margin-left: 10px;
+      border-left: 1px solid #cbd5e0;
+      padding-left: 10px;
+    }
+
+    /* Area in cui nascono le tessere libere */
+    #tiles-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Permette di cliccare sotto */
+    }
+
+    /* Tessera draggable */
+    .draggable {
+      position: absolute;
+      cursor: grab;
+      touch-action: none;
+      width: 120px;
+      min-height: 50px;
+      text-align: center;
+      z-index: 100;
+      resize: both;
+      overflow: visible; /* Importante per far vedere il menu */
+      pointer-events: auto; /* Riattiva i click sulla tessera */
+      background: transparent;
+    }
+    .draggable:active { cursor: grabbing; }
+    
+    .image-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .draggable img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      pointer-events: none;
+      user-select: none;
+      display: block;
+    }
+
+    /* La freccetta per il menu opzioni */
+    .tile-menu-btn {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 20px;
+      height: 20px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      user-select: none;
+    }
+    .tile-menu-btn:hover { background: #fff; }
+
+    /* Menu a tendina a comparsa */
+    .tile-dropdown {
+      display: none;
+      position: absolute;
+      top: 26px;
+      right: 4px;
+      background: white;
+      border: 1px solid #cbd5e0;
+      border-radius: 6px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      padding: 8px;
+      z-index: 999;
+      text-align: left;
+      width: 160px;
+    }
+    .tile-dropdown.show { display: block; }
+    .tile-dropdown label {
+      font-size: 11px;
+      font-weight: bold;
+      color: #4a5568;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .tile-dropdown select {
+      width: 100%;
+      padding: 4px;
+      font-size: 12px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      border: 1px solid #cbd5e0;
+    }
+    .tile-dropdown .btn-del {
+      width: 100%;
+      background: #fff5f5;
+      color: #c53030;
+      border: 1px solid #feb2b2;
+      padding: 4px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      text-align: center;
+      font-weight: 600;
+    }
+    .tile-dropdown .btn-del:hover { background: #fff0f0; }
+
+    /* Caption delle tessere */
+    .caption { margin-top: 5px; width: 100%; }
+    .caption textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 4px;
+      border-radius: 4px;
+      border: 1px solid #cbd5e0;
+      background: #fff;
+      resize: none;
+      overflow: hidden;
+      font-size: 13px;
+      font-family: inherit;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="organizer4.html" class="nav-item"><img src="rimage/orga4.png" alt="Organizer"><span> NOTE </span></a>
+  <a href="caldsp.html" class="nav-item"><img src="rimage/calicon.png" alt="Calendario dsp"><span> DATE </span></a>
+  <a href="check01.html" class="nav-item"><img src="rimage/check02.png" alt="Checklist"><span>LISTE</span></a>
+  <a href="strweb.html" class="nav-item"><img src="rimage/webicon.png" alt="Strumenti web"><span> WEB </span></a>
+  <a href="dashconsolle.html" class="nav-item"><img src="rimage/opzioni.png" alt="Opzioni"><span> ADD </span></a>
+</nav>
+
+<div class="container">
+  <div class="card" style="position: relative;">
+    
+    <div class="toolbar-slides">
+      <button id="prev" class="btn secondary">⬅️ Indietro</button>
+      <button id="centerTiles" class="btn danger">🔄 Reset Posizioni</button>
+      <button id="addTile" class="btn success">➕ Nuova Tessera</button>
+      <button id="next" class="btn secondary">Avanti ➡️</button>
+      
+      <div class="btn-group">
+        <button class="btn secondary" onclick="location.href='tessere3.html'">Pagina 2</button>
+        <button class="btn secondary" onclick="location.href='tessere4.html'">Pagina 3</button>
+      </div>
+    </div>
+
+    <img id="slide" src="img/slide1.jpg" alt="Slide 1">
+
+    <div id="tiles-layer"></div>
+
+  </div>
+</div>
+
+<script>
+  // Chiave unica per salvare lo stato di tutte le tessere attive
+  const STORAGE_KEY = 'organizer_tessere_config_v1';
+  
+  // Array che conterrà l'elenco delle tessere attive
+  let tessereData = [];
+
+  // Inizializzazione o caricamento dati predefiniti (le prime 4 tessere classiche)
+  function loadInitialData() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      tessereData = JSON.parse(saved);
+    } else {
+      // Setup di fabbrica se il localStorage è vuoto
+      tessereData = [
+        { id: "tile_1", imgNum: "001", type: "jpg", top: 250, left: 50, width: "120px", height: "auto", text: "" },
+        { id: "tile_2", imgNum: "002", type: "jpg", top: 250, left: 180, width: "120px", height: "auto", text: "" },
+        { id: "tile_3", imgNum: "003", type: "jpg", top: 250, left: 310, width: "120px", height: "auto", text: "" },
+        { id: "tile_4", imgNum: "none", type: "none", top: 250, left: 440, width: "120px", height: "auto", text: "Nota testo..." }
+      ];
+      saveData();
+    }
+  }
+
+  function saveData() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(tessereData));
+  }
+
+  function autoResizeTextarea(el) {
+    el.style.height = 'auto';
+    el.style.height = el.scrollHeight + 'px';
+  }
+
+  // Genera dinamicamente le opzioni per il menu a tendina (da 001 a 030)
+  function generateSelectOptions(currentVal) {
+    let html = `<option value="none" ${currentVal==='none'?'selected':''}>[Solo Testo]</option>`;
+    for(let i=1; i<=30; i++) {
+      let numStr = String(i).padStart(3, '0');
+      let ext = (i === 17) ? 'gif' : 'jpg'; // Gestione estensione gif per il 17
+      html += `<option value="${numStr}|${ext}" ${currentVal===numStr?'selected':''}>Immagine ${numStr}</option>`;
+    }
+    return html;
+  }
+
+  // Renderizza graficamente tutte le tessere a schermo
+  function renderTessere() {
+    const layer = document.getElementById('tiles-layer');
+    layer.innerHTML = ''; // Svuota lo schermo
+
+    tessereData.forEach(t => {
+      const div = document.createElement('div');
+      div.className = 'draggable';
+      div.id = t.id;
+      div.style.top = t.top + 'px';
+      div.style.left = t.left + 'px';
+      div.style.width = t.width;
+      if(t.height !== 'auto') div.style.height = t.height;
+
+      // Costruisce la parte immagine se attiva
+      let imgHtml = '';
+      if (t.imgNum !== 'none') {
+        imgHtml = `
+          <div class="image-container">
+            <img src="tessere/${t.imgNum}.${t.type}" draggable="false" alt="${t.imgNum}">
+          </div>`;
+      }
+
+      div.innerHTML = `
+        <button class="tile-menu-btn">▼</button>
+        <div class="tile-dropdown">
+          <label>Cambia Contenuto:</label>
+          <select class="img-select">
+            ${generateSelectOptions(t.imgNum)}
+          </select>
+          <button class="btn-del">❌ Elimina</button>
+        </div>
+        ${imgHtml}
+        <div class="caption">
+          <textarea placeholder="Scrivi qui...">${t.text}</textarea>
+        </div>
+      `;
+
+      layer.appendChild(div);
+      
+      const ta = div.querySelector('textarea');
+      autoResizeTextarea(ta);
+
+      // --- EVENTI DELLA SINGOLA TESSERA ---
+
+      // Gestione Menu Tendina Opzioni
+      const menuBtn = div.querySelector('.tile-menu-btn');
+      const dropdown = div.querySelector('.tile-dropdown');
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.querySelectorAll('.tile-dropdown').forEach(d => { if(d !== dropdown) d.classList.remove('show'); });
+        dropdown.classList.toggle('show');
+      });
+
+      // Cambio Immagine dal Select
+      const select = div.querySelector('.img-select');
+      select.addEventListener('change', (e) => {
+        const val = e.target.value;
+        const index = tessereData.findIndex(item => item.id === t.id);
+        if(val === 'none') {
+          tessereData[index].imgNum = 'none';
+          tessereData[index].type = 'none';
+        } else {
+          const parts = val.split('|');
+          tessereData[index].imgNum = parts[0];
+          tessereData[index].type = parts[1];
+        }
+        saveData();
+        renderTessere();
+      });
+
+      // Eliminazione Tessera
+      const delBtn = div.querySelector('.btn-del');
+      delBtn.addEventListener('click', () => {
+        if(confirm("Vuoi eliminare questa tessera?")) {
+          tessereData = tessereData.filter(item => item.id !== t.id);
+          saveData();
+          renderTessere();
+        }
+      });
+
+      // Salvataggio testo in tempo reale
+      ta.addEventListener('input', () => {
+        const index = tessereData.findIndex(item => item.id === t.id);
+        tessereData[index].text = ta.value;
+        saveData();
+        autoResizeTextarea(ta);
+      });
+
+      // Logica del Drag & Drop (Pointer Events)
+      let dragging = false, offsetX = 0, offsetY = 0;
+      div.addEventListener('pointerdown', e => {
+        if(e.target.tagName.toLowerCase() === 'textarea' || e.target.tagName.toLowerCase() === 'select' || e.target.classList.contains('tile-menu-btn') || e.target.classList.contains('btn-del')) return;
+        
+        dragging = true;
+        offsetX = e.clientX - div.offsetLeft;
+        offsetY = e.clientY - div.offsetTop;
+        div.setPointerCapture(e.pointerId);
+        dropdown.classList.remove('show'); // Chiude il menu se trascini
+      });
+
+      div.addEventListener('pointermove', e => {
+        if (!dragging) return;
+        div.style.left = (e.clientX - offsetX) + "px';
+        div.style.top  = (e.clientY - offsetY) + "px";
+      });
+
+      div.addEventListener('pointerup', e => {
+        if (!dragging) return;
+        dragging = false;
+        div.releasePointerCapture(e.pointerId);
+        
+        const index = tessereData.findIndex(item => item.id === t.id);
+        tessereData[index].left = parseInt(div.style.left);
+        tessereData[index].top = parseInt(div.style.top);
+        
+        const style = window.getComputedStyle(div);
+        tessereData[index].width = style.width;
+        tessereData[index].height = style.height;
+        saveData();
+      });
+
+      div.addEventListener('pointercancel', e => {
+        dragging = false;
+        div.releasePointerCapture(e.pointerId);
+      });
+    });
+  }
+
+  // Cliccando fuori si chiudono tutti i menu tendina aperti
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.tile-dropdown').forEach(d => d.classList.remove('show'));
+  });
+
+  // Funzione pulsante "Nuova Tessera"
+  document.getElementById('addTile').addEventListener('click', () => {
+    const newId = 'tile_' + Date.now();
+    tessereData.push({
+      id: newId,
+      imgNum: "001", // Default prima immagine
+      type: "jpg",
+      top: 200,
+      left: 60,
+      width: "120px",
+      height: "auto",
+      text: ""
+    });
+    saveData();
+    renderTessere();
+  });
+
+  // Funzione Pulsante Reset Posizioni / Centra
+  document.getElementById('centerTiles').addEventListener('click', () => {
+    const cardRect = document.querySelector('.card').getBoundingClientRect();
+    tessereData.forEach((t, i) => {
+      t.left = 50 + (i % 6) * 140;
+      t.top = 220 + Math.floor(i / 6) * 150;
+    });
+    saveData();
+    renderTessere();
+  });
+
+  // Avvio dell'app
+  window.addEventListener('DOMContentLoaded', () => {
+    loadInitialData();
+    renderTessere();
+  });
+</script>
+
+<script>
+  // Gestione dello slider immagini di sfondo (Immutato)
+  (function(){
+    const totalSlides = 21;
+    const slides = Array.from({length: totalSlides}, (_, i) => `img/slide${i+1}.jpg`);
+    let current = 0;
+
+    const imgEl   = document.getElementById("slide");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+
+    function update() {
+      imgEl.src = slides[current];
+      imgEl.alt = `Slide ${current + 1}`;
+      prevBtn.disabled = (current === 0);
+      nextBtn.disabled = (current === slides.length - 1);
+    }
+
+    prevBtn.addEventListener("click", () => {
+      if (current > 0) current--;
+      update();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (current < slides.length - 1) current++;
+      update();
+    });
+
+    update();
+  })();
+</script>
+</body>
+</html>
