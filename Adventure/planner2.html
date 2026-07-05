@@ -133,7 +133,7 @@
     .draggable {
       position: absolute;
       cursor: grab;
-      touch-action: none; /* Disattiva le gesture predefinite sul drag */
+      touch-action: none;
       width: 120px;
       min-height: 50px;
       text-align: center;
@@ -159,71 +159,32 @@
       display: block;
     }
 
-    /* La freccetta per il menu opzioni */
-    .tile-menu-btn {
+    /* Contenitore dei controlli veloci sulla tessera */
+    .tile-controls {
       position: absolute;
-      top: 4px;
-      right: 4px;
-      width: 24px; /* Leggermente più grande per facilitare il tap */
+      top: -12px;
+      right: -6px;
+      display: flex;
+      gap: 4px;
+      z-index: 15;
+    }
+
+    .tile-btn {
+      width: 24px;
       height: 24px;
-      background: rgba(255,255,255,0.95);
-      border: 1px solid #bbb;
-      border-radius: 4px;
+      background: white;
+      border: 1px solid #cbd5e0;
+      border-radius: 50%;
       font-size: 11px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 15;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
       user-select: none;
     }
-    .tile-menu-btn:hover { background: #fff; }
-
-    /* Menu a tendina a comparsa */
-    .tile-dropdown {
-      display: none;
-      position: absolute;
-      top: 32px;
-      right: 4px;
-      background: white;
-      border: 1px solid #cbd5e0;
-      border-radius: 6px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      padding: 10px;
-      z-index: 999;
-      text-align: left;
-      width: 170px;
-    }
-    .tile-dropdown.show { display: block; }
-    .tile-dropdown label {
-      font-size: 11px;
-      font-weight: bold;
-      color: #4a5568;
-      display: block;
-      margin-bottom: 4px;
-    }
-    .tile-dropdown select {
-      width: 100%;
-      padding: 6px;
-      font-size: 13px;
-      margin-bottom: 8px;
-      border-radius: 4px;
-      border: 1px solid #cbd5e0;
-      background: #fff;
-    }
-    .tile-dropdown .btn-del {
-      width: 100%;
-      background: #fff5f5;
-      color: #c53030;
-      border: 1px solid #feb2b2;
-      padding: 6px;
-      border-radius: 4px;
-      font-size: 12px;
-      cursor: pointer;
-      text-align: center;
-      font-weight: 600;
-    }
-    .tile-dropdown .btn-del:hover { background: #fff0f0; }
+    .tile-btn.edit { color: #2b6cb0; font-weight: bold; }
+    .tile-btn.del { color: #c53030; }
 
     /* Caption delle tessere */
     .caption { margin-top: 5px; width: 100%; }
@@ -244,7 +205,7 @@
     /* REGULATION PER LA STAMPA */
     @media print {
       body { background: #fff; padding: 0; }
-      .nav, .toolbar-slides, .tile-menu-btn, .tile-dropdown { display: none !important; }
+      .nav, .toolbar-slides, .tile-controls { display: none !important; }
       .card { box-shadow: none !important; padding: 0 !important; }
       .draggable { border: none !important; }
       .caption textarea { border: 1px solid #ccc !important; box-shadow: none !important; }
@@ -253,42 +214,29 @@
 </head>
 <body>
 
-<!-- barra navigazione -->
 <nav class="nav">
-  <a href="organizer4.html" class="nav-item">
-    <img src="rimage/orga4.png" alt="Organizer">
-    <span> NOTE </span>
-  </a> 
-<nav class="nav">
-    <a href="caldsp.html" class="nav-item">
-    <img src="rimage/calicon.png" alt="Calendario dsp">
-    <span> DATE </span>
-    </a>
-  <a href="check01.html" class="nav-item">
-    <img src="rimage/check02.png" alt="Checklist">
-    <span>LISTE</span>
-  </a>
-  <a href="strweb.html" class="nav-item">
-    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
-    <span> WEB </span>
-  </a>
-  <a href="dashconsolle.html" class="nav-item">
-    <img src="rimage/opzioni.png" alt="Opzioni">
-    <span> ADD </span>
-  </a>
+  <a href="organizer4.html" class="nav-item"><img src="rimage/orga4.png" alt="Organizer"><span> NOTE </span></a>
+  <a href="caldsp.html" class="nav-item"><img src="rimage/calicon.png" alt="Calendario dsp"><span> DATE </span></a>
+  <a href="check01.html" class="nav-item"><img src="rimage/check02.png" alt="Checklist"><span>LISTE</span></a>
+  <a href="strweb.html" class="nav-item"><img src="rimage/webicon.png" alt="Strumenti web"><span> WEB </span></a>
+  <a href="dashconsolle.html" class="nav-item"><img src="rimage/opzioni.png" alt="Opzioni"><span> ADD </span></a>
 </nav>
-<!-- fine barra navigazione -->
 
 <div class="container">
   <div class="card" style="position: relative;">
     
     <div class="toolbar-slides">
-      <button id="prev" class="btn secondary"> ⬅️ </button>
-      <button id="centerTiles" class="btn danger"> 🔄 </button>
-      <button id="addTile" class="btn success"> ➕ </button>
-      <button id="printBtn" class="btn info"> 🖨️ </button>
-      <button id="next" class="btn secondary"> ➡️ </button>
+      <button id="prev" class="btn secondary">⬅️ Indietro</button>
+      <button id="centerTiles" class="btn danger">🔄 Reset Posizioni</button>
+      <button id="addTile" class="btn success">➕ Nuova Tessera</button>
+      <button id="printBtn" class="btn info">🖨️ Stampa</button>
+      <button id="next" class="btn secondary">Avanti ➡️</button>
       
+      <div class="btn-group">
+        <button class="btn secondary" onclick="location.href='tessere3.html'">Pagina 2</button>
+        <button class="btn secondary" onclick="location.href='tessere4.html'">Pagina 3</button>
+      </div>
+    </div>
 
     <img id="slide" src="img/slide1.jpg" alt="Slide 1">
 
@@ -325,16 +273,6 @@
     el.style.height = el.scrollHeight + 'px';
   }
 
-  function generateSelectOptions(currentVal) {
-    let html = `<option value="none" ${currentVal==='none'?'selected':''}>[Solo Testo]</option>`;
-    for(let i=1; i<=30; i++) {
-      let numStr = String(i).padStart(3, '0');
-      let ext = (i === 17) ? 'gif' : 'jpg';
-      html += `<option value="${numStr}|${ext}" ${currentVal===numStr?'selected':''}>Immagine ${numStr}</option>`;
-    }
-    return html;
-  }
-
   function renderTessere() {
     const layer = document.getElementById('tiles-layer');
     layer.innerHTML = '';
@@ -357,13 +295,9 @@
       }
 
       div.innerHTML = `
-        <button class="tile-menu-btn">▼</button>
-        <div class="tile-dropdown">
-          <label>Cambia Contenuto:</label>
-          <select class="img-select">
-            ${generateSelectOptions(t.imgNum)}
-          </select>
-          <button class="btn-del">❌ Elimina</button>
+        <div class="tile-controls">
+          <button class="tile-btn edit" title="Cambia Immagine">▼</button>
+          <button class="tile-btn del" title="Elimina Tessera">❌</button>
         </div>
         ${imgHtml}
         <div class="caption">
@@ -376,43 +310,44 @@
       const ta = div.querySelector('textarea');
       autoResizeTextarea(ta);
 
-      const menuBtn = div.querySelector('.tile-menu-btn');
-      const dropdown = div.querySelector('.tile-dropdown');
-      const select = div.querySelector('.img-select');
-      const delBtn = div.querySelector('.btn-del');
+      const editBtn = div.querySelector('.tile-btn.edit');
+      const delBtn = div.querySelector('.tile-btn.del');
 
-      // Protezione interazioni mobile: isola i click/tap sugli elementi interattivi
-      [menuBtn, dropdown, select, delBtn, ta].forEach(element => {
+      // Blocca la propagazione sui controlli e sull'area di testo per evitare conflitti mobile
+      [editBtn, delBtn, ta].forEach(element => {
         if(element) {
           element.addEventListener('pointerdown', e => e.stopPropagation());
           element.addEventListener('touchstart', e => e.stopPropagation());
         }
       });
 
-      // Gestione Menu Tendina Opzioni
-      menuBtn.addEventListener('click', (e) => {
+      // Cambia immagine tramite Prompt nativo a prova di mobile
+      editBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        document.querySelectorAll('.tile-dropdown').forEach(d => { if(d !== dropdown) d.classList.remove('show'); });
-        dropdown.classList.toggle('show');
-      });
-
-      // Cambio Immagine dal Select
-      select.addEventListener('change', (e) => {
-        const val = e.target.value;
-        const index = tessereData.findIndex(item => item.id === t.id);
-        if(val === 'none') {
-          tessereData[index].imgNum = 'none';
-          tessereData[index].type = 'none';
-        } else {
-          const parts = val.split('|');
-          tessereData[index].imgNum = parts[0];
-          tessereData[index].type = parts[1];
+        let currentPromptVal = t.imgNum === 'none' ? '' : t.imgNum;
+        let input = prompt("Inserisci il numero dell'immagine (es. 001, 002, 015) oppure scrivi 'none' per solo testo:", currentPromptVal);
+        
+        if (input !== null) { // Se l'utente non ha premuto "Annulla"
+          let val = input.trim().toLowerCase();
+          const index = tessereData.findIndex(item => item.id === t.id);
+          
+          if (val === 'none' || val === '') {
+            tessereData[index].imgNum = 'none';
+            tessereData[index].type = 'none';
+          } else {
+            // Converte input numerici semplici (es: "1" o "12") nel formato a tre cifre "001" o "012"
+            if (!isNaN(val) && val.length > 0) {
+              val = String(val).padStart(3, '0');
+            }
+            tessereData[index].imgNum = val;
+            tessereData[index].type = (val === '017') ? 'gif' : 'jpg'; // Gestione eccezione gif
+          }
+          saveData();
+          renderTessere();
         }
-        saveData();
-        renderTessere();
       });
 
-      // Eliminazione Tessera
+      // Eliminazione immediata
       delBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         if(confirm("Vuoi eliminare questa tessera?")) {
@@ -424,20 +359,21 @@
 
       ta.addEventListener('input', () => {
         const index = tessereData.findIndex(item => item.id === t.id);
-        tessereData[index].text = ta.value;
-        saveData();
-        autoResizeTextarea(ta);
+        if(index !== -1) {
+          tessereData[index].text = ta.value;
+          saveData();
+          autoResizeTextarea(ta);
+        }
       });
 
-      // Logica del Drag & Drop corretta per Mobile (senza setPointerCapture invasivi)
+      // Logica del Drag & Drop pulita (Funziona ovunque)
       let dragging = false, offsetX = 0, offsetY = 0;
       div.addEventListener('pointerdown', e => {
-        if(e.target.tagName.toLowerCase() === 'textarea' || e.target.tagName.toLowerCase() === 'select' || e.target.classList.contains('tile-menu-btn') || e.target.classList.contains('btn-del')) return;
+        if(e.target.tagName.toLowerCase() === 'textarea' || e.target.classList.contains('tile-btn')) return;
         
         dragging = true;
         offsetX = e.clientX - div.offsetLeft;
         offsetY = e.clientY - div.offsetTop;
-        dropdown.classList.remove('show');
       });
 
       window.addEventListener('pointermove', e => {
@@ -463,10 +399,6 @@
       });
     });
   }
-
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.tile-dropdown').forEach(d => d.classList.remove('show'));
-  });
 
   document.getElementById('addTile').addEventListener('click', () => {
     const newId = 'tile_' + Date.now();
