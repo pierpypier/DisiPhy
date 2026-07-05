@@ -128,7 +128,7 @@
   canvas {
     display: block;
     width: 1000px !important;
-    height: 1900px !important;
+    height: 1700px !important;
     transform-origin: top left;
     touch-action: none;
     
@@ -177,7 +177,7 @@
     <header class="header"></header>
 
     <div class="canvas-container">
-      <canvas id="board" width="1000" height="1900" style="touch-action: none"></canvas>
+      <canvas id="board" style="touch-action: none"></canvas>
     </div>
 
     <div class="toolbar">
@@ -267,7 +267,7 @@
     if (currentMode === 'draw') {
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = '#1e40af'; 
-      ctx.lineWidth = 3;           
+      ctx.lineWidth = 2;           
     } else {
       ctx.globalCompositeOperation = 'destination-out';
       ctx.lineWidth = 20; 
