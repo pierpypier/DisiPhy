@@ -361,16 +361,17 @@
           let val = input.trim().toLowerCase();
           const index = tessereData.findIndex(item => item.id === t.id);
           
-          if (val === 'none' || val === '') {
-            tessereData[index].imgNum = 'none';
-            tessereData[index].type = 'none';
-          } else {
-            // Converte input numerici semplici (es: "1" o "12") nel formato a tre cifre "001" o "012"
-            if (!isNaN(val) && val.length > 0) {
-              val = String(val).padStart(3, '0');
-            }
-            tessereData[index].imgNum = val;
-            tessereData[index].type = (val === '017') ? 'gif' : 'jpg'; // Gestione eccezione gif
+          
+if (val === 'none' || val === '') {
+  tessereData[index].imgNum = 'none';
+  tessereData[index].type = 'none';
+} else {
+  tessereData[index].imgNum = val; // Prende il valore puro
+  tessereData[index].type = 'jpg';  // Forza il jpg minuscolo per evitare conflitti (.JPG o .png)
+}
+          
+          
+          
           }
           saveData();
           renderTessere();
