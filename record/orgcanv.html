@@ -130,12 +130,18 @@
   }
   
   /* touch-action: none evita che lo schermo scorra mentre si disegna col dito */
-  canvas {
-    display: block;
-    width: 100%;
-    touch-action: none; 
-    cursor: crosshair;
-  }
+canvas {
+  display: block;
+  width: 1000px !important;
+  height: 1900px !important;
+  transform-origin: top left;
+  touch-action: none;
+  
+  /* --- NUOVE RIGHE PER LO SFONDO A QUADRETTI --- */
+  background-color: #ffffff; /* Sfondo di base bianco */
+  background-image: url('rimage/quadretti.png'); /* Inserisci qui il nome della tua immagine */
+  background-repeat: repeat; /* Ripete l'immagine se è un pattern piccolo, utile per i quadretti */
+}
 
   /* Stili per la Stampa PDF */
   @media print {
@@ -217,25 +223,25 @@
 
   // --- Funzioni di caricamento e salvataggio ---
   
-  function saveCanvas() {
-    localStorage.setItem(LS_KEY, canvas.toDataURL('image/png'));
-  }
+function saveCanvas() {
+  // Salva in PNG (il CSS dello sfondo non viene salvato nel localStorage, occupando zero memoria aggiuntiva!)
+  localStorage.setItem(LS_KEY, canvas.toDataURL('image/png'));
+}
 
-  function loadCanvas() {
-    const dataURL = localStorage.getItem(LS_KEY);
-    if (dataURL) {
-      const img = new Image();
-      img.onload = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0);
-      };
-      img.src = dataURL;
-    } else {
-      // Sfondo bianco se è la prima volta (utile per la stampa)
-      ctx.fillStyle = '#ffffff';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-    }
+function loadCanvas() {
+  const dataURL = localStorage.getItem(LS_KEY);
+  if (dataURL) {
+    const img = new Image();
+    img.onload = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0);
+    };
+    img.src = dataURL;
+  } else {
+    // Se non c'è disegno, pulisci solo il livello senza colorarlo di bianco
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
   }
+}
 
   // --- Funzioni per convertire le coordinate ---
   // Calcola esattamente dove si trova il mouse/dito rispetto alla risoluzione interna del canvas
@@ -344,17 +350,15 @@ btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
 
 
   btnClear.addEventListener('click', () => {
-    if (confirm("Vuoi cancellare tutto il disegno?")) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#ffffff'; // Ripristina sfondo per stampe perfette
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      saveCanvas();
-    }
-  });
-
-  btnPrint.addEventListener('click', () => {
-    window.print(); // Apre l'interfaccia di stampa di sistema
-  });
+  if (confirm("Vuoi cancellare tutto il disegno?")) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    saveCanvas();
+    
+    // Resetta vista se stavi zoomando
+    scale = 1; panX = 0; panY = 0;
+    applyTransform();
+  }
+});
 
 // --- BLOCCO ANTI-ZOOM PER LA BARRA STRUMENTI ---
 
