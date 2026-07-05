@@ -101,6 +101,8 @@
     .btn.secondary { background: #edf2f7; color: #4a5568; border: 1px solid #cbd5e0; }
     .btn.danger { background: #d9534f; color: #fff; }
     .btn.success { background: #2f855a; color: #fff; }
+    .btn.info { background: #4a5568; color: #fff; } /* Colore grigio scuro per il tasto stampa */
+    
     .btn:disabled {
       color: #a0aec0;
       border-color: #e2e8f0;
@@ -237,6 +239,15 @@
       font-family: inherit;
       box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
+
+    /* 🖨️ REGULATION PER LA STAMPA: Nasconde i comandi e la barra di navigazione */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .nav, .toolbar-slides, .tile-menu-btn, .tile-dropdown { display: none !important; }
+      .card { box-shadow: none !important; padding: 0 !important; }
+      .draggable { border: none !important; }
+      .caption textarea { border: 1px solid #ccc !important; box-shadow: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -256,9 +267,14 @@
       <button id="prev" class="btn secondary"> ⬅️ </button>
       <button id="centerTiles" class="btn danger"> 🔄 </button>
       <button id="addTile" class="btn success"> ➕ </button>
+      <button id="printBtn" class="btn info"> 🖨️ </button>
       <button id="next" class="btn secondary"> ➡️ </button>
       
-
+      <div class="btn-group">
+        <button class="btn secondary" onclick="location.href='tessere3.html'">Pagina 2</button>
+        <button class="btn secondary" onclick="location.href='tessere4.html'">Pagina 3</button>
+      </div>
+    </div>
 
     <img id="slide" src="img/slide1.jpg" alt="Slide 1">
 
@@ -452,6 +468,11 @@
     });
     saveData();
     renderTessere();
+  });
+
+  // Funzione per avviare la stampa nativa del sistema
+  document.getElementById('printBtn').addEventListener('click', () => {
+    window.print();
   });
 
   window.addEventListener('DOMContentLoaded', () => {
