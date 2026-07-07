@@ -570,33 +570,26 @@ render();
 //   SISTEMA DI BACKUP & RIPRISTINO COMPLETO
 // ==========================================
 
-// --- FUNZIONE DI BACKUP UNIVERSALE (ESPORTA) ---
+// --- FUNZIONE DI BACKUP (ESPORTA) ---
 document.getElementById('exportBtn').addEventListener('click', () => {
-  // Trova la chiave corretta usata nella tua pagina in modo dinamico
-  const chiaveAttuale = typeof STORAGE_KEY !== 'undefined' ? STORAGE_KEY : 'organizer_tessere_config_v1';
-  const dataStr = localStorage.getItem(chiaveAttuale);
+  // Forza l'uso di STORAGE_KEY globale. Se non definita, usa un fallback
+  const chiave = (typeof STORAGE_KEY !== 'undefined') ? STORAGE_KEY : 'organizer_tessere_config_v1';
+  const dataStr = localStorage.getItem(chiave);
   
-  // Se non trova nulla o è vuoto, esporta un array vuoto standard per evitare blocchi
   const contenutoDaSalvare = dataStr ? dataStr : '[]';
-  
-  // Crea il file scaricabile contenente i dati dello storage
   const blob = new Blob([contenutoDaSalvare], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   
-  // Legge il titolo della pagina attuale, rimuove gli spazi e i caratteri strani, e lo mette in minuscolo
   const titoloPagina = document.title ? document.title : "planner_page";
   const nomePagina = titoloPagina.replace(/[^a-z0-9]/gi, '_').toLowerCase();
 
   const a = document.createElement('a');
   a.href = url;
-  
-  // Il file si chiamerà (es): backup_pagina_1_2026-07-07.json
   a.download = `backup_${nomePagina}_${new Date().toISOString().slice(0,10)}.json`;
   
   document.body.appendChild(a);
   a.click();
   
-  // Pulizia della memoria temporanea
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 });
@@ -605,7 +598,7 @@ document.getElementById('exportBtn').addEventListener('click', () => {
 const fileInput = document.getElementById('fileInput');
 if (fileInput) {
   document.getElementById('importBtn').addEventListener('click', () => {
-    fileInput.click(); // Apre la selezione file
+    fileInput.click();
   });
 
   fileInput.addEventListener('change', (e) => {
@@ -615,26 +608,28 @@ if (fileInput) {
     const reader = new FileReader();
     reader.onload = function(evt) {
       try {
-        // Verifica solo che il file sia un JSON valido
-        const parsed = JSON.parse(evt.target.result);
+        const contenuto = evt.target.result;
+        JSON.parse(contenuto); // Controllo validità JSON
         
-        if (confirm("Vuoi sovrascrivere i dati attuali di questa pagina con questo backup?")) {
-          const chiaveAttuale = typeof STORAGE_KEY !== 'undefined' ? STORAGE_KEY : 'organizer_tessere_config_v1';
+        if (confirm("Vuoi ripristinare i dati di questa pagina con questo backup? L'operazione sovrascriverà lo stato attuale.")) {
           
-          // Salva i dati grezzi così come sono nel file
-          localStorage.setItem(chiaveAttuale, evt.target.result.trim());
+          // Usa la STESSA IDENTICA chiave del planner per salvare
+          const chiave = (typeof STORAGE_KEY !== 'undefined') ? STORAGE_KEY : 'organizer_tessere_config_v1';
           
-          // FORZA IL RICARICAMENTO DELLA PAGINA
-          window.location.replace(window.location.href); 
+          // Salva i dati nella memoria
+          localStorage.setItem(chiave, contenuto.trim());
+          
+          // Ricarica la pagina forzando il browser a leggere i nuovi dati appena scritti
+          window.location.reload(true);
         }
       } catch (err) {
-        alert("Errore nel caricamento: il file selezionato è danneggiato o non è un backup valido del planner.");
+        alert("Errore nel caricamento: il file non è un backup valido.");
       }
     };
     reader.readAsText(file);
     fileInput.value = ''; // Resetta l'input
   });
-    }
+}
   
   
 </script>
