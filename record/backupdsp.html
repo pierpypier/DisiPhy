@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassaforte Backup Globale</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; text-align: center; background: #f4f4f9; color: #333; }
+        .box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 400px; margin: 40px auto; }
+        button { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; }
+        .btn-export { background: #2ecc71; color: white; }
+        .btn-import { background: #3498db; color: white; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🔒 Cassaforte Organizer</h2>
+    <p>Salva o ripristina <strong>tutte le pagine</strong> contemporaneamente con un unico testo.</p>
+    
+    <button class="btn-export" id="exportAll">💾 ESPORTA TUTTO</button>
+    <button class="btn-import" id="importAll">📂 IMPORTA TUTTO</button>
+</div>
+
+<script>
+// --- FUNZIONE DI ESPORTAZIONE GLOBALE ---
+document.getElementById('exportAll').addEventListener('click', () => {
+  const tuttoIlDatabase = {};
+  
+  // Cattura QUALSIASI dato salvato in questo browser/app, di tutte le pagine
+  for (let i = 0; i < localStorage.length; i++) {
+    const chiave = localStorage.key(i);
+    tuttoIlDatabase[chiave] = localStorage.getItem(chiave);
+  }
+  
+  const testoBackup = JSON.stringify(tuttoIlDatabase);
+  
+  prompt(
+    `📦 BACKUP GLOBALE GENERATO!\n\nQuesto testo contiene TUTTE le tue decine di pagine (Strumenti Web, Calendario, Note, ecc.).\n\nCopia e incollalo nel tuo Foglio Google:`, 
+    testoBackup
+  );
+});
+
+// --- FUNZIONE DI IMPORTAZIONE GLOBALE ---
+document.getElementById('importAll').addEventListener('click', () => {
+  const testoIncollato = prompt("📂 RIPRISTINO TOTALE:\n\nIncolla qui il testo del backup globale preso dal tuo Foglio Google.\n\n⚠️ ATTENZIONE: Questo sovrascriverà i dati di TUTTE le pagine in un colpo solo!");
+  
+  if (!testoIncollato) return;
+
+  try {
+    const databaseRipristinato = JSON.parse(testoIncollato.trim());
+    
+    if (confirm("Sei sicuro al 100%? Tutti i dati attuali sul telefono verranno rimpiazzati con quelli del backup.")) {
+      // Svuota la memoria attuale per evitare residui
+      localStorage.clear();
+      
+      // Reinserisce tutti i cassetti del backup
+      for (const chiave in databaseRipristinato) {
+        localStorage.setItem(chiave, databaseRipristinato[chiave]);
+      }
+      
+      alert("✅ Ripristino Globale Completato! Ricarica le tue pagine per vedere i dati aggiornati.");
+    }
+  } catch (err) {
+    alert("❌ Errore: Il testo inserito non è un backup globale valido.");
+  }
+});
+</script>
+
+</body>
+</html>
