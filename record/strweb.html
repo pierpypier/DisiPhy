@@ -605,7 +605,7 @@ document.getElementById('exportBtn').addEventListener('click', () => {
 const fileInput = document.getElementById('fileInput');
 if (fileInput) {
   document.getElementById('importBtn').addEventListener('click', () => {
-    fileInput.click(); // Apre la selezione file del PC/Telefono
+    fileInput.click(); // Apre la selezione file
   });
 
   fileInput.addEventListener('change', (e) => {
@@ -615,28 +615,26 @@ if (fileInput) {
     const reader = new FileReader();
     reader.onload = function(evt) {
       try {
+        // Verifica solo che il file sia un JSON valido
         const parsed = JSON.parse(evt.target.result);
         
-        // Controllo di sicurezza base per verificare che siano dati validi
-        if (Array.isArray(parsed)) {
-          if (confirm("Vuoi sovrascrivere i dati attuali di questa pagina con questo backup?")) {
-            const chiaveAttuale = typeof STORAGE_KEY !== 'undefined' ? STORAGE_KEY : 'organizer_tessere_config_v1';
-            
-            // Salva i dati e forza il formato stringa corretto
-            localStorage.setItem(chiaveAttuale, typeof evt.target.result === 'string' ? evt.target.result : JSON.stringify(parsed));
-            location.reload(); // Ricarica la pagina per applicare i dati caricati
-          }
-        } else {
-          alert("Il file selezionato non contiene un backup compatibile con il planner.");
+        if (confirm("Vuoi sovrascrivere i dati attuali di questa pagina con questo backup?")) {
+          const chiaveAttuale = typeof STORAGE_KEY !== 'undefined' ? STORAGE_KEY : 'organizer_tessere_config_v1';
+          
+          // Salva i dati grezzi così come sono nel file
+          localStorage.setItem(chiaveAttuale, evt.target.result.trim());
+          
+          // FORZA IL RICARICAMENTO DELLA PAGINA
+          window.location.replace(window.location.href); 
         }
       } catch (err) {
-        alert("Errore nel caricamento del file. Assicurati che sia il file .json corretto.");
+        alert("Errore nel caricamento: il file selezionato è danneggiato o non è un backup valido del planner.");
       }
     };
     reader.readAsText(file);
-    fileInput.value = ''; // Resetta l'input per permettere caricamenti successivi
+    fileInput.value = ''; // Resetta l'input
   });
-}
+    }
   
   
 </script>
