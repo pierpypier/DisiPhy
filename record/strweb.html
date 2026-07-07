@@ -286,7 +286,14 @@ input.title-input:focus{
 
       <div>
         <div class="title">Strumenti Web</div>
-        <div class="subtitle">Gestione Preferiti</div>
+        <div class="subtitle">Dati
+
+        <button id="exportBtn" class="btn success"> 💾 </button>
+<button id="importBtn" class="btn info"> 📂 </button>
+<input type="file" id="fileInput" accept=".json" style="display: none;">
+          
+        
+        </div>
       </div>
 
       
@@ -558,6 +565,69 @@ listEl.addEventListener("drop", () => {
 
 loadState();
 render();
+
+// --- FUNZIONE DI BACKUP (ESPORTA) ---
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const dataStr = localStorage.getItem(STORAGE_KEY);
+  if (!dataStr || dataStr === '[]') {
+    alert("Non ci sono dati da salvare nel backup!");
+    return;
+  }
+  
+// Crea un file scaricabile contenente i dati dello storage
+  const blob = new Blob([dataStr], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  
+  // Legge il titolo della pagina attuale, rimuove gli spazi e i caratteri strani, e lo mette in minuscolo
+  const nomePagina = document.title.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+
+  const a = document.createElement('a');
+  a.href = url;
+  
+  // Il file si chiamerà (es): backup_pagina_1_2026-07-07.json
+  a.download = `backup_${nomePagina}_${new Date().toISOString().slice(0,10)}.json`;
+  
+  document.body.appendChild(a);
+  a.click();
+  
+  // Pulizia
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+// --- FUNZIONE DI RIPRISTINO (IMPORTA) ---
+const fileInput = document.getElementById('fileInput');
+document.getElementById('importBtn').addEventListener('click', () => {
+  fileInput.click(); // Apre la selezione file del PC/Telefono
+});
+
+fileInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(evt) {
+    try {
+      const parsed = JSON.parse(evt.target.result);
+      
+      // Controllo di sicurezza base per verificare che siano dati corretti
+      if (Array.isArray(parsed)) {
+        if (confirm("Vuoi sovrascrivere i dati attuali con questo backup?")) {
+          localStorage.setItem(STORAGE_KEY, evt.target.result);
+          location.reload(); // Ricarica la pagina per applicare i dati caricati
+        }
+      } else {
+        alert("Il file selezionato non è un backup valido.");
+      }
+    } catch (err) {
+      alert("Errore nel caricamento del file. Assicurati che sia il file .json corretto.");
+    }
+  };
+  reader.readAsText(file);
+  fileInput.value = ''; // Resetta l'input per permettere caricamenti successivi
+});
+  
+  
 </script>
 </body>
   </html>
