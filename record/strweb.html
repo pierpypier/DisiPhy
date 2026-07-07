@@ -565,61 +565,36 @@ listEl.addEventListener("drop", () => {
 
 loadState();
 render();
-
 // ==========================================================
-//   BACKUP COPIA/INCOLLA 100% BLINDATO E MANUALE PER PAGINA
+//   VERSIONE RILEVATORE DI CHIAVI PER STRUMENTI WEB
 // ==========================================================
 
-// ⚠️ CONFIGURAZIONE MANUALE - Cambia questo nome per ogni pagina!
-const CHIAVE_PAGINA_FISSA = 'strumenti_web'; 
-
-// --- FUNZIONE DI SALVATAGGIO ---
 document.getElementById('exportBtn').addEventListener('click', () => {
-  const dataStr = localStorage.getItem(CHIAVE_PAGINA_FISSA);
-  const contenutoDaSalvare = dataStr ? dataStr : '[]';
-  
-  // Creiamo il pacchetto contrassegnato in modo univoco
-  const pacchettoBackup = {
-    identificativoPagina: CHIAVE_PAGINA_FISSA,
-    dati: contenutoDaSalvare
-  };
-  
-  const stringaDati = JSON.stringify(pacchettoBackup);
-  
-  prompt(
-    `👉 BACKUP ISOlATO PER: [${CHIAVE_PAGINA_FISSA.toUpperCase()}]\n\nCopia questo testo e incollalo nel tuo Foglio Google.`, 
-    stringaDati
-  );
-});
+  // 1. Cerchiamo se nel codice esiste la variabile STORAGE_KEY del tuo planner
+  let chiaveRilevata = typeof STORAGE_KEY !== 'undefined' ? STORAGE_KEY : 'NON_TROVATA';
+  let datiRilevati = localStorage.getItem(chiaveRilevata);
 
-// --- FUNZIONE DI CARICAMENTO ---
-document.getElementById('importBtn').addEventListener('click', () => {
-  const testoIncollato = prompt(`📂 RIPRISTINO BACKUP PER: [${CHIAVE_PAGINA_FISSA.toUpperCase()}]\n\nIncolla qui il testo del backup prelevato dal tuo Foglio Google:`);
-  
-  if (!testoIncollato) return;
-
-  try {
-    const backupOggetto = JSON.parse(testoIncollato.trim());
-    
-    // CONTROLlo DI SICUREZZA ASSOLUTO: Verifica se il backup appartiene a QUESTA pagina
-    if (!backupOggetto.identificativoPagina || !backupOggetto.dati) {
-      alert("Errore: Formato di backup non riconosciuto.");
-      return;
+  // 2. Se non la trova, analizziamo QUALSIASI chiave contenga dati nel browser in questo momento
+  let tutteLeChiaviDisponibili = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const k = localStorage.key(i);
+    // Escludiamo la stringa fissa che abbiamo provato prima
+    if (k !== 'strumenti_web') {
+      tutteLeChiaviDisponibili.push(k);
     }
-
-    if (backupOggetto.identificativoPagina !== CHIAVE_PAGINA_FISSA) {
-      alert(`❌ BLOCCO DI SICUREZZA:\n\nQuesto backup appartiene alla pagina "${backupOggetto.identificativoPagina.toUpperCase()}".\nNon puoi caricarlo qui su "${CHIAVE_PAGINA_FISSA.toUpperCase()}" altrimenti distruggeresti i dati!`);
-      return; // Blocca l'esecuzione immediatamente
-    }
-
-    if (confirm(`Confermi il ripristino? I dati correnti di questa pagina verranno sovrascritti.`)) {
-      // Sovrascrive solo ed esclusivamente questa chiave
-      localStorage.setItem(CHIAVE_PAGINA_FISSA, backupOggetto.dati);
-      window.location.reload();
-    }
-  } catch (err) {
-    alert("Errore: Il testo inserito non è un backup valido.");
   }
+
+  // Creiamo un messaggio diagnostico chiaro
+  let messaggio = `🔍 DIAGNOSTICA MEMORIA STRUMENTI WEB:\n\n`;
+  messaggio += `• Chiave globale rilevata nello script: [ ${chiaveRilevata} ]\n`;
+  messaggio += `• Stato dati di questa chiave: ${datiRilevati ? "✅ Piena (Contiene dati)" : "❌ Vuota"}\n\n`;
+  messaggio += `Se la chiave sopra è vuota o non trovata, il tuo planner sta usando una di queste chiavi che ho trovato nella memoria del tuo telefono:\n`;
+  
+  tutteLeChiaviDisponibili.forEach(chiave => {
+    messaggio += `👉 ${chiave}\n`;
+  });
+
+  alert(messaggio);
 });
   
 </script>
