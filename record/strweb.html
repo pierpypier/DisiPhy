@@ -567,71 +567,58 @@ loadState();
 render();
 
 // ==========================================================
-//   BACKUP COPIA/INCOLLA 100% ATOMICO PER SINGOLA PAGINA
+//   BACKUP COPIA/INCOLLA 100% BLINDATO E MANUALE PER PAGINA
 // ==========================================================
 
-// --- FUNZIONE DI SALVATAGGIO (LEGGE SOLO QUESTA PAGINA) ---
-document.getElementById('exportBtn').addEventListener('click', () => {
-  // 1. Determina la chiave globale usata da QUESTA specifica pagina
-  const chiaveAttuale = typeof STORAGE_KEY !== 'undefined' ? STORAGE_KEY : null;
-  
-  if (!chiaveAttuale) {
-    alert("Errore: Impossibile identificare la chiave di memoria (STORAGE_KEY) di questa pagina.");
-    return;
-  }
+// ⚠️ CONFIGURAZIONE MANUALE - Cambia questo nome per ogni pagina!
+const CHIAVE_PAGINA_FISSA = 'strumenti_web'; 
 
-  const dataStr = localStorage.getItem(chiaveAttuale);
+// --- FUNZIONE DI SALVATAGGIO ---
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const dataStr = localStorage.getItem(CHIAVE_PAGINA_FISSA);
   const contenutoDaSalvare = dataStr ? dataStr : '[]';
-  const idPagina = document.title ? document.title.replace(/[^a-z0-9]/gi, '_').toLowerCase() : "pagina_generica";
   
-  // 2. Salva nel pacchetto SOLO la chiave di questa pagina e il suo rispettivo valore
+  // Creiamo il pacchetto contrassegnato in modo univoco
   const pacchettoBackup = {
-    sorgente: idPagina,
-    chiaveTarget: chiaveAttuale,
+    identificativoPagina: CHIAVE_PAGINA_FISSA,
     dati: contenutoDaSalvare
   };
   
   const stringaDati = JSON.stringify(pacchettoBackup);
   
   prompt(
-    `👉 BACKUP ISOLATO PER: [${idPagina.toUpperCase()}]\n\nQuesto file contiene SOLO i dati di questa pagina. Copialo e incollalo nel tuo Foglio Google.`, 
+    `👉 BACKUP ISOlATO PER: [${CHIAVE_PAGINA_FISSA.toUpperCase()}]\n\nCopia questo testo e incollalo nel tuo Foglio Google.`, 
     stringaDati
   );
 });
 
-// --- FUNZIONE DI CARICAMENTO (SOVRASCRIVE SOLO QUESTA PAGINA) ---
+// --- FUNZIONE DI CARICAMENTO ---
 document.getElementById('importBtn').addEventListener('click', () => {
-  const testoIncollato = prompt("📂 RIPRISTINO BACKUP PROTETTO:\n\nIncolla qui il testo del backup specifico per questa pagina:");
+  const testoIncollato = prompt(`📂 RIPRISTINO BACKUP PER: [${CHIAVE_PAGINA_FISSA.toUpperCase()}]\n\nIncolla qui il testo del backup prelevato dal tuo Foglio Google:`);
   
   if (!testoIncollato) return;
 
   try {
     const backupOggetto = JSON.parse(testoIncollato.trim());
     
-    // Controllo struttura: deve essere il nuovo formato atomico
-    if (!backupOggetto.chiaveTarget || !backupOggetto.dati) {
-      alert("Errore: Questo file appartiene a un vecchio formato di backup globale e non può essere usato in modalità isolata.");
+    // CONTROLlo DI SICUREZZA ASSOLUTO: Verifica se il backup appartiene a QUESTA pagina
+    if (!backupOggetto.identificativoPagina || !backupOggetto.dati) {
+      alert("Errore: Formato di backup non riconosciuto.");
       return;
     }
 
-    const paginaAttuale = document.title ? document.title.replace(/[^a-z0-9]/gi, '_').toLowerCase() : "pagina_generica";
-
-    // Blocco di sicurezza se provi a scambiare le pagine
-    if (backupOggetto.sorgente && backupOggetto.sorgente !== paginaAttuale) {
-      if (!confirm(`⚠️ ATTENZIONE: Questo backup è di "${backupOggetto.sorgente.toUpperCase()}", ma ora sei in "${paginaAttuale.toUpperCase()}". Vuoi forzare il caricamento rischiando di mischiare i dati?`)) {
-        return;
-      }
+    if (backupOggetto.identificativoPagina !== CHIAVE_PAGINA_FISSA) {
+      alert(`❌ BLOCCO DI SICUREZZA:\n\nQuesto backup appartiene alla pagina "${backupOggetto.identificativoPagina.toUpperCase()}".\nNon puoi caricarlo qui su "${CHIAVE_PAGINA_FISSA.toUpperCase()}" altrimenti distruggeresti i dati!`);
+      return; // Blocca l'esecuzione immediatamente
     }
 
-    if (confirm(`Confermi il ripristino? Verrà sovrascritta SOLO la memoria di questa specifica pagina.`)) {
-      
-      // Scrive SOLO ed esclusivamente sulla chiave target di questa pagina
-      localStorage.setItem(backupOggetto.chiaveTarget, backupOggetto.dati);
-      
+    if (confirm(`Confermi il ripristino? I dati correnti di questa pagina verranno sovrascritti.`)) {
+      // Sovrascrive solo ed esclusivamente questa chiave
+      localStorage.setItem(CHIAVE_PAGINA_FISSA, backupOggetto.dati);
       window.location.reload();
     }
   } catch (err) {
-    alert("Errore: Il testo inserito è danneggiato o non è un backup valido.");
+    alert("Errore: Il testo inserito non è un backup valido.");
   }
 });
   
