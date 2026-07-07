@@ -469,7 +469,18 @@
   (function(){
     const totalSlides = 21;
     const slides = Array.from({length: totalSlides}, (_, i) => `img/slide${i+1}.jpg`);
+    
+    // 1. CHIAVE DI MEMORIA PER LE SLIDE
+    const SLIDE_STORAGE_KEY = 'organizer_slide_current_v1';
+    
+    // 2. RECUPERA LA SLIDE SALVATA (se non c'è, parte da 0)
     let current = 0;
+    const savedSlide = localStorage.getItem(SLIDE_STORAGE_KEY);
+    if (savedSlide) {
+      current = parseInt(savedSlide, 10);
+      // Sicurezza: evita che l'indice salvato sia fuori dai limiti
+      if (current < 0 || current >= slides.length) current = 0;
+    }
 
     const imgEl   = document.getElementById("slide");
     const prevBtn = document.getElementById("prev");
@@ -480,6 +491,9 @@
       imgEl.alt = `Slide ${current + 1}`;
       prevBtn.disabled = (current === 0);
       nextBtn.disabled = (current === slides.length - 1);
+      
+      // 3. SALVA AUTOMATICAMENTE LA POSIZIONE OGNI VOLTA CHE CAMBIA SLIDE
+      localStorage.setItem(SLIDE_STORAGE_KEY, current);
     }
 
     prevBtn.addEventListener("click", () => {
@@ -494,6 +508,7 @@
 
     update();
   })();
-</script>
+</script>  
+
 </body>
 </html>
