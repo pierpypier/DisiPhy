@@ -487,42 +487,46 @@ function calInit(){
 calInit();
 
 // ==========================================================
-//   BACKUP COPIA/INCOLLA 100% AUTOMATICO E ISOLATO (UNIVERSALE)
+//   MODELLO DI BACKUP DA PERSONALIZZARE IN AUTONOMIA
 // ==========================================================
 
 // --- FUNZIONE DI SALVATAGGIO ---
 document.getElementById('exportBtn').addEventListener('click', () => {
-  // Controlla se la chiave del planner esiste nella pagina
+  // 1. ⚠️ METTI LA CHIAVE DELLA PAGINA AL POSTO DI 'LS_KEY' (lascia il typeof davanti!)
   const chiaveReale = typeof LS_KEY !== 'undefined' ? LS_KEY : null;
   
   if (!chiaveReale) {
-    alert("❌ Errore: Impossibile trovare la chiave di memoria (LS_KEY) in questa pagina.");
+    alert("❌ Errore: Impossibile trovare la chiave di memoria in questa pagina.");
     return;
   }
 
-  // Prende i dati aggiornati direttamente dallo 'state' della pagina
-  const datiAttuali = typeof state !== 'undefined' ? JSON.stringify(state) : '{"items":[]}';
+  // 2. ⚠️ METTI I DATI DELLA PAGINA AL POSTO DI 'state' (lascia il typeof davanti!)
+  let datiAttuali = '[]';
+  if (typeof state !== 'undefined') {
+    datiAttuali = JSON.stringify(state); // ⚠️ METTI I DATI ANCHE QUI AL POSTO DI 'state'
+  }
   
-  // Creiamo il pacchetto di backup con il suo marchio di fabbrica
   const pacchettoBackup = {
     identificativoPagina: chiaveReale,
     dati: datiAttuali
   };
   
   prompt(
-    `👉 BACKUP PRONTO PER: [${chiaveReale.toUpperCase()}]\n\nCopia questo testo e incollalo nel tuo Foglio Google.`, 
+    `👉 BACKUP PRONTO PER QUESTA PAGINA\n\nCopia questo testo e incollalo nel tuo Foglio Google.`, 
     JSON.stringify(pacchettoBackup)
   );
 });
 
 // --- FUNZIONE DI CARICAMENTO ---
 document.getElementById('importBtn').addEventListener('click', () => {
-  const testoIncollato = prompt("📂 RIPRISTINO BACKUP PROTETTO:\n\nIncolla qui il testo del backup prelevato dal tuo Foglio Google:");
+  const testoIncollato = prompt("📂 RIPRISTINO BACKUP PROTETTO:\n\nIncolla qui il testo del backup:");
   
   if (!testoIncollato) return;
 
   try {
     const backupOggetto = JSON.parse(testoIncollato.trim());
+    
+    // 3. ⚠️ METTI LA CHIAVE DELLA PAGINA AL POSTO DI 'LS_KEY'
     const chiaveReale = typeof LS_KEY !== 'undefined' ? LS_KEY : null;
     
     if (!backupOggetto.identificativoPagina || !backupOggetto.dati) {
@@ -530,29 +534,25 @@ document.getElementById('importBtn').addEventListener('click', () => {
       return;
     }
 
-    // BLOCCO DI SICUREZZA INTER-PAGINA: Evita di caricare il backup della pagina sbagliata
     if (chiaveReale && backupOggetto.identificativoPagina !== chiaveReale) {
-      alert(`❌ BLOCCO DI SICUREZZA:\n\nQuesto backup appartiene alla pagina "${backupOggetto.identificativoPagina.toUpperCase()}".\nNon puoi caricarlo qui su "${chiaveReale.toUpperCase()}" altrimenti mescoleresti i dati!`);
+      alert(`❌ BLOCCO DI SICUREZZA:\n\nQuesto backup appartiene a un'altra pagina!\nNon puoi caricarlo qui.`);
       return; 
     }
 
-    if (confirm(`Confermi il ripristino? I dati di questa pagina verranno sovrascritti. Le altre pagine rimarranno intatte.`)) {
-      // 1. Scrive i dati nel localStorage del browser
+    if (confirm(`Confermi il ripristino? I dati correnti verranno sovrascritti.`)) {
       localStorage.setItem(chiaveReale, backupOggetto.dati);
       
-      // 2. Aggiorna lo stato interno della pagina per sicurezza
+      // 4. ⚠️ METTI I DATI DELLA PAGINA AL POSTO DI 'state'
       if (typeof state !== 'undefined') {
-        state = JSON.parse(backupOggetto.dati);
+        state = JSON.parse(backupOggetto.dati); // ⚠️ METTI I DATI ANCHE QUI AL POSTO DI 'state'
       }
       
-      // 3. Ricarica la pagina per mostrare i dati ripristinati
       window.location.reload();
     }
   } catch (err) {
-    alert("Errore: Il testo inserito non è un backup valido. Assicurati di averlo copiato tutto.");
+    alert("Errore: Il testo inserito non è un backup valido.");
   }
 });
-  
   
 </script>
 </body>
