@@ -154,10 +154,7 @@
         <div class="calh1cont">
       <h1 class="calh1">CALENDARIO</h1>
 
- <button id="exportBtn" class="btn success">💾</button>
-<button id="importBtn" class="btn info">📂</button>
-<input type="file" id="fileInput" accept=".json" style="display: none;">
-         
+
           
         <button id="calTodayBtn" class="calbtn secondary" style="margin:1px 5px 10px 1px">Oggi <div id="calMonthLabel" class="calmonth-title" style="padding:6px 10px;border-radius:6px;background:#f1f5f9; color:#000;">Aprile 2026</div></button>
         </div>
@@ -486,73 +483,7 @@ function calInit(){
 }
 calInit();
 
-// ==========================================================
-//   MODELLO DI BACKUP DA PERSONALIZZARE IN AUTONOMIA
-// ==========================================================
 
-// --- FUNZIONE DI SALVATAGGIO ---
-document.getElementById('exportBtn').addEventListener('click', () => {
-  // 1. ⚠️ METTI LA CHIAVE DELLA PAGINA AL POSTO DI 'LS_KEY' (lascia il typeof davanti!)
-  const chiaveReale = typeof LS_KEY !== 'undefined' ? LS_KEY : null;
-  
-  if (!chiaveReale) {
-    alert("❌ Errore: Impossibile trovare la chiave di memoria in questa pagina.");
-    return;
-  }
-
-  // 2. ⚠️ METTI I DATI DELLA PAGINA AL POSTO DI 'state' (lascia il typeof davanti!)
-  let datiAttuali = '[]';
-  if (typeof state !== 'undefined') {
-    datiAttuali = JSON.stringify(state); // ⚠️ METTI I DATI ANCHE QUI AL POSTO DI 'state'
-  }
-  
-  const pacchettoBackup = {
-    identificativoPagina: chiaveReale,
-    dati: datiAttuali
-  };
-  
-  prompt(
-    `👉 BACKUP PRONTO PER QUESTA PAGINA\n\nCopia questo testo e incollalo nel tuo Foglio Google.`, 
-    JSON.stringify(pacchettoBackup)
-  );
-});
-
-// --- FUNZIONE DI CARICAMENTO ---
-document.getElementById('importBtn').addEventListener('click', () => {
-  const testoIncollato = prompt("📂 RIPRISTINO BACKUP PROTETTO:\n\nIncolla qui il testo del backup:");
-  
-  if (!testoIncollato) return;
-
-  try {
-    const backupOggetto = JSON.parse(testoIncollato.trim());
-    
-    // 3. ⚠️ METTI LA CHIAVE DELLA PAGINA AL POSTO DI 'LS_KEY'
-    const chiaveReale = typeof LS_KEY !== 'undefined' ? LS_KEY : null;
-    
-    if (!backupOggetto.identificativoPagina || !backupOggetto.dati) {
-      alert("Errore: Formato di backup non riconosciuto.");
-      return;
-    }
-
-    if (chiaveReale && backupOggetto.identificativoPagina !== chiaveReale) {
-      alert(`❌ BLOCCO DI SICUREZZA:\n\nQuesto backup appartiene a un'altra pagina!\nNon puoi caricarlo qui.`);
-      return; 
-    }
-
-    if (confirm(`Confermi il ripristino? I dati correnti verranno sovrascritti.`)) {
-      localStorage.setItem(chiaveReale, backupOggetto.dati);
-      
-      // 4. ⚠️ METTI I DATI DELLA PAGINA AL POSTO DI 'state'
-      if (typeof state !== 'undefined') {
-        state = JSON.parse(backupOggetto.dati); // ⚠️ METTI I DATI ANCHE QUI AL POSTO DI 'state'
-      }
-      
-      window.location.reload();
-    }
-  } catch (err) {
-    alert("Errore: Il testo inserito non è un backup valido.");
-  }
-});
   
 </script>
 </body>
