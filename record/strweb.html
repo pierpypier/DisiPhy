@@ -566,54 +566,78 @@ listEl.addEventListener("drop", () => {
 loadState();
 render();
 
-// ==========================================
-//   BACKUP COPIA/INCOLLA COMPATIBILE SMARTPHONE
-// ==========================================
+// ==========================================================
+//   BACKUP COPIA/INCOLLA 100% ISOLATO E SICURO PER PAGINA
+// ==========================================================
 
-// --- FUNZIONE DI SALVATAGGIO (MOSTRA IL TESTO DA COPIARE) ---
+// --- FUNZIONE DI SALVATAGGIO (PROTETTA) ---
 document.getElementById('exportBtn').addEventListener('click', () => {
-  // Raccoglie TUTTO quello che c'è in memoria per questa pagina, senza indovinare la chiave
   const tuttoLoStorage = {};
+  
+  // Raccoglie i dati della sessione attuale
   for (let i = 0; i < localStorage.length; i++) {
     const chiave = localStorage.key(i);
     tuttoLoStorage[chiave] = localStorage.getItem(chiave);
   }
   
-  const stringaDati = JSON.stringify(tuttoLoStorage);
+  // Identifichiamo questo backup con il titolo della pagina attuale
+  const idPagina = document.title ? document.title.replace(/[^a-z0-9]/gi, '_').toLowerCase() : "pagina_generica";
   
-  // Crea una finestrella temporanea sullo schermo del telefono
-  const testoBackup = prompt(
-    "👉 IL TUO BACKUP È PRONTO!\n\nTieni premuto sul testo qui sotto, seleziona tutto e premi COPIA. Poi incollalo nelle tue Note del telefono per custodirlo.", 
+  // Creiamo il pacchetto di backup includendo l'identificativo della pagina
+  const pacchettoBackup = {
+    sorgente: idPagina,
+    dati: tuttoLoStorage
+  };
+  
+  const stringaDati = JSON.stringify(pacchettoBackup);
+  
+  prompt(
+    `👉 BACKUP PRONTO PER: [${idPagina.toUpperCase()}]\n\nTieni premuto sul testo qui sotto, seleziona tutto e premi COPIA. Poi incollalo nel tuo Foglio Google.`, 
     stringaDati
   );
 });
 
-// --- FUNZIONE DI CARICAMENTO (INCOLLA IL TESTO) ---
+// --- FUNZIONE DI CARICAMENTO (SELETTIVA) ---
 document.getElementById('importBtn').addEventListener('click', () => {
-  const testoIncollato = prompt("📂 RIPRISTINO BACKUP:\n\nIncolla qui dentro il testo del backup che hai salvato nelle tue Note e premi OK:");
+  const testoIncollato = prompt("📂 RIPRISTINO BACKUP ISOLATO:\n\nIncolla qui il testo del backup prelevato dal tuo Foglio Google:");
   
-  if (!testoIncollato) return; // Se l'utente annulla, non fa nulla
+  if (!testoIncollato) return;
 
   try {
-    const datiRipristinati = JSON.parse(testoIncollato.trim());
+    const backupOggetto = JSON.parse(testoIncollato.trim());
     
-    if (confirm("Vuoi sovrascrivere i dati attuali del planner con questo backup? Il telefono si aggiornerà.")) {
+    // Controlliamo se è il formato nuovo protetto o quello vecchio
+    const datiDaCaricare = backupOggetto.dati ? backupOggetto.dati : backupOggetto;
+    const sorgenteBackup = backupOggetto.sorgente ? backupOggetto.sorgente : "sconosciuta";
+    const paginaAttuale = document.title ? document.title.replace(/[^a-z0-9]/gi, '_').toLowerCase() : "pagina_generica";
+
+    // AVVISO DI SICUREZZA SE STAI CARICANDO IL BACKUP NELLA PAGINA SBAGLIATA
+    if (backupOggetto.sorgente && sorgenteBackup !== paginaAttuale) {
+      if (!confirm(`⚠️ ATTENZIONE: Questo backup proviene da "${sorgenteBackup.toUpperCase()}", ma ti trovi in "${paginaAttuale.toUpperCase()}". Vuoi forzare comunque il caricamento?`)) {
+        return;
+      }
+    }
+
+    if (confirm(`Vuoi ripristinare i dati? L'operazione modificherà SOLO la pagina attuale.`)) {
       
-      // Cancella la memoria vecchia per evitare conflitti
-      localStorage.clear();
-      
-      // Riscrive esattamente tutte le chiavi corrette che erano nel backup
-      for (const chiave in datiRipristinati) {
-        if (datiRipristinati.hasOwnProperty(chiave)) {
-          localStorage.setItem(chiave, datiRipristinati[chiave]);
+      // 1. Invece di usare .clear(), cancelliamo SOLO le chiavi che stiamo per sovrascrivere
+      for (const chiave in datiDaCaricare) {
+        if (datiDaCaricare.hasOwnProperty(chiave)) {
+          localStorage.removeItem(chiave);
         }
       }
       
-      // Ricarica la pagina sul telefono
+      // 2. Scriviamo i nuovi dati nella memoria senza toccare il resto
+      for (const chiave in datiDaCaricare) {
+        if (datiDaCaricare.hasOwnProperty(chiave)) {
+          localStorage.setItem(chiave, datiDaCaricare[chiave]);
+        }
+      }
+      
       window.location.reload();
     }
   } catch (err) {
-    alert("Errore: Il testo inserito non è un backup valido. Assicurati di averlo copiato tutto, dalla prima all'ultima lettera.");
+    alert("Errore: Il testo inserito non è un backup valido.");
   }
 });
   
