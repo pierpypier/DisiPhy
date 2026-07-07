@@ -567,70 +567,55 @@ loadState();
 render();
 
 // ==========================================
-//   SISTEMA DI BACKUP & RIPRISTINO COMPLETO
+//   BACKUP COPIA/INCOLLA COMPATIBILE SMARTPHONE
 // ==========================================
 
-// --- FUNZIONE DI BACKUP (ESPORTA) ---
+// --- FUNZIONE DI SALVATAGGIO (MOSTRA IL TESTO DA COPIARE) ---
 document.getElementById('exportBtn').addEventListener('click', () => {
-  // Forza l'uso di STORAGE_KEY globale. Se non definita, usa un fallback
-  const chiave = (typeof STORAGE_KEY !== 'undefined') ? STORAGE_KEY : 'organizer_tessere_config_v1';
-  const dataStr = localStorage.getItem(chiave);
+  // Raccoglie TUTTO quello che c'è in memoria per questa pagina, senza indovinare la chiave
+  const tuttoLoStorage = {};
+  for (let i = 0; i < localStorage.length; i++) {
+    const chiave = localStorage.key(i);
+    tuttoLoStorage[chiave] = localStorage.getItem(chiave);
+  }
   
-  const contenutoDaSalvare = dataStr ? dataStr : '[]';
-  const blob = new Blob([contenutoDaSalvare], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
+  const stringaDati = JSON.stringify(tuttoLoStorage);
   
-  const titoloPagina = document.title ? document.title : "planner_page";
-  const nomePagina = titoloPagina.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `backup_${nomePagina}_${new Date().toISOString().slice(0,10)}.json`;
-  
-  document.body.appendChild(a);
-  a.click();
-  
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  // Crea una finestrella temporanea sullo schermo del telefono
+  const testoBackup = prompt(
+    "👉 IL TUO BACKUP È PRONTO!\n\nTieni premuto sul testo qui sotto, seleziona tutto e premi COPIA. Poi incollalo nelle tue Note del telefono per custodirlo.", 
+    stringaDati
+  );
 });
 
-// --- FUNZIONE DI RIPRISTINO (IMPORTA) ---
-const fileInput = document.getElementById('fileInput');
-if (fileInput) {
-  document.getElementById('importBtn').addEventListener('click', () => {
-    fileInput.click();
-  });
-
-  fileInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function(evt) {
-      try {
-        const contenuto = evt.target.result;
-        JSON.parse(contenuto); // Controllo validità JSON
-        
-        if (confirm("Vuoi ripristinare i dati di questa pagina con questo backup? L'operazione sovrascriverà lo stato attuale.")) {
-          
-          // Usa la STESSA IDENTICA chiave del planner per salvare
-          const chiave = (typeof STORAGE_KEY !== 'undefined') ? STORAGE_KEY : 'organizer_tessere_config_v1';
-          
-          // Salva i dati nella memoria
-          localStorage.setItem(chiave, contenuto.trim());
-          
-          // Ricarica la pagina forzando il browser a leggere i nuovi dati appena scritti
-          window.location.reload(true);
-        }
-      } catch (err) {
-        alert("Errore nel caricamento: il file non è un backup valido.");
-      }
-    };
-    reader.readAsText(file);
-    fileInput.value = ''; // Resetta l'input
-  });
-}
+// --- FUNZIONE DI CARICAMENTO (INCOLLA IL TESTO) ---
+document.getElementById('importBtn').addEventListener('click', () => {
+  const testoIncollato = prompt("📂 RIPRISTINO BACKUP:\n\nIncolla qui dentro il testo del backup che hai salvato nelle tue Note e premi OK:");
   
+  if (!testoIncollato) return; // Se l'utente annulla, non fa nulla
+
+  try {
+    const datiRipristinati = JSON.parse(testoIncollato.trim());
+    
+    if (confirm("Vuoi sovrascrivere i dati attuali del planner con questo backup? Il telefono si aggiornerà.")) {
+      
+      // Cancella la memoria vecchia per evitare conflitti
+      localStorage.clear();
+      
+      // Riscrive esattamente tutte le chiavi corrette che erano nel backup
+      for (const chiave in datiRipristinati) {
+        if (datiRipristinati.hasOwnProperty(chiave)) {
+          localStorage.setItem(chiave, datiRipristinati[chiave]);
+        }
+      }
+      
+      // Ricarica la pagina sul telefono
+      window.location.reload();
+    }
+  } catch (err) {
+    alert("Errore: Il testo inserito non è un backup valido. Assicurati di averlo copiato tutto, dalla prima all'ultima lettera.");
+  }
+});
   
 </script>
 </body>
