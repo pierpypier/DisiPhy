@@ -485,6 +485,75 @@ function calInit(){
   calRenderEventsForSelectedDay();
 }
 calInit();
+
+// ==========================================================
+//   BACKUP COPIA/INCOLLA 100% AUTOMATICO E ISOLATO (UNIVERSALE)
+// ==========================================================
+
+// --- FUNZIONE DI SALVATAGGIO ---
+document.getElementById('exportBtn').addEventListener('click', () => {
+  // Controlla se la chiave del planner esiste nella pagina
+  const chiaveReale = typeof LS_KEY !== 'undefined' ? LS_KEY : null;
+  
+  if (!chiaveReale) {
+    alert("❌ Errore: Impossibile trovare la chiave di memoria (LS_KEY) in questa pagina.");
+    return;
+  }
+
+  // Prende i dati aggiornati direttamente dallo 'state' della pagina
+  const datiAttuali = typeof state !== 'undefined' ? JSON.stringify(state) : '{"items":[]}';
+  
+  // Creiamo il pacchetto di backup con il suo marchio di fabbrica
+  const pacchettoBackup = {
+    identificativoPagina: chiaveReale,
+    dati: datiAttuali
+  };
+  
+  prompt(
+    `👉 BACKUP PRONTO PER: [${chiaveReale.toUpperCase()}]\n\nCopia questo testo e incollalo nel tuo Foglio Google.`, 
+    JSON.stringify(pacchettoBackup)
+  );
+});
+
+// --- FUNZIONE DI CARICAMENTO ---
+document.getElementById('importBtn').addEventListener('click', () => {
+  const testoIncollato = prompt("📂 RIPRISTINO BACKUP PROTETTO:\n\nIncolla qui il testo del backup prelevato dal tuo Foglio Google:");
+  
+  if (!testoIncollato) return;
+
+  try {
+    const backupOggetto = JSON.parse(testoIncollato.trim());
+    const chiaveReale = typeof LS_KEY !== 'undefined' ? LS_KEY : null;
+    
+    if (!backupOggetto.identificativoPagina || !backupOggetto.dati) {
+      alert("Errore: Formato di backup non riconosciuto.");
+      return;
+    }
+
+    // BLOCCO DI SICUREZZA INTER-PAGINA: Evita di caricare il backup della pagina sbagliata
+    if (chiaveReale && backupOggetto.identificativoPagina !== chiaveReale) {
+      alert(`❌ BLOCCO DI SICUREZZA:\n\nQuesto backup appartiene alla pagina "${backupOggetto.identificativoPagina.toUpperCase()}".\nNon puoi caricarlo qui su "${chiaveReale.toUpperCase()}" altrimenti mescoleresti i dati!`);
+      return; 
+    }
+
+    if (confirm(`Confermi il ripristino? I dati di questa pagina verranno sovrascritti. Le altre pagine rimarranno intatte.`)) {
+      // 1. Scrive i dati nel localStorage del browser
+      localStorage.setItem(chiaveReale, backupOggetto.dati);
+      
+      // 2. Aggiorna lo stato interno della pagina per sicurezza
+      if (typeof state !== 'undefined') {
+        state = JSON.parse(backupOggetto.dati);
+      }
+      
+      // 3. Ricarica la pagina per mostrare i dati ripristinati
+      window.location.reload();
+    }
+  } catch (err) {
+    alert("Errore: Il testo inserito non è un backup valido. Assicurati di averlo copiato tutto.");
+  }
+});
+  
+  
 </script>
 </body>
 </html>
