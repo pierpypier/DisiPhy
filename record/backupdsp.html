@@ -12,6 +12,59 @@
         .btn-import { background: #3498db; color: white; }
         textarea { width: 100%; height: 180px; margin-top: 15px; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-family: monospace; font-size: 12px; box-sizing: border-box; resize: vertical; }
         .Info { font-size: 13px; color: #666; margin-bottom: 15px; }
+   
+        /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+        
+    
     </style>
 </head>
 <body>
