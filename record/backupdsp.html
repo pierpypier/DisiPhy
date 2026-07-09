@@ -7,78 +7,39 @@
     <style>
         body { font-family: sans-serif; padding: 20px; text-align: center; background: #f4f4f9; color: #333; }
         .box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 500px; margin: 20px auto; }
-        button { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; }
+        button, .label-file { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; display: block; box-sizing: border-box; }
         .btn-export { background: #2ecc71; color: white; }
         .btn-import { background: #3498db; color: white; }
-        textarea { width: 100%; height: 180px; margin-top: 15px; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-family: monospace; font-size: 12px; box-sizing: border-box; resize: vertical; }
-        .Info { font-size: 13px; color: #666; margin-bottom: 15px; }
+        .label-file { background: #e67e22; color: white; text-align: center; line-height: 1.2; }
+        #fileInput { display: none; } /* Nasconde l'input brutto del browser */
+        textarea { width: 100%; height: 120px; margin-top: 15px; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-family: monospace; font-size: 12px; box-sizing: border-box; resize: vertical; }
+        .info { font-size: 13px; color: #666; margin-bottom: 15px; }
    
         /* stile barra di navigazione */
-.nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 5px 0;
-}
+        .nav { display: flex; justify-content: center; gap: 10px; padding: 5px 0; }
+        .nav-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #000; font-size: 14px; transition: opacity 0.2s ease; }
+        .nav-item img { width: 84px; height: 84px; margin-bottom: 1px; transition: transform 0.2s ease; }
+        .nav-item:hover img { transform: scale(1.05); }
+        .nav-item:hover { opacity: 0.85; }
 
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
-  transition: opacity 0.2s ease;
-}
-
-.nav-item img {
-  width: 84px;
-  height: 84px;
-  margin-bottom: 1px;
-  transition: transform 0.2s ease;
-}
-
-.nav-item:hover img {
-  transform: scale(1.05);
-}
-
-.nav-item:hover {
-  opacity: 0.85;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .nav {
-    gap: 10px;
-  }
-
-  .nav-item img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .nav-item span {
-    font-size: 12px;
-  }
-}
-    
-    /* fine stile barra di navigazione */
-        
-    
+        @media (max-width: 600px) {
+          .nav { gap: 10px; }
+          .nav-item img { width: 60px; height: 60px; }
+          .nav-item span { font-size: 12px; }
+        }
     </style>
 </head>
 <body>
 
-<!-- barra navigazione -->
 <nav class="nav">
-<a href="organizer4.html" class="nav-item">
+  <a href="organizer4.html" class="nav-item">
     <img src="rimage/orga4.png" alt="Organizer">
     <span> NOTE </span>
   </a>
-    <a href="caldsp.html" class="nav-item">
+  <a href="caldsp.html" class="nav-item">
     <img src="rimage/calicon.png" alt="Calendario dsp">
     <span> DATE </span>
-    </a>
+  </a>
   <a href="check01.html" class="nav-item">
     <img src="rimage/check02.png" alt="Checklist">
     <span>LISTE</span>
@@ -92,24 +53,28 @@
     <span> ADD </span>
   </a>
 </nav>
-<!-- fine barra navigazione -->    
-
-    
 <div class="box">
     <h2>🔒 Backup Globale</h2>
-    <p class="info">Fai un backup totale dei dati</p>
+    <p class="info">Fai un backup totale dei dati senza limiti di spazio</p>
     
-    <button class="btn-export" id="exportAll">💾 1. GENERA BACKUP TOTALE</button>
+    <button class="btn-export" id="exportAll">💾 1. SCARICA FILE BACKUP (.TXT)</button>
     
-    <textarea id="boxTesto" placeholder="Il testo del backup apparirà qui dopo aver cliccato Genera... Oppure incolla qui un vecchio backup per ripristinarlo."></textarea>
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
     
-    <button class="btn-import" id="importAll">📂 2. RIPRISTINA IL TESTO SOPRA</button>
+    <label for="fileInput" class="label-file">📂 2A. SELEZIONA FILE BACKUP (.TXT)</label>
+    <input type="file" id="fileInput" accept=".txt">
+
+    <p style="font-size: 12px; margin: 5px 0; font-weight: bold; color: #999;">— OPPURE —</p>
+
+    <textarea id="boxTesto" placeholder="Incolla qui il testo del backup se lo hai salvato come stringa..."></textarea>
+    <button class="btn-import" id="importAll">📂 2B. RIPRISTINA DA TESTO SOPRA</button>
 </div>
 
 <script>
 const areaTesto = document.getElementById('boxTesto');
+const fileInput = document.getElementById('fileInput');
 
-// --- ESPORTAZIONE GLOBALE SICURA ---
+// --- 1. FUNZIONE ESPORTAZIONE CON FILE .TXT (BYPASS CLIPBOARD) ---
 document.getElementById('exportAll').addEventListener('click', () => {
   const tuttoIlDatabase = {};
   
@@ -118,45 +83,75 @@ document.getElementById('exportAll').addEventListener('click', () => {
     tuttoIlDatabase[chiave] = localStorage.getItem(chiave);
   }
   
-  // Scrive il codice direttamente nella scatola di testo gigante
-  areaTesto.value = JSON.stringify(tuttoIlDatabase);
-  areaTesto.select();
-  areaTesto.setSelectionRange(0, 99999); // Forza la selezione totale su smartphone
+  const stringaTotale = JSON.stringify(tuttoIlDatabase);
   
-  alert("✅ Backup calcolato con successo nella casella qui sotto!\n\nTocca il testo nella casella, selezionalo TUTTO, copialo e salvalo sul tuo Foglio Google.");
+  // Mostra comunque l'inizio nella textarea per feedback visivo
+  areaTesto.value = stringaTotale;
+  
+  // Creiamo il file al volo in memoria
+  const blob = new Blob([stringaTotale], { type: 'text/plain;charset=utf-8' });
+  const downloadLink = document.createElement('a');
+  
+  // Generiamo un nome file pulito con la data di oggi
+  const dataOggi = new Date().toISOString().slice(0, 10);
+  downloadLink.download = `backup_agenda_completo_${dataOggi}.txt`;
+  downloadLink.href = window.URL.createObjectURL(blob);
+  downloadLink.style.display = 'none';
+  
+  document.body.appendChild(downloadLink);
+  downloadLink.click(); // Forza il browser a scaricare il file
+  document.body.removeChild(downloadLink);
+  
+  alert("✅ FILE SCARICATO!\n\nIl backup totale è stato salvato nei 'Download' del tuo telefono come file .txt.\n\nOra puoi prendere questo file e caricarlo su Google Drive per tenerlo al sicuro!");
 });
 
-// --- IMPORTAZIONE GLOBALE SICURA ---
+// --- 2. FUNZIONE RIPRISTINO DA FILE .TXT ---
+fileInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(evt) {
+    const contenutoFile = evt.target.result.trim();
+    eseguiRipristinoDatabase(contenutoFile);
+  };
+  reader.readAsText(file);
+});
+
+// --- 3. FUNZIONE RIPRISTINO DA TEXTAREA MANUALE ---
 document.getElementById('importAll').addEventListener('click', () => {
   const testoDaCaricare = areaTesto.value.trim();
-  
   if (!testoDaCaricare) {
-    alert("❌ Errore: La casella di testo è vuota! Prima incolla il backup dentro la casella.");
+    alert("❌ Errore: La casella di testo è vuota!");
     return;
   }
+  eseguiRipristinoDatabase(testoDaCaricare);
+});
 
+// --- MOTORE DI RIPRISTINO UNIFICATO E SICURO ---
+function eseguiRipristinoDatabase(stringaJson) {
   try {
-    const databaseRipristinato = JSON.parse(testoDaCaricare);
+    const databaseRipristinato = JSON.parse(stringaJson);
     
-    // Un minimo di controllo per verificare che sia un oggetto valido
     if (typeof databaseRipristinato !== 'object' || databaseRipristinato === null) {
       throw new Error();
     }
     
-    if (confirm("⚠️ ATTENZIONE: Questo rimpiazzerà i dati di tutte le tue decine di pagine sul telefono con quelli scritti nella casella. Confermi?")) {
+    if (confirm("⚠️ ATTENZIONE: Questo rimpiazzerà TUTTI i dati presenti ora sul telefono con quelli del backup. Confermi il ripristino?")) {
       localStorage.clear();
       
       for (const chiave in databaseRipristinato) {
         localStorage.setItem(chiave, databaseRipristinato[chiave]);
       }
       
-      alert("✅ Ripristino Totale Completato con Successo! Riapri le tue pagine per vedere i dati.");
-      areaTesto.value = ""; // Pulisce la casella
+      alert("✅ Ripristino Totale Completato con Successo!\n\nI dati sono stati caricati nel telefono. Riapri le tue pagine per usarli.");
+      areaTesto.value = ""; 
+      fileInput.value = ""; // Resetta l'input file
     }
   } catch (err) {
-    alert("❌ Errore: Il testo nella casella NON è un backup valido. Assicurati di averlo copiato integralmente dal tuo Foglio Google (senza perdere le parentesi graffe iniziali o finali {}).");
+    alert("❌ Errore: I dati non sono validi. Assicurati che il file .txt o il testo incollato non siano corrotti o tagliati.");
   }
-});
+}
 </script>
 
 </body>
