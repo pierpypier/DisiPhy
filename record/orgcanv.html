@@ -30,19 +30,20 @@
 
   /* --- TOOLBAR BLINDATA IN ALTO (ANTI-ZOOM REALE) --- */
   .toolbar-container {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    background: rgba(255, 255, 255, 0.98);
-    padding: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    transform-origin: top left; /* Cruciale per l'allineamento dello zoom */
-    will-change: transform;
+  position: absolute; /* Cambiato a absolute per assecondare perfettamente il visualViewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Copre la larghezza totale visiva iniziale */
+  max-width: 100%;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transform-origin: top left; /* Mantiene l'ancoraggio nell'angolo in alto a sinistra */
+  will-change: transform;
   }
 
   .toolbar-row {
@@ -372,18 +373,20 @@
   const toolbarContainer = document.querySelector('.toolbar-container');
 
   function keepToolbarFixedTop() {
-    if (!window.visualViewport) return;
-    
-    const vv = window.visualViewport;
-    const scale = 1 / vv.scale;
-    
-    // Calcoliamo la posizione ancorata rigorosamente all'angolo in alto a sinistra della visuale corrente
-    const x = vv.offsetLeft;
-    const y = vv.pageTop;
-    
-    // Spostiamo la barra e la ridimensioniamo inversamente allo zoom per lasciarla IMMOBILE all'occhio umano
-    toolbarContainer.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
-    toolbarContainer.style.width = `${vv.width}px`; // Si adatta alla larghezza dello schermo zoomato
+  if (!window.visualViewport) return;
+  
+  const vv = window.visualViewport;
+  const scale = 1 / vv.scale;
+  
+  // Posizionamento millimetrico sull'origine della vista zoomata
+  const x = vv.offsetLeft;
+  const y = vv.pageTop;
+  
+  // Applica lo spostamento e contrasta lo zoom (scale) in un colpo solo
+  toolbarContainer.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  
+  // Forza la larghezza a resettarsi sui pixel reali visibili in quel momento
+  toolbarContainer.style.width = `${vv.width}px`; 
   }
 
   if (window.visualViewport) {
