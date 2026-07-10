@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Organizer — Lavagna</title>
+<title>Organizer — Lavagna PRO</title>
 <style>
   :root {
     --cal-bg: #f7f7fb;
@@ -20,8 +20,8 @@
     margin: 16px;
     background: var(--cal-bg);
     color: #111;
-    padding-top: 5px; /* Ridotto il padding in alto */
-    padding-bottom: 90px; /* Aggiunto spazio in basso per non coprire la lavagna con la barra */
+    padding-top: 5px;
+    padding-bottom: 160px; /* Spazio in basso calcolato per evitare sovrapposizioni con la barra doppia */
   }
 
    /* stile barra di navigazione */
@@ -49,42 +49,25 @@
     transition: transform 0.2s ease;
   }
 
-  .nav-item:hover img {
-    transform: scale(1.05);
-  }
+  .nav-item:hover img { transform: scale(1.05); }
+  .nav-item:hover { opacity: 0.85; }
 
-  .nav-item:hover {
-    opacity: 0.85;
-  }
-
-  /* Responsive */
   @media (max-width: 600px) {
-    .nav {
-      gap: 10px;
-    }
-    .nav-item img {
-      width: 60px;
-      height: 60px;
-    }
-    .nav-item span {
-      font-size: 12px;
-    }
+    .nav { gap: 10px; }
+    .nav-item img { width: 60px; height: 60px; }
+    .nav-item span { font-size: 12px; }
   }
     
   /* Contenitore Principale */
   .container { max-width: 980px; width: 100%; margin: 0 auto; }
-  .card { background: var(--cal-card); border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.06); margin-bottom: 20px; text-align: center; }
+  .card { background: var(--cal-card); border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.06); margin-bottom: 20px; text-align: center; position: relative; }
 
-  /* Intestazione e Toolbar in Basso */
-  .header h1 { font-size: 22px; color: #155a8a; margin: 0 0 15px 0; }
-  
-  .toolbar {
+  /* CONTENITORE UNICO BARRE STRUMENTI (Gestito da JS in absolute per anti-zoom) */
+  .toolbar-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    
-    /* --- REGOLE PER IL BLOCCO ANTI-ZOOM IN BASSO --- */
     position: absolute;
     top: 0;
     left: 0;
@@ -93,25 +76,52 @@
     background: rgba(255, 255, 255, 0.95); 
     padding: 15px 10px; /* Leggermente più alta per comodità col dito */
     box-shadow: 0 -4px 10px rgba(0,0,0,0.15); /* Ombra verso l'alto */
-    
     transform-origin: top left;
     will-change: transform;
   }
+
+  .toolbar-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Palette Colori */
+  .color-picker {
+    display: flex;
+    gap: 12px;
+    margin-right: 10px;
+  }
+  .color-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.1s;
+  }
+  .color-dot:hover { transform: scale(1.1); }
+  .color-dot.selected { border-color: #000; box-shadow: 0 0 4px rgba(0,0,0,0.4); transform: scale(1.15); }
+  .color-blue { background: #1e40af; }
+  .color-black { background: #000000; }
+  .color-red { background: #dc2626; }
 
   .btn {
     background: var(--cal-accent);
     color: #fff;
     border: 0;
-    padding: 5px 5px;
+    padding: 6px 10px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     transition: opacity 0.2s;
   }
   .btn:hover { opacity: 0.9; }
   .btn.secondary { background: #edf2f7; color: #4a5568; border: 1px solid #cbd5e0; }
-  .btn.active { box-shadow: 0 0 0 3px rgba(43,108,176, 0.4); outline: none; }
+  .btn.active { background: #2b6cb0; color: white; box-shadow: 0 0 0 3px rgba(43,108,176, 0.4); outline: none; }
   .btn.danger { background: #d9534f; color: #fff; }
 
   /* Area Disegno (Canvas) */
@@ -124,24 +134,20 @@
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
   }
   
-  /* touch-action: none evita che lo schermo scorra mentre si disegna col dito */
   canvas {
     display: block;
     width: 1000px !important;
     height: 1000px !important;
     transform-origin: top left;
     touch-action: none;
-    
-    /* --- SFONDO A QUADRETTI --- */
     background-color: #ffffff; 
     background-image: url('rimage/quadpic.jpg'); 
     background-repeat: repeat; 
   }
 
-  /* Stili per la Stampa PDF */
   @media print {
     body { background: #fff; margin: 0; padding: 0; }
-    .nav, .toolbar, .header h1 { display: none !important; } /* Nasconde menu e tasti */
+    .nav, .toolbar-container { display: none !important; }
     .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
     .card { padding: 0; box-shadow: none; border: none; }
     .canvas-container { border: none; box-shadow: none; }
@@ -150,16 +156,15 @@
 </head>
 <body>
 
-<!-- barra navigazione -->
 <nav class="nav">
-<a href="organizer4.html" class="nav-item">
+  <a href="organizer4.html" class="nav-item">
     <img src="rimage/orga4.png" alt="Organizer">
     <span> NOTE </span>
   </a>
-    <a href="caldsp.html" class="nav-item">
+  <a href="caldsp.html" class="nav-item">
     <img src="rimage/calicon.png" alt="Calendario dsp">
     <span> DATE </span>
-    </a>
+  </a>
   <a href="check01.html" class="nav-item">
     <img src="rimage/check02.png" alt="Checklist">
     <span>LISTE</span>
@@ -173,23 +178,36 @@
     <span> ADD </span>
   </a>
 </nav>
-<!-- fine barra navigazione -->
 
-  <div class="card">
-    <header class="header"></header>
+<div class="card">
+  <div class="canvas-container">
+    <canvas id="board" width="1000" height="1000"></canvas>
+  </div>
 
-    <div class="canvas-container">
-      <canvas id="board" width="1000" height="1000" style="touch-action: none"></canvas>
+  <div class="toolbar-container">
+    
+    <div class="toolbar-row">
+      <div class="color-picker">
+        <div class="color-dot color-blue selected" data-color="#1e40af"></div>
+        <div class="color-dot color-black" data-color="#000000"></div>
+        <div class="color-dot color-red" data-color="#dc2626"></div>
+      </div>
+      
+      <button id="toolDraw" class="btn active">✏️</button>
+      <button id="toolLine" class="btn secondary">📏</button>
+      <button id="toolRect" class="btn secondary">⬜ </button>
+      <button id="toolCircle" class="btn secondary">⭕</button>
     </div>
 
-    <div class="toolbar">
-      <button id="btnDraw" class="btn active">✏️</button>
-      <button id="btnErase" class="btn secondary">🧽</button>
+    <div class="toolbar-row">
+            <button id="btnErase" class="btn secondary">🧽</button>
       <button id="btnNone" class="btn secondary">✋</button>
       <button id="btnClear" class="btn danger">🗑️</button>
       <button id="btnPrint" class="btn secondary" style="margin-left: auto;">🖨️</button>
     </div>
+
   </div>
+</div>
 
 <script>
   const canvas = document.getElementById('board');
@@ -197,14 +215,27 @@
   
   const LS_KEY = 'organizer_lavagna_v1';
   
+  // Riferimenti Pulsanti Macro
   const btnDraw = document.getElementById('btnDraw');
   const btnErase = document.getElementById('btnErase');
   const btnNone = document.getElementById('btnNone');
   const btnClear = document.getElementById('btnClear');
   const btnPrint = document.getElementById('btnPrint');
 
+  // Riferimenti Pulsanti Sotto-Forme
+  const toolDraw = document.getElementById('toolDraw');
+  const toolLine = document.getElementById('toolLine');
+  const toolRect = document.getElementById('toolRect');
+  const toolCircle = document.getElementById('toolCircle');
+
   let isDrawing = false;
-  let currentMode = 'draw'; 
+  let currentMode = 'draw';      
+  let currentShape = 'free';     
+  let currentColor = '#1e40af';   
+  
+  let startX = 0;
+  let startY = 0;
+  let snapshot = null;
 
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
@@ -247,10 +278,24 @@
     
     isDrawing = true;
     const pos = getCoordinates(e);
+    startX = pos.x;
+    startY = pos.y;
     
+    if (currentMode === 'draw') {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = currentColor; 
+      ctx.lineWidth = 3; 
+    } else {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 25; 
+    }
+
+    if(currentMode === 'draw' && currentShape !== 'free') {
+      snapshot = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    }
+
     ctx.beginPath();
-    ctx.moveTo(pos.x, pos.y);
-    draw(e); 
+    ctx.moveTo(startX, startY);
   }
 
   function endPosition(e) {
@@ -260,29 +305,38 @@
     saveCanvas(); 
   }
 
- function draw(e) {
+  function draw(e) {
     if (!isDrawing || currentMode === 'none') return;
     if (e.type === 'touchmove') e.preventDefault();
     
     const pos = getCoordinates(e);
 
-    if (currentMode === 'draw') {
-      ctx.globalCompositeOperation = 'source-over';
-      ctx.strokeStyle = '#1e40af'; 
-      ctx.lineWidth = 2;           // ✏️ LINEA SOTTILE (Modifica solo questo numero)
+    if (currentMode === 'erase' || currentShape === 'free') {
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(pos.x, pos.y);
     } else {
-      ctx.globalCompositeOperation = 'destination-out';
-      ctx.lineWidth = 20;          // 🧽 GRANDEZZA GOMMA
+      if(snapshot) ctx.putImageData(snapshot, 0, 0);
+      ctx.beginPath();
+      
+      if (currentShape === 'line') {
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(pos.x, pos.y);
+      } 
+      else if (currentShape === 'rect') {
+        const width = pos.x - startX;
+        const height = pos.y - startY;
+        ctx.rect(startX, startY, width, height);
+      } 
+      else if (currentShape === 'circle') {
+        const radius = Math.sqrt(Math.pow(pos.x - startX, 2) + Math.pow(pos.y - startY, 2));
+        ctx.arc(startX, startY, radius, 0, 2 * Math.PI);
+      }
+      ctx.stroke();
     }
-
-    ctx.lineTo(pos.x, pos.y);
-    ctx.stroke();
-    
-    ctx.beginPath();
-    ctx.moveTo(pos.x, pos.y);
   }
 
-  
   canvas.addEventListener('mousedown', startPosition);
   canvas.addEventListener('mousemove', draw);
   canvas.addEventListener('mouseup', endPosition);
@@ -295,12 +349,10 @@
 
   function setActiveTool(mode, activeBtn) {
     currentMode = mode;
-    
     [btnDraw, btnErase, btnNone].forEach(btn => {
       btn.classList.remove('active');
       btn.classList.add('secondary');
     });
-    
     activeBtn.classList.add('active');
     activeBtn.classList.remove('secondary');
 
@@ -317,6 +369,34 @@
   btnErase.addEventListener('click', () => setActiveTool('erase', btnErase));
   btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
 
+  function setActiveShape(shape, activeBtn) {
+    currentShape = shape;
+    [toolDraw, toolLine, toolRect, toolCircle].forEach(btn => {
+      btn.classList.remove('active');
+      btn.classList.add('secondary');
+    });
+    activeBtn.classList.add('active');
+    activeBtn.classList.remove('secondary');
+    
+    if(currentMode !== 'draw') {
+      setActiveTool('draw', btnDraw);
+    }
+  }
+
+  toolDraw.addEventListener('click', () => setActiveShape('free', toolDraw));
+  toolLine.addEventListener('click', () => setActiveShape('line', toolLine));
+  toolRect.addEventListener('click', () => setActiveShape('rect', toolRect));
+  toolCircle.addEventListener('click', () => setActiveShape('circle', toolCircle));
+
+  document.querySelectorAll('.color-dot').forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+      e.target.classList.add('selected');
+      currentColor = e.target.getAttribute('data-color');
+      if(currentMode !== 'draw') setActiveTool('draw', btnDraw);
+    });
+  });
+
   btnClear.addEventListener('click', () => {
     if (confirm("Vuoi cancellare tutto il disegno?")) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -328,8 +408,8 @@
     window.print();
   });
 
-  // --- BLOCCO ANTI-ZOOM PER LA BARRA STRUMENTI IN BASSO ---
-  const toolbar = document.querySelector('.toolbar');
+  // --- INTERCETTORE ANTI-ZOOM BLINDATO SUL FONDO ---
+  const toolbarContainer = document.querySelector('.toolbar-container');
 
   function keepToolbarFixed() {
     if (!window.visualViewport) return;
@@ -338,20 +418,24 @@
     const scale = 1 / vv.scale;
     
     const x = vv.offsetLeft;
-    // La formula ora calcola il fondo dello schermo anziché la cima!
-    const y = vv.pageTop + vv.height - (toolbar.offsetHeight * scale);
+    const y = vv.pageTop + vv.height - (toolbarContainer.getBoundingClientRect().height * scale);
     
-    toolbar.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+    toolbarContainer.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
   }
 
   if (window.visualViewport) {
     window.visualViewport.addEventListener('scroll', keepToolbarFixed);
     window.visualViewport.addEventListener('resize', keepToolbarFixed);
-    keepToolbarFixed();
+    setTimeout(keepToolbarFixed, 100); // Ritardo di sicurezza per il calcolo delle altezze
   }
 
   window.addEventListener('load', loadCanvas);
-
 </script>
 </body>
-</html>
+  </html>
+
+
+
+
+
+ 
