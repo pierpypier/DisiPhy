@@ -21,7 +21,7 @@
     background: var(--cal-bg);
     color: #111;
     padding-top: 5px;
-    padding-bottom: 140px; /* Aumentato lo spazio per non coprire i nuovi controlli */
+    padding-bottom: 160px; /* Spazio in basso calcolato per evitare sovrapposizioni con la barra doppia */
   }
 
    /* stile barra di navigazione */
@@ -62,13 +62,10 @@
   .container { max-width: 980px; width: 100%; margin: 0 auto; }
   .card { background: var(--cal-card); border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.06); margin-bottom: 20px; text-align: center; position: relative; }
 
-  /* Intestazione e Toolbar in Basso */
-  .header h1 { font-size: 22px; color: #155a8a; margin: 0 0 15px 0; }
-  
-  /* CONTENITORE UNICO BARRE STRUMENTI (Fisso in basso) */
+  /* CONTENITORE UNICO BARRE STRUMENTI (Gestito da JS in absolute per anti-zoom) */
   .toolbar-container {
-    position: fixed;
-    bottom: 0;
+    position: absolute; 
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 9999;
@@ -78,7 +75,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    transform-origin: bottom center;
+    transform-origin: top left; 
     will-change: transform;
   }
 
@@ -149,7 +146,7 @@
 
   @media print {
     body { background: #fff; margin: 0; padding: 0; }
-    .nav, .toolbar-container, .header h1 { display: none !important; }
+    .nav, .toolbar-container { display: none !important; }
     .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
     .card { padding: 0; box-shadow: none; border: none; }
     .canvas-container { border: none; box-shadow: none; }
@@ -218,29 +215,26 @@
   
   const LS_KEY = 'organizer_lavagna_v1';
   
-  // Pulsanti Macro-Modalità
+  // Riferimenti Pulsanti Macro
   const btnDraw = document.getElementById('btnDraw');
   const btnErase = document.getElementById('btnErase');
   const btnNone = document.getElementById('btnNone');
   const btnClear = document.getElementById('btnClear');
   const btnPrint = document.getElementById('btnPrint');
 
-  // Pulsanti Forme Geometriche
+  // Riferimenti Pulsanti Sotto-Forme
   const toolDraw = document.getElementById('toolDraw');
   const toolLine = document.getElementById('toolLine');
   const toolRect = document.getElementById('toolRect');
   const toolCircle = document.getElementById('toolCircle');
 
   let isDrawing = false;
-  let currentMode = 'draw';      // 'draw', 'erase', 'none'
-  let currentShape = 'free';     // 'free', 'line', 'rect', 'circle'
-  let currentColor = '#1e40af';   // Colore di default (Blu)
+  let currentMode = 'draw';      
+  let currentShape = 'free';     
+  let currentColor = '#1e40af';   
   
-  // Coordinate di inizio per le forme geometriche
   let startX = 0;
   let startY = 0;
-  
-  // Immagine d'appoggio per memorizzare lo stato prima di tracciare la forma scalabile
   let snapshot = null;
 
   ctx.lineCap = 'round';
@@ -287,17 +281,15 @@
     startX = pos.x;
     startY = pos.y;
     
-    // Configura lo stile del tratto
     if (currentMode === 'draw') {
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = currentColor; 
-      ctx.lineWidth = 3; // Un po' più visibile
+      ctx.lineWidth = 3; 
     } else {
       ctx.globalCompositeOperation = 'destination-out';
       ctx.lineWidth = 25; 
     }
 
-    // Se stiamo disegnando una forma geometrica, facciamo una foto al canvas corrente
     if(currentMode === 'draw' && currentShape !== 'free') {
       snapshot = ctx.getImageData(0, 0, canvas.width, canvas.height);
     }
@@ -320,39 +312,31 @@
     const pos = getCoordinates(e);
 
     if (currentMode === 'erase' || currentShape === 'free') {
-      // DISEGNO LIBERO O GOMMA STANDARD
       ctx.lineTo(pos.x, pos.y);
       ctx.stroke();
       ctx.beginPath();
       ctx.moveTo(pos.x, pos.y);
     } else {
-      // DISEGNO DI FORME SCALABILI (Ripristina la foto e ricalcola la forma allungata)
       if(snapshot) ctx.putImageData(snapshot, 0, 0);
-      
       ctx.beginPath();
       
       if (currentShape === 'line') {
-        // SEGMENTO STRAIGHT
         ctx.moveTo(startX, startY);
         ctx.lineTo(pos.x, pos.y);
       } 
       else if (currentShape === 'rect') {
-        // RETTANGOLO
         const width = pos.x - startX;
         const height = pos.y - startY;
         ctx.rect(startX, startY, width, height);
       } 
       else if (currentShape === 'circle') {
-        // CERCHIO (Raggio basato sulla distanza)
         const radius = Math.sqrt(Math.pow(pos.x - startX, 2) + Math.pow(pos.y - startY, 2));
         ctx.arc(startX, startY, radius, 0, 2 * Math.PI);
       }
-      
       ctx.stroke();
     }
   }
 
-  // Eventi Mouse e Touch Unificati
   canvas.addEventListener('mousedown', startPosition);
   canvas.addEventListener('mousemove', draw);
   canvas.addEventListener('mouseup', endPosition);
@@ -363,15 +347,12 @@
   canvas.addEventListener('touchend', endPosition);
   canvas.addEventListener('touchcancel', endPosition);
 
-  // Gestione Macro Strumenti (Disegno, Gomma, Sposta)
   function setActiveTool(mode, activeBtn) {
     currentMode = mode;
-    
     [btnDraw, btnErase, btnNone].forEach(btn => {
       btn.classList.remove('active');
       btn.classList.add('secondary');
     });
-    
     activeBtn.classList.add('active');
     activeBtn.classList.remove('secondary');
 
@@ -388,7 +369,6 @@
   btnErase.addEventListener('click', () => setActiveTool('erase', btnErase));
   btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
 
-  // Gestione Sotto-Forme (Libero, Linea, Rettangolo, Cerchio)
   function setActiveShape(shape, activeBtn) {
     currentShape = shape;
     [toolDraw, toolLine, toolRect, toolCircle].forEach(btn => {
@@ -398,7 +378,6 @@
     activeBtn.classList.add('active');
     activeBtn.classList.remove('secondary');
     
-    // Se selezioni una forma, ti sposta in automatico in modalità Disegno se eri su Sposta o Gomma
     if(currentMode !== 'draw') {
       setActiveTool('draw', btnDraw);
     }
@@ -409,14 +388,11 @@
   toolRect.addEventListener('click', () => setActiveShape('rect', toolRect));
   toolCircle.addEventListener('click', () => setActiveShape('circle', toolCircle));
 
-  // Gestione Cambio Colore Cambio immediato
   document.querySelectorAll('.color-dot').forEach(dot => {
     dot.addEventListener('click', (e) => {
       document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
       e.target.classList.add('selected');
       currentColor = e.target.getAttribute('data-color');
-      
-      // Riporta in automatico a disegno se stavi usando la gomma
       if(currentMode !== 'draw') setActiveTool('draw', btnDraw);
     });
   });
@@ -432,7 +408,7 @@
     window.print();
   });
 
-  // --- BLOCCO ANTI-ZOOM AGGIORNATO PER IL PACCHETTO COMPLETO IN BASSO ---
+  // --- INTERCETTORE ANTI-ZOOM BLINDATO SUL FONDO ---
   const toolbarContainer = document.querySelector('.toolbar-container');
 
   function keepToolbarFixed() {
@@ -442,7 +418,7 @@
     const scale = 1 / vv.scale;
     
     const x = vv.offsetLeft;
-    const y = vv.pageTop + vv.height - (toolbarContainer.offsetHeight * scale);
+    const y = vv.pageTop + vv.height - (toolbarContainer.getBoundingClientRect().height * scale);
     
     toolbarContainer.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
   }
@@ -450,10 +426,10 @@
   if (window.visualViewport) {
     window.visualViewport.addEventListener('scroll', keepToolbarFixed);
     window.visualViewport.addEventListener('resize', keepToolbarFixed);
-    keepToolbarFixed();
+    setTimeout(keepToolbarFixed, 100); // Ritardo di sicurezza per il calcolo delle altezze
   }
 
   window.addEventListener('load', loadCanvas);
 </script>
 </body>
-      </html>
+  </html>
