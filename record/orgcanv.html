@@ -75,6 +75,28 @@
   .container { max-width: 980px; width: 100%; margin: 0 auto; }
   .card { background: var(--cal-card); border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.06); margin-bottom: 20px; text-align: center; }
 
+  /* --- STILE PALETTE COLORI (Chirurgico e statico) --- */
+  .color-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 12px;
+  }
+  .color-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.1s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .color-dot:hover { transform: scale(1.1); }
+  .color-dot.selected { border-color: #000; box-shadow: 0 0 5px rgba(0,0,0,0.4); transform: scale(1.15); }
+  .color-blue { background: #1e40af; } /* Il blu originale del tuo tratto */
+  .color-black { background: #000000; }
+  .color-red { background: #dc2626; }
+
   /* Intestazione e Toolbar in Basso */
   .header h1 { font-size: 22px; color: #155a8a; margin: 0 0 15px 0; }
   
@@ -141,7 +163,7 @@
   /* Stili per la Stampa PDF */
   @media print {
     body { background: #fff; margin: 0; padding: 0; }
-    .nav, .toolbar, .header h1 { display: none !important; } /* Nasconde menu e tasti */
+    .nav, .toolbar, .header h1, .color-container { display: none !important; } /* Nasconde menu, tasti e colori */
     .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
     .card { padding: 0; box-shadow: none; border: none; }
     .canvas-container { border: none; box-shadow: none; }
@@ -150,7 +172,6 @@
 </head>
 <body>
 
-<!-- barra navigazione -->
 <nav class="nav">
 <a href="organizer4.html" class="nav-item">
     <img src="rimage/orga4.png" alt="Organizer">
@@ -173,10 +194,14 @@
     <span> ADD </span>
   </a>
 </nav>
-<!-- fine barra navigazione -->
-
-  <div class="card">
+<div class="card">
     <header class="header"></header>
+
+    <div class="color-container">
+      <div class="color-dot color-blue selected" data-color="#1e40af"></div>
+      <div class="color-dot color-black" data-color="#000000"></div>
+      <div class="color-dot color-red" data-color="#dc2626"></div>
+    </div>
 
     <div class="canvas-container">
       <canvas id="board" width="1000" height="1000" style="touch-action: none"></canvas>
@@ -205,6 +230,7 @@
 
   let isDrawing = false;
   let currentMode = 'draw'; 
+  let currentColor = '#1e40af'; // Traccia del colore corrente della matita
 
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
@@ -268,8 +294,8 @@
 
     if (currentMode === 'draw') {
       ctx.globalCompositeOperation = 'source-over';
-      ctx.strokeStyle = '#1e40af'; 
-      ctx.lineWidth = 2;           // ✏️ LINEA SOTTILE (Modifica solo questo numero)
+      ctx.strokeStyle = currentColor;   // Usa la variabile dinamica del colore scelto
+      ctx.lineWidth = 2;           // ✏️ LINEA SOTTILE
     } else {
       ctx.globalCompositeOperation = 'destination-out';
       ctx.lineWidth = 20;          // 🧽 GRANDEZZA GOMMA
@@ -317,6 +343,23 @@
   btnErase.addEventListener('click', () => setActiveTool('erase', btnErase));
   btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
 
+  // --- LOGICA INTERACTION COLORI AGGIUNTA ---
+  document.querySelectorAll('.color-dot').forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      // Aggiorna gli stati grafici della selezione cerchietti
+      document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+      e.target.classList.add('selected');
+      
+      // Cattura il rispettivo valore HEX
+      currentColor = e.target.getAttribute('data-color');
+      
+      // Se si stava usando la gomma, la selezione del colore riporta in modalità matita
+      if (currentMode !== 'draw') {
+        setActiveTool('draw', btnDraw);
+      }
+    });
+  });
+
   btnClear.addEventListener('click', () => {
     if (confirm("Vuoi cancellare tutto il disegno?")) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -351,7 +394,6 @@
   }
 
   window.addEventListener('load', loadCanvas);
-
 </script>
 </body>
 </html>
