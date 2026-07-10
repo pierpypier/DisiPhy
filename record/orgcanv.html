@@ -382,7 +382,7 @@
     
     const x = vv.offsetLeft;
     // La formula ora calcola il fondo dello schermo anziché la cima!
-    const y = vv.pageTop + vv.height - (toolbar.offsetHeight * scale);
+    const y = vv.pageTop;
     
     toolbar.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
   }
