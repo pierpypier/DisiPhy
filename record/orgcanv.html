@@ -20,56 +20,11 @@
     margin: 16px;
     background: var(--cal-bg);
     color: #111;
-    padding-top: 5px; /* Ridotto il padding in alto */
-    padding-bottom: 90px; /* Aggiunto spazio in basso per non coprire la lavagna con la barra */
+    padding-top: 80px; /* Ridotto il padding in alto */
+    padding-bottom: 20px; /* Aggiunto spazio in basso per non coprire la lavagna con la barra */
   }
 
-   /* stile barra di navigazione */
-  .nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 5px 0;
-  }
 
-  .nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
-    transition: opacity 0.2s ease;
-  }
-
-  .nav-item img {
-    width: 84px;
-    height: 84px;
-    margin-bottom: 1px;
-    transition: transform 0.2s ease;
-  }
-
-  .nav-item:hover img {
-    transform: scale(1.05);
-  }
-
-  .nav-item:hover {
-    opacity: 0.85;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    .nav {
-      gap: 10px;
-    }
-    .nav-item img {
-      width: 60px;
-      height: 60px;
-    }
-    .nav-item span {
-      font-size: 12px;
-    }
-  }
     
   /* Contenitore Principale */
   .container { max-width: 980px; width: 100%; margin: 0 auto; }
@@ -114,7 +69,7 @@
     z-index: 9999; 
     background: rgba(255, 255, 255, 0.95); 
     padding: 15px 10px; /* Leggermente più alta per comodità col dito */
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.15); /* Ombra verso l'alto */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Ombra verso l'alto */
     
     transform-origin: top left;
     will-change: transform;
@@ -172,28 +127,7 @@
 </head>
 <body>
 
-<nav class="nav">
-<a href="organizer4.html" class="nav-item">
-    <img src="rimage/orga4.png" alt="Organizer">
-    <span> NOTE </span>
-  </a>
-    <a href="caldsp.html" class="nav-item">
-    <img src="rimage/calicon.png" alt="Calendario dsp">
-    <span> DATE </span>
-    </a>
-  <a href="check01.html" class="nav-item">
-    <img src="rimage/check02.png" alt="Checklist">
-    <span>LISTE</span>
-  </a>
-  <a href="strweb.html" class="nav-item">
-    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
-    <span> WEB </span>
-  </a>
-  <a href="dashconsolle.html" class="nav-item">
-    <img src="rimage/opzioni.png" alt="Opzioni">
-    <span> ADD </span>
-  </a>
-</nav>
+
 <div class="card">
     <header class="header"></header>
 
@@ -213,6 +147,9 @@
       <button id="btnNone" class="btn secondary">✋</button>
       <button id="btnClear" class="btn danger">🗑️</button>
       <button id="btnPrint" class="btn secondary" style="margin-left: auto;">🖨️</button>
+      <div class="color-dot color-blue selected" data-color="#1e40af"></div>
+      <div class="color-dot color-black" data-color="#000000"></div>
+      <div class="color-dot color-red" data-color="#dc2626"></div>
     </div>
   </div>
 
