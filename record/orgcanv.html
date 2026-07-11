@@ -8,38 +8,30 @@
   :root {
     --cal-bg: #f7f7fb;
     --cal-card: #ffffff;
-    --cal-accent: #2b6cb0;
+    --cal-accent: #1e88e5; /* allineato al blu del tema generale dell'app */
     --cal-muted: #666666;
   }
 
   /* Reset */
   *, *::before, *::after { box-sizing: border-box; }
-  
+
   body {
     font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     margin: 8px;
     background: var(--cal-bg);
     color: #111;
-    padding-top: 80px; /* Ridotto il padding in alto */
-    padding-bottom: 20px; /* Aggiunto spazio in basso per non coprire la lavagna con la barra */
+    padding-bottom: 20px;
+    /* padding-top viene impostato dinamicamente in base all'altezza reale della toolbar */
   }
 
-
-    
   /* Contenitore Principale */
   .container { max-width: 1000px; width: 100%; margin: 0 auto; }
   .card { background: var(--cal-card); border-radius: 8px; padding: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.06); margin-bottom: 20px; text-align: center; }
 
-  /* --- STILE PALETTE COLORI (Chirurgico e statico) --- */
-  .color-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 12px;
-  }
+  /* --- Palette colori --- */
   .color-dot {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     cursor: pointer;
     border: 2px solid transparent;
@@ -48,48 +40,69 @@
   }
   .color-dot:hover { transform: scale(1.1); }
   .color-dot.selected { border-color: #000; box-shadow: 0 0 5px rgba(0,0,0,0.4); transform: scale(1.15); }
-  .color-blue { background: #1e40af; } /* Il blu originale del tuo tratto */
+  .color-blue { background: #1e40af; }
   .color-black { background: #000000; }
   .color-red { background: #dc2626; }
 
-  /* Intestazione e Toolbar in Basso */
   .header h1 { font-size: 22px; color: #155a8a; margin: 0 0 15px 0; }
-  
+
+  /* --- Toolbar fissa su 2 righe --- */
   .toolbar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    
-    /* --- REGOLE PER IL BLOCCO ANTI-ZOOM IN BASSO --- */
-    position: absolute;
+    position: fixed;      /* ancorata alla viewport, non al documento */
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999; 
-    background: rgba(255, 255, 255, 0.95); 
-    padding: 15px 10px; /* Leggermente più alta per comodità col dito */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Ombra verso l'alto */
-    
-    transform-origin: top left;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transform-origin: 0 0;
     will-change: transform;
+  }
+
+  .toolbar-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .btn {
     background: var(--cal-accent);
     color: #fff;
     border: 0;
-    padding: 5px 5px;
+    padding: 6px 10px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
     font-size: 16px;
+    line-height: 1;
+    min-width: 40px;
     transition: opacity 0.2s;
   }
   .btn:hover { opacity: 0.9; }
   .btn.secondary { background: #edf2f7; color: #4a5568; border: 1px solid #cbd5e0; }
-  .btn.active { box-shadow: 0 0 0 3px rgba(43,108,176, 0.4); outline: none; }
+  .btn.active { box-shadow: 0 0 0 3px rgba(30,136,229, 0.4); outline: none; }
   .btn.danger { background: #d9534f; color: #fff; }
+  .btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+  .thickness-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #4a5568;
+    background: #edf2f7;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 4px 10px;
+  }
+  .thickness-wrap input[type=range] { width: 90px; }
+  .thickness-wrap span.val { min-width: 14px; text-align: center; font-weight: 600; }
 
   /* Area Disegno (Canvas) */
   .canvas-container {
@@ -99,26 +112,22 @@
     border-radius: 8px;
     background: #ffffff;
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
   }
-  
-  /* touch-action: none evita che lo schermo scorra mentre si disegna col dito */
-  canvas {
+
+  canvas#board {
     display: block;
     width: 1000px !important;
     height: 1000px !important;
-    transform-origin: top left;
     touch-action: none;
-    
-    /* --- SFONDO A QUADRETTI --- */
-    background-color: #ffffff; 
-    background-image: url('rimage/quadpic.jpg'); 
-    background-repeat: repeat; 
+    background-color: #ffffff;
+    background-image: url('rimage/quadpic.jpg');
+    background-repeat: repeat;
   }
 
-  /* Stili per la Stampa PDF */
   @media print {
     body { background: #fff; margin: 0; padding: 0; }
-    .nav, .toolbar, .header h1, .color-container { display: none !important; } /* Nasconde menu, tasti e colori */
+    .toolbar, .header h1 { display: none !important; }
     .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
     .card { padding: 0; box-shadow: none; border: none; }
     .canvas-container { border: none; box-shadow: none; }
@@ -127,44 +136,73 @@
 </head>
 <body>
 
-
-<div class="card">
-    <header class="header"></header>
-
-
-
-    <div class="canvas-container">
-      <canvas id="board" width="1000" height="1000" style="touch-action: none"></canvas>
-    </div>
-
-    <div class="toolbar">
-      <button id="btnprevious" class="btn secondary"><a href="dashconsolle.html">⬅️</a></button>
-      <button id="btnDraw" class="btn active">✏️</button>
-      <button id="btnErase" class="btn secondary">🧽</button>
-      <button id="btnNone" class="btn secondary">✋</button>
-      <button id="btnClear" class="btn danger">🗑️</button>
-      <button id="btnPrint" class="btn secondary" style="margin-left: auto;">🖨️</button>
-      <div class="color-dot color-blue selected" data-color="#1e40af"></div>
-      <div class="color-dot color-black" data-color="#000000"></div>
-      <div class="color-dot color-red" data-color="#dc2626"></div>
+<div class="toolbar">
+  <div class="toolbar-row">
+    <button id="btnprevious" class="btn secondary" title="Indietro">⬅️</button>
+    <button id="btnUndo" class="btn secondary" title="Annulla ultima azione" disabled>↩️</button>
+    <button id="btnDraw" class="btn active" title="Matita">✏️</button>
+    <button id="btnErase" class="btn secondary" title="Gomma">🧽</button>
+    <button id="btnNone" class="btn secondary" title="Sposta / zoom">✋</button>
+    <button id="btnClear" class="btn danger" title="Cancella tutto">🗑️</button>
+    <button id="btnPrint" class="btn secondary" title="Stampa">🖨️</button>
+  </div>
+  <div class="toolbar-row">
+    <button id="btnLine" class="btn secondary" title="Riga">📏</button>
+    <button id="btnRect" class="btn secondary" title="Rettangolo">▭</button>
+    <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
+    <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
+    <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
+    <div class="color-dot color-red" data-color="#dc2626" title="Rosso"></div>
+    <div class="thickness-wrap">
+      <span>Spessore</span>
+      <input type="range" id="thickness" min="1" max="5" step="1" value="2">
+      <span class="val" id="thicknessVal">2</span>
     </div>
   </div>
+</div>
+
+<div class="card">
+  <header class="header"></header>
+
+  <div class="canvas-container">
+    <canvas id="board" width="1000" height="1000"></canvas>
+  </div>
+</div>
 
 <script>
   const canvas = document.getElementById('board');
   const ctx = canvas.getContext('2d');
-  
+
   const LS_KEY = 'organizer_lavagna_v1';
-  
+  const MAX_UNDO = 15;
+
+  const btnprevious = document.getElementById('btnprevious');
+  const btnUndo = document.getElementById('btnUndo');
   const btnDraw = document.getElementById('btnDraw');
   const btnErase = document.getElementById('btnErase');
   const btnNone = document.getElementById('btnNone');
   const btnClear = document.getElementById('btnClear');
   const btnPrint = document.getElementById('btnPrint');
+  const btnLine = document.getElementById('btnLine');
+  const btnRect = document.getElementById('btnRect');
+  const btnCircle = document.getElementById('btnCircle');
+  const thicknessInput = document.getElementById('thickness');
+  const thicknessVal = document.getElementById('thicknessVal');
+  const toolbar = document.querySelector('.toolbar');
+
+  const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnRect, btnCircle];
 
   let isDrawing = false;
-  let currentMode = 'draw'; 
-  let currentColor = '#1e40af'; // Traccia del colore corrente della matita
+  let currentMode = 'draw';
+  let currentColor = '#1e40af';
+  let currentThickness = 2;
+
+  // Usati solo dagli strumenti forma (riga/rettangolo/cerchio) per l'anteprima live
+  let shapeStartPos = null;
+  let savedImageData = null;
+
+  // Stack per l'undo (dataURL PNG)
+  const undoStack = [];
 
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
@@ -187,66 +225,138 @@
     }
   }
 
+  function pushUndo() {
+    try {
+      undoStack.push(canvas.toDataURL('image/png'));
+      if (undoStack.length > MAX_UNDO) undoStack.shift();
+      btnUndo.disabled = false;
+    } catch (err) {
+      // Se per qualche motivo il canvas non è leggibile, l'undo per questo passaggio viene saltato
+    }
+  }
+
+  function undo() {
+    if (undoStack.length === 0) return;
+    const dataURL = undoStack.pop();
+    const img = new Image();
+    img.onload = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0);
+      saveCanvas();
+    };
+    img.src = dataURL;
+    if (undoStack.length === 0) btnUndo.disabled = true;
+  }
+
   function getCoordinates(e) {
     const rect = canvas.getBoundingClientRect();
     const clientX = e.clientX || (e.touches && e.touches[0].clientX);
     const clientY = e.clientY || (e.touches && e.touches[0].clientY);
-    
+
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
-    
+
     return {
       x: (clientX - rect.left) * scaleX,
       y: (clientY - rect.top) * scaleY
     };
   }
 
+  function isShapeMode() {
+    return currentMode === 'line' || currentMode === 'rect' || currentMode === 'circle';
+  }
+
   function startPosition(e) {
-    if(currentMode === 'none') return;
-    if(e.type === 'touchstart') e.preventDefault(); 
-    
+    if (currentMode === 'none') return;
+    if (e.type === 'touchstart') e.preventDefault();
+
     isDrawing = true;
     const pos = getCoordinates(e);
-    
+
+    pushUndo(); // stato salvato PRIMA che parta il tratto/la forma
+
+    if (isShapeMode()) {
+      shapeStartPos = pos;
+      savedImageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      return;
+    }
+
     ctx.beginPath();
     ctx.moveTo(pos.x, pos.y);
-    draw(e); 
+    draw(e);
   }
 
   function endPosition(e) {
     if (!isDrawing) return;
     isDrawing = false;
-    ctx.closePath();
-    saveCanvas(); 
+
+    if (isShapeMode()) {
+      shapeStartPos = null;
+      savedImageData = null;
+    } else {
+      ctx.closePath();
+    }
+    saveCanvas();
   }
 
- function draw(e) {
+  function draw(e) {
     if (!isDrawing || currentMode === 'none') return;
     if (e.type === 'touchmove') e.preventDefault();
-    
+
     const pos = getCoordinates(e);
 
     if (currentMode === 'draw') {
       ctx.globalCompositeOperation = 'source-over';
-      ctx.strokeStyle = currentColor;   // Usa la variabile dinamica del colore scelto
-      ctx.lineWidth = 2;           // ✏️ LINEA SOTTILE
-    } else {
-      ctx.globalCompositeOperation = 'destination-out';
-      ctx.lineWidth = 20;          // 🧽 GRANDEZZA GOMMA
-    }
+      ctx.strokeStyle = currentColor;
+      ctx.lineWidth = currentThickness;
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(pos.x, pos.y);
 
-    ctx.lineTo(pos.x, pos.y);
-    ctx.stroke();
-    
-    ctx.beginPath();
-    ctx.moveTo(pos.x, pos.y);
+    } else if (currentMode === 'erase') {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 20;
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(pos.x, pos.y);
+
+    } else if (isShapeMode()) {
+      if (!shapeStartPos || !savedImageData) return;
+
+      // Ripristina lo stato prima della forma, poi ridisegna l'anteprima:
+      // così la forma "segue il dito" senza lasciare tracce precedenti
+      ctx.putImageData(savedImageData, 0, 0);
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = currentColor;
+      ctx.lineWidth = currentThickness;
+      ctx.beginPath();
+
+      if (currentMode === 'line') {
+        ctx.moveTo(shapeStartPos.x, shapeStartPos.y);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+
+      } else if (currentMode === 'rect') {
+        const w = pos.x - shapeStartPos.x;
+        const h = pos.y - shapeStartPos.y;
+        ctx.strokeRect(shapeStartPos.x, shapeStartPos.y, w, h);
+
+      } else if (currentMode === 'circle') {
+        const dx = pos.x - shapeStartPos.x;
+        const dy = pos.y - shapeStartPos.y;
+        const radius = Math.sqrt(dx * dx + dy * dy);
+        ctx.arc(shapeStartPos.x, shapeStartPos.y, radius, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+    }
   }
 
-  
   canvas.addEventListener('mousedown', startPosition);
   canvas.addEventListener('mousemove', draw);
   canvas.addEventListener('mouseup', endPosition);
-  canvas.addEventListener('mouseleave', endPosition); 
+  canvas.addEventListener('mouseleave', endPosition);
 
   canvas.addEventListener('touchstart', startPosition, { passive: false });
   canvas.addEventListener('touchmove', draw, { passive: false });
@@ -255,20 +365,20 @@
 
   function setActiveTool(mode, activeBtn) {
     currentMode = mode;
-    
-    [btnDraw, btnErase, btnNone].forEach(btn => {
+
+    allModeButtons.forEach(btn => {
       btn.classList.remove('active');
       btn.classList.add('secondary');
     });
-    
+
     activeBtn.classList.add('active');
     activeBtn.classList.remove('secondary');
 
     if (mode === 'none') {
-      canvas.style.touchAction = 'auto'; 
+      canvas.style.touchAction = 'auto';
       canvas.style.cursor = 'grab';
     } else {
-      canvas.style.touchAction = 'none'; 
+      canvas.style.touchAction = 'none';
       canvas.style.cursor = 'crosshair';
     }
   }
@@ -276,26 +386,41 @@
   btnDraw.addEventListener('click', () => setActiveTool('draw', btnDraw));
   btnErase.addEventListener('click', () => setActiveTool('erase', btnErase));
   btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
+  btnLine.addEventListener('click', () => setActiveTool('line', btnLine));
+  btnRect.addEventListener('click', () => setActiveTool('rect', btnRect));
+  btnCircle.addEventListener('click', () => setActiveTool('circle', btnCircle));
 
-  // --- LOGICA INTERACTION COLORI AGGIUNTA ---
+  btnUndo.addEventListener('click', undo);
+
+  btnprevious.addEventListener('click', () => {
+    window.location.href = 'dashconsolle.html';
+  });
+
+  // --- Colori ---
   document.querySelectorAll('.color-dot').forEach(dot => {
     dot.addEventListener('click', (e) => {
-      // Aggiorna gli stati grafici della selezione cerchietti
       document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
       e.target.classList.add('selected');
-      
-      // Cattura il rispettivo valore HEX
       currentColor = e.target.getAttribute('data-color');
-      
-      // Se si stava usando la gomma, la selezione del colore riporta in modalità matita
-      if (currentMode !== 'draw') {
+
+      // Solo se si stava usando la gomma torniamo alla matita;
+      // se si stava usando una forma, restiamo su quella forma col nuovo colore
+      if (currentMode === 'erase') {
         setActiveTool('draw', btnDraw);
       }
     });
   });
 
+  // --- Spessore ---
+  thicknessInput.addEventListener('input', () => {
+    currentThickness = parseInt(thicknessInput.value, 10);
+    thicknessVal.textContent = thicknessInput.value;
+  });
+
+  // --- Cancella tutto ---
   btnClear.addEventListener('click', () => {
     if (confirm("Vuoi cancellare tutto il disegno?")) {
+      pushUndo();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       saveCanvas();
     }
@@ -305,19 +430,19 @@
     window.print();
   });
 
-  // --- BLOCCO ANTI-ZOOM PER LA BARRA STRUMENTI IN BASSO ---
-  const toolbar = document.querySelector('.toolbar');
-
+  // --- Toolbar fissa e a dimensione costante durante il pinch-zoom ---
+  // La toolbar è "position: fixed" (ancorata alla viewport di layout, non al documento).
+  // Il browser, durante il pinch-zoom, ingrandisce anche gli elementi fixed: per
+  // mantenerli a dimensione reale costante applichiamo una scala inversa (1/scale)
+  // e compensiamo lo spostamento (offsetLeft/offsetTop) causato dal pan dello zoom.
   function keepToolbarFixed() {
     if (!window.visualViewport) return;
-    
+
     const vv = window.visualViewport;
     const scale = 1 / vv.scale;
-    
     const x = vv.offsetLeft;
-    // La formula ora calcola il fondo dello schermo anziché la cima!
-    const y = vv.pageTop;
-    
+    const y = vv.offsetTop;
+
     toolbar.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
   }
 
@@ -327,7 +452,17 @@
     keepToolbarFixed();
   }
 
-  window.addEventListener('load', loadCanvas);
+  // La toolbar ora ha 2 righe: calcoliamo lo spazio da lasciare libero in alto
+  // in base alla sua altezza reale, invece di un valore fisso "a occhio"
+  function adjustBodyPadding() {
+    document.body.style.paddingTop = (toolbar.offsetHeight + 10) + 'px';
+  }
+
+  window.addEventListener('load', () => {
+    loadCanvas();
+    adjustBodyPadding();
+  });
+  window.addEventListener('resize', adjustBodyPadding);
 </script>
 </body>
 </html>
