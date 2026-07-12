@@ -187,7 +187,7 @@
     .records-wrap{
       display:flex;
       flex-direction:column;
-      gap:14px;
+      gap:8px;
       margin-bottom:18px;
     }
     .record{
@@ -195,7 +195,7 @@
       margin:0 auto;
       background:var(--card);
       border-radius:12px;
-      padding:14px;
+      padding:8px 14px;
       box-shadow:var(--shadow);
       transition:background 0.2s ease;
     }
@@ -227,7 +227,7 @@
     }
     .desc{
       width:100%;
-      margin-top:10px;
+      margin-top:6px;
       font-size:18px;
       font-weight:700;
       padding:12px;
@@ -244,7 +244,7 @@
     .meta-row{
       display:flex;
       gap:10px;
-      margin-top:10px;
+      margin-top:6px;
       flex-wrap:wrap;
     }
     .input{
@@ -266,7 +266,7 @@
     .flags{
       display:flex;
       gap:12px;
-      margin-top:10px;
+      margin-top:6px;
       flex-wrap:wrap;
     }
     .flag{
@@ -284,12 +284,12 @@
       border:none;
       cursor:pointer;
       font-weight:700;
-      margin-top:10px;
+      margin-top:6px;
     }
     .separator{
       height:1px;
       background:#e6e9ef;
-      margin-top:12px;
+      margin-top:8px;
     }
 
     .resizer {
@@ -391,14 +391,24 @@
     background: #ffffff !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    padding: 0;
   }
-  .controls, .delete-btn, .handle, .nav, .control-card, .category-row, .category-label, .category-input, .cat-btn, .cat-btn-all, .delete-btn, .create-btn, .sort-btn, .stampa-btn, #emptyNote {
+  .controls, .delete-btn, .handle, .nav, .control-card, .category-row, .category-label, .category-input, .cat-btn, .cat-btn-all, .create-btn, .sort-btn, .stampa-btn, .resizer, .actions, #emptyNote {
     display: none !important;
   }
-  .item {
+  .records-wrap{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm 6mm;
+  }
+  .record {
     box-shadow: none !important;
     border: 1px solid #cccccc !important;
     page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .img-preview{
+    max-height: 130px;
   }
   .desc {
     border: none !important;
@@ -406,7 +416,8 @@
     box-shadow: none !important;
   }
   @page {
-    margin: 18mm;
+    size: A4;
+    margin: 12mm;
   }
 }
   
@@ -522,6 +533,22 @@ function saveState(){
   localStorage.setItem(LS.records,JSON.stringify(state.records));
 }
 
+let imgSelectTemplate = null;
+function getImgSelectTemplate(){
+  if(imgSelectTemplate) return imgSelectTemplate;
+  const sel = document.createElement("select");
+  sel.className = "select";
+  for(let i=1;i<=999;i++){
+    const n = String(i).padStart(3,"0");
+    const f = `r${n}.jpg`;
+    const o = document.createElement("option");
+    o.value = f; o.textContent = f;
+    sel.appendChild(o);
+  }
+  imgSelectTemplate = sel;
+  return imgSelectTemplate;
+}
+
 function buildRecord(rec){
   const wrap=document.createElement("div");
   wrap.className="record";
@@ -550,16 +577,8 @@ function buildRecord(rec){
   });
   top.appendChild(selCat);
 
-  const selImg=document.createElement("select");
-  selImg.className="select";
-  for(let i=1;i<=999;i++){
-    const n=String(i).padStart(3,"0");
-    const f=`r${n}.jpg`;
-    const o=document.createElement("option");
-    o.value=f; o.textContent=f;
-    if(f===rec.image) o.selected=true;
-    selImg.appendChild(o);
-  }
+  const selImg=getImgSelectTemplate().cloneNode(true);
+  selImg.value = rec.image;
   top.appendChild(selImg);
   wrap.appendChild(top);
 
@@ -716,12 +735,45 @@ function render(){
 }
 
 (function(){
+  let active = null; // { textarea, startY, startH }
+  let listenersBound = false;
+
+  function applyHeight(textarea, h){
+    const minH = 40;
+    const maxH = window.innerHeight - 120;
+    const newH = Math.max(minH, Math.min(maxH, h));
+    textarea.style.height = newH + 'px';
+  }
+
+  function bindGlobalListenersOnce(){
+    if(listenersBound) return;
+    listenersBound = true;
+
+    document.addEventListener('mousemove', (ev) => {
+      if(!active) return;
+      const dy = ev.clientY - active.startY;
+      applyHeight(active.textarea, active.startH + dy);
+    });
+    document.addEventListener('mouseup', () => {
+      if(!active) return;
+      active = null;
+      document.documentElement.style.cursor = '';
+    });
+    document.addEventListener('touchmove', (ev) => {
+      if(!active) return;
+      const dy = ev.touches[0].clientY - active.startY;
+      applyHeight(active.textarea, active.startH + dy);
+    }, {passive:false});
+    document.addEventListener('touchend', () => {
+      active = null;
+    });
+  }
+
   function initResizers() {
+    bindGlobalListenersOnce();
+
     const textareas = Array.from(document.querySelectorAll('.desc'));
     textareas.forEach(textarea => {
-      const parent = textarea.parentElement;
-      if(parent && parent.classList.contains('desc-wrapper') && parent.querySelector('.resizer')) return;
-
       let wrapper = textarea.parentElement;
       if(!wrapper || !wrapper.classList.contains('desc-wrapper')){
         wrapper = document.createElement('div');
@@ -742,54 +794,19 @@ function render(){
         textarea.style.height = textarea.scrollHeight + 'px';
       }
 
-      let dragging = false;
-      let startY = 0;
-      let startH = 0;
-
-      function applyHeight(h){
-        const minH = 40;
-        const maxH = window.innerHeight - 120;
-        const newH = Math.max(minH, Math.min(maxH, h));
-        textarea.style.height = newH + 'px';
-      }
+      if(resizer.dataset.bound === '1') return;
+      resizer.dataset.bound = '1';
 
       resizer.addEventListener('mousedown', (ev) => {
         ev.preventDefault();
-        dragging = true;
-        startY = ev.clientY;
-        startH = textarea.getBoundingClientRect().height;
+        active = { textarea, startY: ev.clientY, startH: textarea.getBoundingClientRect().height };
         document.documentElement.style.cursor = 'ns-resize';
-      });
-
-      document.addEventListener('mousemove', (ev) => {
-        if(!dragging) return;
-        const dy = ev.clientY - startY;
-        applyHeight(startH + dy);
-      });
-
-      document.addEventListener('mouseup', () => {
-        if(!dragging) return;
-        dragging = false;
-        document.documentElement.style.cursor = '';
       });
 
       resizer.addEventListener('touchstart', (ev) => {
         ev.preventDefault();
-        dragging = true;
-        startY = ev.touches[0].clientY;
-        startH = textarea.getBoundingClientRect().height;
+        active = { textarea, startY: ev.touches[0].clientY, startH: textarea.getBoundingClientRect().height };
       }, {passive:false});
-
-      document.addEventListener('touchmove', (ev) => {
-        if(!dragging) return;
-        const dy = ev.touches[0].clientY - startY;
-        applyHeight(startH + dy);
-      }, {passive:false});
-
-      document.addEventListener('touchend', () => {
-        if(!dragging) return;
-        dragging = false;
-      });
     });
   }
   window.initResizers = initResizers;
@@ -845,9 +862,15 @@ document.getElementById("controlCard").addEventListener('click', (e) => {
 ["cat1","cat2","cat3"].forEach((id,i)=>{
   const el = document.getElementById(id);
   el.addEventListener('input', () => {
-    state.categories[i+1] = el.value.trim() || `Categoria ${i+1}`;
-    saveState();
-    render();
+    const idx = i+1;
+    const oldVal = state.categories[idx];
+    const newVal = el.value.trim() || `Categoria ${idx}`;
+    if(oldVal !== newVal){
+      state.records.forEach(r => { if(r.category === oldVal) r.category = newVal; });
+      state.categories[idx] = newVal;
+      saveState();
+      render();
+    }
   });
 });
 
