@@ -95,16 +95,18 @@
   .calday.calother-month{opacity:.35}
   .calnum{font-weight:700}
   .calday.calweekend .calnum{color:var(--cal-weekend)}
-  .calflag{position:absolute;top:8px;right:8px;width:10px;height:10px;border-radius:2px;background:var(--cal-flag);box-shadow:0 0 0 3px rgba(255,180,0,.12)}
+  .calday.calhas-event{background:#ffe9a8}
+  .calday.calhas-event .calnum{color:#7a5b00}
   .calevents-count{position:absolute;left:8px;bottom:8px;font-size:12px;color:var(--cal-muted)}
   .calday.calselected{outline:3px solid rgba(43,108,176,.12)}
-  .caltoday-badge{position:absolute;left:8px;top:8px;font-size:11px;background:#e6f0ff;color:var(--cal-accent);padding:2px 6px;border-radius:12px}
+  .calday.caltoday{background:#d6f5dc;border-color:rgba(47,158,68,.25)}
+  .calday.caltoday .calnum{color:var(--cal-completed)}
   .calevents-panel{margin-top:12px;display:flex;gap:12px;align-items:flex-start}
   .calevents-list{flex:1}
-  .calevent{display:flex;align-items:center;gap:8px;padding:8px;border-radius:6px;border:1px solid rgba(0,0,0,.04);margin-bottom:8px;background:#fff}
+  .calevent{display:flex;align-items:center;gap:8px;padding:8px;border-radius:6px;border:1px solid rgba(47,158,68,.15);margin-bottom:8px;background:#eefbf1}
   .calevent .calmeta{flex:1}
   .caltime{font-weight:700;color:var(--cal-muted);margin-right:8px}
-  .calevent.calcompleted{background:linear-gradient(180deg,#e9f7ec,#e6f7ea);border-color:rgba(47,158,68,.12)}
+  .calevent.calcompleted{background:linear-gradient(180deg,#cdf0d7,#c6edd1);border-color:rgba(47,158,68,.3)}
   .caldesc{color:#222}
   .calactions{display:flex;gap:6px}
   .calform{width:320px;padding:12px;border-radius:6px;border:1px solid rgba(0,0,0,.04);background:#fff}
@@ -156,7 +158,10 @@
 
 
           
-        <button id="calTodayBtn" class="calbtn secondary" style="margin:1px 5px 10px 1px">Oggi <div id="calMonthLabel" class="calmonth-title" style="padding:6px 10px;border-radius:6px;background:#f1f5f9; color:#000;">Aprile 2026</div></button>
+        <div style="display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; margin:1px 0 10px 0">
+          <button id="calTodayBtn" class="calbtn secondary">Oggi</button>
+          <div id="calMonthLabel" class="calmonth-title" style="padding:6px 10px;border-radius:6px;background:#f1f5f9; color:#000;">Aprile 2026</div>
+        </div>
         </div>
       <div class="calcontrols">
         <div class="calnav-year-month">
@@ -320,10 +325,7 @@ function calRenderCalendar(){
 
     const today = new Date();
     if(ymdStr === calYmd(today)){
-      const tb = document.createElement('div');
-      tb.className = 'caltoday-badge';
-      tb.textContent = 'Oggi';
-      cell.appendChild(tb);
+      cell.classList.add('caltoday');
     }
 
     const weekdayIndex = (cellDate.getDay() + 6) % 7; // 0..6 Mon..Sun
@@ -331,9 +333,7 @@ function calRenderCalendar(){
 
     const cnt = calEventsCountForDate(ymdStr);
     if(cnt > 0){
-      const flag = document.createElement('div');
-      flag.className = 'calflag';
-      cell.appendChild(flag);
+      cell.classList.add('calhas-event');
       const ec = document.createElement('div');
       ec.className = 'calevents-count';
       ec.textContent = cnt + (cnt === 1 ? ' impegno' : ' impegni');
@@ -359,7 +359,7 @@ function calRenderCalendar(){
 ============================ */
 function calRenderEventsForSelectedDay(){
   const sel = calState.selectedDate || calYmd(new Date());
-  calSelectedDayLabel.textContent = new Date(sel).toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  calSelectedDayLabel.textContent = calParseYMD(sel).toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
   const list = calState.events.filter(e => e.date === sel).sort((a,b) => (a.time||'') > (b.time||'') ? 1 : -1);
   calEventsContainer.innerHTML = '';
   if(list.length === 0){
