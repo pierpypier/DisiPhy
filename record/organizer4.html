@@ -115,7 +115,25 @@
     /* fine stile barra di navigazione */
 
     /* CATEGORIE */
+    .cat-toggle-wrap{
+      display:flex;
+      justify-content:center;
+      margin-bottom:12px;
+    }
+    .cat-toggle-btn{
+      background:#e6eefc;
+      color:var(--accent);
+      border:none;
+      border-radius:10px;
+      padding:10px 20px;
+      font-weight:700;
+      font-size:15px;
+      cursor:pointer;
+      box-shadow:var(--shadow);
+    }
+    .cat-toggle-btn:hover{ filter:brightness(0.97); }
     .control-card{
+      display:none;
       width:100%;
       background:var(--card);
       border-radius:var(--radius);
@@ -123,6 +141,32 @@
       padding:8px;
       margin-bottom:16px;
     }
+    .control-card.open{
+      display:block;
+    }
+    .control-card-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:8px;
+      padding:0 4px;
+    }
+    .control-card-title{
+      font-weight:700;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .hide-btn{
+      background:#eef1f5;
+      color:var(--muted);
+      border:none;
+      border-radius:8px;
+      padding:6px 12px;
+      font-weight:700;
+      cursor:pointer;
+      font-size:13px;
+    }
+    .hide-btn:hover{ filter:brightness(0.96); }
     .category-row{
       display:flex;
       gap:12px;
@@ -393,7 +437,7 @@
     print-color-adjust: exact;
     padding: 0;
   }
-  .controls, .delete-btn, .handle, .nav, .control-card, .category-row, .category-label, .category-input, .cat-btn, .cat-btn-all, .create-btn, .sort-btn, .stampa-btn, .resizer, .actions, #emptyNote {
+  .controls, .delete-btn, .handle, .nav, .control-card, .cat-toggle-wrap, .category-row, .category-label, .category-input, .cat-btn, .cat-btn-all, .create-btn, .sort-btn, .stampa-btn, .resizer, .actions, #emptyNote {
     display: none !important;
   }
   .records-wrap{
@@ -457,8 +501,17 @@
       <div class="small">Gestione Attività</div>
     </div>
 
+    <!-- BOTTONE APERTURA CATEGORIE -->
+    <div class="cat-toggle-wrap">
+      <button id="toggleCategoriesBtn" class="cat-toggle-btn" type="button">☰ Categorie</button>
+    </div>
+
     <!-- CATEGORIE (Modificato con allineamento a destra e input "all" uniforme) -->
     <div class="control-card" id="controlCard">
+      <div class="control-card-header">
+        <span class="control-card-title">Categorie</span>
+        <button id="hideCategoriesBtn" class="hide-btn" type="button">Nascondi ✕</button>
+      </div>
       <div class="category-row">
         
         <input class="category-input" type="text" value="visualizza tutti i record" readonly>
@@ -838,6 +891,14 @@ document.getElementById("sortRecords").addEventListener('click', () => {
   });
   saveState();
   render();
+});
+
+const controlCard = document.getElementById("controlCard");
+document.getElementById("toggleCategoriesBtn").addEventListener('click', () => {
+  controlCard.classList.toggle('open');
+});
+document.getElementById("hideCategoriesBtn").addEventListener('click', () => {
+  controlCard.classList.remove('open');
 });
 
 document.getElementById("controlCard").addEventListener('click', (e) => {
