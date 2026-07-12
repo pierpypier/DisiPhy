@@ -117,8 +117,9 @@
 
   canvas#board {
     display: block;
-    width: 1000px !important;
-    height: 1000px !important;
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 1 / 1;
     touch-action: none;
     background-color: #ffffff;
     background-image: url('rimage/quadpic.jpg');
@@ -140,9 +141,9 @@
   <div class="toolbar-row">
     <button id="btnprevious" class="btn secondary" title="Indietro">⬅️</button>
     <button id="btnUndo" class="btn secondary" title="Annulla ultima azione" disabled>↩️</button>
-    <button id="btnDraw" class="btn active" title="Matita">✏️</button>
+    <button id="btnDraw" class="btn secondary" title="Matita">✏️</button>
     <button id="btnErase" class="btn secondary" title="Gomma">🧽</button>
-    <button id="btnNone" class="btn secondary" title="Sposta / zoom">✋</button>
+    <button id="btnNone" class="btn active" title="Sposta / zoom">✋</button>
     <button id="btnClear" class="btn danger" title="Cancella tutto">🗑️</button>
     <button id="btnPrint" class="btn secondary" title="Stampa">🖨️</button>
   </div>
@@ -159,10 +160,15 @@
       <span class="val" id="thicknessVal">2</span>
     </div>
   </div>
+  <div class="toolbar-row">
+    <button id="btnBgUpload" class="btn secondary" title="Carica sfondo dal dispositivo">🖼️ Sfondo</button>
+    <button id="btnBgReset" class="btn secondary" title="Ripristina sfondo predefinito">♻️ Predefinito</button>
+    <input type="file" id="bgFileInput" accept="image/*" style="display:none">
+  </div>
 </div>
 
 <div class="card">
-  <header class="header"></header>
+  <header class="header"><h1>Lavagna</h1></header>
 
   <div class="canvas-container">
     <canvas id="board" width="1000" height="1000"></canvas>
@@ -193,7 +199,7 @@
   const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnRect, btnCircle];
 
   let isDrawing = false;
-  let currentMode = 'draw';
+  let currentMode = 'none';
   let currentColor = '#1e40af';
   let currentThickness = 2;
 
@@ -250,8 +256,9 @@
 
   function getCoordinates(e) {
     const rect = canvas.getBoundingClientRect();
-    const clientX = e.clientX || (e.touches && e.touches[0].clientX);
-    const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+    const touch = e.touches && e.touches[0];
+    const clientX = touch ? touch.clientX : e.clientX;
+    const clientY = touch ? touch.clientY : e.clientY;
 
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
@@ -390,6 +397,9 @@
   btnRect.addEventListener('click', () => setActiveTool('rect', btnRect));
   btnCircle.addEventListener('click', () => setActiveTool('circle', btnCircle));
 
+  // Sincronizza cursore e touch-action con la modalità iniziale (pan/zoom)
+  setActiveTool('none', btnNone);
+
   btnUndo.addEventListener('click', undo);
 
   btnprevious.addEventListener('click', () => {
@@ -428,6 +438,42 @@
 
   btnPrint.addEventListener('click', () => {
     window.print();
+  });
+
+  // --- Sfondo personalizzato (solo in memoria: mai scritto su localStorage) ---
+  const btnBgUpload = document.getElementById('btnBgUpload');
+  const btnBgReset = document.getElementById('btnBgReset');
+  const bgFileInput = document.getElementById('bgFileInput');
+  let customBgObjectUrl = null;
+
+  btnBgUpload.addEventListener('click', () => bgFileInput.click());
+
+  bgFileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    // Libera l'eventuale URL precedente prima di crearne uno nuovo
+    if (customBgObjectUrl) URL.revokeObjectURL(customBgObjectUrl);
+    customBgObjectUrl = URL.createObjectURL(file);
+
+    // Adatta alla larghezza del contenitore mantenendo le proporzioni dell'immagine
+    canvas.style.backgroundImage = `url('${customBgObjectUrl}')`;
+    canvas.style.backgroundRepeat = 'no-repeat';
+    canvas.style.backgroundSize = '100% auto';
+    canvas.style.backgroundPosition = 'top center';
+
+    bgFileInput.value = ''; // permette di ricaricare lo stesso file in seguito
+  });
+
+  btnBgReset.addEventListener('click', () => {
+    if (customBgObjectUrl) {
+      URL.revokeObjectURL(customBgObjectUrl);
+      customBgObjectUrl = null;
+    }
+    canvas.style.backgroundImage = "url('rimage/quadpic.jpg')";
+    canvas.style.backgroundRepeat = 'repeat';
+    canvas.style.backgroundSize = 'auto';
+    canvas.style.backgroundPosition = '0 0';
   });
 
   // --- Toolbar fissa e a dimensione costante durante il pinch-zoom ---
