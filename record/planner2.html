@@ -307,6 +307,33 @@
     el.style.height = el.scrollHeight + 'px';
   }
 
+  // Stato di drag condiviso: evita di registrare nuovi listener su window ad ogni render
+  let dragState = null; // { div, id, offsetX, offsetY }
+
+  function bindGlobalDragListeners(){
+    window.addEventListener('pointermove', e => {
+      if (!dragState) return;
+      dragState.div.style.left = (e.clientX - dragState.offsetX) + "px";
+      dragState.div.style.top  = (e.clientY - dragState.offsetY) + "px";
+    });
+
+    window.addEventListener('pointerup', () => {
+      if (!dragState) return;
+      const { div, id } = dragState;
+      const index = tessereData.findIndex(item => item.id === id);
+      if (index !== -1) {
+        tessereData[index].left = parseInt(div.style.left);
+        tessereData[index].top = parseInt(div.style.top);
+        const style = window.getComputedStyle(div);
+        tessereData[index].width = style.width;
+        tessereData[index].height = style.height;
+        saveData();
+      }
+      dragState = null;
+    });
+  }
+  bindGlobalDragListeners();
+
   function renderTessere() {
     const layer = document.getElementById('tiles-layer');
     layer.innerHTML = '';
@@ -358,8 +385,8 @@
       // Cambia immagine tramite Prompt nativo a prova di mobile
       editBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        let currentPromptVal = t.imgNum === 'none' ? '' : t.imgNum;
-        let input = prompt("Inserisci il numero dell'immagine (es. 001, 002, 015) oppure scrivi 'none' per solo testo:", currentPromptVal);
+        let currentPromptVal = t.imgNum === 'none' ? '' : `${t.imgNum}.${t.type}`;
+        let input = prompt("Inserisci il numero dell'immagine, con estensione facoltativa jpg/png/gif (es. 001, 015.png, 023.gif) oppure scrivi 'none' per solo testo:", currentPromptVal);
         
         if (input !== null) { // Se l'utente non ha premuto "Annulla"
           let val = input.trim().toLowerCase();
@@ -369,12 +396,19 @@
             tessereData[index].imgNum = 'none';
             tessereData[index].type = 'none';
           } else {
+            // Estrae l'estensione se specificata (jpg, jpeg, png, gif), altrimenti resta jpg di default
+            let ext = 'jpg';
+            const match = val.match(/^(.+)\.(jpg|jpeg|png|gif)$/i);
+            if (match) {
+              val = match[1];
+              ext = match[2].toLowerCase();
+            }
             // Converte input numerici semplici (es: "1" o "12") nel formato a tre cifre "001" o "012"
             if (!isNaN(val) && val.length > 0) {
               val = String(val).padStart(3, '0');
             }
             tessereData[index].imgNum = val;
-            tessereData[index].type = (val === '017') ? 'gif' : 'jpg'; // Gestione eccezione gif
+            tessereData[index].type = ext;
           }
           saveData();
           renderTessere();
@@ -401,35 +435,15 @@
       });
 
       // Logica del Drag & Drop pulita (Funziona ovunque)
-      let dragging = false, offsetX = 0, offsetY = 0;
       div.addEventListener('pointerdown', e => {
         if(e.target.tagName.toLowerCase() === 'textarea' || e.target.classList.contains('tile-btn')) return;
-        
-        dragging = true;
-        offsetX = e.clientX - div.offsetLeft;
-        offsetY = e.clientY - div.offsetTop;
-      });
 
-      window.addEventListener('pointermove', e => {
-        if (!dragging) return;
-        div.style.left = (e.clientX - offsetX) + "px";
-        div.style.top  = (e.clientY - offsetY) + "px";
-      });
-
-      window.addEventListener('pointerup', () => {
-        if (!dragging) return;
-        dragging = false;
-        
-        const index = tessereData.findIndex(item => item.id === t.id);
-        if (index !== -1) {
-          tessereData[index].left = parseInt(div.style.left);
-          tessereData[index].top = parseInt(div.style.top);
-          
-          const style = window.getComputedStyle(div);
-          tessereData[index].width = style.width;
-          tessereData[index].height = style.height;
-          saveData();
-        }
+        dragState = {
+          div,
+          id: t.id,
+          offsetX: e.clientX - div.offsetLeft,
+          offsetY: e.clientY - div.offsetTop
+        };
       });
     });
   }
