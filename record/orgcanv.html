@@ -208,6 +208,9 @@
     <button id="btnLine" class="btn secondary" title="Riga">📏</button>
     <button id="btnRect" class="btn secondary" title="Rettangolo">▭</button>
     <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
+    <!-- NUOVO PULSANTE CALAMITA: Attivo di default (colore blu) -->
+    <button id="btnSnapToggle" class="btn active" title="Attiva/Disattiva Calamita">🧲</button>
+    
     <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
     <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
     <div class="color-dot color-red" data-color="#dc2626" title="Rosso"></div>
@@ -233,18 +236,17 @@
   </div>
 </div>
 
-<!-- Righello Verticale modificato con immagine custom -->
+<!-- Righello Verticale (Immagine custom a scala corretta) -->
 <div id="rulerV" class="ruler ruler-vertical hidden">
   <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
   <img src="rimage/rulev.png" alt="Righello Verticale">
 </div>
 
-<!-- Righello Orizzontale modificato con immagine custom -->
+<!-- Righello Orizzontale (Immagine custom a scala corretta) -->
 <div id="rulerH" class="ruler ruler-horizontal hidden">
   <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
   <img src="rimage/ruleh.png" alt="Righello Orizzontale">
 </div>
-
 <script>
   const canvas = document.getElementById('board');
   const ctx = canvas.getContext('2d');
@@ -262,6 +264,7 @@
   const btnLine = document.getElementById('btnLine');
   const btnRect = document.getElementById('btnRect');
   const btnCircle = document.getElementById('btnCircle');
+  const btnSnapToggle = document.getElementById('btnSnapToggle'); // Riferimento al pulsante calamita
   const thicknessInput = document.getElementById('thickness');
   const thicknessVal = document.getElementById('thicknessVal');
   const toolbar = document.querySelector('.toolbar');
@@ -272,6 +275,7 @@
   let currentMode = 'none';
   let currentColor = '#1e40af';
   let currentThickness = 2;
+  let snapEnabled = true; // Stato iniziale della calamita: attiva
 
   // Usati solo dagli strumenti forma (riga/rettangolo/cerchio) per l'anteprima live
   let shapeStartPos = null;
@@ -313,7 +317,7 @@
       if (undoStack.length > MAX_UNDO) undoStack.shift();
       btnUndo.disabled = false;
     } catch (err) {
-      // Se per qualche motivo il canvas non è leggibile, l'undo per questo passaggio viene saltato
+      // Se per qualche motivo il canvas non è leggibile, l'undo viene saltato
     }
   }
 
@@ -349,7 +353,7 @@
     return currentMode === 'line' || currentMode === 'rect' || currentMode === 'circle';
   }
 
-  // --- Snap ai vertici (solo sessione corrente, nessun salvataggio) ---
+  // --- Snap ai vertici ---
   function addSnapPoint(pt) {
     sessionSnapPoints.push(pt);
     if (sessionSnapPoints.length > 400) sessionSnapPoints.shift();
@@ -415,10 +419,13 @@
   }
 
   function trySnap(pos) {
-    // 1. DISATTIVA LO SNAP se l'utente sta usando la matita a mano libera o la gomma
+    // 1. Se l'utente ha disattivato manualmente la calamita, non fare nulla!
+    if (!snapEnabled) return pos;
+
+    // 2. Disattiva lo snap se l'utente usa la matita a mano libera o la gomma
     if (currentMode === 'draw' || currentMode === 'erase') return pos;
     
-    // 2. Lo snap si attiva solo quando l'utente disegna linee, rettangoli o cerchi
+    // 3. Lo snap si attiva solo quando l'utente disegna linee, rettangoli o cerchi
     if (!isShapeMode()) return pos;
     
     const snapped = findSnapPoint(pos);
@@ -499,8 +506,7 @@
     } else if (isShapeMode()) {
       if (!shapeStartPos || !savedImageData) return;
 
-      // Ripristina lo stato prima della forma, poi ridisegna l'anteprima:
-      // così la forma "segue il dita" senza lasciare tracce precedenti
+      // Ripristina lo stato prima della forma, poi ridisegna l'anteprima
       ctx.putImageData(savedImageData, 0, 0);
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = currentColor;
@@ -573,6 +579,19 @@
     window.location.href = 'dashconsolle.html';
   });
 
+  // --- Evento di attivazione/disattivazione Calamita (Snap) ---
+  btnSnapToggle.addEventListener('click', () => {
+    snapEnabled = !snapEnabled; // Inverte lo stato (true/false)
+    
+    if (snapEnabled) {
+      btnSnapToggle.classList.add('active');
+      btnSnapToggle.classList.remove('secondary');
+    } else {
+      btnSnapToggle.classList.remove('active');
+      btnSnapToggle.classList.add('secondary');
+    }
+  });
+
   // --- Colori ---
   document.querySelectorAll('.color-dot').forEach(dot => {
     dot.addEventListener('click', (e) => {
@@ -580,8 +599,6 @@
       e.target.classList.add('selected');
       currentColor = e.target.getAttribute('data-color');
 
-      // Solo se si stava usando la gomma torniamo alla matita;
-      // se si stava usando una forma, restiamo su quella forma col nuovo colore
       if (currentMode === 'erase') {
         setActiveTool('draw', btnDraw);
       }
@@ -608,7 +625,7 @@
     window.print();
   });
 
-  // --- Sfondo personalizzato (solo in memoria: mai scritto su localStorage) ---
+  // --- Sfondo personalizzato ---
   const btnBgUpload = document.getElementById('btnBgUpload');
   const btnBgReset = document.getElementById('btnBgReset');
   const bgFileInput = document.getElementById('bgFileInput');
@@ -620,17 +637,15 @@
     const file = e.target.files[0];
     if (!file) return;
 
-// Libera l'eventuale URL precedente prima di crearne uno nuovo
     if (customBgObjectUrl) URL.revokeObjectURL(customBgObjectUrl);
     customBgObjectUrl = URL.createObjectURL(file);
 
-    // Adatta alla larghezza del contenitore mantenendo le proporzioni dell'immagine
     canvas.style.backgroundImage = `url('${customBgObjectUrl}')`;
     canvas.style.backgroundRepeat = 'no-repeat';
     canvas.style.backgroundSize = '100% auto';
     canvas.style.backgroundPosition = 'top center';
 
-    bgFileInput.value = ''; // permette di ricaricare lo stesso file in seguito
+    bgFileInput.value = ''; 
   });
 
   btnBgReset.addEventListener('click', () => {
@@ -644,7 +659,7 @@
     canvas.style.backgroundPosition = '0 0';
   });
 
-  // --- Toolbar fissa e a dimensione costante durante il pinch-zoom ---
+  // --- Toolbar fissa durante il pinch-zoom ---
   function keepToolbarFixed() {
     if (!window.visualViewport) return;
 
@@ -662,7 +677,6 @@
     keepToolbarFixed();
   }
 
-  // Calcola lo spazio da lasciare in alto
   function adjustBodyPadding() {
     document.body.style.paddingTop = (toolbar.offsetHeight + 10) + 'px';
   }
@@ -673,7 +687,7 @@
   });
   window.addEventListener('resize', adjustBodyPadding);
 
-  // --- Gestione Righelli (Ottimizzata per immagini custom, rimosso ciclo SVG) ---
+  // --- Gestione Righelli (Uguagliati in larghezza/scala simmetrica) ---
   function initRuler(rulerEl, orientation, getDefaultRect) {
     const rotateHandle = rulerEl.querySelector('.ruler-rotate-handle');
     let angle = 0;
@@ -747,14 +761,15 @@
   const rulerH = document.getElementById('rulerH');
   const btnRuler = document.getElementById('btnRuler');
 
+  // r.width - 20 applicato a entrambi garantisce scala identica al 100%
   const rulerVCtl = initRuler(rulerV, 'vertical', () => {
-  const r = getCanvasContainerRect();
-  return { x: r.left + 8, y: r.top + 10, length: r.width - 20 }; // <-- CAMBIATO IN r.width!
-});
-const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
-  const r = getCanvasContainerRect();
-  return { x: r.left + 10, y: r.top + 8, length: r.width - 20 }; //[cite: 2]
-});
+    const r = getCanvasContainerRect();
+    return { x: r.left + 8, y: r.top + 10, length: r.width - 20 };
+  });
+  const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 10, y: r.top + 8, length: r.width - 20 };
+  });
 
   btnRuler.addEventListener('click', () => {
     const hiddenNow = rulerV.classList.toggle('hidden');
@@ -772,3 +787,5 @@ const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
 </script>
 </body>
 </html>
+
+  
