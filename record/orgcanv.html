@@ -132,7 +132,63 @@
     .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
     .card { padding: 0; box-shadow: none; border: none; }
     .canvas-container { border: none; box-shadow: none; }
+    .ruler, .snap-indicator { display: none !important; }
     @page { size: A4; margin: 10mm; }
+  }
+
+  /* --- Indicatore di aggancio ai vertici --- */
+  .snap-indicator {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #16a34a;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    display: none;
+    z-index: 30;
+  }
+
+  /* --- Righello di riferimento (Immagini png personalizzate) --- */
+  .ruler {
+    position: fixed;
+    z-index: 500;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+  }
+  .ruler.hidden { display: none; }
+  .ruler img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+    object-fit: fill;
+    border: 1px solid #334155;
+    background: rgba(255,255,255,0.88);
+    border-radius: 4px;
+  }
+  .ruler-vertical { width: 42px; height: 70vh; }
+  .ruler-horizontal { height: 42px; width: 70vw; }
+  
+  .ruler-rotate-handle {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #1e88e5;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: grab;
+    box-shadow: 0 2px 4px rgba(0,0,0,.25);
+    touch-action: none;
+    z-index: 510;
   }
 </style>
 </head>
@@ -162,8 +218,9 @@
     </div>
   </div>
   <div class="toolbar-row">
-    <button id="btnBgUpload" class="btn secondary" title="Carica sfondo dal dispositivo">🖼️ Sfondo</button>
-    <button id="btnBgReset" class="btn secondary" title="Ripristina sfondo predefinito">♻️ Predefinito</button>
+    <button id="btnBgUpload" class="btn secondary" title="Carica sfondo dal dispositivo">🖼️</button>
+    <button id="btnBgReset" class="btn secondary" title="Ripristina sfondo predefinito">♻️</button>
+    <button id="btnRuler" class="btn secondary" title="Mostra/Nascondi righelli">📐</button>
     <input type="file" id="bgFileInput" accept="image/*" style="display:none">
   </div>
 </div>
@@ -174,6 +231,18 @@
   <div class="canvas-container">
     <canvas id="board" width="1000" height="1414"></canvas>
   </div>
+</div>
+
+<!-- Righello Verticale modificato con immagine custom -->
+<div id="rulerV" class="ruler ruler-vertical hidden">
+  <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
+  <img src="rimage/rulev.png" alt="Righello Verticale">
+</div>
+
+<!-- Righello Orizzontale modificato con immagine custom -->
+<div id="rulerH" class="ruler ruler-horizontal hidden">
+  <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
+  <img src="rimage/ruleh.png" alt="Righello Orizzontale">
 </div>
 
 <script>
@@ -207,6 +276,12 @@
   // Usati solo dagli strumenti forma (riga/rettangolo/cerchio) per l'anteprima live
   let shapeStartPos = null;
   let savedImageData = null;
+
+  // Snap ai vertici: punti di riferimento validi solo per la sessione corrente (non salvati)
+  let sessionSnapPoints = [];
+  let strokeStartPos = null;
+  let lastPos = null;
+  const SNAP_SCREEN_THRESHOLD = 16; // px sullo schermo, indipendente dallo zoom/risoluzione
 
   // Stack per l'undo (dataURL PNG)
   const undoStack = [];
@@ -274,21 +349,104 @@
     return currentMode === 'line' || currentMode === 'rect' || currentMode === 'circle';
   }
 
+  // --- Snap ai vertici (solo sessione corrente, nessun salvataggio) ---
+  function addSnapPoint(pt) {
+    sessionSnapPoints.push(pt);
+    if (sessionSnapPoints.length > 400) sessionSnapPoints.shift();
+  }
+
+  function recordShapeSnapPoints(mode, start, end) {
+    if (mode === 'line') {
+      addSnapPoint(start);
+      addSnapPoint(end);
+    } else if (mode === 'rect') {
+      addSnapPoint(start);
+      addSnapPoint(end);
+      addSnapPoint({ x: start.x, y: end.y });
+      addSnapPoint({ x: end.x, y: start.y });
+    } else if (mode === 'circle') {
+      addSnapPoint(start); // centro
+      addSnapPoint(end);   // punto sul bordo
+    }
+  }
+
+  function findSnapPoint(pos) {
+    if (sessionSnapPoints.length === 0) return null;
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const thresholdCanvasUnits = SNAP_SCREEN_THRESHOLD * scaleX;
+
+    let closest = null;
+    let closestDist = thresholdCanvasUnits;
+
+    sessionSnapPoints.forEach(pt => {
+      const dx = pt.x - pos.x;
+      const dy = pt.y - pos.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist <= closestDist) {
+        closestDist = dist;
+        closest = pt;
+      }
+    });
+
+    return closest;
+  }
+
+  function showSnapIndicator(pt) {
+    let indicator = document.querySelector('.snap-indicator');
+    if (!indicator) {
+      indicator = document.createElement('div');
+      indicator.className = 'snap-indicator';
+      canvas.parentElement.appendChild(indicator);
+    }
+    const rect = canvas.getBoundingClientRect();
+    const containerRect = canvas.parentElement.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+
+    indicator.style.left = ((rect.left - containerRect.left) + (pt.x / scaleX)) + 'px';
+    indicator.style.top = ((rect.top - containerRect.top) + (pt.y / scaleY)) + 'px';
+    indicator.style.display = 'block';
+
+    clearTimeout(indicator._hideTimeout);
+    indicator._hideTimeout = setTimeout(() => {
+      indicator.style.display = 'none';
+    }, 400);
+  }
+
+  function trySnap(pos) {
+    // 1. DISATTIVA LO SNAP se l'utente sta usando la matita a mano libera o la gomma
+    if (currentMode === 'draw' || currentMode === 'erase') return pos;
+    
+    // 2. Lo snap si attiva solo quando l'utente disegna linee, rettangoli o cerchi
+    if (!isShapeMode()) return pos;
+    
+    const snapped = findSnapPoint(pos);
+    if (snapped) {
+      showSnapIndicator(snapped);
+      return snapped;
+    }
+    return pos;
+  }
+
   function startPosition(e) {
     if (currentMode === 'none') return;
     if (e.type === 'touchstart') e.preventDefault();
 
     isDrawing = true;
-    const pos = getCoordinates(e);
+    const pos = trySnap(getCoordinates(e));
 
     pushUndo(); // stato salvato PRIMA che parta il tratto/la forma
 
     if (isShapeMode()) {
       shapeStartPos = pos;
+      lastPos = pos;
       savedImageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       return;
     }
 
+    strokeStartPos = pos;
+    lastPos = pos;
     ctx.beginPath();
     ctx.moveTo(pos.x, pos.y);
     draw(e);
@@ -299,9 +457,16 @@
     isDrawing = false;
 
     if (isShapeMode()) {
+      if (shapeStartPos && lastPos) {
+        recordShapeSnapPoints(currentMode, shapeStartPos, lastPos);
+      }
       shapeStartPos = null;
       savedImageData = null;
     } else {
+      if (currentMode === 'draw' && strokeStartPos && lastPos) {
+        addSnapPoint(strokeStartPos);
+        addSnapPoint(lastPos);
+      }
       ctx.closePath();
     }
     saveCanvas();
@@ -311,7 +476,8 @@
     if (!isDrawing || currentMode === 'none') return;
     if (e.type === 'touchmove') e.preventDefault();
 
-    const pos = getCoordinates(e);
+    const pos = trySnap(getCoordinates(e));
+    lastPos = pos;
 
     if (currentMode === 'draw') {
       ctx.globalCompositeOperation = 'source-over';
@@ -334,7 +500,7 @@
       if (!shapeStartPos || !savedImageData) return;
 
       // Ripristina lo stato prima della forma, poi ridisegna l'anteprima:
-      // così la forma "segue il dito" senza lasciare tracce precedenti
+      // così la forma "segue il dita" senza lasciare tracce precedenti
       ctx.putImageData(savedImageData, 0, 0);
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = currentColor;
@@ -433,6 +599,7 @@
     if (confirm("Vuoi cancellare tutto il disegno?")) {
       pushUndo();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      sessionSnapPoints = [];
       saveCanvas();
     }
   });
@@ -453,7 +620,7 @@
     const file = e.target.files[0];
     if (!file) return;
 
-    // Libera l'eventuale URL precedente prima di crearne uno nuovo
+// Libera l'eventuale URL precedente prima di crearne uno nuovo
     if (customBgObjectUrl) URL.revokeObjectURL(customBgObjectUrl);
     customBgObjectUrl = URL.createObjectURL(file);
 
@@ -478,10 +645,6 @@
   });
 
   // --- Toolbar fissa e a dimensione costante durante il pinch-zoom ---
-  // La toolbar è "position: fixed" (ancorata alla viewport di layout, non al documento).
-  // Il browser, durante il pinch-zoom, ingrandisce anche gli elementi fixed: per
-  // mantenerli a dimensione reale costante applichiamo una scala inversa (1/scale)
-  // e compensiamo lo spostamento (offsetLeft/offsetTop) causato dal pan dello zoom.
   function keepToolbarFixed() {
     if (!window.visualViewport) return;
 
@@ -499,8 +662,7 @@
     keepToolbarFixed();
   }
 
-  // La toolbar ora ha 2 righe: calcoliamo lo spazio da lasciare libero in alto
-  // in base alla sua altezza reale, invece di un valore fisso "a occhio"
+  // Calcola lo spazio da lasciare in alto
   function adjustBodyPadding() {
     document.body.style.paddingTop = (toolbar.offsetHeight + 10) + 'px';
   }
@@ -510,6 +672,103 @@
     adjustBodyPadding();
   });
   window.addEventListener('resize', adjustBodyPadding);
+
+  // --- Gestione Righelli (Ottimizzata per immagini custom, rimosso ciclo SVG) ---
+  function initRuler(rulerEl, orientation, getDefaultRect) {
+    const rotateHandle = rulerEl.querySelector('.ruler-rotate-handle');
+    let angle = 0;
+    let pos = { x: 0, y: 0 };
+    let dragStart = null;
+    let dragStartPos = null;
+    let rotating = false;
+    let rotateStartAngle = 0;
+    let rotateStartRulerAngle = 0;
+
+    function applyTransform() {
+      rulerEl.style.left = pos.x + 'px';
+      rulerEl.style.top = pos.y + 'px';
+      rulerEl.style.transform = `rotate(${angle}deg)`;
+    }
+
+    function resetToDefault() {
+      const d = getDefaultRect();
+      if (orientation === 'vertical') rulerEl.style.height = d.length + 'px';
+      else rulerEl.style.width = d.length + 'px';
+      pos = { x: d.x, y: d.y };
+      angle = 0;
+      applyTransform();
+    }
+
+    rulerEl.addEventListener('pointerdown', (e) => {
+      if (e.target === rotateHandle) return;
+      dragStart = { x: e.clientX, y: e.clientY };
+      dragStartPos = { x: pos.x, y: pos.y };
+      rulerEl.setPointerCapture(e.pointerId);
+    });
+    rulerEl.addEventListener('pointermove', (e) => {
+      if (!dragStart) return;
+      pos.x = dragStartPos.x + (e.clientX - dragStart.x);
+      pos.y = dragStartPos.y + (e.clientY - dragStart.y);
+      applyTransform();
+    });
+    rulerEl.addEventListener('pointerup', () => { dragStart = null; });
+    rulerEl.addEventListener('pointercancel', () => { dragStart = null; });
+
+    rotateHandle.addEventListener('pointerdown', (e) => {
+      e.stopPropagation();
+      const rect = rulerEl.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      rotateStartAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
+      rotateStartRulerAngle = angle;
+      rotating = true;
+      rotateHandle.setPointerCapture(e.pointerId);
+    });
+    rotateHandle.addEventListener('pointermove', (e) => {
+      if (!rotating) return;
+      const rect = rulerEl.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const currentAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
+      angle = rotateStartRulerAngle + (currentAngle - rotateStartAngle) * (180 / Math.PI);
+      applyTransform();
+    });
+    rotateHandle.addEventListener('pointerup', (e) => { rotating = false; e.stopPropagation(); });
+    rotateHandle.addEventListener('pointercancel', () => { rotating = false; });
+
+    return { resetToDefault };
+  }
+
+  function getCanvasContainerRect() {
+    return document.querySelector('.canvas-container').getBoundingClientRect();
+  }
+
+  const rulerV = document.getElementById('rulerV');
+  const rulerH = document.getElementById('rulerH');
+  const btnRuler = document.getElementById('btnRuler');
+
+  const rulerVCtl = initRuler(rulerV, 'vertical', () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 8, y: r.top + 10, length: r.height - 20 };
+  });
+  const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 10, y: r.top + 8, length: r.width - 20 };
+  });
+
+  btnRuler.addEventListener('click', () => {
+    const hiddenNow = rulerV.classList.toggle('hidden');
+    rulerH.classList.toggle('hidden', hiddenNow);
+    if (!hiddenNow) {
+      rulerVCtl.resetToDefault();
+      rulerHCtl.resetToDefault();
+    }
+  });
+
+  window.addEventListener('load', () => {
+    rulerVCtl.resetToDefault();
+    rulerHCtl.resetToDefault();
+  });
 </script>
 </body>
 </html>
