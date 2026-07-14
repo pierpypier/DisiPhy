@@ -748,13 +748,13 @@
   const btnRuler = document.getElementById('btnRuler');
 
   const rulerVCtl = initRuler(rulerV, 'vertical', () => {
-    const r = getCanvasContainerRect();
-    return { x: r.left + 8, y: r.top + 10, length: r.height - 20 };
-  });
-  const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
-    const r = getCanvasContainerRect();
-    return { x: r.left + 10, y: r.top + 8, length: r.width - 20 };
-  });
+  const r = getCanvasContainerRect();
+  return { x: r.left + 8, y: r.top + 10, length: r.width - 20 }; // <-- CAMBIATO IN r.width!
+});
+const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
+  const r = getCanvasContainerRect();
+  return { x: r.left + 10, y: r.top + 8, length: r.width - 20 }; //[cite: 2]
+});
 
   btnRuler.addEventListener('click', () => {
     const hiddenNow = rulerV.classList.toggle('hidden');
