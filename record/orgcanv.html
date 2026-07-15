@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Organizer — Lavagna</title>
+<title>Organizer — Lavagna (Stampa Sfondo)</title>
 <style>
   :root {
     --cal-bg: #f7f7fb;
     --cal-card: #ffffff;
-    --cal-accent: #1e88e5; /* allineato al blu del tema generale dell'app */
+    --cal-accent: #1e88e5;
     --cal-muted: #666666;
   }
 
@@ -21,7 +21,6 @@
     background: var(--cal-bg);
     color: #111;
     padding-bottom: 20px;
-    /* padding-top viene impostato dinamicamente in base all'altezza reale della toolbar */
   }
 
   /* Contenitore Principale */
@@ -48,7 +47,7 @@
 
   /* --- Toolbar fissa su 2 righe --- */
   .toolbar {
-    position: fixed;      /* ancorata alla viewport, non al documento */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -102,7 +101,7 @@
     padding: 4px 10px;
   }
   .thickness-wrap input[type=range] { width: 75px; }
-  .thickness-wrap span.val { min-width: 14px; text-align: center; font-weight: 600; }
+  .thickness-wrap span.val { min-width: 35px; text-align: center; font-weight: 600; }
 
   /* Area Disegno (Canvas) */
   .canvas-container {
@@ -132,8 +131,14 @@
     .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
     .card { padding: 0; box-shadow: none; border: none; }
     .canvas-container { border: none; box-shadow: none; }
-    .ruler, .snap-indicator, .spatula-container { display: none !important; }
+    .ruler, .snap-indicator { display: none !important; }
     @page { size: A4; margin: 10mm; }
+    
+    /* Forza la stampa dei colori e delle immagini di sfondo */
+    canvas#board {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
   }
 
   /* --- Indicatore di aggancio ai vertici --- */
@@ -190,65 +195,10 @@
     touch-action: none;
     z-index: 510;
   }
-
-  /* --- CSS dello Stencil (Bordo continuo da 2px) --- */
-  .spatula-container {
-    position: fixed;
-    z-index: 500;
-    width: 60px;
-    height: 60px;
-    user-select: none;
-    touch-action: none;
-    pointer-events: none; /* TRASPARENTE: permette di disegnare/cancellare sotto lo stencil */
-  }
-  .spatula-container.hidden { display: none; }
-  
-  .spatula-body {
-    width: 100%;
-    height: 100%;
-    border: 2px solid #dc2626; /* Linea continua rossa da 2px */
-    background: rgba(255, 255, 255, 0.4); /* Semi-trasparente */
-    border-radius: 6px;
-    opacity: 0.9;
-    pointer-events: none; /* Trasparente ai click di disegno/gomma */
-  }
-
-  /* Maniglia centrale di trascinamento */
-  .spatula-drag-handle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #dc2626; /* Bollino rosso centrale */
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    cursor: grab;
-    box-shadow: 0 2px 5px rgba(0,0,0,.35);
-    touch-action: none;
-    z-index: 510;
-    pointer-events: auto; /* ATTIVA: cattura i click esclusivamente per muovere lo stencil */
-  }
-  .spatula-drag-handle:active {
-    cursor: grabbing;
-  }
-
-  /* Maniglia di rotazione stencil */
-  .spatula-rotate-handle {
-    background: #dc2626; /* Tema rosso coordinato */
-    pointer-events: auto; /* ATTIVA: intercettabile al click */
-  }
-  .spatula-rotate-handle:active {
-    cursor: grabbing;
-  }
 </style>
 </head>
-<body>
+
+  <body>
 
 <div class="toolbar">
   <!-- RIGA 1: Navigazione e Azioni Principali -->
@@ -273,14 +223,14 @@
     <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
     <div class="color-dot color-red" data-color="#dc2626" title="Rosso"></div>
     
-    <div class="thickness-wrap" title="Spessore della linea">
+    <div class="thickness-wrap" title="Spessore della linea / gomma">
       <input type="range" id="thickness" min="1" max="5" step="1" value="2">
-      <span class="val" id="thicknessVal">2</span>
+      <span class="val" id="thicknessVal">2px</span>
     </div>
 
     <button id="btnBgUpload" class="btn secondary" title="Carica sfondo dal dispositivo">🖼️</button>
     <button id="btnBgReset" class="btn secondary" title="Ripristina sfondo predefinito">♻️</button>
-    <button id="btnRuler" class="btn secondary" title="Mostra/Nascondi righelli e stencil">📐</button>
+    <button id="btnRuler" class="btn secondary" title="Mostra/Nascondi righelli">📐</button>
     <input type="file" id="bgFileInput" accept="image/*" style="display:none">
   </div>
 </div>
@@ -305,25 +255,12 @@
   <img src="rimage/ruleh.png" alt="Righello Orizzontale">
 </div>
 
-<!-- HTML dello Stencil con Doppia Maniglia (Movimento centrale + Rotazione superiore) -->
-<div id="spatula" class="spatula-container hidden">
-  <div class="ruler-rotate-handle spatula-rotate-handle" title="Ruota stencil">⟳</div>
-  <div class="spatula-body"></div>
-  <div class="spatula-drag-handle" title="Trascina lo Stencil">✥</div>
-  </div>
-
-  <script>
+<script>
   const canvas = document.getElementById('board');
   const ctx = canvas.getContext('2d');
 
   const LS_KEY = 'organizer_lavagna_v1';
   const MAX_UNDO = 15;
-
-  // Dimensioni dello Stencil
-  const SPATULA_WIDTH = 60;
-  const SPATULA_HEIGHT = 60; 
-  let spatulaPos = { x: 0, y: 0 };
-  let spatulaCtl = null; // Gestore istanza stencil
 
   const btnprevious = document.getElementById('btnprevious');
   const btnUndo = document.getElementById('btnUndo');
@@ -339,7 +276,6 @@
   const thicknessInput = document.getElementById('thickness');
   const thicknessVal = document.getElementById('thicknessVal');
   const toolbar = document.querySelector('.toolbar');
-  const spatula = document.getElementById('spatula');
 
   const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnRect, btnCircle];
 
@@ -349,7 +285,9 @@
   let currentThickness = 2;
   let snapEnabled = true;
 
-  // Usati solo dagli strumenti forma (riga/rettangolo/cerchio) per l'anteprima live
+  // Spessori gomma predefiniti per i 5 livelli dello slider
+  const ERASER_SIZES = [2, 4, 8, 12, 20];
+
   let shapeStartPos = null;
   let savedImageData = null;
 
@@ -417,74 +355,6 @@
       x: (clientX - rect.left) * scaleX,
       y: (clientY - rect.top) * scaleY
     };
-  }
-
-  // Converti coordinate schermo in coordinate Canvas
-  function screenToCanvas(sx, sy) {
-    const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
-    return {
-      x: (sx - rect.left) * scaleX,
-      y: (sy - rect.top) * scaleY
-    };
-  }
-
-  // Calcola le posizioni esatte dei 4 angoli dello stencil sul Canvas (Supporta anche la rotazione corrente)
-  function getSpatulaCanvasCorners() {
-    if (!spatula || spatula.classList.contains('hidden')) return null;
-
-    const w = SPATULA_WIDTH;
-    const h = SPATULA_HEIGHT;
-
-    // Centro dello stencil in coordinate schermo
-    const cx = spatulaPos.x + w / 2;
-    const cy = spatulaPos.y + h / 2;
-
-    // Angolo di rotazione corrente
-    const angleDeg = spatulaCtl ? spatulaCtl.getAngle() : 0;
-    const angleRad = angleDeg * Math.PI / 180;
-
-    const cos = Math.cos(angleRad);
-    const sin = Math.sin(angleRad);
-
-    const halfW = w / 2;
-    const halfH = h / 2;
-
-    // Angoli relativi locali rispetto al centro dello stencil
-    const localCorners = [
-      { x: -halfW, y: -halfH }, // Alto-Sinistra
-      { x: halfW, y: -halfH },  // Alto-Destra
-      { x: halfW, y: halfH },   // Basso-Destra
-      { x: -halfW, y: halfH }   // Basso-Sinistra
-    ];
-
-    // Applica matrice di rotazione ai punti e converti in coordinate Canvas
-    return localCorners.map(pt => {
-      const rx = pt.x * cos - pt.y * sin;
-      const ry = pt.x * sin + pt.y * cos;
-      return screenToCanvas(cx + rx, cy + ry);
-    });
-  }
-
-  // Crea una maschera di ritaglio "al contrario" per proteggere l'area dello stencil
-  function applySpatulaClip() {
-    const corners = getSpatulaCanvasCorners();
-    if (!corners) return;
-
-    ctx.beginPath();
-    // 1. Definisce l'area totale del foglio
-    ctx.rect(0, 0, canvas.width, canvas.height);
-    
-    // 2. Disegna il percorso del rettangolo dello stencil (anche se ruotato)
-    ctx.moveTo(corners[0].x, corners[0].y);
-    ctx.lineTo(corners[1].x, corners[1].y);
-    ctx.lineTo(corners[2].x, corners[2].y);
-    ctx.lineTo(corners[3].x, corners[3].y);
-    ctx.closePath();
-    
-    // 3. Applica il ritaglio 'evenodd' (cancella ovunque TRANNE che sotto lo stencil)
-    ctx.clip('evenodd');
   }
 
   function isShapeMode() {
@@ -567,8 +437,7 @@
       return snapped;
     }
     return pos;
-  }
-
+        }
   function startPosition(e) {
     if (currentMode === 'none') return;
     if (e.type === 'touchstart') e.preventDefault();
@@ -631,15 +500,14 @@
 
     } else if (currentMode === 'erase') {
       ctx.save();
-      applySpatulaClip(); // Applica la maschera di ritaglio dello stencil
       ctx.globalCompositeOperation = 'destination-out';
-      ctx.lineWidth = 20;
+      ctx.lineWidth = currentThickness; 
       
       ctx.beginPath();
       ctx.moveTo(prevPos.x, prevPos.y);
       ctx.lineTo(pos.x, pos.y);
       ctx.stroke();
-      ctx.restore(); // Ripristina il ritaglio
+      ctx.restore();
       
       ctx.beginPath();
       ctx.moveTo(pos.x, pos.y);
@@ -683,6 +551,19 @@
   canvas.addEventListener('touchend', endPosition);
   canvas.addEventListener('touchcancel', endPosition);
 
+  // --- Gestione Spessore Dinamico ---
+  function updateThickness() {
+    const val = parseInt(thicknessInput.value, 10); // Valore da 1 a 5 dello slider
+    if (currentMode === 'erase') {
+      const eraserSize = ERASER_SIZES[val - 1];
+      thicknessVal.textContent = eraserSize + 'px';
+      currentThickness = eraserSize;
+    } else {
+      thicknessVal.textContent = val + 'px';
+      currentThickness = val;
+    }
+  }
+
   function setActiveTool(mode, activeBtn) {
     currentMode = mode;
 
@@ -701,6 +582,9 @@
       canvas.style.touchAction = 'none';
       canvas.style.cursor = 'crosshair';
     }
+
+    // Aggiorna lo spessore corrente in base al nuovo tool
+    updateThickness();
   }
 
   btnDraw.addEventListener('click', () => setActiveTool('draw', btnDraw));
@@ -720,7 +604,6 @@
 
   btnSnapToggle.addEventListener('click', () => {
     snapEnabled = !snapEnabled;
-    
     if (snapEnabled) {
       btnSnapToggle.classList.add('active');
       btnSnapToggle.classList.remove('secondary');
@@ -743,11 +626,8 @@
     });
   });
 
-  // --- Spessore ---
-  thicknessInput.addEventListener('input', () => {
-    currentThickness = parseInt(thicknessInput.value, 10);
-    thicknessVal.textContent = thicknessInput.value;
-  });
+  // --- Input Spessore ---
+  thicknessInput.addEventListener('input', updateThickness);
 
   // --- Cancella tutto ---
   btnClear.addEventListener('click', () => {
@@ -887,108 +767,6 @@
     return { resetToDefault };
   }
 
-  // --- Gestione Stencil (Con Rotazione) ---
-  function initSpatula(spatulaEl, getDefaultRect) {
-    const dragHandle = spatulaEl.querySelector('.spatula-drag-handle');
-    const rotateHandle = spatulaEl.querySelector('.spatula-rotate-handle');
-    let angle = 0;
-    let dragStart = null;
-    let dragStartPos = null;
-    let rotating = false;
-    let rotateStartAngle = 0;
-    let rotateStartSpatulaAngle = 0;
-
-    function applyTransform() {
-      spatulaEl.style.left = spatulaPos.x + 'px';
-      spatulaEl.style.top = spatulaPos.y + 'px';
-      spatulaEl.style.transform = `rotate(${angle}deg)`;
-    }
-
-    function resetToDefault() {
-      const d = getDefaultRect();
-      spatulaPos = { x: d.x, y: d.y };
-      angle = 0;
-      applyTransform();
-    }
-
-    // Eventi associati alla maniglia centrale di trascinamento
-    dragHandle.addEventListener('pointerdown', (e) => {
-      dragStart = { x: e.clientX, y: e.clientY };
-      dragStartPos = { x: spatulaPos.x, y: spatulaPos.y };
-      dragHandle.setPointerCapture(e.pointerId);
-      e.stopPropagation();
-    });
-    dragHandle.addEventListener('pointermove', (e) => {
-      if (!dragStart) return;
-      spatulaPos.x = dragStartPos.x + (e.clientX - dragStart.x);
-      spatulaPos.y = dragStartPos.y + (e.clientY - dragStart.y);
-      applyTransform();
-      e.stopPropagation();
-    });
-    dragHandle.addEventListener('pointerup', (e) => { 
-      dragStart = null; 
-      e.stopPropagation(); 
-    });
-    dragHandle.addEventListener('pointercancel', () => { 
-      dragStart = null; 
-    });
-
-// Eventi associati alla maniglia centrale di trascinamento
-    dragHandle.addEventListener('pointerdown', (e) => {
-      dragStart = { x: e.clientX, y: e.clientY };
-      dragStartPos = { x: spatulaPos.x, y: spatulaPos.y };
-      dragHandle.setPointerCapture(e.pointerId);
-      e.stopPropagation();
-    });
-    dragHandle.addEventListener('pointermove', (e) => {
-      if (!dragStart) return;
-      spatulaPos.x = dragStartPos.x + (e.clientX - dragStart.x);
-      spatulaPos.y = dragStartPos.y + (e.clientY - dragStart.y);
-      applyTransform();
-      e.stopPropagation();
-    });
-    dragHandle.addEventListener('pointerup', (e) => { 
-      dragStart = null; 
-      e.stopPropagation(); 
-    });
-    dragHandle.addEventListener('pointercancel', () => { 
-      dragStart = null; 
-    });
-
-    // Eventi associati alla maniglia di rotazione superiore
-    rotateHandle.addEventListener('pointerdown', (e) => {
-      e.stopPropagation();
-      const rect = spatulaEl.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      rotateStartAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
-      rotateStartSpatulaAngle = angle;
-      rotating = true;
-      rotateHandle.setPointerCapture(e.pointerId);
-    });
-    rotateHandle.addEventListener('pointermove', (e) => {
-      if (!rotating) return;
-      const rect = spatulaEl.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const currentAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
-      angle = rotateStartSpatulaAngle + (currentAngle - rotateStartAngle) * (180 / Math.PI);
-      applyTransform();
-    });
-    rotateHandle.addEventListener('pointerup', (e) => { 
-      rotating = false; 
-      e.stopPropagation(); 
-    });
-    rotateHandle.addEventListener('pointercancel', () => { 
-      rotating = false; 
-    });
-
-    return { 
-      resetToDefault, 
-      getAngle: () => angle 
-    };
-  }
-
   function getCanvasContainerRect() {
     return document.querySelector('.canvas-container').getBoundingClientRect();
   }
@@ -999,30 +777,19 @@
 
   const rulerVCtl = initRuler(rulerV, 'vertical', () => {
     const r = getCanvasContainerRect();
-    return { x: r.left + 8, y: r.top + 10, length: r.width - 20 };
+    return { x: r.left + 8, y: r.top + 10, length: r.height - 20 };
   });
   const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
     const r = getCanvasContainerRect();
     return { x: r.left + 10, y: r.top + 8, length: r.width - 20 };
   });
 
-  // Inizializza lo Stencil
-  spatulaCtl = initSpatula(spatula, () => {
-    const r = getCanvasContainerRect();
-    const x = r.left + (r.width - SPATULA_WIDTH) / 2;
-    const y = r.top + (r.height - SPATULA_HEIGHT) / 2;
-    return { x, y };
-  });
-
-  // Attiva e disattiva stencil e righelli
   btnRuler.addEventListener('click', () => {
     const hiddenNow = rulerV.classList.toggle('hidden');
     rulerH.classList.toggle('hidden', hiddenNow);
-    spatula.classList.toggle('hidden', hiddenNow); 
     if (!hiddenNow) {
       rulerVCtl.resetToDefault();
       rulerHCtl.resetToDefault();
-      spatulaCtl.resetToDefault(); 
     }
   });
 
@@ -1031,7 +798,6 @@
     adjustBodyPadding();
     rulerVCtl.resetToDefault();
     rulerHCtl.resetToDefault();
-    spatulaCtl.resetToDefault(); 
   });
 </script>
 </body>
