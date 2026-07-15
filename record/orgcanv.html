@@ -153,9 +153,9 @@
   .ruler {
     position: fixed;
     z-index: 500;
-    cursor: grab;
     touch-action: none;
     user-select: none;
+    pointer-events: none; /* il corpo lascia passare tocchi/gomma verso il canvas sottostante */
   }
   .ruler.hidden { display: none; }
   .ruler img {
@@ -171,15 +171,14 @@
   .ruler-vertical { width: 42px; height: 70vh; }
   .ruler-horizontal { height: 42px; width: 70vw; }
   
-  .ruler-rotate-handle {
+  .ruler-rotate-handle,
+  .ruler-drag-handle {
     position: absolute;
-    top: -16px;
     left: 50%;
     transform: translateX(-50%);
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    background: #1e88e5;
     color: #fff;
     display: flex;
     align-items: center;
@@ -189,7 +188,10 @@
     box-shadow: 0 2px 4px rgba(0,0,0,.25);
     touch-action: none;
     z-index: 510;
+    pointer-events: auto; /* le maniglie restano sempre interattive */
   }
+  .ruler-rotate-handle { top: -16px; background: #1e88e5; }
+  .ruler-drag-handle { bottom: -16px; background: #44494f; }
 </style>
 </head>
 <body>
@@ -239,14 +241,17 @@
 <!-- Righello Verticale (Immagine custom a scala corretta) -->
 <div id="rulerV" class="ruler ruler-vertical hidden">
   <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
+  <div class="ruler-drag-handle" title="Trascina righello">✥</div>
   <img src="rimage/rulev.png" alt="Righello Verticale">
 </div>
 
 <!-- Righello Orizzontale (Immagine custom a scala corretta) -->
 <div id="rulerH" class="ruler ruler-horizontal hidden">
   <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
+  <div class="ruler-drag-handle" title="Trascina righello">✥</div>
   <img src="rimage/ruleh.png" alt="Righello Orizzontale">
 </div>
+
 <script>
   const canvas = document.getElementById('board');
   const ctx = canvas.getContext('2d');
@@ -487,19 +492,25 @@
     lastPos = pos;
 
     if (currentMode === 'draw') {
+      ctx.save();
+      clipOutRulers();
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = currentColor;
       ctx.lineWidth = currentThickness;
       ctx.lineTo(pos.x, pos.y);
       ctx.stroke();
+      ctx.restore();
       ctx.beginPath();
       ctx.moveTo(pos.x, pos.y);
 
     } else if (currentMode === 'erase') {
+      ctx.save();
+      clipOutRulers();
       ctx.globalCompositeOperation = 'destination-out';
       ctx.lineWidth = 20;
       ctx.lineTo(pos.x, pos.y);
       ctx.stroke();
+      ctx.restore();
       ctx.beginPath();
       ctx.moveTo(pos.x, pos.y);
 
@@ -690,6 +701,7 @@
   // --- Gestione Righelli (Uguagliati in larghezza/scala simmetrica) ---
   function initRuler(rulerEl, orientation, getDefaultRect) {
     const rotateHandle = rulerEl.querySelector('.ruler-rotate-handle');
+    const dragHandle = rulerEl.querySelector('.ruler-drag-handle');
     let angle = 0;
     let pos = { x: 0, y: 0 };
     let dragStart = null;
@@ -702,6 +714,7 @@
       rulerEl.style.left = pos.x + 'px';
       rulerEl.style.top = pos.y + 'px';
       rulerEl.style.transform = `rotate(${angle}deg)`;
+      rulerEl.dataset.angle = angle; // letto dalla logica di schermatura in draw()
     }
 
     function resetToDefault() {
@@ -713,20 +726,22 @@
       applyTransform();
     }
 
-    rulerEl.addEventListener('pointerdown', (e) => {
-      if (e.target === rotateHandle) return;
+    // Solo la maniglia dedicata trascina il righello: il corpo non risponde più al tocco
+    // (necessario anche perché il corpo ha pointer-events:none, per lasciar passare gomma/matita)
+    dragHandle.addEventListener('pointerdown', (e) => {
+      e.stopPropagation();
       dragStart = { x: e.clientX, y: e.clientY };
       dragStartPos = { x: pos.x, y: pos.y };
-      rulerEl.setPointerCapture(e.pointerId);
+      dragHandle.setPointerCapture(e.pointerId);
     });
-    rulerEl.addEventListener('pointermove', (e) => {
+    dragHandle.addEventListener('pointermove', (e) => {
       if (!dragStart) return;
       pos.x = dragStartPos.x + (e.clientX - dragStart.x);
       pos.y = dragStartPos.y + (e.clientY - dragStart.y);
       applyTransform();
     });
-    rulerEl.addEventListener('pointerup', () => { dragStart = null; });
-    rulerEl.addEventListener('pointercancel', () => { dragStart = null; });
+    dragHandle.addEventListener('pointerup', (e) => { dragStart = null; e.stopPropagation(); });
+    dragHandle.addEventListener('pointercancel', () => { dragStart = null; });
 
     rotateHandle.addEventListener('pointerdown', (e) => {
       e.stopPropagation();
@@ -784,8 +799,62 @@
     rulerVCtl.resetToDefault();
     rulerHCtl.resetToDefault();
   });
+
+  // --- Schermatura: gomma e matita non toccano l'area coperta da un righello ---
+  function getRulerClipCorners(rulerEl) {
+    if (rulerEl.classList.contains('hidden')) return null;
+
+    const w = rulerEl.offsetWidth;
+    const h = rulerEl.offsetHeight;
+    // Il centro resta invariato dalla rotazione (avviene sempre attorno al proprio centro),
+    // quindi getBoundingClientRect() qui è affidabile per trovarlo, a qualunque angolo.
+    const rect = rulerEl.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+
+    const angleDeg = parseFloat(rulerEl.dataset.angle || '0');
+    const rad = angleDeg * Math.PI / 180;
+    const cos = Math.cos(rad), sin = Math.sin(rad);
+
+    const canvasRect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / canvasRect.width;
+    const scaleY = canvas.height / canvasRect.height;
+
+    const localCorners = [
+      { x: -w / 2, y: -h / 2 },
+      { x:  w / 2, y: -h / 2 },
+      { x:  w / 2, y:  h / 2 },
+      { x: -w / 2, y:  h / 2 }
+    ];
+
+    return localCorners.map(p => {
+      const rx = p.x * cos - p.y * sin;
+      const ry = p.x * sin + p.y * cos;
+      const viewportX = cx + rx;
+      const viewportY = cy + ry;
+      return {
+        x: (viewportX - canvasRect.left) * scaleX,
+        y: (viewportY - canvasRect.top) * scaleY
+      };
+    });
+  }
+
+  // Applica un ritaglio (clip) al contesto: l'intero canvas MENO l'area dei righelli visibili.
+  // Va richiamata prima di ogni stroke() di matita/gomma, dentro un save()/restore().
+  function clipOutRulers() {
+    ctx.beginPath();
+    ctx.rect(0, 0, canvas.width, canvas.height);
+    [rulerV, rulerH].forEach(r => {
+      const corners = getRulerClipCorners(r);
+      if (!corners) return;
+      ctx.moveTo(corners[0].x, corners[0].y);
+      ctx.lineTo(corners[1].x, corners[1].y);
+      ctx.lineTo(corners[2].x, corners[2].y);
+      ctx.lineTo(corners[3].x, corners[3].y);
+      ctx.closePath();
+    });
+    ctx.clip('evenodd');
+  }
 </script>
 </body>
 </html>
-
-  
