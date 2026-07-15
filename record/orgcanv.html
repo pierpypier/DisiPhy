@@ -101,7 +101,7 @@
     border-radius: 6px;
     padding: 4px 10px;
   }
-  .thickness-wrap input[type=range] { width: 90px; }
+  .thickness-wrap input[type=range] { width: 75px; }
   .thickness-wrap span.val { min-width: 14px; text-align: center; font-weight: 600; }
 
   /* Area Disegno (Canvas) */
@@ -132,7 +132,7 @@
     .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
     .card { padding: 0; box-shadow: none; border: none; }
     .canvas-container { border: none; box-shadow: none; }
-    .ruler, .snap-indicator { display: none !important; }
+    .ruler, .snap-indicator, .spatula-container { display: none !important; }
     @page { size: A4; margin: 10mm; }
   }
 
@@ -149,13 +149,13 @@
     z-index: 30;
   }
 
-  /* --- Righello di riferimento (Immagini png personalizzate) --- */
+  /* --- Righelli di riferimento --- */
   .ruler {
     position: fixed;
     z-index: 500;
+    cursor: grab;
     touch-action: none;
     user-select: none;
-    pointer-events: none; /* il corpo lascia passare tocchi/gomma verso il canvas sottostante */
   }
   .ruler.hidden { display: none; }
   .ruler img {
@@ -171,14 +171,15 @@
   .ruler-vertical { width: 42px; height: 70vh; }
   .ruler-horizontal { height: 42px; width: 70vw; }
   
-  .ruler-rotate-handle,
-  .ruler-drag-handle {
+  .ruler-rotate-handle {
     position: absolute;
+    top: -16px;
     left: 50%;
     transform: translateX(-50%);
     width: 26px;
     height: 26px;
     border-radius: 50%;
+    background: #1e88e5;
     color: #fff;
     display: flex;
     align-items: center;
@@ -188,15 +189,69 @@
     box-shadow: 0 2px 4px rgba(0,0,0,.25);
     touch-action: none;
     z-index: 510;
-    pointer-events: auto; /* le maniglie restano sempre interattive */
   }
-  .ruler-rotate-handle { top: -16px; background: #1e88e5; }
-  .ruler-drag-handle { bottom: -16px; background: #44494f; }
+
+  /* --- CSS dello Stencil (Bordo continuo da 2px) --- */
+  .spatula-container {
+    position: fixed;
+    z-index: 500;
+    width: 60px;
+    height: 60px;
+    user-select: none;
+    touch-action: none;
+    pointer-events: none; /* TRASPARENTE: permette di disegnare/cancellare sotto lo stencil */
+  }
+  .spatula-container.hidden { display: none; }
+  
+  .spatula-body {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #dc2626; /* Linea continua rossa da 2px */
+    background: rgba(255, 255, 255, 0.4); /* Semi-trasparente */
+    border-radius: 6px;
+    opacity: 0.9;
+    pointer-events: none; /* Trasparente ai click di disegno/gomma */
+  }
+
+  /* Maniglia centrale di trascinamento */
+  .spatula-drag-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #dc2626; /* Bollino rosso centrale */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: grab;
+    box-shadow: 0 2px 5px rgba(0,0,0,.35);
+    touch-action: none;
+    z-index: 510;
+    pointer-events: auto; /* ATTIVA: cattura i click esclusivamente per muovere lo stencil */
+  }
+  .spatula-drag-handle:active {
+    cursor: grabbing;
+  }
+
+  /* Maniglia di rotazione stencil */
+  .spatula-rotate-handle {
+    background: #dc2626; /* Tema rosso coordinato */
+    pointer-events: auto; /* ATTIVA: intercettabile al click */
+  }
+  .spatula-rotate-handle:active {
+    cursor: grabbing;
+  }
 </style>
 </head>
 <body>
 
 <div class="toolbar">
+  <!-- RIGA 1: Navigazione e Azioni Principali -->
   <div class="toolbar-row">
     <button id="btnprevious" class="btn secondary" title="Indietro">⬅️</button>
     <button id="btnUndo" class="btn secondary" title="Annulla ultima azione" disabled>↩️</button>
@@ -206,26 +261,26 @@
     <button id="btnClear" class="btn danger" title="Cancella tutto">🗑️</button>
     <button id="btnPrint" class="btn secondary" title="Stampa">🖨️</button>
   </div>
+  
+  <!-- RIGA 2: Forme, Opzioni Tratto, Sfondi e Righelli -->
   <div class="toolbar-row">
     <button id="btnLine" class="btn secondary" title="Riga">📏</button>
     <button id="btnRect" class="btn secondary" title="Rettangolo">▭</button>
     <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
-    <!-- NUOVO PULSANTE CALAMITA: Attivo di default (colore blu) -->
     <button id="btnSnapToggle" class="btn active" title="Attiva/Disattiva Calamita">🧲</button>
     
     <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
     <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
     <div class="color-dot color-red" data-color="#dc2626" title="Rosso"></div>
-    <div class="thickness-wrap">
-      <span>Spessore</span>
+    
+    <div class="thickness-wrap" title="Spessore della linea">
       <input type="range" id="thickness" min="1" max="5" step="1" value="2">
       <span class="val" id="thicknessVal">2</span>
     </div>
-  </div>
-  <div class="toolbar-row">
+
     <button id="btnBgUpload" class="btn secondary" title="Carica sfondo dal dispositivo">🖼️</button>
     <button id="btnBgReset" class="btn secondary" title="Ripristina sfondo predefinito">♻️</button>
-    <button id="btnRuler" class="btn secondary" title="Mostra/Nascondi righelli">📐</button>
+    <button id="btnRuler" class="btn secondary" title="Mostra/Nascondi righelli e stencil">📐</button>
     <input type="file" id="bgFileInput" accept="image/*" style="display:none">
   </div>
 </div>
@@ -238,26 +293,37 @@
   </div>
 </div>
 
-<!-- Righello Verticale (Immagine custom a scala corretta) -->
+<!-- Righello Verticale -->
 <div id="rulerV" class="ruler ruler-vertical hidden">
   <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
-  <div class="ruler-drag-handle" title="Trascina righello">✥</div>
   <img src="rimage/rulev.png" alt="Righello Verticale">
 </div>
 
-<!-- Righello Orizzontale (Immagine custom a scala corretta) -->
+<!-- Righello Orizzontale -->
 <div id="rulerH" class="ruler ruler-horizontal hidden">
   <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
-  <div class="ruler-drag-handle" title="Trascina righello">✥</div>
   <img src="rimage/ruleh.png" alt="Righello Orizzontale">
 </div>
 
-<script>
+<!-- HTML dello Stencil con Doppia Maniglia (Movimento centrale + Rotazione superiore) -->
+<div id="spatula" class="spatula-container hidden">
+  <div class="ruler-rotate-handle spatula-rotate-handle" title="Ruota stencil">⟳</div>
+  <div class="spatula-body"></div>
+  <div class="spatula-drag-handle" title="Trascina lo Stencil">✥</div>
+  </div>
+
+  <script>
   const canvas = document.getElementById('board');
   const ctx = canvas.getContext('2d');
 
   const LS_KEY = 'organizer_lavagna_v1';
   const MAX_UNDO = 15;
+
+  // Dimensioni dello Stencil
+  const SPATULA_WIDTH = 60;
+  const SPATULA_HEIGHT = 60; 
+  let spatulaPos = { x: 0, y: 0 };
+  let spatulaCtl = null; // Gestore istanza stencil
 
   const btnprevious = document.getElementById('btnprevious');
   const btnUndo = document.getElementById('btnUndo');
@@ -269,10 +335,11 @@
   const btnLine = document.getElementById('btnLine');
   const btnRect = document.getElementById('btnRect');
   const btnCircle = document.getElementById('btnCircle');
-  const btnSnapToggle = document.getElementById('btnSnapToggle'); // Riferimento al pulsante calamita
+  const btnSnapToggle = document.getElementById('btnSnapToggle');
   const thicknessInput = document.getElementById('thickness');
   const thicknessVal = document.getElementById('thicknessVal');
   const toolbar = document.querySelector('.toolbar');
+  const spatula = document.getElementById('spatula');
 
   const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnRect, btnCircle];
 
@@ -280,19 +347,19 @@
   let currentMode = 'none';
   let currentColor = '#1e40af';
   let currentThickness = 2;
-  let snapEnabled = true; // Stato iniziale della calamita: attiva
+  let snapEnabled = true;
 
   // Usati solo dagli strumenti forma (riga/rettangolo/cerchio) per l'anteprima live
   let shapeStartPos = null;
   let savedImageData = null;
 
-  // Snap ai vertici: punti di riferimento validi solo per la sessione corrente (non salvati)
+  // Snap ai vertici
   let sessionSnapPoints = [];
   let strokeStartPos = null;
   let lastPos = null;
-  const SNAP_SCREEN_THRESHOLD = 16; // px sullo schermo, indipendente dallo zoom/risoluzione
+  const SNAP_SCREEN_THRESHOLD = 16; 
 
-  // Stack per l'undo (dataURL PNG)
+  // Stack per l'undo
   const undoStack = [];
 
   ctx.lineCap = 'round';
@@ -321,9 +388,7 @@
       undoStack.push(canvas.toDataURL('image/png'));
       if (undoStack.length > MAX_UNDO) undoStack.shift();
       btnUndo.disabled = false;
-    } catch (err) {
-      // Se per qualche motivo il canvas non è leggibile, l'undo viene saltato
-    }
+    } catch (err) {}
   }
 
   function undo() {
@@ -354,6 +419,74 @@
     };
   }
 
+  // Converti coordinate schermo in coordinate Canvas
+  function screenToCanvas(sx, sy) {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    return {
+      x: (sx - rect.left) * scaleX,
+      y: (sy - rect.top) * scaleY
+    };
+  }
+
+  // Calcola le posizioni esatte dei 4 angoli dello stencil sul Canvas (Supporta anche la rotazione corrente)
+  function getSpatulaCanvasCorners() {
+    if (!spatula || spatula.classList.contains('hidden')) return null;
+
+    const w = SPATULA_WIDTH;
+    const h = SPATULA_HEIGHT;
+
+    // Centro dello stencil in coordinate schermo
+    const cx = spatulaPos.x + w / 2;
+    const cy = spatulaPos.y + h / 2;
+
+    // Angolo di rotazione corrente
+    const angleDeg = spatulaCtl ? spatulaCtl.getAngle() : 0;
+    const angleRad = angleDeg * Math.PI / 180;
+
+    const cos = Math.cos(angleRad);
+    const sin = Math.sin(angleRad);
+
+    const halfW = w / 2;
+    const halfH = h / 2;
+
+    // Angoli relativi locali rispetto al centro dello stencil
+    const localCorners = [
+      { x: -halfW, y: -halfH }, // Alto-Sinistra
+      { x: halfW, y: -halfH },  // Alto-Destra
+      { x: halfW, y: halfH },   // Basso-Destra
+      { x: -halfW, y: halfH }   // Basso-Sinistra
+    ];
+
+    // Applica matrice di rotazione ai punti e converti in coordinate Canvas
+    return localCorners.map(pt => {
+      const rx = pt.x * cos - pt.y * sin;
+      const ry = pt.x * sin + pt.y * cos;
+      return screenToCanvas(cx + rx, cy + ry);
+    });
+  }
+
+  // Crea una maschera di ritaglio "al contrario" per proteggere l'area dello stencil
+  function applySpatulaClip() {
+    const corners = getSpatulaCanvasCorners();
+    if (!corners) return;
+
+    ctx.beginPath();
+    // 1. Definisce l'area totale del foglio
+    ctx.rect(0, 0, canvas.width, canvas.height);
+    
+    // 2. Disegna il percorso del rettangolo dello stencil (anche se ruotato)
+    ctx.moveTo(corners[0].x, corners[0].y);
+    ctx.lineTo(corners[1].x, corners[1].y);
+    ctx.lineTo(corners[2].x, corners[2].y);
+    ctx.lineTo(corners[3].x, corners[3].y);
+    ctx.closePath();
+    
+    // 3. Applica il ritaglio 'evenodd' (cancella ovunque TRANNE che sotto lo stencil)
+    ctx.clip('evenodd');
+  }
+
   function isShapeMode() {
     return currentMode === 'line' || currentMode === 'rect' || currentMode === 'circle';
   }
@@ -374,8 +507,8 @@
       addSnapPoint({ x: start.x, y: end.y });
       addSnapPoint({ x: end.x, y: start.y });
     } else if (mode === 'circle') {
-      addSnapPoint(start); // centro
-      addSnapPoint(end);   // punto sul bordo
+      addSnapPoint(start); 
+      addSnapPoint(end);   
     }
   }
 
@@ -424,13 +557,8 @@
   }
 
   function trySnap(pos) {
-    // 1. Se l'utente ha disattivato manualmente la calamita, non fare nulla!
     if (!snapEnabled) return pos;
-
-    // 2. Disattiva lo snap se l'utente usa la matita a mano libera o la gomma
     if (currentMode === 'draw' || currentMode === 'erase') return pos;
-    
-    // 3. Lo snap si attiva solo quando l'utente disegna linee, rettangoli o cerchi
     if (!isShapeMode()) return pos;
     
     const snapped = findSnapPoint(pos);
@@ -448,7 +576,7 @@
     isDrawing = true;
     const pos = trySnap(getCoordinates(e));
 
-    pushUndo(); // stato salvato PRIMA che parta il tratto/la forma
+    pushUndo(); 
 
     if (isShapeMode()) {
       shapeStartPos = pos;
@@ -489,35 +617,36 @@
     if (e.type === 'touchmove') e.preventDefault();
 
     const pos = trySnap(getCoordinates(e));
+    const prevPos = lastPos ? { x: lastPos.x, y: lastPos.y } : pos;
     lastPos = pos;
 
     if (currentMode === 'draw') {
-      ctx.save();
-      clipOutRulers();
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = currentColor;
       ctx.lineWidth = currentThickness;
       ctx.lineTo(pos.x, pos.y);
       ctx.stroke();
-      ctx.restore();
       ctx.beginPath();
       ctx.moveTo(pos.x, pos.y);
 
     } else if (currentMode === 'erase') {
       ctx.save();
-      clipOutRulers();
+      applySpatulaClip(); // Applica la maschera di ritaglio dello stencil
       ctx.globalCompositeOperation = 'destination-out';
       ctx.lineWidth = 20;
+      
+      ctx.beginPath();
+      ctx.moveTo(prevPos.x, prevPos.y);
       ctx.lineTo(pos.x, pos.y);
       ctx.stroke();
-      ctx.restore();
+      ctx.restore(); // Ripristina il ritaglio
+      
       ctx.beginPath();
       ctx.moveTo(pos.x, pos.y);
 
     } else if (isShapeMode()) {
       if (!shapeStartPos || !savedImageData) return;
 
-      // Ripristina lo stato prima della forma, poi ridisegna l'anteprima
       ctx.putImageData(savedImageData, 0, 0);
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = currentColor;
@@ -530,8 +659,8 @@
         ctx.stroke();
 
       } else if (currentMode === 'rect') {
-        const w = pos.x - shapeStartPos.x;
-        const h = pos.y - shapeStartPos.y;
+        const w = Math.max(1, pos.x - shapeStartPos.x);
+        const h = Math.max(1, pos.y - shapeStartPos.y);
         ctx.strokeRect(shapeStartPos.x, shapeStartPos.y, w, h);
 
       } else if (currentMode === 'circle') {
@@ -581,7 +710,6 @@
   btnRect.addEventListener('click', () => setActiveTool('rect', btnRect));
   btnCircle.addEventListener('click', () => setActiveTool('circle', btnCircle));
 
-  // Sincronizza cursore e touch-action con la modalità iniziale (pan/zoom)
   setActiveTool('none', btnNone);
 
   btnUndo.addEventListener('click', undo);
@@ -590,9 +718,8 @@
     window.location.href = 'dashconsolle.html';
   });
 
-  // --- Evento di attivazione/disattivazione Calamita (Snap) ---
   btnSnapToggle.addEventListener('click', () => {
-    snapEnabled = !snapEnabled; // Inverte lo stato (true/false)
+    snapEnabled = !snapEnabled;
     
     if (snapEnabled) {
       btnSnapToggle.classList.add('active');
@@ -692,16 +819,11 @@
     document.body.style.paddingTop = (toolbar.offsetHeight + 10) + 'px';
   }
 
-  window.addEventListener('load', () => {
-    loadCanvas();
-    adjustBodyPadding();
-  });
   window.addEventListener('resize', adjustBodyPadding);
 
-  // --- Gestione Righelli (Uguagliati in larghezza/scala simmetrica) ---
+  // --- Gestione Righelli ---
   function initRuler(rulerEl, orientation, getDefaultRect) {
     const rotateHandle = rulerEl.querySelector('.ruler-rotate-handle');
-    const dragHandle = rulerEl.querySelector('.ruler-drag-handle');
     let angle = 0;
     let pos = { x: 0, y: 0 };
     let dragStart = null;
@@ -714,7 +836,6 @@
       rulerEl.style.left = pos.x + 'px';
       rulerEl.style.top = pos.y + 'px';
       rulerEl.style.transform = `rotate(${angle}deg)`;
-      rulerEl.dataset.angle = angle; // letto dalla logica di schermatura in draw()
     }
 
     function resetToDefault() {
@@ -726,22 +847,20 @@
       applyTransform();
     }
 
-    // Solo la maniglia dedicata trascina il righello: il corpo non risponde più al tocco
-    // (necessario anche perché il corpo ha pointer-events:none, per lasciar passare gomma/matita)
-    dragHandle.addEventListener('pointerdown', (e) => {
-      e.stopPropagation();
+    rulerEl.addEventListener('pointerdown', (e) => {
+      if (e.target === rotateHandle) return;
       dragStart = { x: e.clientX, y: e.clientY };
       dragStartPos = { x: pos.x, y: pos.y };
-      dragHandle.setPointerCapture(e.pointerId);
+      rulerEl.setPointerCapture(e.pointerId);
     });
-    dragHandle.addEventListener('pointermove', (e) => {
+    rulerEl.addEventListener('pointermove', (e) => {
       if (!dragStart) return;
       pos.x = dragStartPos.x + (e.clientX - dragStart.x);
       pos.y = dragStartPos.y + (e.clientY - dragStart.y);
       applyTransform();
     });
-    dragHandle.addEventListener('pointerup', (e) => { dragStart = null; e.stopPropagation(); });
-    dragHandle.addEventListener('pointercancel', () => { dragStart = null; });
+    rulerEl.addEventListener('pointerup', () => { dragStart = null; });
+    rulerEl.addEventListener('pointercancel', () => { dragStart = null; });
 
     rotateHandle.addEventListener('pointerdown', (e) => {
       e.stopPropagation();
@@ -768,6 +887,108 @@
     return { resetToDefault };
   }
 
+  // --- Gestione Stencil (Con Rotazione) ---
+  function initSpatula(spatulaEl, getDefaultRect) {
+    const dragHandle = spatulaEl.querySelector('.spatula-drag-handle');
+    const rotateHandle = spatulaEl.querySelector('.spatula-rotate-handle');
+    let angle = 0;
+    let dragStart = null;
+    let dragStartPos = null;
+    let rotating = false;
+    let rotateStartAngle = 0;
+    let rotateStartSpatulaAngle = 0;
+
+    function applyTransform() {
+      spatulaEl.style.left = spatulaPos.x + 'px';
+      spatulaEl.style.top = spatulaPos.y + 'px';
+      spatulaEl.style.transform = `rotate(${angle}deg)`;
+    }
+
+    function resetToDefault() {
+      const d = getDefaultRect();
+      spatulaPos = { x: d.x, y: d.y };
+      angle = 0;
+      applyTransform();
+    }
+
+    // Eventi associati alla maniglia centrale di trascinamento
+    dragHandle.addEventListener('pointerdown', (e) => {
+      dragStart = { x: e.clientX, y: e.clientY };
+      dragStartPos = { x: spatulaPos.x, y: spatulaPos.y };
+      dragHandle.setPointerCapture(e.pointerId);
+      e.stopPropagation();
+    });
+    dragHandle.addEventListener('pointermove', (e) => {
+      if (!dragStart) return;
+      spatulaPos.x = dragStartPos.x + (e.clientX - dragStart.x);
+      spatulaPos.y = dragStartPos.y + (e.clientY - dragStart.y);
+      applyTransform();
+      e.stopPropagation();
+    });
+    dragHandle.addEventListener('pointerup', (e) => { 
+      dragStart = null; 
+      e.stopPropagation(); 
+    });
+    dragHandle.addEventListener('pointercancel', () => { 
+      dragStart = null; 
+    });
+
+// Eventi associati alla maniglia centrale di trascinamento
+    dragHandle.addEventListener('pointerdown', (e) => {
+      dragStart = { x: e.clientX, y: e.clientY };
+      dragStartPos = { x: spatulaPos.x, y: spatulaPos.y };
+      dragHandle.setPointerCapture(e.pointerId);
+      e.stopPropagation();
+    });
+    dragHandle.addEventListener('pointermove', (e) => {
+      if (!dragStart) return;
+      spatulaPos.x = dragStartPos.x + (e.clientX - dragStart.x);
+      spatulaPos.y = dragStartPos.y + (e.clientY - dragStart.y);
+      applyTransform();
+      e.stopPropagation();
+    });
+    dragHandle.addEventListener('pointerup', (e) => { 
+      dragStart = null; 
+      e.stopPropagation(); 
+    });
+    dragHandle.addEventListener('pointercancel', () => { 
+      dragStart = null; 
+    });
+
+    // Eventi associati alla maniglia di rotazione superiore
+    rotateHandle.addEventListener('pointerdown', (e) => {
+      e.stopPropagation();
+      const rect = spatulaEl.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      rotateStartAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
+      rotateStartSpatulaAngle = angle;
+      rotating = true;
+      rotateHandle.setPointerCapture(e.pointerId);
+    });
+    rotateHandle.addEventListener('pointermove', (e) => {
+      if (!rotating) return;
+      const rect = spatulaEl.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const currentAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
+      angle = rotateStartSpatulaAngle + (currentAngle - rotateStartAngle) * (180 / Math.PI);
+      applyTransform();
+    });
+    rotateHandle.addEventListener('pointerup', (e) => { 
+      rotating = false; 
+      e.stopPropagation(); 
+    });
+    rotateHandle.addEventListener('pointercancel', () => { 
+      rotating = false; 
+    });
+
+    return { 
+      resetToDefault, 
+      getAngle: () => angle 
+    };
+  }
+
   function getCanvasContainerRect() {
     return document.querySelector('.canvas-container').getBoundingClientRect();
   }
@@ -776,7 +997,6 @@
   const rulerH = document.getElementById('rulerH');
   const btnRuler = document.getElementById('btnRuler');
 
-  // r.width - 20 applicato a entrambi garantisce scala identica al 100%
   const rulerVCtl = initRuler(rulerV, 'vertical', () => {
     const r = getCanvasContainerRect();
     return { x: r.left + 8, y: r.top + 10, length: r.width - 20 };
@@ -786,75 +1006,33 @@
     return { x: r.left + 10, y: r.top + 8, length: r.width - 20 };
   });
 
+  // Inizializza lo Stencil
+  spatulaCtl = initSpatula(spatula, () => {
+    const r = getCanvasContainerRect();
+    const x = r.left + (r.width - SPATULA_WIDTH) / 2;
+    const y = r.top + (r.height - SPATULA_HEIGHT) / 2;
+    return { x, y };
+  });
+
+  // Attiva e disattiva stencil e righelli
   btnRuler.addEventListener('click', () => {
     const hiddenNow = rulerV.classList.toggle('hidden');
     rulerH.classList.toggle('hidden', hiddenNow);
+    spatula.classList.toggle('hidden', hiddenNow); 
     if (!hiddenNow) {
       rulerVCtl.resetToDefault();
       rulerHCtl.resetToDefault();
+      spatulaCtl.resetToDefault(); 
     }
   });
 
   window.addEventListener('load', () => {
+    loadCanvas();
+    adjustBodyPadding();
     rulerVCtl.resetToDefault();
     rulerHCtl.resetToDefault();
+    spatulaCtl.resetToDefault(); 
   });
-
-  // --- Schermatura: gomma e matita non toccano l'area coperta da un righello ---
-  function getRulerClipCorners(rulerEl) {
-    if (rulerEl.classList.contains('hidden')) return null;
-
-    const w = rulerEl.offsetWidth;
-    const h = rulerEl.offsetHeight;
-    // Il centro resta invariato dalla rotazione (avviene sempre attorno al proprio centro),
-    // quindi getBoundingClientRect() qui è affidabile per trovarlo, a qualunque angolo.
-    const rect = rulerEl.getBoundingClientRect();
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-
-    const angleDeg = parseFloat(rulerEl.dataset.angle || '0');
-    const rad = angleDeg * Math.PI / 180;
-    const cos = Math.cos(rad), sin = Math.sin(rad);
-
-    const canvasRect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / canvasRect.width;
-    const scaleY = canvas.height / canvasRect.height;
-
-    const localCorners = [
-      { x: -w / 2, y: -h / 2 },
-      { x:  w / 2, y: -h / 2 },
-      { x:  w / 2, y:  h / 2 },
-      { x: -w / 2, y:  h / 2 }
-    ];
-
-    return localCorners.map(p => {
-      const rx = p.x * cos - p.y * sin;
-      const ry = p.x * sin + p.y * cos;
-      const viewportX = cx + rx;
-      const viewportY = cy + ry;
-      return {
-        x: (viewportX - canvasRect.left) * scaleX,
-        y: (viewportY - canvasRect.top) * scaleY
-      };
-    });
-  }
-
-  // Applica un ritaglio (clip) al contesto: l'intero canvas MENO l'area dei righelli visibili.
-  // Va richiamata prima di ogni stroke() di matita/gomma, dentro un save()/restore().
-  function clipOutRulers() {
-    ctx.beginPath();
-    ctx.rect(0, 0, canvas.width, canvas.height);
-    [rulerV, rulerH].forEach(r => {
-      const corners = getRulerClipCorners(r);
-      if (!corners) return;
-      ctx.moveTo(corners[0].x, corners[0].y);
-      ctx.lineTo(corners[1].x, corners[1].y);
-      ctx.lineTo(corners[2].x, corners[2].y);
-      ctx.lineTo(corners[3].x, corners[3].y);
-      ctx.closePath();
-    });
-    ctx.clip('evenodd');
-  }
 </script>
 </body>
 </html>
