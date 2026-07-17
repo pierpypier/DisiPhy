@@ -8,7 +8,7 @@
   :root {
     --cal-bg: #f7f7fb;
     --cal-card: #ffffff;
-    --cal-accent: #1e88e5; /* allineato al blu del tema generale dell'app */
+    --cal-accent: #1e88e5;
     --cal-muted: #666666;
   }
 
@@ -21,7 +21,6 @@
     background: var(--cal-bg);
     color: #111;
     padding-bottom: 20px;
-    /* padding-top viene impostato dinamicamente in base all'altezza reale della toolbar */
   }
 
   /* Contenitore Principale */
@@ -43,12 +42,13 @@
   .color-blue { background: #1e40af; }
   .color-black { background: #000000; }
   .color-red { background: #dc2626; }
+  .color-white { background: #ffffff; border: 1px solid #cbd5e0; } /* Stile per il cerchietto bianco */
 
   .header h1 { font-size: 22px; color: #155a8a; margin: 0 0 15px 0; }
 
   /* --- Toolbar fissa su 2 righe --- */
   .toolbar {
-    position: fixed;      /* ancorata alla viewport, non al documento */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -191,7 +191,7 @@
     z-index: 510;
   }
 
-  /* --- CSS dello Stencil (Bordo continuo da 2px) --- */
+  /* --- CSS dello Stencil --- */
   .spatula-container {
     position: fixed;
     z-index: 500;
@@ -199,21 +199,20 @@
     height: 60px;
     user-select: none;
     touch-action: none;
-    pointer-events: none; /* TRASPARENTE: permette di disegnare/cancellare sotto lo stencil */
+    pointer-events: none;
   }
   .spatula-container.hidden { display: none; }
   
   .spatula-body {
     width: 100%;
     height: 100%;
-    border: 2px solid #dc2626; /* Linea continua rossa da 2px */
-    background: rgba(255, 255, 255, 0.4); /* Semi-trasparente */
+    border: 2px solid #dc2626;
+    background: rgba(255, 255, 255, 0.4);
     border-radius: 6px;
     opacity: 0.9;
-    pointer-events: none; /* Trasparente ai click di disegno/gomma */
+    pointer-events: none;
   }
 
-  /* Maniglia centrale di trascinamento */
   .spatula-drag-handle {
     position: absolute;
     top: 50%;
@@ -222,7 +221,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: #dc2626; /* Bollino rosso centrale */
+    background: #dc2626;
     color: #fff;
     display: flex;
     align-items: center;
@@ -232,20 +231,15 @@
     box-shadow: 0 2px 5px rgba(0,0,0,.35);
     touch-action: none;
     z-index: 510;
-    pointer-events: auto; /* ATTIVA: cattura i click esclusivamente per muovere lo stencil */
+    pointer-events: auto;
   }
-  .spatula-drag-handle:active {
-    cursor: grabbing;
-  }
+  .spatula-drag-handle:active { cursor: grabbing; }
 
-  /* Maniglia di rotazione stencil */
   .spatula-rotate-handle {
-    background: #dc2626; /* Tema rosso coordinato */
-    pointer-events: auto; /* ATTIVA: intercettabile al click */
+    background: #dc2626;
+    pointer-events: auto;
   }
-  .spatula-rotate-handle:active {
-    cursor: grabbing;
-  }
+  .spatula-rotate-handle:active { cursor: grabbing; }
 </style>
 </head>
 <body>
@@ -264,14 +258,17 @@
   
   <!-- RIGA 2: Forme, Opzioni Tratto, Sfondi e Righelli -->
   <div class="toolbar-row">
+    <button id="btnConstructionLine" class="btn secondary" title="Linea Costruzione (Offset + Grigio)">📐✏️</button>
     <button id="btnLine" class="btn secondary" title="Riga">📏</button>
     <button id="btnRect" class="btn secondary" title="Rettangolo">▭</button>
     <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
     <button id="btnSnapToggle" class="btn active" title="Attiva/Disattiva Calamita">🧲</button>
     
+    <!-- Palette Aggiornata con il Bianco -->
     <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
     <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
     <div class="color-dot color-red" data-color="#dc2626" title="Rosso"></div>
+    <div class="color-dot color-white" data-color="#ffffff" title="Bianco"></div>
     
     <div class="thickness-wrap" title="Spessore della linea">
       <input type="range" id="thickness" min="1" max="5" step="1" value="2">
@@ -305,7 +302,7 @@
   <img src="rimage/ruleh.png" alt="Righello Orizzontale">
 </div>
 
-<!-- HTML dello Stencil con Doppia Maniglia (Movimento centrale + Rotazione superiore) -->
+<!-- Stencil -->
 <div id="spatula" class="spatula-container hidden">
   <div class="ruler-rotate-handle spatula-rotate-handle" title="Ruota stencil">⟳</div>
   <div class="spatula-body"></div>
@@ -319,11 +316,10 @@
   const LS_KEY = 'organizer_lavagna_v1';
   const MAX_UNDO = 15;
 
-  // Dimensioni dello Stencil
   const SPATULA_WIDTH = 60;
   const SPATULA_HEIGHT = 60; 
   let spatulaPos = { x: 0, y: 0 };
-  let spatulaCtl = null; // Gestore istanza stencil
+  let spatulaCtl = null;
 
   const btnprevious = document.getElementById('btnprevious');
   const btnUndo = document.getElementById('btnUndo');
@@ -332,6 +328,7 @@
   const btnNone = document.getElementById('btnNone');
   const btnClear = document.getElementById('btnClear');
   const btnPrint = document.getElementById('btnPrint');
+  const btnConstructionLine = document.getElementById('btnConstructionLine'); // Nuovo bottone
   const btnLine = document.getElementById('btnLine');
   const btnRect = document.getElementById('btnRect');
   const btnCircle = document.getElementById('btnCircle');
@@ -341,7 +338,8 @@
   const toolbar = document.querySelector('.toolbar');
   const spatula = document.getElementById('spatula');
 
-  const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnRect, btnCircle];
+  // Array dei bottoni aggiornato con la nuova modalità
+  const allModeButtons = [btnDraw, btnErase, btnNone, btnConstructionLine, btnLine, btnRect, btnCircle];
 
   let isDrawing = false;
   let currentMode = 'none';
@@ -349,17 +347,14 @@
   let currentThickness = 2;
   let snapEnabled = true;
 
-  // Usati solo dagli strumenti forma (riga/rettangolo/cerchio) per l'anteprima live
   let shapeStartPos = null;
   let savedImageData = null;
 
-  // Snap ai vertici
   let sessionSnapPoints = [];
   let strokeStartPos = null;
   let lastPos = null;
   const SNAP_SCREEN_THRESHOLD = 16; 
 
-  // Stack per l'undo
   const undoStack = [];
 
   ctx.lineCap = 'round';
@@ -404,11 +399,16 @@
     if (undoStack.length === 0) btnUndo.disabled = true;
   }
 
+  // Gestione coordinate: l'offset di 50px si applica SOLTANTO alla 'construction_line'[cite: 1]
   function getCoordinates(e) {
     const rect = canvas.getBoundingClientRect();
     const touch = e.touches && e.touches[0];
-    const clientX = touch ? touch.clientX : e.clientX;
-    const clientY = touch ? touch.clientY : e.clientY;
+    let clientX = touch ? touch.clientX : e.clientX;
+    let clientY = touch ? touch.clientY : e.clientY;
+
+    if (touch && currentMode === 'construction_line') {
+      clientY -= 50; 
+    }
 
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
@@ -419,7 +419,6 @@
     };
   }
 
-  // Converti coordinate schermo in coordinate Canvas
   function screenToCanvas(sx, sy) {
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
@@ -430,36 +429,24 @@
     };
   }
 
-  // Calcola le posizioni esatte dei 4 angoli dello stencil sul Canvas (Supporta anche la rotazione corrente)
   function getSpatulaCanvasCorners() {
     if (!spatula || spatula.classList.contains('hidden')) return null;
-
     const w = SPATULA_WIDTH;
     const h = SPATULA_HEIGHT;
-
-    // Centro dello stencil in coordinate schermo
     const cx = spatulaPos.x + w / 2;
     const cy = spatulaPos.y + h / 2;
-
-    // Angolo di rotazione corrente
     const angleDeg = spatulaCtl ? spatulaCtl.getAngle() : 0;
     const angleRad = angleDeg * Math.PI / 180;
-
     const cos = Math.cos(angleRad);
     const sin = Math.sin(angleRad);
-
     const halfW = w / 2;
     const halfH = h / 2;
-
-    // Angoli relativi locali rispetto al centro dello stencil
     const localCorners = [
-      { x: -halfW, y: -halfH }, // Alto-Sinistra
-      { x: halfW, y: -halfH },  // Alto-Destra
-      { x: halfW, y: halfH },   // Basso-Destra
-      { x: -halfW, y: halfH }   // Basso-Sinistra
+      { x: -halfW, y: -halfH },
+      { x: halfW, y: -halfH },
+      { x: halfW, y: halfH },
+      { x: -halfW, y: halfH }
     ];
-
-    // Applica matrice di rotazione ai punti e converti in coordinate Canvas
     return localCorners.map(pt => {
       const rx = pt.x * cos - pt.y * sin;
       const ry = pt.x * sin + pt.y * cos;
@@ -467,38 +454,30 @@
     });
   }
 
-  // Crea una maschera di ritaglio "al contrario" per proteggere l'area dello stencil
   function applySpatulaClip() {
     const corners = getSpatulaCanvasCorners();
     if (!corners) return;
-
     ctx.beginPath();
-    // 1. Definisce l'area totale del foglio
     ctx.rect(0, 0, canvas.width, canvas.height);
-    
-    // 2. Disegna il percorso del rettangolo dello stencil (anche se ruotato)
     ctx.moveTo(corners[0].x, corners[0].y);
     ctx.lineTo(corners[1].x, corners[1].y);
     ctx.lineTo(corners[2].x, corners[2].y);
     ctx.lineTo(corners[3].x, corners[3].y);
     ctx.closePath();
-    
-    // 3. Applica il ritaglio 'evenodd' (cancella ovunque TRANNE che sotto lo stencil)
     ctx.clip('evenodd');
   }
 
   function isShapeMode() {
-    return currentMode === 'line' || currentMode === 'rect' || currentMode === 'circle';
+    return currentMode === 'line' || currentMode === 'construction_line' || currentMode === 'rect' || currentMode === 'circle';
   }
 
-  // --- Snap ai vertici ---
   function addSnapPoint(pt) {
     sessionSnapPoints.push(pt);
     if (sessionSnapPoints.length > 400) sessionSnapPoints.shift();
   }
 
   function recordShapeSnapPoints(mode, start, end) {
-    if (mode === 'line') {
+    if (mode === 'line' || mode === 'construction_line') {
       addSnapPoint(start);
       addSnapPoint(end);
     } else if (mode === 'rect') {
@@ -631,7 +610,7 @@
 
     } else if (currentMode === 'erase') {
       ctx.save();
-      applySpatulaClip(); // Applica la maschera di ritaglio dello stencil
+      applySpatulaClip();
       ctx.globalCompositeOperation = 'destination-out';
       ctx.lineWidth = 20;
       
@@ -639,7 +618,7 @@
       ctx.moveTo(prevPos.x, prevPos.y);
       ctx.lineTo(pos.x, pos.y);
       ctx.stroke();
-      ctx.restore(); // Ripristina il ritaglio
+      ctx.restore();
       
       ctx.beginPath();
       ctx.moveTo(pos.x, pos.y);
@@ -649,11 +628,18 @@
 
       ctx.putImageData(savedImageData, 0, 0);
       ctx.globalCompositeOperation = 'source-over';
-      ctx.strokeStyle = currentColor;
+      
+      // Assegnazione dinamica del colore a seconda dello strumento attivo
+      if (currentMode === 'construction_line') {
+        ctx.strokeStyle = '#cbd5e1'; // Grigio chiaro fisso di default per la linea di costruzione
+      } else {
+        ctx.strokeStyle = currentColor; // Colore della palette per riga normale, rettangolo, cerchio
+      }
+      
       ctx.lineWidth = currentThickness;
       ctx.beginPath();
 
-      if (currentMode === 'line') {
+      if (currentMode === 'line' || currentMode === 'construction_line') {
         ctx.moveTo(shapeStartPos.x, shapeStartPos.y);
         ctx.lineTo(pos.x, pos.y);
         ctx.stroke();
@@ -706,6 +692,7 @@
   btnDraw.addEventListener('click', () => setActiveTool('draw', btnDraw));
   btnErase.addEventListener('click', () => setActiveTool('erase', btnErase));
   btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
+  btnConstructionLine.addEventListener('click', () => setActiveTool('construction_line', btnConstructionLine)); // Evento nuova linea
   btnLine.addEventListener('click', () => setActiveTool('line', btnLine));
   btnRect.addEventListener('click', () => setActiveTool('rect', btnRect));
   btnCircle.addEventListener('click', () => setActiveTool('circle', btnCircle));
@@ -720,7 +707,6 @@
 
   btnSnapToggle.addEventListener('click', () => {
     snapEnabled = !snapEnabled;
-    
     if (snapEnabled) {
       btnSnapToggle.classList.add('active');
       btnSnapToggle.classList.remove('secondary');
@@ -800,12 +786,10 @@
   // --- Toolbar fissa durante il pinch-zoom ---
   function keepToolbarFixed() {
     if (!window.visualViewport) return;
-
     const vv = window.visualViewport;
     const scale = 1 / vv.scale;
     const x = vv.offsetLeft;
     const y = vv.offsetTop;
-
     toolbar.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
   }
 
@@ -887,7 +871,7 @@
     return { resetToDefault };
   }
 
-  // --- Gestione Stencil (Con Rotazione) ---
+  // --- Gestione Stencil ---
   function initSpatula(spatulaEl, getDefaultRect) {
     const dragHandle = spatulaEl.querySelector('.spatula-drag-handle');
     const rotateHandle = spatulaEl.querySelector('.spatula-rotate-handle');
@@ -911,7 +895,6 @@
       applyTransform();
     }
 
-    // Eventi associati alla maniglia centrale di trascinamento
     dragHandle.addEventListener('pointerdown', (e) => {
       dragStart = { x: e.clientX, y: e.clientY };
       dragStartPos = { x: spatulaPos.x, y: spatulaPos.y };
@@ -933,7 +916,6 @@
       dragStart = null; 
     });
 
-    // Eventi associati alla maniglia di rotazione superiore
     rotateHandle.addEventListener('pointerdown', (e) => {
       e.stopPropagation();
       const rect = spatulaEl.getBoundingClientRect();
@@ -984,7 +966,6 @@
     return { x: r.left + 10, y: r.top + 8, length: r.width - 20 };
   });
 
-  // Inizializza lo Stencil
   spatulaCtl = initSpatula(spatula, () => {
     const r = getCanvasContainerRect();
     const x = r.left + (r.width - SPATULA_WIDTH) / 2;
@@ -992,7 +973,6 @@
     return { x, y };
   });
 
-  // Attiva e disattiva stencil e righelli
   btnRuler.addEventListener('click', () => {
     const hiddenNow = rulerV.classList.toggle('hidden');
     rulerH.classList.toggle('hidden', hiddenNow);
