@@ -42,7 +42,7 @@
   .color-blue { background: #1e40af; }
   .color-black { background: #000000; }
   .color-red { background: #dc2626; }
-  .color-white { background: #ffffff; border: 1px solid #cbd5e0; } /* Stile per il cerchietto bianco */
+  .color-white { background: #ffffff; border: 1px solid #cbd5e0; }
 
   .header h1 { font-size: 22px; color: #155a8a; margin: 0 0 15px 0; }
 
@@ -132,7 +132,7 @@
     .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
     .card { padding: 0; box-shadow: none; border: none; }
     .canvas-container { border: none; box-shadow: none; }
-    .ruler, .snap-indicator, .spatula-container { display: none !important; }
+    .ruler, .snap-indicator, .spatula-container, .triangle-locator { display: none !important; }
     @page { size: A4; margin: 10mm; }
   }
 
@@ -176,15 +176,16 @@
     top: -16px;
     left: 50%;
     transform: translateX(-50%);
-    width: 26px;
+    width: 45px;
     height: 26px;
-    border-radius: 50%;
+    border-radius: 13px;
     background: #1e88e5;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 11px;
+    font-weight: bold;
     cursor: grab;
     box-shadow: 0 2px 4px rgba(0,0,0,.25);
     touch-action: none;
@@ -240,6 +241,42 @@
     pointer-events: auto;
   }
   .spatula-rotate-handle:active { cursor: grabbing; }
+
+  /* --- CSS Triangoli Ancoraggio Geometrico --- */
+  .triangle-locator {
+    position: fixed;
+    z-index: 500;
+    width: 60px;
+    height: 52px; 
+    user-select: none;
+    touch-action: none;
+    pointer-events: none;
+  }
+  .triangle-locator.hidden { display: none; }
+
+  .triangle-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .triangle-handle {
+    position: absolute;
+    top: calc(52px * 0.66); 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #000;
+    border: 2px solid #fff;
+    cursor: grab;
+    touch-action: none;
+    z-index: 510;
+    pointer-events: auto;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+  .triangle-handle:active { cursor: grabbing; }
 </style>
 </head>
 <body>
@@ -258,13 +295,11 @@
   
   <!-- RIGA 2: Forme, Opzioni Tratto, Sfondi e Righelli -->
   <div class="toolbar-row">
-    <button id="btnConstructionLine" class="btn secondary" title="Linea Costruzione (Offset + Grigio)">📐✏️</button>
     <button id="btnLine" class="btn secondary" title="Riga">📏</button>
     <button id="btnRect" class="btn secondary" title="Rettangolo">▭</button>
     <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
     <button id="btnSnapToggle" class="btn active" title="Attiva/Disattiva Calamita">🧲</button>
     
-    <!-- Palette Aggiornata con il Bianco -->
     <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
     <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
     <div class="color-dot color-red" data-color="#dc2626" title="Rosso"></div>
@@ -292,13 +327,13 @@
 
 <!-- Righello Verticale -->
 <div id="rulerV" class="ruler ruler-vertical hidden">
-  <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
+  <div class="ruler-rotate-handle" title="Ruota righello">0°</div>
   <img src="rimage/rulev.png" alt="Righello Verticale">
 </div>
 
 <!-- Righello Orizzontale -->
 <div id="rulerH" class="ruler ruler-horizontal hidden">
-  <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
+  <div class="ruler-rotate-handle" title="Ruota righello">0°</div>
   <img src="rimage/ruleh.png" alt="Righello Orizzontale">
 </div>
 
@@ -307,6 +342,22 @@
   <div class="ruler-rotate-handle spatula-rotate-handle" title="Ruota stencil">⟳</div>
   <div class="spatula-body"></div>
   <div class="spatula-drag-handle" title="Trascina lo Stencil">✥</div>
+</div>
+
+<!-- Triangolo Ancoraggio A -->
+<div id="triangleA" class="triangle-locator hidden">
+  <svg class="triangle-svg" viewBox="0 0 60 52">
+    <polygon points="30,0 60,52 0,52" fill="none" stroke="#16a34a" stroke-width="1"/>
+  </svg>
+  <div class="triangle-handle" title="Trascina Ancoraggio A"></div>
+</div>
+
+<!-- Triangolo Ancoraggio B -->
+<div id="triangleB" class="triangle-locator hidden">
+  <svg class="triangle-svg" viewBox="0 0 60 52">
+    <polygon points="30,0 60,52 0,52" fill="none" stroke="#16a34a" stroke-width="1"/>
+  </svg>
+  <div class="triangle-handle" title="Trascina Ancoraggio B"></div>
 </div>
 
 <script>
@@ -321,6 +372,10 @@
   let spatulaPos = { x: 0, y: 0 };
   let spatulaCtl = null;
 
+  // Stato e posizioni dei due triangoli di ancoraggio
+  let triangleAPos = { x: 0, y: 0 };
+  let triangleBPos = { x: 0, y: 0 };
+
   const btnprevious = document.getElementById('btnprevious');
   const btnUndo = document.getElementById('btnUndo');
   const btnDraw = document.getElementById('btnDraw');
@@ -328,7 +383,6 @@
   const btnNone = document.getElementById('btnNone');
   const btnClear = document.getElementById('btnClear');
   const btnPrint = document.getElementById('btnPrint');
-  const btnConstructionLine = document.getElementById('btnConstructionLine'); // Nuovo bottone
   const btnLine = document.getElementById('btnLine');
   const btnRect = document.getElementById('btnRect');
   const btnCircle = document.getElementById('btnCircle');
@@ -337,9 +391,10 @@
   const thicknessVal = document.getElementById('thicknessVal');
   const toolbar = document.querySelector('.toolbar');
   const spatula = document.getElementById('spatula');
+  const triangleA = document.getElementById('triangleA');
+  const triangleB = document.getElementById('triangleB');
 
-  // Array dei bottoni aggiornato con la nuova modalità
-  const allModeButtons = [btnDraw, btnErase, btnNone, btnConstructionLine, btnLine, btnRect, btnCircle];
+  const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnRect, btnCircle];
 
   let isDrawing = false;
   let currentMode = 'none';
@@ -399,16 +454,11 @@
     if (undoStack.length === 0) btnUndo.disabled = true;
   }
 
-  // Gestione coordinate: l'offset di 50px si applica SOLTANTO alla 'construction_line'[cite: 1]
   function getCoordinates(e) {
     const rect = canvas.getBoundingClientRect();
     const touch = e.touches && e.touches[0];
     let clientX = touch ? touch.clientX : e.clientX;
     let clientY = touch ? touch.clientY : e.clientY;
-
-    if (touch && currentMode === 'construction_line') {
-      clientY -= 50; 
-    }
 
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
@@ -427,6 +477,16 @@
       x: (sx - rect.left) * scaleX,
       y: (sy - rect.top) * scaleY
     };
+  }
+
+  // Restituisce i 3 vertici attuali di un triangolo convertiti in unità Canvas
+  function getTriangleCanvasVertices(pos) {
+    const pts = [
+      { x: pos.x + 30, y: pos.y },
+      { x: pos.x + 60, y: pos.y + 52 },
+      { x: pos.x + 0,  y: pos.y + 52 }
+    ];
+    return pts.map(pt => screenToCanvas(pt.x, pt.y));
   }
 
   function getSpatulaCanvasCorners() {
@@ -468,16 +528,16 @@
   }
 
   function isShapeMode() {
-    return currentMode === 'line' || currentMode === 'construction_line' || currentMode === 'rect' || currentMode === 'circle';
+    return currentMode === 'line' || currentMode === 'rect' || currentMode === 'circle';
   }
 
   function addSnapPoint(pt) {
     sessionSnapPoints.push(pt);
-    if (sessionSnapPoints.length > 400) sessionSnapPoints.shift();
+    if (sessionSnapPoints.length > 600) sessionSnapPoints.shift();
   }
 
   function recordShapeSnapPoints(mode, start, end) {
-    if (mode === 'line' || mode === 'construction_line') {
+    if (mode === 'line') {
       addSnapPoint(start);
       addSnapPoint(end);
     } else if (mode === 'rect') {
@@ -492,7 +552,14 @@
   }
 
   function findSnapPoint(pos) {
-    if (sessionSnapPoints.length === 0) return null;
+    const pool = [...sessionSnapPoints];
+
+    if (!triangleA.classList.contains('hidden')) {
+      pool.push(...getTriangleCanvasVertices(triangleAPos));
+      pool.push(...getTriangleCanvasVertices(triangleBPos));
+    }
+
+    if (pool.length === 0) return null;
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
     const thresholdCanvasUnits = SNAP_SCREEN_THRESHOLD * scaleX;
@@ -500,7 +567,7 @@
     let closest = null;
     let closestDist = thresholdCanvasUnits;
 
-    sessionSnapPoints.forEach(pt => {
+    pool.forEach(pt => {
       const dx = pt.x - pos.x;
       const dy = pt.y - pos.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
@@ -628,18 +695,11 @@
 
       ctx.putImageData(savedImageData, 0, 0);
       ctx.globalCompositeOperation = 'source-over';
-      
-      // Assegnazione dinamica del colore a seconda dello strumento attivo
-      if (currentMode === 'construction_line') {
-        ctx.strokeStyle = '#cbd5e1'; // Grigio chiaro fisso di default per la linea di costruzione
-      } else {
-        ctx.strokeStyle = currentColor; // Colore della palette per riga normale, rettangolo, cerchio
-      }
-      
+      ctx.strokeStyle = currentColor; 
       ctx.lineWidth = currentThickness;
       ctx.beginPath();
 
-      if (currentMode === 'line' || currentMode === 'construction_line') {
+      if (currentMode === 'line') {
         ctx.moveTo(shapeStartPos.x, shapeStartPos.y);
         ctx.lineTo(pos.x, pos.y);
         ctx.stroke();
@@ -692,7 +752,6 @@
   btnDraw.addEventListener('click', () => setActiveTool('draw', btnDraw));
   btnErase.addEventListener('click', () => setActiveTool('erase', btnErase));
   btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
-  btnConstructionLine.addEventListener('click', () => setActiveTool('construction_line', btnConstructionLine)); // Evento nuova linea
   btnLine.addEventListener('click', () => setActiveTool('line', btnLine));
   btnRect.addEventListener('click', () => setActiveTool('rect', btnRect));
   btnCircle.addEventListener('click', () => setActiveTool('circle', btnCircle));
@@ -805,7 +864,7 @@
 
   window.addEventListener('resize', adjustBodyPadding);
 
-  // --- Gestione Righelli ---
+  // --- Gestione Righelli con visualizzazione Gradi ---
   function initRuler(rulerEl, orientation, getDefaultRect) {
     const rotateHandle = rulerEl.querySelector('.ruler-rotate-handle');
     let angle = 0;
@@ -820,6 +879,9 @@
       rulerEl.style.left = pos.x + 'px';
       rulerEl.style.top = pos.y + 'px';
       rulerEl.style.transform = `rotate(${angle}deg)`;
+      
+      // Aggiorna dinamicamente i gradi dentro la maniglia
+      rotateHandle.textContent = Math.round(angle) + '°';
     }
 
     function resetToDefault() {
@@ -863,6 +925,10 @@
       const cy = rect.top + rect.height / 2;
       const currentAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
       angle = rotateStartRulerAngle + (currentAngle - rotateStartAngle) * (180 / Math.PI);
+      
+      if (angle > 180) angle -= 360;
+      if (angle < -180) angle += 360;
+
       applyTransform();
     });
     rotateHandle.addEventListener('pointerup', (e) => { rotating = false; e.stopPropagation(); });
@@ -949,6 +1015,57 @@
     };
   }
 
+  // --- Gestione Logica Triangoli Ancoraggio Geometrico ---
+  function initTriangleLocator(triangleEl, isTriangleB, getDefaultPos) {
+    const handle = triangleEl.querySelector('.triangle-handle');
+    let dragStart = null;
+    let dragStartPos = null;
+
+    function applyTransform(pos) {
+      triangleEl.style.left = pos.x + 'px';
+      triangleEl.style.top = pos.y + 'px';
+    }
+
+    function resetToDefault() {
+      const d = getDefaultPos();
+      if (!isTriangleB) {
+        triangleAPos = { x: d.x, y: d.y };
+        applyTransform(triangleAPos);
+      } else {
+        triangleBPos = { x: d.x, y: d.y };
+        applyTransform(triangleBPos);
+      }
+    }
+
+    handle.addEventListener('pointerdown', (e) => {
+      const currentPos = !isTriangleB ? triangleAPos : triangleBPos;
+      dragStart = { x: e.clientX, y: e.clientY };
+      dragStartPos = { x: currentPos.x, y: currentPos.y };
+      handle.setPointerCapture(e.pointerId);
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointermove', (e) => {
+      if (!dragStart) return;
+      const currentPos = !isTriangleB ? triangleAPos : triangleBPos;
+      currentPos.x = dragStartPos.x + (e.clientX - dragStart.x);
+      currentPos.y = dragStartPos.y + (e.clientY - dragStart.y);
+      applyTransform(currentPos);
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointerup', (e) => {
+      dragStart = null;
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointercancel', () => {
+      dragStart = null;
+    });
+
+    return { resetToDefault };
+  }
+
   function getCanvasContainerRect() {
     return document.querySelector('.canvas-container').getBoundingClientRect();
   }
@@ -973,14 +1090,28 @@
     return { x, y };
   });
 
+  const triangleACtl = initTriangleLocator(triangleA, false, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 40, y: r.top + (r.height / 2) - 26 };
+  });
+  const triangleBCtl = initTriangleLocator(triangleB, true, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + r.width - 100, y: r.top + (r.height / 2) - 26 };
+  });
+
   btnRuler.addEventListener('click', () => {
     const hiddenNow = rulerV.classList.toggle('hidden');
     rulerH.classList.toggle('hidden', hiddenNow);
     spatula.classList.toggle('hidden', hiddenNow); 
+    triangleA.classList.toggle('hidden', hiddenNow); 
+    triangleB.classList.toggle('hidden', hiddenNow);
+    
     if (!hiddenNow) {
       rulerVCtl.resetToDefault();
       rulerHCtl.resetToDefault();
       spatulaCtl.resetToDefault(); 
+      triangleACtl.resetToDefault();
+      triangleBCtl.resetToDefault();
     }
   });
 
@@ -990,6 +1121,8 @@
     rulerVCtl.resetToDefault();
     rulerHCtl.resetToDefault();
     spatulaCtl.resetToDefault(); 
+    triangleACtl.resetToDefault();
+    triangleBCtl.resetToDefault();
   });
 </script>
 </body>
