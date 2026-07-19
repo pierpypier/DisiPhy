@@ -924,8 +924,8 @@
   function createTextNote(x, y, text = "Testo", color = currentColor, focusOnCreate = true) {
     const container = document.createElement('div');
     container.className = 'text-note-container';
-    container.style.left = x + 'px';
-    container.style.top = y + 'px';
+    container.style.left = x + '%';
+    container.style.top = y + '%';
     container.style.color = color;
 
     const handle = document.createElement('div');
@@ -952,10 +952,11 @@
 
     handle.addEventListener('pointermove', (e) => {
       if (!dragStart) return;
-      const dx = e.clientX - dragStart.x;
-      const dy = e.clientY - dragStart.y;
-      container.style.left = (initialPos.x + dx) + 'px';
-      container.style.top = (initialPos.y + dy) + 'px';
+      const rect = getCanvasContainerRect();
+      const dxPct = ((e.clientX - dragStart.x) / rect.width) * 100;
+      const dyPct = ((e.clientY - dragStart.y) / rect.height) * 100;
+      container.style.left = (initialPos.x + dxPct) + '%';
+      container.style.top = (initialPos.y + dyPct) + '%';
       e.stopPropagation();
     });
 
@@ -996,10 +997,9 @@
 
   // Tasto per inserire il testo
   btnText.addEventListener('click', () => {
-    // Posiziona il testo circa a metà del contenitore visibile
-    const rect = canvas.parentElement.getBoundingClientRect();
-    const x = 50; 
-    const y = 80; 
+    // Posiziona il testo in una zona fissa in alto a sinistra, in percentuale
+    const x = 5;  // 5% da sinistra
+    const y = 6;  // 6% dall'alto
     createTextNote(x, y, "Testo", currentColor, true);
   });
 
