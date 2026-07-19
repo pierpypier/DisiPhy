@@ -101,7 +101,7 @@
     border-radius: 6px;
     padding: 4px 10px;
   }
-  .thickness-wrap input[type=range] { width: 75px; }
+  .thickness-wrap input[type=range] { width: 50px; }
   .thickness-wrap span.val { min-width: 14px; text-align: center; font-weight: 600; }
 
   /* Area Disegno (Canvas) */
@@ -126,13 +126,74 @@
     background-repeat: repeat;
   }
 
+  /* --- Livello Testi --- */
+  #textLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Lascia passare i clic al canvas dove non c'è testo */
+    z-index: 100;
+  }
+
+  .text-note-container {
+    position: absolute;
+    z-index: 400;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 60px;
+  }
+
+  .text-drag-handle {
+    height: 16px;
+    background: rgba(200, 200, 200, 0.9);
+    cursor: grab;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #333;
+    visibility: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .text-drag-handle::before {
+    content: "⋮⋮";
+  }
+  .text-drag-handle:active {
+    cursor: grabbing;
+  }
+  .text-note-container:hover .text-drag-handle {
+    visibility: visible;
+  }
+
+  .text-content {
+    padding: 2px 6px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: bold;
+    outline: none;
+    background: transparent;
+    border-radius: 0 0 4px 4px;
+    /* Un leggero alone per renderlo leggibile su sfondi fotografici complessi */
+    text-shadow: -1px -1px 0 rgba(255,255,255,0.7), 1px -1px 0 rgba(255,255,255,0.7), -1px 1px 0 rgba(255,255,255,0.7), 1px 1px 0 rgba(255,255,255,0.7);
+  }
+  .text-content:focus {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 0 2px var(--cal-accent);
+    text-shadow: none; /* Si disattiva mentre scrivi sul bianco */
+  }
+
   @media print {
     body { background: #fff; margin: 0; padding: 0; }
     .toolbar, .header h1 { display: none !important; }
     .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
     .card { padding: 0; box-shadow: none; border: none; }
     .canvas-container { border: none; box-shadow: none; }
-    .ruler, .snap-indicator, .spatula-container, .triangle-locator { display: none !important; }
+    .ruler, .snap-indicator, .spatula-container, .triangle-locator, .text-drag-handle { display: none !important; }
+    .text-content { text-shadow: none !important; }
     @page { size: A4; margin: 10mm; }
   }
 
@@ -317,6 +378,7 @@
     <button id="btnLine" class="btn secondary" title="Riga">📏</button>
     <button id="btnRect" class="btn secondary" title="Rettangolo">▭</button>
     <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
+    <button id="btnText" class="btn secondary" title="Aggiungi Testo">T+</button>
     <button id="btnSnapToggle" class="btn active" title="Attiva/Disattiva Calamita">🧲</button>
     
     <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
@@ -341,6 +403,8 @@
 
   <div class="canvas-container">
     <canvas id="board" width="1000" height="1414"></canvas>
+    <!-- Livello dedicato esclusivamente ai testi testuali -->
+    <div id="textLayer"></div>
   </div>
 </div>
 
@@ -402,8 +466,10 @@
 <script>
   const canvas = document.getElementById('board');
   const ctx = canvas.getContext('2d');
+  const textLayer = document.getElementById('textLayer');
 
   const LS_KEY = 'organizer_lavagna_v1';
+  const LS_KEY_TEXTS = 'organizer_lavagna_testi_v1';
   const MAX_UNDO = 15;
 
   const SPATULA_WIDTH = 60;
@@ -423,6 +489,7 @@
   const btnUndo = document.getElementById('btnUndo');
   const btnDraw = document.getElementById('btnDraw');
   const btnErase = document.getElementById('btnErase');
+  const btnText = document.getElementById('btnText');
   const btnNone = document.getElementById('btnNone');
   const btnClear = document.getElementById('btnClear');
   const btnPrint = document.getElementById('btnPrint');
@@ -449,6 +516,7 @@
   let currentColor = '#1e40af';
   let currentThickness = 2;
   let snapEnabled = true;
+  let activeTextContainer = null; // Traccia il testo attivo per cambiargli il colore
 
   let shapeStartPos = null;
   let savedImageData = null;
@@ -464,10 +532,24 @@
   ctx.lineJoin = 'round';
 
   function saveCanvas() {
+    // Salva l'immagine del canvas
     localStorage.setItem(LS_KEY, canvas.toDataURL('image/png'));
+    
+    // Salva le etichette di testo
+    const texts = [];
+    document.querySelectorAll('.text-note-container').forEach(container => {
+      texts.push({
+        x: parseFloat(container.style.left) || 0,
+        y: parseFloat(container.style.top) || 0,
+        text: container.querySelector('.text-content').innerHTML,
+        color: container.style.color
+      });
+    });
+    localStorage.setItem(LS_KEY_TEXTS, JSON.stringify(texts));
   }
 
   function loadCanvas() {
+    // Carica l'immagine
     const dataURL = localStorage.getItem(LS_KEY);
     if (dataURL) {
       const img = new Image();
@@ -478,6 +560,16 @@
       img.src = dataURL;
     } else {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // Carica le etichette di testo
+    textLayer.innerHTML = '';
+    const savedTexts = localStorage.getItem(LS_KEY_TEXTS);
+    if (savedTexts) {
+      try {
+        const parsed = JSON.parse(savedTexts);
+        parsed.forEach(t => createTextNote(t.x, t.y, t.text, t.color, false));
+      } catch(e) {}
     }
   }
 
@@ -527,7 +619,6 @@
     };
   }
 
-  // Restituisce i 3 vertici attuali di un triangolo convertiti in unità Canvas
   function getTriangleCanvasVertices(pos) {
     const pts = [
       { x: pos.x + 30, y: pos.y },
@@ -789,8 +880,10 @@
       btn.classList.add('secondary');
     });
 
-    activeBtn.classList.add('active');
-    activeBtn.classList.remove('secondary');
+    if (activeBtn) {
+      activeBtn.classList.add('active');
+      activeBtn.classList.remove('secondary');
+    }
 
     if (mode === 'none') {
       canvas.style.touchAction = 'auto';
@@ -827,12 +920,101 @@
     }
   });
 
+  // --- Funzione per Aggiungere Testi Trascinabili ---
+  function createTextNote(x, y, text = "Testo", color = currentColor, focusOnCreate = true) {
+    const container = document.createElement('div');
+    container.className = 'text-note-container';
+    container.style.left = x + 'px';
+    container.style.top = y + 'px';
+    container.style.color = color;
+
+    const handle = document.createElement('div');
+    handle.className = 'text-drag-handle';
+
+    const content = document.createElement('div');
+    content.className = 'text-content';
+    content.contentEditable = true;
+    content.innerHTML = text;
+
+    container.appendChild(handle);
+    container.appendChild(content);
+    textLayer.appendChild(container);
+
+    let dragStart = null;
+    let initialPos = null;
+
+    handle.addEventListener('pointerdown', (e) => {
+      dragStart = { x: e.clientX, y: e.clientY };
+      initialPos = { x: parseFloat(container.style.left) || 0, y: parseFloat(container.style.top) || 0 };
+      handle.setPointerCapture(e.pointerId);
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointermove', (e) => {
+      if (!dragStart) return;
+      const dx = e.clientX - dragStart.x;
+      const dy = e.clientY - dragStart.y;
+      container.style.left = (initialPos.x + dx) + 'px';
+      container.style.top = (initialPos.y + dy) + 'px';
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointerup', (e) => {
+      dragStart = null;
+      saveCanvas();
+      e.stopPropagation();
+    });
+    handle.addEventListener('pointercancel', () => { dragStart = null; });
+
+    // Autodistruzione e Focus
+    content.addEventListener('blur', () => {
+      if (content.innerText.trim() === '') {
+        container.remove();
+      }
+      activeTextContainer = null;
+      saveCanvas();
+    });
+
+    content.addEventListener('focus', () => {
+      activeTextContainer = container;
+      // Imposta il tool su spostamento per non interferire mentre si scrive
+      setActiveTool('none', btnNone);
+    });
+
+    if (focusOnCreate) {
+      setTimeout(() => {
+        content.focus();
+        // Evidenzia il testo iniziale (API moderna al posto di execCommand)
+        const range = document.createRange();
+        range.selectNodeContents(content);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }, 50);
+    }
+  }
+
+  // Tasto per inserire il testo
+  btnText.addEventListener('click', () => {
+    // Posiziona il testo circa a metà del contenitore visibile
+    const rect = canvas.parentElement.getBoundingClientRect();
+    const x = 50; 
+    const y = 80; 
+    createTextNote(x, y, "Testo", currentColor, true);
+  });
+
   // --- Colori ---
   document.querySelectorAll('.color-dot').forEach(dot => {
     dot.addEventListener('click', (e) => {
       document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
       e.target.classList.add('selected');
       currentColor = e.target.getAttribute('data-color');
+
+      // Se c'è un testo selezionato (focus), cambiamo il suo colore in tempo reale
+      if (activeTextContainer) {
+        activeTextContainer.style.color = currentColor;
+        saveCanvas();
+      }
 
       if (currentMode === 'erase') {
         setActiveTool('draw', btnDraw);
@@ -848,10 +1030,11 @@
 
   // --- Cancella tutto ---
   btnClear.addEventListener('click', () => {
-    if (confirm("Vuoi cancellare tutto il disegno?")) {
+    if (confirm("Vuoi cancellare tutto il disegno e i testi?")) {
       pushUndo();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       sessionSnapPoints = [];
+      textLayer.innerHTML = ''; // Elimina tutti i testi
       saveCanvas();
     }
   });
@@ -1062,7 +1245,6 @@
       triangleEl.style.left = pos.x + 'px';
       triangleEl.style.top = pos.y + 'px';
 
-      // Mostra coordinate se il tipo include la parola 'sensor'
       if (type.includes('sensor') && label) {
         const canvasPt = screenToCanvas(pos.x + 30, pos.y);
         label.textContent = `X: ${Math.round(canvasPt.x)} | Y: ${Math.round(canvasPt.y)}`;
@@ -1089,7 +1271,6 @@
       let dx = e.clientX - dragStart.x;
       let dy = e.clientY - dragStart.y;
 
-      // Vincolo ortogonale se il tipo include la parola 'binary'
       if (type.includes('binary')) {
         if (Math.abs(dx) > Math.abs(dy)) {
           posObj.x = dragStartPos.x + dx;
@@ -1099,7 +1280,6 @@
           posObj.y = dragStartPos.y + dy;
         }
       } else {
-        // Movimento libero
         posObj.x = dragStartPos.x + dx;
         posObj.y = dragStartPos.y + dy;
       }
