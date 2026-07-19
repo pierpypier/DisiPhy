@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DSP Organizer — Redirect</title>
+
+  <!-- PWA: manifest and theme -->
+  <link rel="manifest" href="/record/manifest.json">
+  <meta name="theme-color" content="#1e88e5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="/record/rimage/dspimage192.png">
+
+  <!-- Instant redirect to your organizer page -->
+  <meta http-equiv="refresh" content="0;url=record/organizer4.html">
+</head>
+<body>
+  <p>Se non vieni reindirizzato automaticamente, <a href="record/organizer4.html">clicca qui</a> per aprire l'Organizer.</p>
+  <p>Questa pagina include il collegamento al <code>manifest.json</code> in /record/ per preservare il comportamento PWA.</p>
+  <!-- Optional: a small script to perform a JS fallback redirect if meta-refresh is blocked -->
+  <script>
+    (function(){
+      var dest = 'record/organizer4.html';
+      if(location.pathname.replace(/^\//,'') !== dest){
+        try{ location.replace(dest); }catch(e){ /* ignore */ }
+      }
+    })();
+  </script>
+</body>
+</html>
