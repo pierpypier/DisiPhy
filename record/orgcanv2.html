@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Organizer — Lavagna</title>
+<title>Organizer — Lavagna Pro</title>
 <style>
   :root {
     --cal-bg: #f7f7fb;
@@ -277,6 +277,25 @@
     box-shadow: 0 1px 4px rgba(0,0,0,0.4);
   }
   .triangle-handle:active { cursor: grabbing; }
+
+  /* CSS Ovale Coordinate per i Sensori */
+  .coord-label {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(37, 99, 235, 0.9);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    z-index: 520;
+    display: none;
+  }
 </style>
 </head>
 <body>
@@ -318,7 +337,7 @@
 </div>
 
 <div class="card">
-  <header class="header"><h1>Lavagna</h1></header>
+  <header class="header"><h1>Lavagna Pro</h1></header>
 
   <div class="canvas-container">
     <canvas id="board" width="1000" height="1414"></canvas>
@@ -344,20 +363,40 @@
   <div class="spatula-drag-handle" title="Trascina lo Stencil">✥</div>
 </div>
 
-<!-- Triangolo Ancoraggio A -->
+<!-- ============================================== -->
+<!-- 6 TRIANGOLI DI ANCORAGGIO GEOMETRICO           -->
+<!-- ============================================== -->
+
+<!-- Triangoli Classici (Verdi) -->
 <div id="triangleA" class="triangle-locator hidden">
-  <svg class="triangle-svg" viewBox="0 0 60 52">
-    <polygon points="30,0 60,52 0,52" fill="none" stroke="#16a34a" stroke-width="1"/>
-  </svg>
-  <div class="triangle-handle" title="Trascina Ancoraggio A"></div>
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#16a34a" stroke-width="2"/></svg>
+  <div class="triangle-handle" style="background: #16a34a;" title="Classico A"></div>
+</div>
+<div id="triangleB" class="triangle-locator hidden">
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#16a34a" stroke-width="2"/></svg>
+  <div class="triangle-handle" style="background: #16a34a;" title="Classico B"></div>
 </div>
 
-<!-- Triangolo Ancoraggio B -->
-<div id="triangleB" class="triangle-locator hidden">
-  <svg class="triangle-svg" viewBox="0 0 60 52">
-    <polygon points="30,0 60,52 0,52" fill="none" stroke="#16a34a" stroke-width="1"/>
-  </svg>
-  <div class="triangle-handle" title="Trascina Ancoraggio B"></div>
+<!-- Triangoli Sensori + Binari (Blu) - Con Coordinate e vincolo -->
+<div id="triangleC" class="triangle-locator hidden">
+  <div class="coord-label">0, 0</div>
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#2563eb" stroke-width="2"/></svg>
+  <div class="triangle-handle" style="background: #2563eb;" title="Sensore C"></div>
+</div>
+<div id="triangleD" class="triangle-locator hidden">
+  <div class="coord-label">0, 0</div>
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#2563eb" stroke-width="2"/></svg>
+  <div class="triangle-handle" style="background: #2563eb;" title="Sensore D"></div>
+</div>
+
+<!-- Triangoli Binari (Rossi) - Vincolati su Asse -->
+<div id="triangleE" class="triangle-locator hidden">
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#dc2626" stroke-width="2"/></svg>
+  <div class="triangle-handle" style="background: #dc2626;" title="Binario E"></div>
+</div>
+<div id="triangleF" class="triangle-locator hidden">
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#dc2626" stroke-width="2"/></svg>
+  <div class="triangle-handle" style="background: #dc2626;" title="Binario F"></div>
 </div>
 
 <script>
@@ -372,9 +411,13 @@
   let spatulaPos = { x: 0, y: 0 };
   let spatulaCtl = null;
 
-  // Stato e posizioni dei due triangoli di ancoraggio
+  // Posizioni dei 6 triangoli di ancoraggio
   let triangleAPos = { x: 0, y: 0 };
   let triangleBPos = { x: 0, y: 0 };
+  let triangleCPos = { x: 0, y: 0 };
+  let triangleDPos = { x: 0, y: 0 };
+  let triangleEPos = { x: 0, y: 0 };
+  let triangleFPos = { x: 0, y: 0 };
 
   const btnprevious = document.getElementById('btnprevious');
   const btnUndo = document.getElementById('btnUndo');
@@ -391,8 +434,13 @@
   const thicknessVal = document.getElementById('thicknessVal');
   const toolbar = document.querySelector('.toolbar');
   const spatula = document.getElementById('spatula');
+
   const triangleA = document.getElementById('triangleA');
   const triangleB = document.getElementById('triangleB');
+  const triangleC = document.getElementById('triangleC');
+  const triangleD = document.getElementById('triangleD');
+  const triangleE = document.getElementById('triangleE');
+  const triangleF = document.getElementById('triangleF');
 
   const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnRect, btnCircle];
 
@@ -557,6 +605,10 @@
     if (!triangleA.classList.contains('hidden')) {
       pool.push(...getTriangleCanvasVertices(triangleAPos));
       pool.push(...getTriangleCanvasVertices(triangleBPos));
+      pool.push(...getTriangleCanvasVertices(triangleCPos));
+      pool.push(...getTriangleCanvasVertices(triangleDPos));
+      pool.push(...getTriangleCanvasVertices(triangleEPos));
+      pool.push(...getTriangleCanvasVertices(triangleFPos));
     }
 
     if (pool.length === 0) return null;
@@ -864,7 +916,7 @@
 
   window.addEventListener('resize', adjustBodyPadding);
 
-  // --- Gestione Righelli con visualizzazione Gradi ---
+  // --- Gestione Righelli ---
   function initRuler(rulerEl, orientation, getDefaultRect) {
     const rotateHandle = rulerEl.querySelector('.ruler-rotate-handle');
     let angle = 0;
@@ -879,8 +931,6 @@
       rulerEl.style.left = pos.x + 'px';
       rulerEl.style.top = pos.y + 'px';
       rulerEl.style.transform = `rotate(${angle}deg)`;
-      
-      // Aggiorna dinamicamente i gradi dentro la maniglia
       rotateHandle.textContent = Math.round(angle) + '°';
     }
 
@@ -928,7 +978,6 @@
       
       if (angle > 180) angle -= 360;
       if (angle < -180) angle += 360;
-
       applyTransform();
     });
     rotateHandle.addEventListener('pointerup', (e) => { rotating = false; e.stopPropagation(); });
@@ -974,13 +1023,8 @@
       applyTransform();
       e.stopPropagation();
     });
-    dragHandle.addEventListener('pointerup', (e) => { 
-      dragStart = null; 
-      e.stopPropagation(); 
-    });
-    dragHandle.addEventListener('pointercancel', () => { 
-      dragStart = null; 
-    });
+    dragHandle.addEventListener('pointerup', (e) => { dragStart = null; e.stopPropagation(); });
+    dragHandle.addEventListener('pointercancel', () => { dragStart = null; });
 
     rotateHandle.addEventListener('pointerdown', (e) => {
       e.stopPropagation();
@@ -1001,56 +1045,66 @@
       angle = rotateStartSpatulaAngle + (currentAngle - rotateStartAngle) * (180 / Math.PI);
       applyTransform();
     });
-    rotateHandle.addEventListener('pointerup', (e) => { 
-      rotating = false; 
-      e.stopPropagation(); 
-    });
-    rotateHandle.addEventListener('pointercancel', () => { 
-      rotating = false; 
-    });
+    rotateHandle.addEventListener('pointerup', (e) => { rotating = false; e.stopPropagation(); });
+    rotateHandle.addEventListener('pointercancel', () => { rotating = false; });
 
-    return { 
-      resetToDefault, 
-      getAngle: () => angle 
-    };
+    return { resetToDefault, getAngle: () => angle };
   }
 
-  // --- Gestione Logica Triangoli Ancoraggio Geometrico ---
-  function initTriangleLocator(triangleEl, isTriangleB, getDefaultPos) {
+  // --- Gestione Logica 6 Triangoli ---
+  function initTriangleLocator(triangleEl, type, posObj, getDefaultPos) {
     const handle = triangleEl.querySelector('.triangle-handle');
+    const label = triangleEl.querySelector('.coord-label');
     let dragStart = null;
     let dragStartPos = null;
 
     function applyTransform(pos) {
       triangleEl.style.left = pos.x + 'px';
       triangleEl.style.top = pos.y + 'px';
+
+      // Mostra coordinate se il tipo include la parola 'sensor'
+      if (type.includes('sensor') && label) {
+        const canvasPt = screenToCanvas(pos.x + 30, pos.y);
+        label.textContent = `X: ${Math.round(canvasPt.x)} | Y: ${Math.round(canvasPt.y)}`;
+        label.style.display = 'block';
+      }
     }
 
     function resetToDefault() {
       const d = getDefaultPos();
-      if (!isTriangleB) {
-        triangleAPos = { x: d.x, y: d.y };
-        applyTransform(triangleAPos);
-      } else {
-        triangleBPos = { x: d.x, y: d.y };
-        applyTransform(triangleBPos);
-      }
+      posObj.x = d.x;
+      posObj.y = d.y;
+      applyTransform(posObj);
     }
 
     handle.addEventListener('pointerdown', (e) => {
-      const currentPos = !isTriangleB ? triangleAPos : triangleBPos;
       dragStart = { x: e.clientX, y: e.clientY };
-      dragStartPos = { x: currentPos.x, y: currentPos.y };
+      dragStartPos = { x: posObj.x, y: posObj.y };
       handle.setPointerCapture(e.pointerId);
       e.stopPropagation();
     });
 
     handle.addEventListener('pointermove', (e) => {
       if (!dragStart) return;
-      const currentPos = !isTriangleB ? triangleAPos : triangleBPos;
-      currentPos.x = dragStartPos.x + (e.clientX - dragStart.x);
-      currentPos.y = dragStartPos.y + (e.clientY - dragStart.y);
-      applyTransform(currentPos);
+      let dx = e.clientX - dragStart.x;
+      let dy = e.clientY - dragStart.y;
+
+      // Vincolo ortogonale se il tipo include la parola 'binary'
+      if (type.includes('binary')) {
+        if (Math.abs(dx) > Math.abs(dy)) {
+          posObj.x = dragStartPos.x + dx;
+          posObj.y = dragStartPos.y;
+        } else {
+          posObj.x = dragStartPos.x;
+          posObj.y = dragStartPos.y + dy;
+        }
+      } else {
+        // Movimento libero
+        posObj.x = dragStartPos.x + dx;
+        posObj.y = dragStartPos.y + dy;
+      }
+
+      applyTransform(posObj);
       e.stopPropagation();
     });
 
@@ -1090,21 +1144,46 @@
     return { x, y };
   });
 
-  const triangleACtl = initTriangleLocator(triangleA, false, () => {
+  // Inizializzazione dei 6 controller
+  const triangleACtl = initTriangleLocator(triangleA, 'classic', triangleAPos, () => {
     const r = getCanvasContainerRect();
-    return { x: r.left + 40, y: r.top + (r.height / 2) - 26 };
+    return { x: r.left + 40, y: r.top + (r.height * 0.25) - 26 };
   });
-  const triangleBCtl = initTriangleLocator(triangleB, true, () => {
+  const triangleBCtl = initTriangleLocator(triangleB, 'classic', triangleBPos, () => {
     const r = getCanvasContainerRect();
-    return { x: r.left + r.width - 100, y: r.top + (r.height / 2) - 26 };
+    return { x: r.left + r.width - 100, y: r.top + (r.height * 0.25) - 26 };
   });
 
+  const triangleCCtl = initTriangleLocator(triangleC, 'sensor-binary', triangleCPos, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 40, y: r.top + (r.height * 0.50) - 26 };
+  });
+  const triangleDCtl = initTriangleLocator(triangleD, 'sensor-binary', triangleDPos, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + r.width - 100, y: r.top + (r.height * 0.50) - 26 };
+  });
+
+  const triangleECtl = initTriangleLocator(triangleE, 'binary', triangleEPos, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 40, y: r.top + (r.height * 0.75) - 26 };
+  });
+  const triangleFCtl = initTriangleLocator(triangleF, 'binary', triangleFPos, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + r.width - 100, y: r.top + (r.height * 0.75) - 26 };
+  });
+
+  // Toggle dei controlli
   btnRuler.addEventListener('click', () => {
     const hiddenNow = rulerV.classList.toggle('hidden');
     rulerH.classList.toggle('hidden', hiddenNow);
     spatula.classList.toggle('hidden', hiddenNow); 
+    
     triangleA.classList.toggle('hidden', hiddenNow); 
     triangleB.classList.toggle('hidden', hiddenNow);
+    triangleC.classList.toggle('hidden', hiddenNow);
+    triangleD.classList.toggle('hidden', hiddenNow);
+    triangleE.classList.toggle('hidden', hiddenNow);
+    triangleF.classList.toggle('hidden', hiddenNow);
     
     if (!hiddenNow) {
       rulerVCtl.resetToDefault();
@@ -1112,6 +1191,10 @@
       spatulaCtl.resetToDefault(); 
       triangleACtl.resetToDefault();
       triangleBCtl.resetToDefault();
+      triangleCCtl.resetToDefault();
+      triangleDCtl.resetToDefault();
+      triangleECtl.resetToDefault();
+      triangleFCtl.resetToDefault();
     }
   });
 
@@ -1123,6 +1206,10 @@
     spatulaCtl.resetToDefault(); 
     triangleACtl.resetToDefault();
     triangleBCtl.resetToDefault();
+    triangleCCtl.resetToDefault();
+    triangleDCtl.resetToDefault();
+    triangleECtl.resetToDefault();
+    triangleFCtl.resetToDefault();
   });
 </script>
 </body>
