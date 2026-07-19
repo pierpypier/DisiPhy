@@ -1620,11 +1620,11 @@
 
   const rulerVCtl = initRuler(rulerV, 'vertical', () => {
     const r = getCanvasContainerRect();
-    return { x: r.left + 8, y: r.top + 10, length: 1414 };
+    return { x: r.left + 8, y: r.top + 10, length: r.height };
   });
   const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
     const r = getCanvasContainerRect();
-    return { x: r.left + 10, y: r.top + 8, length: 1000};
+    return { x: r.left + 10, y: r.top + 8, length: r.width};
   });
 
   spatulaCtl = initSpatula(spatula, () => {
