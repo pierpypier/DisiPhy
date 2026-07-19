@@ -173,8 +173,8 @@
     background: rgba(255,255,255,0.88);
     border-radius: 0px;
   }
-  .ruler-vertical { width: 42px; height: 70vh; }
-  .ruler-horizontal { height: 42px; width: 70vw; }
+  .ruler-vertical { width: 50px; height: 1414px; }
+  .ruler-horizontal { height: 50px; width: 1000px; }
   
   .ruler-rotate-handle {
     position: absolute;
@@ -777,11 +777,11 @@
 
   const rulerVCtl = initRuler(rulerV, 'vertical', () => {
     const r = getCanvasContainerRect();
-    return { x: r.left + 8, y: r.top + 10, length: r.height - 20 };
+    return { x: r.left + 8, y: r.top + 10, length: r.height };
   });
   const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
     const r = getCanvasContainerRect();
-    return { x: r.left + 10, y: r.top + 8, length: r.width - 20 };
+    return { x: r.left + 10, y: r.top + 8, length: r.width };
   });
 
   btnRuler.addEventListener('click', () => {
