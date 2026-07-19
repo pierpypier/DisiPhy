@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Suite Monitor - Gestione Spazio</title>
+  <style>
+    :root { --bg: #f6f8fb; --card: #ffffff; --accent: #1e88e5; --muted: #6b7280; --shadow: 0 6px 18px rgba(20,30,50,0.06); --radius: 12px; }
+    body { margin: 0; font-family: Inter, Arial; background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%); padding: 20px; display: flex; justify-content: center; }
+    .container { width: 100%; max-width: 980px; }
+
+    /* STILE BARRA NAVIGAZIONE (Estrapolato da source: 1) */
+    .nav { display: flex; justify-content: center; gap: 10px; padding: 5px 0; margin-bottom: 20px; }
+    .nav-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #000; font-size: 14px; transition: opacity 0.2s ease; }
+    .nav-item img { width: 84px; height: 84px; margin-bottom: 1px; transition: transform 0.2s ease; }
+    .nav-item:hover img { transform: scale(1.05); }
+    .nav-item:hover { opacity: 0.85; }
+    @media (max-width: 600px) { .nav-item img { width: 60px; height: 60px; } .nav-item span { font-size: 12px; } }
+
+    /* STILE MONITOR */
+    .monitor-card { background: var(--card); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 20px; }
+    .stat-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+    .btn-clean { background: #d9534f; color: #fff; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+    .bar-bg { background: #eee; height: 20px; border-radius: 10px; overflow: hidden; margin: 10px 0; }
+    #usageBar { background: var(--accent); height: 100%; width: 0%; transition: width 0.5s; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Barra Navigazione -->
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item"><img src="rimage/orga4x.png" alt="Organizer"><span> NOTE </span></a>
+    <a href="caldsp.html" class="nav-item"><img src="rimage/calicon.png" alt="Calendario"><span> DATE </span></a>
+    <a href="check01.html" class="nav-item"><img src="rimage/check02.png" alt="Checklist"><span>LISTE</span></a>
+    <a href="strweb.html" class="nav-item"><img src="rimage/webicon.png" alt="Web"><span> WEB </span></a>
+    <a href="dashconsolle.html" class="nav-item"><img src="rimage/opzioni.png" alt="Opzioni"><span> ADD </span></a>
+  </nav>
+
+  <div class="monitor-card">
+    <h2>Monitor Spazio Suite</h2>
+    <div class="bar-bg"><div id="usageBar"></div></div>
+    <p id="statsText">Calcolo spazio occupato...</p>
+    <div id="storageList"></div>
+  </div>
+</div>
+
+<script>
+function refreshStats() {
+  let totalBytes = 0;
+  const list = document.getElementById("storageList");
+  list.innerHTML = "<h3>File salvati:</h3>";
+  
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+    const size = (value.length * 2) / 1024; // KB
+    totalBytes += value.length * 2;
+    
+    const div = document.createElement("div");
+    div.className = "stat-row";
+    div.innerHTML = `<span>${key} (${size.toFixed(1)} KB)</span>
+                     <button class="btn-clean" onclick="removeItem('${key}')">Elimina</button>`;
+    list.appendChild(div);
+  }
+
+  const totalMB = (totalBytes / 1024 / 1024).toFixed(2);
+  const percent = Math.min((totalBytes / (5 * 1024 * 1024)) * 100, 100);
+  document.getElementById("usageBar").style.width = percent + "%";
+  document.getElementById("statsText").textContent = `Occupazione totale: ${totalMB} MB / 5.00 MB`;
+}
+
+function removeItem(key) {
+  if(confirm("Eliminare definitivamente " + key + "?")) {
+    localStorage.removeItem(key);
+    refreshStats();
+  }
+}
+
+refreshStats();
+</script>
+</body>
+</html>
