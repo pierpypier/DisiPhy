@@ -357,6 +357,13 @@
     z-index: 520;
     display: none;
   }
+  /* Punti di ancoraggio manuali */
+  .anchor-point { position: absolute; border-radius: 50%; background: #16a34a; z-index: 200; transform: translate(-50%, -50%); pointer-events: none; box-shadow: 0 0 0 1px rgba(0,0,0,0.4); }
+  #pointModal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 10000; display: none; text-align: center; }
+  #pointModal h3 { margin: 0 0 10px 0; }
+  #pointModal label { display: block; text-align: left; font-size: 13px; margin: 8px auto 0; width: 180px; color: #333; }
+  #pointModal input { display: block; margin: 4px auto 0; width: 180px; padding: 5px; box-sizing: border-box; }
+  #pointModal .modal-actions { margin-top: 14px; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
 </style>
 </head>
 <body>
@@ -378,8 +385,9 @@
     <button id="btnLine" class="btn secondary" title="Riga">📏</button>
     <button id="btnRect" class="btn secondary" title="Rettangolo">▭</button>
     <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
-    
+    <button id="btnText" class="btn secondary" title="Aggiungi Testo">T+</button>
     <button id="btnSnapToggle" class="btn active" title="Attiva/Disattiva Calamita">🧲</button>
+    <button id="btnAnchor" class="btn secondary" title="Aggiungi punto di ancoraggio manuale">📍</button>
     
     <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
     <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
@@ -390,7 +398,7 @@
       <input type="range" id="thickness" min="1" max="5" step="1" value="2">
       <span class="val" id="thicknessVal">2</span>
     </div>
-<button id="btnText" class="btn secondary" title="Aggiungi Testo">T+</button>
+
     <button id="btnBgUpload" class="btn secondary" title="Carica sfondo dal dispositivo">🖼️</button>
     <button id="btnBgReset" class="btn secondary" title="Ripristina sfondo predefinito">♻️</button>
     <button id="btnRuler" class="btn secondary" title="Mostra/Nascondi righelli e stencil">📐</button>
@@ -463,6 +471,22 @@
   <div class="triangle-handle" style="background: #dc2626;" title="Binario F"></div>
 </div>
 
+<!-- Modale punti di ancoraggio manuali -->
+<div id="pointModal">
+  <h3>Nuovo Punto Ancoraggio</h3>
+  <label for="ptsX">X (0-1000)</label>
+  <input type="number" id="ptsX" placeholder="es. 500" min="0" max="1000">
+  <label for="ptsY">Y (0-1414)</label>
+  <input type="number" id="ptsY" placeholder="es. 700" min="0" max="1414">
+  <label for="ptsThickness">Spessore (1-5)</label>
+  <input type="number" id="ptsThickness" min="1" max="5" step="1" value="2">
+  <div class="modal-actions">
+    <button id="savePoint" class="btn">Salva</button>
+    <button id="clearPoints" class="btn danger">Cancella Punti</button>
+    <button id="closeModal" class="btn secondary">Chiudi</button>
+  </div>
+</div>
+
 <script>
   const canvas = document.getElementById('board');
   const ctx = canvas.getContext('2d');
@@ -522,6 +546,7 @@
   let savedImageData = null;
 
   let sessionSnapPoints = [];
+  let customSnapPoints = []; // Punti di ancoraggio manuali, aggiunti dall'utente
   let strokeStartPos = null;
   let lastPos = null;
   const SNAP_SCREEN_THRESHOLD = 16; 
@@ -691,7 +716,7 @@
   }
 
   function findSnapPoint(pos) {
-    const pool = [...sessionSnapPoints];
+    const pool = [...sessionSnapPoints, ...customSnapPoints];
 
     if (!triangleA.classList.contains('hidden')) {
       pool.push(...getTriangleCanvasVertices(triangleAPos));
@@ -918,6 +943,84 @@
       btnSnapToggle.classList.remove('active');
       btnSnapToggle.classList.add('secondary');
     }
+  });
+
+  // --- Punti di ancoraggio manuali ---
+  const btnAnchor = document.getElementById('btnAnchor');
+  const pointModal = document.getElementById('pointModal');
+  const LS_KEY_ANCHORS = 'orgcanv2_anchorPoints';
+
+  function anchorDiameter(thickness) {
+    // Mappa lo spessore (1-5) a un diametro visibile in px sullo schermo
+    return 8 + (thickness - 1) * 5; // 1 -> 8px, 5 -> 28px
+  }
+
+  function drawAnchorPoint(pt) {
+    const div = document.createElement('div');
+    div.className = 'anchor-point';
+    const d = anchorDiameter(pt.thickness);
+    div.style.width = d + 'px';
+    div.style.height = d + 'px';
+    div.style.left = (pt.x / 1000 * 100) + '%';
+    div.style.top = (pt.y / 1414 * 100) + '%';
+    textLayer.appendChild(div);
+  }
+
+  function renderAllAnchorPoints() {
+    document.querySelectorAll('.anchor-point').forEach(p => p.remove());
+    customSnapPoints.forEach(drawAnchorPoint);
+  }
+
+  function saveAnchorPoints() {
+    localStorage.setItem(LS_KEY_ANCHORS, JSON.stringify(customSnapPoints));
+  }
+
+  function loadAnchorPoints() {
+    const saved = localStorage.getItem(LS_KEY_ANCHORS);
+    if (saved) {
+      try {
+        customSnapPoints = JSON.parse(saved);
+      } catch (e) {
+        customSnapPoints = [];
+      }
+    }
+    renderAllAnchorPoints();
+  }
+
+  btnAnchor.addEventListener('click', () => {
+    pointModal.style.display = 'block';
+  });
+
+  document.getElementById('closeModal').addEventListener('click', () => {
+    pointModal.style.display = 'none';
+  });
+
+  document.getElementById('savePoint').addEventListener('click', () => {
+    const x = parseFloat(document.getElementById('ptsX').value);
+    const y = parseFloat(document.getElementById('ptsY').value);
+    let thickness = parseInt(document.getElementById('ptsThickness').value);
+
+    if (isNaN(x) || isNaN(y) || x < 0 || x > 1000 || y < 0 || y > 1414) {
+      alert('Inserisci coordinate valide: X tra 0 e 1000, Y tra 0 e 1414.');
+      return;
+    }
+    if (isNaN(thickness)) thickness = 2;
+    thickness = Math.min(5, Math.max(1, thickness));
+
+    const pt = { x, y, thickness };
+    customSnapPoints.push(pt);
+    drawAnchorPoint(pt);
+    saveAnchorPoints();
+
+    document.getElementById('ptsX').value = '';
+    document.getElementById('ptsY').value = '';
+    pointModal.style.display = 'none';
+  });
+
+  document.getElementById('clearPoints').addEventListener('click', () => {
+    customSnapPoints = [];
+    document.querySelectorAll('.anchor-point').forEach(p => p.remove());
+    saveAnchorPoints();
   });
 
   // --- Funzione per Aggiungere Testi Trascinabili ---
@@ -1380,6 +1483,7 @@
 
   window.addEventListener('load', () => {
     loadCanvas();
+    loadAnchorPoints();
     adjustBodyPadding();
     rulerVCtl.resetToDefault();
     rulerHCtl.resetToDefault();
