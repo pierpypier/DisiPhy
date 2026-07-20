@@ -1,0 +1,2160 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Organizer — Lavagna Pro</title>
+<style>
+  :root {
+    --cal-bg: #f7f7fb;
+    --cal-card: #ffffff;
+    --cal-accent: #1e88e5;
+    --cal-muted: #666666;
+  }
+
+  /* Reset */
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    margin: 8px;
+    background: var(--cal-bg);
+    color: #111;
+    padding-bottom: 20px;
+  }
+
+  /* Contenitore Principale */
+  .container { max-width: 1000px; width: 100%; margin: 0 auto; }
+  .card { background: var(--cal-card); border-radius: 8px; padding: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.06); margin-bottom: 20px; text-align: center; }
+
+  /* --- Palette colori --- */
+  .color-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.1s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .color-dot:hover { transform: scale(1.1); }
+  .color-dot.selected { border-color: #000; box-shadow: 0 0 5px rgba(0,0,0,0.4); transform: scale(1.15); }
+  .color-blue { background: #1e40af; }
+  .color-black { background: #000000; }
+  .color-red { background: #dc2626; }
+  .color-white { background: #ffffff; border: 1px solid #cbd5e0; }
+
+  .header h1 { font-size: 22px; color: #155a8a; margin: 0 0 15px 0; }
+
+  /* --- Toolbar fissa su 2 righe --- */
+  .toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transform-origin: 0 0;
+    will-change: transform;
+  }
+
+  .toolbar-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn {
+    background: var(--cal-accent);
+    color: #fff;
+    border: 0;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    min-width: 40px;
+    transition: opacity 0.2s;
+  }
+  .btn:hover { opacity: 0.9; }
+  .btn.secondary { background: #edf2f7; color: #4a5568; border: 1px solid #cbd5e0; }
+  .btn.active { box-shadow: 0 0 0 3px rgba(30,136,229, 0.4); outline: none; }
+  .btn.danger { background: #d9534f; color: #fff; }
+  .btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+  .thickness-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #4a5568;
+    background: #edf2f7;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 4px 10px;
+  }
+  .thickness-wrap input[type=range] { width: 50px; }
+  .thickness-wrap span.val { min-width: 14px; text-align: center; font-weight: 600; }
+
+  /* Area Disegno (Canvas) */
+  .canvas-container {
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  canvas#board {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 1000 / 1414;
+    touch-action: none;
+    background-color: #ffffff;
+    background-image: url('rimage/cartamm.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+  }
+
+  /* --- Livello Vettoriale (Fase 1: linee, rettangoli, cerchi) --- */
+  #vectorLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* gli eventi restano su #board, il layer è solo rendering */
+    z-index: 20;
+  }
+
+  /* --- Livello Testi --- */
+  #textLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Lascia passare i clic al canvas dove non c'è testo */
+    z-index: 100;
+  }
+
+  .text-note-container {
+    position: absolute;
+    z-index: 400;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 60px;
+  }
+
+  .text-drag-handle {
+    height: 16px;
+    background: rgba(200, 200, 200, 0.9);
+    cursor: grab;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #333;
+    visibility: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .text-drag-handle::before {
+    content: "⋮⋮";
+  }
+  .text-drag-handle:active {
+    cursor: grabbing;
+  }
+  .text-note-container:hover .text-drag-handle {
+    visibility: visible;
+  }
+
+  .text-content {
+    padding: 2px 6px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: bold;
+    outline: none;
+    background: transparent;
+    border-radius: 0 0 4px 4px;
+    /* Un leggero alone per renderlo leggibile su sfondi fotografici complessi */
+    text-shadow: -1px -1px 0 rgba(255,255,255,0.7), 1px -1px 0 rgba(255,255,255,0.7), -1px 1px 0 rgba(255,255,255,0.7), 1px 1px 0 rgba(255,255,255,0.7);
+  }
+  .text-content:focus {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 0 2px var(--cal-accent);
+    text-shadow: none; /* Si disattiva mentre scrivi sul bianco */
+  }
+
+  @media print {
+    body { background: #fff; margin: 0; padding: 0; }
+    .toolbar, .header h1 { display: none !important; }
+    .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
+    .card { padding: 0; box-shadow: none; border: none; }
+    .canvas-container { border: none; box-shadow: none; }
+    .ruler, .snap-indicator, .spatula-container, .triangle-locator, .text-drag-handle { display: none !important; }
+    .text-content { text-shadow: none !important; }
+    @page { size: A4; margin: 10mm; }
+  }
+
+  /* --- Indicatore di aggancio ai vertici --- */
+  .snap-indicator {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #16a34a;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    display: none;
+    z-index: 30;
+  }
+
+  /* --- Righelli di riferimento --- */
+  .ruler {
+    position: fixed;
+    z-index: 500;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+  }
+  .ruler.hidden { display: none; }
+  .ruler img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+    object-fit: fill;
+    border: 1px solid #334155;
+    background: rgba(255,255,255,0.88);
+    border-radius: 0px;
+  }
+  .ruler-vertical { width: 50px; height: 1414px; }
+  .ruler-horizontal { height: 50px; width: 1000px; }
+  
+  .ruler-rotate-handle {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 26px;
+    border-radius: 13px;
+    background: #1e88e5;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: grab;
+    box-shadow: 0 2px 4px rgba(0,0,0,.25);
+    touch-action: none;
+    z-index: 510;
+  }
+
+  /* --- CSS dello Stencil --- */
+  .spatula-container {
+    position: fixed;
+    z-index: 500;
+    width: 60px;
+    height: 60px;
+    user-select: none;
+    touch-action: none;
+    pointer-events: none;
+  }
+  .spatula-container.hidden { display: none; }
+  
+  .spatula-body {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #dc2626;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  .spatula-drag-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #dc2626;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: grab;
+    box-shadow: 0 2px 5px rgba(0,0,0,.35);
+    touch-action: none;
+    z-index: 510;
+    pointer-events: auto;
+  }
+  .spatula-drag-handle:active { cursor: grabbing; }
+
+  .spatula-rotate-handle {
+    background: #dc2626;
+    pointer-events: auto;
+  }
+  .spatula-rotate-handle:active { cursor: grabbing; }
+
+  /* --- CSS Triangoli Ancoraggio Geometrico --- */
+  .triangle-locator {
+    position: fixed;
+    z-index: 500;
+    width: 60px;
+    height: 52px; 
+    user-select: none;
+    touch-action: none;
+    pointer-events: none;
+  }
+  .triangle-locator.hidden { display: none; }
+
+  .triangle-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .triangle-handle {
+    position: absolute;
+    top: calc(52px * 0.66); 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #000;
+    border: 2px solid #fff;
+    cursor: grab;
+    touch-action: none;
+    z-index: 510;
+    pointer-events: auto;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+  .triangle-handle:active { cursor: grabbing; }
+
+  /* CSS Ovale Coordinate per i Sensori */
+  .coord-label {
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(37, 99, 235, 0.9);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    z-index: 520;
+    display: none;
+  }
+  /* Punti di ancoraggio manuali */
+  .anchor-point { position: absolute; border-radius: 50%; background: transparent; border: 2px solid #16a34a; z-index: 200; transform: translate(-50%, -50%); pointer-events: none; }
+  #pointModal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 10000; display: none; text-align: center; }
+  #pointModal h3 { margin: 0 0 10px 0; }
+  #pointModal label { display: block; text-align: left; font-size: 13px; margin: 8px auto 0; width: 180px; color: #333; }
+  #pointModal input { display: block; margin: 4px auto 0; width: 180px; padding: 5px; box-sizing: border-box; }
+  #pointModal .modal-actions { margin-top: 14px; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
+  /* Tool Conversione Coordinate */
+  #coordConvOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 20000;
+    background: var(--cal-bg);
+    overflow-y: auto;
+    padding: 16px;
+  }
+  #coordConvOverlay .cc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  #coordConvOverlay .cc-header h2 {
+    font-size: 19px;
+    margin: 0;
+    color: #155a8a;
+  }
+  #coordConvOverlay .card { text-align: left; }
+  .cc-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .cc-form-grid .cc-full { grid-column: 1 / -1; }
+  .cc-field label {
+    display: block;
+    font-size: 13px;
+    color: var(--cal-muted);
+    margin-bottom: 4px;
+  }
+  .cc-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  .cc-field input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--cal-accent);
+    border-color: var(--cal-accent);
+  }
+  #btnCoordAdd {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 4px;
+  }
+  .cc-record {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--cal-card);
+    border: 1px solid #eaeaf2;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.05);
+  }
+  .cc-record-info { display: flex; flex-direction: column; gap: 2px; }
+  .cc-record-name { font-weight: 600; color: #111; font-size: 14px; }
+  .cc-record-vals { font-size: 13px; color: var(--cal-muted); }
+  .cc-record-vals b { color: var(--cal-accent); }
+  .cc-delete-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px 8px;
+    flex-shrink: 0;
+  }
+  .cc-empty { color: var(--cal-muted); font-size: 14px; text-align: center; padding: 10px; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <!-- RIGA 1: Navigazione e Azioni Principali -->
+  <div class="toolbar-row">
+    <button id="btnprevious" class="btn secondary" title="Indietro">⬅️</button>
+    <button id="btnUndo" class="btn secondary" title="Annulla ultima azione" disabled>↩️</button>
+    <button id="btnDraw" class="btn secondary" title="Matita">✏️</button>
+    <button id="btnErase" class="btn secondary" title="Gomma">🧽</button>
+    <button id="btnNone" class="btn active" title="Sposta / zoom">✋</button>
+    <button id="btnClear" class="btn danger" title="Cancella tutto">🗑️</button>
+    <button id="btnPrint" class="btn secondary" title="Stampa">🖨️</button>
+  </div>
+  
+  <!-- RIGA 2: Forme, Opzioni Tratto, Sfondi e Righelli -->
+  <div class="toolbar-row">
+    <button id="btnSelect" class="btn secondary" title="Seleziona / Sposta / Modifica forma">👆</button>
+    <button id="btnLine" class="btn secondary" title="Riga">📏</button>
+    <button id="btnRect" class="btn secondary" title="Rettangolo">▭</button>
+    <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
+    <button id="btnArc" class="btn secondary" title="Arco (3 punti): tocca in sequenza 3 punti (anche punti di ancoraggio) per definire l'arco">〰️</button>
+    <button id="btnDeleteShape" class="btn danger" title="Elimina forma selezionata" disabled>🗑️📐</button>
+    <button id="btnText" class="btn secondary" title="Aggiungi Testo">T+</button>
+    <button id="btnSnapToggle" class="btn active" title="Attiva/Disattiva Calamita">🧲</button>
+    <button id="btnAnchor" class="btn secondary" title="Aggiungi punto di ancoraggio manuale">📍</button>
+    <button id="btnCoordConv" class="btn secondary" title="Conversione Coordinate mm → px">🧮</button>
+    
+    <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
+    <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
+    <div class="color-dot color-red" data-color="#dc2626" title="Rosso"></div>
+    <div class="color-dot color-white" data-color="#ffffff" title="Bianco"></div>
+    
+    <div class="thickness-wrap" title="Spessore della linea">
+      <input type="range" id="thickness" min="1" max="5" step="1" value="2">
+      <span class="val" id="thicknessVal">2</span>
+    </div>
+
+    <button id="btnBgUpload" class="btn secondary" title="Carica sfondo dal dispositivo">🖼️</button>
+    <button id="btnBgReset" class="btn secondary" title="Ripristina sfondo predefinito">♻️</button>
+    <button id="btnRuler" class="btn secondary" title="Mostra/Nascondi righelli e stencil">📐</button>
+    <button id="btnExport" class="btn secondary" title="Esporta forme, ancore e testi in un file">💾</button>
+    <button id="btnImport" class="btn secondary" title="Importa forme, ancore e testi da un file">📂</button>
+    <input type="file" id="bgFileInput" accept="image/*" style="display:none">
+    <input type="file" id="importFileInput" accept="application/json,.json" style="display:none">
+  </div>
+</div>
+
+<div class="card">
+  <header class="header"><h1>Lavagna Pro</h1></header>
+
+  <div class="canvas-container">
+    <canvas id="board" width="1000" height="1414"></canvas>
+    <canvas id="vectorLayer" width="1000" height="1414"></canvas>
+    <!-- Livello dedicato esclusivamente ai testi testuali -->
+    <div id="textLayer"></div>
+  </div>
+</div>
+
+<!-- Righello Verticale -->
+<div id="rulerV" class="ruler ruler-vertical hidden">
+  <div class="ruler-rotate-handle" title="Ruota righello">0°</div>
+  <img src="rimage/rulev.png" alt="Righello Verticale">
+</div>
+
+<!-- Righello Orizzontale -->
+<div id="rulerH" class="ruler ruler-horizontal hidden">
+  <div class="ruler-rotate-handle" title="Ruota righello">0°</div>
+  <img src="rimage/ruleh.png" alt="Righello Orizzontale">
+</div>
+
+<!-- Stencil -->
+<div id="spatula" class="spatula-container hidden">
+  <div class="ruler-rotate-handle spatula-rotate-handle" title="Ruota stencil">⟳</div>
+  <div class="spatula-body"></div>
+  <div class="spatula-drag-handle" title="Trascina lo Stencil">✥</div>
+</div>
+
+<!-- ============================================== -->
+<!-- 6 TRIANGOLI DI ANCORAGGIO GEOMETRICO           -->
+<!-- ============================================== -->
+
+<!-- Triangoli Classici (Verdi) -->
+<div id="triangleA" class="triangle-locator hidden">
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#16a34a" stroke-width="1"/></svg>
+  <div class="triangle-handle" style="background: #16a34a;" title="Classico A"></div>
+</div>
+<div id="triangleB" class="triangle-locator hidden">
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#16a34a" stroke-width="1"/></svg>
+  <div class="triangle-handle" style="background: #16a34a;" title="Classico B"></div>
+</div>
+
+<!-- Triangoli Sensori + Binari (Blu) - Con Coordinate e vincolo -->
+<div id="triangleC" class="triangle-locator hidden">
+  <div class="coord-label">X: 0<br>Y: 0</div>
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#2563eb" stroke-width="1"/></svg>
+  <div class="triangle-handle" style="background: #2563eb;" title="Sensore C"></div>
+</div>
+<div id="triangleD" class="triangle-locator hidden">
+  <div class="coord-label">X: 0<br>Y: 0</div>
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#2563eb" stroke-width="1"/></svg>
+  <div class="triangle-handle" style="background: #2563eb;" title="Sensore D"></div>
+</div>
+
+<!-- Triangoli Binari (Rossi) - Vincolati su Asse -->
+<div id="triangleE" class="triangle-locator hidden">
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#dc2626" stroke-width="1"/></svg>
+  <div class="triangle-handle" style="background: #dc2626;" title="Binario E"></div>
+</div>
+<div id="triangleF" class="triangle-locator hidden">
+  <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#dc2626" stroke-width="1"/></svg>
+  <div class="triangle-handle" style="background: #dc2626;" title="Binario F"></div>
+</div>
+
+<!-- Modale punti di ancoraggio manuali -->
+<div id="pointModal">
+  <h3>Nuovo Punto Ancoraggio</h3>
+  <label for="ptsX">X mm (0-210)</label>
+  <input type="number" id="ptsX" step="any" placeholder="es. 105" min="0" max="210">
+  <label for="ptsY">Y mm (0-297)</label>
+  <input type="number" id="ptsY" step="any" placeholder="es. 148" min="0" max="297">
+  <label for="ptsThickness">Spessore (1-5)</label>
+  <input type="number" id="ptsThickness" min="1" max="5" step="1" value="2">
+  <div class="modal-actions">
+    <button id="savePoint" class="btn">Salva</button>
+    <button id="clearPoints" class="btn danger">Cancella Punti</button>
+    <button id="closeModal" class="btn secondary">Chiudi</button>
+  </div>
+</div>
+
+<!-- Tool Conversione Coordinate -->
+<div id="coordConvOverlay">
+  <div class="cc-header">
+    <h2>🧮 Conversione Coordinate</h2>
+    <button id="btnCoordClose" class="btn secondary" title="Chiudi">✕</button>
+  </div>
+
+  <div class="card">
+    <div class="cc-form-grid">
+      <div class="cc-field cc-full">
+        <label for="ccName">Nome Record (opzionale)</label>
+        <input type="text" id="ccName" placeholder="es. Foro A">
+      </div>
+      <div class="cc-field">
+        <label for="ccMmX">X (mm)</label>
+        <input type="number" id="ccMmX" step="any" placeholder="0.0">
+      </div>
+      <div class="cc-field">
+        <label for="ccMmY">Y (mm)</label>
+        <input type="number" id="ccMmY" step="any" placeholder="0.0">
+      </div>
+      <div class="cc-full">
+        <button id="btnCoordAdd" class="btn">Aggiungi</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="coordRecordsList"></div>
+</div>
+
+<script>
+  const canvas = document.getElementById('board');
+  const ctx = canvas.getContext('2d');
+  const textLayer = document.getElementById('textLayer');
+
+  const LS_KEY = 'organizer_lavagna_v1';
+  const LS_KEY_TEXTS = 'organizer_lavagna_testi_v1';
+  const LS_KEY_ELEMENTS = 'orgcanv2_elements';
+  const MAX_UNDO = 15;
+
+  const SPATULA_WIDTH = 60;
+  const SPATULA_HEIGHT = 60; 
+  let spatulaPos = { x: 0, y: 0 };
+  let spatulaCtl = null;
+
+  // Posizioni dei 6 triangoli di ancoraggio
+  let triangleAPos = { x: 0, y: 0 };
+  let triangleBPos = { x: 0, y: 0 };
+  let triangleCPos = { x: 0, y: 0 };
+  let triangleDPos = { x: 0, y: 0 };
+  let triangleEPos = { x: 0, y: 0 };
+  let triangleFPos = { x: 0, y: 0 };
+
+  const btnprevious = document.getElementById('btnprevious');
+  const btnUndo = document.getElementById('btnUndo');
+  const btnDraw = document.getElementById('btnDraw');
+  const btnErase = document.getElementById('btnErase');
+  const btnText = document.getElementById('btnText');
+  const btnNone = document.getElementById('btnNone');
+  const btnClear = document.getElementById('btnClear');
+  const btnPrint = document.getElementById('btnPrint');
+  const btnExport = document.getElementById('btnExport');
+  const btnImport = document.getElementById('btnImport');
+  const importFileInput = document.getElementById('importFileInput');
+  const btnLine = document.getElementById('btnLine');
+  const btnRect = document.getElementById('btnRect');
+  const btnCircle = document.getElementById('btnCircle');
+  const btnArc = document.getElementById('btnArc');
+  const btnSelect = document.getElementById('btnSelect');
+  const btnDeleteShape = document.getElementById('btnDeleteShape');
+  const btnSnapToggle = document.getElementById('btnSnapToggle');
+  const thicknessInput = document.getElementById('thickness');
+  const thicknessVal = document.getElementById('thicknessVal');
+  const toolbar = document.querySelector('.toolbar');
+  const spatula = document.getElementById('spatula');
+
+  const triangleA = document.getElementById('triangleA');
+  const triangleB = document.getElementById('triangleB');
+  const triangleC = document.getElementById('triangleC');
+  const triangleD = document.getElementById('triangleD');
+  const triangleE = document.getElementById('triangleE');
+  const triangleF = document.getElementById('triangleF');
+
+  const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnRect, btnCircle, btnArc, btnSelect];
+
+  let isDrawing = false;
+  let currentMode = 'none';
+  let currentColor = '#1e40af';
+  let currentThickness = 2;
+  let snapEnabled = true;
+  let activeTextContainer = null; // Traccia il testo attivo per cambiargli il colore
+
+  let shapeStartPos = null;
+
+  // --- FASE 4 (rivista): Arco a 3 punti, costruito con 3 tocchi in sequenza ---
+  // Ogni tocco è indipendente (niente trascinamento da spezzare in due gesti) e può
+  // agganciarsi a un punto di ancoraggio o a un vertice esistente, come le altre forme.
+  let arcPoints = [];
+
+  // Calcola centro e raggio della circonferenza passante per 3 punti (circocentro).
+  // Ritorna null se i punti sono allineati (circonferenza non definibile).
+  function computeCircumcircle(p1, p2, p3) {
+    const ax = p1.x, ay = p1.y, bx = p2.x, by = p2.y, cx = p3.x, cy = p3.y;
+    const d = 2 * (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by));
+    if (Math.abs(d) < 1e-6) return null;
+    const ux = ((ax * ax + ay * ay) * (by - cy) + (bx * bx + by * by) * (cy - ay) + (cx * cx + cy * cy) * (ay - by)) / d;
+    const uy = ((ax * ax + ay * ay) * (cx - bx) + (bx * bx + by * by) * (ax - cx) + (cx * cx + cy * cy) * (bx - ax)) / d;
+    return { cx: ux, cy: uy, r: Math.hypot(ax - ux, ay - uy) };
+  }
+
+  function normalizeAngle(a) {
+    const twoPi = Math.PI * 2;
+    a = a % twoPi;
+    if (a < 0) a += twoPi;
+    return a;
+  }
+
+  // Verifica se l'angolo 'mid' cade nel settore ottenuto aumentando l'angolo da 'start' a 'end'.
+  function isInIncreasingSweep(start, end, mid) {
+    const twoPi = Math.PI * 2;
+    let s = normalizeAngle(start), e = normalizeAngle(end), m = normalizeAngle(mid);
+    if (e <= s) e += twoPi;
+    if (m < s) m += twoPi;
+    return m >= s && m <= e;
+  }
+
+  // Costruisce l'oggetto JSON dell'arco che passa per i 3 punti dati.
+  function buildArcElement(p1, p2, p3, color, width) {
+    const circle = computeCircumcircle(p1, p2, p3);
+    if (!circle) return null; // punti allineati: arco non definibile, si scarta il gesto
+    const a1 = Math.atan2(p1.y - circle.cy, p1.x - circle.cx);
+    const a2 = Math.atan2(p2.y - circle.cy, p2.x - circle.cx);
+    const a3 = Math.atan2(p3.y - circle.cy, p3.x - circle.cx);
+    const anticlockwise = !isInIncreasingSweep(a1, a2, a3);
+    return {
+      type: 'arc',
+      cx: circle.cx, cy: circle.cy, r: circle.r,
+      startAngle: a1, endAngle: a2, anticlockwise,
+      color, width
+    };
+  }
+
+  // --- FASE 1: Sistema Ibrido Raster-Vettoriale ---
+  // elementsArray contiene le forme geometriche come oggetti JSON puri,
+  // separate dal raster (sfondo + tratto libero) che resta su #board.
+  let elementsArray = [];
+  const vectorCanvas = document.getElementById('vectorLayer');
+  const vctx = vectorCanvas.getContext('2d');
+
+  // Costruisce l'oggetto JSON di una forma a partire da tipo, punti, stile.
+  // Estendibile: per aggiungere una nuova forma basta un nuovo ramo qui
+  // e un nuovo ramo in drawElement().
+  function buildShapeElement(type, start, end, color, width) {
+    if (type === 'line') {
+      return { type: 'line', x1: start.x, y1: start.y, x2: end.x, y2: end.y, color, width };
+    }
+    if (type === 'rect') {
+      return {
+        type: 'rect',
+        x: start.x, y: start.y,
+        w: Math.max(1, end.x - start.x),
+        h: Math.max(1, end.y - start.y),
+        color, width
+      };
+    }
+    if (type === 'circle') {
+      const dx = end.x - start.x, dy = end.y - start.y;
+      return { type: 'circle', cx: start.x, cy: start.y, r: Math.sqrt(dx * dx + dy * dy), color, width };
+    }
+    return null;
+  }
+
+  // Disegna un singolo oggetto JSON sul contesto passato (vettoriale o, in futuro, export).
+  function drawElement(context, el) {
+    context.save();
+    context.strokeStyle = el.color;
+    context.lineWidth = el.width;
+    context.beginPath();
+    if (el.type === 'line') {
+      context.moveTo(el.x1, el.y1);
+      context.lineTo(el.x2, el.y2);
+    } else if (el.type === 'rect') {
+      context.rect(el.x, el.y, el.w, el.h);
+    } else if (el.type === 'circle') {
+      context.arc(el.cx, el.cy, el.r, 0, Math.PI * 2);
+    } else if (el.type === 'arc') {
+      context.arc(el.cx, el.cy, el.r, el.startAngle, el.endAngle, el.anticlockwise);
+    }
+    context.stroke();
+    context.restore();
+  }
+
+  // Rendering ciclico del SOLO layer vettoriale: pulisce e ridisegna tutto
+  // elementsArray, più eventualmente l'anteprima della forma in corso (previewEl).
+  // Il layer raster (#board) non viene mai toccato da questa funzione.
+  function render(previewEl) {
+    vctx.clearRect(0, 0, vectorCanvas.width, vectorCanvas.height);
+    elementsArray.forEach(el => drawElement(vctx, el));
+    if (previewEl) drawElement(vctx, previewEl);
+    if (selectedElement) drawSelectionBox(selectedElement);
+  }
+
+  // --- FASE 2: Selezione, Hit Detection, Trascinamento, Modifica ---
+  let selectedElement = null;   // riferimento diretto all'oggetto in elementsArray (non copia)
+  let isDraggingElement = false;
+  let dragLastPos = null;
+  const HIT_TOLERANCE = 10; // px canvas: distanza massima dal bordo della forma per considerarla "cliccata"
+
+  // Distanza minima tra un punto p e il segmento a-b (proiezione vettoriale, clampata agli estremi).
+  function distToSegment(p, a, b) {
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const lenSq = dx * dx + dy * dy;
+    let t = lenSq === 0 ? 0 : ((p.x - a.x) * dx + (p.y - a.y) * dy) / lenSq;
+    t = Math.max(0, Math.min(1, t));
+    const projX = a.x + t * dx, projY = a.y + t * dy;
+    return Math.hypot(p.x - projX, p.y - projY);
+  }
+
+  // Hit test per tipo di forma. Estendibile: nuove forme aggiungono qui un ramo dedicato.
+  function hitTestElement(el, pos) {
+    if (el.type === 'line') {
+      return distToSegment(pos, { x: el.x1, y: el.y1 }, { x: el.x2, y: el.y2 }) <= HIT_TOLERANCE;
+    }
+    if (el.type === 'rect') {
+      const sides = [
+        [{ x: el.x, y: el.y }, { x: el.x + el.w, y: el.y }],
+        [{ x: el.x + el.w, y: el.y }, { x: el.x + el.w, y: el.y + el.h }],
+        [{ x: el.x + el.w, y: el.y + el.h }, { x: el.x, y: el.y + el.h }],
+        [{ x: el.x, y: el.y + el.h }, { x: el.x, y: el.y }]
+      ];
+      return sides.some(([a, b]) => distToSegment(pos, a, b) <= HIT_TOLERANCE);
+    }
+    if (el.type === 'circle') {
+      return Math.abs(Math.hypot(pos.x - el.cx, pos.y - el.cy) - el.r) <= HIT_TOLERANCE;
+    }
+    if (el.type === 'arc') {
+      const dist = Math.hypot(pos.x - el.cx, pos.y - el.cy);
+      if (Math.abs(dist - el.r) > HIT_TOLERANCE) return false;
+      const ang = Math.atan2(pos.y - el.cy, pos.x - el.cx);
+      return el.anticlockwise
+        ? isInIncreasingSweep(el.endAngle, el.startAngle, ang)
+        : isInIncreasingSweep(el.startAngle, el.endAngle, ang);
+    }
+    return false;
+  }
+
+  // Cerca l'elemento cliccato partendo dall'ultimo disegnato (il più "in alto" visivamente).
+  function findElementAt(pos) {
+    for (let i = elementsArray.length - 1; i >= 0; i--) {
+      if (hitTestElement(elementsArray[i], pos)) return i;
+    }
+    return -1;
+  }
+
+  // Bounding box di una forma, usata per disegnare il riquadro di selezione.
+  function getElementBounds(el) {
+    if (el.type === 'line') {
+      return {
+        x: Math.min(el.x1, el.x2), y: Math.min(el.y1, el.y2),
+        w: Math.abs(el.x2 - el.x1), h: Math.abs(el.y2 - el.y1)
+      };
+    }
+    if (el.type === 'rect') return { x: el.x, y: el.y, w: el.w, h: el.h };
+    if (el.type === 'circle') return { x: el.cx - el.r, y: el.cy - el.r, w: el.r * 2, h: el.r * 2 };
+    if (el.type === 'arc') return { x: el.cx - el.r, y: el.cy - el.r, w: el.r * 2, h: el.r * 2 };
+    return { x: 0, y: 0, w: 0, h: 0 };
+  }
+
+  function drawSelectionBox(el) {
+    const b = getElementBounds(el);
+    const pad = 8;
+    vctx.save();
+    vctx.strokeStyle = '#f97316';
+    vctx.lineWidth = 1.5;
+    vctx.setLineDash([6, 4]);
+    vctx.strokeRect(b.x - pad, b.y - pad, b.w + pad * 2, b.h + pad * 2);
+    vctx.restore();
+  }
+
+  // Sposta una forma di (dx, dy) mutando direttamente le sue coordinate.
+  function translateElement(el, dx, dy) {
+    if (el.type === 'line') { el.x1 += dx; el.y1 += dy; el.x2 += dx; el.y2 += dy; }
+    else if (el.type === 'rect') { el.x += dx; el.y += dy; }
+    else if (el.type === 'circle') { el.cx += dx; el.cy += dy; }
+    else if (el.type === 'arc') { el.cx += dx; el.cy += dy; }
+  }
+
+  function updateShapeEditUI() {
+    btnDeleteShape.disabled = !selectedElement;
+  }
+
+  function startSelect(pos) {
+    const idx = findElementAt(pos);
+    if (idx === -1) {
+      selectedElement = null;
+      isDraggingElement = false;
+    } else {
+      pushUndo(); // snapshot prima di spostare, per poter tornare alla posizione precedente
+      selectedElement = elementsArray[idx];
+      isDraggingElement = true;
+      dragLastPos = pos;
+    }
+    render();
+    updateShapeEditUI();
+  }
+
+  function dragSelect(pos) {
+    if (!isDraggingElement || !selectedElement || !dragLastPos) return;
+    translateElement(selectedElement, pos.x - dragLastPos.x, pos.y - dragLastPos.y);
+    dragLastPos = pos;
+    render();
+  }
+
+  function endSelect() {
+    isDraggingElement = false;
+    dragLastPos = null;
+    if (selectedElement) saveCanvas();
+  }
+
+  btnDeleteShape.addEventListener('click', () => {
+    if (!selectedElement) return;
+    pushUndo();
+    const idx = elementsArray.indexOf(selectedElement);
+    if (idx !== -1) elementsArray.splice(idx, 1);
+    selectedElement = null;
+    render();
+    updateShapeEditUI();
+    saveCanvas();
+  });
+
+  let sessionSnapPoints = [];
+  let customSnapPoints = []; // Punti di ancoraggio manuali, aggiunti dall'utente
+  let strokeStartPos = null;
+  let lastPos = null;
+  const SNAP_SCREEN_THRESHOLD = 16; 
+
+  const undoStack = [];
+
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+
+  function saveCanvas() {
+    // Salva l'immagine del canvas (raster: sfondo + tratto libero)
+    localStorage.setItem(LS_KEY, canvas.toDataURL('image/png'));
+
+    // Salva le forme vettoriali come JSON puro
+    localStorage.setItem(LS_KEY_ELEMENTS, JSON.stringify(elementsArray));
+
+    // Salva le etichette di testo
+    const texts = [];
+    document.querySelectorAll('.text-note-container').forEach(container => {
+      texts.push({
+        x: parseFloat(container.style.left) || 0,
+        y: parseFloat(container.style.top) || 0,
+        text: container.querySelector('.text-content').innerHTML,
+        color: container.style.color
+      });
+    });
+    localStorage.setItem(LS_KEY_TEXTS, JSON.stringify(texts));
+  }
+
+  function loadCanvas() {
+    // Carica l'immagine
+    const dataURL = localStorage.getItem(LS_KEY);
+    if (dataURL) {
+      const img = new Image();
+      img.onload = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0);
+      };
+      img.src = dataURL;
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // Ricostruisce le forme vettoriali dal JSON salvato
+    const savedElements = localStorage.getItem(LS_KEY_ELEMENTS);
+    if (savedElements) {
+      try {
+        elementsArray = JSON.parse(savedElements);
+      } catch (e) {
+        elementsArray = [];
+      }
+    } else {
+      elementsArray = [];
+    }
+    selectedElement = null;
+    render();
+    updateShapeEditUI();
+
+    // Carica le etichette di testo
+    textLayer.innerHTML = '';
+    const savedTexts = localStorage.getItem(LS_KEY_TEXTS);
+    if (savedTexts) {
+      try {
+        const parsed = JSON.parse(savedTexts);
+        parsed.forEach(t => createTextNote(t.x, t.y, t.text, t.color, false));
+      } catch(e) {}
+    }
+  }
+
+  function pushUndo() {
+    try {
+      undoStack.push({
+        raster: canvas.toDataURL('image/png'),
+        elements: JSON.parse(JSON.stringify(elementsArray))
+      });
+      if (undoStack.length > MAX_UNDO) undoStack.shift();
+      btnUndo.disabled = false;
+    } catch (err) {}
+  }
+
+  function undo() {
+    if (undoStack.length === 0) return;
+    const state = undoStack.pop();
+    const img = new Image();
+    img.onload = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0);
+      elementsArray = state.elements;
+      selectedElement = null;
+      render();
+      updateShapeEditUI();
+      saveCanvas();
+    };
+    img.src = state.raster;
+    if (undoStack.length === 0) btnUndo.disabled = true;
+  }
+
+  function getCoordinates(e) {
+    const rect = canvas.getBoundingClientRect();
+    const touch = e.touches && e.touches[0];
+    let clientX = touch ? touch.clientX : e.clientX;
+    let clientY = touch ? touch.clientY : e.clientY;
+
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+
+    return {
+      x: (clientX - rect.left) * scaleX,
+      y: (clientY - rect.top) * scaleY
+    };
+  }
+
+  function screenToCanvas(sx, sy) {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    return {
+      x: (sx - rect.left) * scaleX,
+      y: (sy - rect.top) * scaleY
+    };
+  }
+
+  function getTriangleCanvasVertices(pos) {
+    const pts = [
+      { x: pos.x + 30, y: pos.y },
+      { x: pos.x + 60, y: pos.y + 52 },
+      { x: pos.x + 0,  y: pos.y + 52 }
+    ];
+    return pts.map(pt => screenToCanvas(pt.x, pt.y));
+  }
+
+  function getSpatulaCanvasCorners() {
+    if (!spatula || spatula.classList.contains('hidden')) return null;
+    const w = SPATULA_WIDTH;
+    const h = SPATULA_HEIGHT;
+    const cx = spatulaPos.x + w / 2;
+    const cy = spatulaPos.y + h / 2;
+    const angleDeg = spatulaCtl ? spatulaCtl.getAngle() : 0;
+    const angleRad = angleDeg * Math.PI / 180;
+    const cos = Math.cos(angleRad);
+    const sin = Math.sin(angleRad);
+    const halfW = w / 2;
+    const halfH = h / 2;
+    const localCorners = [
+      { x: -halfW, y: -halfH },
+      { x: halfW, y: -halfH },
+      { x: halfW, y: halfH },
+      { x: -halfW, y: halfH }
+    ];
+    return localCorners.map(pt => {
+      const rx = pt.x * cos - pt.y * sin;
+      const ry = pt.x * sin + pt.y * cos;
+      return screenToCanvas(cx + rx, cy + ry);
+    });
+  }
+
+  function applySpatulaClip() {
+    const corners = getSpatulaCanvasCorners();
+    if (!corners) return;
+    ctx.beginPath();
+    ctx.rect(0, 0, canvas.width, canvas.height);
+    ctx.moveTo(corners[0].x, corners[0].y);
+    ctx.lineTo(corners[1].x, corners[1].y);
+    ctx.lineTo(corners[2].x, corners[2].y);
+    ctx.lineTo(corners[3].x, corners[3].y);
+    ctx.closePath();
+    ctx.clip('evenodd');
+  }
+
+  function isShapeMode() {
+    return currentMode === 'line' || currentMode === 'rect' || currentMode === 'circle';
+  }
+
+  function addSnapPoint(pt) {
+    sessionSnapPoints.push(pt);
+    if (sessionSnapPoints.length > 600) sessionSnapPoints.shift();
+  }
+
+  // Vertici "notevoli" di una forma vettoriale, usati per lo snap.
+  // A differenza di recordShapeSnapPoints (rimossa), questi si calcolano al volo
+  // da elementsArray: restano corretti dopo un trascinamento e sopravvivono al reload,
+  // perché derivano da dati che vengono già salvati (elementsArray), non da un cache separata.
+  function getElementSnapPoints(el) {
+    if (el.type === 'line') {
+      return [{ x: el.x1, y: el.y1 }, { x: el.x2, y: el.y2 }];
+    }
+    if (el.type === 'rect') {
+      return [
+        { x: el.x, y: el.y },
+        { x: el.x + el.w, y: el.y },
+        { x: el.x, y: el.y + el.h },
+        { x: el.x + el.w, y: el.y + el.h }
+      ];
+    }
+    if (el.type === 'circle') {
+      return [
+        { x: el.cx, y: el.cy },
+        { x: el.cx + el.r, y: el.cy },
+        { x: el.cx - el.r, y: el.cy },
+        { x: el.cx, y: el.cy + el.r },
+        { x: el.cx, y: el.cy - el.r }
+      ];
+    }
+    if (el.type === 'arc') {
+      return [
+        { x: el.cx + el.r * Math.cos(el.startAngle), y: el.cy + el.r * Math.sin(el.startAngle) },
+        { x: el.cx + el.r * Math.cos(el.endAngle), y: el.cy + el.r * Math.sin(el.endAngle) },
+        { x: el.cx, y: el.cy }
+      ];
+    }
+    return [];
+  }
+
+  function findSnapPoint(pos) {
+    const pool = [...sessionSnapPoints, ...customSnapPoints, ...elementsArray.flatMap(getElementSnapPoints)];
+
+    if (!triangleA.classList.contains('hidden')) {
+      pool.push(...getTriangleCanvasVertices(triangleAPos));
+      pool.push(...getTriangleCanvasVertices(triangleBPos));
+      pool.push(...getTriangleCanvasVertices(triangleCPos));
+      pool.push(...getTriangleCanvasVertices(triangleDPos));
+      pool.push(...getTriangleCanvasVertices(triangleEPos));
+      pool.push(...getTriangleCanvasVertices(triangleFPos));
+    }
+
+    if (pool.length === 0) return null;
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const thresholdCanvasUnits = SNAP_SCREEN_THRESHOLD * scaleX;
+
+    let closest = null;
+    let closestDist = thresholdCanvasUnits;
+
+    pool.forEach(pt => {
+      const dx = pt.x - pos.x;
+      const dy = pt.y - pos.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist <= closestDist) {
+        closestDist = dist;
+        closest = pt;
+      }
+    });
+
+    return closest;
+  }
+
+  function showSnapIndicator(pt) {
+    let indicator = document.querySelector('.snap-indicator');
+    if (!indicator) {
+      indicator = document.createElement('div');
+      indicator.className = 'snap-indicator';
+      canvas.parentElement.appendChild(indicator);
+    }
+    const rect = canvas.getBoundingClientRect();
+    const containerRect = canvas.parentElement.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+
+    indicator.style.left = ((rect.left - containerRect.left) + (pt.x / scaleX)) + 'px';
+    indicator.style.top = ((rect.top - containerRect.top) + (pt.y / scaleY)) + 'px';
+    indicator.style.display = 'block';
+
+    clearTimeout(indicator._hideTimeout);
+    indicator._hideTimeout = setTimeout(() => {
+      indicator.style.display = 'none';
+    }, 400);
+  }
+
+  function trySnap(pos) {
+    if (!snapEnabled) return pos;
+    if (currentMode === 'draw' || currentMode === 'erase') return pos;
+    if (!isShapeMode() && currentMode !== 'arc') return pos;
+    
+    const snapped = findSnapPoint(pos);
+    if (snapped) {
+      showSnapIndicator(snapped);
+      return snapped;
+    }
+    return pos;
+  }
+
+  function startPosition(e) {
+    if (currentMode === 'none') return;
+    if (e.type === 'touchstart') e.preventDefault();
+
+    const pos = trySnap(getCoordinates(e));
+
+    if (currentMode === 'arc') {
+      // Ogni tocco aggiunge un punto. Non impostiamo isDrawing: l'arco non usa
+      // draw()/endPosition(), è autonomo e completo qui, tocco per tocco.
+      arcPoints.push(pos);
+
+      if (arcPoints.length === 2) {
+        // dopo il 2° tocco mostriamo la corda, per aiutare a "mirare" il 3° punto
+        render({ type: 'line', x1: arcPoints[0].x, y1: arcPoints[0].y, x2: pos.x, y2: pos.y, color: currentColor, width: currentThickness });
+      } else if (arcPoints.length >= 3) {
+        pushUndo();
+        const finalArc = buildArcElement(arcPoints[0], arcPoints[1], arcPoints[2], currentColor, currentThickness);
+        if (finalArc) elementsArray.push(finalArc);
+        arcPoints = [];
+        render();
+        saveCanvas();
+      }
+      return;
+    }
+
+    isDrawing = true;
+
+    if (currentMode === 'select') {
+      startSelect(pos);
+      return;
+    }
+
+    if (isShapeMode()) {
+      pushUndo(); // snapshot pre-forma: raster invariato, ma elementsArray verrà modificato
+      shapeStartPos = pos;
+      lastPos = pos;
+      return;
+    }
+
+    pushUndo(); // undo per tratto libero / gomma, che toccano #board
+    strokeStartPos = pos;
+    lastPos = pos;
+    ctx.beginPath();
+    ctx.moveTo(pos.x, pos.y);
+    draw(e);
+  }
+
+  function endPosition(e) {
+    if (!isDrawing) return;
+    isDrawing = false;
+
+    if (currentMode === 'select') {
+      endSelect();
+      return;
+    }
+
+    if (isShapeMode()) {
+      if (shapeStartPos && lastPos) {
+        const finalEl = buildShapeElement(currentMode, shapeStartPos, lastPos, currentColor, currentThickness);
+        if (finalEl) elementsArray.push(finalEl);
+        render();
+      }
+      shapeStartPos = null;
+    } else {
+      if (currentMode === 'draw' && strokeStartPos && lastPos) {
+        addSnapPoint(strokeStartPos);
+        addSnapPoint(lastPos);
+      }
+      ctx.closePath();
+    }
+    saveCanvas();
+  }
+
+  function draw(e) {
+    if (!isDrawing || currentMode === 'none') return;
+    if (e.type === 'touchmove') e.preventDefault();
+
+    const pos = trySnap(getCoordinates(e));
+
+    if (currentMode === 'select') {
+      dragSelect(pos);
+      lastPos = pos;
+      return;
+    }
+
+    const prevPos = lastPos ? { x: lastPos.x, y: lastPos.y } : pos;
+    lastPos = pos;
+
+    if (currentMode === 'draw') {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = currentColor;
+      ctx.lineWidth = currentThickness;
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(pos.x, pos.y);
+
+    } else if (currentMode === 'erase') {
+      ctx.save();
+      applySpatulaClip();
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 20;
+      
+      ctx.beginPath();
+      ctx.moveTo(prevPos.x, prevPos.y);
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      ctx.restore();
+      
+      ctx.beginPath();
+      ctx.moveTo(pos.x, pos.y);
+
+    } else if (isShapeMode()) {
+      if (!shapeStartPos) return;
+      const preview = buildShapeElement(currentMode, shapeStartPos, pos, currentColor, currentThickness);
+      render(preview);
+    }
+  }
+
+  canvas.addEventListener('mousedown', startPosition);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mouseup', endPosition);
+  canvas.addEventListener('mouseleave', endPosition);
+
+  canvas.addEventListener('touchstart', startPosition, { passive: false });
+  canvas.addEventListener('touchmove', draw, { passive: false });
+  canvas.addEventListener('touchend', endPosition);
+  canvas.addEventListener('touchcancel', endPosition);
+
+  function setActiveTool(mode, activeBtn) {
+    currentMode = mode;
+
+    allModeButtons.forEach(btn => {
+      btn.classList.remove('active');
+      btn.classList.add('secondary');
+    });
+
+    if (activeBtn) {
+      activeBtn.classList.add('active');
+      activeBtn.classList.remove('secondary');
+    }
+
+    if (mode !== 'select') {
+      selectedElement = null;
+      isDraggingElement = false;
+      updateShapeEditUI();
+    }
+
+    if (mode !== 'arc') {
+      arcPoints = [];
+    }
+
+    render();
+
+    if (mode === 'none') {
+      canvas.style.touchAction = 'auto';
+      canvas.style.cursor = 'grab';
+    } else if (mode === 'select') {
+      canvas.style.touchAction = 'none';
+      canvas.style.cursor = 'pointer';
+    } else {
+      canvas.style.touchAction = 'none';
+      canvas.style.cursor = 'crosshair';
+    }
+  }
+
+  btnDraw.addEventListener('click', () => setActiveTool('draw', btnDraw));
+  btnErase.addEventListener('click', () => setActiveTool('erase', btnErase));
+  btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
+  btnLine.addEventListener('click', () => setActiveTool('line', btnLine));
+  btnRect.addEventListener('click', () => setActiveTool('rect', btnRect));
+  btnCircle.addEventListener('click', () => setActiveTool('circle', btnCircle));
+  btnSelect.addEventListener('click', () => setActiveTool('select', btnSelect));
+  btnArc.addEventListener('click', () => setActiveTool('arc', btnArc));
+
+  setActiveTool('none', btnNone);
+
+  btnUndo.addEventListener('click', undo);
+
+  btnprevious.addEventListener('click', () => {
+    window.location.href = 'dashconsolle.html';
+  });
+
+  btnSnapToggle.addEventListener('click', () => {
+    snapEnabled = !snapEnabled;
+    if (snapEnabled) {
+      btnSnapToggle.classList.add('active');
+      btnSnapToggle.classList.remove('secondary');
+    } else {
+      btnSnapToggle.classList.remove('active');
+      btnSnapToggle.classList.add('secondary');
+    }
+  });
+
+  // --- Punti di ancoraggio manuali ---
+  const btnAnchor = document.getElementById('btnAnchor');
+  const pointModal = document.getElementById('pointModal');
+  const LS_KEY_ANCHORS = 'orgcanv2_anchorPoints';
+
+  function anchorDiameter(thickness) {
+    // Mappa lo spessore (1-5) a un diametro visibile in px sullo schermo
+    return 8 + (thickness - 1) * 5; // 1 -> 8px, 5 -> 28px
+  }
+
+  function drawAnchorPoint(pt) {
+    const div = document.createElement('div');
+    div.className = 'anchor-point';
+    const d = anchorDiameter(pt.thickness);
+    div.style.width = d + 'px';
+    div.style.height = d + 'px';
+    div.style.left = (pt.x / 1000 * 100) + '%';
+    div.style.top = (pt.y / 1414 * 100) + '%';
+    textLayer.appendChild(div);
+  }
+
+  function renderAllAnchorPoints() {
+    document.querySelectorAll('.anchor-point').forEach(p => p.remove());
+    customSnapPoints.forEach(drawAnchorPoint);
+  }
+
+  function saveAnchorPoints() {
+    localStorage.setItem(LS_KEY_ANCHORS, JSON.stringify(customSnapPoints));
+  }
+
+  function loadAnchorPoints() {
+    const saved = localStorage.getItem(LS_KEY_ANCHORS);
+    if (saved) {
+      try {
+        customSnapPoints = JSON.parse(saved);
+      } catch (e) {
+        customSnapPoints = [];
+      }
+    }
+    renderAllAnchorPoints();
+  }
+
+  btnAnchor.addEventListener('click', () => {
+    pointModal.style.display = 'block';
+  });
+
+  document.getElementById('closeModal').addEventListener('click', () => {
+    pointModal.style.display = 'none';
+  });
+
+  document.getElementById('savePoint').addEventListener('click', () => {
+    const mmX = parseFloat(document.getElementById('ptsX').value);
+    const mmY = parseFloat(document.getElementById('ptsY').value);
+    let thickness = parseInt(document.getElementById('ptsThickness').value);
+
+    if (isNaN(mmX) || isNaN(mmY) || mmX < 0 || mmX > 210 || mmY < 0 || mmY > 297) {
+      alert('Inserisci coordinate valide: X tra 0 e 210 mm, Y tra 0 e 297 mm.');
+      return;
+    }
+    if (isNaN(thickness)) thickness = 2;
+    thickness = Math.min(5, Math.max(1, thickness));
+
+    const pt = { x: mmToPx(mmX), y: mmToPx(mmY), thickness };
+    customSnapPoints.push(pt);
+    drawAnchorPoint(pt);
+    saveAnchorPoints();
+
+    document.getElementById('ptsX').value = '';
+    document.getElementById('ptsY').value = '';
+    pointModal.style.display = 'none';
+  });
+
+  document.getElementById('clearPoints').addEventListener('click', () => {
+    customSnapPoints = [];
+    document.querySelectorAll('.anchor-point').forEach(p => p.remove());
+    saveAnchorPoints();
+  });
+
+  // --- Tool Conversione Coordinate (mm <-> px) ---
+  // Fattore unico (media tra 4.7619 su X e 4.7609 su Y): scarto 0,02%, trascurabile.
+  const MM_TO_PX = 4.7614;
+
+  function mmToPx(mm) { return mm * MM_TO_PX; }
+  function pxToMm(px) { return px / MM_TO_PX; }
+
+  const LS_KEY_COORDS = 'orgcanv2_coordRecords';
+
+  const coordConvOverlay = document.getElementById('coordConvOverlay');
+  const coordRecordsList = document.getElementById('coordRecordsList');
+  let coordRecords = [];
+
+  function loadCoordRecords() {
+    const saved = localStorage.getItem(LS_KEY_COORDS);
+    try {
+      coordRecords = saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      coordRecords = [];
+    }
+  }
+
+  function saveCoordRecords() {
+    localStorage.setItem(LS_KEY_COORDS, JSON.stringify(coordRecords));
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function renderCoordRecords() {
+    coordRecordsList.innerHTML = '';
+    if (coordRecords.length === 0) {
+      coordRecordsList.innerHTML = '<div class="cc-empty">Nessun record salvato.</div>';
+      return;
+    }
+    coordRecords.forEach((rec, index) => {
+      const div = document.createElement('div');
+      div.className = 'cc-record';
+      div.innerHTML = `
+        <div class="cc-record-info">
+          ${rec.name ? `<span class="cc-record-name">${escapeHtml(rec.name)}</span>` : ''}
+          <span class="cc-record-vals">MM: <b>${rec.mmX}, ${rec.mmY}</b></span>
+          <span class="cc-record-vals">PX: <b>${rec.pxX}, ${rec.pxY}</b></span>
+        </div>
+        <button class="cc-delete-btn" data-index="${index}" title="Elimina">🗑️</button>
+      `;
+      coordRecordsList.appendChild(div);
+    });
+
+    coordRecordsList.querySelectorAll('.cc-delete-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.getAttribute('data-index'));
+        coordRecords.splice(idx, 1);
+        saveCoordRecords();
+        renderCoordRecords();
+      });
+    });
+  }
+
+  function openCoordConv() {
+    loadCoordRecords();
+    renderCoordRecords();
+    coordConvOverlay.style.display = 'block';
+  }
+
+  function closeCoordConv() {
+    coordConvOverlay.style.display = 'none';
+  }
+
+  document.getElementById('btnCoordConv').addEventListener('click', openCoordConv);
+  document.getElementById('btnCoordClose').addEventListener('click', closeCoordConv);
+
+  document.getElementById('btnCoordAdd').addEventListener('click', () => {
+    const nameInput = document.getElementById('ccName');
+    const mmXInput = document.getElementById('ccMmX');
+    const mmYInput = document.getElementById('ccMmY');
+
+    const name = nameInput.value.trim();
+    const mmX = parseFloat(mmXInput.value);
+    const mmY = parseFloat(mmYInput.value);
+
+    if (isNaN(mmX) || isNaN(mmY)) {
+      alert('Inserisci valori validi per X e Y in mm.');
+      return;
+    }
+
+    const pxX = Math.round(mmX * MM_TO_PX * 100) / 100;
+    const pxY = Math.round(mmY * MM_TO_PX * 100) / 100;
+
+    coordRecords.push({ name, mmX, mmY, pxX, pxY });
+    saveCoordRecords();
+    renderCoordRecords();
+
+    nameInput.value = '';
+    mmXInput.value = '';
+    mmYInput.value = '';
+    mmXInput.focus();
+  });
+
+  // --- Funzione per Aggiungere Testi Trascinabili ---
+  function createTextNote(x, y, text = "Testo", color = currentColor, focusOnCreate = true) {
+    const container = document.createElement('div');
+    container.className = 'text-note-container';
+    container.style.left = x + '%';
+    container.style.top = y + '%';
+    container.style.color = color;
+
+    const handle = document.createElement('div');
+    handle.className = 'text-drag-handle';
+
+    const content = document.createElement('div');
+    content.className = 'text-content';
+    content.contentEditable = true;
+    content.innerHTML = text;
+
+    container.appendChild(handle);
+    container.appendChild(content);
+    textLayer.appendChild(container);
+
+    let dragStart = null;
+    let initialPos = null;
+
+    handle.addEventListener('pointerdown', (e) => {
+      dragStart = { x: e.clientX, y: e.clientY };
+      initialPos = { x: parseFloat(container.style.left) || 0, y: parseFloat(container.style.top) || 0 };
+      handle.setPointerCapture(e.pointerId);
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointermove', (e) => {
+      if (!dragStart) return;
+      const rect = getCanvasContainerRect();
+      const dxPct = ((e.clientX - dragStart.x) / rect.width) * 100;
+      const dyPct = ((e.clientY - dragStart.y) / rect.height) * 100;
+      container.style.left = (initialPos.x + dxPct) + '%';
+      container.style.top = (initialPos.y + dyPct) + '%';
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointerup', (e) => {
+      dragStart = null;
+      saveCanvas();
+      e.stopPropagation();
+    });
+    handle.addEventListener('pointercancel', () => { dragStart = null; });
+
+    // Autodistruzione e Focus
+    content.addEventListener('blur', () => {
+      if (content.innerText.trim() === '') {
+        container.remove();
+      }
+      activeTextContainer = null;
+      saveCanvas();
+    });
+
+    content.addEventListener('focus', () => {
+      activeTextContainer = container;
+      // Imposta il tool su spostamento per non interferire mentre si scrive
+      setActiveTool('none', btnNone);
+    });
+
+    if (focusOnCreate) {
+      setTimeout(() => {
+        content.focus();
+        // Evidenzia il testo iniziale (API moderna al posto di execCommand)
+        const range = document.createRange();
+        range.selectNodeContents(content);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }, 50);
+    }
+  }
+
+  // Tasto per inserire il testo
+  btnText.addEventListener('click', () => {
+    // Posiziona il testo in una zona fissa in alto a sinistra, in percentuale
+    const x = 5;  // 5% da sinistra
+    const y = 6;  // 6% dall'alto
+    createTextNote(x, y, "Testo", currentColor, true);
+  });
+
+  // --- Colori ---
+  document.querySelectorAll('.color-dot').forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+      e.target.classList.add('selected');
+      currentColor = e.target.getAttribute('data-color');
+
+      // Se c'è un testo selezionato (focus), cambiamo il suo colore in tempo reale
+      if (activeTextContainer) {
+        activeTextContainer.style.color = currentColor;
+        saveCanvas();
+      }
+
+      // Se c'è una forma vettoriale selezionata, cambiamo il suo colore in tempo reale
+      if (selectedElement) {
+        pushUndo();
+        selectedElement.color = currentColor;
+        render();
+        saveCanvas();
+      }
+
+      if (currentMode === 'erase') {
+        setActiveTool('draw', btnDraw);
+      }
+    });
+  });
+
+  // --- Spessore ---
+  // Un solo snapshot undo all'inizio del gesto (non ad ogni tick dello slider)
+  thicknessInput.addEventListener('mousedown', () => { if (selectedElement) pushUndo(); });
+  thicknessInput.addEventListener('touchstart', () => { if (selectedElement) pushUndo(); });
+
+  thicknessInput.addEventListener('input', () => {
+    currentThickness = parseInt(thicknessInput.value, 10);
+    thicknessVal.textContent = thicknessInput.value;
+    if (selectedElement) {
+      selectedElement.width = currentThickness;
+      render();
+    }
+  });
+
+  thicknessInput.addEventListener('change', () => {
+    if (selectedElement) saveCanvas();
+  });
+
+  // --- Cancella tutto ---
+  btnClear.addEventListener('click', () => {
+    if (confirm("Vuoi cancellare tutto il disegno e i testi?")) {
+      pushUndo();
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      sessionSnapPoints = [];
+      elementsArray = [];
+      selectedElement = null;
+      render();
+      updateShapeEditUI();
+      textLayer.innerHTML = ''; // Elimina tutti i testi
+      saveCanvas();
+    }
+  });
+
+  btnPrint.addEventListener('click', () => {
+    window.print();
+  });
+
+  // --- Esporta / Importa forme vettoriali, ancore e testi (file JSON) ---
+  // Volutamente NON include lo sfondo né il tratto a mano libera (raster):
+  // quelli restano legati al dispositivo/localStorage, qui esportiamo solo
+  // ciò che è già puro JSON nell'app.
+  btnExport.addEventListener('click', () => {
+    const texts = [];
+    document.querySelectorAll('.text-note-container').forEach(container => {
+      texts.push({
+        x: parseFloat(container.style.left) || 0,
+        y: parseFloat(container.style.top) || 0,
+        text: container.querySelector('.text-content').innerHTML,
+        color: container.style.color
+      });
+    });
+
+    const payload = {
+      formato: 'orgcanv2-vettoriale',
+      versione: 1,
+      dataEsportazione: new Date().toISOString(),
+      elementi: elementsArray,
+      ancore: customSnapPoints,
+      testi: texts
+    };
+
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const stamp = new Date().toISOString().slice(0, 16).replace(/[:T]/g, '-');
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `lavagna-vettoriale_${stamp}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+
+  btnImport.addEventListener('click', () => {
+    importFileInput.value = ''; // permette di riselezionare anche lo stesso file
+    importFileInput.click();
+  });
+
+  importFileInput.addEventListener('change', (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      let data;
+      try {
+        data = JSON.parse(reader.result);
+      } catch (err) {
+        alert('File non valido: non è un JSON leggibile.');
+        return;
+      }
+
+      if (!data || !Array.isArray(data.elementi)) {
+        alert("File non valido: manca l'elenco delle forme vettoriali.");
+        return;
+      }
+
+      if (!confirm('Vuoi sostituire forme, punti di ancoraggio e testi attuali con quelli del file?\nSfondo e tratto a mano libera non verranno toccati.')) {
+        return;
+      }
+
+      pushUndo(); // così l'importazione stessa resta annullabile con ↩️ (forme incluse)
+
+      elementsArray = data.elementi || [];
+      customSnapPoints = data.ancore || [];
+      selectedElement = null;
+
+      textLayer.querySelectorAll('.text-note-container').forEach(el => el.remove());
+      (data.testi || []).forEach(t => createTextNote(t.x, t.y, t.text, t.color, false));
+
+      render();
+      updateShapeEditUI();
+      renderAllAnchorPoints();
+      saveCanvas();
+      saveAnchorPoints();
+    };
+    reader.readAsText(file);
+  });
+
+  // --- Sfondo personalizzato ---
+  const btnBgUpload = document.getElementById('btnBgUpload');
+  const btnBgReset = document.getElementById('btnBgReset');
+  const bgFileInput = document.getElementById('bgFileInput');
+  let customBgObjectUrl = null;
+
+  btnBgUpload.addEventListener('click', () => bgFileInput.click());
+
+  bgFileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    if (customBgObjectUrl) URL.revokeObjectURL(customBgObjectUrl);
+    customBgObjectUrl = URL.createObjectURL(file);
+
+    canvas.style.backgroundImage = `url('${customBgObjectUrl}')`;
+    canvas.style.backgroundRepeat = 'no-repeat';
+    canvas.style.backgroundSize = '100% auto';
+    canvas.style.backgroundPosition = 'top center';
+
+    bgFileInput.value = ''; 
+  });
+
+  btnBgReset.addEventListener('click', () => {
+    if (customBgObjectUrl) {
+      URL.revokeObjectURL(customBgObjectUrl);
+      customBgObjectUrl = null;
+    }
+    canvas.style.backgroundImage = "url('rimage/cartamm.png')";
+    canvas.style.backgroundRepeat = 'no-repeat';
+    canvas.style.backgroundSize = '100% 100%';
+    canvas.style.backgroundPosition = '0 0';
+  });
+
+  // --- Toolbar fissa durante il pinch-zoom ---
+  function keepToolbarFixed() {
+    if (!window.visualViewport) return;
+    const vv = window.visualViewport;
+    const scale = 1 / vv.scale;
+    const x = vv.offsetLeft;
+    const y = vv.offsetTop;
+    toolbar.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  }
+
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('scroll', keepToolbarFixed);
+    window.visualViewport.addEventListener('resize', keepToolbarFixed);
+    keepToolbarFixed();
+  }
+
+  function adjustBodyPadding() {
+    document.body.style.paddingTop = (toolbar.offsetHeight + 10) + 'px';
+  }
+
+  window.addEventListener('resize', adjustBodyPadding);
+
+  // --- Gestione Righelli ---
+  function initRuler(rulerEl, orientation, getDefaultRect) {
+    const rotateHandle = rulerEl.querySelector('.ruler-rotate-handle');
+    let angle = 0;
+    let pos = { x: 0, y: 0 };
+    let dragStart = null;
+    let dragStartPos = null;
+    let rotating = false;
+    let rotateStartAngle = 0;
+    let rotateStartRulerAngle = 0;
+
+    function applyTransform() {
+      rulerEl.style.left = pos.x + 'px';
+      rulerEl.style.top = pos.y + 'px';
+      rulerEl.style.transform = `rotate(${angle}deg)`;
+      rotateHandle.textContent = Math.round(angle) + '°';
+    }
+
+    function resetToDefault() {
+      const d = getDefaultRect();
+      if (orientation === 'vertical') rulerEl.style.height = d.length + 'px';
+      else rulerEl.style.width = d.length + 'px';
+      pos = { x: d.x, y: d.y };
+      angle = 0;
+      applyTransform();
+    }
+
+    rulerEl.addEventListener('pointerdown', (e) => {
+      if (e.target === rotateHandle) return;
+      dragStart = { x: e.clientX, y: e.clientY };
+      dragStartPos = { x: pos.x, y: pos.y };
+      rulerEl.setPointerCapture(e.pointerId);
+    });
+    rulerEl.addEventListener('pointermove', (e) => {
+      if (!dragStart) return;
+      pos.x = dragStartPos.x + (e.clientX - dragStart.x);
+      pos.y = dragStartPos.y + (e.clientY - dragStart.y);
+      applyTransform();
+    });
+    rulerEl.addEventListener('pointerup', () => { dragStart = null; });
+    rulerEl.addEventListener('pointercancel', () => { dragStart = null; });
+
+    rotateHandle.addEventListener('pointerdown', (e) => {
+      e.stopPropagation();
+      const rect = rulerEl.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      rotateStartAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
+      rotateStartRulerAngle = angle;
+      rotating = true;
+      rotateHandle.setPointerCapture(e.pointerId);
+    });
+    rotateHandle.addEventListener('pointermove', (e) => {
+      if (!rotating) return;
+      const rect = rulerEl.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const currentAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
+      angle = rotateStartRulerAngle + (currentAngle - rotateStartAngle) * (180 / Math.PI);
+      
+      if (angle > 180) angle -= 360;
+      if (angle < -180) angle += 360;
+      applyTransform();
+    });
+    rotateHandle.addEventListener('pointerup', (e) => { rotating = false; e.stopPropagation(); });
+    rotateHandle.addEventListener('pointercancel', () => { rotating = false; });
+
+    return { resetToDefault };
+  }
+
+  // --- Gestione Stencil ---
+  function initSpatula(spatulaEl, getDefaultRect) {
+    const dragHandle = spatulaEl.querySelector('.spatula-drag-handle');
+    const rotateHandle = spatulaEl.querySelector('.spatula-rotate-handle');
+    let angle = 0;
+    let dragStart = null;
+    let dragStartPos = null;
+    let rotating = false;
+    let rotateStartAngle = 0;
+    let rotateStartSpatulaAngle = 0;
+
+    function applyTransform() {
+      spatulaEl.style.left = spatulaPos.x + 'px';
+      spatulaEl.style.top = spatulaPos.y + 'px';
+      spatulaEl.style.transform = `rotate(${angle}deg)`;
+    }
+
+    function resetToDefault() {
+      const d = getDefaultRect();
+      spatulaPos = { x: d.x, y: d.y };
+      angle = 0;
+      applyTransform();
+    }
+
+    dragHandle.addEventListener('pointerdown', (e) => {
+      dragStart = { x: e.clientX, y: e.clientY };
+      dragStartPos = { x: spatulaPos.x, y: spatulaPos.y };
+      dragHandle.setPointerCapture(e.pointerId);
+      e.stopPropagation();
+    });
+    dragHandle.addEventListener('pointermove', (e) => {
+      if (!dragStart) return;
+      spatulaPos.x = dragStartPos.x + (e.clientX - dragStart.x);
+      spatulaPos.y = dragStartPos.y + (e.clientY - dragStart.y);
+      applyTransform();
+      e.stopPropagation();
+    });
+    dragHandle.addEventListener('pointerup', (e) => { dragStart = null; e.stopPropagation(); });
+    dragHandle.addEventListener('pointercancel', () => { dragStart = null; });
+
+    rotateHandle.addEventListener('pointerdown', (e) => {
+      e.stopPropagation();
+      const rect = spatulaEl.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      rotateStartAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
+      rotateStartSpatulaAngle = angle;
+      rotating = true;
+      rotateHandle.setPointerCapture(e.pointerId);
+    });
+    rotateHandle.addEventListener('pointermove', (e) => {
+      if (!rotating) return;
+      const rect = spatulaEl.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const currentAngle = Math.atan2(e.clientY - cy, e.clientX - cx);
+      angle = rotateStartSpatulaAngle + (currentAngle - rotateStartAngle) * (180 / Math.PI);
+      applyTransform();
+    });
+    rotateHandle.addEventListener('pointerup', (e) => { rotating = false; e.stopPropagation(); });
+    rotateHandle.addEventListener('pointercancel', () => { rotating = false; });
+
+    return { resetToDefault, getAngle: () => angle };
+  }
+
+  // --- Gestione Logica 6 Triangoli ---
+  function initTriangleLocator(triangleEl, type, posObj, getDefaultPos) {
+    const handle = triangleEl.querySelector('.triangle-handle');
+    const label = triangleEl.querySelector('.coord-label');
+    let dragStart = null;
+    let dragStartPos = null;
+
+    function applyTransform(pos) {
+      triangleEl.style.left = pos.x + 'px';
+      triangleEl.style.top = pos.y + 'px';
+
+      if (type.includes('sensor') && label) {
+        const canvasPt = screenToCanvas(pos.x + 30, pos.y);
+        const mmX = pxToMm(canvasPt.x).toFixed(1);
+        const mmY = pxToMm(canvasPt.y).toFixed(1);
+        label.innerHTML = `X: ${mmX}<br>Y: ${mmY}`;
+        label.style.display = 'block';
+      }
+    }
+
+    function resetToDefault() {
+      const d = getDefaultPos();
+      posObj.x = d.x;
+      posObj.y = d.y;
+      applyTransform(posObj);
+    }
+
+    handle.addEventListener('pointerdown', (e) => {
+      dragStart = { x: e.clientX, y: e.clientY };
+      dragStartPos = { x: posObj.x, y: posObj.y };
+      handle.setPointerCapture(e.pointerId);
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointermove', (e) => {
+      if (!dragStart) return;
+      let dx = e.clientX - dragStart.x;
+      let dy = e.clientY - dragStart.y;
+
+      if (type.includes('binary')) {
+        if (Math.abs(dx) > Math.abs(dy)) {
+          posObj.x = dragStartPos.x + dx;
+          posObj.y = dragStartPos.y;
+        } else {
+          posObj.x = dragStartPos.x;
+          posObj.y = dragStartPos.y + dy;
+        }
+      } else {
+        posObj.x = dragStartPos.x + dx;
+        posObj.y = dragStartPos.y + dy;
+      }
+
+      applyTransform(posObj);
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointerup', (e) => {
+      dragStart = null;
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointercancel', () => {
+      dragStart = null;
+    });
+
+    return { resetToDefault };
+  }
+
+  function getCanvasContainerRect() {
+    return document.querySelector('.canvas-container').getBoundingClientRect();
+  }
+
+  const rulerV = document.getElementById('rulerV');
+  const rulerH = document.getElementById('rulerH');
+  const btnRuler = document.getElementById('btnRuler');
+
+  const rulerVCtl = initRuler(rulerV, 'vertical', () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 8, y: r.top + 10, length: r.height };
+  });
+  const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 10, y: r.top + 8, length: r.width};
+  });
+
+  spatulaCtl = initSpatula(spatula, () => {
+    const r = getCanvasContainerRect();
+    const x = r.left + (r.width - SPATULA_WIDTH) / 2;
+    const y = r.top + (r.height - SPATULA_HEIGHT) / 2;
+    return { x, y };
+  });
+
+  // Inizializzazione dei 6 controller
+  const triangleACtl = initTriangleLocator(triangleA, 'classic', triangleAPos, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 40, y: r.top + (r.height * 0.25) - 26 };
+  });
+  const triangleBCtl = initTriangleLocator(triangleB, 'classic', triangleBPos, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + r.width - 100, y: r.top + (r.height * 0.25) - 26 };
+  });
+
+  const triangleCCtl = initTriangleLocator(triangleC, 'sensor-binary', triangleCPos, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 40, y: r.top + (r.height * 0.50) - 26 };
+  });
+  const triangleDCtl = initTriangleLocator(triangleD, 'sensor-binary', triangleDPos, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + r.width - 100, y: r.top + (r.height * 0.50) - 26 };
+  });
+
+  const triangleECtl = initTriangleLocator(triangleE, 'binary', triangleEPos, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + 40, y: r.top + (r.height * 0.75) - 26 };
+  });
+  const triangleFCtl = initTriangleLocator(triangleF, 'binary', triangleFPos, () => {
+    const r = getCanvasContainerRect();
+    return { x: r.left + r.width - 100, y: r.top + (r.height * 0.75) - 26 };
+  });
+
+  // Toggle dei controlli
+  btnRuler.addEventListener('click', () => {
+    const hiddenNow = rulerV.classList.toggle('hidden');
+    rulerH.classList.toggle('hidden', hiddenNow);
+    spatula.classList.toggle('hidden', hiddenNow); 
+    
+    triangleA.classList.toggle('hidden', hiddenNow); 
+    triangleB.classList.toggle('hidden', hiddenNow);
+    triangleC.classList.toggle('hidden', hiddenNow);
+    triangleD.classList.toggle('hidden', hiddenNow);
+    triangleE.classList.toggle('hidden', hiddenNow);
+    triangleF.classList.toggle('hidden', hiddenNow);
+    
+    if (!hiddenNow) {
+      rulerVCtl.resetToDefault();
+      rulerHCtl.resetToDefault();
+      spatulaCtl.resetToDefault(); 
+      triangleACtl.resetToDefault();
+      triangleBCtl.resetToDefault();
+      triangleCCtl.resetToDefault();
+      triangleDCtl.resetToDefault();
+      triangleECtl.resetToDefault();
+      triangleFCtl.resetToDefault();
+    }
+  });
+
+  window.addEventListener('load', () => {
+    loadCanvas();
+    loadAnchorPoints();
+    adjustBodyPadding();
+    rulerVCtl.resetToDefault();
+    rulerHCtl.resetToDefault();
+    spatulaCtl.resetToDefault(); 
+    triangleACtl.resetToDefault();
+    triangleBCtl.resetToDefault();
+    triangleCCtl.resetToDefault();
+    triangleDCtl.resetToDefault();
+    triangleECtl.resetToDefault();
+    triangleFCtl.resetToDefault();
+  });
+</script>
+</body>
+</html>
