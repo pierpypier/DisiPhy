@@ -122,8 +122,10 @@
     aspect-ratio: 1000 / 1414;
     touch-action: none;
     background-color: #ffffff;
-    background-image: url('rimage/quadpic.jpg');
-    background-repeat: repeat;
+    background-image: url('rimage/cartamm.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
   }
 
   /* --- Livello Testi --- */
@@ -465,6 +467,8 @@
     <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
     <button id="btnText" class="btn secondary" title="Aggiungi Testo">T+</button>
     <button id="btnSnapToggle" class="btn active" title="Attiva/Disattiva Calamita">🧲</button>
+    <button id="btnAnchor" class="btn secondary" title="Aggiungi punto di ancoraggio manuale">📍</button>
+    <button id="btnCoordConv" class="btn secondary" title="Conversione Coordinate mm → px">🧮</button>
     
     <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
     <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
@@ -479,9 +483,6 @@
     <button id="btnBgUpload" class="btn secondary" title="Carica sfondo dal dispositivo">🖼️</button>
     <button id="btnBgReset" class="btn secondary" title="Ripristina sfondo predefinito">♻️</button>
     <button id="btnRuler" class="btn secondary" title="Mostra/Nascondi righelli e stencil">📐</button>
-    <button id="btnAnchor" class="btn secondary" title="Aggiungi punto di ancoraggio manuale">📍</button>
-    <button id="btnCoordConv" class="btn secondary" title="Conversione Coordinate mm → px">🧮</button>
-    
     <input type="file" id="bgFileInput" accept="image/*" style="display:none">
   </div>
 </div>
@@ -554,10 +555,10 @@
 <!-- Modale punti di ancoraggio manuali -->
 <div id="pointModal">
   <h3>Nuovo Punto Ancoraggio</h3>
-  <label for="ptsX">X (0-1000)</label>
-  <input type="number" id="ptsX" placeholder="es. 500" min="0" max="1000">
-  <label for="ptsY">Y (0-1414)</label>
-  <input type="number" id="ptsY" placeholder="es. 700" min="0" max="1414">
+  <label for="ptsX">X mm (0-210)</label>
+  <input type="number" id="ptsX" step="any" placeholder="es. 105" min="0" max="210">
+  <label for="ptsY">Y mm (0-297)</label>
+  <input type="number" id="ptsY" step="any" placeholder="es. 148" min="0" max="297">
   <label for="ptsThickness">Spessore (1-5)</label>
   <input type="number" id="ptsThickness" min="1" max="5" step="1" value="2">
   <div class="modal-actions">
@@ -1106,18 +1107,18 @@
   });
 
   document.getElementById('savePoint').addEventListener('click', () => {
-    const x = parseFloat(document.getElementById('ptsX').value);
-    const y = parseFloat(document.getElementById('ptsY').value);
+    const mmX = parseFloat(document.getElementById('ptsX').value);
+    const mmY = parseFloat(document.getElementById('ptsY').value);
     let thickness = parseInt(document.getElementById('ptsThickness').value);
 
-    if (isNaN(x) || isNaN(y) || x < 0 || x > 1000 || y < 0 || y > 1414) {
-      alert('Inserisci coordinate valide: X tra 0 e 1000, Y tra 0 e 1414.');
+    if (isNaN(mmX) || isNaN(mmY) || mmX < 0 || mmX > 210 || mmY < 0 || mmY > 297) {
+      alert('Inserisci coordinate valide: X tra 0 e 210 mm, Y tra 0 e 297 mm.');
       return;
     }
     if (isNaN(thickness)) thickness = 2;
     thickness = Math.min(5, Math.max(1, thickness));
 
-    const pt = { x, y, thickness };
+    const pt = { x: mmToPx(mmX), y: mmToPx(mmY), thickness };
     customSnapPoints.push(pt);
     drawAnchorPoint(pt);
     saveAnchorPoints();
@@ -1133,9 +1134,13 @@
     saveAnchorPoints();
   });
 
-  // --- Tool Conversione Coordinate (mm -> px) ---
-  const MM_TO_PX_X = 4.7619;
-  const MM_TO_PX_Y = 4.7609;
+  // --- Tool Conversione Coordinate (mm <-> px) ---
+  // Fattore unico (media tra 4.7619 su X e 4.7609 su Y): scarto 0,02%, trascurabile.
+  const MM_TO_PX = 4.7614;
+
+  function mmToPx(mm) { return mm * MM_TO_PX; }
+  function pxToMm(px) { return px / MM_TO_PX; }
+
   const LS_KEY_COORDS = 'orgcanv2_coordRecords';
 
   const coordConvOverlay = document.getElementById('coordConvOverlay');
@@ -1218,8 +1223,8 @@
       return;
     }
 
-    const pxX = Math.round(mmX * MM_TO_PX_X * 100) / 100;
-    const pxY = Math.round(mmY * MM_TO_PX_Y * 100) / 100;
+    const pxX = Math.round(mmX * MM_TO_PX * 100) / 100;
+    const pxY = Math.round(mmY * MM_TO_PX * 100) / 100;
 
     coordRecords.push({ name, mmX, mmY, pxX, pxY });
     saveCoordRecords();
@@ -1382,9 +1387,9 @@
       URL.revokeObjectURL(customBgObjectUrl);
       customBgObjectUrl = null;
     }
-    canvas.style.backgroundImage = "url('rimage/quadpic.jpg')";
-    canvas.style.backgroundRepeat = 'repeat';
-    canvas.style.backgroundSize = 'auto';
+    canvas.style.backgroundImage = "url('rimage/cartamm.png')";
+    canvas.style.backgroundRepeat = 'no-repeat';
+    canvas.style.backgroundSize = '100% 100%';
     canvas.style.backgroundPosition = '0 0';
   });
 
@@ -1558,7 +1563,9 @@
 
       if (type.includes('sensor') && label) {
         const canvasPt = screenToCanvas(pos.x + 30, pos.y);
-        label.textContent = `X: ${Math.round(canvasPt.x)} | Y: ${Math.round(canvasPt.y)}`;
+        const mmX = pxToMm(canvasPt.x).toFixed(1);
+        const mmY = pxToMm(canvasPt.y).toFixed(1);
+        label.textContent = `X: ${mmX} | Y: ${mmY} mm`;
         label.style.display = 'block';
       }
     }
