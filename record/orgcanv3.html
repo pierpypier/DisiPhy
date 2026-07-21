@@ -360,11 +360,11 @@
     transform: translateX(-50%);
     background: rgba(37, 99, 235, 0.9);
     color: white;
-    padding: 3px 8px;
-    border-radius: 10px;
-    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 7px;
+    font-size: 8px;
     font-weight: bold;
-    line-height: 1.3;
+    line-height: 1.2;
     text-align: center;
     white-space: nowrap;
     pointer-events: none;
@@ -379,6 +379,12 @@
   #pointModal label { display: block; text-align: left; font-size: 13px; margin: 8px auto 0; width: 180px; color: #333; }
   #pointModal input { display: block; margin: 4px auto 0; width: 180px; padding: 5px; box-sizing: border-box; }
   #pointModal .modal-actions { margin-top: 14px; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
+
+  #lineLengthModal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 10000; display: none; text-align: center; }
+  #lineLengthModal h3 { margin: 0 0 10px 0; }
+  #lineLengthModal label { display: block; text-align: left; font-size: 13px; margin: 8px auto 0; width: 180px; color: #333; }
+  #lineLengthModal input { display: block; margin: 4px auto 0; width: 180px; padding: 5px; box-sizing: border-box; }
+  #lineLengthModal .modal-actions { margin-top: 14px; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
   /* Tool Conversione Coordinate */
   #coordConvOverlay {
     display: none;
@@ -477,6 +483,7 @@
   <div class="toolbar-row">
     <button id="btnSelect" class="btn secondary" title="Seleziona / Sposta / Modifica forma">👆</button>
     <button id="btnLine" class="btn secondary" title="Riga">📏</button>
+    <button id="btnLineHV" class="btn secondary" title="Linea orizzontale/verticale con lunghezza in mm">📏H/V</button>
     <button id="btnRect" class="btn secondary" title="Rettangolo">▭</button>
     <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
     <button id="btnArc" class="btn secondary" title="Arco (3 punti): tocca in sequenza 3 punti (anche punti di ancoraggio) per definire l'arco">〰️</button>
@@ -542,10 +549,12 @@
 
 <!-- Triangoli Classici (Verdi) -->
 <div id="triangleA" class="triangle-locator hidden">
+  <div class="coord-label">X: 0<br>Y: 0</div>
   <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#16a34a" stroke-width="1"/></svg>
   <div class="triangle-handle" style="background: #16a34a;" title="Classico A"></div>
 </div>
 <div id="triangleB" class="triangle-locator hidden">
+  <div class="coord-label">X: 0<br>Y: 0</div>
   <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#16a34a" stroke-width="1"/></svg>
   <div class="triangle-handle" style="background: #16a34a;" title="Classico B"></div>
 </div>
@@ -564,10 +573,12 @@
 
 <!-- Triangoli Binari (Rossi) - Vincolati su Asse -->
 <div id="triangleE" class="triangle-locator hidden">
+  <div class="coord-label">X: 0<br>Y: 0</div>
   <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#dc2626" stroke-width="1"/></svg>
   <div class="triangle-handle" style="background: #dc2626;" title="Binario E"></div>
 </div>
 <div id="triangleF" class="triangle-locator hidden">
+  <div class="coord-label">X: 0<br>Y: 0</div>
   <svg class="triangle-svg" viewBox="0 0 60 52"><polygon points="30,0 60,52 0,52" fill="none" stroke="#dc2626" stroke-width="1"/></svg>
   <div class="triangle-handle" style="background: #dc2626;" title="Binario F"></div>
 </div>
@@ -585,6 +596,17 @@
     <button id="savePoint" class="btn">Salva</button>
     <button id="clearPoints" class="btn danger">Cancella Punti</button>
     <button id="closeModal" class="btn secondary">Chiudi</button>
+  </div>
+</div>
+
+<!-- Modale lunghezza linea orizzontale/verticale -->
+<div id="lineLengthModal">
+  <h3>Lunghezza linea</h3>
+  <label for="lineLengthMm">Lunghezza mm</label>
+  <input type="number" id="lineLengthMm" step="any" min="0.1" placeholder="es. 50">
+  <div class="modal-actions">
+    <button id="confirmLineLength" class="btn">Conferma</button>
+    <button id="cancelLineLength" class="btn secondary">Annulla</button>
   </div>
 </div>
 
@@ -653,6 +675,8 @@
   const btnImport = document.getElementById('btnImport');
   const importFileInput = document.getElementById('importFileInput');
   const btnLine = document.getElementById('btnLine');
+  const btnLineHV = document.getElementById('btnLineHV');
+  const lineLengthModal = document.getElementById('lineLengthModal');
   const btnRect = document.getElementById('btnRect');
   const btnCircle = document.getElementById('btnCircle');
   const btnArc = document.getElementById('btnArc');
@@ -671,7 +695,7 @@
   const triangleE = document.getElementById('triangleE');
   const triangleF = document.getElementById('triangleF');
 
-  const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnRect, btnCircle, btnArc, btnSelect];
+  const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnLineHV, btnRect, btnCircle, btnArc, btnSelect];
 
   let isDrawing = false;
   let currentMode = 'none';
@@ -686,6 +710,29 @@
   // Ogni tocco è indipendente (niente trascinamento da spezzare in due gesti) e può
   // agganciarsi a un punto di ancoraggio o a un vertice esistente, come le altre forme.
   let arcPoints = [];
+
+  // --- Linea orizzontale/verticale con lunghezza in mm ---
+  let lineHVStartPos = null;   // punto fermo, fissato al mousedown
+  let pendingLineHV = null;    // { start, axis, sign, color, width } in attesa di conferma nel modale
+
+  // Vincola 'raw' a essere allineato con 'start' sull'asse dominante (quello con delta maggiore).
+  // Ritorna anche asse e verso, utili per ricostruire la linea con la lunghezza esatta in mm.
+  function constrainToAxis(start, raw) {
+    const dx = raw.x - start.x;
+    const dy = raw.y - start.y;
+    if (Math.abs(dx) >= Math.abs(dy)) {
+      return { x: raw.x, y: start.y, axis: 'h', sign: dx >= 0 ? 1 : -1 };
+    }
+    return { x: start.x, y: raw.y, axis: 'v', sign: dy >= 0 ? 1 : -1 };
+  }
+
+  function openLineLengthModal(prefillMm) {
+    const input = document.getElementById('lineLengthMm');
+    input.value = Math.max(0.1, prefillMm || 0).toFixed(1);
+    lineLengthModal.style.display = 'block';
+    input.focus();
+    input.select();
+  }
 
   // Calcola centro e raggio della circonferenza passante per 3 punti (circocentro).
   // Ritorna null se i punti sono allineati (circonferenza non definibile).
@@ -1191,7 +1238,7 @@
   function trySnap(pos) {
     if (!snapEnabled) return pos;
     if (currentMode === 'draw' || currentMode === 'erase') return pos;
-    if (!isShapeMode() && currentMode !== 'arc') return pos;
+    if (!isShapeMode() && currentMode !== 'arc' && currentMode !== 'lineHV') return pos;
     
     const snapped = findSnapPoint(pos);
     if (snapped) {
@@ -1228,6 +1275,12 @@
 
     isDrawing = true;
 
+    if (currentMode === 'lineHV') {
+      lineHVStartPos = pos;
+      lastPos = pos;
+      return;
+    }
+
     if (currentMode === 'select') {
       startSelect(pos);
       return;
@@ -1251,6 +1304,25 @@
   function endPosition(e) {
     if (!isDrawing) return;
     isDrawing = false;
+
+    if (currentMode === 'lineHV') {
+      if (lineHVStartPos && lastPos) {
+        const constrained = constrainToAxis(lineHVStartPos, lastPos);
+        pendingLineHV = {
+          start: lineHVStartPos,
+          axis: constrained.axis,
+          sign: constrained.sign,
+          color: currentColor,
+          width: currentThickness
+        };
+        // anteprima visibile mentre il modale è aperto (non ancora in elementsArray)
+        render({ type: 'line', x1: lineHVStartPos.x, y1: lineHVStartPos.y, x2: constrained.x, y2: constrained.y, color: currentColor, width: currentThickness });
+        const lengthPx = Math.hypot(constrained.x - lineHVStartPos.x, constrained.y - lineHVStartPos.y);
+        openLineLengthModal(pxToMm(lengthPx));
+      }
+      lineHVStartPos = null;
+      return;
+    }
 
     if (currentMode === 'select') {
       endSelect();
@@ -1282,6 +1354,14 @@
 
     if (currentMode === 'select') {
       dragSelect(pos);
+      lastPos = pos;
+      return;
+    }
+
+    if (currentMode === 'lineHV') {
+      if (!lineHVStartPos) return;
+      const constrained = constrainToAxis(lineHVStartPos, pos);
+      render({ type: 'line', x1: lineHVStartPos.x, y1: lineHVStartPos.y, x2: constrained.x, y2: constrained.y, color: currentColor, width: currentThickness });
       lastPos = pos;
       return;
     }
@@ -1353,6 +1433,12 @@
       arcPoints = [];
     }
 
+    if (mode !== 'lineHV') {
+      lineHVStartPos = null;
+      pendingLineHV = null;
+      lineLengthModal.style.display = 'none';
+    }
+
     render();
 
     if (mode === 'none') {
@@ -1371,12 +1457,60 @@
   btnErase.addEventListener('click', () => setActiveTool('erase', btnErase));
   btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
   btnLine.addEventListener('click', () => setActiveTool('line', btnLine));
+  btnLineHV.addEventListener('click', () => setActiveTool('lineHV', btnLineHV));
   btnRect.addEventListener('click', () => setActiveTool('rect', btnRect));
   btnCircle.addEventListener('click', () => setActiveTool('circle', btnCircle));
   btnSelect.addEventListener('click', () => setActiveTool('select', btnSelect));
   btnArc.addEventListener('click', () => setActiveTool('arc', btnArc));
 
   setActiveTool('none', btnNone);
+
+  // --- Conferma/Annulla lunghezza esatta della linea H/V ---
+  document.getElementById('confirmLineLength').addEventListener('click', () => {
+    if (!pendingLineHV) { lineLengthModal.style.display = 'none'; return; }
+
+    const mm = parseFloat(document.getElementById('lineLengthMm').value);
+    if (isNaN(mm) || mm <= 0) {
+      alert('Inserisci una lunghezza valida in mm (maggiore di 0).');
+      return;
+    }
+
+    const lengthPx = mmToPx(mm);
+    const { start, axis, sign, color, width } = pendingLineHV;
+    const end = axis === 'h'
+      ? { x: start.x + sign * lengthPx, y: start.y }
+      : { x: start.x, y: start.y + sign * lengthPx };
+
+    pushUndo();
+    const finalEl = buildShapeElement('line', start, end, color, width);
+    if (finalEl) elementsArray.push(finalEl);
+
+    pendingLineHV = null;
+    lineLengthModal.style.display = 'none';
+    render();
+    saveCanvas();
+  });
+
+  document.getElementById('cancelLineLength').addEventListener('click', () => {
+    pendingLineHV = null;
+    lineLengthModal.style.display = 'none';
+    render(); // rimuove l'anteprima: la linea non è mai entrata in elementsArray
+  });
+
+  // Anteprima live: mentre l'utente digita i mm, la linea sul canvas si aggiorna subito
+  document.getElementById('lineLengthMm').addEventListener('input', (e) => {
+    if (!pendingLineHV) return;
+    const mm = parseFloat(e.target.value);
+    if (isNaN(mm) || mm <= 0) return;
+
+    const lengthPx = mmToPx(mm);
+    const { start, axis, sign, color, width } = pendingLineHV;
+    const end = axis === 'h'
+      ? { x: start.x + sign * lengthPx, y: start.y }
+      : { x: start.x, y: start.y + sign * lengthPx };
+
+    render({ type: 'line', x1: start.x, y1: start.y, x2: end.x, y2: end.y, color, width });
+  });
 
   btnUndo.addEventListener('click', undo);
 
@@ -2006,7 +2140,7 @@
       triangleEl.style.left = pos.x + 'px';
       triangleEl.style.top = pos.y + 'px';
 
-      if (type.includes('sensor') && label) {
+      if (label) {
         const canvasPt = screenToCanvas(pos.x + 30, pos.y);
         const mmX = pxToMm(canvasPt.x).toFixed(1);
         const mmY = pxToMm(canvasPt.y).toFixed(1);
