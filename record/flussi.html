@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Workflow Manager - by Pier Paolo Mannoni</title>
+
+  <meta name="theme-color" content="#1e88e5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="rimage/dspimage192.png">
+  <link rel="icon" href="rimage/dspimage192.png">
+
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --success:#C3D2BF;
+      --danger:#E3DCC9;
+      --shadow:0 6px 18px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,Arial;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .title-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      background: #ffffff;
+      border-radius: 10px;
+      flex-wrap: wrap;
+    }
+    .page-title{
+      font-size:20px;
+      font-weight:700;
+      color:var(--accent);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 5px 0;
+    }
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      transition: opacity 0.2s ease;
+    }
+    .nav-item img {
+      width: 84px;
+      height: 84px;
+      margin-bottom: 1px;
+      transition: transform 0.2s ease;
+    }
+    .nav-item:hover img { transform: scale(1.05); }
+    .nav-item:hover { opacity: 0.85; }
+
+    @media (max-width: 600px) {
+      .nav { gap: 10px; }
+      .nav-item img { width: 60px; height: 60px; }
+      .nav-item span { font-size: 12px; }
+    }
+
+    .view-toggle-btn{
+      background:#e6eefc;
+      color:var(--accent);
+      border:none;
+      border-radius:10px;
+      padding:10px 16px;
+      font-weight:700;
+      font-size:14px;
+      cursor:pointer;
+      box-shadow:var(--shadow);
+      min-height:44px;
+    }
+    .view-toggle-btn:hover{ filter:brightness(0.97); }
+
+    .records-wrap{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-bottom:18px;
+    }
+    .record{
+      width:100%;
+      background:var(--card);
+      border-radius:12px;
+      padding:12px 14px;
+      box-shadow:var(--shadow);
+      transition:background 0.2s ease;
+    }
+    .record.green-bg{ background:var(--success); }
+
+    .wf-top-row{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      flex-wrap:wrap;
+    }
+    .wf-fields{ flex:1; min-width:0; }
+
+    .wf-order-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:26px;
+      height:26px;
+      border-radius:50%;
+      background:#eef1f5;
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+      margin-right:8px;
+      flex-shrink:0;
+    }
+
+    .wf-title-input{
+      width:100%;
+      font-size:16px;
+      font-weight:700;
+      padding:10px 12px;
+      border-radius:8px;
+      border:1px solid #e6e9ef;
+      background:#fff;
+    }
+
+    /* Wrapper + maniglia di ridimensionamento per la descrizione,
+       stesso pattern grafico/funzionale già usato altrove nella suite */
+    .wf-desc-wrapper{
+      position: relative;
+      display: block;
+      margin-top:8px;
+    }
+    .wf-desc-input{
+      width:100%;
+      font-size:14px;
+      padding:10px 12px;
+      border-radius:8px;
+      border:1px solid #e6e9ef;
+      background:#fff;
+      resize:none; /* il resize nativo è sostituito dalla maniglia custom */
+      min-height:60px;
+      font-family:inherit;
+      box-sizing:border-box;
+      overflow:auto;
+    }
+    .wf-resizer {
+      position: absolute;
+      right: 6px;
+      bottom: 6px;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(0,0,0,0.06));
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      cursor: ns-resize;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+      z-index: 5;
+    }
+    .wf-resizer::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background-image: linear-gradient(135deg, rgba(0,0,0,0.35) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.35) 75%, transparent 75%, transparent);
+      background-size: 6px 6px;
+      border-radius: 2px;
+      opacity: 0.9;
+    }
+
+    /* Finestra immagine: solo in vista Dettagliata, mai salvata in localStorage */
+    .wf-image-box{
+      margin-top:8px;
+      border:1px dashed #cfd6e0;
+      border-radius:8px;
+      padding:8px;
+      background:#fafbfd;
+    }
+    .wf-image-preview{
+      width:100%;
+      max-height:220px;
+      object-fit:cover;
+      border-radius:8px;
+      display:block;
+      margin-top:6px;
+    }
+    .wf-image-actions{
+      display:flex;
+      gap:8px;
+      margin-top:6px;
+      flex-wrap:wrap;
+    }
+
+    /* In vista Compatta: nascondi descrizione e finestra immagine */
+    .compact-view .wf-desc-wrapper,
+    .compact-view .wf-image-box{ display:none; }
+
+    .wf-meta-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:8px;
+      margin-top:8px;
+      flex-wrap:wrap;
+    }
+    .wf-status-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-weight:700;
+      font-size:13px;
+      padding:6px 10px;
+      border-radius:20px;
+      background:#eef1f5;
+      color:var(--muted);
+    }
+    .wf-status-badge.is-done{ background:#dff0e2; color:#2f7a3d; }
+    .wf-timestamp{ font-size:12px; color:var(--muted); }
+
+    .wf-actions{
+      display:flex;
+      gap:6px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    /* Solo icone: bottoni più compatti e quadrati, per stare tutti sulla stessa riga */
+    .wf-btn{
+      min-width:40px;
+      min-height:40px;
+      width:40px;
+      height:40px;
+      padding:0;
+      border-radius:10px;
+      border:none;
+      background:#e6eefc;
+      color:var(--accent);
+      font-weight:700;
+      font-size:17px;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .wf-btn:hover{ filter:brightness(0.97); }
+    .wf-btn:disabled{ opacity:0.35; cursor:default; }
+    .wf-btn.wf-btn-toggle{ background:#fff3d6; color:#8a6d1f; }
+    .wf-btn.wf-btn-delete{ background:#9ca3af; color:#fff; }
+    .wf-btn.wf-btn-add{ background:#c3e0c9; color:#2f6b3a; }
+    .wf-btn.wf-btn-image{ background:#dbeafe; color:#1e5a99; }
+
+    .empty-state{
+      text-align:center;
+      color:var(--muted);
+      padding:30px 10px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      margin-top:12px;
+      margin-bottom:18px;
+      align-items:center;
+    }
+    .create-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#6b7280;
+      color:#fff;
+      font-size:28px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:none;
+      cursor:pointer;
+    }
+    .create-btn:hover{ filter:brightness(0.95); }
+
+    .stampa-btn{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#9BA695;
+      color:#ffffff;
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      box-shadow:var(--shadow);
+      padding:0;
+    }
+    .stampa-btn:hover{ filter:brightness(0.95); }
+
+    /* Modale scelta stampa: stesso linguaggio visivo degli altri popup della suite */
+    #printChoiceModal {
+      position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      background: white; padding: 20px; border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 10000; display: none; text-align: center;
+      max-width: 90vw;
+    }
+    #printChoiceModal h3{ margin:0 0 6px; color:var(--accent); }
+    #printChoiceModal p{ margin:0 0 14px; color:var(--muted); font-size:14px; }
+    #printChoiceModal .modal-actions{ display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+    #printChoiceModal .btn{
+      background:var(--accent); color:#fff; border:none; border-radius:8px;
+      padding:12px 16px; font-size:14px; font-weight:700; cursor:pointer;
+    }
+    #printChoiceModal .btn.secondary{ background:#eef1f5; color:var(--muted); }
+
+    /* mirror di sola lettura per la stampa: garantisce che tutto il testo della
+       descrizione venga stampato per intero, anche se la textarea è più piccola
+       o scrollata sullo schermo */
+    .wf-print-desc-mirror{ display:none; white-space:pre-wrap; font-size:14px; padding:8px 2px; }
+
+    @media print {
+      body { background:#ffffff !important; padding:0; }
+      .nav, .title-bar .view-toggle-btn, .actions, .wf-actions, .wf-btn-image,
+      .wf-resizer, #printChoiceModal, input[type="file"] {
+        display: none !important;
+      }
+      .record { box-shadow:none !important; border:1px solid #cccccc !important; page-break-inside:avoid; break-inside:avoid; }
+      .wf-title-input, .wf-desc-input { border:none !important; background:#fff !important; }
+      @page { size: A4; margin: 12mm; }
+
+      /* Vista Generale in stampa: solo titoli, griglia compatta a 2 colonne */
+      body.print-compact .records-wrap{ display:grid !important; grid-template-columns:1fr 1fr; gap:6mm; }
+      body.print-compact .wf-desc-wrapper,
+      body.print-compact .wf-image-box{ display:none !important; }
+
+      /* Vista Dettagliata in stampa: una colonna, con descrizione (mirror
+         di sola lettura, non la textarea) e l'eventuale immagine caricata */
+      body.print-detail .records-wrap{ display:flex !important; flex-direction:column; }
+      body.print-detail .wf-desc-input{ display:none !important; }
+      body.print-detail .wf-print-desc-mirror{ display:block !important; }
+      body.print-detail .wf-image-box{ border:none !important; background:none !important; padding:0 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <nav class="nav">
+      <a href="organizer4.html" class="nav-item">
+        <img src="rimage/orga4x.png" alt="Organizer">
+        <span> NOTE </span>
+      </a>
+      <a href="caldsp.html" class="nav-item">
+        <img src="rimage/calicon.png" alt="Calendario dsp">
+        <span> DATE </span>
+      </a>
+      <a href="check01.html" class="nav-item">
+        <img src="rimage/check02.png" alt="Checklist">
+        <span>LISTE</span>
+      </a>
+      <a href="strweb.html" class="nav-item">
+        <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+        <span> WEB </span>
+      </a>
+      <a href="dashconsolle.html" class="nav-item">
+        <img src="rimage/opzioni.png" alt="Opzioni">
+        <span> ADD </span>
+      </a>
+    </nav>
+
+    <div class="title-bar">
+      <div class="page-title">WORKFLOW MANAGER</div>
+      <button id="btnViewToggle" class="view-toggle-btn">🔍 Vista: Dettagliata</button>
+    </div>
+
+    <div id="workflowList" class="records-wrap"></div>
+
+    <div class="actions">
+      <button id="btnAddNew" class="create-btn" title="Aggiungi nuovo passaggio in fondo">+</button>
+      <button id="btnPrint" class="stampa-btn" title="Stampa">🖨️</button>
+    </div>
+
+  </div>
+
+  <!-- Modale scelta vista di stampa -->
+  <div id="printChoiceModal">
+    <h3>🖨️ Stampa</h3>
+    <p>Quale vista vuoi stampare?</p>
+    <div class="modal-actions">
+      <button id="btnPrintDetail" class="btn">📄 Dettagliata</button>
+      <button id="btnPrintCompact" class="btn secondary">📋 Generale (solo titoli)</button>
+    </div>
+  </div>
+
+<script>
+/* ============================================================
+   WORKFLOW MANAGER — modulo indipendente e autocontenuto.
+   Nessuna dipendenza esterna, nessuna integrazione con altri
+   moduli della suite: usa una propria chiave localStorage.
+
+   STRUTTURA DATI (salvata in localStorage)
+   -----------------------------------------------------------
+     { id, ordine, titolo, descrizione, stato, timestamp }
+
+   Le immagini NON fanno parte di questa struttura e non vengono
+   MAI scritte in localStorage: vivono solo in memoria (Map
+   imagesMap, chiave = id del passaggio) tramite URL.createObjectURL
+   sul file scelto dal dispositivo. Sono quindi presenti solo per la
+   sessione corrente della pagina: un refresh le fa sparire, per
+   scelta esplicita (vedi richiesta dell'utente).
+
+   CICLO DI RENDERING
+   -----------------------------------------------------------
+   Ogni operazione sui DATI (aggiungi, elimina, riordina, cambia
+   stato) passa da persistAndRender():
+     1. normalizeOrder() riscrive 'ordine' in base alla posizione
+        reale nell'array (l'array è sempre la fonte di verità).
+     2. saveWorkflow() salva subito su localStorage.
+     3. renderList() svuota il contenitore e lo ricostruisce da
+        zero leggendo l'array in sequenza.
+   Le sole modifiche a titolo/descrizione salvano direttamente
+   (saveWorkflow) SENZA richiamare renderList(), per non far perdere
+   il focus/cursore all'utente mentre sta ancora scrivendo.
+   Le immagini invece non toccano mai localStorage: solo renderList().
+   ============================================================ */
+
+const LS_KEY_WORKFLOW = 'workflowManager_items';
+const LS_KEY_VIEWMODE = 'workflowManager_viewMode'; // 'compact' | 'detail'
+
+let workflowItems = [];
+let viewMode = 'detail';
+let lastAddedId = null; // usato per dare il focus automatico al nuovo titolo
+
+// Immagini caricate dal dispositivo: SOLO in memoria, mai salvate.
+// Mappa: id passaggio -> { objectUrl, fileName }
+const imagesMap = new Map();
+
+/* ---------- Persistenza (solo dati testuali/stato) ---------- */
+
+function loadWorkflow() {
+  const saved = localStorage.getItem(LS_KEY_WORKFLOW);
+  if (saved) {
+    try { workflowItems = JSON.parse(saved); }
+    catch (e) { workflowItems = []; }
+  }
+  const savedView = localStorage.getItem(LS_KEY_VIEWMODE);
+  if (savedView === 'compact' || savedView === 'detail') viewMode = savedView;
+}
+
+function saveWorkflow() {
+  localStorage.setItem(LS_KEY_WORKFLOW, JSON.stringify(workflowItems));
+}
+
+function normalizeOrder(items) {
+  items.forEach((item, index) => { item.ordine = index; });
+}
+
+function persistAndRender() {
+  normalizeOrder(workflowItems);
+  saveWorkflow();
+  renderList();
+}
+
+/* ---------- Utility ---------- */
+
+function generateId() {
+  return 'wf_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
+}
+
+function formatTimestamp(iso) {
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return '';
+  return d.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' }) +
+         ' ' + d.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str || '';
+  return div.innerHTML;
+}
+function escapeHtmlAttr(str) {
+  return escapeHtml(str).replace(/"/g, '&quot;');
+}
+
+/* ---------- Operazioni sui dati ---------- */
+
+function addItem(afterIndex) {
+  const newItem = {
+    id: generateId(),
+    ordine: 0,
+    titolo: '', // resta vuoto: l'utente vede solo il placeholder e può scrivere subito
+    descrizione: '',
+    stato: 'in-corso',
+    timestamp: new Date().toISOString()
+  };
+  const insertAt = (afterIndex === undefined || afterIndex === null) ? workflowItems.length : afterIndex + 1;
+  workflowItems.splice(insertAt, 0, newItem);
+  lastAddedId = newItem.id;
+  persistAndRender();
+}
+
+function deleteItem(index) {
+  const item = workflowItems[index];
+  if (!item) return;
+  if (!confirm(`Eliminare il passaggio "${item.titolo || '(senza titolo)'}"?`)) return;
+  // Ripulisce anche l'eventuale immagine in memoria associata
+  const img = imagesMap.get(item.id);
+  if (img) URL.revokeObjectURL(img.objectUrl);
+  imagesMap.delete(item.id);
+  workflowItems.splice(index, 1);
+  persistAndRender();
+}
+
+function moveItemUp(index) {
+  if (index <= 0) return;
+  const tmp = workflowItems[index - 1];
+  workflowItems[index - 1] = workflowItems[index];
+  workflowItems[index] = tmp;
+  persistAndRender();
+}
+
+function moveItemDown(index) {
+  if (index >= workflowItems.length - 1) return;
+  const tmp = workflowItems[index + 1];
+  workflowItems[index + 1] = workflowItems[index];
+  workflowItems[index] = tmp;
+  persistAndRender();
+}
+
+function toggleStato(index) {
+  const item = workflowItems[index];
+  if (!item) return;
+  item.stato = (item.stato === 'completato') ? 'in-corso' : 'completato';
+  item.timestamp = new Date().toISOString();
+  persistAndRender();
+}
+
+function updateTitolo(index, value) {
+  const item = workflowItems[index];
+  if (!item) return;
+  item.titolo = value;
+  item.timestamp = new Date().toISOString();
+  saveWorkflow();
+}
+
+function updateDescrizione(index, value) {
+  const item = workflowItems[index];
+  if (!item) return;
+  item.descrizione = value;
+  item.timestamp = new Date().toISOString();
+  saveWorkflow();
+}
+
+/* ---------- Immagini (solo in memoria, MAI in localStorage) ---------- */
+
+function setImageForItem(id, file) {
+  const prev = imagesMap.get(id);
+  if (prev) URL.revokeObjectURL(prev.objectUrl); // evita di accumulare URL orfani
+  const objectUrl = URL.createObjectURL(file);
+  imagesMap.set(id, { objectUrl, fileName: file.name });
+  renderList(); // solo rendering: nessun dato di workflowItems è cambiato
+}
+
+function removeImageForItem(id) {
+  const prev = imagesMap.get(id);
+  if (prev) URL.revokeObjectURL(prev.objectUrl);
+  imagesMap.delete(id);
+  renderList();
+}
+
+/* ---------- Maniglia di ridimensionamento descrizione ---------- */
+/* Stesso pattern (drag verticale con mouse/touch) già in uso nel resto
+   della suite: un div .wf-resizer dentro un wrapper posizionato, che
+   modifica height della textarea mentre l'utente trascina. */
+
+let resizeActive = null; // { textarea, startY, startH }
+
+function applyResizeHeight(textarea, h) {
+  const minH = 50;
+  const maxH = window.innerHeight - 120;
+  textarea.style.height = Math.max(minH, Math.min(maxH, h)) + 'px';
+}
+
+document.addEventListener('mousemove', (ev) => {
+  if (!resizeActive) return;
+  applyResizeHeight(resizeActive.textarea, resizeActive.startH + (ev.clientY - resizeActive.startY));
+});
+document.addEventListener('mouseup', () => {
+  resizeActive = null;
+  document.documentElement.style.cursor = '';
+});
+document.addEventListener('touchmove', (ev) => {
+  if (!resizeActive) return;
+  applyResizeHeight(resizeActive.textarea, resizeActive.startH + (ev.touches[0].clientY - resizeActive.startY));
+}, { passive: false });
+document.addEventListener('touchend', () => { resizeActive = null; });
+
+function bindResizer(resizerEl, textareaEl) {
+  resizerEl.addEventListener('mousedown', (ev) => {
+    ev.preventDefault();
+    resizeActive = { textarea: textareaEl, startY: ev.clientY, startH: textareaEl.getBoundingClientRect().height };
+    document.documentElement.style.cursor = 'ns-resize';
+  });
+  resizerEl.addEventListener('touchstart', (ev) => {
+    ev.preventDefault();
+    resizeActive = { textarea: textareaEl, startY: ev.touches[0].clientY, startH: textareaEl.getBoundingClientRect().height };
+  }, { passive: false });
+}
+
+/* ---------- Rendering ---------- */
+
+function renderList() {
+  const container = document.getElementById('workflowList');
+  container.innerHTML = '';
+  container.classList.toggle('compact-view', viewMode === 'compact');
+
+  if (workflowItems.length === 0) {
+    container.innerHTML = '<div class="empty-state">Nessun passaggio ancora. Tocca "+" per iniziare il tuo workflow.</div>';
+    return;
+  }
+
+  workflowItems.forEach((item, index) => {
+    const card = document.createElement('div');
+    card.className = 'record' + (item.stato === 'completato' ? ' green-bg' : '');
+
+    const isDone = item.stato === 'completato';
+    const img = imagesMap.get(item.id);
+
+    card.innerHTML = `
+      <div class="wf-top-row">
+        <span class="wf-order-badge">${index + 1}</span>
+        <div class="wf-fields">
+          <input type="text" class="wf-title-input" value="${escapeHtmlAttr(item.titolo)}" placeholder="Nuovo passaggio">
+
+          <div class="wf-desc-wrapper">
+            <textarea class="wf-desc-input" placeholder="Descrizione (opzionale)">${escapeHtml(item.descrizione)}</textarea>
+            <div class="wf-resizer" title="Trascina per ingrandire"></div>
+          </div>
+          <div class="wf-print-desc-mirror"></div>
+
+          <div class="wf-image-box">
+            ${img ? `
+              <img class="wf-image-preview" src="${img.objectUrl}" alt="Immagine allegata">
+              <div class="wf-image-actions">
+                <button class="wf-btn wf-btn-image" data-action="removeImage" title="Rimuovi immagine">✖</button>
+              </div>
+            ` : `
+              <div class="wf-image-actions">
+                <button class="wf-btn wf-btn-image" data-action="pickImage" title="Carica immagine dal dispositivo">📷</button>
+              </div>
+              <input type="file" accept="image/*" class="wf-image-file-input" style="display:none;">
+            `}
+          </div>
+
+          <div class="wf-meta-row">
+            <span class="wf-status-badge ${isDone ? 'is-done' : ''}">${isDone ? '✅ Completato' : '🕓 In corso'}</span>
+            <span class="wf-timestamp">${formatTimestamp(item.timestamp)}</span>
+          </div>
+        </div>
+      </div>
+      <div class="wf-actions">
+        <button class="wf-btn" data-action="up" ${index === 0 ? 'disabled' : ''} title="Sposta su">⬆</button>
+        <button class="wf-btn" data-action="down" ${index === workflowItems.length - 1 ? 'disabled' : ''} title="Sposta giù">⬇</button>
+        <button class="wf-btn wf-btn-toggle" data-action="toggle" title="Cambia stato">🔁</button>
+        <button class="wf-btn wf-btn-add" data-action="add" title="Aggiungi passaggio sotto">➕</button>
+        <button class="wf-btn wf-btn-delete" data-action="delete" title="Elimina">🗑</button>
+      </div>
+    `;
+
+    // Mirror di sola lettura per la stampa (mostra sempre il testo intero)
+    card.querySelector('.wf-print-desc-mirror').textContent = item.descrizione || '';
+
+    const titleInput = card.querySelector('.wf-title-input');
+    const descInput = card.querySelector('.wf-desc-input');
+
+    titleInput.addEventListener('input', (e) => updateTitolo(index, e.target.value));
+    descInput.addEventListener('input', (e) => {
+      updateDescrizione(index, e.target.value);
+      card.querySelector('.wf-print-desc-mirror').textContent = e.target.value;
+    });
+
+    bindResizer(card.querySelector('.wf-resizer'), descInput);
+
+    card.querySelector('[data-action="up"]').addEventListener('click', () => moveItemUp(index));
+    card.querySelector('[data-action="down"]').addEventListener('click', () => moveItemDown(index));
+    card.querySelector('[data-action="toggle"]').addEventListener('click', () => toggleStato(index));
+    card.querySelector('[data-action="add"]').addEventListener('click', () => addItem(index));
+    card.querySelector('[data-action="delete"]').addEventListener('click', () => deleteItem(index));
+
+    const pickBtn = card.querySelector('[data-action="pickImage"]');
+    if (pickBtn) {
+      const fileInput = card.querySelector('.wf-image-file-input');
+      pickBtn.addEventListener('click', () => fileInput.click());
+      fileInput.addEventListener('change', () => {
+        if (fileInput.files && fileInput.files[0]) setImageForItem(item.id, fileInput.files[0]);
+      });
+    }
+    const removeImgBtn = card.querySelector('[data-action="removeImage"]');
+    if (removeImgBtn) {
+      removeImgBtn.addEventListener('click', () => removeImageForItem(item.id));
+    }
+
+    container.appendChild(card);
+
+    // Focus automatico sul titolo del passaggio appena aggiunto, per
+    // poter scrivere subito senza dover prima toccare il campo.
+    if (item.id === lastAddedId) {
+      lastAddedId = null;
+      setTimeout(() => titleInput.focus(), 30);
+    }
+  });
+}
+
+/* ---------- Vista Compatta / Dettagliata ---------- */
+
+function updateViewToggleLabel() {
+  const btn = document.getElementById('btnViewToggle');
+  btn.textContent = viewMode === 'compact' ? '🔍 Vista: Compatta' : '🔍 Vista: Dettagliata';
+}
+
+document.getElementById('btnViewToggle').addEventListener('click', () => {
+  viewMode = (viewMode === 'compact') ? 'detail' : 'compact';
+  localStorage.setItem(LS_KEY_VIEWMODE, viewMode);
+  updateViewToggleLabel();
+  renderList();
+});
+
+document.getElementById('btnAddNew').addEventListener('click', () => {
+  addItem();
+});
+
+/* ---------- Stampa: scelta Dettagliata/Generale, poi window.print() ---------- */
+
+const printChoiceModal = document.getElementById('printChoiceModal');
+
+document.getElementById('btnPrint').addEventListener('click', () => {
+  printChoiceModal.style.display = 'block';
+});
+
+function launchPrint(mode) {
+  printChoiceModal.style.display = 'none';
+  document.body.classList.remove('print-detail', 'print-compact');
+  document.body.classList.add(mode === 'detail' ? 'print-detail' : 'print-compact');
+  setTimeout(() => window.print(), 50); // piccolo ritardo per applicare la classe prima del rendering di stampa
+}
+
+document.getElementById('btnPrintDetail').addEventListener('click', () => launchPrint('detail'));
+document.getElementById('btnPrintCompact').addEventListener('click', () => launchPrint('compact'));
+
+window.addEventListener('afterprint', () => {
+  document.body.classList.remove('print-detail', 'print-compact');
+});
+
+/* ---------- Avvio ---------- */
+
+window.addEventListener('load', () => {
+  loadWorkflow();
+  updateViewToggleLabel();
+  renderList();
+});
+</script>
+</body>
+</html>
