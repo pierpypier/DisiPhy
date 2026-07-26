@@ -792,7 +792,23 @@
     <div id="scWarning1" class="sc-warning" style="display:none;">
       ⚠️ Salva prima la Taratura per poter usare il Fattore di correzione.
     </div>
-
+    <div class="cc-form-grid">
+      <div class="cc-field">
+        <label for="scTraceValue">Misura Reale nota</label>
+        <input type="number" id="scTraceValue" step="any" placeholder="es. 3.10">
+      </div>
+      <div class="cc-field">
+        <label for="scTraceUnit">Unità</label>
+        <select id="scTraceUnit">
+          <option value="m">metri (m)</option>
+          <option value="cm">centimetri (cm)</option>
+          <option value="mm">millimetri (mm)</option>
+        </select>
+      </div>
+      <div class="cc-full sc-result-full">
+        <div class="sc-inline-result" id="scTraceResult">→ Lunghezza errata letta sulla Lavagna: —</div>
+      </div>
+    </div>
 
     <h4 class="sc-subtitle">Traccia da una misura letta sul Raster</h4>
     <p class="sc-help">Hai misurato col righello un altro elemento direttamente sul raster (non conosci la sua misura reale) e vuoi la lunghezza corretta da tracciare in scala: Misura_Raster × Fattore.</p>
