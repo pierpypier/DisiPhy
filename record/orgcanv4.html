@@ -787,8 +787,8 @@
     </div>
     <div id="scTaraturaStatus" class="sc-status">⚠️ Nessuna taratura salvata.</div>
 
-    <h4 class="sc-subtitle">Traccia da una misura Reale nota</h4>
-    <p class="sc-help">Conosci la misura reale (es. una quota di progetto) di un elemento presente sul raster e vuoi la lunghezza corretta da tracciare in scala.</p>
+    <h4 class="sc-subtitle">Verifica con una misura Reale nota</h4>
+    <p class="sc-help">Conosci la misura reale (es. una quota di progetto) di un elemento presente sul raster e vuoi verificare se la scala e il fattore di taratura calcolati sopra sono corretti</p>
     <div id="scWarning1" class="sc-warning" style="display:none;">
       ⚠️ Salva prima la Taratura per poter usare il Fattore di correzione.
     </div>
@@ -806,12 +806,12 @@
         </select>
       </div>
       <div class="cc-full sc-result-full">
-        <div class="sc-inline-result" id="scTraceResult">→ Lunghezza errata letta sulla Lavagna: —</div>
+        <div class="sc-inline-result" id="scTraceResult">→ Lunghezza misurata sulla Lavagna: —</div>
       </div>
     </div>
 
     <h4 class="sc-subtitle">Traccia da una misura letta sul Raster</h4>
-    <p class="sc-help">Hai misurato col righello un altro elemento direttamente sul raster (non conosci la sua misura reale) e vuoi la lunghezza corretta da tracciare in scala: Misura_Raster × Fattore.</p>
+    <p class="sc-help">Hai misurato col righello un altro elemento direttamente sul raster (non conosci la sua misura reale) hai verificato la correttezza del fattore di taratura e vuoi la lunghezza corretta da tracciare in scala: Misura_Raster × Fattore.</p>
     <div id="scWarning2" class="sc-warning" style="display:none;">
       ⚠️ Salva prima la Taratura per poter usare il Fattore di correzione.
     </div>
@@ -2188,11 +2188,11 @@
 
     const value = parseFloat(document.getElementById('scTraceValue').value);
     const unit = document.getElementById('scTraceUnit').value;
-    if (!isFinite(value)) { scTraceResult.textContent = '→ 2️⃣Lunghezza da tracciare sulla Lavagna: —'; return; }
+    if (!isFinite(value)) { scTraceResult.textContent = '→ 2️⃣Lunghezza rilevata sulla Lavagna: —'; return; }
 
     const valueMm = scToMm(value, unit);
     const traceMm = (valueMm / calib.scale) / calib.factor;
-    scTraceResult.textContent = `→ 3️⃣Lunghezza da tracciare sulla Lavagna: ${traceMm.toFixed(3)} mm`;
+    scTraceResult.textContent = `→ 3️⃣Lunghezza rilevata sulla Lavagna: ${traceMm.toFixed(3)} mm`;
   }
 
   document.getElementById('scTraceValue').addEventListener('input', computeTraceInScale);
