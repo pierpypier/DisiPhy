@@ -2184,15 +2184,15 @@
   function computeTraceInScale() {
     const scTraceResult = document.getElementById('scTraceResult');
     const calib = loadScaleCalib();
-    if (!calib) { scTraceResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —'; return; }
+    if (!calib) { scTraceResult.textContent = '→ 1️⃣Lunghezza da tracciare sulla Lavagna: —'; return; }
 
     const value = parseFloat(document.getElementById('scTraceValue').value);
     const unit = document.getElementById('scTraceUnit').value;
-    if (!isFinite(value)) { scTraceResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —'; return; }
+    if (!isFinite(value)) { scTraceResult.textContent = '→ 2️⃣Lunghezza da tracciare sulla Lavagna: —'; return; }
 
     const valueMm = scToMm(value, unit);
     const traceMm = (valueMm / calib.scale) / calib.factor;
-    scTraceResult.textContent = `→ Lunghezza da tracciare sulla Lavagna: ${traceMm.toFixed(3)} mm`;
+    scTraceResult.textContent = `→ 3️⃣Lunghezza da tracciare sulla Lavagna: ${traceMm.toFixed(3)} mm`;
   }
 
   document.getElementById('scTraceValue').addEventListener('input', computeTraceInScale);
@@ -2203,13 +2203,13 @@
   function computeTraceFromRaster() {
     const scRasterResult = document.getElementById('scRasterResult');
     const calib = loadScaleCalib();
-    if (!calib) { scRasterResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —'; return; }
+    if (!calib) { scRasterResult.textContent = '→ 4️⃣Lunghezza da tracciare sulla Lavagna: —'; return; }
 
     const rasterVal = parseFloat(document.getElementById('scRasterValue').value);
-    if (!isFinite(rasterVal)) { scRasterResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —'; return; }
+    if (!isFinite(rasterVal)) { scRasterResult.textContent = '→ 5️⃣Lunghezza da tracciare sulla Lavagna: —'; return; }
 
     const traceMm = rasterVal * calib.factor;
-    scRasterResult.textContent = `→ Lunghezza da tracciare sulla Lavagna: ${traceMm.toFixed(3)} mm`;
+    scRasterResult.textContent = `→ 6️⃣Lunghezza da tracciare sulla Lavagna: ${traceMm.toFixed(3)} mm`;
   }
 
   document.getElementById('scRasterValue').addEventListener('input', computeTraceFromRaster);
@@ -2246,14 +2246,14 @@
     const scale = parseFloat(scOpScale.value);
     const realVal = parseFloat(scRealInput.value);
     if (!isFinite(scale) || scale <= 0 || !isFinite(realVal)) {
-      scRealResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —';
+      scRealResult.textContent = '→ 7️⃣Lunghezza da tracciare sulla Lavagna: —';
       return;
     }
     const realMm = scToMm(realVal, scRealUnit2.value);
     const boardMm = realMm / scale;
     const outUnit = scBoardOutUnit.value;
     const outVal = scFromMm(boardMm, outUnit);
-    scRealResult.textContent = `→ Lunghezza da tracciare sulla Lavagna: ${outVal.toFixed(3)} ${scUnitLabel[outUnit]}`;
+    scRealResult.textContent = `→ 8️⃣Lunghezza da tracciare sulla Lavagna: ${outVal.toFixed(3)} ${scUnitLabel[outUnit]}`;
   }
 
   scBoardInput.addEventListener('input', computeBoardToReal);
@@ -2270,7 +2270,7 @@
     scBoardInput.value = '';
     scRealInput.value = '';
     scBoardResult.textContent = '→ Misura Reale: —';
-    scRealResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —';
+    scRealResult.textContent = '→ 9️⃣Lunghezza da tracciare sulla Lavagna: —';
   });
 
   // --- Funzione per Aggiungere Testi Trascinabili ---
