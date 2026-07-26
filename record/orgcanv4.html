@@ -468,6 +468,98 @@
     flex-shrink: 0;
   }
   .cc-empty { color: var(--cal-muted); font-size: 14px; text-align: center; padding: 10px; }
+
+  /* --- Utility Calcolo Scala (Taratura + Traduttore di Cantiere) --- */
+  #scaleCalcOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 20000;
+    background: var(--cal-bg);
+    overflow-y: auto;
+    padding: 16px;
+  }
+  #scaleCalcOverlay .cc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  #scaleCalcOverlay .cc-header h2 {
+    font-size: 19px;
+    margin: 0;
+    color: #155a8a;
+  }
+  #scaleCalcOverlay .card { text-align: left; }
+  .sc-section-title {
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #155a8a;
+    border-bottom: 1px solid #eaeaf2;
+    padding-bottom: 8px;
+  }
+  .sc-status {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--cal-muted);
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: #f4f4f8;
+  }
+  .sc-status.sc-ok {
+    color: #16a34a;
+    font-weight: 600;
+    background: #f0fdf4;
+  }
+  .sc-warning {
+    background: #fff4e5;
+    border: 1px solid #f5a623;
+    color: #8a5a00;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .sc-inline-result {
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #16a34a;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+  .sc-field-disabled { opacity: 0.55; }
+  .sc-help {
+    font-size: 12.5px;
+    color: var(--cal-muted);
+    margin: 0 0 14px;
+    line-height: 1.4;
+  }
+  .sc-subtitle {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #333;
+    margin: 18px 0 8px;
+  }
+  .sc-result-full { margin-top: 2px; }
+  .sc-out-unit-label {
+    display: block;
+    font-size: 12px;
+    color: var(--cal-muted);
+    margin: 8px 0 4px;
+  }
+  .sc-out-unit-select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
 </style>
 </head>
 <body>
@@ -498,6 +590,7 @@
     <button id="btnSnapToggle" class="btn active" title="Attiva/Disattiva Calamita">🧲</button>
     <button id="btnAnchor" class="btn secondary" title="Aggiungi punto di ancoraggio manuale">📍</button>
     <button id="btnCoordConv" class="btn secondary" title="Conversione Coordinate mm → px">📊</button>
+    <button id="btnScaleCalc" class="btn secondary" title="Utility Calcolo Scala: traduttore lavagna ↔ cantiere">🏗️</button>
     
     <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
     <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
@@ -653,6 +746,143 @@
   </div>
 
   <div id="coordRecordsList"></div>
+</div>
+
+<!-- Utility Calcolo Scala: Taratura + Traduttore di Cantiere -->
+<div id="scaleCalcOverlay">
+  <div class="cc-header">
+    <h2>🏗️ Calcolo Scala Cantiere</h2>
+    <button id="btnScaleCalcClose" class="btn secondary" title="Chiudi">✕</button>
+  </div>
+
+  <div class="card">
+    <h3 class="sc-section-title">1️⃣ Taratura raster + Traccia in scala</h3>
+    <p class="sc-help">Usa questa sezione quando lavori su un disegno raster (immagine importata) che potrebbe non essere perfettamente in scala. Calibra il Fattore misurando un elemento di misura reale nota col righello, poi usa il Fattore per tracciare correttamente in scala qualsiasi altra misura reale nota su quello stesso disegno.</p>
+
+    <h4 class="sc-subtitle">Taratura (Setup iniziale)</h4>
+    <div class="cc-form-grid">
+      <div class="cc-field">
+        <label for="scRealValue">Misura Reale nota</label>
+        <input type="number" id="scRealValue" step="any" min="0" placeholder="es. 4.26">
+      </div>
+      <div class="cc-field">
+        <label for="scRealUnit">Unità</label>
+        <select id="scRealUnit">
+          <option value="m">metri (m)</option>
+          <option value="cm">centimetri (cm)</option>
+          <option value="mm">millimetri (mm)</option>
+        </select>
+      </div>
+      <div class="cc-field cc-full">
+        <label for="scBoardValue">Misura rilevata col righello sulla Lavagna (mm)</label>
+        <input type="number" id="scBoardValue" step="any" min="0" placeholder="es. 81">
+      </div>
+      <div class="cc-field cc-full">
+        <label for="scScaleSetup">Scala del disegno (es. 50 per 1:50)</label>
+        <input type="number" id="scScaleSetup" step="any" min="1" placeholder="es. 50">
+      </div>
+      <div class="cc-full">
+        <button id="btnSaveTaratura" class="btn">💾 Salva Taratura</button>
+      </div>
+    </div>
+    <div id="scTaraturaStatus" class="sc-status">⚠️ Nessuna taratura salvata.</div>
+
+    <h4 class="sc-subtitle">Traccia da una misura Reale nota</h4>
+    <p class="sc-help">Conosci la misura reale (es. una quota di progetto) di un elemento presente sul raster e vuoi la lunghezza corretta da tracciare in scala.</p>
+    <div id="scWarning1" class="sc-warning" style="display:none;">
+      ⚠️ Salva prima la Taratura per poter usare il Fattore di correzione.
+    </div>
+    <div class="cc-form-grid">
+      <div class="cc-field">
+        <label for="scTraceValue">Misura Reale nota</label>
+        <input type="number" id="scTraceValue" step="any" placeholder="es. 3.10">
+      </div>
+      <div class="cc-field">
+        <label for="scTraceUnit">Unità</label>
+        <select id="scTraceUnit">
+          <option value="m">metri (m)</option>
+          <option value="cm">centimetri (cm)</option>
+          <option value="mm">millimetri (mm)</option>
+        </select>
+      </div>
+      <div class="cc-full sc-result-full">
+        <div class="sc-inline-result" id="scTraceResult">→ Lunghezza da tracciare sulla Lavagna: —</div>
+      </div>
+    </div>
+
+    <h4 class="sc-subtitle">Traccia da una misura letta sul Raster</h4>
+    <p class="sc-help">Hai misurato col righello un altro elemento direttamente sul raster (non conosci la sua misura reale) e vuoi la lunghezza corretta da tracciare in scala: Misura_Raster × Fattore.</p>
+    <div id="scWarning2" class="sc-warning" style="display:none;">
+      ⚠️ Salva prima la Taratura per poter usare il Fattore di correzione.
+    </div>
+    <div class="cc-form-grid">
+      <div class="cc-field cc-full">
+        <label for="scRasterValue">Misura rilevata col righello sul Raster (mm)</label>
+        <input type="number" id="scRasterValue" step="any" placeholder="es. 60">
+      </div>
+      <div class="cc-full sc-result-full">
+        <div class="sc-inline-result" id="scRasterResult">→ Lunghezza da tracciare sulla Lavagna: —</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h3 class="sc-section-title">2️⃣ Traduttore di Cantiere (linee già in scala corretta)</h3>
+    <p class="sc-help">Usa questa sezione per convertire una misura già disegnata correttamente in scala (senza raster fuori scala): conversione diretta tramite la Scala del disegno, senza Fattore di correzione.</p>
+    <div class="cc-form-grid">
+      <div class="cc-field cc-full">
+        <label for="scOpScale">Scala del disegno (es. 50 per 1:50)</label>
+        <input type="number" id="scOpScale" step="any" min="1" placeholder="es. 50">
+      </div>
+
+      <div class="cc-field">
+        <label for="scBoardInput">Misura su Lavagna</label>
+        <input type="number" id="scBoardInput" step="any" placeholder="es. 58">
+      </div>
+      <div class="cc-field">
+        <label for="scBoardUnit">Unità</label>
+        <select id="scBoardUnit">
+          <option value="mm">millimetri (mm)</option>
+          <option value="cm">centimetri (cm)</option>
+        </select>
+      </div>
+      <div class="cc-full">
+        <div class="sc-inline-result" id="scBoardResult">→ Misura Reale: —</div>
+        <label class="sc-out-unit-label" for="scRealOutUnit">Mostra risultato in</label>
+        <select id="scRealOutUnit" class="sc-out-unit-select">
+          <option value="m">metri (m)</option>
+          <option value="cm">centimetri (cm)</option>
+          <option value="mm">millimetri (mm)</option>
+        </select>
+      </div>
+
+      <div class="cc-field">
+        <label for="scRealInput">Misura Reale</label>
+        <input type="number" id="scRealInput" step="any" placeholder="es. 2.9">
+      </div>
+      <div class="cc-field">
+        <label for="scRealUnit2">Unità</label>
+        <select id="scRealUnit2">
+          <option value="m">metri (m)</option>
+          <option value="cm">centimetri (cm)</option>
+          <option value="mm">millimetri (mm)</option>
+        </select>
+      </div>
+      <div class="cc-full">
+        <div class="sc-inline-result" id="scRealResult">→ Lunghezza da tracciare sulla Lavagna: —</div>
+        <label class="sc-out-unit-label" for="scBoardOutUnit">Mostra risultato in</label>
+        <select id="scBoardOutUnit" class="sc-out-unit-select">
+          <option value="mm">millimetri (mm)</option>
+          <option value="cm">centimetri (cm)</option>
+        </select>
+      </div>
+
+      <div class="cc-full">
+        <button id="btnScaleClear" class="btn secondary">🧹 Pulisci</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -1838,6 +2068,209 @@
     mmXInput.value = '';
     mmYInput.value = '';
     mmXInput.focus();
+  });
+
+  // --- Utility Calcolo Scala (Taratura raster + Traccia in scala / Traduttore di Cantiere) ---
+  const LS_KEY_SCALE_CALIB = 'orgcanv2_scaleCalib'; // { factor, scale }
+
+  // Conversioni generiche tra unità di misura reali (mm/cm/m)
+  function scToMm(value, unit) {
+    if (unit === 'm') return value * 1000;
+    if (unit === 'cm') return value * 10;
+    return value; // mm
+  }
+  function scFromMm(valueMm, unit) {
+    if (unit === 'm') return valueMm / 1000;
+    if (unit === 'cm') return valueMm / 10;
+    return valueMm; // mm
+  }
+  const scUnitLabel = { mm: 'mm', cm: 'cm', m: 'm' };
+
+  const scaleCalcOverlay = document.getElementById('scaleCalcOverlay');
+  const scTaraturaStatus = document.getElementById('scTaraturaStatus');
+
+  // --- Sezione 1: Taratura ---
+  function loadScaleCalib() {
+    const saved = localStorage.getItem(LS_KEY_SCALE_CALIB);
+    try {
+      const parsed = saved ? JSON.parse(saved) : null;
+      if (parsed && isFinite(parsed.factor) && parsed.factor > 0 && isFinite(parsed.scale) && parsed.scale > 0) {
+        return parsed;
+      }
+      return null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveScaleCalib(data) {
+    localStorage.setItem(LS_KEY_SCALE_CALIB, JSON.stringify(data));
+  }
+
+  // Aggiorna lo stato di taratura e i messaggi di avviso delle sotto-sezioni "Traccia in scala"
+  function refreshScaleCalibStatus() {
+    const calib = loadScaleCalib();
+    const scWarning1 = document.getElementById('scWarning1');
+    const scWarning2 = document.getElementById('scWarning2');
+    const scTraceValue = document.getElementById('scTraceValue');
+    const scTraceUnit = document.getElementById('scTraceUnit');
+    const scRasterValue = document.getElementById('scRasterValue');
+    if (calib) {
+      scTaraturaStatus.textContent = `✅ Fattore di taratura salvato: ${calib.factor.toFixed(5)} (calibrato a scala 1:${calib.scale})`;
+      scTaraturaStatus.classList.add('sc-ok');
+      scWarning1.style.display = 'none';
+      scWarning2.style.display = 'none';
+      scTraceValue.disabled = false;
+      scTraceUnit.disabled = false;
+      scRasterValue.disabled = false;
+    } else {
+      scTaraturaStatus.textContent = '⚠️ Nessuna taratura salvata.';
+      scTaraturaStatus.classList.remove('sc-ok');
+      scWarning1.style.display = 'block';
+      scWarning2.style.display = 'block';
+      scTraceValue.disabled = true;
+      scTraceUnit.disabled = true;
+      scRasterValue.disabled = true;
+    }
+    return calib;
+  }
+
+  function openScaleCalc() {
+    refreshScaleCalibStatus();
+    computeTraceInScale();
+    computeTraceFromRaster();
+    computeBoardToReal();
+    computeRealToBoard();
+    scaleCalcOverlay.style.display = 'block';
+  }
+
+  function closeScaleCalc() {
+    scaleCalcOverlay.style.display = 'none';
+  }
+
+  document.getElementById('btnScaleCalc').addEventListener('click', openScaleCalc);
+  document.getElementById('btnScaleCalcClose').addEventListener('click', closeScaleCalc);
+
+  document.getElementById('btnSaveTaratura').addEventListener('click', () => {
+    const realValue = parseFloat(document.getElementById('scRealValue').value);
+    const unit = document.getElementById('scRealUnit').value;
+    const boardValue = parseFloat(document.getElementById('scBoardValue').value);
+    const scale = parseFloat(document.getElementById('scScaleSetup').value);
+
+    if (!isFinite(realValue) || realValue <= 0 ||
+        !isFinite(boardValue) || boardValue <= 0 ||
+        !isFinite(scale) || scale <= 0) {
+      alert('Inserisci valori validi (maggiori di zero) in tutti i campi della Taratura.');
+      return;
+    }
+
+    const realMm = scToMm(realValue, unit);
+    const factor = (realMm / scale) / boardValue;
+
+    if (!isFinite(factor) || factor <= 0) {
+      alert('Impossibile calcolare il fattore con questi valori. Controlla i dati inseriti.');
+      return;
+    }
+
+    saveScaleCalib({ factor, scale });
+    refreshScaleCalibStatus();
+    computeTraceInScale();
+    computeTraceFromRaster();
+    alert(`Taratura salvata.\nFattore di taratura calcolato: ${factor.toFixed(5)}`);
+  });
+
+  // --- Sezione 1b: Traccia una misura nota in scala (usa il Fattore) ---
+  // Lunghezza da tracciare sulla Lavagna = (Misura_Reale_mm / Scala) / Fattore
+  function computeTraceInScale() {
+    const scTraceResult = document.getElementById('scTraceResult');
+    const calib = loadScaleCalib();
+    if (!calib) { scTraceResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —'; return; }
+
+    const value = parseFloat(document.getElementById('scTraceValue').value);
+    const unit = document.getElementById('scTraceUnit').value;
+    if (!isFinite(value)) { scTraceResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —'; return; }
+
+    const valueMm = scToMm(value, unit);
+    const traceMm = (valueMm / calib.scale) / calib.factor;
+    scTraceResult.textContent = `→ Lunghezza da tracciare sulla Lavagna: ${traceMm.toFixed(3)} mm`;
+  }
+
+  document.getElementById('scTraceValue').addEventListener('input', computeTraceInScale);
+  document.getElementById('scTraceUnit').addEventListener('change', computeTraceInScale);
+
+  // --- Sezione 1c: Traccia da una misura letta sul Raster (usa il Fattore) ---
+  // Lunghezza da tracciare sulla Lavagna = Misura_letta_sul_Raster_mm * Fattore
+  function computeTraceFromRaster() {
+    const scRasterResult = document.getElementById('scRasterResult');
+    const calib = loadScaleCalib();
+    if (!calib) { scRasterResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —'; return; }
+
+    const rasterVal = parseFloat(document.getElementById('scRasterValue').value);
+    if (!isFinite(rasterVal)) { scRasterResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —'; return; }
+
+    const traceMm = rasterVal * calib.factor;
+    scRasterResult.textContent = `→ Lunghezza da tracciare sulla Lavagna: ${traceMm.toFixed(3)} mm`;
+  }
+
+  document.getElementById('scRasterValue').addEventListener('input', computeTraceFromRaster);
+
+  // --- Sezione 2: Traduttore di Cantiere (conversione pura in scala, nessun Fattore) ---
+  const scOpScale = document.getElementById('scOpScale');
+  const scBoardInput = document.getElementById('scBoardInput');
+  const scBoardUnit = document.getElementById('scBoardUnit');
+  const scRealOutUnit = document.getElementById('scRealOutUnit');
+  const scBoardResult = document.getElementById('scBoardResult');
+
+  const scRealInput = document.getElementById('scRealInput');
+  const scRealUnit2 = document.getElementById('scRealUnit2');
+  const scBoardOutUnit = document.getElementById('scBoardOutUnit');
+  const scRealResult = document.getElementById('scRealResult');
+
+  // Misura su Lavagna -> Misura Reale = Misura_Lavagna_mm * Scala
+  function computeBoardToReal() {
+    const scale = parseFloat(scOpScale.value);
+    const boardVal = parseFloat(scBoardInput.value);
+    if (!isFinite(scale) || scale <= 0 || !isFinite(boardVal)) {
+      scBoardResult.textContent = '→ Misura Reale: —';
+      return;
+    }
+    const boardMm = scToMm(boardVal, scBoardUnit.value);
+    const realMm = boardMm * scale;
+    const outUnit = scRealOutUnit.value;
+    const outVal = scFromMm(realMm, outUnit);
+    scBoardResult.textContent = `→ Misura Reale: ${outVal.toFixed(3)} ${scUnitLabel[outUnit]}`;
+  }
+
+  // Misura Reale -> Lunghezza da tracciare sulla Lavagna = Misura_Reale_mm / Scala
+  function computeRealToBoard() {
+    const scale = parseFloat(scOpScale.value);
+    const realVal = parseFloat(scRealInput.value);
+    if (!isFinite(scale) || scale <= 0 || !isFinite(realVal)) {
+      scRealResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —';
+      return;
+    }
+    const realMm = scToMm(realVal, scRealUnit2.value);
+    const boardMm = realMm / scale;
+    const outUnit = scBoardOutUnit.value;
+    const outVal = scFromMm(boardMm, outUnit);
+    scRealResult.textContent = `→ Lunghezza da tracciare sulla Lavagna: ${outVal.toFixed(3)} ${scUnitLabel[outUnit]}`;
+  }
+
+  scBoardInput.addEventListener('input', computeBoardToReal);
+  scBoardUnit.addEventListener('change', computeBoardToReal);
+  scRealOutUnit.addEventListener('change', computeBoardToReal);
+
+  scRealInput.addEventListener('input', computeRealToBoard);
+  scRealUnit2.addEventListener('change', computeRealToBoard);
+  scBoardOutUnit.addEventListener('change', computeRealToBoard);
+
+  scOpScale.addEventListener('input', () => { computeBoardToReal(); computeRealToBoard(); });
+
+  document.getElementById('btnScaleClear').addEventListener('click', () => {
+    scBoardInput.value = '';
+    scRealInput.value = '';
+    scBoardResult.textContent = '→ Misura Reale: —';
+    scRealResult.textContent = '→ Lunghezza da tracciare sulla Lavagna: —';
   });
 
   // --- Funzione per Aggiungere Testi Trascinabili ---
