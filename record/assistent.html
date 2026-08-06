@@ -504,7 +504,6 @@
 const LS_CONFIG        = 'organizer_config';           // config di questa dashboard
 const LS_CAL_EVENTS    = 'cal_events_v1';               // caldsp.html
 const LS_DSP_RECORDS   = 'dsp_records_v1';               // organizer4.html (note)
-const LS_CHECKLIST     = 'checklist_check01';             // check01.html (per-pagina)
 const LS_PLANNER_TILES = 'organizer_tessere_config_v1';   // planner2.html (tessere)
 
 /* ================================================================
@@ -696,22 +695,42 @@ function renderTodo(){
   const container = document.getElementById('todoList');
   container.innerHTML = '';
 
-  let state = { theme:'', items:[] };
+  // check01.html genera la propria chiave di storage in modo dinamico
+  // ( 'checklist_' + nome_del_file_senza_.html ), quindi se quel file è
+  // stato rinominato/duplicato la chiave 'checklist_check01' potrebbe non
+  // esistere più. Per essere robusti, raccogliamo TUTTE le chiavi che
+  // iniziano con 'checklist_' presenti in localStorage e ne uniamo gli item.
+  let allItems = [];
   try{
-    const raw = localStorage.getItem(LS_CHECKLIST);
-    if(raw) state = JSON.parse(raw);
+    for(let i = 0; i < localStorage.length; i++){
+      const key = localStorage.key(i);
+      if(!key || key.indexOf('checklist_') !== 0) continue;
+      const raw = localStorage.getItem(key);
+      if(!raw) continue;
+      const parsed = JSON.parse(raw);
+      if(parsed && Array.isArray(parsed.items)){
+        allItems = allItems.concat(parsed.items);
+      }
+    }
   }catch(e){
-    console.warn('Errore lettura checklist_check01', e);
+    console.warn('Errore lettura chiavi checklist_*', e);
   }
 
-  const items = (state.items || []).filter(i => !i.done && !i.toDelete && i.text && i.text.trim() !== '');
+  const pending = allItems.filter(i => !i.done && !i.toDelete && i.text && i.text.trim() !== '');
 
-  if(items.length === 0){
-    container.innerHTML = '<div class="empty-msg">Nessuna attività da fare in lista.</div>';
+  if(allItems.length === 0){
+    // Nessuna checklist trovata affatto: probabilmente non è mai stata compilata
+    container.innerHTML = '<div class="empty-msg">Nessuna checklist trovata.</div>';
     return;
   }
 
-  items.forEach(item => {
+  if(pending.length === 0){
+    // Ci sono checklist ma tutte le voci sono completate/vuote
+    container.innerHTML = '<div class="empty-msg">Tutte le attività risultano completate 🎉</div>';
+    return;
+  }
+
+  pending.forEach(item => {
     const el = document.createElement('div');
     el.className = 'todo-item';
     el.textContent = item.text;
