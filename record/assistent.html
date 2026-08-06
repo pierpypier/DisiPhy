@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Home</title>
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#1e88e5">
+
+<!-- Android / Chrome -->
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+
+<!-- Favicon -->
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  /* ============================================================
+     VARIABILI DI STILE — palette e dimensioni condivise con
+     organizer4.html / check01.html (accent #1e88e5) e con
+     caldsp.html / planner2.html (cal-accent #2b6cb0), unificate
+     per la dashboard.
+     ============================================================ */
+  :root{
+    --bg:#f6f8fb;
+    --card:#ffffff;
+    --accent:#1e88e5;
+    --cal-accent:#2b6cb0;
+    --muted:#6b7280;
+    --success:#C3D2BF;
+    --danger:#E3DCC9;
+    --shadow:0 6px 18px rgba(20,30,50,0.06);
+    --radius:12px;
+    --max-width:980px;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    color:#0f172a;
+  }
+
+  .container{ width:100%; max-width:var(--max-width); }
+
+  /* ============================================================
+     BARRA DI NAVIGAZIONE — identica (stessa struttura/classi)
+     a quella presente in tutti i file della suite.
+     ============================================================ */
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+  }
+  .nav-item img {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 1px;
+    transition: transform 0.2s ease;
+  }
+  .nav-item:hover img { transform: scale(1.05); }
+  .nav-item:hover { opacity: 0.85; }
+  .nav-item.active { opacity: 1; }
+  .nav-item.active span { color: var(--accent); font-weight:700; }
+
+  @media (max-width: 600px) {
+    .nav { gap: 10px; }
+    .nav-item img { width: 60px; height: 60px; }
+    .nav-item span { font-size: 12px; }
+  }
+
+  /* ============================================================
+     CARD generica — stile ripreso da organizer4/check01
+     ============================================================ */
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:14px;
+    margin-bottom:18px;
+  }
+
+  .section-title{
+    font-size:18px;
+    font-weight:800;
+    color:var(--accent);
+    margin:0 0 10px 0;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  /* ============================================================
+     BANNER ASSISTENTE
+     ============================================================ */
+  .assistant-banner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    background:linear-gradient(135deg,#e6f0ff 0%,#ffffff 100%);
+    flex-wrap:wrap;
+  }
+
+  .assistant-bubble{
+    position:relative;
+    flex:1;
+    min-width:220px;
+    background:#ffffff;
+    border:1px solid #e6e9ef;
+    border-radius:18px;
+    padding:16px 18px;
+    box-shadow:var(--shadow);
+  }
+  /* Codino stile "fumetto" del balloon, verso l'immagine a destra */
+  .assistant-bubble::after{
+    content:"";
+    position:absolute;
+    right:-14px;
+    top:50%;
+    transform:translateY(-50%);
+    border-width:10px 0 10px 14px;
+    border-style:solid;
+    border-color:transparent transparent transparent #ffffff;
+    filter:drop-shadow(2px 0 1px rgba(0,0,0,0.04));
+  }
+  .assistant-bubble .greet-line1{
+    font-size:19px;
+    font-weight:800;
+    color:var(--accent);
+    margin-bottom:4px;
+  }
+  .assistant-bubble .greet-line2{
+    font-size:15px;
+    color:var(--muted);
+    font-weight:600;
+  }
+
+  .assistant-image-wrap{
+    flex-shrink:0;
+  }
+  .assistant-image-wrap img{
+    width:200px;
+    height:auto;
+    display:block;
+    filter:drop-shadow(0 6px 10px rgba(0,0,0,0.12));
+  }
+
+  @media (max-width:640px){
+    .assistant-banner{ flex-direction:column-reverse; text-align:center; }
+    .assistant-bubble::after{ display:none; }
+  }
+
+  /* ============================================================
+     PULSANTE + PANNELLO CONFIGURAZIONE (accordion a scomparsa)
+     ============================================================ */
+  .config-toggle-wrap{ display:flex; justify-content:center; margin: 4px 0 14px 0; }
+  .config-toggle-btn{
+    background:#e6eefc;
+    color:var(--accent);
+    border:none;
+    border-radius:10px;
+    padding:8px 18px;
+    font-weight:700;
+    font-size:14px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+  }
+  .config-toggle-btn:hover{ filter:brightness(0.97); }
+
+  .config-panel{
+    display:none;
+  }
+  .config-panel.open{
+    display:block;
+  }
+
+  .config-row{
+    margin-bottom:14px;
+  }
+  .config-row label{
+    display:block;
+    font-weight:700;
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:6px;
+  }
+  .config-row input[type="text"],
+  .config-row select{
+    width:100%;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid #e6e9ef;
+    font-size:15px;
+    font-family:inherit;
+  }
+
+  .avatar-picker{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .avatar-option{
+    cursor:pointer;
+    border:3px solid transparent;
+    border-radius:12px;
+    padding:4px;
+    transition:border-color .15s ease, transform .15s ease;
+    background:#f7f9fc;
+  }
+  .avatar-option img{
+    width:64px;
+    height:64px;
+    object-fit:cover;
+    border-radius:8px;
+    display:block;
+  }
+  .avatar-option:hover{ transform:translateY(-2px); }
+  .avatar-option.selected{
+    border-color:var(--accent);
+    background:#e6eefc;
+  }
+
+  .config-save-note{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:4px;
+  }
+
+  /* ============================================================
+     ELENCHI DI CONTENUTO (impegni, note, checklist, planner)
+     ============================================================ */
+  .item-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .empty-msg{
+    color:var(--muted);
+    font-size:14px;
+    font-style:italic;
+    padding:6px 2px;
+  }
+
+  /* Impegni di oggi — richiama lo stile "calevent" di caldsp.html */
+  .today-event{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid rgba(47,158,68,.15);
+    background:#eefbf1;
+  }
+  .today-event.completed{
+    background:linear-gradient(180deg,#cdf0d7,#c6edd1);
+    border-color:rgba(47,158,68,.3);
+  }
+  .today-event .ev-time{
+    font-weight:800;
+    color:var(--muted);
+    min-width:52px;
+  }
+  .today-event .ev-desc{ color:#222; flex:1; }
+
+  /* Ricorda anche — richiama lo stile "record" di organizer4.html */
+  .note-item{
+    border-radius:10px;
+    padding:10px 12px;
+    background:var(--danger);
+    box-shadow:0 1px 0 rgba(0,0,0,0.03);
+  }
+  .note-item.completed{ background:var(--success); }
+  .note-item .note-text{
+    font-size:15px;
+    font-weight:700;
+    color:#1a1a1a;
+    margin-bottom:6px;
+    white-space:pre-wrap;
+  }
+  .note-item .note-meta{
+    font-size:12px;
+    color:var(--muted);
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+
+  /* Dovresti fare — richiama lo stile "item" di check01.html */
+  .todo-item{
+    background:#E3DCC9;
+    border-radius:10px;
+    border:1px solid #eef2f7;
+    padding:10px 12px;
+    font-weight:700;
+    color:#1a1a1a;
+    white-space:pre-wrap;
+  }
+
+  /* Impegni e idee in programma — richiama le tessere di planner2.html */
+  .plan-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+    gap:12px;
+  }
+  .plan-tile{
+    background:#fffef0;
+    border:1px solid #eee4b0;
+    border-radius:10px;
+    padding:10px;
+    text-align:center;
+    box-shadow:0 1px 4px rgba(0,0,0,.06);
+  }
+  .plan-tile img{
+    width:100%;
+    max-height:90px;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:6px;
+  }
+  .plan-tile .plan-text{
+    font-size:13px;
+    color:#3a3a2a;
+    white-space:pre-wrap;
+    word-break:break-word;
+  }
+
+  .link-to-page{
+    font-size:12px;
+    color:var(--accent);
+    text-decoration:none;
+    font-weight:700;
+    margin-left:auto;
+  }
+  .link-to-page:hover{ text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============================================================
+       BARRA DI NAVIGAZIONE (identica alle altre pagine della suite)
+       ============================================================ -->
+  <nav class="nav">
+    <a href="dashboard.html" class="nav-item active">
+      <img src="rimage/opzioni.png" alt="Home" onerror="this.src='rimage/dspimage192.png'">
+      <span> HOME </span>
+    </a>
+    <a href="organizer4.html" class="nav-item">
+      <img src="rimage/orga4.png" alt="Organizer">
+      <span> NOTE </span>
+    </a>
+    <a href="caldsp.html" class="nav-item">
+      <img src="rimage/calicon.png" alt="Calendario dsp">
+      <span> DATE </span>
+    </a>
+    <a href="check01.html" class="nav-item">
+      <img src="rimage/check02.png" alt="Checklist">
+      <span>LISTE</span>
+    </a>
+    <a href="strweb.html" class="nav-item">
+      <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+      <span> WEB </span>
+    </a>
+    <a href="dashconsolle.html" class="nav-item">
+      <img src="rimage/opzioni.png" alt="Opzioni">
+      <span> ADD </span>
+    </a>
+  </nav>
+  <!-- fine barra navigazione -->
+
+  <!-- ============================================================
+       BANNER PRINCIPALE CON ASSISTENTE
+       ============================================================ -->
+  <div class="card assistant-banner">
+    <div class="assistant-bubble">
+      <div class="greet-line1" id="greetLine1">Ciao!</div>
+      <div class="greet-line2">ecco una panoramica degli impegni di oggi</div>
+    </div>
+    <div class="assistant-image-wrap">
+      <img id="assistantImg" src="rimage/assis01.png" alt="Assistente">
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PULSANTE + PANNELLO DI CONFIGURAZIONE (a scomparsa)
+       ============================================================ -->
+  <div class="config-toggle-wrap">
+    <button class="config-toggle-btn" id="toggleConfigBtn">⚙️ Personalizza assistente</button>
+  </div>
+
+  <div class="card config-panel" id="configPanel">
+    <div class="section-title">Configurazione</div>
+
+    <div class="config-row">
+      <label for="cfgNome">Come vuoi essere chiamato?</label>
+      <input type="text" id="cfgNome" placeholder="Es. Pierpaolo">
+    </div>
+
+    <div class="config-row">
+      <label for="cfgSaluto">Frase di saluto iniziale</label>
+      <select id="cfgSaluto">
+        <option value="Ciao">Ciao</option>
+        <option value="Buongiorno">Buongiorno</option>
+        <option value="Buon pomeriggio">Buon pomeriggio</option>
+        <option value="Buonasera">Buonasera</option>
+        <option value="Salve">Salve</option>
+        <option value="Bentornato">Bentornato</option>
+      </select>
+    </div>
+
+    <div class="config-row">
+      <label>Scegli l'avatar dell'assistente</label>
+      <div class="avatar-picker" id="avatarPicker">
+        <div class="avatar-option" data-avatar="assis01.png">
+          <img src="rimage/assis01.png" alt="Avatar 1">
+        </div>
+        <div class="avatar-option" data-avatar="assis02.png">
+          <img src="rimage/assis02.png" alt="Avatar 2">
+        </div>
+        <div class="avatar-option" data-avatar="assis03.png">
+          <img src="rimage/assis03.png" alt="Avatar 3">
+        </div>
+        <div class="avatar-option" data-avatar="assis04.png">
+          <img src="rimage/assis04.png" alt="Avatar 4">
+        </div>
+      </div>
+    </div>
+
+    <div class="config-save-note">Le preferenze vengono salvate automaticamente.</div>
+  </div>
+
+  <!-- ============================================================
+       IMPEGNI DI OGGI (da cal_events_v1 — caldsp.html)
+       ============================================================ -->
+  <div class="card">
+    <div class="section-title">
+      📅 Impegni di oggi
+      <a href="caldsp.html" class="link-to-page">vai al calendario →</a>
+    </div>
+    <div class="item-list" id="todayEventsList"></div>
+  </div>
+
+  <!-- ============================================================
+       RICORDA ANCHE (da dsp_records_v1 — organizer4.html)
+       ============================================================ -->
+  <div class="card">
+    <div class="section-title">
+      📝 ricorda anche
+      <a href="organizer4.html" class="link-to-page">vai alle note →</a>
+    </div>
+    <div class="item-list" id="notesList"></div>
+  </div>
+
+  <!-- ============================================================
+       DOVRESTI FARE (da checklist_check01 — check01.html)
+       ============================================================ -->
+  <div class="card">
+    <div class="section-title">
+      ✅ dovresti fare
+      <a href="check01.html" class="link-to-page">vai alla checklist →</a>
+    </div>
+    <div class="item-list" id="todoList"></div>
+  </div>
+
+  <!-- ============================================================
+       IMPEGNI E IDEE IN PROGRAMMA (da organizer_tessere_config_v1 — planner2.html)
+       ============================================================ -->
+  <div class="card">
+    <div class="section-title">
+      💡 Impegni e idee in programma
+      <a href="planner2.html" class="link-to-page">vai al planner →</a>
+    </div>
+    <div class="plan-grid" id="planList"></div>
+  </div>
+
+</div>
+
+<script>
+/* ================================================================
+   CHIAVI localStorage CONDIVISE CON LE ALTRE PAGINE DELLA SUITE
+   (non modificare: devono restare identiche ai file di origine)
+   ================================================================ */
+const LS_CONFIG        = 'organizer_config';           // config di questa dashboard
+const LS_CAL_EVENTS    = 'cal_events_v1';               // caldsp.html
+const LS_DSP_RECORDS   = 'dsp_records_v1';               // organizer4.html (note)
+const LS_CHECKLIST     = 'checklist_check01';             // check01.html (per-pagina)
+const LS_PLANNER_TILES = 'organizer_tessere_config_v1';   // planner2.html (tessere)
+
+/* ================================================================
+   1) GESTIONE CONFIGURAZIONE ASSISTENTE (nome, saluto, avatar)
+   ================================================================ */
+let config = {
+  nome: '',
+  saluto: 'Ciao',
+  avatar: 'assis01.png'
+};
+
+function loadConfig(){
+  try{
+    const raw = localStorage.getItem(LS_CONFIG);
+    if(raw){
+      const parsed = JSON.parse(raw);
+      config = Object.assign(config, parsed);
+    }
+  }catch(e){
+    console.warn('Errore caricamento organizer_config', e);
+  }
+}
+
+function saveConfig(){
+  try{
+    localStorage.setItem(LS_CONFIG, JSON.stringify(config));
+  }catch(e){
+    console.warn('Errore salvataggio organizer_config', e);
+  }
+}
+
+function applyConfigToUI(){
+  // Campi del pannello di configurazione
+  document.getElementById('cfgNome').value = config.nome || '';
+  document.getElementById('cfgSaluto').value = config.saluto || 'Ciao';
+
+  // Selezione avatar evidenziata
+  document.querySelectorAll('.avatar-option').forEach(opt => {
+    opt.classList.toggle('selected', opt.dataset.avatar === config.avatar);
+  });
+
+  // Immagine assistente nel banner
+  document.getElementById('assistantImg').src = 'rimage/' + (config.avatar || 'assis01.png');
+
+  // Testo di saluto nel fumetto: "{saluto}, {nome}!" (se il nome non è impostato, si omette)
+  const nomeParte = config.nome && config.nome.trim() !== '' ? `, ${config.nome.trim()}` : '';
+  document.getElementById('greetLine1').textContent = `${config.saluto || 'Ciao'}${nomeParte}!`;
+}
+
+function initConfigPanel(){
+  loadConfig();
+  applyConfigToUI();
+
+  // Apertura/chiusura pannello a scomparsa
+  const panel = document.getElementById('configPanel');
+  document.getElementById('toggleConfigBtn').addEventListener('click', () => {
+    panel.classList.toggle('open');
+  });
+
+  // Nome utente
+  document.getElementById('cfgNome').addEventListener('input', (e) => {
+    config.nome = e.target.value;
+    saveConfig();
+    applyConfigToUI();
+  });
+
+  // Frase di saluto
+  document.getElementById('cfgSaluto').addEventListener('change', (e) => {
+    config.saluto = e.target.value;
+    saveConfig();
+    applyConfigToUI();
+  });
+
+  // Scelta avatar
+  document.querySelectorAll('.avatar-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      config.avatar = opt.dataset.avatar;
+      saveConfig();
+      applyConfigToUI();
+    });
+  });
+}
+
+/* ================================================================
+   UTILITÀ DATE
+   ================================================================ */
+function todayYMD(){
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+function formatDateIt(ymd){
+  if(!ymd) return '';
+  const d = new Date(ymd + 'T00:00:00');
+  if(isNaN(d.getTime())) return ymd;
+  return d.toLocaleDateString('it-IT', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+}
+
+/* ================================================================
+   2) IMPEGNI DI OGGI — da cal_events_v1 (caldsp.html)
+   ================================================================ */
+function renderTodayEvents(){
+  const container = document.getElementById('todayEventsList');
+  container.innerHTML = '';
+
+  let events = [];
+  try{
+    const raw = localStorage.getItem(LS_CAL_EVENTS);
+    if(raw) events = JSON.parse(raw);
+  }catch(e){
+    console.warn('Errore lettura cal_events_v1', e);
+  }
+
+  const today = todayYMD();
+  const todaysEvents = events
+    .filter(ev => ev.date === today)
+    .sort((a, b) => (a.time || '') > (b.time || '') ? 1 : -1);
+
+  if(todaysEvents.length === 0){
+    container.innerHTML = '<div class="empty-msg">Nessun impegno per oggi.</div>';
+    return;
+  }
+
+  todaysEvents.forEach(ev => {
+    const el = document.createElement('div');
+    el.className = 'today-event' + (ev.completed ? ' completed' : '');
+    el.innerHTML = `
+      <span class="ev-time">${ev.time || '--:--'}</span>
+      <span class="ev-desc">${escapeHtml(ev.desc || '(nessuna descrizione)')}</span>
+    `;
+    container.appendChild(el);
+  });
+}
+
+/* ================================================================
+   3) RICORDA ANCHE — da dsp_records_v1 (organizer4.html, note)
+   ================================================================ */
+function renderNotes(){
+  const container = document.getElementById('notesList');
+  container.innerHTML = '';
+
+  let records = [];
+  try{
+    const raw = localStorage.getItem(LS_DSP_RECORDS);
+    if(raw) records = JSON.parse(raw);
+  }catch(e){
+    console.warn('Errore lettura dsp_records_v1', e);
+  }
+
+  // Mostra solo le note con un testo effettivo, non marcate per eliminazione
+  const notes = records
+    .filter(r => r.description && r.description.trim() !== '' && !r.toDelete)
+    .sort((a, b) => {
+      // Le note senza data vanno in fondo
+      if(!a.date && !b.date) return 0;
+      if(!a.date) return 1;
+      if(!b.date) return -1;
+      return new Date(a.date + 'T' + (a.time || '00:00')) - new Date(b.date + 'T' + (b.time || '00:00'));
+    });
+
+  if(notes.length === 0){
+    container.innerHTML = '<div class="empty-msg">Nessuna nota da ricordare.</div>';
+    return;
+  }
+
+  notes.forEach(n => {
+    const el = document.createElement('div');
+    el.className = 'note-item' + (n.completed ? ' completed' : '');
+    const metaParts = [];
+    if(n.date) metaParts.push('📅 ' + formatDateIt(n.date));
+    if(n.time) metaParts.push('🕒 ' + n.time);
+    metaParts.push(n.completed ? 'completato' : 'da fare');
+
+    el.innerHTML = `
+      <div class="note-text">${escapeHtml(n.description)}</div>
+      <div class="note-meta">${metaParts.map(m => `<span>${escapeHtml(m)}</span>`).join('')}</div>
+    `;
+    container.appendChild(el);
+  });
+}
+
+/* ================================================================
+   4) DOVRESTI FARE — da checklist_check01 (check01.html)
+   ================================================================ */
+function renderTodo(){
+  const container = document.getElementById('todoList');
+  container.innerHTML = '';
+
+  let state = { theme:'', items:[] };
+  try{
+    const raw = localStorage.getItem(LS_CHECKLIST);
+    if(raw) state = JSON.parse(raw);
+  }catch(e){
+    console.warn('Errore lettura checklist_check01', e);
+  }
+
+  const items = (state.items || []).filter(i => !i.done && !i.toDelete && i.text && i.text.trim() !== '');
+
+  if(items.length === 0){
+    container.innerHTML = '<div class="empty-msg">Nessuna attività da fare in lista.</div>';
+    return;
+  }
+
+  items.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'todo-item';
+    el.textContent = item.text;
+    container.appendChild(el);
+  });
+}
+
+/* ================================================================
+   5) IMPEGNI E IDEE IN PROGRAMMA — da organizer_tessere_config_v1 (planner2.html)
+   ================================================================ */
+function renderPlanner(){
+  const container = document.getElementById('planList');
+  container.innerHTML = '';
+
+  let tiles = [];
+  try{
+    const raw = localStorage.getItem(LS_PLANNER_TILES);
+    if(raw) tiles = JSON.parse(raw);
+  }catch(e){
+    console.warn('Errore lettura organizer_tessere_config_v1', e);
+  }
+
+  // Mostra solo le tessere che hanno un testo effettivo
+  const withText = tiles.filter(t => t.text && t.text.trim() !== '' && t.text.trim() !== 'Nota testo...');
+
+  if(withText.length === 0){
+    container.innerHTML = '<div class="empty-msg">Nessuna idea o tessera in programma.</div>';
+    return;
+  }
+
+  withText.forEach(t => {
+    const el = document.createElement('div');
+    el.className = 'plan-tile';
+    let imgHtml = '';
+    if(t.imgNum && t.imgNum !== 'none'){
+      imgHtml = `<img src="tessere/${t.imgNum}.${t.type}" alt="${escapeHtml(t.imgNum)}">`;
+    }
+    el.innerHTML = `
+      ${imgHtml}
+      <div class="plan-text">${escapeHtml(t.text)}</div>
+    `;
+    container.appendChild(el);
+  });
+}
+
+/* ================================================================
+   UTILITÀ: escape base per evitare l'iniezione di HTML nei testi
+   ================================================================ */
+function escapeHtml(str){
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+/* ================================================================
+   AVVIO
+   ================================================================ */
+window.addEventListener('DOMContentLoaded', () => {
+  initConfigPanel();
+  renderTodayEvents();
+  renderNotes();
+  renderTodo();
+  renderPlanner();
+});
+</script>
+
+</body>
+</html>
