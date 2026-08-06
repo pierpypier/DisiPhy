@@ -432,17 +432,17 @@
     <div class="config-row">
       <label>Scegli l'avatar dell'assistente</label>
       <div class="avatar-picker" id="avatarPicker">
-        <div class="avatar-option" data-avatar="assis01.png">
-          <img src="rimage/assis01.png" alt="Avatar 1">
+        <div class="avatar-option" data-avatar="assis01.jpg">
+          <img src="rimage/assis01.jpg" alt="Avatar 1">
         </div>
-        <div class="avatar-option" data-avatar="assis02.png">
-          <img src="rimage/assis02.png" alt="Avatar 2">
+        <div class="avatar-option" data-avatar="assis02.jpg">
+          <img src="rimage/assis02.jpg" alt="Avatar 2">
         </div>
-        <div class="avatar-option" data-avatar="assis03.png">
-          <img src="rimage/assis03.png" alt="Avatar 3">
+        <div class="avatar-option" data-avatar="assis03.jog">
+          <img src="rimage/assis03.jpg" alt="Avatar 3">
         </div>
-        <div class="avatar-option" data-avatar="assis04.png">
-          <img src="rimage/assis04.png" alt="Avatar 4">
+        <div class="avatar-option" data-avatar="assis04.jpg">
+          <img src="rimage/assis04.jpg" alt="Avatar 4">
         </div>
       </div>
     </div>
@@ -512,7 +512,7 @@ const LS_PLANNER_TILES = 'organizer_tessere_config_v1';   // planner2.html (tess
 let config = {
   nome: '',
   saluto: 'Ciao',
-  avatar: 'assis01.png'
+  avatar: 'assis01.jpg'
 };
 
 function loadConfig(){
@@ -546,7 +546,7 @@ function applyConfigToUI(){
   });
 
   // Immagine assistente nel banner
-  document.getElementById('assistantImg').src = 'rimage/' + (config.avatar || 'assis01.png');
+  document.getElementById('assistantImg').src = 'rimage/' + (config.avatar || 'assis01.jpg');
 
   // Testo di saluto nel fumetto: "{saluto}, {nome}!" (se il nome non è impostato, si omette)
   const nomeParte = config.nome && config.nome.trim() !== '' ? `, ${config.nome.trim()}` : '';
