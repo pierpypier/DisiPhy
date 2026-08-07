@@ -594,7 +594,7 @@ function applyConfigToUI(){
   // Immagine assistente nel banner
   document.getElementById('assistantImg').src = 'rimage/' + (config.avatar || 'assis01.jpg');
 
-  // Testo di saluto nel fumetto: "{saluto}, {nome}!" (se il nome non è impostato, si omette)
+  // Testo di saluto nel fumetto: "{saluto} {nome}" (se il nome non è impostato, si omette)
   const nomeParte = config.nome && config.nome.trim() !== '' ? `, ${config.nome.trim()}` : '';
   document.getElementById('greetLine1').textContent = `${config.saluto || 'Ciao'}${nomeParte}!`;
 }
@@ -772,7 +772,7 @@ function renderTodo(){
 
   if(pending.length === 0){
     // Ci sono checklist ma tutte le voci sono completate/vuote
-    container.innerHTML = '<div class="empty-msg">Tutte le attività risultano completate 🎉</div>';
+    container.innerHTML = '<div class="empty-msg">Tutte le attività risultano completate ✅</div>';
     return;
   }
 
