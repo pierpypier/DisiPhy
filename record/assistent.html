@@ -157,6 +157,14 @@
     color:var(--muted);
     font-weight:600;
   }
+  .assistant-bubble .greet-quote{
+    margin-top:10px;
+    padding-top:8px;
+    border-top:1px dashed #e6e9ef;
+    font-size:13px;
+    font-style:italic;
+    color:var(--cal-accent);
+  }
 
   .assistant-image-wrap{
     flex-shrink:0;
@@ -171,6 +179,34 @@
   @media (max-width:640px){
     .assistant-banner{ flex-direction:column-reverse; text-align:center; }
     .assistant-bubble::after{ display:none; }
+  }
+
+  /* ============================================================
+     RIGA BADGE RIEPILOGATIVI (contatori rapidi)
+     ============================================================ */
+  .stats-row{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin:14px 0;
+  }
+  .stat-badge{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    background:#ffffff;
+    border:1px solid #e6e9ef;
+    border-radius:999px;
+    padding:7px 14px;
+    font-size:13px;
+    font-weight:700;
+    color:#1a1a1a;
+    box-shadow:var(--shadow);
+  }
+  .stat-badge .stat-num{
+    color:var(--accent);
+    font-weight:800;
   }
 
   /* ============================================================
@@ -249,6 +285,15 @@
     margin-top:4px;
   }
 
+  /* Contenitore dei pulsanti backup/ripristino, dentro il pannello configurazione */
+  .config-data-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    padding-top:10px;
+    border-top:1px solid #eef2f7;
+  }
+
   /* ============================================================
      ELENCHI DI CONTENUTO (impegni, note, checklist, planner)
      ============================================================ */
@@ -285,6 +330,40 @@
     min-width:52px;
   }
   .today-event .ev-desc{ color:#222; flex:1; }
+
+  /* Prossimi 7 giorni — variante di today-event con etichetta data e colore blu */
+  .upcoming-event{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid rgba(43,108,176,.15);
+    background:#eaf2fb;
+  }
+  .upcoming-event .ev-date{
+    font-weight:800;
+    color:var(--cal-accent);
+    min-width:110px;
+    font-size:13px;
+    text-transform:capitalize;
+  }
+  .upcoming-event .ev-time{
+    font-weight:700;
+    color:var(--muted);
+    min-width:46px;
+  }
+  .upcoming-event .ev-desc{ color:#222; flex:1; }
+
+  /* Pulsanti di backup/ripristino, stesso stile del toggle configurazione */
+  .backup-btn{
+    background:#eaf6ec;
+    color:#2f7a3d;
+  }
+  .restore-btn{
+    background:#fdeeea;
+    color:#b8442c;
+  }
 
   /* Ricorda anche — richiama lo stile "record" di organizer4.html */
   .note-item{
@@ -396,11 +475,17 @@
     <div class="assistant-bubble">
       <div class="greet-line1" id="greetLine1">Ciao!</div>
       <div class="greet-line2">ecco una panoramica degli impegni di oggi, alcune note da ricordare, le attività da svolgere e le idee in programma</div>
+      <div class="greet-quote" id="greetQuote"></div>
     </div>
     <div class="assistant-image-wrap">
       <img id="assistantImg" src="rimage/assis01.jpg" alt="Assistente">
     </div>
   </div>
+
+  <!-- ============================================================
+       BADGE RIEPILOGATIVI (contatori rapidi su tutte le fonti)
+       ============================================================ -->
+  <div class="stats-row" id="statsRow"></div>
 
   <!-- ============================================================
        PULSANTE + PANNELLO DI CONFIGURAZIONE (a scomparsa)
@@ -420,6 +505,7 @@
     <div class="config-row">
       <label for="cfgSaluto">Frase di saluto iniziale</label>
       <select id="cfgSaluto">
+        <option value="auto">Automatico (in base all'ora)</option>
         <option value="Ciao">Ciao</option>
         <option value="Buongiorno">Buongiorno</option>
         <option value="Buon pomeriggio">Buon pomeriggio</option>
@@ -502,6 +588,16 @@
       </div>
     </div>
 
+    <div class="config-row">
+      <label>Dati della suite</label>
+      <div class="config-data-actions">
+        <button class="config-toggle-btn backup-btn" id="backupBtn">💾 Backup dati</button>
+        <button class="config-toggle-btn restore-btn" id="restoreBtn">📂 Ripristina backup</button>
+        <!-- Input nascosto: viene attivato dal pulsante "Ripristina backup" -->
+        <input type="file" id="restoreFileInput" accept="application/json,.json" style="display:none">
+      </div>
+    </div>
+
     <div class="config-save-note">Le preferenze vengono salvate automaticamente.</div>
   </div>
 
@@ -514,6 +610,17 @@
       <a href="caldsp.html" class="link-to-page">vai al calendario →</a>
     </div>
     <div class="item-list" id="todayEventsList"></div>
+  </div>
+
+  <!-- ============================================================
+       PROSSIMI 7 GIORNI (da cal_events_v1 — caldsp.html)
+       ============================================================ -->
+  <div class="card">
+    <div class="section-title">
+      🔭 Prossimi 7 giorni
+      <a href="caldsp.html" class="link-to-page">vai al calendario →</a>
+    </div>
+    <div class="item-list" id="upcomingEventsList"></div>
   </div>
 
   <!-- ============================================================
@@ -560,13 +667,31 @@ const LS_CONFIG        = 'organizer_config';           // config di questa dashb
 const LS_CAL_EVENTS    = 'cal_events_v1';               // caldsp.html
 const LS_DSP_RECORDS   = 'dsp_records_v1';               // organizer4.html (note)
 const LS_PLANNER_TILES = 'organizer_tessere_config_v1';   // planner2.html (tessere)
+const BACKUP_KEY_PREFIXES = ['dsp_', 'cal_', 'checklist_', 'organizer_']; // chiavi incluse nel backup/ripristino
+
+// Contatori globali usati dalla riga di badge riepilogativi
+let countToday = 0, countUpcoming = 0, countNotes = 0, countTodo = 0, countPlan = 0;
+
+// Frasi motivazionali/citazioni mostrate a rotazione (una al giorno)
+const QUOTES = [
+  'Un passo alla volta, ma tutti i giorni.',
+  'La costanza batte l\'intensità.',
+  'Fatto è meglio che perfetto.',
+  'Piccole cose, fatte bene, fanno grandi risultati.',
+  'Organizza oggi, respira domani.',
+  'La chiarezza nasce dall\'ordine.',
+  'Un obiettivo scritto è già mezzo raggiunto.',
+  'La disciplina è la libertà di domani.',
+  'Prima le cose importanti.',
+  'Il tempo non si trova, si organizza.'
+];
 
 /* ================================================================
    1) GESTIONE CONFIGURAZIONE ASSISTENTE (nome, saluto, avatar)
    ================================================================ */
 let config = {
   nome: '',
-  saluto: 'Ciao',
+  saluto: 'auto',
   avatar: 'assis01.jpg'
 };
 
@@ -593,7 +718,7 @@ function saveConfig(){
 function applyConfigToUI(){
   // Campi del pannello di configurazione
   document.getElementById('cfgNome').value = config.nome || '';
-  document.getElementById('cfgSaluto').value = config.saluto || 'Ciao';
+  document.getElementById('cfgSaluto').value = config.saluto || 'auto';
 
   // Selezione avatar evidenziata
   document.querySelectorAll('.avatar-option').forEach(opt => {
@@ -604,8 +729,40 @@ function applyConfigToUI(){
   document.getElementById('assistantImg').src = 'rimage/' + (config.avatar || 'assis01.jpg');
 
   // Testo di saluto nel fumetto: "{saluto} {nome}" (se il nome non è impostato, si omette)
+  const salutoEffettivo = getSalutoEffettivo();
   const nomeParte = config.nome && config.nome.trim() !== '' ? ` ${config.nome.trim()}` : '';
-  document.getElementById('greetLine1').textContent = `${config.saluto || 'Ciao'}${nomeParte}`;
+  document.getElementById('greetLine1').textContent = `${salutoEffettivo}${nomeParte}`;
+
+  // Citazione/frase motivazionale del giorno (cambia ogni giorno, stabile nell'arco della giornata)
+  document.getElementById('greetQuote').textContent = '"' + getQuoteOfDay() + '"';
+}
+
+/**
+ * Calcola il saluto da mostrare. Se l'utente ha scelto "auto" (o non ha
+ * ancora configurato nulla), il saluto viene dedotto dall'ora corrente;
+ * altrimenti si usa la frase scelta manualmente nel pannello.
+ */
+function getSalutoEffettivo(){
+  if(!config.saluto || config.saluto === 'auto'){
+    const h = new Date().getHours();
+    if(h < 6)  return 'Buonanotte';
+    if(h < 12) return 'Buongiorno';
+    if(h < 18) return 'Buon pomeriggio';
+    return 'Buonasera';
+  }
+  return config.saluto;
+}
+
+/**
+ * Restituisce una frase motivazionale diversa ogni giorno (deterministica:
+ * dipende dal giorno dell'anno, quindi resta stabile per tutta la giornata).
+ */
+function getQuoteOfDay(){
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const diffMs = now - start;
+  const dayOfYear = Math.floor(diffMs / 86400000);
+  return QUOTES[dayOfYear % QUOTES.length];
 }
 
 function initConfigPanel(){
@@ -680,6 +837,8 @@ function renderTodayEvents(){
     .filter(ev => ev.date === today)
     .sort((a, b) => (a.time || '') > (b.time || '') ? 1 : -1);
 
+  countToday = todaysEvents.length;
+
   if(todaysEvents.length === 0){
     container.innerHTML = '<div class="empty-msg">Nessun impegno per oggi.</div>';
     return;
@@ -689,6 +848,56 @@ function renderTodayEvents(){
     const el = document.createElement('div');
     el.className = 'today-event' + (ev.completed ? ' completed' : '');
     el.innerHTML = `
+      <span class="ev-time">${ev.time || '--:--'}</span>
+      <span class="ev-desc">${escapeHtml(ev.desc || '(nessuna descrizione)')}</span>
+    `;
+    container.appendChild(el);
+  });
+}
+
+/* ================================================================
+   2b) PROSSIMI 7 GIORNI — da cal_events_v1 (caldsp.html)
+   Mostra gli impegni compresi tra domani e i successivi 7 giorni.
+   ================================================================ */
+function renderUpcomingEvents(){
+  const container = document.getElementById('upcomingEventsList');
+  container.innerHTML = '';
+
+  let events = [];
+  try{
+    const raw = localStorage.getItem(LS_CAL_EVENTS);
+    if(raw) events = JSON.parse(raw);
+  }catch(e){
+    console.warn('Errore lettura cal_events_v1', e);
+  }
+
+  const now = new Date();
+  const todayMid = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const limitDate = new Date(todayMid);
+  limitDate.setDate(limitDate.getDate() + 7);
+
+  const upcoming = events
+    .filter(ev => {
+      if(!ev.date) return false;
+      const d = new Date(ev.date + 'T00:00:00');
+      if(isNaN(d.getTime())) return false;
+      return d > todayMid && d <= limitDate;
+    })
+    .sort((a, b) => (a.date + (a.time || '')) > (b.date + (b.time || '')) ? 1 : -1);
+
+  countUpcoming = upcoming.length;
+
+  if(upcoming.length === 0){
+    container.innerHTML = '<div class="empty-msg">Nessun impegno nei prossimi 7 giorni.</div>';
+    return;
+  }
+
+  upcoming.forEach(ev => {
+    const el = document.createElement('div');
+    el.className = 'upcoming-event' + (ev.completed ? ' completed' : '');
+    const dataBreve = new Date(ev.date + 'T00:00:00').toLocaleDateString('it-IT', { weekday:'short', day:'numeric', month:'short' });
+    el.innerHTML = `
+      <span class="ev-date">${escapeHtml(dataBreve)}</span>
       <span class="ev-time">${ev.time || '--:--'}</span>
       <span class="ev-desc">${escapeHtml(ev.desc || '(nessuna descrizione)')}</span>
     `;
@@ -723,9 +932,11 @@ function renderNotes(){
     });
 
   if(notes.length === 0){
+    countNotes = 0;
     container.innerHTML = '<div class="empty-msg">Nessuna nota da ricordare.</div>';
     return;
   }
+  countNotes = notes.length;
 
   notes.forEach(n => {
     const el = document.createElement('div');
@@ -775,15 +986,19 @@ function renderTodo(){
 
   if(allItems.length === 0){
     // Nessuna checklist trovata affatto: probabilmente non è mai stata compilata
+    countTodo = 0;
     container.innerHTML = '<div class="empty-msg">Nessuna checklist trovata.</div>';
     return;
   }
 
   if(pending.length === 0){
     // Ci sono checklist ma tutte le voci sono completate/vuote
+    countTodo = 0;
     container.innerHTML = '<div class="empty-msg">Tutte le attività risultano completate ✅</div>';
     return;
   }
+
+  countTodo = pending.length;
 
   pending.forEach(item => {
     const el = document.createElement('div');
@@ -812,9 +1027,11 @@ function renderPlanner(){
   const withText = tiles.filter(t => t.text && t.text.trim() !== '' && t.text.trim() !== 'Nota testo...');
 
   if(withText.length === 0){
+    countPlan = 0;
     container.innerHTML = '<div class="empty-msg">Nessuna idea o tessera in programma.</div>';
     return;
   }
+  countPlan = withText.length;
 
   withText.forEach(t => {
     const el = document.createElement('div');
@@ -832,6 +1049,122 @@ function renderPlanner(){
 }
 
 /* ================================================================
+   6) BADGE RIEPILOGATIVI — riassume i contatori di tutte le sezioni
+   ================================================================ */
+function renderStats(){
+  const container = document.getElementById('statsRow');
+  container.innerHTML = `
+    <div class="stat-badge">📅 Oggi <span class="stat-num">${countToday}</span></div>
+    <div class="stat-badge">🔭 Prossimi 7gg <span class="stat-num">${countUpcoming}</span></div>
+    <div class="stat-badge">📝 Note <span class="stat-num">${countNotes}</span></div>
+    <div class="stat-badge">✅ Da fare <span class="stat-num">${countTodo}</span></div>
+    <div class="stat-badge">💡 Idee <span class="stat-num">${countPlan}</span></div>
+  `;
+}
+
+/* ================================================================
+   7) BACKUP DATI — esporta in un unico file JSON tutte le chiavi
+   della suite (dsp_*, cal_*, checklist_*, organizer_*)
+   ================================================================ */
+function exportBackup(){
+  const backup = {};
+  try{
+    for(let i = 0; i < localStorage.length; i++){
+      const key = localStorage.key(i);
+      if(!key) continue;
+      const matches = BACKUP_KEY_PREFIXES.some(prefix => key.indexOf(prefix) === 0);
+      if(matches){
+        backup[key] = localStorage.getItem(key);
+      }
+    }
+  }catch(e){
+    console.warn('Errore durante la raccolta dei dati per il backup', e);
+    alert('Si è verificato un errore durante la preparazione del backup.');
+    return;
+  }
+
+  const dataStr = JSON.stringify(backup, null, 2);
+  const blob = new Blob([dataStr], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `organizer_backup_${todayYMD()}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+/* ================================================================
+   8) RIPRISTINO BACKUP — legge il file JSON scaricato con "Backup dati"
+   e riscrive le chiavi in localStorage.
+
+   Come si usa:
+   1) Clic su "📂 Ripristina backup"
+   2) Si apre la finestra di selezione file: scegli il file
+      organizer_backup_AAAA-MM-GG.json salvato in precedenza
+   3) Viene mostrata una conferma (l'operazione sovrascrive i dati attuali)
+   4) Dopo la conferma, i dati vengono scritti in localStorage e la
+      pagina si ricarica per mostrare i dati ripristinati ovunque
+   ================================================================ */
+function importBackupFile(file){
+  if(!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = (e) => {
+    let backup;
+    try{
+      backup = JSON.parse(e.target.result);
+    }catch(err){
+      alert('Il file selezionato non è un backup valido: il contenuto non è un JSON leggibile.');
+      return;
+    }
+
+    if(typeof backup !== 'object' || backup === null || Array.isArray(backup)){
+      alert('Il file selezionato non ha il formato di backup atteso.');
+      return;
+    }
+
+    // Per sicurezza, ripristina solo le chiavi riconosciute della suite
+    const validKeys = Object.keys(backup).filter(key =>
+      BACKUP_KEY_PREFIXES.some(prefix => key.indexOf(prefix) === 0)
+    );
+
+    if(validKeys.length === 0){
+      alert('Nessuna chiave riconosciuta (dsp_*, cal_*, checklist_*, organizer_*) trovata nel file selezionato.');
+      return;
+    }
+
+    const conferma = confirm(
+      `Il backup contiene ${validKeys.length} voci di dati.\n` +
+      `Il ripristino SOVRASCRIVERÀ i dati attualmente salvati su questo dispositivo.\n\n` +
+      `Vuoi continuare?`
+    );
+    if(!conferma) return;
+
+    try{
+      validKeys.forEach(key => {
+        localStorage.setItem(key, backup[key]);
+      });
+    }catch(err){
+      console.warn('Errore durante il ripristino del backup', err);
+      alert('Si è verificato un errore durante la scrittura dei dati ripristinati.');
+      return;
+    }
+
+    alert('Backup ripristinato correttamente. La pagina verrà ricaricata per mostrare i dati aggiornati.');
+    location.reload();
+  };
+
+  reader.onerror = () => {
+    alert('Impossibile leggere il file selezionato.');
+  };
+
+  reader.readAsText(file);
+}
+
+/* ================================================================
    UTILITÀ: escape base per evitare l'iniezione di HTML nei testi
    ================================================================ */
 function escapeHtml(str){
@@ -841,14 +1174,50 @@ function escapeHtml(str){
 }
 
 /* ================================================================
+   RENDER COMPLETO — richiama tutte le sezioni in un colpo solo.
+   Usata sia all'avvio sia per il refresh automatico.
+   ================================================================ */
+function refreshAll(){
+  applyConfigToUI();      // ricalcola saluto automatico e citazione del giorno
+  renderTodayEvents();
+  renderUpcomingEvents();
+  renderNotes();
+  renderTodo();
+  renderPlanner();
+  renderStats();          // deve essere l'ultima: usa i contatori aggiornati dalle altre
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
   initConfigPanel();
-  renderTodayEvents();
-  renderNotes();
-  renderTodo();
-  renderPlanner();
+  refreshAll();
+
+  // Backup: genera e scarica il file JSON
+  document.getElementById('backupBtn').addEventListener('click', exportBackup);
+
+  // Ripristino: il pulsante apre il selettore file nascosto
+  document.getElementById('restoreBtn').addEventListener('click', () => {
+    document.getElementById('restoreFileInput').click();
+  });
+  document.getElementById('restoreFileInput').addEventListener('change', (e) => {
+    const file = e.target.files && e.target.files[0];
+    importBackupFile(file);
+    e.target.value = ''; // consente di riselezionare lo stesso file in futuro
+  });
+
+  // Refresh automatico: se l'utente torna su questa scheda dopo aver
+  // modificato dati in un'altra pagina della suite (o in un'altra tab),
+  // i dati vengono ricaricati senza bisogno di un refresh manuale.
+  document.addEventListener('visibilitychange', () => {
+    if(document.visibilityState === 'visible'){
+      refreshAll();
+    }
+  });
+  window.addEventListener('pageshow', () => {
+    refreshAll();
+  });
 });
 </script>
 
