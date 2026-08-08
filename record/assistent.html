@@ -1215,16 +1215,24 @@ function getSalutoEffettivo(){
 }
 
 /**
- * Restituisce una frase motivazionale diversa ogni giorno (deterministica:
- * dipende dal giorno dell'anno, quindi resta stabile per tutta la giornata).
+ * Restituisce tre frasi motivazionale o citazioni diverse tre volte al giorno:
+ * martina pomeriggio e sera, 
  */
 function getQuoteOfDay(){
   const now = new Date();
+  const h = now.getHours();
   const start = new Date(now.getFullYear(), 0, 0);
-  const diffMs = now - start;
-  const dayOfYear = Math.floor(diffMs / 86400000);
-  return QUOTES[dayOfYear % QUOTES.length];
+  const dayOfYear = Math.floor((now - start) / 86400000);
+
+  // offset di 1/3 di anno tra mattina, pomeriggio e sera
+  let offset = 0;
+  if(h >= 6 && h < 13) offset = 0;         // mattina
+  else if(h >= 13 && h < 19) offset = 122; // pomeriggio
+  else offset = 244;                       // sera
+
+  return QUOTES[(dayOfYear + offset) % QUOTES.length];
 }
+  
 
 function initConfigPanel(){
   loadConfig();
