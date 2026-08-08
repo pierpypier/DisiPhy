@@ -89,6 +89,12 @@
     .nav { gap: 10px; }
     .nav-item img { width: 60px; height: 60px; }
     .nav-item span { font-size: 12px; }
+
+  /* Separatore prima della barra di navigazione in fondo alla pagina */
+  .nav-divider{
+    border: none;
+    border-top: 1px solid #e6e9ef;
+    margin: 24px 0 10px 0;
   }
 
   /* ============================================================
@@ -665,6 +671,38 @@
     <div class="plan-grid" id="planList"></div>
   </div>
 
+
+
+  <!-- ============================================================
+       BARRA DI NAVIGAZIONE RIPETUTA IN FONDO ALLA PAGINA
+       ============================================================ -->
+  <hr class="nav-divider">
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item">
+      <img src="rimage/orga4.png" alt="Organizer">
+      <span> NOTE </span>
+    </a>
+    <a href="caldsp.html" class="nav-item">
+      <img src="rimage/calicon.png" alt="Calendario dsp">
+      <span> DATE </span>
+    </a>
+    <a href="check01.html" class="nav-item">
+      <img src="rimage/check02.png" alt="Checklist">
+      <span>LISTE</span>
+    </a>
+    <a href="strweb.html" class="nav-item">
+      <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+      <span> WEB </span>
+    </a>
+    <a href="dashconsolle.html" class="nav-item">
+      <img src="rimage/opzioni.png" alt="Opzioni">
+      <span> ADD </span>
+    </a>
+  </nav>
+
+
+
+  
 </div>
 
 <script>
@@ -1143,7 +1181,228 @@ const QUOTES = [
 // --- Mitologia greca — blocco finale ---
 'Il vaso di Pandora era, nella versione più antica del mito, un\'anfora (pithos). — mitologia greca',
 'Zeus, Poseidone e Ade si divisero il dominio del mondo su cielo, mare e regno dei morti. — mitologia greca',
-  
+
+// --- Consigli comportamentali: lavoro e relazioni ---
+'Ascolta il doppio di quanto parli: hai due orecchie e una sola bocca.',
+'Un buon leader chiede, non impone.',
+'La critica costruttiva si fa in privato, il complimento in pubblico.',
+'Chi non ammette errori, ne farà di peggiori.',
+'Il rispetto si guadagna con la coerenza, non con l\'autorità.',
+'Prometti poco, mantieni molto.',
+'Un "no" detto in tempo vale più di un "sì" forzato.',
+'La fiducia si costruisce lentamente e si perde in un istante.',
+'Chi delega bene, moltiplica il proprio tempo.',
+'Non confondere la fretta con l\'efficienza.',
+'Le riunioni utili hanno un obiettivo chiaro, non solo un orario.',
+'Un problema condiviso è già mezzo risolto.',
+'Chi ascolta per capire, non per rispondere, impara di più.',
+'La pazienza è una competenza, non solo una virtù.',
+'Il silenzio, a volte, è la risposta più saggia.',
+'Chiedi scusa quando serve, non quando conviene.',
+'Un collega aiutato oggi è un alleato domani.',
+'La reputazione si costruisce in anni e si distrugge in minuti.',
+'Non giudicare una persona da un solo giorno storto.',
+'Chi semina fiducia, raccoglie collaborazione.',
+'Meglio una verità scomoda che una bugia comoda.',
+'L\'empatia non è debolezza, è intelligenza applicata alle relazioni.',
+'Prima di correggere qualcuno, chiediti se lo faresti anche in pubblico su te stesso.',
+'Le persone dimenticano cosa hai detto, ma non come le hai fatte sentire.',
+'Un buon compromesso lascia entrambe le parti leggermente insoddisfatte, e va bene così.',
+'La qualità del lavoro parla più a lungo di qualsiasi scusa.',
+'Chi si assume la colpa impara, chi la scarica si ripete.',
+'Organizzare il tempo è organizzare le priorità, non gli orari.',
+'Non tutte le battaglie meritano di essere combattute.',
+'La disponibilità ha un limite: proteggila.',
+'Un feedback dato con rispetto vale più di una lode superficiale.',
+'Chiedere aiuto non è un fallimento, è strategia.',
+'La costanza supera il talento quando il talento non si allena.',
+'Il lavoro di squadra funziona quando ognuno conosce il proprio ruolo, non solo il proprio compito.',
+'Chi ascolta le critiche con calma, cresce più in fretta di chi le respinge.',
+'Le scadenze si rispettano meglio se comunicate per tempo, non imposte all\'ultimo.',
+'Un buon rapporto professionale si basa su aspettative chiare, non su presunzioni.',
+'La gentilezza non costa nulla, ma vale moltissimo.',
+'Chi cambia idea davanti a un\'evidenza migliore mostra intelligenza, non incoerenza.',
+'Non è debolezza dire "non lo so", è onestà.',
+'Il tempo dedicato ad ascoltare un collaboratore raramente è tempo perso.',
+'Le regole chiare prevengono più conflitti di mille buone intenzioni.',
+'Un errore ammesso subito costa meno di un errore nascosto a lungo.',
+'La produttività non si misura in ore, ma in risultati.',
+'Chi rispetta il tempo altrui, rispetta anche il proprio.',
+'Le relazioni si nutrono di piccoli gesti costanti, non di grandi gesti occasionali.',
+'Meglio chiedere una volta in più che sbagliare una volta in meno.',
+'La calma, in una discussione, è spesso l\'argomento più forte.',
+'Chi impara a dire "ho bisogno di aiuto" costruisce squadre più solide.',
+'Il vero valore di una persona si vede in come tratta chi non può ricambiarle nulla.',
+
+// --- Curiosità dal mondo ---
+'Il fiume Nilo e il fiume Rio delle Amazzoni si contendono il primato di corso d\'acqua più lungo del pianeta. — geografia',
+'La Russia attraversa 11 fusi orari, più di qualsiasi altro paese al mondo. — geografia',
+'Il Sahara è il deserto caldo più esteso del mondo, ma il deserto più grande in assoluto è l\'Antartide. — geografia',
+'La Fossa delle Marianne, nell\'oceano Pacifico, è il punto più profondo conosciuto degli oceani terrestri. — geografia',
+'Il Vaticano è lo stato indipendente più piccolo del mondo per superficie. — geografia',
+'Il Monte Everest è la montagna più alta sul livello del mare, ma il vulcano Mauna Kea, misurato dalla base sui fondali oceanici, è più alto in totale. — geografia',
+'Il lago Baikal, in Siberia, contiene circa il 20% dell\'acqua dolce liquida non ghiacciata del pianeta. — geografia',
+'L\'Islanda non ha zanzare, una delle poche regioni abitate al mondo dove questo insetto non è presente. — natura',
+'I polpi hanno tre cuori e sangue di colore blu. — natura',
+'Le formiche non hanno polmoni: respirano attraverso piccoli fori chiamati spiracoli. — natura',
+'Alcuni alberi di sequoia in California sono vissuti per oltre 3.000 anni. — natura',
+'I colibrì sono gli unici uccelli in grado di volare all\'indietro. — natura',
+'Le balenottere azzurre sono gli animali più grandi mai esistiti sulla Terra, dinosauri inclusi. — natura',
+'Le tartarughe delle Galápagos possono vivere oltre 100 anni. — natura',
+'I koala dormono in media tra le 18 e le 22 ore al giorno. — natura',
+'Il miele non scade mai, se conservato correttamente: sono stati trovati vasetti commestibili in antiche tombe egizie. — curiosità',
+'Il cuore umano batte in media circa 100.000 volte al giorno. — corpo umano',
+'Gli esseri umani condividono circa il 60% del proprio DNA con le banane. — corpo umano',
+'Il corpo umano adulto contiene circa 37.000 miliardi di cellule. — corpo umano',
+'La pelle è l\'organo più esteso del corpo umano. — corpo umano',
+'Il naso umano può distinguere oltre mille miliardi di odori diversi, secondo alcune stime scientifiche. — corpo umano',
+'Le unghie crescono più velocemente sulle mani che usiamo di più. — corpo umano',
+'Il cervello umano consuma circa il 20% dell\'energia totale del corpo, pur pesando solo il 2% del peso corporeo. — corpo umano',
+'La lingua italiana deriva in gran parte dal fiorentino del Trecento, grazie soprattutto a Dante Alighieri. — lingue',
+'Il mandarino standard è la lingua materna più parlata al mondo per numero di parlanti nativi. — lingue',
+'L\'alfabeto greco ha dato origine, attraverso l\'etrusco, anche all\'alfabeto latino che usiamo oggi. — lingue',
+'La parola "OK" è tra le espressioni più riconosciute al mondo, in quasi ogni lingua. — lingue',
+'Il primo messaggio email della storia fu inviato nel 1971 da Ray Tomlinson. — tecnologia',
+'Il primo sito web della storia è ancora online ed è stato pubblicato nel 1991 al CERN. — tecnologia',
+'Lo smartphone medio contiene più potenza di calcolo dei computer usati per le missioni Apollo sulla Luna. — tecnologia',
+'Il termine "bug" per indicare un errore informatico nacque quando fu trovata una vera falena in un computer nel 1947. — tecnologia',
+'La password più comune al mondo resta ancora oggi una variante di "123456", secondo diverse analisi di sicurezza. — tecnologia',
+'Il primo videogioco commerciale, Pong, fu lanciato nel 1972. — tecnologia',
+'La Grande Muraglia Cinese non è visibile a occhio nudo dallo spazio, contrariamente a un mito molto diffuso. — curiosità',
+'Il cioccolato fu inizialmente consumato come bevanda amara dalle civiltà mesoamericane, non come dolce solido. — curiosità',
+'La pizza margherita prende il nome dalla regina Margherita di Savoia, a cui fu dedicata nel 1889. — curiosità',
+'Il caffè è, dopo il petrolio, una delle materie prime più scambiate al mondo. — curiosità',
+'Venezia è costruita su oltre 100 isolette collegate da centinaia di ponti. — geografia',
+'Il Giappone è composto da oltre 6.800 isole, anche se solo circa 400 sono abitate. — geografia',
+'L\'Australia è sia il paese più grande che l\'isola più grande del mondo. — geografia',
+'Il numero di stelle visibili a occhio nudo in una notte serena, senza inquinamento luminoso, è di circa 2.500-3.000. — astronomia',
+'Un fulmine può raggiungere una temperatura cinque volte superiore a quella della superficie del Sole. — natura',
+'I fiocchi di neve non hanno mai, secondo l\'osservazione scientifica, una forma esattamente identica l\'uno all\'altro. — natura',
+'Lo Stretto di Gibilterra separa l\'Europa dall\'Africa con appena 14 km di mare aperto nel punto più stretto. — geografia',
+'La Groenlandia, pur chiamandosi "terra verde", è ricoperta per oltre l\'80% da ghiacci perenni. — geografia',
+'Il record di permanenza continuativa nello spazio da parte di un essere umano supera i 400 giorni consecutivi. — esplorazione spaziale',
+'La biblioteca di Alessandria d\'Egitto fu uno dei più grandi centri di sapere del mondo antico, poi andato perduto nel corso dei secoli. — storia della cultura',
+'Gli scacchi, nella loro forma antica, nacquero probabilmente in India intorno al VI secolo. — giochi e cultura',
+'Il violino Stradivari deve il proprio pregio anche alla particolare qualità del legno usato nel Seicento. — musica',
+'La musica classica veniva composta, in origine, quasi sempre su commissione di corti o chiese. — musica',
+'Il pane è uno degli alimenti più antichi preparati dall\'uomo, con tracce risalenti a oltre 14.000 anni fa. — storia dell\'alimentazione',
+'Le Olimpiadi moderne furono fondate nel 1896 da Pierre de Coubertin, ispirandosi ai giochi dell\'antica Grecia. — storia dello sport',
+
+ // --- Arte e architettura ---
+'La Cappella Sistina fu affrescata da Michelangelo tra il 1508 e il 1512. — arte',
+'Il Colosseo di Roma poteva ospitare fino a circa 50.000-80.000 spettatori. — architettura',
+'La Gioconda di Leonardo da Vinci è esposta al Museo del Louvre di Parigi dal 1797. — arte',
+'Il Partenone di Atene fu costruito nel V secolo a.C. in onore della dea Atena. — architettura',
+'La Torre di Pisa pende a causa di un cedimento del terreno iniziato già durante la sua costruzione, nel XII secolo. — architettura',
+'Il Taj Mahal fu fatto costruire nel Seicento dall\'imperatore Shah Jahan in memoria della moglie. — architettura',
+'Van Gogh vendette in vita un solo dipinto, nonostante la sua vasta produzione artistica. — arte',
+'Il Duomo di Firenze fu completato con una cupola progettata da Filippo Brunelleschi nel Quattrocento. — architettura',
+'La Statua della Libertà fu un dono della Francia agli Stati Uniti, inaugurata nel 1886. — arte',
+'Machu Picchu, cittadella Inca in Perù, fu costruita nel XV secolo senza l\'uso della ruota o del ferro. — architettura',
+'Pompei rimase sepolta dalle ceneri del Vesuvio per quasi 1700 anni prima di essere riscoperta. — archeologia',
+'I mosaici di Ravenna, risalenti al V-VI secolo, sono tra i più importanti esempi di arte paleocristiana e bizantina in Italia. — arte',
+
+// --- Matematica ---
+'Il numero pi greco (π) ha infinite cifre decimali non periodiche. — matematica',
+'Euclide sistematizzò la geometria nei suoi "Elementi", intorno al 300 a.C. — matematica',
+'Lo zero come cifra numerica fu sviluppato in India, prima di diffondersi nel mondo arabo ed europeo. — matematica',
+'La sequenza di Fibonacci ricorre spesso in natura, ad esempio nella disposizione dei semi di girasole. — matematica',
+'Il numero aureo, circa 1,618, è considerato da secoli un rapporto esteticamente armonioso. — matematica',
+'I numeri primi sono infiniti, come dimostrato già da Euclide. — matematica',
+'Il sistema numerico decimale che usiamo oggi si basa sulla numerazione posizionale indo-araba. — matematica',
+'Pitagora e la sua scuola attribuivano ai numeri un significato quasi mistico, oltre che matematico. — matematica',
+'Il concetto di infinito matematico fu formalizzato rigorosamente solo nell\'Ottocento da Georg Cantor. — matematica',
+'Gli algoritmi che regolano oggi computer e internet derivano da principi di logica matematica sviluppati nei secoli. — matematica',
+'L\'Ultimo Teorema di Fermat, enunciato nel Seicento, fu dimostrato solo nel 1994, dopo oltre 350 anni. — matematica',
+'Il calcolo delle probabilità nacque nel Seicento dallo studio dei giochi d\'azzardo. — matematica',
+
+// --- Letteratura ---
+'L\'Iliade e l\'Odissea sono tradizionalmente attribuite al poeta greco Omero. — letteratura',
+'La Divina Commedia di Dante Alighieri fu scritta nei primi anni del Trecento. — letteratura',
+'Il romanzo Don Chisciotte di Cervantes è considerato tra le opere fondanti del romanzo moderno. — letteratura',
+'Le opere di Shakespeare sono state tradotte in più lingue di quelle di qualunque altro autore in lingua inglese. — letteratura',
+'I Promessi Sposi di Alessandro Manzoni contribuirono a definire l\'italiano moderno come lingua letteraria. — letteratura',
+'Le Mille e una notte raccoglie racconti provenienti da tradizioni persiane, arabe e indiane. — letteratura',
+'Il termine "romanzo" derivava originariamente dal fatto che queste opere erano scritte in lingua "romanza", cioè volgare, e non in latino. — letteratura',
+'La biblioteca di Alessandria custodiva, secondo le fonti antiche, centinaia di migliaia di rotoli di papiro. — storia della cultura',
+'Secondo la tradizione, Omero sarebbe stato cieco. — letteratura',
+'Il termine "biblioteca" deriva dal greco e significa letteralmente "custodia dei libri". — lingue',
+
+// --- Musica ---
+'Ludwig van Beethoven compose alcune delle sue opere più celebri quando era ormai quasi completamente sordo. — musica',
+'Il pianoforte fu inventato agli inizi del Settecento da Bartolomeo Cristofori. — musica',
+'La notazione musicale moderna si sviluppò a partire dal Medioevo, in ambito monastico. — musica',
+'Wolfgang Amadeus Mozart iniziò a comporre musica già a cinque anni d\'età. — musica',
+'Il termine "opera lirica" nacque in Italia tra Cinquecento e Seicento. — musica',
+'Il diapason standard usato oggi per accordare gli strumenti fissa il La a 440 Hz. — musica',
+'Gli antichi greci consideravano la musica strettamente legata alla matematica e all\'armonia dei numeri. — musica',
+'Il canto gregoriano prende il nome da papa Gregorio Magno, a cui la tradizione ne attribuisce la sistemazione. — musica',
+
+// --- Cinema e teatro ---
+'I fratelli Lumière proiettarono pubblicamente i primi filmati nel 1895 a Parigi. — cinema',
+'Il cinema muto fu accompagnato per decenni da musica dal vivo nelle sale. — cinema',
+'Il primo film sonoro di grande successo commerciale fu "Il cantante di jazz", nel 1927. — cinema',
+'Il teatro greco antico nacque come parte di cerimonie religiose in onore del dio Dioniso. — teatro',
+'Le maschere del teatro greco servivano anche ad amplificare la voce degli attori. — teatro',
+'La Commedia dell\'Arte, nata in Italia nel Cinquecento, si basava su personaggi fissi e improvvisazione. — teatro',
+'Il colore arrivò stabilmente al cinema solo a partire dagli anni Trenta del Novecento. — cinema',
+'I primi effetti speciali cinematografici furono sperimentati già a fine Ottocento dal regista Georges Méliès. — cinema', 
+
+// --- Scienze della Terra e geologia ---
+'La Terra ha un\'età stimata di circa 4,54 miliardi di anni. — geologia',
+'Il nucleo interno della Terra è solido nonostante le temperature elevatissime, a causa dell\'enorme pressione. — geologia',
+'La crosta oceanica è generalmente più sottile e più giovane di quella continentale. — geologia',
+'I terremoti si originano prevalentemente lungo i margini delle placche tettoniche. — geologia',
+'L\'eruzione del vulcano Krakatoa, nel 1883, produsse uno dei suoni più forti mai registrati nella storia. — geologia',
+'Le montagne dell\'Himalaya continuano a crescere di alcuni millimetri ogni anno per la collisione tra placche. — geologia',
+'Il diamante è una delle sostanze naturali più dure conosciute, composta interamente da carbonio. — geologia',
+'Le rocce sedimentarie si formano per accumulo e compattazione di detriti nel corso di lunghi periodi di tempo. — geologia',
+'Il ciclo delle rocce descrive la trasformazione continua tra rocce ignee, sedimentarie e metamorfiche. — geologia',
+'Circa il 71% della superficie terrestre è ricoperto da acqua. — geografia fisica',
+'L\'acqua dolce liquida disponibile rappresenta solo una piccola percentuale dell\'acqua totale presente sulla Terra. — geografia fisica',
+'Le correnti oceaniche influenzano in modo determinante il clima dei continenti. — scienze della Terra',
+'Il campo magnetico terrestre protegge il pianeta da gran parte delle radiazioni solari dannose. — geofisica',
+'I poli magnetici terrestri non coincidono esattamente con i poli geografici. — geofisica',
+'L\'atmosfera terrestre è composta per circa il 78% da azoto e il 21% da ossigeno. — scienze della Terra',
+'I ghiacciai custodiscono al loro interno informazioni sul clima di migliaia di anni fa. — scienze della Terra',
+'Le fosse oceaniche più profonde superano i 10.000 metri di profondità. — geologia',
+
+// --- Medicina e anatomia ---
+'Il sistema circolatorio umano è composto da circa 100.000 km di vasi sanguigni. — anatomia',
+'Il fegato è l\'unico organo interno umano capace di rigenerarsi parzialmente dopo una lesione. — anatomia',
+'Il vaccino contro il vaiolo, sviluppato da Edward Jenner nel 1796, fu tra i primi vaccini della storia. — storia della medicina',
+'La scoperta dei gruppi sanguigni da parte di Karl Landsteiner, nel 1901, rese possibili le trasfusioni sicure. — storia della medicina',
+'Le ossa del corpo umano adulto sono 206. — anatomia',
+'Il cuore umano ha quattro camere: due atri e due ventricoli. — anatomia',
+'Il sistema immunitario è in grado di "ricordare" agenti patogeni incontrati in precedenza. — medicina',
+'I raggi X furono scoperti casualmente da Wilhelm Röntgen nel 1895. — storia della medicina',
+'Il sonno svolge un ruolo fondamentale nel consolidamento della memoria. — medicina',
+'Il corpo umano produce circa un litro e mezzo di saliva al giorno. — anatomia',
+'I polmoni umani contengono milioni di piccole sacche chiamate alveoli, dove avviene lo scambio di gas. — anatomia',
+'Il sistema nervoso trasmette impulsi elettrici a velocità che possono superare i 100 metri al secondo. — anatomia',
+'La scoperta della struttura del DNA, nel 1953, aprì la strada alla genetica moderna. — storia della medicina',
+'Il primo trapianto di cuore umano riuscito fu eseguito nel 1967 da Christiaan Barnard. — storia della medicina',
+'Le impronte digitali sono uniche per ogni individuo, gemelli identici inclusi. — anatomia',
+'Il corpo umano è composto per circa il 60% da acqua. — anatomia',
+
+// --- Invenzioni e scoperte ---
+'La ruota idraulica fu tra le prime macchine capaci di sfruttare l\'energia naturale per il lavoro umano. — storia della tecnica',
+'La bussola, inventata in Cina, permise per la prima volta una navigazione più precisa in mare aperto. — storia della tecnica',
+'La polvere da sparo fu scoperta in Cina, probabilmente durante esperimenti alchemici. — storia della tecnica',
+'Il motore a vapore, perfezionato da James Watt nel Settecento, fu tra i motori della Rivoluzione Industriale. — storia della tecnica',
+'Il telegrafo elettrico rese possibile, per la prima volta, la comunicazione quasi istantanea a lunga distanza. — storia della tecnica',
+'La lampadina a incandescenza fu perfezionata da Thomas Edison alla fine dell\'Ottocento. — storia della tecnica',
+'Il frigorifero domestico si diffuse su larga scala solo a partire dal Novecento. — storia della tecnica',
+'Il transistor, inventato nel 1947, sostituì gradualmente le valvole termoioniche nell\'elettronica. — storia della tecnica',
+'Il primo microprocessore commerciale fu introdotto nel 1971. — storia della tecnica',
+'Il codice Morse permise di trasmettere messaggi complessi tramite semplici impulsi elettrici. — storia della tecnica',
+'Il GPS, inizialmente sviluppato per uso militare, divenne di uso civile diffuso a partire dagli anni Novanta. — storia della tecnica',
+'La plastica sintetica moderna nacque agli inizi del Novecento con l\'invenzione della bachelite. — storia della tecnica',
+'Il primo computer elettronico programmabile, l\'ENIAC, occupava un\'intera stanza. — storia della tecnica',
+'Il velcro fu inventato osservando al microscopio i piccoli uncini dei semi di bardana attaccati al pelo di un cane. — storia della tecnica',
+'Il forno a microonde nacque per caso, dall\'osservazione dello scioglimento di una barretta di cioccolato vicino a un magnetron. — storia della tecnica',
+'Il codice a barre fu brevettato negli anni Cinquanta, ma si diffuse commercialmente solo un ventennio più tardi. — storia della tecnica',
+ 
   'Il tempo non si trova, si organizza.'
 ];
 
