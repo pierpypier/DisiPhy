@@ -377,7 +377,11 @@ function calcolaTotali(){
 
 function saveDati(){
   const t = calcolaTotali();
-  const payload = Object.assign({ totaleAncoraDaVersare: t.totaleAncoraDaVersare }, dati);
+  const payload = Object.assign({
+    totaleAncoraDaVersare: t.totaleAncoraDaVersare,
+    totaleDisponibilitaAttuale: t.totaleDisponibilitaAttuale,
+    totaleRisparmiDiletta: t.totaleRisparmiDiletta
+  }, dati);
   try{ localStorage.setItem(LS_CONTODILETTA, JSON.stringify(payload)); }
   catch(e){ console.warn('Errore salvataggio banca_contodiletta_v1', e); }
 }
