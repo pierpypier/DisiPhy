@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Consolle Finanze</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  :root{
+    --bg:#f6f8fb;
+    --card:#ffffff;
+    --accent:#1e88e5;
+    --cal-accent:#2b6cb0;
+    --muted:#6b7280;
+    --shadow:0 6px 18px rgba(20,30,50,0.06);
+    --radius:12px;
+    --max-width:820px;
+    --ok:#2f7a3d;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  .nav {
+    display: flex; justify-content: center; gap: 10px;
+    padding: 5px 0; margin-bottom: 10px; flex-wrap: wrap;
+  }
+  .nav-item {
+    display: flex; flex-direction: column; align-items: center;
+    text-decoration: none; color: #000; font-size: 14px; transition: opacity 0.2s ease;
+  }
+  .nav-item img { width: 84px; height: 84px; margin-bottom: 1px; transition: transform 0.2s ease; }
+  .nav-item:hover img { transform: scale(1.05); }
+  .nav-item:hover { opacity: 0.85; }
+  @media (max-width: 600px) {
+    .nav { gap: 10px; }
+    .nav-item img { width: 60px; height: 60px; }
+    .nav-item span { font-size: 12px; }
+  }
+
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:16px;
+    margin-bottom:18px;
+  }
+  .section-title{ font-size:18px; font-weight:800; color:var(--accent); margin:0 0 6px 0; }
+  .subsection-title{ font-size:13px; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:.03em; margin:20px 0 10px 0; }
+  .hint{ font-size:12px; color:var(--muted); margin-bottom:14px; }
+
+  /* Cruscotto principale: patrimonio totale in evidenza */
+  .hero-box{
+    background:linear-gradient(135deg,#e6f0ff 0%,#ffffff 100%);
+    border-radius:14px;
+    padding:20px;
+    text-align:center;
+    margin-bottom:20px;
+  }
+  .hero-box .hero-label{ font-size:13px; font-weight:700; color:var(--muted); margin-bottom:6px; }
+  .hero-box .hero-value{ font-size:34px; font-weight:800; color:var(--accent); }
+
+  .saldi-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(190px,1fr));
+    gap:10px;
+    margin-bottom:8px;
+  }
+  .saldo-box{
+    background:#f7f9fc;
+    border:1px solid #e6e9ef;
+    border-radius:10px;
+    padding:14px;
+  }
+  .saldo-box .saldo-label{ font-size:12px; color:var(--muted); font-weight:700; margin-bottom:4px; }
+  .saldo-box .saldo-value{ font-size:20px; font-weight:800; color:#111827; }
+  .saldo-box.ok .saldo-value{ color:var(--ok); }
+
+  .empty-note{
+    background:#fff8e6;
+    border:1px solid #f0dfa8;
+    border-radius:10px;
+    padding:12px 14px;
+    font-size:13px;
+    color:#7a5c00;
+    margin-bottom:16px;
+  }
+
+  /* Nav secondaria, identica agli altri moduli banca */
+  .banca-nav-divider{ border:none; border-top:1px solid #e6e9ef; margin:24px 0 14px 0; }
+  .banca-nav{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+  .banca-nav-item{ display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none; color:#374151; font-size:11px; font-weight:700; }
+  .banca-nav-item .icon{
+    width:46px; height:46px; border-radius:50%; background:#eef2f7;
+    display:flex; align-items:center; justify-content:center; font-size:20px;
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .banca-nav-item:hover .icon{ transform:scale(1.06); }
+  .banca-nav-item.active .icon{ background:var(--accent); }
+  .banca-nav-item.active span.lbl{ color:var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item">
+      <img src="rimage/orga4.png" alt="Organizer">
+      <span> NOTE </span>
+    </a>
+    <a href="caldsp.html" class="nav-item">
+      <img src="rimage/calicon.png" alt="Calendario dsp">
+      <span> DATE </span>
+    </a>
+    <a href="check01.html" class="nav-item">
+      <img src="rimage/check02.png" alt="Checklist">
+      <span>LISTE</span>
+    </a>
+    <a href="strweb.html" class="nav-item">
+      <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+      <span> WEB </span>
+    </a>
+    <a href="dashconsolle.html" class="nav-item">
+      <img src="rimage/opzioni.png" alt="Opzioni">
+      <span> ADD </span>
+    </a>
+  </nav>
+
+  <div class="card">
+    <div class="section-title">🏦 Consolle Finanze</div>
+    <div class="hint">Solo saldi di sintesi — per modificare o aggiungere dati usa i singoli moduli dalla barra qui sotto.</div>
+
+    <div id="emptyNote" class="empty-note" style="display:none;"></div>
+
+    <div class="hero-box">
+      <div class="hero-label">Patrimonio totale contabile</div>
+      <div class="hero-value" id="patrimonioTotale">0,00 €</div>
+    </div>
+
+    <div class="subsection-title">Conti correnti</div>
+    <div class="saldi-grid">
+      <div class="saldo-box"><div class="saldo-label">Saldo Intesa</div><div class="saldo-value" id="saldoIntesa">0,00 €</div></div>
+      <div class="saldo-box"><div class="saldo-label">Saldo Findomestic</div><div class="saldo-value" id="saldoFindomestic">0,00 €</div></div>
+    </div>
+
+    <div class="subsection-title">Conto deposito</div>
+    <div class="saldi-grid">
+      <div class="saldo-box"><div class="saldo-label">Conto Deposito Findomestic</div><div class="saldo-value" id="contoDepositoFindomestic">0,00 €</div></div>
+      <div class="saldo-box"><div class="saldo-label">Deposito Risparmi CC</div><div class="saldo-value" id="depositoRisparmiCC">0,00 €</div></div>
+    </div>
+
+    <div class="subsection-title">Contanti</div>
+    <div class="saldi-grid">
+      <div class="saldo-box"><div class="saldo-label">Liquidità</div><div class="saldo-value" id="contantiLiquidita">0,00 €</div></div>
+      <div class="saldo-box"><div class="saldo-label">Deposito risparmi contanti</div><div class="saldo-value" id="contantiDeposito">0,00 €</div></div>
+    </div>
+
+    <div class="subsection-title">Risparmi</div>
+    <div class="saldi-grid">
+      <div class="saldo-box ok"><div class="saldo-label">Totale risparmi</div><div class="saldo-value" id="totaleRisparmi">0,00 €</div></div>
+      <div class="saldo-box"><div class="saldo-label">Conto Diletta</div><div class="saldo-value" id="totaleDiletta">0,00 €</div></div>
+    </div>
+
+    <!-- ============================================================
+         BARRA DI NAVIGAZIONE SECONDARIA — moduli del gestionale conti
+         ============================================================ -->
+    <hr class="banca-nav-divider">
+    <nav class="banca-nav">
+      <a href="bancaconsolle.html" class="banca-nav-item active">
+        <span class="icon">🏦</span>
+        <span class="lbl">Consolle</span>
+      </a>
+      <a href="bancaconti.html" class="banca-nav-item">
+        <span class="icon">💶</span>
+        <span class="lbl">Spese</span>
+      </a>
+      <a href="bancaacquisti.html" class="banca-nav-item">
+        <span class="icon">🛒</span>
+        <span class="lbl">Acquisti</span>
+      </a>
+      <a href="bancacontanti.html" class="banca-nav-item">
+        <span class="icon">💵</span>
+        <span class="lbl">Contanti</span>
+      </a>
+      <a href="bancadiletta.html" class="banca-nav-item">
+        <span class="icon">🎒</span>
+        <span class="lbl">Diletta</span>
+      </a>
+      <a href="bancastorico.html" class="banca-nav-item">
+        <span class="icon">📜</span>
+        <span class="lbl">Storico</span>
+      </a>
+    </nav>
+  </div>
+
+</div>
+
+<script>
+/* ================================================================
+   CHIAVI localStorage — sola lettura, popolate dagli altri moduli
+   ================================================================ */
+const LS_SALDI = 'banca_saldi_v1';
+const LS_CONTANTI = 'banca_contanti_v1';
+const LS_CONTODILETTA = 'banca_contodiletta_v1';
+
+function eur(n){
+  if(typeof n !== 'number' || isNaN(n)) n = 0;
+  return n.toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' €';
+}
+
+function leggiOggetto(key, fallback){
+  try{
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  }catch(e){
+    console.warn('Errore lettura ' + key, e);
+    return fallback;
+  }
+}
+
+function renderConsolle(){
+  const saldi = leggiOggetto(LS_SALDI, null);
+  const contanti = leggiOggetto(LS_CONTANTI, null);
+  const diletta = leggiOggetto(LS_CONTODILETTA, null);
+
+  const nessunDato = !saldi && !contanti;
+  document.getElementById('emptyNote').style.display = nessunDato ? 'block' : 'none';
+  if(nessunDato){
+    document.getElementById('emptyNote').textContent =
+      'Nessun dato trovato: apri il modulo "Spese" e usa "Importa spese dal file Excel" (o inserisci i saldi a mano) per iniziare a popolare questa consolle.';
+  }
+
+  const saldoIntesa = (saldi && typeof saldi.saldoIntesa === 'number') ? saldi.saldoIntesa : 0;
+  const saldoFindomestic = (saldi && typeof saldi.saldoFindomestic === 'number') ? saldi.saldoFindomestic : 0;
+  const contoDepositoFindomestic = (saldi && typeof saldi.contoDepositoFindomestic === 'number') ? saldi.contoDepositoFindomestic : 0;
+  const depositoRisparmiCC = (saldi && typeof saldi.depositoRisparmiCC === 'number') ? saldi.depositoRisparmiCC : 0;
+
+  const contantiLiquidita = (contanti && typeof contanti.liquidita === 'number') ? contanti.liquidita : 0;
+  const contantiDeposito = (contanti && typeof contanti.depositoRisparmio === 'number') ? contanti.depositoRisparmio : 0;
+
+  const totaleDiletta = (diletta && typeof diletta.totaleRisparmiDiletta === 'number') ? diletta.totaleRisparmiDiletta
+                        : (diletta && typeof diletta.totaleAncoraDaVersare === 'number') ? null : 0;
+
+  const contantiTotali = contantiLiquidita + contantiDeposito;
+  const patrimonioTotale = saldoIntesa + saldoFindomestic + contoDepositoFindomestic + contantiTotali;
+  const totaleRisparmi = depositoRisparmiCC + contantiDeposito + contoDepositoFindomestic;
+
+  document.getElementById('patrimonioTotale').textContent = eur(patrimonioTotale);
+  document.getElementById('saldoIntesa').textContent = eur(saldoIntesa);
+  document.getElementById('saldoFindomestic').textContent = eur(saldoFindomestic);
+  document.getElementById('contoDepositoFindomestic').textContent = eur(contoDepositoFindomestic);
+  document.getElementById('depositoRisparmiCC').textContent = eur(depositoRisparmiCC);
+  document.getElementById('contantiLiquidita').textContent = eur(contantiLiquidita);
+  document.getElementById('contantiDeposito').textContent = eur(contantiDeposito);
+  document.getElementById('totaleRisparmi').textContent = eur(totaleRisparmi);
+  document.getElementById('totaleDiletta').textContent = totaleDiletta !== null ? eur(totaleDiletta) : '—';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  renderConsolle();
+  document.addEventListener('visibilitychange', () => {
+    if(document.visibilityState === 'visible') renderConsolle();
+  });
+});
+</script>
+</body>
+</html>

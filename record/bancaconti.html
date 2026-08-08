@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Conti e Spese</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  /* ============================================================
+     VARIABILI DI STILE — identiche al resto della suite
+     ============================================================ */
+  :root{
+    --bg:#f6f8fb;
+    --card:#ffffff;
+    --accent:#1e88e5;
+    --cal-accent:#2b6cb0;
+    --muted:#6b7280;
+    --success:#C3D2BF;
+    --danger:#E3DCC9;
+    --shadow:0 6px 18px rgba(20,30,50,0.06);
+    --radius:12px;
+    --max-width:1080px;
+    --ok:#2f7a3d;
+    --warn:#b8442c;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  /* ============================================================
+     BARRA DI NAVIGAZIONE — identica al resto della suite
+     ============================================================ */
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+  }
+  .nav-item img { width: 84px; height: 84px; margin-bottom: 1px; transition: transform 0.2s ease; }
+  .nav-item:hover img { transform: scale(1.05); }
+  .nav-item:hover { opacity: 0.85; }
+  @media (max-width: 600px) {
+    .nav { gap: 10px; }
+    .nav-item img { width: 60px; height: 60px; }
+    .nav-item span { font-size: 12px; }
+  }
+
+  /* ============================================================
+     CARD e TITOLI
+     ============================================================ */
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:16px;
+    margin-bottom:18px;
+  }
+  .section-title{
+    font-size:18px;
+    font-weight:800;
+    color:var(--accent);
+    margin:0 0 12px 0;
+  }
+  .hint{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:-6px;
+    margin-bottom:12px;
+  }
+
+  /* ============================================================
+     TAB DI NAVIGAZIONE INTERNA
+     ============================================================ */
+  .tabs{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:16px;
+  }
+  .tab-btn{
+    background:#eef2f7;
+    border:none;
+    border-radius:999px;
+    padding:8px 16px;
+    font-weight:700;
+    font-size:13px;
+    color:#374151;
+    cursor:pointer;
+  }
+  .tab-btn.active{
+    background:var(--accent);
+    color:#fff;
+  }
+  .tab-panel{ display:none; }
+  .tab-panel.active{ display:block; }
+
+  /* ============================================================
+     CRUSCOTTO NUMERICO (riepiloghi calcolati)
+     ============================================================ */
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(190px,1fr));
+    gap:10px;
+    margin-bottom:16px;
+  }
+  .stat-box{
+    background:#f7f9fc;
+    border:1px solid #e6e9ef;
+    border-radius:10px;
+    padding:12px 14px;
+  }
+  .stat-box .stat-label{
+    font-size:12px;
+    color:var(--muted);
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  .stat-box .stat-value{
+    font-size:19px;
+    font-weight:800;
+    color:#111827;
+  }
+  .stat-box.ok .stat-value{ color:var(--ok); }
+  .stat-box.warn .stat-value{ color:var(--warn); }
+
+  /* ============================================================
+     CAMPI SALDO EDITABILI
+     ============================================================ */
+  .saldi-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:12px;
+    margin-bottom:16px;
+  }
+  .saldo-field label{
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+  .saldo-field input{
+    width:100%;
+    padding:9px 10px;
+    border-radius:8px;
+    border:1px solid #e6e9ef;
+    font-size:15px;
+    font-family:inherit;
+  }
+
+  /* ============================================================
+     TABELLA SPESE
+     ============================================================ */
+  table.spese-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+  }
+  table.spese-table th{
+    text-align:left;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    color:var(--muted);
+    border-bottom:2px solid #e6e9ef;
+    padding:6px 8px;
+  }
+  table.spese-table td{
+    padding:8px;
+    border-bottom:1px solid #f0f2f5;
+    vertical-align:middle;
+  }
+  table.spese-table tr:hover td{ background:#f9fbfd; }
+  .conto-badge{
+    display:inline-block;
+    padding:2px 8px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:700;
+  }
+  .conto-badge.intesa{ background:#dbeafe; color:#1e40af; }
+  .conto-badge.findomestic{ background:#fde8e0; color:#9a3412; }
+  .tipo-badge{
+    display:inline-block;
+    padding:2px 8px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:700;
+    background:#eef2f7;
+    color:#374151;
+  }
+  .row-actions button{
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-size:14px;
+    padding:2px 4px;
+  }
+  .row-actions button:hover{ opacity:.7; }
+  .flag-yes{ color:var(--ok); font-weight:800; }
+  .flag-no{ color:#cbd5e1; }
+
+  /* ============================================================
+     FORM AGGIUNTA/MODIFICA SPESA
+     ============================================================ */
+  .spesa-form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(160px,1fr));
+    gap:10px;
+    background:#f7f9fc;
+    border:1px solid #e6e9ef;
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:16px;
+  }
+  .spesa-form .full{ grid-column:1/-1; }
+  .spesa-form label{
+    display:block;
+    font-size:11px;
+    font-weight:700;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+  .spesa-form input, .spesa-form select{
+    width:100%;
+    padding:8px 9px;
+    border-radius:8px;
+    border:1px solid #e6e9ef;
+    font-size:14px;
+    font-family:inherit;
+  }
+  .spesa-form .checkbox-row{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:13px;
+    font-weight:600;
+    color:#374151;
+  }
+  .spesa-form .checkbox-row input{ width:auto; }
+  .form-actions{
+    grid-column:1/-1;
+    display:flex;
+    gap:10px;
+    margin-top:4px;
+  }
+  .btn{
+    border:none;
+    border-radius:8px;
+    padding:9px 18px;
+    font-weight:700;
+    font-size:14px;
+    cursor:pointer;
+  }
+  .btn-primary{ background:var(--accent); color:#fff; }
+  .btn-secondary{ background:#e5e7eb; color:#374151; }
+  .btn:hover{ filter:brightness(0.96); }
+
+  .conditional-field{ display:none; }
+  .conditional-field.show{ display:block; }
+
+  .empty-msg{
+    color:var(--muted);
+    font-size:14px;
+    font-style:italic;
+    padding:10px 2px;
+  }
+
+  /* ============================================================
+     BARRA DI NAVIGAZIONE SECONDARIA — moduli del gestionale conti
+     ============================================================ */
+  .banca-nav-divider{
+    border: none;
+    border-top: 1px solid #e6e9ef;
+    margin: 24px 0 14px 0;
+  }
+  .banca-nav{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-bottom:4px;
+  }
+  .banca-nav-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    text-decoration:none;
+    color:#374151;
+    font-size:11px;
+    font-weight:700;
+  }
+  .banca-nav-item .icon{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:#eef2f7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .banca-nav-item:hover .icon{ transform:scale(1.06); }
+  .banca-nav-item.active .icon{ background:var(--accent); }
+  .banca-nav-item.active span.lbl{ color:var(--accent); }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============================================================
+       BARRA DI NAVIGAZIONE
+       ============================================================ -->
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item">
+      <img src="rimage/orga4.png" alt="Organizer">
+      <span> NOTE </span>
+    </a>
+    <a href="caldsp.html" class="nav-item">
+      <img src="rimage/calicon.png" alt="Calendario dsp">
+      <span> DATE </span>
+    </a>
+    <a href="check01.html" class="nav-item">
+      <img src="rimage/check02.png" alt="Checklist">
+      <span>LISTE</span>
+    </a>
+    <a href="strweb.html" class="nav-item">
+      <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+      <span> WEB </span>
+    </a>
+    <a href="dashconsolle.html" class="nav-item">
+      <img src="rimage/opzioni.png" alt="Opzioni">
+      <span> ADD </span>
+    </a>
+  </nav>
+
+  <div class="card">
+    <div class="section-title">💶 Conti e Spese</div>
+    <div class="hint">Anagrafica spese, viste Intesa/Findomestic e cruscotto patrimonio. I dati restano solo su questo dispositivo (localStorage).</div>
+
+    <!-- TAB -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tabSpese">Spese</button>
+      <button class="tab-btn" data-tab="tabIntesa">Intesa</button>
+      <button class="tab-btn" data-tab="tabFindomestic">Findomestic</button>
+      <button class="tab-btn" data-tab="tabDisponibilita">Disponibilità</button>
+    </div>
+
+    <!-- ========================================================
+         TAB: SPESE (anagrafica master)
+         ======================================================== -->
+    <div class="tab-panel active" id="tabSpese">
+
+      <div class="form-actions" style="margin-bottom:14px;">
+        <button class="btn btn-secondary" id="btnImportaIniziali">📥 Importa spese dal file Excel</button>
+      </div>
+
+      <div class="spesa-form" id="spesaForm">
+        <input type="hidden" id="spesaId">
+        <div class="full">
+          <label>Nome spesa</label>
+          <input type="text" id="fNome" placeholder="Es. Assicurazione auto">
+        </div>
+
+        <div>
+          <label>Conto</label>
+          <select id="fConto">
+            <option value="intesa">Intesa</option>
+            <option value="findomestic">Findomestic</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Tipo</label>
+          <select id="fTipo">
+            <option value="fissa">Fissa (importo pieno)</option>
+            <option value="rateizzata">A scadenza (accantonamento)</option>
+          </select>
+        </div>
+
+        <div>
+          <label id="lblImporto">Importo (€)</label>
+          <input type="number" step="0.01" id="fImporto" placeholder="0.00">
+        </div>
+
+        <div class="conditional-field" id="fScadenzaWrap">
+          <label>Data di scadenza</label>
+          <input type="date" id="fScadenza">
+        </div>
+        <div class="conditional-field" id="fPeriodoWrap">
+          <label>Periodo ricorrenza (giorni)</label>
+          <input type="number" id="fPeriodo" placeholder="Es. 365">
+        </div>
+        <div class="conditional-field" id="fAssestamentoWrap">
+          <label class="checkbox-row"><input type="checkbox" id="fAssestamento"> Calcola il residuo mancante invece del maturato (tipo "Assestamenti")</label>
+        </div>
+
+        <div>
+          <label class="checkbox-row"><input type="checkbox" id="fRimandabile"> Rimandabile (solo Intesa)</label>
+        </div>
+        <div>
+          <label class="checkbox-row"><input type="checkbox" id="fCollegaAcquisti"> Sottrai acquisti già tracciati</label>
+        </div>
+        <div>
+          <label class="checkbox-row"><input type="checkbox" id="fCollegaDiletta"> Importo dal modulo Conto Diletta</label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" id="btnSalvaSpesa">Aggiungi spesa</button>
+          <button class="btn btn-secondary" id="btnAnnullaModifica" style="display:none;">Annulla modifica</button>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="spese-table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Conto</th>
+              <th>Tipo</th>
+              <th>Importo</th>
+              <th>Scadenza</th>
+              <th>Rimandabile</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="speseTableBody"></tbody>
+        </table>
+      </div>
+      <div class="empty-msg" id="speseEmptyMsg" style="display:none;">Nessuna spesa registrata. Aggiungine una dal modulo sopra.</div>
+    </div>
+
+    <!-- ========================================================
+         TAB: INTESA
+         ======================================================== -->
+    <div class="tab-panel" id="tabIntesa">
+      <div class="saldi-grid">
+        <div class="saldo-field">
+          <label>Saldo Intesa alla data odierna (€)</label>
+          <input type="number" step="0.01" id="saldoIntesa">
+        </div>
+      </div>
+
+      <div class="stat-grid" id="statIntesa"></div>
+
+      <div style="overflow-x:auto;">
+        <table class="spese-table">
+          <thead>
+            <tr><th>Spesa</th><th>Quota da accantonare</th><th>Rimandabile</th></tr>
+          </thead>
+          <tbody id="intesaTableBody"></tbody>
+        </table>
+      </div>
+      <div class="empty-msg" id="intesaEmptyMsg" style="display:none;">Nessuna spesa assegnata a Intesa.</div>
+    </div>
+
+    <!-- ========================================================
+         TAB: FINDOMESTIC
+         ======================================================== -->
+    <div class="tab-panel" id="tabFindomestic">
+      <div class="saldi-grid">
+        <div class="saldo-field">
+          <label>Saldo Findomestic alla data odierna (€)</label>
+          <input type="number" step="0.01" id="saldoFindomestic">
+        </div>
+        <div class="saldo-field">
+          <label>Conto Deposito Findomestic (€)</label>
+          <input type="number" step="0.01" id="contoDepositoFindomestic">
+        </div>
+      </div>
+
+      <div class="stat-grid" id="statFindomestic"></div>
+
+      <div style="overflow-x:auto;">
+        <table class="spese-table">
+          <thead>
+            <tr><th>Spesa</th><th>Quota da accantonare</th></tr>
+          </thead>
+          <tbody id="findomesticTableBody"></tbody>
+        </table>
+      </div>
+      <div class="empty-msg" id="findomesticEmptyMsg" style="display:none;">Nessuna spesa assegnata a Findomestic.</div>
+    </div>
+
+    <!-- ========================================================
+         TAB: DISPONIBILITÀ (cruscotto generale)
+         ======================================================== -->
+    <div class="tab-panel" id="tabDisponibilita">
+      <div class="saldi-grid">
+        <div class="saldo-field">
+          <label>Deposito Risparmi CC (€)</label>
+          <input type="number" step="0.01" id="depositoRisparmiCC">
+        </div>
+      </div>
+      <div class="hint">I saldi Intesa/Findomestic si aggiornano dalle rispettive schede. I contanti, se presenti, vengono letti dal modulo "Contanti" quando disponibile.</div>
+
+      <div class="stat-grid" id="statDisponibilita"></div>
+    </div>
+
+  </div>
+
+
+  <!-- ============================================================
+       BARRA DI NAVIGAZIONE SECONDARIA — moduli del gestionale conti
+       ============================================================ -->
+  <hr class="banca-nav-divider">
+  <nav class="banca-nav">
+    <a href="bancaconsolle.html" class="banca-nav-item">
+      <span class="icon">🏦</span>
+      <span class="lbl">Consolle</span>
+    </a>
+    <a href="bancaconti.html" class="banca-nav-item active">
+      <span class="icon">💶</span>
+      <span class="lbl">Spese</span>
+    </a>
+    <a href="bancaacquisti.html" class="banca-nav-item">
+      <span class="icon">🛒</span>
+      <span class="lbl">Acquisti</span>
+    </a>
+    <a href="bancacontanti.html" class="banca-nav-item">
+      <span class="icon">💵</span>
+      <span class="lbl">Contanti</span>
+    </a>
+    <a href="bancadiletta.html" class="banca-nav-item">
+      <span class="icon">🎒</span>
+      <span class="lbl">Diletta</span>
+    </a>
+    <a href="bancastorico.html" class="banca-nav-item">
+      <span class="icon">📜</span>
+      <span class="lbl">Storico</span>
+    </a>
+  </nav>
+
+</div>
+
+<script>
+/* ================================================================
+   CHIAVI localStorage
+   ================================================================ */
+const LS_SPESE = 'banca_spese_v1';
+const LS_SALDI = 'banca_saldi_v1';
+const LS_ACQUISTI = 'banca_acquisti_v1';        // popolato dal modulo bancaacquisti.html
+const LS_CONTODILETTA = 'banca_contodiletta_v1'; // popolato dal modulo bancadiletta.html
+const LS_CONTANTI = 'banca_contanti_v1';         // popolato dal modulo bancacontanti.html
+
+let spese = [];
+let saldi = {
+  saldoIntesa: 0,
+  saldoFindomestic: 0,
+  contoDepositoFindomestic: 0,
+  depositoRisparmiCC: 0
+};
+
+/* ================================================================
+   PERSISTENZA
+   ================================================================ */
+function loadData(){
+  try{
+    const raw = localStorage.getItem(LS_SPESE);
+    if(raw) spese = JSON.parse(raw);
+  }catch(e){ console.warn('Errore lettura banca_spese_v1', e); }
+
+  try{
+    const raw = localStorage.getItem(LS_SALDI);
+    if(raw) saldi = Object.assign(saldi, JSON.parse(raw));
+  }catch(e){ console.warn('Errore lettura banca_saldi_v1', e); }
+}
+function saveSpese(){
+  try{ localStorage.setItem(LS_SPESE, JSON.stringify(spese)); }
+  catch(e){ console.warn('Errore salvataggio banca_spese_v1', e); }
+}
+function saveSaldi(){
+  try{ localStorage.setItem(LS_SALDI, JSON.stringify(saldi)); }
+  catch(e){ console.warn('Errore salvataggio banca_saldi_v1', e); }
+}
+
+/* Legge un totale numerico da un modulo esterno della suite, con fallback a 0 */
+function readExternalTotal(key, path){
+  try{
+    const raw = localStorage.getItem(key);
+    if(!raw) return 0;
+    const parsed = JSON.parse(raw);
+    const val = path(parsed);
+    return typeof val === 'number' && !isNaN(val) ? val : 0;
+  }catch(e){
+    return 0;
+  }
+}
+
+/* ================================================================
+   UTILITÀ NUMERICHE E DATE
+   ================================================================ */
+function eur(n){
+  if(typeof n !== 'number' || isNaN(n)) n = 0;
+  return n.toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' €';
+}
+function todayMidnight(){
+  const d = new Date();
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+}
+function giorniMancanti(scadenzaISO){
+  if(!scadenzaISO) return null;
+  const scad = new Date(scadenzaISO + 'T00:00:00');
+  if(isNaN(scad.getTime())) return null;
+  const diff = Math.round((scad - todayMidnight()) / 86400000);
+  return diff;
+}
+
+/* ================================================================
+   CALCOLO QUOTA EFFETTIVA DI UNA SPESA
+   Riproduce le formule del foglio Excel originale:
+   - fissa: importo pieno
+   - rateizzata: accantonamento pro-quota in base al tempo trascorso
+     del ciclo di scadenza (o il residuo mancante, per le spese
+     con "formulaAssestamento" attivo, tipo "assicurazione anti-sorprese")
+   - collegaAcquisti: sottrae il totale già speso nel modulo Acquisti
+   - collegaContoDiletta: l'importo è sostituito dal totale ancora da
+     versare nel modulo Conto Diletta
+   ================================================================ */
+function calcolaQuota(s){
+  let quota = 0;
+
+  if(s.tipo === 'rateizzata' && s.scadenza && s.periodoGiorni){
+    // Replica esatta della formula Excel: =(importo/periodo)*(periodo-giorniMancanti)
+    // Nessun clamping: se la scadenza è già passata o è oltre un intero periodo
+    // di distanza, il risultato può legittimamente essere negativo o superare
+    // l'importo pieno — è così anche nel foglio originale.
+    const gm = giorniMancanti(s.scadenza) ?? 0;
+    const periodo = Number(s.periodoGiorni) || 1;
+    const giorniTrascorsi = periodo - gm;
+    const quotaMaturata = (Number(s.importo) || 0) * giorniTrascorsi / periodo;
+    quota = s.formulaAssestamento ? (Number(s.importo) || 0) - quotaMaturata : quotaMaturata;
+  } else {
+    quota = Number(s.importo) || 0;
+  }
+
+  if(s.collegaAcquisti){
+    const totaleAcquisti = readExternalTotal(LS_ACQUISTI, arr => Array.isArray(arr) ? arr.reduce((sum,a)=>sum+(Number(a.importo)||0),0) : 0);
+    quota -= totaleAcquisti;
+  }
+  if(s.collegaContoDiletta){
+    quota = readExternalTotal(LS_CONTODILETTA, obj => (obj && typeof obj.totaleAncoraDaVersare === 'number') ? obj.totaleAncoraDaVersare : 0);
+  }
+
+  return quota;
+}
+
+/* ================================================================
+   TAB SWITCHING
+   ================================================================ */
+function initTabs(){
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+}
+
+/* ================================================================
+   FORM: campi condizionali in base al tipo di spesa
+   ================================================================ */
+function updateFormConditional(){
+  const tipo = document.getElementById('fTipo').value;
+  const isRateizzata = tipo === 'rateizzata';
+  document.getElementById('fScadenzaWrap').classList.toggle('show', isRateizzata);
+  document.getElementById('fPeriodoWrap').classList.toggle('show', isRateizzata);
+  document.getElementById('fAssestamentoWrap').classList.toggle('show', isRateizzata);
+  document.getElementById('lblImporto').textContent = isRateizzata ? 'Importo totale alla scadenza (€)' : 'Importo (€)';
+}
+
+function resetForm(){
+  document.getElementById('spesaId').value = '';
+  document.getElementById('fNome').value = '';
+  document.getElementById('fConto').value = 'intesa';
+  document.getElementById('fTipo').value = 'fissa';
+  document.getElementById('fImporto').value = '';
+  document.getElementById('fScadenza').value = '';
+  document.getElementById('fPeriodo').value = '';
+  document.getElementById('fAssestamento').checked = false;
+  document.getElementById('fRimandabile').checked = false;
+  document.getElementById('fCollegaAcquisti').checked = false;
+  document.getElementById('fCollegaDiletta').checked = false;
+  document.getElementById('btnSalvaSpesa').textContent = 'Aggiungi spesa';
+  document.getElementById('btnAnnullaModifica').style.display = 'none';
+  updateFormConditional();
+}
+
+function caricaSpesaNelForm(id){
+  const s = spese.find(x => x.id === id);
+  if(!s) return;
+  document.getElementById('spesaId').value = s.id;
+  document.getElementById('fNome').value = s.nome;
+  document.getElementById('fConto').value = s.conto;
+  document.getElementById('fTipo').value = s.tipo;
+  document.getElementById('fImporto').value = s.importo;
+  document.getElementById('fScadenza').value = s.scadenza || '';
+  document.getElementById('fPeriodo').value = s.periodoGiorni || '';
+  document.getElementById('fAssestamento').checked = !!s.formulaAssestamento;
+  document.getElementById('fRimandabile').checked = !!s.rimandabile;
+  document.getElementById('fCollegaAcquisti').checked = !!s.collegaAcquisti;
+  document.getElementById('fCollegaDiletta').checked = !!s.collegaContoDiletta;
+  document.getElementById('btnSalvaSpesa').textContent = 'Salva modifiche';
+  document.getElementById('btnAnnullaModifica').style.display = 'inline-block';
+  updateFormConditional();
+  document.getElementById('spesaForm').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function salvaSpesaDalForm(){
+  const nome = document.getElementById('fNome').value.trim();
+  if(!nome){ alert('Inserisci il nome della spesa.'); return; }
+
+  const tipo = document.getElementById('fTipo').value;
+  const scadenza = document.getElementById('fScadenza').value;
+  const periodo = document.getElementById('fPeriodo').value;
+  if(tipo === 'rateizzata' && (!scadenza || !periodo)){
+    alert('Per una spesa "a scadenza" servono sia la data di scadenza sia il periodo di ricorrenza in giorni.');
+    return;
+  }
+
+  const id = document.getElementById('spesaId').value;
+  const spesaObj = {
+    id: id || ('s_' + Date.now()),
+    nome: nome,
+    conto: document.getElementById('fConto').value,
+    tipo: tipo,
+    importo: parseFloat(document.getElementById('fImporto').value) || 0,
+    scadenza: tipo === 'rateizzata' ? scadenza : null,
+    periodoGiorni: tipo === 'rateizzata' ? parseInt(periodo, 10) : null,
+    formulaAssestamento: document.getElementById('fAssestamento').checked,
+    rimandabile: document.getElementById('fRimandabile').checked,
+    collegaAcquisti: document.getElementById('fCollegaAcquisti').checked,
+    collegaContoDiletta: document.getElementById('fCollegaDiletta').checked
+  };
+
+  if(id){
+    const idx = spese.findIndex(x => x.id === id);
+    if(idx >= 0) spese[idx] = spesaObj;
+  } else {
+    spese.push(spesaObj);
+  }
+
+  saveSpese();
+  resetForm();
+  renderAll();
+}
+
+function eliminaSpesa(id){
+  if(!confirm('Eliminare questa spesa?')) return;
+  spese = spese.filter(x => x.id !== id);
+  saveSpese();
+  renderAll();
+}
+
+/* ================================================================
+   RENDER: TAB SPESE (tabella anagrafica)
+   ================================================================ */
+function renderSpeseTable(){
+  const tbody = document.getElementById('speseTableBody');
+  tbody.innerHTML = '';
+  document.getElementById('speseEmptyMsg').style.display = spese.length === 0 ? 'block' : 'none';
+
+  spese.forEach(s => {
+    const tr = document.createElement('tr');
+    const scadenzaTxt = s.scadenza ? new Date(s.scadenza + 'T00:00:00').toLocaleDateString('it-IT') : '—';
+    tr.innerHTML = `
+      <td>${escapeHtml(s.nome)}</td>
+      <td><span class="conto-badge ${s.conto}">${s.conto === 'intesa' ? 'Intesa' : 'Findomestic'}</span></td>
+      <td><span class="tipo-badge">${s.tipo === 'fissa' ? 'Fissa' : 'A scadenza'}</span></td>
+      <td>${eur(calcolaQuota(s))}</td>
+      <td>${scadenzaTxt}</td>
+      <td>${s.rimandabile ? '<span class="flag-yes">✔</span>' : '<span class="flag-no">—</span>'}</td>
+      <td class="row-actions">
+        <button title="Modifica" data-edit="${s.id}">✏️</button>
+        <button title="Elimina" data-del="${s.id}">🗑️</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  tbody.querySelectorAll('[data-edit]').forEach(btn => {
+    btn.addEventListener('click', () => caricaSpesaNelForm(btn.dataset.edit));
+  });
+  tbody.querySelectorAll('[data-del]').forEach(btn => {
+    btn.addEventListener('click', () => eliminaSpesa(btn.dataset.del));
+  });
+}
+
+/* ================================================================
+   RENDER: TAB INTESA
+   ================================================================ */
+function renderIntesa(){
+  const speseIntesa = spese.filter(s => s.conto === 'intesa');
+  const tbody = document.getElementById('intesaTableBody');
+  tbody.innerHTML = '';
+  document.getElementById('intesaEmptyMsg').style.display = speseIntesa.length === 0 ? 'block' : 'none';
+
+  let giacenzaNecessaria = 0;
+  let speseRimandabili = 0;
+
+  speseIntesa.forEach(s => {
+    const quota = calcolaQuota(s);
+    giacenzaNecessaria += quota;
+    if(s.rimandabile) speseRimandabili += quota;
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${escapeHtml(s.nome)}</td>
+      <td>${eur(quota)}</td>
+      <td>${s.rimandabile ? '<span class="flag-yes">✔</span>' : '<span class="flag-no">—</span>'}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  const giacenzaMinima = giacenzaNecessaria - speseRimandabili;
+  const prelievoMassimo = saldi.saldoIntesa - giacenzaMinima;
+
+  const box = document.getElementById('statIntesa');
+  box.innerHTML = `
+    <div class="stat-box"><div class="stat-label">Saldo attuale</div><div class="stat-value">${eur(saldi.saldoIntesa)}</div></div>
+    <div class="stat-box"><div class="stat-label">Giacenza necessaria</div><div class="stat-value">${eur(giacenzaNecessaria)}</div></div>
+    <div class="stat-box"><div class="stat-label">Spese rimandabili</div><div class="stat-value">${eur(speseRimandabili)}</div></div>
+    <div class="stat-box"><div class="stat-label">Giacenza minima</div><div class="stat-value">${eur(giacenzaMinima)}</div></div>
+    <div class="stat-box ${prelievoMassimo >= 0 ? 'ok' : 'warn'}"><div class="stat-label">Prelievo/versamento possibile</div><div class="stat-value">${eur(prelievoMassimo)}</div></div>
+  `;
+
+  return { giacenzaMinima };
+}
+
+/* ================================================================
+   RENDER: TAB FINDOMESTIC
+   ================================================================ */
+function renderFindomestic(){
+  const speseFindo = spese.filter(s => s.conto === 'findomestic');
+  const tbody = document.getElementById('findomesticTableBody');
+  tbody.innerHTML = '';
+  document.getElementById('findomesticEmptyMsg').style.display = speseFindo.length === 0 ? 'block' : 'none';
+
+  let giacenzaNecessaria = 0;
+
+  speseFindo.forEach(s => {
+    const quota = calcolaQuota(s);
+    giacenzaNecessaria += quota;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${escapeHtml(s.nome)}</td><td>${eur(quota)}</td>`;
+    tbody.appendChild(tr);
+  });
+
+  const disponibilitaTotale = saldi.saldoFindomestic + saldi.contoDepositoFindomestic;
+  const giacenzaMinima = giacenzaNecessaria; // per Findomestic il flag "rimandabile" non è attivo, come da impostazione confermata
+  const disponibilitaContabile = disponibilitaTotale - giacenzaNecessaria;
+  const alertOk = giacenzaMinima <= disponibilitaTotale;
+
+  const box = document.getElementById('statFindomestic');
+  box.innerHTML = `
+    <div class="stat-box"><div class="stat-label">Saldo attuale</div><div class="stat-value">${eur(saldi.saldoFindomestic)}</div></div>
+    <div class="stat-box"><div class="stat-label">Disponibilità totale</div><div class="stat-value">${eur(disponibilitaTotale)}</div></div>
+    <div class="stat-box"><div class="stat-label">Giacenza necessaria</div><div class="stat-value">${eur(giacenzaNecessaria)}</div></div>
+    <div class="stat-box ${disponibilitaContabile >= 0 ? 'ok' : 'warn'}"><div class="stat-label">Disponibilità contabile</div><div class="stat-value">${eur(disponibilitaContabile)}</div></div>
+    <div class="stat-box ${alertOk ? 'ok' : 'warn'}"><div class="stat-label">Stato</div><div class="stat-value">${alertOk ? '✅ ok' : '🆘 attenzione'}</div></div>
+  `;
+
+  return { giacenzaMinima };
+}
+
+/* ================================================================
+   RENDER: TAB DISPONIBILITÀ (cruscotto generale / patrimonio)
+   ================================================================ */
+function renderDisponibilita(giacenzaMinimaIntesa, giacenzaMinimaFindomestic){
+  const contantiDeposito = readExternalTotal(LS_CONTANTI, obj => (obj && typeof obj.depositoRisparmio === 'number') ? obj.depositoRisparmio : 0);
+  const contantiLiquidita = readExternalTotal(LS_CONTANTI, obj => (obj && typeof obj.liquidita === 'number') ? obj.liquidita : 0);
+  const contantiTotali = contantiDeposito + contantiLiquidita;
+
+  const patrimonioTotale = saldi.saldoIntesa + saldi.saldoFindomestic + saldi.contoDepositoFindomestic + contantiTotali;
+  const patrimonioADisposizione = patrimonioTotale - (giacenzaMinimaIntesa + giacenzaMinimaFindomestic);
+  const totaleRisparmi = saldi.depositoRisparmiCC + contantiDeposito + saldi.contoDepositoFindomestic;
+
+  const box = document.getElementById('statDisponibilita');
+  box.innerHTML = `
+    <div class="stat-box"><div class="stat-label">Saldo Intesa</div><div class="stat-value">${eur(saldi.saldoIntesa)}</div></div>
+    <div class="stat-box"><div class="stat-label">Saldo Findomestic</div><div class="stat-value">${eur(saldi.saldoFindomestic)}</div></div>
+    <div class="stat-box"><div class="stat-label">Conto Deposito Findomestic</div><div class="stat-value">${eur(saldi.contoDepositoFindomestic)}</div></div>
+    <div class="stat-box"><div class="stat-label">Contanti (deposito + liquidità)</div><div class="stat-value">${eur(contantiTotali)}</div></div>
+    <div class="stat-box"><div class="stat-label">Patrimonio totale contabile</div><div class="stat-value">${eur(patrimonioTotale)}</div></div>
+    <div class="stat-box ok"><div class="stat-label">Patrimonio a disposizione</div><div class="stat-value">${eur(patrimonioADisposizione)}</div></div>
+    <div class="stat-box"><div class="stat-label">Totale risparmi</div><div class="stat-value">${eur(totaleRisparmi)}</div></div>
+  `;
+}
+
+/* ================================================================
+   IMPORTAZIONE DATI INIZIALI (dal file Excel originale)
+   Un'operazione una-tantum: carica le 24 spese e i 4 saldi già
+   presenti nel gestionale Excel, così non serve reinserirli a mano.
+   ================================================================ */
+const IMPORT_SALDI_INIZIALI = {
+  saldoIntesa: 13041,
+  saldoFindomestic: 372,
+  contoDepositoFindomestic: 532,
+  depositoRisparmiCC: 10000
+};
+
+const IMPORT_SPESE_INIZIALI = [
+  { nome:'Finanziamento Findomestic', conto:'intesa', tipo:'fissa', importo:430, scadenza:null, periodoGiorni:null, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Assestamenti (30 gg x 18+3 €)', conto:'intesa', tipo:'rateizzata', importo:630, scadenza:'2026-08-17', periodoGiorni:30, formulaAssestamento:true, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Cellulare Pier', conto:'intesa', tipo:'fissa', importo:10, scadenza:null, periodoGiorni:null, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Cellulare Simo', conto:'intesa', tipo:'fissa', importo:10, scadenza:null, periodoGiorni:null, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Cellulare Diletta', conto:'intesa', tipo:'fissa', importo:10, scadenza:null, periodoGiorni:null, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Netflix', conto:'intesa', tipo:'fissa', importo:10, scadenza:null, periodoGiorni:null, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Arrampicata Diletta', conto:'intesa', tipo:'fissa', importo:45, scadenza:null, periodoGiorni:null, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Acquisti vari on-line', conto:'intesa', tipo:'fissa', importo:250, scadenza:null, periodoGiorni:null, formulaAssestamento:false, rimandabile:false, collegaAcquisti:true, collegaContoDiletta:false },
+  { nome:'Da versare nel conto di Diletta', conto:'findomestic', tipo:'fissa', importo:200, scadenza:null, periodoGiorni:null, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:true },
+  { nome:'costi cc bancario Findomestic', conto:'findomestic', tipo:'fissa', importo:10, scadenza:null, periodoGiorni:null, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'quota assicurazione c3 (scadenza 27/11/2026)', conto:'intesa', tipo:'rateizzata', importo:450, scadenza:'2026-11-23', periodoGiorni:365, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'quota assicurazione c1', conto:'intesa', tipo:'rateizzata', importo:250, scadenza:'2026-10-19', periodoGiorni:365, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'quota bollo c1', conto:'intesa', tipo:'rateizzata', importo:132, scadenza:'2026-09-25', periodoGiorni:365, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'quota condominio (trimestre)', conto:'intesa', tipo:'rateizzata', importo:150, scadenza:'2026-08-18', periodoGiorni:90, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'quota bollo c3', conto:'intesa', tipo:'rateizzata', importo:161, scadenza:'2026-09-25', periodoGiorni:365, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Tari (ott. dic. feb. apr.)', conto:'intesa', tipo:'rateizzata', importo:90, scadenza:'2026-10-31', periodoGiorni:180, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Eni luce e gas', conto:'intesa', tipo:'rateizzata', importo:350, scadenza:'2026-09-09', periodoGiorni:60, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Abbanoa', conto:'intesa', tipo:'rateizzata', importo:326, scadenza:'2026-08-13', periodoGiorni:90, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Tagliando C3', conto:'intesa', tipo:'rateizzata', importo:220, scadenza:'2026-10-31', periodoGiorni:365, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Distribuzione C3', conto:'intesa', tipo:'rateizzata', importo:700, scadenza:'2028-11-01', periodoGiorni:1825, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Garanzia Motore C3', conto:'intesa', tipo:'rateizzata', importo:100, scadenza:'2026-10-31', periodoGiorni:365, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'PEC Aruba', conto:'intesa', tipo:'rateizzata', importo:13, scadenza:'2026-11-19', periodoGiorni:365, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Revisione C1', conto:'intesa', tipo:'rateizzata', importo:80, scadenza:'2028-08-31', periodoGiorni:730, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false },
+  { nome:'Revisione C3', conto:'intesa', tipo:'rateizzata', importo:80, scadenza:'2027-11-30', periodoGiorni:730, formulaAssestamento:false, rimandabile:false, collegaAcquisti:false, collegaContoDiletta:false }
+];
+
+function eseguiImportazioneIniziale(){
+  if(spese.length > 0){
+    const continua = confirm(
+      `Sono già presenti ${spese.length} spese registrate.\n` +
+      `Importando di nuovo, le 24 spese del file Excel verranno AGGIUNTE a quelle esistenti ` +
+      `(non sostituite) — se hai già importato in precedenza otterrai dei duplicati.\n\n` +
+      `Vuoi continuare comunque?`
+    );
+    if(!continua) return;
+  } else {
+    const conferma = confirm('Verranno importate le 24 spese e i 4 saldi presenti nel file Excel originale. Continuare?');
+    if(!conferma) return;
+  }
+
+  IMPORT_SPESE_INIZIALI.forEach((s, i) => {
+    spese.push(Object.assign({ id: 's_import_' + Date.now() + '_' + i }, s));
+  });
+  saveSpese();
+
+  saldi = Object.assign({}, IMPORT_SALDI_INIZIALI);
+  saveSaldi();
+
+  initSaldiFields();
+  renderAll();
+  alert('Importazione completata: 24 spese e 4 saldi caricati.');
+}
+
+/* ================================================================
+   UTILITÀ
+   ================================================================ */
+function escapeHtml(str){
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+/* ================================================================
+   RENDER COMPLETO
+   ================================================================ */
+function renderAll(){
+  renderSpeseTable();
+  const { giacenzaMinima: giacenzaIntesa } = renderIntesa();
+  const { giacenzaMinima: giacenzaFindo } = renderFindomestic();
+  renderDisponibilita(giacenzaIntesa, giacenzaFindo);
+}
+
+/* ================================================================
+   CAMPI SALDO: binding con salvataggio automatico
+   ================================================================ */
+function initSaldiFields(){
+  document.getElementById('saldoIntesa').value = saldi.saldoIntesa;
+  document.getElementById('saldoFindomestic').value = saldi.saldoFindomestic;
+  document.getElementById('contoDepositoFindomestic').value = saldi.contoDepositoFindomestic;
+  document.getElementById('depositoRisparmiCC').value = saldi.depositoRisparmiCC;
+
+  const bind = (id, key) => {
+    document.getElementById(id).addEventListener('input', (e) => {
+      saldi[key] = parseFloat(e.target.value) || 0;
+      saveSaldi();
+      renderAll();
+    });
+  };
+  bind('saldoIntesa', 'saldoIntesa');
+  bind('saldoFindomestic', 'saldoFindomestic');
+  bind('contoDepositoFindomestic', 'contoDepositoFindomestic');
+  bind('depositoRisparmiCC', 'depositoRisparmiCC');
+}
+
+/* ================================================================
+   AVVIO
+   ================================================================ */
+window.addEventListener('DOMContentLoaded', () => {
+  loadData();
+  initTabs();
+  initSaldiFields();
+
+  document.getElementById('fTipo').addEventListener('change', updateFormConditional);
+  document.getElementById('btnSalvaSpesa').addEventListener('click', salvaSpesaDalForm);
+  document.getElementById('btnAnnullaModifica').addEventListener('click', resetForm);
+  document.getElementById('btnImportaIniziali').addEventListener('click', eseguiImportazioneIniziale);
+
+  updateFormConditional();
+  renderAll();
+
+  // Refresh automatico se si torna su questa tab (es. dopo aver aggiornato
+  // Acquisti/Contanti/Conto Diletta in un'altra scheda del browser)
+  document.addEventListener('visibilitychange', () => {
+    if(document.visibilityState === 'visible') renderAll();
+  });
+});
+</script>
+</body>
+</html>
