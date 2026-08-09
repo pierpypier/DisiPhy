@@ -316,6 +316,55 @@
     padding:6px 2px;
   }
 
+  /* ============================================================
+     SPESE IN SCADENZA — pannello a scomparsa (da banca_spese_v1)
+     ============================================================ */
+  .spese-panel{ display:none; }
+  .spese-panel.open{ display:block; }
+
+  .spese-subtitle{
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    color:var(--muted);
+    margin:14px 0 8px 0;
+  }
+  .spese-subtitle:first-child{ margin-top:0; }
+
+  .spesa-scadenza-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:8px;
+    margin-bottom:8px;
+    font-size:14px;
+  }
+  .spesa-scadenza-item .nome{ font-weight:700; }
+  .spesa-scadenza-item .dettaglio{ font-size:12px; margin-top:2px; opacity:0.85; }
+  .spesa-scadenza-item .importo{ font-weight:800; white-space:nowrap; }
+
+  /* Rosso: scadute o in scadenza oggi */
+  .spesa-scadenza-item.livello-rosso{
+    border:2px solid #dc2626;
+    color:#991b1b;
+    background:#fef2f2;
+  }
+  /* Arancione: entro i prossimi 7 giorni */
+  .spesa-scadenza-item.livello-arancio{
+    border:2px solid #ea580c;
+    color:#9a3412;
+    background:#fff7ed;
+  }
+  /* Giallo: entro il mese in corso */
+  .spesa-scadenza-item.livello-giallo{
+    border:2px solid #ca8a04;
+    color:#854d0e;
+    background:#fefce8;
+  }
+
   /* Impegni di oggi — richiama lo stile "calevent" di caldsp.html */
   .today-event{
     display:flex;
@@ -671,6 +720,25 @@
     <div class="plan-grid" id="planList"></div>
   </div>
 
+  <!-- ============================================================
+       SPESE IN SCADENZA (da banca_spese_v1 — bancaconti.html)
+       ============================================================ -->
+  <div class="card">
+    <div class="section-title">
+      💳 Spese in scadenza
+      <a href="bancaconti.html" class="link-to-page">vai al gestionale conti →</a>
+    </div>
+    <div class="config-toggle-wrap" style="margin:0 0 12px 0;">
+      <button class="config-toggle-btn" id="toggleSpeseBtn">🔽 Mostra/Nascondi scadenze</button>
+    </div>
+    <div class="spese-panel open" id="spesePanel">
+      <div id="speseScaduteBox"></div>
+      <div id="speseSettimanaBox"></div>
+      <div id="speseMeseBox"></div>
+      <div class="empty-msg" id="speseEmptyMsg" style="display:none;">Nessuna spesa in scadenza nei prossimi giorni.</div>
+    </div>
+  </div>
+
 
 
   <!-- ============================================================
@@ -714,6 +782,8 @@ const LS_CONFIG        = 'organizer_config';           // config di questa dashb
 const LS_CAL_EVENTS    = 'cal_events_v1';               // caldsp.html
 const LS_DSP_RECORDS   = 'dsp_records_v1';               // organizer4.html (note)
 const LS_PLANNER_TILES = 'organizer_tessere_config_v1';   // planner2.html (tessere)
+const LS_BANCA_SPESE = 'banca_spese_v1';                   // bancaconti.html (spese)
+const LS_BANCA_NOMI_CONFIG = 'banca_config_v1';             // bancaconsolle.html (nomi conti personalizzati)
 const BACKUP_KEY_PREFIXES = ['dsp_', 'cal_', 'checklist_', 'organizer_']; // chiavi incluse nel backup/ripristino
 
 // Contatori globali usati dalla riga di badge riepilogativi
@@ -1893,6 +1963,100 @@ function importBackupFile(file){
 }
 
 /* ================================================================
+   9) SPESE IN SCADENZA — da banca_spese_v1 (bancaconti.html)
+   Mostra tre fasce: scadute/oggi (rosso), prossimi 7 giorni
+   (arancione), entro il mese in corso (giallo). Solo le spese "a
+   scadenza" (tipo rateizzata) hanno una data e rientrano qui.
+   ================================================================ */
+function leggiNomiContiConfig(){
+  const defaults = { conto1: 'Intesa', conto2: 'Findomestic', figlio: 'Diletta' };
+  try{
+    const raw = localStorage.getItem(LS_BANCA_NOMI_CONFIG);
+    if(raw) return Object.assign(defaults, JSON.parse(raw));
+  }catch(e){
+    console.warn('Errore lettura banca_config_v1', e);
+  }
+  return defaults;
+}
+
+function calcolaGiorniMancantiSpesa(scadenzaISO){
+  const scad = new Date(scadenzaISO + 'T00:00:00');
+  if(isNaN(scad.getTime())) return null;
+  const oggi = new Date();
+  const oggiMid = new Date(oggi.getFullYear(), oggi.getMonth(), oggi.getDate());
+  return Math.round((scad - oggiMid) / 86400000);
+}
+
+function eurSpesa(n){
+  if(typeof n !== 'number' || isNaN(n)) n = 0;
+  return n.toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' €';
+}
+
+function renderSpeseScadenza(){
+  let spese = [];
+  try{
+    const raw = localStorage.getItem(LS_BANCA_SPESE);
+    if(raw) spese = JSON.parse(raw);
+  }catch(e){
+    console.warn('Errore lettura banca_spese_v1', e);
+  }
+
+  const cfgNomi = leggiNomiContiConfig();
+  const oggi = new Date();
+  const meseCorrente = oggi.getMonth();
+  const annoCorrente = oggi.getFullYear();
+
+  // Solo le spese "a scadenza" (tipo rateizzata) hanno una data utile qui
+  const conScadenza = spese
+    .filter(s => s.tipo === 'rateizzata' && s.scadenza)
+    .map(s => Object.assign({}, s, { giorniMancanti: calcolaGiorniMancantiSpesa(s.scadenza) }))
+    .filter(s => s.giorniMancanti !== null);
+
+  const scadute = conScadenza.filter(s => s.giorniMancanti <= 0);
+  const settimana = conScadenza.filter(s => s.giorniMancanti >= 1 && s.giorniMancanti <= 7);
+  const restoMese = conScadenza.filter(s => {
+    if(s.giorniMancanti <= 7) return false;
+    const d = new Date(s.scadenza + 'T00:00:00');
+    return d.getMonth() === meseCorrente && d.getFullYear() === annoCorrente;
+  });
+
+  const perData = (a,b) => a.giorniMancanti - b.giorniMancanti;
+  scadute.sort(perData);
+  settimana.sort(perData);
+  restoMese.sort(perData);
+
+  const totaleVoci = scadute.length + settimana.length + restoMese.length;
+  document.getElementById('speseEmptyMsg').style.display = totaleVoci === 0 ? 'block' : 'none';
+
+  const renderGruppo = (containerId, titolo, lista, livelloClass) => {
+    const container = document.getElementById(containerId);
+    if(lista.length === 0){ container.innerHTML = ''; return; }
+    let html = `<div class="spese-subtitle">${titolo}</div>`;
+    lista.forEach(s => {
+      const contoLabel = s.conto === 'intesa' ? cfgNomi.conto1 : cfgNomi.conto2;
+      const dataTxt = new Date(s.scadenza + 'T00:00:00').toLocaleDateString('it-IT');
+      const etichettaGiorni = s.giorniMancanti < 0 ? `scaduta da ${Math.abs(s.giorniMancanti)} giorni`
+                              : s.giorniMancanti === 0 ? 'scade oggi'
+                              : `tra ${s.giorniMancanti} giorni`;
+      html += `
+        <div class="spesa-scadenza-item ${livelloClass}">
+          <div>
+            <div class="nome">${escapeHtml(s.nome)}</div>
+            <div class="dettaglio">${escapeHtml(contoLabel)} · scade il ${dataTxt} (${etichettaGiorni})</div>
+          </div>
+          <div class="importo">${eurSpesa(Number(s.importo) || 0)}</div>
+        </div>
+      `;
+    });
+    container.innerHTML = html;
+  };
+
+  renderGruppo('speseScaduteBox', '🔴 Scadute o in scadenza oggi', scadute, 'livello-rosso');
+  renderGruppo('speseSettimanaBox', '🟠 Prossimi 7 giorni', settimana, 'livello-arancio');
+  renderGruppo('speseMeseBox', '🟡 Nel mese in corso', restoMese, 'livello-giallo');
+}
+
+/* ================================================================
    UTILITÀ: escape base per evitare l'iniezione di HTML nei testi
    ================================================================ */
 function escapeHtml(str){
@@ -1912,6 +2076,7 @@ function refreshAll(){
   renderNotes();
   renderTodo();
   renderPlanner();
+  renderSpeseScadenza();
   renderStats();          // deve essere l'ultima: usa i contatori aggiornati dalle altre
 }
 
@@ -1921,6 +2086,11 @@ function refreshAll(){
 window.addEventListener('DOMContentLoaded', () => {
   initConfigPanel();
   refreshAll();
+
+  // Spese in scadenza: apri/chiudi il pannello
+  document.getElementById('toggleSpeseBtn').addEventListener('click', () => {
+    document.getElementById('spesePanel').classList.toggle('open');
+  });
 
   // Backup: genera e scarica il file JSON
   document.getElementById('backupBtn').addEventListener('click', exportBackup);
