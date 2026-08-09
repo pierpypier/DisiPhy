@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Contatori di ore</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  /* ============================================================
+     VARIABILI DI STILE — identiche al resto della suite
+     ============================================================ */
+  :root{
+    --bg:#f6f8fb;
+    --card:#ffffff;
+    --accent:#1e88e5;
+    --cal-accent:#2b6cb0;
+    --muted:#6b7280;
+    --shadow:0 6px 18px rgba(20,30,50,0.06);
+    --radius:12px;
+    --max-width:920px;
+    --ok:#2f7a3d;
+    --warn:#b8442c;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  /* ============================================================
+     BARRA DI NAVIGAZIONE — identica al resto della suite
+     ============================================================ */
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+  }
+  .nav-item img { width: 84px; height: 84px; margin-bottom: 1px; transition: transform 0.2s ease; }
+  .nav-item:hover img { transform: scale(1.05); }
+  .nav-item:hover { opacity: 0.85; }
+  @media (max-width: 600px) {
+    .nav { gap: 10px; }
+    .nav-item img { width: 60px; height: 60px; }
+    .nav-item span { font-size: 12px; }
+  }
+
+  /* ============================================================
+     CARD e TITOLI
+     ============================================================ */
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:16px;
+    margin-bottom:18px;
+  }
+  .section-title{
+    font-size:18px;
+    font-weight:800;
+    color:var(--accent);
+    margin:0 0 8px 0;
+  }
+  .hint{
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:16px;
+  }
+
+  /* ============================================================
+     RIGA DATE (inizio/fine) + pulsante reset
+     ============================================================ */
+  .date-row{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    align-items:end;
+    margin-bottom:10px;
+  }
+  .date-field{ flex:1; min-width:180px; }
+  .date-field label{
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    color:var(--muted);
+    margin-bottom:5px;
+  }
+  .date-field input{
+    width:100%;
+    padding:9px 11px;
+    border-radius:8px;
+    border:1px solid #e6e9ef;
+    font-size:14px;
+    font-family:inherit;
+  }
+  .btn{
+    border:none;
+    border-radius:8px;
+    padding:10px 18px;
+    font-weight:700;
+    font-size:14px;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .btn-secondary{ background:#e5e7eb; color:#374151; }
+  .btn:hover{ filter:brightness(0.96); }
+
+  .warning-note{
+    display:none;
+    background:#fdeeea;
+    border:1px solid #f3c6b8;
+    border-radius:8px;
+    padding:10px 12px;
+    font-size:13px;
+    color:#b8442c;
+    margin-bottom:14px;
+  }
+  .warning-note.show{ display:block; }
+
+  /* ============================================================
+     TABELLA CONTATORI
+     ============================================================ */
+  table.contatori-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+  }
+  table.contatori-table th{
+    text-align:left;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    color:var(--muted);
+    border-bottom:2px solid #e6e9ef;
+    padding:8px;
+  }
+  table.contatori-table td{
+    padding:7px 8px;
+    border-bottom:1px solid #f0f2f5;
+    vertical-align:middle;
+  }
+  table.contatori-table tr:hover td{ background:#f9fbfd; }
+
+  .nome-input{
+    width:100%;
+    min-width:150px;
+    padding:8px 9px;
+    border-radius:8px;
+    border:1px solid transparent;
+    background:transparent;
+    font-size:14px;
+    font-weight:700;
+    font-family:inherit;
+    color:#111827;
+  }
+  .nome-input:hover, .nome-input:focus{
+    border-color:#e6e9ef;
+    background:#f7f9fc;
+  }
+
+  .valore-input{
+    width:100%;
+    min-width:100px;
+    padding:8px 9px;
+    border-radius:8px;
+    border:1px solid #e6e9ef;
+    font-size:14px;
+    font-family:inherit;
+    text-align:right;
+  }
+
+  .risultato-cell{
+    font-weight:800;
+    font-size:16px;
+    color:var(--accent);
+    text-align:right;
+    white-space:nowrap;
+    min-width:110px;
+  }
+  .risultato-cell.vuoto{ color:#cbd5e1; font-weight:600; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============================================================
+       BARRA DI NAVIGAZIONE (identica al resto della suite)
+       ============================================================ -->
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item">
+      <img src="rimage/orga4.png" alt="Organizer">
+      <span> NOTE </span>
+    </a>
+    <a href="caldsp.html" class="nav-item">
+      <img src="rimage/calicon.png" alt="Calendario dsp">
+      <span> DATE </span>
+    </a>
+    <a href="check01.html" class="nav-item">
+      <img src="rimage/check02.png" alt="Checklist">
+      <span>LISTE</span>
+    </a>
+    <a href="strweb.html" class="nav-item">
+      <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+      <span> WEB </span>
+    </a>
+    <a href="dashconsolle.html" class="nav-item">
+      <img src="rimage/opzioni.png" alt="Opzioni">
+      <span> ADD </span>
+    </a>
+  </nav>
+
+  <div class="card">
+    <div class="section-title">⏱️ Contatori di ore — Simulazione e previsione</div>
+    <div class="hint">
+      Inserisci due letture note per ciascun contatore (data A e data B) e la data per cui vuoi la previsione (data C).
+      La pagina calcola il ritmo di utilizzo tra A e B e stima il valore atteso a C — che può essere anche retroattiva o compresa tra A e B.
+      Puoi compilare anche un solo contatore, alcuni, o tutti. Nessun dato viene salvato: alla chiusura della pagina tutto si azzera.
+    </div>
+
+    <div class="date-row">
+      <div class="date-field">
+        <label for="dataInizio">Data A — lettura iniziale nota</label>
+        <input type="date" id="dataInizio">
+      </div>
+      <div class="date-field">
+        <label for="dataFine">Data B — lettura finale nota</label>
+        <input type="date" id="dataFine">
+      </div>
+      <div class="date-field">
+        <label for="dataPrevisione">Data C — data della previsione</label>
+        <input type="date" id="dataPrevisione">
+      </div>
+      <button class="btn btn-secondary" id="btnReset">🔄 Azzera tutto</button>
+    </div>
+
+    <div class="warning-note" id="dateWarning"></div>
+
+    <div style="overflow-x:auto;">
+      <table class="contatori-table">
+        <thead>
+          <tr>
+            <th>Contatore</th>
+            <th>Lettura a inizio</th>
+            <th>Lettura a fine</th>
+            <th id="colPrevistoHeader">Valore previsto (C)</th>
+          </tr>
+        </thead>
+        <tbody id="contatoriBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ================================================================
+   NUMERO DI CONTATORI GESTITI
+   ================================================================ */
+const NUM_CONTATORI = 18;
+
+/* ================================================================
+   UTILITÀ DATE — conteggio giorni "puro calendario", 24 ore fisse
+   per giorno, senza correzioni di fuso orario/ora legale (le
+   letture si considerano sempre fatte alla stessa ora del giorno,
+   quindi la differenza tra due date corrisponde sempre a un numero
+   intero di giorni da 24 ore).
+   ================================================================ */
+function giorniTraDate(dataIso1, dataIso2){
+  const [y1,m1,d1] = dataIso1.split('-').map(Number);
+  const [y2,m2,d2] = dataIso2.split('-').map(Number);
+  const t1 = Date.UTC(y1, m1 - 1, d1);
+  const t2 = Date.UTC(y2, m2 - 1, d2);
+  return Math.round((t2 - t1) / 86400000);
+}
+
+/* ================================================================
+   GENERAZIONE RIGHE TABELLA
+   ================================================================ */
+function generaRighe(){
+  const tbody = document.getElementById('contatoriBody');
+  let html = '';
+  for(let i = 1; i <= NUM_CONTATORI; i++){
+    html += `
+      <tr>
+        <td><input type="text" class="nome-input" id="nome_${i}" value="Contatore ${i}"></td>
+        <td><input type="number" step="0.01" class="valore-input" id="inizio_${i}" placeholder="0"></td>
+        <td><input type="number" step="0.01" class="valore-input" id="fine_${i}" placeholder="0"></td>
+        <td class="risultato-cell vuoto" id="risultato_${i}">—</td>
+      </tr>
+    `;
+  }
+  tbody.innerHTML = html;
+
+  for(let i = 1; i <= NUM_CONTATORI; i++){
+    document.getElementById('inizio_' + i).addEventListener('input', ricalcolaTutto);
+    document.getElementById('fine_' + i).addEventListener('input', ricalcolaTutto);
+  }
+}
+
+/* ================================================================
+   RICALCOLO — richiamato ad ogni modifica di date o valori
+   ================================================================ */
+function ricalcolaTutto(){
+  const dataInizio = document.getElementById('dataInizio').value;   // A
+  const dataFine = document.getElementById('dataFine').value;       // B
+  const dataPrevisione = document.getElementById('dataPrevisione').value; // C
+  const warningEl = document.getElementById('dateWarning');
+
+  const headerEl = document.getElementById('colPrevistoHeader');
+  if(dataPrevisione){
+    const cFormattata = new Date(dataPrevisione + 'T00:00:00').toLocaleDateString('it-IT');
+    headerEl.textContent = `Valore previsto (${cFormattata})`;
+  } else {
+    headerEl.textContent = 'Valore previsto (C)';
+  }
+
+  const svuotaRisultati = () => {
+    for(let i = 1; i <= NUM_CONTATORI; i++){
+      const cell = document.getElementById('risultato_' + i);
+      cell.textContent = '—';
+      cell.classList.add('vuoto');
+    }
+  };
+
+  if(!dataInizio || !dataFine || !dataPrevisione){
+    warningEl.classList.remove('show');
+    svuotaRisultati();
+    return;
+  }
+
+  const giorniTotali = giorniTraDate(dataInizio, dataFine);
+  if(giorniTotali <= 0){
+    warningEl.textContent = 'La data B deve essere successiva alla data A.';
+    warningEl.classList.add('show');
+    svuotaRisultati();
+    return;
+  }
+  warningEl.classList.remove('show');
+
+  // Giorni tra B e C: può essere negativo se C è precedente a B
+  // (compresa tra A e B, oppure retroattiva rispetto ad A) — il calcolo
+  // resta lo stesso, è una semplice estrapolazione/interpolazione lineare.
+  const giorniBC = giorniTraDate(dataFine, dataPrevisione);
+
+  for(let i = 1; i <= NUM_CONTATORI; i++){
+    const rawInizio = document.getElementById('inizio_' + i).value;
+    const rawFine = document.getElementById('fine_' + i).value;
+    const cell = document.getElementById('risultato_' + i);
+
+    if(rawInizio === '' || rawFine === ''){
+      cell.textContent = '—';
+      cell.classList.add('vuoto');
+      continue;
+    }
+
+    const valInizio = parseFloat(rawInizio);
+    const valFine = parseFloat(rawFine);
+    if(isNaN(valInizio) || isNaN(valFine)){
+      cell.textContent = '—';
+      cell.classList.add('vuoto');
+      continue;
+    }
+
+    const tassoGiornaliero = (valFine - valInizio) / giorniTotali;
+    const valorePrevisto = valFine + tassoGiornaliero * giorniBC;
+
+    cell.textContent = Math.round(valorePrevisto).toLocaleString('it-IT');
+    cell.classList.remove('vuoto');
+  }
+}
+
+/* ================================================================
+   AZZERA TUTTO
+   ================================================================ */
+function azzeraTutto(){
+  document.getElementById('dataInizio').value = '';
+  document.getElementById('dataFine').value = '';
+  document.getElementById('dataPrevisione').value = '';
+  for(let i = 1; i <= NUM_CONTATORI; i++){
+    document.getElementById('nome_' + i).value = 'Contatore ' + i;
+    document.getElementById('inizio_' + i).value = '';
+    document.getElementById('fine_' + i).value = '';
+  }
+  ricalcolaTutto();
+}
+
+/* ================================================================
+   AVVIO
+   ================================================================ */
+window.addEventListener('DOMContentLoaded', () => {
+  generaRighe();
+  document.getElementById('dataInizio').addEventListener('input', ricalcolaTutto);
+  document.getElementById('dataFine').addEventListener('input', ricalcolaTutto);
+  document.getElementById('dataPrevisione').addEventListener('input', ricalcolaTutto);
+  document.getElementById('btnReset').addEventListener('click', azzeraTutto);
+  ricalcolaTutto();
+});
+</script>
+
+</body>
+  </html>
