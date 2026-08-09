@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Organizer — Conto Diletta</title>
+<title id="pageTitle">Organizer — Conto Diletta</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#1e88e5">
 <meta name="mobile-web-app-capable" content="yes">
@@ -172,8 +172,7 @@
 
 </style>
 </head>
-
- <body>
+<body>
 
 <div class="container">
 
@@ -201,7 +200,7 @@
   </nav>
 
   <div class="card">
-    <div class="section-title">🎒 Conto Diletta</div>
+    <div class="section-title">🎒 Conto <span data-nome="figlio">Diletta</span></div>
     <div class="hint">Contanti conservati, carta Flash e prelievi/ricariche da riconciliare. "Ancora da versare" alimenta automaticamente la relativa voce nel modulo Conti e Spese.</div>
 
     <div class="form-actions" style="margin-bottom:14px;">
@@ -306,7 +305,7 @@
     </a>
     <a href="bancadiletta.html" class="banca-nav-item active">
       <span class="icon">🎒</span>
-      <span class="lbl">Diletta</span>
+      <span class="lbl" data-nome="figlio">Diletta</span>
     </a>
     <a href="bancastorico.html" class="banca-nav-item">
       <span class="icon">📜</span>
@@ -314,14 +313,37 @@
     </a>
   </nav>
 
-      </div>
+</div>
 
-   <script>
+<script>
 /* ================================================================
    CHIAVE localStorage — letta da bancaconti.html tramite il campo
    "totaleAncoraDaVersare" quando una spesa ha collegaContoDiletta=true
    ================================================================ */
 const LS_CONTODILETTA = 'banca_contodiletta_v1';
+const LS_BANCA_CONFIG = 'banca_config_v1';       // nomi personalizzabili, gestiti da bancaconsolle.html
+
+/* ================================================================
+   NOMI PERSONALIZZABILI — si modificano solo dalla Consolle, qui
+   vengono letti e applicati ad ogni apertura/refresh.
+   ================================================================ */
+let nomiCfg = { conto1: 'Intesa', conto2: 'Findomestic', figlio: 'Diletta' };
+
+function applicaNomiConfig(){
+  const defaults = { conto1: 'Intesa', conto2: 'Findomestic', figlio: 'Diletta' };
+  try{
+    const raw = localStorage.getItem(LS_BANCA_CONFIG);
+    if(raw) nomiCfg = Object.assign(defaults, JSON.parse(raw));
+    else nomiCfg = defaults;
+  }catch(e){ console.warn('Errore lettura banca_config_v1', e); nomiCfg = defaults; }
+
+  document.querySelectorAll('[data-nome="conto1"]').forEach(el => el.textContent = nomiCfg.conto1);
+  document.querySelectorAll('[data-nome="conto2"]').forEach(el => el.textContent = nomiCfg.conto2);
+  document.querySelectorAll('[data-nome="figlio"]').forEach(el => el.textContent = nomiCfg.figlio);
+
+  const titleEl = document.getElementById('pageTitle');
+  if(titleEl) titleEl.textContent = 'Organizer — Conto ' + nomiCfg.figlio;
+}
 
 let dati = {
   entrateContanti: [],
@@ -448,7 +470,7 @@ function renderStatTotali(){
     <div class="stat-box"><div class="stat-label">Disponibilità contanti</div><div class="stat-value">${eur(t.disponibilitaContante)}</div></div>
     <div class="stat-box"><div class="stat-label">Disponibilità carta Flash</div><div class="stat-value">${eur(t.disponibilitaCarta)}</div></div>
     <div class="stat-box ${t.totaleAncoraDaVersare >= 0 ? 'warn' : 'ok'}"><div class="stat-label">Ancora da versare (promemoria)</div><div class="stat-value">${eur(t.totaleAncoraDaVersare)}</div></div>
-    <div class="stat-box ok"><div class="stat-label">Totale risparmi Diletta</div><div class="stat-value">${eur(t.totaleRisparmiDiletta)}</div></div>
+    <div class="stat-box ok"><div class="stat-label">Totale risparmi ${nomiCfg.figlio}</div><div class="stat-value">${eur(t.totaleRisparmiDiletta)}</div></div>
   `;
 }
 
@@ -570,6 +592,7 @@ function eseguiImportazioneIniziale(){
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
+  applicaNomiConfig();
   loadDati();
   initTabs();
   renderAll();
@@ -582,7 +605,7 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btnImportaIniziali').addEventListener('click', eseguiImportazioneIniziale);
 
   document.addEventListener('visibilitychange', () => {
-    if(document.visibilityState === 'visible'){ loadDati(); renderAll(); }
+    if(document.visibilityState === 'visible'){ applicaNomiConfig(); loadDati(); renderAll(); }
   });
 });
 </script>

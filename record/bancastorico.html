@@ -242,7 +242,7 @@
     </a>
     <a href="bancadiletta.html" class="banca-nav-item">
       <span class="icon">🎒</span>
-      <span class="lbl">Diletta</span>
+      <span class="lbl" data-nome="figlio">Diletta</span>
     </a>
     <a href="bancastorico.html" class="banca-nav-item active">
       <span class="icon">📜</span>
@@ -257,6 +257,21 @@
    CHIAVE localStorage — modulo indipendente, non letto da altri
    ================================================================ */
 const LS_STORICO = 'banca_storico_v1';
+const LS_BANCA_CONFIG = 'banca_config_v1';       // nomi personalizzabili (conti e persona), gestiti da bancaconsolle.html
+
+function applicaNomiConfig(){
+  const defaults = { conto1: 'Intesa', conto2: 'Findomestic', figlio: 'Diletta' };
+  let cfg = defaults;
+  try{
+    const raw = localStorage.getItem(LS_BANCA_CONFIG);
+    if(raw) cfg = Object.assign(defaults, JSON.parse(raw));
+  }catch(e){ console.warn('Errore lettura banca_config_v1', e); }
+  document.querySelectorAll('[data-nome="conto1"]').forEach(el => el.textContent = cfg.conto1);
+  document.querySelectorAll('[data-nome="conto2"]').forEach(el => el.textContent = cfg.conto2);
+  document.querySelectorAll('[data-nome="figlio"]').forEach(el => el.textContent = cfg.figlio);
+  return cfg;
+}
+
 
 let storico = [];
 let ordinamento = { campo: 'data', direzione: 'desc' };
@@ -431,6 +446,7 @@ function eseguiImportazioneIniziale(){
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
+  applicaNomiConfig();
   loadStorico();
   initSorting();
   renderAll();
@@ -439,7 +455,7 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btnImportaIniziali').addEventListener('click', eseguiImportazioneIniziale);
 
   document.addEventListener('visibilitychange', () => {
-    if(document.visibilityState === 'visible'){ loadStorico(); renderAll(); }
+    if(document.visibilityState === 'visible'){ applicaNomiConfig(); loadStorico(); renderAll(); }
   });
 });
 </script>

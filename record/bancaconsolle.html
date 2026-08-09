@@ -114,6 +114,27 @@
   .banca-nav-item:hover .icon{ transform:scale(1.06); }
   .banca-nav-item.active .icon{ background:var(--accent); }
   .banca-nav-item.active span.lbl{ color:var(--accent); }
+
+  /* ============================================================
+     PANNELLO CONFIGURAZIONE NOMI (conti e persona)
+     ============================================================ */
+  .config-toggle-wrap{ display:flex; justify-content:center; margin:4px 0 14px 0; }
+  .config-toggle-btn{
+    background:#eaf6ec; color:#2f7a3d;
+    border:none; border-radius:10px;
+    padding:8px 18px; font-weight:700; font-size:13px;
+    cursor:pointer; box-shadow:var(--shadow);
+  }
+  .config-toggle-btn:hover{ filter:brightness(0.97); }
+  .config-panel{ display:none; }
+  .config-panel.open{ display:block; }
+  .config-row{ margin-bottom:12px; }
+  .config-row label{ display:block; font-weight:700; color:var(--muted); font-size:12px; margin-bottom:5px; }
+  .config-row input{
+    width:100%; padding:9px 11px; border-radius:8px;
+    border:1px solid #e6e9ef; font-size:14px; font-family:inherit;
+  }
+  .config-save-note{ font-size:12px; color:var(--muted); margin-top:4px; }
 </style>
 </head>
 <body>
@@ -149,6 +170,25 @@
 
     <div id="emptyNote" class="empty-note" style="display:none;"></div>
 
+    <div class="config-toggle-wrap">
+      <button class="config-toggle-btn" id="toggleConfigBtn">⚙️ Configura nomi conti e persona</button>
+    </div>
+    <div class="card config-panel" id="configPanel" style="box-shadow:none; border:1px solid #e6e9ef; margin-bottom:16px;">
+      <div class="config-row">
+        <label for="cfgConto1">Nome primo conto (es. la tua banca principale)</label>
+        <input type="text" id="cfgConto1" placeholder="Es. Intesa">
+      </div>
+      <div class="config-row">
+        <label for="cfgConto2">Nome secondo conto</label>
+        <input type="text" id="cfgConto2" placeholder="Es. Findomestic">
+      </div>
+      <div class="config-row">
+        <label for="cfgFiglio">Nome della persona (conto dedicato)</label>
+        <input type="text" id="cfgFiglio" placeholder="Es. Diletta">
+      </div>
+      <div class="config-save-note">Le modifiche si applicano subito, in questa pagina e in tutti gli altri moduli.</div>
+    </div>
+
     <div class="hero-box">
       <div class="hero-label">Patrimonio totale contabile</div>
       <div class="hero-value" id="patrimonioTotale">0,00 €</div>
@@ -156,21 +196,21 @@
 
     <div class="subsection-title">Conti correnti</div>
     <div class="saldi-grid">
-      <div class="saldo-box"><div class="saldo-label">Saldo Intesa</div><div class="saldo-value" id="saldoIntesa">0,00 €</div></div>
-      <div class="saldo-box"><div class="saldo-label">Saldo Findomestic</div><div class="saldo-value" id="saldoFindomestic">0,00 €</div></div>
+      <div class="saldo-box"><div class="saldo-label">Saldo <span data-nome="conto1">Intesa</span></div><div class="saldo-value" id="saldoIntesa">0,00 €</div></div>
+      <div class="saldo-box"><div class="saldo-label">Saldo <span data-nome="conto2">Findomestic</span></div><div class="saldo-value" id="saldoFindomestic">0,00 €</div></div>
     </div>
 
     <div class="subsection-title">Conto deposito</div>
     <div class="saldi-grid">
-      <div class="saldo-box"><div class="saldo-label">Conto Deposito Findomestic</div><div class="saldo-value" id="contoDepositoFindomestic">0,00 €</div></div>
+      <div class="saldo-box"><div class="saldo-label">Conto Deposito <span data-nome="conto2">Findomestic</span></div><div class="saldo-value" id="contoDepositoFindomestic">0,00 €</div></div>
       <div class="saldo-box saldo-forte"><div class="saldo-label">Deposito Risparmi CC</div><div class="saldo-value" id="depositoRisparmiCC">0,00 €</div></div>
     </div>
 
     <div class="subsection-title">Disponibilità di spesa</div>
     <div class="hint" style="margin-top:-6px;">Quanto puoi realmente spendere ora, al netto delle spese fisse/ricorrenti già impegnate su ciascun conto.</div>
     <div class="saldi-grid">
-      <div class="saldo-box"><div class="saldo-label">Disponibilità spesa Intesa</div><div class="saldo-value" id="dispIntesa">0,00 €</div></div>
-      <div class="saldo-box"><div class="saldo-label">Disponibilità spesa Findomestic</div><div class="saldo-value" id="dispFindomestic">0,00 €</div></div>
+      <div class="saldo-box"><div class="saldo-label">Disponibilità spesa <span data-nome="conto1">Intesa</span></div><div class="saldo-value" id="dispIntesa">0,00 €</div></div>
+      <div class="saldo-box"><div class="saldo-label">Disponibilità spesa <span data-nome="conto2">Findomestic</span></div><div class="saldo-value" id="dispFindomestic">0,00 €</div></div>
       <div class="saldo-box"><div class="saldo-label">Disponibilità spesa online</div><div class="saldo-value" id="dispOnline">0,00 €</div></div>
       <div class="saldo-box ok"><div class="saldo-label">Totale capacità di spesa immediata</div><div class="saldo-value" id="dispTotale">0,00 €</div></div>
     </div>
@@ -184,7 +224,7 @@
     <div class="subsection-title">Risparmi</div>
     <div class="saldi-grid">
       <div class="saldo-box ok"><div class="saldo-label">Totale risparmi</div><div class="saldo-value" id="totaleRisparmi">0,00 €</div></div>
-      <div class="saldo-box"><div class="saldo-label">Conto Diletta</div><div class="saldo-value" id="totaleDiletta">0,00 €</div></div>
+      <div class="saldo-box"><div class="saldo-label">Conto <span data-nome="figlio">Diletta</span></div><div class="saldo-value" id="totaleDiletta">0,00 €</div></div>
     </div>
 
     <!-- ============================================================
@@ -210,7 +250,7 @@
       </a>
       <a href="bancadiletta.html" class="banca-nav-item">
         <span class="icon">🎒</span>
-        <span class="lbl">Diletta</span>
+        <span class="lbl" data-nome="figlio">Diletta</span>
       </a>
       <a href="bancastorico.html" class="banca-nav-item">
         <span class="icon">📜</span>
@@ -233,6 +273,64 @@ const LS_SPESE = 'banca_spese_v1';
 const LS_ACQUISTI = 'banca_acquisti_v1';
 const LS_CONTANTI = 'banca_contanti_v1';
 const LS_CONTODILETTA = 'banca_contodiletta_v1';
+
+/* ================================================================
+   NOMI PERSONALIZZABILI (conti e persona) — condivisi con TUTTI i
+   moduli del gestionale tramite banca_config_v1. Si modificano solo
+   da questa pagina, ma ogni modulo li legge e li applica in avvio.
+   ================================================================ */
+const LS_BANCA_CONFIG = 'banca_config_v1';
+
+function leggiNomiConfig(){
+  const defaults = { conto1: 'Intesa', conto2: 'Findomestic', figlio: 'Diletta' };
+  try{
+    const raw = localStorage.getItem(LS_BANCA_CONFIG);
+    if(raw) return Object.assign(defaults, JSON.parse(raw));
+  }catch(e){ console.warn('Errore lettura banca_config_v1', e); }
+  return defaults;
+}
+
+function salvaNomiConfig(cfg){
+  try{ localStorage.setItem(LS_BANCA_CONFIG, JSON.stringify(cfg)); }
+  catch(e){ console.warn('Errore salvataggio banca_config_v1', e); }
+}
+
+/* Applica i nomi correnti a tutti gli elementi marcati con data-nome
+   (etichette statiche in HTML) e restituisce l'oggetto config, così
+   le funzioni di render possono usarlo anche per i testi generati via JS. */
+function applicaNomiConfig(){
+  const cfg = leggiNomiConfig();
+  document.querySelectorAll('[data-nome="conto1"]').forEach(el => el.textContent = cfg.conto1);
+  document.querySelectorAll('[data-nome="conto2"]').forEach(el => el.textContent = cfg.conto2);
+  document.querySelectorAll('[data-nome="figlio"]').forEach(el => el.textContent = cfg.figlio);
+  return cfg;
+}
+
+function initPannelloConfig(){
+  const cfg = leggiNomiConfig();
+  document.getElementById('cfgConto1').value = cfg.conto1;
+  document.getElementById('cfgConto2').value = cfg.conto2;
+  document.getElementById('cfgFiglio').value = cfg.figlio;
+
+  const panel = document.getElementById('configPanel');
+  document.getElementById('toggleConfigBtn').addEventListener('click', () => {
+    panel.classList.toggle('open');
+  });
+
+  const aggiorna = () => {
+    const nuovaCfg = {
+      conto1: document.getElementById('cfgConto1').value.trim() || 'Intesa',
+      conto2: document.getElementById('cfgConto2').value.trim() || 'Findomestic',
+      figlio: document.getElementById('cfgFiglio').value.trim() || 'Diletta'
+    };
+    salvaNomiConfig(nuovaCfg);
+    applicaNomiConfig();
+    renderConsolle();
+  };
+  document.getElementById('cfgConto1').addEventListener('input', aggiorna);
+  document.getElementById('cfgConto2').addEventListener('input', aggiorna);
+  document.getElementById('cfgFiglio').addEventListener('input', aggiorna);
+}
 
 function eur(n){
   if(typeof n !== 'number' || isNaN(n)) n = 0;
@@ -378,9 +476,11 @@ function renderConsolle(){
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  applicaNomiConfig();
+  initPannelloConfig();
   renderConsolle();
   document.addEventListener('visibilitychange', () => {
-    if(document.visibilityState === 'visible') renderConsolle();
+    if(document.visibilityState === 'visible'){ applicaNomiConfig(); renderConsolle(); }
   });
 });
 </script>

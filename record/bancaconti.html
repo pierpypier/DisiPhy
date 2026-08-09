@@ -366,13 +366,13 @@
 
   <div class="card">
     <div class="section-title">💶 Conti e Spese</div>
-    <div class="hint">Anagrafica spese, viste Intesa/Findomestic e cruscotto patrimonio. I dati restano solo su questo dispositivo (localStorage).</div>
+    <div class="hint">Anagrafica spese, viste <span data-nome="conto1">Intesa</span>/<span data-nome="conto2">Findomestic</span> e cruscotto patrimonio. I dati restano solo su questo dispositivo (localStorage).</div>
 
     <!-- TAB -->
     <div class="tabs">
       <button class="tab-btn active" data-tab="tabSpese">Spese</button>
-      <button class="tab-btn" data-tab="tabIntesa">Intesa</button>
-      <button class="tab-btn" data-tab="tabFindomestic">Findomestic</button>
+      <button class="tab-btn" data-tab="tabIntesa"><span data-nome="conto1">Intesa</span></button>
+      <button class="tab-btn" data-tab="tabFindomestic"><span data-nome="conto2">Findomestic</span></button>
       <button class="tab-btn" data-tab="tabDisponibilita">Disponibilità</button>
     </div>
 
@@ -395,8 +395,8 @@
         <div>
           <label>Conto</label>
           <select id="fConto">
-            <option value="intesa">Intesa</option>
-            <option value="findomestic">Findomestic</option>
+            <option value="intesa" id="optConto1">Intesa</option>
+            <option value="findomestic" id="optConto2">Findomestic</option>
           </select>
         </div>
 
@@ -426,13 +426,13 @@
         </div>
 
         <div>
-          <label class="checkbox-row"><input type="checkbox" id="fRimandabile"> Rimandabile (solo Intesa)</label>
+          <label class="checkbox-row"><input type="checkbox" id="fRimandabile"> Rimandabile (solo <span data-nome="conto1">Intesa</span>)</label>
         </div>
         <div>
           <label class="checkbox-row"><input type="checkbox" id="fCollegaAcquisti"> Sottrai acquisti già tracciati</label>
         </div>
         <div>
-          <label class="checkbox-row"><input type="checkbox" id="fCollegaDiletta"> Importo dal modulo Conto Diletta</label>
+          <label class="checkbox-row"><input type="checkbox" id="fCollegaDiletta"> Importo dal modulo Conto <span data-nome="figlio">Diletta</span></label>
         </div>
 
         <div class="form-actions">
@@ -466,7 +466,7 @@
     <div class="tab-panel" id="tabIntesa">
       <div class="saldi-grid">
         <div class="saldo-field">
-          <label>Saldo Intesa alla data odierna (€)</label>
+          <label>Saldo <span data-nome="conto1">Intesa</span> alla data odierna (€)</label>
           <input type="number" step="0.01" id="saldoIntesa">
         </div>
       </div>
@@ -481,7 +481,7 @@
           <tbody id="intesaTableBody"></tbody>
         </table>
       </div>
-      <div class="empty-msg" id="intesaEmptyMsg" style="display:none;">Nessuna spesa assegnata a Intesa.</div>
+      <div class="empty-msg" id="intesaEmptyMsg" style="display:none;">Nessuna spesa assegnata a <span data-nome="conto1">Intesa</span>.</div>
     </div>
 
     <!-- ========================================================
@@ -490,11 +490,11 @@
     <div class="tab-panel" id="tabFindomestic">
       <div class="saldi-grid">
         <div class="saldo-field">
-          <label>Saldo Findomestic alla data odierna (€)</label>
+          <label>Saldo <span data-nome="conto2">Findomestic</span> alla data odierna (€)</label>
           <input type="number" step="0.01" id="saldoFindomestic">
         </div>
         <div class="saldo-field">
-          <label>Conto Deposito Findomestic (€)</label>
+          <label>Conto Deposito <span data-nome="conto2">Findomestic</span> (€)</label>
           <input type="number" step="0.01" id="contoDepositoFindomestic">
         </div>
       </div>
@@ -509,7 +509,7 @@
           <tbody id="findomesticTableBody"></tbody>
         </table>
       </div>
-      <div class="empty-msg" id="findomesticEmptyMsg" style="display:none;">Nessuna spesa assegnata a Findomestic.</div>
+      <div class="empty-msg" id="findomesticEmptyMsg" style="display:none;">Nessuna spesa assegnata a <span data-nome="conto2">Findomestic</span>.</div>
     </div>
 
     <!-- ========================================================
@@ -522,7 +522,7 @@
           <input type="number" step="0.01" id="depositoRisparmiCC">
         </div>
       </div>
-      <div class="hint">I saldi Intesa/Findomestic si aggiornano dalle rispettive schede. I contanti, se presenti, vengono letti dal modulo "Contanti" quando disponibile.</div>
+      <div class="hint">I saldi <span data-nome="conto1">Intesa</span>/<span data-nome="conto2">Findomestic</span> si aggiornano dalle rispettive schede. I contanti, se presenti, vengono letti dal modulo "Contanti" quando disponibile.</div>
 
       <div class="stat-grid" id="statDisponibilita"></div>
     </div>
@@ -553,7 +553,7 @@
     </a>
     <a href="bancadiletta.html" class="banca-nav-item">
       <span class="icon">🎒</span>
-      <span class="lbl">Diletta</span>
+      <span class="lbl" data-nome="figlio">Diletta</span>
     </a>
     <a href="bancastorico.html" class="banca-nav-item">
       <span class="icon">📜</span>
@@ -572,6 +572,35 @@ const LS_SALDI = 'banca_saldi_v1';
 const LS_ACQUISTI = 'banca_acquisti_v1';        // popolato dal modulo bancaacquisti.html
 const LS_CONTODILETTA = 'banca_contodiletta_v1'; // popolato dal modulo bancadiletta.html
 const LS_CONTANTI = 'banca_contanti_v1';         // popolato dal modulo bancacontanti.html
+const LS_BANCA_CONFIG = 'banca_config_v1';       // nomi personalizzabili (conti e persona)
+
+/* ================================================================
+   NOMI PERSONALIZZABILI — si modificano solo dalla Consolle
+   (bancaconsolle.html), ma qui vengono letti e applicati ad ogni
+   apertura, così restano sempre coerenti in tutta la suite.
+   ================================================================ */
+let nomiCfg = { conto1: 'Intesa', conto2: 'Findomestic', figlio: 'Diletta' };
+
+function leggiNomiConfig(){
+  const defaults = { conto1: 'Intesa', conto2: 'Findomestic', figlio: 'Diletta' };
+  try{
+    const raw = localStorage.getItem(LS_BANCA_CONFIG);
+    if(raw) return Object.assign(defaults, JSON.parse(raw));
+  }catch(e){ console.warn('Errore lettura banca_config_v1', e); }
+  return defaults;
+}
+
+function applicaNomiConfig(){
+  nomiCfg = leggiNomiConfig();
+  document.querySelectorAll('[data-nome="conto1"]').forEach(el => el.textContent = nomiCfg.conto1);
+  document.querySelectorAll('[data-nome="conto2"]').forEach(el => el.textContent = nomiCfg.conto2);
+  document.querySelectorAll('[data-nome="figlio"]').forEach(el => el.textContent = nomiCfg.figlio);
+  // Le <option> non possono contenere elementi annidati: si aggiornano a parte
+  const optC1 = document.getElementById('optConto1');
+  const optC2 = document.getElementById('optConto2');
+  if(optC1) optC1.textContent = nomiCfg.conto1;
+  if(optC2) optC2.textContent = nomiCfg.conto2;
+}
 
 let spese = [];
 let saldi = {
@@ -797,7 +826,7 @@ function renderSpeseTable(){
     const scadenzaTxt = s.scadenza ? new Date(s.scadenza + 'T00:00:00').toLocaleDateString('it-IT') : '—';
     tr.innerHTML = `
       <td>${escapeHtml(s.nome)}</td>
-      <td><span class="conto-badge ${s.conto}">${s.conto === 'intesa' ? 'Intesa' : 'Findomestic'}</span></td>
+      <td><span class="conto-badge ${s.conto}">${s.conto === 'intesa' ? nomiCfg.conto1 : nomiCfg.conto2}</span></td>
       <td><span class="tipo-badge">${s.tipo === 'fissa' ? 'Fissa' : 'A scadenza'}</span></td>
       <td>${eur(calcolaQuota(s))}</td>
       <td>${scadenzaTxt}</td>
@@ -909,9 +938,9 @@ function renderDisponibilita(giacenzaMinimaIntesa, giacenzaMinimaFindomestic){
 
   const box = document.getElementById('statDisponibilita');
   box.innerHTML = `
-    <div class="stat-box"><div class="stat-label">Saldo Intesa</div><div class="stat-value">${eur(saldi.saldoIntesa)}</div></div>
-    <div class="stat-box"><div class="stat-label">Saldo Findomestic</div><div class="stat-value">${eur(saldi.saldoFindomestic)}</div></div>
-    <div class="stat-box"><div class="stat-label">Conto Deposito Findomestic</div><div class="stat-value">${eur(saldi.contoDepositoFindomestic)}</div></div>
+    <div class="stat-box"><div class="stat-label">Saldo ${nomiCfg.conto1}</div><div class="stat-value">${eur(saldi.saldoIntesa)}</div></div>
+    <div class="stat-box"><div class="stat-label">Saldo ${nomiCfg.conto2}</div><div class="stat-value">${eur(saldi.saldoFindomestic)}</div></div>
+    <div class="stat-box"><div class="stat-label">Conto Deposito ${nomiCfg.conto2}</div><div class="stat-value">${eur(saldi.contoDepositoFindomestic)}</div></div>
     <div class="stat-box"><div class="stat-label">Contanti (deposito + liquidità)</div><div class="stat-value">${eur(contantiTotali)}</div></div>
     <div class="stat-box"><div class="stat-label">Patrimonio totale contabile</div><div class="stat-value">${eur(patrimonioTotale)}</div></div>
     <div class="stat-box ok"><div class="stat-label">Patrimonio a disposizione</div><div class="stat-value">${eur(patrimonioADisposizione)}</div></div>
@@ -1030,6 +1059,7 @@ function initSaldiFields(){
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
+  applicaNomiConfig();
   loadData();
   initTabs();
   initSaldiFields();
@@ -1045,7 +1075,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Refresh automatico se si torna su questa tab (es. dopo aver aggiornato
   // Acquisti/Contanti/Conto Diletta in un'altra scheda del browser)
   document.addEventListener('visibilitychange', () => {
-    if(document.visibilityState === 'visible') renderAll();
+    if(document.visibilityState === 'visible'){ applicaNomiConfig(); renderAll(); }
   });
 });
 </script>
