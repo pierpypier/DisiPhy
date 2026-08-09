@@ -172,7 +172,8 @@
 
 </style>
 </head>
-<body>
+
+ <body>
 
 <div class="container">
 
@@ -313,9 +314,9 @@
     </a>
   </nav>
 
-</div>
+      </div>
 
-<script>
+   <script>
 /* ================================================================
    CHIAVE localStorage — letta da bancaconti.html tramite il campo
    "totaleAncoraDaVersare" quando una spesa ha collegaContoDiletta=true
@@ -360,13 +361,19 @@ function calcolaTotali(){
   const dareTot = sommaImporti(dati.movimentiDareAvere.filter(m => m.tipo === 'dare'));
   const avereTot = sommaImporti(dati.movimentiDareAvere.filter(m => m.tipo === 'avere'));
 
+  // Una ricarica (avere) aumenta solo la carta Flash; un prelievo da restituire
+  // (dare) non è mai stato accreditato sui contanti di Diletta, quindi non li
+  // riduce. Il registro Dare/Avere non tocca più la disponibilità contanti:
+  // resta solo un promemoria di quanto la famiglia deve ancora versarle.
   const entrateCartaTot = avereTot + accreditiCartaTot;
   const totaleAncoraDaVersare = dareTot - avereTot;
 
-  const disponibilitaContante = entrateContantiTot - speseContantiTot - totaleAncoraDaVersare;
+  const disponibilitaContante = entrateContantiTot - speseContantiTot;
   const disponibilitaCarta = entrateCartaTot - speseCartaTot;
   const totaleDisponibilitaAttuale = disponibilitaContante + disponibilitaCarta;
-  const totaleRisparmiDiletta = totaleDisponibilitaAttuale + totaleAncoraDaVersare;
+  // Coincide con la disponibilità attuale: la parte "ancora da versare" è un
+  // promemoria, non un valore già posseduto, quindi non va sommata di nuovo.
+  const totaleRisparmiDiletta = totaleDisponibilitaAttuale;
 
   return {
     entrateContantiTot, accreditiCartaTot, speseContantiTot, speseCartaTot,
@@ -440,7 +447,7 @@ function renderStatTotali(){
   document.getElementById('statTotali').innerHTML = `
     <div class="stat-box"><div class="stat-label">Disponibilità contanti</div><div class="stat-value">${eur(t.disponibilitaContante)}</div></div>
     <div class="stat-box"><div class="stat-label">Disponibilità carta Flash</div><div class="stat-value">${eur(t.disponibilitaCarta)}</div></div>
-    <div class="stat-box ${t.totaleAncoraDaVersare >= 0 ? 'warn' : 'ok'}"><div class="stat-label">Ancora da versare</div><div class="stat-value">${eur(t.totaleAncoraDaVersare)}</div></div>
+    <div class="stat-box ${t.totaleAncoraDaVersare >= 0 ? 'warn' : 'ok'}"><div class="stat-label">Ancora da versare (promemoria)</div><div class="stat-value">${eur(t.totaleAncoraDaVersare)}</div></div>
     <div class="stat-box ok"><div class="stat-label">Totale risparmi Diletta</div><div class="stat-value">${eur(t.totaleRisparmiDiletta)}</div></div>
   `;
 }
