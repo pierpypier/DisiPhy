@@ -90,19 +90,7 @@
   .saldo-box .saldo-label{ font-size:12px; color:var(--muted); font-weight:700; margin-bottom:4px; }
   .saldo-box .saldo-value{ font-size:20px; font-weight:800; color:#111827; }
   .saldo-box.ok .saldo-value{ color:var(--ok); }
-  .saldo-box.saldo-editabile{ background:#eaf2fb; border-color:#cfe0f5; }
-  .saldo-box.saldo-editabile label.saldo-label{ display:block; }
-  .saldo-input{
-    width:100%;
-    padding:8px 9px;
-    border-radius:8px;
-    border:1px solid #cfe0f5;
-    font-size:18px;
-    font-weight:800;
-    font-family:inherit;
-    color:var(--cal-accent);
-    background:#fff;
-  }
+  .saldo-box.saldo-forte .saldo-value{ font-weight:900; }
 
   .empty-note{
     background:#fff8e6;
@@ -175,10 +163,7 @@
     <div class="subsection-title">Conto deposito</div>
     <div class="saldi-grid">
       <div class="saldo-box"><div class="saldo-label">Conto Deposito Findomestic</div><div class="saldo-value" id="contoDepositoFindomestic">0,00 €</div></div>
-      <div class="saldo-box saldo-editabile">
-        <label class="saldo-label" for="depositoRisparmiCC">Deposito Risparmi CC (accantonamento manuale)</label>
-        <input type="number" step="0.01" id="depositoRisparmiCC" class="saldo-input">
-      </div>
+      <div class="saldo-box saldo-forte"><div class="saldo-label">Deposito Risparmi CC</div><div class="saldo-value" id="depositoRisparmiCC">0,00 €</div></div>
     </div>
 
     <div class="subsection-title">Disponibilità di spesa</div>
@@ -318,25 +303,6 @@ function calcolaQuota(s){
 }
 
 /* ================================================================
-   CAMPO EDITABILE: Deposito Risparmi CC
-   Scrive direttamente su banca_saldi_v1, lo stesso oggetto letto/
-   scritto da bancaconti.html — restano sempre sincronizzati.
-   ================================================================ */
-function initCampoEditabile(){
-  const saldi = leggiOggetto(LS_SALDI, {});
-  const input = document.getElementById('depositoRisparmiCC');
-  input.value = (typeof saldi.depositoRisparmiCC === 'number') ? saldi.depositoRisparmiCC : 0;
-
-  input.addEventListener('input', () => {
-    const attuale = leggiOggetto(LS_SALDI, {});
-    attuale.depositoRisparmiCC = parseFloat(input.value) || 0;
-    try{ localStorage.setItem(LS_SALDI, JSON.stringify(attuale)); }
-    catch(e){ console.warn('Errore salvataggio banca_saldi_v1', e); }
-    renderConsolle();
-  });
-}
-
-/* ================================================================
    RENDER PRINCIPALE
    ================================================================ */
 function renderConsolle(){
@@ -355,9 +321,9 @@ function renderConsolle(){
   const saldoIntesa = (saldi && typeof saldi.saldoIntesa === 'number') ? saldi.saldoIntesa : 0;
   const saldoFindomestic = (saldi && typeof saldi.saldoFindomestic === 'number') ? saldi.saldoFindomestic : 0;
   const contoDepositoFindomestic = (saldi && typeof saldi.contoDepositoFindomestic === 'number') ? saldi.contoDepositoFindomestic : 0;
-  // Il Deposito Risparmi CC viene letto direttamente dal campo editabile qui sotto,
-  // non da "saldi", per riflettere subito ciò che l'utente sta digitando.
-  const depositoRisparmiCC = parseFloat(document.getElementById('depositoRisparmiCC').value) || 0;
+  // Sola lettura: il Deposito Risparmi CC si imposta nel modulo Spese
+  // (tab Disponibilità); qui viene solo mostrato.
+  const depositoRisparmiCC = (saldi && typeof saldi.depositoRisparmiCC === 'number') ? saldi.depositoRisparmiCC : 0;
 
   const contantiLiquidita = (contanti && typeof contanti.liquidita === 'number') ? contanti.liquidita : 0;
   const contantiDeposito = (contanti && typeof contanti.depositoRisparmio === 'number') ? contanti.depositoRisparmio : 0;
@@ -400,6 +366,7 @@ function renderConsolle(){
   document.getElementById('saldoIntesa').textContent = eur(saldoIntesa);
   document.getElementById('saldoFindomestic').textContent = eur(saldoFindomestic);
   document.getElementById('contoDepositoFindomestic').textContent = eur(contoDepositoFindomestic);
+  document.getElementById('depositoRisparmiCC').textContent = eur(depositoRisparmiCC);
   document.getElementById('dispIntesa').textContent = eur(dispIntesa);
   document.getElementById('dispFindomestic').textContent = eur(dispFindomestic);
   document.getElementById('dispOnline').textContent = eur(dispOnline);
@@ -411,7 +378,6 @@ function renderConsolle(){
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  initCampoEditabile();
   renderConsolle();
   document.addEventListener('visibilitychange', () => {
     if(document.visibilityState === 'visible') renderConsolle();
