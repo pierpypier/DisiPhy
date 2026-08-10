@@ -68,7 +68,7 @@
     border-radius:18px;
     border:3px solid var(--rosa-scuro);
     display:block;
-    background:#fce4ec; /* placeholder visivo finché le foto non sono presenti */
+    background:#fce4ec;
   }
   .foto-caption{
     font-style:italic;
@@ -105,13 +105,13 @@
   .scelta-foto-wrap{
     width:70%;
     display:flex;
-    flex-direction:column;   /* foto sopra, descrizione sotto */
+    flex-direction:column;
     align-items:center;
     gap:10px;
     min-width:0;
   }
   .scelta-foto-wrap img{
-    width:100%;               /* riempie il 70% del contenitore: foto ben visibile */
+    width:100%;
     aspect-ratio:1/1;
     object-fit:cover;
     border-radius:16px;
@@ -201,7 +201,7 @@
   }
 
   /* ============================================================
-     AVVISO "SOLO UNA SCELTA" — box a comparsa, stile coerente
+     AVVISO "SOLO UNA SCELTA"
      ============================================================ */
   .avviso-box{
     position:fixed;
@@ -246,15 +246,11 @@
 
 <div class="container">
 
-  <!-- ============================================================
-       INTESTAZIONE
-       ============================================================ -->
+  <!-- INTESTAZIONE -->
   <h1>Buon Compleanno Diletta!!!</h1>
   <p class="sottotitolo">Quindici anni, sei davvero grande adesso! Quindi devi impegnarti con un piccolo quiz</p>
 
-  <!-- ============================================================
-       PRIMA GRIGLIA — 4 foto con dediche
-       ============================================================ -->
+  <!-- PRIMA GRIGLIA -->
   <div class="grid-foto">
     <div class="foto-item">
       <img src="fotos/dep.jpg" alt="Foto 1">
@@ -274,12 +270,11 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       SECONDA GRIGLIA — scelte con flag esclusivo
-       ============================================================ -->
+  <!-- SECONDA GRIGLIA (Tutte e 4 le scelte racchiuse correttamente in #scelteContainer) -->
   <p class="scelte-titolo">PICCOLO QUIZ : Immagina... Se Babbo Natale e la Befana, decidessero di fare uno strappo alla regola per una persona speciale e zitti zitti, passassero il giorno del tuo Compleanno, in pieno Agosto, magari senza cappello rosso e scopa ma, in costume da bagno... In quel caso, cosa vorresti che ti lasciassero in dono, sotto il... ventilatore?</p>
 
-<div class="scelta-item" id="item1">
+  <div id="scelteContainer">
+    <div class="scelta-item" id="item1">
       <div class="scelta-foto-wrap">
         <img src="fotos/lup.jpg" alt="Scelta 1">
         <p class="scelta-desc">Una abbondante fornitura di lupini per quando fai la pappa</p>
@@ -287,7 +282,7 @@
       <div class="scelta-flag-wrap">
         <input type="checkbox" class="scelta-flag" id="flag1" data-flag="1">
       </div>
-</div>
+    </div>
     
     <div class="scelta-item" id="item2">
       <div class="scelta-foto-wrap">
@@ -299,7 +294,6 @@
       </div>
     </div>
 
-<div id="scelteContainer">
     <div class="scelta-item" id="item3">
       <div class="scelta-foto-wrap">
         <img src="fotos/eur.jpg" alt="Scelta 3">
@@ -321,15 +315,11 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       SEPARATORE + IMMAGINE INTERMEDIA
-       ============================================================ -->
+  <!-- SEPARATORE + IMMAGINE INTERMEDIA -->
   <hr class="separatore">
   <img class="img-intermedia" src="fotos/jas.jpg" alt="Immagine">
 
-  <!-- ============================================================
-       TESTO INTERMEDIO + BOTTONE DI CONFERMA
-       ============================================================ -->
+  <!-- TESTO INTERMEDIO + BOTTONE -->
   <p class="testo-intermedio">
     Se ci hai pensato bene e hai finalmente scelto, schiaccia il bottone per confermare...
     Ho la sensazione che hai deciso per la fornitura di lupini, ma potrei anche sbagliarmi
@@ -339,30 +329,20 @@
     <button id="btnScelto" class="btn-scelto">Hai scelto? Conferma</button>
   </div>
 
-  <!-- ============================================================
-       MESSAGGIO FINALE (nascosto finché non si conferma)
-       ============================================================ -->
+  <!-- MESSAGGIO FINALE -->
   <p id="messaggioFinale" class="messaggio-finale">
     Complimenti!!! Ottima scelta, proprio quello che immaginavo!
   </p>
 
 </div>
 
-<!-- Box avviso "scelta singola" -->
 <div id="avvisoBox" class="avviso-box"></div>
 
 <script>
-/* ================================================================
-   CHIAVI localStorage
-   ================================================================ */
 const LS_FLAG_SELEZIONATO = 'diletta_flag_selezionato';
 const LS_CONFERMATO = 'diletta_confermato';
-
 const DESTINATARI = ['prpesmn@gmail.com', 'smncnc@gmail.com'];
 
-/* ================================================================
-   AVVISO A COMPARSA (per il tentativo di doppia selezione)
-   ================================================================ */
 let timeoutAvviso = null;
 function mostraAvviso(testo){
   const box = document.getElementById('avvisoBox');
@@ -374,9 +354,6 @@ function mostraAvviso(testo){
   }, 3200);
 }
 
-/* ================================================================
-   GESTIONE SELEZIONE ESCLUSIVA DEI 4 FLAG
-   ================================================================ */
 function getCheckbox(n){ return document.getElementById('flag' + n); }
 function getItem(n){ return document.getElementById('item' + n); }
 
@@ -412,17 +389,14 @@ function gestisciCambioFlag(evento){
   const selezioneAttuale = leggiSelezioneSalvata();
 
   if(checkbox.checked){
-    // Se c'è già una scelta diversa attiva, blocco e avviso
     if(selezioneAttuale && selezioneAttuale !== numero){
       checkbox.checked = false;
       mostraAvviso('e no Dilettina, puoi scegliere solo una delle meravigliose possibilità, forse i braccioli per il mare possono andare bene?');
       return;
     }
-    // Selezione valida
     salvaSelezione(numero);
     evidenziaSelezione(numero);
   } else {
-    // L'utente ha deselezionato la propria scelta: libera per sceglierne un'altra
     salvaSelezione(null);
     evidenziaSelezione(null);
   }
@@ -439,9 +413,6 @@ function ripristinaSelezioneSalvata(){
   }
 }
 
-/* ================================================================
-   CONFERMA SCELTA — invio email (mailto) + messaggio finale
-   ================================================================ */
 function inviaEmailScelta(numero){
   const oggetto = encodeURIComponent('Compleanno Diletta - Scelta effettuata');
   const corpo = encodeURIComponent('Scelta effettuata: flag ' + numero);
@@ -474,9 +445,6 @@ function gestisciConferma(){
   mostraStatoConfermato();
 }
 
-/* ================================================================
-   AVVIO
-   ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
   for(let i = 1; i <= 4; i++){
     getCheckbox(i).addEventListener('change', gestisciCambioFlag);
@@ -485,8 +453,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   ripristinaSelezioneSalvata();
 
-  // Se la scelta era già stata confermata in una visita precedente,
-  // mostra subito lo stato finale invece di far ripartire il quiz.
   let giaConfermato = false;
   try{ giaConfermato = localStorage.getItem(LS_CONFERMATO) === 'true'; }catch(e){}
   if(giaConfermato){
