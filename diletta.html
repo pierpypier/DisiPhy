@@ -1,1 +1,499 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buon Compleanno Diletta!</title>
 
+<style>
+  /* ============================================================
+     PALETTE E VARIABILI DI STILE
+     ============================================================ */
+  :root{
+    --rosa-scuro:   #c2185b;   /* titoli, bordi, testo bottone */
+    --rosa-medio:   #f48fb1;   /* sottotitolo */
+    --rosa-chiaro:  #fff0f3;   /* sfondo pagina, sfondo bottone */
+    --rosa-card:    #ffffff;   /* sfondo card scelte */
+    --grigio:       #6b7280;   /* testo secondario / didascalie */
+    --ombra:        0 4px 14px rgba(194,24,91,0.10);
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    background:var(--rosa-chiaro);
+    font-family:'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color:#3a3a3a;
+    padding:32px 16px 60px 16px;
+  }
+
+  .container{
+    max-width:680px;
+    margin:0 auto;
+  }
+
+  /* ============================================================
+     INTESTAZIONE
+     ============================================================ */
+  h1{
+    text-align:center;
+    color:var(--rosa-scuro);
+    font-size:2rem;
+    margin:0 0 8px 0;
+    letter-spacing:.5px;
+  }
+  .sottotitolo{
+    text-align:center;
+    color:var(--rosa-medio);
+    font-size:1.05rem;
+    margin:0 0 36px 0;
+    font-weight:600;
+  }
+
+  /* ============================================================
+     PRIMA GRIGLIA — 4 foto con dediche
+     ============================================================ */
+  .grid-foto{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    margin-bottom:44px;
+  }
+  .foto-item{ text-align:center; }
+  .foto-item img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:18px;
+    border:3px solid var(--rosa-scuro);
+    display:block;
+    background:#fce4ec; /* placeholder visivo finché le foto non sono presenti */
+  }
+  .foto-caption{
+    font-style:italic;
+    color:var(--grigio);
+    margin:10px 0 0 0;
+    font-size:0.92rem;
+  }
+
+  /* ============================================================
+     SECONDA GRIGLIA — scelte con flag esclusivo
+     ============================================================ */
+  .scelte-titolo{
+    text-align:center;
+    color:var(--rosa-scuro);
+    font-size:1.15rem;
+    font-weight:700;
+    margin:0 0 18px 0;
+  }
+  .scelta-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    background:var(--rosa-card);
+    border-radius:16px;
+    padding:14px;
+    margin-bottom:16px;
+    box-shadow:var(--ombra);
+    transition:transform .15s ease;
+  }
+  .scelta-item.selezionata{
+    outline:2px solid var(--rosa-scuro);
+  }
+  .scelta-foto-wrap{
+    width:70%;
+    display:flex;
+    flex-direction:column;   /* foto sopra, descrizione sotto */
+    align-items:center;
+    gap:10px;
+    min-width:0;
+  }
+  .scelta-foto-wrap img{
+    width:100%;               /* riempie il 70% del contenitore: foto ben visibile */
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:16px;
+    border:3px solid var(--rosa-scuro);
+    display:block;
+    background:#fce4ec;
+  }
+  .scelta-desc{
+    font-style:italic;
+    color:var(--grigio);
+    font-size:0.95rem;
+    margin:0;
+    text-align:center;
+  }
+  .scelta-flag-wrap{
+    width:30%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .scelta-flag{
+    width:30px;
+    height:30px;
+    accent-color:var(--rosa-scuro);
+    cursor:pointer;
+  }
+
+  @media (max-width:480px){
+    .scelta-desc{ font-size:0.85rem; }
+    .scelta-flag{ width:26px; height:26px; }
+  }
+
+  /* ============================================================
+     SEPARATORE + IMMAGINE INTERMEDIA
+     ============================================================ */
+  .separatore{
+    border:none;
+    border-top:1px solid #f0d9df;
+    margin:40px 0 28px 0;
+  }
+  .img-intermedia{
+    width:100%;
+    border-radius:18px;
+    display:block;
+    margin-bottom:28px;
+    background:#fce4ec;
+  }
+
+  /* ============================================================
+     TESTO INTERMEDIO + BOTTONE DI CONFERMA
+     ============================================================ */
+  .testo-intermedio{
+    font-style:italic;
+    color:var(--grigio);
+    text-align:center;
+    line-height:1.5;
+    margin:0 0 30px 0;
+    padding:0 8px;
+  }
+
+  .btn-wrap{
+    text-align:center;
+    margin-bottom:10px;
+  }
+  .btn-scelto{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:3px solid var(--rosa-scuro);
+    background:var(--rosa-chiaro);
+    color:var(--rosa-scuro);
+    font-weight:700;
+    font-style:italic;
+    font-size:1.2rem;
+    cursor:pointer;
+    box-shadow:var(--ombra);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn-scelto:hover{
+    transform:scale(1.04);
+    background:#ffe1e9;
+  }
+  .btn-scelto:disabled{
+    opacity:0.5;
+    cursor:not-allowed;
+    transform:none;
+  }
+
+  /* ============================================================
+     AVVISO "SOLO UNA SCELTA" — box a comparsa, stile coerente
+     ============================================================ */
+  .avviso-box{
+    position:fixed;
+    left:50%;
+    bottom:24px;
+    transform:translate(-50%, 20px);
+    max-width:90%;
+    width:420px;
+    background:var(--rosa-scuro);
+    color:#fff;
+    padding:14px 20px;
+    border-radius:14px;
+    font-size:0.95rem;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(194,24,91,0.35);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+    z-index:999;
+  }
+  .avviso-box.mostra{
+    opacity:1;
+    transform:translate(-50%, 0);
+  }
+
+  /* ============================================================
+     MESSAGGIO FINALE
+     ============================================================ */
+  .messaggio-finale{
+    display:none;
+    text-align:center;
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--rosa-scuro);
+    margin-top:24px;
+    line-height:1.4;
+  }
+  .messaggio-finale.mostra{ display:block; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============================================================
+       INTESTAZIONE
+       ============================================================ -->
+  <h1>Buon Compleanno Diletta!!!</h1>
+  <p class="sottotitolo">quindici anni, sei davvero grande adesso! Quindi devi impegnarti con un piccolo quiz</p>
+
+  <!-- ============================================================
+       PRIMA GRIGLIA — 4 foto con dediche
+       ============================================================ -->
+  <div class="grid-foto">
+    <div class="foto-item">
+      <img src="fotos/dep.jpg" alt="Foto 1">
+      <p class="foto-caption">tanti auguri anche da parte mia</p>
+    </div>
+    <div class="foto-item">
+      <img src="fotos/bel.jpg" alt="Foto 2">
+      <p class="foto-caption">e anche da me</p>
+    </div>
+    <div class="foto-item">
+      <img src="fotos/tom.jpg" alt="Foto 3">
+      <p class="foto-caption">e pure da me</p>
+    </div>
+    <div class="foto-item">
+      <img src="fotos/zen.jpg" alt="Foto 4">
+      <p class="foto-caption">auguri, ci sono anche io</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECONDA GRIGLIA — scelte con flag esclusivo
+       ============================================================ -->
+  <p class="scelte-titolo">Scegli il tuo regalo...</p>
+
+  <div id="scelteContainer">
+    <div class="scelta-item" id="item1">
+      <div class="scelta-foto-wrap">
+        <img src="fotos/eur.jpg" alt="Scelta 1">
+        <p class="scelta-desc">descrizione 1</p>
+      </div>
+      <div class="scelta-flag-wrap">
+        <input type="checkbox" class="scelta-flag" id="flag1" data-flag="1">
+      </div>
+    </div>
+
+    <div class="scelta-item" id="item2">
+      <div class="scelta-foto-wrap">
+        <img src="fotos/lup.jpg" alt="Scelta 2">
+        <p class="scelta-desc">descrizione 2</p>
+      </div>
+      <div class="scelta-flag-wrap">
+        <input type="checkbox" class="scelta-flag" id="flag2" data-flag="2">
+      </div>
+    </div>
+
+    <div class="scelta-item" id="item3">
+      <div class="scelta-foto-wrap">
+        <img src="fotos/bor.jpg" alt="Scelta 3">
+        <p class="scelta-desc">descrizione 3</p>
+      </div>
+      <div class="scelta-flag-wrap">
+        <input type="checkbox" class="scelta-flag" id="flag3" data-flag="3">
+      </div>
+    </div>
+
+    <div class="scelta-item" id="item4">
+      <div class="scelta-foto-wrap">
+        <img src="fotos/bra.jpg" alt="Scelta 4">
+        <p class="scelta-desc">descrizione 4</p>
+      </div>
+      <div class="scelta-flag-wrap">
+        <input type="checkbox" class="scelta-flag" id="flag4" data-flag="4">
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SEPARATORE + IMMAGINE INTERMEDIA
+       ============================================================ -->
+  <hr class="separatore">
+  <img class="img-intermedia" src="fotos/jas.jpg" alt="Immagine">
+
+  <!-- ============================================================
+       TESTO INTERMEDIO + BOTTONE DI CONFERMA
+       ============================================================ -->
+  <p class="testo-intermedio">
+    Se ci hai pensato bene e hai finalmente scelto, conferma pure...
+    Ho la sensazione che hai deciso per la fornitura di lupini, ma potrei anche sbagliarmi
+  </p>
+
+  <div class="btn-wrap">
+    <button id="btnScelto" class="btn-scelto">scelto!</button>
+  </div>
+
+  <!-- ============================================================
+       MESSAGGIO FINALE (nascosto finché non si conferma)
+       ============================================================ -->
+  <p id="messaggioFinale" class="messaggio-finale">
+    Complimenti!!! Ottima scelta, proprio quello che immaginavo!
+  </p>
+
+</div>
+
+<!-- Box avviso "scelta singola" -->
+<div id="avvisoBox" class="avviso-box"></div>
+
+<script>
+/* ================================================================
+   CHIAVI localStorage
+   ================================================================ */
+const LS_FLAG_SELEZIONATO = 'diletta_flag_selezionato';
+const LS_CONFERMATO = 'diletta_confermato';
+
+const DESTINATARI = ['prpesmn@gmail.com', 'smncnc@gmail.com'];
+
+/* ================================================================
+   AVVISO A COMPARSA (per il tentativo di doppia selezione)
+   ================================================================ */
+let timeoutAvviso = null;
+function mostraAvviso(testo){
+  const box = document.getElementById('avvisoBox');
+  box.textContent = testo;
+  box.classList.add('mostra');
+  if(timeoutAvviso) clearTimeout(timeoutAvviso);
+  timeoutAvviso = setTimeout(() => {
+    box.classList.remove('mostra');
+  }, 3200);
+}
+
+/* ================================================================
+   GESTIONE SELEZIONE ESCLUSIVA DEI 4 FLAG
+   ================================================================ */
+function getCheckbox(n){ return document.getElementById('flag' + n); }
+function getItem(n){ return document.getElementById('item' + n); }
+
+function evidenziaSelezione(numeroSelezionato){
+  for(let i = 1; i <= 4; i++){
+    getItem(i).classList.toggle('selezionata', String(i) === String(numeroSelezionato));
+  }
+}
+
+function salvaSelezione(numero){
+  try{
+    if(numero){
+      localStorage.setItem(LS_FLAG_SELEZIONATO, String(numero));
+    } else {
+      localStorage.removeItem(LS_FLAG_SELEZIONATO);
+    }
+  }catch(e){
+    console.warn('Errore salvataggio selezione', e);
+  }
+}
+
+function leggiSelezioneSalvata(){
+  try{
+    return localStorage.getItem(LS_FLAG_SELEZIONATO);
+  }catch(e){
+    return null;
+  }
+}
+
+function gestisciCambioFlag(evento){
+  const checkbox = evento.target;
+  const numero = checkbox.dataset.flag;
+  const selezioneAttuale = leggiSelezioneSalvata();
+
+  if(checkbox.checked){
+    // Se c'è già una scelta diversa attiva, blocco e avviso
+    if(selezioneAttuale && selezioneAttuale !== numero){
+      checkbox.checked = false;
+      mostraAvviso('e no Dilettina, puoi scegliere solo una delle meravigliose possibilità, forse i braccioli per il mare possono andare bene?');
+      return;
+    }
+    // Selezione valida
+    salvaSelezione(numero);
+    evidenziaSelezione(numero);
+  } else {
+    // L'utente ha deselezionato la propria scelta: libera per sceglierne un'altra
+    salvaSelezione(null);
+    evidenziaSelezione(null);
+  }
+}
+
+function ripristinaSelezioneSalvata(){
+  const numero = leggiSelezioneSalvata();
+  if(numero){
+    const cb = getCheckbox(numero);
+    if(cb){
+      cb.checked = true;
+      evidenziaSelezione(numero);
+    }
+  }
+}
+
+/* ================================================================
+   CONFERMA SCELTA — invio email (mailto) + messaggio finale
+   ================================================================ */
+function inviaEmailScelta(numero){
+  const oggetto = encodeURIComponent('Compleanno Diletta - Scelta effettuata');
+  const corpo = encodeURIComponent('Scelta effettuata: flag ' + numero);
+  const url = 'mailto:' + DESTINATARI.join(',') + '?subject=' + oggetto + '&body=' + corpo;
+  window.location.href = url;
+}
+
+function mostraStatoConfermato(){
+  document.getElementById('scelteContainer').style.display = 'none';
+  document.getElementById('btnScelto').style.display = 'none';
+  document.querySelector('.testo-intermedio').style.display = 'none';
+  document.getElementById('messaggioFinale').classList.add('mostra');
+}
+
+function gestisciConferma(){
+  const numero = leggiSelezioneSalvata();
+  if(!numero){
+    mostraAvviso('Prima scegli una delle quattro possibilità qui sopra!');
+    return;
+  }
+
+  inviaEmailScelta(numero);
+
+  try{
+    localStorage.setItem(LS_CONFERMATO, 'true');
+  }catch(e){
+    console.warn('Errore salvataggio conferma', e);
+  }
+
+  mostraStatoConfermato();
+}
+
+/* ================================================================
+   AVVIO
+   ================================================================ */
+window.addEventListener('DOMContentLoaded', () => {
+  for(let i = 1; i <= 4; i++){
+    getCheckbox(i).addEventListener('change', gestisciCambioFlag);
+  }
+  document.getElementById('btnScelto').addEventListener('click', gestisciConferma);
+
+  ripristinaSelezioneSalvata();
+
+  // Se la scelta era già stata confermata in una visita precedente,
+  // mostra subito lo stato finale invece di far ripartire il quiz.
+  let giaConfermato = false;
+  try{ giaConfermato = localStorage.getItem(LS_CONFERMATO) === 'true'; }catch(e){}
+  if(giaConfermato){
+    mostraStatoConfermato();
+  }
+});
+</script>
+
+</body>
+  </html>
