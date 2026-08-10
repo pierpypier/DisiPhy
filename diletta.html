@@ -86,6 +86,7 @@
     font-size:1.15rem;
     font-weight:700;
     margin:0 0 18px 0;
+    line-height:1.4;
   }
   .scelta-item{
     display:flex;
@@ -246,11 +247,15 @@
 
 <div class="container">
 
-  <!-- INTESTAZIONE -->
+  <!-- ============================================================
+       INTESTAZIONE
+       ============================================================ -->
   <h1>Buon Compleanno Diletta!!!</h1>
   <p class="sottotitolo">Quindici anni, sei davvero grande adesso! Quindi devi impegnarti con un piccolo quiz</p>
 
-  <!-- PRIMA GRIGLIA -->
+  <!-- ============================================================
+       PRIMA GRIGLIA — 4 foto con dediche
+       ============================================================ -->
   <div class="grid-foto">
     <div class="foto-item">
       <img src="fotos/dep.jpg" alt="Foto 1">
@@ -270,57 +275,61 @@
     </div>
   </div>
 
-  <!-- SECONDA GRIGLIA (Tutte e 4 le scelte racchiuse correttamente in #scelteContainer) -->
-  <p class="scelte-titolo">PICCOLO QUIZ : Immagina... Se Babbo Natale e la Befana, decidessero di fare uno strappo alla regola per una persona speciale e zitti zitti, passassero il giorno del tuo Compleanno, in pieno Agosto, magari senza cappello rosso e scopa ma, in costume da bagno... In quel caso, cosa vorresti che ti lasciassero in dono, sotto il... ventilatore?</p>
+  <!-- ============================================================
+       SECONDA GRIGLIA — scelte con flag esclusivo
+       ============================================================ -->
+  <p class="scelte-titolo" id="titoloQuiz">PICCOLO QUIZ : Immagina... Se Babbo Natale e la Befana, decidessero di fare uno strappo alla regola per una persona speciale e zitti zitti, passassero il giorno del tuo Compleanno, in pieno Agosto, magari senza cappello rosso e scopa ma, in costume da bagno... In quel caso, cosa vorresti che ti lasciassero in dono, sotto il... ventilatore?</p>
 
-  <div id="scelteContainer">
-    <div class="scelta-item" id="item1">
-      <div class="scelta-foto-wrap">
-        <img src="fotos/lup.jpg" alt="Scelta 1">
-        <p class="scelta-desc">Una abbondante fornitura di lupini per quando fai la pappa</p>
-      </div>
-      <div class="scelta-flag-wrap">
-        <input type="checkbox" class="scelta-flag" id="flag1" data-flag="1">
-      </div>
+  <div class="scelta-item" id="item1">
+    <div class="scelta-foto-wrap">
+      <img src="fotos/lup.jpg" alt="Scelta 1">
+      <p class="scelta-desc">Una abbondante fornitura di lupini per quando fai la pappa</p>
     </div>
+    <div class="scelta-flag-wrap">
+      <input type="checkbox" class="scelta-flag" id="flag1" data-flag="1">
+    </div>
+  </div>
     
-    <div class="scelta-item" id="item2">
-      <div class="scelta-foto-wrap">
-        <img src="fotos/bor.jpg" alt="Scelta 2">
-        <p class="scelta-desc">Una borsetta chick che forse forse ti piace almeno un po'</p>
-      </div>
-      <div class="scelta-flag-wrap">
-        <input type="checkbox" class="scelta-flag" id="flag2" data-flag="2">
-      </div>
+  <div class="scelta-item" id="item2">
+    <div class="scelta-foto-wrap">
+      <img src="fotos/bor.jpg" alt="Scelta 2">
+      <p class="scelta-desc">Una borsetta chick che forse forse ti piace almeno un po'</p>
     </div>
-
-    <div class="scelta-item" id="item3">
-      <div class="scelta-foto-wrap">
-        <img src="fotos/eur.jpg" alt="Scelta 3">
-        <p class="scelta-desc">Un equivalente gruzzoletto per i tuoi risparmi e acquisti</p>
-      </div>
-      <div class="scelta-flag-wrap">
-        <input type="checkbox" class="scelta-flag" id="flag3" data-flag="3">
-      </div>
-    </div>
-  
-    <div class="scelta-item" id="item4">
-      <div class="scelta-foto-wrap">
-        <img src="fotos/bra.jpg" alt="Scelta 4">
-        <p class="scelta-desc">Due bellissimi braccioli dei tuoi Avengers preferiti per le tue splendide giornate al mare</p>
-      </div>
-      <div class="scelta-flag-wrap">
-        <input type="checkbox" class="scelta-flag" id="flag4" data-flag="4">
-      </div>
+    <div class="scelta-flag-wrap">
+      <input type="checkbox" class="scelta-flag" id="flag2" data-flag="2">
     </div>
   </div>
 
-  <!-- SEPARATORE + IMMAGINE INTERMEDIA -->
+  <div class="scelta-item" id="item3">
+    <div class="scelta-foto-wrap">
+      <img src="fotos/eur.jpg" alt="Scelta 3">
+      <p class="scelta-desc">Un equivalente gruzzoletto per i tuoi risparmi e acquisti</p>
+    </div>
+    <div class="scelta-flag-wrap">
+      <input type="checkbox" class="scelta-flag" id="flag3" data-flag="3">
+    </div>
+  </div>
+  
+  <div class="scelta-item" id="item4">
+    <div class="scelta-foto-wrap">
+      <img src="fotos/bra.jpg" alt="Scelta 4">
+      <p class="scelta-desc">Due bellissimi braccioli dei tuoi Avengers preferiti per le tue splendide giornate al mare</p>
+    </div>
+    <div class="scelta-flag-wrap">
+      <input type="checkbox" class="scelta-flag" id="flag4" data-flag="4">
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SEPARATORE + IMMAGINE INTERMEDIA
+       ============================================================ -->
   <hr class="separatore">
   <img class="img-intermedia" src="fotos/jas.jpg" alt="Immagine">
 
-  <!-- TESTO INTERMEDIO + BOTTONE -->
-  <p class="testo-intermedio">
+  <!-- ============================================================
+       TESTO INTERMEDIO + BOTTONE DI CONFERMA
+       ============================================================ -->
+  <p class="testo-intermedio" id="testoIntermedio">
     Se ci hai pensato bene e hai finalmente scelto, schiaccia il bottone per confermare...
     Ho la sensazione che hai deciso per la fornitura di lupini, ma potrei anche sbagliarmi
   </p>
@@ -329,18 +338,23 @@
     <button id="btnScelto" class="btn-scelto">Hai scelto? Conferma</button>
   </div>
 
-  <!-- MESSAGGIO FINALE -->
+  <!-- ============================================================
+       MESSAGGIO FINALE
+       ============================================================ -->
   <p id="messaggioFinale" class="messaggio-finale">
     Complimenti!!! Ottima scelta, proprio quello che immaginavo!
   </p>
 
 </div>
 
+<!-- Box avviso "scelta singola" -->
 <div id="avvisoBox" class="avviso-box"></div>
 
 <script>
-const LS_FLAG_SELEZIONATO = 'diletta_flag_selezionato';
-const LS_CONFERMATO = 'diletta_confermato';
+/* ================================================================
+   LOGICA JAVASCRIPT (Senza LocalStorage)
+   ================================================================ */
+let sceltaAttuale = null;
 const DESTINATARI = ['prpesmn@gmail.com', 'smncnc@gmail.com'];
 
 let timeoutAvviso = null;
@@ -354,112 +368,54 @@ function mostraAvviso(testo){
   }, 3200);
 }
 
-function getCheckbox(n){ return document.getElementById('flag' + n); }
-function getItem(n){ return document.getElementById('item' + n); }
-
-function evidenziaSelezione(numeroSelezionato){
-  for(let i = 1; i <= 4; i++){
-    getItem(i).classList.toggle('selezionata', String(i) === String(numeroSelezionato));
-  }
-}
-
-function salvaSelezione(numero){
-  try{
-    if(numero){
-      localStorage.setItem(LS_FLAG_SELEZIONATO, String(numero));
+// Gestione selezione esclusiva dei 4 flag
+document.querySelectorAll('.scelta-flag').forEach(cb => {
+  cb.addEventListener('change', (e) => {
+    const numero = e.target.dataset.flag;
+    
+    if(e.target.checked){
+      if(sceltaAttuale && sceltaAttuale !== numero){
+        document.getElementById('flag' + sceltaAttuale).checked = false;
+        document.getElementById('item' + sceltaAttuale).classList.remove('selezionata');
+        mostraAvviso('e no Dilettina, puoi scegliere solo una delle meravigliose possibilità, forse i braccioli per il mare possono andare bene?');
+      }
+      sceltaAttuale = numero;
+      document.getElementById('item' + sceltaAttuale).classList.add('selezionata');
     } else {
-      localStorage.removeItem(LS_FLAG_SELEZIONATO);
+      document.getElementById('item' + numero).classList.remove('selezionata');
+      if(sceltaAttuale === numero){
+        sceltaAttuale = null;
+      }
     }
-  }catch(e){
-    console.warn('Errore salvataggio selezione', e);
-  }
-}
+  });
+});
 
-function leggiSelezioneSalvata(){
-  try{
-    return localStorage.getItem(LS_FLAG_SELEZIONATO);
-  }catch(e){
-    return null;
-  }
-}
-
-function gestisciCambioFlag(evento){
-  const checkbox = evento.target;
-  const numero = checkbox.dataset.flag;
-  const selezioneAttuale = leggiSelezioneSalvata();
-
-  if(checkbox.checked){
-    if(selezioneAttuale && selezioneAttuale !== numero){
-      checkbox.checked = false;
-      mostraAvviso('e no Dilettina, puoi scegliere solo una delle meravigliose possibilità, forse i braccioli per il mare possono andare bene?');
-      return;
-    }
-    salvaSelezione(numero);
-    evidenziaSelezione(numero);
-  } else {
-    salvaSelezione(null);
-    evidenziaSelezione(null);
-  }
-}
-
-function ripristinaSelezioneSalvata(){
-  const numero = leggiSelezioneSalvata();
-  if(numero){
-    const cb = getCheckbox(numero);
-    if(cb){
-      cb.checked = true;
-      evidenziaSelezione(numero);
-    }
-  }
-}
-
-function inviaEmailScelta(numero){
-  const oggetto = encodeURIComponent('Compleanno Diletta - Scelta effettuata');
-  const corpo = encodeURIComponent('Scelta effettuata: flag ' + numero);
-  const url = 'mailto:' + DESTINATARI.join(',') + '?subject=' + oggetto + '&body=' + corpo;
-  window.location.href = url;
-}
-
-function mostraStatoConfermato(){
-  document.getElementById('scelteContainer').style.display = 'none';
-  document.getElementById('btnScelto').style.display = 'none';
-  document.querySelector('.testo-intermedio').style.display = 'none';
-  document.getElementById('messaggioFinale').classList.add('mostra');
-}
-
+// Conferma della scelta e apertura client di posta
 function gestisciConferma(){
-  const numero = leggiSelezioneSalvata();
-  if(!numero){
+  if(!sceltaAttuale){
     mostraAvviso('Prima scegli una delle quattro possibilità qui sopra!');
     return;
   }
 
-  inviaEmailScelta(numero);
+  const oggetto = encodeURIComponent('Compleanno Diletta - Scelta effettuata');
+  const corpo = encodeURIComponent('Scelta effettuata: flag ' + sceltaAttuale);
+  const url = 'mailto:' + DESTINATARI.join(',') + '?subject=' + oggetto + '&body=' + corpo;
+  window.location.href = url;
 
-  try{
-    localStorage.setItem(LS_CONFERMATO, 'true');
-  }catch(e){
-    console.warn('Errore salvataggio conferma', e);
+  // Nasconde gli elementi del quiz e mostra il messaggio finale
+  for(let i = 1; i <= 4; i++){
+    document.getElementById('item' + i).style.display = 'none';
   }
-
-  mostraStatoConfermato();
+  document.getElementById('titoloQuiz').style.display = 'none';
+  document.getElementById('btnScelto').style.display = 'none';
+  document.getElementById('testoIntermedio').style.display = 'none';
+  document.getElementById('messaggioFinale').classList.add('mostra');
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  for(let i = 1; i <= 4; i++){
-    getCheckbox(i).addEventListener('change', gestisciCambioFlag);
-  }
   document.getElementById('btnScelto').addEventListener('click', gestisciConferma);
-
-  ripristinaSelezioneSalvata();
-
-  let giaConfermato = false;
-  try{ giaConfermato = localStorage.getItem(LS_CONFERMATO) === 'true'; }catch(e){}
-  if(giaConfermato){
-    mostraStatoConfermato();
-  }
 });
 </script>
 
 </body>
-  </html>
+</html>
