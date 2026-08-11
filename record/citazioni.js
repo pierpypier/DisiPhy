@@ -763,6 +763,56 @@ Urano ruota attorno a un asse fortemente inclinato, quasi parallelo al piano del
 Le aurore polari sono prodotte dall'interazione tra particelle cariche provenienti dal Sole e l'atmosfera terrestre. — fisica dello spazio
 Un triangolo equilatero ha tre lati e tre angoli della stessa misura. — geometria
 La circonferenza di un cerchio è uguale a 2πr, dove r rappresenta il raggio. — geometria
+Le cellule procariotiche non possiedono un nucleo delimitato da una membrana.
+Il reticolo endoplasmatico rugoso è ricoperto di ribosomi e partecipa alla sintesi delle proteine.
+I mitocondri producono gran parte dell'ATP utilizzato dalle cellule e possiedono un proprio DNA.
+Il sangue è classificato come un tessuto connettivo perché contiene cellule immerse in una matrice extracellulare liquida.
+Le piastrine partecipano ai processi che portano alla coagulazione del sangue.
+Il camaleonte può muovere i due occhi in modo indipendente l'uno dall'altro.
+I polpi possiedono tre cuori e il loro sangue contiene emocianina, una proteina contenente rame.
+I coralli sono animali appartenenti al gruppo degli cnidari, non piante.
+English: I forgot my umbrella at the office. — Italiano: Ho dimenticato il mio ombrello in ufficio.
+English: We have been waiting for the doctor for twenty minutes. — Italiano: Stiamo aspettando il medico da venti minuti.
+English: Could I have a window seat, please? — Italiano: Potrei avere un posto vicino al finestrino, per favore?
+English: The museum was closed when we arrived. — Italiano: Il museo era chiuso quando siamo arrivati.
+English: I need to buy a charger for my phone. — Italiano: Devo comprare un caricabatterie per il mio telefono.
+English: My daughter will be home after school. — Italiano: Mia figlia sarà a casa dopo la scuola.
+English: We usually have breakfast before leaving home. — Italiano: Di solito facciamo colazione prima di uscire di casa.
+English: The train has already left the platform. — Italiano: Il treno è già partito dal binario.
+English: I was reading when the lights went out. — Italiano: Stavo leggendo quando è andata via la luce.
+English: Please keep this receipt in case you need to return the item. — Italiano: Conservi questo scontrino nel caso debba restituire l'articolo.
+English: Tomorrow we are meeting our friends at the station. — Italiano: Domani incontreremo i nostri amici alla stazione.
+English: She has just finished her homework. — Italiano: Ha appena finito i compiti.
+English: How long does the journey take by bus? — Italiano: Quanto dura il viaggio in autobus?
+English: I will be back before dinner. — Italiano: Tornerò prima di cena.
+Nella mitologia greca, Dioniso era associato al vino, alla festa e al teatro.
+Nella mitologia greca, Demetra era associata all'agricoltura e alla fertilità della terra.
+Il mito di Orfeo ed Euridice racconta il viaggio di Orfeo nel mondo dei morti per tentare di riportare indietro Euridice.
+Secondo la tradizione mitologica greca, Icaro cadde in mare dopo essersi avvicinato troppo al Sole con ali costruite dal padre Dedalo.
+Il labirinto di Cnosso è collegato nella tradizione mitologica al Minotauro e al re Minosse.
+Parmenide sostenne che ciò che è non può nascere dal nulla né trasformarsi in ciò che non è.
+Epicuro riteneva che una vita felice richiedesse, tra le altre cose, la liberazione dalle paure infondate.
+Diogene di Sinope è una delle figure più note della scuola cinica dell'antica Grecia.
+Archimede formulò il principio secondo cui un corpo immerso in un fluido riceve una spinta verso l'alto pari al peso del fluido spostato.
+Un oggetto in equilibrio traslazionale ha risultante delle forze esterne uguale a zero.
+Il momento di una forza rispetto a un punto dipende dalla forza e dalla distanza perpendicolare dalla sua linea d'azione.
+Un prisma ottico può separare la luce bianca nelle diverse componenti dello spettro visibile.
+Il campo magnetico terrestre contribuisce a deviare una parte delle particelle cariche provenienti dal vento solare.
+Saturno possiede un sistema di anelli composto principalmente da frammenti di ghiaccio e materiale roccioso.
+Giove è il pianeta più grande del Sistema Solare.
+La Luna mostra quasi sempre la stessa faccia alla Terra perché il suo periodo di rotazione è uguale al periodo della sua orbita.
+Un'eclissi solare si verifica quando la Luna si trova tra la Terra e il Sole e ne copre almeno parzialmente il disco osservato dalla Terra.
+Un'eclissi lunare avviene quando la Terra si trova tra il Sole e la Luna e la Luna attraversa l'ombra terrestre.
+Il numero zero svolge un ruolo fondamentale sia come numero sia come elemento neutro dell'addizione.
+Un quadrato possiede quattro lati congruenti e quattro angoli retti.
+Il volume di un cubo di lato l è l³.
+Il teorema di Talete permette di ricavare relazioni tra segmenti quando una famiglia di rette parallele interseca due trasversali.
+La probabilità di un evento certo è uguale a 1.
+Una soluzione chimica è una miscela omogenea nella quale una o più sostanze sono distribuite uniformemente in un solvente.
+Durante una reazione chimica, gli atomi vengono riarrangiati ma non creati né distrutti.
+Il numero atomico di un elemento corrisponde al numero di protoni presenti nel nucleo dei suoi atomi.
+Il diamante e la grafite sono due forme allotropiche del carbonio con strutture cristalline differenti.
+Le reazioni di neutralizzazione tra un acido e una base possono produrre acqua e un sale.   
 Il tempo non si trova, si organizza.
 
 `;
