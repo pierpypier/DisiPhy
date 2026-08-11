@@ -862,6 +862,357 @@ Il mercurio è l'unico elemento metallico che si trova allo stato liquido a temp
 Il diamante è molto duro perché gli atomi di carbonio sono collegati da una struttura tridimensionale di legami covalenti. — chimica
 Il principio di Archimede permette di spiegare perché una nave di acciaio può galleggiare grazie al volume d'acqua che sposta. — fisica
 In un triangolo rettangolo, l'altezza relativa all'ipotenusa divide il triangolo in due triangoli simili tra loro e con quello di partenza. — geometria
+1204 — La Quarta Crociata culmina nel sacco di Costantinopoli da parte dei crociati latini.
+1588 — La flotta inglese sconfigge l'Invincibile Armata spagnola.
+1683 — La Battaglia di Vienna ferma l'avanzata ottomana nell'Europa centrale.
+1707 — Entra in vigore l'Atto di Unione tra Inghilterra e Scozia.
+1893 — La Nuova Zelanda diventa il primo paese al mondo a concedere il voto alle donne.
+1912 — Il transatlantico Titanic affonda durante il suo viaggio inaugurale.
+1927 — Charles Lindbergh compie la prima trasvolata atlantica in solitaria senza scalo.
+1953 — Edmund Hillary e Tenzing Norgay raggiungono per primi la vetta dell'Everest.
+Secondo il mito, Tantalo fu condannato a soffrire fame e sete eterne pur avendo cibo e acqua a portata di mano. — mitologia greca
+Aracne sfidò Atena in una gara di tessitura e fu trasformata in ragno per la sua superbia. — mitologia greca
+Niobe, vantandosi dei propri figli, li vide uccisi dalle frecce di Apollo e Artemide. — mitologia greca
+Ganimede fu rapito da Zeus per diventare coppiere degli dei sull'Olimpo. — mitologia greca
+Cerbero, il cane a tre teste, custodiva l'ingresso del regno dei morti. — mitologia greca
+Bellerofonte domò il cavallo alato Pegaso per affrontare la Chimera. — mitologia greca
+Endimione ricevette da Zeus il dono di un sonno eterno e di un'eterna giovinezza. — mitologia greca
+Cratilo, allievo di Eraclito, sosteneva che il mutamento continuo rendesse impossibile persino nominare le cose. — filosofia antica
+Antistene, considerato tra i fondatori della scuola cinica, predicava una vita semplice e priva di bisogni superflui. — filosofia antica
+Crisippo sistematizzò gran parte della logica e dell'etica della Stoa antica. — filosofia antica
+La teoria dell'inflazione cosmica ipotizza un'espansione estremamente rapida dell'universo nei primi istanti dopo il Big Bang. — cosmologia
+Un effetto di lente gravitazionale si verifica quando la massa di una galassia devia e amplifica la luce proveniente da oggetti più lontani. — cosmologia
+L'orizzonte degli eventi di un buco nero è il confine oltre il quale nulla, nemmeno la luce, può più sfuggire. — astrofisica
+Le stelle di popolazione III, mai osservate direttamente, sarebbero state le primissime stelle formatesi nell'universo. — cosmologia
+Durante l'epoca della reionizzazione, la radiazione delle prime stelle e galassie ionizzò nuovamente il gas neutro dell'universo. — cosmologia
+Petra, in Giordania, fu scavata direttamente nella roccia dai Nabatei oltre duemila anni fa. — curiosità dal mondo
+La Grande Barriera Corallina australiana è la più estesa struttura vivente della Terra. — curiosità dal mondo
+Chichén Itzá, in Messico, fu un importante centro della civiltà Maya. — curiosità dal mondo
+Angkor Wat, in Cambogia, è il più grande complesso religioso mai costruito al mondo. — curiosità dal mondo
+Sull'Isola di Pasqua si trovano centinaia di enormi statue di pietra chiamate moai. — curiosità dal mondo
+I fiordi norvegesi si formarono grazie all'erosione dei ghiacciai durante le ere glaciali. — curiosità dal mondo
+Heinrich Schliemann individuò nel XIX secolo il sito ritenuto corrispondere all'antica Troia. — archeologia
+L'Esercito di Terracotta, scoperto nel 1974, proteggeva la tomba del primo imperatore cinese. — archeologia
+Howard Carter scoprì la tomba pressoché intatta di Tutankhamon nel 1922. — archeologia
+Le rovine dell'antica Cartagine testimoniano ancora oggi la potenza di quella civiltà punica. — archeologia
+Stonehenge, nel sud dell'Inghilterra, fu costruito in diverse fasi a partire da circa 5.000 anni fa. — archeologia
+Il Velociraptor era in realtà molto più piccolo di come viene rappresentato nei film, grande all'incirca come un tacchino. — dinosauri
+Il Triceratops utilizzava le sue corna soprattutto per il combattimento tra esemplari della stessa specie. — dinosauri
+Lo Spinosaurus è ritenuto uno dei pochi dinosauri adattati a una vita semi-acquatica. — dinosauri
+L'estinzione dei dinosauri non aviani è collegata all'impatto dell'asteroide di Chicxulub, in Messico. — dinosauri
+L'Archaeopteryx, vissuto circa 150 milioni di anni fa, è considerato un anello di collegamento tra dinosauri e uccelli. — dinosauri
+Il Decameron di Giovanni Boccaccio raccoglie cento novelle narrate durante la peste del Trecento. — letteratura
+Il Canzoniere di Francesco Petrarca influenzò profondamente la poesia amorosa europea successiva. — letteratura
+L'Eneide di Virgilio narra il viaggio di Enea dalle rovine di Troia fino alle origini di Roma. — letteratura
+Le Metamorfosi di Ovidio raccolgono numerosi miti trasformati in un unico grande poema. — letteratura
+Sofocle ed Euripide, insieme a Eschilo, sono considerati i grandi tragediografi dell'antica Atene. — letteratura
+I need to renew my passport before the trip — Devo rinnovare il passaporto prima del viaggio
+Can you recommend a good restaurant nearby? — Puoi consigliarmi un buon ristorante qui vicino?
+We're running low on printer paper at the office — In ufficio stiamo finendo la carta per la stampante
+Did you remember to lock the front door? — Ti sei ricordato di chiudere a chiave la porta d'ingresso?
+I'll drop the kids off and then head to work — Accompagno i bambini e poi vado al lavoro
+The flight has been delayed by two hours — Il volo è stato ritardato di due ore
+Uluru, in Australia, è uno dei monoliti di arenaria più grandi del mondo ed è sacro per le popolazioni aborigene. — curiosità dal mondo
+Il Grand Canyon, negli Stati Uniti, è stato scavato nel corso di milioni di anni dal fiume Colorado. — curiosità dal mondo
+In Cappadocia, in Turchia, intere abitazioni furono scavate nella roccia vulcanica fin dall'antichità. — curiosità dal mondo
+Le Isole Fær Øer, tra Norvegia e Islanda, contano più pecore che abitanti. — curiosità dal mondo
+Il Monte Fuji, in Giappone, è un vulcano ancora considerato attivo dai vulcanologi. — curiosità dal mondo
+La Foresta Nera, in Germania, prende il nome dalla fittissima vegetazione di conifere che la ricopre. — curiosità dal mondo
+Table Mountain, a Città del Capo, è spesso avvolta da una nube che gli abitanti chiamano tovaglia. — curiosità dal mondo
+Le Grotte di Postumia, in Slovenia, si estendono per oltre venti chilometri sotto la superficie. — curiosità dal mondo
+Il lago Titicaca, tra Perù e Bolivia, è considerato il lago navigabile più alto del mondo. — curiosità dal mondo
+In Antartide vivono colonie di pinguini adattate a temperature estremamente rigide. — curiosità dal mondo
+La Valle della Morte, negli Stati Uniti, ha registrato alcune delle temperature più alte mai misurate sulla Terra. — curiosità dal mondo
+Il bosco di Hallerbos, in Belgio, si tinge di blu ogni primavera per la fioritura dei giacinti selvatici. — curiosità dal mondo
+Il Grande Buco Blu, al largo del Belize, è una gigantesca dolina sottomarina visibile anche dall'alto. — curiosità dal mondo
+Il Salto Angel, in Venezuela, è la cascata con il maggior dislivello ininterrotto del mondo. — curiosità dal mondo
+Il Deserto Bianco, in Egitto, deve il proprio nome alle particolari formazioni rocciose di gesso. — curiosità dal mondo
+Le Isole Galápagos ispirarono Charles Darwin durante il suo viaggio a bordo del Beagle. — curiosità dal mondo
+A Wadi Rum, in Giordania, il paesaggio desertico è stato usato spesso come ambientazione cinematografica. — curiosità dal mondo
+Il ghiacciaio Perito Moreno, in Argentina, è uno dei pochi ghiacciai al mondo ancora in avanzamento. — curiosità dal mondo
+Il vulcano Kilauea, alle Hawaii, è tra i più attivi al mondo. — curiosità dal mondo
+Sull'isola di Socotra, in Yemen, cresce l'albero del sangue di drago, dalla forma insolita a ombrello. — curiosità dal mondo
+La Grotta dei Cristalli di Naica, in Messico, ospita alcuni dei cristalli naturali più grandi mai scoperti. — curiosità dal mondo
+Le formazioni Danxia, in Cina, mostrano rocce stratificate dai colori sorprendenti dovuti a minerali diversi. — curiosità dal mondo
+La Skeleton Coast, in Namibia, prende il nome dai numerosi relitti di navi naufragate lungo la costa. — curiosità dal mondo
+Il deserto del Gobi, tra Cina e Mongolia, è uno dei più estesi deserti freddi del mondo. — curiosità dal mondo
+Le sorgenti termali di Pamukkale, in Turchia, hanno creato nel tempo terrazze di calcare bianco. — curiosità dal mondo
+Ho perso la coincidenza per due minuti — I missed my connection by two minutes
+Could you tell me which platform the train leaves from? — Potrebbe dirmi da quale binario parte il treno?
+Dobbiamo rinnovare l'abbonamento dell'autobus — We need to renew the bus pass
+I'll water the plants while you're away — Innaffierò le piante mentre sei via
+Have you packed your suitcase yet? — Hai già fatto la valigia?
+Il negozio chiude tra dieci minuti — The shop closes in ten minutes
+Can you switch off the oven, please? — Puoi spegnere il forno, per favore?
+Domani ho la riunione con il capo — Tomorrow I have the meeting with the boss
+We're going to repaint the fence this weekend — Questo weekend ridipingeremo la staccionata
+Ho lasciato il portafoglio a casa, torno subito — I left my wallet at home, I'll be right back
+Could you water the garden tonight? — Potresti innaffiare il giardino stasera?
+Sto imparando a suonare la chitarra — I'm learning to play the guitar
+Where can I find a supermarket around here? — Dove posso trovare un supermercato da queste parti?
+Ci siamo persi cercando il museo — We got lost looking for the museum
+I'll email you the report by tomorrow morning — Ti manderò la relazione via email entro domani mattina
+Ho appena finito di caricare la lavastoviglie — I've just finished loading the dishwasher
+Do you need a hand with the suitcases? — Hai bisogno di una mano con le valigie?
+Domani porteremo i documenti in ufficio — Tomorrow we'll bring the documents to the office
+I forgot to set my alarm this morning — Ho dimenticato di impostare la sveglia stamattina
+Puoi controllare se abbiamo ancora zucchero? — Can you check if we still have any sugar?
+We should book the hotel before it gets fully booked — Dovremmo prenotare l'hotel prima che si esaurisca la disponibilità
+Ho lasciato il cellulare in silenzioso tutto il giorno — I've had my phone on silent all day
+Is there a discount for students? — C'è uno sconto per studenti?
+Domani mattina porto la macchina a fare il tagliando — Tomorrow morning I'm taking the car for a service
+I'll pick up the dry cleaning on my way home — Ritiro il lavaggio a secco tornando a casa
+Trolltunga, in Norvegia, è una sporgenza rocciosa sospesa a centinaia di metri sopra un lago glaciale. — curiosità dal mondo
+A Zhangjiajie, in Cina, si trovano imponenti pilastri di arenaria che hanno ispirato ambientazioni cinematografiche. — curiosità dal mondo
+Bagan, in Myanmar, conserva migliaia di antichi templi buddisti sparsi nella pianura. — curiosità dal mondo
+La Baia di Ha Long, in Vietnam, è punteggiata da migliaia di isolotti calcarei. — curiosità dal mondo
+Nella penisola dello Yucatán, in Messico, i cenote sono voragini naturali riempite d'acqua dolce. — curiosità dal mondo
+Le dune del deserto del Namib, in Namibia, sono tra le più alte del mondo. — curiosità dal mondo
+Il lago Hillier, in Australia, ha un colore rosa acceso di origine ancora oggetto di studio. — curiosità dal mondo
+A Meteora, in Grecia, alcuni monasteri furono costruiti sulla sommità di alti pinnacoli rocciosi. — curiosità dal mondo
+Le Isole Lofoten, in Norvegia, sono famose per i loro fiordi e per i villaggi di pescatori colorati. — curiosità dal mondo
+Le Chocolate Hills, nelle Filippine, sono centinaia di collinette coniche che d'estate assumono un colore bruno. — curiosità dal mondo
+Il Rio delle Amazzoni trasporta più acqua di qualsiasi altro fiume al mondo. — curiosità dal mondo
+Il Monte Roraima, al confine tra Venezuela, Brasile e Guyana, è un altopiano isolato dalle pareti quasi verticali. — curiosità dal mondo
+A Bryce Canyon, negli Stati Uniti, l'erosione ha modellato migliaia di guglie di roccia chiamate hoodoo. — curiosità dal mondo
+La depressione della Dancalia, in Etiopia, è una delle zone più calde e vulcanicamente attive della Terra. — curiosità dal mondo
+Lungo la Great Ocean Road, in Australia, si affacciano sul mare i celebri faraglioni dei Dodici Apostoli. — curiosità dal mondo
+Il ghiacciaio Vatnajökull, in Islanda, è tra i più estesi d'Europa. — curiosità dal mondo
+Il Rub al Khali, nella penisola arabica, è uno dei deserti di sabbia più vasti del pianeta. — curiosità dal mondo
+La Foresta Pietrificata, in Arizona, conserva tronchi d'albero trasformati in pietra milioni di anni fa. — curiosità dal mondo
+Il Parco di Yellowstone ospita centinaia di geyser, tra cui il celebre Old Faithful. — curiosità dal mondo
+Le Cuevas de Mármol, in Cile, sono grotte scolpite dall'acqua in una roccia calcarea dalle venature marmoree. — curiosità dal mondo
+Le Grotte di Škocjan, in Slovenia, ospitano uno dei canyon sotterranei più grandi del mondo. — curiosità dal mondo
+Il parco Torres del Paine, in Cile, prende il nome dalle sue imponenti torri di granito. — curiosità dal mondo
+Il Monte Kailash, in Tibet, è considerato sacro da più religioni e non è mai stato scalato per rispetto religioso. — curiosità dal mondo
+La Grotta di Fingal, in Scozia, è famosa per le sue colonne naturali di basalto esagonale. — curiosità dal mondo
+Le Waitomo Glowworm Caves, in Nuova Zelanda, brillano al buio per la presenza di larve bioluminescenti. — curiosità dal mondo
+Sto cercando la fermata del tram più vicina — I'm looking for the nearest tram stop
+Could you validate my ticket, please? — Potrebbe convalidare il mio biglietto, per favore?
+Abbiamo perso l'ultimo autobus della sera — We missed the last bus of the evening
+I need to return this item, do you have the receipt? — Devo restituire questo articolo, ha lo scontrino?
+Domani devo consegnare la relazione al direttore — Tomorrow I have to hand in the report to the manager
+Can we reschedule the meeting to Thursday? — Possiamo spostare la riunione a giovedì?
+Ho lasciato gli appunti a scuola — I left my notes at school
+Did the teacher give you any homework today? — La maestra ti ha dato compiti oggi?
+Dobbiamo cambiare le lenzuola del letto — We need to change the bed sheets
+I'll take the stairs, the lift is out of order — Prendo le scale, l'ascensore è fuori servizio
+Vorrei prenotare un tavolo per stasera — I'd like to book a table for tonight
+Do you accept contactless payments? — Accettate pagamenti contactless?
+Abbiamo dimenticato di spegnere il forno — We forgot to turn off the oven
+The printer is out of ink again — La stampante è di nuovo senza inchiostro
+Mio figlio ha la febbre, resto a casa oggi — My son has a fever, I'm staying home today
+We should leave early to avoid traffic — Dovremmo partire presto per evitare il traffico
+Hai visto le chiavi di casa da qualche parte? — Have you seen the house keys anywhere?
+I'll drop by the post office this afternoon — Passo dall'ufficio postale questo pomeriggio
+Il volo è stato cancellato per maltempo — The flight was cancelled due to bad weather
+Can you keep an eye on the kids for a minute? — Puoi tenere d'occhio i bambini per un minuto?
+Domani portiamo i vestiti in lavanderia — Tomorrow we'll take the clothes to the laundry
+I need to update my address with the bank — Devo aggiornare il mio indirizzo in banca
+Ci siamo fermati a fare benzina lungo l'autostrada — We stopped to get gas along the highway
+Is breakfast included in the price of the room? — La colazione è inclusa nel prezzo della camera?
+Stasera portiamo fuori il cane insieme — Tonight we'll take the dog out together
+Il Giant's Causeway, in Irlanda del Nord, è formato da decine di migliaia di colonne di basalto esagonali. — curiosità dal mondo
+La Reed Flute Cave, vicino a Guilin, in Cina, è nota per le sue formazioni calcaree illuminate artisticamente. — curiosità dal mondo
+Il Lac Rose, in Senegal, deve il suo colore rosato ad alghe e alla forte concentrazione di sale. — curiosità dal mondo
+Le Everglades, in Florida, formano una delle più vaste zone umide subtropicali del pianeta. — curiosità dal mondo
+Il Deserto dei Pinnacoli, in Australia, è disseminato di migliaia di formazioni calcaree simili a colonne. — curiosità dal mondo
+La Laguna Blu, in Islanda, è una spa geotermale alimentata dalle acque calde del sottosuolo vulcanico. — curiosità dal mondo
+La struttura di Richat, in Mauritania, è visibile dallo spazio ed è nota anche come Occhio del Sahara. — curiosità dal mondo
+Il vulcano Ijen, in Indonesia, è famoso per le fiamme blu prodotte dalla combustione dei gas solforosi. — curiosità dal mondo
+Le Scogliere di Moher, in Irlanda, si affacciano a picco sull'oceano Atlantico per oltre duecento metri. — curiosità dal mondo
+I Laghi di Plitvice, in Croazia, sono un susseguirsi di bacini turchesi collegati da cascate. — curiosità dal mondo
+L'Antelope Canyon, in Arizona, è celebre per le pareti di roccia levigate dall'acqua in forme sinuose. — curiosità dal mondo
+I Lençóis Maranhenses, in Brasile, sono dune di sabbia bianca punteggiate da lagune d'acqua piovana. — curiosità dal mondo
+A Deadvlei, in Namibia, alberi secolari ormai morti si stagliano su un terreno d'argilla bianca. — curiosità dal mondo
+Il lago di Melissani, in Grecia, si trova all'interno di una grotta parzialmente crollata. — curiosità dal mondo
+Le Blood Falls, in Antartide, prendono il nome dal colore rossastro dell'acqua ricca di ossido di ferro. — curiosità dal mondo
+La fortezza di Sigiriya, in Sri Lanka, sorge sulla sommità di un'imponente rupe rocciosa. — curiosità dal mondo
+La Montagna Arcobaleno di Vinicunca, in Perù, mostra bande di colore dovute a diversi strati minerali. — curiosità dal mondo
+La Grotta Azzurra, sull'isola di Capri, deve il suo colore a un particolare gioco di luce riflessa. — curiosità dal mondo
+Giethoorn, nei Paesi Bassi, è un villaggio dove gli spostamenti avvengono soprattutto in barca lungo i canali. — curiosità dal mondo
+La Valle di Cocora, in Colombia, ospita alcune delle palme da cera più alte del mondo. — curiosità dal mondo
+I Tsingy de Bemaraha, in Madagascar, sono formazioni calcaree aguzze modellate dall'erosione. — curiosità dal mondo
+Il Tunnel dell'Amore, in Ucraina, è un tratto ferroviario avvolto da una fitta vegetazione ad arco. — curiosità dal mondo
+Il Cirque de Gavarnie, in Francia, è un anfiteatro naturale scavato tra le montagne dei Pirenei. — curiosità dal mondo
+Le Nine Hells di Beppu, in Giappone, sono sorgenti termali dai colori vivaci dovuti ai minerali disciolti. — curiosità dal mondo
+Il lago Nakuru, in Kenya, è spesso tinto di rosa dalla presenza di migliaia di fenicotteri. — curiosità dal mondo
+Ho dimenticato di mettere il caricabatterie in valigia — I forgot to pack the charger in my suitcase
+Could you tell me the wifi password? — Potrebbe dirmi la password del wifi?
+Il traghetto parte tra un'ora — The ferry leaves in an hour
+We need to renew our passports before summer — Dobbiamo rinnovare i passaporti prima dell'estate
+Ho lasciato la borsa in taxi per sbaglio — I accidentally left my bag in the taxi
+Can you tell me how to get to the city center? — Puoi dirmi come arrivare al centro città?
+Domani i ragazzi hanno la gita scolastica — Tomorrow the kids have their school trip
+Have you already handed in your homework? — Hai già consegnato i compiti?
+Dobbiamo sistemare la caldaia prima dell'inverno — We need to get the boiler fixed before winter
+I'll leave the spare key with the neighbour — Lascio la chiave di riserva al vicino
+Vorremmo un tavolo vicino alla finestra — We'd like a table near the window
+Do you have anything in a smaller size? — Avete qualcosa in una taglia più piccola?
+Abbiamo perso il volo di coincidenza — We missed our connecting flight
+The meeting has been moved to next week — La riunione è stata spostata alla prossima settimana
+Mia moglie lavora fino a tardi stasera — My wife is working late tonight
+We should double check the reservation — Dovremmo ricontrollare la prenotazione
+Hai spento le luci prima di uscire? — Did you turn off the lights before leaving?
+I'll send you the invoice by the end of the week — Ti manderò la fattura entro fine settimana
+Il semaforo è rosso, aspettiamo — The traffic light is red, let's wait
+Can you check the departure time again? — Puoi controllare di nuovo l'orario di partenza?
+Domani portiamo il gatto dal veterinario — Tomorrow we're taking the cat to the vet
+I need to renew my gym membership — Devo rinnovare l'abbonamento in palestra
+Ci vediamo davanti all'ingresso principale — Let's meet in front of the main entrance
+Is there a charge for extra luggage? — C'è un costo per il bagaglio in eccesso?
+Stasera facciamo il bucato prima di andare a letto — Tonight we'll do the laundry before going to bed
+Wave Rock, in Australia, è una formazione rocciosa dalla caratteristica forma a onda. — curiosità dal mondo
+Gli eucalipti arcobaleno, diffusi tra Hawaii e Filippine, hanno una corteccia che cambia colore mentre invecchia. — curiosità dal mondo
+Il Blue Hole di Dahab, in Egitto, è una profonda voragine sottomarina lungo la costa del Mar Rosso. — curiosità dal mondo
+Il Caño Cristales, in Colombia, è soprannominato il fiume dei cinque colori per le piante acquatiche che lo popolano. — curiosità dal mondo
+Le Salinas Grandes, in Argentina, formano un'immensa distesa bianca di sale ad alta quota. — curiosità dal mondo
+L'Ol Doinyo Lengai, in Tanzania, è l'unico vulcano al mondo a eruttare una lava scura e relativamente fredda. — curiosità dal mondo
+Le Cascate Vittoria, tra Zambia e Zimbabwe, sono tra le cascate più larghe del mondo. — curiosità dal mondo
+Le Cascate dell'Iguazú, tra Argentina e Brasile, sono composte da centinaia di salti d'acqua distinti. — curiosità dal mondo
+Le Cascate del Niagara, tra Canada e Stati Uniti, riversano ogni secondo enormi quantità d'acqua. — curiosità dal mondo
+Le Grotte di Batu, in Malesia, ospitano santuari induisti all'interno di grandi caverne calcaree. — curiosità dal mondo
+La Grande Rift Valley attraversa l'Africa orientale per migliaia di chilometri. — curiosità dal mondo
+Il Delta dell'Okavango, in Botswana, è un raro esempio di delta fluviale che non sfocia in un mare. — curiosità dal mondo
+Nel Serengeti, tra Tanzania e Kenya, avviene ogni anno una delle più grandi migrazioni di mammiferi al mondo. — curiosità dal mondo
+Lo Spotted Lake, in Canada, mostra in estate centinaia di pozze colorate ricche di minerali. — curiosità dal mondo
+Il Sótano de las Golondrinas, in Messico, è una delle voragini naturali più profonde del mondo. — curiosità dal mondo
+La baia di Mosquito Bay, a Porto Rico, brilla di notte per la presenza di organismi bioluminescenti. — curiosità dal mondo
+Le Blue Mountains, in Australia, devono il loro nome alla foschia bluastra generata dagli oli degli eucalipti. — curiosità dal mondo
+Il cratere di Ngorongoro, in Tanzania, ospita una delle più alte concentrazioni di fauna selvatica dell'Africa. — curiosità dal mondo
+Il fiume sotterraneo di Puerto Princesa, nelle Filippine, scorre per diversi chilometri dentro una grotta. — curiosità dal mondo
+La grotta di Son Doong, in Vietnam, è considerata la più grande cavità naturale conosciuta al mondo. — curiosità dal mondo
+La Diamond Beach, in Islanda, prende il nome dai frammenti di iceberg che si depositano sulla sabbia nera. — curiosità dal mondo
+Il Fly Geyser, in Nevada, è un geyser artificiale dai colori sgargianti creato per errore durante una perforazione. — curiosità dal mondo
+Alla Racetrack Playa, nella Valle della Morte, alcune rocce sembrano spostarsi da sole lasciando lunghe tracce nel fango. — curiosità dal mondo
+Skaftafell, in Islanda, è una regione dove ghiacciai e vulcani si incontrano nello stesso paesaggio. — curiosità dal mondo
+La Laguna Colorada, in Bolivia, ha un colore rossastro dovuto ad alghe e minerali disciolti nell'acqua. — curiosità dal mondo
+Ho dimenticato di annaffiare le piante prima di partire — I forgot to water the plants before leaving
+Could you save me a seat, please? — Potresti tenermi un posto, per favore?
+Il check-in apre due ore prima del volo — Check-in opens two hours before the flight
+We need to buy new towels for the bathroom — Dobbiamo comprare asciugamani nuovi per il bagno
+Ho perso la ricevuta del pagamento — I lost the payment receipt
+Can you tell me where the fitting room is? — Puoi dirmi dov'è il camerino?
+Domani i bambini fanno l'esame di matematica — Tomorrow the kids have their maths exam
+Have you fed the fish this morning? — Hai dato da mangiare ai pesci stamattina?
+Dobbiamo cambiare la password del wifi — We need to change the wifi password
+I'll take care of dinner tonight — Stasera penso io alla cena
+Vorrei cambiare la data della prenotazione — I'd like to change the booking date
+Do you sell umbrellas here? — Vendete ombrelli qui?
+Abbiamo dimenticato la carta d'imbarco a casa — We forgot the boarding pass at home
+The delivery is expected tomorrow morning — La consegna è prevista domani mattina
+Mio marito porta il cane dal veterinario — My husband is taking the dog to the vet
+We should confirm the appointment by phone — Dovremmo confermare l'appuntamento per telefono
+Hai controllato la posta elettronica oggi? — Have you checked your email today?
+I'll water the garden tomorrow morning — Innaffierò il giardino domani mattina
+Il negozio apre alle nove — The shop opens at nine
+Can you help me set up the new printer? — Puoi aiutarmi a configurare la nuova stampante?
+Domani portiamo la spesa a casa dei nonni — Tomorrow we'll bring the shopping to grandma and grandpa's house
+I need to change some money before the trip — Devo cambiare un po' di soldi prima del viaggio
+Ci vediamo alla fermata del treno — Let's meet at the train stop
+Is there a lift in this building? — C'è un ascensore in questo palazzo?
+Stasera controlliamo insieme i compiti — Tonight we'll check the homework together
+Ho dimenticato di prenotare il tavolo per stasera — I forgot to book the table for tonight
+Could you turn up the heating a bit? — Potresti alzare un po' il riscaldamento?
+Il pullman è in ritardo di venti minuti — The coach is running twenty minutes late
+We're thinking about repainting the bedroom — Stiamo pensando di ridipingere la camera da letto
+Ho perso lo scontrino della spesa — I lost the shopping receipt
+Can you show me the way to the station? — Puoi indicarmi la strada per la stazione?
+Domani abbiamo il colloquio di lavoro — Tomorrow we have the job interview
+Have you watered the plants today? — Hai innaffiato le piante oggi?
+Dobbiamo prenotare il dentista per i bambini — We need to book the dentist for the kids
+I'll take out the recycling tonight — Stasera porto fuori la differenziata
+Vorrei restituire questo paio di scarpe — I'd like to return this pair of shoes
+Do you have this jacket in another colour? — Avete questa giacca in un altro colore?
+Abbiamo lasciato le luci accese tutta la notte — We left the lights on all night
+The parcel should arrive by Friday — Il pacco dovrebbe arrivare entro venerdì
+Mia figlia ha una recita a scuola domani — My daughter has a school play tomorrow
+We should double-check the flight times — Dovremmo ricontrollare gli orari del volo
+Hai chiuso il rubinetto del gas? — Did you turn off the gas tap?
+I'll pick up some bread on the way back — Prendo del pane tornando indietro
+Il bar chiude presto la domenica — The café closes early on Sundays
+Can you check if there's still milk in the fridge? — Puoi controllare se c'è ancora latte in frigo?
+Domani portiamo la macchina dal meccanico per il tagliando — Tomorrow we're taking the car to the mechanic for a service
+I need to renew my driving licence — Devo rinnovare la patente
+Ci vediamo all'uscita della scuola — Let's meet at the school gate
+Is there parking nearby? — C'è un parcheggio nelle vicinanze?
+Stasera prepariamo le valigie insieme — Tonight we'll pack the suitcases together
+Ho lasciato il telefono a casa per sbaglio — I accidentally left my phone at home
+Could you switch the channel, please? — Potresti cambiare canale, per favore?
+Il negozio di alimentari apre alle otto — The grocery store opens at eight
+We're going to visit my in-laws this weekend — Questo weekend andiamo a trovare i suoceri
+Ho dimenticato di spegnere la stufa — I forgot to turn off the heater
+Can you help me carry the boxes upstairs? — Puoi aiutarmi a portare le scatole di sopra?
+Domani abbiamo la riunione dei genitori a scuola — Tomorrow we have the parents' meeting at school
+Did you turn off your alarm before the holidays? — Hai disattivato la sveglia prima delle vacanze?
+Dobbiamo cambiare le batterie del telecomando — We need to change the remote's batteries
+I'll walk the dog before breakfast — Porto fuori il cane prima di colazione
+Vorremmo cambiare la stanza, è troppo rumorosa — We'd like to change rooms, it's too noisy
+Do you close for lunch? — Chiudete per la pausa pranzo?
+Abbiamo lasciato il forno acceso per sbaglio — We accidentally left the oven on
+The train has been cancelled due to a strike — Il treno è stato cancellato per uno sciopero
+Mio padre porta i nipoti al parco oggi — My father is taking the grandchildren to the park today
+We should confirm our seats at the theatre — Dovremmo confermare i nostri posti a teatro
+Hai stampato i biglietti per il concerto? — Have you printed the concert tickets?
+I'll charge my laptop before the meeting — Carico il portatile prima della riunione
+Il negozio di scarpe è chiuso il lunedì — The shoe shop is closed on Mondays
+Can you turn the volume down, the baby is sleeping? — Puoi abbassare il volume, il bambino dorme?
+Domani portiamo i documenti in comune — Tomorrow we'll bring the documents to the town hall
+I need to update the software on my computer — Devo aggiornare il software sul computer
+Ci vediamo al parcheggio dietro il supermercato — Let's meet at the car park behind the supermarket
+Is there a pharmacy open on Sundays? — C'è una farmacia aperta la domenica?
+Stasera controlliamo insieme la lista della spesa — Tonight we'll check the shopping list together
+Porto, Portogallo — Da vedere: il Ponte Dom Luís I, le cantine di vino a Vila Nova de Gaia, il quartiere Ribeira. Consiglio pratico: attraversa il ponte a piedi al tramonto per la vista migliore sul fiume Douro.
+Lisbona, Portogallo — Da vedere: il quartiere di Alfama, il Castello di São Jorge, la Torre di Belém. Consiglio pratico: usa il tram 28 per salire le colline del centro storico senza fatica.
+Siviglia, Spagna — Da vedere: la Cattedrale, l'Alcázar, il quartiere di Triana. Consiglio pratico: visita l'Alcázar la mattina presto per evitare la calura e la folla.
+Barcellona, Spagna — Da vedere: la Sagrada Família, il Parco Güell, il quartiere Gotico. Consiglio pratico: prenota online i biglietti della Sagrada Família con largo anticipo.
+Bilbao, Spagna — Da vedere: il Museo Guggenheim, il Casco Viejo, il ponte di Zubizuri. Consiglio pratico: assaggia i pintxos nei bar del centro storico nel tardo pomeriggio.
+Parigi, Francia — Da vedere: la Torre Eiffel, il Louvre, Montmartre. Consiglio pratico: sali sulla Torre Eiffel a piedi fino al secondo piano per saltare parte della fila.
+Lione, Francia — Da vedere: il quartiere di Vieux Lyon, la Basilica di Notre-Dame de Fourvière, i traboules. Consiglio pratico: chiedi in un bar locale come raggiungere i passaggi segreti chiamati traboules.
+Nizza, Francia — Da vedere: la Promenade des Anglais, la Città Vecchia, la collina del Castello. Consiglio pratico: sali alla collina del Castello all'alba per una vista sulla baia senza folla.
+Bordeaux, Francia — Da vedere: Place de la Bourse, il quartiere Saint-Pierre, la Cité du Vin. Consiglio pratico: prenota una degustazione di vino in una delle cantine vicine alla città.
+Amsterdam, Paesi Bassi — Da vedere: i canali del centro storico, la casa di Anna Frank, il quartiere Jordaan. Consiglio pratico: esplora i canali in bicicletta, il mezzo più comodo per muoversi in città.
+Bruges, Belgio — Da vedere: la Piazza del Mercato, il campanile, i canali. Consiglio pratico: fai un giro in barca lungo i canali nel tardo pomeriggio, con luce più morbida.
+Bruxelles, Belgio — Da vedere: la Grand Place, l'Atomium, il quartiere europeo. Consiglio pratico: assaggia le patatine fritte belghe in una delle friggitorie storiche del centro.
+Berlino, Germania — Da vedere: la Porta di Brandeburgo, il Museo Pergamon, i resti del Muro. Consiglio pratico: dedica mezza giornata all'East Side Gallery per vedere i murales sul Muro.
+Monaco di Baviera, Germania — Da vedere: Marienplatz, il Municipio Nuovo, il parco Englischer Garten. Consiglio pratico: assisti al concerto delle campane del Glockenspiel a mezzogiorno.
+Amburgo, Germania — Da vedere: il porto storico, la Speicherstadt, la Elbphilharmonie. Consiglio pratico: sali sulla terrazza panoramica dell'Elbphilharmonie, spesso gratuita con prenotazione.
+Vienna, Austria — Da vedere: il Palazzo di Schönbrunn, la Cattedrale di Santo Stefano, i caffè storici. Consiglio pratico: prenota con anticipo l'ingresso a Schönbrunn per evitare le code.
+Salisburgo, Austria — Da vedere: la Fortezza di Hohensalzburg, la Città Vecchia, la casa natale di Mozart. Consiglio pratico: sali alla fortezza in funicolare per una vista completa sulla città.
+Zurigo, Svizzera — Da vedere: il lago di Zurigo, la Città Vecchia, la Bahnhofstrasse. Consiglio pratico: fai una passeggiata lungo il lago nel tardo pomeriggio, quando la luce è più suggestiva.
+Lucerna, Svizzera — Da vedere: il Ponte della Cappella, il Monte Pilatus, la Città Vecchia. Consiglio pratico: sali sul Monte Pilatus con la funivia per una vista sulle Alpi in giornate serene.
+Praga, Repubblica Ceca — Da vedere: il Ponte Carlo, il Castello di Praga, la Piazza della Città Vecchia. Consiglio pratico: attraversa il Ponte Carlo all'alba per goderlo senza la folla del giorno.
+Cracovia, Polonia — Da vedere: la Piazza del Mercato, il Castello di Wawel, il quartiere di Kazimierz. Consiglio pratico: prenota in anticipo una visita guidata alle miniere di sale di Wieliczka.
+Budapest, Ungheria — Da vedere: il Bastione dei Pescatori, il Parlamento, le terme Széchenyi. Consiglio pratico: visita il Bastione dei Pescatori al tramonto per la vista migliore sul Danubio.
+Lubiana, Slovenia — Da vedere: il Castello, il ponte dei Draghi, il centro storico lungo il fiume Ljubljanica. Consiglio pratico: sali al castello con la funicolare per risparmiare tempo ed energie.
+Zagabria, Croazia — Da vedere: la Cattedrale, il quartiere Gornji Grad, il mercato di Dolac. Consiglio pratico: visita il mercato di Dolac al mattino, quando i banchi sono più forniti.
+Dubrovnik, Croazia — Da vedere: le Mura cittadine, la Città Vecchia, il forte di Lovrijenac. Consiglio pratico: cammina sulle mura nelle prime ore del mattino per evitare caldo e folla.
+Atene, Grecia — Da vedere: l'Acropoli, il Partenone, il quartiere di Plaka. Consiglio pratico: visita l'Acropoli appena apre, prima che il caldo e la folla aumentino.
+Santorini, Grecia — Da vedere: il villaggio di Oia, le case bianche di Fira, le spiagge vulcaniche. Consiglio pratico: raggiungi Oia in anticipo per trovare un buon posto e ammirare il tramonto.
+Copenaghen, Danimarca — Da vedere: Nyhavn, il palazzo di Christiansborg, i giardini di Tivoli. Consiglio pratico: gira il quartiere di Nyhavn in bicicletta, il mezzo più diffuso in città.
+Stoccolma, Svezia — Da vedere: il centro storico di Gamla Stan, il Museo Vasa, il municipio. Consiglio pratico: visita il Museo Vasa nelle prime ore per godertelo con calma.
+Oslo, Norvegia — Da vedere: il Parco Vigeland, il Municipio, il museo delle navi vichinghe. Consiglio pratico: prendi il traghetto per la penisola di Bygdøy per visitare i musei marittimi.
+Bergen, Norvegia — Da vedere: il quartiere di Bryggen, il mercato del pesce, il monte Fløyen. Consiglio pratico: sali sul monte Fløyen con la funicolare per una vista sui fiordi.
+Helsinki, Finlandia — Da vedere: la Cattedrale bianca, la fortezza di Suomenlinna, il mercato del porto. Consiglio pratico: raggiungi Suomenlinna in traghetto, incluso nel biglietto dei trasporti urbani.
+Reykjavik, Islanda — Da vedere: la chiesa di Hallgrímskirkja, il porto vecchio, la laguna blu vicina. Consiglio pratico: prenota con anticipo un tour per l'osservazione dell'aurora boreale in inverno.
+Edimburgo, Scozia — Da vedere: il Castello, il Royal Mile, la collina di Arthur's Seat. Consiglio pratico: cammina fino ad Arthur's Seat al mattino presto per una vista sulla città senza folla.
+Londra, Inghilterra — Da vedere: il Big Ben, il British Museum, il quartiere di Notting Hill. Consiglio pratico: usa la Oyster card per muoverti in modo economico su bus e metropolitana.
+Dublino, Irlanda — Da vedere: il Trinity College, il quartiere di Temple Bar, la Guinness Storehouse. Consiglio pratico: prenota online i biglietti per la Guinness Storehouse per saltare la fila.
+Tallinn, Estonia — Da vedere: la Città Vecchia medievale, la collina di Toompea, le mura cittadine. Consiglio pratico: percorri le mura panoramiche nel tardo pomeriggio per una luce più suggestiva.
+Riga, Lettonia — Da vedere: la Città Vecchia, la Casa delle Teste Nere, il mercato centrale. Consiglio pratico: visita il mercato centrale, allestito in antichi hangar per dirigibili.
+Vilnius, Lituania — Da vedere: la Città Vecchia, la collina dei Tre Croci, il quartiere di Uzupis. Consiglio pratico: sali alla collina delle Tre Croci per una vista d'insieme sulla città.
+Valletta, Malta — Da vedere: la Concattedrale di San Giovanni, i Giardini Barrakka, le fortificazioni. Consiglio pratico: visita i Giardini Barrakka a mezzogiorno per assistere allo sparo del cannone.
+Lussemburgo, Lussemburgo — Da vedere: la Città Vecchia, le Casematte del Bock, il quartiere di Grund. Consiglio pratico: scendi nel quartiere di Grund per una vista dal basso sulle fortificazioni.
+Monaco, Principato di Monaco — Da vedere: il Palazzo dei Principi, il Museo Oceanografico, il porto di Monte Carlo. Consiglio pratico: assisti al cambio della guardia davanti al Palazzo dei Principi a mezzogiorno.
+San Marino, San Marino — Da vedere: le Tre Torri, il centro storico, il Museo di Stato. Consiglio pratico: raggiungi la prima torre a piedi per una vista panoramica sulla Romagna.
+Sintra, Portogallo — Da vedere: il Palazzo Nazionale, il Palácio da Pena, il Castello dei Mori. Consiglio pratico: arriva presto al mattino, i palazzi diventano molto affollati nel weekend.
+Granada, Spagna — Da vedere: l'Alhambra, il quartiere Albaicín, il Generalife. Consiglio pratico: prenota il biglietto per l'Alhambra con largo anticipo, spesso esaurito con settimane di preavviso.
+Verona, Italia — Da vedere: l'Arena romana, la Casa di Giulietta, Piazza delle Erbe. Consiglio pratico: assisti a uno spettacolo estivo nell'Arena se il periodo del viaggio coincide con la stagione lirica.
+Firenze, Italia — Da vedere: il Duomo, gli Uffizi, Ponte Vecchio. Consiglio pratico: prenota online il biglietto degli Uffizi per evitare le lunghe code all'ingresso.
+Venezia, Italia — Da vedere: Piazza San Marco, il Ponte di Rialto, il quartiere di Cannaregio. Consiglio pratico: esplora Cannaregio nelle prime ore del mattino per vivere Venezia lontano dalla folla.
+Matera, Italia — Da vedere: i Sassi, la Cattedrale, le chiese rupestri. Consiglio pratico: visita i Sassi anche di sera, quando l'illuminazione rende l'atmosfera particolarmente suggestiva.
+Danzica, Polonia — Da vedere: la Città Vecchia, la via Długa, il porto storico. Consiglio pratico: passeggia lungo la via Długa la sera, quando le facciate colorate sono illuminate.
+
 Il tempo non si trova, si organizza.
 
 `;
