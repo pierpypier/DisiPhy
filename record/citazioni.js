@@ -713,6 +713,56 @@ La stele di Rosetta, scoperta nel 1799, permise a Champollion di decifrare i ger
 Ötzi, l'uomo venuto dal ghiaccio, è una mummia naturale di oltre 5.300 anni ritrovata sulle Alpi nel 1991. — archeologia
 Il Tyrannosaurus rex viveva più vicino nel tempo all'uomo moderno che al Diplodocus. — dinosauri
 Molti dinosauri, inclusi gli antenati degli uccelli, erano ricoperti di piume. — dinosauri
+Il corpo umano possiede 23 coppie di cromosomi nelle cellule somatiche. — genetica
+Un gene è una sequenza di DNA che contiene informazioni funzionali per un prodotto biologico. — genetica
+I ribosomi sono strutture cellulari che sintetizzano proteine seguendo le informazioni dell'RNA messaggero. — biologia
+I globuli bianchi svolgono funzioni fondamentali nella difesa dell'organismo dalle infezioni. — immunologia
+Il sistema linfatico contribuisce al drenaggio dei liquidi dai tessuti e alla risposta immunitaria. — biologia
+Le balene appartengono all'ordine dei cetacei, un gruppo di mammiferi adattati alla vita acquatica. — zoologia
+Le piante carnivore integrano la nutrizione catturando piccoli organismi, soprattutto in ambienti poveri di nutrienti. — botanica
+I funghi sono un regno distinto sia dalle piante sia dagli animali. — biologia
+English: Could you repeat that more slowly, please? — Italiano: Potrebbe ripeterlo più lentamente, per favore?
+English: We missed the train, so we took the next one. — Italiano: Abbiamo perso il treno, quindi abbiamo preso il successivo.
+English: There is a pharmacy near the hotel. — Italiano: C'è una farmacia vicino all'hotel.
+English: I left my passport in the room. — Italiano: Ho lasciato il passaporto in camera.
+English: What time does the shop open tomorrow? — Italiano: A che ora apre il negozio domani?
+English: We were having dinner when you called. — Italiano: Stavamo cenando quando hai chiamato.
+English: I will send the documents this afternoon. — Italiano: Manderò i documenti questo pomeriggio.
+English: The ticket machine is not working. — Italiano: La macchinetta dei biglietti non funziona.
+English: She has lived here since 2020. — Italiano: Vive qui dal 2020.
+English: Did you see my glasses on the desk? — Italiano: Hai visto i miei occhiali sulla scrivania?
+English: We are going to visit the archaeological site tomorrow. — Italiano: Domani visiteremo il sito archeologico.
+English: I have never travelled by night train. — Italiano: Non ho mai viaggiato su un treno notturno.
+Secondo il mito, Ermes era il messaggero degli dei e proteggeva anche viaggiatori e mercanti. — mitologia greca
+Artemide era associata alla caccia, alla natura selvaggia e alla Luna nella tradizione mitologica greca. — mitologia greca
+Ares rappresentava la dimensione brutale e sanguinosa della guerra nella mitologia greca. — mitologia greca
+Efesto era il dio greco del fuoco, della metallurgia e della lavorazione dei metalli. — mitologia greca
+Afrodite era la dea greca associata all'amore e alla bellezza. — mitologia greca
+Poseidone era il dio greco del mare, dei terremoti e dei cavalli. — mitologia greca
+Aristotele distingueva tra potenza e atto per spiegare il cambiamento e la realizzazione delle cose. — filosofia
+Platone descrisse la conoscenza sensibile come distinta dalla conoscenza delle realtà intelligibili. — filosofia
+La quantità di moto di un corpo è uguale al prodotto della sua massa per la sua velocità. — meccanica
+L'energia cinetica di un corpo è proporzionale alla sua massa e al quadrato della sua velocità. — meccanica
+La potenza misura la rapidità con cui viene trasferita o trasformata energia. — fisica
+Un oggetto a temperatura uniforme emette radiazione elettromagnetica su un intervallo di lunghezze d'onda. — termodinamica
+Un corpo elettricamente neutro possiede quantità uguali di carica positiva e negativa. — elettrostatica
+La pressione è definita come il rapporto tra una forza perpendicolare e l'area sulla quale agisce. — fisica
+Il carbonio può formare una straordinaria varietà di molecole grazie alla capacità di stabilire quattro legami covalenti. — chimica
+Il pH misura l'acidità o la basicità di una soluzione acquosa attraverso la concentrazione degli ioni idrogeno. — chimica
+Un catalizzatore accelera una reazione chimica senza essere consumato nel processo complessivo. — chimica
+Il sodio reagisce energicamente con l'acqua formando idrossido di sodio e idrogeno. — chimica
+Il rame è un ottimo conduttore elettrico e termico. — chimica
+Il ferro arrugginisce attraverso reazioni di ossidazione che coinvolgono ossigeno e acqua. — chimica
+Il cervello umano contiene miliardi di neuroni collegati attraverso una complessa rete di sinapsi. — neuroscienze
+Le sinapsi permettono ai neuroni di comunicare attraverso segnali chimici o elettrici. — neuroscienze
+La memoria non è una registrazione perfetta del passato, ma il risultato di processi biologici di codifica e recupero. — neuroscienze
+Il sonno REM è caratterizzato da intensa attività cerebrale e dalla presenza frequente di sogni vividi. — neuroscienze
+Un anno venusiano dura circa 225 giorni terrestri, mentre un giorno solare su Venere dura circa 117 giorni terrestri. — astronomia
+Mercurio completa un'orbita attorno al Sole in circa 88 giorni terrestri. — astronomia
+Urano ruota attorno a un asse fortemente inclinato, quasi parallelo al piano della sua orbita. — astronomia
+Le aurore polari sono prodotte dall'interazione tra particelle cariche provenienti dal Sole e l'atmosfera terrestre. — fisica dello spazio
+Un triangolo equilatero ha tre lati e tre angoli della stessa misura. — geometria
+La circonferenza di un cerchio è uguale a 2πr, dove r rappresenta il raggio. — geometria
 Il tempo non si trova, si organizza.
 
 `;
