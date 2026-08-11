@@ -813,6 +813,55 @@ Durante una reazione chimica, gli atomi vengono riarrangiati ma non creati né d
 Il numero atomico di un elemento corrisponde al numero di protoni presenti nel nucleo dei suoi atomi.
 Il diamante e la grafite sono due forme allotropiche del carbonio con strutture cristalline differenti.
 Le reazioni di neutralizzazione tra un acido e una base possono produrre acqua e un sale.   
+Il deserto di Atacama è uno dei luoghi più aridi della Terra al di fuori delle regioni polari. — curiosità dal mondo
+Il Salar de Uyuni in Bolivia è la più grande distesa salata del mondo ed è particolarmente estesa durante la stagione secca. — curiosità dal mondo
+Il Giappone comprende migliaia di isole distribuite nell'Oceano Pacifico occidentale. — geografia
+Il Mar Morto si trova in una depressione terrestre e la sua superficie è molto al di sotto del livello del mare. — geografia
+In Islanda molte abitazioni sono riscaldate sfruttando l'energia geotermica. — curiosità dal mondo
+Il Nilo attraversa diversi Paesi africani prima di raggiungere il Mar Mediterraneo. — geografia
+Il Kilimangiaro è la montagna più alta dell'Africa. — geografia
+English: Could you show me where the entrance is? — Italiano: Potrebbe mostrarmi dov'è l'ingresso?
+English: I left my bag on the train, but I remember the carriage number. — Italiano: Ho lasciato la borsa sul treno, ma ricordo il numero della carrozza.
+English: We need to change trains at the next station. — Italiano: Dobbiamo cambiare treno alla prossima stazione.
+English: I ordered this yesterday, but it has not arrived yet. — Italiano: Ho ordinato questo ieri, ma non è ancora arrivato.
+English: She was waiting outside when the shop opened. — Italiano: Stava aspettando fuori quando il negozio ha aperto.
+English: I have never seen such a beautiful building. — Italiano: Non ho mai visto un edificio così bello.
+English: If the weather is good tomorrow, we will go for a walk. — Italiano: Se domani il tempo sarà bello, andremo a fare una passeggiata.
+English: Do you know whether this bus stops near the museum? — Italiano: Sai se questo autobus si ferma vicino al museo?
+English: I forgot to charge my phone before leaving home. — Italiano: Ho dimenticato di caricare il telefono prima di uscire di casa.
+English: We were looking for a quiet restaurant near the station. — Italiano: Cercavamo un ristorante tranquillo vicino alla stazione.
+English: Please tell me if the meeting starts at nine. — Italiano: Per favore, dimmi se la riunione inizia alle nove.
+English: He has already sent the email to the office. — Italiano: Ha già mandato l'email all'ufficio.
+English: I will take the underground because the roads are busy. — Italiano: Prenderò la metropolitana perché le strade sono trafficate.
+English: We arrived early, so we had coffee before the lesson. — Italiano: Siamo arrivati presto, quindi abbiamo preso un caffè prima della lezione.
+English: Can I pay by card, or do you need cash? — Italiano: Posso pagare con la carta o serve contante?
+Le cellule comunicano tra loro attraverso segnali chimici ed elettrici che regolano numerosi processi biologici. — biologia
+Il sistema immunitario distingue molte strutture estranee all'organismo attraverso recettori altamente specifici. — immunologia
+I batteri possono scambiarsi materiale genetico anche attraverso processi diversi dalla riproduzione cellulare. — microbiologia
+La selezione naturale può modificare la frequenza dei caratteri ereditabili all'interno di una popolazione nel corso delle generazioni. — evoluzione
+Le mutazioni sono cambiamenti nella sequenza del DNA e possono avere effetti diversi sull'organismo. — genetica
+Le piante trasportano acqua e sali minerali dalle radici alle parti aeree attraverso lo xilema. — botanica
+Le radici delle piante assorbono acqua e sali minerali dal terreno attraverso strutture specializzate. — botanica
+Le impronte digitali si formano durante lo sviluppo fetale e sono influenzate anche da condizioni presenti nell'ambiente uterino. — biologia
+Il cervello consuma una quantità significativa di energia rispetto alla sua massa complessiva. — neuroscienze
+Il diaframma è un muscolo importante per la respirazione e separa la cavità toracica da quella addominale. — anatomia
+Per Democrito, la materia era costituita da particelle indivisibili chiamate atomi. — filosofia antica
+Zenone di Elea formulò celebri paradossi destinati a mettere alla prova le idee comuni sul movimento e sulla molteplicità. — filosofia antica
+Aristotele classificò diverse forme di governo nella sua riflessione sulla politica. — filosofia
+Secondo Platone, il mito della caverna rappresenta un percorso dalla percezione delle apparenze verso la conoscenza. — filosofia
+Seneca sostenne che il valore della vita non dipende soltanto dalla sua durata, ma anche dal modo in cui viene utilizzata. — filosofia
+Marco Aurelio apparteneva alla tradizione stoica e scrisse riflessioni personali oggi raccolte con il titolo Meditazioni. — filosofia
+Epicuro fondò la sua scuola ad Atene in un luogo tradizionalmente noto come il Giardino. — filosofia antica
+Il principio di inerzia afferma che un corpo mantiene il proprio stato di moto rettilineo uniforme se la risultante delle forze esterne è nulla. — fisica
+La densità di una sostanza è il rapporto tra la sua massa e il volume occupato. — fisica
+La velocità media è data dal rapporto tra lo spazio percorso e il tempo impiegato. — fisica
+La riflessione è il fenomeno per cui la luce cambia direzione tornando nel mezzo da cui proveniva quando incontra una superficie riflettente. — ottica
+Un oggetto immerso in acqua riceve una spinta verso l'alto dovuta alla pressione esercitata dal liquido. — fisica
+La seconda legge della termodinamica stabilisce che nei processi spontanei l'entropia totale di un sistema isolato non diminuisce. — termodinamica
+Il mercurio è l'unico elemento metallico che si trova allo stato liquido a temperatura ambiente in condizioni ordinarie. — chimica
+Il diamante è molto duro perché gli atomi di carbonio sono collegati da una struttura tridimensionale di legami covalenti. — chimica
+Il principio di Archimede permette di spiegare perché una nave di acciaio può galleggiare grazie al volume d'acqua che sposta. — fisica
+In un triangolo rettangolo, l'altezza relativa all'ipotenusa divide il triangolo in due triangoli simili tra loro e con quello di partenza. — geometria
 Il tempo non si trova, si organizza.
 
 `;
