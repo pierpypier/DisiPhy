@@ -348,6 +348,23 @@
   .spesa-scadenza-item .dettaglio{ font-size:12px; margin-top:2px; opacity:0.85; }
   .spesa-scadenza-item .importo{ font-weight:800; white-space:nowrap; }
 
+  /* Disponibilità dei conti — parte integrante dell'Agenda finanziaria */
+  .disponibilita-conto-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:8px;
+    margin-bottom:8px;
+    font-size:14px;
+    border:1px solid #e6e9ef;
+    background:#f7f9fc;
+  }
+  .disponibilita-conto-item .nome{ font-weight:700; }
+  .disponibilita-conto-item .dettaglio{ font-size:12px; margin-top:2px; color:var(--muted); }
+  .disponibilita-conto-item .importo{ font-weight:800; white-space:nowrap; }
+
   /* Rosso: scadute o in scadenza oggi */
   .spesa-scadenza-item.livello-rosso{
     border:2px solid #dc2626;
@@ -730,17 +747,18 @@
        ============================================================ -->
   <div class="card">
     <div class="section-title">
-      💳 Spese in scadenza
+      💳 Agenda finanziaria
       <a href="bancaconti.html" class="link-to-page">vai al gestionale conti →</a>
     </div>
     <div class="config-toggle-wrap" style="margin:0 0 12px 0;">
       <button class="config-toggle-btn" id="toggleSpeseBtn">🔽 Mostra/Nascondi scadenze</button>
     </div>
-    <div class="spese-panel open" id="spesePanel">
+    <div class="spese-panel" id="spesePanel">
       <div id="speseScaduteBox"></div>
       <div id="speseSettimanaBox"></div>
       <div id="speseMeseBox"></div>
       <div class="empty-msg" id="speseEmptyMsg" style="display:none;">Nessuna spesa in scadenza nei prossimi giorni.</div>
+      <div id="disponibilitaContiBox"></div>
     </div>
   </div>
 
@@ -794,6 +812,9 @@ const LS_DSP_RECORDS   = 'dsp_records_v1';               // organizer4.html (not
 const LS_PLANNER_TILES = 'organizer_tessere_config_v1';   // planner2.html (tessere)
 const LS_BANCA_SPESE = 'banca_spese_v1';                   // bancaconti.html (spese)
 const LS_BANCA_NOMI_CONFIG = 'banca_config_v1';             // bancaconsolle.html (nomi conti personalizzati)
+const LS_BANCA_SALDI = 'banca_saldi_v1';                       // bancaconsolle.html
+const LS_BANCA_ACQUISTI = 'banca_acquisti_v1';                 // bancaacquisti.html
+const LS_BANCA_CONTODILETTA = 'banca_contodiletta_v1';         // bancadiletta.html
 const BACKUP_KEY_PREFIXES = ['dsp_', 'cal_', 'checklist_', 'organizer_']; // chiavi incluse nel backup/ripristino
 
 // Contatori globali usati dalla riga di badge riepilogativi
@@ -1456,6 +1477,119 @@ function renderSpeseScadenza(){
 }
 
 /* ================================================================
+   DISPONIBILITÀ DI SPESA DEI CONTI — stessa logica di bancaconsolle.html
+   ================================================================ */
+function leggiOggettoBanca(key, fallback){
+  try{
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  }catch(e){
+    console.warn('Errore lettura ' + key, e);
+    return fallback;
+  }
+}
+
+function leggiArrayBanca(key){
+  try{
+    const raw = localStorage.getItem(key);
+    const parsed = raw ? JSON.parse(raw) : [];
+    return Array.isArray(parsed) ? parsed : [];
+  }catch(e){
+    return [];
+  }
+}
+
+function readExternalTotalBanca(key, path){
+  const parsed = leggiOggettoBanca(key, null);
+  if(!parsed) return 0;
+  const val = path(parsed);
+  return typeof val === 'number' && !isNaN(val) ? val : 0;
+}
+
+function todayMidnightBanca(){
+  const d = new Date();
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+}
+
+function giorniMancantiBanca(scadenzaISO){
+  if(!scadenzaISO) return null;
+  const scad = new Date(scadenzaISO + 'T00:00:00');
+  if(isNaN(scad.getTime())) return null;
+  return Math.round((scad - todayMidnightBanca()) / 86400000);
+}
+
+function calcolaQuotaBanca(s){
+  let quota = 0;
+  if(s.tipo === 'rateizzata' && s.scadenza && s.periodoGiorni){
+    const gm = giorniMancantiBanca(s.scadenza) ?? 0;
+    const periodo = Number(s.periodoGiorni) || 1;
+    const giorniTrascorsi = periodo - gm;
+    const quotaMaturata = (Number(s.importo) || 0) * giorniTrascorsi / periodo;
+    quota = s.formulaAssestamento ? (Number(s.importo) || 0) - quotaMaturata : quotaMaturata;
+  } else {
+    quota = Number(s.importo) || 0;
+  }
+  if(s.collegaAcquisti){
+    const totaleAcquisti = readExternalTotalBanca(LS_BANCA_ACQUISTI, arr => Array.isArray(arr) ? arr.reduce((sum,a) => sum + (Number(a.importo) || 0), 0) : 0);
+    quota -= totaleAcquisti;
+  }
+  if(s.collegaContoDiletta){
+    quota = readExternalTotalBanca(LS_BANCA_CONTODILETTA, obj => (obj && typeof obj.totaleAncoraDaVersare === 'number') ? obj.totaleAncoraDaVersare : 0);
+  }
+  return quota;
+}
+
+function renderDisponibilitaConti(){
+  const container = document.getElementById('disponibilitaContiBox');
+  if(!container) return;
+
+  const saldi = leggiOggettoBanca(LS_BANCA_SALDI, null);
+  const spese = leggiArrayBanca(LS_BANCA_SPESE);
+  const cfgNomi = leggiNomiContiConfig();
+
+  const saldoIntesa = (saldi && typeof saldi.saldoIntesa === 'number') ? saldi.saldoIntesa : 0;
+  const saldoFindomestic = (saldi && typeof saldi.saldoFindomestic === 'number') ? saldi.saldoFindomestic : 0;
+  const contoDepositoFindomestic = (saldi && typeof saldi.contoDepositoFindomestic === 'number') ? saldi.contoDepositoFindomestic : 0;
+  const depositoRisparmiCC = (saldi && typeof saldi.depositoRisparmiCC === 'number') ? saldi.depositoRisparmiCC : 0;
+
+  const speseIntesa = spese.filter(s => s.conto === 'intesa');
+  const speseFindomestic = spese.filter(s => s.conto === 'findomestic');
+
+  let giacenzaNecessariaIntesa = 0, speseRimandabiliIntesa = 0;
+  speseIntesa.forEach(s => {
+    const q = calcolaQuotaBanca(s);
+    giacenzaNecessariaIntesa += q;
+    if(s.rimandabile) speseRimandabiliIntesa += q;
+  });
+  const giacenzaMinimaIntesa = giacenzaNecessariaIntesa - speseRimandabiliIntesa;
+
+  let giacenzaNecessariaFindomestic = 0;
+  speseFindomestic.forEach(s => { giacenzaNecessariaFindomestic += calcolaQuotaBanca(s); });
+  const giacenzaMinimaFindomestic = giacenzaNecessariaFindomestic;
+
+  const dispIntesa = saldoIntesa - giacenzaMinimaIntesa - depositoRisparmiCC;
+  const dispFindomestic = saldoFindomestic + contoDepositoFindomestic - giacenzaMinimaFindomestic;
+
+  container.innerHTML = `
+    <div class="spese-subtitle">💰 Disponibilità di spesa</div>
+    <div class="disponibilita-conto-item">
+      <div>
+        <div class="nome">Disponibilità spesa ${escapeHtml(cfgNomi.conto1)}</div>
+        <div class="dettaglio">Disponibilità attuale del conto principale</div>
+      </div>
+      <div class="importo">${eurSpesa(dispIntesa)}</div>
+    </div>
+    <div class="disponibilita-conto-item">
+      <div>
+        <div class="nome">Disponibilità spesa ${escapeHtml(cfgNomi.conto2)}</div>
+        <div class="dettaglio">Disponibilità attuale del secondo conto</div>
+      </div>
+      <div class="importo">${eurSpesa(dispFindomestic)}</div>
+    </div>
+  `;
+}
+
+/* ================================================================
    UTILITÀ: escape base per evitare l'iniezione di HTML nei testi
    ================================================================ */
 function escapeHtml(str){
@@ -1476,6 +1610,7 @@ function refreshAll(){
   renderTodo();
   renderPlanner();
   renderSpeseScadenza();
+  renderDisponibilitaConti();
   renderStats();          // deve essere l'ultima: usa i contatori aggiornati dalle altre
 }
 
