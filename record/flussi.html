@@ -55,6 +55,26 @@
       font-weight:700;
       color:var(--accent);
     }
+    .page-title-input{
+      font-size:20px;
+      font-weight:700;
+      color:var(--accent);
+      border:none;
+      background:transparent;
+      padding:2px 4px;
+      border-radius:6px;
+      min-width:60px;
+      max-width:100%;
+      font-family:inherit;
+    }
+    .page-title-input:hover,
+    .page-title-input:focus{
+      background:#eef1f5;
+      outline:none;
+    }
+    @media print {
+      .page-title-input{ border:none !important; background:transparent !important; }
+    }
 
     .nav {
       display: flex;
@@ -244,7 +264,6 @@
       color:var(--muted);
     }
     .wf-status-badge.is-done{ background:#dff0e2; color:#2f7a3d; }
-    .wf-timestamp{ font-size:12px; color:var(--muted); }
 
     .wf-actions{
       display:flex;
@@ -354,18 +373,40 @@
       .wf-resizer, #printChoiceModal, input[type="file"] {
         display: none !important;
       }
-      .record { box-shadow:none !important; border:1px solid #cccccc !important; page-break-inside:avoid; break-inside:avoid; }
-      .wf-title-input, .wf-desc-input { border:none !important; background:#fff !important; }
       @page { size: A4; margin: 12mm; }
 
-      /* Vista Generale in stampa: solo titoli, griglia compatta a 2 colonne */
-      body.print-compact .records-wrap{ display:grid !important; grid-template-columns:1fr 1fr; gap:6mm; }
+      /* Schede affiancate in righe da tre, rimpicciolite in proporzione */
+      .records-wrap{
+        display:grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4mm !important;
+        align-items: start;
+      }
+      .record{
+        box-shadow:none !important;
+        border:1px solid #cccccc !important;
+        page-break-inside:avoid;
+        break-inside:avoid;
+        zoom: 0.5;
+      }
+      .wf-title-input, .wf-desc-input { border:none !important; background:#fff !important; }
+
+      /* Numero della scheda: dimensioni doppie rispetto alle attuali
+         (il valore è impostato prima dello zoom della scheda, cosi che
+         in stampa risulti il doppio di quanto sarebbe con il solo
+         rimpicciolimento proporzionale) */
+      .wf-order-badge{
+        min-width:52px !important;
+        height:52px !important;
+        font-size:26px !important;
+      }
+
+      /* Vista Generale in stampa: solo titoli */
       body.print-compact .wf-desc-wrapper,
       body.print-compact .wf-image-box{ display:none !important; }
 
-      /* Vista Dettagliata in stampa: una colonna, con descrizione (mirror
-         di sola lettura, non la textarea) e l'eventuale immagine caricata */
-      body.print-detail .records-wrap{ display:flex !important; flex-direction:column; }
+      /* Vista Dettagliata in stampa: descrizione (mirror di sola lettura,
+         non la textarea) e l'eventuale immagine caricata */
       body.print-detail .wf-desc-input{ display:none !important; }
       body.print-detail .wf-print-desc-mirror{ display:block !important; }
       body.print-detail .wf-image-box{ border:none !important; background:none !important; padding:0 !important; }
@@ -399,7 +440,7 @@
     </nav>
 
     <div class="title-bar">
-      <div class="page-title">WORKFLOW MANAGER</div>
+      <input type="text" id="pageTitleInput" class="page-title-input" value="WORKFLOW MANAGER" placeholder="Titolo pagina" title="Tocca per modificare il titolo">
       <button id="btnViewToggle" class="view-toggle-btn">🔍 Vista: Dettagliata</button>
     </div>
 
@@ -456,6 +497,7 @@
 
 const LS_KEY_WORKFLOW = 'workflowManager_items';
 const LS_KEY_VIEWMODE = 'workflowManager_viewMode'; // 'compact' | 'detail'
+const LS_KEY_PAGETITLE = 'workflowManager_pageTitle';
 
 let workflowItems = [];
 let viewMode = 'detail';
@@ -477,6 +519,18 @@ function loadWorkflow() {
   if (savedView === 'compact' || savedView === 'detail') viewMode = savedView;
 }
 
+/* ---------- Titolo pagina (modificabile) ---------- */
+
+function loadPageTitle() {
+  const saved = localStorage.getItem(LS_KEY_PAGETITLE);
+  const input = document.getElementById('pageTitleInput');
+  if (saved) input.value = saved;
+}
+
+document.getElementById('pageTitleInput').addEventListener('input', (e) => {
+  localStorage.setItem(LS_KEY_PAGETITLE, e.target.value);
+});
+
 function saveWorkflow() {
   localStorage.setItem(LS_KEY_WORKFLOW, JSON.stringify(workflowItems));
 }
@@ -495,13 +549,6 @@ function persistAndRender() {
 
 function generateId() {
   return 'wf_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
-}
-
-function formatTimestamp(iso) {
-  const d = new Date(iso);
-  if (isNaN(d.getTime())) return '';
-  return d.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' }) +
-         ' ' + d.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
 }
 
 function escapeHtml(str) {
@@ -685,7 +732,6 @@ function renderList() {
 
           <div class="wf-meta-row">
             <span class="wf-status-badge ${isDone ? 'is-done' : ''}">${isDone ? '✅ Completato' : '🕓 In corso'}</span>
-            <span class="wf-timestamp">${formatTimestamp(item.timestamp)}</span>
           </div>
         </div>
       </div>
@@ -786,9 +832,12 @@ window.addEventListener('afterprint', () => {
 
 window.addEventListener('load', () => {
   loadWorkflow();
+  loadPageTitle();
   updateViewToggleLabel();
   renderList();
 });
 </script>
 </body>
 </html>
+
+  
