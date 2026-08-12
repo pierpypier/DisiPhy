@@ -748,6 +748,56 @@ How much is the entrance fee for adults? — Quanto costa il biglietto d'ingress
 Please clean your shoes before coming inside. — Per favore pulisciti le scarpe prima di entrare.
 I would like to try these sunglasses on. — Vorrei provare questi occhiali da sole.
 Have a nice trip and write to us when you arrive! — Buon viaggio e scrivici quando arrivi!
+Can you show me how to fill out this form? — Puoi mostrarmi come compilare questo modulo?
+We need to buy a birthday cake for tomorrow. — Dobbiamo comprare una torta di compleanno per domani.
+Is there a charge for using the gym? — C'è un costo per usare la palestra?
+Could you please print the boarding passes? — Potresti stampare le carte d'imbarco, per favore?
+The teacher praised the class for their good results. — L'insegnante ha lodato la classe per i buoni risultati.
+What time does the supermarket close on Sunday? — A che ora chiude il supermercato la domenica?
+I would like to try this dress in blue. — Vorrei provare questo vestito in blu.
+Could you help me install the new printer software? — Potresti aiutarmi a installare il nuovo software della stampante?
+We booked a room with a sea view. — Abbiamo prenotato una camera con vista mare.
+Please put the milk back in the fridge. — Per favore rimetti il latte in frigorifero.
+Is there a laundry service in the hotel? — C'è un servizio lavanderia nell'hotel?
+How long will the flight take? — Quanto durerà il volo?
+I am going to buy fresh fruit at the market. — Vado a comprare frutta fresca al mercato.
+Can you explain this grammar rule again? — Puoi spiegare di nuovo questa regola grammaticale?
+Let us take a short break for coffee. — Facciamo una breve pausa per un caffè.
+Do you have these shoes in a smaller size? — Avete queste scarpe in una taglia più piccola?
+Who forgot to turn off the computer in the study? — Chi ha dimenticato di spegnere il computer nello studio?
+Where is the nearest pharmacy open on weekends? — Dov'è la farmacia più vicina aperta nel fine settimana?
+We are planning a trip to Europe next spring. — Stiamo pianificando un viaggio in Europa la prossima primavera.
+Could you pass me the pepper, please? — Potresti passarmi il pepe, per favore?
+Can I reschedule my appointment with the doctor? — Posso riprogrammare il mio appuntamento con il medico?
+The students are preparing for the science fair. — Gli studenti si stanno preparando per la fiera della scienza.
+Can I pay for these groceries with cash? — Posso pagare questi generi alimentari in contanti?
+What is the wifi network name for guests? — Qual è il nome della rete wifi per gli ospiti?
+We had a great time visiting the local museum. — Ci siamo divertiti molto a visitare il museo locale.
+Please lock the front door when you leave. — Per favore chiudi a chiave la porta d'ingresso quando esci.
+Is there an extra fee for room service? — C'è un costo aggiuntivo per il servizio in camera?
+I am writing an email to the HR department. — Sto scrivendo un'email al reparto risorse umane.
+Could you help me carry these heavy suitcases to the car? — Potresti aiutarmi a portare queste valigie pesanti in macchina?
+What time does the history class start today? — A che ora inizia la lezione di storia oggi?
+Do you sell fresh flowers in this shop? — Vendete fiori freschi in questo negozio?
+We rented a car to explore the island. — Abbiamo noleggiato un'auto per esplorare l'isola.
+Please keep your voice down, the baby is resting. — Per favore tieni la voce bassa, il bambino sta riposando.
+Is there a discount if I buy two items? — C'è uno sconto se compro due articoli?
+The hotel staff was extremely helpful and polite. — Il personale dell'hotel è stato estremamente disponibile e gentile.
+Can you send me the directions to the station? — Puoi inviarmi le indicazioni per la stazione?
+Don't forget to take your vitamins this morning. — Non dimenticare di prendere le tue vitamine stamattina.
+We are having lunch with our grandparents today. — Oggi pranziamo con i nostri nonni.
+I need a pair of comfortable shoes for walking. — Ho bisogno di un paio di scarpe comode per camminare.
+Could you please print the itinerary for the trip? — Potresti stampare l'itinerario del viaggio, per favore?
+The classroom was renovated during the summer. — L'aula è stata ristrutturata durante l'estate.
+Is there a water refill station nearby? — C'è una stazione di ricarica per l'acqua qui vicino?
+Does this shop offer tax-free shopping for tourists? — Questo negozio offre lo shopping tax-free per i turisti?
+We enjoyed the sunset from the beach cafe. — Ci siamo goduti il tramonto dal caffè sulla spiaggia.
+Please submit your project before Friday afternoon. — Per favore invia il tuo progetto entro venerdì pomeriggio.
+Could you help me clean the dining room table? — Potresti aiutarmi a pulire il tavolo della sala da pranzo?
+Do you have any sugar-free beverages here? — Avete bevande senza zucchero qui?
+What is the best way to get to the airport from here? — Qual è il modo migliore per arrivare all'aeroporto da qui?
+My phone battery is running low again. — La batteria del mio telefono si sta scaricando di nuovo.
+Have a nice flight and let us know when you land! — Buon volo e facci sapere quando atterri!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
