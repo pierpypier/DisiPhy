@@ -1211,6 +1211,56 @@ The mountain guide showed us the safest path across the snowfield. (Dhe mowntin 
 Take a moment to rest and enjoy the silence of the forest. (Teyk e mo-ment too rest end in-joy dhe say-lens ov dhe fo-rest) — Prendi un momento per riposare e goderti il silenzio del bosco.
 Heavy fog made it difficult to see the trail markers. (He-vee fog meyd it di-fi-kalt too see dhe treyl mar-kerz) — La fitta nebbia ha reso difficile vedere i segnavia.
 Hiking in the mountains gives a wonderful sense of freedom! (Hay-king in dhe mowntinz givz e wan-der-ful sens ov free-dem) — Fare escursioni in montagna dona una meravigliosa sensazione di libertà!
+Excuse me, how do I get to the city center? (Eks-kiuz mii, hau duu ai ghet tuu de si-tii sen-ter) — Scusi, come arrivo in centro città?
+Turn left at the next traffic light. (Tern left et de nekst tre-fik lait) — Gira a sinistra al prossimo semaforo.
+Turn right after the gas station. (Tern rait af-ter de ghes stei-scion) — Gira a destra dopo il distributore di benzina.
+Go straight ahead for two hundred meters. (Gou streit e-hed for tuu han-dred mii-terz) — Vai dritto per duecento metri.
+Take the second exit at the roundabout. (Teik de se-kond ek-sit et de raund-e-baut) — Prendi la seconda uscita alla rotonda.
+Is it within walking distance from here? (Iz it uid-in uok-ing dis-tens from hiir) — È raggiungibile a piedi da qui?
+It is on the left side of the street. (It iz on de left said ov de striit) — Si trova sul lato sinistro della strada.
+Cross the street at the pedestrian crossing. (Kros de striit et de pe-des-tri-en kros-sing) — Attraversa la strada sulle strisce pedonali.
+Drive past the supermarket and turn left. (Draiv past de suu-per-mar-ket end tern left) — Oltrepassa il supermercato e gira a sinistra.
+Keep going straight until you see the church. (Kiip gou-ing streit an-til yuu sii de ciurc) — Prosegui dritto finché non vedi la chiesa.
+Which way should I go to find the highway entrance? (Uic uei sciud ai gou tuu faind de hai-uei en-trens) — Da che parte devo andare per trovare l'ingresso dell'autostrada?
+It is right around the corner. (It iz rait e-raund de kor-ner) — È proprio dietro l'angolo.
+Follow the signs for the airport. (Fol-lou de sainz for de er-port) — Segui le indicazioni per l'aeroporto.
+You are going in the wrong direction. (Yuu ar gou-ing in de rong di-rek-scion) — Stai andando nella direzione sbagliata.
+Is this the right road for Florence? (Iz dis de rait roud for Flo-rens) — È questa la strada giusta per Firenze?
+Make a U-turn at the next junction. (Meik e yuu-tern et de nekst giang-scion) — Fai un'inversione a U al prossimo incrocio.
+The pharmacy is opposite the bank. (De far-ma-sii iz o-po-zit de benk) — La farmacia è di fronte alla banca.
+It is next to the post office. (It iz nekst tuu de poust o-fis) — È accanto all'ufficio postale.
+Take the first street on your right. (Teik de ferst striit on yor rait) — Prendi la prima strada a destra.
+How far is the nearest train station? (Hau far iz de niir-ist trein stei-scion) — Quanto dista la stazione ferroviaria più vicina?
+The museum is located between the park and the library. (De miu-sii-em iz lou-kei-ted bi-tuiin de park end de lai-bre-rii) — Il museo si trova tra il parco e la biblioteca.
+Go down the hill and cross the bridge. (Gou daun de hil end kros de brig) — Scendi dalla collina e attraversa il ponte.
+Continue past the intersection for one block. (Kon-ti-niu past de in-ter-sek-scion for uan blok) — Prosegui oltre l'incrocio per un isolato.
+Am I heading towards the town hall? (Em ai he-ding to-uordz de taun hol) — Sto andando verso il municipio?
+Is there a shortcut to get there faster? (Iz der e sciot-kat tuu ghet der fas-ter) — C'è una scorciatoia per arrivarci più velocemente?
+The hotel is at the end of this road. (De hou-tel iz et de end ov dis roud) — L'hotel si trova alla fine di questa strada.
+Bear left when the road splits in two. (Ber left uen de roud splits in tuu) — Tieniti a sinistra quando la strada si divide in due.
+Stay in the right lane to exit the freeway. (Stei in de rait lein tuu ek-sit de frii-uei) — Rimani nella corsia di destra per uscire dall'autostrada.
+Is it far from here or can I walk? (Iz it far from hiir or ken ai uok) — È lontano da qui o posso andarci a piedi?
+You will see a large fountain on your left. (Yuu uil sii e largi faun-ten on yor left) — Vedrai una grande fontana sulla tua sinistra.
+Turn back, you just missed the turnoff. (Tern bek, yuu giast mist de tern-of) — Torna indietro, hai appena mancato la svolta.
+The bus stop is across from the main entrance. (De bas stop iz e-kros from de mein en-trens) — La fermata dell'autobus è di fronte all'ingresso principale.
+Go through the tunnel and keep driving straight. (Gou tru de tan-nel end kiip drai-ving streit) — Attraversa il tunnel e continua a guidare dritto.
+Take the side street on the left. (Teik de said striit on de left) — Prendi la strada laterale a sinistra.
+Is this a one-way street? (Iz dis e uan-uei striit) — È una strada a senso unico questa?
+The castle is at the top of the hill. (De kas-sel iz et de top ov de hil) — Il castello si trova in cima alla collina.
+Drive along the river until the third traffic light. (Drai-v e-long de ri-ver an-til de terd tre-fik lait) — Guida lungo il fiume fino al terzo semaforo.
+Look for the sign indicating the city center. (Luk for de sain in-di-kei-ting de si-tii sen-ter) — Cerca il cartello che indica il centro città.
+It is about a ten-minute walk from here. (It iz e-baut e ten-mi-nit uok from hiir) — Dista circa dieci minuti a piedi da qui.
+Merge onto the highway heading north. (Merg on-tuu de hai-uei he-ding nort) — Immettiti sull'autostrada in direzione nord.
+The parking lot is located behind the building. (De par-king lot iz lou-kei-ted bi-haind de bil-ding) — Il parcheggio si trova dietro l'edificio.
+Head south along the main avenue. (Hed saut e-long de mein ev-e-niu) — Dirigiti a sud lungo il viale principale.
+Follow the coastline until you reach the harbor. (Fol-lou de koust-lain an-til yuu riic de har-bor) — Segui la linea costiera fino a raggiungere il porto.
+Do I need to turn left at the stop sign? (Duu ai niid tuu tern left et de stop sain) — Devo girare a sinistra al segnale di stop?
+The hospital is on the upper side of the square. (De hos-pi-tal iz on de ap-per said ov de skuer) — L'ospedale si trova sul lato superiore della piazza.
+You have to walk up the stairs to reach the view. (Yuu hev tuu uok ap de sterz tuu riic de viu) — Devi salire le scale per raggiungere il panorama.
+Go past the gas station and take the second left. (Gou past de ghes stei-scion end teik de se-kond left) — Supera il distributore e prendi la seconda a sinistra.
+Is the subway entrance nearby? (Iz de sab-uei en-trens niir-bai) — L'ingresso della metropolitana è qui vicino?
+Keep to the right side of the road. (Kiip tuu de rait said ov de roud) — Tieniti sul lato destro della strada.
+You will arrive at your destination on your right. (Yuu uil e-raiv et yor des-ti-nei-scion on yor rait) — Arriverai a destinazione sulla tua destra.
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
