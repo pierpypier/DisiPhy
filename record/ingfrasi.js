@@ -1161,6 +1161,56 @@ Let us sit near the pond and watch the ducks. — Sediamoci vicino allo stagno a
 This historical gate was once the main entrance to the city. — Questa porta storica un tempo era l'ingresso principale della città.
 The whole downtown area is restricted to pedestrians only. — L'intera zona del centro storico è riservata esclusivamente ai pedoni.
 What a charming place to take an evening stroll! — Che posto incantevole per fare una passeggiata serale!
+Look at the snow-covered mountain peak! (Luk et dhe sno-kaverd mowntin peek) — Guarda la cima della montagna coperta di neve!
+We are going for a hike along the trail. (Wee ar go-ing for e hayk elong dhe treyl) — Andiamo a fare un'escursione lungo il sentiero.
+Do you have a pair of sturdy hiking boots? (Doo yoo hev e per ov ster-dee hay-king boots) — Hai un paio di scarponi da trekking robusti?
+Make sure to pack a raincoat in your backpack. (Meyk shoor too pek e reyn-kot in yor pek-pek) — Assicurati di mettere un impermeabile nello zaino.
+The view from the summit is absolutely breathtaking. (Dhe vyoo from dhe sa-mit iz eb-so-loot-lee breth-tey-king) — La vista dalla vetta è assolutamente mozzafiato.
+Is there a mountain refuge where we can eat lunch? (Iz dher e mowntin re-fyooj wer wee ken eet lanch) — C'è un rifugio di montagna dove possiamo pranzare?
+Watch out for loose stones on the path. (Woch owt for loos stonz on dhe path) — Fai attenzione ai sassi mossi sul sentiero.
+What is the elevation of this mountain pass? (Wot iz dhe el-e-vey-shen ov dhis mowntin pas) — Qual è l'altitudine di questo passo di montagna?
+We should start descending before it gets dark. (Wee shood start di-sen-ding bee-for it gets dark) — Dovremmo iniziare a scendere prima che faccia buio.
+Do we need trekking poles for this steep climb? (Doo wee need trek-king polz for dhis steep klaym) — Abbiamo bisogno dei bastoncini da trekking per questa salita ripida?
+The weather in the mountains can change very quickly. (Dhe we-dher in dhe mowntinz ken cheynj ve-ree kwik-lee) — Il tempo in montagna può cambiare molto rapidamente.
+Can you show me the route on the topographic map? (Ken yoo sho mee dhe root on dhe to-po-gre-fik mep) — Puoi mostrarmi il percorso sulla mappa topografica?
+Look at that wild eagle flying high in the sky! (Luk et dhet wayld ee-gel flay-ing hay in dhe skay) — Guarda quell'aquila selvatica che vola alta nel cielo!
+Remember to stay on the marked trail at all times. (Re-mem-ber too stey on dhe markt treyl et ol taymz) — Ricordati di rimanere sempre sul sentiero segnato.
+The fresh mountain air smells like pine trees. (Dhe fresh mowntin er smelz layk payn treez) — L'aria fresca di montagna profuma di pini.
+We set up our camp near a clear mountain stream. (Wee set ap awer kemp neer e kleer mowntin streem) — Abbiamo accampato vicino a un ruscello di montagna limpido.
+Are there any avalanche warnings for this region? (Ar dher e-nee ev-e-lanch wor-ningz for dhis ree-jen) — Ci sono avvisi di valanghe per questa regione?
+Let us drink some hot tea from the thermos. (Let as drink sam hot tee from dhe ther-mos) — Beviamo del tè caldo dal thermos.
+The slope is getting steeper and more slippery. (Dhe slop iz get-ting stee-per end mor slip-pe-ree) — Il pendio sta diventando più ripido e scivoloso.
+We reached the cable car station just in time. (Wee reecht dhe key-bel kar stey-shen jast in taym) — Abbiamo raggiunto la stazione della funivia giusto in tempo.
+I heard a marmot whistling near the rocks. (Ay herd e mar-mot wis-ling neer dhe roks) — Ho sentito una marmotta fischiare vicino alle rocce.
+Put on your wool hat and thermal gloves. (Poot on yor wool het end ther-mel glavz) — Mettiti il cappello di lana e i guanti termici.
+Is this trail suitable for beginner hikers? (Iz dhis treyl soo-te-bel for bee-gin-ner hay-kerz) — Questo sentiero è adatto ad escursionisti principianti?
+The wooden bridge crosses a rushing river. (Dhe woo-den brij kros-iz e rash-ing ri-ver) — Il ponte di legno attraversa un fiume impetuoso.
+We stopped at a cozy hut to warm up by the fire. (Wee stopt et e ko-zee hat too worm ap bay dhe fayr) — Ci siamo fermati in un rifugio accogliente per scaldarci al fuoco.
+Always check the weather forecast before heading out. (Ol-weyz chek dhe we-dher for-kast bee-for he-ding owt) — Controlla sempre le previsioni meteo prima di partire.
+We saw a herd of chamois grazing on the rocks. (Wee so e herd ov she-mwa grey-zing on dhe roks) — Abbiamo visto un branco di camosci pascolare sulle rocce.
+The sun is shining brightly on the glacier. (Dhe san iz shay-ning brayt-lee on dhe gley-sher) — Il sole splende luminoso sul ghiacciaio.
+Do not leave any trash along the mountain trail. (Doo not leev e-nee tresh e-long dhe mowntin treyl) — Non lasciare alcun rifiuto lungo il sentiero di montagna.
+My legs are feeling tired after five hours of walking. (May legz ar feel-ing tay-erd ef-ter fayv awerz ov wok-ing) — Le mie gambe sono stanche dopo cinque ore di camminata.
+Is there a water fountain with drinkable spring water? (Iz dher e wo-ter fown-ten wid drink-e-bel spring wo-ter) — C'è una fontana con acqua potabile di sorgente?
+The chairlift takes ski resort visitors to the top. (Dhe cher-lift teyks skee re-zort vi-zi-terz too dhe top) — La seggiovia porta i visitatori della stazione sciistica in cima.
+Put on some sunscreen to protect your skin at high altitude. (Poot on sam san-skreen too pro-tekt yor skin et hay al-ti-tyood) — Metti della crema solare per proteggere la pelle ad alta quota.
+The valley below is completely covered in fog. (Dhe ve-lee bee-lo iz kom-pleet-lee ka-verd in fog) — La valle sottostante è completamente coperta di nebbia.
+How long will it take to reach the mountain shelter? (How long wil it teyk too reech dhe mowntin shel-ter) — Quanto tempo ci vorrà per raggiungere il bivacco?
+Wear polarized sunglasses to avoid glare from the snow. (Wer po-le-rayzd san-gla-siz too e-voyd gler from dhe sno) — Indossa occhiali da sole polarizzati per evitare il riflesso della neve.
+We rented snowshoes for a walk in the forest. (Wee ren-ted sno-shooz for e wok in dhe fo-rest) — Abbiamo noleggiato le ciaspole per una camminata nel bosco.
+The sunset made the mountain peaks turn pink. (Dhe san-set meyd dhe mowntin peeks tern pink) — Il tramonto ha tinto di rosa le cime delle montagne.
+Carry enough water to stay hydrated during the hike. (Ke-ree i-naf wo-ter too stey hay-drey-ted dyoor-ing dhe hayk) — Porta abbastanza acqua per rimanere idratato durante l'escursione.
+Do you know how to use a compass in emergency situations? (Doo yoo no how too yooz e kom-pas in i-mer-jen-see si-choo-ey-shenz) — Sai come usare una bussola in situazioni di emergenza?
+The trail follows the ridge line all the way to the summit. (Dhe treyl fol-loz dhe rij layn ol dhe wey too dhe sa-mit) — Il sentiero segue la cresta fino alla cima.
+We slept in a wooden cabin surrounded by nature. (Wee slept in e woo-den ke-bin se-rown-ded bay ney-cher) — Abbiamo dormito in una baita di legno circondati dalla natura.
+Beware of falling rocks along the cliff side. (Bee-wer ov fol-ing roks e-long dhe klif sayd) — Attenzione alla caduta massi lungo il costone della roccia.
+You can hear the cowbells ringing across the alpine meadow. (Yoo ken heer dhe kow-belz ring-ing e-kros dhe el-payn me-do) — Si possono sentire i campanacci delle mucche risuonare nel pascolo alpino.
+Is this mountain road open during the winter months? (Iz dhis mowntin rod o-pen dyoor-ing dhe win-ter manths) — Questa strada di montagna è aperta durante i mesi invernali?
+We spotted a rare alpine flower blooming among the rocks. (Wee spot-ted e rer el-payn flaw-er bloom-ing e-mang dhe roks) — Abbiamo avvistato un raro fiore alpino fiorito tra le rocce.
+The mountain guide showed us the safest path across the snowfield. (Dhe mowntin gayd shod as dhe sey-fist path e-kros dhe sno-feeld) — La guida alpina ci ha mostrato il percorso più sicuro attraverso il nevaio.
+Take a moment to rest and enjoy the silence of the forest. (Teyk e mo-ment too rest end in-joy dhe say-lens ov dhe fo-rest) — Prendi un momento per riposare e goderti il silenzio del bosco.
+Heavy fog made it difficult to see the trail markers. (He-vee fog meyd it di-fi-kalt too see dhe treyl mar-kerz) — La fitta nebbia ha reso difficile vedere i segnavia.
+Hiking in the mountains gives a wonderful sense of freedom! (Hay-king in dhe mowntinz givz e wan-der-ful sens ov free-dem) — Fare escursioni in montagna dona una meravigliosa sensazione di libertà!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
