@@ -163,6 +163,56 @@ Ja, und mein Handy hab ich auch. (Ja, und main Hendi hab ich auch) - Sì, e ho a
 Dann sind wir eigentlich startklar. (Dan sint via aigentlich schtartklar) - Allora in pratica siamo pronti per partire.
 Warte noch kurz, ich muss das Fenster zumachen. (Varte noch kurts, ich muss das Fenster zumachen) - Aspetta un attimo, devo chiudere la finestra.
 So, jetzt können wir los. (So, jetz können via los) - Ecco, adesso possiamo andare.
+Ich hab heute gleich in der ersten Stunde einen Test. (Ich hab hoite glaich in dea ersten Schtunde ainen Test) - Oggi ho un test già alla prima ora.
+Hast du für die Prüfung gestern noch gelernt? (Hast du füa di Prüfung gestern noch gelernt) - Hai studiato ancora ieri per l'esame?
+Ein bisschen, aber ich hätte mehr machen sollen. (Ain bisschen, aba ich hätte mea machen sollen) - Un po', ma avrei dovuto studiare di più.
+Unser Lehrer war heute ziemlich entspannt. (Unsa Lehra var hoite ziemlich entspannt) - Oggi il nostro insegnante era piuttosto tranquillo.
+Wir haben die Stunde fast nur geredet. (Via haben di Schtunde fast nua geredet) - Abbiamo passato quasi tutta l'ora a parlare.
+In der Pause bin ich kurz nach draußen gegangen. (In dea Pause bin ich kurts nach draußen gegangen) - Durante l'intervallo sono uscita un attimo.
+Meine Freundin hat mir etwas Lustiges erzählt. (Meine Froindin hat mia etvas Lustiges erzählt) - La mia amica mi ha raccontato una cosa divertente.
+Wir mussten so lachen, dass alle rübergeschaut haben. (Via mussten so lachen, dass alle rüba geschaut haben) - Abbiamo riso così tanto che tutti si sono girati a guardarci.
+Was habt ihr in der nächsten Stunde? (Vas habt ia in dea nächsten Schtunde) - Che avete nell'ora successiva?
+Englisch, und danach haben wir zwei Stunden frei. (Englisch, und danach haben via tsvai Stunden frai) - Inglese, e dopo abbiamo due ore libere.
+Ich hab mein Heft zu Hause liegen lassen. (Ich hab main Heft tsu Hause liegen lassen) - Ho lasciato il quaderno a casa.
+Kannst du mir kurz ein Blatt geben? (Kanst du mia kurts ain Blatt geben) - Mi dai un foglio un attimo?
+Ich hab die Aufgabe überhaupt nicht verstanden. (Ich hab di Aufgabe übahaupt nicht ferschtanden) - Non ho proprio capito l'esercizio.
+Frag einfach die Lehrerin, bevor du irgendwas Falsches aufschreibst. (Frag ainfach di Lehrerin, bevor du irgendvas Falsches aufschraibst) - Chiedi semplicemente all'insegnante prima di scrivere qualcosa di sbagliato.
+Heute haben wir überraschend früh Schluss. (Hoite haben via überraschend frü Schluss) - Oggi finiamo sorprendentemente presto.
+Dann können wir nach der Schule noch in die Stadt gehen. (Dan können via nach dea Schule noch in di Schtadt gehen) - Allora dopo scuola possiamo ancora andare in centro.
+Ich muss erst noch ein paar Sachen erledigen. (Ich muss erst noch ain paa Sachen erledigen) - Prima devo ancora sbrigare alcune cose.
+Hast du die Hausaufgaben schon ins Online-Portal eingetragen? (Hast du di Hausaufgaben schon ins Online-Portal eingetragen) - Hai già inserito i compiti nel portale online?
+Noch nicht, das mach ich später. (Noch nicht, das mach ich schpeta) - Non ancora, lo faccio più tardi.
+In der Kantine war heute richtig viel los. (In dea Kantine var hoite richtig fil los) - Oggi in mensa c'era davvero molta gente.
+Ich hab nur schnell etwas gegessen und bin wieder hoch. (Ich hab nua schnell etvas gegessen und bin vida hoch) - Ho mangiato qualcosa velocemente e sono tornata su.
+Mein Akku ist schon wieder fast leer. (Main Akku ist schon vida fast lea) - La batteria è di nuovo quasi scarica.
+Ich hab zum Glück ein Ladekabel dabei. (Ich hab tsum Glück ain Ladekabel dabai) - Per fortuna ho con me un caricabatterie.
+Der Unterricht heute war echt anstrengend. (Dea Untarricht hoite var echt anschtrengend) - Oggi le lezioni sono state davvero stancanti.
+Ich freu mich schon auf den Feierabend. (Ich froi mich schon auf den Faierabend) - Non vedo già l'ora che finisca la giornata di lavoro.
+Im Büro ist heute ziemlich viel zu tun. (Im Büro ist hoite ziemlich fil tsu tun) - Oggi in ufficio c'è parecchio da fare.
+Ich muss zuerst meine E-Mails beantworten. (Ich muss tsuerst maine Imails beantworten) - Devo prima rispondere alle mie e-mail.
+Hast du die Nachricht vom Kunden gesehen? (Hast du di Nachricht fom Kunden gesehn) - Hai visto il messaggio del cliente?
+Ja, ich kümmer mich gleich darum. (Ja, ich kümmar mich glaich darum) - Sì, me ne occupo subito.
+Kannst du mir die Datei weiterleiten? (Kanst du mia di Datai vaitaerlaiten) - Puoi inoltrarmi il file?
+Moment, ich such sie gerade auf meinem Rechner. (Moment, ich such si gerade auf mainem Rechner) - Un attimo, la sto cercando sul computer.
+Der Drucker funktioniert schon wieder nicht. (Dea Drucka funktioniert schon vida nicht) - La stampante non funziona di nuovo.
+Probier mal, ihn aus- und wieder einzuschalten. (Probia mal, in aus und vida ainzuschalten) - Prova a spegnerla e riaccenderla.
+Ich hab gleich einen Termin mit meinem Chef. (Ich hab glaich ainen Termin mit mainem Chef) - Tra poco ho un appuntamento con il mio capo.
+Dann sollte ich vorher noch die Unterlagen zusammensuchen. (Dan sollte ich forhea noch di Untalagen tsusammensuchen) - Allora prima dovrei ancora raccogliere i documenti.
+Das Gespräch hat länger gedauert als gedacht. (Das Gespräch hat lenga gedauat als gedacht) - La conversazione è durata più del previsto.
+Ich brauche jetzt erst mal fünf Minuten Ruhe. (Ich brauche jetz erst mal fünf Minuten Rue) - Adesso ho bisogno di cinque minuti di tranquillità.
+Hast du schon Mittagspause gemacht? (Hast du schon Mittagspause gemacht) - Hai già fatto la pausa pranzo?
+Noch nicht, ich muss diese Sache vorher fertig machen. (Noch nicht, ich muss diese Sache forhea fertig machen) - Non ancora, prima devo finire questa cosa.
+Dann komm später einfach mit uns mit. (Dan komm schpeta ainfach mit uns mit) - Allora più tardi vieni semplicemente con noi.
+Was steht für heute Nachmittag noch auf dem Plan? (Vas schteht füa hoite Nachmittag noch auf dem Plan) - Cos'altro c'è in programma per oggi pomeriggio?
+Ich muss noch eine Präsentation vorbereiten. (Ich muss noch aine Präsentatsion forberaiten) - Devo ancora preparare una presentazione.
+Schick mir die Zahlen bitte, sobald du sie hast. (Schick mia di Tsalen bitte, sobald du si hast) - Mandami i dati appena li hai.
+Kein Problem, ich schick sie dir vor drei. (Kain Problem, ich schick si dia for drai) - Nessun problema, te li mando prima delle tre.
+Heute komm ich mit der Arbeit kaum hinterher. (Hoite komm ich mit dea Arbaeit kaum hinterhea) - Oggi riesco a malapena a stare dietro al lavoro.
+Mach dir keinen Stress, eins nach dem anderen. (Mach dia kainen Schtress, ains nach dem anderen) - Non stressarti, una cosa alla volta.
+Ich bin mit allem durch, ich kann Feierabend machen. (Ich bin mit allem durch, ich kann Faierabend machen) - Ho finito tutto, posso staccare.
+Vergiss nicht, deine Sachen vom Schreibtisch mitzunehmen. (Fagiss nicht, daine Sachen fom Schreib-tisch mitzunehmen) - Non dimenticare di prendere le tue cose dalla scrivania.
+Wir sehen uns morgen wieder. (Via sehn uns morgen vida) - Ci vediamo di nuovo domani.
+Endlich Feierabend, ich bin total platt. (Endlich Faierabend, ich bin total platt) - Finalmente è finita, sono completamente distrutto.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
