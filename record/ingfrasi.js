@@ -861,6 +861,56 @@ Can I order a pizza with my friends this Friday evening? — Posso ordinare una 
 Your mother is currently in an important video call for work. — Tua madre al momento è in un'importante videochiamata di lavoro.
 Let's all sit down and talk about our weekend plans. — Sediamoci tutti e parliamo dei nostri programmi per il fine settimana.
 Who left the front door unlocked when they came home? — Chi ha lasciato la porta d'ingresso aperta quando è tornato a casa?
+Excuse me, where is the check-in desk for flight BA four hundred? — Mi scusi, dov'è il banco del check-in per il volo BA quattrocento?
+Could you please place your hand luggage on the scale? — Potrebbe mettere il bagaglio a mano sulla bilancia, per favore?
+Is this suitcase within the permitted weight limit for cabin baggage? — Questa valigia rientra nel limite di peso consentito per il bagaglio a mano?
+I need to check two bags and carry one backpack on board. — Devo imbarcare due valigie e portare uno zaino a bordo.
+Where is the security checkpoint for international departures? — Dov'è il varco di sicurezza per le partenze internazionali?
+Please take your laptop and liquids out of your bag for scanning. — Per favore tirate fuori il computer portatile e i liquidi dalla borsa per la scansione.
+Do I need to take off my shoes and belt at security? — Devo togliere le scarpe e la cintura ai controlli di sicurezza?
+Excuse me, where can I wrap my luggage in protective plastic film? — Mi scusi, dove posso avvolgere il mio bagaglio nella pellicola protettiva di plastica?
+My flight has been delayed by two hours due to bad weather. — Il mio volo è stato ritardato di due ore a causa del maltempo.
+Where can I find the electronic flight information departure board? — Dove posso trovare il tabellone elettronico delle partenze dei voli?
+The gate for our flight to Paris has just been changed. — Il gate per il nostro volo per Parigi è appena stato cambiato.
+Final boarding call for passengers traveling on flight LH seven hundred. — Ultimo avviso d'imbarco per i passeggeri in viaggio sul volo LH settecento.
+Please present your boarding pass and passport at the gate. — Per favore esibite la carta d'imbarco e il passaporto al gate.
+Is there a fast-track lane available for security screening? — È disponibile una corsia preferenziale per i controlli di sicurezza?
+Where is the baggage claim area for flight AZ two hundred? — Dov'è l'area ritiro bagagli per il volo AZ duecento?
+My suitcase did not arrive on the baggage carousel with the others. — La mia valigia non è arrivata sul nastro bagagli con gli altri.
+Where is the lost and found office for mishandled luggage? — Dov'è l'ufficio oggetti smarriti per i bagagli smarriti?
+Can I exchange currency or use an ATM in the arrivals hall? — Posso cambiare la valuta o usare un bancomat nella hall degli arrivi?
+Where can I catch the express train to the city center? — Dove posso prendere il treno espresso per il centro città?
+Are there official taxi ranks right outside the terminal exit? — Ci sono postazioni di taxi ufficiali proprio fuori dall'uscita del terminal?
+Could you tell me which terminal handles international arrivals? — Potrebbe dirmi quale terminal gestisce gli arrivi internazionali?
+Is free Wi-Fi available throughout the entire airport terminal? — Il Wi-Fi gratuito è disponibile in tutto il terminal dell'aeroporto?
+Where is the nearest airport lounge for business class passengers? — Dov'è la sala d'attesa dell'aeroporto più vicina per i passeggeri di classe business?
+Can I buy duty-free items after passing through security control? — Posso comprare articoli duty-free dopo aver superato il controllo di sicurezza?
+Excuse me, where are the restrooms located near gate twenty-four? — Mi scusi, dove si trovano i bagni vicino al gate ventiquattro?
+My connecting flight leaves in less than forty minutes. — Il mio volo in coincidenza parte in meno di quarantacinque minuti.
+Where do I go to clear passport control and immigration? — Dove devo andare per superare il controllo passaporti e l'immigrazione?
+Please keep your boarding pass handy until you step onto the aircraft. — Per favore tenete a portata di mano la carta d'imbarco fino a quando salite sull'aereo.
+Is there a pharmacy inside the departures terminal? — C'è una farmacia all'interno del terminal delle partenze?
+Where can I rent a car upon arrival at the airport? — Dove posso noleggiare un'auto all'arrivo in aeroporto?
+Could you help me push this heavy luggage trolley? — Potresti aiutarmi a spingere questo carrello portabagagli pesante?
+Are liquids over one hundred milliliters allowed in cabin baggage? — I liquidi superiori a cento millilitri sono ammessi nel bagaglio a mano?
+Please place all electronic devices in a separate tray. — Per favore mettete tutti i dispositivi elettronici in un vassoio separato.
+Excuse me, is this seat next to the emergency exit? — Mi scusi, questo posto è vicino all'uscita di sicurezza?
+The flight attendant is demonstrating safety procedures before takeoff. — L'assistente di volo sta mostrando le procedure di sicurezza prima del decollo.
+Please fasten your seatbelts and return your seat upright. — Per favore allacciate le cinture di sicurezza e rimettete il sedile in posizione verticale.
+Can I use my mobile phone in airplane mode during the flight? — Posso usare il mio cellulare in modalità aereo durante il volo?
+Where is the designated smoking area outside the terminal building? — Dov'è l'area fumatori designata fuori dall'edificio del terminal?
+We need to go through customs check after collecting our bags. — Dobbiamo passare attraverso il controllo doganale dopo aver ritirato le nostre valigie.
+Is there an information desk where I can ask for directions? — C'è un banco informazioni dove posso chiedere indicazioni?
+Where can I plug in my phone to charge the battery? — Dove posso attaccare il mio telefono per caricare la batteria?
+Are strollers allowed all the way up to the aircraft door? — I passeggini sono ammessi fino alla porta dell'aeromobile?
+Excuse me, what time does the airline check-in counter open? — Mi scusi, a che ora apre il banco del check-in della compagnia aerea?
+My passport expires in less than six months from today. — Il mio passaporto scade in meno di sei mesi da oggi.
+Can I bring my pet on board in a special carrier? — Posso portare il mio animale domestico a bordo in un trasportino speciale?
+Where is the VIP lounge for frequent flyer members? — Dov'è la sala VIP per i membri frequent flyer?
+The flight is currently boarding passengers by zones. — Il volo sta attualmente imbarcando i passeggeri per zone.
+Please make sure you have all your personal belongings before leaving. — Per favore assicuratevi di avere tutti i vostri effetti personali prima di partire.
+Where can I buy a bottled water past the security checkpoint? — Dove posso comprare una bottiglietta d'acqua oltre il varco di sicurezza?
+Have a pleasant flight and a safe journey to your destination. — Buon volo e buon viaggio verso la vostra destinazione.
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
