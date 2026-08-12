@@ -475,10 +475,13 @@
 
    Le immagini NON fanno parte di questa struttura e non vengono
    MAI scritte in localStorage: vivono solo in memoria (Map
-   imagesMap, chiave = id del passaggio) tramite URL.createObjectURL
-   sul file scelto dal dispositivo. Sono quindi presenti solo per la
-   sessione corrente della pagina: un refresh le fa sparire, per
-   scelta esplicita (vedi richiesta dell'utente).
+   imagesMap, chiave = id del passaggio) come Data URL (base64)
+   letti dal file scelto sul dispositivo tramite FileReader. Sono
+   quindi presenti solo per la sessione corrente della pagina: un
+   refresh le fa sparire, per scelta esplicita (vedi richiesta
+   dell'utente). Si usa FileReader/Data URL invece di
+   URL.createObjectURL perché più affidabile su browser/tablet che
+   hanno problemi con i blob URL.
 
    CICLO DI RENDERING
    -----------------------------------------------------------
@@ -632,18 +635,24 @@ function updateDescrizione(index, value) {
 /* ---------- Immagini (solo in memoria, MAI in localStorage) ---------- */
 
 function setImageForItem(id, file) {
+  // Usiamo FileReader + Data URL invece di URL.createObjectURL:
+  // su alcuni browser/tablet (WebView Android, Samsung Internet, modalità
+  // di navigazione più restrittive) i blob URL possono non essere renderizzati
+  // correttamente o il file scelto dalla fotocamera potrebbe non essere ancora
+  // scritto su disco quando l'URL viene generato. Il Data URL legge i byte
+  // direttamente in memoria ed è molto più affidabile in modo uniforme.
   const reader = new FileReader();
-  reader.onload = function (e) {
-    imagesMap.set(id, { objectUrl: e.target.result, fileName: file.name });
-    renderList();
+  reader.onload = () => {
+    imagesMap.set(id, { objectUrl: reader.result, fileName: file.name });
+    renderList(); // solo rendering: nessun dato di workflowItems è cambiato
+  };
+  reader.onerror = () => {
+    alert('Impossibile caricare questa immagine. Riprova con un\'altra foto.');
   };
   reader.readAsDataURL(file);
 }
-  
 
 function removeImageForItem(id) {
-  const prev = imagesMap.get(id);
-  if (prev) URL.revokeObjectURL(prev.objectUrl);
   imagesMap.delete(id);
   renderList();
 }
@@ -718,21 +727,19 @@ function renderList() {
           </div>
           <div class="wf-print-desc-mirror"></div>
 
-             <div class="wf-image-box">
+          <div class="wf-image-box">
             ${img ? `
-              <img class="wf-image-preview" src="${img.objectUrl}" alt="Immagine allegata">
+              <img class="wf-image-preview" src="${img.objectUrl}" alt="Immagine allegata" onerror="this.replaceWith(Object.assign(document.createElement('div'),{textContent:'⚠️ Immagine non caricabile',style:'padding:8px;color:#a33;font-size:13px;'}))">
               <div class="wf-image-actions">
                 <button class="wf-btn wf-btn-image" data-action="removeImage" title="Rimuovi immagine">✖</button>
               </div>
             ` : `
-              <div class="wf-image-actions" style="position: relative; display: inline-block; width: 40px; height: 40px;">
-                <button class="wf-btn wf-btn-image" type="button" title="Carica immagine dal dispositivo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">📷</button>
-                <input type="file" accept="image/*" class="wf-image-file-input" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 10;">
+              <div class="wf-image-actions">
+                <button class="wf-btn wf-btn-image" data-action="pickImage" title="Carica immagine dal dispositivo">📷</button>
               </div>
+              <input type="file" accept="image/*" class="wf-image-file-input" style="display:none;">
             `}
           </div>
-          
-          
 
           <div class="wf-meta-row">
             <span class="wf-status-badge ${isDone ? 'is-done' : ''}">${isDone ? '✅ Completato' : '🕓 In corso'}</span>
@@ -768,17 +775,14 @@ function renderList() {
     card.querySelector('[data-action="add"]').addEventListener('click', () => addItem(index));
     card.querySelector('[data-action="delete"]').addEventListener('click', () => deleteItem(index));
 
-        const fileInput = card.querySelector('.wf-image-file-input');
-    if (fileInput) {
-      fileInput.addEventListener('change', (e) => {
-        if (e.target.files && e.target.files[0]) {
-          setImageForItem(item.id, e.target.files[0]);
-        }
+    const pickBtn = card.querySelector('[data-action="pickImage"]');
+    if (pickBtn) {
+      const fileInput = card.querySelector('.wf-image-file-input');
+      pickBtn.addEventListener('click', () => fileInput.click());
+      fileInput.addEventListener('change', () => {
+        if (fileInput.files && fileInput.files[0]) setImageForItem(item.id, fileInput.files[0]);
       });
     }
-    
-    
-    
     const removeImgBtn = card.querySelector('[data-action="removeImage"]');
     if (removeImgBtn) {
       removeImgBtn.addEventListener('click', () => removeImageForItem(item.id));
@@ -846,5 +850,3 @@ window.addEventListener('load', () => {
 </script>
 </body>
 </html>
-
-  
