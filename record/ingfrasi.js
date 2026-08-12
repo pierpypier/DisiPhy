@@ -648,6 +648,56 @@ Could we get two extra keys for our room? — Potremmo avere due chiavi extra pe
 Is there a bakery counter in this supermarket? — C'è un banco panetteria in questo supermercato?
 Let us organize a game night with the whole family. — Organizziamo una serata giochi con tutta la famiglia.
 Enjoy your summer break and see you in September! — Goditi le vacanze estive e ci vediamo a settembre!
+Do we have any homework for English class? — Abbiamo compiti per la classe di inglese?
+Where can I exchange currency near the hotel? — Dove posso cambiare la valuta vicino all'hotel?
+Could I have the receipt for this purchase? — Potrei avere lo scontrino per questo acquisto?
+We are planning a family dinner for Friday. — Stiamo organizzando una cena in famiglia per venerdì.
+Is there a swimming pool in this resort? — C'è una piscina in questo villaggio turistico?
+I am sending you the revised contract now. — Ti sto inviando il contratto revisionato adesso.
+Can you tell me which aisle the coffee is in? — Puoi dirmi in quale corsia si trova il caffè?
+Please turn off the computer when you finish. — Per favore spegni il computer quando finisci.
+We booked our flights three months ago. — Abbiamo prenotato i nostri voli tre mesi fa.
+Do you sell fresh bread here every day? — Vendete pane fresco qui tutti i giorni?
+What time does the lesson finish today? — A che ora finisce la lezione oggi?
+Can I try these shoes in a size eight? — Posso provare queste scarpe nella taglia trentotto?
+I am looking forward to our vacation next month. — Non vedo l'ora di fare le nostre vacanze il mese prossimo.
+Could you send me the location on WhatsApp? — Potresti inviarmi la posizione su WhatsApp?
+Who is taking care of the plants while we are away? — Chi si prende cura delle piante mentre siamo via?
+The teacher asked us to work in small groups. — L'insegnante ci ha chiesto di lavorare in piccoli gruppi.
+Is breakfast served in the room or in the dining hall? — La colazione è servita in camera o nella sala da pranzo?
+I need to buy a birthday card for my sister. — Devo comprare un biglietto di auguri per mia sorella.
+Can we split the bill three ways? — Possiamo dividere il conto in tre?
+Where is the nearest bus station located? — Dove si trova la stazione degli autobus più vicina?
+I need to print my boarding pass for the flight. — Devo stampare la mia carta d'imbarco per il volo.
+Could you pass me the notebook from the shelf? — Potresti passarmi il quaderno dallo scaffale?
+Is there a discount for groups at the museum? — C'è uno sconto per i gruppi al museo?
+Please remind me to take the laundry out. — Per favore ricordami di togliere il bucato.
+We spent the day exploring the old town. — Abbiamo passato la giornata ad esplorare il centro storico.
+Does this jacket come with a hood? — Questa giacca ha il cappuccio?
+I am writing an essay for my history course. — Sto scrivendo un tema per il mio corso di storia.
+Can I leave my key at the reception desk? — Posso lasciare la chiave al banco della reception?
+Is this product locally produced? — Questo prodotto è a chilometro zero?
+Let us discuss the sales figures in the meeting. — Discutiamo i dati di vendita nella riunione.
+Do you need a ride to the airport tomorrow? — Hai bisogno di un passaggio per l'aeroporto domani?
+We need to buy more paper for the printer. — Dobbiamo comprare altra carta per la stampante.
+Can you help me set up the table in the garden? — Puoi aiutarmi ad apparecchiare il tavolo in giardino?
+What is the deadline for submitting the application? — Qual è la scadenza per inviare la candidatura?
+The hotel offers a shuttle service to the beach. — L'hotel offre un servizio navetta per la spiaggia.
+I would like to pay by debit card. — Vorrei pagare con carta di debito.
+Is there a playground for children nearby? — C'è un parco giochi per bambini qui vicino?
+Could you give me some advice on what to visit? — Potrebbe darmi qualche consiglio su cosa visitare?
+We bought some fresh fruit at the street market. — Abbiamo comprato della frutta fresca al mercato di strada.
+Do not forget your coat, it is cold outside. — Non dimenticare il cappotto, fa freddo fuori.
+The exam results will be published next week. — I risultati dell'esame saranno pubblicati la prossima settimana.
+Is there an extra charge for late check-in? — C'è un costo aggiuntivo per il check-in ritardato?
+Could you please turn on the air conditioner? — Potresti accendere l'aria condizionata, per favore?
+I am looking for a gift for a colleague. — Sto cercando un regalo per un collega.
+We rented a car to drive along the coast. — Abbiamo noleggiato un'auto per guidare lungo la costa.
+Can you answer the phone while I cook? — Puoi rispondere al telefono mentre cucino?
+Please double check the delivery address. — Per favore ricontrolla l'indirizzo di spedizione.
+Where is the nearest subway entrance? — Dov'è l'ingresso della metropolitana più vicino?
+I need to return these shoes to the shop. — Devo restituire queste scarpe al negozio.
+Enjoy your meal and have a great evening! — Buon appetito e trascorri una bella serata!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
