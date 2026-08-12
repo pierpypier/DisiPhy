@@ -716,7 +716,7 @@ function renderList() {
           </div>
           <div class="wf-print-desc-mirror"></div>
 
-          <div class="wf-image-box">
+            <div class="wf-image-box">
             ${img ? `
               <img class="wf-image-preview" src="${img.objectUrl}" alt="Immagine allegata">
               <div class="wf-image-actions">
@@ -724,11 +724,14 @@ function renderList() {
               </div>
             ` : `
               <div class="wf-image-actions">
-                <button class="wf-btn wf-btn-image" data-action="pickImage" title="Carica immagine dal dispositivo">📷</button>
+                <label class="wf-btn wf-btn-image" title="Carica immagine dal dispositivo" style="cursor:pointer; display:inline-flex;">
+                  📷
+                  <input type="file" accept="image/*" class="wf-image-file-input" style="display:none;">
+                </label>
               </div>
-              <input type="file" accept="image/*" class="wf-image-file-input" style="display:none;">
             `}
           </div>
+          
 
           <div class="wf-meta-row">
             <span class="wf-status-badge ${isDone ? 'is-done' : ''}">${isDone ? '✅ Completato' : '🕓 In corso'}</span>
@@ -764,14 +767,16 @@ function renderList() {
     card.querySelector('[data-action="add"]').addEventListener('click', () => addItem(index));
     card.querySelector('[data-action="delete"]').addEventListener('click', () => deleteItem(index));
 
-    const pickBtn = card.querySelector('[data-action="pickImage"]');
-    if (pickBtn) {
-      const fileInput = card.querySelector('.wf-image-file-input');
-      pickBtn.addEventListener('click', () => fileInput.click());
-      fileInput.addEventListener('change', () => {
-        if (fileInput.files && fileInput.files[0]) setImageForItem(item.id, fileInput.files[0]);
+    const fileInput = card.querySelector('.wf-image-file-input');
+    if (fileInput) {
+      fileInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files[0]) {
+          setImageForItem(item.id, e.target.files[0]);
+        }
       });
     }
+    
+    
     const removeImgBtn = card.querySelector('[data-action="removeImage"]');
     if (removeImgBtn) {
       removeImgBtn.addEventListener('click', () => removeImageForItem(item.id));
