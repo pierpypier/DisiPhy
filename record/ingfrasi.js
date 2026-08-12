@@ -548,6 +548,56 @@ We are planning a small weekend trip to the mountains. — Stiamo organizzando u
 Thank you for your hospitality during our stay. — Grazie per la vostra ospitalità durante il nostro soggiorno.
 Do you have any recommendations for a local guide? — Ha qualche raccomandazione per una guida locale?
 Have a great weekend and enjoy your time off! — Buon fine settimana e goditi il tempo libero!
+What time does the school assembly start? — A che ora inizia l'assemblea scolastica?
+Please open your textbooks to page forty-five. — Per favore aprite i libri di testo a pagina quarantacinque.
+Do we have a math test tomorrow morning? — Abbiamo un compito in classe di matematica domani mattina?
+My teacher gave us a lot of homework for the weekend. — Il mio insegnante ci ha dato molti compiti per il fine settimana.
+Where is the school library located? — Dove si trova la biblioteca della scuola?
+I need to buy a new pencil case and a ruler. — Devo comprare un astuccio nuovo e un righello.
+Who is responsible for cleaning the blackboard? — Chi è responsabile di pulire la lavagna?
+The geography project is due next Monday. — Il progetto di geografia scade lunedì prossimo.
+Did you study for the history oral exam? — Hai studiato per l'interrogazione di storia?
+Can I borrow a blue pen, please? — Posso prendere in prestito una penna blu, per favore?
+Can I try on these trousers in a larger size? — Posso provare questi pantaloni in una taglia più grande?
+Are there any discounts on the winter collection? — Ci sono sconti sulla collezione invernale?
+Where can I find the cash desk to pay? — Dove posso trovare la cassa per pagare?
+I would like to return this shirt because it is damaged. — Vorrei restituire questa camicia perché è danneggiata.
+Does this item come with a two-year warranty? — Questo articolo ha una garanzia di due anni?
+Can I keep the hanger for the dress? — Posso tenere la gruccia per l'abito?
+Is this store open on public holidays? — Questo negozio è aperto nei giorni festivi?
+I am just looking around, thank you. — Sto solo dando un'occhiata, grazie.
+Do you have a paper bag for my purchases? — Ha una busta di carta per i miei acquisti?
+This pair of shoes is very comfortable to wear. — Questo paio di scarpe è molto comodo da indossare.
+We rented a small cottage near the lake. — Abbiamo affittato un piccolo cottage vicino al lago.
+I love sunbathing on the beach in the afternoon. — Amo prendere il sole in spiaggia nel pomeriggio.
+Don't forget to put on sun cream before going out. — Non dimenticare di mettere la crema solare prima di uscire.
+We booked a guided tour of the historic city center. — Abbiamo prenotato una visita guidata del centro storico.
+The view from our balcony is absolutely breathtaking. — La vista dal nostro balcone è assolutamente mozzafiato.
+What souvenir should we buy for our family? — Che souvenir dovremmo comprare per la nostra famiglia?
+We are going snorkeling in the crystal clear water. — Faremo snorkeling nell'acqua cristallina.
+I bought a postcard to send to my grandparents. — Ho comprato una cartolina da spedire ai miei nonni.
+We spent the whole week relaxing by the pool. — Abbiamo passato l'intera settimana a rilassarci in piscina.
+The local cuisine in this region is extraordinary. — La cucina locale di questa regione è straordinaria.
+Please double check the attachment before sending the email. — Per favore ricontrolla l'allegato prima di inviare l'email.
+I am going to grab a sandwich for lunch. — Vado a prendere un sandwich per pranzo.
+Can you remind me to buy milk on the way home? — Puoi ricordarmi di comprare il latte strada facendo verso casa?
+Let us take a short break to stretch our legs. — Facciamo una breve pausa per sgranchirci le gambe.
+The traffic was terrible on the motorway this morning. — Il traffico era terribile in autostrada stamattina.
+Could you please turn down the bright screen? — Potresti abbassare la luminosità dello schermo, per favore?
+We need to replace the bulb in the hallway lamp. — Dobbiamo sostituire la lampadina della lampada in corridoio.
+I left my sunglasses on the kitchen table. — Ho lasciato i miei occhiali da sole sul tavolo della cucina.
+Are you coming to the party this Saturday evening? — Vieni alla festa questo sabato sera?
+I will send you a text as soon as I arrive at the venue. — Ti manderò un messaggio appena arrivo sul posto.
+What time does the flight start boarding? — A che ora inizia l'imbarco del volo?
+Remember to bring your swimming suit and a towel. — Ricordati di portare il costume da bagno e un asciugamano.
+Can I pay for my coffee with a credit card? — Posso pagare il mio caffè con la carta di credito?
+My laptop charger is not working properly today. — Il caricabatterie del mio computer non funziona bene oggi.
+Let us meet right in front of the fountain. — Incontriamoci proprio davanti alla fontana.
+Do you want me to help you carry the luggage? — Vuoi che ti aiuti a portare i bagagli?
+The supermarket down the street is open late tonight. — Il supermercato in fondo alla strada è aperto fino a tardi stasera.
+We had such a great time together yesterday. — Siamo stati davvero bene insieme ieri.
+Could you please pass me the bread basket? — Potresti passarmi il cestino del pane, per favore?
+Have a safe journey and text me when you land. — Buon viaggio e mandami un messaggio quando atterri.
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
