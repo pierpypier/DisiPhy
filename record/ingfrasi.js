@@ -961,6 +961,56 @@ Please watch your step when crossing the gangway to the ship. — Per favore fat
 Is wifi available on board during the crossing? — Il wifi è disponibile a bordo durante la traversata?
 We arrived early at the port to secure a good spot in line. — Siamo arrivati presto al porto per assicurarci un buon posto in fila.
 Have a safe voyage and enjoy the scenery along the coast! — Buon viaggio e goditi il panorama lungo la costa!
+Is the express train to Milan arriving on platform five? — Il treno espresso per Milano arriva al binario cinque?
+Do I need to validate my subway ticket before tapping in? — Devo convalidare il biglietto della metropolitana prima di passare i tornelli?
+Is there a high-speed train leaving for Florence this morning? — C'è un treno ad alta velocità in partenza per Firenze stamattina?
+Where is the automatic ticket machine for regional trains? — Dov'è la biglietteria automatica per i treni regionali?
+How many stops are there until the central railway station? — Quante fermate ci sono fino alla stazione ferroviaria centrale?
+Is this metro line running direct or local? — Questa linea della metropolitana è diretta o fa tutte le fermate?
+Excuse me, does this subway line go towards the stadium? — Mi scusi, questa linea della metropolitana va verso lo stadio?
+You need to change lines at the next interchange station. — Devi cambiare linea alla prossima stazione di scambio.
+What is the frequency of the underground trains during peak hours? — Qual è la frequenza dei treni della metropolitana nelle ore di punta?
+Is the left-luggage office open twenty-four hours a day? — L'ufficio deposito bagagli è aperto ventiquattr'ore su ventiquattr'ore?
+Please mind the gap between the train and the platform edge. — Per favore prestare attenzione allo spazio tra il treno e il binario.
+Is my rail pass valid on this regional train line? — Il mio abbonamento ferroviario è valido su questa linea regionale?
+Which exit should I take for the main square? — Quale uscita dovrei prendere per la piazza principale?
+The commuter train is delayed due to signaling problems. — Il treno pendolari è in ritardo a causa di problemi di segnalamento.
+Can I buy a monthly travel card at the ticket window? — Posso comprare un abbonamento mensile allo sportello?
+Is there an elevator down to the subway platforms? — C'è un ascensore per scendere ai binari della metropolitana?
+Does this train have quiet carriages for passengers resting? — Questo treno ha carrozze del silenzio per i passeggeri che riposano?
+Where is the lost property office in the station? — Dov'è l'ufficio oggetti smarriti nella stazione?
+The display board shows that the train is on time. — Il tabellone mostra che il treno è in orario.
+Do I have to switch from the blue line to the red line? — Devo passare dalla linea blu alla linea rossa?
+Is first class seating available on this suburban train? — Sono disponibili posti in prima classe su questo treno suburbano?
+Could you tell me where the waiting room is located? — Potrebbe dirmi dove si trova la sala d'attesa?
+Are bicycles allowed on the metro during rush hour? — Le biciclette sono ammesse sulla metropolitana durante l'ora di punta?
+The train inspector is coming to check our tickets. — Il controllore sta arrivando per verificare i nostri biglietti.
+Is there a charge for storing a large suitcase in the locker? — C'è un costo per riporre una valigia grande nell'armadietto?
+What time is the last underground train tonight? — A che ora passa l'ultima metropolitana stasera?
+We missed our connection because the first train was late. — Abbiamo perso la coincidenza perché il primo treno era in ritardo.
+Is tap-and-go payment accepted at the metro turnstiles? — Il pagamento contactless è accettato ai tornelli della metropolitana?
+Please step back behind the yellow safety line on the platform. — Per favore allontanarsi dalla linea gialla di sicurezza sul binario.
+Does this train carry a dining car with snacks and drinks? — Questo treno ha una carrozza bar con snack e bevande?
+Which side of the train do the doors open on? — Da quale lato del treno si aprono le porte?
+Is there a discount ticket for senior citizens on the metro? — C'è un biglietto scontato per gli anziani sulla metropolitana?
+How long is the stop at this intermediate station? — Quanto dura la sosta in questa stazione intermedia?
+The ticket barrier is not accepting my magnetic card. — Il tornello non accetta la mia carta magnetica.
+You must tap out when exiting the subway station. — Devi passare il biglietto ai tornelli quando esci dalla stazione metro.
+Is there a seat reservation required for this night train? — È necessaria la prenotazione del posto per questo treno notturno?
+Where can I find a network map of the underground? — Dove posso trovare una mappa della rete metropolitana?
+The train was cancelled due to maintenance work on the tracks. — Il treno è stato cancellato per lavori di manutenzione sui binari.
+Does this station have escalator access to the surface? — Questa stazione ha la scala mobile per salire in superficie?
+Which carriage number is printed on your paper ticket? — Quale numero di carrozza è stampato sul tuo biglietto cartaceo?
+The announcements are broadcast in both English and Italian. — Gli annunci sono trasmessi sia in inglese che in italiano.
+Is there a connecting bus service right outside the station exit? — C'è un servizio autobus di coincidenza proprio fuori dall'uscita della stazione?
+How many zones does this single ticket cover? — Quante zone copre questo biglietto singolo?
+You can top up your transit card at any ticket machine. — Puoi ricaricare la tua carta dei trasporti in qualsiasi emettitrice automatica.
+Please do not obstruct the train doors while they are closing. — Per favore non ostruire le porte del treno mentre si chiudono.
+Is there a customer service desk near the main concourse? — C'è un banco di assistenza clienti vicino all'atrio principale?
+We need to walk along platform three to reach our carriage. — Dobbiamo camminare lungo il binario tre per raggiungere la nostra carrozza.
+Are all subway stations equipped with tactile paving for the blind? — Tutte le stazioni della metropolitana sono dotate di percorso tattile per non vedenti?
+The next train arriving on platform two does not stop here. — Il prossimo treno in arrivo al binario due non effettua fermata qui.
+Have a smooth journey on your rail travel across the country! — Buon viaggio in treno attraverso il paese!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
