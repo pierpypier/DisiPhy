@@ -1461,6 +1461,56 @@ Tucidide è considerato tra i fondatori della storiografia basata sull'analisi c
 Erodoto viene spesso definito il padre della storia per la sua opera sulle guerre persiane. — antica Grecia
 Le tombe a tholos, a forma di alveare, sono tipiche dell'architettura funeraria micenea. — civiltà micenea
 I Micenei praticavano un'economia palaziale, con i beni gestiti e redistribuiti dal potere centrale. — civiltà micenea
+I have to renew my gym membership. — Devo rinnovare l'abbonamento in palestra.
+We will host my in-laws for dinner tonight. — Stasera ospiteremo i miei suoceri per cena.
+She had finished the exam before the bell rang. — Aveva finito l'esame prima che suonasse la campanella.
+Could you switch off the printer, please? — Potresti spegnere la stampante, per favore?
+They are installing new windows in the house. — Stanno installando nuove finestre in casa.
+I will apply for a promotion next month. — Farò domanda per una promozione il mese prossimo.
+We booked a table for our anniversary. — Abbiamo prenotato un tavolo per il nostro anniversario.
+My uncle is teaching me how to fish. — Mio zio mi sta insegnando a pescare.
+Excuse me, is this the queue for the ticket office? — Mi scusi, è questa la fila per la biglietteria?
+He was working from home when the internet went down. — Stava lavorando da casa quando è saltata la connessione internet.
+We will join a language course in September. — A settembre inizieremo un corso di lingua.
+I spilled coffee on my laptop this morning. — Stamattina ho versato il caffè sul portatile.
+She is negotiating a new contract with her employer. — Sta negoziando un nuovo contratto con il datore di lavoro.
+We were hiking when it started to rain heavily. — Stavamo facendo trekking quando ha iniziato a piovere forte.
+Could you separate the recycling before Friday? — Potresti fare la raccolta differenziata prima di venerdì?
+I will return your umbrella tomorrow. — Ti restituirò l'ombrello domani.
+The plumber is fixing the leak in the bathroom. — L'idraulico sta riparando la perdita in bagno.
+We are considering moving abroad next year. — Stiamo pensando di trasferirci all'estero l'anno prossimo.
+He sprained his ankle during the match. — Si è slogato la caviglia durante la partita.
+I need to update my insurance policy. — Devo aggiornare la mia polizza assicurativa.
+She will host a video call with the whole team. — Organizzerà una videochiamata con tutto il team.
+We are borrowing our neighbor's ladder. — Stiamo prendendo in prestito la scala del vicino.
+Is there a discount for students at the museum? — C'è uno sconto per studenti al museo?
+He commutes to work by bicycle every day. — Va al lavoro in bicicletta ogni giorno.
+The electrician will come to check the fuse box. — L'elettricista verrà a controllare il quadro elettrico.
+Socrate fu condannato a morte ad Atene nel 399 a.C. e costretto a bere la cicuta. — antica Grecia
+Platone fondò ad Atene l'Accademia, una delle prime istituzioni di alta formazione del mondo occidentale. — antica Grecia
+Aristotele fondò il Liceo ad Atene dopo aver lasciato l'Accademia di Platone. — antica Grecia
+Alessandro Magno fu istruito in gioventù dal filosofo Aristotele. — antica Grecia
+L'impero di Alessandro Magno, al suo apice, si estese dalla Grecia fino al nord-ovest dell'India. — antica Grecia
+Alessandro Magno morì a Babilonia nel 323 a.C. all'età di trentadue anni. — antica Grecia
+Il periodo ellenistico iniziò dopo la morte di Alessandro e diffuse la cultura greca su un vasto territorio. — antica Grecia
+Gli ateniesi potevano votare per esiliare una persona per dieci anni attraverso la pratica dell'ostracismo. — antica Grecia
+La trireme greca era una veloce nave da guerra spinta da tre file di rematori. — antica Grecia
+Secondo la leggenda, il corridore Fidippide corse da Maratona ad Atene per annunciare la vittoria greca. — antica Grecia
+I tre principali ordini architettonici dell'antica Grecia erano dorico, ionico e corinzio. — antica Grecia
+L'identità di Omero, autore dell'Iliade e dell'Odissea, resta oggetto di dibattito tra gli studiosi. — antica Grecia
+I simposi greci erano incontri in cui gli uomini discutevano di filosofia e politica bevendo vino. — antica Grecia
+Eracle compì dodici straordinarie fatiche come penitenza impostagli dal re Euristeo. — mitologia greca
+Teseo uccise il Minotauro all'interno del labirinto costruito da Dedalo a Creta. — mitologia greca
+Giasone guidò gli Argonauti in una spedizione per recuperare il Vello d'Oro. — mitologia greca
+Secondo il mito, Prometeo rubò il fuoco agli dei e lo donò all'umanità. — mitologia greca
+Sisifo fu condannato a spingere in eterno un masso su per una collina nell'oltretomba. — mitologia greca
+Orfeo scese nell'oltretomba per riportare in vita la moglie Euridice. — mitologia greca
+Narciso si innamorò del proprio riflesso e si consumò contemplandolo. — mitologia greca
+I Titani, generazione di divinità precedente, furono spodestati dagli dei dell'Olimpo guidati da Zeus. — mitologia greca
+Caronte era il traghettatore mitologico che conduceva le anime attraverso il fiume Stige. — mitologia greca
+Cerbero era il cane a tre teste che sorvegliava l'ingresso dell'oltretomba. — mitologia greca
+Nike era la divinità greca che personificava la vittoria. — mitologia greca
+Estia era la dea del focolare e della vita domestica tra le divinità dell'Olimpo. — mitologia greca
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
