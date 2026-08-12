@@ -448,6 +448,56 @@ Can I get a tax-free refund form? — Posso avere un modulo per il rimborso tax-
 Where can I find gluten-free products here? — Dove posso trovare prodotti senza glutine qui?
 Please sign the attendance sheet before leaving. — Per favore firma il foglio presenze prima di uscire.
 I hope you have a great rest of the day! — Spero che tu abbia un buon proseguimento di giornata!
+Is there a luggage storage area after check-out? — C'è un deposito bagagli dopo il check-out?
+Does the room have a safe for valuables? — La camera ha una cassaforte per gli oggetti di valore?
+Could you give us two key cards for the room? — Potrebbe darci due chiavi elettroniche per la camera?
+What time does the airport shuttle leave? — A che ora parte la navetta per l'aeroporto?
+Is parking included in the reservation? — Il parcheggio è incluso nella prenotazione?
+Could we have a quiet table in the corner? — Potremmo avere un tavolo tranquillo nell'angolo?
+Is service included in the final bill? — Il servizio è incluso nel conto finale?
+Do you have sparkling or still water? — Avete acqua frizzante o naturale?
+Could you bring us some extra napkins, please? — Potrebbe portarci altri tovaglioli, per favore?
+Is this table reserved for someone else? — Questo tavolo è riservato per qualcun altro?
+Where can I find paper towels and tissues? — Dove posso trovare i tovaglioli di carta e i fazzoletti?
+Do you have fresh seafood today? — Avete pesce fresco oggi?
+Can I pay with contactless on my phone? — Posso pagare con il contactless dal telefono?
+Is there an offer on these products today? — C'è un'offerta su questi prodotti oggi?
+Could you give me a paper bag, please? — Potrebbe darmi un sacchetto di carta, per favore?
+Please send me the meeting minutes when possible. — Per favore inviami il verbale della riunione appena possibile.
+I will be away from my desk for twenty minutes. — Sarò lontano dalla mia scrivania per venti minuti.
+Let us discuss this during our weekly sync. — Discutiamone durante il nostro allineamento settimanale.
+Can you forward that email to the team? — Puoi inoltrare quell'email al team?
+I need to update the project timeline today. — Devo aggiornare la tempistica del progetto oggi.
+Who is going to walk the dog this afternoon? — Chi porterà a spasso il cane questo pomeriggio?
+Please take off your shoes at the entrance. — Per favore togliti le scarpe all'ingresso.
+Can you set the alarm for seven o'clock? — Puoi impostare la sveglia per le sette?
+Do not leave your wet towel on the bed. — Non lasciare il tuo asciugamano bagnato sul letto.
+We need to buy more toilet paper and soap. — Dobbiamo comprare altra carta igienica e sapone.
+Are you feeling any better today? — Ti senti un po' meglio oggi?
+Thank you so much for the wonderful evening. — Grazie mille per la splendida serata.
+Let me know if you need any help moving. — Fammi sapere se hai bisogno di aiuto con il trasloco.
+Give me a shout when you arrive at the station. — Fammi un fischio quando arrivi in stazione.
+I am really looking forward to seeing you again. — Non vedo l'ora di rivederti.
+My phone battery is almost completely dead. — La batteria del mio telefono è quasi del tutto scarica.
+Is there a post office near this street? — C'è un ufficio postale vicino a questa strada?
+The lift is temporarily out of service. — L'ascensore è temporaneamente fuori servizio.
+Could you tell me where the restrooms are? — Potrebbe dirmi dove sono i bagni?
+I think I left my jacket in the car. — Penso di aver lasciato la giacca in macchina.
+Which line should I take to get to the museum? — Quale linea dovrei prendere per andare al museo?
+Is there a connection to the city center? — C'è una coincidenza per il centro città?
+Do I need to validate this ticket before boarding? — Devo convalidare questo biglietto prima di salire?
+How long is the delay for the train? — Quanto dura il ritardo del treno?
+Could you open the window a little bit? — Potresti aprire un po' la finestra?
+I will double check the numbers and let you know. — Ricontrollerò i numeri e ti farò sapere.
+Could you share the link to the shared folder? — Potresti condividere il link alla cartella condivisa?
+We need to finalize the budget by tomorrow. — Dobbiamo finalizzare il budget entro domani.
+I am currently in a meeting, I will call you back. — Al momento sono in riunione, ti richiamo dopo.
+Thank you for your prompt response to my request. — Grazie per la sollecita risposta alla mia richiesta.
+Do you have an extension cord I can borrow? — Hai una prolunga che posso prendere in prestito?
+Please lock the balcony door before going to bed. — Per favore chiudi la porta del balcone prima di andare a dormire.
+Can you help me move this heavy box? — Puoi aiutarmi a spostare questa scatola pesante?
+I need to make a copy of my identity card. — Devo fare una copia della mia carta d'identità.
+Have a safe journey home and see you soon! — Buon viaggio di ritorno e a presto!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
