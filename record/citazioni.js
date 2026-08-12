@@ -1549,6 +1549,56 @@ L'imperatore Diocleziano divise l'amministrazione dell'impero in un sistema noto
 Costantino spostò la capitale dell'impero a Bisanzio, poi rinominata Costantinopoli, nel 330 d.C. — antica Roma
 L'eruzione del Vesuvio, nel 79 d.C., seppellì la città di Pompei sotto la cenere vulcanica. — antica Roma
 Giulio Cesare riformò il calendario romano, introducendo quello che divenne noto come calendario giuliano. — antica Roma
+I have to pick up a prescription at the pharmacy. — Devo ritirare una ricetta in farmacia.
+We will attend a parent-teacher meeting tomorrow. — Domani parteciperemo a un colloquio con gli insegnanti.
+She had cleaned the whole house before the guests arrived. — Aveva pulito tutta la casa prima che arrivassero gli ospiti.
+Could you check in for us at the hotel? — Potresti fare il check-in per noi in hotel?
+They are organizing a charity event next month. — Stanno organizzando un evento di beneficenza il mese prossimo.
+I will take the car to the mechanic this week. — Porterò la macchina dal meccanico questa settimana.
+We are planning a road trip along the coast. — Stiamo pianificando un viaggio in auto lungo la costa.
+My nephew is working on a school project about volcanoes. — Mio nipote sta lavorando a un progetto scolastico sui vulcani.
+Excuse me, could I see the menu, please? — Mi scusi, potrei vedere il menu, per favore?
+He was walking the dog when it started to rain. — Stava portando a spasso il cane quando ha iniziato a piovere.
+We will take the cat to the vet on Monday. — Porteremo il gatto dal veterinario lunedì.
+I returned the shoes because they were too small. — Ho restituito le scarpe perché erano troppo piccole.
+She is preparing lunch for the whole family. — Sta preparando il pranzo per tutta la famiglia.
+We were shopping online when the website crashed. — Stavamo facendo acquisti online quando il sito si è bloccato.
+Could you help me move this sofa? — Potresti aiutarmi a spostare questo divano?
+I will join the book club next week. — La prossima settimana entrerò nel club del libro.
+The flight was delayed because of bad weather. — Il volo ha subito un ritardo a causa del maltempo.
+We are hosting a family reunion this summer. — Questa estate ospiteremo una riunione di famiglia.
+He complained to the waiter about the cold soup. — Si è lamentato con il cameriere per la zuppa fredda.
+I need to buy tickets for the festival. — Devo comprare i biglietti per il festival.
+She will renovate the bathroom next spring. — Rinnoverà il bagno la prossima primavera.
+We are viewing an apartment this afternoon. — Questo pomeriggio andiamo a vedere un appartamento.
+My colleague followed up on the job interview. — Il mio collega ha fatto un follow-up sul colloquio di lavoro.
+I packed a lunch for the hike. — Ho preparato un pranzo al sacco per l'escursione.
+The waiting room was full when we arrived. — La sala d'attesa era piena quando siamo arrivati.
+Il Senato romano era originariamente composto dai capi delle famiglie più in vista della città. — antica Roma
+Il cursus honorum indicava la sequenza ordinata delle cariche pubbliche nella carriera politica romana. — antica Roma
+La toga era l'indumento che distingueva i cittadini romani di sesso maschile dagli altri abitanti dell'impero. — antica Roma
+Le guerre puniche, combattute tra Roma e Cartagine, si svolsero complessivamente tra il 264 e il 146 a.C. — antica Roma
+La prima guerra punica fu combattuta soprattutto per il controllo della Sicilia. — antica Roma
+Durante la prima guerra punica, i Romani svilupparono il corvo, un dispositivo per l'arrembaggio navale. — antica Roma
+Marco Aurelio, imperatore e filosofo, scrisse i Colloqui con se stesso, noti come Meditazioni. — antica Roma
+Il Foro Romano era il centro politico, commerciale e religioso della città. — antica Roma
+La Guardia Pretoriana era un corpo scelto incaricato di proteggere l'imperatore. — antica Roma
+La rete stradale romana si estendeva per decine di migliaia di chilometri in tutto l'impero. — antica Roma
+Le tecniche romane di lavorazione del vetro si diffusero in tutto il territorio dell'impero. — antica Roma
+Le insulae erano edifici a più piani che ospitavano la maggior parte della popolazione di Roma. — antica Roma
+Il principio secondo cui un imputato è considerato innocente fino a prova contraria influenzò i sistemi giuridici successivi. — antica Roma
+Cicerone fu uno dei più celebri oratori e uomini politici della tarda Repubblica romana. — antica Roma
+Virgilio scrisse l'Eneide su richiesta dell'imperatore Augusto. — antica Roma
+L'Impero Romano raggiunse la sua massima estensione territoriale sotto l'imperatore Traiano. — antica Roma
+I legionari servivano tipicamente venticinque anni e ricevevano terre o una paga al momento del congedo. — antica Roma
+Tra le macchine d'assedio romane vi erano la balista e la catapulta detta onagro. — antica Roma
+Il trionfo era la cerimonia con cui Roma celebrava il ritorno dei generali vittoriosi. — antica Roma
+I gladiatori combattevano secondo categorie specializzate, come il reziario e il mirmillone. — antica Roma
+Le donne romane non potevano votare né ricoprire cariche pubbliche, pur esercitando talvolta una notevole influenza informale. — antica Roma
+Il nome ufficiale del Colosseo era Anfiteatro Flavio. — antica Roma
+L'ipocausto era il sistema romano di riscaldamento che faceva circolare aria calda sotto i pavimenti. — antica Roma
+Giulio Cesare scrisse il De bello Gallico, un resoconto delle sue campagne militari in Gallia. — antica Roma
+L'Impero Romano adottò ufficialmente il cristianesimo come religione di stato sotto Teodosio nel 380 d.C. — antica Roma
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
