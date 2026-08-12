@@ -1411,6 +1411,56 @@ Il faraone era considerato un dio vivente e mediatore tra gli dei e il popolo. �
 I Colossi di Memnone sono due enormi statue erette in onore del faraone Amenhotep III. — antico Egitto
 Il papiro Edwin Smith, uno dei più antichi testi medici conosciuti, descrive casi chirurgici e traumatici. — antico Egitto
 La piramide a gradoni di Djoser, attribuita all'architetto Imhotep, è considerata il primo grande edificio in pietra della storia. — antico Egitto
+I need to withdraw some cash from the ATM. — Devo prelevare dei contanti al bancomat.
+We will watch the sunset from the terrace. — Guarderemo il tramonto dalla terrazza.
+She has just finished her shift at the hospital. — Ha appena finito il turno in ospedale.
+Could you turn on the heating, please? — Potresti accendere il riscaldamento, per favore?
+They are painting the fence in the garden. — Stanno tinteggiando la staccionata in giardino.
+I will train for the marathon this year. — Mi allenerò per la maratona quest'anno.
+We rented a car for the weekend. — Abbiamo noleggiato un'auto per il fine settimana.
+My grandmother is knitting a scarf. — Mia nonna sta lavorando a maglia una sciarpa.
+Excuse me, is this seat free? — Mi scusi, questo posto è libero?
+He was jogging in the park this morning. — Stamattina stava facendo jogging nel parco.
+We will attend the concert next Friday. — Andremo al concerto venerdì prossimo.
+I dropped my keys down the drain. — Mi sono caduto le chiavi nel tombino.
+She is preparing for a job interview. — Si sta preparando per un colloquio di lavoro.
+We were camping when the storm started. — Eravamo in campeggio quando è iniziato il temporale.
+Could you feed the cat this evening? — Potresti dar da mangiare al gatto stasera?
+I will return the rented equipment tomorrow. — Restituirò l'attrezzatura noleggiata domani.
+The library closes early on Saturdays. — La biblioteca chiude presto il sabato.
+We are planting tomatoes in the garden. — Stiamo piantando pomodori in giardino.
+He broke his arm while skiing. — Si è rotto un braccio sciando.
+I need new batteries for the remote. — Ho bisogno di pile nuove per il telecomando.
+She will publish her first novel next year. — Pubblicherà il suo primo romanzo l'anno prossimo.
+We are decorating the house for Christmas. — Stiamo addobbando la casa per Natale.
+I forgot my umbrella at the office. — Ho dimenticato l'ombrello in ufficio.
+The train was ten minutes late this morning. — Il treno stamattina è arrivato con dieci minuti di ritardo.
+He volunteers at the shelter on weekends. — Fa volontariato al rifugio nei weekend.
+La cittadella di Micene era protetta da mura ciclopiche e dalla celebre Porta dei Leoni. — civiltà micenea
+La lineare B, usata dai Micenei, fu decifrata solo nel 1952 da Michael Ventris. — civiltà micenea
+Heinrich Schliemann scavò il sito di Micene nell'Ottocento, portando alla luce la cosiddetta maschera di Agamennone. — civiltà micenea
+La civiltà micenea fiorì approssimativamente tra il 1600 e il 1100 a.C. — civiltà micenea
+Il collasso della civiltà micenea, intorno al 1200 a.C., aprì la fase nota come Medioevo ellenico. — civiltà micenea
+Le città greche antiche, chiamate poleis, erano entità politiche indipendenti tra loro. — antica Grecia
+Sparta educava i giovani attraverso un rigido addestramento noto come agoge. — antica Grecia
+Le riforme di Clistene, ad Atene nel 508 a.C., posero le basi della democrazia ateniese. — antica Grecia
+Nella battaglia di Maratona, nel 490 a.C., gli Ateniesi sconfissero l'esercito persiano. — antica Grecia
+Alle Termopili, nel 480 a.C., un piccolo contingente greco guidato da Leonida resistette a lungo alle forze persiane. — antica Grecia
+Nella battaglia navale di Salamina, nel 480 a.C., la flotta greca sconfisse quella persiana. — antica Grecia
+Sotto la guida di Pericle, Atene visse un periodo di grande fioritura culturale e politica nel V secolo a.C. — antica Grecia
+Il teatro greco nacque nell'ambito di feste religiose dedicate al dio Dioniso. — antica Grecia
+Il giuramento di Ippocrate stabiliva principi etici ancora oggi centrali nella pratica medica. — antica Grecia
+La guerra del Peloponneso, tra Atene e Sparta, si protrasse dal 431 al 404 a.C. — antica Grecia
+La Lega di Delo fu un'alleanza militare guidata da Atene contro la minaccia persiana. — antica Grecia
+I Greci fondarono numerose colonie lungo le coste del Mediterraneo e del Mar Nero. — antica Grecia
+Le leggi di Draconte, ad Atene, erano note per la loro estrema severità. — antica Grecia
+Solone introdusse riforme ad Atene che posero le premesse per i futuri sviluppi democratici. — antica Grecia
+L'agorà era il principale spazio pubblico delle città greche, centro di commercio e vita politica. — antica Grecia
+La falange oplitica era la formazione di combattimento tipica dei soldati greci pesantemente armati. — antica Grecia
+Tucidide è considerato tra i fondatori della storiografia basata sull'analisi critica delle fonti. — antica Grecia
+Erodoto viene spesso definito il padre della storia per la sua opera sulle guerre persiane. — antica Grecia
+Le tombe a tholos, a forma di alveare, sono tipiche dell'architettura funeraria micenea. — civiltà micenea
+I Micenei praticavano un'economia palaziale, con i beni gestiti e redistribuiti dal potere centrale. — civiltà micenea
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
