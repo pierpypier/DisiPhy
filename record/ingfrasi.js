@@ -1111,6 +1111,56 @@ Are there any sports equipment stores on this avenue? — Ci sono negozi di arti
 Look at that long queue outside the new bakery! — Guarda che lunga fila fuori dalla nuova panetteria!
 This store specializes in handmade leather shoes. — Questo negozio è specializzato in scarpe in pelle fatte a mano.
 What a wonderful afternoon for strolling through the shops! — Che pomeriggio delizioso per passeggiare tra i negozi!
+Shall we cross the street at the pedestrian crossing? — Attraversiamo la strada sulle strisce pedonali?
+Look at the stunning architecture of this ancient building. — Guarda l'architettura mozzafiato di questo antico edificio.
+Is there a nice park nearby where we can sit down? — C'è un bel parco qui vicino dove possiamo sederci?
+Let us take a short break on this park bench. — Facciamo una breve pausa su questa panchina.
+Could you take a picture of us in front of the fountain? — Potrebbe scattarci una foto davanti alla fontana?
+This main square is always full of street performers. — Questa piazza principale è sempre piena di artisti di strada.
+Which way leads to the historical town center? — Quale strada porta al centro storico?
+The city hall is located at the end of this avenue. — Il municipio si trova alla fine di questo viale.
+Let us walk along the river bank at sunset. — Camminiamo lungo la riva del fiume al tramonto.
+Is this cobblestone street accessible for strollers? — Questa strada in ciottoli è accessibile ai passeggini?
+We can get a wonderful view of the city from this hill. — Possiamo godere di una vista meravigliosa della città da questa collina.
+Do you know the history of this marble statue? — Conosci la storia di questa statua di marmo?
+Let us stroll through the narrow alleys of the old neighborhood. — Passeggiamo per i vicoli stretti del vecchio quartiere.
+There is a beautiful botanical garden near the castle. — C'è un bellissimo giardino botanico vicino al castello.
+Watch out for the cyclists coming down the bike lane. — Fai attenzione ai ciclisti che scendono lungo la pista ciclabile.
+How old is the cathedral located in the center? — Quanti anni ha la cattedrale situata in centro?
+There are many cozy cafes along this tree-lined boulevard. — Ci sono molti caffè accoglienti lungo questo viale alberato.
+Let us cross the stone bridge to get to the other side. — Attraversiamo il ponte di pietra per andare dall'altra parte.
+Is there a tourist map of the walking routes available? — C'è una mappa turistica dei percorsi a piedi disponibile?
+Look at the colourful flowers decorating the balconies. — Guarda i fiori colorati che decorano i balconi.
+Where does this pedestrian path lead to? — Dove porta questo percorso pedonale?
+We can hear the church bells ringing across the town. — Possiamo sentire le campane della chiesa suonare in tutta la città.
+Let us stop at the drinking fountain to fill our bottles. — Fermiamoci alla fontanella per riempire le nostre borracce.
+The street lights are turning on as evening falls. — I lampioni si stanno accendendo mentre scende la sera.
+Is it safe to walk around this neighborhood at night? — È sicuro camminare in questo quartiere di notte?
+There is a lively open-air market happening in the square today. — Oggi c'è un vivace mercato all'aperto nella piazza.
+We noticed a plaque commemorating a famous historical event. — Abbiamo notato una targa che commemora un famoso evento storico.
+Can you guide us towards the main promenade? — Puoi guidarci verso la passeggiata principale?
+I love the vibrant atmosphere of this bustling street. — Adoro l'atmosfera vivace di questa strada animata.
+Should we head back towards the hotel before it gets dark? — Dovremmo tornare verso l'hotel prima che faccia buio?
+The ancient city walls are remarkably well preserved. — Le antiche mura della città sono straordinariamente ben conservate.
+Let us take the stairs leading up to the panoramic viewpoint. — Prendiamo le scale che portano al punto panoramico.
+This neighborhood is famous for its colorful street art. — Questo quartiere è famoso per la sua vivace arte urbana.
+Are there any shaded benches where we can rest in the shade? — Ci sono panchine all'ombra dove possiamo riposarci?
+The traffic noise disappears once you enter the quiet alley. — Il rumore del traffico scompare appena si entra nel vicolo silenzioso.
+You can admire the ruins from the observation platform. — Puoi ammirare i resti dalla piattaforma di osservazione.
+Let us follow the signposts directing visitors to the monument. — Seguiamo i cartelli che indicano il monumento ai visitatori.
+Is there a scenic walking trail along the coastline? — C'è un sentiero panoramico lungo la costa?
+I enjoy observing daily life in the neighborhood squares. — Mi piace osservare la vita quotidiana nelle piazze del quartiere.
+Do not forget to look up at the decorative details on the facades. — Non dimenticare di alzare lo sguardo sui dettagli decorativi delle facciate.
+The bell tower dominates the skyline of the whole city. — Il campanile domina il panorama dell'intera città.
+Let us cross the avenue at the traffic lights when it turns green. — Attraversiamo il viale al semaforo quando diventa verde.
+There is a bronze monument erected in honor of the founder. — C'è un monumento in bronzo eretto in onore del fondatore.
+We walked for hours discovering hidden corners of the town. — Abbiamo camminato per ore scoprendo angoli nascosti della città.
+The park is full of locals walking their dogs in the evening. — Il parco è pieno di residenti che portano a spasso i cani la sera.
+Is the old fortress open for public visits today? — La vecchia fortezza è aperta per le visite pubbliche oggi?
+Let us sit near the pond and watch the ducks. — Sediamoci vicino allo stagno a guardare le anatre.
+This historical gate was once the main entrance to the city. — Questa porta storica un tempo era l'ingresso principale della città.
+The whole downtown area is restricted to pedestrians only. — L'intera zona del centro storico è riservata esclusivamente ai pedoni.
+What a charming place to take an evening stroll! — Che posto incantevole per fare una passeggiata serale!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
