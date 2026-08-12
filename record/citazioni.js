@@ -1,15 +1,3 @@
-/* ================================================================
-   citazioni.js
-   Frasi motivazionali / citazioni / curiosità mostrate a rotazione
-   in assistent.html. Una frase per riga, testo semplice: NESSUN
-   apice, NESSUNA virgola di fine riga, NESSUN carattere da
-   "scappare". Per aggiungere una nuova frase basta scrivere una
-   nuova riga qui dentro e salvare — non serve toccare assistent.html.
-
-   Caricato da assistent.html tramite un tag <script> con src="citazioni.js",
-   posizionato PRIMA dello script principale della pagina, così la
-   variabile QUOTES qui definita è già pronta quando serve.
-   ================================================================ */
 const QUOTES_RAW = `
 Un passo alla volta, ma tutti i giorni.
 La costanza batte l'intensità.
@@ -1511,6 +1499,56 @@ Caronte era il traghettatore mitologico che conduceva le anime attraverso il fiu
 Cerbero era il cane a tre teste che sorvegliava l'ingresso dell'oltretomba. — mitologia greca
 Nike era la divinità greca che personificava la vittoria. — mitologia greca
 Estia era la dea del focolare e della vita domestica tra le divinità dell'Olimpo. — mitologia greca
+I need to see a dentist about this toothache. — Devo andare dal dentista per questo mal di denti.
+We will celebrate their retirement next Friday. — Festeggeremo il loro pensionamento venerdì prossimo.
+She had already paid the bill before I offered. — Aveva già pagato il conto prima che mi offrissi io.
+Could you check the oil level in the car? — Potresti controllare il livello dell'olio in macchina?
+They are learning to drive this summer. — Questa estate stanno imparando a guidare.
+I will resign from my job next month. — Mi dimetterò dal lavoro il mese prossimo.
+We are waiting for a package to arrive. — Stiamo aspettando l'arrivo di un pacco.
+My sister is learning photography as a hobby. — Mia sorella sta imparando la fotografia come hobby.
+Excuse me, has the mail arrived yet? — Mi scusi, è già arrivata la posta?
+He was baking a cake when the oven stopped working. — Stava preparando una torta quando il forno ha smesso di funzionare.
+We will move to a new city next year. — Ci trasferiremo in una nuova città l'anno prossimo.
+I broke down on the highway this morning. — Stamattina mi si è rotta l'auto in autostrada.
+She is coaching the youth football team. — Allena la squadra giovanile di calcio.
+We were camping when the tent collapsed. — Eravamo in campeggio quando la tenda è crollata.
+Could you cancel my streaming subscription? — Potresti annullare il mio abbonamento allo streaming?
+I will pay the electricity bill tomorrow. — Pagherò la bolletta della luce domani.
+The doctor prescribed some new medication. — Il medico ha prescritto un nuovo farmaco.
+We are practicing for the school concert. — Ci stiamo esercitando per il concerto scolastico.
+He forgot his phone charger at the hotel. — Ha dimenticato il caricabatterie del telefono in hotel.
+I need to change my phone plan. — Devo cambiare il mio piano telefonico.
+She will start painting the fence tomorrow. — Domani inizierà a dipingere la staccionata.
+We are cleaning out the garage this weekend. — Questo fine settimana stiamo svuotando il garage.
+My laptop crashed while I was saving the file. — Il portatile si è bloccato mentre salvavo il file.
+The library book is already overdue. — Il libro della biblioteca è già in ritardo.
+He is preparing the garden for winter. — Sta preparando il giardino per l'inverno.
+Le legioni romane erano organizzate in coorti, a loro volta suddivise in centurie. — antica Roma
+Le Dodici Tavole, primo codice scritto di leggi romane, furono redatte intorno al 450 a.C. — antica Roma
+Con Pax Romana si indicano circa due secoli di relativa pace e stabilità nell'Impero Romano. — antica Roma
+La via Appia, iniziata nel 312 a.C., fu una delle prime e più importanti strade romane. — antica Roma
+Gli acquedotti romani sfruttavano la forza di gravità per trasportare l'acqua fino alle città. — antica Roma
+Le terme romane erano importanti luoghi di incontro sociale e culturale. — antica Roma
+I giochi gladiatori nacquero come rituali funebri prima di diventare spettacoli pubblici molto popolari. — antica Roma
+Il Circo Massimo, a Roma, poteva ospitare corse di carri davanti a folle enormi. — antica Roma
+Le vestali custodivano il fuoco sacro dedicato alla dea Vesta e vivevano in castità. — antica Roma
+La società romana era divisa tra patrizi e plebei, la cui lunga contrapposizione plasmò il diritto repubblicano. — antica Roma
+La battaglia di Zama, nel 202 a.C., segnò la fine della Seconda guerra punica con la vittoria di Roma su Annibale. — antica Roma
+Cartagine fu completamente distrutta da Roma nel 146 a.C. al termine della Terza guerra punica. — antica Roma
+La conquista della Gallia da parte di Giulio Cesare estese notevolmente il territorio romano. — antica Roma
+Spartaco guidò una grande rivolta di schiavi contro Roma tra il 73 e il 71 a.C. — antica Roma
+I numeri romani combinavano lettere come I, V, X, L, C, D e M per rappresentare le cifre. — antica Roma
+Il latino, la lingua di Roma, diede origine alle moderne lingue romanze. — antica Roma
+La Colonna Traiana, a Roma, celebra le campagne militari dell'imperatore in Dacia. — antica Roma
+Il Vallo di Adriano fu costruito per segnare il confine settentrionale della Britannia romana. — antica Roma
+Il calcestruzzo romano permise di costruire opere durature, alcune delle quali sono giunte fino a oggi. — antica Roma
+Il Pantheon di Roma presenta una delle più grandi cupole in calcestruzzo non armato mai costruite. — antica Roma
+La cittadinanza romana fu progressivamente estesa agli abitanti liberi di tutto l'impero. — antica Roma
+L'imperatore Diocleziano divise l'amministrazione dell'impero in un sistema noto come tetrarchia. — antica Roma
+Costantino spostò la capitale dell'impero a Bisanzio, poi rinominata Costantinopoli, nel 330 d.C. — antica Roma
+L'eruzione del Vesuvio, nel 79 d.C., seppellì la città di Pompei sotto la cenere vulcanica. — antica Roma
+Giulio Cesare riformò il calendario romano, introducendo quello che divenne noto come calendario giuliano. — antica Roma
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
