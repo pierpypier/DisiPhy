@@ -498,6 +498,56 @@ Please lock the balcony door before going to bed. — Per favore chiudi la porta
 Can you help me move this heavy box? — Puoi aiutarmi a spostare questa scatola pesante?
 I need to make a copy of my identity card. — Devo fare una copia della mia carta d'identità.
 Have a safe journey home and see you soon! — Buon viaggio di ritorno e a presto!
+Could you recommend a local dish to try? — Potrebbe consigliarmi un piatto locale da provare?
+Is there a hairdryer in the bathroom? — C'è un asciugacapelli in bagno?
+What is the check-out time in the morning? — A che ora è il check-out la mattina?
+Could I have some extra pillows, please? — Potrei avere dei cuscini extra, per favore?
+Does the room have air conditioning and heating? — La stanza ha l'aria condizionata e il riscaldamento?
+Can I make a reservation for tomorrow evening? — Posso fare una prenotazione per domani sera?
+Is tap water okay or should I buy bottled water? — L'acqua del rubinetto va bene o dovrei comprare acqua in bottiglia?
+Could you bring us the dessert menu? — Potrebbe portarci il menu dei dolci?
+We would like to split the bill, please. — Vorremmo dividere il conto, per favore.
+Do you have any sugar-free options available? — Avete opzioni senza zucchero disponibili?
+Where are the frozen foods located? — Dove si trovano i cibi surgelati?
+Is there a bakery section in this store? — C'è un reparto panetteria in questo negozio?
+Can I get a plastic bag for these items? — Posso avere una busta di plastica per questi articoli?
+Do you accept mobile payments here? — Accettate pagamenti dallo smartphone qui?
+Excuse me, is this trolley free to use? — Scusi, questo carrello è libero da usare?
+I am sending you the link for the video call. — Ti sto inviando il link per la videochiamata.
+Please let me know your availability for next week. — Per favore fammi sapere la tua disponibilità per la prossima settimana.
+I need to reschedule our appointment to Friday. — Devo spostare il nostro appuntamento a venerdì.
+Could you mute your microphone when not speaking? — Potresti disattivare il microfono quando non parli?
+Let us discuss the details during the meeting. — Discutiamo i dettagli durante la riunione.
+What would you like to watch on TV tonight? — Cosa vorresti guardare in TV stasera?
+Could you help me unload the groceries from the car? — Puoi aiutarmi a scaricare la spesa dalla macchina?
+Don't forget to water the flowers on the balcony. — Non dimenticare di annaffiare i fiori sul balcone.
+Who is going to take out the recycling today? — Chi porta fuori la raccolta differenziata oggi?
+Is dinner ready or can I help with anything? — La cena è pronta o posso aiutare in qualcosa?
+It was great seeing you after all this time. — È stato bello vederti dopo tutto questo tempo.
+Give me a call whenever you get home. — Fammi una telefonata ogni volta che arrivi a casa.
+I hope you have a safe flight back home. — Spero che tu faccia un buon volo di ritorno a casa.
+Would you like to grab a quick coffee with me? — Ti andrebbe di prendere un caffè al volo con me?
+Let me know if you need anything else from me. — Fammi sapere se hai bisogno di qualcos'altro da parte mia.
+Where is the nearest bus stop to the center? — Dov'è la fermata dell'autobus più vicina per il centro?
+Is there a taxi rank outside the station? — C'è una stazione dei taxi fuori dalla stazione?
+How far is the hotel from the beach? — Quanto dista l'hotel dalla spiaggia?
+Can I buy tickets directly on the bus? — Posso comprare i biglietti direttamente sull'autobus?
+Is this seat reserved for elderly passengers? — Questo posto è riservato ai passeggeri anziani?
+Where can I find a pharmacy open late tonight? — Dove posso trovare una farmacia aperta fino a tarda notte?
+Could you tell me where the nearest bank is? — Potrebbe dirmi dov'è la banca più vicina?
+Is there a free Wi-Fi network in this area? — C'è una rete Wi-Fi gratuita in questa zona?
+What time does the shopping center close on Saturdays? — A che ora chiude il centro commerciale il sabato?
+I need to buy a plug adapter for my electronics. — Devo comprare un adattatore per le mie apparecchiature elettroniche.
+Could you lower your voice a bit, please? — Potresti abbassare un po' la voce, per favore?
+Please remember to lock the front door when leaving. — Per favore ricordati di chiudere a chiave la porta d'ingresso quando esci.
+Can you pass me the salt and pepper, please? — Puoi passarmi il sale e il pepe, per favore?
+I am going to take a quick shower before dinner. — Vado a fare una doccia veloce prima di cena.
+Make sure to turn off the heating before going out. — Assicurati di spegnere il riscaldamento prima di uscire.
+I will send you a text message as soon as I land. — Ti manderò un messaggio di testo non appena atterro.
+We are planning a small weekend trip to the mountains. — Stiamo organizzando una breve gita nel fine settimana in montagna.
+Thank you for your hospitality during our stay. — Grazie per la vostra ospitalità durante il nostro soggiorno.
+Do you have any recommendations for a local guide? — Ha qualche raccomandazione per una guida locale?
+Have a great weekend and enjoy your time off! — Buon fine settimana e goditi il tempo libero!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
