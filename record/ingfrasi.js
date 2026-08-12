@@ -1411,6 +1411,56 @@ The cinema has comfortable reclining leather seats. (De si-ne-ma hez kam-for-te-
 We arrived early to explore the museum garden. (Uii e-raivd er-lii tuu eks-plor de miu-sii-em gar-den) — Siamo arrivati presto per esplorare il giardino del museo.
 The lead actress received a standing ovation at the end. (De liid ek-tres ri-siivd e sten-ding ou-vei-scion et de end) — L'attrice protagonista ha ricevuto una standing ovation alla fine.
 What a memorable evening of art, culture, and entertainment! (Uot e me-mo-ra-bel iiv-ning ov art, kal-ciur, end en-ter-tein-ment) — Che serata memorabile all'insegna di arte, cultura e intrattenimento!
+Good morning everyone, let us start today's lesson. (Gud mor-ning ev-ri-uan, let as start tu-deiz les-sen) — Buongiorno a tutti, iniziamo la lezione di oggi.
+Could you please open your textbooks to page forty? (Kud yuu pliiz ou-pen yor tekst-buks tuu peig for-tii) — Potreste aprire i libri di testo a pagina quaranta, per favore?
+I have a question about yesterday's homework. (Ai hev e kues-cion e-baut yes-ter-deiz houm-uork) — Ho una domanda sui compiti di ieri.
+The teacher is explaining a complex mathematical equation. (De tii-cer iz eks-plein-ing e kom-pleks me-te-me-ti-kal i-kuei-scion) — L'insegnante sta spiegando un'equazione matematica complessa.
+When is the deadline for submitting our group project? (Uen iz de ded-lain for sab-mit-ting au-er gruup pro-gjekt) — Quand'è la scadenza per consegnare il nostro progetto di gruppo?
+We need to schedule a team meeting for tomorrow morning. (Uii niid tuu ske-diul e tiim miit-ing for tu-mo-rou mor-ning) — Dobbiamo programmare una riunione di lavoro per domani mattina.
+Please send me the updated report by email as soon as possible. (Pliiz send mii de ap-dei-ted ri-port bai i-meil ez suun ez po-si-bel) — Per favore inviami il report aggiornato via email prima possibile.
+I have an online presentation with our client at two o'clock. (Ai hev en on-lain pre-zen-tei-scion uid au-er klai-ent et tuu o-klok) — Ho una presentazione online con il nostro cliente alle due.
+The final exam will cover all the topics from this semester. (De fai-nal ek-sam uil ka-ver ol de to-piks from dis se-mes-ter) — L'esame finale coprirà tutti gli argomenti di questo semestre.
+Can you print a hard copy of this document for me? (Ken yuu print e hard ko-pii ov dis do-kiu-ment for mii) — Puoi stamparmi una copia cartacea di questo documento?
+Let us take a short coffee break before continuing. (Let as teik e sciort kof-fii breik bi-for kon-ti-niu-ing) — Facciamo una breve pausa caffè prima di continuare.
+She works as a project manager in a technology company. (Sciii uorks ez e pro-gjekt me-ne-ger in e tek-no-lo-gii kam-pe-nii) — Lavora come project manager in un'azienda tecnologica.
+Did everyone raise their hand to ask a question? (Did ev-ri-uan reiz der hend tuu ask e kues-cion) — Tutti hanno alzato la mano per fare una domanda?
+I am currently working on a tight schedule this week. (Ai em kar-rent-lii uork-ing on e tait ske-diul dis uiik) — Al momento sto lavorando con ritmi molto serrati questa settimana.
+Where is the conference room for the afternoon workshop? (Uer iz de kon-fe-rens ruum for de af-ter-nuun uork-sciop) — Dov'è la sala conferenze per il laboratorio del pomeriggio?
+Please make sure to sign the attendance sheet. (Pliiz meik sciur tuu sain de e-ten-dens sciit) — Assicurati di firmare il foglio di presenza, per favore.
+We need to review the quarterly budget during the meeting. (Uii niid tuu ri-viu de kuor-ter-lii ba-gjet dyoor-ing de miit-ing) — Dobbiamo revisionare il budget trimestrale durante la riunione.
+He failed his physics test and needs to retake it. (Hii feild hiz fi-ziks test end niidz tuu rii-teik it) — Ha fallito il test di fisica e deve rifarlo.
+Could you explain this concept to me again, please? (Kud yuu eks-plein dis kon-sept tuu mii e-ghen, pliiz) — Potresti spiegarmi di nuovo questo concetto, per favore?
+I need to set up a password for my school account. (Ai niid tuu set ap e pas-uord for mai skuul e-kaunt) — Devo impostare una password per il mio account scolastico.
+The company is hiring new software engineers this month. (De kam-pe-nii iz hai-ring niu soft-uer en-gi-niirz dis mant) — L'azienda sta assumendo nuovi ingegneri del software questo mese.
+Do you want to study together in the library this afternoon? (Duu yuu uont tuu sta-dii tu-ghed-er in de lai-bre-rii dis af-ter-nuun) — Vuoi studiare insieme in biblioteca questo pomeriggio?
+My boss approved my vacation request for next month. (Mai bos e-pruuvd mai ve-kei-scion ri-kuest for nekst mant) — Il mio capo ha approvato la mia richiesta di ferie per il mese prossimo.
+Please submit your assignments before midnight on Friday. (Pliiz sab-mit yor e-sain-ments bi-for mid-nait on Frai-dei) — Per favore consegnate i vostri compiti prima di mezzanotte di venerdì.
+We are going to brainstorm new marketing strategies today. (Uii ar gou-ing tuu brein-storm niu mar-ke-ting stra-te-giiz tu-dei) — Oggi faremo un brainstorming su nuove strategie di marketing.
+The school bell rings at one o'clock for lunch break. (De skuul bel ringz et uan o-klok for lanc breik) — La campanella della scuola suona ad un'ora per la pausa pranzo.
+Can you share your screen during the video call? (Ken yuu scer yor skriin dyoor-ing de vi-de-ou kol) — Puoi condividere lo schermo durante la videoschiamata?
+She graduated with honors in computer science last year. (Sciii gre-diu-ei-ted uid o-norz in kom-piu-ter sai-ens last yiir) — Si è laureata con lode in informatica l'anno scorso.
+I have to prepare a slide presentation for the board. (Ai hev tuu pri-per e slaid pre-zen-tei-scion for de bord) — Devo preparare una presentazione di diapositive per il consiglio d'amministrazione.
+Our team won the regional science competition. (Au-er tiim uon de rii-gio-nal sai-ens kom-pe-ti-scion) — La nostra squadra ha vinto la competizione scientifica regionale.
+Please log in to your employee portal to view your payslip. (Pliiz log in tuu yor em-ploi-ii por-tal tuu viu yor pei-slip) — Per favore accedi al portale dipendenti per vedere la tua busta paga.
+The professor gave us a long reading list for the semester. (De pro-fes-sor gheiv as e long riid-ing list for de se-mes-ter) — Il professore ci ha dato una lunga lista di letture per il semestre.
+I need to fix a bug in the code before the release. (Ai niid tuu fiks e bag in de koud bi-for de ri-liis) — Devo correggere un errore nel codice prima del rilascio.
+Is attendance mandatory for all lectures? (Iz e-ten-dens men-de-tor-ii for ol lek-ciurz) — La frequenza è obbligatoria per tutte le lezioni?
+We have to work overtime to finish this project on time. (Uii hev tuu uork ou-ver-taim tuu fi-nisc dis pro-gjekt on taim) — Dobbiamo fare gli straordinari per finire questo progetto in tempo.
+The new intern is very motivated and eager to learn. (De niu in-tern iz ve-rii mou-ti-vei-ted end ii-gher tuu lern) — Il nuovo tirocinante è molto motivato e desideroso di imparare.
+Where can I find the syllabus for this course? (Uer ken Ai faind de si-la-bas for dis kors) — Dove posso trovare il programma per questo corso?
+I received an email notification about the schedule change. (Ai ri-siivd en i-meil nou-ti-fi-kei-scion e-baut de ske-diul ceing) — Ho ricevuto una notifica via email sul cambio di orario.
+Our company offers training courses for professional development. (Au-er kam-pe-nii of-ferz trei-ning kor-siz for pro-fe-scio-nal di-ve-lop-ment) — La nostra azienda offre corsi di formazione per lo sviluppo professionale.
+Please write your name at the top of the exam paper. (Pliiz rait yor neim et de top ov de ek-sam pei-per) — Per favore scrivi il tuo nome in cima al foglio d'esame.
+I am currently updating my resume for new job applications. (Ai em kar-rent-lii ap-dei-ting mai re-ziu-mei for niu giob e-pli-kei-scionz) — Al momento sto aggiornando il mio CV per nuove candidature di lavoro.
+We need to collaborate closely on this new assignment. (Uii niid tuu ko-la-bo-reit klous-lii on dis niu e-sain-ment) — Dobbiamo collaborare a stretto contatto su questo nuovo compito.
+The laboratory experiment requires strict safety protocols. (De le-bo-ra-tor-ii eks-pe-ri-ment ri-kuairz strikt seif-tii prou-to-kolz) — L'esperimento di laboratorio richiede rigidi protocolli di sicurezza.
+Could you please sign and return the contract by tomorrow? (Kud yuu pliiz sain end ri-tern de kon-trekt bai tu-mo-rou) — Potresti per favore firmare e restituire il contratto entro domani?
+What is your main topic for the diploma thesis? (Uot iz yor mein to-pik for de di-plou-ma tii-sis) — Qual è il tuo argomento principale per la tesi di laurea o diploma?
+We are having a performance review with human resources. (Uii ar hev-ing e per-for-mens ri-viu uid hiu-man ri-sor-siz) — Abbiamo una valutazione delle prestazioni con le risorse umane.
+Don't forget to pack your notebook and pencils for school. (Dount for-ghet tuu pek yor nout-buk end pen-sils for skuul) — Non dimenticare di preparare il quaderno e le matite per la scuola.
+The CEO announced a new expansion plan for the company. (De sii-ii-ou e-naunst e niu eks-pen-scion plen for de kam-pe-nii) — L'amministratore delegato ha annunciato un nuovo piano di espansione per l'azienda.
+He got a promotion to senior manager after two years. (Hii got e pro-mou-scion tuu sii-ni-or me-ne-ger af-ter tuu yiirz) — Ha ottenuto una promozione a senior manager dopo due anni.
+Good luck with your exam, I know you will do great! (Gud lak uid yor ek-sam, Ai nou yuu uil duu greit) — Buona fortuna per il tuo esame, so che andrai alla grande!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
