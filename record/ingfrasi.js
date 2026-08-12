@@ -1061,6 +1061,56 @@ What is the best route to reach the village center on foot? — Qual è il perco
 The continental breakfast included freshly squeezed orange juice. — La colazione continentale includeva spremuta d'arancia fresca.
 Please let us know if we need to lock the main entrance door. — Per favore ci faccia sapere se dobbiamo chiudere a chiave la porta d'ingresso principale.
 Thank you for your warm hospitality and wonderful tips! — Grazie per la calda ospitalità e i meravigliosi consigli!
+Let us go window shopping along the main pedestrian street. — Andiamo a guardare le vetrine lungo la via pedonale principale.
+Do you want to pop into that clothing boutique for a minute? — Vuoi fare un salto in quella boutique di abbigliamento per un minuto?
+Look at that gorgeous coat on the mannequin in the window! — Guarda che splendido cappotto sul manichino in vetrina!
+Is this leather handbag made of genuine leather? — Questa borsa di pelle è in vera pelle?
+I am looking for a pair of comfortable sneakers for walking. — Sto cercando un paio di scarpe da ginnastica comode per camminare.
+Can I try on these sunglasses in a different color frame? — Posso provare questi occhiali da sole con la montatura di un colore diverso?
+Is there a shoe shop on this shopping street? — C'è un negozio di scarpe in questa via dello shopping?
+The summer sales have just started this week. — I saldi estivi sono appena iniziati questa settimana.
+Do you think this color suits me or should I try black? — Pensi che questo colore mi stia bene o dovrei provare il nero?
+I need to find a nice scarf to match this dress. — Devo trovare una bella sciarpa da abbinare a questo vestito.
+Excuse me, do you have these boots in size thirty-nine? — Scusi, avete questi stivali nel numero trentanove?
+Is this shirt made of one hundred percent cotton? — Questa camicia è di cotone al cento per cento?
+I am just browsing for now, thank you for asking. — Sto solo dando un'occhiata per ora, grazie per avermelo chiesto.
+Where is the nearest department store around here? — Dov'è il grande magazzino più vicino da queste parti?
+Could you tell me if this belt comes in a larger size? — Potrebbe dirmi se questa cintura c'è in una taglia più grande?
+These trousers are a bit too long, do you offer alterations? — Questi pantaloni sono un po' troppo lunghi, fate riparazioni sartoriali?
+Let us take a break from shopping and get a gelato. — Facciamo una pausa dallo shopping e prendiamo un gelato.
+I love the vintage clothes in this secondhand shop. — Adoro i vestiti vintage in questo negozio dell'usato.
+Are these handmade ceramics produced by local artisans? — Queste ceramiche fatte a mano sono prodotte da artigiani locali?
+Can I keep the box for these new shoes? — Posso tenere la scatola per queste scarpe nuove?
+I bought this wool sweater on sale at half price. — Ho comprato questo maglione di lana in saldo a metà prezzo.
+Is there a mirror nearby so I can see how it looks? — C'è uno specchio qui vicino così posso vedere come sta?
+This jewelry shop has some very elegant silver necklaces. — Questa gioielleria ha delle collane d'argento molto eleganti.
+Could you wrap this delicate porcelain vase carefully? — Potrebbe incartare questo vaso di porcellana delicato con cura?
+We have been walking through the shopping district all morning. — Abbiamo camminato nel quartiere dello shopping per tutta la mattina.
+Do you accept credit card payments for small amounts? — Accettate pagamenti con carta di credito per piccoli importi?
+I would like to exchange this sweater for a smaller size. — Vorrei cambiare questo maglione con una taglia più piccola.
+Are there any luxury brand outlets near the city center? — Ci sono outlet di marchi di lusso vicino al centro città?
+Look at these cute handmade souvenirs in the gift shop! — Guarda questi carini souvenir fatti a mano nel negozio di souvenir!
+Is this umbrella sturdy enough for strong wind? — Questo ombrello è abbastanza robusto per il vento forte?
+I am looking for a light jacket for cool summer evenings. — Sto cercando una giacca leggera per le fresche sere d'estate.
+Excuse me, is this hat available in one size only? — Scusi, questo cappello è disponibile solo in taglia unica?
+Can you show me the newest arrivals in the window? — Puoi mostrarmi le ultime novità in vetrina?
+My shopping bag is getting quite heavy to carry around. — La mia borsa della spesa sta diventando piuttosto pesante da portare in giro.
+This perfume shop has a wide selection of fragrances. — Questa profumeria ha un'ampia selezione di fragranze.
+Could you give me a receipt so I can claim Tax Free? — Potrebbe darmi uno scontrino così posso richiedere il Tax Free?
+I really like the design of this leather wallet. — Mi piace molto il design di questo portafoglio in pelle.
+Is this fabric machine washable or dry clean only? — Questo tessuto è lavabile in lavatrice o solo a secco?
+Let us walk down this narrow alley to see the artisan shops. — Camminiamo lungo questo vicolo stretto per vedere le botteghe artigiane.
+I am carrying too many bags, let us head back to the hotel. — Sto portando troppe borse, torniamo verso l'hotel.
+Do you have any discounts if I purchase three items? — Avete degli sconti se acquisto tre articoli?
+She bought an elegant silk scarf as a gift for her mother. — Ha comprato un'elegante sciarpa di seta come regalo per sua madre.
+Where can I find a good antique market in this area? — Dove posso trovare un buon mercato dell'antiquariato in questa zona?
+This pair of sunglasses offers full UV protection. — Questo paio di occhiali da sole offre una protezione UV completa.
+Can I leave my heavy bags at the customer service desk? — Posso lasciare le mie borse pesanti al banco di assistenza clienti?
+I cannot decide between the navy blue and the dark green one. — Non riesco a decidere tra quello blu notte e quello verde scuro.
+Are there any sports equipment stores on this avenue? — Ci sono negozi di articoli sportivi in questo viale?
+Look at that long queue outside the new bakery! — Guarda che lunga fila fuori dalla nuova panetteria!
+This store specializes in handmade leather shoes. — Questo negozio è specializzato in scarpe in pelle fatte a mano.
+What a wonderful afternoon for strolling through the shops! — Che pomeriggio delizioso per passeggiare tra i negozi!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
