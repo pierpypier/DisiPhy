@@ -118,7 +118,8 @@
   }
 
   /* ============================================================
-     BANNER ASSISTENTE — identico ad assistent.html
+     BANNER ASSISTENTE — identico ad assistent.html (senza la
+     citazione del momento, già presente in assistent.html)
      ============================================================ */
   .assistant-banner{
     display:flex;
@@ -161,6 +162,7 @@
     color:var(--muted);
     font-weight:600;
   }
+
   .assistant-image-wrap{
     flex-shrink:0;
   }
@@ -279,7 +281,7 @@
   }
 
   /* ============================================================
-     SEZIONE INGLESE — frasi bilingue, testo più grande e leggibile
+     SEZIONE TEDESCO — frasi bilingue, testo più grande e leggibile
      ============================================================ */
   .ted-intro{
     font-size:14px;
@@ -306,12 +308,24 @@
     box-shadow:0 6px 14px rgba(20,30,50,0.08);
   }
 
-  .ted-frase{
-    font-size:20px;
-    line-height:1.5;
-    font-weight:700;
+  .ted-de{
+    font-size:22px;
+    line-height:1.4;
+    font-weight:800;
     color:#0f172a;
+    margin-bottom:8px;
   }
+  .ted-de .flag{ margin-right:8px; }
+
+  .ted-it{
+    font-size:19px;
+    line-height:1.4;
+    font-weight:600;
+    color:var(--cal-accent);
+    padding-top:8px;
+    border-top:1px dashed #cfe0fa;
+  }
+  .ted-it .flag{ margin-right:8px; }
 
   .ted-refresh-wrap{
     display:flex;
@@ -344,7 +358,8 @@
   }
 
   @media (max-width:600px){
-    .ted-frase{ font-size:17px; }
+    .ted-de{ font-size:19px; }
+    .ted-it{ font-size:16px; }
   }
 </style>
 </head>
@@ -521,7 +536,7 @@
   </div>
 
   <!-- ============================================================
-       RIPASSO DI TEDESCO — 5 frasi da tedfrasi.js
+       RIPASSO DI TEDESCO — 5 frasi bilingue da tedfrasi.js
        ============================================================ -->
   <div class="card">
     <div class="section-title">🇩🇪 Ripasso di tedesco</div>
@@ -564,7 +579,7 @@
 
 </div>
 
-<!-- Frasi per il ripasso di tedesco. -->
+<!-- Frasi bilingue per il ripasso di tedesco. -->
 <script src="tedfrasi.js"></script>
 
 <script>
@@ -794,22 +809,21 @@ function escapeHtml(str){
 }
 
 /* ================================================================
-   RIPASSO DI TEDESCO — pesca 5 frasi da FRASI_TED
+   RIPASSO DI TEDESCO — pesca 5 frasi bilingue da FRASI_TED
    (definito in tedfrasi.js) usando la stessa tecnica del "sacchetto
    mescolato" già impiegata per le citazioni: gli indici vengono
    mescolati una volta e pescati senza reinserimento, così nessuna
-   frase si ripete finché non sono state mostrate tutte. A differenza
-   della citazione del momento, qui il sacchetto viene consultato
-   sia all'apertura della pagina sia ad ogni clic sul pulsante di
-   aggiornamento — non è legato a una fascia oraria.
+   frase si ripete finché non sono state mostrate tutte. Il sacchetto
+   viene consultato sia all'apertura della pagina sia ad ogni clic
+   sul pulsante di aggiornamento — non è legato a una fascia oraria.
    ================================================================ */
-const LS_ING_STATE = 'ted_frasi_state_v1';
+const LS_TED_STATE = 'ted_frasi_state_v1';
 const TED_BATCH_SIZE = 5;
 
 function leggiBagTed(){
   let stato = null;
   try{
-    const raw = localStorage.getItem(LS_ING_STATE);
+    const raw = localStorage.getItem(LS_TED_STATE);
     if(raw) stato = JSON.parse(raw);
   }catch(e){
     console.warn('Errore lettura ted_frasi_state_v1', e);
@@ -825,7 +839,7 @@ function leggiBagTed(){
 
 function salvaBagTed(bag){
   try{
-    localStorage.setItem(LS_ING_STATE, JSON.stringify({ bag }));
+    localStorage.setItem(LS_TED_STATE, JSON.stringify({ bag }));
   }catch(e){
     console.warn('Errore salvataggio ted_frasi_state_v1', e);
   }
@@ -864,7 +878,8 @@ function renderFrasiTed(){
 
   container.innerHTML = frasi.map(f => `
     <div class="ted-card">
-      <div class="ted-frase">${escapeHtml(f)}</div>
+      <div class="ted-de"><span class="flag">🇩🇪</span>${escapeHtml(f.de)}</div>
+      <div class="ted-it"><span class="flag">🇮🇹</span>${escapeHtml(f.it)}</div>
     </div>
   `).join('');
 

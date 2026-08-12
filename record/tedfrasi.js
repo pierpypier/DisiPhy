@@ -1,13 +1,13 @@
 /* ================================================================
    tedfrasi.js — Frasi comuni Tedesco/Italiano per tedfile.html
    ----------------------------------------------------------------
-   Stesso schema di citazioni.js e ingfrasi.js: un elenco di frasi
-   su righe separate. Ogni riga ha il formato:
-
-   Frase in tedesco (pronuncia approssimativa) - Traduzione italiana
+   Stesso schema di citazioni.js: frasi su righe separate, formato
+   "Frase in tedesco (pronuncia approssimativa) - Traduzione italiana"
 
    Per aggiungere nuove frasi: basta aggiungere una nuova riga dentro
    il template string qui sotto, rispettando questo formato.
+   Nessun array da modificare a mano: il parsing avviene
+   automaticamente più in basso.
    ================================================================ */
 const FRASI_TED_RAW = `
 Guten Morgen (guten MOR-ghen) - Buongiorno (al mattino)
@@ -61,4 +61,22 @@ Es regnet (es RE-ghnet) - Sta piovendo
 Es ist kalt (es ist kalt) - Fa freddo
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
-const FRASI_TED = FRASI_TED_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
+
+/* ================================================================
+   PARSING — trasforma il testo grezzo in un array di oggetti
+   { de: "...", it: "..." } pronto all'uso in tedfile.html.
+   ================================================================ */
+const FRASI_TED = FRASI_TED_RAW
+  .split('\n')
+  .map(riga => riga.trim())
+  .filter(riga => riga.length > 0)
+  .map(riga => {
+    const sep = ' - ';
+    const idx = riga.indexOf(sep);
+    if (idx === -1) return null;
+    return {
+      de: riga.slice(0, idx).trim(),
+      it: riga.slice(idx + sep.length).trim()
+    };
+  })
+  .filter(coppia => coppia !== null);
