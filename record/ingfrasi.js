@@ -1511,6 +1511,56 @@ Could you gift-wrap this silk scarf for me? (Kud yuu ghift-rep dis silk skarf fo
 Is this trench coat waterproof or water-resistant? (Iz dis trenc kout uo-ter-pruuf or uo-ter-ri-zis-tent) — Questo trench è impermeabile o idrorepellente?
 The fitting room mirror has great lighting. (De fit-ting ruum mi-ror hez greit lait-ing) — Lo specchio del camerino ha un'ottima illuminazione.
 Thank you for your help, I will take these two items! (Tenk yuu for yor help, Ai uil teik diiz tuu ai-temz) — Grazie per l'aiuto, prendo questi due articoli!
+Where is the main entrance to the shopping mall? (Uer iz de mein en-trens tuu de sciop-ping mol) — Dov'è l'ingresso principale del centro commerciale?
+Which floor is the food court on? (Uic flor iz de fuud kort on) — A quale piano si trova l'area ristorazione?
+Is there an underground parking garage here? (Iz der en an-der-graund par-king ghe-ragi hiir) — C'è un parcheggio sotterraneo qui?
+Let us take the escalator up to the first floor. (Let as teik de es-ke-lei-tor ap tuu de ferst flor) — Prendiamo la scala mobile per salire al primo piano.
+Are there any department stores inside this mall? (Ar der en-ii di-part-ment storz in-said dis mol) — Ci sono grandi magazzini all'interno di questo centro commerciale?
+I need to find an ATM machine to withdraw cash. (Ai niid tuu faind en ei-tii-em me-sciin tuu uit-dro kesc) — Devo trovare uno sportello bancomat per prelevare contanti.
+Where is the customer service information desk? (Uer iz de kas-to-mer ser-vis in-for-mei-scion desk) — Dov'è il banco informazioni del servizio clienti?
+Look at the mall map to see where we are. (Luk et de mol mep tuu sii uer uii ar) — Guarda la mappa del centro commerciale per vedere dove siamo.
+Is there a supermarket on the basement level? (Iz der e suu-per-mar-ket on de beis-ment le-vel) — C'è un supermercato al piano interrato?
+We can leave our stroller near the entrance. (Uii ken liiv au-er strou-ler niir de en-trens) — Possiamo lasciare il passeggino vicino all'ingresso.
+What time does the shopping center close on Sundays? (Uot taim daz de sciop-ping sen-ter klous on San-deiz) — A che ora chiude il centro commerciale la domenica?
+There is a huge play area for children on the top floor. (Der iz e hiugj plei e-ri-a for ciul-dren on de top flor) — C'è un'enorme area giochi per bambini all'ultimo piano.
+Do you want to check out the electronics store? (Duu yuu uont tuu cek aut de i-lek-tro-niks stor) — Vuoi dare un'occhiata al negozio di elettronica?
+Let us meet near the central fountain in twenty minutes. (Let as miit niir de sen-tral faun-ten in tuen-tii mi-nits) — Incontriamoci vicino alla fontana centrale tra venti minuti.
+The mall is very crowded during the weekend. (De mol iz ve-rii krau-ded dyoor-ing de uiik-end) — Il centro commerciale è molto affollato durante il fine settimana.
+Is there a bookstore near the electronics shop? (Iz der e buk-stor niir de i-lek-tro-niks sciop) — C'è una libreria vicino al negozio di elettronica?
+Can we get a coffee at the espresso bar upstairs? (Ken uii ghet e kof-fii et de es-pres-sou bar ap-sterz) — Possiamo prendere un caffè al bar espresso di sopra?
+Where are the public restrooms located? (Uer ar de pab-lik rest-ruumz lou-kei-ted) — Dove si trovano i bagni pubblici?
+They are offering free samples of juice in the corridor. (Dei ar of-fer-ing frii sam-pelz ov gius in de ko-ri-dor) — Stanno offrendo campioni gratuiti di succo nel corridoio.
+I lost my shopping bag near the main plaza. (Ai lost mai sciop-ping beg niir de mein pla-za) — Ho perso la mia borsa della spesa vicino alla piazza principale.
+Is there an elevator for people with strollers? (Iz der en e-le-vei-tor for pii-pel uid strou-lerz) — C'è un ascensore per le persone con i passeggini?
+Let us grab a quick lunch at the fast food counter. (Let as greb e kuik lanc et de fast fuud kaun-ter) — Prendiamo un pranzo veloce al banco del fast food.
+Are the shops open during public holidays? (Ar de sciops ou-pen dyoor-ing pab-lik ho-li-deiz) — I negozi sono aperti durante le festività pubbliche?
+You can validate your parking ticket at the machine. (Yuu ken va-li-deit yor par-king tik-et et de me-sciin) — Puoi convalidare il tuo biglietto del parcheggio alla macchinetta.
+Is there a mobile phone repair shop in the mall? (Iz der e mou-bail foun ri-per sciop in de mol) — C'è un negozio di riparazione telefoni nel centro commerciale?
+Look at the large promotional banner over there! (Luk et de largi pro-mou-scio-nal ben-ner ou-ver der) — Guarda il grande striscione promozionale laggiù!
+We can rent a small shopping cart for the kids. (Uii ken rent e smol sciop-ping kart for de kidz) — Possiamo noleggiare un piccolo carrello della spesa per i bambini.
+Where is the nearest exit to the parking lot? (Uer iz de niir-ist ek-sit tuu de par-king lot) — Dov'è l'uscita più vicina per il parcheggio?
+They are celebrating the anniversary of the mall today. (Dei ar se-le-brei-ting de e-ni-ver-se-rii ov de mol tu-dei) — Oggi stanno festeggiando l'anniversario del centro commerciale.
+Is there a pharmacy inside the shopping gallery? (Iz der e far-ma-sii in-said de sciop-ping ghe-ler-ii) — C'è una farmacia all'interno della galleria commerciale?
+Let us try the new ice cream parlor on the ground floor. (Let as trai de niu ais kriim par-lor on de graund flor) — Proviamo la nuova gelateria al piano terra.
+The security guard is standing near the entrance. (De si-kiu-ri-tii gard iz sten-ding niir de en-trens) — La guardia di sicurezza è in piedi vicino all'ingresso.
+Can I pay for my parking with a credit card? (Ken Ai pei for mai par-king uid e kre-dit kard) — Posso pagare il parcheggio con la carta di credito?
+Where can I find a directory map of all stores? (Uer ken Ai faind e di-rek-to-rii mep ov ol storz) — Dove posso trovare una mappa con l'elenco di tutti i negozi?
+The mall has over one hundred different stores. (De mol hez ou-ver uan han-dred di-fe-rent storz) — Il centro commerciale ha oltre cento negozi diversi.
+Let us sit down on the bench for a few minutes. (Let as sit daun on de benc for e fiu mi-nits) — Sediamoci sulla panchina per qualche minuto.
+Is there a pet shop on the lower level? (Iz der e pet sciop on de lou-er le-vel) — C'è un negozio per animali al piano inferiore?
+We got free vouchers for the cinema inside the mall. (Uii got frii vau-cerz for de si-ne-ma in-said de mol) — Abbiamo ottenuto buoni gratuiti per il cinema all'interno del centro commerciale.
+The air conditioning inside the mall is very strong. (De er kon-di-scio-ning in-said de mol iz ve-rii strong) — L'aria condizionata all'interno del centro commerciale è molto forte.
+Do they have a lost and found office here? (Duu dei hev e lost end faund o-fis hiir) — Hanno un ufficio oggetti smarriti qui?
+I need to buy a gift card at the main desk. (Ai niid tuu bai e ghift kard et de mein desk) — Devo comprare una carta regalo al banco principale.
+Is there a hair salon inside this building? (Iz der e her sa-lon in-said dis bil-ding) — C'è un salone di parrucchiere all'interno di questo edificio?
+Follow the green arrows to reach the exit stairs. (Fol-lou de griin e-rouz tuu riic de ek-sit sterz) — Segui le frecce verdi per raggiungere le scale di emergenza.
+We can charge our electric car in the parking garage. (Uii ken ciargi au-er i-lek-trik kar in de par-king ghe-ragi) — Possiamo ricaricare la nostra auto elettrica nel garage.
+Look at the interactive display with store discounts! (Luk et de in-ter-ek-tiv dis-plei uid stor dis-kaunts) — Guarda lo schermo interattivo con gli sconti dei negozi!
+Is there a bakery selling fresh pastries nearby? (Iz der e bei-ke-rii sel-ling fresc pei-striiz niir-bai) — C'è una panetteria che vende pasticcini freschi qui vicino?
+The parking lot is completely full on Saturday afternoon. (De par-king lot iz kom-pliit-lii ful on Se-ter-dei af-ter-nuun) — Il parcheggio è completamente pieno il sabato pomeriggio.
+You can leave your coat in a locker near the entrance. (Yuu ken liiv yor kout in e lo-ker niir de en-trens) — Puoi lasciare il tuo cappotto in un armadietto vicino all'ingresso.
+Let us walk around the upper gallery before leaving. (Let as uok e-raund de ap-per ghe-ler-ii bi-for liiv-ing) — Facciamo un giro nella galleria superiore prima di andare via.
+What a great day spent shopping at the mall! (Uot e greit dei spent sciop-ping et de mol) — Che bella giornata trascorsa a fare shopping al centro commerciale!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
