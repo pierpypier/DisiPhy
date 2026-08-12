@@ -798,6 +798,19 @@ Do you have any sugar-free beverages here? — Avete bevande senza zucchero qui?
 What is the best way to get to the airport from here? — Qual è il modo migliore per arrivare all'aeroporto da qui?
 My phone battery is running low again. — La batteria del mio telefono si sta scaricando di nuovo.
 Have a nice flight and let us know when you land! — Buon volo e facci sapere quando atterri!
+Can I get a glass of sparkling water with lemon? — Posso avere un bicchiere di acqua frizzante con limone?
+Where is the nearest charging spot for electric cars? — Dov'è la colonnina di ricarica più vicina per auto elettriche?
+We need to check the flight status on the app. — Dobbiamo controllare lo stato del volo sull'applicazione.
+Could you please turn off the air conditioning before leaving? — Potresti spegnere l'aria condizionata prima di uscire, per favore?
+Is there a discount if I buy two pairs of shoes? — C'è uno sconto se compro due paia di scarpe?
+Our teacher assigned us a research project on renewable energy. — Il nostro insegnante ci ha assegnato un progetto di ricerca sulle energie rinnovabili.
+Could you send me the location via text message? — Potresti inviarmi la posizione tramite messaggio di testo?
+We are going to order some food from the local pizzeria tonight. — Stasera ordineremo del cibo dalla pizzeria locale.
+Please turn off your mobile phone during the exam. — Per favore spegni il cellulare durante l'esame.
+Do you know if the museum offers audio guides in Italian? — Sai se il museo offre audioguide in italiano?
+I need to buy a new charger for my tablet. — Devo comprare un nuovo caricabatterie per il mio tablet.
+We should leave early to avoid getting stuck in traffic. — Dovremmo partire presto per evitare di rimanere bloccati nel traffico.
+Could you please bring us another bottle of still water? — Potrebbe portarci un'altra bottiglia di acqua naturale, per favore?
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
