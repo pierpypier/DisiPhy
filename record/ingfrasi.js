@@ -1011,6 +1011,56 @@ We need to walk along platform three to reach our carriage. — Dobbiamo cammina
 Are all subway stations equipped with tactile paving for the blind? — Tutte le stazioni della metropolitana sono dotate di percorso tattile per non vedenti?
 The next train arriving on platform two does not stop here. — Il prossimo treno in arrivo al binario due non effettua fermata qui.
 Have a smooth journey on your rail travel across the country! — Buon viaggio in treno attraverso il paese!
+Is the host living on the property or nearby? — L'host abita nella struttura o nelle vicinanze?
+What is the entry code for the front door? — Qual è il codice d'accesso per la porta d'ingresso?
+Could you show us where the breakfast room is? — Potrebbe mostrarci dov'è la sala colazioni?
+Is homemade cake served with breakfast every morning? — Viene servita una torta fatta in casa a colazione ogni mattina?
+Do you offer any gluten-free products for breakfast? — Offrite prodotti senza glutine per la colazione?
+Could we have breakfast a bit earlier tomorrow morning? — Potremmo fare colazione un po' prima domani mattina?
+Where can we leave the house keys when we check out? — Dove possiamo lasciare le chiavi di casa quando facciamo il check-out?
+Is there a common lounge area for all guests? — C'è un'area soggiorno comune per tutti gli ospiti?
+Can we use the coffee machine in the kitchen freely? — Possiamo usare liberamente la macchina del caffè in cucina?
+Are fresh towels provided every two days? — Gli asciugamani puliti vengono forniti ogni due giorni?
+What time is the main entrance gate locked at night? — A che ora viene chiuso a chiave il cancello principale di notte?
+Could you recommend a family-run restaurant nearby? — Potrebbe consigliarmi un ristorante a gestione familiare qui vicino?
+Is parking available directly in the courtyard? — Il parcheggio è disponibile direttamente nel cortile?
+Can I borrow an iron from the host? — Posso prendere in prestito un ferro da stiro dall'host?
+Is there a small fridge in the room for our drinks? — C'è un piccolo frigorifero in camera per le nostre bevande?
+The host gave us a map of the surrounding village. — L'host ci ha dato una mappa del borgo circostante.
+Could we get a tea kettle for our room? — Potremmo avere un bollitore per il tè in camera?
+Is daily housekeeping included in our B&B reservation? — Le pulizie giornaliere sono incluse nella nostra prenotazione B&B?
+Can we leave our bicycles in the garden shed overnight? — Possiamo lasciare le nostre biciclette nel capanno in giardino per la notte?
+Where is the main thermostat to adjust the heating? — Dov'è il termostato principale per regolare il riscaldamento?
+Are we allowed to use the garden terrace in the evening? — Ci è consentito usare la terrazza in giardino la sera?
+The host prepared a delicious basket of fresh local fruit. — L'host ha preparato un delizioso cestino di frutta fresca locale.
+Do you have any extra blankets stored in the wardrobe? — Avete delle coperte extra nell'armadio?
+Can you order a local taxi for us tomorrow at eight? — Può ordinare un taxi locale per noi domani alle otto?
+What options are available for breakfast tomorrow morning? — Quali opzioni sono disponibili per colazione domani mattina?
+What are the quiet hours during the night? — Quali sono gli orari del silenzio durante la notte?
+Could you give us a spare set of house keys? — Potrebbe darci un set di chiavi di riserva?
+Is there a microwave available for heating up baby food? — C'è un microonde disponibile per scaldare le pappe dei bambini?
+The host was very welcoming and recommended great hiking trails. — L'host è stato molto accogliente e ha consigliato ottimi sentieri da trekking.
+Is there a safe place to leave our bags after checking out? — C'è un posto sicuro dove lasciare le nostre borse dopo il check-out?
+Is fresh milk provided in the communal kitchen? — Il latte fresco è fornito nella cucina comune?
+Could you tell us how to turn on the bathroom radiator? — Potrebbe dirci come accendere il radiatore del bagno?
+Are pets allowed inside the bed and breakfast rooms? — Gli animali domestici sono ammessi nelle camere del bed and breakfast?
+The room was decorated in a cozy rustic style. — La camera era arredata in un accogliente stile rustico.
+What time should we inform you about our arrival time? — A che ora dovremmo comunicarvi il nostro orario di arrivo?
+Is there an outdoor swimming pool in the garden area? — C'è una piscina all'aperto nell'area del giardino?
+Could you recommend a scenic spot to watch the sunset? — Potrebbe consigliare un punto panoramico per guardare il tramonto?
+Do we need to turn off all lights when leaving the house? — Dobbiamo spegnere tutte le luci quando usciamo di casa?
+Can we request savory breakfast options like cheese and ham? — Possiamo richiedere opzioni di colazione salata come formaggio e prosciutto?
+The host kindly offered us a welcome drink upon arrival. — L'host ci ha gentilmente offerto un drink di benvenuto all'arrivo.
+Is smoking allowed on the private balcony? — È consentito fumare sul balcone privato?
+How do we open the automatic gate at night? — Come apriamo il cancello automatico di notte?
+Can you recommend a good local bakery nearby? — Può consigliarci una buona panetteria locale qui vicino?
+We felt completely at home during our stay at the B&B. — Ci siamo sentiti completamente a casa durante il nostro soggiorno al B&B.
+Is there a washing machine we can use for a small fee? — C'è una lavatrice che possiamo usare con un piccolo supplemento?
+Could you provide a baby cot for our room? — Potrebbe fornire una culla per neonati per la nostra stanza?
+What is the best route to reach the village center on foot? — Qual è il percorso migliore per raggiungere a piedi il centro del paese?
+The continental breakfast included freshly squeezed orange juice. — La colazione continentale includeva spremuta d'arancia fresca.
+Please let us know if we need to lock the main entrance door. — Per favore ci faccia sapere se dobbiamo chiudere a chiave la porta d'ingresso principale.
+Thank you for your warm hospitality and wonderful tips! — Grazie per la calda ospitalità e i meravigliosi consigli!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
