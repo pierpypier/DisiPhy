@@ -1599,6 +1599,56 @@ Il nome ufficiale del Colosseo era Anfiteatro Flavio. — antica Roma
 L'ipocausto era il sistema romano di riscaldamento che faceva circolare aria calda sotto i pavimenti. — antica Roma
 Giulio Cesare scrisse il De bello Gallico, un resoconto delle sue campagne militari in Gallia. — antica Roma
 L'Impero Romano adottò ufficialmente il cristianesimo come religione di stato sotto Teodosio nel 380 d.C. — antica Roma
+I need to renew my driver's license this year. — Devo rinnovare la patente quest'anno.
+We will attend an art exhibition on Saturday. — Sabato andremo a una mostra d'arte.
+She had already installed the new software before the meeting. — Aveva già installato il nuovo software prima della riunione.
+Could you set up the router for me? — Potresti configurarmi il router?
+They are hiring new staff for the summer season. — Stanno assumendo nuovo personale per la stagione estiva.
+I will transfer some money to my savings account. — Trasferirò del denaro sul mio conto di risparmio.
+We are exchanging currency before the trip. — Stiamo cambiando valuta prima del viaggio.
+My colleague is attending a training course this week. — Il mio collega sta seguendo un corso di formazione questa settimana.
+Excuse me, where is the checkout desk? — Mi scusi, dov'è il banco per il check-out?
+He was assembling the furniture when the screws ran out. — Stava montando il mobile quando sono finite le viti.
+We will donate old clothes to charity. — Doneremo vestiti vecchi in beneficenza.
+I filed an insurance claim after the accident. — Ho presentato una richiesta di risarcimento dopo l'incidente.
+She is volunteering at the animal shelter this weekend. — Questo fine settimana fa volontariato al canile.
+We were rehearsing when the fire alarm went off. — Stavamo provando quando è scattato l'allarme antincendio.
+Could you order a birthday cake for tomorrow? — Potresti ordinare una torta di compleanno per domani?
+I will rent a car for the business trip. — Noleggerò un'auto per il viaggio di lavoro.
+The technician repaired my phone screen. — Il tecnico ha riparato lo schermo del mio telefono.
+We are taking a cooking class next month. — Il mese prossimo faremo un corso di cucina.
+He installed a new security camera at the entrance. — Ha installato una nuova telecamera di sicurezza all'ingresso.
+I need to buy travel insurance before we leave. — Devo comprare un'assicurazione di viaggio prima di partire.
+She will join a language exchange group. — Entrerà in un gruppo di scambio linguistico.
+We are moving boxes into the new apartment. — Stiamo portando gli scatoloni nel nuovo appartamento.
+My brother subscribed to a monthly book box. — Mio fratello si è abbonato a una scatola mensile di libri.
+The doctor scheduled a check-up for next week. — Il medico ha fissato una visita di controllo per la prossima settimana.
+We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
+La Triade Capitolina, formata da Giove, Giunone e Minerva, era al centro della religione ufficiale romana. — antica Roma
+Il paterfamilias esercitava un'autorità legale quasi assoluta su tutti i membri della propria famiglia. — antica Roma
+Uno schiavo romano poteva ottenere la libertà attraverso un atto formale chiamato manomissione. — antica Roma
+Il denario era una delle monete d'argento più diffuse nella Roma repubblicana e imperiale. — antica Roma
+Le fazioni delle corse dei carri, distinte per colore come Azzurri e Verdi, avevano un seguito appassionato tra i romani. — antica Roma
+La Cloaca Massima, uno dei primi grandi sistemi fognari, contribuì a bonificare l'area del Foro Romano. — antica Roma
+L'aquilifero era il legionario incaricato di portare l'insegna dell'aquila, simbolo d'onore della legione. — antica Roma
+Augusto diede il proprio nome al mese di agosto, in precedenza chiamato sextilis. — antica Roma
+Le province romane erano amministrate da governatori nominati dal Senato o dall'imperatore. — antica Roma
+L'ultimo imperatore d'Occidente, Romolo Augustolo, fu deposto dal generale germanico Odoacre nel 476 d.C. — antica Roma
+Il Colosseo fu inaugurato nell'80 d.C. dall'imperatore Tito con cento giorni di giochi. — antica Roma
+L'espressione tutte le strade portano a Roma nasce dalla fitta rete stradale che collegava l'impero alla capitale. — antica Roma
+La Repubblica romana era guidata ogni anno da due consoli eletti, pensati per bilanciare reciprocamente il potere. — antica Roma
+I tribuni della plebe avevano il potere di porre il veto alle decisioni del Senato a tutela dei plebei. — antica Roma
+Gli antichi romani svilupparono e diffusero l'uso dell'arco a tutto sesto nelle proprie costruzioni. — antica Roma
+Catone il Censore era solito concludere i propri discorsi in Senato invocando la distruzione di Cartagine. — antica Roma
+Le ville romane più facoltose erano spesso decorate con elaborati mosaici pavimentali. — antica Roma
+L'Annona era il sistema statale che garantiva l'approvvigionamento di grano alla popolazione di Roma. — antica Roma
+Il gioco da tavolo chiamato ludus latrunculorum era popolare tra i romani come passatempo strategico. — antica Roma
+L'idea del pane e giochi descriveva la strategia di mantenere il consenso popolare con cibo e intrattenimenti gratuiti. — antica Roma
+I bambini romani delle famiglie più abbienti venivano affidati a un pedagogo per l'istruzione. — antica Roma
+Le donne romane sposate indossavano tradizionalmente una veste lunga chiamata stola. — antica Roma
+Il sestertius era una moneta romana di bronzo usata comunemente per le transazioni quotidiane. — antica Roma
+I romani costruirono un fitto sistema di fari e porti per facilitare la navigazione commerciale nel Mediterraneo. — antica Roma
+Il termine legione derivava dal verbo latino legere, nel senso di scegliere o reclutare soldati. — antica Roma
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
