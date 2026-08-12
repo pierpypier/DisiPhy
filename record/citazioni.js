@@ -11,7 +11,6 @@
    variabile QUOTES qui definita è già pronta quando serve.
    ================================================================ */
 const QUOTES_RAW = `
-
 Un passo alla volta, ma tutti i giorni.
 La costanza batte l'intensità.
 Fatto è meglio che perfetto.
@@ -1212,8 +1211,56 @@ Firenze, Italia — Da vedere: il Duomo, gli Uffizi, Ponte Vecchio. Consiglio pr
 Venezia, Italia — Da vedere: Piazza San Marco, il Ponte di Rialto, il quartiere di Cannaregio. Consiglio pratico: esplora Cannaregio nelle prime ore del mattino per vivere Venezia lontano dalla folla.
 Matera, Italia — Da vedere: i Sassi, la Cattedrale, le chiese rupestri. Consiglio pratico: visita i Sassi anche di sera, quando l'illuminazione rende l'atmosfera particolarmente suggestiva.
 Danzica, Polonia — Da vedere: la Città Vecchia, la via Długa, il porto storico. Consiglio pratico: passeggia lungo la via Długa la sera, quando le facciate colorate sono illuminate.
-
+I am waiting for the bus. — Sto aspettando l'autobus.
+She will travel to Rome next summer. — Lei viaggerà a Roma la prossima estate.
+We visited the museum yesterday. — Abbiamo visitato il museo ieri.
+Can I have the bill, please? — Posso avere il conto, per favore?
+He is doing his homework. — Lui sta facendo i compiti.
+They will move to a new house next month. — Si trasferiranno in una nuova casa il mese prossimo.
+I usually take the train to work. — Di solito prendo il treno per andare al lavoro.
+Where is the nearest pharmacy? — Dov'è la farmacia più vicina?
+My sister works in an office downtown. — Mia sorella lavora in un ufficio in centro.
+We were watching a movie when the phone rang. — Stavamo guardando un film quando ha squillato il telefono.
+Could you help me find this address? — Potrebbe aiutarmi a trovare questo indirizzo?
+The children are playing in the garden. — I bambini stanno giocando in giardino.
+I have already booked the hotel room. — Ho già prenotato la camera d'albergo.
+She works as a teacher at the local school. — Lei lavora come insegnante nella scuola del quartiere.
+We will meet at the station at six. — Ci incontreremo alla stazione alle sei.
+He forgot his umbrella at home. — Ha dimenticato l'ombrello a casa.
+I would like to try on this jacket. — Vorrei provare questa giacca.
+The plane departs from gate twelve. — L'aereo parte dal gate dodici.
+My parents are cooking dinner together. — I miei genitori stanno cucinando la cena insieme.
+I need to renew my passport soon. — Devo rinnovare il passaporto presto.
+The shop closes at eight in the evening. — Il negozio chiude alle otto di sera.
+We are learning English at school this year. — Quest'anno stiamo imparando l'inglese a scuola.
+He missed the last train home. — Ha perso l'ultimo treno per tornare a casa.
+I will call you as soon as I arrive. — Ti chiamerò appena arrivo.
+The family gathered for a birthday dinner. — La famiglia si è riunita per una cena di compleanno.
+I Neanderthal seppellivano i loro morti, spesso con oggetti simbolici. — preistoria
+La grotta di Chauvet, in Francia, contiene pitture rupestri risalenti a circa 36.000 anni fa. — preistoria
+Le veneri paleolitiche sono piccole statuette femminili scolpite a partire da circa 40.000 anni fa. — preistoria
+Il primo cane addomesticato risale a circa 15.000 anni fa, secondo le stime più accreditate. — preistoria
+L'uomo di Cro-Magnon è il nome dato ai primi Homo sapiens europei, vissuti circa 40.000 anni fa. — preistoria
+Gli utensili in pietra scheggiata più antichi conosciuti, trovati a Lomekwi in Kenya, risalgono a circa 3,3 milioni di anni fa. — preistoria
+Il mammut lanoso si estinse quasi ovunque circa 10.000 anni fa, ma piccole popolazioni sopravvissero sull'isola di Wrangel fino a circa 4.000 anni fa. — preistoria
+Durante le glaciazioni, ampie zone come Doggerland collegavano la Gran Bretagna al continente europeo. — preistoria
+Göbekli Tepe, in Turchia, è considerato uno dei più antichi complessi monumentali costruiti dall'uomo, con circa 11.000 anni. — preistoria
+I Denisova sono un gruppo umano arcaico conosciuto principalmente da resti fossili trovati in Siberia. — preistoria
+Il fossile noto come Lucy, un Australopithecus afarensis, fu scoperto in Etiopia nel 1974. — preistoria
+Il Ragazzo di Turkana è uno scheletro quasi completo di Homo erectus, vissuto circa 1,5 milioni di anni fa. — preistoria
+L'atlatl, o propulsore, permetteva ai cacciatori preistorici di lanciare le lance con maggiore forza e distanza. — preistoria
+Le più antiche ceramiche conosciute, trovate a Dolní Věstonice, risalgono a circa 29.000 anni fa. — preistoria
+L'ocra rossa veniva usata dall'uomo preistorico sia come pigmento sia, forse, in rituali simbolici. — preistoria
+Il periodo Mesolitico segna la fase di transizione tra il Paleolitico e il Neolitico. — preistoria
+Gli aghi in osso, usati per cucire pelli e tessuti, sono tra le più antiche testimonianze dell'abbigliamento umano. — preistoria
+Stonehenge, in Inghilterra, fu costruito in diverse fasi a partire da circa 5.000 anni fa. — preistoria
+Lo Smilodon, noto come tigre dai denti a sciabola, si estinse insieme a gran parte della megafauna del Pleistocene. — preistoria
+L'alce irlandese, con corna che potevano superare i tre metri di apertura, si estinse circa 7.700 anni fa. — preistoria
+Le prime tracce di fuoco controllato dall'uomo risalgono forse a circa 1 milione di anni fa, anche se la data resta dibattuta. — preistoria
+L'industria litica Acheuleana, caratterizzata dalle amigdale, fu usata per centinaia di migliaia di anni. — preistoria
+Il ponte di terra di Beringia collegava l'Asia al Nord America durante le epoche glaciali. — preistoria
+I megaliti europei, come i dolmen e i menhir, venivano spesso eretti per scopi funerari o rituali. — preistoria
+Le più antiche evidenze di fibre e corde intrecciate risalgono a circa 30.000 anni fa. — preistoria
 Il tempo non si trova, si organizza.
-
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
