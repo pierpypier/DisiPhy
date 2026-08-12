@@ -698,6 +698,56 @@ Please double check the delivery address. — Per favore ricontrolla l'indirizzo
 Where is the nearest subway entrance? — Dov'è l'ingresso della metropolitana più vicino?
 I need to return these shoes to the shop. — Devo restituire queste scarpe al negozio.
 Enjoy your meal and have a great evening! — Buon appetito e trascorri una bella serata!
+Could you check if the wifi connection is working? — Potresti controllare se la connessione wifi funziona?
+Where can I rent an electric bicycle? — Dove posso noleggiare una bicicletta elettrica?
+I need to make an online payment for this bill. — Devo effettuare un pagamento online per questa bolletta.
+Could you please hand me the keys to the garage? — Potresti passarmi le chiavi del garage, per favore?
+The lesson has been moved to room four. — La lezione è stata spostata nell'aula quattro.
+Is there a microwave available in the kitchen? — C'è un forno a microonde disponibile in cucina?
+Can I try on this sweater in medium? — Posso provare questo maglione nella taglia M?
+Please save your work before shutting down the computer. — Per favore salva il tuo lavoro prima di spegnere il computer.
+Do you know where the nearest charging station is? — Sai dov'è la stazione di ricarica più vicina?
+We have a family picnic planned for Sunday afternoon. — Abbiamo in programma un picnic in famiglia per domenica pomeriggio.
+Can I get this dress altered at your shop? — Posso far modificare questo vestito nel vostro negozio?
+What time does the museum guided tour start? — A che ora inizia la visita guidata del museo?
+I am going to buy some fresh bread for dinner. — Vado a comprare del pane fresco per cena.
+Could you put these files in the office folder? — Potresti mettere questi file nella cartella dell'ufficio?
+My daughter is rehearsing for the school play. — Mia figlia sta provando per lo spettacolo teatrale della scuola.
+We had a wonderful lunch overlooking the sea. — Abbiamo fatto un pranzo meraviglioso con vista mare.
+Please don't forget to pack your passport. — Per favore non dimenticare di mettere in valigia il passaporto.
+Is there a group discount for the theatre tickets? — C'è uno sconto di gruppo per i biglietti del teatro?
+Can I change my seat to an aisle seat? — Posso cambiare il mio posto con uno vicino al corridoio?
+Who is coming with us to the supermarket today? — Chi viene con noi al supermercato oggi?
+I need to print twenty copies of this document. — Devo stampare venti copie di questo documento.
+Could you tell me where the shoe department is? — Potrebbe dirmi dov'è il reparto calzature?
+We are going camping in the forest this weekend. — Questo fine settimana andremo in campeggio nella foresta.
+Please wake me up at six o'clock tomorrow. — Per favore svegliami alle sei domani.
+Can I ask for an extra clothes hanger? — Posso chiedere una gruccia per abiti in più?
+The students are preparing for their final exams. — Gli studenti si stanno preparando per gli esami finali.
+Could you help me clean the windows today? — Potresti aiutarmi a pulire le finestre oggi?
+I am looking for a gift for my father's birthday. — Sto cercando un regalo per il compleanno di mio padre.
+We enjoyed watching the fireworks by the harbor. — Ci è piaciuto guardare i fuochi d'artificio al porto.
+Please send me the meeting agenda by email. — Per favore inviami l'ordine del giorno della riunione via email.
+Is this item covered by a money back guarantee? — Questo articolo è coperto da una garanzia di rimborso?
+Do you sell gluten-free flour in this shop? — Vendete farina senza glutine in questo negozio?
+Can you pick up the dry cleaning after work? — Puoi ritirare i vestiti in lavanderia dopo il lavoro?
+The teacher corrected all our essays yesterday. — L'insegnante ha corretto tutti i nostri temi ieri.
+We booked a hotel room with a balcony view. — Abbiamo prenotato una camera d'albergo con vista dal balcone.
+Could you please pass me the olive oil? — Potresti passarmi l'olio d'oliva, per favore?
+I have an appointment with the doctor at three. — Ho un appuntamento con il medico alle tre.
+Is there a kids' menu available in this restaurant? — C'è un menu per bambini disponibile in questo ristorante?
+We spent the afternoon shopping for summer clothes. — Abbiamo passato il pomeriggio a fare acquisti per vestiti estivi.
+Do I need a receipt to exchange this product? — Ho bisogno dello scontrino per cambiare questo prodotto?
+The kids are playing hide and seek in the garden. — I bambini stanno giocando a nascondino in giardino.
+Could you please close the window in the bedroom? — Potresti chiudere la finestra in camera da letto, per favore?
+I will leave the house keys under the mat. — Lascerò le chiavi di casa sotto lo zerbino.
+Is the hotel reception desk open all night? — La reception dell'hotel è aperta tutta la notte?
+Can you help me find my glasses anywhere? — Puoi aiutarmi a trovare i miei occhiali da qualche parte?
+We need to order new stationery for the office. — Dobbiamo ordinare della nuova cancelleria per l'ufficio.
+How much is the entrance fee for adults? — Quanto costa il biglietto d'ingresso per gli adulti?
+Please clean your shoes before coming inside. — Per favore pulisciti le scarpe prima di entrare.
+I would like to try these sunglasses on. — Vorrei provare questi occhiali da sole.
+Have a nice trip and write to us when you arrive! — Buon viaggio e scrivici quando arrivi!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
