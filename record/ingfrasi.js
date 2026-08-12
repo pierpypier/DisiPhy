@@ -598,6 +598,56 @@ The supermarket down the street is open late tonight. — Il supermercato in fon
 We had such a great time together yesterday. — Siamo stati davvero bene insieme ieri.
 Could you please pass me the bread basket? — Potresti passarmi il cestino del pane, per favore?
 Have a safe journey and text me when you land. — Buon viaggio e mandami un messaggio quando atterri.
+What is the deadline for this science project? — Qual è la scadenza per questo progetto di scienze?
+Does this shop offer a discount for cash payments? — Questo negozio offre uno sconto per i pagamenti in contanti?
+We rented a bicycle to explore the coastal village. — Abbiamo noleggiato una bicicletta per esplorare il villaggio costiero.
+Could you please send me the password for the conference room? — Potresti inviarmi la password per la sala conferenze?
+Is there a safe box inside the room? — C'è una cassaforte all'interno della camera?
+Excuse me, where can I find the fresh pasta aisle? — Scusi, dove posso trovare la corsia della pasta fresca?
+Could you help me wash the dishes after dinner? — Puoi aiutarmi a lavare i piatti dopo cena?
+I missed the bus so I had to walk to school. — Ho perso l'autobus quindi ho dovuto camminare fino a scuola.
+Can I return this item if I keep the receipt? — Posso restituire questo articolo se conservo lo scontrino?
+We decided to extend our vacation by three days. — Abbiamo deciso di prolungare la nostra vacanza di tre giorni.
+I have attached the meeting notes to this email. — Ho allegato le note della riunione a questa email.
+Can we ask for extra blankets for the bed? — Possiamo chiedere delle coperte extra per il letto?
+Is there a special deal on organic vegetables today? — C'è un'offerta speciale sulla verdura biologica oggi?
+Don't forget to take out the bins before bedtime. — Non dimenticare di portare fuori i cestini prima di andare a dormire.
+Our class is going on a field trip next month. — La nostra classe farà una gita scolastica il mese prossimo.
+Where can I try on these shoes? — Dove posso provare queste scarpe?
+The beach was quite crowded during the weekend. — La spiaggia era piuttosto affollata durante il fine settimana.
+Let us schedule a follow-up meeting next Tuesday. — Fissiamo una riunione di aggiornamento martedì prossimo.
+Could you please call us a cab to the train station? — Potrebbe chiamarci un taxi per la stazione ferroviaria?
+Where are the canned goods located in this store? — Dove si trovano i prodotti in scatola in questo negozio?
+Who left their jacket on the living room sofa? — Chi ha lasciato la giacca sul divano del soggiorno?
+The teacher asked us to sit in pairs. — L'insegnante ci ha chiesto di sederci a coppie.
+Do you have this dress in a different color? — Avete questo vestito in un altro colore?
+We took a boat tour to see the sea caves. — Abbiamo fatto un tour in barca per vedere le grotte marine.
+I will share the update with the team tomorrow. — Condividerò l'aggiornamento con il team domani.
+What time is the swimming pool open until? — Fino a che ora è aperta la piscina?
+Are these eggs free-range or organic? — Queste uova sono da allevamento all'aperto o biologiche?
+Can you turn down the television volume, please? — Puoi abbassare il volume della televisione, per favore?
+I forgot my gym kit in the school locker. — Ho dimenticato il mio kit da ginnastica nell'armadietto della scuola.
+Do I get a gift card with this purchase? — Ricevo una carta regalo con questo acquisto?
+We bought souvenirs for all our relatives back home. — Abbiamo comprato souvenir per tutti i nostri parenti a casa.
+Please confirm your attendance by the end of the day. — Per favore conferma la tua presenza entro la fine della giornata.
+Can I have a room with a double bed, please? — Posso avere una camera con letto matrimoniale, per favore?
+Could you tell me if these tomatoes are locally grown? — Potrebbe dirmi se questi pomodori sono a chilometro zero?
+We should hang up the laundry before it starts raining. — Dovremmo stendere il bucato prima che inizi a piovere.
+Our principal gave an inspiring speech today. — Il nostro preside ha fatto un discorso ispiratore oggi.
+Is there a queue for the fitting room? — C'è coda per il camerino?
+We went hiking in the national park all morning. — Siamo andati a fare un'escursione nel parco nazionale per tutta la mattina.
+I am currently out of office with limited email access. — Al momento sono fuori ufficio con accesso limitato all'email.
+Could you recommend a good local pub nearby? — Potrebbe consigliarmi un buon pub locale qui vicino?
+Where can I find olive oil and vinegar? — Dove posso trovare l'olio d'oliva e l'aceto?
+Please remember to feed the dog before you leave. — Per favore ricordati di dare da mangiare al cane prima di uscire.
+We need to buy a notebook for geography class. — Dobbiamo comprare un quaderno per la classe di geografia.
+Do you offer gift wrapping for this item? — Offrite una confezione regalo per questo articolo?
+The flight attendant asked us to fasten our seatbelts. — L'assistente di volo ci ha chiesto di allacciare le cinture di sicurezza.
+Let us review the project deliverables together. — Rivediamo insieme i risultati attesi del progetto.
+Could we get two extra keys for our room? — Potremmo avere due chiavi extra per la nostra stanza?
+Is there a bakery counter in this supermarket? — C'è un banco panetteria in questo supermercato?
+Let us organize a game night with the whole family. — Organizziamo una serata giochi con tutta la famiglia.
+Enjoy your summer break and see you in September! — Goditi le vacanze estive e ci vediamo a settembre!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
