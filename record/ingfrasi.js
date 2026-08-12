@@ -1661,6 +1661,56 @@ There are no soap or shampoo bottles in the shower. (Der ar nou soup or sciam-pu
 The curtains in our bedroom are torn and let light in. (De ker-tenz in au-er bed-ruum ar torn end let lait in) — Le tende nella nostra camera da letto sono strappate e lasciano passare la luce.
 The swimming pool is closed for maintenance without prior notice. (De sui-ming puul iz klousd for mein-te-nens uid-aut prai-or nou-tis) — La piscina è chiusa per manutenzione senza preavviso.
 I want to speak with the hotel manager right away. (Ai uont tuu spiik uid de hou-tel me-ne-ger rait e-uei) — Voglio parlare immediatamente con il direttore dell'hotel.
+The kitchen sink is completely clogged again. (De ki-cen sink iz kom-pliit-lii klogd e-ghen) — Il lavello della cucina è di nuovo completamente intasato.
+There is a power outage in our whole neighborhood. (Der iz e pau-er au-tigj in au-er houl nei-bor-hud) — C'è un blackout in tutto il nostro quartiere.
+The washing machine is leaking water on the floor. (De uo-scing me-sciin iz liik-ing uo-ter on de flor) — La lavatrice sta perdendo acqua sul pavimento.
+A pipe burst in the bathroom wall last night. (E paip berst in de bat-ruum uol last nait) — Un tubo si è rotto nel muro del bagno ieri sera.
+The air conditioner is blowing warm air instead of cold. (De er kon-di-scio-ner iz blou-ing uorm er in-sted ov kould) — L'aria condizionata soffia aria calda invece che fredda.
+The roof is leaking right above my bedroom bed. (De ruuf iz liik-ing rait e-bav mai bed-ruum bed) — Il tetto perde acqua proprio sopra il mio letto.
+The lock on the main front door is stuck. (De lok on de mein front dor iz stak) — La serratura della porta d'ingresso principale è bloccata.
+The oven will not heat up at all. (De a-ven uil not hiit ap et ol) — Il forno non si scalda per niente.
+The refrigerator is making a strange humming sound. (De ri-fri-ge-rei-tor iz meik-ing e streingj ham-ming saund) — Il frigorifero sta facendo uno strano ronzio.
+A fuse blew when I turned on the hairdryer. (E fiuz bluu uen Ai ternd on de her-drai-er) — È saltato un fusibile quando ho acceso l'asciugacapelli.
+The boiler is showing an error code on the screen. (De boi-ler iz sciou-ing en er-ror koud on de skriin) — La caldaia mostra un codice di errore sullo schermo.
+We have a rodent problem in the basement. (Uii hev e rou-dent pro-blem in de beis-ment) — Abbiamo un problema di roditori in cantina.
+The window shutter is jammed and won't go down. (De uin-dou sciut-ter iz gjemd end uont gou daun) — La tapperella della finestra è incastrata e non si abbassa.
+The radiator is cold even though the heating is on. (De rei-di-ei-tor iz kould ii-ven dou de hii-ting iz on) — Il termosifone è freddo anche se il riscaldamento è acceso.
+There is black mold growing on the bathroom ceiling. (Der iz blek mould grou-ing on de bat-ruum sii-ling) — C'è della muffa nera che cresce sul soffitto del bagno.
+My car battery is completely dead this morning. (Mai kar be-te-rii iz kom-pliit-lii ded dis mor-ning) — La batteria della mia auto è completamente scarica stamattina.
+I got a flat tire on my way to work. (Ai got e flet tai-er on mai uei tuu uork) — Ho bucato una gomma mentre andavo al lavoro.
+The engine is making a strange knocking noise. (De en-gin iz meik-ing e streingj nok-ing nois) — Il motore sta facendo uno strano rumore di battito.
+The check engine light just came on the dashboard. (De cek en-gin lait giast keim on de desci-bord) — La spia di avaria motore si è appena accesa sul cruscotto.
+I ran out of petrol in the middle of the highway. (Ai ren aut ov pe-trol in de mi-del ov de hai-uei) — Ho finito la benzina in mezzo all'autostrada.
+My brakes are making a loud squeaking sound. (Mai breiks ar meik-ing e laud skuik-ing saund) — I miei freni stanno facendo un forte fischio.
+The starter motor won't turn over at all. (De star-ter mou-tor uont tern ou-ver et ol) — Il motorino di avviamento non gira per niente.
+Someone scratched my car door while it was parked. (Sam-uan skrec-t mai kar dor uail it uoz parkt) — Qualcuno ha rigato la portiera della mia auto mentre era parcheggiata.
+My windscreen wiper blade is broken. (Mai uind-skriin uai-per bleid iz brou-ken) — La spazzola del tergicristallo è rotta.
+The car key fob battery needs to be replaced. (De kar kii fob be-te-rii niidz tuu bii ri-pleisd) — La batteria del telecomando dell'auto deve essere sostituita.
+The radiator is overheating and steam is coming out. (De rei-di-ei-tor iz ou-ver-hii-ting end stiim iz kam-ing aut) — Il radiatore si sta surriscaldando ed esce del vapore.
+I locked my keys inside the car by mistake. (Ai lokt mai kiiz in-said de kar bai mis-teik) — Ho chiuso le chiavi dentro l'auto per errore.
+The clutch pedal feels very loose and soft. (De klac pe-dal fiilz ve-rii luus end soft) — Il pedale della frizione sembra molto allentato e morbido.
+My car was towed because I parked illegally. (Mai kar uoz toud bi-kos Ai parkt i-lii-gal-lii) — La mia auto è stata rimossa perché avevo parcheggiato in divieto di sosta.
+I need to call a roadside assistance tow truck. (Ai niid tuu kol e roud-said e-sis-tens tou trak) — Devo chiamare un carro attrezzi del soccorso stradale.
+The subway line is delayed due to technical issues. (De sab-uei lain iz di-leid diu tuu tek-ni-kal i-sciuz) — La linea della metropolitana è in ritardo per problemi tecnici.
+Traffic is completely jammed near the city center. (Tre-fik iz kom-pliit-lii gjemd niir de si-tii sen-ter) — Il traffico è completamente bloccato vicino al centro città.
+The streetlights on our block are not working tonight. (De striit-laits on au-er blok ar not uork-ing tu-nait) — I lampioni nel nostro isolato non funzionano stasera.
+Construction work is causing heavy traffic delays. (Kon-strak-scion uork iz koz-ing he-vii tre-fik di-leiz) — I lavori in corso stanno causando gravi ritardi al traffico.
+The bus skipped our stop because it was completely packed. (De bas skipt au-er stop bi-kos it uoz kom-pliit-lii pekt) — L'autobus ha saltato la nostra fermata perché era completamente pieno.
+Someone stole my bicycle from the station rack. (Sam-uan stoul mai bai-si-kel from de stei-scion rek) — Qualcuno ha rubato la mia bicicletta dalla rastrelliera della stazione.
+I dropped my wallet down the storm drain by accident. (Ai dropt mai uol-let daun de storm drein bai ek-si-dent) — Mi è caduto il portafoglio nel tombino per sbaglio.
+The ticket machine at the train station is out of order. (De tik-et me-sciin et de trein stei-scion iz aut ov or-der) — La biglietteria automatica alla stazione ferroviaria è fuori servizio.
+Heavy rain has caused flooding on the main avenue. (He-vii rein hez kozd fla-ding on de mein e-ve-niu) — La forte pioggia ha causato allagamenti sul viale principale.
+Garbage collectors haven't picked up the trash for days. (Gar-bigj kol-lek-torz he-vent pikt ap de tresc for deiz) — I netturbini non raccolgono la spazzatura da giorni.
+There is too much noise pollution from the nearby highway. (Der iz tuu mac nois po-liu-scion from de niir-bai hai-uei) — C'è troppo inquinamento acustico dalla vicina autostrada.
+I got a parking ticket for exceeding the time limit. (Ai got e par-king tik-et for ek-siid-ing de taim li-mit) — Ho preso una multa per aver superato il limite di tempo del parcheggio.
+The pavement is slippery and full of icy patches. (De peiv-ment iz slip-pe-rii end ful ov ai-sii pe-ciz) — Il marciapiede è scivoloso e pieno di chiazze di ghiaccio.
+The public park is closed for emergency maintenance. (De pab-lik park iz klousd for i-mer-gien-sii mein-te-nens) — Il parco pubblico è chiuso per manutenzione straordinaria.
+Deep potholes on this street are damaging car wheels. (Diip pot-houlz on dis striit ar de-me-ging kar uiilz) — Le buche profonde su questa strada stanno danneggiando le ruote delle auto.
+The pedestrian crossing light is broken and stuck on red. (De pe-des-tri-an kros-sing lait iz brou-ken end stak on red) — Il semaforo pedonale è rotto e bloccato sul rosso.
+I lost my bus pass and need to buy a replacement. (Ai lost mai bas pas end niid tuu bai e ri-pleis-ment) — Ho perso l'abbonamento dell'autobus e devo comprarne uno nuovo.
+The air quality in the city center is very poor today. (De er kuo-li-tii in de si-tii sen-ter iz ve-rii puor tu-dei) — La qualità dell'aria nel centro città è pessima oggi.
+Road detours are making it hard to navigate around town. (Roud di-tuurz ar meik-ing it hard tuu na-vi-gheit e-raund taun) — Le deviazioni stradali rendono difficile orientarsi in città.
+The tram service is suspended due to a power failure. (De trem ser-vis iz sas-pen-ded diu tuu e pau-er fei-liur) — Il servizio tram è sospeso a causa di un guasto elettrico.
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
