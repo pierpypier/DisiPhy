@@ -1361,6 +1361,56 @@ I Sumeri divisero il cerchio in 360 parti, un'eredità ancora oggi usata in geom
 Le tavolette sumere più antiche contenevano soprattutto registrazioni di magazzino e razioni alimentari. — civiltà sumera
 I Sumeri costruirono canali artificiali per il trasporto fluviale delle merci. — civiltà sumera
 La dea Inanna, associata all'amore e alla guerra, era una delle divinità più venerate dai Sumeri. — civiltà sumera
+I have to return this book to the library. — Devo restituire questo libro in biblioteca.
+We will paint the fence this weekend. — Questo fine settimana tingeremo la staccionata.
+She was cooking when the phone rang. — Stava cucinando quando ha squillato il telefono.
+Can you show me the way to the nearest station? — Puoi indicarmi la strada per la stazione più vicina?
+They are building a new bridge downtown. — Stanno costruendo un nuovo ponte in centro.
+I will submit the application tomorrow. — Invierò la domanda domani.
+We missed the connecting flight. — Abbiamo perso il volo di coincidenza.
+My cousin is visiting us next week. — Mio cugino ci verrà a trovare la prossima settimana.
+Excuse me, where can I buy a bus ticket? — Mi scusi, dove posso comprare un biglietto dell'autobus?
+The teacher explained the lesson again. — L'insegnante ha spiegato di nuovo la lezione.
+I was sleeping when the alarm went off. — Stavo dormendo quando è suonata la sveglia.
+We will repaint the living room next month. — Ridipingeremo il soggiorno il mese prossimo.
+He always checks his email before breakfast. — Controlla sempre le email prima di colazione.
+Could you repeat that, please? — Potresti ripetere, per favore?
+I have broken my glasses again. — Ho rotto di nuovo gli occhiali.
+The concert was cancelled due to rain. — Il concerto è stato annullato a causa della pioggia.
+We are organizing a surprise party for him. — Stiamo organizzando una festa a sorpresa per lui.
+She will graduate next June. — Lei si laureerà a giugno prossimo.
+I need to charge my phone before we leave. — Devo caricare il telefono prima di uscire.
+My colleagues are working on a new project. — I miei colleghi stanno lavorando a un nuovo progetto.
+We used to spend summers at the seaside. — Passavamo le estati al mare.
+Is there a supermarket around the corner? — C'è un supermercato dietro l'angolo?
+He repaired the roof after the storm. — Ha riparato il tetto dopo la tempesta.
+The students will present their projects on Friday. — Gli studenti presenteranno i loro progetti venerdì.
+I forgot to turn off the oven. — Ho dimenticato di spegnere il forno.
+Gli imbalsamatori egizi rimuovevano gli organi interni del defunto e li conservavano in appositi vasi canopi. — antico Egitto
+Il Libro dei Morti raccoglieva formule magiche destinate ad accompagnare il defunto nell'aldilà. — antico Egitto
+Maat era la dea egizia dell'ordine cosmico, della verità e della giustizia. — antico Egitto
+L'ankh, croce con un'ansa superiore, era il simbolo egizio della vita. — antico Egitto
+Il faraone Akhenaton tentò di imporre il culto quasi esclusivo del dio Aton, il disco solare. — antico Egitto
+Il celebre busto di Nefertiti fu scoperto ad Amarna nel 1912. — antico Egitto
+Ramesse II regnò per circa sessantasei anni e fece costruire i templi di Abu Simbel. — antico Egitto
+Cleopatra VII fu l'ultima sovrana dell'Egitto tolemaico, morta nel 30 a.C. — antico Egitto
+La Sfinge di Giza fu scolpita da un unico blocco di roccia calcarea naturale. — antico Egitto
+Il calendario egizio, tra i più antichi conosciuti, era diviso in tre stagioni legate alle piene del Nilo. — antico Egitto
+Il villaggio di Deir el-Medina ospitava gli artigiani che costruivano le tombe reali nella Valle dei Re. — antico Egitto
+Il senet, un antico gioco da tavolo egizio, è tra i più antichi giochi conosciuti al mondo. — antico Egitto
+Gli egizi ricavavano il papiro da una pianta acquatica diffusa lungo il Nilo, usandolo per scrivere. — antico Egitto
+La Valle dei Re, sulla sponda occidentale del Nilo, ospita le tombe di numerosi faraoni del Nuovo Regno. — antico Egitto
+Gli obelischi egizi erano spesso dedicati al dio del sole Ra. — antico Egitto
+Il blu egizio è considerato uno dei primi pigmenti sintetici prodotti dall'uomo. — antico Egitto
+Lo scarabeo era un amuleto molto diffuso nell'antico Egitto, simbolo di rinascita. — antico Egitto
+Hatshepsut, una delle poche donne faraone, organizzò una celebre spedizione commerciale verso la terra di Punt. — antico Egitto
+Thot, dio egizio della scrittura e della saggezza, era spesso raffigurato con la testa di ibis. — antico Egitto
+I sacerdoti egizi si radevano completamente il corpo come segno di purezza rituale. — antico Egitto
+Secondo la religione egizia, il cuore del defunto veniva pesato sulla bilancia contro la piuma di Maat. — antico Egitto
+Il faraone era considerato un dio vivente e mediatore tra gli dei e il popolo. — antico Egitto
+I Colossi di Memnone sono due enormi statue erette in onore del faraone Amenhotep III. — antico Egitto
+Il papiro Edwin Smith, uno dei più antichi testi medici conosciuti, descrive casi chirurgici e traumatici. — antico Egitto
+La piramide a gradoni di Djoser, attribuita all'architetto Imhotep, è considerata il primo grande edificio in pietra della storia. — antico Egitto
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
