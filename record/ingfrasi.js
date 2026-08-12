@@ -348,6 +348,56 @@ She will join a language exchange group. — Entrerà in un gruppo di scambio li
 We are moving boxes into the new apartment. — Stiamo portando gli scatoloni nel nuovo appartamento.
 My brother subscribed to a monthly book box. — Mio fratello si è abbonato a una scatola mensile di libri.
 The doctor scheduled a check-up for next week. — Il medico ha fissato una visita di controllo per la prossima settimana.
+Could I check in earlier than three o'clock? — Potrei fare il check-in prima delle tre?
+Where is the nearest ATM to withdraw cash? — Dov'è il bancomat più vicino per prelevare contanti?
+Could I have extra towels for the bathroom? — Potrei avere altri asciugamani per il bagno?
+Is room service available twenty-four hours a day? — Il servizio in camera è disponibile ventiquattr'ore su ventiquattr'ore?
+I would like to book a table for two at eight o'clock. — Vorrei prenotare un tavolo per due alle otto.
+Could you put the sauce on the side, please? — Potrebbe mettere la salsa a parte, per favore?
+Do you have any vegetarian options on the menu? — Avete opzioni vegetariane nel menu?
+I am allergic to nuts, does this dish contain any? — Sono allergico alla frutta a guscio, questo piatto ne contiene?
+Can I pay the bill separately, please? — Posso pagare il conto separatamente, per favore?
+Where can I find fresh fruits and vegetables? — Dove posso trovare frutta e verdura fresca?
+Excuse me, where are the dairy products located? — Scusi, dove si trovano i prodotti lattiero-caseari?
+Do I need to weigh the fruit before going to the checkout? — Devo pesare la frutta prima di andare alla cassa?
+Is this item on sale this week? — Questo articolo è in offerta questa settimana?
+I forgot my shopping bag in the car. — Ho dimenticato la borsa della spesa in macchina.
+Could you send me the calendar invite for the meeting? — Potresti inviarmi l'invito al calendario per la riunione?
+I am currently working on the quarterly sales report. — Al momento sto lavorando al rapporto vendite trimestrale.
+Let us take a five-minute break before continuing. — Facciamo una pausa di cinque minuti prima di continuare.
+Please review the attached document before tomorrow morning. — Per favore, rivedi il documento allegato entro domani mattina.
+I will be out of the office until next Monday. — Sarò fuori ufficio fino a lunedì prossimo.
+Can we talk about this over coffee later? — Posiamo parlarne davanti a un caffè più tardi?
+I really appreciate your help with this project. — Apprezzo davvero il tuo aiuto con questo progetto.
+I am running a bit late, see you in ten minutes. — Sono un po' in ritardo, ci vediamo tra dieci minuti.
+Let me know when you arrive safely. — Fammi sapere quando arrivi a destinazione sano e salvo.
+It was really nice catching up with you today. — È stato davvero bello fare due chiacchiere con te oggi.
+What time is dinner going to be ready? — A che ora sarà pronta la cena?
+Please remember to take out the rubbish tonight. — Per favore ricordati di portare fuori la spazzatura stasera.
+Could someone answer the doorbell, please? — Qualcuno può andare ad aprire al campanello, per favore?
+Do not forget to empty the dishwasher after lunch. — Non dimenticare di svuotare la lavastoviglie dopo pranzo.
+Who left the tap running in the bathroom? — Chi ha lasciato il rubinetto aperto in bagno?
+Is there a direct train to the city center from here? — C'è un treno diretto per il centro città da qui?
+How much does a day pass for public transport cost? — Quanto costa un biglietto giornaliero per i trasporti pubblici?
+I would like to request a late check-out tomorrow. — Vorrei richiedere un check-out ritardato per domani.
+Can you store our luggage until our flight leaves? — Puoi tenere i nostri bagagli fino alla partenza del nostro volo?
+Could you call a taxi for us tomorrow at seven? — Potrebbe chiamarci un taxi domani alle sette?
+Excuse me, is this the end of the line for this bus? — Scusi, è capolinea per questo autobus?
+I need to buy a SIM card for my mobile phone. — Devo comprare una scheda SIM per il mio cellulare.
+Is the tap water safe to drink here? — L'acqua del rubinetto è potabile qui?
+Could you show me how this coffee machine works? — Potresti mostrarmi come funziona questa macchina del caffè?
+I am looking for the nearest bakery in this neighborhood. — Sto cercando la panetteria più vicina in questo quartiere.
+Can I get a receipt for this transaction, please? — Posso avere una ricevuta per questa transazione, per favore?
+We need to buy some paper towels and laundry detergent. — Dobbiamo comprare dei tovaglioli di carta e del detersivo per il bucato.
+Could you mute your microphone during the presentation? — Potresti disattivare il microfono durante la presentazione?
+I will share my screen so everyone can see the slides. — Condividerò il mio schermo così tutti potranno vedere le diapositive.
+Do you have time for a quick phone call this afternoon? — Hai tempo per una breve telefonata questo pomeriggio?
+I am sorry, I did not catch your name earlier. — Scusa, non ho capito il tuo nome prima.
+Let us order dessert after we finish our main course. — Ordiniamo il dolce dopo aver finito il piatto principale.
+Please put your shoes near the front door. — Per favore metti le scarpe vicino alla porta d'ingresso.
+Could you set the table for four people, please? — Potresti apparecchiare la tavola per quattro persone, per favore?
+Don't forget to charge your laptop for school tomorrow. — Non dimenticare di caricare il portatile per la scuola domani.
+Have a wonderful trip and take plenty of photos! — Fai un buon viaggio e scatta tante foto!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
