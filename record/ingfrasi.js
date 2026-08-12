@@ -1561,6 +1561,56 @@ The parking lot is completely full on Saturday afternoon. (De par-king lot iz ko
 You can leave your coat in a locker near the entrance. (Yuu ken liiv yor kout in e lo-ker niir de en-trens) — Puoi lasciare il tuo cappotto in un armadietto vicino all'ingresso.
 Let us walk around the upper gallery before leaving. (Let as uok e-raund de ap-per ghe-ler-ii bi-for liiv-ing) — Facciamo un giro nella galleria superiore prima di andare via.
 What a great day spent shopping at the mall! (Uot e greit dei spent sciop-ping et de mol) — Che bella giornata trascorsa a fare shopping al centro commerciale!
+You will not believe what happened to me yesterday evening! (Yuu uil not bi-liiv uot he-pend tuu mii yes-ter-dei iiv-ning) — Non crederai mai a cosa mi è successo ieri sera!
+Let me order another round of beers for everyone. (Let mii or-der e-na-der raund ov biirz for ev-ri-uan) — Lascia che ordini un altro giro di birre per tutti.
+So there we were, standing in the middle of the rain... (Sou der uii uer, sten-ding in de mi-del ov de rein) — Allora eravamo lì, in piedi in mezzo alla pioggia...
+Bartender, can we get two more IPAs on tap? (Bar-ten-der, ken uii ghet tuu mor ai-pii-eiz on tep) — Barista, possiamo avere altre due IPA alla spina?
+Do you remember that hilarious summer trip to Greece? (Duu yuu ri-mem-ber det hi-ler-i-as sam-mer trip tuu Griis) — Ti ricordi quel fantastico viaggio estivo in Grecia?
+He started telling this crazy story about his neighbor. (Hii star-ted tel-ling dis krei-zii stor-ii e-baut hiz nei-bor) — Ha iniziato a raccontare questa storia pazza sul suo vicino.
+We ended up staying at the pub until closing time. (Uii en-ded ap stei-ing et de pab un-til klous-ing taim) — Siamo finiti per rimanere al pub fino all'ora di chiusura.
+To make a long story short, everything went completely wrong! (Tuu meik e long stor-ii sciort, ev-ri-ting uent kom-pliit-lii rong) — Per farla breve, è andato tutto completamente storto!
+Are we getting some snacks or a bowl of peanuts with this drink? (Ar uii ghet-ting sam sneks or e boul ov pii-nats uid dis drink) — Prendiamo qualcosa da sgranocchiare o una ciotola di arachidi con questo drink?
+Suddenly, out of nowhere, my ex-girlfriend walked into the bar. (Sa-den-lii, aut ov nou-uer, mai eks-gherl-frend uokt in-tuu de bar) — All'improvviso, dal nulla, la mia ex è entrata nel bar.
+I could not stop laughing when he told us that joke. (Ai kud not stop laf-ing uen hii tould as det giouk) — Non riuscivo a smettere di ridere quando ci ha raccontato quella battuta.
+Cheers to good friends and great weekends ahead! (Ciirz tuu gud frendz end greit uiik-endz e-hed) — Alla salute dei buoni amici e dei grandi fine settimana in arrivo!
+Who is going to pay the bill this time? (Huu iz gou-ing tuu pei de bil dis taim) — Chi paga il conto questa volta?
+He swore it was true, but nobody believed a single word. (Hii suor it uoz truuu, bat nou-bo-dii bi-liivd e sing-gel uord) — Ha giurato che fosse vero, ma nessuno ha creduto a una singola parola.
+Let us move to that table near the big screen. (Let as muuv tuu det tei-bel niir de big skriin) — Spostiamoci in quel tavolo vicino al grande schermo.
+I haven't heard from him since that night at the party. (Ai he-vent herd from him sins det nait et de par-tii) — Non ho più sue notizie da quella notte alla festa.
+Can I get a cold gin and tonic with a slice of lime? (Ken Ai ghet e kould gin end to-nik uid e slais ov laim) — Posso avere un gin tonic freddo con una fetta di lime?
+That was honestly the most embarrassing moment of my life. (Det uoz o-nest-lii de moust em-be-ra-sing mou-ment ov mai laif) — Quello è stato sinceramente il momento più imbarazzante della mia vita.
+You should have seen the look on his face! (Yuu sciud hev siin de luk on hiz feis) — Avresti dovuto vedere l'espressione sulla sua faccia!
+We used to hang out at this pub every Friday night. (Uii yuuzd tuu heng aut et dis pab ev-ri Frai-dei nait) — Eravamo soliti uscire in questo pub ogni venerdì sera.
+I missed my last train because we kept talking! (Ai mist mai last trein bi-kos uii kept tok-ing) — Ho perso il mio ultimo treno perché abbiamo continuato a parlare!
+Put it on my tab, I will clear it before leaving. (Put it on mai teb, Ai uil kliir it bi-for liiv-ing) — Mettilo sul mio conto, lo saldo prima di andare via.
+He always exaggerates whenever he recounts his adventures. (Hii ol-ueiz eg-se-ge-reits uen-e-ver hii ri-kaunts hiz ed-ven-ciurz) — Esagera sempre ogni volta che racconta le sue avventure.
+Shall we split a plate of nachos with cheese? (Scel uii split e pleit ov na-cios uid ciiz) — Dividiamo un piatto di nachos con formaggio?
+That concert was completely wild, I will never forget it! (Det kon-sert uoz kom-pliit-lii uaild, Ai uil ne-ver for-ghet it) — Quel concerto è stato completamente folle, non lo dimenticherò mai!
+What are you guys talking about so intensely? (Uot ar yuu gaiz tok-ing e-baut sou in-tens-lii) — Di cosa state parlando così intensamente ragazzi?
+I ran into our old high school teacher last week. (Ai ren in-tuu au-er ould hai skuul tii-cer last uiik) — Ho incontrato per caso il nostro vecchio professore delle superiori la settimana scorsa.
+Wait, you never told me the full version of that story! (Ueit, yuu ne-ver tould mii de ful ver-scion ov det stor-ii) — Aspetta, non mi hai mai raccontato la versione completa di quella storia!
+Is this seat taken or can I sit here? (Iz dis siit tei-ken or ken Ai sit hiir) — Questo posto è occupato o posso sedermi qui?
+We lost the game in the very last minute of extra time. (Uii lost de gheim in de ve-rii last mi-nit ov eks-tra taim) — Abbiamo perso la partita proprio all'ultimo minuto dei tempi supplementari.
+Let us order a shot of espresso before heading home. (Let as or-der e sciot ov es-pres-sou bi-for hed-ing houm) — Ordiniamo un espresso prima di avviarci a casa.
+She decided to quit her corporate job and move to Bali. (Sciii di-sai-ded tuu kuit her kor-po-ret giob end muuv tuu Ba-li) — Ha deciso di licenziarsi dal suo lavoro in azienda e trasferirsi a Bali.
+It all started when my car broke down in the middle of nowhere. (It ol star-ted uen mai kar brouk daun in de mi-del ov nou-uer) — È iniziato tutto quando la mia macchina si è rotta in mezzo al nulla.
+Give me a moment to catch my breath, I ran all the way here! (Ghiv mii e mou-ment tuu kec mai bret, Ai ren ol de uei hiir) — Dammi un attimo per riprendere fiato, sono corso fino a qui!
+They have a great selection of craft beers on tap tonight. (Dei hev e greit si-lek-scion ov kreft biirz on tep tu-nait) — Hanno una grande selezione di birre artigianali alla spina stasera.
+Believe it or not, we bumped into a Hollywood star at the café. (Bi-liiv it or not, uii bamp-ted in-tuu e Ho-lii-uud star et de ka-fei) — Che ci crediate o no, abbiamo incontrato una stella di Hollywood al bar.
+I accidentally spilled my glass of red wine on his white shirt. (Ai ek-si-den-tal-lii spild mai glas ov red uain on hiz uait sciert) — Ho rovesciato per sbaglio il mio bicchiere di vino rosso sulla sua camicia bianca.
+We stayed up chatting until four o'clock in the morning. (Uii steid ap ce-ting un-til for o-klok in de mor-ning) — Siamo rimasti alzati a chiacchierare fino alle quattro del mattino.
+That joke was so funny that I almost choked on my drink! (Det giouk uoz sou fan-nii det Ai ol-moust cioukt on mai drink) — Quella battuta era così divertente che quasi mi strozzavo con il drink!
+Who wants another round before the kitchen closes? (Huu uonts e-na-der raund bi-for de ki-cen klou-siz) — Chi vuole un altro giro prima che chiuda la cucina?
+I can't believe how much things have changed over the years. (Ai kent bi-liiv hau mac tings hev ceingjd ou-ver de yiirz) — Non posso credere a quanto siano cambiate le cose nel corso degli anni.
+He spent the entire night trying to impress the bartender. (Hii spent de en-tai-er nait trai-ing tuu im-pres de bar-ten-der) — Ha passato l'intera serata cercando di impressionare la barista.
+Let us take a selfie to document this amazing night out! (Let as teik e sel-fii tuu do-kiu-ment dis e-mei-zing nait aut) — Facciamoci un selfie per documentare questa fantastica serata fuori!
+I left my keys on the counter, did anyone see them? (Ai left mai kiiz on de kaun-ter, did en-ii-uan sii dem) — Ho lasciato le mie chiavi sul bancone, qualcuno le ha viste?
+Every time we meet up, we always end up telling the same old stories. (Ev-ri taim uii miit ap, uii ol-ueiz end ap tel-ling de seim ould stor-iiz) — Ogni volta che ci incontriamo, finiamo sempre per raccontare le stesse vecchie storie.
+The background music is a bit too loud for having a conversation. (De bek-graund miu-zik iz e bit tuu laud for hev-ing e kon-ver-sei-scion) — La musica di sottofondo è un po' troppo alta per fare una conversazione.
+We used to play darts here every Thursday after work. (Uii yuuzd tuu plei darts hiir ev-ri Ters-dei af-ter uork) — Eravamo soliti giocare a freccette qui ogni giovedì dopo il lavoro.
+What a night! I really needed a laugh after this stressful week. (Uot e nait! Ai rii-a-lii nii-ded e laf af-ter dis stres-ful uiik) — Che serata! Avevo proprio bisogno di una risata dopo questa settimana stressante.
+Next time, the first round is on me, I promise! (Nekst taim, de ferst raund iz on mii, Ai pro-mis) — La prossima volta il primo giro lo offro io, lo prometto!
+Same place, same time next week? (Seim pleis, seim taim nekst uiik) — Stesso posto, stessa ora la settimana prossima?
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
