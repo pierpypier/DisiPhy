@@ -112,6 +112,57 @@ Nur noch zehn Minuten, dann komm ich. (Nua noch tsen Minuten, dan komm ich) - An
 Du weißt schon, dass aus zehn Minuten schnell eine halbe Stunde wird. (Du vaist schon, das aus tsen Minuten schnell aine halbe Schtunde virt) - Lo sai che dieci minuti diventano presto mezz'ora.
 Ja, ja, ich weiß. (Ja, ja, ich vais) - Sì, sì, lo so.
 Gute Nacht, ihr beiden, schlaft gut. (Gute Nacht, ia baiden, schlaft gut) - Buonanotte a tutti e due, dormite bene.
+Hast du schon Kaffee gemacht? (Hast du schon Kafee gemacht) - Hai già fatto il caffè?
+Ich stell gleich das Brot auf den Tisch. (Ich schtell glaich das Brot auf den Tisch) - Metto subito il pane sul tavolo.
+Diletta, dein Frühstück wird kalt. (Diletta, dain Früschstück virt kalt) - Diletta, la tua colazione si raffredda.
+Ich komm ja schon, ich muss nur noch meine Haare machen. (Ich komm ja schon, ich muss nua noch maine Hare machen) - Arrivo, devo solo sistemarmi i capelli.
+Wo ist eigentlich meine Brille? (Vo ist aigentlich maine Brille) - Dov'è la mia brille, poi?
+Die liegt auf dem Küchentisch. (Di ligt auf dem Küchentisch) - È sul tavolo della cucina.
+Ich hab heute überhaupt keine Lust auf Müsli. (Ich hab hoite übahaupt kaine Lust auf Müsli) - Oggi non ho proprio voglia di muesli.
+Dann mach dir ein Brot mit Käse. (Dan mach dia ain Brot mit Kese) - Allora preparati un panino con il formaggio.
+Kannst du mir die Butter rüberschieben? (Kanst du mia di Butta rübaschieben) - Mi passi il burro?
+Natürlich, hier bitte. (Natürlic, hia bitte) - Certo, tieni.
+Ist noch Saft da? (Ist noch Saft da) - C'è ancora del succo?
+Nur ein bisschen, aber für dich reicht es noch. (Nua ain bisschen, aba füa dich raicht es noch) - Solo un po', ma per te ce n'è ancora abbastanza.
+Ich muss mich echt beeilen, sonst verpasse ich den Bus. (Ich muss mich echt beeilen, sonst fapasse ich den Bus) - Devo proprio sbrigarmi, altrimenti perdo l'autobus.
+Wie spät ist es denn? (Vi schpät ist es den) - Che ore sono?
+Schon halb acht, du solltest langsam los. (Schon halb acht, du solltest langsam los) - Sono già le sette e mezza, dovresti iniziare ad andare.
+Mist, ich dachte, es wäre erst sieben. (Mist, ich dachte, es vere seia erst sieben) - Accidenti, pensavo fossero appena le sette.
+Hast du alles für die Schule eingepackt? (Hast du alles füa di Schule eingepackt) - Hai messo tutto nello zaino per la scuola?
+Ich glaube schon, aber ich schau lieber noch mal nach. (Ich glaube schon, aba ich schau lieba noch mal nach) - Credo di sì, ma preferisco controllare ancora.
+Dein Mathebuch liegt noch auf dem Sofa. (Dain Mathebuch ligt noch auf dem Sofa) - Il tuo libro di matematica è ancora sul divano.
+Oh nein, das hätte ich fast vergessen. (Oh nain, das hätte ich fast vergessen) - Oh no, me ne stavo quasi dimenticando.
+Nimm auch deine Jacke mit, draußen ist es frisch. (Nimm auch daine Jacke mit, draußen ist es frisch) - Porta anche la giacca, fuori fa fresco.
+Ich brauch die Jacke heute nicht. (Ich brauch di Jacke hoite nicht) - Oggi non mi serve la giacca.
+Morgens denkst du das immer, und später frierst du. (Morgens denkst du das immer, und schpeta friaerst du) - La mattina dici sempre così, e poi più tardi hai freddo.
+Wo sind meine Schlüssel? (Vo sint maine Schlüssel) - Dove sono le mie chiavi?
+Hast du sie gestern mit nach oben genommen? (Hast du si gestern mit nach oben genommen) - Le hai portate di sopra ieri?
+Nein, ich hab sie gleich neben die Tür gelegt. (Nain, ich hab si glaich neben di Tür gelegt) - No, le ho messe proprio accanto alla porta.
+Da sind sie ja. (Da sint si ja) - Eccole qua.
+Ich zieh mich noch schnell um, dann bin ich fertig. (Ich zie mich noch schnell um, dan bin ich fertig) - Mi cambio velocemente e poi sono pronta.
+Vergiss deine Brotdose nicht. (Fagiss daine Brot-dose nicht) - Non dimenticare il portapranzo.
+Die ist schon in meinem Rucksack. (Di ist schon in mainem Rucksack) - È già nello zaino.
+Papa, kannst du mich heute zur Schule fahren? (Papa, kanst du mich hoite tsur Schule faren) - Papà, puoi accompagnarmi a scuola oggi?
+Klar, ich muss sowieso in die gleiche Richtung. (Klar, ich muss sowieso in di glaiche Richtung) - Certo, tanto devo andare nella stessa direzione.
+Dann kann ich noch fünf Minuten länger schlafen. (Dan kann ich noch fünf Minuten länger schlafen) - Allora posso dormire altri cinque minuti.
+Aber wirklich nur fünf Minuten. (Aba wirklich nua fünf Minuten) - Ma davvero solo cinque minuti.
+Ich hab mein Handy fast leer. (Ich hab main Hendi fast lea) - Ho quasi scarico il cellulare.
+Dann nimm deine Powerbank mit. (Dan nimm daine Pauerbank mit) - Allora porta con te il powerbank.
+Die liegt irgendwo in meinem Zimmer. (Di ligt irgendwo in mainem Zimmer) - È da qualche parte nella mia camera.
+Dann such sie jetzt lieber, bevor wir losmüssen. (Dan such si jetz lieba, bevor via losmüssen) - Allora cercala adesso, prima che dobbiamo uscire.
+Ich muss auch noch meine Zähne putzen. (Ich muss auch noch maine Tsenne putzen) - Devo ancora lavarmi i denti.
+Und ich muss noch schnell duschen. (Und ich muss noch schnell duschen) - E devo anche fare velocemente una doccia.
+Dann wird's aber langsam knapp mit der Zeit. (Dan virts aba langsam knapp mit dea Tsait) - Allora comincia a essere un po' tardi.
+Keine Sorge, ich bin in zehn Minuten fertig. (Kaine Sorge, ich bin in tsen Minuten fertig) - Non preoccuparti, tra dieci minuti sono pronta.
+Das sagst du, seit du aufgestanden bist. (Das sagst du, sait du aufgestanden bist) - Lo dici da quando ti sei alzata.
+Heute ist einfach alles irgendwie durcheinander. (Hoite ist ainfach alles irgendwie durcheinanda) - Oggi è tutto un po' scombussolato.
+Ich hab meine Arbeitssachen schon bereitgelegt. (Ich hab maine Arbaeitssachen schon baraeitgelegt) - Ho già preparato le cose per il lavoro.
+Die Tasche steht direkt neben der Haustür. (Di Tasche schteht direkt neben dea Haustür) - La borsa è proprio accanto alla porta d'ingresso.
+Hast du deinen Ausweis dabei? (Hast du dainen Ausvais dabai) - Hai con te il documento?
+Ja, und mein Handy hab ich auch. (Ja, und main Hendi hab ich auch) - Sì, e ho anche il cellulare.
+Dann sind wir eigentlich startklar. (Dan sint via aigentlich schtartklar) - Allora in pratica siamo pronti per partire.
+Warte noch kurz, ich muss das Fenster zumachen. (Varte noch kurts, ich muss das Fenster zumachen) - Aspetta un attimo, devo chiudere la finestra.
+So, jetzt können wir los. (So, jetz können via los) - Ecco, adesso possiamo andare.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
