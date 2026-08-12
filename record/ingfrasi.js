@@ -911,6 +911,56 @@ The flight is currently boarding passengers by zones. — Il volo sta attualment
 Please make sure you have all your personal belongings before leaving. — Per favore assicuratevi di avere tutti i vostri effetti personali prima di partire.
 Where can I buy a bottled water past the security checkpoint? — Dove posso comprare una bottiglietta d'acqua oltre il varco di sicurezza?
 Have a pleasant flight and a safe journey to your destination. — Buon volo e buon viaggio verso la vostra destinazione.
+What time does the ferry to the island depart? — A che ora parte il traghetto per l'isola?
+Where is the ticket office for the hydrofoil? — Dov'è la biglietteria per l'aliscafo?
+Do we need to check in our car two hours before boarding? — Dobbiamo fare il check-in dell'auto due ore prima dell'imbarco?
+Which pier does the cruise ship dock at? — A quale molo attracca la nave da crociera?
+Is vehicle boarding allowed on this ferry? — È consentito l'imbarco dei veicoli su questo traghetto?
+Could you tell me where dock number four is? — Potrebbe dirmi dov'è il molo numero quattro?
+How long does the crossing take to reach the port? — Quanto dura la traversata per raggiungere il porto?
+Please have your boarding passes and passports ready. — Per favore tenete pronti i biglietti d'imbarco e i passaporti.
+Is sea sickness medication available at the port pharmacy? — I farmaci per il mal di mare sono disponibili nella farmacia del porto?
+Where can I find a porter to help with heavy luggage? — Dove posso trovare un portabagagli per aiutarmi con i bagagli pesanti?
+We are going on a day excursion by boat along the coast. — Faremo un'escursione di un giorno in barca lungo la costa.
+Is there a waiting room with air conditioning in the terminal? — C'è una sala d'attesa con aria condizionata nel terminal?
+Can we park our car in the port long-stay parking lot? — Possiamo parcheggiare l'auto nel parcheggio a lunga sosta del porto?
+What is the maximum height allowed for vehicles on board? — Qual è l'altezza massima consentita per i veicoli a bordo?
+The sea is quite rough today so the departure might be delayed. — Il mare è piuttosto agitato oggi quindi la partenza potrebbe essere ritardata.
+Where is the passenger drop-off area near the pier? — Dov'è l'area di fermata passeggeri vicino al molo?
+Do we need to book a cabin for the overnight ferry? — Dobbiamo prenotare una cabina per il traghetto notturno?
+Are pets allowed on the upper deck of the ship? — Gli animali domestici sono ammessi sul ponte superiore della nave?
+Excuse me, is this the queue for foot passengers? — Mi scusi, è questa la fila per i passeggeri a piedi?
+Where can we rent a private boat for the afternoon? — Dove possiamo noleggiare una barca privata per il pomeriggio?
+The lighthouse is visible from the end of the harbor wall. — Il faro è visibile dalla fine del molo del porto.
+Please wait inside your car until driving instructions are given. — Per favore attendete in auto finché non vengono date le istruzioni di guida.
+Is there a shuttle bus connecting the port to the railway station? — C'è un autobus navetta che collega il porto alla stazione ferroviaria?
+We booked a reserved seat in the lounge area on the ferry. — Abbiamo prenotato un posto riservato nell'area lounge del traghetto.
+Where do I claim my tax refund at the port exit? — Dove posso richiedere il rimborso fiscale all'uscita del porto?
+The ferry captain announced a slight delay due to fog. — Il capitano del traghetto ha annunciato un leggero ritardo a causa della nebbia.
+Are life jackets available under every seat on the boat? — I giubbotti di salvataggio sono disponibili sotto ogni sedile della barca?
+Where can we buy tickets for the island hop tour? — Dove possiamo comprare i biglietti per il tour tra le isole?
+You must follow the marshals when driving onto the car deck. — È necessario seguire gli addetti quando si guida sul ponte auto.
+Is there a restaurant or cafe open inside the ferry terminal? — C'è un ristorante o un bar aperto all'interno del terminal traghetti?
+How much does a round-trip ticket for the ferry cost? — Quanto costa un biglietto di andata e ritorno per il traghetto?
+The cruise ship will anchor in the bay until tomorrow morning. — La nave da crociera getterà l'ancora nella baia fino a domani mattina.
+Where is the entrance for oversized vehicles and campers? — Dov'è l'ingresso per i veicoli fuori misura e i camper?
+Can we leave our bags in the luggage storage at the port? — Possiamo lasciare i nostri bagagli nel deposito bagagli al porto?
+The harbor authority has issued a weather warning for tonight. — L'autorità portuale ha emesso un avviso meteo per stasera.
+Which gate do we use to exit the port area? — Quale varco usiamo per uscire dall'area portuale?
+We enjoyed watching the sailing boats enter the marina. — Ci è piaciuto guardare le barche a vela entrare nel porticciolo.
+Is there a charging point for electric vehicles at the terminal? — C'è un punto di ricarica per veicoli elettrici al terminal?
+Please turn off your car engine while waiting to board. — Per favore spegnete il motore dell'auto durante l'attesa per l'imbarco.
+Where is the customs control point for international arrivals? — Dov'è il punto di controllo doganale per gli arrivi internazionali?
+We saw dolphins swimming near the ship during the voyage. — Abbiamo visto dei delfini nuotare vicino alla nave durante il viaggio.
+Can I change my ferry ticket to a later departure time? — Posso cambiare il mio biglietto del traghetto per un orario di partenza successivo?
+Is the footbridge open for pedestrians walking into the city? — Il ponte pedonale è aperto per i pedoni che vanno in città?
+The deck crew helped us secure our motorbike on board. — L'equipaggio di coperta ci ha aiutato a fissare la nostra moto a bordo.
+Where can I find a map of the port and its facilities? — Dove posso trovare una mappa del porto e dei suoi servizi?
+The catamaran service to the coastal town operates daily. — Il servizio di catamarano per la città costiera opera tutti i giorni.
+Please watch your step when crossing the gangway to the ship. — Per favore fate attenzione ai piedi mentre attraversate la passerella per la nave.
+Is wifi available on board during the crossing? — Il wifi è disponibile a bordo durante la traversata?
+We arrived early at the port to secure a good spot in line. — Siamo arrivati presto al porto per assicurarci un buon posto in fila.
+Have a safe voyage and enjoy the scenery along the coast! — Buon viaggio e goditi il panorama lungo la costa!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
