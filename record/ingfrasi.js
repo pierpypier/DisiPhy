@@ -1461,6 +1461,56 @@ Don't forget to pack your notebook and pencils for school. (Dount for-ghet tuu p
 The CEO announced a new expansion plan for the company. (De sii-ii-ou e-naunst e niu eks-pen-scion plen for de kam-pe-nii) — L'amministratore delegato ha annunciato un nuovo piano di espansione per l'azienda.
 He got a promotion to senior manager after two years. (Hii got e pro-mou-scion tuu sii-ni-or me-ne-ger af-ter tuu yiirz) — Ha ottenuto una promozione a senior manager dopo due anni.
 Good luck with your exam, I know you will do great! (Gud lak uid yor ek-sam, Ai nou yuu uil duu greit) — Buona fortuna per il tuo esame, so che andrai alla grande!
+May I try on these leather shoes in size forty-two? (Mei Ai trai on diiz le-der scuuz in sais for-tii-tuu) — Posso provare queste scarpe in pelle nel numero quarantadue?
+Where are the fitting rooms located? (Uer ar de fit-ting ruumz lou-kei-ted) — Dove si trovano i camerini?
+Do you have these sneakers in black or dark blue? (Duu yuu hev diiz snii-kerz in blek or dark bluu) — Avete queste scarpe da ginnastica in nero o blu scuro?
+This jacket is a bit too tight around the shoulders. (Dis ge-ket iz e bit tuu tait e-raund de scioul-derz) — Questa giacca è un po' troppo stretta sulle spalle.
+Does this dress come in a smaller size? (Daz dis dres kam in e smol-ler sais) — Questo vestito c'è in una taglia più piccola?
+I would like to buy a matching belt for these trousers. (Ai uud laik tuu bai e me-cing belt for diiz trau-zerz) — Vorrei comprare una cintura da abbinare a questi pantaloni.
+Are these high heels comfortable for walking? (Ar diiz hai hiilz kam-for-te-bel for uok-ing) — Questi tacchi alti sono comodi per camminare?
+Excuse me, how much is this silk tie? (Eks-kiuz mii, hau mac iz dis silk tai) — Scusi, quanto costa questa cravatta di seta?
+Can I try this woolen sweater in medium size? (Ken Ai trai dis uul-len sue-ter in mii-di-um sais) — Posso provare questo maglione di lana nella taglia M?
+These boots are too loose around my ankles. (Diiz buuts ar tuu luus e-raund mai eng-kelz) — Questi stivali sono troppo larghi intorno alle caviglie.
+Do you have sunglasses with polarized lenses? (Duu yuu hev san-gla-siz uid pou-le-raizd len-siz) — Avete occhiali da sole con lenti polarizzate?
+Is this handbag made of real leather or synthetic material? (Iz dis hend-beg meid ov riil le-der or sin-te-tik me-ti-ri-al) — Questa borsa è fatta di vera pelle o materiale sintetico?
+I am looking for a light cotton shirt for summer. (Ai em luk-ing for e lait kot-ton sciert for sam-mer) — Sto cercando una camicia di cotone leggera per l'estate.
+Could you bring me these sandals in size thirty-eight? (Kud yuu bring mii diiz sen-dalz in sais ter-tii-eit) — Potrebbe portarmi questi sandali nel numero trentotto?
+This hat fits me perfectly, I will take it. (Dis het fits mii per-fekt-lii, Ai uil teik it) — Questo cappello mi sta alla perfezione, lo prendo.
+Is there a discount on this winter coat? (Iz der e dis-kaunt on dis uin-ter kout) — C'è uno sconto su questo cappotto invernale?
+Can I exchange these gloves if they don't fit? (Ken Ai eks-ceing-gi diiz glavz if dei dount fit) — Posso cambiare questi guanti se non vanno bene?
+Where can I find elegant suits for a wedding? (Uer ken Ai faind e-le-gant suuts for e ued-ding) — Dove posso trovare abiti eleganti per un matrimonio?
+Do you carry any waterproof hiking shoes? (Duu yuu ke-rii en-ii uo-ter-pruuf hai-king scuuz) — Tenete scarpe da trekking impermeabili?
+This silver bracelet matches my necklace very well. (Dis sil-ver breis-let me-ciz mai nek-leis ve-rii uel) — Questo bracciale d'argento si abbina molto bene alla mia collana.
+I need a pair of running shoes with good cushioning. (Ai niid e per ov ran-ning scuuz uid gud ku-scio-ning) — Ho bisogno di un paio di scarpe da corsa con una buona ammortizzazione.
+Could you measure my wrist for this wristwatch? (Kud yuu me-siur mai rist for dis rist-uoc) — Potrebbe misurarmi il polso per questo orologio da polso?
+Are these jeans machine washable? (Ar diiz giinz me-sciin uo-sca-bel) — Questi jeans sono lavabili in lavatrice?
+I am looking for an elegant evening clutch bag. (Ai em luk-ing for en e-le-gant iiv-ning klac beg) — Sto cercando una pochette elegante da sera.
+Do you have these slippers in a larger size? (Duu yuu hev diiz slip-perz in e lar-gher sais) — Avete queste pantofole in una taglia più grande?
+This blouse is available in red, green, and navy blue. (Dis blaus iz e-vei-le-bel in red, griin, end nei-vii bluu) — Questa camicetta è disponibile in rosso, verde e blu notte.
+Can I get a tax-free receipt for international shopping? (Ken Ai ghet e teks-frii ri-siit for in-ter-ne-scio-nal sciop-ping) — Posso avere uno scontrino tax-free per acquisti internazionali?
+These socks are made of high-quality merino wool. (Diiz soks ar meid ov hai-kuo-li-tii me-rii-nou uul) — Questi calzini sono fatti di lana merino di alta qualità.
+Is this scarf warm enough for freezing weather? (Iz dis skarf uorm i-naf for friiz-ing ue-der) — Questa sciarpa è abbastanza calda per il clima rigido?
+The sole of these shoes provides excellent grip. (De soul ov diiz scuuz pro-vaidz ek-se-lent grip) — La suola di queste scarpe offre una presa eccellente.
+Can you show me your collection of leather wallets? (Ken yuu sciou mii yor ko-lek-scion ov le-der uol-lets) — Puoi mostrarmi la vostra collezione di portafogli in pelle?
+This umbrella is compact enough to fit in my bag. (Dis am-bre-la iz kom-pekt i-naf tuu fit in mai beg) — Questo ombrello è abbastanza compatto da entrare nella mia borsa.
+Do you have a shoehorn I can use, please? (Duu yuu hev e scuu-horn Ai ken yuuz, pliiz) — Avete un calzante che posso usare, per favore?
+Are these gold earrings made of real eighteen-karat gold? (Ar diiz gould iir-ringz meid ov riil ei-tiin-ke-ret gould) — Questi orecchini d'oro sono fatti di vero oro diciotto carati?
+This skirt has convenient side pockets. (Dis skert hez kon-vii-ni-ent said po-kets) — Questa gonna ha comode tasche laterali.
+I would like to return this shirt and get a refund. (Ai uud laik tuu ri-tern dis sciert end ghet e rii-fand) — Vorrei restituire questa camicia ed ottenere un rimborso.
+These flip-flops are perfect for the beach. (Diiz flip-flops ar per-fekt for de biic) — Queste infradito sono perfette per la spiaggia.
+Do you have a matching tie and pocket square set? (Duu yuu hev e me-cing tai end po-ket skuer set) — Avete un set abbinato di cravatta e pochette da taschino?
+I am looking for a warm down jacket for winter sports. (Ai em luk-ing for e uorm daun ge-ket for uin-ter sprotz) — Sto cercando un piumino caldo per gli sport invernali.
+Could you stretch these leather shoes slightly? (Kud yuu strec diiz le-der scuuz slait-lii) — Potrebbe allargare leggermente queste scarpe in pelle?
+This denim jacket never goes out of fashion. (Dis de-nim ge-ket ne-ver gouz aut ov fe-scion) — Questa giacca di jeans non passa mai di moda.
+Do you sell leather care spray or shoe polish here? (Duu yuu sel le-der ker sprei or scuu po-lisc hiir) — Vendete spray per la cura della pelle o lucido per scarpe qui?
+Can I pay using Apple Pay or contactless card? (Ken Ai pei yuu-sing E-pel Pei or kon-tekt-les kard) — Posso pagare con Apple Pay o carta contactless?
+This pair of sunglasses comes with a protective hard case. (Dis per ov san-gla-siz kamz uid e pro-tek-tiv hard keis) — Questo paio di occhiali da sole è dotato di una custodia rigida protettiva.
+I need a formal white shirt with French cuffs. (Ai niid e for-mal uait sciert uid frenc kafs) — Ho bisogno di una camicia bianca formale con polsini doppi.
+These loafers are very stylish and comfortable to wear. (Diiz lou-ferz ar ve-rii stai-lisc end kam-for-te-bel tuu uer) — Questi mocassini sono molto eleganti e comodi da indossare.
+Could you gift-wrap this silk scarf for me? (Kud yuu ghift-rep dis silk skarf for mii) — Potrebbe fare una confezione regalo per questa sciarpa di seta?
+Is this trench coat waterproof or water-resistant? (Iz dis trenc kout uo-ter-pruuf or uo-ter-ri-zis-tent) — Questo trench è impermeabile o idrorepellente?
+The fitting room mirror has great lighting. (De fit-ting ruum mi-ror hez greit lait-ing) — Lo specchio del camerino ha un'ottima illuminazione.
+Thank you for your help, I will take these two items! (Tenk yuu for yor help, Ai uil teik diiz tuu ai-temz) — Grazie per l'aiuto, prendo questi due articoli!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
