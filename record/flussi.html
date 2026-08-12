@@ -632,12 +632,14 @@ function updateDescrizione(index, value) {
 /* ---------- Immagini (solo in memoria, MAI in localStorage) ---------- */
 
 function setImageForItem(id, file) {
-  const prev = imagesMap.get(id);
-  if (prev) URL.revokeObjectURL(prev.objectUrl); // evita di accumulare URL orfani
-  const objectUrl = URL.createObjectURL(file);
-  imagesMap.set(id, { objectUrl, fileName: file.name });
-  renderList(); // solo rendering: nessun dato di workflowItems è cambiato
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    imagesMap.set(id, { objectUrl: e.target.result, fileName: file.name });
+    renderList();
+  };
+  reader.readAsDataURL(file);
 }
+  
 
 function removeImageForItem(id) {
   const prev = imagesMap.get(id);
