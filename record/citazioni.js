@@ -1261,6 +1261,106 @@ L'industria litica Acheuleana, caratterizzata dalle amigdale, fu usata per centi
 Il ponte di terra di Beringia collegava l'Asia al Nord America durante le epoche glaciali. — preistoria
 I megaliti europei, come i dolmen e i menhir, venivano spesso eretti per scopi funerari o rituali. — preistoria
 Le più antiche evidenze di fibre e corde intrecciate risalgono a circa 30.000 anni fa. — preistoria
+I have never been to London. — Non sono mai stato a Londra.
+We are going shopping this afternoon. — Questo pomeriggio andiamo a fare shopping.
+She had already left when I arrived. — Lei era già partita quando sono arrivato.
+Can you close the door, it's cold in here. — Puoi chiudere la porta, fa freddo qui.
+They are renovating their kitchen. — Stanno ristrutturando la cucina.
+I will finish this report by Friday. — Finirò questo rapporto entro venerdì.
+We took the wrong bus this morning. — Stamattina abbiamo preso l'autobus sbagliato.
+My brother is studying for his exams. — Mio fratello sta studiando per gli esami.
+Excuse me, does this train stop at the airport? — Mi scusi, questo treno ferma all'aeroporto?
+The waiter recommended the fish of the day. — Il cameriere ha consigliato il pesce del giorno.
+I was reading when the lights went out. — Stavo leggendo quando è andata via la luce.
+We will visit our grandparents this weekend. — Questo fine settimana andremo dai nonni.
+He always arrives late to meetings. — Arriva sempre tardi alle riunioni.
+Could you lower the price a little? — Potrebbe abbassare un po' il prezzo?
+I have lost my keys again. — Ho perso di nuovo le chiavi.
+The plane was delayed because of the storm. — L'aereo ha subito un ritardo a causa del temporale.
+We are packing our suitcases for the trip. — Stiamo facendo le valigie per il viaggio.
+She will start a new job next Monday. — Lei inizierà un nuovo lavoro lunedì prossimo.
+I need directions to the town hall. — Ho bisogno di indicazioni per il municipio.
+My colleagues are preparing the presentation. — I miei colleghi stanno preparando la presentazione.
+We used to walk to school every day. — Andavamo a scuola a piedi ogni giorno.
+Is there a fitting room nearby? — C'è un camerino qui vicino?
+He fixed the car by himself. — Ha riparato l'auto da solo.
+The kids will play football in the park. — I bambini giocheranno a calcio nel parco.
+I forgot to lock the front door. — Ho dimenticato di chiudere a chiave la porta d'ingresso.
+Il Codice di Hammurabi, risalente al XVIII secolo a.C., è una delle più antiche raccolte di leggi scritte conosciute. — Babilonia
+La civiltà della Valle dell'Indo sviluppò città pianificate come Mohenjo-Daro e Harappa già nel III millennio a.C. — civiltà antiche
+Gli Accadi, guidati da Sargon, crearono uno dei primi imperi della storia intorno al 2334 a.C. — Mesopotamia
+La città sumera di Uruk è considerata tra i primi grandi centri urbani della storia. — Mesopotamia
+I Sumeri svilupparono un sistema numerico in base sessanta, ancora oggi usato per misurare il tempo. — Mesopotamia
+La civiltà minoica, fiorita a Creta, costruì complessi palaziali come quello di Cnosso. — civiltà antiche
+Gli Ittiti, in Anatolia, furono tra i primi popoli a lavorare sistematicamente il ferro. — civiltà antiche
+La civiltà micenea, in Grecia, precedette di secoli l'epoca classica greca. — civiltà antiche
+L'antico Egitto fu unificato sotto un unico faraone intorno al 3100 a.C., secondo la tradizione con Narmer. — Egitto
+Il fiume Nilo, con le sue inondazioni regolari, permise lo sviluppo dell'agricoltura nell'antico Egitto. — Egitto
+La dinastia Shang, in Cina, è la prima per cui esistono testimonianze scritte, risalenti a circa il 1600 a.C. — civiltà antiche
+Gli Assiri costruirono uno dei più grandi imperi del Vicino Oriente antico, con capitale Ninive. — Mesopotamia
+I Fenici erano celebri navigatori e commercianti che fondarono colonie in tutto il Mediterraneo. — civiltà antiche
+La città di Ebla, in Siria, ha restituito migliaia di tavolette cuneiformi risalenti al III millennio a.C. — Mesopotamia
+Nella civiltà egizia, gli scribi occupavano un ruolo sociale di grande prestigio. — Egitto
+I Sumeri costruirono le prime ziqqurat, templi a gradoni dedicati alle divinità cittadine. — Mesopotamia
+L'Epopea di Gilgamesh, scritta in Mesopotamia, è considerata tra le più antiche opere letterarie conosciute. — Mesopotamia
+La civiltà olmeca, in Mesoamerica, è considerata la cultura madre delle successive civiltà come Maya e Aztechi. — civiltà antiche
+L'antico regno di Kush, a sud dell'Egitto, sviluppò una propria scrittura e costruì piramidi proprie. — civiltà antiche
+I Babilonesi svilupparono conoscenze astronomiche avanzate, registrando i movimenti dei pianeti su tavolette. — Babilonia
+La civiltà di Norte Chico, in Perù, è tra le più antiche civiltà urbane delle Americhe. — civiltà antiche
+Il tempio di Karnak, in Egitto, fu ampliato nel corso di secoli da diversi faraoni. — Egitto
+Gli Elamiti, nell'attuale Iran, svilupparono una civiltà parallela a quella sumera in Mesopotamia. — civiltà antiche
+La scrittura della Valle dell'Indo non è ancora stata decifrata con certezza dagli studiosi. — civiltà antiche
+I primi documenti scritti servivano principalmente per la contabilità e l'amministrazione dei beni. — storia della scrittura
+I need to make a doctor's appointment. — Devo prendere un appuntamento dal medico.
+We will celebrate her birthday at a restaurant. — Festeggeremo il suo compleanno al ristorante.
+He has been working here for ten years. — Lavora qui da dieci anni.
+Could you send me the invoice by email? — Potrebbe inviarmi la fattura via email?
+I am looking for a book about ancient history. — Sto cercando un libro sulla storia antica.
+They will get married next spring. — Si sposeranno la prossima primavera.
+We had dinner with our neighbors last night. — Ieri sera abbiamo cenato con i vicini di casa.
+I usually go to the gym after work. — Di solito vado in palestra dopo il lavoro.
+Is this seat taken? — Questo posto è occupato?
+She is learning to play the piano. — Sta imparando a suonare il piano.
+We will call a taxi to the airport. — Chiameremo un taxi per l'aeroporto.
+I dropped my phone and broke the screen. — Mi è caduto il telefono e si è rotto lo schermo.
+He is fixing the wifi connection. — Sta sistemando la connessione wifi.
+We were stuck in traffic for an hour. — Siamo rimasti bloccati nel traffico per un'ora.
+Could you water the plants while I'm away? — Potresti annaffiare le piante mentre sono via?
+I will pick up the kids from school. — Andrò a prendere i bambini a scuola.
+The bank is closed on Sundays. — La banca è chiusa la domenica.
+We are planning a trip to the mountains. — Stiamo pianificando un viaggio in montagna.
+He lost his job last month. — Ha perso il lavoro il mese scorso.
+I need a haircut before the wedding. — Ho bisogno di un taglio di capelli prima del matrimonio.
+She will send the package tomorrow morning. — Spedirà il pacco domani mattina.
+We are cleaning the house before the guests arrive. — Stiamo pulendo la casa prima che arrivino gli ospiti.
+I forgot my wallet at the restaurant. — Ho dimenticato il portafoglio al ristorante.
+The weather will improve by the weekend. — Il tempo migliorerà entro il fine settimana.
+He walks the dog every morning. — Porta a spasso il cane ogni mattina.
+I Sumeri abitavano la Mesopotamia meridionale, tra i fiumi Tigri ed Eufrate. — civiltà sumera
+La città di Ur fu uno dei più importanti centri urbani sumeri, nota anche per le sue tombe reali. — civiltà sumera
+I Sumeri inventarono la scrittura cuneiforme incidendo simboli su tavolette di argilla fresca. — civiltà sumera
+Ogni città sumera era governata come uno stato indipendente, spesso in competizione con le altre. — civiltà sumera
+I sacerdoti sumeri amministravano i templi, che fungevano anche da centri economici. — civiltà sumera
+I Sumeri svilupparono uno dei primi calendari lunari conosciuti. — civiltà sumera
+La ziggurat di Ur, dedicata al dio Nanna, è uno degli edifici sumeri meglio conservati. — civiltà sumera
+I Sumeri usavano sigilli cilindrici per firmare documenti e proteggere le merci. — civiltà sumera
+Il termine Sumeri deriva dal nome accadico dato a questo popolo, che chiamava se stesso in altro modo nella propria lingua. — civiltà sumera
+I Sumeri credevano in un pantheon di divinità legate ai fenomeni naturali e alle città. — civiltà sumera
+La città di Lagash fu un importante centro sumero, noto per lunghe rivalità con Umma. — civiltà sumera
+I Sumeri svilupparono sistemi di irrigazione per sfruttare le acque di Tigri ed Eufrate. — civiltà sumera
+Le prime scuole conosciute, chiamate edubba, formavano gli scribi sumeri fin da giovani. — civiltà sumera
+I Sumeri redigevano contratti scritti per compravendite, prestiti e matrimoni. — civiltà sumera
+La lista reale sumera elenca sovrani leggendari con regni di durata straordinaria. — civiltà sumera
+I Sumeri usavano un sistema contabile basato su piccoli gettoni di argilla per registrare beni. — civiltà sumera
+La città di Eridu è considerata da alcuni la più antica città sumera secondo la tradizione mitologica. — civiltà sumera
+I Sumeri costruivano le loro case con mattoni di fango essiccato al sole. — civiltà sumera
+Il mito sumero del diluvio universale precede di secoli quello narrato nella Bibbia. — civiltà sumera
+I Sumeri praticavano il commercio a lunga distanza, scambiando grano e tessuti con metalli e legname. — civiltà sumera
+La civiltà sumera fu progressivamente assorbita da Accadi e Babilonesi intorno al II millennio a.C. — civiltà sumera
+I Sumeri divisero il cerchio in 360 parti, un'eredità ancora oggi usata in geometria. — civiltà sumera
+Le tavolette sumere più antiche contenevano soprattutto registrazioni di magazzino e razioni alimentari. — civiltà sumera
+I Sumeri costruirono canali artificiali per il trasporto fluviale delle merci. — civiltà sumera
+La dea Inanna, associata all'amore e alla guerra, era una delle divinità più venerate dai Sumeri. — civiltà sumera
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
