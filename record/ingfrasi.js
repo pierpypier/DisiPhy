@@ -398,6 +398,56 @@ Please put your shoes near the front door. — Per favore metti le scarpe vicino
 Could you set the table for four people, please? — Potresti apparecchiare la tavola per quattro persone, per favore?
 Don't forget to charge your laptop for school tomorrow. — Non dimenticare di caricare il portatile per la scuola domani.
 Have a wonderful trip and take plenty of photos! — Fai un buon viaggio e scatta tante foto!
+Is there an iron and an ironing board in the room? — C'è un ferro e un'asse da stiro in camera?
+Could we get a table by the window? — Potremmo avere un tavolo vicino alla finestra?
+Is this product suitable for sensitive skin? — Questo prodotto è adatto alle pelli sensibili?
+I am looking for the bakery department. — Sto cercando il reparto panetteria.
+Do you have this shirt in a medium size? — Avete questa camicia in una taglia M?
+Could you send me the feedback by the end of the day? — Potresti inviarmi il feedback entro la fine della giornata?
+Let us set up a quick call to discuss the project. — Fissiamo una breve chiamata per discutere del progetto.
+I will be working remotely tomorrow morning. — Domani mattina lavorerò da remoto.
+Thank you for inviting us to dinner tonight. — Grazie per averci invitato a cena stasera.
+Can you send me your location on the map? — Puoi inviarmi la tua posizione sulla mappa?
+Please put your dishes in the dishwasher. — Per favore metti i tuoi piatti nella lavastoviglie.
+Who is going to clean the kitchen tonight? — Chi pulirà la cucina stasera?
+Do not forget to take your umbrella with you. — Non dimenticare di portare l'ombrello con te.
+Can you turn down the air conditioning a little? — Puoi abbassare un po' l'aria condizionata?
+Is there a gas station near the entrance? — C'è una stazione di servizio vicino all'ingresso?
+Where can I buy a ticket for the museum? — Dove posso comprare un biglietto per il museo?
+Does this hotel have a swimming pool on the roof? — Questo hotel ha una piscina sul tetto?
+What time does the breakfast buffet start? — A che ora inizia il buffet della colazione?
+I would like to pay with contactless payment. — Vorrei pagare con il pagamento contactless.
+Is this milk fresh or long-life? — Questo latte è fresco o a lunga conservazione?
+Can you help me find the olive oil aisle? — Puoi aiutarmi a trovare la corsia dell'olio d'oliva?
+I need to print this document before the meeting. — Devo stampare questo documento prima della riunione.
+Could you clarify what you mean by that? — Potresti chiarire cosa intendi con questo?
+I will send you the updated invoice shortly. — Ti invierò la fattura aggiornata a breve.
+We need to order more office supplies. — Dobbiamo ordinare altre forniture per l'ufficio.
+Are you free to hang out this afternoon? — Sei libero di uscire questo pomeriggio?
+Take your time, there is no hurry. — Fai con calma, non c'è fretta.
+I am so glad we finally managed to meet. — Sono così contento che siamo finalmente riusciti a incontrarci.
+Could you help me lay the carpet in the hallway? — Potresti aiutarmi a stendere il tappeto nel corridoio?
+Make sure to feed the cat before leaving. — Assicurati di dare da mangiare al gatto prima di uscire.
+Can you grab a loaf of bread from the bakery? — Puoi prendere una pagnotta di pane in panetteria?
+Is there a designated smoking area outside? — C'è un'area fumatori riservata all'esterno?
+Could I get a glass of tap water, please? — Potrei avere un bicchiere d'acqua del rubinetto, per favore?
+We would like to order two coffees to go. — Vorremmo ordinare due caffè da portare via.
+Is this seafood fresh or frozen? — Questo pesce è fresco o surgelato?
+Do you have a loyalty card for this shop? — Ha una carta fedeltà per questo negozio?
+The projector in the meeting room is not working. — Il proiettore nella sala riunioni non funziona.
+Please reply to all participants in the email chain. — Per favore rispondi a tutti i partecipanti nella catena di email.
+I am taking a short lunch break now. — Adesso faccio una breve pausa pranzo.
+Give me a call as soon as you are free. — Fammi una telefonata non appena sei libero.
+I will text you the address right away. — Ti manderò subito l'indirizzo via messaggio.
+Could you pass me the remote control, please? — Potresti passarmi il telecomando, per favore?
+Let us turn off the TV and go to sleep. — Spegniamo la TV e andiamo a dormire.
+Do we have enough garbage bags in the house? — Abbiamo abbastanza sacchetti della spazzatura in casa?
+Where is the nearest tourist information office? — Dov'è l'ufficio di informazioni turistiche più vicino?
+Is the swimming pool heated in the winter? — La piscina è riscaldata in inverno?
+Can I get a tax-free refund form? — Posso avere un modulo per il rimborso tax-free?
+Where can I find gluten-free products here? — Dove posso trovare prodotti senza glutine qui?
+Please sign the attendance sheet before leaving. — Per favore firma il foglio presenze prima di uscire.
+I hope you have a great rest of the day! — Spero che tu abbia un buon proseguimento di giornata!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
