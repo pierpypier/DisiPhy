@@ -1311,6 +1311,56 @@ We enjoy eating outdoor meals during summer. (Uii in-gioi iit-ing aut-dor miilz 
 Who wants to help me chop vegetables for the soup? (Huu uonts tuu help mii ciop veg-te-belz for de suup) — Chi vuole aiutarmi a tagliare le verdure per la zuppa?
 Save room for some fresh fruit after lunch. (Seiv ruum for sam fresc fruut af-ter lanc) — Tieni un posto per della frutta fresca dopo pranzo.
 Thank you all for joining us for dinner tonight! (Tenk yuu ol for gioi-ning as for din-ner tu-nait) — Grazie a tutti per esservi uniti a noi per cena stasera!
+It is so wonderful to see you after all this time! (It iz sou uan-der-ful tuu sii yuu af-ter ol dis taim) — È così bello vederti dopo tutto questo tempo!
+Welcome to our home, please come inside! (Uel-kam tuu au-er houm, pliiz kam in-said) — Benvenuto a casa nostra, prego entra!
+Make yourself at home and take off your coat. (Meik yor-self et houm end teik of yor kout) — Fai come se fossi a casa tua e togliti il cappotto.
+I brought a small gift for the whole family. (Ai brot e smol ghift for de houl fa-mi-lii) — Ho portato un piccolo regalo per tutta la famiglia.
+How have you been keeping lately? (Hau hev yuu biin kiip-ing lei-tlii) — Come stai ultimamente?
+Would you like a hot cup of tea or coffee? (Uud yuu laik e hot kap ov tii or kof-fii) — Vorresti una tazza di tè caldo o un caffè?
+Sit down on the sofa and relax for a moment. (Sit daun on de sou-fa end ri-leks for e mou-ment) — Siediti sul divano e rilassati un momento.
+Your new apartment looks absolutely fantastic! (Yor niu e-part-ment luks eb-so-liut-lii fen-tas-tik) — Il tuo nuovo appartamento è assolutamente fantastico!
+How are your parents doing these days? (Hau ar yor per-ents duu-ing diiz deiz) — Come stanno i tuoi genitori in questo periodo?
+It has been way too long since our last meeting. (It hez biin uei tuu long sins au-er last miit-ing) — È passato decisamente troppo tempo dall'ultimo nostro incontro.
+Can I show you around the house and the garden? (Ken Ai sciou yuu e-raund de haus end de gar-den) — Posso mostrarti la casa e il giardino?
+Our daughter is growing up so fast! (Au-er do-ter iz grou-ing ap sou fast) — Nostra figlia sta crescendo così in fretta!
+Thank you so much for inviting us over today. (Tenk yuu sou mac for in-vait-ing as ou-ver tu-dei) — Grazie mille per averci invitato oggi.
+Did you have any trouble finding our place? (Did yuu hev en-ii tra-bel faind-ing au-er pleis) — Hai avuto difficoltà a trovare casa nostra?
+Let me take your jacket and put it in the closet. (Let mii teik yor ge-ket end put it in de klo-zet) — Lascia che prenda la tua giacca e la metta nell'armadio.
+We brought some homemade cookies for the children. (Uii brot sam houm-meid kuk-iiz for de ciul-dren) — Abbiamo portato dei biscotti fatti in casa per i bambini.
+Tell me everything about your recent trip to London. (Tel mii ev-ri-ting e-baut yor rii-sent trip tuu Lan-don) — Raccontami tutto del tuo recente viaggio a Londra.
+You look great, what is your secret? (Yuu luk greit, uot iz yor sii-kret) — Hai un fantastico aspetto, qual è il tuo segreto?
+Let us look at some old family photo albums together. (Let as luk et sam ould fa-mi-lii fou-tou al-bamz tu-ghed-er) — Guardiamo insieme qualche vecchio album di foto di famiglia.
+My aunt sends her warmest regards to everyone. (Mai ant sendz her uor-mist ri-gardz tuu ev-ri-uan) — Mia zia manda i suoi più calorosi saluti a tutti.
+How is your new job working out for you? (Hau iz yor niu giob uork-ing aut for yuu) — Come va il tuo nuovo lavoro?
+Please stay for dinner, we have plenty of food! (Pliiz stei for din-ner, uii hev plen-tii ov fuud) — Per favore rimani a cena, abbiamo cibo in abbondanza!
+We were just talking about you the other day. (Uii uer giast tok-ing e-baut yuu de a-der dei) — Stavamo proprio parlando di te l'altro giorno.
+Your grandmother will be so happy to see you! (Yor gren-ma-der uil bii sou hep-pii tuu sii yuu) — Tua nonna sarà così felice di vederti!
+Can I get you a glass of wine or fruit juice? (Ken Ai ghet yuu e glas ov uain or fruut gius) — Posso prenderti un bicchiere di vino o un succo di frutta?
+The kids are playing video games upstairs in the room. (De kidz ar plei-ing vi-de-ou gheimz ap-sterz in de ruum) — I bambini stanno giocando ai videogiochi di sopra in camera.
+Thank you for hosting such a wonderful gathering. (Tenk yuu for houst-ing sac e uan-der-ful ghe-der-ing) — Grazie per aver ospitato un incontro così fantastico.
+We should organize a reunion with all our cousins. (Uii sciud or-ga-naiz e rii-yu-ni-on uid ol au-er ka-zinz) — Dovremmo organizzare una riunione con tutti i nostri cugini.
+How time flies when you are having fun with friends! (Hau taim flais uen yuu ar hev-ing fan uid frendz) — Come vola il tempo quando ti diverti con gli amici!
+Let me help you wash the dishes before we leave. (Let mii help yuu uosc de di-sciz bi-for uii liiv) — Lascia che ti aiuti a lavare i piatti prima che ce ne andiamo.
+Is your brother still living in Spain? (Iz yor bra-der stil liv-ing in Spein) — Tuo fratello vive ancora in Spagna?
+Your home is so warm and welcoming. (Yor houm iz sou uorm end uel-kam-ing) — La tua casa è così calda e accogliente.
+I brought a bottle of wine from our local vineyard. (Ai brot e bot-tel ov uain from au-er lou-kal vin-yard) — Ho portato una bottiglia di vino dal nostro vigneto locale.
+Give a big hug to your mother for me. (Ghiv e big hag tuu yor ma-der for mii) — Dai un grande abbraccio a tua madre da parte mia.
+We must do this more often in the future. (Uii mast duu dis mor of-fen in de fiu-ciur) — Dobbiamo farlo più spesso in futuro.
+Do you want to take a walk around the neighborhood? (Duu yuu uont tuu teik e uok e-raund de nei-bor-hud) — Vuoi fare una passeggiata per il quartiere?
+It was such a pleasant surprise to find you here. (It uoz sac e ple-zent ser-prais tuu faind yuu hiir) — È stata una così bella sorpresa trovarti qui.
+Call us as soon as you arrive home safely. (Kol as ez suun ez yuu e-raiv houm seif-lii) — Chiamaci non appena arrivi a casa sano e salvo.
+My uncle always tells the best jokes during dinners. (Mai ang-kel ol-ueiz telz de best giouks dyoor-ing din-nerz) — Mio zio racconta sempre le battute migliori durante le cene.
+We are so glad you could make it today. (Uii ar sou gled yuu kud meik it tu-dei) — Siamo così contenti che tu sia riuscito a venire oggi.
+Please give our best wishes to the whole family. (Pliiz ghiv au-er best ui-sciz tuu de houl fa-mi-lii) — Per favore porta i nostri migliori auguri a tutta la famiglia.
+Would you like to stay overnight in our guest room? (Uud yuu laik tuu stei ou-ver-nait in au-er ghest ruum) — Ti andrebbe di rimanere a dormire nella nostra camera degli ospiti?
+My friend brought her new dog with her today. (Mai frend brot her niu dog uid her tu-dei) — La mia amica ha portato il suo nuovo cane con sé oggi.
+We had such a laugh remembering our school days. (Uii hed sac e laf ri-mem-ber-ing au-er skuul deiz) — Ci siamo fatti così tante risate ricordando i nostri giorni di scuola.
+Thank you for the warm hospitality as always! (Tenk yuu for de uorm hos-pi-ta-li-tii ez ol-ueiz) — Grazie per la calda ospitalità come sempre!
+I will send you the photos from today on WhatsApp. (Ai uil send yuu de fou-touz from tu-dei on Uot-sAp) — Ti manderò le foto di oggi su WhatsApp.
+Take care of yourself and see you very soon! (Teik ker ov yor-self end sii yuu ve-rii suun) — Prenditi cura di te e a prestissimo!
+We hope you enjoyed your time with us. (Uii houp yuu in-gioid yor taim uid as) — Speriamo che ti sia piaciuto il tempo passato con noi.
+Next time you must visit us at our house! (Nekst taim yuu mast vi-sit as et au-er haus) — La prossima volta dovete venire a trovarci a casa nostra!
+Safe journey back home and keep in touch! (Seif giur-nii bek houm end kiip in tac) — Buon viaggio di ritorno a casa e teniamoci in contatto!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
