@@ -811,6 +811,56 @@ Do you know if the museum offers audio guides in Italian? — Sai se il museo of
 I need to buy a new charger for my tablet. — Devo comprare un nuovo caricabatterie per il mio tablet.
 We should leave early to avoid getting stuck in traffic. — Dovremmo partire presto per evitare di rimanere bloccati nel traffico.
 Could you please bring us another bottle of still water? — Potrebbe portarci un'altra bottiglia di acqua naturale, per favore?
+Can you help your mother set the table for dinner? — Puoi aiutare tua madre ad apparecchiare la tavola per cena?
+Dad, can I borrow the car this weekend? — Papà, posso prendere in prestito l'auto questo fine settimana?
+Have you cleaned your bedroom like your father asked? — Hai pulito la tua camera da letto come ti ha chiesto tuo padre?
+Mom, I need some money for the school trip tomorrow. — Mamma, ho bisogno di soldi per la gita scolastica di domani.
+Don't forget that your curfew is at ten o'clock tonight. — Non dimenticare che il tuo rientro è alle dieci stasera.
+Can you two stop arguing and help me unload the dishwasher? — Potete smetterla di litigare e aiutarmi a svuotare la lavastoviglie?
+Who is taking our daughter to her dance practice today? — Chi accompagna nostra figlia a lezione di danza oggi?
+Your father and I think you spend too much time on your phone. — Tuo padre ed io pensiamo che tu passi troppo tempo al telefono.
+Did you ask your mother before taking her jacket? — Hai chiesto a tua madre prima di prendere la sua giacca?
+Can I spend the night at my best friend's house on Saturday? — Posso dormire a casa della mia migliore amica sabato?
+Dad is preparing his famous pasta recipe for dinner tonight. — Papà sta preparando la sua famosa ricetta della pasta per cena stasera.
+Have you finished studying for your history exam tomorrow? — Hai già finito di studiare per il tuo esame di storia di domani?
+Mom, can we go clothes shopping together this afternoon? — Mamma, possiamo andare a comprare dei vestiti insieme questo pomeriggio?
+Please lower the music in your room, your father is working. — Per favore abbassa la musica in camera tua, tuo padre sta lavorando.
+How long are you going to stay in the bathroom? — Quanto tempo hai intenzione di stare in bagno?
+We are having a family movie night in the living room tonight. — Stasera facciamo una serata cinema in famiglia in soggiorno.
+Your mother left her car keys on the kitchen counter again. — Tua madre ha lasciato di nuovo le chiavi della macchina sul bancone della cucina.
+Dad, can you explain this difficult math problem to me? — Papà, puoi spiegarmi questo problema di matematica difficile?
+Don't leave your wet bath towel lying on the floor. — Non lasciare il tuo asciugamano da bagno bagnato sul pavimento.
+Who wants to help me prepare the salad for lunch? — Chi vuole aiutarmi a preparare l'insalata per pranzo?
+Mom and Dad are going out for dinner, so you are in charge. — Mamma e papà escono a cena, quindi te ne occupi tu.
+Can you please put your laundry in the dirty clothes basket? — Puoi mettere il tuo bucato nel cestino dei panni sporchi, per favore?
+Our daughter is studying hard for her driving test. — Nostra figlia sta studiando molto per l'esame della patente.
+Your father fixed the broken light in your bedroom yesterday. — Tuo padre ha riparato la luce rotta nella tua camera da letto ieri.
+Mom, do you know where my favorite pair of jeans is? — Mamma, sai dov'è il mio paio di jeans preferito?
+Please turn off the bathroom light when you are finished. — Per favore spegni la luce del bagno quando hai finito.
+We are going to visit your grandparents this Sunday afternoon. — Andremo a trovare i tuoi nonni questo domenica pomeriggio.
+Dad, can you drive me to my friend's birthday party? — Papà, puoi accompagnarmi in macchina alla festa di compleanno della mia amica?
+Your mother is calling you downstairs for breakfast. — Tua madre ti sta chiamando di sotto per la colazione.
+Did you remember to feed the cat before going to school? — Ti sei ricordata di dare da mangiare al gatto prima di andare a scuola?
+We need to set some clear rules about screen time. — Dobbiamo stabilire alcune regole chiare sul tempo davanti allo schermo.
+Can I invite a few classmates over to study this afternoon? — Posso invitare alcuni compagni di classe a studiare questo pomeriggio?
+Your father is taking the car to the mechanic this morning. — Tuo padre sta portando l'auto dal meccanico stamattina.
+Mom made some fresh pancakes for breakfast today. — Mamma ha fatto dei pancake freschi per colazione oggi.
+Please take your shoes off as soon as you enter the house. — Per favore togliti le scarpe non appena entri in casa.
+Dad, can we practice driving in the parking lot later? — Papà, possiamo esercitarci a guidare nel parcheggio più tardi?
+Our daughter asked if she could go to a concert next month. — Nostra figlia ha chiesto se può andare a un concerto il mese prossimo.
+We should clean out the refrigerator together this weekend. — Dovremmo pulire il frigorifero insieme questo fine settimana.
+Mom, can you help me dry my hair before we leave? — Mamma, puoi aiutarmi ad asciugarmi i capelli prima di uscire?
+Your father and I are very proud of your school results. — Tuo padre ed io siamo molto orgogliosi dei tuoi risultati scolastici.
+Who forgot to turn off the air conditioning in the hallway? — Chi ha dimenticato di spegnere l'aria condizionata nel corridoio?
+Can you give your father a hand with the garden hose? — Puoi dare una mano a tuo padre con la canna da giardino?
+I need to iron my shirt for tomorrow's school presentation. — Devo stirare la mia camicia per la presentazione a scuola di domani.
+Mom, what time are we leaving for the supermarket? — Mamma, a che ora partiamo per il supermercato?
+Please make your bed before you leave for school in the morning. — Per favore rifai il letto prima di uscire per andare a scuola la mattina.
+Your father is grilling some vegetables in the backyard. — Tuo padre sta grigliando delle verdure nel cortile sul retro.
+Can I order a pizza with my friends this Friday evening? — Posso ordinare una pizza con le mie amiche questo venerdì sera?
+Your mother is currently in an important video call for work. — Tua madre al momento è in un'importante videochiamata di lavoro.
+Let's all sit down and talk about our weekend plans. — Sediamoci tutti e parliamo dei nostri programmi per il fine settimana.
+Who left the front door unlocked when they came home? — Chi ha lasciato la porta d'ingresso aperta quando è tornato a casa?
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
