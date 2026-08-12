@@ -1261,6 +1261,56 @@ Go past the gas station and take the second left. (Gou past de ghes stei-scion e
 Is the subway entrance nearby? (Iz de sab-uei en-trens niir-bai) — L'ingresso della metropolitana è qui vicino?
 Keep to the right side of the road. (Kiip tuu de rait said ov de roud) — Tieniti sul lato destro della strada.
 You will arrive at your destination on your right. (Yuu uil e-raiv et yor des-ti-nei-scion on yor rait) — Arriverai a destinazione sulla tua destra.
+What would you like for breakfast this morning? (Uot uud yuu laik for brek-fast dis mor-ning) — Cosa vorresti per colazione stamattina?
+Could you pass me the butter and jam, please? (Kud yuu pas mii de bat-ter end giam, pliiz) — Potresti passarmi il burro e la marmellata, per favore?
+Would anyone like another cup of coffee? (Uud en-i-uan laik e-na-der kap ov kof-fii) — Qualcuno vuole un'altra tazza di caffè?
+Is lunch ready or do you need help in the kitchen? (Iz lanc red-ii or duu yuu niid help in de ki-cen) — Il pranzo è pronto o hai bisogno di aiuto in cucina?
+Dinner is served, everyone come to the table! (Din-ner iz servd, ev-ri-uan kam tuu de tei-bel) — La cena è servita, tutti a tavola!
+This pasta dish tastes absolutely delicious. (Dis pas-ta disc teists eb-so-liut-lii di-li-scias) — Questo piatto di pasta è assolutamente delizioso.
+Who wants some more roast chicken? (Huu uonts sam mor roust ci-ken) — Chi vuole dell'altro pollo arrosto?
+Can you pour me a glass of sparkling water? (Ken yuu por mii e glas ov spar-kling uo-ter) — Puoi versarmi un bicchiere di acqua frizzante?
+We are having a Sunday lunch with the whole family. (Uii ar hev-ing e San-dei lanc uid de houl fa-mi-lii) — Facciamo un pranzo della domenica con tutta la famiglia.
+What time are our friends arriving for dinner? (Uot taim ar au-er frends e-raiv-ing for din-ner) — A che ora arrivano i nostri amici per cena?
+Let us make a toast to our friendship! (Let as meik e toust tuu au-er frend-scip) — Facciamo un brindisi alla nostra amicizia!
+Do you prefer white wine or red wine with dinner? (Duu yuu pri-fer uait uain or red uain uid din-ner) — Preferisci il vino bianco o il vino rosso per cena?
+I am full, thank you, I cannot eat another bite. (Ai em ful, tenk yuu, Ai ke-not iit e-na-der bait) — Sono sazio, grazie, non posso mangiare un altro boccone.
+Who saved room for homemade dessert? (Huu seivd ruum for houm-meid di-zert) — Chi ha tenuto un posto per il dolce fatto in casa?
+The cereal box is in the pantry cupboard. (De si-ri-al boks iz in de pen-tri ka-bord) — La scatola dei cereali è nell'armadio della dispensa.
+Can I have some warm milk with honey? (Ken Ai hev sam uorm milk uid ha-nii) — Posso avere del latte caldo con il miele?
+Please clear your plate after finishing your meal. (Pliiz kliir yor pleit af-ter fi-ni-scing yor miil) — Per favore sparecchia il tuo piatto dopo aver finito il pasto.
+Shall we invite our neighbors for a backyard barbecue? (Sciel uii in-vait au-er nei-borz for e bek-yard bar-bi-kiu) — Invitiamo i nostri vicini per una grigliata in giardino?
+Does anyone want a slice of toasted bread? (Daz en-i-uan uont e slais ov tou-sted bred) — Qualcuno vuole una fetta di pane tostato?
+My daughter helped me bake this strawberry pie. (Mai do-ter helpt mii beik dis stro-ber-rii pai) — Mia figlia mi ha aiutato a preparare questa crostata di fragole.
+Pass the salt and black pepper down the table, please. (Pas de solt end blek pep-per daun de tei-bel, pliiz) — Passa il sale e il pepe nero lungo il tavolo, per favore.
+Is this olive oil freshly pressed? (Iz dis o-liv oil fre-sci-lii prest) — Questo olio d'oliva è spremuto di fresco?
+We should order pizza for dinner tonight. (Uii sciud or-der pi-tsa for din-ner tu-nait) — Dovremmo ordinare la pizza per cena stasera.
+Who wants chocolate syrup on their ice cream? (Huu uonts cio-ko-let si-rap on der ais kriim) — Chi vuole lo sciroppo di cioccolato sul gelato?
+We always have breakfast together at eight in the morning. (Uii ol-ueiz hev brek-fast tu-ghed-er et eit in de mor-ning) — Facciamo sempre colazione insieme alle otto del mattino.
+Can you slice the fresh bread for lunch? (Ken yuu slais de fresc bred for lanc) — Puoi affettare il pane fresco per pranzo?
+The soup is very hot, be careful not to burn yourself. (De suup iz ve-rii hot, bii ker-ful not tuu bern yor-self) — La zuppa è molto calda, fai attenzione a non bruciarti.
+Would you like some parmesan cheese on your pasta? (Uud yuu laik sam par-me-zan ciiz on yor pas-ta) — Vorresti del formaggio parmigiano sulla tua pasta?
+Let us clear the table and bring out the coffee. (Let as kliir de tei-bel end bring aut de kof-fii) — Sparechiamo la tavola e portiamo fuori il caffè.
+Are you vegetarian or do you eat meat and fish? (Ar yuu ve-gi-ter-i-an or duu yuu iit miit end fisc) — Sei vegetariano o mangi carne e pesce?
+We made fresh orange juice for breakfast. (Uii meid fresc o-ringi gius for brek-fast) — Abbiamo fatto la spremuta d'arancia fresca per colazione.
+Can I get you a napkin for your hands? (Ken Ai ghet yuu e nep-kin for yor hendz) — Posso prenderti un tovagliolo per le mani?
+Let us sit outside on the porch for lunch. (Let as sit aut-said on de porc for lanc) — Sediamoci fuori sotto il portico per pranzo.
+Is anyone allergic to nuts or dairy products? (Iz en-i-uan e-ler-gic tuu nats or der-ii pro-dakts) — Qualcuno è allergico alla frutta a guscio o ai latticini?
+Help yourself to more salad from the bowl. (Help yor-self tuu mor se-lad from de boul) — Serviti pure dell'altra insalata dalla ciotola.
+The coffee pot is already brewing on the stove. (De kof-fii pot iz ol-red-ii bruu-ing on de stouv) — La caffettiera sta già cuocendo sul fornello.
+We love having long dinners with good conversation. (Uii lav hev-ing long din-nerz uid gud kon-ver-sei-scion) — Adoriamo fare lunghe cene con buone conversazioni.
+Can I have another cup of herbal tea before bed? (Ken Ai hev e-na-der kap ov her-bal tii bi-for bed) — Posso avere un'altra tazza di tisana prima di andare a letto?
+Who forgot to put the leftover food in the fridge? (Huu for-got tuu put de left-o-ver fuud in de frig) — Chi ha dimenticato di mettere il cibo avanzato in frigorifero?
+What a fantastic meal, compliments to the chef! (Uot e fen-tas-tik miil, kom-pli-ments tuu de scef) — Che pasto fantastico, complimenti allo chef!
+Do you take sugar or sweetener in your espresso? (Duu yuu teik sciu-gar or suiit-ner in yor es-pres-sou) — Prendi lo zucchero o il dolcificante nel tuo espresso?
+We are preparing a surprise birthday cake for dinner. (Uii ar pri-per-ing e ser-prais berd-dei keik for din-ner) — Stiamo preparando una torta di compleanno a sorpresa per cena.
+Could you pass the salad dressing, please? (Kud yuu pas de se-lad dres-sing, pliiz) — Potresti passare il condimento per l'insalata, per favore?
+I love eating warm croissants on Sunday morning. (Ai lav iit-ing uorm krua-san on San-dei mor-ning) — Adoro mangiare cornetti caldi la domenica mattina.
+Let us split the cooking and washing duties today. (Let as split de kuk-ing end uo-scing diu-tiiz tu-dei) — Dividiamoci i compiti di cucina e lavaggio oggi.
+Is there any sparkling lemonade left in the pitcher? (Iz der en-ii spar-kling le-mo-neid left in de pi-cer) — È rimasta della limonata frizzante nella caraffa?
+We enjoy eating outdoor meals during summer. (Uii in-gioi iit-ing aut-dor miilz dyoor-ing sam-mer) — Ci piace mangiare all'aperto durante l'estate.
+Who wants to help me chop vegetables for the soup? (Huu uonts tuu help mii ciop veg-te-belz for de suup) — Chi vuole aiutarmi a tagliare le verdure per la zuppa?
+Save room for some fresh fruit after lunch. (Seiv ruum for sam fresc fruut af-ter lanc) — Tieni un posto per della frutta fresca dopo pranzo.
+Thank you all for joining us for dinner tonight! (Tenk yuu ol for gioi-ning as for din-ner tu-nait) — Grazie a tutti per esservi uniti a noi per cena stasera!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
