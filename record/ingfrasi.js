@@ -1361,6 +1361,56 @@ Take care of yourself and see you very soon! (Teik ker ov yor-self end sii yuu v
 We hope you enjoyed your time with us. (Uii houp yuu in-gioid yor taim uid as) — Speriamo che ti sia piaciuto il tempo passato con noi.
 Next time you must visit us at our house! (Nekst taim yuu mast vi-sit as et au-er haus) — La prossima volta dovete venire a trovarci a casa nostra!
 Safe journey back home and keep in touch! (Seif giur-nii bek houm end kiip in tac) — Buon viaggio di ritorno a casa e teniamoci in contatto!
+What time does the museum open this morning? (Uot taim daz de miu-sii-em ou-pen dis mor-ning) — A che ora apre il museo stamattina?
+Two adult tickets for the afternoon show, please. (Tuu e-dalt tik-ets for de af-ter-nuun sciou, pliiz) — Due biglietti per adulti per lo spettacolo del pomeriggio, per favore.
+Is flash photography allowed inside the art gallery? (Iz flesc fo-to-gra-fii e-laud in-said de art ghe-ler-ii) — È consentito fotografare con il flash all'interno della galleria d'arte?
+Where can we pick up the audio guide for the tour? (Uer ken uii pik ap de au-di-ou gaid for de tuur) — Dove possiamo ritirare l'audioguida per la visita?
+I would like to reserve two seats in the front row. (Ai uud laik tuu ri-serv tuu siits in de front rou) — Vorrei prenotare due posti in prima fila.
+What genre of movie are we going to watch tonight? (Uot gian-ra ov mu-vii ar uii gou-ing tuu uosc tu-nait) — Che genere di film andiamo a guardare stasera?
+Is there a discount for students and senior citizens? (Iz der e dis-kaunt for stiu-dents end sii-ni-or si-ti-zens) — C'è uno sconto per studenti e anziani?
+The play will start promptly at eight o'clock. (De plei uil start prompt-lii et eit o-klok) — Lo spettacolo teatrale inizierà puntualmente alle otto.
+Let us buy some popcorn and drinks before entering the screen. (Let as bai sam pop-korn end drinks bi-for en-ter-ing de skriin) — Compriamo dei popcorn e delle bevande prima di entrare in sala.
+Which screen is showing the new action movie? (Uic skriin iz sciou-ing de niu ek-scion mu-vii) — In quale sala proiettano il nuovo film d'azione?
+The exhibition features famous paintings by local artists. (De ek-si-bi-scion fii-ciurz fei-mas peint-ingz bai lou-kal ar-tists) — La mostra presenta famosi dipinti di artisti locali.
+Are there any seats left in the central balcony? (Ar der en-ii siits left in de sen-tral bel-ko-nii) — Ci sono ancora posti liberi nella balconata centrale?
+We should leave our heavy coats in the cloakroom. (Uii sciud liiv au-er he-vii kouts in de klouk-ruum) — Dovremmo lasciare i nostri cappotti pesanti al guardaroba.
+The actor gave an outstanding performance on stage. (De ek-tor gheiv en aut-stend-ing per-for-mens on steig) — L'attore ha fatto un'interpretazione eccezionale sul palco.
+How long is the intermission between the two acts? (Hau long iz de in-ter-mi-scion bi-tuiin de tuu ekts) — Quanto dura l'intervallo tra i due atti?
+Can we buy tickets online to avoid the queue? (Ken uii bai tik-ets on-lain tuu e-void de kiu) — Possiamo comprare i biglietti online per evitare la fila?
+The sculpture in the main hall is made of white marble. (De skalp-ciur in de mein hol iz meid ov uait mar-bel) — La scultura nella sala principale è fatta di marmo bianco.
+Please switch off your mobile phones during the performance. (Pliiz suic of yor mou-bail founz dyoor-ing de per-for-mens) — Per favore spegnete i cellulari durante lo spettacolo.
+Is this movie subtitled or dubbed in Italian? (Iz dis mu-vii sab-tai-teld or dabd in I-te-li-an) — Questo film è sottotitolato o doppiato in italiano?
+The temporary exhibition is located on the second floor. (De tem-po-rer-ii ek-si-bi-scion iz lou-kei-ted on de se-kond flor) — La mostra temporanea si trova al secondo piano.
+I bought a program to read about the cast and crew. (Ai bot e prou-grem tuu riid e-baut de kast end kruu) — Ho comprato un programma per leggere informazioni sul cast e sulla troupe.
+Where are the restrooms in the theatre lobby? (Uer ar de rest-ruumz in de ti-a-ter lob-bii) — Dove sono i bagni nell'atrio del teatro?
+This museum houses ancient artifacts from Mesopotamia. (Dis miu-sii-em hau-siz ein-scent ar-ti-fakts from Me-so-po-tei-mi-a) — Questo museo ospita antichi reperti della Mesopotamia.
+Did you enjoy the plot twist at the end of the film? (Did yuu in-gioi de plot tuist et de end ov de film) — Ti è piaciuto il colpo di scena alla fine del film?
+We have reserved seats in row ten, numbers five and six. (Uii hev ri-servd siits in rou ten, nam-berz faiv end siks) — Abbiamo posti prenotati in fila dieci, numeri cinque e sei.
+The director was present at the premiere for a Q&A session. (De di-rek-tor uoz pre-sent et de pre-mi-er for e kiu end ei se-scion) — Il regista era presente alla prima per una sessione di domande e risposte.
+Is there a guided tour available in English at two o'clock? (Iz der e gai-ded tuur e-vei-le-bel in Ing-glisc et tuu o-klok) — C'è una visita guidata disponibile in inglese alle due?
+The audience applauded loudly at the end of the show. (De au-di-ens e-plod-ed laud-lii et de end ov de sciou) — Il pubblico ha applaudito calorosamente alla fine dello spettacolo.
+I prefer sitting in the middle of the cinema hall. (Ai pri-fer sit-ting in de mi-del ov de si-ne-ma hol) — Preferisco sedermi al centro della sala cinematografica.
+Look at this ancient mosaic discovered during excavations. (Luk et dis ein-scent mou-zei-ik dis-ka-verd dyoor-ing eks-ka-vei-scionz) — Guarda questo antico mosaico scoperto durante gli scavi.
+Are drinks and snacks allowed inside the auditorium? (Ar drinks end sneks e-laud in-said de au-di-tor-i-um) — Cibi e bevande sono ammessi all'interno dell'auditorium?
+The musical was full of energetic songs and dances. (De miu-zi-kal uoz ful ov e-ner-ghe-tik songz end den-siz) — Il musical era pieno di canzoni e danze energiche.
+You can buy souvenirs at the gift shop near the exit. (Yuu ken bai suu-ve-niirz et de ghift sciop niir de ek-sit) — Puoi comprare souvenir nel negozio di articoli da regalo vicino all'uscita.
+What time do the trailers start before the main movie? (Uot taim duu de trei-lerz start bi-for de mein mu-vii) — A che ora iniziano i trailer prima del film principale?
+The opera house has amazing acoustics for live music. (De o-pe-ra haus hez e-mei-zing e-kuos-tiks for laiv miu-zik) — Il teatro dell'opera ha un'acustica fantastica per la musica dal vivo.
+Do we need to wear 3D glasses for this screening? (Duu uii niid tuu uer trii-dii gla-siz for dis skriin-ing) — Dobbiamo indossare gli occhiali 3D per questa proiezione?
+The museum offers free admission on the first Sunday of the month. (De miu-sii-em of-ferz frii ed-mi-scion on de ferst San-dei ov de man-t) — Il museo offre l'ingresso gratuito la prima domenica del mese.
+Who is your favorite contemporary painter in this gallery? (Huu iz yor fei-vo-rit kon-tem-po-rer-ii peint-er in dis ghe-ler-ii) — Chi è il tuo pittore contemporaneo preferito in questa galleria?
+The curtain goes up in less than five minutes. (De ker-ten gouz ap in les den faiv mi-nits) — Il sipario si alza tra meno di cinque minuti.
+I found the documentary about nature very educational. (Ai faund de do-kiu-men-ta-rii e-baut nei-ciur ve-rii e-diu-kei-scio-nal) — Ho trovato il documentario sulla natura molto educativo.
+Where is the box office to collect our pre-booked tickets? (Uer iz de boks o-fis tuu kol-lekt au-er prii-bukt tik-ets) — Dov'è la biglietteria per ritirare i nostri biglietti prenotati?
+The costume design in this period drama was breathtaking. (De kos-tium di-zain in dis pi-ri-od dra-ma uoz bret-tei-king) — I costumi di questo dramma in costume erano mozzafiato.
+Is there an interactive section for children in the museum? (Iz der en in-ter-ek-tiv sek-scion for ciul-dren in de miu-sii-em) — C'è una sezione interattiva per bambini nel museo?
+We got great seats in the stalls near the stage. (Uii got greit siits in de stolz niir de steig) — Abbiamo preso ottimi posti in platea vicino al palco.
+The movie was so touching that many people cried. (De mu-vii uoz sou ta-cing det me-nii pii-pel kraid) — Il film era così commovente che molte persone hanno pianto.
+Please do not touch the exhibits on display. (Pliiz duu not tac de ek-si-bits on dis-plei) — Per favore non toccare i reperti in mostra.
+The cinema has comfortable reclining leather seats. (De si-ne-ma hez kam-for-te-bel ri-klain-ing le-der siits) — Il cinema ha comode poltrone reclinabili in pelle.
+We arrived early to explore the museum garden. (Uii e-raivd er-lii tuu eks-plor de miu-sii-em gar-den) — Siamo arrivati presto per esplorare il giardino del museo.
+The lead actress received a standing ovation at the end. (De liid ek-tres ri-siivd e sten-ding ou-vei-scion et de end) — L'attrice protagonista ha ricevuto una standing ovation alla fine.
+What a memorable evening of art, culture, and entertainment! (Uot e me-mo-ra-bel iiv-ning ov art, kal-ciur, end en-ter-tein-ment) — Che serata memorabile all'insegna di arte, cultura e intrattenimento!
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
