@@ -1611,6 +1611,56 @@ We used to play darts here every Thursday after work. (Uii yuuzd tuu plei darts 
 What a night! I really needed a laugh after this stressful week. (Uot e nait! Ai rii-a-lii nii-ded e laf af-ter dis stres-ful uiik) — Che serata! Avevo proprio bisogno di una risata dopo questa settimana stressante.
 Next time, the first round is on me, I promise! (Nekst taim, de ferst raund iz on mii, Ai pro-mis) — La prossima volta il primo giro lo offro io, lo prometto!
 Same place, same time next week? (Seim pleis, seim taim nekst uiik) — Stesso posto, stessa ora la settimana prossima?
+The key card is not working and I cannot open my door. (De kii kard iz not uork-ing end Ai ken-not ou-pen mai dor) — La scheda non funziona e non riesco ad aprire la mia porta.
+There is no hot water in the shower this morning. (Der iz nou hot uo-ter in de sciau-er dis mor-ning) — Non c'è acqua calda nella doccia stamattina.
+The air conditioning in our room is making a loud noise. (De er kon-di-scio-ning in au-er ruum iz meik-ing e laud nois) — L'aria condizionata nella nostra camera fa un forte rumore.
+The room has not been cleaned yet and the bed is unmade. (De ruum hez not biin kliind yet end de bed iz an-meid) — La camera non è ancora stata pulita e il letto non è rifatto.
+Excuse me, but there are missing towels in the bathroom. (Eks-kiuz mii, bat der ar mis-sing tau-elz in de bat-ruum) — Scusi, ma mancano gli asciugamani in bagno.
+The Wi-Fi signal in room three hundred is extremely weak. (De Uai-Fai sig-nal in ruum trii han-dred iz eks-triim-lii uiik) — Il segnale Wi-Fi nella camera trecento è estremamente debole.
+My neighbors are partying and playing loud music at night. (Mai nei-borz ar par-ti-ing end plei-ing laud miu-zik et nait) — I miei vicini stanno facendo festa e suonano musica ad alto volume di notte.
+The mini-bar in our room is completely empty. (De mi-ni-bar in au-er ruum iz kom-pliit-lii emp-tii) — Il minibar nella nostra camera è completamente vuoto.
+The toilet is clogged and will not flush properly. (De toi-let iz klogd end uil not flasc pro-per-lii) — Il WC è intasato e non scarica bene.
+I booked a double bed, but I received two single beds. (Ai bukt e da-bel bed, bat Ai ri-siivd tuu sing-gel bedz) — Ho prenotato un letto matrimoniale, ma ho ricevuto due letti singoli.
+There is a terrible smell of smoke in this non-smoking room. (Der iz e te-ri-bel smel ov smouk in dis non-smouk-ing ruum) — C'è un terribile odore di fumo in questa camera per non fumatori.
+The elevator is out of order and we are on the fifth floor. (De e-le-vei-tor iz aut ov or-der end uii ar on de fift flor) — L'ascensore è fuori servizio e siamo al quinto piano.
+I found a stain on the bed sheets. (Ai faund e stein on de bed sciits) — Ho trovato una macchia sulle lenzuola del letto.
+There are no extra pillows in the wardrobe. (Der ar nou eks-tra pil-louz in de uor-droub) — Non ci sono cuscini extra nell'armadio.
+The safe box in our wardrobe is locked and won't open. (De seif boks in au-er uor-droub iz lokt end uont ou-pen) — La cassaforte nel nostro armadio è bloccata e non si apre.
+We ordered room service an hour ago and it hasn't arrived. (Uii or-derd ruum ser-vis en au-er e-gou end it he-zent e-raivd) — Abbiamo ordinato il servizio in camera un'ora fa e non è ancora arrivato.
+There is water leaking from the ceiling in the bathroom. (Der iz uo-ter liik-ing from de sii-ling in de bat-ruum) — C'è un'infiltrazione d'acqua dal soffitto del bagno.
+The window in my room does not close properly. (De uin-dou in mai ruum daz not klous pro-per-lii) — La finestra della mia camera non si chiude bene.
+I was charged twice for the same reservation on my credit card. (Ai uoz ciargjd tuais for de seim re-zer-vei-scion on mai kre-dit kard) — Mi è stata addebitata due volte la stessa prenotazione sulla carta di credito.
+The television remote control is missing its batteries. (De te-le-vi-scion ri-mout kon-troul iz mis-sing its be-te-riiz) — Al telecomando della televisione mancano le batterie.
+There is a lot of traffic noise coming from the street. (Der iz e lot ov tre-fik nois kam-ing from de striit) — C'è molto rumore di traffico proveniente dalla strada.
+The heating system is not working and the room is freezing. (De hii-ting sis-tem iz not uork-ing end de ruum iz friiz-ing) — Il sistema di riscaldamento non funziona e la camera è gelida.
+I requested a sea view room, but I can only see the parking lot. (Ai ri-kues-ted e sii viu ruum, bat Ai ken on-lii sii de par-king lot) — Ho richiesto una camera vista mare, ma vedo solo il parcheggio.
+There are insects near the window frame. (Der ar in-sekts niir de uin-dou freim) — Ci sono insetti vicino al telaio della finestra.
+The shower drain is completely blocked with hair. (De sciau-er drein iz kom-pliit-lii blokt uid her) — Lo scarico della doccia è completamente ostruito da capelli.
+The key card scanner at the main gate is not responding. (De kii kard ske-ner et de mein gheit iz not ri-spond-ing) — Il lettore di schede al cancello principale non risponde.
+There is no toilet paper left in our bathroom. (Der iz nou toi-let pei-per left in au-er bat-ruum) — Non c'è più carta igienica nel nostro bagno.
+I would like to complain about the noise from the construction site next door. (Ai uud laik tuu kom-plein e-baut de nois from de kon-strak-scion sait nekst dor) — Vorrei lamentarmi del rumore del cantiere accanto.
+The desk lamp in our room is flickering continuously. (De desk lemp in au-er ruum iz fli-ke-ring kon-ti-nu-as-lii) — La lampada da scrivania nella nostra camera sfarfalla continuamente.
+The hairdryer in the bathroom is not blowing warm air. (De her-drai-er in de bat-ruum iz not blou-ing uorm er) — L'asciugacapelli in bagno non emette aria calda.
+I lost my room key card, can I get a replacement? (Ai lost mai ruum kii kard, ken Ai ghet e ri-pleis-ment) — Ho perso la scheda della camera, posso averne una di ricambio?
+There are incorrect extra charges on our final hotel bill. (Der ar in-ko-rekt eks-tra ciar-giz on au-er fai-nal hou-tel bil) — Ci sono addebiti extra errati sul nostro conto finale dell'hotel.
+The breakfast buffet was already completely empty at nine o'clock. (De brek-fast buf-fei uoz ol-re-dii kom-pliit-lii emp-tii et nain o-klok) — Il buffet della colazione era già completamente vuoto alle nove.
+The mattress on my bed is very uncomfortable and lumpy. (De me-tres on mai bed iz ve-rii an-kam-for-te-bel end lam-pii) — Il materasso sul mio letto è molto scomodo e pieno di nodi.
+The refrigerator in the minibar is not cooling at all. (De ri-fri-ge-rei-tor in de mi-ni-bar iz not kuul-ing et ol) — Il frigorifero del minibar non raffredda per niente.
+There is dirty water coming out of the bathroom tap. (Der iz der-tii uo-ter kam-ing aut ov de bat-ruum tep) — Esce acqua sporca dal rubinetto del bagno.
+The room smells damp and needs proper ventilation. (De ruum smelz demp end niidz pro-per ven-ti-lei-scion) — La camera puzza di umido e ha bisogno di un'adeguata ventilazione.
+Could you please change our bed sheets immediately? (Kud yuu pliiz ceingj au-er bed sciits i-mii-di-et-lii) — Potreste per favore cambiare le nostre lenzuola immediatamente?
+The smoke alarm in the hallway keeps beeping incessantly. (De smouk e-larm in de hol-uei kiips biip-ing in-se-sant-lii) — L'allarme antincendio nel corridoio continua a suonare incessantemente.
+We specifically asked for a baby cot, but it is not in the room. (Uii spe-si-fi-ka-lii askt for e bei-bii kot, bat it iz not in de ruum) — Abbiamo chiesto specificamente un lettino per bambini, ma non è in camera.
+The room door lock seems broken and does not latch. (De ruum dor lok siimz brou-ken end daz not lec) — La serratura della porta della camera sembra rotta e non si chiude.
+Is there anyone available to help us carry our heavy bags upstairs? (Iz der en-ii-uan e-vei-le-bel tuu help as ke-rii au-er he-vii begz ap-sterz) — C'è qualcuno disponibile ad aiutarci a portare le valigie pesanti di sopra?
+The water pressure in the shower is far too low. (De uo-ter pre-sciur in de sciau-er iz far tuu lou) — La pressione dell'acqua nella doccia è decisamente troppo bassa.
+I found a broken glass on the floor when we walked in. (Ai faund e brou-ken glas on de flor uen uii uokt in) — Ho trovato un bicchiere rotto sul pavimento quando siamo entrati.
+Can we please change rooms due to this terrible noise? (Ken uii pliiz ceingj ruumz diu tuu dis te-ri-bel nois) — Possiamo per favore cambiare camera a causa di questo terribile rumore?
+The hotel staff did not wake me up at seven as requested. (De hou-tel staf did not ueik mii ap et se-ven ez ri-kues-ted) — Lo staff dell'hotel non mi ha svegliato alle sette come richiesto.
+There are no soap or shampoo bottles in the shower. (Der ar nou soup or sciam-puu bot-telz in de sciau-er) — Non ci sono flaconi di sapone o shampoo nella doccia.
+The curtains in our bedroom are torn and let light in. (De ker-tenz in au-er bed-ruum ar torn end let lait in) — Le tende nella nostra camera da letto sono strappate e lasciano passare la luce.
+The swimming pool is closed for maintenance without prior notice. (De sui-ming puul iz klousd for mein-te-nens uid-aut prai-or nou-tis) — La piscina è chiusa per manutenzione senza preavviso.
+I want to speak with the hotel manager right away. (Ai uont tuu spiik uid de hou-tel me-ne-ger rait e-uei) — Voglio parlare immediatamente con il direttore dell'hotel.
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
