@@ -1598,6 +1598,59 @@ J'ai reconnu la place grâce à la statue au milieu. (ʒé rekonü la plas gras 
 Tu peux te garer derrière le bâtiment, il y a quelques places libres. (tü pö te garé derrièr le batiman, il ia kelk plas libr) - Puoi parcheggiare dietro l'edificio, ci sono alcuni posti liberi.
 La voiture tire légèrement vers la droite quand je freine. (la vuatür tir leʒèrman ver la drwat kan ʒö fren) - La macchina tira leggermente verso destra quando freno.
 J'ai crevé sur l'autoroute et je suis coincé sur la bande d'arrêt d'urgence. (ʒé krevé sür lotorut é ʒö süi kwanse sür la band dare dörʒans) - Ho forato in autostrada e sono fermo sulla corsia d'emergenza.
+J'ai passé l'aspirateur dans toute la maison pendant que les fenêtres étaient ouvertes. (ʒé pase laspiratör dan tut la mezon pandan ke le fenetr etè uvert) - Ho passato l'aspirapolvere in tutta la casa mentre le finestre erano aperte.
+Tu peux arroser les plantes pendant mon absence ? (tü pö aroze le plant pandan mon apsans) - Puoi annaffiare le piante mentre sono via?
+J'ai retrouvé les clés de secours dans le tiroir de l'entrée. (ʒé retruvé le clé de sekur dan le tirwar de lantré) - Ho ritrovato le chiavi di riserva nel cassetto dell'ingresso.
+Le sèche-linge fait un bruit bizarre depuis quelques minutes. (le sesc-liñ fè an brüi bizar döpüi kelk minüt) - L'asciugatrice fa uno strano rumore da qualche minuto.
+Il faut nettoyer le filtre de la hotte. (il fo netwaye le filtr de la ot) - Bisogna pulire il filtro della cappa.
+Le chat vient toujours s'installer sur mes genoux quand je m'assois. (le scia vien tuʒur sansstale sür me ʒön kan ʒö maswa) - Il gatto viene sempre a sistemarsi sulle mie ginocchia quando mi siedo.
+Le vétérinaire a dit qu'il fallait surveiller son appétit. (le veteriner a di kil falè sürveyé son apetì) - Il veterinario ha detto che bisogna controllare il suo appetito.
+J'ai préparé les sandwichs pour qu'on puisse manger en route. (ʒé preparé le sandwich pur kon püis manʒé an rut) - Ho preparato i panini così possiamo mangiare durante il viaggio.
+On fera une omelette avec ce qu'il reste dans le frigo. (on fera ün omlet avek se kil rest dan le frigo) - Faremo una frittata con quello che è rimasto in frigo.
+J'ai mis la viande à décongeler hier soir. (ʒé mi la viand a dekongelé ier swar) - Ho messo la carne a scongelare ieri sera.
+Tu peux goûter avant de servir, pour voir s'il manque quelque chose ? (tü pö gute avan de servir, pur vwar sil mank kelkö scos) - Puoi assaggiare prima di servire, per vedere se manca qualcosa?
+J'ai rangé les courses dans les placards. (ʒé ranʒé le kurs dan le plakar) - Ho sistemato la spesa nei pensili.
+Il a oublié son sac de sport dans le vestiaire de l'école. (il a oublié son sak de spor dan le vestyèr de lekol) - Ha dimenticato la borsa da sport nello spogliatoio della scuola.
+La prof de sciences a donné beaucoup de travail cette semaine. (la prof de syans a doné bokou de travay set sömen) - La professoressa di scienze ha dato molti compiti questa settimana.
+J'ai besoin d'un peu de calme pour me concentrer sur cet exercice. (ʒé bezwan dan pö de kalm pur me konsantré sür set egzèrsis) - Ho bisogno di un po' di tranquillità per concentrarmi su questo esercizio.
+On doit signer le carnet avant demain matin. (on dwa siñé le karnè avan döman maten) - Dobbiamo firmare il diario entro domani mattina.
+Tu peux laisser ton téléphone dans la cuisine pendant que tu étudies. (tü pö lesé ton telefon dan la küizin pandan ke tü etüdi) - Puoi lasciare il telefono in cucina mentre studi.
+Je te laisse sortir, mais je veux que tu sois rentré avant minuit. (ʒö te les sortir, mè ʒö vö ke tü swa rantré avan minüi) - Ti lascio uscire, ma voglio che tu sia rientrato prima di mezzanotte.
+Quand tu rentres, préviens-moi pour que je ne m'inquiète pas. (kan tü rantr, previen-mwa pur ke ʒö ne minkyet pa) - Quando rientri, avvisami così non mi preoccupo.
+Ce soir, on éteint les écrans un peu plus tôt. (se swar, on etèn le zekran an pö plü to) - Stasera spegniamo gli schermi un po' prima.
+J'ai pris quelque chose contre le mal de tête à la pharmacie. (ʒé pri kelkö scos kontr le mal de tet a la farmasi) - Ho preso qualcosa contro il mal di testa in farmacia.
+Le pharmacien m'a demandé si je prenais déjà un traitement. (le farmasièn ma demandé si ʒö prenè deʒa an tretman) - Il farmacista mi ha chiesto se stessi già seguendo una terapia.
+Je vais appeler le cabinet pour déplacer mon rendez-vous. (ʒö vé aple le kabinè pur deplase mon randé-vu) - Chiamerò lo studio per spostare il mio appuntamento.
+J'ai moins mal aujourd'hui, mais je préfère rester prudent. (ʒé mwan mal oʒurdüi, mè ʒö prefer resté prüdã) - Oggi mi fa meno male, ma preferisco essere prudente.
+Le train de dix-huit heures est complet. (le tran de dizüit ör é komplet) - Il treno delle diciotto è pieno.
+J'ai demandé si je pouvais monter avec mon vélo. (ʒé demandé si ʒö puvè monte avek mon velo) - Ho chiesto se potevo salire con la mia bici.
+Le quai a changé, regarde l'annonce sur l'écran. (le ké a sciandʒé, regard lanons sür lekran) - Il binario è cambiato, guarda l'annuncio sullo schermo.
+On a encore vingt minutes avant le départ, on a le temps. (on a ankor van minüt avan le depart, on a le tan) - Abbiamo ancora venti minuti prima della partenza, abbiamo tempo.
+Cette gare est immense, j'ai failli prendre le mauvais passage. (set gar é imans, ʒé fayi prandr le movè pasàʒ) - Questa stazione è enorme, stavo quasi prendendo il passaggio sbagliato.
+Il faut descendre à la station suivante et changer de ligne. (il fo desandr a la stasiòn süivant é sciandʒé de liñ) - Bisogna scendere alla stazione successiva e cambiare linea.
+J'ai laissé passer les gens avant d'entrer dans la rame. (ʒé lesé pasé le ʒan avan dantré dan la ram) - Ho lasciato passare la gente prima di entrare nel convoglio.
+Le métro s'est arrêté quelques secondes entre deux stations. (le métro sé arete kelk segond antr dö stasiòn) - La metropolitana si è fermata per alcuni secondi tra due stazioni.
+Le prochain bus ne passe que dans vingt-cinq minutes. (le proscièn büs ne pas ke dan van sank minüt) - Il prossimo autobus passa solo tra venticinque minuti.
+J'ai consulté les horaires sur le panneau à l'arrêt. (ʒé konsülte le zorèr sür le pano a larè) - Ho controllato gli orari sul pannello alla fermata.
+Le bus était tellement plein que je suis resté debout. (le büs etè telman plen ke ʒö süi reste debu) - L'autobus era così pieno che sono rimasto in piedi.
+J'ai demandé au chauffeur de me prévenir quand on arriverait au terminus. (ʒé demandé o scöför de me prevnir kan on arivré o terminüs) - Ho chiesto all'autista di avvisarmi quando saremmo arrivati al capolinea.
+Je préfère enregistrer mes bagages dès mon arrivée à l'aéroport. (ʒö prefer anreʒistré me bagàʒ de mon arivé a laeroport) - Preferisco imbarcare i bagagli appena arrivo in aeroporto.
+Le comptoir d'enregistrement ouvre trois heures avant le décollage. (le kontwar danreʒistrman uvr trwa ör avan le dekolàʒ) - Il banco del check-in apre tre ore prima del decollo.
+J'ai dû refaire la queue parce que j'avais oublié un document. (ʒé dü refèr la kö parskö ʒavè oublié an doküman) - Ho dovuto rifare la fila perché avevo dimenticato un documento.
+On nous a attribué des sièges côte à côte. (on nu a atribüé de sièʒ kot a kot) - Ci hanno assegnato dei posti uno accanto all'altro.
+L'avion a atterri sans problème malgré le vent. (laviyon a aterì san problem malgre le van) - L'aereo è atterrato senza problemi nonostante il vento.
+Le bateau quitte le quai dans quelques instants. (le bato kit le ké dan kelk anstan) - Il traghetto lascia il molo tra pochi istanti.
+J'ai pris une photo du port avant de monter à bord. (ʒé pri ün foto dü por avan de monte a bor) - Ho scattato una foto del porto prima di salire a bordo.
+On peut acheter quelque chose à manger sur le bateau. (on pö asciété kelkö scos a manʒé sür le bato) - Si può comprare qualcosa da mangiare sul traghetto.
+La mer est calme ce matin, la traversée devrait être tranquille. (la mer é kalm se maten, la traversé dövrè etr trankil) - Il mare è calmo stamattina, la traversata dovrebbe essere tranquilla.
+Je cherche une rue qui donne directement sur la cathédrale. (ʒö scersc ün rü ki don direktman sür la katedral) - Cerco una strada che porta direttamente alla cattedrale.
+Si tu continues tout droit, tu arriveras à la grande place. (si tü kontinü tu drwa, tü arivra a la grand plas) - Se continui sempre dritto, arriverai nella piazza principale.
+J'ai garé la voiture un peu plus loin parce qu'il n'y avait plus de place. (ʒé garé la vuatür an pö plü lwan parskil ni avè plü de plas) - Ho parcheggiato la macchina un po' più avanti perché non c'erano più posti.
+La voiture ne freine pas normalement, je préfère ne pas continuer. (la vuatür ne fren pa normalman, ʒö prefer ne pa kontünüé) - La macchina non frena normalmente, preferisco non continuare.
+J'ai appelé le dépanneur dès que le moteur s'est arrêté. (ʒé apel le depanör de ke le motör sé arete) - Ho chiamato il soccorso stradale appena il motore si è spento.
+Il y a eu un petit accident juste devant nous. (il ia ü an pəti aksidan ʒüst devan nu) - C'è stato un piccolo incidente proprio davanti a noi.
+La circulation avance au ralenti depuis plus d'une heure. (la sirkülasiòn avans o ralanti döpüi plüz ün ör) - Il traffico procede a passo d'uomo da più di un'ora.
+Le réseau électrique devrait être rétabli dans la soirée. (le rezo elektrik dövrè etr retabli dan la swaré) - La rete elettrica dovrebbe essere ripristinata in serata.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
