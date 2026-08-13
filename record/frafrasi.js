@@ -436,6 +436,59 @@ Le petit déjeuner de l'hôtel commence à sept heures. (le pəti deʒöné de l
 La chambre donne directement sur la cour intérieure. (la sciambre don direktman sür la kur antériör) - La camera dà direttamente sul cortile interno.
 Nous avons demandé un départ tardif pour dimanche. (nu zavon demandé an depart tardif pur dimansc) - Abbiamo chiesto un check-out posticipato per domenica.
 Je vais vérifier si la piscine est ouverte aujourd'hui. (ʒö vé verifié si la pisin é uvert oʒurdüi) - Controllo se la piscina è aperta oggi.
+J'ai nettoyé les vitres du salon ce matin. (ʒé netwaye le vitr dü salon se maten) - Ho pulito i vetri del soggiorno stamattina.
+Tu peux plier les vêtements qui sont sur le canapé ? (tü pö plié le vetman ki son sür le kanapé) - Puoi piegare i vestiti che sono sul divano?
+J'ai laissé les clés de secours dans le tiroir. (ʒé lesé le clé de sekur dan le tirwar) - Ho lasciato le chiavi di riserva nel cassetto.
+Le sèche-linge est presque terminé. (le sèsc-liènʒ é presk terminé) - L'asciugatrice ha quasi finito.
+Le chat s'est installé sur mon fauteuil préféré. (le scia sé anstalé sür mon fotöy preferé) - Il gatto si è sistemato sulla mia poltrona preferita.
+N'oublie pas de remplir la bouteille d'eau avant de sortir. (nübli pa de ranplir la butèy do avan de sortir) - Non dimenticare di riempire la bottiglia d'acqua prima di uscire.
+J'ai préparé du café frais pour tout le monde. (ʒé preparé dü kafé frè pur tu le mond) - Ho preparato caffè fresco per tutti.
+Tu veux une omelette ou des œufs au plat ? (tü vö ün omlet u de zö o pla) - Vuoi una frittata o delle uova al tegamino?
+Il reste du pain d'hier, mais il est encore très bon. (il rest dü pan dijèr, mè il é ankor trè bon) - È rimasto del pane di ieri, ma è ancora molto buono.
+On peut manger dehors s'il fait assez chaud. (on pö manʒé döor sil fè ase scod) - Possiamo mangiare fuori se fa abbastanza caldo.
+J'ai une rédaction à finir pour demain matin. (ʒé ün redaksiòn a finir pur döman maten) - Ho un tema da finire per domani mattina.
+Le professeur nous a demandé de travailler en groupes. (le profesör nu a demandé de travayé an grup) - L'insegnante ci ha chiesto di lavorare in gruppo.
+Je dois apprendre cette leçon avant le prochain cours. (ʒö dwa aprandr set leson avan le proscièn kur) - Devo imparare questa lezione prima della prossima lezione.
+Elle a passé une heure à chercher des informations pour son projet. (el a pase ün ör a scerscé de zanformasiòn pur son proʒè) - Ha passato un'ora a cercare informazioni per il suo progetto.
+Tu peux poser ton téléphone pendant que tu fais tes devoirs ? (tü pö poze ton telefon pandan ke tü fè te devwar) - Puoi mettere via il telefono mentre fai i compiti?
+Je veux que tu sois prêt à l'heure demain matin. (ʒö vö ke tü swa pre a lör döman maten) - Voglio che tu sia pronto in orario domani mattina.
+Tu n'as pas besoin de rentrer tout de suite après l'école. (tü na pa bezwan de rantré tu de süit aprè lekol) - Non devi tornare subito a casa dopo la scuola.
+On en reparle quand tu seras plus calme. (on an reparl kan tü sera plü kalm) - Ne riparliamo quando sarai più calmo.
+J'ai la tête qui tourne depuis que je me suis levé. (ʒé la tet ki turn döpüi ke ʒö me süi levé) - Ho le vertigini da quando mi sono alzato.
+La pharmacienne m'a conseillé un sirop pour la gorge. (la farmasièn ma konsèyé an siro pur la gorg) - La farmacista mi ha consigliato uno sciroppo per la gola.
+Je dois éviter le soleil pendant quelques jours. (ʒö dwa evité le solèy pandan kelk ʒur) - Devo evitare il sole per qualche giorno.
+Le médecin m'a prescrit une analyse de sang. (le medsan ma preskri ün analiz de san) - Il medico mi ha prescritto un esame del sangue.
+À quelle heure arrive le prochain train pour Bordeaux ? (a kel ör ariv le proscièn tran pur Bordo) - A che ora arriva il prossimo treno per Bordeaux?
+J'ai trouvé une place près de la sortie. (ʒé truvé ün plas prè de la sorti) - Ho trovato un posto vicino all'uscita.
+Le train est tellement long qu'on ne voit même pas le bout. (le tran é telman lon kon nö vwa mem pa le bu) - Il treno è così lungo che non se ne vede nemmeno la fine.
+Tu peux me prévenir quand on approche de notre arrêt ? (tü pö me prevnir kan on aprosc de notr are) - Puoi avvisarmi quando ci avviciniamo alla nostra fermata?
+La station suivante est fermée pour travaux. (la stasiòn süivant é fermé pur travay) - La stazione successiva è chiusa per lavori.
+Je descends à la prochaine, j'ai changé de plan. (ʒö desan a la proscièn, ʒé sciandʒé de plan) - Scendo alla prossima, ho cambiato programma.
+Le tram est arrivé tellement vite que je n'ai pas eu le temps de monter. (le tram é arivé telman vit ke ʒö né pa ü le tan de monté) - Il tram è arrivato così velocemente che non ho fatto in tempo a salire.
+Il faut faire attention en traversant les rails. (il fo fer atansiòn an traversan le rèl) - Bisogna fare attenzione quando si attraversano i binari.
+Le bus est coincé dans les embouteillages. (le büs é koinsé dan lezambuteyaj) - L'autobus è bloccato nel traffico.
+J'ai laissé mon sac dans le bus, je dois retourner à l'arrêt. (ʒé lesé mon sak dan le büs, ʒö dwa retourné a larè) - Ho lasciato la borsa sull'autobus, devo tornare alla fermata.
+On a reçu un message pour nous dire que le vol est retardé. (on a resü an mesaj pur nu dir ke le vol é retarde) - Abbiamo ricevuto un messaggio che ci informa che il volo è in ritardo.
+Il faut peser la valise avant d'aller au comptoir. (il fo peze la valiz avan dalé o kontwar) - Bisogna pesare la valigia prima di andare al banco.
+J'ai presque oublié mon passeport dans le coffre-fort de l'hôtel. (ʒé presk oublié mon paspor dan le kofr-for de lotèl) - Ho quasi dimenticato il passaporto nella cassaforte dell'hotel.
+Le bateau est parti avec vingt minutes de retard. (le bato é parti avek van minüt de retar) - Il traghetto è partito con venti minuti di ritardo.
+On peut laisser la voiture sur le parking du port ? (on pö lesé la vuatür sür le parking dü por) - Possiamo lasciare la macchina nel parcheggio del porto?
+La rue que tu cherches est juste derrière la mairie. (la rü ke tü scersc é ʒüst derrièr la meri) - La strada che cerchi è proprio dietro il municipio.
+Je pense qu'on devrait prendre un raccourci. (ʒö pans kon dövrè prandr an rakursi) - Penso che dovremmo prendere una scorciatoia.
+Un voyant jaune s'est allumé après quelques kilomètres. (an vwayan ʒon sé alumé aprè kelk kilomètr) - Si è accesa una spia gialla dopo qualche chilometro.
+Je vais m'arrêter à la prochaine station-service. (ʒö vé marete a la proscièn stasiòn servis) - Mi fermerò al prossimo distributore.
+Le pare-brise s'est fissuré après un petit impact. (le parbriz sé fisüré aprè an pəti anpak) - Il parabrezza si è crepato dopo un piccolo impatto.
+La circulation est complètement bloquée dans cette direction. (la sirkülasiòn é kompletman bloké dan set direksiòn) - Il traffico è completamente bloccato in questa direzione.
+La rue a été fermée après les inondations. (la rü a été fermé aprè lez inondasiòn) - La strada è stata chiusa dopo l'alluvione.
+Le quartier est encore sans électricité. (le kartié é ankor sanzelektrisité) - Il quartiere è ancora senza elettricità.
+La porte de la chambre claque à chaque fois qu'il y a du vent. (la port de la sciambre klak a scak fwa kil ia dü van) - La porta della camera sbatte ogni volta che c'è vento.
+Le personnel de l'hôtel a été très serviable. (le personel de lotèl a été trè serviabl) - Il personale dell'hotel è stato molto disponibile.
+La douche fuit depuis notre arrivée. (la dusc füi döpüi notr arivé) - La doccia perde da quando siamo arrivati.
+L'hôte nous a envoyé une vidéo pour expliquer le fonctionnement du chauffage. (lot nu a anvoyé ün video pur ekspliké le fonksiònman dü scofaj) - Il proprietario ci ha mandato un video per spiegare come funziona il riscaldamento.
+Vous avez une table disponible pour trois personnes ? (vu zavé ün tabl disponibl pur trwa person) - Avete un tavolo disponibile per tre persone?
+Je vais prendre le plat que vous avez recommandé. (ʒö vé prandr le pla ke vu zavé rekomandé) - Prendo il piatto che ci avete consigliato.
+On s'est assis dehors parce qu'il faisait trop chaud à l'intérieur. (on sé asi döor parskil fezè tro scod a lantériör) - Ci siamo seduti fuori perché dentro faceva troppo caldo.
+Je crois que ce film mérite vraiment d'être vu au cinéma. (ʒö krwa ke se film merit vreman detr vü o sinema) - Credo che questo film meriti davvero di essere visto al cinema.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
