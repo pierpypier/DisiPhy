@@ -1653,6 +1653,58 @@ Nos hemos pasado de la salida, tenemos que dar la vuelta. (nos émos pasádo de 
 El coche hace un pequeño tirón cuando cambio de marcha. (el kóche áse un pekéño tirón kuándo kambyo de márcha) - La macchina dà un piccolo strattone quando cambio marcia.
 He llamado al seguro para informar del accidente. (e yamádo al seguro para informár del aksidénte) - Ho chiamato l'assicurazione per segnalare l'incidente.
 La grúa llegará en unos veinte minutos. (la grúa yegará en unos béinte minútos) - Il carro attrezzi arriverà tra circa venti minuti.
+He puesto a secar los platos que todavía estaban mojados. (e puésto a sekár los plátos ke todabía estaban mohádos) - Ho messo ad asciugare i piatti che erano ancora bagnati.
+Voy a cambiar el paño de cocina porque está empapado. (boi a kambyár el páño de kosína porke está empapádo) - Cambio lo strofinaccio perché è completamente bagnato.
+La puerta del armario no abre porque hay algo detrás. (la puérta del armário no ábre porke ai álgo detrás) - L'anta dell'armadio non si apre perché c'è qualcosa dietro.
+He encontrado unas monedas debajo de la alfombra. (e enkontrádo unas monédas debáho de la alfómbra) - Ho trovato delle monete sotto il tappeto.
+Cierra bien la ventana antes de encender el aire acondicionado. (syérra byén la bentána ántes de ensendér el áire akondisionádo) - Chiudi bene la finestra prima di accendere l'aria condizionata.
+El enchufe de la cocina no parece funcionar. (el enchúfe de la kosína no parése funksionár) - La presa della cucina non sembra funzionare.
+Voy a poner una alarma para no olvidarme de la lavadora. (boi a ponér una alárma para no olbidárme de la labadóra) - Metto una sveglia per non dimenticarmi della lavatrice.
+El perro se ha quedado mirando por la ventana. (el pérro se a kedádo mirándo por la bentána) - Il cane è rimasto a guardare fuori dalla finestra.
+Tengo que comprar comida para el gato esta tarde. (téngo ke komprár komída para el gáto ésta tárde) - Devo comprare il cibo per il gatto questo pomeriggio.
+Hoy voy a acostarme un poco antes. (oi boi a akostárme un póko ántes) - Oggi vado a letto un po' prima.
+He preparado café para todos, pero todavía está muy caliente. (e preparádo kafé para todos, péгo todabía está mui kalyénte) - Ho preparato il caffè per tutti, ma è ancora molto caldo.
+¿Te sirvo un poco más de leche? (te sírbo un póko más de léche) - Te ne verso ancora un po' di latte?
+Voy a poner el agua a hervir. (boi a ponér el água a erbír) - Metto l'acqua a bollire.
+La comida ha quedado mejor de lo que esperaba. (la komída a kedádo mekhór de lo ke esperába) - Il pranzo è venuto meglio di quanto sperassi.
+¿Guardamos esto para mañana o lo tiramos? (guardámos ésto para mañana o lo tirámos) - Conserviamo questo per domani o lo buttiamo?
+Los alumnos tienen que leer tres páginas antes de la próxima clase. (los alumnos tiénen ke leér tres páhinas ántes de la próksima kláse) - Gli studenti devono leggere tre pagine prima della prossima lezione.
+Hoy el profesor ha explicado algo que no habíamos visto antes. (oi el profesór a ekspl ikádo álgo ke no ab íamos bísto ántes) - Oggi l'insegnante ha spiegato qualcosa che non avevamo mai visto prima.
+Mi hijo está preparando una exposición para historia. (mi ího está preparándo una eksposisyón para istória) - Mio figlio sta preparando una presentazione per storia.
+Tiene que organizar mejor el tiempo cuando estudia. (tiéne ke organisár mekhór el tyémpo kuándo estudia) - Deve organizzare meglio il tempo quando studia.
+Esta tarde no salgas hasta que hayas terminado todo. (ésta tárde no salgas ásta ke áyas terminádo todo) - Questo pomeriggio non uscire finché non hai finito tutto.
+Puedes quedarte en casa de tu amigo, pero dime a qué hora vuelves. (puédes kedárte en káса de tu amígo, péгo díme a ke óra buélbes) - Puoi restare a casa del tuo amico, ma dimmi a che ora torni.
+No hace falta que me expliques nada si estás cansado. (no áse fálta ke me ekspl íkes náda si estás kansádo) - Non serve che mi spieghi nulla se sei stanco.
+Cuando llegues, deja las cosas en tu habitación. (kuándo yégues, déha las kósas en tu abitasyón) - Quando arrivi, lascia le cose in camera tua.
+Hoy me encuentro bastante mejor que ayer. (oi me enkuéntro bastante mekhór ke ayér) - Oggi mi sento molto meglio di ieri.
+Me han recomendado beber agua y descansar durante el día. (me an rekomendádo bebér água i deskansár duránte el día) - Mi hanno consigliato di bere acqua e riposare durante la giornata.
+Tengo la espalda cargada después de estar tantas horas sentado. (téngo la espálda kargáda despúes de estár tantas óras sentádo) - Ho la schiena indolenzita dopo essere stato tante ore seduto.
+La enfermera me ha explicado cómo tengo que tomar el tratamiento. (la enferméra me a ekspl ikádo kómo téngo ke tomár el tratamyénto) - L'infermiera mi ha spiegato come devo seguire la terapia.
+El médico me ha pedido que vuelva si aparece algún síntoma nuevo. (el médiko me a pedído ke buélba si aparése algún síntoma nuébo) - Il medico mi ha chiesto di tornare se compare qualche nuovo sintomo.
+El tren de las siete viene con retraso. (el tren de las syéte byéne kon retraso) - Il treno delle sette è in ritardo.
+¿Sabes en qué estación tenemos que hacer el cambio? (sábes en ke estasyón tenémos ke asér el kambio) - Sai in quale stazione dobbiamo cambiare?
+Mejor nos ponemos cerca de la salida para bajar rápido. (mekhór nos ponémos sérka de la salída para bakhár ráp ido) - Meglio metterci vicino all'uscita per scendere rapidamente.
+El billete incluye el viaje de vuelta. (el biyéte inklúye el byáhe de buélta) - Il biglietto comprende il viaggio di ritorno.
+La máquina no acepta mi tarjeta y no tengo efectivo. (la mákina no asept a mi tarhéta i no téngo efek tíbo) - La macchinetta non accetta la mia carta e non ho contanti.
+Tenemos que subir por las escaleras porque el ascensor está averiado. (tenémos ke subír por las eskaléras porke el asensór está aberiádo) - Dobbiamo salire per le scale perché l'ascensore è guasto.
+La estación de metro está cerrada por mantenimiento. (la estasyón de métro está serráda por mantenimiénto) - La stazione della metropolitana è chiusa per manutenzione.
+El tren va tan lleno que apenas podemos movernos. (el tren ba tan yéno ke apénas podémos mobérnos) - Il treno è così pieno che riusciamo appena a muoverci.
+He mirado el horario y el último autobús sale a las once. (e mirádo el orário i el último autobús sále a las ónse) - Ho controllato l'orario e l'ultimo autobus parte alle undici.
+La parada está justo enfrente de la farmacia. (la par áda está khústo enfrénte de la farmásia) - La fermata è proprio di fronte alla farmacia.
+Si perdemos este autobús, tendremos que ir andando. (si perdémos éste autobús, tendrémos ke ír andándo) - Se perdiamo questo autobus, dovremo andare a piedi.
+El conductor ha frenado de golpe porque se ha cruzado un ciclista. (el konduktór a frenádo de gólpe porke se a krusádo un sislísta) - L'autista ha frenato bruscamente perché è passato un ciclista.
+Tengo que quitarme el cinturón antes de pasar el control. (téngo ke kitárme el sinturón ántes de pasár el kontról) - Devo togliermi la cintura prima di passare ai controlli.
+Nos han asignado la puerta de embarque B12. (nos an asignádo la puérta de embarke be dose) - Ci hanno assegnato il gate B12.
+El vuelo está lleno y no queda ningún asiento libre. (el buélo está yéno i no kéda ningún asyénto líbre) - Il volo è pieno e non è rimasto nessun posto libero.
+He puesto el pasaporte y la cartera en la misma bolsa. (e puésto el pasapórte i la kartéra en la misma bólsa) - Ho messo il passaporto e il portafoglio nella stessa borsa.
+El avión ha empezado a moverse hacia la pista. (el abión a empesádo a mobérse asía la písta) - L'aereo ha iniziato a muoversi verso la pista.
+Nos han informado de que el desembarque será por la parte delantera. (nos an informádo de ke el desembárke será por la párte delantéra) - Ci hanno informato che lo sbarco avverrà dalla parte anteriore.
+El barco está esperando a que suban los últimos pasajeros. (el bárko está esperándo a ke súban los últimos pasahéros) - Il traghetto sta aspettando che salgano gli ultimi passeggeri.
+Hace demasiado viento para sentarse fuera en la cubierta. (áse demasiádo byénto para sentárse fuéra en la kubyérta) - C'è troppo vento per stare seduti fuori sul ponte.
+Gira después del puente y encontrarás el museo a la izquierda. (khíra despúes del puénte i enkontrarás el muséo a la isk iérda) - Gira dopo il ponte e troverai il museo sulla sinistra.
+Hemos aparcado bastante lejos porque no había sitio cerca. (émos aparkádo bastante léhos porke no abía sítio sérka) - Abbiamo parcheggiato abbastanza lontano perché non c'era posto vicino.
+El coche pierde aceite y tenemos que llevarlo al taller. (el kóche pyérde aséite i tenémos ke yebárlo al tayér) - La macchina perde olio e dobbiamo portarla dal meccanico.
+He llamado a emergencias porque había una persona herida en la carretera. (e yamádo a emergénsias porke abía una persóna erída en la karretéra) - Ho chiamato i soccorsi perché c'era una persona ferita sulla strada.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
