@@ -820,6 +820,59 @@ Para mí, el plato del día y una botella de agua. (para mí, el pláto del día
 La salsa está muy rica, pero pica bastante. (la sálsa está mui ríkа, péгo píka bastante) - La salsa è molto buona, ma è piuttosto piccante.
 Ayer salimos después de cenar y volvimos tardísimo. (ayér salímos despúes de senár i bolbímos tardísimo) - Ieri siamo usciti dopo cena e siamo tornati tardissimo.
 Nos tomamos algo en una terraza y estuvimos charlando un buen rato. (nos tomámos álgo en una terrása i estubímos charlándo un buén ráto) - Abbiamo bevuto qualcosa in un dehors e siamo rimasti a chiacchierare per un bel po'.
+He sacado los cubiertos del lavavajillas y ya están todos guardados. (e sakádo los kubyértos del lababayíyas i ya están todos guardádos) - Ho tirato fuori le posate dalla lavastoviglie e sono già tutte sistemate.
+Voy a ventilar la casa un rato porque hace bastante calor dentro. (boi a bentilár la káса un ráto porke áse bastante kalór déntro) - Arieggio casa per un po' perché dentro fa piuttosto caldo.
+¿Has dejado la llave puesta por dentro? (as dekhádo la yábe puésta por déntro) - Hai lasciato la chiave inserita dall'interno?
+El cubo de la basura está lleno y hay que bajarlo. (el kúbo de la basúra está yéno i ai ke bakhárlo) - Il bidone della spazzatura è pieno e bisogna portarlo giù.
+El gato se ha metido en el armario y no hay manera de sacarlo. (el gáto se a metído en el armário i no ai manéra de sakárlo) - Il gatto si è infilato nell'armadio e non c'è modo di tirarlo fuori.
+He dejado el móvil cargando en la cocina. (e dekhádo el móbil kargándo en la kosína) - Ho lasciato il cellulare in carica in cucina.
+Para comer podemos hacer arroz con pollo y verduras. (para komér podémos asér arrós kon póyo i berdúras) - A pranzo possiamo fare riso con pollo e verdure.
+¿Te preparo un bocadillo antes de que salgas? (te preparó un bokadíyo ántes de ke sálgas) - Ti preparo un panino prima che tu esca?
+La comida está lista, venid a la mesa. (la komída está lísta, beníd a la mésa) - Il pranzo è pronto, venite a tavola.
+Hoy hemos comido demasiado y no me apetece cenar mucho. (oi émos komído demasiádo i no me apetése senár múcho) - Oggi abbiamo mangiato troppo e non mi va di cenare molto.
+Mi hijo tiene que terminar una redacción para mañana. (mi ího tiéne ke terminár una redaksión para mañana) - Mio figlio deve finire un tema per domani.
+La profesora ha enviado un mensaje a las familias. (la profesóra a embiádo un mensáhe a las famílias) - L'insegnante ha mandato un messaggio alle famiglie.
+¿En qué asignatura tienes más dificultades? (en ke asignatúra tiénes más difikultádes) - In quale materia hai più difficoltà?
+Si te organizas bien, acabarás los deberes antes de cenar. (si te organisas byén, akabarás los deberes ántes de senár) - Se ti organizzi bene, finirai i compiti prima di cena.
+No hace falta que estudies toda la noche para aprobar. (no áse fálta ke estudies toda la nóche para apro bár) - Non serve che studi tutta la notte per essere promosso.
+Esta semana tenemos una reunión con el tutor. (ésta semána tenémos una reunyón kon el tutór) - Questa settimana abbiamo un colloquio con il tutor.
+Te he dicho que primero ordenes tu habitación. (te e dícho ke priméro órdenes tu abitasión) - Ti ho detto che prima devi mettere in ordine la tua camera.
+Puedes usar el ordenador después de hacer los deberes. (puédes usár el ordenador despúes de asér los deberes) - Puoi usare il computer dopo aver fatto i compiti.
+Avísame si vas a llegar más tarde de lo previsto. (abísame si bas a yegár más tárde de lo prebísto) - Avvisami se arriverai più tardi del previsto.
+En la farmacia me han recomendado un spray para la garganta. (en la farmásia me an rekomendádo un esprái para la gargánta) - In farmacia mi hanno consigliato uno spray per la gola.
+¿Tiene algo para el dolor de cabeza que no dé sueño? (tiéne álgo para el dolór de kabésa ke no dé suéño) - Ha qualcosa per il mal di testa che non provochi sonnolenza?
+Desde ayer tengo la nariz completamente taponada. (désde ayér téngo la narís kompletaménte taponáda) - Da ieri ho il naso completamente chiuso.
+Si te encuentras peor, llama al médico sin esperar. (si te enkuéntras peór, yáma al médiko sin esperár) - Se stai peggio, chiama il medico senza aspettare.
+El tren ha salido puntual esta vez. (el tren a salído punt uál ésta bes) - Questa volta il treno è partito puntuale.
+Tenemos que validar los billetes antes de subir. (tenémos ke balidár los biyétes ántes de subír) - Dobbiamo convalidare i biglietti prima di salire.
+¿Sabes en qué estación tenemos que bajarnos? (sábes en ke estasyón tenémos ke bakhárnos) - Sai in quale stazione dobbiamo scendere?
+El vagón está casi vacío a estas horas. (el bagón está káси basío a éstas óras) - A quest'ora la carrozza è quasi vuota.
+Mejor nos ponemos cerca de la salida para no perder tiempo. (mekhór nos ponémos sérka de la salída para no perdér tyémpo) - Meglio metterci vicino all'uscita per non perdere tempo.
+El metro se ha detenido entre dos estaciones. (el métro se a detenído éntre dos estasyónes) - La metropolitana si è fermata tra due stazioni.
+Hay obras en la línea y el servicio es más lento de lo normal. (ai óbras en la línea i el serbísio es más lénto de lo normál) - Ci sono lavori sulla linea e il servizio è più lento del normale.
+No te preocupes, todavía podemos coger el siguiente autobús. (no te preokúpes, todabía podémos kohér el siguiénte autobús) - Non preoccuparti, possiamo ancora prendere il prossimo autobus.
+Esta parada está justo delante del mercado. (ésta parąda está khústo delánte del merkádo) - Questa fermata è proprio davanti al mercato.
+El conductor ha tenido que frenar de golpe. (el konduktór a tenído ke frenár de gólpe) - L'autista ha dovuto frenare bruscamente.
+El vuelo está confirmado y no aparece ningún cambio. (el buélo está konfirmádo i no aparése ningún kâmbio) - Il volo è confermato e non risulta nessuna modifica.
+Voy a facturar la maleta y después buscamos la puerta. (boi a fakturár la maléta i despúes buskámos la puérta) - Imbarco la valigia e poi cerchiamo il gate.
+Nos han asignado asientos separados. (nos an asignádo asyéntos separádos) - Ci hanno assegnato posti separati.
+El aeropuerto está mucho más tranquilo de lo que esperaba. (el aeropuerto está múcho más trankílo de lo ke esperába) - L'aeroporto è molto più tranquillo di quanto pensassi.
+El ferry se ha retrasado por el fuerte viento. (el férri se a retrasádo por el fuérte byénto) - Il traghetto è stato ritardato a causa del forte vento.
+Tenemos que estar en el muelle veinte minutos antes. (tenémos ke estár en el muéye béinte minútos ántes) - Dobbiamo essere al molo venti minuti prima.
+Cruza la plaza y toma la segunda calle a la derecha. (krúsa la plása i tóma la segúnda káye a la derécha) - Attraversa la piazza e prendi la seconda strada a destra.
+El centro está bastante cerca, podemos ir andando. (el séntrо está bastante sérka, podémos ír andándo) - Il centro è abbastanza vicino, possiamo andarci a piedi.
+Me he equivocado de salida en la rotonda. (me e ekibokádo de salída en la rotónda) - Ho sbagliato uscita alla rotonda.
+La batería del coche se ha descargado durante la noche. (la bateríа del kóche se a deskargádo duránte la nóche) - La batteria della macchina si è scaricata durante la notte.
+El taller me ha dicho que estará listo mañana. (el tayér me a dícho ke estará lísto mañana) - L'officina mi ha detto che sarà pronta domani.
+Hay un atasco enorme desde la entrada de la ciudad. (ai un atásko enorme désde la entráda de la syudád) - C'è un ingorgo enorme dall'ingresso della città.
+El agua ha dejado de salir del grifo. (el água a dekhádo de salír del grífo) - L'acqua ha smesso di uscire dal rubinetto.
+La calefacción se ha apagado sola durante la noche. (la kalefaksión se a apagádo sóla duránte la nóche) - Il riscaldamento si è spento da solo durante la notte.
+El hotel nos ha confirmado que podemos dejar las maletas en recepción. (el otél nos a konfirmádo ke podémos dekhár las malétas en resepsión) - L'hotel ci ha confermato che possiamo lasciare le valigie alla reception.
+No funciona el enchufe que está junto a la cama. (no funksióna el enchúfe ke está khúnto a la káma) - Non funziona la presa accanto al letto.
+La habitación tiene una ventana que da al patio interior. (la abitasión tiéne una bentána ke da al pátio interiór) - La camera ha una finestra che dà sul cortile interno.
+El anfitrión nos ha dejado la llave en una caja con código. (el anfitryón nos a dekhádo la yábe en una káha kon kódigo) - L'host ci ha lasciato la chiave in una cassetta con codice.
+La casa está muy bien situada y se puede ir andando a todas partes. (la káса está mui byén situáda i se puéde ír andándo a todas pártes) - La casa è in un'ottima posizione e si può andare ovunque a piedi.
+Nos gustaría quedarnos una noche más si es posible. (nos gustaría kedárnos una nóche más si es posíble) - Ci piacerebbe restare un'altra notte, se possibile.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
