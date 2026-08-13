@@ -1393,6 +1393,57 @@ El coche no arranca y no sé qué hacer. (el kóche no arránka i no sé ke asé
 Creo que nos hemos dado un pequeño golpe al aparcar. (kréo ke nos émos dádo un pekéño gólpe al apar kár) - Credo che abbiamo dato un piccolo colpo parcheggiando.
 Voy a llamar a la asistencia porque no puedo mover el coche. (boi a yamár a la as isténsia porke no puédo mobér el kóche) - Chiamo il soccorso stradale perché non posso muovere la macchina.
 Hay un atasco enorme desde la entrada de la ciudad. (ai un atásko enórme désde la entráda de la syudád) - C'è un ingorgo enorme dall'ingresso della città.
+He puesto una bolsa nueva en la papelera del baño. (e puésto una bólsa nuéba en la papeléra del baño) - Ho messo un sacchetto nuovo nel cestino del bagno.
+Voy a quitar el polvo de las estanterías esta tarde. (boi a kitár el polvo de las estanterías ésta tárde) - Spolvero gli scaffali questo pomeriggio.
+Deja los zapatos en la entrada para no ensuciar el suelo. (déha los sapátos en la entráda para no ensusyár el suélo) - Lascia le scarpe all'ingresso per non sporcare il pavimento.
+La persiana se ha quedado atascada a medio camino. (la persiána se a kedádo ataskáda a médio kamíno) - La tapparella si è bloccata a metà.
+Voy a poner una lavadora de ropa oscura. (boi a ponér una labadóra de rópa oskúra) - Metto una lavatrice di capi scuri.
+¿Has vaciado ya el lavavajillas? (as basyádo ya el lababayíyas) - Hai già svuotato la lavastoviglie?
+El frigorífico está haciendo un ruido que antes no hacía. (el frigorífiko está asyéndo un ruído ke ántes no asía) - Il frigorifero sta facendo un rumore che prima non faceva.
+No encuentro el mando del aire acondicionado. (no enkuéntro el mándo del áire akondisionádo) - Non trovo il telecomando dell'aria condizionata.
+El perro está dormido debajo de la mesa. (el pérro está dormído debáho de la mésa) - Il cane dorme sotto il tavolo.
+Tenemos que llevar al gato al veterinario para revisarlo. (tenémos ke yebár al gáto al beterinário para rebisárlo) - Dobbiamo portare il gatto dal veterinario per farlo controllare.
+He dejado el desayuno preparado para que no llegues tarde. (e dekhádo el desayúno preparádo para ke no yégues tárde) - Ho preparato la colazione così non fai tardi.
+¿Quién quiere un zumo de naranja recién exprimido? (kyén kyére un súmo de naranha resyén esprimído) - Chi vuole una spremuta d'arancia fresca?
+No tengo mucha hambre, tomaré algo ligero. (no téngo múcha ámbre, tomaré álgo líkhero) - Non ho molta fame, mangerò qualcosa di leggero.
+Guarda que se enfría la comida. (guárda ke se enfría la komída) - Guarda che il cibo si raffredda.
+He preparado más arroz por si alguien quiere repetir. (e preparádo más arrós por si algyén kyére repetír) - Ho preparato più riso nel caso qualcuno voglia fare il bis.
+Hoy los niños comen en el colegio. (oi los niños kómen en el kolekhio) - Oggi i bambini mangiano a scuola.
+Mañana no hay clase porque es festivo. (mañána no ai kláse porke es festíbo) - Domani non c'è lezione perché è festivo.
+La profesora quiere hablar con nosotros después de clase. (la profesóra kyére ablár kon nosótros despúes de kláse) - L'insegnante vuole parlare con noi dopo la lezione.
+Tiene que entregar el trabajo antes del viernes. (tiéne ke entregár el trabáho ántes del byérnes) - Deve consegnare il lavoro entro venerdì.
+Si haces los deberes ahora, luego puedes salir. (si áses los deberes aóra, luégo puédes salír) - Se fai i compiti adesso, poi puoi uscire.
+Hoy puedes quedarte un poco más con tus amigos. (oi puédes kedárte un póko más kon tus amígos) - Oggi puoi restare un po' di più con i tuoi amici.
+Avísame cuando estés llegando a casa. (abísame kuándo estés yegándo a káса) - Avvisami quando stai arrivando a casa.
+No quiero que llegues a casa demasiado tarde. (no kyéro ke yégues a káса demasiádo tárde) - Non voglio che tu torni a casa troppo tardi.
+Tómate la mañana con calma y no te fuerces demasiado. (tómate la mañana kon kálma i no te fuérses demasiádo) - Prenditi la mattina con calma e non sforzarti troppo.
+Me he hecho daño en la muñeca entrenando. (me e écho daño en la muñéka entrenándo) - Mi sono fatto male al polso durante l'allenamento.
+Necesito algo para el dolor de garganta. (nesesíto álgo para el dolór de gargánta) - Ho bisogno di qualcosa per il mal di gola.
+¿Tiene este medicamento algún efecto secundario? (tiéne éste medikaménto algún efékto sekundário) - Questo farmaco ha qualche effetto collaterale?
+Me han pedido que vuelva en ayunas. (me an pedído ke buélba en ayúnas) - Mi hanno chiesto di tornare a digiuno.
+La sala de espera está al fondo del pasillo. (la sála de espéra está al fóndo del pasíyo) - La sala d'attesa è in fondo al corridoio.
+El médico todavía está atendiendo a otro paciente. (el médiko todabía está atendyéndo a ótro pasyénte) - Il medico sta ancora visitando un altro paziente.
+¿A qué hora abre la estación los domingos? (a ke óra ábre la estasyón los domíngos) - A che ora apre la stazione la domenica?
+El tren regional tarda más, pero es más barato. (el tren reghionál tárda más, péгo es más baráto) - Il treno regionale impiega più tempo, ma costa meno.
+He visto en la pantalla que han cambiado el horario. (e bísto en la pantáya ke an kambyádo el orário) - Ho visto sullo schermo che hanno cambiato l'orario.
+¿Hay algún tren directo o tenemos que hacer transbordo? (ai algún tren direktо o tenémos ke asér transbórdo) - C'è un treno diretto o dobbiamo cambiare?
+La estación está en obras y algunas zonas están cerradas. (la estasyón está en óbras i alg unas sónas están serrádas) - La stazione è in ristrutturazione e alcune zone sono chiuse.
+La salida del metro está justo detrás del quiosco. (la salída del métro está khústo detrás del kyósko) - L'uscita della metropolitana è proprio dietro l'edicola.
+Me he bajado una parada antes por error. (me e bakhádo una par áda ántes por errór) - Sono sceso una fermata prima per errore.
+Esta línea está temporalmente fuera de servicio. (ésta línea está temporalménte fuéra de serbísio) - Questa linea è temporaneamente fuori servizio.
+El autobús viene tan lleno que no sé si podremos subir. (el autobús byéne tan yéno ke no sé si podrémos subír) - L'autobus arriva così pieno che non so se riusciremo a salire.
+Voy a mirar los horarios en la aplicación. (boi a mirár los orários en la aplikasyón) - Controllo gli orari sull'applicazione.
+El conductor nos ha avisado de que habrá un desvío. (el konduktór nos a abisádo de ke abrá un desbío) - L'autista ci ha avvisato che ci sarà una deviazione.
+Tenemos que estar en la puerta de embarque media hora antes. (tenémos ke estár en la puérta de embarke média óra ántes) - Dobbiamo essere al gate mezz'ora prima.
+La pantalla dice que la puerta todavía está por confirmar. (la pantáya díse ke la puérta todabía está por konfirmár) - Lo schermo dice che il gate è ancora da confermare.
+¿Dónde puedo rellenar una botella de agua? (dónde puédo rellenár una botéya de água) - Dove posso riempire una bottiglia d'acqua?
+El vuelo ha llegado con bastante antelación. (el buélo a yegádo kon bastante antelasión) - Il volo è arrivato con largo anticipo.
+Nos han dejado salir por la puerta trasera del avión. (nos an dekhádo salír por la puérta traséra del abión) - Ci hanno fatto uscire dalla porta posteriore dell'aereo.
+El ferry está a punto de salir del puerto. (el férri está a púnto de salír del puérto) - Il traghetto sta per lasciare il porto.
+No te preocupes por el coche, lo dejaré en el aparcamiento. (no te preokúpes por el kóche, lo deharé en el apar kamiénto) - Non preoccuparti della macchina, la lascerò nel parcheggio.
+Creo que hemos dejado algo en el maletero. (kréo ke émos dekhádo álgo en el maletéro) - Credo che abbiamo lasciato qualcosa nel bagagliaio.
+El navegador ha dejado de funcionar de repente. (el nabegadór a dekhádo de funksionár de repénte) - Il navigatore ha smesso improvvisamente di funzionare.
+Hay un ruido debajo del coche que no me gusta nada. (ai un ruído debáho del kóche ke no me gusta náda) - C'è un rumore sotto la macchina che non mi piace per niente.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
