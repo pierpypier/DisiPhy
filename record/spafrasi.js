@@ -1342,6 +1342,57 @@ El seguro me ha enviado los datos del servicio de asistencia. (el seguro me a en
 Han cortado una calle porque están reparando una tubería. (an kortádo una káye porke están reparándo una tubería) - Hanno chiuso una strada perché stanno riparando una tubatura.
 La tormenta ha dejado varias calles completamente inundadas. (la tormenta a dekhádo bárias káyes kompletaménte inundádas) - Il temporale ha lasciato diverse strade completamente allagate.
 La cobertura ha vuelto después de unos minutos. (la kobertúra a buélto despúes de unos minútos) - La copertura è tornata dopo alcuni minuti.
+He limpiado los cristales porque estaban llenos de polvo. (e limpiádo los kristáles porke estaban yénos de polvo) - Ho pulito i vetri perché erano pieni di polvere.
+Voy a dejar la puerta abierta para que entre un poco de aire. (boi a dekhár la puérta abyérta para ke entre un póko de áire) - Lascio la porta aperta per far entrare un po' d'aria.
+El lavavajillas está lleno, así que lo pondré después de cenar. (el lababayíyas está yéno, así ke lo pondré despúes de senár) - La lavastoviglie è piena, quindi la avvierò dopo cena.
+Se ha atascado el fregadero y el agua no baja. (se a ataskádo el fregadéro i el água no báha) - Il lavello si è intasato e l'acqua non scende.
+¿Dónde has guardado las pilas nuevas? (dónde as guardádo las p ílas nuébas) - Dove hai messo le batterie nuove?
+El niño se ha quedado dormido en el sofá. (el níño se a kedádo dormído en el sofà) - Il bambino si è addormentato sul divano.
+Voy a apagar todas las luces antes de acostarme. (boi a apagár todas las lúses ántes de akostárme) - Spengo tutte le luci prima di andare a letto.
+La aspiradora hace un ruido bastante raro. (la aspiradóra áse un ruído bastante ráro) - L'aspirapolvere fa uno strano rumore.
+He dejado la ropa preparada para mañana. (e dekhádo la rópa preparáda para mañana) - Ho preparato i vestiti per domani.
+No pongas la calefacción tan alta, hace demasiado calor. (no póngas la kalefaksión tan álta, áse demasiádo kalór) - Non mettere il riscaldamento così alto, fa troppo caldo.
+Hoy desayunamos todos juntos antes de salir. (oi desayunámos todos khúntos ántes de salír) - Oggi facciamo tutti colazione insieme prima di uscire.
+¿Quién quiere huevos para desayunar? (kyén kyére uébos para desayunár) - Chi vuole le uova a colazione?
+He preparado fruta cortada para después de comer. (e preparádo frúta kortáda para despúes de komér) - Ho preparato della frutta tagliata per dopo pranzo.
+No comas tan rápido, todavía tenemos tiempo. (no kómas tan ráp ido, todabía tenémos tyémpo) - Non mangiare così velocemente, abbiamo ancora tempo.
+Esta noche cenamos fuera porque nadie tiene ganas de cocinar. (ésta nóche senámos fuéra porke nádye tiéne gánas de kosinár) - Stasera ceniamo fuori perché nessuno ha voglia di cucinare.
+Mi hija necesita un poco de tranquilidad para estudiar. (mi íha nesesíta un póko de trankilidád para estudiár) - Mia figlia ha bisogno di un po' di tranquillità per studiare.
+Hoy han tenido una prueba de inglés. (oi an tenído una pru éba de ingl és) - Oggi hanno fatto una verifica d'inglese.
+El profesor les ha mandado un trabajo para las vacaciones. (el profesór les a mandádo un trabáho para las bakasyónes) - L'insegnante ha assegnato loro un lavoro per le vacanze.
+Si no entiendes algo, pregunta sin miedo. (si no entyéndes álgo, pregunt a sin myédo) - Se non capisci qualcosa, chiedi senza paura.
+No hace falta que termines todo esta noche. (no áse fálta ke termínes todo ésta nóche) - Non è necessario che tu finisca tutto stasera.
+Acuérdate de preparar la mochila antes de dormir. (akuérdate de preparár la mokíla ántes de dormír) - Ricordati di preparare lo zaino prima di dormire.
+Me he levantado con la garganta un poco irritada. (me e lebantádo kon la gargánta un póko iritáda) - Mi sono alzato con la gola un po' irritata.
+¿Tiene alguna crema para esta picadura? (tiéne alguna kréma para ésta pikadúra) - Ha una crema per questa puntura?
+Me han dicho que beba mucho líquido durante el día. (me an dícho ke béba múcho líkido duránte el día) - Mi hanno detto di bere molti liquidi durante la giornata.
+La cita con el médico es a primera hora. (la síta kon el médiko es a priméra óra) - L'appuntamento dal medico è di prima mattina.
+Estoy esperando que me llamen para entrar en la consulta. (estoi esperándo ke me yámen para entrár en la konsúlta) - Sto aspettando che mi chiamino per entrare in ambulatorio.
+El tren sale dentro de cinco minutos, no podemos entretenernos. (el tren sále déntro de sínko minútos, no podémos entretenernos) - Il treno parte tra cinque minuti, non possiamo perdere tempo.
+He dejado la maleta en la consigna de la estación. (e dekhádo la maléta en la kons ígna de la estasyón) - Ho lasciato la valigia al deposito bagagli della stazione.
+¿Este asiento está libre? (éste asyénto está líbre) - Questo posto è libero?
+Nos hemos equivocado de andén y tenemos que cambiar de lado. (nos émos ekibokádo de andén i tenémos ke kambyár de ládo) - Abbiamo sbagliato binario e dobbiamo cambiare lato.
+La estación está mucho más concurrida por las mañanas. (la estasyón está múcho más konkurrída por las mañánas) - La stazione è molto più affollata al mattino.
+Tengo que recargar la tarjeta del metro. (téngo ke rekargár la tarhéta del métro) - Devo ricaricare la tessera della metropolitana.
+El tren que necesitamos pasa cada veinte minutos. (el tren ke nesesitámos páса káda béinte minútos) - Il treno che ci serve passa ogni venti minuti.
+Hoy el autobús va más lento de lo normal por el tráfico. (oi el autobús ba más lénto de lo normál por el tráfiko) - Oggi l'autobus va più lentamente del solito a causa del traffico.
+No encuentro ninguna parada por esta zona. (no enkuéntro ningúna par áda por ésta sónа) - Non trovo nessuna fermata in questa zona.
+El autobús se ha llenado en la siguiente parada. (el autobús se a yenádo en la siguiénte par áda) - L'autobus si è riempito alla fermata successiva.
+¿Puedes abrir la ventana? Hace mucho calor aquí dentro. (puédes abrír la bentána? áse múcho kalór akí déntro) - Puoi aprire il finestrino? Qui dentro fa molto caldo.
+El vuelo ha cambiado de puerta a última hora. (el buélo a kambyádo de puérta a última óra) - Il volo ha cambiato gate all'ultimo momento.
+Nos han avisado por megafonía de que el embarque empieza ya. (nos an abisádo por megafonía de ke el embarke empyésa ya) - Ci hanno avvisato dagli altoparlanti che l'imbarco inizia ora.
+¿Puedo llevar esta mochila como equipaje de mano? (puédo yebár ésta mokíla komo ekipáhe de máno) - Posso portare questo zaino come bagaglio a mano?
+Han retrasado la salida por las condiciones meteorológicas. (an retrasádo la salída por las kondisyónes meteorolókikas) - Hanno ritardato la partenza a causa delle condizioni meteorologiche.
+El barco está atracado al final del muelle. (el bárko está atrakádo al finál del muéye) - Il traghetto è ormeggiato alla fine del molo.
+Nos queda un poco de tiempo para comprar algo en el puerto. (nos kéda un póko de tyémpo para komprár álgo en el puérto) - Abbiamo ancora un po' di tempo per comprare qualcosa al porto.
+Sigue las indicaciones hacia el centro y luego pregunta allí. (sígue las indikasyónes asía el séntrо i luégo pregunt a ayí) - Segui le indicazioni verso il centro e poi chiedi lì.
+Creo que hemos pasado la calle que buscábamos. (kréo ke émos pasádo la káye ke busk ábamos) - Credo che abbiamo superato la strada che cercavamo.
+El aparcamiento está completo, tendremos que dejar el coche más lejos. (el apar kamiénto está kompleto, tendrémos ke dekhár el kóche más léhos) - Il parcheggio è pieno, dovremo lasciare la macchina più lontano.
+Se me ha encendido la luz de reserva. (se me a ensendído la lus de resérba) - Mi si è accesa la spia della riserva.
+El coche no arranca y no sé qué hacer. (el kóche no arránka i no sé ke asér) - La macchina non parte e non so cosa fare.
+Creo que nos hemos dado un pequeño golpe al aparcar. (kréo ke nos émos dádo un pekéño gólpe al apar kár) - Credo che abbiamo dato un piccolo colpo parcheggiando.
+Voy a llamar a la asistencia porque no puedo mover el coche. (boi a yamár a la as isténsia porke no puédo mobér el kóche) - Chiamo il soccorso stradale perché non posso muovere la macchina.
+Hay un atasco enorme desde la entrada de la ciudad. (ai un atásko enórme désde la entráda de la syudád) - C'è un ingorgo enorme dall'ingresso della città.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
