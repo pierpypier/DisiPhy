@@ -768,6 +768,58 @@ El técnico ha venido a revisar la caldera esta mañana. (el tékniko a benído 
 El ruido de la habitación de al lado no me deja dormir. (el ruído de la abitasión de al ládo no me déha dormír) - Il rumore della camera accanto non mi lascia dormire.
 ¿Podrían cambiarme de habitación, por favor? (podrían kambyárme de abitasión, por fabór) - Potreste cambiarmi la camera, per favore?
 El aire de la habitación está demasiado cargado. (el áire de la abitasión está demasiádo kargádo) - L'aria della camera è troppo viziata.
+He fregado la cocina y todavía está un poco húmeda. (e fregádo la kosína i todabía está un póko úmeda) - Ho lavato il pavimento della cucina e non è ancora del tutto asciutto.
+Voy a cambiar la bombilla del pasillo porque se ha fundido. (boi a kambyár la bombíya del pasíyo porke se a fundído) - Cambio la lampadina del corridoio perché si è fulminata.
+Acuérdate de sacar la ropa de la lavadora cuando termine. (akuérdate de sakár la rópa de la labadóra kuándo termíne) - Ricordati di togliere i panni dalla lavatrice quando finisce.
+El gato está esperando delante de su cuenco. (el gáto está esperándo delánte de su kuénko) - Il gatto sta aspettando davanti alla sua ciotola.
+He dejado las llaves de repuesto en un sitio seguro. (e dekhádo las yábes de repuésto en un sítio seguro) - Ho lasciato le chiavi di riserva in un posto sicuro.
+Para desayunar voy a hacerme una tortilla francesa. (para desayunár boi a asérme una tortíya fransésa) - A colazione mi preparo una frittata francese.
+¿Quién ha terminado el último trozo de queso? (kyén a terminádo el último tróso de késo) - Chi ha mangiato l'ultimo pezzo di formaggio?
+Si quieres, calentamos las sobras de ayer. (si kyéres, kalentámos las sóbras de ayér) - Se vuoi, scaldiamo gli avanzi di ieri.
+Hoy cenamos todos juntos, aunque sea un poco tarde. (oi senámos todos khúntos, áunke séa un póko tárde) - Stasera ceniamo tutti insieme, anche se è un po' tardi.
+Pon los vasos en la mesa y yo traigo los platos. (pon los básos en la mésa i yo tráigo los plátos) - Metti i bicchieri sul tavolo e io porto i piatti.
+Mañana la niña tiene que entregar un trabajo de lengua. (mañána la níña tiéne ke entregár un trabáho de léngua) - Domani la bambina deve consegnare un lavoro di italiano.
+El tutor quiere hablar con nosotros sobre su rendimiento. (el tutór kyére ablar kon nosótros sóbre su rendimiénto) - Il tutor vuole parlare con noi del suo rendimento.
+Esta asignatura le gusta mucho más que las demás. (ésta asignatúra le gústa múcho más ke las demás) - Questa materia gli piace molto più delle altre.
+No le pongas la respuesta, deja que lo intente solo. (no le póngas la respuésta, déha ke lo inténte sólo) - Non dargli la risposta, lascia che ci provi da solo.
+Puedes invitar a tus amigos, pero avísame antes. (puédes inbitár a tus amígos, péгo abísame ántes) - Puoi invitare i tuoi amici, ma avvisami prima.
+Hoy tienes que estar en casa antes de las diez. (oi tiénes ke estár en káса ántes de las dyés) - Oggi devi essere a casa prima delle dieci.
+Me he torcido un poco el tobillo bajando las escaleras. (me e torsído un póko el tobíyo bakhándo las eskaléras) - Mi sono leggermente slogato la caviglia scendendo le scale.
+¿Puedo tomar este medicamento si estoy en ayunas? (puédo tomár éste medikaménto si estoi en ayúnas) - Posso prendere questo farmaco se sono a digiuno?
+El médico me ha pedido que vuelva si empeoran los síntomas. (el médiko me a pedído ke buélba si empeóran los síntomas) - Il medico mi ha chiesto di tornare se i sintomi peggiorano.
+Me mareo un poco cuando me levanto demasiado rápido. (me maréo un póko kuándo me lebánto demasiádo rápido) - Mi gira un po' la testa quando mi alzo troppo velocemente.
+El tren está parado porque están revisando las vías. (el tren está parádo porke están rebisándo las bías) - Il treno è fermo perché stanno controllando i binari.
+¿En qué coche está nuestro asiento? (en ke kóche está nuéstro asyénto) - In quale carrozza si trova il nostro posto?
+La pantalla indica que el tren llegará a las seis y diez. (la pantáya indíka ke el tren yegará a las séis i dyes) - Lo schermo indica che il treno arriverà alle sei e dieci.
+Hay un ascensor al fondo de la estación para las personas con equipaje. (ai un asensór al fóndo de la estasyón para las persónas kon ekipáhe) - In fondo alla stazione c'è un ascensore per chi ha bagagli.
+El acceso a esa línea está cerrado temporalmente. (el akséso a ésa línea está serrádo temporalménte) - L'accesso a quella linea è temporaneamente chiuso.
+Vamos a esperar al siguiente metro, este está demasiado lleno. (bámos a esperár al siguiénte métro, éste está demasiádo yéno) - Aspettiamo la prossima metropolitana, questa è troppo piena.
+El conductor ha anunciado que habrá una parada adicional. (el konduktór a anunsiádo ke abrá una parąda adisionál) - L'autista ha annunciato che ci sarà una fermata aggiuntiva.
+He perdido el abono y necesito sacar otro. (e perdído el abóno i nesesíto sakár ótro) - Ho perso l'abbonamento e devo farne un altro.
+El mostrador de facturación cierra cuarenta minutos antes del vuelo. (el mostrador de fakturasión syérra kuarénta minútos ántes del buélo) - Il banco del check-in chiude quaranta minuti prima del volo.
+Nos han pedido que dejemos los líquidos fuera del equipaje. (nos an pedído ke dekhémos los líkidos fuéra del ekipáhe) - Ci hanno chiesto di tirare fuori i liquidi dal bagaglio.
+El control de pasaportes está bastante despejado ahora. (el kontról de pasapórtes está bastante despekhádo aóra) - Il controllo passaporti è abbastanza libero adesso.
+Mi vuelo tiene asignada una puerta diferente a la de ayer. (mi buélo tiéne asignáda una puérta diferénte a la de ayér) - Il mio volo ha un gate diverso da quello di ieri.
+El mar está tranquilo y parece que tendremos una travesía agradable. (el mar está trankílo i parése ke tendrémos una trabesía agradáble) - Il mare è calmo e sembra che faremo una traversata piacevole.
+El ferry tarda aproximadamente una hora y cuarto. (el férri tárda aproximadaménte una óra i kuárto) - Il traghetto impiega circa un'ora e un quarto.
+Si vas por aquí, llegarás antes al centro histórico. (si bas por akí, yegarás ántes al séntrо istóriko) - Se vai da questa parte, arriverai prima al centro storico.
+La plaza está justo detrás de aquella iglesia. (la plása está khústo detrás de akéya iglesya) - La piazza è proprio dietro quella chiesa.
+No cojas esa calle, que es de sentido único. (no kóhas ésa káye, ke es de sentído úniko) - Non prendere quella strada, perché è a senso unico.
+El coche vibra mucho cuando supero cierta velocidad. (el kóche bíbra múcho kuándo supéro syérta belosidád) - La macchina vibra molto quando supero una certa velocità.
+El mecánico cree que habrá que cambiar el alternador. (el mekániko krée ke abrá ke kambyár el alternadór) - Il meccanico pensa che sarà necessario cambiare l'alternatore.
+Hemos llamado a la policía porque hemos visto un accidente. (émos yamádo a la polisía porke émos bísto un aksidénte) - Abbiamo chiamato la polizia perché abbiamo visto un incidente.
+No toques nada hasta que llegue el técnico. (no tókes náda ásta ke yé gue el tékniko) - Non toccare nulla finché non arriva il tecnico.
+El agua está entrando por debajo de la puerta del garaje. (el água está entrándo por debáho de la puérta del garáhe) - L'acqua sta entrando da sotto la porta del garage.
+El hotel nos ha prestado un adaptador para cargar el móvil. (el otél nos a prestádo un adaptadór para kargár el móbil) - L'hotel ci ha prestato un adattatore per caricare il cellulare.
+El desayuno está incluido en el precio de la habitación. (el desayúno está inkluído en el présio de la abitasión) - La colazione è inclusa nel prezzo della camera.
+El anfitrión nos ha enviado las instrucciones para entrar en el apartamento. (el anfitryón nos a embiádo las instruksiónes para entrár en el apartaménto) - L'host ci ha inviato le istruzioni per entrare nell'appartamento.
+La habitación huele a tabaco y habíamos pedido una para no fumadores. (la abitasión uéle a tabáko i abíamos pedído una para no fumadóres) - La camera puzza di fumo e ne avevamo chiesta una per non fumatori.
+He reservado una mesa para tres a nombre de Pierpy. (e reservádo una mésa para tres a nómbre de Pierpy) - Ho prenotato un tavolo per tre a nome di Pierpy.
+Para mí, el plato del día y una botella de agua. (para mí, el pláto del día i una botéya de água) - Per me, il piatto del giorno e una bottiglia d'acqua.
+¿Nos puedes traer la cuenta cuando tengas un momento? (nos puédes traér la kuénta kuándo téngas un moménto) - Puoi portarci il conto quando hai un momento?
+La salsa está muy rica, pero pica bastante. (la sálsa está mui ríkа, péгo píka bastante) - La salsa è molto buona, ma è piuttosto piccante.
+Ayer salimos después de cenar y volvimos tardísimo. (ayér salímos despúes de senár i bolbímos tardísimo) - Ieri siamo usciti dopo cena e siamo tornati tardissimo.
+Nos tomamos algo en una terraza y estuvimos charlando un buen rato. (nos tomámos álgo en una terrása i estubímos charlándo un buén ráto) - Abbiamo bevuto qualcosa in un dehors e siamo rimasti a chiacchierare per un bel po'.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
