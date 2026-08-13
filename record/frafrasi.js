@@ -129,6 +129,57 @@ Le week-end je lis beaucoup, ça me détend vraiment (Le uikend je li bocu, sa m
 Je fais un cours du soir d'italien deux fois par semaine (Je fè an cur dü suar ditalien deu fua par semèn) - Sto seguendo un corso serale d'italiano due volte a settimana
 On s'est rencontrés à une soirée entre amis communs (On se rancontré a ün suaré antr ami comun) - Ci siamo conosciuti a una serata tra amici comuni
 T'as lu le dernier livre dont tout le monde parle? (Ta lü le dernié livr don tu le monde parl?) - Hai letto l'ultimo libro di cui tutti parlano?
+Tu peux fermer la fenêtre de la cuisine avant de partir ? (tü pö fermer la fenetr de la küizin avan de partir) - Puoi chiudere la finestra della cucina prima di andare via?
+J'ai oublié de sortir les poubelles hier soir. (ʒé oublié de sortir le pubel ier swar) - Ieri sera ho dimenticato di portare fuori la spazzatura.
+Le chien attend devant la porte depuis dix minutes. (le scièn atand dövan la port döpüi dis minüt) - Il cane aspetta davanti alla porta da dieci minuti.
+Il faut étendre le linge dès que la machine a fini. (il fo etandr le liènʒ de ke la mascin a fini) - Bisogna stendere il bucato appena la lavatrice ha finito.
+J'ai rangé les courses dans le frigo, mais il reste les légumes. (ʒé ranʒé le kurs dan le frigo, mè il rest le legüm) - Ho sistemato la spesa in frigorifero, ma restano le verdure.
+Tu veux des tartines avec ta confiture ? (tü vö de tartin avek ta konfityür) - Vuoi delle fette di pane tostato con la marmellata?
+Je n'ai pas très faim, je vais juste manger un yaourt. (ʒö né pa trè fen, ʒö vé ʒüst manʒé an iaur) - Non ho molta fame, mangerò solo uno yogurt.
+Qui a préparé le déjeuner aujourd'hui ? (ki a preparé le deʒöné oʒurdüi) - Chi ha preparato il pranzo oggi?
+Mets un peu plus de salade, il en reste encore. (mé an pö plü de salad, il an rest ankor) - Mettine ancora un po' di insalata, ce n'è ancora.
+On mange ensemble ce soir ou chacun de son côté ? (on manʒ ansambl se swar u scakan de son koté) - Stasera mangiamo insieme o ognuno per conto suo?
+J'ai eu une bonne note en histoire cette fois. (ʒé ü ün bon not an istwar set fwa) - Questa volta ho preso un bel voto in storia.
+Le professeur de français nous a donné beaucoup de travail pour lundi. (le profesör de fransè nu a doné bokou de travay pur landi) - L'insegnante di francese ci ha dato molto lavoro per lunedì.
+Je comprends mieux les maths quand quelqu'un m'explique calmement. (ʒö kompran miö le mat kan kelkan meksplik kalmman) - Capisco meglio la matematica quando qualcuno me la spiega con calma.
+N'oublie pas de préparer ton sac ce soir. (nübli pa de preparé ton sak se swar) - Non dimenticare di preparare lo zaino stasera.
+Tu peux inviter ton ami, mais préviens-nous à l'avance. (tü pö anvité ton ami, mè previan nu a lavans) - Puoi invitare il tuo amico, ma avvisaci prima.
+Éteins ton téléphone pendant le dîner, s'il te plaît. (etèn ton telefon pandan le diné, sil te plè) - Spegni il telefono durante la cena, per favore.
+Je vais à la pharmacie parce que j'ai besoin de pansements. (ʒö vé a la farmasi parskö ʒé bezwan de pansman) - Vado in farmacia perché ho bisogno di cerotti.
+Vous avez quelque chose contre le mal de tête ? (vu zavé kelkö scos kontr le mal de tet) - Avete qualcosa contro il mal di testa?
+Depuis ce matin, j'ai le nez bouché et je tousse un peu. (döpüi se maten, ʒé le né buscé é ʒö tus an pö) - Da stamattina ho il naso chiuso e tossisco un po'.
+Le médecin m'a dit de me reposer pendant quelques jours. (le medsan ma di de me repoze pandan kelk ʒur) - Il medico mi ha detto di riposarmi per qualche giorno.
+Tu sais si le train de dix heures est à l'heure ? (tü sè si le tran de dis ör é a lör) - Sai se il treno delle dieci è in orario?
+Il y a un retard annoncé sur la ligne. (il ia an retar anonse sür la liñ) - È stato annunciato un ritardo sulla linea.
+J'ai laissé mon sac dans le compartiment, je reviens tout de suite. (ʒé lesé mon sak dan le kompartiman, ʒö revian tu de süit) - Ho lasciato la borsa nello scompartimento, torno subito.
+Cette station est fermée jusqu'à nouvel ordre. (set stasiòn é fermé ʒüsk a nuvel ordr) - Questa stazione è chiusa fino a nuovo avviso.
+On doit changer de ligne à la prochaine station. (on dwa sciandʒé de liñ a la proscièn stasiòn) - Dobbiamo cambiare linea alla prossima stazione.
+Le bus est tellement plein qu'on ne pourra jamais monter. (le büs é telman plen kon nö pura ʒamè monté) - L'autobus è così pieno che non riusciremo mai a salire.
+Tu as ta carte de transport sur toi ? (tü a ta kart de transport sür twa) - Hai con te la tessera dei trasporti?
+Le chauffeur vient de dire qu'il y aura un détour. (le scöför vien de dir kil i ora an detur) - L'autista ha appena detto che ci sarà una deviazione.
+On doit passer le contrôle de sécurité avant d'aller à la porte. (on dwa pasé le kontrol de sekürité avan dalé a la port) - Dobbiamo passare i controlli di sicurezza prima di andare al gate.
+Mon vol a été retardé d'une heure. (mon vol a été retarde dün ör) - Il mio volo è stato ritardato di un'ora.
+Tu peux garder un œil sur ma valise pendant que je vais aux toilettes ? (tü pö gardé an öi sür ma valiz pandan ke ʒö vé o twalet) - Puoi tenere d'occhio la mia valigia mentre vado in bagno?
+Le bateau est déjà arrivé au port, on peut embarquer. (le bato é deʒa arivé o por, on pö anbarqué) - Il traghetto è già arrivato al porto, possiamo imbarcarci.
+J'ai regardé le plan, le centre-ville n'est plus très loin. (ʒé regardé le plan, le santr vil né plü trè lwan) - Ho guardato la mappa, il centro città non è più molto lontano.
+Tu t'es trompé de rue, il fallait tourner juste avant. (tü té trompé de rü, il falé turné ʒüst avan) - Hai sbagliato strada, dovevi girare proprio prima.
+Ma voiture ne démarre plus, même avec les câbles. (ma vuatür ne demar plü, mem avek le kâbl) - La mia macchina non parte più, nemmeno con i cavi.
+J'ai appelé l'assistance, ils devraient arriver rapidement. (ʒé apel lasistans, il dövré arivé rapidman) - Ho chiamato il soccorso stradale, dovrebbero arrivare rapidamente.
+Un camion bloque complètement la circulation. (an kamiòn blok kompletman la sirkülasiòn) - Un camion blocca completamente il traffico.
+L'ascenseur est en panne depuis ce matin. (lasansör é an pan döpüi se maten) - L'ascensore è guasto da stamattina.
+Pourriez-vous vérifier pourquoi l'eau chaude ne fonctionne pas ? (purié vu verifié purkwa lo sod ne fonksiòn pa) - Potreste controllare perché l'acqua calda non funziona?
+La chambre voisine fait beaucoup trop de bruit. (la sciambre vuazin fè bokou tro de brüi) - La camera accanto fa troppo rumore.
+Nous avons réservé une chambre avec deux lits séparés. (nu zavon rezervé ün sciambre avek dö li séparé) - Abbiamo prenotato una camera con due letti separati.
+L'hôte nous a expliqué comment utiliser la serrure électronique. (lot nu a ekspliké koman tülizé la serür elektronik) - Il proprietario ci ha spiegato come usare la serratura elettronica.
+Je prendrai le poisson avec des légumes grillés. (ʒö prendré le pwason avek de legüm griyé) - Prenderò il pesce con verdure grigliate.
+Vous avez une table près de la fenêtre ? (vu zavé ün tabl prè de la fenetr) - Avete un tavolo vicino alla finestra?
+Je prendrai juste un verre d'eau pour commencer. (ʒö prendré ʒüst an ver do pur komansé) - Per cominciare prenderò solo un bicchiere d'acqua.
+On a bien rigolé hier, il faut remettre ça bientôt. (on a bièn rigolé ier, il fo römetr sa byanto) - Ieri ci siamo divertiti molto, dobbiamo rifarlo presto.
+Tu peux me prêter ton chargeur jusqu'à demain ? (tü pö me prete ton sciarʒör ʒüsk a döman) - Puoi prestarmi il tuo caricabatterie fino a domani?
+Le wifi marche bien dans le salon, mais pas dans la chambre. (le wifi marsc bièn dan le salon, mè pa dan la sciambre) - Il wifi funziona bene in soggiorno, ma non in camera.
+J'ai trouvé un vieux livre dans une boîte au grenier. (ʒé truvé an vjö livr dan ün buat o grenié) - Ho trovato un vecchio libro in una scatola in soffitta.
+On devrait partir tôt demain pour éviter la chaleur. (on dövré partir to döman pur evité la scialör) - Dovremmo partire presto domani per evitare il caldo.
+Je préfère marcher plutôt que prendre la voiture pour si peu de distance. (ʒö prefer marscé plüto ke prandr la vuatür pur si pö de distans) - Preferisco andare a piedi piuttosto che prendere la macchina per una distanza così breve.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
