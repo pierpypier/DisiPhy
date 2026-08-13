@@ -1912,6 +1912,56 @@ That place gets really busy on weekends (dhèt pleis ghets rìeli bizi on uiiken
 I forgot my wallet, can you cover me (ai forgat mai uolët, kèn yu kavër mi) - Ho dimenticato il portafoglio, puoi anticiparmi tu
 Do you take cards or just cash (du yu teik kardz or giast kèsc) - Accettate carte o solo contanti
 Is there a discount if I buy two (is dher a diskaunt if ai bai tuu) - C'è uno sconto se ne compro due
+Let's take a walk around the old town this morning (lets teik a uok araund dhë ould taun dhis mornin) - Facciamo una passeggiata per il centro storico stamattina
+Shall we go up to the castle first or later (scèl uì gou ap tu dhë kèsël fërst or leitër) - Saliamo prima al castello o più tardi
+The view from up there is supposed to be amazing (dhë viu from ap dher iz supouzd tu bi ëmeizin) - Dicono che la vista da lassù sia fantastica
+Can we stop for an ice cream on the way (kèn uì stop for en ais kriim on dhë uei) - Possiamo fermarci per un gelato lungo la strada
+I want to look around some shops first (ai uont tu luk araund sam scops fërst) - Prima voglio dare un'occhiata a qualche negozio
+You two go shopping, we'll head to the park (yu tuu gou scopin, uìl hed tu dhë park) - Voi due andate a fare shopping, noi andiamo al parco
+Let's split up and meet back here in an hour (lets split ap end miit bèk hir in en auer) - Dividiamoci e rincontriamoci qui tra un'ora
+Does anyone actually want to see the cathedral (daz enìuan èkchueli uont tu sii dhë këthiidrël) - Qualcuno ha davvero voglia di vedere la cattedrale
+I'd rather just wander around without a plan (aid rèdhër giast uondër araund uidhaut a plèn) - Preferisco semplicemente girare senza un piano
+There's a market on this street on weekends (dhers a markët on dhis striit on uiikendz) - C'è un mercatino in questa via nei weekend
+Let's check out that little bookshop over there (lets chek aut dhèt litël bukscop ouvër dher) - Diamo un'occhiata a quella piccola libreria laggiù
+This street's all uphill, my legs are killing me (dhis striits ol aphil, mai legz ar kilin mi) - Questa strada è tutta in salita, mi fanno male le gambe
+Can we take the lift instead of the stairs (kèn uì teik dhë lift instèd ov dhë sters) - Possiamo prendere l'ascensore invece delle scale
+Let's find somewhere shady to sit for a bit (lets faind samuer sceidi tu sit for a bit) - Cerchiamo un posto all'ombra dove sederci un attimo
+The kids want to run around in the park for a while (dhë kidz uont tu ran araund in dhë park for a uail) - I bambini vogliono correre un po' nel parco
+There's a playground just past those trees (dhers a pleighraund giast pest dhouz triiz) - C'è un parco giochi appena dopo quegli alberi
+Watch her, she's heading straight for the fountain (uoch hër, scìiz hedin streit for dhë fauntën) - Tienila d'occhio, sta andando dritta verso la fontana
+Let's sit on that bench and watch them play (lets sit on dhèt bench end uoch dhem plei) - Sediamoci su quella panchina a guardarli giocare
+Does anyone know what that monument is (daz enìuan nou uat dhèt moniumënt iz) - Qualcuno sa cos'è quel monumento
+There's a plaque here explaining the history (dhers a plèk hir eksplèinin dhë histëri) - C'è una targa qui che spiega la storia
+This square looks completely different at night (dhis skuer luks kompliitli difërënt et nait) - Questa piazza sembra completamente diversa di notte
+Let's come back later when it's cooler (lets kam bèk leitër uen its kuulër) - Torniamo più tardi quando fa più fresco
+I need a hat, the sun's really strong today (ai niid a hèt, dhë sanz rìeli strong tudei) - Mi serve un cappello, oggi il sole è molto forte
+Can we find some shade before we keep walking (kèn uì faind sam sceid bifor uì kiip uokin) - Possiamo trovare un po' d'ombra prima di continuare a camminare
+Let's grab a bottle of water from that kiosk (lets grèb a botël ov uotër from dhèt kiosk) - Prendiamo una bottiglia d'acqua da quel chiosco
+Is it worth going inside or just seeing it from outside (iz it uorth gouin insaid or giast siiin it from autsaid) - Vale la pena entrare o basta vederlo da fuori
+The queue for tickets looks pretty long (dhë kiuu for tikëts luks priti long) - La fila per i biglietti sembra piuttosto lunga
+Let's just take some photos from out here instead (lets giast teik sam foutouz from aut hir instèd) - Facciamo delle foto da qui fuori invece
+Can you take a picture of all of us together (kèn yu teik a pikchër ov ol ov as tugedhër) - Puoi fare una foto a tutti noi insieme
+Stand a bit closer so I can get you both in (stènd a bit klousër sou ai kèn ghet yu bouth in) - Avvicinatevi un po' così vi inquadro entrambi
+This shop has some really nice local stuff (dhis scop hèz sam rìeli nais loukël staf) - Questo negozio ha delle belle cose locali
+Should we get something for grandma while we're here (sciud uì ghet samthin for grènma uail uir hir) - Prendiamo qualcosa per la nonna già che siamo qui
+That's a bit pricey for what it is (dhèts a bit praisi for uat it iz) - È un po' caro per quello che è
+Let's see if there's a cheaper one somewhere else (lets sii if dhers a chiipër uan samuer els) - Vediamo se ce n'è uno più economico da qualche altra parte
+Can you keep an eye on the bags for a second (kèn yu kiip en ai on dhë bègz for a sekënd) - Puoi tenere d'occhio le borse un secondo
+I left my sunglasses back at that last shop (ai left mai sanglèsiz bèk et dhèt lest scop) - Ho dimenticato gli occhiali da sole in quell'ultimo negozio
+Let's head down towards the seafront for a bit (lets hed daun tuordz dhë siifrant for a bit) - Andiamo verso il lungomare per un po'
+The breeze from the sea feels really nice (dhë briiz from dhë sii fiilz rìeli nais) - La brezza dal mare si sente proprio piacevole
+Can we stop somewhere for a proper sit-down lunch (kèn uì stop samuer for a propër sitdaun lanch) - Possiamo fermarci da qualche parte per pranzare seduti
+I'm starving, let's find somewhere to eat soon (aim starvin, lets faind samuer tu iit suun) - Sto morendo di fame, troviamo presto un posto dove mangiare
+That little square has some nice restaurants around it (dhèt litël skuer hèz sam nais restrants araund it) - Quella piccola piazza ha dei bei ristoranti intorno
+Let's ask a local for a good place to eat (lets èsk a loukël for a gud pleis tu iit) - Chiediamo a un locale un buon posto dove mangiare
+The kids are getting tired, maybe we should head back soon (dhë kidz ar ghetin taierd, meibi uì sciud hed bèk suun) - I bambini si stanno stancando, forse dovremmo tornare presto
+Let's do the shopping tomorrow instead, we're all worn out (lets du dhë scopin tumorou instèd, uir ol uorn aut) - Facciamo lo shopping domani invece, siamo tutti stanchi
+This has been such a nice day out together (dhis hèz bin sach a nais dei aut tugedhër) - È stata proprio una bella giornata fuori insieme
+We should come back here again before we leave (uì sciud kam bèk hir eghèn bifor uì liiv) - Dovremmo tornare di nuovo qui prima di partire
+Can we walk back a different way this time (kèn uì uok bèk a difërënt uei dhis taim) - Possiamo tornare per una strada diversa questa volta
+I think we've seen most of the main sights now (ai think uìv siin moust ov dhë mein saits nau) - Credo che abbiamo visto la maggior parte dei luoghi principali ormai
+Let's grab dinner somewhere near the hotel tonight (lets grèb dinër samuer nir dhë houtel tunait) - Prendiamo la cena da qualche parte vicino all'hotel stasera
+That was a really lovely walk, wasn't it (dhèt uoz a rìeli lavli uok, uozënt it) - È stata una passeggiata proprio piacevole, vero
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
