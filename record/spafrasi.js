@@ -574,6 +574,52 @@ El coche pierde aceite y tengo que llevarlo al taller. (el kóche pyérde aséit
 Se ha pinchado una rueda justo delante de nuestra casa. (se a pintchádo una ruéda khústo delánte de nuéstra káса) - Una gomma si è bucata proprio davanti a casa nostra.
 El agua de la calle ha empezado a bajar por fin. (el água de la káye a empesádo a bakhár por fin) - Finalmente l'acqua dalla strada ha iniziato a defluire.
 Han reparado el semáforo que llevaba varios días estropeado. (an reparádo el semáforo ke yebába bários días estropeádo) - Hanno riparato il semaforo che era guasto da diversi giorni.
+He tendido la ropa dentro de casa porque fuera está lloviendo. (e tendído la rópa déntro de káса porke fuéra está yobyéndo) - Ho steso i panni in casa perché fuori sta piovendo.
+Voy a limpiar el filtro de la secadora, que está lleno de pelusas. (boi a limpiár el fíl tro de la sekadóra, ke está yéno de pelúsas) - Pulisco il filtro dell'asciugatrice, che è pieno di lanugine.
+Cierra bien la puerta, que se ha quedado abierta. (syérra byén la puérta, ke se a kedádo abyérta) - Chiudi bene la porta, che è rimasta aperta.
+He dejado las llaves en la entrada, encima de la cómoda. (e dekhádo las yábes en la entráda, ensíma de la kómoda) - Ho lasciato le chiavi all'ingresso, sopra il mobile.
+El lavavajillas está limpio, pero todavía no lo he vaciado. (el lababayíyas está límpio, péгo todabía no lo e basyádo) - La lavastoviglie è pulita, ma non l'ho ancora svuotata.
+El gato se ha escapado al rellano y no quiere volver. (el gáto se a eskapádo al reyáno i no kyére bolbér) - Il gatto è scappato sul pianerottolo e non vuole rientrare.
+He preparado unas tostadas por si alguien tiene hambre. (e preparádo unas tostádas por si algyén tiéne ámbre) - Ho preparato dei toast nel caso qualcuno abbia fame.
+No queda yogur, así que mañana compraré más. (no kéda yogúr, así ke mañana kompraré más) - Non è rimasto yogurt, quindi domani ne comprerò altro.
+¿A qué hora comemos hoy? (a ke óra komémos oi) - A che ora pranziamo oggi?
+Deja un poco de sitio, que todavía falta el postre. (déha un póko de sítio, ke todabía fálta el postre) - Lascia un po' di spazio, che manca ancora il dolce.
+Mi hijo necesita tranquilidad para concentrarse con los deberes. (mi ího nesesíta trankilidád para konsentrárse kon los deberes) - Mio figlio ha bisogno di tranquillità per concentrarsi sui compiti.
+La profesora ha mandado bastante tarea para el fin de semana. (la profesóra a mandádo bastante taréa para el fin de semána) - L'insegnante ha dato parecchi compiti per il fine settimana.
+¿Has estudiado ya para el control de mañana? (as estudiádo ya para el kontról de mañana) - Hai già studiato per la verifica di domani?
+Si necesitas ayuda, dímelo y lo vemos juntos. (si nesesítas ayúda, dímelo i lo bémos khúntos) - Se hai bisogno di aiuto, dimmelo e lo vediamo insieme.
+Primero terminas los deberes y después puedes salir. (priméro termínas los deberes i despúes puédes salír) - Prima finisci i compiti e poi puoi uscire.
+Hoy puedes quedarte un poco más con tus amigos. (oi puédes kedárte un póko más kon tus amígos) - Oggi puoi restare un po' di più con i tuoi amici.
+Me han recomendado estas pastillas para el dolor de garganta. (me an rekomendádo éstas pastíyas para el dolór de gargánta) - Mi hanno consigliato queste pastiglie per il mal di gola.
+¿Tiene alguna crema para las picaduras de insectos? (tiéne algúna kréma para las pikadúras de insektos) - Ha una crema per le punture di insetti?
+Prefiero consultar al médico antes de tomar nada. (prefyéro konsultár al médiko ántes de tomár náda) - Preferisco consultare il medico prima di prendere qualsiasi cosa.
+La sala de espera está casi llena. (la sála de espéra está káси yéna) - La sala d'attesa è quasi piena.
+El tren va con diez minutos de retraso. (el tren ba kon dyes minútos de retraso) - Il treno ha dieci minuti di ritardo.
+Creo que nos hemos subido al tren equivocado. (kréo ke nos émos subído al tren ekibokádo) - Credo che siamo saliti sul treno sbagliato.
+¿Este tren pasa por la estación central? (éste tren pássa por la estasyón sentrál) - Questo treno passa dalla stazione centrale?
+El andén ha cambiado y lo acaban de anunciar. (el andén a kambyádo i lo akában de anunsiár) - Il binario è cambiato e lo hanno appena annunciato.
+La entrada del metro está en la otra esquina. (la entráda del métro está en la ótra eskína) - L'ingresso della metropolitana è sull'altro angolo.
+Hay demasiada gente en este vagón. (ai demasiáda khénte en éste bagón) - C'è troppa gente in questa carrozza.
+Bajamos en la siguiente y cambiamos de línea. (bakhámos en la siguiénte i kambyámos de línea) - Scendiamo alla prossima e cambiamo linea.
+El autobús está llegando, prepara el billete. (el autobús está yegándo, prepára el biyéte) - Sta arrivando l'autobus, prepara il biglietto.
+Esta línea no funciona los domingos. (ésta línea no funksióna los domíngos) - Questa linea non funziona la domenica.
+El avión ha aterrizado con un poco de retraso. (el abión a aterrisádo kon un póko de retraso) - L'aereo è atterrato con un po' di ritardo.
+Tenemos que recoger el equipaje antes de salir. (tenémos ke rekohér el ekipáhe ántes de salír) - Dobbiamo ritirare i bagagli prima di uscire.
+Me han cambiado el asiento y ahora estoy junto a la ventana. (me an kambyádo el asyénto i aóra estoi khúnto a la bentána) - Mi hanno cambiato il posto e ora sono vicino al finestrino.
+El barco ya está preparado para salir del puerto. (el bárko ya está preparádo para salír del puérto) - Il traghetto è già pronto per lasciare il porto.
+¿Dónde tenemos que embarcar con el coche? (dónde tenémos ke embarkár kon el kóche) - Dove dobbiamo imbarcare con la macchina?
+Gira a la izquierda después del puente y sigue recto. (khíra a la iskýérda despúes del puénte i sígue rékto) - Gira a sinistra dopo il ponte e vai dritto.
+Estamos dando vueltas y no encontramos la calle. (estámos dando buéltas i no enkontrámos la káye) - Stiamo girando a vuoto e non troviamo la strada.
+Hay una gasolinera justo al final de esta carretera. (ai una gasolinéra khústo al finál de ésta karretéra) - C'è un distributore proprio alla fine di questa strada.
+El motor se ha parado en mitad del camino. (el motór se a parádo en mitád del kamíno) - Il motore si è spento a metà strada.
+Menos mal que llevaba el teléfono cargado. (ménos mal ke yebába el telé fono kargádo) - Meno male che avevo il telefono carico.
+El agua se ha filtrado por el techo durante la tormenta. (el água se a filtrádo por el técho duránte la tormenta) - L'acqua è filtrata dal tetto durante il temporale.
+El electricista viene esta tarde a revisar la instalación. (el elektrisísta byéne ésta tárde a rebisár la instalasyón) - L'elettricista viene questo pomeriggio a controllare l'impianto.
+El hotel nos ha ofrecido otra habitación por las molestias. (el otél nos a ofresído ótra abitasión por las moléstias) - L'hotel ci ha offerto un'altra camera per il disagio.
+La ducha pierde agua y el suelo se está mojando. (la dúcha pyérde água i el suélo se está mokhándo) - La doccia perde acqua e il pavimento si sta bagnando.
+¿Podrían guardarnos las maletas hasta esta tarde? (podrían guardárnos las malétas ásta ésta tárde) - Potreste custodirci le valigie fino a questo pomeriggio?
+La casa tiene todo lo necesario para pasar unos días. (la káса tiéne todo lo nesesário para pasár unos días) - La casa ha tutto il necessario per trascorrere qualche giorno.
+Nos han dejado un mapa de la zona sobre la mesa. (nos an dekhádo un mapa de la sona sóbre la mésa) - Ci hanno lasciato una mappa della zona sul tavolo.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
