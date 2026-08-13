@@ -577,6 +577,54 @@ Ich hätte gern einen Tisch für zwei, wenn etwas frei ist. (ich hete gern ainen
 Kann ich statt Pommes auch einen Salat dazu bekommen? (kan ich statt pommes auc ainen zalat datsu bekommen) - Posso avere un'insalata al posto delle patatine?
 Der Kellner hat uns ein Gericht des Tages empfohlen. (der kellner hat uns ain gerict des tages empfohlen) - Il cameriere ci ha consigliato un piatto del giorno.
 Nach dem Essen sind wir noch ein bisschen durch die Stadt gelaufen. (nach dem essen zint vir noch ain bisschen durc di stadt gelaufen) - Dopo cena abbiamo fatto ancora una passeggiata per la città.
+Heute ist die Luft draußen angenehm frisch. (hoite ist di luft draussen angenehm frisc) - Oggi l'aria fuori è piacevolmente fresca.
+Ich hab die ganze Nacht kaum geschlafen. (ich hab di gantse nacht kaum geschlafen) - Stanotte ho dormito a malapena.
+Das Wetter soll am Wochenende deutlich besser werden. (das vetter zol am vochenende doitlec besser werden) - Nel fine settimana il tempo dovrebbe migliorare nettamente.
+Bei dem Wind nehme ich lieber eine Jacke mit. (bai dem vint näme ich liber aine iake mit) - Con questo vento preferisco portare una giacca.
+Morgen soll es den ganzen Tag regnen. (morgen zol es den ganzen tag regnen) - Domani dovrebbe piovere tutto il giorno.
+Ich hab mein Konto gerade online überprüft. (ich hab main konto gerade onlain überprift) - Ho appena controllato il mio conto online.
+Die Überweisung müsste spätestens morgen ankommen. (di übervaizung müsste spetestens morgen ankommen) - Il bonifico dovrebbe arrivare al più tardi domani.
+Meine Karte wurde an der Kasse plötzlich abgelehnt. (maine karte wurde an der kasse plötzlich abgeleent) - La mia carta è stata improvvisamente rifiutata alla cassa.
+Ich hab den Betrag lieber noch einmal kontrolliert. (ich hab den betrag liber noch ainmal kontrolliert) - Ho preferito controllare ancora una volta l'importo.
+Kannst du mir das Geld bis Freitag überweisen? (kanst du mir das gelt bis fraitag übervaizen) - Puoi farmi il bonifico entro venerdì?
+Ich hab nächste Woche ein Vorstellungsgespräch. (ich hab nechste voche ain forstellungsgespräch) - La prossima settimana ho un colloquio di lavoro.
+Die Stelle klingt interessant, vor allem wegen der Arbeitszeiten. (di stelle klingt interessant, for allem wegen der arbeits-tsaiten) - Il posto sembra interessante, soprattutto per gli orari di lavoro.
+Ich möchte im Gespräch ehrlich über meine Erfahrung sprechen. (ich möcte im gespräch eerlic über maine erfaarung sprechen) - Durante il colloquio voglio parlare sinceramente della mia esperienza.
+Mein Chef hat mir mehr Verantwortung angeboten. (main scèf hat mir meer ferantvortung angeboten) - Il mio capo mi ha offerto maggiori responsabilità.
+Ich überlege noch, ob ich den Job wechseln soll. (ich überlege noch, ob ich den job veksln zol) - Sto ancora pensando se cambiare lavoro.
+Unsere Katze muss nächste Woche zum Tierarzt. (unzere katze muss nechste voche tsum tierartzt) - La nostra gatta deve andare dal veterinario la prossima settimana.
+Der Hund hat seit gestern keinen Appetit. (der hund hat sait gestern kainen appetit) - Il cane non ha appetito da ieri.
+Der Tierarzt will ihn zur Sicherheit untersuchen. (der tierartzt vil in tsur ziherhait untersuchen) - Il veterinario vuole visitarlo per sicurezza.
+Wir feiern dieses Jahr Weihnachten bei meinen Eltern. (vir faiern dieses jaar va nachts bei mainen eltern) - Quest'anno festeggiamo il Natale dai miei genitori.
+Zum Geburtstag schenken wir ihr etwas ganz Besonderes. (tsum geburtstag schenken vir ir etvas gants besonderes) - Per il compleanno le regaliamo qualcosa di davvero speciale.
+Auf der Hochzeit waren viel mehr Leute als erwartet. (auf der hochtsait varen fiil meer loite als erwartet) - Al matrimonio c'erano molte più persone del previsto.
+Ich hab dir gerade eine Nachricht geschickt. (ich hab dir gerade aine nachricht geschickt) - Ti ho appena mandato un messaggio.
+Warum bekomme ich ständig diese Benachrichtigungen? (varum bekomme ich ständig deze benachrichtigungen) - Perché continuo a ricevere queste notifiche?
+Die App funktioniert nach dem Update irgendwie nicht mehr richtig. (di äp funktioniert nach dem update irgendwie nicht meer richtig) - Dopo l'aggiornamento l'app non funziona più bene.
+Da bin ich ganz deiner Meinung. (da bin ich gants dainer mainung) - Su questo sono completamente d'accordo con te.
+Ich sehe das ein bisschen anders als du. (ich zee das ain bisschen anders als du) - Io la vedo un po' diversamente da te.
+Ganz ehrlich, ich würde das nicht machen. (gants eerlic, ich würde das nicht machen) - Sinceramente, io non lo farei.
+Das hat mich heute ziemlich geärgert. (das hat mich hoite ziemlich geärgert) - Questa cosa oggi mi ha dato parecchio fastidio.
+Ich bin gerade total entspannt. (ich bin gerade total entspannt) - In questo momento sono completamente rilassato.
+Heute war einfach nicht mein Tag. (hoite var ainfac nicht main tag) - Oggi non era proprio la mia giornata.
+Ich freu mich schon auf das Wochenende. (ich froi mich scion auf das vochenende) - Non vedo già l'ora che arrivi il fine settimana.
+Wir treffen uns am Samstag gegen sechs. (vir treffen uns am zamstag gegen zeks) - Ci vediamo sabato verso le sei.
+Hast du den Termin für Montag noch im Kopf? (hast du den termin für montag noch im kopf) - Ti ricordi ancora dell'appuntamento di lunedì?
+Ich hab mir die Uhrzeit extra aufgeschrieben. (ich hab mir di urtsait extra aufgeschrieben) - Mi sono segnato apposta l'orario.
+Wir sollten spätestens um halb acht losfahren. (vir zolten spetestens um halb acht losfaren) - Dovremmo partire al più tardi alle sette e mezza.
+Ich bringe das Glas später zum Container. (ich bringe das glas speter tsum kontainer) - Più tardi porto il vetro al cassonetto.
+Wir versuchen zu Hause weniger Strom zu verbrauchen. (vir fersuchen tsu hause veniger strom tsu ferbrauchen) - Cerchiamo di consumare meno elettricità in casa.
+Das Fahrrad ist für kurze Strecken viel praktischer. (das farat ist für kurtse strecken fiil praktischer) - La bicicletta è molto più pratica per i tragitti brevi.
+Ich lese gerade einen Roman, den mir ein Freund empfohlen hat. (ich leze gerade ainen roman, den mir ain froint empfohlen hat) - Sto leggendo un romanzo che mi ha consigliato un amico.
+Wir hören beim Kochen meistens Musik. (vir hören baim kochen maistens musik) - Mentre cuciniamo ascoltiamo quasi sempre musica.
+Am Wochenende spielen wir manchmal Karten. (am vochenende scpilen vir manchmal karten) - Nel fine settimana a volte giochiamo a carte.
+Ich hab mich für einen Abendkurs angemeldet. (ich hab mich für ainen abentkurs angemeldet) - Mi sono iscritto a un corso serale.
+Der Sprachkurs findet zweimal pro Woche statt. (der sprac kurs findet tsvai-mal pro voche statt) - Il corso di lingua si tiene due volte alla settimana.
+An der Uni hatte ich besonders gern Geschichte. (an der uni hate ich besonders gern gescichte) - All'università mi piaceva particolarmente la storia.
+Wir haben uns gestern zum ersten Mal persönlich getroffen. (vir habn uns gestern tsum ersten mal persönlich getroffen) - Ieri ci siamo incontrati di persona per la prima volta.
+Stell dich ruhig vor, die anderen kennen dich noch nicht. (stell dich ruig for, di anderen kennen dich noch nicht) - Presentati pure, gli altri non ti conoscono ancora.
+Ich hab das Buch gestern zu Ende gelesen. (ich hab das buc gestern tsu ende gelesen) - Ieri ho finito di leggere il libro.
+Der Film war spannend, aber das Ende hat mich überrascht. (der film var spannend, aber das ende hat mich überrascht) - Il film era avvincente, ma il finale mi ha sorpreso.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
