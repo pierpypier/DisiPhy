@@ -801,6 +801,59 @@ La serrure de la chambre est vraiment difficile à ouvrir. (la serür de la scia
 On entend la télévision de la chambre voisine. (on antan la televizion de la sciambre vwasin) - Si sente la televisione della camera accanto.
 Notre hôte nous a recommandé un petit restaurant du quartier. (notr ot nu a rekomandé an pəti restoran dü kartié) - Il nostro host ci ha consigliato un piccolo ristorante del quartiere.
 J'aimerais réserver une table près de la fenêtre. (ʒemré rezerve ün tabl prè de la fenetr) - Vorrei prenotare un tavolo vicino alla finestra.
+J'ai passé l'aspirateur dans le salon avant l'arrivée des invités. (ʒé pase laspiratör dan le salon avan larivé dezanvité) - Ho passato l'aspirapolvere in salotto prima dell'arrivo degli ospiti.
+Laisse les clés sur la petite table en rentrant. (lès le clé sür la pətit tabl an rantran) - Lascia le chiavi sul tavolino quando rientri.
+La lumière de la cuisine clignote depuis hier soir. (la lümièr de la küizin kliñot döpüi dijèr swar) - La luce della cucina lampeggia da ieri sera.
+J'ai lancé une machine avant de partir au travail. (ʒé lansé ün mascin avan de partir o travay) - Ho avviato una lavatrice prima di andare al lavoro.
+Le chat dort tranquillement sur le canapé. (le scia dor trankilman sür le kanapé) - Il gatto dorme tranquillamente sul divano.
+Le chien a renversé sa gamelle dans la cuisine. (le scièn a ranversé sa gamèl dan la küizin) - Il cane ha rovesciato la sua ciotola in cucina.
+Je me suis fait des tartines avec du miel ce matin. (ʒö me süi fè de tartin avek dü mièl se maten) - Stamattina mi sono preparato delle fette di pane con il miele.
+Tu peux mettre le café sur la table ? (tü pö metr le kafé sür la tabl) - Puoi mettere il caffè sul tavolo?
+On n'a pas besoin de cuisiner, il reste assez de nourriture. (on na pa bezwan de küizine, il rest ase de nurritür) - Non abbiamo bisogno di cucinare, è rimasto abbastanza cibo.
+J'ai réservé une pizza pour toute la famille. (ʒé rezervé ün pitsa pur tut la famiy) - Ho ordinato una pizza per tutta la famiglia.
+Le professeur a expliqué la règle une deuxième fois. (le profesör a eksplike la regl ün dözièm fwa) - L'insegnante ha spiegato la regola una seconda volta.
+J'ai oublié de faire l'exercice de géographie. (ʒé oublié de fer legzersis de ʒeografi) - Ho dimenticato di fare l'esercizio di geografia.
+Elle doit rendre son dossier avant vendredi. (el dwa randr son dosié avan vandrödi) - Deve consegnare il suo dossier entro venerdì.
+On a une interrogation de physique demain matin. (on a ün antrogasiòn de fizik döman maten) - Domani mattina abbiamo una verifica di fisica.
+Il a demandé de l'aide à son professeur après le cours. (il a demandé de led a son profesör aprè le kur) - Ha chiesto aiuto al suo insegnante dopo la lezione.
+Je veux savoir avec qui tu vas sortir ce soir. (ʒö vö savwar avek ki tü va sortir se swar) - Voglio sapere con chi uscirai stasera.
+Tu peux rester encore un peu, mais envoie-moi un message. (tü pö reste ankor an pö, mè anvwa-mwa an mesaj) - Puoi restare ancora un po', ma mandami un messaggio.
+Ce soir, on éteint les écrans à dix heures. (se swar, on etan le zekran a diz ör) - Stasera spegniamo gli schermi alle dieci.
+Je ne veux pas discuter de ça maintenant. (ʒö ne vö pa disküte de sa mantenan) - Non voglio discutere di questo adesso.
+Demain, on fera les courses ensemble. (döman, on fera le kurs ansambl) - Domani faremo la spesa insieme.
+J'ai pris ma température parce que je ne me sentais pas bien. (ʒé pri ma tanperatür parskö ʒö ne me santè pa bièn) - Mi sono misurato la temperatura perché non mi sentivo bene.
+Cette crème est à appliquer deux fois par jour. (set krem é a apliké dö fwa par ʒur) - Questa crema va applicata due volte al giorno.
+J'ai oublié mon ordonnance à la maison. (ʒé oublié mon ordonans a la mezon) - Ho dimenticato la mia ricetta a casa.
+La douleur revient surtout le soir. (la dulör revien sürtu le swar) - Il dolore ritorna soprattutto la sera.
+Je dois passer un examen médical la semaine prochaine. (ʒö dwa pasé an egzamen medikal la semèn proscièn) - Devo fare una visita medica la prossima settimana.
+Le train est parti avec cinq minutes de retard. (le tran é parti avek sank minüt de retar) - Il treno è partito con cinque minuti di ritardo.
+J'ai trouvé une place près de la fenêtre. (ʒé truvé ün plas prè de la fenetr) - Ho trovato un posto vicino al finestrino.
+Tu peux regarder si ma valise est bien fermée ? (tü pö regardé si ma valiz é bièn fermé) - Puoi controllare se la mia valigia è ben chiusa?
+On change de train à la prochaine correspondance. (on sciandʒ de tran a la proscièn korespondans) - Cambiamo treno al prossimo cambio.
+La station est fermée à cause de travaux. (la stasiòn é fermé a koz de travay) - La stazione è chiusa a causa di lavori.
+J'ai oublié de recharger ma carte de transport. (ʒé oublié de resciarʒé ma kart de transport) - Ho dimenticato di ricaricare la mia tessera dei trasporti.
+Le métro était tellement rempli qu'on est restés sur le quai. (le métro etè telman ranpli kon é resté sür le ké) - La metropolitana era così piena che siamo rimasti sul binario.
+Le tram s'est arrêté entre deux stations. (le tram sé areté antr dö stasiòn) - Il tram si è fermato tra due stazioni.
+J'ai laissé passer le bus parce que je n'étais pas sûr du trajet. (ʒé lesé pasé le büs parskö ʒö netè pa sür dü traʒè) - Ho lasciato passare l'autobus perché non ero sicuro del percorso.
+Le chauffeur nous a indiqué où descendre. (le scöför nu a andiké u desandr) - L'autista ci ha indicato dove scendere.
+J'ai téléchargé ma carte d'embarquement sur mon téléphone. (ʒé teleciarʒé ma kart danbarkman sür mon telefon) - Ho scaricato la carta d'imbarco sul telefono.
+On doit encore passer le contrôle de sécurité. (on dwa ankor pasé le kontrol de sekürité) - Dobbiamo ancora passare i controlli di sicurezza.
+Mon vol est affiché sur l'écran numéro six. (mon vol é afiscé sür lékran nümero sis) - Il mio volo è indicato sullo schermo numero sei.
+Le bateau a quitté le port à l'heure prévue. (le bato a kite le por a lör prevü) - Il traghetto ha lasciato il porto all'ora prevista.
+J'ai réservé une place sur le pont extérieur. (ʒé rezervé ün plas sür le pon ekstériör) - Ho prenotato un posto sul ponte esterno.
+Tu dois prendre la rue qui longe le parc. (tü dwa prandr la rü ki lonʒ le park) - Devi prendere la strada che costeggia il parco.
+Je pense qu'on est à deux rues d'ici. (ʒö pans kon é a dö rü disi) - Penso che siamo a due strade da qui.
+Ma voiture ne démarre pas quand le moteur est froid. (ma vuatür ne demar pa kan le motor é frwa) - La mia macchina non parte quando il motore è freddo.
+J'ai entendu un claquement sous la voiture. (ʒé antandü an klakman su la vuatür) - Ho sentito uno schiocco sotto la macchina.
+Le garagiste va faire un diagnostic avant de me donner un prix. (le garajist va fer an diagnostik avan de me doné an pri) - Il meccanico farà una diagnosi prima di darmi un prezzo.
+Un accident bloque complètement la sortie de l'autoroute. (an aksidan blok kompletman la sorti de lotorut) - Un incidente blocca completamente l'uscita dell'autostrada.
+La circulation est revenue à la normale après l'intervention. (la sirkülasiòn é revnü a la normal aprè lantervansiòn) - Il traffico è tornato alla normalità dopo l'intervento.
+Le quartier est resté sans eau pendant plusieurs heures. (le kartié é resté san o pandan plüzior ör) - Il quartiere è rimasto senz'acqua per diverse ore.
+L'hôtel a accepté de nous changer de chambre sans problème. (lotèl a aksepté de nu sciandʒé de sciambre san problem) - L'hotel ha accettato di cambiarci camera senza problemi.
+La climatisation ne fonctionne plus depuis notre arrivée. (la klimatizasiòn ne fonksiòn plü döpüi notr arivé) - L'aria condizionata non funziona più da quando siamo arrivati.
+La salle de bains était inondée après la douche. (la sal de ban zetè inonde aprè la dusc) - Il bagno era allagato dopo la doccia.
+J'ai demandé à l'hôte s'il y avait un supermarché à proximité. (ʒé demandé a lot sil iavè an süpermarsce a proximite) - Ho chiesto all'host se c'era un supermercato nelle vicinanze.
+Le propriétaire nous a envoyé les instructions par e-mail. (le proprietèr nu a anvwaye le zanstrüksiòn par i-mèl) - Il proprietario ci ha mandato le istruzioni via e-mail.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
