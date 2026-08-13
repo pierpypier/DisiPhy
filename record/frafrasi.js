@@ -1651,6 +1651,36 @@ J'ai appelé le dépanneur dès que le moteur s'est arrêté. (ʒé apel le depa
 Il y a eu un petit accident juste devant nous. (il ia ü an pəti aksidan ʒüst devan nu) - C'è stato un piccolo incidente proprio davanti a noi.
 La circulation avance au ralenti depuis plus d'une heure. (la sirkülasiòn avans o ralanti döpüi plüz ün ör) - Il traffico procede a passo d'uomo da più di un'ora.
 Le réseau électrique devrait être rétabli dans la soirée. (le rezo elektrik dövrè etr retabli dan la swaré) - La rete elettrica dovrebbe essere ripristinata in serata.
+J'ai demandé à l'hôtel si je pouvais avoir une chambre plus calme. (ʒé demandé a lotèl si ʒö puvè avwar ün sciambre plü kalm) - Ho chiesto all'hotel se potevo avere una camera più tranquilla.
+Le climatiseur fait un bruit insupportable toute la nuit. (le klimatisör fè an brüi ansüportabl tut la nüi) - Il condizionatore fa un rumore insopportabile tutta la notte.
+L'hôte nous a laissé les clés dans une boîte sécurisée. (lot nu a lesé le clé danz ün bwat sekürizé) - L'host ci ha lasciato le chiavi in una cassetta di sicurezza.
+J'ai réservé cette chambre parce que le petit déjeuner était compris. (ʒé rezervé set sciambre parskö le pəti deʒöné etè kompri) - Ho prenotato questa camera perché la colazione era inclusa.
+On a trouvé une petite maison avec une terrasse donnant sur la mer. (on a truvé ün pətit mezon avek ün teras donã sür la mer) - Abbiamo trovato una casetta con una terrazza sul mare.
+Le propriétaire nous a demandé de ne pas faire de bruit après vingt-trois heures. (le pro-priyetèr nu a demandé de ne pa fer de brüi aprè van-trwa ör) - Il proprietario ci ha chiesto di non fare rumore dopo le ventitré.
+J'ai réservé une table pour trois personnes à huit heures. (ʒé rezervé ün tabl pur trwa person a üit ör) - Ho prenotato un tavolo per tre persone alle otto.
+Je prendrai le plat du jour, ça a l'air très bon. (ʒö prandra le pla dü ʒur, sa a ler trè bon) - Prenderò il piatto del giorno, sembra molto buono.
+Vous avez quelque chose de léger sans viande ? (vu zavé kelkö scos de leʒé san viand) - Avete qualcosa di leggero senza carne?
+On peut avoir l'addition quand vous aurez un moment ? (on pö avwar ladisiòn kan vu zoré an moman) - Possiamo avere il conto quando avete un momento?
+On s'est retrouvés dans ce bar complètement par hasard. (on se retruvé dan se bar komèteman par azar) - Ci siamo ritrovati in questo bar completamente per caso.
+J'ai raconté l'histoire à mes amis et tout le monde a éclaté de rire. (ʒé rakonté listwar a mez ami é tu le mond a eklaté de rir) - Ho raccontato la storia ai miei amici e tutti sono scoppiati a ridere.
+On devrait sortir plus souvent, ça nous ferait du bien. (on dövrè sortir plü suvan, sa nu ferè dü bièn) - Dovremmo uscire più spesso, ci farebbe bene.
+J'ai pris une liste pour ne rien oublier au supermarché. (ʒé pri ün list pur ne rièn oublié o süpermarsce) - Ho fatto una lista per non dimenticare nulla al supermercato.
+Il n'y a plus de tomates mûres, on prendra autre chose. (il nia plü de tomat mür, on prandra otr scos) - Non ci sono più pomodori maturi, prenderemo qualcos'altro.
+Tu sais où ils ont mis les produits sans gluten ? (tü sè u ilz on mi le prodüi san glüten) - Sai dove hanno messo i prodotti senza glutine?
+J'ai essayé cette veste, mais elle est trop grande. (ʒé eseyé set vest, mè el é tro grand) - Ho provato questa giacca, ma è troppo grande.
+Je cherche un pantalon un peu moins cher. (ʒö scersc an pantalon an pö mwan scer) - Cerco un pantalone un po' meno costoso.
+Vous avez cette chemise dans une autre taille ? (vu zavé set scemiz danz ün otr tay) - Avete questa camicia in un'altra taglia?
+J'ai une réunion qui commence dans dix minutes. (ʒé ün reyünyon ki komans dan dis minüt) - Ho una riunione che comincia tra dieci minuti.
+Je t'envoie le fichier dès que j'ai terminé. (ʒö tanvwa le fiscié de ke ʒé terminé) - Ti mando il file appena ho finito.
+La date limite approche, il faut qu'on s'organise. (la dat limit aprosc, il fo kon sorga-niz) - La scadenza si avvicina, dobbiamo organizzarci.
+J'ai répondu à tous les mails avant de partir du bureau. (ʒé repon-dü a tu le mel avan de partir dü büro) - Ho risposto a tutte le email prima di uscire dall'ufficio.
+La connexion coupe toutes les cinq minutes pendant la réunion. (la koneksiòn kup tut le sank minüt pandan la reyünyon) - La connessione cade ogni cinque minuti durante la riunione.
+Tu m'entends bien ou le son coupe ? (tü mantan bièn u le son kup) - Mi senti bene o l'audio si interrompe?
+J'ai oublié de brancher mon téléphone avant de dormir. (ʒé oublié de bransce mon telefon avan de dormi) - Ho dimenticato di collegare il telefono prima di dormire.
+L'imprimante refuse toujours d'imprimer ce document. (lanprimant refüz tuʒur danprime se doküman) - La stampante continua a non voler stampare questo documento.
+J'ai visité une exposition consacrée à l'Égypte ancienne. (ʒé vizité ün ekspozisiòn konsakré a leʒipt ansyèn) - Ho visitato una mostra dedicata all'antico Egitto.
+Le musée ferme dans une heure, on ferait mieux d'entrer maintenant. (le müze ferm danz ün ör, on ferè miö dantré mantenan) - Il museo chiude tra un'ora, faremmo meglio a entrare adesso.
+J'ai adoré le film, surtout la façon dont l'histoire est racontée. (ʒé adore le film, sürtu la fason don listwar é rakonté) - Ho adorato il film, soprattutto il modo in cui è raccontata la storia.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
