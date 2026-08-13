@@ -748,6 +748,59 @@ La chambre était propre, mais il manquait du savon dans la salle de bains. (la 
 J'ai demandé à l'accueil si on pouvait changer les draps. (ʒé demandé a laköy si on puvè sciandʒé le dra) - Ho chiesto alla reception se si potevano cambiare le lenzuola.
 Notre appartement de vacances est à cinq minutes à pied de la plage. (notr apartman de vakans é a sank minüt a pié de la plaʒ) - Il nostro appartamento per le vacanze è a cinque minuti a piedi dalla spiaggia.
 On a reçu le code d'entrée par message hier soir. (on a resü le kod dantré par mesaj ier swar) - Abbiamo ricevuto il codice d'ingresso via messaggio ieri sera.
+J'ai lavé le sol de l'entrée parce qu'il était plein de traces. (ʒé lavé le sol de lantré parskil etè plen de tras) - Ho lavato il pavimento dell'ingresso perché era pieno di impronte.
+Tu peux arroser les plantes pendant mon absence ? (tü pö aroze le plant pandan mon nabsan s) - Puoi annaffiare le piante mentre sono via?
+J'ai retrouvé les clés dans la poche de ma veste. (ʒé retruvé le clé dan la posc de ma vest) - Ho ritrovato le chiavi nella tasca della mia giacca.
+La porte du frigo ne ferme plus correctement. (la port dü frigo ne ferm plü korektman) - La porta del frigorifero non si chiude più bene.
+Le chien s'est couché près de mes pieds. (le scièn sé kucé prè de me pié) - Il cane si è sdraiato vicino ai miei piedi.
+Il faut emmener le chat chez le vétérinaire demain. (il fo anmené le scia sce le veteriner döman) - Bisogna portare il gatto dal veterinario domani.
+J'ai bu un verre de jus avant de sortir. (ʒé bü an ver de ʒü avan de sortir) - Ho bevuto un bicchiere di succo prima di uscire.
+Tu veux du beurre sur ta tartine ? (tü vö dü bör sür ta tartin) - Vuoi del burro sulla tua fetta di pane?
+On a préparé le déjeuner tous les deux. (on a preparé le deʒöné tu le dö) - Abbiamo preparato il pranzo insieme.
+J'ai laissé refroidir le plat avant de le mettre au frigo. (ʒé lesé refrawdir le pla avan de le metr o frigo) - Ho lasciato raffreddare il piatto prima di metterlo in frigorifero.
+La prof de français a corrigé nos rédactions. (la prof de fransè a koreʒé no redaksiòn) - L'insegnante di francese ha corretto i nostri temi.
+Il a oublié son cahier dans la salle de cours. (il a oublié son kayé dan la sal de kur) - Ha dimenticato il suo quaderno in aula.
+Je dois revoir les verbes irréguliers avant le test. (ʒö dwa revwar le verb irégülié avan le test) - Devo ripassare i verbi irregolari prima del test.
+Elle s'est inscrite à un cours de dessin après l'école. (el sé anskrit a an kur de desan aprè lekol) - Si è iscritta a un corso di disegno dopo la scuola.
+J'ai besoin d'une explication supplémentaire pour cet exercice. (ʒé bezwan dün eksplikasiòn süplemantèr pur set egzersis) - Ho bisogno di una spiegazione in più per questo esercizio.
+Tu peux ranger tes chaussures dans l'entrée ? (tü pö ranʒé te scosür dan lantré) - Puoi mettere le tue scarpe all'ingresso?
+Je t'autorise à sortir, mais tu rentres avant onze heures. (ʒö totoriz a sortir, mè tü rantr avan onz ör) - Ti autorizzo a uscire, ma devi rientrare prima delle undici.
+Ce n'est pas grave si tu fais une erreur, recommence simplement. (se né pa grav si tü fè ün erör, rekomans simplöman) - Non è grave se fai un errore, ricomincia semplicemente.
+On mangera ensemble quand tu seras rentré. (on manʒra ansambl kan tü sera rantré) - Mangeremo insieme quando sarai tornato.
+J'ai pris un rendez-vous en ligne avec le médecin. (ʒé pri an randé-vu an liñ avek le medsan) - Ho preso un appuntamento online con il medico.
+Le pharmacien m'a donné des conseils pour soulager la douleur. (le farmasièn ma doné de konsèy pur sulajé la dulör) - Il farmacista mi ha dato dei consigli per alleviare il dolore.
+Je n'ai presque plus de symptômes aujourd'hui. (ʒö né presk plü de simptom oʒurdüi) - Oggi non ho quasi più sintomi.
+Le médecin veut vérifier mes résultats avant de changer le traitement. (le medsan vö verifié me rezülta avan de sciandʒé le tretman) - Il medico vuole controllare i miei risultati prima di cambiare la terapia.
+Je me sens faible depuis ce matin. (ʒö me san febl döpüi se maten) - Mi sento debole da stamattina.
+Le train est arrivé sur un autre quai que prévu. (le tran é arivé sür an otr ké ke prevü) - Il treno è arrivato su un binario diverso dal previsto.
+J'ai demandé au guichet quel train je devais prendre. (ʒé demandé o giscè kel tran ʒö devè prandr) - Ho chiesto allo sportello quale treno dovevo prendere.
+On a trouvé une place assise juste avant le départ. (on a truvé ün plas asi ʒüst avan le depart) - Abbiamo trovato un posto a sedere proprio prima della partenza.
+Le train de nuit est beaucoup plus confortable. (le tran de nüi é bokou plü konfortabl) - Il treno notturno è molto più comodo.
+La station suivante est à seulement deux arrêts d'ici. (la stasiòn süivant é a selman dö zarè disi) - La stazione successiva è a sole due fermate da qui.
+J'ai dû changer de ligne pour rejoindre le centre-ville. (ʒé dü sciandʒé de liñ pur reʒwèndr le santr-vil) - Ho dovuto cambiare linea per raggiungere il centro.
+Le métro est arrivé au moment où les portes se fermaient. (le métro é arivé o moman u le port se fermè) - La metropolitana è arrivata proprio mentre si chiudevano le porte.
+On peut prendre le tram jusqu'au quartier historique. (on pö prandr le tram ʒüsk o kartié istorik) - Possiamo prendere il tram fino al quartiere storico.
+Le bus est passé sans s'arrêter parce qu'il était complet. (le büs é pase san sarete parskil etè komplet) - L'autobus è passato senza fermarsi perché era pieno.
+J'ai vérifié l'arrêt sur l'application avant de monter. (ʒé verifié larè sür laplikasiòn avan de monte) - Ho controllato la fermata sull'app prima di salire.
+Notre porte d'embarquement vient encore de changer. (notr port danbarkman vien ankor de sciandʒé) - Il nostro gate d'imbarco è cambiato di nuovo.
+J'ai mis mon téléphone en mode avion. (ʒé mi mon telefon an mod aviòn) - Ho messo il telefono in modalità aereo.
+Il faut récupérer les bagages avant de passer la douane. (il fo reküperé le bagàʒ avan de pasé la duwan) - Bisogna recuperare i bagagli prima di passare la dogana.
+On a atterri sans problème malgré le mauvais temps. (on a aterì san problem malgre le movè tan) - Siamo atterrati senza problemi nonostante il maltempo.
+Le bateau part du quai numéro quatre. (le bato par dü ké nümero katr) - Il traghetto parte dal molo numero quattro.
+On a réservé une cabine pour la traversée de nuit. (on a rezerve ün kabin pur la traversé de nüi) - Abbiamo prenotato una cabina per la traversata notturna.
+Continue tout droit jusqu'au grand rond-point. (kontinü tu drwa ʒüsk o gran ron-pwan) - Continua dritto fino alla grande rotonda.
+La banque est juste après le pont, sur ta gauche. (la bank é ʒüst aprè le pon, sür ta gos) - La banca è subito dopo il ponte, sulla tua sinistra.
+Je me suis garé un peu plus loin parce que cette rue était pleine. (ʒö me süi garé an pö plü lwan parskö set rü etè plen) - Ho parcheggiato un po' più lontano perché questa strada era piena.
+Le pneu arrière perd de l'air depuis hier. (le pnö arier per de lèr döpüi ier) - La gomma posteriore perde aria da ieri.
+J'ai appelé le garage pour commander la pièce. (ʒé apel le garaʒ pur komandé la piès) - Ho chiamato l'officina per ordinare il pezzo.
+La voiture devant nous a freiné brusquement. (la vuatür devan nu a frené brüskman) - La macchina davanti a noi ha frenato bruscamente.
+Le feu est en panne depuis ce matin. (le fö é an pan döpüi se maten) - Il semaforo è guasto da stamattina.
+Après l'orage, plusieurs rues étaient complètement inondées. (aprè loraʒ, plüzior rü zetè kompletman inonde) - Dopo il temporale, diverse strade erano completamente allagate.
+L'hôtel nous a proposé de garder nos bagages après le départ. (lotèl nu a propozé de gardé no bagàʒ aprè le depart) - L'hotel ci ha proposto di tenere i nostri bagagli dopo il check-out.
+La serrure de la chambre est vraiment difficile à ouvrir. (la serür de la sciambre é vreman difisil a uvrir) - La serratura della camera è davvero difficile da aprire.
+On entend la télévision de la chambre voisine. (on antan la televizion de la sciambre vwasin) - Si sente la televisione della camera accanto.
+Notre hôte nous a recommandé un petit restaurant du quartier. (notr ot nu a rekomandé an pəti restoran dü kartié) - Il nostro host ci ha consigliato un piccolo ristorante del quartiere.
+J'aimerais réserver une table près de la fenêtre. (ʒemré rezerve ün tabl prè de la fenetr) - Vorrei prenotare un tavolo vicino alla finestra.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
