@@ -12,1155 +12,806 @@
    a mano: il parsing avviene automaticamente più in basso.
    ================================================================ */
 const FRASI_ING_RAW = `
-What would you like for breakfast? — Cosa vuoi per colazione?
-What time does the train leave? — A che ora parte il treno?
-Can you pass me the salt, please? — Puoi passarmi il sale, per favore?
-Do you have any plans for the weekend? — Hai programmi per il weekend?
-How much is this, please? — Quanto costa questo, per favore?
-Can I have the bill, please? — Posso avere il conto, per favore?
-Where did you park the car? — Dove hai parcheggiato la macchina?
-Do you know where the nearest pharmacy is? — Sai dov'è la farmacia più vicina?
-What's the weather like today? — Che tempo fa oggi?
-Can you turn down the music, please? — Puoi abbassare la musica, per favore?
-Shall we go for a walk after dinner? — Andiamo a fare due passi dopo cena?
-Can you help me carry these bags? — Puoi aiutarmi a portare queste borse?
-What time do you usually wake up? — A che ora ti svegli di solito?
-Do you want tea or coffee? — Vuoi tè o caffè?
-Can you pick up some milk on your way home? — Puoi prendere del latte tornando a casa?
-Would you like a hand with dinner? — Vuoi una mano con la cena?
-Excuse me, is this seat taken? — Scusi, questo posto è occupato?
-Have you finished your homework? — Hai finito i compiti?
-What time does the pharmacy close? — A che ora chiude la farmacia?
-We'll talk about it later, okay? — Ne parliamo più tardi, va bene?
-Wake up, it's time to go to school! — Sveglia, è ora di andare a scuola!
-Did you brush your teeth? — Ti sei lavato i denti?
-Who's taking the dog out tonight? — Chi porta fuori il cane stasera?
-Have you done your homework yet? — Hai già fatto i compiti?
-Can you help me fold the laundry? — Puoi aiutarmi a piegare il bucato?
-Who left the lights on? — Chi ha lasciato le luci accese?
-Shall we order pizza tonight? — Stasera ordiniamo la pizza?
-Can you check if the door is locked? — Puoi controllare se la porta è chiusa a chiave?
-Who used my charger? — Chi ha usato il mio caricabatterie?
-Can you turn down the volume, please? — Puoi abbassare il volume, per favore?
-Could you please turn off the lights before leaving? — Potresti spegnere le luci prima di uscire, per favore?
-Could you repeat that more slowly, please? — Potrebbe ripeterlo più lentamente, per favore?
-We missed the train, so we took the next one. — Abbiamo perso il treno, quindi abbiamo preso il successivo.
-There is a pharmacy near the hotel. — C'è una farmacia vicino all'hotel.
-I left my passport in the room. — Ho lasciato il passaporto in camera.
-What time does the shop open tomorrow? — A che ora apre il negozio domani?
-We were having dinner when you called. — Stavamo cenando quando hai chiamato.
-I will send the documents this afternoon. — Manderò i documenti questo pomeriggio.
-The ticket machine is not working. — La macchinetta dei biglietti non funziona.
-She has lived here since 2020. — Vive qui dal 2020.
-Did you see my glasses on the desk? — Hai visto i miei occhiali sulla scrivania?
-We are going to visit the archaeological site tomorrow. — Domani visiteremo il sito archeologico.
-I have never travelled by night train. — Non ho mai viaggiato su un treno notturno.
-I forgot my umbrella at the office. — Ho dimenticato il mio ombrello in ufficio.
-We have been waiting for the doctor for twenty minutes. — Stiamo aspettando il medico da venti minuti.
-Could I have a window seat, please? — Potrei avere un posto vicino al finestrino, per favore?
-The museum was closed when we arrived. — Il museo era chiuso quando siamo arrivati.
-I need to buy a charger for my phone. — Devo comprare un caricabatterie per il mio telefono.
-My daughter will be home after school. — Mia figlia sarà a casa dopo la scuola.
-We usually have breakfast before leaving home. — Di solito facciamo colazione prima di uscire di casa.
-The train has already left the platform. — Il treno è già partito dal binario.
-I was reading when the lights went out. — Stavo leggendo quando è andata via la luce.
-Please keep this receipt in case you need to return the item. — Conservi questo scontrino nel caso debba restituire l'articolo.
-Tomorrow we are meeting our friends at the station. — Domani incontreremo i nostri amici alla stazione.
-She has just finished her homework. — Ha appena finito i compiti.
-How long does the journey take by bus? — Quanto dura il viaggio in autobus?
-I will be back before dinner. — Tornerò prima di cena.
-Could you show me where the entrance is? — Potrebbe mostrarmi dov'è l'ingresso?
-I left my bag on the train, but I remember the carriage number. — Ho lasciato la borsa sul treno, ma ricordo il numero della carrozza.
-We need to change trains at the next station. — Dobbiamo cambiare treno alla prossima stazione.
-I ordered this yesterday, but it has not arrived yet. — Ho ordinato questo ieri, ma non è ancora arrivato.
-She was waiting outside when the shop opened. — Stava aspettando fuori quando il negozio ha aperto.
-I have never seen such a beautiful building. — Non ho mai visto un edificio così bello.
-If the weather is good tomorrow, we will go for a walk. — Se domani il tempo sarà bello, andremo a fare una passeggiata.
-Do you know whether this bus stops near the museum? — Sai se questo autobus si ferma vicino al museo?
-I forgot to charge my phone before leaving home. — Ho dimenticato di caricare il telefono prima di uscire di casa.
-We were looking for a quiet restaurant near the station. — Cercavamo un ristorante tranquillo vicino alla stazione.
-Please tell me if the meeting starts at nine. — Per favore, dimmi se la riunione inizia alle nove.
-He has already sent the email to the office. — Ha già mandato l'email all'ufficio.
-I will take the underground because the roads are busy. — Prenderò la metropolitana perché le strade sono trafficate.
-We arrived early, so we had coffee before the lesson. — Siamo arrivati presto, quindi abbiamo preso un caffè prima della lezione.
-Can I pay by card, or do you need cash? — Posso pagare con la carta o serve contante?
-Can you recommend a good restaurant nearby? — Puoi consigliarmi un buon ristorante qui vicino?
-Did you remember to lock the front door? — Ti sei ricordato di chiudere a chiave la porta d'ingresso?
-Could you tell me which platform the train leaves from? — Potrebbe dirmi da quale binario parte il treno?
-Have you packed your suitcase yet? — Hai già fatto la valigia?
-Can you switch off the oven, please? — Puoi spegnere il forno, per favore?
-Could you water the garden tonight? — Potresti innaffiare il giardino stasera?
-Where can I find a supermarket around here? — Dove posso trovare un supermercato da queste parti?
-Do you need a hand with the suitcases? — Hai bisogno di una mano con le valigie?
-Can you check if we still have any sugar? — Puoi controllare se abbiamo ancora zucchero?
-Is there a discount for students? — C'è uno sconto per studenti?
-Could you validate my ticket, please? — Potrebbe convalidare il mio biglietto, per favore?
-I need to return this item, do you have the receipt? — Devo restituire questo articolo, ha lo scontrino?
-Can we reschedule the meeting to Thursday? — Possiamo spostare la riunione a giovedì?
-Did the teacher give you any homework today? — La maestra ti ha dato compiti oggi?
-Have you seen the house keys anywhere? — Hai visto le chiavi di casa da qualche parte?
-Can you keep an eye on the kids for a minute? — Puoi tenere d'occhio i bambini per un minuto?
-Is breakfast included in the price of the room? — La colazione è inclusa nel prezzo della camera?
-Could you tell me the wifi password? — Potrebbe dirmi la password del wifi?
-Can you tell me how to get to the city center? — Puoi dirmi come arrivare al centro città?
-Have you already handed in your homework? — Hai già consegnato i compiti?
-Do you have anything in a smaller size? — Avete qualcosa in una taglia più piccola?
-Did you turn off the lights before leaving? — Hai spento le luci prima di uscire?
-Can you check the departure time again? — Puoi controllare di nuovo l'orario di partenza?
-Is there a charge for extra luggage? — C'è un costo per il bagaglio in eccesso?
-Could you save me a seat, please? — Potresti tenermi un posto, per favore?
-Can you tell me where the fitting room is? — Puoi dirmi dov'è il camerino?
-Have you fed the fish this morning? — Hai dato da mangiare ai pesci stamattina?
-Have you checked your email today? — Hai controllato la posta elettronica oggi?
-Can you help me set up the new printer? — Puoi aiutarmi a configurare la nuova stampante?
-Is there a lift in this building? — C'è un ascensore in questo palazzo?
-Could you turn up the heating a bit? — Potresti alzare un po' il riscaldamento?
-Can you show me the way to the station? — Puoi indicarmi la strada per la stazione?
-Have you watered the plants today? — Hai innaffiato le piante oggi?
-Do you have this jacket in another colour? — Avete questa giacca in un altro colore?
-Did you turn off the gas tap? — Hai chiuso il rubinetto del gas?
-Can you check if there's still milk in the fridge? — Puoi controllare se c'è ancora latte in frigo?
-Is there parking nearby? — C'è un parcheggio nelle vicinanze?
-Could you switch the channel, please? — Potresti cambiare canale, per favore?
-Can you help me carry the boxes upstairs? — Puoi aiutarmi a portare le scatole di sopra?
-Did you turn off your alarm before the holidays? — Hai disattivato la sveglia prima delle vacanze?
-Do you close for lunch? — Chiudete per la pausa pranzo?
-Have you printed the concert tickets? — Hai stampato i biglietti per il concerto?
-Can you turn the volume down, the baby is sleeping? — Puoi abbassare il volume, il bambino dorme?
-Is there a pharmacy open on Sundays? — C'è una farmacia aperta la domenica?
-She will travel to Rome next summer. — Lei viaggerà a Roma la prossima estate.
-We visited the museum yesterday. — Abbiamo visitato il museo ieri.
-He is doing his homework. — Lui sta facendo i compiti.
-They will move to a new house next month. — Si trasferiranno in una nuova casa il mese prossimo.
-I usually take the train to work. — Di solito prendo il treno per andare al lavoro.
-Where is the nearest pharmacy? — Dov'è la farmacia più vicina?
-My sister works in an office downtown. — Mia sorella lavora in un ufficio in centro.
-We were watching a movie when the phone rang. — Stavamo guardando un film quando ha squillato il telefono.
-Could you help me find this address? — Potrebbe aiutarmi a trovare questo indirizzo?
-The children are playing in the garden. — I bambini stanno giocando in giardino.
-I have already booked the hotel room. — Ho già prenotato la camera d'albergo.
-She works as a teacher at the local school. — Lei lavora come insegnante nella scuola del quartiere.
-We will meet at the station at six. — Ci incontreremo alla stazione alle sei.
-He forgot his umbrella at home. — Ha dimenticato l'ombrello a casa.
-I would like to try on this jacket. — Vorrei provare questa giacca.
-The plane departs from gate twelve. — L'aereo parte dal gate dodici.
-My parents are cooking dinner together. — I miei genitori stanno cucinando la cena insieme.
-I need to renew my passport soon. — Devo rinnovare il passaporto presto.
-The shop closes at eight in the evening. — Il negozio chiude alle otto di sera.
-We are learning English at school this year. — Quest'anno stiamo imparando l'inglese a scuola.
-He missed the last train home. — Ha perso l'ultimo treno per tornare a casa.
-I will call you as soon as I arrive. — Ti chiamerò appena arrivo.
-The family gathered for a birthday dinner. — La famiglia si è riunita per una cena di compleanno.
-I have never been to London. — Non sono mai stato a Londra.
-We are going shopping this afternoon. — Questo pomeriggio andiamo a fare shopping.
-She had already left when I arrived. — Lei era già partita quando sono arrivato.
-Can you close the door, it's cold in here. — Puoi chiudere la porta, fa freddo qui.
-They are renovating their kitchen. — Stanno ristrutturando la cucina.
-I will finish this report by Friday. — Finirò questo rapporto entro venerdì.
-We took the wrong bus this morning. — Stamattina abbiamo preso l'autobus sbagliato.
-My brother is studying for his exams. — Mio fratello sta studiando per gli esami.
-Excuse me, does this train stop at the airport? — Mi scusi, questo treno ferma all'aeroporto?
-The waiter recommended the fish of the day. — Il cameriere ha consigliato il pesce del giorno.
-We will visit our grandparents this weekend. — Questo fine settimana andremo dai nonni.
-He always arrives late to meetings. — Arriva sempre tardi alle riunioni.
-Could you lower the price a little? — Potrebbe abbassare un po' il prezzo?
-I have lost my keys again. — Ho perso di nuovo le chiavi.
-The plane was delayed because of the storm. — L'aereo ha subito un ritardo a causa del temporale.
-We are packing our suitcases for the trip. — Stiamo facendo le valigie per il viaggio.
-She will start a new job next Monday. — Lei inizierà un nuovo lavoro lunedì prossimo.
-I need directions to the town hall. — Ho bisogno di indicazioni per il municipio.
-My colleagues are preparing the presentation. — I miei colleghi stanno preparando la presentazione.
-We used to walk to school every day. — Andavamo a scuola a piedi ogni giorno.
-Is there a fitting room nearby? — C'è un camerino qui vicino?
-He fixed the car by himself. — Ha riparato l'auto da solo.
-The kids will play football in the park. — I bambini giocheranno a calcio nel parco.
-I forgot to lock the front door. — Ho dimenticato di chiudere a chiave la porta d'ingresso.
-I need to make a doctor's appointment. — Devo prendere un appuntamento dal medico.
-We will celebrate her birthday at a restaurant. — Festeggeremo il suo compleanno al ristorante.
-He has been working here for ten years. — Lavora qui da dieci anni.
-Could you send me the invoice by email? — Potrebbe inviarmi la fattura via email?
-I am looking for a book about ancient history. — Sto cercando un libro sulla storia antica.
-They will get married next spring. — Si sposeranno la prossima primavera.
-We had dinner with our neighbors last night. — Ieri sera abbiamo cenato con i vicini di casa.
-I usually go to the gym after work. — Di solito vado in palestra dopo il lavoro.
-Is this seat taken? — Questo posto è occupato?
-She is learning to play the piano. — Sta imparando a suonare il piano.
-We will call a taxi to the airport. — Chiameremo un taxi per l'aeroporto.
-I dropped my phone and broke the screen. — Mi è caduto il telefono e si è rotto lo schermo.
-He is fixing the wifi connection. — Sta sistemando la connessione wifi.
-We were stuck in traffic for an hour. — Siamo rimasti bloccati nel traffico per un'ora.
-Could you water the plants while I'm away? — Potresti annaffiare le piante mentre sono via?
-I will pick up the kids from school. — Andrò a prendere i bambini a scuola.
-The bank is closed on Sundays. — La banca è chiusa la domenica.
-We are planning a trip to the mountains. — Stiamo pianificando un viaggio in montagna.
-He lost his job last month. — Ha perso il lavoro il mese scorso.
-I need a haircut before the wedding. — Ho bisogno di un taglio di capelli prima del matrimonio.
-She will send the package tomorrow morning. — Spedirà il pacco domani mattina.
-We are cleaning the house before the guests arrive. — Stiamo pulendo la casa prima che arrivino gli ospiti.
-I forgot my wallet at the restaurant. — Ho dimenticato il portafoglio al ristorante.
-The weather will improve by the weekend. — Il tempo migliorerà entro il fine settimana.
-He walks the dog every morning. — Porta a spasso il cane ogni mattina.
-I have to return this book to the library. — Devo restituire questo libro in biblioteca.
-We will paint the fence this weekend. — Questo fine settimana tingeremo la staccionata.
-She was cooking when the phone rang. — Stava cucinando quando ha squillato il telefono.
-Can you show me the way to the nearest station? — Puoi indicarmi la strada per la stazione più vicina?
-They are building a new bridge downtown. — Stanno costruendo un nuovo ponte in centro.
-I will submit the application tomorrow. — Invierò la domanda domani.
-We missed the connecting flight. — Abbiamo perso il volo di coincidenza.
-My cousin is visiting us next week. — Mio cugino ci verrà a trovare la prossima settimana.
-Excuse me, where can I buy a bus ticket? — Mi scusi, dove posso comprare un biglietto dell'autobus?
-The teacher explained the lesson again. — L'insegnante ha spiegato di nuovo la lezione.
-I was sleeping when the alarm went off. — Stavo dormendo quando è suonata la sveglia.
-We will repaint the living room next month. — Ridipingeremo il soggiorno il mese prossimo.
-He always checks his email before breakfast. — Controlla sempre le email prima di colazione.
-Could you repeat that, please? — Potresti ripetere, per favore?
-I have broken my glasses again. — Ho rotto di nuovo gli occhiali.
-The concert was cancelled due to rain. — Il concerto è stato annullato a causa della pioggia.
-We are organizing a surprise party for him. — Stiamo organizzando una festa a sorpresa per lui.
-She will graduate next June. — Lei si laureerà a giugno prossimo.
-I need to charge my phone before we leave. — Devo caricare il telefono prima di uscire.
-My colleagues are working on a new project. — I miei colleghi stanno lavorando a un nuovo progetto.
-We used to spend summers at the seaside. — Passavamo le estati al mare.
-Is there a supermarket around the corner? — C'è un supermercato dietro l'angolo?
-He repaired the roof after the storm. — Ha riparato il tetto dopo la tempesta.
-The students will present their projects on Friday. — Gli studenti presenteranno i loro progetti venerdì.
-I forgot to turn off the oven. — Ho dimenticato di spegnere il forno.
-I need to withdraw some cash from the ATM. — Devo prelevare dei contanti al bancomat.
-We will watch the sunset from the terrace. — Guarderemo il tramonto dalla terrazza.
-She has just finished her shift at the hospital. — Ha appena finito il turno in ospedale.
-Could you turn on the heating, please? — Potresti accendere il riscaldamento, per favore?
-They are painting the fence in the garden. — Stanno tinteggiando la staccionata in giardino.
-I will train for the marathon this year. — Mi allenerò per la maratona quest'anno.
-We rented a car for the weekend. — Abbiamo noleggiato un'auto per il fine settimana.
-My grandmother is knitting a scarf. — Mia nonna sta lavorando a maglia una sciarpa.
-Excuse me, is this seat free? — Mi scusi, questo posto è libero?
-He was jogging in the park this morning. — Stamattina stava facendo jogging nel parco.
-We will attend the concert next Friday. — Andremo al concerto venerdì prossimo.
-I dropped my keys down the drain. — Mi sono caduto le chiavi nel tombino.
-She is preparing for a job interview. — Si sta preparando per un colloquio di lavoro.
-We were camping when the storm started. — Eravamo in campeggio quando è iniziato il temporale.
-Could you feed the cat this evening? — Potresti dar da mangiare al gatto stasera?
-I will return the rented equipment tomorrow. — Restituirò l'attrezzatura noleggiata domani.
-The library closes early on Saturdays. — La biblioteca chiude presto il sabato.
-We are planting tomatoes in the garden. — Stiamo piantando pomodori in giardino.
-He broke his arm while skiing. — Si è rotto un braccio sciando.
-I need new batteries for the remote. — Ho bisogno di pile nuove per il telecomando.
-She will publish her first novel next year. — Pubblicherà il suo primo romanzo l'anno prossimo.
-We are decorating the house for Christmas. — Stiamo addobbando la casa per Natale.
-The train was ten minutes late this morning. — Il treno stamattina è arrivato con dieci minuti di ritardo.
-He volunteers at the shelter on weekends. — Fa volontariato al rifugio nei weekend.
-I have to renew my gym membership. — Devo rinnovare l'abbonamento in palestra.
-We will host my in-laws for dinner tonight. — Stasera ospiteremo i miei suoceri per cena.
-She had finished the exam before the bell rang. — Aveva finito l'esame prima che suonasse la campanella.
-Could you switch off the printer, please? — Potresti spegnere la stampante, per favore?
-They are installing new windows in the house. — Stanno installando nuove finestre in casa.
-I will apply for a promotion next month. — Farò domanda per una promozione il mese prossimo.
-We booked a table for our anniversary. — Abbiamo prenotato un tavolo per il nostro anniversario.
-My uncle is teaching me how to fish. — Mio zio mi sta insegnando a pescare.
-Excuse me, is this the queue for the ticket office? — Mi scusi, è questa la fila per la biglietteria?
-He was working from home when the internet went down. — Stava lavorando da casa quando è saltata la connessione internet.
-We will join a language course in September. — A settembre inizieremo un corso di lingua.
-I spilled coffee on my laptop this morning. — Stamattina ho versato il caffè sul portatile.
-She is negotiating a new contract with her employer. — Sta negoziando un nuovo contratto con il datore di lavoro.
-We were hiking when it started to rain heavily. — Stavamo facendo trekking quando ha iniziato a piovere forte.
-Could you separate the recycling before Friday? — Potresti fare la raccolta differenziata prima di venerdì?
-I will return your umbrella tomorrow. — Ti restituirò l'ombrello domani.
-The plumber is fixing the leak in the bathroom. — L'idraulico sta riparando la perdita in bagno.
-We are considering moving abroad next year. — Stiamo pensando di trasferirci all'estero l'anno prossimo.
-He sprained his ankle during the match. — Si è slogato la caviglia durante la partita.
-I need to update my insurance policy. — Devo aggiornare la mia polizza assicurativa.
-She will host a video call with the whole team. — Organizzerà una videochiamata con tutto il team.
-We are borrowing our neighbor's ladder. — Stiamo prendendo in prestito la scala del vicino.
-Is there a discount for students at the museum? — C'è uno sconto per studenti al museo?
-He commutes to work by bicycle every day. — Va al lavoro in bicicletta ogni giorno.
-The electrician will come to check the fuse box. — L'elettricista verrà a controllare il quadro elettrico.
-I need to see a dentist about this toothache. — Devo andare dal dentista per questo mal di denti.
-We will celebrate their retirement next Friday. — Festeggeremo il loro pensionamento venerdì prossimo.
-She had already paid the bill before I offered. — Aveva già pagato il conto prima che mi offrissi io.
-Could you check the oil level in the car? — Potresti controllare il livello dell'olio in macchina?
-They are learning to drive this summer. — Questa estate stanno imparando a guidare.
-I will resign from my job next month. — Mi dimetterò dal lavoro il mese prossimo.
-We are waiting for a package to arrive. — Stiamo aspettando l'arrivo di un pacco.
-My sister is learning photography as a hobby. — Mia sorella sta imparando la fotografia come hobby.
-Excuse me, has the mail arrived yet? — Mi scusi, è già arrivata la posta?
-He was baking a cake when the oven stopped working. — Stava preparando una torta quando il forno ha smesso di funzionare.
-We will move to a new city next year. — Ci trasferiremo in una nuova città l'anno prossimo.
-I broke down on the highway this morning. — Stamattina mi si è rotta l'auto in autostrada.
-She is coaching the youth football team. — Allena la squadra giovanile di calcio.
-We were camping when the tent collapsed. — Eravamo in campeggio quando la tenda è crollata.
-Could you cancel my streaming subscription? — Potresti annullare il mio abbonamento allo streaming?
-I will pay the electricity bill tomorrow. — Pagherò la bolletta della luce domani.
-The doctor prescribed some new medication. — Il medico ha prescritto un nuovo farmaco.
-We are practicing for the school concert. — Ci stiamo esercitando per il concerto scolastico.
-He forgot his phone charger at the hotel. — Ha dimenticato il caricabatterie del telefono in hotel.
-I need to change my phone plan. — Devo cambiare il mio piano telefonico.
-She will start painting the fence tomorrow. — Domani inizierà a dipingere la staccionata.
-We are cleaning out the garage this weekend. — Questo fine settimana stiamo svuotando il garage.
-My laptop crashed while I was saving the file. — Il portatile si è bloccato mentre salvavo il file.
-The library book is already overdue. — Il libro della biblioteca è già in ritardo.
-He is preparing the garden for winter. — Sta preparando il giardino per l'inverno.
-I have to pick up a prescription at the pharmacy. — Devo ritirare una ricetta in farmacia.
-We will attend a parent-teacher meeting tomorrow. — Domani parteciperemo a un colloquio con gli insegnanti.
-She had cleaned the whole house before the guests arrived. — Aveva pulito tutta la casa prima che arrivassero gli ospiti.
-Could you check in for us at the hotel? — Potresti fare il check-in per noi in hotel?
-They are organizing a charity event next month. — Stanno organizzando un evento di beneficenza il mese prossimo.
-I will take the car to the mechanic this week. — Porterò la macchina dal meccanico questa settimana.
-We are planning a road trip along the coast. — Stiamo pianificando un viaggio in auto lungo la costa.
-My nephew is working on a school project about volcanoes. — Mio nipote sta lavorando a un progetto scolastico sui vulcani.
-Excuse me, could I see the menu, please? — Mi scusi, potrei vedere il menu, per favore?
-He was walking the dog when it started to rain. — Stava portando a spasso il cane quando ha iniziato a piovere.
-We will take the cat to the vet on Monday. — Porteremo il gatto dal veterinario lunedì.
-I returned the shoes because they were too small. — Ho restituito le scarpe perché erano troppo piccole.
-She is preparing lunch for the whole family. — Sta preparando il pranzo per tutta la famiglia.
-We were shopping online when the website crashed. — Stavamo facendo acquisti online quando il sito si è bloccato.
-Could you help me move this sofa? — Potresti aiutarmi a spostare questo divano?
-I will join the book club next week. — La prossima settimana entrerò nel club del libro.
-The flight was delayed because of bad weather. — Il volo ha subito un ritardo a causa del maltempo.
-We are hosting a family reunion this summer. — Questa estate ospiteremo una riunione di famiglia.
-He complained to the waiter about the cold soup. — Si è lamentato con il cameriere per la zuppa fredda.
-I need to buy tickets for the festival. — Devo comprare i biglietti per il festival.
-She will renovate the bathroom next spring. — Rinnoverà il bagno la prossima primavera.
-We are viewing an apartment this afternoon. — Questo pomeriggio andiamo a vedere un appartamento.
-My colleague followed up on the job interview. — Il mio collega ha fatto un follow-up sul colloquio di lavoro.
-I packed a lunch for the hike. — Ho preparato un pranzo al sacco per l'escursione.
-The waiting room was full when we arrived. — La sala d'attesa era piena quando siamo arrivati.
-I need to renew my driver's license this year. — Devo rinnovare la patente quest'anno.
-We will attend an art exhibition on Saturday. — Sabato andremo a una mostra d'arte.
-She had already installed the new software before the meeting. — Aveva già installato il nuovo software prima della riunione.
-Could you set up the router for me? — Potresti configurarmi il router?
-They are hiring new staff for the summer season. — Stanno assumendo nuovo personale per la stagione estiva.
-I will transfer some money to my savings account. — Trasferirò del denaro sul mio conto di risparmio.
-We are exchanging currency before the trip. — Stiamo cambiando valuta prima del viaggio.
-My colleague is attending a training course this week. — Il mio collega sta seguendo un corso di formazione questa settimana.
-Excuse me, where is the checkout desk? — Mi scusi, dov'è il banco per il check-out?
-He was assembling the furniture when the screws ran out. — Stava montando il mobile quando sono finite le viti.
-We will donate old clothes to charity. — Doneremo vestiti vecchi in beneficenza.
-I filed an insurance claim after the accident. — Ho presentato una richiesta di risarcimento dopo l'incidente.
-She is volunteering at the animal shelter this weekend. — Questo fine settimana fa volontariato al canile.
-We were rehearsing when the fire alarm went off. — Stavamo provando quando è scattato l'allarme antincendio.
-Could you order a birthday cake for tomorrow? — Potresti ordinare una torta di compleanno per domani?
-I will rent a car for the business trip. — Noleggerò un'auto per il viaggio di lavoro.
-The technician repaired my phone screen. — Il tecnico ha riparato lo schermo del mio telefono.
-We are taking a cooking class next month. — Il mese prossimo faremo un corso di cucina.
-He installed a new security camera at the entrance. — Ha installato una nuova telecamera di sicurezza all'ingresso.
-I need to buy travel insurance before we leave. — Devo comprare un'assicurazione di viaggio prima di partire.
-She will join a language exchange group. — Entrerà in un gruppo di scambio linguistico.
-We are moving boxes into the new apartment. — Stiamo portando gli scatoloni nel nuovo appartamento.
-My brother subscribed to a monthly book box. — Mio fratello si è abbonato a una scatola mensile di libri.
-The doctor scheduled a check-up for next week. — Il medico ha fissato una visita di controllo per la prossima settimana.
-Could I check in earlier than three o'clock? — Potrei fare il check-in prima delle tre?
-Where is the nearest ATM to withdraw cash? — Dov'è il bancomat più vicino per prelevare contanti?
-Could I have extra towels for the bathroom? — Potrei avere altri asciugamani per il bagno?
-Is room service available twenty-four hours a day? — Il servizio in camera è disponibile ventiquattr'ore su ventiquattr'ore?
-I would like to book a table for two at eight o'clock. — Vorrei prenotare un tavolo per due alle otto.
-Could you put the sauce on the side, please? — Potrebbe mettere la salsa a parte, per favore?
-Do you have any vegetarian options on the menu? — Avete opzioni vegetariane nel menu?
-I am allergic to nuts, does this dish contain any? — Sono allergico alla frutta a guscio, questo piatto ne contiene?
-Can I pay the bill separately, please? — Posso pagare il conto separatamente, per favore?
-Where can I find fresh fruits and vegetables? — Dove posso trovare frutta e verdura fresca?
-Excuse me, where are the dairy products located? — Scusi, dove si trovano i prodotti lattiero-caseari?
-Do I need to weigh the fruit before going to the checkout? — Devo pesare la frutta prima di andare alla cassa?
-Is this item on sale this week? — Questo articolo è in offerta questa settimana?
-I forgot my shopping bag in the car. — Ho dimenticato la borsa della spesa in macchina.
-Could you send me the calendar invite for the meeting? — Potresti inviarmi l'invito al calendario per la riunione?
-I am currently working on the quarterly sales report. — Al momento sto lavorando al rapporto vendite trimestrale.
-Let us take a five-minute break before continuing. — Facciamo una pausa di cinque minuti prima di continuare.
-Please review the attached document before tomorrow morning. — Per favore, rivedi il documento allegato entro domani mattina.
-I will be out of the office until next Monday. — Sarò fuori ufficio fino a lunedì prossimo.
-Can we talk about this over coffee later? — Posiamo parlarne davanti a un caffè più tardi?
-I really appreciate your help with this project. — Apprezzo davvero il tuo aiuto con questo progetto.
-I am running a bit late, see you in ten minutes. — Sono un po' in ritardo, ci vediamo tra dieci minuti.
-Let me know when you arrive safely. — Fammi sapere quando arrivi a destinazione sano e salvo.
-It was really nice catching up with you today. — È stato davvero bello fare due chiacchiere con te oggi.
-What time is dinner going to be ready? — A che ora sarà pronta la cena?
-Please remember to take out the rubbish tonight. — Per favore ricordati di portare fuori la spazzatura stasera.
-Could someone answer the doorbell, please? — Qualcuno può andare ad aprire al campanello, per favore?
-Do not forget to empty the dishwasher after lunch. — Non dimenticare di svuotare la lavastoviglie dopo pranzo.
-Who left the tap running in the bathroom? — Chi ha lasciato il rubinetto aperto in bagno?
-Is there a direct train to the city center from here? — C'è un treno diretto per il centro città da qui?
-How much does a day pass for public transport cost? — Quanto costa un biglietto giornaliero per i trasporti pubblici?
-I would like to request a late check-out tomorrow. — Vorrei richiedere un check-out ritardato per domani.
-Can you store our luggage until our flight leaves? — Puoi tenere i nostri bagagli fino alla partenza del nostro volo?
-Could you call a taxi for us tomorrow at seven? — Potrebbe chiamarci un taxi domani alle sette?
-Excuse me, is this the end of the line for this bus? — Scusi, è capolinea per questo autobus?
-I need to buy a SIM card for my mobile phone. — Devo comprare una scheda SIM per il mio cellulare.
-Is the tap water safe to drink here? — L'acqua del rubinetto è potabile qui?
-Could you show me how this coffee machine works? — Potresti mostrarmi come funziona questa macchina del caffè?
-I am looking for the nearest bakery in this neighborhood. — Sto cercando la panetteria più vicina in questo quartiere.
-Can I get a receipt for this transaction, please? — Posso avere una ricevuta per questa transazione, per favore?
-We need to buy some paper towels and laundry detergent. — Dobbiamo comprare dei tovaglioli di carta e del detersivo per il bucato.
-Could you mute your microphone during the presentation? — Potresti disattivare il microfono durante la presentazione?
-I will share my screen so everyone can see the slides. — Condividerò il mio schermo così tutti potranno vedere le diapositive.
-Do you have time for a quick phone call this afternoon? — Hai tempo per una breve telefonata questo pomeriggio?
-I am sorry, I did not catch your name earlier. — Scusa, non ho capito il tuo nome prima.
-Let us order dessert after we finish our main course. — Ordiniamo il dolce dopo aver finito il piatto principale.
-Please put your shoes near the front door. — Per favore metti le scarpe vicino alla porta d'ingresso.
-Could you set the table for four people, please? — Potresti apparecchiare la tavola per quattro persone, per favore?
-Don't forget to charge your laptop for school tomorrow. — Non dimenticare di caricare il portatile per la scuola domani.
-Have a wonderful trip and take plenty of photos! — Fai un buon viaggio e scatta tante foto!
-Is there an iron and an ironing board in the room? — C'è un ferro e un'asse da stiro in camera?
-Could we get a table by the window? — Potremmo avere un tavolo vicino alla finestra?
-Is this product suitable for sensitive skin? — Questo prodotto è adatto alle pelli sensibili?
-I am looking for the bakery department. — Sto cercando il reparto panetteria.
-Do you have this shirt in a medium size? — Avete questa camicia in una taglia M?
-Could you send me the feedback by the end of the day? — Potresti inviarmi il feedback entro la fine della giornata?
-Let us set up a quick call to discuss the project. — Fissiamo una breve chiamata per discutere del progetto.
-I will be working remotely tomorrow morning. — Domani mattina lavorerò da remoto.
-Thank you for inviting us to dinner tonight. — Grazie per averci invitato a cena stasera.
-Can you send me your location on the map? — Puoi inviarmi la tua posizione sulla mappa?
-Please put your dishes in the dishwasher. — Per favore metti i tuoi piatti nella lavastoviglie.
-Who is going to clean the kitchen tonight? — Chi pulirà la cucina stasera?
-Do not forget to take your umbrella with you. — Non dimenticare di portare l'ombrello con te.
-Can you turn down the air conditioning a little? — Puoi abbassare un po' l'aria condizionata?
-Is there a gas station near the entrance? — C'è una stazione di servizio vicino all'ingresso?
-Where can I buy a ticket for the museum? — Dove posso comprare un biglietto per il museo?
-Does this hotel have a swimming pool on the roof? — Questo hotel ha una piscina sul tetto?
-What time does the breakfast buffet start? — A che ora inizia il buffet della colazione?
-I would like to pay with contactless payment. — Vorrei pagare con il pagamento contactless.
-Is this milk fresh or long-life? — Questo latte è fresco o a lunga conservazione?
-Can you help me find the olive oil aisle? — Puoi aiutarmi a trovare la corsia dell'olio d'oliva?
-I need to print this document before the meeting. — Devo stampare questo documento prima della riunione.
-Could you clarify what you mean by that? — Potresti chiarire cosa intendi con questo?
-I will send you the updated invoice shortly. — Ti invierò la fattura aggiornata a breve.
-We need to order more office supplies. — Dobbiamo ordinare altre forniture per l'ufficio.
-Are you free to hang out this afternoon? — Sei libero di uscire questo pomeriggio?
-Take your time, there is no hurry. — Fai con calma, non c'è fretta.
-I am so glad we finally managed to meet. — Sono così contento che siamo finalmente riusciti a incontrarci.
-Could you help me lay the carpet in the hallway? — Potresti aiutarmi a stendere il tappeto nel corridoio?
-Make sure to feed the cat before leaving. — Assicurati di dare da mangiare al gatto prima di uscire.
-Can you grab a loaf of bread from the bakery? — Puoi prendere una pagnotta di pane in panetteria?
-Is there a designated smoking area outside? — C'è un'area fumatori riservata all'esterno?
-Could I get a glass of tap water, please? — Potrei avere un bicchiere d'acqua del rubinetto, per favore?
-We would like to order two coffees to go. — Vorremmo ordinare due caffè da portare via.
-Is this seafood fresh or frozen? — Questo pesce è fresco o surgelato?
-Do you have a loyalty card for this shop? — Ha una carta fedeltà per questo negozio?
-The projector in the meeting room is not working. — Il proiettore nella sala riunioni non funziona.
-Please reply to all participants in the email chain. — Per favore rispondi a tutti i partecipanti nella catena di email.
-I am taking a short lunch break now. — Adesso faccio una breve pausa pranzo.
-Give me a call as soon as you are free. — Fammi una telefonata non appena sei libero.
-I will text you the address right away. — Ti manderò subito l'indirizzo via messaggio.
-Could you pass me the remote control, please? — Potresti passarmi il telecomando, per favore?
-Let us turn off the TV and go to sleep. — Spegniamo la TV e andiamo a dormire.
-Do we have enough garbage bags in the house? — Abbiamo abbastanza sacchetti della spazzatura in casa?
-Where is the nearest tourist information office? — Dov'è l'ufficio di informazioni turistiche più vicino?
-Is the swimming pool heated in the winter? — La piscina è riscaldata in inverno?
-Can I get a tax-free refund form? — Posso avere un modulo per il rimborso tax-free?
-Where can I find gluten-free products here? — Dove posso trovare prodotti senza glutine qui?
-Please sign the attendance sheet before leaving. — Per favore firma il foglio presenze prima di uscire.
-I hope you have a great rest of the day! — Spero che tu abbia un buon proseguimento di giornata!
-Is there a luggage storage area after check-out? — C'è un deposito bagagli dopo il check-out?
-Does the room have a safe for valuables? — La camera ha una cassaforte per gli oggetti di valore?
-Could you give us two key cards for the room? — Potrebbe darci due chiavi elettroniche per la camera?
-What time does the airport shuttle leave? — A che ora parte la navetta per l'aeroporto?
-Is parking included in the reservation? — Il parcheggio è incluso nella prenotazione?
-Could we have a quiet table in the corner? — Potremmo avere un tavolo tranquillo nell'angolo?
-Is service included in the final bill? — Il servizio è incluso nel conto finale?
-Do you have sparkling or still water? — Avete acqua frizzante o naturale?
-Could you bring us some extra napkins, please? — Potrebbe portarci altri tovaglioli, per favore?
-Is this table reserved for someone else? — Questo tavolo è riservato per qualcun altro?
-Where can I find paper towels and tissues? — Dove posso trovare i tovaglioli di carta e i fazzoletti?
-Do you have fresh seafood today? — Avete pesce fresco oggi?
-Can I pay with contactless on my phone? — Posso pagare con il contactless dal telefono?
-Is there an offer on these products today? — C'è un'offerta su questi prodotti oggi?
-Could you give me a paper bag, please? — Potrebbe darmi un sacchetto di carta, per favore?
-Please send me the meeting minutes when possible. — Per favore inviami il verbale della riunione appena possibile.
-I will be away from my desk for twenty minutes. — Sarò lontano dalla mia scrivania per venti minuti.
-Let us discuss this during our weekly sync. — Discutiamone durante il nostro allineamento settimanale.
-Can you forward that email to the team? — Puoi inoltrare quell'email al team?
-I need to update the project timeline today. — Devo aggiornare la tempistica del progetto oggi.
-Who is going to walk the dog this afternoon? — Chi porterà a spasso il cane questo pomeriggio?
-Please take off your shoes at the entrance. — Per favore togliti le scarpe all'ingresso.
-Can you set the alarm for seven o'clock? — Puoi impostare la sveglia per le sette?
-Do not leave your wet towel on the bed. — Non lasciare il tuo asciugamano bagnato sul letto.
-We need to buy more toilet paper and soap. — Dobbiamo comprare altra carta igienica e sapone.
-Are you feeling any better today? — Ti senti un po' meglio oggi?
-Thank you so much for the wonderful evening. — Grazie mille per la splendida serata.
-Let me know if you need any help moving. — Fammi sapere se hai bisogno di aiuto con il trasloco.
-Give me a shout when you arrive at the station. — Fammi un fischio quando arrivi in stazione.
-I am really looking forward to seeing you again. — Non vedo l'ora di rivederti.
-My phone battery is almost completely dead. — La batteria del mio telefono è quasi del tutto scarica.
-Is there a post office near this street? — C'è un ufficio postale vicino a questa strada?
-The lift is temporarily out of service. — L'ascensore è temporaneamente fuori servizio.
-Could you tell me where the restrooms are? — Potrebbe dirmi dove sono i bagni?
-I think I left my jacket in the car. — Penso di aver lasciato la giacca in macchina.
-Which line should I take to get to the museum? — Quale linea dovrei prendere per andare al museo?
-Is there a connection to the city center? — C'è una coincidenza per il centro città?
-Do I need to validate this ticket before boarding? — Devo convalidare questo biglietto prima di salire?
-How long is the delay for the train? — Quanto dura il ritardo del treno?
-Could you open the window a little bit? — Potresti aprire un po' la finestra?
-I will double check the numbers and let you know. — Ricontrollerò i numeri e ti farò sapere.
-Could you share the link to the shared folder? — Potresti condividere il link alla cartella condivisa?
-We need to finalize the budget by tomorrow. — Dobbiamo finalizzare il budget entro domani.
-I am currently in a meeting, I will call you back. — Al momento sono in riunione, ti richiamo dopo.
-Thank you for your prompt response to my request. — Grazie per la sollecita risposta alla mia richiesta.
-Do you have an extension cord I can borrow? — Hai una prolunga che posso prendere in prestito?
-Please lock the balcony door before going to bed. — Per favore chiudi la porta del balcone prima di andare a dormire.
-Can you help me move this heavy box? — Puoi aiutarmi a spostare questa scatola pesante?
-I need to make a copy of my identity card. — Devo fare una copia della mia carta d'identità.
-Have a safe journey home and see you soon! — Buon viaggio di ritorno e a presto!
-Could you recommend a local dish to try? — Potrebbe consigliarmi un piatto locale da provare?
-Is there a hairdryer in the bathroom? — C'è un asciugacapelli in bagno?
-What is the check-out time in the morning? — A che ora è il check-out la mattina?
-Could I have some extra pillows, please? — Potrei avere dei cuscini extra, per favore?
-Does the room have air conditioning and heating? — La stanza ha l'aria condizionata e il riscaldamento?
-Can I make a reservation for tomorrow evening? — Posso fare una prenotazione per domani sera?
-Is tap water okay or should I buy bottled water? — L'acqua del rubinetto va bene o dovrei comprare acqua in bottiglia?
-Could you bring us the dessert menu? — Potrebbe portarci il menu dei dolci?
-We would like to split the bill, please. — Vorremmo dividere il conto, per favore.
-Do you have any sugar-free options available? — Avete opzioni senza zucchero disponibili?
-Where are the frozen foods located? — Dove si trovano i cibi surgelati?
-Is there a bakery section in this store? — C'è un reparto panetteria in questo negozio?
-Can I get a plastic bag for these items? — Posso avere una busta di plastica per questi articoli?
-Do you accept mobile payments here? — Accettate pagamenti dallo smartphone qui?
-Excuse me, is this trolley free to use? — Scusi, questo carrello è libero da usare?
-I am sending you the link for the video call. — Ti sto inviando il link per la videochiamata.
-Please let me know your availability for next week. — Per favore fammi sapere la tua disponibilità per la prossima settimana.
-I need to reschedule our appointment to Friday. — Devo spostare il nostro appuntamento a venerdì.
-Could you mute your microphone when not speaking? — Potresti disattivare il microfono quando non parli?
-Let us discuss the details during the meeting. — Discutiamo i dettagli durante la riunione.
-What would you like to watch on TV tonight? — Cosa vorresti guardare in TV stasera?
-Could you help me unload the groceries from the car? — Puoi aiutarmi a scaricare la spesa dalla macchina?
-Don't forget to water the flowers on the balcony. — Non dimenticare di annaffiare i fiori sul balcone.
-Who is going to take out the recycling today? — Chi porta fuori la raccolta differenziata oggi?
-Is dinner ready or can I help with anything? — La cena è pronta o posso aiutare in qualcosa?
-It was great seeing you after all this time. — È stato bello vederti dopo tutto questo tempo.
-Give me a call whenever you get home. — Fammi una telefonata ogni volta che arrivi a casa.
-I hope you have a safe flight back home. — Spero che tu faccia un buon volo di ritorno a casa.
-Would you like to grab a quick coffee with me? — Ti andrebbe di prendere un caffè al volo con me?
-Let me know if you need anything else from me. — Fammi sapere se hai bisogno di qualcos'altro da parte mia.
-Where is the nearest bus stop to the center? — Dov'è la fermata dell'autobus più vicina per il centro?
-Is there a taxi rank outside the station? — C'è una stazione dei taxi fuori dalla stazione?
-How far is the hotel from the beach? — Quanto dista l'hotel dalla spiaggia?
-Can I buy tickets directly on the bus? — Posso comprare i biglietti direttamente sull'autobus?
-Is this seat reserved for elderly passengers? — Questo posto è riservato ai passeggeri anziani?
-Where can I find a pharmacy open late tonight? — Dove posso trovare una farmacia aperta fino a tarda notte?
-Could you tell me where the nearest bank is? — Potrebbe dirmi dov'è la banca più vicina?
-Is there a free Wi-Fi network in this area? — C'è una rete Wi-Fi gratuita in questa zona?
-What time does the shopping center close on Saturdays? — A che ora chiude il centro commerciale il sabato?
-I need to buy a plug adapter for my electronics. — Devo comprare un adattatore per le mie apparecchiature elettroniche.
-Could you lower your voice a bit, please? — Potresti abbassare un po' la voce, per favore?
-Please remember to lock the front door when leaving. — Per favore ricordati di chiudere a chiave la porta d'ingresso quando esci.
-Can you pass me the salt and pepper, please? — Puoi passarmi il sale e il pepe, per favore?
-I am going to take a quick shower before dinner. — Vado a fare una doccia veloce prima di cena.
-Make sure to turn off the heating before going out. — Assicurati di spegnere il riscaldamento prima di uscire.
-I will send you a text message as soon as I land. — Ti manderò un messaggio di testo non appena atterro.
-We are planning a small weekend trip to the mountains. — Stiamo organizzando una breve gita nel fine settimana in montagna.
-Thank you for your hospitality during our stay. — Grazie per la vostra ospitalità durante il nostro soggiorno.
-Do you have any recommendations for a local guide? — Ha qualche raccomandazione per una guida locale?
-Have a great weekend and enjoy your time off! — Buon fine settimana e goditi il tempo libero!
-What time does the school assembly start? — A che ora inizia l'assemblea scolastica?
-Please open your textbooks to page forty-five. — Per favore aprite i libri di testo a pagina quarantacinque.
-Do we have a math test tomorrow morning? — Abbiamo un compito in classe di matematica domani mattina?
-My teacher gave us a lot of homework for the weekend. — Il mio insegnante ci ha dato molti compiti per il fine settimana.
-Where is the school library located? — Dove si trova la biblioteca della scuola?
-I need to buy a new pencil case and a ruler. — Devo comprare un astuccio nuovo e un righello.
-Who is responsible for cleaning the blackboard? — Chi è responsabile di pulire la lavagna?
-The geography project is due next Monday. — Il progetto di geografia scade lunedì prossimo.
-Did you study for the history oral exam? — Hai studiato per l'interrogazione di storia?
-Can I borrow a blue pen, please? — Posso prendere in prestito una penna blu, per favore?
-Can I try on these trousers in a larger size? — Posso provare questi pantaloni in una taglia più grande?
-Are there any discounts on the winter collection? — Ci sono sconti sulla collezione invernale?
-Where can I find the cash desk to pay? — Dove posso trovare la cassa per pagare?
-I would like to return this shirt because it is damaged. — Vorrei restituire questa camicia perché è danneggiata.
-Does this item come with a two-year warranty? — Questo articolo ha una garanzia di due anni?
-Can I keep the hanger for the dress? — Posso tenere la gruccia per l'abito?
-Is this store open on public holidays? — Questo negozio è aperto nei giorni festivi?
-I am just looking around, thank you. — Sto solo dando un'occhiata, grazie.
-Do you have a paper bag for my purchases? — Ha una busta di carta per i miei acquisti?
-This pair of shoes is very comfortable to wear. — Questo paio di scarpe è molto comodo da indossare.
-We rented a small cottage near the lake. — Abbiamo affittato un piccolo cottage vicino al lago.
-I love sunbathing on the beach in the afternoon. — Amo prendere il sole in spiaggia nel pomeriggio.
-Don't forget to put on sun cream before going out. — Non dimenticare di mettere la crema solare prima di uscire.
-We booked a guided tour of the historic city center. — Abbiamo prenotato una visita guidata del centro storico.
-The view from our balcony is absolutely breathtaking. — La vista dal nostro balcone è assolutamente mozzafiato.
-What souvenir should we buy for our family? — Che souvenir dovremmo comprare per la nostra famiglia?
-We are going snorkeling in the crystal clear water. — Faremo snorkeling nell'acqua cristallina.
-I bought a postcard to send to my grandparents. — Ho comprato una cartolina da spedire ai miei nonni.
-We spent the whole week relaxing by the pool. — Abbiamo passato l'intera settimana a rilassarci in piscina.
-The local cuisine in this region is extraordinary. — La cucina locale di questa regione è straordinaria.
-Please double check the attachment before sending the email. — Per favore ricontrolla l'allegato prima di inviare l'email.
-I am going to grab a sandwich for lunch. — Vado a prendere un sandwich per pranzo.
-Can you remind me to buy milk on the way home? — Puoi ricordarmi di comprare il latte strada facendo verso casa?
-Let us take a short break to stretch our legs. — Facciamo una breve pausa per sgranchirci le gambe.
-The traffic was terrible on the motorway this morning. — Il traffico era terribile in autostrada stamattina.
-Could you please turn down the bright screen? — Potresti abbassare la luminosità dello schermo, per favore?
-We need to replace the bulb in the hallway lamp. — Dobbiamo sostituire la lampadina della lampada in corridoio.
-I left my sunglasses on the kitchen table. — Ho lasciato i miei occhiali da sole sul tavolo della cucina.
-Are you coming to the party this Saturday evening? — Vieni alla festa questo sabato sera?
-I will send you a text as soon as I arrive at the venue. — Ti manderò un messaggio appena arrivo sul posto.
-What time does the flight start boarding? — A che ora inizia l'imbarco del volo?
-Remember to bring your swimming suit and a towel. — Ricordati di portare il costume da bagno e un asciugamano.
-Can I pay for my coffee with a credit card? — Posso pagare il mio caffè con la carta di credito?
-My laptop charger is not working properly today. — Il caricabatterie del mio computer non funziona bene oggi.
-Let us meet right in front of the fountain. — Incontriamoci proprio davanti alla fontana.
-Do you want me to help you carry the luggage? — Vuoi che ti aiuti a portare i bagagli?
-The supermarket down the street is open late tonight. — Il supermercato in fondo alla strada è aperto fino a tardi stasera.
-We had such a great time together yesterday. — Siamo stati davvero bene insieme ieri.
-Could you please pass me the bread basket? — Potresti passarmi il cestino del pane, per favore?
-Have a safe journey and text me when you land. — Buon viaggio e mandami un messaggio quando atterri.
-What is the deadline for this science project? — Qual è la scadenza per questo progetto di scienze?
-Does this shop offer a discount for cash payments? — Questo negozio offre uno sconto per i pagamenti in contanti?
-We rented a bicycle to explore the coastal village. — Abbiamo noleggiato una bicicletta per esplorare il villaggio costiero.
-Could you please send me the password for the conference room? — Potresti inviarmi la password per la sala conferenze?
-Is there a safe box inside the room? — C'è una cassaforte all'interno della camera?
-Excuse me, where can I find the fresh pasta aisle? — Scusi, dove posso trovare la corsia della pasta fresca?
-Could you help me wash the dishes after dinner? — Puoi aiutarmi a lavare i piatti dopo cena?
-I missed the bus so I had to walk to school. — Ho perso l'autobus quindi ho dovuto camminare fino a scuola.
-Can I return this item if I keep the receipt? — Posso restituire questo articolo se conservo lo scontrino?
-We decided to extend our vacation by three days. — Abbiamo deciso di prolungare la nostra vacanza di tre giorni.
-I have attached the meeting notes to this email. — Ho allegato le note della riunione a questa email.
-Can we ask for extra blankets for the bed? — Possiamo chiedere delle coperte extra per il letto?
-Is there a special deal on organic vegetables today? — C'è un'offerta speciale sulla verdura biologica oggi?
-Don't forget to take out the bins before bedtime. — Non dimenticare di portare fuori i cestini prima di andare a dormire.
-Our class is going on a field trip next month. — La nostra classe farà una gita scolastica il mese prossimo.
-Where can I try on these shoes? — Dove posso provare queste scarpe?
-The beach was quite crowded during the weekend. — La spiaggia era piuttosto affollata durante il fine settimana.
-Let us schedule a follow-up meeting next Tuesday. — Fissiamo una riunione di aggiornamento martedì prossimo.
-Could you please call us a cab to the train station? — Potrebbe chiamarci un taxi per la stazione ferroviaria?
-Where are the canned goods located in this store? — Dove si trovano i prodotti in scatola in questo negozio?
-Who left their jacket on the living room sofa? — Chi ha lasciato la giacca sul divano del soggiorno?
-The teacher asked us to sit in pairs. — L'insegnante ci ha chiesto di sederci a coppie.
-Do you have this dress in a different color? — Avete questo vestito in un altro colore?
-We took a boat tour to see the sea caves. — Abbiamo fatto un tour in barca per vedere le grotte marine.
-I will share the update with the team tomorrow. — Condividerò l'aggiornamento con il team domani.
-What time is the swimming pool open until? — Fino a che ora è aperta la piscina?
-Are these eggs free-range or organic? — Queste uova sono da allevamento all'aperto o biologiche?
-Can you turn down the television volume, please? — Puoi abbassare il volume della televisione, per favore?
-I forgot my gym kit in the school locker. — Ho dimenticato il mio kit da ginnastica nell'armadietto della scuola.
-Do I get a gift card with this purchase? — Ricevo una carta regalo con questo acquisto?
-We bought souvenirs for all our relatives back home. — Abbiamo comprato souvenir per tutti i nostri parenti a casa.
-Please confirm your attendance by the end of the day. — Per favore conferma la tua presenza entro la fine della giornata.
-Can I have a room with a double bed, please? — Posso avere una camera con letto matrimoniale, per favore?
-Could you tell me if these tomatoes are locally grown? — Potrebbe dirmi se questi pomodori sono a chilometro zero?
-We should hang up the laundry before it starts raining. — Dovremmo stendere il bucato prima che inizi a piovere.
-Our principal gave an inspiring speech today. — Il nostro preside ha fatto un discorso ispiratore oggi.
-Is there a queue for the fitting room? — C'è coda per il camerino?
-We went hiking in the national park all morning. — Siamo andati a fare un'escursione nel parco nazionale per tutta la mattina.
-I am currently out of office with limited email access. — Al momento sono fuori ufficio con accesso limitato all'email.
-Could you recommend a good local pub nearby? — Potrebbe consigliarmi un buon pub locale qui vicino?
-Where can I find olive oil and vinegar? — Dove posso trovare l'olio d'oliva e l'aceto?
-Please remember to feed the dog before you leave. — Per favore ricordati di dare da mangiare al cane prima di uscire.
-We need to buy a notebook for geography class. — Dobbiamo comprare un quaderno per la classe di geografia.
-Do you offer gift wrapping for this item? — Offrite una confezione regalo per questo articolo?
-The flight attendant asked us to fasten our seatbelts. — L'assistente di volo ci ha chiesto di allacciare le cinture di sicurezza.
-Let us review the project deliverables together. — Rivediamo insieme i risultati attesi del progetto.
-Could we get two extra keys for our room? — Potremmo avere due chiavi extra per la nostra stanza?
-Is there a bakery counter in this supermarket? — C'è un banco panetteria in questo supermercato?
-Let us organize a game night with the whole family. — Organizziamo una serata giochi con tutta la famiglia.
-Enjoy your summer break and see you in September! — Goditi le vacanze estive e ci vediamo a settembre!
-Do we have any homework for English class? — Abbiamo compiti per la classe di inglese?
-Where can I exchange currency near the hotel? — Dove posso cambiare la valuta vicino all'hotel?
-Could I have the receipt for this purchase? — Potrei avere lo scontrino per questo acquisto?
-We are planning a family dinner for Friday. — Stiamo organizzando una cena in famiglia per venerdì.
-Is there a swimming pool in this resort? — C'è una piscina in questo villaggio turistico?
-I am sending you the revised contract now. — Ti sto inviando il contratto revisionato adesso.
-Can you tell me which aisle the coffee is in? — Puoi dirmi in quale corsia si trova il caffè?
-Please turn off the computer when you finish. — Per favore spegni il computer quando finisci.
-We booked our flights three months ago. — Abbiamo prenotato i nostri voli tre mesi fa.
-Do you sell fresh bread here every day? — Vendete pane fresco qui tutti i giorni?
-What time does the lesson finish today? — A che ora finisce la lezione oggi?
-Can I try these shoes in a size eight? — Posso provare queste scarpe nella taglia trentotto?
-I am looking forward to our vacation next month. — Non vedo l'ora di fare le nostre vacanze il mese prossimo.
-Could you send me the location on WhatsApp? — Potresti inviarmi la posizione su WhatsApp?
-Who is taking care of the plants while we are away? — Chi si prende cura delle piante mentre siamo via?
-The teacher asked us to work in small groups. — L'insegnante ci ha chiesto di lavorare in piccoli gruppi.
-Is breakfast served in the room or in the dining hall? — La colazione è servita in camera o nella sala da pranzo?
-I need to buy a birthday card for my sister. — Devo comprare un biglietto di auguri per mia sorella.
-Can we split the bill three ways? — Possiamo dividere il conto in tre?
-Where is the nearest bus station located? — Dove si trova la stazione degli autobus più vicina?
-I need to print my boarding pass for the flight. — Devo stampare la mia carta d'imbarco per il volo.
-Could you pass me the notebook from the shelf? — Potresti passarmi il quaderno dallo scaffale?
-Is there a discount for groups at the museum? — C'è uno sconto per i gruppi al museo?
-Please remind me to take the laundry out. — Per favore ricordami di togliere il bucato.
-We spent the day exploring the old town. — Abbiamo passato la giornata ad esplorare il centro storico.
-Does this jacket come with a hood? — Questa giacca ha il cappuccio?
-I am writing an essay for my history course. — Sto scrivendo un tema per il mio corso di storia.
-Can I leave my key at the reception desk? — Posso lasciare la chiave al banco della reception?
-Is this product locally produced? — Questo prodotto è a chilometro zero?
-Let us discuss the sales figures in the meeting. — Discutiamo i dati di vendita nella riunione.
-Do you need a ride to the airport tomorrow? — Hai bisogno di un passaggio per l'aeroporto domani?
-We need to buy more paper for the printer. — Dobbiamo comprare altra carta per la stampante.
-Can you help me set up the table in the garden? — Puoi aiutarmi ad apparecchiare il tavolo in giardino?
-What is the deadline for submitting the application? — Qual è la scadenza per inviare la candidatura?
-The hotel offers a shuttle service to the beach. — L'hotel offre un servizio navetta per la spiaggia.
-I would like to pay by debit card. — Vorrei pagare con carta di debito.
-Is there a playground for children nearby? — C'è un parco giochi per bambini qui vicino?
-Could you give me some advice on what to visit? — Potrebbe darmi qualche consiglio su cosa visitare?
-We bought some fresh fruit at the street market. — Abbiamo comprato della frutta fresca al mercato di strada.
-Do not forget your coat, it is cold outside. — Non dimenticare il cappotto, fa freddo fuori.
-The exam results will be published next week. — I risultati dell'esame saranno pubblicati la prossima settimana.
-Is there an extra charge for late check-in? — C'è un costo aggiuntivo per il check-in ritardato?
-Could you please turn on the air conditioner? — Potresti accendere l'aria condizionata, per favore?
-I am looking for a gift for a colleague. — Sto cercando un regalo per un collega.
-We rented a car to drive along the coast. — Abbiamo noleggiato un'auto per guidare lungo la costa.
-Can you answer the phone while I cook? — Puoi rispondere al telefono mentre cucino?
-Please double check the delivery address. — Per favore ricontrolla l'indirizzo di spedizione.
-Where is the nearest subway entrance? — Dov'è l'ingresso della metropolitana più vicino?
-I need to return these shoes to the shop. — Devo restituire queste scarpe al negozio.
-Enjoy your meal and have a great evening! — Buon appetito e trascorri una bella serata!
-Could you check if the wifi connection is working? — Potresti controllare se la connessione wifi funziona?
-Where can I rent an electric bicycle? — Dove posso noleggiare una bicicletta elettrica?
-I need to make an online payment for this bill. — Devo effettuare un pagamento online per questa bolletta.
-Could you please hand me the keys to the garage? — Potresti passarmi le chiavi del garage, per favore?
-The lesson has been moved to room four. — La lezione è stata spostata nell'aula quattro.
-Is there a microwave available in the kitchen? — C'è un forno a microonde disponibile in cucina?
-Can I try on this sweater in medium? — Posso provare questo maglione nella taglia M?
-Please save your work before shutting down the computer. — Per favore salva il tuo lavoro prima di spegnere il computer.
-Do you know where the nearest charging station is? — Sai dov'è la stazione di ricarica più vicina?
-We have a family picnic planned for Sunday afternoon. — Abbiamo in programma un picnic in famiglia per domenica pomeriggio.
-Can I get this dress altered at your shop? — Posso far modificare questo vestito nel vostro negozio?
-What time does the museum guided tour start? — A che ora inizia la visita guidata del museo?
-I am going to buy some fresh bread for dinner. — Vado a comprare del pane fresco per cena.
-Could you put these files in the office folder? — Potresti mettere questi file nella cartella dell'ufficio?
-My daughter is rehearsing for the school play. — Mia figlia sta provando per lo spettacolo teatrale della scuola.
-We had a wonderful lunch overlooking the sea. — Abbiamo fatto un pranzo meraviglioso con vista mare.
-Please don't forget to pack your passport. — Per favore non dimenticare di mettere in valigia il passaporto.
-Is there a group discount for the theatre tickets? — C'è uno sconto di gruppo per i biglietti del teatro?
-Can I change my seat to an aisle seat? — Posso cambiare il mio posto con uno vicino al corridoio?
-Who is coming with us to the supermarket today? — Chi viene con noi al supermercato oggi?
-I need to print twenty copies of this document. — Devo stampare venti copie di questo documento.
-Could you tell me where the shoe department is? — Potrebbe dirmi dov'è il reparto calzature?
-We are going camping in the forest this weekend. — Questo fine settimana andremo in campeggio nella foresta.
-Please wake me up at six o'clock tomorrow. — Per favore svegliami alle sei domani.
-Can I ask for an extra clothes hanger? — Posso chiedere una gruccia per abiti in più?
-The students are preparing for their final exams. — Gli studenti si stanno preparando per gli esami finali.
-Could you help me clean the windows today? — Potresti aiutarmi a pulire le finestre oggi?
-I am looking for a gift for my father's birthday. — Sto cercando un regalo per il compleanno di mio padre.
-We enjoyed watching the fireworks by the harbor. — Ci è piaciuto guardare i fuochi d'artificio al porto.
-Please send me the meeting agenda by email. — Per favore inviami l'ordine del giorno della riunione via email.
-Is this item covered by a money back guarantee? — Questo articolo è coperto da una garanzia di rimborso?
-Do you sell gluten-free flour in this shop? — Vendete farina senza glutine in questo negozio?
-Can you pick up the dry cleaning after work? — Puoi ritirare i vestiti in lavanderia dopo il lavoro?
-The teacher corrected all our essays yesterday. — L'insegnante ha corretto tutti i nostri temi ieri.
-We booked a hotel room with a balcony view. — Abbiamo prenotato una camera d'albergo con vista dal balcone.
-Could you please pass me the olive oil? — Potresti passarmi l'olio d'oliva, per favore?
-I have an appointment with the doctor at three. — Ho un appuntamento con il medico alle tre.
-Is there a kids' menu available in this restaurant? — C'è un menu per bambini disponibile in questo ristorante?
-We spent the afternoon shopping for summer clothes. — Abbiamo passato il pomeriggio a fare acquisti per vestiti estivi.
-Do I need a receipt to exchange this product? — Ho bisogno dello scontrino per cambiare questo prodotto?
-The kids are playing hide and seek in the garden. — I bambini stanno giocando a nascondino in giardino.
-Could you please close the window in the bedroom? — Potresti chiudere la finestra in camera da letto, per favore?
-I will leave the house keys under the mat. — Lascerò le chiavi di casa sotto lo zerbino.
-Is the hotel reception desk open all night? — La reception dell'hotel è aperta tutta la notte?
-Can you help me find my glasses anywhere? — Puoi aiutarmi a trovare i miei occhiali da qualche parte?
-We need to order new stationery for the office. — Dobbiamo ordinare della nuova cancelleria per l'ufficio.
-How much is the entrance fee for adults? — Quanto costa il biglietto d'ingresso per gli adulti?
-Please clean your shoes before coming inside. — Per favore pulisciti le scarpe prima di entrare.
-I would like to try these sunglasses on. — Vorrei provare questi occhiali da sole.
-Have a nice trip and write to us when you arrive! — Buon viaggio e scrivici quando arrivi!
-Can you show me how to fill out this form? — Puoi mostrarmi come compilare questo modulo?
-We need to buy a birthday cake for tomorrow. — Dobbiamo comprare una torta di compleanno per domani.
-Is there a charge for using the gym? — C'è un costo per usare la palestra?
-Could you please print the boarding passes? — Potresti stampare le carte d'imbarco, per favore?
-The teacher praised the class for their good results. — L'insegnante ha lodato la classe per i buoni risultati.
-What time does the supermarket close on Sunday? — A che ora chiude il supermercato la domenica?
-I would like to try this dress in blue. — Vorrei provare questo vestito in blu.
-Could you help me install the new printer software? — Potresti aiutarmi a installare il nuovo software della stampante?
-We booked a room with a sea view. — Abbiamo prenotato una camera con vista mare.
-Please put the milk back in the fridge. — Per favore rimetti il latte in frigorifero.
-Is there a laundry service in the hotel? — C'è un servizio lavanderia nell'hotel?
-How long will the flight take? — Quanto durerà il volo?
-I am going to buy fresh fruit at the market. — Vado a comprare frutta fresca al mercato.
-Can you explain this grammar rule again? — Puoi spiegare di nuovo questa regola grammaticale?
-Let us take a short break for coffee. — Facciamo una breve pausa per un caffè.
-Do you have these shoes in a smaller size? — Avete queste scarpe in una taglia più piccola?
-Who forgot to turn off the computer in the study? — Chi ha dimenticato di spegnere il computer nello studio?
-Where is the nearest pharmacy open on weekends? — Dov'è la farmacia più vicina aperta nel fine settimana?
-We are planning a trip to Europe next spring. — Stiamo pianificando un viaggio in Europa la prossima primavera.
-Could you pass me the pepper, please? — Potresti passarmi il pepe, per favore?
-Can I reschedule my appointment with the doctor? — Posso riprogrammare il mio appuntamento con il medico?
-The students are preparing for the science fair. — Gli studenti si stanno preparando per la fiera della scienza.
-Can I pay for these groceries with cash? — Posso pagare questi generi alimentari in contanti?
-What is the wifi network name for guests? — Qual è il nome della rete wifi per gli ospiti?
-We had a great time visiting the local museum. — Ci siamo divertiti molto a visitare il museo locale.
-Please lock the front door when you leave. — Per favore chiudi a chiave la porta d'ingresso quando esci.
-Is there an extra fee for room service? — C'è un costo aggiuntivo per il servizio in camera?
-I am writing an email to the HR department. — Sto scrivendo un'email al reparto risorse umane.
-Could you help me carry these heavy suitcases to the car? — Potresti aiutarmi a portare queste valigie pesanti in macchina?
-What time does the history class start today? — A che ora inizia la lezione di storia oggi?
-Do you sell fresh flowers in this shop? — Vendete fiori freschi in questo negozio?
-We rented a car to explore the island. — Abbiamo noleggiato un'auto per esplorare l'isola.
-Please keep your voice down, the baby is resting. — Per favore tieni la voce bassa, il bambino sta riposando.
-Is there a discount if I buy two items? — C'è uno sconto se compro due articoli?
-The hotel staff was extremely helpful and polite. — Il personale dell'hotel è stato estremamente disponibile e gentile.
-Can you send me the directions to the station? — Puoi inviarmi le indicazioni per la stazione?
-Don't forget to take your vitamins this morning. — Non dimenticare di prendere le tue vitamine stamattina.
-We are having lunch with our grandparents today. — Oggi pranziamo con i nostri nonni.
-I need a pair of comfortable shoes for walking. — Ho bisogno di un paio di scarpe comode per camminare.
-Could you please print the itinerary for the trip? — Potresti stampare l'itinerario del viaggio, per favore?
-The classroom was renovated during the summer. — L'aula è stata ristrutturata durante l'estate.
-Is there a water refill station nearby? — C'è una stazione di ricarica per l'acqua qui vicino?
-Does this shop offer tax-free shopping for tourists? — Questo negozio offre lo shopping tax-free per i turisti?
-We enjoyed the sunset from the beach cafe. — Ci siamo goduti il tramonto dal caffè sulla spiaggia.
-Please submit your project before Friday afternoon. — Per favore invia il tuo progetto entro venerdì pomeriggio.
-Could you help me clean the dining room table? — Potresti aiutarmi a pulire il tavolo della sala da pranzo?
-Do you have any sugar-free beverages here? — Avete bevande senza zucchero qui?
-What is the best way to get to the airport from here? — Qual è il modo migliore per arrivare all'aeroporto da qui?
-My phone battery is running low again. — La batteria del mio telefono si sta scaricando di nuovo.
-Have a nice flight and let us know when you land! — Buon volo e facci sapere quando atterri!
-Can I get a glass of sparkling water with lemon? — Posso avere un bicchiere di acqua frizzante con limone?
-Where is the nearest charging spot for electric cars? — Dov'è la colonnina di ricarica più vicina per auto elettriche?
-We need to check the flight status on the app. — Dobbiamo controllare lo stato del volo sull'applicazione.
-Could you please turn off the air conditioning before leaving? — Potresti spegnere l'aria condizionata prima di uscire, per favore?
-Is there a discount if I buy two pairs of shoes? — C'è uno sconto se compro due paia di scarpe?
-Our teacher assigned us a research project on renewable energy. — Il nostro insegnante ci ha assegnato un progetto di ricerca sulle energie rinnovabili.
-Could you send me the location via text message? — Potresti inviarmi la posizione tramite messaggio di testo?
-We are going to order some food from the local pizzeria tonight. — Stasera ordineremo del cibo dalla pizzeria locale.
-Please turn off your mobile phone during the exam. — Per favore spegni il cellulare durante l'esame.
-Do you know if the museum offers audio guides in Italian? — Sai se il museo offre audioguide in italiano?
-I need to buy a new charger for my tablet. — Devo comprare un nuovo caricabatterie per il mio tablet.
-We should leave early to avoid getting stuck in traffic. — Dovremmo partire presto per evitare di rimanere bloccati nel traffico.
-Could you please bring us another bottle of still water? — Potrebbe portarci un'altra bottiglia di acqua naturale, per favore?
-Can you help your mother set the table for dinner? — Puoi aiutare tua madre ad apparecchiare la tavola per cena?
-Dad, can I borrow the car this weekend? — Papà, posso prendere in prestito l'auto questo fine settimana?
-Have you cleaned your bedroom like your father asked? — Hai pulito la tua camera da letto come ti ha chiesto tuo padre?
-Mom, I need some money for the school trip tomorrow. — Mamma, ho bisogno di soldi per la gita scolastica di domani.
-Don't forget that your curfew is at ten o'clock tonight. — Non dimenticare che il tuo rientro è alle dieci stasera.
-Can you two stop arguing and help me unload the dishwasher? — Potete smetterla di litigare e aiutarmi a svuotare la lavastoviglie?
-Who is taking our daughter to her dance practice today? — Chi accompagna nostra figlia a lezione di danza oggi?
-Your father and I think you spend too much time on your phone. — Tuo padre ed io pensiamo che tu passi troppo tempo al telefono.
-Did you ask your mother before taking her jacket? — Hai chiesto a tua madre prima di prendere la sua giacca?
-Can I spend the night at my best friend's house on Saturday? — Posso dormire a casa della mia migliore amica sabato?
-Dad is preparing his famous pasta recipe for dinner tonight. — Papà sta preparando la sua famosa ricetta della pasta per cena stasera.
-Have you finished studying for your history exam tomorrow? — Hai già finito di studiare per il tuo esame di storia di domani?
-Mom, can we go clothes shopping together this afternoon? — Mamma, possiamo andare a comprare dei vestiti insieme questo pomeriggio?
-Please lower the music in your room, your father is working. — Per favore abbassa la musica in camera tua, tuo padre sta lavorando.
-How long are you going to stay in the bathroom? — Quanto tempo hai intenzione di stare in bagno?
-We are having a family movie night in the living room tonight. — Stasera facciamo una serata cinema in famiglia in soggiorno.
-Your mother left her car keys on the kitchen counter again. — Tua madre ha lasciato di nuovo le chiavi della macchina sul bancone della cucina.
-Dad, can you explain this difficult math problem to me? — Papà, puoi spiegarmi questo problema di matematica difficile?
-Don't leave your wet bath towel lying on the floor. — Non lasciare il tuo asciugamano da bagno bagnato sul pavimento.
-Who wants to help me prepare the salad for lunch? — Chi vuole aiutarmi a preparare l'insalata per pranzo?
-Mom and Dad are going out for dinner, so you are in charge. — Mamma e papà escono a cena, quindi te ne occupi tu.
-Can you please put your laundry in the dirty clothes basket? — Puoi mettere il tuo bucato nel cestino dei panni sporchi, per favore?
-Our daughter is studying hard for her driving test. — Nostra figlia sta studiando molto per l'esame della patente.
-Your father fixed the broken light in your bedroom yesterday. — Tuo padre ha riparato la luce rotta nella tua camera da letto ieri.
-Mom, do you know where my favorite pair of jeans is? — Mamma, sai dov'è il mio paio di jeans preferito?
-Please turn off the bathroom light when you are finished. — Per favore spegni la luce del bagno quando hai finito.
-We are going to visit your grandparents this Sunday afternoon. — Andremo a trovare i tuoi nonni questo domenica pomeriggio.
-Dad, can you drive me to my friend's birthday party? — Papà, puoi accompagnarmi in macchina alla festa di compleanno della mia amica?
-Your mother is calling you downstairs for breakfast. — Tua madre ti sta chiamando di sotto per la colazione.
-Did you remember to feed the cat before going to school? — Ti sei ricordata di dare da mangiare al gatto prima di andare a scuola?
-We need to set some clear rules about screen time. — Dobbiamo stabilire alcune regole chiare sul tempo davanti allo schermo.
-Can I invite a few classmates over to study this afternoon? — Posso invitare alcuni compagni di classe a studiare questo pomeriggio?
-Your father is taking the car to the mechanic this morning. — Tuo padre sta portando l'auto dal meccanico stamattina.
-Mom made some fresh pancakes for breakfast today. — Mamma ha fatto dei pancake freschi per colazione oggi.
-Please take your shoes off as soon as you enter the house. — Per favore togliti le scarpe non appena entri in casa.
-Dad, can we practice driving in the parking lot later? — Papà, possiamo esercitarci a guidare nel parcheggio più tardi?
-Our daughter asked if she could go to a concert next month. — Nostra figlia ha chiesto se può andare a un concerto il mese prossimo.
-We should clean out the refrigerator together this weekend. — Dovremmo pulire il frigorifero insieme questo fine settimana.
-Mom, can you help me dry my hair before we leave? — Mamma, puoi aiutarmi ad asciugarmi i capelli prima di uscire?
-Your father and I are very proud of your school results. — Tuo padre ed io siamo molto orgogliosi dei tuoi risultati scolastici.
-Who forgot to turn off the air conditioning in the hallway? — Chi ha dimenticato di spegnere l'aria condizionata nel corridoio?
-Can you give your father a hand with the garden hose? — Puoi dare una mano a tuo padre con la canna da giardino?
-I need to iron my shirt for tomorrow's school presentation. — Devo stirare la mia camicia per la presentazione a scuola di domani.
-Mom, what time are we leaving for the supermarket? — Mamma, a che ora partiamo per il supermercato?
-Please make your bed before you leave for school in the morning. — Per favore rifai il letto prima di uscire per andare a scuola la mattina.
-Your father is grilling some vegetables in the backyard. — Tuo padre sta grigliando delle verdure nel cortile sul retro.
-Can I order a pizza with my friends this Friday evening? — Posso ordinare una pizza con le mie amiche questo venerdì sera?
-Your mother is currently in an important video call for work. — Tua madre al momento è in un'importante videochiamata di lavoro.
-Let's all sit down and talk about our weekend plans. — Sediamoci tutti e parliamo dei nostri programmi per il fine settimana.
-Who left the front door unlocked when they came home? — Chi ha lasciato la porta d'ingresso aperta quando è tornato a casa?
-Excuse me, where is the check-in desk for flight BA four hundred? — Mi scusi, dov'è il banco del check-in per il volo BA quattrocento?
-Could you please place your hand luggage on the scale? — Potrebbe mettere il bagaglio a mano sulla bilancia, per favore?
-Is this suitcase within the permitted weight limit for cabin baggage? — Questa valigia rientra nel limite di peso consentito per il bagaglio a mano?
-I need to check two bags and carry one backpack on board. — Devo imbarcare due valigie e portare uno zaino a bordo.
-Where is the security checkpoint for international departures? — Dov'è il varco di sicurezza per le partenze internazionali?
-Please take your laptop and liquids out of your bag for scanning. — Per favore tirate fuori il computer portatile e i liquidi dalla borsa per la scansione.
-Do I need to take off my shoes and belt at security? — Devo togliere le scarpe e la cintura ai controlli di sicurezza?
-Excuse me, where can I wrap my luggage in protective plastic film? — Mi scusi, dove posso avvolgere il mio bagaglio nella pellicola protettiva di plastica?
-My flight has been delayed by two hours due to bad weather. — Il mio volo è stato ritardato di due ore a causa del maltempo.
-Where can I find the electronic flight information departure board? — Dove posso trovare il tabellone elettronico delle partenze dei voli?
-The gate for our flight to Paris has just been changed. — Il gate per il nostro volo per Parigi è appena stato cambiato.
-Final boarding call for passengers traveling on flight LH seven hundred. — Ultimo avviso d'imbarco per i passeggeri in viaggio sul volo LH settecento.
-Please present your boarding pass and passport at the gate. — Per favore esibite la carta d'imbarco e il passaporto al gate.
-Is there a fast-track lane available for security screening? — È disponibile una corsia preferenziale per i controlli di sicurezza?
-Where is the baggage claim area for flight AZ two hundred? — Dov'è l'area ritiro bagagli per il volo AZ duecento?
-My suitcase did not arrive on the baggage carousel with the others. — La mia valigia non è arrivata sul nastro bagagli con gli altri.
-Where is the lost and found office for mishandled luggage? — Dov'è l'ufficio oggetti smarriti per i bagagli smarriti?
-Can I exchange currency or use an ATM in the arrivals hall? — Posso cambiare la valuta o usare un bancomat nella hall degli arrivi?
-Where can I catch the express train to the city center? — Dove posso prendere il treno espresso per il centro città?
-Are there official taxi ranks right outside the terminal exit? — Ci sono postazioni di taxi ufficiali proprio fuori dall'uscita del terminal?
-Could you tell me which terminal handles international arrivals? — Potrebbe dirmi quale terminal gestisce gli arrivi internazionali?
-Is free Wi-Fi available throughout the entire airport terminal? — Il Wi-Fi gratuito è disponibile in tutto il terminal dell'aeroporto?
-Where is the nearest airport lounge for business class passengers? — Dov'è la sala d'attesa dell'aeroporto più vicina per i passeggeri di classe business?
-Can I buy duty-free items after passing through security control? — Posso comprare articoli duty-free dopo aver superato il controllo di sicurezza?
-Excuse me, where are the restrooms located near gate twenty-four? — Mi scusi, dove si trovano i bagni vicino al gate ventiquattro?
-My connecting flight leaves in less than forty minutes. — Il mio volo in coincidenza parte in meno di quarantacinque minuti.
-Where do I go to clear passport control and immigration? — Dove devo andare per superare il controllo passaporti e l'immigrazione?
-Please keep your boarding pass handy until you step onto the aircraft. — Per favore tenete a portata di mano la carta d'imbarco fino a quando salite sull'aereo.
-Is there a pharmacy inside the departures terminal? — C'è una farmacia all'interno del terminal delle partenze?
-Where can I rent a car upon arrival at the airport? — Dove posso noleggiare un'auto all'arrivo in aeroporto?
-Could you help me push this heavy luggage trolley? — Potresti aiutarmi a spingere questo carrello portabagagli pesante?
-Are liquids over one hundred milliliters allowed in cabin baggage? — I liquidi superiori a cento millilitri sono ammessi nel bagaglio a mano?
-Please place all electronic devices in a separate tray. — Per favore mettete tutti i dispositivi elettronici in un vassoio separato.
-Excuse me, is this seat next to the emergency exit? — Mi scusi, questo posto è vicino all'uscita di sicurezza?
-The flight attendant is demonstrating safety procedures before takeoff. — L'assistente di volo sta mostrando le procedure di sicurezza prima del decollo.
-Please fasten your seatbelts and return your seat upright. — Per favore allacciate le cinture di sicurezza e rimettete il sedile in posizione verticale.
-Can I use my mobile phone in airplane mode during the flight? — Posso usare il mio cellulare in modalità aereo durante il volo?
-Where is the designated smoking area outside the terminal building? — Dov'è l'area fumatori designata fuori dall'edificio del terminal?
-We need to go through customs check after collecting our bags. — Dobbiamo passare attraverso il controllo doganale dopo aver ritirato le nostre valigie.
-Is there an information desk where I can ask for directions? — C'è un banco informazioni dove posso chiedere indicazioni?
-Where can I plug in my phone to charge the battery? — Dove posso attaccare il mio telefono per caricare la batteria?
-Are strollers allowed all the way up to the aircraft door? — I passeggini sono ammessi fino alla porta dell'aeromobile?
-Excuse me, what time does the airline check-in counter open? — Mi scusi, a che ora apre il banco del check-in della compagnia aerea?
-My passport expires in less than six months from today. — Il mio passaporto scade in meno di sei mesi da oggi.
-Can I bring my pet on board in a special carrier? — Posso portare il mio animale domestico a bordo in un trasportino speciale?
-Where is the VIP lounge for frequent flyer members? — Dov'è la sala VIP per i membri frequent flyer?
-The flight is currently boarding passengers by zones. — Il volo sta attualmente imbarcando i passeggeri per zone.
-Please make sure you have all your personal belongings before leaving. — Per favore assicuratevi di avere tutti i vostri effetti personali prima di partire.
-Where can I buy a bottled water past the security checkpoint? — Dove posso comprare una bottiglietta d'acqua oltre il varco di sicurezza?
-Have a pleasant flight and a safe journey to your destination. — Buon volo e buon viaggio verso la vostra destinazione.
-What time does the ferry to the island depart? — A che ora parte il traghetto per l'isola?
-Where is the ticket office for the hydrofoil? — Dov'è la biglietteria per l'aliscafo?
-Do we need to check in our car two hours before boarding? — Dobbiamo fare il check-in dell'auto due ore prima dell'imbarco?
-Which pier does the cruise ship dock at? — A quale molo attracca la nave da crociera?
-Is vehicle boarding allowed on this ferry? — È consentito l'imbarco dei veicoli su questo traghetto?
-Could you tell me where dock number four is? — Potrebbe dirmi dov'è il molo numero quattro?
-How long does the crossing take to reach the port? — Quanto dura la traversata per raggiungere il porto?
-Please have your boarding passes and passports ready. — Per favore tenete pronti i biglietti d'imbarco e i passaporti.
-Is sea sickness medication available at the port pharmacy? — I farmaci per il mal di mare sono disponibili nella farmacia del porto?
-Where can I find a porter to help with heavy luggage? — Dove posso trovare un portabagagli per aiutarmi con i bagagli pesanti?
-We are going on a day excursion by boat along the coast. — Faremo un'escursione di un giorno in barca lungo la costa.
-Is there a waiting room with air conditioning in the terminal? — C'è una sala d'attesa con aria condizionata nel terminal?
-Can we park our car in the port long-stay parking lot? — Possiamo parcheggiare l'auto nel parcheggio a lunga sosta del porto?
-What is the maximum height allowed for vehicles on board? — Qual è l'altezza massima consentita per i veicoli a bordo?
-The sea is quite rough today so the departure might be delayed. — Il mare è piuttosto agitato oggi quindi la partenza potrebbe essere ritardata.
-Where is the passenger drop-off area near the pier? — Dov'è l'area di fermata passeggeri vicino al molo?
-Do we need to book a cabin for the overnight ferry? — Dobbiamo prenotare una cabina per il traghetto notturno?
-Are pets allowed on the upper deck of the ship? — Gli animali domestici sono ammessi sul ponte superiore della nave?
-Excuse me, is this the queue for foot passengers? — Mi scusi, è questa la fila per i passeggeri a piedi?
-Where can we rent a private boat for the afternoon? — Dove possiamo noleggiare una barca privata per il pomeriggio?
-The lighthouse is visible from the end of the harbor wall. — Il faro è visibile dalla fine del molo del porto.
-Please wait inside your car until driving instructions are given. — Per favore attendete in auto finché non vengono date le istruzioni di guida.
-Is there a shuttle bus connecting the port to the railway station? — C'è un autobus navetta che collega il porto alla stazione ferroviaria?
-We booked a reserved seat in the lounge area on the ferry. — Abbiamo prenotato un posto riservato nell'area lounge del traghetto.
-Where do I claim my tax refund at the port exit? — Dove posso richiedere il rimborso fiscale all'uscita del porto?
-The ferry captain announced a slight delay due to fog. — Il capitano del traghetto ha annunciato un leggero ritardo a causa della nebbia.
-Are life jackets available under every seat on the boat? — I giubbotti di salvataggio sono disponibili sotto ogni sedile della barca?
-Where can we buy tickets for the island hop tour? — Dove possiamo comprare i biglietti per il tour tra le isole?
-You must follow the marshals when driving onto the car deck. — È necessario seguire gli addetti quando si guida sul ponte auto.
-Is there a restaurant or cafe open inside the ferry terminal? — C'è un ristorante o un bar aperto all'interno del terminal traghetti?
-How much does a round-trip ticket for the ferry cost? — Quanto costa un biglietto di andata e ritorno per il traghetto?
-The cruise ship will anchor in the bay until tomorrow morning. — La nave da crociera getterà l'ancora nella baia fino a domani mattina.
-Where is the entrance for oversized vehicles and campers? — Dov'è l'ingresso per i veicoli fuori misura e i camper?
-Can we leave our bags in the luggage storage at the port? — Possiamo lasciare i nostri bagagli nel deposito bagagli al porto?
-The harbor authority has issued a weather warning for tonight. — L'autorità portuale ha emesso un avviso meteo per stasera.
-Which gate do we use to exit the port area? — Quale varco usiamo per uscire dall'area portuale?
-We enjoyed watching the sailing boats enter the marina. — Ci è piaciuto guardare le barche a vela entrare nel porticciolo.
-Is there a charging point for electric vehicles at the terminal? — C'è un punto di ricarica per veicoli elettrici al terminal?
-Please turn off your car engine while waiting to board. — Per favore spegnete il motore dell'auto durante l'attesa per l'imbarco.
-Where is the customs control point for international arrivals? — Dov'è il punto di controllo doganale per gli arrivi internazionali?
-We saw dolphins swimming near the ship during the voyage. — Abbiamo visto dei delfini nuotare vicino alla nave durante il viaggio.
-Can I change my ferry ticket to a later departure time? — Posso cambiare il mio biglietto del traghetto per un orario di partenza successivo?
-Is the footbridge open for pedestrians walking into the city? — Il ponte pedonale è aperto per i pedoni che vanno in città?
-The deck crew helped us secure our motorbike on board. — L'equipaggio di coperta ci ha aiutato a fissare la nostra moto a bordo.
-Where can I find a map of the port and its facilities? — Dove posso trovare una mappa del porto e dei suoi servizi?
-The catamaran service to the coastal town operates daily. — Il servizio di catamarano per la città costiera opera tutti i giorni.
-Please watch your step when crossing the gangway to the ship. — Per favore fate attenzione ai piedi mentre attraversate la passerella per la nave.
-Is wifi available on board during the crossing? — Il wifi è disponibile a bordo durante la traversata?
-We arrived early at the port to secure a good spot in line. — Siamo arrivati presto al porto per assicurarci un buon posto in fila.
-Have a safe voyage and enjoy the scenery along the coast! — Buon viaggio e goditi il panorama lungo la costa!
-Is the express train to Milan arriving on platform five? — Il treno espresso per Milano arriva al binario cinque?
-Do I need to validate my subway ticket before tapping in? — Devo convalidare il biglietto della metropolitana prima di passare i tornelli?
-Is there a high-speed train leaving for Florence this morning? — C'è un treno ad alta velocità in partenza per Firenze stamattina?
-Where is the automatic ticket machine for regional trains? — Dov'è la biglietteria automatica per i treni regionali?
-How many stops are there until the central railway station? — Quante fermate ci sono fino alla stazione ferroviaria centrale?
-Is this metro line running direct or local? — Questa linea della metropolitana è diretta o fa tutte le fermate?
-Excuse me, does this subway line go towards the stadium? — Mi scusi, questa linea della metropolitana va verso lo stadio?
-You need to change lines at the next interchange station. — Devi cambiare linea alla prossima stazione di scambio.
-What is the frequency of the underground trains during peak hours? — Qual è la frequenza dei treni della metropolitana nelle ore di punta?
-Is the left-luggage office open twenty-four hours a day? — L'ufficio deposito bagagli è aperto ventiquattr'ore su ventiquattr'ore?
-Please mind the gap between the train and the platform edge. — Per favore prestare attenzione allo spazio tra il treno e il binario.
-Is my rail pass valid on this regional train line? — Il mio abbonamento ferroviario è valido su questa linea regionale?
-Which exit should I take for the main square? — Quale uscita dovrei prendere per la piazza principale?
-The commuter train is delayed due to signaling problems. — Il treno pendolari è in ritardo a causa di problemi di segnalamento.
-Can I buy a monthly travel card at the ticket window? — Posso comprare un abbonamento mensile allo sportello?
-Is there an elevator down to the subway platforms? — C'è un ascensore per scendere ai binari della metropolitana?
-Does this train have quiet carriages for passengers resting? — Questo treno ha carrozze del silenzio per i passeggeri che riposano?
-Where is the lost property office in the station? — Dov'è l'ufficio oggetti smarriti nella stazione?
-The display board shows that the train is on time. — Il tabellone mostra che il treno è in orario.
-Do I have to switch from the blue line to the red line? — Devo passare dalla linea blu alla linea rossa?
-Is first class seating available on this suburban train? — Sono disponibili posti in prima classe su questo treno suburbano?
-Could you tell me where the waiting room is located? — Potrebbe dirmi dove si trova la sala d'attesa?
-Are bicycles allowed on the metro during rush hour? — Le biciclette sono ammesse sulla metropolitana durante l'ora di punta?
-The train inspector is coming to check our tickets. — Il controllore sta arrivando per verificare i nostri biglietti.
-Is there a charge for storing a large suitcase in the locker? — C'è un costo per riporre una valigia grande nell'armadietto?
-What time is the last underground train tonight? — A che ora passa l'ultima metropolitana stasera?
-We missed our connection because the first train was late. — Abbiamo perso la coincidenza perché il primo treno era in ritardo.
-Is tap-and-go payment accepted at the metro turnstiles? — Il pagamento contactless è accettato ai tornelli della metropolitana?
-Please step back behind the yellow safety line on the platform. — Per favore allontanarsi dalla linea gialla di sicurezza sul binario.
-Does this train carry a dining car with snacks and drinks? — Questo treno ha una carrozza bar con snack e bevande?
-Which side of the train do the doors open on? — Da quale lato del treno si aprono le porte?
-Is there a discount ticket for senior citizens on the metro? — C'è un biglietto scontato per gli anziani sulla metropolitana?
-How long is the stop at this intermediate station? — Quanto dura la sosta in questa stazione intermedia?
-The ticket barrier is not accepting my magnetic card. — Il tornello non accetta la mia carta magnetica.
-You must tap out when exiting the subway station. — Devi passare il biglietto ai tornelli quando esci dalla stazione metro.
-Is there a seat reservation required for this night train? — È necessaria la prenotazione del posto per questo treno notturno?
-Where can I find a network map of the underground? — Dove posso trovare una mappa della rete metropolitana?
-The train was cancelled due to maintenance work on the tracks. — Il treno è stato cancellato per lavori di manutenzione sui binari.
-Does this station have escalator access to the surface? — Questa stazione ha la scala mobile per salire in superficie?
-Which carriage number is printed on your paper ticket? — Quale numero di carrozza è stampato sul tuo biglietto cartaceo?
-The announcements are broadcast in both English and Italian. — Gli annunci sono trasmessi sia in inglese che in italiano.
-Is there a connecting bus service right outside the station exit? — C'è un servizio autobus di coincidenza proprio fuori dall'uscita della stazione?
-How many zones does this single ticket cover? — Quante zone copre questo biglietto singolo?
-You can top up your transit card at any ticket machine. — Puoi ricaricare la tua carta dei trasporti in qualsiasi emettitrice automatica.
-Please do not obstruct the train doors while they are closing. — Per favore non ostruire le porte del treno mentre si chiudono.
-Is there a customer service desk near the main concourse? — C'è un banco di assistenza clienti vicino all'atrio principale?
-We need to walk along platform three to reach our carriage. — Dobbiamo camminare lungo il binario tre per raggiungere la nostra carrozza.
-Are all subway stations equipped with tactile paving for the blind? — Tutte le stazioni della metropolitana sono dotate di percorso tattile per non vedenti?
-The next train arriving on platform two does not stop here. — Il prossimo treno in arrivo al binario due non effettua fermata qui.
-Have a smooth journey on your rail travel across the country! — Buon viaggio in treno attraverso il paese!
-Is the host living on the property or nearby? — L'host abita nella struttura o nelle vicinanze?
-What is the entry code for the front door? — Qual è il codice d'accesso per la porta d'ingresso?
-Could you show us where the breakfast room is? — Potrebbe mostrarci dov'è la sala colazioni?
-Is homemade cake served with breakfast every morning? — Viene servita una torta fatta in casa a colazione ogni mattina?
-Do you offer any gluten-free products for breakfast? — Offrite prodotti senza glutine per la colazione?
-Could we have breakfast a bit earlier tomorrow morning? — Potremmo fare colazione un po' prima domani mattina?
-Where can we leave the house keys when we check out? — Dove possiamo lasciare le chiavi di casa quando facciamo il check-out?
-Is there a common lounge area for all guests? — C'è un'area soggiorno comune per tutti gli ospiti?
-Can we use the coffee machine in the kitchen freely? — Possiamo usare liberamente la macchina del caffè in cucina?
-Are fresh towels provided every two days? — Gli asciugamani puliti vengono forniti ogni due giorni?
-What time is the main entrance gate locked at night? — A che ora viene chiuso a chiave il cancello principale di notte?
-Could you recommend a family-run restaurant nearby? — Potrebbe consigliarmi un ristorante a gestione familiare qui vicino?
-Is parking available directly in the courtyard? — Il parcheggio è disponibile direttamente nel cortile?
-Can I borrow an iron from the host? — Posso prendere in prestito un ferro da stiro dall'host?
-Is there a small fridge in the room for our drinks? — C'è un piccolo frigorifero in camera per le nostre bevande?
-The host gave us a map of the surrounding village. — L'host ci ha dato una mappa del borgo circostante.
-Could we get a tea kettle for our room? — Potremmo avere un bollitore per il tè in camera?
-Is daily housekeeping included in our B&B reservation? — Le pulizie giornaliere sono incluse nella nostra prenotazione B&B?
-Can we leave our bicycles in the garden shed overnight? — Possiamo lasciare le nostre biciclette nel capanno in giardino per la notte?
-Where is the main thermostat to adjust the heating? — Dov'è il termostato principale per regolare il riscaldamento?
-Are we allowed to use the garden terrace in the evening? — Ci è consentito usare la terrazza in giardino la sera?
-The host prepared a delicious basket of fresh local fruit. — L'host ha preparato un delizioso cestino di frutta fresca locale.
-Do you have any extra blankets stored in the wardrobe? — Avete delle coperte extra nell'armadio?
-Can you order a local taxi for us tomorrow at eight? — Può ordinare un taxi locale per noi domani alle otto?
-What options are available for breakfast tomorrow morning? — Quali opzioni sono disponibili per colazione domani mattina?
-What are the quiet hours during the night? — Quali sono gli orari del silenzio durante la notte?
-Could you give us a spare set of house keys? — Potrebbe darci un set di chiavi di riserva?
-Is there a microwave available for heating up baby food? — C'è un microonde disponibile per scaldare le pappe dei bambini?
-The host was very welcoming and recommended great hiking trails. — L'host è stato molto accogliente e ha consigliato ottimi sentieri da trekking.
-Is there a safe place to leave our bags after checking out? — C'è un posto sicuro dove lasciare le nostre borse dopo il check-out?
-Is fresh milk provided in the communal kitchen? — Il latte fresco è fornito nella cucina comune?
-Could you tell us how to turn on the bathroom radiator? — Potrebbe dirci come accendere il radiatore del bagno?
-Are pets allowed inside the bed and breakfast rooms? — Gli animali domestici sono ammessi nelle camere del bed and breakfast?
-The room was decorated in a cozy rustic style. — La camera era arredata in un accogliente stile rustico.
-What time should we inform you about our arrival time? — A che ora dovremmo comunicarvi il nostro orario di arrivo?
-Is there an outdoor swimming pool in the garden area? — C'è una piscina all'aperto nell'area del giardino?
-Could you recommend a scenic spot to watch the sunset? — Potrebbe consigliare un punto panoramico per guardare il tramonto?
-Do we need to turn off all lights when leaving the house? — Dobbiamo spegnere tutte le luci quando usciamo di casa?
-Can we request savory breakfast options like cheese and ham? — Possiamo richiedere opzioni di colazione salata come formaggio e prosciutto?
-The host kindly offered us a welcome drink upon arrival. — L'host ci ha gentilmente offerto un drink di benvenuto all'arrivo.
-Is smoking allowed on the private balcony? — È consentito fumare sul balcone privato?
-How do we open the automatic gate at night? — Come apriamo il cancello automatico di notte?
-Can you recommend a good local bakery nearby? — Può consigliarci una buona panetteria locale qui vicino?
-We felt completely at home during our stay at the B&B. — Ci siamo sentiti completamente a casa durante il nostro soggiorno al B&B.
-Is there a washing machine we can use for a small fee? — C'è una lavatrice che possiamo usare con un piccolo supplemento?
-Could you provide a baby cot for our room? — Potrebbe fornire una culla per neonati per la nostra stanza?
-What is the best route to reach the village center on foot? — Qual è il percorso migliore per raggiungere a piedi il centro del paese?
-The continental breakfast included freshly squeezed orange juice. — La colazione continentale includeva spremuta d'arancia fresca.
-Please let us know if we need to lock the main entrance door. — Per favore ci faccia sapere se dobbiamo chiudere a chiave la porta d'ingresso principale.
-Thank you for your warm hospitality and wonderful tips! — Grazie per la calda ospitalità e i meravigliosi consigli!
-Let us go window shopping along the main pedestrian street. — Andiamo a guardare le vetrine lungo la via pedonale principale.
-Do you want to pop into that clothing boutique for a minute? — Vuoi fare un salto in quella boutique di abbigliamento per un minuto?
-Look at that gorgeous coat on the mannequin in the window! — Guarda che splendido cappotto sul manichino in vetrina!
-Is this leather handbag made of genuine leather? — Questa borsa di pelle è in vera pelle?
-I am looking for a pair of comfortable sneakers for walking. — Sto cercando un paio di scarpe da ginnastica comode per camminare.
-Can I try on these sunglasses in a different color frame? — Posso provare questi occhiali da sole con la montatura di un colore diverso?
-Is there a shoe shop on this shopping street? — C'è un negozio di scarpe in questa via dello shopping?
-The summer sales have just started this week. — I saldi estivi sono appena iniziati questa settimana.
-Do you think this color suits me or should I try black? — Pensi che questo colore mi stia bene o dovrei provare il nero?
-I need to find a nice scarf to match this dress. — Devo trovare una bella sciarpa da abbinare a questo vestito.
-Excuse me, do you have these boots in size thirty-nine? — Scusi, avete questi stivali nel numero trentanove?
-Is this shirt made of one hundred percent cotton? — Questa camicia è di cotone al cento per cento?
-I am just browsing for now, thank you for asking. — Sto solo dando un'occhiata per ora, grazie per avermelo chiesto.
-Where is the nearest department store around here? — Dov'è il grande magazzino più vicino da queste parti?
-Could you tell me if this belt comes in a larger size? — Potrebbe dirmi se questa cintura c'è in una taglia più grande?
-These trousers are a bit too long, do you offer alterations? — Questi pantaloni sono un po' troppo lunghi, fate riparazioni sartoriali?
-Let us take a break from shopping and get a gelato. — Facciamo una pausa dallo shopping e prendiamo un gelato.
-I love the vintage clothes in this secondhand shop. — Adoro i vestiti vintage in questo negozio dell'usato.
-Are these handmade ceramics produced by local artisans? — Queste ceramiche fatte a mano sono prodotte da artigiani locali?
-Can I keep the box for these new shoes? — Posso tenere la scatola per queste scarpe nuove?
-I bought this wool sweater on sale at half price. — Ho comprato questo maglione di lana in saldo a metà prezzo.
-Is there a mirror nearby so I can see how it looks? — C'è uno specchio qui vicino così posso vedere come sta?
-This jewelry shop has some very elegant silver necklaces. — Questa gioielleria ha delle collane d'argento molto eleganti.
-Could you wrap this delicate porcelain vase carefully? — Potrebbe incartare questo vaso di porcellana delicato con cura?
-We have been walking through the shopping district all morning. — Abbiamo camminato nel quartiere dello shopping per tutta la mattina.
-Do you accept credit card payments for small amounts? — Accettate pagamenti con carta di credito per piccoli importi?
-I would like to exchange this sweater for a smaller size. — Vorrei cambiare questo maglione con una taglia più piccola.
-Are there any luxury brand outlets near the city center? — Ci sono outlet di marchi di lusso vicino al centro città?
-Look at these cute handmade souvenirs in the gift shop! — Guarda questi carini souvenir fatti a mano nel negozio di souvenir!
-Is this umbrella sturdy enough for strong wind? — Questo ombrello è abbastanza robusto per il vento forte?
-I am looking for a light jacket for cool summer evenings. — Sto cercando una giacca leggera per le fresche sere d'estate.
-Excuse me, is this hat available in one size only? — Scusi, questo cappello è disponibile solo in taglia unica?
-Can you show me the newest arrivals in the window? — Puoi mostrarmi le ultime novità in vetrina?
-My shopping bag is getting quite heavy to carry around. — La mia borsa della spesa sta diventando piuttosto pesante da portare in giro.
-This perfume shop has a wide selection of fragrances. — Questa profumeria ha un'ampia selezione di fragranze.
-Could you give me a receipt so I can claim Tax Free? — Potrebbe darmi uno scontrino così posso richiedere il Tax Free?
-I really like the design of this leather wallet. — Mi piace molto il design di questo portafoglio in pelle.
-Is this fabric machine washable or dry clean only? — Questo tessuto è lavabile in lavatrice o solo a secco?
-Let us walk down this narrow alley to see the artisan shops. — Camminiamo lungo questo vicolo stretto per vedere le botteghe artigiane.
-I am carrying too many bags, let us head back to the hotel. — Sto portando troppe borse, torniamo verso l'hotel.
-Do you have any discounts if I purchase three items? — Avete degli sconti se acquisto tre articoli?
-She bought an elegant silk scarf as a gift for her mother. — Ha comprato un'elegante sciarpa di seta come regalo per sua madre.
-Where can I find a good antique market in this area? — Dove posso trovare un buon mercato dell'antiquariato in questa zona?
-This pair of sunglasses offers full UV protection. — Questo paio di occhiali da sole offre una protezione UV completa.
-Can I leave my heavy bags at the customer service desk? — Posso lasciare le mie borse pesanti al banco di assistenza clienti?
-I cannot decide between the navy blue and the dark green one. — Non riesco a decidere tra quello blu notte e quello verde scuro.
-Are there any sports equipment stores on this avenue? — Ci sono negozi di articoli sportivi in questo viale?
-Look at that long queue outside the new bakery! — Guarda che lunga fila fuori dalla nuova panetteria!
-This store specializes in handmade leather shoes. — Questo negozio è specializzato in scarpe in pelle fatte a mano.
-What a wonderful afternoon for strolling through the shops! — Che pomeriggio delizioso per passeggiare tra i negozi!
-Shall we cross the street at the pedestrian crossing? — Attraversiamo la strada sulle strisce pedonali?
-Look at the stunning architecture of this ancient building. — Guarda l'architettura mozzafiato di questo antico edificio.
-Is there a nice park nearby where we can sit down? — C'è un bel parco qui vicino dove possiamo sederci?
-Let us take a short break on this park bench. — Facciamo una breve pausa su questa panchina.
-Could you take a picture of us in front of the fountain? — Potrebbe scattarci una foto davanti alla fontana?
-This main square is always full of street performers. — Questa piazza principale è sempre piena di artisti di strada.
-Which way leads to the historical town center? — Quale strada porta al centro storico?
-The city hall is located at the end of this avenue. — Il municipio si trova alla fine di questo viale.
-Let us walk along the river bank at sunset. — Camminiamo lungo la riva del fiume al tramonto.
-Is this cobblestone street accessible for strollers? — Questa strada in ciottoli è accessibile ai passeggini?
-We can get a wonderful view of the city from this hill. — Possiamo godere di una vista meravigliosa della città da questa collina.
-Do you know the history of this marble statue? — Conosci la storia di questa statua di marmo?
-Let us stroll through the narrow alleys of the old neighborhood. — Passeggiamo per i vicoli stretti del vecchio quartiere.
-There is a beautiful botanical garden near the castle. — C'è un bellissimo giardino botanico vicino al castello.
-Watch out for the cyclists coming down the bike lane. — Fai attenzione ai ciclisti che scendono lungo la pista ciclabile.
-How old is the cathedral located in the center? — Quanti anni ha la cattedrale situata in centro?
-There are many cozy cafes along this tree-lined boulevard. — Ci sono molti caffè accoglienti lungo questo viale alberato.
-Let us cross the stone bridge to get to the other side. — Attraversiamo il ponte di pietra per andare dall'altra parte.
-Is there a tourist map of the walking routes available? — C'è una mappa turistica dei percorsi a piedi disponibile?
-Look at the colourful flowers decorating the balconies. — Guarda i fiori colorati che decorano i balconi.
-Where does this pedestrian path lead to? — Dove porta questo percorso pedonale?
-We can hear the church bells ringing across the town. — Possiamo sentire le campane della chiesa suonare in tutta la città.
-Let us stop at the drinking fountain to fill our bottles. — Fermiamoci alla fontanella per riempire le nostre borracce.
-The street lights are turning on as evening falls. — I lampioni si stanno accendendo mentre scende la sera.
-Is it safe to walk around this neighborhood at night? — È sicuro camminare in questo quartiere di notte?
-There is a lively open-air market happening in the square today. — Oggi c'è un vivace mercato all'aperto nella piazza.
-We noticed a plaque commemorating a famous historical event. — Abbiamo notato una targa che commemora un famoso evento storico.
-Can you guide us towards the main promenade? — Puoi guidarci verso la passeggiata principale?
-I love the vibrant atmosphere of this bustling street. — Adoro l'atmosfera vivace di questa strada animata.
-Should we head back towards the hotel before it gets dark? — Dovremmo tornare verso l'hotel prima che faccia buio?
-The ancient city walls are remarkably well preserved. — Le antiche mura della città sono straordinariamente ben conservate.
-Let us take the stairs leading up to the panoramic viewpoint. — Prendiamo le scale che portano al punto panoramico.
-This neighborhood is famous for its colorful street art. — Questo quartiere è famoso per la sua vivace arte urbana.
-Are there any shaded benches where we can rest in the shade? — Ci sono panchine all'ombra dove possiamo riposarci?
-The traffic noise disappears once you enter the quiet alley. — Il rumore del traffico scompare appena si entra nel vicolo silenzioso.
-You can admire the ruins from the observation platform. — Puoi ammirare i resti dalla piattaforma di osservazione.
-Let us follow the signposts directing visitors to the monument. — Seguiamo i cartelli che indicano il monumento ai visitatori.
-Is there a scenic walking trail along the coastline? — C'è un sentiero panoramico lungo la costa?
-I enjoy observing daily life in the neighborhood squares. — Mi piace osservare la vita quotidiana nelle piazze del quartiere.
-Do not forget to look up at the decorative details on the facades. — Non dimenticare di alzare lo sguardo sui dettagli decorativi delle facciate.
-The bell tower dominates the skyline of the whole city. — Il campanile domina il panorama dell'intera città.
-Let us cross the avenue at the traffic lights when it turns green. — Attraversiamo il viale al semaforo quando diventa verde.
-There is a bronze monument erected in honor of the founder. — C'è un monumento in bronzo eretto in onore del fondatore.
-We walked for hours discovering hidden corners of the town. — Abbiamo camminato per ore scoprendo angoli nascosti della città.
-The park is full of locals walking their dogs in the evening. — Il parco è pieno di residenti che portano a spasso i cani la sera.
-Is the old fortress open for public visits today? — La vecchia fortezza è aperta per le visite pubbliche oggi?
-Let us sit near the pond and watch the ducks. — Sediamoci vicino allo stagno a guardare le anatre.
-This historical gate was once the main entrance to the city. — Questa porta storica un tempo era l'ingresso principale della città.
-The whole downtown area is restricted to pedestrians only. — L'intera zona del centro storico è riservata esclusivamente ai pedoni.
-What a charming place to take an evening stroll! — Che posto incantevole per fare una passeggiata serale!
+What would you like for breakfast? (uot wud iu laik for brekfast) — Cosa vuoi per colazione?
+What time does the train leave? (uot taim daz de trein liiv) — A che ora parte il treno?
+Can you pass me the salt, please? (ken iu pas mi de solt, pliiz) — Puoi passarmi il sale, per favore?
+Do you have any plans for the weekend? (du iu hev eni plenz for de uiikend) — Hai programmi per il weekend?
+How much is this, please? (hau macc iz dis, pliiz) — Quanto costa questo, per favore?
+Can I have the bill, please? (ken ai hev de bil, pliiz) — Posso avere il conto, per favore?
+Where did you park the car? (uer did iu park de kar) — Dove hai parcheggiato la macchina?
+Do you know where the nearest pharmacy is? (du iu nou uer de nirest farmesi iz) — Sai dov'è la farmacia più vicina?
+What's the weather like today? (uots de ueder laik tudei) — Che tempo fa oggi?
+Can you turn down the music, please? (ken iu tern daun de miuzik, pliiz) — Puoi abbassare la musica, per favore?
+Shall we go for a walk after dinner? (scial ui gou for e uok after diner) — Andiamo a fare due passi dopo cena?
+Can you help me carry these bags? (ken iu help mi keri diiz begz) — Puoi aiutarmi a portare queste borse?
+What time do you usually wake up? (uot taim du iu iujueli ueik ap) — A che ora ti svegli di solito?
+Do you want tea or coffee? (du iu uont tii or kofi) — Vuoi tè o caffè?
+Can you pick up some milk on your way home? (ken iu pik ap sam milk on ior uei houm) — Puoi prendere del latte tornando a casa?
+Would you like a hand with dinner? (wud iu laik e hend uidh diner) — Vuoi una mano con la cena?
+Excuse me, is this seat taken? (ekskiuz mi, iz dis siit teikën) — Scusi, questo posto è occupato?
+Have you finished your homework? (hev iu finiscd ior houmuork) — Hai finito i compiti?
+What time does the pharmacy close? (uot taim daz de farmesi klouz) — A che ora chiude la farmacia?
+We'll talk about it later, okay? (uil tok ebaut it leiter, okei) — Ne parliamo più tardi, va bene?
+Wake up, it's time to go to school! (ueik ap, its taim tu gou tu skuul) — Sveglia, è ora di andare a scuola!
+Did you brush your teeth? (did iu brasc ior tiith) — Ti sei lavato i denti?
+Who's taking the dog out tonight? (huuz teiking de dog aut tunait) — Chi porta fuori il cane stasera?
+Have you done your homework yet? (hev iu dan ior houmuork yet) — Hai già fatto i compiti?
+Can you help me fold the laundry? (ken iu help mi fould de londri) — Puoi aiutarmi a piegare il bucato?
+Who left the lights on? (huu left de laits on) — Chi ha lasciato le luci accese?
+Shall we order pizza tonight? (scial ui order pitza tunait) — Stasera ordiniamo la pizza?
+Can you check if the door is locked? (ken iu cek if de dor iz lokt) — Puoi controllare se la porta è chiusa a chiave?
+Who used my charger? (huu iuzd mai ciarger) — Chi ha usato il mio caricabatterie?
+Can you turn down the volume, please? (ken iu tern daun de voliuum, pliiz) — Puoi abbassare il volume, per favore?
+Could you please turn off the lights before leaving? (kud iu pliiz tern of de laits bifor liiving) — Potresti spegnere le luci prima di uscire, per favore?
+Could you repeat that more slowly, please? (kud iu ripiit det mor slouli, pliiz) — Potrebbe ripeterlo più lentamente, per favore?
+We missed the train, so we took the next one. (ui mist de trein, sou ui tuk de nekst uan) — Abbiamo perso il treno, quindi abbiamo preso il successivo.
+There is a pharmacy near the hotel. (der iz e farmesi nir de houtel) — C'è una farmacia vicino all'hotel.
+I left my passport in the room. (ai left mai pasport in de ruum) — Ho lasciato il passaporto in camera.
+What time does the shop open tomorrow? (uot taim daz de sciop oupën tumorou) — A che ora apre il negozio domani?
+We were having dinner when you called. (ui uer heving diner uen iu kold) — Stavamo cenando quando hai chiamato.
+I will send the documents this afternoon. (ai uil send de dokiuments dis afternuun) — Manderò i documenti questo pomeriggio.
+The ticket machine is not working. (de tiket mesciin iz not uorking) — La macchinetta dei biglietti non funziona.
+She has lived here since 2020. (scii hez livd hir sins tuenti tuenti) — Vive qui dal 2020.
+Did you see my glasses on the desk? (did iu sii mai glasiz on de desk) — Hai visto i miei occhiali sulla scrivania?
+We are going to visit the archaeological site tomorrow. (ui ar gouing tu vizit de arkiolojikel sait tumorou) — Domani visiteremo il sito archeologico.
+I have never travelled by night train. (ai hev never treveld bai nait trein) — Non ho mai viaggiato su un treno notturno.
+I forgot my umbrella at the office. (ai forgot mai ambrela et di ofis) — Ho dimenticato il mio ombrello in ufficio.
+We have been waiting for the doctor for twenty minutes. (ui hev bin ueiting for de dokter for tuenti minits) — Stiamo aspettando il medico da venti minuti.
+Could I have a window seat, please? (kud ai hev e uindou siit, pliiz) — Potrei avere un posto vicino al finestrino, per favore?
+The museum was closed when we arrived. (de miuziëm uoz klouzd uen ui araivd) — Il museo era chiuso quando siamo arrivati.
+I need to buy a charger for my phone. (ai niid tu bai e ciarger for mai foun) — Devo comprare un caricabatterie per il mio telefono.
+My daughter will be home after school. (mai doter uil bi houm after skuul) — Mia figlia sarà a casa dopo la scuola.
+We usually have breakfast before leaving home. (ui iujueli hev brekfast bifor liiving houm) — Di solito facciamo colazione prima di uscire di casa.
+The train has already left the platform. (de trein hez olredi left de pletform) — Il treno è già partito dal binario.
+I was reading when the lights went out. (ai uoz riiding uen de laits uent aut) — Stavo leggendo quando è andata via la luce.
+Please keep this receipt in case you need to return the item. (pliiz kiip dis risiit in keis iu niid tu riturn di aitëm) — Conservi questo scontrino nel caso debba restituire l'articolo.
+Tomorrow we are meeting our friends at the station. (tumorou ui ar miiting auer frendz et de steiscën) — Domani incontreremo i nostri amici alla stazione.
+She has just finished her homework. (scii hez giast finiscd her houmuork) — Ha appena finito i compiti.
+How long does the journey take by bus? (hau long daz de gerni teik bai bas) — Quanto dura il viaggio in autobus?
+I will be back before dinner. (ai uil bi bek bifor diner) — Tornerò prima di cena.
+Could you show me where the entrance is? (kud iu scio mi uer di entrens iz) — Potrebbe mostrarmi dov'è l'ingresso?
+I left my bag on the train, but I remember the carriage number. (ai left mai beg on de trein, bat ai rimember de keridj namber) — Ho lasciato la borsa sul treno, ma ricordo il numero della carrozza.
+We need to change trains at the next station. (ui niid tu ceinj treinz et de nekst steiscën) — Dobbiamo cambiare treno alla prossima stazione.
+I ordered this yesterday, but it has not arrived yet. (ai orderd dis iesterdei, bat it hez not araivd yet) — Ho ordinato questo ieri, ma non è ancora arrivato.
+She was waiting outside when the shop opened. (scii uoz ueiting autsaid uen de sciop oupend) — Stava aspettando fuori quando il negozio ha aperto.
+I have never seen such a beautiful building. (ai hev never siin sacc e biutiful bilding) — Non ho mai visto un edificio così bello.
+If the weather is good tomorrow, we will go for a walk. (if de ueder iz gud tumorou, ui uil gou for e uok) — Se domani il tempo sarà bello, andremo a fare una passeggiata.
+Do you know whether this bus stops near the museum? (du iu nou ueder dis bas stops nir de miuziëm) — Sai se questo autobus si ferma vicino al museo?
+I forgot to charge my phone before leaving home. (ai forgot tu ciarj mai foun bifor liiving houm) — Ho dimenticato di caricare il telefono prima di uscire di casa.
+We were looking for a quiet restaurant near the station. (ui uer luking for e kuaiet restorant nir de steiscën) — Cercavamo un ristorante tranquillo vicino alla stazione.
+Please tell me if the meeting starts at nine. (pliiz tel mi if de miiting starts et nain) — Per favore, dimmi se la riunione inizia alle nove.
+He has already sent the email to the office. (hii hez olredi sent di iimeil tu di ofis) — Ha già mandato l'email all'ufficio.
+I will take the underground because the roads are busy. (ai uil teik di anderraund bikoz de roudz ar bizi) — Prenderò la metropolitana perché le strade sono trafficate.
+We arrived early, so we had coffee before the lesson. (ui araivd erli, sou ui hed kofi bifor de lesën) — Siamo arrivati presto, quindi abbiamo preso un caffè prima della lezione.
+Can I pay by card, or do you need cash? (ken ai pei bai kard, or du iu niid kesc) — Posso pagare con la carta o serve contante?
+Can you recommend a good restaurant nearby? (ken iu rekomend e gud restorant nirbai) — Puoi consigliarmi un buon ristorante qui vicino?
+Did you remember to lock the front door? (did iu rimember tu lok de front dor) — Ti sei ricordato di chiudere a chiave la porta d'ingresso?
+Could you tell me which platform the train leaves from? (kud iu tel mi uicc pletform de trein liivz from) — Potrebbe dirmi da quale binario parte il treno?
+Have you packed your suitcase yet? (hev iu pekt ior siutkeis yet) — Hai già fatto la valigia?
+Can you switch off the oven, please? (ken iu suicc of di aven, pliiz) — Puoi spegnere il forno, per favore?
+Could you water the garden tonight? (kud iu uoter de gardën tunait) — Potresti innaffiare il giardino stasera?
+Where can I find a supermarket around here? (uer ken ai faind e supermarket eraund hir) — Dove posso trovare un supermercato da queste parti?
+Do you need a hand with the suitcases? (du iu niid e hend uidh de siutkeisiz) — Hai bisogno di una mano con le valigie?
+Can you check if we still have any sugar? (ken iu cek if ui stil hev eni sciugar) — Puoi controllare se abbiamo ancora zucchero?
+Is there a discount for students? (iz der e diskaunt for stiudents) — C'è uno sconto per studenti?
+Could you validate my ticket, please? (kud iu velideit mai tiket, pliiz) — Potrebbe convalidare il mio biglietto, per favore?
+I need to return this item, do you have the receipt? (ai niid tu riturn dis aitëm, du iu hev de risiit) — Devo restituire questo articolo, ha lo scontrino?
+Can we reschedule the meeting to Thursday? (ken ui riskediul de miiting tu terzdei) — Possiamo spostare la riunione a giovedì?
+Did the teacher give you any homework today? (did de tiicer giv iu eni houmuork tudei) — La maestra ti ha dato compiti oggi?
+Have you seen the house keys anywhere? (hev iu siin de haus kiiz eniuer) — Hai visto le chiavi di casa da qualche parte?
+Can you keep an eye on the kids for a minute? (ken iu kiip en ai on de kidz for e minit) — Puoi tenere d'occhio i bambini per un minuto?
+Is breakfast included in the price of the room? (iz brekfast inkluudid in de prais ov de ruum) — La colazione è inclusa nel prezzo della camera?
+Could you tell me the wifi password? (kud iu tel mi de uaifai pasuord) — Potrebbe dirmi la password del wifi?
+Can you tell me how to get to the city center? (ken iu tel mi hau tu ghet tu de siti senter) — Puoi dirmi come arrivare al centro città?
+Have you already handed in your homework? (hev iu olredi hended in ior houmuork) — Hai già consegnato i compiti?
+Do you have anything in a smaller size? (du iu hev enithing in e smoler saiz) — Avete qualcosa in una taglia più piccola?
+Did you turn off the lights before leaving? (did iu tern of de laits bifor liiving) — Hai spento le luci prima di uscire?
+Can you check the departure time again? (ken iu cek de departciur taim egen) — Puoi controllare di nuovo l'orario di partenza?
+Is there a charge for extra luggage? (iz der e ciarj for ekstra lagëj) — C'è un costo per il bagaglio in eccesso?
+Could you save me a seat, please? (kud iu seiv mi e siit, pliiz) — Potresti tenermi un posto, per favore?
+Can you tell me where the fitting room is? (ken iu tel mi uer de fiting ruum iz) — Puoi dirmi dov'è il camerino?
+Have you fed the fish this morning? (hev iu fed de fisc dis morning) — Hai dato da mangiare ai pesci stamattina?
+Have you checked your email today? (hev iu cekt ior iimeil tudei) — Hai controllato la posta elettronica oggi?
+Can you help me set up the new printer? (ken iu help mi set ap de niu printer) — Puoi aiutarmi a configurare la nuova stampante?
+Is there a lift in this building? (iz der e lift in dis bilding) — C'è un ascensore in questo palazzo?
+Could you turn up the heating a bit? (kud iu tern ap de hiiting e bit) — Potresti alzare un po' il riscaldamento?
+Can you show me the way to the station? (ken iu scio mi de uei tu de steiscën) — Puoi indicarmi la strada per la stazione?
+Have you watered the plants today? (hev iu uoterd de plants tudei) — Hai innaffiato le piante oggi?
+Do you have this jacket in another colour? (du iu hev dis giaket in enader kaler) — Avete questa giacca in un altro colore?
+Did you turn off the gas tap? (did iu tern of de ghes tep) — Hai chiuso il rubinetto del gas?
+Can you check if there's still milk in the fridge? (ken iu cek if ders stil milk in de fridj) — Puoi controllare se c'è ancora latte in frigo?
+Is there parking nearby? (iz der parking nirbai) — C'è un parcheggio nelle vicinanze?
+Could you switch the channel, please? (kud iu suicc de cianël, pliiz) — Potresti cambiare canale, per favore?
+Can you help me carry the boxes upstairs? (ken iu help mi keri de boksiz apsteirz) — Puoi aiutarmi a portare le scatole di sopra?
+Did you turn off your alarm before the holidays? (did iu tern of ior elarm bifor de holidiz) — Hai disattivato la sveglia prima delle vacanze?
+Do you close for lunch? (du iu klouz for lancc) — Chiudete per la pausa pranzo?
+Have you printed the concert tickets? (hev iu printid de konsert tikets) — Hai stampato i biglietti per il concerto?
+Can you turn the volume down, the baby is sleeping? (ken iu tern de voliuum daun, de beibi iz sliiping) — Puoi abbassare il volume, il bambino dorme?
+Is there a pharmacy open on Sundays? (iz der e farmesi oupën on sandeiz) — C'è una farmacia aperta la domenica?
+She will travel to Rome next summer. (scii uil trevël tu roum nekst samer) — Lei viaggerà a Roma la prossima estate.
+We visited the museum yesterday. (ui vizitid de miuziëm iesterdei) — Abbiamo visitato il museo ieri.
+He is doing his homework. (hii iz duing hiz houmuork) — Lui sta facendo i compiti.
+They will move to a new house next month. (dei uil muuv tu e niu haus nekst manth) — Si trasferiranno in una nuova casa il mese prossimo.
+I usually take the train to work. (ai iujueli teik de trein tu uork) — Di solito prendo il treno per andare al lavoro.
+Where is the nearest pharmacy? (uer iz de nirest farmesi) — Dov'è la farmacia più vicina?
+My sister works in an office downtown. (mai sister uorks in en ofis dauntaun) — Mia sorella lavora in un ufficio in centro.
+We were watching a movie when the phone rang. (ui uer uociing e muuvi uen de foun reng) — Stavamo guardando un film quando ha squillato il telefono.
+Could you help me find this address? (kud iu help mi faind dis edres) — Potrebbe aiutarmi a trovare questo indirizzo?
+The children are playing in the garden. (de cildren ar pleiing in de gardën) — I bambini stanno giocando in giardino.
+I have already booked the hotel room. (ai hev olredi bukt de houtel ruum) — Ho già prenotato la camera d'albergo.
+She works as a teacher at the local school. (scii uorks ez e tiicer et de loukel skuul) — Lei lavora come insegnante nella scuola del quartiere.
+We will meet at the station at six. (ui uil miit et de steiscën et siks) — Ci incontreremo alla stazione alle sei.
+He forgot his umbrella at home. (hii forgot hiz ambrela et houm) — Ha dimenticato l'ombrello a casa.
+I would like to try on this jacket. (ai wud laik tu trai on dis giaket) — Vorrei provare questa giacca.
+The plane departs from gate twelve. (de plein diparts from gheit tuelv) — L'aereo parte dal gate dodici.
+My parents are cooking dinner together. (mai perents ar kuking diner tugheder) — I miei genitori stanno cucinando la cena insieme.
+I need to renew my passport soon. (ai niid tu riniu mai pasport suun) — Devo rinnovare il passaporto presto.
+The shop closes at eight in the evening. (de sciop klouziz et eit in di iivning) — Il negozio chiude alle otto di sera.
+We are learning English at school this year. (ui ar lerning inglisc et skuul dis yir) — Quest'anno stiamo imparando l'inglese a scuola.
+He missed the last train home. (hii mist de last trein houm) — Ha perso l'ultimo treno per tornare a casa.
+I will call you as soon as I arrive. (ai uil kol iu ez suun ez ai araiv) — Ti chiamerò appena arrivo.
+The family gathered for a birthday dinner. (de femili ghederd for e berthdei diner) — La famiglia si è riunita per una cena di compleanno.
+I have never been to London. (ai hev never bin tu landën) — Non sono mai stato a Londra.
+We are going shopping this afternoon. (ui ar gouing sciopping dis afternuun) — Questo pomeriggio andiamo a fare shopping.
+She had already left when I arrived. (scii hed olredi left uen ai araivd) — Lei era già partita quando sono arrivato.
+Can you close the door, it's cold in here. (ken iu klouz de dor, its kould in hir) — Puoi chiudere la porta, fa freddo qui.
+They are renovating their kitchen. (dei ar renoveiting deir kicën) — Stanno ristrutturando la cucina.
+I will finish this report by Friday. (ai uil finisc dis riport bai fraidei) — Finirò questo rapporto entro venerdì.
+We took the wrong bus this morning. (ui tuk de rong bas dis morning) — Stamattina abbiamo preso l'autobus sbagliato.
+My brother is studying for his exams. (mai brader iz stadiing for hiz igzemz) — Mio fratello sta studiando per gli esami.
+Excuse me, does this train stop at the airport? (ekskiuz mi, daz dis trein stop et di eirport) — Mi scusi, questo treno ferma all'aeroporto?
+The waiter recommended the fish of the day. (de ueiter rekomendid de fisc ov de dei) — Il cameriere ha consigliato il pesce del giorno.
+We will visit our grandparents this weekend. (ui uil vizit auer grendperents dis uiikend) — Questo fine settimana andremo dai nonni.
+He always arrives late to meetings. (hii olueiz araivz leit tu miitingz) — Arriva sempre tardi alle riunioni.
+Could you lower the price a little? (kud iu louer de prais e litël) — Potrebbe abbassare un po' il prezzo?
+I have lost my keys again. (ai hev lost mai kiiz egen) — Ho perso di nuovo le chiavi.
+The plane was delayed because of the storm. (de plein uoz dileid bikoz ov de storm) — L'aereo ha subito un ritardo a causa del temporale.
+We are packing our suitcases for the trip. (ui ar peking auer siutkeisiz for de trip) — Stiamo facendo le valigie per il viaggio.
+She will start a new job next Monday. (scii uil start e niu giob nekst mandei) — Lei inizierà un nuovo lavoro lunedì prossimo.
+I need directions to the town hall. (ai niid direksciënz tu de taun hol) — Ho bisogno di indicazioni per il municipio.
+My colleagues are preparing the presentation. (mai koliighz ar priperring de prezenteiscën) — I miei colleghi stanno preparando la presentazione.
+We used to walk to school every day. (ui iuzd tu uok tu skuul evri dei) — Andavamo a scuola a piedi ogni giorno.
+Is there a fitting room nearby? (iz der e fiting ruum nirbai) — C'è un camerino qui vicino?
+He fixed the car by himself. (hii fikst de kar bai himself) — Ha riparato l'auto da solo.
+The kids will play football in the park. (de kidz uil plei futbol in de park) — I bambini giocheranno a calcio nel parco.
+I forgot to lock the front door. (ai forgot tu lok de front dor) — Ho dimenticato di chiudere a chiave la porta d'ingresso.
+I need to make a doctor's appointment. (ai niid tu meik e dokterz epointment) — Devo prendere un appuntamento dal medico.
+We will celebrate her birthday at a restaurant. (ui uil selebreit her berthdei et e restorant) — Festeggeremo il suo compleanno al ristorante.
+He has been working here for ten years. (hii hez bin uorking hir for ten yirz) — Lavora qui da dieci anni.
+Could you send me the invoice by email? (kud iu send mi di invois bai iimeil) — Potrebbe inviarmi la fattura via email?
+I am looking for a book about ancient history. (ai em luking for e buk ebaut einscënt histëri) — Sto cercando un libro sulla storia antica.
+They will get married next spring. (dei uil ghet merid nekst spring) — Si sposeranno la prossima primavera.
+We had dinner with our neighbors last night. (ui hed diner uidh auer neiborz last nait) — Ieri sera abbiamo cenato con i vicini di casa.
+I usually go to the gym after work. (ai iujueli gou tu de giim after uork) — Di solito vado in palestra dopo il lavoro.
+Is this seat taken? (iz dis siit teikën) — Questo posto è occupato?
+She is learning to play the piano. (scii iz lerning tu plei de pianou) — Sta imparando a suonare il piano.
+We will call a taxi to the airport. (ui uil kol e teksi tu di eirport) — Chiameremo un taxi per l'aeroporto.
+I dropped my phone and broke the screen. (ai dropt mai foun end brouk de skriin) — Mi è caduto il telefono e si è rotto lo schermo.
+He is fixing the wifi connection. (hii iz fiksing de uaifai konekscën) — Sta sistemando la connessione wifi.
+We were stuck in traffic for an hour. (ui uer stak in trafik for en auer) — Siamo rimasti bloccati nel traffico per un'ora.
+Could you water the plants while I'm away? (kud iu uoter de plants uail aim euei) — Potresti annaffiare le piante mentre sono via?
+I will pick up the kids from school. (ai uil pik ap de kidz from skuul) — Andrò a prendere i bambini a scuola.
+The bank is closed on Sundays. (de benk iz klouzd on sandeiz) — La banca è chiusa la domenica.
+We are planning a trip to the mountains. (ui ar pleninng e trip tu de mauntinz) — Stiamo pianificando un viaggio in montagna.
+He lost his job last month. (hii lost hiz giob last manth) — Ha perso il lavoro il mese scorso.
+I need a haircut before the wedding. (ai niid e herkat bifor de uedding) — Ho bisogno di un taglio di capelli prima del matrimonio.
+She will send the package tomorrow morning. (scii uil send de pekëj tumorou morning) — Spedirà il pacco domani mattina.
+We are cleaning the house before the guests arrive. (ui ar kliining de haus bifor de ghests araiv) — Stiamo pulendo la casa prima che arrivino gli ospiti.
+I forgot my wallet at the restaurant. (ai forgot mai uolët et de restorant) — Ho dimenticato il portafoglio al ristorante.
+The weather will improve by the weekend. (de ueder uil impruuv bai de uiikend) — Il tempo migliorerà entro il fine settimana.
+He walks the dog every morning. (hii uoks de dog evri morning) — Porta a spasso il cane ogni mattina.
+I have to return this book to the library. (ai hev tu riturn dis buk tu de laibreri) — Devo restituire questo libro in biblioteca.
+We will paint the fence this weekend. (ui uil peint de fens dis uiikend) — Questo fine settimana tingeremo la staccionata.
+She was cooking when the phone rang. (scii uoz kuking uen de foun reng) — Stava cucinando quando ha squillato il telefono.
+Can you show me the way to the nearest station? (ken iu scio mi de uei tu de nirest steiscën) — Puoi indicarmi la strada per la stazione più vicina?
+They are building a new bridge downtown. (dei ar bilding e niu brigj dauntaun) — Stanno costruendo un nuovo ponte in centro.
+I will submit the application tomorrow. (ai uil sabmit di eplikeiscën tumorou) — Invierò la domanda domani.
+We missed the connecting flight. (ui mist de konekting flait) — Abbiamo perso il volo di coincidenza.
+My cousin is visiting us next week. (mai kazën iz viziting as nekst uiik) — Mio cugino ci verrà a trovare la prossima settimana.
+Excuse me, where can I buy a bus ticket? (ekskiuz mi, uer ken ai bai e bas tiket) — Mi scusi, dove posso comprare un biglietto dell'autobus?
+The teacher explained the lesson again. (de tiicer iksplend de lesën egen) — L'insegnante ha spiegato di nuovo la lezione.
+I was sleeping when the alarm went off. (ai uoz sliiping uen di elarm uent of) — Stavo dormendo quando è suonata la sveglia.
+We will repaint the living room next month. (ui uil ripeint de living ruum nekst manth) — Ridipingeremo il soggiorno il mese prossimo.
+He always checks his email before breakfast. (hii olueiz ceks hiz iimeil bifor brekfast) — Controlla sempre le email prima di colazione.
+Could you repeat that, please? (kud iu ripiit det, pliiz) — Potresti ripetere, per favore?
+I have broken my glasses again. (ai hev broukën mai glasiz egen) — Ho rotto di nuovo gli occhiali.
+The concert was cancelled due to rain. (de konsert uoz kenseld diu tu rein) — Il concerto è stato annullato a causa della pioggia.
+We are organizing a surprise party for him. (ui ar orgenaiziing e serpraiz parti for him) — Stiamo organizzando una festa a sorpresa per lui.
+She will graduate next June. (scii uil gredgiueit nekst giun) — Lei si laureerà a giugno prossimo.
+I need to charge my phone before we leave. (ai niid tu ciarj mai foun bifor ui liiv) — Devo caricare il telefono prima di uscire.
+My colleagues are working on a new project. (mai koliighz ar uorking on e niu prodjekt) — I miei colleghi stanno lavorando a un nuovo progetto.
+We used to spend summers at the seaside. (ui iuzd tu spend samerz et de siisaid) — Passavamo le estati al mare.
+Is there a supermarket around the corner? (iz der e supermarket eraund de korner) — C'è un supermercato dietro l'angolo?
+He repaired the roof after the storm. (hii ripeird de ruuf after de storm) — Ha riparato il tetto dopo la tempesta.
+The students will present their projects on Friday. (de stiudents uil prizent deir prodjekts on fraidei) — Gli studenti presenteranno i loro progetti venerdì.
+I forgot to turn off the oven. (ai forgot tu tern of di aven) — Ho dimenticato di spegnere il forno.
+I need to withdraw some cash from the ATM. (ai niid tu uidhdro sam kesc from di eitiem) — Devo prelevare dei contanti al bancomat.
+We will watch the sunset from the terrace. (ui uil uocc de sanset from de teres) — Guarderemo il tramonto dalla terrazza.
+She has just finished her shift at the hospital. (scii hez giast finiscd her scift et de hospitël) — Ha appena finito il turno in ospedale.
+Could you turn on the heating, please? (kud iu tern on de hiiting, pliiz) — Potresti accendere il riscaldamento, per favore?
+They are painting the fence in the garden. (dei ar peinting de fens in de gardën) — Stanno tinteggiando la staccionata in giardino.
+I will train for the marathon this year. (ai uil trein for de meraton dis yir) — Mi allenerò per la maratona quest'anno.
+We rented a car for the weekend. (ui rentid e kar for de uiikend) — Abbiamo noleggiato un'auto per il fine settimana.
+My grandmother is knitting a scarf. (mai grendmader iz nitting e skarf) — Mia nonna sta lavorando a maglia una sciarpa.
+Excuse me, is this seat free? (ekskiuz mi, iz dis siit frii) — Mi scusi, questo posto è libero?
+He was jogging in the park this morning. (hii uoz giogging in de park dis morning) — Stamattina stava facendo jogging nel parco.
+We will attend the concert next Friday. (ui uil etend de konsert nekst fraidei) — Andremo al concerto venerdì prossimo.
+I dropped my keys down the drain. (ai dropt mai kiiz daun de drein) — Mi sono caduto le chiavi nel tombino.
+She is preparing for a job interview. (scii iz priperring for e giob interviu) — Si sta preparando per un colloquio di lavoro.
+We were camping when the storm started. (ui uer kemping uen de storm startid) — Eravamo in campeggio quando è iniziato il temporale.
+Could you feed the cat this evening? (kud iu fiid de ket dis iivning) — Potresti dar da mangiare al gatto stasera?
+I will return the rented equipment tomorrow. (ai uil riturn de rentid ikuipment tumorou) — Restituirò l'attrezzatura noleggiata domani.
+The library closes early on Saturdays. (de laibreri klouziz erli on saterdeiz) — La biblioteca chiude presto il sabato.
+We are planting tomatoes in the garden. (ui ar plenting tomeitouz in de gardën) — Stiamo piantando pomodori in giardino.
+He broke his arm while skiing. (hii brouk hiz arm uail skiiing) — Si è rotto un braccio sciando.
+I need new batteries for the remote. (ai niid niu beteriz for de rimout) — Ho bisogno di pile nuove per il telecomando.
+She will publish her first novel next year. (scii uil pablisc her ferst novël nekst yir) — Pubblicherà il suo primo romanzo l'anno prossimo.
+We are decorating the house for Christmas. (ui ar dekoreiting de haus for krismas) — Stiamo addobbando la casa per Natale.
+The train was ten minutes late this morning. (de trein uoz ten minits leit dis morning) — Il treno stamattina è arrivato con dieci minuti di ritardo.
+He volunteers at the shelter on weekends. (hii volentirz et de shelter on uiikendz) — Fa volontariato al rifugio nei weekend.
+I have to renew my gym membership. (ai hev tu riniu mai giim membershipp) — Devo rinnovare l'abbonamento in palestra.
+We will host my in-laws for dinner tonight. (ui uil houst mai inlouz for diner tunait) — Stasera ospiteremo i miei suoceri per cena.
+She had finished the exam before the bell rang. (scii hed finiscd di igzem bifor de bel reng) — Aveva finito l'esame prima che suonasse la campanella.
+Could you switch off the printer, please? (kud iu suicc of de printer, pliiz) — Potresti spegnere la stampante, per favore?
+They are installing new windows in the house. (dei ar instoling niu uindouz in de haus) — Stanno installando nuove finestre in casa.
+I will apply for a promotion next month. (ai uil eplai for e promouscën nekst manth) — Farò domanda per una promozione il mese prossimo.
+We booked a table for our anniversary. (ui bukt e teibël for auer eniverseri) — Abbiamo prenotato un tavolo per il nostro anniversario.
+My uncle is teaching me how to fish. (mai ankël iz tiiciing mi hau tu fisc) — Mio zio mi sta insegnando a pescare.
+Excuse me, is this the queue for the ticket office? (ekskiuz mi, iz dis de kiu for de tiket ofis) — Mi scusi, è questa la fila per la biglietteria?
+He was working from home when the internet went down. (hii uoz uorking from houm uen di internet uent daun) — Stava lavorando da casa quando è saltata la connessione internet.
+We will join a language course in September. (ui uil giòin e lenguidj kors in september) — A settembre inizieremo un corso di lingua.
+I spilled coffee on my laptop this morning. (ai spild kofi on mai laptop dis morning) — Stamattina ho versato il caffè sul portatile.
+She is negotiating a new contract with her employer. (scii iz negosciieiting e niu kontrekt uidh her emploier) — Sta negoziando un nuovo contratto con il datore di lavoro.
+We were hiking when it started to rain heavily. (ui uer haiking uen it startid tu rein hevili) — Stavamo facendo trekking quando ha iniziato a piovere forte.
+Could you separate the recycling before Friday? (kud iu separeit de risaikling bifor fraidei) — Potresti fare la raccolta differenziata prima di venerdì?
+I will return your umbrella tomorrow. (ai uil riturn ior ambrela tumorou) — Ti restituirò l'ombrello domani.
+The plumber is fixing the leak in the bathroom. (de plamer iz fiksing de liik in de bathruum) — L'idraulico sta riparando la perdita in bagno.
+We are considering moving abroad next year. (ui ar konsidering muuving ebrod nekst yir) — Stiamo pensando di trasferirci all'estero l'anno prossimo.
+He sprained his ankle during the match. (hii spreind hiz enkël diuring de mecc) — Si è slogato la caviglia durante la partita.
+I need to update my insurance policy. (ai niid tu apdeit mai inscurens polisi) — Devo aggiornare la mia polizza assicurativa.
+She will host a video call with the whole team. (scii uil houst e vidiou kol uidh de houl tiim) — Organizzerà una videochiamata con tutto il team.
+We are borrowing our neighbor's ladder. (ui ar borouing auer neiborz leder) — Stiamo prendendo in prestito la scala del vicino.
+Is there a discount for students at the museum? (iz der e diskaunt for stiudents et de miuziëm) — C'è uno sconto per studenti al museo?
+He commutes to work by bicycle every day. (hii komiuts tu uork bai baisikël evri dei) — Va al lavoro in bicicletta ogni giorno.
+The electrician will come to check the fuse box. (di ilektriscën uil kam tu cek de fiuz boks) — L'elettricista verrà a controllare il quadro elettrico.
+I need to see a dentist about this toothache. (ai niid tu sii e dentist ebaut dis tuutheik) — Devo andare dal dentista per questo mal di denti.
+We will celebrate their retirement next Friday. (ui uil selebreit deir ritairment nekst fraidei) — Festeggeremo il loro pensionamento venerdì prossimo.
+She had already paid the bill before I offered. (scii hed olredi peid de bil bifor ai oferd) — Aveva già pagato il conto prima che mi offrissi io.
+Could you check the oil level in the car? (kud iu cek di oil levël in de kar) — Potresti controllare il livello dell'olio in macchina?
+They are learning to drive this summer. (dei ar lerning tu draiv dis samer) — Questa estate stanno imparando a guidare.
+I will resign from my job next month. (ai uil rizain from mai giob nekst manth) — Mi dimetterò dal lavoro il mese prossimo.
+We are waiting for a package to arrive. (ui ar ueiting for e pekëj tu araiv) — Stiamo aspettando l'arrivo di un pacco.
+My sister is learning photography as a hobby. (mai sister iz lerning fotografi ez e hobi) — Mia sorella sta imparando la fotografia come hobby.
+Excuse me, has the mail arrived yet? (ekskiuz mi, hez de meil araivd yet) — Mi scusi, è già arrivata la posta?
+He was baking a cake when the oven stopped working. (hii uoz beiking e keik uen di aven stopt uorking) — Stava preparando una torta quando il forno ha smesso di funzionare.
+We will move to a new city next year. (ui uil muuv tu e niu siti nekst yir) — Ci trasferiremo in una nuova città l'anno prossimo.
+I broke down on the highway this morning. (ai brouk daun on de haiuei dis morning) — Stamattina mi si è rotta l'auto in autostrada.
+She is coaching the youth football team. (scii iz kouciing de iuth futbol tiim) — Allena la squadra giovanile di calcio.
+We were camping when the tent collapsed. (ui uer kemping uen de tent kolepst) — Eravamo in campeggio quando la tenda è crollata.
+Could you cancel my streaming subscription? (kud iu kensël mai striiming sabskripscën) — Potresti annullare il mio abbonamento allo streaming?
+I will pay the electricity bill tomorrow. (ai uil pei di ilektrisiti bil tumorou) — Pagherò la bolletta della luce domani.
+The doctor prescribed some new medication. (de dokter priskraibd sam niu medikeiscën) — Il medico ha prescritto un nuovo farmaco.
+We are practicing for the school concert. (ui ar prektising for de skuul konsert) — Ci stiamo esercitando per il concerto scolastico.
+He forgot his phone charger at the hotel. (hii forgot hiz foun ciarger et de houtel) — Ha dimenticato il caricabatterie del telefono in hotel.
+I need to change my phone plan. (ai niid tu ceinj mai foun plen) — Devo cambiare il mio piano telefonico.
+She will start painting the fence tomorrow. (scii uil start peinting de fens tumorou) — Domani inizierà a dipingere la staccionata.
+We are cleaning out the garage this weekend. (ui ar kliining aut de garagj dis uiikend) — Questo fine settimana stiamo svuotando il garage.
+My laptop crashed while I was saving the file. (mai laptop krescd uail ai uoz seiving de fail) — Il portatile si è bloccato mentre salvavo il file.
+The library book is already overdue. (de laibreri buk iz olredi ouverdiu) — Il libro della biblioteca è già in ritardo.
+He is preparing the garden for winter. (hii iz priperring de gardën for uinter) — Sta preparando il giardino per l'inverno.
+I have to pick up a prescription at the pharmacy. (ai hev tu pik ap e priskripscën et de farmesi) — Devo ritirare una ricetta in farmacia.
+We will attend a parent-teacher meeting tomorrow. (ui uil etend e perent-tiicer miiting tumorou) — Domani parteciperemo a un colloquio con gli insegnanti.
+She had cleaned the whole house before the guests arrived. (scii hed kliind de houl haus bifor de ghests araivd) — Aveva pulito tutta la casa prima che arrivassero gli ospiti.
+Could you check in for us at the hotel? (kud iu cek in for as et de houtel) — Potresti fare il check-in per noi in hotel?
+They are organizing a charity event next month. (dei ar orgenaiziing e cheriti ivent nekst manth) — Stanno organizzando un evento di beneficenza il mese prossimo.
+I will take the car to the mechanic this week. (ai uil teik de kar tu de mekenik dis uiik) — Porterò la macchina dal meccanico questa settimana.
+We are planning a road trip along the coast. (ui ar pleninng e roud trip elong de koust) — Stiamo pianificando un viaggio in auto lungo la costa.
+My nephew is working on a school project about volcanoes. (mai nefiu iz uorking on e skuul prodjekt ebaut volkeinouz) — Mio nipote sta lavorando a un progetto scolastico sui vulcani.
+Excuse me, could I see the menu, please? (ekskiuz mi, kud ai sii de meniu, pliiz) — Mi scusi, potrei vedere il menu, per favore?
+He was walking the dog when it started to rain. (hii uoz uoking de dog uen it startid tu rein) — Stava portando a spasso il cane quando ha iniziato a piovere.
+We will take the cat to the vet on Monday. (ui uil teik de ket tu de vet on mandei) — Porteremo il gatto dal veterinario lunedì.
+I returned the shoes because they were too small. (ai riturnd de sciuz bikoz dei uer tuu smol) — Ho restituito le scarpe perché erano troppo piccole.
+She is preparing lunch for the whole family. (scii iz priperring lancc for de houl femili) — Sta preparando il pranzo per tutta la famiglia.
+We were shopping online when the website crashed. (ui uer sciopping onlain uen de uebsait krescd) — Stavamo facendo acquisti online quando il sito si è bloccato.
+Could you help me move this sofa? (kud iu help mi muuv dis soufa) — Potresti aiutarmi a spostare questo divano?
+I will join the book club next week. (ai uil giòin de buk klab nekst uiik) — La prossima settimana entrerò nel club del libro.
+The flight was delayed because of bad weather. (de flait uoz dileid bikoz ov bed ueder) — Il volo ha subito un ritardo a causa del maltempo.
+We are hosting a family reunion this summer. (ui ar housting e femili riuniën dis samer) — Questa estate ospiteremo una riunione di famiglia.
+He complained to the waiter about the cold soup. (hii kompleind tu de ueiter ebaut de kould suup) — Si è lamentato con il cameriere per la zuppa fredda.
+I need to buy tickets for the festival. (ai niid tu bai tikets for de festivël) — Devo comprare i biglietti per il festival.
+She will renovate the bathroom next spring. (scii uil renoveit de bathruum nekst spring) — Rinnoverà il bagno la prossima primavera.
+We are viewing an apartment this afternoon. (ui ar viuing en apartment dis afternuun) — Questo pomeriggio andiamo a vedere un appartamento.
+My colleague followed up on the job interview. (mai koliig foloud ap on de giob interviu) — Il mio collega ha fatto un follow-up sul colloquio di lavoro.
+I packed a lunch for the hike. (ai pekt e lancc for de haik) — Ho preparato un pranzo al sacco per l'escursione.
+The waiting room was full when we arrived. (de ueiting ruum uoz ful uen ui araivd) — La sala d'attesa era piena quando siamo arrivati.
+I need to renew my driver's license this year. (ai niid tu riniu mai draiverz laisëns dis yir) — Devo rinnovare la patente quest'anno.
+We will attend an art exhibition on Saturday. (ui uil etend en art eksibiscën on saterdei) — Sabato andremo a una mostra d'arte.
+She had already installed the new software before the meeting. (scii hed olredi instold de niu softuer bifor de miiting) — Aveva già installato il nuovo software prima della riunione.
+Could you set up the router for me? (kud iu set ap de rauter for mi) — Potresti configurarmi il router?
+They are hiring new staff for the summer season. (dei ar hairing niu staf for de samer siizën) — Stanno assumendo nuovo personale per la stagione estiva.
+I will transfer some money to my savings account. (ai uil transfer sam mani tu mai seivingz ekaunt) — Trasferirò del denaro sul mio conto di risparmio.
+We are exchanging currency before the trip. (ui ar ikscenging kerensi bifor de trip) — Stiamo cambiando valuta prima del viaggio.
+My colleague is attending a training course this week. (mai koliig iz etending e treining kors dis uiik) — Il mio collega sta seguendo un corso di formazione questa settimana.
+Excuse me, where is the checkout desk? (ekskiuz mi, uer iz de cekaut desk) — Mi scusi, dov'è il banco per il check-out?
+He was assembling the furniture when the screws ran out. (hii uoz esembling de fernicër uen de skruuz ren aut) — Stava montando il mobile quando sono finite le viti.
+We will donate old clothes to charity. (ui uil douneit ould klouthz tu cheriti) — Doneremo vestiti vecchi in beneficenza.
+I filed an insurance claim after the accident. (ai faild en inscurens kleim after di eksident) — Ho presentato una richiesta di risarcimento dopo l'incidente.
+She is volunteering at the animal shelter this weekend. (scii iz volentiring et di enimël shelter dis uiikend) — Questo fine settimana fa volontariato al canile.
+We were rehearsing when the fire alarm went off. (ui uer rihersing uen de faier elarm uent of) — Stavamo provando quando è scattato l'allarme antincendio.
+Could you order a birthday cake for tomorrow? (kud iu order e berthdei keik for tumorou) — Potresti ordinare una torta di compleanno per domani?
+I will rent a car for the business trip. (ai uil rent e kar for de biznes trip) — Noleggerò un'auto per il viaggio di lavoro.
+The technician repaired my phone screen. (de tekniscën ripeird mai foun skriin) — Il tecnico ha riparato lo schermo del mio telefono.
+We are taking a cooking class next month. (ui ar teiking e kuking klas nekst manth) — Il mese prossimo faremo un corso di cucina.
+He installed a new security camera at the entrance. (hii instold e niu sekiuriti kamera et di entrens) — Ha installato una nuova telecamera di sicurezza all'ingresso.
+I need to buy travel insurance before we leave. (ai niid tu bai trevël inscurens bifor ui liiv) — Devo comprare un'assicurazione di viaggio prima di partire.
+She will join a language exchange group. (scii uil giòin e lenguidj ikscenj gruup) — Entrerà in un gruppo di scambio linguistico.
+We are moving boxes into the new apartment. (ui ar muuving boksiz intu de niu apartment) — Stiamo portando gli scatoloni nel nuovo appartamento.
+My brother subscribed to a monthly book box. (mai brader sabskraibd tu e manthli buk boks) — Mio fratello si è abbonato a una scatola mensile di libri.
+The doctor scheduled a check-up for next week. (de dokter skediuld e cekap for nekst uiik) — Il medico ha fissato una visita di controllo per la prossima settimana.
+Could I check in earlier than three o'clock? (kud ai cek in erlier den thrii oklok) — Potrei fare il check-in prima delle tre?
+Where is the nearest ATM to withdraw cash? (uer iz de nirest eitiiem tu uidhdro kesc) — Dov'è il bancomat più vicino per prelevare contanti?
+Could I have extra towels for the bathroom? (kud ai hev ekstra tauelz for de bathruum) — Potrei avere altri asciugamani per il bagno?
+Is room service available twenty-four hours a day? (iz ruum servis eveilebël tuenti for auerz e dei) — Il servizio in camera è disponibile ventiquattr'ore su ventiquattr'ore?
+I would like to book a table for two at eight o'clock. (ai wud laik tu buk e teibël for tuu et eit oklok) — Vorrei prenotare un tavolo per due alle otto.
+Could you put the sauce on the side, please? (kud iu put de sos on de said, pliiz) — Potrebbe mettere la salsa a parte, per favore?
+Do you have any vegetarian options on the menu? (du iu hev eni vegeteriën opscënz on de meniu) — Avete opzioni vegetariane nel menu?
+I am allergic to nuts, does this dish contain any? (ai em elergik tu nats, daz dis disc kontein eni) — Sono allergico alla frutta a guscio, questo piatto ne contiene?
+Can I pay the bill separately, please? (ken ai pei de bil sepretli, pliiz) — Posso pagare il conto separatamente, per favore?
+Where can I find fresh fruits and vegetables? (uer ken ai faind fresc fruuts end vegetebëlz) — Dove posso trovare frutta e verdura fresca?
+Excuse me, where are the dairy products located? (ekskiuz mi, uer ar de deri prodakts loukeitid) — Scusi, dove si trovano i prodotti lattiero-caseari?
+Do I need to weigh the fruit before going to the checkout? (du ai niid tu uei de fruut bifor gouing tu de cekaut) — Devo pesare la frutta prima di andare alla cassa?
+Is this item on sale this week? (iz dis aitëm on seil dis uiik) — Questo articolo è in offerta questa settimana?
+I forgot my shopping bag in the car. (ai forgot mai sciopping bag in de kar) — Ho dimenticato la borsa della spesa in macchina.
+Could you send me the calendar invite for the meeting? (kud iu send mi de kelender invait for de miiting) — Potresti inviarmi l'invito al calendario per la riunione?
+I am currently working on the quarterly sales report. (ai em karrëntli uorking on de kuorterli seilz riport) — Al momento sto lavorando al rapporto vendite trimestrale.
+Let us take a five-minute break before continuing. (let as teik e faiv minit breik bifor kontiniuing) — Facciamo una pausa di cinque minuti prima di continuare.
+Please review the attached document before tomorrow morning. (pliiz riviu di etecd dokiument bifor tumorou morning) — Per favore, rivedi il documento allegato entro domani mattina.
+I will be out of the office until next Monday. (ai uil bi aut ov di ofis antil nekst mandei) — Sarò fuori ufficio fino a lunedì prossimo.
+Can we talk about this over coffee later? (ken ui tok ebaut dis ouver kofi leiter) — Posiamo parlarne davanti a un caffè più tardi?
+I really appreciate your help with this project. (ai riili epriscieit ior help uidh dis prodjekt) — Apprezzo davvero il tuo aiuto con questo progetto.
+I am running a bit late, see you in ten minutes. (ai em ranning e bit leit, sii iu in ten minits) — Sono un po' in ritardo, ci vediamo tra dieci minuti.
+Let me know when you arrive safely. (let mi nou uen iu araiv seifli) — Fammi sapere quando arrivi a destinazione sano e salvo.
+It was really nice catching up with you today. (it uoz riili nais keciing ap uidh iu tudei) — È stato davvero bello fare due chiacchiere con te oggi.
+What time is dinner going to be ready? (uot taim iz diner gouing tu bi redi) — A che ora sarà pronta la cena?
+Please remember to take out the rubbish tonight. (pliiz rimember tu teik aut de rabisc tunait) — Per favore ricordati di portare fuori la spazzatura stasera.
+Could someone answer the doorbell, please? (kud samuan anser de dorbel, pliiz) — Qualcuno può andare ad aprire al campanello, per favore?
+Do not forget to empty the dishwasher after lunch. (du not forget tu empti de disciuoscer after lancc) — Non dimenticare di svuotare la lavastoviglie dopo pranzo.
+Who left the tap running in the bathroom? (huu left de tep ranning in de bathruum) — Chi ha lasciato il rubinetto aperto in bagno?
+Is there a direct train to the city center from here? (iz der e direkt trein tu de siti senter from hir) — C'è un treno diretto per il centro città da qui?
+How much does a day pass for public transport cost? (hau macc daz e dei pas for pablik trensport kost) — Quanto costa un biglietto giornaliero per i trasporti pubblici?
+I would like to request a late check-out tomorrow. (ai wud laik tu rikuest e leit cekaut tumorou) — Vorrei richiedere un check-out ritardato per domani.
+Can you store our luggage until our flight leaves? (ken iu stor auer lagëj antil auer flait liivz) — Puoi tenere i nostri bagagli fino alla partenza del nostro volo?
+Could you call a taxi for us tomorrow at seven? (kud iu kol e teksi for as tumorou et sevën) — Potrebbe chiamarci un taxi domani alle sette?
+Excuse me, is this the end of the line for this bus? (ekskiuz mi, iz dis di end ov de lain for dis bas) — Scusi, è capolinea per questo autobus?
+I need to buy a SIM card for my mobile phone. (ai niid tu bai e sim kard for mai moubail foun) — Devo comprare una scheda SIM per il mio cellulare.
+Is the tap water safe to drink here? (iz de tep uoter seif tu drink hir) — L'acqua del rubinetto è potabile qui?
+Could you show me how this coffee machine works? (kud iu scio mi hau dis kofi mesciin uorks) — Potresti mostrarmi come funziona questa macchina del caffè?
+I am looking for the nearest bakery in this neighborhood. (ai em luking for de nirest beikëri in dis neiborhud) — Sto cercando la panetteria più vicina in questo quartiere.
+Can I get a receipt for this transaction, please? (ken ai ghet e risiit for dis trenzekscën, pliiz) — Posso avere una ricevuta per questa transazione, per favore?
+We need to buy some paper towels and laundry detergent. (ui niid tu bai sam peiper tauelz end londri diterjent) — Dobbiamo comprare dei tovaglioli di carta e del detersivo per il bucato.
+Could you mute your microphone during the presentation? (kud iu miut ior maikrofoun diuring de prezenteiscën) — Potresti disattivare il microfono durante la presentazione?
+I will share my screen so everyone can see the slides. (ai uil scer mai skriin sou evriuan ken sii de slaidz) — Condividerò il mio schermo così tutti potranno vedere le diapositive.
+Do you have time for a quick phone call this afternoon? (du iu hev taim for e kuik foun kol dis afternuun) — Hai tempo per una breve telefonata questo pomeriggio?
+I am sorry, I did not catch your name earlier. (ai em sori, ai did not kecc ior neim erlier) — Scusa, non ho capito il tuo nome prima.
+Let us order dessert after we finish our main course. (let as order dizert after ui finisc auer mein kors) — Ordiniamo il dolce dopo aver finito il piatto principale.
+Please put your shoes near the front door. (pliiz put ior sciuz nir de front dor) — Per favore metti le scarpe vicino alla porta d'ingresso.
+Could you set the table for four people, please? (kud iu set de teibël for for piipël, pliiz) — Potresti apparecchiare la tavola per quattro persone, per favore?
+Don't forget to charge your laptop for school tomorrow. (dount forget tu ciarj ior laptop for skuul tumorou) — Non dimenticare di caricare il portatile per la scuola domani.
+Have a wonderful trip and take plenty of photos! (hev e uanderful trip end teik plenti ov foutouz) — Fai un buon viaggio e scatta tante foto!
+Is there an iron and an ironing board in the room? (iz der en airën end en airëning bord in de ruum) — C'è un ferro e un'asse da stiro in camera?
+Could we get a table by the window? (kud ui ghet e teibël bai de uindou) — Potremmo avere un tavolo vicino alla finestra?
+Is this product suitable for sensitive skin? (iz dis prodakt siutebël for sensitiv skin) — Questo prodotto è adatto alle pelli sensibili?
+I am looking for the bakery department. (ai em luking for de beikëri dipartment) — Sto cercando il reparto panetteria.
+Do you have this shirt in a medium size? (du iu hev dis shert in e miidiëm saiz) — Avete questa camicia in una taglia M?
+Could you send me the feedback by the end of the day? (kud iu send mi de fiidbek bai di end ov de dei) — Potresti inviarmi il feedback entro la fine della giornata?
+Let us set up a quick call to discuss the project. (let as set ap e kuik kol tu diskas de prodjekt) — Fissiamo una breve chiamata per discutere del progetto.
+I will be working remotely tomorrow morning. (ai uil bi uorking rimoutli tumorou morning) — Domani mattina lavorerò da remoto.
+Thank you for inviting us to dinner tonight. (thenk iu for invaiting as tu diner tunait) — Grazie per averci invitato a cena stasera.
+Can you send me your location on the map? (ken iu send mi ior loukeiscën on de mep) — Puoi inviarmi la tua posizione sulla mappa?
+Please put your dishes in the dishwasher. (pliiz put ior discëz in de disciuoscer) — Per favore metti i tuoi piatti nella lavastoviglie.
+Who is going to clean the kitchen tonight? (huu iz gouing tu kliin de kicën tunait) — Chi pulirà la cucina stasera?
+Do not forget to take your umbrella with you. (du not forget tu teik ior ambrela uidh iu) — Non dimenticare di portare l'ombrello con te.
+Can you turn down the air conditioning a little? (ken iu tern daun di er kondiscëning e litël) — Puoi abbassare un po' l'aria condizionata?
+Is there a gas station near the entrance? (iz der e ghes steiscën nir di entrens) — C'è una stazione di servizio vicino all'ingresso?
+Where can I buy a ticket for the museum? (uer ken ai bai e tiket for de miuziëm) — Dove posso comprare un biglietto per il museo?
+Does this hotel have a swimming pool on the roof? (daz dis houtel hev e suiming puul on de ruuf) — Questo hotel ha una piscina sul tetto?
+What time does the breakfast buffet start? (uot taim daz de brekfast bufei start) — A che ora inizia il buffet della colazione?
+I would like to pay with contactless payment. (ai wud laik tu pei uidh kontaktles peiment) — Vorrei pagare con il pagamento contactless.
+Is this milk fresh or long-life? (iz dis milk fresc or long laif) — Questo latte è fresco o a lunga conservazione?
+Can you help me find the olive oil aisle? (ken iu help mi faind di oliv oil ail) — Puoi aiutarmi a trovare la corsia dell'olio d'oliva?
+I need to print this document before the meeting. (ai niid tu print dis dokiument bifor de miiting) — Devo stampare questo documento prima della riunione.
+Could you clarify what you mean by that? (kud iu klerifai uot iu miin bai det) — Potresti chiarire cosa intendi con questo?
+I will send you the updated invoice shortly. (ai uil send iu di apdeitid invois scortli) — Ti invierò la fattura aggiornata a breve.
+We need to order more office supplies. (ui niid tu order mor ofis seplaiz) — Dobbiamo ordinare altre forniture per l'ufficio.
+Are you free to hang out this afternoon? (ar iu frii tu heng aut dis afternuun) — Sei libero di uscire questo pomeriggio?
+Take your time, there is no hurry. (teik ior taim, ders nou hari) — Fai con calma, non c'è fretta.
+I am so glad we finally managed to meet. (ai em sou gled ui fainëli menegjd tu miit) — Sono così contento che siamo finalmente riusciti a incontrarci.
+Could you help me lay the carpet in the hallway? (kud iu help mi lei de karpit in de holuei) — Potresti aiutarmi a stendere il tappeto nel corridoio?
+Make sure to feed the cat before leaving. (meik sciur tu fiid de ket bifor liiving) — Assicurati di dare da mangiare al gatto prima di uscire.
+Can you grab a loaf of bread from the bakery? (ken iu greb e louf ov bred from de beikëri) — Puoi prendere una pagnotta di pane in panetteria?
+Is there a designated smoking area outside? (iz der e dezignetid smouking eria autsaid) — C'è un'area fumatori riservata all'esterno?
+Could I get a glass of tap water, please? (kud ai ghet e glas ov tep uoter, pliiz) — Potrei avere un bicchiere d'acqua del rubinetto, per favore?
+We would like to order two coffees to go. (ui wud laik tu order tuu kofiz tu gou) — Vorremmo ordinare due caffè da portare via.
+Is this seafood fresh or frozen? (iz dis siifuud fresc or frouzën) — Questo pesce è fresco o surgelato?
+Do you have a loyalty card for this shop? (du iu hev e loielti kard for dis sciop) — Ha una carta fedeltà per questo negozio?
+The projector in the meeting room is not working. (de prodjektor in de miiting ruum iz not uorking) — Il proiettore nella sala riunioni non funziona.
+Please reply to all participants in the email chain. (pliiz riplai tu ol partisipents in di iimeil cein) — Per favore rispondi a tutti i partecipanti nella catena di email.
+I am taking a short lunch break now. (ai em teiking e short lancc breik nau) — Adesso faccio una breve pausa pranzo.
+Give me a call as soon as you are free. (giv mi e kol ez suun ez iu ar frii) — Fammi una telefonata non appena sei libero.
+I will text you the address right away. (ai uil tekst iu di edres rait euei) — Ti manderò subito l'indirizzo via messaggio.
+Could you pass me the remote control, please? (kud iu pas mi de rimout kontroul, pliiz) — Potresti passarmi il telecomando, per favore?
+Let us turn off the TV and go to sleep. (let as tern of de tii vii end gou tu sliip) — Spegniamo la TV e andiamo a dormire.
+Do we have enough garbage bags in the house? (du ui hev inaf garbëj begz in de haus) — Abbiamo abbastanza sacchetti della spazzatura in casa?
+Where is the nearest tourist information office? (uer iz de nirest turist informeiscën ofis) — Dov'è l'ufficio di informazioni turistiche più vicino?
+Is the swimming pool heated in the winter? (iz de suiming puul hiitid in de uinter) — La piscina è riscaldata in inverno?
+Can I get a tax-free refund form? (ken ai ghet e teksfrii rifand form) — Posso avere un modulo per il rimborso tax-free?
+Where can I find gluten-free products here? (uer ken ai faind gliutën frii prodakts hir) — Dove posso trovare prodotti senza glutine qui?
+Please sign the attendance sheet before leaving. (pliiz sain di etendens sciit bifor liiving) — Per favore firma il foglio presenze prima di uscire.
+I hope you have a great rest of the day! (ai houp iu hev e greit rest ov de dei) — Spero che tu abbia un buon proseguimento di giornata!
+Is there a luggage storage area after check-out? (iz der e lagëj storëj eria after cekaut) — C'è un deposito bagagli dopo il check-out?
+Does the room have a safe for valuables? (daz de ruum hev e seif for veliuebëlz) — La camera ha una cassaforte per gli oggetti di valore?
+Could you give us two key cards for the room? (kud iu giv as tuu kii kardz for de ruum) — Potrebbe darci due chiavi elettroniche per la camera?
+What time does the airport shuttle leave? (uot taim daz di eirport shatël liiv) — A che ora parte la navetta per l'aeroporto?
+Is parking included in the reservation? (iz parking inkluudid in de rezerveiscën) — Il parcheggio è incluso nella prenotazione?
+Could we have a quiet table in the corner? (kud ui hev e kuaiet teibël in de korner) — Potremmo avere un tavolo tranquillo nell'angolo?
+Is service included in the final bill? (iz servis inkluudid in de fainël bil) — Il servizio è incluso nel conto finale?
+Do you have sparkling or still water? (du iu hev sparkling or stil uoter) — Avete acqua frizzante o naturale?
+Could you bring us some extra napkins, please? (kud iu bring as sam ekstra nepkinz, pliiz) — Potrebbe portarci altri tovaglioli, per favore?
+Is this table reserved for someone else? (iz dis teibël rizervd for samuan els) — Questo tavolo è riservato per qualcun altro?
+Where can I find paper towels and tissues? (uer ken ai faind peiper tauelz end tiscuz) — Dove posso trovare i tovaglioli di carta e i fazzoletti?
+Do you have fresh seafood today? (du iu hev fresc siifuud tudei) — Avete pesce fresco oggi?
+Can I pay with contactless on my phone? (ken ai pei uidh kontaktles on mai foun) — Posso pagare con il contactless dal telefono?
+Is there an offer on these products today? (iz der en ofer on diiz prodakts tudei) — C'è un'offerta su questi prodotti oggi?
+Could you give me a paper bag, please? (kud iu giv mi e peiper beg, pliiz) — Potrebbe darmi un sacchetto di carta, per favore?
+Please send me the meeting minutes when possible. (pliiz send mi de miiting minits uen posibël) — Per favore inviami il verbale della riunione appena possibile.
+I will be away from my desk for twenty minutes. (ai uil bi euei from mai desk for tuenti minits) — Sarò lontano dalla mia scrivania per venti minuti.
+Let us discuss this during our weekly sync. (let as diskas dis diuring auer uiikli sink) — Discutiamone durante il nostro allineamento settimanale.
+Can you forward that email to the team? (ken iu foruord det iimeil tu de tiim) — Puoi inoltrare quell'email al team?
+I need to update the project timeline today. (ai niid tu apdeit de prodjekt taimlain tudei) — Devo aggiornare la tempistica del progetto oggi.
+Who is going to walk the dog this afternoon? (huu iz gouing tu uok de dog dis afternuun) — Chi porterà a spasso il cane questo pomeriggio?
+Please take off your shoes at the entrance. (pliiz teik of ior sciuz et di entrens) — Per favore togliti le scarpe all'ingresso.
+Can you set the alarm for seven o'clock? (ken iu set di elarm for sevën oklok) — Puoi impostare la sveglia per le sette?
+Do not leave your wet towel on the bed. (du not liiv ior uet tauël on de bed) — Non lasciare il tuo asciugamano bagnato sul letto.
+We need to buy more toilet paper and soap. (ui niid tu bai mor toilet peiper end soup) — Dobbiamo comprare altra carta igienica e sapone.
+Are you feeling any better today? (ar iu fiiling eni beter tudei) — Ti senti un po' meglio oggi?
+Thank you so much for the wonderful evening. (thenk iu sou macc for de uanderful iivning) — Grazie mille per la splendida serata.
+Let me know if you need any help moving. (let mi nou if iu niid eni help muuving) — Fammi sapere se hai bisogno di aiuto con il trasloco.
+Give me a shout when you arrive at the station. (giv mi e shaut uen iu araiv et de steiscën) — Fammi un fischio quando arrivi in stazione.
+I am really looking forward to seeing you again. (ai em riili luking foruord tu siiing iu egen) — Non vedo l'ora di rivederti.
+My phone battery is almost completely dead. (mai foun beteri iz olmoust kompliitli ded) — La batteria del mio telefono è quasi del tutto scarica.
+Is there a post office near this street? (iz der e poust ofis nir dis striit) — C'è un ufficio postale vicino a questa strada?
+The lift is temporarily out of service. (de lift iz temporerili aut ov servis) — L'ascensore è temporaneamente fuori servizio.
+Could you tell me where the restrooms are? (kud iu tel mi uer de restruumz ar) — Potrebbe dirmi dove sono i bagni?
+I think I left my jacket in the car. (ai think ai left mai giaket in de kar) — Penso di aver lasciato la giacca in macchina.
+Which line should I take to get to the museum? (uicc lain sciud ai teik tu ghet tu de miuziëm) — Quale linea dovrei prendere per andare al museo?
+Is there a connection to the city center? (iz der e konekscën tu de siti senter) — C'è una coincidenza per il centro città?
+Do I need to validate this ticket before boarding? (du ai niid tu velideit dis tiket bifor bording) — Devo convalidare questo biglietto prima di salire?
+How long is the delay for the train? (hau long iz de dilei for de trein) — Quanto dura il ritardo del treno?
+Could you open the window a little bit? (kud iu oupën de uindou e litël bit) — Potresti aprire un po' la finestra?
+I will double check the numbers and let you know. (ai uil dabël cek de namberz end let iu nou) — Ricontrollerò i numeri e ti farò sapere.
+Could you share the link to the shared folder? (kud iu scer de link tu de scerd foulder) — Potresti condividere il link alla cartella condivisa?
+We need to finalize the budget by tomorrow. (ui niid tu fainelaiz de bagjit bai tumorou) — Dobbiamo finalizzare il budget entro domani.
+I am currently in a meeting, I will call you back. (ai em karrëntli in e miiting, ai uil kol iu bek) — Al momento sono in riunione, ti richiamo dopo.
+Thank you for your prompt response to my request. (thenk iu for ior prompt rispons tu mai rikuest) — Grazie per la sollecita risposta alla mia richiesta.
+Do you have an extension cord I can borrow? (du iu hev en ikstenscën kord ai ken borou) — Hai una prolunga che posso prendere in prestito?
+Please lock the balcony door before going to bed. (pliiz lok de belkoni dor bifor gouing tu bed) — Per favore chiudi la porta del balcone prima di andare a dormire.
+Can you help me move this heavy box? (ken iu help mi muuv dis hevi boks) — Puoi aiutarmi a spostare questa scatola pesante?
+I need to make a copy of my identity card. (ai niid tu meik e kopi ov mai aidentiti kard) — Devo fare una copia della mia carta d'identità.
+Have a safe journey home and see you soon! (hev e seif giurni houm end sii iu suun) — Buon viaggio di ritorno e a presto!
+Could you recommend a local dish to try? (kud iu rekomend e loukël disc tu trai) — Potrebbe consigliarmi un piatto locale da provare?
+Is there a hairdryer in the bathroom? (iz der e herdraier in de bathruum) — C'è un asciugacapelli in bagno?
+What is the check-out time in the morning? (uot iz de cekaut taim in de morning) — A che ora è il check-out la mattina?
+Could I have some extra pillows, please? (kud ai hev sam ekstra pilouz, pliiz) — Potrei avere dei cuscini extra, per favore?
+Does the room have air conditioning and heating? (daz de ruum hev er kondiscëning end hiiting) — La stanza ha l'aria condizionata e il riscaldamento?
+Can I make a reservation for tomorrow evening? (ken ai meik e rezerveiscën for tumorou iivning) — Posso fare una prenotazione per domani sera?
+Is tap water okay or should I buy bottled water? (iz tep uoter okei or sciud ai bai botëld uoter) — L'acqua del rubinetto va bene o dovrei comprare acqua in bottiglia?
+Could you bring us the dessert menu? (kud iu bring as de dizert meniu) — Potrebbe portarci il menu dei dolci?
+We would like to split the bill, please. (ui wud laik tu split de bil, pliiz) — Vorremmo dividere il conto, per favore.
+Do you have any sugar-free options available? (du iu hev eni sciugarfrii opscënz eveilebël) — Avete opzioni senza zucchero disponibili?
+Where are the frozen foods located? (uer ar de frouzën fuudz loukeitid) — Dove si trovano i cibi surgelati?
+Is there a bakery section in this store? (iz der e beikëri sekscën in dis stor) — C'è un reparto panetteria in questo negozio?
+Can I get a plastic bag for these items? (ken ai ghet e plastik beg for diiz aitëmz) — Posso avere una busta di plastica per questi articoli?
+Do you accept mobile payments here? (du iu eksept moubail peiments hir) — Accettate pagamenti dallo smartphone qui?
+Excuse me, is this trolley free to use? (ekskiuz mi, iz dis trouli frii tu iuz) — Scusi, questo carrello è libero da usare?
+I am sending you the link for the video call. (ai em sending iu de link for de vidiou kol) — Ti sto inviando il link per la videochiamata.
+Please let me know your availability for next week. (pliiz let mi nou ior eveilebiliti for nekst uiik) — Per favore fammi sapere la tua disponibilità per la prossima settimana.
+I need to reschedule our appointment to Friday. (ai niid tu riskediul auer epointment tu fraidei) — Devo spostare il nostro appuntamento a venerdì.
+Could you mute your microphone when not speaking? (kud iu miut ior maikrofoun uen not spiiking) — Potresti disattivare il microfono quando non parli?
+Let us discuss the details during the meeting. (let as diskas de diteilz diuring de miiting) — Discutiamo i dettagli durante la riunione.
+What would you like to watch on TV tonight? (uot wud iu laik tu uocc on tii vii tunait) — Cosa vorresti guardare in TV stasera?
+Could you help me unload the groceries from the car? (kud iu help mi anloud de grouseriz from de kar) — Puoi aiutarmi a scaricare la spesa dalla macchina?
+Don't forget to water the flowers on the balcony. (dount forget tu uoter de flauerz on de belkoni) — Non dimenticare di annaffiare i fiori sul balcone.
+Who is going to take out the recycling today? (huu iz gouing tu teik aut de risaikling tudei) — Chi porta fuori la raccolta differenziata oggi?
+Is dinner ready or can I help with anything? (iz diner redi or ken ai help uidh enithing) — La cena è pronta o posso aiutare in qualcosa?
+It was great seeing you after all this time. (it uoz greit siiing iu after ol dis taim) — È stato bello vederti dopo tutto questo tempo.
+Give me a call whenever you get home. (giv mi e kol uenever iu ghet houm) — Fammi una telefonata ogni volta che arrivi a casa.
+I hope you have a safe flight back home. (ai houp iu hev e seif flait bek houm) — Spero che tu faccia un buon volo di ritorno a casa.
+Would you like to grab a quick coffee with me? (wud iu laik tu greb e kuik kofi uidh mi) — Ti andrebbe di prendere un caffè al volo con me?
+Let me know if you need anything else from me. (let mi nou if iu niid enithing els from mi) — Fammi sapere se hai bisogno di qualcos'altro da parte mia.
+Where is the nearest bus stop to the center? (uer iz de nirest bas stop tu de senter) — Dov'è la fermata dell'autobus più vicina per il centro?
+Is there a taxi rank outside the station? (iz der e teksi renk autsaid de steiscën) — C'è una stazione dei taxi fuori dalla stazione?
+How far is the hotel from the beach? (hau far iz de houtel from de biicc) — Quanto dista l'hotel dalla spiaggia?
+Can I buy tickets directly on the bus? (ken ai bai tikets direktli on de bas) — Posso comprare i biglietti direttamente sull'autobus?
+Is this seat reserved for elderly passengers? (iz dis siit rizervd for elderli pasengerz) — Questo posto è riservato ai passeggeri anziani?
+Where can I find a pharmacy open late tonight? (uer ken ai faind e farmesi oupën leit tunait) — Dove posso trovare una farmacia aperta fino a tarda notte?
+Could you tell me where the nearest bank is? (kud iu tel mi uer de nirest benk iz) — Potrebbe dirmi dov'è la banca più vicina?
+Is there a free Wi-Fi network in this area? (iz der e frii uaifai netuork in dis eria) — C'è una rete Wi-Fi gratuita in questa zona?
+What time does the shopping center close on Saturdays? (uot taim daz de sciopping senter klouz on saterdeiz) — A che ora chiude il centro commerciale il sabato?
+I need to buy a plug adapter for my electronics. (ai niid tu bai e plag edapter for mai ilektroniks) — Devo comprare un adattatore per le mie apparecchiature elettroniche.
+Could you lower your voice a bit, please? (kud iu louer ior vois e bit, pliiz) — Potresti abbassare un po' la voce, per favore?
+Please remember to lock the front door when leaving. (pliiz rimember tu lok de front dor uen liiving) — Per favore ricordati di chiudere a chiave la porta d'ingresso quando esci.
+Can you pass me the salt and pepper, please? (ken iu pas mi de solt end peper, pliiz) — Puoi passarmi il sale e il pepe, per favore?
+I am going to take a quick shower before dinner. (ai em gouing tu teik e kuik sciauer bifor diner) — Vado a fare una doccia veloce prima di cena.
+Make sure to turn off the heating before going out. (meik sciur tu tern of de hiiting bifor gouing aut) — Assicurati di spegnere il riscaldamento prima di uscire.
+I will send you a text message as soon as I land. (ai uil send iu e tekst mesëj ez suun ez ai lend) — Ti manderò un messaggio di testo non appena atterro.
+We are planning a small weekend trip to the mountains. (ui ar pleninng e smol uiikend trip tu de mauntinz) — Stiamo organizzando una breve gita nel fine settimana in montagna.
+Thank you for your hospitality during our stay. (thenk iu for ior hospitaliti diuring auer stei) — Grazie per la vostra ospitalità durante il nostro soggiorno.
+Do you have any recommendations for a local guide? (du iu hev eni rekomendeiscënz for e loukël gaid) — Ha qualche raccomandazione per una guida locale?
+Have a great weekend and enjoy your time off! (hev e greit uiikend end engioi ior taim of) — Buon fine settimana e goditi il tempo libero!
+What time does the school assembly start? (uot taim daz de skuul esembli start) — A che ora inizia l'assemblea scolastica?
+Please open your textbooks to page forty-five. (pliiz oupën ior tekstbuks tu peidj forti faiv) — Per favore aprite i libri di testo a pagina quarantacinque.
+Do we have a math test tomorrow morning? (du ui hev e math test tumorou morning) — Abbiamo un compito in classe di matematica domani mattina?
+My teacher gave us a lot of homework for the weekend. (mai tiicer gheiv as e lot ov houmuork for de uiikend) — Il mio insegnante ci ha dato molti compiti per il fine settimana.
+Where is the school library located? (uer iz de skuul laibreri loukeitid) — Dove si trova la biblioteca della scuola?
+I need to buy a new pencil case and a ruler. (ai niid tu bai e niu pensil keis end e ruler) — Devo comprare un astuccio nuovo e un righello.
+Who is responsible for cleaning the blackboard? (huu iz risponsibël for kliining de blekbord) — Chi è responsabile di pulire la lavagna?
+The geography project is due next Monday. (de gioghrafi prodjekt iz diu nekst mandei) — Il progetto di geografia scade lunedì prossimo.
+Did you study for the history oral exam? (did iu stadi for de histëri orël igzem) — Hai studiato per l'interrogazione di storia?
+Can I borrow a blue pen, please? (ken ai borou e bluu pen, pliiz) — Posso prendere in prestito una penna blu, per favore?
+Can I try on these trousers in a larger size? (ken ai trai on diiz trauzerz in e larger saiz) — Posso provare questi pantaloni in una taglia più grande?
+Are there any discounts on the winter collection? (ar der eni diskaunts on de uinter kolekscën) — Ci sono sconti sulla collezione invernale?
+Where can I find the cash desk to pay? (uer ken ai faind de kesc desk tu pei) — Dove posso trovare la cassa per pagare?
+I would like to return this shirt because it is damaged. (ai wud laik tu riturn dis shert bikoz it iz demëjd) — Vorrei restituire questa camicia perché è danneggiata.
+Does this item come with a two-year warranty? (daz dis aitëm kam uidh e tuu yir uoranti) — Questo articolo ha una garanzia di due anni?
+Can I keep the hanger for the dress? (ken ai kiip de henger for de dres) — Posso tenere la gruccia per l'abito?
+Is this store open on public holidays? (iz dis stor oupën on pablik holidiz) — Questo negozio è aperto nei giorni festivi?
+I am just looking around, thank you. (ai em giast luking eraund, thenk iu) — Sto solo dando un'occhiata, grazie.
+Do you have a paper bag for my purchases? (du iu hev e peiper beg for mai percësiz) — Ha una busta di carta per i miei acquisti?
+This pair of shoes is very comfortable to wear. (dis per ov sciuz iz veri kamfortebël tu uer) — Questo paio di scarpe è molto comodo da indossare.
+We rented a small cottage near the lake. (ui rentid e smol kotëj nir de leik) — Abbiamo affittato un piccolo cottage vicino al lago.
+I love sunbathing on the beach in the afternoon. (ai lav sanbeithing on de biicc in di afternuun) — Amo prendere il sole in spiaggia nel pomeriggio.
+Don't forget to put on sun cream before going out. (dount forget tu put on san kriim bifor gouing aut) — Non dimenticare di mettere la crema solare prima di uscire.
+We booked a guided tour of the historic city center. (ui bukt e gaidid tur ov de histerik siti senter) — Abbiamo prenotato una visita guidata del centro storico.
+The view from our balcony is absolutely breathtaking. (de viu from auer belkoni iz absoluutli brethteiking) — La vista dal nostro balcone è assolutamente mozzafiato.
+What souvenir should we buy for our family? (uot suuvenir sciud ui bai for auer femili) — Che souvenir dovremmo comprare per la nostra famiglia?
+We are going snorkeling in the crystal clear water. (ui ar gouing snorkëling in de kristël klir uoter) — Faremo snorkeling nell'acqua cristallina.
+I bought a postcard to send to my grandparents. (ai bot e poustkard tu send tu mai grendperents) — Ho comprato una cartolina da spedire ai miei nonni.
+We spent the whole week relaxing by the pool. (ui spent de houl uiik rilexing bai de puul) — Abbiamo passato l'intera settimana a rilassarci in piscina.
+The local cuisine in this region is extraordinary. (de loukël kuiziin in dis rijën iz ikstrordineri) — La cucina locale di questa regione è straordinaria.
+Please double check the attachment before sending the email. (pliiz dabël cek di etecment bifor sending di iimeil) — Per favore ricontrolla l'allegato prima di inviare l'email.
+I am going to grab a sandwich for lunch. (ai em gouing tu greb e sendwicc for lancc) — Vado a prendere un sandwich per pranzo.
+Can you remind me to buy milk on the way home? (ken iu rimaind mi tu bai milk on de uei houm) — Puoi ricordarmi di comprare il latte strada facendo verso casa?
+Let us take a short break to stretch our legs. (let as teik e short breik tu strecc auer legz) — Facciamo una breve pausa per sgranchirci le gambe.
+The traffic was terrible on the motorway this morning. (de trafik uoz teribël on de moutoruei dis morning) — Il traffico era terribile in autostrada stamattina.
+Could you please turn down the bright screen? (kud iu pliiz tern daun de brait skriin) — Potresti abbassare la luminosità dello schermo, per favore?
+We need to replace the bulb in the hallway lamp. (ui niid tu ripleis de balb in de holuei lemp) — Dobbiamo sostituire la lampadina della lampada in corridoio.
+I left my sunglasses on the kitchen table. (ai left mai sanglasiz on de kicën teibël) — Ho lasciato i miei occhiali da sole sul tavolo della cucina.
+Are you coming to the party this Saturday evening? (ar iu kaming tu de parti dis saterdei iivning) — Vieni alla festa questo sabato sera?
+I will send you a text as soon as I arrive at the venue. (ai uil send iu e tekst ez suun ez ai araiv et de veniu) — Ti manderò un messaggio appena arrivo sul posto.
+What time does the flight start boarding? (uot taim daz de flait start bording) — A che ora inizia l'imbarco del volo?
+Remember to bring your swimming suit and a towel. (rimember tu bring ior suiming suut end e tauël) — Ricordati di portare il costume da bagno e un asciugamano.
+Can I pay for my coffee with a credit card? (ken ai pei for mai kofi uidh e kredit kard) — Posso pagare il mio caffè con la carta di credito?
+My laptop charger is not working properly today. (mai laptop ciarger iz not uorking properli tudei) — Il caricabatterie del mio computer non funziona bene oggi.
+Let us meet right in front of the fountain. (let as miit rait in front ov de fauntën) — Incontriamoci proprio davanti alla fontana.
+Do you want me to help you carry the luggage? (du iu uont mi tu help iu keri de lagëj) — Vuoi che ti aiuti a portare i bagagli?
+The supermarket down the street is open late tonight. (de supermarket daun de striit iz oupën leit tunait) — Il supermercato in fondo alla strada è aperto fino a tardi stasera.
+We had such a great time together yesterday. (ui hed sacc e greit taim tugheder iesterdei) — Siamo stati davvero bene insieme ieri.
+Could you please pass me the bread basket? (kud iu pliiz pas mi de bred basket) — Potresti passarmi il cestino del pane, per favore?
+Have a safe journey and text me when you land. (hev e seif giurni end tekst mi uen iu lend) — Buon viaggio e mandami un messaggio quando atterri.
+What is the deadline for this science project? (uot iz de dedlain for dis saiëns prodjekt) — Qual è la scadenza per questo progetto di scienze?
+Does this shop offer a discount for cash payments? (daz dis sciop ofer e diskaunt for kesc peiments) — Questo negozio offre uno sconto per i pagamenti in contanti?
+We rented a bicycle to explore the coastal village. (ui rentid e baisikël tu iksplor de koustël vilëj) — Abbiamo noleggiato una bicicletta per esplorare il villaggio costiero.
+Could you please send me the password for the conference room? (kud iu pliiz send mi de pasuord for de konferens ruum) — Potresti inviarmi la password per la sala conferenze?
+Is there a safe box inside the room? (iz der e seif boks insaid de ruum) — C'è una cassaforte all'interno della camera?
+Excuse me, where can I find the fresh pasta aisle? (ekskiuz mi, uer ken ai faind de fresc pasta ail) — Scusi, dove posso trovare la corsia della pasta fresca?
+Could you help me wash the dishes after dinner? (kud iu help mi uosc de discëz after diner) — Puoi aiutarmi a lavare i piatti dopo cena?
+I missed the bus so I had to walk to school. (ai mist de bas sou ai hed tu uok tu skuul) — Ho perso l'autobus quindi ho dovuto camminare fino a scuola.
+Can I return this item if I keep the receipt? (ken ai riturn dis aitëm if ai kiip de risiit) — Posso restituire questo articolo se conservo lo scontrino?
+We decided to extend our vacation by three days. (ui disaidid tu ikstend auer veikeiscën bai thrii deiz) — Abbiamo deciso di prolungare la nostra vacanza di tre giorni.
+I have attached the meeting notes to this email. (ai hev etecd de miiting noutz tu dis iimeil) — Ho allegato le note della riunione a questa email.
+Can we ask for extra blankets for the bed? (ken ui ask for ekstra blenkits for de bed) — Possiamo chiedere delle coperte extra per il letto?
+Is there a special deal on organic vegetables today? (iz der e speciël diil on organik vegetebëlz tudei) — C'è un'offerta speciale sulla verdura biologica oggi?
+Don't forget to take out the bins before bedtime. (dount forget tu teik aut de binz bifor bedtaim) — Non dimenticare di portare fuori i cestini prima di andare a dormire.
+Our class is going on a field trip next month. (auer klas iz gouing on e fiild trip nekst manth) — La nostra classe farà una gita scolastica il mese prossimo.
+Where can I try on these shoes? (uer ken ai trai on diiz sciuz) — Dove posso provare queste scarpe?
+The beach was quite crowded during the weekend. (de biicc uoz kuait kraudid diuring de uiikend) — La spiaggia era piuttosto affollata durante il fine settimana.
+Let us schedule a follow-up meeting next Tuesday. (let as skediul e foloap miiting nekst tiuzdei) — Fissiamo una riunione di aggiornamento martedì prossimo.
+Could you please call us a cab to the train station? (kud iu pliiz kol as e keb tu de trein steiscën) — Potrebbe chiamarci un taxi per la stazione ferroviaria?
+Where are the canned goods located in this store? (uer ar de kend gudz loukeitid in dis stor) — Dove si trovano i prodotti in scatola in questo negozio?
+Who left their jacket on the living room sofa? (huu left deir giaket on de living ruum soufa) — Chi ha lasciato la giacca sul divano del soggiorno?
+The teacher asked us to sit in pairs. (de tiicer askt as tu sit in perz) — L'insegnante ci ha chiesto di sederci a coppie.
+Do you have this dress in a different color? (du iu hev dis dres in e diferent kaler) — Avete questo vestito in un altro colore?
+We took a boat tour to see the sea caves. (ui tuk e bout tur tu sii de sii keivz) — Abbiamo fatto un tour in barca per vedere le grotte marine.
+I will share the update with the team tomorrow. (ai uil scer di apdeit uidh de tiim tumorou) — Condividerò l'aggiornamento con il team domani.
+What time is the swimming pool open until? (uot taim iz de suiming puul oupën antil) — Fino a che ora è aperta la piscina?
+Are these eggs free-range or organic? (ar diiz eghz frii reinj or organik) — Queste uova sono da allevamento all'aperto o biologiche?
+Can you turn down the television volume, please? (ken iu tern daun de televiscën voliuum, pliiz) — Puoi abbassare il volume della televisione, per favore?
+I forgot my gym kit in the school locker. (ai forgot mai giim kit in de skuul loker) — Ho dimenticato il mio kit da ginnastica nell'armadietto della scuola.
+Do I get a gift card with this purchase? (du ai ghet e ghift kard uidh dis percës) — Ricevo una carta regalo con questo acquisto?
+We bought souvenirs for all our relatives back home. (ui bot suuvenirz for ol auer reletivz bek houm) — Abbiamo comprato souvenir per tutti i nostri parenti a casa.
+Please confirm your attendance by the end of the day. (pliiz konfirm ior etendens bai di end ov de dei) — Per favore conferma la tua presenza entro la fine della giornata.
+Can I have a room with a double bed, please? (ken ai hev e ruum uidh e dabël bed, pliiz) — Posso avere una camera con letto matrimoniale, per favore?
+Could you tell me if these tomatoes are locally grown? (kud iu tel mi if diiz tomeitouz ar loukëli grouwn) — Potrebbe dirmi se questi pomodori sono a chilometro zero?
+We should hang up the laundry before it starts raining. (ui sciud heng ap de londri bifor it starts reining) — Dovremmo stendere il bucato prima che inizi a piovere.
+Our principal gave an inspiring speech today. (auer prinsipël gheiv en inspaiëring spiicc tudei) — Il nostro preside ha fatto un discorso ispiratore oggi.
+Is there a queue for the fitting room? (iz der e kiu for de fiting ruum) — C'è coda per il camerino?
+We went hiking in the national park all morning. (ui uent haiking in de nescënël park ol morning) — Siamo andati a fare un'escursione nel parco nazionale per tutta la mattina.
+I am currently out of office with limited email access. (ai em karrëntli aut ov ofis uidh limitid iimeil ekses) — Al momento sono fuori ufficio con accesso limitato all'email.
+Could you recommend a good local pub nearby? (kud iu rekomend e gud loukël pab nirbai) — Potrebbe consigliarmi un buon pub locale qui vicino?
+Where can I find olive oil and vinegar? (uer ken ai faind oliv oil end vineger) — Dove posso trovare l'olio d'oliva e l'aceto?
+Please remember to feed the dog before you leave. (pliiz rimember tu fiid de dog bifor iu liiv) — Per favore ricordati di dare da mangiare al cane prima di uscire.
+We need to buy a notebook for geography class. (ui niid tu bai e noutbuk for gioghrafi klas) — Dobbiamo comprare un quaderno per la classe di geografia.
+Do you offer gift wrapping for this item? (du iu ofer ghift reping for dis aitëm) — Offrite una confezione regalo per questo articolo?
+The flight attendant asked us to fasten our seatbelts. (de flait etendent askt as tu fasën auer siitbelts) — L'assistente di volo ci ha chiesto di allacciare le cinture di sicurezza.
+Let us review the project deliverables together. (let as riviu de prodjekt diliverebëlz tugheder) — Rivediamo insieme i risultati attesi del progetto.
+Could we get two extra keys for our room? (kud ui ghet tuu ekstra kiiz for auer ruum) — Potremmo avere due chiavi extra per la nostra stanza?
+Is there a bakery counter in this supermarket? (iz der e beikëri kaunter in dis supermarket) — C'è un banco panetteria in questo supermercato?
+Let us organize a game night with the whole family. (let as organaiz e gheim nait uidh de houl femili) — Organizziamo una serata giochi con tutta la famiglia.
+Enjoy your summer break and see you in September! (engioi ior samer breik end sii iu in september) — Goditi le vacanze estive e ci vediamo a settembre!
+Do we have any homework for English class? (du ui hev eni houmuork for inglisc klas) — Abbiamo compiti per la classe di inglese?
+Where can I exchange currency near the hotel? (uer ken ai ikscenj kerensi nir de houtel) — Dove posso cambiare la valuta vicino all'hotel?
+Could I have the receipt for this purchase? (kud ai hev de risiit for dis percës) — Potrei avere lo scontrino per questo acquisto?
+We are planning a family dinner for Friday. (ui ar pleninng e femili diner for fraidei) — Stiamo organizzando una cena in famiglia per venerdì.
+Is there a swimming pool in this resort? (iz der e suiming puul in dis rizort) — C'è una piscina in questo villaggio turistico?
+I am sending you the revised contract now. (ai em sending iu de rivaizd kontrekt nau) — Ti sto inviando il contratto revisionato adesso.
+Can you tell me which aisle the coffee is in? (ken iu tel mi uicc ail de kofi iz in) — Puoi dirmi in quale corsia si trova il caffè?
+Please turn off the computer when you finish. (pliiz tern of de kompiuter uen iu finisc) — Per favore spegni il computer quando finisci.
+We booked our flights three months ago. (ui bukt auer flaits thrii manths egou) — Abbiamo prenotato i nostri voli tre mesi fa.
+Do you sell fresh bread here every day? (du iu sel fresc bred hir evri dei) — Vendete pane fresco qui tutti i giorni?
+What time does the lesson finish today? (uot taim daz de lesën finisc tudei) — A che ora finisce la lezione oggi?
+Can I try these shoes in a size eight? (ken ai trai diiz sciuz in e saiz eit) — Posso provare queste scarpe nella taglia trentotto?
+I am looking forward to our vacation next month. (ai em luking foruord tu auer veikeiscën nekst manth) — Non vedo l'ora di fare le nostre vacanze il mese prossimo.
+Could you send me the location on WhatsApp? (kud iu send mi de loukeiscën on uotsap) — Potresti inviarmi la posizione su WhatsApp?
+Who is taking care of the plants while we are away? (huu iz teiking ker ov de plants uail ui ar euei) — Chi si prende cura delle piante mentre siamo via?
+The teacher asked us to work in small groups. (de tiicer askt as tu uork in smol gruups) — L'insegnante ci ha chiesto di lavorare in piccoli gruppi.
+Is breakfast served in the room or in the dining hall? (iz brekfast servd in de ruum or in de daining hol) — La colazione è servita in camera o nella sala da pranzo?
+I need to buy a birthday card for my sister. (ai niid tu bai e berthdei kard for mai sister) — Devo comprare un biglietto di auguri per mia sorella.
+Can we split the bill three ways? (ken ui split de bil thrii ueiz) — Possiamo dividere il conto in tre?
+Where is the nearest bus station located? (uer iz de nirest bas steiscën loukeitid) — Dove si trova la stazione degli autobus più vicina?
+I need to print my boarding pass for the flight. (ai niid tu print mai bording pas for de flait) — Devo stampare la mia carta d'imbarco per il volo.
+Could you pass me the notebook from the shelf? (kud iu pas mi de noutbuk from de shelf) — Potresti passarmi il quaderno dallo scaffale?
+Is there a discount for groups at the museum? (iz der e diskaunt for gruups et de miuziëm) — C'è uno sconto per i gruppi al museo?
+Please remind me to take the laundry out. (pliiz rimaind mi tu teik de londri aut) — Per favore ricordami di togliere il bucato.
+We spent the day exploring the old town. (ui spent de dei iksploring di ould taun) — Abbiamo passato la giornata ad esplorare il centro storico.
+Does this jacket come with a hood? (daz dis giaket kam uidh e hud) — Questa giacca ha il cappuccio?
+I am writing an essay for my history course. (ai em raiting en essei for mai histëri kors) — Sto scrivendo un tema per il mio corso di storia.
+Can I leave my key at the reception desk? (ken ai liiv mai kii et de risepscën desk) — Posso lasciare la chiave al banco della reception?
+Is this product locally produced? (iz dis prodakt loukëli prodiust) — Questo prodotto è a chilometro zero?
+Let us discuss the sales figures in the meeting. (let as diskas de seilz figherz in de miiting) — Discutiamo i dati di vendita nella riunione.
+Do you need a ride to the airport tomorrow? (du iu niid e raid tu di eirport tumorou) — Hai bisogno di un passaggio per l'aeroporto domani?
+We need to buy more paper for the printer. (ui niid tu bai mor peiper for de printer) — Dobbiamo comprare altra carta per la stampante.
+Can you help me set up the table in the garden? (ken iu help mi set ap de teibël in de gardën) — Puoi aiutarmi ad apparecchiare il tavolo in giardino?
+What is the deadline for submitting the application? (uot iz de dedlain for sabmiting di eplikeiscën) — Qual è la scadenza per inviare la candidatura?
+The hotel offers a shuttle service to the beach. (de houtel oferz e shatël servis tu de biicc) — L'hotel offre un servizio navetta per la spiaggia.
+I would like to pay by debit card. (ai wud laik tu pei bai debit kard) — Vorrei pagare con carta di debito.
+Is there a playground for children nearby? (iz der e pleigraund for cildren nirbai) — C'è un parco giochi per bambini qui vicino?
+Could you give me some advice on what to visit? (kud iu giv mi sam edvais on uot tu vizit) — Potrebbe darmi qualche consiglio su cosa visitare?
+We bought some fresh fruit at the street market. (ui bot sam fresc fruut et de striit market) — Abbiamo comprato della frutta fresca al mercato di strada.
+Do not forget your coat, it is cold outside. (du not forget ior kout, it iz kould autsaid) — Non dimenticare il cappotto, fa freddo fuori.
+The exam results will be published next week. (di igzem risalts uil bi pablisct nekst uiik) — I risultati dell'esame saranno pubblicati la prossima settimana.
+Is there an extra charge for late check-in? (iz der en ekstra ciarj for leit cekin) — C'è un costo aggiuntivo per il check-in ritardato?
+Could you please turn on the air conditioner? (kud iu pliiz tern on di er kondiscëner) — Potresti accendere l'aria condizionata, per favore?
+I am looking for a gift for a colleague. (ai em luking for e ghift for e koliig) — Sto cercando un regalo per un collega.
+We rented a car to drive along the coast. (ui rentid e kar tu draiv elong de koust) — Abbiamo noleggiato un'auto per guidare lungo la costa.
+Can you answer the phone while I cook? (ken iu anser de foun uail ai kuk) — Puoi rispondere al telefono mentre cucino?
+Please double check the delivery address. (pliiz dabël cek de diliveri edres) — Per favore ricontrolla l'indirizzo di spedizione.
+Where is the nearest subway entrance? (uer iz de nirest sabuei entrens) — Dov'è l'ingresso della metropolitana più vicino?
+I need to return these shoes to the shop. (ai niid tu riturn diiz sciuz tu de sciop) — Devo restituire queste scarpe al negozio.
+Enjoy your meal and have a great evening! (engioi ior miil end hev e greit iivning) — Buon appetito e trascorri una bella serata!
+Could you check if the wifi connection is working? (kud iu cek if de uaifai konekscën iz uorking) — Potresti controllare se la connessione wifi funziona?
+Where can I rent an electric bicycle? (uer ken ai rent en ilektrik baisikël) — Dove posso noleggiare una bicicletta elettrica?
+I need to make an online payment for this bill. (ai niid tu meik en onlain peiment for dis bil) — Devo effettuare un pagamento online per questa bolletta.
+Could you please hand me the keys to the garage? (kud iu pliiz hend mi de kiiz tu de garagj) — Potresti passarmi le chiavi del garage, per favore?
+The lesson has been moved to room four. (de lesën hez bin muuvd tu ruum for) — La lezione è stata spostata nell'aula quattro.
+Is there a microwave available in the kitchen? (iz der e maikroueiv eveilebël in de kicën) — C'è un forno a microonde disponibile in cucina?
+Can I try on this sweater in medium? (ken ai trai on dis suetter in miidiëm) — Posso provare questo maglione nella taglia M?
+Please save your work before shutting down the computer. (pliiz seiv ior uork bifor sciating daun de kompiuter) — Per favore salva il tuo lavoro prima di spegnere il computer.
+Do you know where the nearest charging station is? (du iu nou uer de nirest ciarging steiscën iz) — Sai dov'è la stazione di ricarica più vicina?
+We have a family picnic planned for Sunday afternoon. (ui hev e femili piknik plend for sandei afternuun) — Abbiamo in programma un picnic in famiglia per domenica pomeriggio.
+Can I get this dress altered at your shop? (ken ai ghet dis dres olterd et ior sciop) — Posso far modificare questo vestito nel vostro negozio?
+What time does the museum guided tour start? (uot taim daz de miuziëm gaidid tur start) — A che ora inizia la visita guidata del museo?
+I am going to buy some fresh bread for dinner. (ai em gouing tu bai sam fresc bred for diner) — Vado a comprare del pane fresco per cena.
+Could you put these files in the office folder? (kud iu put diiz failz in di ofis foulder) — Potresti mettere questi file nella cartella dell'ufficio?
+My daughter is rehearsing for the school play. (mai doter iz rihersing for de skuul plei) — Mia figlia sta provando per lo spettacolo teatrale della scuola.
+We had a wonderful lunch overlooking the sea. (ui hed e uanderful lancc ouverluking de sii) — Abbiamo fatto un pranzo meraviglioso con vista mare.
+Please don't forget to pack your passport. (pliiz dount forget tu pek ior pasport) — Per favore non dimenticare di mettere in valigia il passaporto.
+Is there a group discount for the theatre tickets? (iz der e gruup diskaunt for de thieter tikets) — C'è uno sconto di gruppo per i biglietti del teatro?
+Can I change my seat to an aisle seat? (ken ai ceinj mai siit tu en ail siit) — Posso cambiare il mio posto con uno vicino al corridoio?
+Who is coming with us to the supermarket today? (huu iz kaming uidh as tu de supermarket tudei) — Chi viene con noi al supermercato oggi?
+I need to print twenty copies of this document. (ai niid tu print tuenti kopiz ov dis dokiument) — Devo stampare venti copie di questo documento.
+Could you tell me where the shoe department is? (kud iu tel mi uer de sciu dipartment iz) — Potrebbe dirmi dov'è il reparto calzature?
+We are going camping in the forest this weekend. (ui ar gouing kemping in de forest dis uiikend) — Questo fine settimana andremo in campeggio nella foresta.
+Please wake me up at six o'clock tomorrow. (pliiz ueik mi ap et siks oklok tumorou) — Per favore svegliami alle sei domani.
+Can I ask for an extra clothes hanger? (ken ai ask for en ekstra klouthz henger) — Posso chiedere una gruccia per abiti in più?
+The students are preparing for their final exams. (de stiudents ar priperring for deir fainël igzemz) — Gli studenti si stanno preparando per gli esami finali.
+Could you help me clean the windows today? (kud iu help mi kliin de uindouz tudei) — Potresti aiutarmi a pulire le finestre oggi?
+I am looking for a gift for my father's birthday. (ai em luking for e ghift for mai faderz berthdei) — Sto cercando un regalo per il compleanno di mio padre.
+We enjoyed watching the fireworks by the harbor. (ui engioid uociing de faieruorks bai de harbor) — Ci è piaciuto guardare i fuochi d'artificio al porto.
+Please send me the meeting agenda by email. (pliiz send mi de miiting ejenda bai iimeil) — Per favore inviami l'ordine del giorno della riunione via email.
+Is this item covered by a money back guarantee? (iz dis aitëm kaverd bai e mani bek ghereantii) — Questo articolo è coperto da una garanzia di rimborso?
+Do you sell gluten-free flour in this shop? (du iu sel gliutën frii flauer in dis sciop) — Vendete farina senza glutine in questo negozio?
+Can you pick up the dry cleaning after work? (ken iu pik ap de drai kliining after uork) — Puoi ritirare i vestiti in lavanderia dopo il lavoro?
+The teacher corrected all our essays yesterday. (de tiicer korektid ol auer essëiz iesterdei) — L'insegnante ha corretto tutti i nostri temi ieri.
+We booked a hotel room with a balcony view. (ui bukt e houtel ruum uidh e belkoni viu) — Abbiamo prenotato una camera d'albergo con vista dal balcone.
+Could you please pass me the olive oil? (kud iu pliiz pas mi di oliv oil) — Potresti passarmi l'olio d'oliva, per favore?
+I have an appointment with the doctor at three. (ai hev en epointment uidh de dokter et thrii) — Ho un appuntamento con il medico alle tre.
+Is there a kids' menu available in this restaurant? (iz der e kidz meniu eveilebël in dis restorant) — C'è un menu per bambini disponibile in questo ristorante?
+We spent the afternoon shopping for summer clothes. (ui spent di afternuun sciopping for samer klouthz) — Abbiamo passato il pomeriggio a fare acquisti per vestiti estivi.
+Do I need a receipt to exchange this product? (du ai niid e risiit tu ikscenj dis prodakt) — Ho bisogno dello scontrino per cambiare questo prodotto?
+The kids are playing hide and seek in the garden. (de kidz ar pleiing haid end siik in de gardën) — I bambini stanno giocando a nascondino in giardino.
+Could you please close the window in the bedroom? (kud iu pliiz klouz de uindou in de bedruum) — Potresti chiudere la finestra in camera da letto, per favore?
+I will leave the house keys under the mat. (ai uil liiv de haus kiiz ander de met) — Lascerò le chiavi di casa sotto lo zerbino.
+Is the hotel reception desk open all night? (iz de houtel risepscën desk oupën ol nait) — La reception dell'hotel è aperta tutta la notte?
+Can you help me find my glasses anywhere? (ken iu help mi faind mai glasiz eniuer) — Puoi aiutarmi a trovare i miei occhiali da qualche parte?
+We need to order new stationery for the office. (ui niid tu order niu steiscëneri for di ofis) — Dobbiamo ordinare della nuova cancelleria per l'ufficio.
+How much is the entrance fee for adults? (hau macc iz di entrens fii for edalts) — Quanto costa il biglietto d'ingresso per gli adulti?
+Please clean your shoes before coming inside. (pliiz kliin ior sciuz bifor kaming insaid) — Per favore pulisciti le scarpe prima di entrare.
+I would like to try these sunglasses on. (ai wud laik tu trai diiz sanglasiz on) — Vorrei provare questi occhiali da sole.
+Have a nice trip and write to us when you arrive! (hev e nais trip end rait tu as uen iu araiv) — Buon viaggio e scrivici quando arrivi!
+Can you show me how to fill out this form? (ken iu scio mi hau tu fil aut dis form) — Puoi mostrarmi come compilare questo modulo?
+We need to buy a birthday cake for tomorrow. (ui niid tu bai e berthdei keik for tumorou) — Dobbiamo comprare una torta di compleanno per domani.
+Is there a charge for using the gym? (iz der e ciarj for iuzing de giim) — C'è un costo per usare la palestra?
+Could you please print the boarding passes? (kud iu pliiz print de bording pasiz) — Potresti stampare le carte d'imbarco, per favore?
+The teacher praised the class for their good results. (de tiicer preizd de klas for deir gud risalts) — L'insegnante ha lodato la classe per i buoni risultati.
+What time does the supermarket close on Sunday? (uot taim daz de supermarket klouz on sandei) — A che ora chiude il supermercato la domenica?
+I would like to try this dress in blue. (ai wud laik tu trai dis dres in bluu) — Vorrei provare questo vestito in blu.
+Could you help me install the new printer software? (kud iu help mi instol de niu printer softuer) — Potresti aiutarmi a installare il nuovo software della stampante?
+We booked a room with a sea view. (ui bukt e ruum uidh e sii viu) — Abbiamo prenotato una camera con vista mare.
+Please put the milk back in the fridge. (pliiz put de milk bek in de fridj) — Per favore rimetti il latte in frigorifero.
+Is there a laundry service in the hotel? (iz der e londri servis in de houtel) — C'è un servizio lavanderia nell'hotel?
+How long will the flight take? (hau long uil de flait teik) — Quanto durerà il volo?
+I am going to buy fresh fruit at the market. (ai em gouing tu bai fresc fruut et de market) — Vado a comprare frutta fresca al mercato.
+Can you explain this grammar rule again? (ken iu iksplein dis gramar ruul egen) — Puoi spiegare di nuovo questa regola grammaticale?
+Let us take a short break for coffee. (let as teik e short breik for kofi) — Facciamo una breve pausa per un caffè.
+Do you have these shoes in a smaller size? (du iu hev diiz sciuz in e smoler saiz) — Avete queste scarpe in una taglia più piccola?
+Who forgot to turn off the computer in the study? (huu forgot tu tern of de kompiuter in de stadi) — Chi ha dimenticato di spegnere il computer nello studio?
+Where is the nearest pharmacy open on weekends? (uer iz de nirest farmesi oupën on uiikendz) — Dov'è la farmacia più vicina aperta nel fine settimana?
+We are planning a trip to Europe next spring. (ui ar pleninng e trip tu iurop nekst spring) — Stiamo pianificando un viaggio in Europa la prossima primavera.
+Could you pass me the pepper, please? (kud iu pas mi de peper, pliiz) — Potresti passarmi il pepe, per favore?
+Can I reschedule my appointment with the doctor? (ken ai riskediul mai epointment uidh de dokter) — Posso riprogrammare il mio appuntamento con il medico?
+The students are preparing for the science fair. (de stiudents ar priperring for de saiëns fer) — Gli studenti si stanno preparando per la fiera della scienza.
+Can I pay for these groceries with cash? (ken ai pei for diiz grouseriz uidh kesc) — Posso pagare questi generi alimentari in contanti?
+What is the wifi network name for guests? (uot iz de uaifai netuork neim for ghests) — Qual è il nome della rete wifi per gli ospiti?
+We had a great time visiting the local museum. (ui hed e greit taim viziting de loukël miuziëm) — Ci siamo divertiti molto a visitare il museo locale.
+Please lock the front door when you leave. (pliiz lok de front dor uen iu liiv) — Per favore chiudi a chiave la porta d'ingresso quando esci.
+Is there an extra fee for room service? (iz der en ekstra fii for ruum servis) — C'è un costo aggiuntivo per il servizio in camera?
+I am writing an email to the HR department. (ai em raiting en iimeil tu di eic ar dipartment) — Sto scrivendo un'email al reparto risorse umane.
+Could you help me carry these heavy suitcases to the car? (kud iu help mi keri diiz hevi siutkeisiz tu de kar) — Potresti aiutarmi a portare queste valigie pesanti in macchina?
+What time does the history class start today? (uot taim daz de histëri klas start tudei) — A che ora inizia la lezione di storia oggi?
+Do you sell fresh flowers in this shop? (du iu sel fresc flauerz in dis sciop) — Vendete fiori freschi in questo negozio?
+We rented a car to explore the island. (ui rentid e kar tu iksplor di ailend) — Abbiamo noleggiato un'auto per esplorare l'isola.
+Please keep your voice down, the baby is resting. (pliiz kiip ior vois daun, de beibi iz resting) — Per favore tieni la voce bassa, il bambino sta riposando.
+Is there a discount if I buy two items? (iz der e diskaunt if ai bai tuu aitëmz) — C'è uno sconto se compro due articoli?
+The hotel staff was extremely helpful and polite. (de houtel staf uoz ikstriimli helpful end polait) — Il personale dell'hotel è stato estremamente disponibile e gentile.
+Can you send me the directions to the station? (ken iu send mi de direksciënz tu de steiscën) — Puoi inviarmi le indicazioni per la stazione?
+Don't forget to take your vitamins this morning. (dount forget tu teik ior vitaminz dis morning) — Non dimenticare di prendere le tue vitamine stamattina.
+We are having lunch with our grandparents today. (ui ar heving lancc uidh auer grendperents tudei) — Oggi pranziamo con i nostri nonni.
+I need a pair of comfortable shoes for walking. (ai niid e per ov kamfortebël sciuz for uoking) — Ho bisogno di un paio di scarpe comode per camminare.
+Could you please print the itinerary for the trip? (kud iu pliiz print di aitinereri for de trip) — Potresti stampare l'itinerario del viaggio, per favore?
+The classroom was renovated during the summer. (de klasruum uoz renoveitid diuring de samer) — L'aula è stata ristrutturata durante l'estate.
+Is there a water refill station nearby? (iz der e uoter rifil steiscën nirbai) — C'è una stazione di ricarica per l'acqua qui vicino?
+Does this shop offer tax-free shopping for tourists? (daz dis sciop ofer teksfrii sciopping for turists) — Questo negozio offre lo shopping tax-free per i turisti?
+We enjoyed the sunset from the beach cafe. (ui engioid de sanset from de biicc kafei) — Ci siamo goduti il tramonto dal caffè sulla spiaggia.
+Please submit your project before Friday afternoon. (pliiz sabmit ior prodjekt bifor fraidei afternuun) — Per favore invia il tuo progetto entro venerdì pomeriggio.
+Could you help me clean the dining room table? (kud iu help mi kliin de daining ruum teibël) — Potresti aiutarmi a pulire il tavolo della sala da pranzo?
+Do you have any sugar-free beverages here? (du iu hev eni sciugarfrii beverejiz hir) — Avete bevande senza zucchero qui?
+What is the best way to get to the airport from here? (uot iz de best uei tu ghet tu di eirport from hir) — Qual è il modo migliore per arrivare all'aeroporto da qui?
+My phone battery is running low again. (mai foun beteri iz ranning lou egen) — La batteria del mio telefono si sta scaricando di nuovo.
+Have a nice flight and let us know when you land! (hev e nais flait end let as nou uen iu lend) — Buon volo e facci sapere quando atterri!
+Can I get a glass of sparkling water with lemon? (ken ai ghet e glas ov sparkling uoter uidh lemën) — Posso avere un bicchiere di acqua frizzante con limone?
+Where is the nearest charging spot for electric cars? (uer iz de nirest ciarging spot for ilektrik karz) — Dov'è la colonnina di ricarica più vicina per auto elettriche?
+We need to check the flight status on the app. (ui niid tu cek de flait steitas on di ep) — Dobbiamo controllare lo stato del volo sull'applicazione.
+Could you please turn off the air conditioning before leaving? (kud iu pliiz tern of di er kondiscëning bifor liiving) — Potresti spegnere l'aria condizionata prima di uscire, per favore?
+Is there a discount if I buy two pairs of shoes? (iz der e diskaunt if ai bai tuu perz ov sciuz) — C'è uno sconto se compro due paia di scarpe?
+Our teacher assigned us a research project on renewable energy. (auer tiicer esaind as e riserc prodjekt on riniuebël enerji) — Il nostro insegnante ci ha assegnato un progetto di ricerca sulle energie rinnovabili.
+Could you send me the location via text message? (kud iu send mi de loukeiscën via tekst mesëj) — Potresti inviarmi la posizione tramite messaggio di testo?
+We are going to order some food from the local pizzeria tonight. (ui ar gouing tu order sam fuud from de loukël pitzeria tunait) — Stasera ordineremo del cibo dalla pizzeria locale.
+Please turn off your mobile phone during the exam. (pliiz tern of ior moubail foun diuring di igzem) — Per favore spegni il cellulare durante l'esame.
+Do you know if the museum offers audio guides in Italian? (du iu nou if de miuziëm oferz odiou gaidz in italiën) — Sai se il museo offre audioguide in italiano?
+I need to buy a new charger for my tablet. (ai niid tu bai e niu ciarger for mai teblet) — Devo comprare un nuovo caricabatterie per il mio tablet.
+We should leave early to avoid getting stuck in traffic. (ui sciud liiv erli tu evoid ghetting stak in trafik) — Dovremmo partire presto per evitare di rimanere bloccati nel traffico.
+Could you please bring us another bottle of still water? (kud iu pliiz bring as enader botël ov stil uoter) — Potrebbe portarci un'altra bottiglia di acqua naturale, per favore?
+Can you help your mother set the table for dinner? (ken iu help ior mader set de teibël for diner) — Puoi aiutare tua madre ad apparecchiare la tavola per cena?
 Look at the snow-covered mountain peak! (Luk et dhe sno-kaverd mowntin peek) — Guarda la cima della montagna coperta di neve!
 We are going for a hike along the trail. (Wee ar go-ing for e hayk elong dhe treyl) — Andiamo a fare un'escursione lungo il sentiero.
 Do you have a pair of sturdy hiking boots? (Doo yoo hev e per ov ster-dee hay-king boots) — Hai un paio di scarponi da trekking robusti?
@@ -1744,77 +1395,7 @@ The road under the bridge is flooded after the heavy rain. (De roud ander de bri
 The whole block lost power for about half an hour. (De houl blok lost pauer for ebaut haf en auer) - In tutto l'isolato è mancata la corrente per circa mezz'ora.
 Could you send someone up to fix the shower in our room? (Kud iu send samuan ap tu fiks de sciauer in auer ruum?) - Potreste mandare qualcuno a sistemare la doccia della nostra camera?
 Our room is facing the street, and the traffic is really loud. (Auer ruum iz feising de striit, end de traffic iz rili laud) - La nostra camera dà sulla strada e il traffico è davvero rumoroso.
-The host left the keys in a lockbox by the front door. (De houst left de kiiz in e lok-boks bai de front dor) - L'host ha lasciato le chiavi in una cassetta con serratura vicino alla porta d'ingresso.
-There's a small extra charge that wasn't mentioned in the listing. (Derz e smol ekstra ciarg det uozent mensciend in de listing) - C'è un piccolo costo aggiuntivo che non era indicato nell'annuncio.
-Could we have a few more minutes to decide what to order? (Kud ui hev e fiu mor minits tu disa id uot tu order?) - Potremmo avere qualche minuto in più per decidere cosa ordinare?
-I'll have the same as you, unless you want to try something different. (Ail hev de seim ez iu, anles iu uont tu trai samthing difrent) - Prendo la stessa cosa che prendi tu, a meno che tu non voglia provare qualcosa di diverso.
-That bar was packed, so we ended up finding another place nearby. (Det bar uoz pekt, sou ui endid ap fainding enader pleis niarbai) - Quel bar era pienissimo, quindi alla fine abbiamo trovato un altro posto qui vicino.
-I'm just going to grab a few things from the supermarket. (Aim giast gouing tu greb e fiu things from de supermarket) - Vado solo a prendere alcune cose al supermercato.
-These trousers fit well, but I don't like the material. (Dhiiz trauzers fit uel, bat ai dount laik de material) - Questi pantaloni vestono bene, ma non mi piace il materiale.
-Can we move the meeting back by half an hour? (Ken ui muuv de miiting bek bai haf en auer?) - Possiamo spostare la riunione di mezz'ora?
-I'll reply to the email once I've checked the figures. (Ail riplai tu di i-meil uans aiv cekt de figuers) - Risponderò all'email una volta controllati i dati.
-Your microphone keeps cutting out during the video call. (Ior maicrofoun kiips cating aut diuring de video kol) - Il tuo microfono continua a interrompersi durante la videochiamata.
-The printer says it's out of paper again. (De printer sez its aut ov peiper eghen) - La stampante dice che è di nuovo senza carta.
-The museum has a temporary exhibition on ancient coins. (De miuziem hez e temporeri eksibiscion on einsicent coins) - Il museo ha una mostra temporanea sulle monete antiche.
-We walked around the old town until it started getting dark. (Ui uokt eraund di ould taun until it started geting dark) - Abbiamo passeggiato per il centro storico finché non ha iniziato a fare buio.
-The trail gets steeper after the first kilometre. (De treil gets stiiper after de ferst kilometre) - Il sentiero diventa più ripido dopo il primo chilometro.
-I'd rather stay in the shade than spend all afternoon in the sun. (Aid rather stei in de sceid den spend ol after-nuun in de san) - Preferirei stare all'ombra piuttosto che passare tutto il pomeriggio al sole.
-I was relieved when the doctor said there was nothing serious. (Ai uoz riliivd uen de doctor sed der uoz nathing si-ri-es) - Mi sono sentito sollevato quando il medico ha detto che non c'era nulla di grave.
-I usually stretch for a few minutes before I start lifting weights. (Ai iusciueli stretc for e fiu minits bifor ai start lifting ueits) - Di solito faccio stretching per qualche minuto prima di iniziare a sollevare pesi.
-I turn off the lights before I go to bed (ai tërn off dhë laits bifor ai gou tu bed) - Spengo le luci prima di andare a letto
-Have you seen my keys anywhere (hav yu sin mai chiis ènibuer) - Hai visto le mie chiavi da qualche parte
-The dishwasher is making a weird noise again (dhë dishuosciër is meikin a uird nois eghèn) - La lavastoviglie fa di nuovo uno strano rumore
-Can you feed the cat before school (kèn yu fiid dhë chèt bifor skuul) - Puoi dare da mangiare al gatto prima della scuola
-We're out of milk, can you grab some (uir aut ov milk, kèn yu grèb sam) - Abbiamo finito il latte, puoi prenderne un po'
-Did you finish your homework yet (did yu finish yor houmuork yet) - Hai già finito i compiti
-My daughter has a math test tomorrow (mai dotër hez a mèth test tumorou) - Mia figlia ha un compito di matematica domani
-Ask your teacher if you can hand it in late (esk yor tiicër if yu kèn hènd it in leit) - Chiedi alla tua insegnante se puoi consegnarlo in ritardo
-You can go out, but be back by ten (yu kèn gou aut, bat bi bek bai ten) - Puoi uscire, ma torna entro le dieci
-Do I need a prescription for this (du ai niid a priskripscion for dhis) - Mi serve la ricetta per questo
-The pharmacy closes at eight tonight (dhë farmasi klousiz et eit tunait) - La farmacia chiude alle otto stasera
-Excuse me, does this train stop at the next station (ekskiuz mi, das dhis trein stap et dhë nekst steiscion) - Scusi, questo treno si ferma alla prossima stazione
-We just missed the last train home (uì giast mist dhë lest trein houm) - Abbiamo appena perso l'ultimo treno per tornare a casa
-Which line do I take to get to the center (uic lain du ai teik tu ghet tu dhë sentër) - Quale linea devo prendere per arrivare in centro
-The bus is running about ten minutes late (dhë bas is ranin abaut ten minits leit) - L'autobus è in ritardo di circa dieci minuti
-Is this seat taken (is dhis siit teikën) - È libero questo posto
-Our flight got delayed because of the weather (auer flait gat dileid bikoz ov dhë uedhër) - Il nostro volo è stato ritardato a causa del maltempo
-Where is the gate for the flight to Rome (uer is dhë gheit for dhë flait tu roum) - Dov'è il gate per il volo per Roma
-The ferry leaves from the other side of the port (dhë fèri liivz from dhë adhër said ov dhë port) - Il traghetto parte dall'altro lato del porto
-Excuse me, how do I get to the old town (ekskiuz mi, hau du ai ghet tu dhë ould taun) - Scusi, come si arriva al centro storico
-Turn left at the next traffic light (tërn left et dhë nekst trèfik lait) - Gira a sinistra al prossimo semaforo
-The car won't start again this morning (dhë kar uont start eghèn dhis mornin) - La macchina di nuovo non parte stamattina
-We need to call roadside assistance (uì niid tu kol roudsaid asistëns) - Dobbiamo chiamare il soccorso stradale
-There's a huge traffic jam on the ring road (dhers a hiuug trèfik giem on dhë ring roud) - C'è un ingorgo enorme sulla tangenziale
-The whole street flooded after the storm (dhë houl striit fladid aftër dhë storm) - Tutta la strada si è allagata dopo il temporale
-We had a blackout for a couple of hours last night (uì hed a blèkaut for a kapël ov auerz lest nait) - Ieri sera abbiamo avuto un blackout per un paio d'ore
-Could we get some extra towels for the room (kud uì ghet sam ekstra tauëlz for dhë ruum) - Potremmo avere degli asciugamani in più per la camera
-The air conditioning isn't working in our room (dhë er kondiscionin isënt uorkin in auer ruum) - L'aria condizionata non funziona nella nostra camera
-There's a leak in the bathroom ceiling (dhers a liik in dhë bethruum siilin) - C'è una perdita nel soffitto del bagno
-It's way too noisy to sleep, could we change rooms (its uei tuu noizi tu sliip, kud uì cheingi ruumz) - C'è troppo rumore per dormire, potremmo cambiare camera
-The host left the keys under the mat like she said (dhë houst left dhë chiis andër dhë mèt laik scì sed) - L'host ha lasciato le chiavi sotto lo zerbino come aveva detto
-Could we see the menu, please (kud uì sii dhë meniu, pliiz) - Possiamo vedere il menù, per favore
-I'll have the same as him (ail hev dhë seim ez him) - Prendo lo stesso che ha preso lui
-Can we get the bill whenever you're ready (kèn uì ghet dhë bil uenevër yor redi) - Possiamo avere il conto quando volete
-We should grab a drink after work sometime (uì sciud grèb a drink aftër uork samtaim) - Dovremmo bere qualcosa insieme dopo il lavoro qualche volta
-You won't believe what happened last night (yu uont bilìv uat hèpënd lest nait) - Non crederai a cosa è successo ieri sera
-I forgot my reusable bags again (ai forgat mai riiuusëbël bègz eghèn) - Ho dimenticato di nuovo i sacchetti riutilizzabili
-Is this on sale or is that the regular price (is dhis on seil or is dhèt dhë reghiulër prais) - Questo è in saldo o è il prezzo normale
-Can I try this on in a bigger size (kèn ai trai dhis on in a bighër saiz) - Posso provarlo in una taglia più grande
-Sorry I'm late, the meeting ran over (sori aim leit, dhë miitin ren ouvër) - Scusa il ritardo, la riunione è andata per le lunghe
-Can you send me that email again, I think I deleted it (kèn yu send mi dhèt iimeil eghèn, ai think ai dilitid it) - Puoi rimandarmi quella email, credo di averla cancellata
-You're on mute, we can't hear you (yor on miuut, uì kènt hir yu) - Sei mutato, non ti sentiamo
-The wifi keeps cutting out during calls (dhë uaifai kiips katin aut diurin kolz) - Il wifi continua a cadere durante le chiamate
-Does anyone know where the phone charger went (das enìuan nou uer dhë foun chargër uent) - Qualcuno sa dov'è finito il caricabatterie
-The exhibit closes earlier on Sundays (dhë eksibit klousiz erlìer on sandeiz) - La mostra chiude prima la domenica
-We got lost wandering around the old streets (uì gat lost uonderin araund dhë ould striits) - Ci siamo persi girovagando per le vecchie strade
-The trail gets pretty steep after this point (dhë treil ghets priti stiip aftër dhis point) - Il sentiero diventa piuttosto ripido dopo questo punto
-The boiler's making a strange noise, can you take a look (dhë boilërz meikin a streingi nois, kèn yu teik a luuk) - La caldaia fa uno strano rumore, puoi dare un'occhiata
-It's freezing out there today (its friizin aut dher tudei) - Fa un freddo pungente fuori oggi
-I need to transfer some money to my savings account (ai niid tu trènsfër sam mani tu mai seivinz akaunt) - Devo trasferire dei soldi sul mio conto di risparmio
-I can't find my other shoe anywhere (ai kènt faind mai adhër scìu ènìuer) - Non trovo da nessuna parte l'altra scarpa
-Don't slam the door, the baby's asleep (dount slèm dhë dor, dhë beibiz aslìip) - Non sbattere la porta, il bambino sta dormendo
-Whose turn is it to walk the dog tonight (huuz tërn is it tu uok dhë dog tunait) - Di chi è il turno di portare fuori il cane stasera
-I'll set the table if you start cooking (ail set dhë teibël if yu start kukin) - Apparecchio io se tu inizi a cucinare
+The host left the keys inin) - Apparecchio io se tu inizi a cucinare
 We're having pasta again, is that okay (uir hèvin pasta eghèn, is dhèt okei) - Mangiamo di nuovo la pasta, va bene
 Can you pass the salt, please (kèn yu pès dhë solt, pliiz) - Puoi passarmi il sale, per favore
 Hurry up or we'll be late for school (hari ap or uìl bi leit for skuul) - Sbrigati o faremo tardi per la scuola
