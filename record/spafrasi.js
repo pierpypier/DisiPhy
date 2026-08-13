@@ -1604,6 +1604,55 @@ Tenemos que enseñar los billetes antes de subir al barco. (tenémos ke enseñar
 La carretera está bastante despejada a esta hora. (la karretéra está bastante despeháda a ésta óra) - A quest'ora la strada è abbastanza libera.
 Gira a la derecha después del semáforo y sigue recto. (khíra a la derécha despúes del semáforo i sígue rékto) - Gira a destra dopo il semaforo e vai dritto.
 Creo que el coche se ha quedado sin batería. (kréo ke el kóche se a kedádo sin bater ía) - Credo che la macchina sia rimasta senza batteria.
+He puesto el mantel limpio porque el otro estaba manchado. (e puésto el mantél límpio porke el ótro estaba manchádo) - Ho messo la tovaglia pulita perché l'altra era macchiata.
+Voy a doblar las toallas y guardarlas en el armario. (boi a doblár las toáyas i guardárlas en el armário) - Piego gli asciugamani e li metto nell'armadio.
+La ventana del salón no cierra del todo. (la bentána del salón no syérra del todo) - La finestra del soggiorno non si chiude del tutto.
+He encontrado un calcetín debajo del sofá. (e enkontrádo un kals etín debáho del sofà) - Ho trovato un calzino sotto il divano.
+¿Puedes bajar un poco el volumen de la música? (puédes bakhár un póko el bolúmen de la músika) - Puoi abbassare un po' il volume della musica?
+El teléfono está vibrando encima de la mesa. (el telé fono está bib rándo ensíma de la mésa) - Il telefono sta vibrando sul tavolo.
+Voy a poner a cargar la tableta antes de acostarme. (boi a ponér a kargár la tablet a ántes de akostárme) - Metto il tablet in carica prima di andare a letto.
+No abras el horno todavía, que se escapa todo el calor. (no ábras el órno todabía, ke se eskápa todo el kalór) - Non aprire ancora il forno, altrimenti esce tutto il calore.
+He preparado una ensalada para acompañar la carne. (e preparádo una ensaláda para akompañár la kárne) - Ho preparato un'insalata da accompagnare alla carne.
+¿Quieres que ponga un poco de queso en la pasta? (kyéres ke pónga un póko de késo en la pásta) - Vuoi che metta un po' di formaggio sulla pasta?
+Hoy tenemos sobras de ayer, así que no cocino. (oi tenémos sóbras de ayér, así ke no kosíno) - Oggi abbiamo gli avanzi di ieri, quindi non cucino.
+Deja enfriar la sopa antes de probarla. (déha enfriyár la sópa ántes de probárla) - Lascia raffreddare la zuppa prima di assaggiarla.
+Los niños ya están sentados a la mesa. (los niños ya están sentádos a la mésa) - I bambini sono già seduti a tavola.
+He comprado algo para picar después de cenar. (e komprádo álgo para pikár despúes de senár) - Ho comprato qualcosa da sgranocchiare dopo cena.
+Mañana tiene una excursión con el colegio. (mañána tiéne una ekskursyón kon el kolekhio) - Domani ha una gita con la scuola.
+Le han puesto demasiados deberes para un solo día. (le an puésto demasiádos deberes para un sólo día) - Gli hanno dato troppi compiti per un solo giorno.
+La próxima semana empiezan las vacaciones escolares. (la próksima semána empyésan las bakasyónes eskoláres) - La prossima settimana iniziano le vacanze scolastiche.
+¿Has entendido lo que ha explicado el profesor? (as ent endído lo ke a ekspl ikádo el profesór) - Hai capito quello che ha spiegato l'insegnante?
+No te pongas a estudiar justo antes de dormir. (no te póngas a estudiár khústo ántes de dormír) - Non metterti a studiare proprio prima di dormire.
+Puedes usar el ordenador cuando hayas terminado. (puédes usár el ordenadór kuándo áyas terminádo) - Puoi usare il computer quando hai finito.
+Hoy no me encuentro muy bien, voy a descansar. (oi no me enkuéntro mui byén, boi a deskansár) - Oggi non mi sento molto bene, vado a riposarmi.
+Tengo un poco de tos, pero no tengo fiebre. (téngo un póko de tos, péгo no téngo fyébre) - Ho un po' di tosse, ma non ho la febbre.
+¿Puedo comprar este medicamento sin receta? (puédo komprár éste medikaménto sin reséta) - Posso comprare questo farmaco senza ricetta?
+El médico me ha recomendado hacerme una revisión. (el médiko me a rekomendádo asérme una rebisyón) - Il medico mi ha consigliato di fare un controllo.
+Estoy esperando los resultados de la prueba. (estoi esperándo los resultádos de la pru éba) - Sto aspettando i risultati dell'esame.
+¿En qué ventanilla puedo pedir información sobre los trenes? (en ke bent aníya puédo pedír informasyón sóbre los trenes) - A quale sportello posso chiedere informazioni sui treni?
+El tren ha salido del andén cinco hace un minuto. (el tren a salído del andén sínko áse un minúto) - Il treno è partito dal binario cinque un minuto fa.
+Nos hemos quedado sin sitio para sentarnos. (nos émos kedádo sin sítio para sentárnos) - Siamo rimasti senza posti a sedere.
+El próximo tren viene por la vía de enfrente. (el próksimo tren byéne por la bía de enfrénte) - Il prossimo treno arriva dal binario di fronte.
+Tengo que validar el billete antes de subir. (téngo ke balidár el biyéte ántes de subír) - Devo convalidare il biglietto prima di salire.
+La estación de metro está conectada con la estación de tren. (la estasyón de métro está konektáda kon la estasyón de tren) - La stazione della metropolitana è collegata con quella ferroviaria.
+He salido por la boca de metro equivocada. (e salído por la bóka de métro ekibokáda) - Sono uscito dall'uscita sbagliata della metropolitana.
+Para llegar al centro, tienes que cambiar de línea. (para yegár al séntrо, tiénes ke kambyár de línea) - Per arrivare in centro devi cambiare linea.
+El autobús está parado en el semáforo de la esquina. (el autobús está parádo en el semáforo de la eskína) - L'autobus è fermo al semaforo dell'angolo.
+Hoy han puesto autobuses adicionales por el evento. (oi an puésto autobúses adisy onáles por el eb énto) - Oggi hanno aggiunto autobus supplementari per l'evento.
+Me bajo en la siguiente parada y voy andando desde allí. (me báho en la siguiénte par áda i boi andándo désde ayí) - Scendo alla prossima fermata e da lì proseguo a piedi.
+El conductor ha esperado a que subieran todos los pasajeros. (el konduktór a esperádo a ke subyéran todos los pasahéros) - L'autista ha aspettato che salissero tutti i passeggeri.
+El control de seguridad estaba bastante rápido esta mañana. (el kontról de seguridád estaba bastante ráp ido ésta mañana) - I controlli di sicurezza sono stati piuttosto veloci stamattina.
+He guardado el pasaporte en un bolsillo interior de la mochila. (e guardádo el pasapórte en un bolsíyo interiór de la mokíla) - Ho messo il passaporto in una tasca interna dello zaino.
+Nos han pedido que formemos una fila junto a la puerta. (nos an pedído ke formémos una fíla khúnto a la puérta) - Ci hanno chiesto di metterci in fila vicino al gate.
+El avión está casi vacío en la parte de atrás. (el abión está káസി basío en la párte de atrás) - L'aereo è quasi vuoto nella parte posteriore.
+Han empezado a repartir las bebidas durante el vuelo. (an empesádo a repartír las bebídas duránte el buélo) - Hanno iniziato a distribuire le bevande durante il volo.
+El mar está tranquilo y el viaje en ferry será agradable. (el mar está trankílo i el byáhe en férri será agradáble) - Il mare è calmo e il viaggio in traghetto sarà piacevole.
+Tenemos que esperar a que abran la barrera del puerto. (tenémos ke esperár a ke ábran la barréra del puérto) - Dobbiamo aspettare che aprano la sbarra del porto.
+Sigue esta avenida hasta encontrar una fuente grande. (sígue ésta abenída ásta enkontrár una fuénte gránde) - Segui questo viale fino a trovare una grande fontana.
+Nos hemos pasado de la salida, tenemos que dar la vuelta. (nos émos pasádo de la salída, tenémos ke dár la buélta) - Abbiamo superato l'uscita, dobbiamo tornare indietro.
+El coche hace un pequeño tirón cuando cambio de marcha. (el kóche áse un pekéño tirón kuándo kambyo de márcha) - La macchina dà un piccolo strattone quando cambio marcia.
+He llamado al seguro para informar del accidente. (e yamádo al seguro para informár del aksidénte) - Ho chiamato l'assicurazione per segnalare l'incidente.
+La grúa llegará en unos veinte minutos. (la grúa yegará en unos béinte minútos) - Il carro attrezzi arriverà tra circa venti minuti.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
