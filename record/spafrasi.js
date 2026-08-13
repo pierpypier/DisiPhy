@@ -1497,6 +1497,60 @@ Creo que el mapa está al revés. (kréo ke el mapa está al rebés) - Credo che
 No podemos seguir por aquí porque la carretera está cortada. (no podémos seguír por akí porke la karretéra está kortáda) - Non possiamo proseguire da qui perché la strada è chiusa.
 El coche se ha averiado justo al salir del garaje. (el kóche se a aberiádo khústo al salír del garáhe) - La macchina si è guastata proprio appena usciti dal garage.
 Voy a ponerme el chaleco reflectante por seguridad. (boi a ponérme el chaléko reflektánte por seguridád) - Indosso il giubbotto catarifrangente per sicurezza.
+He sacado el lavavajillas y ahora tengo que colocar todo en su sitio. (e sakádo el lababayíyas i aóra téngo ke kolokár todo en su sítio) - Ho svuotato la lavastoviglie e ora devo mettere tutto al suo posto.
+Voy a cambiar la bombilla del pasillo porque se ha fundido. (boi a kambyár la bombíya del pasíyo porke se a fundído) - Cambio la lampadina del corridoio perché si è fulminata.
+El agua de la ducha tarda mucho en calentarse. (el água de la dúcha tárda múcho en kalentárse) - L'acqua della doccia impiega molto a scaldarsi.
+He dejado el balcón abierto y ha entrado bastante polvo. (e dekhádo el balkón abyérto i a entrádo bastante polvo) - Ho lasciato il balcone aperto ed è entrata parecchia polvere.
+¿Quién ha dejado la puerta del frigorífico abierta? (kyén a dekhádo la puérta del frigorífiko abyérta) - Chi ha lasciato aperta la porta del frigorifero?
+El gato está escondido debajo de la cama. (el gáto está eskondído debáho de la káma) - Il gatto è nascosto sotto il letto.
+Tengo que limpiar el comedero del perro. (téngo ke limpiár el komedéro del pérro) - Devo pulire la ciotola del cane.
+Hoy toca limpiar el baño a fondo. (oi tóka limpiár el baño a fóndo) - Oggi tocca pulire a fondo il bagno.
+He puesto las cortinas a lavar. (e puésto las kortínas a labár) - Ho messo le tende in lavatrice.
+No sé dónde he metido el cepillo nuevo. (no sé dónde e metído el sepíyo nuébo) - Non so dove ho messo la spazzola nuova.
+Para desayunar me apetece algo dulce. (para desayunár me apetése álgo d úlse) - A colazione mi va qualcosa di dolce.
+Voy a cortar unas rodajas de fruta para todos. (boi a kortár unas rodáhas de frúta para todos) - Taglio della frutta a fette per tutti.
+¿Queda algo de zumo en la nevera? (kéda álgo de súmo en la nebéra) - È rimasto del succo in frigorifero?
+He preparado tortilla para la comida. (e preparádo tortíya para la komída) - Ho preparato una tortilla per pranzo.
+Si quieres más pan, córtalo tú mismo. (si kyéres más pan, kórtalo tú mismo) - Se vuoi altro pane, tagliatelo tu.
+Vamos a dejar la mesa recogida antes de levantarnos. (bámos a dekhár la mésa rekohída ántes de lebantárnos) - Lasciamo in ordine la tavola prima di alzarci.
+Hoy tiene clase de música después de matemáticas. (oi tiéne kláse de músika despúes de matemátikas) - Oggi ha lezione di musica dopo matematica.
+Han cambiado el horario de la asignatura. (an kambyádo el orário de la asignatúra) - Hanno cambiato l'orario della materia.
+El examen de ciencias será el miércoles. (el eksámen de syénsias será el myérkoles) - La verifica di scienze sarà mercoledì.
+Necesita practicar más la pronunciación. (nesesíta prakt ikár más la pronunsyasión) - Deve esercitarsi di più con la pronuncia.
+No te olvides de llevar el libro de lectura. (no te olbïdes de yebár el líbro de lektúra) - Non dimenticarti di portare il libro di lettura.
+Primero termina los deberes y después hablamos de salir. (priméro termína los deberes i despúes abl ámos de salír) - Prima finisci i compiti, poi parliamo di uscire.
+Te he dicho que no puedes quedarte fuera hasta tan tarde. (te e dícho ke no puédes kedárte fuéra ásta tan tárde) - Ti ho detto che non puoi restare fuori fino a così tardi.
+Déjame saber con quién vas a estar. (déhame sabér kon kyén bas a estár) - Fammi sapere con chi starai.
+Si necesitas dinero, dímelo antes de salir. (si nesesítas dinéro, dímelo ántes de salír) - Se ti servono soldi, dimmelo prima di uscire.
+Hoy estoy un poco mareado, prefiero quedarme en casa. (oi estoi un póko mareádo, prefyéro kedárme en káса) - Oggi ho un po' di giramenti di testa, preferisco restare a casa.
+Me ha salido una pequeña irritación en la piel. (me a salído una pekéña iritasyón en la pyél) - Mi è comparsa una piccola irritazione sulla pelle.
+¿Tiene algo para la acidez de estómago? (tiéne álgo para la asidéz de estómago) - Ha qualcosa per il bruciore di stomaco?
+La doctora quiere volver a verme la semana que viene. (la doktóra kyére bolbér a bérme la semána ke byéne) - La dottoressa vuole rivedermi la prossima settimana.
+Me han llamado de la consulta para confirmar la cita. (me an yamádo de la konsúlta para konfirmár la síta) - Mi hanno chiamato dall'ambulatorio per confermare l'appuntamento.
+El tren ha salido del túnel y ya se ve la estación. (el tren a salído del túnel i ya se be la estasyón) - Il treno è uscito dalla galleria e si vede già la stazione.
+He comprado el billete en la máquina automática. (e komprádo el biyéte en la mákina automátika) - Ho comprato il biglietto alla macchinetta automatica.
+¿Tenemos que reservar asiento para este trayecto? (tenémos ke reservár asyénto para éste trayékto) - Dobbiamo prenotare il posto per questo viaggio?
+El revisor está comprobando los billetes de todos. (el rebisór está komprobándo los biyétes de todos) - Il controllore sta controllando i biglietti di tutti.
+La conexión con el siguiente tren es bastante justa. (la koneksyón kon el siguiénte tren es bastante khústa) - La coincidenza con il treno successivo è piuttosto stretta.
+He bajado del metro en la estación equivocada. (e bakhádo del métro en la estasyón ekibokáda) - Sono sceso dalla metropolitana alla stazione sbagliata.
+Hay que cruzar el vestíbulo para cambiar de línea. (ai ke krusár el bestíbulo para kambyár de línea) - Bisogna attraversare l'atrio per cambiare linea.
+El metro se ha parado entre dos estaciones. (el métro se a parádo entre dos estasyónes) - La metropolitana si è fermata tra due stazioni.
+La próxima parada es la nuestra. (la próksima par áda es la nuéstra) - La prossima fermata è la nostra.
+El autobús pasa con menos frecuencia los domingos. (el autobús páса kon ménos frekuénsia los domíngos) - L'autobus passa meno frequentemente la domenica.
+He dejado pasar dos autobuses porque iban llenos. (e dekhádo pasár dos autobúses porke íban yénos) - Ho lasciato passare due autobus perché erano pieni.
+¿Sabes si este autobús llega hasta el aeropuerto? (sábes si éste autobús yéga ásta el aeropuérto) - Sai se questo autobus arriva fino all'aeroporto?
+La parada está temporalmente desplazada por las obras. (la par áda está temporalménte desplasáda por las óbras) - La fermata è stata temporaneamente spostata a causa dei lavori.
+Tengo que imprimir la tarjeta de embarque. (téngo ke imprimír la tarhéta de embarke) - Devo stampare la carta d'imbarco.
+El equipaje facturado llegará directamente al destino final. (el ekipáhe fakturádo yegará direktaménte al destino finál) - Il bagaglio imbarcato arriverà direttamente alla destinazione finale.
+Nos han pedido que dejemos los líquidos aparte. (nos an pedído ke dekhémos los líkidos aparte) - Ci hanno chiesto di tenere i liquidi separati.
+El avión está lleno, pero el vuelo parece tranquilo. (el abión está yéno, péгo el buélo parése trankílo) - L'aereo è pieno, ma il volo sembra tranquillo.
+¿Dónde está la cinta para recoger el equipaje? (dónde está la sínta para rekohér el ekipáhe) - Dov'è il nastro per ritirare i bagagli?
+El ferry tiene una zona cubierta para los pasajeros. (el férri tiéne una sónа kubyérta para los pasahéros) - Il traghetto ha una zona coperta per i passeggeri.
+El mar está demasiado movido para salir con una barca pequeña. (el mar está demasiádo mobído para salír kon una bárka pekéña) - Il mare è troppo mosso per uscire con una piccola barca.
+Hemos llegado al puerto justo antes de que cerraran el acceso. (émos yegádo al puérto khústo ántes de ke serráran el aks éso) - Siamo arrivati al porto proprio prima che chiudessero l'accesso.
+Voy a revisar el coche antes de hacer un viaje largo. (boi a rebisár el kóche ántes de asér un byáhe lárgo) - Controllo la macchina prima di fare un lungo viaggio.
+Creo que una de las ruedas está un poco baja. (kréo ke una de las ruédas está un póko báha) - Credo che una delle gomme sia un po' sgonfia.
+El tráfico está tan mal que llegaremos tarde. (el tráfiko está tan mal ke yeg arémos tárde) - Il traffico è così intenso che arriveremo tardi.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
