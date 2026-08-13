@@ -979,6 +979,59 @@ Se ha producido un corte de luz en varias zonas de la ciudad. (se a produsído u
 El hotel tiene servicio de habitaciones durante toda la noche. (el otél tiéne serbísio de abitasión duránte toda la nóche) - L'hotel offre il servizio in camera per tutta la notte.
 La calefacción de la habitación no calienta nada. (la kalefaksión de la abitasión no kalyénta náda) - Il riscaldamento della camera non scalda per niente.
 La ducha tarda mucho en tener agua caliente. (la dúcha tárda múcho en tenér água kalyénte) - La doccia impiega molto tempo a far arrivare l'acqua calda.
+¿Has cerrado bien la puerta de casa? (as serrádo byén la puérta de káса) - Hai chiuso bene la porta di casa?
+Voy a tender la ropa antes de que anochezca. (boi a tendér la rópa ántes de ke anochéska) - Stendo i panni prima che faccia buio.
+Se me ha olvidado poner el lavavajillas. (se me a olvidádo ponér el lababayíyas) - Mi sono dimenticato di avviare la lavastoviglie.
+Deja las llaves siempre en el mismo sitio y así no las perderás. (déha las yábes syémpre en el mismo sítio i así no las perderás) - Lascia sempre le chiavi nello stesso posto, così non le perderai.
+El gato lleva toda la mañana escondido debajo de la cama. (el gáto yéba toda la mañana eskondído debáho de la káma) - Il gatto è nascosto sotto il letto da tutta la mattina.
+A ver si arreglamos este cajón, que no cierra bien. (a ber si arreglámos éste kahón, ke no syérra byén) - Vediamo di sistemare questo cassetto, che non si chiude bene.
+He dejado la ventana abierta y se ha llenado todo de polvo. (e dekhádo la bentána abyérta i se a yenádo todo de polvo) - Ho lasciato la finestra aperta e si è riempito tutto di polvere.
+¿Te queda tiempo para desayunar tranquilamente? (te kéda tyémpo para desayunár trankilaménte) - Hai tempo per fare colazione con calma?
+Hoy he dormido fatal y necesito un café. (oi e dormído fatál i nesesíto un kafé) - Stanotte ho dormito malissimo e ho bisogno di un caffè.
+Guárdame un poco de pan para la cena. (guárdame un póko de pan para la séna) - Tienimi da parte un po' di pane per cena.
+Si no quieres cocinar, podemos pedir algo. (si no kyéres kosinár, podémos pedír álgo) - Se non vuoi cucinare, possiamo ordinare qualcosa.
+¿Quién se encarga de recoger la mesa? (kyén se enkárga de rekohér la mésa) - Chi si occupa di sparecchiare?
+Hoy le han puesto muchos deberes de ciencias. (oi le an puésto múchos deberes de syénsias) - Oggi gli hanno dato molti compiti di scienze.
+El profesor les ha mandado estudiar para el lunes. (el profesór les a mandádo estudiár para el lúnes) - L'insegnante ha assegnato loro da studiare per lunedì.
+Mi hijo dice que esta asignatura le parece aburridísima. (mi ího díse ke ésta asignatúra le parése aburridísima) - Mio figlio dice che questa materia gli sembra noiosissima.
+No te voy a dejar salir si no has terminado los deberes. (no te boi a dekhár salír si no as terminádo los deberes) - Non ti lascio uscire se non hai finito i compiti.
+A las ocho quiero que estés ya en casa. (a las ócho kyéro ke estés ya en káса) - Alle otto voglio che tu sia già a casa.
+Puedes quedarte un rato más, pero mándame un mensaje cuando llegues. (puédes kedárte un ráto más, péгo mándame un mensáhe kuándo yégues) - Puoi restare ancora un po', ma mandami un messaggio quando arrivi.
+No hace falta que me acompañes, puedo ir solo. (no áse fálta ke me akompañes, puédo ír sólo) - Non c'è bisogno che tu mi accompagni, posso andare da solo.
+¿Me puede recomendar algo para este dolor de garganta? (me puéde rekomendár álgo para éste dolór de gargánta) - Può consigliarmi qualcosa per questo mal di gola?
+Desde esta mañana tengo un poco de tos. (désde ésta mañana téngo un póko de tos) - Da stamattina ho un po' di tosse.
+Me han dicho que descanse unos días y beba mucho líquido. (me an dícho ke deskánse unos días i béba múcho líkido) - Mi hanno detto di riposare qualche giorno e bere molti liquidi.
+Tengo cita a las cuatro, pero no sé en qué planta es. (téngo síta a las kuátro, péгo no sé en ke plánta es) - Ho un appuntamento alle quattro, ma non so a quale piano sia.
+¿A qué hora sale el próximo tren hacia Valencia? (a ke óra sále el próksimo tren asía balénsia) - A che ora parte il prossimo treno per Valencia?
+Este tren no para en todas las estaciones. (éste tren no pára en todas las estasyónes) - Questo treno non ferma in tutte le stazioni.
+Nos hemos equivocado de andén otra vez. (nos émos ekibokádo de andén ótra bes) - Abbiamo sbagliato binario un'altra volta.
+Si pierdes este tren, el siguiente sale dentro de media hora. (si pyérdes éste tren, el siguiénte sále déntro de média óra) - Se perdi questo treno, il prossimo parte tra mezz'ora.
+La máquina para los billetes no acepta monedas. (la mákina para los biyétes no asepta monédas) - La macchinetta dei biglietti non accetta monete.
+Esta línea de metro pasa por el centro y por la universidad. (ésta línea de métro páса por el séntrо i por la unibersidád) - Questa linea della metropolitana passa per il centro e per l'università.
+¿Sabes si hay ascensor en esta estación? (sábes si ai asensór en ésta estasyón) - Sai se c'è un ascensore in questa stazione?
+Con este tráfico llegaremos tarde seguro. (kon éste tráfiko yegarémos tárde seguro) - Con questo traffico arriveremo sicuramente tardi.
+El autobús viene con diez minutos de retraso. (el autobús byéne kon dyes minútos de retraso) - L'autobus arriva con dieci minuti di ritardo.
+Me bajo en la siguiente parada, avísame si te olvidas. (me báho en la siguiénte parąda, abísame si te olbídas) - Scendo alla prossima fermata, avvisami se ti dimentichi.
+El avión sale de la terminal dos, no de la uno. (el abión sále de la terminál dos, no de la úno) - L'aereo parte dal terminal due, non dall'uno.
+¿Tenemos que sacar los líquidos de la mochila? (tenémos ke sakár los líkidos de la mokíla) - Dobbiamo tirare fuori i liquidi dallo zaino?
+Han cambiado la puerta de embarque a última hora. (an kambyádo la puérta de embarke a última óra) - Hanno cambiato il gate all'ultimo momento.
+No encuentro mi maleta por ningún lado. (no enkuéntro mi maléta por ningún ládo) - Non trovo la mia valigia da nessuna parte.
+El ferry sale a las nueve y media, así que no lleguemos tarde. (el férri sále a las nuébe i média, así ke no yeguémos tárde) - Il traghetto parte alle nove e mezza, quindi non arriviamo tardi.
+¿Dónde se compran los billetes para el barco? (dónde se kompran los biyétes para el bárko) - Dove si comprano i biglietti per il traghetto?
+Perdona, ¿esta calle lleva a la plaza Mayor? (perdóna, ésta káye yéba a la plása mayór) - Scusa, questa strada porta a Plaza Mayor?
+Creo que nos hemos pasado de la salida. (kréo ke nos émos pasádo de la salída) - Credo che abbiamo superato l'uscita.
+El navegador dice que llegaremos en unos veinte minutos. (el nabegadór díse ke yegarémos en unos béinte minútos) - Il navigatore dice che arriveremo tra una ventina di minuti.
+La rueda trasera está perdiendo aire muy rápido. (la ruéda traséra está perdiéndo áire mui ráp ido) - La ruota posteriore perde aria molto velocemente.
+El coche no arranca y las luces del salpicadero parpadean. (el kóche no arránka i las lúses del salpikadéro parpadéan) - La macchina non parte e le luci del cruscotto lampeggiano.
+Voy a apartar el coche para no bloquear la carretera. (boi a apartár el kóche para no bloké ar la karretéra) - Sposto la macchina per non bloccare la strada.
+Se ha roto una tubería y están cortando el agua del barrio. (se a róto una tubería i están kortándo el água del bário) - Si è rotta una tubatura e stanno togliendo l'acqua nel quartiere.
+Lleva toda la tarde lloviendo a cántaros. (yéba toda la tárde yob yéndo a kántaros) - Piove a dirotto per tutto il pomeriggio.
+El ascensor del edificio lleva dos días sin funcionar. (el asensór del edifísio yéba dos días sin funksionár) - L'ascensore del palazzo non funziona da due giorni.
+En recepción me han dado una habitación distinta de la que reservé. (en resepsión me an dádo una abitasión distínta de la ke reserbé) - Alla reception mi hanno dato una camera diversa da quella che avevo prenotato.
+El aire acondicionado hace un ruido insoportable. (el áire akondisionádo áse un ruído insoportáble) - L'aria condizionata fa un rumore insopportabile.
+¿Podrían dejarme otra almohada, por favor? (podrían dekhárme ótra almoháda, por fabór) - Potreste lasciarmi un altro cuscino, per favore?
+La casa de vacaciones está más lejos de la playa de lo que parecía. (la káса de bakasyónes está más léhos de la pláya de lo ke paresía) - La casa vacanze è più lontana dalla spiaggia di quanto sembrasse.
+El dueño nos ha dicho que podemos hacer el check-out más tarde. (el duéño nos a dícho ke podémos asér el chek-áut más tárde) - Il proprietario ci ha detto che possiamo fare il check-out più tardi.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
