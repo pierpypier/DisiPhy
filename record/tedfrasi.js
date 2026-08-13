@@ -817,6 +817,52 @@ Ich hab den Tisch lieber draußen reserviert. (ich hab den tisc liber draussen r
 Für mich bitte das Tagesgericht und ein Mineralwasser. (für mich bitte das tagesgerict und ain mineralvasser) - Per me il piatto del giorno e un'acqua minerale, per favore.
 Kann ich die Rechnung auch mit Karte bezahlen? (kan ich di rechnung auc mit karte bezahlen) - Posso pagare il conto anche con la carta?
 Wir haben uns nach dem Abendessen noch lange unterhalten. (vir habn uns nach dem abentessen noch lange unterhalten) - Dopo cena abbiamo parlato a lungo.
+Ich muss heute noch das Badezimmer putzen. (ich muss hoite noch das bade-tsimmer putzen) - Oggi devo ancora pulire il bagno.
+Die Glühbirne im Schlafzimmer ist durchgebrannt. (di glübirne im sclafzimmer ist durcgebrant) - La lampadina in camera da letto si è bruciata.
+Ich hab den Haustürschlüssel in der Jackentasche gefunden. (ich hab den haustür-schlüssl in der iakentasce gefunden) - Ho trovato la chiave di casa nella tasca della giacca.
+Die Katze kratzt ständig an der Tür. (di katze kratst ständig an der tür) - Il gatto graffia continuamente la porta.
+Ich lass die Wäsche noch eine Weile auf dem Balkon. (ich lass di vesce noch aine vaile auf dem balkon) - Lascio ancora per un po' il bucato sul balcone.
+Die Spülmaschine ist fertig, aber ich hab keine Lust, sie auszuräumen. (di spülmascine ist fertig, aber ich hab kaine lust, zi auszuroimen) - La lavastoviglie ha finito, ma non ho voglia di svuotarla.
+Kannst du bitte die Kaffeemaschine einschalten? (kanst du bitte di kaffeemascine ainscalten) - Puoi accendere la macchina del caffè, per favore?
+Ich hab heute Morgen nur einen Joghurt gegessen. (ich hab hoite morgen nur ainen jogurt gegessen) - Stamattina ho mangiato solo uno yogurt.
+Zum Mittag machen wir uns schnell ein Sandwich. (tsum mittag machen vir uns scnell ain sandwich) - A pranzo ci prepariamo velocemente un panino.
+Wer möchte später noch ein Stück Kuchen? (ver möcte speter noch ain stück kuchen) - Chi vuole ancora una fetta di torta più tardi?
+Mein Sohn hat seinen Schlüssel schon wieder verloren. (main zon hat zainen schlüssl scion vider ferloren) - Mio figlio ha perso di nuovo le sue chiavi.
+Die Lehrerin hat heute eine wichtige Mitteilung gemacht. (di leererin hat hoite aine wichtige mitteilung gemacht) - Oggi l'insegnante ha fatto un'importante comunicazione.
+Für die Prüfung muss ich noch ziemlich viel lernen. (für di prüfung muss ich noch ziemlich fiil lernen) - Per l'esame devo ancora studiare parecchio.
+Mein Kind kommt mit der neuen Schule gut klar. (main kint kommt mit der noien scule gut klar) - Mio figlio si trova bene nella nuova scuola.
+Ich hab dir erlaubt, heute länger draußen zu bleiben. (ich hab dir erlaubt, hoite lenger draussen tsu blaiben) - Ti ho permesso di restare fuori più a lungo oggi.
+Bevor du gehst, musst du noch dein Zimmer aufräumen. (bevor du gest, musst du noch dain tsimmer aufroimen) - Prima di uscire devi ancora riordinare la tua camera.
+Sag mir bitte ungefähr, wann du zurückkommst. (sag mir bitte ungefer, van du tsurückkommst) - Dimmi più o meno quando torni, per favore.
+Ich hab in letzter Zeit ziemlich schlecht geschlafen. (ich hab in letzter tsait ziemlich slecht geschlafen) - Ultimamente ho dormito piuttosto male.
+Nimm das Medikament nicht auf nüchternen Magen. (nim das medikament nicht auf nüchternen magen) - Non prendere il farmaco a stomaco vuoto.
+Ich hab morgen früh eine Blutuntersuchung. (ich hab morgen frü aine blutuntersuchung) - Domani mattina ho un esame del sangue.
+Der Arzt hat mir eine Überweisung zum Facharzt gegeben. (der artzt hat mir aine übervaizung tsum facarzt gegeben) - Il medico mi ha dato un'impegnativa per uno specialista.
+Der Zug steht noch am Bahnsteig, aber die Türen sind schon zu. (der tsug steht noch am baanstaig, aber di türen zint scion tsu) - Il treno è ancora al binario, ma le porte sono già chiuse.
+Wir müssen uns beeilen, sonst fährt der Zug ohne uns ab. (vir müssen uns beailen, sonst fert der tsug one uns ap) - Dobbiamo sbrigarci, altrimenti il treno parte senza di noi.
+Ich hab im Zug keinen Empfang. (ich hab im tsug kainen empfank) - Sul treno non ho campo.
+Die U-Bahn ist um diese Uhrzeit meistens ziemlich leer. (di u-baan ist um deze uurtsait maistens ziemlich leer) - A quest'ora la metropolitana è di solito piuttosto vuota.
+Wir sind an der falschen Station ausgestiegen. (vir zint an der falschen station ausgestigen) - Siamo scesi alla stazione sbagliata.
+Gibt's hier einen Aufzug zum Bahnsteig? (gibt's hier ainen auf-tsug tsum baanstaig) - C'è un ascensore per il binario?
+Der Bus war so voll, dass niemand mehr einsteigen konnte. (der bus var zo fol, das ni-mant meer ainstaigen konte) - L'autobus era così pieno che non poteva più salire nessuno.
+Ich hab die Haltestelle fast übersehen. (ich hab di haltestelle fast überzeen) - Ho quasi superato la fermata.
+Wir müssen am Flughafen noch unser Gepäck aufgeben. (vir müssen am flughafen noch unzer gepek aufgeben) - In aeroporto dobbiamo ancora consegnare i bagagli.
+Wo finde ich die Gepäckausgabe? (vo finde ich di gepeck-ausgabe) - Dov'è il ritiro bagagli?
+Unser Flug hat ein neues Abflug-Gate bekommen. (unzer flug hat ain noies abflug-geit bekommen) - Al nostro volo è stato assegnato un nuovo gate di partenza.
+Die Fähre ist schon fast voll, wir sollten jetzt einsteigen. (di fere ist scion fast fol, vir zolten ietzt ainstaigen) - Il traghetto è quasi pieno, dovremmo salire adesso.
+Kann man die Fahrkarten auch direkt am Hafen kaufen? (kan man di fartkarten auc direkt am haafen kaufen) - Si possono comprare i biglietti direttamente al porto?
+Ich glaube, hinter diesem Gebäude geht es zur Altstadt. (ich glaube, hinter dizem gebäude geet es tsur altstadt) - Credo che dietro questo edificio si vada al centro storico.
+Die Straße endet gleich an einem großen Platz. (di strasse endet glaic an ainem grossen platz) - La strada finisce proprio in una grande piazza.
+Ich hab beim Rückwärtsfahren den Bordstein erwischt. (ich hab baim rückvertsfaren den bordstain erwischt) - In retromarcia ho urtato il marciapiede.
+Der Wagen lässt sich plötzlich nicht mehr lenken. (der vagen lest zich plötzlich nicht meer lenken) - All'improvviso l'auto non si lascia più sterzare.
+Ich stelle das Warndreieck hinter dem Auto auf. (ich stelle das varndraieck hinter dem auto auf) - Metto il triangolo di emergenza dietro l'auto.
+Der Verkehr ist heute wegen eines Unfalls völlig zusammengebrochen. (der ferker ist hoite wegen aines unfals föllig tsusammengebrochen) - Oggi il traffico è completamente paralizzato a causa di un incidente.
+In unserer Straße wird seit Tagen an den Leitungen gearbeitet. (in unzerer strasse virt sait tagen an den laitungen gearbeitet) - Nella nostra strada lavorano sulle tubature da giorni.
+Im Hotelzimmer riecht es stark nach Rauch. (im hoteltsimmer riect es stark nach rauch) - Nella camera d'hotel c'è un forte odore di fumo.
+Wir haben leider nur ein kleines Fenster zum Innenhof. (vir habn leider nur ain klaines fenster tsum innenhof) - Purtroppo abbiamo solo una piccola finestra sul cortile interno.
+Der Wasserkocher im Zimmer funktioniert nicht. (der vasserkocher im tsimmer funktioniert nicht) - Il bollitore in camera non funziona.
+Der Gastgeber hat uns sofort auf unsere Nachricht geantwortet. (der gastgeber hat uns zofort auf unsere nachricht geantwortet) - L'host ha risposto subito al nostro messaggio.
+Wir mussten wegen des Lärms mitten in der Nacht das Zimmer wechseln. (vir mussten wegen des lärms mitten in der nacht das tsimmer veksln) - A causa del rumore abbiamo dovuto cambiare camera nel cuore della notte.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
