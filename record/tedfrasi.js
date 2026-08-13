@@ -382,6 +382,55 @@ Lesen ist echt mein liebstes Hobby. (Leezen ist ekt main liipstes Hobi) - Legger
 Der Sprachkurs fängt nächste Woche an. (Der Shprakhkurs fèngt nèkste Vokhe an) - Il corso di lingua inizia la prossima settimana.
 Ich hab da neulich eine super Frau kennengelernt. (Ish hab da noilish aine zuuper Frau kenengelernt) - Ho conosciuto di recente una donna fantastica.
 Hast du das neue Buch von ihr schon gelesen? (Hast du das noie Buukh fon iir shon gelezen?) - Hai già letto il suo nuovo libro?
+Ich hab heute Morgen noch schnell die Betten gemacht. (ich hab hoite morgen noch scnell di betten gemacht) - Stamattina ho rifatto velocemente i letti.
+Kannst du bitte die Fenster zumachen? Es zieht ziemlich. (kanst du bitte di fenster tsumachen? es tsiit ziemlich) - Puoi chiudere le finestre, per favore? C'è parecchia corrente.
+Die Katze sitzt schon seit einer Stunde vor der Tür. (di katze sitzt scion sait ainer stunde for der tür) - Il gatto è davanti alla porta già da un'ora.
+Ich hab vergessen, den Müll rauszubringen. (ich hab fergeben, den mül rauszubringen) - Mi sono dimenticato di portare fuori la spazzatura.
+Das Geschirr kann noch ein bisschen in der Spülmaschine bleiben. (das ghescir kan noch ain bisschen in der spülmascine blaiben) - I piatti possono restare ancora un po' nella lavastoviglie.
+Frühstück steht auf dem Tisch, bedien dich einfach. (früstück steht auf dem tisc, bediin dich ainfac) - La colazione è sul tavolo, serviti pure.
+Wer möchte noch Kaffee? Ich mach gerade welchen. (ver möcte noch kaffe? ich mach gerade velchen) - Chi vuole ancora del caffè? Lo sto preparando.
+Warte kurz, das Brot ist noch im Toaster. (varte kurtz, das brot ist noch im toaster) - Aspetta un attimo, il pane è ancora nel tostapane.
+Wir essen heute zusammen, auch wenn's spät wird. (vir essen hoite tsusammen, auc ven's spet virt) - Oggi mangiamo insieme, anche se facciamo tardi.
+Ich hab keine Ahnung, was wir heute kochen sollen. (ich hab kaine anung, vas vir hoite kochen zollen) - Non ho idea di cosa dovremmo cucinare oggi.
+Denk dran, morgen deine Sportsachen mitzunehmen. (denk dran, morgen daine sportzachen mitzunehmen) - Ricordati di portare domani le tue cose da palestra.
+Hast du eigentlich für den Test gelernt? (hast du eigentlich für den test gelernt) - Hai studiato per il test?
+Die Lehrerin hat uns eine Menge Aufgaben aufgegeben. (di leererin hat uns aine menge aufgaben aufgegeben) - L'insegnante ci ha assegnato un sacco di esercizi.
+Ich versteh diese Aufgabe einfach nicht. (ich fersc te deze aufgabe ainfac nicht) - Proprio non capisco questo esercizio.
+Wenn du fertig bist, kannst du mir deinen Text zeigen. (ven du fertig bist, kanst du mir dainen text tsaigen) - Quando hai finito, puoi farmi vedere il tuo testo.
+Du musst mir Bescheid sagen, bevor du irgendwo hingehst. (du musst mir bescait sagen, bevor du irgendo hingest) - Devi avvisarmi prima di andare da qualche parte.
+Heute gibt's keine Bildschirmzeit mehr, es ist schon spät. (hoite gibt's kaine bildschirmtsait meer, es ist scion spet) - Oggi niente più tempo davanti allo schermo, è già tardi.
+Kannste morgen den Einkauf mitnehmen? (kanste morgen den ain-kauf mitnemen) - Domani puoi fare anche la spesa?
+Ich hab mir beim Arzt einen Termin für nächste Woche geben lassen. (ich hab mir baim artzt ainen termin für nechste voche geben lassen) - Ho preso dal medico un appuntamento per la prossima settimana.
+Seit gestern tut mir der Hals beim Schlucken weh. (sait gestern tut mir der hals baim schlucken vee) - Da ieri mi fa male la gola quando deglutisco.
+Der Arzt meinte, ich soll mich ein paar Tage schonen. (der artzt meinte, ich zol mich ain paar tage scionen) - Il medico ha detto che dovrei stare a riposo per qualche giorno.
+Ich hab meine Versichertenkarte zu Hause liegen lassen. (ich hab maine fersichertenkarte tsu hause liegen lassen) - Ho lasciato a casa la tessera sanitaria.
+Am Bahnhof ist heute wegen einer Störung ziemlich viel los. (am baanhof ist hoite wegen ainer störung ziemlich fiil los) - Oggi alla stazione c'è parecchia confusione a causa di un guasto.
+Der Zug kommt auf einem anderen Gleis an. (der tsug kommt auf ainem anderen glais an) - Il treno arriva su un altro binario.
+Ich hab meinen Anschluss fast verpasst. (ich hab mainen anschluss fast ferpasst) - Ho rischiato di perdere la coincidenza.
+Die nächste Straßenbahn fährt in fünf Minuten. (di nechste strassenbaan fert in fünf minuten) - Il prossimo tram parte tra cinque minuti.
+Entschuldigung, wo ist hier die nächste Bushaltestelle? (entsculdigung, vo ist hier di nechste bushaltestelle) - Mi scusi, dov'è la fermata dell'autobus più vicina?
+Die Linie fährt heute nur bis zum Rathaus. (di linie fert hoite nur bis tsum rathaus) - Oggi questa linea arriva solo fino al municipio.
+Am Flughafen mussten wir unsere Koffer noch einmal öffnen. (am flughafen mussten vir unsere koffer noch ainmal öffnen) - In aeroporto abbiamo dovuto aprire di nuovo le valigie.
+Mein Gate wurde kurzfristig geändert. (main geit wurde kurtzfristig geändert) - Il mio gate è stato cambiato all'ultimo momento.
+Zum Glück hatte der Flug keine große Verspätung. (tsum glück hate der flug kaine grosse ferspetung) - Per fortuna il volo non ha avuto un grosso ritardo.
+Wir haben im Hafen noch etwas Zeit, bevor das Schiff ablegt. (vir habn im haafen noch etvas tsait, bevor das schiff ableegt) - Abbiamo ancora un po' di tempo al porto prima che parta la nave.
+Fahr vorsichtig, die Straße ist wegen des Regens rutschig. (far forzichtig, di strasse ist wegen des regens rutschig) - Guida con prudenza, la strada è scivolosa per la pioggia.
+Mein Navi zeigt eine völlig andere Route an. (main nawi tsaigt aine föllig andere route an) - Il navigatore mi indica un percorso completamente diverso.
+Hinter uns hat es gerade gekracht. (hinter uns hat es gerade gekracht) - Dietro di noi è appena avvenuto un incidente.
+Der Pannendienst kommt laut App in ungefähr vierzig Minuten. (der pannen-dienst kommt laut äp in ungefer fiarzig minuten) - Secondo l'app, il soccorso stradale arriva tra circa quaranta minuti.
+Das Wasser läuft unter der Spüle raus. (das vasser leuft unter der spüle raus) - L'acqua esce da sotto il lavello.
+Der Elektriker kommt morgen Vormittag vorbei. (der elektrik-er kommt morgen formittag vorbei) - L'elettricista passa domani in mattinata.
+Die Heizung macht seit gestern komische Geräusche. (di haizung macht sait gestern komisce geroische) - Il riscaldamento fa strani rumori da ieri.
+In unserem Zimmer ist es nachts viel zu laut. (in unzerem tsimmer ist es nachts fiil tsu laut) - Nella nostra camera di notte c'è troppo rumore.
+Wir hätten gern ein anderes Zimmer, wenn das möglich ist. (vir heten gern ain anderes tsimmer, ven das möglich ist) - Vorremmo un'altra camera, se fosse possibile.
+Die Wohnung war genauso wie auf den Fotos. (di vonung var genauso vi auf den fotos) - L'appartamento era esattamente come nelle foto.
+Unser Gastgeber hat uns eine tolle Restaurantempfehlung gegeben. (unzer gastgeber hat uns aine tolle restaurant-empfelung gegeben) - Il nostro host ci ha consigliato un ottimo ristorante.
+Ich hätte gern die Rechnung, wenn's geht. (ich hete gern di rechnung, vens geet) - Vorrei il conto, se possibile.
+Für mich bitte ein stilles Wasser. (für mich bitte ain stilles vasser) - Per me un'acqua naturale, per favore.
+Der Laden hat leider genau meine Größe nicht mehr. (der laden hat leider genau maine größe nicht meer) - Purtroppo il negozio non ha più proprio la mia taglia.
+Ich hab die Datei gerade in den gemeinsamen Ordner hochgeladen. (ich hab di daitai gerade in den gemeinsamen ordner hochgeladen) - Ho appena caricato il file nella cartella condivisa.
+Die Besprechung dauert hoffentlich nicht länger als eine Stunde. (di besprechung dauert hoffentlich nicht lenger als aine stunde) - Spero che la riunione non duri più di un'ora.
+Mein Akku ist fast leer, ich brauch dringend ein Ladegerät. (main akku ist fast leer, ich brauch dringend ain ladegeret) - La batteria è quasi scarica, mi serve urgentemente un caricabatterie.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
