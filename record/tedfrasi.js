@@ -1710,6 +1710,54 @@ Ich hab im Duty-free noch schnell ein Geschenk gekauft. (ich hab im djuti-fri no
 Der Kapitän hat wegen des Wetters eine andere Route gewählt. (der kapitän hat wegen des vetters aine andere route gewelt) - Il capitano ha scelto un'altra rotta a causa del maltempo.
 Wir sind im Hafen angekommen, bevor die Fähre angelegt hat. (vir zint im haafen angekommen, bevor di fere angelegt hat) - Siamo arrivati al porto prima che il traghetto attraccasse.
 An dieser Kreuzung musst du besonders auf die Radfahrer achten. (an diza kroitsung musst du besonders auf di radfarer achten) - A questo incrocio devi fare particolare attenzione ai ciclisti.
+Ich häng grad die Wäsche auf, kannst du kurz helfen? (Ish häng grat di Vèshe auf, kannst du kurts helfen?) - Sto stendendo il bucato, puoi aiutarmi un attimo?
+Wer hat schon wieder das Licht brennen lassen? (Vér hat shon vieder das Likt brenen lassen?) - Chi ha di nuovo lasciato la luce accesa?
+Die Katze will unbedingt raus, mach mal die Tür auf. (Di Katse vill unbedingt raus, makh mal di Tühr auf) - Il gatto vuole assolutamente uscire, apri la porta.
+Ich hab die Waschmaschine schon angemacht. (Ish hab di Vashmashiine shon angemakht) - Ho già acceso la lavatrice.
+Setzt euch, das Essen wird gleich kalt. (Zetst oikh, das Essen virt glaish kalt) - Sedetevi, il cibo tra poco si fredda.
+Nimm dir noch was Brot, es ist genug da. (Nim dir nokh vas Broot, es ist genuk da) - Prendi ancora del pane, ce n'è abbastanza.
+Welches Fach hast du morgen als Erstes? (Velshes Fakh hast du morgen als Ershtes?) - Che materia hai domani per prima?
+Die Lehrerin hat gesagt, wir schreiben nächste Woche einen Test. (Di Léarin hat gezaakt, viir shraiben nèkste Vokhe ainen Test) - La maestra ha detto che la prossima settimana faremo un test.
+Bevor du fernsiehst, mach erst deine Hausaufgaben. (Befoor du fernziist, makh erst daine Hausaufgaben) - Prima di guardare la TV, fai prima i compiti.
+Um wie viel Uhr musst du zu Hause sein? (Um vii fiil Uur musst du tsu Hauze zain?) - A che ora devi essere a casa?
+Haben Sie was gegen Halsschmerzen da? (Haaben Zii vas geegen Halsshmertsen da?) - Avete qualcosa contro il mal di gola?
+Nehmen Sie das lieber nach dem Essen. (Neemen Zii das liiber nakh dem Essen) - Lo prenda piuttosto dopo mangiato.
+Fährt dieser Zug direkt oder muss ich umsteigen? (Fèrt diizer Tsuuk direkt oder muss ish umshtaigen?) - Questo treno è diretto o devo cambiare?
+Der Bahnsteig wurde kurzfristig geändert. (Der Baanshtaik vurde kurtsfristikh geèndert) - Il binario è stato cambiato all'ultimo momento.
+Die nächste Station ist Ihre, steigen Sie hier aus. (Di nèkste Shtatsioon ist Iire, shtaigen Zii hiir aus) - La prossima fermata è la sua, scenda qui.
+Fährt dieser Bus auch am Wochenende? (Fèrt diizer Buss aukh am Vokhenende?) - Passa anche il weekend questo autobus?
+Mein Koffer ist leider nicht angekommen. (Main Koffer ist laider nikht angekommen) - La mia valigia purtroppo non è arrivata.
+Wo muss ich für den Anschlussflug hin? (Voo muss ish für den Anshlussfluuk hin?) - Dove devo andare per il volo in coincidenza?
+Können Autos auch mit auf die Fähre? (Können Autos aukh mit auf di Fèere?) - Possono salire anche le auto sul traghetto?
+Ich hab mich total verlaufen, wo bin ich hier? (Ish hab mish total ferlaufen, voo bin ish hiir?) - Mi sono completamente perso, dove sono?
+Gehen Sie immer geradeaus bis zur Kreuzung. (Geen Zii immer geradeaus bis tsur Kroitsung) - Vada sempre dritto fino all'incrocio.
+Die Reifen sind bei dem Regen echt glatt. (Di Raifen zint bai dem Reegen ekt glatt) - Le gomme con questa pioggia sono davvero scivolose.
+Der Motor macht seit gestern komische Geräusche. (Der Motoor makht zait gestern koomishe Geroishe) - Il motore fa dei rumori strani da ieri.
+Zum Glück ist bei dem Unfall keinem was passiert. (Tsum Glük ist bai dem Unfal kainem vas passiirt) - Per fortuna nell'incidente non è successo niente a nessuno.
+Wegen der Baustelle ist die Straße halb gesperrt. (Veegen der Baushtele ist di Shtrasse halp geshpert) - A causa dei lavori la strada è chiusa a metà.
+Nach dem Gewitter war die ganze Kreuzung überflutet. (Nakh dem Gevitter var di gantse Kroitsung überflootet) - Dopo il temporale l'intero incrocio era allagato.
+Wir hätten gern noch ein Kopfkissen mehr. (Viir hèten gern nokh ain Kopfkissen meer) - Vorremmo ancora un cuscino in più.
+Die Dusche wird einfach nicht richtig warm. (Di Dushe virt ainfakh nikht rishtikh varm) - La doccia proprio non si scalda bene.
+Können wir noch etwas später auschecken? (Können viir nokh etvas shpèter aushcheken?) - Possiamo fare il check-out un po' più tardi?
+Der Gastgeber hat uns die Schlüssel vor der Tür hinterlassen. (Der Gastgeeber hat uns di Shlüssel foor der Tühr hinterlassen) - L'host ci ha lasciato le chiavi davanti alla porta.
+Gibt's hier in der Nähe einen Parkplatz? (Ghipts hiir in der Nèe ainen Parkplats?) - C'è un parcheggio qui vicino?
+Könnten wir noch etwas Wasser bekommen? (Könten viir nokh etvas Vasser bekommen?) - Potremmo avere ancora un po' d'acqua?
+Ist der Tisch am Fenster noch frei? (Ist der Tish am Fenster nokh frai?) - Il tavolo vicino alla finestra è ancora libero?
+Lass uns noch auf einen Absacker bleiben. (Lass uns nokh auf ainen Apzaker blaiben) - Restiamo ancora per un ultimo bicchiere.
+Ich brauch noch Milch und Eier für morgen. (Ish braukh nokh Milsh und Aier für morgen) - Mi serve ancora latte e uova per domani.
+Die Schlange an der Kasse war endlos heute. (Di Shlange an der Kasse var entloos hoite) - La fila alla cassa oggi era infinita.
+Haben Sie das Kleid auch in Blau? (Haaben Zii das Klait aukh in Blau?) - Avete il vestito anche in blu?
+Die Frist für das Projekt wurde verlängert. (Di Frist für das Projekt vurde ferlèngert) - La scadenza per il progetto è stata prorogata.
+Ich schick dir die Unterlagen gleich per Mail. (Ish shik dir di Unterlaagen glaish per Mail) - Ti mando subito i documenti via mail.
+Dein Mikro ist stumm, wir hören dich nicht. (Dain Mikro ist shtumm, viir hören dish nikht) - Il tuo microfono è muto, non ti sentiamo.
+Mein Ladekabel ist schon wieder kaputtgegangen. (Main Laadekaabel ist shon vieder kaputtgegangen) - Il mio cavo di ricarica si è di nuovo rotto.
+Der Ausblick von der Burg war einfach atemberaubend. (Der Ausblik fon der Burk var ainfakh aatemberaubent) - La vista dal castello era semplicemente mozzafiato.
+Die Wanderung war länger als auf der Karte angegeben. (Di Vanderung var lènger als auf der Karte angegeeben) - L'escursione era più lunga di quanto indicato sulla mappa.
+Ruf mich an, sobald du zu Hause bist. (Ruuf mish an, zobalt du tsu Hauze bist) - Chiamami appena arrivi a casa.
+Der Heizkörper im Bad wird einfach nicht warm. (Der Haitskörper im Baat virt ainfakh nikht varm) - Il termosifone in bagno proprio non si scalda.
+Seit wann hast du schon diese Schmerzen? (Zait van hast du shon diize Shmertsen?) - Da quando hai questi dolori?
+Unser Hund muss dringend zum Tierarzt. (Unzer Hunt muss dringent tsum Tiirartst) - Il nostro cane deve urgentemente andare dal veterinario.
+Ich freu mich schon riesig auf Weihnachten. (Ish froi mish shon riizikh auf Vainakhten) - Sono già molto felice per il Natale.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
