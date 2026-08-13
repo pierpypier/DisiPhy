@@ -674,6 +674,54 @@ Ich nehme lieber etwas Leichtes, ich hab heute keinen großen Hunger. (ich näme
 Die Portion war größer, als ich gedacht hatte. (di portion var gröser, als ich gedacht hate) - La porzione era più grande di quanto pensassi.
 Nach der Arbeit gehen wir noch kurz in unsere Stammkneipe. (nach der arbeit geen vir noch kurtz in unsere stamm-knaipe) - Dopo il lavoro passiamo ancora un attimo nel nostro locale abituale.
 Ich hab ihm die Geschichte gestern schon erzählt. (ich hab im di gescichte gestern scion erzählt) - Gliel'ho già raccontata ieri, la storia.
+Heute muss ich unbedingt noch den Boden wischen. (hoite muss ich unbedingt noch den boden viscen) - Oggi devo assolutamente ancora lavare il pavimento.
+Die Lampe im Flur geht manchmal von allein aus. (di lampe im flur geet manchmal fon allein aus) - La lampada in corridoio a volte si spegne da sola.
+Ich hab die Tür abgeschlossen, bevor ich gegangen bin. (ich hab di tür abgeschlosen, bevor ich gegangen bin) - Ho chiuso a chiave la porta prima di uscire.
+Unser Kater versteckt sich gern unter dem Sofa. (unzer kater fersteckt zich gern unter dem sofa) - Il nostro gatto ama nascondersi sotto il divano.
+Die Wäsche ist noch feucht, ich lass sie lieber länger trocknen. (di vesce ist noch foicht, ich lass zi liber lenger trocknen) - Il bucato è ancora umido, preferisco lasciarlo asciugare più a lungo.
+Der Geschirrspüler zeigt einen Fehler an. (der ghesirspüler tsaigt ainen feeler an) - La lavastoviglie segnala un errore.
+Ich hab heute Morgen ein Ei und ein Brötchen gegessen. (ich hab hoite morgen ain ai und ain brötchen gegessen) - Stamattina ho mangiato un uovo e un panino.
+Kannst du schon mal das Gemüse schneiden? (kanst du scion mal das gemüze scnaiden) - Puoi intanto tagliare le verdure?
+Nach dem Essen trinken wir meistens noch einen Tee. (nach dem essen trinken vir maistens noch ainen tee) - Dopo cena di solito beviamo ancora un tè.
+Heute bleibt die Küche kalt, wir essen unterwegs. (hoite blaibt di küce kalt, vir essen unterwegs) - Oggi non cuciniamo, mangiamo fuori.
+Meine Tochter muss morgen eine Präsentation halten. (maine tochter muss morgen aine presentation halten) - Mia figlia domani deve fare una presentazione.
+In Englisch hat sie sich deutlich verbessert. (in englisc hat zi zich doitlec ferbessert) - In inglese è migliorata notevolmente.
+Der neue Lehrer wirkt ziemlich nett. (der noie leerer virkt ziemlich nett) - Il nuovo insegnante sembra piuttosto simpatico.
+Wir haben heute nach der Schule noch einen Termin. (vir habn hoite nach der scule noch ainen termin) - Oggi dopo la scuola abbiamo ancora un appuntamento.
+Du weißt genau, wann du zu Hause sein musst. (du vaist genau, van du tsu hause zain musst) - Sai benissimo quando devi essere a casa.
+Ich möchte, dass du mir vorher eine Nachricht schreibst. (ich möcte, das du mir forher aine nachricht scraibst) - Voglio che prima mi mandi un messaggio.
+Du kannst deine Freunde einladen, aber sag mir vorher Bescheid. (du kanst daine froinde ainladen, aber sag mir forher bescait) - Puoi invitare i tuoi amici, ma prima avvisami.
+Ich hab heute Morgen meine Tablette vergessen. (ich hab hoite morgen maine tablette fergeben) - Stamattina ho dimenticato la mia compressa.
+Der Husten ist inzwischen fast weg. (der husten ist inzwischen fast vek) - Ormai la tosse è quasi passata.
+Ich hab einen Termin beim Zahnarzt nächste Woche. (ich hab ainen termin baim tsanartzt nechste voche) - La prossima settimana ho un appuntamento dal dentista.
+Die Praxis hat heute wegen Urlaub geschlossen. (di praxis hat hoite wegen urlaub geschlossen) - Lo studio oggi è chiuso per ferie.
+Der Zug ist schon wieder zehn Minuten später dran. (der tsug ist scion vider tzen minuten speter dran) - Il treno è di nuovo in ritardo di dieci minuti.
+Ich hab am Automaten noch eine Fahrkarte gekauft. (ich hab am automaten noch aine fartkarte gekauft) - Ho comprato ancora un biglietto alla macchinetta.
+Auf welchem Gleis fährt der Zug nach Köln ab? (auf velchem glais fert der tsug nach köln ap) - Da quale binario parte il treno per Colonia?
+Die Durchsage war so leise, dass ich nichts verstanden hab. (di durcsage var zo laize, das ich nichts ferstanden hab) - L'annuncio era così basso che non ho capito niente.
+Die U-Bahn steht gerade wegen eines technischen Problems. (di u-baan steht gerade wegen aines technischen problems) - La metropolitana è ferma per un problema tecnico.
+Ich nehme die nächste Bahn, die kommt gleich. (ich näme di nechste baan, di kommt glaic) - Prendo la prossima metro, arriva tra poco.
+In der Straßenbahn war heute kaum noch ein Sitzplatz frei. (in der strassenbaan var hoite kaum noch ain zitzplatz frai) - Oggi sul tram non c'era quasi più un posto libero.
+Der Bus fährt nur noch bis zur nächsten Haltestelle. (der bus fert nur noch bis tsur nechsten haltestelle) - L'autobus arriva solo fino alla prossima fermata.
+Am Flughafen haben sie unser Handgepäck gewogen. (am flughafen habn zi unzer handgepek gewogen) - In aeroporto ci hanno pesato il bagaglio a mano.
+Ich hab meinen Ausweis schon griffbereit. (ich hab mainen ausvais scion griffberait) - Ho già il documento a portata di mano.
+Unser Gate ist ziemlich weit weg von hier. (unzer geit ist ziemlich vait vek fon hier) - Il nostro gate è piuttosto lontano da qui.
+Die Fähre kommt laut Anzeige in zehn Minuten an. (di fere kommt laut antsaige in tzen minuten an) - Secondo il display il traghetto arriva tra dieci minuti.
+Wir sollten die Tickets besser griffbereit haben. (vir zolten di tikets besser griffberait habn) - Faremmo meglio ad avere i biglietti a portata di mano.
+Kannst du kurz nachsehen, ob wir hier richtig sind? (kanst du kurtz nachzeen, ob vir hier richtig zint) - Puoi controllare un attimo se siamo nel posto giusto?
+Die Altstadt ist von hier aus gut zu Fuß erreichbar. (di altstadt ist fon hier aus gut tsu fus erreich-bar) - Da qui il centro storico è facilmente raggiungibile a piedi.
+Ich hab beim Einparken einen Pfosten übersehen. (ich hab baim ainparken ainen pfosten überzeen) - Durante il parcheggio non ho visto un paletto.
+Zum Glück ist am Auto nur ein kleiner Kratzer. (tsum glück ist am auto nur ain klainer kratser) - Per fortuna sull'auto c'è solo un piccolo graffio.
+Der Motor klingt seit heute Morgen irgendwie anders. (der motor klingt sait hoite morgen irgendwie anders) - Da stamattina il motore suona in qualche modo diverso.
+An der nächsten Ecke gibt es eine Werkstatt. (an der nechsten ecke gibt es aine verkstatt) - All'angolo successivo c'è un'officina.
+Die Feuerwehr musste wegen des Rauchs kommen. (di feuerver musste wegen des rauchs kommen) - I vigili del fuoco sono dovuti intervenire a causa del fumo.
+Bei uns im Viertel fällt seit Stunden der Strom aus und ein. (bai uns im firtel felt sait stunden der strom aus und ain) - Nel nostro quartiere la corrente va e viene da ore.
+Das Hotel hat uns netterweise ein Babybett ins Zimmer gestellt. (das hotel hat uns nettervaize ain babybett ins tsimmer gestellt) - L'hotel è stato così gentile da mettere una culla in camera.
+Der Wasserhahn tropft die ganze Nacht. (der vasserhaan tropft di gantse nacht) - Il rubinetto gocciola tutta la notte.
+Die Heizung lässt sich überhaupt nicht einstellen. (di haizung lest zich überhaupt nicht ain-stellen) - Il riscaldamento non si riesce proprio a regolare.
+Der Fernseher im Zimmer hat keinen Ton. (der fernzeer im tsimmer hat kainen ton) - Il televisore in camera non ha audio.
+Wir haben für morgen einen Tisch reserviert. (vir habn für morgen ainen tisc reserviert) - Abbiamo prenotato un tavolo per domani.
+Ich hätte gern noch etwas Brot dazu. (ich hete gern noch etvas brot datsu) - Vorrei ancora un po' di pane insieme.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
