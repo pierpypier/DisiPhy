@@ -1329,6 +1329,60 @@ Une alerte météo a été diffusée sur les téléphones. (ün alèrt meteo a �
 Le chauffage de l'hôtel ne chauffe presque rien. (le scofaʒ de lotèl ne scof presk rièn) - Il riscaldamento dell'hotel non scalda quasi per niente.
 La serrure de la salle de bains ne ferme plus. (la serür de la sal de ban ne ferm plü) - La serratura del bagno non si chiude più.
 L'hôte nous a demandé de lui envoyer une copie de nos pièces d'identité. (lot nu a demandé de lüi anvwaye ün kopi de no piès didantité) - L'host ci ha chiesto di mandargli una copia dei nostri documenti d'identità.
+J'ai secoué les coussins du canapé avant de recevoir nos invités. (ʒé seküé le kusan dü kanapé avan de resevwar no zanvité) - Ho scosso i cuscini del divano prima di ricevere i nostri ospiti.
+Tu peux remplir le bac à glaçons avant de mettre la table ? (tü pö ranplir le bak a glason avan de metr la tabl) - Puoi riempire la vaschetta del ghiaccio prima di apparecchiare?
+J'ai retrouvé une vieille photo derrière la bibliothèque. (ʒé retruvé ün vièy foto derrièr la bibliyotèk) - Ho ritrovato una vecchia foto dietro la libreria.
+Le lave-vaisselle affiche un message d'erreur. (le lav-vèsèl afisc an mesaʒ derör) - La lavastoviglie mostra un messaggio di errore.
+Le chien a besoin de sortir, il tourne en rond depuis dix minutes. (le scièn a bezwan de sortir, il turn an ron döpüi dis minüt) - Il cane ha bisogno di uscire, gira in tondo da dieci minuti.
+J'ai donné ses médicaments au chat comme indiqué par le vétérinaire. (ʒé doné se medikaman o scia kom andike par le veteriner) - Ho dato le medicine al gatto come indicato dal veterinario.
+Je n'ai pas très faim, je prendrai juste une tartine. (ʒö né pa trè fen, ʒö prandra ʒüst ün tartin) - Non ho molta fame, prenderò solo una fetta di pane.
+Tu veux que je te fasse un œuf à la coque ? (tü vö ke ʒö te fas an ö a la kok) - Vuoi che ti prepari un uovo alla coque?
+J'ai mis les légumes au réfrigérateur pour demain. (ʒé mi le legüm o refrigératör pur döman) - Ho messo le verdure in frigorifero per domani.
+On fera quelque chose de simple ce soir, je suis crevé. (on fera kelkö scos de sampl se swar, ʒö süi krevé) - Stasera prepareremo qualcosa di semplice, sono distrutto.
+J'ai oublié de prendre mon livre de français pour le cours. (ʒé oublié de prandr mon livr de fransè pur le kur) - Ho dimenticato di prendere il mio libro di francese per la lezione.
+Le professeur a conseillé de relire le texte à voix haute. (le profesör a konsèyé de relir le tekst a vwa ot) - L'insegnante ha consigliato di rileggere il testo ad alta voce.
+J'ai obtenu une meilleure note que la dernière fois. (ʒé obtön ün meyör not ke la dernyèr fwa) - Ho preso un voto migliore dell'ultima volta.
+Elle prépare son sac la veille pour ne rien oublier. (el prepar son sak la vèy pur ne rièn oublié) - Prepara la sua borsa la sera prima per non dimenticare nulla.
+Le professeur a demandé qui voulait passer au tableau. (le profesör a demandé ki vulè pasé o tablo) - L'insegnante ha chiesto chi volesse andare alla lavagna.
+J'ai promis de l'aider à réviser ce week-end. (ʒé promi de ledé a revize se wik-end) - Ho promesso di aiutarla a ripassare questo fine settimana.
+Tu peux prendre ton vélo, mais mets bien ton casque. (tü pö prandr ton velo, mè mè bièn ton kask) - Puoi prendere la bici, ma metti bene il casco.
+Je préfère que tu me demandes avant de modifier quoi que ce soit. (ʒö prefer ke tü me demand avan de modifié kwa ke se swa) - Preferisco che tu mi chieda prima di modificare qualsiasi cosa.
+Ce soir, tu es responsable de débarrasser la table. (se swar, tü é responsabl de debarese la tabl) - Stasera sei tu responsabile di sparecchiare.
+On fera les courses ensemble après le travail. (on fera le kurs ansambl aprè le travay) - Faremo la spesa insieme dopo il lavoro.
+J'ai une légère migraine depuis le réveil. (ʒé ün leʒèr migrèn döpüi le revey) - Ho una leggera emicrania da quando mi sono svegliato.
+La pharmacie de garde se trouve à quelques rues d'ici. (la farmasi de gard se truv a kelk rü disi) - La farmacia di turno si trova a poche strade da qui.
+Je vais éviter le sport pendant quelques jours. (ʒö vé evité le spor pandan kelk ʒur) - Eviterò lo sport per qualche giorno.
+Le médecin m'a prescrit une prise de sang. (le medsan ma preskri ün priz de san) - Il medico mi ha prescritto un esame del sangue.
+Je dois être à l'hôpital à huit heures précises. (ʒö dwa etr a lopital a üit ör presiz) - Devo essere in ospedale alle otto precise.
+J'ai choisi un train qui arrive avant midi. (ʒé scwazì an tran ki ariv avan midi) - Ho scelto un treno che arriva prima di mezzogiorno.
+Le billet comprend une réservation de siège. (le biyè kompran ün rezervasiòn de sièʒ) - Il biglietto comprende la prenotazione del posto.
+On devra changer de train dans cette petite gare. (on devra sciandʒé de tran dan set pətit gar) - Dovremo cambiare treno in questa piccola stazione.
+J'ai posé ma valise dans l'espace prévu à cet effet. (ʒé poze ma valiz dan lespas prevü a set efè) - Ho messo la valigia nello spazio apposito.
+Cette station permet de rejoindre plusieurs lignes différentes. (set stasiòn permè de reʒwèndr plüzior liñ diferant) - Questa stazione permette di raggiungere diverse linee.
+Je vais attendre sur le quai jusqu'à l'arrivée de mon frère. (ʒö vé atandr sür le ké ʒüsk a larivé de mon frer) - Aspetterò sul binario fino all'arrivo di mio fratello.
+La correspondance est indiquée sur l'écran au-dessus des portes. (la korespondans é andike sür lekran o-desü de port) - La coincidenza è indicata sullo schermo sopra le porte.
+J'ai demandé au chauffeur de m'indiquer le prochain arrêt. (ʒé demandé o scöför de mandike le proscièn are) - Ho chiesto all'autista di indicarmi la prossima fermata.
+Le bus scolaire passe devant chez nous vers sept heures. (le büs skoler pas devan sce nu ver set ör) - L'autobus scolastico passa davanti a casa nostra verso le sette.
+On prendra le bus de nuit pour rentrer. (on prandra le büs de nüi pur rantré) - Prenderemo l'autobus notturno per tornare a casa.
+J'ai téléchargé l'application de la compagnie avant le départ. (ʒé tele-sciarʒé laplikasiòn de la kompanyi avan le depart) - Ho scaricato l'app della compagnia prima della partenza.
+La porte d'embarquement vient de changer sur les écrans. (la port danbarkman vien de sciandʒé sür le zekran) - Il gate d'imbarco è appena cambiato sugli schermi.
+J'ai mis mon ordinateur en mode avion. (ʒé mi mon ordinatör an mod aviyon) - Ho messo il computer in modalità aereo.
+On nous a demandé de garder nos cartes d'embarquement jusqu'à la sortie. (on nu a demandé de gardé no kart danbarkman ʒüsk a la sorti) - Ci hanno chiesto di conservare le carte d'imbarco fino all'uscita.
+La passerelle vers l'avion est encore fermée. (la paserel ver laviyon é ankor fermé) - Il finger verso l'aereo è ancora chiuso.
+Le bateau est arrivé au port avec un peu de retard. (le bato é arivé o por avek an pö de retar) - Il traghetto è arrivato al porto con un po' di ritardo.
+J'ai réservé une place près de la sortie du ferry. (ʒé rezervé ün plas prè de la sorti dü feri) - Ho prenotato un posto vicino all'uscita del traghetto.
+Le vent souffle tellement fort que les passagers restent à l'intérieur. (le van sufl telman for ke le pasajé rest a linteriör) - Il vento soffia così forte che i passeggeri restano all'interno.
+Pour éviter le centre, passe plutôt par cette avenue. (pur evité le santr, pas plüto par set avenü) - Per evitare il centro, passa piuttosto da questo viale.
+J'ai repéré un parking juste derrière la mairie. (ʒé repere an parking ʒüst derrièr la meri) - Ho individuato un parcheggio proprio dietro il municipio.
+La voiture fait un bruit métallique quand j'accélère. (la vuatür fè an brüi metalik kan ʒaksélèr) - La macchina fa un rumore metallico quando accelero.
+J'ai laissé mes coordonnées au conducteur de l'autre voiture. (ʒé lesé me koordiné o kondüktör de lotr vuatür) - Ho lasciato i miei recapiti al conducente dell'altra macchina.
+Le garagiste doit commander la pièce avant de commencer la réparation. (le garagist dwa komandé la piès avan de komansé la reparasiòn) - Il meccanico deve ordinare il pezzo prima di iniziare la riparazione.
+Le quartier est plongé dans le noir depuis plusieurs heures. (le kartié é plonʒé dan le nwar döpüi plüzior ör) - Il quartiere è al buio da diverse ore.
+Une équipe intervient pour dégager la route après la chute d'un arbre. (ün ekip antervien pur deʒaʒé la rut aprè la scüt dan narbr) - Una squadra sta intervenendo per liberare la strada dopo la caduta di un albero.
+Le technicien de l'hôtel doit passer dans l'après-midi. (le teknisièn de lotèl dwa pasé dan laprè-midi) - Il tecnico dell'hotel dovrebbe passare nel pomeriggio.
+La télévision de la chambre ne capte aucune chaîne. (la televizion de la sciambre ne kapt okün scèn) - La televisione della camera non riceve nessun canale.
+J'ai demandé à l'accueil si je pouvais laisser mes bagages après le départ. (ʒé demandé a laköy si ʒö puvè lesé me bagàʒ aprè le depart) - Ho chiesto alla reception se potevo lasciare i bagagli dopo il check-out.
+L'appartement est au troisième étage et il n'y a pas d'ascenseur. (lapartman é o trwa-zièm etaʒ é il nia pa dasansör) - L'appartamento è al terzo piano e non c'è l'ascensore.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
