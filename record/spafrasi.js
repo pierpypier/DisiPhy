@@ -528,6 +528,52 @@ Me gusta escuchar música mientras hago las tareas de casa. (me gústa eskuchár
 Los fines de semana suelo salir en bicicleta por las afueras. (los fínes de semána suélo salír en bisikléta por las afuéras) - Nei fine settimana di solito esco in bicicletta in periferia.
 He empezado a coleccionar monedas antiguas. (e empesádo a koleksionár mónedas antíguas) - Ho iniziato a collezionare monete antiche.
 Anoche jugamos a cartas y acabamos riéndonos todos. (anóche khugámos a kártas i akabámos riéndonos todos) - Ieri sera abbiamo giocato a carte e abbiamo finito tutti per ridere.
+Tengo que cambiar las sábanas porque ya llevan varios días puestas. (téngo ke kambyár las sábаnas porke ya yéban bários días puéstas) - Devo cambiare le lenzuola perché sono già lì da diversi giorni.
+Voy a ordenar el cajón de los cubiertos. (boi a ordenár el kakhón de los kubyértos) - Metto in ordine il cassetto delle posate.
+Se ha quedado una prenda atrapada en la puerta de la lavadora. (se a kedádo una prénda atrapáda en la puérta de la labadóra) - Un indumento è rimasto incastrato nella porta della lavatrice.
+¿Has visto el mando de la televisión? (as bísto el mándo de la telebisión) - Hai visto il telecomando della televisione?
+El perro está dormido debajo de la mesa. (el pérro está dormído debáho de la mésa) - Il cane dorme sotto il tavolo.
+Voy a llenar el lavavajillas y lo pongo en marcha. (boi a yenár el lababayíyas i lo póngo en márcha) - Riempio la lavastoviglie e la metto in funzione.
+Queda muy poca comida, mañana tendremos que hacer la compra. (kéda mui póka komída, mañana tendrémos ke asér la kómprа) - È rimasto pochissimo cibo, domani dovremo fare la spesa.
+¿Me ayudas a llevar estas cajas al trastero? (me ayúdas a yebár éstas káhas al trastéro) - Mi aiuti a portare queste scatole in ripostiglio?
+He dejado las persianas medio bajadas para que no entre tanto sol. (e dekhádo las persiánas médio bakhá das para ke no én tre tánto sol) - Ho lasciato le persiane mezze abbassate per far entrare meno sole.
+Esta noche podemos aprovechar lo que tenemos en la despensa. (ésta nóche podémos aprobechár lo ke tenémos en la despénsa) - Stasera possiamo usare quello che abbiamo in dispensa.
+¿Quieres un poco más de café o ya has terminado? (kyéres un póko más de kafé o ya as terminádo) - Vuoi ancora un po' di caffè o hai già finito?
+He puesto la carne en el frigorífico para que se descongele despacio. (e puésto la kárne en el frigorífiko para ke se deskonséle despásio) - Ho messo la carne in frigorifero perché si scongeli lentamente.
+No comas tan deprisa, que todavía tenemos tiempo. (no kómas tan deprísa, ke todabía tenémos tyémpo) - Non mangiare così in fretta, abbiamo ancora tempo.
+¿Quién quiere ayudarme a preparar la ensalada? (kyén kyére ayudárme a preparár la ensaláda) - Chi vuole aiutarmi a preparare l'insalata?
+El profesor ha explicado que el examen será la próxima semana. (el profesór a ekspl ikádo ke el eksámen será la próksima semána) - L'insegnante ha spiegato che l'esame sarà la prossima settimana.
+Mi hijo se ha olvidado otra vez de llevar el material a clase. (mi ího se a olbidádo ótra bes de yebár el materiál a kláse) - Mio figlio si è dimenticato di nuovo di portare il materiale a scuola.
+¿Puedes ayudarme con este ejercicio de matemáticas? (puédes ayudárme kon éste ersisísio de matemátikas) - Puoi aiutarmi con questo esercizio di matematica?
+Hoy tengo que recoger a los niños a la salida del colegio. (oi téngo ke rekohér a los niños a la salída del kolekhio) - Oggi devo andare a prendere i bambini all'uscita da scuola.
+Si acabas pronto, puedes ver un capítulo antes de dormir. (si akábas pronto, puédes ber un kapítulo ántes de dormír) - Se finisci presto, puoi vedere un episodio prima di dormire.
+No quiero que te acostumbres a acostarte tan tarde. (no kyéro ke te akostúmbres a akostárte tan tárde) - Non voglio che ti abitui ad andare a letto così tardi.
+La farmacéutica me ha explicado cómo tengo que tomar este medicamento. (la farmaséutika me a ekspl ikádo kómo téngo ke tomár éste medikaménto) - La farmacista mi ha spiegato come devo prendere questo farmaco.
+¿Hace falta pedir cita para esta prueba? (áse fálta pedír síta para ésta pru éba) - Bisogna prendere appuntamento per questo esame?
+Me han dicho que beba mucha agua durante el día. (me an dícho ke béba múcha água duránte el día) - Mi hanno detto di bere molta acqua durante il giorno.
+Todavía estoy esperando que me llamen para entrar en consulta. (todabía estoi esperándo ke me yámen para entrár en konsúlta) - Sto ancora aspettando che mi chiamino per entrare in visita.
+El tren nocturno llega a primera hora de la mañana. (el tren noktúrno yéga a priméra óra de la mañana) - Il treno notturno arriva di prima mattina.
+¿Dónde están las taquillas para comprar los billetes? (dónde están las takíyas para komprár los biyétes) - Dove sono le biglietterie per comprare i biglietti?
+El tren que necesitamos sale dentro de veinte minutos. (el tren ke nesesitámos sále déntro de béinte minútos) - Il treno che ci serve parte tra venti minuti.
+Nos hemos confundido de dirección al salir de la estación. (nos émos konfundído de direksyón al salír de la estasyón) - Abbiamo sbagliato direzione uscendo dalla stazione.
+La estación de metro tiene cuatro salidas diferentes. (la estasyón de métro tiéne kuátro salídas diferéntes) - La stazione della metropolitana ha quattro uscite diverse.
+El tren del metro acaba de pasar y el siguiente tardará cinco minutos. (el tren del métro akaba de pasár i el siguiénte tardará sínko minútos) - È appena passata la metropolitana e la prossima arriverà tra cinque minuti.
+Hay que dejar salir a la gente antes de entrar en el vagón. (ai ke dekhár salír a la khénte ántes de entrár en el bagón) - Bisogna lasciare uscire le persone prima di entrare nella carrozza.
+El autobús ha cambiado de recorrido por las obras. (el autobús a kambyádo de rekordído por las óbras) - L'autobus ha cambiato percorso a causa dei lavori.
+¿Esta parada tiene servicio durante toda la noche? (ésta parąda tiéne serbísio duránte toda la nóche) - Questa fermata è servita per tutta la notte?
+El conductor nos ha indicado dónde tenemos que bajarnos. (el konduktór nos a indikádo dónde tenémos ke bakhárnos) - L'autista ci ha indicato dove dobbiamo scendere.
+El vuelo ya aparece en la pantalla de salidas. (el buélo ya aparése en la pantáya de salídas) - Il volo compare già sullo schermo delle partenze.
+Me han pedido que pese la maleta en el mostrador. (me an pedído ke pése la maléta en el mostrador) - Mi hanno chiesto di pesare la valigia al banco.
+Tenemos que pasar primero por el control de seguridad. (tenémos ke pasár priméro por el kontról de seguridád) - Dobbiamo passare prima dai controlli di sicurezza.
+El puerto queda bastante lejos del centro de la ciudad. (el puérto kéda bastante léhos del séntrо de la syudád) - Il porto è piuttosto lontano dal centro della città.
+El barco tiene una zona cubierta para los pasajeros. (el bárko tiéne una sona kubyérta para los pasahéros) - Il traghetto ha una zona coperta per i passeggeri.
+Estamos buscando un sitio donde dejar el coche unas horas. (estámos buskándo un sítio dónde dekhár el kóche unas óras) - Stiamo cercando un posto dove lasciare la macchina per qualche ora.
+Si sigues esta avenida llegarás directamente a la plaza mayor. (si sígues ésta abenída yegarás direktaménte a la plása mayor) - Se segui questo viale arriverai direttamente nella piazza principale.
+He tenido que reducir la velocidad porque la carretera estaba mojada. (e tenído ke redusír la belosidád porke la karretéra estaba mokháda) - Ho dovuto ridurre la velocità perché la strada era bagnata.
+El coche pierde aceite y tengo que llevarlo al taller. (el kóche pyérde aséite i téngo ke yebárlo al tayér) - La macchina perde olio e devo portarla in officina.
+Se ha pinchado una rueda justo delante de nuestra casa. (se a pintchádo una ruéda khústo delánte de nuéstra káса) - Una gomma si è bucata proprio davanti a casa nostra.
+El agua de la calle ha empezado a bajar por fin. (el água de la káye a empesádo a bakhár por fin) - Finalmente l'acqua dalla strada ha iniziato a defluire.
+Han reparado el semáforo que llevaba varios días estropeado. (an reparádo el semáforo ke yebába bários días estropeádo) - Hanno riparato il semaforo che era guasto da diversi giorni.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
