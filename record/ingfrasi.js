@@ -1711,6 +1711,56 @@ I lost my bus pass and need to buy a replacement. (Ai lost mai bas pas end niid 
 The air quality in the city center is very poor today. (De er kuo-li-tii in de si-tii sen-ter iz ve-rii puor tu-dei) — La qualità dell'aria nel centro città è pessima oggi.
 Road detours are making it hard to navigate around town. (Roud di-tuurz ar meik-ing it hard tuu na-vi-gheit e-raund taun) — Le deviazioni stradali rendono difficile orientarsi in città.
 The tram service is suspended due to a power failure. (De trem ser-vis iz sas-pen-ded diu tuu e pau-er fei-liur) — Il servizio tram è sospeso a causa di un guasto elettrico.
+Could you put the clean towels in the bathroom cupboard? (Kud iu put de kliin tauelz in de bat-ruum kaberd?) - Puoi mettere gli asciugamani puliti nell'armadietto del bagno?
+Did you leave the spare keys by the front door? (Did iu liiv de sper kiiz bai de front dor?) - Hai lasciato le chiavi di riserva vicino alla porta d'ingresso?
+The dishwasher is still running, so don't open it yet. (De disciuoscer iz stil ran-ning, sou dount oupen it iet) - La lavastoviglie è ancora in funzione, quindi non aprirla ancora.
+I've put a load of dark clothes in the washing machine. (Aiv put e loud ov dark kloudz in de uoscing me-sciin) - Ho messo un carico di vestiti scuri in lavatrice.
+Can you give the cat some fresh water before you go? (Ken iu giv de ket sam fresh uoter bifor iu gou?) - Puoi dare dell'acqua fresca al gatto prima di andare?
+There's no bread left, so I'll make toast instead. (Derz nou bred left, sou ail meik toust insted) - Non è rimasto pane, quindi mi farò dei toast.
+Are we all eating together tonight, or should I wait? (Ar ui ol iiting tugheder tenait, or sciud ai ueit?) - Mangiamo tutti insieme stasera o devo aspettare?
+Could you save me some pasta for when I get home? (Kud iu seiv mi sam pasta for uen ai get houm?) - Potresti lasciarmi un po' di pasta per quando torno a casa?
+Have you checked what time your first lesson starts tomorrow? (Hev iu cekt uot taim ior ferst leson starts tumorou?) - Hai controllato a che ora inizia la tua prima lezione domani?
+Your science teacher left a message about the project. (Ior saiens tiicer left e mesij ebaut de project) - Il tuo insegnante di scienze ha lasciato un messaggio sul progetto.
+You can go out after you've finished your homework. (Iu ken gou aut after iuv finisct ior houm-uork) - Puoi uscire dopo aver finito i compiti.
+Why don't you get your schoolbag ready before you go to bed? (Uai dount iu get ior sculbeg redi bifor iu gou tu bed?) - Perché non prepari lo zaino prima di andare a letto?
+The pharmacist said to take these tablets after meals. (De farmacist sed tu teik dhiiz teblets after miilz) - Il farmacista ha detto di prendere queste compresse dopo i pasti.
+I've got a bit of a headache, but I'll be fine. (Aiv got e bit ov e hedeik, bat ail bi fain) - Ho un po' di mal di testa, ma starò bene.
+Do you know which platform the regional train leaves from? (Du iu nou uic platform de ri-gionel trein liivz from?) - Sai da quale binario parte il treno regionale?
+Let's get on the train before it gets too crowded. (Lets get on de trein bifor it gets tu craudid) - Saliamo sul treno prima che si riempia troppo.
+The next metro should be here in about three minutes. (De nekst metro sciud bi hier in ebaut thrii minits) - La prossima metropolitana dovrebbe arrivare tra circa tre minuti.
+We need to get off at the third stop and change lines. (Ui niid tu get of et de therd stop end ceingj lains) - Dobbiamo scendere alla terza fermata e cambiare linea.
+There's a bus coming, but I don't think it's our one. (Derz e bas caming, bat ai dount think its auer uan) - Sta arrivando un autobus, ma non credo sia il nostro.
+The bus driver told us to get off at the next stop. (De bas draiver tould as tu get of et de nekst stop) - L'autista dell'autobus ci ha detto di scendere alla prossima fermata.
+Have you checked in online, or do you still need to do it at the airport? (Hev iu cekt in onlain, or du iu stil niid tu du it et di erport?) - Hai già fatto il check-in online o devi ancora farlo in aeroporto?
+We've got plenty of time, so there's no need to rush to the gate. (Uiv got plenti ov taim, sou derz nou niid tu ras tu de geit) - Abbiamo tutto il tempo che ci serve, quindi non c'è bisogno di correre al gate.
+Where do we drop our bags for the flight? (Uer du ui drop auer begs for de flait?) - Dove lasciamo i bagagli per il volo?
+Let's wait by the arrivals board until they announce the ferry. (Lets ueit bai di arraivals bord until dei enauns de ferry) - Aspettiamo vicino al tabellone degli arrivi finché non annunciano il traghetto.
+Keep your ticket handy because they may check it on board. (Kiip ior tiket hendi bikoz dei mei cek it on bord) - Tieni il biglietto a portata di mano perché potrebbero controllarlo a bordo.
+Take the second street on the left, then keep going straight. (Teik de second striit on de left, den kiip gouing streit) - Prendi la seconda strada a sinistra, poi continua sempre dritto.
+I think we've gone past the turning we needed. (Ai think uiv gon past de terning ui niidid) - Credo che abbiamo superato la svolta che dovevamo prendere.
+The car won't start, so I'll call roadside assistance. (De kar uount start, sou ail kol roudsaid e-sistens) - La macchina non parte, quindi chiamerò il soccorso stradale.
+Someone has just backed into my car in the car park. (Samuan hez giast bekt intu mai kar in de kar park) - Qualcuno ha appena urtato la mia macchina facendo retromarcia nel parcheggio.
+The road under the bridge is flooded after the heavy rain. (De roud ander de brij iz fladid after de hevi rein) - La strada sotto il ponte è allagata dopo la forte pioggia.
+The whole block lost power for about half an hour. (De houl blok lost pauer for ebaut haf en auer) - In tutto l'isolato è mancata la corrente per circa mezz'ora.
+Could you send someone up to fix the shower in our room? (Kud iu send samuan ap tu fiks de sciauer in auer ruum?) - Potreste mandare qualcuno a sistemare la doccia della nostra camera?
+Our room is facing the street, and the traffic is really loud. (Auer ruum iz feising de striit, end de traffic iz rili laud) - La nostra camera dà sulla strada e il traffico è davvero rumoroso.
+The host left the keys in a lockbox by the front door. (De houst left de kiiz in e lok-boks bai de front dor) - L'host ha lasciato le chiavi in una cassetta con serratura vicino alla porta d'ingresso.
+There's a small extra charge that wasn't mentioned in the listing. (Derz e smol ekstra ciarg det uozent mensciend in de listing) - C'è un piccolo costo aggiuntivo che non era indicato nell'annuncio.
+Could we have a few more minutes to decide what to order? (Kud ui hev e fiu mor minits tu disa id uot tu order?) - Potremmo avere qualche minuto in più per decidere cosa ordinare?
+I'll have the same as you, unless you want to try something different. (Ail hev de seim ez iu, anles iu uont tu trai samthing difrent) - Prendo la stessa cosa che prendi tu, a meno che tu non voglia provare qualcosa di diverso.
+That bar was packed, so we ended up finding another place nearby. (Det bar uoz pekt, sou ui endid ap fainding enader pleis niarbai) - Quel bar era pienissimo, quindi alla fine abbiamo trovato un altro posto qui vicino.
+I'm just going to grab a few things from the supermarket. (Aim giast gouing tu greb e fiu things from de supermarket) - Vado solo a prendere alcune cose al supermercato.
+These trousers fit well, but I don't like the material. (Dhiiz trauzers fit uel, bat ai dount laik de material) - Questi pantaloni vestono bene, ma non mi piace il materiale.
+Can we move the meeting back by half an hour? (Ken ui muuv de miiting bek bai haf en auer?) - Possiamo spostare la riunione di mezz'ora?
+I'll reply to the email once I've checked the figures. (Ail riplai tu di i-meil uans aiv cekt de figuers) - Risponderò all'email una volta controllati i dati.
+Your microphone keeps cutting out during the video call. (Ior maicrofoun kiips cating aut diuring de video kol) - Il tuo microfono continua a interrompersi durante la videochiamata.
+The printer says it's out of paper again. (De printer sez its aut ov peiper eghen) - La stampante dice che è di nuovo senza carta.
+The museum has a temporary exhibition on ancient coins. (De miuziem hez e temporeri eksibiscion on einsicent coins) - Il museo ha una mostra temporanea sulle monete antiche.
+We walked around the old town until it started getting dark. (Ui uokt eraund di ould taun until it started geting dark) - Abbiamo passeggiato per il centro storico finché non ha iniziato a fare buio.
+The trail gets steeper after the first kilometre. (De treil gets stiiper after de ferst kilometre) - Il sentiero diventa più ripido dopo il primo chilometro.
+I'd rather stay in the shade than spend all afternoon in the sun. (Aid rather stei in de sceid den spend ol after-nuun in de san) - Preferirei stare all'ombra piuttosto che passare tutto il pomeriggio al sole.
+I was relieved when the doctor said there was nothing serious. (Ai uoz riliivd uen de doctor sed der uoz nathing si-ri-es) - Mi sono sentito sollevato quando il medico ha detto che non c'era nulla di grave.
+I usually stretch for a few minutes before I start lifting weights. (Ai iusciueli stretc for e fiu minits bifor ai start lifting ueits) - Di solito faccio stretching per qualche minuto prima di iniziare a sollevare pesi.
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
