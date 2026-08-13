@@ -1677,6 +1677,39 @@ Der Stromausfall hat auch den Aufzug lahmgelegt. (der stromausfall hat auc den a
 Im Hotel war das Bett leider ziemlich unbequem. (im hotel var das bet leider ziemlich unbequem) - In hotel il letto era purtroppo piuttosto scomodo.
 Könnten Sie bitte die Minibar aus dem Zimmer entfernen? (könnten zi bitte di minibar aus dem tsimmer entfernen) - Potrebbe rimuovere il minibar dalla camera, per favore?
 In unserer Ferienwohnung gab es sogar eine Waschmaschine. (in unzerer ferienvonung gab es sogar aine vasmascine) - Nel nostro appartamento vacanze c'era persino una lavatrice.
+Ich hab die Einkaufsliste noch schnell auf dem Handy ergänzt. (ich hab di einkaufs-liste noch scnell auf dem hendi ergänzt) - Ho aggiunto velocemente qualcosa alla lista della spesa sul cellulare.
+Im Kühlschrank ist kaum noch Platz. (im külsc-rank ist kaum noch plats) - Nel frigorifero non c'è quasi più spazio.
+Der Wasserkocher hat heute Morgen plötzlich den Geist aufgegeben. (der vasserkocher hat hoite morgen plötzlich den gaist aufgegeben) - Stamattina il bollitore ha improvvisamente smesso di funzionare.
+Ich hab die Schuhe zum Trocknen vor die Heizung gestellt. (ich hab di scue tsum trocknen for di haitzung gestellt) - Ho messo le scarpe davanti al termosifone ad asciugare.
+Unser Hund will bei Regen überhaupt nicht raus. (unzer hund vil bai regen überhaupt nicht raus) - Il nostro cane con la pioggia non vuole proprio uscire.
+Die Katze hat die ganze Nacht auf dem Sofa geschlafen. (di katze hat di ganze nacht auf dem sofa geschlafen) - Il gatto ha dormito tutta la notte sul divano.
+Zum Frühstück hätte ich gern noch ein Glas Orangensaft. (tsum früstück hete ich gern noch ain glas orangensaft) - A colazione vorrei anche un bicchiere di succo d'arancia.
+Ich hab das Mittagessen schon vorbereitet, ihr müsst nur noch den Tisch decken. (ich hab das mittagessen scion forbereitet, ir müsst nur noch den tisc decken) - Ho già preparato il pranzo, dovete solo apparecchiare.
+Heute kochen wir gemeinsam, jeder macht einen Teil. (hoite kochen vir gemeinsam, jeder macht ainen tail) - Oggi cuciniamo insieme, ognuno fa una parte.
+Der Kuchen muss noch abkühlen, bevor wir ihn anschneiden. (der kuchen muss noch apkülen, bevor vir in anschnaiden) - La torta deve ancora raffreddarsi prima di poterla tagliare.
+Ich hab vergessen, dass heute Elternsprechtag ist. (ich hab fergeben, das hoite eltern-spreac-tag ist) - Ho dimenticato che oggi ci sono i colloqui con gli insegnanti.
+Für das Projekt brauchen sie noch Informationen aus drei verschiedenen Quellen. (für das projekt brauchen zi noch informationen aus drai ferscidenen quellen) - Per il progetto hanno ancora bisogno di informazioni da tre fonti diverse.
+Sie hat sich gestern freiwillig für die Schulaufführung gemeldet. (zi hat zich gestern fraivilig für di scul-auffürung gemeldet) - Ieri si è offerta volontariamente per lo spettacolo scolastico.
+Ich hab die E-Mail der Lehrerin erst heute gelesen. (ich hab di i-meil der leererin erst hoite gelesen) - Ho letto solo oggi l'e-mail dell'insegnante.
+Du kannst deine Freunde einladen, aber räumt danach bitte gemeinsam auf. (du kanst daine froinde ainladen, aber roimt danach bitte gemeinsam auf) - Puoi invitare i tuoi amici, ma poi riordinate insieme, per favore.
+Ich möchte wissen, mit wem du unterwegs bist. (ich möcte vissen, mit vem du unterwegs bist) - Voglio sapere con chi sei in giro.
+Du bist alt genug, um selbst auf die Uhr zu schauen. (du bist alt genug, um zelbst auf di uur tsu schauen) - Sei abbastanza grande da guardare l'ora da solo.
+Wir sprechen später darüber, jetzt müssen wir los. (vir sprechen speter darüber, ietzt müssen vir los) - Ne parliamo dopo, adesso dobbiamo andare.
+Ich hab mir in der Apotheke ein Nasenspray geholt. (ich hab mir in der apoteke ain nasen-sprai geholt) - Ho preso uno spray nasale in farmacia.
+Nehmen Sie dieses Mittel lieber nicht auf nüchternen Magen. (nemen zi dieses mittel liber nicht auf nüchternen magen) - È meglio non prendere questo prodotto a stomaco vuoto.
+Ich warte noch auf die Ergebnisse der Untersuchung. (ich varte noch auf di ergebnisse der untersuchung) - Sto ancora aspettando i risultati dell'esame.
+Wenn es schlimmer wird, fahre ich ins Krankenhaus. (ven es sclimmer virt, fare ich ins krankenhaus) - Se peggiora, vado in ospedale.
+Der Zug nach Berlin steht heute an einem anderen Bahnsteig. (der tsug nach berlin steht hoite an ainem anderen baanstaig) - Oggi il treno per Berlino è a un altro binario.
+Wir haben im Zug leider keinen Platz nebeneinander gefunden. (vir habn im tsug leider kainen plats nebeneinander gefunden) - Purtroppo sul treno non abbiamo trovato posti vicini.
+Die U-Bahn-Station ist von hier aus nur fünf Minuten entfernt. (di u-baan-station ist fon hier aus nur fünf minuten entfernt) - La stazione della metropolitana dista solo cinque minuti da qui.
+Ich steig lieber an der Endhaltestelle aus. (ich staig liber an der endhaltestelle aus) - Preferisco scendere al capolinea.
+Der Bus fährt wegen des Marathons heute nicht durch die Innenstadt. (der bus fert wegen des marathons hoite nicht durc di innenstadt) - Oggi l'autobus non passa per il centro a causa della maratona.
+Wir sollten eine Verbindung früher nehmen, dann haben wir mehr Zeit. (vir zolten aine ferbindung früer nemen, dan habn vir meer tsait) - Dovremmo prendere una corsa prima, così avremo più tempo.
+Am Flughafen wurde unser Flug kurzfristig auf ein anderes Gate verlegt. (am flughafen wurde unser flug kurtzfristig auf ain anderes geit ferlegt) - In aeroporto il nostro volo è stato spostato all'ultimo momento a un altro gate.
+Ich hab im Duty-free noch schnell ein Geschenk gekauft. (ich hab im djuti-fri noch scnell ain geschenk gekauft) - Ho comprato velocemente un regalo al duty-free.
+Der Kapitän hat wegen des Wetters eine andere Route gewählt. (der kapitän hat wegen des vetters aine andere route gewelt) - Il capitano ha scelto un'altra rotta a causa del maltempo.
+Wir sind im Hafen angekommen, bevor die Fähre angelegt hat. (vir zint im haafen angekommen, bevor di fere angelegt hat) - Siamo arrivati al porto prima che il traghetto attraccasse.
+An dieser Kreuzung musst du besonders auf die Radfahrer achten. (an diza kroitsung musst du besonders auf di radfarer achten) - A questo incrocio devi fare particolare attenzione ai ciclisti.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
