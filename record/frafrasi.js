@@ -1491,6 +1491,60 @@ Il y a des bouchons depuis la sortie de l'autoroute. (il ia de buson döpüi la 
 La rue a été fermée parce qu'une canalisation a éclaté. (la rü a été fermé parskün kanalizasiòn a eklaté) - La strada è stata chiusa perché è scoppiata una tubatura.
 Le personnel de l'hôtel m'a prêté un adaptateur électrique. (le personel de lotèl ma prete an adaptatör elektrik) - Il personale dell'hotel mi ha prestato un adattatore elettrico.
 La douche fuit et l'eau s'accumule sur le sol. (la dusc füi é lo sakümül sür le sol) - La doccia perde e l'acqua si accumula sul pavimento.
+J'ai changé les draps et aéré la chambre pendant quelques minutes. (ʒé sciandʒé le dra é are la sciambre pandan kelk minüt) - Ho cambiato le lenzuola e arieggiato la camera per qualche minuto.
+Tu peux passer un coup de balai dans l'entrée ? (tü pö pasé an ku de balè dan lantré) - Puoi dare una spazzata all'ingresso?
+J'ai mis les vêtements délicats à sécher à l'intérieur. (ʒé mi le vetman delika a se sce a linteriör) - Ho messo ad asciugare in casa i vestiti delicati.
+La télécommande n'a presque plus de piles. (la teleromand na presk plü de pil) - Il telecomando ha quasi esaurito le batterie.
+Le chat miaule devant la porte du balcon. (le scia myol devan la port dü balkon) - Il gatto miagola davanti alla porta del balcone.
+J'ai réservé une visite chez le vétérinaire pour mardi prochain. (ʒé rezervé ün vizit sce le veteriner pur mardi proscièn) - Ho prenotato una visita dal veterinario per martedì prossimo.
+J'ai pris un café et une banane avant de sortir. (ʒé pri an kafé é ün banan avan de sortir) - Ho preso un caffè e una banana prima di uscire.
+Tu peux couper les fruits pour le dessert ? (tü pö küpe le frui pur le deser) - Puoi tagliare la frutta per il dolce?
+On mangera plus tard, j'attends encore ma fille. (on manʒra plü tar, ʒatand ankor ma fiʒ) - Mangeremo più tardi, sto ancora aspettando mia figlia.
+J'ai sorti le pain du congélateur pour ce soir. (ʒé sorti le pan dü konʒelatör pur se swar) - Ho tirato fuori il pane dal congelatore per stasera.
+J'ai terminé mon devoir de littérature hier soir. (ʒé terminé mon devwar de literatür ier swar) - Ho finito il mio compito di letteratura ieri sera.
+La classe prépare une sortie scolaire pour le mois prochain. (la klas prepar ün sorti skolèr pur le mwa proscièn) - La classe sta preparando una gita scolastica per il mese prossimo.
+J'ai reçu les résultats de mon contrôle par l'application de l'école. (ʒé resü le rezultà de mon kontrol par laplikasiòn de lekol) - Ho ricevuto i risultati della mia verifica tramite l'app della scuola.
+Elle préfère travailler le matin quand la maison est calme. (el prefer travayé le maten kan la mezon é kalm) - Preferisce studiare la mattina quando la casa è tranquilla.
+Le professeur a demandé aux élèves de former des groupes. (le profesör a demandé ozelèv de formé de grup) - L'insegnante ha chiesto agli studenti di formare dei gruppi.
+Tu dois ranger ta chambre avant de sortir avec tes amis. (tü dwa ranʒé ta sciambre avan de sortir avek tez ami) - Devi mettere in ordine la tua camera prima di uscire con gli amici.
+Je t'autorise à utiliser la voiture, mais sois prudent. (ʒö totorìz a ütilizé la vuatür, mè swa prüdã) - Ti autorizzo a usare la macchina, ma fai attenzione.
+Tu peux dormir un peu plus demain matin, c'est samedi. (tü pö dormi an pö plü döman maten, sè samedi) - Domani mattina puoi dormire un po' di più, è sabato.
+Je veux que chacun participe aux tâches de la maison. (ʒö vö ke scakan partisip o tasce de la mezon) - Voglio che ognuno partecipi alle faccende di casa.
+J'ai une petite irritation sur la peau depuis hier. (ʒé ün pətit iritasiòn sür la po döpüi ier) - Ho una piccola irritazione sulla pelle da ieri.
+La pharmacienne m'a proposé une crème sans parfum. (la farmasièn ma propozé ün krem san parfum) - La farmacista mi ha proposto una crema senza profumo.
+Je vais prendre ma température avant de décider. (ʒö vé prandr ma tanperatür avan de dezide) - Mi misurerò la temperatura prima di decidere.
+Le médecin a écouté mes poumons avec son stéthoscope. (le medsan a ekuté me pümòn avek son stetoskop) - Il medico ha ascoltato i miei polmoni con lo stetoscopio.
+On m'a conseillé de revenir si les symptômes s'aggravent. (on ma konsèyé de revnir si le simptòm saggrav) - Mi hanno consigliato di tornare se i sintomi peggiorano.
+Le train est annoncé avec cinq minutes d'avance. (le tran é anonse avek sank minüt davans) - Il treno è annunciato con cinque minuti di anticipo.
+J'ai demandé si ce billet était valable pour le train suivant. (ʒé demandé si se biyè etè valabl pur le tran süivan) - Ho chiesto se questo biglietto era valido per il treno successivo.
+On s'est assis dans une voiture presque vide. (on sé asi danz ün vuatür presk vid) - Ci siamo seduti in una carrozza quasi vuota.
+La gare routière est juste derrière la gare ferroviaire. (la gar rütyèr é ʒüst derrièr la gar feroviyèr) - La stazione degli autobus è proprio dietro quella ferroviaria.
+J'ai oublié de composter mon billet avant de monter. (ʒé oublié de komposté mon biyè avan de monte) - Ho dimenticato di convalidare il biglietto prima di salire.
+La sortie numéro six est beaucoup plus proche du centre. (la sorti nümero sis é bokou plü pros dü santr) - L'uscita numero sei è molto più vicina al centro.
+Je suis descendu deux stations trop tôt. (ʒö süi desandü dö stasiòn tro to) - Sono sceso due fermate troppo presto.
+La ligne est particulièrement chargée aux heures de pointe. (la liñ é partikülyèrman sciarsce o zer de pwant) - La linea è particolarmente affollata nelle ore di punta.
+Le bus arrive dans trois minutes d'après l'écran. (le büs ariv dan trwa minüt daprè lekran) - L'autobus arriva tra tre minuti, secondo lo schermo.
+J'ai oublié ma carte de transport dans l'autre veste. (ʒé oublié ma kart de transport dan lotr vest) - Ho dimenticato la tessera dei trasporti nell'altra giacca.
+Le chauffeur nous a prévenus que le trajet serait plus long. (le scöför nu a prevnü ke le traʒè serè plü lon) - L'autista ci ha avvisato che il tragitto sarebbe stato più lungo.
+Je préfère arriver tôt à l'aéroport plutôt que de courir. (ʒö prefer arivé to a laeroport plüto ke de kuri) - Preferisco arrivare presto in aeroporto piuttosto che correre.
+Mon bagage dépasse légèrement la limite de poids autorisée. (mon bagàʒ depas leʒèrman la limit de pwa otorizé) - Il mio bagaglio supera leggermente il limite di peso consentito.
+On a attendu presque une heure au contrôle de sécurité. (on a atandü presk ün ör o kontrol de sekürité) - Abbiamo aspettato quasi un'ora ai controlli di sicurezza.
+J'ai demandé un siège côté couloir pour pouvoir me lever facilement. (ʒé demandé an sièʒ kote kuloir pur puvar me lev fasilman) - Ho chiesto un posto lato corridoio per potermi alzare facilmente.
+Le vol a été retardé à cause des mauvaises conditions météo. (le vol a été retarde a koz de movèz kondisyon meteo) - Il volo è stato ritardato a causa delle cattive condizioni meteorologiche.
+Le ferry accepte les voitures et les motos. (le feri aksèpt le vuatür é le moto) - Il traghetto accetta auto e moto.
+J'ai regardé la météo avant de réserver la traversée. (ʒé regardé la meteo avan de rezervé la traversé) - Ho controllato il meteo prima di prenotare la traversata.
+On doit suivre les indications jusqu'au parking du port. (on dwa süivr le zandikasiòn ʒüsk o parking dü por) - Dobbiamo seguire le indicazioni fino al parcheggio del porto.
+Tourne à droite après la pharmacie et tu verras la fontaine. (turn a drwat aprè la farmasi é tü verà la fontèn) - Gira a destra dopo la farmacia e vedrai la fontana.
+Je crois qu'on s'est trompés de direction. (ʒö krwa kon sé trompé de direksiòn) - Credo che abbiamo preso la direzione sbagliata.
+Le GPS recalculera l'itinéraire si tu rates cette sortie. (le ʒepe-es rekalkülra litinerèr si tü rat set sorti) - Il GPS ricalcolerà il percorso se perdi questa uscita.
+J'ai remarqué une fuite d'huile sous la voiture. (ʒé remarké ün füit düil su la vuatür) - Ho notato una perdita d'olio sotto la macchina.
+Le pneu avant gauche perd de l'air depuis hier. (le pnö avan gos per de ler döpüi ier) - La gomma anteriore sinistra perde aria da ieri.
+J'ai appelé l'assistance après avoir eu un voyant rouge au tableau de bord. (ʒé apel lasistans aprè avwar ü an vwayan ruʒ o tablo de bor) - Ho chiamato l'assistenza dopo che si è accesa una spia rossa sul cruscotto.
+La circulation est bloquée dans les deux sens. (la sirkülasiòn é bloke dan le dö san) - Il traffico è bloccato in entrambe le direzioni.
+Une coupure de courant a arrêté les feux de circulation. (ün kupür de kuran a arete le fö de sirkülasiòn) - Un'interruzione di corrente ha fermato i semafori.
+La réception nous a donné le mot de passe du Wi-Fi. (la resepsiòn nu a doné le mo de pas dü wifi) - La reception ci ha dato la password del Wi-Fi.
+La chambre donne sur une rue très animée, même la nuit. (la sciambre don sür ün rü trè anime, mem la nüi) - La camera dà su una strada molto movimentata, anche di notte.
+L'eau du lavabo s'écoule très lentement. (lo dü lavabo sekul trè lantman) - L'acqua del lavandino defluisce molto lentamente.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
