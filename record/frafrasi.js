@@ -1731,6 +1731,57 @@ On a acheté un gros lapin en chocolat pour les enfants (On a ashté an gro lapi
 Les amis sont venus avec des bouteilles pour fêter ça dignement (Lezami son venü avec dé butey pur feté sa dignmen) - Gli amici sono venuti con delle bottiglie per festeggiare degnamente
 On a fait un discours émouvant pour leurs noces d'or (On a fé an discur émuvan pur leur noss dor) - Abbiamo fatto un discorso commovente per le loro nozze d'oro
 Toute la tablée a chanté joyeux anniversaire en chœur (Tut la tablé a shanté juayeuz aniverser an keur) - Tutta la tavolata ha cantato buon compleanno in coro
+On pourrait commencer par la tour Eiffel ce matin, non? (On purè comansé par la tur Efel se matin, non?) - Potremmo iniziare dalla torre Eiffel stamattina, no?
+Les enfants veulent absolument monter tout en haut (Lezanfan veul absolümen monté tu tan o) - I bambini vogliono assolutamente salire fino in cima
+On fait la queue depuis vingt minutes déjà (On fè la keu depüi vin minüt dejà) - Siamo in fila già da venti minuti
+Moi je préfère me balader dans le Marais cet après-midi (Mua je prefer me baladé dan le Marè set aprèmidi) - Io preferisco passeggiare nel Marais questo pomeriggio
+On pourrait se séparer, vous faites du shopping et moi je visite le Louvre (On purè se separé, vu fet dü shoping e mua je vizit le Luvr) - Potremmo dividerci, voi fate shopping e io visito il Louvre
+Il y a trop de monde devant la Joconde, on repassera (Ilia tro de monde devan la Gioconde, on repassera) - C'è troppa gente davanti alla Gioconda, ripasseremo
+On se retrouve devant Notre-Dame dans une heure (On se retruv devan Notr Dam dan ün eur) - Ci ritroviamo davanti a Notre-Dame tra un'ora
+Les vitrines des boutiques sont magnifiques en cette saison (Lé vitrin dé butik son manifik an set sèzon) - Le vetrine dei negozi sono magnifiche in questa stagione
+Tu veux qu'on prenne le bateau-mouche sur la Seine? (Tü veu con pren le bato mush sür la Sèn) - Vuoi che prendiamo il battello sulla Senna?
+On pique-nique dans le jardin du Luxembourg vers midi (On pique nique dan le jardin dü Lüxanbur ver midì) - Facciamo un picnic ai giardini del Lussemburgo verso mezzogiorno
+Les petits pourront jouer un peu au parc pendant qu'on se repose (Lé p'ti purron jué an peu o park pandan con se repoz) - I piccoli potranno giocare un po' al parco mentre ci riposiamo
+On monte à Montmartre à pied ou on prend le funiculaire? (On mont a Monmartr a pié u on pran le fünikülèr?) - Saliamo a Montmartre a piedi o prendiamo la funicolare?
+La vue depuis le Sacré-Cœur vaut vraiment le détour (La vü depüi le Sacre Keur vo vrémen le detur) - La vista dal Sacré-Cœur vale davvero la deviazione
+On s'arrête acheter des souvenirs pour la famille avant de repartir (On sarèt ashté dé suvenir pur la famiy avan de reparti) - Ci fermiamo a comprare dei souvenir per la famiglia prima di ripartire
+Les Champs-Élysées sont bondés le samedi après-midi (Lé Shanzelizé son bondé le samdi aprèmidi) - Gli Champs-Élysées sono affollati il sabato pomeriggio
+On pourrait faire les magasins vers l'Opéra, y a de belles enseignes (On purè fer lé magazin ver lopéra, ia de bel ansegn) - Potremmo fare shopping verso l'Opéra, ci sono bei negozi
+Arrête-toi, faut absolument prendre une photo devant l'Arc de Triomphe (Aret tua, fo absolümen prandr ün foto devan lark de triomf) - Fermati, dobbiamo assolutamente fare una foto davanti all'Arco di Trionfo
+On traverse par les Tuileries, c'est plus tranquille (On travers par lé Tuileri, sè plü tranquil) - Attraversiamo dalle Tuileries, è più tranquillo
+Je crois qu'on s'est un peu perdus dans ce quartier (Je crua con se an peu perdü dan se quartié) - Credo che ci siamo un po' persi in questo quartiere
+On demande notre chemin à quelqu'un, ça vaut mieux (On demand notr shemin a quelcan, sa vo mieu) - Chiediamo la strada a qualcuno, è meglio
+Les enfants sont fatigués, faut trouver un endroit pour s'asseoir (Lezanfan son fatigué, fo truvé an andrua pur saswar) - I bambini sono stanchi, bisogna trovare un posto per sedersi
+On prend le métro ou on continue à pied jusqu'à l'hôtel? (On pran le metrò u on continü a pié jüska lotel?) - Prendiamo la metro o continuiamo a piedi fino all'hotel?
+Cette boulangerie a l'air super, on s'arrête goûter un croissant (Set bulanjeri a ler süper, on sarèt gutè an cruasan) - Questa panetteria sembra ottima, ci fermiamo ad assaggiare un croissant
+On a réservé une table pas loin des Invalides pour ce soir (On a rezervé ün tabl pa lwin dezanvalid pur se suar) - Abbiamo prenotato un tavolo non lontano dagli Invalides per stasera
+Je préfère qu'on visite le musée d'Orsay plutôt que le Louvre (Je prefer con vizit le müzé dorsé plüto que le Luvr) - Preferisco che visitiamo il museo d'Orsay piuttosto che il Louvre
+Regardez comme les bateaux sur la Seine sont jolis (Regardé com lé bato sür la Sèn son joli) - Guardate come sono belle le barche sulla Senna
+On loue des vélos pour faire le tour des berges cet après-midi? (On lu dé velo pur fer le tur dé berg set aprèmidi?) - Noleggiamo delle bici per fare il giro delle rive questo pomeriggio?
+Les vendeurs de rue proposent des tours Eiffel miniatures partout (Lé vandeur de rü propoz dé tur Efel miniatür partu) - I venditori ambulanti propongono torri Eiffel in miniatura ovunque
+On profite du parc des Buttes-Chaumont, il paraît que c'est superbe (On profit dü park dé Büt Shomon, il paré que sè süperb) - Approfittiamo del parco delle Buttes-Chaumont, sembra sia stupendo
+Je veux absolument passer devant le Panthéon, c'est sur le chemin (Je veu absolümen passé devan le Panteon, sè sür le shemin) - Voglio assolutamente passare davanti al Panthéon, è sulla strada
+On a repéré une petite crêperie sympa près de Saint-Michel (On a repéré ün ptit crèperi sinpa prè de Sin Mishel) - Abbiamo individuato una piccola crêperie carina vicino a Saint-Michel
+Les enfants adorent regarder les artistes de rue à Montmartre (Lezanfan ador regardé lezartist de rü a Monmartr) - I bambini adorano guardare gli artisti di strada a Montmartre
+On garde un peu de temps libre pour faire les boutiques après (On gard an peu de tan libr pur fer lé butik aprè) - Teniamo un po' di tempo libero per fare shopping dopo
+Cette place a un charme fou avec toutes ses terrasses (Set plas a an sharm fu avec tut sé teras) - Questa piazza ha un fascino incredibile con tutti i suoi dehors
+On monte voir la vue panoramique depuis le Trocadéro (On mont vuar la vü panoramik depüi le Trocadero) - Saliamo a vedere la vista panoramica dal Trocadéro
+Faut vraiment qu'on prenne le temps de flâner dans ce quartier (Fo vrémen con pren le tan de flané dan se quartié) - Dobbiamo davvero prenderci il tempo di girovagare in questo quartiere
+On va faire un tour au marché aux puces si on a le temps (On va fer an tur o marshé o püs si on a le tan) - Andiamo a fare un giro al mercatino delle pulci se abbiamo tempo
+Les magasins de la rue de Rivoli sont pratiques pour les cadeaux (Lé magazin de la rü de Rivoli son pratik pur lé cado) - I negozi di rue de Rivoli sono pratici per i regali
+On s'installe sur les pelouses du Champ-de-Mars pour se reposer (On sinstal sür lé pluz dü Shan de Mars pur se repozé) - Ci sistemiamo sui prati del Champ-de-Mars per riposarci
+La queue pour la tour Eiffel est plus courte en fin de journée (La keu pur la tur Efel è plü curt an fin de jurné) - La fila per la torre Eiffel è più corta a fine giornata
+On achète les billets à l'avance pour éviter d'attendre (On ashèt lé bié a lavans pur evité datandr) - Compriamo i biglietti in anticipo per evitare di aspettare
+Cette rue piétonne est bondée de touristes en cette saison (Set rü pieton è bondé de turist an set sèzon) - Questa via pedonale è piena di turisti in questa stagione
+On finit la journée avec une glace près du Pont Neuf (On fini la jurné avec ün glas prè dü Pon Neuf) - Finiamo la giornata con un gelato vicino al Pont Neuf
+Les grands magasins du boulevard Haussmann valent le coup d'œil (Lé gran magazin dü bulvar Osman val le cu deui) - I grandi magazzini del boulevard Haussmann meritano un'occhiata
+On croise plein de vélos et de trottinettes dans ce quartier (On cruaz plin de velo e de trotinet dan se quartié) - Incontriamo tanti bici e monopattini in questo quartiere
+Vous préférez le musée Grévin ou plutôt les catacombes? (Vu preferé le müzé Grevin u plüto lé catacomb?) - Preferite il museo Grévin o piuttosto le catacombe?
+Je propose qu'on garde la Sainte-Chapelle pour demain matin (Je propoz con gard la Sint Shapel pur deman matin) - Propongo di tenere la Sainte-Chapelle per domani mattina
+Les enfants ont adoré nourrir les canards au jardin des Plantes (Lezanfan on adoré nurrir lé canar o jardin dé Plant) - I bambini hanno adorato dar da mangiare alle anatre al giardino delle Piante
+On prend un café en terrasse avant de reprendre la visite (On pran an cafe an teras avan de repranadr la vizit) - Prendiamo un caffè al tavolino prima di riprendere la visita
+Cette librairie a l'air géniale, on peut jeter un œil? (Set librèri a ler jenial, on peu jeté an euil?) - Questa libreria sembra fantastica, possiamo dare un'occhiata?
+On termine par une balade nocturne pour voir la tour illuminée (On termin par ün balad noctürn pur vuar la tur ilüminé) - Finiamo con una passeggiata notturna per vedere la torre illuminata
 On garde toujours une part de gâteau pour ceux qui arrivent en retard (On gard tujur ün par de gato pur seu qui ariv an retar) - Teniamo sempre una fetta di torta per quelli che arrivano in ritardo
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
