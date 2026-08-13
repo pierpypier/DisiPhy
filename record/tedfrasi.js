@@ -526,6 +526,57 @@ Das Wasser in der Dusche wird einfach nicht warm. (das vasser in der dusce virt 
 Wir haben gestern im Museum eine interessante Ausstellung gesehen. (vir habn gestern im muzeum aine interessante ausstellung gesehen) - Ieri abbiamo visto una mostra interessante al museo.
 Der Eintritt für die Ausstellung ist heute kostenlos. (der aintritt für di ausstellung ist hoite kostenlos) - Oggi l'ingresso alla mostra è gratuito.
 Der Film war anders, als ich erwartet hatte, aber ich fand ihn gut. (der film var anders, als ich erwartet hate, aber ich fant in gut) - Il film era diverso da come me l'aspettavo, ma mi è piaciuto.
+Ich hab heute endlich den Kleiderschrank aufgeräumt. (ich hab hoite endlich den klaiderscrank aufgeräumt) - Oggi finalmente ho riordinato l'armadio.
+Die Batterien für die Fernbedienung sind schon wieder leer. (di batterien für di fernbedinung zint scion vider leer) - Le batterie del telecomando sono già scariche di nuovo.
+Stell das Fenster im Schlafzimmer bitte auf Kipp. (stell das fenster im sclafzimmer bitte auf kipp) - Lascia socchiusa la finestra della camera da letto, per favore.
+Der Hund schläft heute den ganzen Vormittag. (der hund sleeft hoite den ganzen formittag) - Oggi il cane dorme per tutta la mattinata.
+Ich muss noch die Handtücher zusammenlegen. (ich muss noch di handtücher tsusammenlegen) - Devo ancora piegare gli asciugamani.
+Die Waschmaschine ist fertig, du kannst sie ausräumen. (di vasmascine ist fertig, du kanst zi ausroimen) - La lavatrice ha finito, puoi svuotarla.
+Ich hab morgens nie viel Hunger. (ich hab morgens nie fiil hunger) - La mattina non ho mai molta fame.
+Kannst du den Käse aus dem Kühlschrank holen? (kanst du den kese aus dem külscrank holen) - Puoi prendere il formaggio dal frigorifero?
+Wir machen heute Abend etwas Einfaches, ich bin ziemlich müde. (vir machen hoite abent etvas ainfaches, ich bin ziemlich müde) - Stasera facciamo qualcosa di semplice, sono piuttosto stanco.
+Lass den Teller ruhig stehen, ich räum später alles weg. (lass den teller ruig steen, ich roim speter alles vek) - Lascia pure il piatto lì, sistemo tutto più tardi.
+Ich hab morgen einen Elternabend in der Schule. (ich hab morgen ainen elternabent in der scule) - Domani ho una riunione dei genitori a scuola.
+Die Hausaufgaben für Deutsch waren diesmal ziemlich einfach. (di hausaufgaben für doitsch varen diesmal ziemlich ainfac) - Questa volta i compiti di tedesco erano piuttosto facili.
+Meine Tochter lernt gerade für eine wichtige Klausur. (maine tochter lernt gerade für aine wichtige klausur) - Mia figlia sta studiando per un esame importante.
+Der Unterricht beginnt morgen erst um neun. (der unterricht beginnt morgen erst um noin) - Domani le lezioni iniziano solo alle nove.
+Ich hab dir doch gesagt, dass du vorher fragen musst. (ich hab dir doch gesagt, das du forher fragen musst) - Ti avevo detto che prima devi chiedere.
+Wenn du deine Aufgaben erledigt hast, kannst du zu deinen Freunden gehen. (ven du daine aufgaben erledigt hast, kanst du tsu dainen froinden geen) - Quando hai finito i compiti, puoi andare dai tuoi amici.
+Heute gibt's keine Ausnahme, morgen musst du wieder früh aufstehen. (hoite gibt's kaine ausname, morgen musst du vider frü aufsteen) - Oggi niente eccezioni, domani devi alzarti presto di nuovo.
+Ich hab in der Apotheke nach etwas für meine Allergie gefragt. (ich hab in der apoteke nach etvas für maine allergie gefragt) - In farmacia ho chiesto qualcosa per la mia allergia.
+Der Apotheker hat mir ein Nasenspray empfohlen. (der apoteker hat mir ain nasenscpray empfohlen) - Il farmacista mi ha consigliato uno spray nasale.
+Ich fühle mich seit ein paar Tagen nicht besonders gut. (ich füle mich sait ain paar tagen nicht besonders gut) - Da qualche giorno non mi sento molto bene.
+Die Untersuchung dauert laut Arzt nicht lange. (di untersuchung dauert laut artzt nicht lange) - Secondo il medico la visita non durerà molto.
+Der Zug fährt heute ausnahmsweise fünf Minuten früher ab. (der tsug fert hoite ausnamsvaize fünf minuten früer ap) - Oggi eccezionalmente il treno parte cinque minuti prima.
+Wir sitzen ganz vorne im Zug. (vir sitzen gants forne im tsug) - Siamo seduti proprio davanti sul treno.
+Ich hab noch ein Ticket für die Rückfahrt besorgt. (ich hab noch ain tiket für di rückfart besorgt) - Ho preso anche un biglietto per il viaggio di ritorno.
+Die nächste U-Bahn kommt in weniger als drei Minuten. (di nechste u-baan kommt in veniger als drai minuten) - La prossima metropolitana arriva tra meno di tre minuti.
+Wir müssen an der Endstation umsteigen. (vir müssen an der endstation umstaigen) - Dobbiamo cambiare alla stazione capolinea.
+Die Anzeige zeigt an, dass die Linie unterbrochen ist. (di antsaige tsaigt an, das di linie unterbrochen ist) - Il display indica che la linea è interrotta.
+Der Busfahrer hat uns noch schnell mitgenommen. (der busfarer hat uns noch scnell mitgenommen) - L'autista dell'autobus ci ha fatto salire al volo.
+Ich steige lieber vorne ein, da ist meistens mehr Platz. (ich staige liber forne ain, da ist maistens meer platz) - Preferisco salire davanti, lì di solito c'è più spazio.
+Am Flughafen ist heute unglaublich viel Betrieb. (am flughafen ist hoite unglaublic fiil betrib) - Oggi in aeroporto c'è un movimento incredibile.
+Wir haben nur noch zwanzig Minuten bis zum Boarding. (vir habn nur noch tsvantsig minuten bis tsum boarding) - Abbiamo solo venti minuti prima del boarding.
+Mein Sitzplatz ist direkt am Fenster. (main zitzplatz ist direkt am fenster) - Il mio posto è proprio vicino al finestrino.
+Die Fähre ist wegen des starken Winds später abgefahren. (di fere ist wegen des starken vints speter abgefaren) - Il traghetto è partito più tardi a causa del forte vento.
+Vom Parkplatz bis zum Hafen sind es ungefähr fünf Minuten. (fom parkplatz bis tsum haafen zint es ungefer fünf minuten) - Dal parcheggio al porto sono circa cinque minuti.
+Ich glaube, wir haben gerade die falsche Ausfahrt genommen. (ich glaube, vir habn gerade di false ausfart genommen) - Credo che abbiamo appena preso l'uscita sbagliata.
+Fahr einfach langsam weiter, wir können später wenden. (far ainfac langsam vaita, vir können speter venden) - Continua semplicemente piano, possiamo fare inversione più avanti.
+Mein Auto zeigt plötzlich eine Warnleuchte an. (main auto tsaigt plötzlich aine varnloichte an) - La mia auto mostra improvvisamente una spia.
+Ich rufe lieber den Pannendienst, bevor ich weiterfahre. (ich rufe liber den pannen-dienst, bevor ich vaita-fare) - Preferisco chiamare il soccorso stradale prima di ripartire.
+Die Kreuzung ist wegen einer Baustelle gesperrt. (di kroitzung ist wegen ainer baustelle gesperrt) - L'incrocio è chiuso a causa di un cantiere.
+Nach dem Unwetter liegen überall Äste auf der Straße. (nach dem unvetter liegen überal este auf der strasse) - Dopo il maltempo ci sono rami dappertutto sulla strada.
+Unser Hotel liegt ziemlich nah am Bahnhof. (unzer hotel ligt ziemlich naa am baanhof) - Il nostro hotel è abbastanza vicino alla stazione.
+Das WLAN-Passwort steht auf einem Zettel neben dem Fernseher. (das ve-lan-passvort steht auf ainem tsettel neben dem fernzeer) - La password del Wi-Fi è su un foglietto accanto alla televisione.
+Im Bad fehlt leider noch Seife. (im baat felt leider noch zaife) - Purtroppo in bagno manca ancora il sapone.
+Das Zimmer wurde heute Morgen noch nicht gereinigt. (das tsimmer wurde hoite morgen noch nicht gereinigt) - La camera stamattina non è ancora stata pulita.
+Wir würden gern zwei zusätzliche Kissen bekommen. (vir würden gern tsvai etsütslice kissen bekommen) - Vorremmo avere due cuscini aggiuntivi.
+Die Wohnung ist schön, aber nachts hört man jedes Geräusch von draußen. (di vonung ist scön, aber nachts hört man jedes geroisc fon draussen) - L'appartamento è bello, ma di notte si sente ogni rumore proveniente dall'esterno.
+Der Vermieter hat gesagt, dass der Techniker morgen kommt. (der fermiter hat gesagt, das der techniker morgen kommt) - Il proprietario ha detto che il tecnico verrà domani.
+Ich hätte gern einen Tisch für zwei, wenn etwas frei ist. (ich hete gern ainen tisc für tsvai, ven etvas frai ist) - Vorrei un tavolo per due, se c'è posto.
+Kann ich statt Pommes auch einen Salat dazu bekommen? (kan ich statt pommes auc ainen zalat datsu bekommen) - Posso avere un'insalata al posto delle patatine?
+Der Kellner hat uns ein Gericht des Tages empfohlen. (der kellner hat uns ain gerict des tages empfohlen) - Il cameriere ci ha consigliato un piatto del giorno.
+Nach dem Essen sind wir noch ein bisschen durch die Stadt gelaufen. (nach dem essen zint vir noch ain bisschen durc di stadt gelaufen) - Dopo cena abbiamo fatto ancora una passeggiata per la città.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
