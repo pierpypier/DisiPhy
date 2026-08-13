@@ -213,6 +213,57 @@ Ich bin mit allem durch, ich kann Feierabend machen. (Ich bin mit allem durch, i
 Vergiss nicht, deine Sachen vom Schreibtisch mitzunehmen. (Fagiss nicht, daine Sachen fom Schreib-tisch mitzunehmen) - Non dimenticare di prendere le tue cose dalla scrivania.
 Wir sehen uns morgen wieder. (Via sehn uns morgen vida) - Ci vediamo di nuovo domani.
 Endlich Feierabend, ich bin total platt. (Endlich Faierabend, ich bin total platt) - Finalmente è finita, sono completamente distrutto.
+Ich muss heute noch ein paar Sachen für morgen vorbereiten. (Ich muss hoite noch ain paa Sachen füa morgen forberaiten) - Devo ancora preparare alcune cose per domani.
+Hast du daran gedacht, deinen Wecker zu stellen? (Hast du daran gedacht, dainen Vekka tsu schtellen) - Ti sei ricordata di mettere la sveglia?
+Mein Rucksack ist schon fertig gepackt. (Main Rucksack ist schon fertig gepackt) - Il mio zaino è già pronto.
+Ich muss morgen etwas früher los als sonst. (Ich muss morgen etvas früa los als sonst) - Domani devo uscire un po' prima del solito.
+Kannst du mir später noch eine Nachricht schicken? (Kanst du mia schpeta noch aine Nachricht schicken) - Puoi mandarmi un messaggio più tardi?
+Ich hab gerade keine Zeit, ich bin mitten in etwas drin. (Ich hab gerade kaine Tsait, ich bin mitten in etvas drin) - In questo momento non ho tempo, sono nel bel mezzo di una cosa.
+Das erledige ich lieber gleich, dann hab ich es hinter mir. (Das erledige ich lieba glaich, dan hab ich es hinter mia) - Preferisco sbrigarmene subito, così me la tolgo di mezzo.
+Wir müssen noch ein paar Sachen für die Woche einkaufen. (Via müssen noch ain paa Sachen füa di Woche einkaufen) - Dobbiamo ancora comprare alcune cose per la settimana.
+Was fehlt uns denn noch aus dem Supermarkt? (Vas fehlt uns den noch aus dem Supamarkt) - Cosa ci manca ancora dal supermercato?
+Schreib es lieber auf, sonst vergessen wir am Ende die Hälfte. (Schraib es lieba auf, sonst fergessen via am Ende di Hälfte) - Meglio scriverlo, altrimenti alla fine dimentichiamo metà delle cose.
+Ich hab gesehen, dass die Milch fast leer ist. (Ich hab gesehn, dass di Milch fast lea ist) - Ho visto che il latte è quasi finito.
+Die Nudeln stehen ganz oben im Schrank. (Di Nudeln schtehen gants oben im Schrank) - La pasta è nello scaffale più in alto.
+Wir haben kaum noch Obst zu Hause. (Via haben kaum noch Obst tsu Hause) - Abbiamo quasi finito la frutta a casa.
+Nimm ruhig die größere Packung, die hält länger. (Nimm ruig di grössere Packung, di hält lenga) - Prendi pure la confezione più grande, dura più a lungo.
+Ich stell die Sachen schon mal in den Kühlschrank. (Ich schtell di Sachen schon mal in den Külsrank) - Metto intanto le cose in frigorifero.
+Hast du gesehen, dass morgen Regen angesagt ist? (Hast du gesehn, dass morgen Regen angesagt ist) - Hai visto che per domani è prevista pioggia?
+Dann nehme ich lieber einen Schirm mit. (Dan neeme ich lieba ainen Schirm mit) - Allora porto meglio un ombrello.
+Das Wetter soll am Nachmittag wieder besser werden. (Das Vetta soll am Nachmittag vida besser werden) - Nel pomeriggio il tempo dovrebbe migliorare di nuovo.
+Wir könnten am Wochenende einen Ausflug machen. (Via könnten am Vochende ainen Ausflug machen) - Potremmo fare una gita nel fine settimana.
+Mal sehen, wie das Wetter wird. (Mal sehn, vi das Vetta virt) - Vediamo come sarà il tempo.
+Ich hab den Termin gerade in meinen Kalender eingetragen. (Ich hab den Termin gerade in mainen Kalenda eingetragen) - Ho appena segnato l'appuntamento nel mio calendario.
+Der Termin wurde kurzfristig verschoben. (Dea Termin vurde kurzfrischtig fershoben) - L'appuntamento è stato spostato all'ultimo momento.
+Ich muss vorher noch etwas im Büro erledigen. (Ich muss forhea noch etvas im Büro erledigen) - Prima devo ancora sbrigare una cosa in ufficio.
+Mein Kollege hat mir die Unterlagen per E-Mail geschickt. (Main Kollege hat mia di Untalagen per I-Meil geschickt) - Il mio collega mi ha mandato i documenti via e-mail.
+Ich schau mir das später in Ruhe an. (Ich schau mia das schpeta in Rue an) - Lo guardo più tardi con calma.
+Kannst du die Datei noch einmal öffnen? (Kanst du di Datai noch ainmal öffnen) - Puoi aprire di nuovo il file?
+Irgendwas stimmt mit dem Drucker nicht. (Irgentvas schtimmt mit dem Drucka nicht) - C'è qualcosa che non va con la stampante.
+Ich hab das Dokument versehentlich geschlossen. (Ich hab das Dokument fersehentlich geschlossen) - Ho chiuso il documento per errore.
+Zum Glück hatte ich es vorher gespeichert. (Tsum Glück hatte ich es forhea gespeichert) - Per fortuna l'avevo salvato prima.
+Wir besprechen den Rest morgen früh. (Via besprechen den Rest morgen frü) - Discutiamo del resto domani mattina.
+Ich bin heute ziemlich spät dran. (Ich bin hoite ziemlich schpät dran) - Oggi sono piuttosto in ritardo.
+Der Bus war schon voll, als ich eingestiegen bin. (Dea Bus var schon foll, als ich eingestiegen bin) - L'autobus era già pieno quando sono salita.
+Deshalb musste ich die ganze Zeit stehen. (Deshalb musste ich di gants Tsait schtehen) - Per questo ho dovuto stare in piedi per tutto il tragitto.
+Ich hoffe, dass ich heute pünktlich nach Hause komme. (Ich hoffe, dass ich hoite pünktlich nach Hause komme) - Spero di tornare a casa puntuale oggi.
+Was möchtest du nach der Schule machen? (Vas möchtest du nach dea Schule machen) - Cosa vuoi fare dopo la scuola?
+Ich wollte mich eigentlich mit einer Freundin treffen. (Ich wollte mich aigentlich mit aina Froindin treffen) - In realtà volevo incontrare un'amica.
+Wir haben uns schon seit ein paar Wochen nicht gesehen. (Via haben uns schon sait ain paa Vohen nicht gesehn) - Non ci vediamo da qualche settimana.
+Dann komm nicht zu spät zum Abendessen. (Dan komm nicht tsu schpät tsum Abendessen) - Allora non fare troppo tardi per cena.
+Ich weiß noch nicht, wann ich zurück bin. (Ich vais noch nicht, van ich tsurück bin) - Non so ancora quando torno.
+Schick einfach kurz Bescheid, wenn du losgehst. (Schick ainfach kurts Beschaid, ven du losgehst) - Mandami solo un messaggio quando parti.
+Mein Handy war den ganzen Vormittag auf lautlos. (Main Hendi var den gantsen Vormittag auf lautlos) - Il mio cellulare è rimasto silenzioso per tutta la mattina.
+Ich hab deine Nachricht erst gerade gesehen. (Ich hab daine Nachricht erst gerade gesehn) - Ho appena visto il tuo messaggio.
+Wir können später gemeinsam darüber sprechen. (Via können schpeta gemeinsam darüba sprechen) - Possiamo parlarne insieme più tardi.
+Heute Abend möchte ich einfach ein bisschen abschalten. (Hoite Abend möchte ich ainfach ain bisschen abschalten) - Stasera voglio semplicemente staccare un po'.
+Lass uns nach dem Essen noch eine Folge anschauen. (Lass uns nach dem Essen noch aine Folge anschauen) - Guardiamoci ancora una puntata dopo cena.
+Mach den Fernseher bitte nicht so laut. (Mach den Fernseha bitte nicht so laut) - Non tenere la televisione così alta, per favore.
+Ich hab morgen früh einen wichtigen Termin. (Ich hab morgen frü ainen wichtigen Termin) - Domani mattina ho un appuntamento importante.
+Dann sollten wir heute nicht allzu spät ins Bett gehen. (Dan sollten via hoite nicht alltsu schpät ins Bett gehen) - Allora stasera non dovremmo andare a letto troppo tardi.
+Leg dein Handy lieber weg und komm essen. (Laik dain Hendi lieba veg und komm essen) - Metti via il cellulare e vieni a mangiare.
+Nur noch einen Moment, ich komme gleich. (Nua noch ainen Moment, ich komme glaich) - Ancora un momento e arrivo.
+Wir reden später weiter, jetzt ist erst mal Essen angesagt. (Via reden schpeta vaita, jetz ist erst mal Essen angesagt) - Ne parliamo più tardi, adesso prima si mangia.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
