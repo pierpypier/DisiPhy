@@ -863,6 +863,55 @@ Wir haben leider nur ein kleines Fenster zum Innenhof. (vir habn leider nur ain 
 Der Wasserkocher im Zimmer funktioniert nicht. (der vasserkocher im tsimmer funktioniert nicht) - Il bollitore in camera non funziona.
 Der Gastgeber hat uns sofort auf unsere Nachricht geantwortet. (der gastgeber hat uns zofort auf unsere nachricht geantwortet) - L'host ha risposto subito al nostro messaggio.
 Wir mussten wegen des Lärms mitten in der Nacht das Zimmer wechseln. (vir mussten wegen des lärms mitten in der nacht das tsimmer veksln) - A causa del rumore abbiamo dovuto cambiare camera nel cuore della notte.
+Ich hab vor dem Frühstück noch kurz den Briefkasten geleert. (ich hab for dem früstück noch kurtz den briefkasten geleert) - Prima di colazione ho svuotato velocemente la cassetta della posta.
+Die Nachbarn sind schon wieder ziemlich laut. (di nachbarn zint scion vider ziemlich laut) - I vicini sono già di nuovo piuttosto rumorosi.
+Ich muss noch die Schuhe sauber machen. (ich muss noch di scue sauber machen) - Devo ancora pulire le scarpe.
+Wo ist das Ladekabel für mein Handy? (vo ist das ladekabel für main hendi) - Dov'è il cavo di ricarica del mio cellulare?
+Der Hund hat sich unter dem Tisch versteckt. (der hund hat zich unter dem tisc fersteckt) - Il cane si è nascosto sotto il tavolo.
+Ich hab vergessen, die Spülmaschine anzuschalten. (ich hab fergeben, di spülmascine antsuschalten) - Ho dimenticato di accendere la lavastoviglie.
+Mach bitte das Licht im Keller aus. (mach bitte das licht im keller aus) - Spegni la luce in cantina, per favore.
+Zum Frühstück mache ich mir meistens Haferflocken. (tsum früstück mache ich mir maistens haferflocken) - A colazione di solito mi preparo dei fiocchi d'avena.
+Ich hab noch einen Kaffee auf dem Herd stehen. (ich hab noch ainen kaffe auf dem hert steen) - Ho ancora un caffè sul fornello.
+Heute Abend essen wir bei meinen Eltern. (hoite abent essen vir bai mainen eltern) - Stasera mangiamo dai miei genitori.
+Die Kinder sind nach dem Essen direkt ins Wohnzimmer gegangen. (di kinder zint nach dem essen direkt ins vonzimmer gegangen) - I bambini dopo cena sono andati direttamente in soggiorno.
+Hast du schon für die Mathearbeit gelernt? (hast du scion für di matearbeit gelernt) - Hai già studiato per il compito di matematica?
+Meine Tochter muss für morgen noch ein Buch lesen. (maine tochter muss für morgen noch ain buc lesen) - Mia figlia deve ancora leggere un libro per domani.
+Der Lehrer hat die Aufgabe an der Tafel erklärt. (der leerer hat di aufgabe an der tafel erklärt) - L'insegnante ha spiegato l'esercizio alla lavagna.
+Sie hat in letzter Zeit bessere Noten bekommen. (zi hat in letzter tsait bessere noten bekommen) - Ultimamente ha preso voti migliori.
+Ich will, dass du heute rechtzeitig nach Hause kommst. (ich vil, das du hoite recht-tsaitig nach hause kommst) - Voglio che oggi torni a casa in orario.
+Du kannst das Fahrrad nehmen, aber pass auf der Straße auf. (du kanst das farat nemen, aber pass auf der strasse auf) - Puoi prendere la bicicletta, ma fai attenzione per strada.
+Ich hab dir schon zweimal gesagt, dass es Zeit zum Schlafengehen ist. (ich hab dir scion tsvai-mal gesagt, das es tsait tsum sclafengeen ist) - Ti ho già detto due volte che è ora di andare a dormire.
+Wenn du dich nicht gut fühlst, bleib heute lieber zu Hause. (ven du dich nicht gut füülst, blaib hoite liber tsu hause) - Se non ti senti bene, oggi resta piuttosto a casa.
+Ich hab in der Apotheke nach einem Mittel gegen Erkältung gefragt. (ich hab in der apoteke nach ainem mittel gegen erkeltung gefragt) - In farmacia ho chiesto un rimedio contro il raffreddore.
+Der Apotheker meinte, ich soll viel Wasser trinken. (der apoteker meinte, ich zol fiil vasser trinken) - Il farmacista ha detto che dovrei bere molta acqua.
+Ich hab seit gestern Ohrenschmerzen. (ich hab sait gestern oren-scmerzen) - Ho mal d'orecchio da ieri.
+Die Untersuchung war zum Glück schnell vorbei. (di untersuchung var tsum glück scnell forbai) - Per fortuna la visita è finita rapidamente.
+Der Zug nach Berlin hat heute zehn Minuten Verspätung. (der tsug nach berlin hat hoite tzen minuten ferspetung) - Il treno per Berlino oggi ha dieci minuti di ritardo.
+Ich hab den Fahrplan auf meinem Handy gespeichert. (ich hab den farplan auf mainem hendi gespeichert) - Ho salvato l'orario dei treni sul cellulare.
+Der Zug ist gerade eingefahren. (der tsug ist gerade eingefaren) - Il treno è appena entrato in stazione.
+Wir müssen auf die andere Seite des Bahnsteigs. (vir müssen auf di andere zaite des baanstaigs) - Dobbiamo andare dall'altra parte del binario.
+Die U-Bahn fährt heute nur alle zehn Minuten. (di u-baan fert hoite nur alle tzen minuten) - Oggi la metropolitana passa solo ogni dieci minuti.
+Ich hab an der nächsten Station einen Termin. (ich hab an der nechsten station ainen termin) - Ho un appuntamento alla prossima stazione.
+Die Rolltreppe nach unten ist ziemlich langsam. (di rolltreppe nach unten ist ziemlich langsam) - La scala mobile per scendere è piuttosto lenta.
+Der Bus ist einfach an uns vorbeigefahren. (der bus ist ainfac an uns forbaigefaren) - L'autobus ci è semplicemente passato davanti.
+Ich hoffe, dass wir im nächsten Bus einen Sitzplatz bekommen. (ich hoffe, das vir im nechsten bus ainen zitzplatz bekommen) - Spero che sul prossimo autobus troviamo un posto a sedere.
+Am Flughafen mussten wir ziemlich lange auf das Gepäck warten. (am flughafen mussten vir ziemlich lange auf das gepek varten) - In aeroporto abbiamo dovuto aspettare parecchio i bagagli.
+Mein Reisepass steckt noch in meinem Rucksack. (main raizepass steckt noch in mainem rucksack) - Il mio passaporto è ancora nello zaino.
+Das Gate ist plötzlich auf die andere Seite verlegt worden. (das geit ist plötzlich auf di andere zaite ferlegt worden) - Il gate è stato improvvisamente spostato dall'altra parte.
+Wir sind schon früh am Hafen angekommen. (vir zint scion frü am haafen angekommen) - Siamo arrivati al porto già presto.
+Die Überfahrt dauert bei ruhiger See ungefähr eine Stunde. (di überfart dauert bai ruiger zee ungefer aine stunde) - Con il mare calmo la traversata dura circa un'ora.
+Entschuldigung, können Sie mir den Weg zum Marktplatz zeigen? (entsculdigung, können zi mir den veg tsum markt-platz tsaigen) - Mi scusi, può indicarmi la strada per la piazza del mercato?
+Nimm die zweite Straße links, dann siehst du das Rathaus. (nim di tsvaita strasse links, dan ziist du das rathaus) - Prendi la seconda strada a sinistra, poi vedrai il municipio.
+Mein Auto verliert Kühlwasser. (main auto ferliirt külvasser) - La mia auto perde liquido di raffreddamento.
+Ich hab den Abschleppdienst schon verständigt. (ich hab den apsclepp-dienst scion ferstendigt) - Ho già chiamato il carro attrezzi.
+Der Reifen ist komplett platt. (der raifen ist komplet platt) - La gomma è completamente a terra.
+Auf der Umgehungsstraße geht es gerade überhaupt nicht voran. (auf der umgeungsstrasse geet es gerade überhaupt nicht foran) - Sulla tangenziale in questo momento non si va avanti per niente.
+Die Baustelle sorgt jeden Morgen für einen riesigen Stau. (di baustelle sorgt jeden morgen für ainen rizigen stau) - Il cantiere provoca ogni mattina un ingorgo enorme.
+Das Wasser ist nach dem Gewitter bis ins Erdgeschoss gelaufen. (das vasser ist nach dem gevitter bis ins erdgescos gelaufen) - Dopo il temporale l'acqua è arrivata fino al piano terra.
+Im Hotel war das Zimmer bei unserer Ankunft noch nicht fertig. (im hotel var das tsimmer bai unzerer ankunft noch nicht fertig) - In hotel la camera non era ancora pronta quando siamo arrivati.
+Könnten Sie bitte jemanden schicken, der sich die Klimaanlage anschaut? (könnten zi bitte jemanden schicken, der zich di klimaanlage anschaut) - Potrebbe mandare qualcuno a controllare l'aria condizionata?
+Wir haben an der Rezeption nach einem ruhigen Zimmer gefragt. (vir habn an der rezeption nach ainem ruigen tsimmer gefragt) - Alla reception abbiamo chiesto una camera tranquilla.
+Der Vermieter hat uns erlaubt, später auszuchecken. (der fermiter hat uns erlaubt, speter auszutscheken) - Il proprietario ci ha permesso di fare il check-out più tardi.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
