@@ -722,6 +722,52 @@ Die Heizung lässt sich überhaupt nicht einstellen. (di haizung lest zich über
 Der Fernseher im Zimmer hat keinen Ton. (der fernzeer im tsimmer hat kainen ton) - Il televisore in camera non ha audio.
 Wir haben für morgen einen Tisch reserviert. (vir habn für morgen ainen tisc reserviert) - Abbiamo prenotato un tavolo per domani.
 Ich hätte gern noch etwas Brot dazu. (ich hete gern noch etvas brot datsu) - Vorrei ancora un po' di pane insieme.
+Ich muss vor dem Schlafengehen noch die Küche aufräumen. (ich muss for dem sclafengeen noch di küce aufroimen) - Prima di andare a dormire devo ancora sistemare la cucina.
+Die Sicherung ist schon wieder rausgeflogen. (di zic-erung ist scion vider rausgeflogen) - È saltato di nuovo il fusibile.
+Ich hab die nassen Handtücher über die Heizung gehängt. (ich hab di nassen handtücher über di haizung gehengt) - Ho appeso gli asciugamani bagnati sul riscaldamento.
+Mach bitte die Waschmaschine erst morgen an. (mach bitte di vasmascine erst morgen an) - Metti in funzione la lavatrice solo domani, per favore.
+Unser Hund bellt jedes Mal, wenn es an der Tür klingelt. (unzer hund belt jedes mal, ven es an der tür klingelt) - Il nostro cane abbaia ogni volta che suona il campanello.
+Hast du den Herd ausgeschaltet? (hast du den hert ausgeschaltet) - Hai spento i fornelli?
+Ich hab keine Zeit für ein großes Frühstück. (ich hab kaine tsait für ain grosses früstück) - Non ho tempo per una colazione abbondante.
+Stell die Marmelade wieder in den Schrank. (stell di marmelade vider in den scrank) - Rimetti la marmellata nell'armadietto.
+Wer macht heute den Abwasch? (ver macht hoite den apvasc) - Chi lava i piatti oggi?
+Wir können später gemeinsam einkaufen gehen. (vir können speter gemeinsam ain-kaufen geen) - Possiamo andare a fare la spesa insieme più tardi.
+Hast du deinen Stundenplan schon bekommen? (hast du dainen stundenplan scion bekommen) - Hai già ricevuto il tuo orario scolastico?
+Morgen schreiben wir einen Test in Biologie. (morgen scraiben vir ainen test in biologie) - Domani abbiamo un test di biologia.
+Die Matheaufgabe sieht komplizierter aus, als sie ist. (di mateaufgabe ziit komplizierter aus, als zi ist) - L'esercizio di matematica sembra più complicato di quanto sia.
+Ich muss heute noch einen Aufsatz für die Schule fertig schreiben. (ich muss hoite noch ainen aufsatz für di scule fertig scraiben) - Oggi devo ancora finire un tema per la scuola.
+Wenn du Hilfe brauchst, kannst du mich jederzeit fragen. (ven du hilfe braucst, kanst du mich tsu jeder-tsait fragen) - Se hai bisogno di aiuto, puoi chiedermi in qualsiasi momento.
+Du darfst heute länger aufbleiben, weil morgen keine Schule ist. (du darfst hoite lenger aufblaiben, vail morgen kaine scule ist) - Stasera puoi stare alzato più a lungo perché domani non c'è scuola.
+Ich möchte wissen, mit wem du unterwegs bist. (ich möcte wissen, mit vem du unterwegs bist) - Voglio sapere con chi sei in giro.
+Wir besprechen das morgen in Ruhe. (vir besprechen das morgen in ru-e) - Ne parliamo con calma domani.
+Nimm lieber etwas Warmes mit, es wird abends kühl. (nim liber etvas varmes mit, es virt abents küül) - Porta qualcosa di caldo, la sera farà fresco.
+Ich hab mir beim Sport den Knöchel leicht verstaucht. (ich hab mir baim sport den knöchel laict ferstaucht) - Mi sono leggermente slogato la caviglia facendo sport.
+Die Ärztin hat mir geraten, ein paar Tage keinen Sport zu machen. (di ärtstin hat mir geraten, ain paar tage kainen sport tsu machen) - La dottoressa mi ha consigliato di non fare sport per qualche giorno.
+Ich muss dieses Rezept noch in der Apotheke einlösen. (ich muss dieses rezept noch in der apoteke ainlösen) - Devo ancora andare in farmacia con questa ricetta.
+Der Blutdruck war bei der Kontrolle ganz normal. (der blutdruk var bai der kontrolle gants normal) - La pressione era del tutto normale durante il controllo.
+Der Zug hat wegen eines technischen Defekts angehalten. (der tsug hat wegen aines technischen defekts angehalten) - Il treno si è fermato a causa di un guasto tecnico.
+Ich glaube, mein Platz ist im nächsten Wagen. (ich glaube, main platz ist im nechsten vagen) - Credo che il mio posto sia nella carrozza successiva.
+Kannst du kurz auf meinen Koffer aufpassen? (kanst du kurtz auf mainen koffer aufpassen) - Puoi tenere d'occhio un attimo la mia valigia?
+Die U-Bahn fährt am Wochenende seltener. (di u-baan fert am vochenende zeltener) - La metropolitana passa meno frequentemente nel fine settimana.
+Ich hab keine Lust, schon wieder so lange zu warten. (ich hab kaine lust, scion vider zo lange tsu varten) - Non ho voglia di aspettare così tanto di nuovo.
+An der nächsten Station kannst du in die andere Linie wechseln. (an der nechsten station kanst du in di andere linie vekseln) - Alla prossima stazione puoi cambiare con l'altra linea.
+Der Bus kommt heute wegen des Berufsverkehrs später. (der bus kommt hoite wegen des berufsferkers speter) - Oggi l'autobus arriva più tardi a causa del traffico dell'ora di punta.
+Ich hab extra eine Verbindung ohne Umsteigen ausgesucht. (ich hab extra aine ferbindung one umstaigen ausgesucht) - Ho scelto apposta una tratta senza cambi.
+Wir müssen am Flughafen noch durch die Passkontrolle. (vir müssen am flughafen noch durc di passkontrolle) - In aeroporto dobbiamo ancora passare il controllo passaporti.
+Unser Flug landet voraussichtlich um halb elf. (unzer flug landet vorauszictlic um halb elf) - Il nostro volo dovrebbe atterrare alle dieci e mezza.
+Ich hoffe, dass unser Gepäck diesmal gleich mitkommt. (ich hoffe, das unzer gepek diesmal glaic mitkommt) - Spero che questa volta i nostri bagagli arrivino subito.
+Die Fähre fährt bei schlechtem Wetter manchmal gar nicht. (di fere fert bai slechtem vetter manchmal gar nicht) - Con il brutto tempo il traghetto a volte non parte proprio.
+Vom Hafen fahren regelmäßig Busse ins Zentrum. (fom haafen faren regelmessig busse ins tsentrum) - Dal porto partono regolarmente autobus per il centro.
+Wir haben uns an diesem Platz komplett verfahren. (vir habn uns an dizem platz komplet ferfaren) - In questa zona ci siamo completamente persi.
+Geh einfach immer Richtung Zentrum, dann findest du es. (ge ainfac immer richtung tsentrum, dan findest du es) - Vai semplicemente sempre verso il centro, poi lo trovi.
+Ich hab beim Starten nur ein Klickgeräusch gehört. (ich hab baim starten nur ain klickgeroisc gehört) - Quando ho provato ad avviare l'auto ho sentito solo un clic.
+Die Werkstatt konnte den Fehler heute nicht finden. (di verkstatt konte den feeler hoite nicht finden) - L'officina oggi non è riuscita a trovare il guasto.
+Auf der Autobahn ist ein langer Stau entstanden. (auf der autobaan ist ain langer stau entstanden) - Sull'autostrada si è formata una lunga coda.
+Wegen der Baustelle ist die ganze Straße gesperrt. (wegen der baustelle ist di gantse strasse gesperrt) - A causa del cantiere l'intera strada è chiusa.
+Im Hotel war nachts ständig jemand auf dem Flur unterwegs. (im hotel var nachts ständig jemand auf dem flur unterwegs) - Di notte in hotel c'era continuamente qualcuno in giro per il corridoio.
+Könnten wir bitte ein Zimmer auf der ruhigeren Seite bekommen? (könnten vir bitte ain tsimmer auf der ruigeren zaite bekommen) - Potremmo avere una camera sul lato più tranquillo?
+Die Dusche verliert irgendwo Wasser. (di dusce ferliirt irgendo vasser) - La doccia perde acqua da qualche parte.
+Ich hab dem Vermieter schon ein Foto vom Schaden geschickt. (ich hab dem fermiter scion ain foto fom scaden geschickt) - Ho già mandato al proprietario una foto del danno.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
