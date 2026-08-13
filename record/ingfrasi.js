@@ -1974,8 +1974,13 @@ const FRASI_ING = FRASI_ING_RAW
   .map(riga => riga.trim())
   .filter(riga => riga.length > 0)
   .map(riga => {
-    const sep = ' — ';
-    const idx = riga.indexOf(sep);
+    // Accetta sia l'em-dash " — " sia il trattino normale " - " come separatore
+    let sep = ' — ';
+    let idx = riga.indexOf(sep);
+    if (idx === -1) {
+      sep = ' - ';
+      idx = riga.indexOf(sep);
+    }
     if (idx === -1) return null;
     return {
       en: riga.slice(0, idx).trim(),
