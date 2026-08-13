@@ -439,6 +439,51 @@ Este plato lleva frutos secos, ¿verdad? (éste plato yéba frútos sékos, berd
 Ayer salimos con unos amigos y nos reímos muchísimo. (ayér salímos kon unos amígos i nos reímos muchísimо) - Ieri siamo usciti con degli amici e abbiamo riso tantissimo.
 Hacía años que no veía a ese chico. (asía años ke no beía a ése chíko) - Erano anni che non vedevo quel ragazzo.
 Qué bien sienta salir un rato después de una semana de trabajo. (ke byén syénta salír un ráto despúes de una semána de trabákho) - Fa proprio bene uscire un po' dopo una settimana di lavoro.
+He separado el papel y el plástico para tirarlos en sus contenedores. (e separádo el papél i el plástiko para tirárlos en sus kontenedóres) - Ho separato la carta e la plastica per buttarle nei rispettivi contenitori.
+¿Puedes apagar el aire cuando salgas de la habitación? (puédes apagár el áire kuándo salgas de la abitasión) - Puoi spegnere l'aria condizionata quando esci dalla stanza?
+La bombilla del baño se ha fundido otra vez. (la bombíya del baño se a fundído ótra bes) - La lampadina del bagno si è bruciata di nuovo.
+He puesto las sobras en un recipiente para mañana. (e puésto las sóbras en un resipyénte para mañana) - Ho messo gli avanzi in un contenitore per domani.
+¿Te importa bajar un poco la música? (te impórta bakhár un póko la músika) - Ti dispiace abbassare un po' la musica?
+Hoy hace demasiado calor para hacer deporte fuera. (oi áse demasiádo kalór para asér depórte fuéra) - Oggi fa troppo caldo per fare sport all'aperto.
+Llevo toda la mañana intentando ordenar los papeles. (yébo toda la mañana intentándo ordenár los papéles) - Sto cercando di mettere in ordine i documenti da tutta la mattina.
+El banco me ha cobrado una comisión que no esperaba. (el bánko me a kobrádo una komisión ke no esperába) - La banca mi ha addebitato una commissione che non mi aspettavo.
+Quiero hacer una transferencia a otra cuenta. (kyéro asér una transferénsia a ótra kuénta) - Voglio fare un bonifico su un altro conto.
+¿Puedo sacar dinero con esta tarjeta? (puédo sakár dinéro kon ésta tarhéta) - Posso prelevare denaro con questa carta?
+La aplicación del banco me pide una contraseña nueva. (la aplikasyón del bánko me píde una kontraseña nuéba) - L'app della banca mi chiede una nuova password.
+Tengo que revisar unos documentos antes de la reunión. (téngo ke rebisár unos dokumentos ántes de la reunyón) - Devo controllare alcuni documenti prima della riunione.
+Te he enviado el informe por correo electrónico. (te e embiádo el infórme por koréo elektróniko) - Ti ho mandato il rapporto per email.
+Tenemos que entregar el proyecto antes de que termine el mes. (tenémos ke entregár el proyékto ántes de ke termíne el mes) - Dobbiamo consegnare il progetto prima della fine del mese.
+La reunión se ha alargado más de lo previsto. (la reunyón se a alargádo más de lo prebísto) - La riunione è durata più del previsto.
+Ahora mismo estoy hablando con un cliente. (aóra mismo estoi ablándo kon un kliyénte) - In questo momento sto parlando con un cliente.
+Se me ha olvidado adjuntar el archivo al correo. (se me a olbidádo adkhuntár el archíbo al koréo) - Mi sono dimenticato di allegare il file all'email.
+Mañana tengo una entrevista para un puesto nuevo. (mañána téngo una entrevista para un puésto nuébo) - Domani ho un colloquio per un nuovo posto di lavoro.
+En mi opinión, esta oferta merece la pena. (en mi opinyón, ésta oférta merése la péna) - Secondo me, questa offerta vale la pena.
+Durante la entrevista me preguntaron por mi experiencia. (duránte la entrevista me preguntáron por mi eksperyénsia) - Durante il colloquio mi hanno chiesto della mia esperienza.
+La videollamada se ha cortado justo cuando empezábamos. (la bidеoyamáda se a kortádo khústo kuándo empesábamos) - La videochiamata è caduta proprio quando stavamo iniziando.
+¿Me oyes bien o se corta el sonido? (me óyes byén o se kórta el sonído) - Mi senti bene o l'audio si interrompe?
+Espera un segundo, voy a conectar los auriculares. (espéra un segúndo, boi a konektár los aurikuláres) - Aspetta un secondo, collego le cuffie.
+La impresora no reconoce el ordenador. (la impresóra no rekonóse el ordenadór) - La stampante non riconosce il computer.
+He reiniciado el router y parece que funciona mejor. (e reini syádo el ráuter i parése ke funksióna mekhór) - Ho riavviato il router e sembra che funzioni meglio.
+El cargador se ha calentado demasiado. (el kargadór se a kalentádo demasiádo) - Il caricabatterie si è surriscaldato troppo.
+La entrada al museo incluye la exposición temporal. (la entráda al muséo inklúye la eksposisyón temporál) - Il biglietto del museo comprende la mostra temporanea.
+Esta pieza arqueológica tiene más de dos mil años. (ésta pyésa arkeolókhika tiéne más de dos mil años) - Questo reperto archeologico ha più di duemila anni.
+¿Podemos hacer fotos dentro de la exposición? (podémos asér fotos déntro de la eksposisyón) - Possiamo fare foto all'interno della mostra?
+La obra empieza a las ocho y tenemos los asientos en la segunda fila. (la óbra empyésa a las ócho i tenémos los asyéntos en la segúnda ríla) - Lo spettacolo inizia alle otto e abbiamo i posti in seconda fila.
+Prefiero sentarme cerca de la salida por si tenemos que irnos antes. (prefyéro sentárme sérka de la salída por si tenémos ke írnos ántes) - Preferisco sedermi vicino all'uscita nel caso dovessimo andare via prima.
+El libro que me recomendaste me está gustando mucho. (el líbro ke me rekomendáste me está gustándo múcho) - Il libro che mi hai consigliato mi sta piacendo molto.
+No he visto todavía la serie de la que todo el mundo habla. (no e bísto todabía la série de la ke todo el mundo ábla) - Non ho ancora visto la serie di cui parlano tutti.
+La película está basada en hechos reales. (la pelikúla está basáda en échos reáles) - Il film è basato su fatti realmente accaduti.
+He empezado a entrenar otra vez después de varios meses. (e empesádo a entrenár ótra bes despúes de bários meses) - Ho ricominciato ad allenarmi dopo diversi mesi.
+Hoy me toca trabajar las piernas en el gimnasio. (oi me tóka trabahár las pyérnas en el khimnásio) - Oggi devo allenare le gambe in palestra.
+Después del entrenamiento necesito descansar un rato. (despúes del entrenamiénto nesesíto deskansár un ráto) - Dopo l'allenamento ho bisogno di riposarmi un po'.
+La previsión dice que por la noche habrá tormenta. (la prebisyón dise ke por la nóche abrá tormenta) - Le previsioni dicono che stanotte ci sarà un temporale.
+Parece que las temperaturas van a bajar durante el fin de semana. (parése ke las temperaturás ban a bakhár duránte el fin de semána) - Sembra che le temperature scenderanno durante il fine settimana.
+Este invierno ha sido bastante más suave de lo normal. (éste inbyérno a sído bastante más suábe de lo normál) - Quest'inverno è stato decisamente più mite del normale.
+Hace un frío tremendo fuera, ponte algo de abrigo. (áse un frío treméndo fuéra, pónte álgo de abrígo) - Fuori fa un freddo tremendo, mettiti qualcosa di pesante.
+No me ha llegado todavía la notificación de la aplicación. (no me a yegádo todabía la notifikasyón de la aplikasyón) - Non mi è ancora arrivata la notifica dell'app.
+Te he escrito por mensaje porque no sabía si estabas ocupado. (te e eskrito por mensáhe porke no sabía si estabas okupádo) - Ti ho scritto perché non sapevo se fossi occupato.
+He visto tu comentario y no estoy del todo de acuerdo. (e bísto tu komentário i no estoi del todo de akuerdo) - Ho visto il tuo commento e non sono del tutto d'accordo.
+Entiendo lo que dices, pero creo que hay otro punto de vista. (entyéndo lo ke dises, péгo kréo ke ai ótro púnto de bista) - Capisco quello che dici, ma credo che ci sia un altro punto di vista.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
