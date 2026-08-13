@@ -1187,6 +1187,58 @@ Por suerte, el taller está muy cerca de aquí. (por suérte, el tayér está mu
 El ayuntamiento ha puesto vallas alrededor de la zona. (el ayuntamyénto a puésto báyas alrededór de la sónа) - Il comune ha messo delle transenne intorno alla zona.
 Lleva toda la mañana sin funcionar el semáforo de esta esquina. (yéba toda la mañana sin funksionár el semáforo de ésta eskína) - Il semaforo di questo angolo non funziona da tutta la mattina.
 Nos han avisado de que habrá cortes de agua durante unas horas. (nos an abisádo de ke abrá kórtes de água duránte unas óras) - Ci hanno avvisato che ci saranno interruzioni dell'acqua per alcune ore.
+He puesto el móvil a cargar porque me quedaba poca batería. (e puésto el móbil a kargár porke me kedába póka bateríа) - Ho messo il cellulare in carica perché mi rimaneva poca batteria.
+Oye, ¿has visto mi cargador por ahí? (óye, as bísto mi kargadór por aí) - Ehi, hai visto il mio caricabatterie da qualche parte?
+La impresora se ha quedado sin tinta justo ahora. (la impresóra se a kedádo sin tinta khústo aóra) - La stampante ha finito l'inchiostro proprio adesso.
+No sé qué le pasa al wifi, va fatal desde esta mañana. (no sé ke le páса al uífi, ba fatál désde ésta mañana) - Non so cosa abbia il wifi, va malissimo da stamattina.
+He reiniciado el router y parece que funciona mejor. (e reinyisiádo el rúter i parése ke funksióna mekhór) - Ho riavviato il router e sembra che funzioni meglio.
+¿Puedes mandarme el documento por correo cuando tengas un momento? (puédes mandárme el dokuménto por kor réo kuándo téngas un moménto) - Puoi mandarmi il documento per email quando hai un momento?
+La reunión se ha alargado más de lo previsto. (la reunyón se a alargádo más de lo preb isto) - La riunione si è protratta più del previsto.
+Tengo que terminar esto antes de la hora de comer. (téngo ke terminár ésto ántes de la óra de komér) - Devo finire questo prima dell'ora di pranzo.
+Te lo envío en cuanto salga de la reunión. (te lo enbío en kuánto salga de la reunyón) - Te lo mando appena esco dalla riunione.
+Hoy voy bastante liado, hablamos luego. (oi boi bastante liádo, ablámos luégo) - Oggi sono parecchio preso, ci sentiamo dopo.
+La videollamada se corta cada dos por tres. (la bid eoyamáda se kórta káda dos por tres) - La videochiamata si interrompe continuamente.
+Creo que tienes el micrófono apagado. (kréo ke tiénes el mikrófono apagádo) - Credo che tu abbia il microfono spento.
+Espera un segundo, que se me ha quedado congelada la pantalla. (espéra un segundo, ke se me a kedádo kongeláda la pantáya) - Aspetta un secondo, mi si è bloccato lo schermo.
+Ahora sí, te escucho perfectamente. (aóra sí, te eskúcho perfektaménte) - Adesso sì, ti sento perfettamente.
+Perdona, se me ha ido la conexión otra vez. (perdóna, se me a ído la koneksyón ótra bes) - Scusa, mi è saltata di nuovo la connessione.
+Esta exposición tiene algunas piezas realmente impresionantes. (ésta eksposisyón tiéne alg unas pyésas real ménte impresyonántes) - Questa mostra ha alcune opere davvero impressionanti.
+¿Sabes de qué época es esta escultura? (sábes de ke é poca es ésta eskultúra) - Sai di che epoca è questa scultura?
+Nos han dado una audioguía en la entrada. (nos an dádo una audioguía en la entráda) - Ci hanno dato un'audioguida all'ingresso.
+No toques nada, está prohibido acercarse a las piezas. (no tókes náda, está proibído aserkárse a las pyésas) - Non toccare nulla, è vietato avvicinarsi alle opere.
+Podríamos quedarnos aquí un rato, hay muchísimo que ver. (podrí amos kedárnos akí un ráto, ai much ísimo ke ber) - Potremmo restare qui un po', c'è davvero molto da vedere.
+La película empieza dentro de diez minutos. (la película empyésa déntro de dyes minútos) - Il film inizia tra dieci minuti.
+¿Te apetece comprar algo antes de entrar? (te apetése komprár álgo ántes de entrár) - Ti va di comprare qualcosa prima di entrare?
+La obra ha sido más divertida de lo que esperaba. (la óbra a sído más dibertída de lo ke esperába) - Lo spettacolo è stato più divertente di quanto mi aspettassi.
+No hagas ruido, que ya ha empezado la película. (no ágas ruído, ke ya a empesádo la película) - Non fare rumore, il film è già iniziato.
+El teatro estaba lleno y apenas quedaban entradas. (el teátro estaba yéno i apénas kedában entrádas) - Il teatro era pieno e rimanevano appena pochi biglietti.
+Vamos a dar una vuelta por el casco antiguo. (bámos a dár una buélta por el kásko antíguo) - Facciamo un giro per il centro storico.
+Desde esta plaza se llega andando al castillo. (désde ésta plása se yéga andándo al kastíyo) - Da questa piazza si arriva a piedi al castello.
+Mira esas casas, todavía conservan las fachadas originales. (míra ésas kásas, todabía konsérban las fachádas origináles) - Guarda quelle case, conservano ancora le facciate originali.
+Nos hemos parado a hacer unas fotos de la catedral. (nos émos parádo a asér unas fótos de la katedral) - Ci siamo fermati a fare qualche foto della cattedrale.
+Hay un mirador al final de esta calle. (ai un miradór al finál de ésta káye) - Alla fine di questa strada c'è un belvedere.
+La ruta empieza fácil, pero luego se complica bastante. (la rúta empyésa fásil, péгo luégo se komplíka bastante) - Il percorso inizia facilmente, ma poi diventa piuttosto impegnativo.
+Llévate algo de agua por si acaso. (yébate álgo de água por si akáso) - Portati un po' d'acqua, non si sa mai.
+Hemos tardado más porque nos hemos parado muchas veces. (émos tardádo más porke nos émos parádo múchas bé ses) - Ci abbiamo messo di più perché ci siamo fermati molte volte.
+No te alejes del sendero, que es fácil perderse por aquí. (no te alehes del sendéro, ke es fásil perdérse por akí) - Non allontanarti dal sentiero, qui è facile perdersi.
+La playa está mucho más tranquila a primera hora de la mañana. (la pláya está múcho más trankíla a priméra óra de la mañana) - La spiaggia è molto più tranquilla di prima mattina.
+Hoy hay bastante viento y las olas están fuertes. (oi ai bastante byénto i las ólas están fuértes) - Oggi c'è molto vento e le onde sono forti.
+Voy a dejar la toalla aquí mientras nos damos un baño. (boi a dekhár la toáya akí miéntras nos dámos un baño) - Lascio qui l'asciugamano mentre facciamo un bagno.
+No te olvides de ponerte crema antes de salir al sol. (no te olbïdes de ponérte kréma ántes de salír al sol) - Non dimenticarti di mettere la crema prima di esporti al sole.
+Qué bien se está aquí, no se oye nada. (ke byén se está akí, no se óye náda) - Si sta proprio bene qui, non si sente nulla.
+Esta tarde vienen unos amigos a casa a tomar algo. (ésta tárde byénen unos amígos a káса a tomár álgo) - Questo pomeriggio vengono degli amici a casa a bere qualcosa.
+No hace falta que traigas nada, tenemos de sobra. (no áse fálta ke tráigas náda, tenémos de sóbra) - Non serve che porti nulla, ne abbiamo in abbondanza.
+Hace muchísimo que no nos vemos, tenemos que ponernos al día. (áse much ísimo ke no nos bé mos, tenémos ke ponérnos al día) - È tantissimo che non ci vediamo, dobbiamo aggiornarci.
+Pasa, pasa, que la puerta está abierta. (páса, páса, ke la puérta está abyérta) - Entra, entra, la porta è aperta.
+Quédate a cenar, hemos preparado comida de sobra. (kédáte a senár, émos preparádo komída de sóbra) - Resta a cena, abbiamo preparato cibo in abbondanza.
+El fontanero ha dicho que vendrá mañana por la mañana. (el fontanéro a dícho ke bendrá mañana por la mañana) - L'idraulico ha detto che verrà domani mattina.
+La caldera hace un ruido extraño cuando se enciende. (la kal déra áse un ruído estráño kuándo se ensyénde) - La caldaia fa uno strano rumore quando si accende.
+Creo que el enchufe se ha estropeado. (kréo ke el enchúfe se a estropeádo) - Credo che la presa elettrica si sia guastata.
+No te preocupes, ya llamaré a alguien para que lo arregle. (no te preokúpes, ya yamaré a algyén para ke lo arregle) - Non preoccuparti, chiamerò qualcuno per farlo sistemare.
+¿Qué tal, cómo va todo? (ke tal, kómo ba todo) - Come va, come procede tutto?
+Pues nada, aquí estamos, tirando como podemos. (pues náda, akí estámos, tirándo komo podémos) - E niente, siamo qui, andiamo avanti come possiamo.
+Hace un tiempo que no hablamos, ¿qué ha sido de ti? (áse un tyémpo ke no ablámos, ke a sído de ti) - È da un po' che non ci sentiamo, che fine hai fatto?
+Me ha alegrado mucho verte después de tanto tiempo. (me a alegrádo múcho verte despúes de tánto tyémpo) - Mi ha fatto molto piacere vederti dopo tanto tempo.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
