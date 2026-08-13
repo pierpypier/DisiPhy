@@ -1415,6 +1415,59 @@ Im Hotel fehlt in unserem Zimmer eine Nachttischlampe. (im hotel felt in unzerem
 Das Zimmermädchen hat unser Zimmer heute noch nicht gemacht. (das tsimmer-medcen hat unzer tsimmer hoite noch nicht gemacht) - La cameriera ai piani oggi non ha ancora sistemato la nostra camera.
 Wir hätten gern zwei weitere Handtücher fürs Bad. (vir heten gern tsvai vaitere handtücher fürs baad) - Vorremmo altri due asciugamani per il bagno.
 Der Gastgeber hat uns erlaubt, die Koffer schon morgens abzustellen. (der gastgeber hat uns erlaubt, di koffer scion morgens ap-tsustellen) - L'host ci ha permesso di lasciare le valigie già al mattino.
+Ich hab die Küche nach dem Frühstück schnell sauber gemacht. (ich hab di küce nach dem früstück scnell sauber gemacht) - Ho pulito velocemente la cucina dopo colazione.
+Die Müllabfuhr war heute schon früh hier. (di mülabfur var hoite scion frü hier) - La raccolta dei rifiuti è già passata presto oggi.
+Ich hab den Haustürschlüssel in der Hosentasche gefunden. (ich hab den haustürschlüssl in der hozentasce gefunden) - Ho trovato la chiave di casa nella tasca dei pantaloni.
+Der Hund liegt gerade unter dem Esstisch. (der hund ligt gerade unter dem esstisc) - Il cane è sdraiato proprio sotto il tavolo da pranzo.
+Unsere Katze miaut jedes Mal, wenn sie Futter will. (unzere katze miaut jedes mal, ven zi futter vil) - La nostra gatta miagola ogni volta che vuole mangiare.
+Ich hab die Waschmaschine auf sechzig Grad eingestellt. (ich hab di vasmascine auf zechzig grad eingestellt) - Ho impostato la lavatrice a sessanta gradi.
+Der Trockner ist noch nicht fertig, ich lass ihn einfach laufen. (der trockner ist noch nicht fertig, ich lass in ainfac laufen) - L'asciugatrice non ha ancora finito, la lascio semplicemente andare.
+Kannst du im Bad das kleine Fenster schließen? (kanst du im baad das klaine fenster schließen) - Puoi chiudere la finestrella del bagno?
+Zum Frühstück hab ich mir eine Banane und Haferflocken gemacht. (tsum früstück hab ich mir aine banane und haferflocken gemacht) - A colazione mi sono preparato una banana e dei fiocchi d'avena.
+Ich hab den Honig neben den Kaffee gestellt. (ich hab den honig neben den kaffe gestellt) - Ho messo il miele accanto al caffè.
+Fürs Mittagessen reicht das Essen von gestern noch. (fürs mittagessen raict das essen fon gestern noch) - Per pranzo basta ancora il cibo di ieri.
+Wir essen heute etwas später, weil noch jemand arbeitet. (vir essen hoite etvas speter, vail noch jemand arbeitet) - Oggi mangiamo un po' più tardi perché qualcuno sta ancora lavorando.
+Kannst du schon mal die Getränke auf den Tisch stellen? (kanst du scion mal di getränke auf den tisc stellen) - Puoi mettere intanto le bevande sul tavolo?
+Nach dem Essen war jeder zu müde zum Aufräumen. (nach dem essen var jeder tsu müde tsum aufroimen) - Dopo cena erano tutti troppo stanchi per riordinare.
+Morgen hat sie in der ersten Stunde Englisch. (morgen hat zi in der ersten stunde englisc) - Domani alla prima ora ha inglese.
+Er hat seine Hausaufgaben ausnahmsweise schon am Nachmittag erledigt. (er hat zaine hausaufgaben ausnamzvaize scion am nachmittag erledigt) - Eccezionalmente ha già fatto i compiti nel pomeriggio.
+Die Lehrerin hat gesagt, dass die Aufgabe freiwillig ist. (di leererin hat gesagt, das di aufgabe fraivilig ist) - L'insegnante ha detto che l'esercizio è facoltativo.
+Sie hat sich für den Kurs entschieden, weil das Thema sie interessiert. (zi hat zich für den kurs entscieden, vail das tema zi interesiert) - Ha scelto il corso perché l'argomento le interessa.
+In der Schule gibt es nächste Woche einen Elternabend. (in der scule gibt es nechste voche ainen elternabent) - La prossima settimana a scuola ci sarà una riunione per i genitori.
+Du musst nicht sofort antworten, denk erst mal darüber nach. (du musst nicht zofort antworten, denk erst mal darüber nach) - Non devi rispondere subito, pensaci prima un po'.
+Ich hab dir gesagt, dass du vorher fragen sollst. (ich hab dir gesagt, das du forer fragen zolst) - Ti ho detto che devi chiedere prima.
+Heute Abend bist du für das Aufräumen zuständig. (hoite abent bist du für das aufroimen tsustendig) - Stasera sei tu incaricato di riordinare.
+Wenn du pünktlich nach Hause kommst, ist alles in Ordnung. (ven du pünktlic nach hause kommst, ist alles in ordnung) - Se torni a casa puntuale, va tutto bene.
+Haben Sie etwas gegen eine leichte Erkältung? (haben zi etvas gegen aine laicte erkeltung) - Avete qualcosa per un leggero raffreddore?
+Ich hab seit zwei Tagen ständig eine verstopfte Nase. (ich hab sait tsvai tagen ständig aine ferstopfte naze) - Ho il naso chiuso continuamente da due giorni.
+Die Apothekerin meinte, ich sollte viel trinken. (di apotekerin meinte, ich zolte fiil trinken) - La farmacista ha detto che dovrei bere molto.
+Ich hab morgen früh einen Termin zur Blutuntersuchung. (ich hab morgen frü ainen termin tsur blutuntersuchung) - Domani mattina ho un appuntamento per un esame del sangue.
+Wenn die Schmerzen stärker werden, ruf bitte den Arzt an. (ven di scmerzen sterker werden, ruf bitte den artzt an) - Se il dolore aumenta, chiama il medico.
+Der Zug steht noch am Bahnsteig, wir können in Ruhe einsteigen. (der tsug steht noch am baanstaig, vir können in ru-e ainstaigen) - Il treno è ancora al binario, possiamo salire con calma.
+Ich hab meinen Rucksack schon im Gepäckfach verstaut. (ich hab mainen rucksack scion im gepäckfac ferstaut) - Ho già sistemato lo zaino nel portabagagli.
+Der Zug ist heute besonders langsam unterwegs. (der tsug ist hoite besonders langsam unterwegs) - Oggi il treno procede in modo particolarmente lento.
+Wir müssen am Bahnhof noch eine Fahrkarte kaufen. (vir müssen am baanhof noch aine fartkarte kaufen) - Alla stazione dobbiamo ancora comprare un biglietto.
+Die U-Bahn fährt in beide Richtungen von diesem Bahnsteig. (di u-baan fert in baide richtungen fon disem baanstaig) - Da questo binario la metropolitana parte in entrambe le direzioni.
+Ich hab die falsche Ausgangstür genommen. (ich hab di falsce ausgangstür genommen) - Ho preso l'uscita sbagliata.
+An dieser Haltestelle hält die Straßenbahn nicht. (an diza haltestelle helt di strassenbaan nicht) - Il tram non ferma a questa fermata.
+Der Bus war pünktlich, aber wir waren zu spät. (der bus var pünktlic, aber vir varen tsu spet) - L'autobus era puntuale, ma noi eravamo in ritardo.
+Ich hab dem Fahrer gesagt, wo ich aussteigen möchte. (ich hab dem farer gesagt, vo ich ausstaigen möcte) - Ho detto all'autista dove volevo scendere.
+Unser Check-in ist erst ab drei Uhr möglich. (unzer check-in ist erst ap drai uur möglich) - Il nostro check-in è possibile solo dalle tre.
+Ich hab meinen Reisepass schon griffbereit. (ich hab mainen raizepass scion griffberait) - Ho già il passaporto a portata di mano.
+Der Flug wurde wegen schlechten Wetters umgeleitet. (der flug wurde wegen sclesten vetters umgeleitet) - Il volo è stato deviato a causa del maltempo.
+Wir haben am Gate noch schnell etwas zu trinken gekauft. (vir habn am geit noch scnell etvas tsu trinken gekauft) - Al gate abbiamo comprato velocemente qualcosa da bere.
+Die Fähre ist ziemlich voll, aber wir haben noch einen Sitzplatz bekommen. (di fere ist ziemlich fol, aber vir habn noch ainen zitzplatz bekommen) - Il traghetto è piuttosto affollato, ma abbiamo trovato ancora un posto a sedere.
+Vom Hafen bis zur Altstadt kann man zu Fuß gehen. (fom haafen bis tsur altstadt kan man tsu fus geen) - Dal porto al centro storico si può andare a piedi.
+An der nächsten Ampel musst du rechts abbiegen. (an der nechsten ampel musst du rechts abigen) - Al prossimo semaforo devi girare a destra.
+Die Straße sieht auf der Karte viel kürzer aus. (di strasse ziit auf der karte fiil kürtser aus) - Sulla mappa la strada sembra molto più corta.
+Beim Bremsen vibriert das Lenkrad ziemlich stark. (baim bremsen fibriert das lenkrad ziemlich stark) - Quando freno il volante vibra parecchio.
+Ich hab das Auto heute zur Inspektion gebracht. (ich hab das auto hoite tsur inspektion gebracht) - Oggi ho portato l'auto a fare il tagliando.
+Der Abschleppdienst hat das Auto zur nächsten Werkstatt gebracht. (der apscleppdienst hat das auto tsur nechsten verkstatt gebracht) - Il soccorso stradale ha portato l'auto all'officina più vicina.
+Auf der Hauptstraße steht seit einer Stunde alles still. (auf der hauptstrasse steht sait ainer stunde alles still) - Sulla strada principale è tutto fermo da un'ora.
+Nach dem Starkregen waren die Keller voller Wasser. (nach dem starkregen varen di keller foler vasser) - Dopo il forte acquazzone le cantine erano piene d'acqua.
+Im Hotel haben wir leider keinen Balkon bekommen. (im hotel habn vir leider kainen balkon bekommen) - Purtroppo in hotel non abbiamo ricevuto una camera con balcone.
+Die Klimaanlage in unserem Zimmer macht ein komisches Geräusch. (di klimaanlage in unzerem tsimmer macht ain komisches geroisc) - L'aria condizionata nella nostra camera fa uno strano rumore.
+Der Gastgeber hat uns erklärt, wo die Waschmaschine steht. (der gastgeber hat uns erklärt, vo di vasmascine steht) - L'host ci ha spiegato dove si trova la lavatrice.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
