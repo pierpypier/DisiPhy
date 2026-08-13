@@ -668,6 +668,56 @@ La habitación es cómoda, pero da a una calle muy ruidosa. (la abitasión es k�
 El aire acondicionado no responde al mando. (el áire akondisionádo no respónde al mándo) - L'aria condizionata non risponde al telecomando.
 ¿Podrían traerme otra almohada, por favor? (podrían traérme ótra almoháda, por fabór) - Potreste portarmi un altro cuscino, per favore?
 Nos han recomendado este restaurante y tiene muy buena pinta. (nos an rekomendádo éste restauránte i tiéne mui buéna pínta) - Ci hanno consigliato questo ristorante e sembra davvero ottimo.
+He limpiado el balcón y ahora voy a sacar la basura. (e limpiádo el balkón i aóra boi a sakár la basúra) - Ho pulito il balcone e ora porto fuori la spazzatura.
+No dejes la puerta del frigorífico abierta tanto tiempo. (no déhes la puérta del frigorífiko abyérta tánto tyémpo) - Non lasciare la porta del frigorifero aperta così a lungo.
+Voy a poner una lavadora antes de salir. (boi a ponér una labadóra ántes de salír) - Metto una lavatrice prima di uscire.
+¿Has visto dónde he puesto las tijeras? (as bísto dónde e puésto las tihéras) - Hai visto dove ho messo le forbici?
+El agua de la cafetera está a punto de acabarse. (el água de la kafetéra está a púnto de akabárse) - L'acqua della macchina del caffè sta per finire.
+El perro necesita salir un momento. (el pérro nesesíta salír un moménto) - Il cane deve uscire un attimo.
+Esta tarde voy a limpiar el polvo de los muebles. (ésta tárde boi a limpiár el polvo de los muébles) - Questo pomeriggio spolvero i mobili.
+He puesto una alarma para acordarme de apagar el horno. (e puésto una alárma para akordárme de apagár el órno) - Ho messo una sveglia per ricordarmi di spegnere il forno.
+Para desayunar me apetece algo dulce. (para desayunár me apetése álgo dulse) - A colazione mi va qualcosa di dolce.
+¿Queda suficiente leche para hacer café? (kéda sufisyénte léche para asér kafé) - È rimasto abbastanza latte per fare il caffè?
+Hoy voy a preparar pasta con verduras. (oi boi a preparár pásta kon berdúras) - Oggi preparo la pasta con le verdure.
+No empieces a comer, que todavía falta tu hermana. (no empyéses a komér, ke todabía fálta tu ermána) - Non iniziare a mangiare, manca ancora tua sorella.
+He guardado el postre para después de cenar. (e guardádo el postre para despúes de senár) - Ho conservato il dolce per dopo cena.
+Mañana tienen que llevar una autorización firmada al colegio. (mañána tiénen ke yebár una autóriasasyón firmáda al kolekhio) - Domani devono portare a scuola un'autorizzazione firmata.
+La clase de matemáticas empieza a primera hora. (la kláse de matemátikas empyésa a priméra óra) - La lezione di matematica è la prima ora.
+Mi hija está bastante contenta con sus notas este trimestre. (mi íha está bastante konténta kon sus nótas éste triméstre) - Mia figlia è piuttosto contenta dei suoi voti questo trimestre.
+¿Tienes todo preparado para el examen? (tiénes todo preparádo para el eksámen) - Hai tutto pronto per l'esame?
+Cuando termines, deja los libros en la mochila. (kuándo termínes, déha los líbros en la mokíla) - Quando hai finito, metti i libri nello zaino.
+Esta noche no hace falta que estudies más. (ésta nóche no áse fálta ke estudies más) - Stasera non c'è bisogno che studi ancora.
+Te dejo salir, pero quiero que vuelvas antes de medianoche. (te dého salír, péгo kyéro ke buélbas ántes de medianóche) - Ti lascio uscire, ma voglio che torni prima di mezzanotte.
+Tengo el cuello un poco cargado desde ayer. (téngo el kuéyo un póko kargádo désde ayér) - Ho il collo un po' contratto da ieri.
+¿Este jarabe sirve también para la tos seca? (éste harábe sírbe tambyén para la tos séka) - Questo sciroppo va bene anche per la tosse secca?
+Me han dicho que tome el medicamento después de comer. (me an dícho ke tóme el medikaménto despúes de komér) - Mi hanno detto di prendere il farmaco dopo aver mangiato.
+La consulta está en la segunda planta. (la konsúlta está en la segúnda plánta) - L'ambulatorio è al secondo piano.
+El tren acaba de entrar en la estación. (el tren akaba de entrár en la estasyón) - Il treno è appena entrato in stazione.
+¿Este asiento está libre? (éste asyénto está líbre) - Questo posto è libero?
+Nos han avisado de que el tren saldrá por otra vía. (nos an abisádo de ke el tren saldrá por ótra bía) - Ci hanno avvisato che il treno partirà da un altro binario.
+Tengo que comprar el billete de ida y vuelta. (téngo ke komprár el biyéte de ída i buélta) - Devo comprare il biglietto di andata e ritorno.
+La estación central está a cinco minutos andando. (la estasyón sentrál está a sínko minútos andándo) - La stazione centrale è a cinque minuti a piedi.
+He dejado pasar dos metros porque iban demasiado llenos. (e dekhádo pasár dos métros porke íban demasiádo yénos) - Ho lasciato passare due metropolitane perché erano troppo affollate.
+La tarjeta no me funciona en los tornos. (la tarhéta no me funksióna en los tórnos) - La tessera non mi funziona ai tornelli.
+Hay que cambiar de andén para coger la otra línea. (ai ke kambyár de andén para kohér la ótra línea) - Bisogna cambiare binario per prendere l'altra linea.
+El autobús se ha saltado nuestra parada. (el autobús se a saltádo nuéstra parąda) - L'autobus ha saltato la nostra fermata.
+¿Sabe si este autobús llega hasta el hospital? (sábe si éste autobús yéga ásta el ospitál) - Sa se questo autobus arriva fino all'ospedale?
+El conductor nos ha pedido que esperemos detrás de la línea. (el konduktór nos a pedído ke esperémos detrás de la línea) - L'autista ci ha chiesto di aspettare dietro la linea.
+El vuelo se ha retrasado por las malas condiciones meteorológicas. (el buélo se a retrasádo por las malas kondisyónes meteorolókhikas) - Il volo è stato ritardato a causa delle cattive condizioni meteorologiche.
+Tengo que sacar la tarjeta de embarque en la máquina. (téngo ke sakár la tarhéta de embarke en la mákina) - Devo stampare la carta d'imbarco alla macchinetta.
+¿Hay que quitarse los zapatos para pasar el control? (ai ke kitárse los sapátos para pasár el kontról) - Bisogna togliersi le scarpe per passare i controlli?
+Mi maleta ha aparecido en la cinta equivocada. (mi maléta a apareсído en la sínta ekibokáda) - La mia valigia è comparsa sul nastro sbagliato.
+El ferry está completo para esta salida. (el férri está kompléto para ésta salída) - Il traghetto è al completo per questa partenza.
+Hemos llegado al puerto con bastante tiempo de sobra. (émos yegádo al puérto kon bastante tyémpo de sóbra) - Siamo arrivati al porto con largo anticipo.
+Sigue todo recto hasta el segundo semáforo. (sígue todo rékto ásta el segúndo semáforo) - Vai sempre dritto fino al secondo semaforo.
+Perdona, creo que estamos buscando la calle equivocada. (perdóna, kréo ke estámos buskándo la káye ekibokáda) - Scusa, credo che stiamo cercando la strada sbagliata.
+El GPS me está llevando por un camino bastante raro. (el khepeése me está yebándo por un kamíno bastante ráro) - Il GPS mi sta portando per una strada piuttosto strana.
+El coche se ha quedado sin gasolina a pocos kilómetros de aquí. (el kóche se a kedádo sin gasolína a pókos kiló metros de akí) - La macchina è rimasta senza benzina a pochi chilometri da qui.
+He llamado a asistencia porque no puedo cambiar la rueda. (e yamádo a asisténsia porke no puédo kambyár la ruéda) - Ho chiamato l'assistenza perché non riesco a cambiare la ruota.
+Hay una cola enorme delante del túnel. (ai una kóla enorme delánte del túnel) - C'è una coda enorme davanti al tunnel.
+El agua ha inundado varias calles del centro. (el água a inundádo bárias káyes del séntrо) - L'acqua ha allagato diverse strade del centro.
+El hotel nos ha dejado hacer el registro un poco antes. (el otél nos a dekhádo asér el rekhístro un póko ántes) - L'hotel ci ha permesso di fare il check-in un po' prima.
+La habitación no está lista todavía, tendremos que esperar. (la abitasión no está lísta todabía, tendrémos ke esperár) - La camera non è ancora pronta, dovremo aspettare.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
