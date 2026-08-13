@@ -484,6 +484,50 @@ No me ha llegado todavía la notificación de la aplicación. (no me a yegádo t
 Te he escrito por mensaje porque no sabía si estabas ocupado. (te e eskrito por mensáhe porke no sabía si estabas okupádo) - Ti ho scritto perché non sapevo se fossi occupato.
 He visto tu comentario y no estoy del todo de acuerdo. (e bísto tu komentário i no estoi del todo de akuerdo) - Ho visto il tuo commento e non sono del tutto d'accordo.
 Entiendo lo que dices, pero creo que hay otro punto de vista. (entyéndo lo ke dises, péгo kréo ke ai ótro púnto de bista) - Capisco quello che dici, ma credo che ci sia un altro punto di vista.
+Hoy me siento con mucha energía y tengo ganas de hacer cosas. (oi me syénto kon múcha enerkhía i téngo gánas de asér kósas) - Oggi mi sento pieno di energia e ho voglia di fare cose.
+Últimamente estoy un poco cansado, pero se me pasará. (últimaménte estoi un póko kansádo, péгo se me pasará) - Ultimamente sono un po' stanco, ma mi passerà.
+No te preocupes por mí, estoy bien. (no te preokúpes por mí, estoi byén) - Non preoccuparti per me, sto bene.
+Me ha hecho ilusión recibir tu mensaje. (me a écho ilusyón resibír tu mensáhe) - Mi ha fatto piacere ricevere il tuo messaggio.
+Estoy bastante nervioso por lo que pueda pasar. (estoi bastante nerbyóso por lo ke puéda pasár) - Sono piuttosto nervoso per quello che potrebbe succedere.
+Necesito desconectar un poco después de este día. (nesesíto deskonektár un póko despúes de éste día) - Ho bisogno di staccare un po' dopo questa giornata.
+La verdad es que me preocupa bastante este asunto. (la berdád es ke me preokúpa bastante éste asúnto) - A dire il vero questa faccenda mi preoccupa parecchio.
+Me alegro de que todo haya salido bien. (me alégro de ke todo áya salído byén) - Sono contento che sia andato tutto bene.
+No estoy enfadado, simplemente estoy decepcionado. (no estoi enfadádo, simplemente estoi desepsionádo) - Non sono arrabbiato, sono semplicemente deluso.
+A mí también me parece una buena idea. (a mí tambyén me parése una buéna idéa) - Anche a me sembra una buona idea.
+Yo lo veo de otra manera, pero respeto tu opinión. (yo lo béo de ótra manéra, péгo respéto tu opinyón) - Io la vedo in un altro modo, ma rispetto la tua opinione.
+En eso tienes toda la razón. (en éso tiénes toda la rasón) - Su questo hai perfettamente ragione.
+No creo que sea tan sencillo como parece. (no kréo ke séa tan sensíyo komo parése) - Non credo che sia così semplice come sembra.
+Estoy de acuerdo contigo hasta cierto punto. (estoi de akuerdo kontígo ásta syérto púnto) - Sono d'accordo con te fino a un certo punto.
+No estoy convencido de que esa sea la mejor solución. (no estoi kombensído de ke ésa séa la mekhór solusyón) - Non sono convinto che quella sia la soluzione migliore.
+¿Cuándo quedamos para tomar un café? (kuándo kedámos para tomár un kafé) - Quando ci vediamo per prendere un caffè?
+Apunta la cita en el calendario para que no se nos olvide. (apúnta la síta en el kalendário para ke no se nos olbide) - Segna l'appuntamento sul calendario così non ce ne dimentichiamo.
+Tengo libre el martes por la tarde. (téngo líbre el mártes por la tárde) - Sono libero martedì pomeriggio.
+Nos vemos a las ocho en la entrada principal. (nos bé mos a las ócho en la entráda prinsipál) - Ci vediamo alle otto all'ingresso principale.
+Llámame cuando tengas un momento libre. (yámame kuándo téngas un moménto líbre) - Chiamami quando hai un momento libero.
+El próximo mes tengo que renovar el documento. (el próksimo mes téngo ke renobár el dokumento) - Il mese prossimo devo rinnovare il documento.
+La reunión está prevista para el día quince. (la reunyón está prebísta para el día kínsе) - La riunione è prevista per il giorno quindici.
+Son las nueve menos cuarto, todavía llegamos a tiempo. (son las nuébe ménos kuárto, todabía yegámos a tyémpo) - Sono le nove meno un quarto, siamo ancora in tempo.
+Tengo una cita a las cuatro y media. (téngo una síta a las kuátro i média) - Ho un appuntamento alle quattro e mezza.
+¿Te viene bien quedar el sábado por la mañana? (te byéne byén kedár el sábаdo por la mañana) - Ti va bene vederci sabato mattina?
+No llegues tarde, que la reserva es a las ocho. (no yégues tárde, ke la resérba es a las ócho) - Non fare tardi, la prenotazione è alle otto.
+Estoy aprendiendo español por mi cuenta. (estoi aprendyéndo espanyol por mi kuénta) - Sto imparando lo spagnolo da solo.
+Tengo una clase de conversación esta tarde. (téngo una kláse de konbersasyón ésta tárde) - Ho una lezione di conversazione questo pomeriggio.
+El profesor nos ha puesto un ejercicio para practicar en casa. (el profesór nos a puésto un ersisísio para praktikár en káса) - L'insegnante ci ha dato un esercizio da fare a casa.
+Me cuesta pronunciar algunas palabras correctamente. (me kuésta pronunsyár algú nas palábras korréktamente) - Faccio fatica a pronunciare correttamente alcune parole.
+Quiero apuntarme a un curso de fotografía. (kyéro apuntárme a un kúrsо de fotografíа) - Voglio iscrivermi a un corso di fotografia.
+Ayer conocí a una pareja muy simpática durante la excursión. (ayér konosí a una paréha mui simpátika duránte la ekskursyón) - Ieri ho conosciuto una coppia molto simpatica durante l'escursione.
+Nos presentaron a sus amigos y estuvimos hablando toda la tarde. (nos presentáron a sus amígos i estubímos ablándo toda la tárde) - Ci hanno presentato ai loro amici e abbiamo parlato tutto il pomeriggio.
+Hace tiempo que no conozco gente nueva. (áse tyémpo ke no konósko khénte nuéba) - È da tempo che non conosco persone nuove.
+¿Te apetece venir con nosotros esta noche? (te apetése benír kon nosótros ésta nóche) - Ti va di venire con noi stasera?
+Mi amigo me ha recomendado un documental sobre historia. (mi amígo me a rekomendádo un dokumentál sóbre istória) - Un mio amico mi ha consigliato un documentario sulla storia.
+Estoy leyendo una novela que me está enganchando muchísimo. (estoi leyéndo una nobéla ke me está enganchándo muchísimо) - Sto leggendo un romanzo che mi sta prendendo tantissimo.
+El final del libro me dejó pensando durante varios días. (el finál del líbro me dekhó pensándo duránte bários días) - Il finale del libro mi ha fatto riflettere per diversi giorni.
+No sabía que esa película estaba basada en una novela. (no sabía ke ésa pelikúla estaba basáda en una nobéla) - Non sapevo che quel film fosse basato su un romanzo.
+El documental explica el tema de una forma muy clara. (el dokumentál eksplíka el téma de una fórma mui klára) - Il documentario spiega l'argomento in modo molto chiaro.
+Me gusta escuchar música mientras hago las tareas de casa. (me gústa eskuchár músika miéntras ágo las taréas de káса) - Mi piace ascoltare musica mentre faccio i lavori di casa.
+Los fines de semana suelo salir en bicicleta por las afueras. (los fínes de semána suélo salír en bisikléta por las afuéras) - Nei fine settimana di solito esco in bicicletta in periferia.
+He empezado a coleccionar monedas antiguas. (e empesádo a koleksionár mónedas antíguas) - Ho iniziato a collezionare monete antiche.
+Anoche jugamos a cartas y acabamos riéndonos todos. (anóche khugámos a kártas i akabámos riéndonos todos) - Ieri sera abbiamo giocato a carte e abbiamo finito tutti per ridere.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
