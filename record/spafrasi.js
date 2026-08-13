@@ -1083,6 +1083,60 @@ El hotel nos ofrece dejar el equipaje después de hacer el check-out. (el otél 
 La habitación da a una calle muy transitada y hay mucho ruido. (la abitasión da a una káye mui transitáda i ai múcho ruído) - La camera dà su una strada molto trafficata e c'è molto rumore.
 El grifo del lavabo gotea sin parar. (el grífo del labábo gotéa sin parár) - Il rubinetto del lavabo perde acqua continuamente.
 El apartamento está limpio, pero el sofá necesita una limpieza. (el apartaménto está límpio, péгo el sofà nesesíta una limpiésa) - L'appartamento è pulito, ma il divano avrebbe bisogno di essere pulito.
+Voy a poner una carga de ropa antes de irme a trabajar. (boi a ponér una kárga de rópa ántes de írme a trabahár) - Metto una lavatrice prima di andare al lavoro.
+¿Puedes recoger las cosas del tendedero? (puédes rekohér las kósas del tend edéro) - Puoi ritirare i panni dallo stendino?
+He dejado las ventanas cerradas porque esta noche hará frío. (e dekhádo las bentánas serrádas porke ésta nóche ará frío) - Ho lasciato le finestre chiuse perché stanotte farà freddo.
+La puerta de entrada no encaja bien en el marco. (la puérta de entráda no enkáha byén en el márko) - La porta d'ingresso non combacia bene con il telaio.
+Voy a limpiar la nevera antes de hacer la compra. (boi a limpiár la nebéra ántes de asér la kóm pra) - Pulisco il frigorifero prima di fare la spesa.
+El perro ha tirado el cuenco y ha puesto todo perdido. (el pérro a tirádo el kuénko i a puésto todo perdído) - Il cane ha rovesciato la ciotola e ha combinato un disastro.
+He encontrado pelos del gato por todo el sofá. (e enkontrádo pé los del gáto por todo el sofà) - Ho trovato peli del gatto su tutto il divano.
+Esta sartén está para tirar, se ha pegado todo. (ésta sartén está para tirár, se a pegádo todo) - Questa padella è da buttare, si è attaccato tutto.
+¿Has puesto agua en el hervidor? (as puésto água en el erb idór) - Hai messo l'acqua nel bollitore?
+Me voy a preparar unas tostadas con tomate. (me boi a preparár unas tostádas kon tomáte) - Mi preparo dei toast con pomodoro.
+Hoy tenemos comida de ayer, así que no cocino. (oi tenémos komída de ayér, así ke no kosíno) - Oggi mangiamo gli avanzi di ieri, quindi non cucino.
+¿Quieres que ponga algo de música mientras comemos? (kyéres ke pónga álgo de músika miéntras komémos) - Vuoi che metta un po' di musica mentre mangiamo?
+La cena estará lista en unos veinte minutos. (la séna estará lísta en unos béinte minútos) - La cena sarà pronta tra una ventina di minuti.
+No te sirvas tanto, que luego no te lo acabas. (no te sírbas tánto, ke luégo no te lo akábas) - Non servirti troppo, poi non riesci a finirlo.
+Mañana hay excursión y tienen que llevar comida de casa. (mañána ai ekskursyón i tiénen ke yebár komída de káса) - Domani c'è una gita e devono portarsi il pranzo da casa.
+La clase empieza a las nueve, pero tienen que estar allí antes. (la kláse empyésa a las nuébe, péгo tiénen ke estár ayí ántes) - La lezione inizia alle nove, ma devono essere lì prima.
+Le cuesta concentrarse cuando hay ruido alrededor. (le kuésta konsentrárse kuándo ai ruído al rededór) - Fa fatica a concentrarsi quando c'è rumore intorno.
+El examen es más fácil de lo que pensábamos. (el eksámen es más fásil de lo ke pensábamos) - L'esame è più facile di quanto pensassimo.
+El profesor les ha dado una semana más para terminar el trabajo. (el profesór les a dádo una semána más para terminár el trabáho) - L'insegnante ha dato loro un'altra settimana per finire il lavoro.
+Esta tarde tienes que repasar los verbos. (ésta tárde tiénes ke repasár los bérbos) - Questo pomeriggio devi ripassare i verbi.
+Puedes quedar con tus amigos después de la clase. (puédes kedár kon tus amígos despúes de la kláse) - Puoi vederti con i tuoi amici dopo la lezione.
+No te enfades, solo te estoy diciendo que tengas cuidado. (no te enfádes, sólo te estoi disyéndo ke téngas ku idádo) - Non arrabbiarti, ti sto solo dicendo di fare attenzione.
+Si vas a volver tarde, deja las llaves puestas en el cajetín. (si bas a bolbér tárde, déha las yábes puéstas en el kahetín) - Se torni tardi, lascia le chiavi nel portachiavi.
+Hoy me siento bastante mejor que ayer. (oi me syénto bastante mekhór ke ayér) - Oggi mi sento decisamente meglio di ieri.
+Tengo una molestia aquí desde hace un par de días. (téngo una molestía akí désde áse un par de días) - Ho un fastidio qui da un paio di giorni.
+¿Necesita que le dé algo para el dolor? (nesesíta ke le dé álgo para el dolór) - Ha bisogno che le dia qualcosa per il dolore?
+La enfermera me ha dicho que espere en la sala. (la enferméra me a dícho ke espére en la sála) - L'infermiera mi ha detto di aspettare in sala.
+Me han hecho unos análisis y estoy esperando los resultados. (me an écho unos anál isis i estoi esperándo los resultádos) - Mi hanno fatto degli esami e sto aspettando i risultati.
+El médico de cabecera está de vacaciones esta semana. (el médiko de kabeséra está de bakasyónes ésta semána) - Il medico di base è in vacanza questa settimana.
+El tren está a punto de salir, date prisa. (el tren está a púnto de salír, date prisa) - Il treno sta per partire, sbrigati.
+Me he quedado sin batería y no puedo enseñar el billete. (me e kedádo sin bateríа i no puédo enseñár el biyéte) - Sono rimasto senza batteria e non posso mostrare il biglietto.
+¿En este tren hay sitio para dejar las maletas? (en éste tren ai sítio para dekhár las malétas) - Su questo treno c'è posto per lasciare le valigie?
+El tren va con retraso, pero dicen que recuperará tiempo. (el tren ba kon retraso, péгo dísen ke rekuperará tyémpo) - Il treno è in ritardo, ma dicono che recupererà tempo.
+Tenemos que subir por las escaleras de la derecha. (tenémos ke subír por las eskaléras de la derécha) - Dobbiamo salire per le scale a destra.
+La entrada del metro está al otro lado de la calle. (la entráda del métro está al ótro ládo de la káye) - L'ingresso della metropolitana è dall'altra parte della strada.
+No te quedes detrás de la puerta, que va a salir mucha gente. (no te kédes detrás de la puérta, ke ba a salír múcha khénte) - Non restare dietro la porta, perché uscirà molta gente.
+El próximo autobús viene por la avenida principal. (el próksimo autobús byéne por la abenída prinsipál) - Il prossimo autobus arriva dal viale principale.
+¿Este autobús acepta pagos con tarjeta? (éste autobús asepta págos kon tarhéta) - Questo autobus accetta pagamenti con la carta?
+El conductor ha esperado a que subiera una señora mayor. (el konduktór a esperádo a ke subyéra una señóra mayór) - L'autista ha aspettato che salisse un'anziana.
+El vuelo lleva casi una hora de retraso. (el buélo yéba káси una óra de retraso) - Il volo ha quasi un'ora di ritardo.
+Nos han pedido que acudamos a la puerta inmediatamente. (nos an pedído ke akudámos a la puérta imediataménte) - Ci hanno chiesto di recarci immediatamente al gate.
+Tengo que pesar la maleta porque creo que me he pasado de peso. (téngo ke pesár la maléta porke kréo ke me e pasádo de péso) - Devo pesare la valigia perché credo di aver superato il peso consentito.
+El control de seguridad está mucho más lleno que antes. (el kontról de seguridád está múcho más yéno ke ántes) - I controlli di sicurezza sono molto più affollati di prima.
+Nos toca embarcar por la puerta de la derecha. (nos tóka embarkár por la puérta de la derécha) - Dobbiamo imbarcarci dal gate a destra.
+El barco está esperando a que suban los últimos pasajeros. (el bárko está esperándo a ke súban los últimos pasahéros) - Il traghetto sta aspettando che salgano gli ultimi passeggeri.
+¿Sabes cuánto falta para llegar al puerto? (sábes kuánto fálta para yegár al puérto) - Sai quanto manca per arrivare al porto?
+Baja por esta calle hasta encontrar una fuente grande. (báha por ésta káye ásta enkontrár una fuénte gránde) - Scendi per questa strada fino a trovare una grande fontana.
+Estamos cerca, pero hemos tomado un pequeño desvío. (estámos sérka, péгo émos tomádo un pekéño desbío) - Siamo vicini, ma abbiamo fatto una piccola deviazione.
+El coche se ha quedado sin batería justo delante de casa. (el kóche se a kedádo sin bateríа khústo delánte de káса) - La macchina è rimasta senza batteria proprio davanti a casa.
+Voy a poner las luces de emergencia mientras esperamos. (boi a ponér las lúses de emerghénsia miéntras esperámos) - Metto le quattro frecce mentre aspettiamo.
+El motor pierde potencia cuando subimos una cuesta. (el motór pyérde poténsia kuándo subímos una kuésta) - Il motore perde potenza quando saliamo una salita.
+Han puesto una ambulancia en la entrada por si hace falta. (an puésto una ambulánsia en la entráda por si áse fálta) - Hanno messo un'ambulanza all'ingresso, nel caso servisse.
+La calle está llena de agua y no se puede pasar. (la káye está yéna de água i no se puéde pasár) - La strada è piena d'acqua e non si può passare.
+Se ha ido la luz en todo el edificio. (se a ído la lus en todo el edifísio) - È saltata la corrente in tutto il palazzo.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
