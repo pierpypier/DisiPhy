@@ -1259,6 +1259,55 @@ Nach dem starken Regen war die Unterführung komplett überflutet. (nach dem sta
 Im Hotel war das WLAN so langsam, dass kaum etwas funktioniert hat. (im hotel var das ve-lan zo langsam, das kaum etvas funktioniert hat) - In hotel il Wi-Fi era così lento che funzionava a malapena qualcosa.
 Könnten Sie bitte die Heizung in unserem Zimmer überprüfen? (könnten zi bitte di haitzung in unzerem tsimmer überprüfen) - Potrebbe controllare il riscaldamento nella nostra camera, per favore?
 Wir haben im Ferienhaus alles so vorgefunden, wie es beschrieben war. (vir habn im ferienhaus alles zo forgefunden, vi es beschrieben var) - Nella casa vacanze abbiamo trovato tutto come era descritto.
+Ich hab die Fenster heute weit aufgemacht, damit frische Luft reinkommt. (ich hab di fenster hoite vait aufgemacht, damit frisce luft rainkommt) - Oggi ho spalancato le finestre per far entrare aria fresca.
+Die Schlüssel sind diesmal in der Schublade neben dem Telefon. (di schlüssl zint diesmal in der scublade neben dem telefon) - Questa volta le chiavi sono nel cassetto accanto al telefono.
+Ich muss noch den Mülleimer in der Küche leeren. (ich muss noch den müleimer in der küce leren) - Devo ancora svuotare il cestino della cucina.
+Der Hund hat seine Decke im Wohnzimmer zerfetzt. (der hund hat zaine decke im vonzimmer zerfetst) - Il cane ha fatto a pezzi la sua coperta in soggiorno.
+Die Katze wartet schon vor dem Futternapf. (di katze wartet scion for dem futternapf) - Il gatto sta già aspettando davanti alla ciotola.
+Ich hab die Handtücher gerade aus dem Trockner genommen. (ich hab di handtücher gerade aus dem trockner genommen) - Ho appena tolto gli asciugamani dall'asciugatrice.
+Die Waschmaschine zeigt plötzlich einen Fehler an. (di vasmascine tsaigt plötzlich ainen fehler an) - La lavatrice improvvisamente segnala un errore.
+Kannst du bitte die letzte Lampe im Flur ausschalten? (kanst du bitte di letzte lampe im flur ausschalten) - Puoi spegnere l'ultima luce in corridoio, per favore?
+Ich trinke meinen Kaffee heute lieber auf dem Balkon. (ich trinke mainen kaffe hoite liber auf dem balkon) - Oggi preferisco bere il caffè sul balcone.
+Zum Frühstück hatte ich nur ein Brötchen mit Käse. (tsum früstück hatte ich nur ain brötcen mit keze) - A colazione ho mangiato solo un panino con formaggio.
+Kannst du den Salat schon mal auf den Tisch stellen? (kanst du den zalat scion mal auf den tisc stellen) - Puoi mettere intanto l'insalata in tavola?
+Wir haben nach dem Essen noch einen Spaziergang gemacht. (vir habn nach dem essen noch ainen spaciergang gemacht) - Dopo cena abbiamo fatto ancora una passeggiata.
+Mein Sohn hat heute seine Brotdose zu Hause vergessen. (main zon hat hoite zaine brotdoze tsu hause fergeben) - Oggi mio figlio ha dimenticato a casa il contenitore del pranzo.
+In der nächsten Stunde schreiben wir einen Test. (in der nechsten stunde schreiben vir ainen test) - Nell'ora successiva facciamo una verifica.
+Für die Hausaufgabe muss sie einen kurzen Text schreiben. (für di hausaufgabe muss zi ainen kurtzen text schreiben) - Per i compiti deve scrivere un breve testo.
+Der neue Schüler sitzt direkt neben ihm. (der noie scüler sitzt direkt neben im) - Il nuovo studente siede proprio accanto a lui.
+Ich hab dir extra einen Zettel für morgen hingelegt. (ich hab dir extra ainen tsettel für morgen hingelegt) - Ti ho lasciato apposta un biglietto per domani.
+Du musst Bescheid sagen, wenn sich deine Pläne ändern. (du musst bescait sagen, ven zich daine pläne ändern) - Devi avvisarmi se cambiano i tuoi programmi.
+Heute darfst du selbst entscheiden, was wir anschauen. (hoite darfst du zelbst entscaiden, vas vir anschauen) - Oggi puoi decidere tu cosa guardiamo.
+Ich möchte, dass du mir kurz Bescheid gibst, bevor du losfährst. (ich möcte, das du mir kurtz bescait gibst, bevor du losferst) - Voglio che mi avvisi brevemente prima di partire.
+Haben Sie etwas gegen eine verstopfte Nase und Kopfschmerzen? (haben zi etvas gegen aine ferstopfte naze und kopfscmerzen) - Avete qualcosa per il naso chiuso e il mal di testa?
+Ich hab die Tropfen dreimal am Tag nehmen müssen. (ich hab di tropfen draimal am tag nemen müssen) - Ho dovuto prendere le gocce tre volte al giorno.
+Die Apotheke macht heute schon um sechs zu. (di apoteke macht hoite scion um zeks tsu) - Oggi la farmacia chiude già alle sei.
+Mein Termin beim Arzt wurde auf nächste Woche verschoben. (main termin baim artzt wurde auf nechste voche ferscoben) - Il mio appuntamento dal medico è stato spostato alla prossima settimana.
+Ich hab plötzlich starke Rückenschmerzen bekommen. (ich hab plötzlich starke rücken-scmerzen bekommen) - Ho avuto improvvisamente un forte mal di schiena.
+Unser Zug kommt heute auf einem anderen Gleis an. (unzer tsug kommt hoite auf ainem anderen glais an) - Oggi il nostro treno arriva su un altro binario.
+Ich hab die Verbindung mit dem schnelleren Zug gewählt. (ich hab di ferbindung mit dem scnellereren tsug gewelt) - Ho scelto il collegamento con il treno più veloce.
+Der Zug hält hier nur zwei Minuten. (der tsug helt hier nur tsvai minuten) - Il treno qui si ferma solo due minuti.
+Wir können während der Fahrt etwas essen. (vir können während der fart etvas essen) - Possiamo mangiare qualcosa durante il viaggio.
+Die U-Bahn fährt unter der ganzen Innenstadt durch. (di u-baan fert unter der ganzen innenstadt durc) - La metropolitana passa sotto tutto il centro della città.
+Ich hab am Automaten eine Tageskarte gekauft. (ich hab am automaten aine tageskarte gekauft) - Ho comprato un biglietto giornaliero alla macchinetta.
+Die nächste Station ist nur zwei Minuten entfernt. (di nechste station ist nur tsvai minuten entfernt) - La prossima stazione dista solo due minuti.
+Der Bus ist heute pünktlicher als sonst. (der bus ist hoite pünktlicer als sonst) - Oggi l'autobus è più puntuale del solito.
+Ich hab meinen Rucksack auf dem Sitz neben mir abgestellt. (ich hab mainen rucksack auf dem zitz neben mir apgestellt) - Ho appoggiato lo zaino sul sedile accanto a me.
+Am Flughafen mussten wir unsere Schuhe ausziehen. (am flughafen mussten vir unsere scue aus-tsien) - In aeroporto abbiamo dovuto toglierci le scarpe.
+Ich hab die Bordkarte schon als PDF auf dem Handy. (ich hab di bortkarte scion als pe-de-ef auf dem hendi) - Ho già la carta d'imbarco in PDF sul cellulare.
+Unser Flug geht erst heute Abend. (unzer flug geet erst hoite abent) - Il nostro volo parte solo stasera.
+Die Fähre ist pünktlich im Hafen angekommen. (di fere ist pünktlic im haafen angekommen) - Il traghetto è arrivato puntualmente al porto.
+Wir haben die Autoschlüssel vor dem Einsteigen noch mal kontrolliert. (vir habn di autosc-lüssl for dem ainstaigen noch mal kontrolliert) - Prima di salire abbiamo controllato ancora una volta le chiavi dell'auto.
+Nach dem Kreisverkehr nimmst du die erste Ausfahrt. (nach dem kraisferker nimst du di erste ausfart) - Dopo la rotatoria prendi la prima uscita.
+Das Navi hat uns über eine kleinere Straße geschickt. (das navi hat uns über aine klainere strasse geschickt) - Il navigatore ci ha fatto passare per una strada secondaria.
+Ich hab beim Parken einen Pfosten übersehen. (ich hab baim parken ainen pfosten überzeen) - Durante il parcheggio non ho visto un paletto.
+Die Batterie ist leer, deshalb springt der Wagen nicht an. (di baterie ist leer, deshalb springt der vagen nicht an) - La batteria è scarica, per questo l'auto non parte.
+Wir mussten das Auto am Straßenrand stehen lassen. (vir mussten das auto am strassenrand steen lassen) - Abbiamo dovuto lasciare l'auto sul bordo della strada.
+Der Strom ist während des Gewitters zweimal ausgefallen. (der strom ist während des gevitters tsvai-mal ausgefallen) - Durante il temporale è saltata la corrente due volte.
+Wegen der Baustelle kommt man hier momentan nicht durch. (wegen der baustelle kommt man hier momentan nicht durc) - A causa del cantiere al momento non si riesce a passare da qui.
+Im Hotel fehlt uns noch eine zweite Zimmerkarte. (im hotel felt uns noch aine tsvaita tsimmerkarte) - In hotel ci manca ancora una seconda tessera della camera.
+Das Fenster im Bad lässt sich nicht richtig schließen. (das fenster im baad lest zich nicht richtig schließen) - La finestra del bagno non si chiude bene.
+Der Gastgeber hat uns die Hausregeln per Nachricht geschickt. (der gastgeber hat uns di hausregeln per nachricht geschickt) - L'host ci ha mandato le regole della casa per messaggio.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
