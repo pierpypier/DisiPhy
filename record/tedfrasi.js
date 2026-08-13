@@ -312,6 +312,76 @@ Kannst du mich kurz hören? Meine Internetverbindung spinnt schon wieder. (kanst
 Der Drucker erkennt meinen Laptop einfach nicht. (der druker erkennt mainen leptop ainfac nicht) - La stampante proprio non riconosce il mio portatile.
 Das Museum ist viel größer, als ich erwartet hatte. (das muzeum ist fiil gröser, als ich erwartet hate) - Il museo è molto più grande di quanto mi aspettassi.
 Wir sind gestern stundenlang durch die Altstadt gelaufen. (vir zint gestern stundenlang durc di altstadt gelaufen) - Ieri abbiamo camminato per ore nel centro storico.
+Hast du die Schlüssel gesehen? (Hast du di Shlüssel gezéen?) - Hai visto le chiavi?
+Ich hab den Herd schon ausgemacht. (Ish hab den Hert shon aus-gemakt) - Ho già spento i fornelli.
+Mach bitte das Licht im Flur aus. (Makh bitte das Likt im Fluur aus) - Spegni per favore la luce nel corridoio.
+Die Spülmaschine ist schon wieder kaputt. (Di Shpühlmashiine ist shon vieder kaputt) - La lavastoviglie si è di nuovo rotta.
+Wer geht heute mit dem Hund raus? (Vér geet hoite mit dem Hund raus?) - Chi porta fuori il cane oggi?
+Gibt's noch Kaffee für mich? (Ghipts nokh Kafee für mish?) - C'è ancora caffè per me?
+Iss dein Frühstück auf, du kommst zu spät. (Iss dain Frühshtük auf, du kommst tsu shpèt) - Finisci la colazione, farai tardi.
+Hast du deine Hausaufgaben schon fertig? (Hast du daine Hausaufgaben shon fertikh?) - Hai già finito i compiti?
+Der Lehrer hat uns viel zu viel aufgegeben. (Der Léarer hat uns fiil tsu fiil aufgegeeben) - Il professore ci ha dato troppi compiti.
+Darf ich heute Abend länger draußen bleiben? (Darf ish hoite Aabent lènger drausen blaiben?) - Posso stare fuori più a lungo stasera?
+Räum bitte dein Zimmer auf, bevor du rausgehst. (Roim bitte dain Tsimmer auf, befoor du rausgeest) - Metti in ordine la stanza prima di uscire.
+Ich brauch was gegen Kopfschmerzen. (Ish braukh vas geegen Kopfshmertsen) - Ho bisogno di qualcosa contro il mal di testa.
+Haben Sie das auch ohne Rezept? (Haaben Zii das aukh oone Retsept?) - Ce l'avete anche senza ricetta?
+Der Zug hat mal wieder Verspätung. (Der Tsuuk hat maal vieder Fershpèetung) - Il treno è di nuovo in ritardo.
+Von welchem Gleis fährt der Zug nach München? (Fon velshem Glais fèrt der Tsuuk nakh Münshen?) - Da quale binario parte il treno per Monaco?
+Steig hier um, die U-Bahn fährt nur bis hier. (Shtaik hiir um, di Uubaan fèrt nuur bis hiir) - Cambia qui, la metro arriva solo fino a qui.
+Der Bus kommt heute einfach nicht. (Der Buss kommt hoite ainfakh nikht) - L'autobus oggi proprio non arriva.
+Wo ist der Check-in-Schalter für diesen Flug? (Voo ist der Chek-in-Shalter für diisen Fluuk?) - Dov'è il banco check-in per questo volo?
+Die Fähre legt in zehn Minuten ab. (Di Fèere leekt in tseen Minuuten ap) - Il traghetto parte tra dieci minuti.
+Entschuldigung, wie komm ich zum Marktplatz? (Entshuldigung, vii komm ish tsum Marktplats?) - Scusi, come arrivo alla piazza del mercato?
+Biegen Sie an der Ampel links ab. (Biigen Zii an der Ampel links ap) - Giri a sinistra al semaforo.
+Mein Auto springt einfach nicht an. (Main Auto shpringt ainfakh nikht an) - La mia auto proprio non si accende.
+Wir hatten einen kleinen Unfall auf der Autobahn. (Viir hatten ainen klainen Unfal auf der Autobaan) - Abbiamo avuto un piccolo incidente in autostrada.
+Können Sie mir den Pannendienst rufen? (Können Zii mir den Pannendiinst ruufen?) - Può chiamarmi il soccorso stradale?
+Wegen des Staus komm ich später. (Veegen des Shtaus komm ish shpèter) - A causa del traffico arriverò più tardi.
+Der Keller steht schon wieder unter Wasser. (Der Keller shteet shon vieder unter Vasser) - La cantina è di nuovo allagata.
+Wir hätten gern ein ruhiges Zimmer zum Hof. (Viir hèten gern ain ruiges Tsimmer tsum Hoof) - Vorremmo una camera tranquilla sul cortile.
+Die Klimaanlage funktioniert leider nicht. (Di Klimaanlaage funktsioniirt laider nikht) - Purtroppo il condizionatore non funziona.
+Im Zimmer nebenan ist es die ganze Nacht laut. (Im Tsimmer neebenan ist es di gantse Nakht laut) - Nella camera accanto c'è rumore tutta la notte.
+Wann checken wir am besten aus? (Van cheken viir am besten aus?) - Quando conviene fare il check-out?
+Der Schlüssel für die Wohnung liegt unter der Matte. (Der Shlüssel für di Voonung liikt unter der Matte) - La chiave dell'appartamento è sotto lo zerbino.
+Können wir schon mal die Karte haben? (Können viir shon maal di Karte haaben?) - Possiamo già avere il menu?
+Für mich bitte das Schnitzel ohne Pommes. (Für mish bitte das Shnitsel oone Pommes) - Per me lo schnitzel senza patatine, grazie.
+Sollen wir uns noch auf ein Bier treffen? (Zolen viir uns nokh auf ain Biir treffen?) - Ci vediamo ancora per una birra?
+Ich hab gestern was total Peinliches erlebt. (Ish hab gestern vas total Painlishes erleebt) - Ieri mi è successa una cosa davvero imbarazzante.
+Brauchst du noch was vom Supermarkt? (Brauchst du nokh vas fom Zuupermarkt?) - Ti serve ancora qualcosa dal supermercato?
+Die Tomaten sehen heute nicht so frisch aus. (Di Tomaaten seen hoite nikht zoo frish aus) - I pomodori oggi non sembrano tanto freschi.
+Haben Sie das auch in einer anderen Größe? (Haaben Zii das aukh in ainer anderen Grösse?) - Ce l'avete anche in un'altra taglia?
+Das Meeting wurde schon wieder verschoben. (Das Miiting vurde shon vieder fershooben) - La riunione è stata di nuovo rimandata.
+Kannste mir kurz die Präsentation schicken? (Kannste miir kurts di Prèsentatsioon shiken?) - Puoi mandarmi velocemente la presentazione?
+Meine Kamera geht nicht, könnt ihr mich hören? (Maine Kaamera geet nikht, könnt iir mish hören?) - La mia camera non funziona, mi sentite?
+Der Drucker hat schon wieder kein Papier. (Der Druker hat shon vieder kain Papiir) - La stampante è di nuovo senza carta.
+Das WLAN ist hier echt langsam. (Das Veelaan ist hiir ekt langzaam) - Il wifi qui è davvero lento.
+Die Ausstellung im Museum war echt beeindruckend. (Di Ausshtelung im Muzeeum var ekt be-aindrukend) - La mostra al museo era davvero impressionante.
+Wollen wir heute Abend ins Kino gehen? (Volen viir hoite Aabent ins Kiino geen?) - Vogliamo andare al cinema stasera?
+Die Altstadt ist wirklich schön zum Bummeln. (Di Altshtat ist virklish shöön tsum Bumeln) - Il centro storico è davvero bello per passeggiare.
+Der Weg zur Hütte war steiler als gedacht. (Der Veek tsur Hütte var shtailer als gedakht) - Il sentiero per il rifugio era più ripido del previsto.
+Am Strand war es heute total voll. (Am Shtrant var es hoite total foll) - In spiaggia oggi era tutto pieno.
+Kommt ihr uns dieses Wochenende besuchen? (Kommt iir uns diizes Vokhenende bezuukhen?) - Venite a trovarci questo weekend?
+Der Handwerker kommt erst nächste Woche. (Der Hantverker kommt erst nèkste Vokhe) - L'operaio viene solo la prossima settimana.
+Wie geht's dir, lange nicht gesehen! (Vii geets diir, lange nikht gezeen!) - Come stai, non ci vediamo da tanto!
+Mir tut seit heute Morgen der Bauch weh. (Miir tuut zait hoite Morgen der Baukh vee) - Da stamattina mi fa male la pancia.
+Rufen Sie sofort einen Krankenwagen! (Ruufen Zii zofort ainen Krankenvaagen!) - Chiamate subito un'ambulanza!
+Jemand hat mir das Fahrrad geklaut. (Yemant hat miir das Faarrat geklaut) - Qualcuno mi ha rubato la bicicletta.
+Gehst du heute noch ins Fitnessstudio? (Geest du hoite nokh ins Fitnesshtudio?) - Vai ancora oggi in palestra?
+Morgen soll es den ganzen Tag regnen. (Morgen zol es den gantsen Taak reegnen) - Domani dovrebbe piovere tutto il giorno.
+Ich muss noch schnell Geld überweisen. (Ish muss nokh shnel Gelt übervaizen) - Devo ancora fare velocemente un bonifico.
+Die Karte wurde leider abgelehnt. (Di Karte vurde laider apgelent) - La carta purtroppo è stata rifiutata.
+Das Vorstellungsgespräch lief richtig gut. (Das Foorshtelungsgeshprèkh liif rishtikh guut) - Il colloquio di lavoro è andato davvero bene.
+Unser Kater will einfach nicht fressen. (Unzer Kaater vill ainfakh nikht fressen) - Il nostro gatto proprio non vuole mangiare.
+Wir feiern ihren Geburtstag im Garten. (Viir faiern iiren Geburtstaak im Garten) - Festeggiamo il suo compleanno in giardino.
+Ich hab schon zehn Nachrichten von ihr bekommen. (Ish hab shon tseen Nakhrikhten fon iir bekommen) - Ho già ricevuto dieci messaggi da lei.
+Ehrlich gesagt, da bin ich anderer Meinung. (Eerlish gezaakt, da bin ish anderer Mainung) - Sinceramente, su questo non sono d'accordo.
+Ich freu mich total auf morgen. (Ish froi mish total auf morgen) - Sono davvero contento per domani.
+Um wie viel Uhr treffen wir uns genau? (Um vii fiil Uur treffen viir uns genau?) - A che ora ci vediamo esattamente?
+Wir sollten wirklich mehr Müll trennen. (Viir zolten virklish meer Müll trennen) - Dovremmo davvero fare più la raccolta differenziata.
+Lesen ist echt mein liebstes Hobby. (Leezen ist ekt main liipstes Hobi) - Leggere è davvero il mio hobby preferito.
+Der Sprachkurs fängt nächste Woche an. (Der Shprakhkurs fèngt nèkste Vokhe an) - Il corso di lingua inizia la prossima settimana.
+Ich hab da neulich eine super Frau kennengelernt. (Ish hab da noilish aine zuuper Frau kenengelernt) - Ho conosciuto di recente una donna fantastica.
+Hast du das neue Buch von ihr schon gelesen? (Hast du das noie Buukh fon iir shon gelezen?) - Hai già letto il suo nuovo libro?
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
