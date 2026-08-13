@@ -1056,6 +1056,56 @@ In unserem Viertel sind mehrere Straßen wegen Bauarbeiten gesperrt. (in unzerem
 Könnten Sie bitte jemanden wegen des defekten Schlosses schicken? (könnten zi bitte jemanden wegen des defekten schlosses schicken) - Potrebbe mandare qualcuno per la serratura guasta, per favore?
 Das Wasser in der Dusche wird leider nicht richtig warm. (das vasser in der dusce virt leider nicht richtig varm) - Purtroppo l'acqua della doccia non diventa abbastanza calda.
 Wir haben an der Rezeption nach einem weiteren Schlüssel gefragt. (vir habn an der rezeption nach ainem vaiteren schlüssl gefragt) - Alla reception abbiamo chiesto un'altra chiave.
+Ich hab heute Morgen den Geschirrspüler ausgeräumt, bevor ich zur Arbeit gegangen bin. (ich hab hoite morgen den geschirspüler ausgeroimt, bevor ich tsur arbeit gegangen bin) - Stamattina ho svuotato la lavastoviglie prima di andare al lavoro.
+Die Haustür fällt immer ziemlich laut ins Schloss. (di haustür felt immer ziemlich laut ins schloss) - La porta d'ingresso si chiude sempre con un rumore piuttosto forte.
+Ich hab die Ersatzschlüssel beim Nachbarn gelassen. (ich hab di ersatzschlüssl baim nachbarn gelassen) - Ho lasciato le chiavi di riserva dal vicino.
+Unsere Katze schläft tagsüber meistens auf dem Sessel. (unzere katze schläft tagsüber maistens auf dem sessel) - La nostra gatta durante il giorno dorme quasi sempre sulla poltrona.
+Die Waschmaschine läuft noch, also warte bitte mit dem Wäschekorb. (di vasmascine läuft noch, also varte bitte mit dem vescekorb) - La lavatrice è ancora in funzione, quindi aspetta con il cesto della biancheria.
+Ich hab das Geschirr von gestern Abend noch nicht weggeräumt. (ich hab das geschir fon gestern abent noch nicht veggeroimt) - Non ho ancora sistemato i piatti di ieri sera.
+Machst du heute Kaffee oder soll ich? (machst du hoite kaffe oder zol ich) - Fai tu il caffè oggi o lo faccio io?
+Ich hab mir schnell ein belegtes Brot gemacht. (ich hab mir scnell ain belegtes brot gemacht) - Mi sono preparato velocemente un panino.
+Fürs Mittagessen brauchen wir noch frisches Gemüse. (fürs mittagessen brauchen vir noch frisches gemüze) - Per pranzo ci servono ancora delle verdure fresche.
+Nach dem Essen räumen wir gemeinsam den Tisch ab. (nach dem essen roimen vir gemeinsam den tisc ap) - Dopo cena sparecchiamo insieme.
+Die Schule hat nächste Woche einen Wandertag geplant. (di scule hat nechste voche ainen vandertag geplant) - La scuola ha organizzato un'escursione per la prossima settimana.
+In welchem Fach hast du eigentlich die meisten Probleme? (in velchem fac hast du eigentlich di maisten probleme) - In quale materia hai più difficoltà?
+Der Lehrer hat die Prüfung auf Freitag verschoben. (der leerer hat di prüfung auf fraitag ferscoben) - L'insegnante ha spostato l'esame a venerdì.
+Sie hat sich gestern nach dem Unterricht noch mit einer Freundin getroffen. (zi hat zich gestern nach dem unterrict noch mit ainer froindin getroffen) - Ieri dopo le lezioni si è incontrata ancora con un'amica.
+Du kannst heute deine Hausaufgaben im Wohnzimmer machen. (du kanst hoite daine hausaufgaben im vonzimmer machen) - Oggi puoi fare i compiti in soggiorno.
+Ich möchte nicht, dass du morgens immer in letzter Minute losgehst. (ich möcte nicht, das du morgens immer in letzter minute losgest) - Non voglio che ogni mattina tu esca all'ultimo momento.
+Wenn du ausgehst, nimm bitte dein Handy mit. (ven du ausgest, nim bitte dain hendi mit) - Quando esci, porta con te il cellulare, per favore.
+Wir können darüber reden, sobald du wieder zu Hause bist. (vir können darüber reden, sobald du vider tsu hause bist) - Possiamo parlarne appena sei di nuovo a casa.
+Heute ist die letzte Folge, danach gehen wir schlafen. (hoite ist di letzte folge, danach geen vir sclafen) - Stasera c'è l'ultimo episodio, poi andiamo a dormire.
+Ich hab in der Apotheke nach etwas gegen Allergien gefragt. (ich hab in der apoteke nach etvas gegen allergien gefragt) - In farmacia ho chiesto qualcosa contro le allergie.
+Haben Sie diese Salbe auch ohne Rezept? (haben zi deze zalbe auc one rezept) - Avete questa pomata anche senza ricetta?
+Der Arzt hat gesagt, dass die Wunde gut verheilt. (der artzt hat gesagt, das di vunde gut ferhailt) - Il medico ha detto che la ferita sta guarendo bene.
+Ich soll nächste Woche noch einmal zur Kontrolle kommen. (ich zol nechste voche noch ainmal tsur kontrolle kommen) - Devo tornare la prossima settimana per un controllo.
+Der Zug ist pünktlich, das hätte ich heute nicht erwartet. (der tsug ist pünktlic, das hete ich hoite nicht erwartet) - Il treno è puntuale, oggi non me l'aspettavo.
+Ich hab extra einen Platz am Fenster reserviert. (ich hab extra ainen platz am fenster reserviert) - Ho prenotato apposta un posto vicino al finestrino.
+Der Zug fährt heute aus einem anderen Bahnhof ab. (der tsug fert hoite aus ainem anderen baanhof ap) - Oggi il treno parte da un'altra stazione.
+Wir haben nur fünf Minuten bis zum nächsten Zug. (vir habn nur fünf minuten bis tsum nechsten tsug) - Abbiamo solo cinque minuti fino al prossimo treno.
+In der U-Bahn ist gerade kein einziger Sitzplatz frei. (in der u-baan ist gerade kain ainziger zitzplatz frai) - In metropolitana in questo momento non c'è neanche un posto libero.
+Ich steige eine Station früher aus und gehe den Rest zu Fuß. (ich staige aine station früer aus und ge-e den rest tsu fus) - Scendo una fermata prima e faccio il resto a piedi.
+Die Anzeige zeigt eine Verzögerung von fünf Minuten an. (di antsaige tsaigt aine ferzögerung fon fünf minuten an) - Il display indica un ritardo di cinque minuti.
+Der Busfahrer hat die Tür direkt vor meiner Nase zugemacht. (der busfarer hat di tür direkt for meiner nase tsugemacht) - L'autista dell'autobus mi ha chiuso la porta proprio davanti al naso.
+Ich hab online gesehen, dass unser Flug verspätet ist. (ich hab onlain gesehen, das unser flug ferspetet ist) - Ho visto online che il nostro volo è in ritardo.
+Wo kann ich hier meinen Koffer wiegen? (vo kan ich hier mainen koffer wiegen) - Dove posso pesare qui la mia valigia?
+Wir müssen nach der Sicherheitskontrolle sofort zu unserem Gate. (vir müssen nach der ziherhaitskontrolle zofort tsu unzerem geit) - Dopo i controlli di sicurezza dobbiamo andare subito al nostro gate.
+Die Fähre hat wegen des starken Windes Verspätung. (di fere hat wegen des starken vindes ferspetung) - Il traghetto è in ritardo a causa del forte vento.
+Auf dem Deck ist es heute ziemlich windig. (auf dem deck ist es hoite ziemlich vindig) - Oggi sul ponte c'è parecchio vento.
+Entschuldigung, ist das Museum von hier aus weit? (entsculdigung, ist das muzeum fon hier aus vait) - Mi scusi, il museo è lontano da qui?
+Du bist in die falsche Richtung gelaufen, dreh lieber um. (du bist in di falsce richtung gelaufen, dre-e liber um) - Hai camminato nella direzione sbagliata, torna indietro.
+Beim Losfahren hat plötzlich die Motorleuchte aufgeleuchtet. (baim losfaren hat plötzlich di motorloichte aufgeleuchtet) - Quando sono partito si è accesa improvvisamente la spia del motore.
+Ich glaube, mit dem Reifen stimmt etwas nicht. (ich glaube, mit dem raifen stimmt etvas nicht) - Credo che ci sia qualcosa che non va con la gomma.
+Der Abschleppwagen soll in etwa zwanzig Minuten da sein. (der apscleppvagen zol in etwa tsvantsig minuten da zain) - Il carro attrezzi dovrebbe arrivare tra circa venti minuti.
+Der Verkehr hat sich nach dem Unfall schnell wieder normalisiert. (der ferker hat zich nach dem unfal scnell vider normalisiert) - Dopo l'incidente il traffico è tornato rapidamente alla normalità.
+Wegen eines Rohrbruchs ist das Wasser in mehreren Häusern abgestellt. (wegen aines roorbruchs ist das vasser in mereren hoizern apgestellt) - A causa della rottura di una tubatura, l'acqua è stata interrotta in diverse case.
+Unser Hotelzimmer war bei der Ankunft eiskalt. (unzer hoteltsimmer var bai der ankunft aiskalt) - La nostra camera d'hotel era gelida al nostro arrivo.
+Die Rezeption hat uns sofort eine zusätzliche Decke gebracht. (di rezeption hat uns zofort aine zusätzliche decke gebracht) - La reception ci ha portato subito una coperta aggiuntiva.
+Ich hab im B&B nach einem späteren Check-out gefragt. (ich hab im be-e-en-be nach ainem speteren check-out gefragt) - Nel B&B ho chiesto di poter fare il check-out più tardi.
+Der Gastgeber war sehr freundlich und hat uns alles erklärt. (der gastgeber var zeer froindlic und hat uns alles erklärt) - L'host è stato molto gentile e ci ha spiegato tutto.
+Im Restaurant würde ich gern draußen sitzen. (im restaurant würde ich gern draussen sitzen) - Al ristorante vorrei sedermi fuori.
+Wir haben noch nichts bestellt, wir warten auf einen Freund. (vir habn noch nichts bestellt, vir varten auf ainen froint) - Non abbiamo ancora ordinato, stiamo aspettando un amico.
+Kannst du mir die Speisekarte kurz rüberschieben? (kanst du mir di speisekarte kurtz rüber-sciben) - Puoi passarmi un attimo il menù?
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
