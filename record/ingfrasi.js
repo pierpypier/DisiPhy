@@ -1811,6 +1811,57 @@ The trail gets pretty steep after this point (dhë treil ghets priti stiip aftë
 The boiler's making a strange noise, can you take a look (dhë boilërz meikin a streingi nois, kèn yu teik a luuk) - La caldaia fa uno strano rumore, puoi dare un'occhiata
 It's freezing out there today (its friizin aut dher tudei) - Fa un freddo pungente fuori oggi
 I need to transfer some money to my savings account (ai niid tu trènsfër sam mani tu mai seivinz akaunt) - Devo trasferire dei soldi sul mio conto di risparmio
+I can't find my other shoe anywhere (ai kènt faind mai adhër scìu ènìuer) - Non trovo da nessuna parte l'altra scarpa
+Don't slam the door, the baby's asleep (dount slèm dhë dor, dhë beibiz aslìip) - Non sbattere la porta, il bambino sta dormendo
+Whose turn is it to walk the dog tonight (huuz tërn is it tu uok dhë dog tunait) - Di chi è il turno di portare fuori il cane stasera
+I'll set the table if you start cooking (ail set dhë teibël if yu start kukin) - Apparecchio io se tu inizi a cucinare
+We're having pasta again, is that okay (uir hèvin pasta eghèn, is dhèt okei) - Mangiamo di nuovo la pasta, va bene
+Can you pass the salt, please (kèn yu pès dhë solt, pliiz) - Puoi passarmi il sale, per favore
+Hurry up or we'll be late for school (hari ap or uìl bi leit for skuul) - Sbrigati o faremo tardi per la scuola
+I left my textbook at school by mistake (ai left mai tekstbuk et skuul bai misteik) - Ho lasciato per sbaglio il libro a scuola
+The teacher gave us way too much homework (dhë tiicër gheiv as uei tuu mach houmuork) - L'insegnante ci ha dato troppi compiti
+Can I stay up a little later tonight (kèn ai stei ap a litël leitër tunait) - Posso stare sveglio un po' più tardi stasera
+You need to tidy your room before dinner (yu niid tu taidi yor ruum bifor dinër) - Devi riordinare la stanza prima di cena
+I've got a bit of a headache today (aiv gat a bit ov a hedeik tudei) - Ho un po' di mal di testa oggi
+Do you have anything for a sore throat (du yu hev enìthin for a sor throut) - Avete qualcosa per il mal di gola
+The train's delayed by twenty minutes (dhë treinz dileid bai tuenti minits) - Il treno è in ritardo di venti minuti
+Which platform does it leave from (uic plètform daz it liiv from) - Da quale binario parte
+Mind the gap between the train and the platform (maind dhë ghèp bituìn dhë trein end dhë plètform) - Attenzione allo spazio tra il treno e la banchina
+Does this bus go anywhere near the station (daz dhis bas gou enìuer nir dhë steiscion) - Questo autobus passa vicino alla stazione
+I think we got on the wrong bus (ai think uì gat on dhë rong bas) - Credo che siamo saliti sull'autobus sbagliato
+We need to check in two hours before the flight (uì niid tu chek in tuu auerz bifor dhë flait) - Dobbiamo fare il check-in due ore prima del volo
+My suitcase didn't come out on the belt (mai suutkeis didënt kam aut on dhë belt) - La mia valigia non è uscita sul nastro
+The ferry's a bit late leaving today (dhë fèriz a bit leit liivin tudei) - Il traghetto parte un po' in ritardo oggi
+Sorry, I think I'm a little lost (sori, ai think aim a litël lost) - Scusa, credo di essermi un po' perso
+Just go straight and it's on your right (giast gou streit end its on yor rait) - Vai dritto ed è sulla tua destra
+The car's making a funny noise when I brake (dhë karz meikin a fani nois uen ai breik) - La macchina fa uno strano rumore quando freno
+We got a flat tyre halfway there (uì gat a flèt tair hafuei dher) - Abbiamo forato una gomma a metà strada
+There's roadworks on the way into town (dhers roudworks on dhë uei intu taun) - Ci sono lavori in corso sulla strada verso il centro
+The power's been out since this morning (dhë pauerz bin aut sins dhis mornin) - La corrente è saltata da stamattina
+Could we get a room with a better view (kud uì ghet a ruum uidh a betër viu) - Potremmo avere una camera con una vista migliore
+The shower's not draining properly (dhë sciauerz not dreinin properli) - La doccia non scarica bene
+Is breakfast included in the price (is brekfëst inkluudid in dhë prais) - La colazione è inclusa nel prezzo
+The neighbours upstairs are so loud (dhë neibërz apsteirz ar sou laud) - I vicini di sopra sono così rumorosi
+Our host said check-out is at eleven (auer houst sed chekaut is et ilevën) - L'host ha detto che il check-out è alle undici
+Could we get a table for four, please (kud uì ghet a teibël for for, pliiz) - Possiamo avere un tavolo per quattro, per favore
+What do you recommend from the menu (uat du yu rekomend from dhë meniu) - Cosa consigli dal menù
+Could I get this without cheese (kud ai ghet dhis uidhaut chiiz) - Potrei averlo senza formaggio
+Let's grab a coffee before we head out (lets grèb a kofi bifor uì hed aut) - Prendiamo un caffè prima di uscire
+He told the funniest story last night (hi tould dhë faniëst stori lest nait) - Ha raccontato la storia più divertente ieri sera
+I'm not really in the mood to go out tonight (aim not rìeli in dhë muud tu gou aut tunait) - Non ho proprio voglia di uscire stasera
+Do you have this in a smaller size (du yu hev dhis in a smolër saiz) - Ce l'avete in una taglia più piccola
+I'm just browsing, thanks (aim giast brauzin, thènks) - Sto solo guardando, grazie
+Can I get a refund if it doesn't fit (kèn ai ghet a rifand if it dazënt fit) - Posso avere un rimborso se non va bene
+The meeting's been pushed back to three (dhë miitinz bin puscht bèk tu thrii) - La riunione è stata spostata alle tre
+I still haven't heard back from them (ai stil hèvënt hërd bèk from dhem) - Non ho ancora ricevuto risposta da loro
+Can everyone see my screen okay (kèn evriuan sii mai skriin okei) - Riuscite tutti a vedere bene lo schermo
+The printer's out of ink again (dhë printërz aut ov ink eghèn) - La stampante è di nuovo senza inchiostro
+This museum's bigger than I expected (dhis miuuziëm iz bighër dhèn ai ekspektid) - Questo museo è più grande di quanto mi aspettassi
+We should get tickets online in advance (uì sciud ghet tikëts onlain in edvèns) - Dovremmo prendere i biglietti online in anticipo
+The view from up here is incredible (dhë viu from ap hir is inkredibël) - La vista da quassù è incredibile
+It looks like rain later this afternoon (it luks laik rein leitër dhis afternuun) - Sembra che pioverà nel pomeriggio
+I need to renew my card, it's about to expire (ai niid tu rinìuu mai kard, its abaut tu ekspaiër) - Devo rinnovare la carta, sta per scadere
+How did the job interview go (hau did dhë giob intërviu gou) - Com'è andato il colloquio di lavoro
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
