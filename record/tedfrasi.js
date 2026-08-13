@@ -264,6 +264,54 @@ Dann sollten wir heute nicht allzu spät ins Bett gehen. (Dan sollten via hoite 
 Leg dein Handy lieber weg und komm essen. (Laik dain Hendi lieba veg und komm essen) - Metti via il cellulare e vieni a mangiare.
 Nur noch einen Moment, ich komme gleich. (Nua noch ainen Moment, ich komme glaich) - Ancora un momento e arrivo.
 Wir reden später weiter, jetzt ist erst mal Essen angesagt. (Via reden schpeta vaita, jetz ist erst mal Essen angesagt) - Ne parliamo più tardi, adesso prima si mangia.
+Ich hab die Spülmaschine schon ausgeräumt. (ich hab di spüülmascine scion ausgeräumt) - Ho già svuotato la lavastoviglie.
+Mach bitte das Licht im Flur aus. (mach bitte das licht im flur aus) - Per favore spegni la luce in corridoio.
+Wo sind eigentlich die Wohnungsschlüssel? (vo zint eigentlich di vonungsschlüssl) - Dove sono le chiavi di casa, già?
+Die Waschmaschine läuft noch, also warte kurz. (di vasmascine leuft noch, also varte kurtz) - La lavatrice sta ancora andando, quindi aspetta un attimo.
+Der Hund hat schon wieder mein Frühstück geklaut. (der hund hat scion vider main früstück geklaut) - Il cane mi ha rubato di nuovo la colazione.
+Kannst du den Tisch decken? Das Essen ist gleich fertig. (kanst du den tisc deken? das essen ist glaic fertig) - Puoi apparecchiare? La cena è quasi pronta.
+Ich muss heute früher los, ich hab einen Termin. (ich muss hoite früer los, ich hab einen termin) - Oggi devo uscire prima, ho un appuntamento.
+Hast du deine Hausaufgaben schon gemacht? (hast du daine hausaufgaben scion gemacht) - Hai già fatto i compiti?
+Unser Lehrer hat die Klassenarbeit auf nächste Woche verschoben. (unzer leerer hat di klassenarbeit auf nechste voche ferscoben) - Il nostro insegnante ha rimandato il compito in classe alla prossima settimana.
+Für Mathe brauche ich echt länger als gedacht. (für mate brauche ich echt lenger als gedacht) - Per matematica ci metto davvero più tempo del previsto.
+Du kannst heute Abend noch raus, aber sei um zehn wieder da. (du kanst hoite abent noch raus, aber zai um tzen vider da) - Stasera puoi ancora uscire, ma alle dieci devi essere di nuovo a casa.
+Räum erst dein Zimmer auf, dann kannst du spielen. (reum erst dain zimmer auf, dan kanst du scpilen) - Prima riordina la tua camera, poi puoi giocare.
+Ich hab dir doch gesagt, dass du dein Handy nachts nicht benutzen sollst. (ich hab dir doch gesagt, das du dain hendi nachts nicht benutzen zolst) - Ti avevo detto che di notte non devi usare il cellulare.
+Heute gibt's zum Mittagessen Nudeln mit Gemüse. (hoite gibt's zum mittagessen nudeln mit gemüze) - Oggi a pranzo ci sono pasta e verdure.
+Leg das Handy beim Essen bitte weg. (leg das hendi baim essen bitte vek) - Metti via il cellulare mentre mangiamo, per favore.
+Ich nehme morgens meistens nur einen Kaffee und ein Stück Brot. (ich näme morgens maistens nur ainen kaffe und ain Stück brot) - La mattina di solito prendo solo un caffè e un pezzo di pane.
+Die Apotheke macht in einer halben Stunde zu. (di apoteke macht in ainer halben stunde zu) - La farmacia chiude tra mezz'ora.
+Ich brauche etwas gegen Kopfschmerzen, aber nichts Starkes. (ich brauche etvas gegen kopfscmerzen, aber nichts starkes) - Mi serve qualcosa per il mal di testa, ma niente di forte.
+Der Zug nach München fährt heute von Gleis sieben. (der zug nach münchen fert hoite fon glais zibn) - Il treno per Monaco oggi parte dal binario sette.
+Weißt du, ob der Zug schon Verspätung hat? (vaist du, ob der zug scion ferspetung hat) - Sai se il treno è già in ritardo?
+Ich steig an der nächsten Station aus. (ich staig an der nechsten station aus) - Scendo alla prossima fermata.
+Die U-Bahn war so voll, dass ich kaum einsteigen konnte. (di u-baan var zo fol, das ich kaum ainstaigen konte) - La metropolitana era così piena che riuscivo a malapena a salire.
+Fährt dieser Bus auch bis zum Hauptbahnhof? (fert diza bus auc bis zum hauptbaanhof) - Questo autobus arriva anche fino alla stazione centrale?
+Wir müssen umsteigen, sonst fahren wir in die falsche Richtung. (vir müssen umstaigen, sonst faren vir in di false ricchtung) - Dobbiamo cambiare, altrimenti andiamo nella direzione sbagliata.
+Der Flug geht erst heute Abend, wir haben also noch Zeit. (der flug geet erst hoite abent, vir habn also noch tsait) - Il volo parte solo stasera, quindi abbiamo ancora tempo.
+Hast du schon online eingecheckt? (hast du scion onlain eingecekt) - Hai già fatto il check-in online?
+Wo muss ich hin, wenn ich nur Handgepäck habe? (vo muss ich hin, ven ich nur handgepek habe) - Dove devo andare se ho solo il bagaglio a mano?
+Die Fähre legt in zwanzig Minuten ab. (di fere legt in tsvantsig minuten ap) - Il traghetto parte tra venti minuti.
+Vom Hafen bis zur Altstadt sind es nur zehn Minuten zu Fuß. (fom haafen bis tsur altstadt zint es nur tzen minuten zu fus) - Dal porto al centro storico ci sono solo dieci minuti a piedi.
+Fahr an der nächsten Kreuzung links und dann immer geradeaus. (far an der nechsten kroitzung links und dan immer geradeaus) - Alla prossima rotonda gira a sinistra e poi vai sempre dritto.
+Mein Auto springt plötzlich nicht mehr an. (main auto springt plötzlic nicht meer an) - La mia auto all'improvviso non parte più.
+Ich hatte gerade einen kleinen Unfall, aber niemand ist verletzt. (ich hate gerade ainen klainen unfall, aber nimant ist ferletzt) - Ho appena avuto un piccolo incidente, ma nessuno si è fatto male.
+Wegen des starken Regens ist die Straße komplett überflutet. (vegen des starken regens ist di strasse komplet überflutet) - A causa della forte pioggia la strada è completamente allagata.
+Bei uns ist gerade der Strom ausgefallen. (bai uns ist gerade der strom ausgefalen) - Da noi è appena saltata la corrente.
+Könnten Sie mir bitte noch ein Handtuch aufs Zimmer bringen? (könnten zi mir bitte noch ain handtuch aufs tsimmer bringen) - Potrebbe portarmi ancora un asciugamano in camera, per favore?
+In unserem Bad funktioniert die Dusche nicht richtig. (in unzerem baat funktioniert di dusce nicht richtig) - Nel nostro bagno la doccia non funziona bene.
+Die Klimaanlage ist ziemlich laut, besonders nachts. (di klimaanlage ist ziemlich laut, besonders nachts) - L'aria condizionata è piuttosto rumorosa, soprattutto di notte.
+Der Gastgeber war supernett und hat uns sogar früher einchecken lassen. (der gastgeber var supernett und hat uns sogar früer ainceken lassen) - Il proprietario è stato gentilissimo e ci ha persino permesso di fare il check-in prima.
+Für drei Personen hätten wir gern einen Tisch am Fenster. (für drai personen heten vir gern ainen tisc am fenster) - Per tre persone vorremmo un tavolo vicino alla finestra.
+Ich nehme den Fisch, aber bitte ohne Zwiebeln. (ich näme den fisc, aber bitte one tsvibeln) - Prendo il pesce, ma senza cipolle, per favore.
+Hast du noch Lust auf einen Drink nach dem Essen? (hast du noch lust auf ainen drink nach dem essen) - Ti va ancora di bere qualcosa dopo cena?
+Ich muss noch Milch und Eier kaufen. (ich muss noch milc und aia kaufen) - Devo ancora comprare latte e uova.
+Die Jacke sieht gut aus, aber sie ist mir ein bisschen zu teuer. (di iake ziit gut aus, aber zi ist mir ain bisschen tsu toia) - La giacca è bella, ma per me è un po' troppo costosa.
+Ich schicke dir die Unterlagen später per E-Mail. (ich scike dir di unterlagen speter per imeil) - Ti mando i documenti più tardi per email.
+Kannst du mich kurz hören? Meine Internetverbindung spinnt schon wieder. (kanst du mich kurtz hören? maine internetferbindung spinnt scion vider) - Mi senti un attimo? La connessione Internet fa di nuovo i capricci.
+Der Drucker erkennt meinen Laptop einfach nicht. (der druker erkennt mainen leptop ainfac nicht) - La stampante proprio non riconosce il mio portatile.
+Das Museum ist viel größer, als ich erwartet hatte. (das muzeum ist fiil gröser, als ich erwartet hate) - Il museo è molto più grande di quanto mi aspettassi.
+Wir sind gestern stundenlang durch die Altstadt gelaufen. (vir zint gestern stundenlang durc di altstadt gelaufen) - Ieri abbiamo camminato per ore nel centro storico.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
