@@ -180,6 +180,55 @@ Le wifi marche bien dans le salon, mais pas dans la chambre. (le wifi marsc biè
 J'ai trouvé un vieux livre dans une boîte au grenier. (ʒé truvé an vjö livr dan ün buat o grenié) - Ho trovato un vecchio libro in una scatola in soffitta.
 On devrait partir tôt demain pour éviter la chaleur. (on dövré partir to döman pur evité la scialör) - Dovremmo partire presto domani per evitare il caldo.
 Je préfère marcher plutôt que prendre la voiture pour si peu de distance. (ʒö prefer marscé plüto ke prandr la vuatür pur si pö de distans) - Preferisco andare a piedi piuttosto che prendere la macchina per una distanza così breve.
+J'ai mis le linge à sécher sur le balcon. (ʒé mi le liènʒ a seʃé sür le balkon) - Ho messo il bucato ad asciugare sul balcone.
+Tu peux arroser les plantes avant de sortir ? (tü pö aroze le plant avan de sortir) - Puoi annaffiare le piante prima di uscire?
+J'ai retrouvé les clés au fond de mon sac. (ʒé retruvé le clé o fon de mon sak) - Ho ritrovato le chiavi in fondo alla mia borsa.
+Le frigo fait un drôle de bruit depuis quelques jours. (le frigo fè an drol de brüi döpüi kelk ʒur) - Il frigorifero fa uno strano rumore da qualche giorno.
+N'allume pas le four, le gâteau est déjà prêt. (nalüm pa le fur, le gato é deʒa pre) - Non accendere il forno, la torta è già pronta.
+J'ai préparé des œufs pour tout le monde. (ʒé prepare de zö pur tu le mond) - Ho preparato delle uova per tutti.
+Tu peux passer le pain, s'il te plaît ? (tü pö pase le pan, sil te plè) - Puoi passarmi il pane, per favore?
+On mangera les restes demain midi. (on manʒra le rest döman midi) - Domani a pranzo mangeremo gli avanzi.
+Qui veut encore un peu de fromage ? (ki vö ankor an pö de fromaʒ) - Chi ne vuole ancora un po' di formaggio?
+Il faut débarrasser la table avant de partir. (il fo debarese la tabl avan de partir) - Bisogna sparecchiare prima di andare via.
+J'ai complètement oublié le contrôle de sciences. (ʒé kompletman oublié le kontrol de sians) - Ho completamente dimenticato la verifica di scienze.
+La classe commence à huit heures et demie. (la klas komans a üit ör e demi) - La lezione inizia alle otto e mezza.
+Mon fils trouve les devoirs de français assez faciles. (mon fis truv le devwar de fransè ase fasil) - Mio figlio trova abbastanza facili i compiti di francese.
+Ma fille doit préparer un exposé pour la semaine prochaine. (ma fiʎ dwa preparé an ekspoze pur la semèn proscièn) - Mia figlia deve preparare una presentazione per la prossima settimana.
+Tu as bien écouté ce que je viens de te dire ? (tü a bièn ekuté se ke ʒö vien de te dir) - Hai ascoltato bene quello che ti ho appena detto?
+Après le dîner, tu ranges ta chambre. (aprè le diné, tü ranʒ ta sciambre) - Dopo cena sistemi la tua camera.
+Je ne veux pas que tu rentres trop tard ce soir. (ʒö nö vö pa ke tü rantr tro tar se swar) - Non voglio che tu torni troppo tardi stasera.
+Si tu finis tout avant six heures, tu peux sortir. (si tü fini tu avan sis ör, tü pö sortir) - Se finisci tutto prima delle sei, puoi uscire.
+J'ai pris rendez-vous pour mardi matin. (ʒé pri randé-vu pur mardi maten) - Ho preso appuntamento per martedì mattina.
+Le médecin m'a demandé si j'avais de la fièvre. (le medsan ma demandé si ʒavé de la fièvr) - Il medico mi ha chiesto se avevo la febbre.
+Je me sens beaucoup mieux depuis hier. (ʒö me san bokou miö döpüi ier) - Mi sento molto meglio da ieri.
+Cette crème est à appliquer deux fois par jour. (set krem é a apliké dö fwa par ʒur) - Questa crema va applicata due volte al giorno.
+Le quai a changé, il faut regarder les écrans. (le ké a sciandʒé, il fo regardé lékran) - Il binario è cambiato, bisogna guardare gli schermi.
+J'ai acheté le billet directement à la gare. (ʒé asciété le biyè direktman a la gar) - Ho comprato il biglietto direttamente in stazione.
+Le train est arrivé avec quelques minutes d'avance. (le tran é arivé avek kelk minüt davans) - Il treno è arrivato con qualche minuto di anticipo.
+On peut prendre la ligne quatre jusqu'au centre. (on pö prandr la liñ katr ʒüsk o santr) - Possiamo prendere la linea quattro fino al centro.
+J'ai validé ma carte, mais le portique ne s'est pas ouvert. (ʒé valide ma kart, mè le portik nö sé pa uver) - Ho convalidato la tessera, ma il tornello non si è aperto.
+Le prochain tram passe dans moins de cinq minutes. (le proscièn tram pas dan mwan de sank minüt) - Il prossimo tram passa tra meno di cinque minuti.
+Le chauffeur a annoncé un arrêt supplémentaire. (le scöför a anonse an are süplémantèr) - L'autista ha annunciato una fermata aggiuntiva.
+Il faut descendre par la porte arrière. (il fo desandr par la port arrièr) - Bisogna scendere dalla porta posteriore.
+J'ai déjà fait l'enregistrement en ligne. (ʒé deʒa fè lanreʒistrman an liñ) - Ho già fatto il check-in online.
+Où est-ce qu'on doit déposer les bagages ? (u es kon dwa depoze le bagàʒ) - Dove dobbiamo consegnare i bagagli?
+Mon vol décolle dans deux heures, on a encore le temps. (mon vol dekòl dan dö ör, on a ankor le tan) - Il mio volo decolla tra due ore, abbiamo ancora tempo.
+Le bateau est complet, il n'y a plus de places disponibles. (le bato é komplet, il nia plü de plas disponibl) - Il traghetto è pieno, non ci sono più posti disponibili.
+Le parking du port est presque plein. (le parking dü por é presk plen) - Il parcheggio del porto è quasi pieno.
+Tourne après l'église, puis continue tout droit. (turn aprè legliz, pui kontinü tu drwa) - Gira dopo la chiesa, poi continua sempre dritto.
+On est un peu perdus, vous pouvez nous indiquer le chemin ? (on é an pö perdü, vu puvé nu indiké le sceman) - Ci siamo un po' persi, potete indicarci la strada?
+Le voyant rouge s'est allumé sur le tableau de bord. (le vwayan ruʒ sé alumé sür le tablo de bor) - Si è accesa la spia rossa sul cruscotto.
+Je vais appeler un garage, je ne préfère pas continuer comme ça. (ʒö vé apel an garaʒ, ʒö ne prefer pa kontinüé kom sa) - Chiamo un'officina, preferisco non continuare così.
+Il y a eu un petit accident au carrefour. (il ia ü an pəti aksidan o karfur) - C'è stato un piccolo incidente all'incrocio.
+La rue est fermée à cause des travaux. (la rü é fermé a koz de travay) - La strada è chiusa a causa dei lavori.
+On a perdu internet pendant toute la matinée. (on a perdü internet pandan tut la matiné) - Siamo rimasti senza internet per tutta la mattina.
+La pression de l'eau est vraiment faible. (la presion de lo é vreman febl) - La pressione dell'acqua è davvero bassa.
+Le chauffage s'est arrêté en pleine nuit. (le scofaj sé arete an plen nüi) - Il riscaldamento si è fermato nel cuore della notte.
+Vous pourriez envoyer quelqu'un pour vérifier la fuite ? (vu purié anvoyé kelkan pur verifié la füit) - Potreste mandare qualcuno a controllare la perdita?
+La chambre est propre, mais la douche ne chauffe pas. (la sciambre é propr, mè la dusc ne scof pa) - La camera è pulita, ma la doccia non si scalda.
+On a demandé une chambre calme, loin de l'ascenseur. (on a demandé ün sciambre kalm, lwan de lasansör) - Avevamo chiesto una camera tranquilla, lontana dall'ascensore.
+Je vais envoyer un message à l'hôte pour lui demander où jeter les déchets. (ʒö vé anvoyé an mesaj a lot pur lüi demandé u ʒeté le desce) - Manderò un messaggio al proprietario per chiedergli dove buttare i rifiuti.
+Tu veux réserver la table pour samedi soir ? (tü vö rezerve la tabl pur samdi swar) - Vuoi prenotare il tavolo per sabato sera?
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
