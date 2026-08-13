@@ -1705,6 +1705,53 @@ Gira después del puente y encontrarás el museo a la izquierda. (khíra despúe
 Hemos aparcado bastante lejos porque no había sitio cerca. (émos aparkádo bastante léhos porke no abía sítio sérka) - Abbiamo parcheggiato abbastanza lontano perché non c'era posto vicino.
 El coche pierde aceite y tenemos que llevarlo al taller. (el kóche pyérde aséite i tenémos ke yebárlo al tayér) - La macchina perde olio e dobbiamo portarla dal meccanico.
 He llamado a emergencias porque había una persona herida en la carretera. (e yamádo a emergénsias porke abía una persóna erída en la karretéra) - Ho chiamato i soccorsi perché c'era una persona ferita sulla strada.
+Feliz cumpleaños, cielo, que cumplas muchos más. (Felís kumpleáños, ziélo, ke kúmplas múchos mas) - Buon compleanno, tesoro, che tu ne compia tanti altri
+¿Ya has soplado las velas o te esperamos? (Ya as sopládo las bélas o te esperámos?) - Hai già spento le candeline o ti aspettiamo?
+Hemos traído la tarta, espero que te guste el sabor. (Émos traído la tárta, espéro ke te gúste el sabór) - Abbiamo portato la torta, spero ti piaccia il sapore
+Venga, todos a cantar el cumpleaños feliz. (Bénga, tódos a kantár el kumpleáños felís) - Dai, tutti a cantare tanti auguri
+Este año la Nochebuena la hacemos en mi casa. (Éste áño la Nochebuéna la azémos en mi kása) - Quest'anno la vigilia di Natale la facciamo a casa mia
+¿Habéis puesto ya el árbol de Navidad? (Abéis puésto ya el árbol de Nabidád) - Avete già messo l'albero di Natale?
+Mi abuela prepara el turrón como nadie, tío. (Mi abuéla prepára el turrón kómo nádie, tío) - Mia nonna prepara il torrone come nessun altro, amico
+Los peques están como locos esperando a los Reyes. (Los pékes están kómo lókos esperándo a los Réyes) - I piccoli sono impazziti aspettando i Re Magi
+¿Qué le vas a pedir a Papá Noel este año? (Ké le bas a pedír a Papà Noél éste áño?) - Cosa chiederai a Babbo Natale quest'anno?
+Hemos hecho el amigo invisible con toda la familia. (Émos écho el amígo imbisíble kon tóda la família) - Abbiamo fatto l'amico invisibile con tutta la famiglia
+Todavía no he envuelto ni un solo regalo, qué desastre. (Todabía no e embuélto ni un sólo regálo, ke desástre) - Non ho ancora incartato neanche un regalo, che disastro
+El Domingo de Ramos vamos siempre a ver la procesión. (El Domíngo de Rámos bámos siémpre a ber la prozesión) - La Domenica delle Palme andiamo sempre a vedere la processione
+En Semana Santa mi madre hace torrijas todos los días. (En Semána Sánta mi mádre áze torríhas tódos los días) - A Pasqua mia madre fa le torrijas tutti i giorni
+¿Vais a ver los pasos el Viernes Santo? (Bais a ber los pásos el Biérnes Sánto?) - Andate a vedere le processioni il Venerdì Santo?
+El Domingo de Pascua comemos cordero en familia. (El Domíngo de Páskua komémos kordéro en família) - La Domenica di Pasqua mangiamo agnello in famiglia
+Hoy hace veinte años que estamos casados, qué rápido pasa el tiempo. (Oi áze béinte áños ke estámos kasádos, ke rápido pása el tiémpo) - Oggi sono vent'anni che siamo sposati, come passa in fretta il tempo
+Hemos reservado un restaurante para celebrar el aniversario. (Émos reserbádo un restauránte pára zelebrár el aniversário) - Abbiamo prenotato un ristorante per festeggiare l'anniversario
+Mis padres celebran las bodas de plata este verano. (Mis pádres zelébran las bódas de pláta éste beráno) - I miei genitori festeggiano le nozze d'argento quest'estate
+Le he comprado un regalito para sorprenderla el día del aniversario. (Le e kompádo un regalíto pára sorprendérla el día del aniversário) - Le ho comprato un regalino per sorprenderla il giorno dell'anniversario
+Vienen mis tíos de Valencia para la cena de Nochevieja. (Biénen mis tíos de Balénzia pára la zéna de Nochebiéha) - Vengono i miei zii da Valencia per la cena di Capodanno
+A medianoche comemos las doce uvas, como siempre. (A medianóche komémos las dóze úbas, kómo siémpre) - A mezzanotte mangiamo i dodici chicchi d'uva, come sempre
+¿Qué deseo has pedido para el año que viene? (Ké deséo as pedído pára el áño ke biéne?) - Che desiderio hai chiesto per l'anno prossimo?
+Este año quiero organizar una fiesta sorpresa para mi hermana. (Éste áño kiéro organisár úna fiésta sorprésa pára mi ermána) - Quest'anno voglio organizzare una festa a sorpresa per mia sorella
+No le digas nada, que es una sorpresa, ¿eh? (No le dígas náda, ke es úna sorprésa, e?) - Non dirle niente, che è una sorpresa, eh?
+Hemos alquilado un salón para el cumpleaños de mi padre. (Émos alkiládo un salón pára el kumpleáños de mi pádre) - Abbiamo affittato una sala per il compleanno di mio padre
+¿Cuántas velas le ponemos, sesenta son muchas, tío. (Kuántas bélas le ponémos, sesénta son múchas, tío) - Quante candeline gli mettiamo, sessanta sono tante, amico
+Vamos a hacer una barbacoa el día de su cumple. (Bámos a azér úna barbakóa el día de su kúmple) - Facciamo un barbecue il giorno del suo compleanno
+Los primos vienen todos juntos para las fiestas, qué caos y qué alegría. (Los prímos biénen tódos húntos pára las fiéstas, ke káos i ke alegría) - I cugini arrivano tutti insieme per le feste, che caos e che gioia
+Cada Navidad hacemos el mismo brindis, ya es tradición. (Káda Nabidád azémos el mísmo brindís, ya es tradizión) - Ogni Natale facciamo lo stesso brindisi, ormai è tradizione
+Este año toca cenar en casa de mi suegra. (Éste áño tóka zenár en kása de mi suégra) - Quest'anno tocca cenare a casa di mia suocera
+He puesto el belén encima de la chimenea, como cada año. (E puésto el belén enzíma de la chiménea, kómo káda áño) - Ho messo il presepe sopra il camino, come ogni anno
+Mi cuñado siempre trae los turrones de más calidad. (Mi kuñádo siémpre tráe los turrónes de mas kalidád) - Mio cognato porta sempre i torroni di miglior qualità
+Vamos a brindar por otro año juntos, salud. (Bámos a brindár por ótro áño húntos, salúd) - Brindiamo per un altro anno insieme, salute
+Hemos invitado a los vecinos a tomar algo por Navidad. (Émos imbitádo a los bezínos a tomár álgo por Nabidád) - Abbiamo invitato i vicini a bere qualcosa per Natale
+Este cumpleaños prefiero algo tranquilo, sin mucho lío. (Éste kumpleáños prefiéro álgo tránkilo, sin múcho lío) - Per questo compleanno preferisco qualcosa di tranquillo, senza troppo casino
+Los niños se han disfrazado para la fiesta de cumpleaños. (Los níños se an disfrasádo pára la fiésta de kumpleáños) - I bambini si sono travestiti per la festa di compleanno
+Hemos colgado luces por todo el balcón para Navidad. (Émos kolgádo lúzes por tódo el balkón pára Nabidád) - Abbiamo appeso le luci per tutto il balcone per Natale
+Mi hermano siempre se olvida de traer el regalo, qué desastre de tío. (Mi ermáno siémpre se olbída de traér el regálo, ke desástre de tío) - Mio fratello si dimentica sempre di portare il regalo, che disastro
+Vamos a hacer una videollamada con la familia que vive fuera por Nochebuena. (Bámos a azér úna bideollamáda kon la família ke bíbe fuéra por Nochebuéna) - Facciamo una videochiamata con la famiglia che vive lontano per la vigilia di Natale
+Hoy toca comer roscón de Reyes, a ver a quién le toca el haba. (Oi tóka komér roskón de Réyes, a ber a kién le tóka el ába) - Oggi tocca mangiare il roscón de Reyes, vediamo a chi tocca la fava
+Nos hemos disfrazado todos iguales para la fiesta, qué risa. (Nos émos disfrasádo tódos igwáles pára la fiésta, ke rísa) - Ci siamo travestiti tutti uguali per la festa, che ridere
+Hemos quedado con los amigos de siempre para celebrarlo. (Émos kedádo kon los amígos de siémpre pára zelebrárlo) - Ci siamo dati appuntamento con gli amici di sempre per festeggiarlo
+Este aniversario lo vamos a pasar en la playa, para variar. (Éste aniversário lo bámos a pasár en la pláya, pára bariár) - Questo anniversario lo passiamo in spiaggia, tanto per cambiare
+Le hemos preparado una tarta casera, nada de comprada. (Le émos preparádo úna tárta kaséra, náda de kompráda) - Gli abbiamo preparato una torta fatta in casa, niente di comprato
+Todos los años nos reunimos en casa de los abuelos por Pascua. (Tódos los áños nos reunímos en kása de los abuélos por Páskua) - Ogni anno ci riuniamo a casa dei nonni per Pasqua
+Han venido hasta los primos segundos a la fiesta, menuda familia. (An benído ásta los prímos segúndos a la fiésta, menúda família) - Sono venuti perfino i cugini di secondo grado alla festa, che famiglia
+Brindamos por los que ya no están y por los que siguen aquí. (Brindámos por los ke ya no están i por los ke sígen akí) - Brindiamo per chi non c'è più e per chi è ancora qui
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
