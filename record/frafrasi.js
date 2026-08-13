@@ -489,6 +489,57 @@ Vous avez une table disponible pour trois personnes ? (vu zavé ün tabl disponi
 Je vais prendre le plat que vous avez recommandé. (ʒö vé prandr le pla ke vu zavé rekomandé) - Prendo il piatto che ci avete consigliato.
 On s'est assis dehors parce qu'il faisait trop chaud à l'intérieur. (on sé asi döor parskil fezè tro scod a lantériör) - Ci siamo seduti fuori perché dentro faceva troppo caldo.
 Je crois que ce film mérite vraiment d'être vu au cinéma. (ʒö krwa ke se film merit vreman detr vü o sinema) - Credo che questo film meriti davvero di essere visto al cinema.
+J'ai nettoyé la table de la cuisine après le dîner. (ʒé netwayé la tabl de la küizin aprè le diné) - Ho pulito il tavolo della cucina dopo cena.
+Tu peux ouvrir les volets, il fait déjà jour. (tü pö uvrir le volè, il fè deʒa ʒur) - Puoi aprire le persiane, è già giorno.
+J'ai retrouvé une chaussette derrière le lit. (ʒé retruvé ün scosèt derrièr le li) - Ho ritrovato un calzino dietro il letto.
+La machine s'est arrêtée avant la fin du programme. (la mascin sé areté avan la fin dü program) - La lavatrice si è fermata prima della fine del programma.
+Le chien attend que quelqu'un lui ouvre la porte. (le scièn atand ke kelkan lüi uvr la port) - Il cane aspetta che qualcuno gli apra la porta.
+J'ai rempli le lave-vaisselle après le repas. (ʒé ranpli le lav-vèsèl aprè le röpa) - Ho riempito la lavastoviglie dopo il pasto.
+Je prends juste un café avant de commencer ma journée. (ʒö pran ʒüst an kafé avan de komansé ma ʒurné) - Prendo solo un caffè prima di iniziare la giornata.
+Tu peux couper le pain pendant que je fais les œufs ? (tü pö kupe le pan pandan ke ʒö fè le zö) - Puoi tagliare il pane mentre preparo le uova?
+Il reste du fromage dans le frigo si tu as encore faim. (il rest dü fromaʒ dan le frigo si tü a ankor fen) - C'è ancora del formaggio in frigorifero se hai ancora fame.
+On a prévu de manger tous ensemble dimanche midi. (on a prevü de manʒé tu ansambl dimansc midi) - Abbiamo previsto di pranzare tutti insieme domenica.
+J'ai oublié mon livre de maths dans la salle de classe. (ʒé oublié mon livr de mat dan la sal de klas) - Ho dimenticato il mio libro di matematica in classe.
+La prof nous a rendu les contrôles aujourd'hui. (la prof nu a randü le kontrol oʒurdüi) - Oggi la professoressa ci ha restituito le verifiche.
+Je dois encore apprendre une dizaine de mots pour demain. (ʒö dwa ankor aprandr ün dizèn de mo pur döman) - Devo ancora imparare una decina di parole per domani.
+Il a eu du mal à se concentrer pendant le cours. (il a ü dü mal a se konsantré pandan le kur) - Ha avuto difficoltà a concentrarsi durante la lezione.
+Tu ferais mieux de commencer tes devoirs maintenant. (tü ferè miö de komansé te devwar mantenan) - Faresti meglio a iniziare i compiti adesso.
+Je veux que tu me préviennes quand tu rentres. (ʒö vö ke tü me previen kan tü rantr) - Voglio che mi avvisi quando rientri.
+Ce soir, pas de téléphone à table. (se swar, pa de telefon a tabl) - Stasera niente telefono a tavola.
+Tu peux inviter tes amis, mais pas trop tard. (tü pö anvité te zami, mè pa tro tar) - Puoi invitare i tuoi amici, ma non troppo tardi.
+Demain, tu te lèves tôt parce que tu as cours. (döman, tü te lev to parskö tü a kur) - Domani ti alzi presto perché hai lezione.
+Je me suis réveillé avec un peu de fièvre. (ʒö me süi reveyè avek an pö de fièvr) - Mi sono svegliato con un po' di febbre.
+Le médecin veut me revoir la semaine prochaine. (le medsan vö me revwar la semèn proscièn) - Il medico vuole rivedermi la prossima settimana.
+J'ai demandé au pharmacien s'il y avait une version moins chère. (ʒé demandé o farmasièn sil ia-vè ün versiòn mwan scèr) - Ho chiesto al farmacista se c'era una versione meno costosa.
+Ça fait deux jours que j'ai mal au ventre. (sa fè dö ʒur ke ʒé mal o vantr) - Ho mal di pancia da due giorni.
+Le train entre en gare dans quelques secondes. (le tran antr an gar dan kelk sekond) - Il treno entra in stazione tra pochi secondi.
+J'ai vérifié mon billet, mais je ne trouve pas le numéro de voiture. (ʒé verifié mon biyè, mè ʒö nö truv pa le nümero de vuatür) - Ho controllato il biglietto, ma non trovo il numero della carrozza.
+On descend à la prochaine gare et on prend un autre train. (on desan a la proscièn gar é on pran an otr tran) - Scendiamo alla prossima stazione e prendiamo un altro treno.
+Le métro s'arrête dans toutes les stations aujourd'hui. (le métro sarèt dan tut le stasiòn oʒurdüi) - Oggi la metropolitana si ferma in tutte le stazioni.
+Il y a trop de monde sur le quai, attendons le suivant. (il ia tro de mond sür le ké, atandon le süivan) - C'è troppa gente sul binario, aspettiamo il prossimo.
+Le tram est plus rapide que la voiture aux heures de pointe. (le tram é plü rapid ke la vuatür o zör de pwant) - Il tram è più veloce dell'auto nelle ore di punta.
+J'ai laissé passer deux bus parce qu'ils étaient bondés. (ʒé lesé pasé dö büs parskil zetè bonde) - Ho lasciato passare due autobus perché erano pieni.
+Tu peux me dire si ce bus va jusqu'à la gare centrale ? (tü pö me dir si se büs va ʒüsk a la gar santral) - Puoi dirmi se questo autobus arriva fino alla stazione centrale?
+Le chauffeur a changé d'itinéraire à cause d'une rue fermée. (le scöför a sciandʒé ditinerèr a koz dün rü fermé) - L'autista ha cambiato percorso a causa di una strada chiusa.
+Les écrans indiquent que l'embarquement commence bientôt. (lekran zandik ke lanbarkman komans byanto) - Gli schermi indicano che l'imbarco inizierà presto.
+J'ai choisi un siège près de l'allée. (ʒé scwazi an sièʒ prè de lalé) - Ho scelto un posto vicino al corridoio.
+On doit passer par le contrôle des passeports avant la sortie. (on dwa pasé par le kontrol de paspor avan la sorti) - Dobbiamo passare dal controllo passaporti prima dell'uscita.
+Le ferry a été annulé à cause de la mauvaise météo. (le feri a été anulé a koz de la movè meteo) - Il traghetto è stato cancellato a causa del maltempo.
+Il faut garder le billet jusqu'à l'arrivée au port. (il fo gardé le biyè ʒüsk a larivé o por) - Bisogna conservare il biglietto fino all'arrivo al porto.
+Tu prends cette avenue et tu tournes à gauche au prochain feu. (tü pran set avenü é tü turn a gos o proscièn fö) - Prendi questo viale e gira a sinistra al prossimo semaforo.
+Je ne reconnais pas du tout ce quartier. (ʒö nö rekonè pa dü tu se kartié) - Non riconosco affatto questo quartiere.
+Ma voiture a commencé à perdre de la puissance sur l'autoroute. (ma vuatür a komansé a perdr de la püsans sür lotorut) - La mia macchina ha iniziato a perdere potenza in autostrada.
+Le garagiste pense que le problème vient de l'alternateur. (le garajist pans ke le problem vien de lalternatör) - Il meccanico pensa che il problema venga dall'alternatore.
+J'ai vu de la fumée sortir du capot. (ʒé vü de la fümé sortir dü kapo) - Ho visto uscire del fumo dal cofano.
+Les pompiers sont arrivés très rapidement. (le pompier son arivé trè rapidman) - I vigili del fuoco sono arrivati molto rapidamente.
+Il pleut tellement que les caniveaux débordent. (il plö telman ke le kanivo debord) - Piove così tanto che i tombini straripano.
+On a eu une coupure de courant pendant le dîner. (on a ü ün kupür de kuran pandan le diné) - Abbiamo avuto un'interruzione di corrente durante la cena.
+La réception peut appeler un taxi pour nous ? (la resepsiòn pö apel an taksi pur nu) - La reception può chiamarci un taxi?
+La chambre était correcte, mais le lit était très inconfortable. (la sciambre etè korekt, mè le li etè trè ankonfortabl) - La camera era discreta, ma il letto era molto scomodo.
+Le voisin de l'étage supérieur faisait du bruit toute la nuit. (le vwasan de letaʒ süperiör fezè dü brüi tut la nüi) - Il vicino del piano superiore faceva rumore tutta la notte.
+J'ai signalé le problème à l'accueil dès ce matin. (ʒé signalé le problem a laköy de se maten) - Ho segnalato il problema alla reception già stamattina.
+On peut laisser nos valises ici jusqu'à ce soir ? (on pö lesé no valiz isi ʒüsk a se swar) - Possiamo lasciare qui le nostre valigie fino a stasera?
+L'appartement est bien situé, tout est accessible à pied. (lapartman é bièn situé, tu é aksesibl a pié) - L'appartamento è ben situato, tutto è raggiungibile a piedi.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
