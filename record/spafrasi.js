@@ -927,6 +927,58 @@ Han cerrado esta carretera porque hay riesgo de desprendimientos. (an serrádo �
 La señal del móvil ha desaparecido por completo. (la señal del móbil a desapareсído por kompleto) - Il segnale del cellulare è completamente sparito.
 Mi tarjeta ha sido rechazada al intentar pagar. (mi tarhéta a sído rechasáda al intentár pagár) - La mia carta è stata rifiutata quando ho provato a pagare.
 He hecho una transferencia, pero todavía no aparece en la cuenta. (e écho una transferénsia, péгo todabía no aparése en la kuénta) - Ho fatto un bonifico, ma non compare ancora sul conto.
+He pasado la aspiradora por toda la casa y ahora voy a limpiar el baño. (e pasádo la aspiradóra por toda la káса i aóra boi a limpiár el baño) - Ho passato l'aspirapolvere in tutta casa e ora pulisco il bagno.
+Voy a dejar las ventanas abiertas unos minutos para que corra el aire. (boi a dekhár las bentánas abyértas unos minútos para ke kórra el áire) - Lascio le finestre aperte per qualche minuto per far circolare l'aria.
+¿Dónde has guardado el detergente para la ropa? (dónde as guardádo el detergénte para la rópa) - Dove hai messo il detersivo per il bucato?
+La puerta del garaje se ha quedado atascada. (la puérta del garáhe se a kedádo ataskáda) - La porta del garage è rimasta bloccata.
+El gato quiere salir, pero acaba de empezar a llover. (el gáto kyére salír, péгo akaba de empesár a yobér) - Il gatto vuole uscire, ma ha appena iniziato a piovere.
+He apagado todas las luces de la planta de arriba. (e apagádo todas las lúses de la plánta de arríba) - Ho spento tutte le luci del piano di sopra.
+Esta noche hacemos una cena sencilla y nos acostamos pronto. (ésta nóche asémos una séna sensíya i nos akostámos pronto) - Stasera facciamo una cena semplice e andiamo a letto presto.
+¿Has puesto ya la mesa para desayunar? (as puésto ya la mésa para desayunár) - Hai già apparecchiato per la colazione?
+Voy a preparar unos huevos antes de que se haga tarde. (boi a preparár unos uébos ántes de ke se ága tárde) - Preparo delle uova prima che si faccia tardi.
+A mí me apetece comer algo ligero esta noche. (a mí me apetése komér álgo likhéro ésta nóche) - Stasera mi va di mangiare qualcosa di leggero.
+No te olvides de meter la botella de agua en la nevera. (no te olbïdes de metér la botéya de água en la nebéra) - Non dimenticarti di mettere la bottiglia d'acqua in frigorifero.
+Hoy los niños han salido antes del colegio. (oi los niños an salído ántes del kolekhio) - Oggi i ragazzi sono usciti prima da scuola.
+El profesor ha cambiado la fecha del examen. (el profesór a kambyádo la fécha del eksámen) - L'insegnante ha cambiato la data dell'esame.
+Mi hija está preparando una presentación para clase. (mi íha está preparándo una presentasyón para kláse) - Mia figlia sta preparando una presentazione per la scuola.
+¿Has entendido lo que explicó la profesora? (as entendído lo ke ekspl ikó la profesóra) - Hai capito quello che ha spiegato l'insegnante?
+No dejes el estudio para el último día. (no déhes el estudyo para el último día) - Non rimandare lo studio all'ultimo giorno.
+Cuando vuelvas, quiero que me cuentes cómo ha ido. (kuándo buélbas, kyéro ke me kuéntes kómo a ído) - Quando torni, voglio che mi racconti com'è andata.
+Esta tarde tienes permiso para ir al parque con tus amigos. (ésta tárde tiénes permíso para ír al párke kon tus amígos) - Questo pomeriggio puoi andare al parco con i tuoi amici.
+Antes de acostarte, prepara la ropa para mañana. (ántes de akostárte, prepará la rópa para mañana) - Prima di andare a letto, prepara i vestiti per domani.
+No hace falta que me esperes despierto. (no áse fálta ke me espéres despiérto) - Non c'è bisogno che mi aspetti sveglio.
+Creo que me he resfriado un poco. (kréo ke me e resfryádo un póko) - Credo di essermi preso un po' di raffreddore.
+¿Me puede decir cada cuánto tengo que tomarlo? (me puéde desir káda kuánto téngo ke tomárlo) - Mi può dire ogni quanto devo prenderlo?
+Tengo la nariz tapada y me cuesta respirar. (téngo la narís tapáda i me kuésta respirár) - Ho il naso chiuso e faccio fatica a respirare.
+Si mañana sigo igual, pediré cita con el médico. (si mañana sígo iguál, pediré síta kon el médiko) - Se domani sto ancora così, prenderò un appuntamento dal medico.
+El médico me ha recomendado que no haga esfuerzos. (el médiko me a rekomendádo ke no ága esfuérsos) - Il medico mi ha consigliato di non fare sforzi.
+El tren sale de la estación a las siete en punto. (el tren sále de la estasyón a las syéte en púnto) - Il treno parte dalla stazione alle sette in punto.
+Creo que todavía estamos a tiempo de comprar algo para comer. (kréo ke todabía estámos a tyémpo de komprár álgo para komér) - Credo che siamo ancora in tempo per comprare qualcosa da mangiare.
+El revisor ha comprobado nuestros billetes dos veces. (el rebisór a komprobádo nuéstros biyétes dos bé ses) - Il controllore ha controllato i nostri biglietti due volte.
+Nos bajamos en la próxima estación y seguimos a pie. (nos bakhámos en la próksima estasyón i segímos a pyé) - Scendiamo alla prossima stazione e proseguiamo a piedi.
+La salida está señalizada con una flecha azul. (la salída está señalisáda kon una flécha asúl) - L'uscita è indicata da una freccia blu.
+Este metro va directamente al centro sin hacer transbordo. (éste métro ba direktaménte al séntrо sin asér transbórdo) - Questa metropolitana va direttamente in centro senza cambi.
+La estación está muy concurrida a estas horas. (la estasyón está mui konkurída a éstas óras) - La stazione è molto affollata a quest'ora.
+El autobús se ha desviado por una calle lateral. (el autobús se a desbyádo por una káye laterál) - L'autobus ha deviato per una strada laterale.
+Creo que hemos dejado pasar nuestra parada. (kréo ke émos dekhádo pasár nuéstra parąda) - Credo che abbiamo superato la nostra fermata.
+El conductor nos ha dicho que bajemos por la puerta trasera. (el konduktór nos a dícho ke bakhémos por la puérta traséra) - L'autista ci ha detto di scendere dalla porta posteriore.
+Ya han abierto la puerta de embarque. (ya an abyérto la puérta de embarke) - Hanno già aperto il gate d'imbarco.
+Tengo que poner el móvil en modo avión. (téngo ke ponér el móbil en módo abión) - Devo mettere il cellulare in modalità aereo.
+La cola para el control de seguridad avanza bastante rápido. (la kóla para el kontról de seguridád abánsa bastante ráp ido) - La fila ai controlli di sicurezza scorre abbastanza velocemente.
+He encontrado mi pasaporte en el bolsillo de la chaqueta. (e enkontrádo mi pasapórte en el bolsíyo de la chakéta) - Ho trovato il passaporto nella tasca della giacca.
+El barco está a punto de salir del muelle. (el bárko está a púnto de salír del muéye) - Il traghetto sta per partire dal molo.
+Desde aquí se ve perfectamente la entrada del puerto. (désde akí se bé perfek taménte la entráda del puérto) - Da qui si vede perfettamente l'ingresso del porto.
+Toma la primera calle después del semáforo. (tóma la priméra káye despúes del semáforo) - Prendi la prima strada dopo il semaforo.
+Creo que el centro está por aquella dirección. (kréo ke el séntrо está por akéya direksyón) - Credo che il centro sia da quella parte.
+Hay que dar la vuelta porque esta calle está cortada. (ai ke dar la buélta porke ésta káye está kortáda) - Bisogna tornare indietro perché questa strada è chiusa.
+El coche no me deja arrancar y aparece un aviso en el salpicadero. (el kóche no me déha arrankár i aparése un abíso en el salpikadéro) - La macchina non parte e compare un avviso sul cruscotto.
+Voy a llamar al seguro para explicar lo que ha pasado. (boi a yamár al seguro para ekspl ikár lo ke a pasádo) - Chiamo l'assicurazione per spiegare cosa è successo.
+Por suerte nadie ha resultado herido en el accidente. (por suérte nádye a resultádo erído en el aksidénte) - Per fortuna nessuno è rimasto ferito nell'incidente.
+Han cerrado la calle por una fuga de agua. (an serrádo la káye por una fúga de água) - Hanno chiuso la strada per una perdita d'acqua.
+Se ha producido un corte de luz en varias zonas de la ciudad. (se a produsído un kórte de lus en bárias sónas de la syudád) - C'è stato un blackout in diverse zone della città.
+El hotel tiene servicio de habitaciones durante toda la noche. (el otél tiéne serbísio de abitasión duránte toda la nóche) - L'hotel offre il servizio in camera per tutta la notte.
+La calefacción de la habitación no calienta nada. (la kalefaksión de la abitasión no kalyénta náda) - Il riscaldamento della camera non scalda per niente.
+La ducha tarda mucho en tener agua caliente. (la dúcha tárda múcho en tenér água kalyénte) - La doccia impiega molto tempo a far arrivare l'acqua calda.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
