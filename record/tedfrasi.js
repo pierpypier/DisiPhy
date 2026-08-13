@@ -1007,6 +1007,55 @@ Wegen des Streiks fährt heute kaum ein Bus. (wegen des straiks fert hoite kaum 
 Nach dem Unwetter waren mehrere Straßen nicht mehr befahrbar. (nach dem unvetter varen merere strassen nicht meer befarbar) - Dopo il maltempo diverse strade non erano più percorribili.
 Könnten wir bitte noch zwei zusätzliche Kissen bekommen? (könnten vir bitte noch tsvai zusätzliche kissen bekommen) - Potremmo avere altri due cuscini, per favore?
 Das Zimmer ist schön, aber das Bett ist ziemlich unbequem. (das tsimmer ist scön, aber das bett ist ziemlich unbequem) - La camera è bella, ma il letto è piuttosto scomodo.
+Ich hab heute Morgen die Pflanzen auf dem Balkon gegossen. (ich hab hoite morgen di pflantsen auf dem balkon gegossen) - Stamattina ho annaffiato le piante sul balcone.
+Die Mülltonne muss heute noch an die Straße gestellt werden. (di mültonne muss hoite noch an di strasse gestellt werden) - Oggi bisogna ancora mettere il bidone della spazzatura in strada.
+Ich hab die Fernbedienung zwischen den Sofakissen gefunden. (ich hab di fernbedinung tsvischen den sofakissen gefunden) - Ho trovato il telecomando tra i cuscini del divano.
+Der Hund hat sich vor dem Gewitter unter dem Bett versteckt. (der hund hat zich for dem gevitter unter dem bett fersteckt) - Il cane si è nascosto sotto il letto prima del temporale.
+Kannst du nachsehen, ob noch genug Waschmittel da ist? (kanst du nachzeen, ob noch genug vaschmittel da ist) - Puoi controllare se c'è ancora abbastanza detersivo?
+Ich hab die Spülmaschine diesmal nicht ganz voll gemacht. (ich hab di spülmascine diesmal nicht gants fol gemacht) - Questa volta non ho riempito completamente la lavastoviglie.
+Mach die Balkontür zu, sonst wird es drinnen kalt. (mach di balkontür tsu, sonst virt es drinnen kalt) - Chiudi la porta del balcone, altrimenti dentro farà freddo.
+Ich hab morgens meistens überhaupt keinen Hunger. (ich hab morgens maistens überhaupt kainen hunger) - Al mattino di solito non ho proprio fame.
+Kannst du mir noch ein Glas Orangensaft einschenken? (kanst du mir noch ain glas orangensaft ainscenken) - Puoi versarmi ancora un bicchiere di succo d'arancia?
+Wir haben heute keine Lust zu kochen. (vir habn hoite kaine lust tsu kochen) - Oggi non abbiamo voglia di cucinare.
+Die Kinder erzählen beim Abendessen immer, was in der Schule passiert ist. (di kinder erzählen baim abentessen immer, vas in der scule passiert ist) - A cena i bambini raccontano sempre cosa è successo a scuola.
+Ich muss morgen früh mit der Klassenlehrerin telefonieren. (ich muss morgen frü mit der klassenleererin telefonieren) - Domani mattina devo parlare al telefono con la coordinatrice di classe.
+In der Pause dürfen die Schüler auf den Hof gehen. (in der pause dürfen di scüler auf den hof geen) - Durante la ricreazione gli studenti possono andare in cortile.
+Mein Sohn hat heute seine Hausaufgaben freiwillig gemacht. (main zon hat hoite zaine hausaufgaben fraivilig gemacht) - Oggi mio figlio ha fatto i compiti spontaneamente.
+Die Lehrerin hat ihm geraten, mehr zu lesen. (di leererin hat im geraten, meer tsu lesen) - L'insegnante gli ha consigliato di leggere di più.
+Du kannst heute Abend länger fernsehen, wenn du alles erledigt hast. (du kanst hoite abent lenger fernzeen, ven du alles erledigt hast) - Stasera puoi guardare la TV più a lungo se hai finito tutto.
+Ich hab nichts dagegen, solange du pünktlich zurück bist. (ich hab nichts dagegen, zolang du pünktlic tsurück bist) - Non ho nulla in contrario, purché tu torni puntuale.
+Vergiss nicht, mir Bescheid zu geben, wenn du später kommst. (fergiss nicht, mir bescait tsu geben, ven du speter kommst) - Non dimenticare di avvisarmi se torni più tardi.
+Heute Abend machen wir keine Ausnahme. (hoite abent machen vir kaine ausname) - Stasera non facciamo eccezioni.
+Ich brauche etwas gegen diese Halsschmerzen. (ich brauche etvas gegen deze hals-scmerzen) - Ho bisogno di qualcosa contro questo mal di gola.
+Haben Sie auch eine günstigere Alternative? (haben zi auc aine günstigere alternative) - Avete anche un'alternativa più economica?
+Ich darf das Medikament nur nach dem Essen nehmen. (ich darf das medikament nur nach dem essen nemen) - Posso prendere il farmaco solo dopo aver mangiato.
+Der Arzt hat mir geraten, mich heute zu schonen. (der artzt hat mir geraten, mich hoite tsu schonen) - Il medico mi ha consigliato di riguardarmi oggi.
+Falls es schlimmer wird, gehe ich direkt ins Krankenhaus. (falls es sclemmer virt, ge-e ich direkt ins krankenhaus) - Se peggiora, vado direttamente in ospedale.
+Wir haben gerade noch einen Platz im Zug bekommen. (vir habn gerade noch ainen platz im tsug bekommen) - Siamo riusciti appena in tempo a trovare un posto sul treno.
+Der Zug steht wegen eines Signals noch im Bahnhof. (der tsug steht wegen aines signals noch im baanhof) - Il treno è ancora in stazione a causa di un segnale.
+Ich muss in München umsteigen. (ich muss in münchen umstaigen) - Devo cambiare treno a Monaco.
+Der Schalter für die Fahrkarten ist schon geschlossen. (der scalter für di fartkarten ist scion geschlossen) - Lo sportello dei biglietti è già chiuso.
+Wir nehmen lieber die nächste Verbindung. (vir nemen liber di nechste ferbindung) - Preferiamo prendere la prossima coincidenza.
+Die U-Bahn war heute wegen einer Störung komplett überfüllt. (di u-baan var hoite wegen ainer störung komplet überfült) - Oggi la metropolitana era completamente affollata a causa di un guasto.
+Wo müssen wir umsteigen, um zum Zentrum zu kommen? (vo müssen vir umstaigen, um tsum tsentrum tsu kommen) - Dove dobbiamo cambiare per arrivare in centro?
+Ich hab meine Tasche fast in der Bahn liegen lassen. (ich hab maine tasce fast in der baan liegen lassen) - Ho quasi dimenticato la mia borsa sul treno.
+Der Bus fährt nur an Werktagen. (der bus fert nur an verk-tagen) - L'autobus circola solo nei giorni feriali.
+Kannst du mich an der nächsten Haltestelle rauslassen? (kanst du mich an der nechsten haltestelle rauslassen) - Puoi farmi scendere alla prossima fermata?
+Am Flughafen müssen wir zuerst zum Check-in-Schalter. (am flughafen müssen vir tsuerst tsum check-in-scalter) - In aeroporto dobbiamo prima andare al banco del check-in.
+Ich hab nur Handgepäck, deshalb muss ich keinen Koffer aufgeben. (ich hab nur handgepek, deshalb muss ich kainen koffer aufgeben) - Ho solo il bagaglio a mano, quindi non devo imbarcare nessuna valigia.
+Unser Abflug wurde auf einen späteren Zeitpunkt verschoben. (unzer abflug wurde auf ainen speteren tsaitpunkt ferchoben) - La nostra partenza è stata posticipata.
+Die Fähre schwankt heute ziemlich stark. (di fere schwankt hoite ziemlich stark) - Oggi il traghetto oscilla parecchio.
+Wir müssen uns am Hafen noch die Tickets abholen. (vir müssen uns am haafen noch di tikets abholen) - Al porto dobbiamo ancora ritirare i biglietti.
+Der Stadtplan ist auf der Rückseite viel übersichtlicher. (der stadtplan ist auf der rückzaite fiil überzictlicer) - La mappa della città è molto più chiara sul retro.
+Von hier aus sind es zu Fuß etwa fünfzehn Minuten. (fon hier aus zint es tsu fus etwa fünf-tsen minuten) - Da qui sono circa quindici minuti a piedi.
+Ich hab beim Tanken aus Versehen den falschen Zapfhahn genommen. (ich hab baim tanken aus ferzeen den falschen tsapfaan genommen) - Durante il rifornimento ho preso per errore la pompa sbagliata.
+Die Bremsen fühlen sich seit ein paar Tagen komisch an. (di bremsen fülen zich sait ain paar tagen komisc an) - Da qualche giorno i freni mi sembrano strani.
+Nach dem kleinen Unfall haben wir die Daten ausgetauscht. (nach dem klainen unfal habn vir di daten ausgetauscht) - Dopo il piccolo incidente ci siamo scambiati i dati.
+Der Verkehr läuft heute überraschend gut. (der ferker läuft hoite überrascend gut) - Oggi il traffico scorre sorprendentemente bene.
+In unserem Viertel sind mehrere Straßen wegen Bauarbeiten gesperrt. (in unzerem firtel zint merere strassen wegen bauarbeiten gesperrt) - Nel nostro quartiere diverse strade sono chiuse per lavori.
+Könnten Sie bitte jemanden wegen des defekten Schlosses schicken? (könnten zi bitte jemanden wegen des defekten schlosses schicken) - Potrebbe mandare qualcuno per la serratura guasta, per favore?
+Das Wasser in der Dusche wird leider nicht richtig warm. (das vasser in der dusce virt leider nicht richtig varm) - Purtroppo l'acqua della doccia non diventa abbastanza calda.
+Wir haben an der Rezeption nach einem weiteren Schlüssel gefragt. (vir habn an der rezeption nach ainem vaiteren schlüssl gefragt) - Alla reception abbiamo chiesto un'altra chiave.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
