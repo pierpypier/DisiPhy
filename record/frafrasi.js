@@ -1545,6 +1545,59 @@ Une coupure de courant a arrêté les feux de circulation. (ün kupür de kuran 
 La réception nous a donné le mot de passe du Wi-Fi. (la resepsiòn nu a doné le mo de pas dü wifi) - La reception ci ha dato la password del Wi-Fi.
 La chambre donne sur une rue très animée, même la nuit. (la sciambre don sür ün rü trè anime, mem la nüi) - La camera dà su una strada molto movimentata, anche di notte.
 L'eau du lavabo s'écoule très lentement. (lo dü lavabo sekul trè lantman) - L'acqua del lavandino defluisce molto lentamente.
+J'ai plié les serviettes et je les ai rangées dans le placard. (ʒé plié le servièt é ʒö le zé ranʒé dan le plakar) - Ho piegato gli asciugamani e li ho sistemati nell'armadio.
+La machine à laver est encore en marche, tu peux attendre avant de couper le courant. (la mascin a lavé é ankor an marsc, tü pö atandr avan de küpe le kuran) - La lavatrice è ancora in funzione, puoi aspettare prima di staccare la corrente.
+J'ai laissé les clés sur la console près de la porte. (ʒé lesé le clé sür la konsol prè de la port) - Ho lasciato le chiavi sulla consolle vicino alla porta.
+Il faut remplacer l'ampoule du couloir, elle vient de griller. (il fo ranplase lampul dü kulwar, el vien de griʒe) - Bisogna sostituire la lampadina del corridoio, si è appena fulminata.
+Le lave-vaisselle est propre, tu peux ranger les assiettes. (le lav-vèsèl é propr, tü pö ranʒé le zasiet) - La lavastoviglie è pulita, puoi sistemare i piatti.
+J'ai trouvé des miettes partout sous la table. (ʒé truvé de myèt partu su la tabl) - Ho trovato briciole dappertutto sotto il tavolo.
+Le chat a renversé son bol d'eau dans la cuisine. (le scia a ranversé son bol do dan la küizin) - Il gatto ha rovesciato la sua ciotola d'acqua in cucina.
+Le chien n'arrête pas d'aboyer depuis que quelqu'un est arrivé. (le scièn narèt pa dobwèyé döpüi kelkan é arivé) - Il cane non smette di abbaiare da quando è arrivato qualcuno.
+J'ai préparé des tartines avec du beurre et de la confiture. (ʒé preparé de tartin avek dü bör é de la konfitür) - Ho preparato delle fette di pane con burro e marmellata.
+Tu veux un yaourt ou plutôt un fruit pour finir ? (tü vö an yaurt u plüto an frui pur finir) - Vuoi uno yogurt o piuttosto un frutto per finire?
+J'ai mis les assiettes au four pour les garder au chaud. (ʒé mi le zasiet o fur pur le gardé o sco) - Ho messo i piatti nel forno per tenerli al caldo.
+On mangera les pâtes restantes demain midi. (on manʒra le pat restant döman midi) - Mangeremo domani a pranzo la pasta rimasta.
+J'ai oublié d'acheter du lait, il n'en reste presque plus. (ʒé oublié dasciété dü lè, il nan rest presk plü) - Ho dimenticato di comprare il latte, ne è rimasto pochissimo.
+Ma fille a passé toute la soirée à préparer son exposé. (ma fiʒ a pase tut la swaré a preparé son ekspoze) - Mia figlia ha passato tutta la sera a preparare la sua presentazione.
+Il a enfin compris comment résoudre le problème de maths. (il a anfen kompri koman rezudr le problem de mat) - Finalmente ha capito come risolvere il problema di matematica.
+La professeure a envoyé les consignes par mail aux parents. (la profesör a anvwaye le konsiñ par mel o paran) - L'insegnante ha inviato le istruzioni via email ai genitori.
+J'ai relu la rédaction avant de la rendre. (ʒé relü la redaksiòn avan de la randr) - Ho riletto il tema prima di consegnarlo.
+Il y aura une réunion avec les parents jeudi prochain. (il i ora ün reyünyon avek le paran ʒödi proscièn) - Ci sarà una riunione con i genitori giovedì prossimo.
+Tu as préparé ton réveil pour demain matin ? (tü a preparé ton revey pur döman maten) - Hai impostato la sveglia per domani mattina?
+Éteins la lumière quand tu quittes la pièce. (etèn la lümyèr kan tü kit la piès) - Spegni la luce quando esci dalla stanza.
+Tu peux sortir après avoir fini tes devoirs. (tü pö sortir aprè avwar fini te devwar) - Puoi uscire dopo aver finito i compiti.
+Je ne veux pas que tu rentres trop tard ce soir. (ʒö ne vö pa ke tü rantr tro tar se swar) - Non voglio che tu torni troppo tardi stasera.
+Envoie-moi un message quand tu seras arrivé chez ton ami. (anvwa-mwa an mesaʒ kan tü sera arivé sce ton ami) - Mandami un messaggio quando sarai arrivato dal tuo amico.
+J'ai pris rendez-vous chez le dentiste pour la semaine prochaine. (ʒé pri randé-vu sce le dentist pur la sömen proscièn) - Ho preso appuntamento dal dentista per la prossima settimana.
+Cette pommade doit être appliquée deux fois par jour. (set pomad dwa etr aplike dö fwa par ʒur) - Questa pomata deve essere applicata due volte al giorno.
+Je vais attendre encore un peu avant de reprendre le travail. (ʒö vé atandr ankor an pö avan de reprandr le travay) - Aspetterò ancora un po' prima di riprendere a lavorare.
+J'ai eu des vertiges en me levant ce matin. (ʒé ü de vertiʒ an me levã se maten) - Ho avuto dei giramenti di testa alzandomi stamattina.
+Le médecin veut me revoir dans quinze jours. (le medsan vö me revwar dan kanz ʒur) - Il medico vuole rivedermi tra quindici giorni.
+Le train pour Lyon part de quel quai ? (le tran pur Lion par de kel ké) - Da quale binario parte il treno per Lione?
+J'ai vérifié deux fois l'heure du départ pour être sûr. (ʒé verifié dö fwa lör dü depart pur etr sür) - Ho controllato due volte l'orario di partenza per essere sicuro.
+La voiture-bar se trouve au milieu du train. (la vuatür-bar se truv o milyö dü tran) - La carrozza bar si trova al centro del treno.
+On descend à la prochaine gare et on prend le suivant. (on desan a la proscièn gar é on pran le süivan) - Scendiamo alla prossima stazione e prendiamo il successivo.
+Le panneau indique que notre train est supprimé. (le pano andik ke notr tran é süprimé) - Il tabellone indica che il nostro treno è stato soppresso.
+La station est fermée temporairement pour des travaux. (la stasiòn é fermé tanporèrman pur de travay) - La stazione è temporaneamente chiusa per lavori.
+J'ai validé mon titre de transport avant de descendre sur le quai. (ʒé valide mon titr de transport avan de desandr sür le ké) - Ho convalidato il biglietto prima di scendere sul binario.
+Le métro était tellement bondé qu'on n'a pas pu monter. (le métro etè telman bonde kon na pa pü monte) - La metropolitana era così affollata che non siamo riusciti a salire.
+Le bus a été dévié à cause d'une manifestation. (le büs a été devié a koz dün manifestasiòn) - L'autobus è stato deviato a causa di una manifestazione.
+J'ai laissé passer ce bus parce que je pensais qu'il était plein. (ʒé lesé pasé se büs parskö ʒö pansè kil etè plen) - Ho lasciato passare questo autobus perché pensavo fosse pieno.
+Il reste deux arrêts avant le terminus. (il rest dö zarè avan le terminüs) - Mancano due fermate al capolinea.
+Le chauffeur a ouvert la porte arrière pour les passagers. (le scöför a uver la port arrièr pur le pasajé) - L'autista ha aperto la porta posteriore per i passeggeri.
+Tu as déjà fait l'enregistrement en ligne pour le vol ? (tü a deʒa fè lanreʒistrman an liñ pur le vol) - Hai già fatto il check-in online per il volo?
+J'ai gardé mon passeport dans une poche intérieure de mon sac. (ʒé gardé mon paspor dan ün pos anteryor de mon sak) - Ho tenuto il passaporto in una tasca interna della borsa.
+On doit passer par le contrôle des passeports avant de rejoindre la porte. (on dwa pasé par le kontrol de paspor avan de reʒwèndr la port) - Dobbiamo passare dal controllo dei passaporti prima di raggiungere il gate.
+L'écran affiche maintenant l'heure d'embarquement. (lekran afis mantenan lör danbarkman) - Lo schermo mostra ora l'orario d'imbarco.
+J'ai attaché ma ceinture dès que je me suis assis. (ʒé atasce ma santür de ke ʒö me süi asi) - Ho allacciato la cintura appena mi sono seduto.
+Le bateau est presque plein, heureusement qu'on avait réservé. (le bato é presk plen, örözman kon avè rezervé) - Il traghetto è quasi pieno, per fortuna avevamo prenotato.
+On peut laisser la voiture sur le pont inférieur. (on pö lesé la vuatür sür le pon anteryor) - Possiamo lasciare la macchina sul ponte inferiore.
+Le vent s'est calmé, la traversée devrait être agréable. (le van sé kalmé, la traversé dövrè etr agreabl) - Il vento si è calmato, la traversata dovrebbe essere piacevole.
+Pour rejoindre la vieille ville, il faut traverser cette rue. (pur reʒwèndr la vièy vil, il fo traversé set rü) - Per raggiungere il centro storico bisogna attraversare questa strada.
+J'ai reconnu la place grâce à la statue au milieu. (ʒé rekonü la plas gras a la statü o milyö) - Ho riconosciuto la piazza grazie alla statua al centro.
+Tu peux te garer derrière le bâtiment, il y a quelques places libres. (tü pö te garé derrièr le batiman, il ia kelk plas libr) - Puoi parcheggiare dietro l'edificio, ci sono alcuni posti liberi.
+La voiture tire légèrement vers la droite quand je freine. (la vuatür tir leʒèrman ver la drwat kan ʒö fren) - La macchina tira leggermente verso destra quando freno.
+J'ai crevé sur l'autoroute et je suis coincé sur la bande d'arrêt d'urgence. (ʒé krevé sür lotorut é ʒö süi kwanse sür la band dare dörʒans) - Ho forato in autostrada e sono fermo sulla corsia d'emergenza.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
