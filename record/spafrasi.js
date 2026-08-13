@@ -718,6 +718,56 @@ Hay una cola enorme delante del túnel. (ai una kóla enorme delánte del túnel
 El agua ha inundado varias calles del centro. (el água a inundádo bárias káyes del séntrо) - L'acqua ha allagato diverse strade del centro.
 El hotel nos ha dejado hacer el registro un poco antes. (el otél nos a dekhádo asér el rekhístro un póko ántes) - L'hotel ci ha permesso di fare il check-in un po' prima.
 La habitación no está lista todavía, tendremos que esperar. (la abitasión no está lísta todabía, tendrémos ke esperár) - La camera non è ancora pronta, dovremo aspettare.
+He cambiado la funda de la almohada porque estaba manchada. (e kambyádo la fún da de la almoháda porke estaba mancháda) - Ho cambiato la federa del cuscino perché era macchiata.
+Voy a doblar las toallas y guardarlas en el armario. (boi a doblár las toáyas i guardárlas en el armário) - Piego gli asciugamani e li metto nell'armadio.
+No sé quién ha dejado estas cosas encima de la mesa. (no sé kyén a dekhádo éstas kósas ensíma de la mésa) - Non so chi ha lasciato queste cose sul tavolo.
+He encontrado una moneda detrás del mueble. (e enkontrádo una monéda detrás del muéble) - Ho trovato una moneta dietro il mobile.
+El agua caliente tarda unos minutos en llegar. (el água kalyénte tárda unos minútos en yegár) - L'acqua calda impiega qualche minuto ad arrivare.
+Hoy voy a limpiar también debajo de los muebles. (oi boi a limpiár tambyén debáho de los muébles) - Oggi pulisco anche sotto i mobili.
+¿Puedes cerrar las cortinas cuando empiece a oscurecer? (puédes serrár las kortínas kuándo empyése a oskuresér) - Puoi chiudere le tende quando comincia a fare buio?
+La lavadora ha terminado y está pitando. (la labadóra a terminádo i está pitándo) - La lavatrice ha finito e sta suonando.
+He puesto el lavavajillas con los platos de la cena. (e puésto el lababayíyas kon los plátos de la séna) - Ho messo nella lavastoviglie i piatti della cena.
+El perro ha escondido su juguete debajo del sofá. (el pérro a eskondído su khuguéte debáho del sofà) - Il cane ha nascosto il suo giocattolo sotto il divano.
+Esta mañana no tenía nada de hambre. (ésta mañana no teníа náda de ámbre) - Stamattina non avevo per niente fame.
+He preparado fruta para llevar al trabajo. (e preparádo fruta para yebár al trabáho) - Ho preparato della frutta da portare al lavoro.
+¿Te apetece tomar algo después de comer? (te apetése tomár álgo despúes de komér) - Ti va di bere qualcosa dopo pranzo?
+La sopa está demasiado caliente, espera un poco. (la sópa está demasiádo kalyénte, espéra un póko) - La zuppa è troppo calda, aspetta un po'.
+Si quieres repetir, todavía queda bastante. (si kyéres repetír, todabía kéda bastante) - Se vuoi fare il bis, ce n'è ancora parecchio.
+Mañana tienen una prueba de historia. (mañána tiénen una pru éba de istória) - Domani hanno una verifica di storia.
+La profesora ha dicho que pueden usar el diccionario. (la profesóra a dícho ke puéden usár el diksyonário) - L'insegnante ha detto che possono usare il dizionario.
+Mi hijo está preocupado porque no entiende este tema. (mi ího está preokupádo porke no entyénde éste téma) - Mio figlio è preoccupato perché non capisce questo argomento.
+Antes de salir, revisa que lleves todo lo necesario. (ántes de salír, rebísa ke yébes todo lo nesesário) - Prima di uscire, controlla di avere tutto il necessario.
+Los padres tenemos que estar pendientes de estas cosas. (los pá­dres tenémos ke estár pendyéntes de éstas kósas) - Noi genitori dobbiamo stare attenti a queste cose.
+No quiero que llegues a casa demasiado tarde. (no kyéro ke yégues a káса demasiádo tárde) - Non voglio che tu torni a casa troppo tardi.
+Hoy te toca poner la mesa. (oi te tóka ponér la mésa) - Oggi tocca a te apparecchiare.
+Me he levantado con la garganta bastante irritada. (me e lebantádo kon la gargánta bastante irritáda) - Mi sono alzato con la gola piuttosto irritata.
+¿Tiene algún producto para aliviar la congestión nasal? (tiéne algún prodúkto para alibiár la kongestión nasál) - Ha qualche prodotto per alleviare la congestione nasale?
+Voy a medir la temperatura porque me encuentro raro. (boi a medir la temperaturа porke me enkuéntro ráro) - Mi misuro la temperatura perché non mi sento bene.
+El médico quiere volver a verme dentro de una semana. (el médiko kyére bolbér a bérme déntro de una semána) - Il medico vuole rivedermi tra una settimana.
+El tren está entrando ahora mismo en la estación. (el tren está entrándo aóra mismo en la estasyón) - Il treno sta entrando proprio ora in stazione.
+Nos han asignado los asientos del vagón cinco. (nos an asignádo los asyéntos del bagón sínko) - Ci hanno assegnato i posti della carrozza cinque.
+El billete digital aparece en la aplicación del móvil. (el biyéte dikhitál aparése en la aplikasyón del móbil) - Il biglietto digitale appare nell'app del cellulare.
+El próximo tren tarda casi una hora. (el próksimo tren tárda káси una óra) - Il prossimo treno impiega quasi un'ora.
+Hay mucha gente esperando en las escaleras mecánicas. (ai múcha khénte esperándo en las eskaléras mekánikas) - C'è molta gente che aspetta sulle scale mobili.
+La estación de metro está cerrada por mantenimiento. (la estasyón de métro está serráda por mantenimiénto) - La stazione della metropolitana è chiusa per manutenzione.
+He mirado el mapa para saber dónde tenemos que cambiar. (e mirádo el mapa para sabér dónde tenémos ke kambyár) - Ho guardato la mappa per sapere dove dobbiamo cambiare.
+El autobús llega cada media hora por la noche. (el autobús yéga káda média óra por la nóche) - L'autobus arriva ogni mezz'ora di notte.
+Nos hemos quedado esperando en la parada equivocada. (nos émos kedádo esperándo en la parąda ekibokáda) - Siamo rimasti ad aspettare alla fermata sbagliata.
+El avión ha despegado con bastante turbulencia. (el abión a despegádo kon bastante turbulénsia) - L'aereo è decollato con parecchia turbolenza.
+Por favor, mantengan los cinturones abrochados durante el despegue. (por fabór, manténgan los sinturónes abrochádos duránte el despegue) - Per favore, tenete le cinture allacciate durante il decollo.
+¿Dónde está la zona de recogida de equipajes? (dónde está la sona de rekohída de ekipáhes) - Dov'è la zona ritiro bagagli?
+El barco llegará al puerto a última hora de la tarde. (el bárko yegará al puérto a última óra de la tárde) - Il traghetto arriverà in porto nel tardo pomeriggio.
+Hemos comprado los billetes del ferry por internet. (émos komprádo los biyétes del férri por internét) - Abbiamo comprato online i biglietti del traghetto.
+La calle que buscas está detrás del ayuntamiento. (la káye ke búskas está detrás del ayuntamiénto) - La strada che cerchi è dietro il municipio.
+Pregúntale a ese señor, parece que conoce bien la zona. (pregúntale a ése señór, parése ke konóse byén la sona) - Chiedi a quel signore, sembra che conosca bene la zona.
+Hay un desvío obligatorio por las obras de la carretera. (ai un desbío obligatório por las óbras de la karretéra) - C'è una deviazione obbligatoria a causa dei lavori stradali.
+El coche hace un ruido raro al girar a la derecha. (el kóche áse un ruído ráro al khirár a la derécha) - La macchina fa uno strano rumore quando giro a destra.
+Creo que el problema está en los frenos. (kréo ke el probléma está en los frénos) - Credo che il problema sia nei freni.
+Han cortado el agua del edificio por una avería. (an kortádo el água del edifísio por una abería) - Hanno tolto l'acqua al palazzo per un guasto.
+El técnico ha venido a revisar la caldera esta mañana. (el tékniko a benído a rebisár la kaldéra ésta mañana) - Il tecnico è venuto a controllare la caldaia stamattina.
+El ruido de la habitación de al lado no me deja dormir. (el ruído de la abitasión de al ládo no me déha dormír) - Il rumore della camera accanto non mi lascia dormire.
+¿Podrían cambiarme de habitación, por favor? (podrían kambyárme de abitasión, por fabór) - Potreste cambiarmi la camera, per favore?
+El aire de la habitación está demasiado cargado. (el áire de la abitasión está demasiádo kargádo) - L'aria della camera è troppo viziata.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
