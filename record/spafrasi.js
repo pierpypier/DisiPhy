@@ -620,6 +620,54 @@ La ducha pierde agua y el suelo se está mojando. (la dúcha pyérde água i el 
 ¿Podrían guardarnos las maletas hasta esta tarde? (podrían guardárnos las malétas ásta ésta tárde) - Potreste custodirci le valigie fino a questo pomeriggio?
 La casa tiene todo lo necesario para pasar unos días. (la káса tiéne todo lo nesesário para pasár unos días) - La casa ha tutto il necessario per trascorrere qualche giorno.
 Nos han dejado un mapa de la zona sobre la mesa. (nos an dekhádo un mapa de la sona sóbre la mésa) - Ci hanno lasciato una mappa della zona sul tavolo.
+He puesto el despertador un poco antes porque mañana tengo que salir temprano. (e puésto el despertadór un póko ántes porke mañana téngo ke salír temprano) - Ho messo la sveglia un po' prima perché domani devo uscire presto.
+Deja las zapatillas en la entrada para no ensuciar el suelo. (déha las sapatíyas en la entráda para no ensusiár el suélo) - Lascia le scarpe all'ingresso per non sporcare il pavimento.
+Tengo que tender la ropa antes de irme a trabajar. (téngo ke tendér la rópa ántes de írme a trabahár) - Devo stendere i panni prima di andare al lavoro.
+He abierto la ventana porque olía un poco a humedad. (e abyérto la bentána porke olía un póko a umedád) - Ho aperto la finestra perché c'era un po' di odore di umidità.
+¿Puedes comprobar si has cerrado el grifo? (puédes komprobár si as serrádo el grífo) - Puoi controllare se hai chiuso il rubinetto?
+La nevera está haciendo un ruido extraño desde ayer. (la nebéra está asyéndo un ruído ekstráño désde ayér) - Il frigorifero fa uno strano rumore da ieri.
+Voy a guardar los alimentos que acabamos de comprar. (boi a guardár los aliméntos ke akabámos de komprár) - Metto via gli alimenti che abbiamo appena comprato.
+Hoy no hace falta cocinar, podemos pedir algo. (oi no áse fálta kosinár, podémos pedír álgo) - Oggi non serve cucinare, possiamo ordinare qualcosa.
+¿Me pasas el pan, por favor? (me pásas el pan, por fabór) - Mi passi il pane, per favore?
+He preparado café para todos. (e preparádo kafé para todos) - Ho preparato il caffè per tutti.
+Mi hija tiene que estudiar historia esta tarde. (mi íha tiéne ke estudiár istória ésta tárde) - Mia figlia deve studiare storia questo pomeriggio.
+El profesor les ha pedido que lean un capítulo para mañana. (el profesór les a pedído ke léan un kapítulo para mañana) - L'insegnante ha chiesto loro di leggere un capitolo per domani.
+¿Has terminado ya el trabajo de ciencias? (as terminádo ya el trabáho de syénsias) - Hai già finito il lavoro di scienze?
+Mañana puedes dormir hasta un poco más tarde. (mañána puédes dormír ásta un póko más tárde) - Domani puoi dormire un po' più a lungo.
+Quiero que me avises cuando hayas llegado al colegio. (kyéro ke me abíses kuándo áyas yegádo al kolekhio) - Voglio che mi avvisi quando sei arrivato a scuola.
+Esta vez no te voy a dejar usar el móvil durante la cena. (ésta bes no te boi a dekhár usár el móbil duránte la séna) - Questa volta non ti lascerò usare il cellulare durante la cena.
+Creo que necesito dormir más estos días. (kréo ke nesesíto dormír más éstos días) - Credo di aver bisogno di dormire di più in questi giorni.
+Me duele la espalda desde que me levanté esta mañana. (me duéle la espálda désde ke me lebanté ésta mañana) - Mi fa male la schiena da quando mi sono alzato stamattina.
+El médico me ha dicho que descanse unos días. (el médiko me a dícho ke deskánse unos días) - Il medico mi ha detto di riposare per qualche giorno.
+Voy a pedir cita con el especialista. (boi a pedír síta kon el espesyalísta) - Prendo un appuntamento con lo specialista.
+El tren llegará con unos minutos de retraso por una avería. (el tren yegará kon unos minútos de retraso por una abería) - Il treno arriverà con qualche minuto di ritardo per un guasto.
+¿Hay algún sitio libre para sentarse? (ai algún sítio líbre para sentárse) - C'è qualche posto libero dove sedersi?
+El billete más barato no permite cambios. (el biyéte más baráto no permíte kâmbios) - Il biglietto più economico non permette cambi.
+Nos hemos bajado una estación demasiado pronto. (nos émos bakhádo una estasyón demasiádo pronto) - Siamo scesi una fermata troppo presto.
+La salida que buscamos está al final del pasillo. (la salída ke buskámos está al finál del pasíyo) - L'uscita che cerchiamo è in fondo al corridoio.
+La máquina no acepta mi tarjeta de transporte. (la mákina no aseptá mi tarhéta de transporte) - La macchinetta non accetta la mia tessera dei trasporti.
+El metro está funcionando con normalidad otra vez. (el métro está funksionándo kon normalidád ótra bes) - La metropolitana funziona di nuovo normalmente.
+El autobús se ha quedado atrapado en el tráfico. (el autobús se a kedádo atrapádo en el tráfiko) - L'autobus è rimasto bloccato nel traffico.
+Creo que este autobús nos deja cerca del hotel. (kréo ke éste autobús nos déha sérka del otél) - Credo che questo autobus ci lasci vicino all'hotel.
+El vuelo sale de la puerta número doce. (el buélo sále de la puérta número dose) - Il volo parte dal gate numero dodici.
+Tenemos que estar en la puerta de embarque media hora antes. (tenémos ke estár en la puérta de embarke média óra ántes) - Dobbiamo essere al gate mezz'ora prima.
+Han anunciado un cambio de puerta para nuestro vuelo. (an anunsiádo un kâmbio de puérta para nuéstro buélo) - Hanno annunciato un cambio di gate per il nostro volo.
+Mi equipaje de mano pesa más de lo permitido. (mi ekipáhe de máno péssa más de lo permitído) - Il mio bagaglio a mano pesa più del consentito.
+El ferry está esperando a los últimos pasajeros. (el férri está esperándo a los últimos pasahéros) - Il traghetto sta aspettando gli ultimi passeggeri.
+Hay bastante oleaje y el barco se mueve mucho. (ai bastante oleáhe i el bárko se muébe múcho) - C'è parecchio moto ondoso e il traghetto si muove molto.
+Cruza la calle y encontrarás la farmacia a mano derecha. (krúsa la káye i enkontrarás la farmásia a máno derécha) - Attraversa la strada e troverai la farmacia sulla destra.
+El museo está a dos calles de aquí. (el muséo está a dos káyes de akí) - Il museo è a due strade da qui.
+Nos hemos perdido, pero creo que ya estamos cerca. (nos émos perdído, péгo kréo ke ya estámos sérka) - Ci siamo persi, ma credo che ormai siamo vicini.
+Hay aparcamiento gratuito detrás del edificio. (ai apar kamiénto gratuíto detrás del edifísio) - C'è un parcheggio gratuito dietro l'edificio.
+La carretera está llena de baches. (la karretéra está yéna de báches) - La strada è piena di buche.
+El coche no arranca aunque la batería parece estar bien. (el kóche no arránka áunke la bateríа parése estár byén) - La macchina non parte anche se la batteria sembra funzionare.
+He puesto las luces de emergencia y estoy esperando ayuda. (e puésto las lú ses de emer khénsia i estoi esperándo ayúda) - Ho acceso le luci d'emergenza e sto aspettando aiuto.
+Se ha ido la luz en todo el barrio. (se a ído la lus en todo el bário) - È saltata la corrente in tutto il quartiere.
+El ascensor no funciona y tendremos que subir por las escaleras. (el asensór no funksióna i tendrémos ke subír por las eskaléras) - L'ascensore non funziona e dovremo salire per le scale.
+La habitación es cómoda, pero da a una calle muy ruidosa. (la abitasión es kómoda, péгo da a una káye mui ruídosа) - La camera è confortevole, ma dà su una strada molto rumorosa.
+El aire acondicionado no responde al mando. (el áire akondisionádo no respónde al mándo) - L'aria condizionata non risponde al telecomando.
+¿Podrían traerme otra almohada, por favor? (podrían traérme ótra almoháda, por fabór) - Potreste portarmi un altro cuscino, per favore?
+Nos han recomendado este restaurante y tiene muy buena pinta. (nos an rekomendádo éste restauránte i tiéne mui buéna pínta) - Ci hanno consigliato questo ristorante e sembra davvero ottimo.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
