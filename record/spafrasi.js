@@ -1291,6 +1291,57 @@ Han puesto una señal nueva en esta esquina. (an puésto una señal nuéba en é
 El agua de la calle está empezando a bajar. (el água de la káye está empesándo a bakhár) - L'acqua sulla strada sta iniziando a defluire.
 No funciona el cajero de la esquina, tendremos que buscar otro. (no funksióna el kahéro de la eskína, tendrémos ke buskár ótro) - Il bancomat all'angolo non funziona, dovremo cercarne un altro.
 La tarjeta me ha llegado hoy por correo. (la tarhéta me a yegádo oi por kor réo) - La carta mi è arrivata oggi per posta.
+He sacado los cubiertos del cajón y los he dejado sobre la mesa. (e sakádo los kubyértos del kahón i los e dekhádo sóbre la mésa) - Ho preso le posate dal cassetto e le ho messe sul tavolo.
+La lavadora ha terminado, pero todavía no he tendido la ropa. (la labadóra a terminádo, péгo todabía no e tendído la rópa) - La lavatrice ha finito, ma non ho ancora steso i panni.
+Voy a limpiar el espejo porque está lleno de huellas. (boi a limpiár el espého porke está yéno de uéyas) - Pulisco lo specchio perché è pieno di impronte.
+No dejes las llaves encima de la mesa, guárdalas en el cajón. (no déhes las yábes ensíma de la mésa, guárdalas en el kahón) - Non lasciare le chiavi sul tavolo, mettile nel cassetto.
+El gato se ha subido al sofá y no quiere bajar. (el gáto se a subído al sofà i no kyére bakhár) - Il gatto è salito sul divano e non vuole scendere.
+Tengo que comprar unas bombillas para el dormitorio. (téngo ke komprár unas bombíyas para el dorm itório) - Devo comprare delle lampadine per la camera da letto.
+He dejado el abrigo en la entrada para que se seque. (e dekhádo el abrígo en la entráda para ke se séke) - Ho lasciato il cappotto all'ingresso perché si asciughi.
+¿Puedes comprobar si queda leche para mañana? (puédes komprobár si kéda léche para mañana) - Puoi controllare se è rimasto del latte per domani?
+Voy a cortar el pan mientras preparas el café. (boi a kortár el pan miéntras preparas el kafé) - Taglio il pane mentre prepari il caffè.
+Hoy vamos a comer un poco más tarde de lo normal. (oi bámos a komér un póko más tárde de lo normál) - Oggi mangeremo un po' più tardi del solito.
+He comprado pescado fresco para hacer la cena. (e komprádo peskádo fré sko para asér la séna) - Ho comprato del pesce fresco per preparare la cena.
+¿Te queda sitio en el plato para un poco más? (te kéda sítio en el pláto para un póko más) - Hai ancora spazio nel piatto per un altro po'?
+Los niños están terminando de comer en la cocina. (los niños están terminándo de komér en la kosína) - I ragazzi stanno finendo di mangiare in cucina.
+No te levantes todavía, que falta el postre. (no te lebántes todabía, ke fálta el postre) - Non alzarti ancora, manca il dolce.
+Mañana tenemos que levantarnos temprano para ir al colegio. (mañána tenémos ke lebantárnos temprano para ír al kolekhio) - Domani dobbiamo alzarci presto per andare a scuola.
+La profesora ha corregido los ejercicios y ha dejado algunos comentarios. (la profesóra a korekhído los eher sísios i a dekhádo alg unos komentários) - L'insegnante ha corretto gli esercizi e ha lasciato alcuni commenti.
+Esta asignatura me parece bastante interesante este año. (ésta asignatúra me parése bastante interesánte éste año) - Quest'anno questa materia mi sembra piuttosto interessante.
+¿Has estudiado suficiente para el examen de mañana? (as estudiádo sufisyénte para el eksámen de mañana) - Hai studiato abbastanza per l'esame di domani?
+No te quedes despierto hasta tan tarde entre semana. (no te kédes despiérto ásta tan tárde entre semána) - Non stare sveglio fino a così tardi durante la settimana.
+Si acabas pronto, puedes descansar un rato antes de cenar. (si ak ábas pronto, puédes deskansár un ráto ántes de senár) - Se finisci presto, puoi riposarti un po' prima di cena.
+Me duele el estómago desde anoche. (me duéle el estómago désde anóche) - Ho mal di stomaco da ieri sera.
+¿Puedo tomar este jarabe antes de acostarme? (puédo tomár éste harábe ántes de akostárme) - Posso prendere questo sciroppo prima di andare a letto?
+La farmacia cierra dentro de media hora. (la farmásia syérra déntro de média óra) - La farmacia chiude tra mezz'ora.
+Tengo que llevar el informe al hospital esta tarde. (téngo ke yebár el infórme al ospitál ésta tárde) - Devo portare il referto in ospedale questo pomeriggio.
+¿A qué hora llega el tren procedente de Madrid? (a ke óra yéga el tren prosedénte de Madríd) - A che ora arriva il treno proveniente da Madrid?
+El tren nocturno tiene plazas disponibles todavía. (el tren noktúrno tiéne plásas disponíb les todabía) - Il treno notturno ha ancora posti disponibili.
+He comprado un billete de ida y vuelta. (e komprádo un biyéte de ída i buélta) - Ho comprato un biglietto di andata e ritorno.
+La pantalla indica que el tren llegará por el andén cuatro. (la pantáya indíka ke el tren yegará por el andén kuátro) - Lo schermo indica che il treno arriverà al binario quattro.
+La estación de metro está a menos de cinco minutos andando. (la estasyón de métro está a ménos de sínko minútos andándo) - La stazione della metropolitana è a meno di cinque minuti a piedi.
+He perdido el abono y tengo que pedir otro. (e perdído el abóno i téngo ke pedír ótro) - Ho perso l'abbonamento e devo chiederne un altro.
+Hay demasiada gente en el andén, espera un poco antes de acercarte. (ai demasiáda khénte en el andén, espéra un póko ántes de aserkárte) - C'è troppa gente sul binario, aspetta un po' prima di avvicinarti.
+El autobús ha cambiado de recorrido por las obras. (el autobús a kambyádo de rekorrído por las óbras) - L'autobus ha cambiato percorso a causa dei lavori.
+¿Puedes decirme dónde tengo que bajar? (puédes desir me dónde téngo ke bakhár) - Puoi dirmi dove devo scendere?
+La tarjeta de transporte no me funciona. (la tarhéta de transporte no me funksióna) - La tessera dei trasporti non funziona.
+El avión ya está en pista y parece que saldremos enseguida. (el abión ya está en písta i parése ke saldrémos enseguída) - L'aereo è già sulla pista e sembra che partiremo subito.
+He guardado los documentos importantes en el equipaje de mano. (e guardádo los dokumentos importántes en el ekipáhe de máno) - Ho messo i documenti importanti nel bagaglio a mano.
+Nos queda bastante tiempo antes de que cierre la puerta de embarque. (nos kéda bastante tyémpo ántes de ke syérre la puérta de embarke) - Abbiamo ancora parecchio tempo prima che chiuda il gate.
+El vuelo ha aterrizado sin ningún problema. (el buélo a aterrisádo sin ningún probléma) - Il volo è atterrato senza alcun problema.
+El equipaje de mano no cabe debajo del asiento. (el ekipáhe de máno no kábe debáho del asyénto) - Il bagaglio a mano non entra sotto il sedile.
+El barco llegará al puerto sobre las seis de la tarde. (el bárko yegará al puérto sóbre las séis de la tárde) - Il traghetto arriverà al porto verso le sei del pomeriggio.
+Nos han recomendado llegar con bastante antelación al embarcadero. (nos an rekomendádo yegár kon bastante antelasión al embarkadéro) - Ci hanno consigliato di arrivare con largo anticipo all'imbarcadero.
+Perdona, ¿me puedes indicar cómo llegar a la estación? (perdóna, me puédes indikár kómo yegár a la estasyón) - Scusa, puoi indicarmi come arrivare alla stazione?
+Desde aquí tenemos que seguir las señales hacia el centro. (désde akí tenémos ke seguír las señáles asía el séntrо) - Da qui dobbiamo seguire le indicazioni verso il centro.
+No aparques aquí, está reservado para residentes. (no apar kes akí, está reservádo para res idéntes) - Non parcheggiare qui, è riservato ai residenti.
+El coche hace un ruido metálico cuando acelero. (el kóche áse un ruído metáliko kuándo aseléro) - La macchina fa un rumore metallico quando accelero.
+Voy a mirar el nivel de aceite antes de salir. (boi a mirár el nibél de aséite ántes de salír) - Controllo il livello dell'olio prima di partire.
+Se ha encendido un testigo rojo en el cuadro. (se a ensendído un testígo róho en el kuádro) - Si è accesa una spia rossa sul cruscotto.
+El seguro me ha enviado los datos del servicio de asistencia. (el seguro me a enbyádo los dátos del serbísio de as isténsia) - L'assicurazione mi ha inviato i dati del servizio di assistenza.
+Han cortado una calle porque están reparando una tubería. (an kortádo una káye porke están reparándo una tubería) - Hanno chiuso una strada perché stanno riparando una tubatura.
+La tormenta ha dejado varias calles completamente inundadas. (la tormenta a dekhádo bárias káyes kompletaménte inundádas) - Il temporale ha lasciato diverse strade completamente allagate.
+La cobertura ha vuelto después de unos minutos. (la kobertúra a buélto despúes de unos minútos) - La copertura è tornata dopo alcuni minuti.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
