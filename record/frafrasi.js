@@ -281,6 +281,58 @@ Vous pouvez nous conseiller un plat typique de la région ? (vu puvé nu konsèy
 On s'est retrouvés par hasard dans le même café. (on sé retruvé par azar dan le mem kafé) - Ci siamo ritrovati per caso nello stesso bar.
 J'ai complètement perdu la notion du temps en lisant ce livre. (ʒé kompletman perdü la nosiòn dü tan an lizan se livr) - Ho perso completamente la cognizione del tempo leggendo questo libro.
 Je n'ai pas envie de sortir ce soir, je suis épuisé. (ʒö né pa anvi de sortir se swar, ʒö süi epüizé) - Non ho voglia di uscire stasera, sono esausto.
+J'ai passé l'aspirateur dans toute la maison avant midi. (ʒé pase laspiratör dan tut la mezon avan midi) - Ho passato l'aspirapolvere in tutta casa prima di mezzogiorno.
+La fenêtre de la chambre est restée ouverte toute la nuit. (la fenetr de la sciambre é reste uvert tut la nüi) - La finestra della camera è rimasta aperta tutta la notte.
+Tu peux remettre les coussins sur le canapé ? (tü pö remetr le kusan sür le kanapé) - Puoi rimettere i cuscini sul divano?
+J'ai sorti le linge de la machine, mais il est encore humide. (ʒé sorti le liènʒ de la mascin, mè il é ankor üm id) - Ho tolto il bucato dalla lavatrice, ma è ancora umido.
+Le chien a renversé sa gamelle dans la cuisine. (le scièn a ranversé sa gamèl dan la küizin) - Il cane ha rovesciato la sua ciotola in cucina.
+Ferme bien le robinet, il goutte encore. (ferm bièn le robinè, il gut ankor) - Chiudi bene il rubinetto, perde ancora qualche goccia.
+J'ai acheté des fruits pour le petit déjeuner de demain. (ʒé asciété de früi pur le pəti deʒöné de döman) - Ho comprato della frutta per la colazione di domani.
+Tu peux mettre la table pendant que je termine de cuisiner ? (tü pö metr la tabl pandan ke ʒö termin de küiziné) - Puoi apparecchiare mentre finisco di cucinare?
+Il reste assez de riz pour préparer un dîner rapide. (il rest ase de ri pur preparé an diné rapid) - È rimasto abbastanza riso per preparare una cena veloce.
+J'ai oublié de décongeler la viande, on fera autre chose. (ʒé oublié de dekongelé la viand, on fera otr scos) - Ho dimenticato di scongelare la carne, faremo qualcos'altro.
+La réunion de parents est prévue jeudi soir. (la réüniòn de paran é prevü ʒödi swar) - La riunione dei genitori è prevista per giovedì sera.
+Mon professeur a conseillé de lire ce roman pendant les vacances. (mon profesör a konsèyé de lir se roman pandan le vakans) - Il mio insegnante ha consigliato di leggere questo romanzo durante le vacanze.
+J'ai besoin d'un peu de calme pour me concentrer. (ʒé bezwan dan pö de kalm pur me konsantré) - Ho bisogno di un po' di tranquillità per concentrarmi.
+Elle a révisé toute la soirée pour son examen. (el a revizé tut la swaré pur son egzamen) - Ha ripassato tutta la sera per il suo esame.
+Tu peux éteindre la télé quand tu vas te coucher ? (tü pö etandr la telé kan tü va te kucé) - Puoi spegnere la televisione quando vai a dormire?
+Je t'ai déjà dit que les devoirs passent avant les jeux vidéo. (ʒö té deʒa di ke le devwar pas avan le ʒö vidéo) - Ti ho già detto che i compiti vengono prima dei videogiochi.
+Si tu veux utiliser la voiture, demande-moi d'abord. (si tü vö tülizé la vuatür, demand-mwa dabòr) - Se vuoi usare la macchina, chiedimelo prima.
+J'ai une douleur au dos qui revient de temps en temps. (ʒé ün dulör o do ki revian de tan an tan) - Ho un dolore alla schiena che torna ogni tanto.
+Le pharmacien m'a dit de boire beaucoup d'eau. (le farmasièn ma di de bwar bokou do) - Il farmacista mi ha detto di bere molta acqua.
+Je vais prendre ma température pour être sûr. (ʒö vé prandr ma tanperatür pur etr sür) - Mi misurerò la temperatura per essere sicuro.
+J'ai raté mon train, le prochain est dans vingt minutes. (ʒé raté mon tran, le proscièn é dan van minüt) - Ho perso il treno, il prossimo è tra venti minuti.
+Cette gare est beaucoup plus grande que je ne pensais. (set gar é bokou plü grand ke ʒö ne panse) - Questa stazione è molto più grande di quanto pensassi.
+Tu peux regarder si le train s'arrête à Dijon ? (tü pö regardé si le tran sarèt a Diʒon) - Puoi controllare se il treno ferma a Digione?
+On a changé de wagon à la dernière minute. (on a sciandʒé de vagon a la dernìèr minüt) - Abbiamo cambiato carrozza all'ultimo momento.
+Le métro est presque vide à cette heure-ci. (le métro é presk vid a set ör si) - La metropolitana è quasi vuota a quest'ora.
+J'ai pris la mauvaise direction sur la ligne. (ʒé pri la movèz direksiòn sür la liñ) - Ho preso la direzione sbagliata sulla linea.
+Le tram s'est arrêté juste avant notre station. (le tram sé arete ʒüst avan notr stasiòn) - Il tram si è fermato proprio prima della nostra stazione.
+On peut prendre le bus suivant, celui-ci est vraiment trop chargé. (on pö prandr le büs süivan, sö-lüi é vreman tro sciargé) - Possiamo prendere l'autobus successivo, questo è davvero troppo pieno.
+J'ai oublié de recharger ma carte de transport. (ʒé oublié de resciarʒé ma kart de transport) - Ho dimenticato di ricaricare la mia tessera dei trasporti.
+Il reste une place libre au fond du bus. (il rest ün plas libr o fon dü büs) - È rimasto un posto libero in fondo all'autobus.
+Nous avons atterri avec presque une demi-heure de retard. (nu zavon aterì avek presk ün dömi ör de retar) - Siamo atterrati con quasi mezz'ora di ritardo.
+Les portes d'embarquement viennent d'ouvrir. (le port danbarkman vièn duvrir) - I gate d'imbarco hanno appena aperto.
+J'ai dû mettre mon ordinateur dans un bac séparé. (ʒé dü metr mon ordinatör dan an bak séparé) - Ho dovuto mettere il computer in una vaschetta separata.
+Le vol est complet, mais on peut encore demander une place côté fenêtre. (le vol é komplet, mè on pö ankor demandé ün plas koté fenetr) - Il volo è pieno, ma possiamo ancora chiedere un posto vicino al finestrino.
+La mer est calme aujourd'hui, la traversée devrait être agréable. (la mer é kalm oʒurdüi, la traversé dövrè etr agreabl) - Il mare è calmo oggi, la traversata dovrebbe essere piacevole.
+On a oublié de réserver une place pour la voiture sur le ferry. (on a oublié de rezerve ün plas pur la vuatür sür le feri) - Abbiamo dimenticato di prenotare un posto per l'auto sul traghetto.
+Tu vois la pharmacie juste en face de la banque ? (tü vwa la farmasi ʒüst an fas de la bank) - Vedi la farmacia proprio di fronte alla banca?
+Pour aller au musée, continuez tout droit pendant cinq cents mètres. (pur alé o müzé, kontinüé tu drwa pandan sank san metr) - Per andare al museo, continuate dritto per cinquecento metri.
+Ma voiture tire légèrement vers la droite quand je freine. (ma vuatür tir leʒèrman ver la drwat kan ʒö fren) - La mia macchina tende leggermente verso destra quando freno.
+Je préfère appeler le dépanneur plutôt que prendre un risque. (ʒö prefer apel le depanör plüto ke prandr an risk) - Preferisco chiamare il soccorso stradale piuttosto che correre un rischio.
+La police a bloqué la rue après l'accident. (la polis a bloke la rü aprè laksidan) - La polizia ha bloccato la strada dopo l'incidente.
+Il faut éviter ce quartier, il y a trop d'embouteillages. (il fo evité se kartié, il ia tro danbuteyaj) - Bisogna evitare questo quartiere, ci sono troppi ingorghi.
+On nous a prévenus qu'il pourrait y avoir une coupure de courant. (on nu a prevünü kil purè ia-vwar ün kupür de kuran) - Ci hanno avvertito che potrebbe esserci un'interruzione di corrente.
+La chaudière fait un bruit inquiétant depuis ce matin. (la sodier fè an brüi ankiétan döpüi se maten) - La caldaia fa uno strano rumore preoccupante da stamattina.
+Le technicien passera demain entre neuf heures et midi. (le teknisièn pasar döman antr nöf ör é midi) - Il tecnico passerà domani tra le nove e mezzogiorno.
+Notre chambre donne sur une rue assez animée. (notr sciambre don sür ün rü ase anime) - La nostra camera dà su una strada piuttosto animata.
+Est-ce qu'il serait possible d'avoir un oreiller supplémentaire ? (es kil serè posibil davwar an oreyè süplémantèr) - Sarebbe possibile avere un cuscino aggiuntivo?
+L'ascenseur fait un bruit étrange à chaque étage. (lasansör fè an brüi etranʒ a scak etaʒ) - L'ascensore fa uno strano rumore a ogni piano.
+La salle de bains était encore humide quand nous sommes arrivés. (la sal de ban etè ankor üm id kan nu som arivé) - Il bagno era ancora umido quando siamo arrivati.
+On a trouvé l'appartement facilement grâce aux indications de l'hôte. (on a truvé lapartman fasilman gras o zandikasiòn de lot) - Abbiamo trovato facilmente l'appartamento grazie alle indicazioni del proprietario.
+Je prendrai la soupe du jour et une salade. (ʒö prendré la sup dü ʒur é ün salad) - Prenderò la zuppa del giorno e un'insalata.
+On peut commander un dessert à partager ? (on pö komandé an desèr a partaʒé) - Possiamo ordinare un dolce da condividere?
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
