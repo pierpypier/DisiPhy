@@ -1308,6 +1308,60 @@ Wegen der Baustelle kommt man hier momentan nicht durch. (wegen der baustelle ko
 Im Hotel fehlt uns noch eine zweite Zimmerkarte. (im hotel felt uns noch aine tsvaita tsimmerkarte) - In hotel ci manca ancora una seconda tessera della camera.
 Das Fenster im Bad lässt sich nicht richtig schließen. (das fenster im baad lest zich nicht richtig schließen) - La finestra del bagno non si chiude bene.
 Der Gastgeber hat uns die Hausregeln per Nachricht geschickt. (der gastgeber hat uns di hausregeln per nachricht geschickt) - L'host ci ha mandato le regole della casa per messaggio.
+Ich hab den Küchentisch vor dem Frühstück abgewischt. (ich hab den kücentisc for dem früstück abgewischt) - Ho pulito il tavolo della cucina prima di colazione.
+Die Spülmaschine ist fertig, du kannst sie ausräumen. (di spülmascine ist fertig, du kanst zi ausroimen) - La lavastoviglie ha finito, puoi svuotarla.
+Ich hab die Schlüssel in meiner Jackentasche gefunden. (ich hab di schlüssl in meiner iakentasce gefunden) - Ho trovato le chiavi nella tasca della mia giacca.
+Der Hund kratzt schon wieder an der Wohnungstür. (der hund kratzt scion vider an der vonungstür) - Il cane gratta di nuovo alla porta di casa.
+Unsere Katze hat sich im Schrank versteckt. (unzere katze hat zich im scrank fersteckt) - Il nostro gatto si è nascosto nell'armadio.
+Ich muss noch die Wäsche aus der Maschine holen. (ich muss noch di vesce aus der mascine holen) - Devo ancora togliere il bucato dalla lavatrice.
+Das Licht im Schlafzimmer ist noch an. (das licht im sclafzimmer ist noch an) - La luce in camera da letto è ancora accesa.
+Mach bitte die Tür hinter dir zu. (mach bitte di tür hinter dir tsu) - Chiudi la porta dietro di te, per favore.
+Ich hab heute Morgen keine Zeit gehabt, in Ruhe zu frühstücken. (ich hab hoite morgen kaine tsait gehabt, in ru-e tsu früstücken) - Stamattina non ho avuto tempo di fare colazione con calma.
+Der Kaffee steht schon auf dem Küchentisch. (der kaffe steht scion auf dem kücentisc) - Il caffè è già sul tavolo della cucina.
+Zum Mittagessen machen wir Nudeln mit Gemüse. (tsum mittagessen machen vir nudeln mit gemüze) - A pranzo facciamo pasta con verdure.
+Wer möchte noch ein Stück Kuchen? (ver möcte noch ain stück kuchen) - Chi vuole ancora una fetta di torta?
+Beim Abendessen war es heute ungewöhnlich still. (baim abentessen var es hoite ungewöhnlic still) - Stasera a cena c'era un silenzio insolito.
+Die Schule hat uns eine Nachricht über die App geschickt. (di scule hat uns aine nachricht über di äpp geschickt) - La scuola ci ha mandato un messaggio tramite l'app.
+Sie muss für morgen noch ein Referat vorbereiten. (zi muss für morgen noch ain referat forbereiten) - Deve ancora preparare una presentazione per domani.
+In Geschichte hat er gerade ein interessantes Thema. (in gescichte hat er gerade ain interesantes tema) - In storia sta affrontando un argomento interessante.
+Die Mathelehrerin hat die Aufgabe an der Tafel erklärt. (di mateleererin hat di aufgabe an der tafel erklärt) - L'insegnante di matematica ha spiegato l'esercizio alla lavagna.
+Ich hab ihm geholfen, den Text zu verstehen. (ich hab im geholfen, den text tsu fersteen) - L'ho aiutato a capire il testo.
+Du kannst nach dem Lernen eine Pause machen. (du kanst nach dem lernen aine pause machen) - Dopo aver studiato puoi fare una pausa.
+Heute Abend musst du nicht früh ins Bett. (hoite abent musst du nicht frü ins bett) - Stasera non devi andare a letto presto.
+Ich will nur, dass du mir vorher Bescheid sagst. (ich vil nur, das du mir forer bescait sagst) - Voglio solo che me lo dica prima.
+Du kannst mitkommen, aber du musst um elf wieder da sein. (du kanst mitkommen, aber du musst um elf vider da zain) - Puoi venire, ma devi essere di nuovo qui alle undici.
+Ich hab dir erlaubt, länger aufzubleiben. (ich hab dir erlaubt, lenger auftsubleiben) - Ti ho permesso di stare sveglio più a lungo.
+Haben Sie etwas gegen Sodbrennen? (haben zi etvas gegen zodbrennen) - Avete qualcosa contro il bruciore di stomaco?
+Ich brauche eine neue Packung von diesem Medikament. (ich brauche aine noie pakung fon disem medikament) - Ho bisogno di una nuova confezione di questo farmaco.
+Die Schmerzen sind seit gestern deutlich schwächer. (di scmerzen zint sait gestern doitlec svecher) - I dolori sono decisamente più lievi da ieri.
+Der Arzt hat mir Blut abgenommen. (der artzt hat mir blut abgenommen) - Il medico mi ha fatto un prelievo di sangue.
+Ich musste im Wartezimmer fast eine Stunde sitzen. (ich musste im varte-tsimmer fast aine stunde sitzen) - Ho dovuto aspettare quasi un'ora in sala d'attesa.
+Der Zug nach Köln fährt heute zehn Minuten später ab. (der tsug nach köln fert hoite tzen minuten speter ap) - Il treno per Colonia parte oggi con dieci minuti di ritardo.
+Ich hab mein Ticket schon auf dem Handy gespeichert. (ich hab main tiket scion auf dem hendi gespeichert) - Ho già salvato il biglietto sul cellulare.
+Der Zug ist ziemlich voll, aber wir haben noch Sitzplätze bekommen. (der tsug ist ziemlich fol, aber vir habn noch zitzplätse bekommen) - Il treno è piuttosto affollato, ma abbiamo trovato ancora dei posti a sedere.
+Kannst du kurz auf meinen Koffer aufpassen? (kanst du kurtz auf mainen koffer aufpassen) - Puoi tenere d'occhio un attimo la mia valigia?
+Die U-Bahn fährt heute nur bis zum Hauptbahnhof. (di u-baan fert hoite nur bis tsum hauptbaanhof) - Oggi la metropolitana arriva solo fino alla stazione centrale.
+Ich hab keine Ahnung, auf welcher Seite wir aussteigen müssen. (ich hab kaine anung, auf velcher zaita vir ausstaigen müssen) - Non ho idea da quale lato dobbiamo scendere.
+Die Rolltreppe zur U-Bahn ist außer Betrieb. (di rolltreppe tsur u-baan ist ausser betrib) - La scala mobile per la metropolitana è fuori servizio.
+Der Bus war so voll, dass niemand mehr einsteigen konnte. (der bus var zo fol, das niemand meer ainstaigen konte) - L'autobus era così pieno che non poteva più salire nessuno.
+Ich hab die Haltestelle fast verpasst. (ich hab di haltestelle fast ferpasst) - Ho quasi perso la fermata.
+Am Flughafen mussten wir ziemlich lange auf unser Gepäck warten. (am flughafen mussten vir ziemlich lange auf unser gepäck varten) - In aeroporto abbiamo dovuto aspettare parecchio i bagagli.
+Der Flug geht heute von einem anderen Gate. (der flug geet hoite fon ainem anderen geit) - Oggi il volo parte da un altro gate.
+Ich hab vergessen, meine Flüssigkeiten aus dem Rucksack zu nehmen. (ich hab fergeben, maine flüssigkeiten aus dem rucksack tsu nemen) - Ho dimenticato di tirare fuori i liquidi dallo zaino.
+Auf der Fähre gibt es einen kleinen Laden. (auf der fere gibt es ainen klainen laden) - Sul traghetto c'è un piccolo negozio.
+Wir sind kurz vor der Abfahrt noch an Bord gegangen. (vir zint kurtz for der apfart noch an bort gegangen) - Siamo saliti a bordo poco prima della partenza.
+Das Rathaus ist von hier aus leicht zu finden. (das rathauss ist fon hier aus laict tsu finden) - Il municipio è facile da trovare da qui.
+Wir sind einfach den Schildern Richtung Zentrum gefolgt. (vir zint ainfac den schildern richtung tsentrum gefolgt) - Abbiamo semplicemente seguito i cartelli verso il centro.
+Beim Rückwärtsfahren hab ich einen Pfosten erwischt. (baim rückvertsfaren hab ich ainen pfosten erwischt) - Facendo retromarcia ho urtato un paletto.
+Der Mechaniker meint, dass die Reparatur zwei Tage dauert. (der mecaniker maint, das di reparatur tsvai tage dauert) - Il meccanico dice che la riparazione richiederà due giorni.
+Ich hab den Pannendienst über die App gerufen. (ich hab den pannendienst über di äpp gerufen) - Ho chiamato il soccorso stradale tramite l'app.
+Nach dem Unfall mussten wir auf die Polizei warten. (nach dem unfal mussten vir auf di politsai varten) - Dopo l'incidente abbiamo dovuto aspettare la polizia.
+Der Gehweg ist wegen der Bauarbeiten gesperrt. (der ge-e-vek ist wegen der bauarbeiten gesperrt) - Il marciapiede è chiuso a causa dei lavori.
+Bei starkem Regen läuft das Wasser hier nicht richtig ab. (bai starkem regen läuft das vasser hier nicht richtig ap) - Quando piove forte, qui l'acqua non defluisce bene.
+Unser Hotelzimmer liegt direkt neben dem Aufzug. (unzer hoteltsimmer ligt direkt neben dem auftsug) - La nostra camera d'hotel è proprio accanto all'ascensore.
+Könnten wir bitte ein ruhigeres Zimmer bekommen? (könnten vir bitte ain ruigeres tsimmer bekommen) - Potremmo avere una camera più tranquilla, per favore?
+Im Bad funktioniert die Steckdose nicht. (im baad funktioniert di steckdoze nicht) - In bagno la presa elettrica non funziona.
+Der Gastgeber hat uns schon vor der Anreise alle wichtigen Infos geschickt. (der gastgeber hat uns scion for der anraize alle wichtigen infos geschickt) - L'host ci ha già mandato tutte le informazioni importanti prima del nostro arrivo.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
