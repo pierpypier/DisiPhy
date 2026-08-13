@@ -642,6 +642,60 @@ La douche est bouchée et l'eau ne s'écoule pas. (la dusc é buscé é lo ne se
 On a laissé nos valises à la consigne de l'hôtel. (on a lesé no valiz a la konsiñ de lotèl) - Abbiamo lasciato le nostre valigie al deposito bagagli dell'hotel.
 Notre hôte répond très vite quand on lui écrit. (notr ot repon trè vit kan on lüi ekri) - Il nostro host risponde molto velocemente quando gli scriviamo.
 Le restaurant était complet, heureusement qu'on avait réservé. (le restoran etè komplet, örözman kon avè rezerve) - Il ristorante era pieno, per fortuna avevamo prenotato.
+J'ai ouvert les fenêtres pour faire entrer un peu d'air frais. (ʒé uver le fenetr pur fer an pö dèr frè) - Ho aperto le finestre per far entrare un po' d'aria fresca.
+Tu as vu où j'ai posé les clés de la maison ? (tü a vü u ʒé pozé le clé de la mezon) - Hai visto dove ho messo le chiavi di casa?
+Il faut sortir les poubelles avant que le camion passe. (il fo sortir le pubèl avan ke le kamion pas) - Bisogna portare fuori la spazzatura prima che passi il camion.
+J'ai mis le linge à sécher sur le balcon. (ʒé mi le liènʒ a seʃé sür le balkon) - Ho messo il bucato ad asciugare sul balcone.
+Le chat réclame à manger depuis une heure. (le scia reklàm a manʒé döpüi ün ör) - Il gatto chiede da mangiare da un'ora.
+N'oublie pas de fermer les fenêtres avant de partir. (nübli pa de fermé le fenetr avan de partir) - Non dimenticare di chiudere le finestre prima di uscire.
+J'ai préparé des crêpes pour le petit déjeuner. (ʒé preparé de krep pur le pəti deʒöné) - Ho preparato delle crêpes per colazione.
+Tu veux encore un peu de confiture ? (tü vö ankor an pö de konfitür) - Vuoi ancora un po' di marmellata?
+On mangera le poulet avec des légumes ce midi. (on manʒra le pulé avek de legüm se midi) - A pranzo mangeremo il pollo con le verdure.
+J'ai mis une bouteille d'eau sur la table pour toi. (ʒé mi ün butèy do sür la tabl pur twa) - Ho messo una bottiglia d'acqua sul tavolo per te.
+La classe commence à huit heures et demie demain. (la klas komans a üit ör é dömi döman) - Domani la lezione inizia alle otto e mezza.
+Le professeur a changé la date du prochain examen. (le profesör a sciandʒé la dat dü proscièn egzamen) - L'insegnante ha cambiato la data del prossimo esame.
+J'ai encore trois exercices de grammaire à faire. (ʒé ankor trwa egzersis de gramer a fer) - Ho ancora tre esercizi di grammatica da fare.
+Elle préfère les sciences parce qu'elle trouve ça passionnant. (el prefer le sians parskel truv sa pasionan) - Preferisce le scienze perché le trova appassionanti.
+Tu peux relire ton texte avant de le rendre ? (tü pö relir ton tekst avan de le randr) - Puoi rileggere il tuo testo prima di consegnarlo?
+Je t'avais demandé de prévenir avant d'inviter quelqu'un. (ʒö tavè demandé de prevnir avan danvité kelkan) - Ti avevo chiesto di avvisare prima di invitare qualcuno.
+Ce soir, tu ranges ta chambre avant de sortir. (se swar, tü ranʒ ta sciambre avan de sortir) - Stasera metti in ordine la tua camera prima di uscire.
+Si tu as fini, tu peux aller rejoindre tes amis. (si tü a fini, tü pö alé reʒwèndr te zami) - Se hai finito, puoi andare a raggiungere i tuoi amici.
+Je préfère que tu sois rentré avant minuit. (ʒö prefer ke tü swa rantré avan minüi) - Preferisco che tu sia rientrato prima di mezzanotte.
+On peut en parler tranquillement demain matin. (on pö an parlé trankilman döman maten) - Possiamo parlarne tranquillamente domani mattina.
+J'ai pris rendez-vous parce que ma toux ne passe pas. (ʒé pri randé-vu parskö ma tu ne pas pa) - Ho preso appuntamento perché la tosse non passa.
+Je cherche quelque chose contre le mal de tête. (ʒö scersc kelkö scos kontr le mal de tet) - Cerco qualcosa contro il mal di testa.
+Est-ce que je dois prendre ce médicament avant ou après le repas ? (es ke ʒö dwa prandr se medikaman avan u aprè le röpa) - Devo prendere questo farmaco prima o dopo i pasti?
+J'ai oublié de demander combien de temps dure le traitement. (ʒé oublié de demandé kombièn de tan dür le tretman) - Ho dimenticato di chiedere quanto dura la terapia.
+Je vais attendre ici jusqu'à ce que mon numéro soit appelé. (ʒö vé atandr isi ʒüsk a ke mon nümero swa apelé) - Aspetterò qui finché non verrà chiamato il mio numero.
+Tu sais à quelle heure le train repart ? (tü sè a kel ör le tran repar) - Sai a che ora riparte il treno?
+Mon billet indique une correspondance à Lyon. (mon biyè andik ün korespondans a Lion) - Il mio biglietto indica un cambio a Lione.
+Il n'y a plus de sièges disponibles dans cette voiture. (il nia plü de sièʒ disponibl dan set vuatür) - Non ci sono più posti disponibili in questa carrozza.
+On a dix minutes pour changer de quai. (on a dis minüt pur sciandʒé de ké) - Abbiamo dieci minuti per cambiare binario.
+La ligne est interrompue entre ces deux stations. (la liñ é anterompü antr se dö stasiòn) - La linea è interrotta tra queste due stazioni.
+J'ai pris le métro parce qu'il y avait trop de circulation. (ʒé pri le métro parskil iavè tro de sirkülasiòn) - Ho preso la metropolitana perché c'era troppo traffico.
+La prochaine rame arrive dans moins de cinq minutes. (la proscièn ram ariv dan mwan de sank minüt) - Il prossimo convoglio arriva tra meno di cinque minuti.
+Le bus s'est trompé de rue et le chauffeur fait demi-tour. (le büs sé trompé de rü é le scöför fè dömi-tur) - L'autobus ha sbagliato strada e l'autista sta facendo inversione.
+Je vais descendre au prochain arrêt, c'est plus pratique. (ʒö vé desandr o proscièn are, sè plü pratik) - Scenderò alla prossima fermata, è più comodo.
+L'enregistrement en ligne ferme trois heures avant le vol. (lanreʒistrman an liñ ferm trwa ör avan le vol) - Il check-in online chiude tre ore prima del volo.
+J'ai gardé mon billet sur mon téléphone pour éviter de l'imprimer. (ʒé gardé mon biyè sür mon telefon pur evité de lanprimé) - Ho tenuto il biglietto sul telefono per evitare di stamparlo.
+Notre vol part du terminal deux, pas du terminal un. (notr vol par dü terminal dö, pa dü terminal an) - Il nostro volo parte dal terminal due, non dal terminal uno.
+Il y avait beaucoup de vent quand le ferry est arrivé. (il iavè bokou de van kan le feri é arivé) - C'era molto vento quando è arrivato il traghetto.
+On doit être au port une heure avant le départ. (on dwa etr o por ün ör avan le depart) - Dobbiamo essere al porto un'ora prima della partenza.
+Tourne après la boulangerie, puis prends la deuxième rue à droite. (turn aprè la bulanʒri, pɥi pran la dözièm rü a drwat) - Gira dopo il panificio, poi prendi la seconda strada a destra.
+Je ne sais plus où j'ai garé la voiture. (ʒö ne sè plü u ʒé garé la vuatür) - Non ricordo più dove ho parcheggiato la macchina.
+Le moteur chauffe beaucoup quand je reste dans les embouteillages. (le motor scof bokou kan ʒö rest dan lezambuteyaj) - Il motore si surriscalda molto quando rimango nel traffico.
+J'ai pris une photo du numéro de la dépanneuse. (ʒé pri ün foto dü nümero de la depanöz) - Ho fotografato il numero del carro attrezzi.
+Un scooter a heurté ma voiture en sortant du parking. (an skuter a örté ma vuatür an sortan dü parking) - Uno scooter ha urtato la mia macchina uscendo dal parcheggio.
+La police nous a demandé de déplacer la voiture. (la polis nu a demandé de deplasé la vuatür) - La polizia ci ha chiesto di spostare la macchina.
+Il y a des travaux sur toute l'avenue depuis lundi. (il ia de travay sür tut lavenü döpüi landi) - Ci sono lavori su tutto il viale da lunedì.
+Le quartier a retrouvé l'électricité vers minuit. (le kartié a retruvé lelektrisité ver minüi) - Il quartiere ha riavuto la corrente verso mezzanotte.
+La chambre est prête, mais votre salle de bains est encore en nettoyage. (la sciambre é pret, mè votr sal de ban é ankor an netwayaj) - La camera è pronta, ma il vostro bagno è ancora in fase di pulizia.
+Est-ce qu'on peut avoir deux serviettes de plus ? (es kon pö avwar dö servièt de plü) - Possiamo avere altri due asciugamani?
+La clé magnétique ne déverrouille pas la porte. (la clé manyetik ne devrüi pa la port) - La chiave magnetica non apre la porta.
+On entend clairement les conversations du couloir. (on antan klèrman le konversasiòn dü kuloir) - Si sentono chiaramente le conversazioni del corridoio.
+L'hôte nous a expliqué où jeter les déchets recyclables. (lot nu a eksplike u ʒeté le desce re siklabl) - L'host ci ha spiegato dove buttare i rifiuti riciclabili.
+La réservation comprend le petit déjeuner, mais pas le dîner. (la rezervasiòn kompran le pəti deʒöné, mè pa le diné) - La prenotazione comprende la colazione, ma non la cena.
+Je voudrais une table un peu plus loin de la musique. (ʒö vudrè ün tabl an pö plü lwan de la müzik) - Vorrei un tavolo un po' più lontano dalla musica.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
