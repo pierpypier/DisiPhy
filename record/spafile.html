@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Spagnolo</title>
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#1e88e5">
+
+<!-- Android / Chrome -->
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+
+<!-- Favicon -->
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  /* ============================================================
+     VARIABILI DI STILE — identiche ad assistent.html, per restare
+     coerenti con il resto della suite.
+     ============================================================ */
+  :root{
+    --bg:#f6f8fb;
+    --card:#ffffff;
+    --accent:#1e88e5;
+    --cal-accent:#2b6cb0;
+    --muted:#6b7280;
+    --success:#C3D2BF;
+    --danger:#E3DCC9;
+    --shadow:0 6px 18px rgba(20,30,50,0.06);
+    --radius:12px;
+    --max-width:980px;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    color:#0f172a;
+  }
+
+  .container{ width:100%; max-width:var(--max-width); }
+
+  /* ============================================================
+     BARRA DI NAVIGAZIONE — identica (stessa struttura/classi)
+     a quella presente in tutti i file della suite.
+     ============================================================ */
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+  }
+  .nav-item img {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 1px;
+    transition: transform 0.2s ease;
+  }
+  .nav-item:hover img { transform: scale(1.05); }
+  .nav-item:hover { opacity: 0.85; }
+  .nav-item.active { opacity: 1; }
+  .nav-item.active span { color: var(--accent); font-weight:700; }
+
+  @media (max-width: 600px) {
+    .nav { gap: 10px; }
+    .nav-item img { width: 60px; height: 60px; }
+    .nav-item span { font-size: 12px; }
+  }
+
+  /* Separatore prima della barra di navigazione in fondo alla pagina */
+  .nav-divider{
+    border: none;
+    border-top: 1px solid #e6e9ef;
+    margin: 24px 0 10px 0;
+  }
+
+  /* ============================================================
+     CARD generica — stile ripreso da assistent.html
+     ============================================================ */
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:14px;
+    margin-bottom:18px;
+  }
+
+  .section-title{
+    font-size:18px;
+    font-weight:800;
+    color:var(--accent);
+    margin:0 0 10px 0;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  /* ============================================================
+     BANNER ASSISTENTE — identico ad assistent.html (senza la
+     citazione del momento, già presente in assistent.html)
+     ============================================================ */
+  .assistant-banner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    background:linear-gradient(135deg,#e6f0ff 0%,#ffffff 100%);
+    flex-wrap:wrap;
+  }
+
+  .assistant-bubble{
+    position:relative;
+    flex:1;
+    min-width:220px;
+    background:#ffffff;
+    border:1px solid #e6e9ef;
+    border-radius:18px;
+    padding:16px 18px;
+    box-shadow:var(--shadow);
+  }
+  .assistant-bubble::after{
+    content:"";
+    position:absolute;
+    right:-14px;
+    top:50%;
+    transform:translateY(-50%);
+    border-width:10px 0 10px 14px;
+    border-style:solid;
+    border-color:transparent transparent transparent #ffffff;
+    filter:drop-shadow(2px 0 1px rgba(0,0,0,0.04));
+  }
+  .assistant-bubble .greet-line1{
+    font-size:19px;
+    font-weight:800;
+    color:var(--accent);
+    margin-bottom:4px;
+  }
+  .assistant-bubble .greet-line2{
+    font-size:15px;
+    color:var(--muted);
+    font-weight:600;
+  }
+
+  .assistant-image-wrap{
+    flex-shrink:0;
+  }
+  .assistant-image-wrap img{
+    width:279px;
+    height:auto;
+    display:block;
+    border-radius:30px;
+    filter:drop-shadow(0 6px 10px rgba(0,0,0,0.12));
+  }
+
+  @media (max-width:640px){
+    .assistant-banner{ flex-direction:column-reverse; text-align:center; }
+    .assistant-bubble::after{ display:none; }
+  }
+
+  /* ============================================================
+     PULSANTE + PANNELLO CONFIGURAZIONE (accordion a scomparsa)
+     — identico ad assistent.html
+     ============================================================ */
+  .config-toggle-wrap{ display:flex; justify-content:center; margin: 4px 0 14px 0; }
+  .config-toggle-btn{
+    background:#e6eefc;
+    color:var(--accent);
+    border:none;
+    border-radius:10px;
+    padding:8px 18px;
+    font-weight:700;
+    font-size:14px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+  }
+  .config-toggle-btn:hover{ filter:brightness(0.97); }
+
+  .config-panel{
+    display:none;
+  }
+  .config-panel.open{
+    display:block;
+  }
+
+  .config-row{
+    margin-bottom:14px;
+  }
+  .config-row label{
+    display:block;
+    font-weight:700;
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:6px;
+  }
+  .config-row input[type="text"],
+  .config-row select{
+    width:100%;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid #e6e9ef;
+    font-size:15px;
+    font-family:inherit;
+  }
+
+  .avatar-picker{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .avatar-option{
+    cursor:pointer;
+    border:3px solid transparent;
+    border-radius:12px;
+    padding:4px;
+    transition:border-color .15s ease, transform .15s ease;
+    background:#f7f9fc;
+  }
+  .avatar-option img{
+    width:64px;
+    height:64px;
+    object-fit:cover;
+    border-radius:8px;
+    display:block;
+  }
+  .avatar-option:hover{ transform:translateY(-2px); }
+  .avatar-option.selected{
+    border-color:var(--accent);
+    background:#e6eefc;
+  }
+
+  .config-save-note{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:4px;
+  }
+
+  /* Contenitore dei pulsanti backup/ripristino, dentro il pannello configurazione */
+  .config-data-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    padding-top:10px;
+    border-top:1px solid #eef2f7;
+  }
+  .backup-btn{
+    background:#eaf6ec;
+    color:#2f7a3d;
+  }
+  .restore-btn{
+    background:#fdeeea;
+    color:#b8442c;
+  }
+
+  .empty-msg{
+    color:var(--muted);
+    font-size:14px;
+    font-style:italic;
+    padding:6px 2px;
+  }
+
+  /* ============================================================
+     SEZIONE TEDESCO — frasi bilingue, testo più grande e leggibile
+     ============================================================ */
+  .spa-intro{
+    font-size:14px;
+    color:var(--muted);
+    margin:-4px 0 14px 0;
+  }
+
+  .spa-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .spa-card{
+    background:#f7faff;
+    border:1px solid #dbe7fb;
+    border-radius:14px;
+    padding:18px 20px;
+    box-shadow:0 2px 6px rgba(20,30,50,0.04);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .spa-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(20,30,50,0.08);
+  }
+
+  .spa-es{
+    font-size:22px;
+    line-height:1.4;
+    font-weight:800;
+    color:#0f172a;
+    margin-bottom:8px;
+  }
+  .spa-es .flag{ margin-right:8px; }
+
+  .spa-it{
+    font-size:19px;
+    line-height:1.4;
+    font-weight:600;
+    color:var(--cal-accent);
+    padding-top:8px;
+    border-top:1px dashed #cfe0fa;
+  }
+  .spa-it .flag{ margin-right:8px; }
+
+  .spa-refresh-wrap{
+    display:flex;
+    justify-content:center;
+    margin-top:18px;
+  }
+  .spa-refresh-btn{
+    background:var(--accent);
+    color:#ffffff;
+    border:none;
+    border-radius:12px;
+    padding:14px 28px;
+    font-weight:800;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition: transform .12s ease, filter .12s ease;
+  }
+  .spa-refresh-btn:hover{ filter:brightness(1.05); }
+  .spa-refresh-btn:active{ transform:scale(0.97); }
+
+  .spa-counter{
+    text-align:center;
+    font-size:12px;
+    color:var(--muted);
+    margin-top:10px;
+  }
+
+  @media (max-width:600px){
+    .spa-es{ font-size:19px; }
+    .spa-it{ font-size:16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============================================================
+       BARRA DI NAVIGAZIONE (identica alle altre pagine della suite)
+       ============================================================ -->
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item">
+      <img src="rimage/orga4.png" alt="Organizer">
+      <span> NOTE </span>
+    </a>
+    <a href="caldsp.html" class="nav-item">
+      <img src="rimage/calicon.png" alt="Calendario dsp">
+      <span> DATE </span>
+    </a>
+    <a href="check01.html" class="nav-item">
+      <img src="rimage/check02.png" alt="Checklist">
+      <span>LISTE</span>
+    </a>
+    <a href="strweb.html" class="nav-item">
+      <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+      <span> WEB </span>
+    </a>
+    <a href="dashconsolle.html" class="nav-item">
+      <img src="rimage/opzioni.png" alt="Opzioni">
+      <span> ADD </span>
+    </a>
+  </nav>
+  <!-- fine barra navigazione -->
+
+  <!-- ============================================================
+       BANNER PRINCIPALE CON ASSISTENTE (invariato rispetto ad
+       assistent.html: stessa configurazione, stesso avatar. La
+       citazione del momento non è ripetuta qui: è già presente in
+       assistent.html)
+       ============================================================ -->
+  <div class="card assistant-banner">
+    <div class="assistant-bubble">
+      <div class="greet-line1" id="greetLine1">Ciao!</div>
+      <div class="greet-line2">un piccolo ripasso di spagnolo: 5 frasi nuove ad ogni apertura della pagina</div>
+    </div>
+    <div class="assistant-image-wrap">
+      <img id="assistantImg" src="rimage/assis01.jpg" alt="Assistente">
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PULSANTE + PANNELLO DI CONFIGURAZIONE (a scomparsa) — invariato
+       ============================================================ -->
+  <div class="config-toggle-wrap">
+    <button class="config-toggle-btn" id="toggleConfigBtn">⚙️ Personalizza assistente</button>
+  </div>
+
+  <div class="card config-panel" id="configPanel">
+    <div class="section-title">Configurazione</div>
+
+    <div class="config-row">
+      <label for="cfgNome">Come vuoi essere chiamato?</label>
+      <input type="text" id="cfgNome" placeholder="Es. Pierpaolo">
+    </div>
+
+    <div class="config-row">
+      <label for="cfgSaluto">Frase di saluto iniziale</label>
+      <select id="cfgSaluto">
+        <option value="auto">Automatico (in base all'ora)</option>
+        <option value="Ciao">Ciao</option>
+        <option value="Buongiorno">Buongiorno</option>
+        <option value="Buon pomeriggio">Buon pomeriggio</option>
+        <option value="Buonasera">Buonasera</option>
+        <option value="Salve">Salve</option>
+        <option value="Bentornato">Bentornato</option>
+      </select>
+    </div>
+
+    <div class="config-row">
+      <label>Scegli l'avatar dell'assistente</label>
+      <div class="avatar-picker" id="avatarPicker">
+        <div class="avatar-option" data-avatar="assis01.jpg">
+          <img src="rimage/assis01.jpg" alt="Avatar 1">
+        </div>
+        <div class="avatar-option" data-avatar="assis02.jpg">
+          <img src="rimage/assis02.jpg" alt="Avatar 2">
+        </div>
+        <div class="avatar-option" data-avatar="assis03.jpg">
+          <img src="rimage/assis03.jpg" alt="Avatar 3">
+        </div>
+        <div class="avatar-option" data-avatar="assis04.jpg">
+          <img src="rimage/assis04.jpg" alt="Avatar 4">
+        </div>
+        <div class="avatar-option" data-avatar="assis05.jpg">
+          <img src="rimage/assis05.jpg" alt="Avatar 5">
+        </div>
+        <div class="avatar-option" data-avatar="assis06.jpg">
+          <img src="rimage/assis06.jpg" alt="Avatar 6">
+        </div>
+        <div class="avatar-option" data-avatar="assis07.jpg">
+          <img src="rimage/assis07.jpg" alt="Avatar 7">
+        </div>
+        <div class="avatar-option" data-avatar="assis08.jpg">
+          <img src="rimage/assis08.jpg" alt="Avatar 8">
+        </div>
+        <div class="avatar-option" data-avatar="assis09.jpg">
+          <img src="rimage/assis09.jpg" alt="Avatar 9">
+        </div>
+        <div class="avatar-option" data-avatar="assis10.jpg">
+          <img src="rimage/assis10.jpg" alt="Avatar 10">
+        </div>
+        <div class="avatar-option" data-avatar="assis11.jpg">
+          <img src="rimage/assis11.jpg" alt="Avatar 11">
+        </div>
+        <div class="avatar-option" data-avatar="assis12.jpg">
+          <img src="rimage/assis12.jpg" alt="Avatar 12">
+        </div>
+        <div class="avatar-option" data-avatar="assis13.jpg">
+          <img src="rimage/assis13.jpg" alt="Avatar 13">
+        </div>
+        <div class="avatar-option" data-avatar="assis14.jpg">
+          <img src="rimage/assis14.jpg" alt="Avatar 14">
+        </div>
+        <div class="avatar-option" data-avatar="assis15.jpg">
+          <img src="rimage/assis15.jpg" alt="Avatar 15">
+        </div>
+        <div class="avatar-option" data-avatar="assis16.jpg">
+          <img src="rimage/assis16.jpg" alt="Avatar 16">
+        </div>
+        <div class="avatar-option" data-avatar="assis17.jpg">
+          <img src="rimage/assis17.jpg" alt="Avatar 17">
+        </div>
+        <div class="avatar-option" data-avatar="assis18.jpg">
+          <img src="rimage/assis18.jpg" alt="Avatar 18">
+        </div>
+        <div class="avatar-option" data-avatar="assis19.jpg">
+          <img src="rimage/assis19.jpg" alt="Avatar 19">
+        </div>
+        <div class="avatar-option" data-avatar="assis20.jpg">
+          <img src="rimage/assis20.jpg" alt="Avatar 20">
+        </div>
+        <div class="avatar-option" data-avatar="assis21.jpg">
+          <img src="rimage/assis21.jpg" alt="Avatar 21">
+        </div>
+        <div class="avatar-option" data-avatar="assis22.jpg">
+          <img src="rimage/assis22.jpg" alt="Avatar 22">
+        </div>
+        <div class="avatar-option" data-avatar="assis23.jpg">
+          <img src="rimage/assis23.jpg" alt="Avatar 23">
+        </div>
+        <div class="avatar-option" data-avatar="assis24.jpg">
+          <img src="rimage/assis24.jpg" alt="Avatar 24">
+        </div>
+        <div class="avatar-option" data-avatar="assis25.jpg">
+          <img src="rimage/assis25.jpg" alt="Avatar 25">
+        </div>
+        <div class="avatar-option" data-avatar="assis26.jpg">
+          <img src="rimage/assis26.jpg" alt="Avatar 26">
+        </div>
+      </div>
+    </div>
+
+    <div class="config-row">
+      <label>Dati della suite</label>
+      <div class="config-data-actions">
+        <button class="config-toggle-btn backup-btn" id="backupBtn">💾 Backup dati</button>
+        <button class="config-toggle-btn restore-btn" id="restoreBtn">📂 Ripristina backup</button>
+        <!-- Input nascosto: viene attivato dal pulsante "Ripristina backup" -->
+        <input type="file" id="restoreFileInput" accept="application/json,.json" style="display:none">
+      </div>
+    </div>
+
+    <div class="config-save-note">Le preferenze vengono salvate automaticamente.</div>
+  </div>
+
+  <!-- ============================================================
+       RIPASSO DI SPAGNOLO — 5 frasi bilingue da spafrasi.js
+       ============================================================ -->
+  <div class="card">
+    <div class="section-title">🇪🇸 Ripasso di spagnolo</div>
+    <div class="spa-intro">5 frasi nuove ad ogni apertura della pagina. Premi il pulsante per vederne altre 5.</div>
+
+    <div class="spa-list" id="spaList"></div>
+
+    <div class="spa-refresh-wrap">
+      <button class="spa-refresh-btn" id="spaRefreshBtn">🔄 Altre 5 frasi</button>
+    </div>
+    <div class="spa-counter" id="spaCounter"></div>
+  </div>
+
+  <!-- ============================================================
+       BARRA DI NAVIGAZIONE RIPETUTA IN FONDO ALLA PAGINA
+       ============================================================ -->
+  <hr class="nav-divider">
+  <nav class="nav">
+    <a href="planner2.html" class="nav-item">
+      <img src="rimage/icoplan.png" alt="planner">
+      <span> PLAN </span>
+    </a>
+    <a href="orgcanv11.html" class="nav-item">
+      <img src="rimage/icolav.png" alt="Lavagna">
+      <span>CANVA</span>
+    </a>
+    <a href="flussi.html" class="nav-item">
+      <img src="rimage/icoflu.png" alt="Flussi">
+      <span>FLUSSI</span>
+    </a>
+    <a href="https://pierpypier.github.io/DisiPhy/allenamento/schedahome.html" class="nav-item">
+      <img src="rimage/icofit.png" alt="Allenamento" loading="lazy" decoding="async" width="84" height="84">
+      <span> FIT </span>
+    </a>
+    <a href="bancaconsolle.html" class="nav-item">
+      <img src="rimage/icocon.png" alt="banca">
+      <span>CONTI</span>
+    </a>
+  </nav>
+
+</div>
+
+<!-- Frasi bilingue per il ripasso di spagnolo. -->
+<script src="spafrasi.js"></script>
+
+<script>
+/* ================================================================
+   CHIAVI localStorage CONDIVISE CON LE ALTRE PAGINE DELLA SUITE
+   (non modificare: devono restare identiche ai file di origine)
+   ================================================================ */
+const LS_CONFIG = 'organizer_config';           // config dell'assistente, condivisa con assistent.html
+const BACKUP_KEY_PREFIXES = ['dsp_', 'cal_', 'checklist_', 'organizer_']; // chiavi incluse nel backup/ripristino
+
+/* ================================================================
+   1) GESTIONE CONFIGURAZIONE ASSISTENTE (nome, saluto, avatar)
+   — logica identica ad assistent.html
+   ================================================================ */
+let config = {
+  nome: '',
+  saluto: 'auto',
+  avatar: 'assis01.jpg'
+};
+
+function loadConfig(){
+  try{
+    const raw = localStorage.getItem(LS_CONFIG);
+    if(raw){
+      const parsed = JSON.parse(raw);
+      config = Object.assign(config, parsed);
+    }
+  }catch(e){
+    console.warn('Errore caricamento organizer_config', e);
+  }
+}
+
+function saveConfig(){
+  try{
+    localStorage.setItem(LS_CONFIG, JSON.stringify(config));
+  }catch(e){
+    console.warn('Errore salvataggio organizer_config', e);
+  }
+}
+
+function applyConfigToUI(){
+  document.getElementById('cfgNome').value = config.nome || '';
+  document.getElementById('cfgSaluto').value = config.saluto || 'auto';
+
+  document.querySelectorAll('.avatar-option').forEach(opt => {
+    opt.classList.toggle('selected', opt.dataset.avatar === config.avatar);
+  });
+
+  document.getElementById('assistantImg').src = 'rimage/' + (config.avatar || 'assis01.jpg');
+
+  const salutoEffettivo = getSalutoEffettivo();
+  const nomeParte = config.nome && config.nome.trim() !== '' ? ` ${config.nome.trim()}` : '';
+  document.getElementById('greetLine1').textContent = `${salutoEffettivo}${nomeParte}`;
+}
+
+function getSalutoEffettivo(){
+  if(!config.saluto || config.saluto === 'auto'){
+    const h = new Date().getHours();
+    if(h < 6)  return 'Buonanotte';
+    if(h < 12) return 'Buongiorno';
+    if(h < 18) return 'Buon pomeriggio';
+    return 'Buonasera';
+  }
+  return config.saluto;
+}
+
+/* ================================================================
+   UTILITÀ — mescolamento di un array di indici (Fisher-Yates),
+   usata per il "sacchetto" delle frasi di ripasso più in basso.
+   ================================================================ */
+function mescola(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function initConfigPanel(){
+  loadConfig();
+  applyConfigToUI();
+
+  const panel = document.getElementById('configPanel');
+  document.getElementById('toggleConfigBtn').addEventListener('click', () => {
+    panel.classList.toggle('open');
+  });
+
+  document.getElementById('cfgNome').addEventListener('input', (e) => {
+    config.nome = e.target.value;
+    saveConfig();
+    applyConfigToUI();
+  });
+
+  document.getElementById('cfgSaluto').addEventListener('change', (e) => {
+    config.saluto = e.target.value;
+    saveConfig();
+    applyConfigToUI();
+  });
+
+  document.querySelectorAll('.avatar-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      config.avatar = opt.dataset.avatar;
+      saveConfig();
+      applyConfigToUI();
+    });
+  });
+
+  document.getElementById('backupBtn').addEventListener('click', exportBackup);
+
+  document.getElementById('restoreBtn').addEventListener('click', () => {
+    document.getElementById('restoreFileInput').click();
+  });
+  document.getElementById('restoreFileInput').addEventListener('change', (e) => {
+    const file = e.target.files && e.target.files[0];
+    importBackupFile(file);
+    e.target.value = '';
+  });
+}
+
+/* ================================================================
+   UTILITÀ DATE — identiche ad assistent.html
+   ================================================================ */
+function todayYMD(){
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+/* ================================================================
+   BACKUP / RIPRISTINO DATI — identici ad assistent.html
+   ================================================================ */
+function exportBackup(){
+  const backup = {};
+  try{
+    for(let i = 0; i < localStorage.length; i++){
+      const key = localStorage.key(i);
+      if(!key) continue;
+      const matches = BACKUP_KEY_PREFIXES.some(prefix => key.indexOf(prefix) === 0);
+      if(matches){
+        backup[key] = localStorage.getItem(key);
+      }
+    }
+  }catch(e){
+    console.warn('Errore durante la raccolta dei dati per il backup', e);
+    alert('Si è verificato un errore durante la preparazione del backup.');
+    return;
+  }
+
+  const dataStr = JSON.stringify(backup, null, 2);
+  const blob = new Blob([dataStr], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `organizer_backup_${todayYMD()}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function importBackupFile(file){
+  if(!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = (e) => {
+    let backup;
+    try{
+      backup = JSON.parse(e.target.result);
+    }catch(err){
+      alert('Il file selezionato non è un backup valido: il contenuto non è un JSON leggibile.');
+      return;
+    }
+
+    if(typeof backup !== 'object' || backup === null || Array.isArray(backup)){
+      alert('Il file selezionato non ha il formato di backup atteso.');
+      return;
+    }
+
+    const validKeys = Object.keys(backup).filter(key =>
+      BACKUP_KEY_PREFIXES.some(prefix => key.indexOf(prefix) === 0)
+    );
+
+    if(validKeys.length === 0){
+      alert('Nessuna chiave riconosciuta (dsp_*, cal_*, checklist_*, organizer_*) trovata nel file selezionato.');
+      return;
+    }
+
+    const conferma = confirm(
+      `Il backup contiene ${validKeys.length} voci di dati.\n` +
+      `Il ripristino SOVRASCRIVERÀ i dati attualmente salvati su questo dispositivo.\n\n` +
+      `Vuoi continuare?`
+    );
+    if(!conferma) return;
+
+    try{
+      validKeys.forEach(key => {
+        localStorage.setItem(key, backup[key]);
+      });
+    }catch(err){
+      console.warn('Errore durante il ripristino del backup', err);
+      alert('Si è verificato un errore durante la scrittura dei dati ripristinati.');
+      return;
+    }
+
+    alert('Backup ripristinato correttamente. La pagina verrà ricaricata per mostrare i dati aggiornati.');
+    location.reload();
+  };
+
+  reader.onerror = () => {
+    alert('Impossibile leggere il file selezionato.');
+  };
+
+  reader.readAsText(file);
+}
+
+/* ================================================================
+   UTILITÀ: escape base per evitare l'iniezione di HTML nei testi
+   ================================================================ */
+function escapeHtml(str){
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+/* ================================================================
+   RIPASSO DI SPAGNOLO — pesca 5 frasi bilingue da FRASI_SPA
+   (definito in spafrasi.js) usando la stessa tecnica del "sacchetto
+   mescolato" già impiegata per le citazioni: gli indici vengono
+   mescolati una volta e pescati senza reinserimento, così nessuna
+   frase si ripete finché non sono state mostrate tutte. Il sacchetto
+   viene consultato sia all'apertura della pagina sia ad ogni clic
+   sul pulsante di aggiornamento — non è legato a una fascia oraria.
+   ================================================================ */
+const LS_TED_STATE = 'spa_frasi_state_v1';
+const SPA_BATCH_SIZE = 5;
+
+function leggiBagSpa(){
+  let stato = null;
+  try{
+    const raw = localStorage.getItem(LS_TED_STATE);
+    if(raw) stato = JSON.parse(raw);
+  }catch(e){
+    console.warn('Errore lettura spa_frasi_state_v1', e);
+  }
+
+  let bag = (stato && Array.isArray(stato.bag)) ? stato.bag.slice() : [];
+  const bagValido = bag.length > 0 && bag.every(i => i >= 0 && i < FRASI_SPA.length);
+  if(!bagValido){
+    bag = mescola(FRASI_SPA.map((_, i) => i));
+  }
+  return bag;
+}
+
+function salvaBagSpa(bag){
+  try{
+    localStorage.setItem(LS_TED_STATE, JSON.stringify({ bag }));
+  }catch(e){
+    console.warn('Errore salvataggio spa_frasi_state_v1', e);
+  }
+}
+
+/**
+ * Estrae le prossime N frasi dal sacchetto. Se il sacchetto non basta
+ * a completare il gruppo richiesto, viene rimescolato da capo (le
+ * frasi già usate in questo giro possono quindi ripresentarsi solo
+ * a partire dal nuovo ciclo, non all'interno dello stesso gruppo).
+ */
+function estraiFrasiSpa(n){
+  let bag = leggiBagSpa();
+  if(bag.length < n){
+    bag = mescola(FRASI_SPA.map((_, i) => i));
+  }
+
+  const indiciScelti = [];
+  for(let k = 0; k < n; k++){
+    indiciScelti.push(bag.pop());
+  }
+
+  salvaBagSpa(bag);
+  return indiciScelti.map(i => FRASI_SPA[i]);
+}
+
+function renderFrasiSpa(){
+  const container = document.getElementById('spaList');
+  const frasi = estraiFrasiSpa(SPA_BATCH_SIZE);
+
+  if(!frasi.length){
+    container.innerHTML = '<div class="empty-msg">Nessuna frase disponibile: controlla il file spafrasi.js.</div>';
+    document.getElementById('spaCounter').textContent = '';
+    return;
+  }
+
+  container.innerHTML = frasi.map(f => `
+    <div class="spa-card">
+      <div class="spa-es"><span class="flag">🇪🇸</span>${escapeHtml(f.es)}</div>
+      <div class="spa-it"><span class="flag">🇮🇹</span>${escapeHtml(f.it)}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('spaCounter').textContent =
+    `Archivio frasi: ${FRASI_SPA.length} totali`;
+}
+
+/* ================================================================
+   AVVIO
+   ================================================================ */
+window.addEventListener('DOMContentLoaded', () => {
+  initConfigPanel();
+  renderFrasiSpa();
+
+  document.getElementById('spaRefreshBtn').addEventListener('click', renderFrasiSpa);
+});
+</script>
+
+</body>
+</html>
