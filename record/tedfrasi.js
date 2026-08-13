@@ -960,6 +960,53 @@ Im Hotel gibt es leider keine zusätzlichen Handtücher. (im hotel gibt es leide
 Unser Zimmer liegt direkt neben dem Aufzug. (unzer tsimmer ligt direkt neben dem auf-tsug) - La nostra camera è proprio accanto all'ascensore.
 Die Klimaanlage ist nachts viel zu laut. (di klimaanlage ist nachts fiil tsu laut) - L'aria condizionata di notte è troppo rumorosa.
 Der Gastgeber hat uns eine gute Pizzeria in der Nähe empfohlen. (der gastgeber hat uns aine gute pitzeria in der ne-e empfohlen) - L'host ci ha consigliato una buona pizzeria nelle vicinanze.
+Ich hab gestern endlich den Keller aufgeräumt. (ich hab gestern endlich den keller aufgeroimt) - Ieri finalmente ho riordinato la cantina.
+Die Schlüssel liegen wahrscheinlich noch in meiner Arbeitstasche. (di schlüssl liegen varscainlic noch in meiner arbetstasce) - Probabilmente le chiavi sono ancora nella mia borsa da lavoro.
+Mach das Fenster zu, es zieht hier ziemlich stark. (mach das fenster tsu, es tsiit hier ziemlich stark) - Chiudi la finestra, qui c'è parecchia corrente.
+Der Kater hat schon wieder das Wasser umgestoßen. (der kater hat scion vider das vasser umgestossen) - Il gatto ha rovesciato di nuovo l'acqua.
+Ich hab die Waschmaschine für heute Abend programmiert. (ich hab di vasmascine für hoite abent programmiert) - Ho programmato la lavatrice per stasera.
+Die Teller können noch eine Runde in die Spülmaschine. (di teller können noch aine runde in di spülmascine) - I piatti possono ancora fare un giro in lavastoviglie.
+Ich nehme morgens lieber etwas Herzhaftes. (ich näme morgens liber etvas herzhaftes) - Al mattino preferisco qualcosa di salato.
+Der Kaffee ist mir heute viel zu stark. (der kaffe ist mir hoite fiil tsu stark) - Oggi il caffè è decisamente troppo forte per me.
+Wir haben noch genug Brot für morgen früh. (vir habn noch genug brot für morgen frü) - Abbiamo ancora abbastanza pane per domani mattina.
+Heute Abend machen wir eine Suppe, wenn du magst. (hoite abent machen vir aine zuppe, ven du magst) - Stasera facciamo una zuppa, se vuoi.
+Ich hab vergessen, wann die nächste Elternversammlung ist. (ich hab fergeben, van di nechste elternfersamlung ist) - Ho dimenticato quando sarà la prossima riunione dei genitori.
+In welcher Klasse ist dein neuer Lehrer? (in velcher klasse ist dain noier leerer) - In quale classe insegna il tuo nuovo professore?
+Sie hat für die Prüfung viel weniger gelernt als geplant. (zi hat für di prüfung fiil veniger gelernt als geplant) - Ha studiato molto meno del previsto per l'esame.
+Der Lehrer hat uns eine Woche mehr Zeit gegeben. (der leerer hat uns aine voche meer tsait gegeben) - L'insegnante ci ha dato una settimana in più.
+Ich möchte erst deine Hausaufgaben sehen, bevor du rausgehst. (ich möcte erst daine hausaufgaben zeen, bevor du rausgest) - Voglio vedere prima i tuoi compiti, prima che tu esca.
+Du kannst später mit deinen Freunden telefonieren. (du kanst speter mit dainen froinden telefonieren) - Puoi telefonare più tardi ai tuoi amici.
+Wir haben doch abgemacht, dass du heute zu Hause bleibst. (vir habn doch abgemacht, das du hoite tsu hause blaibst) - Avevamo stabilito che oggi restavi a casa.
+Ich weiß, dass du müde bist, aber du musst noch duschen. (ich vais, das du müde bist, aber du musst noch duscen) - So che sei stanco, ma devi ancora fare la doccia.
+Wenn du fertig bist, räum bitte deine Sachen weg. (ven du fertig bist, roim bitte daine zachen vek) - Quando hai finito, metti a posto le tue cose, per favore.
+Haben Sie etwas gegen Kopfschmerzen? (haben zi etvas gegen kopfscmerzen) - Avete qualcosa contro il mal di testa?
+Ich hätte gern etwas, das nicht müde macht. (ich hete gern etvas, das nicht müde macht) - Vorrei qualcosa che non faccia venire sonnolenza.
+Die Apothekerin hat mir dieses Spray empfohlen. (di apotekerin hat mir dieses spray empfohlen) - La farmacista mi ha consigliato questo spray.
+Ich soll die Tabletten dreimal am Tag nehmen. (ich zol di tabletten draimal am tag nemen) - Devo prendere le compresse tre volte al giorno.
+Die Untersuchung dauert wahrscheinlich nicht lange. (di untersuchung dauert varscainlic nicht lange) - Probabilmente la visita non durerà molto.
+Der Zug nach Hamburg steht bereits am Gleis. (der tsug nach hamburg steht bereits am glais) - Il treno per Amburgo è già al binario.
+Ich hab nur einen kleinen Rucksack dabei. (ich hab nur ainen klainen rucksack dabai) - Ho con me solo un piccolo zaino.
+Weißt du, ob dieser Zug auch in Bonn hält? (vaist du, ob dizer tsug auc in bon hält) - Sai se questo treno ferma anche a Bonn?
+Der Fahrkartenautomat nimmt meine Karte nicht an. (der fartkartenautomat nimmt maine karte nicht an) - La macchinetta dei biglietti non accetta la mia carta.
+Wir haben wegen der Verspätung unseren Anschluss verpasst. (vir habn wegen der ferspetung unzeren anschluss ferpasst) - A causa del ritardo abbiamo perso la coincidenza.
+Die nächste U-Bahn fährt in drei Minuten. (di nechste u-baan fert in drai minuten) - La prossima metropolitana parte tra tre minuti.
+Ich steige lieber an der Endstation aus. (ich staige liber an der endstation aus) - Preferisco scendere al capolinea.
+Auf dem Bahnsteig ist heute ungewöhnlich viel los. (auf dem baanstaig ist hoite ungewöhnlic fiil los) - Oggi sul binario c'è insolitamente molta gente.
+Die Straßenbahn kommt laut Anzeige in fünf Minuten. (di strassenbaan kommt laut antsaige in fünf minuten) - Secondo il display il tram arriva tra cinque minuti.
+Kannste mir sagen, ob der Bus hier zum Hauptbahnhof fährt? (kanste mir sagen, ob der bus hier tsum hauptbaanhof fert) - Mi puoi dire se da qui passa l'autobus per la stazione centrale?
+Am Check-in-Schalter mussten wir unsere Koffer öffnen. (am check-in-scalter mussten vir unsere koffer öffnen) - Al banco del check-in abbiamo dovuto aprire le valigie.
+Ich hab noch keine Bordkarte auf dem Handy. (ich hab noch kaine bortkarte auf dem hendi) - Non ho ancora la carta d'imbarco sul cellulare.
+Das Flugzeug steht schon auf der Startbahn. (das flug-tsoik steht scion auf der startbaan) - L'aereo è già sulla pista di decollo.
+Die Fähre legt pünktlich um neun Uhr ab. (di fere legt pünktlic um noyn uur ap) - Il traghetto parte puntualmente alle nove.
+Vom Deck aus hat man einen tollen Blick auf die Küste. (fom deck aus hat man ainen tollen blick auf di küste) - Dal ponte si gode di una vista magnifica sulla costa.
+Bieg an der nächsten Kreuzung rechts ab. (big an der nechsten kroitsung reccs ap) - Gira a destra al prossimo incrocio.
+Das Navi führt uns gerade durch eine gesperrte Straße. (das navi füürt uns gerade durc aine gesperte strasse) - Il navigatore ci sta portando proprio attraverso una strada chiusa.
+Mein Auto macht beim Bremsen ein seltsames Geräusch. (main auto macht baim bremsen ain zeltsames geroisc) - La mia auto fa uno strano rumore quando freno.
+Ich hab den Pannendienst angerufen, sie sind unterwegs. (ich hab den pannendienst angerufen, zi zint unterwegs) - Ho chiamato il soccorso stradale, stanno arrivando.
+Wegen des Streiks fährt heute kaum ein Bus. (wegen des straiks fert hoite kaum ain bus) - A causa dello sciopero oggi circola a malapena qualche autobus.
+Nach dem Unwetter waren mehrere Straßen nicht mehr befahrbar. (nach dem unvetter varen merere strassen nicht meer befarbar) - Dopo il maltempo diverse strade non erano più percorribili.
+Könnten wir bitte noch zwei zusätzliche Kissen bekommen? (könnten vir bitte noch tsvai zusätzliche kissen bekommen) - Potremmo avere altri due cuscini, per favore?
+Das Zimmer ist schön, aber das Bett ist ziemlich unbequem. (das tsimmer ist scön, aber das bett ist ziemlich unbequem) - La camera è bella, ma il letto è piuttosto scomodo.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
