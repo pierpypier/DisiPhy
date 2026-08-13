@@ -385,6 +385,57 @@ Excusez-moi, nous n'avons pas commandé cette bouteille. (eksküze mwa, nu navon
 Le dessert était tellement bon qu'on en a repris un deuxième. (le desèr etè telman bon kon an a repri an dözièm) - Il dolce era così buono che ne abbiamo preso un secondo.
 On devrait arriver avant la fermeture du musée. (on dövrè arivé avan la fermetür dü müzé) - Dovremmo arrivare prima della chiusura del museo.
 J'ai réservé deux places pour la séance de huit heures. (ʒé rezerve dö plas pur la seans de üit ör) - Ho prenotato due posti per lo spettacolo delle otto.
+J'ai rangé les produits ménagers sous l'évier. (ʒé ranʒé le prodüi menaʒè su lévié) - Ho sistemato i prodotti per la pulizia sotto il lavandino.
+Tu peux secouer le tapis dehors avant de le remettre ? (tü pö seküé le tapi döor avan de le remetr) - Puoi scuotere il tappeto fuori prima di rimetterlo?
+La porte du garage est restée entrouverte. (la port dü garaʒ é resté antruvèr) - La porta del garage è rimasta socchiusa.
+J'ai fait tourner la machine avec les serviettes. (ʒé fè turné la mascin avek le servièt) - Ho fatto andare la lavatrice con gli asciugamani.
+Le chat a renversé son bol d'eau pendant la nuit. (le scia a ranversé son bol do pandan la nüi) - Il gatto ha rovesciato la sua ciotola dell'acqua durante la notte.
+Il faut acheter des sacs-poubelle avant ce soir. (il fo asciété de sak-pubèl avan se swar) - Bisogna comprare i sacchi della spazzatura prima di stasera.
+J'ai pris une banane parce que je n'avais pas le temps de cuisiner. (ʒé pri ün banan parskö ʒö navè pa le tan de küiziné) - Ho preso una banana perché non avevo tempo di cucinare.
+Tu peux mettre les bols sur la table ? (tü pö metr le bol sür la tabl) - Puoi mettere le ciotole sul tavolo?
+On a encore des œufs, mais il faut acheter du pain. (on a ankor de zö, mè il fo asciété dü pan) - Abbiamo ancora delle uova, ma bisogna comprare il pane.
+J'ai préparé une soupe pour ce soir, elle est encore chaude. (ʒé preparé ün sup pur se swar, el é ankor scod) - Ho preparato una zuppa per stasera, è ancora calda.
+Le devoir de littérature m'a pris toute l'après-midi. (le devwar de literatür ma pri tut laprè-midi) - Il compito di letteratura mi ha portato via tutto il pomeriggio.
+Le professeur a annoncé les résultats ce matin. (le profesör a anonse le rezülta se maten) - L'insegnante ha annunciato i risultati stamattina.
+J'ai besoin de relire le chapitre avant le contrôle. (ʒé bezwan de relir le sciapitr avan le kontrol) - Ho bisogno di rileggere il capitolo prima della verifica.
+Elle travaille mieux quand elle étudie dans le silence. (el travay miö kan el etüdi dan le silans) - Studia meglio quando studia in silenzio.
+Range ton bureau avant d'aller jouer. (ranʒ ton büro avan dalé ʒué) - Metti in ordine la tua scrivania prima di andare a giocare.
+Je t'ai demandé de ne pas laisser tes affaires partout. (ʒö té demandé de ne pa lesé te zafer partu) - Ti ho chiesto di non lasciare le tue cose dappertutto.
+On partira dès que tu auras fini de te préparer. (on partira de ke tü ora fini de te preparé) - Partiremo appena avrai finito di prepararti.
+Tu peux dormir un peu plus demain, c'est dimanche. (tü pö dormir an pö plü döman, sè dimansc) - Domani puoi dormire un po' di più, è domenica.
+J'ai une petite irritation à l'œil depuis ce matin. (ʒé ün pətit iritasiòn a löy döpüi se maten) - Ho una piccola irritazione all'occhio da stamattina.
+Le médecin m'a conseillé de boire chaud et de me reposer. (le medsan ma konsèyé de bwar scod é de me repoze) - Il medico mi ha consigliato di bere qualcosa di caldo e riposarmi.
+Je dois passer à la pharmacie avant de rentrer. (ʒö dwa pase a la farmasi avan de rantré) - Devo passare in farmacia prima di tornare a casa.
+La salle d'attente est presque pleine. (la sal datant é presk plen) - La sala d'attesa è quasi piena.
+Le train de dix-huit heures est affiché sur quel écran ? (le tran de diz-üit ör é afisce sür kel ekran) - Su quale schermo è indicato il treno delle diciotto?
+J'ai pris une place côté couloir cette fois. (ʒé pri ün plas koté kulwar set fwa) - Questa volta ho preso un posto vicino al corridoio.
+Le train ralentit, je pense qu'on approche de la gare. (le tran ralanti, ʒö pans kon aprosc de la gar) - Il treno rallenta, penso che ci stiamo avvicinando alla stazione.
+Il y a un ascenseur au bout du quai. (il ia an nasansör o bu dü ké) - C'è un ascensore in fondo al binario.
+La rame est arrivée vide, on a trouvé des places facilement. (la ram é arivé vid, on a truvé de plas fasilman) - La carrozza è arrivata vuota, abbiamo trovato facilmente posto.
+J'ai oublié de vérifier les perturbations avant de partir. (ʒé oublié de verifié le pertürbasiòn avan de partir) - Ho dimenticato di controllare le disagi prima di partire.
+Le tram passe devant la gare toutes les dix minutes. (le tram pas dövan la gar tut le dis minüt) - Il tram passa davanti alla stazione ogni dieci minuti.
+On peut acheter le ticket directement dans le bus. (on pö asciété le tikè direktman dan le büs) - Possiamo comprare il biglietto direttamente sull'autobus.
+La circulation est fluide aujourd'hui, ça change. (la sirkülasiòn é flüid oʒurdüi, sa sciandʒ) - Oggi il traffico scorre bene, è una novità.
+Le bus scolaire vient de partir. (le büs skoler vien de partir) - L'autobus scolastico è appena partito.
+Notre porte d'embarquement est à l'autre bout du terminal. (notr port danbarkman é a lotr bu dü terminal) - Il nostro gate d'imbarco è dall'altra parte del terminal.
+J'ai reçu une notification disant que le vol était avancé. (ʒé resü ün notifikasiòn dizan ke le vol etè avanse) - Ho ricevuto una notifica che diceva che il volo era stato anticipato.
+Il faut présenter le passeport au comptoir. (il fo prezanté le paspor o kontwar) - Bisogna presentare il passaporto al banco.
+On a une heure avant l'embarquement, allons prendre un café. (on a ün ör avan lanbarkman, alon prandr an kafé) - Abbiamo un'ora prima dell'imbarco, andiamo a prendere un caffè.
+La traversée a été plus longue que prévu à cause du vent. (la traversé a été plü long ke prevü a koz dü van) - La traversata è durata più del previsto a causa del vento.
+Tu sais où se trouve la billetterie du port ? (tü sè u se truv la biyetrì dü por) - Sai dove si trova la biglietteria del porto?
+Après le feu, prends la rue qui monte vers la colline. (aprè le fö, pran la rü ki mont ver la kolin) - Dopo il semaforo, prendi la strada che sale verso la collina.
+Je crois qu'on a dépassé l'entrée du parking. (ʒö krwa kon a depase lantré dü parking) - Credo che abbiamo superato l'ingresso del parcheggio.
+La voiture fait des vibrations quand je dépasse les quatre-vingts. (la vuatür fè de vibrasiòn kan ʒö depas le katr-van) - La macchina vibra quando supero gli ottanta.
+J'ai appelé mon assurance pour déclarer l'accident. (ʒé apel mon asürans pur deklare laksidan) - Ho chiamato la mia assicurazione per denunciare l'incidente.
+Le feu tricolore ne fonctionne plus depuis hier. (le fö trikolor ne fonksiòn plü döpüi ier) - Il semaforo non funziona più da ieri.
+La route est impraticable après les fortes pluies. (la rut é anpratikabl aprè le fort plüi) - La strada è impraticabile dopo le forti piogge.
+Tout l'immeuble a été évacué à cause de la fumée. (tu limöbl a été evaküé a koz de la fümé) - Tutto il palazzo è stato evacuato a causa del fumo.
+La climatisation fait un bruit étrange quand on l'allume. (la klimatizasiòn fè an brüi etranʒ kan on lalüm) - L'aria condizionata fa uno strano rumore quando la accendiamo.
+Le plombier doit venir dans l'après-midi. (le plombié dwa venir dan laprè-midi) - L'idraulico dovrebbe venire nel pomeriggio.
+Le petit déjeuner de l'hôtel commence à sept heures. (le pəti deʒöné de lotèl komans a set ör) - La colazione dell'hotel inizia alle sette.
+La chambre donne directement sur la cour intérieure. (la sciambre don direktman sür la kur antériör) - La camera dà direttamente sul cortile interno.
+Nous avons demandé un départ tardif pour dimanche. (nu zavon demandé an depart tardif pur dimansc) - Abbiamo chiesto un check-out posticipato per domenica.
+Je vais vérifier si la piscine est ouverte aujourd'hui. (ʒö vé verifié si la pisin é uvert oʒurdüi) - Controllo se la piscina è aperta oggi.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
