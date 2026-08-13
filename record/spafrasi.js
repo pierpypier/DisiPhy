@@ -71,6 +71,57 @@ La película me gustó, aunque el final me pareció un poco flojo. (la pelikúla
 Después de comer, nos dimos una vuelta por el casco antiguo. (despúes de komér, nos dímos una buélta por el kásko antíguo) - Dopo pranzo abbiamo fatto un giro nel centro storico.
 Si mañana hace buen tiempo, podemos hacer una ruta por la montaña. (si mañana áse buen tiémpo, podémos asér una rúta por la montaña) - Se domani fa bel tempo, possiamo fare un'escursione in montagna.
 No me apetece bajar a la playa, prefiero quedarme en casa con un libro. (no me apetése bakhár a la pláya, prefyéro kedárme en káса kon un líbro) - Non mi va di andare in spiaggia, preferisco restare a casa con un libro.
+Oye, ¿has apagado la luz de la cocina? (Alta stanza, la luz de la kozina? / Óie as apagádo la lus de la kosína) - Ehi, hai spento la luce della cucina?
+Voy a poner la lavadora antes de cenar. (Boi a ponér la labadóra ántes de zenár) - Metto la lavatrice prima di cena
+¿Dónde están las llaves del coche, tío? (Dónde estàn las llábes del kóche, tío?) - Dove sono le chiavi della macchina, amico?
+El gato se ha vuelto a subir a la mesa. (El gáto se a buélto a subír a la mésa) - Il gatto è risalito di nuovo sul tavolo
+Venga, a la mesa que se enfría la cena. (Bénga, a la mésa ke se enfría la zéna) - Dai, a tavola che si fredda la cena
+Mamá, ¿me firmas esto para el cole? (Mamà, me firmas ésto pára el kóle?) - Mamma, mi firmi questo per la scuola?
+No he entendido nada de matemáticas hoy. (No e entendído náda de matemátikas oi) - Non ho capito niente di matematica oggi
+¿Puedo quedarme a dormir en casa de Marta? (Puédo kedárme a dormír en kása de Márta?) - Posso dormire a casa di Marta?
+A las diez en casa, ni un minuto más. (A las diéz en kása, ni un minúto mas) - A casa alle dieci, non un minuto di più
+Necesito algo para el dolor de cabeza. (Nezesíto álgo pára el dolór de kabéza) - Ho bisogno di qualcosa per il mal di testa
+¿A qué hora sale el próximo tren a Sevilla? (A ké óra sále el próksimo trén a Sebílla?) - A che ora parte il prossimo treno per Siviglia?
+El metro va fatal a estas horas, tío. (El métro ba fatál a éstas óras, tío) - La metro va malissimo a quest'ora, amico
+Este autobús no para donde yo pensaba. (Éste autobús no pára dónde yo pensába) - Questo autobus non ferma dove pensavo
+Perdona, ¿de qué puerta sale mi vuelo? (Perdóna, de ké puérta sále mi buélo?) - Scusa, da quale gate parte il mio volo?
+El ferry sale con retraso por el viento. (El férri sále kon retráso por el biénto) - Il traghetto parte in ritardo per il vento
+Sigue todo recto y luego giras a la izquierda. (Sígue tódo rékto i luégo híras a la iskiérda) - Vai sempre dritto e poi giri a sinistra
+Se me ha calado el coche en medio de la rotonda. (Se me a kaládo el kóche en médio de la rotónda) - Mi si è spenta la macchina in mezzo alla rotonda
+Hay un atasco horrible en la entrada de la ciudad. (Ai un atásko orríble en la entráda de la ziudád) - C'è un traffico terribile all'entrata della città
+Se ha ido la luz en todo el barrio otra vez. (Se a ído la lus en tódo el bárrio ótra bes) - È andata via la luce in tutto il quartiere di nuovo
+Buenas, querría una habitación doble para esta noche. (Buénas, kerría una abitazión dóble pára ésta nóche) - Buonasera, vorrei una camera doppia per stasera
+El baño de la habitación tiene una gotera. (El báño de la abitazión tiéne una gotéra) - Il bagno della camera ha una perdita d'acqua
+La anfitriona nos dejó las llaves debajo del felpudo. (La anfitrióna nos dehó las llábes debáho del felpúdo) - La padrona di casa ci ha lasciato le chiavi sotto lo zerbino
+¿Nos puede traer la carta y algo para picar? (Nos puéde traér la kárta i álgo pára pikár?) - Ci può portare il menù e qualcosa da sgranocchiare?
+Pon dos cañas y unas bravas para empezar. (Pon dos káñas i únas brábas pára empezár) - Metti due birre piccole e delle patate bravas per iniziare
+Anoche salimos hasta las tantas, menudo lío. (Anóche salímos ásta las tántas, menúdo lío) - Ieri sera siamo usciti fino a tardi, che casino
+Voy al súper a comprar cuatro cosas nada más. (Boi al súper a komprár kuátro kósas náda mas) - Vado al supermercato a comprare giusto quattro cose
+Me quiero probar esta chaqueta en la talla mediana. (Me kiéro probár ésta chakéta en la tálla mediána) - Voglio provarmi questa giacca in taglia media
+Tengo una reunión a primera hora, no llego a comer. (Téngo úna reunión a priméra óra, no llégo a komér) - Ho una riunione a prima ora, non arrivo per pranzo
+Se me ha cortado la videollamada tres veces seguidas. (Se me a kortádo la bideollamáda tres béces segídas) - Mi si è interrotta la videochiamata tre volte di fila
+El wifi de casa va fatal desde ayer. (El uífi de kása ba fatál désde ayér) - Il wifi di casa va malissimo da ieri
+Esta impresora se atasca cada dos por tres. (Ésta impresóra se atáska káda dos por tres) - Questa stampante si inceppa in continuazione
+El museo cierra a las ocho, tenemos tiempo de sobra. (El muséo ziérra a las ócho, tenémos tiémpo de sóbra) - Il museo chiude alle otto, abbiamo un sacco di tempo
+La peli empieza en veinte minutos, corre un poco. (La péli empiéza en béinte minútos, kórre un póko) - Il film inizia tra venti minuti, sbrigati un po'
+Nos perdimos paseando por el casco antiguo. (Nos perdímos paseándo por el kásko antíguo) - Ci siamo persi passeggiando per il centro storico
+El sendero está embarrado, mejor llevamos botas. (El sendéro está embarrádo, mehór llebámos bótas) - Il sentiero è fangoso, meglio portare gli scarponi
+Vamos a la playa en cuanto baje el sol un poco. (Bámos a la pláya en kuánto báhe el sol un póko) - Andiamo in spiaggia appena il sole cala un po'
+Han venido mis suegros a pasar el fin de semana. (An benído mis suégros a pasár el fin de semána) - Sono venuti i miei suoceri a passare il weekend
+Se nos ha estropeado la caldera otra vez, qué rabia. (Se nos a estropeádo la kaldéra ótra bes, ke rábia) - Ci si è rotta di nuovo la caldaia, che rabbia
+¿Qué tal todo? Cuánto tiempo sin verte, tío. (Ké tal tódo? Kuánto tiémpo sin bérte, tío) - Come va? Quanto tempo senza vederci, amico
+Llevo dos días con fiebre y no se me pasa. (Llébo dos días kon fiébre i no se me pása) - Sono due giorni che ho la febbre e non mi passa
+He llamado a emergencias porque se ha caído mi vecina. (E llamádo a emerhénzias porké se a kaído mi bezína) - Ho chiamato il pronto intervento perché è caduta la mia vicina
+Voy al gimnasio tres veces por semana si puedo. (Boi al himnásio tres béces por semána si puédo) - Vado in palestra tre volte a settimana se posso
+Dicen que mañana va a llover a cántaros. (Dízen ke mañána ba a llobér a kántaros) - Dicono che domani pioverà a dirotto
+Tengo que hacer una transferencia antes de que cierre el banco. (Téngo ke azér una transferénzia ántes de ke ziérre el bánko) - Devo fare un bonifico prima che chiuda la banca
+Tengo una entrevista de trabajo el jueves por la tarde. (Téngo úna entrebísta de trabáho el huébes por la tárde) - Ho un colloquio di lavoro giovedì pomeriggio
+El perro lleva toda la mañana sin querer comer. (El pérro lléba tóda la mañána sin kerér komér) - Il cane sta tutta la mattina senza voler mangiare
+Estamos organizando la fiesta de cumpleaños de mi hija. (Estámos organisándo la fiésta de kumpleáños de mi íha) - Stiamo organizzando la festa di compleanno di mia figlia
+Me ha llegado una notificación rarísima al móvil. (Me a llegádo úna notifikazión raríssima al móbil) - Mi è arrivata una notifica stranissima sul cellulare
+Yo no estoy nada de acuerdo con lo que dices. (Yo no estói náda de akuérdo kon lo ke díses) - Io non sono per niente d'accordo con quello che dici
+Hoy me siento un poco baja de energía, la verdad. (Oi me siénto un póko báha de enerhía, la berdád) - Oggi mi sento un po' scarica di energie, sinceramente
+Quedamos a las siete en la puerta del cine, ¿vale? (Kedámos a las siéte en la puérta del zíne, bále?) - Ci vediamo alle sette davanti al cinema, va bene?
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
