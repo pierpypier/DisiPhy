@@ -1362,6 +1362,59 @@ Unser Hotelzimmer liegt direkt neben dem Aufzug. (unzer hoteltsimmer ligt direkt
 Könnten wir bitte ein ruhigeres Zimmer bekommen? (könnten vir bitte ain ruigeres tsimmer bekommen) - Potremmo avere una camera più tranquilla, per favore?
 Im Bad funktioniert die Steckdose nicht. (im baad funktioniert di steckdoze nicht) - In bagno la presa elettrica non funziona.
 Der Gastgeber hat uns schon vor der Anreise alle wichtigen Infos geschickt. (der gastgeber hat uns scion for der anraize alle wichtigen infos geschickt) - L'host ci ha già mandato tutte le informazioni importanti prima del nostro arrivo.
+Ich hab den Wäscheständer heute Morgen vor das Fenster gestellt. (ich hab den vesce-stender hoite morgen for das fenster gestellt) - Stamattina ho messo lo stendibiancheria davanti alla finestra.
+Die Schublade mit den Küchentüchern klemmt ständig. (di scublade mit den kücentüchern klemmt ständig) - Il cassetto con gli strofinacci della cucina si inceppa continuamente.
+Ich hab die Haustür abgeschlossen, bevor ich losgegangen bin. (ich hab di haustür abgeschlossen, bevor ich losgegangen bin) - Ho chiuso a chiave la porta di casa prima di uscire.
+Unser Hund hört sofort, wenn jemand an der Tür klingelt. (unzer hund hört zofort, ven jemand an der tür klingelt) - Il nostro cane sente subito quando qualcuno suona alla porta.
+Die Katze hat sich den ganzen Nachmittag nicht blicken lassen. (di katze hat zich den ganzen nachmittag nicht blicken lassen) - Il gatto non si è fatto vedere per tutto il pomeriggio.
+Ich muss noch die Bettwäsche in den Schrank legen. (ich muss noch di bettvesce in den scrank legen) - Devo ancora mettere la biancheria da letto nell'armadio.
+Die Spülmaschine ist schon wieder halb leer. (di spülmascine ist scion vider halb leer) - La lavastoviglie è di nuovo mezza vuota.
+Kannst du im Wohnzimmer das Licht anmachen? (kanst du im vonzimmer das licht anmachen) - Puoi accendere la luce in soggiorno?
+Ich hab heute nur einen Joghurt zum Frühstück gegessen. (ich hab hoite nur ainen jogurt tsum früstück gegessen) - Oggi a colazione ho mangiato solo uno yogurt.
+Stell bitte die Milch zurück in den Kühlschrank. (stell bitte di milch tsurück in den külsc-rank) - Rimetti il latte in frigorifero, per favore.
+Zum Mittag gibt es heute etwas Schnelles. (tsum mittag gibt es hoite etvas scnelles) - Oggi a pranzo mangiamo qualcosa di veloce.
+Wer hat den letzten Apfel genommen? (ver hat den letzten apfel genommen) - Chi ha preso l'ultima mela?
+Nach dem Abendessen trinken wir noch einen Tee. (nach dem abentessen trinken vir noch ainen te) - Dopo cena beviamo ancora un tè.
+Die Schule beginnt morgen erst um neun. (di scule beginnt morgen erst um noyn) - Domani la scuola inizia solo alle nove.
+Für die Prüfung fehlen ihr noch ein paar Kapitel. (für di prüfung felen ir noch ain paar kapitel) - Le mancano ancora alcuni capitoli da studiare per l'esame.
+Der Lehrer hat heute überraschend einen Test angekündigt. (der leerer hat hoite überrascend ainen test angekündigt) - Oggi l'insegnante ha annunciato a sorpresa una verifica.
+Sie versteht Chemie viel besser, wenn jemand es ihr erklärt. (zi fersteht chemie fiil besser, ven jemand es ir erklärt) - Capisce molto meglio la chimica quando qualcuno gliela spiega.
+Ich hab die Schulunterlagen auf dem Schreibtisch liegen lassen. (ich hab di sculunterlagen auf dem scraibtisc liegen lassen) - Ho lasciato il materiale scolastico sulla scrivania.
+Du kannst dich nach den Hausaufgaben mit deinen Freunden treffen. (du kanst dich nach den hausaufgaben mit dainen froinden treffen) - Dopo i compiti puoi incontrarti con i tuoi amici.
+Ich möchte heute Abend nicht wieder über dein Handy diskutieren. (ich möcte hoite abent nicht vider über dain hendi diskutieren) - Stasera non voglio discutere di nuovo del tuo cellulare.
+Wenn du müde bist, geh einfach früher schlafen. (ven du müde bist, ge-e ainfac früer sclafen) - Se sei stanco, vai semplicemente a dormire prima.
+Du hast morgen früh einen Termin, also stell dir einen Wecker. (du hast morgen frü ainen termin, also stell dir ainen vecker) - Domani mattina hai un appuntamento, quindi metti la sveglia.
+Ich hab in der Apotheke nach einem Mittel gegen Fieber gefragt. (ich hab in der apoteke nach ainem mittel gegen fiber gefragt) - In farmacia ho chiesto un rimedio contro la febbre.
+Muss ich für dieses Medikament ein Rezept vorlegen? (muss ich für dieses medikament ain rezept forlegen) - Devo presentare una ricetta per questo farmaco?
+Die Beschwerden kommen meistens am Abend zurück. (di besverden kommen maistens am abent tsurück) - I disturbi tornano per lo più la sera.
+Ich hab heute einen Termin beim Zahnarzt. (ich hab hoite ainen termin baim tsan-artzt) - Oggi ho un appuntamento dal dentista.
+Die Ärztin hat mir empfohlen, mich ein paar Tage auszuruhen. (di ärtstin hat mir empfohlen, mich ain paar tage aus-tsuru-en) - La dottoressa mi ha consigliato di riposarmi per qualche giorno.
+Der Zug fährt in einer Viertelstunde ab. (der tsug fert in ainer firtelstunde ap) - Il treno parte tra un quarto d'ora.
+Wir sollten langsam zum Gleis gehen. (vir zolten langsam tsum glais geen) - Dovremmo avviarci lentamente verso il binario.
+Ich hab den Zug gerade noch erwischt. (ich hab den tsug gerade noch erwischt) - Sono riuscito a prendere il treno proprio all'ultimo momento.
+Die Anzeige am Bahnhof funktioniert heute nicht. (di antsaige am baanhof funktioniert hoite nicht) - Oggi il display della stazione non funziona.
+In der U-Bahn ist es morgens immer voll. (in der u-baan ist es morgens immer fol) - La metropolitana è sempre affollata al mattino.
+Ich muss an der nächsten Station auf die andere Linie wechseln. (ich muss an der nechsten station auf di andere linie vecseln) - Alla prossima stazione devo cambiare linea.
+Die Türen schließen automatisch. (di türen schließen automatisch) - Le porte si chiudono automaticamente.
+Der Busfahrer wartet noch auf ein paar Fahrgäste. (der busfarer wartet noch auf ain paar far-geste) - L'autista dell'autobus sta ancora aspettando alcuni passeggeri.
+Ich hab den Bus verpasst und muss jetzt zehn Minuten warten. (ich hab den bus ferpasst und muss ietzt tzen minuten varten) - Ho perso l'autobus e ora devo aspettare dieci minuti.
+Am Flughafen ist unser Gate ziemlich weit entfernt. (am flughafen ist unser geit ziemlich vait entfernt) - In aeroporto il nostro gate è piuttosto lontano.
+Wir haben schon online eingecheckt. (vir habn scion onlain eingecheckt) - Abbiamo già fatto il check-in online.
+Ich hoffe, dass unser Gepäck diesmal direkt ankommt. (ich hoffe, das unser gepäck diesmal direkt ankommt) - Spero che questa volta i nostri bagagli arrivino direttamente.
+Die Fähre legt gleich vom anderen Anleger ab. (di fere legt glaic fom anderen anleger ap) - Il traghetto parte tra poco dall'altro molo.
+Wir mussten am Hafen ziemlich lange auf die Abfahrt warten. (vir mussten am haafen ziemlich lange auf di apfart varten) - Al porto abbiamo dovuto aspettare parecchio la partenza.
+Der Stadtplan zeigt auch die kleineren Straßen an. (der stadtplan tsaigt auc di klaineren strassen an) - La mappa della città mostra anche le strade più piccole.
+Wenn du hier links gehst, kommst du direkt zum Marktplatz. (ven du hier links gest, kommst du direkt tsum marktplats) - Se vai a sinistra qui, arrivi direttamente in piazza del mercato.
+Ich hab beim Fahren plötzlich ein Warnsignal gehört. (ich hab baim faren plötzlich ain varnsignal gehört) - Durante la guida ho sentito improvvisamente un segnale d'allarme.
+Der Reifen verliert langsam Luft. (der raifen ferliert langsam luft) - La gomma perde lentamente aria.
+Ich hab die Werkstatt angerufen und einen Termin bekommen. (ich hab di verkstatt angerufen und ainen termin bekommen) - Ho chiamato l'officina e preso un appuntamento.
+Nach dem Unfall war die Straße für eine Stunde gesperrt. (nach dem unfal var di strasse für aine stunde gesperrt) - Dopo l'incidente la strada è rimasta chiusa per un'ora.
+Die Feuerwehr hat den Keller wegen des Wassers kontrolliert. (di foierver hat den keller wegen des vassers kontrolliert) - I vigili del fuoco hanno controllato la cantina a causa dell'acqua.
+Seit dem Stromausfall funktioniert der Aufzug nicht mehr. (sait dem stromausfall funktioniert der auftsug nicht meer) - Da quando è saltata la corrente l'ascensore non funziona più.
+Im Hotel fehlt in unserem Zimmer eine Nachttischlampe. (im hotel felt in unzerem tsimmer aine nacht-tisc-lampe) - Nella nostra camera d'hotel manca una lampada da comodino.
+Das Zimmermädchen hat unser Zimmer heute noch nicht gemacht. (das tsimmer-medcen hat unzer tsimmer hoite noch nicht gemacht) - La cameriera ai piani oggi non ha ancora sistemato la nostra camera.
+Wir hätten gern zwei weitere Handtücher fürs Bad. (vir heten gern tsvai vaitere handtücher fürs baad) - Vorremmo altri due asciugamani per il bagno.
+Der Gastgeber hat uns erlaubt, die Koffer schon morgens abzustellen. (der gastgeber hat uns erlaubt, di koffer scion morgens ap-tsustellen) - L'host ci ha permesso di lasciare le valigie già al mattino.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
