@@ -1752,6 +1752,56 @@ Le hemos preparado una tarta casera, nada de comprada. (Le émos preparádo úna
 Todos los años nos reunimos en casa de los abuelos por Pascua. (Tódos los áños nos reunímos en kása de los abuélos por Páskua) - Ogni anno ci riuniamo a casa dei nonni per Pasqua
 Han venido hasta los primos segundos a la fiesta, menuda familia. (An benído ásta los prímos segúndos a la fiésta, menúda família) - Sono venuti perfino i cugini di secondo grado alla festa, che famiglia
 Brindamos por los que ya no están y por los que siguen aquí. (Brindámos por los ke ya no están i por los ke sígen akí) - Brindiamo per chi non c'è più e per chi è ancora qui
+¿Qué plan hacemos hoy, paseamos por el centro o vamos de tiendas? (Ké plan azémos oi, paseámos por el zéntro o bámos de tiéndas?) - Che programma facciamo oggi, passeggiamo in centro o andiamo a fare shopping?
+Yo prefiero ir al Retiro a dar una vuelta con los niños. (Yo prefiéro ir al Retíro a dar úna buélta kon los níños) - Io preferisco andare al Retiro a fare un giro con i bambini
+Podemos alquilar una barca en el estanque del parque. (Podémos alkilár úna bárka en el estánke del párke) - Possiamo noleggiare una barca nel laghetto del parco
+Los peques quieren ver el Palacio de Cristal, está aquí cerca. (Los pékes kiéren ber el Paláthio de Kristál, está akí zérka) - I piccoli vogliono vedere il Palacio de Cristal, è qui vicino
+Vamos primero a la Puerta del Sol y luego ya vemos. (Bámos priméro a la Puérta del Sol i luégo ya bémos) - Andiamo prima alla Puerta del Sol e poi vediamo
+Desde aquí se llega andando a la Plaza Mayor en diez minutos. (Désde akí se lléga andándo a la Pláza Mayór en diéz minútos) - Da qui si arriva a piedi a Plaza Mayor in dieci minuti
+Yo me quiero pasar por Gran Vía a mirar escaparates. (Yo me kiéro pasár por Gran Bía a mirár eskaparátes) - Io voglio passare per Gran Vía a guardare le vetrine
+¿Entramos al Museo del Prado o lo dejamos para mañana? (Entrámos al Muséo del Prádo o lo dehámos pára mañána?) - Entriamo al Museo del Prado o lo lasciamo per domani?
+Con la entrada del Prado también podemos ver el Reina Sofía. (Kon la entráda del Prádo tambiém podémos ber el Réina Sofía) - Con il biglietto del Prado possiamo vedere anche il Reina Sofía
+A mí lo que más me apetece es ver el Palacio Real. (A mi lo ke mas me apetéze es ber el Paláthio Reál) - A me quello che più mi va è vedere il Palacio Real
+La cola para el Palacio Real está bastante larga hoy. (La kóla pára el Paláthio Reál está bastánte lárga oi) - La coda per il Palacio Real è piuttosto lunga oggi
+Podemos comprar las entradas por internet y así no esperamos tanto. (Podémos komprár las entrádas por internét i así no esperámos tánto) - Possiamo comprare i biglietti online così non aspettiamo tanto
+Los niños están cansados, mejor paramos a tomar algo. (Los níños están kansádos, mehór parámos a tomár álgo) - I bambini sono stanchi, meglio fermarci a bere qualcosa
+Hay una terraza aquí mismo, sentémonos un rato. (Ai úna terráza akí mísmo, sentémonos un ráto) - C'è una terrazza proprio qui, sediamoci un po'
+Vamos a comprar algún recuerdo para la abuela en esta tienda. (Bámos a komprár algún rekuérdo pára la abuéla en ésta tiénda) - Compriamo un souvenir per la nonna in questo negozio
+A mí me gustaría entrar en El Corte Inglés a ver ropa. (A mi me gustaría entrár en El Kórte Inglés a ber rópa) - A me piacerebbe entrare all'El Corte Inglés a vedere vestiti
+Podemos subir al mirador del Círculo de Bellas Artes. (Podémos subír al miradór del Církulo de Béllas Ártes) - Possiamo salire al belvedere del Círculo de Bellas Artes
+Desde ahí arriba se ve toda la ciudad, merece la pena. (Désde aí arríba se be tóda la thiudád, meréze la péna) - Da lassù si vede tutta la città, vale la pena
+Luego podemos acercarnos al Templo de Debod para el atardecer. (Luégo podémos azerkárnos al Témplo de Debód pára el atardezér) - Poi possiamo avvicinarci al Templo de Debod per il tramonto
+Está un poco lejos, mejor cogemos el metro hasta allí. (Está un póko léhos, mehór kohémos el métro ásta allí) - È un po' lontano, meglio prendere la metro fino lì
+Los abuelos prefieren quedarse en la plaza sentados mientras compramos. (Los abuélos prefiéren kedárse en la pláza sentádos miéntras komprámos) - I nonni preferiscono restare in piazza seduti mentre facciamo shopping
+Nos vemos aquí en una hora, así cada uno hace lo suyo. (Nos bémos akí en úna óra, así káda úno áze lo súyo) - Ci vediamo qui tra un'ora, così ognuno fa quello che vuole
+Yo me llevo a los niños a ver el estadio Santiago Bernabéu. (Yo me llébo a los níños a ber el estádio Santiágo Bernabéu) - Io porto i bambini a vedere lo stadio Santiago Bernabéu
+Podemos hacer la visita guiada del estadio si hay tiempo. (Podémos azér la bisíta gíada del estádio si ai tiémpo) - Possiamo fare la visita guidata dello stadio se c'è tempo
+A la vuelta paramos en el Mercado de San Miguel a picar algo. (A la buélta parámos en el Merkádo de San Migél a pikár álgo) - Al ritorno ci fermiamo al Mercado de San Miguel per mangiare qualcosa
+Ese mercado siempre está lleno de gente, pero merece la pena. (Ése merkádo siémpre está lléno de hénte, péro meréze la péna) - Quel mercato è sempre pieno di gente, ma vale la pena
+Voy a comprarme unas gafas de sol en esa tienda de ahí. (Boi a komprárme únas gáfas de sol en ésa tiénda de aí) - Vado a comprarmi degli occhiali da sole in quel negozio là
+¿Habéis visto la Fuente de Cibeles? Está aquí al lado. (Abéis bísto la Fuénte de Zibéles? Está akí al ládo) - Avete visto la Fontana di Cibeles? È qui vicino
+Nos hacemos una foto todos juntos delante de la fuente. (Nos azémos úna fóto tódos húntos delánte de la fuénte) - Ci facciamo una foto tutti insieme davanti alla fontana
+Después de comer podemos ir andando hasta el Parque del Oeste. (Después de komér podémos ir andándo ásta el Párke del Oéste) - Dopo pranzo possiamo andare a piedi fino al Parque del Oeste
+Se puede coger el teleférico desde allí, a los niños les va a encantar. (Se puéde kohér el teleférico désde allí, a los níños les ba a enkantár) - Si può prendere la funivia da lì, ai bambini piacerà tantissimo
+Yo voy a aprovechar para comprar unas zapatillas nuevas. (Yo boi a aprobechár pára komprár únas zapatíllas nuébas) - Io approfitto per comprarmi delle scarpe da ginnastica nuove
+¿Alguien sabe si el Mercado de Motores abre los domingos? (Alguién sábe si el Merkádo de Motóres ábre los domíngos?) - Qualcuno sa se il Mercado de Motores apre la domenica?
+Mejor dejamos las compras grandes para el último día. (Mehór dehámos las kómpras grándes pára el últímo día) - Meglio lasciare gli acquisti grandi per l'ultimo giorno
+A mí me apetece mucho ver el Museo Reina Sofía por el Guernica. (A mi me apetéze múcho ber el Muséo Réina Sofía por el Guérnika) - A me va molto di vedere il Museo Reina Sofía per il Guernica
+Los niños se han empeñado en subir a la noria del Retiro. (Los níños se an empeñádo en subír a la nória del Retíro) - I bambini si sono impuntati per salire sulla ruota panoramica del Retiro
+Vale, pero luego nos vamos derechos al hotel que estoy reventado. (Bále, péro luégo nos bámos deréchos al otél ke estói rebentádo) - Va bene, ma poi andiamo dritti in hotel che sono distrutto
+Podemos parar en alguna heladería, hace mucho calor hoy. (Podémos parár en algúna eladería, áze múcho kalór oi) - Possiamo fermarci in una gelateria, fa molto caldo oggi
+Esta calle está llena de tiendas de recuerdos baratitos. (Ésta kálle está lléna de tiéndas de rekuérdos baratítos) - Questa strada è piena di negozi di souvenir economici
+Voy a comprar unos imanes para la nevera, me encanta coleccionarlos. (Boi a komprár únos imánes pára la nebéra, me enkánta koleccionárlos) - Vado a comprare delle calamite per il frigo, adoro collezionarle
+¿Nos acercamos al Parque de El Capricho? Dicen que es una pasada. (Nos azerkámos al Párke de El Kaprícho? Dízen ke es úna pasáda) - Ci avviciniamo al Parque de El Capricho? Dicono che è fantastico
+Está bastante lejos del centro, necesitamos coger un bus. (Está bastánte léhos del zéntro, nezesitámos kohér un bus) - È abbastanza lontano dal centro, dobbiamo prendere un autobus
+Mejor lo dejamos para otro día, hoy no nos da tiempo. (Mehór lo dehámos pára ótro día, oi no nos da tiémpo) - Meglio lasciarlo per un altro giorno, oggi non ci fa tempo
+Voy a llevar a mi madre a ver los jardines de Sabatini. (Boi a llebár a mi mádre a ber los hardínes de Sabatíni) - Porto mia madre a vedere i giardini di Sabatini
+Desde los jardines se ve genial la fachada del Palacio Real. (Désde los hardínes se be henál la fachada del Paláthio Reál) - Dai giardini si vede benissimo la facciata del Palacio Real
+Aprovechemos que hace buen tiempo para pasear por Chueca. (Aprobechémos ke áze buén tiémpo pára paseár por Chuéka) - Approfittiamo del bel tempo per passeggiare per Chueca
+Hay tiendas monísimas por esa zona, seguro que algo compramos. (Ai tiéndas monísimas por ésa zóna, segúro ke álgo komprámos) - Ci sono negozi carinissimi in quella zona, sicuro che qualcosa compriamo
+Yo me quedo un rato más en el parque con los peques. (Yo me kédo un ráto mas en el párke kon los pékes) - Io mi fermo ancora un po' al parco con i piccoli
+Vosotros id de compras y luego nos juntamos para cenar. (Bosótros id de kómpras i luégo nos huntámos pára zenár) - Voi andate a fare shopping e poi ci riuniamo per cena
+Qué día tan completo, hemos visto medio Madrid en unas horas. (Ke día tan kompléto, émos bísto médio Madríd en únas óras) - Che giornata piena, abbiamo visto mezza Madrid in poche ore
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
