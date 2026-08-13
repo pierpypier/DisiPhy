@@ -349,6 +349,51 @@ El coche se ha quedado sin batería en mitad del aparcamiento. (el kóche se a k
 Ha empezado a llover justo cuando salíamos de casa. (a empesádo a yobér khústo kuándo salíamos de káса) - Ha iniziato a piovere proprio quando stavamo uscendo di casa.
 Según la previsión, mañana hará bastante frío. (según la prebisión, mañana ará bastante frío) - Secondo le previsioni, domani farà piuttosto freddo.
 Hace tanto viento que mejor dejamos la excursión para otro día. (áse tánto byénto ke mekhór dekhámos la ekskursyón para ótro día) - C'è così tanto vento che è meglio rimandare l'escursione a un altro giorno.
+Voy a poner a cargar el móvil mientras preparo la cena. (boi a ponér a kargár el móbil miéntras prepáro la séna) - Metto il cellulare in carica mentre preparo la cena.
+He dejado las ventanas abiertas para que entre un poco de aire. (e dekhádo las bentánas abyértas para ke én tre un póko de áire) - Ho lasciato le finestre aperte per far entrare un po' d'aria.
+¿Dónde has guardado las pilas del mando? (dónde as guardádo las pìlas del mándo) - Dove hai messo le pile del telecomando?
+El perro ha volcado el cuenco del agua otra vez. (el pérro a bolkádo el kuénko del água ótra bes) - Il cane ha rovesciato di nuovo la ciotola dell'acqua.
+Voy a limpiar el horno porque está bastante sucio. (boi a limpiár el órno porke está bastante súsio) - Pulisco il forno perché è piuttosto sporco.
+No pongas la ropa mojada encima de la cama. (no póngas la rópa mokháda ensíma de la káma) - Non mettere i vestiti bagnati sul letto.
+He comprado leche porque se había acabado. (e komprádo léche porke se abía akabádo) - Ho comprato il latte perché era finito.
+¿Quieres que te prepare un bocadillo? (kyéres ke te prepáre un bokadíyo) - Vuoi che ti prepari un panino?
+Hoy prefiero cenar algo que no sea pesado. (oi prefyéro senár álgo ke no séa pesádo) - Stasera preferisco mangiare qualcosa di leggero.
+Guarda qué bien ha quedado la comida. (guárda ke byén a kedádo la komída) - Guarda com'è venuto bene il cibo.
+El examen de inglés les ha resultado bastante fácil. (el eksámen de inglés les a resultádo bastante fásil) - L'esame di inglese è risultato piuttosto facile per loro.
+Mi hijo está preparando una presentación para clase. (mi ího está preparándo una presentasyón para kláse) - Mio figlio sta preparando una presentazione per la scuola.
+La profesora ha cambiado la fecha del examen. (la profesóra a kambyádo la fécha del eksámen) - L'insegnante ha cambiato la data dell'esame.
+No salgas todavía, quiero hablar contigo un momento. (no sálgas todabía, kyéro ablar kontígo un moménto) - Non uscire ancora, voglio parlarti un momento.
+Si vas a llegar tarde, mándame un mensaje. (si bas a yegár tárde, mándame un mensáhe) - Se fai tardi, mandami un messaggio.
+Me he levantado varias veces esta noche. (me e lebantádo bárias béses ésta nóche) - Mi sono alzato diverse volte stanotte.
+Tengo la nariz tapada y me cuesta respirar. (téngo la narís tapáda i me kuésta respirár) - Ho il naso chiuso e faccio fatica a respirare.
+El médico me ha recomendado beber más agua. (el médiko me a rekomendádo bebér más água) - Il medico mi ha consigliato di bere più acqua.
+Si te encuentras peor, no esperes y ve a urgencias. (si te enkuéntras peór, no espéres i be a urkhénsias) - Se ti senti peggio, non aspettare e vai al pronto soccorso.
+El tren de las ocho acaba de salir. (el tren de las ócho akaba de salír) - Il treno delle otto è appena partito.
+¿Dónde puedo consultar los horarios de los trenes? (dónde puédo konsultár los orários de los trenes) - Dove posso consultare gli orari dei treni?
+El revisor nos ha pedido los billetes. (el rebisór nos a pedído los biyétes) - Il controllore ci ha chiesto i biglietti.
+Nos quedan tres estaciones para llegar. (nos ké dan trés estasyónes para yegár) - Ci mancano tre fermate per arrivare.
+La salida correcta está al otro extremo del andén. (la salída korrékta está al ótro ekstrémo del andén) - L'uscita corretta è all'altra estremità del binario.
+He perdido la conexión y ahora tengo que esperar media hora. (e pérdido la koneksyón i aóra téngo ke esperár média óra) - Ho perso la coincidenza e ora devo aspettare mezz'ora.
+El metro va más rápido que el autobús a esta hora. (el métro ba más rápido ke el autobús a ésta óra) - A quest'ora la metropolitana è più veloce dell'autobus.
+Hay una huelga y algunos trenes no circulan. (ai una uélga i algú nos trenes no sirkúlan) - C'è uno sciopero e alcuni treni non circolano.
+El conductor ha tenido que desviarse por una calle cortada. (el konduktór a tenído ke desbiyárse por una káye kortáda) - L'autista ha dovuto fare una deviazione a causa di una strada chiusa.
+¿Podemos bajar aquí o hay que esperar a la siguiente parada? (podémos bakhár akí o ai ke esperár a la siguiénte parąda) - Possiamo scendere qui o dobbiamo aspettare la fermata successiva?
+He llegado al aeropuerto con bastante antelación. (e yegádo al aeropuérto kon bastante antelasión) - Sono arrivato in aeroporto con largo anticipo.
+La pantalla indica que el vuelo está embarcando. (la pantáya indíka ke el buélo está embarkándo) - Lo schermo indica che stanno imbarcando sul volo.
+¿Dónde está el control de pasaportes? (dónde está el kontról de pasapórtes) - Dov'è il controllo passaporti?
+La maleta no ha llegado a la cinta de equipajes. (la maléta no a yegádo a la sínta de ekipáhes) - La valigia non è arrivata al nastro bagagli.
+El barco se ha retrasado porque había niebla en el puerto. (el bárko se a retrasádo porke abía niébla en el puérto) - Il traghetto è in ritardo perché c'era nebbia nel porto.
+Tenemos que recoger las tarjetas de embarque antes de subir. (tenémos ke rekohér las tarhétas de embarke ántes de subír) - Dobbiamo ritirare le carte d'imbarco prima di salire.
+Sigue las señales hasta llegar a la salida principal. (sígue las señáles ásta yegár a la salída prinsipál) - Segui i cartelli fino all'uscita principale.
+La plaza está justo detrás de esa iglesia. (la plása está khústo detrás de ésa iglesya) - La piazza è proprio dietro quella chiesa.
+Me he equivocado de camino, tenemos que volver. (me e ekibokádo de kamíno, tenémos ke bolbér) - Ho sbagliato strada, dobbiamo tornare indietro.
+El coche no frena bien y prefiero no seguir conduciendo. (el kóche no fréna byén i prefyéro no seguír kondusyéndo) - La macchina non frena bene e preferisco non continuare a guidare.
+He llamado a la policía porque alguien ha golpeado mi coche. (e yamádo a la polisía porke algyén a golpiádo mi kóche) - Ho chiamato la polizia perché qualcuno ha urtato la mia macchina.
+El tráfico está peor de lo habitual esta mañana. (el tráfiko está peór de lo abitual ésta mañana) - Stamattina il traffico è peggiore del solito.
+No hay electricidad en casa desde hace una hora. (no ai elektrisidád en káса désde áse una óra) - Non c'è elettricità in casa da un'ora.
+El fontanero vendrá a primera hora de la mañana. (el fontanéro bendrá a priméra óra de la mañana) - L'idraulico verrà di prima mattina.
+El aire acondicionado de la habitación gotea continuamente. (el áire akondisionádo de la abitasión gotéa kontinuaménte) - L'aria condizionata della camera perde acqua continuamente.
+¿Podrían dejarme una manta extra? Tengo un poco de frío. (podrían dekhárme una mánta ekstra? téngo un póko de frío) - Potreste lasciarmi una coperta in più? Ho un po' freddo.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
