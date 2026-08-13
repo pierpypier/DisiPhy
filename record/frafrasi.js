@@ -1681,6 +1681,57 @@ L'imprimante refuse toujours d'imprimer ce document. (lanprimant refüz tuʒur d
 J'ai visité une exposition consacrée à l'Égypte ancienne. (ʒé vizité ün ekspozisiòn konsakré a leʒipt ansyèn) - Ho visitato una mostra dedicata all'antico Egitto.
 Le musée ferme dans une heure, on ferait mieux d'entrer maintenant. (le müze ferm danz ün ör, on ferè miö dantré mantenan) - Il museo chiude tra un'ora, faremmo meglio a entrare adesso.
 J'ai adoré le film, surtout la façon dont l'histoire est racontée. (ʒé adore le film, sürtu la fason don listwar é rakonté) - Ho adorato il film, soprattutto il modo in cui è raccontata la storia.
+On a organisé une surprise-party pour ses trente ans (On a organizé ün sürpriz parti pur sé trant an) - Abbiamo organizzato una festa a sorpresa per i suoi trent'anni
+Souffle les bougies et fais un vœu! (Suf lé bugi e fé an veu!) - Soffia le candeline ed esprimi un desiderio!
+On a caché le cadeau dans le coffre de la voiture (On a caché le cado dan le cofr de la vuatür) - Abbiamo nascosto il regalo nel bagagliaio della macchina
+Toute la famille sera réunie pour Noël cette année (Tut la famiy sera reüni pur Noel set ané) - Tutta la famiglia sarà riunita per Natale quest'anno
+On a décoré le sapin ensemble hier soir (On a decoré le sapin ansanbl ièr suar) - Abbiamo decorato l'albero insieme ieri sera
+Tu as pensé à emballer les cadeaux pour les enfants? (Tü a pansé a anbalé lé cado pur lezanfan?) - Hai pensato a incartare i regali per i bambini?
+Le réveillon commence vers vingt heures chez mes parents (Le reveion comans ver vinteur ché mé paran) - Il cenone inizia verso le venti a casa dei miei
+On mange la bûche de Noël après le dîner (On mange la büsh de Noel aprè le diné) - Mangiamo il tronchetto di Natale dopo cena
+Le père Noël passe cette nuit, il faut dormir vite! (Le pèr Noel pass set nüi, il fo dormir vit!) - Babbo Natale passa stanotte, bisogna dormire subito!
+On a fait une belle chasse aux œufs dans le jardin (On a fé ün bel chass o zeu dan le jardin) - Abbiamo fatto una bella caccia alle uova in giardino
+Les cloches de Pâques ont apporté plein de chocolats (Lé closh de Pak on aporté plin de chocolà) - Le campane di Pasqua hanno portato un sacco di cioccolatini
+On se retrouve tous chez mamie pour le repas de Pâques (On se retruv tu ché mami pur le repà de Pak) - Ci ritroviamo tutti da nonna per il pranzo di Pasqua
+Ça fait déjà dix ans qu'on est mariés, le temps file (Sa fè dejà diz an con è marié, le tan fil) - Sono già dieci anni che siamo sposati, il tempo vola
+On fête notre anniversaire de mariage au restaurant ce soir (On fet notr aniverser de marié o restoran se suar) - Festeggiamo il nostro anniversario di matrimonio al ristorante stasera
+J'ai commandé un gâteau au chocolat pour l'occasion (Gé comandé an gato o chocolà pur locazion) - Ho ordinato una torta al cioccolato per l'occasione
+Les enfants ont hâte d'ouvrir leurs cadeaux demain matin (Lezanfan on at duvrir leur cado deman matin) - I bambini non vedono l'ora di aprire i regali domani mattina
+On a invité toute la famille et quelques amis proches (On a invité tut la famiy e quelkezami proch) - Abbiamo invitato tutta la famiglia e alcuni amici stretti
+Tu crois qu'on aura assez de chaises pour tout le monde? (Tü crua con ora assé de shéz pur tu le monde?) - Pensi che avremo abbastanza sedie per tutti?
+On a mis la table avec la belle nappe de grand-mère (On a mi la tabl avec la bel nap de granmèr) - Abbiamo apparecchiato con la bella tovaglia della nonna
+Les cousins arrivent en fin de matinée avec les grands-parents (Lé cuzin ariv an fin de matiné avec lé gran paran) - I cugini arrivano a fine mattinata con i nonni
+On a préparé une liste de cadeaux pour pas se tromper (On a prepaé ün list de cado pur pa se tronpé) - Abbiamo preparato una lista di regali per non sbagliare
+Le petit dernier croit encore dur comme fer au père Noël (Le p'ti dernié crua ancor dür com fer o pèr Noel) - Il più piccolo crede ancora fermamente a Babbo Natale
+On chante des chants de Noël autour du sapin (On shant dé shan de Noel otur dü sapin) - Cantiamo canzoni di Natale intorno all'albero
+J'espère que tu vas aimer ton cadeau, j'ai eu du mal à choisir (Jespèr que tü va emé ton cado, gé ü dü mal a shuazir) - Spero che ti piacerà il regalo, ho fatto fatica a scegliere
+On se fait toujours un petit apéro avant le repas de fête (On se fè tujur an p'ti aperò avan le repà de fet) - Ci facciamo sempre un piccolo aperitivo prima del pranzo di festa
+Ma belle-sœur amène toujours sa fameuse salade de fruits (Ma bel seur amèn tujur sa fameuz salad de früi) - Mia cognata porta sempre la sua famosa macetta di frutta
+On va faire une photo de famille avant que tout le monde reparte (On va fer ün foto de famiy avan que tu le monde repart) - Facciamo una foto di famiglia prima che tutti se ne vadano
+Les enfants ont fabriqué des décorations de Pâques à l'école (Lezanfan on fabriké dé decorasion de Pak a lekol) - I bambini hanno fatto delle decorazioni di Pasqua a scuola
+On offre toujours un petit quelque chose même sans grande occasion (On ofr tujur an p'ti quelke shoz mem san grand okazion) - Regaliamo sempre qualcosa anche senza una grande occasione
+Le gâteau d'anniversaire est resté au frigo toute la nuit (Le gato daniverser è resté o frigo tut la nüi) - La torta di compleanno è rimasta in frigo tutta la notte
+On a mis des guirlandes partout dans le salon (On a mi dé girland partu dan le salon) - Abbiamo messo le luci decorative dappertutto in salotto
+Mon oncle raconte toujours les mêmes blagues à chaque Noël (Mon onkl racont tujur lé mem blag a chak Noel) - Mio zio racconta sempre le stesse battute ogni Natale
+On s'échange les cadeaux juste après le dessert (On seshange lé cado güst aprè le desser) - Ci scambiamo i regali subito dopo il dolce
+Les grands-parents offrent toujours quelque chose d'utile (Lé gran paran ofr tujur quelke shoz dütil) - I nonni regalano sempre qualcosa di utile
+On a prévu un petit feu d'artifice pour clôturer la soirée (On a prevü an p'ti feu dartifis pur clotüré la suaré) - Abbiamo previsto dei piccoli fuochi d'artificio per chiudere la serata
+Je dois encore trouver un cadeau pour ma belle-mère (Je dua ancor truvé an cado pur ma bel mèr) - Devo ancora trovare un regalo per mia suocera
+On fête toujours les anniversaires avec un gâteau fait maison (On fet tujur lezaniverser avec an gato fé mèzon) - Festeggiamo sempre i compleanni con una torta fatta in casa
+Les cloches sonnent, ça veut dire que le repas est bientôt prêt (Lé closh son, sa veu dir que le repà è biento prè) - Le campane suonano, vuol dire che il pranzo è quasi pronto
+On a décoré des œufs en famille tout l'après-midi (On a decoré dezeu an famiy tu laprèmidi) - Abbiamo decorato le uova in famiglia tutto il pomeriggio
+Ma grand-mère prépare toujours son fameux agneau de Pâques (Ma granmèr prepar tujur son fameu agno de Pak) - Mia nonna prepara sempre il suo famoso agnello di Pasqua
+On a hâte de se retrouver tous ensemble pour les fêtes (On at de se retruvé tu zansanbl pur lé fet) - Non vediamo l'ora di ritrovarci tutti insieme per le feste
+Les petits ont eu bien plus de cadeaux que prévu cette année (Lé p'ti on ü bien plü de cado que prevü set ané) - I piccoli hanno avuto molti più regali del previsto quest'anno
+On trinque tous ensemble à minuit pour le réveillon (On trink tu zansanbl a minüi pur le reveion) - Brindiamo tutti insieme a mezzanotte per il cenone
+Le sapin est un peu penché mais bon, ça passe (Le sapin et an peu panshé mé bon, sa pass) - L'albero è un po' storto ma vabbè, va bene così
+On a organisé une chasse au trésor pour son anniversaire (On a organizé ün chass o trezor pur son aniverser) - Abbiamo organizzato una caccia al tesoro per il suo compleanno
+Chaque année on se réunit chez les mêmes pour Pâques (Chak ané on se reüni ché lé mem pur Pak) - Ogni anno ci riuniamo dagli stessi per Pasqua
+On a acheté un gros lapin en chocolat pour les enfants (On a ashté an gro lapin an chocolà pur lezanfan) - Abbiamo comprato un grosso coniglio di cioccolato per i bambini
+Les amis sont venus avec des bouteilles pour fêter ça dignement (Lezami son venü avec dé butey pur feté sa dignmen) - Gli amici sono venuti con delle bottiglie per festeggiare degnamente
+On a fait un discours émouvant pour leurs noces d'or (On a fé an discur émuvan pur leur noss dor) - Abbiamo fatto un discorso commovente per le loro nozze d'oro
+Toute la tablée a chanté joyeux anniversaire en chœur (Tut la tablé a shanté juayeuz aniverser an keur) - Tutta la tavolata ha cantato buon compleanno in coro
+On garde toujours une part de gâteau pour ceux qui arrivent en retard (On gard tujur ün par de gato pur seu qui ariv an retar) - Teniamo sempre una fetta di torta per quelli che arrivano in ritardo
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
