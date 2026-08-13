@@ -1444,6 +1444,59 @@ No te preocupes por el coche, lo dejaré en el aparcamiento. (no te preokúpes p
 Creo que hemos dejado algo en el maletero. (kréo ke émos dekhádo álgo en el maletéro) - Credo che abbiamo lasciato qualcosa nel bagagliaio.
 El navegador ha dejado de funcionar de repente. (el nabegadór a dekhádo de funksionár de repénte) - Il navigatore ha smesso improvvisamente di funzionare.
 Hay un ruido debajo del coche que no me gusta nada. (ai un ruído debáho del kóche ke no me gusta náda) - C'è un rumore sotto la macchina che non mi piace per niente.
+He dejado la ventana entreabierta para que se renueve el aire. (e dekhádo la bentána entreabyérta para ke se renuébe el áire) - Ho lasciato la finestra socchiusa per far cambiare l'aria.
+Voy a pasar la mopa por el pasillo antes de que lleguen. (boi a pasár la mópa por el pasíyo ántes de ke yéguen) - Passo il mocio in corridoio prima che arrivino.
+Se me ha roto una percha y necesito comprar otra. (se me a róto una pércha i nesesíto komprár ótra) - Mi si è rotta una gruccia e devo comprarne un'altra.
+La lavadora hace un ruido extraño cuando centrifuga. (la labadóra áse un ruído estráño kuándo sentrifúga) - La lavatrice fa uno strano rumore quando centrifuga.
+¿Puedes poner la mesa mientras termino de cocinar? (puédes ponér la mésa miéntras termíno de kosinár) - Puoi apparecchiare mentre finisco di cucinare?
+He guardado las sobras en un recipiente. (e guardádo las sóbras en un resipyénte) - Ho messo gli avanzi in un contenitore.
+No dejes el vaso al borde de la mesa. (no déhes el básо al bórde de la mésa) - Non lasciare il bicchiere sul bordo del tavolo.
+El perro está ladrando porque ha oído algo en la escalera. (el pérro está ladrándo porke a oído álgo en la eskaléra) - Il cane abbaia perché ha sentito qualcosa sulle scale.
+Tengo que llevar la basura al contenedor antes de acostarme. (téngo ke yebár la basúra al kontenedór ántes de akostárme) - Devo portare la spazzatura al cassonetto prima di andare a letto.
+Hoy he dormido de un tirón. (oi e dormído de un tirón) - Oggi ho dormito tutto d'un fiato.
+Voy a preparar el almuerzo para llevar al trabajo. (boi a preparár el alm uérso para yebár al trabáho) - Preparo il pranzo da portare al lavoro.
+¿Quieres que te caliente la comida? (kyéres ke te kal y énte la komída) - Vuoi che ti riscaldi il cibo?
+He comprado pan integral y leche sin lactosa. (e komprádo pan integrál i léche sin laktósa) - Ho comprato pane integrale e latte senza lattosio.
+No queda café, así que esta vez toca bajar a comprarlo. (no kéda kafé, así ke ésta bes tóka bakhár a komprárlo) - Non è rimasto caffè, quindi stavolta tocca scendere a comprarlo.
+¿Me pasas la sal, por favor? (me pásas la sal, por fabór) - Mi passi il sale, per favore?
+Los chicos han salido del colegio hace un rato. (los chícos an salído del kolekhio áse un ráto) - I ragazzi sono usciti da scuola poco fa.
+La reunión de padres empieza justo después de la última clase. (la reunyón de pá dres empyésa khústo despúes de la última kláse) - La riunione dei genitori inizia subito dopo l'ultima lezione.
+Tiene que estudiar historia esta tarde. (tiéne ke estudiár istória ésta tárde) - Deve studiare storia questo pomeriggio.
+No le ha salido bien el ejercicio, pero lo intentará otra vez. (no le a salído byén el eher sísio, péгo lo intentará ótra bes) - L'esercizio non gli è venuto bene, ma ci riproverà.
+¿A qué hora quieres que venga a buscarte? (a ke óra kyéres ke bénga a buskárte) - A che ora vuoi che venga a prenderti?
+Mientras vivas en esta casa, tendrás que respetar estas normas. (miéntras bíbas en ésta káса, tendrás ke respetár éstas nórmas) - Finché vivi in questa casa, dovrai rispettare queste regole.
+Puedes salir después de hacer la cena, pero vuelve antes de las once. (puédes salír despúes de asér la séna, péгo buélbe ántes de las ónse) - Puoi uscire dopo cena, ma torna prima delle undici.
+No hace falta que me esperes despierto. (no áse fálta ke me espéres despiérto) - Non serve che mi aspetti sveglio.
+Mañana te toca llevar a tu hermana al colegio. (mañána te tóka yebár a tu ermána al kolekhio) - Domani tocca a te accompagnare tua sorella a scuola.
+Me he torcido el tobillo bajando las escaleras. (me e torsído el tobíyo bakhándo las eskaléras) - Mi sono slogato la caviglia scendendo le scale.
+Tengo la nariz completamente taponada. (téngo la narís kompletaménte taponáda) - Ho il naso completamente chiuso.
+¿Hay que tomar las pastillas con comida? (ai ke tomár las pastíyas kon komída) - Bisogna prendere le compresse durante i pasti?
+Me han dado cita para dentro de tres semanas. (me an dádo síta para déntro de tres semánas) - Mi hanno dato un appuntamento tra tre settimane.
+Siéntese aquí y espere a que le llamemos. (syéntese akí i espére a ke le yámemos) - Si sieda qui e aspetti che la chiamiamo.
+Me encuentro bastante débil desde ayer. (me enkuéntro bastante débil désde ayér) - Mi sento piuttosto debole da ieri.
+El tren está entrando ahora mismo en la estación. (el tren está entrándo aóra mismo en la estasyón) - Il treno sta entrando proprio ora in stazione.
+He reservado un asiento junto a la ventana. (e reservádo un asyénto khúnto a la bentána) - Ho prenotato un posto vicino al finestrino.
+¿Este tren continúa hasta Barcelona? (éste tren kont inúa ásta Barselóna) - Questo treno prosegue fino a Barcellona?
+Han cambiado el tren de vía a última hora. (an kambyádo el tren de bía a última óra) - Hanno cambiato il treno di binario all'ultimo momento.
+No te preocupes, todavía estamos a tiempo. (no te preokúpes, todabía estamos a tyémpo) - Non preoccuparti, siamo ancora in tempo.
+La línea que buscas sale desde el otro andén. (la línea ke búskas sále désde el ótro andén) - La linea che cerchi parte dall'altro binario.
+He dejado pasar el metro porque iba demasiado lleno. (e dekhádo pasár el métro porke iba demasiádo yéno) - Ho lasciato passare la metropolitana perché era troppo piena.
+¿Dónde se compra el billete del autobús? (dónde se kómpra el biyéte del autobús) - Dove si compra il biglietto dell'autobus?
+Esta parada no aparece en la aplicación. (ésta par áda no aparése en la aplikasyón) - Questa fermata non compare nell'applicazione.
+El autobús se ha desviado por una manifestación. (el autobús se a desbyádo por una manifestasyón) - L'autobus ha deviato il percorso a causa di una manifestazione.
+Mejor nos bajamos aquí y seguimos andando. (mekhór nos bakh ámos akí i seguímos andándo) - Meglio scendere qui e continuare a piedi.
+¿Has facturado ya la maleta grande? (as fakturádo ya la maléta gránde) - Hai già imbarcato la valigia grande?
+El vuelo sale de la terminal dos. (el buélo sále de la terminál dos) - Il volo parte dal terminal due.
+Nos han cambiado los asientos sin avisar. (nos an kambyádo los asyéntos sin abisár) - Ci hanno cambiato i posti senza avvisare.
+Tengo que pasar por inmigración antes de recoger la maleta. (téngo ke pasár por inmigrasyón ántes de rekohér la maléta) - Devo passare dall'immigrazione prima di ritirare la valigia.
+El barco se ha retrasado por el fuerte viento. (el bárko se a retrasádo por el fuérte byénto) - Il traghetto è stato ritardato a causa del forte vento.
+Nos han dicho que embarquemos por la cubierta de abajo. (nos an dícho ke embarkémos por la kubyérta de abáho) - Ci hanno detto di imbarcarci dal ponte inferiore.
+El puerto está lleno de barcos pesqueros esta mañana. (el puérto está yéno de bárkos peskeros ésta mañana) - Il porto è pieno di pescherecci stamattina.
+Perdona, ¿esta calle lleva a la plaza mayor? (perdóna, ésta káye yéba a la plása mayór) - Scusa, questa strada porta alla piazza principale?
+Creo que el mapa está al revés. (kréo ke el mapa está al rebés) - Credo che la mappa sia al contrario.
+No podemos seguir por aquí porque la carretera está cortada. (no podémos seguír por akí porke la karretéra está kortáda) - Non possiamo proseguire da qui perché la strada è chiusa.
+El coche se ha averiado justo al salir del garaje. (el kóche se a aberiádo khústo al salír del garáhe) - La macchina si è guastata proprio appena usciti dal garage.
+Voy a ponerme el chaleco reflectante por seguridad. (boi a ponérme el chaléko reflektánte por seguridád) - Indosso il giubbotto catarifrangente per sicurezza.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
