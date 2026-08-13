@@ -854,6 +854,57 @@ La climatisation ne fonctionne plus depuis notre arrivée. (la klimatizasiòn ne
 La salle de bains était inondée après la douche. (la sal de ban zetè inonde aprè la dusc) - Il bagno era allagato dopo la doccia.
 J'ai demandé à l'hôte s'il y avait un supermarché à proximité. (ʒé demandé a lot sil iavè an süpermarsce a proximite) - Ho chiesto all'host se c'era un supermercato nelle vicinanze.
 Le propriétaire nous a envoyé les instructions par e-mail. (le proprietèr nu a anvwaye le zanstrüksiòn par i-mèl) - Il proprietario ci ha mandato le istruzioni via e-mail.
+J'ai nettoyé les vitres parce qu'elles étaient pleines de traces. (ʒé netwaye le vitr parskel zetè plen de tras) - Ho pulito i vetri perché erano pieni di impronte.
+Tu peux plier les serviettes et les mettre dans l'armoire ? (tü pö pliyé le servièt é le metr dan larmwar) - Puoi piegare gli asciugamani e metterli nell'armadio?
+J'ai éteint le chauffage avant d'ouvrir les fenêtres. (ʒé etan le scofaʒ avan duvrir le fenetr) - Ho spento il riscaldamento prima di aprire le finestre.
+Il y a une fuite sous l'évier de la cuisine. (il ia ün füit su levié de la küizin) - C'è una perdita sotto il lavello della cucina.
+Le chien a encore caché son jouet sous le canapé. (le scièn a ankor kascé son ʒuè su le kanapé) - Il cane ha nascosto di nuovo il suo giocattolo sotto il divano.
+Notre chat n'aime pas quand on lui coupe les griffes. (notr scia nèm pa kan on lüi kup le grif) - Al nostro gatto non piace quando gli tagliamo le unghie.
+J'ai préparé des œufs brouillés avec du pain grillé. (ʒé preparé de zö brüiyé avek dü pan griyé) - Ho preparato delle uova strapazzate con pane tostato.
+Tu as déjà déjeuné ou tu attends les autres ? (tü a deʒa deʒöne u tü atand le zotr) - Hai già pranzato o aspetti gli altri?
+Ce soir, je vais faire une soupe avec les légumes qui restent. (se swar, ʒö vé fer ün sup avek le legüm ki rest) - Stasera preparo una zuppa con le verdure rimaste.
+Mets un peu moins de sel, c'est déjà assez salé. (mé an pö mwan de sel, sè deʒa ase sale) - Metti un po' meno sale, è già abbastanza salato.
+J'ai oublié mon agenda dans mon casier. (ʒé oublié mon aʒanda dan mon kazié) - Ho dimenticato la mia agenda nell'armadietto.
+Le professeur sera absent demain, le cours est donc annulé. (le profesör sera apsan döman, le kur é donk anüle) - Domani l'insegnante sarà assente, quindi la lezione è annullata.
+J'ai besoin d'un peu de temps pour finir ce devoir. (ʒé bezwan dan pö de tan pur finir se devwar) - Ho bisogno di un po' di tempo per finire questo compito.
+On a étudié la Révolution française en histoire cette année. (on a etüdié la revolüsiòn fransèz an istor set ané) - Quest'anno abbiamo studiato la Rivoluzione francese a storia.
+Elle a demandé au professeur si elle pouvait refaire l'exercice. (el a demandé o profesör si el puvè refèr legzersis) - Ha chiesto all'insegnante se poteva rifare l'esercizio.
+Tu peux me dire à quelle heure tu seras de retour ? (tü pö me dir a kel ör tü sera de retur) - Puoi dirmi a che ora tornerai?
+Je veux juste savoir où tu vas, c'est tout. (ʒö vö ʒüst savwar u tü va, sè tu) - Voglio solo sapere dove vai, tutto qui.
+Après les devoirs, tu peux regarder un épisode. (aprè le devwar, tü pö regardé an episode) - Dopo i compiti puoi guardare un episodio.
+On se lève tôt demain, alors essaie de ne pas te coucher trop tard. (on se lèv to döman, alor esè de ne pa te kucé tro tar) - Domani ci alziamo presto, quindi cerca di non andare a letto troppo tardi.
+J'ai les yeux qui piquent depuis ce matin. (ʒé le zö ki pik döpüi se maten) - Mi bruciano gli occhi da stamattina.
+Le médecin m'a conseillé de boire davantage. (le medsan ma konsèyé de bwar davantaʒ) - Il medico mi ha consigliato di bere di più.
+Je vais à la pharmacie chercher quelque chose pour la toux. (ʒö vé a la farmasi sercè kelkö scos pur la tu) - Vado in farmacia a cercare qualcosa per la tosse.
+Cette douleur n'est pas forte, mais elle revient régulièrement. (set dulör né pa fort, mè el revien regülyèrman) - Questo dolore non è forte, ma ritorna regolarmente.
+On m'a demandé d'attendre dans la salle d'attente. (on ma demandé datandr dan la sal datandr) - Mi hanno chiesto di aspettare in sala d'attesa.
+Le train régional met environ quarante minutes. (le tran reʒional mè anviron karant minüt) - Il treno regionale impiega circa quaranta minuti.
+J'ai regardé le tableau pour vérifier le numéro du train. (ʒé regardé le tablo pur verifié le nümero dü tran) - Ho guardato il tabellone per controllare il numero del treno.
+On a failli rater notre correspondance. (on a fayi raté notr korespondans) - Stavamo quasi per perdere la coincidenza.
+Le wagon est presque vide, on peut s'asseoir ici. (le vagon é presk vid, on pö sasewar isi) - La carrozza è quasi vuota, possiamo sederci qui.
+La sortie de la station se trouve de l'autre côté de la rue. (la sorti de la stasiòn se truv de lotr kote de la rü) - L'uscita della stazione si trova dall'altra parte della strada.
+J'ai utilisé ma carte bancaire pour acheter le ticket de métro. (ʒé ütilize ma kart bankèr pur asciété le tikè de métro) - Ho usato la carta di credito per comprare il biglietto della metropolitana.
+Il faut laisser descendre les gens avant de monter. (il fo lesé desandr le ʒan avan de monte) - Bisogna lasciare scendere le persone prima di salire.
+Le tram a été dévié à cause des travaux. (le tram a été devié a koz de travay) - Il tram è stato deviato a causa dei lavori.
+J'ai raté mon arrêt parce que je regardais mon téléphone. (ʒé raté mon are parskö ʒö regardè mon telefon) - Ho perso la mia fermata perché guardavo il telefono.
+On a enregistré les bagages directement au comptoir. (on a anreʒistré le bagàʒ direktman o komptwar) - Abbiamo registrato i bagagli direttamente al banco.
+Il faut enlever la ceinture pour passer le contrôle de sécurité. (il fo anlevé la santür pur pasé le kontrol de sekürité) - Bisogna togliere la cintura per passare i controlli di sicurezza.
+Notre avion est déjà affiché, mais la porte n'est pas encore ouverte. (notr aviyon é deʒa afisce, mè la port né pa ankor uvert) - Il nostro aereo è già indicato, ma il gate non è ancora aperto.
+J'ai pris un siège côté fenêtre pour profiter de la vue. (ʒé pri an sièʒ kote fenetr pur profite de la vü) - Ho preso un posto vicino al finestrino per godermi il panorama.
+Le bateau a été retardé à cause du vent. (le bato a été retarde a koz dü van) - Il traghetto è stato ritardato a causa del vento.
+On peut laisser la voiture sur le parking du port. (on pö lesé la vuatür sür le parking dü por) - Possiamo lasciare la macchina nel parcheggio del porto.
+Au bout de la rue, tu verras une grande fontaine. (o bu de la rü, tü verra ün gran fontèn) - In fondo alla strada vedrai una grande fontana.
+Je crois qu'il faut faire demi-tour ici. (ʒö krwa kil fo fer dömi-tur isi) - Credo che qui dobbiamo fare inversione.
+Le voyant de la batterie s'est allumé en pleine route. (le vwayan de la batri sé alumé an plen rut) - La spia della batteria si è accesa durante il viaggio.
+J'ai appelé la dépanneuse dès que la voiture s'est arrêtée. (ʒé apel la depanöz dè ke la vuatür sé areté) - Ho chiamato il carro attrezzi appena la macchina si è fermata.
+Heureusement, personne n'a été blessé dans l'accident. (örözman, person na été blesé dan laksidan) - Per fortuna, nessuno è rimasto ferito nell'incidente.
+Les feux de circulation ne fonctionnent plus à ce carrefour. (le fö de sirkülasiòn ne fonksiòn plü a se karkur) - I semafori non funzionano più a questo incrocio.
+Une canalisation a éclaté et toute la rue est sous l'eau. (ün kanalizasiòn a eklaté é tut la rü é su lo) - È esplosa una tubatura e tutta la strada è sott'acqua.
+La réception m'a donné une autre clé pour la chambre. (la resepsiòn ma doné ün otr clé pur la sciambre) - La reception mi ha dato un'altra chiave per la camera.
+La douche n'a presque pas d'eau chaude ce matin. (la dusc na presk pa do scod se maten) - Stamattina la doccia ha quasi finito l'acqua calda.
+On nous a proposé de nous offrir le petit déjeuner à cause du problème. (on nu a propozé de nu zofrir le pəti deʒöné a koz dü problem) - Ci hanno proposto di offrirci la colazione a causa del problema.
+J'ai demandé un oreiller supplémentaire pour le lit. (ʒé demandé an oreiyé süplemantèr pur le li) - Ho chiesto un cuscino in più per il letto.
+Notre hôte nous a envoyé une vidéo pour expliquer comment entrer dans l'immeuble. (notr ot nu a anvwaye ün video pur eksplike koman antré dan limöbl) - Il nostro host ci ha mandato un video per spiegare come entrare nell'edificio.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
