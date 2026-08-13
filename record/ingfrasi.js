@@ -1862,6 +1862,56 @@ The view from up here is incredible (dhë viu from ap hir is inkredibël) - La v
 It looks like rain later this afternoon (it luks laik rein leitër dhis afternuun) - Sembra che pioverà nel pomeriggio
 I need to renew my card, it's about to expire (ai niid tu rinìuu mai kard, its abaut tu ekspaiër) - Devo rinnovare la carta, sta per scadere
 How did the job interview go (hau did dhë giob intërviu gou) - Com'è andato il colloquio di lavoro
+The dog's been scratching at the door all morning (dhë dog beein skrèchin et dhë dor ol mornin) - Il cane sta grattando alla porta da tutta la mattina
+I hung the washing out before it started raining (ai hang dhë uoscin aut bifor it startid reinin) - Ho steso il bucato prima che iniziasse a piovere
+Could you switch the lights off when you leave (kud yu suich dhë laits of uen yu liiv) - Puoi spegnere le luci quando esci
+We ran out of coffee this morning (uì rèn aut ov kofi dhis mornin) - Stamattina abbiamo finito il caffè
+Who left the fridge door open (huu left dhë frigi dor oupën) - Chi ha lasciato aperta la porta del frigo
+Can you set the alarm for six tomorrow (kèn yu set dhë alarm for siks tumorou) - Puoi mettere la sveglia alle sei domani
+I've got a parents' evening at school next week (aiv gat a perënts iivnin et skuul nekst uiik) - Ho un colloquio con gli insegnanti la prossima settimana
+She's really struggling with her science homework (scìiz rìeli straglin uidh hër saiëns houmuork) - Sta facendo fatica con i compiti di scienze
+Can I borrow your calculator for a sec (kèn ai borou yor kèlkiuleitër for a sek) - Posso prendere in prestito la tua calcolatrice un attimo
+Who's picking the kids up from school today (huuz pikin dhë kids ap from skuul tudei) - Chi va a prendere i bambini a scuola oggi
+You can't go out until you've finished your homework (yu kènt gou aut antil yuv finiscid yor houmuork) - Non puoi uscire finché non hai finito i compiti
+I need to pick up a prescription later (ai niid tu pik ap a priskripscion leitër) - Devo ritirare una ricetta più tardi
+Does this medicine make you drowsy (daz dhis medisin meik yu drauzi) - Questa medicina fa venire sonnolenza
+Take two tablets after meals (teik tuu tèblëts aftër miilz) - Prendi due compresse dopo i pasti
+The next train to the city center leaves in five minutes (dhë nekst trein tu dhë siti sentër liivz in faiv minits) - Il prossimo treno per il centro parte tra cinque minuti
+I think we need to change trains at the next stop (ai think uì niid tu cheingi treinz et dhë nekst stop) - Credo che dobbiamo cambiare treno alla prossima fermata
+The underground was packed this morning (dhë andërgraund uoz pèkt dhis mornin) - La metropolitana era stipata stamattina
+Which exit do I need for the museum (uic eksit du ai niid for dhë miuuziëm) - Quale uscita devo prendere per il museo
+Does this bus pass by the hospital (daz dhis bas pès bai dhë hospitël) - Questo autobus passa vicino all'ospedale
+I need a ticket that covers the whole day (ai niid a tikët dhèt kavërz dhë houl dei) - Mi serve un biglietto valido per tutta la giornata
+Our flight's been moved to a different gate (auer flaits bin muuvd tu a difërënt gheit) - Il nostro volo è stato spostato a un altro gate
+Is there a lounge near this terminal (is dher a laungi nir dhis tërminël) - C'è una lounge vicino a questo terminal
+How long is the layover in Paris (hau long is dhë leiouvër in Pèris) - Quanto dura lo scalo a Parigi
+The ferry crossing takes about an hour (dhë fèri krosin teiks abaut en auer) - La traversata in traghetto dura circa un'ora
+We need to be at the port by seven (uì niid tu bi et dhë port bai sevën) - Dobbiamo essere al porto entro le sette
+Excuse me, is this the right way to the station (ekskiuz mi, is dhis dhë rait uei tu dhë steiscion) - Scusi, è questa la strada giusta per la stazione
+You've missed the turning, go back a bit (yuuv mist dhë tërnin, gou bèk a bit) - Hai perso la svolta, torna un po' indietro
+The satnav's taking us the long way round (dhë sètnèv is teikin as dhë long uei raund) - Il navigatore ci sta facendo fare il giro lungo
+The engine's making a weird rattling noise (dhë engin iz meikin a uird rètlin nois) - Il motore fa uno strano rumore metallico
+We've broken down on the motorway (uìv broukën daun on dhë moutëruei) - Siamo rimasti in panne in autostrada
+There's been an accident up ahead (dhers bin en èksidënt ap ëhed) - C'è stato un incidente più avanti
+Traffic's backed up for miles (trèfik iz bèkt ap for mailz) - Il traffico è bloccato per chilometri
+The road's closed because of the flooding (dhë roud iz klouzd bikoz ov dhë fladin) - La strada è chiusa a causa dell'allagamento
+The whole neighbourhood lost power last night (dhë houl neibërhud lost pauer lest nait) - Tutto il quartiere è rimasto senza corrente ieri sera
+Could we get a late check-out tomorrow (kud uì ghet a leit chekaut tumorou) - Potremmo avere un check-out posticipato domani
+Is there a minibar in the room (is dher a minibaar in dhë ruum) - C'è un minibar in camera
+Could you send someone to fix the TV (kud yu send samuan tu fiks dhë tii vii) - Potrebbe mandare qualcuno a riparare la TV
+The room hasn't been cleaned today (dhë ruum hèzënt bin kliind tudei) - La stanza non è stata pulita oggi
+There's no hot water in the bathroom (dhers nou hot uotër in dhë bethruum) - Non c'è acqua calda in bagno
+The lock on the door seems broken (dhë lok on dhë dor siimz broukën) - La serratura della porta sembra rotta
+The host answered all our questions really quickly (dhë houst ènsërd ol auer kuescionz rìeli kuikli) - L'host ha risposto a tutte le nostre domande molto velocemente
+Is parking included with the apartment (is parkin inkluudid uidh dhë apartmënt) - Il parcheggio è incluso con l'appartamento
+Could we get some more bread, please (kud uì ghet sam mor bred, pliiz) - Potremmo avere ancora del pane, per favore
+Is the fish fresh today (is dhë fisc fresc tudei) - Il pesce è fresco oggi
+Can we split the bill between us (kèn uì split dhë bil bituìn as) - Possiamo dividere il conto tra di noi
+Let's meet up for a drink after work (lets miit ap for a drink aftër uork) - Vediamoci per bere qualcosa dopo il lavoro
+That place gets really busy on weekends (dhèt pleis ghets rìeli bizi on uiikendz) - Quel posto diventa molto affollato nei weekend
+I forgot my wallet, can you cover me (ai forgat mai uolët, kèn yu kavër mi) - Ho dimenticato il portafoglio, puoi anticiparmi tu
+Do you take cards or just cash (du yu teik kardz or giast kèsc) - Accettate carte o solo contanti
+Is there a discount if I buy two (is dher a diskaunt if ai bai tuu) - C'è uno sconto se ne compro due
 We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
 `;
 
