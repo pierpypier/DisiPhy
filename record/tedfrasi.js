@@ -1520,6 +1520,59 @@ Nach dem starken Regen stand die Straße unter Wasser. (nach dem starken regen s
 In unserem Hotel war nachts ständig Lärm vom Flur zu hören. (in unzerem hotel var nachts ständig lerm fom flur tsu hören) - Nel nostro hotel di notte si sentivano continuamente rumori dal corridoio.
 Könnten Sie bitte jemanden schicken, um die Klimaanlage zu reparieren? (könnten zi bitte jemanden schicken, um di klimaanlage tsu reparieren) - Potrebbe mandare qualcuno a riparare l'aria condizionata, per favore?
 Unser Gastgeber hat uns erlaubt, die Fahrräder im Innenhof abzustellen. (unzer gastgeber hat uns erlaubt, di faräder im innenhof ap-tsustellen) - Il nostro host ci ha permesso di lasciare le biciclette nel cortile interno.
+Ich hab heute die Pflanzen auf dem Balkon gegossen. (ich hab hoite di pflantsen auf dem balkon gegossen) - Oggi ho annaffiato le piante sul balcone.
+Der Staubsauger steht noch mitten im Flur. (der staubsauger steht noch mitten im flur) - L'aspirapolvere è ancora in mezzo al corridoio.
+Ich hab die Haustür nur angelehnt, weil ich gleich wiederkomme. (ich hab di haustür nur angeleent, vail ich glaic viderkomme) - Ho lasciato socchiusa la porta di casa perché torno subito.
+Wo hab ich bloß die Ersatzschlüssel hingelegt? (vo hab ich bloß di ersatzschlüssl hingelegt) - Dove diavolo ho messo le chiavi di riserva?
+Der Hund schläft normalerweise in seinem Körbchen. (der hund schläft normalerweise in zainem körbcen) - Di solito il cane dorme nella sua cuccia.
+Unsere Katze sitzt schon seit einer Stunde am Fenster. (unzere katze sitzt scion sait ainer stunde am fenster) - Il nostro gatto è seduto alla finestra già da un'ora.
+Die Waschmaschine hat beim Schleudern ziemlich laut gerüttelt. (di vasmascine hat baim scleidern ziemlich laut gerüttelt) - La lavatrice ha vibrato parecchio durante la centrifuga.
+Ich hab die Spülmaschine eingeräumt, sie kann jetzt laufen. (ich hab di spülmascine eingeräumt, zi kan ietzt laufen) - Ho caricato la lavastoviglie, ora può partire.
+Mach bitte im Schlafzimmer das Fenster zu, es wird kalt. (mach bitte im sclafzimmer das fenster tsu, es virt kalt) - Chiudi la finestra in camera da letto, per favore, sta diventando freddo.
+Ich hätte morgens ohne Kaffee echt schlechte Laune. (ich hete morgens one kaffe echt sclecte laune) - La mattina senza caffè avrei davvero il cattivo umore.
+Heute früh gab's nur Müsli und Obst. (hoite frü gab's nur müsli und obst) - Stamattina c'erano solo cereali e frutta.
+Ich hab das Brot gestern Abend noch eingefroren. (ich hab das brot gestern abent noch eingefroren) - Ieri sera ho messo anche il pane nel congelatore.
+Zum Mittagessen nehmen wir uns etwas mit ins Büro. (tsum mittagessen nemen vir uns etvas mit ins büro) - A pranzo ci portiamo qualcosa in ufficio.
+Kannst du nach dem Essen die Teller in die Spüle stellen? (kanst du nach dem essen di teller in di spüle stellen) - Puoi mettere i piatti nel lavello dopo cena?
+Wir haben beim Essen lange über das Wochenende gesprochen. (vir habn baim essen lange über das vocenende gesprochen) - A tavola abbiamo parlato a lungo del fine settimana.
+Die Hausaufgaben sind diesmal wirklich nicht schwer. (di hausaufgaben zint diesmal wirklich nicht scver) - Questa volta i compiti non sono davvero difficili.
+Morgen muss ich mein Schulprojekt abgeben. (morgen muss ich main sculprojekt apgeben) - Domani devo consegnare il mio progetto scolastico.
+Der Unterricht fällt heute wegen einer Fortbildung aus. (der unterricht felt hoite wegen ainer fortbildung aus) - Oggi la lezione è cancellata a causa di un corso di aggiornamento.
+Sie hat in Physik eine interessante Frage gestellt. (zi hat in fizik aine interesante frage gestellt) - Ha fatto una domanda interessante durante la lezione di fisica.
+Ich kann dir bei den Hausaufgaben helfen, aber erst nach dem Essen. (ich kan dir bai den hausaufgaben helfen, aber erst nach dem essen) - Posso aiutarti con i compiti, ma solo dopo cena.
+Du brauchst nicht zu schreien, ich höre dich auch so. (du braucst nicht tsu scraien, ich höre dich auc zo) - Non c'è bisogno che urli, ti sento lo stesso.
+Du hast deine Bildschirmzeit für heute schon aufgebraucht. (du hast daine bildschirmtsait für hoite scion aufgebraucht) - Hai già esaurito il tempo di utilizzo dello schermo per oggi.
+Wenn du alles erledigt hast, kannst du rausgehen. (ven du alles erledigt hast, kanst du rausgeen) - Quando hai finito tutto, puoi uscire.
+Ich hab in der Apotheke nach einem Schmerzmittel gefragt. (ich hab in der apoteke nach ainem scmerts-mittel gefragt) - In farmacia ho chiesto un antidolorifico.
+Gibt es dieses Medikament auch als Tropfen? (gibt es dises medikament auc als tropfen) - Questo farmaco esiste anche in gocce?
+Die Kopfschmerzen sind nach ein paar Stunden verschwunden. (di kopfscmerzen zint nach ain paar stunden ferscvunden) - Il mal di testa è sparito dopo qualche ora.
+Ich soll die Tabletten nach dem Essen einnehmen. (ich zol di tabletten nach dem essen ain nemen) - Devo prendere le compresse dopo i pasti.
+Im Wartezimmer saßen schon mehrere Leute. (im varte-tsimmer sassen scion merere loite) - In sala d'attesa c'erano già diverse persone.
+Der Arzt hat mir geraten, mich heute zu schonen. (der artzt hat mir geraten, mich hoite tsu sc-onen) - Il medico mi ha consigliato di stare a riposo oggi.
+Unser Zug hat wegen eines technischen Problems Verspätung. (unzer tsug hat wegen aines tecniscen problems ferspetung) - Il nostro treno ha un ritardo a causa di un problema tecnico.
+Ich hab meinen Sitzplatz direkt am Fenster reserviert. (ich hab mainen zitzplatz direkt am fenster reserviert) - Ho prenotato il mio posto proprio vicino al finestrino.
+Auf diesem Bahnhof gibt es keine Rolltreppen. (auf disem baanhof gibt es kaine rolltreppen) - In questa stazione non ci sono scale mobili.
+Wir müssen noch herausfinden, von welchem Bahnsteig der Zug fährt. (vir müssen noch herausfinden, fon velcem baanstaig der tsug fert) - Dobbiamo ancora scoprire da quale binario parte il treno.
+Die U-Bahn war wegen einer Störung mehrere Minuten außer Betrieb. (di u-baan var wegen ainer störung merere minuten ausser betrib) - La metropolitana è rimasta fuori servizio per diversi minuti a causa di un guasto.
+Ich hab die falsche Linie genommen und musste zurückfahren. (ich hab di falsce linie genommen und musste tsurückfaren) - Ho preso la linea sbagliata e ho dovuto tornare indietro.
+Der Automat akzeptiert meine Fahrkarte nicht. (der automat akzeptiert maine fartkarte nicht) - La macchinetta non accetta il mio biglietto.
+Der Bus kommt laut Anzeige in drei Minuten. (der bus kommt laut antsaige in drai minuten) - Secondo il display, l'autobus arriva tra tre minuti.
+Ich hab im Bus meinen Regenschirm liegen lassen. (ich hab im bus mainen regenscirm liegen lassen) - Ho lasciato l'ombrello sull'autobus.
+Wir müssen vor dem Abflug noch durch die Passkontrolle. (vir müssen for dem apflug noch durc di passkontrolle) - Prima del decollo dobbiamo ancora passare il controllo passaporti.
+Mein Koffer ist leider nicht auf dem Gepäckband angekommen. (main koffer ist leider nicht auf dem gepäckband angekommen) - Purtroppo la mia valigia non è arrivata sul nastro bagagli.
+Ich hab am Schalter nach einem anderen Flug gefragt. (ich hab am scalter nach ainem anderen flug gefragt) - Al banco ho chiesto informazioni su un altro volo.
+Die Fähre war wegen des Windes fast eine Stunde verspätet. (di fere var wegen des vindes fast aine stunde ferspetet) - Il traghetto ha avuto quasi un'ora di ritardo a causa del vento.
+Wir mussten das Auto nach der Ankunft von der Fähre holen. (vir mussten das auto nach der ankunft fon der fere holen) - Dopo l'arrivo abbiamo dovuto recuperare l'auto dal traghetto.
+Wenn du die Brücke überquerst, bist du schon fast im Zentrum. (ven du di brücke überkerst, bist du scion fast im tsentrum) - Quando attraversi il ponte, sei già quasi in centro.
+Die Touristeninformation ist gleich hinter dem großen Platz. (di touristeninformation ist glaic hinter dem grossen plats) - L'ufficio turistico è proprio dietro la grande piazza.
+Beim Einparken hat plötzlich die Warnleuchte aufgeleuchtet. (baim ainparken hat plötzlich di varnloichte aufgeleuchtet) - Durante il parcheggio si è accesa improvvisamente la spia.
+Ich glaube, mit der Kupplung stimmt etwas nicht. (ich glaube, mit der kupplung stimmt etvas nicht) - Credo che ci sia qualcosa che non va con la frizione.
+Die Werkstatt hat den Fehler schnell gefunden. (di verkstatt hat den fehler scnell gefunden) - L'officina ha trovato rapidamente il guasto.
+Wegen des Staus kommen wir mindestens zwanzig Minuten später. (wegen des staus kommen vir mindestens tsvantsig minuten speter) - A causa del traffico arriveremo almeno venti minuti più tardi.
+Nach dem Unwetter waren mehrere Straßen nicht befahrbar. (nach dem unvetter varen merere strassen nicht befarbar) - Dopo il maltempo diverse strade erano impraticabili.
+Im Hotel war das Wasser in der Dusche morgens nur lauwarm. (im hotel var das vasser in der dusce morgens nur lauvam) - In hotel al mattino l'acqua della doccia era appena tiepida.
+Wir haben an der Rezeption nach einem zusätzlichen Kissen gefragt. (vir habn an der retzeption nach ainem zusätzlichen kissen gefragt) - Alla reception abbiamo chiesto un cuscino aggiuntivo.
+Der Gastgeber hat uns den Code für die Haustür geschickt. (der gastgeber hat uns den code für di haustür geschickt) - L'host ci ha mandato il codice per la porta d'ingresso.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
