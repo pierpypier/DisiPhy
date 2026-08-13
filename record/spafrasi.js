@@ -261,6 +261,50 @@ Hemos tenido un problema con la reserva y no aparece en el sistema. (émos tení
 El dueño nos ha recomendado un restaurante que está muy cerca. (el duéño nos a rekomendádo un restoránte ke está mui sérka) - Il proprietario ci ha consigliato un ristorante che è molto vicino.
 ¿Podría traerme el menú, por favor? (podría traérme el menú, por fabór) - Potrebbe portarmi il menù, per favore?
 Para beber, tomaremos dos aguas y una cerveza sin alcohol. (para bebér, tomarémos dos águas i una serbésa sin alkól) - Da bere prenderemo due acque e una birra analcolica.
+Anoche dejé secando los platos y esta mañana ya estaban todos guardados. (anóche dekhé sekándo los plátos i ésta mañana ya estaban todos guardádos) - Ieri sera ho lasciato asciugare i piatti e stamattina erano già tutti riposti.
+¿Puedes pasar la aspiradora antes de que lleguen los invitados? (puédes pasár la aspiradóra ántes de ke yéguen los imbita dos) - Puoi passare l'aspirapolvere prima che arrivino gli ospiti?
+He encontrado las llaves debajo del sofá. (e enkontrádo las yábes debáho del sofà) - Ho trovato le chiavi sotto il divano.
+Voy a sacar la ropa de la secadora en cuanto termine. (boi a sakár la rópa de la sekadóra en kuánto termíne) - Tiro fuori i panni dall'asciugatrice appena finisce.
+El gato lleva un rato maullando delante de la puerta. (el gáto yéba un ráto maullándo delánte de la puérta) - Il gatto miagola da un po' davanti alla porta.
+Hoy toca limpiar los cristales de las ventanas. (oi tóka limpiár los kristáles de las bentánas) - Oggi tocca pulire i vetri delle finestre.
+¿Quién quiere huevos para desayunar? (kyén kyére uébos para desayunár) - Chi vuole le uova per colazione?
+He dejado la fruta cortada en la nevera. (e dekhádo la fruta kortáda en la nebéra) - Ho lasciato la frutta tagliata in frigorifero.
+Si no tienes hambre ahora, puedes comer más tarde. (si no tiénes ámbre aóra, puédes komér más tárde) - Se non hai fame adesso, puoi mangiare più tardi.
+Esta noche hacemos algo sencillo para cenar. (ésta nóche asémos álgo sensíyo para senár) - Stasera prepariamo qualcosa di semplice per cena.
+Mi hija está repasando para el examen de mañana. (mi íha está repasándo para el eksámen de mañana) - Mia figlia sta ripassando per l'esame di domani.
+En clase han empezado un tema nuevo de literatura. (en kláse an empesádo un téma nuébo de literatúra) - In classe hanno iniziato un nuovo argomento di letteratura.
+¿Te has acordado de llevar el libro que necesitas? (te as akordádo de yebár el líbro ke nesesítas) - Ti sei ricordato di portare il libro che ti serve?
+Puedes usar el ordenador después de terminar los deberes. (puédes usár el ordenadór despúes de terminár los deberes) - Puoi usare il computer dopo aver finito i compiti.
+Mañana tienes que levantarte a tiempo para coger el autobús. (mañána tiénes ke lebantárte a tyémpo para kohér el autobús) - Domani devi alzarti in tempo per prendere l'autobus.
+No te quedes con el móvil hasta la madrugada. (no te kédes kon el móbil ásta la madrugáda) - Non stare al cellulare fino a notte fonda.
+Llevo dos días con dolor de cabeza y no se me pasa. (yébo dos días kon dolór de kabésa i no se me pássa) - Ho mal di testa da due giorni e non mi passa.
+¿Necesita algo más para la tos? (nesesíta álgo más para la tos) - Ha bisogno di qualcos'altro per la tosse?
+Me han dado hora para el jueves por la tarde. (me an dádo óra para el khu ébes por la tárde) - Mi hanno dato un appuntamento per giovedì pomeriggio.
+Si te mareas, avisa a una enfermera. (si te maréas, abísa a una enferméra) - Se ti senti svenire, avvisa un'infermiera.
+El tren regional tarda un poco más, pero cuesta menos. (el tren rekhionál tárda un póko más, péгo kuésta ménos) - Il treno regionale ci mette un po' di più, ma costa meno.
+¿En qué dirección está la salida de la estación? (en ke direksyón está la salída de la estasyón) - In che direzione si trova l'uscita della stazione?
+Han puesto más máquinas para comprar billetes. (an puésto más mákinas para komprár biyétes) - Hanno installato più macchinette per comprare i biglietti.
+No subas al tren hasta que se abran las puertas. (no súbas al tren ásta ke se ábran las puértas) - Non salire sul treno finché non si aprono le porte.
+La línea azul está cerrada por obras. (la línea asúl está serráda por óbras) - La linea blu è chiusa per lavori.
+Tenemos que salir en la próxima estación y volver atrás. (tenémos ke salír en la próksima estasyón i bolbér atrás) - Dobbiamo scendere alla prossima stazione e tornare indietro.
+El autobús ha llegado antes de lo previsto. (el autobús a yegádo ántes de lo prebísto) - L'autobus è arrivato prima del previsto.
+Si pierdes este autobús, el siguiente pasa en diez minutos. (si pyérdes éste autobús, el siguiénte pássa en dyes minútos) - Se perdi questo autobus, il prossimo passa tra dieci minuti.
+El tráfico está parado desde la rotonda. (el tráfiko está parádo désde la rotónda) - Il traffico è fermo dalla rotonda.
+Nos queda poco combustible, tenemos que parar en la próxima gasolinera. (nos kéda póko kombustíble, tenémos ke parár en la próksima gasolinéra) - Abbiamo poco carburante, dobbiamo fermarci al prossimo distributore.
+El coche hace un ruido metálico cuando acelero. (el kóche áse un ruído metáliko kuándo aseléro) - La macchina fa un rumore metallico quando accelero.
+Por suerte, conseguimos salir del coche sin ayuda. (por suérte, konsigímos salír del kóche sin ayúda) - Per fortuna siamo riusciti a uscire dalla macchina senza aiuto.
+Han cerrado varios accesos por las inundaciones. (an serrádo bários aksésos por las inundasyónes) - Hanno chiuso diversi accessi a causa degli allagamenti.
+El ascensor se ha quedado bloqueado entre dos plantas. (el asensór se a kedádo blokéado éntre dos plántas) - L'ascensore è rimasto bloccato tra due piani.
+El técnico ha encontrado la fuga debajo del fregadero. (el tékniko a enkontrádo la fúga debáho del fregadéro) - Il tecnico ha trovato la perdita sotto il lavello.
+No hay calefacción porque la caldera está averiada. (no ai kalefaksión porke la kaldéra está aberiáda) - Non c'è riscaldamento perché la caldaia è guasta.
+La habitación huele a tabaco y habíamos pedido una para no fumadores. (la abitasión uéle a tabáko i abíamos pedído una para no fumadóres) - La camera puzza di fumo e ne avevamo chiesta una per non fumatori.
+El agua de la ducha sale fría de repente. (el água de la dúcha sále fría de repénte) - L'acqua della doccia diventa improvvisamente fredda.
+¿Sería posible hacer el check-out un poco más tarde? (sería posíble asér el chekaut un póko más tárde) - Sarebbe possibile fare il check-out un po' più tardi?
+Hemos dejado el apartamento tal y como lo encontramos. (émos dekhádo el apartaménto tal i komo lo enkontrámos) - Abbiamo lasciato l'appartamento esattamente come l'abbiamo trovato.
+El anfitrión responde muy rápido cuando le escribimos. (el anfitriyón respónde mui rápido kuándo le eskribímos) - L'host risponde molto rapidamente quando gli scriviamo.
+¿Nos puede poner una mesa cerca de la ventana? (nos puéde ponér una mésa sérka de la bentána) - Può metterci un tavolo vicino alla finestra?
+Para mí, el plato del día, pero sin cebolla. (para mí, el plato del día, péгo sin seboya) - Per me il piatto del giorno, ma senza cipolla.
+La comida estaba buenísima, pero tardaron bastante en servirla. (la komída estaba buenísima, péгo tardáron bastante en serbíгla) - Il cibo era buonissimo, ma ci hanno messo parecchio a servirlo.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
