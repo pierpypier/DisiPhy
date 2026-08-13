@@ -1137,6 +1137,56 @@ El motor pierde potencia cuando subimos una cuesta. (el motór pyérde poténsia
 Han puesto una ambulancia en la entrada por si hace falta. (an puésto una ambulánsia en la entráda por si áse fálta) - Hanno messo un'ambulanza all'ingresso, nel caso servisse.
 La calle está llena de agua y no se puede pasar. (la káye está yéna de água i no se puéde pasár) - La strada è piena d'acqua e non si può passare.
 Se ha ido la luz en todo el edificio. (se a ído la lus en todo el edifísio) - È saltata la corrente in tutto il palazzo.
+¿Puedes sacar la basura cuando bajes? (puédes sakár la basúra kuándo báhes) - Puoi portare fuori la spazzatura quando scendi?
+He puesto las toallas limpias en el armario del pasillo. (e puésto las toáyas límpias en el armário del pasíyo) - Ho messo gli asciugamani puliti nell'armadio del corridoio.
+No abras todavía el horno, que se escapa todo el calor. (no ábras todabía el órno, ke se eskápa todo el kalór) - Non aprire ancora il forno, altrimenti esce tutto il calore.
+Voy a fregar el suelo porque se ha derramado agua. (boi a fregár el suélo porke se a derramádo água) - Lavo il pavimento perché si è rovesciata dell'acqua.
+¿Has visto dónde dejé las gafas? (as bísto dónde dekhé las gáfas) - Hai visto dove ho lasciato gli occhiali?
+El gato se ha metido dentro del armario. (el gáto se a metído déntro del armário) - Il gatto si è infilato dentro l'armadio.
+Hay que cambiar el filtro del aire acondicionado. (ai ke kambyár el fíltro del áire akondisionádo) - Bisogna cambiare il filtro dell'aria condizionata.
+He puesto el lavavajillas en marcha antes de salir. (e puésto el lababayíyas en márcha ántes de salír) - Ho avviato la lavastoviglie prima di uscire.
+¿Quién ha dejado las llaves sobre la mesa? (kyén a dekhádo las yábes sóbre la mésa) - Chi ha lasciato le chiavi sul tavolo?
+Esta mañana solo me ha dado tiempo a tomar un café. (ésta mañana sólo me a dádo tyémpo a tomár un kafé) - Stamattina ho avuto tempo solo per bere un caffè.
+Voy a preparar algo rápido porque tenemos hambre. (boi a preparár álgo ráp ido porke tenémos ámbre) - Preparo qualcosa di veloce perché abbiamo fame.
+¿Queda queso en la nevera o tengo que comprarlo? (kéda késo en la nebéra o téngo ke komprárlo) - È rimasto del formaggio in frigo o devo comprarlo?
+No empieces a comer hasta que lleguen todos. (no empyéses a komér ásta ke yéguen todos) - Non iniziare a mangiare finché non arrivano tutti.
+Después de cenar podemos ver una película juntos. (despúes de senár podémos ber una película khúntos) - Dopo cena possiamo vedere un film insieme.
+Hoy tiene un examen de matemáticas y está un poco nervioso. (oi tiéne un eksámen de matemátikas i está un póko nerbyóso) - Oggi ha una verifica di matematica ed è un po' nervoso.
+La tutora ha enviado un mensaje a todas las familias. (la tutóra a enbyádo un mensáhe a todas las famil ias) - La coordinatrice ha mandato un messaggio a tutte le famiglie.
+Si necesitas ayuda con los deberes, me avisas. (si nesesítas ayúda kon los deberes, me abísas) - Se hai bisogno di aiuto con i compiti, fammelo sapere.
+No puedes usar el móvil mientras haces los deberes. (no puédes usár el móbil miéntras áses los deberes) - Non puoi usare il cellulare mentre fai i compiti.
+Cuando termines, recoge tus cosas y baja a cenar. (kuándo termínes, rekóhe tus kósas i báha a senár) - Quando hai finito, sistema le tue cose e scendi a cena.
+Llevo dos días con dolor de cabeza. (yébo dos días kon dolór de kabésa) - Ho mal di testa da due giorni.
+¿Tiene algo para aliviar la congestión nasal? (tiéne álgo para alibiár la kongestión nasal) - Ha qualcosa per alleviare la congestione nasale?
+Prefiero tomar este medicamento después de comer. (prefyéro tomár éste medikaménto despúes de komér) - Preferisco prendere questo farmaco dopo aver mangiato.
+Me mareo cuando me levanto demasiado rápido. (me maréo kuándo me lebánto demasiádo ráp ido) - Mi gira la testa quando mi alzo troppo velocemente.
+La doctora me ha dicho que beba más agua. (la doktóra me a dícho ke béba más água) - La dottoressa mi ha detto di bere più acqua.
+¿En qué vía sale el tren de las seis? (en ke bía sále el tren de las séis) - Da quale binario parte il treno delle sei?
+Hay que validar el billete antes de subir al tren. (ai ke balidár el biyéte ántes de subír al tren) - Bisogna convalidare il biglietto prima di salire sul treno.
+Nos queda poco tiempo, vamos a darnos prisa. (nos kéda póko tyémpo, bámos a dárnos prisa) - Ci rimane poco tempo, sbrighiamoci.
+El tren se ha detenido por un problema en la línea. (el tren se a detenído por un probléma en la línea) - Il treno si è fermato per un problema sulla linea.
+Creo que me he equivocado de dirección en el metro. (kréo ke me e ekibokádo de direksyón en el métro) - Credo di aver preso la direzione sbagliata in metropolitana.
+Para llegar allí tienes que hacer dos transbordos. (para yegár ayí tiénes ke asér dos transbórdos) - Per arrivare lì devi fare due cambi.
+Esta estación tiene una salida directamente a la calle principal. (ésta estasyón tiéne una salída direktaménte a la káye prinsipál) - Questa stazione ha un'uscita direttamente sulla strada principale.
+El autobús acaba de pasar y tendremos que esperar al siguiente. (el autobús akaba de pasár i tendrémos ke esperár al siguiénte) - L'autobus è appena passato e dovremo aspettare il prossimo.
+Siéntate aquí, todavía quedan un par de paradas. (syéntate akí, todabía ké dan un par de parádas) - Siediti qui, mancano ancora un paio di fermate.
+El conductor ha frenado de golpe y casi me caigo. (el konduktór a frenádo de gólpe i káси me káigo) - L'autista ha frenato bruscamente e stavo quasi cadendo.
+¿Dónde está el mostrador de facturación? (dónde está el mostrador de fakturasyón) - Dov'è il banco del check-in?
+Tenemos que pasar el control de pasaportes antes de ir a la puerta. (tenémos ke pasár el kontról de pasapórtes ántes de ír a la puérta) - Dobbiamo passare il controllo passaporti prima di andare al gate.
+Me han pedido que saque el ordenador de la mochila. (me an pedído ke sáke el ordenador de la mokíla) - Mi hanno chiesto di tirare fuori il computer dallo zaino.
+El vuelo está completo y no quedan asientos libres. (el buélo está kompleto i no ké dan asyéntos líbres) - Il volo è pieno e non sono rimasti posti liberi.
+¿Hay que llevar el chaleco salvavidas durante el trayecto? (ai ke yebár el chaléko salbabídas duránte el trayékto) - Bisogna indossare il giubbotto salvagente durante la traversata?
+El mar está bastante tranquilo esta mañana. (el mar está bastante trankílo ésta mañana) - Il mare è abbastanza calmo stamattina.
+El puerto está a unos diez minutos andando desde aquí. (el puérto está a unos dyes minútos andándo désde akí) - Il porto è a circa dieci minuti a piedi da qui.
+Sigue recto hasta llegar a la rotonda y allí gira a la derecha. (sígue rékto ásta yegár a la rotónda i ayí khíra a la derécha) - Vai dritto fino alla rotonda e lì gira a destra.
+No cojas esa calle, está cortada por obras. (no kóhas ésa káye, está kortáda por óbras) - Non prendere quella strada, è chiusa per lavori.
+He aparcado dos calles más abajo. (e apar k ádo dos káyes más abáho) - Ho parcheggiato due strade più avanti.
+La batería está completamente descargada. (la bateríа está kompletaménte deskargáda) - La batteria è completamente scarica.
+El coche hace un ruido raro al girar. (el kóche áse un ruído ráro al khirár) - La macchina fa uno strano rumore quando giro.
+Por suerte, el taller está muy cerca de aquí. (por suérte, el tayér está mui sérka de akí) - Per fortuna l'officina è molto vicina da qui.
+El ayuntamiento ha puesto vallas alrededor de la zona. (el ayuntamyénto a puésto báyas alrededór de la sónа) - Il comune ha messo delle transenne intorno alla zona.
+Lleva toda la mañana sin funcionar el semáforo de esta esquina. (yéba toda la mañana sin funksionár el semáforo de ésta eskína) - Il semaforo di questo angolo non funziona da tutta la mattina.
+Nos han avisado de que habrá cortes de agua durante unas horas. (nos an abisádo de ke abrá kórtes de água duránte unas óras) - Ci hanno avvisato che ci saranno interruzioni dell'acqua per alcune ore.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
