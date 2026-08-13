@@ -1032,6 +1032,57 @@ El aire acondicionado hace un ruido insoportable. (el áire akondisionádo áse 
 ¿Podrían dejarme otra almohada, por favor? (podrían dekhárme ótra almoháda, por fabór) - Potreste lasciarmi un altro cuscino, per favore?
 La casa de vacaciones está más lejos de la playa de lo que parecía. (la káса de bakasyónes está más léhos de la pláya de lo ke paresía) - La casa vacanze è più lontana dalla spiaggia di quanto sembrasse.
 El dueño nos ha dicho que podemos hacer el check-out más tarde. (el duéño nos a dícho ke podémos asér el chek-áut más tárde) - Il proprietario ci ha detto che possiamo fare il check-out più tardi.
+He dejado el paraguas junto a la puerta para no olvidarlo mañana. (e dekhádo el paragüas khúnto a la puérta para no olbidárlo mañana) - Ho lasciato l'ombrello vicino alla porta per non dimenticarlo domani.
+La ropa de cama ya está limpia y doblada. (la rópa de káma ya está límpia i dobláda) - La biancheria da letto è già pulita e piegata.
+Voy a ordenar el armario antes de comprar más ropa. (boi a ordenár el armário ántes de komprár más rópa) - Metto in ordine l'armadio prima di comprare altri vestiti.
+Se ha quedado encendida la luz del cuarto de baño. (se a kedádo ensendída la lus del kuárto de baño) - È rimasta accesa la luce del bagno.
+El cachorro ha mordido una de mis zapatillas. (el kachórro a mordído una de mis sapatíyas) - Il cucciolo ha morso una delle mie pantofole.
+Tengo que comprar comida para el gato esta tarde. (téngo ke komprár komída para el gáto ésta tárde) - Devo comprare il cibo per il gatto questo pomeriggio.
+He puesto el pan en el congelador porque no lo vamos a gastar. (e puésto el pan en el kongeladór porke no lo bámos a gastár) - Ho messo il pane nel congelatore perché non lo consumeremo.
+¿Te importa bajar un poco el volumen de la televisión? (te impórta bakhár un póko el bolúmen de la televisyón) - Ti dispiace abbassare un po' il volume della televisione?
+Voy a hacer una ensalada mientras se termina de hacer la carne. (boi a asér una ensaláda miéntras se termína de asér la kárne) - Preparo un'insalata mentre finisce di cuocere la carne.
+Hoy no tenemos prisa, podemos comer con calma. (oi no tenémos prisa, podémos komér kon kálma) - Oggi non abbiamo fretta, possiamo mangiare con calma.
+He guardado un poco de tarta para los niños. (e guardádo un póko de tárta para los niños) - Ho messo da parte un po' di torta per i bambini.
+¿Quieres café o prefieres tomar té? (kyéres kafé o prefyéres tomár té) - Vuoi il caffè o preferisci bere il tè?
+El profesor ha suspendido la clase de mañana. (el profesór a suspendído la kláse de mañana) - L'insegnante ha annullato la lezione di domani.
+Tenemos que comprar material para el nuevo curso. (tenémos ke komprár materyál para el nuébo kú rso) - Dobbiamo comprare il materiale per il nuovo anno scolastico.
+A mi hijo se le dan muy bien los idiomas. (a mi ího se le dan mui byén los idi ómas) - Mio figlio è molto portato per le lingue.
+La reunión con los padres será el próximo jueves. (la reunyón kon los pá dres será el próksimo huébes) - Il colloquio con i genitori sarà giovedì prossimo.
+¿Has preparado ya todo lo que necesitas para mañana? (as preparádo ya todo lo ke nesesítas para mañana) - Hai già preparato tutto quello che ti serve per domani?
+No quiero que salgas sin haber desayunado. (no kyéro ke sálgas sin abér desayunádo) - Non voglio che tu esca senza aver fatto colazione.
+Cuando llegues, mándame un mensaje para saber que estás bien. (kuándo yégues, mándame un mensáhe para sabér ke estás byén) - Quando arrivi, mandami un messaggio per sapere che stai bene.
+Hoy me duele bastante la espalda. (oi me duéle bastante la espálda) - Oggi mi fa abbastanza male la schiena.
+¿Necesita algo más además de este medicamento? (nesesíta álgo más además de éste medikaménto) - Ha bisogno di qualcos'altro oltre a questo farmaco?
+Me han citado para hacerme una radiografía. (me an sitádo para asérme una radiografía) - Mi hanno fissato un appuntamento per fare una radiografia.
+Voy a pedir hora con el especialista. (boi a pedír óra kon el espesyalísta) - Prendo un appuntamento con lo specialista.
+El médico me ha dicho que vuelva dentro de unos días. (el médiko me a dícho ke buélba déntro de unos días) - Il medico mi ha detto di tornare tra qualche giorno.
+¿Queda mucho para que llegue el tren? (kéda múcho para ke yégue el tren) - Manca molto all'arrivo del treno?
+El tren de las ocho viene con retraso. (el tren de las ócho byéne kon retraso) - Il treno delle otto è in ritardo.
+Hemos tenido que esperar fuera porque la estación estaba cerrada. (émos tenído ke esperár fuéra porke la estasyón estaba serráda) - Abbiamo dovuto aspettare fuori perché la stazione era chiusa.
+Este billete no corresponde a este tren. (éste biyéte no korrespónde a éste tren) - Questo biglietto non corrisponde a questo treno.
+¿Hay alguna salida de metro cerca de aquí? (ai alguna salída de métro sérka de akí) - C'è un'uscita della metropolitana qui vicino?
+Mejor vamos por las escaleras, hay demasiada gente en el ascensor. (mekhór bámos por las eskaléras, ai demasiáda khénte en el asensór) - Meglio andare per le scale, c'è troppa gente nell'ascensore.
+El metro va lleno a estas horas, como siempre. (el métro ba yéno a éstas óras, komo syémpre) - La metropolitana è piena a quest'ora, come sempre.
+¿Este autobús pasa por la estación de tren? (éste autobús páса por la estasyón de tren) - Questo autobus passa dalla stazione ferroviaria?
+La parada está un poco más adelante, junto a la farmacia. (la par áda está un póko más adelant e, khúnto a la farmásia) - La fermata è un po' più avanti, accanto alla farmacia.
+Nos hemos bajado del autobús demasiado pronto. (nos émos bakhádo del autobús demasiádo pronto) - Siamo scesi dall'autobus troppo presto.
+¿A qué hora empieza el embarque de nuestro vuelo? (a ke óra empyésa el embarke de nuéstro buélo) - A che ora inizia l'imbarco del nostro volo?
+No encuentro dónde tengo que dejar esta maleta. (no enkuéntro dónde téngo ke dekhár ésta maléta) - Non trovo dove devo lasciare questa valigia.
+Nos han hecho pasar por un control adicional. (nos an écho pasár por un kontról adisionál) - Ci hanno fatto passare da un controllo aggiuntivo.
+El avión está esperando autorización para despegar. (el abión está esperándo aut orisasión para despegár) - L'aereo sta aspettando l'autorizzazione al decollo.
+El barco se mueve bastante por culpa del oleaje. (el bárko se muébe bastante por kúlpa del oleyáhe) - Il traghetto si muove parecchio a causa del moto ondoso.
+Tenemos que enseñar los documentos antes de subir a bordo. (tenémos ke enseñár los dokumentos ántes de subír a bórdo) - Dobbiamo mostrare i documenti prima di salire a bordo.
+Gira a la izquierda después de la gasolinera. (khíra a la isk yérda despúes de la gasolinéra) - Gira a sinistra dopo il distributore.
+Estamos dando vueltas y no encontramos el aparcamiento. (estámos dando buéltas i no enkontrámos el apar kamiénto) - Stiamo girando a vuoto e non troviamo il parcheggio.
+El semáforo no funciona y hay bastante lío en el cruce. (el semáforo no funksióna i ai bastante lío en el krúse) - Il semaforo non funziona e c'è parecchio caos all'incrocio.
+El coche ha empezado a perder aceite. (el kóche a empesádo a perdér aséite) - La macchina ha iniziato a perdere olio.
+Voy a llamar al taller antes de seguir conduciendo. (boi a yamár al tayér ántes de seguír kondusyéndo) - Chiamo l'officina prima di continuare a guidare.
+Se nos ha pinchado una rueda en plena autopista. (se nos a pinchádo una ruéda en pléna autopísta) - Abbiamo bucato una gomma proprio in autostrada.
+El hotel nos ofrece dejar el equipaje después de hacer el check-out. (el otél nos ofrése dekhár el ekipáhe despúes de asér el chek-áut) - L'hotel ci offre la possibilità di lasciare i bagagli dopo il check-out.
+¿Podrían traerme una manta? Tengo bastante frío. (podrían traérme una mánta? téngo bastante frío) - Potreste portarmi una coperta? Ho piuttosto freddo.
+La habitación da a una calle muy transitada y hay mucho ruido. (la abitasión da a una káye mui transitáda i ai múcho ruído) - La camera dà su una strada molto trafficata e c'è molto rumore.
+El grifo del lavabo gotea sin parar. (el grífo del labábo gotéa sin parár) - Il rubinetto del lavabo perde acqua continuamente.
+El apartamento está limpio, pero el sofá necesita una limpieza. (el apartaménto está límpio, péгo el sofà nesesíta una limpiésa) - L'appartamento è pulito, ma il divano avrebbe bisogno di essere pulito.
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
