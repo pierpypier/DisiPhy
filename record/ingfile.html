@@ -946,17 +946,21 @@ function renderFrasiIng(){
     return;
   }
   
-function leggiInglese(testo) {
-  window.speechSynthesis.cancel();
-  const lettura = new SpeechSynthesisUtterance(testo);
-  lettura.lang = 'en-GB'; // Imposta la voce in inglese britannico (usa 'en-US' per l'americano)
-  window.speechSynthesis.speak(lettura);
+function renderFrasiIng(){
+  const container = document.getElementById('ingList');
+  const frasi = estraiFrasiIng(ING_BATCH_SIZE);
+
+  if(!frasi.length){
+    container.innerHTML = '<div class="empty-msg">Nessuna frase disponibile: controlla il file ingfrasi.js.</div>';
+    document.getElementById('ingCounter').textContent = '';
+    return;
   }
-      
+
   container.innerHTML = frasi.map(f => `
     <div class="ing-card">
-      <div class="ing-en"><span class="flag">🇬🇧</span>${escapeHtml(f.en)}
-      <button onclick="leggiInglese('${escapeHtml(f.en).replace(/'/g, "\\'")}')" style="background:none; border:none; cursor:pointer; font-size:20px; margin-left:8px;" title="Ascolta">🔊</button>
+      <div class="ing-en">
+        <span class="flag">🇬🇧</span><span class="ing-text">${escapeHtml(f.en)}</span>
+        <button type="button" class="btn-speak" style="background:none; border:none; cursor:pointer; font-size:20px; margin-left:8px;" title="Ascolta">🔊</button>
       </div>
       <div class="ing-it"><span class="flag">🇮🇹</span>${escapeHtml(f.it)}</div>
     </div>
@@ -974,6 +978,18 @@ window.addEventListener('DOMContentLoaded', () => {
   renderFrasiIng();
 
   document.getElementById('ingRefreshBtn').addEventListener('click', renderFrasiIng);
+
+  // NUOVO BLOCCO DA AGGIUNGERE:
+  document.getElementById('ingList').addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn-speak')) {
+      const testo = e.target.closest('.ing-en').querySelector('.ing-text').textContent;
+      
+      window.speechSynthesis.cancel();
+      const lettura = new SpeechSynthesisUtterance(testo);
+      lettura.lang = 'en-GB'; // o 'en-US' per l'inglese americano
+      window.speechSynthesis.speak(lettura);
+    }
+  });
 });
 </script>
 
