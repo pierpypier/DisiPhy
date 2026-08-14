@@ -314,8 +314,40 @@
     font-weight:800;
     color:#0f172a;
     margin-bottom:8px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
   }
   .fra-fr .flag{ margin-right:8px; }
+  .fra-fr-text{ flex:1; }
+
+  .fra-speak-btn{
+    flex-shrink:0;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    border:none;
+    background:var(--accent);
+    color:#ffffff;
+    font-size:16px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 2px 6px rgba(20,30,50,0.12);
+    transition: transform .12s ease, filter .12s ease;
+  }
+  .fra-speak-btn:hover{ filter:brightness(1.08); }
+  .fra-speak-btn:active{ transform:scale(0.92); }
+  .fra-speak-btn.speaking{
+    background:var(--cal-accent);
+    animation: fraPulse 1s ease-in-out infinite;
+  }
+  @keyframes fraPulse{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.1); }
+  }
 
   .fra-it{
     font-size:19px;
@@ -878,7 +910,10 @@ function renderFrasiFra(){
 
   container.innerHTML = frasi.map(f => `
     <div class="fra-card">
-      <div class="fra-fr"><span class="flag">🇫🇷</span>${escapeHtml(f.fr)}</div>
+      <div class="fra-fr">
+        <span class="fra-fr-text"><span class="flag">🇫🇷</span>${escapeHtml(f.fr)}</span>
+        <button type="button" class="fra-speak-btn" data-testo="${escapeHtml(f.fr)}" title="Ascolta la pronuncia" aria-label="Ascolta la pronuncia">🔊</button>
+      </div>
       <div class="fra-it"><span class="flag">🇮🇹</span>${escapeHtml(f.it)}</div>
     </div>
   `).join('');
@@ -888,11 +923,73 @@ function renderFrasiFra(){
 }
 
 /* ================================================================
+   LETTURA AD ALTA VOCE (Web Speech API) — pronuncia le frasi francesi
+   usando una voce francese del dispositivo, se disponibile. Il testo
+   tra parentesi (guida di pronuncia) viene rimosso prima della
+   lettura, così non viene mai pronunciato.
+   ================================================================ */
+let vociDisponibiliFra = [];
+
+function caricaVociFra(){
+  if(!('speechSynthesis' in window)) return;
+  vociDisponibiliFra = window.speechSynthesis.getVoices();
+}
+
+function scegliVoceFra(){
+  if(!vociDisponibiliFra.length) return null;
+  // Preferenza: voce francese FR (Francia), poi qualsiasi voce "fr-*"
+  return vociDisponibiliFra.find(v => v.lang === 'fr-FR') ||
+         vociDisponibiliFra.find(v => v.lang && v.lang.toLowerCase().startsWith('fr')) ||
+         null;
+}
+
+function parlaFraseFra(testo, bottone){
+  if(!('speechSynthesis' in window)){
+    alert('La lettura vocale non è supportata su questo browser.');
+    return;
+  }
+
+  // Rimuove eventuale testo tra parentesi (guida di pronuncia)
+  // prima di inviarlo al sintetizzatore vocale
+  const testoPulito = testo.replace(/\s*\([^)]*\)/g, '').trim();
+
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(testoPulito);
+  utterance.lang = 'fr-FR';
+  const voce = scegliVoceFra();
+  if(voce) utterance.voice = voce;
+  utterance.rate = 0.95;
+  utterance.pitch = 1;
+
+  document.querySelectorAll('.fra-speak-btn.speaking').forEach(b => b.classList.remove('speaking'));
+  if(bottone) bottone.classList.add('speaking');
+
+  utterance.onend = () => { if(bottone) bottone.classList.remove('speaking'); };
+  utterance.onerror = () => { if(bottone) bottone.classList.remove('speaking'); };
+
+  window.speechSynthesis.speak(utterance);
+}
+
+function initLetturaVoceFra(){
+  if(!('speechSynthesis' in window)) return;
+  caricaVociFra();
+  window.speechSynthesis.onvoiceschanged = caricaVociFra;
+
+  document.getElementById('fraList').addEventListener('click', (e) => {
+    const btn = e.target.closest('.fra-speak-btn');
+    if(!btn) return;
+    parlaFraseFra(btn.dataset.testo, btn);
+  });
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
   initConfigPanel();
   renderFrasiFra();
+  initLetturaVoceFra();
 
   document.getElementById('fraRefreshBtn').addEventListener('click', renderFrasiFra);
 });
