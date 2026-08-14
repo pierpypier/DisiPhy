@@ -1395,7 +1395,77 @@ The road under the bridge is flooded after the heavy rain. (De roud ander de bri
 The whole block lost power for about half an hour. (De houl blok lost pauer for ebaut haf en auer) - In tutto l'isolato è mancata la corrente per circa mezz'ora.
 Could you send someone up to fix the shower in our room? (Kud iu send samuan ap tu fiks de sciauer in auer ruum?) - Potreste mandare qualcuno a sistemare la doccia della nostra camera?
 Our room is facing the street, and the traffic is really loud. (Auer ruum iz feising de striit, end de traffic iz rili laud) - La nostra camera dà sulla strada e il traffico è davvero rumoroso.
-The host left the keys inin) - Apparecchio io se tu inizi a cucinare
+The host left the keys in a lockbox by the front door. (De houst left de kiiz in e lok-boks bai de front dor) - L'host ha lasciato le chiavi in una cassetta con serratura vicino alla porta d'ingresso.
+There's a small extra charge that wasn't mentioned in the listing. (Derz e smol ekstra ciarg det uozent mensciend in de listing) - C'è un piccolo costo aggiuntivo che non era indicato nell'annuncio.
+Could we have a few more minutes to decide what to order? (Kud ui hev e fiu mor minits tu disa id uot tu order?) - Potremmo avere qualche minuto in più per decidere cosa ordinare?
+I'll have the same as you, unless you want to try something different. (Ail hev de seim ez iu, anles iu uont tu trai samthing difrent) - Prendo la stessa cosa che prendi tu, a meno che tu non voglia provare qualcosa di diverso.
+That bar was packed, so we ended up finding another place nearby. (Det bar uoz pekt, sou ui endid ap fainding enader pleis niarbai) - Quel bar era pienissimo, quindi alla fine abbiamo trovato un altro posto qui vicino.
+I'm just going to grab a few things from the supermarket. (Aim giast gouing tu greb e fiu things from de supermarket) - Vado solo a prendere alcune cose al supermercato.
+These trousers fit well, but I don't like the material. (Dhiiz trauzers fit uel, bat ai dount laik de material) - Questi pantaloni vestono bene, ma non mi piace il materiale.
+Can we move the meeting back by half an hour? (Ken ui muuv de miiting bek bai haf en auer?) - Possiamo spostare la riunione di mezz'ora?
+I'll reply to the email once I've checked the figures. (Ail riplai tu di i-meil uans aiv cekt de figuers) - Risponderò all'email una volta controllati i dati.
+Your microphone keeps cutting out during the video call. (Ior maicrofoun kiips cating aut diuring de video kol) - Il tuo microfono continua a interrompersi durante la videochiamata.
+The printer says it's out of paper again. (De printer sez its aut ov peiper eghen) - La stampante dice che è di nuovo senza carta.
+The museum has a temporary exhibition on ancient coins. (De miuziem hez e temporeri eksibiscion on einsicent coins) - Il museo ha una mostra temporanea sulle monete antiche.
+We walked around the old town until it started getting dark. (Ui uokt eraund di ould taun until it started geting dark) - Abbiamo passeggiato per il centro storico finché non ha iniziato a fare buio.
+The trail gets steeper after the first kilometre. (De treil gets stiiper after de ferst kilometre) - Il sentiero diventa più ripido dopo il primo chilometro.
+I'd rather stay in the shade than spend all afternoon in the sun. (Aid rather stei in de sceid den spend ol after-nuun in de san) - Preferirei stare all'ombra piuttosto che passare tutto il pomeriggio al sole.
+I was relieved when the doctor said there was nothing serious. (Ai uoz riliivd uen de doctor sed der uoz nathing si-ri-es) - Mi sono sentito sollevato quando il medico ha detto che non c'era nulla di grave.
+I usually stretch for a few minutes before I start lifting weights. (Ai iusciueli stretc for e fiu minits bifor ai start lifting ueits) - Di solito faccio stretching per qualche minuto prima di iniziare a sollevare pesi.
+I turn off the lights before I go to bed (ai tërn off dhë laits bifor ai gou tu bed) - Spengo le luci prima di andare a letto
+Have you seen my keys anywhere (hav yu sin mai chiis ènibuer) - Hai visto le mie chiavi da qualche parte
+The dishwasher is making a weird noise again (dhë dishuosciër is meikin a uird nois eghèn) - La lavastoviglie fa di nuovo uno strano rumore
+Can you feed the cat before school (kèn yu fiid dhë chèt bifor skuul) - Puoi dare da mangiare al gatto prima della scuola
+We're out of milk, can you grab some (uir aut ov milk, kèn yu grèb sam) - Abbiamo finito il latte, puoi prenderne un po'
+Did you finish your homework yet (did yu finish yor houmuork yet) - Hai già finito i compiti
+My daughter has a math test tomorrow (mai dotër hez a mèth test tumorou) - Mia figlia ha un compito di matematica domani
+Ask your teacher if you can hand it in late (esk yor tiicër if yu kèn hènd it in leit) - Chiedi alla tua insegnante se puoi consegnarlo in ritardo
+You can go out, but be back by ten (yu kèn gou aut, bat bi bek bai ten) - Puoi uscire, ma torna entro le dieci
+Do I need a prescription for this (du ai niid a priskripscion for dhis) - Mi serve la ricetta per questo
+The pharmacy closes at eight tonight (dhë farmasi klousiz et eit tunait) - La farmacia chiude alle otto stasera
+Excuse me, does this train stop at the next station (ekskiuz mi, das dhis trein stap et dhë nekst steiscion) - Scusi, questo treno si ferma alla prossima stazione
+We just missed the last train home (uì giast mist dhë lest trein houm) - Abbiamo appena perso l'ultimo treno per tornare a casa
+Which line do I take to get to the center (uic lain du ai teik tu ghet tu dhë sentër) - Quale linea devo prendere per arrivare in centro
+The bus is running about ten minutes late (dhë bas is ranin abaut ten minits leit) - L'autobus è in ritardo di circa dieci minuti
+Is this seat taken (is dhis siit teikën) - È libero questo posto
+Our flight got delayed because of the weather (auer flait gat dileid bikoz ov dhë uedhër) - Il nostro volo è stato ritardato a causa del maltempo
+Where is the gate for the flight to Rome (uer is dhë gheit for dhë flait tu roum) - Dov'è il gate per il volo per Roma
+The ferry leaves from the other side of the port (dhë fèri liivz from dhë adhër said ov dhë port) - Il traghetto parte dall'altro lato del porto
+Excuse me, how do I get to the old town (ekskiuz mi, hau du ai ghet tu dhë ould taun) - Scusi, come si arriva al centro storico
+Turn left at the next traffic light (tërn left et dhë nekst trèfik lait) - Gira a sinistra al prossimo semaforo
+The car won't start again this morning (dhë kar uont start eghèn dhis mornin) - La macchina di nuovo non parte stamattina
+We need to call roadside assistance (uì niid tu kol roudsaid asistëns) - Dobbiamo chiamare il soccorso stradale
+There's a huge traffic jam on the ring road (dhers a hiuug trèfik giem on dhë ring roud) - C'è un ingorgo enorme sulla tangenziale
+The whole street flooded after the storm (dhë houl striit fladid aftër dhë storm) - Tutta la strada si è allagata dopo il temporale
+We had a blackout for a couple of hours last night (uì hed a blèkaut for a kapël ov auerz lest nait) - Ieri sera abbiamo avuto un blackout per un paio d'ore
+Could we get some extra towels for the room (kud uì ghet sam ekstra tauëlz for dhë ruum) - Potremmo avere degli asciugamani in più per la camera
+The air conditioning isn't working in our room (dhë er kondiscionin isënt uorkin in auer ruum) - L'aria condizionata non funziona nella nostra camera
+There's a leak in the bathroom ceiling (dhers a liik in dhë bethruum siilin) - C'è una perdita nel soffitto del bagno
+It's way too noisy to sleep, could we change rooms (its uei tuu noizi tu sliip, kud uì cheingi ruumz) - C'è troppo rumore per dormire, potremmo cambiare camera
+The host left the keys under the mat like she said (dhë houst left dhë chiis andër dhë mèt laik scì sed) - L'host ha lasciato le chiavi sotto lo zerbino come aveva detto
+Could we see the menu, please (kud uì sii dhë meniu, pliiz) - Possiamo vedere il menù, per favore
+I'll have the same as him (ail hev dhë seim ez him) - Prendo lo stesso che ha preso lui
+Can we get the bill whenever you're ready (kèn uì ghet dhë bil uenevër yor redi) - Possiamo avere il conto quando volete
+We should grab a drink after work sometime (uì sciud grèb a drink aftër uork samtaim) - Dovremmo bere qualcosa insieme dopo il lavoro qualche volta
+You won't believe what happened last night (yu uont bilìv uat hèpënd lest nait) - Non crederai a cosa è successo ieri sera
+I forgot my reusable bags again (ai forgat mai riiuusëbël bègz eghèn) - Ho dimenticato di nuovo i sacchetti riutilizzabili
+Is this on sale or is that the regular price (is dhis on seil or is dhèt dhë reghiulër prais) - Questo è in saldo o è il prezzo normale
+Can I try this on in a bigger size (kèn ai trai dhis on in a bighër saiz) - Posso provarlo in una taglia più grande
+Sorry I'm late, the meeting ran over (sori aim leit, dhë miitin ren ouvër) - Scusa il ritardo, la riunione è andata per le lunghe
+Can you send me that email again, I think I deleted it (kèn yu send mi dhèt iimeil eghèn, ai think ai dilitid it) - Puoi rimandarmi quella email, credo di averla cancellata
+You're on mute, we can't hear you (yor on miuut, uì kènt hir yu) - Sei mutato, non ti sentiamo
+The wifi keeps cutting out during calls (dhë uaifai kiips katin aut diurin kolz) - Il wifi continua a cadere durante le chiamate
+Does anyone know where the phone charger went (das enìuan nou uer dhë foun chargër uent) - Qualcuno sa dov'è finito il caricabatterie
+The exhibit closes earlier on Sundays (dhë eksibit klousiz erlìer on sandeiz) - La mostra chiude prima la domenica
+We got lost wandering around the old streets (uì gat lost uonderin araund dhë ould striits) - Ci siamo persi girovagando per le vecchie strade
+The trail gets pretty steep after this point (dhë treil ghets priti stiip aftër dhis point) - Il sentiero diventa piuttosto ripido dopo questo punto
+The boiler's making a strange noise, can you take a look (dhë boilërz meikin a streingi nois, kèn yu teik a luuk) - La caldaia fa uno strano rumore, puoi dare un'occhiata
+It's freezing out there today (its friizin aut dher tudei) - Fa un freddo pungente fuori oggi
+I need to transfer some money to my savings account (ai niid tu trènsfër sam mani tu mai seivinz akaunt) - Devo trasferire dei soldi sul mio conto di risparmio
+I can't find my other shoe anywhere (ai kènt faind mai adhër scìu ènìuer) - Non trovo da nessuna parte l'altra scarpa
+Don't slam the door, the baby's asleep (dount slèm dhë dor, dhë beibiz aslìip) - Non sbattere la porta, il bambino sta dormendo
+Whose turn is it to walk the dog tonight (huuz tërn is it tu uok dhë dog tunait) - Di chi è il turno di portare fuori il cane stasera
+I'll set the table if you start cooking (ail set dhë teibël if yu start kukin) - Apparecchio io se tu inizi a cucinare
 We're having pasta again, is that okay (uir hèvin pasta eghèn, is dhèt okei) - Mangiamo di nuovo la pasta, va bene
 Can you pass the salt, please (kèn yu pès dhë solt, pliiz) - Puoi passarmi il sale, per favore
 Hurry up or we'll be late for school (hari ap or uìl bi leit for skuul) - Sbrigati o faremo tardi per la scuola
