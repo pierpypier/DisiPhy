@@ -945,10 +945,19 @@ function renderFrasiIng(){
     document.getElementById('ingCounter').textContent = '';
     return;
   }
-
+  
+function leggiInglese(testo) {
+  window.speechSynthesis.cancel();
+  const lettura = new SpeechSynthesisUtterance(testo);
+  lettura.lang = 'en-GB'; // Imposta la voce in inglese britannico (usa 'en-US' per l'americano)
+  window.speechSynthesis.speak(lettura);
+  }
+      
   container.innerHTML = frasi.map(f => `
     <div class="ing-card">
-      <div class="ing-en"><span class="flag">🇬🇧</span>${escapeHtml(f.en)}</div>
+      <div class="ing-en"><span class="flag">🇬🇧</span>${escapeHtml(f.en)}
+      <button onclick="leggiInglese('${escapeHtml(f.en).replace(/'/g, "\\'")}')" style="background:none; border:none; cursor:pointer; font-size:20px; margin-left:8px;" title="Ascolta">🔊</button>
+      </div>
       <div class="ing-it"><span class="flag">🇮🇹</span>${escapeHtml(f.it)}</div>
     </div>
   `).join('');
