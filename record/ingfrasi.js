@@ -1543,7 +1543,356 @@ Can we walk back a different way this time (kèn uì uok bèk a difërënt uei d
 I think we've seen most of the main sights now (ai think uìv siin moust ov dhë mein saits nau) - Credo che abbiamo visto la maggior parte dei luoghi principali ormai
 Let's grab dinner somewhere near the hotel tonight (lets grèb dinër samuer nir dhë houtel tunait) - Prendiamo la cena da qualche parte vicino all'hotel stasera
 That was a really lovely walk, wasn't it (dhèt uoz a rìeli lavli uok, uozënt it) - È stata una passeggiata proprio piacevole, vero
-We will watch the match at a friend's house. — Guarderemo la partita a casa di un amico.
+Dad, can I borrow the car this weekend? (ded, ken ai borou de kar dis uiikend) — Papà, posso prendere in prestito l'auto questo fine settimana?
+Have you cleaned your bedroom like your father asked? (hev iu kliind ior bedruum laik ior fader askt) — Hai pulito la tua camera da letto come ti ha chiesto tuo padre?
+Mom, I need some money for the school trip tomorrow. (mom, ai niid sam mani for de skuul trip tumorou) — Mamma, ho bisogno di soldi per la gita scolastica di domani.
+Don't forget that your curfew is at ten o'clock tonight. (dount forget det ior kerfiu iz et ten oklok tunait) — Non dimenticare che il tuo rientro è alle dieci stasera.
+Can you two stop arguing and help me unload the dishwasher? (ken iu tuu stop arghiuing end help mi anloud de disciuoscer) — Potete smetterla di litigare e aiutarmi a svuotare la lavastoviglie?
+Who is taking our daughter to her dance practice today? (huu iz teiking auer doter tu her dans prektis tudei) — Chi accompagna nostra figlia a lezione di danza oggi?
+Your father and I think you spend too much time on your phone. (ior fader end ai think iu spend tuu macc taim on ior foun) — Tuo padre ed io pensiamo che tu passi troppo tempo al telefono.
+Did you ask your mother before taking her jacket? (did iu ask ior mader bifor teiking her giaket) — Hai chiesto a tua madre prima di prendere la sua giacca?
+Can I spend the night at my best friend's house on Saturday? (ken ai spend de nait et mai best frendz haus on saterdei) — Posso dormire a casa della mia migliore amica sabato?
+Dad is preparing his famous pasta recipe for dinner tonight. (ded iz priperring hiz feimës pasta resipi for diner tunait) — Papà sta preparando la sua famosa ricetta della pasta per cena stasera.
+Have you finished studying for your history exam tomorrow? (hev iu finiscd stadiing for ior histëri igzem tumorou) — Hai già finito di studiare per il tuo esame di storia di domani?
+Mom, can we go clothes shopping together this afternoon? (mom, ken ui gou klouthz sciopping tugheder dis afternuun) — Mamma, possiamo andare a comprare dei vestiti insieme questo pomeriggio?
+Please lower the music in your room, your father is working. (pliiz louer de miuzik in ior ruum, ior fader iz uorking) — Per favore abbassa la musica in camera tua, tuo padre sta lavorando.
+How long are you going to stay in the bathroom? (hau long ar iu gouing tu stei in de bathruum) — Quanto tempo hai intenzione di stare in bagno?
+We are having a family movie night in the living room tonight. (ui ar heving e femili muuvi nait in de living ruum tunait) — Stasera facciamo una serata cinema in famiglia in soggiorno.
+Your mother left her car keys on the kitchen counter again. (ior mader left her kar kiiz on de kicën kaunter egen) — Tua madre ha lasciato di nuovo le chiavi della macchina sul bancone della cucina.
+Dad, can you explain this difficult math problem to me? (ded, ken iu iksplein dis difikëlt math problëm tu mi) — Papà, puoi spiegarmi questo problema di matematica difficile?
+Don't leave your wet bath towel lying on the floor. (dount liiv ior uet bath tauël laiing on de flor) — Non lasciare il tuo asciugamano da bagno bagnato sul pavimento.
+Who wants to help me prepare the salad for lunch? (huu uonts tu help mi priper de saled for lancc) — Chi vuole aiutarmi a preparare l'insalata per pranzo?
+Mom and Dad are going out for dinner, so you are in charge. (mom end ded ar gouing aut for diner, sou iu ar in ciarj) — Mamma e papà escono a cena, quindi te ne occupi tu.
+Can you please put your laundry in the dirty clothes basket? (ken iu pliiz put ior londri in de derti klouthz basket) — Puoi mettere il tuo bucato nel cestino dei panni sporchi, per favore?
+Our daughter is studying hard for her driving test. (auer doter iz stadiing hard for her draiving test) — Nostra figlia sta studiando molto per l'esame della patente.
+Your father fixed the broken light in your bedroom yesterday. (ior fader fikst de broukën lait in ior bedruum iesterdei) — Tuo padre ha riparato la luce rotta nella tua camera da letto ieri.
+Mom, do you know where my favorite pair of jeans is? (mom, du iu nou uer mai feivorit per ov giinz iz) — Mamma, sai dov'è il mio paio di jeans preferito?
+Please turn off the bathroom light when you are finished. (pliiz tern of de bathruum lait uen iu ar finiscd) — Per favore spegni la luce del bagno quando hai finito.
+We are going to visit your grandparents this Sunday afternoon. (ui ar gouing tu vizit ior grendperents dis sandei afternuun) — Andremo a trovare i tuoi nonni questo domenica pomeriggio.
+Dad, can you drive me to my friend's birthday party? (ded, ken iu draiv mi tu mai frendz berthdei parti) — Papà, puoi accompagnarmi in macchina alla festa di compleanno della mia amica?
+Your mother is calling you downstairs for breakfast. (ior mader iz koling iu daunsteirz for brekfast) — Tua madre ti sta chiamando di sotto per la colazione.
+Did you remember to feed the cat before going to school? (did iu rimember tu fiid de ket bifor gouing tu skuul) — Ti sei ricordata di dare da mangiare al gatto prima di andare a scuola?
+We need to set some clear rules about screen time. (ui niid tu set sam klir ruulz ebaut skriin taim) — Dobbiamo stabilire alcune regole chiare sul tempo davanti allo schermo.
+Can I invite a few classmates over to study this afternoon? (ken ai invait e fiu klasmeits ouver tu stadi dis afternuun) — Posso invitare alcuni compagni di classe a studiare questo pomeriggio?
+Your father is taking the car to the mechanic this morning. (ior fader iz teiking de kar tu de mekenik dis morning) — Tuo padre sta portando l'auto dal meccanico stamattina.
+Mom made some fresh pancakes for breakfast today. (mom meid sam fresc penkeiks for brekfast tudei) — Mamma ha fatto dei pancake freschi per colazione oggi.
+Please take your shoes off as soon as you enter the house. (pliiz teik ior sciuz of ez suun ez iu enter de haus) — Per favore togliti le scarpe non appena entri in casa.
+Dad, can we practice driving in the parking lot later? (ded, ken ui praktis draiving in de parking lot leiter) — Papà, possiamo esercitarci a guidare nel parcheggio più tardi?
+Our daughter asked if she could go to a concert next month. (auer doter askt if scii kud gou tu e konsert nekst manth) — Nostra figlia ha chiesto se può andare a un concerto il mese prossimo.
+We should clean out the refrigerator together this weekend. (ui sciud kliin aut de rifrijereitor tugheder dis uiikend) — Dovremmo pulire il frigorifero insieme questo fine settimana.
+Mom, can you help me dry my hair before we leave? (mom, ken iu help mi drai mai her bifor ui liiv) — Mamma, puoi aiutarmi ad asciugarmi i capelli prima di uscire?
+Your father and I are very proud of your school results. (ior fader end ai ar veri praud ov ior skuul risalts) — Tuo padre ed io siamo molto orgogliosi dei tuoi risultati scolastici.
+Who forgot to turn off the air conditioning in the hallway? (huu forgot tu tern of di er kondiscëning in de holuei) — Chi ha dimenticato di spegnere l'aria condizionata nel corridoio?
+Can you give your father a hand with the garden hose? (ken iu giv ior fader e hend uidh de gardën houz) — Puoi dare una mano a tuo padre con la canna da giardino?
+I need to iron my shirt for tomorrow's school presentation. (ai niid tu airën mai shert for tumorouz skuul prezenteiscën) — Devo stirare la mia camicia per la presentazione a scuola di domani.
+Mom, what time are we leaving for the supermarket? (mom, uot taim ar ui liiving for de supermarket) — Mamma, a che ora partiamo per il supermercato?
+Please make your bed before you leave for school in the morning. (pliiz meik ior bed bifor iu liiv for skuul in de morning) — Per favore rifai il letto prima di uscire per andare a scuola la mattina.
+Your father is grilling some vegetables in the backyard. (ior fader iz griling sam vegetebëlz in de bekiard) — Tuo padre sta grigliando delle verdure nel cortile sul retro.
+Can I order a pizza with my friends this Friday evening? (ken ai order e pitza uidh mai frendz dis fraidei iivning) — Posso ordinare una pizza con le mie amiche questo venerdì sera?
+Your mother is currently in an important video call for work. (ior mader iz karrëntli in en important vidiou kol for uork) — Tua madre al momento è in un'importante videochiamata di lavoro.
+Let's all sit down and talk about our weekend plans. (lets ol sit daun end tok ebaut auer uiikend plenz) — Sediamoci tutti e parliamo dei nostri programmi per il fine settimana.
+Who left the front door unlocked when they came home? (huu left de front dor anlokt uen dei keim houm) — Chi ha lasciato la porta d'ingresso aperta quando è tornato a casa?
+Excuse me, where is the check-in desk for flight BA four hundred? (ekskiuz mi, uer iz de cekin desk for flait bii ei for handred) — Mi scusi, dov'è il banco del check-in per il volo BA quattrocento?
+Could you please place your hand luggage on the scale? (kud iu pliiz pleis ior hend lagëj on de skeil) — Potrebbe mettere il bagaglio a mano sulla bilancia, per favore?
+Is this suitcase within the permitted weight limit for cabin baggage? (iz dis siutkeis uidhin de permitid ueit limit for kebin begëj) — Questa valigia rientra nel limite di peso consentito per il bagaglio a mano?
+I need to check two bags and carry one backpack on board. (ai niid tu cek tuu begz end keri uan bekpek on bord) — Devo imbarcare due valigie e portare uno zaino a bordo.
+Where is the security checkpoint for international departures? (uer iz de sekiuriti cekpoint for internescënël dipartciurz) — Dov'è il varco di sicurezza per le partenze internazionali?
+Please take your laptop and liquids out of your bag for scanning. (pliiz teik ior laptop end likuidz aut ov ior beg for skening) — Per favore tirate fuori il computer portatile e i liquidi dalla borsa per la scansione.
+Do I need to take off my shoes and belt at security? (du ai niid tu teik of mai sciuz end belt et sekiuriti) — Devo togliere le scarpe e la cintura ai controlli di sicurezza?
+Excuse me, where can I wrap my luggage in protective plastic film? (ekskiuz mi, uer ken ai rep mai lagëj in protektiv plestik film) — Mi scusi, dove posso avvolgere il mio bagaglio nella pellicola protettiva di plastica?
+My flight has been delayed by two hours due to bad weather. (mai flait hez bin dileid bai tuu auerz diu tu bed ueder) — Il mio volo è stato ritardato di due ore a causa del maltempo.
+Where can I find the electronic flight information departure board? (uer ken ai faind di ilektronik flait informeiscën dipartciur bord) — Dove posso trovare il tabellone elettronico delle partenze dei voli?
+The gate for our flight to Paris has just been changed. (de gheit for auer flait tu peris hez giast bin ceinjd) — Il gate per il nostro volo per Parigi è appena stato cambiato.
+Final boarding call for passengers traveling on flight LH seven hundred. (fainël bording kol for pasengerz treveling on flait el eic sevën handred) — Ultimo avviso d'imbarco per i passeggeri in viaggio sul volo LH settecento.
+Please present your boarding pass and passport at the gate. (pliiz prizent ior bording pas end pasport et de gheit) — Per favore esibite la carta d'imbarco e il passaporto al gate.
+Is there a fast-track lane available for security screening? (iz der e fasttrek lein eveilebël for sekiuriti skriining) — È disponibile una corsia preferenziale per i controlli di sicurezza?
+Where is the baggage claim area for flight AZ two hundred? (uer iz de begëj kleim eria for flait ei zed tuu handred) — Dov'è l'area ritiro bagagli per il volo AZ duecento?
+My suitcase did not arrive on the baggage carousel with the others. (mai siutkeis did not araiv on de begëj karusël uidh di aderz) — La mia valigia non è arrivata sul nastro bagagli con gli altri.
+Where is the lost and found office for mishandled luggage? (uer iz de lost end faund ofis for mishendëld lagëj) — Dov'è l'ufficio oggetti smarriti per i bagagli smarriti?
+Can I exchange currency or use an ATM in the arrivals hall? (ken ai ikscenj kerensi or iuz en eitiiem in di eraivëlz hol) — Posso cambiare la valuta o usare un bancomat nella hall degli arrivi?
+Where can I catch the express train to the city center? (uer ken ai kecc di ikspres trein tu de siti senter) — Dove posso prendere il treno espresso per il centro città?
+Are there official taxi ranks right outside the terminal exit? (ar der ofiscël teksi renks rait autsaid de terminël eksit) — Ci sono postazioni di taxi ufficiali proprio fuori dall'uscita del terminal?
+Could you tell me which terminal handles international arrivals? (kud iu tel mi uicc terminël hendëlz internescënël eraivëlz) — Potrebbe dirmi quale terminal gestisce gli arrivi internazionali?
+Is free Wi-Fi available throughout the entire airport terminal? (iz frii uaifai eveilebël thruaut di entaier eirport terminël) — Il Wi-Fi gratuito è disponibile in tutto il terminal dell'aeroporto?
+Where is the nearest airport lounge for business class passengers? (uer iz de nirest eirport launj for biznes klas pasengerz) — Dov'è la sala d'attesa dell'aeroporto più vicina per i passeggeri di classe business?
+Can I buy duty-free items after passing through security control? (ken ai bai diutifrii aitëmz after pasing thru sekiuriti kontroul) — Posso comprare articoli duty-free dopo aver superato il controllo di sicurezza?
+Excuse me, where are the restrooms located near gate twenty-four? (ekskiuz mi, uer ar de restruumz loukeitid nir gheit tuenti for) — Mi scusi, dove si trovano i bagni vicino al gate ventiquattro?
+My connecting flight leaves in less than forty minutes. (mai konekting flait liivz in les den forti minits) — Il mio volo in coincidenza parte in meno di quarantacinque minuti.
+Where do I go to clear passport control and immigration? (uer du ai gou tu klir pasport kontroul end imigreiscën) — Dove devo andare per superare il controllo passaporti e l'immigrazione?
+Please keep your boarding pass handy until you step onto the aircraft. (pliiz kiip ior bording pas hendi antil iu step ontu di erkraft) — Per favore tenete a portata di mano la carta d'imbarco fino a quando salite sull'aereo.
+Is there a pharmacy inside the departures terminal? (iz der e farmesi insaid de dipartciurz terminël) — C'è una farmacia all'interno del terminal delle partenze?
+Where can I rent a car upon arrival at the airport? (uer ken ai rent e kar apon eraivël et di eirport) — Dove posso noleggiare un'auto all'arrivo in aeroporto?
+Could you help me push this heavy luggage trolley? (kud iu help mi push dis hevi lagëj trouli) — Potresti aiutarmi a spingere questo carrello portabagagli pesante?
+Are liquids over one hundred milliliters allowed in cabin baggage? (ar likuidz ouver uan handred mililiterz eloud in kebin begëj) — I liquidi superiori a cento millilitri sono ammessi nel bagaglio a mano?
+Please place all electronic devices in a separate tray. (pliiz pleis ol ilektronik divaisiz in e sepret trei) — Per favore mettete tutti i dispositivi elettronici in un vassoio separato.
+Excuse me, is this seat next to the emergency exit? (ekskiuz mi, iz dis siit nekst tu di imerjensi eksit) — Mi scusi, questo posto è vicino all'uscita di sicurezza?
+The flight attendant is demonstrating safety procedures before takeoff. (de flait etendent iz demonstreiting seifti prosidiurz bifor teikof) — L'assistente di volo sta mostrando le procedure di sicurezza prima del decollo.
+Please fasten your seatbelts and return your seat upright. (pliiz fasën ior siitbelts end riturn ior siit apreit) — Per favore allacciate le cinture di sicurezza e rimettete il sedile in posizione verticale.
+Can I use my mobile phone in airplane mode during the flight? (ken ai iuz mai moubail foun in erplein moud diuring de flait) — Posso usare il mio cellulare in modalità aereo durante il volo?
+Where is the designated smoking area outside the terminal building? (uer iz de dezignetid smouking eria autsaid de terminël bilding) — Dov'è l'area fumatori designata fuori dall'edificio del terminal?
+We need to go through customs check after collecting our bags. (ui niid tu gou thru kastëmz cek after kolekting auer begz) — Dobbiamo passare attraverso il controllo doganale dopo aver ritirato le nostre valigie.
+Is there an information desk where I can ask for directions? (iz der en informeiscën desk uer ai ken ask for direksciënz) — C'è un banco informazioni dove posso chiedere indicazioni?
+Where can I plug in my phone to charge the battery? (uer ken ai plag in mai foun tu ciarj de beteri) — Dove posso attaccare il mio telefono per caricare la batteria?
+Are strollers allowed all the way up to the aircraft door? (ar strolerz eloud ol de uei ap tu di erkraft dor) — I passeggini sono ammessi fino alla porta dell'aeromobile?
+Excuse me, what time does the airline check-in counter open? (ekskiuz mi, uot taim daz di erlain cekin kaunter oupën) — Mi scusi, a che ora apre il banco del check-in della compagnia aerea?
+My passport expires in less than six months from today. (mai pasport ikspairz in les den siks manths from tudei) — Il mio passaporto scade in meno di sei mesi da oggi.
+Can I bring my pet on board in a special carrier? (ken ai bring mai pet on bord in e speciël kerier) — Posso portare il mio animale domestico a bordo in un trasportino speciale?
+Where is the VIP lounge for frequent flyer members? (uer iz de vii ai pii launj for frikuent flaier memberz) — Dov'è la sala VIP per i membri frequent flyer?
+The flight is currently boarding passengers by zones. (de flait iz karrëntli bording pasengerz bai zounz) — Il volo sta attualmente imbarcando i passeggeri per zone.
+Please make sure you have all your personal belongings before leaving. (pliiz meik sciur iu hev ol ior personël biloningz bifor liiving) — Per favore assicuratevi di avere tutti i vostri effetti personali prima di partire.
+Where can I buy a bottled water past the security checkpoint? (uer ken ai bai e botëld uoter past de sekiuriti cekpoint) — Dove posso comprare una bottiglietta d'acqua oltre il varco di sicurezza?
+Have a pleasant flight and a safe journey to your destination. (hev e plezent flait end e seif giurni tu ior destineiscën) — Buon volo e buon viaggio verso la vostra destinazione.
+What time does the ferry to the island depart? (uot taim daz de feri tu di ailend dipart) — A che ora parte il traghetto per l'isola?
+Where is the ticket office for the hydrofoil? (uer iz de tiket ofis for de haidrofoil) — Dov'è la biglietteria per l'aliscafo?
+Do we need to check in our car two hours before boarding? (du ui niid tu cekin auer kar tuu auerz bifor bording) — Dobbiamo fare il check-in dell'auto due ore prima dell'imbarco?
+Which pier does the cruise ship dock at? (uicc pir daz de kruuz scip dok et) — A quale molo attracca la nave da crociera?
+Is vehicle boarding allowed on this ferry? (iz viikël bording eloud on dis feri) — È consentito l'imbarco dei veicoli su questo traghetto?
+Could you tell me where dock number four is? (kud iu tel mi uer dok namber for iz) — Potrebbe dirmi dov'è il molo numero quattro?
+How long does the crossing take to reach the port? (hau long daz de krosing teik tu riicc de port) — Quanto dura la traversata per raggiungere il porto?
+Please have your boarding passes and passports ready. (pliiz hev ior bording pasiz end pasports redi) — Per favore tenete pronti i biglietti d'imbarco e i passaporti.
+Is sea sickness medication available at the port pharmacy? (iz sii sikness medikeiscën eveilebël et de port farmesi) — I farmaci per il mal di mare sono disponibili nella farmacia del porto?
+Where can I find a porter to help with heavy luggage? (uer ken ai faind e porter tu help uidh hevi lagëj) — Dove posso trovare un portabagagli per aiutarmi con i bagagli pesanti?
+We are going on a day excursion by boat along the coast. (ui ar gouing on e dei ekskerscën bai bout elong de koust) — Faremo un'escursione di un giorno in barca lungo la costa.
+Is there a waiting room with air conditioning in the terminal? (iz der e ueiting ruum uidh er kondiscëning in de terminël) — C'è una sala d'attesa con aria condizionata nel terminal?
+Can we park our car in the port long-stay parking lot? (ken ui park auer kar in de port longstei parking lot) — Possiamo parcheggiare l'auto nel parcheggio a lunga sosta del porto?
+What is the maximum height allowed for vehicles on board? (uot iz de maksimëm hait eloud for viikëlz on bord) — Qual è l'altezza massima consentita per i veicoli a bordo?
+The sea is quite rough today so the departure might be delayed. (de sii iz kuait raf tudei sou de dipartciur mait bi dileid) — Il mare è piuttosto agitato oggi quindi la partenza potrebbe essere ritardata.
+Where is the passenger drop-off area near the pier? (uer iz de pasenger dropof eria nir de pir) — Dov'è l'area di fermata passeggeri vicino al molo?
+Do we need to book a cabin for the overnight ferry? (du ui niid tu buk e kebin for di ouvernait feri) — Dobbiamo prenotare una cabina per il traghetto notturno?
+Are pets allowed on the upper deck of the ship? (ar pets eloud on di aper dek ov de scip) — Gli animali domestici sono ammessi sul ponte superiore della nave?
+Excuse me, is this the queue for foot passengers? (ekskiuz mi, iz dis de kiu for fuut pasengerz) — Mi scusi, è questa la fila per i passeggeri a piedi?
+Where can we rent a private boat for the afternoon? (uer ken ui rent e praivet bout for di afternuun) — Dove possiamo noleggiare una barca privata per il pomeriggio?
+The lighthouse is visible from the end of the harbor wall. (de laithaus iz vizibël from di end ov de harbor uol) — Il faro è visibile dalla fine del molo del porto.
+Please wait inside your car until driving instructions are given. (pliiz ueit insaid ior kar antil draiving instrakscënz ar givën) — Per favore attendete in auto finché non vengono date le istruzioni di guida.
+Is there a shuttle bus connecting the port to the railway station? (iz der e shatël bas konekting de port tu de reilwei steiscën) — C'è un autobus navetta che collega il porto alla stazione ferroviaria?
+We booked a reserved seat in the lounge area on the ferry. (ui bukt e rizervd siit in de launj eria on de feri) — Abbiamo prenotato un posto riservato nell'area lounge del traghetto.
+Where do I claim my tax refund at the port exit? (uer du ai kleim mai teks rifand et de port eksit) — Dove posso richiedere il rimborso fiscale all'uscita del porto?
+The ferry captain announced a slight delay due to fog. (de feri kaptin enaunst e slait dilei diu tu fog) — Il capitano del traghetto ha annunciato un leggero ritardo a causa della nebbia.
+Are life jackets available under every seat on the boat? (ar laif giekets eveilebël ander evri siit on de bout) — I giubbotti di salvataggio sono disponibili sotto ogni sedile della barca?
+Where can we buy tickets for the island hop tour? (uer ken ui bai tikets for di ailend hop tur) — Dove possiamo comprare i biglietti per il tour tra le isole?
+You must follow the marshals when driving onto the car deck. (iu mast folou de marscëlz uen draiving ontu de kar dek) — È necessario seguire gli addetti quando si guida sul ponte auto.
+Is there a restaurant or cafe open inside the ferry terminal? (iz der e restorant or kafei oupën insaid de feri terminël) — C'è un ristorante o un bar aperto all'interno del terminal traghetti?
+How much does a round-trip ticket for the ferry cost? (hau macc daz e raundtrip tiket for de feri kost) — Quanto costa un biglietto di andata e ritorno per il traghetto?
+The cruise ship will anchor in the bay until tomorrow morning. (de kruuz scip uil enker in de bei antil tumorou morning) — La nave da crociera getterà l'ancora nella baia fino a domani mattina.
+Where is the entrance for oversized vehicles and campers? (uer iz di entrens for ouversaizd viikëlz end kemperz) — Dov'è l'ingresso per i veicoli fuori misura e i camper?
+Can we leave our bags in the luggage storage at the port? (ken ui liiv auer begz in de lagëj storëj et de port) — Possiamo lasciare i nostri bagagli nel deposito bagagli al porto?
+The harbor authority has issued a weather warning for tonight. (de harbor othoriti hez isciud e ueder uorning for tunait) — L'autorità portuale ha emesso un avviso meteo per stasera.
+Which gate do we use to exit the port area? (uicc gheit du ui iuz tu eksit de port eria) — Quale varco usiamo per uscire dall'area portuale?
+We enjoyed watching the sailing boats enter the marina. (ui engioid uociing de seiling bouts enter de marina) — Ci è piaciuto guardare le barche a vela entrare nel porticciolo.
+Is there a charging point for electric vehicles at the terminal? (iz der e ciarging point for ilektrik viikëlz et de terminël) — C'è un punto di ricarica per veicoli elettrici al terminal?
+Please turn off your car engine while waiting to board. (pliiz tern of ior kar enjin uail ueiting tu bord) — Per favore spegnete il motore dell'auto durante l'attesa per l'imbarco.
+Where is the customs control point for international arrivals? (uer iz de kastëmz kontroul point for internescënël eraivëlz) — Dov'è il punto di controllo doganale per gli arrivi internazionali?
+We saw dolphins swimming near the ship during the voyage. (ui so dolfinz suiming nir de scip diuring de voiëj) — Abbiamo visto dei delfini nuotare vicino alla nave durante il viaggio.
+Can I change my ferry ticket to a later departure time? (ken ai ceinj mai feri tiket tu e leiter dipartciur taim) — Posso cambiare il mio biglietto del traghetto per un orario di partenza successivo?
+Is the footbridge open for pedestrians walking into the city? (iz de futbrigj oupën for pedestriëns uoking intu de siti) — Il ponte pedonale è aperto per i pedoni che vanno in città?
+The deck crew helped us secure our motorbike on board. (de dek kruu helpt as sekiur auer moutorbaik on bord) — L'equipaggio di coperta ci ha aiutato a fissare la nostra moto a bordo.
+Where can I find a map of the port and its facilities? (uer ken ai faind e mep ov de port end its fasilitiz) — Dove posso trovare una mappa del porto e dei suoi servizi?
+The catamaran service to the coastal town operates daily. (de katameran servis tu de koustël taun opereits deili) — Il servizio di catamarano per la città costiera opera tutti i giorni.
+Please watch your step when crossing the gangway to the ship. (pliiz uocc ior step uen krosing de genguei tu de scip) — Per favore fate attenzione ai piedi mentre attraversate la passerella per la nave.
+Is wifi available on board during the crossing? (iz uaifai eveilebël on bord diuring de krosing) — Il wifi è disponibile a bordo durante la traversata?
+We arrived early at the port to secure a good spot in line. (ui araivd erli et de port tu sekiur e gud spot in lain) — Siamo arrivati presto al porto per assicurarci un buon posto in fila.
+Have a safe voyage and enjoy the scenery along the coast! (hev e seif voiëj end engioi de siineri elong de koust) — Buon viaggio e goditi il panorama lungo la costa!
+Is the express train to Milan arriving on platform five? (iz di ikspres trein tu milan araiving on pletform faiv) — Il treno espresso per Milano arriva al binario cinque?
+Do I need to validate my subway ticket before tapping in? (du ai niid tu velideit mai sabuei tiket bifor teping in) — Devo convalidare il biglietto della metropolitana prima di passare i tornelli?
+Is there a high-speed train leaving for Florence this morning? (iz der e haispiid trein liiving for florens dis morning) — C'è un treno ad alta velocità in partenza per Firenze stamattina?
+Where is the automatic ticket machine for regional trains? (uer iz di otomatik tiket mesciin for rijënël treinz) — Dov'è la biglietteria automatica per i treni regionali?
+How many stops are there until the central railway station? (hau meni stops ar der antil de sentrël reilwei steiscën) — Quante fermate ci sono fino alla stazione ferroviaria centrale?
+Is this metro line running direct or local? (iz dis metrou lain ranning direkt or loukël) — Questa linea della metropolitana è diretta o fa tutte le fermate?
+Excuse me, does this subway line go towards the stadium? (ekskiuz mi, daz dis sabuei lain gou tuords de steidiëm) — Mi scusi, questa linea della metropolitana va verso lo stadio?
+You need to change lines at the next interchange station. (iu niid tu ceinj lainz et de nekst intercienj steiscën) — Devi cambiare linea alla prossima stazione di scambio.
+What is the frequency of the underground trains during peak hours? (uot iz de frikuensi ov di anderghraund treinz diuring piik auerz) — Qual è la frequenza dei treni della metropolitana nelle ore di punta?
+Is the left-luggage office open twenty-four hours a day? (iz de leftlagëj ofis oupën tuenti for auerz e dei) — L'ufficio deposito bagagli è aperto ventiquattr'ore su ventiquattr'ore?
+Please mind the gap between the train and the platform edge. (pliiz maind de gep bituiin de trein end de pletform edj) — Per favore prestare attenzione allo spazio tra il treno e il binario.
+Is my rail pass valid on this regional train line? (iz mai reil pas velid on dis rijënël trein lain) — Il mio abbonamento ferroviario è valido su questa linea regionale?
+Which exit should I take for the main square? (uicc eksit sciud ai teik for de mein skuer) — Quale uscita dovrei prendere per la piazza principale?
+The commuter train is delayed due to signaling problems. (de komiuter trein iz dileid diu tu signëling problëmz) — Il treno pendolari è in ritardo a causa di problemi di segnalamento.
+Can I buy a monthly travel card at the ticket window? (ken ai bai e manthli trevël kard et de tiket uindou) — Posso comprare un abbonamento mensile allo sportello?
+Is there an elevator down to the subway platforms? (iz der en eleveitor daun tu de sabuei pletformz) — C'è un ascensore per scendere ai binari della metropolitana?
+Does this train have quiet carriages for passengers resting? (daz dis trein hev kuaiet keridjiz for pasengerz resting) — Questo treno ha carrozze del silenzio per i passeggeri che riposano?
+Where is the lost property office in the station? (uer iz de lost properti ofis in de steiscën) — Dov'è l'ufficio oggetti smarriti nella stazione?
+The display board shows that the train is on time. (de displei bord scious det de trein iz on taim) — Il tabellone mostra che il treno è in orario.
+Do I have to switch from the blue line to the red line? (du ai hev tu suicc from de bluu lain tu de red lain) — Devo passare dalla linea blu alla linea rossa?
+Is first class seating available on this suburban train? (iz ferst klas siiting eveilebël on dis saberbën trein) — Sono disponibili posti in prima classe su questo treno suburbano?
+Could you tell me where the waiting room is located? (kud iu tel mi uer de ueiting ruum iz loukeitid) — Potrebbe dirmi dove si trova la sala d'attesa?
+Are bicycles allowed on the metro during rush hour? (ar baisikëlz eloud on de metrou diuring rash auer) — Le biciclette sono ammesse sulla metropolitana durante l'ora di punta?
+The train inspector is coming to check our tickets. (de trein inspektor iz kaming tu cek auer tikets) — Il controllore sta arrivando per verificare i nostri biglietti.
+Is there a charge for storing a large suitcase in the locker? (iz der e ciarj for storing e larj siutkeis in de loker) — C'è un costo per riporre una valigia grande nell'armadietto?
+What time is the last underground train tonight? (uot taim iz de last anderghraund trein tunait) — A che ora passa l'ultima metropolitana stasera?
+We missed our connection because the first train was late. (ui mist auer konekscën bikoz de ferst trein uoz leit) — Abbiamo perso la coincidenza perché il primo treno era in ritardo.
+Is tap-and-go payment accepted at the metro turnstiles? (iz tependgou peiment eksepted et de metrou ternstailz) — Il pagamento contactless è accettato ai tornelli della metropolitana?
+Please step back behind the yellow safety line on the platform. (pliiz step bek bihaind de ielou seifti lain on de pletform) — Per favore allontanarsi dalla linea gialla di sicurezza sul binario.
+Does this train carry a dining car with snacks and drinks? (daz dis trein keri e daining kar uidh sneks end drinks) — Questo treno ha una carrozza bar con snack e bevande?
+Which side of the train do the doors open on? (uicc said ov de trein du de dorz oupën on) — Da quale lato del treno si aprono le porte?
+Is there a discount ticket for senior citizens on the metro? (iz der e diskaunt tiket for sinior sitizenz on de metrou) — C'è un biglietto scontato per gli anziani sulla metropolitana?
+How long is the stop at this intermediate station? (hau long iz de stop et dis intermidiet steiscën) — Quanto dura la sosta in questa stazione intermedia?
+The ticket barrier is not accepting my magnetic card. (de tiket berrier iz not eksepting mai megnetik kard) — Il tornello non accetta la mia carta magnetica.
+You must tap out when exiting the subway station. (iu mast tep aut uen eksiting de sabuei steiscën) — Devi passare il biglietto ai tornelli quando esci dalla stazione metro.
+Is there a seat reservation required for this night train? (iz der e siit rezerveiscën rikuaird for dis nait trein) — È necessaria la prenotazione del posto per questo treno notturno?
+Where can I find a network map of the underground? (uer ken ai faind e netuork mep ov di anderghraund) — Dove posso trovare una mappa della rete metropolitana?
+The train was cancelled due to maintenance work on the tracks. (de trein uoz kenseld diu tu meintenens uork on de treks) — Il treno è stato cancellato per lavori di manutenzione sui binari.
+Does this station have escalator access to the surface? (daz dis steiscën hev eskeleitor ekses tu de serfis) — Questa stazione ha la scala mobile per salire in superficie?
+Which carriage number is printed on your paper ticket? (uicc keridj namber iz printid on ior peiper tiket) — Quale numero di carrozza è stampato sul tuo biglietto cartaceo?
+The announcements are broadcast in both English and Italian. (di enaunsments ar brodkast in bouth inglisc end italiën) — Gli annunci sono trasmessi sia in inglese che in italiano.
+Is there a connecting bus service right outside the station exit? (iz der e konekting bas servis rait autsaid de steiscën eksit) — C'è un servizio autobus di coincidenza proprio fuori dall'uscita della stazione?
+How many zones does this single ticket cover? (hau meni zounz daz dis singël tiket kaver) — Quante zone copre questo biglietto singolo?
+You can top up your transit card at any ticket machine. (iu ken top ap ior trenzit kard et eni tiket mesciin) — Puoi ricaricare la tua carta dei trasporti in qualsiasi emettitrice automatica.
+Please do not obstruct the train doors while they are closing. (pliiz du not obstrakt de trein dorz uail dei ar klouzing) — Per favore non ostruire le porte del treno mentre si chiudono.
+Is there a customer service desk near the main concourse? (iz der e kastomer servis desk nir de mein konkors) — C'è un banco di assistenza clienti vicino all'atrio principale?
+We need to walk along platform three to reach our carriage. (ui niid tu uok elong pletform thrii tu riicc auer keridj) — Dobbiamo camminare lungo il binario tre per raggiungere la nostra carrozza.
+Are all subway stations equipped with tactile paving for the blind? (ar ol sabuei steiscënz ikuipt uidh taktail peiving for de blaind) — Tutte le stazioni della metropolitana sono dotate di percorso tattile per non vedenti?
+The next train arriving on platform two does not stop here. (de nekst trein araiving on pletform tuu daz not stop hir) — Il prossimo treno in arrivo al binario due non effettua fermata qui.
+Have a smooth journey on your rail travel across the country! (hev e smuudh giurni on ior reil trevël ekros de kantri) — Buon viaggio in treno attraverso il paese!
+Is the host living on the property or nearby? (iz de houst living on de properti or nirbai) — L'host abita nella struttura o nelle vicinanze?
+What is the entry code for the front door? (uot iz di entri koud for de front dor) — Qual è il codice d'accesso per la porta d'ingresso?
+Could you show us where the breakfast room is? (kud iu scio as uer de brekfast ruum iz) — Potrebbe mostrarci dov'è la sala colazioni?
+Is homemade cake served with breakfast every morning? (iz hoummeid keik servd uidh brekfast evri morning) — Viene servita una torta fatta in casa a colazione ogni mattina?
+Do you offer any gluten-free products for breakfast? (du iu ofer eni gliutën frii prodakts for brekfast) — Offrite prodotti senza glutine per la colazione?
+Could we have breakfast a bit earlier tomorrow morning? (kud ui hev brekfast e bit erlier tumorou morning) — Potremmo fare colazione un po' prima domani mattina?
+Where can we leave the house keys when we check out? (uer ken ui liiv de haus kiiz uen ui cek aut) — Dove possiamo lasciare le chiavi di casa quando facciamo il check-out?
+Is there a common lounge area for all guests? (iz der e komën launj eria for ol ghests) — C'è un'area soggiorno comune per tutti gli ospiti?
+Can we use the coffee machine in the kitchen freely? (ken ui iuz de kofi mesciin in de kicën friili) — Possiamo usare liberamente la macchina del caffè in cucina?
+Are fresh towels provided every two days? (ar fresc tauelz providid evri tuu deiz) — Gli asciugamani puliti vengono forniti ogni due giorni?
+What time is the main entrance gate locked at night? (uot taim iz de mein entrens gheit lokt et nait) — A che ora viene chiuso a chiave il cancello principale di notte?
+Could you recommend a family-run restaurant nearby? (kud iu rekomend e femili ran restorant nirbai) — Potrebbe consigliarmi un ristorante a gestione familiare qui vicino?
+Is parking available directly in the courtyard? (iz parking eveilebël direktli in de kortiard) — Il parcheggio è disponibile direttamente nel cortile?
+Can I borrow an iron from the host? (ken ai borou en airën from de houst) — Posso prendere in prestito un ferro da stiro dall'host?
+Is there a small fridge in the room for our drinks? (iz der e smol fridj in de ruum for auer drinks) — C'è un piccolo frigorifero in camera per le nostre bevande?
+The host gave us a map of the surrounding village. (de houst gheiv as e mep ov de sarraunding vilëj) — L'host ci ha dato una mappa del borgo circostante.
+Could we get a tea kettle for our room? (kud ui ghet e tii ketël for auer ruum) — Potremmo avere un bollitore per il tè in camera?
+Is daily housekeeping included in our B&B reservation? (iz deili hauskiiping inkluudid in auer bii end bii rezerveiscën) — Le pulizie giornaliere sono incluse nella nostra prenotazione B&B?
+Can we leave our bicycles in the garden shed overnight? (ken ui liiv auer baisikëlz in de gardën scied ouvernait) — Possiamo lasciare le nostre biciclette nel capanno in giardino per la notte?
+Where is the main thermostat to adjust the heating? (uer iz de mein thermostat tu edjast de hiiting) — Dov'è il termostato principale per regolare il riscaldamento?
+Are we allowed to use the garden terrace in the evening? (ar ui eloud tu iuz de gardën teres in di iivning) — Ci è consentito usare la terrazza in giardino la sera?
+The host prepared a delicious basket of fresh local fruit. (de houst priperd e dilishës basket ov fresc loukël fruut) — L'host ha preparato un delizioso cestino di frutta fresca locale.
+Do you have any extra blankets stored in the wardrobe? (du iu hev eni ekstra blenkits stord in de uordroub) — Avete delle coperte extra nell'armadio?
+Can you order a local taxi for us tomorrow at eight? (ken iu order e loukël teksi for as tumorou et eit) — Può ordinare un taxi locale per noi domani alle otto?
+What options are available for breakfast tomorrow morning? (uot opscënz ar eveilebël for brekfast tumorou morning) — Quali opzioni sono disponibili per colazione domani mattina?
+What are the quiet hours during the night? (uot ar de kuaiet auerz diuring de nait) — Quali sono gli orari del silenzio durante la notte?
+Could you give us a spare set of house keys? (kud iu giv as e sper set ov haus kiiz) — Potrebbe darci un set di chiavi di riserva?
+Is there a microwave available for heating up baby food? (iz der e maikroueiv eveilebël for hiiting ap beibi fuud) — C'è un microonde disponibile per scaldare le pappe dei bambini?
+The host was very welcoming and recommended great hiking trails. (de houst uoz veri uelkaming end rekomendid greit haiking treilz) — L'host è stato molto accogliente e ha consigliato ottimi sentieri da trekking.
+Is there a safe place to leave our bags after checking out? (iz der e seif pleis tu liiv auer begz after ceking aut) — C'è un posto sicuro dove lasciare le nostre borse dopo il check-out?
+Is fresh milk provided in the communal kitchen? (iz fresc milk providid in de komiunël kicën) — Il latte fresco è fornito nella cucina comune?
+Could you tell us how to turn on the bathroom radiator? (kud iu tel as hau tu tern on de bathruum reidieitor) — Potrebbe dirci come accendere il radiatore del bagno?
+Are pets allowed inside the bed and breakfast rooms? (ar pets eloud insaid de bed end brekfast ruumz) — Gli animali domestici sono ammessi nelle camere del bed and breakfast?
+The room was decorated in a cozy rustic style. (de ruum uoz dekoreitid in e kouzi rastik stail) — La camera era arredata in un accogliente stile rustico.
+What time should we inform you about our arrival time? (uot taim sciud ui inform iu ebaut auer eraivël taim) — A che ora dovremmo comunicarvi il nostro orario di arrivo?
+Is there an outdoor swimming pool in the garden area? (iz der en autdor suiming puul in de gardën eria) — C'è una piscina all'aperto nell'area del giardino?
+Could you recommend a scenic spot to watch the sunset? (kud iu rekomend e siinik spot tu uocc de sanset) — Potrebbe consigliare un punto panoramico per guardare il tramonto?
+Do we need to turn off all lights when leaving the house? (du ui niid tu tern of ol laits uen liiving de haus) — Dobbiamo spegnere tutte le luci quando usciamo di casa?
+Can we request savory breakfast options like cheese and ham? (ken ui rikuest seivori brekfast opscënz laik ciiz end hem) — Possiamo richiedere opzioni di colazione salata come formaggio e prosciutto?
+The host kindly offered us a welcome drink upon arrival. (de houst kaindli oferd as e uelkam drink apon eraivël) — L'host ci ha gentilmente offerto un drink di benvenuto all'arrivo.
+Is smoking allowed on the private balcony? (iz smouking eloud on de praivet belkoni) — È consentito fumare sul balcone privato?
+How do we open the automatic gate at night? (hau du ui oupën di otomatik gheit et nait) — Come apriamo il cancello automatico di notte?
+Can you recommend a good local bakery nearby? (ken iu rekomend e gud loukël beikëri nirbai) — Può consigliarci una buona panetteria locale qui vicino?
+We felt completely at home during our stay at the B&B. (ui felt kompliitli et houm diuring auer stei et de bii end bii) — Ci siamo sentiti completamente a casa durante il nostro soggiorno al B&B.
+Is there a washing machine we can use for a small fee? (iz der e uosciing mesciin ui ken iuz for e smol fii) — C'è una lavatrice che possiamo usare con un piccolo supplemento?
+Could you provide a baby cot for our room? (kud iu provaid e beibi kot for auer ruum) — Potrebbe fornire una culla per neonati per la nostra stanza?
+What is the best route to reach the village center on foot? (uot iz de best ruut tu riicc de vilëj senter on fuut) — Qual è il percorso migliore per raggiungere a piedi il centro del paese?
+The continental breakfast included freshly squeezed orange juice. (de kontinentël brekfast inkluudid freshli skuiizd orenj giuus) — La colazione continentale includeva spremuta d'arancia fresca.
+Please let us know if we need to lock the main entrance door. (pliiz let as nou if ui niid tu lok de mein entrens dor) — Per favore ci faccia sapere se dobbiamo chiudere a chiave la porta d'ingresso principale.
+Thank you for your warm hospitality and wonderful tips! (thenk iu for ior uorm hospitaliti end uanderful tips) — Grazie per la calda ospitalità e i meravigliosi consigli!
+Let us go window shopping along the main pedestrian street. (let as gou uindou sciopping elong de mein pedestriën striit) — Andiamo a guardare le vetrine lungo la via pedonale principale.
+Do you want to pop into that clothing boutique for a minute? (du iu uont tu pop intu det klouthing butiik for e minit) — Vuoi fare un salto in quella boutique di abbigliamento per un minuto?
+Look at that gorgeous coat on the mannequin in the window! (luk et det gorjës kout on de menikin in de uindou) — Guarda che splendido cappotto sul manichino in vetrina!
+Is this leather handbag made of genuine leather? (iz dis leder hendbeg meid ov jeniuin leder) — Questa borsa di pelle è in vera pelle?
+I am looking for a pair of comfortable sneakers for walking. (ai em luking for e per ov kamfortebël sniikerz for uoking) — Sto cercando un paio di scarpe da ginnastica comode per camminare.
+Can I try on these sunglasses in a different color frame? (ken ai trai on diiz sanglasiz in e diferent kaler freim) — Posso provare questi occhiali da sole con la montatura di un colore diverso?
+Is there a shoe shop on this shopping street? (iz der e sciu sciop on dis sciopping striit) — C'è un negozio di scarpe in questa via dello shopping?
+The summer sales have just started this week. (de samer seilz hev giast startid dis uiik) — I saldi estivi sono appena iniziati questa settimana.
+Do you think this color suits me or should I try black? (du iu think dis kaler suuts mi or sciud ai trai blek) — Pensi che questo colore mi stia bene o dovrei provare il nero?
+I need to find a nice scarf to match this dress. (ai niid tu faind e nais skarf tu mecc dis dres) — Devo trovare una bella sciarpa da abbinare a questo vestito.
+Excuse me, do you have these boots in size thirty-nine? (ekskiuz mi, du iu hev diiz buuts in saiz therti nain) — Scusi, avete questi stivali nel numero trentanove?
+Is this shirt made of one hundred percent cotton? (iz dis shert meid ov uan handred persent kotën) — Questa camicia è di cotone al cento per cento?
+I am just browsing for now, thank you for asking. (ai em giast brauzing for nau, thenk iu for asking) — Sto solo dando un'occhiata per ora, grazie per avermelo chiesto.
+Where is the nearest department store around here? (uer iz de nirest dipartment stor eraund hir) — Dov'è il grande magazzino più vicino da queste parti?
+Could you tell me if this belt comes in a larger size? (kud iu tel mi if dis belt kams in e larger saiz) — Potrebbe dirmi se questa cintura c'è in una taglia più grande?
+These trousers are a bit too long, do you offer alterations? (diiz trauzerz ar e bit tuu long, du iu ofer oltereiscënz) — Questi pantaloni sono un po' troppo lunghi, fate riparazioni sartoriali?
+Let us take a break from shopping and get a gelato. (let as teik e breik from sciopping end ghet e jelato) — Facciamo una pausa dallo shopping e prendiamo un gelato.
+I love the vintage clothes in this secondhand shop. (ai lav de vintëj klouthz in dis sekëndhend sciop) — Adoro i vestiti vintage in questo negozio dell'usato.
+Are these handmade ceramics produced by local artisans? (ar diiz hendmeid seramiks prodiust bai loukël artizens) — Queste ceramiche fatte a mano sono prodotte da artigiani locali?
+Can I keep the box for these new shoes? (ken ai kiip de boks for diiz niu sciuz) — Posso tenere la scatola per queste scarpe nuove?
+I bought this wool sweater on sale at half price. (ai bot dis wuul suetter on seil et haf prais) — Ho comprato questo maglione di lana in saldo a metà prezzo.
+Is there a mirror nearby so I can see how it looks? (iz der e mirror nirbai sou ai ken sii hau it luks) — C'è uno specchio qui vicino così posso vedere come sta?
+This jewelry shop has some very elegant silver necklaces. (dis giuelri sciop hez sam veri elegant silver neklesiz) — Questa gioielleria ha delle collane d'argento molto eleganti.
+Could you wrap this delicate porcelain vase carefully? (kud iu rep dis deliket porcelein veis kerfuli) — Potrebbe incartare questo vaso di porcellana delicato con cura?
+We have been walking through the shopping district all morning. (ui hev bin uoking thru de sciopping distrikt ol morning) — Abbiamo camminato nel quartiere dello shopping per tutta la mattina.
+Do you accept credit card payments for small amounts? (du iu eksept kredit kard peiments for smol emaunts) — Accettate pagamenti con carta di credito per piccoli importi?
+I would like to exchange this sweater for a smaller size. (ai wud laik tu ikscenj dis suetter for e smoler saiz) — Vorrei cambiare questo maglione con una taglia più piccola.
+Are there any luxury brand outlets near the city center? (ar der eni lakshëri brend autlets nir de siti senter) — Ci sono outlet di marchi di lusso vicino al centro città?
+Look at these cute handmade souvenirs in the gift shop! (luk et diiz kiut hendmeid suuvenirz in de ghift sciop) — Guarda questi carini souvenir fatti a mano nel negozio di souvenir!
+Is this umbrella sturdy enough for strong wind? (iz dis ambrela sterdi inaf for strong uind) — Questo ombrello è abbastanza robusto per il vento forte?
+I am looking for a light jacket for cool summer evenings. (ai em luking for e lait giaket for kuul samer iivningz) — Sto cercando una giacca leggera per le fresche sere d'estate.
+Excuse me, is this hat available in one size only? (ekskiuz mi, iz dis het eveilebël in uan saiz ounli) — Scusi, questo cappello è disponibile solo in taglia unica?
+Can you show me the newest arrivals in the window? (ken iu scio mi de niuest eraivëlz in de uindou) — Puoi mostrarmi le ultime novità in vetrina?
+My shopping bag is getting quite heavy to carry around. (mai sciopping beg iz ghetting kuait hevi tu keri eraund) — La mia borsa della spesa sta diventando piuttosto pesante da portare in giro.
+This perfume shop has a wide selection of fragrances. (dis perfiuum sciop hez e uaid selekscën ov freigrensiz) — Questa profumeria ha un'ampia selezione di fragranze.
+Could you give me a receipt so I can claim Tax Free? (kud iu giv mi e risiit sou ai ken kleim teks frii) — Potrebbe darmi uno scontrino così posso richiedere il Tax Free?
+I really like the design of this leather wallet. (ai riili laik de dizain ov dis leder uolët) — Mi piace molto il design di questo portafoglio in pelle.
+Is this fabric machine washable or dry clean only? (iz dis fabrik mesciin uosciebël or drai kliin ounli) — Questo tessuto è lavabile in lavatrice o solo a secco?
+Let us walk down this narrow alley to see the artisan shops. (let as uok daun dis narou eli tu sii di artizen sciops) — Camminiamo lungo questo vicolo stretto per vedere le botteghe artigiane.
+I am carrying too many bags, let us head back to the hotel. (ai em kerriing tuu meni begz, let as hed bek tu de houtel) — Sto portando troppe borse, torniamo verso l'hotel.
+Do you have any discounts if I purchase three items? (du iu hev eni diskaunts if ai percës thrii aitëmz) — Avete degli sconti se acquisto tre articoli?
+She bought an elegant silk scarf as a gift for her mother. (scii bot en elegant silk skarf ez e ghift for her mader) — Ha comprato un'elegante sciarpa di seta come regalo per sua madre.
+Where can I find a good antique market in this area? (uer ken ai faind e gud entiik market in dis eria) — Dove posso trovare un buon mercato dell'antiquariato in questa zona?
+This pair of sunglasses offers full UV protection. (dis per ov sanglasiz oferz ful iu vii protekscën) — Questo paio di occhiali da sole offre una protezione UV completa.
+Can I leave my heavy bags at the customer service desk? (ken ai liiv mai hevi begz et de kastomer servis desk) — Posso lasciare le mie borse pesanti al banco di assistenza clienti?
+I cannot decide between the navy blue and the dark green one. (ai kenot disaid bituiin de neivi bluu end de dark griin uan) — Non riesco a decidere tra quello blu notte e quello verde scuro.
+Are there any sports equipment stores on this avenue? (ar der eni sports ikuipment storz on dis eveniu) — Ci sono negozi di articoli sportivi in questo viale?
+Look at that long queue outside the new bakery! (luk et det long kiu autsaid de niu beikëri) — Guarda che lunga fila fuori dalla nuova panetteria!
+This store specializes in handmade leather shoes. (dis stor speshelaiziz in hendmeid leder sciuz) — Questo negozio è specializzato in scarpe in pelle fatte a mano.
+What a wonderful afternoon for strolling through the shops! (uot e uanderful afternuun for strouling thru de sciops) — Che pomeriggio delizioso per passeggiare tra i negozi!
+Shall we cross the street at the pedestrian crossing? (scial ui kros de striit et de pedestriën krosing) — Attraversiamo la strada sulle strisce pedonali?
+Look at the stunning architecture of this ancient building. (luk et de staning arkitektiur ov dis einscënt bilding) — Guarda l'architettura mozzafiato di questo antico edificio.
+Is there a nice park nearby where we can sit down? (iz der e nais park nirbai uer ui ken sit daun) — C'è un bel parco qui vicino dove possiamo sederci?
+Let us take a short break on this park bench. (let as teik e short breik on dis park bencc) — Facciamo una breve pausa su questa panchina.
+Could you take a picture of us in front of the fountain? (kud iu teik e pikciur ov as in front ov de fauntën) — Potrebbe scattarci una foto davanti alla fontana?
+This main square is always full of street performers. (dis mein skuer iz olueiz ful ov striit performerz) — Questa piazza principale è sempre piena di artisti di strada.
+Which way leads to the historical town center? (uicc uei liidz tu de histerikël taun senter) — Quale strada porta al centro storico?
+The city hall is located at the end of this avenue. (de siti hol iz loukeitid et di end ov dis eveniu) — Il municipio si trova alla fine di questo viale.
+Let us walk along the river bank at sunset. (let as uok elong de river benk et sanset) — Camminiamo lungo la riva del fiume al tramonto.
+Is this cobblestone street accessible for strollers? (iz dis kobëlstoun striit eksesibël for strolerz) — Questa strada in ciottoli è accessibile ai passeggini?
+We can get a wonderful view of the city from this hill. (ui ken ghet e uanderful viu ov de siti from dis hil) — Possiamo godere di una vista meravigliosa della città da questa collina.
+Do you know the history of this marble statue? (du iu nou de histëri ov dis marbël stachiu) — Conosci la storia di questa statua di marmo?
+Let us stroll through the narrow alleys of the old neighborhood. (let as stroul thru de narou eliz ov di ould neiborhud) — Passeggiamo per i vicoli stretti del vecchio quartiere.
+There is a beautiful botanical garden near the castle. (der iz e biutiful boutenikël gardën nir de kasël) — C'è un bellissimo giardino botanico vicino al castello.
+Watch out for the cyclists coming down the bike lane. (uocc aut for de saiklists kaming daun de baik lein) — Fai attenzione ai ciclisti che scendono lungo la pista ciclabile.
+How old is the cathedral located in the center? (hau ould iz de kethidrël loukeitid in de senter) — Quanti anni ha la cattedrale situata in centro?
+There are many cozy cafes along this tree-lined boulevard. (der ar meni kouzi kafeiz elong dis trii laind buulevard) — Ci sono molti caffè accoglienti lungo questo viale alberato.
+Let us cross the stone bridge to get to the other side. (let as kros de stoun brigj tu ghet tu di ader said) — Attraversiamo il ponte di pietra per andare dall'altra parte.
+Is there a tourist map of the walking routes available? (iz der e turist mep ov de uoking ruuts eveilebël) — C'è una mappa turistica dei percorsi a piedi disponibile?
+Look at the colourful flowers decorating the balconies. (luk et de kalorful flauerz dekoreiting de belkoniz) — Guarda i fiori colorati che decorano i balconi.
+Where does this pedestrian path lead to? (uer daz dis pedestriën path liid tu) — Dove porta questo percorso pedonale?
+We can hear the church bells ringing across the town. (ui ken hir de cerc belz ringing ekros de taun) — Possiamo sentire le campane della chiesa suonare in tutta la città.
+Let us stop at the drinking fountain to fill our bottles. (let as stop et de drinking fauntën tu fil auer botëlz) — Fermiamoci alla fontanella per riempire le nostre borracce.
+The street lights are turning on as evening falls. (de striit laits ar terning on ez iivning folz) — I lampioni si stanno accendendo mentre scende la sera.
+Is it safe to walk around this neighborhood at night? (iz it seif tu uok eraund dis neiborhud et nait) — È sicuro camminare in questo quartiere di notte?
+There is a lively open-air market happening in the square today. (der iz e laivli oupën er market hepëning in de skuer tudei) — Oggi c'è un vivace mercato all'aperto nella piazza.
+We noticed a plaque commemorating a famous historical event. (ui noutist e plek komemoreiting e feimës histerikël ivent) — Abbiamo notato una targa che commemora un famoso evento storico.
+Can you guide us towards the main promenade? (ken iu gaid as tuords de mein promeneid) — Puoi guidarci verso la passeggiata principale?
+I love the vibrant atmosphere of this bustling street. (ai lav de vaibrent atmosfir ov dis basling striit) — Adoro l'atmosfera vivace di questa strada animata.
+Should we head back towards the hotel before it gets dark? (sciud ui hed bek tuords de houtel bifor it ghets dark) — Dovremmo tornare verso l'hotel prima che faccia buio?
+The ancient city walls are remarkably well preserved. (di einscënt siti uolz ar rimarkëbli uel prizervd) — Le antiche mura della città sono straordinariamente ben conservate.
+Let us take the stairs leading up to the panoramic viewpoint. (let as teik de sterz liiding ap tu de panoramik viupoint) — Prendiamo le scale che portano al punto panoramico.
+This neighborhood is famous for its colorful street art. (dis neiborhud iz feimës for its kalorful striit art) — Questo quartiere è famoso per la sua vivace arte urbana.
+Are there any shaded benches where we can rest in the shade? (ar der eni sceidid benciz uer ui ken rest in de sceid) — Ci sono panchine all'ombra dove possiamo riposarci?
+The traffic noise disappears once you enter the quiet alley. (de trafik noiz disepiirz uans iu enter de kuaiet eli) — Il rumore del traffico scompare appena si entra nel vicolo silenzioso.
+You can admire the ruins from the observation platform. (iu ken edmaier de ruinz from di observeiscën pletform) — Puoi ammirare i resti dalla piattaforma di osservazione.
+Let us follow the signposts directing visitors to the monument. (let as folou de sainpousts direkting vizitorz tu de moniument) — Seguiamo i cartelli che indicano il monumento ai visitatori.
+Is there a scenic walking trail along the coastline? (iz der e siinik uoking treil elong de koustlain) — C'è un sentiero panoramico lungo la costa?
+I enjoy observing daily life in the neighborhood squares. (ai engioi obzerving deili laif in de neiborhud skuerz) — Mi piace osservare la vita quotidiana nelle piazze del quartiere.
+Do not forget to look up at the decorative details on the facades. (du not forget tu luk ap et de dekorativ diteilz on de fasadz) — Non dimenticare di alzare lo sguardo sui dettagli decorativi delle facciate.
+The bell tower dominates the skyline of the whole city. (de bel tauer domineits de skailain ov de houl siti) — Il campanile domina il panorama dell'intera città.
+Let us cross the avenue at the traffic lights when it turns green. (let as kros di eveniu et de trafik laits uen it ternz griin) — Attraversiamo il viale al semaforo quando diventa verde.
+There is a bronze monument erected in honor of the founder. (der iz e bronz moniument irektid in oner ov de faunder) — C'è un monumento in bronzo eretto in onore del fondatore.
+We walked for hours discovering hidden corners of the town. (ui uokt for auerz diskavering hidën kornerz ov de taun) — Abbiamo camminato per ore scoprendo angoli nascosti della città.
+The park is full of locals walking their dogs in the evening. (de park iz ful ov loukëlz uoking deir dogz in di iivning) — Il parco è pieno di residenti che portano a spasso i cani la sera.
+Is the old fortress open for public visits today? (iz di ould fortres oupën for pablik vizits tudei) — La vecchia fortezza è aperta per le visite pubbliche oggi?
+Let us sit near the pond and watch the ducks. (let as sit nir de pond end uocc de daks) — Sediamoci vicino allo stagno a guardare le anatre.
+This historical gate was once the main entrance to the city. (dis histerikël gheit uoz uans de mein entrens tu de siti) — Questa porta storica un tempo era l'ingresso principale della città.
+The whole downtown area is restricted to pedestrians only. (de houl dauntaun eria iz ristriktid tu pedestriëns ounli) — L'intera zona del centro storico è riservata esclusivamente ai pedoni.
+What a charming place to take an evening stroll! (uot e ciarming pleis tu teik en iivning stroul) — Che posto incantevole per fare una passeggiata serale!
+We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
 /* ================================================================
