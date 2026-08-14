@@ -321,8 +321,40 @@
     font-weight:800;
     color:#0f172a;
     margin-bottom:8px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
   }
   .ing-en .flag{ margin-right:8px; }
+  .ing-en-text{ flex:1; }
+
+  .ing-speak-btn{
+    flex-shrink:0;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    border:none;
+    background:var(--accent);
+    color:#ffffff;
+    font-size:16px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 2px 6px rgba(20,30,50,0.12);
+    transition: transform .12s ease, filter .12s ease;
+  }
+  .ing-speak-btn:hover{ filter:brightness(1.08); }
+  .ing-speak-btn:active{ transform:scale(0.92); }
+  .ing-speak-btn.speaking{
+    background:var(--cal-accent);
+    animation: ingPulse 1s ease-in-out infinite;
+  }
+  @keyframes ingPulse{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.1); }
+  }
 
   .ing-it{
     font-size:19px;
@@ -948,7 +980,10 @@ function renderFrasiIng(){
 
   container.innerHTML = frasi.map(f => `
     <div class="ing-card">
-      <div class="ing-en"><span class="flag">🇬🇧</span>${escapeHtml(f.en)}</div>
+      <div class="ing-en">
+        <span class="ing-en-text"><span class="flag">🇬🇧</span>${escapeHtml(f.en)}</span>
+        <button type="button" class="ing-speak-btn" data-testo="${escapeHtml(f.en)}" title="Ascolta la pronuncia" aria-label="Ascolta la pronuncia">🔊</button>
+      </div>
       <div class="ing-it"><span class="flag">🇮🇹</span>${escapeHtml(f.it)}</div>
     </div>
   `).join('');
@@ -958,11 +993,72 @@ function renderFrasiIng(){
 }
 
 /* ================================================================
+   LETTURA AD ALTA VOCE (Web Speech API) — pronuncia le frasi inglesi
+   usando una voce inglese del dispositivo, se disponibile. Non
+   richiede librerie esterne: si appoggia a window.speechSynthesis,
+   supportato dai principali browser desktop e mobile.
+   ================================================================ */
+let vociDisponibili = [];
+
+function caricaVociIng(){
+  if(!('speechSynthesis' in window)) return;
+  vociDisponibili = window.speechSynthesis.getVoices();
+}
+
+function scegliVoceIng(){
+  if(!vociDisponibili.length) return null;
+  // Preferenza: voce inglese UK, poi US, poi qualsiasi voce "en-*"
+  return vociDisponibili.find(v => v.lang === 'en-GB') ||
+         vociDisponibili.find(v => v.lang === 'en-US') ||
+         vociDisponibili.find(v => v.lang && v.lang.toLowerCase().startsWith('en')) ||
+         null;
+}
+
+function parlaFraseIng(testo, bottone){
+  if(!('speechSynthesis' in window)){
+    alert('La lettura vocale non è supportata su questo browser.');
+    return;
+  }
+
+  // Se sta già parlando, interrompe (comportamento "toggle" sul click ripetuto)
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(testo);
+  utterance.lang = 'en-GB';
+  const voce = scegliVoceIng();
+  if(voce) utterance.voice = voce;
+  utterance.rate = 0.95;
+  utterance.pitch = 1;
+
+  document.querySelectorAll('.ing-speak-btn.speaking').forEach(b => b.classList.remove('speaking'));
+  if(bottone) bottone.classList.add('speaking');
+
+  utterance.onend = () => { if(bottone) bottone.classList.remove('speaking'); };
+  utterance.onerror = () => { if(bottone) bottone.classList.remove('speaking'); };
+
+  window.speechSynthesis.speak(utterance);
+}
+
+function initLetturaVoceIng(){
+  if(!('speechSynthesis' in window)) return;
+  caricaVociIng();
+  // Le voci vengono caricate in modo asincrono dal browser
+  window.speechSynthesis.onvoiceschanged = caricaVociIng;
+
+  document.getElementById('ingList').addEventListener('click', (e) => {
+    const btn = e.target.closest('.ing-speak-btn');
+    if(!btn) return;
+    parlaFraseIng(btn.dataset.testo, btn);
+  });
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
   initConfigPanel();
   renderFrasiIng();
+  initLetturaVoceIng();
 
   document.getElementById('ingRefreshBtn').addEventListener('click', renderFrasiIng);
 });
