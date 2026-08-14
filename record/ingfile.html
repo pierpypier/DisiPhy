@@ -1021,9 +1021,10 @@ function parlaFraseIng(testo, bottone){
   }
 
   // Se sta già parlando, interrompe (comportamento "toggle" sul click ripetuto)
+  const testoPulito = testo.replace(/\s*\([^)]*\)/g, '').trim();
   window.speechSynthesis.cancel();
 
-  const utterance = new SpeechSynthesisUtterance(testo);
+  const utterance = new SpeechSynthesisUtterance(testoPulito);
   utterance.lang = 'en-GB';
   const voce = scegliVoceIng();
   if(voce) utterance.voice = voce;
