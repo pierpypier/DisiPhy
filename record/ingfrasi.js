@@ -1962,6 +1962,54 @@ Let us sit near the pond and watch the ducks. (let as sit nir de pond end uocc d
 This historical gate was once the main entrance to the city. (dis histerikël gheit uoz uans de mein entrens tu de siti) — Questa porta storica un tempo era l'ingresso principale della città.
 The whole downtown area is restricted to pedestrians only. (de houl dauntaun eria iz ristriktid tu pedestriëns ounli) — L'intera zona del centro storico è riservata esclusivamente ai pedoni.
 What a charming place to take an evening stroll! (uot e ciarming pleis tu teik en iivning stroul) — Che posto incantevole per fare una passeggiata serale!
+Did you bring enough water for everyone? (Did iu bring i-naf uoter for ev-ri-uan?) - Hai portato abbastanza acqua per tutti?
+I think I'll sit here for a bit and watch the waves. (Ai think ail sit hier for e bit end uotc de ueivz) - Credo che starò qui un po' a guardare le onde.
+Are you actually going in, or are you just dipping your feet? (Ar iu ektciueli gouing in, or ar iu giast diping ior fiit?) - Entri davvero in acqua o immergi solo i piedi?
+It's much warmer than I expected today. (Its mac uormer den ai ekspektid tudei) - Oggi è molto più caldo di quanto mi aspettassi.
+Don't wander too far out, especially with these waves. (Dount uonder tuu far aut, espe-scieli uid dhiiz ueivz) - Non andare troppo al largo, soprattutto con queste onde.
+I could stay here all afternoon if nobody's in a hurry. (Ai kud stei hier ol after-nuun if noubodiz in e hari) - Potrei restare qui tutto il pomeriggio se nessuno ha fretta.
+Have you put enough sunscreen on your shoulders? (Hev iu put i-naf sanskriin on ior sciolders?) - Hai messo abbastanza crema solare sulle spalle?
+Dad, can we get something cold to drink later? (Ded, ken ui get samthing kould tu drink leiter?) - Papà, possiamo prendere qualcosa di fresco da bere più tardi?
+Let's wait until the sun goes down a little before we head back. (Lets ueit until de san gouz daun e litel bifor ui hed bek) - Aspettiamo che il sole scenda un po' prima di tornare indietro.
+I haven't been to this beach since I was a kid. (Ai hev-nt biin tu dis biic sins ai uoz e kid) - Non venivo in questa spiaggia da quando ero bambino.
+Look at those boats out there; I wonder where they're going. (Luk et dhouz bouts aut der; ai uonder uer deir gouing) - Guarda quelle barche laggiù; chissà dove stanno andando.
+The water looks calm, but it's surprisingly deep over there. (De uoter luks kam, bat its ser-praizing-lii diip ouver der) - L'acqua sembra calma, ma lì è sorprendentemente profonda.
+Did you see that family trying to keep their umbrella from blowing away? (Did iu sii det femili traiing tu kiip deir ambrela from blouing euei?) - Hai visto quella famiglia che cercava di non far volare via l'ombrellone?
+We should grab our stuff before the tide comes in. (Ui sciud greb auer staf bifor de taid kamz in) - Dovremmo prendere le nostre cose prima che salga la marea.
+I think the little one is getting tired of being in the sun. (Ai think de litel uan iz geting taiard ov biing in de san) - Credo che il piccolo si stia stancando di stare al sole.
+Why don't we have lunch somewhere along the waterfront? (Uai dount ui hev lanc samuer elong de uoterfront?) - Perché non pranziamo da qualche parte sul lungomare?
+That breeze feels really nice after being out in the heat. (Det briiz fiilz rili nais after biing aut in de hiit) - Questa brezza è davvero piacevole dopo essere stati al caldo.
+Mum, I'm starving. Can we get an ice cream? (Mam, aim starving. Ken ui get en ais kriim?) - Mamma, sto morendo di fame. Possiamo prendere un gelato?
+I don't remember the sea being this clear when we came here last summer. (Ai dount rimember de sii biing dis kliir uen ui keim hier last samer) - Non ricordo che il mare fosse così limpido quando siamo venuti qui l'estate scorsa.
+You've got sand all over your face. (Iuv got send ol ouver ior feis) - Hai sabbia dappertutto sulla faccia.
+Hold on, I've got something in my eye. (Hould on, aiv got samthing in mai ai) - Aspetta, ho qualcosa nell'occhio.
+Let's rinse our feet before getting back in the car. (Lets rins auer fiit bifor geting bek in de kar) - Sciacquiamoci i piedi prima di risalire in macchina.
+Do you fancy going for a walk along the beach later? (Du iu fensi gouing for e uok elong de biic leiter?) - Ti va di fare una passeggiata sulla spiaggia più tardi?
+I remember Dad bringing us here when we were little. (Ai rimember Ded briging as hier uen ui uer litel) - Ricordo che papà ci portava qui quando eravamo piccoli.
+The kids have been playing in the sand for nearly an hour. (De kids hev biin pleiing in de send for nirli en auer) - I bambini giocano nella sabbia da quasi un'ora.
+We'd better move the chairs into the shade. (Uid beter muuv de cers intu de sceid) - Faremmo meglio a spostare le sedie all'ombra.
+Can you keep an eye on my bag while I go for a swim? (Ken iu kiip en ai on mai beg uail ai gou for e suim?) - Puoi tenere d'occhio la mia borsa mentre faccio una nuotata?
+I thought the beach would be packed, but it's actually pretty quiet. (Ai thot de biic ud bi pekt, bat its ektciueli priti kuaiet) - Pensavo che la spiaggia sarebbe stata affollatissima, invece è abbastanza tranquilla.
+We could come back here tomorrow if the weather stays like this. (Ui kud kam bek hier tumorou if de ueder steiz laik dis) - Potremmo tornare qui domani se il tempo resta così.
+Did anyone bring a book, or are we all just going to sit around? (Did eniuan bring e buk, or ar ui ol giast gouing tu sit eraund?) - Qualcuno ha portato un libro o staremo tutti semplicemente qui a non fare niente?
+I love sitting by the sea and listening to everyone talk. (Ai lav siting bai de sii end lisening tu evriuan tok) - Mi piace stare vicino al mare e ascoltare tutti parlare.
+It's funny how we always end up talking about the same things on holiday. (Its fani hau ui olueiz end ap talking ebaut de seim things on holidei) - È divertente come in vacanza finiamo sempre per parlare delle stesse cose.
+You two were arguing about the smallest thing five minutes ago. (Iu tu uer arguing ebaut de smolest thing faiv minits ego) - Voi due stavate discutendo per una sciocchezza cinque minuti fa.
+Come on, forget about it and enjoy the day. (Kam on, forget ebaut it end enjoy de dei) - Dai, lasciate perdere e godetevi la giornata.
+I was just thinking how lucky we are to have days like this together. (Ai uoz giast thinking hau laki ui ar tu hev deiz laik dis tugheder) - Stavo pensando a quanto siamo fortunati ad avere giornate così insieme.
+Do you remember that time we got caught in a storm at the beach? (Du iu rimember det taim ui got kot in e storm et de biic?) - Ti ricordi quella volta che ci sorprese un temporale in spiaggia?
+We had to run back to the car with all our stuff. (Ui hed tu ran bek tu de kar uid ol auer staf) - Abbiamo dovuto correre alla macchina con tutta la nostra roba.
+I can still hear you laughing about it. (Ai ken stil hiir iu laffing ebaut it) - Ti sento ancora ridere quando ne parli.
+Maybe we should head home before everyone gets hungry again. (Meibi ui sciud hed houm bifor evriuan gets hangri eghen) - Forse dovremmo tornare a casa prima che venga di nuovo fame a tutti.
+Give me a minute, I want to take one last look at the sea. (Giv mi e minit, ai uont tu teik uan last luk et de sii) - Dammi un minuto, voglio dare un'ultima occhiata al mare.
+The sunset is starting to look amazing. (De sanset iz starting tu luk emeizing) - Il tramonto sta iniziando a essere spettacolare.
+Let's sit here for a while and watch the sky change colour. (Lets sit hier for e uail end uotc de skai ceingj kaler) - Sediamoci qui per un po' e guardiamo il cielo cambiare colore.
+I don't think anyone's ready to leave just yet. (Ai dount think eniuanz redi tu liiv giast iet) - Non credo che nessuno sia ancora pronto ad andare via.
+You can tell everyone had a good day just by looking at their faces. (Iu ken tel evriuan hed e gud dei giast bai luking et deir feisis) - Si capisce che tutti hanno passato una bella giornata solo guardandoli in faccia.
+Let's get the towels and shake the sand off before we pack everything up. (Lets get de tauelz end sceik de send of bifor ui pek evriting ap) - Prendiamo gli asciugamani e togliamo la sabbia prima di mettere via tutto.
+I'm glad we came here instead of staying indoors all day. (Aim gled ui keim hier insted ov steiing indorz ol dei) - Sono contento che siamo venuti qui invece di restare in casa tutto il giorno.
+Next time, let's bring a bigger umbrella and a cooler bag. (Nekst taim, lets bring e biger ambrela end e cooler beg) - La prossima volta portiamo un ombrellone più grande e una borsa frigo.
+I reckon this is exactly the kind of family day we'll talk about for years. (Ai reken dis iz egzaktli de kaind ov femili dei uil tok ebaut for yiirz) - Secondo me è proprio il tipo di giornata in famiglia di cui parleremo per anni.
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
