@@ -314,8 +314,40 @@
     font-weight:800;
     color:#0f172a;
     margin-bottom:8px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
   }
   .spa-es .flag{ margin-right:8px; }
+  .spa-es-text{ flex:1; }
+
+  .spa-speak-btn{
+    flex-shrink:0;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    border:none;
+    background:var(--accent);
+    color:#ffffff;
+    font-size:16px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 2px 6px rgba(20,30,50,0.12);
+    transition: transform .12s ease, filter .12s ease;
+  }
+  .spa-speak-btn:hover{ filter:brightness(1.08); }
+  .spa-speak-btn:active{ transform:scale(0.92); }
+  .spa-speak-btn.speaking{
+    background:var(--cal-accent);
+    animation: spaPulse 1s ease-in-out infinite;
+  }
+  @keyframes spaPulse{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.1); }
+  }
 
   .spa-it{
     font-size:19px;
@@ -878,7 +910,10 @@ function renderFrasiSpa(){
 
   container.innerHTML = frasi.map(f => `
     <div class="spa-card">
-      <div class="spa-es"><span class="flag">🇪🇸</span>${escapeHtml(f.es)}</div>
+      <div class="spa-es">
+        <span class="spa-es-text"><span class="flag">🇪🇸</span>${escapeHtml(f.es)}</span>
+        <button type="button" class="spa-speak-btn" data-testo="${escapeHtml(f.es)}" title="Ascolta la pronuncia" aria-label="Ascolta la pronuncia">🔊</button>
+      </div>
       <div class="spa-it"><span class="flag">🇮🇹</span>${escapeHtml(f.it)}</div>
     </div>
   `).join('');
@@ -888,11 +923,73 @@ function renderFrasiSpa(){
 }
 
 /* ================================================================
+   LETTURA AD ALTA VOCE (Web Speech API) — pronuncia le frasi spagnole
+   usando una voce spagnola del dispositivo, se disponibile. Il testo
+   tra parentesi (guida di pronuncia) viene rimosso prima della
+   lettura, così non viene mai pronunciato.
+   ================================================================ */
+let vociDisponibiliSpa = [];
+
+function caricaVociSpa(){
+  if(!('speechSynthesis' in window)) return;
+  vociDisponibiliSpa = window.speechSynthesis.getVoices();
+}
+
+function scegliVoceSpa(){
+  if(!vociDisponibiliSpa.length) return null;
+  // Preferenza: voce spagnola ES (Spagna), poi qualsiasi voce "es-*"
+  return vociDisponibiliSpa.find(v => v.lang === 'es-ES') ||
+         vociDisponibiliSpa.find(v => v.lang && v.lang.toLowerCase().startsWith('es')) ||
+         null;
+}
+
+function parlaFraseSpa(testo, bottone){
+  if(!('speechSynthesis' in window)){
+    alert('La lettura vocale non è supportata su questo browser.');
+    return;
+  }
+
+  // Rimuove eventuale testo tra parentesi (guida di pronuncia)
+  // prima di inviarlo al sintetizzatore vocale
+  const testoPulito = testo.replace(/\s*\([^)]*\)/g, '').trim();
+
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(testoPulito);
+  utterance.lang = 'es-ES';
+  const voce = scegliVoceSpa();
+  if(voce) utterance.voice = voce;
+  utterance.rate = 0.95;
+  utterance.pitch = 1;
+
+  document.querySelectorAll('.spa-speak-btn.speaking').forEach(b => b.classList.remove('speaking'));
+  if(bottone) bottone.classList.add('speaking');
+
+  utterance.onend = () => { if(bottone) bottone.classList.remove('speaking'); };
+  utterance.onerror = () => { if(bottone) bottone.classList.remove('speaking'); };
+
+  window.speechSynthesis.speak(utterance);
+}
+
+function initLetturaVoceSpa(){
+  if(!('speechSynthesis' in window)) return;
+  caricaVociSpa();
+  window.speechSynthesis.onvoiceschanged = caricaVociSpa;
+
+  document.getElementById('spaList').addEventListener('click', (e) => {
+    const btn = e.target.closest('.spa-speak-btn');
+    if(!btn) return;
+    parlaFraseSpa(btn.dataset.testo, btn);
+  });
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
   initConfigPanel();
   renderFrasiSpa();
+  initLetturaVoceSpa();
 
   document.getElementById('spaRefreshBtn').addEventListener('click', renderFrasiSpa);
 });
