@@ -2057,6 +2057,152 @@ Let's take some photos of the room and think about it tonight. (Lets teik sam fo
 If we're spending that much, I want something that'll last. (If uir spending det mac, ai uont samthing detl last) - Se spendiamo così tanto, voglio qualcosa che duri.
 I'm happy with whatever we choose as long as the house feels comfortable. (Aim hepi uid uotever ui ciuuz ez long ez de haus fiilz kamfterbel) - Per me va bene qualsiasi cosa scegliamo, purché la casa sia confortevole.
 Once we agree on the layout, we can start looking for the furniture. (Uans ui egrii on de lei-aut, ui ken start luking for de fernicier) - Una volta deciso come disporre gli ambienti, possiamo iniziare a cercare i mobili.
+Right, let's grab a trolley and get started (rait, lets grèb a troli end ghet startid) - Bene, prendiamo un carrello e iniziamo
+Do we need a big one or will a basket do (du uì niid a big uan or uil a bèskët du) - Ci serve uno grande o basta un cestino
+Can you check the list and see what we're missing (kèn yu chek dhë list end sii uat uir misin) - Puoi controllare la lista e vedere cosa ci manca
+We're almost out of pasta and rice (uir olmoust aut ov pasta end rais) - Stiamo finendo la pasta e il riso
+Grab a couple of loaves of bread while you're there (grèb a kapël ov louvz ov bred uail yor dher) - Prendi un paio di pagnotte di pane già che sei lì
+Can you get some eggs, we're down to two (kèn yu ghet sam eggz, uir daun tu tuu) - Puoi prendere delle uova, ce ne sono rimaste solo due
+Which milk do you want, whole or semi-skimmed (uic milk du yu uont, houl or semiskimd) - Che latte vuoi, intero o parzialmente scremato
+Let's get the bigger pack, it's better value (lets ghet dhë bighër pèk, its betër vèliuu) - Prendiamo la confezione più grande, conviene di più
+Is this cheese on offer this week (iz dhis chiiz on ofër dhis uiik) - Questo formaggio è in offerta questa settimana
+Grab some yoghurts for the kids' lunchboxes (grèb sam yogërts for dhë kidz lanchboksiz) - Prendi degli yogurt per i pranzi al sacco dei bambini
+Can you check the expiry date on that (kèn yu chek dhë ekspairi deit on dhèt) - Puoi controllare la data di scadenza su quello
+This one's about to go off, grab one from the back (dhis uanz abaut tu gou of, grèb uan from dhë bèk) - Questo sta per scadere, prendine uno da dietro
+Do we actually need more snacks (du uì èkchueli niid mor snèks) - Ci servono davvero altri snack
+Put that back, we've already got some at home (put dhèt bèk, uìv olredi gat sam et houm) - Rimettilo a posto, ne abbiamo già a casa
+Can you weigh these tomatoes for me (kèn yu uei dhiiz tomeitouz for mi) - Puoi pesarmi questi pomodori
+Which apples are on special this week (uic apëlz ar on spescël dhis uiik) - Quali mele sono in offerta questa settimana
+Grab a bag of onions and some garlic (grèb a bèg ov aniënz end sam garlik) - Prendi un sacchetto di cipolle e un po' d'aglio
+Do we need more potatoes or have we got enough (du uì niid mor poteitouz or hèv uì gat inaf) - Ci servono altre patate o ne abbiamo abbastanza
+Let's get some fresh basil for the sauce (lets ghet sam fresc bèzil for dhë sos) - Prendiamo del basilico fresco per il sugo
+Can you pick a ripe avocado, not a hard one (kèn yu pik a raip avokadou, not a hard uan) - Puoi scegliere un avocado maturo, non uno duro
+We're out of chicken, grab a couple of breasts (uir aut ov chikën, grèb a kapël ov brests) - Non abbiamo più pollo, prendi un paio di petti
+Is the fish counter open today (iz dhë fisc kauntër oupën tudei) - Il banco del pesce è aperto oggi
+Can you ask if they've got any fresh prawns (kèn yu esk if dheiv gat eni fresc pronz) - Puoi chiedere se hanno dei gamberi freschi
+Let's get something quick for dinner tonight (lets ghet samthin kuik for dinër tunait) - Prendiamo qualcosa di veloce per cena stasera
+Check if this one's got less sugar in it (chek if dhis uanz gat les sciugër in it) - Controlla se questo ha meno zucchero
+Read the label, does it have nuts in it (riid dhë leibël, daz it hev nats in it) - Leggi l'etichetta, contiene frutta secca
+Can we get the cereal that's not full of sugar (kèn uì ghet dhë sirìel dhèts not ful ov sciugër) - Possiamo prendere i cereali che non sono pieni di zucchero
+Grab some more washing up liquid, we're nearly out (grèb sam mor uoscin ap likuid, uir nirli aut) - Prendi altro detersivo per i piatti, ne stiamo rimanendo senza
+We need toilet paper, we're down to the last roll (uì niid toilet peipër, uir daun tu dhë lest roul) - Ci serve carta igienica, siamo rimasti all'ultimo rotolo
+Can you grab some bin bags on the way to the till (kèn yu grèb sam bin bègz on dhë uei tu dhë til) - Puoi prendere dei sacchetti della spazzatura mentre andiamo alla cassa
+Let's check if there's a shorter queue at another till (lets chek if dhers a scortër kiuu et anadhër til) - Vediamo se c'è una fila più corta a un'altra cassa
+Can you go grab a basket, this trolley's too much (kèn yu gou grèb a bèskët, dhis troli iz tuu mach) - Puoi andare a prendere un cestino, questo carrello è troppo
+Do you have a loyalty card with you (du yu hev a loialti kard uidh yu) - Hai con te la carta fedeltà
+I think we've got a coupon for this somewhere (ai think uìv gat a kupon for dhis samuer) - Credo che abbiamo un buono per questo da qualche parte
+Can you put the frozen stuff in this bag separately (kèn yu put dhë frouzën staf in dhis bèg sepërëtli) - Puoi mettere i surgelati in questo sacchetto separatamente
+Careful, that jar's heavy, don't drop it (kerful, dhèt giarz hevi, dount drop it) - Attento, quel barattolo è pesante, non farlo cadere
+Stop putting sweets in the trolley when I'm not looking (stop putin suiits in dhë troli uen aim not lukin) - Smettila di mettere dolciumi nel carrello quando non guardo
+Can I get some chocolate, please, just one bar (kèn ai ghet sam choklët, pliiz, giast uan bar) - Posso prendere del cioccolato, per favore, solo una tavoletta
+You can have one thing, not the whole shelf (yu kèn hev uan thin, not dhë houl scelf) - Puoi prendere una cosa, non tutto lo scaffale
+Let's check the total before we get to the till (lets chek dhë toutël bifor uì ghet tu dhë til) - Controlliamo il totale prima di arrivare alla cassa
+I think we've gone a bit over budget again (ai think uìv gon a bit ouvër bagit eghèn) - Credo che abbiamo di nuovo sforato il budget
+Do you want to pack the bags or shall I (du yu uont tu pèk dhë bègz or scèl ai) - Vuoi impacchettare tu le buste o lo faccio io
+Can you help me load the bags into the boot (kèn yu help mi loud dhë bègz intu dhë buut) - Puoi aiutarmi a caricare le buste nel bagagliaio
+Did we forget anything, let me check the list again (did uì forghet enìthin, let mi chek dhë list eghèn) - Abbiamo dimenticato qualcosa, fammi ricontrollare la lista
+We still need to stop by the pharmacy after this (uì stil niid tu stop bai dhë farmasi aftër dhis) - Dobbiamo ancora passare in farmacia dopo questo
+Can you put the eggs on top so they don't get crushed (kèn yu put dhë eggz on top sou dhei dount ghet krascit) - Puoi mettere le uova sopra così non si rompono
+Let's put the cold stuff in the fridge as soon as we're home (lets put dhë kould staf in dhë frigi az suun az uir houm) - Mettiamo subito le cose fredde in frigo appena arriviamo a casa
+Did you remember to bring the reusable bags this time (did yu rimembër tu bring dhë riuusëbël bègz dhis taim) - Ti sei ricordato di portare i sacchetti riutilizzabili questa volta
+That was way more expensive than I thought it'd be (dhèt uoz uei mor ekspensiv dhèn ai thot itd bi) - È costato molto più di quanto pensassi
+Right, that's the shopping done for the week (rait, dhèts dhë scopin dan for dhë uiik) - Bene, la spesa per la settimana è fatta
+How much are these peaches per kilo? (Hau mac ar dhiiz piiciz per kiilou?) - Quanto costano queste pesche al chilo?
+Could I have about half a kilo of these apples, please? (Kud ai hev ebaut haf e kiilou ov dhiiz epelz, pliiz?) - Potrei avere circa mezzo chilo di queste mele, per favore?
+I'll take six oranges, but make sure they're nice and ripe. (Ail teik siks oren-jiz, bat meik sciur deir nais end raip) - Prendo sei arance, ma assicurati che siano belle mature.
+Can you give me a kilo of tomatoes, please? (Ken iu giv mi e kiilou ov tomeitouz, pliiz?) - Puoi darmi un chilo di pomodori, per favore?
+How many bananas do you think I'll need for a cake? (Hau meni benenaz du iu think ail niid for e keik?) - Quante banane pensi che mi serviranno per una torta?
+I'd like three of the larger ones and four of the smaller ones. (Aid laik thrii ov de larjer uanz end for ov de smoler uanz) - Vorrei tre di quelle più grandi e quattro di quelle più piccole.
+Are these grapes seedless? (Ar dhiiz greips siidles?) - Questi acini d'uva sono senza semi?
+I'll have two bunches of grapes, please. (Ail hev tu banciz ov greips, pliiz) - Prendo due grappoli d'uva, per favore.
+Could you weigh these for me? (Kud iu uei dhiiz for mi?) - Potresti pesarmeli?
+That's a bit too much; can you take a couple out? (Dets e bit tu mac; ken iu teik e kapel aut?) - È un po' troppo; puoi toglierne un paio?
+I'll take a dozen eggs while I'm here. (Ail teik e dazen egz uail aim hier) - Prendo anche una dozzina di uova, visto che sono qui.
+Have you got any strawberries left? (Hev iu got eni stroberiz left?) - Avete ancora delle fragole?
+I'll take two punnets if they're fresh. (Ail teik tu panits if deir fresh) - Ne prendo due vaschette se sono fresche.
+How much would three kilos of potatoes be? (Hau mac ud thrii kiilouz ov poteitouz bi?) - Quanto costerebbero tre chili di patate?
+I only need about 700 grams, not a full kilo. (Ai ounli niid ebaut seven handred gremz, not e ful kiilou) - Mi servono solo circa 700 grammi, non un chilo intero.
+Can I get five lemons and two limes? (Ken ai get faiv lemonz end tu laimz?) - Posso avere cinque limoni e due lime?
+These pears look great, but are they ready to eat? (Dhiiz perz luk greit, bat ar dei redi tu iit?) - Queste pere sembrano ottime, ma sono pronte da mangiare?
+I'll take four, but I'd like them a little less ripe. (Ail teik for, bat aid laik dem e litel les raip) - Ne prendo quattro, ma le vorrei un po' meno mature.
+Do you sell avocados by the piece or by weight? (Du iu sel evokadou z bai de piis or bai ueit?) - Vendete gli avocado a pezzo o a peso?
+I'll have three avocados, please, and not too soft. (Ail hev thrii evokadou z, pliiz, end not tu soft) - Prendo tre avocado, per favore, e non troppo morbidi.
+How many kilos of onions do we have at home? (Hau meni kiilouz ov anienz du ui hev et houm?) - Quanti chili di cipolle abbiamo a casa?
+Let's get two kilos; we'll probably use them this week. (Lets get tu kiilouz; uil probabli iuz dem dis uiik) - Prendiamone due chili; probabilmente li useremo questa settimana.
+Do you have any smaller courgettes? (Du iu hev eni smoler kuor-jets?) - Avete delle zucchine più piccole?
+I'll take six of those and four peppers. (Ail teik siks ov dhouz end for pepers) - Prendo sei di quelle e quattro peperoni.
+Could you put the fruit in separate bags, please? (Kud iu put de fruut in sepret begs, pliiz?) - Potresti mettere la frutta in sacchetti separati, per favore?
+I need about one and a half kilos of oranges. (Ai niid ebaut uan end e haf kiilouz ov oren-jiz) - Mi serve circa un chilo e mezzo di arance.
+Are these local, or have they come from somewhere else? (Ar dhiiz loukel, or hev dei kam from samuer els?) - Questi sono prodotti locali o vengono da un'altra zona?
+I'd like 300 grams of sliced beef, please. (Aid laik thrii handred gremz ov slaist biif, pliiz) - Vorrei 300 grammi di manzo affettato, per favore.
+Can I get half a kilo of chicken breast? (Ken ai get haf e kiilou ov ciken brest?) - Posso avere mezzo chilo di petto di pollo?
+I need about eight chicken thighs for dinner. (Ai niid ebaut eit ciken thaiz for diner) - Mi servono circa otto cosce di pollo per cena.
+Could you cut the steaks a little thinner? (Kud iu kat de steiks e litel thiner?) - Potresti tagliare le bistecche un po' più sottili?
+I'll take four steaks, around 200 grams each. (Ail teik for steiks, eraund tu handred gremz iic) - Prendo quattro bistecche, da circa 200 grammi l'una.
+How much does a kilo of minced beef cost? (Hau mac daz e kiilou ov minst biif kost?) - Quanto costa un chilo di carne macinata di manzo?
+Could I have 500 grams of minced beef and 300 grams of pork? (Kud ai hev faiv handred gremz ov minst biif end thrii handred gremz ov pork?) - Potrei avere 500 grammi di carne macinata di manzo e 300 grammi di maiale?
+Do you have enough sausages for six people? (Du iu hev i-naf sosijiz for siks piipel?) - Avete abbastanza salsicce per sei persone?
+We'll need about twelve sausages for everyone. (Uil niid ebaut tuelv sosijiz for evriuan) - Ce ne serviranno circa dodici per tutti.
+Can you give me two lamb chops and three pork chops? (Ken iu giv mi tu lem cops end thrii pork cops?) - Puoi darmi due costolette d'agnello e tre di maiale?
+I'd like a small piece of beef, around 400 grams. (Aid laik e smol piis ov biif, eraund for handred gremz) - Vorrei un piccolo pezzo di manzo, circa 400 grammi.
+Is this enough meat for four adults? (Iz dis i-naf miit for for edalts?) - Questa quantità di carne basta per quattro adulti?
+Maybe we'd better get another 500 grams, just in case. (Meibi uid beter get enader faiv handred gremz, giast in keis) - Forse è meglio prendere altri 500 grammi, per sicurezza.
+Can you remove the skin and bones from this chicken? (Ken iu rimuuv de skin end bounz from dis ciken?) - Puoi togliere la pelle e le ossa da questo pollo?
+I'd like six slices of ham, not too thick. (Aid laik siks slaisis ov hem, not tu thik) - Vorrei sei fette di prosciutto, non troppo spesse.
+How many burgers can we make from one kilo of mince? (Hau meni berghez ken ui meik from uan kiilou ov mins?) - Quanti hamburger possiamo fare con un chilo di carne macinata?
+We need enough meat for eight burgers. (Ui niid i-naf miit for eit berghez) - Ci serve abbastanza carne per otto hamburger.
+Could you pack the chicken separately from the beef? (Kud iu pek de ciken sepretli from de biif?) - Potresti confezionare il pollo separatamente dal manzo?
+That's nearly a kilo; I only asked for 600 grams. (Dets nirli e kiilou; ai ounli askt for siks handred gremz) - È quasi un chilo; avevo chiesto solo 600 grammi.
+I'll take the extra two hundred grams if that's easier. (Ail teik di ekstra tu handred gremz if dets iizier) - Prendo i 200 grammi in più, se è più semplice.
+We should buy enough fruit and meat for the whole weekend. (Ui sciud bai i-naf fruut end miit for de houl uiikend) - Dovremmo comprare abbastanza frutta e carne per tutto il fine settimana.
+Could I have two sea bass, please, about 400 grams each? (Kud ai hev tu sii bas, pliiz, ebaut for handred gremz iic?) - Potrei avere due spigole, per favore, di circa 400 grammi ciascuna?
+Are these sardines fresh today? (Ar dhiiz sardinz fresh tudei?) - Queste sardine sono fresche oggi?
+I'll take a kilo of these prawns, but the medium-sized ones. (Ail teik e kiilou ov dhiiz proonz, bat de miidium-saizd uanz) - Prendo un chilo di questi gamberi, ma quelli di media grandezza.
+Can you clean four of the fish for me? (Ken iu kliin for ov de fisc for mi?) - Puoi pulirmi quattro di questi pesci?
+I'd like about 600 grams of salmon, cut into four pieces. (Aid laik ebaut siks handred gremz ov samen, kat intu for piisis) - Vorrei circa 600 grammi di salmone, tagliato in quattro pezzi.
+How much are these red mullet per kilo? (Hau mac ar dhiiz red malet per kiilou?) - Quanto costano queste triglie al chilo?
+I'll have six small anchovies and eight of the larger ones. (Ail hev siks smol enciviz end eit ov de larjer uanz) - Prendo sei acciughe piccole e otto di quelle più grandi.
+Could you put the fish in two separate bags? (Kud iu put de fisc in tu sepret begs?) - Potresti mettere il pesce in due sacchetti separati?
+Are those blue ones mackerel? (Ar dhouz blu uanz mekerel?) - Quelli blu sono sgombri?
+I'll take three, as long as they're not too big. (Ail teik thrii, ez long ez deir not tu big) - Ne prendo tre, purché non siano troppo grandi.
+Do you have any squid left? (Du iu hev eni skuid left?) - Avete ancora dei calamari?
+I need about a kilo and a half of squid for dinner. (Ai niid ebaut e kiilou end e haf ov skuid for diner) - Mi serve circa un chilo e mezzo di calamari per cena.
+Could you give me 500 grams of mussels and 500 grams of clams? (Kud iu giv mi faiv handred gremz ov maselz end faiv handred gremz ov klemz?) - Potresti darmi 500 grammi di cozze e 500 grammi di vongole?
+These prawns are much bigger than the ones we bought last time. (Dhiiz proonz ar mac biger den de uanz ui bot last taim) - Questi gamberi sono molto più grandi di quelli che abbiamo comprato l'altra volta.
+I'd rather have eight small fish than four really large ones. (Aid rather hev eit smol fisc den for rili larj uanz) - Preferirei otto pesci piccoli piuttosto che quattro molto grandi.
+Can you weigh this one on its own? (Ken iu uei dis uan on its oun?) - Puoi pesare questo da solo?
+That one looks fresh, but I'd prefer the darker red one. (Det uan luks fresh, bat aid prefer de darker red uan) - Quello sembra fresco, ma preferirei quello rosso più scuro.
+Do you have any fish with a lighter colour? (Du iu hev eni fisc uid e laiter kaler?) - Avete del pesce di colore più chiaro?
+I'll take two kilos of ice as well, please. (Ail teik tu kiilouz ov ais ez uel, pliiz) - Prendo anche due chili di ghiaccio, per favore.
+Are these fillets about 200 grams each? (Ar dhiiz filets ebaut tu handred gremz iic?) - Questi filetti sono di circa 200 grammi ciascuno?
+I need enough fish for five people, including two children. (Ai niid i-naf fisc for faiv piipel, incliuding tu ciul-dren) - Mi serve abbastanza pesce per cinque persone, compresi due bambini.
+Let's get three different kinds so everyone has a choice. (Lets get thrii difrent kaindz sou evriuan hez e chois) - Prendiamo tre tipi diversi così tutti possono scegliere.
+Could you remove the heads from these six prawns? (Kud iu rimuuv de hedz from dhiiz siks proonz?) - Potresti togliere la testa a questi sei gamberi?
+I'll take four blue screws and four silver ones. (Ail teik for blu scruuz end for silver uanz) - Prendo quattro viti blu e quattro argentate.
+Do you have these screws in a smaller size? (Du iu hev dhiiz scruuz in e smoler saiz?) - Avete queste viti in una misura più piccola?
+I need twenty-five of these, not fifty. (Ai niid tuenti faiv ov dhiiz, not fifti) - Me ne servono venticinque, non cinquanta.
+Could I get two metres of the black cable? (Kud ai get tu miiters ov de blek keibel?) - Potrei avere due metri del cavo nero?
+I'd like three metres of the red wire and one metre of the blue. (Aid laik thrii miiters ov de red uai-er end uan miiter ov de blu) - Vorrei tre metri del filo rosso e un metro di quello blu.
+Have you got a five-millimetre drill bit? (Hev iu got e faiv-milimiter dril bit?) - Avete una punta da trapano da cinque millimetri?
+I need six wall plugs for these screws. (Ai niid siks uol plags for dhiiz scruuz) - Mi servono sei tasselli per queste viti.
+Do you have a pack of ten in black? (Du iu hev e pek ov ten in blek?) - Avete una confezione da dieci neri?
+I'll take two packs, one white and one grey. (Ail teik tu peks, uan uait end uan grei) - Prendo due confezioni, una bianca e una grigia.
+Which size would you recommend for a ten-millimetre hole? (Uic saiz ud iu rekomend for e ten-milimiter houl?) - Quale misura mi consiglieresti per un foro da dieci millimetri?
+I need a roll of strong black tape, about ten metres long. (Ai niid e roul ov strong blek teip, ebaut ten miiters long) - Mi serve un rotolo di nastro nero resistente, lungo circa dieci metri.
+Can I get four metres of this grey plastic tubing? (Ken ai get for miiters ov dis grei plestik tiubing?) - Posso avere quattro metri di questo tubo di plastica grigio?
+Do you have this paint in a darker blue? (Du iu hev dis peint in e darker blu?) - Avete questa vernice in un blu più scuro?
+I only need half a litre, not the whole tin. (Ai ounli niid haf e liiter, not de houl tin) - Mi serve solo mezzo litro, non tutta la latta.
+Could you give me two brushes, one small and one medium? (Kud iu giv mi tu brashez, uan smol end uan miidium?) - Potresti darmi due pennelli, uno piccolo e uno medio?
+I'm looking for three white handles to match the doors. (Aim luking for thrii uait hendelz tu metc de dorz) - Cerco tre maniglie bianche abbinate alle porte.
+Do you have a longer version of this, maybe around 30 centimetres? (Du iu hev e longer verjen ov dis, meibi eraund therti sentimiiters?) - Avete una versione più lunga, magari di circa 30 centimetri?
+I need four metres of this yellow rope. (Ai niid for miiters ov dis ielou roup) - Mi servono quattro metri di questa corda gialla.
+Are these metal brackets available in silver or black? (Ar dhiiz metal brekets eveilebel in silver or blek?) - Queste staffe metalliche sono disponibili in argento o nero?
+I'll take eight of the small washers and four of the larger ones. (Ail teik eit ov de smol uoscers end for ov de larjer uanz) - Prendo otto delle rondelle piccole e quattro di quelle più grandi.
+How many pieces are in this box? (Hau meni piisis ar in dis boks?) - Quanti pezzi ci sono in questa scatola?
+There are only six left, so I'd better take all of them. (Der ar ounli siks left, sou aid beter teik ol ov dem) - Ne sono rimasti solo sei, quindi è meglio che li prenda tutti.
+I need a two-metre extension lead with a white plug. (Ai niid e tu-miiter ekstension liid uid e uait plag) - Mi serve una prolunga di due metri con una spina bianca.
+Do you have a smaller red paint roller, around ten centimetres wide? (Du iu hev e smoler red peint rouler, eraund ten sentimiiters uaid?) - Avete un rullo per vernice rosso più piccolo, largo circa dieci centimetri?
+I'll take five of these hooks and two packs of nails. (Ail teik faiv ov dhiiz huks end tu peks ov neilz) - Prendo cinque di questi ganci e due confezioni di chiodi.
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
