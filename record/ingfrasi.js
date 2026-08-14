@@ -2010,6 +2010,53 @@ Let's get the towels and shake the sand off before we pack everything up. (Lets 
 I'm glad we came here instead of staying indoors all day. (Aim gled ui keim hier insted ov steiing indorz ol dei) - Sono contento che siamo venuti qui invece di restare in casa tutto il giorno.
 Next time, let's bring a bigger umbrella and a cooler bag. (Nekst taim, lets bring e biger ambrela end e cooler beg) - La prossima volta portiamo un ombrellone più grande e una borsa frigo.
 I reckon this is exactly the kind of family day we'll talk about for years. (Ai reken dis iz egzaktli de kaind ov femili dei uil tok ebaut for yiirz) - Secondo me è proprio il tipo di giornata in famiglia di cui parleremo per anni.
+What do you think we should do with this empty wall? (Uot du iu think ui sciud du uid dis empti uol?) - Cosa pensi che dovremmo fare con questa parete vuota?
+I reckon the sofa would look better against the other wall. (Ai reken de soufa ud luk beter eghenst di ader uol) - Secondo me il divano starebbe meglio sull'altra parete.
+Should we go for a bigger dining table, or would that make the room feel cramped? (Sciud ui gou for e biger daining teibel, or ud det meik de ruum fiil krempt?) - Prendiamo un tavolo da pranzo più grande o renderebbe la stanza troppo stretta?
+I don't want the room to feel too cluttered. (Ai dount uont de ruum tu fiil tu klaterd) - Non voglio che la stanza sembri troppo piena di cose.
+Maybe we could put the bookcase next to the window. (Meibi ui kud put de bukkeis nekst tu de uindou) - Potremmo mettere la libreria accanto alla finestra.
+I'd rather have something simple and easy to keep tidy. (Aid rather hev samthing simpel end iizi tu kiip taidi) - Preferirei qualcosa di semplice e facile da tenere in ordine.
+Do you think this colour would work in the living room? (Du iu think dis kaler ud uork in de living ruum?) - Pensi che questo colore starebbe bene in soggiorno?
+I really like the idea of having wooden shelves here. (Ai rili laik di aidea ov heving uden scelvz hier) - Mi piace molto l'idea di mettere qui delle mensole di legno.
+We need to make sure there's enough space to walk around the table. (Ui niid tu meik sciur derz i-naf speis tu uok eraund de teibel) - Dobbiamo assicurarci che ci sia abbastanza spazio per girare intorno al tavolo.
+What if we move the TV over there and put the cabinet underneath it? (Uot if ui muuv de tii-vi ouver der end put de kebinet ander it?) - E se spostassimo la TV lì e mettessimo il mobile sotto?
+I don't think that armchair fits with the rest of the furniture. (Ai dount think det armcer fits uid de rest ov de fernicier) - Non credo che quella poltrona stia bene con il resto dei mobili.
+Let's measure the wall before we order anything. (Lets meger de uol bifor ui order enithing) - Misuriamo la parete prima di ordinare qualcosa.
+We could get a smaller coffee table and leave more room around the sofa. (Ui kud get e smoler kofi teibel end liiv mor ruum eraund de soufa) - Potremmo prendere un tavolino più piccolo e lasciare più spazio intorno al divano.
+I'd love to have some plants in this corner. (Aid lav tu hev sam plants in dis korner) - Mi piacerebbe avere delle piante in questo angolo.
+Do we really need another cabinet in here? (Du ui rili niid enader kebinet in hier?) - Abbiamo davvero bisogno di un altro mobile qui?
+I think the room needs a bit more light. (Ai think de ruum niidz e bit mor lait) - Secondo me la stanza ha bisogno di un po' più di luce.
+What about putting a floor lamp beside the sofa? (Uot ebaut puting e flor lemp bisaid de soufa?) - Che ne dite di mettere una lampada da terra accanto al divano?
+We should pick furniture that won't go out of style too quickly. (Ui sciud pik fernicier det uount gou aut ov stail tu kuikli) - Dovremmo scegliere mobili che non passino di moda troppo presto.
+I'm not sure that sofa is big enough for all of us. (Aim not sciur det soufa iz big i-naf for ol ov as) - Non sono sicuro che quel divano sia abbastanza grande per tutti noi.
+Can we find something nicer without spending a fortune? (Ken ui faind samthing naiser uidaut spending e fortiun?) - Possiamo trovare qualcosa di più bello senza spendere una fortuna?
+I'd put the dining table closer to the kitchen. (Aid put de daining teibel klouser tu de kicen) - Io metterei il tavolo da pranzo più vicino alla cucina.
+The curtains should match the colour of the walls. (De kerten sciod metc de kaler ov de uolz) - Le tende dovrebbero essere abbinate al colore delle pareti.
+I don't want anything too modern; I'd rather keep it cosy. (Ai dount uont enithing tu modern; aid rather kiip it kouzi) - Non voglio niente di troppo moderno; preferisco mantenere un'atmosfera accogliente.
+What kind of chairs would look good with this table? (Uot kaind ov cers ud luk gud uid dis teibel?) - Che tipo di sedie starebbero bene con questo tavolo?
+We could put a mirror here to make the room look bigger. (Ui kud put e mirer hier tu meik de ruum luk biger) - Potremmo mettere uno specchio qui per far sembrare la stanza più grande.
+I think we'd be better off with drawers instead of cupboards. (Ai think uid bi beter of uid drorz insted ov kaberdz) - Secondo me sarebbe meglio scegliere dei cassetti invece degli armadietti.
+Let's not buy everything at once. (Lets not bai evriting et uans) - Non compriamo tutto in una volta.
+Maybe we should start with the essentials and decide the rest later. (Meibi ui sciud start uid di esencielz end disaid de rest leiter) - Forse dovremmo cominciare dalle cose essenziali e decidere il resto più avanti.
+I'd like the bedroom to feel calm and relaxing. (Aid laik de bedruum tu fiil kam end rileksing) - Vorrei che la camera da letto fosse tranquilla e rilassante.
+Where are we going to put all these books? (Uer ar ui gouing tu put ol dhiiz buks?) - Dove metteremo tutti questi libri?
+I think a low TV unit would look better here. (Ai think e lou tii-vi iunit ud luk beter hier) - Secondo me qui starebbe meglio un mobile TV basso.
+Do you want the shelves open or with doors? (Du iu uont de scelvz oupen or uid dorz?) - Vuoi le mensole aperte o con le ante?
+We should leave some empty space so the room can breathe. (Ui sciud liiv sam empti speis sou de ruum ken briidh) - Dovremmo lasciare un po' di spazio vuoto, così la stanza non risulta soffocata.
+That rug might be too small for the living room. (Det rag mait bi tu smol for de living ruum) - Quel tappeto potrebbe essere troppo piccolo per il soggiorno.
+How about a round table instead of a rectangular one? (Hau ebaut e raund teibel insted ov e rektenghiuler uan?) - Che ne dici di un tavolo rotondo invece di uno rettangolare?
+I don't want the furniture blocking the natural light. (Ai dount uont de fernicier bloking de necierel lait) - Non voglio che i mobili blocchino la luce naturale.
+Let's check a few different layouts before we decide. (Lets cek e fiu difrent lei-auts bifor ui disaid) - Guardiamo alcune disposizioni diverse prima di decidere.
+That colour looks nice, but I'm worried it'll make the room darker. (Det kaler luks nais, bat aim uorid itl meik de ruum darker) - Quel colore è bello, ma temo che renderà la stanza più buia.
+We could add some storage under the stairs. (Ui kud ed sam storij ander de sterz) - Potremmo aggiungere dello spazio contenitore sotto le scale.
+I think this cabinet is too bulky for such a small room. (Ai think dis kebinet iz tu balki for sac e smol ruum) - Secondo me questo mobile è troppo ingombrante per una stanza così piccola.
+Would you rather have a big sofa or more space to move around? (Uud iu rather hev e big soufa or mor speis tu muuv eraund?) - Preferiresti avere un divano grande o più spazio per muoverti?
+We don't have to agree on everything, but we should find a compromise. (Ui dount hev tu egrii on evriting, bat ui sciud faind e kompromais) - Non dobbiamo essere d'accordo su tutto, ma dovremmo trovare un compromesso.
+I think we should keep the old table; it's still in really good condition. (Ai think ui sciud kiip di ould teibel; its stil in rili gud kondiscion) - Secondo me dovremmo tenere il vecchio tavolo; è ancora in ottime condizioni.
+Let's take some photos of the room and think about it tonight. (Lets teik sam foutous ov de ruum end think ebaut it tenait) - Facciamo qualche foto della stanza e riflettiamoci stasera.
+If we're spending that much, I want something that'll last. (If uir spending det mac, ai uont samthing detl last) - Se spendiamo così tanto, voglio qualcosa che duri.
+I'm happy with whatever we choose as long as the house feels comfortable. (Aim hepi uid uotever ui ciuuz ez long ez de haus fiilz kamfterbel) - Per me va bene qualsiasi cosa scegliamo, purché la casa sia confortevole.
+Once we agree on the layout, we can start looking for the furniture. (Uans ui egrii on de lei-aut, ui ken start luking for de fernicier) - Una volta deciso come disporre gli ambienti, possiamo iniziare a cercare i mobili.
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
