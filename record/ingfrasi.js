@@ -2790,6 +2790,56 @@ November comes immediately before December. (Nouvember kamz imiidiatli bifor Dis
 Can you tell me the difference between sixteen and sixty? (Ken iu tel mi de difrens bituin sikstiin end siksti?) - Sai dirmi la differenza tra sedici e sessanta?
 Sixteen is a number, while sixty is ten times as much. (Sikstiin iz e namber, uail siksti iz ten taims ez mac) - Sedici è un numero, mentre sessanta è dieci volte tanto.
 Let's practise saying the dates aloud so they sound more natural. (Lets prektis seing de deits elaud sou dei saund mor neciurel) - Esercitiamoci a dire le date ad alta voce in modo che suonino più naturali.
+Right, let's start by counting from one to ten (rait, lets start bai kauntin from uan tu ten) - Bene, iniziamo contando da uno a dieci
+Can anyone count backwards from twenty (kèn enìuan kaunt bèkuordz from tuenti) - Qualcuno sa contare all'indietro da venti
+What comes after nineteen (uat kamz aftër naintiin) - Cosa viene dopo diciannove
+Twenty, well done (tuenti, uel dan) - Venti, bravo
+Can you write down today's date for me (kèn yu rait daun tudeiz deit for mi) - Puoi scrivermi la data di oggi
+What day of the week is it today (uat dei ov dhë uiik iz it tudei) - Che giorno della settimana è oggi
+It's Wednesday, isn't it (its Uenzdei, izënt it) - È mercoledì, vero
+No, actually it's Thursday (nou, èkchueli its Thërzdei) - No, in realtà è giovedì
+Which days do you go to school (uic deiz du yu gou tu skuul) - Quali giorni vai a scuola
+I go every day except Saturday and Sunday (ai gou evri dei eksept Sètërdei end Sandei) - Vado tutti i giorni tranne sabato e domenica
+Those are called the weekend, remember (dhouz ar kold dhë uiikend, rimembër) - Quelli si chiamano weekend, ricordatelo
+Can you name all seven days in order (kèn yu neim ol sevën deiz in ordër) - Sapete nominare tutti e sette i giorni in ordine
+Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday (Mandei, Tiuzdei, Uenzdei, Thërzdei, Fraidei, Sètërdei, Sandei) - Lunedì, martedì, mercoledì, giovedì, venerdì, sabato, domenica
+Very good, that's exactly right (veri gud, dhèts ekzèktli rait) - Molto bene, esattamente giusto
+Which month were you born in (uic manth uer yu born in) - In quale mese sei nato
+I was born in March (ai uoz born in March) - Sono nato a marzo
+How many months are there in a year (hau meni manths ar dher in a yir) - Quanti mesi ci sono in un anno
+There are twelve months altogether (dher ar tuelv manths oltugedhër) - Ci sono dodici mesi in tutto
+Can you list them starting from January (kèn yu list dhem startin from Genueri) - Riuscite a elencarli iniziando da gennaio
+January, February, March, April, May, June (Genueri, Februeri, March, Eiprël, Mei, Giuun) - Gennaio, febbraio, marzo, aprile, maggio, giugno
+Keep going, what comes next (kiip gouin, uat kamz nekst) - Continuate, cosa viene dopo
+July, August, September, October, November, December (Giulai, Ogëst, Septembër, Oktoubër, Novembër, Disembër) - Luglio, agosto, settembre, ottobre, novembre, dicembre
+Which month has the fewest days (uic manth hèz dhë fiuuëst deiz) - Quale mese ha meno giorni
+February usually has twenty-eight (Februeri iuzueli hèz tuenti eit) - Febbraio di solito ne ha ventotto
+Except in a leap year, when it has twenty-nine (eksept in a liip yir, uen it hèz tuenti nain) - Tranne negli anni bisestili, quando ne ha ventinove
+What's a leap year exactly (uats a liip yir ekzèktli) - Cos'è esattamente un anno bisestile
+It happens every four years (it hèpënz evri for yirz) - Succede ogni quattro anni
+Which months have thirty-one days (uic manths hev thërti uan deiz) - Quali mesi hanno trentuno giorni
+January, March, May, July, August, October, and December (Genueri, March, Mei, Giulai, Ogëst, Oktoubër, end Disembër) - Gennaio, marzo, maggio, luglio, agosto, ottobre e dicembre
+Good, and the rest have thirty, except February (gud, end dhë rest hev thërti, eksept Februeri) - Bene, e gli altri ne hanno trenta, tranne febbraio
+What's today's date, the full version please (uats tudeiz deit, dhë ful vërscion pliiz) - Qual è la data di oggi, la versione completa per favore
+It's the fifteenth of August, twenty twenty-six (its dhë fiftiinth ov Ogëst, tuenti tuenti siks) - È il quindici agosto duemilaventisei
+Can you say that number out loud for the class (kèn yu sei dhèt nambër aut laud for dhë klès) - Puoi dire ad alta voce quel numero per la classe
+Ninety-seven (nainti sevën) - Novantasette
+What's forty plus sixteen (uats forti plas siksтiin) - Quanto fa quaranta più sedici
+That's fifty-six (dhèts fifti siks) - Fa cinquantasei
+Can you count in tens up to a hundred (kèn yu kaunt in tenz ap tu a handrëd) - Riuscite a contare per decine fino a cento
+Ten, twenty, thirty, forty, fifty (ten, tuenti, thërti, forti, fifti) - Dieci, venti, trenta, quaranta, cinquanta
+Keep going, don't stop there (kiip gouin, dount stop dher) - Continuate, non fermatevi lì
+Sixty, seventy, eighty, ninety, a hundred (siksti, sevënti, eiti, nainti, a handrëd) - Sessanta, settanta, ottanta, novanta, cento
+What day comes right after Friday (uat dei kamz rait aftër Fraidei) - Quale giorno viene subito dopo venerdì
+Saturday, obviously (Sètërdei, obviësli) - Sabato, ovviamente
+How many weeks are there in a year roughly (hau meni uiiks ar dher in a yir rafli) - Quante settimane ci sono circa in un anno
+About fifty-two (abaut fifti tuu) - Circa cinquantadue
+Which month comes right before December (uic manth kamz rait bifor Disembër) - Quale mese viene subito prima di dicembre
+November does (Novembër daz) - Novembre
+What's your favourite month and why (uats yor feivërit manth end uai) - Qual è il tuo mese preferito e perché
+I like August because we're on holiday (ai laik Ogëst bikoz uir on holidei) - Mi piace agosto perché siamo in vacanza
+Can you write next Tuesday's date on the board (kèn yu rait nekst Tiuzdeiz deit on dhë bord) - Puoi scrivere alla lavagna la data del prossimo martedì
+Right, that's enough numbers and dates for today (rait, dhèts inaf nambërz end deits for tudei) - Bene, basta numeri e date per oggi
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
