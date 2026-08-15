@@ -2775,6 +2775,105 @@ Ya he hecho quince, me quedan otros quince por hacer. (Ya e écho kínthe, me k�
 Somos veintisiete, uno está enfermo hoy. (Sómos beintisiéte, úno está enférmo oi) - Siamo ventisette, uno è malato oggi
 El próximo examen será el segundo lunes de noviembre. (El próksimo eksámen será el segúndo lúnes de nobiémbre) - Il prossimo esame sarà il secondo lunedì di novembre
 Ya casi terminamos el trimestre, quedan solo tres semanas. (Ya kási terminámos el trimestre, kédan sólo tres semánas) - Stiamo quasi finendo il trimestre, mancano solo tre settimane
+Buenas, estamos buscando un sofá para el salón, algo cómodo. (Buénas, estámos buskándo un sofá pára el salón, álgo kómodo) - Buongiorno, stiamo cercando un divano per il salotto, qualcosa di comodo
+¿Este modelo viene también en tres plazas? (Éste modélo biéne tambiém en tres pláthas?) - Questo modello viene anche a tre posti?
+Sí, tenemos de dos, tres plazas y también de esquina. (Si, tenémos de dos, tres pláthas i tambiém de eskína) - Sì, abbiamo da due, tre posti e anche ad angolo
+¿De qué material está tarapizado este sofá? (De ké materiál está tapithádo éste sofá?) - Di che materiale è rivestito questo divano?
+Es de tela antimanchas, muy fácil de limpiar. (Es de téla antimánchas, mui fáthil de limpiár) - È in tessuto antimacchia, molto facile da pulire
+Nosotros preferimos algo de piel, más resistente. (Nosótros preferímos álgo de piél, mas resisténte) - Noi preferiamo qualcosa in pelle, più resistente
+Tenemos varios modelos en piel sintética por aquí. (Tenémos bários modélos en piél sintétika por akí) - Abbiamo diversi modelli in ecopelle da questa parte
+¿Cuánto tiempo tarda en llegar si lo encargamos hoy? (Kuánto tiémpo tárda en llegár si lo enkargámos oi?) - Quanto tempo ci mette ad arrivare se lo ordiniamo oggi?
+El plazo de entrega normal es de tres a cuatro semanas. (El pláatho de entréga normál es de tres a kuátro semánas) - Il termine di consegna normale è da tre a quattro settimane
+¿Tenéis mesas de comedor extensibles? (Tenéis mésas de komédor estensíbles?) - Avete tavoli da pranzo allungabili?
+Sí, esta se extiende hasta para diez personas. (Si, ésta se estiénde ásta pára diéth persónas) - Sì, questo si allunga fino a dieci persone
+¿De qué madera está hecha esta mesa? (De ké madéra está écha ésta mésa?) - Di che legno è fatto questo tavolo?
+Es de roble macizo, muy resistente y duradero. (Es de róble mathítho, mui resisténte i duradéro) - È di quercia massiccia, molto resistente e duraturo
+Necesitamos también sillas a juego, unas seis más o menos. (Nezesitámos tambiém síllas a huégo, únas séis mas o ménos) - Ci servono anche delle sedie coordinate, circa sei
+Tenemos un pack de seis sillas que combina perfecto con esta mesa. (Tenémos un pak de séis síllas ke kombína perfékto kon ésta mésa) - Abbiamo un pacchetto di sei sedie che si abbina perfettamente a questo tavolo
+¿Cuánto cuesta el conjunto completo, mesa y sillas? (Kuánto kuésta el konhúnto kompléto, mésa i síllas?) - Quanto costa l'insieme completo, tavolo e sedie?
+El conjunto sale por ochocientos cincuenta euros con el descuento. (El konhúnto sále por ochothiéntos thinkuénta éuros kon el deskuénto) - L'insieme viene ottocentocinquanta euro con lo sconto
+¿Hacéis envío a domicilio o hay que llevárselo uno mismo? (Athéis embío a domithílio o ai ke llebárselo úno mísmo?) - Fate consegna a domicilio o bisogna portarselo via da sé?
+El envío está incluido si compras más de trescientos euros. (El embío está inklwído si kómpras mas de tresthiéntos éuros) - La consegna è inclusa se compri più di trecento euro
+Estamos buscando también un armario para el dormitorio. (Estámos buskándo tambiém un armário pára el dormitório) - Stiamo cercando anche un armadio per la camera da letto
+¿Lo queréis de puertas correderas o abatibles? (Lo keréis de puértas korredéras o abatíbles?) - Lo volete con ante scorrevoli o a battente?
+Preferimos correderas, ocupan menos espacio en la habitación. (Preferímos korredéras, okúpan ménos espáthio en la abitathión) - Preferiamo scorrevoli, occupano meno spazio nella stanza
+Este modelo tiene espejo integrado en una de las puertas. (Éste modélo tiéne espého integrádo en úna de las puértas) - Questo modello ha lo specchio integrato in una delle ante
+¿Cuántos cajones interiores trae el armario? (Kuántos kahónes interiores tráe el armário?) - Quanti cassetti interni ha l'armadio?
+Trae seis cajones y una barra doble para colgar la ropa. (Tráe séis kahónes i úna bárra dóble pára kolgár la rópa) - Ha sei cassetti e una barra doppia per appendere i vestiti
+También necesitamos una cama nueva, de matrimonio. (Tambiém nezesitámos úna káma nuéba, de matrimónio) - Ci serve anche un letto nuovo, matrimoniale
+¿Qué medida es la cama de matrimonio estándar, ciento cincuenta? (Ké medída es la káma de matrimónio estándar, thiénto thinkuénta?) - Che misura ha il letto matrimoniale standard, centocinquanta?
+Tenemos de ciento treinta y cinco y de ciento cincuenta centímetros. (Tenémos de thiénto tréinta i thínko i de thiénto thinkuénta thentímetros) - Abbiamo da centotrentacinque e da centocinquanta centimetri
+¿El somier viene incluido con la cama o se compra aparte? (El somiér biéne inklwído kon la káma o se kómpra apárte?) - La rete viene inclusa con il letto o si compra a parte?
+El somier se vende por separado, cuesta ciento veinte euros. (El somiér se bénde por separádo, kuésta thiénto béinte éuros) - La rete si vende a parte, costa centoventi euro
+¿Tenéis estanterías para el salón, algo moderno? (Tenéis estanterías pára el salón, álgo modérno?) - Avete librerie per il salotto, qualcosa di moderno?
+Sí, mira esta línea minimalista que acaba de llegar. (Si, míra ésta línea minimalísta ke akába de llegár) - Sì, guarda questa linea minimalista appena arrivata
+Nos gustaría algo con más baldas para poner libros. (Nos gustaría álgo kon mas báldas pára ponér líbros) - Ci piacerebbe qualcosa con più ripiani per mettere i libri
+Este modelo trae ocho baldas ajustables en altura. (Éste modélo tráe ócho báldas ahustábles en altúra) - Questo modello ha otto ripiani regolabili in altezza
+¿Cuánto peso aguanta cada balda, más o menos? (Kuánto péso agwánta káda bálda, mas o ménos?) - Quanto peso regge ogni ripiano, più o meno?
+Aguanta hasta quince kilos por balda sin problema. (Agwánta ásta kínthe kílos por bálda sin probléma) - Regge fino a quindici chili per ripiano senza problemi
+¿Se puede montar uno mismo o hay que pagar el montaje? (Se puéde montár úno mísmo o ai ke pagár el montáhe?) - Si può montare da soli o bisogna pagare il montaggio?
+Viene con instrucciones fáciles, aunque también ofrecemos montaje a domicilio. (Biéne kon instrukthiónes fáthiles, aúnke tambiém ofrethémos montáhe a domithílio) - Viene con istruzioni facili, anche se offriamo anche montaggio a domicilio
+¿Cuánto cuesta el servicio de montaje aparte? (Kuánto kuésta el serbíthio de montáhe apárte?) - Quanto costa il servizio di montaggio a parte?
+Son cuarenta euros por mueble, independientemente del tamaño. (Son kuarénta éuros por muéble, independientemente del tamáño) - Sono quaranta euro a mobile, indipendentemente dalla dimensione
+Estamos mirando también lámparas para el pasillo. (Estámos mirándo tambiém lámparas pára el pasíllo) - Stiamo guardando anche lampade per il corridoio
+Tenemos aplique de pared o lámparas de techo, lo que prefiráis. (Tenémos aplíke de paréd o lámparas de técho, lo ke preferáis) - Abbiamo applique da parete o lampade da soffitto, quello che preferite
+¿Estas alfombras son lavables a máquina? (Éstas alfómbras son labábles a mákina?) - Questi tappeti sono lavabili in lavatrice?
+Sí, hasta sesenta grados sin ningún problema. (Si, ásta sesénta grádos sin ningún probléma) - Sì, fino a sessanta gradi senza nessun problema
+¿Cuál es la política de devoluciones si algo no encaja bien? (Kuál es la polítika de debolutiónes si álgo no enkáha bién?) - Qual è la politica di reso se qualcosa non va bene?
+Tenéis treinta días para devolver cualquier producto sin usar. (Tenéis tréinta días pára debolbér kwalkiér prodúkto sin usár) - Avete trenta giorni per restituire qualsiasi prodotto non usato
+Perfecto, entonces nos llevamos el sofá, la mesa y el armario. (Perfékto, entónthes nos llebámos el sofá, la mésa i el armário) - Perfetto, allora prendiamo il divano, il tavolo e l'armadio
+Muy bien, os preparo el presupuesto total con el envío incluido. (Mui bién, os prepáro el presupuésto totál kon el embío inklwído) - Benissimo, vi preparo il preventivo totale con la consegna inclusa
+¿Qué hora es? Se me ha parado el reloj otra vez. (Ké óra es? Se me a paráado el relóh ótra beth) - Che ore sono? Mi si è fermato l'orologio di nuovo
+Son las siete y media, vas a llegar tarde al cole. (Son las siéte i média, bas a llegár tárde al kóle) - Sono le sette e mezza, farai tardi a scuola
+¿A qué hora quedamos mañana, a las diez en punto? (A ké óra kedámos mañána, a las diéth en púnto?) - A che ora ci vediamo domani, alle dieci in punto?
+Mejor quedamos un poco antes, a las nueve y cuarto. (Mehór kedámos un póko ántes, a las nuébe i kuárto) - Meglio vederci un po' prima, alle nove e un quarto
+Falta un cuarto de hora para que empiece la película. (Fálta un kuárto de óra pára ke empiéthe la pelíkula) - Manca un quarto d'ora perché inizi il film
+El tren sale a las seis menos veinte, no lleguemos tarde. (El tren sále a las séis ménos béinte, no llegémos tárde) - Il treno parte alle sei meno venti, non facciamo tardi
+Ya son casi las doce de la noche, deberíamos irnos a dormir. (Ya son kási las dóthe de la nóche, debéramos írnos a dormír) - Sono già quasi le dodici di notte, dovremmo andare a dormire
+Me he despertado a las cinco de la madrugada sin motivo. (Me e despertádo a las thínko de la madrugáda sin motíbo) - Mi sono svegliato alle cinque del mattino presto senza motivo
+¿Tienes hora? Se me ha quedado el móvil sin batería. (Tiénes óra? Se me a kedádo el móbil sin batería) - Hai l'ora? Mi si è scaricato il cellulare
+Son las tres y cuarto, todavía tenemos tiempo de sobra. (Son las tres i kuárto, todabía tenémos tiémpo de sóbra) - Sono le tre e un quarto, abbiamo ancora tempo in abbondanza
+El reloj de la cocina va adelantado diez minutos siempre. (El relóh de la kothína ba adelantádo diéth minútos siémpre) - L'orologio della cucina è sempre avanti di dieci minuti
+Yo lo dejo así a propósito, para no llegar tarde nunca. (Yo lo dého así a propósito, pára no llegár tárde núnka) - Io lo lascio così apposta, per non fare mai tardi
+¿A qué hora cierra la farmacia, a las nueve de la noche? (A ké óra thiérra la farmáthia, a las nuébe de la nóche?) - A che ora chiude la farmacia, alle nove di sera?
+Cierra un poco antes los sábados, a las ocho y media. (Thiérra un póko ántes los sábados, a las ócho i média) - Chiude un po' prima il sabato, alle otto e mezza
+Llevo esperando media hora y todavía no ha llegado el autobús. (Llébo esperándo média óra i todabía no a llegádo el autobús) - Sono mezz'ora che aspetto e ancora non è arrivato l'autobus
+El reloj de pared se ha parado a las cuatro y diez. (El relóh de paréd se a paráado a las kuátro i diéth) - L'orologio da parete si è fermato alle quattro e dieci
+Necesito cambiar la pila de este reloj, ya no funciona. (Nezesíto kambiár la píla de éste relóh, ya no funthióna) - Ho bisogno di cambiare la pila di questo orologio, non funziona più
+¿Sabes qué hora es en Nueva York ahora mismo? (Sábes ké óra es en Nuéba York áora mísmo?) - Sai che ore sono a New York proprio adesso?
+Allí deben de ser las nueve de la mañana, con la diferencia horaria. (Allí dében de ser las nuébe de la mañána, kon la diferénthia orária) - Lì dovrebbero essere le nove del mattino, con il fuso orario
+Este reloj de pulsera me lo regaló mi abuelo hace años. (Éste relóh de pulséra me lo regaló mi abuélo áthe áños) - Questo orologio da polso me lo regalò mio nonno anni fa
+Todavía funciona perfecto, aunque hay que darle cuerda cada día. (Todabía funthióna perfékto, aúnke ai ke darle kuérda káda día) - Funziona ancora perfettamente, anche se bisogna caricarlo ogni giorno
+¿A qué hora sale el sol en verano, sobre las siete? (A ké óra sále el sol en beráno, sóbre las siéte?) - A che ora sorge il sole d'estate, verso le sette?
+Sale mucho antes, casi a las seis y media de la mañana. (Sále múcho ántes, kási a las séis i média de la mañána) - Sorge molto prima, quasi alle sei e mezza del mattino
+El reloj despertador no ha sonado esta mañana, qué desastre. (El relóh despertadór no a soanádo ésta mañána, ke desástre) - La sveglia non è suonata stamattina, che disastro
+Se me ha olvidado programarlo anoche, con las prisas. (Se me a olbidádo programárlo anóche, kon las prísas) - Mi sono dimenticato di impostarla ieri sera, con la fretta
+Faltan cinco minutos para las ocho, date prisa que llegamos tarde. (Fáltan thínko minútos pára las ócho, date prísa ke llegámos tárde) - Mancano cinque minuti alle otto, sbrigati che facciamo tardi
+A esta hora del día siempre hay muchísimo tráfico en la ciudad. (A ésta óra del día siémpre ai muchísimo tráfiko en la thiudád) - A quest'ora del giorno c'è sempre moltissimo traffico in città
+¿Cuánto falta para que sea mediodía? (Kuánto fálta pára ke séa mediodía?) - Quanto manca perché sia mezzogiorno?
+Faltan veinte minutos, así que ya casi es hora de comer. (Fáltan béinte minútos, así ke ya kási es óra de komér) - Mancano venti minuti, quindi è già quasi ora di pranzo
+El horario de verano cambia otra vez este fin de semana. (El orário de beráno kámbia ótra beth éste fin de semána) - L'ora legale cambia di nuovo questo weekend
+¿Adelantamos el reloj o lo atrasamos esta vez? (Adelantámos el relóh o lo atrasámos ésta beth?) - Spostiamo avanti l'orologio o indietro questa volta?
+Se atrasa una hora en otoño, se adelanta en primavera. (Se atrása úna óra en otóño, se adeláanta en primabéra) - Va indietro di un'ora in autunno, avanti in primavera
+A medianoche en punto empiezan los fuegos artificiales de Nochevieja. (A medianóche en púnto empiéthan los fuégos artifithiáles de Nochebiéha) - A mezzanotte in punto iniziano i fuochi d'artificio di Capodanno
+Nos quedan casi tres horas hasta que llegue el momento. (Nos kédan kási tres óras ásta ke llégue el moménto) - Ci restano quasi tre ore fino a quando arrivi il momento
+El reloj del ayuntamiento da las campanadas cada hora en punto. (El relóh del ayuntamiénto da las kampanádas káda óra en púnto) - L'orologio del municipio suona i rintocchi ogni ora esatta
+Se escuchan desde toda la plaza, es una tradición del pueblo. (Se eskúchan désde tóda la pláatha, es úna tradithión del puéblo) - Si sentono da tutta la piazza, è una tradizione del paese
+¿A qué hora empieza el turno de tarde en tu trabajo? (A ké óra empiétha el túrno de tárde en tu trabáho?) - A che ora inizia il turno pomeridiano nel tuo lavoro?
+Empieza a las tres y termina a las once de la noche. (Empiétha a las tres i termína a las ónthe de la nóche) - Inizia alle tre e finisce alle undici di sera
+Todavía es pronto, son solo las ocho de la mañana. (Todabía es prónto, son sólo las ócho de la mañána) - È ancora presto, sono solo le otto del mattino
+Ya es tarde para llamar, son casi las once de la noche. (Ya es tárde pára llamár, son kási las ónthe de la nóche) - È già tardi per chiamare, sono quasi le undici di sera
+El reloj de sol del jardín ya no marca bien la hora. (El relóh de sol del hardín ya no márka bién la óra) - La meridiana del giardino non segna più bene l'ora
+Con las nubes de hoy no se ve ni la sombra siquiera. (Kon las núbes de oi no se be ni la sómbra sikiéra) - Con le nuvole di oggi non si vede nemmeno l'ombra
+¿Cuánto tiempo llevas esperando aquí, media hora ya? (Kuánto tiémpo llébas esperándo akí, média óra ya?) - Quanto tempo sei qui ad aspettare, già mezz'ora?
+Llevo veinte minutos, no te preocupes que no pasa nada. (Llébo béinte minútos, no te preokúpes ke no pása náda) - Sono venti minuti, non ti preoccupare che non fa niente
+El vuelo sale a las seis y media de la madrugada, qué horror. (El buélo sále a las séis i média de la madrugáda, ke orrór) - Il volo parte alle sei e mezza di mattina presto, che orrore
+Tendremos que levantarnos a las cuatro para llegar a tiempo. (Tendrémos ke lebantárnos a las kuátro pára llegár a tiémpo) - Dovremo alzarci alle quattro per arrivare in tempo
+A las dos de la tarde solemos echar la siesta en verano. (A las dos de la tárde solémos echár la siésta en beráno) - Alle due del pomeriggio di solito facciamo la pennichella d'estate
+Después de comer, media horita de siesta y como nuevo. (Después de komér, média orita de siésta i kómo nuébo) - Dopo pranzo, una mezz'oretta di pisolino e come nuovo
+¿A qué hora cenáis normalmente en tu casa? (A ké óra thenáis normalménte en tu kása?) - A che ora cenate di solito a casa tua?
+Solemos cenar sobre las nueve, un poco tarde para los niños. (Solémos thenár sóbre las nuébe, un póko tárde pára los níños) - Di solito ceniamo verso le nove, un po' tardi per i bambini
+Ya ha dado la una, vámonos ya que se hace tarde. (Ya a dádo la úna, bámonos ya ke se áthe tárde) - È già scoccata l'una, andiamocene che si fa tardi
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
