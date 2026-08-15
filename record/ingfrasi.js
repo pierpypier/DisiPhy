@@ -2641,6 +2641,54 @@ It's honestly a bit unsettling how precise he is (its onëstli a bit ansetlin ha
 Grandma still calls the remote control the clicker (grènma stil kolz dhë rimout kontroul dhë klikër) - La nonna chiama ancora il telecomando "the clicker"
 Nobody's had the heart to correct her (noubodiz hèd dhë hart tu korekt hër) - Nessuno ha avuto il coraggio di correggerla
 Honestly, everyone in this family's got some weird habit or other (onëstli, evriuan in dhis fèmiliz gat sam uird hèbit or adhër) - Onestamente, in questa famiglia tutti hanno qualche strana abitudine o l'altra
+We need to check whether the system is still working properly before we start the maintenance. (Ui niid tu cek ueder de sistem iz stil uorking properli bifor ui start de meintinens) - Dobbiamo controllare se il sistema funziona ancora correttamente prima di iniziare la manutenzione.
+I think the new control panel is much easier to use than the old one. (Ai think de niu kontrol panel iz mac iizier tu iuz den di ould uan) - Penso che il nuovo pannello di controllo sia molto più facile da usare di quello vecchio.
+Have you checked the pressure readings on the main line? (Hev iu cekt de prescer riidings on de mein lain?) - Hai controllato i valori di pressione sulla linea principale?
+The sensor keeps giving us a slightly different reading every time. (De sensor kiips giving as e slaitli difrent riiding evri taim) - Il sensore continua a darci una lettura leggermente diversa ogni volta.
+Maybe the problem isn't the equipment itself but the connection to the network. (Meibi de problem iznt di ekuipment itself bat de konekcion tu de netuork) - Forse il problema non è l'apparecchiatura in sé, ma il collegamento alla rete.
+We should replace that cable before it causes a bigger problem. (Ui sciud ripleis det keibel bifor it kozes e biger problem) - Dovremmo sostituire quel cavo prima che provochi un problema più serio.
+The backup system should kick in automatically if the main unit fails. (De bekap sistem sciud kik in otomatikli if de mein iunit feils) - Il sistema di backup dovrebbe entrare automaticamente in funzione se l'unità principale si guasta.
+Can you see anything unusual on the screen? (Ken iu sii enithing aniujiuel on de skriin?) - Vedi qualcosa di insolito sullo schermo?
+The software needs an update, but I don't want to do it while the system is running. (De softuer niidz en apdeit, bat ai dount uont tu du it uail de sistem iz raning) - Il software deve essere aggiornato, ma non voglio farlo mentre il sistema è in funzione.
+We've got three alarms showing at the same time. (Uiv got thrii elarmz sciouing et de seim taim) - Abbiamo tre allarmi visualizzati contemporaneamente.
+Let's find out what triggered the first alarm. (Lets faind aut uot trigd de ferst elarm) - Vediamo cosa ha fatto scattare il primo allarme.
+The temperature has gone up by five degrees in the last hour. (De tempricer hez gon ap bai faiv digriiz in de last auer) - La temperatura è aumentata di cinque gradi nell'ultima ora.
+I wouldn't change that setting without checking the manual first. (Ai udent ceingj det seting uidaut ceking de meniuel ferst) - Non cambierei quella impostazione senza prima controllare il manuale.
+The old machine is slower, but it's still more reliable. (Di ould mesciin iz slouer, bat its stil mor rilaiebel) - La vecchia macchina è più lenta, ma è ancora più affidabile.
+We need a system that can handle a higher workload. (Ui niid e sistem det ken hendel e haier uorkloud) - Ci serve un sistema che possa gestire un carico di lavoro maggiore.
+How much power does this unit actually consume? (Hau mac pauer daz dis iunit ektciueli konsium?) - Quanta energia consuma realmente questa unità?
+The display goes blank whenever the voltage drops. (De displei gouz blenk uenever de voltij drops) - Il display diventa nero ogni volta che la tensione scende.
+Could the problem be caused by a faulty sensor? (Kud de problem bi kozd bai e folti sensor?) - Il problema potrebbe essere causato da un sensore difettoso?
+We've already replaced two sensors, so I'd check the wiring next. (Uiv olredi ripleist tu sensorz, sou aid cek de uai-ring nekst) - Abbiamo già sostituito due sensori, quindi controllerei il cablaggio.
+The connection looks fine, but the signal is still unstable. (De konekcion luks fain, bat de signal iz stil ansteibel) - Il collegamento sembra a posto, ma il segnale è ancora instabile.
+If we install the new module, we might need to restart the whole system. (If ui instal de niu modiul, ui mait niid tu riistart de houl sistem) - Se installiamo il nuovo modulo, potremmo dover riavviare l'intero sistema.
+I'd rather test it on a spare unit first. (Aid rader test it on e sper iunit ferst) - Preferirei testarlo prima su un'unità di riserva.
+The data is being recorded automatically every ten minutes. (De deita iz biing rikordid otomatikli evri ten minits) - I dati vengono registrati automaticamente ogni dieci minuti.
+Can we access the system remotely from another computer? (Ken ui ekses de sistem rimoutli from enader kompiuter?) - Possiamo accedere al sistema da remoto da un altro computer?
+The Wi-Fi signal is too weak in this part of the building. (De uai-fai signal iz tu uiik in dis part ov de bilding) - Il segnale Wi-Fi è troppo debole in questa parte dell'edificio.
+We could add another access point to improve the coverage. (Ui kud ed enader ekses point tu impruuv de kaverij) - Potremmo aggiungere un altro punto di accesso per migliorare la copertura.
+The printer works, but it's taking ages to connect. (De printer uorks, bat its teiking eijiz tu konekt) - La stampante funziona, ma ci mette un'eternità a collegarsi.
+I think the server is overloaded. (Ai think de server iz ouver loudid) - Penso che il server sia sovraccarico.
+Have you backed up the configuration before changing anything? (Hev iu bekt ap de konfigiureiscion bifor ceingjing enithing?) - Hai fatto il backup della configurazione prima di modificare qualcosa?
+We can't afford to lose the settings we've already entered. (Ui kent eford tu luuz de setingz uiv olredi enter d) - Non possiamo permetterci di perdere le impostazioni che abbiamo già inserito.
+The new software is faster, but some of the menus are confusing. (De niu softuer iz faster, bat sam ov de meniuz ar konfiusing) - Il nuovo software è più veloce, ma alcuni menu sono poco intuitivi.
+I found a way to automate that task. (Ai faund e uei tu otom eit det task) - Ho trovato un modo per automatizzare quella operazione.
+That could save us at least an hour every day. (Det kud seiv as et liist en auer evri dei) - Potrebbe farci risparmiare almeno un'ora ogni giorno.
+We should keep the old equipment until we're sure the new one is reliable. (Ui sciud kiip di ould ekuipment until uir sciur de niu uan iz rilaiebel) - Dovremmo tenere le vecchie apparecchiature finché non siamo sicuri che quelle nuove siano affidabili.
+The maintenance team said the repair would take about four hours. (De meintinens tiim sed de ripeer ud teik ebaut for auerz) - Il team di manutenzione ha detto che la riparazione richiederà circa quattro ore.
+If we shut this down now, we'll have to restart everything from scratch. (If ui sciut dis daun nau, uil hev tu riistart evriting from skrec) - Se lo spegniamo adesso, dovremo riavviare tutto da capo.
+Let's monitor it for another thirty minutes before we make a decision. (Lets monitor it for enader therti minits bifor ui meik e disiscion) - Monitoriamolo per altri trenta minuti prima di prendere una decisione.
+The readings look normal now, so the problem may have fixed itself. (De riidings luk normal nau, sou de problem mei hev fikst itself) - I valori sembrano normali adesso, quindi il problema potrebbe essersi risolto da solo.
+I don't trust that warning light because it sometimes comes on for no reason. (Ai dount trast det uorning lait bikoz it samtaimz kamz on for nou riizen) - Non mi fido di quella spia perché a volte si accende senza motivo.
+We need a better way to track faults and maintenance. (Ui niid e beter uei tu trek folts end meintinens) - Ci serve un modo migliore per tenere traccia dei guasti e della manutenzione.
+Could we connect the two systems so they can share data? (Kud ui konekt de tu sistemz sou dei ken scer deita?) - Potremmo collegare i due sistemi in modo che possano condividere i dati?
+The technician left a note saying that the motor was running too hot. (De tekniscen left e nout seing det de moutor uoz raning tu hot) - Il tecnico ha lasciato una nota dicendo che il motore funzionava a una temperatura troppo elevata.
+I think we should replace the part rather than keep repairing it. (Ai think ui sciud ripleis de part rader den kiip ripeering it) - Penso che dovremmo sostituire il componente invece di continuare a ripararlo.
+The system is old, and finding replacement parts is getting harder. (De sistem iz ould, end fainding ripleisment parts iz geting harder) - Il sistema è vecchio e trovare pezzi di ricambio sta diventando più difficile.
+Technology changes so quickly that it's hard to keep everything up to date. (Teknologi ceingjiz sou kuikli det its hard tu kiip evriting ap tu deit) - La tecnologia cambia così rapidamente che è difficile tenere tutto aggiornato.
+I'd rather spend a little more now than deal with a major failure later. (Aid rader spend e litel mor nau den diil uid e meijor feiler leiter) - Preferirei spendere un po' di più adesso piuttosto che affrontare un guasto grave più avanti.
+Before we install anything new, we need to make sure it's compatible with the existing system. (Bifor ui instal enithing niu, ui niid tu meik sciur its kompatebel uid di egzisting sistem) - Prima di installare qualcosa di nuovo, dobbiamo assicurarci che sia compatibile con il sistema esistente.
+I think a simple solution would be better than adding another layer of technology. (Ai think e simpel soliuscion ud bi beter den eding enader leier ov teknologi) - Penso che una soluzione semplice sarebbe migliore che aggiungere un altro livello di tecnologia.
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
