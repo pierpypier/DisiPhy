@@ -2590,6 +2590,57 @@ Grandma still keeps the same birthday cards and gives them back to the same peop
 I wonder where she picked up that strange habit. (Ai uonder uer sci pikt ap det streinj hebit) - Mi chiedo dove abbia preso quella strana abitudine.
 Maybe we're all a little weird in our own way. (Meibi uir ol e litel uird in auer oun uei) - Forse siamo tutti un po' strani a modo nostro.
 At least nobody in our family is ever boring. (Et liist noubodi in auer femili iz ever boring) - Almeno nella nostra famiglia nessuno è mai noioso.
+Have you noticed how Uncle Mark always arrives an hour early (hev yu noutist hau ankël Mark ouëlweiz araivz en auer erli) - Hai notato come zio Mark arrivi sempre un'ora prima
+He says he'd rather wait than risk being late (hi sez hiid rèdhër ueit dhèn risk biiin leit) - Dice che preferisce aspettare piuttosto che rischiare di fare tardi
+Aunt Carol still won't eat anything green, it's so odd (ènt Kèrol stil uont iit enìthin griin, its sou od) - Zia Carol ancora non mangia niente di verde, è così strano
+She's been like that since we were kids (scìiz bin laik dhèt sins uì uer kidz) - È così da quando eravamo bambini
+Grandad always falls asleep halfway through dinner (grènd£d ouëlweiz folz asliip hafuei thruu dinër) - Il nonno si addormenta sempre a metà cena
+Nobody even bothers waking him up anymore (noubodi ivën badhërz ueikin him ap enimor) - Ormai nessuno si preoccupa più di svegliarlo
+Have you noticed Laura never answers her phone the first time (hev yu noutist Loura nevër ènsërz hër foun dhë fërst taim) - Hai notato che Laura non risponde mai al telefono la prima volta
+You always have to call her twice for some reason (yu ouëlweiz hev tu kol hër tuais for sam rizën) - Devi sempre chiamarla due volte per qualche motivo
+My colleague Tom brings the same lunch every single day (mai kolìig Tom bringz dhë seim lanch evri singël dei) - Il mio collega Tom porta lo stesso pranzo ogni singolo giorno
+I don't know how he doesn't get bored of it (ai dount nou hau hi dazënt ghet bord ov it) - Non so come faccia a non stancarsene
+Grandma insists on hand-washing everything, even the plates (grènma insists on hèndwoscin evrithin, ivën dhë pleits) - La nonna insiste per lavare tutto a mano, anche i piatti
+She just doesn't trust the dishwasher, never has (scì giast dazënt trast dhë dishuosciër, nevër hèz) - Semplicemente non si fida della lavastoviglie, non l'ha mai fatto
+Have you noticed Peter always parks in the exact same spot (hev yu noutist Piitër ouëlweiz parks in dhë igzèkt seim spot) - Hai notato che Peter parcheggia sempre esattamente nello stesso posto
+He gets weirdly annoyed if someone else takes it (hi ghets uirdli anoid if samuan els teiks it) - Si infastidisce stranamente se qualcun altro lo occupa
+My sister still sleeps with the light on, at her age (mai sistër stil sliips uidh dhë lait on, et hër eigi) - Mia sorella dorme ancora con la luce accesa, alla sua età
+I honestly thought she'd have grown out of that by now (ai onëstli thot scìid hev groun aut ov dhèt bai nau) - Onestamente pensavo l'avesse superata ormai
+Dad always checks the weather five times a day (dèd ouëlweiz cheks dhë uedhër faiv taimz a dei) - Papà controlla sempre il meteo cinque volte al giorno
+Even when it's clearly not going to change (ivën uen its klirli not gouin tu cheingi) - Anche quando è chiaro che non cambierà
+Have you noticed how Julia always finishes everyone's sentences (hev yu noutist hau Giulia ouëlweiz finiscis evriuanz sentënsiz) - Hai notato come Julia finisca sempre le frasi di tutti
+It drives me a bit crazy, if I'm honest (it draivz mi a bit kreizi, if aim onëst) - Mi manda un po' fuori di testa, se devo essere sincero
+My cousin Andy never says goodbye properly, he just leaves (mai kazën Andi nevër sez gudbai propërli, hi giast liivz) - Mio cugino Andy non saluta mai come si deve, se ne va e basta
+One minute he's there, the next he's gone (uan minit hiiz dher, dhë nekst hiiz gon) - Un minuto è lì, l'attimo dopo è sparito
+Grandpa still writes everything down on paper, never on his phone (grènpa stil raits evrithin daun on peipër, nevër on hiz foun) - Il nonno scrive ancora tutto su carta, mai sul telefono
+He doesn't trust technology one bit (hi dazënt trast teknoloji uan bit) - Non si fida per niente della tecnologia
+Have you noticed Chiara always orders the same dish at every restaurant (hev yu noutist Kiara ouëlweiz ordërz dhë seim disc et evri restrant) - Hai notato che Chiara ordina sempre lo stesso piatto in ogni ristorante
+Why even look at the menu at that point (uai ivën luk et dhë meniu et dhèt point) - A quel punto perché guardare pure il menù
+My friend Marco can never remember anyone's name (mai frend Marko kèn nevër rimembër enìuanz neim) - Il mio amico Marco non riesce mai a ricordare il nome di nessuno
+He just calls everyone mate to be safe (hi giast kolz evriuan meit tu bi seif) - Chiama tutti "mate" per sicurezza
+Aunt Rosa always brings way too much food to every party (ènt Rouza ouëlweiz bringz uei tuu mach fuud tu evri parti) - Zia Rosa porta sempre troppo cibo a ogni festa
+There's always enough leftovers to feed an army (dhers ouëlweiz inaf leftouvërz tu fiid en armi) - Ci sono sempre abbastanza avanzi da sfamare un esercito
+Have you noticed how Simone hums while he's cooking (hev yu noutist hau Simoun hamz uail hiiz kukin) - Hai notato come Simone canticchi mentre cucina
+He doesn't even realise he's doing it (hi dazënt ivën rìelaiz hiiz duuin it) - Non si accorge nemmeno di farlo
+My uncle Franco tells the same three stories at every dinner (mai ankël Frènko telz dhë seim thrii storiz et evri dinër) - Mio zio Franco racconta le stesse tre storie a ogni cena
+We all know the punchlines by heart now (uì ol nou dhë panchlainz bai hart nau) - Ormai conosciamo tutti la battuta finale a memoria
+Have you noticed Elena always shows up with a different bag (hev yu noutist Elena ouëlweiz scouz ap uidh a difërënt bèg) - Hai notato che Elena si presenta sempre con una borsa diversa
+I don't know where she keeps them all (ai dount nou uer scì kiips dhem ol) - Non so dove le tenga tutte
+My brother-in-law never admits when he's lost while driving (mai bradhërinlo nevër ædmits uen hiiz lost uail draivin) - Mio cognato non ammette mai di essersi perso mentre guida
+He just says he's taking the scenic route (hi giast sez hiiz teikin dhë siinik ruut) - Dice solo che sta prendendo la strada panoramica
+Have you noticed how Nonna always pinches your cheek when she sees you (hev yu noutist hau Nona ouëlweiz pinciz yor chiik uen scì siiz yu) - Hai notato come la nonna ti pizzichi sempre la guancia quando ti vede
+It doesn't matter how old you get, she still does it (it dazënt matër hau ould yu ghet, scì stil daz it) - Non importa quanti anni hai, lo fa sempre
+My friend Giulia texts back within seconds, always (mai frend Giulia teksts bèk uidhin sekëndz, ouëlweiz) - La mia amica Giulia risponde sempre ai messaggi in pochi secondi
+I genuinely don't know how she's that fast (ai genuinli dount nou hauz scì dhèt fast) - Non so davvero come faccia a essere così veloce
+Dad refuses to ask for directions, no matter how lost we are (dèd rifiuuziz tu ask for direkscionz, nou matër hau lost uì ar) - Papà si rifiuta di chiedere indicazioni, non importa quanto ci siamo persi
+It's a point of pride for him, apparently (its a point ov praid for him, ëperëntli) - A quanto pare è una questione d'orgoglio per lui
+Have you noticed Marta always has a spare charger in her bag (hev yu noutist Marta ouëlweiz hèz a sper chargër in hër bèg) - Hai notato che Marta ha sempre un caricabatterie di riserva nella borsa
+She's basically saved half the family at this point (scìiz bèsikli seivd haf dhë fèmili et dhis point) - A questo punto ha praticamente salvato metà della famiglia
+My friend Luca always shows up exactly on time, never early, never late (mai frend Luuka ouëlweiz scouz ap igzèktli on taim, nevër erli, nevër leit) - Il mio amico Luca arriva sempre esattamente puntuale, mai in anticipo, mai in ritardo
+It's honestly a bit unsettling how precise he is (its onëstli a bit ansetlin hau prisais hi iz) - È onestamente un po' inquietante quanto sia preciso
+Grandma still calls the remote control the clicker (grènma stil kolz dhë rimout kontroul dhë klikër) - La nonna chiama ancora il telecomando "the clicker"
+Nobody's had the heart to correct her (noubodiz hèd dhë hart tu korekt hër) - Nessuno ha avuto il coraggio di correggerla
+Honestly, everyone in this family's got some weird habit or other (onëstli, evriuan in dhis fèmiliz gat sam uird hèbit or adhër) - Onestamente, in questa famiglia tutti hanno qualche strana abitudine o l'altra
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
