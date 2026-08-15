@@ -2709,6 +2709,56 @@ Ruf am besten gleich den technischen Support an. (Ruuf am besten glaish den tekh
 Ich hoffe wirklich, die neue Firewall bringt mehr Sicherheit. (Ish hoffe virklish, di noie Faierwaal bringt meer Zisherhait) - Spero davvero che il nuovo firewall porti più sicurezza.
 Das wäre echt dringend nötig nach dem letzten Vorfall. (Das vère ekt dringent nöötikh nakh dem letsten Foorfal) - Sarebbe davvero urgentemente necessario dopo l'ultimo incidente.
 Wir sollten die ganze Technik hier mal generalüberholen. (Viir zolten di gantse Tekhnik hiir maal generaalüberhoolen) - Dovremmo revisionare completamente tutta la tecnologia qui.
+Wisst ihr, wie man von eins bis zehn auf Deutsch zählt? (Vist iir, vii man fon ains bis tseen auf Doitsh tsèlt?) - Sapete come si conta da uno a dieci in tedesco?
+Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn. (Ains, tsvai, drai, fiir, fünf, zeks, ziiben, akht, noin, tseen) - Uno, due, tre, quattro, cinque, sei, sette, otto, nove, dieci.
+Wer kann mir bis zwanzig weiterzählen? (Vér kann miir bis tsvantsikh vaitertsèlen?) - Chi sa contare in avanti fino a venti?
+Elf, zwölf, dreizehn, vierzehn, fünfzehn. (Elf, tsvölf, draitseen, fiirtseen, fünftseen) - Undici, dodici, tredici, quattordici, quindici.
+Sechzehn, siebzehn, achtzehn, neunzehn, zwanzig. (Zekhtseen, ziibtseen, akhtseen, noinseen, tsvantsikh) - Sedici, diciassette, diciotto, diciannove, venti.
+Schreibt bitte die Zahlen von eins bis fünfzig ins Heft. (Shraipt bitte di Tsaalen fon ains bis fünftsikh ins Heft) - Scrivete i numeri da uno a cinquanta sul quaderno.
+Wie sagt man eigentlich hundert auf Deutsch? (Vii zaakt man aigentlish hundert auf Doitsh?) - Come si dice in realtà cento in tedesco?
+Hundert sagt man einfach so, wie es klingt. (Hundert zaakt man ainfakh zoo, vii es klingt) - Cento si dice semplicemente così, come suona.
+Wie viele Tage hat eine Woche eigentlich? (Vii fiile Taage hat aine Vokhe aigentlish?) - Quanti giorni ha in realtà una settimana?
+Eine Woche hat sieben Tage, das wisst ihr sicher schon. (Aine Vokhe hat ziiben Taage, das vist iir zisher shon) - Una settimana ha sette giorni, questo lo sapete già di sicuro.
+Nennt mir bitte alle Wochentage der Reihe nach. (Nent miir bitte ale Vokhentaage der Raihe nakh) - Ditemi tutti i giorni della settimana in ordine.
+Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag. (Moontaak, Diinstaak, Mitvokh, Donerstaak, Fraitaak, Zamstaak, Zontaak) - Lunedì, martedì, mercoledì, giovedì, venerdì, sabato, domenica.
+Welcher Tag ist eigentlich heute? (Velsher Taak ist aigentlish hoite?) - Che giorno è oggi in realtà?
+Heute ist Mittwoch, morgen haben wir frei. (Hoite ist Mitvokh, morgen haaben viir frai) - Oggi è mercoledì, domani siamo liberi.
+Und welcher Tag war gestern noch mal? (Und velsher Taak var gestern nokh maal?) - E che giorno era ieri, ripetimi?
+Gestern war Dienstag, das stimmt genau. (Gestern var Diinstaak, das shtimt genau) - Ieri era martedì, esatto.
+Wie viele Monate hat eigentlich ein ganzes Jahr? (Vii fiile Monaate hat aigentlish ain gantses Yaar?) - Quanti mesi ha in realtà un anno intero?
+Ein Jahr hat zwölf Monate, das wisst ihr bestimmt schon. (Ain Yaar hat tsvölf Monaate, das vist iir beshtimt shon) - Un anno ha dodici mesi, questo lo sapete di sicuro già.
+Zählt mir bitte alle Monate des Jahres auf. (Tsèlt miir bitte ale Monaate des Yaares auf) - Elencatemi tutti i mesi dell'anno.
+Januar, Februar, März, April, Mai, Juni. (Yanuaar, Febrer, Merts, April, Mai, Yuuni) - Gennaio, febbraio, marzo, aprile, maggio, giugno.
+Juli, August, September, Oktober, November, Dezember. (Yuuli, Ausgust, Septèmber, Oktoober, Novèmber, Detsèmber) - Luglio, agosto, settembre, ottobre, novembre, dicembre.
+In welchem Monat sind eigentlich eure Geburtstage? (In velshem Monaat zint aigentlish oire Geburtstaage?) - In quale mese sono i vostri compleanni?
+Meiner ist im März, der von meiner Schwester im Juli. (Mainer ist im Merts, der fon mainer Shvester im Yuuli) - Il mio è a marzo, quello di mia sorella a luglio.
+Wie viele Tage hat der Februar in einem Schaltjahr? (Vii fiile Taage hat der Febrer in ainem Shaltyaar?) - Quanti giorni ha febbraio in un anno bisestile?
+Im Schaltjahr hat der Februar neunundzwanzig Tage. (Im Shaltyaar hat der Febrer noinundtsvantsikh Taage) - Nell'anno bisestile febbraio ha ventinove giorni.
+Welcher Monat hat eigentlich die meisten Tage? (Velsher Monaat hat aigentlish di maisten Taage?) - Quale mese ha in realtà più giorni?
+Mehrere Monate haben einunddreißig Tage. (Meerere Monaate haaben ainundraisikh Taage) - Diversi mesi hanno trentuno giorni.
+Wie viel ist eigentlich fünfzehn plus siebenundzwanzig? (Vii fiil ist aigentlish fünftseen plus ziibenuntsvantsikh?) - Quanto fa in realtà quindici più ventisette?
+Das macht zusammen zweiundvierzig, wenn ich richtig rechne. (Das makht tsuzammen tsvaiundfiirtsikh, ven ish rishtikh rekhne) - Fa quarantadue in totale, se conto bene.
+Rechnet bitte hundert minus dreiunddreißig im Kopf. (Rekhnet bitte hundert minus draiundraisikh im Kopf) - Calcolate a mente cento meno trentatré.
+Das ergibt siebenundsechzig, das war gar nicht so schwer. (Das ergipt ziibenundzekhtsikh, das var gaar nikht zoo shvéer) - Fa sessantasette, non è stato poi così difficile.
+An welchem Wochentag beginnt eigentlich dieses Jahr der Januar? (An velshem Vokhentaak begint aigentlish diizes Yaar der Yanuaar?) - In che giorno della settimana inizia gennaio quest'anno?
+Das müssten wir eigentlich im Kalender nachschauen. (Das müsten viir aigentlish im Kalender nakhshauen) - Dovremmo controllarlo sul calendario, in realtà.
+Wie viele Wochenenden hat ungefähr ein ganzes Jahr? (Vii fiile Vokhenenden hat ungefèer ain gantses Yaar?) - Quanti fine settimana ha circa un anno intero?
+Ein Jahr hat ungefähr zweiundfünfzig Wochenenden. (Ain Yaar hat ungefèer tsvaiundfünftsikh Vokhenenden) - Un anno ha circa cinquantadue fine settimana.
+Wann genau haben wir eigentlich Sommerferien? (Van genau haaben viir aigentlish Zomerferien?) - Quando abbiamo esattamente le vacanze estive?
+Die Sommerferien beginnen meistens Ende Juli. (Di Zomerferien beginen maistens Ende Yuuli) - Le vacanze estive iniziano di solito a fine luglio.
+Zählt bitte rückwärts von zwanzig bis eins. (Tsèlt bitte rükvèrts fon tsvantsikh bis ains) - Contate all'indietro da venti a uno.
+Zwanzig, neunzehn, achtzehn, siebzehn, sechzehn. (Tsvantsikh, noinseen, akhtseen, ziibtseen, zekhtseen) - Venti, diciannove, diciotto, diciassette, sedici.
+Wie viele Wochen hat eigentlich ein Monat ungefähr? (Vii fiile Vokhen hat aigentlish ain Monaat ungefèer?) - Quante settimane ha in realtà circa un mese?
+Ein Monat hat ungefähr vier Wochen, manchmal etwas mehr. (Ain Monaat hat ungefèer fiir Vokhen, manshmaal etvas meer) - Un mese ha circa quattro settimane, a volte un po' di più.
+An welchem Tag treffen wir uns für den Ausflug? (An velshem Taak treffen viir uns für den Ausfluuk?) - In che giorno ci vediamo per la gita?
+Wir treffen uns am Freitag, den vierzehnten. (Viir treffen uns am Fraitaak, den fiirtseenten) - Ci vediamo venerdì quattordici.
+Merkt euch bitte, der wievielte Tag heute eigentlich ist. (Merkt oikh bitte, der viifiilte Taak hoite aigentlish ist) - Ricordatevi che giorno del mese è oggi in realtà.
+Heute haben wir den zwölften Oktober. (Hoite haaben viir den tsvölften Oktoober) - Oggi è il dodici ottobre.
+Wie viel ist neun mal neun, wer weiß es schnell? (Vii fiil ist noin maal noin, vér vais es shnel?) - Quanto fa nove per nove, chi lo sa velocemente?
+Neun mal neun macht einundachtzig, das stimmt genau. (Noin maal noin makht ainundakhtsikh, das shtimt genau) - Nove per nove fa ottantuno, esatto.
+Für die Prüfung solltet ihr alle Zahlen bis hundert können. (Für di Prüfung zoltet iir ale Tsaalen bis hundert können) - Per l'esame dovreste conoscere tutti i numeri fino a cento.
+Übt bitte zu Hause noch die Monate auswendig. (Üpt bitte tsu Hauze nokh di Monaate ausvendikh) - Esercitatevi a casa a memorizzare ancora i mesi.
+Sehr gut, das war eine tolle Stunde heute. (Zeer guut, das var aine tole Shtunde hoite) - Molto bene, è stata una bella lezione oggi.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
