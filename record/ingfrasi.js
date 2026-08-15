@@ -2898,6 +2898,106 @@ Do you have one that's a bit wider? (Du iu hev uan dets e bit uaider?) - Ne avet
 I'm worried that the doors won't open properly in that corner. (Aim uorid det de dorz uount oupen properli in det korner) - Temo che le ante non si aprano bene in quell'angolo.
 Let's check the measurements one more time before we order it. (Lets cek de mejerm ents uan mor taim bifor ui order it) - Controlliamo le misure un'altra volta prima di ordinarlo.
 I think this would work really well in the living room. (Ai think dis ud uork rili uel in de living ruum) - Penso che questo starebbe davvero bene in soggiorno.
+What time is it right now (uat taim iz it rait nau) - Che ore sono adesso
+It's almost half past nine (its olmoust haf pest nain) - Sono quasi le nove e mezza
+Can you tell me the time, please (kèn yu tel mi dhë taim, pliiz) - Puoi dirmi l'ora, per favore
+It's just gone eight o'clock (its giast gon eit oklok) - Sono appena passate le otto
+We need to leave in about ten minutes (uì niid tu liiv in abaut ten minits) - Dobbiamo partire tra circa dieci minuti
+What time does the shop open (uat taim daz dhë scop oupën) - A che ora apre il negozio
+It opens at nine and closes at seven (it oupënz et nain end klousiz et sevën) - Apre alle nove e chiude alle sette
+Can you set the clock forward an hour (kèn yu set dhë klok foruord en auer) - Puoi spostare avanti di un'ora l'orologio
+The clocks go back this weekend, don't forget (dhë kloks gou bèk dhis uiikend, dount forghet) - Questo weekend torniamo indietro con gli orologi, non dimenticarlo
+What time do you usually wake up (uat taim du yu iuzueli ueik ap) - A che ora ti svegli di solito
+I normally get up around seven (ai normali ghet ap araund sevën) - Di solito mi alzo verso le sette
+It's quarter past six in the morning (its kuortër past siks in dhë mornin) - Sono le sei e un quarto del mattino
+Can we meet at half nine instead (kèn uì miit et haf nain instèd) - Possiamo vederci alle nove e mezza invece
+Sure, that works better for me anyway (sciur, dhèt uorks betër for mi enìuei) - Certo, mi va meglio comunque
+What time's the meeting scheduled for (uat taimz dhë miitin skedjuld for) - A che ora è programmata la riunione
+It's at quarter to eleven (its et kuortër tu ilevën) - È alle undici meno un quarto
+We're running a bit behind schedule (uir ranin a bit bihaind skedjuul) - Siamo un po' in ritardo sulla tabella di marcia
+Can you check what time it is on your phone (kèn yu chek uat taim it iz on yor foun) - Puoi controllare che ore sono sul telefono
+My watch says it's ten to five (mai uoch sez its ten tu faiv) - Il mio orologio dice che sono le cinque meno dieci
+That clock on the wall is always a bit fast (dhèt klok on dhë uol iz ouëlweiz a bit fast) - Quell'orologio a muro è sempre un po' avanti
+It's about five minutes ahead, I think (its abaut faiv minits ëhed, ai think) - È avanti di circa cinque minuti, credo
+What time does the sun come up these days (uat taim daz dhë san kam ap dhiiz deiz) - A che ora sorge il sole in questo periodo
+It's getting light around six now (its ghetin lait araund siks nau) - Adesso comincia a fare luce verso le sei
+What time does it get dark in winter (uat taim daz it ghet dark in uintër) - A che ora fa buio d'inverno
+It's pitch black by five o'clock (its pich blèk bai faiv oklok) - È completamente buio già alle cinque
+Can you wake me up at half past six tomorrow (kèn yu ueik mi ap et haf pest siks tumorou) - Puoi svegliarmi domani alle sei e mezza
+Sure, I'll set an alarm for you (sciur, ail set en alarm for yu) - Certo, ti metto la sveglia
+What time do you usually have lunch (uat taim du yu iuzueli hev lanch) - A che ora pranzi di solito
+We normally eat around one (uì normali iit araund uan) - Di solito mangiamo verso l'una
+Dinner's at eight tonight, not seven (dinërz et eit tunait, not sevën) - Stasera si cena alle otto, non alle sette
+Can you be ready by quarter past seven (kèn yu bi redi bai kuortër pest sevën) - Puoi essere pronto per le sette e un quarto
+I'll try my best, no promises though (ail trai mai best, nou promisiz dhou) - Ci proverò, ma non prometto niente
+It's already midday and I've done nothing (its olredi middei end aiv dan nathin) - È già mezzogiorno e non ho fatto niente
+Time really flies when you're busy (taim rìeli flaiz uen yor bizi) - Il tempo vola davvero quando sei impegnato
+What time does the last bus leave (uat taim daz dhë lest bas liiv) - A che ora parte l'ultimo autobus
+It leaves at midnight on the dot (it liivz et midnait on dhë dot) - Parte a mezzanotte in punto
+We've got plenty of time before it comes (uìv gat plenti ov taim bifor it kamz) - Abbiamo un sacco di tempo prima che arrivi
+Hurry up, we're going to be late (hari ap, uir gouin tu bi leit) - Sbrigati, faremo tardi
+Relax, we've still got twenty minutes (rilèks, uìv stil gat tuenti minits) - Rilassati, abbiamo ancora venti minuti
+What time did you get home last night (uat taim did yu ghet houm lest nait) - A che ora sei tornato a casa ieri sera
+It was around eleven, maybe a bit later (it uoz araund ilevën, meibi a bit leitër) - Era circa le undici, forse un po' più tardi
+Can we push the appointment back an hour (kèn uì puscc dhë ëpointmënt bèk en auer) - Possiamo spostare l'appuntamento un'ora più tardi
+That should be fine, I'll check the diary (dhèt sciud bi fain, ail chek dhë daiëri) - Dovrebbe andare bene, controllo l'agenda
+What time zone are they in over there (uat taim zoun ar dhei in ouvër dher) - In che fuso orario sono lì
+They're about six hours behind us (dheir abaut siks auerz bihaind as) - Sono circa sei ore indietro rispetto a noi
+It's already tomorrow where they are (its olredi tumorou uer dhei ar) - Dove sono loro è già domani
+I always lose track of time when I'm reading (ai ouëlweiz luuz trèk ov taim uen aim riidin) - Perdo sempre la cognizione del tempo quando leggo
+Same here, hours just disappear (seim hir, auerz giast disëpir) - Anche a me, le ore spariscono semplicemente
+What time should we set off tomorrow (uat taim sciud uì set of tumorou) - A che ora dovremmo partire domani
+Let's leave nice and early, around six (lets liiv nais end erli, araund siks) - Partiamo presto, verso le sei
+That sounds like a solid plan to me (dhèt saundz laik a solid plèn tu mi) - Mi sembra un buon piano
+Have you finished the first Harry Potter book yet (hev yu finiscd dhë fërst Hèri Potër buk yet) - Hai già finito il primo libro di Harry Potter
+Not yet, I'm about halfway through (not yet, aim abaut hafuei thruu) - Non ancora, sono circa a metà
+Who's your favourite character so far (huuz yor feivërit kèrëktër sou far) - Chi è il tuo personaggio preferito finora
+I really like the one with the bushy hair (ai rìeli laik dhë uan uidh dhë buscì her) - Mi piace molto quella con i capelli crespi
+She's definitely the smartest one in the group (scìiz definitli dhë smartëst uan in dhë grup) - È sicuramente la più intelligente del gruppo
+I always thought the owl was such a clever idea (ai ouëlweiz thot dhë aul uoz sach a klevër aidiëa) - Ho sempre pensato che il gufo fosse un'idea davvero geniale
+Using birds to deliver letters is pretty magical (iuzin bërdz tu dilivër letërz iz priti mèjikël) - Usare uccelli per consegnare lettere è piuttosto magico
+Which house would you want to be sorted into (uic haus uud yu uont tu bi sortid intu) - In quale casa vorresti essere smistato
+I'd probably want the brave one, to be honest (aid probëbli uont dhë breiv uan, tu bi onëst) - Vorrei probabilmente quella dei coraggiosi, sinceramente
+That school with the moving staircases sounds chaotic (dhèt skuul uidh dhë muuvin sterkeisiz saundz keiotik) - Quella scuola con le scale che si muovono sembra caotica
+Imagine getting lost every single day (imèjin ghetin lost evri singël dei) - Immagina perderti ogni singolo giorno
+The scenes on the train always feel exciting to me (dhë siinz on dhë trein ouëlweiz fiil iksaitin tu mi) - Le scene sul treno mi sembrano sempre emozionanti
+There's something special about starting a new school year that way (dhers samthin spescël abaut startin a niuu skuul yir dhèt uei) - C'è qualcosa di speciale nell'iniziare così un nuovo anno scolastico
+Did you read the one where they compete in that dangerous tournament (did yu riid dhë uan uer dhei kompiit in dhèt deinjërës turnëmënt) - Hai letto quello in cui partecipano a quel torneo pericoloso
+That one gets pretty dark towards the end (dhèt uan ghets priti dark tuordz dhë end) - Quello diventa piuttosto cupo verso la fine
+I actually prefer the earlier books, they're lighter (ai èkchueli prifer dhë erlìer buks, dheir laitër) - In realtà preferisco i primi libri, sono più leggeri
+Have you read anything about ancient Greek stories (hev yu riid enìthin abaut einshënt griik storiz) - Hai letto qualcosa sulle antiche storie greche
+We're reading a version of the Iliad at school right now (uir riidin a vërscion ov dhë Iliad et skuul rait nau) - A scuola stiamo leggendo una versione dell'Iliade in questo periodo
+What's it actually about (uats it èkchueli abaut) - Di cosa parla esattamente
+It's about a long war fought over a city called Troy (its abaut a long uor fot ouvër a siti kold Troi) - Parla di una lunga guerra combattuta per una città chiamata Troia
+There's a warrior who's basically unstoppable in battle (dhers a uoriër huuz bèsikli anstopëbël in bètël) - C'è un guerriero praticamente inarrestabile in battaglia
+He's furious for most of the story, apparently (hiiz fiuriës for moust ov dhë stori, ëperëntli) - A quanto pare è furioso per gran parte della storia
+The gods keep interfering in the fighting too (dhë godz kiip intërfirin in dhë faitin tuu) - Anche gli dei continuano a interferire nella battaglia
+That's such a strange idea when you think about it (dhèts sach a streinji aidiëa uen yu think abaut it) - È un'idea così strana se ci pensi
+Imagine gods picking sides in a human war (imèjin godz pikin saidz in a hiuumën uor) - Immagina degli dei che scelgono una parte in una guerra umana
+It's kind of similar to how Harry Potter has different forces fighting each other (its kaind ov similar tu hau Hèri Potër hèz difërënt forsiz faitin iich adhër) - È in qualche modo simile a come in Harry Potter ci sono forze diverse che si combattono
+There's always good and bad sides pulling people in (dhers ouëlweiz gud end bèd saidz pulin piipël in) - Ci sono sempre parti buone e cattive che attirano le persone
+Both stories have that whole idea of fate you can't escape (bouth storiz hev dhèt houl aidiëa ov feit yu kènt iskeip) - Entrambe le storie hanno quest'idea del destino a cui non puoi sfuggire
+Do you think the hero always knows he's going to die (du yu think dhë hìrou ouëlweiz nouz hiiz gouin tu dai) - Pensi che l'eroe sappia sempre che morirà
+I think he chooses glory over a long life, basically (ai think hi chuuziz glori ouvër a long laif, bèsikli) - Penso che scelga la gloria invece di una vita lunga, in pratica
+That's such a heavy thing to think about honestly (dhèts sach a hevi thing tu think abaut onëstli) - È una cosa davvero pesante a cui pensare, onestamente
+I prefer stories where the good guys just win in the end (ai prifer storiz uer dhë gud gaiz giast uin in dhë end) - Preferisco le storie in cui i buoni vincono e basta alla fine
+Life's not always that simple though, is it (laifs not ouëlweiz dhèt simpël dhou, iz it) - Ma la vita non è sempre così semplice, vero
+Which do you prefer, wizards or ancient warriors (uic du yu prifer, uizërdz or einshënt uoriërz) - Cosa preferisci, i maghi o gli antichi guerrieri
+Honestly, I can't choose, I love them both (onëstli, ai kènt chuuz, ai lav dhem bouth) - Onestamente non riesco a scegliere, mi piacciono entrambi
+The Iliad's a lot harder to read though, isn't it (dhë Iliëdz a lot hardër tu riid dhou, izënt it) - L'Iliade però è molto più difficile da leggere, no
+Yeah, the names are tricky to remember at first (yèh, dhë neimz ar triki tu rimembër et fërst) - Sì, i nomi sono difficili da ricordare all'inizio
+Once you get into it, it's actually really gripping (uans yu ghet intu it, its èkchueli rìeli gripin) - Una volta che ci entri, è in realtà davvero avvincente
+Did the teacher explain who all the different gods were (did dhë tiicër eksplèin huu ol dhë difërënt godz uer) - L'insegnante ha spiegato chi erano tutti i diversi dei
+Yes, there's one for pretty much everything (yes, dhers uan for priti mach evrithing) - Sì, ce n'è uno praticamente per ogni cosa
+There's even one for the sea and one for war (dhers ivën uan for dhë sii end uan for uor) - Ce n'è persino uno per il mare e uno per la guerra
+That reminds me a bit of the different subjects taught at that wizarding school (dhèt rimaindz mi a bit ov dhë difërënt sabjekts tot et dhèt uizardin skuul) - Questo mi ricorda un po' le diverse materie insegnate in quella scuola di magia
+Everything's connected to something bigger in both stories (evrithingz konektid tu samthin bighër in bouth storiz) - In entrambe le storie tutto è collegato a qualcosa di più grande
+Do you think people still relate to these old stories today (du yu think piipël stil rileit tu dhiiz ould storiz tudei) - Pensi che le persone si rispecchino ancora oggi in queste vecchie storie
+Definitely, themes like friendship and courage never really change (definitli, thiimz laik frendscip end karigi nevër rìeli cheingi) - Sicuramente, temi come amicizia e coraggio non cambiano mai davvero
+That's probably why people still read them thousands of years later (dhèts probëbli uai piipël stil riid dhem thauzëndz ov yirz leitër) - Probabilmente è per questo che la gente le legge ancora migliaia di anni dopo
+Maybe people will still be reading Harry Potter in a hundred years too (meibi piipël uil stil bi riidin Hèri Potër in a handrëd yirz tuu) - Forse tra cento anni la gente leggerà ancora Harry Potter
+Same stories just stick around forever, don't they (sam storiz giast stik araund forevër, dount dhei) - Certe storie restano semplicemente per sempre, no
+I think that's what makes a story a proper classic (ai think dhèts uat meiks a stori a propër klèsik) - Penso che sia questo che rende una storia un vero classico
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
