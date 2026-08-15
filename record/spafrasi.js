@@ -2874,6 +2874,129 @@ Después de comer, media horita de siesta y como nuevo. (Después de komér, mé
 ¿A qué hora cenáis normalmente en tu casa? (A ké óra thenáis normalménte en tu kása?) - A che ora cenate di solito a casa tua?
 Solemos cenar sobre las nueve, un poco tarde para los niños. (Solémos thenár sóbre las nuébe, un póko tárde pára los níños) - Di solito ceniamo verso le nove, un po' tardi per i bambini
 Ya ha dado la una, vámonos ya que se hace tarde. (Ya a dádo la úna, bámonos ya ke se áthe tárde) - È già scoccata l'una, andiamocene che si fa tardi
+¿Has leído ya el último libro de Harry Potter? (As leído ya el último líbro de Harri Póter?) - Hai già letto l'ultimo libro di Harry Potter?
+A mí me encanta la saga entera, la he leído como tres veces. (A mi me enkánta la sága entéra, la e leído kómo tres béthes) - A me piace tantissimo l'intera saga, l'ho letta come tre volte
+¿Tú de qué casa serías, Gryffindor o Slytherin? (Tu de ké kása serías, Grifindor o Eslitherin?) - Tu di che casa saresti, Grifondoro o Serpeverde?
+Yo creo que sería de Ravenclaw, me gusta mucho estudiar. (Yo kréo ke sería de Rábenklo, me gústa múcho estudiár) - Io credo che sarei di Corvonero, mi piace molto studiare
+Mi personaje favorito siempre ha sido Hermione, es súper inteligente. (Mi personáhe fabóríto siémpre a sído Ermióne, es súper inteliхénte) - Il mio personaggio preferito è sempre stato Hermione, è super intelligente
+A mí me cae mejor Ron, tiene un humor buenísimo. (A mi me kae méhor Ron, tiéne un umór buenísimo) - A me sta più simpatico Ron, ha un umorismo bellissimo
+¿Has visto todas las películas o solo has leído los libros? (As bísto tódas las películas o sólo as leído los líbros?) - Hai visto tutti i film o hai solo letto i libri?
+Los libros son mucho mejores, como siempre pasa. (Los líbros son múcho mehóres, kómo siémpre pása) - I libri sono molto meglio, come sempre succede
+Mi hija está obsesionada con Hogwarts, quiere ir a un parque temático. (Mi íha está obsesionáda kon Ógwarts, kiéte ir a un párke temátiko) - Mia figlia è ossessionata da Hogwarts, vuole andare in un parco a tema
+Hay uno en Orlando, dicen que está increíble de bien hecho. (Ai úno en Orlándo, dízen ke está inkreíble de bién écho) - Ce n'è uno a Orlando, dicono che è fatto incredibilmente bene
+¿Cuál es tu varita favorita, la de Harry o la de Voldemort? (Kuál es tu barita fabóríta, la de Harri o la de Boldemort?) - Qual è la tua bacchetta preferita, quella di Harry o quella di Voldemort?
+A mí me fascina toda la historia de las reliquias de la muerte. (A mi me fasthína tóda la istória de las relíkias de la muérte) - A me affascina tutta la storia dei doni della morte
+Este fin de semana vamos a hacer maratón de todas las películas. (Éste fin de semána bámos a athér maratón de tódas las películas) - Questo weekend facciamo una maratona di tutti i film
+Son ocho películas en total, nos va a llevar todo el día. (Son ócho películas en totál, nos ba a llebár tódo el día) - Sono otto film in totale, ci porterà via tutta la giornata
+¿Te acuerdas de la escena del basilisco en la cámara secreta? (Te akuérdas de la eskéna del basilísko en la kámara sekréta?) - Ti ricordi della scena del basilisco nella camera dei segreti?
+Esa parte me daba muchísimo miedo de pequeño. (Ésa párte me dába muchísimo miédo de pekéño) - Quella parte mi faceva moltissima paura da piccolo
+En clase de literatura estamos empezando a leer la Ilíada. (En kláse de literatúra estámos empethándo a leér la Ilíada) - A lezione di letteratura stiamo iniziando a leggere l'Iliade
+Es un poema larguísimo, no sé si voy a terminarlo a tiempo. (Es un poéma larguísimo, no se si boy a terminárlo a tiémpo) - È un poema lunghissimo, non so se riuscirò a finirlo in tempo
+¿Sabes de qué trata realmente la guerra de Troya? (Sábes de ké tráta realménte la guérra de Tróya?) - Sai di cosa parla veramente la guerra di Troia?
+Todo empieza por el rapto de Helena, si no recuerdo mal. (Tódo empiétha por el ráto de Eléna, si no rekuérdo mal) - Tutto inizia con il rapimento di Elena, se non ricordo male
+Mi personaje favorito de la Ilíada es Héctor, me da mucha pena. (Mi personáhe fabóríto de la Ilíada es Éktor, me da múcha péna) - Il mio personaggio preferito dell'Iliade è Ettore, mi fa molta pena
+Aquiles es muy valiente, pero también bastante orgulloso. (Akíles es mui baliénte, péro tambiém bastánte orgullóso) - Achille è molto coraggioso, ma anche piuttosto orgoglioso
+¿Habéis leído ya la parte del duelo entre Héctor y Aquiles? (Abéis leído ya la párte del duélo éntre Éktor i Akíles?) - Avete già letto la parte del duello tra Ettore e Achille?
+Esa escena es muy dramática, casi se me saltan las lágrimas. (Ésa eskéna es mui dramátika, kási se me sáltan las lágrimas) - Quella scena è molto drammatica, quasi mi vengono le lacrime
+El profesor nos ha explicado quiénes eran todos los dioses griegos. (El profesór nos a esplikádo kiénes éran tódos los diósess griégos) - Il professore ci ha spiegato chi erano tutti gli dei greci
+Zeus siempre metiéndose en los asuntos de los mortales, qué personaje. (Zéus siémpre metiéndose en los asúntos de los mortáles, ke personáhe) - Zeus che si intromette sempre negli affari dei mortali, che personaggio
+Mi hija está comparando la Ilíada con Harry Potter para un trabajo. (Mi íha está komparándo la Ilíada kon Harri Póter pára un trabáho) - Mia figlia sta paragonando l'Iliade a Harry Potter per un lavoro scolastico
+Qué idea tan original, nunca se me hubiera ocurrido a mí. (Ke idéa tan orihinál, núnka se me ubiéra okurrído a mi) - Che idea originale, non mi sarebbe mai venuta in mente
+Dice que en las dos historias hay batallas épicas entre el bien y el mal. (Díze ke en las dos istórias ai batállas épikas éntre el bien i el mal) - Dice che in entrambe le storie ci sono battaglie epiche tra il bene e il male
+Tiene bastante razón, aunque son épocas totalmente distintas. (Tiéne bastánte rathón, aúnke son épokas totalménte distíntas) - Ha abbastanza ragione, anche se sono epoche totalmente diverse
+¿Cuántos libros tiene la saga completa de Harry Potter? (Kuántos líbros tiéne la sága kompléta de Harri Póter?) - Quanti libri ha la saga completa di Harry Potter?
+Son siete libros en total, uno por cada año en Hogwarts. (Son siéte líbros en totál, úno por káda áño en Ógwarts) - Sono sette libri in totale, uno per ogni anno a Hogwarts
+La Ilíada también se divide en muchas partes, se llaman cantos. (La Ilíada tambiém se dibíde en múchas pártes, se llaman kántos) - Anche l'Iliade si divide in molte parti, si chiamano canti
+¿Cuántos cantos tiene el poema completo, veinticuatro? (Kuántos kántos tiéne el poéma kompléto, beintikuátro?) - Quanti canti ha il poema completo, ventiquattro?
+Sí, y cada uno cuenta una parte distinta de la guerra. (Si, i káda úno kuénta úna párte distínta de la guérra) - Sì, e ognuno racconta una parte diversa della guerra
+A mí me encantaría tener una lechuza como la de Harry. (A mi me enkantaría tenér úna lechútha kómo la de Harri) - A me piacerebbe tantissimo avere un gufo come quello di Harry
+Sería complicado cuidarla en un piso pequeño, la verdad. (Sería komplikádo kuidárla en un píso pekéño, la berdád) - Sarebbe complicato curarlo in un appartamento piccolo, sinceramente
+¿Habéis visto la nueva serie que están haciendo sobre Hogwarts? (Abéis bísto la nuéba série ke están athiéndo sóbre Ógwarts?) - Avete visto la nuova serie che stanno facendo su Hogwarts?
+Todavía no ha salido, pero tiene una pinta buenísima. (Todabía no a salído, péro tiéne úna pínta buenísima) - Non è ancora uscita, ma sembra bellissima
+El profesor nos ha dicho que comparemos los héroes de ambas historias. (El profesór nos a dícho ke komparémos los éroes de ámbas istórias) - Il professore ci ha detto di confrontare gli eroi di entrambe le storie
+Harry y Aquiles se parecen en que los dos tienen un destino marcado. (Harri i Akíles se paréthen en ke los dos tiénen un destíno markádo) - Harry e Achille si assomigliano perché entrambi hanno un destino segnato
+Tenemos que entregar el trabajo comparativo antes del viernes. (Tenémos ke entregár el trabáho komparatíbo ántes del biérnes) - Dobbiamo consegnare il lavoro comparativo prima di venerdì
+Yo prefiero mil veces la magia a las batallas con espadas. (Yo prefiéro mil béthes la máhia a las batállas kon espádas) - Io preferisco mille volte la magia alle battaglie con le spade
+A mí me gustan las dos cosas por igual, la verdad. (A mi me gústan las dos kósas por igwál, la berdád) - A me piacciono entrambe le cose allo stesso modo, sinceramente
+Este verano quiero releer toda la saga de Harry Potter otra vez. (Éste beráno kiéro releér tóda la sága de Harri Póter ótra beth) - Quest'estate voglio rileggere tutta la saga di Harry Potter di nuovo
+Yo prefiero avanzar con la Ilíada, todavía me quedan diez cantos. (Yo prefiéro abanthár kon la Ilíada, todabía me kédan diéth kántos) - Io preferisco andare avanti con l'Iliade, mi restano ancora dieci canti
+¿Cuál dirías que es la lección principal de la Ilíada? (Kuál dirías ke es la lekthión printhipál de la Ilíada?) - Quale diresti che è la lezione principale dell'Iliade?
+Que el orgullo y la ira pueden destruirlo todo, más o menos. (Ke el orgúllo i la íra puéden destruírlo tódo, mas o ménos) - Che l'orgoglio e l'ira possono distruggere tutto, più o meno
+Y en Harry Potter la lección es que el amor vence al odio. (I en Harri Póter la lekthión es ke el amór bénthe al ódio) - E in Harry Potter la lezione è che l'amore vince sull'odio
+Los dos son historias que se van a leer durante generaciones. (Los dos son istórias ke se ban a leér duránte heneratiónes) - Entrambe sono storie che verranno lette per generazioni
+¿Sabes cuándo se usa el subjuntivo en español? (Sábes kuándo se úsa el subhuntíbo en español?) - Sai quando si usa il congiuntivo in spagnolo?
+La verdad es que a mí todavía me cuesta bastante, tío. (La berdád es ke a mi todabía me kuésta bastánte, tío) - La verità è che a me costa ancora parecchio, amico
+Después de "ojalá" siempre va el subjuntivo, eso ya lo tengo claro. (Después de oahalá siémpre ba el subhuntíbo, éso ya lo téngo kláro) - Dopo "magari" va sempre il congiuntivo, quello ormai lo ho chiaro
+¿Cuál es la diferencia entre "ser" y "estar", me lío siempre? (Kuál es la diferénthia éntre ser i estár, me lío siémpre?) - Qual è la differenza tra "ser" e "estar", mi confondo sempre?
+"Ser" es para lo permanente y "estar" para lo temporal, más o menos. (Ser es pára lo permanénte i estár pára lo temporál, mas o ménos) - "Ser" è per il permanente ed "estar" per il temporaneo, più o meno
+Aunque hay excepciones que rompen esa regla, claro. (Aúnke ai eksethiónes ke rómpen ésa régla, kláro) - Anche se ci sono eccezioni che rompono quella regola, certo
+El profesor nos ha explicado hoy el pretérito indefinido. (El profesór nos a esplikádo oi el pretérito indefinido) - Il professore ci ha spiegato oggi il passato remoto
+Ese tiempo verbal tiene muchísimas irregularidades, es un lío. (Ése tiémpo berbál tiéne muchísimas irregularidádes, es un lío) - Quel tempo verbale ha moltissime irregolarità, è un casino
+¿Cuándo se usa el pretérito perfecto y cuándo el indefinido? (Kuándo se úsa el pretérito perfékto i kuándo el indefinído?) - Quando si usa il passato prossimo e quando il passato remoto?
+Depende de si la acción está conectada con el presente o no. (Depénde de si la akthión está konektáda kon el presénte o no) - Dipende se l'azione è collegata al presente oppure no
+Tenemos un examen de gramática el próximo miércoles. (Tenémos un eksámen de gramátika el próksimo miérkoles) - Abbiamo un esame di grammatica il prossimo mercoledì
+No sé todavía cuándo usar "por" y cuándo usar "para". (No se todabía kuándo usár por i kuándo usár pára) - Non so ancora quando usare "por" e quando usare "para"
+"Por" suele indicar causa y "para" indica finalidad, más o menos. (Por suéle indikár káusa i pára indíka finalidád, mas o ménos) - "Por" di solito indica causa e "para" indica finalità, più o meno
+¿Cómo se forma el futuro perfecto en español? (Kómo se fórma el futúro perfékto en español?) - Come si forma il futuro anteriore in spagnolo?
+Se forma con "haber" en futuro más el participio, es fácil. (Se fórma kon abér en futúro mas el partithípio, es fáthil) - Si forma con "haber" al futuro più il participio, è facile
+Me cuesta muchísimo distinguir cuándo va acento y cuándo no. (Me kuésta muchísimo distingír kuándo ba athénto i kuándo no) - Mi costa moltissimo distinguere quando va l'accento e quando no
+Las palabras agudas llevan tilde si terminan en vocal, n o s. (Las palábras agúdas llében tílde si termínan en bokál, ene o ese) - Le parole tronche portano l'accento se finiscono in vocale, n o s
+¿Y las esdrújulas? Esas siempre llevan acento, ¿no? (I las esdrúhulas? Ésas siémpre llében athénto, no?) - E le sdrucciole? Quelle portano sempre l'accento, no?
+Exacto, las esdrújulas siempre se acentúan sin excepción. (Eksákto, las esdrúhulas siémpre se athentúan sin eksethión) - Esatto, le sdrucciole si accentano sempre senza eccezioni
+El profesor nos ha mandado veinte ejercicios sobre los pronombres. (El profesór nos a mandádo béinte eherthíthios sóbre los pronómbres) - Il professore ci ha assegnato venti esercizi sui pronomi
+Los pronombres de objeto directo e indirecto me confunden mucho. (Los pronómbres de obhéto direkto e indiréto me konfúnden múcho) - I pronomi di oggetto diretto e indiretto mi confondono molto
+"Le" y "lo" a veces se pueden intercambiar según la región. (Le i lo a béthes se puéden interkambiár según la rehión) - "Le" e "lo" a volte si possono scambiare a seconda della regione
+En España usamos mucho el leísmo, aunque no sea muy correcto. (En España usámos múcho el leísmo, aúnke no séa mui korrékto) - In Spagna usiamo molto il leísmo, anche se non è molto corretto
+¿Cuál es la diferencia entre "este" y "éste", con o sin tilde? (Kuál es la diferénthia éntre éste i éste, kon o sin tílde?) - Qual è la differenza tra "este" e "éste", con o senza accento?
+Ya no se acentúan los demostrativos, cambiaron la norma hace años. (Ya no se athentúan los demostratíbos, kambiáron la nórma áthe áños) - Ormai i dimostrativi non si accentano più, hanno cambiato la norma anni fa
+Tenemos que aprendernos las conjugaciones de los verbos irregulares. (Tenémos ke aprendérnos las konhugathiónes de los bérbos irregulares) - Dobbiamo imparare le coniugazioni dei verbi irregolari
+El verbo "ir" es de los más irregulares que hay, menudo lío. (El bérbo ir es de los mas irregulares ke ai, menúdo lío) - Il verbo "andare" è uno dei più irregolari che ci siano, che casino
+¿Cómo se dice "yo fui" en presente, "voy", verdad? (Kómo se díthe yo fui en presénte, boy, berdád?) - Come si dice "io sono andato" al presente, "vado", vero?
+Exacto, el verbo "ir" cambia completamente según el tiempo verbal. (Eksákto, el bérbo ir kámbia kompletaménte según el tiémpo berbál) - Esatto, il verbo "andare" cambia completamente a seconda del tempo verbale
+El profesor nos ha corregido mal el uso de las comas en el texto. (El profesór nos a korrehído mal el úso de las kómas en el tésto) - Il professore ci ha corretto l'uso sbagliato delle virgole nel testo
+La puntuación es superimportante, cambia el sentido de la frase. (La puntuathión es superimportánte, kámbia el sentído de la fráse) - La punteggiatura è super importante, cambia il senso della frase
+¿Cuándo se usa "qué" con tilde y cuándo sin tilde? (Kuándo se úsa ké kon tílde i kuándo sin tílde?) - Quando si usa "qué" con l'accento e quando senza?
+Lleva tilde cuando es interrogativo o exclamativo, si no, no. (Lléba tílde kuándo es interrogatíbo o eksklamatíbo, si no, no) - Porta l'accento quando è interrogativo o esclamativo, altrimenti no
+Me cuesta mucho diferenciar "haber" de "a ver" al escribir. (Me kuésta múcho diferenthiár abér de a ber al eskribír) - Mi costa molto differenziare "haber" da "a ver" quando scrivo
+Son homófonos, suenan igual pero se escriben distinto, típico error. (Son omófonos, suénan igwál péro se eskríben distínto, típiko error) - Sono omofoni, suonano uguale ma si scrivono diversi, errore tipico
+¿Sabéis cuántos tiempos verbales tiene el español en total? (Sabéis kuántos tiémpos berbáles tiéne el español en totál?) - Sapete quanti tempi verbali ha lo spagnolo in totale?
+Entre todos los modos, deben de ser más de quince, una barbaridad. (Éntre tódos los módos, dében de ser mas de kínthe, úna barbaridád) - Tra tutti i modi, dovrebbero essere più di quindici, una follia
+El profesor nos ha explicado la diferencia entre "sino" y "si no". (El profesór nos a esplikádo la diferénthia éntre síno i si no) - Il professore ci ha spiegato la differenza tra "sino" e "si no"
+Esa me la sé, aunque siempre dudo un segundo antes de escribirla. (Ésa me la se, aúnke siémpre dúdo un segúndo ántes de eskribírla) - Quella la so, anche se dubito sempre un secondo prima di scriverla
+¿El gerundio se usa igual que en italiano, más o menos? (El herúndio se úsa igwál ke en italiáno, mas o ménos?) - Il gerundio si usa allo stesso modo dell'italiano, più o meno?
+Se parece bastante, pero en español hay reglas más estrictas. (Se paréthe bastánte, péro en español ai réglas mas estríktas) - Si assomiglia parecchio, ma in spagnolo ci sono regole più rigide
+Tenemos que analizar diez oraciones y decir el sujeto y el predicado. (Tenémos ke analithár diéth orathiónes i dethír el suhéto i el predikádo) - Dobbiamo analizzare dieci frasi e dire il soggetto e il predicato
+El análisis sintáctico se me da fatal, la verdad. (El análisis sintáktiko se me da fatál, la berdád) - L'analisi sintattica mi viene malissimo, sinceramente
+¿Por qué "agua" lleva "el" delante si es femenina? (Por ké água lléba el delánte si es femenína?) - Perché "agua" ha "el" davanti se è femminile?
+Es porque empieza por "a" tónica, para evitar la cacofonía. (Es porké empiétha por a tónika, pára ebitár la kakofonía) - È perché inizia con "a" tonica, per evitare la cacofonia
+El profesor nos ha pedido diez ejemplos de oraciones compuestas. (El profesór nos a pedído diéth ehémplos de orathiónes kompuéstas) - Il professore ci ha chiesto dieci esempi di frasi composte
+Las subordinadas siempre me marean un poco, hay demasiados tipos. (Las subordinádas siémpre me maréan un póko, ai demasiádos típos) - Le subordinate mi confondono sempre un po', ci sono troppi tipi
+¿Cuál es el plural de "lápiz", "lápices" con ce, verdad? (Kuál es el plurál de lápith, lápithes kon the, berdád?) - Qual è il plurale di "lápiz", "lápices" con la c, vero?
+Sí, las palabras que terminan en zeta cambian la zeta por ce en plural. (Si, las palábras ke termínan en théta kámbian la théta por the en plurál) - Sì, le parole che finiscono in z cambiano la z in c al plurale
+Con toda esta gramática ya me duele hasta la cabeza, oye. (Kon tóda ésta gramátika ya me duéle ásta la kabétha, óye) - Con tutta questa grammatica mi fa già male pure la testa, ehi
+¿Te toca a ti tirar el dado o me toca a mí? (Te tóka a ti tirár el dádo o me tóka a mi?) - Tocca a te tirare il dado o tocca a me?
+Venga, mueve ficha que llevamos aquí una hora. (Bénga, muébe fítha ke llebámos akí úna óra) - Dai, muovi la pedina che siamo qui da un'ora
+He conquistado ya tres territorios, vas perdiendo. (E konkistádo ya tres territórios, bas perdiéndo) - Ho già conquistato tre territori, stai perdendo
+Espera, esa jugada no vale, mira las reglas otra vez. (Espéra, ésa hugáda no bále, míra las réglas ótra beth) - Aspetta, quella mossa non vale, guarda di nuovo le regole
+Voy a atacar tu ejército con estas dos cartas. (Boy a atakár tu ehérthito kon éstas dos kártas) - Attacco il tuo esercito con queste due carte
+No hagas trampas, que te he visto cambiar la carta. (No ágas trámpas, ke te e bísto kambiár la kárta) - Non fare imbrogli, che ti ho visto cambiare la carta
+Si construyo aquí una fortaleza, tú ya no puedes pasar. (Si konstrúyo akí úna fortalétha, tu ya no puédes pasár) - Se costruisco qui una fortezza, tu non puoi più passare
+Me quedan pocos recursos, tengo que jugar con cabeza. (Me kédan pókos rekúrsos, téngo ke hugár kon kabétha) - Mi restano pochi risorse, devo giocare con la testa
+¿Cuántos puntos llevas tú? Yo voy con quince. (Kuántos púntos llébas tu? Yo boy kon kínthe) - Quanti punti hai tu? Io sono a quindici
+Vas a caer en mi trampa, ya lo verás. (Bas a kaér en mi trámpa, ya lo berás) - Cadrai nella mia trappola, vedrai
+Esta partida se está alargando muchísimo, tío. (Ésta partída se está alargándo muchísimo, tío) - Questa partita si sta allungando moltissimo, amico
+Si mueves ahí, te dejo el camino libre sin querer. (Si muébes aí, te dého el kamíno líbre sin kerér) - Se ti muovi lì, ti lascio la strada libera senza volerlo
+Necesito reforzar mis defensas antes de tu próximo turno. (Nezesíto reforthár mis defénsas ántes de tu próksimo túrno) - Devo rinforzare le mie difese prima del tuo prossimo turno
+¿Jugamos otra partida después de esta o lo dejamos aquí? (Hugámos ótra partída después de ésta o lo dehámos akí?) - Giochiamo un'altra partita dopo questa o la lasciamo qui?
+He perdido todas mis tropas en ese ataque, qué desastre. (E perdído tódas mis trópas en ése atáke, ke desástre) - Ho perso tutte le mie truppe in quell'attacco, che disastro
+Si formamos una alianza, podemos ganarle a los demás. (Si formámos úna alíantha, podémos ganárle a los demás) - Se formiamo un'alleanza, possiamo battere gli altri
+No me fío de ti, la última vez me traicionaste. (No me fío de ti, la última beth me traithionáste) - Non mi fido di te, l'ultima volta mi hai tradito
+Tira otra vez el dado, ese resultado no cuenta. (Tíra ótra beth el dádo, ése resultádo no kuénta) - Tira di nuovo il dado, quel risultato non conta
+Me falta solo una carta para completar la colección. (Me fálta sólo úna kárta pára kompletár la kolekthión) - Mi manca solo una carta per completare la collezione
+Con esta jugada te dejo sin ninguna opción, jaque mate. (Kon ésta hugáda te dého sin ningúna optión, háke máte) - Con questa mossa non ti lascio nessuna opzione, scacco matto
+Vaya partidón, ha sido la mejor de toda la noche. (Báya partidón, a sído la méhor de tóda la nóche) - Che partitona, è stata la migliore di tutta la sera
+La próxima vez te voy a ganar seguro, ya lo verás. (La próksima beth te boy a ganár segúro, ya lo berás) - La prossima volta ti batterò di sicuro, vedrai
+Venga, te toca a ti, no te lo pienses tanto que se hace de noche. (Bénga, te tóka a ti, no te lo piénses tánto ke se áthe de nóche) - Dai, tocca a te, non pensarci tanto che si fa notte
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
