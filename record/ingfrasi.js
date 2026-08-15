@@ -1,16 +1,3 @@
-/* ================================================================
-   ingfrasi.js — Frasi bilingue Inglese/Italiano per ingfile.html
-   ----------------------------------------------------------------
-   Estratte e ripulite dalle coppie bilingui presenti in citazioni.js.
-   Formato di ogni riga: "Frase inglese — Frase italiana"
-   (stesso schema a "riga singola + separatore ' — '" già usato in
-   citazioni.js, per restare coerenti con le convenzioni della suite).
-
-   Per aggiungere nuove frasi: basta aggiungere una nuova riga dentro
-   il template string qui sotto, rispettando il formato
-   "Inglese — Italiano". Nessuna virgola, nessun array da modificare
-   a mano: il parsing avviene automaticamente più in basso.
-   ================================================================ */
 const FRASI_ING_RAW = `
 What would you like for breakfast? (uot wud iu laik for brekfast) — Cosa vuoi per colazione?
 What time does the train leave? (uot taim daz de trein liiv) — A che ora parte il treno?
