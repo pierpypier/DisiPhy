@@ -1758,6 +1758,519 @@ Der Heizkörper im Bad wird einfach nicht warm. (Der Haitskörper im Baat virt a
 Seit wann hast du schon diese Schmerzen? (Zait van hast du shon diize Shmertsen?) - Da quando hai questi dolori?
 Unser Hund muss dringend zum Tierarzt. (Unzer Hunt muss dringent tsum Tiirartst) - Il nostro cane deve urgentemente andare dal veterinario.
 Ich freu mich schon riesig auf Weihnachten. (Ish froi mish shon riizikh auf Vainakhten) - Sono già molto felice per il Natale.
+Ich hätte gern ein halbes Kilo Rinderhack, bitte. (ich hete gern ain halbes kilo rinderhak, bitte) - Vorrei mezzo chilo di carne macinata di manzo, per favore.
+Von den Hähnchenbrustfilets nehme ich gleich sechs Stück. (fon den hencenbrust-filets näme ich glaic zeks stück) - Dei filetti di petto di pollo ne prendo subito sei.
+Haben Sie noch ungefähr dreihundert Gramm Schweinegulasch? (haben zi noch ungefer draihundert gramm scvainegulasch) - Avete ancora circa trecento grammi di spezzatino di maiale?
+Davon bitte nur zweihundert Gramm, das reicht für heute. (dafon bitte nur tsvaihundert gramm, das raict für hoite) - Di quello solo duecento grammi, per oggi basta.
+Ich nehme vier Bratwürste und zwei Schnitzel. (ich näme fir bratvürste und tsvai scnitsel) - Prendo quattro salsicce e due cotolette.
+Können Sie mir das Fleisch in dünne Scheiben schneiden? (können zi mir das flaish in dünne schaiben schnaiden) - Può tagliarmi la carne a fette sottili?
+Ich hätte gern etwa ein Kilo Hähnchenschenkel. (ich hete gern etwa ain kilo hencen-scenkel) - Vorrei circa un chilo di cosce di pollo.
+Was kostet das Kilo Rindersteak heute? (vas kostet das kilo rindersteak hoite) - Quanto costa oggi un chilo di bistecca di manzo?
+Dann nehme ich lieber nur dreihundert Gramm. (dan näme ich liber nur draihundert gramm) - Allora preferisco prenderne solo trecento grammi.
+Können Sie mir davon fünf Scheiben abschneiden? (können zi mir davon fünf schaiben apschnaiden) - Può tagliarmene cinque fette?
+Ich suche etwas Mageres, ungefähr vierhundert Gramm. (ich zuche etvas mageres, ungefer firhundert gramm) - Cerco qualcosa di magro, circa quattrocento grammi.
+Die zwei Stücke sehen gut aus, die nehme ich. (di tsvai stücke zeen gut aus, di näme ich) - I due pezzi sembrano buoni, prendo quelli.
+Haben Sie frische Leber, oder ist die schon ausverkauft? (haben zi frisce leber, oder ist di scion ausferkauft) - Avete fegato fresco o è già esaurito?
+Ich hätte gern drei hundertfünfzig Gramm gemischtes Hackfleisch. (ich hete gern draihundert-fünfzig gramm gemischtes hakflaish) - Vorrei trecentocinquanta grammi di carne macinata mista.
+Machen Sie bitte ungefähr acht gleich große Stücke daraus. (machen zi bitte ungefer acht glaic grosse stücke daraus) - Ne faccia per favore circa otto pezzi della stessa dimensione.
+Von der Salami hätte ich gern zweihundertfünfzig Gramm. (fon der zalami hete ich gern tsvaihundert-fünfzig gramm) - Vorrei duecentocinquanta grammi di salame.
+Kann ich auch nur hundert Gramm davon bekommen? (kan ich auc nur hundert gramm davon bekommen) - Posso averne anche solo cento grammi?
+Für sechs Personen brauche ich ungefähr ein Kilo Fleisch. (für zeks personen brauche ich ungefer ain kilo flaish) - Per sei persone mi serve circa un chilo di carne.
+Packen Sie das bitte getrennt ein, einmal für heute und einmal für morgen. (packen zi das bitte getrennt ain, ainmal für hoite und ainmal für morgen) - Me lo confezioni separatamente, una parte per oggi e una per domani.
+Ich hab nur zehn Euro dabei, reicht das für diese Menge? (ich hab nur tsen euro dabai, raict das für di-ze menge) - Ho solo dieci euro con me, bastano per questa quantità?
+Von den Äpfeln hätte ich gern ein Kilo, aber bitte nicht zu reif. (fon den äpfeln hete ich gern ain kilo, aber bitte nicht tsu raif) - Vorrei un chilo di mele, ma non troppo mature.
+Geben Sie mir bitte sechs Äpfel von den kleineren. (geben zi mir bitte zeks äpfel fon den klaineren) - Mi dia per favore sei delle mele più piccole.
+Ich nehme ein halbes Kilo Bananen. (ich näme ain halbes kilo bananen) - Prendo mezzo chilo di banane.
+Sind die Erdbeeren heute frisch gekommen? (zint di erdberen hoite frisch gekommen) - Le fragole sono arrivate fresche oggi?
+Dann nehme ich zwei Schalen Erdbeeren. (dan näme ich tsvai schalen erdberen) - Allora prendo due vaschette di fragole.
+Haben Sie noch ungefähr ein Pfund Kirschen? (haben zi noch ungefer ain pfund kirscen) - Avete ancora circa mezzo chilo di ciliegie?
+Ich hätte gern vier Orangen und drei Zitronen. (ich hete gern fir orangen und drai tsitronen) - Vorrei quattro arance e tre limoni.
+Von den Pfirsichen nehme ich fünf Stück, die hier sehen gut aus. (fon den pfirsichen näme ich fünf stück, di hier zeen gut aus) - Prendo cinque pesche, queste qui sembrano buone.
+Wie viel kostet ein Kilo Tomaten? (vi fiil kostet ain kilo tomaten) - Quanto costa un chilo di pomodori?
+Dann nehme ich gleich zwei Kilo. (dan näme ich glaic tsvai kilo) - Allora ne prendo subito due chili.
+Können Sie mir ein halbes Kilo Kartoffeln abwiegen? (können zi mir ain halbes kilo kartoffeln abvigen) - Può pesarmi mezzo chilo di patate?
+Ich brauche ungefähr sieben Karotten für die Suppe. (ich brauche ungefer ziben karotten für di zuppe) - Mi servono circa sette carote per la zuppa.
+Von den Paprika hätte ich gern drei rote und zwei gelbe. (fon den paprika hete ich gern drai rote und tsvai gelbe) - Vorrei tre peperoni rossi e due gialli.
+Die Gurken sehen heute besonders knackig aus. (di gurken zeen hoite besonders knackig aus) - I cetrioli oggi sembrano particolarmente croccanti.
+Ich nehme vier Gurken und einen Bund Radieschen. (ich näme fir gurken und ainen bund radischen) - Prendo quattro cetrioli e un mazzetto di ravanelli.
+Haben Sie Weintrauben auch in kleineren Schalen? (haben zi vaintrauben auc in klaineren schalen) - Avete l'uva anche in confezioni più piccole?
+Ich hätte gern eine Schale mit ungefähr fünfhundert Gramm. (ich hete gern aine schale mit ungefer fünfhundert gramm) - Vorrei una confezione da circa cinquecento grammi.
+Von den Birnen nehme ich drei, aber bitte noch etwas festere. (fon den birnen näme ich drai, aber bitte noch etvas festege) - Prendo tre pere, ma per favore un po' più sode.
+Sind die Melonen schon reif oder sollte ich noch zwei Tage warten? (zint di melonen scion raif oder zolte ich noch tsvai tage varten) - I meloni sono già maturi o dovrei aspettare ancora due giorni?
+Ich nehme eine kleine Wassermelone, die reicht für vier Leute. (ich näme aine klaine vassermelone, di raict für fir loite) - Prendo un'anguria piccola, basta per quattro persone.
+Können Sie mir von den Pilzen etwa dreihundert Gramm abwiegen? (können zi mir fon den pilzen etwa draihundert gramm apvigen) - Può pesarmi circa trecento grammi di funghi?
+Ich brauche nur zwei Zucchini und eine Aubergine. (ich brauche nur tsvai tsukkini und aine aubergine) - Mi servono solo due zucchine e una melanzana.
+Die Kirschen sind lecker, aber fünfzehn Euro pro Kilo sind mir zu teuer. (di kirscen zint lecker, aber fünftsen euro pro kilo zint mir tsu toier) - Le ciliegie sono buone, ma quindici euro al chilo per me sono troppi.
+Gibt es einen Mengenrabatt, wenn ich drei Kilo nehme? (gibt es ainen mengenrabatt, ven ich drai kilo näme) - C'è uno sconto sulla quantità se ne prendo tre chili?
+Ich hab ungefähr zwanzig Euro für Fleisch und Gemüse eingeplant. (ich hab ungefer tsvantsig euro für flaish und gemüze eingeplant) - Ho previsto circa venti euro per carne e verdura.
+Das macht zusammen achtzehn Euro und vierzig Cent. (das macht tsuzammen achtzeen euro und firtsig tsent) - In tutto fanno diciotto euro e quaranta centesimi.
+Geben Sie mir bitte noch zwei Bananen dazu, dann sind wir fertig. (geben zi mir bitte noch tsvai bananen datsu, dan zint vir fertig) - Mi aggiunga ancora due banane, poi abbiamo finito.
+Ich hätte gern insgesamt etwa zweieinhalb Kilo Obst. (ich hete gern insgesamt etwa tsvai-ainhalb kilo obst) - Vorrei in tutto circa due chili e mezzo di frutta.
+Für den Grillabend brauche ich mindestens anderthalb Kilo Fleisch. (für den grillabent brauche ich mindestens anderthalb kilo flaish) - Per la grigliata mi serve almeno un chilo e mezzo di carne.
+Heute messen wir die Temperatur von drei verschiedenen Flüssigkeiten. (hoite messen vir di temperatur fon drai ferscidenen flüssigkeiten) - Oggi misuriamo la temperatura di tre liquidi diversi.
+Wie viel Grad hat das Wasser gerade? (vi fiil grad hat das vasser gerade) - Quanti gradi ha adesso l'acqua?
+Das Thermometer zeigt zweiundzwanzig Grad an. (das termometer tsaigt tsvaiundtsvantsig grad an) - Il termometro indica ventidue gradi.
+Wir brauchen für den Versuch genau fünfzig Milliliter Wasser. (vir brauchen für den fersuch genau fünftsig milliliter vasser) - Per l'esperimento ci servono esattamente cinquanta millilitri d'acqua.
+Gib bitte zehn Tropfen von dieser Flüssigkeit dazu. (gib bitte tsen tropfen fon diza flüssigkeit datsu) - Aggiungi per favore dieci gocce di questo liquido.
+Warum steigt der Pegel nach dem Erhitzen an? (varum staigt der pegel nach dem erhitzen an) - Perché il livello sale dopo il riscaldamento?
+Das Stück Metall wiegt genau zweihundert Gramm. (das stück metall vigt genau tsvaihundert gramm) - Il pezzo di metallo pesa esattamente duecento grammi.
+Wir teilen die Klasse in vier Gruppen auf. (vir tailen di klasse in fir gruppen auf) - Dividiamo la classe in quattro gruppi.
+Jede Gruppe bekommt drei Reagenzgläser. (jede gruppe bekommt drai reagentzgläser) - Ogni gruppo riceve tre provette.
+Füllt das erste Glas bis zur Hälfte mit Wasser. (füllt das erste glas bis tsur hälfte mit vasser) - Riempite il primo bicchiere per metà con acqua.
+Wir müssen die Ergebnisse mindestens zweimal überprüfen. (vir müssen di ergebnisse mindestens tsvai-mal überprüfen) - Dobbiamo verificare i risultati almeno due volte.
+Die Pflanze ist in den letzten sieben Tagen fast fünf Zentimeter gewachsen. (di pflantse ist in den letzten ziben tagen fast fünf tsentimeter gewachsen) - La pianta è cresciuta di quasi cinque centimetri negli ultimi sette giorni.
+Wie viele Blätter hat die Pflanze inzwischen? (vi fiil blätter hat di pflantse inzwischen) - Quante foglie ha ormai la pianta?
+Ich habe vierzehn Blätter gezählt. (ich habe firtsen blätter gezählt) - Ho contato quattordici foglie.
+Das Licht war acht Stunden pro Tag eingeschaltet. (das licht var acht stunden pro tag eingeschaltet) - La luce è rimasta accesa otto ore al giorno.
+Ohne Licht wächst die Pflanze deutlich langsamer. (one licht vekst di pflantse doiltlic langsamer) - Senza luce la pianta cresce molto più lentamente.
+Wir vergleichen heute zwei verschiedene Bodenproben. (vir fer-glaichen hoite tsvai ferscidene bodenproben) - Oggi confrontiamo due diversi campioni di terreno.
+In dieser Probe sind deutlich mehr Sandkörner enthalten. (in diza probe zint doiltlic meer zandkörner enthalten) - In questo campione ci sono molti più granelli di sabbia.
+Die Erde enthält ungefähr dreißig Prozent Feuchtigkeit. (di erde enthält ungefer draisig protsent foichtigkeit) - Il terreno contiene circa il trenta per cento di umidità.
+Wie viel Sauerstoff befindet sich ungefähr in der Luft? (vi fiil sauerstoff befindet zich ungefer in der luft) - Quanto ossigeno c'è approssimativamente nell'aria?
+Der Sauerstoffanteil liegt bei etwa einundzwanzig Prozent. (der sauerstoff-antail ligt bai etwa ainundtsvantsig protsent) - La percentuale di ossigeno è circa del ventuno per cento.
+Wir haben den Versuch nach zehn Minuten beendet. (vir habn den fersuch nach tsen minuten beendet) - Abbiamo terminato l'esperimento dopo dieci minuti.
+Nach drei Minuten begann die Flüssigkeit zu sprudeln. (nach drai minuten begann di flüssigkeit tsu sprudeln) - Dopo tre minuti il liquido ha iniziato a gorgogliare.
+Die Reaktion wurde nach ungefähr einer Minute schwächer. (di reaktion wurde nach ungefer ainer minute svecher) - La reazione si è indebolita dopo circa un minuto.
+Welche Temperatur braucht Wasser, damit es kocht? (velce temperatur braucht vasser, damit es kocht) - Di quale temperatura ha bisogno l'acqua per bollire?
+Bei ungefähr hundert Grad Celsius beginnt Wasser zu kochen. (bai ungefer hundert grad tselzius beginnt vasser tsu kochen) - L'acqua inizia a bollire a circa cento gradi Celsius.
+Wir kühlen die Probe auf fünf Grad herunter. (vir külen di probe auf fünf grad herunter) - Raffreddiamo il campione fino a cinque gradi.
+Der Magnet zieht die beiden Metallstücke sofort an. (der magnet tsiit di baiden metallstücke zofort an) - Il magnete attira subito i due pezzi di metallo.
+Wie viele Büroklammern kann dieser Magnet halten? (vi fiil büroklammern kan diza magnet halten) - Quante graffette può sostenere questo magnete?
+Mit diesem Magneten können wir ungefähr dreißig Büroklammern anheben. (mit disem magneten können vir ungefer draisig büroklammern anheben) - Con questo magnete possiamo sollevare circa trenta graffette.
+Die Batterie liefert eine Spannung von neun Volt. (di baterie liefert aine spannung fon noin volt) - La batteria fornisce una tensione di nove volt.
+Wir verbinden die zwei Kabel mit den Kontakten. (vir ferbinden di tsvai kabel mit den kontakten) - Colleghiamo i due cavi ai contatti.
+Warum leuchtet die Lampe bei drei Batterien heller? (varum loichtet di lampe bai drai baterien heller) - Perché la lampada è più luminosa con tre batterie?
+Wir haben insgesamt zwölf Messungen durchgeführt. (vir habn insgesamt tsvölf messungen durcgefüart) - Abbiamo effettuato in tutto dodici misurazioni.
+Die erste Messung war ungefähr zwei Sekunden länger als die letzte. (di erste messung var ungefer tsvai sekunden länger als di letzte) - La prima misurazione è durata circa due secondi in più dell'ultima.
+Der Versuch zeigt einen klaren Unterschied zwischen den beiden Stoffen. (der fersuch tsaigt ainen klaren unterschied tsvischen den baiden stoffen) - L'esperimento mostra una chiara differenza tra le due sostanze.
+Wir brauchen nur ein Gramm von diesem Pulver. (vir brauchen nur ain gramm fon disem pulver) - Ci serve solo un grammo di questa polvere.
+Gib vorsichtig ungefähr einen halben Teelöffel davon hinein. (gib forzichtic ungefer ainen halben telöffel davon hinein) - Versane con attenzione circa mezzo cucchiaino.
+Die Flüssigkeit hat ihre Farbe innerhalb von fünf Minuten verändert. (di flüssigkeit hat ire farbe innerhalb fon fünf minuten ferändert) - Il liquido ha cambiato colore nell'arco di cinque minuti.
+Wir sehen unter dem Mikroskop ungefähr hundert Zellen. (vir zeen unter dem mikroskop ungefer hundert tsellen) - Vediamo circa cento cellule al microscopio.
+Diese Zellen sind nur wenige Mikrometer groß. (di-ze tsellen zint nur venige mikrometer gross) - Queste cellule hanno dimensioni di pochi micrometri.
+Der Mond braucht ungefähr achtundzwanzig Tage für einen Umlauf um die Erde. (der mond braucht ungefer achtundtsvantsig tage für ainen umlauf um di erde) - La Luna impiega circa ventotto giorni per compiere un'orbita intorno alla Terra.
+Die Erde braucht ungefähr dreihundertfünfundsechzig Tage für einen Umlauf um die Sonne. (di erde braucht ungefer draihundert-fünfund-zeksig tage für ainen umlauf um di zonne) - La Terra impiega circa 365 giorni per compiere un'orbita intorno al Sole.
+Das Licht legt in einer Sekunde ungefähr dreihunderttausend Kilometer zurück. (das licht legt in ainer sekunde ungefer draihundert-tausent kilometer tsurück) - La luce percorre circa trecentomila chilometri in un secondo.
+Wie viele Planeten hat unser Sonnensystem? (vi fiil planeten hat unser zonnensystem) - Quanti pianeti ha il nostro sistema solare?
+Unser Sonnensystem hat acht Planeten. (unzer zonnensystem hat acht planeten) - Il nostro sistema solare ha otto pianeti.
+Die Schwerkraft auf dem Mond ist ungefähr sechsmal schwächer als auf der Erde. (di scverkraft auf dem mond ist ungefer zeksmal svecher als auf der erde) - La gravità sulla Luna è circa sei volte più debole che sulla Terra.
+Wir haben heute fünfzehn Minuten Zeit für die Auswertung. (vir habn hoite fünf-tsen minuten tsait für di ausvertung) - Oggi abbiamo quindici minuti per analizzare i risultati.
+Schreibt eure Messwerte mit zwei Nachkommastellen auf. (schraibt oire messverte mit tsvai nachkomastellen auf) - Annotate i valori misurati con due cifre decimali.
+Der Durchschnitt aus diesen fünf Messungen beträgt vier Komma zwei. (der durcscnitt aus dizen fünf messungen beträgt fir komma tsvai) - La media di queste cinque misurazioni è 4,2.
+Wenn wir die doppelte Menge nehmen, verändert sich das Ergebnis deutlich. (ven vir di doppelte menge nemen, ferändert zich das ergebnis doiltlic) - Se prendiamo il doppio della quantità, il risultato cambia notevolmente.
+Ich hätte gern ein Kilo frischen Seelachs, bitte. (ich hete gern ain kilo frischen zelachs, bitte) - Vorrei un chilo di merluzzo fresco, per favore.
+Von den Forellen nehme ich drei Stück, bitte ausnehmen. (fon den forellen näme ich drai stück, bitte ausnemen) - Delle trote ne prendo tre, per favore pulitele.
+Haben Sie heute frische Sardinen bekommen? (haben zi hoite frisce sardinen bekommen) - Avete ricevuto sardine fresche oggi?
+Dann geben Sie mir bitte fünfhundert Gramm davon. (dan geben zi mir bitte fünfhundert gramm davon) - Allora me ne dia cinquecento grammi, per favore.
+Ich hätte gern vier Garnelen für jeden von uns. (ich hete gern fir garnelen für jeden fon uns) - Vorrei quattro gamberi per ciascuno di noi.
+Können Sie den Fisch in sechs gleich große Stücke teilen? (können zi den fish in zeks glaic grosse stücke tailen) - Può dividere il pesce in sei pezzi uguali?
+Wie viel kostet das Kilo Lachs heute? (vi fiil kostet das kilo laks hoite) - Quanto costa oggi un chilo di salmone?
+Der Lachs ist mir zu teuer, ich nehme lieber dreihundert Gramm. (der laks ist mir tsu toier, ich näme liber draihundert gramm) - Il salmone è troppo caro per me, preferisco trecento grammi.
+Haben Sie noch zwei ganze Doraden? (haben zi noch tsvai gantse doraden) - Avete ancora due orate intere?
+Ich brauche ungefähr achthundert Gramm Muscheln. (ich brauche ungefer achthundert gramm musceln) - Mi servono circa ottocento grammi di cozze.
+Sind die Tintenfische schon sauber gemacht? (zint di tintenfishe scion sauber gemacht) - I calamari sono già puliti?
+Ich nehme ein halbes Kilo Calamari und dreihundert Gramm Garnelen. (ich näme ain halbes kilo kalamari und draihundert gramm garnelen) - Prendo mezzo chilo di calamari e trecento grammi di gamberi.
+Von den Sardellen hätte ich gern etwa zweihundert Gramm. (fon den sardellen hete ich gern etwa tsvaihundert gramm) - Vorrei circa duecento grammi di acciughe.
+Können Sie mir den Fisch bitte filetieren? (können zi mir den fish bitte filetieren) - Può sfilettarmi il pesce, per favore?
+Für sechs Personen sollten ungefähr anderthalb Kilo reichen. (für zeks personen zolten ungefer anderthalb kilo raichen) - Per sei persone dovrebbe bastare circa un chilo e mezzo.
+Ich nehme lieber zwei kleinere Fische als einen großen. (ich näme liber tsvai klainere fische als ainen grossen) - Preferisco due pesci più piccoli invece di uno grande.
+Haben Sie Räucherlachs in Packungen zu hundert Gramm? (haben zi roikerlaks in pakungen tsu hundert gramm) - Avete salmone affumicato in confezioni da cento grammi?
+Dann nehme ich drei Packungen. (dan näme ich drai pakungen) - Allora ne prendo tre confezioni.
+Wie lange kann ich den Fisch im Kühlschrank aufbewahren? (vi lange kan ich den fish im külsc-rank aufbewaren) - Per quanto tempo posso conservare il pesce in frigorifero?
+Packen Sie ihn bitte gut ein, ich brauche ungefähr eine Stunde bis nach Hause. (packen zi in bitte gut ain, ich brauche ungefer aine stunde bis nach hause) - Me lo confezioni bene, ci metto circa un'ora per arrivare a casa.
+Ich brauche sechs Meter Kabel für die neue Lampe. (ich brauche zeks meter kabel für di noie lampe) - Mi servono sei metri di cavo per la nuova lampada.
+Haben Sie Schrauben in drei verschiedenen Größen? (haben zi schrauben in drai ferscidenen grössen) - Avete viti in tre diverse misure?
+Ich suche zehn Schrauben, ungefähr fünf Zentimeter lang. (ich zuche tsen schrauben, ungefer fünf tsentimeter lang) - Cerco dieci viti lunghe circa cinque centimetri.
+Gibt es diese Dübel auch in einer Packung mit fünfzig Stück? (gibt es di-ze dübel auc in ainer pakung mit fünftsig stück) - Ci sono questi tasselli anche in una confezione da cinquanta pezzi?
+Dann nehme ich lieber die Packung mit hundert. (dan näme ich liber di pakung mit hundert) - Allora preferisco la confezione da cento.
+Ich brauche zwei Meter von diesem Schlauch. (ich brauche tsvai meter fon disem schlauch) - Mi servono due metri di questo tubo flessibile.
+Kann man den Schlauch auf genau einen Meter zuschneiden? (kan man den schlauch auf genau ainen meter tsuschnaiden) - Si può tagliare il tubo esattamente a un metro?
+Ich hätte gern vier Rollen Isolierband. (ich hete gern fir rollen isolierbant) - Vorrei quattro rotoli di nastro isolante.
+Welche Bohrergröße brauche ich für diese Schrauben? (velce bo-rergrösse brauche ich für di-ze schrauben) - Di quale misura di punta ho bisogno per queste viti?
+Nehmen Sie einen Bohrer mit acht Millimetern Durchmesser. (nemen zi ainen bo-rer mit acht millimetern durc-messer) - Prenda una punta con un diametro di otto millimetri.
+Ich brauche eine Verlängerung von mindestens zehn Metern. (ich brauche aine ferlängerung fon mindestens tsen metern) - Mi serve una prolunga di almeno dieci metri.
+Haben Sie auch eine mit drei Steckdosen? (haben zi auc aine mit drai steckdozen) - Ne avete anche una con tre prese?
+Ich suche einen Schraubenschlüssel für eine Mutter mit zwölf Millimetern. (ich zuche ainen schraubensclüssel für aine mutter mit tsvölf millimetern) - Cerco una chiave inglese per un dado da dodici millimetri.
+Gibt es den auch eine Nummer größer? (gibt es den auc aine nummer grösser) - C'è anche una misura più grande?
+Ich brauche zwei Rollen starkes Klebeband. (ich brauche tsvai rollen starkes klebebant) - Mi servono due rotoli di nastro adesivo resistente.
+Von diesem Silikon brauche ich mindestens drei Kartuschen. (fon disem silikon brauche ich mindestens drai kartuschen) - Di questo silicone mi servono almeno tre cartucce.
+Wie viel Gewicht hält dieser Haken aus? (vi fiil gevicht hält diza haken aus) - Quanto peso regge questo gancio?
+Der Haken sollte ungefähr zwanzig Kilo tragen können. (der haken zolte ungefer tsvantsig kilo tragen können) - Il gancio dovrebbe poter reggere circa venti chili.
+Ich brauche sechs Dübel und sechs passende Schrauben. (ich brauche zeks dübel und zeks passende schrauben) - Mi servono sei tasselli e sei viti adatte.
+Haben Sie Schleifpapier in drei verschiedenen Körnungen? (haben zi sc-laifpapier in drai ferscidenen körnungen) - Avete carta abrasiva con tre diverse granulometrie?
+Ich nehme von jeder Sorte zwei Bögen. (ich näme fon jeder zorte tsvai bögen) - Ne prendo due fogli per ogni tipo.
+Ich brauche ungefähr einen halben Liter Lack. (ich brauche ungefer ainen halben liter lack) - Mi serve circa mezzo litro di vernice.
+Reicht eine Dose mit siebenhundertfünfzig Millilitern für zwei Türen? (raicht aine doze mit zibenhundert-fünfzig millilitern für tsvai türen) - Una confezione da 750 millilitri basta per due porte?
+Ich hätte gern einen Pinsel mit fünf Zentimetern Breite. (ich hete gern ainen pinsel mit fünf tsentimetern braite) - Vorrei un pennello largo cinque centimetri.
+Gibt es diese Handschuhe auch in Größe zehn? (gibt es di-ze handscue auc in grösse tsen) - Questi guanti ci sono anche nella misura dieci?
+Ich nehme zwei Paar Arbeitshandschuhe. (ich näme tsvai paar arbeits-hand-sc-ue) - Prendo due paia di guanti da lavoro.
+Haben Sie einen kleinen Hammer mit ungefähr dreihundert Gramm Gewicht? (haben zi ainen klainen hammer mit ungefer draihundert gramm gevicht) - Avete un piccolo martello del peso di circa trecento grammi?
+Ich brauche noch eine Wasserwaage von mindestens fünfzig Zentimetern. (ich brauche noch aine vasser-vaage fon mindestens fünftsig tsentimetern) - Mi serve anche una livella lunga almeno cinquanta centimetri.
+Gibt es diese Schrauben auch aus Edelstahl und in einer Packung mit fünfundzwanzig Stück? (gibt es di-ze schrauben auc aus edelstal und in ainer pakung mit fünfundtsvantsig stück) - Queste viti ci sono anche in acciaio inox e in una confezione da venticinque pezzi?
+Für das Regal brauche ich ungefähr zwölf Winkel. (für das regal brauche ich ungefer tsvölf winkel) - Per lo scaffale mi servono circa dodici staffe angolari.
+Ich nehme lieber zwei Packungen, dann habe ich ein paar Ersatzteile übrig. (ich näme liber tsvai pakungen, dan habe ich ain paar ersatztaile übrig) - Preferisco prendere due confezioni, così mi restano alcuni pezzi di ricambio.
+Was kostet das alles zusammen? Ich möchte unter vierzig Euro bleiben. (vas kostet das alles tsuzammen? ich möcte unter firtsig euro blaiben) - Quanto costa tutto insieme? Vorrei restare sotto i quaranta euro.
+Wann hat der Erste Weltkrieg eigentlich angefangen? (van hat der erste veltkrieg aigenlic angefangen) - Quando è iniziata esattamente la Prima guerra mondiale?
+Der Erste Weltkrieg begann im Jahr neunzehnhundertvierzehn. (der erste veltkrieg begann im iar nointsenhundert-firtsen) - La Prima guerra mondiale iniziò nel 1914.
+Der Zweite Weltkrieg endete in Europa im Jahr neunzehnhundertfünfundvierzig. (der tsvaita veltkrieg endete in europa im iar nointsenhundert-fünfund-firtsig) - La Seconda guerra mondiale finì in Europa nel 1945.
+Warum gilt das Jahr eintausendneunhundertneunundachtzig als so wichtig? (varum gilt das iar aintausend-noinhundert-noinundachtzig als zo wichtig) - Perché l'anno 1989 è considerato così importante?
+In diesem Jahr fiel die Berliner Mauer. (in disem iar fiil di berliner mauer) - In quell'anno cadde il Muro di Berlino.
+Die Mauer wurde am neunten November neunzehnhundertneunundachtzig geöffnet. (di mauer wurde am nointen november nointsenhundert-noinundachtzig geöffnet) - Il Muro fu aperto il 9 novembre 1989.
+Wann wurde das Römische Reich gegründet? (van wurde das römische raich gegründet) - Quando fu fondato l'Impero romano?
+Rom wurde der Überlieferung nach im Jahr siebenhundertdreiundfünfzig vor Christus gegründet. (rom wurde der überlieferung nach im iar zibenhundert-draiund-fünfzig for cristus gegründet) - Secondo la tradizione, Roma fu fondata nel 753 a.C.
+Welche Bedeutung hatte das Jahr dreiunddreißig vor Christus? (velce bedeutung hatte das iar draiund-draisig for cristus) - Quale importanza ebbe l'anno 33 a.C.?
+Das ist ungefähr die Zeit, in der Octavian immer mächtiger wurde. (das ist ungefer di tsait, in der oktavian immer mächtiger wurde) - È all'incirca il periodo in cui Ottaviano divenne sempre più potente.
+Wann wurde Konstantinopel erobert? (van wurde konstantinopel erobert) - Quando fu conquistata Costantinopoli?
+Die Stadt fiel am neunundzwanzigsten Mai vierzehnhundertdreiundfünfzig. (di stadt fiil am nointsvantsigsten mai firtsenhundert-draiund-fünfzig) - La città cadde il 29 maggio 1453.
+Das Mittelalter dauerte mehrere Jahrhunderte und war nicht überall gleich. (das mittelalter dauerte merere iarhunderte und var nicht überall glaic) - Il Medioevo durò diversi secoli e non fu uguale dappertutto.
+Wann begann eigentlich die Französische Revolution? (van begann aigenlic di französische revolution) - Quando iniziò esattamente la Rivoluzione francese?
+Sie begann im Jahr siebzehnhundertneunundachtzig. (zi begann im iar zibtsenhundert-noinundachtzig) - Iniziò nel 1789.
+Die Bastille wurde am vierzehnten Juli siebzehnhundertneunundachtzig gestürmt. (di bastille wurde am firtsenten juli zibtsenhundert-noinundachtzig gestürmt) - La Bastiglia fu presa il 14 luglio 1789.
+Warum war die Französische Revolution für Europa so wichtig? (varum var di französische revolution für europa zo wichtig) - Perché la Rivoluzione francese fu così importante per l'Europa?
+Napoleon wurde im Jahr eintausendachthundertvier zum Kaiser gekrönt. (napoleon wurde im iar aintausendachthundert-fir tsum kaiser gekrönt) - Napoleone fu incoronato imperatore nel 1804.
+Seine Herrschaft endete nach der Niederlage bei Waterloo im Jahr achtzehnhundertfünfzehn. (zaine herscaft endete nach der niederlage bai vaterlu im iar achtseenhundert-fünf-tsen) - Il suo dominio finì dopo la sconfitta di Waterloo nel 1815.
+Die erste Mondlandung fand am zwanzigsten Juli neunzehnhundertneunundsechzig statt. (di erste mondlandung fand am tsvantsigsten juli nointsenhundert-noinund-zeksig statt) - Il primo allunaggio avvenne il 20 luglio 1969.
+Neil Armstrong betrat den Mond in der Nacht zum einundzwanzigsten Juli. (niil armstrong betrat den mond in der nacht tsum ainundtsvantsigsten juli) - Neil Armstrong mise piede sulla Luna nella notte tra il 20 e il 21 luglio.
+Wann wurde die erste Eisenbahn in Deutschland eröffnet? (van wurde di erste aizenbaan in doitscland eröffnet) - Quando fu inaugurata la prima ferrovia in Germania?
+Die Strecke zwischen Nürnberg und Fürth wurde 1835 eröffnet. (di strecke tsviscen nürnberg und fürt wurde achtseenhundert-fünfund-draisig eröffnet) - La linea tra Norimberga e Fürth fu inaugurata nel 1835.
+Das Deutsche Kaiserreich wurde 1871 gegründet. (das doitsce kaiserraich wurde achtseenhundert-ainund-zibtsig gegründet) - L'Impero tedesco fu fondato nel 1871.
+Wer war damals der erste deutsche Kaiser? (ver var damals der erste doitsce kaiser) - Chi era allora il primo imperatore tedesco?
+Wilhelm der Erste wurde im Januar 1871 zum Kaiser ausgerufen. (vilhelm der erste wurde im januar achtseenhundert-ainund-zibtsig tsum kaiser ausgerufen) - Guglielmo I fu proclamato imperatore nel gennaio 1871.
+Die Weimarer Republik entstand nach dem Ersten Weltkrieg im Jahr 1919. (di vaimarer republik entstand nach dem ersten veltkrieg im iar nointsenhundert-nointsen) - La Repubblica di Weimar nacque dopo la Prima guerra mondiale nel 1919.
+Hitler wurde 1933 zum Reichskanzler ernannt. (hitler wurde nointsenhundert-draiund-draisig tsum raicskanzler ernannt) - Hitler fu nominato cancelliere del Reich nel 1933.
+Der Zweite Weltkrieg begann am ersten September 1939. (der tsvaita veltkrieg begann am ersten september nointsenhundert-noinund-draisig) - La Seconda guerra mondiale iniziò il 1º settembre 1939.
+Am achten Mai 1945 endete der Krieg in Europa. (am axten mai nointsenhundert-fünfund-firtsig endete der krieg in europa) - L'8 maggio 1945 finì la guerra in Europa.
+Die Berliner Mauer wurde 1961 gebaut. (di berliner mauer wurde nointsenhundert-ainund-zekzig gebaut) - Il Muro di Berlino fu costruito nel 1961.
+Am dreizehnten August 1961 begannen die Abriegelungsmaßnahmen. (am draitsenten august nointsenhundert-ainund-zekzig begannen di abrieg-lungs-massnamen) - Il 13 agosto 1961 iniziarono le misure di chiusura del confine.
+Deutschland wurde am dritten Oktober 1990 wiedervereinigt. (doitscland wurde am dritten oktober nointsenhundert-nointsig vider-ferainigt) - La Germania fu riunificata il 3 ottobre 1990.
+Wann wurde Amerika eigentlich unabhängig? (van wurde amerika aigenlic unabhängig) - Quando divenne indipendente l'America?
+Die Unabhängigkeitserklärung wurde am vierten Juli 1776 verabschiedet. (di unabhängigkaits-erklärung wurde am firten juli zibtsenhundert-sechsundsibzig ferabs-cidet) - La Dichiarazione d'indipendenza fu adottata il 4 luglio 1776.
+Die alten Ägypter bauten die großen Pyramiden vor mehreren tausend Jahren. (di alten egipter bauten di grossen pyramiden for mereren tausent jaren) - Gli antichi Egizi costruirono le grandi piramidi migliaia di anni fa.
+Die Cheops-Pyramide entstand wahrscheinlich im dritten Jahrtausend vor Christus. (di cheops-pyramide entstand varscainlic im dritten iar-tausent for cristus) - La piramide di Cheope fu costruita probabilmente nel terzo millennio a.C.
+Alexander der Große starb 323 vor Christus. (aleksander der grosse starb draihundert-draiund-tsvantsig for cristus) - Alessandro Magno morì nel 323 a.C.
+Das Römische Reich teilte sich 395 in zwei große Teile. (das römische raich tailte zich firhundert-fünfund-nointsig in tsvai grosse taile) - L'Impero romano si divise nel 395 in due grandi parti.
+476 gilt traditionell als das Ende des Weströmischen Reiches. (firhundert-zeksund-zibtsig gilt traditsionell als das ende des veströmischen raiches) - Il 476 è tradizionalmente considerato l'anno della fine dell'Impero romano d'Occidente.
+Karl der Große wurde im Jahr 800 zum Kaiser gekrönt. (karl der grosse wurde im iar acht hundert tsum kaiser gekrönt) - Carlo Magno fu incoronato imperatore nell'anno 800.
+Christoph Kolumbus erreichte Amerika am zwölften Oktober 1492. (cristof kolumbus erreichte amerika am tsvölften oktober firtsenhundert-tsvaiund-nointsig) - Cristoforo Colombo raggiunse l'America il 12 ottobre 1492.
+Die erste Weltumsegelung begann 1519 und endete 1522. (di erste velt-umsegelung begann fünf-tsenhundert-noin-tsen und endete fünf-tsenhundert-tsvaiund-tsvantsig) - La prima circumnavigazione del mondo iniziò nel 1519 e terminò nel 1522.
+Martin Luther veröffentlichte seine 95 Thesen im Jahr 1517. (martin luter feröffentlichte zaine fünfund-nointsig tesen im iar fünf-tsenhundert-zibtsen) - Martin Lutero pubblicò le sue 95 tesi nel 1517.
+Der Dreißigjährige Krieg dauerte von 1618 bis 1648. (der draisig-jerige krieg dauerte fon sech-tsenhundert-axtsen bis sech-tsenhundert-axtund-firtsig) - La guerra dei Trent'anni durò dal 1618 al 1648.
+Die erste industrielle Revolution begann im achtzehnten Jahrhundert. (di erste industrielle revolution begann im achtseenhundert) - La prima rivoluzione industriale iniziò nel XVIII secolo.
+Im neunzehnten Jahrhundert veränderte die Eisenbahn das Reisen grundlegend. (im nointsenhundert feränderte di aizenbaan das raizen grundlegend) - Nel XIX secolo la ferrovia cambiò profondamente il modo di viaggiare.
+Der Untergang der Titanic war am fünfzehnten April 1912. (der untergang der titanik var am fünf-tsenten april nointsenhundert-tsvölf) - L'affondamento del Titanic avvenne il 15 aprile 1912.
+Der erste Mensch im Weltraum war Juri Gagarin im Jahr 1961. (der erste mensch im velt-raum var juri gagarin im iar nointsenhundert-ainund-zekzig) - Il primo uomo nello spazio fu Jurij Gagarin nel 1961.
+Er flog am zwölften April 1961 ins All. (er flog am tsvölften april nointsenhundert-ainund-zekzig ins all) - Volò nello spazio il 12 aprile 1961.
+Die Europäische Union entstand in ihrer heutigen Form nicht an einem einzigen Tag. (di europäische union entstand in irer hoitigen form nicht an ainem aintzigen tag) - L'Unione Europea non nacque nella sua forma attuale in un solo giorno.
+Die Europäische Wirtschaftsgemeinschaft wurde 1957 gegründet. (di europäische virt-scaftsgemeinscaft wurde nointsenhundert-zibenund-fünfzig gegründet) - La Comunità Economica Europea fu fondata nel 1957.
+Wir vergleichen heute zwei Ereignisse, die fast fünfhundert Jahre auseinanderliegen. (vir fer-glaichen hoite tsvai ereignisse, di fast fünfhundert jare auseinanderligen) - Oggi confrontiamo due eventi separati da quasi cinquecento anni.
+Wie weit ist es von Berlin bis Hamburg? (vi vait ist es fon berlin bis hamburg) - Quanto dista Berlino da Amburgo?
+Die beiden Städte liegen ungefähr zweihundertneunzig Kilometer auseinander. (di baiden städte liggen ungefer tsvaihundert-nointsig kilometer auseinander) - Le due città distano circa 290 chilometri.
+Wie lange braucht man mit dem Zug bis nach München? (vi lange braucht man mit dem tsug bis nach münchen) - Quanto ci vuole in treno per arrivare a Monaco?
+Von hier aus sind es ungefähr vierhundert Kilometer bis zur nächsten Grenze. (fon hier aus zint es ungefer firhundert kilometer bis tsur nächsten grentse) - Da qui ci sono circa 400 chilometri fino al confine più vicino.
+Der Bodensee ist ungefähr sechzig Kilometer lang. (der bodensee ist ungefer zektsig kilometer lang) - Il Lago di Costanza è lungo circa 60 chilometri.
+Wie groß ist die Fläche von Deutschland? (vi gross ist di flece fon doitscland) - Quanto è grande la superficie della Germania?
+Deutschland hat eine Fläche von ungefähr dreihundertfünfundsiebzigtausend Quadratkilometern. (doitscland hat aine flece fon ungefer draihundert-fünfund-zibtsig-tausent quadratkilometern) - La Germania ha una superficie di circa 375.000 chilometri quadrati.
+Der höchste Berg Deutschlands ist fast dreitausend Meter hoch. (der höcste berg doitsclands ist fast draitausent meter hoch) - La montagna più alta della Germania è alta quasi 3.000 metri.
+Wie hoch liegt diese Stadt über dem Meeresspiegel? (vi hoch ligt di-ze stadt über dem meres-spiegel) - A quale altitudine sul livello del mare si trova questa città?
+Das Dorf liegt ungefähr achthundert Meter über dem Meeresspiegel. (das dorf ligt ungefer achthundert meter über dem meres-spiegel) - Il paese si trova a circa 800 metri sul livello del mare.
+Der Berg ist vom Parkplatz nur drei Kilometer entfernt. (der berg ist fom parkplats nur drai kilometer entfernt) - La montagna dista solo 3 chilometri dal parcheggio.
+Wir müssen noch etwa fünf Kilometer bis zum Gipfel laufen. (vir müssen noch etwa fünf kilometer bis tsum gipfel laufen) - Dobbiamo ancora camminare per circa 5 chilometri fino alla cima.
+Der Fluss ist an dieser Stelle ungefähr zweihundert Meter breit. (der fluss ist an diza stelle ungefer tsvaihundert meter brait) - In questo punto il fiume è largo circa 200 metri.
+Wie tief ist der See an seiner tiefsten Stelle? (vi tiif ist der ze an zainer tiifsten stelle) - Quanto è profondo il lago nel punto più profondo?
+Der See ist dort fast hundert Meter tief. (der ze ist dort fast hundert meter tiif) - In quel punto il lago è profondo quasi 100 metri.
+Die Insel ist etwa dreißig Kilometer von der Küste entfernt. (di insel ist etwa draisig kilometer fon der küste entfernt) - L'isola dista circa 30 chilometri dalla costa.
+Von der Hauptstadt bis zur Grenze sind es weniger als hundert Kilometer. (fon der hauptstadt bis tsur grentse zint es veniger als hundert kilometer) - Dalla capitale al confine ci sono meno di 100 chilometri.
+Der Äquator verläuft ungefähr vierzigtausend Kilometer um die Erde. (der äquator ferloift ungefer firtsig-tausent kilometer um di erde) - L'equatore misura circa 40.000 chilometri intorno alla Terra.
+Die Erde ist ungefähr zwölf Millionen Kilometer vom Mond entfernt. (di erde ist ungefer tsölf millionen kilometer fom mond entfernt) - La Terra dista circa 12 milioni di chilometri dalla Luna.
+Wie weit ist die Sonne von der Erde entfernt? (vi vait ist di zonne fon der erde entfernt) - Quanto dista il Sole dalla Terra?
+Die durchschnittliche Entfernung beträgt ungefähr hundertfünfzig Millionen Kilometer. (di durcscnitliche entfernung beträgt ungefer hundert-fünfzig millionen kilometer) - La distanza media è di circa 150 milioni di chilometri.
+Der Pazifische Ozean ist größer als alle Kontinente zusammen. (der patsifisce ozean ist grösser als alle kontinente tsuzammen) - L'Oceano Pacifico è più grande di tutti i continenti messi insieme.
+Afrika ist von Nord nach Süd ungefähr achttausend Kilometer lang. (afrika ist fon nord nach süd ungefer achttausent kilometer lang) - L'Africa è lunga circa 8.000 chilometri da nord a sud.
+Europa ist flächenmäßig viel kleiner als Asien. (europa ist flecenmässig fiil klainer als azien) - L'Europa è molto più piccola dell'Asia per superficie.
+Welche Entfernung ist ungefähr zwischen Europa und Nordamerika? (velce entfernung ist ungefer tsviscen europa und nordamerika) - Qual è all'incirca la distanza tra Europa e Nord America?
+Zwischen den beiden Kontinenten liegen ungefähr fünftausend Kilometer. (tsviscen den baiden kontinente liggen ungefer fünftausent kilometer) - Tra i due continenti ci sono circa 5.000 chilometri.
+Warum sind manche Wüsten mehr als zweitausend Kilometer lang? (varum zint manche vüsten meer als tsvai-tausent kilometer lang) - Perché alcuni deserti sono lunghi più di 2.000 chilometri?
+Die Sahara erstreckt sich über ungefähr viertausend achthundert Kilometer. (di sahara erstreckt zich über ungefer fir-tausent acht-hundert kilometer) - Il Sahara si estende per circa 4.800 chilometri.
+Wie weit ist es von der Küste bis zum nächsten Gebirge? (vi vait ist es fon der küste bis tsum nächsten gebirge) - Quanto dista la costa dalla catena montuosa più vicina?
+Das Gebirge beginnt ungefähr fünfzig Kilometer landeinwärts. (das gebirge beginnt ungefer fünftsig kilometer landeinverts) - La catena montuosa inizia a circa 50 chilometri nell'entroterra.
+Der längste Fluss Europas ist mehr als dreitausend fünfhundert Kilometer lang. (der längste fluss europas ist meer als draitausent fünfhundert kilometer lang) - Il fiume più lungo d'Europa è lungo più di 3.500 chilometri.
+Wie viele Kilometer fließt die Donau durch Europa? (vi fiil kilometer fliest di donau durc europa) - Quanti chilometri percorre il Danubio attraverso l'Europa?
+Die Donau ist insgesamt ungefähr zweitausend achthundert Kilometer lang. (di donau ist insgesamt ungefer tsvai-tausent acht-hundert kilometer lang) - Il Danubio è lungo complessivamente circa 2.800 chilometri.
+Der Mount Everest ist fast neun Kilometer hoch. (der maunt everest ist fast noin kilometer hoch) - Il Monte Everest è alto quasi 9 chilometri.
+Von hier bis zum Gipfel sind es noch ungefähr sechshundert Höhenmeter. (fon hier bis tsum gipfel zint es noch ungefer zeks-hundert höen-meter) - Da qui alla cima ci sono ancora circa 600 metri di dislivello.
+Je höher wir kommen, desto niedriger wird die Temperatur. (je höer vir kommen, desto nidriger virt di temperatur) - Più saliamo, più diminuisce la temperatura.
+Auf dieser Höhe liegt im Winter oft mehr als ein Meter Schnee. (auf diza höe ligt im vinter oft meer als ain meter sne) - A questa altitudine in inverno c'è spesso più di un metro di neve.
+Die Stadt liegt nur zehn Kilometer vom Meer entfernt. (di stadt ligt nur tsen kilometer fom meer entfernt) - La città dista solo 10 chilometri dal mare.
+Von unserem Hotel bis zum historischen Zentrum sind es etwa zwei Kilometer. (fon unzerem hotel bis tsum historischen tsentrum zint es etwa tsvai kilometer) - Dal nostro hotel al centro storico ci sono circa 2 chilometri.
+Die Grenze verläuft hier auf einer Länge von fast hundert Kilometern. (di grentse ferloift hier auf ainer länge fon fast hundert kilometern) - Qui il confine si estende per quasi 100 chilometri.
+Dieser See hat eine Fläche von ungefähr fünfzig Quadratkilometern. (diza ze hat aine flece fon ungefer fünftsig quadratkilometern) - Questo lago ha una superficie di circa 50 chilometri quadrati.
+Die Straße führt über einen Pass in eintausendzweihundert Metern Höhe. (di strasse fürt über ainen pass in aintausend-tsvaihundert metern höe) - La strada passa attraverso un valico a 1.200 metri di altitudine.
+Wie weit müssen wir noch bis zur nächsten Ortschaft fahren? (vi vait müssen vir noch bis tsur nächsten ortschaft faren) - Quanto dobbiamo ancora guidare fino al centro abitato più vicino?
+Bis zum nächsten Dorf sind es ungefähr zwölf Kilometer. (bis tsum nächsten dorf zint es ungefer tsvölf kilometer) - Fino al paese più vicino ci sono circa 12 chilometri.
+Die beiden Orte sind nur fünfzehn Kilometer voneinander entfernt. (di baiden orte zint nur fünf-tsen kilometer fonainander entfernt) - I due luoghi distano solo 15 chilometri l'uno dall'altro.
+Auf der Karte sieht die Entfernung viel kürzer aus. (auf der karte ziit di entfernung fiil kürtser aus) - Sulla carta la distanza sembra molto più breve.
+Der Maßstab der Karte beträgt eins zu fünfzigtausend. (der masstab der karte beträgt ains tsu fünftsig-tausent) - La scala della carta è di uno a 50.000.
+Zwei Zentimeter auf der Karte entsprechen einem Kilometer in Wirklichkeit. (tsvai tsentimeter auf der karte entsprechen ainem kilometer in virklic-kait) - Due centimetri sulla carta corrispondono a un chilometro nella realtà.
+Von Westen nach Osten ist das Land ungefähr sechshundert Kilometer breit. (fon vesten nach osten ist das land ungefer zeks-hundert kilometer brait) - Da ovest a est il Paese è largo circa 600 chilometri.
+Im Norden ist das Klima deutlich kühler als im Süden. (im norden ist das klima doiltlic kül-er als im züden) - Nel nord il clima è decisamente più fresco che nel sud.
+Je näher wir dem Äquator kommen, desto wärmer wird es normalerweise. (je näer vir dem äquator kommen, desto vermer virt es normalervaisse) - Più ci avviciniamo all'equatore, più normalmente aumenta la temperatura.
+Unser Lehrer hat uns heute gezeigt, wie man Entfernungen auf Karten berechnet. (unzer leerer hat uns hoite gezeigt, vi man entfernenungen auf karten berechnet) - Oggi il nostro insegnante ci ha mostrato come si calcolano le distanze sulle carte.
+Ich finde es schwer zu verstehen, warum Menschen wegen ihrer Religion miteinander kämpfen. (ich finde es scver tsu fersteen, varum menscen wegen irer religion miteinander kämpfen) - Trovo difficile capire perché le persone combattano tra loro per motivi religiosi.
+Über Kriege in der Familie zu sprechen, ist manchmal ziemlich belastend. (über kriege in der familie tsu sprechen, ist manchmal ziemlich belastend) - Parlare delle guerre in famiglia a volte è piuttosto pesante.
+Man kann eine Religion respektieren, ohne selbst gläubig zu sein. (man kan aine religion respektieren, one zelbst gläubig tsu zain) - Si può rispettare una religione senza essere credenti.
+Ich glaube nicht, dass Religion allein einen Krieg verursacht. (ich glaube nicht, das religion alain ainen krieg ferursacht) - Non credo che la religione da sola provochi una guerra.
+Oft spielen politische und wirtschaftliche Interessen eine genauso große Rolle. (oft spielen politisce und virt-scaftliche interessen aine genauso grosse rolle) - Spesso anche gli interessi politici ed economici hanno un ruolo altrettanto importante.
+Warum werden eigentlich immer wieder alte Konflikte neu entfacht? (varum werden aigenlic immer vider alte konflikte noi entfacht) - Perché vecchi conflitti vengono continuamente riaccesi?
+Manchmal habe ich den Eindruck, dass Geschichte viel zu schnell vergessen wird. (mancmal habe ich den aindruck, das gescichte fiil tsu scnell fergeben virt) - A volte ho l'impressione che la storia venga dimenticata troppo in fretta.
+Wenn man die Vergangenheit nicht kennt, versteht man viele Konflikte heute schlechter. (ven man di fer-gangenheit nicht kennt, fersteht man fiile konflikte hoite sclechter) - Se non si conosce il passato, si comprendono peggio molti conflitti di oggi.
+Es gibt Menschen, die ihre Religion sehr persönlich nehmen. (es gibt menscen, di ire religion zeer persönlich nemen) - Ci sono persone che vivono la propria religione in modo molto personale.
+Das sollte aber kein Grund sein, anderen ihre Überzeugungen vorzuschreiben. (das zolte aber kain grund zain, anderen ire übertsogungen for-zuschraiben) - Questo però non dovrebbe essere un motivo per imporre le proprie convinzioni agli altri.
+Ich finde, jeder sollte seinen Glauben frei wählen können. (ich finde, jeder zolte zainen glauben frai velen können) - Penso che ognuno dovrebbe poter scegliere liberamente la propria fede.
+Genauso sollte jeder das Recht haben, nicht zu glauben. (genauzo zolte jeder das recht haben, nicht tsu glauben) - Allo stesso modo, ognuno dovrebbe avere il diritto di non credere.
+In unserer Familie diskutieren wir darüber, ohne uns gleich zu streiten. (in unzerer familie diskutieren vir darüber, one uns glaic tsu straiten) - Nella nostra famiglia ne discutiamo senza litigare subito.
+Dilettantische Erklärungen helfen bei solchen Themen überhaupt nicht weiter. (diletantisce erklerungen helfen bai solchen themen überhaupt nicht vaita) - Le spiegazioni superficiali su temi del genere non aiutano affatto.
+Man sollte zwischen religiösem Glauben und politischem Extremismus unterscheiden. (man zolte tsviscen religiösem glauben und politiscem extremismus unterscheiden) - Bisognerebbe distinguere tra fede religiosa ed estremismo politico.
+Nicht jeder Gläubige denkt automatisch radikal. (nicht jeder gläubige denkt automatisch radikal) - Non tutti i credenti pensano automaticamente in modo radicale.
+Und nicht jeder Atheist lehnt religiöse Menschen ab. (und nicht jeder ateist lent religiöse menscen ap) - E non tutti gli atei rifiutano le persone religiose.
+Viele Religionen haben sehr unterschiedliche Traditionen. (fiile religionen haben zeer unterscidlic traditionsonen) - Molte religioni hanno tradizioni molto diverse.
+Innerhalb derselben Religion gibt es oft völlig verschiedene Strömungen. (innerhalb derselben religion gibt es oft völlig ferscidene strömungen) - All'interno della stessa religione ci sono spesso correnti completamente diverse.
+Ich würde niemals jemanden nur nach seiner Religion beurteilen. (ich würde niemals jemanden nur nach zainer religion beurteilen) - Non giudicherei mai qualcuno solo in base alla sua religione.
+Bei einem Krieg leiden meistens auch die Menschen, die gar nichts damit zu tun haben. (bai ainem krieg laiden meistens auc di menscen, di gar nichts damit tsu tun haben) - In una guerra soffrono spesso anche le persone che non c'entrano nulla.
+Kinder verstehen überhaupt nicht, warum sie plötzlich ihr Zuhause verlassen müssen. (kinder fersteen überhaupt nicht, varum zi plötzlich ir tsu-hause ferlassen müssen) - I bambini non capiscono affatto perché improvvisamente debbano lasciare la loro casa.
+Es muss furchtbar sein, seine Heimat wegen eines Krieges zu verlieren. (es muss furc-tbar zain, zaine haimat wegen aines krieges tsu ferlieren) - Dev'essere terribile perdere la propria patria a causa di una guerra.
+Ich kann mir kaum vorstellen, wie es sich anfühlt, ständig Angst vor Bomben zu haben. (ich kan mir kaum for-stellen, vi es zich anfült, ständig angst for bomben tsu haben) - Riesco a malapena a immaginare cosa significhi vivere con la paura costante delle bombe.
+Warum werden religiöse Gebäude in Kriegen manchmal absichtlich zerstört? (varum werden religiöse geboide in kriegen manchmal absic-lic zerstört) - Perché durante le guerre gli edifici religiosi vengono a volte distrutti intenzionalmente?
+Solche Orte sind für viele Menschen ein wichtiger Teil ihrer Geschichte. (solche orte zint für fiile menscen ain wichtig-er tail irer gescichte) - Questi luoghi sono una parte importante della storia di molte persone.
+Eine Moschee, eine Kirche oder eine Synagoge kann für eine Gemeinschaft sehr viel bedeuten. (aine moschee, aine kirche oder aine zynagoge kan für aine gemeinscaft zeer fiil bedeuten) - Una moschea, una chiesa o una sinagoga possono significare molto per una comunità.
+Ich finde es interessant, wie verschiedene Religionen ähnliche moralische Werte haben. (ich finde es interessant, vi ferscidene religionen änlic moralische verte haben) - Trovo interessante il fatto che religioni diverse abbiano valori morali simili.
+Trotzdem unterscheiden sich ihre Bräuche und Geschichten oft stark voneinander. (trotsdem unterscheiden zich ire broiche und gescichten oft stark fonainander) - Tuttavia le loro usanze e storie spesso differiscono molto.
+Man darf eine Religion kritisieren, ohne ihre Anhänger zu hassen. (man darf aine religion kritisieren, one ire anhänger tsu hassen) - Si può criticare una religione senza odiare i suoi seguaci.
+Genauso darf man politische Entscheidungen kritisieren, ohne ein ganzes Volk abzulehnen. (genauzo darf man politisce entscheidungen kritisieren, one ain gantzes folk abtsulenen) - Allo stesso modo si possono criticare decisioni politiche senza rifiutare un intero popolo.
+Ich glaube, dass Bildung langfristig mehr bewirken kann als Gewalt. (ich glaube, das bildung lang-fristig meer bewirken kan als gewalt) - Credo che l'istruzione possa ottenere più risultati della violenza nel lungo periodo.
+Wenn Kinder früh lernen, kritisch zu denken, ist das später viel wert. (ven kinder frü leren, kritisc tsu denken, ist das speter fiil vert) - Se i bambini imparano presto a pensare criticamente, questo sarà molto utile in seguito.
+Man kann über Religion diskutieren, ohne persönlich beleidigend zu werden. (man kan über religion diskutieren, one persönlich beleidigend tsu werden) - Si può discutere di religione senza diventare offensivi sul piano personale.
+Bei solchen Gesprächen muss man manchmal einfach zuhören. (bai solchen gesprächen muss man manchmal einfach tsuören) - In conversazioni del genere a volte bisogna semplicemente ascoltare.
+Ich möchte lieber verstehen, warum jemand etwas glaubt, als sofort darüber zu urteilen. (ich möcte liber fersteen, varum jemand etvas glaubt, als zofort darüber tsu urteilen) - Preferisco capire perché qualcuno crede in qualcosa piuttosto che giudicarlo subito.
+Für mich ist es wichtig, zwischen Menschen und ihren politischen Führern zu unterscheiden. (für mich ist es wichtig, tsviscen menscen und iren politiscen fürern tsu unterscheiden) - Per me è importante distinguere tra le persone e i loro leader politici.
+Ein ganzes Land kann nicht für die Entscheidungen seiner Regierung verantwortlich gemacht werden. (ain gantzes land kan nicht für di entscheidungen zainer regierung ferantvortlic gemacht werden) - Un intero Paese non può essere ritenuto responsabile delle decisioni del proprio governo.
+Viele Kriege dauern länger, als die Menschen am Anfang gedacht haben. (fiile kriege dauern länger, als di menscen am anfang gedacht haben) - Molte guerre durano più a lungo di quanto le persone avessero pensato all'inizio.
+Und wenn ein Krieg zehn Jahre dauert, wächst eine ganze Generation damit auf. (und ven ain krieg tsen jare dauert, vekst aine gantse generation damit auf) - E quando una guerra dura dieci anni, un'intera generazione cresce in quella situazione.
+Ich frage mich oft, wie Gesellschaften nach einem Krieg wieder zusammenfinden. (ich frage mich oft, vi geselscaften nach ainem krieg vider tsuzammenfinden) - Mi chiedo spesso come le società riescano a ritrovare la propria unità dopo una guerra.
+Versöhnung dauert wahrscheinlich viel länger als ein Friedensvertrag. (fersönung dauert varscainlic fiil länger als ain friedensfertrag) - La riconciliazione probabilmente richiede molto più tempo di un trattato di pace.
+Ein Friedensvertrag beendet einen Krieg, aber nicht automatisch den Hass. (ain friedensfertrag beendet ainen krieg, aber nicht automatisch den hass) - Un trattato di pace pone fine a una guerra, ma non elimina automaticamente l'odio.
+Vielleicht beginnt echter Frieden erst, wenn die Menschen wieder Vertrauen haben. (filaicht beginnt echter frieden erst, ven di menscen vider fertrauen haben) - Forse la vera pace inizia solo quando le persone riacquistano fiducia.
+Ich finde, dass unterschiedliche Religionen durchaus friedlich zusammenleben können. (ich finde, das unterscid-liche religionen durcaus friedlic tsuzammenleben können) - Penso che religioni diverse possano tranquillamente convivere in pace.
+Am Ende wollen die meisten Menschen einfach sicher leben und ihre Familie schützen. (am ende vollen di maisten menscen einfach zicer leben und ire familie schützen) - Alla fine la maggior parte delle persone vuole semplicemente vivere al sicuro e proteggere la propria famiglia.
+Das ist eigentlich etwas, das Menschen unabhängig von ihrer Religion verbindet. (das ist aigenlic etvas, das menscen unabhängig fon irer religion ferbindet) - È qualcosa che unisce le persone indipendentemente dalla loro religione.
+Wenn man darüber nachdenkt, haben wir trotz aller Unterschiede erstaunlich viel gemeinsam. (ven man darüber nachdenkt, haben vir trots aller untersciide erstaublic fiil gemeinsam) - Se ci si pensa, nonostante tutte le differenze abbiamo sorprendentemente molto in comune.
+Ich würde niemals ein exotisches Tier kaufen, ohne mich vorher gründlich zu informieren. (ich würde niemalz ain exotisches tier kaufen, one mich forer gründlic tsu informieren) - Non comprerei mai un animale esotico senza prima informarmi bene.
+Für manche Tiere braucht man viel mehr Platz, als man denkt. (für manche tiere braucht man fiil meer plats, als man denkt) - Per alcuni animali serve molto più spazio di quanto si pensi.
+Ein Papagei kann mehrere Jahrzehnte alt werden. (ain papagaai kan merere de-tsen-jare alt werden) - Un pappagallo può vivere diversi decenni.
+Ich finde es erstaunlich, wie intelligent manche Vögel sind. (ich finde es erstaublic, vi intelligent manche fögl zint) - Trovo sorprendente quanto siano intelligenti alcuni uccelli.
+Unsere Katze schläft heute schon seit drei Stunden auf dem Sessel. (unzere katze schläft hoite scion zait drai stunden auf dem sessel) - La nostra gatta dorme già da tre ore sulla poltrona.
+Der Hund merkt sofort, wenn jemand schlechte Laune hat. (der hund merkt zofort, ven jemand sclechte laune hat) - Il cane si accorge subito quando qualcuno è di cattivo umore.
+Ich glaube, Tiere können die Stimmung in einer Familie ziemlich gut spüren. (ich glaube, tiere können di stimmung in ainer familie ziemlich gut spüren) - Credo che gli animali riescano a percepire abbastanza bene l'atmosfera di una famiglia.
+Ein Kaninchen braucht mehr Pflege, als viele Leute zunächst glauben. (ain kanincen braucht meer pflege, als fiile loite tsunecst glauben) - Un coniglio richiede più cure di quanto molti pensino inizialmente.
+Hamster sind zwar klein, aber sie brauchen trotzdem ausreichend Platz. (hamster zint tsvar klain, aber zi brauchen trotsdem ausraicend plats) - I criceti sono piccoli, ma hanno comunque bisogno di spazio sufficiente.
+Ich hätte nicht gedacht, dass Schildkröten so alt werden können. (ich hete nicht gedacht, das schildkröten zo alt werden können) - Non avrei pensato che le tartarughe potessero vivere così a lungo.
+Manche Schildkröten werden älter als fünfzig Jahre. (manc-e schildkröten werden elter als fünftsig jare) - Alcune tartarughe vivono più di cinquant'anni.
+Ein Gecko ist interessant, aber die Haltung ist nicht ganz einfach. (ain geko ist interessant, aber di haltung ist nicht gantz ainfach) - Un geco è interessante, ma allevarlo non è proprio semplice.
+Für eine Schlange braucht man ein geeignetes Terrarium mit der richtigen Temperatur. (für aine schlange braucht man ain geeignetes terarium mit der richtigen temperatur) - Per un serpente serve un terrario adatto con la temperatura giusta.
+Ich möchte kein Tier zu Hause haben, das aus seinem natürlichen Lebensraum stammt. (ich möcte kain tier tsu hause haben, das aus zainem natürlichen lebensraum stammt) - Non vorrei avere in casa un animale proveniente dal suo habitat naturale.
+Bei exotischen Tieren muss man besonders darauf achten, woher sie kommen. (bai exotiscen tieren muss man besonders darauf achten, voher zi kommen) - Con gli animali esotici bisogna fare particolare attenzione alla loro provenienza.
+Ein Wildtier ist kein Haustier, nur weil es klein oder niedlich aussieht. (ain viltier ist kain haustier, nur vail es klain oder nidl-ic aussieht) - Un animale selvatico non è un animale domestico solo perché è piccolo o carino.
+Ich finde es besser, ein Tier aus dem Tierheim zu nehmen. (ich finde es besser, ain tier aus dem tierhaim tsu nemen) - Penso sia meglio prendere un animale da un rifugio.
+Unsere Nachbarn haben zwei Hunde und drei Katzen. (unzere nachbarn haben tsvai hunde und drai katzen) - I nostri vicini hanno due cani e tre gatti.
+Die beiden Hunde verstehen sich erstaunlich gut. (di baiden hunde fersteen zich erstaublic gut) - I due cani vanno sorprendentemente d'accordo.
+Die ältere Katze geht den jungen Hund meistens aus dem Weg. (di eltere katze geht den jungen hund maistens aus dem veg) - La gatta più anziana di solito evita il cane giovane.
+Warum wollen eigentlich so viele Leute einen Hund, obwohl sie kaum Zeit haben? (varum vollen aigenlic zo fiile loite ainen hund, obwohl zi kaum tsait haben) - Perché così tante persone vogliono un cane pur avendo pochissimo tempo?
+Ein Hund kann nicht einfach acht Stunden allein zu Hause bleiben. (ain hund kan nicht einfach acht stunden alain tsu hause blaiben) - Un cane non può semplicemente restare otto ore da solo a casa.
+Vor dem Kauf sollte man überlegen, wer sich täglich um das Tier kümmert. (for dem kauf zolte man überlegen, ver zich täglich um das tier kümmert) - Prima di prendere un animale bisogna pensare a chi se ne occuperà ogni giorno.
+Die Verantwortung liegt schließlich bei der ganzen Familie. (di ferantvortung ligt schließlich bai der ganzen familie) - Alla fine la responsabilità è di tutta la famiglia.
+Du kannst nicht versprechen, dass du dich jeden Tag darum kümmerst, und es dann vergessen. (du kanst nicht fersprechen, das du dich jeden tag darum kümmerst, und es dan fergeben) - Non puoi promettere di occupartene ogni giorno e poi dimenticartene.
+Ich würde lieber zweimal darüber nachdenken, bevor wir noch ein Haustier anschaffen. (ich würde liber tsvai-mal darüber nachdenken, bevor vir noch ain haustier anschaffen) - Ci penserei due volte prima di prendere un altro animale domestico.
+Unsere Katze frisst am liebsten morgens und abends. (unzere katze frist am libsten morgens und abents) - La nostra gatta preferisce mangiare al mattino e alla sera.
+Der Tierarzt hat gesagt, dass sie etwas weniger Futter bekommen sollte. (der tierartzt hat gesagt, das zi etvas veniger futter bekommen zolte) - Il veterinario ha detto che dovrebbe ricevere un po' meno cibo.
+Wir müssen die nächste Impfung im Kalender eintragen. (vir müssen di nächste impfung im kalender aintragen) - Dobbiamo segnare la prossima vaccinazione sul calendario.
+Der Hund hat gestern beim Spaziergang plötzlich gehumpelt. (der hund hat gestern baim spatsirgang plötzlich gehumpelt) - Ieri il cane ha improvvisamente iniziato a zoppicare durante la passeggiata.
+Zum Glück war es nur eine kleine Verletzung an der Pfote. (tsum glück var es nur aine klaine ferletsung an der pfote) - Per fortuna era solo una piccola ferita alla zampa.
+Wenn er morgen immer noch humpelt, gehen wir zum Tierarzt. (ven er morgen immer noch humpelt, geen vir tsum tierartzt) - Se domani zoppica ancora, andiamo dal veterinario.
+Ich finde es faszinierend, wie sich Vögel orientieren können. (ich finde es faszinierend, vi zich fögl orientieren können) - Trovo affascinante il modo in cui gli uccelli riescono a orientarsi.
+Zugvögel legen auf ihren Reisen Tausende von Kilometern zurück. (tsugfögl legen auf iren raizen tausende fon kilometern tsurück) - Gli uccelli migratori percorrono migliaia di chilometri durante i loro viaggi.
+Wusstest du, dass einige Wale mehr als hundert Jahre alt werden? (vusstest du, das ainige vale meer als hundert jare alt werden) - Sapevi che alcune balene possono vivere più di cento anni?
+Ich könnte mir niemals vorstellen, eine große Raubkatze zu Hause zu halten. (ich könnte mir niemalz for-stellen, aine grosse raubkatze tsu hause tsu halten) - Non riuscirei mai a immaginare di tenere in casa un grande felino predatore.
+Ein Löwe gehört in die Wildnis und nicht ins Wohnzimmer. (ain löve gehört in di vildnis und nicht ins vonzimmer) - Un leone appartiene alla natura selvaggia, non al salotto.
+Auch bei kleinen exotischen Tieren sollte man die Haltung nicht unterschätzen. (auc bai klainen exotiscen tieren zolte man di haltung nicht unterschätzen) - Anche con piccoli animali esotici non bisogna sottovalutare le esigenze di allevamento.
+Man braucht oft spezielle Lampen, Heizungen und geeignetes Futter. (man braucht oft spezielle lampen, haitsungen und geeignetes futter) - Spesso servono lampade, sistemi di riscaldamento e alimenti specifici.
+Das kann auf Dauer ziemlich teuer werden. (das kan auf dauer ziemlich toier werden) - Alla lunga può diventare piuttosto costoso.
+Ich glaube, dass ein Haustier gut zu einer Familie passen kann, wenn alle mitmachen. (ich glaube, das ain haustier gut tsu ainer familie passen kan, ven alle mitmachen) - Credo che un animale domestico possa adattarsi bene a una famiglia se tutti collaborano.
+Man sollte sich auch überlegen, was passiert, wenn man in den Urlaub fährt. (man zolte zich auc überlegen, vas passiert, ven man in den urlaub fert) - Bisogna anche pensare a cosa succede quando si va in vacanza.
+Wer kümmert sich um das Tier, wenn wir zwei Wochen weg sind? (ver kümmert zich um das tier, ven vir tsvai vocen veg zint) - Chi si occupa dell'animale se siamo via per due settimane?
+Ein zuverlässiger Tiersitter wäre in so einem Fall eine gute Lösung. (ain tsu-ferlässiger tir-sitter vere in zo ainem fall aine gute lösung) - Un pet sitter affidabile sarebbe una buona soluzione in un caso del genere.
+Ich mag Tiere sehr, aber ich finde, man sollte ihre Bedürfnisse ernst nehmen. (ich mag tiere zeer, aber ich finde, man zolte ire bedürfnisse ernst nemen) - Mi piacciono molto gli animali, ma penso che bisogna prendere sul serio le loro esigenze.
+Nicht jedes Tier passt zu jeder Familie oder zu jeder Wohnung. (nicht jedes tier passt tsu jeder familie oder tsu jeder vonung) - Non tutti gli animali sono adatti a ogni famiglia o a ogni appartamento.
+Ein Aquarium sieht schön aus, macht aber auch regelmäßig Arbeit. (ain akwarium ziit scön aus, macht aber auc regelmässig arbeit) - Un acquario è bello da vedere, ma richiede anche manutenzione regolare.
+Man muss das Wasser kontrollieren und regelmäßig wechseln. (man muss das vasser kontrollieren und regelmässig vecseln) - Bisogna controllare l'acqua e cambiarla regolarmente.
+Wenn wir ein weiteres Tier nehmen, müssen wir zuerst genau planen. (ven vir ain weiteres tier nemen, müssen vir tsuerst genau planen) - Se prendiamo un altro animale, dobbiamo prima pianificare tutto con attenzione.
+Am Ende zählt nicht, wie exotisch ein Tier ist, sondern ob es bei uns gut leben kann. (am ende tselt nicht, vi exotisc ain tier ist, sondern ob es bai uns gut leben kan) - Alla fine non conta quanto sia esotico un animale, ma se può vivere bene con noi.
+Meine Schwester steht am Wochenende nie vor neun Uhr auf. (maine scvester steht am vochenende nie for noin uur auf) - Mia sorella nel fine settimana non si alza mai prima delle nove.
+Mein Bruder geht abends meistens ziemlich früh ins Bett. (main bruder geht abents maistens ziemlich früh ins bet) - Mio fratello la sera va a letto abbastanza presto.
+Unsere Eltern trinken morgens immer zusammen einen Kaffee. (unzere eltern trinken morgens immer tsuzammen ainen kaffe) - I nostri genitori bevono sempre insieme un caffè al mattino.
+Mein Onkel kommt grundsätzlich zu spät zu Familienfeiern. (main onkel kommt grundsätzlic tsu spät tsu familienfaiern) - Mio zio arriva sistematicamente in ritardo alle feste di famiglia.
+Meine Tante ruft jeden Sonntag ihre Mutter an. (maine tante ruft jeden zontag ire mutter an) - Mia zia telefona a sua madre ogni domenica.
+Mein Cousin kocht fast jeden Abend selbst. (main kusin kocht fast jeden abent zelbst) - Mio cugino cucina da solo quasi tutte le sere.
+Meine Cousine kann morgens ohne Musik überhaupt nicht wach werden. (maine kusine kan morgens one musik überhaupt nicht vac werden) - Mia cugina al mattino non riesce proprio a svegliarsi senza musica.
+Mein Vater liest beim Frühstück immer die Nachrichten. (main fater list baim früstück immer di nachricten) - Mio padre durante la colazione legge sempre le notizie.
+Meine Mutter macht jeden Abend noch einen kurzen Spaziergang. (maine mutter macht jeden abent noch ainen kurzen spatsirgang) - Mia madre ogni sera fa ancora una breve passeggiata.
+Unser Nachbar arbeitet nachts und schläft deshalb tagsüber. (unzer nachbar arbeitet nachts und schläft deshalb tagsüber) - Il nostro vicino lavora di notte e per questo dorme durante il giorno.
+Meine beste Freundin antwortet auf Nachrichten manchmal erst Stunden später. (maine beste froindin antvortet auf nachricten manchmal erst stunden speter) - La mia migliore amica a volte risponde ai messaggi solo dopo ore.
+Mein bester Freund plant jede Reise bis ins kleinste Detail. (main bester froind plant jede raize bis ins klainste detail) - Il mio migliore amico pianifica ogni viaggio nei minimi dettagli.
+Meine Schwester lässt ihre Sachen ständig irgendwo liegen. (maine scvester lest ire zachen ständig irgendwo liegen) - Mia sorella lascia continuamente le sue cose in giro.
+Mein Bruder räumt sofort auf, wenn er etwas benutzt hat. (main bruder roimt zofort auf, ven er etvas benutzt hat) - Mio fratello mette subito in ordine dopo aver usato qualcosa.
+Meine Tante schaut jeden Abend dieselbe Serie. (maine tante schaut jeden abent di-zelbe zerie) - Mia zia guarda la stessa serie ogni sera.
+Mein Onkel erzählt bei jedem Treffen dieselben Geschichten. (main onkel ertseelt bai jedem treffen di-zelben gescichten) - Mio zio racconta le stesse storie a ogni incontro.
+Meine Cousins treffen sich fast jeden Freitagabend in derselben Kneipe. (maine kusins treffen zich fast jeden fraitag-abent in der-zelben kneipe) - I miei cugini si incontrano quasi ogni venerdì sera nello stesso locale.
+Eine Freundin von mir geht jeden Morgen joggen, egal bei welchem Wetter. (aine froindin fon mir geht jeden morgen joggen, egal bai velcem vetter) - Una mia amica va a correre ogni mattina, indipendentemente dal tempo.
+Mein Schwager schaut beim Essen ständig aufs Handy. (main scvager schaut baim essen ständig aufs hendi) - Mio cognato guarda continuamente il cellulare mentre mangia.
+Meine Schwägerin kommt nie mit leeren Händen zu Besuch. (maine scvegerin kommt nie mit leren henden tsu besuch) - Mia cognata non viene mai in visita a mani vuote.
+Unsere Freunde essen am liebsten spät zu Abend. (unzere froinde essen am libsten spät tsu abent) - I nostri amici preferiscono cenare tardi.
+Mein Cousin frühstückt unter der Woche überhaupt nicht. (main kusin früstückt unter der voce überhaupt nicht) - Mio cugino durante la settimana non fa proprio colazione.
+Meine Cousine nimmt überall eine Wasserflasche mit. (maine kusine nimmt überall aine vasserflasche mit) - Mia cugina porta sempre con sé una bottiglia d'acqua.
+Mein Vater braucht morgens mindestens eine halbe Stunde, bis er richtig wach ist. (main fater braucht morgens mindestens aine halbe stunde, bis er richtig vac ist) - Mio padre al mattino ha bisogno di almeno mezz'ora prima di essere completamente sveglio.
+Meine Mutter schreibt Einkaufslisten, selbst wenn sie nur fünf Sachen braucht. (maine mutter schreibt einkaufslisten, zelbst ven zi nur fünf zachen braucht) - Mia madre fa liste della spesa anche quando le servono solo cinque cose.
+Mein Bruder kauft immer mehr ein, als ursprünglich geplant war. (main bruder kauft immer meer ain, als ursprünglich geplant var) - Mio fratello compra sempre più cose di quanto avesse previsto.
+Meine Schwester spart seit Jahren für eine große Reise. (maine scvester spart zait jaren für aine grosse raize) - Mia sorella risparmia da anni per un grande viaggio.
+Mein Onkel fährt selbst für kurze Strecken mit dem Auto. (main onkel fert zelbst für kurtse strecken mit dem auto) - Mio zio usa la macchina anche per tragitti brevi.
+Meine Tante fährt dagegen fast überall mit dem Fahrrad hin. (maine tante fert dagegen fast überall mit dem far-rat hin) - Mia zia invece va quasi dappertutto in bicicletta.
+Unsere Freunde wechseln jedes Jahr ihr Urlaubsziel. (unzere froinde vecseln jedes iar ir urlaubsziel) - I nostri amici cambiano destinazione per le vacanze ogni anno.
+Mein Cousin fährt lieber zweimal im Jahr kurz weg als einmal für drei Wochen. (main kusin fert liber tsvai-mal im iar kurtz veg als ainmal für drai vocen) - Mio cugino preferisce fare due viaggi brevi all'anno invece di uno di tre settimane.
+Meine Cousine liest jeden Abend mindestens zwanzig Seiten. (maine kusine list jeden abent mindestens tsvantsig zaiten) - Mia cugina legge almeno venti pagine ogni sera.
+Mein Vater hört beim Autofahren immer Radio. (main fater hört baim auto-faren immer radio) - Mio padre ascolta sempre la radio mentre guida.
+Meine Mutter hört lieber Podcasts als Musik. (maine mutter hört liber podcasts als musik) - Mia madre preferisce ascoltare podcast piuttosto che musica.
+Mein Bruder schickt morgens grundsätzlich keine Sprachnachrichten. (main bruder schickt morgens grundsätzlic kaine spracnachricten) - Mio fratello al mattino non manda mai messaggi vocali.
+Meine Schwester telefoniert lieber, als lange Nachrichten zu schreiben. (maine scvester telefoniert liber, als lange nachricten tsu schreiben) - Mia sorella preferisce telefonare piuttosto che scrivere messaggi lunghi.
+Mein Onkel hebt alte Sachen auf, die er seit Jahren nicht benutzt. (main onkel hebt alte zachen auf, di er zait jaren nicht benutzt) - Mio zio conserva vecchie cose che non usa da anni.
+Meine Tante verschenkt alles, was sie nicht mehr braucht. (maine tante ferscenkt alles, vas zi nicht meer braucht) - Mia zia regala tutto ciò che non le serve più.
+Ein Freund von uns lädt am liebsten spontan Leute zu sich nach Hause ein. (ain froind fon uns let am libsten spontan loite tsu zich nach hause ain) - Un nostro amico preferisce invitare spontaneamente le persone a casa sua.
+Meine Schwester braucht morgens absolute Ruhe. (maine scvester braucht morgens absolute ru-e) - Mia sorella al mattino ha bisogno di assoluto silenzio.
+Mein Bruder kann beim Fernsehen problemlos gleichzeitig telefonieren. (main bruder kan baim fernzeen problemlos gleichzeitig telefonieren) - Mio fratello riesce tranquillamente a telefonare mentre guarda la TV.
+Meine Eltern gehen jeden Samstag gemeinsam einkaufen. (maine eltern geen jeden zamstag gemeinsam einkaufen) - I miei genitori fanno la spesa insieme ogni sabato.
+Meine Tante besucht ihre Freunde mindestens zweimal im Monat. (maine tante besucht ire froinde mindestens tsvai-mal im monat) - Mia zia va a trovare i suoi amici almeno due volte al mese.
+Mein Cousin bleibt bei Partys meistens bis zum Schluss. (main kusin blaibt bai partys maistens bis tsum scluss) - Mio cugino alle feste di solito rimane fino alla fine.
+Meine Cousine geht lieber früh nach Hause, wenn es ihr zu laut wird. (maine kusine geht liber frü nach hause, ven es ir tsu laut virt) - Mia cugina preferisce tornare presto a casa quando c'è troppo rumore.
+Unsere Nachbarn laden jeden Sommer die ganze Familie zum Grillen ein. (unzere nachbarn laden jeden zomer di gantse familie tsum grillen ain) - I nostri vicini invitano tutta la famiglia a fare una grigliata ogni estate.
+Mein Schwager probiert im Urlaub grundsätzlich jedes regionale Gericht. (main scvager probiert im urlaub grundsätzlic jedes regionale gericht) - Mio cognato in vacanza assaggia sistematicamente ogni piatto tipico locale.
+Meine Schwägerin macht von jeder Reise Hunderte Fotos. (maine scvegerin macht fon jeder raize hunderte fotos) - Mia cognata scatta centinaia di foto durante ogni viaggio.
+Mein Vater schaut morgens zuerst auf die Wettervorhersage. (main fater schaut morgens tsuerst auf di vetterfor-ersage) - Mio padre al mattino guarda prima di tutto le previsioni del tempo.
+Meine Mutter schreibt sich jeden Termin sofort in den Kalender. (maine mutter schreibt zich jeden termin zofort in den kalender) - Mia madre annota subito ogni appuntamento sul calendario.
+Wenn wir alle zusammen sind, merkt man erst, wie unterschiedlich unsere Gewohnheiten sind. (ven vir alle tsuzammen zint, merkt man erst, vi unterscidlic unsere gewonhaiten zint) - Quando siamo tutti insieme, ci si rende conto di quanto siano diverse le nostre abitudini.
+Hast du schon geprüft, ob die Anlage wieder normal läuft? (hast du scion geprüft, ob di anlage vider normal loift) - Hai già controllato se l'impianto funziona di nuovo normalmente?
+Ich glaube, der Druck in der Leitung ist heute etwas zu niedrig. (ich glaube, der druck in der laitung ist hoite etvas tsu nidrig) - Credo che oggi la pressione nella tubazione sia un po' troppo bassa.
+Wir sollten den Sensor austauschen, bevor er komplett ausfällt. (vir zolten den sensor austauscen, bevor er komplett ausfelt) - Dovremmo sostituire il sensore prima che si guasti completamente.
+Die Steuerung reagiert manchmal erst nach ein paar Sekunden. (di stoierung reagiert manchmal erst nach ain paar sekunden) - Il sistema di controllo a volte reagisce solo dopo qualche secondo.
+Kannst du mir kurz zeigen, wo der Fehler auf dem Display angezeigt wird? (kanst du mir kurtz tsaigen, vo der feler auf dem display angetsaigt virt) - Puoi mostrarmi velocemente dove viene visualizzato l'errore sul display?
+Die neue Software ist zwar schneller, aber die Oberfläche finde ich nicht besonders übersichtlich. (di noie software ist tsvar scneller, aber di oberflece finde ich nicht besonders überzictlic) - Il nuovo software è più veloce, ma non trovo l'interfaccia particolarmente intuitiva.
+Wir müssen die Einstellungen ändern, sonst schaltet sich das System ständig ab. (vir müssen di ainstellungen ändern, sonst scaltet zich das sistem ständig ap) - Dobbiamo modificare le impostazioni, altrimenti il sistema continua a spegnersi.
+Der Techniker hat gestern zwei neue Komponenten eingebaut. (der techniker hat gestern tsvai noie komponenten eingebaut) - Ieri il tecnico ha installato due nuovi componenti.
+Ich hab die Werte aus dem Protokoll mit den aktuellen Messungen verglichen. (ich hab di verte aus dem protokoll mit den aktuellen messungen fer-glichen) - Ho confrontato i valori del verbale con le misurazioni attuali.
+Die beiden Messgeräte zeigen unterschiedliche Werte an. (di baiden messgerete tsaigen unterscid-liche verte an) - I due strumenti di misura mostrano valori diversi.
+Vielleicht liegt es gar nicht am Gerät, sondern an der Stromversorgung. (filaicht ligt es gar nicht am geret, sondern an der strom-ferzorgung) - Forse il problema non è affatto il dispositivo, ma l'alimentazione elettrica.
+Wir haben heute Morgen einen kurzen Spannungsausfall gehabt. (vir haben hoite morgen ainen kurtzen spannungs-ausfal gehabt) - Stamattina abbiamo avuto una breve interruzione di tensione.
+Nach dem Neustart funktioniert die Anlage wieder einwandfrei. (nach dem noistart funktioniert di anlage vider ainvant-frai) - Dopo il riavvio l'impianto funziona di nuovo perfettamente.
+Die Sicherung ist schon wieder rausgeflogen. (di zicherung ist scion vider raus-geflogen) - È saltato di nuovo il fusibile.
+Bevor du etwas abschaltest, sag bitte kurz Bescheid. (bevor du etvas absaltest, sag bitte kurtz bescait) - Prima di spegnere qualcosa, avvisami per favore.
+Wir dürfen die alte Steuerung nicht einfach durch eine neue ersetzen. (vir dürfen di alte stoierung nicht ainfach durc aine noie ersetzen) - Non possiamo semplicemente sostituire il vecchio sistema di controllo con uno nuovo.
+Dafür brauchen wir erst die Freigabe vom Verantwortlichen. (dafür brauchen vir erst di fraigabe fom ferantvortlicen) - Per questo ci serve prima l'autorizzazione del responsabile.
+Hast du die Wartungsintervalle im System schon aktualisiert? (hast du di vartungs-intervalle im sistem scion aktualisiert) - Hai già aggiornato gli intervalli di manutenzione nel sistema?
+Der Filter muss spätestens nächste Woche gewechselt werden. (der filter muss spetestens nächste voc-e gewecselt werden) - Il filtro deve essere sostituito al più tardi la prossima settimana.
+Wenn der Durchfluss weiter sinkt, müssen wir genauer nach der Ursache suchen. (ven der durc-fluss vaita zinkt, müssen vir genauer nach der ursace suchen) - Se la portata continua a diminuire, dobbiamo cercare più precisamente la causa.
+Ich würde zuerst alle Anschlüsse kontrollieren. (ich würde tsuerst alle anschlüsse kontrollieren) - Io controllerei prima tutti i collegamenti.
+An der Stelle scheint irgendwo Luft ins System zu kommen. (an der sc-telle scheint irgendwo luft ins sistem tsu kommen) - Sembra che in quel punto entri aria da qualche parte nel sistema.
+Die Pumpe macht seit gestern ein ungewöhnliches Geräusch. (di pumpe macht zait gestern ain unge-vönlices geräusc) - Da ieri la pompa fa un rumore insolito.
+Hörst du dieses Klackern auch? (hörst du diz-es klakern auc) - Senti anche tu questo ticchettio?
+Ja, das Geräusch wird deutlich lauter, wenn die Anlage hochfährt. (ja, das geräusc virt doiltlic lauter, ven di anlage hochfert) - Sì, il rumore diventa decisamente più forte quando l'impianto entra in funzione.
+Wir sollten das lieber dokumentieren, bevor wir den Fehler zurücksetzen. (vir zolten das liber dokumentieren, bevor vir den feler tsurücksetzen) - Sarebbe meglio documentarlo prima di resettare l'errore.
+Die Daten werden automatisch in der Cloud gespeichert. (di daten werden automatisch in der klaud gespeicert) - I dati vengono salvati automaticamente nel cloud.
+Ohne Internetverbindung können wir momentan nicht auf die Steuerung zugreifen. (one internet-ferbindung können vir momentan nicht auf di stoierung tsugreifen) - Al momento non possiamo accedere al sistema di controllo senza connessione Internet.
+Das WLAN ist hier im Keller ziemlich schwach. (das ve-lan ist hier im keller ziemlich scvac) - Qui in cantina il Wi-Fi è piuttosto debole.
+Vielleicht brauchen wir einen zusätzlichen Access Point. (filaicht brauchen vir ainen tsusätzlicen access point) - Forse ci serve un access point aggiuntivo.
+Der Drucker hat schon wieder die Verbindung zum Netzwerk verloren. (der drucker hat scion vider di ferbindung tsum netzverk ferloren) - La stampante ha perso di nuovo la connessione alla rete.
+Ich hab den Treiber aktualisiert, aber der Fehler ist immer noch da. (ich hab den traiber aktualisiert, aber der feler ist immer noch da) - Ho aggiornato il driver, ma l'errore è ancora presente.
+Die Datei lässt sich auf meinem Rechner nicht öffnen. (di faile lest zich auf mainem recner nicht öffnen) - Il file non si riesce ad aprire sul mio computer.
+Schick mir die aktuelle Version einfach per E-Mail. (scik mir di aktuelle version ainfach per imeil) - Mandami semplicemente la versione aggiornata via e-mail.
+Wir müssen aufpassen, dass niemand gleichzeitig dieselbe Konfiguration ändert. (vir müssen aufpassen, das niemand gleichzeitig di-zelbe konfiguration ändet) - Dobbiamo fare attenzione che nessuno modifichi contemporaneamente la stessa configurazione.
+Die neue Schnittstelle soll mehrere Systeme miteinander verbinden. (di noie scnit-stelle zol merere systeme miteinander fer-binden) - La nuova interfaccia dovrebbe collegare tra loro diversi sistemi.
+Das klingt gut, aber ich frage mich, wie stabil das Ganze im Dauerbetrieb ist. (das klingt gut, aber ich frage mich, vi stabil das gantse im dauerbetrieb ist) - Sembra una buona cosa, ma mi chiedo quanto sia stabile il sistema nel funzionamento continuo.
+Wir haben noch keine Rückmeldung vom Hersteller bekommen. (vir haben noch kaine rück-meldung fom hersteller bekommen) - Non abbiamo ancora ricevuto risposta dal produttore.
+Der Support meinte, dass sie uns bis heute Nachmittag Bescheid geben. (der support meinte, das zi uns bis hoite nachmittag bescait geben) - L'assistenza ha detto che ci avrebbe dato una risposta entro oggi pomeriggio.
+Wenn das Ersatzteil morgen kommt, können wir die Reparatur gleich durchführen. (ven das ersatz-tail morgen kommt, können vir di reparatur glaic durc-füren) - Se il pezzo di ricambio arriva domani, possiamo eseguire subito la riparazione.
+Wie viele Ersatzteile haben wir eigentlich noch auf Lager? (vi fiile ersatz-taile haben vir aigenlic noch auf lager) - Quanti pezzi di ricambio abbiamo ancora in magazzino?
+Laut Inventarliste sind es nur noch drei Stück. (laut inventar-liste zint es nur noch drai stück) - Secondo l'inventario ne sono rimasti solo tre.
+Dann sollten wir rechtzeitig nachbestellen, bevor sie uns ausgehen. (dan zolten vir recht-tsaitig nach-bestellen, bevor zi uns ausgeen) - Allora dovremmo ordinarne altri per tempo, prima di rimanere senza.
+Die Anlage läuft jetzt seit sechs Stunden ohne eine einzige Störung. (di anlage loift yetst zait zeks stunden one aine aintzige störung) - L'impianto funziona ormai da sei ore senza un solo guasto.
+Das ist schon mal ein gutes Zeichen. (das ist scion mal ain gutes tsaicen) - Questo è già un buon segno.
+Ich würde trotzdem noch ein paar Messungen machen. (ich würde trotsdem noch ain paar messungen machen) - Farei comunque ancora qualche misurazione.
+Die automatische Meldung kam heute dreimal hintereinander. (di automatische meldung kam hoite drai-mal hinter-ainander) - Oggi la segnalazione automatica è comparsa tre volte di seguito.
+Vielleicht sollten wir die Alarmgrenze etwas höher einstellen. (filaicht zolten vir di alarm-grentse etvas höer ain-stellen) - Forse dovremmo impostare un po' più in alto la soglia di allarme.
+Bevor wir das machen, sollten wir prüfen, ob die aktuellen Messwerte wirklich stimmen. (bevor vir das machen, zolten vir prüfen, ob di aktuellen messverte virklic stimmen) - Prima di farlo, dovremmo verificare che i valori misurati attuali siano davvero corretti.
+Wenn die Technik zuverlässig läuft, spart uns das später eine Menge Arbeit. (ven di technik tsu-ferlässig loift, spart uns das speter aine menge arbeit) - Se la tecnologia funziona in modo affidabile, in seguito ci farà risparmiare molto lavoro.
+Heute lernen wir, wie man die Zahlen von eins bis hundert auf Deutsch sagt. (hoite lernen vir, vi man di tsalen fon ains bis hundert auf doitsc sagt) - Oggi impariamo come si dicono in tedesco i numeri da uno a cento.
+Wie schreibt man die Zahl vierundzwanzig? (vi schreibt man di tsal firundtsvantsig) - Come si scrive il numero ventiquattro?
+Vierundzwanzig schreibt man mit einem und in der Mitte. (firundtsvantsig schreibt man mit ainem und in der mitte) - Ventiquattro si scrive con un und nel mezzo.
+Was kommt nach neununddreißig? (vas kommt nach nointunddraisig) - Cosa viene dopo trentanove?
+Nach neununddreißig kommt vierzig. (nach nointunddraisig kommt firtsig) - Dopo trentanove viene quaranta.
+Kannst du die Zahlen von fünfzig bis sechzig aufzählen? (kanst du di tsalen fon fünftsig bis zektsig aufzelen) - Puoi elencare i numeri da cinquanta a sessanta?
+Klar, das sind fünfzig, einundfünfzig, zweiundfünfzig und so weiter. (klar, das zint fünftsig, ainundfünftsig, tsvaiundfünftsig und zo vaita) - Certo, sono cinquanta, cinquantuno, cinquantadue e così via.
+Bei den deutschen Zahlen sagt man zuerst die Einer und dann die Zehner. (bai den doitscen tsalen sagt man tsuerst di ainer und dan di tsener) - Nei numeri tedeschi si dicono prima le unità e poi le decine.
+Siebenundachtzig ist also wörtlich sieben und achtzig. (zibenundachtzig ist also vörtlic ziben und achtzig) - Settantasette è quindi letteralmente sette e ottanta.
+Welche Zahl steht zwischen dreiundsechzig und fünfundsechzig? (velce tsal steht tsviscen draiundzektsig und fünfundzektsig) - Quale numero sta tra sessantatré e sessantacinque?
+Natürlich vierundsechzig. (natürlic firundzektsig) - Naturalmente sessantaquattro.
+Wie viele Tage hat eine Woche? (vi fiile tage hat aine voce) - Quanti giorni ha una settimana?
+Eine Woche hat sieben Tage. (aine voce hat ziben tage) - Una settimana ha sette giorni.
+Welcher Tag kommt nach Montag? (velcer tag kommt nach montag) - Quale giorno viene dopo lunedì?
+Nach Montag kommt Dienstag. (nach montag kommt dinstag) - Dopo lunedì viene martedì.
+Was machen wir am Mittwoch? (vas machen vir am mitvoc) - Cosa facciamo mercoledì?
+Am Mittwoch haben wir zwei Stunden Deutschunterricht. (am mitvoc haben vir tsvai stunden doitsc-unterrict) - Mercoledì abbiamo due ore di lezione di tedesco.
+Welcher Tag kommt direkt vor Freitag? (velcer tag kommt direkt for fraitag) - Quale giorno viene subito prima di venerdì?
+Donnerstag kommt direkt vor Freitag. (donnerstag kommt direkt for fraitag) - Giovedì viene subito prima di venerdì.
+Am Samstag und Sonntag haben wir keinen Unterricht. (am zamstag und zontag haben vir kainen unterrict) - Il sabato e la domenica non abbiamo lezioni.
+Welcher Tag ist heute? (velcer tag ist hoite) - Che giorno è oggi?
+Heute ist Samstag, der fünfzehnte August. (hoite ist zamstag, der fünf-tsente august) - Oggi è sabato, 15 agosto.
+Und welcher Tag ist morgen? (und velcer tag ist morgen) - E quale giorno sarà domani?
+Morgen ist Sonntag, der sechzehnte August. (morgen ist zontag, der zek-tsente august) - Domani sarà domenica, 16 agosto.
+Gestern war Freitag, der vierzehnte August. (gestern var fraitag, der fir-tsente august) - Ieri era venerdì, 14 agosto.
+Wie viele Monate hat ein Jahr? (vi fiile monate hat ain iar) - Quanti mesi ha un anno?
+Ein Jahr hat zwölf Monate. (ain iar hat tsölf monate) - Un anno ha dodici mesi.
+Welcher Monat kommt nach Januar? (velcer monat kommt nach januar) - Quale mese viene dopo gennaio?
+Nach Januar kommt Februar. (nach januar kommt februar) - Dopo gennaio viene febbraio.
+Der März hat einunddreißig Tage. (der mertz hat ainunddraisig tage) - Marzo ha trentuno giorni.
+Der April hat dagegen nur dreißig Tage. (der april hat dagegen nur draisig tage) - Aprile invece ha solo trenta giorni.
+Welcher Monat kommt zwischen Mai und Juli? (velcer monat kommt tsviscen mai und juli) - Quale mese viene tra maggio e luglio?
+Natürlich Juni. (natürlic juni) - Naturalmente giugno.
+Im August sind die Tage noch ziemlich lang. (im august zint di tage noch ziemlich lang) - Ad agosto le giornate sono ancora piuttosto lunghe.
+September ist der neunte Monat des Jahres. (zeptember ist der nointe monat des iares) - Settembre è il nono mese dell'anno.
+Im Oktober beginnt es bei uns oft schon deutlich kühler zu werden. (im oktober beginnt es bai uns oft scion doiltlic kül-er tsu werden) - Da noi a ottobre inizia spesso a fare sensibilmente più fresco.
+November kommt direkt vor Dezember. (november kommt direkt for detsember) - Novembre viene subito prima di dicembre.
+Im Dezember endet das Kalenderjahr. (im detsember endet das kalenderiar) - A dicembre termina l'anno solare.
+Welcher Monat hat normalerweise achtundzwanzig Tage? (velcer monat hat normalervaisse achtundtsvantsig tage) - Quale mese ha normalmente ventotto giorni?
+Der Februar hat normalerweise achtundzwanzig Tage. (der februar hat normalervaisse achtundtsvantsig tage) - Febbraio normalmente ha ventotto giorni.
+In einem Schaltjahr hat der Februar neunundzwanzig Tage. (in ainem scalt-iar hat der februar nointundtsvantsig tage) - In un anno bisestile febbraio ha ventinove giorni.
+Wie viele Wochen sind ungefähr ein Monat? (vi fiile vocen zint ungefer ain monat) - Quante settimane sono circa un mese?
+Ein Monat hat ungefähr vier Wochen, manchmal etwas mehr. (ain monat hat ungefer fir vocen, manchmal etvas meer) - Un mese ha circa quattro settimane, a volte qualcosa in più.
+Wir haben heute den fünfzehnten, also ist die Hälfte des Monats schon vorbei. (vir haben hoite den fünf-tsenten, also ist di helft des monats scion forbai) - Oggi è il quindici, quindi metà del mese è già passata.
+Mein Geburtstag ist am zweiundzwanzigsten Mai. (main geburtstag ist am tsvaiundtsvantsigsten mai) - Il mio compleanno è il 22 maggio.
+Welcher Monat kommt genau vier Monate nach Januar? (velcer monat kommt genau fir monate nach januar) - Quale mese viene esattamente quattro mesi dopo gennaio?
+Vier Monate nach Januar ist Mai. (fir monate nach januar ist mai) - Quattro mesi dopo gennaio è maggio.
+Wenn heute Dienstag ist, welcher Tag ist dann in drei Tagen? (ven hoite dinstag ist, velcer tag ist dan in drai tagen) - Se oggi è martedì, che giorno sarà tra tre giorni?
+In drei Tagen ist Freitag. (in drai tagen ist fraitag) - Tra tre giorni sarà venerdì.
+Und welcher Tag war vor zwei Tagen? (und velcer tag var for tsvai tagen) - E quale giorno era due giorni fa?
+Vor zwei Tagen war Sonntag. (for tsvai tagen var zontag) - Due giorni fa era domenica.
+Zähl bitte rückwärts von zwanzig bis zehn. (tsel bitte rückverts fon tsvantsig bis tsen) - Conta per favore all'indietro da venti a dieci.
+Zwanzig, neunzehn, achtzehn, siebzehn und so weiter. (tsvantsig, nointsen, achtseen, zibtsen und zo vaita) - Venti, diciannove, diciotto, diciassette e così via.
+Wie sagt man hundert auf Deutsch? (vi sagt man hundert auf doitsc) - Come si dice cento in tedesco?
+Hundert heißt einfach hundert. (hundert haist ainfach hundert) - Cento si dice semplicemente hundert.
+Was kommt nach hundert? (vas kommt nach hundert) - Cosa viene dopo cento?
+Nach hundert kommt einhunderteins. (nach hundert kommt ainhundertains) - Dopo cento viene centouno.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
