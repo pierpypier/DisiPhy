@@ -2349,6 +2349,51 @@ In the end, nobody benefits from an endless cycle of violence. (In di end, noubo
 I'd rather see people arguing over ideas than fighting over them. (Aid rader sii piipel arguing ouver aideaz den faiting ouver dem) - Preferirei vedere le persone discutere sulle idee piuttosto che combattere per esse.
 Even when we strongly disagree, we can still talk to each other. (Iiven uen ui strongli disagrii, ui ken stil tok tu iic ader) - Anche quando siamo fortemente in disaccordo, possiamo comunque parlare gli uni con gli altri.
 That's probably a good rule for any family discussion. (Dets probabli e gud ruul for eni femili discascion) - Probabilmente è una buona regola per qualsiasi discussione in famiglia.
+Do you think we'd be better off with a dog or a cat? (Du iu think uid bi beter of uid e dog or e ket?) - Secondo te sarebbe meglio prendere un cane o un gatto?
+I've always thought cats were easier to look after. (Aiv olueiz thot kets uer iizier tu luk after) - Ho sempre pensato che i gatti fossero più facili da accudire.
+A dog needs much more attention during the day. (E dog niidz mac mor etencen diuring de dei) - Un cane ha bisogno di molta più attenzione durante il giorno.
+Would you really have enough time to take a dog for two long walks every day? (Uud iu rili hev i-naf taim tu teik e dog for tu long uoks evri dei?) - Avresti davvero abbastanza tempo per portare un cane a fare due lunghe passeggiate ogni giorno?
+I wouldn't want to keep an exotic animal just because it looks unusual. (Ai udent uont tu kiip en egzotik enimal giast bikoz it luks aniujiuel) - Non vorrei tenere un animale esotico solo perché ha un aspetto insolito.
+Some exotic animals have very specific needs that are hard to meet at home. (Sam egzotik enimelz hev veri spesifik niidz det ar hard tu miit et houm) - Alcuni animali esotici hanno esigenze molto specifiche che sono difficili da soddisfare in casa.
+What about keeping a rabbit as a pet? (Uot ebaut kiiping e rebit ez e pet?) - Che ne dici di tenere un coniglio come animale domestico?
+Rabbits need more space than people sometimes realise. (Rebits niid mor speis den piipel samtaimz ri elaiz) - I conigli hanno bisogno di più spazio di quanto a volte si pensi.
+I think a parrot would be fascinating, but they can live for decades. (Ai think e peret ud bi fesineiting, bat dei ken liv for dekeidz) - Penso che un pappagallo sarebbe affascinante, ma può vivere per decenni.
+That's a huge commitment for the whole family. (Dets e hiug komitment for de houl femili) - È un impegno enorme per tutta la famiglia.
+Would you be comfortable having a snake in the house? (Uud iu bi kamfterbel heving e sneik in de haus?) - Ti sentiresti a tuo agio ad avere un serpente in casa?
+I'd probably spend the first few weeks checking where it was. (Aid probabli spend de ferst fiu uiiks ceking uer it uoz) - Probabilmente passerei le prime settimane a controllare dove si trova.
+Not all snakes are dangerous, though. (Not ol sneiks ar deinjeres, dou) - Però non tutti i serpenti sono pericolosi.
+True, but I'd still want to know exactly what species it is. (Tru, bat aid stil uont tu nou egzaktli uot spiisciz it iz) - Vero, ma vorrei comunque sapere esattamente di quale specie si tratta.
+I've seen people keeping reptiles in specially designed enclosures. (Aiv siin piipel kiiping reptailz in spescielli dizaind inkloujers) - Ho visto persone che tengono rettili in appositi terrari.
+You can't just put an exotic animal in a normal cage and expect it to be fine. (Iu kent giast put en egzotik enimal in e normal keij end ekspekt it tu bi fain) - Non puoi semplicemente mettere un animale esotico in una gabbia normale e aspettarti che stia bene.
+What would happen if the temperature in the enclosure dropped too low? (Uot ud hepen if de tempricer in di inkloujer dropt tu lou?) - Cosa succederebbe se la temperatura nel terrario scendesse troppo?
+Some reptiles need heat lamps running for several hours a day. (Sam reptailz niid hiit lamps raning for several auerz e dei) - Alcuni rettili hanno bisogno di lampade riscaldanti accese per diverse ore al giorno.
+I'd rather have an animal that can comfortably live in our climate. (Aid rader hev en enimal det ken kamfterbli liv in auer klaimet) - Preferirei un animale che possa vivere tranquillamente nel nostro clima.
+Do you think fish count as easy pets? (Du iu think fisc kaunt ez iizi pets?) - Pensi che i pesci siano animali domestici facili da gestire?
+They're quiet, but the tank still needs regular cleaning. (Deir kuaiet, bat de tenk stil niidz regiuler kliining) - Sono silenziosi, ma l'acquario ha comunque bisogno di essere pulito regolarmente.
+And you have to be careful not to overfeed them. (End iu hev tu bi kerful not tu ouverfiid dem) - E bisogna stare attenti a non dar loro troppo cibo.
+Imagine having a small aquarium with twenty colourful fish. (Imagin heving e smol ekuieriem uid tuenti kalerful fisc) - Immagina di avere un piccolo acquario con venti pesci colorati.
+That would actually look pretty nice in the living room. (Det ud ektciueli luk priti nais in de living ruum) - In realtà starebbe piuttosto bene in soggiorno.
+I'd love to have a tortoise, but they can live for a very long time. (Aid lav tu hev e tortes, bat dei ken liv for e veri long taim) - Mi piacerebbe avere una tartaruga, ma può vivere davvero molto a lungo.
+We'd have to think about who would look after it if we went away for two weeks. (Uid hev tu think ebaut hu ud luk after it if ui went euei for tu uiiks) - Dovremmo pensare a chi se ne occuperebbe se partissimo per due settimane.
+That's one reason I'd choose a cat. (Dets uan riizen aid ciuuz e ket) - È uno dei motivi per cui sceglierei un gatto.
+Cats can usually be more independent when you're out during the day. (Kets ken iugiueli bi mor indipendent uen ior aut diuring de dei) - I gatti di solito possono essere più indipendenti quando sei fuori durante il giorno.
+But dogs are much more social and active. (Bat dogz ar mac mor souscial end ektiv) - Ma i cani sono molto più socievoli e attivi.
+Maybe we should choose the pet based on our routine rather than what looks cutest. (Meibi ui sciud ciuuz de pet beist on auer rutin rader den uot luks kiutest) - Forse dovremmo scegliere l'animale in base alla nostra routine, invece di scegliere quello più carino.
+That's probably the most sensible way to look at it. (Dets probabli de moust sensibel uei tu luk et it) - Probabilmente è il modo più sensato di considerare la questione.
+Would you ever consider adopting an older animal? (Uud iu ever konsider edopting en oulder enimal?) - Prenderesti mai in considerazione l'adozione di un animale anziano?
+Sure, older pets need homes too. (Sciur, oulder pets niid houmz tu) - Certo, anche gli animali anziani hanno bisogno di una casa.
+I think adopting is better than buying when possible. (Ai think edopting iz beter den baiing uen posibel) - Penso che, quando possibile, sia meglio adottare che comprare.
+What about animals that have been rescued from the wild? (Uot ebaut enimelz det hev bin reskiud from de uaild?) - E gli animali che sono stati salvati dalla natura?
+They may need specialist care for the rest of their lives. (Dei mei niid spescielist ker for de rest ov deir laivz) - Potrebbero aver bisogno di cure specialistiche per il resto della loro vita.
+I wouldn't keep a wild animal as a pet unless it was genuinely necessary. (Ai udent kiip e uaild enimal ez e pet anles it uoz gieniuinli neseseri) - Non terrei un animale selvatico come animale domestico, a meno che non fosse davvero necessario.
+Wild animals belong in their natural environment whenever possible. (Uaild enimelz bilong in deir neciurel envaiorment uenever posibel) - Gli animali selvatici dovrebbero vivere nel loro ambiente naturale quando possibile.
+Have you ever seen a fox up close? (Hev iu ever siin e foks ap klous?) - Hai mai visto una volpe da vicino?
+They're beautiful, but that doesn't mean they'd make good pets. (Deir biutiful, bat det dazent miin deid meik gud pets) - Sono bellissime, ma questo non significa che sarebbero buoni animali domestici.
+What would you do if a wild animal came into the garden? (Uot ud iu du if e uaild enimal keim intu de garden?) - Cosa faresti se un animale selvatico entrasse in giardino?
+I'd keep my distance and let it leave on its own. (Aid kiip mai distens end let it liiv on its oun) - Terrei le distanze e gli lascerei andare via da solo.
+I don't think we should feed wild animals just because they're cute. (Ai dount think ui sciud fiid uaild enimelz giast bikoz deir kiut) - Non credo dovremmo dare da mangiare agli animali selvatici solo perché sono carini.
+It can make them dependent on humans and cause problems later. (It ken meik dem dipendent on iumenz end koz problemz leiter) - Può renderli dipendenti dagli esseri umani e creare problemi in seguito.
+In the end, having a pet is a responsibility, not just something fun to do. (In di end, heving e pet iz e risponsibiliti, not giast samthing fan tu du) - Alla fine, avere un animale domestico è una responsabilità, non solo qualcosa di divertente da fare.
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
