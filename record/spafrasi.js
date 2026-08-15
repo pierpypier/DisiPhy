@@ -1,18 +1,3 @@
-/* ================================================================
-   spafrasi.js — Frasi comuni Spagnolo/Italiano per spafile.html
-   ----------------------------------------------------------------
-   Stesso schema di citazioni.js, tedfrasi.js e frafrasi.js: frasi
-   su righe separate, formato:
-   "Frase in spagnolo (pronuncia approssimativa) - Traduzione italiana"
-
-   Per aggiungere nuove frasi: basta aggiungere una nuova riga dentro
-   il template string qui sotto, rispettando questo formato.
-   Nessun array da modificare a mano: il parsing avviene
-   automaticamente più in basso.
-
-   NOTA: al momento contiene solo 10 frasi di partenza; altre
-   verranno aggiunte in seguito, in batch successivi.
-   ================================================================ */
 const FRASI_SPA_RAW = `
 Buenos días (bue-nos di-as) - Buongiorno
 Buenas tardes (bue-nas tar-des) - Buon pomeriggio
