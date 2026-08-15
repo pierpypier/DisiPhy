@@ -2445,6 +2445,56 @@ That mountain pass is closed for most of the winter (dhèt mauntën pès iz klou
 How many kilometres of coastline does Italy have (hau meni kilomiitërz ov koustlain daz Itali hev) - Quanti chilometri di costa ha l'Italia
 It's got over seven thousand kilometres of coastline (its gat ouvër sevën thauzënd kilomiitërz ov koustlain) - Ha oltre settemila chilometri di costa
 Right, that's enough for today, we'll continue next lesson (rait, dhèts inaf for tudei, uìl kontiniuu nekst lesën) - Bene, basta così per oggi, continueremo alla prossima lezione
+I still don't really understand why wars start in the first place (ai stil dount rìeli andërstènd uai uorz start in dhë fërst pleis) - Non capisco ancora bene perché scoppiano le guerre
+It's usually about power, land, or resources (its iuzueli abaut pauer, lènd, or risorsiz) - Di solito riguarda potere, terra o risorse
+Religion gets blamed a lot, but it's more complicated than that (rilijën ghets bleimd a lot, bat its mor komplikeitid dhèn dhèt) - La religione viene spesso incolpata, ma è più complicato di così
+People have fought over beliefs for thousands of years (piipël hev fot ouvër bilìifs for thauzëndz ov yirz) - Le persone hanno combattuto per le proprie convinzioni per migliaia di anni
+I don't think religion itself causes war, people do (ai dount think rilijën itself kozëz uor, piipël du) - Non credo che sia la religione in sé a causare la guerra, sono le persone
+It's often used as an excuse for other motives (its ofën iuuzd az en ekskiuuz for adhër moutivz) - Viene spesso usata come scusa per altri motivi
+Can you explain why there's still conflict in that region (kèn yu eksplèin uai dhers stil konflikt in dhèt riigën) - Puoi spiegarmi perché c'è ancora conflitto in quella regione
+It's a really old dispute that's never been properly resolved (its a rìeli ould dispiuut dhèts nevër bin propërli rizolvd) - È una disputa molto vecchia che non è mai stata davvero risolta
+Grandpa used to talk about the war a lot when I was little (grènpa iuuzd tu tok abaut dhë uor a lot uen ai uoz litël) - Il nonno parlava spesso della guerra quando ero piccolo
+He said things you just don't forget once you've heard them (hi sed thingz yu giast dount forghet uans yuuv hërd dhem) - Diceva cose che non dimentichi più una volta sentite
+It's important kids learn about this stuff, even if it's heavy (its importënt kidz lërn abaut dhis staf, ivën if its hevi) - È importante che i bambini imparino queste cose, anche se sono pesanti
+I think it's better to talk about it than avoid it (ai think its betër tu tok abaut it dhèn ëvoid it) - Penso sia meglio parlarne che evitarlo
+Different religions actually share a lot of the same values (difërënt rilijënz èkchueli scer a lot ov dhë seim vèliuuz) - Religioni diverse in realtà condividono molti valori simili
+People just focus on the differences instead (piipël giast foukës on dhë difërënsiz instèd) - Le persone si concentrano invece sulle differenze
+I was never really raised with any particular religion (ai uoz nevër rìeli reizd uidh eni pëtikiulër rilijën) - Non sono mai stato cresciuto con una religione particolare
+Your grandmother's side of the family is quite religious though (yor grènmadhërz said ov dhë fèmili iz kuait rilijës dhou) - Il ramo di tua nonna della famiglia però è piuttosto religioso
+I respect people's beliefs even if I don't share them (ai rispekt piipëlz bilìifs ivën if ai dount scer dhem) - Rispetto le convinzioni delle persone anche se non le condivido
+It's not really our place to judge how others believe (its not rìeli auer pleis tu giagi hau adhërz biliiv) - Non spetta a noi giudicare come credono gli altri
+Some of the worst conflicts weren't really about religion at all (sam ov dhë uorst konflikts uerënt rìeli abaut rilijën et ol) - Alcuni dei peggiori conflitti in realtà non riguardavano affatto la religione
+It's easy to blame religion when the real issue is politics (its iizi tu bleim rilijën uen dhë riël iscìuu iz politiks) - È facile incolpare la religione quando il vero problema è la politica
+Do you think people will ever stop fighting over this stuff (du yu think piipël uil evër stop faitin ouvër dhis staf) - Pensi che le persone smetteranno mai di litigare per queste cose
+Honestly, I'm not that optimistic about it (onëstli, aim not dhèt optimistik abaut it) - Onestamente non sono così ottimista al riguardo
+There's always going to be some kind of conflict somewhere (dhers ouëlweiz gouin tu bi sam kaind ov konflikt samuer) - Ci sarà sempre qualche tipo di conflitto da qualche parte
+I just hope it never affects us directly (ai giast houp it nevër ëfekts as direktli) - Spero solo che non ci tocchi mai direttamente
+We're lucky to live somewhere peaceful, don't forget that (uir laki tu liv samuer piisful, dount forghet dhèt) - Siamo fortunati a vivere in un posto tranquillo, non dimenticarlo
+Not everyone gets to grow up without that kind of fear (not evriuan ghets tu grou ap uidhaut dhèt kaind ov fir) - Non tutti crescono senza quel tipo di paura
+I read somewhere that most wars are about control, not faith (ai riid samuer dhèt moust uorz ar abaut kontroul, not feith) - Ho letto da qualche parte che la maggior parte delle guerre riguarda il controllo, non la fede
+That actually makes a lot of sense when you think about it (dhèt èkchueli meiks a lot ov sens uen yu think abaut it) - In effetti ha molto senso se ci pensi
+Can we talk about something a bit lighter now (kèn uì tok abaut samthin a bit laitër nau) - Possiamo parlare di qualcosa di più leggero adesso
+Sorry, I didn't mean to make dinner so serious (sori, ai didënt miin tu meik dinër sou sirìës) - Scusa, non volevo rendere la cena così seria
+No, it's fine, these conversations matter too (nou, its fain, dhiiz konvërseiscionz matër tuu) - No, va bene, anche queste conversazioni sono importanti
+I just don't want the kids to feel scared before bed (ai giast dount uont dhë kidz tu fiil skerd bifor bed) - Non voglio solo che i bambini si sentano spaventati prima di andare a letto
+Fair enough, let's finish this chat another time (fer inaf, lets finiscc dhis chèt anadhër taim) - Va bene, finiamo questa chiacchierata un'altra volta
+I think it's good she's curious about this kind of thing (ai think its gud scìiz kiuriës abaut dhis kaind ov thing) - Penso sia positivo che sia curiosa riguardo a queste cose
+It shows she's actually thinking about the world around her (it scouz scìiz èkchueli thinkin abaut dhë uorld araund hër) - Dimostra che sta davvero riflettendo sul mondo che la circonda
+You can believe in something without forcing it on anyone else (yu kèn biliiv in samthin uidhaut forsin it on enìuan els) - Puoi credere in qualcosa senza imporlo a nessun altro
+That's the part people seem to forget most (dhèts dhë part piipël siim tu forghet moust) - È la parte che le persone sembrano dimenticare di più
+I think tolerance should be taught just as much as history (ai think tolërëns sciud bi tot giast az mach az histëri) - Penso che la tolleranza dovrebbe essere insegnata quanto la storia
+Knowing the facts doesn't always stop people repeating mistakes (nouin dhë fèkts dazënt ouëlweiz stop piipël ripiitin misteiks) - Conoscere i fatti non sempre impedisce alle persone di ripetere gli errori
+It's strange how history keeps repeating itself (its streinji hau histëri kiips ripiitin itself) - È strano come la storia continui a ripetersi
+Maybe that's why it's so important to keep talking about it (meibi dhèts uai its sou importënt tu kiip tokin abaut it) - Forse è per questo che è così importante continuare a parlarne
+Anyway, let's not ruin a nice family dinner over this (enìuei, lets not ruuin a nais fèmili dinër ouvër dhis) - Comunque, non roviniamo una bella cena in famiglia per questo
+You're right, let's talk about the holiday instead (yor rait, lets tok abaut dhë holidei instèd) - Hai ragione, parliamo delle vacanze invece
+That's a much happier subject, honestly (dhèts a mach hèpiër sabgikt, onëstli) - È un argomento molto più felice, onestamente
+I just want everyone to grow up kind, whatever they believe (ai giast uont evriuan tu grou ap kaind, uotevër dhei biliiv) - Voglio solo che tutti crescano gentili, qualunque cosa credano
+That's really all that matters in the end (dhèts rìeli ol dhèt matërz in dhë end) - Alla fine è davvero l'unica cosa che conta
+I think you handled that question really well earlier (ai think yu hèndëld dhèt kuescion rìeli uel erlìer) - Penso che tu abbia gestito davvero bene quella domanda prima
+Thanks, it's not always easy to explain these things simply (thènks, its not ouëlweiz iizi tu eksplèin dhiiz thingz simpli) - Grazie, non è sempre facile spiegare queste cose in modo semplice
+We'll keep having these conversations as she gets older (uìl kiip hèvin dhiiz konvërseiscionz az scì ghets ouldër) - Continueremo ad avere queste conversazioni man mano che cresce
+That sounds like a good plan to me (dhèt saundz laik a gud plèn tu mi) - Mi sembra un buon piano
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
