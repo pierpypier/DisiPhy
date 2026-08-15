@@ -2395,6 +2395,401 @@ Hemos usado cien gramos de bicarbonato para el volcán casero. (Émos usádo thi
 El profesor nos pone nota sobre diez por cada práctica de laboratorio. (El profesór nos póne nóta sóbre diéth por káda práktika de laboratório) - Il professore ci dà un voto su dieci per ogni esperienza di laboratorio
 Tenemos que traer una probeta y dos vasos de precipitado para mañana. (Tenémos ke traér úna probéta i dos básos de prezipitádo pára mañána) - Dobbiamo portare una provetta e due becher per domani
 Me ha salido mal el experimento, tengo que repetirlo desde cero. (Me a salído mal el esperiménto, téngo ke repetírlo désde théro) - Mi è venuto male l'esperimento, devo rifarlo da capo
+Buenos días, ¿me pone un kilo de merluza en filetes? (Buénos días, me póne un kílo de merlútha en filétes?) - Buongiorno, mi mette un chilo di nasello a filetti?
+¿Cuánto vale el kilo de gambas hoy? (Kuánto bále el kílo de gámbas oi?) - Quanto costa il chilo di gamberi oggi?
+Deme medio kilo de mejillones, los grandes si tiene. (Déme médio kílo de mehillónes, los grándes si tiéne) - Mi dia mezzo chilo di cozze, quelle grandi se le ha
+¿Me limpia esta dorada, por favor? (Me límpia ésta doráda, por fabór?) - Mi pulisce questa orata, per favore?
+Quería dos doradas para hacer al horno esta noche. (Kería dos dorádas pára azér al órno ésta nóche) - Volevo due orate da fare al forno stasera
+¿Tiene pulpo cocido? Póngame trescientos gramos. (Tiéne púlpo kothído? Póngame tresthiéntos grámos) - Ha del polpo cotto? Me ne metta trecento grammi
+Necesito un kilo de sardinas frescas para la parrilla. (Nezesíto un kílo de sardínas frésko pára la parrílla) - Ho bisogno di un chilo di sardine fresche per la griglia
+¿Cuánto pesa este bonito entero? (Kuánto pésa éste boníto entéro?) - Quanto pesa questo tonnetto intero?
+Póngame dos rodajas de merluza bien gruesas. (Póngame dos rodáhas de merlútha bién grwésas) - Mi metta due tranci di nasello ben spessi
+¿Me hace un kilo de calamares limpios? (Me áze un kílo de kalamáres límpios?) - Mi fa un chilo di calamari puliti?
+Deme una docena de almejas y otra de berberechos. (Déme úna dothéna de alméhas i ótra de berberéchos) - Mi dia una dozzina di vongole e un'altra di cardidi
+¿A cómo está el kilo de langostinos grandes? (A kómo está el kílo de langostínos grándes?) - A quanto sta il chilo di gamberoni grandi?
+Póngame ocho langostinos, para una cena especial. (Póngame ócho langostínos, pára úna zéna espethiál) - Me ne metta otto gamberoni, per una cena speciale
+¿Cuánto le debo por todo el pescado? (Kuánto le débo por tódo el peskádo?) - Quanto le devo per tutto il pesce?
+Son veintidós euros con cincuenta en total. (Son beintidós éuros kon thinkuénta en totál) - Sono ventidue euro e cinquanta in totale
+¿Tiene salmón fresco o solo congelado? (Tiéne salmón frésko o sólo konheládo?) - Ha salmone fresco o solo congelato?
+Póngame cuatro filetes de salmón sin piel. (Póngame kuátro filétes de salmón sin piél) - Mi metta quattro filetti di salmone senza pelle
+¿Me quita las espinas a la lubina, por favor? (Me kíta las espínas a la lubína, por fabór?) - Mi toglie le lische alla spigola, per favore?
+Necesito dos kilos de mejillones para hacer para toda la familia. (Nezesíto dos kílos de mehillónes pára azér pára tóda la família) - Ho bisogno di due chili di cozze da fare per tutta la famiglia
+¿Cuántas gambas hay más o menos en un kilo? (Kuántas gámbas ai mas o ménos en un kílo?) - Quanti gamberi ci sono più o meno in un chilo?
+Deme medio kilo de boquerones para marinar. (Déme médio kílo de bokerónes pára marinár) - Mi dia mezzo chilo di alici da marinare
+¿Tiene percebes hoy? Ponme unos doscientos gramos. (Tiéne perthébes oi? Ponme únos dosthiéntos grámos) - Ha dei percebes oggi? Me ne dia circa duecento grammi
+Muchas gracias, nos vemos la semana que viene. (Múchas grázias, nos bémos la semána ke biéne) - Grazie mille, ci vediamo la settimana prossima
+Buenas, necesito seis tornillos de cuatro centímetros. (Buénas, nezesíto séis tornílios de kuátro thentímetros) - Buongiorno, ho bisogno di sei viti da quattro centimetri
+¿Tiene tacos de madera del número ocho? (Tiéne tákos de madéra del número ócho?) - Ha dei tasselli di legno del numero otto?
+Deme un metro de cable eléctrico, del fino. (Déme un métro de kable elektríko, del fíno) - Mi dia un metro di cavo elettrico, quello sottile
+¿Cuánto cuesta este taladro, el de la oferta? (Kuánto kuésta éste taládro, el de la oférta?) - Quanto costa questo trapano, quello in offerta?
+Necesito dos litros de pintura blanca para el salón. (Nezesíto dos lítros de pintúra blánka pára el salón) - Ho bisogno di due litri di vernice bianca per il salotto
+¿Me da diez tacos y diez tornillos a juego? (Me da diéth tákos i diéth tornílios a huégo?) - Mi dà dieci tasselli e dieci viti abbinate?
+Quería una brocha mediana y un rodillo pequeño. (Kería úna brócha mediána i un rodíllo pekéño) - Volevo un pennello medio e un rullo piccolo
+¿Cuánto vale el metro de manguera de jardín? (Kuánto bále el métro de mangéra de hardín?) - Quanto costa al metro il tubo da giardino?
+Deme cinco metros de manguera, con la boquilla incluida. (Déme thínko métros de mangéra, kon la bokílla inklwída) - Mi dia cinque metri di tubo, con l'ugello incluso
+¿Tiene bombillas de bajo consumo de sesenta vatios? (Tiéne bombíllas de báho konsúmo de sesénta bátios?) - Ha lampadine a basso consumo da sessanta watt?
+Necesito tres bombillas y un enchufe nuevo. (Nezesíto tres bombíllas i un enchúfe nuébo) - Ho bisogno di tre lampadine e una presa nuova
+¿Me corta esta madera en dos trozos iguales? (Me kórta ésta madéra en dos trótos igwáles?) - Mi taglia questo legno in due pezzi uguali?
+Quería un martillo, unos alicates y un destornillador plano. (Kería un martíllo, únos alikátes i un destornillaadór pláno) - Volevo un martello, delle pinze e un cacciavite piatto
+¿Cuánto cuestan estos guantes de trabajo? (Kuánto kuéstan éstos guántes de trabáho?) - Quanto costano questi guanti da lavoro?
+Deme dos pares de guantes, del número mediano. (Déme dos páres de guántes, del número mediáno) - Mi dia due paia di guanti, della misura media
+Necesito un candado pequeño para la maleta. (Nezesíto un kandádo pekéño pára la maléta) - Ho bisogno di un lucchetto piccolo per la valigia
+¿Tiene tornillos de dos centímetros y medio? (Tiéne tornílios de dos thentímetros i médio?) - Ha delle viti da due centimetri e mezzo?
+Quiero cuarenta tornillos, todos del mismo tamaño. (Kiéro kuarénta tornílios, tódos del mísmo tamáño) - Voglio quaranta viti, tutte della stessa misura
+¿Cuánto cuesta el metro cuadrado de este suelo laminado? (Kuánto kuésta el métro kwadrádo de éste swélo lamináado?) - Quanto costa al metro quadro questo pavimento laminato?
+Necesito quince metros cuadrados para toda la habitación. (Nezesíto kínthe métros kwadrádos pára tóda la abitathión) - Ho bisogno di quindici metri quadrati per tutta la stanza
+¿Me da una caja de clavos pequeños y otra de grandes? (Me da úna kája de klábos pekéños i ótra de grándes?) - Mi dà una scatola di chiodi piccoli e un'altra di grandi?
+Deme una escalera de tres peldaños, la más ligera. (Déme úna eskaléra de tres peldáños, la mas lihéra) - Mi dia una scala a tre gradini, la più leggera
+¿Cuánto es todo junto, con el descuento incluido? (Kuánto es tódo húnto, kon el deskuénto inklwído?) - Quanto fa tutto insieme, con lo sconto incluso?
+Son treinta y cinco euros con noventa céntimos. (Son tréinta i thínko éuros kon nobénta théntimos) - Sono trentacinque euro e novanta centesimi
+¿Tiene pilas del número doble A, necesito ocho? (Tiéne pílas del número dóble a, nezesíto ócho?) - Ha delle pile stilo AA, ne ho bisogno di otto?
+Deme un paquete de bridas de veinte centímetros. (Déme un pakéte de brídas de béinte thentímetros) - Mi dia un pacco di fascette da venti centimetri
+Perfecto, con esto ya tengo todo lo que necesitaba. (Perfékto, kon ésto ya téngo tódo lo ke nezesitába) - Perfetto, con questo ho già tutto quello che mi serviva
+La Segunda Guerra Mundial empezó en mil novecientos treinta y nueve. (La Segúnda Guérra Mundiál empethó en mil nobethiéntos tréinta i nuébe) - La Seconda Guerra Mondiale iniziò nel millenovecentotrentanove
+¿En qué año se descubrió América, mil cuatrocientos noventa y dos? (En ké áño se deskubrió Amérika, mil kuatrothiéntos nobénta i dos?) - In che anno fu scoperta l'America, nel millequattrocentonovantadue?
+La Revolución Francesa comenzó en mil setecientos ochenta y nueve. (La Rebolución Franthésa komenthó en mil setethiéntos ochénta i nuébe) - La Rivoluzione Francese iniziò nel millesettecentottantanove
+El profesor nos ha explicado la caída del Imperio Romano hoy. (El profesór nos a esplikádo la kaída del Império Románo oi) - Il professore ci ha spiegato la caduta dell'Impero Romano oggi
+¿Cuántos años duró el Imperio Romano de Occidente? (Kuántos áños duró el Império Románo de Okthidénte?) - Quanti anni durò l'Impero Romano d'Occidente?
+Tenemos que memorizar las fechas de la Guerra Civil española. (Tenémos ke memorizár las féchas de la Guérra Thibíl españóla) - Dobbiamo memorizzare le date della Guerra Civile spagnola
+La Guerra Civil española duró de mil novecientos treinta y seis a mil novecientos treinta y nueve. (La Guérra Thibíl españóla duró de mil nobethiéntos tréinta i séis a mil nobethiéntos tréinta i nuébe) - La Guerra Civile spagnola durò dal millenovecentotrentasei al millenovecentotrentanove
+¿En qué siglo vivió Julio César, en el primero antes de Cristo? (En ké síglo bibió Húlio Thésar, en el priméro ántes de Kristo?) - In che secolo visse Giulio Cesare, nel primo secolo avanti Cristo?
+El muro de Berlín cayó en mil novecientos ochenta y nueve. (El múro de Berlín kayó en mil nobethiéntos ochénta i nuébe) - Il muro di Berlino cadde nel millenovecentottantanove
+Tenemos un examen sobre la Edad Media el próximo viernes. (Tenémos un eksámen sóbre la Edád Média el próksimo biérnes) - Abbiamo un esame sul Medioevo il prossimo venerdì
+¿Cuándo empezó la Primera Guerra Mundial, en mil novecientos catorce? (Kuándo empethó la Priméra Guérra Mundiál, en mil nobethiéntos katórthe?) - Quando iniziò la Prima Guerra Mondiale, nel millenovecentoquattordici?
+La Primera Guerra Mundial terminó cuatro años después, en mil novecientos dieciocho. (La Priméra Guérra Mundiál terminó kuátro áños después, en mil nobethiéntos diethiócho) - La Prima Guerra Mondiale finì quattro anni dopo, nel millenovecentodiciotto
+El profesor ha traído un mapa del siglo dieciséis para la clase. (El profesór a traído un mápa del síglo diethiséis pára la kláse) - Il professore ha portato una mappa del sedicesimo secolo per la lezione
+¿En qué año se independizó España de los romanos, o sea nunca del todo? (En ké áño se independithó España de los romános, o séa nunka del tódo?) - In che anno la Spagna si liberò dai romani, o meglio non del tutto?
+Los Reyes Católicos reinaron a finales del siglo quince. (Los Réyes Katólikos reinaron a finales del siglo quince) - I Re Cattolici regnarono alla fine del quindicesimo secolo
+Colón llegó a América un doce de octubre, ¿verdad? (Kolón llegó a Amérika un dothe de oktúbre, berdád?) - Colombo arrivò in America il dodici ottobre, vero?
+La Revolución Industrial empezó en Inglaterra a mediados del siglo dieciocho. (La Rebolutión Industriál empethó en Inglatérra a mediádos del síglo diethiócho) - La Rivoluzione Industriale iniziò in Inghilterra a metà del diciottesimo secolo
+¿Cuántos años pasaron entre la Revolución Francesa y la Primera Guerra Mundial? (Kuántos áños pasáron éntre la Rebolutión Franthésa i la Priméra Guérra Mundiál?) - Quanti anni passarono tra la Rivoluzione Francese e la Prima Guerra Mondiale?
+El profesor nos ha puesto un examen tipo test con treinta preguntas. (El profesór nos a puésto un eksámen típo test kon tréinta pregúntas) - Il professore ci ha dato un esame a quiz con trenta domande
+Tengo que hacer un resumen de dos páginas sobre el Renacimiento. (Téngo ke azér un reasúmen de dos páhinas sóbre el Renathimiénto) - Devo fare un riassunto di due pagine sul Rinascimento
+¿En qué siglo se construyó la Alhambra de Granada? (En ké síglo se konstruyó la Alámbra de Granáda?) - In che secolo fu costruita l'Alhambra di Granada?
+La Alhambra se empezó a construir en el siglo trece. (La Alámbra se empethó a konstruír en el síglo trétheh) - L'Alhambra iniziò a essere costruita nel tredicesimo secolo
+Napoleón fue derrotado en mil ochocientos quince, en Waterloo. (Napoleón fue derrotádo en mil ochothiéntos kínthe, en Baterlú) - Napoleone fu sconfitto nel milleottocentoquindici, a Waterloo
+¿Cuántos años estuvo Napoleón en el poder, unos quince? (Kuántos áños estúbo Napoleón en el podér, únos kínthe?) - Quanti anni fu al potere Napoleone, circa quindici?
+El profesor nos ha explicado el descubrimiento de Machu Picchu en mil novecientos once. (El profesór nos a esplikádo el deskubrimiénto de Máchu Píkchu en mil nobethiéntos ónthe) - Il professore ci ha spiegato la scoperta di Machu Picchu nel millenovecentoundici
+Tenemos que aprendernos diez fechas importantes para el examen. (Tenémos ke aprendérnos diéth féchas importántes pára el eksámen) - Dobbiamo imparare dieci date importanti per l'esame
+¿Cuándo se fundó Roma, en el setecientos cincuenta y tres antes de Cristo? (Kuándo se fundó Róma, en el setethiéntos thinkuénta i tres ántes de Kristo?) - Quando fu fondata Roma, nel settecentocinquantatré avanti Cristo?
+El Imperio Bizantino duró más de mil años, es una barbaridad. (El Império Bithantíno duró mas de mil áños, es úna barbaridád) - L'Impero Bizantino durò più di mille anni, è una cosa pazzesca
+¿En qué año cayó Constantinopla, en mil cuatrocientos cincuenta y tres? (En ké áño kayó Konstantinópla, en mil kuatrothiéntos thinkuénta i tres?) - In che anno cadde Costantinopoli, nel millequattrocentocinquantatré?
+La caída de Constantinopla marca el final de la Edad Media para muchos historiadores. (La kaída de Konstantinópla márka el finál de la Edád Média pára múchos istoriadóres) - La caduta di Costantinopoli segna la fine del Medioevo per molti storici
+El profesor nos ha mandado leer dos capítulos sobre la Guerra Fría. (El profesór nos a mandádo leér dos kapítulos sóbre la Guérra Fría) - Il professore ci ha assegnato di leggere due capitoli sulla Guerra Fredda
+¿Cuántos años duró la Guerra Fría, más de cuarenta? (Kuántos áños duró la Guérra Fría, mas de kuarénta?) - Quanti anni durò la Guerra Fredda, più di quaranta?
+La transición española empezó tras la muerte de Franco en mil novecientos setenta y cinco. (La transithión españóla empethó tras la muérte de Fránko en mil nobethiéntos setenta i thínko) - La transizione spagnola iniziò dopo la morte di Franco nel millenovecentosettantacinque
+¿En qué año entró España en la Unión Europea? (En ké áño entró España en la Unión Européa?) - In che anno la Spagna entrò nell'Unione Europea?
+España entró en la Unión Europea en mil novecientos ochenta y seis. (España entró en la Unión Européa en mil nobethiéntos ochénta i séis) - La Spagna entrò nell'Unione Europea nel millenovecentottantasei
+Tenemos que hacer una línea del tiempo con veinte acontecimientos importantes. (Tenémos ke azér úna línea del tiémpo kon béinte akontethimiéntos importántes) - Dobbiamo fare una linea del tempo con venti avvenimenti importanti
+¿Sabes en qué año empezó la Guerra de la Independencia española? (Sábes en ké áño empethó la Guérra de la Independénthia españóla?) - Sai in che anno iniziò la Guerra d'Indipendenza spagnola?
+Empezó en mil ochocientos ocho, contra la invasión francesa. (Empethó en mil ochothiéntos ócho, kóntra la imbasión franthésa) - Iniziò nel milleottocentootto, contro l'invasione francese
+El profesor ha dividido la clase en grupos de cinco para el trabajo de historia. (El profesór a dibidído la kláse en grúpos de thínko pára el trabáho de istória) - Il professore ha diviso la classe in gruppi di cinque per il lavoro di storia
+¿Cuántas dinastías gobernaron Egipto a lo largo de la historia? (Kuántas dinastías gobernáron Ehípto a lo lárgo de la istória?) - Quante dinastie governarono l'Egitto nel corso della storia?
+Tenemos que entregar el trabajo antes del quince de mayo. (Tenémos ke entregár el trabáho ántes del kínthe de máyo) - Dobbiamo consegnare il lavoro prima del quindici maggio
+La Revolución Rusa ocurrió en mil novecientos diecisiete, ¿verdad? (La Rebolutión Rúsa okurrió en mil nobethiéntos diethisiéte, berdád?) - La Rivoluzione Russa avvenne nel millenovecentodiciassette, vero?
+Sí, hubo dos revoluciones ese mismo año, en febrero y en octubre. (Si, úbo dos rebolutiónes ése mísmo áño, en febréro i en oktúbre) - Sì, ci furono due rivoluzioni quello stesso anno, a febbraio e a ottobre
+El profesor nos ha puesto un documental de cuarenta minutos sobre los faraones. (El profesór nos a puésto un dokumentál de kuarénta minútos sóbre los faraónes) - Il professore ci ha messo un documentario di quaranta minuti sui faraoni
+¿Cuántos años tienen las pirámides de Egipto, más de cuatro mil quinientos? (Kuántos áños tiénen las pirámides de Ehípto, mas de kuátro mil kiniéntos?) - Quante anni hanno le piramidi d'Egitto, più di quattromilacinquecento?
+Tenemos que estudiar tres imperios distintos para el próximo examen. (Tenémos ke estudiár tres impérios distíntos pára el próksimo eksámen) - Dobbiamo studiare tre imperi diversi per il prossimo esame
+¿En qué año llegó Hernán Cortés a México? (En ké áño llegó Ernán Kortés a Méhiko?) - In che anno arrivò Hernán Cortés in Messico?
+Llegó en mil quinientos diecinueve, si no recuerdo mal. (Llegó en mil kiniéntos diethinuébe, si no rekuérdo mal) - Arrivò nel millecinquecentodiciannove, se non ricordo male
+El profesor nos ha pedido diez fechas clave del siglo veinte. (El profesór nos a pedído diéth féchas kláve del síglo béinte) - Il professore ci ha chiesto dieci date chiave del ventesimo secolo
+Con este resumen ya tengo casi todo listo para el examen de mañana. (Kon éste reasúmen ya téngo kási tódo lísto pára el eksámen de mañána) - Con questo riassunto ho già quasi tutto pronto per l'esame di domani
+El río Amazonas es el más largo del mundo, tío. (El río Amathónas es el mas lárgo del múndo, tío) - Il fiume Amazzoni è il più lungo del mondo, amico
+¿Cuántos kilómetros mide el río Nilo? (Kuántos kilómetros míde el río Nílo?) - Quanti chilometri misura il fiume Nilo?
+El Nilo mide unos seis mil ochocientos kilómetros. (El Nílo míde únos séis mil ochothiéntos kilómetros) - Il Nilo misura circa seimilaottocento chilometri
+El profesor nos ha puesto un mapa mudo de Europa para rellenar. (El profesór nos a puésto un mápa múdo de Européa pára rellenár) - Il professore ci ha dato una cartina muta d'Europa da completare
+¿Cuál es la montaña más alta del mundo, el Everest? (Kuál es la montáña mas álta del múndo, el Ebérest?) - Qual è la montagna più alta del mondo, l'Everest?
+El Everest mide ocho mil ochocientos cuarenta y nueve metros. (El Ebérest míde ócho mil ochothiéntos kuarénta i nuébe métros) - L'Everest misura ottomilaottocentoquarantanove metri
+Tenemos que aprendernos las capitales de toda Europa. (Tenémos ke aprendérnos las kapitáles de tóda Européa) - Dobbiamo imparare le capitali di tutta Europa
+¿Cuál es la capital de Portugal, Lisboa? (Kuál es la kapitál de Portugál, Lisbóa?) - Qual è la capitale del Portogallo, Lisbona?
+Madrid está a unos seiscientos veinte kilómetros de Lisboa. (Madríd está a únos seisthiéntos béinte kilómetros de Lisbóa) - Madrid dista circa seicentoventi chilometri da Lisbona
+El desierto del Sahara es el más grande del mundo, tío. (El desiérto del Saára es el mas gránde del múndo, tío) - Il deserto del Sahara è il più grande del mondo, amico
+¿Cuántos países atraviesa el río Danubio? (Kuántos países atrabiésa el río Danúbio?) - Quanti paesi attraversa il fiume Danubio?
+El Danubio atraviesa diez países antes de llegar al mar Negro. (El Danúbio atrabiésa diéth países ántes de llegár al mar Négro) - Il Danubio attraversa dieci paesi prima di arrivare al Mar Nero
+El profesor nos ha explicado las placas tectónicas hoy. (El profesór nos a esplikádo las plákas tektónikas oi) - Il professore ci ha spiegato le placche tettoniche oggi
+¿A cuántos kilómetros está Barcelona de Madrid? (A kuántos kilómetros está Barthelóna de Madríd?) - A quanti chilometri sta Barcellona da Madrid?
+Barcelona está a unos seiscientos veinte kilómetros de Madrid. (Barthelóna está a únos seisthiéntos béinte kilómetros de Madríd) - Barcellona dista circa seicentoventi chilometri da Madrid
+El estrecho de Gibraltar separa España de Marruecos. (El estrécho de Hibraltár separa España de Marruékos) - Lo stretto di Gibilterra separa la Spagna dal Marocco
+¿Cuántos kilómetros hay entre España y África en el punto más cercano? (Kuántos kilómetros ai éntre España i Áfrika en el púnto mas therkáno?) - Quanti chilometri ci sono tra Spagna e Africa nel punto più vicino?
+Solo catorce kilómetros separan Tarifa de la costa marroquí. (Sólo katórthe kilómetros séparan Tarífa de la kósta marrokí) - Solo quattordici chilometri separano Tarifa dalla costa marocchina
+El profesor nos ha pedido situar diez ríos en el mapa. (El profesór nos a pedído situár diéth ríos en el mápa) - Il professore ci ha chiesto di collocare dieci fiumi sulla mappa
+¿Cuál es el océano más grande del mundo, el Pacífico? (Kuál es el otheáno mas gránde del múndo, el Pathífiko?) - Qual è l'oceano più grande del mondo, il Pacifico?
+El océano Pacífico cubre casi un tercio de la superficie de la Tierra. (El otheáno Pathífiko kúbre kási un terthio de la superfíthie de la Tiérra) - L'oceano Pacifico copre quasi un terzo della superficie della Terra
+Tenemos un examen sobre los continentes el próximo martes. (Tenémos un eksámen sóbre los kontinéntes el próksimo mártes) - Abbiamo un esame sui continenti il prossimo martedì
+¿Cuántos continentes hay, cinco o seis según el libro? (Kuántos kontinéntes ai, thínko o séis según el líbro?) - Quanti continenti ci sono, cinque o sei secondo il libro?
+La cordillera de los Andes mide más de siete mil kilómetros. (La kordilléra de los Ándes míde mas de siéte mil kilómetros) - La cordigliera delle Ande misura più di settemila chilometri
+Es la cordillera más larga del mundo, tío, una barbaridad. (Es la kordilléra mas lárga del múndo, tío, úna barbaridád) - È la cordigliera più lunga del mondo, amico, una cosa pazzesca
+¿A qué distancia está la Luna de la Tierra, unos trescientos ochenta mil kilómetros? (A ké distánthia está la Lúna de la Tiérra, únos tresthiéntos ochénta mil kilómetros?) - A che distanza sta la Luna dalla Terra, circa trecentottantamila chilometri?
+El profesor nos ha mandado dibujar el mapa de España con las diecisiete comunidades. (El profesór nos a mandádo dibuhár el mápa de España kon las diethisiéte komunidádes) - Il professore ci ha assegnato di disegnare la mappa della Spagna con le diciassette comunità
+¿Cuál es el punto más alto de España, el Teide? (Kuál es el púnto mas álto de España, el Téide?) - Qual è il punto più alto della Spagna, il Teide?
+El Teide mide tres mil setecientos dieciocho metros, está en Tenerife. (El Téide míde tres mil setethiéntos diethiócho métros, está en Tenerífe) - Il Teide misura tremilasettecentodiciotto metri, si trova a Tenerife
+El río más largo de España es el Tajo, con casi mil cien kilómetros. (El río mas lárgo de España es el Táho, kon kási mil thién kilómetros) - Il fiume più lungo della Spagna è il Tago, con quasi millecento chilometri
+¿Cuántos kilómetros de costa tiene España en total? (Kuántos kilómetros de kósta tiéne España en totál?) - Quanti chilometri di costa ha la Spagna in totale?
+España tiene casi ocho mil kilómetros de costa entre el Atlántico y el Mediterráneo. (España tiéne kási ócho mil kilómetros de kósta éntre el Atlántiko i el Mediterráneo) - La Spagna ha quasi ottomila chilometri di costa tra l'Atlantico e il Mediterraneo
+El profesor nos ha explicado la diferencia entre clima y tiempo atmosférico. (El profesór nos a esplikádo la diferénthia éntre klíma i tiémpo atmosfériko) - Il professore ci ha spiegato la differenza tra clima e tempo atmosferico
+¿Cuántos husos horarios tiene Rusia, once? (Kuántos úsos orários tiéne Rúsia, ónthe?) - Quanti fusi orari ha la Russia, undici?
+Rusia es el país más grande del mundo por superficie. (Rúsia es el país mas gránde del múndo por superfíthie) - La Russia è il paese più grande del mondo per superficie
+El lago Titicaca está a unos tres mil ochocientos metros de altitud. (El lágo Titikáka está a únos tres mil ochothiéntos métros de altitúd) - Il lago Titicaca si trova a circa tremilaottocento metri di altitudine
+¿Cuál es el país más pequeño del mundo, el Vaticano? (Kuál es el país mas pekéño del múndo, el Batikáno?) - Qual è il paese più piccolo del mondo, il Vaticano?
+El Vaticano mide menos de medio kilómetro cuadrado, es diminuto. (El Batikáno míde ménos de médio kilómetro kwadrádo, es diminúto) - Il Vaticano misura meno di mezzo chilometro quadrato, è minuscolo
+Tenemos que aprendernos los mares que rodean la península ibérica. (Tenémos ke aprendérnos los máres ke rodéan la península ibérika) - Dobbiamo imparare i mari che circondano la penisola iberica
+¿A cuántos kilómetros está Canarias de la península? (A kuántos kilómetros está Kanárias de la península?) - A quanti chilometri stanno le Canarie dalla penisola?
+Canarias está a más de mil trescientos kilómetros de la península. (Kanárias está a mas de mil tresthiéntos kilómetros de la península) - Le Canarie distano più di milletrecento chilometri dalla penisola
+El profesor nos ha puesto un vídeo sobre el cambio climático. (El profesór nos a puésto un bídeo sóbre el kámbio klimátiko) - Il professore ci ha messo un video sul cambiamento climatico
+¿Cuántos kilómetros cuadrados tiene España en total? (Kuántos kilómetros kwadrádos tiéne España en totál?) - Quanti chilometri quadrati ha la Spagna in totale?
+España tiene poco más de quinientos mil kilómetros cuadrados. (España tiéne póko mas de kiniéntos mil kilómetros kwadrádos) - La Spagna ha poco più di cinquecentomila chilometri quadrati
+El estrecho de Bering separa Asia de América del Norte. (El estrécho de Béring separa Ásia de Amérika del Norte) - Lo stretto di Bering separa l'Asia dal Nord America
+¿Cuántos kilómetros hay entre Rusia y Alaska en ese punto? (Kuántos kilómetros ai éntre Rúsia i Aláska en ése púnto?) - Quanti chilometri ci sono tra Russia e Alaska in quel punto?
+Solo ochenta y dos kilómetros separan Rusia de Alaska por el estrecho. (Sólo ochénta i dos kilómetros séparan Rúsia de Aláska por el estrécho) - Solo ottantadue chilometri separano la Russia dall'Alaska attraverso lo stretto
+El profesor nos ha pedido calcular la distancia entre cinco ciudades europeas. (El profesór nos a pedído kalkulár la distánthia éntre thínko thiudádes européas) - Il professore ci ha chiesto di calcolare la distanza tra cinque città europee
+Con este mapa ya me sé casi todas las capitales de memoria. (Kon éste mápa ya me se kási tódas las kapitáles de memória) - Con questa mappa ormai so quasi tutte le capitali a memoria
+Papá, ¿por qué hay tantas guerras por culpa de la religión? (Papà, por ké ai tántas guérras por kúlpa de la relihión?) - Papà, perché ci sono tante guerre a causa della religione?
+No es exactamente por la religión, hija, es más complicado que eso. (No es eksaktaménte por la relihión, íha, es mas komplikádo ke éso) - Non è esattamente per la religione, figlia, è più complicato di così
+A mí me parece que la gente usa la religión como excusa. (A mi me paréthe ke la hénte úsa la relihión kómo ekskúsa) - A me sembra che la gente usi la religione come scusa
+Cada religión predica la paz, pero luego pasa lo que pasa. (Káda relihión prédika la path, péro luégo pása lo ke pása) - Ogni religione predica la pace, ma poi succede quello che succede
+Yo creo que el problema es el poder, no la fe en sí. (Yo kréo ke el probléma es el podér, no la fe en si) - Io credo che il problema sia il potere, non la fede in sé
+¿Tú en qué crees, mamá, o no crees en nada? (Tu en ké kréas, mamà, o no kréas en náda?) - Tu in cosa credi, mamma, o non credi in niente?
+Yo fui educada en la fe católica, pero ahora dudo bastante. (Yo fui edukáda en la fe katólika, péro áora dúdo bastánte) - Io sono stata educata nella fede cattolica, ma ora ho parecchi dubbi
+Hay gente que mata en nombre de Dios y eso no lo entiendo. (Ai hénte ke máta en nómbre de Dios i éso no lo entiéndo) - C'è gente che uccide in nome di Dio e questo non lo capisco
+Ninguna guerra ha sido justa del todo, para mí. (Ningúna guérra a sído hústa del tódo, pára mi) - Nessuna guerra è stata del tutto giusta, secondo me
+Las religiones monoteístas se parecen más de lo que la gente cree. (Las relihiónes monoteístas se paréthen mas de lo ke la hénte kréa) - Le religioni monoteiste si assomigliano più di quanto la gente creda
+El islam, el cristianismo y el judaísmo vienen todos del mismo tronco. (El islám, el kristianísmo i el hudaísmo biénen tódos del mísmo trónko) - L'Islam, il cristianesimo e l'ebraismo derivano tutti dallo stesso tronco
+Pues entonces, ¿por qué se pelean tanto entre ellos? (Pues entónthes, por ké se peléan tánto éntre éllos?) - E allora, perché litigano tanto tra di loro?
+Eso tiene más que ver con territorios e intereses políticos. (Éso tiéne mas ke ber kon territórios e interéses polítikos) - Questo ha più a che vedere con territori e interessi politici
+En el fondo, casi todas las guerras van de recursos, no de creencias. (En el fóndo, kási tódas las guérras ban de rekúrsos, no de kreénthias) - In fondo, quasi tutte le guerre riguardano le risorse, non le credenze
+Yo he leído que en la India hay muchísimas religiones distintas. (Yo e leído ke en la Índia ai muchísimas relihiónes distíntas) - Io ho letto che in India ci sono moltissime religioni diverse
+Sí, el hinduismo, el budismo, el sijismo, y conviven bastante bien. (Si, el induísmo, el budísmo, el sihísmo, i kombíben bastánte bién) - Sì, l'induismo, il buddismo, il sikhismo, e convivono abbastanza bene
+Entonces se puede vivir junto sin matarse, ¿no? (Entónthes se puéde bibír húnto sin matárse, no?) - Allora si può convivere senza ammazzarsi, no?
+Claro que sí, el problema nunca es la diversidad en sí misma. (Kláro ke si, el probléma núnka es la diberidád en si mísma) - Certo che sì, il problema non è mai la diversità in sé
+A mí me da miedo cuando la gente se pone tan radical. (A mi me da miédo kuándo la hénte se póne tan radikál) - A me fa paura quando la gente diventa così radicale
+El fanatismo es peligroso venga de donde venga, hija. (El fanatísmo es peligróso bénga de dónde bénga, íha) - Il fanatismo è pericoloso da qualunque parte venga, figlia
+¿Tú crees que algún día habrá paz de verdad en el mundo? (Tu kréas ke algún día abrá path de berdád en el múndo?) - Tu credi che un giorno ci sarà davvero pace nel mondo?
+Ojalá, pero la historia no me da muchas esperanzas, la verdad. (Ohalá, péro la istória no me da múchas esperánzas, la berdád) - Magari, ma la storia non mi dà molte speranze, sinceramente
+En clase de historia estamos viendo las cruzadas ahora mismo. (En kláse de istória estámos biéndo las kruthádas áora mísmo) - A lezione di storia stiamo studiando le crociate proprio adesso
+Qué barbaridad lo de las cruzadas, todo en nombre de la fe. (Ke barbaridád lo de las kruthádas, tódo en nómbre de la fe) - Che follia le crociate, tutto in nome della fede
+Y eso que se supone que las religiones enseñan amor al prójimo. (I éso ke se supóne ke las relihiónes enséñan amór al próhimo) - E pensare che le religioni dovrebbero insegnare l'amore per il prossimo
+Cada texto sagrado se puede interpretar de mil maneras distintas. (Káda tésto sagrádo se puéde interpretár de mil manéras distíntas) - Ogni testo sacro si può interpretare in mille modi diversi
+Ahí está el problema, cada uno interpreta lo que le conviene. (Aí está el probléma, káda úno interpréta lo ke le kombiéne) - Il problema è lì, ognuno interpreta quello che gli conviene
+Yo prefiero que cada uno crea lo que quiera, sin imponer nada. (Yo prefiéro ke káda úno kréa lo ke kiéra, sin imponér náda) - Io preferisco che ognuno creda quello che vuole, senza imporre nulla
+Eso es lo que se llama libertad religiosa, y es fundamental. (Éso es lo ke se llama libertád relihiósa, i es fundamentál) - Questo è quello che si chiama libertà religiosa, ed è fondamentale
+¿Y por qué en algunos países no hay esa libertad, papá? (I por ké en algúnos países no ai ésa libertád, papà?) - E perché in alcuni paesi non c'è questa libertà, papà?
+Porque el poder político y la religión a veces van de la mano. (Porké el podér polítiko i la relihión a béthes ban de la máno) - Perché il potere politico e la religione a volte vanno a braccetto
+Cuando eso pasa, la religión se convierte en una herramienta de control. (Kuándo éso pása, la relihión se kombiérte en úna erramiénta de kontról) - Quando succede questo, la religione diventa uno strumento di controllo
+Yo estudié la Guerra de los Treinta Años el año pasado en el instituto. (Yo estudié la Guérra de los Tréinta Áños el áño pasádo en el institúto) - Io ho studiato la Guerra dei Trent'Anni l'anno scorso a scuola
+Esa guerra fue entre católicos y protestantes, ¿verdad? (Ésa guérra fue éntre katólikos i protestántes, berdád?) - Quella guerra fu tra cattolici e protestanti, vero?
+Sí, y murió muchísima gente por diferencias que hoy parecen absurdas. (Si, i murió muchísima hénte por diferénthias ke oi paréthen absúrdas) - Sì, e morì moltissima gente per differenze che oggi sembrano assurde
+Ahora casi nadie se mata por eso, al menos en Europa. (Áora kási nádie se máta por éso, al ménos en Européa) - Ora quasi nessuno si ammazza più per questo, almeno in Europa
+Bueno, todavía hay conflictos con base religiosa en otras partes. (Bwéno, todabía ai konflíktos kon báse relihiósa en ótras pártes) - Beh, ci sono ancora conflitti con base religiosa in altre parti
+Como en Oriente Medio, por ejemplo, que es un lío tremendo. (Kómo en Oriénte Médio, por eehémplo, ke es un lío treméndo) - Come in Medio Oriente, per esempio, che è un casino tremendo
+Ese conflicto lleva décadas y no tiene pinta de resolverse pronto. (Ése konflíkto lléba dékadas i no tiéne pínta de resolbérse prónto) - Quel conflitto va avanti da decenni e non sembra risolversi presto
+Yo creo que la educación es la clave para cambiar las cosas. (Yo kréo ke la edukathión es la kláve pára kambiár las kósas) - Io credo che l'educazione sia la chiave per cambiare le cose
+Si desde pequeños nos enseñan a respetar al que piensa distinto, algo mejora. (Si désde pekéños nos enséñan a respetár al ke piénsa distínto, álgo mehóra) - Se fin da piccoli ci insegnano a rispettare chi pensa diverso, qualcosa migliora
+Estoy de acuerdo contigo, hija, ojalá más gente pensara así. (Estói de akuérdo kontígo, íha, ohalá mas hénte pensára así) - Sono d'accordo con te, figlia, magari più gente la pensasse così
+¿Vosotros de pequeños ibais a misa todos los domingos? (Bosótros de pekéños ibáis a mísa tódos los domíngos?) - Voi da piccoli andavate a messa tutte le domeniche?
+Sí, era casi obligatorio en mi familia, ahora ya no tanto. (Si, éra kási obligatório en mi família, áora ya no tánto) - Sì, era quasi obbligatorio nella mia famiglia, adesso non più tanto
+Yo creo que se puede ser buena persona sin ninguna religión. (Yo kréo ke se puéde ser buéna persóna sin ningúna relihión) - Io credo che si possa essere brave persone senza nessuna religione
+Totalmente de acuerdo, la moral no depende solo de la fe. (Totalménte de akuérdo, la morál no depénde sólo de la fe) - Sono totalmente d'accordo, la morale non dipende solo dalla fede
+Lo importante es respetar a los demás, crean lo que crean. (Lo importánte es respetár a los demás, kréan lo ke kréan) - L'importante è rispettare gli altri, qualunque cosa credano
+Bueno, ya está bien de temas serios por hoy, vamos a cenar. (Bwéno, ya está bién de témas sérios por oi, bámos a zenár) - Va bene, basta con gli argomenti seri per oggi, andiamo a cena
+¿Sabías que los axolotl pueden regenerar hasta las patas enteras? (Sabías ke los aksolótl puéden regenerár ásta las pátas entéras?) - Sapevi che gli axolotl possono rigenerare interamente anche le zampe?
+Qué animal tan raro, parece un dibujo animado. (Ke animál tan ráro, paréthe un dibúho animádo) - Che animale strano, sembra un cartone animato
+A mí me encantaría tener un camaleón en casa. (A mi me enkantaría tenér un kaméleon en kása) - A me piacerebbe tantissimo avere un camaleonte in casa
+Los camaleones necesitan un terrario especial con mucha humedad. (Los kaméleones nezesítan un terário espethiál kon múcha umedád) - I camaleonti hanno bisogno di un terrario speciale con molta umidità
+Yo prefiero un perro normal, esos bichos me dan un poco de grima. (Yo prefiéro un pérro normál, ésos bíchos me dan un póko de gríma) - Io preferisco un cane normale, quelle bestie mi fanno un po' impressione
+¿Sabíais que los pulpos tienen tres corazones? (Sabíais ke los púlpos tiénen tres korathónes?) - Sapevate che i polpi hanno tre cuori?
+Y son buenísimos escapando, se cuelan por cualquier rendija. (I son buenísimos eskapándo, se kwélan por kwalkiér rendíha) - E sono bravissimi a scappare, si infilano in qualsiasi fessura
+El vecino tiene una iguana enorme, me da un poco de respeto. (El bethíno tiéne úna igwána enórme, me da un póko de respéto) - Il vicino ha un'iguana enorme, mi mette un po' soggezione
+Las iguanas pueden vivir hasta veinte años si las cuidas bien. (Las igwánas puéden bibír ásta béinte áños si las kuídas bién) - Le iguane possono vivere fino a vent'anni se le curi bene
+Yo lo que quiero es un loro que hable, como el de la abuela. (Yo lo ke kiéro es un lóro ke áble, kómo el de la abuéla) - Io quello che voglio è un pappagallo che parla, come quello della nonna
+Los loros grises africanos son los que mejor imitan la voz humana. (Los lóros gríses afrikános son los ke méhor imítan la both umána) - I pappagalli cenerini africani sono quelli che imitano meglio la voce umana
+¿Cuánto vive un loro, más que nosotros seguro? (Kuánto bíbe un lóro, mas ke nosótros segúro?) - Quanto vive un pappagallo, sicuramente più di noi?
+Algunos loros llegan a vivir sesenta u ochenta años, es una locura. (Algúnos lóros llégan a bibír sesénta u ochénta áños, es úna lokúra) - Alcuni pappagalli arrivano a vivere sessanta o ottant'anni, è una follia
+Entonces si compramos uno, se lo tendrías que dejar a tus nietos. (Entónthes si komprámos úno, se lo tendrías ke dehár a tus niétos) - Allora se ne compriamo uno, dovresti lasciarlo in eredità ai tuoi nipoti
+Mejor nos quedamos con el hámster que ya tenemos, es más fácil. (Mehór nos kedámos kon el hámster ke ya tenémos, es mas fáthil) - Meglio tenerci il criceto che abbiamo già, è più semplice
+El hámster se ha vuelto a escapar de la jaula esta mañana. (El hámster se a buélto a eskapár de la háula ésta mañána) - Il criceto è scappato di nuovo dalla gabbia stamattina
+Hay que cerrar bien la puertecita, que es un fugitivo profesional. (Ai ke therrár bién la puertethíta, ke es un fuhitíbo profesionál) - Bisogna chiudere bene lo sportellino, che è un fuggitivo professionista
+A mí me daría miedo tener una serpiente en casa, la verdad. (A mi me daría miédo tenér úna serpiénte en kása, la berdád) - A me farebbe paura avere un serpente in casa, sinceramente
+Hay gente que tiene pitones enormes de mascota, no lo entiendo. (Ai hénte ke tiéne pitónes enórmes de maskóta, no lo entiéndo) - C'è gente che ha pitoni enormi come animale domestico, non lo capisco
+Un compañero mío tiene una tarántula, y encima la saca a pasear por la mano. (Un kompañéro mío tiéne úna tarántula, i enthíma la sáka a paseár por la máno) - Un mio compagno ha una tarantola, e per giunta se la fa camminare sulla mano
+Qué asco, yo no me acercaría ni loca. (Ke ásko, yo no me atherkaría ni lóka) - Che schifo, io non mi avvicinerei neanche per sbaglio
+Los animales exóticos necesitan cuidados muy específicos, no es como un gato. (Los animáles eksótikos nezesítan kuidádos mui espethífikos, no es kómo un gáto) - Gli animali esotici hanno bisogno di cure molto specifiche, non è come un gatto
+Además muchos están protegidos, no se pueden tener sin permiso. (Además múchos están protehídos, no se puéden tenér sin permíso) - Inoltre molti sono protetti, non si possono avere senza autorizzazione
+Yo he leído que hay gente que cría erizos pigmeos en casa. (Yo e leído ke ai hénte ke kría erítho pigméos en kása) - Io ho letto che c'è gente che alleva ricci pigmei in casa
+Esos son monísimos, se hacen una bolita cuando se asustan. (Ésos son monísimos, se áthen úna bolíta kuándo se asústan) - Quelli sono carinissimi, si fanno una pallina quando si spaventano
+Nuestro gato se pasa el día durmiendo, dieciséis horas por lo menos. (Nuéstro gáto se pása el día durmiéndo, diethiséis óras por lo ménos) - Il nostro gatto passa la giornata a dormire, almeno sedici ore
+Tiene una vida mejor que la nuestra, la verdad, tío. (Tiéne úna bída méhor ke la nuéstra, la berdád, tío) - Ha una vita migliore della nostra, sinceramente, amico
+¿Cuándo le toca la próxima visita al veterinario? (Kuándo le tóka la próksima bisíta al beterinário?) - Quando gli tocca la prossima visita dal veterinario?
+La semana que viene, tiene que ponerse la vacuna anual. (La semána ke biéne, tiéne ke ponérse la bakúna anwál) - La settimana prossima, deve fare il vaccino annuale
+Mi prima tiene un chinchilla, es como una bolita de pelo gigante. (Mi príma tiéne un chinchílla, es kómo úna bolíta de pélo higánte) - Mia cugina ha una cincillà, è come una pallina di pelo gigante
+Necesitan baños de arena especial en vez de agua. (Nezesítan báños de aréna espethiál en beth de água) - Hanno bisogno di bagni di sabbia speciale invece dell'acqua
+A mí me encantan los pingüinos, aunque no sean mascotas claro. (A mi me enkántan los pingüínos, aúnke no séan maskótas kláro) - A me piacciono tantissimo i pinguini, anche se non sono animali domestici ovviamente
+Los vimos en el zoo el mes pasado, son buenísimos nadando. (Los bímos en el thóo el mes pasádo, son buenísimos nadándo) - Li abbiamo visti allo zoo il mese scorso, sono bravissimi a nuotare
+¿Os acordáis del oso panda que adoptamos simbólicamente hace años? (Os akordáis del óso pánda ke adoptámos simbólikaménte áthe áños?) - Vi ricordate dell'orso panda che abbiamo adottato simbolicamente anni fa?
+Sí, todavía nos llega alguna carta del zoológico de vez en cuando. (Si, todabía nos lléga algúna kárta del thoolóhiko de beth en kuándo) - Sì, ci arriva ancora qualche lettera dallo zoo ogni tanto
+Yo creo que los animales exóticos deberían quedarse en su hábitat natural. (Yo kréo ke los animáles eksótikos debérian kedárse en su ábitat naturál) - Io credo che gli animali esotici dovrebbero restare nel loro habitat naturale
+Estoy de acuerdo, no todo lo que es bonito hay que tenerlo en casa. (Estói de akuérdo, no tódo lo ke es bonito ai ke tenérlo en kása) - Sono d'accordo, non tutto ciò che è bello va tenuto in casa
+El perro necesita salir a pasear al menos dos veces al día. (El pérro nezesíta salír a paseár al ménos dos béthes al día) - Il cane ha bisogno di uscire a passeggio almeno due volte al giorno
+Yo lo saco por la mañana y luego por la noche, con eso le basta. (Yo lo sáko por la mañána i luégo por la nóche, kon éso le básta) - Io lo porto fuori la mattina e poi la sera, con questo gli basta
+Los peces de colores son de los animales más fáciles de cuidar. (Los péthes de kolóres son de los animáles mas fáthiles de kuidár) - I pesci rossi sono tra gli animali più facili da curare
+Aun así hay que cambiarles el agua cada cierto tiempo, ¿eh? (Aun así ai ke kambiárles el água káda thiérto tiémpo, e?) - Anche così bisogna cambiare loro l'acqua ogni tanto, eh?
+¿Podemos tener un conejo en casa, mamá, porfa? (Podémos tenér un koného en kása, mamà, porfá?) - Possiamo avere un coniglio in casa, mamma, per favore?
+Los conejos mordisquean todos los cables, ten cuidado con eso. (Los konéhos mordiskéan tódos los káhbles, ten kuidádo kon éso) - I conigli rosicchiano tutti i cavi, stai attento a quello
+Mi tío tiene gallinas en el jardín, ponen huevos cada día. (Mi tío tiéne gallínas en el hardín, pónen guébos káda día) - Mio zio ha delle galline in giardino, fanno le uova ogni giorno
+Qué suerte, así tenéis huevos fresquísimos siempre. (Ke suérte, así tenéis guébos freskísimos siémpre) - Che fortuna, così avete uova freschissime sempre
+A mí de pequeña me daban miedo las arañas, y todavía un poco. (A mi de pekéña me dában miédo las aráñas, i todabía un póko) - Da piccola avevo paura dei ragni, e ancora un po'
+Pues hay gente que las tiene como mascota, tarántulas y todo. (Pues ai hénte ke las tiéne kómo maskóta, tarántulas i tódo) - Beh, c'è gente che li tiene come animali domestici, tarantole comprese
+Cada uno con sus gustos, aunque a mí me sigue pareciendo una locura. (Káda úno kon sus gústos, aúnke a mi me sígue pareziéndo úna lokúra) - Ognuno con i propri gusti, anche se a me continua a sembrare una follia
+Bueno, vamos a dar de comer al gato que ya está maullando. (Bwéno, bámos a dar de komér al gáto ke ya está maulándo) - Va bene, andiamo a dar da mangiare al gatto che sta già miagolando
+¿Sabéis que la tía Pili se ha apuntado a clases de baile a los sesenta años? (Sabéis ke la tía Pilí se a apuntádo a kláses de báile a los sesénta áños?) - Sapete che zia Pili si è iscritta a lezioni di ballo a sessant'anni?
+Qué fuerte, con lo tímida que era de joven. (Ke fuérte, kon lo tímida ke éra de hóben) - Che forte, con quanto era timida da giovane
+Mi cuñado se levanta todos los días a las cinco de la mañana sin falta. (Mi kuñádo se lebánta tódos los días a las thínko de la mañána sin fálta) - Mio cognato si alza tutti i giorni alle cinque del mattino senza eccezioni
+Yo no sé cómo aguanta, a mí me mataría eso. (Yo no se kómo agwánta, a mi me matería éso) - Io non so come faccia a resistere, a me ucciderebbe
+¿Te has enterado de que Marisa se ha comprado una moto a los cincuenta? (Te as enteradó de ke Marísa se a kompráado úna móto a los thinkuénta?) - Ti sei accorto che Marisa si è comprata una moto a cinquant'anni?
+Sí, y encima dice que la usa hasta para ir al súper. (Si, i enthíma díze ke la úsa ásta pára ir al súper) - Sì, e per giunta dice che la usa persino per andare al supermercato
+Mi vecino no saluda nunca, es un poco raro el hombre. (Mi bethíno no salúda núnka, es un póko ráro el ómbre) - Il mio vicino non saluta mai, è un po' strano quest'uomo
+A lo mejor es tímido, no hay que juzgar tan rápido. (A lo méhor es tímido, no ai ke huthgár tan rápido) - Magari è timido, non bisogna giudicare così in fretta
+Mi suegra siempre llega media hora antes a todas partes. (Mi suégra siémpre lléga média óra ántes a tódas pártes) - Mia suocera arriva sempre mezz'ora in anticipo dappertutto
+Es que le da pánico llegar tarde, desde pequeña es así. (Es ke le da pániko llegár tárde, désde pekéña es así) - È che le fa panico arrivare tardi, da piccola è già così
+¿Has visto que Carlos se ha dejado barba? Está irreconocible. (As bísto ke Kárlos se a dehádo bárba? Está irrekonozíble) - Hai visto che Carlos si è fatto crescere la barba? È irriconoscibile
+Sí, dice que es para el verano, aunque a mí no me convence. (Si, díze ke es pára el beráno, aúnke a mi no me combénthe) - Sì, dice che è per l'estate, anche se a me non convince
+Mi hermana colecciona tazas de café, tiene como cien ya. (Mi ermána kolekthióna táthas de kafé, tiéne kómo thién ya) - Mia sorella colleziona tazze da caffè, ne ha già circa cento
+Cada vez que viaja se trae una nueva, es una obsesión. (Káda beth ke biáha se tráe úna nuéba, es úna obsesión) - Ogni volta che viaggia se ne porta una nuova, è un'ossessione
+¿Sabíais que el tío Paco todavía usa un móvil de los antiguos? (Sabíais ke el tío Páko todabía úsa un móbil de los antígwos?) - Sapevate che zio Paco usa ancora un cellulare vecchio stile?
+Sí, dice que los de ahora son demasiado complicados para él. (Si, díze ke los de áora son demasiádo komplikádos pára el) - Sì, dice che quelli di adesso sono troppo complicati per lui
+Mi amiga Laura cambia de trabajo cada dos años más o menos. (Mi amíga Láura kámbia de trabáho káda dos áños mas o ménos) - La mia amica Laura cambia lavoro ogni due anni più o meno
+No sé cómo lo hace, yo con un cambio ya me estreso. (No se kómo lo áze, yo kon un kámbio ya me estréso) - Non so come faccia, io con un solo cambiamento già mi stresso
+¿Habéis oído que los del tercero se han separado? (Abéis oído ke los del thérthero se an separádo?) - Avete sentito che quelli del terzo piano si sono separati?
+Qué pena, parecían tan felices en las fotos de Instagram. (Ke péna, pareían tan felíthes en las fótos de Instagram) - Che peccato, sembravano così felici nelle foto di Instagram
+Las apariencias engañan mucho, tío, nunca sabes lo que pasa en casa ajena. (Las aparienthias engáñan múcho, tío, núnka sábes lo ke pása en kása ahéna) - Le apparenze ingannano molto, amico, non sai mai cosa succede in casa d'altri
+Mi padre se pone siempre el mismo jersey para ver el fútbol, es su amuleto. (Mi pádre se póne siémpre el mísmo herséi pára ber el fútbol, es su amuléto) - Mio padre indossa sempre lo stesso maglione per guardare il calcio, è il suo portafortuna
+Y si pierde el equipo, dice que es porque yo he hablado durante el partido. (I si piérde el ekípo, díze ke es porké yo e abládo duránte el partído) - E se perde la squadra, dice che è perché io ho parlato durante la partita
+¿Sabes que Elena no come nunca verdura de ningún tipo? (Sábes ke Eléna no kóme núnka berdúra de ningún típo?) - Sai che Elena non mangia mai verdura di nessun tipo?
+Qué raro, con lo sana que parece en todo lo demás. (Ke ráro, kon lo sána ke paréthe en tódo lo demás) - Che strano, con quanto sembra sana in tutto il resto
+Mi tía siempre cuenta la misma historia en cada comida familiar. (Mi tía siémpre kuénta la mísma istória en káda komída familiár) - Mia zia racconta sempre la stessa storia a ogni pranzo di famiglia
+Ya nos la sabemos de memoria, pero nos hacemos los sorprendidos. (Ya nos la sabémos de memória, péro nos athémos los sorprendídos) - Ormai la sappiamo a memoria, ma facciamo finta di essere sorpresi
+¿Te has fijado en que Pedro siempre llega tarde a todo? (Te as fihádo en ke Pédro siémpre lléga tárde a tódo?) - Ti sei accorto che Pedro arriva sempre in ritardo a tutto?
+Es una tradición familiar ya, su padre era exactamente igual. (Es úna tradithión familiár ya, su pádre éra eksaktaménte igwál) - Ormai è una tradizione di famiglia, suo padre era esattamente uguale
+Mi cuñada guarda todas las bolsas de plástico del mundo, no sé para qué. (Mi kuñáda gwárda tódas las bólsas de plástiko del múndo, no se pára ké) - Mia cognata conserva tutti i sacchetti di plastica del mondo, non so per cosa
+Tiene un cajón entero lleno, es de locos. (Tiéne un kahón entéro lléno, es de lókos) - Ha un intero cassetto pieno, è da pazzi
+¿Sabíais que Ana habla dormida? Su marido lo cuenta siempre. (Sabíais ke Ána ábla dormída? Su marído lo kuénta siémpre) - Sapevate che Ana parla nel sonno? Suo marito lo racconta sempre
+Dice que a veces hasta discute con ella y responde cosas raras. (Díze ke a béthes ásta diskúte kon élla i respónde kósas ráras) - Dice che a volte litiga persino con lei e risponde cose strane
+Mi primo se ha hecho vegano de repente, sin avisar a nadie. (Mi prímo se a écho begáno de repénte, sin abisár a nádie) - Mio cugino è diventato vegano all'improvviso, senza avvisare nessuno
+En la última barbacoa fue un poco incómodo, la verdad. (En la última barbakóa fue un póko inkómodo, la berdád) - All'ultimo barbecue è stato un po' imbarazzante, sinceramente
+¿Habéis visto que los padres de Nuria se han comprado una autocaravana? (Abéis bísto ke los pádres de Núria se an kompráado úna autokarabána?) - Avete visto che i genitori di Nuria si sono comprati un camper?
+Sí, dicen que se van a recorrer toda España este verano. (Si, dízen ke se ban a rekorrér tóda España éste beráno) - Sì, dicono che gireranno tutta la Spagna quest'estate
+Mi abuelo repite siempre el mismo chiste en cada cena familiar. (Mi abuélo repíte siémpre el mísmo chíste en káda théna familiár) - Mio nonno ripete sempre la stessa barzelletta a ogni cena di famiglia
+Y todos nos reímos igual, como si fuera la primera vez. (I tódos nos reímos igwál, kómo si fuéra la priméra beth) - E tutti ridiamo allo stesso modo, come se fosse la prima volta
+¿Sabes que el marido de Rosa nunca ha pisado un supermercado? (Sábes ke el marído de Rósa núnka a pisádo un supermerkádo?) - Sai che il marito di Rosa non ha mai messo piede in un supermercato?
+Ella hace la compra siempre, es increíble a estas alturas. (Élla áze la kómpra siémpre, es inkreíble a éstas altúras) - La spesa la fa sempre lei, è incredibile di questi tempi
+Mi compañera de trabajo guarda rencor por tonterías de hace años. (Mi kompañéra de trabáho gwárda renkór por tontérias de áthe áños) - La mia collega di lavoro porta rancore per sciocchezze di anni fa
+Yo prefiero olvidarme de esas cosas, la vida es muy corta. (Yo prefiéro olbidárme de ésas kósas, la bída es mui kórta) - Io preferisco dimenticarmi di queste cose, la vita è troppo corta
+¿Os habéis enterado del cotilleo del barrio sobre los del quinto? (Os abéis enteradó del kotilléo del bárrio sóbre los del kínto?) - Vi siete accorti del pettegolezzo del quartiere su quelli del quinto piano?
+No me cuentes nada, que luego no me lo puedo quitar de la cabeza. (No me kuéntes náda, ke luégo no me lo puédo kitár de la kabétha) - Non raccontarmi niente, che poi non riesco a togliermelo dalla testa
+Mi tío siempre discute de política en las comidas, es agotador. (Mi tío siémpre diskúte de polítika en las komídas, es agotadór) - Mio zio discute sempre di politica ai pranzi, è estenuante
+Ya sabemos que hay que cambiar de tema en cuanto empieza. (Ya sabémos ke ai ke kambiár de téma en kwánto empiétha) - Sappiamo già che bisogna cambiare argomento appena inizia
+Bueno, dejemos ya los cotilleos que se enfría la cena. (Bwéno, dehémos ya los kotilléos ke se enfría la théna) - Va bene, lasciamo perdere i pettegolezzi che si fredda la cena
+¿Habéis visto que se ha vuelto a caer el servidor esta mañana? (Abéis bísto ke se a buélto a kaér el serbidór ésta mañána?) - Avete visto che è di nuovo andato giù il server stamattina?
+Sí, llevamos así desde las nueve, es un desastre. (Si, llebámos así désde las nuébe, es un desástre) - Sì, siamo così da le nove, è un disastro
+¿Alguien ha llamado ya a informática para que lo miren? (Alguién a llamádo ya a informátika pára ke lo míren?) - Qualcuno ha già chiamato l'informatica perché lo controllino?
+He abierto un ticket, pero dicen que tardarán un par de horas. (E abiérto un tíket, péro dízen ke tardarán un par de óras) - Ho aperto un ticket, ma dicono che ci metteranno un paio d'ore
+Menos mal que tengo todo el trabajo guardado en la nube. (Ménos mal ke téngo tódo el trabáho gwardádo en la núbe) - Meno male che ho tutto il lavoro salvato nel cloud
+Yo todavía guardo copia en el disco duro por si acaso. (Yo todabía gwárdo kópia en el dísko dúro por si akáso) - Io conservo ancora una copia sul disco fisso per sicurezza
+¿Se ha actualizado ya el sistema o seguimos con la versión vieja? (Se a aktualizádo ya el sistéma o segímos kon la bersión biéha?) - Si è già aggiornato il sistema o continuiamo con la versione vecchia?
+Nos han dicho que la actualización es este fin de semana. (Nos an dícho ke la aktualithathión es éste fin de semána) - Ci hanno detto che l'aggiornamento è questo weekend
+Espero que no se rompa nada como la última vez, menudo lío. (Espéro ke no se rómpa náda kómo la última beth, menúdo lío) - Spero non si rompa niente come l'ultima volta, che casino
+La impresora de la tercera planta lleva atascada toda la semana. (La impresóra de la thérthera plánta lléba atháskada tóda la semána) - La stampante del terzo piano è inceppata da tutta la settimana
+He pedido que manden a un técnico, a ver si viene hoy. (E pedído ke mánden a un tékniko, a ber si biéne oi) - Ho chiesto che mandino un tecnico, vediamo se viene oggi
+¿Alguien sabe la contraseña nueva del wifi de la oficina? (Alguién sábe la kontraséña nuéba del uífi de la ofithína?) - Qualcuno sa la nuova password del wifi dell'ufficio?
+La cambian cada mes y nunca me acuerdo, qué pereza. (La kámbian káda mes i núnka me akuérdo, ke perétha) - La cambiano ogni mese e non me la ricordo mai, che pigrizia
+Este ordenador va lentísimo, necesito que me lo cambien ya. (Éste ordenadór ba lentísimo, nezesíto ke me lo kámbien ya) - Questo computer va lentissimo, ho bisogno che me lo cambino subito
+Llevo pidiéndolo desde hace meses y nada, siempre lo aplazan. (Llébo pidiéndolo désde áthe méses i náda, siémpre lo apláthan) - Sono mesi che lo chiedo e niente, lo rimandano sempre
+¿Habéis probado la nueva plataforma de gestión de proyectos? (Abéis probádo la nuéba platafórma de hestión de proyéktos?) - Avete provato la nuova piattaforma di gestione progetti?
+A mí me parece un poco lío al principio, pero se aprende rápido. (A mi me paréthe un póko lío al printhípio, péro se aprénde rápido) - A me sembra un po' complicata all'inizio, ma si impara in fretta
+El proyector de la sala de reuniones no enciende otra vez. (El proyektór de la sála de reuniónes no enthiénde ótra beth) - Il proiettore della sala riunioni non si accende di nuovo
+Habrá que pedir uno nuevo, este ya está muy viejo. (Abrá ke pedír úno nuébo, éste ya está mui biého) - Bisognerà chiederne uno nuovo, questo ormai è troppo vecchio
+¿Nos vamos a pasar todos a los portátiles nuevos este año? (Nos bámos a pasár tódos a los portátiles nuébos éste áño?) - Passeremo tutti ai portatili nuovi quest'anno?
+Eso dicen desde arriba, pero luego nunca se cumple del todo. (Éso dízen désde arríba, péro luégo núnka se kúmple del tódo) - Così dicono dall'alto, ma poi non si realizza mai del tutto
+El sistema de climatización de la planta lleva días dando fallos. (El sistéma de klimatithathión de la plánta lléba días dándo fáyos) - L'impianto di climatizzazione dello stabilimento è giorni che dà problemi
+Mantenimiento ya está al tanto, pero la pieza tarda en llegar. (Mantenimiénto ya está al tánto, péro la piétha tárda en llegár) - La manutenzione è già informata, ma il pezzo tarda ad arrivare
+¿Sabéis si han revisado ya el generador de emergencia? (Sabéis si an rebisádo ya el heneradór de emerhénthia?) - Sapete se hanno già controllato il generatore di emergenza?
+Sí, lo revisan cada seis meses, la última fue en marzo. (Si, lo rebísan káda séis méses, la última fue en márzo) - Sì, lo controllano ogni sei mesi, l'ultima è stata a marzo
+Se ha disparado la alarma de incendios sin motivo aparente otra vez. (Se a disparádo la alárma de inthéndios sin motíbo aparénte ótra beth) - È scattato l'allarme antincendio senza motivo apparente un'altra volta
+Seguro que es un sensor defectuoso, hay que cambiarlo. (Segúro ke es un sensór defektuóso, ai ke kambiárlo) - Sicuramente è un sensore difettoso, bisogna cambiarlo
+La línea de producción se ha parado por un fallo eléctrico. (La línea de produkthión se a paráado por un fáyo eléktriko) - La linea di produzione si è fermata per un guasto elettrico
+Ya han venido los eléctricos, están revisando el cuadro general. (Ya an benído los eléktrikos, están rebisándo el kuádro henerál) - Sono già venuti gli elettricisti, stanno controllando il quadro generale
+¿Cuánto tiempo llevamos parados, casi dos horas ya? (Kuánto tiémpo llebámos paráados, kási dos óras ya?) - Quanto tempo siamo fermi, quasi due ore ormai?
+Vamos a perder toda la producción del turno de mañana. (Bámos a perdér tóda la produkthión del túrno de mañána) - Perderemo tutta la produzione del turno del mattino
+La caldera industrial necesita una revisión completa este trimestre. (La kaldéra industriál nezesíta úna rebisión kompléta éste trimestre) - La caldaia industriale ha bisogno di una revisione completa questo trimestre
+Hay que parar la línea un día entero para hacerlo bien. (Ai ke parár la línea un día entéro pára athérlo bién) - Bisogna fermare la linea un giorno intero per farlo bene
+¿Han instalado ya las cámaras nuevas en el almacén? (An instaláado ya las kámaras nuébas en el almathén?) - Hanno già installato le nuove telecamere nel magazzino?
+Sí, pero todavía no funciona bien la conexión con el sistema central. (Si, péro todabía no funthióna bién la konesión kon el sistéma zentrál) - Sì, ma ancora non funziona bene la connessione con il sistema centrale
+El aire acondicionado de esta oficina no para de gotear. (El áire akondithionádo de ésta ofithína no pára de gotéar) - Il condizionatore di questo ufficio non smette di gocciolare
+Ya he avisado, dicen que vienen a revisarlo esta tarde. (Ya e abisádo, dízen ke biénen a rebisárlo ésta tárde) - Ho già avvisato, dicono che vengono a controllarlo questo pomeriggio
+Deberíamos actualizar los antivirus de todos los equipos. (Debéramos aktualizár los antibírus de tódos los ekípos) - Dovremmo aggiornare gli antivirus di tutti i computer
+Informática lo hace de forma automática cada noche, no te preocupes. (Informátika lo áze de fórma automátika káda nóche, no te preokúpes) - L'informatica lo fa automaticamente ogni notte, non ti preoccupare
+El escáner del departamento lleva estropeado más de un mes. (El eskáner del departaménto lléba estropeádo mas de un mes) - Lo scanner del dipartimento è rotto da più di un mese
+Nadie parece tener prisa por arreglarlo, la verdad. (Nádie paréthe tenér prísa por arreglárlo, la berdád) - Nessuno sembra avere fretta di ripararlo, sinceramente
+¿Habéis probado a reiniciar el router de la sala de servidores? (Abéis probádo a reiniziár el rúter de la sála de serbidóres?) - Avete provato a riavviare il router della sala server?
+Eso fue lo primero que hicimos, pero no ha servido de nada. (Éso fue lo priméro ke izímos, péro no a serbído de náda) - Quello è stato il primo che abbiamo fatto, ma non è servito a niente
+La fábrica va a instalar paneles solares en el tejado este año. (La fábrika ba a instalár panéles solares en el teháado éste áño) - La fabbrica installerà pannelli solari sul tetto quest'anno
+Con eso deberíamos ahorrar bastante en la factura eléctrica. (Kon éso debéramos aorrár bastánte en la faktúra eléktrika) - Con questo dovremmo risparmiare parecchio sulla bolletta elettrica
+El compresor de aire de la nave hace un ruido rarísimo. (El kompresór de áire de la náabe áze un ruído raríssimo) - Il compressore d'aria del capannone fa un rumore stranissimo
+Habrá que revisarlo antes de que se estropee del todo. (Abrá ke rebisárlo ántes de ke se estropée del tódo) - Bisognerà controllarlo prima che si rompa del tutto
+Estamos migrando todos los archivos al nuevo servidor este mes. (Estámos migrándo tódos los archíbos al nuébo serbidór éste mes) - Stiamo migrando tutti i file al nuovo server questo mese
+Espero que no perdamos nada en el proceso, como la otra vez. (Espéro ke no perdámos náda en el prothéso, kómo la ótra beth) - Spero che non perdiamo niente nel processo, come l'altra volta
+¿Cuántos días tiene el mes de febrero este año? (Kuántos días tiéne el mes de febréro éste áño?) - Quanti giorni ha il mese di febbraio quest'anno?
+Este año febrero tiene veintinueve días, es bisiesto. (Éste áño febréro tiéne beintinuébe días, es bisiésto) - Quest'anno febbraio ha ventinove giorni, è bisestile
+¿Qué día de la semana es hoy, miércoles o jueves? (Ké día de la semána es oi, miérkoles o huébes?) - Che giorno della settimana è oggi, mercoledì o giovedì?
+Hoy es martes, mañana ya es miércoles. (Oi es mártes, mañána ya es miérkoles) - Oggi è martedì, domani è già mercoledì
+La semana tiene siete días, empezando por el lunes. (La semána tiéne siéte días, empethándo por el lúnes) - La settimana ha sette giorni, iniziando dal lunedì
+¿Cuántos meses tiene el año, doce, verdad? (Kuántos méses tiéne el áño, dóthe, berdád?) - Quanti mesi ha l'anno, dodici, vero?
+Sí, y cuatro estaciones distintas, cada una con tres meses. (Si, i kuátro estathiónes distíntas, káda úna kon tres méses) - Sì, e quattro stagioni diverse, ognuna con tre mesi
+¿En qué mes empieza el verano, en junio? (En ké mes empiétha el beráno, en húnio?) - In che mese inizia l'estate, a giugno?
+El verano empieza a finales de junio, sobre el veintiuno. (El beráno empiétha a finales de húnio, sóbre el beintiúno) - L'estate inizia alla fine di giugno, intorno al ventuno
+Tenemos que aprendernos los meses del año en orden. (Tenémos ke aprendérnos los méses del áño en órden) - Dobbiamo imparare i mesi dell'anno in ordine
+Enero, febrero, marzo, abril, mayo y junio, eso ya me lo sé. (Enéro, febréro, márzo, abríl, máyo i húnio, éso ya me lo se) - Gennaio, febbraio, marzo, aprile, maggio e giugno, quello lo so già
+¿Cuántas semanas tiene un año, más o menos cincuenta y dos? (Kuántas semánas tiéne un áño, mas o ménos thinkuénta i dos?) - Quante settimane ha un anno, circa cinquantadue?
+Exacto, cincuenta y dos semanas y un día suelto. (Eksákto, thinkuénta i dos semánas i un día suélto) - Esatto, cinquantadue settimane e un giorno spaiato
+El profesor nos ha pedido contar del uno al cien en voz alta. (El profesór nos a pedído kontár del úno al thién en both álta) - Il professore ci ha chiesto di contare da uno a cento ad alta voce
+Me he equivocado en el sesenta y tres, qué vergüenza. (Me e ekiboakádo en el sesénta i tres, ke bergüéntha) - Mi sono sbagliato al sessantatré, che vergogna
+¿Cuánto es quince más veintisiete? (Kuánto es kínthe mas beintisiéte?) - Quanto fa quindici più ventisette?
+Quince más veintisiete son cuarenta y dos. (Kínthe mas beintisiéte son kuarénta i dos) - Quindici più ventisette fa quarantadue
+Tenemos examen de matemáticas el próximo lunes por la mañana. (Tenémos eksámen de matemátikas el próksimo lúnes por la mañána) - Abbiamo l'esame di matematica il prossimo lunedì mattina
+¿Qué mes viene después de agosto, septiembre? (Ké mes biéne después de agósto, septiémbre?) - Che mese viene dopo agosto, settembre?
+Sí, y después octubre, noviembre y diciembre, hasta cerrar el año. (Si, i después oktúbre, nobiémbre i dithiémbre, ásta therrár el áño) - Sì, e poi ottobre, novembre e dicembre, fino a chiudere l'anno
+¿Cuántos días tiene el mes de abril, treinta o treinta y uno? (Kuántos días tiéne el mes de abríl, tréinta o tréinta i úno?) - Quanti giorni ha il mese di aprile, trenta o trentuno?
+Abril tiene treinta días, como septiembre y noviembre. (Abríl tiéne tréinta días, kómo septiémbre i nobiémbre) - Aprile ha trenta giorni, come settembre e novembre
+El profesor nos ha puesto un problema con cien manzanas y treinta niños. (El profesór nos a puésto un probléma kon thién manthánas i tréinta níños) - Il professore ci ha dato un problema con cento mele e trenta bambini
+Tenemos que dividir cien entre treinta, no sale exacto. (Tenémos ke dibidír thién éntre tréinta, no sále eksákto) - Dobbiamo dividere cento per trenta, non viene esatto
+¿Cuál es el mes más corto del año, febrero? (Kuál es el mes mas kórto del áño, febréro?) - Qual è il mese più corto dell'anno, febbraio?
+Sí, tiene solo veintiocho días normalmente. (Si, tiéne sólo beintiócho días normalménte) - Sì, ha solo ventotto giorni normalmente
+¿Qué día caía tu cumpleaños este año, en domingo? (Ké día kaía tu kumpleáños éste áño, en domíngo?) - Che giorno cadeva il tuo compleanno quest'anno, di domenica?
+Cayó en sábado, hicimos la fiesta al día siguiente. (Kayó en sábado, ithímos la fiésta al día sigiénte) - Cadeva di sabato, abbiamo fatto la festa il giorno dopo
+El profesor nos ha explicado las tablas de multiplicar hasta el diez. (El profesór nos a esplikádo las táblas de multiplikár ásta el diéth) - Il professore ci ha spiegato le tabelline fino al dieci
+Todavía me cuesta la del siete, siempre me lío. (Todabía me kuésta la del siéte, siémpre me lío) - Mi costa ancora quella del sette, mi confondo sempre
+¿Cuántos días quedan hasta las vacaciones de Navidad? (Kuántos días kédan ásta las bakathiónes de Nabidád?) - Quanti giorni mancano alle vacanze di Natale?
+Quedan exactamente veintitrés días, ya los he contado. (Kédan eksaktaménte beintitrés días, ya los e kontádo) - Mancano esattamente ventitré giorni, li ho già contati
+El examen es el día quince de octubre, apuntadlo bien. (El eksámen es el día kínthe de oktúbre, apuntádlo bién) - L'esame è il giorno quindici di ottobre, appuntatelo bene
+¿Qué estación viene después del otoño, el invierno? (Ké estathión biéne después del otóño, el imbiérno?) - Che stagione viene dopo l'autunno, l'inverno?
+Sí, el otoño empieza en septiembre y termina en diciembre. (Si, el otóño empiétha en septiémbre i termína en dithiémbre) - Sì, l'autunno inizia a settembre e finisce a dicembre
+Tenemos que aprender a contar del cien al mil de diez en diez. (Tenémos ke aprendér a kontár del thién al mil de diéth en diéth) - Dobbiamo imparare a contare da cento a mille di dieci in dieci
+¿Cuánto es la mitad de cuarenta y ocho? (Kuánto es la mitád de kuarénta i ócho?) - Quanto è la metà di quarantotto?
+La mitad de cuarenta y ocho es veinticuatro. (La mitád de kuarénta i ócho es beintikuátro) - La metà di quarantotto è ventiquattro
+¿Qué mes tiene el Día de los Enamorados, febrero? (Ké mes tiéne el Día de los Enamoáados, febréro?) - In che mese cade il giorno degli innamorati, febbraio?
+Sí, es el catorce de febrero, todos los años igual. (Si, es el katórthe de febréro, tódos los áños igwál) - Sì, è il quattordici febbraio, ogni anno lo stesso
+El profesor nos ha dado un mes entero para el trabajo final. (El profesór nos a dádo un mes entéro pára el trabáho finál) - Il professore ci ha dato un mese intero per il lavoro finale
+Con treinta días de plazo, no hay excusa para no entregarlo. (Kon tréinta días de pláatho, no ai eskúsa pára no entregárlo) - Con trenta giorni di tempo, non c'è scusa per non consegnarlo
+¿Cuántas horas tiene un día, veinticuatro exactas? (Kuántas óras tiéne un día, beintikuátro eksáktas?) - Quante ore ha un giorno, ventiquattro esatte?
+Sí, y cada hora tiene sesenta minutos, eso ya lo sabemos. (Si, i káda óra tiéne sesénta minútos, éso ya lo sabémos) - Sì, e ogni ora ha sessanta minuti, quello lo sappiamo già
+¿En qué día de la semana cae el primero de mayo este año? (En ké día de la semána káe el priméro de máyo éste áño?) - In che giorno della settimana cade il primo maggio quest'anno?
+Cae en jueves, así que tenemos puente largo. (Káe en huébes, así ke tenémos puénte lárgo) - Cade di giovedì, quindi abbiamo un ponte lungo
+Tenemos que resolver treinta problemas de matemáticas para el viernes. (Tenémos ke resolbér tréinta probléamas de matemátikas pára el biérnes) - Dobbiamo risolvere trenta problemi di matematica per venerdì
+Ya he hecho quince, me quedan otros quince por hacer. (Ya e écho kínthe, me kédan ótros kínthe por athér) - Ne ho già fatti quindici, me ne restano altri quindici da fare
+¿Cuántos alumnos hay en total en nuestra clase, veintiocho? (Kuántos alúmnos ai en totál en nuéstra kláse, beintiócho?) - Quanti alunni ci sono in totale nella nostra classe, ventotto?
+Somos veintisiete, uno está enfermo hoy. (Sómos beintisiéte, úno está enférmo oi) - Siamo ventisette, uno è malato oggi
+El próximo examen será el segundo lunes de noviembre. (El próksimo eksámen será el segúndo lúnes de nobiémbre) - Il prossimo esame sarà il secondo lunedì di novembre
+Ya casi terminamos el trimestre, quedan solo tres semanas. (Ya kási terminámos el trimestre, kédan sólo tres semánas) - Stiamo quasi finendo il trimestre, mancano solo tre settimane
 Disculpe (dis-kul-pe) - Mi scusi
 ¿Dónde está el baño? (don-de es-ta el ba-nio) - Dov'è il bagno?
 `;
