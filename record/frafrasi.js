@@ -1783,6 +1783,697 @@ On prend un café en terrasse avant de reprendre la visite (On pran an cafe an t
 Cette librairie a l'air géniale, on peut jeter un œil? (Set librèri a ler jenial, on peu jeté an euil?) - Questa libreria sembra fantastica, possiamo dare un'occhiata?
 On termine par une balade nocturne pour voir la tour illuminée (On termin par ün balad noctürn pur vuar la tur ilüminé) - Finiamo con una passeggiata notturna per vedere la torre illuminata
 On garde toujours une part de gâteau pour ceux qui arrivent en retard (On gard tujur ün par de gato pur seu qui ariv an retar) - Teniamo sempre una fetta di torta per quelli che arrivano in ritardo
+Bonjour, je voudrais quatre escalopes de poulet s'il vous plaît (Bonjur, je vudré catr escalop de pulé sil vu plé) - Buongiorno, vorrei quattro scaloppine di pollo per favore
+Vous pouvez me couper ça en tranches fines? (Vu puvé me cupé sa an transh fin?) - Può tagliarmelo a fette sottili?
+Je prendrais un kilo de bœuf haché pour ce soir (Je prandré an kilo de beuf ashé pur se suar) - Prenderei un chilo di carne macinata di manzo per stasera
+C'est combien le kilo de côtelettes d'agneau? (Sè conbien le kilo de cotlet dagno?) - Quanto costa al chilo la costoletta d'agnello?
+Mettez-m'en six, ça sera suffisant pour le repas (Mété man si, sa sera süfizan pur le repà) - Me ne metta sei, saranno sufficienti per il pranzo
+Je voudrais un rôti de porc d'environ un kilo deux (Je vudré an roti de por danviron an kilo deu) - Vorrei un arrosto di maiale di circa un chilo e duecento
+Vous avez du poulet fermier aujourd'hui? (Vu avé dü pulé fermié ojurdüi?) - Ha del pollo ruspante oggi?
+Ça fait combien pour les trois cents grammes de jambon? (Sa fè conbien pur lé trua san gram de janbon?) - Quanto viene per i trecento grammi di prosciutto?
+Coupez-moi encore deux tranches, s'il vous plaît (Cupé mua ancor deu transh, sil vu plé) - Mi tagli ancora due fette, per favore
+Je cherche une belle pièce de bœuf pour dimanche (Je shersh ün bel pièz de beuf pur dimansh) - Cerco un bel pezzo di manzo per domenica
+Vous me faites huit merguez pour le barbecue? (Vu me fet üit merguez pur le barbekü?) - Mi prepara otto merguez per il barbecue?
+Ça pèse combien cette dinde, à peu près? (Sa pez conbien set dind, a peu prè?) - Quanto pesa questo tacchino, all'incirca?
+Je vais prendre deux cent cinquante grammes de pâté (Je vé prandr deu san sincant gram de paté) - Prendo duecentocinquanta grammi di pâté
+Vous pourriez me désosser le poulet entier? (Vu purié me dezosé le pulé antié?) - Potrebbe disossarmi il pollo intero?
+Il me faudrait cinq saucisses pour ce soir (Il me fodré sink sosis pur se suar) - Mi servirebbero cinque salsicce per stasera
+C'est trop pour nous, vous pouvez m'en mettre la moitié? (Sè tro pur nu, vu puvé man metr la muatié?) - È troppo per noi, può mettermene la metà?
+Je prendrais bien un kilo et demi de côtes de bœuf (Je prandré bien an kilo e demi de cot de beuf) - Prenderei un chilo e mezzo di costate di manzo
+Vous avez de la viande hachée pas trop grasse? (Vu avé de la viand ashé pa tro gras?) - Ha della carne macinata non troppo grassa?
+Mettez-moi quatre côtelettes et deux saucisses en plus (Mété mua catr cotlet e deu sosis an plüs) - Mi metta quattro cotolette e due salsicce in più
+Ça revient à combien tout ça au final? (Sa revien a conbien tu sa o final?) - Quanto viene tutto questo alla fine?
+Vous pouvez me mettre ça sous vide pour le congélateur? (Vu puvé me metr sa su vid pur le conjelatör?) - Può mettermelo sottovuoto per il congelatore?
+Je voudrais un kilo de pommes bien mûres pour la tarte (Je vudré an kilo de pom bien mür pur la tart) - Vorrei un chilo di mele ben mature per la torta
+Donnez-moi trois kilos de pommes de terre s'il vous plaît (Doné mua trua kilo de pom de ter sil vu plé) - Mi dia tre chili di patate per favore
+Vous avez des tomates bien fermes aujourd'hui? (Vu avé dé tomat bien ferm ojurdüi?) - Ha dei pomodori ben sodi oggi?
+Je prendrais une botte de carottes et deux poireaux (Je prandré ün bot de carot e deu puaro) - Prenderei un mazzo di carote e due porri
+Ça fait combien le kilo de fraises en ce moment? (Sa fè conbien le kilo de frèz an se moman?) - Quanto costa al chilo le fragole in questo momento?
+Mettez-m'en cinq cents grammes, pas plus (Mété man sink san gram, pa plüs) - Me ne metta cinquecento grammi, non di più
+Vous pouvez choisir les plus mûrs pour moi? (Vu puvé shuazir lé plü mür pur mua?) - Può scegliere i più maturi per me?
+J'ai besoin d'une dizaine d'oignons pour la semaine (Gé bezuin dün dizèn dognon pur la semèn) - Ho bisogno di una decina di cipolle per la settimana
+Ces courgettes sont un peu chères non? (Sé curjet son an peu shèr non?) - Queste zucchine sono un po' care no?
+Donnez-moi deux avocats bien à point s'il vous plaît (Doné mua deuzavocà bien a puin sil vu plé) - Mi dia due avocado ben maturi per favore
+Vous avez du raisin sans pépins aujourd'hui? (Vu avé dü rezin san pepin ojurdüi?) - Ha dell'uva senza semi oggi?
+Je voudrais un ananas et une demi-douzaine de kiwis (Je vudré an ananà e ün demi duzèn de kiwi) - Vorrei un ananas e una mezza dozzina di kiwi
+Ça revient à combien le cageot de pêches? (Sa revien a conbien le kajo de pesh?) - Quanto viene la cassetta di pesche?
+Mettez-moi une salade et un kilo d'oranges à jus (Mété mua ün salad e an kilo doranj a jü) - Mi metta un'insalata e un chilo di arance da spremuta
+Vous pouvez me faire un joli panier de saison? (Vu puvé me fer an joli panié de sèzon?) - Può prepararmi un bel cesto di stagione?
+Je prendrais bien deux kilos de melons pour la fête (Je prandré bien deu kilo de melon pur la fet) - Prenderei due meloni per la festa
+C'est combien la barquette de framboises, s'il vous plaît? (Sè conbien la barket de franbuaz, sil vu plé?) - Quanto costa la vaschetta di lamponi, per favore?
+Vous avez encore des cerises ou c'est fini la saison? (Vu avé ancor dé serize u sè fini la sèzon?) - Ha ancora delle ciliegie o è finita la stagione?
+Je voudrais sept ou huit citrons pour la semaine (Je vudré set u üit sitron pur la semèn) - Vorrei sette o otto limoni per la settimana
+Donnez-moi un kilo de haricots verts bien frais (Doné mua an kilo dariko ver bien frè) - Mi dia un chilo di fagiolini ben freschi
+Ça fait un total de combien avec les légumes en plus? (Sa fè an total de conbien avec lé legüm an plüs) - Quanto viene in totale con la verdura in più?
+Vous pouvez me préparer un kilo de champignons frais? (Vu puvé me preparé an kilo de shanpignon frè?) - Può prepararmi un chilo di funghi freschi?
+Je prends deux poivrons rouges et un jaune pour la salade (Je pran deu puavron rug e an jon pur la salad) - Prendo due peperoni rossi e uno giallo per l'insalata
+Il me faut environ trois cents grammes de mâche (Il me fo anviron trua san gram de mash) - Mi servono circa trecento grammi di valeriana
+Vous avez des artichauts violets ou seulement les verts? (Vu avé dezartisho violé u seulman lé ver?) - Ha dei carciofi violetti o solo quelli verdi?
+Je voudrais une vingtaine d'asperges bien fraîches (Je vudré ün vintèn dasperj bien fresh) - Vorrei una ventina di asparagi ben freschi
+Ça fait cher le petit panier, non? (Sa fè sher le p'ti panié, non?) - Costa caro il cestino piccolo, no?
+Vous pouvez me peser ça exactement, s'il vous plaît? (Vu puvé me pezé sa exactman, sil vu plé?) - Può pesarmelo esattamente, per favore?
+Gardez-moi les plus beaux, c'est pour offrir (Gardé mua lé plü bo, sè pur ofrir) - Mi tenga i più belli, sono per regalare
+La photosynthèse transforme le CO2 et l'eau en glucose (La fotosintez transform le sédéu e lo an glükoz) - La fotosintesi trasforma la CO2 e l'acqua in glucosio
+Le professeur a demandé de mesurer trente millilitres de solution (Le profeseur a demandé de mezuré trant mililitr de solüsion) - Il professore ha chiesto di misurare trenta millilitri di soluzione
+On doit rendre le rapport de labo avant vendredi (On dua randr le rapor de labo avan vandredi) - Dobbiamo consegnare la relazione di laboratorio prima di venerdì
+Il y a combien de chromosomes dans une cellule humaine déjà? (Ilia conbien de cromozom dan ün selül ümèn dejà?) - Quanti cromosomi ci sono in una cellula umana già?
+On a besoin de deux éprouvettes et d'un bécher pour l'expérience (On a bezuin de deuzepruvet e dan besher pur lexperiens) - Abbiamo bisogno di due provette e un becher per l'esperimento
+La vitesse de la lumière est d'environ trois cent mille kilomètres par seconde (La vites de la lümiér e danviron trua san mil kilometr par segond) - La velocità della luce è di circa trecentomila chilometri al secondo
+Mettez cinq grammes de sel dans cent millilitres d'eau (Meté sink gram de sel dan san mililitr do) - Mettete cinque grammi di sale in cento millilitri d'acqua
+Le prof a expliqué le tableau périodique pendant une heure entière (Le prof a esplika le tablo periodik pandan ün eur antiér) - Il prof ha spiegato la tavola periodica per un'ora intera
+On observe les cellules au microscope à un grossissement de quarante fois (On observ lé selül o microscop a an grosisman de carant fua) - Osserviamo le cellule al microscopio con un ingrandimento di quaranta volte
+Il faut chauffer le mélange à environ soixante-dix degrés (Il fo shofé le melanj a anviron suasant di degré) - Bisogna riscaldare la miscela a circa settanta gradi
+La Terre met environ trois cent soixante-cinq jours pour faire le tour du soleil (La Ter mè anviron trua san suasant sink jur pur fer le tur dü solèi) - La Terra impiega circa trecentosessantacinque giorni per girare intorno al sole
+On a un contrôle sur les atomes et les molécules jeudi prochain (On a an control sür lezatom e lé molekül jeudi proshin) - Abbiamo una verifica su atomi e molecole giovedì prossimo
+Le squelette humain compte environ deux cent six os (Le squelet ümin compt anviron deu san si zo) - Lo scheletro umano conta circa duecentosei ossa
+On doit calculer la densité avec la masse divisée par le volume (On dua calkülé la dansité avec la mas divizé par le volüm) - Dobbiamo calcolare la densità con la massa divisa per il volume
+Vous pouvez répéter l'expérience une deuxième fois pour vérifier (Vu puvé repeté lexperiens ün deuziém fua pur verifié) - Potete ripetere l'esperimento una seconda volta per verificare
+Le cœur humain bat environ soixante-dix fois par minute au repos (Le keur ümin ba anviron suasant di fua par minüt o repo) - Il cuore umano batte circa settanta volte al minuto a riposo
+On a étudié trois types de roches différentes en cours (On a etüdié trua tip de rosh diferant an cur) - Abbiamo studiato tre tipi di rocce diverse a lezione
+Il manque encore deux questions pour finir l'exercice (Il mank ancor deu question pur fini lexersis) - Mancano ancora due domande per finire l'esercizio
+La formule chimique de l'eau c'est H deux O, tout le monde le sait (La formül shimik de lo sè ash deu o, tu le monde le sè) - La formula chimica dell'acqua è H2O, lo sanno tutti
+On a utilisé un aimant pour observer le champ magnétique (On a ütilizé an emant pur observé le shan manetik) - Abbiamo usato un magnete per osservare il campo magnetico
+Le prof a noté nos résultats sur dix pour chaque groupe (Le prof a noté no rezültà sür di pur shak grup) - Il prof ha valutato i nostri risultati su dieci per ogni gruppo
+Il y a quatre états de la matière qu'on doit connaître par cœur (Ilia catr età de la matiér con dua conetr par keur) - Ci sono quattro stati della materia che dobbiamo conoscere a memoria
+On a dissous dix grammes de sucre dans le verre d'eau (On a disu di gram de sükr dan le ver do) - Abbiamo sciolto dieci grammi di zucchero nel bicchiere d'acqua
+La classe est divisée en six groupes de quatre élèves (La clas et divizé an si grup de catr elev) - La classe è divisa in sei gruppi di quattro alunni
+Le pH de cette solution est légèrement acide, autour de six (Le pé ash de set solüsion e lejerman asid, otur de si) - Il pH di questa soluzione è leggermente acido, intorno a sei
+On a besoin d'une pipette pour prélever exactement deux millilitres (On a bezuin dün pipet pur prelevé exactman deu mililitr) - Abbiamo bisogno di una pipetta per prelevare esattamente due millilitri
+Le système solaire compte huit planètes officiellement (Le sistem solèr conte üit planet ofisielman) - Il sistema solare conta otto pianeti ufficialmente
+On a fait une dissection de grenouille en cours de bio (On a fé ün disexion de grenuiy an cur de bio) - Abbiamo fatto una dissezione di rana a lezione di biologia
+Il faut noter la température toutes les cinq minutes pendant l'expérience (Il fo noté la tanperatür tut lé sink minüt pandan lexperiens) - Bisogna annotare la temperatura ogni cinque minuti durante l'esperimento
+La distance Terre-Lune est d'environ trois cent quatre-vingt mille kilomètres (La distans Ter Lün e danviron trua san catrvin mil kilometr) - La distanza Terra-Luna è di circa trecentottantamila chilometri
+On a besoin de deux piles pour faire fonctionner le circuit (On a bezuin de deu pil pur fer fonksioné le sirküi) - Abbiamo bisogno di due pile per far funzionare il circuito
+Le prof a fait une expérience avec de l'azote liquide, c'était impressionnant (Le prof a fé ün experiens avec de lazot likid, sété impresionan) - Il prof ha fatto un esperimento con azoto liquido, è stato impressionante
+On étudie l'appareil digestif ce trimestre en sciences (On etüdi laparèi digestif se trimestr an siens) - Studiamo l'apparato digerente questo trimestre in scienze
+Il y a environ sept milliards de personnes sur Terre actuellement (Ilia anviron set miliar de person sür Ter aktüelman) - Ci sono circa sette miliardi di persone sulla Terra attualmente
+On doit peser précisément vingt grammes de cette poudre (On dua pezé presizeman vin gram de set pudr) - Dobbiamo pesare precisamente venti grammi di questa polvere
+Le professeur a projeté un schéma de la cellule au tableau (Le profeseur a projeté an shema de la selül o tablo) - Il professore ha proiettato uno schema della cellula alla lavagna
+On a mélangé deux liquides et ça a changé de couleur immédiatement (On a melanjé deu likid e sa a shanjé de culeur imediatman) - Abbiamo mescolato due liquidi e ha cambiato colore immediatamente
+Il reste encore trois expériences à faire avant la fin du cours (Il rest ancor truazexperiens a fer avan la fin dü cur) - Restano ancora tre esperimenti da fare prima della fine della lezione
+La vitesse du son est d'environ trois cent quarante mètres par seconde (La vites dü son e danviron trua san carant metr par segond) - La velocità del suono è di circa trecentoquaranta metri al secondo
+On a compté le nombre de battements cardiaques en une minute (On a conté le nonbr de batman kardiak an ün minüt) - Abbiamo contato il numero di battiti cardiaci in un minuto
+Il faut porter des gants et des lunettes pendant toute l'expérience (Il fo porté dé gan e dé lünet pandan tut lexperiens) - Bisogna indossare guanti e occhiali durante tutto l'esperimento
+On a observé une éclipse partielle avec des lunettes spéciales (On a observé ün eklips parsiel avec dé lünet spesial) - Abbiamo osservato un'eclissi parziale con occhiali speciali
+Le corps humain contient environ soixante pour cent d'eau (Le cor ümin contien anviron suasant pursan do) - Il corpo umano contiene circa il sessanta per cento d'acqua
+On a besoin d'un thermomètre pour mesurer la température exacte (On a bezuin dan termometr pur mezuré la tanperatür exakt) - Abbiamo bisogno di un termometro per misurare la temperatura esatta
+Il y a cent neuf éléments environ dans le tableau périodique (Ilia san neuf elemant anviron dan le tablo periodik) - Ci sono circa centonove elementi nella tavola periodica
+On a dessiné le cycle de l'eau avec quatre étapes principales (On a desiné le sikl de lo avec catrétap prinsipal) - Abbiamo disegnato il ciclo dell'acqua con quattro tappe principali
+Le prof nous a donné vingt minutes pour terminer l'expérience (Le prof nu a doné vin minüt pur terminé lexperiens) - Il prof ci ha dato venti minuti per terminare l'esperimento
+On a utilisé une balance pour peser les échantillons un par un (On a ütilizé ün balans pur pezé lezashantiyon an par an) - Abbiamo usato una bilancia per pesare i campioni uno per uno
+Il faut respecter les proportions, sinon la réaction ne marche pas (Il fo respekté lé proporsion, sinon la reaksion ne marsh pa) - Bisogna rispettare le proporzioni, altrimenti la reazione non funziona
+On a calculé que l'eau bout à cent degrés au niveau de la mer (On a calkülé que lo bu a san degré o nivo de la mer) - Abbiamo calcolato che l'acqua bolle a cento gradi al livello del mare
+Le squelette du poisson qu'on a observé avait environ deux cents os (Le squelet dü puason con a observé avé anviron deu san zo) - Lo scheletro del pesce che abbiamo osservato aveva circa duecento ossa
+Bonjour, je voudrais un kilo de moules bien fraîches (Bonjur, je vudré an kilo de mul bien fresh) - Buongiorno, vorrei un chilo di cozze ben fresche
+Vous pouvez me lever les filets de ces deux daurades? (Vu puvé me levé lé file de sé deu dorad?) - Può sfilettarmi queste due orate?
+C'est combien le kilo de crevettes aujourd'hui? (Sè conbien le kilo de crevet ojurdüi?) - Quanto costa al chilo i gamberi oggi?
+Je prendrais huit huîtres pour ce soir, pas plus (Je prandré üit uitr pur se suar, pa plüs) - Prenderei otto ostriche per stasera, non di più
+Vous avez du saumon frais ou seulement du fumé? (Vu avé dü somon frè u seulman dü fümé?) - Ha del salmone fresco o solo affumicato?
+Mettez-moi trois cents grammes de crevettes décortiquées (Mété mua trua san gram de crevet decortiké) - Mi metta trecento grammi di gamberi sgusciati
+Ça pèse combien ce bar, à peu près? (Sa pez conbien se bar, a peu prè?) - Quanto pesa questa spigola, all'incirca?
+Je voudrais une douzaine de langoustines bien grosses (Je vudré ün duzèn de langustin bien groz) - Vorrei una dozzina di scampi bene grossi
+Vous pouvez vider et écailler le poisson pour moi? (Vu puvé vidé e ekaiyé le puason pur mua?) - Può eviscerare e squamare il pesce per me?
+Il me faudrait deux kilos de moules pour la marinière (Il me fodré deu kilo de mul pur la mariniér) - Mi servirebbero due chili di cozze per la marinara
+C'est trop cher le homard aujourd'hui, non? (Sè tro sher le omar ojurdüi, non?) - È troppo caro l'astice oggi, no?
+Je prendrais bien un demi-kilo de calamars frais (Je prandré bien an demi kilo de calamar frè) - Prenderei mezzo chilo di calamari freschi
+Vous avez des sardines fraîches, elles sont de ce matin? (Vu avé dé sardin fresh, el son de se matin?) - Ha delle sardine fresche, sono di stamattina?
+Donnez-moi quatre tranches de thon bien épaisses (Doné mua catr transh de ton bien epès) - Mi dia quattro tranci di tonno ben spessi
+Ça fait combien pour les deux kilos de coquillages? (Sa fè conbien pur lé deu kilo de coquiyaj?) - Quanto viene per i due chili di frutti di mare?
+Je voudrais un poulpe d'environ un kilo cinq (Je vudré an pulp danviron an kilo sink) - Vorrei un polpo di circa un chilo e mezzo
+Vous pouvez me préparer un plateau de fruits de mer pour six personnes? (Vu puvé me preparé an plato de früi de mer pur si person?) - Può prepararmi un piatto di frutti di mare per sei persone?
+Il reste des anchois frais ou c'est fini? (Il rest dezanshua frè u sè fini?) - Restano acciughe fresche o sono finite?
+Mettez-m'en une vingtaine, ça sera parfait (Mété man ün vintèn, sa sera parfè) - Me ne metta una ventina, sarà perfetto
+Je cherche un beau poisson entier pour cuire au four (Je shersh an bo puason antié pur küir o fur) - Cerco un bel pesce intero da cuocere al forno
+Bonjour, vous auriez des vis de six millimètres de diamètre? (Bonjur, vu orié dé vis de si milimetr de diametr?) - Buongiorno, avrebbe delle viti da sei millimetri di diametro?
+Il me faudrait une dizaine de chevilles pour le mur (Il me fodré ün dizèn de sheviy pur le mür) - Mi servirebbero una decina di tasselli per il muro
+Vous avez du fil électrique de deux virgule cinq millimètres carrés? (Vu avé dü fil elektrik de deu virgül sink milimetr caré?) - Ha del filo elettrico da due virgola cinque millimetri quadrati?
+Je voudrais trois mètres de tuyau flexible s'il vous plaît (Je vudré trua metr de tüiau flexibl sil vu plé) - Vorrei tre metri di tubo flessibile per favore
+C'est combien la boîte de cent vis à bois? (Sè conbien la buat de san vis a bua?) - Quanto costa la scatola di cento viti da legno?
+Vous auriez un tournevis cruciforme de taille moyenne? (Vu orié an turnvis crüsiform de tay muayen?) - Avrebbe un cacciavite a croce di misura media?
+Il me faut deux pots de peinture blanche pour le salon (Il me fo deu po de pintür blansh pur le salon) - Mi servono due barattoli di vernice bianca per il salotto
+Vous avez des ampoules de soixante watts en stock? (Vu avé dezanpul de suasant uat an stok?) - Ha delle lampadine da sessanta watt in magazzino?
+Je prendrais cinq mètres de câble électrique pour cette prise (Je prandré sink metr de cabl elektrik pur set priz) - Prenderei cinque metri di cavo elettrico per questa presa
+Vous pouvez me couper cette planche en trois morceaux égaux? (Vu puvé me cupé set plansh an trua morso egal?) - Può tagliarmi questa tavola in tre pezzi uguali?
+Il me faudrait un marteau et une boîte de clous de quatre centimètres (Il me fodré an marto e ün buat de clu de catr santimetr) - Mi servirebbero un martello e una scatola di chiodi da quattro centimetri
+C'est combien le mètre de tuyau en cuivre? (Sè conbien le metr de tüiau an küivr?) - Quanto costa al metro il tubo in rame?
+Vous avez de la colle forte pour réparer une chaise cassée? (Vu avé de la col fort pur reparé ün shez casé?) - Ha della colla forte per riparare una sedia rotta?
+Je voudrais deux poignées de porte assorties, s'il vous plaît (Je vudré deu puanié de port asorti, sil vu plé) - Vorrei due maniglie per porta assortite, per favore
+Il me faut un mètre carré de grillage pour le jardin (Il me fo an metr caré de griyaj pur le jardin) - Mi serve un metro quadro di rete metallica per il giardino
+Vous auriez une perceuse à louer pour le week-end? (Vu orié ün persöz a lué pur le uikend?) - Avrebbe un trapano da noleggiare per il weekend?
+Je prendrais douze vis et six écrous de la même taille (Je prandré duz vis e siz ekru de la mem tay) - Prenderei dodici viti e sei dadi della stessa misura
+Ça fait combien pour les trois rouleaux de scotch renforcé? (Sa fè conbien pur lé trua rulo de scotch ranforsé?) - Quanto viene per i tre rotoli di nastro rinforzato?
+Vous avez du papier de verre grain fin, en plusieurs feuilles? (Vu avé dü papié de ver grin fin, an plüzieur feuiy?) - Ha della carta vetrata a grana fine, in più fogli?
+Il me faudrait une rallonge électrique de dix mètres (Il me fodré ün ralonj elektrik de di metr) - Mi servirebbe una prolunga elettrica da dieci metri
+Vous pouvez me donner deux clés de douze et une de dix? (Vu puvé me doné deu clé de duz e ün de di?) - Può darmi due chiavi da dodici e una da dieci?
+Je voudrais un bidon de cinq litres de peinture extérieure (Je vudré an bidon de sink litr de pintür exterieur) - Vorrei un bidone da cinque litri di vernice per esterni
+C'est combien la boîte à outils complète avec tous les accessoires? (Sè conbien la buat a uti conplet avec tu lezaksesuar?) - Quanto costa la cassetta degli attrezzi completa con tutti gli accessori?
+Vous auriez des gants de protection en taille moyenne? (Vu orié dé gan de proteksion an tay muayen?) - Avrebbe dei guanti di protezione in taglia media?
+Il me faut environ quinze mètres de fil pour cette installation (Il me fo anviron kinz metr de fil pur set instalasion) - Mi servono circa quindici metri di filo per questo impianto
+Vous avez encore des cadenas en stock ou c'est épuisé? (Vu avé ancor dé cadnà an stok u sè epüizé?) - Ha ancora dei lucchetti in magazzino o sono esauriti?
+Je prendrais quatre charnières et une poignée pour le placard (Je prandré catr sharniér e ün puanié pur le plakar) - Prenderei quattro cerniere e una maniglia per l'armadio
+Ça revient à combien avec la remise sur la peinture? (Sa revien a conbien avec la remiz sür la pintür?) - Quanto viene con lo sconto sulla vernice?
+Vous pouvez me préparer un kit complet avec vis et chevilles assorties? (Vu puvé me preparé an kit conplet avec vis e sheviy asorti?) - Può prepararmi un kit completo con viti e tasselli assortiti?
+Il me faudrait juste un mètre de corde solide pour finir (Il me fodré güst an metr de cord solid pur fini) - Mi servirebbe solo un metro di corda solida per finire
+La Révolution française a commencé en dix-sept cent quatre-vingt-neuf (La revolüsion fransez a comansé an diset san catrvin neuf) - La Rivoluzione francese è iniziata nel millesettecentottantanove
+Le professeur nous a parlé de la chute de l'Empire romain en quatre cent soixante-seize (Le profeseur nu a parlé de la shüt de lanpir romin an catr san suasant sez) - Il professore ci ha parlato della caduta dell'Impero romano nel quattrocentosettantasei
+On doit apprendre par cœur les dates de la Première Guerre mondiale (On dua apprandr par keur lé dat de la premiér ger mondial) - Dobbiamo imparare a memoria le date della Prima guerra mondiale
+Napoléon a été sacré empereur en dix-huit cent quatre (Napoléon a été sacré anpereur an dizüit san catr) - Napoleone è stato incoronato imperatore nel milleottocentoquattro
+Il y a un contrôle sur la Renaissance jeudi prochain (Ilia an control sür la Renesans jeudi proshin) - C'è una verifica sul Rinascimento giovedì prossimo
+La Seconde Guerre mondiale s'est terminée en dix-neuf cent quarante-cinq (La segond ger mondial se terminé an dizneuf san carant sink) - La Seconda guerra mondiale è finita nel millenovecentoquarantacinque
+On a étudié la prise de la Bastille le quatorze juillet dix-sept cent quatre-vingt-neuf (On a etüdié la priz de la Bastiy le catorz juiyè diset san catrvin neuf) - Abbiamo studiato la presa della Bastiglia il quattordici luglio millesettecentottantanove
+Le prof a expliqué les causes de la révolution industrielle en Angleterre (Le prof a esplika lé coz de la revolüsion andüstriel an Anglter) - Il prof ha spiegato le cause della rivoluzione industriale in Inghilterra
+On doit rendre un exposé sur Jules César pour lundi (On dua randr anexpozé sür Jül Sézar pur lundi) - Dobbiamo consegnare un lavoro su Giulio Cesare per lunedì
+Christophe Colomb est arrivé en Amérique en quatorze cent quatre-vingt-douze (Cristof Colon et arivé an Amerik an catorz san catrvin duz) - Cristoforo Colombo è arrivato in America nel millequattrocentonovantadue
+Le mur de Berlin est tombé en dix-neuf cent quatre-vingt-neuf (Le mür de Berlin è tonbé an dizneuf san catrvin neuf) - Il muro di Berlino è caduto nel millenovecentottantanove
+On a vu une carte de l'Empire romain à son apogée (On a vü ün cart de lanpir romin a son apojé) - Abbiamo visto una mappa dell'Impero romano al suo apogeo
+Le professeur a insisté sur les conséquences de la crise de mille neuf cent vingt-neuf (Le profeseur a insisté sür lé consekans de la criz de mil neuf san vintneuf) - Il professore ha insistito sulle conseguenze della crisi del millenovecentoventinove
+On doit faire une frise chronologique pour le Moyen Âge (On dua fer ün friz cronolojik pur le Muayenaj) - Dobbiamo fare una linea del tempo per il Medioevo
+Louis quatorze est monté sur le trône très jeune, à cinq ans (Lui catorz è monté sür le tron trè jeun, a sinkan) - Luigi XIV è salito al trono molto giovane, a cinque anni
+La Déclaration des droits de l'homme date de dix-sept cent quatre-vingt-neuf aussi (La declarasion dé druà de lom dat de diset san catrvin neuf osi) - La Dichiarazione dei diritti dell'uomo risale anch'essa al millesettecentottantanove
+On a discuté des origines de la guerre froide après mille neuf cent quarante-cinq (On a diskuté dezorijin de la ger fruad aprè mil neuf san carant sink) - Abbiamo discusso delle origini della guerra fredda dopo il millenovecentoquarantacinque
+Le prof nous a montré des photos de l'époque victorienne (Le prof nu a montré dé foto de lepok viktorien) - Il prof ci ha mostrato delle foto dell'epoca vittoriana
+Il faut connaître les grandes dates de la décolonisation en Afrique (Il fo conetr lé grand dat de la dekolonizasion an Afrik) - Bisogna conoscere le grandi date della decolonizzazione in Africa
+On a un débat en classe sur les causes de la Première Guerre mondiale (On a an deba an clas sür lé coz de la premiér ger mondial) - Abbiamo un dibattito in classe sulle cause della Prima guerra mondiale
+La chute du mur de Berlin a marqué la fin de la guerre froide (La shüt dü mür de Berlin a marké la fin de la ger fruad) - La caduta del muro di Berlino ha segnato la fine della guerra fredda
+On doit lire un chapitre entier sur l'Égypte ancienne pour vendredi (On dua lir an shapitr antié sür lejipt ansien pur vandredi) - Dobbiamo leggere un capitolo intero sull'Egitto antico per venerdì
+Le prof a parlé pendant une heure de la révolution russe de dix-neuf cent dix-sept (Le prof a parlé pandan ün eur de la revolüsion rüs de dizneuf san diset) - Il prof ha parlato per un'ora della rivoluzione russa del millenovecentodiciassette
+On a comparé les royaumes francs du cinquième au huitième siècle (On a conparé lé ruayom fran dü sinkiém o üitiém siekl) - Abbiamo confrontato i regni franchi dal quinto all'ottavo secolo
+Il y a beaucoup de dates à retenir pour ce chapitre, c'est un peu dur (Ilia bocu de dat a retnir pur se shapitr, sè an peu dür) - Ci sono tante date da ricordare per questo capitolo, è un po' difficile
+La guerre de Cent Ans a duré en réalité cent seize ans (La ger de San An a düré an realité san sez an) - La guerra dei Cent'anni è durata in realtà centosedici anni
+On a vu un documentaire sur les pyramides d'Égypte en cours (On a vü an dokümanter sür lé piramid dejipt an cur) - Abbiamo visto un documentario sulle piramidi d'Egitto a lezione
+Le professeur nous a demandé de situer ces événements sur une carte (Le profeseur nu a demandé de sitüé sézevenman sür ün cart) - Il professore ci ha chiesto di collocare questi eventi su una mappa
+On étudie la Guerre froide et la course à l'espace ce trimestre (On etüdi la Ger fruad e la curs a lespas se trimestr) - Studiamo la guerra fredda e la corsa allo spazio questo trimestre
+Jeanne d'Arc est morte brûlée en quatorze cent trente et un (Jean dark è mort brülé an catorz san trant e an) - Giovanna d'Arco è morta bruciata nel millequattrocentotrentuno
+Il faut retenir que la Bastille a été prise en dix-sept cent quatre-vingt-neuf (Il fo retnir que la Bastiy a été priz an diset san catrvin neuf) - Bisogna ricordare che la Bastiglia è stata presa nel millesettecentottantanove
+On a comparé les régimes totalitaires du vingtième siècle (On a conparé lé rejim totaliter dü vintiém siekl) - Abbiamo confrontato i regimi totalitari del ventesimo secolo
+Le prof a raconté l'histoire de la construction des cathédrales gothiques (Le prof a raconté listuar de la constrüksion dé catedral gotik) - Il prof ha raccontato la storia della costruzione delle cattedrali gotiche
+On doit apprendre les grandes explorations du quinzième et seizième siècle (On dua apprandr lé grandzexplorasion dü kinziém e seziém siekl) - Dobbiamo imparare le grandi esplorazioni del quindicesimo e sedicesimo secolo
+Il y a eu un empire byzantin qui a duré plus de mille ans (Ilia ü an anpir bizantin qui a düré plü de mil an) - C'è stato un impero bizantino che è durato più di mille anni
+On a analysé un texte sur la Commune de Paris de dix-huit cent soixante et onze (On a analizé an text sür la Comün de Pari de dizüit san suasant e onz) - Abbiamo analizzato un testo sulla Comune di Parigi del milleottocentosettantuno
+Le professeur a écrit toutes les dates importantes au tableau (Le profeseur a ekri tut lé dat inportant o tablo) - Il professore ha scritto tutte le date importanti alla lavagna
+On doit préparer un exposé sur les Grandes découvertes pour le mois prochain (On dua preparé anexpozé sür lé grand dekuvert pur le mua proshin) - Dobbiamo preparare un lavoro sulle grandi scoperte per il mese prossimo
+La première guerre mondiale a commencé en dix-neuf cent quatorze (La premiér ger mondial a comansé an dizneuf san catorz) - La prima guerra mondiale è iniziata nel millenovecentoquattordici
+On a vu comment l'Empire romain s'est divisé en deux en trois cent quatre-vingt-quinze (On a vü coman lanpir romin se divizé an deu an trua san catrvin kinz) - Abbiamo visto come l'Impero romano si è diviso in due nel trecentonovantacinque
+Le prof nous a expliqué le contexte de la guerre d'indépendance américaine (Le prof nu a esplika le context de la ger dindepandans amerikèn) - Il prof ci ha spiegato il contesto della guerra d'indipendenza americana
+On a dix minutes pour répondre à ces questions sur l'Antiquité (On a di minüt pur repondr a sé question sür lantikité) - Abbiamo dieci minuti per rispondere a queste domande sull'Antichità
+Charlemagne a été couronné empereur le vingt-cinq décembre huit cents (Sharlmagn a été curoné anpereur le vintsink desanbr üi san) - Carlo Magno è stato incoronato imperatore il venticinque dicembre ottocento
+On a un contrôle sur les rois de France du seizième siècle (On a an control sür lé rua de Frans dü seziém siekl) - Abbiamo una verifica sui re di Francia del sedicesimo secolo
+Le professeur compare souvent des événements espacés de plusieurs siècles (Le profeseur conpar suvan dezevenman espasé de plüzieur siekl) - Il professore confronta spesso eventi distanti diversi secoli
+On a discuté de l'importance de l'imprimerie inventée vers mille quatre cent quarante (On a diskuté de l'inportans de l'inprimeri anvanté ver mil catr san carant) - Abbiamo discusso dell'importanza della stampa inventata verso il millequattrocentoquaranta
+Il faut situer les grandes batailles de Napoléon sur une carte d'Europe (Il fo sitüé lé grand bataiy de Napoléon sür ün cart döroop) - Bisogna collocare le grandi battaglie di Napoleone su una mappa d'Europa
+On a lu un extrait sur la vie quotidienne au Moyen Âge (On a lü anextrè sür la vi cotidien o Muayenaj) - Abbiamo letto un estratto sulla vita quotidiana nel Medioevo
+Le prof a expliqué pourquoi mille neuf cent dix-sept est une date clé (Le prof a esplika purcua mil neuf san diset et ün dat clé) - Il prof ha spiegato perché il millenovecentodiciassette è una data chiave
+On doit retenir au moins dix dates importantes pour l'examen final (On dua retnir o muin di dat inportant pur legzamin final) - Dobbiamo ricordare almeno dieci date importanti per l'esame finale
+La Grèce antique a connu son âge d'or au cinquième siècle avant Jésus-Christ (La Gres antik a conü son aj dor o sinkiém siekl avan Jezü Cri) - La Grecia antica ha conosciuto la sua età dell'oro nel quinto secolo avanti Cristo
+Je vais prendre six cents grammes de blanc de poulet, s'il vous plaît. (ʒö vé prandr sis san gram de blan de pulè, sil vu plè) - Prendo seicento grammi di petto di pollo, per favore.
+Vous pouvez me mettre quatre côtelettes de porc, pas trop épaisses ? (vu puvé me metr katr kotlet de por, pa troz epès) - Può mettermi quattro costolette di maiale, non troppo spesse?
+Il me faudrait environ un kilo de viande hachée. (il me fodrè anviron an kilo de viand ascié) - Mi servirebbe circa un chilo di carne macinata.
+Je vais prendre trois steaks, mais assez fins. (ʒö vé prandr trwa stek, mè ase fen) - Prendo tre bistecche, ma abbastanza sottili.
+Vous avez encore des cuisses de poulet à moins de dix euros le kilo ? (vu zavé ankor de küis de pulè a mwan de dis öro le kilo) - Avete ancora cosce di pollo a meno di dieci euro al chilo?
+Mettez-moi huit tranches de jambon, s'il vous plaît. (meté mwa üit transce de ʒambon, sil vu plè) - Mi metta otto fette di prosciutto, per favore.
+Je voudrais deux escalopes de veau d'environ cent cinquante grammes chacune. (ʒö vudrè dö zeskalop de vo danviron san sankant gram scakün) - Vorrei due scaloppine di vitello di circa centocinquanta grammi ciascuna.
+Vous pouvez m'en faire cinq portions individuelles ? (vu puvé man fer sank porsion endividüel) - Può farmene cinque porzioni individuali?
+J'en prends un peu plus d'un demi-kilo, ça devrait suffire pour ce soir. (ʒan pran an pö plü dan dömi kilo, sa dövrè süfir pur se swar) - Ne prendo poco più di mezzo chilo, dovrebbe bastare per stasera.
+Il me faudrait deux cents grammes de viande pour la recette. (il me fodrè dö san gram de viand pur la reset) - Mi servirebbero duecento grammi di carne per la ricetta.
+Vous avez des saucisses pour trois personnes ? (vu zavé de sosiss pur trwa person) - Avete delle salsicce per tre persone?
+Je vais en prendre douze, on est nombreux ce soir. (ʒö vé an prandr duz, on é nombrö se swar) - Ne prendo dodici, stasera siamo in tanti.
+Coupez-moi cette pièce en six morceaux, ce sera plus pratique. (kupe mwa set piès an sis morso, se sera plü praktik) - Mi tagli questo pezzo in sei parti, sarà più pratico.
+Je préfère celle-ci, elle a l'air plus tendre. (ʒö prefer sel-si, el a ler plü tãdr) - Preferisco questa, sembra più tenera.
+Il vous reste combien de kilos de bœuf ? (il vu rest kombièn de kilo de böf) - Quanti chili di manzo vi sono rimasti?
+Je vais prendre un kilo et demi de poulet pour la semaine. (ʒö vé prandr an kilo é dömi de pulè pur la sömen) - Prendo un chilo e mezzo di pollo per la settimana.
+Vous pouvez me donner un morceau d'environ trois cents grammes ? (vu puvé me doné an morso danviron trwa san gram) - Può darmi un pezzo di circa trecento grammi?
+Je n'ai besoin que de deux tranches de rôti. (ʒö né bezwan ke de transce de roti) - Mi servono solo due fette di arrosto.
+Mettez-en un peu moins, je trouve que ça fait beaucoup. (meté nan an pö mwan, ʒö truv ke sa fè bokou) - Ne metta un po' meno, mi sembra che sia tanto.
+Je vais prendre ces quatre morceaux, ils ont l'air bien frais. (ʒö vé prandr se katr morso, ilz on ler bièn frè) - Prendo questi quattro pezzi, sembrano molto freschi.
+Vous avez des poires bien mûres aujourd'hui ? (vu zavé de pwar bièn mür oʒurdüi) - Avete delle pere ben mature oggi?
+Je vais prendre un kilo de pommes, plutôt des petites. (ʒö vé prandr an kilo de pom, plüto de pətit) - Prendo un chilo di mele, preferibilmente piccole.
+Mettez-moi six bananes, mais pas trop mûres. (meté mwa sis banan, mè pa tro mür) - Mi metta sei banane, ma non troppo mature.
+Il me faudrait environ cinq cents grammes de fraises. (il me fodrè anviron sank san gram de frez) - Mi servirebbero circa cinquecento grammi di fragole.
+Je vais prendre deux kilos d'oranges, elles sont à combien ? (ʒö vé prandr dö kilo doranʒ, el son a kombièn) - Prendo due chili di arance, quanto costano?
+Vous pouvez m'en choisir une dizaine qui soient bien mûres ? (vu puvé man scwazir ün dizèn ki swa bièn mür) - Può scegliermene una decina ben mature?
+J'en prends trois, celles-là sont parfaites. (ʒan pran trwa, sel-la son parfèt) - Ne prendo tre, quelle vanno benissimo.
+Vous avez encore des pêches à moins de quatre euros le kilo ? (vu zavé ankor de pesc a mwan de katr öro le kilo) - Avete ancora pesche a meno di quattro euro al chilo?
+Je voudrais sept abricots, pas trop mous. (ʒö vudrè set abrikò, pa tro mu) - Vorrei sette albicocche, non troppo morbide.
+Il me reste seulement deux tomates à la maison, j'en prends six. (il me rest selman dö tomat a la mezon, ʒan pran sis) - A casa mi sono rimasti solo due pomodori, ne prendo sei.
+Mettez-moi huit cents grammes de tomates, s'il vous plaît. (meté mwa üit san gram de tomat, sil vu plè) - Mi metta ottocento grammi di pomodori, per favore.
+Je cherche environ un demi-kilo de courgettes bien fermes. (ʒö scersc anviron an dömi kilo de kurʒet bièn ferm) - Cerco circa mezzo chilo di zucchine ben sode.
+Vous pouvez peser ces cinq pommes de terre séparément ? (vu puvé peze se sank pom de ter separéman) - Può pesare separatamente queste cinque patate?
+Je vais prendre deux barquettes de framboises. (ʒö vé prandr dö barket de frãbwaz) - Prendo due vaschette di lamponi.
+Il n'y a presque plus de raisins sans pépins. (il nia presk plü de rezan san pepẽ) - Non ci sono quasi più uva senza semi.
+Vous me conseillez plutôt les melons à deux euros ou ceux à trois euros ? (vu me konsèyé plüto le melon a dö zöro u sö a trwa zöro) - Mi consiglia i meloni da due euro o quelli da tre euro?
+Je vais prendre la plus petite pastèque, elle sera largement suffisante. (ʒö vé prandr la plü pətit paskèk, el sera larʒman süfizant) - Prendo l'anguria più piccola, sarà più che sufficiente.
+Il m'en faudrait une douzaine pour une salade de fruits. (il man fodrè ün duzèn pur ün salad de frui) - Me ne servirebbe una dozzina per una macedonia.
+Vous avez des citrons vendus au kilo ou à la pièce ? (vu zavé de sitron vandü o kilo u a la piès) - Avete limoni venduti al chilo o al pezzo?
+Prenez-moi quatre citrons bien juteux, s'il vous plaît. (prené mwa katr sitron bièn ʒüto, sil vu plè) - Mi dia quattro limoni ben succosi, per favore.
+J'en voudrais environ deux cents grammes, pas davantage. (ʒan vudrè anviron dö san gram, pa davantaʒ) - Ne vorrei circa duecento grammi, non di più.
+Ça fait combien pour les trois kilos de pommes et le demi-kilo de poires ? (sa fè kombièn pur le trwa kilo de pom é le dömi kilo de pwar) - Quanto fanno tre chili di mele e mezzo chilo di pere?
+Je vais prendre un kilo de chaque, comme ça j'en aurai pour plusieurs jours. (ʒö vé prandr an kilo de scak, kom sa ʒan orè pur plüzior ʒur) - Prendo un chilo di ciascuno, così ne avrò per diversi giorni.
+Vous pouvez me mettre les fruits les plus mûrs dans un sac à part ? (vu puvé me metr le frui le plü mür danz an sak a par) - Può mettermi i frutti più maturi in un sacchetto a parte?
+J'en prends une vingtaine, c'est pour une fête samedi. (ʒan pran ün van-ten, sè pur ün fet samedi) - Ne prendo una ventina, è per una festa sabato.
+Il me faut au moins trois kilos de pommes de terre pour tout le monde. (il me fo o mwan trwa kilo de pom de ter pur tu le mond) - Mi servono almeno tre chili di patate per tutti.
+Vous pouvez arrondir à un kilo, ce sera plus simple. (vu puvé arondir a an kilo, se sera plü sampl) - Può arrotondare a un chilo, sarà più semplice.
+J'en ai déjà pris cinq, mais il m'en manque encore quatre. (ʒan é deʒa pri sank, mè il man ankor katr) - Ne ho già presi cinque, ma me ne mancano ancora quattro.
+Je vais prendre deux kilos et garder le reste pour la semaine prochaine. (ʒö vé prandr dö kilo é gardé le rest pur la sömen proscièn) - Prendo due chili e conserverò il resto per la prossima settimana.
+Aujourd'hui, on va mesurer la température de l'eau toutes les cinq minutes. (oʒurdüi, on va mezüre la tanperatür de lo tut le sank minüt) - Oggi misureremo la temperatura dell'acqua ogni cinque minuti.
+J'ai noté trente-deux degrés dans mon cahier. (ʒé note trant-dö degrè dan mon kaye) - Ho annotato trentadue gradi sul mio quaderno.
+Il faut mélanger deux liquides dans des proportions égales. (il fo melanʒé dö likid dan de proporʃion egal) - Bisogna mescolare due liquidi in proporzioni uguali.
+On ajoute seulement cinq millilitres de cette solution. (on aʒut selman sank mililitr de set solüsiòn) - Aggiungiamo solo cinque millilitri di questa soluzione.
+Regardez bien, la couleur commence à changer après quelques secondes. (regardé bièn, la kulör komans a sciandʒé aprè kelk segond) - Guardate bene, il colore comincia a cambiare dopo alcuni secondi.
+J'ai utilisé trois gouttes de colorant pour l'expérience. (ʒé ütilizé trwa gut de kolorã pur leksperyans) - Ho usato tre gocce di colorante per l'esperimento.
+La masse de cet objet est d'environ deux cents grammes. (la mas de set obʒè é danviron dö san gram) - La massa di questo oggetto è di circa duecento grammi.
+On doit mesurer la longueur de chaque échantillon avec une règle. (on dwa mezüre la longör de scak esciantiyon avek ün regl) - Dobbiamo misurare la lunghezza di ogni campione con un righello.
+Cette plante a grandi de presque dix centimètres en un mois. (set plant a grandi de presk dis santimetr an an mwa) - Questa pianta è cresciuta di quasi dieci centimetri in un mese.
+J'ai compté douze feuilles sur la plus grande tige. (ʒé konte duz fœy sür la plü grand tiʒ) - Ho contato dodici foglie sul fusto più grande.
+Pourquoi le liquide monte-t-il dans le tube ? (purkwa le likid mont til dan le tüb) - Perché il liquido sale nel tubo?
+On va chauffer le mélange pendant environ trois minutes. (on va scofé le melanʒ pandan anviron trwa minüt) - Riscalderemo la miscela per circa tre minuti.
+La température a augmenté de quatre degrés en moins d'une minute. (la tanperatür a ogmanté de katr degrè an mwan dün minüt) - La temperatura è aumentata di quattro gradi in meno di un minuto.
+Il reste environ cent millilitres dans le récipient. (il rest anviron san mililitr dan le resipyan) - Nel contenitore sono rimasti circa cento millilitri.
+On doit faire deux mesures pour vérifier le résultat. (on dwa fer dö mezür pur verifié le rezultà) - Dobbiamo fare due misurazioni per verificare il risultato.
+J'ai obtenu un résultat légèrement différent du tien. (ʒé optenü an rezultà leʒèrman diferan dü tyan) - Ho ottenuto un risultato leggermente diverso dal tuo.
+La pression est passée de cent à cent vingt kilopascals. (la presyon é pase de san a san van kilopaskal) - La pressione è passata da cento a centoventi kilopascal.
+On peut observer les cellules avec un grossissement de quatre cents fois. (on pö opsèrve le selül avek an grosisman de katr san fwa) - Possiamo osservare le cellule con un ingrandimento di quattrocento volte.
+Cette bactérie mesure seulement deux micromètres. (set bakterì mezür selman dö mikrometr) - Questo batterio misura solo due micrometri.
+Il y a environ sept milliards d'habitants sur Terre. (il ia anviron set milyar dabitan sür ter) - Ci sono circa sette miliardi di abitanti sulla Terra.
+Notre planète met environ trois cent soixante-cinq jours pour faire le tour du Soleil. (notr planet me anviron trwa san swasant sank ʒur pur fer le tur dü soley) - Il nostro pianeta impiega circa trecentosessantacinque giorni per fare il giro del Sole.
+La lumière parcourt presque trois cent mille kilomètres par seconde. (la lümyèr parkur presk trwa san mil kilometr par segond) - La luce percorre quasi trecentomila chilometri al secondo.
+Il faut environ huit minutes à la lumière du Soleil pour atteindre la Terre. (il fo anviron üit minüt a la lümyèr dü solei pur atandr la ter) - La luce del Sole impiega circa otto minuti per raggiungere la Terra.
+J'ai trouvé trois différences entre les deux schémas. (ʒé truvé trwa diferans antr le dö scema) - Ho trovato tre differenze tra i due schemi.
+Cette réaction libère beaucoup de chaleur en très peu de temps. (set reaksyon liber bokou de scaler an trè pö de tan) - Questa reazione libera molto calore in pochissimo tempo.
+On a besoin de cinquante grammes de cette substance. (on a bezwan de sankant gram de set sübstans) - Abbiamo bisogno di cinquanta grammi di questa sostanza.
+Ne touchez pas au matériel tant qu'il est encore chaud. (ne tusce pa o materyèl tan kil é ankor sco) - Non toccate il materiale finché è ancora caldo.
+J'ai réglé la balance sur zéro avant de commencer. (ʒé reglè la balans sür zero avan de komanse) - Ho azzerato la bilancia prima di iniziare.
+Il faut attendre au moins vingt secondes avant de lire le résultat. (il fo atandr o mwan van segond avan de lir le rezultà) - Bisogna aspettare almeno venti secondi prima di leggere il risultato.
+On a observé une baisse de température de six degrés. (on a obsèrve ün bes de tanperatür de sis degrè) - Abbiamo osservato una diminuzione della temperatura di sei gradi.
+La moitié des élèves a choisi la même réponse. (la mwatye dez elev a scwazì la mem repons) - Metà degli studenti ha scelto la stessa risposta.
+Il y a quatre groupes et chacun reçoit le même matériel. (il ia katr grup é scakün reswa le mem materyèl) - Ci sono quattro gruppi e ciascuno riceve lo stesso materiale.
+Vous avez dix minutes pour terminer l'expérience. (vu zavé dis minüt pur termine leksperyans) - Avete dieci minuti per terminare l'esperimento.
+J'ai versé trop d'eau, il en fallait seulement cent millilitres. (ʒé verse tro do, il an falè selman san mililitr) - Ho versato troppa acqua, ne servivano solo cento millilitri.
+La masse totale est de presque un kilogramme. (la mas total é de presk an kilogram) - La massa totale è di quasi un chilogrammo.
+Cette éprouvette contient vingt-cinq millilitres de liquide. (set epruvèt kontyen van sank mililitr de likid) - Questa provetta contiene venticinque millilitri di liquido.
+On va comparer les résultats des trois expériences. (on va kompare le rezultà de trwa zeksperyans) - Confronteremo i risultati dei tre esperimenti.
+La première mesure était plus élevée que les deux suivantes. (la premiyèr mezür etè plü eleve ke le dö süivant) - La prima misurazione era più alta delle due successive.
+Il manque environ quinze grammes pour atteindre la masse prévue. (il mank anviron kanz gram pur atandr la mas prevü) - Mancano circa quindici grammi per raggiungere la massa prevista.
+On a laissé le mélange reposer pendant une dizaine de minutes. (on a lesé le melanʒ repoze pandan ün dizèn de minüt) - Abbiamo lasciato riposare la miscela per una decina di minuti.
+Le microscope est déjà utilisé par deux élèves. (le mikroskop é deʒa ütilizé par dö zelev) - Il microscopio è già utilizzato da due studenti.
+J'ai dessiné ce que j'ai observé sous le microscope. (ʒé desine se ke ʒé obsèrve su le mikroskop) - Ho disegnato ciò che ho osservato al microscopio.
+La densité de ce matériau est presque deux fois plus élevée. (la dansité de se materyo é presk dö fwa plü eleve) - La densità di questo materiale è quasi due volte maggiore.
+On a obtenu une moyenne de dix-huit degrés. (on a optenü ün moyèn de dizüit degrè) - Abbiamo ottenuto una media di diciotto gradi.
+Il faut diviser le résultat par quatre pour obtenir la valeur moyenne. (il fo divize le rezultà par katr pur optenir la valör moyèn) - Bisogna dividere il risultato per quattro per ottenere il valore medio.
+Cette expérience montre clairement que la chaleur se transmet. (set eksperyans montr klèrman ke la scaler se transmè) - Questo esperimento mostra chiaramente che il calore si trasmette.
+On a mesuré une différence de température de douze degrés entre les deux échantillons. (on a mezüre ün diferans de tanperatür de duz degrè antr le dö zescanti yon) - Abbiamo misurato una differenza di temperatura di dodici gradi tra i due campioni.
+Le professeur nous a demandé d'expliquer le résultat en trois phrases. (le profesör nu a demandé deksplike le rezultà an trwa fraz) - L'insegnante ci ha chiesto di spiegare il risultato in tre frasi.
+J'ai besoin d'environ cinq minutes pour terminer mon graphique. (ʒé bezwan danviron sank minüt pur termine mon grafik) - Ho bisogno di circa cinque minuti per finire il mio grafico.
+Je vais prendre deux filets de saumon, environ trois cents grammes chacun. (ʒö vé prandr dö file de somon, anviron trwa san gram scakün) - Prendo due filetti di salmone, circa trecento grammi ciascuno.
+Vous pouvez me nettoyer quatre dorades, s'il vous plaît ? (vu puvé me netwaye katr dorad, sil vu plè) - Può pulirmi quattro orate, per favore?
+Il me faudrait un kilo de moules bien fraîches. (il me fodrè an kilo de mul bièn frèsc) - Mi servirebbe un chilo di cozze ben fresche.
+Vous avez des crevettes à moins de quinze euros le kilo ? (vu zavé de krevet a mwan de kanz öro le kilo) - Avete dei gamberi a meno di quindici euro al chilo?
+Mettez-moi six cents grammes de calamars, pas plus. (meté mwa sis san gram de kalamar, pa plü) - Mi metta seicento grammi di calamari, non di più.
+Je vais prendre huit sardines pour ce soir. (ʒö vé prandr üit sardin pur se swar) - Prendo otto sardine per stasera.
+Il me reste seulement deux portions de poisson à préparer. (il me rest selman dö porsion de pwasòn a preparé) - Mi restano solo due porzioni di pesce da preparare.
+Vous pouvez me donner environ cinq cents grammes de thon ? (vu puvé me doné anviron sank san gram de ton) - Può darmi circa cinquecento grammi di tonno?
+Je voudrais trois tranches de saumon fumé, assez fines. (ʒö vudrè trwa transce de somon füme, ase fin) - Vorrei tre fette di salmone affumicato, abbastanza sottili.
+Ces poissons font combien au total ? (se pwasòn fon kombièn o total) - Quanto pesano in tutto questi pesci?
+Je vais prendre la moitié de celui-ci, il est beaucoup trop gros pour nous. (ʒö vé prandr la mwatye de selüi-si, il é bokou tro gro pur nu) - Prendo metà di questo, è troppo grande per noi.
+Vous me conseillez combien de crevettes pour quatre personnes ? (vu me konsèyé kombièn de krevet pur katr person) - Quanti gamberi mi consiglia per quattro persone?
+Il faudrait environ un kilo et demi de poisson pour toute la famille. (il fodrè anviron an kilo é dömi de pwasòn pur tut la famiy) - Servirebbe circa un chilo e mezzo di pesce per tutta la famiglia.
+Je peux avoir dix-huit huîtres, s'il vous plaît ? (ʒö pö avwar dizüit üitr, sil vu plè) - Posso avere diciotto ostriche, per favore?
+J'en prends quatre cents grammes, ça devrait largement suffire. (ʒan pran katr san gram, sa dövrè larʒman süfir) - Ne prendo quattrocento grammi, dovrebbe bastare abbondantemente.
+Les anchois sont à combien les cent grammes ? (lez ansciwa son a kombièn le san gram) - Quanto costano le acciughe per cento grammi?
+Vous pouvez peser les deux morceaux séparément ? (vu puvé peze le dö morso separéman) - Può pesare separatamente i due pezzi?
+Je vais prendre trois bars, autour de quatre cents grammes chacun. (ʒö vé prandr trwa bar, otur de katr san gram scakün) - Prendo tre spigole, di circa quattrocento grammi ciascuna.
+Il n'y a plus que sept coquilles Saint-Jacques dans le plateau. (il nia plü ke set kokiy san ʒak dan le plato) - Nel vassoio sono rimaste solo sette capesante.
+Vous avez des filets sans arêtes pour les enfants ? (vu zavé de file san aret pur le zanfa) - Avete dei filetti senza spine per i bambini?
+Je vais prendre un demi-kilo de crevettes décortiquées. (ʒö vé prandr an dömi kilo de krevet dekortike) - Prendo mezzo chilo di gamberi sgusciati.
+Vous pouvez me préparer ces cinq poissons pour la cuisson au four ? (vu puvé me preparé se sank pwasòn pur la küison o fur) - Può prepararmi questi cinque pesci per la cottura al forno?
+Je cherche une boîte de vis de six millimètres. (ʒö scersc ün bwat de vis de sis milimetr) - Cerco una scatola di viti da sei millimetri.
+Il me faut une perceuse avec deux batteries si possible. (il me fo ün persöz avek dö bateri si posibl) - Mi serve un trapano con due batterie, se possibile.
+Vous avez des chevilles de huit millimètres pour du béton ? (vu zavé de sceviy de üit milimetr pur dü beton) - Avete tasselli da otto millimetri per il cemento?
+Je vais prendre trois mètres de câble électrique. (ʒö vé prandr trwa metr de kabl elektrik) - Prendo tre metri di cavo elettrico.
+Il me faudrait une dizaine de rondelles de ce diamètre. (il me fodrè ün dizèn de rondel de se dyametr) - Mi servirebbe una decina di rondelle di questo diametro.
+Vous pouvez me couper une barre de métal d'un mètre vingt ? (vu puvé me kupe ün bar de metal dan metr van) - Può tagliarmi una barra di metallo da un metro e venti?
+Je cherche quatre crochets assez solides pour accrocher une étagère. (ʒö scersc katr krosce ase solid pur akrosce ün etaʒèr) - Cerco quattro ganci abbastanza robusti per appendere una mensola.
+Ces vis sont vendues par boîtes de cinquante ? (se vis son vandü par bwat de sankant) - Queste viti sono vendute in scatole da cinquanta?
+Je vais prendre deux tubes de silicone blanc. (ʒö vé prandr dö tüb de silikon blan) - Prendo due tubetti di silicone bianco.
+Vous avez une clé de douze ou de quatorze ? (vu zavé ün kle de duz u de katorz) - Avete una chiave da dodici o da quattordici?
+Il me faudrait environ cinq mètres de tuyau souple. (il me fodrè anviron sank metr de tüyo supl) - Mi servirebbero circa cinque metri di tubo flessibile.
+Je prends ce paquet de cent chevilles, le prix est correct. (ʒö pran se pakè de san sceviy, le pri é korekt) - Prendo questa confezione da cento tasselli, il prezzo va bene.
+Vous pouvez me donner deux rouleaux de ruban isolant ? (vu puvé me doné dö rulo de rüban izolã) - Può darmi due rotoli di nastro isolante?
+J'ai besoin de trois ampoules LED de neuf watts. (ʒé bezwan de trwa ampul led de nö vat) - Ho bisogno di tre lampadine LED da nove watt.
+Cette pince existe en deux tailles différentes ? (set pans egzist an dö tay diferant) - Questa pinza esiste in due misure diverse?
+Je cherche un tournevis avec une lame d'environ dix centimètres. (ʒö scersc an turnövis avek ün lam danviron dis santimetr) - Cerco un cacciavite con una lama di circa dieci centimetri.
+Il me faut six mètres de câble, mais j'en prendrai huit pour avoir une marge. (il me fo sis metr de kabl, mè ʒan prandra üit pur avwar ün marʒ) - Mi servono sei metri di cavo, ma ne prenderò otto per avere un margine.
+Vous avez des forets de quatre, six et huit millimètres ? (vu zavé de forè de katr, sis é üit milimetr) - Avete punte da quattro, sei e otto millimetri?
+Je vais prendre deux boîtes de chevilles, une de six et une de huit. (ʒö vé prandr dö bwat de sceviy, ün de sis é ün de üit) - Prendo due scatole di tasselli, una da sei e una da otto.
+Il me faudrait une longueur d'au moins deux mètres cinquante. (il me fodrè ün longör do mwan dö metr sankant) - Mi servirebbe una lunghezza di almeno due metri e cinquanta.
+Vous pouvez me conseiller une colle qui tient au moins vingt-quatre heures ? (vu puvé me konsèyé ün kol ki tyen o mwan van-katr ör) - Può consigliarmi una colla che tenga almeno ventiquattro ore?
+J'ai cassé trois carreaux, il m'en faudrait autant pour les remplacer. (ʒé kase trwa karo, il man fodrè otan pur le ranplase) - Ho rotto tre piastrelle, me ne servirebbero altrettante per sostituirle.
+Vous avez des joints de cinq millimètres pour ces carreaux ? (vu zavé de ʒwan de sank milimetr pur se karo) - Avete fughe da cinque millimetri per queste piastrelle?
+Je vais prendre un rouleau de dix mètres de longueur. (ʒö vé prandr an rulo de dis metr de longör) - Prendo un rotolo lungo dieci metri.
+Il me faut deux cadenas, de préférence avec la même clé. (il me fo dö kadena, de preferans avek la mem kle) - Mi servono due lucchetti, preferibilmente con la stessa chiave.
+Vous avez des gants de travail en taille neuf ? (vu zavé de gan de travay an tay nöf) - Avete guanti da lavoro della misura nove?
+Je cherche une rallonge de cinq mètres avec trois prises. (ʒö scersc ün ralonʒ de sank metr avek trwa priz) - Cerco una prolunga di cinque metri con tre prese.
+Je vais prendre quatre sachets de vis, ça me suffira pour tout le chantier. (ʒö vé prandr katr sasce de vis, sa me süfira pur tu le sciãtye) - Prendo quattro bustine di viti, mi basteranno per tutto il lavoro.
+Le professeur nous a demandé de retenir la date de la Révolution française. (le profesör nu a demandé de retni(r) la dat de la revolüsiòn fransèz) - L'insegnante ci ha chiesto di ricordare la data della Rivoluzione francese.
+La prise de la Bastille a eu lieu le quatorze juillet 1789. (la priz de la Bastiy a ü lü le katorz ʒüiyè mil-set-san-katr-van-nöf) - La presa della Bastiglia avvenne il 14 luglio 1789.
+Napoléon est devenu empereur en 1804. (Napoleon é devenü anperör an mil-üit-san-katr) - Napoleone divenne imperatore nel 1804.
+J'ai du mal à retenir toutes ces dates, il y en a vraiment beaucoup. (ʒé dü mal a retni(r) tut se dat, il i an vrèman bokou) - Faccio fatica a ricordare tutte queste date, ce ne sono davvero tante.
+On a commencé le chapitre avec la chute de l'Empire romain en 476. (on a komanse le scapit(r) avek la scüt de lanpir roman an katr-san-soasant-sez) - Abbiamo iniziato il capitolo con la caduta dell'Impero romano nel 476.
+Le Moyen Âge commence généralement au Ve siècle. (le mwa-yen aʒ komans ʒeneralman o sankyèm sièkl) - Il Medioevo inizia generalmente nel V secolo.
+En 1066, les Normands ont conquis l'Angleterre. (an mil-soasant-sis, le normã on konkì lãnglter) - Nel 1066 i Normanni conquistarono l'Inghilterra.
+La bataille d'Hastings a eu lieu le 14 octobre 1066. (la batay dastinʒ a ü lü le katorz oktobr mil-soasant-sis) - La battaglia di Hastings ebbe luogo il 14 ottobre 1066.
+Je confonds toujours 1492 et 1453. (ʒö konfõ tuʒur mil-katr-san-katr-van-duz é mil-katr-san-sankant-trwa) - Confondo sempre il 1492 e il 1453.
+Christophe Colomb est arrivé en Amérique en 1492. (Kristof Kolõb é arivé an Amerik an mil-katr-san-katr-van-duz) - Cristoforo Colombo arrivò in America nel 1492.
+La chute de Constantinople date de 1453. (la scüt de Konstantinopl dat de mil-katr-san-sankant-trwa) - La caduta di Costantinopoli risale al 1453.
+La Renaissance s'est développée entre le XVe et le XVIe siècle. (la Renesãs sé devlope antr le kenz-yèm é le sèz-yèm sièkl) - Il Rinascimento si sviluppò tra il XV e il XVI secolo.
+Léonard de Vinci est mort en 1519. (Leonàr de Vinsi é mor an mil-sank-san-diz-nöf) - Leonardo da Vinci morì nel 1519.
+La Réforme protestante commence au début du XVIe siècle. (la Reform protestant komans o debü dü sèz-yèm sièkl) - La Riforma protestante iniziò all'inizio del XVI secolo.
+Louis XIV a régné pendant plus de soixante-douze ans. (Lüi katorz a règné pandan plü de swasant-duz an) - Luigi XIV regnò per più di settantadue anni.
+Il est né en 1638 et il est mort en 1715. (il é né an mil-sis-san-trant-üit é il é mor an mil-set-san-kenz) - Nacque nel 1638 e morì nel 1715.
+La construction de Versailles s'est étalée sur plusieurs décennies. (la konstrüksion de Versay sé etale sür plüzior deseni) - La costruzione di Versailles si protrasse per diversi decenni.
+La Révolution française a commencé en 1789. (la revolüsiòn fransèz a komanse an mil-set-san-katr-van-nöf) - La Rivoluzione francese iniziò nel 1789.
+Louis XVI a été exécuté le 21 janvier 1793. (Lüi sèz a été egzeküte le van-te-an ʒanvyé mil-set-san-katr-van-trez) - Luigi XVI fu giustiziato il 21 gennaio 1793.
+Napoléon a été exilé une première fois en 1814. (Napoleon a été egzilé ün premièr fwa an mil-üit-san-katorz) - Napoleone fu esiliato per la prima volta nel 1814.
+Il est revenu au pouvoir pendant les Cent-Jours en 1815. (il é revnü o puvar pandan le san-ʒur an mil-üit-san-kenz) - Tornò al potere durante i Cento Giorni nel 1815.
+La bataille de Waterloo a eu lieu le 18 juin 1815. (la batay de Vaterlo a ü lü le diz-üit ʒwẽ mil-üit-san-kenz) - La battaglia di Waterloo ebbe luogo il 18 giugno 1815.
+Le XIXe siècle a connu de grands changements politiques et sociaux. (le diz-nöf-yèm sièkl a konü de gran sciãʒman politik é sosyo) - Il XIX secolo conobbe grandi cambiamenti politici e sociali.
+L'industrialisation s'est accélérée au cours du XIXe siècle. (landüstriyalizasiòn sé akselere o kur dü diz-nöf-yèm sièkl) - L'industrializzazione accelerò nel corso del XIX secolo.
+La Première Guerre mondiale a commencé en 1914. (la premiyèr gèr mondyal a komanse an mil-nöf-san-katorz) - La Prima guerra mondiale iniziò nel 1914.
+Elle s'est terminée le 11 novembre 1918. (el sé termine le onz novãbr mil-nöf-san-diz-üit) - Terminò l'11 novembre 1918.
+Mon grand-père est né quelques années après la fin de la guerre. (mon gran-per é né kelk zané aprè la fen de la gèr) - Mio nonno nacque alcuni anni dopo la fine della guerra.
+La crise de 1929 a eu des conséquences dans beaucoup de pays. (la kriz de mil-nöf-san-van-nöf a ü de konsékans dan bokou de pei) - La crisi del 1929 ebbe conseguenze in molti Paesi.
+La Seconde Guerre mondiale a commencé en 1939. (la segond gèr mondyal a komanse an mil-nöf-san-trant-nöf) - La Seconda guerra mondiale iniziò nel 1939.
+La France a été libérée en grande partie en 1944. (la Frans a été libere an grand parti an mil-nöf-san-karant-katr) - La Francia fu liberata in gran parte nel 1944.
+La guerre s'est officiellement terminée en Europe le 8 mai 1945. (la gèr sé ofisyèlman termine an Europ le üit mè mil-nöf-san-karant-sank) - La guerra terminò ufficialmente in Europa l'8 maggio 1945.
+L'Organisation des Nations unies a été créée en 1945. (lorganizasiòn de nasiòn ünì a été kreé an mil-nöf-san-karant-sank) - L'Organizzazione delle Nazioni Unite fu creata nel 1945.
+Le mur de Berlin est tombé le 9 novembre 1989. (le mür de Berlin é tombe le nöf novãbr mil-nöf-san-katr-van-nöf) - Il muro di Berlino cadde il 9 novembre 1989.
+J'étais encore enfant quand le mur de Berlin est tombé. (ʒetè ankor anfan kan le mür de Berlin é tombe) - Ero ancora bambino quando cadde il muro di Berlino.
+L'Union soviétique a disparu en 1991. (lünion sovyetik a disparü an mil-nöf-san-katr-van-onz) - L'Unione Sovietica scomparve nel 1991.
+Le professeur nous a demandé ce qui s'était passé entre 1940 et 1945. (le profesör nu a demandé se ki setè pase antr mil-nöf-san-karant é mil-nöf-san-karant-sank) - L'insegnante ci ha chiesto cosa fosse successo tra il 1940 e il 1945.
+Je dois apprendre les dates principales avant le contrôle de vendredi. (ʒö dwa aprandr le dat prinsipàl avan le kontrol de vandredi) - Devo imparare le date principali prima della verifica di venerdì.
+Cette civilisation a existé pendant près de mille ans. (set sivilizasiòn a egziste pandan prè de mil an) - Questa civiltà è esistita per quasi mille anni.
+On sait que la ville a été fondée au IIIe siècle avant notre ère. (on sè ke la vil a été fonde o trwazyèm sièkl avan notr er) - Sappiamo che la città fu fondata nel III secolo a.C.
+Les Romains sont arrivés dans cette région au IIe siècle avant notre ère. (le Roman son arivé dan set reʒyon o dözyèm sièkl avan notr er) - I Romani arrivarono in questa regione nel II secolo a.C.
+Cette inscription date probablement du Ier siècle après J.-C. (set inskripsion dat probablaman dü premié sièkl aprè ʒe-se) - Questa iscrizione risale probabilmente al I secolo d.C.
+Il faut remettre les événements dans l'ordre chronologique. (il fo remetr le zevenman dan lordr kronolojik) - Bisogna mettere gli eventi in ordine cronologico.
+J'ai mélangé les années 1848 et 1870 dans ma réponse. (ʒé melãʒé le zané mil-üit-san-karant-üit é mil-üit-san-swasant-dis dan ma repons) - Ho confuso gli anni 1848 e 1870 nella mia risposta.
+La première République française a été proclamée en 1792. (la premiyèr Republiḳ fransèz a été proklame an mil-set-san-katr-van-duz) - La Prima Repubblica francese fu proclamata nel 1792.
+Le professeur nous a montré une carte datant de 1910. (le profesör nu a montre ün kart datã de mil-nöf-san-dis) - L'insegnante ci ha mostrato una carta risalente al 1910.
+Cette photo a été prise quelques mois avant la fin de la guerre. (set foto a été priz kelk mwa avan la fen de la gèr) - Questa foto è stata scattata alcuni mesi prima della fine della guerra.
+On va comparer ce qui s'est passé en 1789 avec les événements de 1848. (on va kompare se ki sé pase an mil-set-san-katr-van-nöf avek le zevenman de mil-üit-san-karant-üit) - Confronteremo ciò che accadde nel 1789 con gli eventi del 1848.
+J'ai seulement trois dates à retenir pour cette partie du cours. (ʒé selman trwa dat a retni(r) pur set parti dü kur) - Devo ricordare solo tre date per questa parte della lezione.
+Il nous reste vingt minutes pour terminer la frise chronologique. (il nu rest van minüt pur termine la friz kronolojik) - Ci restano venti minuti per finire la linea del tempo.
+La France est située à l'ouest de l'Europe, entre l'océan Atlantique et la Méditerranée. (la Frans é situé a luèst de lörop, antr losean Atlantik é la Mediterané) - La Francia si trova a ovest dell'Europa, tra l'oceano Atlantico e il Mediterraneo.
+Paris est à environ trois cent cinquante kilomètres de Bruxelles. (Pari é a anviron trwa san sankant kilometr de Brüksèl) - Parigi dista circa trecentocinquanta chilometri da Bruxelles.
+L'Espagne partage une longue frontière avec la France. (Lespañ partaʒ ün long frontyèr avek la Frans) - La Spagna condivide una lunga frontiera con la Francia.
+Madrid se trouve au centre de l'Espagne, assez loin de la côte. (Madrid se truv o santr de Lespañ, ase lwan de la kot) - Madrid si trova al centro della Spagna, abbastanza lontano dalla costa.
+L'Italie s'étend sur plus de mille kilomètres du nord au sud. (Litali setan sür plü de mil kilometr dü nor o süd) - L'Italia si estende per più di mille chilometri da nord a sud.
+Rome est située à environ deux cents kilomètres de Florence. (Rom é situé a anviron dö san kilometr de Florans) - Roma si trova a circa duecento chilometri da Firenze.
+La Sicile est la plus grande île de la Méditerranée. (la Sisil é la plü grand il de la Mediterané) - La Sicilia è l'isola più grande del Mediterraneo.
+La Sardaigne se trouve à l'ouest de la péninsule italienne. (la Sardaɲ se truv a luèst de la peninsül italièn) - La Sardegna si trova a ovest della penisola italiana.
+Le Portugal est à l'ouest de l'Espagne, au bord de l'océan Atlantique. (le Portugal é a luèst de Lespañ, o bor de losean Atlantik) - Il Portogallo si trova a ovest della Spagna, sull'oceano Atlantico.
+Lisbonne est à plus de cinq cents kilomètres de Madrid. (Lisbon é a plü de sank san kilometr de Madrid) - Lisbona dista più di cinquecento chilometri da Madrid.
+L'Allemagne est l'un des plus grands pays d'Europe. (Lalmanʲ é lan de plü gran pei dörop) - La Germania è uno dei Paesi più grandi d'Europa.
+Berlin est beaucoup plus au nord que Munich. (Berlin é bokou plü o nor ke Münik) - Berlino è molto più a nord di Monaco di Baviera.
+La Pologne se trouve entre l'Allemagne et l'Ukraine. (la Poloɲ se truv antr Lalmanʲ é Lükren) - La Polonia si trova tra la Germania e l'Ucraina.
+Varsovie est située à environ mille kilomètres de Berlin. (Varsovi é situé a anviron mil kilometr de Berlin) - Varsavia si trova a circa mille chilometri da Berlino.
+La Grèce est composée de milliers d'îles, mais elles ne sont pas toutes habitées. (la Grès é kompozé de milye dil, mè el ne son pa tut abité) - La Grecia è composta da migliaia di isole, ma non sono tutte abitate.
+Athènes se trouve dans la partie sud-est du pays. (Atèn se truv dan la parti südèst dü pei) - Atene si trova nella parte sud-orientale del Paese.
+L'Égypte est traversée par le Nil sur plus de mille kilomètres. (Legipt é traversé par le Nil sür plü de mil kilometr) - L'Egitto è attraversato dal Nilo per più di mille chilometri.
+Le Caire est l'une des villes les plus peuplées d'Afrique. (le Ker é lün de vil le plü pöplé dafrik) - Il Cairo è una delle città più popolose dell'Africa.
+Le Maroc se trouve au nord-ouest de l'Afrique. (le Marok se truv o nor-uèst de lafrik) - Il Marocco si trova nel nord-ovest dell'Africa.
+Casablanca est à environ deux cent cinquante kilomètres de Rabat. (Kazablanka é a anviron dö san sankant kilometr de Raba) - Casablanca dista circa duecentocinquanta chilometri da Rabat.
+L'Afrique est le deuxième plus grand continent après l'Asie. (Lafrik é le dözyèm plü gran kontinan aprè Lazi) - L'Africa è il secondo continente più grande dopo l'Asia.
+L'Asie est tellement vaste qu'elle couvre une grande partie de l'hémisphère nord. (Lazi é telman vast kel küvr ün grand parti de lemisfèr nor) - L'Asia è talmente vasta che copre gran parte dell'emisfero settentrionale.
+La Chine est séparée de l'Europe par plusieurs milliers de kilomètres. (la Cin é separé de lörop par plüzior milye kilometr) - La Cina è separata dall'Europa da diverse migliaia di chilometri.
+Pékin se trouve à plus de deux mille kilomètres de Shanghai. (Pekin se truv a plü de dö mil kilometr de Scianghai) - Pechino dista più di duemila chilometri da Shanghai.
+Le Japon est un archipel situé dans l'océan Pacifique. (le Japon é an arcipel situé dan losean Pasifik) - Il Giappone è un arcipelago situato nell'oceano Pacifico.
+Tokyo est l'une des plus grandes agglomérations du monde. (Tokyo é lün de plü grand aglomerasiòn dü mond) - Tokyo è una delle più grandi aree metropolitane del mondo.
+L'Inde est beaucoup plus peuplée que la France. (Lind é bokou plü pöplé ke la Frans) - L'India è molto più popolosa della Francia.
+New Delhi se trouve dans le nord de l'Inde. (Nü Delhi se truv dan le nor de Lind) - Nuova Delhi si trova nel nord dell'India.
+La Russie s'étend sur une distance de plus de neuf mille kilomètres d'est en ouest. (la Rüsi setan sür ün distans de plü de nöf mil kilometr dèst an uèst) - La Russia si estende per una distanza di oltre novemila chilometri da est a ovest.
+Moscou est beaucoup plus à l'ouest que Vladivostok. (Moskü é bokou plü a luèst ke Vladivostok) - Mosca è molto più a ovest di Vladivostok.
+Les États-Unis s'étendent de l'océan Atlantique à l'océan Pacifique. (lez Eta-Züni setand de losean Atlantik a losean Pasifik) - Gli Stati Uniti si estendono dall'oceano Atlantico all'oceano Pacifico.
+New York est à environ quatre mille kilomètres de Los Angeles. (Nü York é a anviron katr mil kilometr de Los Anʒeles) - New York dista circa quattromila chilometri da Los Angeles.
+Le Canada partage une immense frontière avec les États-Unis. (le Kanada partaʒ ün imans frontyèr avek lez Eta-Züni) - Il Canada condivide un'immensa frontiera con gli Stati Uniti.
+Ottawa est située dans la partie est du Canada. (Otawa é situé dan la parti èst dü Kanada) - Ottawa si trova nella parte orientale del Canada.
+Le Mexique est au sud des États-Unis et au nord de l'Amérique centrale. (le Meksik é o süd dez Eta-Züni é o nor de Lamerik santral) - Il Messico si trova a sud degli Stati Uniti e a nord dell'America centrale.
+Mexico est à plus de deux mille mètres d'altitude. (Meksiko é a plü de dö mil metr daltitüd) - Città del Messico si trova a più di duemila metri di altitudine.
+L'Amérique du Sud est traversée par l'Amazone, l'un des plus grands fleuves du monde. (Lamerik dü süd é traversé par Lamazon, lan de plü gran flöv dü mond) - Il Sud America è attraversato dal Rio delle Amazzoni, uno dei fiumi più grandi del mondo.
+Buenos Aires se trouve sur la côte est de l'Argentine. (Bwenozèr se truv sür la kot èst de laʒantin) - Buenos Aires si trova sulla costa orientale dell'Argentina.
+Le Brésil occupe presque la moitié du territoire de l'Amérique du Sud. (le Brezil okup presk la mwatye dü teritwa de Lamerik dü süd) - Il Brasile occupa quasi la metà del territorio del Sud America.
+L'Australie est à plusieurs milliers de kilomètres de l'Asie. (Lostrali é a plüzior milye kilometr de Lazi) - L'Australia dista diverse migliaia di chilometri dall'Asia.
+Sydney est située sur la côte sud-est de l'Australie. (Sidnè é situé sür la kot südèst de Lostrali) - Sydney si trova sulla costa sud-orientale dell'Australia.
+L'Antarctique est le continent le plus froid de la planète. (Lantarctik é le kontinan le plü frwa de la planet) - L'Antartide è il continente più freddo del pianeta.
+Le Groenland est beaucoup plus grand que la plupart des pays européens. (le Groenlan é bokou plü gran ke la plüpar de pei zöropeen) - La Groenlandia è molto più grande della maggior parte dei Paesi europei.
+Le Sahara couvre une immense superficie en Afrique du Nord. (le Sahara küvr ün imans sürfasi an Afrik dü Nor) - Il Sahara copre un'immensa superficie nel Nord Africa.
+Le Danube traverse plusieurs pays avant d'atteindre la mer Noire. (le Danüb travers plüzior pei avan datandr la mer Nwar) - Il Danubio attraversa diversi Paesi prima di raggiungere il Mar Nero.
+Les Alpes forment une frontière naturelle entre plusieurs pays européens. (lez Alp form ün frontyèr natürèl antr plüzior pei zöropeen) - Le Alpi formano una frontiera naturale tra diversi Paesi europei.
+Le mont Blanc dépasse les quatre mille huit cents mètres d'altitude. (le mon Blan depas le katr mil üit san metr daltitüd) - Il Monte Bianco supera i quattromilaottocento metri di altitudine.
+Cette vallée est à seulement trente kilomètres de la frontière suisse. (set vale é a selman trant kilometr de la frontyèr süis) - Questa valle dista solo trenta chilometri dal confine svizzero.
+La capitale se trouve à environ cent kilomètres de la mer. (la kapital se truv a anviron san kilometr de la mer) - La capitale si trova a circa cento chilometri dal mare.
+Sur cette carte, chaque centimètre représente cinquante kilomètres. (sür set kart, scak santimetr reprézant sankant kilometr) - Su questa carta, ogni centimetro rappresenta cinquanta chilometri.
+Je pense qu'on comprend mieux une guerre quand on connaît aussi son contexte historique. (ʒö pans kon kompran miö ün gèr kan on konè osi son konteks istorik) - Penso che si comprenda meglio una guerra quando se ne conosce anche il contesto storico.
+On peut parler de religion sans forcément être d'accord avec les croyances des autres. (on pö parlé de relijyon san forséman etr dakor avek le krwayans dez otr) - Si può parlare di religione senza essere necessariamente d'accordo con le credenze degli altri.
+Tu crois que les conflits religieux sont toujours vraiment religieux ? (tü krwar ke le konflì relijyö son tuʒur vrèman relijyö) - Credi che i conflitti religiosi siano sempre veramente religiosi?
+À mon avis, il y a souvent aussi des raisons politiques derrière. (a mon avi, il ia suvan osi de rezòn politik derièr) - Secondo me, spesso ci sono anche motivi politici dietro.
+Certaines guerres ont commencé pour des raisons qui n'avaient rien à voir avec la religion. (sèrtèn gèr on komanse pur de rezòn ki navè rièn a vwar avek la relijyon) - Alcune guerre sono iniziate per motivi che non avevano nulla a che fare con la religione.
+Je trouve intéressant de comparer les différentes façons dont les peuples expliquent le monde. (ʒö truv interesan de kompare le diferant fason don le pöpl eksplìk le mond) - Trovo interessante confrontare i diversi modi in cui i popoli spiegano il mondo.
+Les religions du monde sont beaucoup plus diverses qu'on ne l'imagine. (le relijyon dü mond son bokou plü divers kon ne limajin) - Le religioni del mondo sono molto più diverse di quanto si immagini.
+On entend souvent parler des différences, mais moins de ce qu'elles ont en commun. (on antan suvan parlé de diferans, mè mwan de se kel on an komün) - Si sente spesso parlare delle differenze, ma meno di ciò che hanno in comune.
+L'histoire montre que les frontières peuvent changer énormément en quelques décennies. (listwar montr ke le frontyèr pöv sciandʒé enormeman an kelk deseni) - La storia mostra che i confini possono cambiare enormemente in pochi decenni.
+Je me demande comment les gens ordinaires vivaient pendant ces guerres. (ʒö me mand koman le ʒan ordinèr vivè pandan se gèr) - Mi chiedo come vivessero le persone comuni durante queste guerre.
+Ce qui me frappe, c'est le nombre de civils qui ont souffert. (se ki me frap, sè le nombr de sivil ki on sufèr) - Ciò che mi colpisce è il numero di civili che hanno sofferto.
+On oublie parfois que derrière les chiffres, il y a des millions de personnes. (on üb l i parfwa ke derièr le scifr, il ia de milyon de person) - A volte si dimentica che dietro i numeri ci sono milioni di persone.
+Les enfants sont souvent parmi les premières victimes des conflits. (lez anfan son suvan parmi le premièr viktim de konflì) - I bambini sono spesso tra le prime vittime dei conflitti.
+Je préfère essayer de comprendre les causes plutôt que de chercher immédiatement un coupable. (ʒö prefer eseyé de komprandr le koz plüto ke de scersc imediatman an kuplabl) - Preferisco cercare di capire le cause piuttosto che cercare subito un colpevole.
+On peut critiquer une religion sans manquer de respect à ceux qui la pratiquent. (on pö kritike ün relijyon san manke de respekt a sö ki la pratik) - Si può criticare una religione senza mancare di rispetto a chi la pratica.
+Je trouve important de faire la différence entre une croyance et une décision politique. (ʒö truv important de fer la diferans antr ün krwayans é ün desiziòn politik) - Trovo importante distinguere tra una credenza e una decisione politica.
+Toutes les personnes d'une même religion ne pensent évidemment pas de la même façon. (tut le person d ün mem relijyon ne pans evidaman pa de la mem fason) - Ovviamente non tutte le persone della stessa religione pensano allo stesso modo.
+Il y a des croyants très pratiquants et d'autres beaucoup moins. (il ia de krwayan trè pratikã é dotr bokou mwan) - Ci sono credenti molto praticanti e altri molto meno.
+Dans une même famille, les opinions religieuses peuvent être complètement différentes. (dan ün mem famiy, le zopinyon relijyöz pöv etr komèteman diferant) - Nella stessa famiglia le opinioni religiose possono essere completamente diverse.
+Je trouve fascinant de voir comment une même histoire est racontée différemment selon les cultures. (ʒö truv fasinasan de vwar koman ün mem istwar é rakonté diferaman selon le kültür) - Trovo affascinante vedere come una stessa storia venga raccontata diversamente a seconda delle culture.
+Certaines traditions sont très anciennes et existent depuis des milliers d'années. (sèrtèn tradisiòn son trè ansyèn é egzist döpüi de milye dane) - Alcune tradizioni sono molto antiche ed esistono da migliaia di anni.
+On devrait apprendre davantage l'histoire des religions à l'école. (on dövrè aprandr davantage listwar de relijyon a lekol) - Si dovrebbe studiare maggiormente la storia delle religioni a scuola.
+Ça permettrait peut-être de mieux comprendre certaines tensions actuelles. (sa permetrè petetr de miö komprandr sèrtèn tãsyòn aktüèl) - Forse permetterebbe di comprendere meglio alcune tensioni attuali.
+Une guerre peut laisser des traces pendant plusieurs générations. (ün gèr pö lesé de tras pandan plüzior ʒenerasiòn) - Una guerra può lasciare conseguenze per diverse generazioni.
+Même après la paix, les souvenirs restent parfois très présents. (mem aprè la pè, le suvnir rest parfwa trè prezan) - Anche dopo la pace, i ricordi a volte rimangono molto presenti.
+Je comprends pourquoi certaines familles ont encore du mal à parler de la guerre. (ʒö kompran purkwa sèrtèn famiy on ankor dü mal a parlé de la gèr) - Capisco perché alcune famiglie facciano ancora fatica a parlare della guerra.
+Les monuments aux morts racontent une partie de l'histoire d'un pays. (le monüman o mor rakont ün parti de listwar dan pei) - I monumenti ai caduti raccontano una parte della storia di un Paese.
+Quand je visite un lieu historique, j'essaie toujours d'imaginer ce qui s'y passait avant. (kan ʒö vizit an lyo istorik, ʒesè tuʒur dimajiné se ki si pasè avan) - Quando visito un luogo storico, cerco sempre di immaginare cosa vi accadesse in passato.
+Les frontières actuelles ne ressemblent pas toujours à celles d'il y a cent ans. (le frontyèr aktüèl ne resãbl pa tuʒur a sel dil ia san an) - I confini attuali non assomigliano sempre a quelli di cento anni fa.
+On parle beaucoup de paix, mais elle demande souvent énormément d'efforts. (on parl bokou de pè, mè el dömand suvan enormeman defor) - Si parla molto di pace, ma spesso richiede enormi sforzi.
+Je pense que le dialogue vaut mieux que la violence, même quand les désaccords sont profonds. (ʒö pans ke le dyalog vo miö ke la vyolans, mem kan le dezakor son profon) - Penso che il dialogo sia meglio della violenza, anche quando i disaccordi sono profondi.
+Il est difficile de juger le passé avec uniquement les critères d'aujourd'hui. (il é difisil de ʒüʒé le pase avek ünıkman le kriter doʒurdüi) - È difficile giudicare il passato usando soltanto i criteri di oggi.
+Mais comprendre le contexte ne veut pas forcément dire tout excuser. (mè komprandr le konteks ne vö pa forséman dir tu eksküzé) - Ma comprendere il contesto non significa necessariamente giustificare tutto.
+Les religions ont aussi joué un rôle important dans l'art et l'architecture. (le relijyon on osi ʒüé an rol important dan lar é larʃitektür) - Le religioni hanno avuto un ruolo importante anche nell'arte e nell'architettura.
+On le voit dans les temples, les églises, les mosquées et les synagogues. (on le vwar dan le tanpl, lez egliz, le moske é le sinagog) - Lo si vede nei templi, nelle chiese, nelle moschee e nelle sinagoghe.
+Certaines villes ont changé de religion dominante plusieurs fois au cours de leur histoire. (sèrtèn vil on sciãʒé de relijyon dominãt plüzior fwa o kur de lör istwar) - Alcune città hanno cambiato più volte religione dominante nel corso della loro storia.
+Ça doit être passionnant d'étudier une ville qui a été influencée par plusieurs civilisations. (sa dwa etr pasyonan detüdié ün vil ki a été enfliüansé par plüzior sivilizasiòn) - Deve essere affascinante studiare una città influenzata da diverse civiltà.
+Je ne crois pas qu'on puisse expliquer un conflit avec une seule cause. (ʒö ne krwar pa kon püis ekspliké an konflì avek ün sèl koz) - Non credo che si possa spiegare un conflitto con una sola causa.
+Il faut souvent regarder la politique, l'économie, le territoire et l'histoire ensemble. (il fo suvan regardé la politik, lekonomi, le teritwa é listwar ansãbl) - Spesso bisogna considerare insieme politica, economia, territorio e storia.
+Les ressources naturelles peuvent aussi être à l'origine de tensions entre les pays. (le resurs natürèl pöv osi etr a loriʒin de tãsyòn antr le pei) - Le risorse naturali possono essere anch'esse all'origine di tensioni tra i Paesi.
+L'eau est devenue une question stratégique dans plusieurs régions du monde. (lo é devenü ün kestyon strateʒik dan plüzior reʒyon dü mond) - L'acqua è diventata una questione strategica in diverse regioni del mondo.
+Je trouve incroyable que certaines frontières aient été tracées il y a seulement quelques décennies. (ʒö truv enkroyabl ke sèrtèn frontyèr è été trase il ia selman kelk deseni) - Trovo incredibile che alcuni confini siano stati tracciati solo pochi decenni fa.
+Quand on regarde une carte ancienne, on ne reconnaît parfois presque plus les pays. (kan on regard ün kart ansyèn, on ne rekonè parfwa presk plü le pei) - Quando si guarda una carta antica, a volte non si riconoscono quasi più i Paesi.
+Dilettante d'histoire ou pas, je trouve ce sujet impossible à résumer en quelques minutes. (diletãt distwar u pa, ʒö truv se süʒè imposibl a rezüme an kelk minüt) - Che si sia appassionati di storia oppure no, trovo questo argomento impossibile da riassumere in pochi minuti.
+On peut ne pas partager une croyance tout en respectant la personne qui la défend. (on pö ne pa partaʒé ün krwayans tu an respektã la person ki la defan) - Si può non condividere una credenza rispettando comunque la persona che la sostiene.
+Au fond, les gens cherchent souvent les mêmes choses : la sécurité, la famille et une vie tranquille. (o fon, le ʒan scersc suvan le mem scos: la sekürité, la famiy é ün vi trankil) - In fondo, le persone cercano spesso le stesse cose: sicurezza, famiglia e una vita tranquilla.
+C'est peut-être pour ça que l'histoire mérite d'être étudiée avec autant d'attention. (sè petetr pur sa ke listwar merit detr etüdié avek otan datansyon) - Forse è proprio per questo che la storia merita di essere studiata con tanta attenzione.
+Je trouve que les chats sont beaucoup plus indépendants que les chiens. (ʒö truv ke le scia son bokou plüz endepandã ke le sciẽ) - Trovo che i gatti siano molto più indipendenti dei cani.
+Notre voisin a adopté un vieux labrador qui avait été abandonné. (notr vwa-zẽ a adopte an vyö labrador ki avè été abandone) - Il nostro vicino ha adottato un vecchio labrador che era stato abbandonato.
+Les golden retrievers ont souvent un caractère très doux avec les enfants. (le golden retriver on suvan an karakter trè du avek lez anfã) - I golden retriever hanno spesso un carattere molto dolce con i bambini.
+Je ne suis pas sûr qu'un perroquet soit facile à garder en appartement. (ʒö ne süi pa sür kan peroke swa fasil a gardé an apartman) - Non sono sicuro che un pappagallo sia facile da tenere in appartamento.
+Les perruches peuvent apprendre à reconnaître certaines voix. (le perüsc pöv aprandr a rekonetr sertèn vwa) - I pappagallini possono imparare a riconoscere alcune voci.
+J'ai toujours trouvé les dauphins fascinants, surtout leur intelligence. (ʒé tuʒur truve le dofẽ fasinasã, sürtu lör ẽteliʒans) - Ho sempre trovato affascinanti i delfini, soprattutto per la loro intelligenza.
+Un éléphant peut reconnaître son reflet dans un miroir. (an elefan pö rekonetr son reflet danz an mirwar) - Un elefante può riconoscere il proprio riflesso in uno specchio.
+Les éléphants vivent en groupes très organisés. (lez elefan viv an grup trèz organize) - Gli elefanti vivono in gruppi molto organizzati.
+Tu savais que les corbeaux sont capables de résoudre des problèmes assez complexes ? (tü savè ke le korbo son kapab de rezudr de problem ase komplek) - Sapevi che i corvi sono capaci di risolvere problemi abbastanza complessi?
+Je préfère observer les renards dans la nature plutôt que de les voir en captivité. (ʒö prefer opsèrve le rena(r) dan la natür plüto ke de le vwar an kaptivité) - Preferisco osservare le volpi in natura piuttosto che vederle in cattività.
+Les loups communiquent entre eux avec des sons, des gestes et des odeurs. (le lu komünik antr ö avek de son, de ʒest é de zodör) - I lupi comunicano tra loro con suoni, gesti e odori.
+Un hibou peut tourner sa tête beaucoup plus qu'un humain. (an ibu pö turné sa tet bokou plü kan ümẽ) - Un gufo può girare la testa molto più di un essere umano.
+Les chouettes ont une ouïe impressionnante, même dans l'obscurité. (le scwèt on ün wi ẽpresyonãt, mem dan lobskürité) - I gufi hanno un udito impressionante, anche al buio.
+Je ne voudrais jamais avoir un serpent chez moi, même si certaines espèces sont inoffensives. (ʒö ne vudrè ʒamè avwar an serpã sce mwa, mem si sèrtèn espes son inofansiv) - Non vorrei mai avere un serpente in casa, anche se alcune specie sono innocue.
+Les serpents comme le python peuvent devenir vraiment énormes. (le serpã kom le piton pöv devenìr vrèman enorm) - Serpenti come il pitone possono diventare davvero enormi.
+Un gecko léopard est beaucoup plus petit qu'un iguane adulte. (an geko leopar é bokou plü pəti kan igüan adült) - Un geco leopardino è molto più piccolo di un'iguana adulta.
+Les tortues terrestres peuvent vivre plusieurs dizaines d'années. (le tortü terestr pöv viv plüzior dezèn dane) - Le tartarughe terrestri possono vivere diverse decine di anni.
+Je me demande combien de temps une tortue géante peut réellement vivre. (ʒö me mand kombiẽ de tã ün tortü ʒeyãt pö reèlman vivr) - Mi chiedo quanto possa vivere realmente una tartaruga gigante.
+Les caméléons changent de couleur pour plusieurs raisons, pas seulement pour se cacher. (le kameleon sciãʒ de kulör pur plüzior rezòn, pa selman pur se kascé) - I camaleonti cambiano colore per diverse ragioni, non solo per nascondersi.
+Je trouve les axolotls vraiment étranges, mais fascinants à observer. (ʒö truv le aksolotl vrèmanz etrãʒ, mè fasinasã a opsèrve) - Trovo gli axolotl davvero strani, ma affascinanti da osservare.
+Les poissons rouges ont besoin de beaucoup plus d'espace qu'on ne le pense. (le pwasõ ruʒ on bezwan de bokou plü despas kon ne le pans) - I pesci rossi hanno bisogno di molto più spazio di quanto si pensi.
+Un aquarium trop petit peut être mauvais pour un poisson. (an akwaryom tro pəti pö etr movè pur an pwasõ) - Un acquario troppo piccolo può essere dannoso per un pesce.
+Je trouve les chats beaucoup plus expressifs qu'on ne l'imagine. (ʒö truv le scia bokou plü ekspresif kon ne limajin) - Trovo che i gatti siano molto più espressivi di quanto si immagini.
+Notre chat vient nous réveiller tous les matins à la même heure. (notr scia vien nu reveyé tu le maten a la mem ör) - Il nostro gatto viene a svegliarci tutte le mattine alla stessa ora.
+Les chiens comprennent souvent beaucoup de mots sans qu'on s'en rende compte. (le sciẽ komprèn suvan bokou de mo san kon san rand kont) - I cani spesso capiscono molte parole senza che ce ne rendiamo conto.
+Un border collie a besoin de beaucoup d'activité pour être heureux. (an border koli a bezwan de bokou daktivité pur etr örö) - Un border collie ha bisogno di molta attività per essere felice.
+Les lapins sont mignons, mais ils demandent aussi pas mal de soins. (le lapẽ son miñon, mè il demand osi pa mal de swẽ) - I conigli sono carini, ma richiedono anche parecchie cure.
+Je ne savais pas qu'un cochon d'Inde pouvait être aussi sociable. (ʒö ne savè pa kan kosõ dẽ pöve etr osi sosyabl) - Non sapevo che una cavia potesse essere così socievole.
+Les hamsters sont surtout actifs pendant la nuit. (le amstèr son sürtu aktif pandan la nüi) - I criceti sono soprattutto attivi durante la notte.
+Un furet peut être très curieux et mettre son nez partout. (an fürè pö etr trè kürjö é metr son ne partu) - Un furetto può essere molto curioso e mettere il naso dappertutto.
+Je pense qu'il faut bien réfléchir avant d'acheter un animal exotique. (ʒö pans kil fo biẽ reflecir avan dasceté an animal egzotik) - Penso che bisogna riflettere bene prima di acquistare un animale esotico.
+Certaines personnes achètent des serpents sans savoir combien leur entretien peut coûter. (sèrtèn person asèt de serpã san savwar kombiẽ lör ãtrötyẽ pö kuté) - Alcune persone comprano serpenti senza sapere quanto possa costare mantenerli.
+Un iguane adulte peut avoir besoin d'un espace assez grand. (an igüan adült pö avwar bezwan dan espas ase gran) - Un'iguana adulta può avere bisogno di uno spazio abbastanza grande.
+Les perroquets peuvent vivre très longtemps, parfois plusieurs dizaines d'années. (le peroke pöv vivr trè longtan, parfwa plüzior dezèn dane) - I pappagalli possono vivere molto a lungo, a volte per diverse decine di anni.
+Je trouve les flamants roses magnifiques quand ils sont tous regroupés. (ʒö truv le flamã roz magnifik kan il son tu regroupé) - Trovo bellissimi i fenicotteri rosa quando sono tutti riuniti.
+Les manchots vivent dans des régions où les températures sont extrêmement basses. (le mãscio viv dan de reʒyon u le tanperatür son ekstrèmman bas) - I pinguini vivono in regioni dove le temperature sono estremamente basse.
+Un ours polaire peut parcourir de très longues distances pour chercher de la nourriture. (an urs polèr pö parkur de trè long distans pur scerscé de la nuritür) - Un orso polare può percorrere distanze molto lunghe per cercare cibo.
+Les girafes ont un cou incroyablement long, mais elles ont aussi un cœur très puissant. (le ʒiraf on an ku ẽkrwayablaman long, mè el on osi an kœr trè pwisã) - Le giraffe hanno un collo incredibilmente lungo, ma hanno anche un cuore molto potente.
+Je trouve les gorilles impressionnants, surtout quand on les voit de près. (ʒö truv le goriy ẽpresyonã, sürtu kan on le vwar de pre) - Trovo impressionanti i gorilla, soprattutto quando li si vede da vicino.
+Les chimpanzés sont capables d'utiliser certains objets comme outils. (le scẽpãze son kapab dütìlize sèrtẽz obʒè kom util) - Gli scimpanzé sono capaci di usare alcuni oggetti come strumenti.
+Les abeilles jouent un rôle essentiel dans la pollinisation des plantes. (lez abèy ʒu an rol esansyel dan la polinizasiòn de plant) - Le api svolgono un ruolo essenziale nell'impollinazione delle piante.
+Sans les insectes pollinisateurs, beaucoup de cultures seraient en difficulté. (san le zẽsekt polinizatör, bokou de kültür serè an difikülte) - Senza gli insetti impollinatori, molte coltivazioni sarebbero in difficoltà.
+Les araignées me dérangent moins depuis que j'ai appris leur rôle dans la nature. (lez arañe me derãʒ mwan döpüi ke ʒé apri lör rol dan la natür) - I ragni mi danno meno fastidio da quando ho imparato a conoscere il loro ruolo in natura.
+Une seule chauve-souris peut manger énormément d'insectes pendant une nuit. (ün sèl scov-suri pö manʒé enormeman dẽsekt pandan ün nüi) - Un solo pipistrello può mangiare un'enorme quantità di insetti durante una notte.
+Je trouve étonnant que certains animaux reconnaissent leur propre nom. (ʒö truv etonã ke sèrtẽz animal rekonès lör propr nom) - Trovo sorprendente che alcuni animali riconoscano il proprio nome.
+À la maison, on préfère les animaux qui peuvent s'adapter facilement à notre rythme de vie. (a la mezon, on prefer le zanimo ki pöv sadapté fasilman a notr ritm de vi) - A casa preferiamo gli animali che possono adattarsi facilmente al nostro ritmo di vita.
+Pour moi, avoir un animal, c'est surtout accepter une responsabilité pendant de nombreuses années. (pur mwa, avwar an animal, sè sürtu aksèpte ün responsablité pandan de nombröz ane) - Per me, avere un animale significa soprattutto assumersi una responsabilità per molti anni.
+Je trouve que Marc vérifie toujours trois fois s'il a bien fermé la porte. (ʒö truv ke Mark verifi tuʒur trwa fwa sil a bièn ferme la port) - Trovo che Marc controlli sempre tre volte se ha chiuso bene la porta.
+Sophie ne boit jamais son café avant de regarder ses messages. (Sofi ne bwa ʒamè son kafe avan de regardé se mesaʒ) - Sophie non beve mai il caffè prima di guardare i suoi messaggi.
+Paul commence chaque matin par ouvrir toutes les fenêtres. (Pol komans scak maten par uvrir tut le fenetr) - Paul comincia ogni mattina aprendo tutte le finestre.
+Claire a l'habitude de parler toute seule quand elle fait le ménage. (Klèr a labitüd de parlé tut sèl kan el fè le menaʒ) - Claire ha l'abitudine di parlare da sola quando fa le pulizie.
+Tu as remarqué que Julien mange toujours les aliments dans un ordre précis ? (tü a remarke ke ʒülyẽ manʒ tuʒur le zaliman danz an ordr presi) - Hai notato che Julien mangia sempre gli alimenti in un ordine preciso?
+Élodie arrive systématiquement dix minutes en avance, même quand personne ne l'attend. (Elodi ariv sistematikman dis minüt an avans, mem kan person ne latan) - Élodie arriva sistematicamente dieci minuti in anticipo, anche quando nessuno la aspetta.
+Thomas garde tous ses vieux téléphones dans une boîte depuis des années. (Toma gard tu se vyö telefon danz ün bwat döpüi dezane) - Thomas conserva tutti i suoi vecchi telefoni in una scatola da anni.
+Nathalie ne supporte pas les portes entrouvertes, elle les ferme toujours complètement. (Natali ne süport pa le portz antr uvert, el le ferm tuʒur komèteman) - Nathalie non sopporta le porte socchiuse, le chiude sempre completamente.
+J'ai remarqué que Laurent change de place dès qu'il y a un courant d'air. (ʒé remarke ke Loran sciãʒ de plas de kil ia an kurã der) - Ho notato che Laurent cambia posto appena c'è una corrente d'aria.
+Camille met toujours son réveil à cinq heures cinquante-neuf au lieu de six heures. (Kamiy met tuʒur son revei a sank ör sankant-nöf o lyo de sis ör) - Camille mette sempre la sveglia alle 5:59 invece che alle sei.
+Antoine peut passer une heure à choisir un film avant de finalement regarder une série. (Antwan pö pase ün ör a scwazir an film avan de finalman regardé ün seri) - Antoine può passare un'ora a scegliere un film per poi guardare una serie.
+Julie relit plusieurs fois ses messages avant de les envoyer. (ʒüli reli plüzior fwa se mesaʒ avan de lez anvuayé) - Julie rilegge più volte i suoi messaggi prima di inviarli.
+Pierre garde toujours un sac en plastique dans la voiture, juste au cas où. (Pièr gard tuʒur an sak an plastik dan la vuatür, ʒüst o ka u) - Pierre tiene sempre un sacchetto di plastica in macchina, non si sa mai.
+Tu sais pourquoi Isabelle met ses clés toujours au même endroit ? (tü sè purkwa Izabèl mè se kle tuʒur o mem andrwa) - Sai perché Isabelle mette sempre le chiavi nello stesso posto?
+Hugo ne peut pas s'endormir s'il n'a pas vérifié l'heure au moins deux fois. (Ügo ne pö pa sandormir sil na pa verifie ler o mwan dö fwa) - Hugo non riesce ad addormentarsi se non ha controllato l'ora almeno due volte.
+Marion a la manie de remettre les coussins en place dès que quelqu'un se lève. (Marion a la mani de remetr le kusẽ an plas de ke kelkan se lev) - Marion ha la mania di rimettere a posto i cuscini appena qualcuno si alza.
+Lucas mange tellement vite qu'on a à peine le temps de commencer. (Lüka manʒ telman vit kon a a pen le tan de komanse) - Lucas mangia così velocemente che abbiamo appena il tempo di iniziare.
+Chloé laisse toujours refroidir son thé pendant au moins quinze minutes. (Kloe les tuʒur refrodir son te pandan o mwan kanz minüt) - Chloé lascia sempre raffreddare il tè per almeno quindici minuti.
+Romain ne répond jamais au téléphone quand il est en train de cuisiner. (Romen ne repon ʒamè o telefon kan il é an tran de küizine) - Romain non risponde mai al telefono quando sta cucinando.
+Je trouve drôle que Manon mette ses chaussures dans un ordre différent chaque soir. (ʒö truv drol ke Manon mè se scosür danz an ordr diferan scak swar) - Trovo divertente che Manon metta le scarpe in un ordine diverso ogni sera.
+Thomas parle tellement fort au téléphone qu'on entend toute la conversation. (Toma parl telman for o telefon kon antan tut la konversasiòn) - Thomas parla così forte al telefono che si sente tutta la conversazione.
+Sébastien regarde la météo trois fois avant de décider s'il sort. (Sebastyẽ regard la meteo trwa fwa avan de deside sil sor) - Sébastien guarda il meteo tre volte prima di decidere se uscire.
+Amélie achète toujours deux exemplaires du même livre, au cas où elle en perdrait un. (Ameli asèt tuʒur dö egzãpler dü mem livr, o ka u el an perdrè an) - Amélie compra sempre due copie dello stesso libro, nel caso ne perda una.
+Nicolas déteste les nombres impairs et choisit toujours des nombres pairs. (Nikolà detèst le nombr ẽpèr é scwazi tuʒur de nombr per) - Nicolas odia i numeri dispari e sceglie sempre numeri pari.
+Laura vérifie son sac au moins quatre fois avant de quitter la maison. (Lora verifi son sak o mwan katr fwa avan de kite la mezon) - Laura controlla la borsa almeno quattro volte prima di uscire di casa.
+David a pris l'habitude de marcher dans l'appartement pendant qu'il téléphone. (David a pri labitüd de marsce dan lapartman pandan kil telefon) - David ha preso l'abitudine di camminare per casa mentre telefona.
+Je ne comprends pas comment Emma peut travailler avec autant de bruit autour d'elle. (ʒö ne kompran pa koman Ema pö travay avek otan de brüi otur del) - Non capisco come Emma possa lavorare con tutto quel rumore intorno.
+François éteint toujours les lumières dans les pièces où personne ne se trouve. (Franswa etẽ tuʒur le lümyèr dan le piès u person ne se truv) - François spegne sempre le luci nelle stanze dove non c'è nessuno.
+Sarah garde les tickets de caisse pendant plusieurs mois. (Sara gard le tikè de kes pandan plüzior mwa) - Sarah conserva gli scontrini per diversi mesi.
+Maxime ne supporte pas qu'on touche à ses affaires sans demander. (Maksim ne süport pa kon tusc a sez afèr san demande) - Maxime non sopporta che si tocchino le sue cose senza chiedere.
+Tu crois que Léa se rend compte qu'elle raconte la même histoire à chaque repas ? (tü krwar ke Lea se ran kont kel rakont la mem istwar a scak repa) - Credi che Léa si renda conto che racconta la stessa storia a ogni pasto?
+Olivier vérifie toujours deux fois la porte de la voiture avant de partir. (Olivie verifi tuʒur dö fwa la port de la vuatür avan de partir) - Olivier controlla sempre due volte la portiera dell'auto prima di partire.
+Caroline ne jette jamais un objet si elle pense qu'elle pourrait en avoir besoin un jour. (Karolin ne ʒet ʒamè an obʒè si el pans kel purèz an avwar bezwan an ʒur) - Caroline non butta mai un oggetto se pensa che potrebbe servirle un giorno.
+Jérôme connaît par cœur les horaires de bus de son quartier. (ʒerom konè par ker le zorèr de büs de son kartye) - Jérôme conosce a memoria gli orari degli autobus del suo quartiere.
+Valérie met toujours la même chanson quand elle fait la cuisine. (Valeri mè tuʒur la mem scanson kan el fè la küizin) - Valérie mette sempre la stessa canzone quando cucina.
+Marc ne sort jamais sans une petite bouteille d'eau dans son sac. (Mark ne sor ʒamè san ün pətit butèy do dan son sak) - Marc non esce mai senza una bottiglietta d'acqua nella borsa.
+Je trouve bizarre que Thomas mette une alarme même quand il doit se lever naturellement. (ʒö truv bizar ke Toma mè ün alarm mem kan il dwa se lev natürèlman) - Trovo strano che Thomas metta una sveglia anche quando deve semplicemente svegliarsi da solo.
+Sophie peut reconnaître une chanson après seulement trois secondes. (Sofi pö rekonetr ün scanson aprè selman trwa segond) - Sophie riesce a riconoscere una canzone dopo appena tre secondi.
+Paul a toujours besoin de savoir exactement combien de temps il reste avant de partir. (Pol a tuʒur bezwan de savwar egzakteman kombiẽ de tan il rest avan de partir) - Paul ha sempre bisogno di sapere esattamente quanto tempo manca prima di partire.
+Claire ouvre le frigo plusieurs fois sans jamais prendre quoi que ce soit. (Klèr uvr le frigo plüzior fwa san ʒamè prandr kwa ke se swa) - Claire apre il frigorifero più volte senza mai prendere nulla.
+Julien préfère envoyer un message plutôt que de téléphoner, même pour une chose urgente. (ʒülyẽ prefer anvuayé an mesaʒ plüto ke de telefone, mem pur ün scos ürʒant) - Julien preferisce mandare un messaggio invece di telefonare, anche per una cosa urgente.
+Élodie connaît les habitudes de tout le monde et remarque immédiatement quand quelque chose change. (Elodi konè lez abitüd de tu le mond é remark imediatman kan kelkö scos sciãʒ) - Élodie conosce le abitudini di tutti e nota immediatamente quando cambia qualcosa.
+Antoine est incapable de jeter les vieux câbles, même ceux dont il ne connaît plus l'utilité. (Antwan é ẽkapabl de ʒeté le vyo kabl, mem sö don il ne konè plü lütilité) - Antoine è incapace di buttare i vecchi cavi, anche quelli di cui non conosce più l'utilità.
+Nathalie prend toujours le même chemin, même quand un autre serait plus rapide. (Natali pran tuʒur le mem scemẽ, mem kan an otr serè plü rapid) - Nathalie fa sempre la stessa strada, anche quando un'altra sarebbe più veloce.
+Romain a tendance à répondre aux messages seulement quand il est déjà très tard. (Romen a tandans a repondr o mesaʒ selman kan il é deʒa trè tar) - Romain tende a rispondere ai messaggi solo quando è già molto tardi.
+Manon est tellement ponctuelle qu'elle arrive parfois avant même l'ouverture du magasin. (Manon é telman ponktüèl kel ariv parfwa avan mem luvertür dü magazẽ) - Manon è così puntuale che a volte arriva prima ancora dell'apertura del negozio.
+Lucas raconte toujours les détails les plus inutiles, mais c'est justement ce qui nous fait rire. (Lüka rakont tuʒur le detay le plü inütil, mè sè ʒüstman se ki nu fè rir) - Lucas racconta sempre i dettagli più inutili, ma è proprio questo che ci fa ridere.
+Je crois que chaque famille a ses petites manies, et c'est plutôt amusant. (ʒö krwar ke scak famiy a se pətit mani, é sè plüto amüzan) - Credo che ogni famiglia abbia le sue piccole manie, ed è piuttosto divertente.
+Il faudrait vérifier la pression avant de remettre l'installation en service. (il fodrè verifie la presion avan de remetr lanstalasion an servis) - Bisognerebbe controllare la pressione prima di rimettere l'impianto in servizio.
+Tu crois que cette alarme vient du capteur ou du tableau de commande ? (tü krwar ke set alarm vien dü kaptör u dü tablo de komand) - Pensi che questo allarme venga dal sensore o dal quadro di comando?
+J'ai remarqué que la température monte beaucoup plus vite depuis hier. (ʒé remarque ke la tanperatür mont bokou plü vit döpüi ier) - Ho notato che la temperatura sale molto più rapidamente da ieri.
+Le technicien a remplacé le câble, mais le problème est toujours là. (le teknisiẽ a ranplase le kabl, mè le problem é tuʒur la) - Il tecnico ha sostituito il cavo, ma il problema è ancora presente.
+On devrait mesurer la tension avant de toucher aux connexions. (on dövrè mezüre la tansion avan de tusce o koneksion) - Dovremmo misurare la tensione prima di toccare i collegamenti.
+Le moteur fait un bruit bizarre quand il démarre. (le motor fè an brüi bizar kan il demar) - Il motore fa uno strano rumore quando si avvia.
+J'ai l'impression que la pompe fonctionne par intermittence. (ʒé lepresion ke la pomp fonksion par anterm itans) - Ho l'impressione che la pompa funzioni a intermittenza.
+Le logiciel nous signale une erreur, mais il ne donne aucune explication. (le loʒisyel nu siɲal ün erör, mè il ne don okün eksplikasion) - Il software ci segnala un errore, ma non dà alcuna spiegazione.
+Tu as sauvegardé la dernière version du programme ? (tü a sovgardé la dernyer version dü program) - Hai salvato l'ultima versione del programma?
+Il faut mettre à jour le système avant la prochaine intervention. (il fo metr a ʒur le sistem avan la proschen antarvansion) - Bisogna aggiornare il sistema prima del prossimo intervento.
+Le nouveau capteur est plus précis que l'ancien. (le nuvo kaptör é plü presi ke lansien) - Il nuovo sensore è più preciso di quello vecchio.
+On pourrait automatiser cette étape au lieu de la faire manuellement. (on purè otomatize set etap o lyo de la fer manyelman) - Potremmo automatizzare questa fase invece di farla manualmente.
+Le tableau électrique est dans le local technique au fond du couloir. (le tablo elektrik é dan le lokal teknik o fon dü kulwar) - Il quadro elettrico è nel locale tecnico in fondo al corridoio.
+J'ai vérifié les fusibles, ils sont tous en bon état. (ʒé verifie le fü zib, il son tu an bon eta) - Ho controllato i fusibili, sono tutti in buone condizioni.
+La connexion réseau coupe dès qu'on lance plusieurs applications. (la koneksion rezo kup de kon lanse plüzior aplikasion) - La connessione di rete si interrompe appena avviamo diverse applicazioni.
+Notre serveur est presque plein, il faudrait libérer de l'espace. (notr server é presk plen, il fodrè libere de lespas) - Il nostro server è quasi pieno, bisognerebbe liberare spazio.
+Le système fonctionne normalement pendant deux heures, puis il se bloque. (le sistem fonksion normalman pandan döz ör, pwi il se blok) - Il sistema funziona normalmente per due ore, poi si blocca.
+Je pense qu'on devrait enregistrer les données toutes les cinq minutes. (ʒö pans kon dövrè anreʒistre le done tut le sank minüt) - Penso che dovremmo registrare i dati ogni cinque minuti.
+Le nouveau logiciel est intéressant, mais l'interface n'est pas très intuitive. (le nuvo loʒisyel é interesan, mè lanterfas né pa trè antüitiv) - Il nuovo software è interessante, ma l'interfaccia non è molto intuitiva.
+Tu peux vérifier si l'imprimante est bien connectée au réseau ? (tü pö verifie si lanprimant é biẽ konekte o rezo) - Puoi controllare se la stampante è collegata correttamente alla rete?
+On a changé le routeur la semaine dernière et depuis, tout marche mieux. (on a sciãʒe le ruter la semen dernyer é döpüi tu marsc miö) - Abbiamo cambiato il router la settimana scorsa e da allora funziona tutto meglio.
+Le signal est trop faible dans cette partie du bâtiment. (le siɲal é tro febl dan set parti dü batiman) - Il segnale è troppo debole in questa parte dell'edificio.
+Il faudrait installer un répéteur pour améliorer la couverture Wi-Fi. (il fodrè ẽstale an repetör pur amel yore la küvertür wi-fi) - Bisognerebbe installare un ripetitore per migliorare la copertura Wi-Fi.
+La batterie tient à peine une demi-journée maintenant. (la batri tẽ a pen ün demi-ʒurne mantenan) - La batteria ormai dura appena mezza giornata.
+J'ai commandé deux chargeurs de secours pour le bureau. (ʒé komande dö sarʒör de sekür pur le büro) - Ho ordinato due caricabatterie di emergenza per l'ufficio.
+Le système de ventilation consomme beaucoup plus d'énergie que prévu. (le sistem de ventilasion konsom bokou plü denerʒi ke prevü) - Il sistema di ventilazione consuma molta più energia del previsto.
+On devrait comparer les relevés de cette année avec ceux de l'année dernière. (on dövrè kompare le releve de set ane avek sö de lane dernyer) - Dovremmo confrontare le rilevazioni di quest'anno con quelle dell'anno scorso.
+La consommation a augmenté de presque quinze pour cent. (la konsomasion a ogmante de presk kenz pur san) - Il consumo è aumentato di quasi il quindici per cento.
+Le compresseur s'arrête automatiquement quand la pression dépasse la limite. (le kompresör saretomatikman kan la presion depas la limit) - Il compressore si arresta automaticamente quando la pressione supera il limite.
+Il faut absolument respecter les paramètres indiqués par le fabricant. (il fo absolüman respekte le paramètr ẽdike par le fabrikã) - Bisogna assolutamente rispettare i parametri indicati dal produttore.
+Le manuel indique une température maximale de quarante degrés. (le manyel ẽdik ün tanperatür maksimal de karant degre) - Il manuale indica una temperatura massima di quaranta gradi.
+J'ai trouvé trois valeurs différentes dans les derniers rapports. (ʒé truve trwa valör diferant dan le dernye rapor) - Ho trovato tre valori diversi negli ultimi rapporti.
+Il faudrait savoir laquelle est la bonne avant de modifier le réglage. (il fodrè savwar lakel é la bon avan de modifie le regl aʒ) - Bisognerebbe sapere quale sia quella corretta prima di modificare la regolazione.
+Le technicien pense que la panne vient d'un relais défectueux. (le teknisiẽ pans ke la pan vien dan relè defektö) - Il tecnico pensa che il guasto dipenda da un relè difettoso.
+On peut tester le relais avec un autre appareil pour être sûrs. (on pö teste le relè avek an otr aparey pur etr sür) - Possiamo testare il relè con un altro apparecchio per essere sicuri.
+La caméra ne transmet plus d'image depuis ce matin. (la kamera ne transmè plü damaʒ döpüi se maten) - La telecamera non trasmette più immagini da stamattina.
+J'ai redémarré le système, mais ça n'a rien changé. (ʒé redemare le sistem, mè sa na riẽ sciãʒe) - Ho riavviato il sistema, ma non è cambiato nulla.
+Peut-être que le problème vient simplement de la connexion. (pö-tetr ke le problem vien simplöman de la koneksion) - Forse il problema dipende semplicemente dalla connessione.
+La mise à jour a pris presque vingt minutes. (la miz a ʒur a pri presk van minüt) - L'aggiornamento ha richiesto quasi venti minuti.
+Il ne faut pas éteindre l'ordinateur pendant l'installation. (il ne fo pa etẽdr lord inatör pandan lanstalasion) - Non bisogna spegnere il computer durante l'installazione.
+Tu peux m'envoyer le fichier par mail quand tu as terminé ? (tü pö manvuayé le fisye par mel kan tü a termine) - Puoi mandarmi il file per email quando hai finito?
+J'ai mis les mesures dans un tableau pour qu'on puisse les comparer facilement. (ʒé mi le mezür danz an tablo pur kon püis le kompare fasilman) - Ho inserito le misure in una tabella così possiamo confrontarle facilmente.
+On devrait faire une sauvegarde avant de modifier les paramètres. (on dövrè fer ün sovgard avan de modifie le paramètr) - Dovremmo fare un backup prima di modificare i parametri.
+Le système de secours s'est déclenché pendant la coupure de courant. (le sistem de sekür se deslanse pandan la kupür de kuran) - Il sistema di emergenza si è attivato durante il blackout.
+Heureusement, l'alimentation de secours a pris le relais immédiatement. (örözman, lalimantasion de sekür a pri le relè imediatman) - Fortunatamente, l'alimentazione di emergenza è subentrata immediatamente.
+Il y a probablement un problème avec le capteur de température. (il ia probablaman an problem avek le kaptör de tanperatür) - Probabilmente c'è un problema con il sensore di temperatura.
+On va remplacer la pièce et voir si l'erreur disparaît. (on va ranplase la piès é vwar si lerör disparè) - Sostituiremo il componente e vedremo se l'errore scompare.
+Le nouveau système permet de contrôler l'installation à distance. (le nuvo sistem permè de kontrolé lanstalasion a distans) - Il nuovo sistema permette di controllare l'impianto a distanza.
+C'est pratique, surtout quand on n'est pas sur place. (se pratik, sürtu kan on né pa sür plas) - È comodo, soprattutto quando non si è sul posto.
+On reçoit une notification dès qu'une valeur dépasse le seuil défini. (on reswa ün notifikasion de ke ün valör depas le söy definì) - Riceviamo una notifica non appena un valore supera la soglia impostata.
+Je trouve que la technologie nous fait gagner beaucoup de temps au quotidien. (ʒö truv ke la teknoloji nu fè gane bokou de tan o kotidien) - Trovo che la tecnologia ci faccia risparmiare molto tempo nella vita quotidiana.
+Aujourd'hui, on va revoir les nombres de zéro à cent. (oʒurdüi, on va revwar le nombr de zero a san) - Oggi ripasseremo i numeri da zero a cento.
+Tu peux écrire les nombres de un à vingt au tableau ? (tü pö ekrir le nombr de an a van o tablo) - Puoi scrivere i numeri da uno a venti alla lavagna?
+J'ai encore du mal à prononcer correctement soixante-dix. (ʒé ankor dü mal a prononse korekteman swasant-dis) - Faccio ancora fatica a pronunciare correttamente settanta.
+Soixante-quinze, c'est bien soixante plus quinze, c'est ça ? (swasant-kanz, sè biẽ swasant plü kanz, sè sa) - Settantacinque è sessanta più quindici, giusto?
+Attention, quatre-vingts prend un s quand il n'y a rien après. (atansion, katr-van pran an es kan il nia riẽ aprè) - Attenzione, ottanta prende una s quando non c'è nulla dopo.
+Quatre-vingt-un n'a pas de s à vingt. (katr-van-an na pa de es a van) - Ottantuno non ha la s in vingt.
+Combien font trente-six plus quarante-deux ? (kombiẽ fon trant-sis plü karant-dö) - Quanto fa trentasei più quarantadue?
+Ça fait soixante-dix-huit, si j'ai bien calculé. (sa fè swasant-dizüit, si ʒé biẽ kalküle) - Fa settantotto, se ho calcolato bene.
+Il faut écrire le nombre en toutes lettres, pas en chiffres. (il fo ekrir le nombr an tut le letr, pa an scifr) - Bisogna scrivere il numero in lettere, non in cifre.
+J'ai oublié comment on écrit quatre-vingt-dix-neuf. (ʒé übliye koman on ekri katr-van-diz-nöf) - Ho dimenticato come si scrive novantanove.
+Quel jour sommes-nous aujourd'hui ? (kel ʒur som nu oʒurdüi) - Che giorno è oggi?
+Aujourd'hui, on est lundi, et demain ce sera mardi. (oʒurdüi, on é lẽdi, é demẽ se sera mardi) - Oggi è lunedì e domani sarà martedì.
+Mercredi vient juste après mardi. (merkredi viẽ ʒüst aprè mardi) - Mercoledì viene subito dopo martedì.
+Je confonds encore jeudi et vendredi quand je parle trop vite. (ʒö konfõ ankor ʒödi é vandredi kan ʒö parl tro vit) - Confondo ancora giovedì e venerdì quando parlo troppo velocemente.
+Samedi et dimanche sont les deux jours du week-end. (samdi é dimãsc son le dö ʒur dü wik-end) - Sabato e domenica sono i due giorni del fine settimana.
+Le cours a lieu tous les mardis à neuf heures. (le kur a lyo tu le mardi a nöf ör) - La lezione si tiene tutti i martedì alle nove.
+On se retrouve jeudi prochain à dix heures et demie. (on se retruv ʒödi prosces a dis ör é demi) - Ci vediamo giovedì prossimo alle dieci e mezza.
+Vendredi dernier, on a fait un exercice sur les dates. (vandredi dernye, on a fè an egzèrsis sür le dat) - Venerdì scorso abbiamo fatto un esercizio sulle date.
+Quel jour étions-nous le quinze août ? (kel ʒur etyon nu le kanz ut) - Che giorno era il quindici agosto?
+Le premier janvier est toujours facile à retenir. (le premye ʒanvye é tuʒur fasil a retni(r)) - Il primo gennaio è sempre facile da ricordare.
+En français, on dit le deux février, pas le deuxième février. (an fransè, on di le dö fevriye, pa le dözyèm fevriye) - In francese si dice il due febbraio, non il secondo febbraio.
+Mon anniversaire tombe le vingt-deux mai. (mon aniversèr tomb le van-dö mè) - Il mio compleanno cade il ventidue maggio.
+L'année commence en janvier et se termine en décembre. (lane komans an ʒanvye é se termin an desãbr) - L'anno inizia a gennaio e finisce a dicembre.
+Février est le mois le plus court de l'année. (fevriye é le mwa le plü kur de lane) - Febbraio è il mese più corto dell'anno.
+Mars arrive juste après février. (mars ariv ʒüst aprè fevriye) - Marzo arriva subito dopo febbraio.
+En avril, les journées commencent généralement à être plus longues. (an avril, le ʒurne komans ʒeneralman a etr plü long) - Ad aprile le giornate iniziano generalmente a essere più lunghe.
+Mai est souvent un mois agréable pour voyager. (mè é suvan an mwa agreabl pur vwayaʒe) - Maggio è spesso un mese piacevole per viaggiare.
+Juin marque le début de l'été dans l'hémisphère nord. (ʒwẽ mark le debü de lete dan lemisfèr nor) - Giugno segna l'inizio dell'estate nell'emisfero settentrionale.
+Juillet et août sont généralement les mois les plus chauds. (ʒüiyè é ut son ʒeneralman le mwa le plü sco) - Luglio e agosto sono generalmente i mesi più caldi.
+En septembre, les enfants retournent à l'école. (an septãbr, lez anfan retürn a lekol) - A settembre i bambini tornano a scuola.
+Octobre arrive avant novembre, évidemment. (ok tobr ariv avan novãbr, evidaman) - Ottobre viene prima di novembre, ovviamente.
+Décembre est le dernier mois de l'année. (desãbr é le dernye mwa de lane) - Dicembre è l'ultimo mese dell'anno.
+Combien de jours y a-t-il dans une semaine ? (kombiẽ de ʒur ia-til danz ün semen) - Quanti giorni ci sono in una settimana?
+Une semaine compte sept jours. (ün semen kont set ʒur) - Una settimana conta sette giorni.
+Une année normale compte trois cent soixante-cinq jours. (ün ane normal kont trwa san swasant-sank ʒur) - Un anno normale conta 365 giorni.
+Une année bissextile compte trois cent soixante-six jours. (ün ane bisèxtil kont trwa san swasant-sis ʒur) - Un anno bisestile conta 366 giorni.
+Combien de mois y a-t-il dans une année ? (kombiẽ de mwa ia-til danz ün ane) - Quanti mesi ci sono in un anno?
+Il y a douze mois dans une année. (il ia duz mwa danz ün ane) - Ci sono dodici mesi in un anno.
+Trois mois font un trimestre. (trwa mwa fon an trimestr) - Tre mesi formano un trimestre.
+Six mois, c'est la moitié d'une année. (sis mwa, sè la mwatye dün ane) - Sei mesi sono la metà di un anno.
+Mon rendez-vous est prévu pour mardi dix-huit septembre à quatorze heures. (mon randé-vu é prevü pur mardi dizüit septãbr a katorz ör) - Il mio appuntamento è previsto per martedì 18 settembre alle quattordici.
+Tu peux me rappeler la date exacte du prochain cours ? (tü pö me rapelé la dat egzakt dü prosces kur) - Puoi ricordarmi la data esatta della prossima lezione?
+Le contrôle aura lieu le vendredi vingt novembre. (le kontrol o-ra lyo le vandredi van novãbr) - La verifica avrà luogo venerdì 20 novembre.
+Entre lundi et vendredi, nous avons cours quatre jours. (antr lẽdi é vandredi, nu zavon kur katr ʒur) - Tra lunedì e venerdì abbiamo lezione per quattro giorni.
+Si aujourd'hui est mercredi, quel jour sera-t-il dans trois jours ? (si oʒurdüi é merkredi, kel ʒur sera-til dan trwa ʒur) - Se oggi è mercoledì, che giorno sarà tra tre giorni?
+Dans deux semaines, on sera déjà au mois suivant. (dan dö semen, on sera deʒa o mwa süivan) - Tra due settimane saremo già nel mese successivo.
+Le mois dernier, on était encore en juin. (le mwa dernye, on etè ankor an ʒwẽ) - Il mese scorso eravamo ancora a giugno.
+Il reste seulement cinq jours avant la fin du mois. (il rest selman sank ʒur avan la fen dü mwa) - Mancano solo cinque giorni alla fine del mese.
+Cette année, le premier mai tombe un vendredi. (set ane, le premye mè tomb an vandredi) - Quest'anno il primo maggio cade di venerdì.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
