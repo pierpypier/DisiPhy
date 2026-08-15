@@ -2740,6 +2740,56 @@ The fire alarm went off for no reason again yesterday (dhë faiër alarm uent of
 Everyone had to evacuate for absolutely nothing (evriuan hèd tu ivèkiueit for absolutli nathin) - Tutti hanno dovuto evacuare per assolutamente niente
 Honestly, this building needs a proper overhaul (onëstli, dhis bildin niidz a propër ouvërhol) - Onestamente questo edificio ha bisogno di una revisione seria
 I don't think that's happening anytime soon though (ai dount think dhèts hèpënin enitaim suun dhou) - Non credo che succederà tanto presto però
+How do you spell the number forty? (Hau du iu spel de namber forti?) - Come si scrive il numero quaranta?
+Can you count from one to twenty without looking at the board? (Ken iu kaunt from uan tu tuenti uidaut luking et de bord?) - Riesci a contare da uno a venti senza guardare la lavagna?
+What comes after thirty-nine? (Uot kamz after therti-nain?) - Cosa viene dopo trentanove?
+The answer is forty, not four hundred. (Di anser iz forti, not for handred) - La risposta è quaranta, non quattrocento.
+How do you say 85 in English? (Hau du iu sei eiti-faiv in Inglisc?) - Come si dice 85 in inglese?
+Eighty-five is between eighty and ninety. (Eiti-faiv iz bituin eiti end nainti) - Ottantacinque è tra ottanta e novanta.
+What number comes just before one hundred? (Uot namber kamz giast bifor uan handred?) - Quale numero viene subito prima di cento?
+Ninety-nine is the last number before one hundred. (Nainti-nain iz de last namber bifor uan handred) - Novantanove è l'ultimo numero prima di cento.
+Let's write the numbers from ten to thirty in our notebooks. (Lets rait de nambers from ten tu therti in auer noutbuks) - Scriviamo i numeri da dieci a trenta sui nostri quaderni.
+Be careful with thirteen and thirty; they sound quite different. (Bi kerful uid thertiin end therti; dei saund kuait difrent) - Fai attenzione a thirteen e thirty; suonano abbastanza diversi.
+What day is it today? (Uot dei iz it tudei?) - Che giorno è oggi?
+Today is Monday, and tomorrow will be Tuesday. (Tudei iz Mandei, end tumoro uil bi Tiuzdei) - Oggi è lunedì e domani sarà martedì.
+What day comes after Wednesday? (Uot dei kamz after Uenzdei?) - Quale giorno viene dopo mercoledì?
+Thursday comes after Wednesday and before Friday. (Therzdei kamz after Uenzdei end bifor Fraidei) - Giovedì viene dopo mercoledì e prima di venerdì.
+Which day do you like best? (Uic dei du iu laik best?) - Quale giorno ti piace di più?
+I usually prefer Saturday because I don't have to work. (Ai iugiueli prifer Saterdei bikoz ai dount hev tu uork) - Di solito preferisco il sabato perché non devo lavorare.
+Sunday is the first day of the week on this calendar. (Sandei iz de ferst dei ov de uiik on dis kelender) - Domenica è il primo giorno della settimana su questo calendario.
+How many days are there in a week? (Hau meni deiz ar der in e uiik?) - Quanti giorni ci sono in una settimana?
+There are seven days, from Monday to Sunday. (Der ar seven deiz, from Mandei tu Sandei) - Ci sono sette giorni, da lunedì a domenica.
+Can you name all seven days in order? (Ken iu neim ol seven deiz in order?) - Sai dire tutti e sette i giorni in ordine?
+Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. (Mandei, Tiuzdei, Uenzdei, Therzdei, Fraidei, Saterdei, Sandei) - Lunedì, martedì, mercoledì, giovedì, venerdì, sabato, domenica.
+What month are we in? (Uot manth ar ui in?) - In che mese siamo?
+We're in August, which is the eighth month of the year. (Uir in Ogast, uic iz di eith manth ov de yiir) - Siamo ad agosto, che è l'ottavo mese dell'anno.
+Which month comes after September? (Uic manth kamz after September?) - Quale mese viene dopo settembre?
+October comes after September and before November. (Oktouber kamz after September end bifor Nouvember) - Ottobre viene dopo settembre e prima di novembre.
+What's the first month of the year? (Uots de ferst manth ov de yiir?) - Qual è il primo mese dell'anno?
+January is the first month, and December is the last. (Geniueri iz de ferst manth, end Disember iz de last) - Gennaio è il primo mese e dicembre è l'ultimo.
+How many months are there in a year? (Hau meni manths ar der in e yiir?) - Quanti mesi ci sono in un anno?
+There are twelve months in a year. (Der ar tuelv manths in e yiir) - Ci sono dodici mesi in un anno.
+Which month has twenty-eight days in a normal year? (Uic manth hez tuenti-eit deiz in e normal yiir?) - Quale mese ha ventotto giorni in un anno normale?
+February has twenty-eight days, but twenty-nine in a leap year. (Februeri hez tuenti-eit deiz, bat tuenti-nain in e liip yiir) - Febbraio ha ventotto giorni, ma ventinove negli anni bisestili.
+What date is your next English lesson? (Uot deit iz ior nekst Inglisc lesen?) - Che data ha la tua prossima lezione d'inglese?
+It's on the fifteenth of August. (Its on de fiftiin ov Ogast) - È il quindici agosto.
+How do you write today's date in English? (Hau du iu rait tudeiz deit in Inglisc?) - Come si scrive la data di oggi in inglese?
+You can write August fifteenth or the fifteenth of August. (Iu ken rait Ogast fiftiin or de fiftiin ov Ogast) - Puoi scrivere quindici agosto oppure il quindici di agosto.
+What month comes three months after April? (Uot manth kamz thrii manths after Eipril?) - Quale mese viene tre mesi dopo aprile?
+July comes three months after April. (Giu lai kamz thrii manths after Eipril) - Luglio viene tre mesi dopo aprile.
+If today is Friday, what day will it be in three days? (If tudei iz Fraidei, uot dei uil it bi in thrii deiz?) - Se oggi è venerdì, che giorno sarà tra tre giorni?
+It'll be Monday. (Itel bi Mandei) - Sarà lunedì.
+If it's the tenth today, what date will it be in five days? (If its de tenth tudei, uot deit uil it bi in faiv deiz?) - Se oggi è il dieci, che data sarà tra cinque giorni?
+It'll be the fifteenth. (Itel bi de fiftiin) - Sarà il quindici.
+Which is longer, a week or a month? (Uic iz longer, e uiik or e manth?) - Cosa dura più a lungo, una settimana o un mese?
+A month is longer, although the number of days can vary. (E manth iz longer, oldhou de namber ov deiz ken veri) - Un mese è più lungo, anche se il numero di giorni può variare.
+How many days are there between Monday and Thursday? (Hau meni deiz ar der bituin Mandei end Therzdei?) - Quanti giorni ci sono tra lunedì e giovedì?
+There are three days between them if you don't count Thursday itself. (Der ar thrii deiz bituin dem if iu dount kaunt Therzdei itself) - Ci sono tre giorni tra loro se non conti giovedì stesso.
+Which month comes immediately before December? (Uic manth kamz imiidiatli bifor Disember?) - Quale mese viene subito prima di dicembre?
+November comes immediately before December. (Nouvember kamz imiidiatli bifor Disember) - Novembre viene subito prima di dicembre.
+Can you tell me the difference between sixteen and sixty? (Ken iu tel mi de difrens bituin sikstiin end siksti?) - Sai dirmi la differenza tra sedici e sessanta?
+Sixteen is a number, while sixty is ten times as much. (Sikstiin iz e namber, uail siksti iz ten taims ez mac) - Sedici è un numero, mentre sessanta è dieci volte tanto.
+Let's practise saying the dates aloud so they sound more natural. (Lets prektis seing de deits elaud sou dei saund mor neciurel) - Esercitiamoci a dire le date ad alta voce in modo che suonino più naturali.
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
