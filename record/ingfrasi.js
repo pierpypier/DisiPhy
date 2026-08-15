@@ -2848,6 +2848,56 @@ English usually puts the auxiliary before the subject when forming a question. (
 Let's compare these two sentences and see what changes. (Lets komper dhiiz tu sentensiz end sii uot ceingjiz) - Confrontiamo queste due frasi e vediamo cosa cambia.
 What happens if we change this sentence from the active voice to the passive voice? (Uot hepens if ui ceingj dis sentens from di ektiv vois tu de passiv vois?) - Cosa succede se trasformiamo questa frase dalla forma attiva alla forma passiva?
 Can you explain when we should use the past continuous instead of the past simple? (Ken iu eksplein uen ui sciud iuz de past kontin iues insted ov de past simpel?) - Puoi spiegare quando dovremmo usare il past continuous invece del past simple?
+Who's going first? (Huuz gouing ferst?) - Chi comincia?
+Don't forget, you can only move one space at a time. (Dount forget, iu ken ounli muuv uan speis et e taim) - Non dimenticare, puoi muovere solo di una casella alla volta.
+It's your turn, so go ahead and roll the dice. (Its ior tern, sou gou ehed end roul de dais) - Tocca a te, quindi tira pure i dadi.
+I rolled a six! (Ai rould e siks) - Ho fatto sei!
+You need to draw a card before you move. (Iu niid tu dro e kard bifor iu muuv) - Devi pescare una carta prima di muoverti.
+Wait, I think you skipped a square. (Ueit, ai think iu skipt e skuer) - Aspetta, credo che tu abbia saltato una casella.
+Are you sure that's where you're supposed to land? (Ar iu sciur dets uer ior spouzd tu lend?) - Sei sicuro che sia lì che devi fermarti?
+If you land on that space, you have to go back three squares. (If iu lend on det speis, iu hev tu gou bek thrii skuerz) - Se finisci su quella casella, devi tornare indietro di tre caselle.
+I got the exact number I needed! (Ai got di egzakt namber ai niidid) - Ho fatto esattamente il numero che mi serviva!
+Can I trade this card for one of yours? (Ken ai treid dis kard for uan ov iorz?) - Posso scambiare questa carta con una delle tue?
+No way, that's a terrible deal for me. (Nou uei, dets e teribel diil for mi) - Neanche per sogno, per me è un pessimo affare.
+You're only one point away from winning. (Ior ounli uan point euei from uining) - Ti manca solo un punto per vincere.
+I think you've got this one. (Ai think iuv got dis uan) - Penso che questa volta vincerai.
+Hang on, I need to check the rules. (Heng on, ai niid tu cek de ruulz) - Aspetta, devo controllare le regole.
+It says you have to pay two coins if you land here. (It sez iu hev tu pei tu koinz if iu lend hier) - Dice che devi pagare due monete se finisci qui.
+Can we make an exception just this once? (Ken ui meik en iksep shen giast dis uans?) - Possiamo fare un'eccezione solo per questa volta?
+You can't use that card after you've already rolled. (Iu kent iuz det kard after iuv olredi rould) - Non puoi usare quella carta dopo aver già tirato i dadi.
+I was hoping you'd land on my square. (Ai uoz hoping iud lend on mai skuer) - Speravo che finissi sulla mia casella.
+That's the third time you've rolled a double. (Dets de therd taim iuv rould e dabel) - È la terza volta che fai un doppio.
+If I get another six, I get another turn. (If ai get enader siks, ai get enader tern) - Se faccio un altro sei, ho un altro turno.
+You can't take my piece; it's protected on this space. (Iu kent teik mai piis; its protektid on dis speis) - Non puoi prendere la mia pedina; è protetta su questa casella.
+We're running out of time, so let's play one more round. (Uir raning aut ov taim, sou lets plei uan mor raund) - Stiamo finendo il tempo, quindi facciamo un altro giro.
+I knew that was going to happen! (Ai niu det uoz gouing tu hepen) - Lo sapevo che sarebbe successo!
+Don't celebrate yet, the game's not over. (Dount selebreit iet, de geimz not ouver) - Non festeggiare ancora, la partita non è finita.
+Okay, winner takes the last slice of cake. (Oukei, uiner teiks de last slais ov keik) - D'accordo, chi vince prende l'ultima fetta di torta.
+Do you have this sofa in a lighter colour? (Du iu hev dis soufa in e laiter kaller?) - Avete questo divano in un colore più chiaro?
+I really like this table, but I'm not sure it'll fit in our dining room. (Ai rili laik dis teibel, bat aim not sciur itel fit in auer daining ruum) - Mi piace molto questo tavolo, ma non sono sicuro che ci stia nella nostra sala da pranzo.
+Could we see how big it is when it's fully extended? (Kud ui sii hau big it iz uen its fuli ikstendid?) - Possiamo vedere quanto è grande quando è completamente allungato?
+We're looking for something simple and not too expensive. (Uir luking for samthing simpel end not tu ikspensiv) - Cerchiamo qualcosa di semplice e non troppo costoso.
+Is this wardrobe available in white? (Iz dis uordroub eveilebel in uait?) - Questo armadio è disponibile in bianco?
+I'd prefer the darker wood because it'll match the floor better. (Aid prifer de darker uod bikoz itel mec de flor beter) - Preferirei il legno più scuro perché si abbinerà meglio al pavimento.
+How long would delivery take? (Hau long ud deliv eri teik?) - Quanto tempo ci vorrebbe per la consegna?
+Can you deliver it and assemble it for us? (Ken iu deliv er it end esembel it for as?) - Potete consegnarlo e montarlo per noi?
+Does the price include delivery? (Daz de prais inklud deliv eri?) - Il prezzo include la consegna?
+I'd like to try this chair before we buy it. (Aid laik tu trai dis ceer bifor ui bai it) - Vorrei provare questa sedia prima di comprarla.
+This mattress feels much more comfortable than the other one. (Dis metres fiilz mac mor kamfterbel den di ader uan) - Questo materasso sembra molto più comodo dell'altro.
+Do you have a smaller version of this bookcase? (Du iu hev e smoler vercion ov dis bukkeis?) - Avete una versione più piccola di questa libreria?
+We're trying to make the most of a fairly small space. (Uir traiing tu meik de moust ov e ferli smol speis) - Cerchiamo di sfruttare al meglio uno spazio abbastanza piccolo.
+Would this cabinet work well under the television? (Uud dis kebinet uork uel ander de televicion?) - Questo mobile starebbe bene sotto il televisore?
+I like the design, but I'd rather have something with more storage. (Ai laik de dizain, bat aid rader hev samthing uid mor storij) - Mi piace il design, ma preferirei qualcosa con più spazio per riporre le cose.
+Can these shelves be adjusted to different heights? (Ken dhiiz scelvz bi edgiusted tu difrent haits?) - Questi ripiani possono essere regolati a diverse altezze?
+We need to measure the wall before we decide. (Ui niid tu mejer de uol bifor ui disaid) - Dobbiamo misurare la parete prima di decidere.
+What are these drawers made of? (Uot ar dhiiz drorz meid ov?) - Di che materiale sono fatti questi cassetti?
+I'm not keen on the handles, but I love the rest of it. (Aim not kiin on de hendelz, bat ai lav de rest ov it) - Non mi piacciono molto le maniglie, ma adoro il resto.
+Could you show us something similar in a darker finish? (Kud iu sciou as samthing simil er in e darker finis?) - Potreste mostrarci qualcosa di simile con una finitura più scura?
+This lamp would look great next to the sofa. (Dis lemp ud luk greit nekst tu de soufa) - Questa lampada starebbe benissimo accanto al divano.
+Do you have one that's a bit wider? (Du iu hev uan dets e bit uaider?) - Ne avete una un po' più larga?
+I'm worried that the doors won't open properly in that corner. (Aim uorid det de dorz uount oupen properli in det korner) - Temo che le ante non si aprano bene in quell'angolo.
+Let's check the measurements one more time before we order it. (Lets cek de mejerm ents uan mor taim bifor ui order it) - Controlliamo le misure un'altra volta prima di ordinarlo.
+I think this would work really well in the living room. (Ai think dis ud uork rili uel in de living ruum) - Penso che questo starebbe davvero bene in soggiorno.
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
