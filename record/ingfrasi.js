@@ -2394,6 +2394,57 @@ I'd keep my distance and let it leave on its own. (Aid kiip mai distens end let 
 I don't think we should feed wild animals just because they're cute. (Ai dount think ui sciud fiid uaild enimelz giast bikoz deir kiut) - Non credo dovremmo dare da mangiare agli animali selvatici solo perché sono carini.
 It can make them dependent on humans and cause problems later. (It ken meik dem dipendent on iumenz end koz problemz leiter) - Può renderli dipendenti dagli esseri umani e creare problemi in seguito.
 In the end, having a pet is a responsibility, not just something fun to do. (In di end, heving e pet iz e risponsibiliti, not giast samthing fan tu du) - Alla fine, avere un animale domestico è una responsabilità, non solo qualcosa di divertente da fare.
+Right, today we're looking at maps of Europe (rait, tudei uir lukin et mèps ov Iuroup) - Bene, oggi guardiamo le mappe dell'Europa
+Can anyone point out Italy on the map (kèn enìuan point aut Itali on dhë mèp) - Qualcuno sa indicare l'Italia sulla mappa
+Does anyone know the capital of France (daz enìuan nou dhë kèpitël ov Frèns) - Qualcuno sa qual è la capitale della Francia
+How far is it from here to London (hau far iz it from hir tu Landën) - Quanto dista da qui a Londra
+It's about two thousand kilometres away (its abaut tuu thauzënd kilomiitërz ëuei) - Sono circa duemila chilometri di distanza
+That's roughly a two hour flight (dhèts rafli a tuu auer flait) - Sono all'incirca due ore di volo
+Can you find the equator on this globe (kèn yu faind dhë ikueitër on dhis gloub) - Riesci a trovare l'equatore su questo mappamondo
+What's the difference between longitude and latitude (uats dhë difërëns bituìn longitiuud end lètitiuud) - Qual è la differenza tra longitudine e latitudine
+This mountain range stretches for hundreds of miles (dhis mauntën reingi strechiz for handrëds ov mailz) - Questa catena montuosa si estende per centinaia di miglia
+Which is the longest river in the world (uic iz dhë longëst rivër in dhë uorld) - Qual è il fiume più lungo del mondo
+It's roughly six and a half thousand kilometres long (its rafli siks end a haf thauzënd kilomiitërz long) - È lungo circa seimilacinquecento chilometri
+Can someone measure the distance using the scale (kèn samuan meziur dhë distëns iuzin dhë skeil) - Qualcuno può misurare la distanza usando la scala
+Every centimetre on this map equals fifty kilometres (evri sentimiitër on dhis mèp iikuëlz fifti kilomiitërz) - Ogni centimetro su questa mappa equivale a cinquanta chilometri
+That desert covers a massive area (dhèt dezërt kavërz a mèsiv eëria) - Quel deserto copre un'area enorme
+How many countries border Germany (hau meni kantriz bordër Giërmani) - Quanti paesi confinano con la Germania
+Can you name the seas surrounding Italy (kèn yu neim dhë siiz saraundin Itali) - Sapete nominare i mari che circondano l'Italia
+This island's actually further than it looks (dhis ailënd iz èkchueli fërdhër dhèn it luks) - Quest'isola in realtà è più lontana di quanto sembri
+It only looks close because of the map projection (it ounli luks klous bikoz ov dhë mèp projekscion) - Sembra vicina solo per via della proiezione della mappa
+What's the population of that country roughly (uats dhë popiuleiscion ov dhèt kantri rafli) - Qual è più o meno la popolazione di quel paese
+It's home to about eighty million people (its houm tu abaut eiti miliën piipël) - Ospita circa ottanta milioni di persone
+Can anyone tell me what a peninsula is (kèn enìuan tel mi uat a peninsiula iz) - Qualcuno sa dirmi cos'è una penisola
+Italy's actually shaped a bit like a boot (Italiz èkchueli sceipt a bit laik a buut) - L'Italia in realtà è a forma di stivale
+How high is the tallest mountain in Europe (hau hai iz dhë tolëst mauntën in Iuroup) - Quant'è alta la montagna più alta d'Europa
+It's just over four thousand metres tall (its giast ouvër for thauzënd miitërz tol) - È alta poco più di quattromila metri
+That volcano's still active, believe it or not (dhèt volkeinouz stil èktiv, biliiv it or not) - Quel vulcano è ancora attivo, che ci crediate o no
+Which ocean is the biggest one (uic ouscën iz dhë bighëst uan) - Qual è l'oceano più grande
+The Pacific's bigger than all the continents combined (dhë Pesifiks bighër dhèn ol dhë kontinënts kombaind) - Il Pacifico è più grande di tutti i continenti messi insieme
+Can you work out the distance between these two cities (kèn yu uork aut dhë distëns bituìn dhiiz tuu sitiz) - Riesci a calcolare la distanza tra queste due città
+They're only about three hundred kilometres apart (dheir ounli abaut thrii handrëd kilomiitërz apart) - Sono distanti solo circa trecento chilometri
+That's roughly a three hour drive (dhèts rafli a thrii auer draiv) - Sono circa tre ore di macchina
+Which countries actually don't have a coastline (uic kantriz èkchueli dount hev a koustlain) - Quali paesi non hanno effettivamente una costa
+Switzerland's completely landlocked, for example (Suitsërlëndz kompliitli lèndlokt, for ekzèmpël) - La Svizzera, per esempio, è completamente senza sbocco sul mare
+Can anyone guess how deep that trench is (kèn enìuan ghes hau diip dhèt trench iz) - Qualcuno sa indovinare quanto è profonda quella fossa
+It's nearly eleven kilometres at its deepest point (its nirli ilevën kilomiitërz et its diipëst point) - È profonda quasi undici chilometri nel suo punto più profondo
+What's the time difference between here and Japan (uats dhë taim difërëns bituìn hir end Giapèn) - Qual è la differenza di fuso orario tra qui e il Giappone
+It's about eight hours ahead of us (its abaut eit auerz ëhed ov as) - È circa otto ore avanti rispetto a noi
+Look at how close Spain and Morocco actually are (luk et hau klous Spein end Moroukou èkchueli ar) - Guardate quanto sono in realtà vicini la Spagna e il Marocco
+There's only about fourteen kilometres between them (dhers ounli abaut fortiin kilomiitërz bituìn dhem) - Ci sono solo circa quattordici chilometri tra di loro
+Which continent has the most countries (uic kontinënt hez dhë moust kantriz) - Quale continente ha più paesi
+Can you list the countries that make up Scandinavia (kèn yu list dhë kantriz dhèt meik ap Skandineivia) - Riuscite a elencare i paesi che formano la Scandinavia
+That lake's much bigger than it looks on the map (dhèt leik iz mach bighër dhèn it luks on dhë mèp) - Quel lago è molto più grande di quanto sembri sulla mappa
+How far is it from the coast to the capital (hau far iz it from dhë koust tu dhë kèpitël) - Quanto dista la costa dalla capitale
+It's a fair distance, about four hundred kilometres (its a fer distëns, abaut for handrëd kilomiitërz) - È una bella distanza, circa quattrocento chilometri
+Can someone explain why some countries are landlocked (kèn samuan eksplèin uai sam kantriz ar lèndlokt) - Qualcuno può spiegare perché alcuni paesi sono senza sbocco sul mare
+What's the shortest route between these two points (uats dhë scortëst ruut bituìn dhiiz tuu points) - Qual è il percorso più breve tra questi due punti
+Flying's obviously faster, but the train's more scenic (flaiin iz obviësli fèstër, bat dhë treinz mor siinik) - Volare è ovviamente più veloce, ma il treno è più panoramico
+Can anyone tell me the difference between a strait and a channel (kèn enìuan tel mi dhë difërëns bituìn a streit end a chènël) - Qualcuno sa dirmi la differenza tra uno stretto e un canale
+That mountain pass is closed for most of the winter (dhèt mauntën pès iz klouzd for moust ov dhë uintër) - Quel passo di montagna è chiuso per gran parte dell'inverno
+How many kilometres of coastline does Italy have (hau meni kilomiitërz ov koustlain daz Itali hev) - Quanti chilometri di costa ha l'Italia
+It's got over seven thousand kilometres of coastline (its gat ouvër sevën thauzënd kilomiitërz ov koustlain) - Ha oltre settemila chilometri di costa
+Right, that's enough for today, we'll continue next lesson (rait, dhèts inaf for tudei, uìl kontiniuu nekst lesën) - Bene, basta così per oggi, continueremo alla prossima lezione
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
