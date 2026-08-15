@@ -2759,6 +2759,154 @@ Neun mal neun macht einundachtzig, das stimmt genau. (Noin maal noin makht ainun
 Für die Prüfung solltet ihr alle Zahlen bis hundert können. (Für di Prüfung zoltet iir ale Tsaalen bis hundert können) - Per l'esame dovreste conoscere tutti i numeri fino a cento.
 Übt bitte zu Hause noch die Monate auswendig. (Üpt bitte tsu Hauze nokh di Monaate ausvendikh) - Esercitatevi a casa a memorizzare ancora i mesi.
 Sehr gut, das war eine tolle Stunde heute. (Zeer guut, das var aine tole Shtunde hoite) - Molto bene, è stata una bella lezione oggi.
+Wie spät ist es eigentlich gerade? (Vii shpèt ist es aigentlish geraade?) - Che ore sono in realtà adesso?
+Es ist jetzt genau acht Uhr morgens. (Es ist yetst genau akht Uur morgens) - Sono le otto esatte di mattina adesso.
+Kannst du mir kurz sagen, wie viel Uhr wir haben? (Kannst du miir kurts zaagen, vii fiil Uur viir haaben?) - Puoi dirmi al volo che ora è?
+Es ist zehn nach neun, wir müssen los. (Es ist tseen nakh noin, viir müssen loos) - Sono le nove e dieci, dobbiamo andare.
+Um wie viel Uhr fängt eigentlich der Film an? (Um vii fiil Uur fèngt aigentlish der Film an?) - A che ora inizia in realtà il film?
+Der Film fängt um Viertel nach sieben an. (Der Film fèngt um Firtel nakh ziiben an) - Il film inizia alle sette e un quarto.
+Wir treffen uns dann so gegen halb sechs. (Viir treffen uns den zoo geegen halp zeks) - Ci vediamo allora verso le cinque e mezza.
+Es ist schon fast Mitternacht, wir sollten schlafen gehen. (Es ist shon fast Miternakht, viir zolten shlaafen geen) - È già quasi mezzanotte, dovremmo andare a dormire.
+Um zwölf Uhr mittags essen wir meistens zu Mittag. (Um tsvölf Uur mitaaks essen viir maistens tsu Mitaak) - A mezzogiorno di solito pranziamo.
+Kurz vor acht sollten wir langsam los. (Kurts foor akht zolten viir langzaam loos) - Poco prima delle otto dovremmo iniziare ad andare.
+Es ist schon zwanzig vor zehn, beeil dich bitte. (Es ist shon tsvantsikh foor tseen, be-ail dish bitte) - Sono già le dieci meno venti, sbrigati per favore.
+Der Wecker klingelt jeden Morgen um sechs. (Der Veker klingelt yeeden Morgen um zeks) - La sveglia suona ogni mattina alle sei.
+Ich steh normalerweise erst um Viertel vor sieben auf. (Ish shtee normaalervaize erst um Firtel foor ziiben auf) - Di solito mi alzo solo alle sette meno un quarto.
+Wann genau geht eigentlich die Sonne heute auf? (Van genau geet aigentlish di Zone hoite auf?) - Quando sorge esattamente il sole oggi?
+Die Sonne geht heute kurz nach sechs auf. (Di Zone geet hoite kurts nakh zeks auf) - Il sole sorge oggi poco dopo le sei.
+Und wann geht die Sonne abends unter? (Und van geet di Zone aabents unter?) - E quando tramonta il sole la sera?
+Im Sommer geht sie erst gegen neun Uhr abends unter. (Im Zomer geet zii erst geegen noin Uur aabents unter) - In estate tramonta solo verso le nove di sera.
+Ich hab am Nachmittag um drei einen Zahnarzttermin. (Ish hab am Nakhmitaak um drai ainen Tsaanartsttermiin) - Ho un appuntamento dal dentista alle tre del pomeriggio.
+Um wie viel Uhr machen die Geschäfte eigentlich zu? (Um vii fiil Uur makhen di Geshèfte aigentlish tsu?) - A che ora chiudono in realtà i negozi?
+Die meisten schließen so um acht Uhr abends. (Di maisten shliisen zoo um akht Uur aabents) - La maggior parte chiude verso le otto di sera.
+Kommst du am Vormittag oder eher am Abend vorbei? (Kommst du am Foormitaak oder eeer am Aabent foorbai?) - Passi in mattinata o piuttosto la sera?
+Ich schaff es wahrscheinlich erst spät am Abend. (Ish shaf es vaarsheinlish erst shpèt am Aabent) - Probabilmente riesco solo tardi la sera.
+Punkt neun Uhr fängt die Besprechung an, sei pünktlich. (Punkt noin Uur fèngt di Beshprekhung an, zai pünktlish) - La riunione inizia alle nove precise, sii puntuale.
+Fünf Minuten vor der Zeit bin ich schon da. (Fünf Minuuten foor der Tsait bin ish shon da) - Sono già lì cinque minuti prima dell'orario.
+Wie lange dauert eigentlich die Fahrt bis dorthin? (Vii lange dauert aigentlish di Faart bis dorthin?) - Quanto dura in realtà il tragitto fino là?
+Die Fahrt dauert ungefähr eine Dreiviertelstunde. (Di Faart dauert ungefèer aine Draifirtelshtunde) - Il tragitto dura circa tre quarti d'ora.
+Können wir uns gegen Mittag noch mal kurz sprechen? (Können viir uns geegen Mitaak nokh maal kurts shprekhen?) - Possiamo sentirci ancora un attimo verso mezzogiorno?
+Klar, ich hab da eigentlich noch nichts vor. (Klaar, ish hab da aigentlish nokh nikhts foor) - Certo, non ho ancora niente in programma a quell'ora.
+Um Mitternacht sind wir bestimmt noch nicht zu Hause. (Um Miternakht zint viir beshtimt nokh nikht tsu Hauze) - A mezzanotte di sicuro non saremo ancora a casa.
+Am frühen Morgen ist es hier draußen richtig ruhig. (Am früüen Morgen ist es hiir drausen rishtikh rui) - Al mattino presto qui fuori è davvero tranquillo.
+In der Mittagspause geh ich meistens kurz spazieren. (In der Mitaakspauze gee ish maistens kurts shpatsiiren) - Nella pausa pranzo di solito faccio una breve passeggiata.
+Wie viel Uhr ist es eigentlich in New York gerade? (Vii fiil Uur ist es aigentlish in Nyu York geraade?) - Che ore sono in realtà a New York adesso?
+Dort ist es sechs Stunden früher als bei uns. (Dort ist es zeks Shtunden früüer als bai uns) - Lì sono sei ore in meno rispetto a noi.
+Der Zug fährt Punkt halb neun ab, verpass ihn nicht. (Der Tsuuk fèrt Punkt halp noin ap, ferpass iin nikht) - Il treno parte esattamente alle otto e mezza, non perderlo.
+Ich hab den Bus um zwei Minuten verpasst, so ein Pech. (Ish hab den Buss um tsvai Minuuten ferpasst, zoo ain Pesh) - Ho perso l'autobus per due minuti, che sfortuna.
+Am späten Abend schau ich meistens noch kurz die Nachrichten. (Am shpèten Aabent shau ish maistens nokh kurts di Nakhrikhten) - Tardi la sera di solito guardo ancora un po' il telegiornale.
+Um wie viel Uhr geht ihr normalerweise ins Bett? (Um vii fiil Uur geet iir normaalervaize ins Bet?) - A che ora andate di solito a letto?
+Ich geh meistens so gegen elf ins Bett. (Ish gee maistens zoo geegen elf ins Bet) - Vado a letto di solito verso le undici.
+Der Termin wurde leider auf halb vier verschoben. (Der Termiin vurde laider auf halp fiir fershooben) - L'appuntamento è stato purtroppo posticipato alle tre e mezza.
+Wir haben nur noch eine Viertelstunde bis zum Treffen. (Viir haaben nuur nokh aine Firtelshtunde bis tsum Trefen) - Abbiamo solo ancora un quarto d'ora fino all'incontro.
+Ich brauch noch fünf Minuten, dann bin ich fertig. (Ish braukh nokh fünf Minuuten, den bin ish fertikh) - Mi servono ancora cinque minuti, poi sono pronto.
+Am Wochenende schlaf ich gern etwas länger aus. (Am Vokhenende shlaaf ish gern etvas lènger aus) - Nel weekend mi piace dormire un po' più a lungo.
+Die Apotheke hat bis achtzehn Uhr geöffnet. (Di Apoteeke hat bis akhtseen Uur geöfnet) - La farmacia è aperta fino alle diciotto.
+Kurz nach Mitternacht war die ganze Stadt schon still. (Kurts nakh Miternakht var di gantse Shtat shon shtil) - Poco dopo mezzanotte l'intera città era già silenziosa.
+Wir sehen uns dann morgen früh um sieben. (Viir seen uns den morgen früü um ziiben) - Ci vediamo allora domani mattina alle sette.
+Der Laden macht erst um zehn Uhr auf, das ist spät. (Der Laaden makht erst um tseen Uur auf, das ist shpèt) - Il negozio apre solo alle dieci, è tardi.
+Gegen späten Nachmittag wird es draußen schon dunkel. (Geegen shpèten Nakhmitaak virt es drausen shon dunkel) - Verso tardo pomeriggio fuori diventa già buio.
+Wie viele Stunden hat eigentlich ein ganzer Tag? (Vii fiile Shtunden hat aigentlish ain gantser Taak?) - Quante ore ha in realtà un giorno intero?
+Ein Tag hat genau vierundzwanzig Stunden, das weißt du sicher. (Ain Taak hat genau fiirundtsvantsikh Shtunden, das vaist du zisher) - Un giorno ha esattamente ventiquattro ore, questo lo sai di sicuro.
+Es ist jetzt Punkt Mittag, Zeit für eine Pause. (Es ist yetst Punkt Mitaak, Tsait für aine Pauze) - È mezzogiorno preciso adesso, è ora di una pausa.
+Guten Tag, wir suchen ein neues Sofa fürs Wohnzimmer. (Guuten Taak, viir zukhen ain noies Zoofa fürs Voonzimer) - Buongiorno, cerchiamo un nuovo divano per il soggiorno.
+Haben Sie dieses Modell auch in einem anderen Stoff? (Haaben Zii diizes Model aukh in ainem anderen Shtof?) - Avete questo modello anche in un altro tessuto?
+Wir hätten gern etwas mit einer Ausziehfunktion. (Viir hèten gern etvas mit ainer Austsiifunktsioon) - Vorremmo qualcosa con la funzione letto estraibile.
+Wie lange dauert eigentlich die Lieferung von diesem Schrank? (Vii lange dauert aigentlish di Liiferung fon diizem Shrank?) - Quanto ci mette in realtà la consegna di questo armadio?
+Die Lieferzeit beträgt momentan etwa sechs Wochen. (Di Liiferzait betrèkt momentaan etva zeks Vokhen) - Il tempo di consegna al momento è di circa sei settimane.
+Können Sie uns diesen Tisch bis nach Hause liefern? (Können Zii uns diizen Tish bis nakh Hauze liifern?) - Potete consegnarci questo tavolo fino a casa?
+Ja, die Lieferung kostet allerdings extra fünfzig Euro. (Ya, di Liiferung kostet alerdings ekstra fünftsikh Oiro) - Sì, la consegna però costa cinquanta euro in più.
+Ist dieser Stuhl auch stapelbar für den Balkon? (Ist diizer Shtuul aukh shtaapelbaar für den Balkoon?) - Questa sedia è anche impilabile per il balcone?
+Wir suchen eigentlich einen Esstisch für sechs Personen. (Viir zukhen aigentlish ainen Estish für zeks Perzoonen) - Cerchiamo in realtà un tavolo da pranzo per sei persone.
+Dieser hier lässt sich sogar noch ausziehen. (Diizer hiir lèsst zish zoogar nokh austsiien) - Questo qui si può addirittura ancora allungare.
+Gibt es das Bett auch in einer größeren Version? (Gipt es das Bet aukh in ainer gröseren Verzioon?) - C'è il letto anche in una versione più grande?
+Ja, wir haben es auch als Doppelbett verfügbar. (Ya, viir haaben es aukh als Dopelbet ferfügbaar) - Sì, l'abbiamo disponibile anche come letto matrimoniale.
+Wie viel kostet eigentlich diese Kommode dort drüben? (Vii fiil kostet aigentlish diize Komoode dort drüben?) - Quanto costa in realtà quel comò lì?
+Die Kommode kostet dreihundertfünfzig Euro reduziert. (Di Komoode kostet draihundertfünftsikh Oiro redutsiirt) - Il comò costa trecentocinquanta euro scontato.
+Haben Sie auch Regale, die man selbst zusammenbauen muss? (Haaben Zii aukh Reegaale, di man zelpst tsuzamenbauen muss?) - Avete anche scaffali da montare da soli?
+Die meisten unserer Möbel kommen als Bausatz. (Di maisten unzerer Möbel komen als Bauzats) - La maggior parte dei nostri mobili arriva come kit da montare.
+Ist der Aufbau dieses Schranks eigentlich kompliziert? (Ist der Aufbau diizes Shranks aigentlish komplitsiirt?) - Il montaggio di questo armadio è complicato?
+Nein, das dauert mit zwei Personen höchstens eine Stunde. (Nain, das dauert mit tsvai Perzoonen höökhstens aine Shtunde) - No, ci vuole al massimo un'ora con due persone.
+Wir hätten gern einen Teppich in einem neutralen Ton. (Viir hèten gern ainen Tepish in ainem noitraalen Toon) - Vorremmo un tappeto in una tonalità neutra.
+Dieser Teppich hier ist auch waschbar in der Maschine. (Diizer Tepish hiir ist aukh vashbaar in der Mashiine) - Questo tappeto qui è anche lavabile in lavatrice.
+Können wir diese Lampe irgendwo ausprobieren? (Können viir diize Lampe irgentvoo ausprobiiren?) - Possiamo provare da qualche parte questa lampada?
+Klar, wir haben drüben einen kleinen Musterbereich. (Klaar, viir haaben drüben ainen klainen Musterbereish) - Certo, abbiamo là un piccolo reparto espositivo.
+Passt dieser Schrank überhaupt durch unsere Zimmertür? (Passt diizer Shrank überhaupt durkh unzere Tsimertühr?) - Questo armadio passa attraverso la nostra porta della camera?
+Die Maße stehen genau auf dem Etikett dran. (Di Maase shteen genau auf dem Etikèt dran) - Le misure sono indicate esattamente sull'etichetta.
+Wir bräuchten noch passende Griffe für diese Schublade. (Viir broikhten nokh passende Grife für diize Shuublaade) - Ci servirebbero ancora maniglie adatte per questo cassetto.
+Die Griffe finden Sie in der Abteilung nebenan. (Di Grife finden Zii in der Aptailung neebenan) - Le maniglie le trova nel reparto accanto.
+Gibt es für dieses Regal auch zusätzliche Fächer? (Gipt es für diizes Reegaal aukh tsuzètslishe Fèsher?) - Ci sono anche ripiani aggiuntivi per questa libreria?
+Ja, die können Sie separat dazukaufen. (Ya, di können Zii zeparaat datsukaufen) - Sì, li può acquistare separatamente.
+Wie pflegeleicht ist eigentlich dieser Sofastoff? (Vii pfleegelaikht ist aigentlish diizer Zoofashtof?) - Quanto è facile da curare in realtà questo tessuto del divano?
+Der Bezug lässt sich zum Glück komplett abnehmen. (Der Betsuuk lèsst zish tsum Glük komplett apneemen) - Il rivestimento fortunatamente si può togliere completamente.
+Wir überlegen noch zwischen Holz und Metall fürs Gestell. (Viir überleegen nokh tsvishen Holts und Metal fürs Geshtel) - Stiamo ancora valutando tra legno e metallo per la struttura.
+Holz wirkt natürlich wärmer, Metall ist robuster. (Holts virkt natürlish vèrmer, Metal ist robuster) - Il legno risulta naturalmente più caldo, il metallo è più robusto.
+Können wir die Matratze vor dem Kauf mal testen? (Können viir di Matratse foor dem Kauf maal testen) - Possiamo provare il materasso prima dell'acquisto?
+Natürlich, hier vorne stehen einige Testbetten bereit. (Natürlish, hiir foorne shteen ainige Testbeten beraiit) - Certo, qui davanti ci sono alcuni letti di prova pronti.
+Wie viele Farben gibt es eigentlich von diesem Regal? (Vii fiile Farben gipt es aigentlish fon diizem Reegaal?) - Quanti colori ci sono in realtà di questa libreria?
+Aktuell gibt es das Modell in vier verschiedenen Farben. (Aktuel gipt es das Model in fiir fershiidenen Farben) - Attualmente il modello è disponibile in quattro colori diversi.
+Nehmen Sie auch alte Möbel zur Entsorgung mit? (Neemen Zii aukh alte Möbel tsur Entzorgung mit?) - Portate via anche i mobili vecchi per lo smaltimento?
+Das bieten wir gegen einen kleinen Aufpreis an. (Das biiten viir geegen ainen klainen Aufprais an) - Lo offriamo con un piccolo sovrapprezzo.
+Können Sie mir bei der Montage zu Hause helfen? (Können Zii miir bai der Montaazhe tsu Hauze helfen?) - Potete aiutarmi con il montaggio a casa?
+Ja, dafür bieten wir einen extra Montageservice an. (Ya, dafür biiten viir ainen ekstra Montaazheservis an) - Sì, per questo offriamo un servizio di montaggio extra.
+Wir suchen noch einen kleinen Beistelltisch fürs Sofa. (Viir zukhen nokh ainen klainen Baishteltish fürs Zoofa) - Cerchiamo ancora un piccolo tavolino da affiancare al divano.
+Dieser hier ist auch stapelbar mit einem zweiten. (Diizer hiir ist aukh shtaapelbaar mit ainem tsvaiten) - Questo qui è anche impilabile con un secondo.
+Wie stabil ist eigentlich dieser Barhocker? (Vii shtabiil ist aigentlish diizer Baarhoker?) - Quanto è stabile in realtà questo sgabello da bar?
+Der hält bis zu hundertzwanzig Kilo problemlos aus. (Der hèlt bis tsu hundertsvantsikh Kiilo probleemloos aus) - Regge fino a centoventi chili senza problemi.
+Gibt es zu diesem Bett auch passende Nachttische? (Gipt es tsu diizem Bet aukh passende Nakhttishe?) - Ci sono anche comodini abbinati a questo letto?
+Ja, die im gleichen Design stehen dort im Regal. (Ya, di im glaishen Dizain shteen dort im Reegaal) - Sì, quelli dello stesso design sono lì sullo scaffale.
+Wir würden gern noch einen Katalog mitnehmen. (Viir vürden gern nokh ainen Kataloog mitneemen) - Vorremmo prendere ancora un catalogo.
+Klar, die liegen direkt am Eingang für Sie bereit. (Klaar, di liigen direkt am Aingang für Zii beraiit) - Certo, sono proprio all'ingresso pronti per lei.
+Können wir die Ware auch online reservieren lassen? (Können viir di Vaare aukh onlain rezerviiren lassen?) - Possiamo far riservare la merce anche online?
+Ja, das geht ganz einfach über unsere Webseite. (Ya, das geet gants ainfakh über unzere Vepzaite) - Sì, funziona molto facilmente tramite il nostro sito.
+Vielen Dank für die ausführliche Beratung heute. (Fiilen Dank für di ausfüürlishe Beraatung hoite) - Grazie mille per la consulenza dettagliata di oggi.
+Hast du schon alle Harry-Potter-Bücher gelesen? (Hast du shon ale Hari-Poter-Büüsher gelezen?) - Hai già letto tutti i libri di Harry Potter?
+Ich hab sie sogar zweimal komplett durchgelesen. (Ish hab zii zoogaar tsvaimaal komplet durkhgelezen) - Li ho persino letti tutti per intero due volte.
+Welches Haus in Hogwarts würdest du eigentlich wählen? (Velshes Haus in Hoogvarts vürdest du aigentlish vèlen?) - Quale casa a Hogwarts sceglieresti in realtà?
+Ich würde wahrscheinlich nach Gryffindor kommen, glaub ich. (Ish vürde vaarsheinlish nakh Grifindor komen, glaub ish) - Finirei probabilmente a Grifondoro, credo.
+Ich hätte lieber Ravenclaw gewählt, ehrlich gesagt. (Ish hète liiber Reevenklaa gevèlt, eerlish gezaakt) - Avrei preferito Corvonero, a dire il vero.
+Findest du den Film oder das Buch eigentlich besser? (Findest du den Film oder das Buukh aigentlish besser?) - Trovi migliore in realtà il film o il libro?
+Das Buch ist für mich immer noch viel besser. (Das Buukh ist für mish immer nokh fiil besser) - Il libro per me è ancora molto meglio.
+Welcher Charakter gefällt dir am meisten in der Geschichte? (Velsher Karakter gefèlt dir am maisten in der Geshikhte?) - Quale personaggio ti piace di più nella storia?
+Mir gefällt der weise alte Schulleiter am besten. (Miir gefèlt der vaize alte Shullaiter am besten) - Mi piace di più il vecchio e saggio preside.
+Meine Lieblingsfigur ist eigentlich die kluge beste Freundin. (Maine Liiplingsfigur ist aigentlish di kluuge beste Froindin) - Il mio personaggio preferito è in realtà la migliore amica intelligente.
+Hast du gewusst, dass es sieben Bücher in der Reihe gibt? (Hast du gevusst, das es ziiben Büüsher in der Raihe gipt?) - Sapevi che ci sono sette libri nella serie?
+Ja klar, ich hab die ganze Sammlung im Regal stehen. (Ya klaar, ish hab di gantse Zamlung im Reegaal shteen) - Sì certo, ho tutta la collezione sullo scaffale.
+Welcher Teil der Geschichte gefällt dir am besten? (Velsher Tail der Geshikhte gefèlt dir am besten?) - Quale parte della storia ti piace di più?
+Mir gefällt vor allem der Anfang, als alles beginnt. (Miir gefèlt foor alem der Anfang, als ales begint) - Mi piace soprattutto l'inizio, quando tutto comincia.
+Ich fand den Endkampf am spannendsten von allen Teilen. (Ish fant den Entkampf am shpanentsten fon alen Tailen) - Ho trovato la battaglia finale la più avvincente di tutte le parti.
+Würdest du gern mal so einen Zauberstab besitzen? (Vürdest du gern maal zoo ainen Tsauberstaap bezitsen?) - Ti piacerebbe possedere una bacchetta magica come quella?
+Klar, das wäre wirklich der Traum meiner Kindheit gewesen. (Klaar, das vère virklish der Traum mainer Kinthait gevéezen) - Certo, sarebbe stato davvero il sogno della mia infanzia.
+Wie findest du die Filme im Vergleich zueinander? (Vii findest du di Filme im Fergliish tsuainander?) - Come li trovi i film uno rispetto all'altro?
+Die ersten Teile mochte ich immer am liebsten. (Di ersten Taile mokhte ish immer am liipsten) - I primi capitoli mi sono sempre piaciuti di più.
+Hast du auch mal überlegt, welches Tier du hättest? (Hast du aukh maal überleekt, velshes Tiir du hètest?) - Hai anche mai pensato quale animale avresti?
+Ich hätte gern eine Eule als treuen Begleiter. (Ish hète gern aine Oile als troien Beglaiter) - Vorrei un gufo come fedele compagno.
+Meine Tochter liest die Bücher gerade zum ersten Mal. (Maine Tokhter liist di Büüsher geraade tsum ersten Maal) - Mia figlia sta leggendo i libri proprio per la prima volta.
+Das freut mich total, das sind wirklich tolle Geschichten. (Das froit mish total, das zint virklish tole Geshikhten) - Mi fa davvero piacere, sono storie davvero bellissime.
+Wie alt warst du eigentlich, als du das erste Mal gelesen hast? (Vii alt varst du aigentlish, als du das erste Maal gelezen hast?) - Quanti anni avevi in realtà quando hai letto per la prima volta?
+Ich war damals ungefähr zehn oder elf Jahre alt. (Ish var damaals ungefèer tseen oder elf Yaare alt) - Avevo allora circa dieci o undici anni.
+Welche magische Fähigkeit hättest du gerne selbst? (Velshe maagishe Fèikhkait hètest du gerne zelpst?) - Quale abilità magica vorresti avere tu stesso?
+Ich würde gern unsichtbar werden können, wenn ich will. (Ish vürde gern unzishtbaar verden können, ven ish vil) - Vorrei poter diventare invisibile quando voglio.
+Findest du das Schulsystem in der Geschichte realistisch? (Findest du das Shulzüsteem in der Geshikhte realistish?) - Trovi realistico il sistema scolastico nella storia?
+Natürlich nicht wirklich, aber es macht trotzdem großen Spaß. (Natürlish nikht virklish, aber es makht trotstdem groosen Shpaas) - Ovviamente non davvero, ma è comunque molto divertente.
+Wir sollten mal einen ganzen Filmabend dazu machen. (Viir zolten maal ainen gantsen Filmaabent datsu makhen) - Dovremmo organizzare una serata cinema intera su questo.
+Gute Idee, ich bring dann Popcorn für alle mit. (Guute Idee, ish bring den Popkorn für ale mit) - Buona idea, porto io i popcorn per tutti allora.
+Wie findest du eigentlich die ganze Musik in den Filmen? (Vii findest du aigentlish di gantse Muzik in den Filmen?) - Cosa ne pensi in realtà di tutta la musica nei film?
+Die Musik ist echt unglaublich stimmungsvoll, finde ich. (Di Muzik ist ekt unglaublish shtimungsfol, finde ish) - La musica è davvero incredibilmente evocativa, secondo me.
+Welche Kreatur aus der Geschichte findest du am gruseligsten? (Velshe Kreatuur aus der Geshikhte findest du am gruuzeligsten?) - Quale creatura della storia trovi più spaventosa?
+Die riesige Spinne fand ich als Kind total furchteinflößend. (Di riizige Shpine fant ish als Kint total furkhtainflösent) - Il ragno gigante lo trovavo da bambino davvero terrificante.
+Hast du auch mal einen dieser Themenparks besucht? (Hast du aukh maal ainen diizer Teemenparks bezuukht?) - Hai anche mai visitato uno di questi parchi a tema?
+Nein, aber das steht ganz oben auf meiner Wunschliste. (Nain, aber das shteet gants oben auf mainer Vunshliste) - No, ma è in cima alla mia lista dei desideri.
+Welches Buch würdest du jemandem zuerst empfehlen? (Velshes Buukh vürdest du yeemandem tsuerst empfeelen?) - Quale libro consiglieresti a qualcuno per primo?
+Definitiv das allererste, damit fängt alles an. (Definitiif das aleerste, damit fèngt ales an) - Sicuramente il primissimo, con quello inizia tutto.
+Erinnerst du dich noch an deine erste Reaktion beim Lesen? (Erinerst du dish nokh an daine erste Reaktsioon baim Leezen?) - Ricordi ancora la tua prima reazione durante la lettura?
+Ich konnte das Buch damals einfach nicht mehr weglegen. (Ish konte das Buukh damaals ainfakh nikht meer vekleegen) - All'epoca non riuscivo proprio più a mettere giù il libro.
+Wie oft hast du die Filme insgesamt schon gesehen? (Vii oft hast du di Filme insgezamt shon gezeen?) - Quante volte hai già visto i film in totale?
+Ehrlich gesagt hab ich sie schon unzählige Male gesehen. (Eerlish gezaakt hab ish zii shon untsèlige Maale gezeen) - A dire il vero li ho già visti innumerevoli volte.
+Denkst du, die Geschichte bleibt auch in Zukunft beliebt? (Denkst du, di Geshikhte blaipt aukh in Tsukunft beliipt?) - Pensi che la storia resterà popolare anche in futuro?
+Auf jeden Fall, das ist einfach ein zeitloser Klassiker. (Auf yeeden Fal, das ist ainfakh ain tsaitlooser Klasiker) - Assolutamente, è semplicemente un classico senza tempo.
+Wollen wir dieses Wochenende zusammen weiterlesen? (Volen viir diizes Vokhenende tsuzamen vaiterleezen?) - Vogliamo continuare a leggere insieme questo weekend?
+Sehr gern, ich freu mich schon richtig darauf. (Zeer gern, ish froi mish shon rishtikh darauf) - Molto volentieri, non vedo già l'ora.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
