@@ -2762,6 +2762,242 @@ Le rendez-vous est fixé au jeudi vingt-trois mai à dix heures (Le randevu è f
 On doit retenir les jours fériés du mois de mai (On dua retnir lé jur ferié dü mua de mè) - Dobbiamo ricordare i giorni festivi del mese di maggio
 Compte combien il y a de lettres dans le mot dimanche (Kont conbien ilia de letr dan le mo dimansh) - Conta quante lettere ci sono nella parola domenica
 On a rendez-vous chez le dentiste le trois du mois prochain (On a randevu ché le dantist le trua dü mua proshin) - Abbiamo appuntamento dal dentista il tre del mese prossimo
+Tu peux me dire quelle heure il est ? (tü pö me dir kel ör il é) - Puoi dirmi che ore sono?
+Il est presque huit heures, on ferait mieux de se dépêcher. (il é presk üit ör, on ferè miö de se depesce) - Sono quasi le otto, faremmo meglio a sbrigarci.
+Je me suis réveillé à six heures et quart ce matin. (ʒö me süi reveye a sis ör é kar se maten) - Stamattina mi sono svegliato alle sei e un quarto.
+À sept heures moins dix, je suis déjà dans la voiture. (a set ör mwan dis, ʒö süi deʒa dan la vuatür) - Alle sette meno dieci sono già in macchina.
+Le petit-déjeuner me prend environ vingt minutes. (le pəti deʒöné me pran anviron van minüt) - La colazione mi richiede circa venti minuti.
+Je pars généralement de chez moi vers huit heures moins le quart. (ʒö par ʒeneralman de sce mwa ver üit ör mwan le kar) - Di solito esco di casa verso le otto meno un quarto.
+J'ai une réunion à neuf heures précises, alors je ne peux pas traîner. (ʒé ün reyünyon a nöf ör presiz, alor ʒö ne pö pa trené) - Ho una riunione alle nove precise, quindi non posso perdere tempo.
+Le rendez-vous est prévu pour dix heures et demie. (le randé-vu é prevü pur dis ör é demi) - L'appuntamento è fissato per le dieci e mezza.
+Il faut que je termine ce travail avant midi. (il fo ke ʒö termin se travay avan midi) - Devo finire questo lavoro prima di mezzogiorno.
+À midi, on déjeune généralement tous ensemble. (a midi, on deʒön ʒeneralman tu ansãbl) - A mezzogiorno di solito pranziamo tutti insieme.
+Cet après-midi, j'ai deux rendez-vous à la suite. (set aprè-midi, ʒé dö randé-vu a la süit) - Questo pomeriggio ho due appuntamenti di seguito.
+Je serai libre vers trois heures et quart. (ʒö serè libr ver trwa ör é kar) - Sarò libero verso le tre e un quarto.
+On peut se parler à quatre heures, si ça t'arrange. (on pö se parlé a katr ör, si sa taranʒ) - Possiamo sentirci alle quattro, se per te va bene.
+Je dois passer à la banque avant cinq heures. (ʒö dwa pase a la bank avan sank ör) - Devo passare in banca prima delle cinque.
+À dix-huit heures, je vais normalement à la salle de sport. (a diz-üit ör, ʒö vè normalman a la sal de spor) - Alle diciotto vado normalmente in palestra.
+L'entraînement commence à dix-huit heures trente et dure environ une heure. (lantrenman komans a diz-üit ör trant é dür anviron ün ör) - L'allenamento inizia alle 18:30 e dura circa un'ora.
+Je rentre chez moi vers dix-neuf heures quarante-cinq. (ʒö rantr sce mwa ver diz-nöf ör karant-sank) - Torno a casa verso le 19:45.
+Il est déjà vingt heures, il faut penser au dîner. (il é deʒa van ör, il fo panse o dine) - Sono già le venti, bisogna pensare alla cena.
+Après vingt et une heures, j'évite généralement de travailler. (aprè van-te-ün ör, ʒevit ʒeneralman de travayé) - Dopo le 21 di solito evito di lavorare.
+Je regarde rarement l'heure quand je suis en vacances. (ʒö regard raröman ler kan ʒö süi an vakãs) - Quando sono in vacanza guardo raramente l'ora.
+Mon réveil sonne à six heures quinze tous les jours. (mon revei son a sis ör kenz tu le ʒur) - La mia sveglia suona alle 6:15 ogni giorno.
+Je mets toujours mon réveil dix minutes plus tôt pour avoir le temps de me préparer. (ʒö mè tuʒur mon revei dis minüt plü to pur avwar le tan de me prepare) - Metto sempre la sveglia dieci minuti prima per avere il tempo di prepararmi.
+J'ai tendance à regarder l'heure dès que je me réveille. (ʒé tandãs a regarde ler de ke ʒö me revei) - Ho la tendenza a guardare l'ora appena mi sveglio.
+Il est neuf heures du matin, tu es déjà debout ? (il é nöf ör dü maten, tü é deʒa debu) - Sono le nove del mattino, sei già in piedi?
+Je n'ai pas vu le temps passer, il est déjà midi et demi. (ʒö né pa vü le tan pase, il é deʒa midi é demi) - Non mi sono accorto del tempo che passava, è già mezzogiorno e mezza.
+On a encore vingt minutes avant le début de la réunion. (on a ankor van minüt avan le debü de la reyünyon) - Abbiamo ancora venti minuti prima dell'inizio della riunione.
+La réunion devait finir à onze heures, mais elle a duré jusqu'à midi. (la reyünyon devè finir a onz ör, mè el a dür ʒüsk a midi) - La riunione doveva finire alle undici, ma è durata fino a mezzogiorno.
+Je dois être à la gare à sept heures quarante. (ʒö dwa etr a la gar a set ör karant) - Devo essere in stazione alle 7:40.
+Le train part à huit heures cinq, donc il ne faut pas être en retard. (le trẽ par a üit ör sank, donk il ne fo pa etr an retar) - Il treno parte alle 8:05, quindi non bisogna fare tardi.
+J'ai bloqué toute ma matinée pour ce rendez-vous. (ʒé bloke tut ma matine pur se randé-vu) - Ho riservato tutta la mattina per questo appuntamento.
+Cet après-midi, je n'ai rien de prévu avant dix-sept heures. (set aprè-midi, ʒö né riẽ de prevü avan diz-set ör) - Questo pomeriggio non ho nulla in programma prima delle 17.
+À partir de dix-huit heures, je suis généralement occupé. (a partir de diz-üit ör, ʒö süi ʒeneralman oküpe) - A partire dalle 18, generalmente sono impegnato.
+Je peux passer te voir vers dix-neuf heures, mais pas plus tard. (ʒö pö pase te vwar ver diz-nöf ör, mè pa plü tar) - Posso passare a trovarti verso le 19, ma non più tardi.
+On avait prévu de sortir à vingt heures, mais on est partis plus tard. (on avè prevü de sortir a van ör, mè on é parti plü tar) - Avevamo previsto di uscire alle 20, ma siamo partiti più tardi.
+Il est onze heures du soir et je commence déjà à avoir sommeil. (il é onz ör dü swar é ʒö komãs deʒa a avwar somèy) - Sono le undici di sera e comincio già ad avere sonno.
+Je vais me coucher vers minuit quand je n'ai pas besoin de me lever tôt. (ʒö vè me küşé ver minüi kan ʒö né pa bezwan de me levé to) - Vado a letto verso mezzanotte quando non devo alzarmi presto.
+Hier, je me suis couché à vingt-trois heures trente. (ier, ʒö me süi küşé a van-trwa ör trant) - Ieri sono andato a letto alle 23:30.
+Demain matin, j'ai un rendez-vous à huit heures. (demẽ maten, ʒé an randé-vu a üit ör) - Domani mattina ho un appuntamento alle otto.
+Il me reste une demi-heure avant de devoir partir. (il me rest ün demi-ör avan de devwar partir) - Mi resta mezz'ora prima di dover partire.
+Tu as combien de temps avant ton prochain rendez-vous ? (tü a kombiẽ de tan avan ton prosces randé-vu) - Quanto tempo hai prima del tuo prossimo appuntamento?
+J'ai seulement dix minutes, alors fais vite. (ʒé selman dis minüt, alor fè vit) - Ho solo dieci minuti, quindi fai presto.
+Je pensais avoir plus de temps, mais l'après-midi est passé très vite. (ʒö pansè avwar plü de tan, mè laprè-midi é pase trè vit) - Pensavo di avere più tempo, ma il pomeriggio è passato molto velocemente.
+Ma journée commence tôt et se termine assez tard. (ma ʒurne komans to é se termin ase tar) - La mia giornata inizia presto e finisce abbastanza tardi.
+Le matin, je suis beaucoup plus efficace qu'en fin de journée. (le maten, ʒö süi bokou plü efikas kan fen de ʒurne) - La mattina sono molto più efficiente che alla fine della giornata.
+Je préfère faire les tâches importantes avant onze heures. (ʒö prefer fer le tasc ẽportant avan onz ör) - Preferisco fare le attività importanti prima delle undici.
+Vers treize heures, j'ai généralement besoin d'une pause. (ver trèz ör, ʒé ʒeneralman bezwan dün poz) - Verso le tredici ho generalmente bisogno di una pausa.
+À quinze heures, je prends souvent un café pour rester concentré. (a kenz ör, ʒö pran suvan an kafe pur reste konsantre) - Alle quindici prendo spesso un caffè per rimanere concentrato.
+Si tu arrives après dix heures, appelle-moi avant d'entrer. (si tü ariv aprè dis ör, apel-mwa avan dantré) - Se arrivi dopo le dieci, chiamami prima di entrare.
+J'ai noté tous mes engagements dans mon agenda pour ne rien oublier. (ʒé note tu mez angaʒman dan mon aʒenda pur ne riẽ übliye) - Ho annotato tutti i miei impegni nell'agenda per non dimenticare nulla.
+Il faut vraiment que je trouve un peu de temps pour me reposer. (il fo vrèman ke ʒö truv an pö de tan pur me repoze) - Devo davvero trovare un po' di tempo per riposarmi.
+On cherche une table assez grande pour six personnes. (on scersc ün tabl ase grand pur sis person) - Cerchiamo un tavolo abbastanza grande per sei persone.
+Tu préfères le bois clair ou quelque chose de plus foncé ? (tü prefer le bwa klèr u kelk scos de plü fonse) - Preferisci il legno chiaro o qualcosa di più scuro?
+Ce canapé existe en trois couleurs différentes. (se kanape egzist an trwa kulör diferant) - Questo divano è disponibile in tre colori diversi.
+J'aime bien ce modèle, mais je le trouve un peu trop imposant. (ʒem biẽ se model, mè ʒö le truv an pö tro ẽpozan) - Mi piace questo modello, ma lo trovo un po' troppo ingombrante.
+Est-ce que vous avez cette commode dans une largeur de quatre-vingts centimètres ? (es ke vu zave set komod danz ün larʒör de katr-van santimetr) - Avete questa cassettiera in una larghezza di ottanta centimetri?
+Il nous faudrait deux chaises supplémentaires pour la salle à manger. (il nu fodrè dö scèz süplemantar pur la sal a manʒe) - Ci servirebbero altre due sedie per la sala da pranzo.
+Je voudrais voir si ce fauteuil est confortable avant de l'acheter. (ʒö vudrè vwar si se fotöy é konfortabl avan de lasceté) - Vorrei vedere se questa poltrona è comoda prima di comprarla.
+On a seulement deux mètres entre le mur et la fenêtre. (on a selman dö metr antr le mür é la fenetr) - Abbiamo solo due metri tra il muro e la finestra.
+Ce meuble est joli, mais il risque de prendre beaucoup de place. (se möbl é ʒoli, mè il risk de prandr bokou de plas) - Questo mobile è bello, ma rischia di occupare molto spazio.
+Vous pouvez me dire combien coûte la livraison ? (vu puve me dir kombiẽ kut la livrèzon) - Può dirmi quanto costa la consegna?
+Le montage est compris dans le prix ou c'est en supplément ? (le montaʒ é kompri dan le pri u sè an süpleman) - Il montaggio è compreso nel prezzo o è un supplemento?
+J'hésite entre ce lit et le modèle juste à côté. (ʒesite antr se li é le model ʒüst a kote) - Sono indeciso tra questo letto e il modello proprio accanto.
+Cette armoire fait deux mètres de haut, c'est bien ça ? (set armoar fè dö metr de o, sè biẽ sa) - Questo armadio è alto due metri, giusto?
+Je voudrais quelque chose de simple, sans trop de décorations. (ʒö vudrè kelk scos de sãpl, san tro de dekorasion) - Vorrei qualcosa di semplice, senza troppe decorazioni.
+On cherche un meuble TV qui ne soit pas trop large. (on scersc an möbl te-ve ki ne swa pa tro larʒ) - Cerchiamo un mobile TV che non sia troppo largo.
+Ce canapé peut accueillir trois personnes sans problème. (se kanape pö aköyir trwa person san problem) - Questo divano può ospitare tre persone senza problemi.
+Est-ce que les coussins sont inclus avec le canapé ? (es ke le kusẽ son ẽklü avek le kanape) - I cuscini sono inclusi con il divano?
+J'aime beaucoup cette étagère, surtout avec les portes en verre. (ʒem bokou set etaʒèr, sürtu avek le port an vèr) - Mi piace molto questa libreria, soprattutto con le ante in vetro.
+Il me faudrait une bibliothèque pour environ deux cents livres. (il me fodrè ün bibliyotek pur anviron dö san livr) - Mi servirebbe una libreria per circa duecento libri.
+On peut choisir la couleur des poignées ? (on pö scwazi(r) la kulör de pwané) - Si può scegliere il colore delle maniglie?
+Je préfère les meubles avec des lignes assez modernes. (ʒö prefer le möbl avek de liɲ ase modern) - Preferisco i mobili dalle linee abbastanza moderne.
+Cette table est extensible, donc elle peut facilement passer de quatre à huit places. (set tabl é ekstansibl, donk el pö fasilman pase de katr a üit plas) - Questo tavolo è allungabile, quindi può passare facilmente da quattro a otto posti.
+Il faut mesurer la porte avant de commander ce meuble. (il fo mezüre la port avan de komande se möbl) - Bisogna misurare la porta prima di ordinare questo mobile.
+Tu crois que ce canapé va passer dans l'escalier ? (tü krwar ke se kanape va pase dan leskaliye) - Pensi che questo divano passerà per le vano delle scale?
+La livraison est prévue pour mardi prochain. (la livrèzon é prevü pur mardi prosce) - La consegna è prevista per martedì prossimo.
+Ils peuvent monter le meuble directement dans la chambre. (il pöv monte le möbl direktman dan la scãbr) - Possono montare il mobile direttamente in camera.
+Ce matelas existe en plusieurs épaisseurs. (se matela egzist an plüzior epesör) - Questo materasso è disponibile in diversi spessori.
+Je cherche un matelas plutôt ferme, mais pas trop dur. (ʒö scersc an matela plüto ferm, mè pa tro dür) - Cerco un materasso abbastanza rigido, ma non troppo duro.
+Quelle est la différence entre ces deux modèles de fauteuil ? (kel é la diferans antr se dö model de fotöy) - Qual è la differenza tra questi due modelli di poltrona?
+Celui-ci est moins cher, mais l'autre semble plus solide. (sölüi-si é mwan scèr, mè lotr sambl plü solid) - Questo costa meno, ma l'altro sembra più robusto.
+Vous avez une version plus petite de cette table basse ? (vu zave ün version plü pətit de set tabl bas) - Avete una versione più piccola di questo tavolino?
+Je voudrais quelque chose qui ne prenne pas trop de place dans le salon. (ʒö vudrè kelk scos ki ne pran pa tro de plas dan le salon) - Vorrei qualcosa che non occupi troppo spazio in soggiorno.
+Ce meuble est disponible immédiatement ou il faut le commander ? (se möbl é disponibl imediatman u il fo le komande) - Questo mobile è disponibile subito o bisogna ordinarlo?
+On peut payer en deux fois ? (on pö peye an dö fwa) - Si può pagare in due volte?
+Est-ce que vous faites des réductions si on achète plusieurs meubles ? (es ke vu fet de redüksion si on asèt plüzior möbl) - Fate degli sconti se si acquistano più mobili?
+J'aime cette lampe, mais je trouve qu'elle est un peu trop grande pour la pièce. (ʒem set lamp, mè ʒö truv kel é an pö tro grand pur la piès) - Mi piace questa lampada, ma trovo che sia un po' troppo grande per la stanza.
+On voudrait remplacer les meubles de toute la chambre. (on vudrè ranplase le möbl de tut la scãbr) - Vorremmo sostituire tutti i mobili della camera.
+Cette commode a six tiroirs, ça devrait être largement suffisant. (set komod a sis tirwar, sa dövrè etr larʒman süfizã) - Questa cassettiera ha sei cassetti, dovrebbe essere più che sufficiente.
+Je cherche une petite table de chevet avec un tiroir. (ʒö scersc ün pətit tabl de scève avek an tirwar) - Cerco un piccolo comodino con un cassetto.
+Le bois massif coûte généralement plus cher que le mélaminé. (le bwa masif kut ʒeneralman plü scèr ke le melaminé) - Il legno massello generalmente costa più del melaminico.
+Est-ce que cette étagère supporte beaucoup de poids ? (es ke set etaʒèr süport bokou de pwa) - Questa mensola regge molto peso?
+Je voudrais éviter les meubles trop fragiles, surtout avec les enfants. (ʒö vudrè evite le möbl tro fraʒil, sürtu avek lez anfan) - Vorrei evitare i mobili troppo fragili, soprattutto con i bambini.
+Cette chaise est disponible en noir, blanc et gris. (set scèz é disponibl an nwar, blã é gri) - Questa sedia è disponibile in nero, bianco e grigio.
+On hésite encore entre une table ronde et une table rectangulaire. (on ezit ankor antr ün tabl rond é ün tabl rektangülèr) - Siamo ancora indecisi tra un tavolo rotondo e uno rettangolare.
+Il faudrait au moins cent vingt centimètres de largeur pour la télé. (il fodrè o mwan san van santimetr de larʒör pur la te-le) - Servirebbero almeno centoventi centimetri di larghezza per la TV.
+Ce lit est disponible en cent quarante ou en cent soixante centimètres. (se li é disponibl an san karant u an san swasant santimetr) - Questo letto è disponibile da 140 o 160 centimetri.
+Je préfère essayer le fauteuil quelques minutes avant de me décider. (ʒö prefer eseye le fotöy kelk minüt avan de me deside) - Preferisco provare la poltrona per qualche minuto prima di decidere.
+Vous avez des meubles de rangement adaptés aux petits appartements ? (vu zave de möbl de ranʒman adapte o pəti apartman) - Avete mobili contenitori adatti ai piccoli appartamenti?
+Ce meuble existe aussi en version plus claire, avec du bois naturel. (se möbl egzist osi an version plü klèr, avek dü bwa natürèl) - Questo mobile esiste anche in una versione più chiara, con legno naturale.
+Si on prend l'ensemble, est-ce que la livraison est offerte ? (si on pran lansãbl, es ke la livrèzon é ofert) - Se prendiamo tutto il set, la consegna è gratuita?
+On devrait prendre les mesures une dernière fois avant de passer commande. (on dövrè prandr le mezür ün dernyèr fwa avan de pase komand) - Dovremmo prendere le misure un'ultima volta prima di effettuare l'ordine.
+Aujourd'hui, on va revoir la différence entre l'imparfait et le passé composé. (oʒurdüi, on va revwar la diferans antr lẽparfè é le pase kompoze) - Oggi ripasseremo la differenza tra imperfetto e passato prossimo.
+Dans cette phrase, le verbe doit être conjugué au présent. (dan set fraz, le verb dwa etr konʒüge o prezan) - In questa frase il verbo deve essere coniugato al presente.
+Pourquoi est-ce qu'on utilise l'imparfait ici et pas le passé composé ? (purkwa es kon ütiliz lẽparfè isi é pa le pase kompoze) - Perché qui si usa l'imperfetto e non il passato prossimo?
+Regarde bien la terminaison du verbe, elle nous donne un indice. (regard biẽ la terminèzon dü verb, el nu don an endis) - Guarda bene la desinenza del verbo, ci dà un indizio.
+Avec les verbes en -er, les terminaisons de l'imparfait sont assez faciles à retenir. (avek le verb an er, le terminèzon de lẽparfè son ase fasil a retni(r)) - Con i verbi in -er, le desinenze dell'imperfetto sono abbastanza facili da ricordare.
+Le professeur nous demande de transformer la phrase du singulier au pluriel. (le profesor nu demand de transf orme la fraz dü sengüliye o plüryel) - L'insegnante ci chiede di trasformare la frase dal singolare al plurale.
+Faites attention à l'accord entre le sujet et le verbe. (fet atansion a lakor antr le süʒè é le verb) - Fate attenzione alla concordanza tra soggetto e verbo.
+Dans « ils parlent », pourquoi entend-on à peine la terminaison ? (dan il parl, purkwa antan-ton a pen la terminèzon) - In «ils parlent», perché si sente appena la desinenza?
+Le « s » final ne se prononce pas dans beaucoup de mots français. (le es final ne se pronons pa dan bokou de mo fransè) - La s finale non si pronuncia in molte parole francesi.
+Tu peux me donner un exemple avec le verbe « prendre » ? (tü pö me done an egzãpl avek le verb prandr) - Puoi farmi un esempio con il verbo «prendre»?
+Il faut apprendre les verbes irréguliers par cœur, malheureusement. (il fo aprandr le verb irregüliye par ker, malörözman) - Bisogna imparare a memoria i verbi irregolari, purtroppo.
+Le participe passé de « faire », c'est « fait ». (le partisip pase de fer, sè fè) - Il participio passato di «faire» è «fait».
+N'oubliez pas que certains verbes utilisent « être » au passé composé. (nübliye pa ke sèrtẽ verb ütiliz etr o pase kompoze) - Non dimenticate che alcuni verbi usano «être» al passato composto.
+Avec « être », le participe passé s'accorde avec le sujet. (avek etr, le partisip pase sakor avek le süʒè) - Con «être», il participio passato concorda con il soggetto.
+Elle est partie à huit heures, donc elle n'est plus ici. (el é parti a üit ör, donk el né plü isi) - È partita alle otto, quindi non è più qui.
+Pourquoi dit-on « je suis allé » et pas « j'ai allé » ? (purkwa di-ton ʒö süi ale é pa ʒé ale) - Perché si dice «je suis allé» e non «j'ai allé»?
+Parce que « aller » se conjugue avec « être » au passé composé. (parskö ale se konʒüg avek etr o pase kompoze) - Perché «aller» si coniuga con «être» al passato composto.
+Maintenant, essayez de mettre cette phrase à la forme négative. (mantenã, eseye de metr set fraz a la form negatif) - Adesso provate a mettere questa frase alla forma negativa.
+À la forme négative, le « ne » vient avant le verbe conjugué. (a la form negatif, le ne viẽ avan le verb konʒüge) - Nella forma negativa, il «ne» viene prima del verbo coniugato.
+À l'oral, on entend souvent « j'ai pas » au lieu de « je n'ai pas ». (a loral, on antan suvan ʒé pa o lyo de ʒö né pa) - Nel parlato si sente spesso «j'ai pas» invece di «je n'ai pas».
+Cette expression est correcte à l'oral, mais évitez-la dans une rédaction scolaire. (set ekspresion é korekt a loral, mè evite-la danz ün redaksion skolèr) - Questa espressione è corretta nel parlato, ma evitatela in un tema scolastico.
+Quelle est la différence entre « depuis » et « pendant » ? (kel é la diferans antr depüi é pandan) - Qual è la differenza tra «depuis» e «pendant»?
+On utilise « depuis » pour une action qui continue encore maintenant. (on ütiliz depüi pur ün aksion ki kontiny ankor mantenã) - Si usa «depuis» per un'azione che continua ancora adesso.
+« Pendant trois ans » indique une durée terminée. (pandan trwa zan ẽdik ün düré termine) - «Pendant trois ans» indica una durata conclusa.
+J'habite ici depuis cinq ans, et je m'y plais toujours. (ʒabit isi depüi sank zan, é ʒö mi plè tuʒur) - Abito qui da cinque anni e mi trovo ancora bene.
+Faites attention à la place des adjectifs dans cette phrase. (fet atansion a la plas dez adʒektif dan set fraz) - Fate attenzione alla posizione degli aggettivi in questa frase.
+Certains adjectifs se placent avant le nom, d'autres après. (sèrtẽz adʒektif se plas avan le nom, dotr aprè) - Alcuni aggettivi si mettono prima del nome, altri dopo.
+Pourquoi est-ce qu'on dit « une petite maison » mais « une maison moderne » ? (purkwa es kon di ün pətit mezon mè ün mezon modern) - Perché si dice «une petite maison» ma «une maison moderne»?
+Parce que la position de l'adjectif peut parfois changer le sens. (parskö la pozision de ladʒektif pö parfwa sciãʒe le sans) - Perché la posizione dell'aggettivo a volte può cambiare il significato.
+Le professeur nous a donné dix phrases à corriger pour demain. (le profesor nu za done dis fraz a koreʒe pur demẽ) - L'insegnante ci ha dato dieci frasi da correggere per domani.
+Je n'ai pas compris pourquoi cette réponse est considérée comme fausse. (ʒö né pa kompri purkwa set repons é konsideré kom fos) - Non ho capito perché questa risposta è considerata sbagliata.
+Tu peux expliquer la règle avec tes propres mots ? (tü pö eksplike la regl avek te propr mo) - Puoi spiegare la regola con parole tue?
+Essayons d'abord de trouver le sujet de la phrase. (eseyon dab or de truve le süʒè de la fraz) - Proviamo prima a trovare il soggetto della frase.
+Ensuite, on cherche le verbe et on regarde à quel temps il est. (ansüit, on scersc le verb é on regard a kel tan il é) - Poi cerchiamo il verbo e vediamo a quale tempo è.
+Dans « nous finirons », le verbe est au futur simple. (dan nu finirõ, le verb é o für simpel) - In «nous finirons», il verbo è al futuro semplice.
+La terminaison « -ons » indique ici la première personne du pluriel. (la terminèzon on ẽdik isi la premye person dü plüryel) - La desinenza «-ons» indica qui la prima persona plurale.
+Attention à ne pas confondre le futur avec le conditionnel. (atansion a ne pa konf ondr le für avek le kondisionel) - Attenzione a non confondere il futuro con il condizionale.
+« Je voudrais » exprime une demande plus polie que « je veux ». (ʒö vudrè eksprim ün demand plü poli ke ʒö vö) - «Je voudrais» esprime una richiesta più cortese di «je veux».
+Dans cette phrase, pourquoi utilise-t-on le subjonctif ? (dan set fraz, purkwa ütiliz-ton le sübʒonktif) - In questa frase, perché si usa il congiuntivo?
+Après certaines expressions, le subjonctif est obligatoire. (aprè sèrtèn ekspresion, le sübʒonktif é obligatwar) - Dopo alcune espressioni il congiuntivo è obbligatorio.
+Il faut que tu fasses attention à l'orthographe. (il fo ke tü fas atansion a lortograf) - Devi fare attenzione all'ortografia.
+Le verbe « devoir » peut exprimer une obligation ou une probabilité. (le verb devwar pö eksprim ün obligasion u ün probabilite) - Il verbo «devoir» può esprimere un obbligo o una probabilità.
+« Il doit être chez lui » peut aussi signifier « il est probablement chez lui ». (il dwa etr sce lü pö osi siɲifi il é probablaman sce lü) - «Il doit être chez lui» può anche significare «probabilmente è a casa sua».
+Relisez votre texte avant de le rendre au professeur. (rölize votr tekst avan de le randr o profesor) - Rileggete il vostro testo prima di consegnarlo all'insegnante.
+J'ai fait une faute d'accord dans la dernière phrase. (ʒé fè ün fot dakor dan la dernyèr fraz) - Ho fatto un errore di concordanza nell'ultima frase.
+Il manque un accent sur cette lettre. (il mank an aksan sür set letr) - Manca un accento su questa lettera.
+Le français écrit demande beaucoup plus de précision que le français parlé. (le fransè ekri demand bokou plü de presizion ke le fransè parle) - Il francese scritto richiede molta più precisione del francese parlato.
+On va faire un petit exercice pour vérifier si tout est clair. (on va fer an pəti egzèrsis pur verifie si tu é klèr) - Faremo un piccolo esercizio per verificare se è tutto chiaro.
+Prenez cinq minutes pour compléter les phrases. (prone sank minüt pur komplete le fraz) - Prendete cinque minuti per completare le frasi.
+Si vous avez un doute, regardez la règle dans votre manuel. (si vu zave an dut, regardé la regl dan votr manyel) - Se avete un dubbio, guardate la regola nel vostro manuale.
+La prochaine fois, on fera un contrôle sur les temps du passé. (la proschen fwa, on fera an kontrol sür le tan dü pase) - La prossima volta faremo una verifica sui tempi del passato.
+Cette année, on va installer le sapin un peu plus tôt que d'habitude. (set ane, on va ẽstale le sapẽ an pö plü to ke dabitüd) - Quest'anno metteremo l'albero un po' prima del solito.
+Tu préfères mettre le sapin près de la fenêtre ou dans un coin du salon ? (tü prefer metr le sapẽ pre de la fenetr u danz an kwẽ dü salon) - Preferisci mettere l'albero vicino alla finestra o in un angolo del soggiorno?
+Il faut d'abord sortir toutes les décorations du placard. (il fo dab or sortir tut le dekorasion dü plakar) - Prima bisogna tirare fuori tutte le decorazioni dall'armadio.
+On a gardé les boules de Noël de l'année dernière. (on a garde le bul de noèl de lane dernyer) - Abbiamo conservato le palline di Natale dell'anno scorso.
+Attention, certaines décorations sont assez fragiles. (atansion, sèrtèn dekorasion son ase fraʒil) - Attenzione, alcune decorazioni sono abbastanza fragili.
+J'aime bien mettre les guirlandes lumineuses avant les boules. (ʒem biẽ metr le girland lüminöz avan le bul) - Mi piace mettere le luci decorative prima delle palline.
+Les lumières fonctionnent encore ou il faut en acheter de nouvelles ? (le lümyèr fonksion ankor u il fo an ascté de nuvèl) - Le luci funzionano ancora o bisogna comprarne di nuove?
+On pourrait mettre des lumières blanches cette année. (on purè metr de lümyèr blãsc set ane) - Potremmo mettere delle luci bianche quest'anno.
+Tu peux démêler cette guirlande pendant que je prépare les décorations. (tü pö demele set girland pandan ke ʒö prepar le dekorasion) - Puoi districare questa ghirlanda mentre preparo le decorazioni.
+Il manque quelques crochets pour accrocher les boules. (il mank kelk kroce pur akrosce le bul) - Mancano alcuni ganci per appendere le palline.
+Mets les décorations les plus lourdes vers le bas du sapin. (mè le dekorasion le plü lurd ver le ba dü sapẽ) - Metti le decorazioni più pesanti nella parte bassa dell'albero.
+La petite étoile va tout en haut. (la pətit etwal va tu an o) - La piccola stella va proprio in cima.
+Je crois qu'on devrait mettre un peu plus de décorations sur ce côté. (ʒö krwar kon dövrè metr an pö plü de dekorasion sür se kote) - Credo che dovremmo mettere un po' più di decorazioni su questo lato.
+Le sapin penche légèrement vers la gauche. (le sapẽ panc leʒèrman ver la gosc) - L'albero pende leggermente verso sinistra.
+Attends, je vais remettre le pied du sapin correctement. (atã, ʒö vè remetr le pye dü sapẽ korekteman) - Aspetta, rimetto correttamente la base dell'albero.
+Voilà, maintenant il est bien droit. (vwala, mantenã il é biẽ drwa) - Ecco, adesso è ben dritto.
+Tu trouves qu'il est assez grand pour le salon ? (tü truv kil é ase gran pur le salon) - Ti sembra abbastanza grande per il soggiorno?
+Il fait presque deux mètres de haut, ça devrait suffire. (il fè presk dö metr de o, sa dövrè süfir) - È alto quasi due metri, dovrebbe bastare.
+On pourrait mettre le train miniature autour du sapin cette année. (on purè metr le trẽ miniatür otur dü sapẽ set ane) - Potremmo mettere il trenino elettrico intorno all'albero quest'anno.
+N'oublie pas de laisser une prise libre pour les lumières. (nübli pa de lese ün priz libr pur le lümyèr) - Non dimenticare di lasciare una presa libera per le luci.
+Le chat va sûrement essayer de grimper dans le sapin. (le scia va sürman eseye de grimpe dan le sapẽ) - Il gatto cercherà sicuramente di arrampicarsi sull'albero.
+Il faut éviter de laisser les fils électriques traîner par terre. (il fo evite de lese le fil elektrik trene par ter) - Bisogna evitare di lasciare i fili elettrici in giro per terra.
+Après le sapin, on pourra s'occuper de la crèche. (aprè le sapẽ, on pur a soküpe de la krèsc) - Dopo l'albero potremo occuparci del presepe.
+J'adore installer la crèche, ça me rappelle quand j'étais enfant. (ʒador ẽstale la krèsc, sa me rapèl kan ʒetè anfan) - Adoro preparare il presepe, mi ricorda quando ero bambino.
+Tu sais où sont les figurines de l'année dernière ? (tü sè u son le figürin de lane dernyer) - Sai dove sono le statuine dell'anno scorso?
+Elles doivent être dans la grande boîte en carton. (el dwa etr dan la grand bwat an karton) - Dovrebbero essere nella grande scatola di cartone.
+Il manque Joseph, je ne le trouve nulle part. (il mank ʒozèf, ʒö ne le truv nül par) - Manca Giuseppe, non lo trovo da nessuna parte.
+Marie est là, juste à côté de l'enfant Jésus. (Mari é la, ʒüst a kote de lanfan ʒe zü) - Maria è lì, proprio accanto a Gesù bambino.
+Les trois rois mages doivent être placés un peu plus loin. (le trwa rwa maʒ dwa etr plase an pö plü lwẽ) - I tre Re Magi devono essere messi un po' più lontano.
+On pourrait faire un petit chemin avec des cailloux jusqu'à la crèche. (on purè fer an pəti scemẽ avek de kayo ʒüsk a la krèsc) - Potremmo fare un piccolo sentiero con dei sassolini fino al presepe.
+Il faut encore trouver un endroit pour mettre les moutons. (il fo ankor truve an andrwa pur metr le muton) - Dobbiamo ancora trovare un posto per mettere le pecore.
+Les bergers peuvent être installés près de la rivière. (le berʒe pöv etr ẽstale pre de la rivyè) - I pastori possono essere sistemati vicino al fiume.
+Cette année, j'aimerais ajouter quelques maisons au village. (set ane, ʒemrè aʒüte kelk mezon o vilaʒ) - Quest'anno mi piacerebbe aggiungere alcune case al villaggio.
+On a encore la petite maison en bois avec le toit rouge. (on a ankor la pətit mezon an bwa avek le twa ruʒ) - Abbiamo ancora la casetta di legno con il tetto rosso.
+Il faudrait mettre un peu de mousse autour des maisons. (il fodrè metr an pö de mus otur de mezon) - Bisognerebbe mettere un po' di muschio intorno alle case.
+Fais attention à ne pas casser les petites figurines. (fè atansion a ne pa kase le pətit figürin) - Fai attenzione a non rompere le piccole statuine.
+Certaines sont très anciennes et on ne peut plus les remplacer. (sèrtèn son trèz ansyèn é on ne pö plü le ranplase) - Alcune sono molto vecchie e non si possono più sostituire.
+Tu veux mettre de la fausse neige autour de la crèche ? (tü vö metr de la fos neʒ otur de la krèsc) - Vuoi mettere della neve finta intorno al presepe?
+On pourrait éclairer la crèche avec une petite lampe. (on purè ekleré la krèsc avek ün pətit lamp) - Potremmo illuminare il presepe con una piccola lampada.
+Éteins la lumière principale, on verra mieux les petites lumières. (etẽ la lümyèr prinsipal, on verra miö le pətit lümyèr) - Spegni la luce principale, vedremo meglio le piccole luci.
+Il manque encore quelque chose au-dessus de la crèche. (il mank ankor kelk scos odesü de la krèsc) - Manca ancora qualcosa sopra il presepe.
+Une petite étoile ferait bien l'affaire. (ün pətit etwal ferè biẽ lafer) - Una piccola stella starebbe benissimo.
+On mettra les cadeaux sous le sapin demain matin. (on metra le kado su le sapẽ demẽ maten) - Metteremo i regali sotto l'albero domani mattina.
+Il faut cacher les cadeaux pour que personne ne les voie avant Noël. (il fo kascé le kado pur ke person ne le vwa avan noèl) - Bisogna nascondere i regali perché nessuno li veda prima di Natale.
+Cette année, on va décorer toute la maison, pas seulement le salon. (set ane, on va dekore tut la mezon, pa selman le salon) - Quest'anno decoreremo tutta la casa, non solo il soggiorno.
+On peut mettre une couronne sur la porte d'entrée. (on pö metr ün kuron sür la port dãtre) - Possiamo mettere una corona sulla porta d'ingresso.
+J'aime quand la maison est pleine de petites lumières à Noël. (ʒem kan la mezon é plen de pətit lümyèr a noèl) - Mi piace quando a Natale la casa è piena di piccole luci.
+Il ne reste plus qu'à mettre l'étoile au sommet du sapin. (il ne rest plü ka metr le t wal o somè dü sapẽ) - Non resta che mettere la stella in cima all'albero.
+Voilà, tout est prêt pour Noël, on peut enfin se poser. (vwala, tu é prè pur noèl, on pö anfen se poze) - Ecco, è tutto pronto per Natale, finalmente possiamo rilassarci.
+On va commencer la partie avec chacun cinq ressources. (on va komanse la parti avek scakan sank resurs) - Iniziamo la partita con cinque risorse a testa.
+Tu devrais garder quelques unités en réserve au cas où. (tü dövrè garde kelk ünité an rezerv o ka u) - Dovresti tenere alcune unità di riserva, non si sa mai.
+Si tu attaques maintenant, tu risques de perdre beaucoup de soldats. (si tü atak mantenã, tü risk de perdr bokou de solda) - Se attacchi adesso, rischi di perdere molti soldati.
+Je préfère renforcer ma défense avant de passer à l'offensive. (ʒö prefer ranforse ma defans avan de pase a lofensiv) - Preferisco rafforzare la mia difesa prima di passare all'offensiva.
+Il me manque encore deux points pour pouvoir construire cette forteresse. (il me mank ankor dö pwẽ pur puvwar konstrüir set forterès) - Mi mancano ancora due punti per poter costruire questa fortezza.
+Regarde la carte, il y a un passage secret derrière la montagne. (regard la kart, il ia an pasaʒ sekrè deryèr la montañ) - Guarda la mappa, c'è un passaggio segreto dietro la montagna.
+Tu viens de prendre ma capitale, ça change complètement la partie. (tü viẽ de prandr ma kapital, sa sciãʒ komletman la parti) - Hai appena conquistato la mia capitale, questo cambia completamente la partita.
+Je vais économiser mes ressources pendant deux tours. (ʒö vè ekonomize me resurs pandan dö tur) - Risparmierò le mie risorse per due turni.
+À ton avis, quelle stratégie serait la plus efficace ? (a ton avi, kel strateʒi serè la plü efikas) - Secondo te, quale strategia sarebbe più efficace?
+Attends, laisse-moi réfléchir avant de jouer mon prochain tour. (atã, lèse-mwa reflecir avan de ʒwe mon prosce tur) - Aspetta, lasciami riflettere prima di fare la mia prossima mossa.
+Après la partie, on regardera Harry Potter. (aprè la parti, on regardra Ari Poter) - Dopo la partita guarderemo Harry Potter.
+Tu te rappelles à quel moment Harry découvre vraiment ses pouvoirs ? (tü te rapèl a kel moman Ari dekuvr vrèman se puvwar) - Ti ricordi quando Harry scopre veramente i suoi poteri?
+J'aime bien le premier film, il a une ambiance beaucoup plus magique. (ʒem biẽ le premye film, il a ün ãbyãs bokou plü maʒik) - Mi piace il primo film, ha un'atmosfera molto più magica.
+On pourrait regarder deux films ce soir, mais ça risque de finir très tard. (on purè regardé dö film se swar, mè sa risk de finir trè tar) - Potremmo guardare due film stasera, ma rischiamo di finire molto tardi.
+Tu préfères les scènes à Poudlard ou celles qui se passent dans le monde des sorciers ? (tü prefer le scèn a Poudlar u sel ki se pas dan le mond de sorsye) - Preferisci le scene a Hogwarts o quelle ambientate nel mondo dei maghi?
+Cette scène avec Rogue me fait toujours rire, même après plusieurs visionnages. (set scèn avek Rog me fè tuʒur rir, mem aprè plüzior vizionnaʒ) - Questa scena con Piton mi fa sempre ridere, anche dopo aver visto il film diverse volte.
+Je trouve que la musique rend certaines scènes beaucoup plus impressionnantes. (ʒö truv ke la müzik ran sèrtèn scèn bokou plü ẽpresyonant) - Trovo che la musica renda alcune scene molto più impressionanti.
+Après le film, j'aimerais lire quelques pages de l'Iliade. (aprè le film, ʒemrè lir kelk paʒ de Liliad) - Dopo il film, mi piacerebbe leggere alcune pagine dell'Iliade.
+On en est arrivé au moment où Achille se met vraiment en colère. (on an é arive o moman u Akil se mè vrèman an kolèr) - Siamo arrivati al punto in cui Achille si arrabbia davvero.
+Je trouve intéressant de voir comment les personnages réagissent à l'honneur et à la vengeance. (ʒö truv ẽteresã de vwar koman le personnaʒ reaʒis a lonör é a la vãʒãs) - Trovo interessante vedere come i personaggi reagiscono all'onore e alla vendetta.
+Achille est puissant, mais son caractère lui crée aussi beaucoup de problèmes. (Akil é pwisã, mè son karakter lü kre osi bokou de problem) - Achille è potente, ma il suo carattere gli crea anche molti problemi.
+Tu te souviens qui était le roi de Mycènes ? (tü te suvyiẽ ki etè le rwa de Misen) - Ti ricordi chi era il re di Micene?
+Agamemnon joue un rôle important dans le conflit entre les Grecs et les Troyens. (Agamemnon ʒu an rol ẽportã dan le konflì antr le grek é le trwa-yẽ) - Agamennone svolge un ruolo importante nel conflitto tra Greci e Troiani.
+J'aime bien comparer les personnages de l'Iliade avec ceux qu'on voit dans les films. (ʒem biẽ kompare le personnaʒ de Liliad avek sö kon vwar dan le film) - Mi piace confrontare i personaggi dell'Iliade con quelli che vediamo nei film.
+On devrait lire le passage lentement, parce qu'il y a beaucoup de noms à retenir. (on dövrè lir le pasaʒ lẽtman, parskil ia bokou de nom a retni(r)) - Dovremmo leggere il passo lentamente, perché ci sono molti nomi da ricordare.
+Hector me paraît beaucoup plus réfléchi que certains autres guerriers. (Ektor me parè bokou plü refleci ke sèrtẽz otr gerye) - Ettore mi sembra molto più riflessivo di alcuni altri guerrieri.
+Tu veux lire un chapitre chacun et ensuite en discuter ? (tü vö lir an scapit(r) scakan é ansüit an disküte) - Vuoi leggere un capitolo a testa e poi discuterne?
+J'ai besoin de revenir quelques pages en arrière, j'ai perdu le fil. (ʒé bezwan de rövnir kelk paʒ an aryer, ʒé per dü fil) - Ho bisogno di tornare indietro di qualche pagina, ho perso il filo.
+Cette bataille dure depuis tellement longtemps qu'on ne sait presque plus qui attaque qui. (set bataiy dür döpüi telman longtan kon ne sè presk plü ki atak ki) - Questa battaglia dura da così tanto che quasi non si capisce più chi attacca chi.
+Si on lit dix pages par jour, on devrait terminer le livre dans quelques semaines. (si on li dis paʒ par ʒur, on dövrè termine le livr dan kelk semen) - Se leggiamo dieci pagine al giorno, dovremmo finire il libro in qualche settimana.
+Je préfère lire le texte tranquillement plutôt que d'essayer d'aller trop vite. (ʒö prefer lir le tekst trankilman plüto ke deseye dale tro vit) - Preferisco leggere il testo con calma invece di cercare di andare troppo velocemente.
+Entre le jeu, Harry Potter et l'Iliade, on a de quoi passer toute la soirée. (antr le ʒö, Ari Poter é Liliad, on a de kwa pase tut la swarè) - Tra il gioco, Harry Potter e l'Iliade, abbiamo di che trascorrere tutta la serata.
+On fait une pause de dix minutes avant de reprendre la partie ? (on fè ün poz de dis minüt avan de reprandr la parti) - Facciamo una pausa di dieci minuti prima di riprendere la partita?
+J'espère que tu n'as pas oublié que c'est encore mon tour. (ʒespèr ke tü na pa übliye ke sè ankor mon tur) - Spero che tu non abbia dimenticato che è ancora il mio turno.
+Je crois que je pourrais regarder Harry Potter encore une dizaine de fois sans m'en lasser. (ʒö krwar ke ʒö purè regarde Ari Poter ankor ün dizèn de fwa san man lasé) - Credo che potrei guardare Harry Potter ancora una decina di volte senza stancarmene.
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
