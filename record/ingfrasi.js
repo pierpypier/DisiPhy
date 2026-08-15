@@ -2252,6 +2252,55 @@ I never realised how much chemistry is involved in everyday life. (Ai never ri e
 Can we see the experiment from over here? (Ken ui sii di eksperiment from ouver hier?) - Possiamo vedere l'esperimento da qui?
 The teacher gave us ten minutes to finish the worksheet. (De tiicer geiv as ten minits tu finis de uork-sciit) - L'insegnante ci ha dato dieci minuti per finire la scheda.
 I think I finally understand how this works. (Ai think ai faineli anderstend hau dis uorks) - Penso di aver finalmente capito come funziona
+Where exactly is this country on the map? (Uer egzaktli iz dis kantri on de map?) - Dov'è esattamente questo paese sulla carta geografica?
+How far is the capital from the coast? (Hau far iz de kepitel from de koust?) - Quanto dista la capitale dalla costa?
+The capital is about 300 kilometres from the sea. (De kepitel iz ebaut thrii handred kilomiters from de sii) - La capitale dista circa 300 chilometri dal mare.
+How long would it take to drive from north to south? (Hau long ud it teik tu draiv from north tu sauth?) - Quanto ci vorrebbe per andare in auto da nord a sud?
+This river runs for more than 800 kilometres. (Dis river ranz for mor den eit handred kilomiters) - Questo fiume si estende per più di 800 chilometri.
+Which countries share a border with Germany? (Uic kantriz scer e border uid Germani?) - Quali paesi confinano con la Germania?
+It's only about 70 kilometres from here to the border. (Its ounli ebaut sevnti kilomiters from hier tu de border) - Da qui al confine ci sono solo circa 70 chilometri.
+Can you show me where the equator is? (Ken iu sciou mi uer di ekueiter iz?) - Puoi mostrarmi dov'è l'equatore?
+Most of the country lies south of the equator. (Moust ov de kantri laiz sauth ov di ekueiter) - La maggior parte del paese si trova a sud dell'equatore.
+What's the distance between these two cities? (Uots de distens bituin dhiiz tu sitiz?) - Qual è la distanza tra queste due città?
+They're roughly 150 kilometres apart. (Deir rafli uan handred end fifti kilomiters epart) - Dista circa 150 chilometri.
+This mountain range stretches across several countries. (Dis maunten reinj strecciz ecros severel kantriz) - Questa catena montuosa attraversa diversi paesi.
+The village is nearly 2,000 metres above sea level. (De vilij iz nirli tu thauzend miiters ebav sii level) - Il villaggio si trova a quasi 2.000 metri sul livello del mare.
+Why are there so many mountains in this part of the country? (Uai ar der sou meni mauntens in dis part ov de kantri?) - Perché ci sono così tante montagne in questa parte del paese?
+The eastern coast gets much more rain than the west. (Di ister n koust gets mac mor rein den de uest) - La costa orientale riceve molta più pioggia rispetto a quella occidentale.
+How far is the nearest major city? (Hau far iz de nierest meijor siti?) - Quanto dista la città principale più vicina?
+It's about a two-hour drive from here. (Its ebaut e tu-auer draiv from hier) - È a circa due ore di macchina da qui.
+The island is only 25 kilometres long. (Di ailand iz ounli tuenti faiv kilomiters long) - L'isola è lunga solo 25 chilometri.
+And how wide is it at its widest point? (End hau uaid iz it et its uaidest point?) - E quanto è larga nel suo punto più ampio?
+The lake covers an area of nearly 600 square kilometres. (De leik kavers en eria ov nirli siks handred skuer kilomiters) - Il lago copre una superficie di quasi 600 chilometri quadrati.
+Is this the longest river in the region? (Iz dis de longest river in de riijion?) - È questo il fiume più lungo della regione?
+The two cities are connected by a railway line that's over 200 kilometres long. (De tu sitiz ar konektid bai e reiluei lain dets ouver tu handred kilomiters long) - Le due città sono collegate da una linea ferroviaria lunga più di 200 chilometri.
+Which direction are we heading in? (Uic direkscion ar ui heding in?) - In che direzione stiamo andando?
+We're travelling west, towards the coast. (Uir treveling uest, teuordz de koust) - Stiamo viaggiando verso ovest, in direzione della costa.
+The border runs along the middle of the mountain range. (De border ranz elong de midel ov de maunten reinj) - Il confine corre lungo la parte centrale della catena montuosa.
+This region is much flatter than the area around it. (Dis riijion iz mac fleter den di eria eraund it) - Questa regione è molto più pianeggiante rispetto alla zona circostante.
+How far can you see from the top of the hill? (Hau far ken iu sii from de top ov de hil?) - Quanto lontano si può vedere dalla cima della collina?
+On a clear day, you can see mountains more than 100 kilometres away. (On e kliir dei, iu ken sii mauntens mor den uan handred kilomiters euei) - In una giornata limpida si possono vedere montagne a più di 100 chilometri di distanza.
+Why does this area have such a dry climate? (Uai daz dis eria hev sac e drai klaimet?) - Perché questa zona ha un clima così secco?
+It's much colder here because we're at a higher altitude. (Its mac koulder hier bikoz uir et e haier eltitiud) - Qui fa molto più freddo perché siamo a un'altitudine maggiore.
+How far is the nearest airport from the city centre? (Hau far iz de nierest erport from de siti senter?) - Quanto dista l'aeroporto più vicino dal centro città?
+The airport is roughly 18 kilometres outside the city. (Di erport iz rafli eitin kilomiters autsaid de siti) - L'aeroporto si trova a circa 18 chilometri fuori dalla città.
+Look at how the coastline curves around the bay. (Luk et hau de koustlain kervz eraund de bei) - Guarda come la costa curva intorno alla baia.
+This desert stretches for thousands of kilometres. (Dis dezert strecciz for thauzends ov kilomiters) - Questo deserto si estende per migliaia di chilometri.
+Which ocean is on the other side of the continent? (Uic oucen iz on di ader said ov de kontinent?) - Quale oceano si trova dall'altra parte del continente?
+The Pacific Ocean is much larger than the Atlantic. (De Pesifik Ouschen iz mac larjer den di Etlentik) - L'Oceano Pacifico è molto più grande dell'Atlantico.
+How many kilometres does the river flow through this country? (Hau meni kilomiters daz de river flou thru dis kantri?) - Per quanti chilometri scorre il fiume attraverso questo paese?
+It forms part of the border for almost 400 kilometres. (It forms part ov de border for olmost for handred kilomiters) - Forma parte del confine per quasi 400 chilometri.
+This map shows the population density in different areas. (Dis map sciouz de popiuleiscion densiti in difrent eriaz) - Questa carta mostra la densità della popolazione nelle diverse zone.
+Why are most of the big cities near the coast? (Uai ar moust ov de big sitiz niir de koust?) - Perché la maggior parte delle grandi città si trova vicino alla costa?
+The road climbs more than 1,000 metres over a distance of 15 kilometres. (De roud klaimz mor den uan thauzend miiters ouver e distens ov fiftiin kilomiters) - La strada sale di oltre 1.000 metri su una distanza di 15 chilometri.
+This part of the country is almost completely covered by forest. (Dis part ov de kantri iz olmost kompliitli kaverd bai forest) - Questa parte del paese è quasi completamente ricoperta da foreste.
+What's the shortest route between the two towns? (Uots de sciortest ruut bituin de tu taunz?) - Qual è il percorso più breve tra le due città?
+According to the map, it's just over 40 kilometres. (Ecording tu de map, its giast ouver forti kilomiters) - Secondo la carta, sono poco più di 40 chilometri.
+The population is concentrated around the major urban areas. (De popiuleiscion iz konsentreitid eraund de meijor erben eriaz) - La popolazione è concentrata intorno alle principali aree urbane.
+If you look closely, you can see a small island about ten kilometres offshore. (If iu luk klousli, iu ken sii e smol ailand ebaut ten kilomiters ofscior) - Se guardi attentamente, puoi vedere una piccola isola a circa dieci chilometri dalla costa.
+The climate changes quite a lot as you travel inland. (De klaimet ceingjiz kuait e lot ez iu trevel inland) - Il clima cambia parecchio man mano che ci si sposta verso l'interno.
+We'd have to travel nearly 500 kilometres to reach the other side. (Uid hev tu trevel nirli faiv handred kilomiters tu riic di ader said) - Dovremmo percorrere quasi 500 chilometri per raggiungere l'altra parte.
+This map makes it much easier to understand the geography of the region. (Dis map meiks it mac iizier tu anderstend de giografi ov de riijion) - Questa carta rende molto più facile capire la geografia della regione.
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
