@@ -1,18 +1,3 @@
-/* ================================================================
-   frafrasi.js — Frasi comuni Francese/Italiano per frafile.html
-   ----------------------------------------------------------------
-   Stesso schema di citazioni.js e tedfrasi.js: frasi su righe
-   separate, formato:
-   "Frase in francese (pronuncia approssimativa) - Traduzione italiana"
-
-   Per aggiungere nuove frasi: basta aggiungere una nuova riga dentro
-   il template string qui sotto, rispettando questo formato.
-   Nessun array da modificare a mano: il parsing avviene
-   automaticamente più in basso.
-
-   NOTA: al momento contiene solo 10 frasi di partenza; altre
-   verranno aggiunte in seguito, in batch successivi.
-   ================================================================ */
 const FRASI_FRA_RAW = `
 Bonjour (bon-giur) - Buongiorno
 Bonsoir (bon-suar) - Buonasera
