@@ -2907,6 +2907,97 @@ Denkst du, die Geschichte bleibt auch in Zukunft beliebt? (Denkst du, di Geshikh
 Auf jeden Fall, das ist einfach ein zeitloser Klassiker. (Auf yeeden Fal, das ist ainfakh ain tsaitlooser Klasiker) - Assolutamente, è semplicemente un classico senza tempo.
 Wollen wir dieses Wochenende zusammen weiterlesen? (Volen viir diizes Vokhenende tsuzamen vaiterleezen?) - Vogliamo continuare a leggere insieme questo weekend?
 Sehr gern, ich freu mich schon richtig darauf. (Zeer gern, ish froi mish shon rishtikh darauf) - Molto volentieri, non vedo già l'ora.
+Hast du die Ilias eigentlich schon einmal komplett gelesen? (hast du di ilias aigenlic scion ainmal komplett gelesen) - Hai mai letto l'Iliade per intero?
+Ich finde es erstaunlich, wie modern manche Gedanken in der Ilias noch wirken. (ich finde es erstaublic, vi modern manche gedanken in der ilias noch virken) - Trovo sorprendente quanto alcuni pensieri dell'Iliade sembrino ancora moderni.
+Achilleus ist für mich eine der interessantesten Figuren des ganzen Epos. (achilleus ist für mich aine der interessantesten figuren des gantzen epos) - Achille è per me uno dei personaggi più interessanti dell'intero poema.
+Warum ist Achilleus eigentlich so wütend auf Agamemnon? (varum ist achilleus aigenlic zo vütend auf agamemnon) - Perché Achille è così arrabbiato con Agamennone?
+Agamemnon nimmt ihm Briseis weg, und damit fühlt sich Achilleus gedemütigt. (agamemnon nimmt im briseis vek, und damit fühlt zich achilleus gedemütigt) - Agamennone gli porta via Briseide e così Achille si sente umiliato.
+Ich glaube, bei Achilleus geht es nicht nur um Briseis, sondern vor allem um seine Ehre. (ich glaube, bai achilleus geht es nicht nur um briseis, sondern for allem um zaine ere) - Credo che per Achille non si tratti solo di Briseide, ma soprattutto del suo onore.
+Hektor wirkt viel ruhiger und verantwortungsbewusster als Achilleus. (hektor virkt fiil ruiger und ferantvortungsbewusster als achilleus) - Ettore sembra molto più calmo e responsabile di Achille.
+Trotzdem muss Hektor seine Stadt und seine Familie verteidigen. (trotsdem muss hektor zaine stadt und zaine familie fer-taidigen) - Tuttavia Ettore deve difendere la sua città e la sua famiglia.
+Ich finde die Beziehung zwischen Hektor und Andromache besonders bewegend. (ich finde di betsiung tsviscen hektor und andromache besonders bewegend) - Trovo particolarmente toccante il rapporto tra Ettore e Andromaca.
+Andromache weiß genau, was passieren könnte, wenn Hektor in die Schlacht zurückgeht. (andromache vais genau, vas passieren könnte, ven hektor in di sclacht tsurück-geht) - Andromaca sa esattamente cosa potrebbe accadere se Ettore tornasse in battaglia.
+Hektor weiß das auch, aber er kann seine Pflicht trotzdem nicht einfach aufgeben. (hektor vais das auc, aber er kan zaine pflight trotsdem nicht ainfach aufgeben) - Anche Ettore lo sa, ma non può semplicemente abbandonare il suo dovere.
+Paris ist ganz anders als sein Bruder Hektor. (paris ist gantz anders als zain bruder hektor) - Paride è completamente diverso da suo fratello Ettore.
+Manchmal habe ich den Eindruck, dass Paris die Folgen seiner Entscheidungen unterschätzt. (mancmal habe ich den aindruck, das paris di folgen zainer entscheidungen unterschätzt) - A volte ho l'impressione che Paride sottovaluti le conseguenze delle sue decisioni.
+Helena wird in der Ilias viel differenzierter dargestellt, als man zunächst denkt. (helena virt in der ilias fiil differenzierter dargestellt, als man tsunecst denkt) - Elena è rappresentata nell'Iliade in modo molto più complesso di quanto si pensi inizialmente.
+Ich finde interessant, dass Helena selbst über ihre Rolle im Krieg nachdenkt. (ich finde interessant, das helena zelbst über ire rolle im krieg nachdenkt) - Trovo interessante che Elena rifletta sul proprio ruolo nella guerra.
+Die Götter mischen sich ständig in die Angelegenheiten der Menschen ein. (di götter miscen zich ständig in di angelegenhaiten der menscen ain) - Gli dèi interferiscono continuamente nelle vicende degli uomini.
+Athene unterstützt die Griechen, während Aphrodite eher auf der Seite der Trojaner steht. (atene unterstützt di griechen, während afrodite eer auf der zait-e der trojaner steht) - Atena sostiene i Greci, mentre Afrodite è più dalla parte dei Troiani.
+Zeus versucht manchmal, die anderen Götter unter Kontrolle zu halten. (tsois fersucht manchmal, di anderen götter unter kontrolle tsu halten) - Zeus cerca a volte di tenere sotto controllo gli altri dèi.
+Trotzdem macht jeder Gott im Grunde, was er will. (trotsdem macht jeder gott im grunde, vas er vil) - Tuttavia ogni dio, in fondo, fa quello che vuole.
+Die Götter wirken oft genauso eifersüchtig und nachtragend wie die Menschen. (di götter virken oft genauso aiferzüchtig und nachtragend vi di menscen) - Gli dèi spesso sembrano gelosi e rancorosi proprio come gli esseri umani.
+Ich frage mich, ob Homer die Götter absichtlich so menschlich dargestellt hat. (ich frage mich, ob homer di götter absic-lic zo mensc-lic dargestellt hat) - Mi chiedo se Omero abbia rappresentato intenzionalmente gli dèi in modo così umano.
+Achilleus kehrt erst wieder in den Kampf zurück, nachdem Patroklos gestorben ist. (achilleus kert erst vider in den kampf tsurück, nachdem patroklos gestorben ist) - Achille torna a combattere solo dopo la morte di Patroclo.
+Der Tod von Patroklos verändert Achilleus völlig. (der tod fon patroklos ferändert achilleus völlig) - La morte di Patroclo cambia completamente Achille.
+Für Achilleus ist der Tod seines Freundes ein Wendepunkt. (für achilleus ist der tod zaines froindes ain vende-punkt) - Per Achille la morte del suo amico rappresenta un punto di svolta.
+Nach Patroklos' Tod wird Achilleus noch rücksichtsloser. (nach patroklos tod virt achilleus noch rücksic-tslozer) - Dopo la morte di Patroclo, Achille diventa ancora più spietato.
+Der Kampf zwischen Achilleus und Hektor gehört zu den bekanntesten Szenen der Ilias. (der kampf tsviscen achilleus und hektor gehört tsu den bekanntesten tsenen der ilias) - Lo scontro tra Achille ed Ettore è una delle scene più famose dell'Iliade.
+Hektor weiß, dass seine Chancen gegen Achilleus sehr schlecht stehen. (hektor vais, das zaine cancen gegen achilleus zeer sclect stehen) - Ettore sa che le sue possibilità contro Achille sono molto scarse.
+Trotzdem bleibt er vor den Mauern Trojas stehen. (trotsdem blaibt er for den mauern trojas stehen) - Nonostante ciò rimane davanti alle mura di Troia.
+Ich finde Hektors Entscheidung gleichzeitig mutig und tragisch. (ich finde hektors entscheidung gleichzeitig mutig und tragisc) - Trovo la decisione di Ettore allo stesso tempo coraggiosa e tragica.
+Nach dem Tod Hektors verändert sich die Stimmung in Troja völlig. (nach dem tod hektors ferändert zich di stimmung in troja völlig) - Dopo la morte di Ettore, l'atmosfera a Troia cambia completamente.
+Achilleus behandelt Hektors Leichnam zunächst äußerst brutal. (achilleus behandelt hektors laicnam tsunecst oiserst brutal) - Inizialmente Achille tratta il cadavere di Ettore in modo estremamente brutale.
+Priamos geht schließlich persönlich zu Achilleus, um den Leichnam seines Sohnes zurückzufordern. (priamos geht schließlich persönlich tsu achilleus, um den laicnam zaines zones tsurück-tsu-fordern) - Priamo va infine personalmente da Achille per chiedere la restituzione del corpo di suo figlio.
+Die Begegnung zwischen Priamos und Achilleus ist für mich eine der stärksten Szenen des Epos. (di begegnung tsviscen priamos und achilleus ist für mich aine der stärksten tsenen des epos) - L'incontro tra Priamo e Achille è per me una delle scene più intense del poema.
+Achilleus erkennt in Priamos plötzlich auch den eigenen Vater. (achilleus erkennt in priamos plötzlich auc den aigenen fater) - Achille riconosce improvvisamente in Priamo anche il proprio padre.
+Beide Männer verbindet in diesem Moment der Schmerz über einen verlorenen Menschen. (baide mener ferbindet in dizem moment der scmertz über ainen ferlorenen menscen) - In quel momento entrambi gli uomini sono uniti dal dolore per una persona perduta.
+Ich finde es bemerkenswert, dass die Ilias trotz all der Gewalt auch von Mitgefühl handelt. (ich finde es bemerkensvert, das di ilias trots all der gewalt auc fon mitgefühl handelt) - Trovo notevole che l'Iliade, nonostante tutta la violenza, parli anche di compassione.
+Im Mittelpunkt steht nicht nur der Krieg, sondern auch die menschlichen Gefühle dahinter. (im mittel-punkt steht nicht nur der krieg, sondern auc di mensc-licen gefüle dahinter) - Al centro non c'è solo la guerra, ma anche i sentimenti umani che ci stanno dietro.
+Ehre, Ruhm, Freundschaft und Verlust spielen eine riesige Rolle. (ere, rum, froindschaft und ferlust spielen aine ri-zige rolle) - Onore, gloria, amicizia e perdita hanno un ruolo enorme.
+Man merkt, wie wichtig der persönliche Ruhm für die Krieger damals war. (man merkt, vi wichtig der persönliche rum für di krieger damals var) - Si capisce quanto fosse importante per i guerrieri dell'epoca la gloria personale.
+Heute würden wir viele dieser Vorstellungen wahrscheinlich ganz anders bewerten. (hoite würden vir fiile diza for-stellungen varscainlic gantz anders bewerten) - Oggi probabilmente valuteremmo molte di queste concezioni in modo completamente diverso.
+Trotzdem sind die Fragen nach Ruhm, Angst und Verlust immer noch aktuell. (trotsdem zint di fragen nach rum, angst und ferlust immer noch aktuell) - Tuttavia le questioni legate a gloria, paura e perdita sono ancora attuali.
+Vielleicht ist genau das der Grund, warum wir die Ilias nach fast dreitausend Jahren noch lesen. (filaicht ist genau das der grund, warum vir di ilias nach fast drai-tausent jaren noch lesen) - Forse è proprio questo il motivo per cui leggiamo ancora l'Iliade dopo quasi tremila anni.
+Ich würde gern einmal die ganze Geschichte mit einer Karte von Troja verfolgen. (ich würde gern ainmal di gantse gescichte mit ainer karte fon troja ferfolgen) - Mi piacerebbe seguire l'intera storia con una mappa di Troia.
+So kann man sich viel besser vorstellen, wo die verschiedenen Figuren unterwegs sind. (zo kan man zich fiil besser for-stellen, vo di ferscid-enen figuren untervegs zint) - Così ci si può immaginare molto meglio dove si trovano i diversi personaggi.
+Je mehr man über die Ilias spricht, desto interessanter finde ich sie. (je meer man über di ilias spricht, desto interessanter finde ich zi) - Più si parla dell'Iliade, più la trovo interessante.
+Warum steht das Verb in diesem Satz an zweiter Stelle? (varum steht das ferb in dizem zatz an tsvaiter sc-telle) - Perché il verbo in questa frase è al secondo posto?
+Bei einem Hauptsatz steht das konjugierte Verb normalerweise auf Position zwei. (bai ainem hauptzatz steht das konjugierte ferb normalervaisse auf position tsvai) - In una frase principale il verbo coniugato si trova normalmente in seconda posizione.
+Wenn der Satz mit einer Zeitangabe beginnt, bleibt das Verb trotzdem an zweiter Stelle. (ven der zatz mit ainer tsait-angabe beginnt, blaibt das ferb trotsdem an tsvaiter sc-telle) - Se la frase inizia con un'espressione di tempo, il verbo rimane comunque al secondo posto.
+Warum kommt das Verb im Nebensatz ganz nach hinten? (varum kommt das ferb im nebensatz gantz nach hinten) - Perché nella proposizione subordinata il verbo va completamente alla fine?
+Das liegt daran, dass im Nebensatz andere Wortstellungsregeln gelten. (das ligt daran, das im nebensatz andere vort-stellungs-regeln gelten) - Dipende dal fatto che nella subordinata valgono regole diverse per l'ordine delle parole.
+Ich verwechsle immer noch den Akkusativ und den Dativ. (ich ferveksle immer noch den akkusativ und den dativ) - Confondo ancora l'accusativo e il dativo.
+Nach bestimmten Verben muss man einfach den Dativ verwenden. (nach bestimten ferben muss man ainfach den dativ ferwenden) - Dopo determinati verbi bisogna semplicemente usare il dativo.
+Kannst du mir erklären, warum es hier dem und nicht den heißt? (kanst du mir erklären, varum es hier dem und nicht den haist) - Puoi spiegarmi perché qui si usa dem e non den?
+Weil das Substantiv in diesem Satz im Dativ steht. (vail das substantiv in dizem zatz im dativ steht) - Perché in questa frase il sostantivo è al dativo.
+Bei der Verneinung muss man zwischen nicht und kein unterscheiden. (bai der fer-nainung muss man tsviscen nicht und kain unter-sc-aiden) - Nella negazione bisogna distinguere tra nicht e kein.
+Kein steht normalerweise vor einem Substantiv ohne bestimmten Artikel. (kain steht normalervaisse for ainem substantiv one bestimten artikel) - Kein si usa normalmente prima di un sostantivo senza articolo determinativo.
+Nicht bezieht sich dagegen auf Verben, Adjektive oder andere Satzteile. (nicht betsit zich dagegen auf ferben, adjektive oder andere satz-taile) - Nicht invece si riferisce a verbi, aggettivi o altre parti della frase.
+Warum sagt man ich habe keine Zeit und nicht ich habe nicht Zeit? (varum sagt man ich habe kaine tsait und nicht ich habe nicht tsait) - Perché si dice ich habe keine Zeit e non ich habe nicht Zeit?
+Weil Zeit hier als nicht näher bestimmte Sache mit kein verneint wird. (vail tsait hier als nicht näer bestimte zache mit kain fer-naint virt) - Perché qui Zeit viene negato con kein in quanto cosa non determinata.
+Die Endung des Adjektivs hängt vom Artikel und vom Fall ab. (di endung des adjektifs hängt fom artikel und fom fall ap) - La desinenza dell'aggettivo dipende dall'articolo e dal caso.
+Das klingt kompliziert, aber mit der Zeit wird es leichter. (das klingt kompliziert, aber mit der tsait virt es laicter) - Sembra complicato, ma con il tempo diventa più facile.
+Warum heißt es ein guter Freund, aber einen guten Freund? (varum haist es ain guter froind, aber ainen guten froind) - Perché si dice ein guter Freund, ma einen guten Freund?
+Weil sich die Adjektivendung je nach Fall verändert. (vail zich di adjektiv-endung je nach fall ferändert) - Perché la desinenza dell'aggettivo cambia a seconda del caso.
+Im Plural ist die Adjektivendung oft leichter zu erkennen. (im plural ist di adjektiv-endung oft laicter tsu erkennen) - Al plurale la desinenza dell'aggettivo è spesso più facile da riconoscere.
+Ich muss noch üben, wann man der, die oder das benutzt. (ich muss noch üben, van man der, di oder das benutzt) - Devo ancora esercitarmi su quando usare der, die o das.
+Das grammatische Geschlecht eines Wortes kann man leider nicht immer logisch ableiten. (das grammatisce gesclect aines sortes kan man leider nicht immer logisc ableiten) - Purtroppo non si può sempre dedurre logicamente il genere grammaticale di una parola.
+Manchmal muss man den Artikel einfach mit dem Wort lernen. (mancmal muss man den artikel ainfach mit dem vort lernen) - A volte bisogna semplicemente imparare l'articolo insieme alla parola.
+Bei den Präpositionen ist es wichtig zu wissen, welchen Fall sie verlangen. (bai den prepositionen ist es wichtig tsu vissen, velcen fall zi ferlangen) - Con le preposizioni è importante sapere quale caso reggono.
+Mit steht zum Beispiel immer mit dem Dativ. (mit steht tsum baisspil immer mit dem dativ) - Mit, per esempio, regge sempre il dativo.
+Durch, für, gegen, ohne und um stehen dagegen mit dem Akkusativ. (durc, für, gegen, one und um stehen dagegen mit dem akkusativ) - Durch, für, gegen, ohne e um invece reggono l'accusativo.
+Bei Wechselpräpositionen hängt der Fall davon ab, ob es um Bewegung oder einen Ort geht. (bai vecsel-prepositionen hängt der fall davon ap, ob es um bewegung oder ainen ort geht) - Con le preposizioni a doppia reggenza il caso dipende dal fatto che si tratti di movimento o di posizione.
+Ich gehe in die Küche, aber ich bin in der Küche. (ich gee in di küce, aber ich bin in der küce) - Vado in cucina, ma sono in cucina.
+Im ersten Satz gibt es eine Richtung, deshalb steht Küche im Akkusativ. (im ersten zatz gibt es aine ric-tung, deshalb steht küce im akkusativ) - Nella prima frase c'è una direzione, perciò Küche è all'accusativo.
+Im zweiten Satz geht es dagegen nur um einen Ort. (im tsvaiten zatz geht es dagegen nur um ainen ort) - Nella seconda frase invece si tratta semplicemente di una posizione.
+Die trennbaren Verben machen mir manchmal noch Probleme. (di trennbaren ferben machen mir manchmal noch probleme) - I verbi separabili a volte mi danno ancora problemi.
+Bei anrufen sagt man zum Beispiel Ich rufe dich morgen an. (bai anrufen sagt man tsum baisspil ich rufe dich morgen an) - Con anrufen, per esempio, si dice Ich rufe dich morgen an.
+Im Infinitiv bleibt die Vorsilbe dagegen mit dem Verb zusammen. (im infinitif blaibt di for-zilbe dagegen mit dem ferb tsuzammen) - Nell'infinito invece il prefisso rimane unito al verbo.
+Ich will dich morgen anrufen. (ich vil dich morgen anrufen) - Voglio chiamarti domani.
+Bei Modalverben steht der zweite Infinitiv normalerweise am Ende des Satzes. (bai modal-ferben steht der tsvaita infinitif normalervaisse am ende des zatzes) - Con i verbi modali il secondo infinito si trova normalmente alla fine della frase.
+Ich kann heute nicht kommen, weil ich arbeiten muss. (ich kan hoite nicht kommen, vail ich arbeiten muss) - Oggi non posso venire perché devo lavorare.
+Im Perfekt benutzt man meistens haben oder sein als Hilfsverb. (im perfekt benutzt man maistens haben oder zain als hilfsferb) - Nel Perfekt si usano per lo più haben o sein come verbi ausiliari.
+Bei Verben der Bewegung wird häufig sein verwendet. (bai ferben der bewegung virt hoifig zain ferwendet) - Con i verbi di movimento si usa spesso sein.
+Ich bin gestern spät nach Hause gekommen. (ich bin gestern spät nach hause gekommen) - Ieri sono tornato a casa tardi.
+Ich habe gestern lange gearbeitet. (ich habe gestern lange gearbeitet) - Ieri ho lavorato a lungo.
+Das Partizip II steht im Hauptsatz meistens an einer anderen Stelle als das konjugierte Verb. (das partitsip tsvai steht im hauptzatz maistens an ainer anderen sc-telle als das konjugierte ferb) - Il participio passato nella frase principale si trova generalmente in una posizione diversa dal verbo coniugato.
+Im Nebensatz stehen die Verbteile dagegen am Ende. (im nebensatz stehen di ferb-taile dagegen am ende) - Nella subordinata invece le parti verbali si trovano alla fine.
+Ich weiß nicht, ob er schon angekommen ist. (ich vais nicht, ob er scion angekommen ist) - Non so se sia già arrivato.
+Bei Fragen kann das konjugierte Verb direkt am Anfang stehen. (bai fragen kan das konjugierte ferb direkt am anfang stehen) - Nelle domande il verbo coniugato può stare direttamente all'inizio.
+Hast du gestern deine Hausaufgaben gemacht? (hast du gestern daine haus-aufgaben gemacht) - Hai fatto i compiti ieri?
+W-Fragen beginnen dagegen mit einem Fragewort wie warum, wann oder wo. (ve-fragen beginnen dagegen mit ainem fragevort vi varum, van oder vo) - Le domande con W invece iniziano con una parola interrogativa come perché, quando o dove.
+Viel wichtiger ist, dass man regelmäßig übt und keine Angst vor Fehlern hat. (fiil wichtig-er ist, das man regelmessig übt und kaine angst for felern hat) - Molto più importante è esercitarsi regolarmente e non avere paura degli errori.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
