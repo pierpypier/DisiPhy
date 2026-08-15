@@ -2459,6 +2459,309 @@ Dans deux semaines, on sera déjà au mois suivant. (dan dö semen, on sera deʒ
 Le mois dernier, on était encore en juin. (le mwa dernye, on etè ankor an ʒwẽ) - Il mese scorso eravamo ancora a giugno.
 Il reste seulement cinq jours avant la fin du mois. (il rest selman sank ʒur avan la fen dü mwa) - Mancano solo cinque giorni alla fine del mese.
 Cette année, le premier mai tombe un vendredi. (set ane, le premye mè tomb an vandredi) - Quest'anno il primo maggio cade di venerdì.
+Le Nil est le fleuve le plus long d'Afrique avec plus de six mille kilomètres (Le Nil è le fleuv le plü lon dafrik avec plü de si mil kilometr) - Il Nilo è il fiume più lungo dell'Africa con più di seimila chilometri
+On doit situer les cinq continents sur la carte du monde (On dua sitüé lé sink continan sür la cart dü monde) - Dobbiamo collocare i cinque continenti sulla mappa del mondo
+Paris et Marseille sont distantes d'environ huit cents kilomètres (Pari e Marsèy son distant danviron üi san kilometr) - Parigi e Marsiglia distano circa ottocento chilometri
+Le professeur nous a montré les frontières entre la France et l'Espagne (Le profeseur nu a montré lé frontier antr la Frans e lespagn) - Il professore ci ha mostrato i confini tra Francia e Spagna
+L'Everest est le sommet le plus haut du monde avec huit mille huit cent quarante-huit mètres (Leverest è le sommè le plü o dü monde avec üi mil üi san carant üi metr) - L'Everest è la vetta più alta del mondo con ottomilaottocentoquarantotto metri
+On étudie les capitales de l'Union européenne ce trimestre (On etüdi lé capital de lünion européen se trimestr) - Studiamo le capitali dell'Unione europea questo trimestre
+Il y a combien de kilomètres entre Paris et Rome environ? (Ilia conbien de kilometr antr Pari e Rom anviron?) - Quanti chilometri ci sono tra Parigi e Roma circa?
+Le Sahara est le plus grand désert chaud du monde (Le Sahara è le plü gran dezer sho dü monde) - Il Sahara è il più grande deserto caldo del mondo
+On doit apprendre les principaux fleuves d'Europe pour le contrôle (On dua apprandr lé prinsipo fleuv döroop pur le control) - Dobbiamo imparare i principali fiumi d'Europa per la verifica
+La Russie est le pays le plus vaste du monde, de loin (La Rüsi è le pei le plü vast dü monde, de luin) - La Russia è il paese più vasto del mondo, di gran lunga
+On a comparé la superficie de l'Asie avec celle de l'Europe (On a conparé la süperfisi de lazi avec sel de löroop) - Abbiamo confrontato la superficie dell'Asia con quella dell'Europa
+Le prof nous a expliqué pourquoi le climat change selon la latitude (Le prof nu a esplika purcua le klima shange selon la latitüd) - Il prof ci ha spiegato perché il clima cambia in base alla latitudine
+L'Amazonie s'étend principalement sur le territoire brésilien (Lamazoni setan prinsipalman sür le terituar brezilien) - L'Amazzonia si estende principalmente sul territorio brasiliano
+On doit situer l'Australie et la Nouvelle-Zélande sur le planisphère (On dua sitüé lostrali e la nuvel zeland sür le planispher) - Dobbiamo collocare l'Australia e la Nuova Zelanda sul planisfero
+La distance entre New York et Los Angeles est d'environ quatre mille kilomètres (La distans antr Niu York e Los Anjeles et danviron catr mil kilometr) - La distanza tra New York e Los Angeles è di circa quattromila chilometri
+Le Mont Blanc culmine à environ quatre mille huit cent dix mètres (Le Mon Blan külmin a anviron catr mil üi san di metr) - Il Monte Bianco culmina a circa quattromilaottocentodieci metri
+On a un exposé sur les capitales d'Amérique du Sud à préparer (On a anexpozé sür lé capital damerik dü sür a preparé) - Abbiamo un lavoro sulle capitali del Sudamerica da preparare
+La Chine et l'Inde sont les deux pays les plus peuplés du monde (La Shin e lind son lé deu pei lé plü peuplé dü monde) - Cina e India sono i due paesi più popolosi del mondo
+On doit apprendre la liste des océans, il y en a cinq (On dua apprandr la list dezosean, ilianan sink) - Dobbiamo imparare l'elenco degli oceani, ce ne sono cinque
+Le détroit de Gibraltar sépare l'Europe de l'Afrique (Le detrua de Jibraltar separ löroop de lafrik) - Lo stretto di Gibilterra separa l'Europa dall'Africa
+On a étudié les fuseaux horaires et les décalages entre continents (On a etüdié lé füzo orer e lé dekalaj antr continan) - Abbiamo studiato i fusi orari e gli sfasamenti tra continenti
+La capitale de l'Australie n'est pas Sydney mais Canberra (La capital de lostrali ne pa Sidnè mè Canberra) - La capitale dell'Australia non è Sydney ma Canberra
+On doit situer le Japon et la Corée sur la carte de l'Asie (On dua sitüé le Japon e la Koré sür la cart de lazi) - Dobbiamo collocare il Giappone e la Corea sulla mappa dell'Asia
+Le canal de Suez relie la Méditerranée à la mer Rouge (Le canal de Süez rli la Mediteraneé a la mer Rug) - Il canale di Suez collega il Mediterraneo al Mar Rosso
+Il y a environ neuf mille kilomètres entre Paris et Tokyo (Ilia anviron neuf mil kilometr antr Pari e Tokio) - Ci sono circa novemila chilometri tra Parigi e Tokyo
+On a vu que le Groenland appartient au Danemark (On a vü que le Groenland apartien o Danmark) - Abbiamo visto che la Groenlandia appartiene alla Danimarca
+Le professeur a expliqué la différence entre climat tropical et climat tempéré (Le profeseur a esplika la diferans antr klima tropikal e klima tanperé) - Il professore ha spiegato la differenza tra clima tropicale e clima temperato
+La Manche sépare la France de l'Angleterre sur environ trente-quatre kilomètres au point le plus étroit (La Mansh separ la Frans de langlter sür anviron trant catr kilometr o puin le plüzetruat) - La Manica separa la Francia dall'Inghilterra per circa trentaquattro chilometri nel punto più stretto
+On doit connaître les principales chaînes de montagnes du monde (On dua conetr lé prinsipal shen de montagn dü monde) - Dobbiamo conoscere le principali catene montuose del mondo
+Le Brésil est le plus grand pays d'Amérique du Sud (Le Brezil è le plü gran pei damerik dü sür) - Il Brasile è il paese più grande del Sudamerica
+On a comparé la population de l'Afrique et celle de l'Europe (On a conparé la populasion de lafrik e sel de löroop) - Abbiamo confrontato la popolazione dell'Africa e quella dell'Europa
+Le Vatican est le plus petit État du monde par sa superficie (Le Vatikan è le plü p'ti eta dü monde par sa süperfisi) - Il Vaticano è il più piccolo Stato del mondo per superficie
+On doit situer les grands fleuves comme l'Amazone, le Nil et le Mississippi (On dua sitüé lé gran fleuv com lamazon, le Nil e le Misisipi) - Dobbiamo collocare i grandi fiumi come l'Amazzonia, il Nilo e il Mississippi
+La distance entre Londres et Édimbourg est d'environ six cents kilomètres (La distans antr Londr e Edinbur et danviron si san kilometr) - La distanza tra Londra ed Edimburgo è di circa seicento chilometri
+On a appris que l'Antarctique est un continent entièrement gelé (On a apri que lantarktik et an continan antierman jelé) - Abbiamo imparato che l'Antartide è un continente interamente ghiacciato
+Le prof nous a demandé de situer les tropiques sur le globe (Le prof nu a demandé de sitüé lé tropik sür le glob) - Il prof ci ha chiesto di collocare i tropici sul globo
+On a un contrôle sur les capitales d'Afrique la semaine prochaine (On a an control sür lé capital dafrik la semèn proshin) - Abbiamo una verifica sulle capitali d'Africa la settimana prossima
+Istanbul est une ville particulière car elle est à cheval sur deux continents (Istanbul et ün vil partikülié car el et a shval sür deu continan) - Istanbul è una città particolare perché è a cavallo tra due continenti
+On a calculé qu'il y a environ douze mille kilomètres entre Paris et Sydney (On a calkülé kilia anviron duz mil kilometr antr Pari e Sidnè) - Abbiamo calcolato che ci sono circa dodicimila chilometri tra Parigi e Sydney
+Le lac Baïkal est le lac le plus profond du monde, en Sibérie (Le lak Baikal è le lak le plü profon dü monde, an Siberi) - Il lago Baikal è il lago più profondo del mondo, in Siberia
+On doit apprendre les pays limitrophes de la France par cœur (On dua apprandr lé pei limitrof de la Frans par keur) - Dobbiamo imparare a memoria i paesi confinanti con la Francia
+La Nouvelle-Calédonie est un territoire français dans le Pacifique (La nuvel Caledoni et an terituar fransè dan le Pasifik) - La Nuova Caledonia è un territorio francese nel Pacifico
+On a vu que le Kilimandjaro est le plus haut sommet d'Afrique (On a vü que le Kilimanjaro è le plü o somè dafrik) - Abbiamo visto che il Kilimangiaro è la vetta più alta d'Africa
+Il y a environ mille kilomètres entre Rome et Berlin (Ilia anviron mil kilometr antr Rom e Berlin) - Ci sono circa mille chilometri tra Roma e Berlino
+On a étudié les courants marins et leur influence sur le climat (On a etüdié lé curan marin e leur inflüans sür le klima) - Abbiamo studiato le correnti marine e la loro influenza sul clima
+Le Portugal est le pays le plus à l'ouest de l'Europe continentale (Le Portügal è le pei le plüzalwest de löroop continantal) - Il Portogallo è il paese più a ovest dell'Europa continentale
+On doit situer les grandes villes d'Amérique du Nord sur la carte (On dua sitüé lé grand vil damerik dü nor sür la cart) - Dobbiamo collocare le grandi città del Nordamerica sulla mappa
+La mer Morte est le point le plus bas de la surface terrestre (La mer Mort è le puin le plü ba de la sürfas terestr) - Il Mar Morto è il punto più basso della superficie terrestre
+On a un exposé de dix minutes à préparer sur un pays au choix (On a anexpozé de di minüt a preparé sür an pei o shua) - Abbiamo un lavoro di dieci minuti da preparare su un paese a scelta
+Le prof nous a rappelé que l'Oural sépare l'Europe de l'Asie (Le prof nu a rapelé que loural separ löroop de lazi) - Il prof ci ha ricordato che gli Urali separano l'Europa dall'Asia
+On devrait parler un peu de la guerre avec les enfants, tu crois? (On devré parlé an peu de la ger avec lezanfan, tü crua?) - Dovremmo parlare un po' della guerra con i bambini, pensi?
+Papa, pourquoi les gens font encore la guerre aujourd'hui? (Papa, purcua lé jan fon ancor la ger ojurdüi?) - Papà, perché la gente fa ancora la guerra oggi?
+C'est compliqué, ça dépend souvent de la religion ou du territoire (Sè conplike, sa depan suvan de la relijion u dü terituar) - È complicato, dipende spesso dalla religione o dal territorio
+On a discuté hier soir des différentes religions dans le monde (On a diskuté ièr suar dé diferant relijion dan le monde) - Abbiamo discusso ieri sera delle diverse religioni nel mondo
+Chaque religion a sa propre vision de Dieu et du monde (Shak relijion a sa propr vizion de Dieu e dü monde) - Ogni religione ha una propria visione di Dio e del mondo
+Ma fille pose beaucoup de questions sur les guerres de religion (Ma fiy poz bocu de question sür lé ger de relijion) - Mia figlia fa tante domande sulle guerre di religione
+On essaie de lui expliquer sans prendre parti, c'est pas facile (On essè de lui esplika san prandr parti, sè pa fasil) - Cerchiamo di spiegarle senza schierarci, non è facile
+Le grand-père raconte toujours ses souvenirs de la guerre (Le granpèr racont tujur sé suvenir de la ger) - Il nonno racconta sempre i suoi ricordi della guerra
+On a regardé un reportage sur les conflits actuels en famille (On a regardé an reportaj sür lé conflit aktüel an famiy) - Abbiamo guardato un reportage sui conflitti attuali in famiglia
+C'est important de leur apprendre à respecter toutes les croyances (Sè inportan de leur apprandr a respekté tut lé cruayans) - È importante insegnargli a rispettare tutte le credenze
+Je pense que la religion devrait rester une affaire privée (Je pans que la relijion devré resté ün afer privé) - Penso che la religione dovrebbe restare una questione privata
+Mon fils a demandé pourquoi il y a autant de religions différentes (Mon fis a demandé purcua ilia otan de relijion diferant) - Mio figlio ha chiesto perché ci sono così tante religioni diverse
+On a essayé de lui expliquer l'histoire des trois grandes religions monothéistes (On a essèié de lui esplika listuar dé trua grand relijion monoteist) - Abbiamo cercato di spiegargli la storia delle tre grandi religioni monoteiste
+Ça me fait de la peine de voir tous ces conflits à la télé (Sa me fè de la pèn de vuar tu sé conflit a la telé) - Mi rattrista vedere tutti questi conflitti in tv
+On a eu un débat animé à table sur la liberté de croyance (On a ü an deba animé a tabl sür la liberté de cruayans) - Abbiamo avuto un dibattito animato a tavola sulla libertà di credo
+Mes parents ont vécu la guerre, ils en parlent rarement (Mé paran on veku la ger, ilzan parl rarman) - I miei genitori hanno vissuto la guerra, ne parlano raramente
+On essaie d'élever nos enfants avec une ouverture d'esprit sur ces sujets (On essè delve nozanfan avec ün uvertür despri sür sé süjè) - Cerchiamo di crescere i nostri figli con apertura mentale su questi temi
+Ma grand-mère était très croyante, moi beaucoup moins (Ma granmèr eté trè cruayant, mua bocu muin) - Mia nonna era molto credente, io molto meno
+On a expliqué aux enfants que toutes les guerres ne sont pas religieuses (On a esplika ozanfan que tut lé ger ne son pa relijieuz) - Abbiamo spiegato ai bambini che non tutte le guerre sono religiose
+Il y a souvent des raisons économiques derrière les conflits (Ilia suvan dé rezon ekonomik derier lé conflit) - Ci sono spesso ragioni economiche dietro i conflitti
+On a une famille mixte, avec des croyances différentes, et ça marche bien (On a ün famiy mixt, avec dé cruayans diferant, e sa marsh bien) - Abbiamo una famiglia mista, con credenze diverse, e funziona bene
+Mon mari est athée et moi je crois un peu, on en discute souvent (Mon mari et até e mua je crua an peu, on an diskut suvan) - Mio marito è ateo e io credo un po', ne discutiamo spesso
+Les enfants apprennent l'histoire des religions à l'école cette année (Lezanfan apren listuar dé relijion a lekol set ané) - I bambini imparano la storia delle religioni a scuola quest'anno
+On a visité une mosquée et une synagogue pour leur montrer la diversité (On a vizité ün moské e ün sinagog pur leur montré la diversité) - Abbiamo visitato una moschea e una sinagoga per mostrargli la diversità
+Je trouve important qu'ils comprennent d'où viennent les tensions actuelles (Je truv inportan quil conpren du vien lé tansion aktüel) - Trovo importante che capiscano da dove vengono le tensioni attuali
+Mon oncle a fait la guerre et il n'aime pas trop en parler (Mon onkl a fé la ger e il nem pa tro an parlé) - Mio zio ha fatto la guerra e non ama molto parlarne
+On a regardé ensemble un documentaire sur la Seconde Guerre mondiale (On a regardé ansanbl an dokümanter sür la segond ger mondial) - Abbiamo guardato insieme un documentario sulla Seconda guerra mondiale
+Les enfants étaient bouleversés en apprenant certains détails de l'histoire (Lezanfan eté bulversé an apranan sertin detay de listuar) - I bambini erano sconvolti nell'apprendere certi dettagli della storia
+On leur a dit que le dialogue vaut toujours mieux que la violence (On leur a di que le dialog vo tujur mieu que la violans) - Abbiamo detto loro che il dialogo vale sempre più della violenza
+Ma fille s'intéresse beaucoup à l'histoire des croisades en ce moment (Ma fiy sinteres bocu a listuar dé cruazad an se moman) - Mia figlia si interessa molto alla storia delle crociate in questo periodo
+On essaie de leur montrer plusieurs points de vue sur chaque conflit (On essè de leur montré plüzieur puin de vü sür shak conflit) - Cerchiamo di mostrargli più punti di vista su ogni conflitto
+C'est difficile d'expliquer certaines guerres sans simplifier à l'excès (Sè difisil desplika sertèn ger san sinplifié a lexè) - È difficile spiegare certe guerre senza semplificare troppo
+Mon grand-père disait toujours que la guerre ne résout rien vraiment (Mon granpèr dizè tujur que la ger ne rezu rien vrémen) - Mio nonno diceva sempre che la guerra non risolve davvero nulla
+On a une amie musulmane et une amie juive, les enfants adorent apprendre d'elles (On a ün ami müzülman e ün ami jüiv, lezanfan ador apranadr delz) - Abbiamo un'amica musulmana e una ebrea, i bambini adorano imparare da loro
+Je pense que le respect commence par la connaissance de l'autre (Je pans que le respè comans par la conesans de lotr) - Penso che il rispetto inizi dalla conoscenza dell'altro
+On a discuté du rôle de la religion dans les conflits actuels au Moyen-Orient (On a diskuté dü rol de la relijion dan lé conflit aktüel o Muayenoriant) - Abbiamo discusso del ruolo della religione nei conflitti attuali in Medio Oriente
+Ma belle-mère est très pratiquante, on évite certains sujets à table (Ma bel mèr è trè pratikant, on evit sertin süjè a tabl) - Mia suocera è molto praticante, evitiamo certi argomenti a tavola
+On veut que nos enfants se forgent leur propre opinion plus tard (On veu que no zanfan se forj leur propr opinion plü tar) - Vogliamo che i nostri figli si formino una propria opinione più avanti
+Mon fils m'a demandé si toutes les religions croient au même Dieu (Mon fis ma demandé si tut lé relijion cruav o mem Dieu) - Mio figlio mi ha chiesto se tutte le religioni credono nello stesso Dio
+On a essayé de lui répondre honnêtement, même si c'est complexe (On a essèié de lui repondr onetman, mem si sè conplex) - Abbiamo cercato di rispondergli onestamente, anche se è complesso
+Les guerres de religion ont fait des millions de morts au fil des siècles (Lé ger de relijion on fé dé milion de mor o fil dé siekl) - Le guerre di religione hanno fatto milioni di morti nel corso dei secoli
+On lit ensemble des livres qui parlent de tolérance et de paix (On li ansanbl dé livr qui parl de tolerans e de pè) - Leggiamo insieme libri che parlano di tolleranza e pace
+Ma mère est croyante mais elle respecte totalement mes choix (Ma mèr è cruayant mè el respekt totalman mé shua) - Mia madre è credente ma rispetta totalmente le mie scelte
+On a expliqué aux enfants la différence entre foi et fanatisme (On a esplika ozanfan la diferans antr fua e fanatism) - Abbiamo spiegato ai bambini la differenza tra fede e fanatismo
+Je trouve essentiel de leur parler des génocides du vingtième siècle aussi (Je truv esansiel de leur parlé dé jenosid dü vintiém siekl osi) - Trovo essenziale parlargli anche dei genocidi del ventesimo secolo
+On a un débat familial chaque dimanche sur l'actualité internationale (On a an deba familial shak dimansh sür laktüalité internasional) - Abbiamo un dibattito familiare ogni domenica sull'attualità internazionale
+Les enfants comprennent mieux quand on utilise des exemples concrets (Lezanfan conpren mieu can on ütiliz dezexanpl concrè) - I bambini capiscono meglio quando usiamo esempi concreti
+On veut leur transmettre des valeurs de paix plutôt que de division (On veu leur transmetr dé valeur de pè plüto que de divizion) - Vogliamo trasmettergli valori di pace piuttosto che di divisione
+Ma fille a dit qu'elle voudrait travailler pour une ONG humanitaire plus tard (Ma fiy a di quel vudré travayé pur ün oenjé ümaniter plü tar) - Mia figlia ha detto che vorrebbe lavorare per una ONG umanitaria più avanti
+On espère juste qu'ils grandiront avec plus de tolérance que nous (On esper güst quil grandiron avec plü de tolerans que nu) - Speriamo solo che crescano con più tolleranza di noi
+On pourrait adopter un chat, non? Les enfants en rêvent depuis des mois (On purè adopté an sha, non? Lezanfan an rev depüi dé mua) - Potremmo adottare un gatto, no? I bambini lo sognano da mesi
+Un iguane, ça demande beaucoup d'entretien tu sais (An iguan, sa demand bocu dantretien tü sè) - Un'iguana richiede molta manutenzione lo sai
+Ma fille voudrait un perroquet mais ça vit super longtemps (Ma fiy vudré an peroket mè sa vi süper lontan) - Mia figlia vorrebbe un pappagallo ma vive tantissimo
+Les tortues terrestres peuvent vivre plus de cinquante ans, t'imagines? (Lé tortü terestr peuv vivr plü de sinkant an, timaj?) - Le tartarughe terrestri possono vivere più di cinquant'anni, immagini?
+On a failli acheter un furet le week-end dernier (On a faiyi ashté an fürè le uikend dernié) - Abbiamo quasi comprato un furetto il weekend scorso
+Le chien du voisin est un berger allemand, il est énorme (Le shien dü vuazin et an berjer alman, il et enorm) - Il cane del vicino è un pastore tedesco, è enorme
+Je préférerais un chat plutôt qu'un chien, c'est plus indépendant (Je preferré an sha plüto can shien, sè plüzindependan) - Preferirei un gatto piuttosto che un cane, è più indipendente
+Mon fils rêve d'avoir un serpent, ça me fait un peu peur (Mon fis rev davuar an serpan, sa me fè an peu peur) - Mio figlio sogna di avere un serpente, mi fa un po' paura
+On a vu des lémuriens au zoo, les enfants étaient fascinés (On a vü dé lemürien o zo, lezanfan eté fasiné) - Abbiamo visto dei lemuri allo zoo, i bambini erano affascinati
+Un hamster c'est bien pour commencer, c'est plus facile à gérer (An amster sè bien pur comansé, sè plü fasil a jeré) - Un criceto va bene per iniziare, è più facile da gestire
+Les poissons rouges demandent moins d'attention que les autres animaux (Lé puason rug demand muin datansion que lezotr animo) - I pesci rossi richiedono meno attenzione degli altri animali
+On a discuté d'adopter un chaton abandonné trouvé dans le jardin (On a diskuté dadopté an shaton abandoné truvé dan le jardin) - Abbiamo discusso di adottare un gattino abbandonato trovato in giardino
+Ma belle-sœur a deux perruches qui chantent toute la journée (Ma bel seur a deu perüsh qui shant tut la jurné) - Mia cognata ha due cocorite che cantano tutto il giorno
+Les enfants voudraient un lapin nain, ils l'ont vu à l'animalerie (Lezanfan vudré an lapin nin, ilzon vü a lanimaleri) - I bambini vorrebbero un coniglio nano, l'hanno visto in negozio di animali
+On a un aquarium avec des poissons tropicaux depuis un an (On a anacuariom avec dé puason tropiko depüi anan) - Abbiamo un acquario con pesci tropicali da un anno
+Mon frère a une tarentule, ça me dégoûte un peu franchement (Mon frer a ün tarantül, sa me degut an peu franshman) - Mio fratello ha una tarantola, mi disgusta un po' francamente
+On pourrait prendre un cochon d'Inde, c'est mignon et facile (On purè prandr an coshon dind, sè minion e fasil) - Potremmo prendere una cavia, è carina e facile
+Ma fille est fascinée par les axolotls depuis qu'elle en a vu un (Ma fiy è fasiné par lé axolotl depüi quelan a vü an) - Mia figlia è affascinata dagli axolotl da quando ne ha visto uno
+On a visité une réserve avec des flamants roses le mois dernier (On a vizité ün rezerv avec dé flaman roz le mua dernié) - Abbiamo visitato una riserva con fenicotteri rosa il mese scorso
+Les caméléons changent de couleur, les enfants trouvent ça magique (Lé kameleon shanj de culeur, lezanfan truv sa majik) - I camaleonti cambiano colore, i bambini lo trovano magico
+On a un chat et un chien, ils s'entendent plutôt bien finalement (On a an sha e an shien, ilsantand plüto bien finalman) - Abbiamo un gatto e un cane, vanno d'accordo piuttosto bene alla fine
+Mon oncle élève des chèvres et des poules à la campagne (Mon onkl elev dé shevr e dé pul a la conpagn) - Mio zio alleva capre e galline in campagna
+On a adopté deux chatons de la même portée, ils sont inséparables (On a adopté deu shaton de la mem porté, il son inseparabl) - Abbiamo adottato due gattini della stessa cucciolata, sono inseparabili
+Les enfants adorent regarder les manchots quand on va au zoo (Lezanfan ador regardé lé manshò can on va o zo) - I bambini adorano guardare i pinguini quando andiamo allo zoo
+On a hésité entre un chien et un chat, finalement on a pris les deux (On a ezité antr an shien e an sha, finalman on a pri lé deu) - Abbiamo esitato tra un cane e un gatto, alla fine li abbiamo presi entrambi
+Mon cousin a un perroquet gris du Gabon qui parle vraiment bien (Mon cuzin a an peroket gri dü Gabon qui parl vrémen bien) - Mio cugino ha un pappagallo cenerino che parla davvero bene
+On a vu des paresseux au zoo, ils bougent tellement lentement (On a vü dé paressö o zo, il buj telman lantman) - Abbiamo visto dei bradipi allo zoo, si muovono così lentamente
+Ma fille collectionne des figurines d'animaux exotiques dans sa chambre (Ma fiy colecsion dé figürin danimo exotik dan sa shanbr) - Mia figlia colleziona statuine di animali esotici in camera sua
+On aimerait avoir une volière avec plusieurs oiseaux dans le jardin (On emré avuar ün voliér avec plüzieur wazo dan le jardin) - Vorremmo avere una voliera con diversi uccelli in giardino
+Les enfants ont adopté un poisson combattant à l'école cette année (Lezanfan on adopté an puason conbatan a lekol set ané) - I bambini hanno adottato un pesce combattente a scuola quest'anno
+Mon beau-frère élève des poules dans son jardin, on a des œufs frais (Mon bofrer elev dé pul dan son jardin, on a dezeu frè) - Mio cognato alleva galline nel suo giardino, abbiamo uova fresche
+On a discuté des risques d'avoir un python à la maison (On a diskuté dé risk davuar an piton a la mèzon) - Abbiamo discusso dei rischi di avere un pitone in casa
+Ma fille voudrait un koala mais évidemment c'est totalement impossible (Ma fiy vudré an coala mè evidamen sè totalman inposibl) - Mia figlia vorrebbe un koala ma ovviamente è totalmente impossibile
+On a vu des suricates au zoo, ils sont hyper curieux (On a vü dé sürikat o zo, il son iper cürieu) - Abbiamo visto dei suricati allo zoo, sono iper curiosi
+Mon fils demande souvent si les araignées sont des insectes ou pas (Mon fis demand suvan si lezarègn son dezinsekt u pa) - Mio figlio chiede spesso se i ragni sono insetti o no
+On a un canari qui chante dès le matin, c'est plutôt agréable (On a an canari qui shant dè le matin, sè plüto agreabl) - Abbiamo un canarino che canta fin dal mattino, è piuttosto piacevole
+Les enfants s'occupent chacun leur tour du hamster de la classe (Lezanfan sokup shakan leur tur dü amster de la klas) - I bambini si occupano a turno del criceto della classe
+On a envisagé un cheval mais on n'a pas assez de place franchement (On a anvisajé an sheval mè on na pazasé de plas franshman) - Abbiamo considerato un cavallo ma non abbiamo abbastanza spazio francamente
+Ma nièce a une salamandre, c'est un animal assez étrange (Ma niess a ün salamandr, sè an animal asé etranj) - Mia nipote ha una salamandra, è un animale piuttosto strano
+On a vu un ornithorynque en Australie, c'est un animal vraiment unique (On a vü an ornitorink an Ostrali, sè an animal vrémen ünik) - Abbiamo visto un ornitorinco in Australia, è un animale davvero unico
+Le chat de ma sœur déteste les chiens, il devient furieux direct (Le sha de ma seur detest lé shien, il devien fürieu direct) - Il gatto di mia sorella odia i cani, diventa furioso all'istante
+On a hésité longtemps avant d'adopter un chien de race croisée (On a ezité lontan avan dadopté an shien de rass cruazé) - Abbiamo esitato a lungo prima di adottare un cane di razza incrociata
+Ma fille aimerait beaucoup avoir un panda roux, c'est son animal préféré (Ma fiy emré bocu avuar an panda ru, sè son animal preferé) - Mia figlia vorrebbe tanto avere un panda rosso, è il suo animale preferito
+On a un rongeur assez rare à la maison, un chinchilla (On a an ronjeur asé rar a la mèzon, an shinshila) - Abbiamo un roditore piuttosto raro in casa, uno chinchilla
+Les enfants voudraient une tortue aquatique plutôt qu'une terrestre (Lezanfan vudré ün tortü acuatik plüto cün terestr) - I bambini vorrebbero una tartaruga acquatica piuttosto che terrestre
+On a parlé des dangers d'avoir un scorpion comme animal de compagnie (On a parlé dé danjer davuar an skorpion com animal de conpagni) - Abbiamo parlato dei pericoli di avere uno scorpione come animale domestico
+Mon neveu a une mygale, franchement ça me donne des frissons (Mon neveu a ün migal, franshman sa me don dé frison) - Mio nipote ha una mygale, francamente mi fa venire i brividi
+On a expliqué aux enfants pourquoi certains animaux exotiques sont protégés (On a esplika ozanfan purcua sertinzanimo exotik son protejé) - Abbiamo spiegato ai bambini perché alcuni animali esotici sono protetti
+Ma fille rêve de voir un jour un tigre du Bengale dans son habitat naturel (Ma fiy rev de vuar an jur an tigr dü Bengal dan son abita natürel) - Mia figlia sogna di vedere un giorno una tigre del Bengala nel suo habitat naturale
+On a un gecko léopard depuis quelques mois, il s'adapte bien (On a an geko leopar depüi quelke mua, il sadapt bien) - Abbiamo un geco leopardo da qualche mese, si sta ambientando bene
+On préfère largement les animaux domestiques classiques finalement (On preferér larjman lézanimo domestik klasik finalman) - Alla fine preferiamo di gran lunga gli animali domestici classici
+Tu as remarqué que Marc arrive toujours en retard, sans exception (Tü a remarké que Mark ariv tujur an retar, sanzeksepsion) - Hai notato che Marc arriva sempre in ritardo, senza eccezioni
+Tante Josiane raconte toujours la même histoire à chaque repas (Tant Joziann racont tujur la mem istuar a shak repà) - Zia Josiane racconta sempre la stessa storia a ogni pasto
+Pierre a la manie de tout ranger par couleur, c'est bizarre (Pier a la mani de tu ranjé par culeur, sè bizar) - Pierre ha la mania di ordinare tutto per colore, è strano
+Ma cousine Élodie change d'avis toutes les cinq minutes franchement (Ma cuzin Elodi shanj davi tut lé sink minüt franshman) - Mia cugina Élodie cambia idea ogni cinque minuti francamente
+Papi refuse toujours d'utiliser son téléphone, il déteste ça (Papi refüz tujur dütilizé son telefon, il detest sa) - Il nonno rifiuta sempre di usare il telefono, lo odia
+Sophie parle super fort au téléphone, on entend tout depuis le salon (Sofi parl süper for o telefon, on antan tu depüi le salon) - Sophie parla fortissimo al telefono, si sente tutto dal salotto
+Mon beau-frère Julien arrive toujours les mains vides aux dîners (Mon bofrer Jülien ariv tujur lé min vid o diné) - Mio cognato Julien arriva sempre a mani vuote alle cene
+Tu as vu comment Nathalie critique tout le temps la nourriture des autres? (Tü a vü coman Natali kritik tu le tan la nurritür dezotr?) - Hai visto come Nathalie critica sempre il cibo degli altri?
+Mon oncle Bernard raconte des blagues qui ne font jamais rire personne (Mon onkl Bernar racont dé blag qui ne fon jame rir person) - Mio zio Bernard racconta barzellette che non fanno mai ridere nessuno
+Camille arrive toujours une heure en avance, c'est presque agaçant (Camiy ariv tujur ün eur an avans, sè presk agasan) - Camille arriva sempre un'ora in anticipo, è quasi fastidioso
+Mamie garde absolument tout, même les vieux sacs plastique (Mami gard absolümen tu, mem lé vieu sak plastik) - La nonna tiene assolutamente tutto, persino i vecchi sacchetti di plastica
+Thomas ne répond jamais aux messages avant deux ou trois jours (Toma ne repon jame o mesaj avan deu u trua jur) - Thomas non risponde mai ai messaggi prima di due o tre giorni
+Ma belle-mère réorganise ma cuisine à chaque fois qu'elle vient (Ma bel mèr reorganiz ma cüizin a shak fua quel vien) - Mia suocera riorganizza la mia cucina ogni volta che viene
+Alexandre parle toujours de son travail, même pendant les vacances (Alexandr parl tujur de son travay, mem pandan lé vakans) - Alexandre parla sempre del suo lavoro, anche durante le vacanze
+Ma sœur Chloé est incapable d'arriver quelque part sans photos (Ma seur Kloé et incapabl darivé quelke par san foto) - Mia sorella Chloé è incapace di arrivare da qualche parte senza foto
+Grand-père répète toujours les mêmes conseils depuis vingt ans (Granpèr repet tujur lé mem consei depüi vinan) - Il nonno ripete sempre gli stessi consigli da vent'anni
+Vincent a toujours une excuse pour ne pas faire la vaisselle (Vinsan a tujur ünexcüz pur ne pa fer la vesel) - Vincent ha sempre una scusa per non lavare i piatti
+Ma tante Brigitte demande toujours combien on a payé pour tout (Ma tant Brijit demand tujur conbien on a péié pur tu) - Mia zia Brigitte chiede sempre quanto abbiamo pagato per tutto
+Léa n'arrive jamais à jeter quoi que ce soit, elle garde tout (Lea narriv jame a jeté cua que se sua, el gard tu) - Léa non riesce mai a buttare via nulla, tiene tutto
+Mon cousin Antoine parle toujours plus fort que nécessaire (Mon cuzin Antuan parl tujur plü for que nesesèr) - Mio cugino Antoine parla sempre più forte del necessario
+Isabelle vérifie trois fois si la porte est bien fermée avant de partir (Izabel verifi trua fua si la port et bien fermé avan de parti) - Isabelle controlla tre volte se la porta è ben chiusa prima di partire
+Papa raconte toujours les mêmes anecdotes de son service militaire (Papa racont tujur lé mem anekdot de son servis militer) - Papà racconta sempre gli stessi aneddoti del servizio militare
+Ma copine Manon est toujours en train de regarder son portable (Ma copin Manon et tujur an tran de regardé son portabl) - La mia amica Manon sta sempre a guardare il cellulare
+Mon collègue Julien fait toujours des blagues au mauvais moment (Mon coleg Jülien fè tujur dé blag o movè moman) - Il mio collega Julien fa sempre battute al momento sbagliato
+Ma mère refait toujours la vaisselle même si on l'a déjà faite (Ma mèr refè tujur la vesel mem si on la dejà fet) - Mia madre rilava sempre i piatti anche se li abbiamo già lavati
+Fabien arrive toujours avec des idées bizarres pour les vacances (Fabien ariv tujur avec dezidé bizar pur lé vakans) - Fabien arriva sempre con idee strane per le vacanze
+Ma nièce Juliette adore corriger tout le monde sur tout (Ma niess Jüliet ador corijé tu le monde sür tu) - Mia nipote Juliette adora correggere tutti su tutto
+Mon voisin Marc tond sa pelouse tous les dimanches à huit heures pile (Mon vuazin Mark ton sa peluz tu lé dimansh a üitteur pil) - Il mio vicino Marc taglia il prato ogni domenica alle otto in punto
+Ma belle-sœur Émilie est toujours au régime mais mange comme quatre (Ma bel seur Emili et tujur o rejim mè manj com catr) - Mia cognata Émilie è sempre a dieta ma mangia come un elefante
+Grégoire ne dit jamais non même quand il n'a pas envie (Gregoar ne di jame non mem can il na pazanvi) - Grégoire non dice mai di no anche quando non ne ha voglia
+Ma sœur adore donner des conseils qu'on ne lui a pas demandés (Ma seur ador doné dé consei con nui a pa demandé) - Mia sorella adora dare consigli non richiesti
+Mon père se lève toujours avant tout le monde, même en vacances (Mon pèr se lev tujur avan tu le monde, mem an vakans) - Mio padre si alza sempre prima di tutti, anche in vacanza
+Ma tante Colette prend toujours trois heures pour se préparer (Ma tant Colet pran tujur trua zeur pur se preparé) - Mia zia Colette impiega sempre tre ore per prepararsi
+Simon a toujours besoin d'avoir raison, c'est fatigant à la longue (Simon a tujur bezuin davuar rezon, sè fatigan a la long) - Simon ha sempre bisogno di avere ragione, è stancante alla lunga
+Ma copine Laura change de coiffure tous les deux mois environ (Ma copin Laura shanj de cuafür tu lé deu mua anviron) - La mia amica Laura cambia pettinatura ogni due mesi circa
+Mon oncle Roger raconte toujours ses histoires de pêche interminables (Mon onkl Rojé racont tujur sézistuar de pesh interminabl) - Mio zio Roger racconta sempre le sue interminabili storie di pesca
+Ma fille Clara laisse toujours ses affaires traîner partout dans la maison (Ma fiy Clara less tujur sézafer trené partu dan la mèzon) - Mia figlia Clara lascia sempre le sue cose in giro per casa
+Christophe arrive toujours avec dix minutes de retard, jamais plus jamais moins (Cristof ariv tujur avec di minüt de retar, jamè plü jamè muin) - Christophe arriva sempre con dieci minuti di ritardo, mai di più mai di meno
+Ma grand-mère demande toujours si on a assez mangé, même après trois assiettes (Ma granmèr demand tujur si on a asé manjé, mem aprè truazasiet) - Mia nonna chiede sempre se abbiamo mangiato abbastanza, anche dopo tre piatti
+Mon ami Karim raconte toujours ses voyages avec beaucoup trop de détails (Mon ami Karim racont tujur sé vuayaj avec bocu tro de detay) - Il mio amico Karim racconta sempre i suoi viaggi con troppi dettagli
+Ma sœur Aurélie oublie systématiquement son téléphone partout où elle va (Ma seur Oreli ubli sistematikman son telefon partu u el va) - Mia sorella Aurélie dimentica sistematicamente il telefono ovunque vada
+Mon cousin Théo a toujours faim, même juste après avoir mangé (Mon cuzin Teo a tujur fin, mem güst aprè avuar manjé) - Mio cugino Théo ha sempre fame, anche subito dopo aver mangiato
+Ma collègue Sandrine parle toujours de ses problèmes de couple à tout le monde (Ma coleg Sandrin parl tujur de sé problem de cupl a tu le monde) - La mia collega Sandrine parla sempre dei suoi problemi di coppia con tutti
+Mon beau-père répète toujours qu'à son époque c'était mieux (Mon bopèr repet tujur qua son epok seté mieu) - Mio suocero ripete sempre che ai suoi tempi era meglio
+Ma tante Véronique appelle toujours au pire moment possible (Ma tant Veronik apel tujur o pir moman posibl) - Mia zia Véronique chiama sempre nel peggior momento possibile
+Mon frère Baptiste ne finit jamais ce qu'il commence, c'est agaçant (Mon frer Batist ne fini jame se quil comans, sè agasan) - Mio fratello Baptiste non finisce mai quello che inizia, è fastidioso
+Ma copine Élise arrive toujours avec un nouveau régime miracle (Ma copin Eliz ariv tujur avec an nuvo rejim mirakl) - La mia amica Élise arriva sempre con una nuova dieta miracolosa
+Mon collègue David envoie des messages à trois heures du matin sans problème (Mon coleg David anvua dé mesaj a trua zeur dü matin san problem) - Il mio collega David manda messaggi alle tre di notte senza problemi
+Ma grand-tante Odette pense encore qu'on a douze ans (Ma gran tant Odet pans ancor con a duzan) - La mia prozia Odette pensa ancora che abbiamo dodici anni
+Mon ami Rémi n'arrive jamais à l'heure, même à son propre mariage (Mon ami Remi narriv jame a leur, mem a son propr marié) - Il mio amico Rémi non arriva mai puntuale, nemmeno al suo matrimonio
+On dirait que toute la famille a hérité de la manie de tout critiquer (On diré que tut la famiy a erité de la mani de tu kritiké) - Sembra che tutta la famiglia abbia ereditato la mania di criticare tutto
+Le serveur est encore tombé en panne ce matin, incroyable (Le server et ancor tonbé an pan se matin, incroiiabl) - Il server è di nuovo andato in tiro questa mattina, incredibile
+On doit changer le système de climatisation, il fait une chaleur insupportable (On dua shanjé le sistem de klimatizasion, il fè ün shaleur insüportabl) - Dobbiamo cambiare l'impianto di climatizzazione, fa un caldo insopportabile
+Le technicien vient vérifier l'installation électrique demain matin (Le teknisien vien verifié lenstalasion elektrik deman matin) - Il tecnico viene a controllare l'impianto elettrico domani mattina
+On a eu une coupure de courant pendant deux heures cet après-midi (On a ü ün cupür de curan pandan deuzeur set aprèmidi) - Abbiamo avuto un blackout per due ore questo pomeriggio
+Le wifi de l'étage est vraiment lent depuis quelques jours (Le uifi de letaj è vrémen lan depüi quelke jur) - Il wifi del piano è davvero lento da qualche giorno
+Il faudrait mettre à jour tous les ordinateurs du bureau (Il fodré metr a jur tu lezordinatör dü büro) - Bisognerebbe aggiornare tutti i computer dell'ufficio
+La photocopieuse est encore en panne, ça devient vraiment gênant (La fotocopiöz et ancor an pan, sa devien vrémen jenan) - La fotocopiatrice è di nuovo rotta, sta diventando davvero fastidioso
+On attend le nouveau système de vidéosurveillance depuis un mois (On atan le nuvo sistem de videosürveiyans depüi anmua) - Aspettiamo il nuovo impianto di videosorveglianza da un mese
+Le responsable informatique est en congé, on doit patienter (Le responsabl informatik et an conjé, on dua pasiante) - Il responsabile informatico è in ferie, dobbiamo pazientare
+L'ascenseur est encore bloqué entre le deuxième et le troisième étage (Lasanseur et ancor bloké antr le deuziém e le truaziém etaj) - L'ascensore è di nuovo bloccato tra il secondo e il terzo piano
+On devrait installer des panneaux solaires sur le toit du bâtiment (On devré instalé dé panno soler sür le tua dü batiman) - Dovremmo installare pannelli solari sul tetto dell'edificio
+Le chauffage central ne fonctionne toujours pas correctement (Le shofaj santral ne fonksion tujur pa corektman) - Il riscaldamento centrale non funziona ancora correttamente
+On a des problèmes récurrents avec le réseau interne de l'entreprise (On a dé problem reküran avec le rezo intern de lantrepriz) - Abbiamo problemi ricorrenti con la rete interna dell'azienda
+Il faut absolument sauvegarder tous les fichiers avant la mise à jour (Il fo absolümen sovgardé tu lé fishié avan la miz a jur) - Bisogna assolutamente salvare tutti i file prima dell'aggiornamento
+Le badge d'accès ne marche plus depuis ce matin, c'est bizarre (Le badj daksè ne marsh plü depüi se matin, sè bizar) - Il badge d'accesso non funziona più da stamattina, è strano
+On a changé de fournisseur d'électricité pour réduire les coûts (On a shanjé de furniseur delektrisité pur redüir lé cu) - Abbiamo cambiato fornitore di elettricità per ridurre i costi
+Le système d'alarme s'est déclenché sans raison cette nuit (Le sistem dalarm se deklanshé san rezon set nüi) - L'impianto d'allarme è scattato senza motivo questa notte
+On doit prévoir un budget pour renouveler tout le parc informatique (On dua prevuar an büdje pur renuvlé tu le park informatik) - Dobbiamo prevedere un budget per rinnovare tutto il parco informatico
+La ventilation de la salle de réunion ne marche pas très bien (La vantilasion de la sal de reünion ne marsh pa trè bien) - La ventilazione della sala riunioni non funziona molto bene
+On a installé de nouveaux imprimantes réseau au deuxième étage (On a instalé de nuvo inprimant rezo o deuziém etaj) - Abbiamo installato nuove stampanti in rete al secondo piano
+Le prestataire informatique doit passer réparer les serveurs jeudi (Le prestater informatik dua passé reparé lé serveur jeudi) - Il fornitore informatico deve venire a riparare i server giovedì
+On a un problème de surchauffe avec les machines de la salle serveur (On a an problem de sürshof avec lé mashin de la sal serveur) - Abbiamo un problema di surriscaldamento con le macchine della sala server
+Il faudrait revoir toute l'installation électrique du sous-sol (Il fodré revuar tut lenstalasion elektrik dü suso) - Bisognerebbe rivedere tutto l'impianto elettrico del seminterrato
+Les caméras de surveillance du parking ne fonctionnent plus (Lé kamera de sürveiyans dü parking ne fonksion plü) - Le telecamere di sorveglianza del parcheggio non funzionano più
+On a migré vers un nouveau logiciel de gestion la semaine dernière (On a migré ver an nuvo lojisiel de jestion la semèn dernier) - Siamo migrati verso un nuovo software di gestione la settimana scorsa
+Le réseau wifi invité est complètement séparé du réseau interne (Le rezo uifi invité è conpletman separé dü rezo intern) - La rete wifi ospiti è completamente separata dalla rete interna
+On attend toujours la livraison des nouveaux écrans pour les bureaux (On atan tujur la livrezon dé nuvozekran pur lé büro) - Aspettiamo ancora la consegna dei nuovi schermi per gli uffici
+La climatisation fait un bruit bizarre depuis hier, faut vérifier ça (La klimatizasion fè an brui bizar depüi ièr, fo verifié sa) - Il condizionatore fa un rumore strano da ieri, bisogna controllarlo
+On a eu une alerte de sécurité informatique la semaine dernière (On a ü ün alert de sekürité informatik la semèn dernier) - Abbiamo avuto un allarme di sicurezza informatica la settimana scorsa
+Le système de badge est relié directement à la centrale de sécurité (Le sistem de badj è relié directman a la santral de sekürité) - Il sistema di badge è collegato direttamente alla centrale di sicurezza
+On doit remplacer les câbles réseau qui sont vraiment vieux (On dua ranplasé lé cabl rezo qui son vrémen vieu) - Dobbiamo sostituire i cavi di rete che sono davvero vecchi
+Il y a une fuite d'eau au niveau de la climatisation centrale (Ilia ün füit do o nivo de la klimatizasion santral) - C'è una perdita d'acqua nell'impianto di climatizzazione centrale
+On a installé un nouveau standard téléphonique le mois dernier (On a instalé an nuvo standar telefonik le mua dernier) - Abbiamo installato un nuovo centralino telefonico il mese scorso
+Le service technique met beaucoup de temps à répondre aux appels (Le servis teknik mè bocu de tan a repondr ozapel) - Il servizio tecnico impiega molto tempo a rispondere alle chiamate
+On a des soucis récurrents avec l'onduleur de la salle informatique (On a dé susi reküran avec londüleur de la sal informatik) - Abbiamo problemi ricorrenti con l'UPS della sala informatica
+Le nouveau système de vidéoconférence est vraiment plus performant (Le nuvo sistem de videoconferans è vrémen plü performan) - Il nuovo sistema di videoconferenza è davvero più performante
+On doit programmer une maintenance générale de tous les équipements (On dua programé ün mentnans jeneral de tu lezekipman) - Dobbiamo programmare una manutenzione generale di tutte le apparecchiature
+Le disjoncteur a sauté trois fois cette semaine, c'est inquiétant (Le disjonktör a soté trua fua set semèn, sè inkietan) - L'interruttore è scattato tre volte questa settimana, è preoccupante
+On a enfin réglé le problème de synchronisation des emails (On a anfin reglé le problem de sinkronizasion dezimel) - Abbiamo finalmente risolto il problema di sincronizzazione delle email
+Le technicien a mis toute la matinée pour réparer l'imprimante (Le teknisien a mi tut la matiné pur reparé lenprimant) - Il tecnico ha impiegato tutta la mattina per riparare la stampante
+On envisage de passer au cloud pour tous nos serveurs internes (On anvizaj de passé o klaoud pur tu no serveur intern) - Stiamo valutando di passare al cloud per tutti i nostri server interni
+La sécurité du bâtiment a été renforcée après le dernier incident (La sekürité dü batiman a été ranforsé aprè le dernié inisidan) - La sicurezza dell'edificio è stata rafforzata dopo l'ultimo incidente
+On a remarqué une baisse de performance sur tout le réseau (On a remarké ün bès de performans sür tu le rezo) - Abbiamo notato un calo di prestazioni su tutta la rete
+Le prestataire nous propose un contrat de maintenance annuel (Le prestater nu propoz an contrà de mentnans anüel) - Il fornitore ci propone un contratto di manutenzione annuale
+On doit remplacer la batterie de secours du système de sécurité (On dua ranplasé la bateri de secur dü sistem de sekürité) - Dobbiamo sostituire la batteria di riserva del sistema di sicurezza
+Le logiciel de comptabilité plante encore une fois sur certains postes (Le lojisiel de contabilité plant ancor ün fua sür sertin post) - Il software di contabilità va ancora in crash su alcune postazioni
+On a demandé un devis pour refaire toute l'installation informatique (On a demandé an devi pur refer tut lenstalasion informatik) - Abbiamo chiesto un preventivo per rifare tutto l'impianto informatico
+Le système d'éclairage automatique s'allume au mauvais moment (Le sistem deklerage otomatik salüm o movè moman) - Il sistema di illuminazione automatica si accende al momento sbagliato
+On a un problème d'accès à distance depuis la mise à jour (On a an problem daksè a distans depüi la miz a jur) - Abbiamo un problema di accesso remoto dalla scorsa aggiornamento
+La direction veut moderniser tout le parc technologique cette année (La direksion veu modernizé tu le park teknolojik set ané) - La direzione vuole modernizzare tutto il parco tecnologico quest'anno
+On compte de un à dix avant de passer aux grands nombres (On kont de an a di avan de passé o gran nonbr) - Contiamo da uno a dieci prima di passare ai numeri grandi
+Aujourd'hui c'est lundi, demain ce sera mardi (Ojurdüi sè lundi, deman se sera mardi) - Oggi è lunedì, domani sarà martedì
+Le contrôle de maths est prévu mercredi prochain (Le control de mat è prevü merkredi proshin) - Il compito di matematica è previsto mercoledì prossimo
+On a cours de sport le jeudi après-midi normalement (On a cur de spor le jeudi aprèmidi normalman) - Abbiamo educazione fisica il giovedì pomeriggio normalmente
+Le vendredi, on finit plus tôt, c'est la meilleure journée (Le vandredi, on fini plü to, sè la meiyeur jurné) - Il venerdì finiamo prima, è il giorno migliore
+Le week-end commence le samedi et finit le dimanche soir (Le uikend comans le samdi e fini le dimansh suar) - Il weekend inizia il sabato e finisce la domenica sera
+Il y a sept jours dans une semaine, ça tout le monde le sait (Ilia set jur dan ün semèn, sa tu le monde le sè) - Ci sono sette giorni in una settimana, questo lo sanno tutti
+Janvier est le premier mois de l'année, février le deuxième (Janvié et le premié mua de lané, fevrié le deuziém) - Gennaio è il primo mese dell'anno, febbraio il secondo
+On apprend les mois de l'année dans l'ordre, un par un (On apran lé mua de lané dan lordr, an par an) - Impariamo i mesi dell'anno in ordine, uno per uno
+Mars, avril et mai, c'est le printemps qui commence (Mars, avril e mè, sè le printan qui comans) - Marzo, aprile e maggio, è la primavera che inizia
+Juin, juillet et août, ce sont les mois d'été (Jüin, jüiè e u, se son lé mua deté) - Giugno, luglio e agosto sono i mesi d'estate
+Septembre marque la rentrée des classes pour tout le monde (Septanbr mark la rantré dé klas pur tu le monde) - Settembre segna il rientro a scuola per tutti
+Octobre, novembre et décembre, c'est l'automne puis l'hiver (Octobr, novanbr e desanbr, sè lotonn püi liver) - Ottobre, novembre e dicembre sono l'autunno poi l'inverno
+Il y a douze mois dans une année, comme d'habitude (Ilia duz mua dan ün ané, com dabitüd) - Ci sono dodici mesi in un anno, come al solito
+On doit compter de dix en dix jusqu'à cent (On dua conté de di an di jüska san) - Dobbiamo contare di dieci in dieci fino a cento
+Vingt, trente, quarante, cinquante, on continue comme ça (Vin, trant, carant, sinkant, on continü com sa) - Venti, trenta, quaranta, cinquanta, continuiamo così
+Soixante, soixante-dix, quatre-vingts, quatre-vingt-dix, ça se complique un peu (Suasant, suasant di, catrvin, catrvin di, sa se conplik an peu) - Sessanta, settanta, ottanta, novanta, si complica un po'
+Cent, c'est le nombre qu'on utilise pour beaucoup de choses (San, sè le nonbr con ütiliz pur bocu de shoz) - Cento è il numero che usiamo per molte cose
+Mille, c'est déjà un grand nombre pour les enfants (Mil, sè dejà an gran nonbr pur lezanfan) - Mille è già un numero grande per i bambini
+On fait des exercices avec les nombres pairs et impairs (On fè dezexersis avec lé nonbr pèr e inpèr) - Facciamo esercizi con i numeri pari e dispari
+Deux, quatre, six, huit, ce sont des nombres pairs (Deu, catr, si, üit, se son dé nonbr pèr) - Due, quattro, sei, otto sono numeri pari
+Un, trois, cinq, sept, ce sont des nombres impairs (An, trua, sink, set, se son dé nonbr inpèr) - Uno, tre, cinque, sette sono numeri dispari
+Le premier jour du mois s'appelle toujours le premier (Le premié jur dü mua sapel tujur le premié) - Il primo giorno del mese si chiama sempre il primo
+On révise les jours de la semaine en chantant une comptine (On reviz lé jur de la semèn an shantan ün contin) - Ripassiamo i giorni della settimana cantando una filastrocca
+Quel jour on est aujourd'hui, tu te souviens? (Quel jur on et ojurdüi, tü te suvien?) - Che giorno è oggi, ti ricordi?
+On est le combien aujourd'hui, le douze ou le treize? (On è le conbien ojurdüi, le duz u le trez?) - Che data è oggi, il dodici o il tredici?
+Mon anniversaire tombe toujours un jour différent selon les années (Mon aniverser tonb tujur an jur diferan selon lezané) - Il mio compleanno cade sempre in un giorno diverso a seconda degli anni
+En quel mois sommes-nous en ce moment, tu sais? (An quel mua som nu an se moman, tü sè?) - In che mese siamo in questo momento, lo sai?
+Les vacances d'été commencent généralement fin juin (Lé vakans deté comans jeneralman fin jüin) - Le vacanze estive iniziano generalmente a fine giugno
+On révise les nombres jusqu'à mille pour le contrôle (On reviz lé nonbr jüska mil pur le control) - Ripassiamo i numeri fino a mille per la verifica
+Compte les billes que tu as dans ta main, s'il te plaît (Kont lé biy que tü a dan ta min, sil te plé) - Conta le biglie che hai in mano, per favore
+Il y a combien de semaines dans un mois, à peu près? (Ilia conbien de semèn dan an mua, a peu prè?) - Quante settimane ci sono in un mese, all'incirca?
+On révise l'ordre des jours, lundi vient toujours avant mardi (On reviz lordr dé jur, lundi vien tujur avan mardi) - Ripassiamo l'ordine dei giorni, lunedì viene sempre prima di martedì
+Le mois de février a parfois vingt-neuf jours au lieu de vingt-huit (Le mua de fevrié a parfua vintneuf jur o lieu de vintüit) - Il mese di febbraio ha a volte ventinove giorni invece di ventotto
+On apprend à écrire les nombres en toutes lettres aussi (On apran a ekrir lé nonbr an tut letr osi) - Impariamo a scrivere i numeri anche in lettere
+Combien font sept plus huit, qui sait la réponse? (Conbien fon set plü üit, qui sè la reponse?) - Quanto fa sette più otto, chi sa la risposta?
+On fait des additions et des soustractions simples aujourd'hui (On fè dezadision e dé sustraksion sinpl ojurdüi) - Facciamo addizioni e sottrazioni semplici oggi
+Le premier trimestre se termine généralement en décembre (Le premié trimestr se termin jeneralman an desanbr) - Il primo trimestre finisce generalmente a dicembre
+On compte les jours qui nous séparent des vacances de Noël (On kont lé jur qui nu separ dé vakans de Noel) - Contiamo i giorni che ci separano dalle vacanze di Natale
+Il reste combien de mois avant la fin de l'année scolaire? (Il rest conbien de mua avan la fin de lané skoler?) - Quanti mesi mancano alla fine dell'anno scolastico?
+On a un examen le mardi seize avril, notez bien la date (On a anexamin le mardi sez avril, noté bien la dat) - Abbiamo un esame martedì sedici aprile, segnatevi bene la data
+Combien de jours y a-t-il entre le début et la fin du mois? (Conbien de jur ia til antr le debü e la fin dü mua?) - Quanti giorni ci sono tra l'inizio e la fine del mese?
+On compte à rebours à partir de vingt jusqu'à zéro (On kont a rebur a parti de vin jüska zero) - Contiamo alla rovescia da venti fino a zero
+Chaque mois a un nombre de jours différent, sauf certains (Shak mua a an nonbr de jur diferan, so sertin) - Ogni mese ha un numero di giorni diverso, tranne alcuni
+Avril, juin, septembre et novembre ont trente jours (Avril, jüin, septanbr e novanbr on trant jur) - Aprile, giugno, settembre e novembre hanno trenta giorni
+Les autres mois ont trente et un jours, sauf février (Lezotr mua on trant e an jur, so fevrié) - Gli altri mesi hanno trentuno giorni, tranne febbraio
+On révise les nombres ordinaux, premier, deuxième, troisième (On reviz lé nonbr ordino, premié, deuziém, truaziém) - Ripassiamo i numeri ordinali, primo, secondo, terzo
+Le rendez-vous est fixé au jeudi vingt-trois mai à dix heures (Le randevu è fixé o jeudi vintrua mè a dizeur) - L'appuntamento è fissato a giovedì ventitré maggio alle dieci
+On doit retenir les jours fériés du mois de mai (On dua retnir lé jur ferié dü mua de mè) - Dobbiamo ricordare i giorni festivi del mese di maggio
+Compte combien il y a de lettres dans le mot dimanche (Kont conbien ilia de letr dan le mo dimansh) - Conta quante lettere ci sono nella parola domenica
+On a rendez-vous chez le dentiste le trois du mois prochain (On a randevu ché le dantist le trua dü mua proshin) - Abbiamo appuntamento dal dentista il tre del mese prossimo
 Où sont les toilettes? (u son le tua-let) - Dove sono i bagni?
 `;
 
