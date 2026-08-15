@@ -2689,6 +2689,57 @@ Technology changes so quickly that it's hard to keep everything up to date. (Tek
 I'd rather spend a little more now than deal with a major failure later. (Aid rader spend e litel mor nau den diil uid e meijor feiler leiter) - Preferirei spendere un po' di più adesso piuttosto che affrontare un guasto grave più avanti.
 Before we install anything new, we need to make sure it's compatible with the existing system. (Bifor ui instal enithing niu, ui niid tu meik sciur its kompatebel uid di egzisting sistem) - Prima di installare qualcosa di nuovo, dobbiamo assicurarci che sia compatibile con il sistema esistente.
 I think a simple solution would be better than adding another layer of technology. (Ai think e simpel soliuscion ud bi beter den eding enader leier ov teknologi) - Penso che una soluzione semplice sarebbe migliore che aggiungere un altro livello di tecnologia.
+The whole network's been down since this morning (dhë houl netuork iz bin daun sins dhis mornin) - Tutta la rete è giù da stamattina
+Have you tried restarting the router (hev yu traid ristartin dhë rautër) - Hai provato a riavviare il router
+I already tried that twice, it's not helping (ai olredi traid dhèt tuais, its not helpin) - L'ho già provato due volte, non serve a niente
+IT said they're looking into it (ai tii sed dheir lukin intu it) - L'IT ha detto che ci stanno lavorando
+Meanwhile we're all just sitting here doing nothing (miinuail uir ol giast sitin hir duuin nathin) - Nel frattempo siamo tutti seduti qui a non fare niente
+The printer's jammed again, third time today (dhë printërz giemd eghèn, thërd taim tudei) - La stampante si è di nuovo inceppata, terza volta oggi
+Someone needs to call maintenance about that thing (samuan niidz tu kol meintënëns abaut dhèt thing) - Qualcuno deve chiamare la manutenzione per quel coso
+Honestly, we should just replace it at this point (onëstli, uì sciud giast riplèis it et dhis point) - Onestamente dovremmo semplicemente sostituirla a questo punto
+The air conditioning's not working properly on this floor (dhë er kondiscioninz not uorkin propërli on dhis flor) - L'aria condizionata non funziona bene a questo piano
+It's either too hot or too cold, never in between (its aidhër tuu hot or tuu kould, nevër in bituìn) - O fa troppo caldo o troppo freddo, mai una via di mezzo
+Can you check if the server's back up yet (kèn yu chek if dhë sërvërz bèk ap yet) - Puoi controllare se il server è di nuovo online
+It says it's still down on my end (it sez its stil daun on mai end) - Dal mio lato dice che è ancora giù
+We really need to upgrade this whole system (uì rìeli niid tu apgreid dhis houl sistëm) - Dovremmo davvero aggiornare tutto questo sistema
+It's been running on the same software for years (its bin ranin on dhë seim softuer for yirz) - Funziona con lo stesso software da anni
+The badge reader at the front door isn't working (dhë bègi riidër et dhë front dor iznt uorkin) - Il lettore di badge alla porta principale non funziona
+I had to wait for someone to let me in this morning (ai hèd tu ueit for samuan tu let mi in dhis mornin) - Stamattina ho dovuto aspettare che qualcuno mi facesse entrare
+Can you send me the login details again (kèn yu send mi dhë loghin diteilz eghèn) - Puoi rimandarmi di nuovo i dati di accesso
+I forgot my password and got locked out (ai forgat mai pèsuord end gat lokt aut) - Ho dimenticato la password e sono rimasto bloccato fuori
+The system logs you out automatically after ten minutes (dhë sistëm logz yu aut otëmètikli aftër ten minits) - Il sistema ti disconnette automaticamente dopo dieci minuti
+That's really annoying when you're in the middle of something (dhèts rìeli anoin uen yor in dhë midël ov samthin) - È davvero fastidioso quando sei nel bel mezzo di qualcosa
+Have they fixed the elevator yet or is it still out (hev dhei fikst dhë elëveitër yet or iz it stil aut) - Hanno già sistemato l'ascensore o è ancora fuori uso
+Still out, we're stuck using the stairs (stil aut, uir stak iuzin dhë sters) - Ancora fuori uso, siamo costretti a usare le scale
+The lights in the meeting room keep flickering (dhë laits in dhë miitin ruum kiip flikërin) - Le luci nella sala riunioni continuano a sfarfallare
+Someone should really report that to facilities (samuan sciud rìeli riport dhèt tu fasilitiz) - Qualcuno dovrebbe davvero segnalarlo alla manutenzione
+I already did last week, nothing's happened yet (ai olredi did lest uiik, nathinz hèpënd yet) - L'ho già fatto la settimana scorsa, non è successo ancora niente
+The projector in room three won't connect to my laptop (dhë projektër in ruum thrii uont konekt tu mai lèptop) - Il proiettore nella sala tre non si connette al mio portatile
+Try the other cable, that one's a bit temperamental (trai dhë adhër keibël, dhèt uanz a bit tempërëmentël) - Prova l'altro cavo, quello è un po' capriccioso
+Our email's been really slow all week (auer iimeilz bin rìeli slou ol uiik) - La nostra email è stata molto lenta tutta la settimana
+It takes forever just to open an attachment (it teiks forevër giast tu oupën en ëtèchmënt) - Ci vuole un'eternità solo per aprire un allegato
+Can you check if there's a storage issue on the server (kèn yu chek if dhers a storiji iscìuu on dhë sërvër) - Puoi controllare se c'è un problema di spazio sul server
+We're almost out of space, apparently (uir olmoust aut ov speis, ëperëntli) - A quanto pare siamo quasi senza spazio
+The heating system in this building's ancient (dhë hiitin sistëm in dhis bildinz einshënt) - L'impianto di riscaldamento in questo edificio è antico
+It breaks down at least once a winter (it breiks daun et liist uans a uintër) - Si guasta almeno una volta ogni inverno
+Have you noticed the wifi's weaker near the kitchen (hev yu noutist dhë uaifaiz uiikër nir dhë kichën) - Hai notato che il wifi è più debole vicino alla cucina
+I can barely load anything when I sit over there (ai kèn berli loud enìthin uen ai sit ouvër dher) - Riesco a malapena a caricare qualcosa quando mi siedo lì
+The new system's actually pretty intuitive once you get used to it (dhë niuu sistëmz èkchueli priti intiuitiv uans yu ghet iuuzd tu it) - Il nuovo sistema è in realtà abbastanza intuitivo una volta che ci fai l'abitudine
+It just took a bit of getting used to at first (it giast tuk a bit ov ghetin iuuzd tu et fërst) - All'inizio ci è voluto solo un po' per abituarsi
+Can you show me how to log this in the new software (kèn yu scou mi hau tu log dhis in dhë niuu softuer) - Puoi mostrarmi come registrare questo nel nuovo software
+Sure, it's actually pretty similar to the old one (sciur, its èkchueli priti simila tu dhë ould uan) - Certo, in realtà è abbastanza simile a quello vecchio
+The backup system kicked in when the power flickered earlier (dhë bèkap sistëm kikt in uen dhë pauer flikërd erlìer) - Il sistema di backup è entrato in funzione quando la corrente ha vacillato prima
+Good thing we have that, or we'd have lost everything (gud thing uì hev dhèt, or uìd hev lost evrithin) - Meno male che ce l'abbiamo, altrimenti avremmo perso tutto
+Someone left the server room door unlocked again (samuan left dhë sërvër ruum dor anlokt eghèn) - Qualcuno ha di nuovo lasciato la porta della sala server aperta
+That's a security issue, someone should mention it (dhèts a sikiuriti iscìuu, samuan sciud menscion it) - È un problema di sicurezza, qualcuno dovrebbe segnalarlo
+The CCTV cameras in the car park haven't worked for months (dhë sii sii tii vii kèmërëz in dhë kar park hèvënt uorkt for manths) - Le telecamere di sorveglianza nel parcheggio non funzionano da mesi
+I mentioned it to facilities, but nothing's changed (ai menscionëd it tu fasilitiz, bat nathinz cheingid) - L'ho segnalato alla manutenzione, ma non è cambiato niente
+Can IT install the update on my computer today (kèn ai tii instol dhë apdeit on mai kompiuutër tudei) - L'IT può installare l'aggiornamento sul mio computer oggi
+They said they'll get to it sometime this week (dhei sed dheil ghet tu it samtaim dhis uiik) - Hanno detto che se ne occuperanno in qualche giorno di questa settimana
+The fire alarm went off for no reason again yesterday (dhë faiër alarm uent of for nou rizën eghèn yestërdei) - Ieri l'allarme antincendio è di nuovo scattato senza motivo
+Everyone had to evacuate for absolutely nothing (evriuan hèd tu ivèkiueit for absolutli nathin) - Tutti hanno dovuto evacuare per assolutamente niente
+Honestly, this building needs a proper overhaul (onëstli, dhis bildin niidz a propër ouvërhol) - Onestamente questo edificio ha bisogno di una revisione seria
+I don't think that's happening anytime soon though (ai dount think dhèts hèpënin enitaim suun dhou) - Non credo che succederà tanto presto però
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
