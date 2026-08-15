@@ -2495,6 +2495,56 @@ I think you handled that question really well earlier (ai think yu hèndëld dh�
 Thanks, it's not always easy to explain these things simply (thènks, its not ouëlweiz iizi tu eksplèin dhiiz thingz simpli) - Grazie, non è sempre facile spiegare queste cose in modo semplice
 We'll keep having these conversations as she gets older (uìl kiip hèvin dhiiz konvërseiscionz az scì ghets ouldër) - Continueremo ad avere queste conversazioni man mano che cresce
 That sounds like a good plan to me (dhèt saundz laik a gud plèn tu mi) - Mi sembra un buon piano
+Did you know octopuses have three hearts (did yu nou oktëpësiz hev thrii harts) - Sapevi che i polpi hanno tre cuori
+That's so weird, how does that even work (dhèts sou uird, hau daz dhèt ivën uork) - Che strano, come funziona anche solo questo
+I read that elephants can recognise themselves in a mirror (ai riid dhèt elifënts kèn rekëgnaiz dhemselvz in a mirër) - Ho letto che gli elefanti riescono a riconoscersi allo specchio
+Not many animals can actually do that (not meni ènimëlz kèn èkchueli du dhèt) - Non molti animali sanno davvero farlo
+Dolphins are supposed to be really intelligent too (dolfinz ar supouzd tu bi rìeli intelijënt tuu) - Anche i delfini si dice siano molto intelligenti
+I'd love to see one up close someday (aid lav tu sii uan ap klous samdei) - Mi piacerebbe vederne uno da vicino un giorno
+Could we get a pet hamster for my birthday (kud uì ghet a pet hèmstër for mai bërthdei) - Potremmo prendere un criceto per il mio compleanno
+We already talked about this, it's a lot of responsibility (uì olredi tokt abaut dhis, its a lot ov rispensibiliti) - Ne abbiamo già parlato, è una grande responsabilità
+I promise I'll clean the cage every week (ai promis ail kliin dhë keigi evri uiik) - Prometto che pulirò la gabbia ogni settimana
+That's exactly what you said about the goldfish (dhèts ekzèktli uat yu sed abaut dhë gouldfisc) - È esattamente quello che avevi detto per il pesce rosso
+Whatever happened to that goldfish anyway (uotevër hèpënd tu dhèt gouldfisc enìuei) - Cosa è successo poi a quel pesce rosso comunque
+Let's not talk about the goldfish (lets not tok abaut dhë gouldfisc) - Non parliamo del pesce rosso
+Did you know some parrots can live for eighty years (did yu nou sam pèrëts kèn liv for eiti yirz) - Sapevi che alcuni pappagalli possono vivere ottant'anni
+That's longer than most people I know (dhèts longër dhèn moust piipël ai nou) - È più a lungo di molte persone che conosco
+Owning a parrot's basically a lifelong commitment then (ounin a pèrëts bèsikli a laifëlong komitmënt dhen) - Avere un pappagallo è praticamente un impegno per tutta la vita quindi
+Our neighbour's got a tortoise that's older than me (auer neibërz gat a tortës dhèts ouldër dhèn mi) - Il nostro vicino ha una tartaruga più vecchia di me
+Tortoises can live for over a hundred years, some of them (tortësiz kèn liv for ouvër a handrëd yirz, sam ov dhem) - Alcune tartarughe possono vivere oltre cento anni
+That's kind of mind-blowing when you think about it (dhèts kaind ov maindblouin uen yu think abaut it) - È abbastanza incredibile se ci pensi
+Can we go to the zoo this weekend (kèn uì gou tu dhë zuu dhis uiikend) - Possiamo andare allo zoo questo weekend
+I want to see the giraffes and the lions (ai uont tu sii dhë girèfs end dhë laiënz) - Voglio vedere le giraffe e i leoni
+The penguins are always my favourite part (dhë pengwinz ar ouëlweiz mai feivërit part) - I pinguini sono sempre la parte che preferisco
+They waddle around like they own the place (dhei uodël araund laik dhei oun dhë pleis) - Camminano dondolando come se il posto fosse loro
+Did you see the size of that snake in there (did yu sii dhë saiz ov dhèt sneik in dher) - Hai visto quanto era grande quel serpente lì dentro
+It gave me the chills just looking at it (it gheiv mi dhë chilz giast lukin et it) - Mi ha fatto venire i brividi solo a guardarlo
+I could never have a snake as a pet, no thanks (ai kud nevër hev a sneik az a pet, nou thènks) - Non potrei mai avere un serpente come animale domestico, no grazie
+Some people actually find them really calming (sam piipël èkchueli faind dhem rìeli kaamin) - Alcune persone in realtà le trovano molto rilassanti
+Each to their own, I suppose (iich tu dher oun, ai supouz) - Ognuno ha i suoi gusti, immagino
+Our cat's been acting really strange lately (auer kèts bin èktin rìeli streinji leitli) - La nostra gatta si sta comportando in modo strano ultimamente
+Maybe she just wants more attention (meibi scì giast uonts mor ëtenscion) - Forse vuole solo più attenzioni
+The dog keeps staring at the door for no reason (dhë dog kiips sterin et dhë dor for nou rizën) - Il cane continua a fissare la porta senza motivo
+He probably heard something we can't (hi probëbli hërd samthin uì kènt) - Probabilmente ha sentito qualcosa che noi non possiamo sentire
+Dogs can hear sounds humans can't even pick up on (dogz kèn hir saundz hiuumëns kènt ivën pik ap on) - I cani riescono a sentire suoni che gli umani non riescono nemmeno a percepire
+That explains a lot actually (dhèt eksplèinz a lot èkchueli) - Questo spiega molte cose in realtà
+Cats sleep for like sixteen hours a day, don't they (kèts sliip for laik sikstiin auerz a dei, dount dhei) - I gatti dormono per circa sedici ore al giorno, vero
+Must be nice, honestly (mast bi nais, onëstli) - Deve essere bello, onestamente
+I'd love to have a horse one day (aid lav tu hev a hors uan dei) - Mi piacerebbe avere un cavallo un giorno
+They're a lot more work than people realise (dheir a lot mor uork dhèn piipël rìelaiz) - Richiedono molto più lavoro di quanto la gente pensi
+Maybe we could just go horse riding instead (meibi uì kud giast gou hors raidin instèd) - Forse potremmo semplicemente andare a cavallo invece
+That sounds like a much better idea (dhèt saundz laik a mach betër aidiëa) - Mi sembra un'idea molto migliore
+Did you know koalas sleep almost all day too (did yu nou kouaalëz sliip olmoust ol dei tuu) - Sapevi che anche i koala dormono quasi tutto il giorno
+They basically just eat and sleep, lucky things (dhei bèsikli giast iit end sliip, laki thingz) - In pratica mangiano e dormono soltanto, che fortunati
+Pandas only eat bamboo, isn't that right (pèndëz ounli iit bèmbuu, izënt dhèt rait) - I panda mangiano solo bambù, giusto
+They spend most of the day just chewing it (dhei spend moust ov dhë dei giast chuuin it) - Passano gran parte della giornata semplicemente masticandolo
+Sounds exhausting to me (saundz igzostin tu mi) - Mi sembra sfiancante
+Can we get a rabbit instead of a hamster (kèn uì ghet a rèbit instèd ov a hèmstër) - Possiamo prendere un coniglio invece di un criceto
+Rabbits need more space than you'd think (rèbits niid mor speis dhèn yuud think) - I conigli hanno bisogno di più spazio di quanto si pensi
+They can actually be litter trained, believe it or not (dhei kèn èkchueli bi litër treind, biliiv it or not) - Possono essere addestrati a usare la lettiera, che ci crediate o no
+That would actually make things a lot easier (dhèt uud èkchueli meik thingz a lot iizìer) - Questo renderebbe le cose molto più semplici
+Let's do some research before we decide on anything (lets du sam risërch bifor uì disaid on enìthin) - Facciamo delle ricerche prima di decidere qualsiasi cosa
+Fair enough, but I'm definitely getting a pet this year (fer inaf, bat aim definitli ghetin a pet dhis yir) - Va bene, ma quest'anno mi prendo sicuramente un animale domestico
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
