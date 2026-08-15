@@ -2827,6 +2827,27 @@ What's your favourite month and why (uats yor feivërit manth end uai) - Qual è
 I like August because we're on holiday (ai laik Ogëst bikoz uir on holidei) - Mi piace agosto perché siamo in vacanza
 Can you write next Tuesday's date on the board (kèn yu rait nekst Tiuzdeiz deit on dhë bord) - Puoi scrivere alla lavagna la data del prossimo martedì
 Right, that's enough numbers and dates for today (rait, dhèts inaf nambërz end deits for tudei) - Bene, basta numeri e date per oggi
+Can you explain why we use the present perfect in this sentence? (Ken iu eksplein uai ui iuz de prez ent perfekt in dis sentens?) - Puoi spiegare perché usiamo il present perfect in questa frase?
+The past simple usually refers to a finished action at a specific time in the past. (De past simpel iugiueli rifers tu e finisct ekcion et e spesifik taim in de past) - Il past simple di solito si riferisce a un'azione conclusa in un momento specifico del passato.
+What's the difference between I have seen it and I saw it? (Uots de difrens bituin ai hev siin it end ai so it?) - Qual è la differenza tra I have seen it e I saw it?
+We use do and does to form questions in the present simple. (Ui iuz du end daz tu form kuescions in de prez ent simpel) - Usiamo do e does per formare le domande al present simple.
+Why do we say he doesn't like it instead of he don't like it? (Uai du ui sei hi dazent laik it insted ov hi dount laik it?) - Perché diciamo he doesn't like it invece di he don't like it?
+Remember that the third person singular takes an s in the present simple. (Rimember det de therd person singiuler teiks en es in de prez ent simpel) - Ricorda che la terza persona singolare prende una s al present simple.
+When do we use an instead of a? (Uen du ui iuz en insted ov e?) - Quando usiamo an invece di a?
+We use an before a vowel sound, not simply before every vowel letter. (Ui iuz en bifor e vaul saund, not simpel i bifor evri vaul leter) - Usiamo an prima di un suono vocalico, non semplicemente prima di ogni vocale scritta.
+Can you give me an example of a sentence in the passive voice? (Ken iu giv mi en igzampel ov e sentens in de passiv vois?) - Puoi farmi un esempio di frase al passivo?
+In the passive voice, the object of the active sentence becomes the subject. (In de passiv vois, di objek ov di ektiv sentens bikamz de sabjekt) - Nella forma passiva, il complemento oggetto della frase attiva diventa il soggetto.
+How can we tell whether a verb is regular or irregular? (Hau ken ui tel ueder e verb iz regiuler or irregiuler?) - Come possiamo capire se un verbo è regolare o irregolare?
+You have to learn the most common irregular verbs by heart. (Iu hev tu lern de moust komon irregiuler verbs bai hart) - Devi imparare a memoria i verbi irregolari più comuni.
+What's the difference between will and going to? (Uots de difrens bituin uil end gouing tu?) - Qual è la differenza tra will e going to?
+We often use going to when we already have a plan or intention. (Ui ofen iuz gouing tu uen ui olredi hev e plen or intentcen) - Usiamo spesso going to quando abbiamo già un piano o un'intenzione.
+Could you turn this sentence into a negative question? (Kud iu tern dis sentens intu e neghetiv kuescion?) - Potresti trasformare questa frase in una domanda negativa?
+Don't forget that some verbs are followed by the infinitive and others by the gerund. (Dount forget det sam verbs ar foloud bai di infinitiv end aders bai de gerend) - Non dimenticare che alcuni verbi sono seguiti dall'infinito e altri dal gerundio.
+Why is the word order different in a question? (Uai iz de uord order difrent in e kuescion?) - Perché l'ordine delle parole è diverso in una domanda?
+English usually puts the auxiliary before the subject when forming a question. (Inglisc iugiueli puts di oksiliari bifor de sabjekt uen forming e kuescion) - L'inglese di solito mette l'ausiliare prima del soggetto quando forma una domanda.
+Let's compare these two sentences and see what changes. (Lets komper dhiiz tu sentensiz end sii uot ceingjiz) - Confrontiamo queste due frasi e vediamo cosa cambia.
+What happens if we change this sentence from the active voice to the passive voice? (Uot hepens if ui ceingj dis sentens from di ektiv vois tu de passiv vois?) - Cosa succede se trasformiamo questa frase dalla forma attiva alla forma passiva?
+Can you explain when we should use the past continuous instead of the past simple? (Ken iu eksplein uen ui sciud iuz de past kontin iues insted ov de past simpel?) - Puoi spiegare quando dovremmo usare il past continuous invece del past simple?
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
