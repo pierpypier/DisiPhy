@@ -2203,6 +2203,55 @@ There are only six left, so I'd better take all of them. (Der ar ounli siks left
 I need a two-metre extension lead with a white plug. (Ai niid e tu-miiter ekstension liid uid e uait plag) - Mi serve una prolunga di due metri con una spina bianca.
 Do you have a smaller red paint roller, around ten centimetres wide? (Du iu hev e smoler red peint rouler, eraund ten sentimiiters uaid?) - Avete un rullo per vernice rosso più piccolo, largo circa dieci centimetri?
 I'll take five of these hooks and two packs of nails. (Ail teik faiv ov dhiiz huks end tu peks ov neilz) - Prendo cinque di questi ganci e due confezioni di chiodi.
+What are we supposed to observe in this experiment? (Uot ar ui sapouzd tu obzerv in dis eksperiment?) - Cosa dobbiamo osservare in questo esperimento?
+I think the temperature is going up because the reaction is giving off heat. (Ai think de tempricer iz gouing ap bikoz de riakscion iz giving of hiit) - Penso che la temperatura stia aumentando perché la reazione sta liberando calore.
+Can someone explain why the water changes colour? (Ken samuan eksplein uai de uoter ceingjiz kaler?) - Qualcuno può spiegare perché l'acqua cambia colore?
+Don't touch the equipment until the teacher tells you to. (Dount tac di ekuipment until de tiicer telz iu tu) - Non toccare l'attrezzatura finché l'insegnante non te lo dice.
+Write down the result before you move on to the next step. (Rait daun de rizalt bifor iu muuv on tu de nekst step) - Scrivi il risultato prima di passare alla fase successiva.
+We need to measure the liquid very carefully. (Ui niid tu meger de likuid veri kerfuli) - Dobbiamo misurare il liquido con molta attenzione.
+What would happen if we doubled the amount of salt? (Uot ud hepen if ui dabold di emaunt ov solt?) - Cosa succederebbe se raddoppiassimo la quantità di sale?
+The teacher said we should work in pairs today. (De tiicer sed ui sciud uork in perz tudei) - L'insegnante ha detto che oggi dobbiamo lavorare a coppie.
+I can't see anything through this microscope. (Ai kent sii enithing thru dis maicroscoup) - Non riesco a vedere niente attraverso questo microscopio.
+Try adjusting the focus a little. (Trai egia sting de foukes e litel) - Prova a regolare un po' la messa a fuoco.
+We learned about cells in biology last week. (Ui lernd ebaut selz in baiologi last uiik) - La settimana scorsa abbiamo studiato le cellule in biologia.
+Is this part of the nucleus or the cell membrane? (Iz dis part ov de niukli-es or de sel membrein?) - Questa è una parte del nucleo o della membrana cellulare?
+The diagram on the board makes it much easier to understand. (De daiagram on de bord meiks it mac iizier tu anderstend) - Il diagramma alla lavagna rende molto più facile capire.
+I forgot to bring my lab notebook today. (Ai forgot tu bring mai leb noutbuk tudei) - Oggi ho dimenticato di portare il mio quaderno di laboratorio.
+How do we know which variable we're supposed to change? (Hau du ui nou uic veriabel uir sapouzd tu ceingj?) - Come facciamo a sapere quale variabile dobbiamo modificare?
+The results don't match what we predicted. (De rizalts dount metc uot ui pridiktid) - I risultati non corrispondono a ciò che avevamo previsto.
+Maybe we made a mistake when we measured the volume. (Meibi ui meid e misteik uen ui megd de volium) - Forse abbiamo fatto un errore quando abbiamo misurato il volume.
+What's the difference between mass and weight? (Uots de difrens bituin mes end ueit?) - Qual è la differenza tra massa e peso?
+Does gravity have the same effect everywhere? (Daz greviti hev de seim efekt evriuer?) - La gravità ha lo stesso effetto ovunque?
+Why does the Moon appear to change shape? (Uai daz de muun epir tu ceingj sceip?) - Perché la Luna sembra cambiare forma?
+The Earth takes about a year to go around the Sun. (Di Erth teiks ebaut e yiir tu gou eraund de San) - La Terra impiega circa un anno a orbitare intorno al Sole.
+So the seasons aren't caused by how close we are to the Sun? (Sou de siizenz arnt kozd bai hau klous ui ar tu de San?) - Quindi le stagioni non sono causate da quanto siamo vicini al Sole?
+I didn't quite understand the last part. (Ai didnt kuait anderstend de last part) - Non ho capito bene l'ultima parte.
+Could you go over that again? (Kud iu gou ouver det eghen?) - Potresti ripetere quella parte?
+What happens to the energy when the object stops moving? (Uot hepens tu di energi uen di objekt stops muving?) - Cosa succede all'energia quando l'oggetto smette di muoversi?
+We can use this formula to calculate the speed. (Ui ken iuz dis formula tu kelkiuleit de spiid) - Possiamo usare questa formula per calcolare la velocità.
+I got a different answer from everyone else. (Ai got e difrent anser from evriuan els) - Ho ottenuto una risposta diversa da tutti gli altri.
+Let's check the calculation one more time. (Lets cek de kelkiuleiscion uan mor taim) - Controlliamo il calcolo un'altra volta.
+The graph shows how the temperature changes over time. (De graf sciouz hau de tempricer ceingjiz ouver taim) - Il grafico mostra come cambia la temperatura nel tempo.
+Why is there a line going up so quickly? (Uai iz der e lain gouing ap sou kuikli?) - Perché c'è una linea che sale così rapidamente?
+We need more data before we can draw a conclusion. (Ui niid mor deita bifor ui ken dro e konklusion) - Ci servono più dati prima di poter trarre una conclusione.
+Our first test didn't work, so we're going to repeat it. (Auer ferst test didnt uork, sou uir gouing tu ripiit it) - Il nostro primo test non ha funzionato, quindi lo ripeteremo.
+Be careful with that glass tube, it's really fragile. (Bi kerful uid det glas tiub, its rili frajail) - Fai attenzione con quel tubo di vetro, è davvero fragile.
+Do we have to wear safety goggles for this experiment? (Du ui hev tu uer seifti gogolz for dis eksperiment?) - Dobbiamo indossare gli occhiali protettivi per questo esperimento?
+The teacher wants us to record everything we observe. (De tiicer uonts as tu rikord evriting ui obzerv) - L'insegnante vuole che annotiamo tutto ciò che osserviamo.
+I think this substance is reacting with the acid. (Ai think dis sabstens iz riakting uid di esid) - Penso che questa sostanza stia reagendo con l'acido.
+What happens when you heat the mixture? (Uot hepens uen iu hiit de mikscer?) - Cosa succede quando riscaldi la miscela?
+It starts bubbling almost immediately. (It starts babling olmost imiidietli) - Inizia a fare le bolle quasi immediatamente.
+The teacher said not to pour too much into the test tube. (De tiicer sed not tu por tu mac intu de test tiub) - L'insegnante ha detto di non versarne troppo nella provetta.
+Can you pass me the thermometer? (Ken iu pas mi de termometer?) - Mi passi il termometro?
+The reading is slightly higher than the one we got before. (De riiding iz slaitli haier den de uan ui got bifor) - Il valore misurato è leggermente più alto di quello che avevamo ottenuto prima.
+We should keep the conditions exactly the same for the second test. (Ui sciud kiip de kondiscionz egzaktli de seim for de second test) - Dovremmo mantenere esattamente le stesse condizioni per il secondo test.
+Could this be evidence that our hypothesis was wrong? (Kud dis bi evidens det auer haipothesis uoz rong?) - Potrebbe essere una prova che la nostra ipotesi era sbagliata?
+I like science because you can test an idea instead of just guessing. (Ai laik saiens bikoz iu ken test en aidea insted ov giast gesing) - Mi piace la scienza perché puoi verificare un'idea invece di limitarti a indovinare.
+Are we going to study the human body next? (Ar ui gouing tu stadi de iuman bodi nekst?) - Studieremo il corpo umano la prossima volta?
+I never realised how much chemistry is involved in everyday life. (Ai never ri elaizd hau mac kemistri iz involvd in evridei laif) - Non mi ero mai reso conto di quanta chimica ci sia nella vita quotidiana.
+Can we see the experiment from over here? (Ken ui sii di eksperiment from ouver hier?) - Possiamo vedere l'esperimento da qui?
+The teacher gave us ten minutes to finish the worksheet. (De tiicer geiv as ten minits tu finis de uork-sciit) - L'insegnante ci ha dato dieci minuti per finire la scheda.
+I think I finally understand how this works. (Ai think ai faineli anderstend hau dis uorks) - Penso di aver finalmente capito come funziona
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
