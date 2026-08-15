@@ -2545,6 +2545,51 @@ They can actually be litter trained, believe it or not (dhei kèn èkchueli bi l
 That would actually make things a lot easier (dhèt uud èkchueli meik thingz a lot iizìer) - Questo renderebbe le cose molto più semplici
 Let's do some research before we decide on anything (lets du sam risërch bifor uì disaid on enìthin) - Facciamo delle ricerche prima di decidere qualsiasi cosa
 Fair enough, but I'm definitely getting a pet this year (fer inaf, bat aim definitli ghetin a pet dhis yir) - Va bene, ma quest'anno mi prendo sicuramente un animale domestico
+Have you noticed how Uncle Mike always checks the front door three times before going to bed? (Hev iu nou tist hau Ankel Maik olueiz ceks de front dor thrii taims bifor gouing tu bed?) - Hai notato come lo zio Mike controlli sempre la porta d'ingresso tre volte prima di andare a letto?
+Mum still refuses to sit in the same seat twice at the cinema. (Mam stil rifiuziz tu sit in de seim siit tu taims et de sinema) - La mamma si rifiuta ancora di sedersi due volte nello stesso posto al cinema.
+Your cousin has this weird habit of eating cereal with a fork. (Ior kazen hez dis uird hebit ov iiting siriel uid e fork) - Tuo cugino ha questa strana abitudine di mangiare i cereali con una forchetta.
+I've never understood why Dad rearranges the cushions every time he walks past the sofa. (Aiv never anderstud uai Ded riereinjiz de kuscenz evri taim hi uoks past de soufa) - Non ho mai capito perché papà sistemi i cuscini ogni volta che passa davanti al divano.
+She always reads the last page of a book before she starts it. (Sci olueiz riidz de last peij ov e buk bifor sci starts it) - Lei legge sempre l'ultima pagina di un libro prima di iniziarlo.
+Do you think it's strange that he talks to his plants? (Du iu think its streinj det hi toks tu hiz plants?) - Pensi sia strano che parli con le sue piante?
+Grandma keeps the TV on even when nobody's watching it. (Grenma kiips de tii-vi on iiven uen noubodiz uocing it) - La nonna tiene la TV accesa anche quando non la guarda nessuno.
+I can't believe she sets five alarms and still manages to oversleep. (Ai kent biliiv sci sets faiv elarmz end stil menijiz tu ouversliip) - Non riesco a credere che metta cinque sveglie e riesca comunque a dormire troppo.
+Your brother never finishes a bottle of water; he always leaves the last sip. (Ior brader never finisiz e botel ov uoter; hi olueiz liivz de last sip) - Tuo fratello non finisce mai una bottiglia d'acqua; lascia sempre l'ultimo sorso.
+Why does Aunt Sarah whisper when she's on the phone? (Uai daz Ant Sera uisper uen sciiz on de foun?) - Perché zia Sarah sussurra quando è al telefono?
+I've noticed that Mark always walks around the house barefoot, even in winter. (Aiv nou tist det Mark olueiz uoks eraund de haus berfut, iiven in uinter) - Ho notato che Mark gira sempre per casa a piedi nudi, anche d'inverno.
+She has to touch the door handle twice before she leaves the house. (Sci hez tu tac de dor hendel tu taims bifor sci liivz de haus) - Deve toccare la maniglia della porta due volte prima di uscire di casa.
+Uncle John eats the same breakfast every single morning. (Ankel Jon iits de seim brekfest evri singel morning) - Lo zio John mangia la stessa colazione ogni singola mattina.
+He puts ketchup on almost everything, even eggs. (Hi puts kecap on olmost evriting, iiven egz) - Mette il ketchup praticamente su tutto, persino sulle uova.
+Did you see how she sorts the sweets by colour before eating them? (Did iu sii hau sci sorts de suiits bai kaler bifor iiting dem?) - Hai visto come divide le caramelle per colore prima di mangiarle?
+My sister can't stand having the volume on an odd number. (Mai sister kent stend heving de volium on en od namber) - Mia sorella non sopporta che il volume sia impostato su un numero dispari.
+He always takes the longest possible route home, even when he's in a hurry. (Hi olueiz teiks de longest posibel ruut houm, iiven uen hiiz in e hari) - Prende sempre il percorso più lungo possibile per tornare a casa, anche quando ha fretta.
+I don't know how she can sleep with the bedroom window wide open. (Ai dount nou hau sci ken sliip uid de bedruum uindou uaid oupen) - Non so come faccia a dormire con la finestra della camera completamente aperta.
+Your uncle never uses the last sheet of toilet paper on a roll. (Ior ankel never iuziz de last sciit ov toilet peiper on e roul) - Tuo zio non usa mai l'ultimo foglio di carta igienica del rotolo.
+She keeps old receipts in her handbag for months. (Sci kiips ould risiits in her hendbeg for manths) - Tiene vecchi scontrini nella borsa per mesi.
+Why does Tom always eat dessert before the main course? (Uai daz Tom olueiz iit dizert bifor de mein kors?) - Perché Tom mangia sempre il dolce prima della portata principale?
+He won't start eating until everyone at the table has been served. (Hi uount start iiting until evriuan et de teibel hez bin servd) - Non inizia a mangiare finché tutti a tavola non sono stati serviti.
+My aunt takes pictures of almost every meal she eats. (Mai ant teiks pikcerz ov olmost evri miil sci iits) - Mia zia fotografa quasi ogni pasto che mangia.
+I find it funny that Grandpa still writes down people's birthdays in a notebook. (Ai faind it fani det Grenpa stil raits daun piipolz berthdeiz in e noutbuk) - Trovo divertente che il nonno annoti ancora i compleanni delle persone su un quaderno.
+She checks the weather app before opening the curtains every morning. (Sci ceks de ueder ep bifor oupening de kerten z evri morning) - Controlla l'app del meteo prima di aprire le tende ogni mattina.
+He never throws away a cardboard box because he might need it someday. (Hi never throuz euei e kardbord boks bikoz hi mait niid it samdei) - Non butta mai via una scatola di cartone perché potrebbe servirgli un giorno.
+Your cousin counts the stairs every time she walks up them. (Ior kazen kaunts de sterz evri taim sci uoks ap dem) - Tua cugina conta i gradini ogni volta che li sale.
+I don't think I've ever seen him leave the house without checking his pockets three times. (Ai dount think aiv ever siin im liiv de haus uidaut ceking hiz pokets thrii taims) - Non credo di averlo mai visto uscire di casa senza controllarsi le tasche tre volte.
+She drinks coffee at midnight and then complains that she can't sleep. (Sci drinks kofi et midnait end den kompleinz det sci kent sliip) - Beve caffè a mezzanotte e poi si lamenta di non riuscire a dormire.
+Dad always turns the lights off in empty rooms, even when someone is about to go back in. (Ded olueiz ternz de laits of in empti ruumz, iiven uen samuan iz ebaut tu gou bek in) - Papà spegne sempre le luci nelle stanze vuote, anche quando qualcuno sta per rientrarci.
+Mum folds every plastic bag and keeps them in a drawer. (Mam fouldz evri plestik beg end kiips dem in e dror) - La mamma piega ogni sacchetto di plastica e li conserva in un cassetto.
+I've got a friend who won't use a public toilet unless he cleans the seat first. (Aiv got e frend hu uount iuz e pablik toilet anles hi kliinz de siit ferst) - Ho un amico che non usa un bagno pubblico se prima non pulisce il sedile.
+She always has to finish a TV series in one day once she starts it. (Sci olueiz hez tu finis e tii-vi siiriz in uan dei uans sci starts it) - Una volta iniziata una serie TV, deve sempre finirla in un solo giorno.
+Why does he put his phone in the fridge when he's cooking? (Uai daz hi put hiz foun in de frij uen hiiz kuking?) - Perché mette il telefono nel frigorifero quando cucina?
+Apparently, he once forgot where he'd put it and spent an hour looking for it. (Eperentli, hi uans forgot uer hiid put it end spent en auer luking for it) - A quanto pare, una volta si è dimenticato dove l'aveva messo e ha passato un'ora a cercarlo.
+My cousin refuses to eat food if different things are touching on the plate. (Mai kazen rifiuziz tu iit fud if difrent things ar tacing on de pleit) - Mio cugino si rifiuta di mangiare se i diversi cibi si toccano nel piatto.
+She always carries a tiny spoon in her handbag. (Sci olueiz kerriz e taini spun in her hendbeg) - Porta sempre un cucchiaino nella borsa.
+He talks to himself when he's trying to solve a problem. (Hi toks tu imself uen hiiz traiing tu solv e problem) - Parla da solo quando cerca di risolvere un problema.
+I actually do that too when I'm trying to remember something. (Ai ektciueli du det tu uen aim traiing tu rimember samthing) - In realtà lo faccio anch'io quando cerco di ricordare qualcosa.
+Your aunt never sits with her back to the door in a restaurant. (Ior ant never sits uid her bek tu de dor in e restoran) - Tua zia non si siede mai dando le spalle alla porta in un ristorante.
+He has a habit of checking the time even though he isn't going anywhere. (Hi hez e hebit ov ceking de taim iiven dou hi iznt gouing eniuuer) - Ha l'abitudine di guardare l'ora anche se non deve andare da nessuna parte.
+Grandma still keeps the same birthday cards and gives them back to the same people every year. (Grenma stil kiips de seim berthdei kardz end givz dem bek tu de seim piipel evri yiir) - La nonna conserva sempre gli stessi biglietti di compleanno e li ridà alle stesse persone ogni anno.
+I wonder where she picked up that strange habit. (Ai uonder uer sci pikt ap det streinj hebit) - Mi chiedo dove abbia preso quella strana abitudine.
+Maybe we're all a little weird in our own way. (Meibi uir ol e litel uird in auer oun uei) - Forse siamo tutti un po' strani a modo nostro.
+At least nobody in our family is ever boring. (Et liist noubodi in auer femili iz ever boring) - Almeno nella nostra famiglia nessuno è mai noioso.
 We will watch the match at a friend's house. (ui uil uocc de mecc et e frendz haus) — Guarderemo la partita a casa di un amico.
 `;
 
