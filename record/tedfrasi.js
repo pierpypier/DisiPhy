@@ -1,14 +1,3 @@
-/* ================================================================
-   tedfrasi.js — Frasi comuni Tedesco/Italiano per tedfile.html
-   ----------------------------------------------------------------
-   Stesso schema di citazioni.js: frasi su righe separate, formato
-   "Frase in tedesco (pronuncia approssimativa) - Traduzione italiana"
-
-   Per aggiungere nuove frasi: basta aggiungere una nuova riga dentro
-   il template string qui sotto, rispettando questo formato.
-   Nessun array da modificare a mano: il parsing avviene
-   automaticamente più in basso.
-   ================================================================ */
 const FRASI_TED_RAW = `
 Guten Morgen (guten MOR-ghen) - Buongiorno (al mattino)
 Guten Tag (guten TAK) - Buongiorno
@@ -2271,6 +2260,455 @@ Wie sagt man hundert auf Deutsch? (vi sagt man hundert auf doitsc) - Come si dic
 Hundert heißt einfach hundert. (hundert haist ainfach hundert) - Cento si dice semplicemente hundert.
 Was kommt nach hundert? (vas kommt nach hundert) - Cosa viene dopo cento?
 Nach hundert kommt einhunderteins. (nach hundert kommt ainhundertains) - Dopo cento viene centouno.
+Guten Tag, ich hätte gern fünfhundert Gramm Hackfleisch. (Guuten Taak, ish hète gern fünfhundert Gramm Hakflaish) - Buongiorno, vorrei cinquecento grammi di carne macinata.
+Können Sie mir das Fleisch bitte dünn schneiden? (Können Zii miir das Flaish bitte dünn shnaiden) - Può tagliarmi la carne sottile, per favore?
+Ich brauch zwei Kilo Rinderbraten für Sonntag. (Ish braukh tsvai Kiilo Rinderbraaten für Zontaak) - Mi servono due chili di arrosto di manzo per domenica.
+Was kostet das Schweinefilet pro Kilo? (Vas kostet das Shvainefileh proo Kiilo?) - Quanto costa il filetto di maiale al chilo?
+Geben Sie mir bitte sechs Scheiben Schinken. (Geeben Zii miir bitte zeks Shaiben Shinken) - Mi dia sei fette di prosciutto, per favore.
+Ist das Hähnchen frisch oder aus dem Kühlfach? (Ist das Hènshen frish oder aus dem Kühlfakh?) - Il pollo è fresco o dal frigo?
+Ich hätte gern noch zwei Bratwürste dazu. (Ish hète gern nokh tsvai Bratvürste datsu) - Vorrei ancora due salsicce da griglia in più.
+Können Sie das Fett bitte wegschneiden? (Können Zii das Fett bitte vekshnaiden) - Può togliere il grasso, per favore?
+Reicht ein Kilo Gulaschfleisch für vier Personen? (Raikht ain Kiilo Gulashflaish für fiir Perzoonen?) - Un chilo di carne per gulasch basta per quattro persone?
+Ich nehm noch ein halbes Kilo Leberwurst. (Ish neem nokh ain halbes Kiilo Leeberwurst) - Prendo ancora mezzo chilo di salame di fegato.
+Haben Sie auch Rinderhack ohne Fett? (Haaben Zii aukh Rinderhak oone Fett?) - Avete anche macinato di manzo senza grasso?
+Das Kotelett sieht heute richtig gut aus. (Das Kotelett siit hoite rishtikh guut aus) - La costoletta oggi sembra davvero buona.
+Können Sie mir zehn Würstchen einpacken? (Können Zii miir tseen Vürstshen ainpaken?) - Può incartarmi dieci wurstel?
+Wie viel macht das Ganze zusammen? (Vii fiil makht das Gantse tsuzammen?) - Quanto viene il tutto?
+Ich hätte gern ein Stück vom Rinderfilet. (Ish hète gern ain Shtük fom Rinderfileh) - Vorrei un pezzo di filetto di manzo.
+Das ist mir ein bisschen zu viel, machen Sie weniger. (Das ist miir ain bisshen tsu fiil, makhen Zii veeniger) - È un po' troppo per me, ne faccia di meno.
+Kann ich das Fleisch auch vakuumiert bekommen? (Kann ish das Flaish aukh vakuumiirt bekommen?) - Posso avere la carne anche sottovuoto?
+Ich brauch noch etwas Suppenfleisch mit Knochen. (Ish braukh nokh etvas Zuppenflaish mit Knokhen) - Mi serve ancora carne per brodo con l'osso.
+Legen Sie mir bitte noch drei Koteletts dazu. (Leegen Zii miir bitte nokh drai Koteletts datsu) - Mi aggiunga ancora tre costolette, per favore.
+Ist der Speck hausgemacht oder gekauft? (Ist der Shpek hausgemakht oder gekauft?) - La pancetta è fatta in casa o comprata?
+Guten Tag, wie viel kosten die Tomaten heute? (Guuten Taak, vii fiil kosten di Tomaaten hoite?) - Buongiorno, quanto costano i pomodori oggi?
+Ich hätte gern ein Kilo Äpfel, die roten dort. (Ish hète gern ain Kiilo Èpfel, di rooten dort) - Vorrei un chilo di mele, quelle rosse lì.
+Sind die Bananen schon reif genug? (Zint di Bananen shon raif genuk?) - Le banane sono già abbastanza mature?
+Geben Sie mir bitte fünf Stück Paprika. (Geeben Zii miir bitte fünf Shtük Paprika) - Mi dia cinque peperoni, per favore.
+Ich nehm noch eine Schale Erdbeeren dazu. (Ish neem nokh aine Shaale Erdbeeren datsu) - Prendo ancora una vaschetta di fragole.
+Was kosten die Kartoffeln pro Kilo? (Vas kosten di Kartoffeln proo Kiilo?) - Quanto costano le patate al chilo?
+Können Sie mir zwei Netze Zwiebeln geben? (Können Zii miir tsvai Netse Tsviibeln geeben?) - Può darmi due retine di cipolle?
+Ich brauch noch ein Bund Petersilie und Basilikum. (Ish braukh nokh ain Bunt Peeterziilie und Bazilikum) - Mi serve ancora un mazzo di prezzemolo e basilico.
+Haben Sie auch Bio-Gemüse im Angebot? (Haaben Zii aukh Bio-Gemüze im Angeboot?) - Avete anche verdura bio in offerta?
+Die Gurken sehen heute nicht so knackig aus. (Di Gurken seen hoite nikht zoo knakikh aus) - I cetrioli oggi non sembrano tanto croccanti.
+Ich hätte gern drei Kilo Orangen zum Pressen. (Ish hète gern drai Kiilo Orangzhen tsum Pressen) - Vorrei tre chili di arance da spremere.
+Können Sie mir den Salat bitte putzen? (Können Zii miir den Zalaat bitte putsen) - Può pulirmi l'insalata, per favore?
+Wie viel kostet das Kilo Weintrauben? (Vii fiil kostet das Kiilo Vaintrauben?) - Quanto costa il chilo d'uva?
+Ich nehm noch einen Kohlkopf und zwei Zucchini. (Ish neem nokh ainen Koolkopf und tsvai Tsukiini) - Prendo ancora un cavolo e due zucchine.
+Reicht ein halbes Kilo Pilze für die Soße? (Raikht ain halbes Kiilo Piltse für di Zoose?) - Mezzo chilo di funghi basta per il sugo?
+Ich hätte gern noch etwas Ingwer und Knoblauch. (Ish hète gern nokh etvas Ingver und Knoblaukh) - Vorrei ancora un po' di zenzero e aglio.
+Können Sie mir die Melone anschneiden? (Können Zii miir di Meloone anshnaiden) - Può tagliarmi il melone per assaggiarlo?
+Sind die Zitronen unbehandelt? (Zint di Tsitroonen unbehandelt?) - I limoni non sono trattati?
+Ich brauch noch vier Karotten für den Eintopf. (Ish braukh nokh fiir Karotten für den Aintopf) - Mi servono ancora quattro carote per lo spezzatino.
+Das macht dann zusammen zwölf Euro fünfzig. (Das makht den tsuzammen tsvölf Oiro fünftsikh) - Vengono in tutto dodici euro e cinquanta.
+Ich hätte gern eine Kiste Äpfel für den Winter. (Ish hète gern aine Kiste Èpfel für den Vinter) - Vorrei una cassetta di mele per l'inverno.
+Können Sie mir noch ein Kilo Zwetschgen abwiegen? (Können Zii miir nokh ain Kiilo Tsvetshgen apviigen?) - Può pesarmi ancora un chilo di prugne?
+Die Aubergine dort hinten sieht besser aus. (Di Aubergiine dort hinten siit besser aus) - Quella melanzana lì dietro sembra migliore.
+Ich nehm noch zwei Salatgurken und einen Fenchel. (Ish neem nokh tsvai Zalaatgurken und ainen Fenkhel) - Prendo ancora due cetrioli e un finocchio.
+Haben Sie frischen Spinat da? (Haaben Zii frishen Shpinaat da?) - Avete degli spinaci freschi?
+Wie viele Kartoffeln brauchst du für das Rezept? (Vii fiile Kartoffeln braukhst du für das Retsept?) - Quante patate ti servono per la ricetta?
+Ich hätte gern noch eine Handvoll Kirschen zum Probieren. (Ish hète gern nokh aine Hantfoll Kirshen tsum Probiiren) - Vorrei ancora una manciata di ciliegie per assaggiare.
+Können Sie mir das restliche Obst einpacken? (Können Zii miir das restlishe Opst ainpaken) - Può incartarmi la frutta rimanente?
+Danke schön, hier ist Ihr Wechselgeld. (Danke shöön, hiir ist Iir Vekselgelt) - Grazie mille, ecco il suo resto.
+Wisst ihr, wie viele Knochen ein erwachsener Mensch hat? (Vist iir, vii fiile Knokhen ain ervaksener Mensh hat?) - Sapete quante ossa ha un adulto?
+Heute besprechen wir das Periodensystem der Elemente. (Hoite beshprekhen viir das Periodenzüsteem der Elemente) - Oggi parliamo della tavola periodica degli elementi.
+Wasser besteht aus zwei Teilen Wasserstoff und einem Teil Sauerstoff. (Vasser beshteet aus tsvai Tailen Vasserstoff und ainem Tail Zauerstoff) - L'acqua è composta da due parti di idrogeno e una di ossigeno.
+Nehmt bitte euer Heft und schreibt die Formel mit. (Neemt bitte oier Heft und shraibt di Formel mit) - Prendete il quaderno e scrivete la formula.
+Wie viel Grad Celsius braucht Wasser zum Kochen? (Vii fiil Graat Tselziius braukht Vasser tsum Kokhen?) - Quanti gradi Celsius servono all'acqua per bollire?
+Der Versuch dauert ungefähr zwanzig Minuten. (Der Ferzuukh dauert ungefèer tsvantsikh Minuuten) - L'esperimento dura circa venti minuti.
+Bitte messt die Temperatur alle fünf Minuten. (Bitte messt di Temperatuur ale fünf Minuuten) - Misurate la temperatura ogni cinque minuti.
+Ein Molekül Kohlendioxid besteht aus drei Atomen. (Ain Molekühl Koolendioksiit beshteet aus drai Atoomen) - Una molecola di anidride carbonica è composta da tre atomi.
+Wie viele Planeten hat unser Sonnensystem? (Vii fiile Planeeten hat unzer Zonenzüsteem?) - Quanti pianeti ha il nostro sistema solare?
+Die Erde braucht ungefähr dreihundertfünfundsechzig Tage für eine Umrundung. (Di Eerde braukht ungefèer draihundertfünfundzekhtsikh Taage für aine Umrundung) - La Terra impiega circa trecentosessantacinque giorni per un giro completo.
+Nehmt zehn Milliliter Salzsäure für den Versuch. (Neemt tseen Milliliiter Zaltssoire für den Ferzuukh) - Prendete dieci millilitri di acido cloridrico per l'esperimento.
+Achtung, das Reagenzglas ist heiß, fasst es nicht an. (Akhtung, das Reagentsglaas ist hais, fasst es nikht an) - Attenzione, la provetta è calda, non toccatela.
+Wie viele Chromosomen hat ein Mensch? (Vii fiile Kromozoomen hat ain Mensh?) - Quanti cromosomi ha un essere umano?
+Ein erwachsenes Herz schlägt etwa siebzig Mal pro Minute. (Ain ervaksenes Herts shlèkt etva ziibtsikh Maal proo Minuute) - Un cuore adulto batte circa settanta volte al minuto.
+Bildet Gruppen zu je vier Personen für den Versuch. (Bildet Gruppen tsu ye fiir Perzoonen für den Ferzuukh) - Formate gruppi di quattro persone per l'esperimento.
+Wiegt die Probe genau auf zwei Nachkommastellen. (Viikt di Proobe genau auf tsvai Nakhkommashtelen) - Pesate il campione con precisione di due decimali.
+Wie viele Muskeln hat der menschliche Körper? (Vii fiile Muskeln hat der menshlishe Körper?) - Quanti muscoli ha il corpo umano?
+Der Mond ist etwa dreihundertachtzigtausend Kilometer von der Erde entfernt. (Der Moont ist etva draihundertakhtsiktausent Kilometer fon der Eerde entfernt) - La Luna è a circa trecentottantamila chilometri dalla Terra.
+Notiert euch die Ergebnisse in der Tabelle. (Notiirt oikh di Ergeebnisse in der Tabele) - Annotate i risultati nella tabella.
+Ein Lichtjahr entspricht einer riesigen Entfernung, fast zehn Billionen Kilometer. (Ain Likhtyaar entshprikht ainer riizigen Entfernung, fast tseen Billionen Kilometer) - Un anno luce corrisponde a una distanza enorme, quasi dieci mila miliardi di chilometri.
+Gebt drei Tropfen von der Lösung dazu. (Geept drai Tropfen fon der Löözung datsu) - Aggiungete tre gocce della soluzione.
+Wie schnell breitet sich der Schall in der Luft aus? (Vii shnel braitet zish der Shal in der Luft aus?) - A che velocità si propaga il suono nell'aria?
+Der Mensch hat im Durchschnitt zweiunddreißig Zähne. (Der Mensh hat im Durkhshnit tsvaiunddraisikh Tsène) - L'essere umano ha in media trentadue denti.
+Passt auf, die Chemikalie riecht ziemlich streng. (Passt auf, di Kemikaalie riikht tsiimlish shtreng) - Fate attenzione, la sostanza chimica ha un odore piuttosto forte.
+Wie viele Zellen hat ungefähr der menschliche Körper? (Vii fiile Tselen hat ungefèer der menshlishe Körper?) - Quante cellule ha circa il corpo umano?
+Wir brauchen für den Versuch nur fünfzig Gramm Zucker. (Viir braukhen für den Ferzuukh nuur fünftsikh Gramm Tsuker) - Ci servono solo cinquanta grammi di zucchero per l'esperimento.
+Trage die Werte bitte in das Diagramm ein. (Traage di Vèrte bitte in das Diagramm ain) - Riporta i valori nel grafico.
+Ein Tag auf dem Mars dauert etwas mehr als vierundzwanzig Stunden. (Ain Taak auf dem Mars dauert etvas meer als fiirundtsvantsikh Shtunden) - Un giorno su Marte dura poco più di ventiquattro ore.
+Wie viele Knochen hat ein neugeborenes Baby? (Vii fiile Knokhen hat ain noigeboorenes Beebi?) - Quante ossa ha un neonato?
+Bitte tragt Schutzbrillen während des ganzen Versuchs. (Bitte trakt Shutsbrilen vèrent des gantsen Ferzuukhs) - Indossate gli occhiali protettivi per tutto l'esperimento.
+Der Puls steigt nach dem Sport auf über hundert. (Der Puls shtaikt nakh dem Shport auf über hundert) - Il battito sale dopo lo sport oltre i cento.
+Wie viele Arten von Wirbeltieren kennt ihr? (Vii fiile Arten fon Virbeltiiren kent iir?) - Quante tipologie di vertebrati conoscete?
+Die Sonne ist etwa hundertfünfzig Millionen Kilometer von der Erde entfernt. (Di Zone ist etva hundertfünftsikh Millioonen Kilometer fon der Eerde entfernt) - Il sole è a circa centocinquanta milioni di chilometri dalla Terra.
+Lest bis nächste Stunde die ersten zehn Seiten im Buch. (Leest bis nèkste Shtunde di ersten tseen Zaiten im Buukh) - Leggete entro la prossima lezione le prime dieci pagine del libro.
+Erhitzt die Flüssigkeit langsam auf fünfzig Grad. (Erhitst di Flüssikhkait langzaam auf fünftsikh Graat) - Scaldate lentamente il liquido fino a cinquanta gradi.
+Wie viele Knochen bilden die Wirbelsäule? (Vii fiile Knokhen bilden di Virbelzoile?) - Quante ossa formano la colonna vertebrale?
+Für den zweiten Versuch braucht ihr nur die Hälfte der Menge. (Für den tsvaiten Ferzuukh braukht iir nuur di Hèlfte der Menge) - Per il secondo esperimento vi serve solo metà della quantità.
+Beobachtet die Reaktion genau eine Minute lang. (Beobakhtet di Reaktsioon genau aine Minuute lang) - Osservate la reazione per esattamente un minuto.
+Wie viele Sinne hat der Mensch eigentlich? (Vii fiile Zine hat der Mensh aigentlish?) - Quanti sensi ha in realtà l'essere umano?
+Ein Blitz ist heißer als die Oberfläche der Sonne. (Ain Blits ist haisser als di Oberflèshe der Zone) - Un fulmine è più caldo della superficie del sole.
+Zählt die Herzschläge eine Minute lang mit der Uhr. (Tsèlt di Hertsshlège aine Minuute lang mit der Uur) - Contate i battiti cardiaci per un minuto con l'orologio.
+Wie tief ist der tiefste Punkt im Ozean? (Vii tiif ist der tiifste Punkt im Otseaan?) - Quanto è profondo il punto più profondo dell'oceano?
+Der Marianengraben ist fast elftausend Meter tief. (Der Mariaanengraaben ist fast elftausent Meeter tiif) - La fossa delle Marianne è profonda quasi undicimila metri.
+Rechnet bitte die Ergebnisse auf zwei Stellen genau. (Rekhnet bitte di Ergeebnisse auf tsvai Shtelen genau) - Calcolate i risultati con precisione di due cifre.
+Wie viele Knochen hat eigentlich die Hand allein? (Vii fiile Knokhen hat aigentlish di Hant alain?) - Quante ossa ha solo la mano?
+Vergesst nicht, die Uhrzeit bei jedem Messwert zu notieren. (Fergesst nikht, di Uurtsait bai yeedem Messvèrt tsu notiiren) - Non dimenticate di annotare l'ora per ogni misurazione.
+Ein Erwachsener atmet etwa sechzehn Mal pro Minute. (Ain Ervaksener aatmet etva zekhtsen Maal proo Minuute) - Un adulto respira circa sedici volte al minuto.
+Wie schwer ist eigentlich das menschliche Gehirn? (Vii shvér ist aigentlish das menshlishe Gehiirn?) - Quanto pesa il cervello umano?
+Das Gehirn wiegt im Schnitt etwa anderthalb Kilo. (Das Gehiirn viikt im Shnit etva anderthalp Kiilo) - Il cervello pesa in media circa un chilo e mezzo.
+Bringt bis morgen bitte einen Taschenrechner mit. (Bringt bis morgen bitte ainen Tashenrekhner mit) - Portate domani una calcolatrice.
+Guten Tag, ich hätte gern ein Kilo frischen Lachs. (Guuten Taak, ish hète gern ain Kiilo frishen Laks) - Buongiorno, vorrei un chilo di salmone fresco.
+Sind die Garnelen schon geputzt oder noch roh? (Zint di Garneelen shon geputst oder nokh roo?) - I gamberi sono già puliti o ancora crudi?
+Können Sie mir den Fisch bitte ausnehmen? (Können Zii miir den Fish bitte ausneemen?) - Può eviscerarmi il pesce, per favore?
+Ich brauch vier Forellen für heute Abend. (Ish braukh fiir Forelen für hoite Aabent) - Mi servono quattro trote per stasera.
+Was kostet das Kilo Thunfisch heute? (Vas kostet das Kiilo Tuunfish hoite?) - Quanto costa oggi il chilo di tonno?
+Geben Sie mir bitte fünfhundert Gramm Muscheln. (Geeben Zii miir bitte fünfhundert Gramm Mushein) - Mi dia cinquecento grammi di cozze, per favore.
+Ist der Kabeljau heute Morgen erst angekommen? (Ist der Kabelyau hoite Morgen erst angekommen?) - Il merluzzo è arrivato solo stamattina?
+Ich hätte gern zwei Seezungen, mittelgroß bitte. (Ish hète gern tsvai Zeetsungen, mitelgroos bitte) - Vorrei due sogliole, di media grandezza per favore.
+Können Sie mir die Schuppen abmachen? (Können Zii miir di Shupen apmakhen?) - Può togliermi le squame, per favore?
+Ich nehm noch ein Kilo Miesmuscheln dazu. (Ish neem nokh ain Kiilo Miismushein datsu) - Prendo ancora un chilo di cozze in più.
+Riecht der Fisch für Sie noch frisch? (Riikht der Fish für Zii nokh frish?) - Le sembra ancora fresco il pesce?
+Wie viele Krabben sind in dieser Packung? (Vii fiile Krabben zint in diizer Pakung?) - Quanti gamberetti ci sono in questa confezione?
+Ich hätte gern noch ein Filet vom Zander. (Ish hète gern nokh ain Fileh fom Tsander) - Vorrei ancora un filetto di lucioperca.
+Können Sie das Filet ohne Gräten machen? (Können Zii das Fileh oone Grèten makhen?) - Può farmi il filetto senza lische?
+Der ganze Fisch wiegt etwa anderthalb Kilo. (Der gantse Fish viikt etva anderthalp Kiilo) - Il pesce intero pesa circa un chilo e mezzo.
+Ich brauch noch zehn Austern für die Feier. (Ish braukh nokh tseen Austern für di Faier) - Mi servono ancora dieci ostriche per la festa.
+Haben Sie auch Tintenfisch im Angebot? (Haaben Zii aukh Tintenfish im Angeboot?) - Avete anche il calamaro in offerta?
+Können Sie mir den Fisch in Alufolie einpacken? (Können Zii miir den Fish in Aluufoolie ainpaken?) - Può incartarmi il pesce nella carta d'alluminio?
+Was macht das Ganze zusammen mit den Garnelen? (Vas makht das Gantse tsuzammen mit den Garneelen?) - Quanto viene il tutto insieme ai gamberi?
+Ich nehm noch dreihundert Gramm geräucherten Lachs. (Ish neem nokh draihundert Gramm geroikherten Laks) - Prendo ancora trecento grammi di salmone affumicato.
+Guten Tag, ich brauch zwanzig Schrauben, sechs Millimeter. (Guuten Taak, ish braukh tsvantsikh Shrauben, zeks Millimeeter) - Buongiorno, mi servono venti viti da sei millimetri.
+Haben Sie auch längere Nägel, so acht Zentimeter? (Haaben Zii aukh lèngere Nègel, zoo akht Tsentimeeter?) - Avete anche chiodi più lunghi, tipo otto centimetri?
+Ich brauch einen Meter von diesem Draht. (Ish braukh ainen Meeter fon diizem Draat) - Mi serve un metro di questo filo.
+Können Sie mir zehn Dübel für Beton empfehlen? (Können Zii miir tseen Dühbel für Betoon empfeelen?) - Può consigliarmi dieci tasselli per il cemento?
+Ich such einen Schraubenzieher, Größe drei. (Ish zukh ainen Shraubentsiier, Gröse drai) - Sto cercando un cacciavite di misura tre.
+Wie viel kostet der Liter von diesem Lack? (Vii fiil kostet der Liiter fon diizem Lak?) - Quanto costa il litro di questa vernice?
+Ich brauch noch zwei Rollen Klebeband. (Ish braukh nokh tsvai Rolen Kleebebant) - Mi servono ancora due rotoli di nastro adesivo.
+Haben Sie diese Farbe auch in fünf Litern? (Haaben Zii diize Farbe aukh in fünf Liitern?) - Avete questo colore anche da cinque litri?
+Ich such eine Zange, aber eine kleinere. (Ish zukh aine Tsange, aber aine klainere) - Sto cercando una pinza, ma più piccola.
+Wie viele Fliesen brauch ich für vier Quadratmeter? (Vii fiile Fliizen braukh ish für fiir Kvadraatmeeter?) - Quante piastrelle mi servono per quattro metri quadrati?
+Ich brauch noch fünf Meter Kabel, dreiadrig bitte. (Ish braukh nokh fünf Meeter Kaabel, draiaadrikh bitte) - Mi servono ancora cinque metri di cavo, a tre fili per favore.
+Können Sie mir das Brett auf einen Meter zuschneiden? (Können Zii miir das Bret auf ainen Meeter tsushnaiden?) - Può tagliarmi la tavola a misura di un metro?
+Ich brauch eine Glühbirne, sechzig Watt. (Ish braukh aine Glühbirne, zekhtsikh Vat) - Mi serve una lampadina, sessanta watt.
+Haben Sie Schrauben auch einzeln oder nur im Set? (Haaben Zii Shrauben aukh aintseln oder nuur im Set?) - Avete viti anche singole o solo in confezione?
+Ich brauch noch einen Eimer Farbe für die Wand. (Ish braukh nokh ainen Aimer Farbe für di Vant) - Mi serve ancora un secchio di vernice per la parete.
+Wie viele Amp braucht diese Sicherung? (Vii fiile Amp braukht diize Zisherung?) - Quanti amperè richiede questo fusibile?
+Ich such eine Wasserwaage, die kleine bitte. (Ish zukh aine Vasservaage, di klaine bitte) - Sto cercando una livella, quella piccola per favore.
+Haben Sie auch Schleifpapier, grobe Körnung? (Haaben Zii aukh Shlaifpapiir, groobe Körnung?) - Avete anche carta vetrata a grana grossa?
+Ich brauch drei Bretter, je zwei Meter lang. (Ish braukh drai Breter, ye tsvai Meeter lang) - Mi servono tre tavole, ognuna lunga due metri.
+Wie viel kostet der Hammer dort im Regal? (Vii fiil kostet der Hammer dort im Reegaal?) - Quanto costa il martello lì sullo scaffale?
+Ich such noch Muttern für diese Schraubengröße. (Ish zukh nokh Mutern für diize Shraubengröse) - Sto cercando ancora dadi per questa misura di vite.
+Haben Sie eine Bohrmaschine zum Ausleihen? (Haaben Zii aine Boormashiine tsum Auslaihen?) - Avete un trapano da noleggiare?
+Ich brauch zwei Kilo Zement für die Reparatur. (Ish braukh tsvai Kiilo Tsement für di Reparatuur) - Mi servono due chili di cemento per la riparazione.
+Wie viele Liter braucht man für diese Wandfläche? (Vii fiile Liiter braukht man für diize Vantflèshe?) - Quanti litri servono per questa superficie di parete?
+Ich such einen Bohrer, acht Millimeter Durchmesser. (Ish zukh ainen Boorer, akht Millimeeter Durkhmesser) - Sto cercando una punta da trapano, otto millimetri di diametro.
+Haben Sie auch kleinere Scharniere für den Schrank? (Haaben Zii aukh klainere Sharniire für den Shrank?) - Avete anche cerniere più piccole per l'armadio?
+Ich brauch noch eine Rolle Isolierband. (Ish braukh nokh aine Role Izoliirbant) - Mi serve ancora un rotolo di nastro isolante.
+Wie viel wiegt dieser Sack Kies? (Vii fiil viikt diizer Zak Kiis?) - Quanto pesa questo sacco di ghiaia?
+Können Sie mir noch fünfzehn Schrauben dazugeben? (Können Zii miir nokh fünftseen Shrauben datsugeeben?) - Può darmi ancora quindici viti in più?
+Wisst ihr, wann der Zweite Weltkrieg zu Ende war? (Vist iir, van der Tsvaite Veltkriik tsu Ende var?) - Sapete quando è finita la Seconda guerra mondiale?
+Die Berliner Mauer fiel am neunten November neunzehnhundertneunundachtzig. (Di Berliiner Mauer fiil am nointen Novèmber noinzeenhundertnoinundakhtsikh) - Il muro di Berlino cadde il nove novembre millenovecentottantanove.
+Heute sprechen wir über die Französische Revolution. (Hoite shprekhen viir über di Frantsöözishe Revolutsioon) - Oggi parliamo della Rivoluzione francese.
+Wann genau begann der Erste Weltkrieg? (Van genau begann der Erste Veltkriik?) - Quando iniziò esattamente la Prima guerra mondiale?
+Der Erste Weltkrieg begann neunzehnhundertvierzehn. (Der Erste Veltkriik begann noinzeenhundertfiirtseen) - La Prima guerra mondiale iniziò nel millenovecentoquattordici.
+Schlagt bitte euer Buch auf Seite achtzig auf. (Shlaakt bitte oier Buukh auf Zaite akhtsikh auf) - Aprite il libro a pagina ottanta.
+Karl der Große wurde im Jahr achthundert zum Kaiser gekrönt. (Karl der Groose vurde im Yaar akhthundert tsum Kaizer gekröönt) - Carlo Magno fu incoronato imperatore nell'anno ottocento.
+Wie viele Jahre dauerte der Dreißigjährige Krieg eigentlich? (Vii fiile Yaare dauerte der Draisikhyèrige Kriik aigentlish?) - Quanti anni durò in realtà la Guerra dei trent'anni?
+Der Krieg dauerte, wie der Name schon sagt, dreißig Jahre. (Der Kriik dauerte, vii der Naame shon zaakt, draisikh Yaare) - La guerra durò, come dice già il nome, trent'anni.
+Kolumbus erreichte Amerika im Jahr vierzehnhundertzweiundneunzig. (Kolumbus erraikhte Ameerika im Yaar fiirtseenhundertsvaiundnointsikh) - Colombo raggiunse l'America nell'anno millequattrocentonovantadue.
+Merkt euch dieses Datum gut, es kommt in der Prüfung dran. (Merkt oikh diizes Datum guut, es kommt in der Prüfung dran) - Ricordatevi bene questa data, uscirà all'esame.
+Die Französische Revolution begann siebzehnhundertneunundachtzig. (Di Frantsöözishe Revolutsioon begann ziibtseenhundertnoinundakhtsikh) - La Rivoluzione francese iniziò nel millesettecentottantanove.
+Wer kann mir sagen, wann Napoleon Kaiser wurde? (Vér kann miir zaagen, van Napoleon Kaizer vurde?) - Chi sa dirmi quando Napoleone divenne imperatore?
+Napoleon wurde achtzehnhundertvier zum Kaiser gekrönt. (Napoleon vurde akhtseenhundertfiir tsum Kaizer gekröönt) - Napoleone fu incoronato imperatore nel milleottocentoquattro.
+Die Industrielle Revolution begann etwa Mitte des achtzehnten Jahrhunderts. (Di Industrielle Revolutsioon begann etva Mite des akhtseenten Yaarhundertz) - La Rivoluzione industriale iniziò circa a metà del diciottesimo secolo.
+Wie viele Jahre liegen zwischen den beiden Weltkriegen? (Vii fiile Yaare liigen tsvishen den baiden Veltkriigen?) - Quanti anni ci sono tra le due guerre mondiali?
+Zwischen den beiden Kriegen liegen etwa einundzwanzig Jahre. (Tsvishen den baiden Kriigen liigen etva ainundtsvantsikh Yaare) - Tra le due guerre ci sono circa ventuno anni.
+Wann wurde eigentlich die Berliner Mauer gebaut? (Van vurde aigentlish di Berliiner Mauer gebaut?) - Quando fu costruito il muro di Berlino?
+Die Mauer wurde neunzehnhunderteinundsechzig errichtet. (Di Mauer vurde noinzeenhunderteinundzekhtsikh errikhtet) - Il muro fu eretto nel millenovecentosessantuno.
+Schreibt bitte die wichtigsten Jahreszahlen in euer Heft. (Shraibt bitte di vishtikhsten Yaareztsaalen in oier Heft) - Scrivete le date più importanti nel vostro quaderno.
+Rom wurde der Sage nach siebenhundertdreiundfünfzig vor Christus gegründet. (Roon vurde der Zaage nakh ziibenhundertdraiundfünftsikh foor Kristus gegründet) - Roma fu fondata secondo la leggenda nel settecentocinquantatré avanti Cristo.
+Wie lange dauerte eigentlich das Römische Reich? (Vii lange dauerte aigentlish das Röömishe Raikh?) - Quanto durò in realtà l'Impero romano?
+Das Weströmische Reich fiel im Jahr vierhundertsechsundsiebzig. (Das Veströömishe Raikh fiil im Yaar fiirhundertzekhsundziibtsikh) - L'Impero romano d'Occidente cadde nell'anno quattrocentosettantasei.
+Könnt ihr mir sagen, wann Luther seine Thesen veröffentlichte? (Könt iir miir zaagen, van Luuter zaine Teezen feröffentlishte?) - Sapete dirmi quando Lutero pubblicò le sue tesi?
+Luther veröffentlichte seine Thesen fünfzehnhundertsiebzehn. (Luuter feröffentlishte zaine Teezen fünftseenhundertziibtseen) - Lutero pubblicò le sue tesi nel millecinquecentodiciassette.
+Wie viele Jahrhunderte liegen zwischen diesen beiden Ereignissen? (Vii fiile Yaarhunderte liigen tsvishen diizen baiden Eraignissen?) - Quanti secoli ci sono tra questi due eventi?
+Die Wiedervereinigung Deutschlands fand neunzehnhundertneunzig statt. (Di Viidervereinigung Doitshlants fant noinzeenhundertnointsikh shtat) - La riunificazione della Germania avvenne nel millenovecentonovanta.
+Wisst ihr noch, wann die Titanic gesunken ist? (Vist iir nokh, van di Titanik gezunken ist?) - Sapete ancora quando è affondato il Titanic?
+Die Titanic sank neunzehnhundertzwölf im April. (Di Titanik zank noinzeenhundertsvölf im April) - Il Titanic affondò nell'aprile millenovecentododici.
+Für die nächste Stunde lernt bitte die Jahreszahlen auswendig. (Für di nèkste Shtunde lernt bitte di Yaareztsaalen ausvendikh) - Per la prossima lezione imparate le date a memoria.
+Wann genau endete das Mittelalter ungefähr? (Van genau endete das Mitelalter ungefèer?) - Quando finì esattamente circa il Medioevo?
+Man sagt, das Mittelalter endete etwa vierzehnhundertfünfzig. (Man zaakt, das Mitelalter endete etva fiirtseenhundertfünftsikh) - Si dice che il Medioevo finì circa nel millequattrocentocinquanta.
+Die Entdeckung Amerikas liegt schon über fünfhundert Jahre zurück. (Di Entdekung Ameerikas liikt shon über fünfhundert Yaare tsurük) - La scoperta dell'America risale a oltre cinquecento anni fa.
+Wie alt war Napoleon eigentlich, als er starb? (Vii alt var Napoleon aigentlish, als er shtarp?) - Quanti anni aveva Napoleone in realtà quando morì?
+Napoleon starb achtzehnhunderteinundzwanzig im Alter von einundfünfzig Jahren. (Napoleon shtarp akhtseenhunderteinundtsvantsikh im Alter fon ainundfünftsikh Yaaren) - Napoleone morì nel milleottocentoventuno all'età di cinquantuno anni.
+Nennt mir drei wichtige Ereignisse aus dem zwanzigsten Jahrhundert. (Nent miir drai vishtige Eraignisse aus dem tsvantsikhsten Yaarhundert) - Ditemi tre eventi importanti del ventesimo secolo.
+Der Kalte Krieg dauerte fast fünfundvierzig Jahre lang. (Der Kalte Kriik dauerte fast fünfundfiirtsikh Yaare lang) - La Guerra fredda durò quasi quarantacinque anni.
+Wann wurde die UNO eigentlich gegründet? (Van vurde di Uuno aigentlish gegründet?) - Quando fu fondata in realtà l'ONU?
+Die UNO wurde neunzehnhundertfünfundvierzig gegründet. (Di Uuno vurde noinzeenhundertfünfundfiirtsikh gegründet) - L'ONU fu fondata nel millenovecentoquarantacinque.
+Schreibt einen kurzen Aufsatz über ein Ereignis vor eintausend Jahren. (Shraibt ainen kurtsen Aufzats über ain Eraignis foor aintausent Yaaren) - Scrivete un breve tema su un evento di mille anni fa.
+Wisst ihr, in welchem Jahrhundert die Pest in Europa wütete? (Vist iir, in velshem Yaarhundert di Pest in Oiroopa vühtete?) - Sapete in quale secolo la peste imperversò in Europa?
+Die große Pest wütete vor allem im vierzehnten Jahrhundert. (Di groose Pest vühtete foor alem im fiirtseenten Yaarhundert) - La grande peste imperversò soprattutto nel quattordicesimo secolo.
+Wie viele Menschen starben damals ungefähr an der Pest? (Vii fiile Menshen shtarben damaals ungefèer an der Pest?) - Quante persone morirono all'incirca allora di peste?
+Man schätzt, dass etwa fünfundzwanzig Millionen Menschen starben. (Man shètst, das etva fünfundtsvantsikh Millioonen Menshen shtarben) - Si stima che morirono circa venticinque milioni di persone.
+Bereitet bis nächste Woche ein Referat über ein Jahrhundert eurer Wahl vor. (Beraitet bis nèkste Vokhe ain Referaat über ain Yaarhundert oirer Vaal foor) - Preparate per la prossima settimana una relazione su un secolo a vostra scelta.
+Wann fand eigentlich die Mondlandung statt? (Van fant aigentlish di Moontlandung shtat?) - Quando avvenne in realtà lo sbarco sulla Luna?
+Die erste Mondlandung war neunzehnhundertneunundsechzig. (Di erste Moontlandung var noinzeenhundertnoinundzekhtsikh) - Il primo sbarco sulla Luna fu nel millenovecentosessantanove.
+Könnt ihr die wichtigsten Daten des zwanzigsten Jahrhunderts aufzählen? (Könt iir di vishtikhsten Daaten des tsvantsikhsten Yaarhundertz auftsèlen?) - Riuscite a elencare le date più importanti del ventesimo secolo?
+Der Vertrag von Versailles wurde neunzehnhundertneunzehn unterschrieben. (Der Fertraak fon Verzai vurde noinzeenhundertnoinzeen untershriiben) - Il trattato di Versailles fu firmato nel millenovecentodiciannove.
+Die Prüfung nächste Woche deckt den Zeitraum von neunzehnhundert bis heute ab. (Di Prüfung nèkste Vokhe dekt den Tsaitraum fon noinzeenhundert bis hoite ap) - L'esame della prossima settimana copre il periodo dal millenovecento a oggi.
+Wisst ihr, wie lang die Donau eigentlich ist? (Vist iir, vii lang di Donau aigentlish ist?) - Sapete quanto è lunga in realtà il Danubio?
+Die Donau ist fast zweitausendneunhundert Kilometer lang. (Di Donau ist fast tsvaitausentnoinhundert Kilometer lang) - Il Danubio è lungo quasi duemilanovecento chilometri.
+Heute sprechen wir über die Alpen und ihre höchsten Gipfel. (Hoite shprekhen viir über di Alpen und iire höökhsten Gipfel) - Oggi parliamo delle Alpi e delle loro cime più alte.
+Wie hoch ist eigentlich der Mont Blanc? (Vii hoo ist aigentlish der Mong Blang?) - Quanto è alto in realtà il Monte Bianco?
+Der Mont Blanc ist etwa viertausendachthundert Meter hoch. (Der Mong Blang ist etva fiirtausentakhthundert Meeter hoo) - Il Monte Bianco è alto circa quattromilaottocento metri.
+Schaut mal auf der Karte, wo Deutschland an Polen grenzt. (Shaut maal auf der Karte, voo Doitshlant an Poolen grentst) - Guardate sulla cartina dove la Germania confina con la Polonia.
+Wie weit ist es von Berlin bis nach München? (Vii vait ist es fon Berliin bis nakh Münshen?) - Quanto dista Berlino da Monaco?
+Von Berlin bis München sind es etwa sechshundert Kilometer. (Fon Berliin bis Münshen zint es etva zekhshundert Kilometer) - Da Berlino a Monaco ci sono circa seicento chilometri.
+Der Rhein entspringt in der Schweiz und fließt bis in die Nordsee. (Der Rain entshpringt in der Shvaits und fliist bis in di Nortzeee) - Il Reno nasce in Svizzera e scorre fino al Mare del Nord.
+Nennt mir die fünf größten Flüsse in Europa. (Nent miir di fünf gröösten Flüsse in Oiroopa) - Ditemi i cinque fiumi più grandi in Europa.
+Wie tief ist eigentlich der Bodensee im Durchschnitt? (Vii tiif ist aigentlish der Boodenzeee im Durkhshnit?) - Quanto è profondo in media il lago di Costanza?
+Der Bodensee ist im Schnitt etwa hundert Meter tief. (Der Boodenzeee ist im Shnit etva hundert Meeter tiif) - Il lago di Costanza è profondo in media circa cento metri.
+Wisst ihr, wie weit Sardinien vom italienischen Festland entfernt ist? (Vist iir, vii vait Zardiinien fom italieenishen Festlant entfernt ist?) - Sapete quanto dista la Sardegna dalla terraferma italiana?
+Sardinien liegt etwa zweihundert Kilometer vor der Küste. (Zardiinien liikt etva tsvaihundert Kilometer foor der Küste) - La Sardegna si trova a circa duecento chilometri dalla costa.
+Wie hoch liegt eigentlich die Stadt La Paz in Bolivien? (Vii hoo liikt aigentlish di Shtat La Pas in Boliivien?) - A che altitudine si trova in realtà la città di La Paz in Bolivia?
+La Paz liegt auf über dreitausendsechshundert Metern Höhe. (La Pas liikt auf über draitausentzekhshundert Meetern Höhe) - La Paz si trova a oltre tremilaseicento metri di altitudine.
+Sucht mal auf der Karte, wo der Äquator verläuft. (Zukht maal auf der Karte, voo der Èkvaator ferlauft) - Cercate sulla cartina dove passa l'equatore.
+Wie viele Kilometer misst der Äquator eigentlich? (Vii fiile Kilometer misst der Èkvaator aigentlish?) - Quanti chilometri misura in realtà l'equatore?
+Der Äquator ist etwa vierzigtausend Kilometer lang. (Der Èkvaator ist etva fiirtsikhtausent Kilometer lang) - L'equatore è lungo circa quarantamila chilometri.
+Wie weit ist es von hier bis zum Nordpol? (Vii vait ist es fon hiir bis tsum Nortpool?) - Quanto dista da qui il Polo Nord?
+Die Sahara ist die größte heiße Wüste der Welt. (Di Zaahara ist di gröste haisse Vüste der Velt) - Il Sahara è il più grande deserto caldo del mondo.
+Wie groß ist die Sahara ungefähr? (Vii groos ist di Zaahara ungefèer?) - Quanto è grande all'incirca il Sahara?
+Die Sahara ist fast so groß wie ganz Europa. (Di Zaahara ist fast zoo groos vii gants Oiroopa) - Il Sahara è quasi grande quanto tutta l'Europa.
+Zeigt mir mal auf der Karte, wo der Nil mündet. (Tsaikt miir maal auf der Karte, voo der Niil mündet) - Mostratemi sulla cartina dove sfocia il Nilo.
+Der Nil ist mit über sechstausend Kilometern der längste Fluss der Erde. (Der Niil ist mit über zekhstausent Kilometern der lèngste Fluss der Eerde) - Il Nilo, con oltre seimila chilometri, è il fiume più lungo della Terra.
+Wie weit fliegt man ungefähr von Frankfurt nach New York? (Vii vait fliikt man ungefèer fon Frankfurt nakh Nyu York?) - Quanto si vola all'incirca da Francoforte a New York?
+Der Flug von Frankfurt nach New York dauert etwa neun Stunden. (Der Fluuk fon Frankfurt nakh Nyu York dauert etva noin Shtunden) - Il volo da Francoforte a New York dura circa nove ore.
+Wisst ihr, welcher der höchste Berg der Welt ist? (Vist iir, velsher der höökhste Berk der Velt ist?) - Sapete qual è la montagna più alta del mondo?
+Der Mount Everest ist fast neuntausend Meter hoch. (Der Maunt Everest ist fast noiuntausent Meeter hoo) - L'Everest è alto quasi novemila metri.
+Wie viele Kilometer sind es von Rom bis nach Cagliari? (Vii fiile Kilometer zint es fon Roon bis nakh Kaljaari?) - Quanti chilometri ci sono da Roma a Cagliari?
+Von Rom bis Cagliari sind es etwa fünfhundert Kilometer über das Meer. (Fon Roon bis Kaljaari zint es etva fünfhundert Kilometer über das Meer) - Da Roma a Cagliari ci sono circa cinquecento chilometri via mare.
+Schaut euch mal an, wie groß Russland im Vergleich zu Europa ist. (Shaut oikh maal an, vii groos Russlant im Fergliish tsu Oiroopa ist) - Guardate quanto è grande la Russia rispetto all'Europa.
+Russland erstreckt sich über elf Zeitzonen. (Russlant ershtrekt zish über elf Tsaittsoonen) - La Russia si estende su undici fusi orari.
+Wie weit ist Australien eigentlich von Europa entfernt? (Vii vait ist Australien aigentlish fon Oiroopa entfernt?) - Quanto dista in realtà l'Australia dall'Europa?
+Von Europa bis Australien sind es über vierzehntausend Kilometer. (Fon Oiroopa bis Australien zint es über fiirtseentausent Kilometer) - Dall'Europa all'Australia ci sono oltre quattordicimila chilometri.
+Nennt mir die Hauptstädte der fünf größten Länder Europas. (Nent miir di Hauptshtète der fünf gröösten Lènder Oiroopas) - Ditemi le capitali dei cinque paesi più grandi d'Europa.
+Wie tief ist eigentlich der Marianengraben im Pazifik? (Vii tiif ist aigentlish der Mariaanengraaben im Patsiifik?) - Quanto è profonda in realtà la fossa delle Marianne nel Pacifico?
+Der Marianengraben ist fast elftausend Meter tief. (Der Mariaanengraaben ist fast elftausent Meeter tiif) - La fossa delle Marianne è profonda quasi undicimila metri.
+Wo genau liegt eigentlich Island auf der Karte? (Voo genau liikt aigentlish Islant auf der Karte?) - Dove si trova esattamente l'Islanda sulla cartina?
+Island liegt knapp unterhalb des Polarkreises im Nordatlantik. (Islant liikt knap unterhalp des Poolarkraizes im Nortatlantik) - L'Islanda si trova appena sotto il circolo polare artico nell'Atlantico del Nord.
+Wie groß ist eigentlich Grönland im Vergleich zu Deutschland? (Vii groos ist aigentlish Grönlant im Fergliish tsu Doitshlant?) - Quanto è grande in realtà la Groenlandia rispetto alla Germania?
+Grönland ist über sechsmal so groß wie Deutschland. (Grönlant ist über zekhsmaal zoo groos vii Doitshlant) - La Groenlandia è più di sei volte più grande della Germania.
+Sucht auf der Karte die Straße von Gibraltar. (Zukht auf der Karte di Shtraase fon Gibraltaar) - Cercate sulla cartina lo Stretto di Gibilterra.
+Wie breit ist die Straße von Gibraltar an der schmalsten Stelle? (Vii brait ist di Shtraase fon Gibraltaar an der shmaalsten Shtele?) - Quanto è largo lo Stretto di Gibilterra nel punto più stretto?
+An der schmalsten Stelle sind es nur vierzehn Kilometer. (An der shmaalsten Shtele zint es nuur fiirtseen Kilometer) - Nel punto più stretto ci sono solo quattordici chilometri.
+Wie viele Einwohner hat eigentlich Tokio ungefähr? (Vii fiile Ainvooner hat aigentlish Tookio ungefèer?) - Quanti abitanti ha in realtà Tokyo all'incirca?
+Der Großraum Tokio hat über sechsunddreißig Millionen Einwohner. (Der Groosraum Tookio hat über zekhsundraisikh Millioonen Ainvooner) - L'area metropolitana di Tokyo ha oltre trentasei milioni di abitanti.
+Bereitet für nächste Woche ein Referat über einen Kontinent eurer Wahl vor. (Beraitet für nèkste Vokhe ain Referaat über ainen Kontinent oirer Vaal foor) - Preparate per la prossima settimana una relazione su un continente a vostra scelta.
+Wie weit ist der Mount Everest vom Meeresspiegel entfernt? (Vii vait ist der Maunt Everest fom Meeresshpiigel entfernt?) - Quanto dista l'Everest dal livello del mare?
+Zeigt mir auf der Karte, wo der Kilimandscharo liegt. (Tsaikt miir auf der Karte, voo der Kilimandsharo liikt) - Mostratemi sulla cartina dove si trova il Kilimangiaro.
+Der Kilimandscharo ist der höchste Berg Afrikas mit fast sechstausend Metern. (Der Kilimandsharo ist der höökhste Berk Afrikas mit fast zekhstausent Meetern) - Il Kilimangiaro è la montagna più alta dell'Africa con quasi seimila metri.
+Papa, warum führen Menschen überhaupt Kriege? (Papa, varum führen Menshen überhaupt Kriige?) - Papà, perché gli uomini fanno le guerre?
+Das ist eine gute Frage, das hat viele Gründe. (Das ist aine guute Fraage, das hat fiile Gründe) - È una buona domanda, ha molte cause.
+Meistens geht es um Macht oder um Land. (Maistens geet es um Makht oder um Lant) - Il più delle volte si tratta di potere o di territorio.
+Manchmal wird auch die Religion als Grund benutzt. (Manshmaal virt aukh di Religioon als Grunt benutst) - A volte anche la religione viene usata come pretesto.
+Aber ist Religion nicht eigentlich etwas Friedliches? (Aber ist Religioon nikht aigentlish etvas Friitlishes?) - Ma la religione non dovrebbe essere qualcosa di pacifico?
+Im Grunde schon, aber Menschen missbrauchen sie manchmal. (Im Grunde shon, aber Menshen missbraukhen zii manshmaal) - In fondo sì, ma a volte le persone ne abusano.
+Glauben eigentlich alle Menschen auf der Welt an Gott? (Glauben aigentlish ale Menshen auf der Velt an Got?) - Tutte le persone al mondo credono in Dio?
+Nein, es gibt viele verschiedene Religionen und auch Menschen ohne Glauben. (Nain, es gipt fiile fershiidene Religionen und aukh Menshen oone Glauben) - No, ci sono molte religioni diverse e anche persone senza fede.
+Was ist eigentlich der Unterschied zwischen Christen und Muslimen? (Vas ist aigentlish der Untershiit tsvishen Kristen und Muslimen?) - Qual è in realtà la differenza tra cristiani e musulmani?
+Beide glauben an einen Gott, aber ihre Bücher sind unterschiedlich. (Baide glauben an ainen Got, aber iire Büüsher zint untershitlish) - Entrambi credono in un dio, ma i loro testi sacri sono diversi.
+Und was glauben eigentlich die Juden genau? (Und vas glauben aigentlish di Yuuden genau?) - E cosa credono esattamente gli ebrei?
+Das Judentum ist übrigens die älteste der drei großen Religionen. (Das Yuudentum ist übrigens di èlteste der drai groosen Religionen) - L'ebraismo è tra l'altro la più antica delle tre grandi religioni.
+Warum streiten sich Menschen dann trotzdem, wenn sie fast dasselbe glauben? (Varum shtraiten zish Menshen dan trotstdem, ven zii fast dasselbe glauben?) - Perché allora le persone litigano comunque, se credono quasi nella stessa cosa?
+Genau das verstehe ich manchmal auch nicht so richtig. (Genau das fershteee ish manshmaal aukh nikht zoo rishtikh) - Proprio questo a volte non lo capisco bene nemmeno io.
+Opa hat mir erzählt, dass es früher viele Religionskriege gab. (Oopa hat miir ertsèlt, das es früher fiile Religionskriige gaap) - Il nonno mi ha raccontato che una volta c'erano molte guerre di religione.
+Ja, zum Beispiel im Mittelalter zwischen Christen und Muslimen. (Ya, tsum Baishpiil im Mitelalter tsvishen Kristen und Muslimen) - Sì, per esempio nel Medioevo tra cristiani e musulmani.
+Und heute gibt es doch immer noch Kriege wegen der Religion, oder? (Und hoite gipt es dokh immer nokh Kriige veegen der Religioon, oder?) - E anche oggi ci sono ancora guerre a causa della religione, giusto?
+Leider ja, auch wenn die Gründe meistens komplizierter sind. (Laider ya, aukh ven di Gründe maistens komplitsiirter zint) - Purtroppo sì, anche se le cause di solito sono più complicate.
+Findest du, dass die Menschen aus der Geschichte gelernt haben? (Findest du, das di Menshen aus der Geshikhte gelernt haaben?) - Pensi che le persone abbiano imparato dalla storia?
+Ehrlich gesagt, nicht so richtig, leider. (Eerlish gezaakt, nikht zoo rishtikh, laider) - Sinceramente, non proprio, purtroppo.
+Warum kämpfen manche Länder immer noch um Grenzen? (Varum kèmpfen manshe Lènder immer nokh um Grentsen?) - Perché alcuni paesi combattono ancora per i confini?
+Weil Land und Ressourcen oft sehr wertvoll sind. (Vaail Lant und Ressourtsen oft zeer vertfol zint) - Perché il territorio e le risorse spesso sono molto preziosi.
+Gibt es auch Kriege, die nichts mit Religion zu tun haben? (Gipt es aukh Kriige, di nikhts mit Religioon tsu tuun haaben?) - Ci sono anche guerre che non hanno nulla a che fare con la religione?
+Natürlich, die meisten Kriege haben eigentlich politische Gründe. (Natürlish, di maisten Kriige haaben aigentlish politishe Gründe) - Certo, la maggior parte delle guerre ha in realtà cause politiche.
+Was denkst du, warum manche Menschen so fanatisch werden? (Vas denkst du, varum manshe Menshen zoo fanaatish verden?) - Cosa pensi, perché alcune persone diventano così fanatiche?
+Ich glaube, das hat oft mit Angst und Unwissenheit zu tun. (Ish glaube, das hat oft mit Angst und Unvissenhait tsu tuun) - Credo che spesso c'entrino la paura e l'ignoranza.
+Kann man Kriege eigentlich ganz verhindern? (Kann man Kriige aigentlish gants ferhindern?) - Si possono davvero evitare del tutto le guerre?
+Das wäre schön, aber realistisch ist das wohl schwer. (Das vère shöön, aber realistish ist das vool shvér) - Sarebbe bello, ma realisticamente è difficile.
+Findest du, dass alle Religionen im Grunde dasselbe wollen? (Findest du, das ale Religionen im Grunde dasselbe volen?) - Pensi che tutte le religioni in fondo vogliano la stessa cosa?
+Im Kern geht es meistens um Nächstenliebe und Frieden. (Im Kern geet es maistens um Nèkhstenliibe und Friiden) - Nel nucleo si tratta il più delle volte di amore per il prossimo e pace.
+Warum missversteht man das dann so oft? (Varum missfershteet man das den zoo oft?) - Perché allora lo si fraintende così spesso?
+Weil Macht und Interessen die eigentliche Botschaft oft verzerren. (Vaail Makht und Interessen di aigentlishe Botshaft oft fertserren) - Perché il potere e gli interessi spesso distorcono il messaggio originale.
+Glaubst du, dass Bildung dabei helfen könnte? (Glaubst du, das Bildung dabai helfen könte?) - Pensi che l'istruzione possa aiutare in questo?
+Auf jeden Fall, Verständnis fängt mit Wissen an. (Auf yeeden Fall, Fershtèntnis fèngt mit Vissen an) - Assolutamente, la comprensione inizia con la conoscenza.
+Findest du es wichtig, verschiedene Religionen kennenzulernen? (Findest du es vishtikh, fershiidene Religionen kenentsulernen?) - Trovi importante conoscere religioni diverse?
+Auf jeden Fall, das hilft, Vorurteile abzubauen. (Auf yeeden Fall, das hilft, Foorurtaile aptsubauen) - Assolutamente, aiuta a ridurre i pregiudizi.
+Hast du eigentlich selbst einen bestimmten Glauben? (Hast du aigentlish zelpst ainen beshtimten Glauben?) - Tu hai in realtà una fede particolare?
+Das ist eine sehr persönliche Frage, jeder muss das selbst entscheiden. (Das ist aine zeer perzöönlishe Fraage, yeeder muss das zelpst entshaiden) - È una domanda molto personale, ognuno deve deciderlo da solo.
+Denkst du, dass Frieden zwischen den Religionen möglich ist? (Denkst du, das Friiden tsvishen den Religionen möglish ist?) - Pensi che sia possibile la pace tra le religioni?
+Ich hoffe es wirklich, mit gegenseitigem Respekt schon. (Ish hoffe es virklish, mit geegenzaitigem Respekt shon) - Lo spero davvero, con rispetto reciproco sì.
+Was können wir als Familie dazu beitragen? (Vas können viir als Familie datsu baitraagen?) - Cosa possiamo fare noi come famiglia per contribuire?
+Zum Beispiel offen über solche Themen sprechen, so wie jetzt. (Tsum Baishpiil offen über zolshe Teemen shprekhen, zoo vii yetst) - Per esempio parlare apertamente di questi temi, come stiamo facendo ora.
+Ich finde es gut, dass wir darüber reden können. (Ish finde es guut, das viir darüber reeden können) - Trovo bello che possiamo parlarne insieme.
+Ich auch, solche Gespräche sind mir wichtig. (Ish aukh, zolshe Geshprèshe zint miir vishtikh) - Anch'io, queste conversazioni sono importanti per me.
+Denkst du, wir werden irgendwann in einer friedlicheren Welt leben? (Denkst du, viir verden irgentvan in ainer friitlisheren Velt leeben?) - Pensi che un giorno vivremo in un mondo più pacifico?
+Ich hoffe es von ganzem Herzen, wirklich. (Ish hoffe es fon gantsem Hertsen, virklish) - Lo spero con tutto il cuore, davvero.
+Vielleicht fängt Frieden ja im Kleinen an, bei uns zu Hause. (Fielaikht fèngt Friiden ya im Klainen an, bai uns tsu Hauze) - Forse la pace inizia proprio nelle piccole cose, a casa nostra.
+Das glaube ich auch, jede Familie kann etwas beitragen. (Das glaube ish aukh, yeede Familie kann etvas baitraagen) - Lo penso anch'io, ogni famiglia può contribuire in qualcosa.
+Danke, Papa, dass du dir immer Zeit für solche Fragen nimmst. (Danke, Papa, das du dir immer Tsait für zolshe Fraagen nimst) - Grazie, papà, che trovi sempre tempo per queste domande.
+Immer gerne, das sind wichtige Themen für uns alle. (Immer gerne, das zint vishtige Teemen für uns ale) - Con piacere sempre, sono temi importanti per tutti noi.
+Papa, dürfen wir uns irgendwann einen Hund holen? (Papa, dürfen viir uns irgentvan ainen Hunt hoolen?) - Papà, possiamo prendere un cane prima o poi?
+Das müssen wir uns gut überlegen, ein Hund braucht viel Zeit. (Das müssen viir uns guut überleegen, ain Hunt braukht fiil Tsait) - Dobbiamo pensarci bene, un cane richiede molto tempo.
+Ich hätte auch gern eine Katze, die sind pflegeleichter. (Ish hète aukh gern aine Katse, di zint pfleegelaishter) - Vorrei anche un gatto, sono più facili da gestire.
+Wusstest du, dass Papageien über hundert Jahre alt werden können? (Vustest du, das Papagaien über hundert Yaare alt verden können?) - Sapevi che i pappagalli possono vivere oltre cento anni?
+Wirklich? Das ist ja fast so alt wie ein Mensch. (Virklish? Das ist ya fast zoo alt vii ain Mensh) - Davvero? È quasi vecchio quanto una persona.
+Im Zoo haben wir gestern einen Erdmännchen gesehen, die waren so lustig. (Im Tsoo haaben viir gestern ainen Ertmènshen gezeen, di vaaren zoo lustikh) - Ieri allo zoo abbiamo visto dei suricati, erano così buffi.
+Ich fand die Erdmännchen auch total niedlich. (Ish fant di Ertmènshen aukh total niitlish) - Anche a me sono sembrati molto carini i suricati.
+Können wir bitte auch die Faultiere besuchen gehen? (Können viir bitte aukh di Faultiire bezuukhen geen?) - Possiamo andare a vedere anche i bradipi, per favore?
+Faultiere bewegen sich unglaublich langsam, das ist echt witzig. (Faultiire beveegen zish unglaublish langzaam, das ist ekt vitsikh) - I bradipi si muovono incredibilmente lento, è davvero buffo.
+Ein Chamäleon kann seine Farbe wechseln, das finde ich faszinierend. (Ain Kameeleon kann zaine Farbe vekseln, das finde ish fastsiniirent) - Un camaleonte può cambiare colore, lo trovo affascinante.
+Warum können manche Tiere ihre Farbe eigentlich ändern? (Varum können manshe Tiire iire Farbe aigentlish èndern?) - Perché alcuni animali possono cambiare colore?
+Das dient meistens zur Tarnung oder zur Kommunikation. (Das diint maistens tsur Tarnung oder tsur Komunikatsioon) - Serve per lo più a mimetizzarsi o a comunicare.
+Ich würde gern mal einen echten Koala sehen. (Ish vürde gern maal ainen ekhten Koaala seen) - Mi piacerebbe vedere davvero un koala.
+Koalas schlafen fast zwanzig Stunden am Tag, stell dir das vor. (Koaalas shlaafen fast tsvantsikh Shtunden am Taak, shtel dir das foor) - I koala dormono quasi venti ore al giorno, immagina un po'.
+Zwanzig Stunden? Das wäre mein Traumleben. (Tsvantsikh Shtunden? Das vère main Traumleeben) - Venti ore? Sarebbe la vita dei miei sogni.
+Unser Nachbar hat übrigens einen echten Papagei zu Hause. (Unzer Nakhbaar hat übrigens ainen ekhten Papagai tsu Hauze) - Il nostro vicino tra l'altro ha un vero pappagallo a casa.
+Kann der auch sprechen wie im Fernsehen? (Kann der aukh shprekhen vii im Fernzeeen?) - Sa anche parlare come si vede in TV?
+Er kann tatsächlich ein paar Wörter nachmachen. (Er kann tatsèshlish ain paar Vörter nakhmakhen) - Sa davvero imitare qualche parola.
+Ich hab neulich einen Film über Pinguine in der Antarktis gesehen. (Ish hab noilish ainen Film über Pingviine in der Antarktis gezeen) - Ho visto di recente un film sui pinguini in Antartide.
+Pinguine können gar nicht fliegen, dafür aber super schwimmen. (Pingviine können gaar nikht fliigen, dafür aber zuuper shvimen) - I pinguini non sanno affatto volare, ma in compenso nuotano benissimo.
+Findest du Reptilien eigentlich eklig oder interessant? (Findest du Reptiilien aigentlish eeklikh oder interesant?) - Trovi in realtà i rettili disgustosi o interessanti?
+Ich finde sie eher spannend als eklig, ehrlich gesagt. (Ish finde zii eeer shpanent als eeklikh, eerlish gezaakt) - Li trovo più interessanti che disgustosi, a dire il vero.
+Eine Schlange würde ich mir trotzdem nie ins Haus holen. (Aine Shlange vürde ish mir trotstdem nii ins Hauz hoolen) - Un serpente comunque non lo porterei mai in casa.
+Manche Leute halten sogar Schlangen als Haustiere. (Manshe Loite halten zoogar Shlangen als Haustiire) - Alcune persone tengono addirittura serpenti come animali domestici.
+Das könnte ich mir bei uns wirklich nicht vorstellen. (Das könte ish mir bai uns virklish nikht foorshtelen) - Non riuscirei davvero a immaginarlo da noi.
+Weißt du, was ein Faultier eigentlich am liebsten isst? (Vaist du, vas ain Faultiir aigentlish am liipsten isst?) - Sai cosa mangia in realtà preferibilmente un bradipo?
+Ich glaube hauptsächlich Blätter, aber genau weiß ich es nicht. (Ish glaube hauptzèshlish Blèter, aber genau vais ish es nikht) - Credo principalmente foglie, ma non lo so con precisione.
+Elefanten sind übrigens sehr soziale und kluge Tiere. (Elefanten zint übrigens zeer zotsiaale und kluuge Tiire) - Gli elefanti tra l'altro sono animali molto sociali e intelligenti.
+Sie können sich sogar an Menschen erinnern, hab ich gelesen. (Zii können zish zoogar an Menshen erinern, hab ish gelezen) - Si ricordano addirittura delle persone, ho letto.
+Wollen wir dieses Wochenende in den Tierpark fahren? (Volen viir diizes Vokhenende in den Tiirpark faaren?) - Vogliamo andare al parco zoo questo weekend?
+Ja gern, ich würde die Giraffen zu gern mal live sehen. (Ya gern, ish vürde di Giraafen tsu gern maal liif seen) - Sì volentieri, mi piacerebbe tanto vedere le giraffe dal vivo.
+Giraffen haben trotz ihres langen Halses genauso viele Wirbel wie wir. (Giraafen haaben trots iires langen Halzes genauzoo fiile Virbel vii viir) - Le giraffe, nonostante il collo lungo, hanno tante vertebre quante noi.
+Das hätte ich echt nicht gedacht, ehrlich gesagt. (Das hète ish ekt nikht gedakht, eerlish gezaakt) - Non l'avrei davvero pensato, a dire il vero.
+Ich finde Delfine auch total faszinierend, die sind so schlau. (Ish finde Delfiine aukh total fastsiniirent, di zint zoo shlau) - Trovo anche i delfini davvero affascinanti, sono così intelligenti.
+Delfine erkennen sich sogar gegenseitig an ihrer Stimme. (Delfiine erkenen zish zoogar geegenzaitikh an iirer Shtime) - I delfini si riconoscono addirittura tra loro dalla voce.
+Unsere Katze erkennt bestimmt auch unsere Stimmen. (Unzere Katse erkent beshtimt aukh unzere Shtimen) - Anche il nostro gatto riconosce sicuramente le nostre voci.
+Klar, Katzen sind viel schlauer, als viele Leute denken. (Klaar, Katsen zint fiil shlauer, als fiile Loite denken) - Certo, i gatti sono molto più intelligenti di quanto molti pensino.
+Meerschweinchen wären auch süß, die sind pflegeleicht, oder? (Meerschvainshen vèren aukh züs, di zint pfleegelaikht, oder?) - Anche i porcellini d'India sarebbero carini, sono facili da gestire, no?
+Sie brauchen trotzdem täglich Auslauf und frisches Gemüse. (Zii braukhen trotstdem tèklish Auslauf und frishes Gemüze) - Necessitano comunque di uscite giornaliere e verdura fresca.
+Ich hab gelesen, dass Oktopusse unglaublich intelligent sind. (Ish hab gelezen, das Oktopusse unglaublish inteligent zint) - Ho letto che i polpi sono incredibilmente intelligenti.
+Ja, die können sogar Rätsel lösen, das ist echt beeindruckend. (Ya, di können zoogar Rètsel lözen, das ist ekt be-aindrukent) - Sì, riescono persino a risolvere enigmi, è davvero impressionante.
+Ich würde gern mal ein Faultier ganz aus der Nähe sehen. (Ish vürde gern maal ain Faultiir gants aus der Nèe seen) - Mi piacerebbe vedere un bradipo davvero da vicino.
+Im Tierpark kannst du das bestimmt bald machen. (Im Tiirpark kanst du das beshtimt balt makhen) - Al parco zoo potrai sicuramente farlo presto.
+Können wir uns auch die Flamingos anschauen? (Können viir uns aukh di Flaminggos anshauen?) - Possiamo guardare anche i fenicotteri?
+Klar, die stehen meistens alle auf einem Bein. (Klaar, di shteen maistens ale auf ainem Bain) - Certo, di solito stanno tutti su una zampa sola.
+Warum machen die das eigentlich, weißt du das? (Varum makhen di das aigentlish, vaist du das?) - Perché lo fanno in realtà, lo sai?
+Ich glaube, das spart ihnen Energie beim Wärmehalten. (Ish glaube, das shpaart iinen Energii baim Vèrmehalten) - Credo che risparmi loro energia per mantenersi caldi.
+Tiere sind einfach faszinierend, egal ob exotisch oder ganz normal. (Tiire zint ainfakh fastsiniirent, eegaal op eksootish oder gants normaal) - Gli animali sono semplicemente affascinanti, che siano esotici o del tutto normali.
+Da stimm ich dir voll und ganz zu. (Da shtim ish dir foll und gants tsu) - Sono pienamente d'accordo con te su questo.
+Hast du schon gehört, was Tante Erika letztens gemacht hat? (Hast du shon gehört, vas Tante Eerika letstens gemakht hat?) - Hai già sentito cosa ha fatto di recente zia Erika?
+Nein, erzähl mal, ich bin gespannt. (Nain, ertsèl maal, ish bin geshpant) - No, racconta, sono curioso.
+Sie hat sich tatsächlich mit siebzig noch ein Tattoo stechen lassen. (Zii hat zish tatsèshlish mit ziibtsikh nokh ain Tatuu shtekhen lassen) - Si è fatta davvero fare un tatuaggio a settant'anni.
+Das sieht ihr eigentlich gar nicht ähnlich. (Das siit iir aigentlish gaar nikht èenlish) - Non le assomiglia proprio per niente.
+Onkel Werner räumt seine Garage schon seit Jahren nicht auf. (Onkel Verner roimt zaine Garaazhe shon zait Yaaren nikht auf) - Lo zio Werner non riordina il garage da anni ormai.
+Da drin findet man wahrscheinlich alles Mögliche. (Da drin findet man vaarsheinlish ales Mööglishe) - Lì dentro probabilmente si trova di tutto.
+Weißt du, dass Cousine Petra nie pünktlich ist? (Vaist du, das Kuziine Petra nii pünktlish ist?) - Sai che la cugina Petra non è mai puntuale?
+Klar, bei ihr rechnet man immer mit einer halben Stunde extra. (Klaar, bai iir rekhnet man immer mit ainer halben Shtunde ekstra) - Certo, con lei si mette sempre in conto mezz'ora in più.
+Mein Kollege Frank redet ständig über sein neues Auto. (Main Koleege Frank reedet shtèndikh über zain noies Auto) - Il mio collega Frank parla continuamente della sua auto nuova.
+Das nervt bestimmt ziemlich auf Dauer. (Das nervt beshtimt tsiimlish auf Dauer) - Sicuramente diventa piuttosto fastidioso col tempo.
+Oma sammelt schon seit Ewigkeiten irgendwelche Salzstreuer. (Oma zamelt shon zait Eevishkaiten irgentvelshe Zaltsshtroier) - La nonna colleziona da un'eternità delle saliere.
+Ich glaub, sie hat mittlerweile über hundert davon. (Ish glaub, zii hat mitlervaile über hundert dafon) - Credo che ormai ne abbia più di cento.
+Hast du gemerkt, dass Tante Sabine nie über sich selbst redet? (Hast du gemerkt, das Tante Zabiine nii über zish zelpst reedet?) - Hai notato che zia Sabine non parla mai di sé stessa?
+Ja, sie fragt lieber immer nach den anderen. (Ya, zii fraakt liiber immer nakh den anderen) - Sì, preferisce sempre chiedere degli altri.
+Mein Bruder isst wirklich alles mit Ketchup, sogar Nudeln. (Main Bruder isst virklish ales mit Ketshap, zoogar Nudeln) - Mio fratello mangia davvero tutto col ketchup, persino la pasta.
+Das ist ja wirklich eine seltsame Angewohnheit. (Das ist ya virklish aine zeltzaame Angevoonhait) - Questa è davvero un'abitudine strana.
+Unser Nachbar grüßt einen nie, egal wie oft man sich sieht. (Unzer Nakhbaar grüst ainen nii, eegaal vii oft man zish siit) - Il nostro vicino non saluta mai, indipendentemente da quante volte lo si incontri.
+Vielleicht ist er einfach nur schüchtern. (Fielaikht ist er ainfakh nuur shükhtern) - Forse è semplicemente timido.
+Hast du gewusst, dass Onkel Paul jeden Sonntag denselben Spaziergang macht? (Hast du gevusst, das Onkel Paul yeeden Zontaak denzelben Shpatsiirgang makht?) - Sapevi che zio Paul fa ogni domenica la stessa passeggiata?
+Ja, immer die gleiche Route, seit ich denken kann. (Ya, immer di glaishe Ruute, zait ish denken kann) - Sì, sempre lo stesso percorso, da quando ricordo.
+Meine Schwägerin spricht immer so leise, man versteht kaum was. (Maine Shvègerin shprikht immer zoo laize, man fershteet kaum vas) - Mia cognata parla sempre così piano, non si capisce quasi niente.
+Ich muss sie meistens zweimal fragen. (Ish muss zii maistens tsvaimaal fraagen) - Devo chiederle di solito due volte.
+Hast du gehört, dass Frau Meier von nebenan angeblich Lottogewinnerin ist? (Hast du gehört, das Frau Maier fon neebenan angeblish Lotogevinerin ist?) - Hai sentito che la signora Meier del vicinato pare abbia vinto alla lotteria?
+Das ist doch nur ein Gerücht, glaub ich nicht so richtig. (Das ist dokh nuur ain Gerükht, glaub ish nikht zoo rishtikh) - È solo una voce, non ci credo tanto in realtà.
+Mein Cousin wechselt ständig seinen Job, das versteh ich nicht. (Main Kuziin vekselt shtèndikh zainen Dzhop, das fershtee ish nikht) - Mio cugino cambia continuamente lavoro, non lo capisco.
+Vielleicht sucht er einfach noch nach dem Richtigen. (Fielaikht zukht er ainfakh nokh nakh dem Rishtigen) - Forse sta ancora cercando quello giusto.
+Weißt du, dass Opa jeden Morgen um fünf Uhr aufsteht? (Vaist du, das Opa yeeden Morgen um fünf Uur aufshteet?) - Sai che il nonno si alza ogni mattina alle cinque?
+Das war schon immer so, seit ich mich erinnern kann. (Das var shon immer zoo, zait ish mish erinern kann) - È sempre stato così, da quando riesco a ricordare.
+Meine Freundin Anja kann echt keine Kritik vertragen. (Maine Froindin Anya kann ekt kaine Kritiik fertraagen) - La mia amica Anja non tollera davvero le critiche.
+Da muss man wirklich vorsichtig sein, was man sagt. (Da muss man virklish foorzishtikh zain, vas man zaakt) - Bisogna davvero stare attenti a cosa si dice.
+Onkel Klaus erzählt jedes Mal dieselben Witze auf Familienfeiern. (Onkel Klaus ertsèlt yeedes Maal dizelben Vitse auf Familienfaiern) - Zio Klaus racconta sempre le stesse battute alle feste di famiglia.
+Wir lachen trotzdem immer höflich mit. (Viir lakhen trotstdem immer höflish mit) - Ridiamo comunque sempre educatamente insieme a lui.
+Hast du bemerkt, dass Tante Rosi total abergläubisch ist? (Hast du bemerkt, das Tante Roozi total aabergloibish ist?) - Hai notato che zia Rosi è davvero superstiziosa?
+Ja, sie klopft ständig dreimal auf Holz. (Ya, zii klopft shtèndikh draimaal auf Holts) - Sì, tocca continuamente ferro tre volte.
+Mein Schwager kann einfach nicht früh aufstehen, egal was ist. (Main Shvaager kann ainfakh nikht früü aufshteen, eegaal vas ist) - Mio cognato proprio non riesce ad alzarsi presto, qualsiasi cosa accada.
+Deswegen kommt er auch fast immer zu spät. (Desveegen kommt er aukh fast immer tsu shpèt) - Per questo arriva quasi sempre in ritardo.
+Hast du gesehen, wie ordentlich Kollegin Sandra ihren Schreibtisch hat? (Hast du gezeen, vii ordentlish Koleegin Zandra iiren Shraiptish hat?) - Hai visto quanto è ordinata la collega Sandra con la scrivania?
+Bei mir sieht das leider ganz anders aus. (Bai miir siit das laider gants anders aus) - Da me purtroppo è tutto molto diverso.
+Meine Nichte redet neuerdings nur noch über ihre Diät. (Maine Nishte reedet noierdings nuur nokh über iire Dièt) - Mia nipote di recente parla solo della sua dieta.
+Das kenn ich, das geht irgendwann vorbei. (Das ken ish, das geet irgentvan foorbai) - Lo conosco questo fenomeno, prima o poi passa.
+Hast du mitbekommen, dass Herr Schulz nebenan angeblich heimlich raucht? (Hast du mitbekommen, das Herr Shults neebenan angeblish haimlish raukht?) - Hai saputo che il signor Schulz del vicinato a quanto pare fuma di nascosto?
+Seine Frau weiß bestimmt trotzdem längst Bescheid. (Zaine Frau vais beshtimt trotstdem lèngst Beshaid) - Sua moglie lo sa sicuramente comunque da tempo.
+Mein Vater erzählt immer wieder dieselbe Geschichte von früher. (Main Faater ertsèlt immer vieder dizelbe Geshikhte fon früüer) - Mio padre racconta sempre di nuovo la stessa storia di quando era giovane.
+Wir kennen sie schon fast auswendig, ehrlich gesagt. (Viir kenen zii shon fast ausvendikh, eerlish gezaakt) - La conosciamo quasi a memoria, a dire il vero.
+Findest du nicht auch, dass Tante Gitte ziemlich viel tratscht? (Findest du nikht aukh, das Tante Gite tsiimlish fiil tratsht?) - Non trovi anche tu che zia Gitte spettegoli parecchio?
+Doch, bei ihr weiß am Ende immer jeder alles. (Dokh, bai iir vais am Ende immer yeeder ales) - Sì, con lei alla fine sanno sempre tutti tutto.
+Mein bester Freund vergisst ständig unsere Verabredungen. (Main bester Froint fergisst shtèndikh unzere Ferabreedungen) - Il mio migliore amico dimentica continuamente i nostri appuntamenti.
+Ich schreib ihm mittlerweile lieber eine Erinnerung. (Ish shraib iim mitlervaile liiber aine Erinerung) - Ormai preferisco mandargli un promemoria.
+Weißt du eigentlich, warum Cousin Dieter nie über seine Arbeit spricht? (Vaist du aigentlish, varum Kuziin Diiter nii über zaine Arbait shprikht?) - Sai in realtà perché il cugino Dieter non parla mai del suo lavoro?
+Keine Ahnung, vielleicht ist ihm das einfach unangenehm. (Kaine Aanung, fielaikht ist iim das ainfakh unangeneem) - Non ne ho idea, forse gli risulta semplicemente imbarazzante.
+Hast du gesehen, dass der Server heute Nacht wieder abgestürzt ist? (Hast du gezeen, das der Server hoite Nakht vieder apgeshtürtst ist?) - Hai visto che il server stanotte è di nuovo andato in crash?
+Ja, die IT-Abteilung arbeitet schon seit heute Morgen daran. (Ya, di Ai-Tii-Aptailung arbaitet shon zait hoite Morgen daran) - Sì, il reparto IT ci sta lavorando già da stamattina.
+Unser Drucker im zweiten Stock streikt schon wieder. (Unzer Druker im tsvaiten Shtok shtraikt shon vieder) - La nostra stampante al secondo piano è di nuovo in tilt.
+Ich glaub, dem geht ständig die Tinte aus. (Ish glaub, dem geet shtèndikh di Tinte aus) - Credo che gli finisca continuamente l'inchiostro.
+Können wir bitte endlich auf neue Bildschirme umsteigen? (Können viir bitte entlish auf noie Bildshirme umshtaigen?) - Possiamo finalmente passare a nuovi monitor, per favore?
+Die alten flackern echt schon seit Monaten. (Di alten flakern ekt shon zait Monaaten) - Quelli vecchi sblinkano davvero già da mesi.
+Läuft das neue System eigentlich schon stabil? (Loift das noie Züsteem aigentlish shon shtabiil?) - Il nuovo sistema è già stabile?
+Noch nicht ganz, es gibt ab und zu kleinere Fehler. (Nokh nikht gants, es gipt ap und tsu klainere Feeler) - Non ancora del tutto, ci sono ogni tanto piccoli errori.
+Kannst du mir kurz mit dem Beamer helfen? (Kannst du miir kurts mit dem Biimer helfen?) - Puoi aiutarmi un attimo con il proiettore?
+Klar, meistens ist einfach das Kabel locker. (Klaar, maistens ist ainfakh das Kaabel loker) - Certo, di solito è semplicemente il cavo allentato.
+Unsere Telefonanlage ist wirklich völlig veraltet. (Unzere Telefoonanlaage ist virklish föllikh feraltet) - Il nostro centralino telefonico è davvero completamente obsoleto.
+Da geb ich dir vollkommen recht, das nervt im Alltag. (Da geep ish diir folkomen resht, das nervt im Altaak) - Ti do assolutamente ragione, disturba nella routine quotidiana.
+Habt ihr schon von der neuen Software gehört? (Hapt iir shon fon der noien Zoftvèr gehört?) - Avete già sentito parlare del nuovo software?
+Ja, angeblich soll die viel benutzerfreundlicher sein. (Ya, angeblish zol di fiil benutserfroindlisher zain) - Sì, a quanto pare dovrebbe essere molto più intuitiva.
+Das WLAN im Konferenzraum bricht ständig ab. (Das Veelaan im Konferentsraum brikht shtèndikh ap) - Il wifi nella sala conferenze si interrompe continuamente.
+Vielleicht liegt das am Router in der Ecke. (Fielaikht liikt das am Rauter in der Eke) - Forse dipende dal router nell'angolo.
+Wann bekommen wir eigentlich neue Laptops? (Van bekomen viir aigentlish noie Leptops?) - Quando riceviamo in realtà nuovi portatili?
+Das steht wohl erst nächstes Jahr im Budget. (Das shteet vool erst nèkstes Yaar im Budzheet) - Questo è previsto solo nel budget dell'anno prossimo.
+Meine Maus reagiert seit heute total verzögert. (Maine Maus reagiirt zait hoite total fertsöögert) - Il mio mouse reagisce con ritardo da oggi.
+Vielleicht ist einfach der Akku fast leer. (Fielaikht ist ainfakh der Aku fast leer) - Forse è semplicemente la batteria quasi scarica.
+Die Klimaanlage im Büro ist mal wieder viel zu kalt. (Di Klimaanlaage im Büroo ist maal vieder fiil tsu kalt) - Il condizionatore in ufficio è di nuovo troppo freddo.
+Ich hab extra einen Pullover mitgebracht deswegen. (Ish hab ekstra ainen Pulover mitgebrakht desveegen) - Ho portato apposta un maglione per questo motivo.
+Können wir das Netzwerk vielleicht mal neu starten? (Können viir das Netsverk fielaikht maal noi shtarten?) - Possiamo forse riavviare la rete?
+Das hab ich vorhin schon probiert, hat leider nichts gebracht. (Das hab ish foorhin shon probiirt, hat laider nikhts gebrakht) - L'ho già provato prima, purtroppo non è servito a niente.
+Unser Aufzug bleibt neuerdings öfter mal stecken. (Unzer Auftsuuk blaipt noierdings öfter maal shteken) - Il nostro ascensore di recente si blocca più spesso.
+Das ist ja richtig gefährlich, das sollten wir melden. (Das ist ya rishtikh gefèrlish, das zolten viir melden) - È davvero pericoloso, dovremmo segnalarlo.
+Die Kaffeemaschine in der Küche zeigt schon wieder einen Fehlercode. (Di Kafeemashiine in der Küshe tsaikt shon vieder ainen Feelerkoode) - La macchina del caffè in cucina mostra di nuovo un codice di errore.
+Ohne Kaffee überlebt hier wirklich niemand. (Oone Kafee überleept hiir virklish niimant) - Senza caffè qui non sopravvive davvero nessuno.
+Habt ihr schon die neue Zugangskarte für die Eingangstür? (Hapt iir shon di noie Tsugangskarte für di Aingangstühr?) - Avete già il nuovo badge d'accesso per la porta d'ingresso?
+Ja, seit letzter Woche funktioniert der alte Chip nicht mehr. (Ya, zait letster Vokhe funktsioniirt der alte Ship nikht meer) - Sì, da settimana scorsa il vecchio chip non funziona più.
+Der Beamer im großen Saal hat schon wieder kein Bild. (Der Biimer im groosen Zaal hat shon vieder kain Bilt) - Il proiettore nella sala grande non ha di nuovo l'immagine.
+Vielleicht liegt es diesmal am HDMI-Kabel. (Fielaikht liikt es diizmaal am Ha-De-Emm-I-Kaabel) - Forse questa volta dipende dal cavo HDMI.
+Sollten wir nicht mal auf Cloud-Speicher umsteigen? (Zolten viir nikht maal auf Klaut-Shpaikher umshtaigen?) - Non dovremmo passare all'archiviazione cloud?
+Das würde vieles wirklich deutlich einfacher machen. (Das vürde fiiles virklish doitlish ainfakher makhen) - Renderebbe davvero molte cose più semplici.
+Das Faxgerät benutzt hier eigentlich noch irgendjemand? (Das Faksgerèt benutst hiir aigentlish nokh irgentyeemant?) - Il fax lo usa ancora qualcuno qui in realtà?
+Ehrlich gesagt glaub ich das schon lange nicht mehr. (Eerlish gezaakt glaub ish das shon lange nikht meer) - Sinceramente non lo credo già da tanto tempo.
+Unsere Bildschirme im Meetingraum sind viel zu klein. (Unzere Bildshirme im Miitingraum zint fiil tsu klain) - I nostri monitor nella sala riunioni sono troppo piccoli.
+Das seh ich genauso, man erkennt kaum was. (Das zee ish genauzoo, man erkent kaum vas) - La vedo allo stesso modo, non si distingue quasi niente.
+Wie oft muss man das System eigentlich updaten? (Vii oft muss man das Züsteem aigentlish apdeeten?) - Ogni quanto bisogna in realtà aggiornare il sistema?
+Am besten regelmäßig, sonst häufen sich die Probleme. (Am besten reegelmèsikh, zonst hoifen zish di Probleeme) - Meglio farlo regolarmente, altrimenti si accumulano i problemi.
+Ich krieg diese Meeting-Software einfach nicht zum Laufen. (Ish kriik diize Miiting-Zoftvèr ainfakh nikht tsum Laufen) - Non riesco proprio a far funzionare questo software per le riunioni.
+Warte, ich schau kurz vorbei und helf dir. (Varte, ish shau kurts foorbai und helf dir) - Aspetta, passo un attimo e ti aiuto.
+Unsere Datenbank ist inzwischen ziemlich langsam geworden. (Unzere Daatenbank ist intsvishen tsiimlish langzaam gevorden) - Il nostro database nel frattempo è diventato piuttosto lento.
+Vielleicht müssen wir mal wieder aufräumen und aufräumen lassen. (Fielaikht müssen viir maal vieder aufroimen und aufroimen lassen) - Forse dobbiamo farla pulire e riordinare di nuovo.
+Habt ihr das neue Ticketsystem für IT-Probleme schon getestet? (Hapt iir das noie Tiketzüsteem für Ai-Tii-Probleeme shon getestet?) - Avete già provato il nuovo sistema di ticket per i problemi IT?
+Ja, das läuft bisher wirklich ziemlich gut. (Ya, das loift bisher virklish tsiimlish guut) - Sì, finora funziona davvero piuttosto bene.
+Der Aktenscanner spinnt heute total, glaub ich. (Der Aktenskaner shpint hoite total, glaub ish) - Lo scanner per documenti oggi va completamente in tilt, credo.
+Ruf am besten gleich den technischen Support an. (Ruuf am besten glaish den tekhnishen Zupoort an) - Chiama subito il supporto tecnico, è meglio.
+Ich hoffe wirklich, die neue Firewall bringt mehr Sicherheit. (Ish hoffe virklish, di noie Faierwaal bringt meer Zisherhait) - Spero davvero che il nuovo firewall porti più sicurezza.
+Das wäre echt dringend nötig nach dem letzten Vorfall. (Das vère ekt dringent nöötikh nakh dem letsten Foorfal) - Sarebbe davvero urgentemente necessario dopo l'ultimo incidente.
+Wir sollten die ganze Technik hier mal generalüberholen. (Viir zolten di gantse Tekhnik hiir maal generaalüberhoolen) - Dovremmo revisionare completamente tutta la tecnologia qui.
 Machen wir eine Pause (MA-khen vir AI-ne PAU-ze) - Facciamo una pausa
 `;
 
