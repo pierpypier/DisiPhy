@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 02</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzionix.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo storia 02: formazione delle prime stelle e galassie -->
+<div id="capitolo-02-stelle-galassie" class="capitolo-storia">
+  <p class="titolo-capitolo">02 - Formazione delle prime stelle e galassie - da 13,6 a 12 miliardi di anni fa</p>
+
+  <p class="titolo-capitolo">La fine dell'epoca oscura</p>
+  <p>Dopo circa 200-400 milioni di anni dal Big Bang, le piccole differenze di densità presenti nel gas primordiale iniziano finalmente a produrre i loro effetti.</p>
+  <p>Nelle zone leggermente più dense la gravità attira sempre più gas, che si addensa e si riscalda progressivamente, formando enormi nubi di idrogeno ed elio.</p>
+  <p>Quando la densità e la temperatura al centro di queste nubi diventano sufficientemente elevate, si innescano le reazioni di fusione nucleare: nascono così le prime stelle dell'universo.</p>
+  <p>Questo momento segna la fine della cosiddetta epoca oscura e l'inizio di quella che gli astronomi chiamano "epoca della reionizzazione".</p>
+
+  <p class="titolo-capitolo">Le stelle di popolazione III</p>
+  <p>Le primissime stelle, chiamate dagli astronomi "stelle di popolazione III", sono molto diverse da quelle che vediamo oggi: enormi, calde e composte quasi esclusivamente da idrogeno ed elio, senza gli elementi più pesanti presenti nelle stelle successive.</p>
+  <p>Proprio per la loro grande massa, queste stelle vivono pochissimo, solo pochi milioni di anni, per poi esplodere in violentissime supernove.</p>
+  <p>Queste esplosioni sono fondamentali per la storia dell'universo: disperdono nello spazio elementi chimici più pesanti come carbonio, ossigeno e ferro, creati nel loro nucleo durante la vita della stella e nell'esplosione finale.</p>
+  <p>Senza queste prime generazioni di stelle e le loro esplosioni, gli elementi necessari per formare pianeti rocciosi e forme di vita non sarebbero mai esistiti.</p>
+
+  <p class="titolo-capitolo">La reionizzazione dell'universo</p>
+  <p>La luce ultravioletta emessa da queste prime stelle è così intensa da riuscire a strappare gli elettroni dagli atomi di idrogeno neutro che riempiono lo spazio circostante, un processo chiamato ionizzazione.</p>
+  <p>Pian piano, con la nascita di sempre più stelle, gran parte del gas dell'universo torna a essere ionizzato, come lo era nei primissimi istanti dopo il Big Bang, anche se ora molto più diluito nello spazio.</p>
+  <p>Questo periodo di trasformazione, durato centinaia di milioni di anni, viene per l'appunto chiamato epoca della reionizzazione.</p>
+
+  <p class="titolo-capitolo">La nascita delle prime galassie</p>
+  <p>Le stelle non si formano isolate, ma tendono ad aggregarsi in strutture più grandi, tenute insieme dalla forza di gravità: nascono così le prime galassie primordiali.</p>
+  <p>Si tratta inizialmente di piccole galassie irregolari, molto diverse dalle grandi galassie a spirale o ellittiche che osserviamo oggi nell'universo vicino a noi.</p>
+  <p>Nel corso di centinaia di milioni di anni queste piccole galassie si scontrano e si fondono ripetutamente tra loro, un processo che porta gradualmente alla formazione di galassie sempre più grandi e strutturate.</p>
+
+  <p class="titolo-capitolo">Ammassi e superammassi di galassie</p>
+  <p>Con il passare del tempo, la gravità continua ad aggregare la materia su scale sempre più grandi: le galassie si raggruppano in ammassi, che a loro volta si organizzano in superammassi.</p>
+  <p>Si viene così a formare quella che gli astronomi chiamano la "ragnatela cosmica", un'enorme rete di filamenti di materia ed enormi vuoti quasi privi di galassie che caratterizza ancora oggi la struttura su grande scala dell'universo.</p>
+  <p>È proprio all'interno di uno di questi filamenti che, molto più tardi, si formerà anche la nostra galassia, la Via Lattea, e al suo interno il Sistema Solare, di cui parleremo nel prossimo capitolo.</p>
+</div>
+<!-- fine capitolo storia 02 -->
+    
+<div id="indice-storia" class="capitolo-storia">
+  <p><a href="story03.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>
