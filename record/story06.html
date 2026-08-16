@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 06</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+
+<!-- capitolo storia 06: era dei dinosauri e estinzione di massa -->
+<div id="capitolo-06-dinosauri-estinzione" class="capitolo-storia">
+  <p class="titolo-capitolo">06 - Era dei dinosauri e estinzione di massa - da 250 a 66 milioni di anni fa</p>
+
+  <p class="titolo-capitolo">Il mondo prima dei dinosauri</p>
+  <p>Circa 250 milioni di anni fa la Terra si stava riprendendo dalla più grande estinzione di massa della sua storia, avvenuta alla fine del periodo Permiano, che aveva eliminato la maggior parte delle specie viventi allora esistenti.</p>
+  <p>In quel periodo tutte le terre emerse del pianeta erano riunite in un unico supercontinente, chiamato Pangea, circondato da un solo grande oceano.</p>
+  <p>Il clima era generalmente caldo e arido nelle zone interne del supercontinente, mentre lungo le coste erano presenti ambienti più umidi e favorevoli alla vita.</p>
+  <p>In questo scenario, ancora libero da grandi competitori, iniziarono a diversificarsi diversi gruppi di rettili, tra cui quello che avrebbe dato origine ai dinosauri.</p>
+
+  <p class="titolo-capitolo">La comparsa dei dinosauri</p>
+  <p>I primi dinosauri comparvero circa 240-230 milioni di anni fa, durante il periodo Triassico, come piccoli rettili bipedi di dimensioni modeste, molto diversi dai giganti che siamo abituati a immaginare.</p>
+  <p>Ciò che distingueva i dinosauri dagli altri rettili era in particolare la struttura delle zampe, posizionate direttamente sotto il corpo invece che ai lati, una caratteristica che permetteva loro movimenti più efficienti e veloci.</p>
+  <p>Nel corso di alcuni milioni di anni, complice anche una nuova estinzione di massa che eliminò molti dei loro concorrenti, i dinosauri iniziarono a diversificarsi e a diffondersi in tutto il pianeta.</p>
+  <p>Durante i periodi Giurassico e Cretaceo, durati complessivamente circa 135 milioni di anni, i dinosauri divennero gli animali dominanti sulla terraferma, in tutte le dimensioni e forme immaginabili, da piccoli predatori agili a enormi erbivori lunghi decine di metri.</p>
+
+  <p class="titolo-capitolo">Un mondo dominato dai rettili</p>
+  <p>Durante l'era dei dinosauri, chiamata Mesozoico, anche i mari e i cieli erano dominati da grandi rettili: negli oceani nuotavano gli ittiosauri e i plesiosauri, mentre nei cieli volavano gli pterosauri.</p>
+  <p>Nel frattempo, Pangea iniziò lentamente a frammentarsi in continenti più piccoli, un processo che portò gradualmente alla configurazione dei continenti che conosciamo oggi, anche se con posizioni ancora molto diverse dalle attuali.</p>
+  <p>Accanto ai dinosauri, in questo periodo, comparvero anche i primi mammiferi, ma si trattava di animali piccoli, spesso non più grandi di un topo, costretti a vivere nell'ombra dei grandi rettili dominanti.</p>
+  <p>Comparvero inoltre in questo periodo le prime piante da fiore, chiamate angiosperme, che si diffusero rapidamente affiancandosi alle piante più antiche come felci e conifere.</p>
+
+  <p class="titolo-capitolo">L'estinzione di massa del Cretaceo</p>
+  <p>Circa 66 milioni di anni fa, un evento catastrofico pose fine all'era dei dinosauri: un asteroide di circa 10 chilometri di diametro colpì la Terra nella zona dell'attuale penisola dello Yucatán, in Messico.</p>
+  <p>L'impatto provocò effetti devastanti su scala globale: incendi diffusi, terremoti, tsunami giganteschi e l'immissione nell'atmosfera di enormi quantità di polvere e detriti che oscurarono il cielo per mesi o anni.</p>
+  <p>Il conseguente crollo delle temperature e il blocco della fotosintesi resero impossibile la sopravvivenza per moltissime specie, sia vegetali che animali, in tutto il pianeta.</p>
+  <p>Questo evento, insieme probabilmente ad altri fattori come un'intensa attività vulcanica già in corso in India, causò l'estinzione di circa il 75% delle specie viventi, compresi tutti i dinosauri non aviani.</p>
+
+  <p class="titolo-capitolo">Dopo la catastrofe</p>
+  <p>Non tutti i discendenti dei dinosauri si estinsero completamente: un ramo di piccoli dinosauri piumati sopravvisse e diede origine agli uccelli, che possiamo quindi considerare, dal punto di vista scientifico, come dinosauri ancora viventi.</p>
+  <p>Anche molti mammiferi sopravvissero a questa estinzione di massa, probabilmente grazie alle loro piccole dimensioni e alle abitudini spesso notturne o sotterranee che li avevano protetti dagli effetti peggiori della catastrofe.</p>
+  <p>Con la scomparsa dei grandi rettili dominanti, questi mammiferi sopravvissuti si trovarono improvvisamente liberi di occupare ambienti e ruoli ecologici rimasti vuoti, dando inizio a una nuova fase di diversificazione che vedremo nel prossimo capitolo.</p>
+</div>
+<!-- fine capitolo storia 06 -->
+    
+<div id="indice-storia" class="capitolo-storia">
+  <p><a href="story07.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 04</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+
+<!-- capitolo storia 04: origine della vita e prime cellule -->
+<div id="capitolo-04-origine-vita" class="capitolo-storia">
+  <p class="titolo-capitolo">04 - Origine della vita e prime cellule - da 4 a 3,5 miliardi di anni fa</p>
+
+  <p class="titolo-capitolo">Una Terra ancora ostile</p>
+  <p>Circa 4 miliardi di anni fa la Terra era un pianeta molto diverso da quello che conosciamo oggi: la superficie si stava appena raffreddando e solidificando dopo il periodo iniziale in cui era quasi interamente fusa.</p>
+  <p>L'atmosfera non conteneva ossigeno come oggi, ma era composta soprattutto da gas come anidride carbonica, azoto, vapore acqueo e piccole quantità di metano e ammoniaca.</p>
+  <p>Il pianeta era inoltre sottoposto a un intenso bombardamento di meteoriti e asteroidi, un periodo che gli scienziati chiamano "grande bombardamento tardivo", che rendeva l'ambiente terrestre ancora molto instabile.</p>
+  <p>Nonostante queste condizioni difficili, proprio in questo periodo così ostile si pensa sia comparsa la vita sulla Terra.</p>
+
+  <p class="titolo-capitolo">Le molecole della vita</p>
+  <p>Perché possa esistere la vita come la conosciamo, sono necessarie particolari molecole capaci di conservare informazioni e di replicarsi, come il DNA e l'RNA, oltre a molecole capaci di svolgere funzioni, come le proteine.</p>
+  <p>Gli scienziati ipotizzano che queste molecole complesse si siano formate a partire da sostanze più semplici, come acqua, metano, ammoniaca e idrogeno, presenti sulla Terra primordiale.</p>
+  <p>Esperimenti di laboratorio, come il celebre esperimento di Miller e Urey degli anni '50, hanno dimostrato che, ricreando condizioni simili a quelle della Terra primitiva, è possibile ottenere naturalmente alcuni mattoni fondamentali della vita, come gli amminoacidi.</p>
+  <p>Resta comunque uno dei grandi misteri della scienza capire esattamente come da queste molecole semplici si sia arrivati a strutture capaci di riprodursi e di evolversi, cioè alla vita vera e propria.</p>
+
+  <p class="titolo-capitolo">Dove è nata la vita</p>
+  <p>Gli scienziati non hanno ancora una risposta definitiva su dove esattamente sia comparsa la vita sulla Terra, ma esistono diverse ipotesi affascinanti.</p>
+  <p>Una delle più accreditate riguarda le sorgenti idrotermali sottomarine, cioè fessure nel fondo oceanico da cui fuoriesce acqua calda ricca di minerali: qui si troverebbero le condizioni di energia e sostanze chimiche adatte a favorire le prime reazioni della vita.</p>
+  <p>Altre ipotesi suggeriscono che la vita possa essere nata in piccole pozze d'acqua sulla terraferma, soggette a cicli di essiccazione e bagnatura che avrebbero favorito la concentrazione e l'unione delle molecole necessarie.</p>
+  <p>Alcuni scienziati ipotizzano perfino che alcuni ingredienti fondamentali per la vita possano essere arrivati dallo spazio, trasportati da meteoriti e comete che bombardavano la giovane Terra.</p>
+
+  <p class="titolo-capitolo">Le prime cellule</p>
+  <p>Le prove più antiche di vita sulla Terra risalgono a circa 3,5-3,8 miliardi di anni fa e sono rappresentate da microrganismi molto semplici, simili ai batteri attuali.</p>
+  <p>Queste prime forme di vita erano cellule procariotiche, cioè cellule semplici prive di un nucleo ben definito, in cui il materiale genetico si trova libero all'interno della cellula.</p>
+  <p>Si trattava di organismi microscopici, invisibili a occhio nudo, capaci però di nutrirsi, crescere e riprodursi, le caratteristiche fondamentali che definiscono un essere vivente.</p>
+  <p>Per centinaia di milioni di anni, questi microrganismi semplici furono le uniche forme di vita presenti sulla Terra.</p>
+
+  <p class="titolo-capitolo">I primi ecosistemi e le stromatoliti</p>
+  <p>Alcune delle testimonianze più importanti di questa vita primordiale sono le stromatoliti, strutture rocciose stratificate formate dall'attività di colonie di microrganismi, in particolare i cianobatteri.</p>
+  <p>I cianobatteri erano organismi capaci di svolgere la fotosintesi, cioè di produrre energia utilizzando la luce del sole, l'acqua e l'anidride carbonica, rilasciando come prodotto di scarto l'ossigeno.</p>
+  <p>Questa capacità si rivelerà fondamentale per la storia futura della Terra: nel corso di centinaia di milioni di anni, l'accumulo di ossigeno prodotto da questi microrganismi trasformerà profondamente la composizione dell'atmosfera terrestre.</p>
+  <p>Queste prime forme di vita, per quanto semplici, gettarono così le basi per tutta l'evoluzione biologica successiva, che porterà nel tempo a organismi sempre più complessi.</p>
+</div>
+<!-- fine capitolo storia 04 -->
+    
+<div id="indice-storia" class="capitolo-storia">
+  <p><a href="story05.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

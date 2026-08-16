@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 07</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+
+<!-- capitolo storia 07: evoluzione dei mammiferi e dei primati -->
+<div id="capitolo-07-mammiferi-primati" class="capitolo-storia">
+  <p class="titolo-capitolo">07 - Evoluzione dei mammiferi e dei primati - da 66 a 6 milioni di anni fa</p>
+
+  <p class="titolo-capitolo">Un mondo improvvisamente libero</p>
+  <p>Dopo l'estinzione di massa che eliminò i dinosauri non aviani, circa 66 milioni di anni fa, i mammiferi sopravvissuti si trovarono in un mondo profondamente cambiato, privo dei grandi predatori e competitori che ne avevano limitato lo sviluppo per oltre 150 milioni di anni.</p>
+  <p>Questo periodo, chiamato Cenozoico, viene spesso definito "l'era dei mammiferi", perché proprio in questa fase questo gruppo di animali si diversificò enormemente, occupando ambienti e ruoli ecologici lasciati liberi.</p>
+  <p>I primi mammiferi di questo periodo erano ancora piccoli e poco specializzati, simili per molti aspetti ai loro antenati vissuti insieme ai dinosauri, ma iniziarono rapidamente a evolversi in forme sempre più varie.</p>
+  <p>Nel giro di pochi milioni di anni, tempo relativamente breve su scala geologica, comparvero già i primi rappresentanti di gruppi importanti come i primati, i carnivori, gli ungulati e i roditori.</p>
+
+  <p class="titolo-capitolo">La comparsa dei primati</p>
+  <p>I primi primati, il gruppo di mammiferi a cui appartengono anche gli esseri umani, comparvero probabilmente già intorno a 65-55 milioni di anni fa, poco dopo l'estinzione dei dinosauri.</p>
+  <p>Questi primi primati erano piccoli animali arboricoli, cioè adattati alla vita sugli alberi, con caratteristiche che si riveleranno fondamentali per l'evoluzione successiva: mani prensili capaci di afferrare i rami, occhi rivolti in avanti per una visione tridimensionale, e un cervello proporzionalmente più sviluppato rispetto ad altri mammiferi.</p>
+  <p>Vivere sugli alberi richiedeva infatti una buona coordinazione tra vista e movimento, oltre alla capacità di valutare correttamente le distanze, caratteristiche che favorirono lo sviluppo di capacità cognitive più raffinate.</p>
+  <p>Nel corso di decine di milioni di anni, i primati si diversificarono in numerosi gruppi diversi, diffondendosi soprattutto nelle regioni tropicali e subtropicali del pianeta.</p>
+
+  <p class="titolo-capitolo">Scimmie antropomorfe</p>
+  <p>Circa 25-20 milioni di anni fa, all'interno del grande gruppo dei primati, comparve un sottogruppo particolare chiamato scimmie antropomorfe, caratterizzato dall'assenza della coda e da una maggiore complessità del comportamento sociale.</p>
+  <p>A questo gruppo appartengono ancora oggi animali come gorilla, scimpanzé, oranghi e gibboni, oltre naturalmente alla linea evolutiva che porterà, molto più tardi, agli esseri umani.</p>
+  <p>Questi animali svilupparono comportamenti sociali via via più complessi, vivendo spesso in gruppi organizzati con relazioni articolate tra i membri, comunicazione tramite vocalizzazioni e gestualità, e in alcuni casi anche un uso rudimentale di oggetti.</p>
+
+  <p class="titolo-capitolo">La separazione tra scimmie e antenati umani</p>
+  <p>Circa 7-6 milioni di anni fa, in Africa, si verificò un evento fondamentale per la nostra storia: la linea evolutiva che avrebbe portato agli scimpanzé attuali si separò da quella che avrebbe portato, molto più avanti, agli esseri umani.</p>
+  <p>Questo momento non fu naturalmente un evento improvviso o netto, ma un lento processo di divergenza genetica e comportamentale tra popolazioni di scimmie antropomorfe africane, favorito probabilmente da cambiamenti climatici e ambientali avvenuti in quel periodo.</p>
+  <p>Il progressivo inaridimento del clima africano portò infatti alla riduzione delle grandi foreste tropicali e all'espansione di ambienti di savana più aperti, spingendo alcune popolazioni di primati ad adattarsi a nuove condizioni di vita.</p>
+
+  <p class="titolo-capitolo">Verso la savana</p>
+  <p>Proprio questo cambiamento ambientale, con la trasformazione di ampie zone dell'Africa orientale da foresta a savana, avrebbe favorito nei nostri antenati lo sviluppo di caratteristiche nuove rispetto alle altre scimmie antropomorfe.</p>
+  <p>In un ambiente più aperto, spostarsi in posizione eretta su due zampe, invece che a quattro zampe come le altre scimmie, offriva diversi vantaggi: permetteva di vedere più lontano al di sopra dell'erba alta, di percorrere lunghe distanze in modo più efficiente dal punto di vista energetico, e di liberare le mani per altri utilizzi.</p>
+  <p>Proprio questa capacità di camminare stabilmente su due zampe, chiamata bipedismo, rappresenterà una delle caratteristiche distintive più importanti degli ominidi, il gruppo a cui apparteniamo, di cui parleremo nel prossimo capitolo.</p>
+</div>
+<!-- fine capitolo storia 07 -->    
+<div id="indice-storia" class="capitolo-storia">
+  <p><a href="story08.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

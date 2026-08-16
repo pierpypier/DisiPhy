@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 05</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+
+<!-- capitolo storia 05: evoluzione della vita complessa ed esplosione cambriana -->
+<div id="capitolo-05-esplosione-cambriana" class="capitolo-storia">
+  <p class="titolo-capitolo">05 - Evoluzione della vita complessa ed esplosione cambriana - da 3,5 miliardi a 540 milioni di anni fa</p>
+
+  <p class="titolo-capitolo">Un lunghissimo periodo di semplicità</p>
+  <p>Per circa 3 miliardi di anni, dopo la comparsa delle prime cellule, la vita sulla Terra rimase piuttosto semplice, rappresentata quasi esclusivamente da microrganismi unicellulari come batteri e altri organismi procarioti.</p>
+  <p>Questo lunghissimo periodo, che occupa la maggior parte della storia della vita sul nostro pianeta, non fu però un tempo di stasi: durante questi miliardi di anni avvennero trasformazioni fondamentali, anche se lente e poco visibili.</p>
+  <p>Una delle più importanti fu il progressivo accumulo di ossigeno nell'atmosfera, prodotto dall'attività fotosintetica dei cianobatteri, che cambiò profondamente la chimica del pianeta.</p>
+  <p>Questo evento, chiamato "grande evento di ossidazione", avvenuto circa 2,4 miliardi di anni fa, fu inizialmente quasi catastrofico per molte forme di vita esistenti, per le quali l'ossigeno era una sostanza tossica.</p>
+
+  <p class="titolo-capitolo">La comparsa delle cellule complesse</p>
+  <p>Circa 2 miliardi di anni fa comparvero le prime cellule eucariotiche, molto più complesse di quelle precedenti perché dotate di un nucleo ben definito che racchiude il materiale genetico.</p>
+  <p>Una teoria molto accreditata, chiamata teoria endosimbiotica, sostiene che alcune strutture interne di queste cellule, come i mitocondri, derivino da batteri più semplici inglobati e poi integrati stabilmente da cellule più grandi.</p>
+  <p>Questa maggiore complessità cellulare aprì la strada a possibilità evolutive del tutto nuove, permettendo nel tempo la comparsa di organismi sempre più articolati.</p>
+  <p>Solo molto più tardi, circa 1 miliardo di anni fa, iniziarono a comparire i primi organismi pluricellulari semplici, formati cioè da più cellule cooperanti tra loro.</p>
+
+  <p class="titolo-capitolo">La biota ediacarana</p>
+  <p>Circa 635-540 milioni di anni fa comparvero i primi organismi pluricellulari complessi e di dimensioni consistenti, testimoniati da fossili ritrovati in diverse parti del mondo e noti come "biota ediacarana".</p>
+  <p>Si trattava di organismi dall'aspetto molto diverso da quelli attuali: forme piatte, simili a foglie, dischi o nastri, spesso prive di organi riconoscibili come bocca, occhi o arti.</p>
+  <p>Molti di questi organismi vivevano immobili sul fondale marino, nutrendosi probabilmente per assorbimento diretto delle sostanze disciolte nell'acqua circostante.</p>
+  <p>La loro relazione con le forme di vita successive resta ancora oggetto di studio per gli scienziati, ma rappresentano comunque un passaggio fondamentale verso la complessità biologica.</p>
+
+  <p class="titolo-capitolo">L'esplosione cambriana</p>
+  <p>Circa 540 milioni di anni fa, all'inizio del periodo geologico chiamato Cambriano, si verificò un evento straordinario nella storia della vita: in un tempo relativamente breve, se paragonato ai tempi geologici, comparve un'enorme varietà di nuove forme di vita.</p>
+  <p>Questo fenomeno, noto come esplosione cambriana, vide la comparsa improvvisa della maggior parte dei grandi gruppi di animali che conosciamo ancora oggi, come artropodi, molluschi e i primi cordati, il gruppo a cui apparteniamo anche noi esseri umani.</p>
+  <p>Per la prima volta compaiono animali dotati di caratteristiche complesse come occhi veri e propri, arti articolati, gusci e conchiglie protettive, e apparati digerenti ben definiti.</p>
+  <p>Le cause di questa rapida diversificazione non sono ancora del tutto chiare, ma probabilmente furono favorite dall'aumento dell'ossigeno disponibile e dallo sviluppo di nuove relazioni ecologiche, come la predazione, che spinsero gli organismi a evolvere nuove difese e strategie.</p>
+
+  <p class="titolo-capitolo">Un mondo ancora acquatico</p>
+  <p>Tutta questa straordinaria diversificazione di forme di vita avveniva esclusivamente negli ambienti marini: la terraferma era ancora un ambiente completamente privo di vita animale e vegetale.</p>
+  <p>Gli oceani del Cambriano ospitavano già ecosistemi complessi, con catene alimentari articolate che comprendevano predatori e prede, in modo non troppo diverso, seppur più semplice, da quello che osserviamo negli oceani attuali.</p>
+  <p>Solo molto più avanti nella storia della Terra la vita inizierà a colonizzare anche gli ambienti terrestri, un passaggio fondamentale che vedremo nei capitoli successivi.</p>
+</div>
+<!-- fine capitolo storia 05 -->
+    
+<div id="indice-storia" class="capitolo-storia">
+  <p><a href="story06.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

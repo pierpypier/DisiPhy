@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 03</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+
+<!-- capitolo storia 03: formazione del sistema solare e della terra -->
+<div id="capitolo-03-sistema-solare-terra" class="capitolo-storia">
+  <p class="titolo-capitolo">03 - Formazione del Sistema Solare e della Terra - 4,5 miliardi di anni fa</p>
+
+  <p class="titolo-capitolo">Una nube di gas e polvere</p>
+  <p>Circa 4,6 miliardi di anni fa, in uno dei bracci a spirale della Via Lattea, esisteva un'enorme nube di gas e polvere, resti delle esplosioni di generazioni di stelle precedenti.</p>
+  <p>Questa nube, chiamata nebulosa solare, era composta soprattutto da idrogeno ed elio, ma conteneva anche elementi più pesanti come carbonio, silicio e ferro, prodotti proprio dalle stelle morte in precedenza.</p>
+  <p>Probabilmente l'onda d'urto di una supernova vicina, cioè l'esplosione di una stella massiccia, perturbò questa nube facendola collassare sotto l'effetto della propria gravità.</p>
+  <p>Con il collasso, la nube iniziò a ruotare sempre più velocemente e ad appiattirsi, assumendo la forma di un disco, un po' come accade a un pattinatore che gira più veloce raccogliendo le braccia.</p>
+
+  <p class="titolo-capitolo">La nascita del Sole</p>
+  <p>Al centro di questo disco rotante, la materia si concentrò sempre di più, aumentando pressione e temperatura fino a innescare le reazioni di fusione nucleare: nacque così il Sole, la nostra stella.</p>
+  <p>Il Sole arrivò a contenere circa il 99% di tutta la massa presente nel disco originario, mentre il restante 1% rimase a orbitargli attorno sotto forma di gas e piccole particelle solide.</p>
+  <p>Questo disco di materiale residuo, chiamato disco protoplanetario, fu il luogo in cui si formarono in seguito tutti i pianeti, i satelliti, gli asteroidi e le comete del Sistema Solare.</p>
+
+  <p class="titolo-capitolo">La formazione dei pianeti</p>
+  <p>All'interno del disco protoplanetario, piccole particelle di polvere iniziarono a scontrarsi e a unirsi tra loro grazie alla forza di gravità, formando corpi sempre più grandi chiamati planetesimi.</p>
+  <p>Nella parte più vicina al Sole, dove le temperature erano troppo elevate perché i gas e i ghiacci potessero restare solidi, si formarono soprattutto planetesimi rocciosi e metallici: da questi nacquero i pianeti interni come Mercurio, Venere, la Terra e Marte.</p>
+  <p>Nella parte più lontana e fredda del disco, invece, potevano condensare anche i ghiacci, e questo permise la formazione di pianeti molto più grandi come Giove, Saturno, Urano e Nettuno, i cosiddetti giganti gassosi e ghiacciati.</p>
+  <p>Questo processo di aggregazione, chiamato accrescimento, richiese complessivamente alcuni milioni di anni per dare forma ai pianeti che oggi conosciamo.</p>
+
+  <p class="titolo-capitolo">La formazione della Terra</p>
+  <p>La Terra si formò circa 4,5 miliardi di anni fa dall'unione progressiva di planetesimi rocciosi e metallici nella zona centrale del Sistema Solare.</p>
+  <p>Negli stadi iniziali della sua formazione, la Terra era un corpo caldissimo e in gran parte fuso, bombardato di continuo da altri corpi rocciosi ancora presenti nel disco protoplanetario.</p>
+  <p>Il calore prodotto dagli impatti e dalla decadenza di elementi radioattivi mantenne a lungo la giovane Terra in uno stato quasi completamente fuso, un oceano di magma incandescente.</p>
+  <p>Proprio a causa di questo stato fuso, i materiali più pesanti come il ferro e il nichel sprofondarono verso il centro del pianeta, mentre quelli più leggeri risalirono in superficie: questo processo, chiamato differenziazione planetaria, diede origine alla struttura a strati della Terra, con un nucleo metallico, un mantello roccioso e una sottile crosta esterna.</p>
+
+  <p class="titolo-capitolo">La nascita della Luna</p>
+  <p>Secondo l'ipotesi oggi più accreditata tra gli scienziati, poco dopo la sua formazione la Terra fu colpita da un corpo celeste delle dimensioni di Marte, chiamato Theia.</p>
+  <p>L'impatto fu talmente violento da scagliare nello spazio un'enorme quantità di materiale roccioso, sia dalla Terra che dal corpo impattante.</p>
+  <p>Questo materiale, orbitando attorno alla Terra, si aggregò progressivamente fino a formare la Luna, il nostro satellite naturale.</p>
+  <p>La presenza della Luna avrà in seguito un ruolo importante per la storia del nostro pianeta, contribuendo a stabilizzare l'inclinazione dell'asse terrestre e quindi il susseguirsi regolare delle stagioni.</p>
+</div>
+<!-- fine capitolo storia 03 -->
+
+    
+<div id="indice-storia" class="capitolo-storia">
+  <p><a href="story04.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>
