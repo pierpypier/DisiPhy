@@ -2052,6 +2052,356 @@ Gli accordi di Monaco del 1938 cercarono di evitare il conflitto cedendo territo
 Le fabbriche convertirono rapidamente la produzione civile in produzione bellica durante entrambi i conflitti. — Storia
 La ricostruzione postbellica in Europa richiese anni di sforzi economici e sociali dopo il 1945. — Storia
 Il ricordo delle due guerre mondiali è oggi mantenuto attraverso musei, monumenti e giornate della memoria. — Storia
+Il Risorgimento fu il movimento politico e culturale che portò all'unificazione dell'Italia nel corso dell'Ottocento. — Storia del Risorgimento
+Il Congresso di Vienna del 1815 ridisegnò la carta politica europea dopo le guerre napoleoniche. — Storia del Risorgimento
+Le società segrete, come la Carboneria, furono tra le prime organizzazioni patriottiche italiane dell'Ottocento. — Storia del Risorgimento
+I moti del 1820-1821 interessarono diversi stati della penisola italiana. — Storia del Risorgimento
+I moti del 1830-1831 si diffusero in vari ducati dell'Italia centrale. — Storia del Risorgimento
+Giuseppe Mazzini fondò la Giovine Italia nel 1831 per promuovere l'unità e la repubblica. — Storia del Risorgimento
+Il 1848 fu un anno di grandi rivolte in tutta Europa, incluso il Regno di Sardegna e altri stati italiani. — Storia del Risorgimento
+Carlo Alberto concesse lo Statuto Albertino nel marzo del 1848. — Storia del Risorgimento
+La prima guerra d'indipendenza italiana si svolse tra il 1848 e il 1849. — Storia del Risorgimento
+La Repubblica Romana del 1849 ebbe vita breve ma un forte valore simbolico per il movimento risorgimentale. — Storia del Risorgimento
+Camillo Benso, conte di Cavour, divenne primo ministro del Regno di Sardegna nel 1852. — Storia del Risorgimento
+Il Regno di Sardegna partecipò alla guerra di Crimea per rafforzare la propria posizione diplomatica in Europa. — Storia del Risorgimento
+Gli accordi di Plombières del 1858 prepararono l'alleanza tra Regno di Sardegna e Francia contro l'Austria. — Storia del Risorgimento
+La seconda guerra d'indipendenza si svolse nel 1859 con l'alleanza franco-piemontese. — Storia del Risorgimento
+La battaglia di Solferino e San Martino, nel 1859, fu una delle più sanguinose del Risorgimento. — Storia del Risorgimento
+L'orrore visto a Solferino spinse Henry Dunant a proporre la fondazione della Croce Rossa. — Storia del Risorgimento
+La Lombardia fu annessa al Regno di Sardegna nel 1859, dopo la seconda guerra d'indipendenza. — Storia del Risorgimento
+Nizza e Savoia furono cedute alla Francia nel 1860, in seguito agli accordi con Napoleone III. — Storia del Risorgimento
+Giuseppe Garibaldi salpò da Quarto con i Mille nel maggio del 1860 diretto in Sicilia. — Storia del Risorgimento
+La spedizione dei Mille portò alla caduta del Regno delle Due Sicilie nel 1860. — Storia del Risorgimento
+Garibaldi incontrò Vittorio Emanuele II a Teano nell'ottobre del 1860, consegnando i territori conquistati. — Storia del Risorgimento
+I plebisciti del 1860 sancirono l'annessione di gran parte dell'Italia centro-meridionale al Regno di Sardegna. — Storia del Risorgimento
+Il Regno d'Italia fu proclamato ufficialmente il 17 marzo 1861. — Storia del Risorgimento
+Vittorio Emanuele II divenne il primo re d'Italia dopo l'unificazione del 1861. — Storia del Risorgimento
+Torino fu la prima capitale del Regno d'Italia, dal 1861 al 1865. — Storia del Risorgimento
+Firenze fu capitale del Regno d'Italia tra il 1865 e il 1871. — Storia del Risorgimento
+Cavour morì nel giugno del 1861, poco dopo la proclamazione del Regno d'Italia. — Storia del Risorgimento
+La terza guerra d'indipendenza, nel 1866, portò all'annessione del Veneto al Regno d'Italia. — Storia del Risorgimento
+Il Veneto fu annesso al Regno d'Italia nel 1866 grazie anche all'alleanza con la Prussia. — Storia del Risorgimento
+La presa di Roma avvenne il 20 settembre 1870, con la breccia di Porta Pia. — Storia del Risorgimento
+Roma divenne capitale del Regno d'Italia nel 1871, dopo la fine del potere temporale dei papi. — Storia del Risorgimento
+Il brigantaggio nel Mezzogiorno fu un fenomeno di resistenza e disordine seguito all'unificazione italiana. — Storia del Risorgimento
+La questione romana rimase irrisolta tra Stato italiano e Santa Sede per diversi decenni dopo il 1870. — Storia del Risorgimento
+Massimo d'Azeglio è ricordato per il suo impegno letterario e politico a favore della causa risorgimentale. — Storia del Risorgimento
+Il tricolore italiano, verde bianco e rosso, fu adottato come bandiera già in epoca napoleonica e poi risorgimentale. — Storia del Risorgimento
+Silvio Pellico raccontò la propria prigionia politica nell'opera Le mie prigioni, pubblicata nel 1832. — Storia del Risorgimento
+La stampa clandestina ebbe un ruolo importante nella diffusione delle idee risorgimentali sotto la censura. — Storia del Risorgimento
+Le cinque giornate di Milano, nel marzo 1848, videro la popolazione insorgere contro il dominio austriaco. — Storia del Risorgimento
+La difesa di Venezia, guidata da Daniele Manin, resistette a lungo durante la prima guerra d'indipendenza. — Storia del Risorgimento
+Molti patrioti risorgimentali vissero l'esilio politico in altri paesi europei durante la loro attività cospirativa. — Storia del Risorgimento
+Il neoguelfismo proponeva un'unità italiana sotto la guida politica del papato. — Storia del Risorgimento
+L'idea federalista, sostenuta da alcuni intellettuali, proponeva un'Italia unita ma organizzata in stati confederati. — Storia del Risorgimento
+Il Regno delle Due Sicilie comprendeva prima dell'unità la Sicilia e gran parte dell'Italia meridionale. — Storia del Risorgimento
+Lo Stato Pontificio governò Roma e parte dell'Italia centrale fino alla presa di Roma del 1870. — Storia del Risorgimento
+La bandiera dei Mille e le camicie rosse divennero simboli riconoscibili della spedizione garibaldina. — Storia del Risorgimento
+L'alfabetizzazione era ancora limitata in Italia al momento dell'unificazione nel 1861. — Storia del Risorgimento
+Le differenze economiche tra nord e sud della penisola erano già marcate al momento dell'unità nazionale. — Storia del Risorgimento
+L'inno di Mameli, composto nel 1847, divenne poi l'inno nazionale della Repubblica Italiana nel Novecento. — Storia del Risorgimento
+Il termine Risorgimento indicava simbolicamente la rinascita politica e culturale della nazione italiana. — Storia del Risorgimento
+L'unificazione italiana fu un processo graduale, compiuto attraverso guerre, diplomazia e plebisciti tra il 1848 e il 1870. — Storia del Risorgimento
+La rivoluzione scientifica del Seicento cambiò profondamente il modo di studiare la natura in Europa. — Storia moderna
+Galileo Galilei perfezionò il telescopio e lo utilizzò per osservazioni astronomiche a partire dal 1609. — Storia moderna
+Eppur si muove è una frase divenuta celebre, attribuita a Galileo dopo l'abiura del 1633. — attribuita a Galileo Galilei
+La guerra dei trent'anni, tra il 1618 e il 1648, coinvolse gran parte dell'Europa centrale. — Storia moderna
+La pace di Vestfalia, nel 1648, ridefinì gli equilibri politici e religiosi europei dopo la guerra dei trent'anni. — Storia moderna
+Cartesio pubblicò il Discorso sul metodo nel 1637, opera fondamentale della filosofia moderna. — Storia moderna
+Cogito ergo sum: penso, dunque sono. — Cartesio
+Isaac Newton formulò la legge di gravitazione universale nella seconda metà del Seicento. — Storia moderna
+Il Barocco fu lo stile artistico dominante in Europa tra il tardo Cinquecento e il Settecento. — Storia moderna
+La monarchia assoluta trovò in Luigi XIV di Francia uno dei suoi esempi più rappresentativi. — Storia moderna
+La reggia di Versailles fu ampliata e trasformata in residenza reale nella seconda metà del Seicento. — Storia moderna
+La rivoluzione inglese del Seicento portò a un progressivo rafforzamento del ruolo del Parlamento. — Storia moderna
+La compagnia olandese delle Indie orientali fu tra le più importanti compagnie commerciali del Seicento. — Storia moderna
+Il Settecento è comunemente definito il secolo dei Lumi, per la centralità della ragione nel pensiero europeo. — Storia moderna
+L'Illuminismo promosse l'uso della ragione critica contro pregiudizi e superstizioni. — Storia moderna
+Voltaire fu una delle figure più influenti dell'Illuminismo francese del Settecento. — Storia moderna
+L'Enciclopedia, curata da Diderot e D'Alembert, raccolse il sapere del tempo in numerosi volumi. — Storia moderna
+Il dispotismo illuminato caratterizzò il governo di alcuni sovrani europei del Settecento, come Maria Teresa d'Austria. — Storia moderna
+La rivoluzione americana portò alla dichiarazione d'indipendenza degli Stati Uniti nel 1776. — Storia moderna
+La rivoluzione francese ebbe inizio nel 1789 con la presa della Bastiglia. — Storia moderna
+La dichiarazione dei diritti dell'uomo e del cittadino fu approvata in Francia nel 1789. — Storia moderna
+Il regno del Terrore, tra il 1793 e il 1794, fu una delle fasi più violente della rivoluzione francese. — Storia moderna
+Napoleone Bonaparte guidò la campagna d'Italia tra il 1796 e il 1797. — Storia moderna
+Napoleone si proclamò imperatore dei francesi nel 1804. — Storia moderna
+Il codice napoleonico, promulgato nel 1804, influenzò a lungo i sistemi giuridici europei. — Storia moderna
+La campagna di Russia del 1812 segnò l'inizio del declino militare di Napoleone. — Storia moderna
+La battaglia di Waterloo, nel 1815, segnò la sconfitta definitiva di Napoleone. — Storia moderna
+Il Congresso di Vienna del 1814-1815 ridisegnò gli equilibri politici europei dopo l'epoca napoleonica. — Storia moderna
+La Restaurazione cercò di ripristinare gli assetti politici precedenti alla rivoluzione francese. — Storia moderna
+L'Italia, dopo il Congresso di Vienna, rimase divisa in numerosi stati sotto diverse influenze straniere. — Storia moderna
+Il Regno Lombardo-Veneto fu istituito sotto il controllo dell'Impero austriaco dopo il 1815. — Storia moderna
+La rivoluzione industriale iniziò in Inghilterra nella seconda metà del Settecento. — Storia moderna
+La macchina a vapore, perfezionata da James Watt, favorì lo sviluppo dell'industria manifatturiera. — Storia moderna
+Le prime ferrovie a vapore per il trasporto pubblico furono inaugurate in Inghilterra nella prima metà dell'Ottocento. — Storia moderna
+Il liberalismo politico ottocentesco chiedeva costituzioni scritte e maggiori libertà civili. — Storia moderna
+Il romanticismo, movimento culturale dell'Ottocento, valorizzava i sentimenti e l'identità nazionale dei popoli. — Storia moderna
+La stampa periodica si diffuse sempre più tra Settecento e Ottocento, favorendo la circolazione delle idee. — Storia moderna
+Il commercio triangolare atlantico caratterizzò gli scambi economici tra Europa, Africa e Americhe in età moderna. — Storia moderna
+La peste del 1656 colpì duramente diverse città italiane, tra cui Napoli. — Storia moderna
+La Repubblica di Venezia mantenne una posizione commerciale rilevante nel Mediterraneo fino al Settecento inoltrato. — Storia moderna
+Il tramonto della Repubblica di Venezia avvenne nel 1797, con l'arrivo delle truppe napoleoniche. — Storia moderna
+Il Regno di Sardegna comprendeva, tra Sette e Ottocento, territori sia sulla terraferma che sull'isola. — Storia moderna
+Le riforme di Pietro Leopoldo in Toscana furono un esempio di dispotismo illuminato applicato in Italia. — Storia moderna
+La scienza chimica compì grandi progressi nel Settecento grazie a studiosi come Antoine Lavoisier. — Storia moderna
+Le accademie scientifiche, come la Royal Society, promossero la ricerca sperimentale già dal Seicento. — Storia moderna
+Il calendario gregoriano, introdotto nel 1582, fu adottato gradualmente nei diversi paesi europei nei secoli successivi. — Storia moderna
+La tratta atlantica degli schiavi raggiunse dimensioni enormi tra il Seicento e l'Ottocento, prima delle progressive abolizioni. — Storia moderna
+Il costituzionalismo ottocentesco si ispirò in parte ai modelli politici nati dalla rivoluzione americana e francese. — Storia moderna
+La borghesia commerciale e industriale acquisì crescente peso politico ed economico tra Sette e Ottocento. — Storia moderna
+Il periodo tra la fine del Rinascimento e il Risorgimento vide l'Europa attraversare guerre, rivoluzioni e profonde trasformazioni sociali. — Storia moderna
+Il periodo Jomon, tra i più antichi del Giappone, è noto per una delle più antiche ceramiche al mondo. — Storia del Giappone antico
+Il periodo Yayoi, iniziato circa nel III secolo a.C., segnò la diffusione della coltivazione del riso in Giappone. — Storia del Giappone antico
+Il periodo Kofun prende il nome dalle grandi tombe a tumulo costruite per i sovrani e i nobili dell'epoca. — Storia del Giappone antico
+Il kofun Daisen, tra i più grandi tumuli funerari del mondo, si trova nell'attuale prefettura di Osaka. — Storia del Giappone antico
+Il buddhismo giunse in Giappone dal continente asiatico intorno al VI secolo d.C. — Storia del Giappone antico
+Il periodo Asuka prende il nome dalla regione dove si concentrò il potere politico giapponese tra VI e VII secolo. — Storia del Giappone antico
+Il principe Shotoku è tradizionalmente ricordato per aver favorito la diffusione del buddhismo in Giappone. — Storia del Giappone antico
+La costituzione in diciassette articoli, attribuita al principe Shotoku, promuoveva l'armonia sociale. — Storia del Giappone antico
+Le riforme Taika, avviate nel 645, riorganizzarono l'amministrazione statale giapponese sul modello cinese. — Storia del Giappone antico
+Nara divenne la prima capitale permanente del Giappone nel 710. — Storia del Giappone antico
+Il periodo Nara, dal 710 al 794, vide una forte influenza della cultura cinese sulla corte giapponese. — Storia del Giappone antico
+Il Kojiki, compilato nel 712, è tra le più antiche cronache scritte della storia e della mitologia giapponese. — Storia del Giappone antico
+Il Nihon Shoki, completato nel 720, rappresenta un'altra fondamentale cronaca storica del Giappone antico. — Storia del Giappone antico
+Il tempio Todai-ji di Nara custodisce una grande statua in bronzo del Buddha, completata nell'VIII secolo. — Storia del Giappone antico
+La capitale fu trasferita a Heian, l'odierna Kyoto, nel 794, dando inizio al periodo Heian. — Storia del Giappone antico
+Il periodo Heian, dal 794 al 1185, fu un'epoca di grande fioritura culturale e letteraria alla corte imperiale. — Storia del Giappone antico
+La Genji Monogatari, attribuita a Murasaki Shikibu, è considerata tra i primi romanzi della letteratura mondiale. — Storia del Giappone antico
+La scrittura kana si sviluppò in Giappone durante il periodo Heian, semplificando l'uso dei caratteri cinesi. — Storia del Giappone antico
+La famiglia Fujiwara esercitò una forte influenza politica sulla corte imperiale durante il periodo Heian. — Storia del Giappone antico
+Il sistema di reggenza sekkan permise ai Fujiwara di controllare la successione imperiale per lungo tempo. — Storia del Giappone antico
+La classe dei samurai iniziò a formarsi come ceto guerriero già a partire dal periodo Heian. — Storia del Giappone antico
+Il santuario di Ise è tra i luoghi sacri più antichi e importanti dello shintoismo giapponese. — Storia del Giappone antico
+Lo shintoismo, religione autoctona del Giappone, coesistette e si integrò progressivamente con il buddhismo importato. — Storia del Giappone antico
+Il clan Taira e il clan Minamoto si contesero il potere politico e militare nella tarda epoca Heian. — Storia del Giappone antico
+La guerra Genpei, tra Taira e Minamoto, si concluse nel 1185 con la vittoria dei Minamoto. — Storia del Giappone antico
+Minamoto no Yoritomo fondò lo shogunato di Kamakura nel 1192, segnando l'inizio dell'epoca feudale. — Storia del Giappone antico
+Lo shogunato di Kamakura spostò il centro effettivo del potere politico lontano dalla corte imperiale di Kyoto. — Storia del Giappone antico
+L'imperatore giapponese mantenne un ruolo prevalentemente simbolico e religioso durante gran parte dell'epoca feudale. — Storia del Giappone antico
+Il codice Ritsuryo definì l'organizzazione amministrativa e legale del Giappone ispirandosi ai modelli cinesi. — Storia del Giappone antico
+La città di Nara fu costruita seguendo il modello urbanistico della capitale cinese Chang'an. — Storia del Giappone antico
+Le missioni giapponesi in Cina, come quelle degli inviati Kentoshi, favorirono lo scambio culturale tra i due paesi. — Storia del Giappone antico
+La ceramica Haniwa, tipica del periodo Kofun, veniva posta attorno alle tombe a tumulo con funzione rituale. — Storia del Giappone antico
+Il calendario e la scrittura cinesi furono adottati e adattati progressivamente dalla cultura giapponese antica. — Storia del Giappone antico
+La poesia waka fu una forma letteraria molto apprezzata alla corte imperiale del periodo Heian. — Storia del Giappone antico
+L'antologia poetica Man'yoshu, compilata nell'VIII secolo, raccoglie migliaia di componimenti giapponesi antichi. — Storia del Giappone antico
+Il monaco Kukai fondò la scuola buddhista Shingon dopo un periodo di studio in Cina agli inizi del IX secolo. — Storia del Giappone antico
+Il monaco Saicho fondò la scuola buddhista Tendai sul monte Hiei nel IX secolo. — Storia del Giappone antico
+Le case aristocratiche del periodo Heian vivevano secondo rigide regole di etichetta e cerimoniale di corte. — Storia del Giappone antico
+La leggenda narra che la dea Amaterasu sia la progenitrice mitica della linea imperiale giapponese. — Mitologia giapponese
+Il termine samurai deriva da un verbo giapponese che significa originariamente servire una persona di rango elevato. — Storia del Giappone antico
+L'arte della calligrafia giapponese si sviluppò a partire dai modelli calligrafici cinesi importati nei secoli precedenti. — Storia del Giappone antico
+Le pratiche agricole legate alla coltivazione del riso influenzarono profondamente l'organizzazione sociale del Giappone antico. — Storia del Giappone antico
+Il sistema delle province, con governatori nominati dalla corte, fu introdotto per amministrare il territorio giapponese antico. — Storia del Giappone antico
+Le isole giapponesi furono abitate fin dal periodo preistorico da popolazioni di cacciatori e raccoglitori. — Storia del Giappone antico
+Il commercio con la penisola coreana favorì la diffusione di tecnologie e conoscenze nel Giappone antico. — Storia del Giappone antico
+La costruzione dei kofun richiese un notevole impiego di manodopera organizzata sotto l'autorità dei capi locali. — Storia del Giappone antico
+La corte imperiale di Heian sviluppò un raffinato sistema di gerarchie sociali e titoli nobiliari. — Storia del Giappone antico
+Le arti marziali giapponesi affondano le proprie radici nelle pratiche guerriere sviluppate durante l'epoca feudale antica. — Storia del Giappone antico
+Il Giappone antico non fu mai conquistato stabilmente da potenze straniere, mantenendo una propria continuità dinastica. — Storia del Giappone antico
+Il passaggio dal periodo Heian all'epoca feudale segnò la transizione dal governo di corte al governo militare in Giappone. — Storia del Giappone antico
+La civiltà sumerica, tra le più antiche del mondo, si sviluppò in Mesopotamia a partire dal IV millennio a.C. — Storia antica dell'Eurasia
+La scrittura cuneiforme, inventata dai Sumeri, è tra le più antiche forme di scrittura conosciute. — Storia antica dell'Eurasia
+Il codice di Hammurabi, redatto in Babilonia nel XVIII secolo a.C., è uno dei più antichi codici legali giunti fino a noi. — Storia antica dell'Eurasia
+L'antico Egitto si sviluppò lungo la valle del Nilo a partire dal IV millennio a.C. — Storia antica dell'Eurasia
+Le grandi piramidi di Giza furono costruite come tombe monumentali per i faraoni dell'Antico Regno egizio. — Storia antica dell'Eurasia
+La scrittura geroglifica egizia fu decifrata nell'Ottocento grazie alla stele di Rosetta. — Storia antica dell'Eurasia
+La civiltà della valle dell'Indo fiorì tra il III e il II millennio a.C. nell'attuale Pakistan e India nord-occidentale. — Storia antica dell'Eurasia
+Le città di Mohenjo-daro e Harappa mostrano un sofisticato sistema urbanistico e fognario già in età antica. — Storia antica dell'Eurasia
+Gli Ittiti, popolazione dell'Anatolia, furono tra i primi a impiegare su larga scala il ferro nella metallurgia. — Storia antica dell'Eurasia
+I Fenici svilupparono un alfabeto che influenzò numerosi sistemi di scrittura successivi, incluso quello greco. — Storia antica dell'Eurasia
+I Fenici furono abili navigatori e commercianti, fondando colonie in tutto il Mediterraneo. — Storia antica dell'Eurasia
+La civiltà minoica, sviluppatasi a Creta, è considerata tra le prime civiltà complesse dell'Europa antica. — Storia antica dell'Eurasia
+Il palazzo di Cnosso, a Creta, testimonia la ricchezza architettonica della civiltà minoica. — Storia antica dell'Eurasia
+La civiltà micenea si sviluppò in Grecia continentale tra il XVI e il XII secolo a.C. — Storia antica dell'Eurasia
+Il lineare B, usato dai micenei, rappresenta una delle più antiche forme di scrittura greca conosciute. — Storia antica dell'Eurasia
+L'antica Grecia era organizzata in poleis, città-stato indipendenti con proprie leggi e istituzioni. — Storia antica dell'Eurasia
+Atene sviluppò nel V secolo a.C. una delle prime forme di democrazia diretta della storia. — Storia antica dell'Eurasia
+Sparta era una polis greca organizzata attorno a un rigido addestramento militare dei suoi cittadini. — Storia antica dell'Eurasia
+I giochi olimpici antichi si svolgevano a Olimpia in onore del dio Zeus fin dall'VIII secolo a.C. — Storia antica dell'Eurasia
+Alessandro Magno estese il proprio impero dalla Grecia fino all'India nel IV secolo a.C. — Storia antica dell'Eurasia
+L'impero persiano achemenide, fondato da Ciro il Grande, fu tra i più vasti del mondo antico. — Storia antica dell'Eurasia
+Il sistema stradale persiano, come la via Regia, collegava le diverse province dell'impero achemenide. — Storia antica dell'Eurasia
+Zoroastro fu una figura religiosa fondamentale per lo sviluppo dello zoroastrismo in area persiana. — Storia antica dell'Eurasia
+La dinastia Shang, in Cina, è la prima per cui esistono fonti scritte dirette, risalenti al II millennio a.C. — Storia antica dell'Eurasia
+La scrittura cinese antica si sviluppò già in forma di caratteri incisi su ossa oracolari durante la dinastia Shang. — Storia antica dell'Eurasia
+Confucio, vissuto nel VI-V secolo a.C., influenzò profondamente il pensiero etico e politico cinese. — Storia antica dell'Eurasia
+La grande muraglia cinese iniziò a essere costruita in forme antiche già a partire da vari regni prima dell'unificazione. — Storia antica dell'Eurasia
+La dinastia Qin unificò la Cina nel 221 a.C. sotto un unico governo centralizzato. — Storia antica dell'Eurasia
+L'esercito di terracotta, scoperto nel XX secolo, fu realizzato per accompagnare la tomba del primo imperatore Qin. — Storia antica dell'Eurasia
+La via della seta collegava la Cina all'area mediterranea attraverso una rete di rotte commerciali terrestri. — Storia antica dell'Eurasia
+Le popolazioni nomadi delle steppe eurasiatiche svilupparono tecniche avanzate di allevamento e cavalleria fin dall'antichità. — Storia antica dell'Eurasia
+Gli Sciti, popolazione delle steppe, erano noti per la loro abilità nella cavalleria e nel tiro con l'arco. — Storia antica dell'Eurasia
+La civiltà babilonese sviluppò conoscenze astronomiche avanzate, utili anche per il calendario e la matematica. — Storia antica dell'Eurasia
+Il sistema numerico sessagesimale babilonese è ancora oggi visibile nella suddivisione di ore e minuti. — Storia antica dell'Eurasia
+L'impero assiro, con capitale Ninive, fu una delle potenze militari più temute del vicino oriente antico. — Storia antica dell'Eurasia
+La biblioteca di Ninive, voluta dal re Assurbanipal, conservava migliaia di tavolette cuneiformi. — Storia antica dell'Eurasia
+Il regno di Israele e Giuda si sviluppò nel Levante durante il I millennio a.C. — Storia antica dell'Eurasia
+La civiltà urartea si sviluppò nell'area dell'attuale Armenia tra il IX e il VI secolo a.C. — Storia antica dell'Eurasia
+Il buddhismo nacque in India nel VI secolo a.C. a partire dall'insegnamento di Siddharta Gautama. — Storia antica dell'Eurasia
+L'induismo affonda le proprie radici in testi antichissimi come i Veda, composti in un arco di molti secoli. — Storia antica dell'Eurasia
+La dinastia Maurya unificò gran parte del subcontinente indiano nel IV-III secolo a.C. — Storia antica dell'Eurasia
+L'imperatore Ashoka, della dinastia Maurya, promosse la diffusione del buddhismo dopo essersi convertito. — Storia antica dell'Eurasia
+Le città greche fondarono numerose colonie lungo le coste del Mediterraneo e del Mar Nero in età arcaica. — Storia antica dell'Eurasia
+La filosofia greca antica pose le basi per gran parte del pensiero occidentale successivo. — Storia antica dell'Eurasia
+Erodoto, storico greco del V secolo a.C., è spesso considerato tra i padri della storiografia occidentale. — Storia antica dell'Eurasia
+La battaglia di Maratona, nel 490 a.C., vide gli ateniesi respingere l'invasione persiana in Grecia. — Storia antica dell'Eurasia
+La cultura urnfield e altre culture dell'età del bronzo europea precedettero la formazione delle civiltà classiche mediterranee. — Storia antica dell'Eurasia
+Gli antichi commerci di metalli, come stagno e rame, collegavano regioni lontane dell'Eurasia già nell'età del bronzo. — Storia antica dell'Eurasia
+La scrittura alfabetica si diffuse gradualmente in tutta l'area mediterranea a partire dal modello fenicio. — Storia antica dell'Eurasia
+Le grandi civiltà dell'Eurasia antica, pur distanti tra loro, furono collegate da reti di scambio commerciale e culturale. — Storia antica dell'Eurasia
+Gli Olmechi sono considerati una delle prime civiltà complesse della Mesoamerica, sviluppatasi a partire dal II millennio a.C. — Storia antica delle Americhe
+Le teste colossali olmeche, scolpite in pietra basaltica, restano tra le testimonianze più note di questa civiltà. — Storia antica delle Americhe
+La civiltà maya si sviluppò in un'area che comprende oggi Messico, Guatemala, Belize e parte dell'Honduras. — Storia antica delle Americhe
+I maya svilupparono un sistema di scrittura geroglifica complesso, in parte decifrato solo nel Novecento. — Storia antica delle Americhe
+Il calendario maya comprendeva diversi sistemi di computo del tempo, tra cui il celebre Lungo Computo. — Storia antica delle Americhe
+Le città maya di Tikal e Copán furono importanti centri politici e religiosi nel periodo classico. — Storia antica delle Americhe
+I maya svilupparono conoscenze matematiche avanzate, incluso l'uso del concetto di zero. — Storia antica delle Americhe
+Le piramidi a gradoni maya avevano funzione principalmente religiosa e cerimoniale. — Storia antica delle Americhe
+Il declino delle grandi città maya del periodo classico avvenne gradualmente tra l'VIII e il X secolo d.C. — Storia antica delle Americhe
+La civiltà zapoteca si sviluppò nella valle di Oaxaca, con il centro cerimoniale di Monte Albán. — Storia antica delle Americhe
+Teotihuacan fu una delle più grandi città dell'America precolombiana, con migliaia di abitanti nel suo periodo di massimo splendore. — Storia antica delle Americhe
+La piramide del Sole a Teotihuacan è tra le strutture più imponenti dell'antica Mesoamerica. — Storia antica delle Americhe
+Gli aztechi fondarono la città di Tenochtitlan su un'isola del lago Texcoco nel XIV secolo. — Storia antica delle Americhe
+L'impero azteco si estese su gran parte del Messico centrale prima dell'arrivo degli spagnoli. — Storia antica delle Americhe
+Il sistema di chinampe, isole artificiali coltivabili, permetteva agli aztechi di coltivare sul lago Texcoco. — Storia antica delle Americhe
+Il calendario azteco, la pietra del sole, è oggi uno dei reperti più noti di questa civiltà. — Storia antica delle Americhe
+La lingua nahuatl era parlata dagli aztechi ed è ancora oggi utilizzata da comunità indigene in Messico. — Storia antica delle Americhe
+L'impero inca ebbe come capitale la città di Cusco, situata sulle Ande peruviane. — Storia antica delle Americhe
+Il Machu Picchu, situato in Perù, è uno dei siti archeologici incaici meglio conservati. — Storia antica delle Americhe
+Gli inca svilupparono una vasta rete stradale di montagna, il Qhapaq Ñan, per collegare il proprio impero. — Storia antica delle Americhe
+Gli inca utilizzavano i quipu, cordicelle annodate, per registrare informazioni numeriche e amministrative. — Storia antica delle Americhe
+L'impero inca, il Tahuantinsuyu, era diviso in quattro grandi regioni amministrative. — Storia antica delle Americhe
+Gli inca praticavano tecniche agricole avanzate, come i terrazzamenti sui pendii montani. — Storia antica delle Americhe
+La civiltà nazca, in Perù, è nota per le celebri geoglifi tracciati sul terreno desertico. — Storia antica delle Americhe
+Le linee di Nazca, visibili chiaramente solo dall'alto, raffigurano animali e forme geometriche. — Storia antica delle Americhe
+La cultura moche, sulla costa settentrionale del Perù, produsse ceramiche raffinate con decorazioni figurative. — Storia antica delle Americhe
+Le piramidi in mattoni di adobe, come quelle moche, sono tra le costruzioni monumentali dell'antico Perù. — Storia antica delle Americhe
+La civiltà chimú, successiva ai moche, ebbe come capitale la città di Chan Chan, costruita in fango essiccato. — Storia antica delle Americhe
+La cultura wari si sviluppò nelle Ande centrali prima dell'ascesa dell'impero inca. — Storia antica delle Americhe
+La cultura tiwanaku, nell'area del lago Titicaca, fu un importante centro politico e religioso andino. — Storia antica delle Americhe
+I costruttori di tumuli del Nord America eressero grandi strutture di terra per scopi rituali e funerari. — Storia antica delle Americhe
+Cahokia, nell'attuale Illinois, fu uno dei più grandi insediamenti precolombiani a nord del Messico. — Storia antica delle Americhe
+La cultura Hopewell, nel Nord America, sviluppò reti di scambio commerciale su lunghe distanze. — Storia antica delle Americhe
+I popoli ancestrali Pueblo, nel sud-ovest degli Stati Uniti, costruirono abitazioni in pietra incastonate nelle pareti rocciose. — Storia antica delle Americhe
+Il sito di Chaco Canyon, nel Nuovo Messico, mostra una sofisticata pianificazione architettonica e astronomica. — Storia antica delle Americhe
+Gli antichi popoli delle Americhe svilupparono in modo indipendente l'agricoltura del mais, alimento base per molte civiltà. — Storia antica delle Americhe
+La coltivazione della patata ebbe origine nelle regioni andine dell'America del Sud in epoca precolombiana. — Storia antica delle Americhe
+Il gioco della palla mesoamericano aveva un forte significato rituale oltre che sportivo per maya e aztechi. — Storia antica delle Americhe
+I sacrifici rituali erano parte delle pratiche religiose di diverse civiltà mesoamericane precolombiane. — Storia antica delle Americhe
+Gli aztechi consideravano Tenochtitlan il centro simbolico dell'universo secondo la propria cosmologia. — Storia antica delle Americhe
+I maya osservavano con attenzione i fenomeni astronomici, integrandoli nei propri calendari e nella religione. — Storia antica delle Americhe
+La metallurgia dell'oro e dell'argento raggiunse notevole raffinatezza tra le civiltà andine precolombiane. — Storia antica delle Americhe
+Le civiltà mesoamericane utilizzavano l'ossidiana per fabbricare strumenti da taglio e armi. — Storia antica delle Americhe
+Il commercio a lunga distanza collegava diverse regioni delle Americhe precolombiane ben prima dell'arrivo degli europei. — Storia antica delle Americhe
+La città di Palenque, tra i siti maya meglio conservati, conserva iscrizioni geroglifiche di grande importanza storica. — Storia antica delle Americhe
+Gli inca costruivano edifici in pietra con tecniche di incastro estremamente precise, senza uso di malta. — Storia antica delle Americhe
+La religione delle civiltà mesoamericane era politeista, con divinità legate a fenomeni naturali e cicli agricoli. — Storia antica delle Americhe
+L'arrivo degli spagnoli nel XVI secolo portò rapidamente al crollo degli imperi azteco e inca. — Storia antica delle Americhe
+Hernán Cortés guidò la spedizione che portò alla caduta di Tenochtitlan nel 1521. — Storia antica delle Americhe
+Francisco Pizarro guidò la spedizione che portò alla caduta dell'impero inca negli anni Trenta del Cinquecento. — Storia antica delle Americhe
+I popoli scandinavi dell'età del ferro precedettero di secoli l'epoca vichinga vera e propria. — Storia dei paesi nordici
+L'epoca vichinga è convenzionalmente fatta iniziare nel 793 con il raid al monastero di Lindisfarne. — Storia dei paesi nordici
+I vichinghi provenivano principalmente dalle attuali Norvegia, Svezia e Danimarca. — Storia dei paesi nordici
+Le navi drakkar vichinghe erano progettate per navigare sia in mare aperto sia lungo i fiumi interni. — Storia dei paesi nordici
+I vichinghi svilupparono ampie reti commerciali che raggiungevano l'Europa orientale e il mondo islamico. — Storia dei paesi nordici
+L'alfabeto runico fu usato dai popoli germanici del nord Europa per secoli, prima della diffusione della scrittura latina. — Storia dei paesi nordici
+I vichinghi fondarono insediamenti in Islanda a partire dal IX secolo. — Storia dei paesi nordici
+Erik il Rosso fondò le prime colonie norrene in Groenlandia alla fine del X secolo. — Storia dei paesi nordici
+Leif Erikson, figlio di Erik il Rosso, raggiunse le coste del Nord America intorno all'anno 1000. — Storia dei paesi nordici
+L'Althing islandese, fondato nel 930, è considerato una delle più antiche assemblee legislative del mondo. — Storia dei paesi nordici
+I vichinghi danesi si stabilirono in ampie zone dell'Inghilterra, dando origine al cosiddetto Danelaw. — Storia dei paesi nordici
+Canuto il Grande governò contemporaneamente Danimarca, Inghilterra e Norvegia nell'XI secolo. — Storia dei paesi nordici
+La cristianizzazione della Scandinavia avvenne gradualmente tra il X e il XII secolo. — Storia dei paesi nordici
+Olaf II di Norvegia, poi venerato come santo, favorì la diffusione del cristianesimo nel regno norvegese. — Storia dei paesi nordici
+Il regno di Svezia iniziò a consolidarsi come entità politica unitaria a partire dal medioevo centrale. — Storia dei paesi nordici
+La Lega Anseatica influenzò fortemente i commerci delle città portuali del Baltico e del Mare del Nord nel tardo medioevo. — Storia dei paesi nordici
+Bergen, in Norvegia, fu un importante centro commerciale anseatico nel medioevo. — Storia dei paesi nordici
+L'unione di Kalmar, dal 1397, riunì sotto un'unica corona Danimarca, Norvegia e Svezia. — Storia dei paesi nordici
+La Svezia uscì definitivamente dall'unione di Kalmar nel corso del XVI secolo. — Storia dei paesi nordici
+Gustavo Vasa divenne re di Svezia nel 1523, avviando una nuova dinastia nazionale. — Storia dei paesi nordici
+La riforma protestante si diffuse nei paesi nordici nel corso del Cinquecento, sostituendo il cattolicesimo come religione di stato. — Storia dei paesi nordici
+La Danimarca e la Norvegia rimasero unite sotto un'unica corona per diversi secoli dopo la fine dell'unione di Kalmar. — Storia dei paesi nordici
+La Svezia divenne una delle grandi potenze europee nel corso del Seicento, durante l'epoca definita grande potenza. — Storia dei paesi nordici
+La guerra dei trent'anni vide la Svezia intervenire attivamente sotto la guida di Gustavo Adolfo. — Storia dei paesi nordici
+La grande guerra del nord, tra il 1700 e il 1721, segnò il declino della potenza svedese in Europa. — Storia dei paesi nordici
+La Finlandia fu a lungo parte del regno di Svezia, prima di passare sotto il controllo russo nel 1809. — Storia dei paesi nordici
+Il Granducato di Finlandia mantenne una certa autonomia amministrativa all'interno dell'impero russo nell'Ottocento. — Storia dei paesi nordici
+La Norvegia fu ceduta alla Svezia nel 1814, dopo essere stata a lungo unita alla Danimarca. — Storia dei paesi nordici
+L'unione tra Svezia e Norvegia si sciolse pacificamente nel 1905, con la piena indipendenza norvegese. — Storia dei paesi nordici
+L'Islanda ottenne un proprio parlamento autonomo nel corso dell'Ottocento, pur restando legata alla Danimarca. — Storia dei paesi nordici
+L'Islanda divenne pienamente indipendente come repubblica nel 1944. — Storia dei paesi nordici
+La Finlandia dichiarò la propria indipendenza dalla Russia nel dicembre del 1917. — Storia dei paesi nordici
+Le saghe islandesi, scritte a partire dal medioevo, raccontano vicende storiche e leggendarie dei popoli nordici. — Storia dei paesi nordici
+La mitologia norrena comprendeva divinità come Odino, Thor e Freya, venerate prima della cristianizzazione. — Storia dei paesi nordici
+Il commercio delle pellicce e dell'ambra fu una risorsa economica importante per le regioni nordiche fin dall'antichità. — Storia dei paesi nordici
+Le rune venivano incise su pietre commemorative, spesso in memoria di viaggi, battaglie o defunti. — Storia dei paesi nordici
+La città di Roskilde fu per lungo tempo un importante centro politico e religioso del regno di Danimarca. — Storia dei paesi nordici
+Il castello di Kalmar, in Svezia, fu teatro della firma dell'omonima unione medievale scandinava. — Storia dei paesi nordici
+La pesca e la navigazione furono da sempre attività centrali per l'economia delle popolazioni costiere nordiche. — Storia dei paesi nordici
+La colonizzazione norrena della Groenlandia si estinse gradualmente nel corso del tardo medioevo. — Storia dei paesi nordici
+Le lingue scandinave moderne derivano dall'antico norreno parlato dalle popolazioni vichinghe. — Storia dei paesi nordici
+La Danimarca fu tra i primi paesi europei ad adottare una costituzione moderna, nel 1849. — Storia dei paesi nordici
+Il regno di Norvegia riacquistò una propria monarchia indipendente nel 1905, dopo secoli di unioni con Danimarca e Svezia. — Storia dei paesi nordici
+Le popolazioni sami, native delle regioni artiche scandinave, hanno una storia e una cultura distinte da quella norrena. — Storia dei paesi nordici
+Le migrazioni vichinghe raggiunsero anche le coste dell'attuale Russia settentrionale, contribuendo alla nascita della Rus di Kiev. — Storia dei paesi nordici
+I mercanti variaghi, di origine scandinava, ebbero un ruolo importante nei primi scambi commerciali dell'Europa orientale medievale. — Storia dei paesi nordici
+La Svezia mantenne una politica di neutralità in numerosi conflitti europei a partire dal XIX secolo. — Storia dei paesi nordici
+La rivoluzione industriale raggiunse i paesi nordici più tardi rispetto all'Europa occidentale, nel corso dell'Ottocento. — Storia dei paesi nordici
+L'emigrazione verso il Nord America coinvolse un numero significativo di abitanti dei paesi nordici tra Otto e Novecento. — Storia dei paesi nordici
+La storia dei paesi nordici è segnata da un'alternanza di unioni, separazioni e progressiva costruzione di identità nazionali autonome. — Storia dei paesi nordici
+So di non sapere. — Socrate
+Una vita senza esame non è degna di essere vissuta. — Socrate
+Conosci te stesso. — attribuita a Socrate
+L'uomo è per natura un animale politico. — Aristotele
+La virtù sta nel giusto mezzo tra due estremi. — Aristotele
+Tutti gli uomini per natura desiderano conoscere. — Aristotele
+Il tutto è più della somma delle sue parti. — Aristotele
+La filosofia nasce dalla meraviglia. — attribuita a Platone
+Il coraggio è sapere ciò che non si deve temere. — attribuita a Platone
+Cerco un uomo. — attribuita a Diogene di Sinope
+Togliti dal sole. — attribuita a Diogene di Sinope
+La morte non è nulla per noi. — Epicuro
+Il piacere è principio e fine di una vita felice. — Epicuro
+Sopporta e astieniti. — Epitteto
+Non sono le cose a turbare gli uomini, ma le opinioni che essi hanno delle cose. — Epitteto
+Non è povero chi ha poco, ma chi desidera di più. — Seneca
+Non è che abbiamo poco tempo, ma ne perdiamo molto. — Seneca
+Chi non sa in quale porto vuole approdare, nessun vento gli è favorevole. — Seneca
+Il miglior modo di vendicarsi è non essere come chi ci ha offeso. — Marco Aurelio
+La vita di ognuno è ciò che i suoi pensieri ne fanno. — attribuita a Marco Aurelio
+Vivere est cogitare: vivere è pensare. — Cicerone
+Nessuno è così vecchio da non pensare di poter vivere ancora un anno. — Cicerone
+Non basta avere un buon ingegno, l'essenziale è applicarlo bene. — Cartesio
+Dubito, dunque penso, dunque sono. — attribuita a Cartesio
+La libertà è la comprensione della necessità. — attribuita a Spinoza
+Non ridere, non compiangere, non detestare, ma comprendere. — Spinoza
+Sapere è potere. — Francesco Bacone
+La natura, per essere comandata, deve essere obbedita. — Francesco Bacone
+La vita nello stato di natura è solitaria, povera, sgradevole, brutale e breve. — Thomas Hobbes
+Nulla è nell'intelletto che prima non sia stato nei sensi. — attribuita a John Locke
+La mente alla nascita è come una tavola rasa. — attribuita a John Locke
+La ragione è, e deve essere, schiava delle passioni. — David Hume
+L'abitudine è la grande guida della vita umana. — David Hume
+L'uomo è nato libero, e ovunque è in catene. — Jean-Jacques Rousseau
+Agisci in modo che la massima della tua volontà possa sempre valere come principio di una legislazione universale. — Immanuel Kant
+Abbi il coraggio di servirti della tua propria intelligenza. — Immanuel Kant
+Due cose riempiono l'animo di ammirazione e venerazione: il cielo stellato sopra di me e la legge morale dentro di me. — Immanuel Kant
+Ciò che è razionale è reale, e ciò che è reale è razionale. — Georg Wilhelm Friedrich Hegel
+La nottola di Minerva spicca il volo sul far del crepuscolo. — Georg Wilhelm Friedrich Hegel
+Il mondo è la mia rappresentazione. — Arthur Schopenhauer
+Il talento colpisce un bersaglio che nessun altro può colpire, il genio colpisce un bersaglio che nessun altro può vedere. — Arthur Schopenhauer
+Ciò che non uccide rende più forti. — Friedrich Nietzsche
+Diventa ciò che sei. — Friedrich Nietzsche
+Chi ha un perché per vivere può sopportare quasi ogni come. — attribuita a Friedrich Nietzsche
+L'angoscia è la vertigine della libertà. — Søren Kierkegaard
+La vita si comprende solo guardando indietro, ma va vissuta guardando avanti. — attribuita a Søren Kierkegaard
+Il cuore ha le sue ragioni che la ragione non conosce. — Blaise Pascal
+L'uomo è soltanto una canna, la più debole della natura, ma è una canna pensante. — Blaise Pascal
+Non importa quanto vai piano, l'importante è non fermarsi mai. — attribuita a Confucio
+Chi impara senza pensare è perduto, chi pensa senza imparare è in pericolo. — Confucio
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
