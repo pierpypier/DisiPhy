@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 01</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzionix.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo storia 01: il big bang -->
+<div id="capitolo-01-big-bang" class="capitolo-storia">
+  <p class="titolo-capitolo">01 - Il Big Bang - 13,8 miliardi di anni fa</p>
+
+  <p class="titolo-capitolo">L'inizio di tutto</p>
+  <p>Circa 13,8 miliardi di anni fa tutto lo spazio, il tempo, la materia e l'energia dell'universo erano concentrati in un punto piccolissimo e densissimo, chiamato singolarità.</p>
+  <p>Non c'era ancora nulla al di fuori di quel punto: non esisteva uno spazio in cui espandersi, perché lo spazio stesso nasce insieme all'universo.</p>
+  <p>In un istante questo punto inizia a espandersi a velocità incredibile: è il Big Bang, l'evento che dà origine all'universo così come lo conosciamo oggi.</p>
+  <p>Non si tratta di un'esplosione nello spazio, come spesso viene raffigurata, ma di un'espansione dello spazio stesso, che si dilata portando con sé materia ed energia.</p>
+
+  <p class="titolo-capitolo">I primi istanti</p>
+  <p>Nelle prime frazioni di secondo l'universo è caldissimo e densissimo, un miscuglio di energia pura e particelle elementari che si formano, si scontrano e si distruggono in continuazione.</p>
+  <p>Le quattro forze fondamentali della natura, che oggi conosciamo distinte (gravità, elettromagnetismo, forza nucleare forte e debole), in quei primi istanti erano probabilmente unite in un'unica forza, per poi separarsi mano a mano che l'universo si raffreddava.</p>
+  <p>Con l'espansione la temperatura scende rapidamente e iniziano a formarsi le prime particelle stabili di materia: protoni, neutroni ed elettroni, i mattoni con cui in seguito si costruirà tutta la materia dell'universo.</p>
+  <p>Nei primi minuti si formano anche i primi nuclei atomici semplici, soprattutto idrogeno ed elio, in un processo chiamato nucleosintesi primordiale.</p>
+
+  <p class="titolo-capitolo">La luce intrappolata</p>
+  <p>Per circa 380.000 anni l'universo resta troppo caldo e denso perché la luce possa viaggiare libera: è pieno di particelle cariche che intrappolano continuamente i fotoni, assorbendoli ed emettendoli senza sosta.</p>
+  <p>In pratica, se fosse stato possibile osservarlo dall'esterno, l'universo di quel periodo sarebbe apparso come una nebbia luminosa e opaca, simile all'interno di una nuvola densa.</p>
+  <p>Quando la temperatura scende sotto una certa soglia, elettroni e protoni riescono finalmente a legarsi stabilmente formando i primi atomi neutri di idrogeno ed elio.</p>
+  <p>Senza più particelle cariche libere a intrappolarla, la luce può finalmente propagarsi nello spazio: questo momento viene chiamato "disaccoppiamento" o ricombinazione.</p>
+
+  <p class="titolo-capitolo">Il fondo cosmico a microonde</p>
+  <p>Quella prima luce liberata 380.000 anni dopo il Big Bang riempie ancora oggi tutto l'universo ed è osservabile come una debole radiazione, chiamata fondo cosmico a microonde.</p>
+  <p>È la traccia più antica che possiamo osservare direttamente del cosmo neonato, una sorta di fotografia dell'universo in quel preciso momento della sua storia.</p>
+  <p>Le piccole variazioni di temperatura in questa radiazione, misurate con grande precisione da satelliti come COBE, WMAP e Planck, corrispondono alle zone leggermente più dense da cui in seguito si formeranno le galassie.</p>
+
+  <p class="titolo-capitolo">Un universo ancora buio</p>
+  <p>Dopo la liberazione della luce l'universo attraversa un lungo periodo, chiamato "epoca oscura", privo di stelle e di galassie.</p>
+  <p>Esiste solo un'immensa distesa di gas, per lo più idrogeno ed elio, distribuita nello spazio in modo quasi uniforme, con lievissime irregolarità di densità ereditate dai primi istanti dopo il Big Bang.</p>
+  <p>Sono proprio queste piccole differenze di densità a fare da innesco: nei punti leggermente più densi la gravità inizia lentamente ad attirare altro gas, gettando le basi per la formazione delle prime stelle e galassie, che vedremo nel capitolo successivo.</p>
+</div>
+<!-- fine capitolo storia 01 -->
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

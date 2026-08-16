@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia Indice</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzionix.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">Indice</div>
+            <div class="desc">Tutti i capitoli</div>
+          </div>  
+    </div> 
+      </div>
+    
+<!-- indice storia -->
+<div id="indice-storia" class="capitolo-storia">
+  <p class="titolo-capitolo">Dal Big Bang ad oggi</p>
+
+  <p><a href="story01.html">01 - Il Big Bang - 13,8 miliardi di anni fa</a></p>
+  <p><a href="story02.html">02 - Formazione delle prime stelle e galassie - da 13,6 a 12 miliardi di anni fa</a></p>
+  <p><a href="story03.html">03 - Formazione del Sistema Solare e della Terra - 4,5 miliardi di anni fa</a></p>
+  <p><a href="story04.html">04 - Origine della vita e prime cellule - da 4 a 3,5 miliardi di anni fa</a></p>
+  <p><a href="story05.html">05 - Evoluzione della vita complessa ed esplosione cambriana - da 3,5 miliardi a 540 milioni di anni fa</a></p>
+  <p><a href="story06.html">06 - Era dei dinosauri e estinzione di massa - da 250 a 66 milioni di anni fa</a></p>
+  <p><a href="story07.html">07 - Evoluzione dei mammiferi e dei primati - da 66 a 6 milioni di anni fa</a></p>
+
+  <p><a href="story08.html">08 - Ominidi e origini del genere Homo - da 6 milioni a 300.000 anni fa</a></p>
+  <p><a href="story09.html">09 - Homo sapiens e migrazioni fuori dall'Africa - da 300.000 a 12.000 anni fa</a></p>
+  <p><a href="story10.html">10 - Rivoluzione agricola e neolitico - da 12.000 a 6.000 anni fa</a></p>
+  <p><a href="story11.html">11 - Nascita delle prime città e della scrittura - da 6.000 a 3.000 a.C.</a></p>
+
+  <p><a href="story12.html">12 - Mesopotamia: Sumeri, Babilonesi, Assiri - dal 3.000 al 539 a.C.</a></p>
+  <p><a href="story13.html">13 - Antico Egitto - dal 3.100 al 30 a.C.</a></p>
+  <p><a href="story14.html">14 - Civiltà dell'Indo e Cina antica - dal 2.500 al 221 a.C.</a></p>
+  <p><a href="story15.html">15 - Civiltà minoica e micenea - dal 2.700 al 1.100 a.C.</a></p>
+  <p><a href="story16.html">16 - Fenici, Ebrei e popoli del Mediterraneo orientale - dal 1.200 al 539 a.C.</a></p>
+  <p><a href="story17.html">17 - Grecia arcaica e nascita delle poleis - dal 800 al 500 a.C.</a></p>
+  <p><a href="story18.html">18 - Grecia classica: guerre persiane e Atene di Pericle - dal 500 al 431 a.C.</a></p>
+  <p><a href="story19.html">19 - Guerra del Peloponneso e crisi delle poleis - dal 431 al 338 a.C.</a></p>
+  <p><a href="story20.html">20 - Alessandro Magno e l'ellenismo - dal 336 al 30 a.C.</a></p>
+  <p><a href="story21.html">21 - Roma delle origini e Repubblica - dal 753 al 133 a.C.</a></p>
+  <p><a href="story22.html">22 - Crisi della Repubblica e guerre civili - dal 133 al 27 a.C.</a></p>
+  <p><a href="story23.html">23 - L'Impero Romano: apogeo - dal 27 a.C. al 180 d.C.</a></p>
+  <p><a href="story24.html">24 - Crisi e caduta dell'Impero Romano d'Occidente - dal 180 al 476 d.C.</a></p>
+
+  <p><a href="story25.html">25 - Regni romano-barbarici e Impero Bizantino - dal 476 al 800</a></p>
+  <p><a href="story26.html">26 - Nascita e espansione dell'Islam - dal 610 al 750</a></p>
+  <p><a href="story27.html">27 - Carlo Magno e il Sacro Romano Impero - dal 768 al 900</a></p>
+  <p><a href="story28.html">28 - Feudalesimo e società medievale - dal 900 al 1200</a></p>
+  <p><a href="story29.html">29 - Crociate e rapporti tra Islam e Cristianità - dal 1096 al 1291</a></p>
+  <p><a href="story30.html">30 - Comuni italiani e rinascita economica - dal 1100 al 1300</a></p>
+  <p><a href="story31.html">31 - Crisi del Trecento: peste, carestie, guerre - dal 1300 al 1400</a></p>
+  <p><a href="story32.html">32 - Guerra dei Cent'anni e monarchie nazionali - dal 1337 al 1453</a></p>
+
+  <p><a href="story33.html">33 - Umanesimo e Rinascimento - dal 1400 al 1500</a></p>
+  <p><a href="story34.html">34 - Scoperte geografiche ed espansione europea - dal 1492 al 1600</a></p>
+  <p><a href="story35.html">35 - Riforma protestante e Controriforma - dal 1517 al 1648</a></p>
+  <p><a href="story36.html">36 - Guerra dei Trent'anni e assolutismo - dal 1618 al 1715</a></p>
+  <p><a href="story37.html">37 - Rivoluzione scientifica - dal 1543 al 1687</a></p>
+  <p><a href="story38.html">38 - Illuminismo - dal 1687 al 1789</a></p>
+  <p><a href="story39.html">39 - Rivoluzione industriale - dal 1760 al 1840</a></p>
+  <p><a href="story40.html">40 - Rivoluzione americana - dal 1765 al 1791</a></p>
+  <p><a href="story41.html">41 - Rivoluzione francese - dal 1789 al 1799</a></p>
+  <p><a href="story42.html">42 - Età napoleonica - dal 1799 al 1815</a></p>
+
+  <p><a href="story43.html">43 - Restaurazione e moti liberali - dal 1815 al 1848</a></p>
+  <p><a href="story44.html">44 - Primavera dei popoli - dal 1848 al 1849</a></p>
+  <p><a href="story45.html">45 - Risorgimento e unità d'Italia - dal 1849 al 1861</a></p>
+  <p><a href="story46.html">46 - Unificazione tedesca e nuovi equilibri europei - dal 1861 al 1871</a></p>
+  <p><a href="story47.html">47 - Seconda rivoluzione industriale e società di massa - dal 1870 al 1900</a></p>
+  <p><a href="story48.html">48 - Imperialismo e colonialismo - dal 1870 al 1914</a></p>
+
+  <p><a href="story49.html">49 - Prima guerra mondiale - dal 1914 al 1918</a></p>
+  <p><a href="story50.html">50 - Rivoluzione russa e nascita dell'URSS - dal 1917 al 1924</a></p>
+  <p><a href="story51.html">51 - Dopoguerra e crisi del '29 - dal 1919 al 1933</a></p>
+  <p><a href="story52.html">52 - Fascismo in Italia - dal 1922 al 1939</a></p>
+  <p><a href="story53.html">53 - Nazismo in Germania - dal 1933 al 1939</a></p>
+  <p><a href="story54.html">54 - Seconda guerra mondiale - dal 1939 al 1945</a></p>
+  <p><a href="story55.html">55 - Shoah e crimini contro l'umanità - dal 1941 al 1945</a></p>
+
+  <p><a href="story56.html">56 - Guerra fredda: origini e blocchi contrapposti - dal 1945 al 1953</a></p>
+  <p><a href="story57.html">57 - Decolonizzazione - dal 1945 al 1975</a></p>
+  <p><a href="story58.html">58 - Italia repubblicana e ricostruzione - dal 1946 al 1963</a></p>
+  <p><a href="story59.html">59 - Boom economico e società dei consumi - dal 1950 al 1973</a></p>
+  <p><a href="story60.html">60 - Guerra fredda: crisi e distensione - dal 1953 al 1979</a></p>
+  <p><a href="story61.html">61 - Contestazioni e movimenti del '68 - dal 1968 al 1977</a></p>
+  <p><a href="story62.html">62 - Anni di piombo in Italia - dal 1969 al 1982</a></p>
+  <p><a href="story63.html">63 - Crisi energetica e trasformazioni economiche - dal 1973 al 1989</a></p>
+  <p><a href="story64.html">64 - Crollo del comunismo e fine della Guerra Fredda - dal 1985 al 1991</a></p>
+  <p><a href="story65.html">65 - Globalizzazione e rivoluzione digitale - dal 1991 al 2001</a></p>
+  <p><a href="story66.html">66 - Terrorismo internazionale e nuovi conflitti - dal 2001 al 2010</a></p>
+  <p><a href="story67.html">67 - Crisi economica globale ed evoluzioni recenti - dal 2008 al 2019</a></p>
+  <p><a href="story68.html">68 - Pandemia e mondo attuale - dal 2020 a oggi</a></p>
+</div>
+<!-- fine indice storia -->    
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>
