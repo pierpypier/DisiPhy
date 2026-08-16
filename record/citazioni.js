@@ -1649,6 +1649,409 @@ Le donne romane sposate indossavano tradizionalmente una veste lunga chiamata st
 Il sestertius era una moneta romana di bronzo usata comunemente per le transazioni quotidiane. — antica Roma
 I romani costruirono un fitto sistema di fari e porti per facilitare la navigazione commerciale nel Mediterraneo. — antica Roma
 Il termine legione derivava dal verbo latino legere, nel senso di scegliere o reclutare soldati. — antica Roma
+Il cuore di un colibrì può battere centinaia di volte al minuto durante l'attività intensa — zoologia
+Le api possono riconoscere alcuni schemi visivi e imparare ad associarli a una ricompensa — zoologia
+I polpi possiedono tre cuori e il loro sangue contiene emocianina, una proteina ricca di rame — zoologia
+Le giraffe hanno sette vertebre cervicali, come gli esseri umani, ma molto più lunghe — zoologia
+I corvi sono capaci di risolvere problemi e di utilizzare alcuni oggetti come strumenti — etologia
+Le lontre marine possono usare pietre come strumenti per rompere gusci duri — etologia
+Un gruppo di fenicotteri può assumere una colorazione più intensa quando la dieta contiene molti carotenoidi — zoologia
+Le balene comunicano attraverso suoni che possono propagarsi per grandi distanze nell'oceano — zoologia
+Alcune rane possono sopravvivere a periodi di congelamento parziale e riprendere l'attività quando la temperatura sale — zoologia
+I pipistrelli sono gli unici mammiferi capaci di un volo veramente attivo e sostenuto — zoologia
+Le formiche comunicano tra loro anche attraverso sostanze chimiche chiamate feromoni — entomologia
+Le farfalle assaggiano le sostanze soprattutto attraverso recettori presenti sulle zampe — entomologia
+Le libellule possono muovere le ali in modo indipendente, consentendo loro di compiere manovre aeree molto precise — entomologia
+Il tardigrado è un minuscolo animale capace di entrare in uno stato di estrema dormienza chiamato criptobiosi — zoologia
+Le stelle marine non hanno un cervello centrale come quello dei vertebrati — zoologia
+I delfini utilizzano l'ecolocalizzazione per individuare oggetti attraverso gli echi dei suoni che producono — zoologia
+Alcuni alberi possono comunicare indirettamente attraverso reti di funghi associate alle loro radici — ecologia
+Le piante carnivore catturano piccoli animali soprattutto per integrare nutrienti che nel terreno sono scarsi — botanica
+I girasoli giovani seguono il movimento apparente del Sole durante la giornata, un fenomeno chiamato eliotropismo — botanica
+Il bambù può crescere molto rapidamente in condizioni favorevoli, ma la velocità varia notevolmente tra le specie — botanica
+I licheni sono associazioni simbiotiche tra un fungo e un organismo fotosintetico, come un'alga o un cianobatterio — biologia
+Il colore verde delle foglie deriva principalmente dalla clorofilla, che assorbe selettivamente la luce — botanica
+Le sequoie costiere possono raggiungere altezze superiori a cento metri — botanica
+Alcuni semi possono rimanere dormienti per anni prima di trovare condizioni adatte alla germinazione — botanica
+Le mangrovie possono vivere in ambienti costieri salmastri e contribuiscono a proteggere le coste dall'erosione — ecologia
+I coralli sono animali coloniali e non piante, come potrebbe suggerire il loro aspetto — biologia marina
+Le meduse non possiedono un cervello centralizzato, ma una rete diffusa di cellule nervose — zoologia
+Il sangue del polpo è blu perché la sua emocianina utilizza rame per trasportare l'ossigeno — fisiologia
+Le balene sono mammiferi: respirano aria attraverso i polmoni e devono emergere per inspirare — zoologia
+I pinguini non volano, ma le loro ali sono adattate al nuoto e funzionano come robuste pinne — zoologia
+Le zampe degli uccelli hanno una struttura che permette a molte specie di afferrare un ramo anche durante il riposo — anatomia
+Alcuni serpenti percepiscono il calore emesso dalle prede attraverso speciali organi sensoriali — zoologia
+I camaleonti cambiano colore per diverse ragioni, tra cui comunicazione e regolazione della temperatura, non soltanto per mimetizzarsi — zoologia
+Le lumache terrestri utilizzano una struttura dentellata chiamata radula per raschiare il cibo — zoologia
+Le cicale trascorrono gran parte del loro ciclo vitale in forma giovanile, spesso nel terreno, prima di diventare adulte — entomologia
+Le termiti costruiscono strutture complesse che possono favorire la ventilazione naturale delle loro colonie — entomologia
+I ragni non sono insetti: appartengono agli aracnidi e possiedono otto zampe — zoologia
+Le api da miele possono indicare alle compagne la posizione di una fonte di cibo attraverso una particolare danza — etologia
+Alcuni uccelli migratori riescono a orientarsi usando anche il campo magnetico terrestre — zoologia
+I salmoni possono ritrovare il corso d'acqua in cui sono nati grazie a una combinazione di segnali ambientali — zoologia
+Le tartarughe marine utilizzano diversi segnali ambientali per orientarsi durante le loro migrazioni — zoologia marina
+Il mantello delle zebre presenta strisce uniche per ciascun individuo, come una sorta di disegno identificativo — zoologia
+Gli elefanti comunicano anche attraverso suoni a bassa frequenza che possono percorrere lunghe distanze — etologia
+Le balene megattere producono canti complessi, soprattutto durante le interazioni riproduttive — etologia
+Alcuni uccelli possono imitare suoni dell'ambiente e persino parti del linguaggio umano — etologia
+I castori modificano l'ambiente costruendo dighe che possono creare nuovi habitat per molte altre specie — ecologia
+Le foreste non sono soltanto insiemi di alberi: ospitano reti intricate di organismi che scambiano materia ed energia — ecologia
+Il suolo è un ecosistema ricchissimo, popolato da batteri, funghi, piccoli animali e radici — ecologia
+Il plancton comprende organismi molto diversi e costituisce una componente fondamentale delle reti alimentari acquatiche — ecologia marina
+Ogni specie occupa una propria nicchia ecologica, definita dall'insieme delle condizioni e delle risorse che ne permettono la sopravvivenza — ecologia
+Tyrannosaurus rex visse alla fine del Cretaceo, circa 68–66 milioni di anni fa — paleontologia
+Il nome Tyrannosaurus rex significa letteralmente "re lucertola tiranno" — paleontologia
+Triceratops possedeva tre corna e un grande collare osseo dietro il cranio — paleontologia
+Il nome Velociraptor significa "predatore veloce" — paleontologia
+Velociraptor era molto più piccolo di quanto spesso venga rappresentato nei film, con una lunghezza di circa due metri — paleontologia
+Il grande artiglio ricurvo di Velociraptor si trovava sul secondo dito di ciascun piede — paleontologia
+Stegosaurus aveva grandi piastre ossee lungo il dorso e quattro lunghe spine sulla coda — paleontologia
+Le piastre di Stegosaurus non erano semplicemente disposte come una corazza continua, ma formavano due file lungo il dorso — paleontologia
+Diplodocus aveva un collo e una coda estremamente lunghi rispetto al resto del corpo — paleontologia
+Brachiosaurus aveva zampe anteriori più lunghe di quelle posteriori, caratteristica insolita tra i grandi dinosauri — paleontologia
+Il nome Brachiosaurus significa "lucertola dalle braccia", in riferimento alla particolare lunghezza degli arti anteriori — paleontologia
+Spinosaurus possedeva una caratteristica vela dorsale formata da lunghe spine neurali delle vertebre — paleontologia
+Spinosaurus aveva un muso allungato e conico, simile per alcuni aspetti a quello dei coccodrilli — paleontologia
+Alcuni fossili indicano che Spinosaurus era fortemente adattato alla vita in ambienti acquatici — paleontologia
+Archaeopteryx è considerato un importante fossile nel dibattito sull'evoluzione degli uccelli dai dinosauri teropodi — paleontologia
+Archaeopteryx possedeva piume, ma conservava anche caratteristiche tipiche dei dinosauri, come denti e una lunga coda ossea — paleontologia
+Gli uccelli moderni sono considerati dinosauri viventi appartenenti al gruppo dei teropodi — paleontologia
+Non tutti i dinosauri erano enormi: alcune specie avevano dimensioni paragonabili a quelle di un pollo o di un tacchino — paleontologia
+Compsognathus era un piccolo dinosauro teropode vissuto nel Giurassico superiore — paleontologia
+Dinosauria è il gruppo che comprende tutti i dinosauri, inclusi gli uccelli moderni — paleontologia
+I dinosauri comparvero durante il Triassico superiore, oltre 230 milioni di anni fa — paleontologia
+I dinosauri dominarono molti ecosistemi terrestri per oltre 160 milioni di anni — paleontologia
+Il Mesozoico comprende i periodi Triassico, Giurassico e Cretaceo — geologia
+Il primo periodo del Mesozoico fu il Triassico, seguito dal Giurassico e dal Cretaceo — geologia
+I dinosauri non vissero tutti nello stesso periodo: molte specie erano separate da decine di milioni di anni — paleontologia
+Stegosaurus visse durante il Giurassico superiore, molto prima della comparsa di Tyrannosaurus rex — paleontologia
+Triceratops e Tyrannosaurus rex vissero entrambi alla fine del Cretaceo nordamericano — paleontologia
+Il Cretaceo terminò circa 66 milioni di anni fa con una grande estinzione di massa — geologia
+L'estinzione di fine Cretaceo eliminò tutti i dinosauri non aviani conosciuti — paleontologia
+Una delle principali evidenze collega l'estinzione di fine Cretaceo all'impatto di un grande asteroide nell'area dell'attuale penisola dello Yucatán — geologia
+Il cratere di Chicxulub è sepolto sotto la penisola dello Yucatán e parte del vicino Golfo del Messico — geologia
+Le rocce dell'area di Chicxulub conservano tracce geologiche compatibili con un enorme impatto avvenuto circa 66 milioni di anni fa — geologia
+I fossili di dinosauro sono spesso conservati nelle rocce sedimentarie, dove i resti possono essere sepolti e mineralizzati — paleontologia
+Un fossile non deve necessariamente essere uno scheletro completo: anche impronte, uova e coproliti possono fornire informazioni sui dinosauri — paleontologia
+Le impronte fossili possono rivelare informazioni sulla locomozione e sul comportamento degli animali preistorici — paleontologia
+Le uova fossili di dinosauro permettono agli scienziati di studiare aspetti della riproduzione e dello sviluppo embrionale — paleontologia
+Alcuni dinosauri possedevano piume o strutture simili a piume, anche se non tutti erano piumati — paleontologia
+Il piumaggio era presente in numerosi teropodi non appartenenti agli uccelli — paleontologia
+La presenza di piume nei dinosauri è documentata soprattutto da fossili eccezionalmente conservati — paleontologia
+I dinosauri erbivori svilupparono diverse strategie alimentari, adattandosi a piante e ambienti differenti — paleontologia
+Hadrosaurus e altri adrosauri possedevano batterie di denti che permettevano loro di triturare efficacemente il materiale vegetale — paleontologia
+Gli adrosauri sono spesso chiamati "dinosauri dal becco d'anatra" per la forma caratteristica del muso in alcune specie — paleontologia
+Ankylosaurus possedeva un corpo corazzato e una grande struttura ossea all'estremità della coda — paleontologia
+Pachycephalosaurus aveva una cupola ossea molto spessa sulla parte superiore del cranio — paleontologia
+Parasaurolophus aveva una lunga cresta cava che probabilmente svolgeva una funzione nella comunicazione acustica — paleontologia
+Diplodocus apparteneva ai sauropodi, il gruppo che comprende alcuni dei più grandi animali terrestri conosciuti — paleontologia
+I sauropodi avevano colli molto lunghi sostenuti da vertebre specializzate e relativamente leggere — anatomia
+Alcuni sauropodi raggiunsero dimensioni superiori a quelle di qualsiasi altro animale terrestre conosciuto — paleontologia
+Il termine "dinosauro" fu coniato nel 1842 dal paleontologo britannico Richard Owen — storia della paleontologia
+La parola Dinosauria deriva dal greco antico e può essere resa come "lucertole terribili" — etimologia paleontologica
+I primi ominini comparvero in Africa diversi milioni di anni fa, molto prima della comparsa del genere Homo — paleoantropologia
+Il termine ominino indica gli esseri umani e i loro parenti evolutivi più stretti successivi alla separazione dalla linea degli scimpanzé — paleoantropologia
+La linea evolutiva umana e quella degli scimpanzé condividono un antenato comune vissuto milioni di anni fa — evoluzione
+Australopithecus afarensis visse in Africa orientale circa tra 3,9 e 2,9 milioni di anni fa — paleoantropologia
+Il famoso fossile di Australopithecus afarensis chiamato Lucy fu scoperto in Etiopia nel 1974 — paleoantropologia
+Lucy apparteneva alla specie Australopithecus afarensis ed era alta circa un metro — paleoantropologia
+La struttura del bacino e degli arti di Australopithecus afarensis indica un adattamento alla locomozione bipede — paleoantropologia
+La locomozione bipede è una delle caratteristiche fondamentali che distinguono l'evoluzione degli ominini — paleoantropologia
+Camminare abitualmente su due gambe liberò gli arti superiori da una parte delle funzioni legate alla locomozione — evoluzione
+Australopithecus africanus visse in Africa meridionale tra circa 3 e 2 milioni di anni fa — paleoantropologia
+Il genere Homo comparve in Africa circa 2,8 milioni di anni fa, secondo le più antiche evidenze fossili attualmente conosciute — paleoantropologia
+Homo habilis è una delle prime specie tradizionalmente associate al genere Homo — paleoantropologia
+Il nome Homo habilis significa "uomo abile", un riferimento alla sua associazione storica con i primi strumenti litici — paleoantropologia
+Gli strumenti di pietra più antichi conosciuti risalgono a oltre 3 milioni di anni fa e precedono la comparsa di Homo habilis — archeologia
+Homo erectus comparve circa 2 milioni di anni fa ed ebbe una distribuzione geografica molto più ampia rispetto ai primi Homo — paleoantropologia
+Homo erectus aveva proporzioni corporee più simili a quelle degli esseri umani moderni rispetto agli australopiteci — paleoantropologia
+Homo erectus fu tra i primi ominini a diffondersi dall'Africa verso altre regioni dell'Eurasia — paleoantropologia
+I primi grandi spostamenti di Homo fuori dall'Africa avvennero molto prima della comparsa di Homo sapiens — paleoantropologia
+Gli strumenti acheuleani sono caratterizzati da manufatti come le amigdale, spesso lavorate su entrambe le facce — archeologia
+La tecnologia acheuleana rimase in uso per oltre un milione di anni in diverse regioni del Vecchio Mondo — archeologia
+Il controllo del fuoco rappresentò una trasformazione importante nella storia evolutiva umana, anche se la data della sua prima gestione intenzionale resta discussa — archeologia
+Il fuoco poteva fornire calore, luce e protezione e permetteva inoltre di cuocere gli alimenti — archeologia
+La cottura degli alimenti modifica la loro struttura e può renderli più facili da digerire — evoluzione
+Homo heidelbergensis visse in Africa, Europa e probabilmente in parte dell'Asia durante il Pleistocene medio — paleoantropologia
+Molti paleoantropologi considerano popolazioni appartenenti al gruppo di Homo heidelbergensis vicine all'origine evolutiva dei Neanderthal e degli esseri umani moderni — paleoantropologia
+I Neanderthal vissero soprattutto in Europa e in alcune regioni dell'Asia occidentale — paleoantropologia
+Homo neanderthalensis e Homo sapiens condivisero per migliaia di anni alcune regioni dell'Eurasia — paleoantropologia
+I Neanderthal avevano un cervello mediamente grande quanto o persino superiore a quello degli esseri umani moderni in termini di volume endocranico — paleoantropologia
+I Neanderthal erano adattati ai climi freddi grazie anche a una corporatura robusta e compatta — paleoantropologia
+I Neanderthal utilizzavano strumenti di pietra, controllavano il fuoco e praticavano attività culturali complesse — archeologia
+Le prove genetiche mostrano che Neanderthal e Homo sapiens si incrociarono dopo l'arrivo dei sapiens in Eurasia — genetica
+Molte persone di origine non africana possiedono una piccola percentuale di DNA ereditato dai Neanderthal — genetica
+I Denisoviani sono conosciuti soprattutto attraverso fossili e DNA recuperati da una grotta dei Monti Altaj in Siberia — paleoantropologia
+Il genoma denisoviano ha rivelato che i Denisoviani erano un gruppo umano distinto ma strettamente imparentato con i Neanderthal — genetica
+Alcune popolazioni dell'Oceania possiedono una quota significativa di DNA derivato da antichi Denisoviani — genetica
+Homo sapiens comparve in Africa almeno circa 300000 anni fa secondo le principali evidenze fossili — paleoantropologia
+I fossili di Jebel Irhoud in Marocco hanno contribuito a retrodatare l'origine di Homo sapiens a circa 300000 anni fa — paleoantropologia
+Homo sapiens possiede un cranio generalmente più globulare e una faccia relativamente più piccola rispetto ai Neanderthal — anatomia evolutiva
+Gli esseri umani moderni appartengono alla specie Homo sapiens — tassonomia
+L'espressione Homo sapiens sapiens è stata usata storicamente per indicare gli esseri umani moderni, anche se oggi il nome scientifico normalmente utilizzato è Homo sapiens — tassonomia
+La nostra specie trascorse gran parte della propria storia evolutiva in Africa prima di espandersi in altri continenti — paleoantropologia
+La principale espansione di Homo sapiens fuori dall'Africa avvenne decine di migliaia di anni fa, anche se vi furono precedenti dispersioni — paleoantropologia
+Homo sapiens raggiunse l'Australia almeno circa 50000 anni fa, secondo le principali evidenze archeologiche — archeologia
+Gli esseri umani arrivarono nelle Americhe durante il Pleistocene finale, ma la data esatta delle prime presenze è ancora oggetto di ricerca — archeologia
+Le pitture rupestri di Chauvet in Francia risalgono a circa 36000 anni fa e comprendono rappresentazioni di numerosi animali — archeologia
+La grotta di Lascaux contiene celebri raffigurazioni di animali realizzate durante il Paleolitico superiore — archeologia
+Durante il Paleolitico superiore Homo sapiens sviluppò una grande varietà di strumenti, ornamenti e forme artistiche — archeologia
+L'uso di ornamenti personali è documentato in diverse popolazioni di Homo sapiens del Paleolitico — archeologia
+La rivoluzione agricola iniziò in diverse regioni del mondo in periodi differenti, a partire da circa 12000 anni fa — archeologia
+L'agricoltura permise a molte comunità umane di diventare più sedentarie e di sviluppare insediamenti permanenti — storia umana
+L'evoluzione umana non fu una semplice successione lineare di specie, ma una storia ramificata con numerose popolazioni contemporanee — paleoantropologia
+L'Iliade racconta una parte della guerra di Troia e non l'intero conflitto decennale — letteratura greca
+L'Iliade è composta da 24 libri, secondo la tradizione testuale antica — letteratura greca
+Il poema è tradizionalmente attribuito a Omero — tradizione greca
+L'Iliade è scritta in esametri dattilici, il metro tipico della poesia epica greca — metrica greca
+Il tema centrale dell'Iliade è l'ira di Achille e le sue conseguenze — letteratura greca
+Il poema si apre invocando la dea affinché canti l'ira di Achille — tradizione omerica
+Achille è il principale eroe greco dell'Iliade — mitologia greca
+Agamennone è il comandante supremo delle forze achee riunite contro Troia — Iliade
+Menelao è il marito di Elena e fratello di Agamennone — Iliade
+Elena è figlia di Zeus e Leda secondo la tradizione mitologica più diffusa — mitologia greca
+Paride è uno dei figli del re troiano Priamo — Iliade
+Paride è anche chiamato Alessandro nel poema omerico — Iliade
+Ettore è il figlio maggiore di Priamo e il principale difensore di Troia — Iliade
+Ettore è fratello di Paride e marito di Andromaca — Iliade
+Andromaca è la moglie di Ettore e madre di Astianatte — Iliade
+Priamo è il vecchio re di Troia durante la guerra narrata nel poema — Iliade
+Ecuba è la moglie di Priamo e la madre di numerosi figli, tra cui Ettore e Paride — mitologia greca
+Patroclo è il compagno più caro di Achille nell'Iliade — Iliade
+La morte di Patroclo spinge Achille a tornare sul campo di battaglia — Iliade
+Achille torna a combattere dopo aver deposto la propria ira contro Agamennone — Iliade
+Teti è la madre divina di Achille e una delle Nereidi — mitologia greca
+Teti chiede a Zeus di favorire temporaneamente i Troiani per onorare Achille — Iliade
+Zeus è la principale divinità olimpica coinvolta negli eventi narrati nell'Iliade — Iliade
+Atena sostiene frequentemente gli Achei nel corso del poema — Iliade
+Apollo sostiene i Troiani e svolge un ruolo importante nell'ira iniziale di Achille — Iliade
+Era è favorevole agli Achei e ostile alla causa troiana nell'Iliade — Iliade
+Afrodite protegge Paride durante il duello con Menelao — Iliade
+Ares combatte dalla parte dei Troiani in una parte significativa del conflitto divino narrato nel poema — Iliade
+Efesto forgia per Achille una nuova armatura su richiesta di Teti — Iliade
+Lo scudo di Achille viene descritto attraverso una lunga e celebre rappresentazione del mondo umano e naturale — Iliade
+Lo scudo di Achille raffigura, tra le altre cose, una città in pace e una città coinvolta in un conflitto — Iliade
+Il duello tra Menelao e Paride avrebbe potuto porre fine alla contesa, ma viene interrotto dall'intervento divino — Iliade
+Ettore affronta Aiace in un celebre duello che termina senza un vincitore decisivo — Iliade
+Aiace Telamonio è uno dei più forti guerrieri achei dopo Achille — Iliade
+Odisseo è uno degli eroi achei più importanti presenti nell'Iliade — Iliade
+Diomede compie alcune delle imprese militari più note tra gli eroi achei — Iliade
+Diomede arriva persino a ferire Afrodite e Ares con l'aiuto di Atena — Iliade
+Nell'Iliade gli dèi partecipano direttamente alle vicende degli esseri umani — religione greca antica
+Gli dèi dell'Iliade hanno caratteristiche profondamente umane, comprese rivalità, passioni e discussioni — letteratura greca
+Il destino occupa un ruolo importante nel rapporto tra dèi, eroi e uomini nell'Iliade — mitologia greca
+Achille sa che la sua vita sarà breve se sceglierà una gloria imperitura attraverso la guerra — Iliade
+Ettore conosce il pericolo che corre tornando a combattere, ma sceglie di difendere Troia — Iliade
+Priamo entra nell'accampamento acheo per chiedere ad Achille il corpo del figlio Ettore — Iliade
+Priamo e Achille condividono un momento di profonda umanità dopo la morte di Ettore — Iliade
+Achille restituisce a Priamo il corpo di Ettore dopo averne ascoltato la supplica — Iliade
+L'Iliade si conclude con i funerali di Ettore e non con la caduta di Troia — letteratura greca
+Il cavallo di Troia non compare come episodio narrato direttamente nell'Iliade — tradizione epica
+La morte di Achille non viene raccontata nell'Iliade — tradizione epica
+La caduta definitiva di Troia non viene raccontata nell'Iliade — tradizione epica
+L'Iliade appartiene alla tradizione della poesia epica orale che precedette la sua fissazione scritta — storia della letteratura
+Il linguaggio dell'Iliade conserva formule ricorrenti che facilitavano la composizione e la memorizzazione orale dei versi — filologia omerica
+Il poema alterna scene di battaglia a momenti familiari, assemblee, dialoghi e interventi degli dèi — struttura narrativa dell'Iliade
+Roma fu fondata, secondo la tradizione, nel 753 a.C. — Tradizione romana
+Il Senato romano nacque come consiglio degli anziani delle famiglie patrizie. — Storia romana
+Alea iacta est: il dado è tratto. — attribuita a Giulio Cesare
+Veni, vidi, vici: venni, vidi, vinsi. — Giulio Cesare
+Le dodici tavole furono il primo codice scritto di leggi romane, nel V secolo a.C. — Storia romana
+Il Colosseo, inaugurato nell'80 d.C., poteva ospitare decine di migliaia di spettatori. — Storia romana
+Mos maiorum: il costume degli antenati, cardine della morale romana. — Cultura romana
+Homo homini lupus: l'uomo è lupo per l'altro uomo. — attribuita a Plauto
+Roma non fu costruita in un giorno. — Proverbio latino
+Si vis pacem, para bellum: se vuoi la pace, prepara la guerra. — Massima latina
+Cicerone fu console nel 63 a.C. e sventò la congiura di Catilina. — Storia romana
+O tempora, o mores: che tempi, che costumi. — Cicerone
+La Repubblica romana durò circa cinque secoli, dal 509 al 27 a.C. — Storia romana
+Augusto divenne il primo imperatore romano nel 27 a.C. — Storia romana
+Panem et circenses: pane e giochi, per placare il popolo. — Giovenale
+Le legioni romane marciavano in media circa trenta chilometri al giorno. — Storia militare romana
+L'Impero romano raggiunse la sua massima estensione territoriale sotto Traiano. — Storia romana
+Carpe diem: cogli l'attimo. — Orazio
+In vino veritas: nel vino la verità. — Proverbio latino
+Le strade romane, come la via Appia, collegavano l'intero impero. — Storia romana
+Errare humanum est: errare è umano. — attribuita a Seneca
+La pax romana fu un lungo periodo di relativa stabilità interna nell'impero. — Storia romana
+Marco Aurelio fu imperatore e filosofo, esponente dello stoicismo romano. — Storia romana
+Ave Caesar, morituri te salutant: coloro che stanno per morire ti salutano. — attribuita ai gladiatori
+Il latino era la lingua ufficiale dell'amministrazione e dell'esercito romano. — Storia romana
+Divide et impera: dividi e comanda. — Massima politica romana
+Le terme romane erano luoghi di bagno, ma anche di incontro sociale. — Cultura romana
+Nulla dies sine linea: nessun giorno senza una riga scritta. — attribuita a Plinio il Vecchio
+Roma cadde nel 476 d.C. con la deposizione dell'ultimo imperatore d'Occidente. — Storia romana
+Fortis fortuna adiuvat: la fortuna aiuta gli audaci. — Proverbio latino
+Il Pantheon, con la sua cupola in cemento, resta un capolavoro dell'ingegneria romana. — Storia romana
+Tempus fugit: il tempo fugge. — Virgilio
+I romani svilupparono un sistema di acquedotti per portare acqua nelle città. — Storia romana
+Cui bono: a chi giova, domanda usata per individuare i colpevoli. — attribuita a Cicerone
+Giulio Cesare fu assassinato alle Idi di marzo del 44 a.C. — Storia romana
+Cave canem: attento al cane, iscrizione comune sui mosaici delle case romane. — Cultura romana
+Il diritto romano è alla base di molti sistemi giuridici moderni. — Storia del diritto
+Memento mori: ricordati che devi morire. — Massima latina
+Le vestali custodivano il fuoco sacro di Vesta a Roma. — Cultura romana
+Audaces fortuna iuvat: la fortuna aiuta gli audaci. — Virgilio
+Il Foro Romano era il centro politico, religioso ed economico della città. — Storia romana
+Amor vincit omnia: l'amore vince tutto. — Virgilio
+Traiano ampliò l'impero fino alla Mesopotamia nel II secolo d.C. — Storia romana
+Historia magistra vitae: la storia è maestra di vita. — Cicerone
+Le insulae erano gli edifici popolari a più piani nelle città romane. — Storia romana
+Dulce et decorum est pro patria mori: è dolce morire per la patria. — Orazio
+Il calendario giuliano, introdotto da Cesare nel 46 a.C., riformò il computo dell'anno. — Storia romana
+Festina lente: affrettati lentamente. — attribuita ad Augusto
+Il gladio corto era l'arma principale del legionario romano nel corpo a corpo. — Storia militare romana
+Roma, secondo la leggenda, fu fondata da Romolo e Remo, allevati da una lupa. — Tradizione romana
+Nel medioevo i libri venivano spesso incatenati agli scaffali delle biblioteche per evitarne il furto. — Curiosità medievali
+Il termine medioevo fu coniato solo secoli dopo, dagli umanisti del Rinascimento, per indicare un periodo intermedio. — Storiografia
+Le università più antiche d'Europa, come Bologna e Parigi, nacquero proprio nel medioevo. — Storia medievale
+I cavalieri medievali impiegavano spesso l'aiuto di uno scudiero solo per indossare l'armatura completa. — Curiosità medievali
+Il sapone era conosciuto e usato in Europa già in epoca medievale, contrariamente a un luogo comune diffuso. — Curiosità medievali
+Le cattedrali gotiche potevano richiedere anche più di un secolo per essere completate. — Storia medievale
+Il gioco degli scacchi si diffuse in Europa attraverso il mondo arabo intorno al X secolo. — Curiosità medievali
+I mulini ad acqua erano diffusi in tutta Europa medievale per macinare il grano. — Storia medievale
+Le spezie come pepe e zafferano erano beni di lusso, spesso più preziosi dell'oro per peso. — Curiosità medievali
+La peste nera, tra il 1347 e il 1351, uccise una parte significativa della popolazione europea. — Storia medievale
+I monasteri furono tra i principali centri di conservazione e copia dei testi antichi. — Storia medievale
+Il torneo cavalleresco nacque come addestramento militare prima di diventare spettacolo pubblico. — Curiosità medievali
+Le città medievali erano spesso circondate da mura per motivi difensivi. — Storia medievale
+I colori vivaci nei vestiti erano segno di ricchezza, perché i tessuti coloranti costavano molto. — Curiosità medievali
+Carlo Magno fu incoronato imperatore a Roma nell'anno 800. — Storia medievale
+Le fiere commerciali medievali, come quelle della Champagne, erano crocevia di mercanti da tutta Europa. — Storia medievale
+Gli orologi meccanici pubblici iniziarono a diffondersi nelle città europee nel corso del Trecento. — Storia medievale
+Il feudalesimo si basava su un sistema di obblighi reciproci tra signori e vassalli. — Storia medievale
+La carta, introdotta in Europa dal mondo arabo, sostituì gradualmente la pergamena, più costosa. — Curiosità medievali
+Le crociate furono una serie di spedizioni militari verso la Terra Santa tra XI e XIII secolo. — Storia medievale
+I cavalli da guerra medievali erano allevati e addestrati appositamente per il combattimento. — Curiosità medievali
+Le corporazioni di arti e mestieri regolavano la formazione e il lavoro degli artigiani medievali. — Storia medievale
+Il matrimonio tra nobili era spesso concordato per motivi politici o economici più che sentimentali. — Curiosità medievali
+Le strade romane continuarono a essere usate, seppur in parte degradate, per tutto il medioevo. — Storia medievale
+I falconieri medievali addestravano rapaci per la caccia, attività riservata soprattutto alla nobiltà. — Curiosità medievali
+La Magna Carta fu firmata in Inghilterra nel 1215, limitando i poteri del sovrano. — Storia medievale
+Le vetrate colorate delle cattedrali servivano anche a raccontare storie bibliche a chi non sapeva leggere. — Curiosità medievali
+I villaggi medievali erano in gran parte autosufficienti per il cibo e i beni di prima necessità. — Storia medievale
+Il termine cavaliere derivava dal possesso di un cavallo, elemento costoso e distintivo del ruolo militare. — Curiosità medievali
+Le abbazie medievali gestivano spesso vaste proprietà agricole e attività economiche. — Storia medievale
+Nel medioevo si credeva comunemente, come già nell'antichità, che la Terra fosse sferica tra gli studiosi colti. — Curiosità medievali
+Le lettere e i documenti ufficiali venivano sigillati con cera e un timbro personale o istituzionale. — Curiosità medievali
+La bussola, di origine cinese, si diffuse in Europa per la navigazione intorno al XII-XIII secolo. — Curiosità medievali
+I tornei e le giostre potevano essere occasioni pericolose, con cavalieri feriti o uccisi durante le gare. — Curiosità medievali
+Le città-stato italiane, come Venezia e Genova, prosperarono grazie ai commerci marittimi medievali. — Storia medievale
+Il pane era l'alimento base della dieta medievale, con qualità diverse a seconda del ceto sociale. — Curiosità medievali
+Le biblioteche monastiche conservavano manoscritti copiati a mano dagli amanuensi. — Storia medievale
+Il sistema numerico arabo, con lo zero, si diffuse in Europa nel basso medioevo sostituendo i numeri romani nel calcolo. — Curiosità medievali
+Le pellegrinazioni verso Roma, Gerusalemme e Santiago di Compostela erano pratiche religiose diffuse. — Storia medievale
+I giullari e i menestrelli intrattenevano le corti medievali con musica, racconti e giochi. — Curiosità medievali
+Le epidemie e le carestie erano eventi ricorrenti che segnavano profondamente la vita medievale. — Storia medievale
+Il vetro delle finestre era un lusso raro, spesso sostituito da pergamena oleata o legno nelle case comuni. — Curiosità medievali
+Le donne nel medioevo potevano gestire attività commerciali e artigianali, specie da vedove. — Storia medievale
+I castelli medievali si evolvettero da semplici strutture in legno a complesse fortificazioni in pietra. — Storia medievale
+Il concetto di anno zero non esisteva nel calendario medievale, che passava direttamente dall'anno 1 a.C. all'anno 1 d.C. — Curiosità medievali
+Le arti liberali insegnate nelle università medievali comprendevano grammatica, retorica, logica, aritmetica, geometria, musica e astronomia. — Storia medievale
+I lebbrosari erano strutture dedicate all'isolamento e alla cura dei malati di lebbra. — Storia medievale
+Il commercio delle pellicce provenienti dal nord Europa era molto redditizio nel medioevo. — Curiosità medievali
+Le tecniche di costruzione degli archi a sesto acuto permisero alle cattedrali gotiche di raggiungere altezze notevoli. — Curiosità medievali
+Il declino dell'Impero Romano d'Occidente nel 476 d.C. è tradizionalmente considerato l'inizio del medioevo. — Storia medievale
+Il Rinascimento nacque in Italia, in particolare a Firenze, tra il XIV e il XV secolo. — Storia del Rinascimento
+Leonardo da Vinci scriveva molti dei suoi appunti da destra a sinistra, leggibili solo allo specchio. — Curiosità rinascimentali
+La famiglia Medici finanziò artisti, scienziati e architetti, diventando mecenate fondamentale del Rinascimento fiorentino. — Storia del Rinascimento
+La cupola di Santa Maria del Fiore fu progettata da Filippo Brunelleschi senza l'uso di centine di sostegno complete. — Curiosità rinascimentali
+Gutenberg introdusse in Europa la stampa a caratteri mobili intorno al 1450, rivoluzionando la diffusione dei libri. — Storia del Rinascimento
+La prospettiva lineare fu formalizzata come tecnica pittorica proprio nel primo Rinascimento italiano. — Storia del Rinascimento
+Leonardo da Vinci progettò macchine volanti, sommergibili e carri armati, rimasti però solo su carta. — Curiosità rinascimentali
+Michelangelo dipinse la volta della Cappella Sistina lavorando per lo più in piedi, non sdraiato come si crede spesso. — Curiosità rinascimentali
+Il termine rinascimento fu usato per la prima volta in senso storico dagli storici dell'Ottocento. — Storiografia
+Le botteghe artigiane rinascimentali erano scuole dove i giovani apprendisti imparavano tecniche pittoriche e scultoree. — Storia del Rinascimento
+Copernico elaborò la teoria eliocentrica, pubblicata poco prima della sua morte nel 1543. — Storia del Rinascimento
+Il Rinascimento riscoprì e studiò con grande interesse i testi classici greci e latini. — Storia del Rinascimento
+La Gioconda di Leonardo da Vinci non ha sopracciglia visibili, forse per un restauro o per moda dell'epoca. — Curiosità rinascimentali
+Le corti rinascimentali, come quella di Urbino, erano centri di cultura, arte e diplomazia. — Storia del Rinascimento
+Botticelli dipinse la Nascita di Venere per la famiglia Medici, ispirandosi alla mitologia classica. — Curiosità rinascimentali
+L'invenzione della stampa contribuì a diffondere rapidamente le idee umanistiche in tutta Europa. — Storia del Rinascimento
+Leonardo da Vinci studiò l'anatomia umana dissezionando personalmente diversi cadaveri per le sue ricerche. — Curiosità rinascimentali
+Il mecenatismo permetteva agli artisti di dedicarsi alle proprie opere grazie al sostegno economico di ricchi committenti. — Storia del Rinascimento
+Raffaello morì a soli 37 anni, lo stesso giorno del suo compleanno secondo alcune fonti. — Curiosità rinascimentali
+L'Umanesimo poneva l'uomo e le sue capacità al centro della riflessione filosofica e culturale. — Storia del Rinascimento
+Il David di Michelangelo fu scolpito da un unico blocco di marmo già parzialmente lavorato da altri artisti. — Curiosità rinascimentali
+Le esplorazioni geografiche rinascimentali ampliarono enormemente la conoscenza europea del mondo. — Storia del Rinascimento
+Leonardo da Vinci lasciò incompiuti molti dei suoi progetti e dipinti, distratto da nuovi interessi. — Curiosità rinascimentali
+La tecnica dello sfumato, perfezionata da Leonardo, sfuma i contorni per creare effetti di morbidezza. — Curiosità rinascimentali
+Niccolò Machiavelli scrisse Il Principe agli inizi del Cinquecento, opera fondamentale del pensiero politico. — Storia del Rinascimento
+Le botteghe rinascimentali producevano anche colori e pigmenti, spesso con ingredienti rari e costosi. — Curiosità rinascimentali
+Il mercante e banchiere rinascimentale utilizzava già tecniche di contabilità simili alla partita doppia moderna. — Storia del Rinascimento
+Filippo Brunelleschi fu anche un pioniere della prospettiva geometrica applicata all'architettura. — Storia del Rinascimento
+Il Rinascimento vide una rinnovata attenzione allo studio diretto della natura da parte di artisti e scienziati. — Storia del Rinascimento
+Leonardo da Vinci teneva i suoi taccuini pieni di disegni, appunti scientifici e osservazioni sparse. — Curiosità rinascimentali
+La città di Venezia divenne un centro editoriale di primaria importanza grazie alla stampa rinascimentale. — Storia del Rinascimento
+Tiziano fu uno dei pittori più richiesti dalle corti europee del Rinascimento maturo. — Storia del Rinascimento
+Le prime accademie scientifiche e artistiche nacquero proprio durante il periodo rinascimentale. — Storia del Rinascimento
+Leon Battista Alberti scrisse trattati fondamentali su architettura, pittura e scultura rinascimentale. — Storia del Rinascimento
+Il concetto di uomo universale, capace in più discipline, trovò in Leonardo da Vinci il suo esempio più celebre. — Curiosità rinascimentali
+Le vetrerie di Murano, vicino Venezia, produssero vetri pregiati molto richiesti in tutta Europa rinascimentale. — Curiosità rinascimentali
+Il Rinascimento si diffuse gradualmente dall'Italia al resto d'Europa nel corso del Cinquecento. — Storia del Rinascimento
+Leonardo da Vinci lavorò come ingegnere militare per diverse signorie italiane del suo tempo. — Curiosità rinascimentali
+La tavolozza dei pittori rinascimentali si arricchì di nuovi pigmenti provenienti dai commerci con l'Oriente. — Curiosità rinascimentali
+Erasmo da Rotterdam fu una delle figure di spicco dell'umanesimo europeo tra Quattrocento e Cinquecento. — Storia del Rinascimento
+La camera oscura era già nota e sperimentata da alcuni studiosi rinascimentali interessati all'ottica. — Curiosità rinascimentali
+Il Rinascimento italiano si divide convenzionalmente in un primo periodo quattrocentesco e uno maturo cinquecentesco. — Storiografia
+Le famiglie nobili rinascimentali commissionavano ritratti come simbolo di prestigio e memoria familiare. — Storia del Rinascimento
+Leonardo da Vinci morì in Francia nel 1519, ospite del re Francesco I. — Curiosità rinascimentali
+Il pittore rinascimentale utilizzava spesso la tempera all'uovo prima della diffusione della pittura a olio. — Curiosità rinascimentali
+Il concetto di prospettiva aerea, usato da Leonardo, sfrutta la foschia per dare profondità ai paesaggi dipinti. — Curiosità rinascimentali
+Baldassarre Castiglione scrisse Il Cortegiano, trattato sul comportamento ideale a corte nel Rinascimento. — Storia del Rinascimento
+Le università rinascimentali italiane, come Padova, erano rinomate per lo studio di medicina e scienze. — Storia del Rinascimento
+Il Rinascimento vide una rinnovata fioritura degli studi matematici applicati all'arte e all'architettura. — Storia del Rinascimento
+Sandro Botticelli lavorò a lungo per la famiglia Medici prima di un periodo di crisi religiosa negli ultimi anni. — Curiosità rinascimentali
+La prima guerra mondiale iniziò nel luglio del 1914 e si concluse nel novembre del 1918. — Storia
+L'attentato di Sarajevo, il 28 giugno 1914, fu uno dei fattori scatenanti del conflitto. — Storia
+La guerra di trincea caratterizzò gran parte del fronte occidentale della prima guerra mondiale. — Storia
+Gli Stati Uniti entrarono nella prima guerra mondiale nel 1917. — Storia
+L'Italia entrò nella prima guerra mondiale nel 1915, a fianco dell'Intesa. — Storia
+Il trattato di Versailles del 1919 pose fine formalmente alla prima guerra mondiale. — Storia
+La battaglia di Caporetto, nel 1917, fu una grave sconfitta per l'esercito italiano. — Storia
+La battaglia della Somme, nel 1916, fu una delle più sanguinose della prima guerra mondiale. — Storia
+I gas tossici furono usati come arma su larga scala per la prima volta durante la prima guerra mondiale. — Storia
+La rivoluzione russa del 1917 portò all'uscita della Russia dal conflitto l'anno seguente. — Storia
+La seconda guerra mondiale iniziò il primo settembre 1939 con l'invasione della Polonia. — Storia
+La seconda guerra mondiale si concluse nel 1945, dopo la resa del Giappone in settembre. — Storia
+Lo sbarco in Normandia, il 6 giugno 1944, è noto anche come D-Day. — Storia
+La battaglia di Stalingrado, tra il 1942 e il 1943, segnò una svolta sul fronte orientale. — Storia
+Gli Stati Uniti entrarono nella seconda guerra mondiale dopo l'attacco a Pearl Harbor nel dicembre 1941. — Storia
+La Shoah causò lo sterminio sistematico di milioni di ebrei europei durante la seconda guerra mondiale. — Storia
+Il codice Enigma, usato dai tedeschi, fu decifrato dagli alleati grazie al lavoro di crittoanalisti come Alan Turing. — Storia
+La battaglia d'Inghilterra, nel 1940, vide la Royal Air Force contrastare i bombardamenti tedeschi. — Storia
+Le bombe atomiche furono sganciate su Hiroshima e Nagasaki nell'agosto del 1945. — Storia
+La linea Maginot era un sistema di fortificazioni costruito dalla Francia lungo il confine con la Germania. — Storia
+Il razionamento alimentare fu una pratica comune in molti paesi coinvolti nella seconda guerra mondiale. — Storia
+La resistenza partigiana in Italia si sviluppò soprattutto dopo l'armistizio dell'8 settembre 1943. — Storia
+La conferenza di Yalta, nel febbraio 1945, riunì i leader alleati per discutere l'assetto postbellico. — Storia
+Il fronte orientale della seconda guerra mondiale fu teatro di alcuni degli scontri più estesi del conflitto. — Storia
+La Croce Rossa svolse un ruolo importante nell'assistenza a feriti e prigionieri durante entrambe le guerre mondiali. — Storia
+Le donne furono impiegate massicciamente nell'industria bellica durante la seconda guerra mondiale. — Storia
+Il codice Morse e la radio furono strumenti fondamentali per le comunicazioni militari nel Novecento. — Storia
+La battaglia delle Ardenne, nell'inverno 1944-1945, fu l'ultima grande offensiva tedesca a ovest. — Storia
+La società delle nazioni fu istituita dopo la prima guerra mondiale con l'obiettivo di mantenere la pace. — Storia
+Le nazioni unite furono fondate nel 1945, dopo la fine della seconda guerra mondiale. — Storia
+I sommergibili tedeschi, gli U-Boot, misero a dura prova i rifornimenti alleati nell'Atlantico. — Storia
+La battaglia di Midway, nel giugno 1942, segnò una svolta nel fronte del Pacifico. — Storia
+Il piano Marshall, avviato nel 1948, sostenne la ricostruzione economica dell'Europa occidentale nel dopoguerra. — Storia
+L'aviazione ebbe un ruolo strategico crescente, passando da mezzo di ricognizione a vera arma offensiva. — Storia
+La battaglia di Verdun, nel 1916, durò quasi tutto l'anno e causò perdite enormi su entrambi i fronti. — Storia
+Il trattato di non aggressione tra Germania e Unione Sovietica fu firmato nell'agosto del 1939. — Storia
+La liberazione dei campi di concentramento nel 1945 rivelò l'entità della persecuzione nazista. — Storia
+La battaglia di El Alamein, nel 1942, fu decisiva per le sorti della campagna nordafricana. — Storia
+Il fronte italiano della prima guerra mondiale si combatté in gran parte lungo le Alpi e l'Isonzo. — Storia
+La censura sulla stampa fu applicata in molti paesi belligeranti durante entrambi i conflitti mondiali. — Storia
+Il razzo V2 tedesco fu la prima arma missilistica balistica impiegata in un conflitto bellico. — Storia
+La resa della Germania nazista fu firmata l'8 maggio 1945, giorno noto come Victory in Europe Day. — Storia
+La spagnola, un'epidemia influenzale, si diffuse a livello mondiale negli ultimi mesi della prima guerra mondiale. — Storia
+Le lettere dal fronte erano spesso l'unico mezzo di contatto tra i soldati e le loro famiglie. — Storia
+Il Giappone occupò ampie zone dell'Asia orientale e del Pacifico prima e durante la seconda guerra mondiale. — Storia
+La battaglia di Iwo Jima, nel 1945, fu uno degli scontri più duri nel Pacifico. — Storia
+Gli accordi di Monaco del 1938 cercarono di evitare il conflitto cedendo territori cecoslovacchi alla Germania. — Storia
+Le fabbriche convertirono rapidamente la produzione civile in produzione bellica durante entrambi i conflitti. — Storia
+La ricostruzione postbellica in Europa richiese anni di sforzi economici e sociali dopo il 1945. — Storia
+Il ricordo delle due guerre mondiali è oggi mantenuto attraverso musei, monumenti e giornate della memoria. — Storia
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
