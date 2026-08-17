@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 43</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 43: restaurazione e moti liberali -->
+<div id="capitolo-43-restaurazione-moti-liberali" class="capitolo-storia">
+  <p class="titolo-capitolo">43 - Restaurazione e moti liberali - dal 1815 al 1848</p>
+
+  <p class="titolo-capitolo">Il Congresso di Vienna</p>
+  <p>Dopo la sconfitta definitiva di Napoleone, le principali potenze europee si riunirono a Vienna, tra il 1814 e il 1815, in un grande congresso diplomatico con l'obiettivo di ridisegnare gli equilibri politici e territoriali del continente, sconvolti da oltre vent'anni di guerre rivoluzionarie e napoleoniche.</p>
+  <p>I protagonisti principali di questo congresso, tra cui l'austriaco Klemens von Metternich, il russo zar Alessandro I e i rappresentanti di Inghilterra, Prussia e Francia, si ispirarono a due principi fondamentali: quello di legittimità, secondo cui i sovrani spodestati dalla rivoluzione e da Napoleone dovevano essere ripristinati sui propri troni, e quello di equilibrio tra le potenze, per evitare che uno stato diventasse eccessivamente forte rispetto agli altri.</p>
+  <p>Sulla base di questi principi, molti territori europei tornarono sotto il controllo delle antiche dinastie regnanti prima della rivoluzione francese, un processo che gli storici chiamano appunto Restaurazione, anche se non fu quasi mai possibile cancellare del tutto le trasformazioni sociali e istituzionali introdotte negli anni precedenti.</p>
+
+  <p class="titolo-capitolo">L'Italia e l'Europa dopo Vienna</p>
+  <p>In Italia, il Congresso di Vienna ripristinò una situazione di forte frammentazione politica, con la penisola divisa in numerosi stati, molti dei quali sotto diretto controllo o forte influenza dell'Austria, come il Lombardo-Veneto, mentre il Regno di Sardegna, sotto la dinastia dei Savoia, si rafforzava nel nord-ovest della penisola.</p>
+  <p>Anche in altre parti d'Europa vennero ridisegnati i confini territoriali secondo la logica dell'equilibrio tra le potenze, spesso senza tenere in adeguata considerazione i sentimenti nazionali o le aspirazioni di autogoverno delle diverse popolazioni coinvolte, un fattore che avrebbe generato tensioni destinate a esplodere nei decenni successivi.</p>
+  <p>Per garantire il mantenimento di questo nuovo assetto politico, le principali potenze europee crearono anche un sistema di alleanze, chiamato Santa Alleanza, con l'obiettivo dichiarato di reprimere ogni tentativo rivoluzionario o liberale che potesse minacciare l'ordine appena ristabilito.</p>
+
+  <p class="titolo-capitolo">Liberalismo e nazionalismo</p>
+  <p>Nonostante gli sforzi della Restaurazione per ripristinare l'ordine politico precedente alla rivoluzione, le idee di libertà, uguaglianza e sovranità popolare diffuse durante il periodo rivoluzionario e napoleonico non scomparvero, ma continuarono a diffondersi tra ampi settori della società europea, soprattutto tra la borghesia colta.</p>
+  <p>Si sviluppò così un movimento politico e culturale chiamato liberalismo, che rivendicava principi come costituzioni scritte capaci di limitare il potere dei sovrani, la separazione dei poteri e maggiori libertà individuali, spesso in aperto contrasto con i governi assolutisti restaurati dal Congresso di Vienna.</p>
+  <p>Parallelamente si diffuse anche il nazionalismo, un sentimento e movimento politico basato sull'idea che ogni popolo, unito da lingua, storia e cultura comuni, avesse il diritto di costituirsi in una propria nazione indipendente, un principio destinato a mettere profondamente in crisi i grandi imperi multinazionali europei, come quello austriaco.</p>
+
+  <p class="titolo-capitolo">I primi moti rivoluzionari</p>
+  <p>Nel corso degli anni '20 e '30 dell'Ottocento, queste tensioni politiche sfociarono in una serie di moti rivoluzionari in diverse parti d'Europa, spesso organizzati da società segrete, come la Carboneria in Italia, che cospiravano per ottenere costituzioni liberali o l'indipendenza nazionale.</p>
+  <p>Tra i moti più significativi di questo periodo ricordiamo quelli scoppiati in Italia nel 1820-21, in particolare a Napoli e in Piemonte, e quelli del 1830-31, che coinvolsero diverse regioni italiane oltre a Francia, Belgio e Polonia, anche se quasi tutti questi tentativi furono duramente repressi dalle forze militari degli stati assolutisti, spesso con l'aiuto diretto dell'Austria.</p>
+  <p>Nonostante questi ripetuti fallimenti, i moti rivoluzionari di questo periodo contribuirono a mantenere vivo e a diffondere ulteriormente il sentimento liberale e nazionale in tutta Europa, ponendo le premesse per un nuovo e più ampio ciclo rivoluzionario, che sarebbe esploso nel 1848 in quella che gli storici chiamano la "primavera dei popoli", di cui parleremo nel prossimo capitolo.</p>
+</div>
+
+
+<!-- fine capitolo storia 43-->
+
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story44.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

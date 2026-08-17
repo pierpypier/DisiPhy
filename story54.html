@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 54</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 54: seconda guerra mondiale -->
+<div id="capitolo-54-seconda-guerra-mondiale" class="capitolo-storia">
+  <p class="titolo-capitolo">54 - Seconda guerra mondiale - dal 1939 al 1945</p>
+
+  <p class="titolo-capitolo">Lo scoppio del conflitto</p>
+  <p>Il 1° settembre del 1939, la Germania nazista invase la Polonia, un'aggressione che spinse Francia e Gran Bretagna a dichiarare guerra alla Germania, dando così inizio alla seconda guerra mondiale, il conflitto più devastante e sanguinoso di tutta la storia dell'umanità.</p>
+  <p>Nelle prime fasi della guerra, la Germania ottenne una serie impressionante di rapide vittorie, grazie a una nuova tattica militare chiamata "guerra lampo", basata sull'uso coordinato e veloce di carri armati e aviazione, che permise la rapida conquista di Polonia, Danimarca, Norvegia, Paesi Bassi, Belgio e, nel giugno del 1940, la stessa Francia.</p>
+  <p>Nello stesso mese, l'Italia fascista, guidata da Mussolini, decise di entrare in guerra a fianco della Germania, convinta di poter approfittare rapidamente della vittoria tedesca per ottenere vantaggi territoriali, un calcolo che si sarebbe rivelato in gran parte illusorio.</p>
+
+  <p class="titolo-capitolo">L'espansione del conflitto</p>
+  <p>Dopo la caduta della Francia, la Gran Bretagna, guidata dal primo ministro Winston Churchill, rimase l'unica grande potenza europea a resistere ancora alla Germania, respingendo con successo, nell'estate del 1940, un intenso tentativo di invasione aerea tedesca, noto come battaglia d'Inghilterra.</p>
+  <p>Nel giugno del 1941, Hitler, tradendo il patto di non aggressione firmato in precedenza, invase l'Unione Sovietica con un'imponente operazione militare chiamata Operazione Barbarossa, aprendo un nuovo e vastissimo fronte orientale che avrebbe assorbito, nel corso della guerra, la maggior parte delle forze militari tedesche.</p>
+  <p>Nel dicembre dello stesso anno, il Giappone, alleato di Germania e Italia nel cosiddetto Patto Tripartito, attaccò a sorpresa la base navale statunitense di Pearl Harbor, nelle Hawaii, un evento che portò gli Stati Uniti a entrare direttamente nel conflitto, trasformandolo definitivamente in una guerra di dimensioni globali.</p>
+
+  <p class="titolo-capitolo">La svolta della guerra</p>
+  <p>Tra la fine del 1942 e l'inizio del 1943, il conflitto conobbe una svolta decisiva a sfavore delle potenze dell'Asse, Germania, Italia e Giappone: sul fronte orientale, l'Armata Rossa sovietica inflisse una durissima sconfitta all'esercito tedesco nella battaglia di Stalingrado, mentre nel Pacifico gli Stati Uniti iniziarono a riconquistare progressivamente il controllo sui mari contro il Giappone.</p>
+  <p>Nel luglio del 1943, gli Alleati sbarcarono in Sicilia, dando inizio alla campagna d'Italia, un evento che portò rapidamente alla caduta del regime fascista di Mussolini e all'armistizio dell'8 settembre, con cui l'Italia si arrese agli Alleati, anche se il paese rimase comunque teatro di guerra fino al 1945, diviso tra un'Italia occupata dai tedeschi nel centro-nord, dove nacque un'intensa resistenza partigiana, e un'Italia liberata al sud.</p>
+  <p>Il 6 giugno del 1944, gli Alleati sbarcarono in Normandia, in Francia, aprendo un nuovo fronte occidentale che, insieme alla continua avanzata sovietica da est, avrebbe portato progressivamente alla liberazione dell'Europa occupata dai nazisti.</p>
+
+  <p class="titolo-capitolo">La fine della guerra in Europa</p>
+  <p>Nella primavera del 1945, con gli eserciti alleati e sovietici che avanzavano rapidamente verso il cuore della Germania da direzioni opposte, il regime nazista si trovò ormai in una situazione militare disperata e senza alcuna possibilità di vittoria.</p>
+  <p>Il 30 aprile del 1945, con le truppe sovietiche ormai giunte a Berlino, Adolf Hitler si tolse la vita nel proprio bunker sotterraneo, mentre pochi giorni prima, in Italia, anche Mussolini era stato catturato e giustiziato da partigiani italiani mentre tentava la fuga.</p>
+  <p>L'8 maggio del 1945, la Germania firmò la resa incondizionata, ponendo ufficialmente fine al conflitto sul fronte europeo, anche se la guerra sarebbe proseguita ancora per alcuni mesi nel Pacifico, contro il Giappone.</p>
+
+  <p class="titolo-capitolo">La fine della guerra e le bombe atomiche</p>
+  <p>Nel Pacifico, il Giappone continuò a combattere anche dopo la resa tedesca, nonostante una situazione militare ormai gravemente compromessa, spingendo gli Stati Uniti a decidere di utilizzare un'arma nuova e terribile, la bomba atomica, sviluppata segretamente nel corso della guerra.</p>
+  <p>Il 6 e il 9 agosto del 1945, gli Stati Uniti sganciarono due bombe atomiche sulle città giapponesi di Hiroshima e Nagasaki, causando centinaia di migliaia di morti, in gran parte civili, e devastazioni di proporzioni mai viste prima, un evento che convinse infine il Giappone ad arrendersi incondizionatamente il 15 agosto del 1945.</p>
+  <p>La seconda guerra mondiale, conclusasi ufficialmente nel settembre del 1945, causò complessivamente la morte di decine di milioni di persone in tutto il mondo, sconvolgendo profondamente gli equilibri politici, economici e sociali del pianeta, e ponendo le premesse per il nuovo assetto mondiale del secondo dopoguerra, di cui parleremo nei prossimi capitoli, a partire dalla tragedia della Shoah.</p>
+</div>
+
+
+
+<!-- fine capitolo storia 54-->
+
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story55.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>
