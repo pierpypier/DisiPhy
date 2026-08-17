@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 44</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 44: primavera dei popoli -->
+<div id="capitolo-44-primavera-popoli" class="capitolo-storia">
+  <p class="titolo-capitolo">44 - Primavera dei popoli - dal 1848 al 1849</p>
+
+  <p class="titolo-capitolo">Le cause di un anno rivoluzionario</p>
+  <p>Nel 1848, l'Europa fu attraversata da un'ondata rivoluzionaria di proporzioni eccezionali, che coinvolse quasi simultaneamente numerosi stati del continente, un fenomeno così ampio e coordinato da essere ricordato dagli storici come "primavera dei popoli".</p>
+  <p>Alla base di questa esplosione rivoluzionaria vi era una combinazione di fattori diversi: da un lato le tensioni politiche accumulate negli anni della Restaurazione, legate alla diffusione delle idee liberali e nazionali, dall'altro una grave crisi economica e alimentare, aggravata da cattivi raccolti e da una difficile crisi agricola che colpì duramente le classi più povere della popolazione.</p>
+  <p>A questi fattori si aggiungevano le difficili condizioni di vita dei nuovi ceti operai nati dalla rivoluzione industriale, sempre più insofferenti verso condizioni di lavoro durissime e salari insufficienti, un malcontento sociale che si sommò alle rivendicazioni politiche liberali e nazionali.</p>
+
+  <p class="titolo-capitolo">La rivoluzione in Francia</p>
+  <p>Il movimento rivoluzionario ebbe inizio proprio in Francia, nel febbraio del 1848, dove una rivolta popolare a Parigi costrinse il re Luigi Filippo d'Orléans ad abdicare, portando alla proclamazione della Seconda Repubblica francese.</p>
+  <p>Questo evento ebbe un effetto immediato in tutta Europa, incoraggiando movimenti rivoluzionari simili in numerosi altri stati del continente, che videro nella caduta della monarchia francese un segnale incoraggiante per le proprie aspirazioni liberali e nazionali.</p>
+
+  <p class="titolo-capitolo">La rivoluzione negli imperi multinazionali</p>
+  <p>Nell'impero austriaco, la notizia della rivoluzione francese scatenò una serie di rivolte in diverse parti del territorio, dalla stessa Vienna, dove il potente cancelliere Metternich, simbolo della politica repressiva della Restaurazione, fu costretto a fuggire, fino all'Ungheria e ai territori italiani sotto controllo austriaco.</p>
+  <p>Anche nei numerosi piccoli stati tedeschi si diffusero movimenti rivoluzionari che chiedevano riforme liberali e, soprattutto, l'unificazione nazionale tedesca, portando alla convocazione di un'assemblea nazionale a Francoforte, incaricata di elaborare una costituzione per una futura Germania unita.</p>
+  <p>Queste rivolte misero in seria difficoltà, per la prima volta dopo decenni, la stabilità dei grandi imperi multinazionali europei, come quello austriaco, minacciato dalle rivendicazioni nazionali di popoli come ungheresi, italiani e diverse popolazioni slave.</p>
+
+  <p class="titolo-capitolo">I moti rivoluzionari in Italia</p>
+  <p>Anche in Italia, il 1848 vide un'intensa stagione di moti rivoluzionari, con insurrezioni popolari in diverse città, tra cui la celebre rivolta di Milano contro gli austriaci, ricordata come le "Cinque giornate di Milano", e sommosse anche a Venezia, Roma e Napoli.</p>
+  <p>Spinto da questo clima rivoluzionario, il re del Regno di Sardegna, Carlo Alberto di Savoia, decise di dichiarare guerra all'Austria per sostenere le rivolte italiane, dando inizio a quella che viene chiamata prima guerra d'indipendenza italiana, con l'obiettivo di cacciare gli austriaci dal territorio della penisola.</p>
+  <p>Anche in altri stati italiani, come lo Stato Pontificio e il Regno delle Due Sicilie, i sovrani furono costretti dalla pressione popolare a concedere costituzioni liberali, chiamate statuti, mentre a Roma venne addirittura proclamata per un breve periodo una repubblica, dopo la fuga del papa Pio IX dalla città.</p>
+
+  <p class="titolo-capitolo">Il fallimento della rivoluzione</p>
+  <p>Nonostante l'ampiezza e l'intensità di questi movimenti rivoluzionari, la maggior parte di essi si concluse, nel giro di uno o due anni, con un sostanziale fallimento: gli eserciti degli stati assolutisti, riorganizzatisi dopo il momento di iniziale sorpresa, riuscirono progressivamente a riconquistare il controllo della situazione.</p>
+  <p>In Italia, l'esercito piemontese fu sconfitto dagli austriaci nelle battaglie di Custoza, nel 1848, e definitivamente a Novara, nel 1849, ponendo fine alla prima guerra d'indipendenza, mentre anche le repubbliche proclamate a Roma e Venezia furono infine sconfitte e ripristinati i precedenti governi.</p>
+  <p>Nonostante questi fallimenti immediati, la primavera dei popoli del 1848 lasciò comunque un'eredità importante: contribuì infatti a diffondere ulteriormente e in modo ancora più ampio le idee liberali e nazionali in tutta Europa, ponendo le basi culturali e politiche per i successivi processi di unificazione nazionale, a partire proprio dal Risorgimento italiano, di cui parleremo nel prossimo capitolo.</p>
+</div>
+
+
+<!-- fine capitolo storia 44-->
+
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story45.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

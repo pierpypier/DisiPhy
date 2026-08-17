@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 39</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 39: rivoluzione industriale -->
+<div id="capitolo-39-rivoluzione-industriale" class="capitolo-storia">
+  <p class="titolo-capitolo">39 - Rivoluzione industriale - dal 1760 al 1840</p>
+
+  <p class="titolo-capitolo">Le premesse della rivoluzione industriale</p>
+  <p>A partire dalla seconda metà del Settecento, in Inghilterra ebbe inizio un profondo processo di trasformazione economica e produttiva, chiamato rivoluzione industriale, destinato a cambiare radicalmente il modo di produrre beni e, di conseguenza, la struttura stessa della società.</p>
+  <p>L'Inghilterra si trovava in una posizione particolarmente favorevole per dare avvio a questo processo, grazie alla disponibilità di importanti risorse naturali come carbone e ferro, a un sistema finanziario e bancario già ben sviluppato, e a una solida rete di commerci internazionali costruita anche grazie al proprio impero coloniale.</p>
+  <p>A questi fattori si aggiungeva inoltre una situazione sociale favorevole, con una classe di proprietari terrieri e mercanti disposti a investire capitali in nuove attività produttive, e una manodopera resa disponibile anche dalle trasformazioni già avvenute in agricoltura.</p>
+
+  <p class="titolo-capitolo">Le innovazioni tecniche fondamentali</p>
+  <p>Uno degli elementi centrali della rivoluzione industriale fu l'introduzione di nuove macchine capaci di sostituire, almeno in parte, il lavoro manuale, a partire dal settore tessile, dove macchine come il telaio meccanico permisero di aumentare enormemente la produttività rispetto alla lavorazione artigianale tradizionale.</p>
+  <p>Un'innovazione ancora più determinante fu il perfezionamento della macchina a vapore, realizzato in particolare dall'ingegnere scozzese James Watt a partire dagli anni '60 del Settecento, che permise di sfruttare l'energia del vapore per azionare macchinari sempre più potenti ed efficienti.</p>
+  <p>Questa nuova fonte di energia, non più dipendente dalla forza umana, animale o dall'acqua corrente come in passato, permise di costruire fabbriche anche lontano dai corsi d'acqua, favorendo una concentrazione della produzione in grandi stabilimenti industriali.</p>
+
+  <p class="titolo-capitolo">La nascita della fabbrica moderna</p>
+  <p>Con la diffusione di queste nuove tecnologie, si affermò progressivamente un nuovo modello produttivo, la fabbrica, in cui numerosi lavoratori si riunivano in un unico luogo per utilizzare macchinari complessi e costosi, sostituendo il precedente sistema basato sul lavoro artigianale svolto nelle botteghe o direttamente nelle case dei lavoratori.</p>
+  <p>Questo nuovo modello produttivo comportò anche una diversa organizzazione del lavoro, con orari di lavoro rigidi, spesso molto lunghi e faticosi, ritmi produttivi dettati dal funzionamento delle macchine, e una crescente divisione dei compiti tra i diversi lavoratori, ciascuno specializzato in una singola fase del processo produttivo.</p>
+  <p>Le condizioni di lavoro nelle prime fabbriche erano spesso durissime, con l'impiego diffuso anche di donne e bambini, sottoposti a lunghi orari di lavoro in ambienti poco salubri e pericolosi, e retribuzioni molto basse, condizioni che avrebbero generato, nei decenni successivi, forti tensioni sociali.</p>
+
+  <p class="titolo-capitolo">Nuovi sistemi di trasporto</p>
+  <p>La rivoluzione industriale portò anche importanti innovazioni nel campo dei trasporti, fondamentali per il trasporto rapido ed economico di materie prime e prodotti finiti su lunghe distanze, elemento indispensabile per sostenere la crescente produzione industriale.</p>
+  <p>Tra queste innovazioni spicca in particolare la ferrovia, resa possibile dall'applicazione della macchina a vapore alla locomozione, con la prima linea ferroviaria pubblica al mondo, inaugurata in Inghilterra nel 1825, seguita nel giro di pochi decenni dalla costruzione di estese reti ferroviarie in tutta Europa.</p>
+  <p>Anche il trasporto marittimo fu trasformato dall'introduzione di navi a vapore, che progressivamente affiancarono e sostituirono le tradizionali imbarcazioni a vela, rendendo i trasporti transoceanici più rapidi, regolari e affidabili rispetto al passato.</p>
+
+  <p class="titolo-capitolo">Conseguenze sociali della rivoluzione industriale</p>
+  <p>La rivoluzione industriale trasformò profondamente la struttura sociale ed economica dei paesi coinvolti, favorendo un massiccio fenomeno di urbanizzazione, con milioni di persone che, in cerca di lavoro, si trasferirono dalle campagne alle città industriali in rapida crescita.</p>
+  <p>In questo periodo emersero anche nuove classi sociali fondamentali per la storia successiva: la borghesia industriale, formata dai proprietari delle fabbriche e dei capitali investiti nella produzione, e il proletariato industriale, cioè i lavoratori salariati impiegati nelle fabbriche, spesso in condizioni di vita e di lavoro molto difficili.</p>
+  <p>Le difficili condizioni di vita e di lavoro del proletariato industriale avrebbero portato, nel corso dell'Ottocento, alla nascita dei primi movimenti operai organizzati, e allo sviluppo di nuove ideologie politiche e sociali, come il socialismo, destinate a segnare profondamente la storia politica dei secoli successivi, temi che approfondiremo nei capitoli dedicati all'Ottocento.</p>
+</div>
+
+<!-- fine capitolo storia 39-->
+
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story40.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

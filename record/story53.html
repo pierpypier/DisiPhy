@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 53</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 53: nazismo in germania -->
+<div id="capitolo-53-nazismo-germania" class="capitolo-storia">
+  <p class="titolo-capitolo">53 - Nazismo in Germania - dal 1933 al 1939</p>
+
+  <p class="titolo-capitolo">La Germania dopo la prima guerra mondiale</p>
+  <p>Dopo la sconfitta nella prima guerra mondiale, la Germania si trasformò in una repubblica democratica, chiamata Repubblica di Weimar dal nome della città dove venne redatta la nuova costituzione, ma questo nuovo stato dovette affrontare fin dall'inizio gravissime difficoltà economiche e politiche.</p>
+  <p>Il paese era gravato dalle pesanti riparazioni di guerra imposte dal trattato di Versailles, oltre a una fortissima instabilità politica interna, con continui tentativi di colpi di stato sia da parte di estremisti di destra che di sinistra, e un forte risentimento nazionalista diffuso in ampi strati della popolazione tedesca per le umilianti condizioni della sconfitta.</p>
+  <p>Nel 1923, la Germania attraversò inoltre un periodo di iperinflazione drammatica, durante il quale la moneta tedesca perse quasi completamente il proprio valore, distruggendo i risparmi di milioni di famiglie tedesche e alimentando ulteriormente la sfiducia verso le istituzioni democratiche appena nate.</p>
+
+  <p class="titolo-capitolo">L'ascesa di Adolf Hitler</p>
+  <p>In questo clima di instabilità, Adolf Hitler, un ex caporale austriaco dell'esercito tedesco durante la prima guerra mondiale, assunse la guida del Partito Nazionalsocialista Tedesco dei Lavoratori, meglio conosciuto come partito nazista, un movimento politico di estrema destra caratterizzato da un forte nazionalismo, antisemitismo e anticomunismo.</p>
+  <p>Dopo un fallito tentativo di colpo di stato nel 1923, che gli costò un breve periodo di detenzione, Hitler decise di perseguire il potere attraverso vie formalmente legali, sfruttando abilmente la propaganda politica e le difficoltà economiche del paese per aumentare progressivamente il consenso verso il proprio partito.</p>
+  <p>La gravissima crisi economica mondiale scatenata dal crollo di Wall Street nel 1929 colpì duramente anche la Germania, causando un drammatico aumento della disoccupazione e un forte malcontento popolare, un terreno particolarmente favorevole alla crescita del consenso elettorale del partito nazista negli anni successivi.</p>
+
+  <p class="titolo-capitolo">La conquista del potere</p>
+  <p>Nel gennaio del 1933, dopo una serie di elezioni che avevano visto crescere costantemente i consensi del partito nazista, il presidente tedesco Paul von Hindenburg nominò Hitler cancelliere, cioè capo del governo tedesco, sperando erroneamente di poterne controllare l'azione politica attraverso un governo di coalizione con altre forze conservatrici.</p>
+  <p>Sfruttando abilmente un incendio di origine sospetta al palazzo del parlamento tedesco, il Reichstag, Hitler ottenne poteri emergenziali straordinari, che utilizzò per reprimere duramente i partiti di opposizione, in particolare comunisti e socialisti, e per far approvare leggi che gli conferivano progressivamente pieni poteri legislativi.</p>
+  <p>Nel giro di pochi mesi, Hitler riuscì a smantellare completamente le istituzioni democratiche della Repubblica di Weimar, vietando tutti i partiti politici tranne quello nazista e instaurando così una dittatura a partito unico, consolidata definitivamente dopo la morte di Hindenburg, nel 1934, quando Hitler unificò nella propria persona le cariche di cancelliere e presidente, assumendo il titolo di Führer, cioè "guida" o "capo" della nazione tedesca.</p>
+
+  <p class="titolo-capitolo">Il regime nazista</p>
+  <p>Il regime nazista sviluppò un controllo totalitario sulla società tedesca, ancora più pervasivo rispetto al fascismo italiano, attraverso un'intensa propaganda ideologica, un forte controllo sui mezzi di informazione e sull'istruzione, e una polizia politica segreta, la famigerata Gestapo, incaricata di reprimere ogni forma di opposizione al regime.</p>
+  <p>Elemento centrale dell'ideologia nazista era un'ideologia razzista che considerava il popolo tedesco, definito "ariano", come razzialmente superiore rispetto ad altri popoli, in particolare rispetto agli ebrei, individuati come principali nemici interni ed esterni della nazione tedesca attraverso una propaganda antisemita sempre più aggressiva e violenta.</p>
+  <p>Fin dal 1933, il regime nazista promosse una crescente discriminazione legale e sociale nei confronti della popolazione ebraica tedesca, culminata nel 1935 con le leggi di Norimberga, che privarono gli ebrei della cittadinanza tedesca e vietarono i matrimoni misti, e successivamente con episodi di violenza sempre più diffusa, come la Notte dei Cristalli, nel novembre 1938, durante la quale vennero devastati e distrutti negozi, sinagoghe e abitazioni ebraiche in tutta la Germania.</p>
+
+  <p class="titolo-capitolo">Verso la guerra</p>
+  <p>Sul piano della politica estera, Hitler perseguì fin da subito una politica aggressiva ed espansionistica, violando apertamente le clausole militari imposte dal trattato di Versailles, riarmando rapidamente la Germania, e rivendicando l'unione con l'Austria, realizzata con l'annessione forzata del 1938, chiamata Anschluss.</p>
+  <p>Nello stesso anno, Hitler ottenne inoltre, con l'accordo delle principali potenze europee riunite nella conferenza di Monaco, l'annessione dei territori tedeschi della Cecoslovacchia, in una politica che le potenze occidentali, in particolare Gran Bretagna e Francia, tentarono inizialmente di gestire attraverso concessioni territoriali, chiamata politica dell'appeasement, nella speranza di evitare un nuovo conflitto generale.</p>
+  <p>Questa politica di concessioni si rivelò però fallimentare: nel 1939, dopo aver occupato l'intera Cecoslovacchia e aver siglato un sorprendente patto di non aggressione con l'Unione Sovietica, Hitler invase la Polonia, un'aggressione che avrebbe spinto Francia e Gran Bretagna a dichiarare finalmente guerra alla Germania, dando inizio alla seconda guerra mondiale, di cui parleremo nel prossimo capitolo.</p>
+</div>
+
+
+<!-- fine capitolo storia 53-->
+
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story54.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>
