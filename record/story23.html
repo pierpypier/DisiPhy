@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 23</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 23: l'impero romano - apogeo -->
+<div id="capitolo-23-impero-romano-apogeo" class="capitolo-storia">
+  <p class="titolo-capitolo">23 - L'Impero Romano: apogeo - dal 27 a.C. al 180 d.C.</p>
+
+  <p class="titolo-capitolo">La nascita del principato</p>
+  <p>Dopo la vittoria nella battaglia di Azio, Ottaviano si trovò a essere l'unico e incontrastato padrone del mondo romano, ma decise abilmente di non presentarsi apertamente come un nuovo re o dittatore, memore della sorte toccata a Giulio Cesare.</p>
+  <p>Nel 27 a.C. il Senato gli conferì il titolo onorifico di Augusto, cioè "colui che accresce", e Ottaviano mantenne formalmente in vita le istituzioni repubblicane, come il Senato e le magistrature, pur concentrando nelle proprie mani tutti i poteri effettivi, in particolare il comando supremo dell'esercito.</p>
+  <p>Questo nuovo sistema di governo, che gli storici chiamano principato, rappresentava di fatto una monarchia mascherata da forme repubblicane, e avrebbe caratterizzato il governo di Roma per i due secoli successivi.</p>
+
+  <p class="titolo-capitolo">La pace augustea</p>
+  <p>Il lungo governo di Augusto, durato fino alla sua morte nel 14 d.C., portò a Roma un periodo di stabilità e prosperità dopo un secolo di guerre civili, un'epoca che i Romani stessi chiamarono pax romana, cioè pace romana.</p>
+  <p>Augusto promosse importanti riforme amministrative, militari e fiscali, riorganizzò l'esercito rendendolo un corpo professionale permanente, e favorì un'intensa attività edilizia e culturale, tanto da vantarsi, secondo la tradizione, di aver trovato Roma di mattoni e di averla lasciata di marmo.</p>
+  <p>In questo periodo fiorirono anche importanti opere letterarie latine, con autori come Virgilio, Orazio e Ovidio, che contribuirono a costruire un'immagine di Roma come erede della grande tradizione culturale greca, ma con una propria identità originale.</p>
+
+  <p class="titolo-capitolo">La dinastia giulio-claudia</p>
+  <p>Dopo la morte di Augusto, il potere imperiale passò, attraverso legami familiari e adozioni, ai suoi successori, dando origine a quella che gli storici chiamano dinastia giulio-claudia, che governò Roma fino al 68 d.C.</p>
+  <p>A questa dinastia appartennero imperatori dal governo molto diverso tra loro, da Tiberio e Claudio, generalmente considerati amministratori capaci, fino a figure più controverse come Caligola e Nerone, ricordati dalle fonti antiche soprattutto per la loro condotta dispotica e talvolta crudele.</p>
+  <p>Con la morte di Nerone, avvenuta nel 68 d.C. in circostanze drammatiche, si concluse questa prima dinastia imperiale, e Roma attraversò un breve ma intenso periodo di instabilità, con diversi generali che si contesero rapidamente il trono.</p>
+
+  <p class="titolo-capitolo">L'espansione territoriale dell'impero</p>
+  <p>Nel corso del I e II secolo d.C., sotto il governo di dinastie successive come quella flavia e quella degli imperatori adottivi, l'Impero Romano raggiunse la sua massima estensione territoriale, arrivando a controllare un'area vastissima intorno a tutto il bacino del Mediterraneo.</p>
+  <p>Un ruolo particolarmente importante in questa fase di espansione fu giocato dall'imperatore Traiano, che tra il 98 e il 117 d.C. conquistò nuovi territori come la Dacia, corrispondente in gran parte all'attuale Romania, e per un breve periodo anche vasti territori in Mesopotamia, portando l'impero alla sua massima estensione storica.</p>
+  <p>Sotto il successore Adriano, invece, prevalse una politica più difensiva, orientata a consolidare i confini esistenti piuttosto che a espanderli ulteriormente, come testimonia la costruzione del celebre Vallo di Adriano in Britannia, pensato per proteggere i territori conquistati dalle popolazioni non sottomesse a nord.</p>
+
+  <p class="titolo-capitolo">L'età degli imperatori adottivi</p>
+  <p>Il periodo compreso tra la fine del I e la fine del II secolo d.C., in particolare sotto gli imperatori Traiano, Adriano, Antonino Pio e Marco Aurelio, viene generalmente considerato dagli storici come l'età d'oro dell'Impero Romano, un periodo di grande stabilità politica, prosperità economica e sviluppo culturale.</p>
+  <p>Una caratteristica particolare di questo periodo fu la pratica dell'adozione: invece di trasmettere il potere per via ereditaria diretta, questi imperatori scelsero come proprio successore la persona ritenuta più capace, adottandola formalmente come figlio, un sistema che favorì la continuità di un governo generalmente efficace e stabile.</p>
+  <p>Con il governo di Marco Aurelio, filosofo oltre che imperatore, l'impero iniziò però ad affrontare nuove difficoltà, tra cui pressioni sempre più forti lungo i confini settentrionali da parte di popolazioni germaniche e gravi epidemie, segnali di problematiche destinate ad aggravarsi nei secoli successivi, come vedremo nel prossimo capitolo.</p>
+</div>
+<!-- fine capitolo storia 23-->
+
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story24.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

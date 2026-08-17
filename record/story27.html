@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 27</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 27: carlo magno e il sacro romano impero -->
+<div id="capitolo-27-carlo-magno" class="capitolo-storia">
+  <p class="titolo-capitolo">27 - Carlo Magno e il Sacro Romano Impero - dal 768 al 900</p>
+
+  <p class="titolo-capitolo">L'ascesa dei Carolingi</p>
+  <p>Nel corso del VII e VIII secolo d.C., il potere reale nel regno dei Franchi passò progressivamente dalla dinastia dei Merovingi, ormai indebolita, nelle mani dei maggiordomi di palazzo, alti funzionari che di fatto governavano il regno per conto di sovrani sempre più deboli.</p>
+  <p>Tra questi maggiordomi si distinse in particolare Carlo Martello, che nel 732 d.C. fermò l'avanzata islamica nella battaglia di Poitiers, e successivamente suo figlio Pipino il Breve, che nel 751 d.C. depose formalmente l'ultimo re merovingio, facendosi incoronare re dei Franchi con l'appoggio del papa, dando origine alla nuova dinastia carolingia.</p>
+  <p>Questo appoggio papale, in cambio del quale Pipino intervenne militarmente in Italia per difendere il papa dai Longobardi, rafforzò notevolmente il legame politico tra la Chiesa di Roma e il regno dei Franchi, un'alleanza destinata a rivelarsi fondamentale negli anni successivi.</p>
+
+  <p class="titolo-capitolo">Il regno di Carlo Magno</p>
+  <p>Nel 768 d.C. salì al trono Carlo, figlio di Pipino, passato alla storia come Carlo Magno, destinato a diventare uno dei sovrani più importanti di tutto il Medioevo europeo grazie a un lunghissimo regno caratterizzato da continue campagne militari ed espansione territoriale.</p>
+  <p>Nel corso del suo regno, Carlo Magno conquistò il regno longobardo in Italia, sottomise le popolazioni sassoni nella Germania settentrionale dopo una lunga e sanguinosa guerra, ed estese il proprio dominio anche verso la Spagna settentrionale e l'Europa centrale.</p>
+  <p>Attraverso queste conquiste, Carlo Magno riuscì a unificare sotto il proprio controllo gran parte dell'Europa occidentale, ricreando un'entità politica di dimensioni non viste dai tempi dell'Impero Romano.</p>
+
+  <p class="titolo-capitolo">L'incoronazione imperiale</p>
+  <p>Il giorno di Natale dell'anno 800 d.C., durante una cerimonia religiosa nella basilica di San Pietro a Roma, papa Leone III incoronò Carlo Magno imperatore, un titolo che nell'Europa occidentale non veniva utilizzato da oltre trecento anni, dalla caduta dell'Impero Romano d'Occidente.</p>
+  <p>Questo evento aveva un significato politico e simbolico enorme: da un lato riaffermava l'idea di un impero cristiano in Occidente, erede della tradizione romana, dall'altro rafforzava ulteriormente lo stretto legame tra il potere politico carolingio e l'autorità religiosa del papato.</p>
+  <p>L'incoronazione di Carlo Magno segnò anche l'inizio di una lunga tensione con l'Impero Bizantino, che considerava sé stesso l'unico legittimo erede dell'antico Impero Romano, e vedeva quindi con sospetto la nascita di un nuovo impero rivale in Occidente.</p>
+
+  <p class="titolo-capitolo">L'organizzazione dell'impero carolingio</p>
+  <p>Per governare un territorio così vasto ed eterogeneo, Carlo Magno organizzò l'impero in unità amministrative locali, chiamate contee, ciascuna governata da un conte di sua fiducia, controllato periodicamente da funzionari itineranti chiamati messi regi.</p>
+  <p>Carlo Magno promosse inoltre un'importante rinascita culturale, chiamata dagli storici "rinascita carolingia", richiamando alla propria corte, ad Aquisgrana, importanti intellettuali del tempo e favorendo la creazione di scuole presso monasteri e cattedrali per formare un clero più istruito.</p>
+  <p>In questo periodo venne anche sviluppata e diffusa una nuova forma di scrittura, chiamata minuscola carolina, più chiara e leggibile rispetto alle scritture precedenti, che avrebbe influenzato profondamente lo sviluppo della scrittura in Europa nei secoli successivi.</p>
+
+  <p class="titolo-capitolo">La divisione dell'impero</p>
+  <p>Dopo la morte di Carlo Magno, avvenuta nell'814 d.C., l'impero passò al figlio Ludovico il Pio, ma le tradizioni successorie franche, che prevedevano la divisione dell'eredità tra tutti i figli maschi, misero presto in crisi l'unità del grande impero carolingio.</p>
+  <p>Nell'843 d.C., con il trattato di Verdun, i tre nipoti di Carlo Magno si divisero definitivamente l'impero in tre regni distinti, che corrispondono approssimativamente alle future Francia, Germania e a una fascia centrale di territori, tra cui il nord Italia, di confine tra i due.</p>
+  <p>Questa divisione, unita alle crescenti pressioni di nuove popolazioni invasori come Vichinghi, Saraceni e Ungari, indebolì progressivamente l'autorità centrale carolingia, aprendo la strada, nei secoli successivi, a un nuovo assetto politico e sociale che vedremo nel prossimo capitolo: il feudalesimo.</p>
+</div>
+
+
+<!-- fine capitolo storia 27-->
+
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story28.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>
