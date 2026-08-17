@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 18</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 18: grecia classica - guerre persiane e atene di pericle -->
+<div id="capitolo-18-grecia-classica-pericle" class="capitolo-storia">
+  <p class="titolo-capitolo">18 - Grecia classica: guerre persiane e Atene di Pericle - dal 500 al 431 a.C.</p>
+
+  <p class="titolo-capitolo">La nascita della democrazia ateniese</p>
+  <p>Tra la fine del VII e il VI secolo a.C., ad Atene si susseguirono diverse riforme politiche fondamentali: prima quelle di Solone, che cercò di attenuare le tensioni sociali tra ricchi e poveri, poi il periodo della tirannide di Pisistrato e dei suoi figli.</p>
+  <p>La svolta decisiva avvenne nel 508-507 a.C. con le riforme di Clistene, che riorganizzò la struttura politica della città in modo da ridurre il peso delle antiche famiglie aristocratiche, ponendo le basi di quella che sarebbe diventata la democrazia ateniese, cioè un governo in cui il potere apparteneva, almeno in teoria, all'insieme dei cittadini.</p>
+  <p>È importante ricordare che questa democrazia riguardava solo una parte della popolazione: ne erano esclusi le donne, gli schiavi e gli stranieri residenti, per cui i cittadini con pieni diritti politici rappresentavano una minoranza rispetto agli abitanti complessivi della città.</p>
+
+  <p class="titolo-capitolo">Le guerre persiane</p>
+  <p>All'inizio del V secolo a.C., il grande impero persiano, che controllava anche le città greche dell'Asia Minore, entrò in conflitto con le poleis della Grecia continentale, dando inizio a un lungo periodo di guerre note come guerre persiane.</p>
+  <p>Nel 490 a.C., un primo tentativo di invasione persiana guidato dal re Dario I fu fermato dagli Ateniesi nella celebre battaglia di Maratona, una vittoria che divenne simbolo del coraggio e della determinazione greca contro un impero molto più grande e potente.</p>
+  <p>Dieci anni dopo, nel 480 a.C., il nuovo re persiano Serse I organizzò un'invasione molto più massiccia, affrontata dai Greci in diverse battaglie celebri, tra cui la strenua resistenza degli Spartani guidati dal re Leonida al passo delle Termopili, e la decisiva vittoria navale ateniese nella battaglia di Salamina.</p>
+  <p>La guerra si concluse definitivamente nel 479 a.C. con le vittorie greche di Platea e Micale, che posero fine ai tentativi persiani di conquistare la Grecia continentale, consolidando il prestigio militare e politico di Atene e Sparta.</p>
+
+  <p class="titolo-capitolo">L'ascesa della potenza ateniese</p>
+  <p>Dopo la vittoria contro i Persiani, Atene guidò la formazione della Lega di Delo, un'alleanza militare tra numerose poleis greche, ufficialmente creata per difendersi da future minacce persiane, con sede del tesoro comune nell'isola di Delo.</p>
+  <p>Nel corso dei decenni successivi, Atene trasformò progressivamente questa alleanza in un vero e proprio impero marittimo, spostando il tesoro della lega ad Atene stessa e imponendo il proprio controllo politico ed economico sulle altre città alleate.</p>
+  <p>Questa crescente potenza ateniese, sostenuta da una flotta navale molto forte, permise alla città di accumulare ricchezze considerevoli, utilizzate anche per finanziare importanti opere pubbliche e monumentali.</p>
+
+  <p class="titolo-capitolo">L'età di Pericle</p>
+  <p>Tra il 461 e il 429 a.C., la vita politica di Atene fu dominata dalla figura di Pericle, un abile statista che seppe guidare la città verso il suo massimo splendore politico, culturale ed economico, tanto che questo periodo viene spesso chiamato "età di Pericle" o "secolo d'oro" di Atene.</p>
+  <p>Sotto la guida di Pericle vennero rafforzate ulteriormente le istituzioni democratiche della città, con l'introduzione di un compenso economico per chi partecipava alle cariche pubbliche, una misura pensata per permettere anche ai cittadini meno abbienti di dedicarsi alla vita politica.</p>
+  <p>In questo periodo Atene divenne inoltre un importantissimo centro culturale e artistico, con la costruzione di edifici monumentali come il Partenone sull'acropoli, e la presenza di filosofi, drammaturghi e pensatori che avrebbero segnato profondamente la storia del pensiero occidentale.</p>
+  <p>Proprio la crescente potenza di Atene e la sua rivalità con Sparta, guida di un'alleanza concorrente chiamata Lega del Peloponneso, avrebbero portato però a un conflitto devastante tra le due città, di cui parleremo nel prossimo capitolo.</p>
+</div>
+<!-- fine capitolo storia 18 -->
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story19.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

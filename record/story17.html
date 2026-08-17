@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 17</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 17: grecia arcaica e nascita delle poleis -->
+<div id="capitolo-17-grecia-arcaica" class="capitolo-storia">
+  <p class="titolo-capitolo">17 - Grecia arcaica e nascita delle poleis - dal 800 al 500 a.C.</p>
+
+  <p class="titolo-capitolo">La fine dei secoli bui</p>
+  <p>Dopo il crollo della civiltà micenea, la Grecia attraversò un lungo periodo di declino, chiamato dagli storici "medioevo ellenico" o secoli bui, durato circa dal 1.100 all'800 a.C., caratterizzato da un forte calo della popolazione, dalla scomparsa della scrittura e da un generale impoverimento economico e culturale.</p>
+  <p>A partire dall'800 a.C. circa, la Grecia iniziò lentamente a riprendersi da questa crisi, dando inizio a un nuovo periodo storico chiamato età arcaica, durante il quale si formarono molte delle caratteristiche fondamentali della civiltà greca classica.</p>
+  <p>In questo periodo i Greci ripresero anche l'uso della scrittura, adottando e adattando alle proprie esigenze l'alfabeto fenicio, arricchito con l'aggiunta delle vocali per meglio rappresentare la lingua greca.</p>
+
+  <p class="titolo-capitolo">La nascita delle poleis</p>
+  <p>La caratteristica politica più importante della Grecia arcaica fu la nascita delle poleis, cioè le città-stato, piccole comunità politicamente indipendenti, formate da una città centrale e dal territorio agricolo circostante.</p>
+  <p>A differenza dei grandi imperi centralizzati del Vicino Oriente, la Grecia rimase per tutta la sua storia antica divisa in centinaia di poleis autonome, spesso in competizione o in guerra tra loro, unite però da una lingua, una religione e una cultura comuni.</p>
+  <p>Ogni polis era organizzata attorno ad alcuni elementi caratteristici: l'acropoli, la parte alta e fortificata della città dove sorgevano i templi principali, e l'agorà, la piazza centrale utilizzata come mercato e luogo di incontro e discussione politica.</p>
+  <p>Tra le poleis più importanti dell'epoca arcaica si distinsero in particolare Atene, nella regione dell'Attica, e Sparta, nel Peloponneso, che nel corso dei secoli svilupperanno modelli politici e sociali molto diversi tra loro.</p>
+
+  <p class="titolo-capitolo">La colonizzazione greca</p>
+  <p>Tra l'VIII e il VI secolo a.C., molte poleis greche, spinte dalla crescita della popolazione, dalla scarsità di terre coltivabili e dal desiderio di sviluppare nuovi commerci, diedero vita a un intenso fenomeno di colonizzazione in tutto il Mediterraneo.</p>
+  <p>Vennero fondate numerose colonie lungo le coste dell'Italia meridionale e della Sicilia, una regione talmente ricca di insediamenti greci da essere chiamata "Magna Grecia", oltre che sulle coste del Mar Nero, della Francia meridionale e della Spagna.</p>
+  <p>Queste colonie non dipendevano politicamente dalla città di origine, chiamata madrepatria, ma diventavano poleis autonome a loro volta, pur mantenendo legami culturali, religiosi e commerciali con la città che le aveva fondate.</p>
+  <p>Attraverso questo processo di colonizzazione, la lingua, la religione e la cultura greca si diffusero in gran parte del bacino del Mediterraneo, influenzando profondamente i popoli con cui i Greci entravano in contatto.</p>
+
+  <p class="titolo-capitolo">Le prime forme di governo</p>
+  <p>Nelle prime fasi dell'età arcaica, la maggior parte delle poleis greche era governata da aristocrazie, cioè da ristrette classi di famiglie nobili che detenevano il potere politico grazie al possesso di grandi proprietà terriere.</p>
+  <p>Con il passare del tempo, le crescenti tensioni sociali tra l'aristocrazia e il resto della popolazione, unite alle trasformazioni economiche legate al commercio e all'uso crescente della moneta, portarono in molte città alla comparsa di una nuova forma di governo: la tirannide.</p>
+  <p>I tiranni erano singoli individui che riuscivano a conquistare il potere assoluto su una polis, spesso presentandosi come difensori del popolo contro i privilegi dell'aristocrazia, anche se il termine "tirannia", nel significato originale greco, non implicava necessariamente un governo crudele come nell'accezione moderna.</p>
+
+  <p class="titolo-capitolo">Verso la Grecia classica</p>
+  <p>Un'altra innovazione fondamentale dell'età arcaica fu lo sviluppo della falange oplitica, una formazione militare compatta composta da cittadini-soldati chiamati opliti, armati di lancia e scudo, che combattevano schierati fianco a fianco in file ordinate.</p>
+  <p>La diffusione di questo modello militare, che richiedeva la partecipazione di un ampio numero di cittadini benestanti in grado di procurarsi l'armamento, contribuì anche a rafforzare le richieste di maggiore partecipazione politica da parte di queste classi sociali.</p>
+  <p>Proprio da queste tensioni sociali e politiche, soprattutto ad Atene, si svilupperanno nel corso del VI secolo a.C. le prime riforme verso forme di governo più partecipate, un processo che porterà, come vedremo nel prossimo capitolo, alla nascita della democrazia.</p>
+</div>
+<!-- fine capitolo storia 17 -->
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story18.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

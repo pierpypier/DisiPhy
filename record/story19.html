@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 19</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 19: guerra del peloponneso e crisi delle poleis -->
+<div id="capitolo-19-guerra-peloponneso" class="capitolo-storia">
+  <p class="titolo-capitolo">19 - Guerra del Peloponneso e crisi delle poleis - dal 431 al 338 a.C.</p>
+
+  <p class="titolo-capitolo">Le cause del conflitto</p>
+  <p>Nel corso del V secolo a.C., la crescente potenza di Atene, guida della Lega di Delo, iniziò a preoccupare sempre di più Sparta e i suoi alleati, riuniti nella Lega del Peloponneso, dando vita a una rivalità sempre più forte tra le due principali potenze della Grecia.</p>
+  <p>Le due città rappresentavano anche due modelli politici e sociali molto diversi: Atene era una democrazia commerciale e marittima, mentre Sparta era una società fortemente militarizzata, governata in modo oligarchico da un ristretto gruppo di cittadini-guerrieri.</p>
+  <p>Questa rivalità politica, economica e militare sfociò infine, nel 431 a.C., in un conflitto su larga scala tra le due alleanze, passato alla storia come guerra del Peloponneso, uno degli scontri più lunghi e devastanti dell'intera storia greca antica.</p>
+
+  <p class="titolo-capitolo">Lo svolgimento della guerra</p>
+  <p>La guerra si protrasse per quasi trent'anni, alternando fasi di combattimento intenso a periodi di tregua instabile, e coinvolse gran parte del mondo greco, con Atene forte soprattutto sul mare grazie alla propria flotta, e Sparta dominante sulla terraferma grazie al proprio esercito.</p>
+  <p>Nel corso del conflitto, Atene subì anche una gravissima epidemia di peste, scoppiata nel 430 a.C. proprio mentre la popolazione era concentrata all'interno delle mura cittadine per sfuggire agli attacchi spartani, che causò la morte di una parte consistente della popolazione, incluso lo stesso Pericle.</p>
+  <p>Un momento decisivo della guerra fu la disastrosa spedizione militare ateniese in Sicilia, tra il 415 e il 413 a.C., conclusa con una sconfitta durissima che indebolì fortemente le forze militari ed economiche di Atene.</p>
+
+  <p class="titolo-capitolo">La sconfitta di Atene</p>
+  <p>Nel 404 a.C., dopo anni di guerra logorante e con l'aiuto economico del nemico storico persiano, Sparta riuscì infine a sconfiggere definitivamente Atene, che fu costretta ad arrendersi, a smantellare le proprie mura difensive e a rinunciare al proprio impero marittimo.</p>
+  <p>Questa vittoria segnò l'inizio di un periodo di egemonia spartana su gran parte della Grecia, anche se Sparta si dimostrò poi incapace di governare con equilibrio le altre poleis, generando nuovi malcontenti e nuove alleanze contrarie nel giro di pochi decenni.</p>
+
+  <p class="titolo-capitolo">Un lungo periodo di instabilità</p>
+  <p>Nei decenni successivi alla guerra del Peloponneso, la Grecia rimase divisa da continui conflitti tra le principali poleis, con un'egemonia spartana che passò poi, per un breve periodo, nelle mani di Tebe, dopo la sua vittoria sui spartani nella battaglia di Leuttra nel 371 a.C.</p>
+  <p>Questo lungo periodo di guerre continue tra le città greche indebolì progressivamente tutte le principali poleis, sia dal punto di vista militare che economico, lasciando la Grecia divisa e vulnerabile proprio mentre, a nord, si stava rafforzando una nuova potenza: il regno di Macedonia.</p>
+  <p>Le crescenti divisioni interne, sommate al costante logoramento delle risorse economiche e umane dovuto ai conflitti quasi ininterrotti, misero progressivamente in crisi il modello stesso della polis indipendente, che aveva caratterizzato la storia greca per secoli.</p>
+
+  <p class="titolo-capitolo">L'ascesa della Macedonia</p>
+  <p>Nella seconda metà del IV secolo a.C., il regno di Macedonia, situato nella Grecia settentrionale e fino ad allora considerato una potenza periferica, si rafforzò notevolmente sotto la guida del re Filippo II, che riorganizzò l'esercito macedone rendendolo estremamente efficiente.</p>
+  <p>Filippo II approfittò abilmente delle divisioni tra le poleis greche per estendere progressivamente la propria influenza sulla Grecia, fino alla decisiva battaglia di Cheronea, nel 338 a.C., in cui l'esercito macedone sconfisse la coalizione delle principali città greche, tra cui Atene e Tebe.</p>
+  <p>Questa vittoria segnò di fatto la fine dell'indipendenza politica delle poleis greche, che pur mantenendo una certa autonomia interna, si trovarono ormai sotto l'influenza del regno di Macedonia, aprendo la strada al periodo storico successivo, dominato dalla figura di Alessandro Magno, figlio di Filippo II.</p>
+</div>
+<!-- fine capitolo storia 19 -->
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story20.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>
