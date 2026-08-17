@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 59</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+<!-- capitolo storia 59: boom economico e società dei consumi -->
+<div id="capitolo-59-boom-economico" class="capitolo-storia">
+  <p class="titolo-capitolo">59 - Boom economico e società dei consumi - dal 1950 al 1973</p>
+
+  <p class="titolo-capitolo">Un lungo periodo di crescita globale</p>
+  <p>Nel corso degli anni '50 e '60, gran parte dei paesi dell'Europa occidentale, insieme agli Stati Uniti e al Giappone, sperimentarono un lunghissimo periodo di crescita economica sostenuta, un fenomeno così ampio e duraturo da essere ricordato dagli storici come i "trenta gloriosi", per indicare i circa trent'anni di prosperità compresi tra la fine della seconda guerra mondiale e la crisi petrolifera del 1973.</p>
+  <p>Questa straordinaria crescita economica fu resa possibile da diversi fattori: la ricostruzione post-bellica, che stimolò la domanda di beni e infrastrutture, importanti investimenti sia pubblici che privati, un forte sviluppo tecnologico e industriale, e la disponibilità di energia a basso costo, soprattutto grazie al petrolio proveniente dal Medio Oriente.</p>
+  <p>In questo periodo, i governi di molti paesi occidentali svilupparono inoltre politiche economiche e sociali improntate a un maggiore intervento dello stato nell'economia e nel welfare, cioè nel sistema di protezione sociale, contribuendo a ridistribuire in parte i benefici della crescita economica tra ampie fasce della popolazione.</p>
+
+  <p class="titolo-capitolo">La nascita della società dei consumi</p>
+  <p>Questo lungo periodo di crescita economica trasformò profondamente le abitudini di vita di milioni di persone in Europa occidentale e negli Stati Uniti, favorendo la nascita di quella che gli storici chiamano società dei consumi, caratterizzata da una crescente disponibilità economica delle famiglie e dalla diffusione di nuovi beni di consumo durevoli.</p>
+  <p>Elettrodomestici come frigoriferi, lavatrici e televisori, insieme all'automobile, divennero progressivamente accessibili anche alle famiglie di ceto medio e operaio, trasformando profondamente la vita quotidiana e le abitudini domestiche, con conseguenze significative anche sui ruoli familiari tradizionali, in particolare quello delle donne.</p>
+  <p>Un ruolo fondamentale in questa trasformazione fu giocato dalla pubblicità e dai nuovi mezzi di comunicazione di massa, in particolare la televisione, che si diffuse rapidamente in questo periodo, contribuendo a diffondere modelli di consumo e stili di vita sempre più omogenei tra diverse fasce della popolazione.</p>
+
+  <p class="titolo-capitolo">L'integrazione economica europea</p>
+  <p>In questo contesto di crescita economica, i paesi dell'Europa occidentale intrapresero anche un importante percorso di integrazione economica e politica, con l'obiettivo dichiarato di favorire la cooperazione tra le nazioni europee e prevenire il ripetersi di conflitti come quelli che avevano insanguinato il continente nella prima metà del Novecento.</p>
+  <p>Un primo passo fondamentale in questa direzione fu la creazione, nel 1951, della Comunità Europea del Carbone e dell'Acciaio, un'organizzazione che metteva in comune la gestione di queste risorse strategiche tra sei paesi fondatori, tra cui l'Italia, ponendo le basi per una più ampia cooperazione economica europea.</p>
+  <p>Questo processo di integrazione proseguì nel 1957 con i trattati di Roma, che istituirono la Comunità Economica Europea, un mercato comune tra i paesi membri basato sulla libera circolazione di merci, servizi, capitali e, progressivamente, anche delle persone, un progetto destinato a svilupparsi ulteriormente nei decenni successivi fino alla nascita dell'attuale Unione Europea.</p>
+
+  <p class="titolo-capitolo">Trasformazioni sociali e culturali</p>
+  <p>La crescente prosperità economica di questo periodo si accompagnò anche a profonde trasformazioni sociali e culturali, con un progressivo miglioramento dell'accesso all'istruzione, anche superiore, per fasce sempre più ampie della popolazione, precedentemente escluse da questa opportunità.</p>
+  <p>In questi anni si diffusero anche nuovi modelli culturali giovanili, spesso influenzati dalla cultura statunitense, come la musica rock, i nuovi stili di abbigliamento e nuove forme di socializzazione tra i giovani, elementi che avrebbero contribuito a preparare il terreno per le più profonde trasformazioni culturali e i movimenti di contestazione che sarebbero esplosi, come vedremo, alla fine degli anni '60.</p>
+
+  <p class="titolo-capitolo">I limiti della crescita</p>
+  <p>Nonostante gli innegabili benefici diffusi da questa lunga fase di crescita economica, il modello di sviluppo di questo periodo presentava anche significativi limiti e contraddizioni, tra cui un forte impatto ambientale, legato all'intenso sfruttamento delle risorse naturali e a un modello di sviluppo industriale poco attento alle conseguenze ecologiche, questioni che sarebbero diventate oggetto di crescente attenzione e preoccupazione solo nei decenni successivi.</p>
+  <p>Questo lungo periodo di prosperità economica, che aveva caratterizzato gran parte del mondo occidentale, si sarebbe bruscamente interrotto nel 1973, quando una grave crisi energetica internazionale avrebbe messo in discussione le basi stesse di questo modello di sviluppo, aprendo una nuova e più difficile fase economica, di cui parleremo più avanti nel manuale.</p>
+</div>
+<!-- fine capitolo storia 59: l'impero romano - apogeo -->
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story60.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>
