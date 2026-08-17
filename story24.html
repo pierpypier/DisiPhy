@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 24</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+
+<!-- capitolo storia 24: crisi e caduta dell'impero romano d'occidente -->
+<div id="capitolo-24-crisi-caduta-impero" class="capitolo-storia">
+  <p class="titolo-capitolo">24 - Crisi e caduta dell'Impero Romano d'Occidente - dal 180 al 476 d.C.</p>
+
+  <p class="titolo-capitolo">L'inizio della crisi</p>
+  <p>Con la morte dell'imperatore Marco Aurelio, nel 180 d.C., si concluse il lungo periodo di stabilità dell'età degli imperatori adottivi, e il potere passò al figlio Commodo, il cui governo instabile e violento segnò l'inizio di un periodo di crescente difficoltà per l'impero.</p>
+  <p>Nel corso del III secolo d.C., l'Impero Romano attraversò una fase di grave crisi generale, chiamata dagli storici "crisi del III secolo", caratterizzata da instabilità politica, con numerosi imperatori che si susseguirono rapidamente, spesso uccisi dalle proprie stesse truppe.</p>
+  <p>A questa instabilità politica si aggiunsero gravi problemi economici, come una forte inflazione dovuta alla svalutazione della moneta, e crescenti pressioni militari lungo i confini, sia a nord da parte delle popolazioni germaniche, sia a est da parte del nuovo e aggressivo impero persiano sasanide.</p>
+
+  <p class="titolo-capitolo">Le riforme di Diocleziano</p>
+  <p>Nel 284 d.C., l'imperatore Diocleziano riuscì a ristabilire un certo ordine nell'impero, introducendo riforme profonde per affrontare le difficoltà che lo attanagliavano da decenni.</p>
+  <p>Una delle innovazioni più importanti fu la tetrarchia, cioè la divisione del governo dell'impero tra quattro sovrani, due imperatori principali chiamati augusti e due loro collaboratori chiamati cesari, un sistema pensato per rendere più efficiente il governo di un territorio ormai troppo vasto per essere controllato da un solo uomo.</p>
+  <p>Diocleziano riorganizzò inoltre profondamente l'amministrazione, l'esercito e il sistema fiscale dell'impero, anche se queste riforme comportarono anche un aumento della pressione fiscale e un controllo più rigido sulla vita economica e sociale dei cittadini.</p>
+
+  <p class="titolo-capitolo">Costantino e la diffusione del cristianesimo</p>
+  <p>Dopo un nuovo periodo di guerre civili seguito all'abdicazione di Diocleziano, l'imperatore Costantino riuscì a riunificare sotto il proprio controllo l'intero impero, governando dal 306 al 337 d.C.</p>
+  <p>Costantino è celebre soprattutto per l'editto di Milano, emanato nel 313 d.C., con cui concesse libertà di culto ai cristiani, ponendo fine a secoli di persecuzioni nei confronti di questa religione, che nel corso del secolo successivo sarebbe diventata la religione ufficiale dell'impero.</p>
+  <p>Nel 330 d.C., Costantino fondò inoltre una nuova capitale in Oriente, Costantinopoli, costruita sul sito dell'antica città greca di Bisanzio, destinata a diventare un centro di potere sempre più importante rispetto alla stessa Roma.</p>
+
+  <p class="titolo-capitolo">La divisione dell'impero</p>
+  <p>Nel 395 d.C., alla morte dell'imperatore Teodosio, l'ultimo sovrano a governare l'intero impero unito, il territorio romano fu diviso definitivamente tra i suoi due figli in due parti separate: l'Impero Romano d'Occidente, con capitale prima Roma e poi Ravenna, e l'Impero Romano d'Oriente, con capitale Costantinopoli.</p>
+  <p>Le due metà dell'impero seguirono da questo momento destini molto diversi: l'Oriente, più ricco e meglio organizzato, avrebbe continuato a esistere per altri mille anni con il nome di Impero Bizantino, mentre l'Occidente si trovò ad affrontare pressioni sempre più insostenibili.</p>
+
+  <p class="titolo-capitolo">Le invasioni e la caduta dell'Occidente</p>
+  <p>Nel corso del IV e V secolo d.C., pressioni crescenti da parte di popolazioni provenienti dall'Asia centrale, in particolare gli Unni guidati da Attila, spinsero numerose popolazioni germaniche a cercare rifugio all'interno dei confini dell'impero, dando origine a un periodo di grandi migrazioni.</p>
+  <p>L'Impero Romano d'Occidente, indebolito da decenni di crisi economica, instabilità politica e difficoltà nel mantenere un esercito efficiente, non fu più in grado di controllare efficacemente questi movimenti di popoli, e diversi gruppi germanici, come Visigoti, Vandali e Ostrogoti, si stabilirono progressivamente all'interno dei suoi territori, in alcuni casi anche saccheggiando la stessa Roma.</p>
+  <p>La fine formale dell'Impero Romano d'Occidente viene tradizionalmente collocata nel 476 d.C., quando il capo militare germanico Odoacre depose l'ultimo imperatore romano d'Occidente, il giovanissimo Romolo Augustolo, senza nominare un successore.</p>
+  <p>Questa data segna convenzionalmente, per gli storici, la fine dell'età antica e l'inizio di un nuovo periodo storico, il Medioevo, che vedremo iniziare nel prossimo capitolo con la nascita dei regni romano-barbarici e la sopravvivenza dell'impero in Oriente.</p>
+</div>
+
+<!-- fine capitolo storia 24-->
+
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story25.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>
