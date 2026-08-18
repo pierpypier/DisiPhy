@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 64</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+<!-- capitolo storia 64: crollo del comunismo e fine della guerra fredda -->
+<div id="capitolo-64-crollo-comunismo" class="capitolo-storia">
+  <p class="titolo-capitolo">64 - Crollo del comunismo e fine della Guerra Fredda - dal 1985 al 1991</p>
+
+  <p class="titolo-capitolo">L'Unione Sovietica alla vigilia del cambiamento</p>
+  <p>Nella prima metà degli anni '80, l'Unione Sovietica attraversava una fase di crescente difficoltà economica, caratterizzata da una produttività industriale sempre più stagnante, da una tecnologia arretrata rispetto ai paesi occidentali, e da un sistema economico centralizzato che si dimostrava sempre meno capace di soddisfare i bisogni della popolazione.</p>
+  <p>A questa crisi economica si aggiungeva l'enorme peso finanziario della corsa agli armamenti nucleari, che assorbiva risorse ingenti a scapito degli investimenti civili, oltre ai costi di un lungo e logorante conflitto militare in Afghanistan, dove l'esercito sovietico era intervenuto dal 1979 senza riuscire a ottenere una vittoria decisiva.</p>
+
+  <p class="titolo-capitolo">Le riforme di Gorbačёv</p>
+  <p>Nel 1985, salì alla guida dell'Unione Sovietica Michail Gorbačёv, un leader relativamente giovane che, consapevole della gravità della crisi che attraversava il paese, promosse due importanti politiche di riforma: la perestrojka, cioè la ristrutturazione dell'economia sovietica in senso più aperto al mercato, e la glasnost, cioè una maggiore trasparenza e libertà di espressione nella vita politica e culturale del paese.</p>
+  <p>Queste riforme, pur nate con l'intento di rafforzare e modernizzare il sistema sovietico, finirono per innescare un processo di cambiamento molto più profondo e rapido di quanto lo stesso Gorbačёv avesse previsto, mettendo progressivamente in discussione le stesse basi del sistema comunista sovietico.</p>
+  <p>Sul piano internazionale, Gorbačёv promosse anche un significativo allentamento delle tensioni con gli Stati Uniti, avviando importanti negoziati per la riduzione degli armamenti nucleari e rinunciando progressivamente alla dottrina sovietica che prevedeva il diritto di intervenire militarmente per difendere i regimi comunisti nei paesi alleati dell'Europa orientale.</p>
+
+  <p class="titolo-capitolo">Il crollo dei regimi comunisti in Europa orientale</p>
+  <p>Proprio la rinuncia sovietica a intervenire militarmente in difesa dei governi comunisti alleati aprì la strada, nel corso del 1989, a una rapidissima serie di rivoluzioni pacifiche in gran parte dei paesi dell'Europa orientale, dove la popolazione, approfittando del nuovo clima politico, si sollevò contro i regimi comunisti al potere ormai da decenni.</p>
+  <p>In pochi mesi, tra la Polonia, l'Ungheria, la Cecoslovacchia e altri paesi della regione, i governi comunisti caddero uno dopo l'altro, spesso attraverso proteste popolari pacifiche, anche se in alcuni casi, come in Romania, il cambiamento fu accompagnato da episodi di violenza più intensa.</p>
+  <p>L'evento simbolicamente più significativo di questo straordinario processo fu la caduta del muro di Berlino, il 9 novembre del 1989, quando la popolazione tedesca, approfittando dell'apertura improvvisa dei confini, iniziò ad abbattere fisicamente il muro che per quasi trent'anni aveva diviso la città, un'immagine che divenne rapidamente il simbolo più potente della fine della guerra fredda.</p>
+
+  <p class="titolo-capitolo">La riunificazione tedesca</p>
+  <p>La caduta del muro di Berlino aprì rapidamente la strada alla riunificazione della Germania, divisa dalla fine della seconda guerra mondiale in due stati separati: nell'ottobre del 1990, dopo complessi negoziati diplomatici tra le due Germanie e le principali potenze internazionali, la Repubblica Democratica Tedesca fu formalmente assorbita dalla Repubblica Federale Tedesca, dando vita a una Germania unita.</p>
+  <p>Questo evento, insieme alla più generale dissoluzione del blocco comunista in Europa orientale, segnò la fine effettiva della divisione del continente europeo che aveva caratterizzato l'intero periodo della guerra fredda, aprendo la strada a un nuovo processo di integrazione tra le due parti d'Europa.</p>
+
+  <p class="titolo-capitolo">La dissoluzione dell'Unione Sovietica</p>
+  <p>Il crollo dei regimi comunisti in Europa orientale ebbe conseguenze profonde anche all'interno della stessa Unione Sovietica, dove le riforme di Gorbačёv avevano nel frattempo alimentato forti spinte autonomiste e indipendentiste da parte delle diverse repubbliche che componevano il vasto stato sovietico.</p>
+  <p>Nel dicembre del 1991, dopo un tentativo fallito di colpo di stato da parte di settori conservatori del partito comunista contrari alle riforme, l'Unione Sovietica si dissolse ufficialmente, dando vita a quindici stati indipendenti, tra cui la Russia, che ne ereditò gran parte del territorio, della popolazione e dell'arsenale militare, incluse le armi nucleari.</p>
+  <p>La dissoluzione dell'Unione Sovietica pose fine definitivamente alla guerra fredda, quarant'anni di contrapposizione tra i due blocchi che avevano profondamente segnato la storia mondiale del secondo dopoguerra, aprendo una nuova fase storica caratterizzata dalla globalizzazione economica e da nuovi equilibri internazionali, di cui parleremo nel prossimo capitolo.</p>
+</div>
+<!-- fine capitolo storia 64 -->
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story65.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>

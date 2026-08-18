@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Storia 67</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo storia */
+    .capitolo-storia{
+      background:#fffaf0;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #c9971e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b2116;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#8a5a00;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">STORIA</div>
+        <div class="subtitle">Piccolo manuale di storia, dalla formazione dell'universo ai giorni nostri</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="storia00.html" title="storia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+<!-- capitolo storia 67: crisi economica globale ed evoluzioni recenti -->
+<div id="capitolo-67-crisi-economica-globale" class="capitolo-storia">
+  <p class="titolo-capitolo">67 - Crisi economica globale ed evoluzioni recenti - dal 2008 al 2019</p>
+
+  <p class="titolo-capitolo">Le origini della crisi finanziaria</p>
+  <p>Nel corso degli anni 2000, negli Stati Uniti si era sviluppato un forte mercato di mutui immobiliari concessi con grande facilità, spesso anche a persone con scarse garanzie di solvibilità economica, un fenomeno favorito da una diffusa pratica bancaria di trasformare questi mutui rischiosi in complessi prodotti finanziari, venduti poi a investitori di tutto il mondo.</p>
+  <p>Quando, a partire dal 2007, il mercato immobiliare statunitense iniziò a mostrare i primi segnali di crisi, con un calo dei prezzi delle case e un aumento delle insolvenze sui mutui, questi complessi prodotti finanziari, diffusi ormai in tutto il sistema bancario internazionale, si rivelarono estremamente rischiosi e in gran parte privi di reale valore.</p>
+  <p>Nel settembre del 2008, il fallimento della grande banca d'investimento statunitense Lehman Brothers segnò il punto di svolta di questa crisi, scatenando il panico nei mercati finanziari internazionali e dando origine a quella che gli storici chiamano la Grande Recessione, la più grave crisi economica mondiale dai tempi della Grande Depressione degli anni '30.</p>
+
+  <p class="titolo-capitolo">Le conseguenze globali della crisi</p>
+  <p>La crisi finanziaria, originata negli Stati Uniti, si diffuse rapidamente a livello globale, complice la forte interconnessione dei mercati finanziari internazionali sviluppatasi nel corso del processo di globalizzazione economica degli anni precedenti, colpendo duramente le economie di gran parte del mondo, con un forte aumento della disoccupazione e una diffusa recessione economica.</p>
+  <p>Per evitare il collasso completo del sistema finanziario internazionale, numerosi governi e banche centrali intervennero con imponenti misure di sostegno pubblico alle banche in difficoltà, oltre a politiche monetarie ed economiche eccezionali, contribuendo a stabilizzare progressivamente la situazione, anche se al prezzo di un forte aumento del debito pubblico in molti paesi.</p>
+
+  <p class="titolo-capitolo">La crisi del debito europeo</p>
+  <p>Nel corso degli anni successivi, la crisi economica globale ebbe conseguenze particolarmente gravi in Europa, dove diversi paesi, tra cui in particolare la Grecia, ma anche Portogallo, Irlanda, Spagna e Italia, si trovarono ad affrontare una grave crisi del proprio debito pubblico, aggravata anche dalle rigidità strutturali della moneta unica europea, che impediva ai singoli paesi di svalutare autonomamente la propria valuta per affrontare la crisi.</p>
+  <p>Questa crisi del debito, che rischiò in alcuni momenti di mettere in discussione la stessa tenuta della moneta unica europea, portò all'adozione di severe politiche di austerità economica in diversi paesi, cioè politiche basate su una forte riduzione della spesa pubblica e un aumento delle tasse, misure che, pur contribuendo a stabilizzare i conti pubblici, causarono anche notevoli sofferenze sociali ed economiche per ampie fasce della popolazione in questi paesi.</p>
+
+  <p class="titolo-capitolo">Nuove tensioni politiche e sociali</p>
+  <p>Le difficili conseguenze economiche e sociali della crisi, unite a una crescente percezione di disuguaglianza economica tra diverse fasce della popolazione, contribuirono in questo periodo alla nascita e alla crescita, in numerosi paesi occidentali, di nuovi movimenti politici populisti, spesso critici verso le tradizionali élite politiche ed economiche e verso il processo di globalizzazione economica.</p>
+  <p>Questo clima di crescente sfiducia verso le istituzioni tradizionali e verso il processo di integrazione internazionale si manifestò in modo particolarmente evidente nel 2016, con il referendum britannico che sancì la decisione del Regno Unito di uscire dall'Unione Europea, un evento noto come Brexit, che avrebbe avuto conseguenze significative sui futuri equilibri politici ed economici europei.</p>
+
+  <p class="titolo-capitolo">Verso nuove sfide globali</p>
+  <p>Nel corso di questo decennio, accanto alle difficoltà economiche, crebbe anche una consapevolezza sempre più diffusa riguardo ad altre importanti sfide globali, in particolare i cambiamenti climatici, un problema che portò, nel 2015, alla firma dell'accordo di Parigi, un importante trattato internazionale con l'obiettivo di limitare l'aumento della temperatura media globale attraverso una riduzione coordinata delle emissioni di gas serra da parte dei paesi firmatari.</p>
+  <p>Questi anni furono inoltre segnati da importanti flussi migratori verso l'Europa, provenienti soprattutto da zone di conflitto e instabilità in Medio Oriente e Africa, un fenomeno che pose nuove sfide sul piano umanitario, sociale e politico per numerosi paesi europei, alimentando anche in questo caso un acceso dibattito politico e sociale, che si sarebbe intrecciato, negli anni immediatamente successivi, con nuove e inaspettate sfide globali, come vedremo nell'ultimo capitolo del manuale.</p>
+</div>
+<!-- fine capitolo storia 67 -->
+    
+    <div id="indice-storia" class="capitolo-storia">  
+  <p><a href="story68.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia
+    </footer>
+
+  </div>
+</body>
+  </html>
