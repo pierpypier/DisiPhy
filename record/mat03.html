@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 03</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 03: Scomposizione di polinomi -->
+<div class="capitolo-storia" id="capitolo-03-scomposizione-polinomi">
+
+<p class="titolo-capitolo">03 - Scomposizione di polinomi - Classe 1</p>
+
+<p class="titolo-capitolo">Che cosa significa scomporre un polinomio</p>
+<p>Nel capitolo precedente abbiamo imparato a moltiplicare polinomi tra loro, ottenendo come risultato un polinomio più complesso. Scomporre un polinomio significa fare il percorso inverso: partire da un polinomio e riscriverlo come prodotto di due o più polinomi più semplici, detti fattori. Questa operazione si chiama anche fattorizzazione.</p>
+<p>Il motivo per cui questa tecnica è così importante è che, come vedremo nei prossimi capitoli, molte operazioni come la semplificazione di frazioni algebriche o la risoluzione di equazioni diventano possibili solo se sappiamo scomporre in fattori. Non esiste un unico metodo: a seconda della struttura del polinomio, si sceglie una tecnica diversa, spesso combinandone più di una nello stesso esercizio.</p>
+
+<p class="titolo-capitolo">Raccoglimento a fattor comune totale</p>
+<p>La tecnica più semplice consiste nell'osservare se tutti i termini del polinomio hanno in comune un fattore, numerico o letterale. Se questo accade, si può "raccogliere" quel fattore fuori da una parentesi, dividendo ogni termine per il fattore stesso e scrivendo il risultato all'interno della parentesi.</p>
+<p>Consideriamo il polinomio 6x<sup>3</sup> + 9x<sup>2</sup>. Il M.C.D. tra i coefficienti 6 e 9 è 3, e la parte letterale comune con esponente minimo è x<sup>2</sup>. Il fattore comune è quindi 3x<sup>2</sup>.</p>
+<p class="formula">6x<sup>3</sup> + 9x<sup>2</sup> = 3x<sup>2</sup> × (2x + 3)</p>
+<p>Per controllare che la scomposizione sia corretta basta eseguire il prodotto inverso: 3x<sup>2</sup> × 2x = 6x<sup>3</sup> e 3x<sup>2</sup> × 3 = 9x<sup>2</sup>, che è proprio il polinomio di partenza.</p>
+
+<p class="titolo-capitolo">Raccoglimento parziale</p>
+<p>Quando un polinomio ha quattro termini e non esiste un fattore comune a tutti, si può provare a raggruppare i termini a due a due, cercando un fattore comune in ciascun gruppo. Se dopo il primo raccoglimento resta la stessa espressione tra parentesi in entrambi i gruppi, quella espressione può essere raccolta a sua volta.</p>
+<p>Scomponiamo il polinomio ax + ay + bx + by. Raggruppiamo il primo termine con il secondo e il terzo con il quarto.</p>
+<p class="formula">ax + ay + bx + by = a(x + y) + b(x + y)</p>
+<p>Ora (x + y) è un fattore comune a entrambi i gruppi, e possiamo raccoglierlo ulteriormente:</p>
+<p class="formula">a(x + y) + b(x + y) = (x + y) × (a + b)</p>
+<p>Il raccoglimento parziale funziona solo se, dopo il primo passaggio, le parentesi ottenute sono identiche tra loro: se ciò non accade, occorre provare a riordinare i termini in modo diverso prima di raggrupparli.</p>
+
+<p class="titolo-capitolo">Differenza di due quadrati</p>
+<p>Ricordiamo il prodotto notevole (a + b)(a - b) = a<sup>2</sup> - b<sup>2</sup>, visto nel capitolo precedente. Se leggiamo questa uguaglianza da destra verso sinistra, otteniamo una regola di scomposizione: ogni volta che riconosciamo una differenza tra due quadrati, possiamo scomporla come somma per differenza delle rispettive basi.</p>
+<p class="formula">a<sup>2</sup> - b<sup>2</sup> = (a + b) × (a - b)</p>
+<p>Scomponiamo x<sup>2</sup> - 16. Riconosciamo che x<sup>2</sup> è il quadrato di x e che 16 è il quadrato di 4.</p>
+<p class="formula">x<sup>2</sup> - 16 = x<sup>2</sup> - 4<sup>2</sup> = (x + 4) × (x - 4)</p>
+<p>È importante osservare che questa regola vale solo per una differenza di quadrati, mai per una somma: un'espressione come x<sup>2</sup> + 16 non si può scomporre con numeri reali, perché non esiste alcun binomio che, moltiplicato per se stesso con segno cambiato, dia una somma di quadrati.</p>
+
+<p class="titolo-capitolo">Trinomio quadrato di un binomio</p>
+<p>Allo stesso modo, possiamo leggere al contrario anche il quadrato di un binomio: se un trinomio ha due termini che sono quadrati perfetti e il terzo termine è uguale al doppio prodotto delle basi di quei quadrati, allora il trinomio è il quadrato di un binomio.</p>
+<p class="formula">a<sup>2</sup> ± 2ab + b<sup>2</sup> = (a ± b)<sup>2</sup></p>
+<p>Verifichiamo se il trinomio x<sup>2</sup> + 6x + 9 è un quadrato di binomio. Il primo termine x<sup>2</sup> è il quadrato di x, il terzo termine 9 è il quadrato di 3. Controlliamo il termine centrale: il doppio prodotto di x e 3 è 2 × x × 3 = 6x, che coincide esattamente con il termine centrale del trinomio.</p>
+<p class="formula">x<sup>2</sup> + 6x + 9 = (x + 3)<sup>2</sup></p>
+<p>Se il termine centrale non avesse coinciso con il doppio prodotto, il trinomio non sarebbe stato scomponibile con questa regola, e si sarebbe dovuto cercare un altro metodo.</p>
+
+<p class="titolo-capitolo">Trinomio notevole di secondo grado</p>
+<p>Un'altra situazione frequente è quella di un trinomio del tipo x<sup>2</sup> + sx + p, dove il coefficiente di x<sup>2</sup> è 1. Per scomporlo, si cercano due numeri che, moltiplicati tra loro, diano il termine noto p, e che, sommati tra loro, diano il coefficiente s del termine di primo grado.</p>
+<p class="formula">x<sup>2</sup> + sx + p = (x + m) × (x + n), con m × n = p e m + n = s</p>
+<p>Scomponiamo x<sup>2</sup> + 5x + 6. Cerchiamo due numeri il cui prodotto sia 6 e la cui somma sia 5: si tratta di 2 e 3, infatti 2 × 3 = 6 e 2 + 3 = 5.</p>
+<p class="formula">x<sup>2</sup> + 5x + 6 = (x + 2) × (x + 3)</p>
+<p>Proviamo anche con x<sup>2</sup> - x - 12. Cerchiamo due numeri il cui prodotto sia -12 e la cui somma sia -1: si tratta di -4 e 3, poiché -4 × 3 = -12 e -4 + 3 = -1.</p>
+<p class="formula">x<sup>2</sup> - x - 12 = (x - 4) × (x + 3)</p>
+
+<p class="titolo-capitolo">Somma e differenza di due cubi</p>
+<p>Esistono infine due scomposizioni particolari legate ai cubi, che vale la pena conoscere anche se meno frequenti delle precedenti. Si dimostrano eseguendo il prodotto a ritroso e verificando che il risultato torni corretto.</p>
+<p class="formula">a<sup>3</sup> + b<sup>3</sup> = (a + b) × (a<sup>2</sup> - ab + b<sup>2</sup>)</p>
+<p class="formula">a<sup>3</sup> - b<sup>3</sup> = (a - b) × (a<sup>2</sup> + ab + b<sup>2</sup>)</p>
+<p>Scomponiamo x<sup>3</sup> - 8. Riconosciamo che x<sup>3</sup> è il cubo di x e che 8 è il cubo di 2.</p>
+<p class="formula">x<sup>3</sup> - 8 = x<sup>3</sup> - 2<sup>3</sup> = (x - 2) × (x<sup>2</sup> + 2x + 4)</p>
+<p>Nella pratica, di fronte a un polinomio da scomporre conviene procedere con ordine: si controlla prima se esiste un raccoglimento totale, poi si osserva se il polinomio corrisponde a uno dei prodotti notevoli visti, e infine, se il polinomio ha quattro o più termini, si prova con il raccoglimento parziale. Solo l'esercizio costante permette di riconoscere a colpo d'occhio quale tecnica applicare.</p>
+
+</div>
+<!-- fine capitolo matematica 03 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat04.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
