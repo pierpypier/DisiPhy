@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 01</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 01: insiemi numerici e operazioni -->
+<div id="capitolo-01-insiemi-numerici" class="capitolo-storia">
+  <p class="titolo-capitolo">01 - Insiemi numerici e operazioni - Classe 1</p>
+
+  <p class="titolo-capitolo">I numeri naturali</p>
+  <p>L'insieme dei numeri naturali, indicato con il simbolo ℕ, è il primo e più semplice insieme numerico che incontriamo: comprende i numeri 0, 1, 2, 3, 4 e così via, cioè i numeri che usiamo naturalmente per contare oggetti.</p>
+  <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ...}</p>
+  <p>Con i numeri naturali possiamo sempre eseguire addizioni e moltiplicazioni, ottenendo come risultato un altro numero naturale: ad esempio 5 + 3 = 8, oppure 4 × 6 = 24, entrambi ancora numeri naturali.</p>
+  <p>Il problema nasce con la sottrazione: un'operazione come 3 − 7 non ha soluzione all'interno di ℕ, perché non esiste alcun numero naturale che, sommato a 7, dia come risultato 3. Serve quindi un insieme numerico più ampio.</p>
+
+  <p class="titolo-capitolo">I numeri interi relativi</p>
+  <p>Per poter eseguire sempre la sottrazione, anche quando il risultato è negativo, si introduce l'insieme dei numeri interi relativi, indicato con ℤ, che comprende tutti i numeri naturali insieme ai loro opposti negativi.</p>
+  <p class="formula">ℤ = {..., −3, −2, −1, 0, 1, 2, 3, ...}</p>
+  <p>Ora l'operazione 3 − 7 ha finalmente soluzione: 3 − 7 = −4, un numero intero negativo. Il segno "−" davanti a un numero ne indica l'opposto rispetto allo zero, che rimane il punto di riferimento centrale, né positivo né negativo.</p>
+  <p>Su una retta numerica, i numeri interi si dispongono in ordine crescente da sinistra verso destra: più un numero è a destra, più è grande. Ad esempio, −2 è maggiore di −5, anche se a un primo sguardo "5" sembra un numero più grande di "2".</p>
+
+  <p class="titolo-capitolo">I numeri razionali</p>
+  <p>Con i numeri interi possiamo sommare, sottrarre e moltiplicare senza problemi, ma la divisione non è sempre possibile: ad esempio 7 : 2 non dà come risultato un numero intero. Per risolvere anche questo problema si introduce l'insieme dei numeri razionali, indicato con ℚ.</p>
+  <p>Un numero razionale è un numero che può essere scritto come frazione, cioè come rapporto tra due numeri interi, con il denominatore diverso da zero.</p>
+  <p class="formula">ℚ = { <span class="frazione"><span class="num">a</span><span class="den">b</span></span> con a, b ∈ ℤ e b ≠ 0 }</p>
+  <p>Ad esempio, il numero 7 : 2 può essere scritto come la frazione <span class="frazione"><span class="num">7</span><span class="den">2</span></span>, che corrisponde al numero decimale 3,5. Anche i numeri interi fanno parte dei numeri razionali, perché ogni numero intero può essere scritto come frazione con denominatore 1 (ad esempio 5 = <span class="frazione"><span class="num">5</span><span class="den">1</span></span>).</p>
+  <p>I numeri razionali, scritti in forma decimale, danno origine a numeri decimali finiti (come 0,25) oppure a numeri decimali periodici, cioè con una o più cifre che si ripetono all'infinito (come 0,333... che corrisponde alla frazione <span class="frazione"><span class="num">1</span><span class="den">3</span></span>).</p>
+
+  <p class="titolo-capitolo">I numeri irrazionali e i numeri reali</p>
+  <p>Esistono però numeri che non possono essere scritti come frazione di due numeri interi, e che hanno una rappresentazione decimale con infinite cifre non periodiche, cioè che non si ripetono mai secondo uno schema fisso: questi numeri si chiamano numeri irrazionali.</p>
+  <p>Un esempio molto noto di numero irrazionale è √2, cioè la radice quadrata di 2: non esiste alcuna frazione di numeri interi che, elevata al quadrato, dia esattamente 2. Anche il numero π (pi greco), che rappresenta il rapporto tra la circonferenza e il diametro di un cerchio, è un numero irrazionale.</p>
+  <p>L'unione di tutti i numeri razionali e di tutti i numeri irrazionali forma l'insieme dei numeri reali, indicato con ℝ, l'insieme numerico più ampio che utilizzeremo per gran parte del nostro percorso di studio.</p>
+  <p class="formula">ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</p>
+  <p>Questa scrittura si legge: "ℕ è contenuto in ℤ, che è contenuto in ℚ, che è contenuto in ℝ", e indica che ciascun insieme numerico racchiude al proprio interno tutti quelli precedenti, ampliando progressivamente le operazioni che è possibile eseguire.</p>
+
+  <p class="titolo-capitolo">Le proprietà delle operazioni</p>
+  <p>Le operazioni di addizione e moltiplicazione godono di alcune proprietà fondamentali, che è importante conoscere perché permettono di semplificare i calcoli e giustificano molte regole che useremo nei prossimi capitoli.</p>
+  <p>La proprietà commutativa afferma che cambiando l'ordine degli addendi (o dei fattori) il risultato non cambia: 3 + 5 = 5 + 3, e allo stesso modo 4 × 7 = 7 × 4. Questa proprietà non vale invece per la sottrazione e la divisione: 5 − 3 non è uguale a 3 − 5.</p>
+  <p>La proprietà associativa afferma che, in una somma o in un prodotto con più termini, possiamo raggruppare gli addendi (o i fattori) in modi diversi senza cambiare il risultato: (2 + 3) + 4 = 2 + (3 + 4), entrambi uguali a 9.</p>
+  <p>La proprietà distributiva collega invece la moltiplicazione all'addizione, e sarà particolarmente importante nei prossimi capitoli dedicati al calcolo letterale: un numero moltiplicato per una somma è uguale alla somma dei singoli prodotti.</p>
+  <p class="formula">a × (b + c) = a × b + a × c</p>
+  <p>Ad esempio: 3 × (4 + 5) = 3 × 9 = 27, ed è lo stesso risultato che otteniamo calcolando 3 × 4 + 3 × 5 = 12 + 15 = 27.</p>
+
+  <p class="titolo-capitolo">L'ordine delle operazioni</p>
+  <p>Quando in un'espressione numerica compaiono più operazioni diverse, è fondamentale rispettare un ordine preciso di esecuzione, altrimenti si rischia di ottenere risultati diversi e sbagliati a seconda di come si procede.</p>
+  <p>L'ordine corretto prevede, salvo la presenza di parentesi, di eseguire per prime le potenze, poi le moltiplicazioni e le divisioni (nell'ordine in cui compaiono da sinistra a destra), e per ultime le addizioni e le sottrazioni.</p>
+  <p>Consideriamo ad esempio l'espressione 2 + 3 × 4. Se eseguissimo le operazioni semplicemente da sinistra a destra otterremmo 2 + 3 = 5, poi 5 × 4 = 20, un risultato sbagliato. Rispettando invece l'ordine corretto, calcoliamo prima la moltiplicazione: 3 × 4 = 12, e poi sommiamo: 2 + 12 = 14, che è il risultato corretto.</p>
+  <p>Quando sono presenti delle parentesi, queste vanno sempre risolte per prime, partendo dalle parentesi più interne. Ad esempio, nell'espressione (2 + 3) × 4, calcoliamo prima 2 + 3 = 5, e poi moltiplichiamo: 5 × 4 = 20, un risultato diverso dal caso precedente proprio a causa delle parentesi.</p>
+
+  <p class="titolo-capitolo">Le potenze e le loro proprietà</p>
+  <p>La potenza è un'operazione che indica una moltiplicazione ripetuta di uno stesso numero, chiamato base, per un certo numero di volte, indicato dall'esponente.</p>
+  <p class="formula">a<sup>n</sup> = a × a × a × ... × a (n volte)</p>
+  <p>Ad esempio, 2<sup>4</sup> significa moltiplicare 2 per se stesso 4 volte: 2 × 2 × 2 × 2 = 16.</p>
+  <p>Anche le potenze hanno alcune proprietà utili per semplificare i calcoli. Il prodotto di due potenze con la stessa base si calcola sommando gli esponenti: a<sup>n</sup> × a<sup>m</sup> = a<sup>n+m</sup>. Ad esempio: 2<sup>3</sup> × 2<sup>2</sup> = 2<sup>5</sup> = 32, che corrisponde infatti a (2 × 2 × 2) × (2 × 2) = 8 × 4 = 32.</p>
+  <p>Il quoziente di due potenze con la stessa base si calcola invece sottraendo gli esponenti: a<sup>n</sup> : a<sup>m</sup> = a<sup>n−m</sup>, con a diverso da zero. Ad esempio: 3<sup>5</sup> : 3<sup>2</sup> = 3<sup>3</sup> = 27.</p>
+  <p>Una potenza elevata a un ulteriore esponente si calcola moltiplicando tra loro gli esponenti: (a<sup>n</sup>)<sup>m</sup> = a<sup>n×m</sup>. Ad esempio: (2<sup>3</sup>)<sup>2</sup> = 2<sup>6</sup> = 64.</p>
+  <p>Infine, ogni numero diverso da zero elevato a esponente zero è sempre uguale a 1: a<sup>0</sup> = 1, con a ≠ 0. Questa regola, apparentemente strana, è coerente con le proprietà appena viste: infatti a<sup>n</sup> : a<sup>n</sup> = a<sup>n−n</sup> = a<sup>0</sup>, ma sappiamo anche che un qualsiasi numero diviso se stesso è sempre uguale a 1.</p>
+</div>
+<!-- fine capitolo matematica 01 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat02.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

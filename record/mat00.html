@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica Indice</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">Indice</div>
+            <div class="desc">Tutti i capitoli</div>
+          </div>  
+    </div> 
+      </div>
+    
+<!-- indice matematica -->
+<div id="indice-matematica" class="capitolo-storia">
+  <p class="titolo-capitolo">Matematica e Geometria - Scuole superiori</p>
+
+  <p><a href="mat01.html">01 - Insiemi numerici e operazioni - Classe 1</a></p>
+  <p><a href="mat02.html">02 - Calcolo letterale: monomi e polinomi - Classe 1</a></p>
+  <p><a href="mat03.html">03 - Scomposizione di polinomi - Classe 1</a></p>
+  <p><a href="mat04.html">04 - Frazioni algebriche - Classe 1</a></p>
+  <p><a href="mat05.html">05 - Equazioni di primo grado - Classe 1</a></p>
+  <p><a href="mat06.html">06 - Disequazioni di primo grado - Classe 1</a></p>
+  <p><a href="mat07.html">07 - Sistemi di equazioni di primo grado - Classe 1</a></p>
+  <p><a href="mat08.html">08 - Geometria euclidea: enti fondamentali - Classe 1</a></p>
+  <p><a href="mat09.html">09 - I triangoli - Classe 1</a></p>
+  <p><a href="mat10.html">10 - Rette perpendicolari e parallele - Classe 1</a></p>
+
+  <p><a href="mat11.html">11 - I radicali - Classe 2</a></p>
+  <p><a href="mat12.html">12 - Equazioni di secondo grado - Classe 2</a></p>
+  <p><a href="mat13.html">13 - Disequazioni di secondo grado - Classe 2</a></p>
+  <p><a href="mat14.html">14 - Sistemi di secondo grado - Classe 2</a></p>
+  <p><a href="mat15.html">15 - Parallelogrammi e trapezi - Classe 2</a></p>
+  <p><a href="mat16.html">16 - Circonferenza e cerchio - Classe 2</a></p>
+  <p><a href="mat17.html">17 - Equivalenza delle superfici piane - Classe 2</a></p>
+  <p><a href="mat18.html">18 - Teoremi di Euclide e Pitagora - Classe 2</a></p>
+  <p><a href="mat19.html">19 - Grandezze proporzionali e similitudine - Classe 2</a></p>
+  <p><a href="mat20.html">20 - Statistica descrittiva - Classe 2</a></p>
+  <p><a href="mat21.html">21 - Probabilità: primi elementi - Classe 2</a></p>
+
+  <p><a href="mat22.html">22 - Introduzione alle funzioni: linguaggio e funzioni elementari - Classe 3</a></p>
+  <p><a href="mat23.html">23 - Il piano cartesiano e la retta - Classe 3</a></p>
+  <p><a href="mat24.html">24 - La circonferenza nel piano cartesiano - Classe 3</a></p>
+  <p><a href="mat25.html">25 - La parabola - Classe 3</a></p>
+  <p><a href="mat26.html">26 - L'ellisse - Classe 3</a></p>
+  <p><a href="mat27.html">27 - L'iperbole - Classe 3</a></p>
+  <p><a href="mat28.html">28 - Trasformazioni geometriche nel piano - Classe 3</a></p>
+  <p><a href="mat29.html">29 - Le funzioni: proprietà, funzioni composte e inverse - Classe 3</a></p>
+  <p><a href="mat30.html">30 - Esponenziali e logaritmi - Classe 3</a></p>
+  <p><a href="mat31.html">31 - Goniometria: le funzioni goniometriche - Classe 3</a></p>
+
+  <p><a href="mat32.html">32 - Equazioni e disequazioni goniometriche - Classe 4</a></p>
+  <p><a href="mat33.html">33 - Trigonometria: risoluzione dei triangoli - Classe 4</a></p>
+  <p><a href="mat34.html">34 - I numeri complessi - Classe 4</a></p>
+  <p><a href="mat35.html">35 - Geometria dello spazio: i solidi - Classe 4</a></p>
+  <p><a href="mat36.html">36 - Successioni e progressioni - Classe 4</a></p>
+  <p><a href="mat37.html">37 - I limiti di funzioni - Classe 4</a></p>
+  <p><a href="mat38.html">38 - La continuità delle funzioni - Classe 4</a></p>
+
+  <p><a href="mat39.html">39 - Le derivate - Classe 5</a></p>
+  <p><a href="mat40.html">40 - I teoremi del calcolo differenziale - Classe 5</a></p>
+  <p><a href="mat41.html">41 - Lo studio di funzione - Classe 5</a></p>
+  <p><a href="mat42.html">42 - Gli integrali indefiniti - Classe 5</a></p>
+  <p><a href="mat43.html">43 - Gli integrali definiti - Classe 5</a></p>
+  <p><a href="mat44.html">44 - Cenni di equazioni differenziali - Classe 5</a></p>
+  <p><a href="mat45.html">45 - Calcolo combinatorio - Classe 5</a></p>
+  <p><a href="mat46.html">46 - Probabilità: approfondimenti - Classe 5</a></p>
+  <p><a href="mat47.html">47 - Distribuzioni di probabilità - Classe 5</a></p>
+  <p><a href="mat48.html">48 - Cenni di geometria analitica dello spazio - Classe 5</a></p>
+</div>
+<!-- fine indice matematica -->    
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 02</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 02: Calcolo letterale - monomi e polinomi -->
+<div class="capitolo-storia" id="capitolo-02-calcolo-letterale">
+
+<p class="titolo-capitolo">02 - Calcolo letterale: monomi e polinomi - Classe 1</p>
+
+<p class="titolo-capitolo">Dalle lettere ai numeri: cos'è un monomio</p>
+<p>Finora abbiamo lavorato con numeri ben precisi. Ma in matematica capita spesso di dover descrivere situazioni in cui un valore non è fissato, oppure regole che devono valere per infiniti numeri contemporaneamente. Per fare questo si usano le lettere: una lettera come x, y o a rappresenta un numero qualsiasi, non ancora specificato. Questo modo di scrivere si chiama calcolo letterale.</p>
+<p>Un monomio è un'espressione in cui compaiono solo numeri e lettere legati tra loro esclusivamente da moltiplicazioni e potenze con esponente naturale. Ad esempio 5x<sup>2</sup>, -3ab, 7 e (2/3)xy<sup>3</sup> sono monomi. Non sono invece monomi espressioni come 3x + 2 (c'è un'addizione) oppure 5/x (la lettera compare al denominatore).</p>
+<p>Ogni monomio si scompone in due parti: il coefficiente, cioè la parte numerica, e la parte letterale, cioè l'insieme delle lettere con i rispettivi esponenti. Nel monomio -4x<sup>3</sup>y<sup>2</sup>, il coefficiente è -4 e la parte letterale è x<sup>3</sup>y<sup>2</sup>.</p>
+<p class="formula">monomio = coefficiente × parte letterale</p>
+<p>Il grado di un monomio rispetto a una lettera è l'esponente con cui quella lettera compare. Il grado complessivo, invece, è la somma di tutti gli esponenti delle lettere presenti. Ad esempio, nel monomio 6x<sup>2</sup>y<sup>3</sup>, il grado rispetto a x è 2, il grado rispetto a y è 3, e il grado complessivo è 2 + 3 = 5.</p>
+<p>Due monomi si dicono simili quando hanno la stessa parte letterale, anche se i coefficienti sono diversi. Ad esempio 3x<sup>2</sup>y e -7x<sup>2</sup>y sono simili, mentre 3x<sup>2</sup>y e 3xy<sup>2</sup> non lo sono, perché gli esponenti sono distribuiti in modo diverso.</p>
+
+<p class="titolo-capitolo">Le operazioni con i monomi</p>
+<p>La somma algebrica si può eseguire solo tra monomi simili: si sommano i coefficienti e si lascia invariata la parte letterale. Questa operazione si chiama anche riduzione dei monomi simili.</p>
+<p class="formula">5x<sup>2</sup>y + 3x<sup>2</sup>y = (5 + 3)x<sup>2</sup>y = 8x<sup>2</sup>y</p>
+<p>Se i monomi non sono simili, come 4x e 2x<sup>2</sup>, la somma non si può ridurre a un unico monomio e resta scritta come 4x + 2x<sup>2</sup>: in questo caso, come vedremo tra poco, il risultato è un polinomio.</p>
+<p>Il prodotto tra monomi si può invece eseguire sempre, indipendentemente dal fatto che siano simili o no: si moltiplicano i coefficienti tra loro e si moltiplicano le parti letterali applicando le proprietà delle potenze, per cui lettere uguali si sommano negli esponenti.</p>
+<p class="formula">(3x<sup>2</sup>y) × (-2xy<sup>3</sup>) = (3 × -2) × (x<sup>2</sup> × x) × (y × y<sup>3</sup>) = -6x<sup>3</sup>y<sup>4</sup></p>
+<p>Per dividere due monomi si dividono i coefficienti e si sottraggono gli esponenti delle lettere uguali. La divisione è possibile in ambito di monomi solo quando ogni esponente del divisore è minore o uguale a quello corrispondente nel dividendo, altrimenti il risultato non è più un monomio ma una frazione algebrica.</p>
+<p class="formula">(12x<sup>5</sup>y<sup>3</sup>) : (4x<sup>2</sup>y) = (12 : 4) × x<sup>5 - 2</sup> × y<sup>3 - 1</sup> = 3x<sup>3</sup>y<sup>2</sup></p>
+<p>Infine, per elevare un monomio a potenza, si eleva a quella potenza il coefficiente e si moltiplica ogni esponente della parte letterale per l'esponente esterno.</p>
+<p class="formula">(2x<sup>3</sup>y<sup>2</sup>)<sup>3</sup> = 2<sup>3</sup> × x<sup>3×3</sup> × y<sup>2×3</sup> = 8x<sup>9</sup>y<sup>6</sup></p>
+
+<p class="titolo-capitolo">M.C.D. e m.c.m. tra monomi</p>
+<p>Come per i numeri, anche tra monomi si può calcolare il massimo comun divisore (M.C.D.) e il minimo comune multiplo (m.c.m.). Per il coefficiente numerico si procede come per i numeri interi; per la parte letterale, il M.C.D. contiene ogni lettera comune presa con l'esponente minimo, mentre il m.c.m. contiene ogni lettera presente (comune o no) presa con l'esponente massimo.</p>
+<p>Consideriamo i monomi 12x<sup>2</sup>y<sup>3</sup> e 18x<sup>4</sup>y.</p>
+<p>Il M.C.D. tra i coefficienti 12 e 18 è 6; per la parte letterale si prendono gli esponenti minimi: x<sup>2</sup> e y<sup>1</sup>. Quindi M.C.D. = 6x<sup>2</sup>y.</p>
+<p>Il m.c.m. tra 12 e 18 è 36; per la parte letterale si prendono gli esponenti massimi: x<sup>4</sup> e y<sup>3</sup>. Quindi m.c.m. = 36x<sup>4</sup>y<sup>3</sup>.</p>
+
+<p class="titolo-capitolo">I polinomi: definizione e grado</p>
+<p>Quando si sommano algebricamente due o più monomi non simili tra loro, si ottiene un polinomio. Un polinomio è dunque una somma algebrica di monomi, ciascuno dei quali viene chiamato termine del polinomio.</p>
+<p class="formula">3x<sup>2</sup> - 5xy + 7y<sup>2</sup> - 2</p>
+<p>In base al numero di termini, un polinomio prende un nome particolare: se ha due termini si chiama binomio, se ne ha tre trinomio, se ne ha quattro quadrinomio. Un polinomio si dice ridotto in forma normale quando non contiene più monomi simili tra loro, cioè quando sono già stati sommati tutti quelli riducibili.</p>
+<p>Il grado di un polinomio è il grado più alto tra quelli dei suoi termini. Nel polinomio 3x<sup>2</sup> - 5xy + 7y<sup>2</sup> - 2, i gradi dei singoli termini sono rispettivamente 2, 2, 2 e 0: il grado complessivo del polinomio è quindi 2.</p>
+<p>Un polinomio si dice omogeneo quando tutti i suoi termini hanno lo stesso grado; si dice ordinato secondo una lettera quando gli esponenti di quella lettera compaiono in ordine crescente o decrescente; si dice completo quando compaiono tutte le potenze di quella lettera, dal grado massimo fino a zero.</p>
+
+<p class="titolo-capitolo">Somma, differenza e prodotto di polinomi</p>
+<p>Per sommare o sottrarre due polinomi si scrivono uno di seguito all'altro tutti i loro termini, avendo cura di cambiare segno a ciascun termine del polinomio che viene sottratto, e infine si riducono i monomi simili.</p>
+<p>Sommiamo i polinomi A = 3x<sup>2</sup> - 2x + 5 e B = -x<sup>2</sup> + 4x - 1.</p>
+<p class="formula">A + B = (3x<sup>2</sup> - 2x + 5) + (-x<sup>2</sup> + 4x - 1) = (3 - 1)x<sup>2</sup> + (-2 + 4)x + (5 - 1) = 2x<sup>2</sup> + 2x + 4</p>
+<p>Calcoliamo ora la differenza A - B: cambiamo segno a ogni termine di B e poi sommiamo.</p>
+<p class="formula">A - B = (3x<sup>2</sup> - 2x + 5) + (x<sup>2</sup> - 4x + 1) = 4x<sup>2</sup> - 6x + 6</p>
+<p>Per moltiplicare un polinomio per un monomio, si applica la proprietà distributiva: si moltiplica il monomio per ciascun termine del polinomio, sommando poi i risultati.</p>
+<p class="formula">2x × (3x<sup>2</sup> - 4x + 1) = 6x<sup>3</sup> - 8x<sup>2</sup> + 2x</p>
+<p>Per moltiplicare due polinomi tra loro, si moltiplica ogni termine del primo per ogni termine del secondo e si riducono, alla fine, i monomi simili.</p>
+<p class="formula">(x + 3) × (x - 2) = x×x + x×(-2) + 3×x + 3×(-2) = x<sup>2</sup> - 2x + 3x - 6 = x<sup>2</sup> + x - 6</p>
+
+<p class="titolo-capitolo">I prodotti notevoli</p>
+<p>Alcuni prodotti tra polinomi si presentano così di frequente che conviene imparare a memoria il loro risultato, senza dover ripetere ogni volta tutti i passaggi: si chiamano prodotti notevoli.</p>
+<p>Il primo è il quadrato di un binomio: il quadrato del primo termine, più il doppio prodotto del primo per il secondo, più il quadrato del secondo.</p>
+<p class="formula">(a + b)<sup>2</sup> = a<sup>2</sup> + 2ab + b<sup>2</sup></p>
+<p class="formula">(a - b)<sup>2</sup> = a<sup>2</sup> - 2ab + b<sup>2</sup></p>
+<p>Verifichiamolo con un esempio numerico: calcoliamo (x + 4)<sup>2</sup> applicando la regola invece di eseguire la moltiplicazione per esteso.</p>
+<p class="formula">(x + 4)<sup>2</sup> = x<sup>2</sup> + 2×x×4 + 4<sup>2</sup> = x<sup>2</sup> + 8x + 16</p>
+<p>Il secondo prodotto notevole è la somma per differenza: il prodotto di una somma e di una differenza degli stessi due termini è uguale alla differenza dei loro quadrati.</p>
+<p class="formula">(a + b) × (a - b) = a<sup>2</sup> - b<sup>2</sup></p>
+<p>Ad esempio, (x + 5) × (x - 5) = x<sup>2</sup> - 25, un risultato che si ottiene immediatamente senza dover sviluppare tutti i quattro prodotti.</p>
+<p>Esiste anche il cubo di un binomio, utile soprattutto in classe successiva quando si affronteranno le scomposizioni, che vale:</p>
+<p class="formula">(a + b)<sup>3</sup> = a<sup>3</sup> + 3a<sup>2</sup>b + 3ab<sup>2</sup> + b<sup>3</sup></p>
+<p>Riconoscere questi schemi è molto utile: quando in un esercizio si nota una struttura simile a (a + b)<sup>2</sup> o a (a + b)(a - b), si può scrivere subito il risultato applicando la formula, risparmiando tempo e riducendo il rischio di errori di calcolo.</p>
+
+</div>
+<!-- fine capitolo matematica 02 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat03.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
