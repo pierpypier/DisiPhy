@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 09</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 09: I triangoli -->
+<div class="capitolo-storia" id="capitolo-09-triangoli">
+
+<p class="titolo-capitolo">09 - I triangoli - Classe 1</p>
+
+<p class="titolo-capitolo">Definizione e elementi di un triangolo</p>
+<p>Un triangolo è un poligono formato da tre segmenti, detti lati, che uniscono a due a due tre punti non allineati, detti vertici. Il triangolo è il poligono più semplice che esista, perché tre è il minimo numero di lati necessario per racchiudere una porzione di piano.</p>
+<p>Ogni triangolo possiede tre lati, tre angoli interni (formati a ciascun vertice dai due lati che vi si incontrano) e tre vertici. La somma dei tre lati si chiama perimetro del triangolo. Un lato di un triangolo si indica spesso con la lettera minuscola corrispondente al vertice opposto: il lato opposto al vertice A si chiama a, quello opposto a B si chiama b, e così via.</p>
+<p>Un angolo esterno di un triangolo è l'angolo adiacente a un angolo interno, ottenuto prolungando un lato oltre un vertice.</p>
+
+<p class="titolo-capitolo">Classificazione dei triangoli rispetto ai lati</p>
+<p>In base alla lunghezza dei lati, i triangoli si classificano in tre categorie.</p>
+<p>Un triangolo si dice scaleno quando ha tutti e tre i lati di lunghezza diversa tra loro. Un triangolo si dice isoscele quando ha almeno due lati congruenti: i due lati congruenti si chiamano lati obliqui, il terzo lato si chiama base, e l'angolo compreso tra i due lati obliqui si chiama angolo al vertice. Un triangolo si dice equilatero quando ha tutti e tre i lati congruenti tra loro: si può considerare un caso particolare di triangolo isoscele, in cui anche il terzo lato è congruente agli altri due.</p>
+
+<p class="titolo-capitolo">Classificazione dei triangoli rispetto agli angoli</p>
+<p>In base all'ampiezza degli angoli interni, i triangoli si classificano in altre tre categorie.</p>
+<p>Un triangolo si dice acutangolo quando tutti e tre i suoi angoli interni sono acuti, cioè minori di 90°. Un triangolo si dice rettangolo quando uno dei suoi angoli interni è retto, cioè misura esattamente 90°: in questo caso, i due lati che formano l'angolo retto si chiamano cateti, mentre il lato opposto all'angolo retto, il più lungo dei tre, si chiama ipotenusa. Un triangolo si dice ottusangolo quando uno dei suoi angoli interni è ottuso, cioè maggiore di 90°.</p>
+<p>È importante notare che in un triangolo non può mai esserci più di un angolo retto o ottuso: lo dimostreremo a breve grazie al teorema sulla somma degli angoli interni.</p>
+
+<p class="titolo-capitolo">I criteri di congruenza dei triangoli</p>
+<p>Due triangoli si dicono congruenti quando hanno tutti gli elementi corrispondenti (lati e angoli) rispettivamente congruenti. Per stabilire se due triangoli sono congruenti non è però necessario verificare tutti e sei gli elementi: bastano alcune condizioni particolari, dette criteri di congruenza.</p>
+<p>Il primo criterio di congruenza afferma che due triangoli sono congruenti se hanno rispettivamente congruenti due lati e l'angolo tra essi compreso.</p>
+<p>Il secondo criterio di congruenza afferma che due triangoli sono congruenti se hanno rispettivamente congruenti un lato e i due angoli ad esso adiacenti.</p>
+<p>Il terzo criterio di congruenza afferma che due triangoli sono congruenti se hanno rispettivamente congruenti tutti e tre i lati.</p>
+<p>Questi criteri sono strumenti fondamentali per le dimostrazioni geometriche: ogni volta che dobbiamo dimostrare che due triangoli sono congruenti, ci basta verificare che siano soddisfatte le condizioni di uno solo dei tre criteri, senza dover controllare direttamente tutti gli elementi.</p>
+
+<p class="titolo-capitolo">Proprietà del triangolo isoscele</p>
+<p>Il triangolo isoscele possiede alcune proprietà importanti, che si dimostrano proprio a partire dai criteri di congruenza appena visti. La proprietà principale afferma che, in un triangolo isoscele, gli angoli alla base (cioè gli angoli adiacenti alla base, opposti ai lati obliqui congruenti) sono congruenti tra loro.</p>
+<p>Questa proprietà si dimostra tracciando la bisettrice dell'angolo al vertice, che divide il triangolo isoscele in due triangoli congruenti per il primo criterio (i due lati obliqui sono congruenti per ipotesi, la bisettrice è un lato in comune, e gli angoli compresi sono congruenti perché la bisettrice li divide esattamente a metà). Dalla congruenza dei due triangoli così ottenuti segue che gli angoli alla base sono congruenti.</p>
+<p>Un'altra importante proprietà afferma che, in un triangolo isoscele, la bisettrice dell'angolo al vertice, la mediana relativa alla base (cioè il segmento che unisce il vertice al punto medio della base) e l'altezza relativa alla base (cioè il segmento perpendicolare alla base condotto dal vertice opposto) coincidono tutte nello stesso segmento.</p>
+
+<p class="titolo-capitolo">Il teorema della somma degli angoli interni</p>
+<p>Uno dei teoremi più importanti e utilizzati riguardanti i triangoli afferma che la somma degli angoli interni di un triangolo qualsiasi è sempre uguale a un angolo piatto, cioè a 180°.</p>
+<p class="formula">α + β + γ = 180°</p>
+<p>Questo teorema si dimostra tracciando, per il vertice opposto al lato considerato come base, una retta parallela a quella base: grazie alle proprietà degli angoli formati da una trasversale che taglia due rette parallele (che approfondiremo nel prossimo capitolo), si può dimostrare che i tre angoli interni del triangolo, "trasportati" lungo questa retta ausiliaria, formano insieme proprio un angolo piatto.</p>
+<p>Da questo teorema fondamentale derivano diverse conseguenze utili. Innanzitutto, in un triangolo rettangolo, poiché uno degli angoli misura già 90°, la somma degli altri due angoli acuti deve necessariamente essere 90°: sono cioè complementari tra loro.</p>
+<p class="formula">In un triangolo rettangolo: angolo1 + angolo2 = 90° (oltre all'angolo retto)</p>
+<p>Inoltre, un angolo esterno di un triangolo è sempre congruente alla somma dei due angoli interni non adiacenti ad esso: questa è una conseguenza diretta del teorema della somma degli angoli interni, applicata insieme al fatto che un angolo esterno e il suo angolo interno adiacente sono supplementari.</p>
+<p>Applichiamo il teorema a un esempio numerico: in un triangolo, un angolo misura 50° e un secondo angolo misura 70°. Quanto misura il terzo angolo?</p>
+<p class="formula">180° - 50° - 70° = 60°</p>
+<p>Il terzo angolo misura quindi 60°, e possiamo notare che, essendo tutti e tre gli angoli minori di 90°, il triangolo in questione è acutangolo.</p>
+
+<p class="titolo-capitolo">Le disuguaglianze del triangolo</p>
+<p>Esistono infine due importanti disuguaglianze che regolano la forma di un triangolo. La prima riguarda i lati: in un triangolo qualsiasi, ogni lato deve essere minore della somma degli altri due e maggiore della loro differenza. Questa condizione si chiama disuguaglianza triangolare, ed è essenziale: se non fosse rispettata, i tre segmenti non potrebbero materialmente chiudersi a formare un triangolo.</p>
+<p class="formula">|b - c| &lt; a &lt; b + c</p>
+<p>La seconda disuguaglianza mette in relazione lati e angoli: in un triangolo, a lato maggiore si oppone angolo maggiore, e viceversa. Questo significa, per esempio, che in un triangolo rettangolo l'ipotesi è sempre il lato più lungo, dato che l'angolo retto, opposto ad essa, è il maggiore dei tre angoli.</p>
+
+</div>
+<!-- fine capitolo matematica 09 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat10.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

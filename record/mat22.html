@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 22</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 22: Introduzione alle funzioni -->
+<div class="capitolo-storia" id="capitolo-22-introduzione-funzioni">
+
+<p class="titolo-capitolo">22 - Introduzione alle funzioni: linguaggio e funzioni elementari - Classe 3</p>
+
+<p class="titolo-capitolo">Il concetto di funzione</p>
+<p>Una funzione è una particolare relazione che associa a ogni elemento di un primo insieme, detto dominio, uno e un solo elemento di un secondo insieme, detto codominio. La caratteristica fondamentale che distingue una funzione da una relazione qualsiasi è proprio questa: a ogni elemento del dominio deve corrispondere un solo elemento del codominio, mai due o più.</p>
+<p>Se indichiamo con f il nome della funzione, con x un generico elemento del dominio e con y il corrispondente elemento del codominio, la relazione si scrive nel seguente modo, e si legge "y uguale a f di x".</p>
+<p class="formula">y = f(x)</p>
+<p>La variabile x si chiama variabile indipendente, perché può assumere liberamente qualsiasi valore appartenente al dominio; la variabile y si chiama variabile dipendente, perché il suo valore dipende da quello scelto per x, secondo la legge espressa dalla funzione. L'insieme di tutti i valori effettivamente assunti da y, al variare di x nel dominio, si chiama codominio effettivo (o insieme immagine).</p>
+
+<p class="titolo-capitolo">Dominio di una funzione</p>
+<p>Quando una funzione è espressa tramite una formula algebrica, senza che sia specificato esplicitamente l'insieme di partenza, si assume convenzionalmente come dominio l'insieme più ampio possibile di numeri reali per cui la formula ha senso, cioè per cui è possibile eseguire tutti i calcoli previsti. Determinare questo insieme si chiama trovare il dominio (o campo di esistenza) della funzione, e le regole sono le stesse già viste per le condizioni di esistenza delle frazioni algebriche e dei radicali.</p>
+<p>Se la funzione è un polinomio, il dominio è sempre tutto l'insieme dei numeri reali, perché non ci sono operazioni che pongano restrizioni. Se la funzione è una frazione, occorre escludere i valori che annullano il denominatore. Se la funzione contiene un radicale di indice pari, occorre imporre che il radicando sia maggiore o uguale a zero.</p>
+<p>Determiniamo il dominio della funzione f(x) = √(x - 2) / (x - 5). Dobbiamo imporre contemporaneamente che il radicando sia non negativo e che il denominatore sia diverso da zero.</p>
+<p class="formula">x - 2 ≥ 0 e x - 5 ≠ 0 → x ≥ 2 e x ≠ 5</p>
+<p class="formula">Dominio: x ≥ 2, con x ≠ 5</p>
+
+<p class="titolo-capitolo">Rappresentazione grafica: il piano cartesiano</p>
+<p>Per rappresentare graficamente una funzione si utilizza il piano cartesiano, che studieremo nel dettaglio nel prossimo capitolo: a ogni coppia di valori (x, y) che soddisfa la relazione y = f(x) corrisponde un punto del piano, e l'insieme di tutti questi punti forma il grafico della funzione. Proprio grazie alla condizione che ogni x del dominio abbia un solo corrispondente valore di y, il grafico di una funzione ha una proprietà geometrica importante: ogni retta verticale (parallela all'asse y) incontra il grafico al massimo in un punto. Questa si chiama proprietà del grafico cartesiano di una funzione, ed è un modo rapido per riconoscere visivamente se un grafico rappresenta effettivamente una funzione.</p>
+
+<p class="titolo-capitolo">Funzioni iniettive, suriettive e biiettive</p>
+<p>Oltre alla proprietà generale di funzione, si possono studiare ulteriori caratteristiche riguardanti la corrispondenza tra dominio e codominio. Una funzione si dice iniettiva quando a elementi diversi del dominio corrispondono sempre elementi diversi del codominio, cioè non esistono due valori distinti di x che diano lo stesso valore di y.</p>
+<p>Una funzione si dice suriettiva quando ogni elemento del codominio è immagine di almeno un elemento del dominio, cioè il codominio effettivo coincide con l'intero codominio dichiarato. Una funzione si dice biiettiva (o biunivoca) quando è contemporaneamente iniettiva e suriettiva: in questo caso esiste una corrispondenza perfetta, uno a uno, tra dominio e codominio, e diventa possibile definire la funzione inversa, che vedremo più avanti in questo stesso anno.</p>
+
+<p class="titolo-capitolo">Le funzioni elementari: retta, parabola e iperbole</p>
+<p>Introduciamo ora brevemente le funzioni elementari più importanti, che verranno poi studiate approfonditamente nei capitoli successivi di quest'anno. La funzione lineare, il cui grafico è una retta, ha la forma generale seguente, dove m si chiama coefficiente angolare e q si chiama intercetta (o termine noto).</p>
+<p class="formula">y = mx + q</p>
+<p>La funzione quadratica, il cui grafico è una parabola, ha la forma generale seguente, con la condizione che a sia diverso da zero.</p>
+<p class="formula">y = ax<sup>2</sup> + bx + c</p>
+<p>La funzione omografica (o razionale fratta più semplice), il cui grafico, in un caso particolare che vedremo, è un'iperbole, ha una forma come la seguente, con dominio che esclude i valori che annullano il denominatore.</p>
+<p class="formula">y = k / x , con x ≠ 0</p>
+
+<p class="titolo-capitolo">Funzioni pari e dispari</p>
+<p>Un'ultima classificazione utile riguarda la simmetria del grafico di una funzione. Una funzione si dice pari quando, per ogni x del dominio, vale f(-x) = f(x): il suo grafico è simmetrico rispetto all'asse delle ordinate. Una funzione si dice dispari quando, per ogni x del dominio, vale f(-x) = -f(x): il suo grafico è simmetrico rispetto all'origine degli assi.</p>
+<p class="formula">pari: f(-x) = f(x) , dispari: f(-x) = -f(x)</p>
+<p>Verifichiamo se la funzione f(x) = x<sup>2</sup> è pari, calcolando f(-x) e confrontandolo con f(x).</p>
+<p class="formula">f(-x) = (-x)<sup>2</sup> = x<sup>2</sup> = f(x) → la funzione è pari</p>
+<p>Verifichiamo ora se la funzione f(x) = x<sup>3</sup> è dispari.</p>
+<p class="formula">f(-x) = (-x)<sup>3</sup> = -x<sup>3</sup> = -f(x) → la funzione è dispari</p>
+<p>Molte funzioni, tuttavia, non sono né pari né dispari: basta un solo controesempio, cioè un solo valore di x per cui né f(-x) = f(x) né f(-x) = -f(x) risultano verificate, per escludere entrambe le simmetrie.</p>
+
+</div>
+<!-- fine capitolo matematica 22 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat23.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

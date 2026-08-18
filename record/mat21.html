@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 21</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 21: Probabilità - primi elementi -->
+<div class="capitolo-storia" id="capitolo-21-probabilita-primi-elementi">
+
+<p class="titolo-capitolo">21 - Probabilità: primi elementi - Classe 2</p>
+
+<p class="titolo-capitolo">Eventi ed esperimenti aleatori</p>
+<p>Un esperimento aleatorio (o casuale) è un esperimento il cui esito non è prevedibile con certezza in anticipo, pur essendo note tutte le possibili conseguenze che si possono verificare: il lancio di un dado o di una moneta sono gli esempi più classici. L'insieme di tutti i possibili esiti di un esperimento aleatorio si chiama spazio campionario, e ciascun possibile esito si chiama evento elementare.</p>
+<p>Un evento, in generale, è un qualsiasi sottoinsieme dello spazio campionario: può essere un singolo evento elementare, oppure un insieme di più eventi elementari che condividono una certa caratteristica. Per esempio, nel lancio di un dado a sei facce, lo spazio campionario è l'insieme {1, 2, 3, 4, 5, 6}, mentre l'evento "esce un numero pari" è il sottoinsieme {2, 4, 6}.</p>
+<p>Un evento si dice certo quando coincide con l'intero spazio campionario, cioè si verifica sempre qualunque sia l'esito dell'esperimento. Un evento si dice impossibile quando non contiene alcun evento elementare, cioè non si può mai verificare. Due eventi si dicono incompatibili quando non hanno alcun evento elementare in comune, cioè non si possono verificare contemporaneamente nello stesso esperimento.</p>
+
+<p class="titolo-capitolo">La definizione classica di probabilità</p>
+<p>La definizione classica di probabilità, attribuita storicamente al matematico francese Pierre Simon Laplace, si applica quando tutti gli eventi elementari dello spazio campionario sono ugualmente possibili, cioè equiprobabili. In questo caso, la probabilità di un evento si calcola come il rapporto tra il numero di casi favorevoli all'evento e il numero di casi possibili nello spazio campionario.</p>
+<p class="formula">P(evento) = casi favorevoli / casi possibili</p>
+<p>Da questa definizione discende immediatamente che la probabilità di un evento è sempre un numero compreso tra 0 e 1 (estremi inclusi): vale 0 per un evento impossibile (nessun caso favorevole) e vale 1 per un evento certo (tutti i casi sono favorevoli).</p>
+<p class="formula">0 ≤ P(evento) ≤ 1</p>
+<p>Calcoliamo la probabilità di ottenere un numero pari lanciando un dado a sei facce non truccato. I casi favorevoli sono {2, 4, 6}, cioè 3, mentre i casi possibili sono 6.</p>
+<p class="formula">P(numero pari) = 3 / 6 = 1/2 = 0,5</p>
+
+<p class="titolo-capitolo">L'evento contrario</p>
+<p>Dato un evento E, si chiama evento contrario (o complementare) di E, indicato con E-negato, l'evento che si verifica esattamente quando E non si verifica. Poiché l'evento E e il suo contrario, insieme, esauriscono tutte le possibilità dello spazio campionario, la somma delle loro probabilità è sempre 1.</p>
+<p class="formula">P(E) + P(non E) = 1 , quindi P(non E) = 1 - P(E)</p>
+<p>Questa relazione è molto utile in pratica, soprattutto quando calcolare direttamente la probabilità dell'evento contrario è più semplice che calcolare quella dell'evento originale. Calcoliamo, ad esempio, la probabilità di non ottenere un 6 lanciando un dado: sapendo che P(ottenere 6) = 1/6, si ha subito P(non ottenere 6) = 1 - 1/6 = 5/6.</p>
+
+<p class="titolo-capitolo">La probabilità della somma logica di eventi</p>
+<p>Quando si vuole calcolare la probabilità che si verifichi almeno uno tra due eventi A e B, detta somma logica e indicata con P(A ∪ B), occorre distinguere due casi, a seconda che gli eventi siano compatibili o incompatibili.</p>
+<p>Se i due eventi sono incompatibili, cioè non possono verificarsi contemporaneamente, la probabilità della loro somma logica è semplicemente la somma delle rispettive probabilità.</p>
+<p class="formula">P(A ∪ B) = P(A) + P(B) , se A e B sono incompatibili</p>
+<p>Se invece i due eventi sono compatibili, cioè possono verificarsi contemporaneamente, sommando semplicemente le probabilità si conterebbe due volte la probabilità dell'evento intersezione (cioè l'evento in cui si verificano entrambi): occorre quindi sottrarla una volta.</p>
+<p class="formula">P(A ∪ B) = P(A) + P(B) - P(A ∩ B) , se A e B sono compatibili</p>
+<p>Calcoliamo la probabilità di ottenere, lanciando un dado, un numero pari oppure un numero maggiore di 4. L'evento "pari" è {2, 4, 6}, con probabilità 3/6; l'evento "maggiore di 4" è {5, 6}, con probabilità 2/6. I due eventi sono compatibili, perché condividono l'esito 6: la loro intersezione è {6}, con probabilità 1/6.</p>
+<p class="formula">P(pari ∪ maggiore di 4) = 3/6 + 2/6 - 1/6 = 4/6 = 2/3</p>
+
+<p class="titolo-capitolo">La probabilità del prodotto logico di eventi</p>
+<p>Quando si vuole calcolare la probabilità che si verifichino entrambi gli eventi A e B contemporaneamente, detta prodotto logico e indicata con P(A ∩ B), occorre distinguere se gli eventi sono indipendenti oppure dipendenti tra loro.</p>
+<p>Due eventi si dicono indipendenti quando il verificarsi dell'uno non influenza in alcun modo la probabilità che si verifichi l'altro (per esempio, i risultati di due lanci distinti di un dado sono sempre indipendenti tra loro). In questo caso, la probabilità del prodotto logico è semplicemente il prodotto delle rispettive probabilità.</p>
+<p class="formula">P(A ∩ B) = P(A) × P(B) , se A e B sono indipendenti</p>
+<p>Calcoliamo la probabilità di ottenere testa lanciando una moneta e, contemporaneamente, un numero pari lanciando un dado, sapendo che i due esperimenti sono indipendenti tra loro.</p>
+<p class="formula">P(testa) × P(pari) = 1/2 × 1/2 = 1/4</p>
+<p>Quando invece gli eventi sono dipendenti, cioè il verificarsi del primo modifica la probabilità del secondo (situazione tipica, ad esempio, delle estrazioni senza reinserimento), occorre utilizzare la probabilità condizionata, indicata con P(B|A), che rappresenta la probabilità che si verifichi B sapendo che A si è già verificato.</p>
+<p class="formula">P(A ∩ B) = P(A) × P(B|A) , se A e B sono dipendenti</p>
+<p>Consideriamo un'urna con 5 palline rosse e 3 palline blu, da cui si estraggono due palline senza reinserimento. Calcoliamo la probabilità di estrarre due palline rosse consecutivamente. La probabilità di estrarre rossa alla prima estrazione è 5/8; dato che è uscita una rossa, rimangono 4 rosse su 7 palline totali per la seconda estrazione.</p>
+<p class="formula">P(rossa e rossa) = 5/8 × 4/7 = 20/56 = 5/14</p>
+
+</div>
+<!-- fine capitolo matematica 21 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat22.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

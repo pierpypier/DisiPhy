@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 12</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 12: Equazioni di secondo grado -->
+<div class="capitolo-storia" id="capitolo-12-equazioni-secondo-grado">
+
+<p class="titolo-capitolo">12 - Equazioni di secondo grado - Classe 2</p>
+
+<p class="titolo-capitolo">Che cos'è un'equazione di secondo grado</p>
+<p>Un'equazione di secondo grado è un'equazione in cui l'incognita compare, dopo aver svolto tutti i calcoli, con esponente massimo uguale a 2. La forma normale di un'equazione di secondo grado è la seguente, dove a, b e c sono numeri reali detti coefficienti, con la condizione che a sia diverso da zero (altrimenti l'equazione sarebbe di primo grado).</p>
+<p class="formula">ax<sup>2</sup> + bx + c = 0</p>
+<p>Il coefficiente a si chiama coefficiente del termine di secondo grado, b coefficiente del termine di primo grado, c termine noto. In base ai valori di questi coefficienti, un'equazione di secondo grado si classifica in modi diversi.</p>
+<p>Se sia b sia c sono diversi da zero, l'equazione si dice completa. Se b è uguale a zero, l'equazione si dice pura, e ha la forma ax<sup>2</sup> + c = 0. Se c è uguale a zero, l'equazione si dice spuria, e ha la forma ax<sup>2</sup> + bx = 0. Se sia b sia c sono uguali a zero, l'equazione si dice monomia, e ha la forma ax<sup>2</sup> = 0.</p>
+
+<p class="titolo-capitolo">Risoluzione delle equazioni incomplete</p>
+<p>Le equazioni incomplete si risolvono con metodi più rapidi rispetto alla formula generale, che vedremo tra poco per il caso completo.</p>
+<p>Un'equazione monomia ax<sup>2</sup> = 0 si risolve dividendo per a: si ottiene x<sup>2</sup> = 0, la cui unica soluzione è x = 0 (contata, come vedremo, due volte).</p>
+<p>Un'equazione pura ax<sup>2</sup> + c = 0 si risolve isolando x<sup>2</sup> ed estraendo la radice quadrata di entrambi i membri.</p>
+<p class="formula">x<sup>2</sup> = -c/a → x = ±√(-c/a)</p>
+<p>Risolviamo l'equazione pura 2x<sup>2</sup> - 8 = 0. Isoliamo x<sup>2</sup>.</p>
+<p class="formula">2x<sup>2</sup> = 8 → x<sup>2</sup> = 4 → x = ±√4 = ±2</p>
+<p>Le soluzioni sono quindi x = 2 e x = -2. Se invece il valore -c/a fosse risultato negativo, l'equazione pura non avrebbe avuto soluzioni reali, perché non esiste alcun numero reale il cui quadrato sia negativo.</p>
+<p>Un'equazione spuria ax<sup>2</sup> + bx = 0 si risolve raccogliendo x a fattor comune, ottenendo il prodotto di due fattori uguagliato a zero: si applica quindi la legge di annullamento del prodotto, per cui un prodotto è nullo se e solo se almeno uno dei suoi fattori è nullo.</p>
+<p class="formula">x(ax + b) = 0 → x = 0 oppure ax + b = 0 → x = -b/a</p>
+<p>Risolviamo l'equazione spuria 3x<sup>2</sup> - 6x = 0. Raccogliamo x a fattor comune.</p>
+<p class="formula">x(3x - 6) = 0 → x = 0 oppure 3x - 6 = 0 → x = 2</p>
+<p>Le soluzioni sono quindi x = 0 e x = 2. Un'equazione spuria ha sempre lo zero tra le sue soluzioni.</p>
+
+<p class="titolo-capitolo">La formula risolutiva generale</p>
+<p>Per risolvere un'equazione completa, si utilizza la formula risolutiva generale, ottenuta con la tecnica del completamento del quadrato applicata alla forma normale ax<sup>2</sup> + bx + c = 0.</p>
+<p class="formula">x = (-b ± √(b<sup>2</sup> - 4ac)) / (2a)</p>
+<p>L'espressione sotto il segno di radice, b<sup>2</sup> - 4ac, si chiama discriminante dell'equazione e si indica solitamente con la lettera greca Δ (delta), perché il suo segno determina completamente il numero di soluzioni reali dell'equazione.</p>
+<p class="formula">Δ = b<sup>2</sup> - 4ac</p>
+<p>Risolviamo l'equazione x<sup>2</sup> - 5x + 6 = 0, con a = 1, b = -5, c = 6. Calcoliamo prima il discriminante.</p>
+<p class="formula">Δ = (-5)<sup>2</sup> - 4×1×6 = 25 - 24 = 1</p>
+<p>Poiché Δ è positivo, applichiamo la formula risolutiva.</p>
+<p class="formula">x = (5 ± √1) / 2 = (5 ± 1) / 2</p>
+<p>Otteniamo così le due soluzioni: x = (5+1)/2 = 3 e x = (5-1)/2 = 2.</p>
+
+<p class="titolo-capitolo">Il segno del discriminante</p>
+<p>Il valore del discriminante Δ permette di sapere, ancora prima di completare i calcoli, quante soluzioni reali avrà l'equazione, senza bisogno di calcolarle esplicitamente.</p>
+<p>Se Δ è maggiore di zero, l'equazione ha due soluzioni reali e distinte, date dalla formula risolutiva con il doppio segno.</p>
+<p>Se Δ è uguale a zero, l'equazione ha un'unica soluzione reale, detta anche soluzione doppia, perché la formula risolutiva si riduce a x = -b/(2a), dato che la radice del discriminante nullo è zero.</p>
+<p>Se Δ è minore di zero, l'equazione non ha soluzioni reali, perché non esiste alcun numero reale che sia la radice quadrata di un numero negativo: si dice in questo caso che l'equazione è impossibile in ℝ. (Il capitolo sui numeri complessi mostrerà come, in un insieme numerico più ampio, anche queste equazioni ammettano soluzione.)</p>
+<p>Verifichiamo con un esempio il caso Δ = 0: risolviamo x<sup>2</sup> - 4x + 4 = 0.</p>
+<p class="formula">Δ = (-4)<sup>2</sup> - 4×1×4 = 16 - 16 = 0</p>
+<p>La soluzione doppia è quindi x = -(-4)/(2×1) = 4/2 = 2.</p>
+
+<p class="titolo-capitolo">La formula ridotta</p>
+<p>Quando il coefficiente b è un numero pari, oppure quando b/2 è comunque un numero intero, conviene utilizzare la formula ridotta, che semplifica i calcoli evitando alcuni passaggi. Si pone b = 2b', dove b' è la metà di b.</p>
+<p class="formula">x = (-b' ± √(b'<sup>2</sup> - ac)) / a</p>
+<p>Risolviamo con la formula ridotta l'equazione x<sup>2</sup> - 6x + 5 = 0, dove b = -6, quindi b' = -3.</p>
+<p class="formula">x = (3 ± √(9 - 5)) / 1 = 3 ± √4 = 3 ± 2</p>
+<p>Le soluzioni sono quindi x = 5 e x = 1, ottenute con calcoli leggermente più rapidi rispetto alla formula generale.</p>
+
+<p class="titolo-capitolo">Relazioni tra coefficienti e soluzioni</p>
+<p>Esistono due relazioni molto utili, note come relazioni di Viète (o formule di Girard), che legano direttamente i coefficienti di un'equazione di secondo grado alla somma e al prodotto delle sue soluzioni, senza bisogno di calcolarle esplicitamente.</p>
+<p class="formula">x<sub>1</sub> + x<sub>2</sub> = -b/a , x<sub>1</sub> × x<sub>2</sub> = c/a</p>
+<p>Queste relazioni sono utili anche per ricostruire un'equazione a partire dalle sue soluzioni, oppure per verificare rapidamente la correttezza di soluzioni già trovate. Verifichiamo, per l'equazione x<sup>2</sup> - 5x + 6 = 0 risolta sopra, che le relazioni siano soddisfatte: la somma delle soluzioni è 3 + 2 = 5, che coincide con -b/a = 5; il prodotto è 3 × 2 = 6, che coincide con c/a = 6.</p>
+
+<p class="titolo-capitolo">Scomposizione del trinomio di secondo grado</p>
+<p>Le relazioni appena viste permettono anche di scomporre in fattori un qualsiasi trinomio di secondo grado ax<sup>2</sup> + bx + c, purché il discriminante non sia negativo, utilizzando le soluzioni x<sub>1</sub> e x<sub>2</sub> dell'equazione associata.</p>
+<p class="formula">ax<sup>2</sup> + bx + c = a(x - x<sub>1</sub>)(x - x<sub>2</sub>)</p>
+<p>Scomponiamo il trinomio 2x<sup>2</sup> - 2x - 4. Risolviamo prima l'equazione associata 2x<sup>2</sup> - 2x - 4 = 0, cioè x<sup>2</sup> - x - 2 = 0 dopo aver diviso per 2: troviamo x<sub>1</sub> = 2 e x<sub>2</sub> = -1.</p>
+<p class="formula">2x<sup>2</sup> - 2x - 4 = 2(x - 2)(x + 1)</p>
+<p>Questo metodo generalizza la tecnica del trinomio notevole vista nel capitolo sulla scomposizione, e funziona anche quando i due numeri cercati non sono facilmente individuabili "a mente".</p>
+
+</div>
+<!-- fine capitolo matematica 12 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat13.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

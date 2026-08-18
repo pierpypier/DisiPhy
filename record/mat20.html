@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 20</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 20: Statistica descrittiva -->
+<div class="capitolo-storia" id="capitolo-20-statistica-descrittiva">
+
+<p class="titolo-capitolo">20 - Statistica descrittiva - Classe 2</p>
+
+<p class="titolo-capitolo">Popolazione, unità statistiche e caratteri</p>
+<p>La statistica descrittiva è quel ramo della matematica che si occupa di raccogliere, organizzare e sintetizzare dati relativi a un insieme di elementi, allo scopo di descriverne le caratteristiche principali. L'insieme completo degli elementi oggetto di studio si chiama popolazione statistica, mentre ciascun elemento della popolazione si chiama unità statistica.</p>
+<p>La caratteristica che si osserva su ciascuna unità statistica si chiama carattere (o variabile statistica), e può essere di due tipi. Un carattere si dice qualitativo quando esprime una qualità, cioè non è misurabile numericamente (per esempio, il colore degli occhi o il titolo di studio). Un carattere si dice quantitativo quando si esprime tramite un numero (per esempio, l'altezza o il numero di fratelli); i caratteri quantitativi si dividono ulteriormente in discreti, se possono assumere solo valori isolati (come il numero di fratelli), e continui, se possono assumere qualsiasi valore all'interno di un intervallo (come l'altezza).</p>
+
+<p class="titolo-capitolo">Distribuzioni di frequenza</p>
+<p>Una volta raccolti i dati, è utile organizzarli in una tabella di frequenza, che elenca ciascun valore distinto osservato insieme al numero di volte in cui compare, detto frequenza assoluta. Dividendo la frequenza assoluta per il numero totale di osservazioni si ottiene la frequenza relativa, che esprime la proporzione di unità statistiche con quel valore; moltiplicando la frequenza relativa per 100 si ottiene la frequenza percentuale.</p>
+<p class="formula">frequenza relativa = frequenza assoluta / totale osservazioni</p>
+<p>Supponiamo di aver rilevato il voto di un compito in classe su 20 studenti, ottenendo 4 studenti con voto 6, 8 studenti con voto 7 e 8 studenti con voto 8. Calcoliamo la frequenza relativa e percentuale del voto 7.</p>
+<p class="formula">frequenza relativa (voto 7) = 8 / 20 = 0,4 → frequenza percentuale = 40%</p>
+
+<p class="titolo-capitolo">Gli indici di posizione centrale</p>
+<p>Per sintetizzare in un solo numero l'insieme dei dati raccolti, si usano gli indici di posizione centrale, che indicano un valore "tipico" o "centrale" della distribuzione. I tre indici principali sono la media aritmetica, la moda e la mediana.</p>
+<p>La media aritmetica si calcola sommando tutti i valori osservati e dividendo per il numero totale di osservazioni.</p>
+<p class="formula">
+media = <span class="frazione"><span>x<sub>1</sub> + x<sub>2</sub> + ... + x<sub>n</sub></span><span>n</span></span>
+</p>
+<p>Calcoliamo la media dei voti 6, 7, 7, 8, 9 ottenuti da cinque studenti in una verifica.</p>
+<p class="formula">media = (6 + 7 + 7 + 8 + 9) / 5 = 37 / 5 = 7,4</p>
+<p>La moda è il valore che compare con la frequenza più alta all'interno della distribuzione, cioè il valore più diffuso. Nell'esempio precedente, il voto 7 compare due volte, più di ogni altro valore: la moda è quindi 7. Una distribuzione può avere anche più mode, se più valori condividono la massima frequenza, e in questo caso si dice bimodale o multimodale.</p>
+<p>La mediana è il valore che occupa la posizione centrale quando tutti i dati vengono ordinati in senso crescente (o decrescente). Se il numero di osservazioni è dispari, la mediana è semplicemente il valore centrale; se è pari, la mediana è la media aritmetica dei due valori centrali.</p>
+<p>Ordiniamo i voti dell'esempio precedente: 6, 7, 7, 8, 9. Essendo cinque valori (numero dispari), la mediana è il valore che occupa la terza posizione, cioè 7.</p>
+<p class="formula">mediana = 7</p>
+
+<p class="titolo-capitolo">Gli indici di variabilità</p>
+<p>Gli indici di posizione centrale, da soli, non bastano a descrivere completamente una distribuzione di dati: due insiemi di dati possono avere la stessa media pur essendo molto diversi tra loro nella dispersione dei valori attorno ad essa. Per questo si usano anche gli indici di variabilità (o dispersione).</p>
+<p>Il più semplice è il campo di variazione (o range), dato dalla differenza tra il valore massimo e il valore minimo osservati.</p>
+<p class="formula">campo di variazione = valore massimo - valore minimo</p>
+<p>Un indice più raffinato è la varianza, che misura la dispersione dei dati calcolando la media dei quadrati degli scarti di ciascun valore dalla media aritmetica. Si eleva al quadrato lo scarto per evitare che scarti positivi e negativi si compensino a vicenda annullandosi nella somma.</p>
+<p class="formula">
+varianza = <span class="frazione"><span>(x<sub>1</sub> - media)<sup>2</sup> + (x<sub>2</sub> - media)<sup>2</sup> + ... + (x<sub>n</sub> - media)<sup>2</sup></span><span>n</span></span>
+</p>
+<p>Poiché la varianza è espressa in un'unità di misura al quadrato rispetto ai dati originali (per esempio, cm<sup>2</sup> se i dati sono altezze in cm), si preferisce spesso usare la deviazione standard (o scarto quadratico medio), che è semplicemente la radice quadrata della varianza, tornando così alla stessa unità di misura dei dati di partenza.</p>
+<p class="formula">deviazione standard = √varianza</p>
+<p>Calcoliamo la varianza e la deviazione standard dei voti 6, 7, 7, 8, 9, sapendo che la loro media è 7,4. Calcoliamo prima gli scarti dalla media e i loro quadrati.</p>
+<p class="formula">(6-7,4)<sup>2</sup> + (7-7,4)<sup>2</sup> + (7-7,4)<sup>2</sup> + (8-7,4)<sup>2</sup> + (9-7,4)<sup>2</sup> = 1,96 + 0,16 + 0,16 + 0,36 + 2,56 = 5,2</p>
+<p class="formula">varianza = 5,2 / 5 = 1,04 → deviazione standard = √1,04 ≈ 1,02</p>
+
+<p class="titolo-capitolo">Rappresentazioni grafiche</p>
+<p>I dati statistici si rappresentano spesso anche graficamente, per facilitarne la lettura e il confronto visivo. Le rappresentazioni più comuni sono l'istogramma, utilizzato soprattutto per caratteri quantitativi, in cui a ciascun valore o intervallo di valori corrisponde una barra la cui altezza è proporzionale alla frequenza; il diagramma a settori circolari (o a torta), particolarmente adatto per mostrare come un totale si suddivide in parti, dato che l'ampiezza di ciascun settore è proporzionale alla frequenza percentuale del corrispondente valore; e il diagramma a barre, simile all'istogramma ma spesso utilizzato per caratteri qualitativi o discreti, con barre separate tra loro invece che accostate.</p>
+<p>Per costruire un settore circolare corrispondente a una determinata frequenza, si calcola l'ampiezza dell'angolo al centro moltiplicando l'angolo giro (360°) per la frequenza relativa di quel valore.</p>
+<p class="formula">ampiezza angolo settore = 360° × frequenza relativa</p>
+<p>Nell'esempio dei voti su 20 studenti (4 con voto 6, 8 con voto 7, 8 con voto 8), calcoliamo l'ampiezza dell'angolo corrispondente al voto 6, la cui frequenza relativa è 4/20 = 0,2.</p>
+<p class="formula">ampiezza = 360° × 0,2 = 72°</p>
+
+</div>
+<!-- fine capitolo matematica 20 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat21.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

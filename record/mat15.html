@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 15</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 15: Parallelogrammi e trapezi -->
+<div class="capitolo-storia" id="capitolo-15-parallelogrammi-trapezi">
+
+<p class="titolo-capitolo">15 - Parallelogrammi e trapezi - Classe 2</p>
+
+<p class="titolo-capitolo">I quadrilateri e la loro classificazione</p>
+<p>Un quadrilatero è un poligono con quattro lati, quattro angoli e quattro vertici. Prima di studiare le figure particolari, ricordiamo un teorema generale valido per tutti i quadrilateri convessi: la somma degli angoli interni di un quadrilatero convesso è sempre uguale a 360°, poiché ogni quadrilatero si può dividere in due triangoli tracciando una diagonale, e ciascun triangolo contribuisce con 180°.</p>
+<p class="formula">α + β + γ + δ = 360°</p>
+<p>All'interno della grande famiglia dei quadrilateri, particolare importanza hanno i quadrilateri con lati paralleli a due a due, detti parallelogrammi, e i quadrilateri con una sola coppia di lati paralleli, detti trapezi.</p>
+
+<p class="titolo-capitolo">Il parallelogramma: proprietà</p>
+<p>Un parallelogramma è un quadrilatero che ha i lati opposti paralleli a due a due. Da questa unica condizione discendono, per dimostrazione, numerose proprietà importanti, che è utile conoscere ed è possibile dimostrare a partire dai criteri di congruenza dei triangoli, tracciando una diagonale.</p>
+<p>In ogni parallelogramma, i lati opposti sono congruenti tra loro, e anche gli angoli opposti sono congruenti tra loro. Inoltre, due angoli consecutivi (cioè adiacenti allo stesso lato) sono sempre supplementari, dato che i lati che li racchiudono sono paralleli tagliati da una trasversale.</p>
+<p>Un'altra proprietà fondamentale riguarda le diagonali: in un parallelogramma, le due diagonali si tagliano scambievolmente per metà, cioè il loro punto di intersezione è punto medio di entrambe.</p>
+<p>Vale anche il teorema inverso: se in un quadrilatero si verifica anche una sola di queste proprietà (per esempio, lati opposti congruenti, oppure diagonali che si tagliano a metà), allora il quadrilatero è necessariamente un parallelogramma. Questi teoremi inversi sono molto utili nelle dimostrazioni, perché spesso è più semplice verificare una singola condizione piuttosto che il parallelismo diretto dei lati.</p>
+
+<p class="titolo-capitolo">I parallelogrammi particolari</p>
+<p>All'interno della famiglia dei parallelogrammi si distinguono alcuni casi particolari, ciascuno con proprietà aggiuntive rispetto al parallelogramma generico.</p>
+<p>Il rettangolo è un parallelogramma che ha tutti gli angoli congruenti (e quindi retti, dato che la loro somma è 360°). Oltre alle proprietà del parallelogramma generico, nel rettangolo le due diagonali sono anche congruenti tra loro, non solo si tagliano a metà.</p>
+<p>Il rombo è un parallelogramma che ha tutti i lati congruenti. Nel rombo, le diagonali, oltre a tagliarsi scambievolmente per metà, sono anche perpendicolari tra loro, e ciascuna diagonale è bisettrice degli angoli ai vertici che congiunge.</p>
+<p>Il quadrato è un parallelogramma che ha contemporaneamente tutti gli angoli congruenti e tutti i lati congruenti: è cioè, allo stesso tempo, un caso particolare sia di rettangolo sia di rombo, e ne eredita quindi tutte le proprietà, comprese diagonali congruenti, perpendicolari e bisettrici degli angoli.</p>
+
+<p class="titolo-capitolo">Il trapezio</p>
+<p>Un trapezio è un quadrilatero che ha una sola coppia di lati paralleli, detti base maggiore e base minore, mentre gli altri due lati si chiamano lati obliqui. La distanza tra le due basi, cioè il segmento perpendicolare a entrambe, si chiama altezza del trapezio.</p>
+<p>In base ai lati obliqui, il trapezio si classifica in tre tipi. Un trapezio si dice scaleno quando i due lati obliqui non sono congruenti. Un trapezio si dice isoscele quando i due lati obliqui sono congruenti tra loro: in questo caso, gli angoli adiacenti a ciascuna base sono a loro volta congruenti tra loro, e le diagonali del trapezio isoscele sono congruenti. Un trapezio si dice rettangolo quando uno dei lati obliqui è perpendicolare alle basi, coincidendo quindi con l'altezza del trapezio.</p>
+<p>Una linea notevole del trapezio è la mediana, cioè il segmento che unisce i punti medi dei due lati obliqui: questo segmento è sempre parallelo alle basi, e la sua lunghezza è uguale alla semisomma delle due basi.</p>
+<p class="formula">mediana = (base maggiore + base minore) / 2</p>
+
+<p class="titolo-capitolo">Il teorema del fascio di rette parallele</p>
+<p>Le proprietà del trapezio, come quella della mediana appena vista, derivano da un teorema più generale, detto teorema del fascio di rette parallele (o piccolo teorema di Talete): se un fascio di rette parallele taglia due trasversali, i segmenti che si formano su una trasversale sono direttamente proporzionali ai corrispondenti segmenti che si formano sull'altra trasversale.</p>
+<p class="formula">AB : A'B' = BC : B'C'</p>
+<p>Questo teorema ha un caso particolare molto utilizzato: se le rette parallele del fascio staccano su una trasversale segmenti congruenti, allora staccano segmenti congruenti anche sull'altra trasversale, qualunque essa sia. È proprio questa proprietà a garantire che, unendo i punti medi dei lati obliqui di un trapezio, si ottenga effettivamente un segmento parallelo alle basi e di lunghezza pari alla loro semisomma.</p>
+
+<p class="titolo-capitolo">Applicazione numerica</p>
+<p>Calcoliamo la lunghezza della mediana di un trapezio che ha base maggiore di 18 cm e base minore di 10 cm.</p>
+<p class="formula">mediana = (18 + 10) / 2 = 28 / 2 = 14 cm</p>
+<p>Consideriamo ora un rombo con le diagonali di 6 cm e 8 cm, e calcoliamo la lunghezza del suo lato, sapendo che le diagonali di un rombo si tagliano a metà e perpendicolarmente, formando quattro triangoli rettangoli congruenti i cui cateti sono le semidiagonali.</p>
+<p class="formula">semidiagonali: 6/2 = 3 cm e 8/2 = 4 cm</p>
+<p>Applicando il teorema di Pitagora (che approfondiremo nel dettaglio più avanti in questo stesso anno) ai cateti di 3 cm e 4 cm, troviamo l'ipotenusa, che corrisponde proprio al lato del rombo.</p>
+<p class="formula">lato = √(3<sup>2</sup> + 4<sup>2</sup>) = √(9 + 16) = √25 = 5 cm</p>
+
+</div>
+<!-- fine capitolo matematica 15 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat16.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

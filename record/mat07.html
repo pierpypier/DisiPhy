@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 07</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 07: Sistemi di equazioni di primo grado -->
+<div class="capitolo-storia" id="capitolo-07-sistemi-equazioni">
+
+<p class="titolo-capitolo">07 - Sistemi di equazioni di primo grado - Classe 1</p>
+
+<p class="titolo-capitolo">Che cos'è un sistema di equazioni</p>
+<p>Un sistema di equazioni è un insieme di due o più equazioni che devono essere verificate contemporaneamente dalle stesse incognite. Mentre un'equazione in due incognite, come x + y = 5, ha infinite soluzioni, un sistema di due equazioni in due incognite permette in genere di individuare una sola coppia di valori che soddisfa entrambe le condizioni insieme.</p>
+<p>Un sistema si indica racchiudendo le equazioni con una parentesi graffa, a indicare che vanno considerate simultaneamente.</p>
+<p class="formula">
+<span class="frazione"><span>x + y = 5</span><span>x - y = 1</span></span>
+</p>
+<p>Risolvere un sistema significa trovare tutte le coppie di valori (x, y) che, sostituiti in entrambe le equazioni, le rendono vere contemporaneamente. Esistono diversi metodi per risolvere un sistema di due equazioni in due incognite: il metodo di sostituzione, il metodo del confronto, il metodo di riduzione e il metodo di Cramer.</p>
+
+<p class="titolo-capitolo">Il metodo di sostituzione</p>
+<p>Il metodo di sostituzione consiste nel ricavare da una delle due equazioni una incognita in funzione dell'altra, e nel sostituire poi questa espressione nell'altra equazione, che diventa così un'equazione in una sola incognita, risolvibile con le tecniche già note.</p>
+<p>Risolviamo il sistema formato da x + y = 5 e x - y = 1. Dalla prima equazione ricaviamo x in funzione di y.</p>
+<p class="formula">x = 5 - y</p>
+<p>Sostituiamo questa espressione al posto di x nella seconda equazione.</p>
+<p class="formula">(5 - y) - y = 1 → 5 - 2y = 1 → -2y = -4 → y = 2</p>
+<p>Ora che conosciamo y, lo sostituiamo nell'espressione trovata per x.</p>
+<p class="formula">x = 5 - 2 = 3</p>
+<p>La soluzione del sistema è quindi la coppia (x, y) = (3, 2). Verifichiamo sostituendo in entrambe le equazioni originali: 3 + 2 = 5 e 3 - 2 = 1, entrambe verificate.</p>
+
+<p class="titolo-capitolo">Il metodo di riduzione</p>
+<p>Il metodo di riduzione si basa sull'idea di sommare o sottrarre membro a membro le due equazioni del sistema, dopo averle eventualmente moltiplicate per opportuni numeri, in modo da eliminare una delle due incognite e ottenere un'equazione in una sola variabile.</p>
+<p>Risolviamo con questo metodo il sistema formato da 2x + y = 8 e x - y = 1. Osserviamo che i coefficienti di y sono già opposti (+1 e -1): sommando membro a membro le due equazioni, la y si elimina.</p>
+<p class="formula">(2x + y) + (x - y) = 8 + 1 → 3x = 9 → x = 3</p>
+<p>Sostituiamo x = 3 in una delle due equazioni originali, per esempio nella seconda.</p>
+<p class="formula">3 - y = 1 → y = 2</p>
+<p>Anche in questo caso la soluzione è (x, y) = (3, 2). Quando i coefficienti dell'incognita da eliminare non sono opposti né uguali, prima di sommare o sottrarre occorre moltiplicare una o entrambe le equazioni per numeri opportuni, in modo da renderli tali.</p>
+<p>Risolviamo il sistema 3x + 2y = 12 e x + y = 5. Moltiplichiamo la seconda equazione per -2, così il coefficiente di y diventa opposto a quello della prima.</p>
+<p class="formula">3x + 2y = 12 e -2x - 2y = -10</p>
+<p>Sommando membro a membro, la y si elimina.</p>
+<p class="formula">x = 2</p>
+<p>Sostituendo nella seconda equazione originale: 2 + y = 5, da cui y = 3. La soluzione è (x, y) = (2, 3).</p>
+
+<p class="titolo-capitolo">Il metodo del confronto</p>
+<p>Il metodo del confronto consiste nel ricavare la stessa incognita da entrambe le equazioni del sistema, ottenendo così due espressioni diverse che devono essere uguali tra loro, dato che rappresentano la stessa incognita.</p>
+<p>Riprendiamo il sistema x + y = 5 e x - y = 1. Ricaviamo x da entrambe le equazioni.</p>
+<p class="formula">x = 5 - y e x = 1 + y</p>
+<p>Poiché entrambe le espressioni sono uguali a x, devono essere uguali tra loro.</p>
+<p class="formula">5 - y = 1 + y → 4 = 2y → y = 2</p>
+<p>Sostituendo y = 2 in una delle due espressioni troviamo x = 5 - 2 = 3, confermando la stessa soluzione (3, 2) trovata con gli altri metodi.</p>
+
+<p class="titolo-capitolo">Il metodo di Cramer</p>
+<p>Il metodo di Cramer utilizza il concetto di determinante per risolvere un sistema di due equazioni in due incognite scritto in forma normale, cioè con i termini noti isolati al secondo membro.</p>
+<p class="formula">
+<span class="frazione"><span>a<sub>1</sub>x + b<sub>1</sub>y = c<sub>1</sub></span><span>a<sub>2</sub>x + b<sub>2</sub>y = c<sub>2</sub></span></span>
+</p>
+<p>Si calcola innanzitutto il determinante del sistema, indicato con D, formando una tabella con i coefficienti delle incognite e calcolando il prodotto incrociato.</p>
+<table style="border-collapse:collapse; margin:6px 0;"><tr><td style="border:1px solid #16233a; padding:4px 10px; text-align:center;">a<sub>1</sub></td><td style="border:1px solid #16233a; padding:4px 10px; text-align:center;">b<sub>1</sub></td></tr><tr><td style="border:1px solid #16233a; padding:4px 10px; text-align:center;">a<sub>2</sub></td><td style="border:1px solid #16233a; padding:4px 10px; text-align:center;">b<sub>2</sub></td></tr></table>
+<p class="formula">D = a<sub>1</sub>×b<sub>2</sub> - a<sub>2</sub>×b<sub>1</sub></p>
+<p>Si calcolano poi due ulteriori determinanti, D<sub>x</sub> e D<sub>y</sub>, sostituendo di volta in volta la colonna dei coefficienti dell'incognita cercata con la colonna dei termini noti.</p>
+<p class="formula">D<sub>x</sub> = c<sub>1</sub>×b<sub>2</sub> - c<sub>2</sub>×b<sub>1</sub></p>
+<p class="formula">D<sub>y</sub> = a<sub>1</sub>×c<sub>2</sub> - a<sub>2</sub>×c<sub>1</sub></p>
+<p>Le soluzioni del sistema si ottengono infine come rapporto tra questi determinanti, purché D sia diverso da zero.</p>
+<p class="formula">x = D<sub>x</sub> / D , y = D<sub>y</sub> / D</p>
+<p>Applichiamo il metodo al sistema 2x + y = 8 e x - y = 1. I coefficienti sono a<sub>1</sub>=2, b<sub>1</sub>=1, c<sub>1</sub>=8, a<sub>2</sub>=1, b<sub>2</sub>=-1, c<sub>2</sub>=1.</p>
+<p class="formula">D = 2×(-1) - 1×1 = -2 - 1 = -3</p>
+<p class="formula">D<sub>x</sub> = 8×(-1) - 1×1 = -8 - 1 = -9 → x = -9 / -3 = 3</p>
+<p class="formula">D<sub>y</sub> = 2×1 - 1×8 = 2 - 8 = -6 → y = -6 / -3 = 2</p>
+<p>Anche con il metodo di Cramer ritroviamo la soluzione (x, y) = (3, 2), coerente con tutti gli altri metodi utilizzati.</p>
+
+<p class="titolo-capitolo">Sistemi determinati, impossibili e indeterminati</p>
+<p>Un sistema di due equazioni in due incognite può presentare tre situazioni diverse, che si riconoscono facilmente utilizzando il determinante D del metodo di Cramer.</p>
+<p>Se D è diverso da zero, il sistema ha una e una sola soluzione: si dice determinato. Geometricamente, come vedremo meglio quando parleremo del piano cartesiano, questo corrisponde a due rette che si incontrano in un unico punto.</p>
+<p>Se D è uguale a zero, e anche D<sub>x</sub> e D<sub>y</sub> sono uguali a zero, il sistema ha infinite soluzioni: si dice indeterminato. Le due equazioni, in questo caso, rappresentano in realtà la stessa relazione tra x e y.</p>
+<p>Se D è uguale a zero, ma almeno uno tra D<sub>x</sub> e D<sub>y</sub> è diverso da zero, il sistema non ha alcuna soluzione: si dice impossibile. Le due equazioni, in questo caso, esprimono condizioni tra loro incompatibili.</p>
+
+<p class="titolo-capitolo">Problemi risolvibili con i sistemi</p>
+<p>I sistemi di equazioni sono particolarmente utili per risolvere problemi in cui compaiono due grandezze incognite legate da due condizioni distinte. Il procedimento consiste nell'individuare le due incognite, tradurre ciascuna condizione del problema in un'equazione, risolvere il sistema ottenuto e infine interpretare il risultato.</p>
+<p>Un problema classico: la somma di due numeri è 20 e la loro differenza è 4. Trovare i due numeri. Chiamiamo x e y i due numeri.</p>
+<p class="formula">
+<span class="frazione"><span>x + y = 20</span><span>x - y = 4</span></span>
+</p>
+<p>Sommando membro a membro le due equazioni con il metodo di riduzione otteniamo 2x = 24, da cui x = 12; sostituendo nella prima equazione, 12 + y = 20, da cui y = 8. I due numeri cercati sono quindi 12 e 8, e verifichiamo facilmente che la loro somma è 20 e la loro differenza è 4.</p>
+
+</div>
+<!-- fine capitolo matematica 07 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat08.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 10</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 10: Rette perpendicolari e parallele -->
+<div class="capitolo-storia" id="capitolo-10-perpendicolari-parallele">
+
+<p class="titolo-capitolo">10 - Rette perpendicolari e parallele - Classe 1</p>
+
+<p class="titolo-capitolo">Rette perpendicolari</p>
+<p>Due rette del piano si dicono perpendicolari quando, incontrandosi in un punto, formano quattro angoli tutti congruenti tra loro, ciascuno dei quali misura quindi 90°, cioè è un angolo retto. Per indicare che due rette r e s sono perpendicolari si usa il simbolo ⊥.</p>
+<p class="formula">r ⊥ s</p>
+<p>Un importante teorema afferma che, dato un punto P e una retta r, esiste una e una sola retta passante per P e perpendicolare a r. Se il punto P appartiene già alla retta r, questa perpendicolare divide il piano attorno a P in quattro angoli retti; se invece P è esterno alla retta, la perpendicolare condotta da P incontra r in un punto, detto piede della perpendicolare.</p>
+<p>Il segmento che unisce un punto P esterno a una retta r con il piede della perpendicolare condotta da P a r si chiama distanza di P dalla retta r. Questa distanza ha una proprietà importante: è il segmento più corto tra tutti quelli che uniscono P a un qualsiasi punto della retta r. Tutti gli altri segmenti, detti obliqui, sono più lunghi della perpendicolare.</p>
+<p>Anche l'asse di un segmento è definito grazie alla perpendicolarità: si chiama asse del segmento AB la retta perpendicolare al segmento, passante per il suo punto medio. Un punto dell'asse gode di una proprietà notevole, che vedremo tra poco a proposito dei luoghi geometrici: è sempre equidistante dai due estremi A e B del segmento.</p>
+
+<p class="titolo-capitolo">Rette parallele e il quinto postulato</p>
+<p>Due rette del piano si dicono parallele quando non hanno alcun punto in comune, oppure quando coincidono perfettamente (si tratta in questo caso di un caso limite, detto parallelismo improprio). Per indicare che due rette r e s sono parallele si usa il simbolo ∥.</p>
+<p class="formula">r ∥ s</p>
+<p>Il parallelismo tra rette è legato a uno degli aspetti più celebri e discussi di tutta la geometria euclidea: il quinto postulato di Euclide, noto anche come postulato delle parallele. Nella sua formulazione più semplice, dovuta al matematico scozzese John Playfair, il postulato afferma che, dato un punto P esterno a una retta r, esiste una e una sola retta passante per P e parallela a r.</p>
+<p>Questo postulato, a differenza degli altri quattro enunciati da Euclide, apparve fin da subito meno "evidente" ai matematici successivi, che per secoli tentarono di dimostrarlo a partire dagli altri postulati, senza riuscirci: solo nell'Ottocento si comprese che il quinto postulato è effettivamente indipendente dagli altri, e che negandolo si ottengono geometrie diverse, ma altrettanto coerenti, dette geometrie non euclidee.</p>
+
+<p class="titolo-capitolo">Angoli formati da una trasversale</p>
+<p>Quando due rette del piano vengono tagliate da una terza retta, detta trasversale, si formano complessivamente otto angoli: quattro nel punto di intersezione con la prima retta e quattro nel punto di intersezione con la seconda. A queste otto coppie di angoli vengono dati nomi specifici, a seconda della loro posizione reciproca.</p>
+<p>Gli angoli che si trovano dalla stessa parte rispetto alla trasversale, uno interno (cioè compreso tra le due rette) e uno esterno, nella stessa posizione rispetto ai rispettivi punti di intersezione, si chiamano angoli corrispondenti. Gli angoli che si trovano entrambi nella zona interna alle due rette, ma su lati opposti della trasversale, si chiamano angoli alterni interni. Gli angoli che si trovano entrambi nella zona esterna alle due rette, su lati opposti della trasversale, si chiamano angoli alterni esterni. Infine, gli angoli che si trovano entrambi nella zona interna, dalla stessa parte della trasversale, si chiamano angoli coniugati interni (o angoli interni dalla stessa parte).</p>
+
+<p class="titolo-capitolo">Il teorema delle rette parallele</p>
+<p>Il legame tra questi angoli e il parallelismo è espresso da uno dei teoremi più importanti e utilizzati di tutta la geometria del piano, che si compone in realtà di due parti, l'una inversa dell'altra.</p>
+<p>La prima parte del teorema (teorema diretto) afferma che se due rette tagliate da una trasversale formano una coppia di angoli corrispondenti congruenti, allora le due rette sono parallele. La stessa conclusione vale anche se si forma una coppia di angoli alterni (interni o esterni) congruenti, oppure una coppia di angoli coniugati supplementari (cioè la cui somma è 180°).</p>
+<p>La seconda parte del teorema (teorema inverso) afferma il contrario: se due rette sono parallele, allora ogni coppia di angoli corrispondenti tagliati da una trasversale è congruente. Analogamente risultano congruenti gli angoli alterni (interni ed esterni), e risultano supplementari gli angoli coniugati.</p>
+<p>Questo doppio teorema è uno strumento fondamentale: si usa la prima parte per dimostrare che due rette sono parallele quando si conosce qualche relazione tra gli angoli formati da una trasversale, mentre si usa la seconda parte per calcolare la misura di un angolo incognito quando si sa già che due rette sono parallele.</p>
+<p>Applichiamo il teorema inverso a un esempio: due rette parallele sono tagliate da una trasversale, e un angolo formato in uno dei due punti di intersezione misura 65°. Quanto misura l'angolo alterno interno corrispondente nell'altro punto di intersezione?</p>
+<p class="formula">angolo alterno interno = 65° (per congruenza degli angoli alterni interni)</p>
+<p>Calcoliamo ora l'angolo coniugato interno rispetto a quello di 65°: poiché gli angoli coniugati interni sono supplementari, basta sottrarre da 180°.</p>
+<p class="formula">180° - 65° = 115°</p>
+
+<p class="titolo-capitolo">Proprietà transitiva del parallelismo</p>
+<p>Un'ultima proprietà importante riguarda il parallelismo tra più rette: se due rette sono entrambe parallele a una terza retta, allora sono parallele anche tra loro. Questa proprietà si chiama proprietà transitiva del parallelismo, ed è analoga alla proprietà transitiva già nota per l'uguaglianza tra numeri.</p>
+<p class="formula">se r ∥ t e s ∥ t, allora r ∥ s</p>
+<p>Questa proprietà, unita al teorema delle rette parallele visto sopra, fornisce gli strumenti essenziali per affrontare la maggior parte delle dimostrazioni geometriche riguardanti figure con lati paralleli, che incontreremo diffusamente nei prossimi capitoli dedicati ai quadrilateri e ai poligoni.</p>
+
+</div>
+<!-- fine capitolo matematica 10 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat11.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
