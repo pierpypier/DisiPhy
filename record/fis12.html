@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 12</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 12: lavoro ed energia cinetica -->
+<div id="capitolo-12-lavoro-energia-cinetica" class="capitolo-storia">
+  <p class="titolo-capitolo">12 - Lavoro ed energia cinetica - Classe 2</p>
+
+  <p class="titolo-capitolo">Il significato fisico di lavoro</p>
+  <p>Nel linguaggio comune la parola "lavoro" indica qualsiasi attività che richieda impegno, anche solo mentale. In fisica, invece, il lavoro ha un significato molto più preciso: si parla di lavoro solo quando una forza produce uno spostamento del corpo su cui agisce. Se spingiamo con tutte le nostre forze un muro senza riuscire a spostarlo, dal punto di vista fisico non stiamo compiendo alcun lavoro, per quanto possa sembrare faticoso.</p>
+  <p>Il lavoro compiuto da una forza costante F→, durante uno spostamento Δs→, dipende non solo dai moduli della forza e dello spostamento, ma anche dall'angolo θ compreso tra le loro direzioni.</p>
+  <p class="formula">L = F · Δs · cos θ</p>
+  <p>Nel Sistema Internazionale il lavoro si misura in joule (J), dove 1 J corrisponde al lavoro compiuto da una forza di 1 N che produce uno spostamento di 1 m nella stessa direzione e verso della forza: 1 J = 1 N · 1 m.</p>
+
+  <p class="titolo-capitolo">Lavoro positivo, negativo e nullo</p>
+  <p>Il segno del lavoro dipende dall'angolo θ tra la forza e lo spostamento. Quando la forza ha una componente nello stesso verso dello spostamento (θ compreso tra 0° e 90°), il lavoro è positivo, e la forza contribuisce ad aumentare la velocità del corpo. Quando la forza ha una componente opposta allo spostamento (θ compreso tra 90° e 180°), il lavoro è negativo, e la forza tende a rallentare il corpo.</p>
+  <p>Quando la forza è perpendicolare allo spostamento (θ = 90°), il lavoro è nullo, perché cos 90° = 0: questo è il caso, ad esempio, della forza peso e della forza normale nel moto di un corpo su un piano orizzontale, oppure della forza centripeta nel moto circolare uniforme, sempre perpendicolare alla velocità (e quindi allo spostamento istantaneo).</p>
+  <p><em>Esempio svolto:</em> una cassa viene trascinata per 10 m su un pavimento orizzontale da una forza F = 40 N, inclinata di 60° rispetto all'orizzontale. Il lavoro compiuto dalla forza vale L = 40 × 10 × cos 60° = 400 × 0,5 = 200 J.</p>
+
+  <p class="titolo-capitolo">Il lavoro della forza peso e il lavoro dell'attrito</p>
+  <p>Il lavoro compiuto dalla forza peso durante uno spostamento dipende solo dal dislivello verticale h percorso dal corpo, e non dal percorso seguito: se il corpo scende di un'altezza h, il lavoro della forza peso è positivo; se il corpo sale di un'altezza h, il lavoro della forza peso è negativo.</p>
+  <p class="formula">L<sub>peso</sub> = ± P · h = ± m · g · h</p>
+  <p>Il lavoro compiuto dalla forza di attrito, invece, è sempre negativo quando il corpo si muove, perché l'attrito è per definizione sempre diretto in verso opposto al moto (θ = 180°, cos 180° = −1), e il suo modulo dipende dal percorso effettivamente compiuto, non solo dallo spostamento netto.</p>
+  <p class="formula">L<sub>attrito</sub> = − F<sub>attrito</sub> · d</p>
+  <p><em>Esempio svolto:</em> un blocco di massa m = 3 kg viene fatto scendere lungo un piano inclinato, con un dislivello verticale h = 2 m. Il lavoro della forza peso vale L<sub>peso</sub> = 3 × 9,8 × 2 = 58,8 J.</p>
+
+  <p class="titolo-capitolo">L'energia cinetica</p>
+  <p>L'energia è una grandezza fisica che misura la capacità di un corpo (o di un sistema) di compiere lavoro. Esistono diverse forme di energia; una delle più importanti in meccanica è l'energia cinetica, associata al movimento di un corpo, che dipende dalla sua massa e dal quadrato della sua velocità.</p>
+  <p class="formula">E<sub>c</sub> = (1/2) · m · v<sup>2</sup></p>
+  <p>Come il lavoro, anche l'energia cinetica si misura in joule (J), essendo entrambe forme della stessa grandezza fisica: l'energia. Poiché la velocità compare al quadrato, l'energia cinetica è sempre positiva (o nulla, se il corpo è fermo), indipendentemente dal verso del moto.</p>
+  <p><em>Esempio svolto:</em> un'automobile di massa m = 1200 kg viaggia a velocità v = 20 m/s. La sua energia cinetica vale E<sub>c</sub> = (1/2) × 1200 × 20<sup>2</sup> = 600 × 400 = 240000 J, cioè 240 kJ.</p>
+
+  <p class="titolo-capitolo">Il teorema dell'energia cinetica</p>
+  <p>Il teorema dell'energia cinetica (o teorema delle forze vive) stabilisce un legame fondamentale tra il lavoro totale compiuto su un corpo e la variazione della sua energia cinetica: il lavoro totale compiuto da tutte le forze applicate a un corpo è uguale alla variazione della sua energia cinetica.</p>
+  <p class="formula">L<sub>totale</sub> = ΔE<sub>c</sub> = E<sub>c,f</sub> − E<sub>c,i</sub> = (1/2)·m·v<sub>f</sub><sup>2</sup> − (1/2)·m·v<sub>i</sub><sup>2</sup></p>
+  <p>Questo teorema è particolarmente utile perché permette di risolvere molti problemi di dinamica senza dover conoscere il tempo impiegato o l'accelerazione del corpo, lavorando direttamente con le energie e con gli spostamenti.</p>
+  <p><em>Esempio svolto:</em> un corpo di massa m = 2 kg, inizialmente fermo (v<sub>i</sub> = 0), viene spinto da una forza costante F = 10 N per uno spostamento di 5 m su un piano orizzontale senza attrito. Il lavoro compiuto dalla forza vale L = 10 × 5 = 50 J. Per il teorema dell'energia cinetica, questo lavoro è uguale alla variazione di energia cinetica: 50 = (1/2) × 2 × v<sub>f</sub><sup>2</sup> − 0, da cui v<sub>f</sub><sup>2</sup> = 50, e quindi v<sub>f</sub> = √50 ≈ 7,07 m/s.</p>
+
+  <p class="titolo-capitolo">La potenza</p>
+  <p>Spesso è importante sapere non solo quanto lavoro viene compiuto, ma anche in quanto tempo: la stessa quantità di lavoro può essere svolta rapidamente o lentamente, e questo fa una grande differenza pratica. La potenza è definita come il rapporto tra il lavoro compiuto e il tempo impiegato a compierlo.</p>
+  <p class="formula">P = L / t</p>
+  <p>Nel Sistema Internazionale la potenza si misura in watt (W), dove 1 W corrisponde a un lavoro di 1 J compiuto in un tempo di 1 s: 1 W = 1 J/s. Nella pratica quotidiana si usa spesso anche il cavallo vapore (CV) o il chilowatt (kW), soprattutto per motori e macchine.</p>
+  <p>Quando la forza è costante e il corpo si muove con velocità costante, la potenza può anche essere calcolata direttamente come prodotto tra la forza e la velocità (nella stessa direzione).</p>
+  <p class="formula">P = F · v</p>
+  <p><em>Esempio svolto:</em> una gru solleva un carico di massa 500 kg fino a un'altezza di 8 m in un tempo di 20 s. Il lavoro compiuto contro la forza peso vale L = m·g·h = 500 × 9,8 × 8 = 39200 J. La potenza sviluppata dalla gru vale P = 39200 / 20 = 1960 W, cioè circa 1,96 kW.</p>
+</div>
+<!-- fine capitolo fisica 12 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis13.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 25</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 25: il suono e i fenomeni acustici -->
+<div id="capitolo-25-suono-fenomeni-acustici" class="capitolo-storia">
+  <p class="titolo-capitolo">25 - Il suono e i fenomeni acustici - Classe 3</p>
+
+  <p class="titolo-capitolo">La natura del suono</p>
+  <p>Il suono è un'onda meccanica longitudinale, generata dalla vibrazione di un corpo (come le corde vocali, la membrana di un altoparlante, o le corde di uno strumento musicale), che si propaga attraverso un mezzo materiale elastico, come l'aria, l'acqua o i solidi, sotto forma di successive compressioni e rarefazioni del mezzo stesso.</p>
+  <p>Poiché il suono è un'onda meccanica, non può propagarsi nel vuoto, a differenza della luce: questo è il motivo per cui, nello spazio, dove non c'è aria né alcun altro mezzo materiale, non è possibile udire alcun suono, come rappresentato correttamente (anche se spesso non rispettato per esigenze narrative) in molti film di fantascienza.</p>
+
+  <p class="titolo-capitolo">La velocità del suono</p>
+  <p>La velocità di propagazione del suono dipende dalle proprietà elastiche e dalla densità del mezzo in cui si propaga, e in particolare dipende fortemente dalla temperatura per quanto riguarda i gas. Nell'aria, a temperatura ambiente (circa 20 °C), il suono si propaga con una velocità di circa 343 m/s, mentre nell'acqua la velocità è molto maggiore, circa 1480 m/s, e nei solidi rigidi, come l'acciaio, può superare i 5000 m/s.</p>
+  <p class="formula">v<sub>suono in aria</sub> ≈ 343 m/s &nbsp;(a 20 °C)</p>
+  <p>In generale, il suono si propaga più velocemente nei mezzi più rigidi e meno densi, perché le particelle del mezzo riescono a trasmettersi più rapidamente la perturbazione meccanica da una all'altra. Nell'aria, la velocità del suono aumenta leggermente con la temperatura, poiché le molecole si muovono più velocemente e trasmettono più rapidamente la perturbazione.</p>
+  <p><em>Esempio svolto:</em> durante un temporale, un osservatore vede un lampo e, dopo 6 secondi, sente il tuono. Trascurando il tempo di propagazione della luce (praticamente istantanea rispetto al suono), la distanza del fulmine si calcola come d = v · t = 343 × 6 ≈ 2058 m, cioè circa 2 km.</p>
+
+  <p class="titolo-capitolo">Le caratteristiche percettive del suono</p>
+  <p>Le caratteristiche fisiche di un'onda sonora, cioè frequenza, ampiezza e forma d'onda, corrispondono a caratteristiche percettive che il nostro orecchio è in grado di distinguere. L'altezza di un suono, cioè la sensazione soggettiva che ci permette di distinguere un suono "acuto" da uno "grave", corrisponde alla frequenza dell'onda sonora: suoni ad alta frequenza sono percepiti come acuti, suoni a bassa frequenza come gravi.</p>
+  <p>L'orecchio umano è in grado di percepire suoni con frequenze comprese, indicativamente, tra 20 Hz e 20000 Hz (20 kHz), un intervallo detto campo di udibilità; suoni con frequenza inferiore a 20 Hz si chiamano infrasuoni, mentre suoni con frequenza superiore a 20 kHz si chiamano ultrasuoni, entrambi non udibili dall'orecchio umano, ma percepibili da alcuni animali (come i cani, che possono udire ultrasuoni) o rilevabili con strumenti specifici.</p>
+  <p>L'intensità del suono, legata alla sensazione soggettiva di "volume" (suono forte o debole), è collegata all'ampiezza dell'onda sonora: maggiore è l'ampiezza dell'oscillazione delle particelle del mezzo, maggiore è l'energia trasportata dall'onda, e quindi maggiore è l'intensità percepita.</p>
+  <p>Il timbro, infine, è la caratteristica che ci permette di distinguere due suoni della stessa altezza e della stessa intensità, ma prodotti da sorgenti diverse (ad esempio la stessa nota suonata da un violino e da un pianoforte): dipende dalla forma d'onda complessiva, che nella realtà è quasi sempre la sovrapposizione di più onde sinusoidali di frequenze diverse (dette armoniche).</p>
+
+  <p class="titolo-capitolo">L'intensità sonora e la scala dei decibel</p>
+  <p>L'intensità sonora I, dal punto di vista fisico, è definita come la potenza sonora trasportata dall'onda per unità di superficie attraversata, e nel Sistema Internazionale si misura in W/m<sup>2</sup>.</p>
+  <p class="formula">I = P / S</p>
+  <p>L'orecchio umano è sensibile a un intervallo di intensità sonore estremamente ampio, dell'ordine di 12-13 ordini di grandezza tra la soglia di udibilità e la soglia del dolore: per questo motivo, invece dell'intensità in W/m<sup>2</sup>, si preferisce nella pratica utilizzare una scala logaritmica, il livello di intensità sonora, misurato in decibel (dB).</p>
+  <p class="formula">β = 10 · log<sub>10</sub>(I / I<sub>0</sub>)</p>
+  <p>dove I<sub>0</sub> ≈ 10<sup>−12</sup> W/m<sup>2</sup> è l'intensità di riferimento, corrispondente approssimativamente alla soglia di udibilità dell'orecchio umano a 1000 Hz. Una conversazione normale corrisponde a circa 60 dB, il traffico stradale intenso a circa 80-90 dB, mentre un concerto rock può raggiungere e superare i 110-120 dB, un livello che, se prolungato, può danneggiare permanentemente l'udito.</p>
+
+  <p class="titolo-capitolo">L'effetto Doppler</p>
+  <p>L'effetto Doppler è un fenomeno per cui la frequenza percepita di un'onda sonora (o di qualsiasi altro tipo di onda) cambia quando la sorgente del suono e l'osservatore sono in moto relativo tra loro. Chiunque abbia ascoltato la sirena di un'ambulanza avvicinarsi e poi allontanarsi ha sperimentato questo fenomeno: il suono appare più acuto (frequenza maggiore) quando la sorgente si avvicina, e più grave (frequenza minore) quando la sorgente si allontana.</p>
+  <p>Nel caso di una sorgente in movimento e un osservatore fermo, la frequenza percepita dall'osservatore si calcola con la formula seguente, dove v è la velocità del suono nel mezzo, v<sub>s</sub> è la velocità della sorgente (positiva se la sorgente si allontana, negativa se si avvicina), e f è la frequenza emessa dalla sorgente.</p>
+  <p class="formula">f' = f · v / (v ± v<sub>s</sub>)</p>
+  <p><em>Esempio svolto:</em> un'ambulanza emette una sirena con frequenza f = 800 Hz, e si avvicina a un osservatore fermo con velocità v<sub>s</sub> = 30 m/s (velocità del suono v = 343 m/s). Poiché la sorgente si avvicina, usiamo il segno meno al denominatore: f' = 800 × 343 / (343 − 30) = 274400 / 313 ≈ 876,7 Hz, una frequenza percepita più alta rispetto a quella reale emessa dalla sirena.</p>
+</div>
+<!-- fine capitolo fisica 25 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis26.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

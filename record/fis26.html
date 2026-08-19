@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 26</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 26: ottica geometrica: lenti e strumenti ottici -->
+<div id="capitolo-26-ottica-geometrica-lenti" class="capitolo-storia">
+  <p class="titolo-capitolo">26 - Ottica geometrica: lenti e strumenti ottici - Classe 3</p>
+
+  <p class="titolo-capitolo">Gli specchi curvi: specchi sferici concavi e convessi</p>
+  <p>Oltre agli specchi piani, già studiati nel capitolo 18, esistono specchi con superficie curva, in particolare sferica, che si dividono in specchi concavi (la superficie riflettente è rivolta verso il centro di curvatura) e specchi convessi (la superficie riflettente è rivolta in verso opposto al centro di curvatura). Ogni specchio sferico è caratterizzato da un centro di curvatura C, dal raggio di curvatura r, e da un punto focale F, situato a metà strada tra il centro di curvatura e la superficie dello specchio.</p>
+  <p class="formula">f = r / 2</p>
+  <p>dove f è la distanza focale, cioè la distanza tra il punto focale e lo specchio. Uno specchio concavo è convergente, cioè fa convergere in un unico punto (il fuoco) i raggi paralleli all'asse ottico che incidono su di esso; uno specchio convesso è invece divergente, e i raggi riflessi sembrano provenire da un fuoco virtuale, situato dietro lo specchio.</p>
+
+  <p class="titolo-capitolo">Le lenti sottili</p>
+  <p>Una lente è un elemento ottico trasparente, delimitato da due superfici curve (generalmente sferiche), che sfrutta il fenomeno della rifrazione per deviare i raggi luminosi che la attraversano. Le lenti si dividono in due grandi categorie in base alla loro forma e al loro comportamento ottico.</p>
+  <p>Le lenti convergenti (più spesse al centro che ai bordi) fanno convergere in un unico punto, il fuoco, i raggi luminosi paralleli all'asse ottico che le attraversano. Le lenti divergenti (più sottili al centro che ai bordi) fanno invece divergere i raggi paralleli, che dopo aver attraversato la lente sembrano provenire da un fuoco virtuale, situato dallo stesso lato da cui provenivano i raggi incidenti.</p>
+  <p>Per convenzione, la distanza focale f di una lente convergente si considera positiva, mentre quella di una lente divergente si considera negativa.</p>
+
+  <p class="titolo-capitolo">L'equazione dei punti coniugati</p>
+  <p>La relazione fondamentale che lega, per una lente sottile (o per uno specchio sferico), la distanza dell'oggetto dalla lente (p), la distanza dell'immagine dalla lente (q) e la distanza focale (f), è nota come equazione dei punti coniugati (o equazione delle lenti sottili).</p>
+  <p class="formula">1/p + 1/q = 1/f</p>
+  <p>Questa equazione permette di calcolare la posizione dell'immagine formata da una lente, conoscendo la posizione dell'oggetto e la distanza focale della lente. In base al segno del risultato ottenuto per q, si distingue tra immagine reale (q positivo, l'immagine si trova dal lato opposto dell'oggetto rispetto alla lente, ed è raggiunta effettivamente dai raggi luminosi, quindi può essere proiettata su uno schermo) e immagine virtuale (q negativo, l'immagine si trova dallo stesso lato dell'oggetto, e non può essere proiettata su uno schermo).</p>
+  <p><em>Esempio svolto:</em> un oggetto è posto a distanza p = 30 cm da una lente convergente con distanza focale f = 10 cm. Applicando l'equazione dei punti coniugati: 1/30 + 1/q = 1/10, da cui 1/q = 1/10 − 1/30 = 3/30 − 1/30 = 2/30 = 1/15, e quindi q = 15 cm: l'immagine è reale, situata a 15 cm dalla lente, dal lato opposto rispetto all'oggetto.</p>
+
+  <p class="titolo-capitolo">L'ingrandimento e le caratteristiche dell'immagine</p>
+  <p>Oltre alla posizione, è importante conoscere anche le dimensioni e l'orientamento dell'immagine formata da una lente rispetto all'oggetto originale. Si definisce ingrandimento lineare G il rapporto tra l'altezza dell'immagine e l'altezza dell'oggetto, che si può calcolare anche come rapporto (cambiato di segno) tra le distanze q e p.</p>
+  <p class="formula">G = h<sub>immagine</sub> / h<sub>oggetto</sub> = − q / p</p>
+  <p>Se il valore assoluto di G è maggiore di 1, l'immagine è ingrandita rispetto all'oggetto; se è minore di 1, l'immagine è rimpicciolita. Se G è positivo, l'immagine è diritta rispetto all'oggetto; se G è negativo, l'immagine è capovolta.</p>
+  <p><em>Esempio svolto:</em> riprendendo l'esempio precedente, con p = 30 cm e q = 15 cm, l'ingrandimento vale G = − 15/30 = − 0,5: l'immagine è quindi rimpicciolita (dimezzata rispetto all'oggetto) e capovolta, poiché G è negativo.</p>
+
+  <p class="titolo-capitolo">L'occhio umano e i suoi difetti</p>
+  <p>L'occhio umano è, dal punto di vista ottico, assimilabile a un sistema di lenti convergenti (in particolare la cornea e il cristallino) che formano un'immagine reale, rimpicciolita e capovolta sulla retina, dove viene poi elaborata dal cervello (che la "reinterpreta" correttamente in senso diritto). Il cristallino ha la capacità di modificare la propria curvatura, e quindi la propria distanza focale, per mettere a fuoco oggetti posti a diverse distanze: questa capacità si chiama accomodamento.</p>
+  <p>Quando il sistema ottico dell'occhio non riesce a formare correttamente l'immagine sulla retina, si parla di difetti visivi. Nella miopia, l'immagine di un oggetto lontano si forma davanti alla retina (l'occhio è troppo "potente" o troppo allungato), e si corregge con lenti divergenti, che riducono la convergenza complessiva del sistema. Nell'ipermetropia, l'immagine si formerebbe dietro la retina, e si corregge con lenti convergenti, che aumentano la convergenza complessiva.</p>
+
+  <p class="titolo-capitolo">Il microscopio e il telescopio</p>
+  <p>Molti strumenti ottici sfruttano la combinazione di due o più lenti per ottenere ingrandimenti che una singola lente non potrebbe fornire. Il microscopio ottico, utilizzato per osservare oggetti molto piccoli, è costituito da due lenti convergenti: l'obiettivo, molto vicino all'oggetto osservato, che forma una prima immagine reale e ingrandita; e l'oculare, attraverso cui l'osservatore guarda, che agisce come una lente d'ingrandimento su questa prima immagine, producendo un'immagine finale virtuale, fortemente ingrandita.</p>
+  <p>Il telescopio (o cannocchiale astronomico) è concettualmente simile, ma progettato per osservare oggetti molto lontani (come i corpi celesti) invece che molto vicini: anch'esso è costituito da un obiettivo, che in questo caso ha una lunga distanza focale per raccogliere quanta più luce possibile dagli oggetti lontani, e da un oculare, che ingrandisce l'immagine formata dall'obiettivo prima che raggiunga l'occhio dell'osservatore.</p>
+  <p>L'ingrandimento angolare complessivo di un telescopio semplice, costituito da due lenti convergenti, dipende dal rapporto tra le distanze focali dell'obiettivo e dell'oculare.</p>
+  <p class="formula">G<sub>telescopio</sub> = f<sub>obiettivo</sub> / f<sub>oculare</sub></p>
+</div>
+<!-- fine capitolo fisica 26 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis27.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 14</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 14: la quantità di moto e gli urti -->
+<div id="capitolo-14-quantita-moto-urti" class="capitolo-storia">
+  <p class="titolo-capitolo">14 - La quantità di moto e gli urti - Classe 2</p>
+
+  <p class="titolo-capitolo">La quantità di moto</p>
+  <p>Accanto all'energia, un'altra grandezza fondamentale in meccanica è la quantità di moto (detta anche momento lineare), che permette di descrivere in modo efficace fenomeni come gli urti tra due corpi. La quantità di moto di un corpo è definita come il prodotto tra la sua massa e la sua velocità.</p>
+  <p class="formula">p→ = m · v→</p>
+  <p>La quantità di moto è una grandezza vettoriale, con la stessa direzione e verso della velocità. Nel Sistema Internazionale si misura in kg·m/s. A parità di velocità, un corpo con massa maggiore possiede una quantità di moto maggiore: questo spiega, ad esempio, perché sia molto più difficile fermare un camion che una bicicletta lanciata alla stessa velocità.</p>
+  <p><em>Esempio svolto:</em> un'automobile di massa m = 1000 kg viaggia a velocità v = 15 m/s. La sua quantità di moto vale p = 1000 × 15 = 15000 kg·m/s.</p>
+
+  <p class="titolo-capitolo">L'impulso di una forza</p>
+  <p>Il secondo principio della dinamica può essere riscritto in una forma alternativa, particolarmente utile quando una forza agisce per un intervallo di tempo molto breve, come durante un urto. Si definisce impulso di una forza il prodotto tra la forza (supposta costante) e l'intervallo di tempo Δt in cui essa agisce.</p>
+  <p class="formula">J→ = F→ · Δt</p>
+  <p>Si può dimostrare che l'impulso di una forza è sempre uguale alla variazione della quantità di moto che essa produce sul corpo su cui agisce: questa relazione è nota come teorema dell'impulso.</p>
+  <p class="formula">F→ · Δt = Δp→ = m · v<sub>f</sub>→ − m · v<sub>i</sub>→</p>
+  <p>Questo teorema è particolarmente utile per capire perché, ad esempio, un airbag riduce i danni in un incidente: allungando il tempo Δt durante il quale la quantità di moto della persona si annulla, a parità di variazione di quantità di moto, si riduce l'intensità della forza media necessaria.</p>
+  <p><em>Esempio svolto:</em> una palla da tennis di massa m = 0,06 kg arriva con velocità v<sub>i</sub> = 20 m/s e viene rimandata indietro dalla racchetta con velocità v<sub>f</sub> = −25 m/s (verso opposto), in un tempo di contatto Δt = 0,01 s. La variazione di quantità di moto vale Δp = 0,06 × (−25) − 0,06 × 20 = −1,5 − 1,2 = −2,7 kg·m/s. La forza media esercitata dalla racchetta vale F = Δp / Δt = −2,7 / 0,01 = −270 N (il segno negativo indica il verso opposto a quello iniziale della palla).</p>
+
+  <p class="titolo-capitolo">La conservazione della quantità di moto</p>
+  <p>Consideriamo un sistema isolato, cioè un sistema di due o più corpi su cui non agiscono forze esterne (o su cui le forze esterne si bilanciano), come nel caso di un urto tra due oggetti, dove le uniche forze rilevanti sono quelle interne, di azione e reazione, che i due corpi si scambiano durante l'urto.</p>
+  <p>Per il terzo principio della dinamica, le forze interne che i due corpi si scambiano durante l'urto sono sempre uguali e opposte in ogni istante: questo comporta che la quantità di moto totale del sistema, cioè la somma vettoriale delle quantità di moto dei singoli corpi, rimane costante durante tutto l'urto.</p>
+  <p class="formula">p<sub>totale,i</sub>→ = p<sub>totale,f</sub>→ &nbsp;&nbsp;→&nbsp;&nbsp; m<sub>1</sub>·v<sub>1,i</sub>→ + m<sub>2</sub>·v<sub>2,i</sub>→ = m<sub>1</sub>·v<sub>1,f</sub>→ + m<sub>2</sub>·v<sub>2,f</sub>→</p>
+  <p>Questo principio, chiamato principio di conservazione della quantità di moto, è valido per qualsiasi sistema isolato, indipendentemente dal tipo di forze interne in gioco (comprese le forze molto complesse che si sviluppano durante un urto), ed è uno dei principi più generali e potenti di tutta la fisica.</p>
+
+  <p class="titolo-capitolo">Gli urti elastici</p>
+  <p>Un urto si dice elastico quando, oltre alla quantità di moto, si conserva anche l'energia cinetica totale del sistema: questo significa che nessuna energia viene dissipata durante l'urto, ad esempio in calore o in deformazioni permanenti dei corpi.</p>
+  <p class="formula">(1/2)m<sub>1</sub>v<sub>1,i</sub><sup>2</sup> + (1/2)m<sub>2</sub>v<sub>2,i</sub><sup>2</sup> = (1/2)m<sub>1</sub>v<sub>1,f</sub><sup>2</sup> + (1/2)m<sub>2</sub>v<sub>2,f</sub><sup>2</sup></p>
+  <p>Gli urti perfettamente elastici sono un'idealizzazione, realizzata solo approssimativamente nella realtà (ad esempio tra biglie molto rigide, o tra particelle subatomiche): risolvendo insieme la conservazione della quantità di moto e dell'energia cinetica per un urto elastico unidimensionale, si ottengono le velocità finali dei due corpi.</p>
+  <p><em>Esempio svolto (caso particolare):</em> una biglia di massa m<sub>1</sub> = 2 kg, con velocità v<sub>1,i</sub> = 3 m/s, urta elasticamente una biglia identica m<sub>2</sub> = 2 kg, inizialmente ferma (v<sub>2,i</sub> = 0). Si può dimostrare che, quando le masse sono uguali, in un urto elastico le due biglie si scambiano semplicemente le velocità: dopo l'urto, la biglia 1 si ferma (v<sub>1,f</sub> = 0) e la biglia 2 si muove con v<sub>2,f</sub> = 3 m/s, un risultato facilmente osservabile giocando a biliardo.</p>
+
+  <p class="titolo-capitolo">Gli urti anelastici e l'urto completamente anelastico</p>
+  <p>Un urto si dice anelastico quando l'energia cinetica totale non si conserva: parte dell'energia cinetica iniziale si trasforma in altre forme di energia, come calore, suono o energia di deformazione permanente dei corpi. La quantità di moto, invece, si conserva sempre in un sistema isolato, sia negli urti elastici sia in quelli anelastici.</p>
+  <p>Un caso particolare, e particolarmente semplice da trattare, è l'urto completamente anelastico, in cui i due corpi rimangono uniti dopo l'urto, muovendosi insieme con la stessa velocità finale. In questo caso la conservazione della quantità di moto permette di calcolare direttamente la velocità comune finale.</p>
+  <p class="formula">v<sub>f</sub> = (m<sub>1</sub> · v<sub>1,i</sub> + m<sub>2</sub> · v<sub>2,i</sub>) / (m<sub>1</sub> + m<sub>2</sub>)</p>
+  <p><em>Esempio svolto:</em> un carrello di massa m<sub>1</sub> = 4 kg, con velocità v<sub>1,i</sub> = 6 m/s, si scontra e si aggancia a un secondo carrello di massa m<sub>2</sub> = 2 kg, inizialmente fermo (v<sub>2,i</sub> = 0). La velocità comune dopo l'urto vale v<sub>f</sub> = (4 × 6 + 2 × 0) / (4 + 2) = 24 / 6 = 4 m/s. Verifichiamo che l'energia cinetica non si conserva: E<sub>c,i</sub> = (1/2)×4×6<sup>2</sup> = 72 J, mentre E<sub>c,f</sub> = (1/2)×6×4<sup>2</sup> = 48 J: 24 J sono stati dissipati durante l'urto.</p>
+</div>
+<!-- fine capitolo fisica 14 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis15.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

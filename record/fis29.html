@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 29</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 29: il campo elettrico -->
+<div id="capitolo-29-campo-elettrico" class="capitolo-storia">
+  <p class="titolo-capitolo">29 - Il campo elettrico - Classe 4</p>
+
+  <p class="titolo-capitolo">Il concetto di campo elettrico</p>
+  <p>Nel capitolo precedente abbiamo descritto l'interazione tra due cariche elettriche attraverso la legge di Coulomb, che richiede sempre di considerare esplicitamente due cariche. È utile, però, introdurre un concetto più generale, in perfetta analogia con quanto già fatto per la gravitazione nel capitolo 19: il campo elettrico, che descrive l'effetto prodotto da una (o più) cariche elettriche nello spazio circostante, indipendentemente dalla presenza di una seconda carica su cui misurarne l'effetto.</p>
+  <p>Il campo elettrico E→ in un punto dello spazio si definisce come il rapporto tra la forza elettrica che agirebbe su una carica di prova q<sub>0</sub> (piccola e positiva, per convenzione), posta in quel punto, e il valore della carica di prova stessa.</p>
+  <p class="formula">E→ = F→ / q<sub>0</sub></p>
+  <p>Nel Sistema Internazionale il campo elettrico si misura in newton al coulomb (N/C), oppure, equivalentemente (come vedremo nel prossimo capitolo), in volt al metro (V/m). Il campo elettrico è una grandezza vettoriale, definita in ogni punto dello spazio circostante le cariche che lo generano.</p>
+
+  <p class="titolo-capitolo">Il campo elettrico generato da una carica puntiforme</p>
+  <p>Combinando la definizione di campo elettrico con la legge di Coulomb, si ottiene l'espressione del campo elettrico generato da una singola carica puntiforme Q, a distanza r da essa.</p>
+  <p class="formula">E = k · |Q| / r<sup>2</sup></p>
+  <p>Il campo elettrico generato da una carica positiva è diretto radialmente verso l'esterno, allontanandosi dalla carica in ogni direzione; il campo elettrico generato da una carica negativa è diretto radialmente verso l'interno, cioè verso la carica stessa. Nota E→, la forza che agirebbe su una qualsiasi carica q posta in quel punto si ottiene semplicemente moltiplicando: F→ = q · E→.</p>
+  <p><em>Esempio svolto:</em> vogliamo calcolare il campo elettrico generato da una carica puntiforme Q = 5×10<sup>−6</sup> C a distanza r = 0,5 m. Applicando la formula: E = 8,99×10<sup>9</sup> × 5×10<sup>−6</sup> / 0,5<sup>2</sup> = 44950 / 0,25 ≈ 179800 N/C.</p>
+
+  <p class="titolo-capitolo">Il principio di sovrapposizione per il campo elettrico</p>
+  <p>Quando più cariche elettriche sono presenti contemporaneamente, il campo elettrico risultante in un punto dello spazio si ottiene sommando vettorialmente i campi elettrici generati separatamente da ciascuna carica, esattamente come già visto per le forze.</p>
+  <p class="formula">E<sub>R</sub>→ = E<sub>1</sub>→ + E<sub>2</sub>→ + E<sub>3</sub>→ + ...</p>
+  <p><em>Esempio svolto:</em> due cariche uguali e positive, q<sub>1</sub> = q<sub>2</sub> = 2×10<sup>−6</sup> C, sono poste a distanza d = 0,4 m l'una dall'altra. Vogliamo calcolare il campo elettrico nel punto medio del segmento che le congiunge. Il campo generato da ciascuna carica in quel punto (a distanza r = 0,2 m) vale E<sub>1</sub> = E<sub>2</sub> = 8,99×10<sup>9</sup> × 2×10<sup>−6</sup> / 0,2<sup>2</sup> = 17980 / 0,04 ≈ 449500 N/C. Poiché i due campi, generati da cariche positive, sono diretti in versi opposti lungo la stessa retta (allontanandosi da ciascuna carica), essi si annullano esattamente nel punto medio: il campo risultante è nullo.</p>
+
+  <p class="titolo-capitolo">Le linee di campo</p>
+  <p>Per rappresentare graficamente l'andamento di un campo elettrico nello spazio, si utilizzano le linee di campo (o linee di forza), cioè linee tracciate in modo tale che, in ogni punto, la tangente alla linea indichi la direzione del campo elettrico in quel punto. Le linee di campo escono sempre dalle cariche positive ed entrano sempre nelle cariche negative.</p>
+  <p>La densità delle linee di campo, cioè quante linee attraversano una data area, è proporzionale all'intensità del campo elettrico in quella regione: dove le linee sono più fitte, il campo è più intenso; dove sono più rade, il campo è più debole. Le linee di campo, inoltre, non si intersecano mai tra loro, poiché in ogni punto il campo elettrico ha un'unica direzione ben definita.</p>
+  <p>Un caso particolarmente importante, che ritroveremo spesso, è quello del campo elettrico uniforme, in cui le linee di campo sono parallele ed equidistanti tra loro, e il campo ha lo stesso valore (in modulo, direzione e verso) in ogni punto della regione considerata: questa situazione si realizza, con buona approssimazione, nello spazio compreso tra due lastre piane parallele, cariche con segno opposto.</p>
+
+  <p class="titolo-capitolo">Il campo elettrico all'interno di un conduttore in equilibrio</p>
+  <p>Un risultato fondamentale dell'elettrostatica riguarda il comportamento del campo elettrico all'interno di un conduttore in equilibrio elettrostatico (cioè quando le cariche al suo interno non sono più in movimento): in queste condizioni, il campo elettrico all'interno di un conduttore è sempre nullo.</p>
+  <p>Questo risultato si spiega considerando che, se il campo elettrico interno non fosse nullo, le cariche libere del conduttore (gli elettroni di conduzione) continuerebbero a muoversi sotto l'effetto della forza elettrica, e il sistema non potrebbe essere in equilibrio: gli elettroni si ridistribuiscono quindi sulla superficie del conduttore fino a quando il campo elettrico all'interno non si annulla completamente.</p>
+  <p>Una conseguenza di questo fenomeno è che, in un conduttore carico in equilibrio, tutta la carica elettrica in eccesso si distribuisce esclusivamente sulla superficie esterna del conduttore, e non nel suo volume interno: questa proprietà è alla base del funzionamento della gabbia di Faraday, una struttura conduttrice cava che scherma efficacemente il proprio interno dai campi elettrici esterni.</p>
+</div>
+<!-- fine capitolo fisica 29 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis30.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

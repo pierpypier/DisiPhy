@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 07</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 07: forze ed equilibrio dei corpi solidi -->
+<div id="capitolo-07-forze-equilibrio-solidi" class="capitolo-storia">
+  <p class="titolo-capitolo">07 - Forze ed equilibrio dei corpi solidi - Classe 1</p>
+
+  <p class="titolo-capitolo">Il concetto di forza</p>
+  <p>Una forza è un'azione capace di modificare lo stato di moto di un corpo, cioè di farlo accelerare, oppure di deformarlo. Spingere un carrello, tirare una corda, la caduta di un oggetto sotto l'effetto della gravità sono tutti esempi di forze che agiscono sui corpi.</p>
+  <p>La forza è una grandezza vettoriale: per descriverla completamente occorre indicarne il modulo (l'intensità), la direzione e il verso, oltre al punto di applicazione, cioè il punto del corpo su cui la forza agisce. Nel Sistema Internazionale la forza si misura in newton (N).</p>
+  <p>Uno strumento comune per misurare le forze è il dinamometro, basato sulla proprietà di alcune molle di allungarsi in modo proporzionale alla forza applicata, secondo la legge di Hooke, che vedremo in dettaglio più avanti nel corso.</p>
+
+  <p class="titolo-capitolo">La forza peso</p>
+  <p>La forza peso è la forza con cui la Terra attira ogni corpo verso il suo centro, ed è la causa della caduta libera studiata nel capitolo 5. Il peso di un corpo è direttamente proporzionale alla sua massa, secondo la relazione seguente.</p>
+  <p class="formula">P = m · g</p>
+  <p>dove m è la massa del corpo, espressa in kg, e g ≈ 9,8 m/s<sup>2</sup> è l'accelerazione di gravità. È importante non confondere la massa (una proprietà intrinseca del corpo, che si misura in kg e non cambia) con il peso (una forza, che si misura in N e dipende dal valore di g nel luogo in cui ci si trova).</p>
+  <p><em>Esempio svolto:</em> un corpo ha massa m = 5 kg. Il suo peso sulla superficie terrestre vale P = 5 × 9,8 = 49 N.</p>
+
+  <p class="titolo-capitolo">La somma di più forze: la forza risultante</p>
+  <p>Quando su un corpo agiscono contemporaneamente più forze, il loro effetto complessivo è equivalente a quello di un'unica forza, chiamata forza risultante, ottenuta sommando vettorialmente tutte le forze applicate, con le stesse regole di somma tra vettori viste nel capitolo 3.</p>
+  <p class="formula">F<sub>R</sub>→ = F<sub>1</sub>→ + F<sub>2</sub>→ + F<sub>3</sub>→ + ...</p>
+  <p><em>Esempio svolto:</em> su un corpo agiscono due forze perpendicolari tra loro, F<sub>1</sub> = 6 N (orizzontale) e F<sub>2</sub> = 8 N (verticale). Il modulo della forza risultante si calcola con il teorema di Pitagora: F<sub>R</sub> = √(6<sup>2</sup> + 8<sup>2</sup>) = √(36 + 64) = √100 = 10 N.</p>
+
+  <p class="titolo-capitolo">L'equilibrio di un punto materiale</p>
+  <p>Un corpo, schematizzato come un punto materiale, si trova in equilibrio quando la risultante di tutte le forze applicate su di esso è nulla. In questa condizione il corpo, se inizialmente fermo, rimane fermo; se inizialmente in movimento, continua a muoversi con velocità costante (questo principio sarà ripreso e approfondito nel capitolo dedicato ai principi della dinamica).</p>
+  <p class="formula">F<sub>R</sub>→ = ΣF<sub>i</sub>→ = 0</p>
+  <p>Un caso molto comune è quello di un corpo appoggiato su un piano orizzontale: la forza peso, diretta verso il basso, è bilanciata dalla forza normale N, esercitata dal piano verso l'alto, perpendicolarmente alla superficie di appoggio.</p>
+  <p><em>Esempio svolto:</em> un libro di massa m = 1,2 kg è appoggiato su un tavolo. Il suo peso è P = 1,2 × 9,8 ≈ 11,76 N, diretto verso il basso. Poiché il libro è in equilibrio, la forza normale esercitata dal tavolo deve avere lo stesso modulo e verso opposto: N = 11,76 N, diretta verso l'alto.</p>
+
+  <p class="titolo-capitolo">Il piano inclinato</p>
+  <p>Un caso classico di scomposizione delle forze è quello di un corpo appoggiato su un piano inclinato di un angolo θ rispetto all'orizzontale. In questa situazione conviene scomporre la forza peso in due componenti: una parallela al piano inclinato, che tende a far scivolare il corpo verso il basso, e una perpendicolare al piano, che viene bilanciata dalla forza normale.</p>
+  <p class="formula">P<sub>parallela</sub> = P · sin θ ,&nbsp;&nbsp; P<sub>perpendicolare</sub> = P · cos θ</p>
+  <p>In assenza di attrito, la componente parallela al piano è l'unica forza che determina il moto del corpo lungo il piano inclinato, mentre la componente perpendicolare è sempre bilanciata dalla forza normale, qualunque sia l'angolo di inclinazione.</p>
+  <p><em>Esempio svolto:</em> un blocco di massa m = 2 kg è appoggiato su un piano inclinato di θ = 30°, senza attrito. Il peso è P = 2 × 9,8 = 19,6 N. La componente parallela al piano vale P<sub>parallela</sub> = 19,6 × sin 30° = 19,6 × 0,5 = 9,8 N, ed è questa la forza che fa scivolare il blocco lungo il piano.</p>
+
+  <p class="titolo-capitolo">L'attrito</p>
+  <p>L'attrito è una forza che si oppone al movimento relativo (o alla tendenza al movimento) tra due superfici a contatto, ed è dovuto alle irregolarità microscopiche presenti su ogni superficie, anche quelle apparentemente lisce.</p>
+  <p>Si distingue l'attrito statico, che agisce quando il corpo è ancora fermo e si oppone all'inizio del movimento, dall'attrito dinamico, che agisce quando il corpo è già in movimento e si oppone al moto relativo. L'attrito statico massimo è generalmente maggiore dell'attrito dinamico: per questo è più difficile "far partire" un oggetto pesante che tenerlo in movimento una volta avviato.</p>
+  <p>L'intensità della forza di attrito è proporzionale alla forza normale che preme le due superfici l'una contro l'altra, secondo un coefficiente di attrito μ che dipende dalla natura delle superfici a contatto.</p>
+  <p class="formula">F<sub>attrito</sub> = μ · N</p>
+  <p><em>Esempio svolto:</em> un blocco di massa m = 4 kg, appoggiato su un piano orizzontale, ha con la superficie un coefficiente di attrito dinamico μ = 0,3. La forza normale vale N = P = m·g = 4 × 9,8 = 39,2 N. La forza di attrito dinamico che si oppone allo scorrimento del blocco vale quindi F<sub>attrito</sub> = 0,3 × 39,2 ≈ 11,76 N.</p>
+
+  <p class="titolo-capitolo">L'equilibrio di un corpo rigido: il momento di una forza</p>
+  <p>Finora abbiamo considerato i corpi come punti materiali, senza dimensioni. Un corpo rigido, cioè un corpo esteso che non si deforma, può però ruotare anche quando la risultante delle forze applicate è nulla, se le forze non sono applicate nello stesso punto: per questo motivo, oltre all'equilibrio delle forze, occorre considerare anche l'equilibrio rispetto alle rotazioni.</p>
+  <p>Si definisce momento di una forza (o momento torcente) rispetto a un punto (detto polo) il prodotto tra il modulo della forza e il braccio, cioè la distanza tra il polo e la retta d'azione della forza.</p>
+  <p class="formula">M = F · b</p>
+  <p>Nel Sistema Internazionale il momento di una forza si misura in newton per metro (N·m). Un corpo rigido è in equilibrio quando sono nulle sia la risultante delle forze sia la somma dei momenti delle forze rispetto a un qualsiasi polo.</p>
+  <p><em>Esempio svolto:</em> una leva ha un braccio di lunghezza 2 m rispetto al fulcro, su cui viene applicata una forza F = 15 N perpendicolare alla leva. Il momento della forza rispetto al fulcro vale M = 15 × 2 = 30 N·m.</p>
+</div>
+<!-- fine capitolo fisica 07 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis08.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

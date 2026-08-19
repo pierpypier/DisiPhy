@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 10</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 10: i principi della dinamica -->
+<div id="capitolo-10-principi-dinamica" class="capitolo-storia">
+  <p class="titolo-capitolo">10 - I principi della dinamica - Classe 2</p>
+
+  <p class="titolo-capitolo">Dalla cinematica alla dinamica</p>
+  <p>Nei capitoli precedenti abbiamo descritto il moto dei corpi senza chiederci quali fossero le sue cause: questo è il compito della cinematica. La dinamica, invece, è la parte della meccanica che studia il legame tra le forze applicate a un corpo e il moto che ne consegue, rispondendo alla domanda "perché un corpo si muove in un certo modo".</p>
+  <p>Le basi della dinamica moderna furono poste da Isaac Newton, che nel Seicento formulò tre principi fondamentali (detti anche leggi di Newton), tuttora alla base dello studio del moto dei corpi macroscopici a velocità non troppo elevate.</p>
+
+  <p class="titolo-capitolo">Il primo principio della dinamica: il principio di inerzia</p>
+  <p>Il primo principio della dinamica, detto anche principio di inerzia, afferma che un corpo su cui non agisce alcuna forza (oppure su cui agiscono forze che si bilanciano perfettamente, cioè con risultante nulla) permane nel suo stato di quiete, oppure di moto rettilineo uniforme, se già in movimento.</p>
+  <p>Questo principio contraddice l'esperienza quotidiana, secondo cui un corpo in movimento tende naturalmente a fermarsi: in realtà, a fermare gli oggetti che osserviamo muoversi è quasi sempre l'attrito, una forza che nella vita di tutti i giorni è raramente del tutto assente. In assenza di attrito e di altre forze, un corpo in moto continuerebbe a muoversi indefinitamente con velocità costante.</p>
+  <p>La proprietà di un corpo di "resistere" a variazioni del proprio stato di moto si chiama inerzia: per questo motivo il primo principio è detto anche principio di inerzia. Un esempio comune è la sensazione di essere spinti in avanti quando un'automobile frena bruscamente: il nostro corpo, per inerzia, tende a mantenere la velocità che aveva, mentre l'automobile rallenta.</p>
+
+  <p class="titolo-capitolo">I sistemi di riferimento inerziali</p>
+  <p>Il primo principio della dinamica vale solo in particolari sistemi di riferimento, detti sistemi di riferimento inerziali, cioè sistemi che non sono accelerati. In un sistema di riferimento accelerato (detto non inerziale), come un'automobile in frenata o una giostra in rotazione, gli oggetti possono sembrare muoversi anche senza che agisca alcuna forza reale su di essi, per effetto del moto stesso del sistema di riferimento.</p>
+  <p>Un sistema di riferimento fermo, oppure che si muove di moto rettilineo uniforme rispetto a un altro sistema inerziale, è anch'esso un sistema di riferimento inerziale: per questo motivo, se siamo su un treno che viaggia a velocità costante su un binario rettilineo, possiamo considerare valido il principio di inerzia esattamente come se fossimo fermi rispetto al suolo.</p>
+
+  <p class="titolo-capitolo">Il secondo principio della dinamica: la legge fondamentale</p>
+  <p>Il secondo principio della dinamica, considerato la legge fondamentale della meccanica classica, stabilisce il legame quantitativo tra la forza risultante applicata a un corpo, la sua massa e l'accelerazione che ne deriva: l'accelerazione di un corpo è direttamente proporzionale alla forza risultante applicata, e inversamente proporzionale alla sua massa.</p>
+  <p class="formula">F<sub>R</sub>→ = m · a→</p>
+  <p>Questa equazione, spesso scritta anche come a→ = F<sub>R</sub>→ / m, è di fondamentale importanza: a parità di forza applicata, un corpo con massa maggiore subisce un'accelerazione minore, cioè la sua velocità cambia più lentamente. La massa, in questo contesto, rappresenta quindi una misura dell'inerzia del corpo, cioè della sua "resistenza" a variare il proprio stato di moto.</p>
+  <p>Da questa legge deriva anche la definizione operativa dell'unità di misura della forza: 1 newton (N) è la forza che, applicata a un corpo di massa 1 kg, gli imprime un'accelerazione di 1 m/s<sup>2</sup>.</p>
+  <p class="formula">1 N = 1 kg · 1 m/s<sup>2</sup></p>
+  <p><em>Esempio svolto:</em> una forza risultante di 20 N è applicata a un corpo di massa 4 kg. L'accelerazione del corpo vale a = F / m = 20 / 4 = 5 m/s<sup>2</sup>.</p>
+
+  <p class="titolo-capitolo">Il terzo principio della dinamica: azione e reazione</p>
+  <p>Il terzo principio della dinamica, noto come principio di azione e reazione, afferma che se un corpo A esercita una forza (azione) su un corpo B, allora il corpo B esercita simultaneamente su A una forza (reazione) di uguale intensità e direzione, ma verso opposto.</p>
+  <p class="formula">F<sub>A→B</sub>→ = − F<sub>B→A</sub>→</p>
+  <p>È fondamentale notare che le due forze di azione e reazione, pur essendo uguali e opposte, non si annullano mai tra loro, perché agiscono su due corpi diversi (una su A, l'altra su B), e non sullo stesso corpo: per questo motivo non contraddicono affatto il fatto che i corpi possano accelerare.</p>
+  <p>Un esempio comune è quello di una persona che spinge un muro: la persona esercita una forza sul muro, e contemporaneamente il muro esercita sulla persona una forza uguale e contraria, che è il motivo per cui la persona percepisce una resistenza e può, ad esempio, spingersi indietro allontanandosi dal muro.</p>
+  <p><em>Esempio svolto:</em> due pattinatori sul ghiaccio, inizialmente fermi, si spingono a vicenda. Il pattinatore A (massa 60 kg) e il pattinatore B (massa 80 kg) si scambiano una forza di uguale intensità, secondo il terzo principio. Poiché F = m·a, e la forza è la stessa per entrambi, l'accelerazione di A sarà maggiore di quella di B (proprio nel rapporto inverso delle masse), motivo per cui, a parità di tempo di contatto, il pattinatore più leggero acquisirà una velocità maggiore.</p>
+
+  <p class="titolo-capitolo">L'applicazione dei principi della dinamica</p>
+  <p>Per risolvere un problema di dinamica si procede generalmente identificando tutte le forze che agiscono sul corpo in esame, disegnandole in un diagramma (detto diagramma delle forze o diagramma di corpo libero), calcolando la forza risultante (sommando vettorialmente le singole forze), e infine applicando il secondo principio per determinare l'accelerazione del corpo.</p>
+  <p><em>Esempio svolto:</em> un corpo di massa m = 10 kg è appoggiato su un piano orizzontale privo di attrito, ed è tirato da una forza orizzontale F = 25 N. Poiché il piano è orizzontale e senza attrito, la forza peso e la forza normale si bilanciano esattamente, e l'unica forza che determina il moto orizzontale è F. L'accelerazione del corpo vale quindi a = F / m = 25 / 10 = 2,5 m/s<sup>2</sup>.</p>
+</div>
+<!-- fine capitolo fisica 10 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis11.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

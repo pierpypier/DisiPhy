@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 27</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 27: l'ottica ondulatoria: interferenza e diffrazione -->
+<div id="capitolo-27-ottica-ondulatoria" class="capitolo-storia">
+  <p class="titolo-capitolo">27 - L'ottica ondulatoria: interferenza e diffrazione - Classe 3</p>
+
+  <p class="titolo-capitolo">La natura ondulatoria della luce</p>
+  <p>Nei capitoli 18 e 26 abbiamo studiato la luce utilizzando l'approssimazione dell'ottica geometrica, cioè trattandola come un insieme di raggi che si propagano in linea retta, subendo riflessione e rifrazione. Questa approssimazione, per quanto molto utile in numerose applicazioni pratiche, non è in grado di spiegare tutti i fenomeni luminosi osservati sperimentalmente: alcuni di questi richiedono di considerare la luce come un'onda, dando origine all'ottica ondulatoria.</p>
+  <p>L'ipotesi ondulatoria della luce, sostenuta in particolare da Christiaan Huygens nel Seicento, in contrapposizione all'ipotesi corpuscolare sostenuta da Newton, trovò una conferma sperimentale decisiva soltanto all'inizio dell'Ottocento, grazie agli esperimenti del fisico inglese Thomas Young, che descriviamo in questo capitolo.</p>
+
+  <p class="titolo-capitolo">L'esperimento della doppia fenditura di Young</p>
+  <p>Nel 1801 Thomas Young fece passare la luce proveniente da un'unica sorgente attraverso due sottili fenditure parallele, molto vicine tra loro, praticate su uno schermo opaco, osservando poi la luce proiettata su un secondo schermo posto a una certa distanza. Se la luce fosse composta da particelle che si muovono in linea retta, come previsto dall'ottica geometrica, ci si aspetterebbe di osservare sullo schermo solo due strisce luminose, in corrispondenza delle due fenditure.</p>
+  <p>Ciò che si osserva sperimentalmente, invece, è una serie alternata di frange chiare e frange scure, chiamata figura di interferenza: questo risultato è spiegabile solo assumendo che la luce, comportandosi come un'onda, subisca il fenomeno dell'interferenza (già introdotto nel capitolo 24) tra le onde secondarie provenienti dalle due fenditure, che si comportano come due sorgenti coerenti (cioè con la stessa frequenza e una relazione di fase costante nel tempo).</p>
+
+  <p class="titolo-capitolo">Le condizioni per l'interferenza costruttiva e distruttiva</p>
+  <p>Nell'esperimento di Young, in ogni punto dello schermo, la luce proveniente dalle due fenditure percorre cammini leggermente diversi, con una differenza di cammino ottico Δ che dipende dalla posizione del punto considerato sullo schermo e dalla distanza tra le due fenditure.</p>
+  <p>Si osserva un'interferenza costruttiva (una frangia chiara), corrispondente a un massimo di luminosità, nei punti in cui la differenza di cammino è un multiplo intero della lunghezza d'onda della luce, poiché in questo caso le due onde arrivano sempre in fase.</p>
+  <p class="formula">Δ = m · λ &nbsp;&nbsp; (m = 0, ±1, ±2, ...)</p>
+  <p>Si osserva invece un'interferenza distruttiva (una frangia scura), corrispondente a un minimo di luminosità, nei punti in cui la differenza di cammino è un multiplo dispari di mezza lunghezza d'onda, poiché in questo caso le due onde arrivano sempre in opposizione di fase.</p>
+  <p class="formula">Δ = (m + 1/2) · λ &nbsp;&nbsp; (m = 0, ±1, ±2, ...)</p>
+  <p>La distanza y tra due frange chiare consecutive sullo schermo, posto a distanza L dalle fenditure separate da una distanza d, è data dalla formula seguente, valida quando L è molto maggiore di d.</p>
+  <p class="formula">y = λ · L / d</p>
+  <p><em>Esempio svolto:</em> in un esperimento di Young, due fenditure distanti d = 0,2 mm sono illuminate da una luce di lunghezza d'onda λ = 600 nm, e lo schermo è posto a distanza L = 2 m. La distanza tra due frange chiare consecutive vale y = (600×10<sup>−9</sup> × 2) / (0,2×10<sup>−3</sup>) = 1,2×10<sup>−6</sup> / 2×10<sup>−4</sup> = 6×10<sup>−3</sup> m = 6 mm.</p>
+
+  <p class="titolo-capitolo">La diffrazione</p>
+  <p>La diffrazione è il fenomeno per cui un'onda, incontrando un ostacolo o passando attraverso un'apertura di dimensioni paragonabili alla sua lunghezza d'onda, si allarga e devia dalla propagazione rettilinea prevista dall'ottica geometrica, "aggirando" parzialmente l'ostacolo. Questo fenomeno, come l'interferenza, è una prova ulteriore della natura ondulatoria della luce.</p>
+  <p>La diffrazione della luce attraverso una singola fenditura stretta produce sullo schermo una figura caratteristica, con un massimo centrale molto luminoso e più esteso, affiancato da una serie di massimi secondari, molto meno intensi, separati da minimi di luminosità. L'ampiezza angolare del massimo centrale di diffrazione dipende dal rapporto tra la lunghezza d'onda della luce e la larghezza della fenditura: fenditure più strette producono una diffrazione più marcata (una figura più allargata).</p>
+  <p>La diffrazione, pur essendo un fenomeno generale di tutte le onde, diventa evidente solo quando le dimensioni dell'ostacolo o dell'apertura sono paragonabili alla lunghezza d'onda: poiché la lunghezza d'onda della luce visibile è molto piccola (poche centinaia di nanometri), la diffrazione della luce è generalmente osservabile solo con aperture molto strette, mentre per aperture molto più grandi della lunghezza d'onda l'ottica geometrica rimane una buona approssimazione.</p>
+
+  <p class="titolo-capitolo">Lo spettro della luce visibile e la dispersione</p>
+  <p>La luce bianca, come quella del Sole, non è costituita da un'unica lunghezza d'onda, ma è la sovrapposizione di infinite componenti, ciascuna con una diversa lunghezza d'onda, che corrispondono, per l'occhio umano, a diverse sensazioni di colore. Lo spettro della luce visibile si estende indicativamente da circa 400 nm (violetto) a circa 700 nm (rosso), passando attraverso tutti i colori dell'arcobaleno.</p>
+  <p class="formula">Luce visibile: λ ≈ 400 ÷ 700 nm</p>
+  <p>Poiché l'indice di rifrazione di un materiale trasparente dipende leggermente dalla lunghezza d'onda della luce (fenomeno chiamato dispersione), quando un fascio di luce bianca attraversa un prisma di vetro, le diverse componenti cromatiche vengono rifratte con angoli leggermente diversi, separandosi visivamente: questo è il fenomeno che permette di scomporre la luce bianca nei colori dell'arcobaleno, sia in laboratorio con un prisma, sia in natura, quando la luce del Sole attraversa le gocce di pioggia sospese nell'aria.</p>
+</div>
+<!-- fine capitolo fisica 27 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis28.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

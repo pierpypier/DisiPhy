@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 22</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 22: i principi della termodinamica -->
+<div id="capitolo-22-principi-termodinamica" class="capitolo-storia">
+  <p class="titolo-capitolo">22 - I principi della termodinamica - Classe 3</p>
+
+  <p class="titolo-capitolo">L'energia interna di un sistema</p>
+  <p>La termodinamica è la parte della fisica che studia le trasformazioni dell'energia, in particolare gli scambi tra calore e lavoro, all'interno di un sistema fisico. Il punto di partenza è il concetto di energia interna, indicata con U, che rappresenta la somma di tutte le energie cinetiche e potenziali associate alle particelle (atomi e molecole) che compongono un sistema, dovute al loro movimento e alle loro interazioni reciproche.</p>
+  <p>Per un gas ideale, in cui non esistono interazioni tra le particelle (se non durante gli urti), l'energia interna coincide con la sola energia cinetica totale delle particelle, e dipende quindi unicamente dalla temperatura del gas, e non dalla sua pressione o dal suo volume.</p>
+  <p class="formula">U = n · (3/2) · R · T &nbsp;&nbsp; (gas ideale monoatomico)</p>
+
+  <p class="titolo-capitolo">Il primo principio della termodinamica</p>
+  <p>Il primo principio della termodinamica è una generalizzazione del principio di conservazione dell'energia, applicata specificamente ai sistemi termodinamici: la variazione di energia interna di un sistema è uguale alla differenza tra il calore scambiato dal sistema con l'ambiente esterno e il lavoro compiuto dal sistema sull'ambiente esterno.</p>
+  <p class="formula">ΔU = Q − L</p>
+  <p>In questa convenzione (largamente usata nei testi scolastici), il calore Q è positivo se assorbito dal sistema e negativo se ceduto dal sistema; il lavoro L è positivo se compiuto dal sistema verso l'esterno (ad esempio un gas che si espande spingendo un pistone) e negativo se compiuto dall'esterno sul sistema (ad esempio un gas che viene compresso).</p>
+  <p>Questo principio esprime, in sostanza, l'impossibilità di creare o distruggere energia: l'energia fornita a un sistema sotto forma di calore può solo aumentare l'energia interna del sistema stesso oppure essere convertita in lavoro compiuto verso l'esterno, e viceversa.</p>
+  <p><em>Esempio svolto:</em> un gas riceve una quantità di calore Q = 500 J e compie un lavoro L = 200 J espandendosi contro un pistone. La variazione di energia interna del gas vale ΔU = 500 − 200 = 300 J.</p>
+
+  <p class="titolo-capitolo">Le trasformazioni termodinamiche particolari</p>
+  <p>Applicando il primo principio a diverse trasformazioni particolari di un gas, si ottengono relazioni semplici e utili. In una trasformazione isocora (a volume costante), il gas non compie lavoro, poiché non c'è variazione di volume: L = 0, e quindi tutto il calore scambiato si traduce in variazione di energia interna, ΔU = Q.</p>
+  <p>In una trasformazione isoterma (a temperatura costante) di un gas ideale, l'energia interna non cambia, poiché essa dipende solo dalla temperatura: ΔU = 0, e quindi il calore assorbito è interamente convertito in lavoro compiuto dal gas, Q = L.</p>
+  <p>In una trasformazione adiabatica, il sistema non scambia calore con l'esterno (Q = 0), ad esempio perché isolato termicamente, oppure perché la trasformazione avviene troppo rapidamente perché possa avvenire uno scambio termico significativo: in questo caso, il primo principio si riduce a ΔU = − L, cioè ogni lavoro compiuto dal gas avviene a spese della sua stessa energia interna (e quindi della sua temperatura).</p>
+  <p><em>Esempio svolto:</em> un gas si espande adiabaticamente (Q = 0) compiendo un lavoro L = 150 J. La variazione di energia interna vale ΔU = 0 − 150 = −150 J: l'energia interna del gas diminuisce, e di conseguenza (per un gas ideale) diminuisce anche la sua temperatura.</p>
+
+  <p class="titolo-capitolo">Le macchine termiche</p>
+  <p>Una macchina termica è un dispositivo che trasforma parte del calore fornito da una sorgente calda in lavoro utile, operando ciclicamente: dopo ogni ciclo completo, la macchina ritorna esattamente nello stesso stato iniziale, pronta a ripetere il processo. Poiché l'energia interna, dopo un ciclo completo, torna al valore iniziale (ΔU = 0), per il primo principio tutto il calore netto scambiato durante il ciclo si converte in lavoro netto compiuto.</p>
+  <p>In una macchina termica reale, la sorgente calda cede una quantità di calore Q<sub>c</sub> alla macchina, che ne converte una parte in lavoro utile L e cede il resto, come calore Q<sub>f</sub>, a una sorgente fredda (ad esempio l'ambiente esterno), secondo la relazione:</p>
+  <p class="formula">L = Q<sub>c</sub> − Q<sub>f</sub></p>
+  <p>Si definisce rendimento η (eta) di una macchina termica il rapporto tra il lavoro utile ottenuto e il calore fornito dalla sorgente calda, una misura di quanto efficacemente la macchina converte il calore in lavoro.</p>
+  <p class="formula">η = L / Q<sub>c</sub> = 1 − Q<sub>f</sub> / Q<sub>c</sub></p>
+  <p><em>Esempio svolto:</em> una macchina termica assorbe Q<sub>c</sub> = 800 J dalla sorgente calda e cede Q<sub>f</sub> = 500 J alla sorgente fredda in ogni ciclo. Il lavoro utile prodotto vale L = 800 − 500 = 300 J, e il rendimento della macchina vale η = 300 / 800 = 0,375, cioè il 37,5%.</p>
+
+  <p class="titolo-capitolo">Il secondo principio della termodinamica</p>
+  <p>Il primo principio della termodinamica non pone alcun limite teorico alla possibilità di convertire integralmente il calore in lavoro, ma l'esperienza mostra che ciò non è mai possibile per una macchina che operi ciclicamente: esiste quindi un ulteriore principio, il secondo principio della termodinamica, che stabilisce limiti fondamentali alla trasformazione del calore in lavoro.</p>
+  <p>Il secondo principio può essere enunciato in diverse forme equivalenti. L'enunciato di Kelvin afferma che è impossibile realizzare una macchina termica che, operando ciclicamente, abbia come unico risultato la conversione completa in lavoro di tutto il calore assorbito da un'unica sorgente: una macchina termica deve necessariamente cedere una parte del calore assorbito a una sorgente più fredda.</p>
+  <p>Una conseguenza diretta di questo principio è che il rendimento di qualsiasi macchina termica reale è sempre minore di 1 (cioè minore del 100%): non esiste, e non può esistere, una macchina termica perfetta, capace di convertire tutto il calore ricevuto in lavoro utile.</p>
+  <p>L'enunciato di Clausius, equivalente a quello di Kelvin, afferma invece che è impossibile realizzare una trasformazione ciclica il cui unico risultato sia il passaggio spontaneo di calore da un corpo più freddo a un corpo più caldo: per far avvenire un simile trasferimento (come accade, ad esempio, in un frigorifero) è sempre necessario fornire energia dall'esterno, sotto forma di lavoro.</p>
+</div>
+<!-- fine capitolo fisica 22 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis23.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 15</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 15: il momento angolare e il moto rotatorio -->
+<div id="capitolo-15-momento-angolare-moto-rotatorio" class="capitolo-storia">
+  <p class="titolo-capitolo">15 - Il momento angolare e il moto rotatorio - Classe 2</p>
+
+  <p class="titolo-capitolo">Il corpo rigido in rotazione</p>
+  <p>Finora abbiamo studiato principalmente il moto di traslazione dei corpi, schematizzati come punti materiali. Molti corpi reali, però, possiedono anche un moto di rotazione attorno a un asse, come una ruota che gira, una porta che si apre, oppure la Terra che ruota su se stessa. Per descrivere questo tipo di moto occorre introdurre alcune grandezze analoghe a quelle già viste per la traslazione, ma adattate alla rotazione.</p>
+  <p>Nel capitolo 6 abbiamo già introdotto la velocità angolare ω e l'accelerazione angolare α per descrivere cinematicamente il moto circolare. Ora affrontiamo l'aspetto dinamico: quali grandezze giocano, nella rotazione, il ruolo che la massa e la forza giocano nella traslazione.</p>
+
+  <p class="titolo-capitolo">Il momento d'inerzia</p>
+  <p>Nella traslazione, la massa di un corpo rappresenta la sua inerzia, cioè la sua resistenza a variare la velocità. Nella rotazione, il ruolo analogo è svolto dal momento d'inerzia, indicato con I, che dipende non solo dalla massa del corpo, ma anche da come questa massa è distribuita rispetto all'asse di rotazione.</p>
+  <p>Per un punto materiale di massa m che ruota a distanza r da un asse, il momento d'inerzia vale:</p>
+  <p class="formula">I = m · r<sup>2</sup></p>
+  <p>Per un corpo esteso, il momento d'inerzia totale si ottiene sommando i contributi di tutte le sue parti; il risultato dipende dalla forma del corpo e da come la massa è distribuita rispetto all'asse (ad esempio, un anello ha un momento d'inerzia maggiore di un disco pieno della stessa massa e dello stesso raggio, perché nell'anello tutta la massa si trova alla massima distanza dall'asse).</p>
+  <p><em>Esempio svolto:</em> una piccola sfera di massa m = 0,5 kg è vincolata a ruotare a distanza r = 0,4 m da un asse tramite un'asta rigida di massa trascurabile. Il suo momento d'inerzia vale I = 0,5 × 0,4<sup>2</sup> = 0,5 × 0,16 = 0,08 kg·m<sup>2</sup>.</p>
+
+  <p class="titolo-capitolo">Il momento angolare</p>
+  <p>Il momento angolare, indicato con L, è la grandezza che nella rotazione svolge un ruolo analogo alla quantità di moto nella traslazione. Per un corpo rigido che ruota attorno a un asse con velocità angolare ω, il momento angolare si definisce come il prodotto tra il momento d'inerzia e la velocità angolare.</p>
+  <p class="formula">L = I · ω</p>
+  <p>Nel Sistema Internazionale il momento angolare si misura in kg·m<sup>2</sup>/s. Come la quantità di moto, anche il momento angolare è una grandezza vettoriale, diretta lungo l'asse di rotazione secondo la regola della mano destra.</p>
+  <p><em>Esempio svolto:</em> riprendendo l'esempio precedente, se la sfera ruota con velocità angolare ω = 5 rad/s, il suo momento angolare vale L = 0,08 × 5 = 0,4 kg·m<sup>2</sup>/s.</p>
+
+  <p class="titolo-capitolo">La relazione fondamentale della dinamica rotazionale</p>
+  <p>Così come la forza risultante produce una variazione della quantità di moto (secondo principio della dinamica), il momento risultante delle forze applicate a un corpo rigido produce una variazione del momento angolare. In modo del tutto analogo al secondo principio, per un corpo rigido con momento d'inerzia costante si può scrivere:</p>
+  <p class="formula">M = I · α</p>
+  <p>dove M è il momento risultante delle forze esterne (introdotto nel capitolo 7) e α è l'accelerazione angolare. Questa relazione è l'equivalente rotazionale della legge F = m·a, con il momento d'inerzia I che sostituisce la massa m, il momento M che sostituisce la forza F, e l'accelerazione angolare α che sostituisce l'accelerazione lineare a.</p>
+  <p><em>Esempio svolto:</em> una ruota con momento d'inerzia I = 2 kg·m<sup>2</sup> è sottoposta a un momento risultante M = 6 N·m. La sua accelerazione angolare vale α = M / I = 6 / 2 = 3 rad/s<sup>2</sup>.</p>
+
+  <p class="titolo-capitolo">La conservazione del momento angolare</p>
+  <p>In un sistema isolato, cioè su cui non agisce alcun momento esterno risultante, il momento angolare totale si conserva, rimanendo costante nel tempo. Questo principio è analogo alla conservazione della quantità di moto vista nel capitolo precedente, ed è altrettanto generale e importante.</p>
+  <p class="formula">I<sub>i</sub> · ω<sub>i</sub> = I<sub>f</sub> · ω<sub>f</sub></p>
+  <p>Una conseguenza interessante di questo principio è che, se un corpo rigido può modificare la propria distribuzione di massa (e quindi il proprio momento d'inerzia) senza l'intervento di momenti esterni, la sua velocità angolare deve variare in modo da mantenere costante il prodotto I·ω.</p>
+  <p>Questo fenomeno è ben noto ai pattinatori artistici: quando un pattinatore in rotazione avvicina le braccia al corpo, riduce il proprio momento d'inerzia, e per la conservazione del momento angolare la sua velocità angolare aumenta, facendolo ruotare più velocemente. Allargando le braccia, al contrario, aumenta il momento d'inerzia e la rotazione rallenta.</p>
+  <p><em>Esempio svolto:</em> un pattinatore ruota con velocità angolare ω<sub>i</sub> = 2 rad/s quando il suo momento d'inerzia, a braccia aperte, vale I<sub>i</sub> = 4 kg·m<sup>2</sup>. Avvicinando le braccia al corpo, il momento d'inerzia si riduce a I<sub>f</sub> = 1,6 kg·m<sup>2</sup>. La nuova velocità angolare si trova dalla conservazione del momento angolare: 4 × 2 = 1,6 × ω<sub>f</sub>, da cui ω<sub>f</sub> = 8 / 1,6 = 5 rad/s, cioè la rotazione diventa 2,5 volte più veloce.</p>
+
+  <p class="titolo-capitolo">L'energia cinetica rotazionale</p>
+  <p>Anche un corpo in rotazione possiede energia cinetica, dovuta al movimento delle sue parti attorno all'asse. L'energia cinetica rotazionale di un corpo rigido, in perfetta analogia con l'energia cinetica di traslazione E<sub>c</sub> = (1/2)mv<sup>2</sup>, si calcola sostituendo la massa con il momento d'inerzia e la velocità con la velocità angolare.</p>
+  <p class="formula">E<sub>c,rot</sub> = (1/2) · I · ω<sup>2</sup></p>
+  <p>Un corpo che rotola senza strisciare, come una ruota o una palla che rotola su un piano, possiede contemporaneamente energia cinetica di traslazione (dovuta al moto del suo centro di massa) ed energia cinetica di rotazione (dovuta alla rotazione attorno al proprio asse), e l'energia cinetica totale è la somma delle due.</p>
+  <p class="formula">E<sub>c,totale</sub> = (1/2) · m · v<sup>2</sup> + (1/2) · I · ω<sup>2</sup></p>
+  <p><em>Esempio svolto:</em> una ruota di massa m = 3 kg e momento d'inerzia I = 0,6 kg·m<sup>2</sup> rotola senza strisciare con velocità del centro v = 4 m/s e velocità angolare ω = 8 rad/s. L'energia cinetica totale vale E<sub>c</sub> = (1/2)×3×4<sup>2</sup> + (1/2)×0,6×8<sup>2</sup> = 24 + 19,2 = 43,2 J.</p>
+</div>
+<!-- fine capitolo fisica 15 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis16.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 09</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 09: la spinta di archimede e il galleggiamento -->
+<div id="capitolo-09-spinta-archimede" class="capitolo-storia">
+  <p class="titolo-capitolo">09 - La spinta di Archimede e il galleggiamento - Classe 1</p>
+
+  <p class="titolo-capitolo">Un'osservazione quotidiana</p>
+  <p>Chiunque abbia mai sollevato un oggetto dentro l'acqua, ad esempio in piscina, avrà notato che sembra pesare meno rispetto a quando lo si solleva fuori dall'acqua. Questo fenomeno non è un'illusione: quando un corpo è immerso in un fluido, il fluido stesso esercita su di esso una forza diretta verso l'alto, che si oppone in parte al peso del corpo.</p>
+  <p>Questo fenomeno fu descritto per la prima volta da Archimede, matematico e fisico greco vissuto nel III secolo a.C., e la forza che ne è responsabile prende oggi il nome di spinta di Archimede.</p>
+
+  <p class="titolo-capitolo">L'origine della spinta di Archimede</p>
+  <p>La spinta di Archimede nasce dalla differenza di pressione idrostatica tra la parte inferiore e la parte superiore di un corpo immerso in un fluido: come visto nel capitolo precedente, la pressione di un fluido aumenta con la profondità, quindi la pressione che agisce sulla base inferiore del corpo, più profonda, è maggiore di quella che agisce sulla sua superficie superiore, meno profonda.</p>
+  <p>Questa differenza di pressione, applicata sulle superfici del corpo, produce una forza netta diretta verso l'alto, che è appunto la spinta di Archimede.</p>
+
+  <p class="titolo-capitolo">Il principio di Archimede</p>
+  <p>Il principio di Archimede afferma che un corpo immerso, totalmente o parzialmente, in un fluido riceve una spinta dal basso verso l'alto, uguale al peso del volume di fluido spostato dal corpo. È importante notare che la spinta dipende dal volume di fluido spostato e dalla densità del fluido, e non dal peso o dalla densità del corpo immerso.</p>
+  <p class="formula">S = ρ<sub>fluido</sub> · g · V<sub>immerso</sub></p>
+  <p>dove ρ<sub>fluido</sub> è la densità del fluido, g è l'accelerazione di gravità, e V<sub>immerso</sub> è il volume della parte di corpo effettivamente immersa nel fluido.</p>
+  <p><em>Esempio svolto:</em> un blocco di volume V = 0,02 m<sup>3</sup> è completamente immerso in acqua (ρ = 1000 kg/m<sup>3</sup>). La spinta di Archimede che riceve vale S = 1000 × 9,8 × 0,02 = 196 N.</p>
+
+  <p class="titolo-capitolo">La densità e il peso specifico</p>
+  <p>Per comprendere il comportamento dei corpi immersi in un fluido è utile richiamare il concetto di densità, definita come il rapporto tra la massa di un corpo e il suo volume.</p>
+  <p class="formula">ρ = m / V</p>
+  <p>Nel Sistema Internazionale la densità si misura in kg/m<sup>3</sup>, anche se nella pratica si usa spesso il g/cm<sup>3</sup> (dove 1 g/cm<sup>3</sup> = 1000 kg/m<sup>3</sup>). L'acqua pura, ad esempio, ha una densità di 1000 kg/m<sup>3</sup>, cioè 1 g/cm<sup>3</sup>.</p>
+  <p>Un concetto strettamente collegato è il peso specifico, definito come il rapporto tra il peso di un corpo e il suo volume, che si può anche scrivere come il prodotto tra la densità e l'accelerazione di gravità.</p>
+  <p class="formula">P<sub>s</sub> = P / V = ρ · g</p>
+
+  <p class="titolo-capitolo">Le condizioni di galleggiamento</p>
+  <p>Confrontando il peso di un corpo con la spinta di Archimede che riceve quando è completamente immerso, possiamo prevedere se il corpo galleggia, affonda o rimane in equilibrio in una posizione qualsiasi all'interno del fluido.</p>
+  <p>Se il peso del corpo è maggiore della spinta massima ricevuta da completamente immerso (cioè se la densità del corpo è maggiore della densità del fluido), il corpo affonda: la forza risultante è diretta verso il basso. Se il peso del corpo è uguale alla spinta massima (densità del corpo uguale alla densità del fluido), il corpo rimane in equilibrio in qualsiasi posizione all'interno del fluido, né affonda né sale in superficie.</p>
+  <p>Se invece il peso del corpo è minore della spinta massima (densità del corpo minore della densità del fluido), il corpo sale verso la superficie e, una volta raggiunta la superficie, galleggia, immergendosi solo parzialmente fino a quando la spinta di Archimede, ridotta rispetto al caso di immersione totale, eguaglia esattamente il peso del corpo.</p>
+  <p class="formula">Corpo galleggiante in equilibrio: S = P → ρ<sub>fluido</sub> · g · V<sub>immerso</sub> = ρ<sub>corpo</sub> · g · V<sub>corpo</sub></p>
+  <p><em>Esempio svolto:</em> un pezzo di legno ha densità ρ<sub>legno</sub> = 600 kg/m<sup>3</sup> e volume totale V = 0,05 m<sup>3</sup>, e galleggia in acqua (ρ<sub>acqua</sub> = 1000 kg/m<sup>3</sup>). Vogliamo calcolare il volume immerso. Dall'uguaglianza tra spinta e peso: 1000 × V<sub>immerso</sub> = 600 × 0,05, da cui V<sub>immerso</sub> = 30 / 1000 = 0,03 m<sup>3</sup>, cioè il 60% del volume totale del legno rimane sotto la superficie dell'acqua.</p>
+
+  <p class="titolo-capitolo">Applicazioni del principio di Archimede</p>
+  <p>Il principio di Archimede spiega numerosi fenomeni e trova applicazione in molte tecnologie. Le navi, pur essendo costruite in acciaio (materiale con densità molto maggiore di quella dell'acqua), galleggiano perché la loro forma, cava all'interno, fa sì che la densità media dell'intero scafo, comprensiva degli spazi vuoti pieni d'aria, risulti inferiore a quella dell'acqua.</p>
+  <p>Anche i sottomarini sfruttano questo principio: modificando la quantità d'acqua contenuta in appositi serbatoi (le casse di zavorra), il sottomarino può variare la propria densità media, scegliendo se immergersi, risalire in superficie, oppure rimanere in equilibrio a una profondità costante, con densità media esattamente uguale a quella dell'acqua circostante.</p>
+  <p>Anche i pesci utilizzano un principio simile grazie alla vescica natatoria, un organo pieno di gas che possono gonfiare o sgonfiare per regolare la propria densità media e mantenersi in equilibrio a una determinata profondità senza sforzo muscolare continuo.</p>
+</div>
+<!-- fine capitolo fisica 09 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis10.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>
