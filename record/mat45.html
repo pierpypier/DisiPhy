@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 45</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 45: Calcolo combinatorio -->
+<div class="capitolo-storia" id="capitolo-45-calcolo-combinatorio">
+
+<p class="titolo-capitolo">45 - Calcolo combinatorio - Classe 5</p>
+
+<p class="titolo-capitolo">Il principio fondamentale del calcolo combinatorio</p>
+<p>Il calcolo combinatorio è quel ramo della matematica che si occupa di contare, senza doverli elencare uno per uno, il numero di modi diversi in cui si possono disporre, scegliere o raggruppare gli elementi di un insieme. Alla base di tutto il calcolo combinatorio c'è il principio fondamentale del conteggio (o principio moltiplicativo): se una scelta si compone di più fasi successive e indipendenti, e la prima fase può essere compiuta in n<sub>1</sub> modi diversi, la seconda in n<sub>2</sub> modi diversi, e così via, il numero totale di modi in cui si può effettuare l'intera scelta è dato dal prodotto di tutti questi numeri.</p>
+<p class="formula">numero totale = n<sub>1</sub> × n<sub>2</sub> × ... × n<sub>k</sub></p>
+<p>Un esempio classico: se un ristorante offre 4 primi piatti e 3 secondi piatti, il numero di menù diversi (composti da un primo e un secondo) che si possono comporre è 4 × 3 = 12.</p>
+
+<p class="titolo-capitolo">Il fattoriale</p>
+<p>Prima di introdurre le formule del calcolo combinatorio, è necessario definire un'operazione molto utilizzata: il fattoriale di un numero naturale n, indicato con n!, è il prodotto di tutti i numeri naturali da 1 a n.</p>
+<p class="formula">n! = n × (n-1) × (n-2) × ... × 2 × 1</p>
+<p>Per convenzione, si pone 0! = 1. Calcoliamo, per esempio, 5!.</p>
+<p class="formula">5! = 5 × 4 × 3 × 2 × 1 = 120</p>
+<p>Il fattoriale cresce molto rapidamente all'aumentare di n: già 10! vale oltre tre milioni, il che dà un'idea di quanto velocemente crescano le possibilità di combinazione quando gli elementi in gioco aumentano.</p>
+
+<p class="titolo-capitolo">Le permutazioni</p>
+<p>Una permutazione di n elementi distinti è ciascuno dei possibili modi di ordinare tutti quegli n elementi in una sequenza. Il numero totale di permutazioni di n elementi si indica con P<sub>n</sub>, ed è dato semplicemente da n!.</p>
+<p class="formula">P<sub>n</sub> = n!</p>
+<p>Calcoliamo in quanti modi diversi si possono disporre in fila 4 persone. Applicando la formula con n = 4.</p>
+<p class="formula">P<sub>4</sub> = 4! = 4 × 3 × 2 × 1 = 24</p>
+<p>Quando tra gli n elementi da disporre ve ne sono alcuni indistinguibili tra loro (per esempio lettere ripetute in una parola), si parla di permutazioni con ripetizione, e il numero totale si ottiene dividendo n! per il prodotto dei fattoriali del numero di ripetizioni di ciascun elemento uguale.</p>
+<p class="formula">
+P<sub>n</sub><sup>(r<sub>1</sub>,r<sub>2</sub>,...)</sup> = <span class="frazione"><span>n!</span><span>r<sub>1</sub>! × r<sub>2</sub>! × ...</span></span>
+</p>
+<p>Calcoliamo quanti anagrammi (anche privi di significato) si possono formare con le lettere della parola MAMMA, che ha 5 lettere, di cui la M si ripete 3 volte e la A si ripete 2 volte.</p>
+<p class="formula">P<sub>5</sub><sup>(3,2)</sup> = 5! / (3! × 2!) = 120 / (6 × 2) = 120/12 = 10</p>
+
+<p class="titolo-capitolo">Le disposizioni</p>
+<p>Una disposizione di n elementi distinti presi k alla volta (con k minore o uguale a n) è ciascuno dei possibili modi di scegliere e ordinare k elementi tra gli n disponibili: a differenza delle permutazioni, non si utilizzano tutti gli elementi, ma solo una parte di essi, e l'ordine con cui vengono scelti è comunque rilevante.</p>
+<p class="formula">
+D<sub>n,k</sub> = n × (n-1) × ... × (n-k+1) = <span class="frazione"><span>n!</span><span>(n-k)!</span></span>
+</p>
+<p>Calcoliamo in quanti modi si possono assegnare una medaglia d'oro, una d'argento e una di bronzo a 3 atleti scelti tra 8 partecipanti a una gara. Poiché l'ordine conta (assegnare l'oro ad A e l'argento a B è diverso da assegnare l'argento ad A e l'oro a B), si tratta di una disposizione di 8 elementi presi 3 alla volta.</p>
+<p class="formula">D<sub>8,3</sub> = 8! / (8-3)! = 8! / 5! = 8 × 7 × 6 = 336</p>
+<p>Quando invece è possibile scegliere più volte lo stesso elemento (per esempio, formando una sigla di 3 lettere dove le lettere si possono ripetere), si parla di disposizioni con ripetizione, il cui numero si calcola semplicemente con una potenza.</p>
+<p class="formula">D'<sub>n,k</sub> = n<sup>k</sup></p>
+
+<p class="titolo-capitolo">Le combinazioni</p>
+<p>Una combinazione di n elementi distinti presi k alla volta è ciascuno dei possibili modi di scegliere un sottoinsieme di k elementi tra gli n disponibili, senza tenere conto dell'ordine di scelta: a differenza delle disposizioni, scegliere prima A e poi B è considerato lo stesso risultato di scegliere prima B e poi A.</p>
+<p class="formula">
+C<sub>n,k</sub> = <span class="frazione"><span>D<sub>n,k</sub></span><span>k!</span></span> = <span class="frazione"><span>n!</span><span>k! × (n-k)!</span></span>
+</p>
+<p>Il numero C<sub>n,k</sub> si chiama anche coefficiente binomiale, e si indica spesso con la notazione seguente, che si legge "n su k".</p>
+<p class="formula">
+C<sub>n,k</sub> = <span class="frazione"><span>n</span><span>k</span></span>
+</p>
+<p>Calcoliamo in quanti modi si possono scegliere 3 studenti tra 8 disponibili per formare una commissione (dove, a differenza dell'esempio precedente sulle medaglie, non ha importanza l'ordine con cui i tre vengono selezionati).</p>
+<p class="formula">C<sub>8,3</sub> = 8! / (3! × 5!) = 336 / 6 = 56</p>
+<p>Si può notare che il numero delle combinazioni è sempre più piccolo di quello delle disposizioni corrispondenti (56 contro 336), proprio perché nelle combinazioni tutti gli ordinamenti diversi degli stessi k elementi vengono contati una volta sola.</p>
+
+<p class="titolo-capitolo">Il triangolo di Tartaglia e il binomio di Newton</p>
+<p>I coefficienti binomiali C<sub>n,k</sub> compaiono anche nello sviluppo della potenza n-esima di un binomio (a + b), secondo la formula del binomio di Newton, che generalizza i prodotti notevoli del quadrato e del cubo di un binomio già visti negli anni precedenti.</p>
+<p class="formula">
+(a+b)<sup>n</sup> = <span class="frazione"><span>n</span><span>0</span></span>a<sup>n</sup> + <span class="frazione"><span>n</span><span>1</span></span>a<sup>n-1</sup>b + ... + <span class="frazione"><span>n</span><span>n</span></span>b<sup>n</sup>
+</p>
+<p>Questi stessi coefficienti si possono organizzare in una struttura triangolare, nota come triangolo di Tartaglia (o triangolo di Pascal), in cui ogni riga inizia e finisce con 1, e ogni altro numero si ottiene sommando i due numeri della riga precedente immediatamente sopra di esso.</p>
+<p>Verifichiamo con un esempio: la quarta riga del triangolo di Tartaglia (corrispondente a n = 3) è 1, 3, 3, 1, che sono proprio i coefficienti binomiali dello sviluppo di (a+b)<sup>3</sup> = a<sup>3</sup> + 3a<sup>2</sup>b + 3ab<sup>2</sup> + b<sup>3</sup>, il prodotto notevole già incontrato nel capitolo sul calcolo letterale.</p>
+
+</div>
+<!-- fine capitolo matematica 45 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat46.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

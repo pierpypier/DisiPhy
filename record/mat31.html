@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 31</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 31: Goniometria - le funzioni goniometriche -->
+<div class="capitolo-storia" id="capitolo-31-funzioni-goniometriche">
+
+<p class="titolo-capitolo">31 - Goniometria: le funzioni goniometriche - Classe 3</p>
+
+<p class="titolo-capitolo">La misura degli angoli in radianti</p>
+<p>Finora abbiamo sempre misurato gli angoli in gradi, ma in goniometria e in analisi si preferisce un'altra unità di misura, detta radiante, che risulta più naturale nei calcoli. Un radiante è la misura dell'angolo al centro di una circonferenza che sottende un arco di lunghezza uguale al raggio della circonferenza stessa.</p>
+<p>Poiché l'intera circonferenza ha lunghezza 2πr, e questa lunghezza corrisponde all'angolo giro (360°), la relazione tra gradi e radianti si ottiene dalla seguente proporzione.</p>
+<p class="formula">360° : 2π = α° : α<sub>rad</sub></p>
+<p>Da questa proporzione si ricavano le formule di conversione tra le due unità di misura.</p>
+<p class="formula">α<sub>rad</sub> = α° × (π / 180°) , α° = α<sub>rad</sub> × (180° / π)</p>
+<p>Convertiamo 90° in radianti: applichiamo la formula sostituendo α° = 90°.</p>
+<p class="formula">90 × (π / 180) = π/2 rad</p>
+<p>Gli angoli notevoli più utilizzati, con la loro corrispondenza tra gradi e radianti, sono: 30° = π/6, 45° = π/4, 60° = π/3, 90° = π/2, 180° = π, 360° = 2π.</p>
+
+<p class="titolo-capitolo">La circonferenza goniometrica</p>
+<p>Per definire le funzioni goniometriche si utilizza la circonferenza goniometrica, cioè una circonferenza con centro nell'origine degli assi cartesiani e raggio uguale a 1. Un angolo α si misura a partire dal semiasse positivo delle x, in senso antiorario, e individua su questa circonferenza un punto P, le cui coordinate definiscono proprio le funzioni goniometriche fondamentali.</p>
+<p>Il seno dell'angolo α, indicato con sin α, è l'ordinata del punto P sulla circonferenza goniometrica. Il coseno dell'angolo α, indicato con cos α, è l'ascissa dello stesso punto P.</p>
+<p class="formula">P(cos α, sin α)</p>
+<p>Poiché il punto P appartiene sempre alla circonferenza goniometrica di raggio 1, le sue coordinate soddisfano sempre l'equazione della circonferenza x<sup>2</sup> + y<sup>2</sup> = 1, da cui deriva la più importante identità della goniometria, detta prima relazione fondamentale.</p>
+<p class="formula">sin<sup>2</sup> α + cos<sup>2</sup> α = 1</p>
+<p>Da questa definizione discende anche che sia il seno sia il coseno di un angolo qualsiasi sono sempre numeri compresi tra -1 e 1 (estremi inclusi), dato che rappresentano coordinate di punti su una circonferenza di raggio 1.</p>
+
+<p class="titolo-capitolo">La tangente goniometrica</p>
+<p>La tangente dell'angolo α, indicata con tan α (o tg α), si definisce come il rapporto tra il seno e il coseno dello stesso angolo, con la condizione che il coseno sia diverso da zero.</p>
+<p class="formula">tan α = sin α / cos α , con cos α ≠ 0</p>
+<p>Geometricamente, la tangente si può anche interpretare come l'ordinata del punto in cui il prolungamento del lato mobile dell'angolo incontra la retta tangente alla circonferenza goniometrica nel punto (1, 0), condotta parallelamente all'asse y: da questa costruzione deriva proprio il nome della funzione.</p>
+<p>La tangente non è definita per gli angoli di 90° e 270° (cioè π/2 e 3π/2 radianti), dove il coseno si annulla: in questi punti il grafico della tangente presenta un asintoto verticale.</p>
+
+<p class="titolo-capitolo">I valori delle funzioni goniometriche per gli angoli notevoli</p>
+<p>Alcuni angoli particolari hanno valori di seno, coseno e tangente esprimibili in forma esatta, senza bisogno di approssimazioni decimali: si chiamano angoli notevoli, e conviene memorizzarne i valori data la frequenza con cui compaiono negli esercizi.</p>
+<table style="border-collapse:collapse; margin:8px 0; width:100%; text-align:center;">
+<tr><td style="border:1px solid #16233a; padding:5px 8px;">angolo</td><td style="border:1px solid #16233a; padding:5px 8px;">30° (π/6)</td><td style="border:1px solid #16233a; padding:5px 8px;">45° (π/4)</td><td style="border:1px solid #16233a; padding:5px 8px;">60° (π/3)</td></tr>
+<tr><td style="border:1px solid #16233a; padding:5px 8px;">seno</td><td style="border:1px solid #16233a; padding:5px 8px;">1/2</td><td style="border:1px solid #16233a; padding:5px 8px;">√2/2</td><td style="border:1px solid #16233a; padding:5px 8px;">√3/2</td></tr>
+<tr><td style="border:1px solid #16233a; padding:5px 8px;">coseno</td><td style="border:1px solid #16233a; padding:5px 8px;">√3/2</td><td style="border:1px solid #16233a; padding:5px 8px;">√2/2</td><td style="border:1px solid #16233a; padding:5px 8px;">1/2</td></tr>
+<tr><td style="border:1px solid #16233a; padding:5px 8px;">tangente</td><td style="border:1px solid #16233a; padding:5px 8px;">√3/3</td><td style="border:1px solid #16233a; padding:5px 8px;">1</td><td style="border:1px solid #16233a; padding:5px 8px;">√3</td></tr>
+</table>
+<p>Si può notare una simmetria interessante: il seno di 30° coincide con il coseno di 60°, e viceversa. Questo non è un caso, ma deriva da una proprietà generale che vedremo tra poco, relativa agli angoli complementari.</p>
+
+<p class="titolo-capitolo">Le funzioni goniometriche negli altri quadranti e gli angoli associati</p>
+<p>Al di fuori del primo quadrante, il segno di seno e coseno cambia secondo il quadrante in cui si trova il punto P sulla circonferenza goniometrica: nel secondo quadrante il seno è positivo e il coseno negativo; nel terzo quadrante entrambi sono negativi; nel quarto quadrante il seno è negativo e il coseno positivo.</p>
+<p>Esistono relazioni, dette angoli associati, che permettono di calcolare le funzioni goniometriche di angoli particolari a partire da quelle di angoli del primo quadrante, sfruttando le simmetrie della circonferenza goniometrica.</p>
+<p class="formula">sin(180° - α) = sin α , cos(180° - α) = -cos α</p>
+<p class="formula">sin(-α) = -sin α , cos(-α) = cos α</p>
+<p class="formula">sin(90° - α) = cos α , cos(90° - α) = sin α</p>
+<p>Queste ultime due relazioni, relative agli angoli complementari, spiegano proprio la simmetria notata sopra tra seno di 30° e coseno di 60° (che sono, appunto, angoli complementari, dato che la loro somma è 90°).</p>
+<p>Calcoliamo sin(150°) sfruttando la relazione sugli angoli supplementari, scrivendo 150° = 180° - 30°.</p>
+<p class="formula">sin(150°) = sin(180° - 30°) = sin(30°) = 1/2</p>
+
+<p class="titolo-capitolo">I grafici delle funzioni goniometriche</p>
+<p>Il grafico della funzione y = sin x è una curva ondulatoria, detta sinusoide, che oscilla continuamente tra -1 e 1, ripetendo esattamente lo stesso andamento a intervalli di 2π: si dice per questo che la funzione seno è periodica, con periodo 2π. Anche la funzione y = cos x è periodica con periodo 2π, con un grafico identico a quello del seno ma traslato orizzontalmente di π/2.</p>
+<p class="formula">sin(x + 2π) = sin x , cos(x + 2π) = cos x</p>
+<p>Il grafico della funzione y = tan x è invece composto da infiniti rami separati, ciascuno compreso tra due asintoti verticali consecutivi, e si ripete con periodo π, minore di quello del seno e del coseno.</p>
+<p class="formula">tan(x + π) = tan x</p>
+
+</div>
+<!-- fine capitolo matematica 31 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat32.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

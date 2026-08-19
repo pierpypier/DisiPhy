@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 39</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 39: Le derivate -->
+<div class="capitolo-storia" id="capitolo-39-derivate">
+
+<p class="titolo-capitolo">39 - Le derivate - Classe 5</p>
+
+<p class="titolo-capitolo">Il problema della tangente e il rapporto incrementale</p>
+<p>Il concetto di derivata nasce storicamente dal problema geometrico di determinare la retta tangente al grafico di una funzione in un suo punto. Per affrontare questo problema, si considera dapprima una retta secante, che passa per il punto considerato P(x<sub>0</sub>, f(x<sub>0</sub>)) e per un altro punto Q della funzione, vicino a P, di coordinate (x<sub>0</sub>+h, f(x<sub>0</sub>+h)), dove h rappresenta un piccolo incremento della x.</p>
+<p>Il coefficiente angolare di questa retta secante si chiama rapporto incrementale della funzione, ed è definito come il rapporto tra l'incremento della funzione e l'incremento della variabile.</p>
+<p class="formula">
+rapporto incrementale = <span class="frazione"><span>f(x<sub>0</sub>+h) - f(x<sub>0</sub>)</span><span>h</span></span>
+</p>
+<p>L'idea fondamentale è che, facendo avvicinare sempre di più il punto Q al punto P, cioè facendo tendere h a zero, la retta secante si avvicina sempre di più alla retta tangente alla funzione nel punto P: il coefficiente angolare della tangente è quindi il limite del rapporto incrementale per h che tende a zero.</p>
+
+<p class="titolo-capitolo">La definizione di derivata</p>
+<p>La derivata di una funzione f(x) in un punto x<sub>0</sub>, indicata con f'(x<sub>0</sub>), è per definizione il limite del rapporto incrementale per h che tende a zero, quando questo limite esiste ed è finito. In questo caso si dice che la funzione è derivabile in x<sub>0</sub>.</p>
+<p class="formula">
+f'(x<sub>0</sub>) = lim<sub>h→0</sub> <span class="frazione"><span>f(x<sub>0</sub>+h) - f(x<sub>0</sub>)</span><span>h</span></span>
+</p>
+<p>Il significato geometrico della derivata è quindi immediato: f'(x<sub>0</sub>) rappresenta esattamente il coefficiente angolare della retta tangente al grafico della funzione nel punto di ascissa x<sub>0</sub>. Conoscendo la derivata, si può quindi scrivere direttamente l'equazione della retta tangente, riutilizzando la formula della retta per un punto già vista nel capitolo sul piano cartesiano.</p>
+<p class="formula">y - f(x<sub>0</sub>) = f'(x<sub>0</sub>) × (x - x<sub>0</sub>)</p>
+<p>Calcoliamo, applicando la definizione, la derivata della funzione f(x) = x<sup>2</sup> in un punto generico x<sub>0</sub>. Calcoliamo prima il rapporto incrementale.</p>
+<p class="formula">
+<span class="frazione"><span>(x<sub>0</sub>+h)<sup>2</sup> - x<sub>0</sub><sup>2</sup></span><span>h</span></span> = <span class="frazione"><span>x<sub>0</sub><sup>2</sup> + 2x<sub>0</sub>h + h<sup>2</sup> - x<sub>0</sub><sup>2</sup></span><span>h</span></span> = <span class="frazione"><span>2x<sub>0</sub>h + h<sup>2</sup></span><span>h</span></span> = 2x<sub>0</sub> + h
+</p>
+<p>Calcoliamo ora il limite di questa espressione per h che tende a 0.</p>
+<p class="formula">f'(x<sub>0</sub>) = lim<sub>h→0</sub> (2x<sub>0</sub> + h) = 2x<sub>0</sub></p>
+<p>Questo risultato, valido per ogni punto x<sub>0</sub>, ci permette di scrivere la funzione derivata di f(x) = x<sup>2</sup>, cioè f'(x) = 2x, valida per qualsiasi valore della x.</p>
+
+<p class="titolo-capitolo">Le derivate fondamentali</p>
+<p>Con lo stesso procedimento visto sopra, applicato alle principali funzioni elementari, si ricavano le formule delle derivate fondamentali, che è indispensabile conoscere a memoria per poter affrontare con rapidità il calcolo differenziale.</p>
+<p class="formula">D(k) = 0 (la derivata di una costante è sempre zero)</p>
+<p class="formula">D(x<sup>n</sup>) = n × x<sup>(n-1)</sup></p>
+<p class="formula">D(sin x) = cos x , D(cos x) = -sin x</p>
+<p class="formula">D(e<sup>x</sup>) = e<sup>x</sup> , D(a<sup>x</sup>) = a<sup>x</sup> × ln a</p>
+<p class="formula">D(ln x) = 1/x , D(log<sub>a</sub> x) = 1/(x × ln a)</p>
+<p>Si può notare come la funzione esponenziale con base e sia l'unica funzione, tra tutte quelle elementari, che coincide esattamente con la propria derivata: questa proprietà, apparentemente sorprendente, è in realtà proprio una delle ragioni per cui il numero e riveste un ruolo così centrale in analisi matematica.</p>
+
+<p class="titolo-capitolo">Le regole di derivazione</p>
+<p>Per calcolare la derivata di funzioni più complesse, ottenute combinando funzioni elementari tramite somme, prodotti, quozienti o composizioni, si utilizzano alcune regole di derivazione, che si dimostrano a partire dalla definizione generale vista sopra.</p>
+<p>La derivata di una somma (o differenza) di funzioni è uguale alla somma (o differenza) delle derivate delle singole funzioni.</p>
+<p class="formula">D[f(x) + g(x)] = f'(x) + g'(x)</p>
+<p>La derivata del prodotto di due funzioni si calcola con la seguente regola, detta regola del prodotto (o regola di Leibniz).</p>
+<p class="formula">D[f(x) × g(x)] = f'(x) × g(x) + f(x) × g'(x)</p>
+<p>La derivata del quoziente di due funzioni si calcola con la seguente regola, detta regola del quoziente.</p>
+<p class="formula">
+D[f(x)/g(x)] = <span class="frazione"><span>f'(x)×g(x) - f(x)×g'(x)</span><span>[g(x)]<sup>2</sup></span></span> , con g(x) ≠ 0
+</p>
+<p>Calcoliamo la derivata della funzione f(x) = x<sup>2</sup> × sin x, applicando la regola del prodotto.</p>
+<p class="formula">f'(x) = 2x × sin x + x<sup>2</sup> × cos x</p>
+
+<p class="titolo-capitolo">La derivata della funzione composta</p>
+<p>Per derivare una funzione composta, cioè una funzione ottenuta componendo due (o più) funzioni secondo quanto già visto nel capitolo dedicato alle funzioni composte, si utilizza la regola della catena, che afferma che la derivata di g(f(x)) è uguale al prodotto tra la derivata di g calcolata in f(x), e la derivata di f(x).</p>
+<p class="formula">D[g(f(x))] = g'(f(x)) × f'(x)</p>
+<p>Calcoliamo la derivata di h(x) = sin(x<sup>2</sup>), pensando h come composizione di g(t) = sin(t), esterna, e f(x) = x<sup>2</sup>, interna. Applichiamo la regola della catena.</p>
+<p class="formula">h'(x) = cos(x<sup>2</sup>) × 2x = 2x × cos(x<sup>2</sup>)</p>
+<p>La regola della catena si può applicare anche a catene di composizione più lunghe, moltiplicando semplicemente tra loro tutte le derivate delle funzioni via via più interne, procedendo dall'esterno verso l'interno della composizione.</p>
+
+<p class="titolo-capitolo">Punti di non derivabilità</p>
+<p>Non tutte le funzioni continue sono anche derivabili in ogni punto del loro dominio: esistono infatti alcuni punti particolari in cui, pur essendo la funzione continua, il rapporto incrementale non ammette limite, oppure limite destro e limite sinistro del rapporto incrementale esistono ma sono diversi tra loro.</p>
+<p>Un punto angoloso è un punto in cui il limite destro e il limite sinistro del rapporto incrementale esistono entrambi ma sono diversi, dando origine a due "semirette tangenti" diverse, che si incontrano formando un angolo. Un tipico esempio è la funzione valore assoluto f(x) = |x|, che presenta un punto angoloso proprio nell'origine, dove la derivata da destra vale 1 e la derivata da sinistra vale -1.</p>
+<p>Una cuspide è un punto in cui i limiti del rapporto incrementale, da destra e da sinistra, sono entrambi infiniti ma di segno opposto. Un flesso a tangente verticale è invece un punto in cui i due limiti del rapporto incrementale sono entrambi infiniti, ma dello stesso segno: in questo caso la funzione è continua e il grafico ammette una tangente verticale in quel punto, anche se la derivata, nel senso della definizione ordinaria, non esiste.</p>
+
+</div>
+<!-- fine capitolo matematica 39 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat40.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

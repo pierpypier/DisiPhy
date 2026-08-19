@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 33</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 33: Trigonometria - risoluzione dei triangoli -->
+<div class="capitolo-storia" id="capitolo-33-risoluzione-triangoli">
+
+<p class="titolo-capitolo">33 - Trigonometria: risoluzione dei triangoli - Classe 4</p>
+
+<p class="titolo-capitolo">I teoremi sui triangoli rettangoli</p>
+<p>Risolvere un triangolo significa determinare la misura di tutti i suoi lati e di tutti i suoi angoli, a partire da un numero sufficiente di dati iniziali. Iniziamo dal caso più semplice, quello del triangolo rettangolo, per il quale valgono alcuni teoremi che collegano cateti, ipotenusa e angoli, generalizzando in chiave trigonometrica quanto già visto con i teoremi di Euclide e Pitagora.</p>
+<p>Il primo teorema sui triangoli rettangoli afferma che ogni cateto è uguale al prodotto dell'ipotenusa per il seno dell'angolo opposto al cateto, oppure, equivalentemente, per il coseno dell'angolo adiacente al cateto.</p>
+<p class="formula">cateto = ipotenusa × sin(angolo opposto) = ipotenusa × cos(angolo adiacente)</p>
+<p>Il secondo teorema sui triangoli rettangoli afferma che ogni cateto è uguale al prodotto dell'altro cateto per la tangente dell'angolo opposto al primo cateto, oppure per la cotangente dell'angolo adiacente.</p>
+<p class="formula">cateto<sub>1</sub> = cateto<sub>2</sub> × tan(angolo opposto al cateto<sub>1</sub>)</p>
+<p>Applichiamo il primo teorema: in un triangolo rettangolo, l'ipotenusa misura 10 cm e un angolo acuto misura 30°. Calcoliamo il cateto opposto a questo angolo.</p>
+<p class="formula">cateto = 10 × sin(30°) = 10 × 0,5 = 5 cm</p>
+
+<p class="titolo-capitolo">Area di un triangolo qualsiasi con la trigonometria</p>
+<p>Grazie alla trigonometria è possibile calcolare l'area di un triangolo qualsiasi (non necessariamente rettangolo) conoscendo due lati e l'angolo compreso tra essi, senza bisogno di conoscere direttamente l'altezza.</p>
+<p class="formula">Area = (a × b × sin γ) / 2</p>
+<p>dove a e b sono due lati del triangolo e γ è l'angolo tra essi compreso. Questa formula si dimostra osservando che il prodotto b × sin γ rappresenta esattamente l'altezza del triangolo relativa al lato a, ricondducendo così alla formula già nota (base × altezza) / 2.</p>
+<p>Calcoliamo l'area di un triangolo con due lati di 8 cm e 6 cm e angolo compreso di 60°.</p>
+<p class="formula">Area = (8 × 6 × sin 60°) / 2 = (48 × (√3/2)) / 2 = (24√3) / 2 = 12√3 ≈ 20,8 cm<sup>2</sup></p>
+
+<p class="titolo-capitolo">Il teorema dei seni</p>
+<p>Il teorema dei seni afferma che, in un triangolo qualsiasi, il rapporto tra ciascun lato e il seno dell'angolo opposto è sempre costante, e questa costante è uguale al diametro della circonferenza circoscritta al triangolo.</p>
+<p class="formula">
+<span class="frazione"><span>a</span><span>sin α</span></span> = <span class="frazione"><span>b</span><span>sin β</span></span> = <span class="frazione"><span>c</span><span>sin γ</span></span> = 2R
+</p>
+<p>dove R è il raggio della circonferenza circoscritta al triangolo. Questo teorema è particolarmente utile quando si conoscono due angoli e un lato di un triangolo (o due lati e un angolo non compreso tra essi), permettendo di calcolare rapidamente gli elementi mancanti.</p>
+<p>Risolviamo un triangolo in cui il lato a misura 10 cm, l'angolo α misura 40° e l'angolo β misura 60°. Calcoliamo il lato b usando il teorema dei seni.</p>
+<p class="formula">a / sin α = b / sin β → b = a × sin β / sin α = 10 × sin(60°) / sin(40°) ≈ 10 × 0,866 / 0,643 ≈ 13,5 cm</p>
+
+<p class="titolo-capitolo">Il teorema del coseno (o di Carnot)</p>
+<p>Il teorema del coseno, detto anche teorema di Carnot, generalizza il teorema di Pitagora a un triangolo qualsiasi, non necessariamente rettangolo, introducendo un termine correttivo legato al coseno dell'angolo compreso tra i due lati considerati.</p>
+<p class="formula">a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2bc × cos α</p>
+<p>Si può notare che, se l'angolo α fosse di 90°, il termine correttivo si annullerebbe (dato che cos 90° = 0), e la formula si ridurrebbe esattamente al teorema di Pitagora: questo confirma che il teorema di Pitagora è proprio un caso particolare del teorema del coseno.</p>
+<p>Questo teorema è particolarmente utile quando si conoscono due lati e l'angolo compreso tra essi (per calcolare il terzo lato), oppure tutti e tre i lati (per calcolare uno degli angoli, invertendo la formula).</p>
+<p>Calcoliamo il lato a di un triangolo con b = 7 cm, c = 5 cm e angolo α = 60° tra essi compreso... 
+
+Attenzione: rileggendo la formula, l'angolo α nel teorema del coseno deve essere l'angolo opposto al lato a, cioè l'angolo compreso tra gli altri due lati b e c. Procediamo con il calcolo.</p>
+<p class="formula">a<sup>2</sup> = 7<sup>2</sup> + 5<sup>2</sup> - 2×7×5×cos(60°) = 49 + 25 - 70×0,5 = 74 - 35 = 39</p>
+<p class="formula">a = √39 ≈ 6,24 cm</p>
+
+<p class="titolo-capitolo">Risoluzione di triangoli qualsiasi</p>
+<p>In base ai dati iniziali disponibili, un triangolo qualsiasi si risolve applicando in sequenza i teoremi visti sopra. Se sono noti due angoli e un lato, si trova il terzo angolo per differenza da 180°, e poi si applica il teorema dei seni per trovare gli altri due lati. Se sono noti due lati e l'angolo compreso, si applica il teorema del coseno per trovare il terzo lato, e poi il teorema dei seni (o ancora il teorema del coseno) per trovare gli angoli rimanenti. Se sono noti tutti e tre i lati, si applica il teorema del coseno, invertendo la formula, per calcolare ciascun angolo.</p>
+<p class="formula">cos α = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>) / (2bc)</p>
+<p>Questi strumenti trigonometrici trovano ampia applicazione pratica in problemi di topografia, navigazione e astronomia, ogniqualvolta sia necessario calcolare distanze o angoli non misurabili direttamente, ma dedotti a partire da altre misure note, secondo il principio della triangolazione.</p>
+
+</div>
+<!-- fine capitolo matematica 33 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat34.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

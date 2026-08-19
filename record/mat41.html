@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 41</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 41: Lo studio di funzione -->
+<div class="capitolo-storia" id="capitolo-41-studio-funzione">
+
+<p class="titolo-capitolo">41 - Lo studio di funzione - Classe 5</p>
+
+<p class="titolo-capitolo">Perché studiare una funzione: obiettivo e struttura del procedimento</p>
+<p>Lo studio di funzione è il procedimento che raccoglie e utilizza sistematicamente tutti gli strumenti visti nei capitoli precedenti (dominio, limiti, continuità, derivate) allo scopo di ricostruire, passo dopo passo, un grafico qualitativo accurato della funzione, senza doverla tracciare punto per punto. Il procedimento si articola in una sequenza di passi ben definita, che conviene sempre seguire nello stesso ordine.</p>
+
+<p class="titolo-capitolo">Dominio, simmetrie e segno</p>
+<p>Il primo passo consiste sempre nel determinare il dominio della funzione, applicando le condizioni di esistenza già viste nei capitoli precedenti (denominatori diversi da zero, radicandi non negativi per indici pari, argomenti positivi per i logaritmi).</p>
+<p>Il secondo passo consiste nel verificare se la funzione è pari o dispari, calcolando f(-x) e confrontandolo con f(x), secondo quanto visto nel capitolo introduttivo sulle funzioni: questo permette, se la simmetria esiste, di studiare la funzione solo per x positivi e dedurre automaticamente il comportamento per x negativi.</p>
+<p>Il terzo passo consiste nello studio del segno della funzione, cioè nel risolvere la disequazione f(x) &gt; 0, per determinare in quali intervalli il grafico si trova sopra l'asse x e in quali si trova sotto. Contestualmente si trovano anche le intersezioni con gli assi cartesiani, ponendo y = 0 per l'asse x e x = 0 per l'asse y (quando quest'ultimo appartiene al dominio).</p>
+
+<p class="titolo-capitolo">Limiti agli estremi del dominio e asintoti</p>
+<p>Il quarto passo consiste nel calcolare i limiti della funzione agli estremi del dominio: ai confini di eventuali intervalli, ai punti esclusi dal dominio, e per x che tende a +∞ e a -∞ (quando questi fanno parte del dominio). Questi limiti permettono di individuare gli eventuali asintoti della funzione, già introdotti nel capitolo sui limiti.</p>
+<p>Un asintoto verticale di equazione x = x<sub>0</sub> è presente quando il limite della funzione, per x che tende a x<sub>0</sub> da destra o da sinistra, è infinito. Un asintoto orizzontale di equazione y = l è presente quando il limite della funzione, per x che tende a +∞ o a -∞, è un valore finito l.</p>
+<p>Quando non esiste un asintoto orizzontale, può esistere invece un asintoto obliquo, di equazione y = mx + q, dove il coefficiente angolare m e l'intercetta q si calcolano con i seguenti limiti.</p>
+<p class="formula">
+m = lim<sub>x→∞</sub> <span class="frazione"><span>f(x)</span><span>x</span></span> , q = lim<sub>x→∞</sub> [f(x) - mx]
+</p>
+<p>L'asintoto obliquo esiste solo se entrambi questi limiti esistono, sono finiti, e m è diverso da zero (altrimenti si tratterebbe in realtà di un asintoto orizzontale). Un asintoto obliquo può presentarsi tipicamente nelle funzioni razionali fratte in cui il grado del numeratore supera di esattamente 1 il grado del denominatore.</p>
+
+<p class="titolo-capitolo">Derivata prima: monotonia e punti stazionari</p>
+<p>Il quinto passo consiste nel calcolare la derivata prima della funzione e studiarne il segno, applicando quanto visto nel capitolo sui teoremi del calcolo differenziale: dove f'(x) è positiva la funzione è crescente, dove è negativa la funzione è decrescente.</p>
+<p>I punti in cui la derivata prima si annulla, detti punti stazionari, sono candidati a essere punti di massimo o di minimo relativo. Per stabilire la natura di questi punti, si osserva il cambiamento di segno della derivata prima nell'intorno del punto: se la derivata passa da positiva a negativa, il punto è di massimo relativo; se passa da negativa a positiva, il punto è di minimo relativo; se il segno non cambia, il punto è un flesso a tangente orizzontale.</p>
+<p class="formula">
+f'(x): + → - ⟹ massimo relativo ; f'(x): - → + ⟹ minimo relativo
+</p>
+<p>Studiamo la derivata prima di f(x) = x<sup>3</sup> - 3x<sup>2</sup>, per trovare i punti di massimo e minimo.</p>
+<p class="formula">f'(x) = 3x<sup>2</sup> - 6x = 3x(x - 2)</p>
+<p>La derivata si annulla per x = 0 e x = 2. Studiando il segno del prodotto, f'(x) è positiva per x &lt; 0 ∨ x &gt; 2, negativa per 0 &lt; x &lt; 2: quindi x = 0 è un punto di massimo relativo, x = 2 è un punto di minimo relativo.</p>
+
+<p class="titolo-capitolo">Derivata seconda: concavità e flessi</p>
+<p>Il sesto passo, spesso utile per affinare ulteriormente il grafico, consiste nel calcolare la derivata seconda, cioè la derivata della derivata prima, e studiarne il segno. Dove la derivata seconda è positiva, la funzione ha concavità rivolta verso l'alto; dove è negativa, la concavità è rivolta verso il basso.</p>
+<p class="formula">f''(x) &gt; 0 ⟹ concavità verso l'alto ; f''(x) &lt; 0 ⟹ concavità verso il basso</p>
+<p>Un punto in cui la derivata seconda si annulla, e in cui la concavità cambia effettivamente verso (da positiva a negativa o viceversa), si chiama punto di flesso: in questo punto la funzione passa da una concavità all'altra, attraversando la propria retta tangente.</p>
+<p>Calcoliamo la derivata seconda di f(x) = x<sup>3</sup> - 3x<sup>2</sup>, riprendendo dalla derivata prima f'(x) = 3x<sup>2</sup> - 6x.</p>
+<p class="formula">f''(x) = 6x - 6</p>
+<p>La derivata seconda si annulla per x = 1, ed effettivamente cambia segno (negativa per x &lt; 1, positiva per x &gt; 1): x = 1 è quindi un punto di flesso, e si può notare che è proprio il punto intermedio tra il massimo (x=0) e il minimo (x=2) trovati in precedenza.</p>
+
+<p class="titolo-capitolo">Composizione del grafico finale</p>
+<p>L'ultimo passo consiste nel riunire tutte le informazioni raccolte nei passi precedenti (dominio, simmetrie, segno, intersezioni con gli assi, asintoti, intervalli di monotonia, punti di massimo e minimo, concavità e flessi) per tracciare un grafico qualitativo complessivo della funzione, coerente con tutti i risultati ottenuti.</p>
+<p>È buona norma organizzare i risultati trovati su una linea del tempo (l'asse x), segnando in corrispondenza di ciascun valore significativo (punti stazionari, flessi, asintoti verticali, intersezioni) l'informazione corrispondente, in modo da poter unire i punti con un tratto continuo che rispetti crescenza, decrescenza e concavità determinate algebricamente, ottenendo così una rappresentazione fedele dell'andamento della funzione su tutto il suo dominio.</p>
+
+</div>
+<!-- fine capitolo matematica 41 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat42.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 42</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 42: Gli integrali indefiniti -->
+<div class="capitolo-storia" id="capitolo-42-integrali-indefiniti">
+
+<p class="titolo-capitolo">42 - Gli integrali indefiniti - Classe 5</p>
+
+<p class="titolo-capitolo">Il problema inverso della derivata: la primitiva</p>
+<p>Dopo aver imparato, nei capitoli precedenti, a calcolare la derivata di una funzione, affrontiamo ora il problema inverso: data una funzione f(x), trovare una funzione F(x) la cui derivata sia proprio f(x). Una funzione F(x) con questa proprietà si chiama primitiva (o antiderivata) di f(x).</p>
+<p class="formula">F'(x) = f(x)</p>
+<p>Se una funzione ammette una primitiva, in realtà ne ammette infinite: infatti, aggiungendo a una primitiva una qualsiasi costante, si ottiene ancora una primitiva della stessa funzione, dato che la derivata di una costante è sempre zero. Un teorema importante afferma che, viceversa, due primitive della stessa funzione differiscono sempre e soltanto per una costante: l'insieme di tutte le primitive di f(x) si può quindi scrivere come F(x) + c, dove F(x) è una primitiva qualsiasi e c è una costante arbitraria.</p>
+
+<p class="titolo-capitolo">L'integrale indefinito</p>
+<p>L'insieme di tutte le primitive di una funzione f(x) si chiama integrale indefinito di f(x), e si indica con il simbolo seguente, dove il simbolo ∫ si chiama segno di integrale, f(x) si chiama funzione integranda, e dx indica la variabile rispetto a cui si sta integrando.</p>
+<p class="formula">∫ f(x) dx = F(x) + c</p>
+<p>Integrare una funzione significa quindi trovare, a meno della costante arbitraria c, una qualsiasi delle sue primitive. Poiché l'integrazione è l'operazione inversa della derivazione, ogni formula di derivazione già nota può essere letta "al contrario" per ottenere una corrispondente formula di integrazione.</p>
+
+<p class="titolo-capitolo">Gli integrali indefiniti fondamentali</p>
+<p>Dalle formule delle derivate fondamentali, viste nel capitolo sulle derivate, si ricavano direttamente gli integrali indefiniti delle funzioni elementari più importanti, che è indispensabile conoscere a memoria.</p>
+<p class="formula">
+∫ x<sup>n</sup> dx = <span class="frazione"><span>x<sup>n+1</sup></span><span>n+1</span></span> + c , con n ≠ -1
+</p>
+<p class="formula">∫ (1/x) dx = ln|x| + c</p>
+<p class="formula">∫ e<sup>x</sup> dx = e<sup>x</sup> + c</p>
+<p class="formula">∫ sin x dx = -cos x + c , ∫ cos x dx = sin x + c</p>
+<p>Calcoliamo l'integrale indefinito di f(x) = x<sup>3</sup>, applicando la prima formula fondamentale con n = 3.</p>
+<p class="formula">∫ x<sup>3</sup> dx = x<sup>4</sup>/4 + c</p>
+<p>Verifichiamo il risultato derivando: D(x<sup>4</sup>/4 + c) = 4x<sup>3</sup>/4 + 0 = x<sup>3</sup>, che coincide esattamente con la funzione integranda di partenza, confermando la correttezza del calcolo.</p>
+
+<p class="titolo-capitolo">Le proprietà di linearità dell'integrale indefinito</p>
+<p>L'integrale indefinito, come la derivata, gode della proprietà di linearità: l'integrale di una somma (o differenza) di funzioni è uguale alla somma (o differenza) degli integrali delle singole funzioni, e una costante moltiplicativa può essere portata fuori dal segno di integrale.</p>
+<p class="formula">∫ [f(x) + g(x)] dx = ∫ f(x) dx + ∫ g(x) dx</p>
+<p class="formula">∫ k × f(x) dx = k × ∫ f(x) dx</p>
+<p>Calcoliamo l'integrale indefinito di f(x) = 3x<sup>2</sup> + 4x - 5, applicando la linearità termine per termine.</p>
+<p class="formula">∫ (3x<sup>2</sup> + 4x - 5) dx = 3×(x<sup>3</sup>/3) + 4×(x<sup>2</sup>/2) - 5x + c = x<sup>3</sup> + 2x<sup>2</sup> - 5x + c</p>
+
+<p class="titolo-capitolo">L'integrazione per sostituzione</p>
+<p>Quando la funzione integranda non rientra direttamente tra gli integrali fondamentali, ma si presenta come una funzione composta, si può spesso applicare il metodo di integrazione per sostituzione, che consiste nel cambiare variabile per ricondurre l'integrale a una forma più semplice.</p>
+<p>Un caso particolarmente frequente, che si riconosce facilmente, è quello in cui la funzione integranda è il prodotto di una funzione composta g(f(x)) per la derivata della funzione interna f'(x): in questo caso, ponendo t = f(x), l'integrale si trasforma in un integrale elementare nella nuova variabile t.</p>
+<p class="formula">∫ f'(x) × g(f(x)) dx = ∫ g(t) dt , con t = f(x)</p>
+<p>Calcoliamo l'integrale ∫ 2x × cos(x<sup>2</sup>) dx. Riconosciamo che 2x è proprio la derivata di x<sup>2</sup>: poniamo quindi t = x<sup>2</sup>, da cui dt = 2x dx.</p>
+<p class="formula">∫ 2x × cos(x<sup>2</sup>) dx = ∫ cos(t) dt = sin(t) + c = sin(x<sup>2</sup>) + c</p>
+
+<p class="titolo-capitolo">L'integrazione per parti</p>
+<p>Quando la funzione integranda è il prodotto di due funzioni di natura diversa (per esempio un polinomio per una funzione esponenziale, oppure un polinomio per una funzione goniometrica), si utilizza spesso il metodo di integrazione per parti, che deriva dalla regola di derivazione del prodotto letta al contrario.</p>
+<p class="formula">∫ f(x) × g'(x) dx = f(x) × g(x) - ∫ f'(x) × g(x) dx</p>
+<p>In questa formula, f(x) si chiama fattore finito (quello che si deriva) e g'(x) si chiama fattore differenziale (quello che si integra): la scelta di quale funzione considerare come fattore finito e quale come fattore differenziale è cruciale per la buona riuscita del metodo, e richiede un po' di pratica.</p>
+<p>Calcoliamo l'integrale ∫ x × e<sup>x</sup> dx. Scegliamo f(x) = x come fattore finito (la sua derivata è 1, più semplice) e g'(x) = e<sup>x</sup> come fattore differenziale (la cui primitiva è ancora e<sup>x</sup>).</p>
+<p class="formula">∫ x × e<sup>x</sup> dx = x × e<sup>x</sup> - ∫ 1 × e<sup>x</sup> dx = x×e<sup>x</sup> - e<sup>x</sup> + c</p>
+<p>Il risultato si può anche scrivere raccogliendo il fattore comune e<sup>x</sup>.</p>
+<p class="formula">∫ x × e<sup>x</sup> dx = e<sup>x</sup>(x - 1) + c</p>
+
+<p class="titolo-capitolo">Integrazione delle funzioni razionali fratte</p>
+<p>Per integrare una funzione razionale fratta, cioè il quoziente di due polinomi, il metodo dipende dal confronto tra i gradi di numeratore e denominatore, e dalla scomposizione in fattori del denominatore. Se il grado del numeratore è maggiore o uguale a quello del denominatore, si esegue prima la divisione tra polinomi, ottenendo un quoziente (polinomiale, facilmente integrabile) più un resto su denominatore, di grado inferiore.</p>
+<p>Se il denominatore è di primo grado, oppure si scompone in fattori di primo grado distinti, si può spesso ricondurre l'integrale a una somma di termini del tipo 1/(x-a), il cui integrale è un logaritmo, secondo la formula fondamentale già vista.</p>
+<p>Calcoliamo l'integrale ∫ (2x+3)/(x<sup>2</sup>+3x+1) dx. Notiamo che il numeratore 2x+3 è proprio la derivata del denominatore x<sup>2</sup>+3x+1: si tratta quindi di un caso riconducibile direttamente alla formula ∫ f'(x)/f(x) dx = ln|f(x)| + c.</p>
+<p class="formula">∫ (2x+3)/(x<sup>2</sup>+3x+1) dx = ln|x<sup>2</sup>+3x+1| + c</p>
+
+</div>
+<!-- fine capitolo matematica 42 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat43.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

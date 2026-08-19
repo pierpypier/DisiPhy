@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 32</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 32: Equazioni e disequazioni goniometriche -->
+<div class="capitolo-storia" id="capitolo-32-equazioni-disequazioni-goniometriche">
+
+<p class="titolo-capitolo">32 - Equazioni e disequazioni goniometriche - Classe 4</p>
+
+<p class="titolo-capitolo">Le equazioni goniometriche elementari</p>
+<p>Un'equazione goniometrica è un'equazione in cui l'incognita compare all'interno di una funzione goniometrica. Le equazioni goniometriche elementari sono quelle riconducibili a una delle tre forme fondamentali: sin x = m, cos x = m oppure tan x = m.</p>
+<p>Per l'equazione sin x = m, occorre distinguere due casi: se m è compreso tra -1 e 1 (estremi inclusi), esistono infinite soluzioni, perché la funzione seno è periodica; se invece |m| è maggiore di 1, l'equazione è impossibile, perché il seno non può mai superare, in valore assoluto, il valore 1.</p>
+<p>Quando esiste almeno una soluzione α, tutte le altre soluzioni si ottengono considerando anche l'angolo supplementare, e aggiungendo poi un multiplo intero dell'angolo giro, per tenere conto della periodicità.</p>
+<p class="formula">sin x = m → x = α + 2kπ ∨ x = (π - α) + 2kπ , con k ∈ ℤ</p>
+<p>Risolviamo l'equazione sin x = 1/2. Sappiamo che sin(π/6) = 1/2, quindi α = π/6.</p>
+<p class="formula">x = π/6 + 2kπ ∨ x = π - π/6 + 2kπ = 5π/6 + 2kπ , con k ∈ ℤ</p>
+<p>In modo analogo, per l'equazione cos x = m, con |m| ≤ 1, le soluzioni si ottengono considerando l'angolo opposto oltre a quello trovato.</p>
+<p class="formula">cos x = m → x = ±α + 2kπ , con k ∈ ℤ</p>
+<p>Per l'equazione tan x = m, che ammette sempre soluzione qualunque sia il valore reale m (dato che la tangente assume tutti i valori reali), basta invece aggiungere un multiplo intero di π, dato che il periodo della tangente è proprio π.</p>
+<p class="formula">tan x = m → x = α + kπ , con k ∈ ℤ</p>
+
+<p class="titolo-capitolo">Equazioni lineari in seno e coseno</p>
+<p>Un'equazione goniometrica si dice lineare in seno e coseno quando ha la forma a sin x + b cos x + c = 0, con a e b non entrambi nulli. Quando il termine noto c è uguale a zero, l'equazione si dice omogenea, e si risolve dividendo tutto per cos x (verificando prima che cos x = 0 non sia soluzione), trasformandola così in un'equazione nella sola tangente.</p>
+<p>Risolviamo l'equazione omogenea sin x - √3 cos x = 0. Verifichiamo che cos x = 0 non sia soluzione: se cos x = 0 allora anche sin x dovrebbe essere 0, ma questo è impossibile per la prima relazione fondamentale. Dividiamo quindi tutto per cos x.</p>
+<p class="formula">tan x - √3 = 0 → tan x = √3 → x = π/3 + kπ , con k ∈ ℤ</p>
+<p>Quando invece il termine noto c non è nullo, si parla di equazione lineare completa, e si risolve solitamente con il metodo dell'angolo aggiunto, oppure tramite le formule parametriche, che esprimono seno e coseno in funzione della tangente del semiangolo, riconducendo l'equazione a un'equazione algebrica di secondo grado in una nuova incognita t = tan(x/2).</p>
+<p class="formula">sin x = 2t / (1 + t<sup>2</sup>) , cos x = (1 - t<sup>2</sup>) / (1 + t<sup>2</sup>)</p>
+
+<p class="titolo-capitolo">Le disequazioni goniometriche elementari</p>
+<p>Una disequazione goniometrica elementare si risolve in modo analogo alle equazioni, ma utilizzando la circonferenza goniometrica per individuare graficamente l'arco (o gli archi) di soluzioni, invece di singoli punti. Si individuano prima i punti della circonferenza in cui la funzione vale esattamente il valore limite, per poi determinare in quale porzione della circonferenza la disuguaglianza risulta verificata.</p>
+<p>Risolviamo la disequazione sin x &gt; 1/2, limitandoci per semplicità all'intervallo [0, 2π). Sulla circonferenza goniometrica, il seno rappresenta l'ordinata del punto: dobbiamo trovare dove questa ordinata supera 1/2.</p>
+<p>I punti in cui sin x = 1/2 sono x = π/6 e x = 5π/6. L'ordinata è maggiore di 1/2 nell'arco compreso tra questi due angoli (la parte "alta" della circonferenza).</p>
+<p class="formula">π/6 &lt; x &lt; 5π/6</p>
+<p>Se si vogliono tutte le soluzioni sull'intero asse reale, e non solo in un periodo, si aggiunge 2kπ, con k intero, a tutta la soluzione trovata.</p>
+<p class="formula">π/6 + 2kπ &lt; x &lt; 5π/6 + 2kπ , con k ∈ ℤ</p>
+
+<p class="titolo-capitolo">Disequazioni con coseno e tangente</p>
+<p>Per le disequazioni con il coseno, si procede in modo analogo, ricordando che il coseno rappresenta l'ascissa del punto sulla circonferenza goniometrica, quindi le regioni di validità si trovano confrontando l'ascissa con il valore limite, invece dell'ordinata.</p>
+<p>Risolviamo cos x ≤ 1/2, nell'intervallo [0, 2π). I punti in cui cos x = 1/2 sono x = π/3 e x = 5π/3. L'ascissa è minore o uguale a 1/2 nell'arco esterno a questi due valori, cioè dalla parte "sinistra" della circonferenza.</p>
+<p class="formula">π/3 ≤ x ≤ 5π/3</p>
+<p>Per le disequazioni con la tangente, si ragiona invece sulla retta tangente alla circonferenza goniometrica nel punto (1,0), tenendo sempre presente che il periodo è π e che la funzione non è definita per x = π/2 + kπ.</p>
+
+<p class="titolo-capitolo">Sistemi di disequazioni goniometriche</p>
+<p>Quando un problema richiede la soluzione simultanea di più disequazioni goniometriche, si risolve ciascuna disequazione separatamente sulla circonferenza goniometrica, per poi sovrapporre graficamente gli archi di soluzione trovati e individuarne l'intersezione, esattamente come già fatto per i sistemi di disequazioni algebriche.</p>
+<p>Risolviamo il sistema formato da sin x &gt; 0 e cos x &gt; 0, nell'intervallo [0, 2π). La prima disequazione è verificata nel primo e secondo quadrante (0 &lt; x &lt; π); la seconda è verificata nel primo e quarto quadrante (0 ≤ x &lt; π/2 ∨ 3π/2 &lt; x &lt; 2π).</p>
+<p>L'intersezione di questi due archi corrisponde esattamente al primo quadrante, l'unico in cui sia il seno sia il coseno sono positivi contemporaneamente.</p>
+<p class="formula">0 &lt; x &lt; π/2</p>
+
+</div>
+<!-- fine capitolo matematica 32 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat33.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

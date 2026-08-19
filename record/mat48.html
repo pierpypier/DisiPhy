@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 48</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 48: Cenni di geometria analitica dello spazio -->
+<div class="capitolo-storia" id="capitolo-48-geometria-analitica-spazio">
+
+<p class="titolo-capitolo">48 - Cenni di geometria analitica dello spazio - Classe 5</p>
+
+<p class="titolo-capitolo">Il sistema di riferimento cartesiano nello spazio</p>
+<p>Concludiamo il nostro percorso estendendo allo spazio tridimensionale il sistema di coordinate cartesiane già utilizzato nel piano. Per individuare un punto nello spazio si utilizzano tre assi mutuamente perpendicolari, che si incontrano nell'origine O: l'asse x, l'asse y e l'asse z. Ogni punto P dello spazio è individuato da una terna ordinata di coordinate (x<sub>P</sub>, y<sub>P</sub>, z<sub>P</sub>), rispettivamente le distanze con segno di P dai tre piani coordinati.</p>
+<p>I tre assi, presi a due a due, individuano tre piani coordinati: il piano xy, il piano xz e il piano yz. Questi tre piani dividono lo spazio in otto regioni, dette ottanti, generalizzazione tridimensionale dei quattro quadranti del piano.</p>
+
+<p class="titolo-capitolo">Distanza tra due punti nello spazio</p>
+<p>Dati due punti A(x<sub>1</sub>, y<sub>1</sub>, z<sub>1</sub>) e B(x<sub>2</sub>, y<sub>2</sub>, z<sub>2</sub>), la distanza tra di essi si calcola generalizzando la formula già vista nel piano, aggiungendo semplicemente il contributo della terza coordinata, secondo un'applicazione ripetuta del teorema di Pitagora.</p>
+<p class="formula">AB = √[(x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup> + (z<sub>2</sub>-z<sub>1</sub>)<sup>2</sup>]</p>
+<p>Calcoliamo la distanza tra i punti A(1, 2, 2) e B(4, 6, 2).</p>
+<p class="formula">AB = √[(4-1)<sup>2</sup> + (6-2)<sup>2</sup> + (2-2)<sup>2</sup>] = √[9 + 16 + 0] = √25 = 5</p>
+<p>Anche le coordinate del punto medio di un segmento si ottengono generalizzando la formula del piano: si calcola semplicemente la media aritmetica, separatamente, di ciascuna delle tre coordinate degli estremi.</p>
+<p class="formula">M = ( (x<sub>1</sub>+x<sub>2</sub>)/2 , (y<sub>1</sub>+y<sub>2</sub>)/2 , (z<sub>1</sub>+z<sub>2</sub>)/2 )</p>
+
+<p class="titolo-capitolo">L'equazione del piano nello spazio</p>
+<p>Così come una retta nel piano cartesiano si descrive con un'equazione lineare in x e y, un piano nello spazio si descrive con un'equazione lineare nelle tre variabili x, y, z, dove i coefficienti a, b, c non sono contemporaneamente tutti nulli.</p>
+<p class="formula">ax + by + cz + d = 0</p>
+<p>I coefficienti a, b, c hanno un significato geometrico importante: rappresentano le componenti di un vettore perpendicolare al piano, detto vettore normale al piano. Questa proprietà è molto utile, per esempio, per stabilire rapidamente se due piani sono paralleli (quando i rispettivi vettori normali sono proporzionali) oppure perpendicolari (quando i vettori normali sono a loro volta perpendicolari, cioè il loro prodotto scalare è nullo).</p>
+<p>Alcuni casi particolari sono immediati da riconoscere: se manca la variabile z (cioè c = 0), il piano risulta parallelo all'asse z; equazioni come x = k, y = k oppure z = k rappresentano invece piani paralleli, rispettivamente, ai piani coordinati yz, xz e xy.</p>
+
+<p class="titolo-capitolo">L'equazione della retta nello spazio</p>
+<p>A differenza del piano, una retta nello spazio non si può descrivere con una singola equazione lineare, perché un'equazione di questo tipo rappresenta sempre un piano, non una retta: una retta nello spazio si ottiene invece come intersezione di due piani non paralleli tra loro, e si descrive quindi con un sistema di due equazioni lineari.</p>
+<p class="formula">
+<span class="frazione"><span>a<sub>1</sub>x + b<sub>1</sub>y + c<sub>1</sub>z + d<sub>1</sub> = 0</span><span>a<sub>2</sub>x + b<sub>2</sub>y + c<sub>2</sub>z + d<sub>2</sub> = 0</span></span>
+</p>
+<p>In alternativa, una retta nello spazio si può descrivere anche tramite le equazioni parametriche, particolarmente utili e intuitive: conoscendo un punto P<sub>0</sub>(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>) della retta e un vettore direttore (l, m, n), parallelo alla retta stessa, ogni punto della retta si ottiene facendo variare un parametro t.</p>
+<p class="formula">x = x<sub>0</sub> + lt , y = y<sub>0</sub> + mt , z = z<sub>0</sub> + nt</p>
+
+<p class="titolo-capitolo">La sfera nello spazio cartesiano</p>
+<p>Generalizzando quanto già visto per la circonferenza nel piano cartesiano, la sfera è il luogo geometrico dei punti dello spazio equidistanti da un punto fisso, detto centro. Indicando con C(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>) il centro e con r il raggio, l'equazione della sfera in forma canonica si ottiene imponendo che la distanza di un generico punto P(x, y, z) da C sia uguale a r.</p>
+<p class="formula">(x-x<sub>0</sub>)<sup>2</sup> + (y-y<sub>0</sub>)<sup>2</sup> + (z-z<sub>0</sub>)<sup>2</sup> = r<sup>2</sup></p>
+<p>Scriviamo l'equazione della sfera con centro C(1, -2, 3) e raggio 4.</p>
+<p class="formula">(x-1)<sup>2</sup> + (y+2)<sup>2</sup> + (z-3)<sup>2</sup> = 16</p>
+<p>Come già visto per la circonferenza, sviluppando i quadrati si ottiene la forma generale dell'equazione della sfera, in cui compaiono anche i termini x<sup>2</sup>, y<sup>2</sup>, z<sup>2</sup> con lo stesso coefficiente (riducibile a 1), e dalla quale si possono ricavare centro e raggio con formule analoghe a quelle già viste per la circonferenza.</p>
+<p class="formula">x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> + ax + by + cz + d = 0</p>
+
+<p class="titolo-capitolo">Uno sguardo d'insieme sul percorso compiuto</p>
+<p>Con questo capitolo si conclude il percorso di matematica e geometria delle scuole superiori, che ha condotto dai concetti più elementari del calcolo letterale, attraverso la geometria euclidea del piano, l'algebra delle equazioni e disequazioni, la geometria analitica delle coniche, la goniometria e la trigonometria, fino agli strumenti più potenti dell'analisi matematica (limiti, derivate, integrali) e del calcolo delle probabilità. Ciascuno di questi argomenti, nato spesso per rispondere a un problema concreto (misurare un campo, calcolare un'area, prevedere un fenomeno aleatorio), ha finito per intrecciarsi con gli altri, componendo quell'edificio coerente e potente che è la matematica moderna, e che continua tutt'oggi a essere lo strumento più efficace per comprendere e descrivere il mondo che ci circonda.</p>
+
+</div>
+<!-- fine capitolo matematica 48 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat00.html">Torna all'indice</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

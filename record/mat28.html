@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 28</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 28: Trasformazioni geometriche nel piano -->
+<div class="capitolo-storia" id="capitolo-28-trasformazioni-geometriche">
+
+<p class="titolo-capitolo">28 - Trasformazioni geometriche nel piano - Classe 3</p>
+
+<p class="titolo-capitolo">Che cos'è una trasformazione geometrica</p>
+<p>Una trasformazione geometrica è una legge che associa a ogni punto P del piano un altro punto P', detto immagine (o trasformato) di P, secondo regole ben precise, generalmente espresse tramite formule che legano le coordinate (x', y') del punto immagine alle coordinate (x, y) del punto di partenza. L'insieme di partenza si chiama figura originaria, e l'insieme di tutti i punti immagine si chiama figura trasformata (o immagine della figura).</p>
+<p>Le trasformazioni geometriche più importanti si dividono in due grandi categorie: le isometrie, che conservano le distanze (e quindi anche le forme e le dimensioni delle figure), e le altre trasformazioni, come l'omotetia, che non conservano le distanze ma mantengono comunque proporzioni e angoli.</p>
+
+<p class="titolo-capitolo">La traslazione</p>
+<p>La traslazione è l'isometria che sposta ogni punto del piano della stessa quantità, nella stessa direzione, secondo un vettore fisso detto vettore di traslazione, indicato con le sue componenti (a, b). Le equazioni che descrivono una traslazione sono le seguenti.</p>
+<p class="formula">x' = x + a , y' = y + b</p>
+<p>Applichiamo la traslazione di vettore (3, -2) al punto A(1, 4).</p>
+<p class="formula">x' = 1 + 3 = 4 , y' = 4 - 2 = 2 → A'(4, 2)</p>
+<p>Una traslazione, applicata a una qualsiasi figura, la sposta rigidamente senza modificarne né la forma né le dimensioni: ogni segmento della figura originaria si trasforma in un segmento parallelo e congruente nella figura trasformata.</p>
+
+<p class="titolo-capitolo">La simmetria centrale e la simmetria assiale</p>
+<p>La simmetria centrale rispetto a un punto C, detto centro di simmetria, associa a ogni punto P il punto P' tale che C sia il punto medio del segmento PP'. Quando il centro di simmetria coincide con l'origine degli assi, le equazioni sono particolarmente semplici.</p>
+<p class="formula">x' = -x , y' = -y</p>
+<p>La simmetria assiale rispetto a una retta r, detta asse di simmetria, associa a ogni punto P il punto P' tale che r sia l'asse del segmento PP', cioè la retta perpendicolare a PP' passante per il suo punto medio. Le simmetrie assiali rispetto agli assi cartesiani hanno equazioni molto semplici.</p>
+<p class="formula">simmetria rispetto all'asse x: x' = x , y' = -y</p>
+<p class="formula">simmetria rispetto all'asse y: x' = -x , y' = y</p>
+<p>Applichiamo la simmetria rispetto all'asse x al punto A(3, 5): l'ascissa rimane invariata, mentre l'ordinata cambia segno.</p>
+<p class="formula">A'(3, -5)</p>
+<p>Un'altra simmetria assiale molto utilizzata è quella rispetto alla bisettrice del primo e terzo quadrante (la retta y = x), che scambia semplicemente tra loro le coordinate del punto.</p>
+<p class="formula">simmetria rispetto alla retta y = x: x' = y , y' = x</p>
+
+<p class="titolo-capitolo">La rotazione</p>
+<p>La rotazione è l'isometria che fa ruotare ogni punto del piano di un angolo fisso θ (theta) attorno a un punto fisso, detto centro di rotazione. Quando il centro di rotazione coincide con l'origine degli assi, le equazioni della rotazione sono le seguenti, dove θ è l'angolo di rotazione misurato in senso antiorario.</p>
+<p class="formula">x' = x cos θ - y sin θ , y' = x sin θ + y cos θ</p>
+<p>Un caso particolarmente semplice e utile è quello della rotazione di 90° in senso antiorario attorno all'origine, per cui cos 90° = 0 e sin 90° = 1, e le formule si riducono a:</p>
+<p class="formula">rotazione di 90°: x' = -y , y' = x</p>
+<p>Applichiamo la rotazione di 90° attorno all'origine al punto A(2, 5).</p>
+<p class="formula">A'(-5, 2)</p>
+
+<p class="titolo-capitolo">L'omotetia</p>
+<p>L'omotetia è una trasformazione che, a differenza delle isometrie viste finora, non conserva in generale le distanze, ma le moltiplica tutte per uno stesso fattore, detto rapporto di omotetia (o rapporto di scala), indicato con k. Quando il centro dell'omotetia coincide con l'origine degli assi, le equazioni sono le seguenti.</p>
+<p class="formula">x' = kx , y' = ky</p>
+<p>Se il valore assoluto di k è maggiore di 1, l'omotetia ingrandisce la figura; se è compreso tra 0 e 1, la rimpicciolisce; se k è negativo, oltre a cambiare le dimensioni, l'omotetia inverte anche l'orientamento della figura, come se fosse combinata con una simmetria centrale rispetto al centro di omotetia.</p>
+<p>Applichiamo l'omotetia di rapporto k = 2 e centro nell'origine al punto A(3, 1).</p>
+<p class="formula">A'(6, 2)</p>
+<p>Poiché un'omotetia conserva gli angoli e le proporzioni pur cambiando le dimensioni, ogni figura trasformata tramite omotetia è sempre simile alla figura originaria, con rapporto di similitudine uguale al valore assoluto di k, collegandosi così direttamente al capitolo sulla similitudine già studiato.</p>
+
+<p class="titolo-capitolo">Trasformazioni e funzioni: effetti sui grafici</p>
+<p>Le trasformazioni geometriche permettono anche di comprendere in modo intuitivo come cambia il grafico di una funzione quando si modifica la sua equazione. Sostituire x con (x - h) nell'equazione di una funzione corrisponde a traslare il grafico orizzontalmente di h unità; sostituire y con (y - k), cioè aggiungere k al secondo membro, corrisponde a traslare il grafico verticalmente di k unità.</p>
+<p class="formula">y = f(x - h) + k → traslazione di vettore (h, k)</p>
+<p>Analogamente, sostituire x con -x nell'equazione corrisponde a una simmetria del grafico rispetto all'asse y; sostituire y con -y (cioè cambiare il segno a tutta la funzione) corrisponde a una simmetria rispetto all'asse x.</p>
+<p>Verifichiamo con un esempio: la parabola y = x<sup>2</sup> ha vertice nell'origine. Applicando la traslazione di vettore (2, 3), cioè sostituendo x con (x-2) e aggiungendo 3, si ottiene una nuova parabola con vertice traslato.</p>
+<p class="formula">y = (x - 2)<sup>2</sup> + 3, con vertice in V(2, 3)</p>
+<p>Questo risultato è coerente con quanto già visto nel capitolo sulla parabola: il vertice si è spostato esattamente secondo il vettore di traslazione applicato, confermando la stretta relazione tra le trasformazioni geometriche e lo studio dei grafici delle funzioni.</p>
+
+</div>
+<!-- fine capitolo matematica 28 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat29.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

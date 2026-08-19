@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 24</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 24: La circonferenza nel piano cartesiano -->
+<div class="capitolo-storia" id="capitolo-24-circonferenza-piano-cartesiano">
+
+<p class="titolo-capitolo">24 - La circonferenza nel piano cartesiano - Classe 3</p>
+
+<p class="titolo-capitolo">Dalla definizione geometrica all'equazione</p>
+<p>Ricordiamo dal capitolo dedicato alla circonferenza che essa è il luogo geometrico dei punti del piano equidistanti da un punto fisso, detto centro. Nel piano cartesiano, indicando con C(x<sub>0</sub>, y<sub>0</sub>) il centro e con r il raggio, un punto P(x, y) appartiene alla circonferenza quando la sua distanza da C, calcolata con la formula vista nel capitolo precedente, è uguale a r.</p>
+<p class="formula">√[(x - x<sub>0</sub>)<sup>2</sup> + (y - y<sub>0</sub>)<sup>2</sup>] = r</p>
+<p>Elevando al quadrato entrambi i membri per eliminare la radice, si ottiene l'equazione della circonferenza in forma canonica, detta anche forma "centro-raggio".</p>
+<p class="formula">(x - x<sub>0</sub>)<sup>2</sup> + (y - y<sub>0</sub>)<sup>2</sup> = r<sup>2</sup></p>
+<p>Scriviamo l'equazione della circonferenza con centro C(2, -1) e raggio 3.</p>
+<p class="formula">(x - 2)<sup>2</sup> + (y + 1)<sup>2</sup> = 9</p>
+
+<p class="titolo-capitolo">La forma generale dell'equazione</p>
+<p>Sviluppando i quadrati della forma canonica e riducendo i termini simili, si ottiene la forma generale dell'equazione della circonferenza, in cui compaiono anche i termini x<sup>2</sup> e y<sup>2</sup>, sempre con lo stesso coefficiente (che si può sempre ridurre a 1 dividendo l'intera equazione).</p>
+<p class="formula">x<sup>2</sup> + y<sup>2</sup> + ax + by + c = 0</p>
+<p>Confrontando questa forma generale con lo sviluppo della forma canonica, si ricavano le relazioni che legano i coefficienti a, b, c alle coordinate del centro e alla misura del raggio.</p>
+<p class="formula">
+centro: C(-a/2 , -b/2) &nbsp;&nbsp; raggio: r = √[(a/2)<sup>2</sup> + (b/2)<sup>2</sup> - c]
+</p>
+<p>Determiniamo centro e raggio della circonferenza di equazione x<sup>2</sup> + y<sup>2</sup> - 4x + 6y - 12 = 0. Qui a = -4, b = 6, c = -12.</p>
+<p class="formula">centro: C(-(-4)/2 , -6/2) = C(2, -3)</p>
+<p class="formula">r = √[(-4/2)<sup>2</sup> + (6/2)<sup>2</sup> - (-12)] = √[4 + 9 + 12] = √25 = 5</p>
+<p>È importante osservare che l'espressione sotto radice, (a/2)<sup>2</sup> + (b/2)<sup>2</sup> - c, deve essere positiva per avere una circonferenza reale con raggio effettivo; se questa espressione fosse uguale a zero, l'equazione rappresenterebbe un solo punto (una circonferenza di raggio nullo); se fosse negativa, l'equazione non avrebbe alcuna soluzione reale nel piano.</p>
+
+<p class="titolo-capitolo">Posizione di una retta rispetto a una circonferenza</p>
+<p>Come già accennato nel capitolo sui sistemi di secondo grado, la posizione reciproca tra una retta e una circonferenza si determina risolvendo il sistema formato dalle loro equazioni e osservando il segno del discriminante dell'equazione risolvente.</p>
+<p>In alternativa, spesso più rapido, si può confrontare direttamente la distanza tra il centro della circonferenza e la retta (usando la formula del capitolo precedente) con la misura del raggio: se la distanza è maggiore del raggio la retta è esterna, se è uguale al raggio la retta è tangente, se è minore del raggio la retta è secante.</p>
+<p>Verifichiamo la posizione della retta x + y - 7 = 0 rispetto alla circonferenza con centro C(2, -3) e raggio 5, trovata sopra. Calcoliamo la distanza di C dalla retta.</p>
+<p class="formula">distanza = |1×2 + 1×(-3) - 7| / √(1<sup>2</sup> + 1<sup>2</sup>) = |2 - 3 - 7| / √2 = 8/√2 = 8√2/2 = 4√2 ≈ 5,66</p>
+<p>Poiché la distanza (≈5,66) è maggiore del raggio (5), la retta è esterna alla circonferenza.</p>
+
+<p class="titolo-capitolo">Le rette tangenti a una circonferenza</p>
+<p>Per determinare le equazioni delle rette tangenti a una circonferenza condotte da un punto esterno, si può impostare un sistema tra l'equazione della circonferenza e l'equazione di un generico fascio di rette passanti per quel punto, imponendo poi che il discriminante dell'equazione risolvente sia uguale a zero (condizione di tangenza).</p>
+<p>Un metodo alternativo, spesso più rapido quando il punto appartiene già alla circonferenza, consiste nell'imporre che la distanza tra il centro e la retta generica del fascio sia uguale al raggio, e risolvere l'equazione (di solito di secondo grado) che ne deriva rispetto al coefficiente angolare del fascio.</p>
+
+<p class="titolo-capitolo">Posizioni reciproche tra due circonferenze nel piano cartesiano</p>
+<p>Analogamente a quanto visto nel capitolo dedicato alla circonferenza, anche nel piano cartesiano due circonferenze possono essere esterne, tangenti (esternamente o internamente), secanti, oppure una interna all'altra. Il criterio è sempre lo stesso: si confronta la distanza tra i due centri (calcolata con la formula della distanza tra due punti) con la somma e la differenza dei due raggi.</p>
+<p>Consideriamo due circonferenze con centri C<sub>1</sub>(0, 0) e C<sub>2</sub>(10, 0), e raggi rispettivamente r<sub>1</sub> = 3 e r<sub>2</sub> = 4. Calcoliamo la distanza tra i centri.</p>
+<p class="formula">distanza tra i centri = √[(10-0)<sup>2</sup> + (0-0)<sup>2</sup>] = √100 = 10</p>
+<p>Confrontiamo questa distanza con la somma dei raggi (3 + 4 = 7) e la loro differenza (4 - 3 = 1): poiché 10 è maggiore di 7, le due circonferenze sono esterne tra loro, non avendo alcun punto in comune.</p>
+
+<p class="titolo-capitolo">Determinare l'equazione di una circonferenza per punti dati</p>
+<p>Per determinare l'equazione di una circonferenza passante per tre punti non allineati, si sostituiscono le coordinate di ciascun punto nella forma generale x<sup>2</sup> + y<sup>2</sup> + ax + by + c = 0, ottenendo un sistema di tre equazioni lineari nelle tre incognite a, b, c, che si risolve con i metodi già noti per i sistemi lineari.</p>
+<p>Consideriamo tre punti A(0, 0), B(4, 0), C(0, 4), e cerchiamo la circonferenza che passa per tutti e tre. Sostituendo A(0,0) nella forma generale si ottiene subito c = 0. Sostituendo B(4, 0) si ottiene 16 + 4a = 0, quindi a = -4. Sostituendo C(0, 4) si ottiene 16 + 4b = 0, quindi b = -4.</p>
+<p class="formula">x<sup>2</sup> + y<sup>2</sup> - 4x - 4y = 0</p>
+<p>Da questa equazione generale si possono poi ricavare centro C(2, 2) e raggio r = √[(-4/2)<sup>2</sup> + (-4/2)<sup>2</sup> - 0] = √8 = 2√2, usando le formule viste in precedenza.</p>
+
+</div>
+<!-- fine capitolo matematica 24 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat25.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

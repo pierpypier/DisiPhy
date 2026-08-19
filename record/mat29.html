@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 29</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 29: Le funzioni: proprietà, funzioni composte e inverse -->
+<div class="capitolo-storia" id="capitolo-29-funzioni-composte-inverse">
+
+<p class="titolo-capitolo">29 - Le funzioni: proprietà, funzioni composte e inverse - Classe 3</p>
+
+<p class="titolo-capitolo">Funzioni crescenti e decrescenti</p>
+<p>Riprendiamo lo studio delle funzioni, introdotte in un capitolo precedente, approfondendo alcune proprietà legate al loro andamento. Una funzione si dice crescente in un intervallo del dominio quando, presi due valori x<sub>1</sub> e x<sub>2</sub> qualsiasi di quell'intervallo con x<sub>1</sub> minore di x<sub>2</sub>, risulta sempre f(x<sub>1</sub>) minore di f(x<sub>2</sub>): in altre parole, a valori crescenti della x corrispondono valori crescenti della y.</p>
+<p class="formula">funzione crescente: x<sub>1</sub> &lt; x<sub>2</sub> ⟹ f(x<sub>1</sub>) &lt; f(x<sub>2</sub>)</p>
+<p>Una funzione si dice invece decrescente in un intervallo quando, sotto le stesse condizioni sugli argomenti, risulta f(x<sub>1</sub>) maggiore di f(x<sub>2</sub>): a valori crescenti della x corrispondono valori decrescenti della y.</p>
+<p class="formula">funzione decrescente: x<sub>1</sub> &lt; x<sub>2</sub> ⟹ f(x<sub>1</sub>) &gt; f(x<sub>2</sub>)</p>
+<p>Una funzione che è crescente (o decrescente) su tutto il proprio dominio si dice monotona. Molte funzioni, però, non sono monotone su tutto il dominio, ma alternano intervalli di crescenza e di decrescenza: la parabola y = x<sup>2</sup>, per esempio, è decrescente per x minore di 0 e crescente per x maggiore di 0, con il vertice che rappresenta il punto di passaggio tra i due comportamenti.</p>
+
+<p class="titolo-capitolo">La funzione composta</p>
+<p>Date due funzioni f e g, si chiama funzione composta di g e f (si legge anche "g composto f") la funzione che si ottiene applicando prima f e poi g al risultato, cioè calcolando g(f(x)). Si indica con il simbolo seguente.</p>
+<p class="formula">(g ∘ f)(x) = g(f(x))</p>
+<p>È fondamentale prestare attenzione all'ordine di composizione: si applica prima la funzione più vicina alla x, cioè f, e poi si applica g al risultato ottenuto. In generale, la composizione non è commutativa, cioè g(f(x)) è diverso da f(g(x)).</p>
+<p>Date le funzioni f(x) = x + 2 e g(x) = x<sup>2</sup>, calcoliamo (g ∘ f)(x), cioè g(f(x)). Sostituiamo f(x) al posto della x in g.</p>
+<p class="formula">g(f(x)) = g(x + 2) = (x + 2)<sup>2</sup></p>
+<p>Calcoliamo ora, per confronto, (f ∘ g)(x), cioè f(g(x)).</p>
+<p class="formula">f(g(x)) = f(x<sup>2</sup>) = x<sup>2</sup> + 2</p>
+<p>Come si vede confrontando i due risultati, (x + 2)<sup>2</sup> e x<sup>2</sup> + 2 sono espressioni diverse: questo confirma che, in generale, la composizione di funzioni non è commutativa.</p>
+
+<p class="titolo-capitolo">La funzione inversa</p>
+<p>Come accennato nel capitolo introduttivo sulle funzioni, una funzione biiettiva (cioè sia iniettiva sia suriettiva) ammette una funzione inversa, indicata con f<sup>-1</sup>, che "annulla" l'effetto della funzione originaria: se f trasforma x in y, allora f<sup>-1</sup> trasforma y di nuovo in x.</p>
+<p class="formula">se y = f(x), allora x = f<sup>-1</sup>(y)</p>
+<p>Componendo una funzione con la propria inversa, in qualunque ordine, si ottiene sempre la funzione identica, cioè quella funzione che restituisce esattamente il valore di partenza.</p>
+<p class="formula">f<sup>-1</sup>(f(x)) = x , f(f<sup>-1</sup>(x)) = x</p>
+<p>Per determinare l'espressione della funzione inversa a partire dalla funzione data, si scrive y = f(x), si scambiano tra loro le lettere x e y, e infine si risolve l'equazione ottenuta rispetto alla nuova y, che rappresenterà proprio f<sup>-1</sup>(x).</p>
+<p>Determiniamo la funzione inversa di f(x) = 2x + 3. Scriviamo y = 2x + 3, poi scambiamo x e y.</p>
+<p class="formula">x = 2y + 3</p>
+<p>Risolviamo questa equazione rispetto a y.</p>
+<p class="formula">2y = x - 3 → y = (x - 3) / 2</p>
+<p>La funzione inversa è quindi f<sup>-1</sup>(x) = (x - 3) / 2. Verifichiamo componendo le due funzioni: f<sup>-1</sup>(f(x)) = f<sup>-1</sup>(2x+3) = [(2x+3)-3]/2 = 2x/2 = x, come previsto.</p>
+
+<p class="titolo-capitolo">Il grafico della funzione inversa</p>
+<p>Esiste una relazione geometrica molto utile tra il grafico di una funzione e quello della sua inversa: i due grafici sono sempre simmetrici rispetto alla retta y = x, cioè alla bisettrice del primo e terzo quadrante già incontrata nel capitolo sulle trasformazioni geometriche.</p>
+<p>Questo accade perché, scambiando x e y nel processo di inversione, ogni punto (x<sub>0</sub>, y<sub>0</sub>) del grafico di f corrisponde esattamente al punto (y<sub>0</sub>, x<sub>0</sub>) del grafico di f<sup>-1</sup>, e questi due punti sono sempre simmetrici rispetto alla retta y = x.</p>
+<p>Verifichiamolo con l'esempio precedente: la funzione f(x) = 2x + 3 passa per il punto (0, 3); la sua inversa f<sup>-1</sup>(x) = (x-3)/2 passa infatti per il punto (3, 0), che è esattamente il simmetrico di (0, 3) rispetto alla retta y = x.</p>
+
+<p class="titolo-capitolo">Funzioni non biiettive e restrizione del dominio</p>
+<p>Quando una funzione non è biiettiva sull'intero dominio naturale, come la parabola y = x<sup>2</sup> (che non è iniettiva, dato che f(2) = f(-2) = 4), non è possibile definire un'unica funzione inversa su tutto il dominio. In questi casi, si può restringere il dominio a un intervallo in cui la funzione risulti effettivamente biiettiva (per esempio, dove è monotona), e definire l'inversa solo su quella porzione ristretta.</p>
+<p>Restringendo il dominio di y = x<sup>2</sup> ai soli valori x ≥ 0, la funzione diventa crescente e quindi biiettiva su questo intervallo: la sua inversa, in questo caso ristretto, è la funzione radice quadrata.</p>
+<p class="formula">f(x) = x<sup>2</sup> (con x ≥ 0) → f<sup>-1</sup>(x) = √x</p>
+<p>Questo esempio mostra bene perché, quando si definisce la radice quadrata come funzione, si sceglie sempre la convenzione del risultato non negativo: è proprio la scelta che rende possibile l'inversione della funzione quadratica ristretta ai valori non negativi.</p>
+
+</div>
+<!-- fine capitolo matematica 29 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat30.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

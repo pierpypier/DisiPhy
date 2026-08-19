@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 43</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo matematica 43: Gli integrali definiti -->
+<div class="capitolo-storia" id="capitolo-43-integrali-definiti">
+
+<p class="titolo-capitolo">43 - Gli integrali definiti - Classe 5</p>
+
+<p class="titolo-capitolo">Il problema del calcolo di un'area</p>
+<p>L'integrale definito nasce dal problema geometrico di calcolare l'area della regione di piano compresa tra il grafico di una funzione f(x), l'asse delle ascisse, e due rette verticali di equazione x = a e x = b, con f(x) continua e non negativa nell'intervallo [a, b]. Per figure geometriche elementari (rettangoli, triangoli, trapezi) questa area si calcola con le formule già note; per una curva generica, occorre un procedimento diverso.</p>
+<p>L'idea alla base dell'integrale definito è quella di approssimare questa area suddividendo l'intervallo [a, b] in tanti piccoli sottointervalli, costruendo su ciascuno di essi un rettangolo di altezza pari (approssimativamente) al valore della funzione in quel sottointervallo, e sommando le aree di tutti questi rettangoli. Aumentando sempre di più il numero di sottointervalli, e quindi rimpicciolendo sempre di più la loro larghezza, questa somma approssimata si avvicina sempre di più al valore esatto dell'area sottesa dalla curva.</p>
+
+<p class="titolo-capitolo">La definizione di integrale definito</p>
+<p>Il limite di queste somme approssimate, al tendere all'infinito del numero di sottointervalli (e quindi al tendere a zero della loro ampiezza), si chiama integrale definito della funzione f(x) esteso all'intervallo [a, b], e si indica con il seguente simbolo, dove a e b si chiamano estremi di integrazione.</p>
+<p class="formula">∫<sub>a</sub><sup>b</sup> f(x) dx</p>
+<p>A differenza dell'integrale indefinito, che rappresenta un insieme di funzioni (le primitive), l'integrale definito è un numero, che rappresenta proprio l'area (con segno, come vedremo) della regione di piano descritta sopra.</p>
+
+<p class="titolo-capitolo">Il teorema fondamentale del calcolo integrale</p>
+<p>Il legame tra l'integrale definito, appena introdotto tramite il concetto di area, e l'integrale indefinito, cioè le primitive viste nel capitolo precedente, è espresso da uno dei risultati più importanti di tutta l'analisi matematica: il teorema fondamentale del calcolo integrale (detto anche teorema di Torricelli-Barrow).</p>
+<p>Questo teorema afferma che, se f(x) è una funzione continua nell'intervallo [a, b] e F(x) è una qualsiasi sua primitiva, allora l'integrale definito di f(x) esteso a [a, b] si calcola semplicemente come la differenza tra i valori della primitiva calcolata negli estremi dell'intervallo.</p>
+<p class="formula">∫<sub>a</sub><sup>b</sup> f(x) dx = F(b) - F(a)</p>
+<p>Questa formula, nota anche come formula fondamentale del calcolo integrale, si indica spesso con la notazione seguente, dove la parentesi quadra con i due estremi a pedice e apice significa proprio "calcola F in b, calcola F in a, e sottrai".</p>
+<p class="formula">∫<sub>a</sub><sup>b</sup> f(x) dx = [F(x)]<sub>a</sub><sup>b</sup> = F(b) - F(a)</p>
+<p>Calcoliamo l'integrale definito di f(x) = x<sup>2</sup> esteso all'intervallo [1, 3]. Troviamo prima una primitiva: F(x) = x<sup>3</sup>/3.</p>
+<p class="formula">∫<sub>1</sub><sup>3</sup> x<sup>2</sup> dx = [x<sup>3</sup>/3]<sub>1</sub><sup>3</sup> = 27/3 - 1/3 = 9 - 1/3 = 26/3</p>
+<p>Si noti che, essendo l'integrale definito un numero, la costante arbitraria c dell'integrale indefinito non compare nel risultato finale: qualsiasi primitiva si scelga, infatti, la costante si elide nella differenza F(b) - F(a).</p>
+
+<p class="titolo-capitolo">Le proprietà dell'integrale definito</p>
+<p>L'integrale definito gode di alcune proprietà fondamentali, che derivano direttamente dalla definizione e dal teorema fondamentale. La proprietà di linearità, analoga a quella già vista per l'integrale indefinito, afferma che l'integrale di una somma è la somma degli integrali, e una costante moltiplicativa si può portare fuori dal segno di integrale.</p>
+<p class="formula">∫<sub>a</sub><sup>b</sup> [f(x) + g(x)] dx = ∫<sub>a</sub><sup>b</sup> f(x) dx + ∫<sub>a</sub><sup>b</sup> g(x) dx</p>
+<p>La proprietà di additività rispetto all'intervallo di integrazione afferma che, se c è un punto interno all'intervallo [a, b], l'integrale su tutto l'intervallo è uguale alla somma degli integrali sui due sottointervalli in cui c lo divide.</p>
+<p class="formula">∫<sub>a</sub><sup>b</sup> f(x) dx = ∫<sub>a</sub><sup>c</sup> f(x) dx + ∫<sub>c</sub><sup>b</sup> f(x) dx</p>
+<p>Scambiando tra loro gli estremi di integrazione, l'integrale cambia segno; di conseguenza, un integrale con estremi coincidenti vale sempre zero.</p>
+<p class="formula">∫<sub>a</sub><sup>b</sup> f(x) dx = -∫<sub>b</sub><sup>a</sup> f(x) dx , ∫<sub>a</sub><sup>a</sup> f(x) dx = 0</p>
+
+<p class="titolo-capitolo">Il calcolo delle aree con l'integrale definito</p>
+<p>Se nell'intervallo [a, b] la funzione f(x) è sempre negativa, l'integrale definito risulta anch'esso negativo, pur essendo l'area geometrica, per definizione, sempre una quantità positiva: in questo caso, per ottenere l'area effettiva, occorre considerare il valore assoluto dell'integrale, oppure, equivalentemente, cambiare il segno all'integrale calcolato.</p>
+<p class="formula">Area = |∫<sub>a</sub><sup>b</sup> f(x) dx| , se f(x) ≤ 0 in [a,b]</p>
+<p>Quando la funzione cambia segno all'interno dell'intervallo [a, b], per calcolare l'area complessiva (intesa come area geometrica, sempre positiva) occorre innanzitutto individuare i punti in cui la funzione si annulla, suddividere l'intervallo in sottointervalli in cui il segno è costante, calcolare l'integrale (in valore assoluto) su ciascun sottointervallo, e sommare infine tutti i contributi.</p>
+<p>Per calcolare l'area della regione compresa tra i grafici di due funzioni f(x) e g(x), con f(x) ≥ g(x) nell'intervallo considerato, si integra la differenza tra la funzione "superiore" e quella "inferiore".</p>
+<p class="formula">Area = ∫<sub>a</sub><sup>b</sup> [f(x) - g(x)] dx , con f(x) ≥ g(x) in [a,b]</p>
+<p>Calcoliamo l'area della regione compresa tra le curve y = x<sup>2</sup> e y = x, nell'intervallo in cui x è maggiore di x<sup>2</sup>. Troviamo prima i punti di intersezione risolvendo x = x<sup>2</sup>, cioè x(x-1) = 0: si ottiene x = 0 e x = 1. In questo intervallo, x è maggiore di x<sup>2</sup> (per esempio, in x=0,5: 0,5 &gt; 0,25).</p>
+<p class="formula">Area = ∫<sub>0</sub><sup>1</sup> (x - x<sup>2</sup>) dx = [x<sup>2</sup>/2 - x<sup>3</sup>/3]<sub>0</sub><sup>1</sup> = (1/2 - 1/3) - 0 = 1/6</p>
+
+<p class="titolo-capitolo">Applicazioni: volume di un solido di rotazione</p>
+<p>Un'importante applicazione dell'integrale definito riguarda il calcolo del volume di un solido ottenuto dalla rotazione completa, attorno all'asse x, della regione di piano compresa tra il grafico di una funzione f(x), l'asse x e le rette x = a e x = b. Il volume di questo solido si calcola con la seguente formula, che si giustifica pensando il solido come composto da infiniti dischi sottili di raggio f(x).</p>
+<p class="formula">V = π × ∫<sub>a</sub><sup>b</sup> [f(x)]<sup>2</sup> dx</p>
+<p>Calcoliamo il volume del solido generato dalla rotazione, attorno all'asse x, della regione sottesa dalla funzione f(x) = √x, nell'intervallo [0, 4].</p>
+<p class="formula">V = π × ∫<sub>0</sub><sup>4</sup> (√x)<sup>2</sup> dx = π × ∫<sub>0</sub><sup>4</sup> x dx = π × [x<sup>2</sup>/2]<sub>0</sub><sup>4</sup> = π × (16/2 - 0) = 8π</p>
+
+</div>
+<!-- fine capitolo matematica 43 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat44.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
