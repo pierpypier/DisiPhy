@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 05</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 05: l'accelerazione e il moto uniformemente accelerato -->
+<div id="capitolo-05-moto-uniformemente-accelerato" class="capitolo-storia">
+  <p class="titolo-capitolo">05 - L'accelerazione e il moto uniformemente accelerato - Classe 1</p>
+
+  <p class="titolo-capitolo">Il concetto di accelerazione</p>
+  <p>Nel capitolo precedente abbiamo studiato il moto rettilineo uniforme, in cui la velocità rimane costante nel tempo. Nella realtà, però, la maggior parte dei movimenti che osserviamo comporta variazioni di velocità: un'automobile che parte da ferma, un ciclista che frena, un pallone lanciato verso l'alto. Per descrivere queste situazioni serve una nuova grandezza fisica: l'accelerazione.</p>
+  <p>L'accelerazione media è definita come il rapporto tra la variazione di velocità e l'intervallo di tempo in cui questa variazione avviene.</p>
+  <p class="formula">a<sub>m</sub> = Δv / Δt = (v<sub>f</sub> − v<sub>i</sub>) / (t<sub>f</sub> − t<sub>i</sub>)</p>
+  <p>Nel Sistema Internazionale l'accelerazione si misura in metri al secondo quadrato (m/s<sup>2</sup>), un'unità che indica di quanto varia la velocità (in m/s) ogni secondo che passa.</p>
+  <p>Il segno dell'accelerazione indica se la velocità sta aumentando o diminuendo (in valore, considerando il verso del moto): se l'accelerazione ha lo stesso segno della velocità, il corpo sta accelerando (aumenta la rapidità); se ha segno opposto, il corpo sta decelerando, cioè rallentando.</p>
+  <p><em>Esempio svolto:</em> un'automobile passa da una velocità di 10 m/s a una velocità di 30 m/s in un tempo di 5 s. La sua accelerazione media è a<sub>m</sub> = (30 − 10) / 5 = 20 / 5 = 4 m/s<sup>2</sup>.</p>
+
+  <p class="titolo-capitolo">Il moto rettilineo uniformemente accelerato</p>
+  <p>Un corpo si muove di moto rettilineo uniformemente accelerato quando la sua accelerazione rimane costante nel tempo, sia in modulo che in verso. Questo è il tipo di moto più semplice tra quelli con velocità variabile, ed è anche uno dei più importanti, perché descrive, tra le altre cose, la caduta libera dei corpi, che studieremo tra poco.</p>
+  <p>La legge della velocità in funzione del tempo, per un moto con accelerazione costante a e velocità iniziale v<sub>0</sub>, si ottiene dalla definizione di accelerazione media, risolvendo rispetto a v<sub>f</sub>.</p>
+  <p class="formula">v(t) = v<sub>0</sub> + a · t</p>
+  <p>Nel grafico velocità-tempo, questa legge è rappresentata da una retta, la cui pendenza corrisponde al valore dell'accelerazione: più la retta è inclinata, maggiore è l'accelerazione.</p>
+  <p><em>Esempio svolto:</em> un motociclino parte da fermo (v<sub>0</sub> = 0 m/s) con accelerazione costante a = 3 m/s<sup>2</sup>. Dopo 6 secondi la sua velocità sarà v(6) = 0 + 3 × 6 = 18 m/s.</p>
+
+  <p class="titolo-capitolo">La legge oraria del moto uniformemente accelerato</p>
+  <p>Per ricavare la posizione del corpo in funzione del tempo, ricordiamo che nel grafico velocità-tempo lo spostamento corrisponde all'area sotto la retta, come visto nel capitolo precedente. Nel caso del moto uniformemente accelerato questa area è quella di un trapezio (o di un triangolo, se v<sub>0</sub> = 0), e il calcolo porta alla seguente legge oraria.</p>
+  <p class="formula">x(t) = x<sub>0</sub> + v<sub>0</sub> · t + (1/2) · a · t<sup>2</sup></p>
+  <p>Si tratta di un'equazione di secondo grado in t: nel grafico spazio-tempo, il moto uniformemente accelerato è rappresentato non più da una retta, ma da una parabola.</p>
+  <p><em>Esempio svolto:</em> un corpo parte da x<sub>0</sub> = 0 m con velocità iniziale v<sub>0</sub> = 2 m/s e accelerazione costante a = 4 m/s<sup>2</sup>. La sua posizione dopo 3 secondi è x(3) = 0 + 2 × 3 + (1/2) × 4 × 3<sup>2</sup> = 6 + 2 × 9 = 6 + 18 = 24 m.</p>
+
+  <p class="titolo-capitolo">L'equazione che lega velocità e spostamento</p>
+  <p>Talvolta è utile una relazione tra velocità e spostamento che non contenga esplicitamente il tempo, ad esempio quando il tempo di percorrenza non è noto o non interessa. Combinando le due leggi precedenti (eliminando la variabile t) si ottiene questa terza equazione fondamentale del moto uniformemente accelerato.</p>
+  <p class="formula">v<sup>2</sup> = v<sub>0</sub><sup>2</sup> + 2 · a · Δx</p>
+  <p><em>Esempio svolto:</em> un'auto con velocità iniziale v<sub>0</sub> = 5 m/s accelera uniformemente con a = 2 m/s<sup>2</sup> per uno spostamento Δx = 24 m. La velocità finale si trova da v<sup>2</sup> = 5<sup>2</sup> + 2 × 2 × 24 = 25 + 96 = 121, da cui v = √121 = 11 m/s.</p>
+
+  <p class="titolo-capitolo">La caduta libera dei corpi</p>
+  <p>Un'applicazione fondamentale del moto uniformemente accelerato è la caduta libera, cioè il moto di un corpo lasciato cadere sotto l'azione della sola forza di gravità, trascurando la resistenza dell'aria. Galileo Galilei dimostrò sperimentalmente che, in assenza di attrito, tutti i corpi cadono con la stessa accelerazione, indipendentemente dalla loro massa.</p>
+  <p>Questa accelerazione, chiamata accelerazione di gravità e indicata con g, ha in prossimità della superficie terrestre un valore approssimativamente costante.</p>
+  <p class="formula">g ≈ 9,8 m/s<sup>2</sup></p>
+  <p>Le equazioni della caduta libera sono le stesse del moto uniformemente accelerato, sostituendo semplicemente l'accelerazione a con g (con verso diretto verso il basso). Se scegliamo l'asse y orientato verso il basso, con origine nel punto di partenza e v<sub>0</sub> = 0 (corpo lasciato cadere da fermo), le leggi diventano:</p>
+  <p class="formula">v(t) = g · t ,&nbsp;&nbsp; y(t) = (1/2) · g · t<sup>2</sup></p>
+  <p><em>Esempio svolto:</em> un sasso viene lasciato cadere da un ponte alto 20 m. Vogliamo sapere dopo quanto tempo tocca l'acqua. Dalla legge oraria: 20 = (1/2) × 9,8 × t<sup>2</sup>, da cui t<sup>2</sup> = 40 / 9,8 ≈ 4,08, e quindi t = √4,08 ≈ 2,02 s. La velocità di impatto è v = g · t = 9,8 × 2,02 ≈ 19,8 m/s.</p>
+
+  <p class="titolo-capitolo">Il lancio verticale verso l'alto</p>
+  <p>Un altro caso importante è quello di un corpo lanciato verticalmente verso l'alto con una certa velocità iniziale v<sub>0</sub>. In questo caso l'accelerazione di gravità è sempre diretta verso il basso, quindi rallenta il corpo durante la salita, lo ferma per un istante all'altezza massima, e poi lo fa ricadere accelerandolo verso il basso.</p>
+  <p>Scegliendo l'asse y orientato verso l'alto, con origine nel punto di lancio, l'accelerazione vale a = −g (negativa perché opposta al verso positivo scelto). Nel punto più alto della traiettoria la velocità è istantaneamente nulla: possiamo usare questa condizione per calcolare il tempo di salita e l'altezza massima raggiunta.</p>
+  <p><em>Esempio svolto:</em> una pallina viene lanciata verticalmente verso l'alto con velocità iniziale v<sub>0</sub> = 15 m/s. Il tempo di salita si trova imponendo v = 0 nella legge v(t) = v<sub>0</sub> − g·t: 0 = 15 − 9,8·t, da cui t = 15 / 9,8 ≈ 1,53 s. L'altezza massima si ottiene da v<sup>2</sup> = v<sub>0</sub><sup>2</sup> − 2g·h, ponendo v = 0: h = v<sub>0</sub><sup>2</sup> / (2g) = 15<sup>2</sup> / (2 × 9,8) = 225 / 19,6 ≈ 11,5 m.</p>
+</div>
+<!-- fine capitolo fisica 05 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis06.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

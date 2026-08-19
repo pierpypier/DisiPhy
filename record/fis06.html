@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 05</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 06: i moti nel piano: moto circolare e composizione dei moti -->
+<div id="capitolo-06-moti-nel-piano" class="capitolo-storia">
+  <p class="titolo-capitolo">06 - I moti nel piano: moto circolare e composizione dei moti - Classe 1</p>
+
+  <p class="titolo-capitolo">Dal moto rettilineo al moto nel piano</p>
+  <p>Nei capitoli precedenti abbiamo studiato il moto lungo una retta, descritto da una sola coordinata. Molti movimenti reali, però, avvengono su una traiettoria curva, contenuta in un piano: il moto di una giostra, il lancio di un pallone, il percorso di un satellite. Per descrivere questi moti servono due coordinate, x e y, e il linguaggio dei vettori introdotto nel capitolo 3 diventa indispensabile.</p>
+  <p>La posizione di un corpo nel piano si descrive con un vettore posizione r→, che va dall'origine del sistema di riferimento fino al punto in cui si trova il corpo. Anche la velocità e l'accelerazione, in questo contesto, sono grandezze vettoriali, con componenti lungo x e lungo y.</p>
+
+  <p class="titolo-capitolo">Il moto circolare uniforme</p>
+  <p>Il moto circolare uniforme è il moto di un corpo che percorre una traiettoria circolare con velocità di modulo costante. Nonostante il modulo della velocità non cambi, il moto non è "uniforme" nel senso di rettilineo: la direzione della velocità cambia continuamente, istante per istante, perché la velocità è sempre tangente alla circonferenza.</p>
+  <p>Per descrivere questo moto si introduce il periodo T, cioè il tempo impiegato dal corpo per completare un intero giro, e la frequenza f, cioè il numero di giri completati in un secondo; le due grandezze sono l'una il reciproco dell'altra.</p>
+  <p class="formula">f = 1 / T</p>
+  <p>Nel Sistema Internazionale il periodo si misura in secondi (s), mentre la frequenza si misura in hertz (Hz), dove 1 Hz corrisponde a un giro al secondo.</p>
+
+  <p class="titolo-capitolo">Velocità angolare e velocità tangenziale</p>
+  <p>Per descrivere la posizione di un corpo lungo la circonferenza è comodo usare l'angolo θ percorso, misurato in radianti, invece della distanza percorsa lungo l'arco. Si definisce quindi la velocità angolare ω come il rapporto tra l'angolo percorso e il tempo impiegato.</p>
+  <p class="formula">ω = Δθ / Δt = 2π / T</p>
+  <p>Nel Sistema Internazionale la velocità angolare si misura in radianti al secondo (rad/s). La velocità tangenziale (o velocità lineare) v, cioè il modulo della velocità con cui il corpo percorre effettivamente la circonferenza, è legata alla velocità angolare e al raggio r della traiettoria dalla relazione seguente.</p>
+  <p class="formula">v = ω · r</p>
+  <p><em>Esempio svolto:</em> un punto sul bordo di una ruota di raggio r = 0,5 m compie un giro completo in T = 2 s. La velocità angolare è ω = 2π / 2 = π ≈ 3,14 rad/s. La velocità tangenziale è v = ω · r = 3,14 × 0,5 ≈ 1,57 m/s.</p>
+
+  <p class="titolo-capitolo">L'accelerazione centripeta</p>
+  <p>Anche se nel moto circolare uniforme il modulo della velocità non cambia, la sua direzione varia continuamente: questo significa che il corpo è comunque accelerato, perché l'accelerazione, in generale, misura ogni variazione del vettore velocità, non solo del suo modulo.</p>
+  <p>Questa accelerazione, chiamata accelerazione centripeta, è diretta in ogni istante verso il centro della circonferenza (da qui il nome, che significa "che cerca il centro"), ed è responsabile del continuo cambiamento di direzione della velocità.</p>
+  <p class="formula">a<sub>c</sub> = v<sup>2</sup> / r = ω<sup>2</sup> · r</p>
+  <p><em>Esempio svolto:</em> riprendendo l'esempio precedente, con v ≈ 1,57 m/s e r = 0,5 m, l'accelerazione centripeta vale a<sub>c</sub> = 1,57<sup>2</sup> / 0,5 = 2,46 / 0,5 ≈ 4,93 m/s<sup>2</sup>.</p>
+
+  <p class="titolo-capitolo">Il moto circolare uniformemente accelerato</p>
+  <p>Quando anche il modulo della velocità tangenziale cambia nel tempo in modo uniforme (ad esempio una giostra che sta accelerando), si parla di moto circolare uniformemente accelerato. Si introduce allora l'accelerazione angolare α, definita come la variazione della velocità angolare nell'unità di tempo.</p>
+  <p class="formula">α = Δω / Δt</p>
+  <p>In questo caso il corpo possiede contemporaneamente due componenti di accelerazione: l'accelerazione centripeta, sempre diretta verso il centro, e l'accelerazione tangenziale a<sub>t</sub> = α · r, diretta come la velocità (tangente alla circonferenza), responsabile della variazione del modulo della velocità.</p>
+
+  <p class="titolo-capitolo">Il moto parabolico: composizione di due moti</p>
+  <p>Un'importante applicazione del moto nel piano è il moto di un proiettile lanciato con una velocità iniziale che ha sia una componente orizzontale sia una componente verticale, come una palla da calcio calciata "a effetto" o un pallone lanciato in una traiettoria curva.</p>
+  <p>Il principio fondamentale, dovuto anch'esso a Galileo, è che il moto nelle due direzioni x e y può essere studiato separatamente e indipendentemente, e poi ricomposto: lungo l'orizzontale (x) il moto è rettilineo uniforme, perché non ci sono forze orizzontali (trascurando l'attrito dell'aria); lungo la verticale (y) il moto è uniformemente accelerato, a causa della forza di gravità.</p>
+  <p class="formula">x(t) = x<sub>0</sub> + v<sub>0x</sub> · t ,&nbsp;&nbsp; y(t) = y<sub>0</sub> + v<sub>0y</sub> · t − (1/2) · g · t<sup>2</sup></p>
+  <p>La composizione di questi due moti indipendenti dà origine a una traiettoria a forma di parabola, da cui il nome "moto parabolico".</p>
+  <p><em>Esempio svolto:</em> una pallina viene lanciata orizzontalmente (v<sub>0y</sub> = 0) da un tavolo alto 1,25 m, con velocità orizzontale v<sub>0x</sub> = 2 m/s. Vogliamo sapere dopo quanto tempo tocca il pavimento e a che distanza orizzontale dal tavolo. Dal moto verticale: 1,25 = (1/2) × 9,8 × t<sup>2</sup>, da cui t<sup>2</sup> = 2,5 / 9,8 ≈ 0,255, quindi t ≈ 0,505 s. La distanza orizzontale percorsa è x = v<sub>0x</sub> · t = 2 × 0,505 ≈ 1,01 m.</p>
+</div>
+<!-- fine capitolo fisica 06 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis07.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 03</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 03: vettori e scalari -->
+<div id="capitolo-03-vettori-scalari" class="capitolo-storia">
+  <p class="titolo-capitolo">03 - Vettori e scalari - Classe 1</p>
+
+  <p class="titolo-capitolo">Grandezze scalari e grandezze vettoriali</p>
+  <p>Non tutte le grandezze fisiche si comportano allo stesso modo quando si tratta di sommarle o di descriverle completamente. Alcune grandezze, dette grandezze scalari, sono definite in modo completo da un semplice numero (accompagnato dalla sua unità di misura): la massa di un corpo, la temperatura di una stanza, il tempo impiegato per un tragitto sono tutti esempi di grandezze scalari.</p>
+  <p>Altre grandezze, invece, per essere descritte completamente hanno bisogno non solo di un valore numerico, ma anche di una direzione e di un verso: queste si chiamano grandezze vettoriali. Uno spostamento, una velocità, una forza sono grandezze vettoriali: non basta dire "una forza di 10 N" per descriverla completamente, bisogna anche specificare in quale direzione e verso agisce.</p>
+  <p>Pensiamo a due automobili che si muovono entrambe a 50 km/h: se una viaggia verso nord e l'altra verso sud, hanno la stessa velocità in termini di valore numerico (la stessa "rapidità"), ma stanno andando in direzioni opposte. Per descrivere correttamente il loro movimento serve quindi un ente matematico più ricco del semplice numero: il vettore.</p>
+
+  <p class="titolo-capitolo">Rappresentazione dei vettori</p>
+  <p>Un vettore si rappresenta graficamente con una freccia, cioè un segmento orientato. La lunghezza della freccia, disegnata in scala, rappresenta il modulo (o intensità) del vettore, cioè il suo valore numerico; la retta su cui giace la freccia rappresenta la direzione; la punta della freccia indica il verso.</p>
+  <p>Un vettore si indica solitamente con una lettera sormontata da una freccia, come v→, oppure in grassetto come <strong>v</strong>. Il modulo del vettore si indica con la stessa lettera senza freccia, oppure racchiudendo il vettore tra barre: |v→|.</p>
+  <p>Due vettori sono uguali se hanno lo stesso modulo, la stessa direzione e lo stesso verso, anche se sono disegnati partendo da punti diversi del piano: ciò che conta per l'uguaglianza tra vettori non è la posizione del punto di applicazione, ma solo le tre caratteristiche appena descritte.</p>
+
+  <p class="titolo-capitolo">La somma di vettori: metodo punta-coda</p>
+  <p>Per sommare due grandezze scalari basta sommare i loro valori numerici: 3 kg + 2 kg = 5 kg. Per sommare due vettori, invece, non è sufficiente sommare i moduli, perché bisogna tenere conto anche delle direzioni e dei versi.</p>
+  <p>Un metodo grafico semplice per sommare due vettori a→ e b→ è il metodo punta-coda: si disegna il primo vettore a→, poi si disegna il secondo vettore b→ facendo partire la sua coda dalla punta di a→. Il vettore somma s→ = a→ + b→ è quello che va dalla coda del primo vettore alla punta del secondo.</p>
+  <p>Un metodo equivalente, molto usato quando i due vettori hanno la stessa origine, è il metodo del parallelogramma: si costruisce un parallelogramma avente i due vettori come lati adiacenti, e il vettore somma corrisponde alla diagonale del parallelogramma che parte dall'origine comune.</p>
+  <p><em>Esempio svolto:</em> due spostamenti successivi, a→ di modulo 4 m verso est e b→ di modulo 3 m verso nord, sono tra loro perpendicolari. Con il metodo punta-coda, il vettore somma va dal punto di partenza al punto di arrivo, e forma con a→ e b→ un triangolo rettangolo: il modulo dello spostamento totale si calcola quindi con il teorema di Pitagora, che vedremo nel dettaglio più avanti.</p>
+
+  <p class="titolo-capitolo">Somma di vettori con il metodo cartesiano</p>
+  <p>Un metodo più preciso e adatto ai calcoli numerici consiste nello scomporre ogni vettore nelle sue componenti cartesiane, cioè nelle sue proiezioni lungo gli assi x e y di un sistema di riferimento. Un vettore v→ con modulo v e che forma un angolo θ con l'asse x ha componenti:</p>
+  <p class="formula">v<sub>x</sub> = v · cos θ ,&nbsp;&nbsp; v<sub>y</sub> = v · sin θ</p>
+  <p>Per sommare due o più vettori con questo metodo, si sommano separatamente tutte le componenti lungo x e tutte le componenti lungo y, ottenendo le componenti del vettore somma.</p>
+  <p class="formula">s<sub>x</sub> = a<sub>x</sub> + b<sub>x</sub> ,&nbsp;&nbsp; s<sub>y</sub> = a<sub>y</sub> + b<sub>y</sub></p>
+  <p>Il modulo del vettore somma si ricava poi dalle sue componenti applicando il teorema di Pitagora, mentre la direzione si ricava dalla funzione tangente.</p>
+  <p class="formula">s = √(s<sub>x</sub><sup>2</sup> + s<sub>y</sub><sup>2</sup>) ,&nbsp;&nbsp; θ = arctan(s<sub>y</sub> / s<sub>x</sub>)</p>
+  <p><em>Esempio svolto:</em> sommiamo i due vettori a→ = 4 m (est, lungo x) e b→ = 3 m (nord, lungo y), già visti nell'esempio precedente. Qui a<sub>x</sub> = 4 m, a<sub>y</sub> = 0 m, b<sub>x</sub> = 0 m, b<sub>y</sub> = 3 m. Le componenti del vettore somma sono s<sub>x</sub> = 4 + 0 = 4 m e s<sub>y</sub> = 0 + 3 = 3 m. Il modulo vale s = √(4<sup>2</sup> + 3<sup>2</sup>) = √(16 + 9) = √25 = 5 m.</p>
+
+  <p class="titolo-capitolo">Il prodotto di un vettore per uno scalare</p>
+  <p>Moltiplicare un vettore v→ per un numero scalare k produce un nuovo vettore, con la stessa direzione del vettore originale, ma con modulo pari a |k| volte il modulo di v→. Se k è positivo il verso rimane invariato, se k è negativo il verso si inverte.</p>
+  <p class="formula">|k · v→| = |k| · |v→|</p>
+  <p>Ad esempio, se v→ ha modulo 6 m/s, il vettore 2v→ ha modulo 12 m/s nella stessa direzione e verso, mentre il vettore −0,5v→ ha modulo 3 m/s ma verso opposto rispetto a v→.</p>
+
+  <p class="titolo-capitolo">Il vettore opposto e la differenza tra vettori</p>
+  <p>Il vettore opposto di v→, indicato con −v→, è il vettore che ha lo stesso modulo e la stessa direzione di v→, ma verso opposto. La sottrazione tra due vettori si definisce a partire dal vettore opposto: sottrarre un vettore equivale a sommare il suo opposto.</p>
+  <p class="formula">a→ − b→ = a→ + (−b→)</p>
+  <p>Graficamente, per sottrarre b→ da a→ con il metodo punta-coda, basta quindi invertire il verso di b→ (ottenendo −b→) e sommarlo ad a→ come visto in precedenza.</p>
+  <p><em>Esempio svolto:</em> due vettori a→ e b→ hanno componenti a<sub>x</sub> = 5 m, a<sub>y</sub> = 2 m e b<sub>x</sub> = 3 m, b<sub>y</sub> = 4 m. La differenza a→ − b→ ha componenti (5 − 3) m = 2 m lungo x e (2 − 4) m = −2 m lungo y. Il modulo del vettore differenza vale √(2<sup>2</sup> + (−2)<sup>2</sup>) = √8 ≈ 2,83 m.</p>
+</div>
+<!-- fine capitolo fisica 03 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis04.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

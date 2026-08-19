@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 01</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 01: il metodo scientifico e le grandezze fisiche -->
+<div id="capitolo-01-metodo-scientifico" class="capitolo-storia">
+  <p class="titolo-capitolo">01 - Il metodo scientifico e le grandezze fisiche - Classe 1</p>
+
+  <p class="titolo-capitolo">Che cos'è la fisica</p>
+  <p>La fisica è la scienza che studia i fenomeni naturali cercando di descriverli e prevederli attraverso leggi matematiche. Quando lasciamo cadere un oggetto, quando accendiamo una lampadina o quando osserviamo il moto delle stelle, stiamo osservando fenomeni fisici, cioè eventi che seguono regole precise, valide sempre e ovunque, che il fisico cerca di scoprire e formulare.</p>
+  <p>A differenza di altre discipline, la fisica non si accontenta di descrivere ciò che accade: cerca di capire perché accade, costruendo modelli semplificati della realtà che permettano di fare previsioni verificabili con l'esperienza.</p>
+
+  <p class="titolo-capitolo">Il metodo scientifico sperimentale</p>
+  <p>Il metodo scientifico, introdotto da Galileo Galilei nel Seicento, è il procedimento con cui la fisica (e le scienze in generale) costruisce conoscenza affidabile. Non si basa su opinioni o su ciò che "sembra ovvio", ma su osservazioni ed esperimenti controllati e ripetibili.</p>
+  <p>Il metodo si articola in alcune fasi fondamentali. Prima si osserva un fenomeno naturale e si raccolgono dati; poi si formula un'ipotesi, cioè una possibile spiegazione del fenomeno; quindi si progetta un esperimento per verificare se l'ipotesi è corretta, ripetendo la misura più volte in condizioni controllate; infine, se i risultati confermano l'ipotesi in modo ripetibile, questa può diventare una legge fisica, espressa il più delle volte con una formula matematica.</p>
+  <p>Una caratteristica fondamentale del metodo scientifico è che una teoria deve essere falsificabile: deve cioè essere possibile, almeno in linea di principio, immaginare un esperimento che la smentisca. Se nessun esperimento potesse mai contraddirla, non si tratterebbe di una teoria scientifica.</p>
+
+  <p class="titolo-capitolo">Le grandezze fisiche e la loro misura</p>
+  <p>Una grandezza fisica è una qualsiasi proprietà di un corpo o di un fenomeno che può essere misurata, cioè confrontata con un campione di riferimento chiamato unità di misura, ottenendo come risultato un numero. La lunghezza di un tavolo, la massa di una mela, il tempo impiegato per percorrere una strada sono tutte grandezze fisiche.</p>
+  <p>Non tutte le proprietà sono grandezze fisiche: la bellezza di un tramonto o la simpatia di una persona non possono essere misurate con uno strumento e un'unità di misura condivisa, quindi non rientrano nello studio della fisica.</p>
+  <p>Misurare una grandezza significa confrontarla con un'unità di misura scelta come riferimento e stabilire quante volte quell'unità è contenuta nella grandezza da misurare. Ad esempio, misurare la lunghezza di un banco con un metro significa vedere quante volte il metro (o una sua frazione) è contenuto in quella lunghezza.</p>
+
+  <p class="titolo-capitolo">Il Sistema Internazionale di unità di misura</p>
+  <p>Per poter confrontare le misure fatte da persone diverse, in luoghi e tempi diversi, è indispensabile utilizzare un sistema di unità di misura condiviso a livello internazionale: il Sistema Internazionale, indicato con la sigla SI.</p>
+  <p>Il Sistema Internazionale definisce sette grandezze fondamentali, dalle quali si possono ricavare tutte le altre. Le grandezze fondamentali che utilizzeremo più spesso in questo corso sono la lunghezza, la massa, il tempo, la temperatura e l'intensità di corrente elettrica.</p>
+  <p>Le rispettive unità di misura fondamentali sono il metro (m) per la lunghezza, il chilogrammo (kg) per la massa, il secondo (s) per il tempo, il kelvin (K) per la temperatura e l'ampere (A) per l'intensità di corrente.</p>
+  <p>Accanto alle grandezze fondamentali esistono le grandezze derivate, che si ottengono combinando tra loro le grandezze fondamentali attraverso operazioni matematiche. Ad esempio, la velocità è una grandezza derivata perché si ottiene dividendo una lunghezza per un tempo.</p>
+  <p class="formula">v = s / t → [v] = m / s</p>
+  <p>Un altro esempio è l'area, che si ottiene moltiplicando due lunghezze, e la cui unità di misura nel SI è il metro quadrato (m<sup>2</sup>); oppure il volume, che si ottiene moltiplicando tre lunghezze, con unità di misura il metro cubo (m<sup>3</sup>).</p>
+
+  <p class="titolo-capitolo">I multipli e i sottomultipli delle unità di misura</p>
+  <p>Spesso le grandezze che misuriamo sono molto più grandi o molto più piccole dell'unità di misura fondamentale: la distanza tra due città si misura comodamente in chilometri, mentre lo spessore di un capello si misura in millimetri o micrometri. Per questo motivo si usano i multipli e i sottomultipli, ottenuti moltiplicando o dividendo l'unità fondamentale per potenze di 10.</p>
+  <p>I prefissi più comuni sono: chilo (k) che indica 10<sup>3</sup>, cioè mille volte l'unità; centi (c) che indica 10<sup>−2</sup>, cioè un centesimo; milli (m) che indica 10<sup>−3</sup>, cioè un millesimo; micro (μ) che indica 10<sup>−6</sup>, cioè un milionesimo.</p>
+  <p>Ad esempio, 1 km equivale a 1000 m, cioè 1 km = 10<sup>3</sup> m; mentre 1 mm equivale a 0,001 m, cioè 1 mm = 10<sup>−3</sup> m.</p>
+  <p><em>Esempio svolto:</em> convertiamo 2,5 km in metri e 350 cm in metri. Per la prima conversione: 2,5 km = 2,5 × 10<sup>3</sup> m = 2500 m. Per la seconda conversione, ricordando che 1 cm = 10<sup>−2</sup> m: 350 cm = 350 × 10<sup>−2</sup> m = 3,5 m.</p>
+
+  <p class="titolo-capitolo">La notazione scientifica</p>
+  <p>Quando i numeri da scrivere sono molto grandi o molto piccoli, risulta scomodo scriverli con tutte le loro cifre: si preferisce allora la notazione scientifica, che esprime un numero come prodotto di un numero decimale compreso tra 1 e 10 per una potenza di 10.</p>
+  <p class="formula">N = a × 10<sup>n</sup>, con 1 ≤ a &lt; 10</p>
+  <p>Ad esempio, la distanza media Terra-Sole, pari a 150000000 km, si scrive in notazione scientifica come 1,5 × 10<sup>8</sup> km. Il raggio di un atomo, pari a circa 0,0000000001 m, si scrive invece come 1 × 10<sup>−10</sup> m.</p>
+  <p><em>Esempio svolto:</em> scriviamo in notazione scientifica il numero 47500. Spostiamo la virgola di 4 posizioni verso sinistra, ottenendo 4,75, e moltiplichiamo per 10 elevato al numero di posizioni spostate: 47500 = 4,75 × 10<sup>4</sup>.</p>
+
+  <p class="titolo-capitolo">Gli errori di misura e le cifre significative</p>
+  <p>Ogni misura sperimentale è affetta da un certo grado di incertezza, dovuta alla precisione limitata degli strumenti utilizzati e all'abilità di chi effettua la misura: per questo motivo non esiste una misura "perfetta", ma solo misure più o meno precise.</p>
+  <p>Le cifre significative di una misura sono tutte le cifre note con certezza più l'ultima cifra incerta, stimata. Ad esempio, se un righello permette di leggere 12,4 cm con l'ultima cifra stimata, la misura ha tre cifre significative.</p>
+  <p>Quando si effettuano calcoli con più misure, il risultato non può avere più cifre significative della misura meno precisa tra quelle utilizzate, perché non avrebbe senso esprimere il risultato con una precisione maggiore di quella dei dati di partenza.</p>
+  <p><em>Esempio svolto:</em> un blocco di metallo ha lati misurati come 4,20 cm e 2,5 cm (quest'ultima con due sole cifre significative). L'area si calcola come 4,20 cm × 2,5 cm = 10,5 cm<sup>2</sup>, e va arrotondata a due cifre significative, cioè 11 cm<sup>2</sup>, in accordo con la misura meno precisa.</p>
+</div>
+<!-- fine capitolo fisica 01 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis02.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>
