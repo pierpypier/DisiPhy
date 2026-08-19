@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 33</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 33: fenomeni magnetici e campo magnetico -->
+<div id="capitolo-33-fenomeni-magnetici" class="capitolo-storia">
+  <p class="titolo-capitolo">33 - Fenomeni magnetici e campo magnetico - Classe 4</p>
+
+  <p class="titolo-capitolo">I fenomeni magnetici naturali</p>
+  <p>Fin dall'antichità si conosceva l'esistenza di alcuni minerali, come la magnetite, capaci di attrarre spontaneamente piccoli oggetti di ferro: questi materiali, chiamati magneti naturali, presentano fenomeni analoghi, ma non identici, a quelli elettrici studiati nei capitoli precedenti. Ogni magnete possiede due poli, convenzionalmente chiamati polo nord e polo sud, e poli dello stesso tipo si respingono, mentre poli di tipo opposto si attraggono, esattamente come accade per le cariche elettriche.</p>
+  <p>Esiste però una differenza fondamentale rispetto all'elettricità: mentre è possibile isolare una singola carica elettrica positiva o negativa, non è mai stato possibile isolare un singolo polo magnetico (un "monopolo magnetico"). Se si spezza un magnete in due parti, si ottengono sempre due nuovi magneti, ciascuno dotato di un proprio polo nord e di un proprio polo sud, e non due monopoli separati.</p>
+
+  <p class="titolo-capitolo">Il campo magnetico</p>
+  <p>In analogia con il campo elettrico, si introduce il concetto di campo magnetico, indicato con B→, per descrivere l'effetto che un magnete (o, come vedremo, una corrente elettrica) produce nello spazio circostante. Il campo magnetico è una grandezza vettoriale, e nel Sistema Internazionale si misura in tesla (T), un'unità piuttosto grande per i fenomeni di uso quotidiano, per cui si usa spesso il sottomultiplo microtesla (μT) o il gauss (unità non SI, con 1 T = 10<sup>4</sup> gauss).</p>
+  <p>Le linee di campo magnetico, analogamente alle linee di campo elettrico, escono convenzionalmente dal polo nord del magnete ed entrano nel polo sud, all'esterno del magnete stesso; a differenza delle linee di campo elettrico, però, le linee di campo magnetico non hanno mai un inizio o una fine, ma formano sempre percorsi chiusi, proseguendo anche all'interno del materiale magnetico, dal polo sud verso il polo nord.</p>
+
+  <p class="titolo-capitolo">Il campo magnetico terrestre</p>
+  <p>La Terra stessa si comporta come un enorme magnete naturale, generando un campo magnetico che si estende nello spazio circostante il pianeta, ed è responsabile del funzionamento della bussola, uno strumento costituito da un ago magnetico libero di ruotare, che si orienta spontaneamente lungo la direzione del campo magnetico terrestre locale.</p>
+  <p>È interessante notare che, per convenzione storica, il polo dell'ago magnetico che punta verso il nord geografico della Terra è chiamato "polo nord" dell'ago: questo significa, per coerenza con la regola dell'attrazione tra poli opposti, che il polo magnetico situato in prossimità del polo nord geografico terrestre si comporta, dal punto di vista magnetico, come un polo sud.</p>
+
+  <p class="titolo-capitolo">L'esperimento di Oersted: il legame tra elettricità e magnetismo</p>
+  <p>Un momento fondamentale nella storia della fisica fu la scoperta, nel 1820, del fisico danese Hans Christian Oersted, il quale osservò che un ago magnetico posto vicino a un filo percorso da corrente elettrica subisce una deviazione dalla sua posizione di equilibrio naturale (allineata con il campo magnetico terrestre): questo dimostrò per la prima volta un legame diretto tra i fenomeni elettrici e i fenomeni magnetici, fino ad allora considerati completamente indipendenti.</p>
+  <p>Da questa scoperta nacque l'elettromagnetismo, la parte della fisica che studia congiuntamente i fenomeni elettrici e magnetici, riconoscendo che una corrente elettrica genera sempre un campo magnetico nello spazio circostante, e che, come vedremo nel capitolo dedicato all'induzione elettromagnetica, anche un campo magnetico variabile può generare una corrente elettrica.</p>
+
+  <p class="titolo-capitolo">Il campo magnetico generato da un filo rettilineo percorso da corrente</p>
+  <p>Un filo conduttore rettilineo, molto lungo, percorso da una corrente di intensità i, genera nello spazio circostante un campo magnetico le cui linee di campo sono circonferenze concentriche al filo, giacenti su piani perpendicolari al filo stesso: il verso di queste linee di campo si determina con la regola della mano destra, disponendo il pollice nel verso della corrente, e le altre dita indicano il verso di avvolgimento delle linee di campo.</p>
+  <p>L'intensità del campo magnetico generato da un filo rettilineo, a una distanza r dal filo, si calcola con la legge di Biot-Savart.</p>
+  <p class="formula">B = μ<sub>0</sub> · i / (2π · r)</p>
+  <p>dove μ<sub>0</sub> (si legge "mu zero") è la permeabilità magnetica del vuoto, una costante fondamentale che vale μ<sub>0</sub> ≈ 4π × 10<sup>−7</sup> T·m/A.</p>
+  <p><em>Esempio svolto:</em> un filo rettilineo è percorso da una corrente i = 5 A. Vogliamo calcolare l'intensità del campo magnetico generato a distanza r = 0,1 m dal filo. Applicando la formula: B = (4π×10<sup>−7</sup> × 5) / (2π × 0,1) = (2×10<sup>−6</sup>×π) / (0,2×π) = 2×10<sup>−6</sup> / 0,2 = 1×10<sup>−5</sup> T, cioè 10 μT.</p>
+
+  <p class="titolo-capitolo">Il campo magnetico di una spira e di un solenoide</p>
+  <p>Un altro caso importante è quello di una spira circolare percorsa da corrente, che genera un campo magnetico particolarmente intenso nel proprio centro, diretto perpendicolarmente al piano della spira, con un verso determinato anch'esso dalla regola della mano destra (avvolgendo le dita nel verso della corrente nella spira, il pollice indica il verso del campo al centro).</p>
+  <p class="formula">B<sub>centro spira</sub> = μ<sub>0</sub> · i / (2 · r)</p>
+  <p>dove r è il raggio della spira. Un solenoide è invece un avvolgimento di filo conduttore a forma di elica, costituito da molte spire circolari affiancate: al suo interno si genera un campo magnetico praticamente uniforme, con linee di campo parallele all'asse del solenoide, particolarmente intenso rispetto a quello di una singola spira, grazie alla somma dei contributi di tutte le spire che lo compongono.</p>
+  <p class="formula">B<sub>interno solenoide</sub> = μ<sub>0</sub> · n · i</p>
+  <p>dove n è il numero di spire per unità di lunghezza del solenoide (cioè il numero totale di spire diviso per la lunghezza del solenoide). Il campo magnetico generato da un solenoide percorso da corrente è del tutto analogo, all'esterno, a quello generato da una calamita a forma di barra, con un polo nord e un polo sud ben definiti alle due estremità: per questo motivo un solenoide percorso da corrente viene anche chiamato elettromagnete.</p>
+</div>
+<!-- fine capitolo fisica 33 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis34.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

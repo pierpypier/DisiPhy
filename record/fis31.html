@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 31</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 31: la corrente elettrica continua -->
+<div id="capitolo-31-corrente-elettrica-continua" class="capitolo-storia">
+  <p class="titolo-capitolo">31 - La corrente elettrica continua - Classe 4</p>
+
+  <p class="titolo-capitolo">Il concetto di corrente elettrica</p>
+  <p>Fino a questo capitolo abbiamo studiato le cariche elettriche in condizioni statiche, cioè ferme. Quando invece le cariche elettriche si muovono in modo ordinato all'interno di un conduttore, si genera una corrente elettrica: questo avviene, tipicamente, collegando un conduttore ai due poli di un generatore (come una pila), che mantiene una differenza di potenziale costante tra le sue estremità.</p>
+  <p>L'intensità di corrente elettrica, indicata con i (o I), è definita come la quantità di carica elettrica che attraversa la sezione di un conduttore nell'unità di tempo.</p>
+  <p class="formula">i = ΔQ / Δt</p>
+  <p>Nel Sistema Internazionale l'intensità di corrente è una grandezza fondamentale, e si misura in ampere (A), dove 1 A corrisponde al passaggio di una carica di 1 coulomb in un tempo di 1 secondo: 1 A = 1 C/s.</p>
+  <p><em>Esempio svolto:</em> in un conduttore attraversa una carica ΔQ = 12 C in un intervallo di tempo Δt = 4 s. L'intensità di corrente vale i = 12 / 4 = 3 A.</p>
+
+  <p class="titolo-capitolo">Il verso convenzionale della corrente</p>
+  <p>Nei conduttori metallici, i portatori di carica che effettivamente si muovono sono gli elettroni di conduzione, dotati di carica negativa, che si spostano dal polo negativo verso il polo positivo del generatore all'interno del circuito esterno. Per motivi storici (la natura della carica dell'elettrone fu scoperta solo successivamente alla convenzione già adottata), si è stabilito che il verso convenzionale della corrente elettrica sia quello del moto delle cariche positive, cioè dal polo positivo al polo negativo del generatore, nel circuito esterno.</p>
+  <p>Questa convenzione, pur essendo opposta al reale verso di moto degli elettroni nei metalli, non crea alcun problema nei calcoli e nelle leggi dei circuiti elettrici, poiché è semplicemente una convenzione di segno, universalmente adottata.</p>
+
+  <p class="titolo-capitolo">La prima legge di Ohm</p>
+  <p>Il fisico tedesco Georg Simon Ohm scoprì sperimentalmente, all'inizio dell'Ottocento, che per molti conduttori (detti per questo motivo conduttori ohmici), a temperatura costante, l'intensità di corrente che li attraversa è direttamente proporzionale alla differenza di potenziale applicata ai loro estremi. Questa relazione, nota come prima legge di Ohm, si esprime introducendo una costante di proporzionalità caratteristica del conduttore, la resistenza elettrica R.</p>
+  <p class="formula">ΔV = R · i</p>
+  <p>Nel Sistema Internazionale la resistenza elettrica si misura in ohm (Ω), dove 1 Ω corrisponde alla resistenza di un conduttore che, sottoposto a una differenza di potenziale di 1 V, è attraversato da una corrente di 1 A: 1 Ω = 1 V/A. La resistenza rappresenta, in un certo senso, l'opposizione che il conduttore offre al passaggio della corrente elettrica: a parità di tensione applicata, un conduttore con resistenza maggiore è attraversato da una corrente minore.</p>
+  <p><em>Esempio svolto:</em> un conduttore ha resistenza R = 15 Ω ed è collegato a un generatore con differenza di potenziale ΔV = 6 V. L'intensità di corrente che lo attraversa vale i = ΔV / R = 6 / 15 = 0,4 A.</p>
+
+  <p class="titolo-capitolo">La seconda legge di Ohm</p>
+  <p>La seconda legge di Ohm mette in relazione la resistenza elettrica di un conduttore filiforme (ad esempio un filo metallico) con le sue caratteristiche geometriche e con il materiale di cui è costituito, mostrando che la resistenza è direttamente proporzionale alla lunghezza del conduttore e inversamente proporzionale alla sua sezione trasversale.</p>
+  <p class="formula">R = ρ · L / S</p>
+  <p>dove L è la lunghezza del conduttore, S è l'area della sezione trasversale, e ρ (rho) è la resistività elettrica del materiale, una proprietà caratteristica di ogni sostanza, che nel SI si misura in Ω·m. I metalli, come il rame o l'argento, sono caratterizzati da valori di resistività molto bassi (buoni conduttori), mentre materiali isolanti, come la gomma o il vetro, hanno valori di resistività estremamente elevati.</p>
+  <p><em>Esempio svolto:</em> un filo di rame (ρ<sub>rame</sub> ≈ 1,7×10<sup>−8</sup> Ω·m) è lungo L = 20 m e ha sezione S = 2×10<sup>−6</sup> m<sup>2</sup>. La sua resistenza vale R = 1,7×10<sup>−8</sup> × 20 / 2×10<sup>−6</sup> = 3,4×10<sup>−7</sup> / 2×10<sup>−6</sup> = 0,17 Ω.</p>
+
+  <p class="titolo-capitolo">La dipendenza della resistività dalla temperatura</p>
+  <p>La resistività elettrica di un conduttore metallico non è una costante assoluta, ma dipende dalla temperatura: nella maggior parte dei metalli, la resistività aumenta all'aumentare della temperatura, poiché l'agitazione termica maggiore degli atomi del reticolo cristallino ostacola più efficacemente il moto ordinato degli elettroni di conduzione.</p>
+  <p class="formula">ρ(T) = ρ<sub>0</sub> · [1 + α · (T − T<sub>0</sub>)]</p>
+  <p>dove ρ<sub>0</sub> è la resistività a una temperatura di riferimento T<sub>0</sub> (solitamente 20 °C), e α è il coefficiente termico di resistività, caratteristico del materiale. Questo fenomeno spiega, ad esempio, perché il filamento di una lampadina ad incandescenza, che raggiunge temperature molto elevate durante il funzionamento, abbia una resistenza significativamente maggiore rispetto a quella misurata a temperatura ambiente.</p>
+
+  <p class="titolo-capitolo">La potenza elettrica: l'effetto Joule</p>
+  <p>Quando una corrente elettrica attraversa un conduttore dotato di resistenza, parte dell'energia elettrica viene dissipata sotto forma di calore, in un fenomeno noto come effetto Joule, dovuto alle continue collisioni tra gli elettroni di conduzione in movimento e gli atomi del reticolo cristallino del conduttore.</p>
+  <p>La potenza elettrica dissipata per effetto Joule in un conduttore, attraversato da una corrente i e sottoposto a una differenza di potenziale ΔV, si calcola con la seguente formula, che deriva dalla definizione generale di potenza (P = L/t) applicata al lavoro elettrico (L = q·ΔV).</p>
+  <p class="formula">P = ΔV · i</p>
+  <p>Combinando questa formula con la prima legge di Ohm (ΔV = R·i), si ottengono due espressioni equivalenti, particolarmente utili quando si conosce solo una delle due grandezze elettriche (corrente o tensione), oltre alla resistenza.</p>
+  <p class="formula">P = R · i<sup>2</sup> = ΔV<sup>2</sup> / R</p>
+  <p><em>Esempio svolto:</em> una resistenza R = 20 Ω è attraversata da una corrente i = 3 A. La potenza dissipata per effetto Joule vale P = R·i<sup>2</sup> = 20 × 3<sup>2</sup> = 20 × 9 = 180 W. Questo principio è alla base del funzionamento delle stufe elettriche, dei ferri da stiro e dei fornelli elettrici, che sfruttano l'effetto Joule per produrre calore.</p>
+</div>
+<!-- fine capitolo fisica 31 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis32.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

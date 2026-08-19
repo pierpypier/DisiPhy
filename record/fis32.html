@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 32</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 32: i circuiti elettrici e le leggi di kirchhoff -->
+<div id="capitolo-32-circuiti-kirchhoff" class="capitolo-storia">
+  <p class="titolo-capitolo">32 - I circuiti elettrici e le leggi di Kirchhoff - Classe 4</p>
+
+  <p class="titolo-capitolo">Gli elementi di un circuito elettrico</p>
+  <p>Un circuito elettrico è un percorso chiuso, costituito da uno o più generatori (come una pila, che fornisce l'energia necessaria a mantenere una differenza di potenziale), collegati tramite conduttori (i fili elettrici) a uno o più utilizzatori (come resistenze, lampadine o motori), che convertono l'energia elettrica in altre forme di energia (calore, luce, energia meccanica).</p>
+  <p>Un generatore ideale di tensione (o forza elettromotrice, indicata con la lettera greca ε) mantiene ai suoi capi una differenza di potenziale costante, indipendentemente dalla corrente che lo attraversa. Nei circuiti reali, ogni generatore possiede anche una piccola resistenza interna, che comporta una caduta di tensione proporzionale alla corrente erogata, ma nei problemi più semplici questa resistenza interna viene spesso trascurata.</p>
+
+  <p class="titolo-capitolo">I resistori in serie</p>
+  <p>Due o più resistori si dicono collegati in serie quando sono attraversati dalla stessa identica corrente, cioè quando sono disposti uno di seguito all'altro lungo un unico percorso, senza diramazioni intermedie. In un collegamento in serie, la differenza di potenziale totale ai capi dell'intera serie di resistori è uguale alla somma delle singole cadute di tensione su ciascun resistore.</p>
+  <p>Si può dimostrare che un insieme di resistori in serie è equivalente, dal punto di vista del circuito esterno, a un unico resistore, la cui resistenza equivalente è la somma delle singole resistenze.</p>
+  <p class="formula">R<sub>eq</sub> = R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub> + ...</p>
+  <p>La resistenza equivalente di un collegamento in serie è quindi sempre maggiore della più grande tra le singole resistenze coinvolte.</p>
+  <p><em>Esempio svolto:</em> tre resistori, R<sub>1</sub> = 10 Ω, R<sub>2</sub> = 15 Ω e R<sub>3</sub> = 25 Ω, sono collegati in serie a un generatore con ΔV = 100 V. La resistenza equivalente vale R<sub>eq</sub> = 10 + 15 + 25 = 50 Ω, e la corrente che percorre il circuito vale i = ΔV / R<sub>eq</sub> = 100 / 50 = 2 A, la stessa corrente che attraversa ciascuno dei tre resistori.</p>
+
+  <p class="titolo-capitolo">I resistori in parallelo</p>
+  <p>Due o più resistori si dicono collegati in parallelo quando sono sottoposti alla stessa identica differenza di potenziale ai loro capi, cioè quando sono collegati tra gli stessi due nodi del circuito, formando percorsi alternativi (diramazioni) per la corrente. In un collegamento in parallelo, la corrente totale che entra nel gruppo di resistori si suddivide tra i vari rami, in proporzione inversa alla resistenza di ciascun ramo.</p>
+  <p>La resistenza equivalente di un collegamento in parallelo si calcola sommando i reciproci delle singole resistenze, e poi calcolando il reciproco della somma ottenuta.</p>
+  <p class="formula">1 / R<sub>eq</sub> = 1/R<sub>1</sub> + 1/R<sub>2</sub> + 1/R<sub>3</sub> + ...</p>
+  <p>La resistenza equivalente di un collegamento in parallelo è quindi sempre minore della più piccola tra le singole resistenze coinvolte: aggiungere ulteriori rami in parallelo offre sempre nuovi percorsi alla corrente, riducendo la resistenza complessiva del sistema.</p>
+  <p><em>Esempio svolto:</em> due resistori, R<sub>1</sub> = 6 Ω e R<sub>2</sub> = 3 Ω, sono collegati in parallelo. La resistenza equivalente si trova da 1/R<sub>eq</sub> = 1/6 + 1/3 = 1/6 + 2/6 = 3/6 = 1/2, da cui R<sub>eq</sub> = 2 Ω. Per due soli resistori in parallelo esiste anche una formula diretta più rapida: R<sub>eq</sub> = (R<sub>1</sub>·R<sub>2</sub>) / (R<sub>1</sub>+R<sub>2</sub>) = (6×3)/(6+3) = 18/9 = 2 Ω, coerente con il risultato precedente.</p>
+
+  <p class="titolo-capitolo">La prima legge di Kirchhoff: la legge dei nodi</p>
+  <p>Quando un circuito diventa più complesso, con più diramazioni e più generatori, il semplice calcolo delle resistenze equivalenti serie e parallelo non è più sufficiente, ed è necessario ricorrere a due principi più generali, formulati dal fisico tedesco Gustav Kirchhoff, applicabili a qualsiasi circuito elettrico, per quanto complesso.</p>
+  <p>La prima legge di Kirchhoff, detta anche legge dei nodi, è una diretta conseguenza del principio di conservazione della carica elettrica: in ogni nodo di un circuito (cioè in ogni punto in cui si incontrano tre o più conduttori), la somma delle correnti entranti nel nodo è sempre uguale alla somma delle correnti uscenti dal nodo.</p>
+  <p class="formula">Σ i<sub>entranti</sub> = Σ i<sub>uscenti</sub></p>
+  <p>Questo principio garantisce che la carica elettrica non si accumuli mai in un nodo (in condizioni di corrente continua e stazionaria), poiché tutta la carica che entra in un nodo, in un dato intervallo di tempo, deve necessariamente uscire dallo stesso nodo.</p>
+  <p><em>Esempio svolto:</em> in un nodo di un circuito arrivano due correnti, i<sub>1</sub> = 5 A e i<sub>2</sub> = 3 A, e ne esce una terza corrente i<sub>3</sub>, oltre a nessun'altra diramazione. Applicando la legge dei nodi: i<sub>1</sub> + i<sub>2</sub> = i<sub>3</sub>, da cui i<sub>3</sub> = 5 + 3 = 8 A.</p>
+
+  <p class="titolo-capitolo">La seconda legge di Kirchhoff: la legge delle maglie</p>
+  <p>La seconda legge di Kirchhoff, detta anche legge delle maglie, è una diretta conseguenza del fatto che il campo elettrico è conservativo (come visto nel capitolo 30): percorrendo una qualsiasi maglia chiusa di un circuito (cioè un qualsiasi percorso chiuso all'interno del circuito), la somma algebrica di tutte le forze elettromotrici e di tutte le cadute di tensione sui resistori incontrati lungo il percorso è sempre nulla.</p>
+  <p class="formula">Σ ε<sub>i</sub> = Σ R<sub>i</sub> · i<sub>i</sub></p>
+  <p>Questa legge riflette il fatto che il potenziale elettrico è una funzione univocamente definita in ogni punto del circuito: percorrendo un cammino chiuso, si deve necessariamente tornare al valore di potenziale di partenza, indipendentemente dal percorso seguito, esattamente come già osservato per il lavoro delle forze conservative lungo un percorso chiuso.</p>
+  <p><em>Esempio svolto:</em> un generatore con forza elettromotrice ε = 24 V alimenta un circuito a maglia singola contenente due resistori in serie, R<sub>1</sub> = 8 Ω e R<sub>2</sub> = 4 Ω. Applicando la legge delle maglie: ε = R<sub>1</sub>·i + R<sub>2</sub>·i = (R<sub>1</sub>+R<sub>2</sub>)·i, da cui 24 = 12·i, e quindi i = 2 A. La caduta di tensione su ciascun resistore vale rispettivamente ΔV<sub>1</sub> = R<sub>1</sub>·i = 8×2 = 16 V e ΔV<sub>2</sub> = R<sub>2</sub>·i = 4×2 = 8 V, la cui somma (16 + 8 = 24 V) coincide correttamente con la forza elettromotrice del generatore.</p>
+
+  <p class="titolo-capitolo">Gli strumenti di misura in un circuito</p>
+  <p>Per misurare le grandezze elettriche in un circuito si utilizzano strumenti specifici, che devono essere inseriti nel circuito secondo modalità precise per non alterarne significativamente il funzionamento. L'amperometro, utilizzato per misurare l'intensità di corrente, deve essere collegato in serie nel ramo di circuito di cui si vuole misurare la corrente, e per questo motivo deve avere una resistenza interna molto piccola, per non introdurre una caduta di tensione significativa.</p>
+  <p>Il voltmetro, utilizzato per misurare la differenza di potenziale tra due punti, deve invece essere collegato in parallelo tra quei due punti, e per questo motivo deve avere una resistenza interna molto grande, in modo da non deviare una parte significativa della corrente del circuito attraverso lo strumento stesso, alterando le misure.</p>
+</div>
+<!-- fine capitolo fisica 32 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis33.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 30</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 30: il potenziale elettrico e la capacità -->
+<div id="capitolo-30-potenziale-elettrico-capacita" class="capitolo-storia">
+  <p class="titolo-capitolo">30 - Il potenziale elettrico e la capacità - Classe 4</p>
+
+  <p class="titolo-capitolo">La forza elettrica come forza conservativa</p>
+  <p>Come già anticipato per la forza gravitazionale nel capitolo 13, anche la forza elettrica (essendo anch'essa una forza centrale, che dipende solo dalla distanza tra le cariche) è una forza conservativa: il lavoro compiuto dalla forza elettrica per spostare una carica da un punto a un altro dipende solo dalle posizioni iniziale e finale, e non dal percorso seguito.</p>
+  <p>Essendo una forza conservativa, è possibile associare alla forza elettrica un'energia potenziale elettrica, indicata con U (o E<sub>p</sub>), in perfetta analogia con quanto già visto per l'energia potenziale gravitazionale.</p>
+
+  <p class="titolo-capitolo">L'energia potenziale elettrica</p>
+  <p>L'energia potenziale elettrica di un sistema formato da due cariche puntiformi q<sub>1</sub> e q<sub>2</sub>, poste a distanza r, si calcola con una formula del tutto analoga a quella dell'energia potenziale gravitazionale, ma senza il segno negativo, poiché la forza elettrica può essere sia attrattiva sia repulsiva.</p>
+  <p class="formula">U = k · (q<sub>1</sub> · q<sub>2</sub>) / r</p>
+  <p>Se le due cariche hanno lo stesso segno (forza repulsiva), l'energia potenziale è positiva, e tende a diminuire (fino a zero, a distanza infinita) se le cariche si allontanano; se le cariche hanno segno opposto (forza attrattiva), l'energia potenziale è negativa, e diminuisce ulteriormente (diventa più negativa) se le cariche si avvicinano.</p>
+
+  <p class="titolo-capitolo">Il potenziale elettrico</p>
+  <p>Così come il campo elettrico descrive la forza per unità di carica in un punto dello spazio, il potenziale elettrico V descrive l'energia potenziale elettrica per unità di carica, cioè il rapporto tra l'energia potenziale elettrica che avrebbe una carica di prova q<sub>0</sub>, posta in un dato punto, e il valore della carica di prova stessa.</p>
+  <p class="formula">V = U / q<sub>0</sub></p>
+  <p>Nel Sistema Internazionale il potenziale elettrico si misura in volt (V), dove 1 V = 1 J/C. A differenza del campo elettrico e della forza, il potenziale elettrico è una grandezza scalare, priva di direzione, il che ne rende spesso più semplice l'utilizzo nei calcoli.</p>
+  <p>Il potenziale elettrico generato da una carica puntiforme Q a distanza r si ottiene dividendo l'energia potenziale per la carica di prova, ottenendo una formula analoga a quella del campo elettrico, ma senza l'esponente al denominatore.</p>
+  <p class="formula">V = k · Q / r</p>
+
+  <p class="titolo-capitolo">La differenza di potenziale</p>
+  <p>Nella pratica, ciò che ha significato fisico misurabile non è tanto il valore assoluto del potenziale elettrico in un punto (che dipende da una scelta arbitraria del livello di riferimento, come già visto per l'energia potenziale gravitazionale), ma la differenza di potenziale tra due punti, spesso indicata con ΔV, o anche con il simbolo di tensione elettrica.</p>
+  <p>Il lavoro compiuto dalla forza elettrica per spostare una carica q da un punto A a un punto B è legato alla differenza di potenziale tra i due punti dalla seguente relazione.</p>
+  <p class="formula">L<sub>A→B</sub> = q · (V<sub>A</sub> − V<sub>B</sub>) = q · ΔV</p>
+  <p>Questa relazione è particolarmente importante perché la differenza di potenziale, comunemente chiamata anche "tensione" o "voltaggio", è la grandezza effettivamente misurata dagli strumenti elettrici comuni, come il voltmetro, ed è alla base del funzionamento dei circuiti elettrici che studieremo nei prossimi capitoli.</p>
+  <p><em>Esempio svolto:</em> una carica q = 3×10<sup>−6</sup> C si sposta tra due punti con differenza di potenziale ΔV = 12 V. Il lavoro compiuto dalla forza elettrica vale L = 3×10<sup>−6</sup> × 12 = 3,6×10<sup>−5</sup> J.</p>
+
+  <p class="titolo-capitolo">I condensatori e la capacità elettrica</p>
+  <p>Un condensatore è un dispositivo elettrico costituito da due conduttori (dette armature), separati da un materiale isolante (detto dielettrico, che può anche essere semplicemente aria o vuoto), utilizzato per immagazzinare energia elettrica sotto forma di cariche elettriche di segno opposto accumulate sulle due armature.</p>
+  <p>Quando un condensatore viene collegato a un generatore, le due armature acquistano cariche elettriche uguali in modulo ma di segno opposto, +Q e −Q, e tra di esse si stabilisce una differenza di potenziale ΔV. La capacità elettrica C del condensatore è definita come il rapporto tra la carica accumulata su un'armatura e la differenza di potenziale tra le armature stesse.</p>
+  <p class="formula">C = Q / ΔV</p>
+  <p>Nel Sistema Internazionale la capacità elettrica si misura in farad (F), dove 1 F = 1 C/V; trattandosi di un'unità molto grande per le applicazioni pratiche, si usano spesso i sottomultipli, come il microfarad (μF) o il picofarad (pF). La capacità di un condensatore dipende esclusivamente dalla sua geometria (forma e dimensioni delle armature, distanza tra loro) e dal tipo di dielettrico utilizzato, non dalla carica o dalla tensione applicate.</p>
+
+  <p class="titolo-capitolo">Il condensatore piano</p>
+  <p>Il caso più semplice e più studiato di condensatore è il condensatore piano, costituito da due armature piane e parallele, di area S ciascuna, poste a distanza d l'una dall'altra. La capacità di un condensatore piano, con vuoto (o aria) tra le armature, si calcola con la formula seguente.</p>
+  <p class="formula">C = ε<sub>0</sub> · S / d</p>
+  <p>dove ε<sub>0</sub> (si legge "epsilon zero") è la costante dielettrica del vuoto, ε<sub>0</sub> ≈ 8,85 × 10<sup>−12</sup> F/m. Se tra le armature è presente un materiale dielettrico diverso dal vuoto, la capacità aumenta di un fattore, detto costante dielettrica relativa del materiale, tipicamente maggiore di 1.</p>
+  <p><em>Esempio svolto:</em> un condensatore piano ha armature di area S = 0,02 m<sup>2</sup>, poste a distanza d = 1 mm = 0,001 m, con vuoto tra di esse. La sua capacità vale C = 8,85×10<sup>−12</sup> × 0,02 / 0,001 = 1,77×10<sup>−13</sup> / 0,001 = 1,77×10<sup>−10</sup> F, cioè circa 177 pF.</p>
+
+  <p class="titolo-capitolo">L'energia immagazzinata in un condensatore</p>
+  <p>Un condensatore carico immagazzina energia potenziale elettrica, associata al lavoro compiuto per accumulare le cariche sulle due armature, contro la forza repulsiva delle cariche già presenti. L'energia immagazzinata in un condensatore di capacità C, carico con una differenza di potenziale ΔV, si calcola con la formula seguente.</p>
+  <p class="formula">U = (1/2) · C · ΔV<sup>2</sup></p>
+  <p><em>Esempio svolto:</em> un condensatore di capacità C = 10 μF = 10×10<sup>−6</sup> F è caricato con una differenza di potenziale ΔV = 20 V. L'energia immagazzinata vale U = (1/2) × 10×10<sup>−6</sup> × 20<sup>2</sup> = 5×10<sup>−6</sup> × 400 = 2×10<sup>−3</sup> J, cioè 2 mJ.</p>
+</div>
+<!-- fine capitolo fisica 30 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis31.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>
