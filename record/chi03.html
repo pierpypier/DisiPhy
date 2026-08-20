@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 03</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 03: stati di aggregazione della materia -->
+<div id="capitolo-03-stati-aggregazione" class="capitolo-storia">
+  <p class="titolo-capitolo">03 - Stati di aggregazione della materia - Classe 1</p>
+
+  <p class="titolo-capitolo">I tre stati fisici della materia</p>
+  <p>Ogni sostanza, a seconda delle condizioni di temperatura e pressione in cui si trova, può presentarsi in uno dei tre stati fisici fondamentali: solido, liquido o aeriforme. Basta pensare all'acqua, che nella vita quotidiana incontriamo come ghiaccio (solido), come acqua liquida da bere, e come vapore acqueo che si libera da una pentola in ebollizione (aeriforme): si tratta sempre della stessa sostanza, H<sub>2</sub>O, ma organizzata in modi molto diversi.</p>
+  <p>Per spiegare le differenze tra i tre stati si utilizza il modello particellare della materia, secondo il quale ogni sostanza è costituita da particelle piccolissime (atomi, molecole o ioni, che studieremo nei prossimi capitoli) in continuo movimento, e le proprietà macroscopiche che osserviamo, come la forma o la capacità di scorrere, dipendono da come queste particelle sono disposte e da quanto sono libere di muoversi.</p>
+
+  <p class="titolo-capitolo">Lo stato solido</p>
+  <p>Nello stato solido le particelle sono disposte in modo molto ravvicinato e sono tenute insieme da forze di attrazione intense, che ne limitano fortemente il movimento: ogni particella può soltanto vibrare attorno a una posizione fissa, senza spostarsi liberamente rispetto alle particelle vicine. Per questo motivo un solido possiede una forma propria e un volume proprio, che non dipendono dal recipiente che lo contiene: un pezzo di ferro, o un cubetto di ghiaccio, mantengono la loro forma indipendentemente da dove vengono posti.</p>
+  <p>I solidi sono inoltre praticamente incomprimibili, cioè il loro volume non diminuisce in modo apprezzabile se si applica una pressione, proprio perché le particelle sono già disposte a distanza molto ravvicinata, e non c'è spazio libero significativo tra di esse da poter ridurre ulteriormente.</p>
+  <p>Molti solidi presentano una struttura ordinata e regolare, detta reticolo cristallino, in cui le particelle occupano posizioni fisse e ripetute nello spazio secondo uno schema geometrico preciso: il sale da cucina, lo zucchero e il quarzo sono esempi di solidi cristallini. Esistono anche solidi in cui le particelle non sono disposte secondo un ordine regolare, detti solidi amorfi, come il vetro comune.</p>
+
+  <p class="titolo-capitolo">Lo stato liquido</p>
+  <p>Nello stato liquido le particelle sono ancora vicine tra loro, e le forze di attrazione reciproca restano significative, ma non abbastanza intense da bloccarle in posizioni fisse: le particelle possono scorrere le une sulle altre, pur rimanendo a contatto. Per questo motivo un liquido possiede un volume proprio, ma non una forma propria, assumendo la forma del recipiente che lo contiene: l'acqua versata in un bicchiere assume la forma del bicchiere, mentre versata in una bottiglia assume la forma della bottiglia, pur mantenendo lo stesso volume.</p>
+  <p>Come i solidi, anche i liquidi sono poco comprimibili, poiché le particelle restano comunque a distanza ravvicinata: comprimere un liquido significherebbe avvicinare ulteriormente particelle già molto vicine tra loro, e questo richiede pressioni molto elevate per produrre variazioni di volume apprezzabili.</p>
+  <p>Un liquido presenta la proprietà di scorrere, detta fluidità, che dipende dalla facilità con cui le particelle riescono a muoversi le une rispetto alle altre: questa facilità di scorrimento è quantificata dalla viscosità, una grandezza che misura la resistenza interna di un liquido allo scorrimento. Un liquido molto viscoso, come il miele, scorre lentamente perché le forze di attrazione tra le sue particelle sono relativamente intense; un liquido poco viscoso, come l'acqua, scorre invece con molta facilità.</p>
+
+  <p class="titolo-capitolo">Lo stato aeriforme</p>
+  <p>Nello stato aeriforme le particelle sono molto distanti tra loro rispetto alle loro dimensioni, e le forze di attrazione reciproca sono praticamente trascurabili: ogni particella si muove quindi in modo disordinato e indipendente, occupando tutto lo spazio disponibile. Per questo motivo un aeriforme non possiede né forma propria né volume proprio, ma tende sempre a occupare interamente il recipiente che lo contiene, qualunque sia la sua forma o il suo volume: un profumo spruzzato in un angolo di una stanza, dopo un certo tempo, si diffonde in tutto l'ambiente.</p>
+  <p>A differenza di solidi e liquidi, gli aeriformi sono facilmente comprimibili, proprio perché tra le particelle è presente molto spazio vuoto, che può essere ridotto applicando una pressione: è per questo motivo che è possibile inserire una grande quantità di gas in una bombola di volume relativamente piccolo, semplicemente comprimendolo.</p>
+  <p>È utile distinguere, all'interno degli aeriformi, tra il termine gas e il termine vapore. Si parla di gas per una sostanza che, alla temperatura ambiente e alla pressione atmosferica, si trova naturalmente allo stato aeriforme, come l'ossigeno o l'azoto; si parla invece di vapore per una sostanza che a temperatura ambiente si troverebbe normalmente allo stato liquido o solido, ma che si trova temporaneamente allo stato aeriforme, come il vapore acqueo, che è semplicemente acqua portata allo stato aeriforme.</p>
+
+  <p class="titolo-capitolo">I passaggi di stato</p>
+  <p>Una stessa sostanza può passare da uno stato di aggregazione a un altro, in seguito a una variazione di temperatura o di pressione: questi cambiamenti sono chiamati passaggi di stato, e sono trasformazioni fisiche, non chimiche, poiché la sostanza non cambia identità, ma soltanto il modo in cui le sue particelle sono organizzate.</p>
+  <p>I passaggi di stato che comportano un aumento dell'energia delle particelle (in genere ottenuto fornendo calore) sono la fusione, cioè il passaggio da solido a liquido, l'ebollizione (o vaporizzazione), cioè il passaggio da liquido ad aeriforme, e la sublimazione, cioè il passaggio diretto da solido ad aeriforme, senza passare per lo stato liquido, come avviene ad esempio per la naftalina o per il ghiaccio secco (anidride carbonica solida).</p>
+  <p>I passaggi di stato inversi, che comportano invece una diminuzione dell'energia delle particelle (in genere ottenuta sottraendo calore), sono la solidificazione, cioè il passaggio da liquido a solido, la condensazione, cioè il passaggio da aeriforme a liquido, e il brinamento, cioè il passaggio diretto da aeriforme a solido, come avviene nella formazione della brina su una superficie fredda.</p>
+  <p>Durante un passaggio di stato, la temperatura di una sostanza pura rimane costante finché il passaggio non è completato, anche continuando a fornire (o sottrarre) calore: l'energia fornita non viene infatti impiegata per aumentare la temperatura, ma per modificare le forze di attrazione tra le particelle, permettendo il cambiamento di stato.</p>
+
+  <p class="titolo-capitolo">La curva di riscaldamento e i punti fissi</p>
+  <p>L'andamento della temperatura di una sostanza pura in funzione del calore fornito, mantenendo costante la pressione, viene rappresentato graficamente da una curva di riscaldamento, che alterna tratti in cui la temperatura aumenta a tratti orizzontali, in corrispondenza dei passaggi di stato, in cui la temperatura resta costante.</p>
+  <p>La temperatura alla quale una sostanza passa dallo stato solido allo stato liquido, a pressione costante, è detta temperatura (o punto) di fusione; la temperatura alla quale una sostanza passa dallo stato liquido allo stato aeriforme è detta temperatura (o punto) di ebollizione. Come già visto nel capitolo 1 a proposito delle proprietà intensive, questi valori sono caratteristici di ogni sostanza pura, a una data pressione, e vengono per questo utilizzati per identificarla.</p>
+  <p>La temperatura di fusione e quella di solidificazione di una stessa sostanza coincidono, così come coincidono la temperatura di ebollizione e quella di condensazione: cambia soltanto il verso del passaggio di stato, ma non la temperatura alla quale esso avviene, a parità di pressione.</p>
+  <p><em>Esempio svolto:</em> un campione di ghiaccio a −10 °C viene riscaldato lentamente e uniformemente. La temperatura sale fino a raggiungere 0 °C, temperatura di fusione dell'acqua a pressione atmosferica; da questo momento la temperatura rimane costante a 0 °C, finché tutto il ghiaccio non si è trasformato in acqua liquida. Solo a fusione completata la temperatura riprende a salire, fino a raggiungere 100 °C, temperatura di ebollizione dell'acqua a pressione atmosferica, valore al quale resterà nuovamente costante finché tutta l'acqua liquida non sarà evaporata.</p>
+
+  <p class="titolo-capitolo">L'effetto della pressione sui passaggi di stato</p>
+  <p>La temperatura alla quale avviene un passaggio di stato non dipende soltanto dalla natura della sostanza, ma anche dalla pressione esterna a cui la sostanza è sottoposta. In particolare, la temperatura di ebollizione di un liquido diminuisce al diminuire della pressione esterna: è per questo motivo che, in alta montagna, dove la pressione atmosferica è più bassa rispetto al livello del mare, l'acqua bolle a una temperatura inferiore a 100 °C, e la cottura degli alimenti richiede tempi più lunghi.</p>
+  <p>Al contrario, aumentando la pressione esterna, la temperatura di ebollizione di un liquido aumenta: questo principio è sfruttato dalla pentola a pressione, che, mantenendo al proprio interno una pressione superiore a quella atmosferica, permette all'acqua di raggiungere temperature superiori a 100 °C senza bollire, riducendo così i tempi di cottura.</p>
+  <p>Anche la temperatura di fusione risente della pressione, sebbene in modo generalmente meno marcato rispetto alla temperatura di ebollizione, e con un effetto che dipende dalla sostanza considerata: per la maggior parte delle sostanze la temperatura di fusione aumenta leggermente all'aumentare della pressione, mentre per l'acqua, che rappresenta un'eccezione, si verifica il comportamento opposto.</p>
+
+  <p class="titolo-capitolo">L'evaporazione e l'equilibrio liquido-vapore</p>
+  <p>È importante distinguere tra ebollizione ed evaporazione. L'ebollizione è un fenomeno che coinvolge l'intera massa del liquido, avviene a una temperatura ben precisa (la temperatura di ebollizione) e produce la formazione di bolle di vapore anche all'interno del liquido, non solo in superficie. L'evaporazione, invece, è un fenomeno che riguarda soltanto la superficie del liquido, avviene a qualsiasi temperatura, ed è il motivo per cui un bicchiere d'acqua lasciato all'aria aperta, anche a temperatura ambiente, si svuota lentamente nel corso dei giorni, pur senza mai raggiungere la temperatura di ebollizione.</p>
+  <p>L'evaporazione avviene perché, anche a temperature inferiori al punto di ebollizione, alcune particelle sulla superficie del liquido possiedono, in un dato istante, un'energia sufficiente a vincere le forze di attrazione che le tengono legate alle particelle vicine, e riescono così a sfuggire verso lo stato aeriforme.</p>
+  <p>Se un liquido viene posto in un recipiente chiuso, l'evaporazione continua finché non si stabilisce un equilibrio dinamico tra il liquido e il vapore sovrastante: in questa condizione, chiamata equilibrio liquido-vapore e indicata con il simbolo ⇌, il numero di particelle che lasciano il liquido per evaporazione, in un certo intervallo di tempo, è uguale al numero di particelle che dal vapore ritornano allo stato liquido per condensazione, cosicché la quantità complessiva di liquido e di vapore presenti rimane costante nel tempo.</p>
+  <p class="formula">liquido ⇌ vapore</p>
+  <p>La pressione esercitata dal vapore in equilibrio con il proprio liquido, a una data temperatura, è detta tensione di vapore (o pressione di vapore), e aumenta all'aumentare della temperatura: quando la tensione di vapore di un liquido eguaglia la pressione esterna, il liquido entra in ebollizione, ed è proprio questo il motivo per cui, a pressione esterna più bassa, come in alta montagna, è sufficiente una temperatura minore perché il liquido raggiunga l'ebollizione.</p>
+</div>
+<!-- fine capitolo chimica 03 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi04.html">Vai al Capitolo successivo</a></p>
+</div>  
+  
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
