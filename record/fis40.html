@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 40</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 40: la relatività ristretta -->
+<div id="capitolo-40-relativita-ristretta" class="capitolo-storia">
+  <p class="titolo-capitolo">40 - La relatività ristretta - Classe 5</p>
+
+  <p class="titolo-capitolo">I postulati della relatività ristretta</p>
+  <p>Nel 1905, Albert Einstein, allora un giovane impiegato dell'ufficio brevetti di Berna, pubblicò la teoria della relatività ristretta (o relatività speciale), risolvendo in modo radicale il problema lasciato aperto dall'esperimento di Michelson e Morley, e ridefinendo profondamente i concetti classici di spazio e di tempo. La teoria si fonda su due postulati fondamentali, assunti come veri senza necessità di ulteriore dimostrazione.</p>
+  <p>Il primo postulato, detto principio di relatività, afferma che le leggi della fisica hanno la stessa forma in tutti i sistemi di riferimento inerziali (già introdotti nel capitolo 10): non esiste alcun esperimento, condotto interamente all'interno di un sistema di riferimento inerziale, che permetta di distinguere se quel sistema sia fermo oppure in moto rettilineo uniforme rispetto a un altro sistema inerziale.</p>
+  <p>Il secondo postulato, detto principio di invarianza della velocità della luce, afferma che la velocità della luce nel vuoto ha lo stesso valore c in tutti i sistemi di riferimento inerziali, indipendentemente dal moto della sorgente che emette la luce e dal moto dell'osservatore che la misura. Questo postulato, apparentemente in contraddizione con l'intuizione classica (secondo cui le velocità si sommano sempre in modo semplice), è proprio ciò che spiega il risultato negativo dell'esperimento di Michelson e Morley.</p>
+
+  <p class="titolo-capitolo">La relatività della simultaneità</p>
+  <p>Una diretta conseguenza dei due postulati di Einstein è che il concetto di simultaneità tra eventi, che nella fisica classica era considerato assoluto (due eventi simultanei per un osservatore lo sono per tutti gli osservatori), diventa invece relativo: due eventi che risultano simultanei per un osservatore in un certo sistema di riferimento possono non esserlo per un altro osservatore, in moto relativo rispetto al primo.</p>
+  <p>Questo risultato, per quanto controintuitivo, è una necessaria conseguenza logica del fatto che la velocità della luce debba risultare la stessa per tutti gli osservatori, indipendentemente dal loro stato di moto: se il tempo e lo spazio fossero assoluti, come nella meccanica classica, la velocità della luce non potrebbe essere la stessa per osservatori in moto relativo tra loro.</p>
+
+  <p class="titolo-capitolo">La dilatazione dei tempi</p>
+  <p>Una delle conseguenze più note e sperimentalmente verificate della relatività ristretta è la dilatazione dei tempi: un intervallo di tempo misurato da un osservatore in moto rispetto a un evento (o a un orologio) risulta sempre maggiore rispetto all'intervallo di tempo proprio, cioè misurato da un osservatore fermo rispetto all'evento stesso.</p>
+  <p class="formula">Δt = Δt<sub>0</sub> / √(1 − v<sup>2</sup>/c<sup>2</sup>)</p>
+  <p>dove Δt<sub>0</sub> è il tempo proprio (misurato nel sistema di riferimento in cui l'evento avviene nello stesso punto dello spazio), Δt è il tempo misurato da un osservatore rispetto al quale l'evento si muove con velocità v, e c è la velocità della luce nel vuoto. Il fattore 1/√(1−v²/c²), che compare frequentemente nelle formule della relatività, viene spesso indicato con il simbolo γ (gamma), detto fattore di Lorentz.</p>
+  <p>Questo effetto diventa significativo solo per velocità molto elevate, paragonabili a una frazione consistente della velocità della luce: per le velocità della vita quotidiana, il fattore di dilatazione è talmente vicino a 1 da risultare del tutto impercettibile, il che spiega perché la dilatazione dei tempi non contraddica la nostra esperienza comune.</p>
+  <p><em>Esempio svolto:</em> un'astronave viaggia a una velocità v = 0,8c rispetto alla Terra. Un orologio a bordo dell'astronave misura un intervallo di tempo proprio Δt<sub>0</sub> = 10 s. L'intervallo di tempo corrispondente, misurato da un osservatore sulla Terra, vale Δt = 10 / √(1 − 0,8<sup>2</sup>) = 10 / √(1 − 0,64) = 10 / √0,36 = 10 / 0,6 ≈ 16,7 s: l'osservatore terrestre misura quindi un intervallo di tempo più lungo rispetto a quello misurato a bordo dell'astronave.</p>
+
+  <p class="titolo-capitolo">La contrazione delle lunghezze</p>
+  <p>Un'altra conseguenza della relatività ristretta, strettamente collegata alla dilatazione dei tempi, è la contrazione delle lunghezze: un oggetto in movimento rispetto a un osservatore appare, sempre nella direzione del moto, più corto rispetto alla sua lunghezza propria, cioè la lunghezza misurata da un osservatore fermo rispetto all'oggetto stesso.</p>
+  <p class="formula">L = L<sub>0</sub> · √(1 − v<sup>2</sup>/c<sup>2</sup>)</p>
+  <p>dove L<sub>0</sub> è la lunghezza propria dell'oggetto, e L è la lunghezza misurata da un osservatore rispetto al quale l'oggetto si muove con velocità v, sempre nella direzione del moto (nella direzione perpendicolare al moto, invece, le lunghezze non subiscono alcuna contrazione).</p>
+  <p><em>Esempio svolto:</em> un'astronave ha una lunghezza propria L<sub>0</sub> = 100 m, misurata da un osservatore a bordo. Vista da un osservatore fermo sulla Terra, mentre l'astronave viaggia a v = 0,6c, la sua lunghezza risulta L = 100 × √(1 − 0,6<sup>2</sup>) = 100 × √(1 − 0,36) = 100 × √0,64 = 100 × 0,8 = 80 m.</p>
+
+  <p class="titolo-capitolo">L'equivalenza tra massa ed energia</p>
+  <p>Forse la conseguenza più celebre della relatività ristretta è l'equivalenza tra massa ed energia, espressa dalla formula più famosa di tutta la fisica, che afferma che la massa di un corpo rappresenta essa stessa una forma di energia, chiamata energia a riposo, anche quando il corpo è completamente fermo, cioè privo di energia cinetica.</p>
+  <p class="formula">E = m · c<sup>2</sup></p>
+  <p>Questa formula, apparentemente semplice, ha conseguenze fisiche enormi: poiché la velocità della luce c è un numero molto grande (e quindi il suo quadrato ancora di più), anche una piccolissima quantità di massa corrisponde a un'enorme quantità di energia. Questo principio è alla base del funzionamento delle centrali nucleari e delle armi nucleari, dove una piccola frazione della massa dei nuclei atomici coinvolti viene convertita in energia, secondo i processi di fissione e fusione nucleare che studieremo in un capitolo successivo.</p>
+  <p><em>Esempio svolto:</em> vogliamo calcolare l'energia equivalente a una massa m = 1 g = 0,001 kg. Applicando la formula: E = 0,001 × (3×10<sup>8</sup>)<sup>2</sup> = 0,001 × 9×10<sup>16</sup> = 9×10<sup>13</sup> J, un'energia enorme, paragonabile a quella rilasciata da una consistente esplosione, ottenuta dalla conversione completa di appena un grammo di materia.</p>
+</div>
+<!-- fine capitolo fisica 40 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis41.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

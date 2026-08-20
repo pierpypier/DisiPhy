@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 36</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 36: la corrente alternata -->
+<div id="capitolo-36-corrente-alternata" class="capitolo-storia">
+  <p class="titolo-capitolo">36 - La corrente alternata - Classe 4</p>
+
+  <p class="titolo-capitolo">Dalla corrente continua alla corrente alternata</p>
+  <p>Nei capitoli precedenti abbiamo studiato circuiti percorsi da corrente continua, cioè da una corrente che scorre sempre nello stesso verso e con intensità costante nel tempo, tipicamente prodotta da generatori come le pile. Come visto nel capitolo precedente, però, l'alternatore (il dispositivo utilizzato nelle centrali elettriche) genera naturalmente una forza elettromotrice che varia sinusoidalmente nel tempo: questo tipo di corrente, che inverte periodicamente il proprio verso, si chiama corrente alternata, ed è quella distribuita nelle reti elettriche domestiche e industriali di tutto il mondo.</p>
+  <p>L'andamento sinusoidale della tensione (e della corrispondente corrente) di un generatore di corrente alternata si descrive con le seguenti espressioni, dove ω è la pulsazione (la stessa velocità angolare vista per l'alternatore nel capitolo precedente) e φ è un eventuale sfasamento tra tensione e corrente.</p>
+  <p class="formula">v(t) = V<sub>max</sub> · sin(ω · t) ,&nbsp;&nbsp; i(t) = I<sub>max</sub> · sin(ω · t − φ)</p>
+
+  <p class="titolo-capitolo">Frequenza e pulsazione della corrente alternata</p>
+  <p>La frequenza f della corrente alternata indica quanti cicli completi (cioè quante oscillazioni complete tra i valori massimo e minimo) avvengono in un secondo, e si misura, come già visto per le onde, in hertz (Hz). Nelle reti elettriche europee, compresa quella italiana, la frequenza standard della corrente alternata distribuita nelle abitazioni è di 50 Hz, mentre in altri paesi, come gli Stati Uniti, si utilizzano 60 Hz.</p>
+  <p>La pulsazione ω, già introdotta nel capitolo precedente in relazione alla velocità angolare dell'alternatore, è legata alla frequenza dalla stessa relazione già vista per il moto circolare nel capitolo 6.</p>
+  <p class="formula">ω = 2π · f</p>
+  <p><em>Esempio svolto:</em> calcoliamo la pulsazione della corrente alternata della rete elettrica italiana, con frequenza f = 50 Hz. Applicando la formula: ω = 2π × 50 ≈ 314,16 rad/s.</p>
+
+  <p class="titolo-capitolo">I valori efficaci di tensione e corrente</p>
+  <p>Poiché la tensione e la corrente alternata variano continuamente nel tempo, assumendo sia valori positivi sia negativi, non avrebbe senso pratico riferirsi al loro valore medio nel tempo, che risulta sempre nullo su un periodo completo. Per questo motivo si introduce il valore efficace (indicato con il pedice "eff", o talvolta con la sigla RMS), definito in modo tale che una corrente continua di pari valore produrrebbe, su una resistenza, lo stesso effetto Joule medio prodotto dalla corrente alternata reale.</p>
+  <p>Per una grandezza sinusoidale, il valore efficace è legato al valore massimo (o di picco) da un fattore costante, pari alla radice quadrata di 2.</p>
+  <p class="formula">V<sub>eff</sub> = V<sub>max</sub> / √2 ,&nbsp;&nbsp; I<sub>eff</sub> = I<sub>max</sub> / √2</p>
+  <p>I valori nominali della tensione di rete che siamo abituati a utilizzare nella vita quotidiana (ad esempio 230 V nelle abitazioni italiane) sono sempre valori efficaci, non valori massimi: il valore massimo istantaneo della tensione di rete italiana, ad esempio, è in realtà significativamente più elevato del valore nominale di 230 V.</p>
+  <p><em>Esempio svolto:</em> calcoliamo il valore massimo della tensione di rete italiana, sapendo che il valore efficace nominale è V<sub>eff</sub> = 230 V. Dalla formula: V<sub>max</sub> = V<sub>eff</sub> × √2 = 230 × 1,414 ≈ 325 V.</p>
+
+  <p class="titolo-capitolo">La potenza in corrente alternata</p>
+  <p>Nei circuiti puramente resistivi (cioè costituiti solo da resistori, senza condensatori o induttori), tensione e corrente sono sempre in fase tra loro (φ = 0), e la potenza dissipata mediamente nel tempo si calcola con formule del tutto analoghe a quelle già viste per la corrente continua, semplicemente utilizzando i valori efficaci al posto dei valori costanti.</p>
+  <p class="formula">P<sub>media</sub> = V<sub>eff</sub> · I<sub>eff</sub> = R · I<sub>eff</sub><sup>2</sup></p>
+  <p>Quando invece nel circuito sono presenti anche condensatori o induttori (elementi che vedremo brevemente nel prossimo paragrafo), tensione e corrente possono presentare uno sfasamento φ diverso da zero, e la potenza media dissipata si riduce di un fattore cosφ, chiamato fattore di potenza.</p>
+  <p class="formula">P<sub>media</sub> = V<sub>eff</sub> · I<sub>eff</sub> · cos φ</p>
+  <p><em>Esempio svolto:</em> un elettrodomestico puramente resistivo è collegato alla rete elettrica italiana (V<sub>eff</sub> = 230 V), ed è attraversato da una corrente efficace I<sub>eff</sub> = 4 A. La potenza media dissipata vale P = 230 × 4 = 920 W.</p>
+
+  <p class="titolo-capitolo">Il trasformatore</p>
+  <p>Il trasformatore è un dispositivo, basato sul principio dell'induzione elettromagnetica, che permette di variare l'ampiezza di una tensione alternata, aumentandola o diminuendola, mantenendo (idealmente) invariata la potenza elettrica trasmessa. È costituito da due avvolgimenti di filo conduttore, detti primario e secondario, avvolti attorno a un nucleo comune di materiale ferromagnetico, che convoglia il flusso magnetico generato dal primario verso il secondario.</p>
+  <p>Il rapporto tra le tensioni ai capi dei due avvolgimenti è uguale al rapporto tra il numero di spire di ciascun avvolgimento, secondo la seguente relazione.</p>
+  <p class="formula">V<sub>2</sub> / V<sub>1</sub> = N<sub>2</sub> / N<sub>1</sub></p>
+  <p>dove V<sub>1</sub> e N<sub>1</sub> sono la tensione e il numero di spire dell'avvolgimento primario, mentre V<sub>2</sub> e N<sub>2</sub> sono la tensione e il numero di spire dell'avvolgimento secondario. Se N<sub>2</sub> è maggiore di N<sub>1</sub>, il trasformatore è elevatore di tensione; se N<sub>2</sub> è minore di N<sub>1</sub>, il trasformatore è riduttore di tensione.</p>
+  <p>Poiché, in un trasformatore ideale, la potenza elettrica in ingresso è uguale alla potenza elettrica in uscita (P<sub>1</sub> = P<sub>2</sub>, cioè V<sub>1</sub>·I<sub>1</sub> = V<sub>2</sub>·I<sub>2</sub>), a un aumento della tensione corrisponde sempre una corrispondente diminuzione della corrente, e viceversa.</p>
+  <p><em>Esempio svolto:</em> un trasformatore ha N<sub>1</sub> = 200 spire al primario e N<sub>2</sub> = 1000 spire al secondario, ed è alimentato con una tensione V<sub>1</sub> = 12 V. La tensione al secondario vale V<sub>2</sub> = V<sub>1</sub> × (N<sub>2</sub>/N<sub>1</sub>) = 12 × (1000/200) = 12 × 5 = 60 V.</p>
+
+  <p class="titolo-capitolo">Il trasporto dell'energia elettrica a grande distanza</p>
+  <p>Un'applicazione fondamentale del trasformatore riguarda il trasporto dell'energia elettrica su lunghe distanze, dalle centrali elettriche di produzione fino alle città e alle case: poiché la potenza dissipata per effetto Joule lungo le linee elettriche di trasporto è proporzionale al quadrato della corrente (P<sub>dissipata</sub> = R·i<sup>2</sup>, come visto nel capitolo 31), conviene trasportare l'energia elettrica con una tensione molto elevata (e quindi una corrente proporzionalmente più bassa, a parità di potenza trasportata), riducendo così drasticamente le perdite di energia lungo il tragitto.</p>
+  <p>Per questo motivo, l'energia elettrica prodotta nelle centrali viene innalzata a tensioni molto elevate (anche centinaia di migliaia di volt) tramite trasformatori elevatori, per essere trasportata lungo le linee ad alta tensione, e viene poi progressivamente ridotta, tramite trasformatori riduttori, fino ai valori di tensione utilizzabili in sicurezza nelle case e nelle industrie.</p>
+</div>
+<!-- fine capitolo fisica 36 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis37.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

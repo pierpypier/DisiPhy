@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 37</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 37: le equazioni di maxwell e le onde elettromagnetiche -->
+<div id="capitolo-37-maxwell-onde-elettromagnetiche" class="capitolo-storia">
+  <p class="titolo-capitolo">37 - Le equazioni di Maxwell e le onde elettromagnetiche - Classe 5</p>
+
+  <p class="titolo-capitolo">La sintesi di Maxwell</p>
+  <p>Nella seconda metà dell'Ottocento, il fisico scozzese James Clerk Maxwell riuscì a riassumere in un insieme coerente di quattro equazioni tutte le leggi dell'elettricità e del magnetismo scoperte fino a quel momento (la legge di Coulomb, l'assenza di monopoli magnetici, la legge di Faraday-Neumann e la legge di Biot-Savart, opportunamente generalizzata), dando vita a una teoria unificata, oggi nota come elettromagnetismo classico.</p>
+  <p>Le quattro equazioni di Maxwell, pur richiedendo strumenti matematici avanzati per una trattazione rigorosa, esprimono concettualmente quattro idee fondamentali già incontrate nei capitoli precedenti: le cariche elettriche generano un campo elettrico (legge di Gauss); non esistono monopoli magnetici isolati; un campo magnetico variabile nel tempo genera un campo elettrico (legge di Faraday-Neumann); e una corrente elettrica, oppure un campo elettrico variabile nel tempo, genera un campo magnetico (legge di Ampère-Maxwell).</p>
+
+  <p class="titolo-capitolo">La corrente di spostamento</p>
+  <p>Il contributo originale di Maxwell, rispetto alle leggi già note, fu l'introduzione della cosiddetta corrente di spostamento: Maxwell si rese conto che, per rendere le equazioni dell'elettromagnetismo pienamente coerenti (in particolare per rispettare la conservazione della carica elettrica anche in circuiti contenenti condensatori), era necessario ammettere che anche un campo elettrico variabile nel tempo, e non solo una corrente elettrica reale, fosse in grado di generare un campo magnetico.</p>
+  <p>Questa aggiunta, apparentemente solo formale, si rivelò di importanza cruciale, perché rese le equazioni di Maxwell simmetriche in un aspetto fondamentale: un campo magnetico variabile genera un campo elettrico (Faraday), e un campo elettrico variabile genera un campo magnetico (Maxwell), aprendo la strada alla scoperta più importante della teoria: la possibilità che i due campi si sostengano reciprocamente, propagandosi nello spazio in modo autonomo.</p>
+
+  <p class="titolo-capitolo">La previsione delle onde elettromagnetiche</p>
+  <p>Dalle sue equazioni, Maxwell dedusse teoricamente l'esistenza di onde elettromagnetiche: perturbazioni costituite da un campo elettrico e un campo magnetico oscillanti, perpendicolari tra loro e perpendicolari alla direzione di propagazione (onde trasversali, secondo la classificazione vista nel capitolo 24), capaci di autosostenersi e di propagarsi nello spazio anche in assenza di qualsiasi mezzo materiale, cioè anche nel vuoto.</p>
+  <p>Calcolando la velocità di propagazione teorica di queste onde a partire dalle costanti fondamentali dell'elettromagnetismo (la permeabilità magnetica del vuoto μ<sub>0</sub> e la costante dielettrica del vuoto ε<sub>0</sub>, già incontrate nei capitoli precedenti), Maxwell ottenne un valore che coincideva, entro gli errori sperimentali dell'epoca, con la velocità della luce nel vuoto, già misurata in precedenza con metodi puramente ottici.</p>
+  <p class="formula">c = 1 / √(ε<sub>0</sub> · μ<sub>0</sub>) ≈ 3 × 10<sup>8</sup> m/s</p>
+  <p>Questa straordinaria coincidenza numerica portò Maxwell a formulare un'ipotesi audace, poi pienamente confermata: la luce stessa è un'onda elettromagnetica, identificando così, in un'unica teoria coerente, fenomeni fino ad allora considerati completamente distinti: elettricità, magnetismo e ottica.</p>
+
+  <p class="titolo-capitolo">La conferma sperimentale: Hertz</p>
+  <p>La previsione teorica di Maxwell fu confermata sperimentalmente solo alcuni anni dopo la sua morte, nel 1887, dal fisico tedesco Heinrich Hertz, che riuscì a generare e a rilevare in laboratorio onde elettromagnetiche (in particolare, onde radio) prodotte da un circuito elettrico oscillante, dimostrandone sperimentalmente l'esistenza, la propagazione nel vuoto (o nell'aria) alla velocità prevista, e il comportamento ondulatorio, con fenomeni di riflessione, rifrazione e interferenza del tutto analoghi a quelli già osservati per la luce visibile.</p>
+  <p>Questa scoperta aprì la strada a innumerevoli applicazioni tecnologiche, dalla radio alla televisione, fino ai moderni sistemi di telecomunicazione, tutti basati sulla generazione e sulla rilevazione controllata di onde elettromagnetiche.</p>
+
+  <p class="titolo-capitolo">Le caratteristiche delle onde elettromagnetiche</p>
+  <p>Un'onda elettromagnetica è costituita da un campo elettrico E→ e da un campo magnetico B→, oscillanti in fase tra loro, perpendicolari l'uno all'altro e perpendicolari alla direzione di propagazione dell'onda. Il rapporto tra i moduli dei due campi, in ogni istante, è costante e uguale alla velocità della luce nel vuoto.</p>
+  <p class="formula">E / B = c</p>
+  <p>A differenza delle onde meccaniche, che richiedono sempre un mezzo materiale per propagarsi, le onde elettromagnetiche possono propagarsi anche nel vuoto assoluto, poiché la loro esistenza non dipende dall'oscillazione di particelle materiali, ma dalla mutua generazione tra campo elettrico e campo magnetico variabili nel tempo, secondo il meccanismo previsto dalle equazioni di Maxwell.</p>
+  <p>Come tutte le onde periodiche, anche le onde elettromagnetiche sono caratterizzate da una frequenza f e da una lunghezza d'onda λ, legate alla velocità di propagazione dalla stessa relazione già vista nel capitolo 24 per le onde in generale.</p>
+  <p class="formula">c = λ · f</p>
+  <p><em>Esempio svolto:</em> un'onda elettromagnetica ha frequenza f = 100 MHz = 1×10<sup>8</sup> Hz (tipica delle trasmissioni radio in modulazione di frequenza). La sua lunghezza d'onda vale λ = c / f = 3×10<sup>8</sup> / 1×10<sup>8</sup> = 3 m.</p>
+
+  <p class="titolo-capitolo">Il trasporto di energia delle onde elettromagnetiche</p>
+  <p>Come tutte le onde, anche le onde elettromagnetiche trasportano energia, senza trasportare materia, dalla sorgente che le genera fino ai punti dello spazio da esse raggiunti: questa è, in ultima analisi, l'energia che riceviamo dal Sole sotto forma di luce e di calore, dopo aver attraversato il vuoto dello spazio interplanetario, oppure l'energia trasportata da un segnale radio dalla trasmittente all'antenna ricevente.</p>
+  <p>L'intensità di un'onda elettromagnetica, definita come per le onde sonore nel capitolo 25 (potenza trasportata per unità di superficie), diminuisce con il quadrato della distanza dalla sorgente, per una sorgente puntiforme che irraggia in modo uniforme in tutte le direzioni, poiché la stessa energia totale si distribuisce su una superficie sferica sempre più estesa man mano che l'onda si allontana dalla sorgente.</p>
+</div>
+<!-- fine capitolo fisica 37 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis38.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

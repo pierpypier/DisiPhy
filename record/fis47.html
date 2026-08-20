@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 47</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 47: le particelle elementari e il modello standard -->
+<div id="capitolo-47-particelle-elementari-modello-standard" class="capitolo-storia">
+  <p class="titolo-capitolo">47 - Le particelle elementari e il Modello Standard - Classe 5</p>
+
+  <p class="titolo-capitolo">Oltre il nucleo: la ricerca dei costituenti fondamentali</p>
+  <p>Nei capitoli precedenti abbiamo visto come protoni e neutroni, i costituenti del nucleo atomico, siano a loro volta considerati particelle composte, e non elementari nel senso più profondo del termine. Nel corso del Novecento, grazie soprattutto allo sviluppo di acceleratori di particelle sempre più potenti, capaci di far collidere particelle a energie sempre maggiori (secondo il principio, già accennato nel capitolo 34, per cui campi magnetici intensi possono guidare particelle cariche lungo traiettorie controllate), i fisici scoprirono un numero crescente di nuove particelle subatomiche, portando gradualmente alla formulazione di una teoria unificata, nota oggi come Modello Standard della fisica delle particelle.</p>
+  <p>Il Modello Standard, sviluppato principalmente tra gli anni Sessanta e Settanta del Novecento, e confermato sperimentalmente con crescente precisione nei decenni successivi, classifica tutte le particelle elementari conosciute (cioè non ulteriormente scomponibili, per quanto ne sappiamo attualmente) in poche categorie fondamentali, e descrive tre delle quattro interazioni fondamentali della natura in un quadro teorico unificato e coerente.</p>
+
+  <p class="titolo-capitolo">I quark e i leptoni</p>
+  <p>Secondo il Modello Standard, la materia ordinaria è costituita, a livello più fondamentale, da due grandi famiglie di particelle elementari, chiamate quark e leptoni, entrambe soggette al principio di indeterminazione e alle altre leggi della meccanica quantistica descritte nel capitolo 44.</p>
+  <p>I quark sono le particelle elementari che, combinandosi tra loro in gruppi di tre (secondo regole precise stabilite dall'interazione forte), formano i protoni e i neutroni, e più in generale tutte le particelle chiamate adroni: esistono sei diversi tipi (o "sapori") di quark, chiamati convenzionalmente up, down, charm, strange, top e bottom, ciascuno con proprie caratteristiche di massa e carica elettrica.</p>
+  <p>I leptoni sono invece particelle elementari che non partecipano all'interazione forte, e includono, tra gli altri, l'elettrone (già ampiamente incontrato nei capitoli precedenti) e il suo neutrino associato, oltre a due particelle più pesanti ma per il resto simili all'elettrone, chiamate muone e tau, ciascuna con il proprio neutrino corrispondente.</p>
+
+  <p class="titolo-capitolo">Le quattro interazioni fondamentali</p>
+  <p>Tutti i fenomeni fisici conosciuti, secondo la comprensione attuale, si possono ricondurre all'azione di sole quattro interazioni fondamentali della natura. L'interazione gravitazionale, descritta classicamente dalla legge di gravitazione universale di Newton (capitolo 19) e più compiutamente dalla relatività generale di Einstein (capitolo 41), agisce tra tutti i corpi dotati di massa (o energia), ma è di gran lunga la più debole delle quattro interazioni, diventando dominante solo su scala macroscopica e astronomica, a causa dell'assenza di cariche di segno opposto che possano parzialmente cancellarne l'effetto.</p>
+  <p>L'interazione elettromagnetica, descritta dalle equazioni di Maxwell (capitolo 37) e, a livello quantistico più fondamentale, dall'elettrodinamica quantistica, agisce tra tutte le particelle dotate di carica elettrica, ed è responsabile della quasi totalità dei fenomeni fisici e chimici della vita quotidiana, dalla luce alla struttura degli atomi e delle molecole.</p>
+  <p>L'interazione nucleare forte, già introdotta nel capitolo 45, tiene uniti i quark all'interno dei protoni e dei neutroni, e, indirettamente, i protoni e i neutroni stessi all'interno del nucleo atomico, nonostante la repulsione elettrica tra i protoni. L'interazione nucleare debole, infine, è responsabile del decadimento beta (visto anch'esso nel capitolo 45), cioè della trasformazione di un neutrone in un protone (o viceversa), all'interno del nucleo atomico.</p>
+
+  <p class="titolo-capitolo">Le particelle mediatrici delle interazioni</p>
+  <p>Un aspetto centrale del Modello Standard, derivante dalla teoria quantistica dei campi, è che ciascuna delle tre interazioni fondamentali descritte dal modello (elettromagnetica, forte e debole, escludendo per ora la gravità, che non è ancora stata pienamente integrata in una teoria quantistica soddisfacente) è mediata dallo scambio di particelle specifiche, chiamate bosoni mediatori, o bosoni di gauge.</p>
+  <p>L'interazione elettromagnetica è mediata dal fotone (già incontrato nel capitolo 42 in relazione all'effetto fotoelettrico), privo di massa e di carica elettrica; l'interazione forte è mediata da otto particelle chiamate gluoni, anch'esse prive di massa; l'interazione debole è mediata da tre particelle massive, chiamate bosoni W<sup>+</sup>, W<sup>−</sup> e Z<sup>0</sup>, la cui massa relativamente elevata (a differenza del fotone e dei gluoni) spiega perché l'interazione debole abbia, appunto, un raggio d'azione molto più corto rispetto alle altre interazioni.</p>
+
+  <p class="titolo-capitolo">Il bosone di Higgs</p>
+  <p>Un elemento fondamentale del Modello Standard, teorizzato a metà degli anni Sessanta del Novecento da Peter Higgs e da altri fisici, ma confermato sperimentalmente solamente nel 2012 grazie agli esperimenti condotti presso il Large Hadron Collider (LHC) del CERN di Ginevra, è il bosone di Higgs, una particella associata a un campo, presente in tutto lo spazio, chiamato campo di Higgs.</p>
+  <p>Secondo il meccanismo di Higgs, l'interazione delle particelle elementari con questo campo, onnipresente nello spazio, è responsabile del fatto che molte particelle elementari (compresi i bosoni W e Z, e i quark e i leptoni) possiedano una massa: senza questo meccanismo, secondo le equazioni fondamentali del Modello Standard, tutte queste particelle risulterebbero prive di massa, in netto contrasto con l'evidenza sperimentale.</p>
+  <p>La scoperta sperimentale del bosone di Higgs rappresentò una conferma decisiva e conclusiva del Modello Standard nel suo complesso, coronando decenni di ricerca teorica e sperimentale, pur lasciando ancora aperte alcune questioni fondamentali non spiegate dal modello, come la natura della materia oscura, l'origine dell'asimmetria tra materia e antimateria nell'universo, e, come già accennato, l'assenza di una descrizione quantistica pienamente soddisfacente della forza di gravità.</p>
+</div>
+<!-- fine capitolo fisica 47 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis48.html">Vai al Capitolo successivo</a></p>
+</div>
+
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>

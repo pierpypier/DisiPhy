@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fisica 44</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo fisica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FISICA</div>
+        <div class="subtitle">Piccolo manuale di Fisica</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fis00.html" title="fisica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo fisica 44: la meccanica quantistica: dualismo e principio di indeterminazione -->
+<div id="capitolo-44-meccanica-quantistica-indeterminazione" class="capitolo-storia">
+  <p class="titolo-capitolo">44 - La meccanica quantistica: dualismo e principio di indeterminazione - Classe 5</p>
+
+  <p class="titolo-capitolo">Dal modello di Bohr alla meccanica quantistica</p>
+  <p>Come accennato nel capitolo precedente, il modello atomico di Bohr, pur rappresentando un passo fondamentale verso la comprensione della struttura atomica, si basava su ipotesi in parte arbitrarie (come la quantizzazione del momento angolare, introdotta senza una vera giustificazione teorica) e si rivelò presto insufficiente a descrivere correttamente atomi più complessi dell'idrogeno. Nella seconda metà degli anni Venti del Novecento, un gruppo di giovani fisici (tra cui Werner Heisenberg, Erwin Schrödinger, Paul Dirac e Max Born) sviluppò una teoria molto più generale e matematicamente coerente, oggi nota come meccanica quantistica, capace di descrivere correttamente il comportamento della materia e della radiazione a livello atomico e subatomico.</p>
+  <p>La meccanica quantistica rappresenta un cambiamento concettuale radicale rispetto alla fisica classica, richiedendo di abbandonare alcune intuizioni profondamente radicate nel nostro modo di pensare al mondo fisico, come l'idea che una particella possieda sempre, in ogni istante, una posizione e una velocità perfettamente definite.</p>
+
+  <p class="titolo-capitolo">La funzione d'onda e l'interpretazione probabilistica</p>
+  <p>Nella meccanica quantistica, lo stato di una particella (come un elettrone) non è più descritto specificando la sua posizione e la sua velocità esatte in ogni istante, come avveniva nella meccanica classica, ma da una funzione matematica, chiamata funzione d'onda (indicata generalmente con la lettera greca ψ, "psi"), che contiene tutta l'informazione fisicamente accessibile sullo stato della particella.</p>
+  <p>Secondo l'interpretazione probabilistica della funzione d'onda, proposta dal fisico tedesco Max Born, il quadrato del modulo della funzione d'onda in un dato punto dello spazio non rappresenta una grandezza fisica direttamente osservabile, ma la densità di probabilità di trovare la particella in quel punto, qualora se ne effettuasse una misura di posizione.</p>
+  <p>Questo rappresenta un allontanamento radicale dal determinismo della fisica classica: mentre nella meccanica newtoniana, conoscendo con precisione la posizione e la velocità iniziali di una particella (e tutte le forze agenti su di essa), è teoricamente possibile prevedere con certezza assoluta la sua traiettoria futura, nella meccanica quantistica è possibile prevedere solamente la probabilità di ottenere un certo risultato da una misura, non il risultato specifico che si otterrà in una singola misurazione.</p>
+
+  <p class="titolo-capitolo">Il principio di indeterminazione di Heisenberg</p>
+  <p>Nel 1927, il fisico tedesco Werner Heisenberg formulò uno dei principi più celebri e caratteristici di tutta la meccanica quantistica, noto come principio di indeterminazione (o principio di indeterminazione di Heisenberg): è impossibile, per qualsiasi particella, conoscere simultaneamente e con precisione arbitraria sia la sua posizione sia la sua quantità di moto lungo una stessa direzione.</p>
+  <p class="formula">Δx · Δp ≥ h / (4π)</p>
+  <p>dove Δx rappresenta l'incertezza sulla posizione della particella lungo una direzione, e Δp rappresenta l'incertezza sulla sua quantità di moto lungo la stessa direzione. Questa relazione mostra che, tanto più si cerca di determinare con precisione la posizione di una particella (rendendo Δx molto piccolo), tanto più diventa incerta la sua quantità di moto (Δp deve necessariamente aumentare, per mantenere il prodotto sempre maggiore o uguale al valore minimo previsto dalla formula), e viceversa.</p>
+  <p>È fondamentale sottolineare che il principio di indeterminazione non è dovuto a una limitazione tecnica degli strumenti di misura, superabile in linea di principio con strumenti più sofisticati o più precisi, ma rappresenta un limite fondamentale e intrinseco della natura stessa a livello quantistico, indipendente da qualsiasi imperfezione sperimentale.</p>
+  <p><em>Esempio svolto:</em> vogliamo stimare l'indeterminazione minima sulla velocità di un elettrone (massa m ≈ 9,11×10<sup>−31</sup> kg) la cui posizione è nota con un'incertezza Δx = 1×10<sup>−10</sup> m (dell'ordine delle dimensioni atomiche). Dalla relazione di indeterminazione: Δp ≥ h/(4π·Δx) = 6,63×10<sup>−34</sup> / (4π × 1×10<sup>−10</sup>) ≈ 6,63×10<sup>−34</sup> / 1,257×10<sup>−9</sup> ≈ 5,27×10<sup>−25</sup> kg·m/s. L'indeterminazione minima sulla velocità vale quindi Δv = Δp/m ≈ 5,27×10<sup>−25</sup> / 9,11×10<sup>−31</sup> ≈ 5,79×10<sup>5</sup> m/s, un valore enorme rispetto alle dimensioni atomiche in gioco, che mostra come, a questa scala, non abbia più senso parlare di una traiettoria classica ben definita per l'elettrone.</p>
+
+  <p class="titolo-capitolo">Un'ulteriore relazione di indeterminazione: energia e tempo</p>
+  <p>Accanto alla relazione di indeterminazione tra posizione e quantità di moto, la meccanica quantistica prevede una relazione analoga tra l'energia di un sistema e il tempo impiegato per misurarla (o, equivalentemente, la durata di uno stato energetico del sistema).</p>
+  <p class="formula">ΔE · Δt ≥ h / (4π)</p>
+  <p>Questa relazione ha, tra le altre, un'importante conseguenza per gli stati energetici instabili, come i livelli energetici eccitati di un atomo, oppure i nuclei radioattivi: uno stato con una vita media Δt molto breve possiede necessariamente un'indeterminazione ΔE sull'energia relativamente grande, un effetto osservabile sperimentalmente come un allargamento delle righe spettrali corrispondenti a transizioni che coinvolgono stati di vita molto breve.</p>
+
+  <p class="titolo-capitolo">L'orbitale atomico e la nuvola di probabilità</p>
+  <p>Alla luce della meccanica quantistica, il modello atomico moderno abbandona definitivamente l'immagine, ereditata dal modello di Bohr, di elettroni che percorrono orbite ben definite attorno al nucleo, sostituendola con il concetto di orbitale atomico: una regione di spazio attorno al nucleo in cui la probabilità di trovare l'elettrone, calcolata a partire dalla sua funzione d'onda, è significativamente diversa da zero (convenzionalmente si considera un orbitale come la regione che racchiude, ad esempio, il 90% della probabilità totale di presenza dell'elettrone).</p>
+  <p>Gli orbitali atomici, la cui forma dipende dai numeri quantici già introdotti nel capitolo precedente, sono spesso rappresentati graficamente come "nuvole di probabilità" più o meno dense, anziché come traiettorie ben definite: questa rappresentazione, per quanto meno intuitiva di quella classica, riflette fedelmente la reale natura probabilistica del comportamento degli elettroni all'interno degli atomi, secondo quanto previsto dalla meccanica quantistica.</p>
+
+  <p class="titolo-capitolo">L'esperimento della doppia fenditura con singole particelle</p>
+  <p>Una delle dimostrazioni più suggestive e concettualmente profonde della natura quantistica della materia si ottiene ripetendo l'esperimento della doppia fenditura di Young (già visto nel capitolo 27 per la luce) utilizzando invece un fascio di elettroni, inviati uno alla volta verso le due fenditure, in modo che, in ogni istante, un solo elettrone attraversi l'apparato sperimentale.</p>
+  <p>Sorprendentemente, anche in queste condizioni, dopo aver inviato un numero sufficientemente grande di elettroni, sullo schermo di rilevazione si osserva comunque la formazione di una figura di interferenza, del tutto analoga a quella osservata con la luce, come se ciascun singolo elettrone "interferisse con se stesso", attraversando in qualche modo entrambe le fenditure simultaneamente: questo risultato, verificato sperimentalmente con grande precisione, illustra in modo particolarmente evocativo la profonda e per certi versi ancora oggi filosoficamente dibattuta natura duale, onda-particella, di tutti gli oggetti quantistici.</p>
+</div>
+<!-- fine capitolo fisica 44 -->
+
+<div id="indice-fisica" class="capitolo-storia">
+  <p><a href="fis45.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+    
+    
+    <footer>
+      Piccolo manuale di Fisica
+    </footer>
+
+  </div>
+</body>
+  </html>
