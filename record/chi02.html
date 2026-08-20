@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 02</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r901.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 02: grandezze e misure in chimica -->
+<div id="capitolo-02-grandezze-misure" class="capitolo-storia">
+  <p class="titolo-capitolo">02 - Grandezze e misure in chimica - Classe 1</p>
+
+  <p class="titolo-capitolo">Le grandezze fondamentali in chimica</p>
+  <p>Come già visto in fisica, ogni misura richiede il confronto di una grandezza con un'unità di riferimento condivisa. In chimica si utilizzano abitualmente le stesse grandezze fondamentali del Sistema Internazionale già incontrate in fisica: la massa (kg, anche se in chimica si preferisce spesso il grammo, g), la lunghezza (m), il tempo (s) e la temperatura (K), a cui si aggiunge una grandezza fondamentale specifica della chimica: la quantità di sostanza, misurata in moli (mol), che introdurremo più avanti in questo percorso.</p>
+  <p>Accanto alle grandezze fondamentali, la chimica utilizza numerose grandezze derivate, ottenute combinando tra loro le grandezze fondamentali: il volume (m<sup>3</sup>, o più comunemente il litro, L, e i suoi sottomultipli), la densità (kg/m<sup>3</sup>, o g/cm<sup>3</sup>) e la concentrazione (che studieremo in dettaglio più avanti) sono tra le più utilizzate in laboratorio.</p>
+
+  <p class="titolo-capitolo">Il volume e le sue unità di misura</p>
+  <p>Il volume è la grandezza che misura lo spazio occupato da un corpo. Nel Sistema Internazionale l'unità di misura del volume è il metro cubo (m<sup>3</sup>), ma per le quantità tipicamente maneggiate in un laboratorio chimico si utilizza molto più spesso il litro (L), e i suoi sottomultipli, come il millilitro (mL).</p>
+  <p class="formula">1 L = 1 dm<sup>3</sup> = 1000 cm<sup>3</sup> ,&nbsp;&nbsp; 1 mL = 1 cm<sup>3</sup></p>
+  <p>Questa corrispondenza tra litro e decimetro cubo è particolarmente utile in laboratorio, dove il volume dei liquidi viene spesso misurato con strumenti graduati in millilitri (come cilindri graduati, burette e pipette), mentre le dimensioni di oggetti solidi vengono più naturalmente misurate in centimetri.</p>
+  <p><em>Esempio svolto:</em> un becher contiene 250 mL di una soluzione. Vogliamo esprimere questo volume in litri e in metri cubi. In litri: 250 mL = 250 / 1000 = 0,25 L. In metri cubi, ricordando che 1 L = 10<sup>−3</sup> m<sup>3</sup>: 0,25 L = 0,25 × 10<sup>−3</sup> m<sup>3</sup> = 2,5 × 10<sup>−4</sup> m<sup>3</sup>.</p>
+
+  <p class="titolo-capitolo">Gli strumenti di misura del volume in laboratorio</p>
+  <p>In un laboratorio chimico si utilizzano diversi strumenti per misurare il volume di un liquido, con diversi gradi di precisione. Il cilindro graduato permette misure relativamente rapide, ma con una precisione moderata, tipicamente dell'ordine del millilitro. La pipetta, tarata per erogare (o prelevare) un volume specifico e ben definito, e la buretta, dotata di un rubinetto che permette di erogare il liquido goccia a goccia (particolarmente utile nelle titolazioni, che vedremo più avanti nel corso), offrono invece una precisione molto maggiore.</p>
+  <p>Un aspetto pratico importante nella lettura del volume di un liquido contenuto in un recipiente graduato è il menisco, cioè la curvatura che la superficie del liquido assume a contatto con le pareti del recipiente, dovuta alle forze di adesione e coesione: per la maggior parte dei liquidi (come l'acqua), la lettura corretta del volume va effettuata guardando il punto più basso del menisco, all'altezza degli occhi dell'osservatore.</p>
+
+  <p class="titolo-capitolo">La densità come strumento di identificazione</p>
+  <p>Come già accennato nel capitolo precedente, la densità è una proprietà intensiva molto utile in chimica, sia per identificare sostanze sconosciute, sia per effettuare conversioni pratiche tra massa e volume di una sostanza, particolarmente utili quando si opera in laboratorio con strumenti che misurano più agevolmente uno dei due valori piuttosto che l'altro.</p>
+  <p class="formula">ρ = m / V &nbsp;&nbsp;→&nbsp;&nbsp; m = ρ · V &nbsp;&nbsp;→&nbsp;&nbsp; V = m / ρ</p>
+  <p>La densità di una sostanza dipende dalla temperatura (generalmente diminuisce all'aumentare della temperatura, per effetto della dilatazione termica, come visto in fisica), motivo per cui i valori di densità riportati nelle tabelle sono sempre accompagnati dall'indicazione della temperatura a cui sono stati misurati (tipicamente 20 °C o 25 °C).</p>
+  <p><em>Esempio svolto:</em> vogliamo prelevare m = 79 g di etanolo (densità ρ = 0,79 g/mL a 20 °C) utilizzando un cilindro graduato. Il volume da prelevare vale V = m / ρ = 79 / 0,79 = 100 mL.</p>
+
+  <p class="titolo-capitolo">Le cifre significative nelle misure chimiche</p>
+  <p>Come già visto in fisica, ogni misura sperimentale è affetta da un'incertezza legata alla precisione dello strumento utilizzato, ed è quindi fondamentale esprimere i risultati con il corretto numero di cifre significative. In chimica questo aspetto è particolarmente importante, poiché i calcoli coinvolgono spesso più misure sperimentali, ciascuna con la propria precisione.</p>
+  <p>Valgono le stesse regole già viste in fisica: nelle addizioni e sottrazioni, il risultato deve avere lo stesso numero di cifre decimali della misura meno precisa; nelle moltiplicazioni e divisioni, il risultato deve avere lo stesso numero di cifre significative della misura con il minor numero di cifre significative tra quelle coinvolte nel calcolo.</p>
+  <p><em>Esempio svolto:</em> un campione ha massa m = 12,44 g (quattro cifre significative) e volume V = 3,1 cm<sup>3</sup> (due cifre significative). La densità calcolata come m/V vale 12,44 / 3,1 = 4,0129... g/cm<sup>3</sup>, che va arrotondata a due sole cifre significative, coerentemente con la misura meno precisa: ρ ≈ 4,0 g/cm<sup>3</sup>.</p>
+
+  <p class="titolo-capitolo">La notazione scientifica e i prefissi del Sistema Internazionale</p>
+  <p>Come già visto in fisica, in chimica si incontrano molto spesso numeri estremamente grandi (come il numero di particelle contenute in una piccola quantità di sostanza) oppure estremamente piccoli (come le dimensioni di un atomo o la massa di una singola molecola), per i quali risulta indispensabile l'uso della notazione scientifica.</p>
+  <p class="formula">N = a × 10<sup>n</sup>, con 1 ≤ a &lt; 10</p>
+  <p>Accanto alla notazione scientifica, si utilizzano frequentemente i prefissi del Sistema Internazionale già introdotti in fisica: chilo (k, 10<sup>3</sup>), centi (c, 10<sup>−2</sup>), milli (m, 10<sup>−3</sup>), micro (μ, 10<sup>−6</sup>) e nano (n, 10<sup>−9</sup>), quest'ultimo particolarmente utilizzato per esprimere le dimensioni atomiche e molecolari.</p>
+  <p><em>Esempio svolto:</em> il raggio di un atomo di idrogeno vale circa 53 pm (picometri), dove 1 pm = 10<sup>−12</sup> m. Espresso in metri, questo valore corrisponde a 53 × 10<sup>−12</sup> m = 5,3 × 10<sup>−11</sup> m, un valore estremamente piccolo che giustifica l'utilità pratica dei sottomultipli e della notazione scientifica per esprimere le grandezze a livello atomico.</p>
+</div>
+<!-- fine capitolo chimica 02 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi03.html">Vai al Capitolo successivo</a></p>
+</div>
+  
+  
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
