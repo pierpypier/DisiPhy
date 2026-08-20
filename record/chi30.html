@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 30</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 30: l'equilibrio chimico -->
+<div id="capitolo-30-equilibrio-chimico" class="capitolo-storia">
+  <p class="titolo-capitolo">30 - L'equilibrio chimico - Classe 4</p>
+
+  <p class="titolo-capitolo">Le reazioni reversibili</p>
+  <p>Finora abbiamo trattato le reazioni chimiche come trasformazioni che procedono in un'unica direzione, dai reagenti verso i prodotti, fino al completo esaurimento del reagente limitante (concetto già visto nel capitolo 20). In realtà, molte reazioni chimiche sono reversibili, cioè possono avvenire contemporaneamente in entrambe le direzioni: i reagenti si trasformano in prodotti (reazione diretta), ma allo stesso tempo i prodotti, non appena si formano, possono ritrasformarsi nei reagenti di partenza (reazione inversa). Una reazione reversibile si indica con una doppia freccia, invece della freccia singola già utilizzata nel capitolo 18.</p>
+  <p class="formula">A + B ⇌ C + D</p>
+  <p>Questo concetto di reversibilità è già stato incontrato, in un contesto più specifico, nel capitolo 3, a proposito dell'equilibrio dinamico tra un liquido e il proprio vapore: l'equilibrio chimico che esamineremo in questo capitolo generalizza quella stessa idea alle reazioni chimiche vere e proprie.</p>
+
+  <p class="titolo-capitolo">Il raggiungimento dell'equilibrio dinamico</p>
+  <p>Immaginiamo di far reagire i soli reagenti A e B, in un recipiente chiuso, all'istante iniziale. All'inizio della reazione, la velocità della reazione diretta è massima, poiché la concentrazione dei reagenti è massima, mentre la velocità della reazione inversa è nulla, poiché i prodotti non si sono ancora formati. Con il procedere della reazione, la concentrazione dei reagenti diminuisce progressivamente, e con essa diminuisce anche la velocità della reazione diretta (in accordo con quanto visto nel capitolo 29 a proposito dell'effetto della concentrazione sulla velocità di reazione); allo stesso tempo, la concentrazione dei prodotti aumenta, e con essa aumenta anche la velocità della reazione inversa.</p>
+  <p>Dopo un certo intervallo di tempo, la velocità della reazione diretta e la velocità della reazione inversa diventano uguali tra loro: da questo momento in poi, il sistema ha raggiunto una condizione di equilibrio chimico, in cui le concentrazioni di tutte le sostanze coinvolte, sia reagenti sia prodotti, rimangono costanti nel tempo, pur continuando entrambe le reazioni, diretta e inversa, a procedere continuamente e con la stessa velocità reciproca: proprio per questo motivo si parla di equilibrio dinamico, e non di un semplice arresto della reazione.</p>
+
+  <p class="titolo-capitolo">La costante di equilibrio</p>
+  <p>Per una generica reazione reversibile all'equilibrio, del tipo aA + bB ⇌ cC + dD (dove le lettere minuscole rappresentano i coefficienti stechiometrici dell'equazione bilanciata), si definisce la costante di equilibrio, indicata con il simbolo K<sub>eq</sub>, come il rapporto tra il prodotto delle concentrazioni molari dei prodotti, ciascuna elevata al proprio coefficiente stechiometrico, e il prodotto delle concentrazioni molari dei reagenti, anch'esse elevate al proprio coefficiente stechiometrico.</p>
+  <p class="formula">K<sub>eq</sub> = [C]<sup>c</sup> · [D]<sup>d</sup> / ([A]<sup>a</sup> · [B]<sup>b</sup>)</p>
+  <p>Il valore della costante di equilibrio K<sub>eq</sub>, per una data reazione a una data temperatura, è sempre lo stesso, indipendentemente dalle concentrazioni iniziali di reagenti e prodotti da cui si è partiti per raggiungere l'equilibrio: cambiando invece la temperatura, il valore della costante di equilibrio può variare, poiché, come vedremo nel prossimo capitolo, la temperatura influenza la reazione diretta e la reazione inversa in modo generalmente diverso tra loro.</p>
+
+  <p class="titolo-capitolo">Interpretare il valore della costante di equilibrio</p>
+  <p>Il valore numerico della costante di equilibrio fornisce un'informazione importante sulla posizione dell'equilibrio, cioè su quanto la reazione sia spostata verso i prodotti oppure verso i reagenti, una volta raggiunta la condizione di equilibrio dinamico. Un valore di K<sub>eq</sub> molto maggiore di 1 indica che, all'equilibrio, le concentrazioni dei prodotti sono nettamente superiori a quelle dei reagenti: si dice in questo caso che l'equilibrio è spostato verso destra, cioè verso i prodotti.</p>
+  <p>Un valore di K<sub>eq</sub> molto minore di 1 indica, al contrario, che all'equilibrio le concentrazioni dei reagenti sono nettamente superiori a quelle dei prodotti: si dice in questo caso che l'equilibrio è spostato verso sinistra, cioè verso i reagenti. Un valore di K<sub>eq</sub> vicino a 1, infine, indica che, all'equilibrio, le concentrazioni di reagenti e prodotti sono paragonabili tra loro, senza una netta prevalenza degli uni o degli altri.</p>
+  <p><em>Esempio svolto:</em> per la reazione di sintesi dell'ammoniaca, N<sub>2</sub> + 3 H<sub>2</sub> ⇌ 2 NH<sub>3</sub>, all'equilibrio, a una data temperatura, si misurano le seguenti concentrazioni: [N<sub>2</sub>] = 0,50 mol/L, [H<sub>2</sub>] = 1,5 mol/L, [NH<sub>3</sub>] = 3,0 mol/L. La costante di equilibrio vale K<sub>eq</sub> = [NH<sub>3</sub>]<sup>2</sup> / ([N<sub>2</sub>] · [H<sub>2</sub>]<sup>3</sup>) = (3,0)<sup>2</sup> / (0,50 × (1,5)<sup>3</sup>) = 9,0 / (0,50 × 3,375) = 9,0 / 1,6875 ≈ 5,33.</p>
+
+  <p class="titolo-capitolo">Il quoziente di reazione</p>
+  <p>Quando un sistema chimico non si trova ancora in condizioni di equilibrio, è possibile calcolare, con la stessa formula già vista per la costante di equilibrio, ma utilizzando le concentrazioni istantanee delle sostanze coinvolte anziché quelle all'equilibrio, una grandezza chiamata quoziente di reazione, indicata con il simbolo Q, che permette di prevedere in quale direzione procederà la reazione per raggiungere l'equilibrio.</p>
+  <p>Confrontando il valore del quoziente di reazione Q con il valore della costante di equilibrio K<sub>eq</sub>, è possibile stabilire il verso in cui la reazione procederà spontaneamente: se Q è minore di K<sub>eq</sub>, la reazione procede verso destra, cioè nel verso della reazione diretta, formando ulteriori prodotti, fino a raggiungere l'equilibrio; se Q è maggiore di K<sub>eq</sub>, la reazione procede invece verso sinistra, cioè nel verso della reazione inversa, formando ulteriori reagenti; se Q è uguale a K<sub>eq</sub>, il sistema si trova già in condizioni di equilibrio, e le concentrazioni delle sostanze coinvolte non variano ulteriormente nel tempo.</p>
+</div>
+<!-- fine capitolo chimica 30 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi31.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 27</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 27: l'entropia e l'energia libera -->
+<div id="capitolo-27-entropia-energia-libera" class="capitolo-storia">
+  <p class="titolo-capitolo">27 - L'entropia e l'energia libera - Classe 3</p>
+
+  <p class="titolo-capitolo">Un limite della sola entalpia</p>
+  <p>Nel capitolo precedente abbiamo visto come la variazione di entalpia ΔH permetta di misurare l'energia scambiata sotto forma di calore durante una reazione chimica, e come le reazioni esotermiche, che liberano energia, siano generalmente favorite dal punto di vista energetico. Tuttavia, esistono in natura numerose trasformazioni endotermiche che avvengono ugualmente in modo spontaneo, cioè senza alcun intervento esterno: la sola entalpia, quindi, non è sufficiente a prevedere se una trasformazione avverrà spontaneamente oppure no, ed è necessario introdurre una seconda grandezza, l'entropia.</p>
+
+  <p class="titolo-capitolo">Il concetto di entropia</p>
+  <p>L'entropia, indicata con il simbolo S, è una grandezza che misura il grado di disordine (più precisamente, il numero di configurazioni microscopiche possibili) di un sistema: un sistema molto ordinato, in cui le particelle sono disposte in modo altamente regolare, come in un cristallo perfetto, possiede un'entropia bassa; un sistema molto disordinato, in cui le particelle possono disporsi in un numero molto maggiore di configurazioni diverse, come un gas che occupa liberamente tutto lo spazio disponibile, possiede un'entropia elevata.</p>
+  <p>Confrontando i tre stati di aggregazione della materia già esaminati nel capitolo 3, l'entropia aumenta generalmente passando dallo stato solido allo stato liquido, e ulteriormente dallo stato liquido allo stato aeriforme, in accordo con il progressivo aumento del disordine e della libertà di movimento delle particelle già descritto in quel capitolo.</p>
+  <p>Il secondo principio della termodinamica afferma che, in un sistema isolato (che non scambia né materia né energia con l'ambiente circostante), l'entropia complessiva tende sempre ad aumentare nel corso di una trasformazione spontanea, o al più a rimanere costante: questo principio riflette la tendenza naturale dei sistemi fisici a evolvere verso configurazioni statisticamente più probabili, cioè più disordinate.</p>
+
+  <p class="titolo-capitolo">La variazione di entropia in una reazione chimica</p>
+  <p>Analogamente a quanto già visto per l'entalpia nel capitolo precedente, si definisce la variazione di entropia di una reazione chimica, indicata con il simbolo ΔS, come la differenza tra l'entropia dei prodotti e l'entropia dei reagenti.</p>
+  <p class="formula">ΔS = S<sub>prodotti</sub> − S<sub>reagenti</sub></p>
+  <p>Una reazione chimica in cui aumenta il numero complessivo di moli di sostanze gassose tra i prodotti rispetto ai reagenti presenta generalmente una variazione di entropia positiva (ΔS &gt; 0), poiché lo stato aeriforme, come già visto, è associato a un'entropia più elevata rispetto agli stati liquido e solido; al contrario, una reazione in cui diminuisce il numero di moli gassose, o in cui una sostanza passa da uno stato più disordinato a uno più ordinato, presenta generalmente una variazione di entropia negativa (ΔS &lt; 0).</p>
+  <p><em>Esempio svolto:</em> la reazione di decomposizione del carbonato di calcio, già incontrata nel capitolo 18, CaCO<sub>3</sub> → CaO + CO<sub>2</sub>, produce, a partire da un solo reagente solido, un prodotto solido e un prodotto gassoso: l'aumento del disordine complessivo, dovuto alla comparsa di una nuova sostanza allo stato aeriforme tra i prodotti, comporta una variazione di entropia positiva per questa reazione.</p>
+
+  <p class="titolo-capitolo">L'energia libera di Gibbs</p>
+  <p>Per stabilire in modo rigoroso se una trasformazione chimica sia spontanea oppure no, tenendo conto contemporaneamente sia della variazione di entalpia sia della variazione di entropia, si introduce una grandezza chiamata energia libera di Gibbs, indicata con il simbolo G, dal nome del fisico e chimico statunitense Josiah Willard Gibbs, definita dalla relazione seguente.</p>
+  <p class="formula">ΔG = ΔH − T · ΔS</p>
+  <p>In questa formula, T rappresenta la temperatura assoluta, espressa in kelvin come già visto nel capitolo 2, mentre ΔH e ΔS rappresentano rispettivamente la variazione di entalpia e la variazione di entropia associate alla trasformazione considerata.</p>
+
+  <p class="titolo-capitolo">Il criterio di spontaneità</p>
+  <p>Il valore della variazione di energia libera ΔG permette di stabilire, in modo diretto, se una trasformazione chimica, a una data temperatura, sia spontanea oppure no: se ΔG risulta negativo (ΔG &lt; 0), la trasformazione è spontanea, cioè avviene senza necessità di un apporto continuo di energia dall'esterno; se ΔG risulta positivo (ΔG &gt; 0), la trasformazione non è spontanea, e può avvenire soltanto fornendo energia dall'esterno in modo continuo; se ΔG risulta uguale a zero, il sistema si trova in una condizione di equilibrio, argomento che sarà approfondito in un capitolo successivo dedicato all'equilibrio chimico.</p>
+  <p>Osservando la formula dell'energia libera, si comprende come una reazione esotermica (ΔH &lt; 0) accompagnata da un aumento di entropia (ΔS &gt; 0) risulti sempre spontanea, a qualsiasi temperatura, poiché entrambi i termini contribuiscono a rendere ΔG negativo; al contrario, una reazione endotermica (ΔH &gt; 0) accompagnata da una diminuzione di entropia (ΔS &lt; 0) non risulta mai spontanea, a nessuna temperatura, poiché entrambi i termini contribuiscono a rendere ΔG positivo.</p>
+  <p>Nei due casi intermedi, in cui i due termini si oppongono a vicenda (ad esempio, una reazione endotermica ma con aumento di entropia), la spontaneità della reazione dipende dal valore specifico della temperatura T, poiché il termine T · ΔS diventa via via più importante all'aumentare della temperatura: è per questo motivo che alcune trasformazioni, come la fusione del ghiaccio (endotermica, ma con aumento di entropia, poiché il liquido è più disordinato del solido), risultano spontanee soltanto al di sopra di una certa temperatura caratteristica.</p>
+  <p><em>Esempio svolto:</em> verifichiamo se la fusione del ghiaccio a T = 263 K (−10 °C) sia spontanea, sapendo che ΔH = +6,0 kJ/mol e ΔS = +22 J/(mol·K) = 0,022 kJ/(mol·K) per questa trasformazione. Applicando la formula, ΔG = 6,0 − (263 × 0,022) = 6,0 − 5,79 = +0,21 kJ/mol: poiché ΔG è positivo, la fusione del ghiaccio non è spontanea a questa temperatura, in accordo con l'esperienza quotidiana, secondo cui il ghiaccio non fonde spontaneamente al di sotto di 0 °C.</p>
+</div>
+<!-- fine capitolo chimica 27 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi28.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+  
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

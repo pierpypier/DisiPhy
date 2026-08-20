@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 24</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 25: le proprietà colligative delle soluzioni -->
+<div id="capitolo-25-proprieta-colligative-soluzioni" class="capitolo-storia">
+  <p class="titolo-capitolo">25 - Le proprietà colligative delle soluzioni - Classe 3</p>
+
+  <p class="titolo-capitolo">Che cosa sono le proprietà colligative</p>
+  <p>Nel capitolo precedente abbiamo visto come sciogliere un soluto in un solvente modifichi la composizione della soluzione risultante. Alcune proprietà fisiche di una soluzione, chiamate proprietà colligative, non dipendono dalla natura chimica specifica del soluto disciolto, cioè da quale particolare sostanza sia stata sciolta, ma esclusivamente dal numero di particelle di soluto presenti nella soluzione, rispetto alla quantità di solvente: è per questo che si dice che dipendono "colligativamente", cioè collettivamente, dal numero di particelle, e non dalla loro identità.</p>
+  <p>Le quattro proprietà colligative principali, che esamineremo in questo capitolo, sono l'abbassamento della tensione di vapore, l'innalzamento della temperatura di ebollizione, l'abbassamento della temperatura di fusione (o crioscopico) e la pressione osmotica.</p>
+
+  <p class="titolo-capitolo">L'abbassamento della tensione di vapore</p>
+  <p>Come visto nel capitolo 3, la tensione di vapore di un liquido puro è la pressione esercitata dal vapore in equilibrio con il liquido stesso, a una data temperatura. Quando un soluto non volatile (cioè che non evapora facilmente) viene disciolto in un solvente, la tensione di vapore della soluzione risultante risulta inferiore a quella del solvente puro, alla stessa temperatura: questo fenomeno è chiamato abbassamento della tensione di vapore, ed è dovuto al fatto che, sulla superficie della soluzione, una parte delle posizioni occupate in precedenza da molecole di solvente sono ora occupate da particelle di soluto, riducendo così il numero di molecole di solvente effettivamente disponibili a evaporare in un dato istante.</p>
+
+  <p class="titolo-capitolo">L'innalzamento ebullioscopico</p>
+  <p>Come diretta conseguenza dell'abbassamento della tensione di vapore appena descritto, una soluzione contenente un soluto non volatile presenta una temperatura di ebollizione più elevata rispetto a quella del solvente puro, poiché, come già visto nel capitolo 3, l'ebollizione avviene quando la tensione di vapore eguaglia la pressione esterna: se la tensione di vapore della soluzione è più bassa a parità di temperatura, sarà necessaria una temperatura maggiore per raggiungere l'ebollizione. Questo fenomeno è chiamato innalzamento ebullioscopico, e la sua entità è direttamente proporzionale alla molalità del soluto disciolto, secondo la relazione seguente.</p>
+  <p class="formula">ΔT<sub>eb</sub> = K<sub>eb</sub> · m</p>
+  <p>In questa formula, K<sub>eb</sub> rappresenta la costante ebullioscopica, un valore caratteristico di ciascun solvente (per l'acqua, ad esempio, vale 0,512 °C·kg/mol), e m rappresenta la molalità della soluzione, già introdotta nel capitolo precedente.</p>
+  <p><em>Esempio svolto:</em> calcoliamo l'innalzamento della temperatura di ebollizione di una soluzione acquosa con molalità m = 0,50 mol/kg, sapendo che la costante ebullioscopica dell'acqua vale K<sub>eb</sub> = 0,512 °C·kg/mol. L'innalzamento vale ΔT<sub>eb</sub> = 0,512 × 0,50 = 0,256 °C, quindi la soluzione bolle a una temperatura pari a 100 + 0,256 = 100,256 °C, anziché ai consueti 100 °C dell'acqua pura.</p>
+
+  <p class="titolo-capitolo">L'abbassamento crioscopico</p>
+  <p>In modo speculare rispetto all'innalzamento ebullioscopico, una soluzione contenente un soluto disciolto presenta una temperatura di fusione (o di solidificazione) inferiore rispetto a quella del solvente puro: questo fenomeno è chiamato abbassamento crioscopico, ed è anch'esso direttamente proporzionale alla molalità del soluto, secondo una relazione del tutto analoga a quella vista per l'innalzamento ebullioscopico.</p>
+  <p class="formula">ΔT<sub>cr</sub> = K<sub>cr</sub> · m</p>
+  <p>In questa formula, K<sub>cr</sub> rappresenta la costante crioscopica, anch'essa caratteristica di ciascun solvente (per l'acqua vale 1,86 °C·kg/mol). Questo fenomeno spiega, in modo quantitativo, l'utilizzo pratico del sale sparso sulle strade ghiacciate in inverno, che, sciogliendosi nell'acqua presente, ne abbassa la temperatura di solidificazione, favorendo lo scioglimento del ghiaccio anche a temperature inferiori a 0 °C.</p>
+  <p><em>Esempio svolto:</em> calcoliamo l'abbassamento della temperatura di solidificazione di una soluzione acquosa con molalità m = 1,5 mol/kg, sapendo che la costante crioscopica dell'acqua vale K<sub>cr</sub> = 1,86 °C·kg/mol. L'abbassamento vale ΔT<sub>cr</sub> = 1,86 × 1,5 = 2,79 °C, quindi la soluzione solidifica a una temperatura pari a 0 − 2,79 = −2,79 °C, anziché agli 0 °C dell'acqua pura.</p>
+
+  <p class="titolo-capitolo">L'osmosi e la pressione osmotica</p>
+  <p>L'osmosi è il fenomeno del passaggio spontaneo delle molecole di solvente attraverso una membrana semipermeabile, cioè una membrana che permette il passaggio delle piccole molecole di solvente ma non delle particelle di soluto, più grandi: quando due soluzioni a diversa concentrazione (o una soluzione e il solvente puro) sono separate da una membrana semipermeabile, il solvente tende a spostarsi spontaneamente dalla soluzione meno concentrata verso quella più concentrata, nel tentativo di uniformare le concentrazioni sui due lati della membrana.</p>
+  <p>La pressione osmotica, indicata con il simbolo π, è definita come la pressione che sarebbe necessario applicare sulla soluzione più concentrata per impedire, ed esattamente bilanciare, il flusso spontaneo di solvente dovuto all'osmosi. Sperimentalmente, si osserva che la pressione osmotica di una soluzione diluita segue una relazione formalmente identica all'equazione di stato dei gas ideali già vista nel capitolo 21.</p>
+  <p class="formula">π · V = n · R · T &nbsp;&nbsp;→&nbsp;&nbsp; π = M · R · T</p>
+  <p>In questa formula, M rappresenta la concentrazione molare della soluzione, già introdotta nel capitolo precedente, ed R rappresenta la stessa costante universale dei gas già incontrata nel capitolo 21.</p>
+  <p><em>Esempio svolto:</em> calcoliamo la pressione osmotica di una soluzione acquosa con concentrazione molare M = 0,10 mol/L, alla temperatura T = 300 K. Applicando la formula, π = M · R · T = 0,10 × 0,0821 × 300 ≈ 2,46 atm.</p>
+
+  <p class="titolo-capitolo">L'osmosi negli organismi viventi</p>
+  <p>Il fenomeno dell'osmosi riveste un'importanza fondamentale negli organismi viventi, poiché le membrane cellulari si comportano, in larga misura, come membrane semipermeabili: una cellula immersa in una soluzione più concentrata rispetto al proprio interno (soluzione ipertonica) tende a perdere acqua per osmosi, disidratandosi, mentre una cellula immersa in una soluzione meno concentrata (soluzione ipotonica) tende ad assorbire acqua, fino a rischiare, nei casi più estremi, di danneggiarsi. Una soluzione con la stessa concentrazione del contenuto cellulare, che non provoca quindi alcun flusso netto di acqua attraverso la membrana, è detta isotonica.</p>
+</div>
+<!-- fine capitolo chimica 25 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi26.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

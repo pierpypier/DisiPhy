@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 29</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 29: i fattori che influenzano la cinetica chimica -->
+<div id="capitolo-29-fattori-cinetica-chimica" class="capitolo-storia">
+  <p class="titolo-capitolo">29 - I fattori che influenzano la cinetica chimica - Classe 4</p>
+
+  <p class="titolo-capitolo">Quali fattori modificano la velocità di reazione</p>
+  <p>Nel capitolo precedente abbiamo introdotto il modello degli urti efficaci e il concetto di energia di attivazione, spiegando a livello microscopico perché le reazioni chimiche procedano con velocità diverse tra loro. In questo capitolo esaminiamo nel dettaglio i principali fattori sperimentali che è possibile modificare per influenzare la velocità di una data reazione chimica: la concentrazione dei reagenti, la temperatura, lo stato di suddivisione dei reagenti solidi e la presenza di un catalizzatore.</p>
+
+  <p class="titolo-capitolo">L'effetto della concentrazione</p>
+  <p>Aumentando la concentrazione dei reagenti, la velocità di una reazione chimica generalmente aumenta: questo effetto si spiega facilmente in base al modello degli urti già introdotto nel capitolo precedente, poiché una maggiore concentrazione comporta un maggior numero di particelle di reagente presenti nello stesso volume, e quindi una maggiore frequenza di urti complessivi tra le particelle, con un conseguente aumento proporzionale anche del numero di urti efficaci.</p>
+  <p>La relazione quantitativa tra la concentrazione dei reagenti e la velocità di una reazione è descritta dalla legge cinetica (o equazione della velocità), che per una reazione generica del tipo A + B → prodotti assume, in molti casi, la forma seguente.</p>
+  <p class="formula">v = k · [A]<sup>x</sup> · [B]<sup>y</sup></p>
+  <p>In questa formula, k rappresenta la costante cinetica della reazione, un valore caratteristico che dipende dalla particolare reazione considerata e dalla temperatura (ma non dalla concentrazione dei reagenti), mentre gli esponenti x e y, chiamati ordini di reazione rispetto ad A e rispetto a B, sono valori determinati sperimentalmente, e non coincidono necessariamente con i coefficienti stechiometrici della reazione bilanciata.</p>
+
+  <p class="titolo-capitolo">L'effetto della temperatura</p>
+  <p>Aumentando la temperatura, la velocità di una reazione chimica aumenta, generalmente in modo piuttosto marcato: come regola empirica approssimativa, un aumento di temperatura di circa 10 °C tende a raddoppiare (o talvolta triplicare) la velocità di molte reazioni chimiche comuni.</p>
+  <p>Questo effetto si spiega considerando che, all'aumentare della temperatura, aumenta l'energia cinetica media delle particelle dei reagenti, e con essa aumenta anche la frazione di particelle che possiedono, in un dato istante, un'energia sufficiente a superare l'energia di attivazione già introdotta nel capitolo precedente: un numero maggiore di urti risulta quindi efficace, con un conseguente aumento della velocità complessiva della reazione. È interessante notare come l'aumento di temperatura influisca sulla velocità di reazione soprattutto attraverso questo effetto sulla frazione di urti efficaci, mentre l'effetto sulla semplice frequenza totale degli urti, dovuto al maggiore movimento delle particelle, risulta generalmente molto meno significativo.</p>
+  <p><em>Esempio svolto:</em> una reazione ha, a una data temperatura, una velocità v<sub>1</sub> = 0,020 mol/(L·s). Se, in base alla regola empirica del raddoppio ogni 10 °C, la temperatura viene aumentata di 30 °C, la nuova velocità vale approssimativamente v<sub>2</sub> = v<sub>1</sub> × 2<sup>3</sup> = 0,020 × 8 = 0,16 mol/(L·s), poiché un aumento di 30 °C corrisponde a tre intervalli successivi di 10 °C.</p>
+
+  <p class="titolo-capitolo">L'effetto della superficie di contatto</p>
+  <p>Quando uno o più reagenti di una reazione si trovano allo stato solido, la velocità della reazione dipende fortemente dallo stato di suddivisione del solido, cioè dalla superficie di contatto effettivamente disponibile tra il solido e le altre sostanze reagenti: un solido finemente suddiviso, ad esempio sotto forma di polvere, presenta una superficie di contatto molto maggiore, a parità di massa complessiva, rispetto allo stesso solido in un unico blocco compatto, poiché una maggiore quantità di particelle si trova esposta sulla superficie, direttamente disponibile a entrare in contatto (e quindi in urto) con le particelle degli altri reagenti.</p>
+  <p>Questo effetto spiega, ad esempio, perché un pezzo di legno in un unico blocco compatto bruci relativamente lentamente, mentre della segatura fine della stessa essenza legnosa, esposta all'aria in condizioni analoghe, può bruciare in modo estremamente più rapido, e in alcuni casi persino esplosivo, proprio a causa della superficie di contatto enormemente maggiore a disposizione della reazione di combustione.</p>
+
+  <p class="titolo-capitolo">I catalizzatori</p>
+  <p>Un catalizzatore è una sostanza capace di aumentare la velocità di una reazione chimica, senza essere essa stessa consumata nel corso della reazione complessiva, e senza modificare la posizione dell'equilibrio finale della reazione (argomento che sarà approfondito nel prossimo capitolo), né la variazione di entalpia complessiva della trasformazione.</p>
+  <p>Un catalizzatore agisce fornendo un percorso di reazione alternativo, caratterizzato da un'energia di attivazione inferiore rispetto a quella della reazione non catalizzata: poiché, come già visto in questo capitolo, una minore energia di attivazione comporta una maggiore frazione di urti efficaci a una data temperatura, la reazione catalizzata procede con velocità significativamente maggiore, pur portando esattamente agli stessi prodotti finali della reazione non catalizzata.</p>
+  <p>Si distinguono generalmente due tipi di catalisi: la catalisi omogenea, in cui il catalizzatore si trova nella stessa fase (solida, liquida o aeriforme) dei reagenti, e la catalisi eterogenea, in cui il catalizzatore si trova in una fase diversa da quella dei reagenti, come nel caso comune di un catalizzatore solido che agisce sulla superficie di contatto con reagenti liquidi o aeriformi, fornendo una superficie sulla quale le molecole dei reagenti possono adsorbirsi temporaneamente, favorendo un'orientazione reciproca più adeguata alla formazione dei prodotti.</p>
+  <p>Un esempio molto noto di catalisi eterogenea è quello della marmitta catalitica delle automobili, in cui i gas di scarico, contenenti sostanze inquinanti come il monossido di carbonio, attraversano una superficie metallica catalitica (generalmente a base di platino, palladio e rodio), che accelera la loro trasformazione in sostanze meno dannose, come l'anidride carbonica, senza che il metallo catalizzatore venga consumato nel processo.</p>
+
+  <p class="titolo-capitolo">Gli enzimi: catalizzatori biologici</p>
+  <p>Un caso particolarmente importante di catalizzatori, presenti negli organismi viventi, sono gli enzimi, molecole complesse (generalmente proteine) capaci di accelerare in modo estremamente efficiente le numerosissime reazioni chimiche necessarie al funzionamento delle cellule, molte delle quali, in assenza di catalisi enzimatica, procederebbero a una velocità troppo bassa per sostenere i processi vitali nei tempi richiesti dall'organismo.</p>
+  <p>Ogni enzima presenta generalmente un'elevata specificità nei confronti della reazione (o delle reazioni) che è in grado di catalizzare, agendo attraverso un sito attivo, cioè una particolare regione della propria struttura tridimensionale, capace di legarsi in modo selettivo con le molecole dei reagenti (chiamati, in questo contesto, substrati), favorendone l'orientazione reciproca e riducendo, come qualsiasi altro catalizzatore, l'energia di attivazione necessaria affinché la reazione abbia luogo.</p>
+</div>
+<!-- fine capitolo chimica 29 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi30.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

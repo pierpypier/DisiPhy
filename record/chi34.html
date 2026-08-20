@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 34</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 34: le reazioni acido-base e la titolazione -->
+<div id="capitolo-34-reazioni-acido-base-titolazione" class="capitolo-storia">
+  <p class="titolo-capitolo">34 - Le reazioni acido-base e la titolazione - Classe 4</p>
+
+  <p class="titolo-capitolo">La reazione di neutralizzazione</p>
+  <p>Quando un acido e una base, secondo le definizioni già viste nel capitolo 32, reagiscono tra loro in soluzione acquosa, avviene una reazione chiamata neutralizzazione, in cui gli ioni idronio provenienti dall'acido e gli ioni ossidrile provenienti dalla base si combinano per formare acqua, mentre gli ioni rimanenti (il catione della base e l'anione dell'acido) formano un sale, secondo lo schema generale già introdotto nel capitolo 17 a proposito della nomenclatura dei sali.</p>
+  <p class="formula">acido + base → sale + acqua</p>
+  <p><em>Esempio svolto:</em> la reazione di neutralizzazione tra acido cloridrico e idrossido di sodio produce cloruro di sodio e acqua: HCl + NaOH → NaCl + H<sub>2</sub>O.</p>
+  <p>Se un acido forte reagisce con una base forte, in quantità stechiometricamente equivalenti (come vedremo tra poco), la soluzione risultante al termine della reazione è neutra, con pH = 7, poiché il sale formato, come nell'esempio del cloruro di sodio, non altera l'equilibrio di autoionizzazione dell'acqua già visto nel capitolo precedente. Se invece uno dei due reagenti è debole, come vedremo, la soluzione risultante al punto di equivalenza non è generalmente neutra.</p>
+
+  <p class="titolo-capitolo">Il concetto di titolazione</p>
+  <p>La titolazione (o titolazione acido-base) è una tecnica sperimentale che permette di determinare la concentrazione incognita di una soluzione acida (o basica), facendola reagire, in modo controllato e progressivo, con una soluzione basica (o acida) di concentrazione nota, chiamata soluzione titolante, fino al raggiungimento del punto di equivalenza, cioè del punto in cui le moli di acido e le moli di base presenti nella miscela di reazione sono esattamente in rapporto stechiometrico tra loro, secondo l'equazione bilanciata della reazione di neutralizzazione.</p>
+  <p>Nella pratica di laboratorio, la soluzione titolante viene aggiunta gradualmente, mediante uno strumento graduato chiamato buretta, alla soluzione di concentrazione incognita, fino a osservare un cambiamento visibile che segnali il raggiungimento del punto di equivalenza: questo cambiamento è generalmente ottenuto grazie all'aggiunta di un indicatore acido-base, una sostanza che cambia colore in modo netto in un ristretto intervallo di pH, scelto in modo da coincidere il più possibile con il pH del punto di equivalenza della specifica titolazione considerata.</p>
+
+  <p class="titolo-capitolo">Il calcolo della concentrazione incognita</p>
+  <p>Al punto di equivalenza di una titolazione tra un acido monoprotico (che cede un solo protone per molecola) e una base monoprotica (che accetta un solo protone per molecola), il numero di moli di acido presenti inizialmente nella soluzione è uguale al numero di moli di base aggiunte tramite la soluzione titolante, poiché il rapporto stechiometrico tra i due, in questo caso particolare, vale 1 a 1.</p>
+  <p>Ricordando la definizione di concentrazione molare già vista nel capitolo 24, secondo cui n = M · V, è possibile ricavare la seguente relazione, valida al punto di equivalenza di una titolazione tra un acido monoprotico e una base monoprotica.</p>
+  <p class="formula">M<sub>acido</sub> · V<sub>acido</sub> = M<sub>base</sub> · V<sub>base</sub></p>
+  <p><em>Esempio svolto:</em> in una titolazione, V<sub>acido</sub> = 25,0 mL di una soluzione di acido cloridrico a concentrazione incognita vengono neutralizzati completamente da V<sub>base</sub> = 32,5 mL di una soluzione di idrossido di sodio a concentrazione nota M<sub>base</sub> = 0,100 mol/L. Applicando la formula, la concentrazione incognita dell'acido vale M<sub>acido</sub> = (M<sub>base</sub> · V<sub>base</sub>) / V<sub>acido</sub> = (0,100 × 32,5) / 25,0 = 0,130 mol/L.</p>
+
+  <p class="titolo-capitolo">La curva di titolazione</p>
+  <p>Rappresentando graficamente l'andamento del pH della soluzione in funzione del volume di soluzione titolante progressivamente aggiunto, si ottiene un grafico chiamato curva di titolazione, la cui forma caratteristica dipende dal tipo di acido e di base coinvolti nella reazione (forti o deboli).</p>
+  <p>Nella titolazione di un acido forte con una base forte, la curva di titolazione presenta un tratto quasi verticale in corrispondenza del punto di equivalenza, dove il pH varia molto bruscamente anche per piccolissime aggiunte di titolante: questo tratto verticale corrisponde a un pH pari a 7, come già osservato in precedenza per la neutralizzazione tra acidi e basi entrambi forti.</p>
+
+  <p class="titolo-capitolo">La titolazione con un acido o una base debole</p>
+  <p>Quando la titolazione coinvolge un acido debole (con una base forte) oppure una base debole (con un acido forte), il punto di equivalenza non corrisponde più a un pH pari a 7, poiché il sale formato al termine della reazione, contenendo la base coniugata (o l'acido coniugato, secondo quanto visto nel capitolo 32) di un acido (o di una base) debole, reagisce a propria volta parzialmente con l'acqua, in un processo chiamato idrolisi salina, alterando il pH della soluzione finale rispetto alla neutralità.</p>
+  <p>Nella titolazione di un acido debole con una base forte, il punto di equivalenza si trova a un pH superiore a 7 (soluzione leggermente basica), poiché l'anione dell'acido debole, cioè la sua base coniugata, tende a reagire con l'acqua sottraendo protoni e liberando ioni ossidrile; nella titolazione di una base debole con un acido forte, al contrario, il punto di equivalenza si trova a un pH inferiore a 7 (soluzione leggermente acida), per un meccanismo analogo ma di segno opposto, coinvolgente l'acido coniugato della base debole.</p>
+
+  <p class="titolo-capitolo">La scelta dell'indicatore adatto</p>
+  <p>Poiché ogni indicatore acido-base cambia colore in un intervallo di pH specifico e limitato, è fondamentale scegliere, per ciascuna titolazione, un indicatore il cui intervallo di viraggio coincida il più possibile con il pH del punto di equivalenza previsto per quella particolare reazione, in modo da minimizzare l'errore sperimentale nella determinazione del punto finale della titolazione.</p>
+  <p>Per una titolazione tra un acido forte e una base forte, in cui il punto di equivalenza si trova a pH = 7, sono adatti indicatori con un intervallo di viraggio centrato attorno alla neutralità; per titolazioni che coinvolgono acidi o basi deboli, con punto di equivalenza spostato rispettivamente verso valori di pH più alti o più bassi, è invece necessario scegliere indicatori con un intervallo di viraggio spostato di conseguenza, in accordo con quanto discusso nel paragrafo precedente.</p>
+</div>
+<!-- fine capitolo chimica 34 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi35.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

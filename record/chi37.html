@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 37</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 37: l'elettrochimica, le pile -->
+<div id="capitolo-37-elettrochimica-pile" class="capitolo-storia">
+  <p class="titolo-capitolo">37 - L'elettrochimica: le pile - Classe 5</p>
+
+  <p class="titolo-capitolo">Dalla reazione redox alla corrente elettrica</p>
+  <p>Nel capitolo precedente abbiamo visto come, in una reazione di ossidoriduzione spontanea, come quella tra zinco metallico e ioni rame(II), avvenga un trasferimento diretto di elettroni dalla specie che si ossida alla specie che si riduce. Se le due semireazioni vengono fatte avvenire in due contenitori separati, collegati elettricamente tra loro in modo da costringere gli elettroni a passare attraverso un circuito esterno prima di raggiungere la specie che si riduce, è possibile sfruttare questo flusso di elettroni per generare una corrente elettrica utilizzabile: un dispositivo costruito secondo questo principio è chiamato pila (o cella galvanica).</p>
+
+  <p class="titolo-capitolo">La struttura di una pila</p>
+  <p>Una pila è costituita da due semicelle distinte, ciascuna formata da un elettrodo (una lamina o barretta metallica) immerso in una soluzione contenente i propri ioni: la semicella in cui avviene l'ossidazione è chiamata anodo, mentre la semicella in cui avviene la riduzione è chiamata catodo. I due elettrodi sono collegati tra loro mediante un filo conduttore esterno, lungo il quale scorrono gli elettroni prodotti dall'ossidazione all'anodo, diretti verso il catodo, dove vengono consumati dalla riduzione.</p>
+  <p>Poiché il passaggio di elettroni dall'anodo al catodo, se non compensato, provocherebbe un accumulo di carica positiva nella semicella anodica (a causa della formazione di ioni positivi) e un accumulo di carica negativa nella semicella catodica (a causa del consumo di ioni positivi), le due semicelle vengono collegate anche mediante un ponte salino, un dispositivo che permette il passaggio di ioni tra le due soluzioni, senza mescolarle direttamente, mantenendo così la neutralità elettrica complessiva di entrambe le semicelle durante il funzionamento della pila.</p>
+
+  <p class="titolo-capitolo">La pila Daniell</p>
+  <p>Un esempio storico e didatticamente molto utilizzato di pila è la pila Daniell, formata da una semicella con un elettrodo di zinco immerso in una soluzione di solfato di zinco, e da una semicella con un elettrodo di rame immerso in una soluzione di solfato di rame, collegate tra loro mediante un ponte salino, secondo lo schema generale appena descritto.</p>
+  <p>All'anodo di zinco avviene la semireazione di ossidazione già vista nel capitolo precedente, Zn → Zn<sup>2+</sup> + 2 e<sup>−</sup>, mentre al catodo di rame avviene la semireazione di riduzione, Cu<sup>2+</sup> + 2 e<sup>−</sup> → Cu: gli elettroni ceduti dallo zinco all'anodo percorrono il circuito esterno fino al catodo di rame, generando così una corrente elettrica utilizzabile, ad esempio per alimentare una piccola lampadina collegata al circuito.</p>
+
+  <p class="titolo-capitolo">Il potenziale standard di riduzione</p>
+  <p>Ogni semireazione di riduzione è caratterizzata da un valore proprio, chiamato potenziale standard di riduzione, indicato con il simbolo E°, che misura la tendenza relativa di quella particolare semireazione ad avvenire effettivamente come riduzione (cioè ad acquistare elettroni), in condizioni standard di concentrazione e temperatura, rispetto a un elettrodo di riferimento convenzionale (l'elettrodo standard a idrogeno, a cui viene assegnato, per convenzione, un potenziale pari esattamente a 0 volt).</p>
+  <p>Un valore di E° più elevato (più positivo) indica una maggiore tendenza della specie chimica considerata a ridursi, cioè ad acquistare elettroni; un valore di E° più basso (più negativo) indica invece una minore tendenza a ridursi, e quindi, di conseguenza, una maggiore tendenza della specie corrispondente, nella sua forma ridotta, a ossidarsi, cedendo elettroni.</p>
+  <p>La serie di reattività dei metalli già introdotta nel capitolo precedente può quindi essere espressa in modo più rigoroso e quantitativo proprio in termini di potenziali standard di riduzione, ordinando le diverse semireazioni in base al proprio valore di E°.</p>
+
+  <p class="titolo-capitolo">Il calcolo del potenziale standard di una pila</p>
+  <p>Conoscendo i potenziali standard di riduzione delle due semireazioni coinvolte in una pila, è possibile calcolare il potenziale standard complessivo della pila, indicato con il simbolo E°<sub>cella</sub>, come la differenza tra il potenziale standard di riduzione della semireazione che avviene effettivamente al catodo (cioè quella con il valore di E° più elevato tra le due) e il potenziale standard di riduzione della semireazione che avviene effettivamente all'anodo (quella con il valore di E° più basso, che nella pila avviene però in verso opposto, cioè come ossidazione).</p>
+  <p class="formula">E°<sub>cella</sub> = E°<sub>catodo</sub> − E°<sub>anodo</sub></p>
+  <p>Una pila funziona spontaneamente, generando effettivamente corrente elettrica, soltanto quando il valore calcolato di E°<sub>cella</sub> risulta positivo: questo criterio è del tutto coerente con quanto già visto nel capitolo 27 a proposito della relazione tra energia libera di Gibbs e spontaneità di una trasformazione, poiché un valore positivo di E°<sub>cella</sub> corrisponde sempre, per una data reazione redox, a un valore negativo della variazione di energia libera ΔG, condizione di spontaneità già discussa in quel capitolo.</p>
+  <p><em>Esempio svolto:</em> calcoliamo il potenziale standard della pila Daniell, sapendo che il potenziale standard di riduzione della semireazione Cu<sup>2+</sup> + 2 e<sup>−</sup> → Cu vale E° = +0,34 V, mentre quello della semireazione Zn<sup>2+</sup> + 2 e<sup>−</sup> → Zn vale E° = −0,76 V. Poiché il rame presenta il valore di E° più elevato, esso costituisce il catodo, mentre lo zinco, con il valore di E° più basso, costituisce l'anodo. Il potenziale standard della pila vale quindi E°<sub>cella</sub> = 0,34 − (−0,76) = 1,10 V, un valore positivo, coerente con il funzionamento spontaneo effettivamente osservato per questa pila.</p>
+
+  <p class="titolo-capitolo">Le pile nella vita quotidiana</p>
+  <p>Il principio di funzionamento della pila Daniell, seppure con materiali ed elettroliti differenti, è alla base delle comuni pile e batterie utilizzate quotidianamente, come le pile alcaline o le batterie ricaricabili agli ioni di litio, ampiamente diffuse in dispositivi elettronici portatili: in tutti questi dispositivi, l'energia chimica liberata da una reazione di ossidoriduzione spontanea viene convertita in energia elettrica utilizzabile, secondo lo stesso principio generale illustrato in questo capitolo, pur con configurazioni costruttive e materiali specifici via via più sofisticati rispetto alla semplice pila Daniell qui descritta a scopo didattico.</p>
+</div>
+<!-- fine capitolo chimica 37 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi38.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

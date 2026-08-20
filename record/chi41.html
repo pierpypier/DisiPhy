@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 41</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 41: gli idrocarburi insaturi, alcheni e alchini -->
+<div id="capitolo-41-idrocarburi-insaturi-alcheni-alchini" class="capitolo-storia">
+  <p class="titolo-capitolo">41 - Gli idrocarburi insaturi: alcheni e alchini - Classe 5</p>
+
+  <p class="titolo-capitolo">Gli idrocarburi insaturi</p>
+  <p>Nel capitolo 39 abbiamo definito gli idrocarburi insaturi come composti contenenti almeno un legame doppio o triplo tra due atomi di carbonio, a differenza degli alcani esaminati nel capitolo precedente, che contengono esclusivamente legami semplici. In questo capitolo esaminiamo le due principali categorie di idrocarburi insaturi: gli alcheni, caratterizzati da almeno un doppio legame, e gli alchini, caratterizzati da almeno un triplo legame.</p>
+
+  <p class="titolo-capitolo">Gli alcheni: struttura e nomenclatura</p>
+  <p>Gli alcheni sono idrocarburi contenenti un doppio legame carbonio-carbonio, formato, come già visto nel capitolo 39, da atomi di carbonio con ibridazione sp<sup>2</sup>: la loro formula generale, per un alchene con un solo doppio legame e struttura a catena aperta, è C<sub>n</sub>H<sub>2n</sub>, la stessa formula generale già incontrata nel capitolo precedente a proposito dei cicloalcani, pur trattandosi di due classi di composti strutturalmente molto diverse tra loro.</p>
+  <p>Il nome IUPAC di un alchene si costruisce in modo analogo a quello di un alcano, sostituendo il suffisso "-ano" con il suffisso "-ene", e indicando, con un numero di posizione, l'atomo di carbonio da cui ha inizio il doppio legame, scegliendo la numerazione della catena principale in modo da assegnare al doppio legame il numero più basso possibile.</p>
+  <p><em>Esempio svolto:</em> l'etene (C<sub>2</sub>H<sub>4</sub>), il più semplice degli alcheni, presenta un doppio legame tra i due unici atomi di carbonio della molecola; il propene (C<sub>3</sub>H<sub>6</sub>) presenta invece un doppio legame tra il primo e il secondo atomo di carbonio di una catena di tre atomi, e si indica anche come 1-propene, per evidenziare la posizione del doppio legame.</p>
+
+  <p class="titolo-capitolo">Gli alchini: struttura e nomenclatura</p>
+  <p>Gli alchini sono idrocarburi contenenti un triplo legame carbonio-carbonio, formato, come già visto nel capitolo 39, da atomi di carbonio con ibridazione sp: la loro formula generale, per un alchino con un solo triplo legame e struttura a catena aperta, è C<sub>n</sub>H<sub>2n−2</sub>.</p>
+  <p>Il nome IUPAC di un alchino si costruisce in modo del tutto analogo a quello di un alchene, sostituendo il suffisso "-ano" dell'alcano corrispondente con il suffisso "-ino", e indicando allo stesso modo, con un numero di posizione, l'atomo di carbonio da cui ha inizio il triplo legame.</p>
+  <p><em>Esempio svolto:</em> l'etino (C<sub>2</sub>H<sub>2</sub>), noto anche con il nome tradizionale di acetilene, il più semplice degli alchini, presenta un triplo legame tra i due unici atomi di carbonio della molecola.</p>
+
+  <p class="titolo-capitolo">L'isomeria di posizione</p>
+  <p>Oltre all'isomeria di catena già esaminata nel capitolo precedente, gli alcheni e gli alchini presentano un ulteriore tipo di isomeria, chiamata isomeria di posizione, in cui due composti condividono la stessa formula minima e la stessa catena carboniosa di base, ma differiscono per la posizione del doppio (o del triplo) legame lungo la catena.</p>
+  <p><em>Esempio svolto:</em> il butene (C<sub>4</sub>H<sub>8</sub>) presenta due isomeri di posizione: l'1-butene, con il doppio legame tra il primo e il secondo atomo di carbonio, e il 2-butene, con il doppio legame tra il secondo e il terzo atomo di carbonio: entrambi condividono la stessa formula minima C<sub>4</sub>H<sub>8</sub>, ma differiscono per la posizione del doppio legame, e presentano quindi proprietà fisiche leggermente diverse.</p>
+
+  <p class="titolo-capitolo">L'isomeria geometrica (cis-trans)</p>
+  <p>Negli alcheni si manifesta anche un tipo particolare di isomeria, chiamata isomeria geometrica (o isomeria cis-trans), dovuta al fatto che, a differenza del legame semplice, il doppio legame carbonio-carbonio non permette la libera rotazione dei due atomi di carbonio coinvolti l'uno rispetto all'altro, bloccando quindi in modo rigido la disposizione spaziale reciproca dei sostituenti legati a questi due atomi.</p>
+  <p>Quando ciascuno dei due atomi di carbonio del doppio legame porta due sostituenti diversi tra loro, sono possibili due diverse disposizioni spaziali: l'isomero cis, in cui i due sostituenti considerati uguali (o comunque simili) si trovano dalla stessa parte rispetto al doppio legame, e l'isomero trans, in cui essi si trovano su lati opposti. Questi due isomeri, pur condividendo la stessa formula minima e la stessa sequenza di legami, presentano proprietà fisiche generalmente diverse tra loro, a causa della diversa forma tridimensionale complessiva della molecola.</p>
+
+  <p class="titolo-capitolo">Le reazioni di addizione</p>
+  <p>A differenza degli alcani, chimicamente poco reattivi come visto nel capitolo precedente, gli alcheni e gli alchini sono composti relativamente reattivi, proprio a causa della presenza del doppio o del triplo legame, che, pur essendo più forte di un legame semplice (come già osservato nel capitolo 15), presenta una regione di elettroni particolarmente esposta e disponibile ad attacchi da parte di altre specie chimiche.</p>
+  <p>La reazione tipica degli alcheni e degli alchini è la reazione di addizione, in cui una molecola si "addiziona" al doppio (o triplo) legame, rompendolo parzialmente (nel caso di un doppio legame, che si trasforma in un legame semplice) o completamente (nel caso di un triplo legame, che può trasformarsi in un doppio o in un legame semplice, a seconda della quantità di reagente addizionato), con formazione di nuovi legami semplici tra il carbonio e gli atomi provenienti dalla molecola addizionata.</p>
+  <p><em>Esempio svolto:</em> l'etene reagisce con l'idrogeno molecolare, in presenza di un opportuno catalizzatore (una reazione chiamata idrogenazione), addizionando i due atomi di idrogeno ai due atomi di carbonio del doppio legame, e trasformandosi così in etano: CH<sub>2</sub>=CH<sub>2</sub> + H<sub>2</sub> → CH<sub>3</sub>−CH<sub>3</sub>.</p>
+</div>
+<!-- fine capitolo chimica 41 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi42.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

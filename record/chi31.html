@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 31</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 31: il principio di Le Chatelier -->
+<div id="capitolo-31-principio-le-chatelier" class="capitolo-storia">
+  <p class="titolo-capitolo">31 - Il principio di Le Chatelier - Classe 4</p>
+
+  <p class="titolo-capitolo">Che cosa succede a un sistema all'equilibrio se viene perturbato</p>
+  <p>Nel capitolo precedente abbiamo visto come un sistema chimico, raggiunto l'equilibrio dinamico, mantenga costanti nel tempo le concentrazioni di tutte le sostanze coinvolte, purché le condizioni esterne rimangano invariate. In questo capitolo esaminiamo che cosa accade quando un sistema già all'equilibrio viene sottoposto a una perturbazione esterna, come una variazione di concentrazione, di pressione o di temperatura, e come esso reagisca per ristabilire una nuova condizione di equilibrio.</p>
+
+  <p class="titolo-capitolo">L'enunciato del principio di Le Chatelier</p>
+  <p>Il principio di Le Chatelier, formulato dal chimico francese Henry Louis Le Chatelier, afferma che, se un sistema chimico all'equilibrio viene sottoposto a una perturbazione esterna, il sistema reagisce spostando la posizione dell'equilibrio nella direzione che tende a contrastare, almeno in parte, l'effetto della perturbazione subita, fino a raggiungere una nuova condizione di equilibrio.</p>
+  <p>Questo principio, di natura essenzialmente qualitativa, permette di prevedere in quale direzione si sposterà un equilibrio chimico in seguito a una data perturbazione, senza dover necessariamente ricorrere a calcoli numerici basati sulla costante di equilibrio già introdotta nel capitolo precedente.</p>
+
+  <p class="titolo-capitolo">L'effetto di una variazione di concentrazione</p>
+  <p>Se, a un sistema già all'equilibrio, viene aggiunta una quantità aggiuntiva di un reagente (aumentandone quindi la concentrazione), il sistema reagisce spostando l'equilibrio verso destra, cioè favorendo la reazione diretta, in modo da consumare parte del reagente aggiunto e contrastare così l'aumento di concentrazione subito; se viene invece sottratta una parte di un reagente (diminuendone la concentrazione), il sistema reagisce spostando l'equilibrio verso sinistra, cioè favorendo la reazione inversa, in modo da riformare parte del reagente sottratto.</p>
+  <p>In modo del tutto analogo, aumentando la concentrazione di un prodotto, il sistema reagisce spostando l'equilibrio verso sinistra, favorendo la reazione inversa, per consumare parte del prodotto aggiunto; diminuendo invece la concentrazione di un prodotto, ad esempio rimuovendolo progressivamente dal sistema, l'equilibrio si sposta verso destra, favorendo la reazione diretta, per riformare parte del prodotto rimosso.</p>
+  <p><em>Esempio svolto:</em> nella reazione di sintesi dell'ammoniaca, N<sub>2</sub> + 3 H<sub>2</sub> ⇌ 2 NH<sub>3</sub>, già esaminata nel capitolo precedente, se a un sistema all'equilibrio viene aggiunta una quantità aggiuntiva di azoto, l'equilibrio si sposta verso destra, favorendo la formazione di ulteriore ammoniaca, fino al raggiungimento di una nuova condizione di equilibrio, con una concentrazione di ammoniaca superiore a quella iniziale.</p>
+
+  <p class="titolo-capitolo">L'effetto di una variazione di pressione (o di volume)</p>
+  <p>Una variazione di pressione, ottenuta generalmente modificando il volume del recipiente in cui avviene la reazione, ha un effetto significativo soltanto sulle reazioni in cui sono coinvolte sostanze allo stato aeriforme, e soltanto quando il numero complessivo di moli gassose è diverso tra reagenti e prodotti, in accordo con la legge di Boyle già vista nel capitolo 21, secondo la quale, a temperatura costante, una diminuzione di volume comporta un aumento di pressione.</p>
+  <p>Diminuendo il volume del sistema (e quindi aumentando la pressione), l'equilibrio si sposta nella direzione in cui è presente un minor numero complessivo di moli di sostanze gassose, poiché questo spostamento tende a contrastare l'aumento di pressione subito, in accordo con il principio di Le Chatelier; aumentando invece il volume del sistema (e quindi diminuendo la pressione), l'equilibrio si sposta nella direzione in cui è presente un maggior numero complessivo di moli di sostanze gassose.</p>
+  <p><em>Esempio svolto:</em> nella reazione di sintesi dell'ammoniaca, N<sub>2</sub> + 3 H<sub>2</sub> ⇌ 2 NH<sub>3</sub>, il numero di moli gassose vale 1 + 3 = 4 tra i reagenti, e 2 tra i prodotti: diminuendo il volume del sistema, e quindi aumentando la pressione, l'equilibrio si sposta verso destra, cioè verso i prodotti, poiché questa direzione comporta un minor numero complessivo di moli gassose (2, contro le 4 dei reagenti), contrastando così, almeno in parte, l'aumento di pressione subito.</p>
+
+  <p class="titolo-capitolo">L'effetto di una variazione di temperatura</p>
+  <p>A differenza degli altri due fattori esaminati in questo capitolo, una variazione di temperatura modifica anche il valore stesso della costante di equilibrio, e non soltanto la posizione dell'equilibrio a parità di K<sub>eq</sub>, poiché temperatura e reazione diretta (o inversa) sono legate, come già visto nel capitolo 29, dall'energia di attivazione, che influenza in modo diverso la velocità delle due reazioni opposte.</p>
+  <p>Per prevedere l'effetto di una variazione di temperatura su un equilibrio chimico, è utile considerare il calore, secondo il segno della variazione di entalpia già vista nel capitolo 26, come se fosse esso stesso un reagente (nel caso di una reazione endotermica, ΔH &gt; 0) o un prodotto (nel caso di una reazione esotermica, ΔH &lt; 0) della reazione diretta: aumentando la temperatura, il sistema reagisce spostando l'equilibrio nella direzione che assorbe l'energia aggiuntiva fornita, cioè verso la reazione endotermica; diminuendo la temperatura, l'equilibrio si sposta invece nella direzione che libera energia, cioè verso la reazione esotermica.</p>
+  <p><em>Esempio svolto:</em> la reazione di sintesi dell'ammoniaca, N<sub>2</sub> + 3 H<sub>2</sub> ⇌ 2 NH<sub>3</sub>, è esotermica nella direzione diretta (ΔH &lt; 0, cioè verso destra, verso la formazione di ammoniaca). Aumentando la temperatura del sistema, l'equilibrio si sposta verso sinistra, cioè verso la reazione inversa (endotermica), diminuendo la concentrazione di ammoniaca all'equilibrio; diminuendo invece la temperatura, l'equilibrio si sposta verso destra, favorendo ulteriormente la formazione di ammoniaca.</p>
+
+  <p class="titolo-capitolo">L'effetto di un catalizzatore sull'equilibrio</p>
+  <p>Come già anticipato nel capitolo precedente, un catalizzatore, pur aumentando significativamente la velocità con cui un sistema chimico raggiunge la condizione di equilibrio (accelerando in egual misura sia la reazione diretta sia la reazione inversa, come già visto nel capitolo 29), non modifica in alcun modo la posizione finale dell'equilibrio, né il valore della costante di equilibrio K<sub>eq</sub>: un catalizzatore permette quindi di raggiungere più rapidamente lo stesso stato di equilibrio che il sistema avrebbe comunque raggiunto, prima o poi, anche in sua assenza, ma non altera in alcun modo le concentrazioni finali delle sostanze coinvolte una volta raggiunto l'equilibrio.</p>
+</div>
+<!-- fine capitolo chimica 31 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi32.html">Vai al Capitolo successivo</a></p>
+</div>
+  
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

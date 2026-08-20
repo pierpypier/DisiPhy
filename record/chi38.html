@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 38</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 38: l'elettrolisi -->
+<div id="capitolo-38-elettrolisi" class="capitolo-storia">
+  <p class="titolo-capitolo">38 - L'elettrolisi - Classe 5</p>
+
+  <p class="titolo-capitolo">Dalla reazione spontanea alla reazione forzata</p>
+  <p>Nel capitolo precedente abbiamo visto come una pila sfrutti una reazione di ossidoriduzione spontanea per generare corrente elettrica. In questo capitolo esaminiamo il processo inverso: l'elettrolisi è un procedimento in cui viene utilizzata energia elettrica proveniente dall'esterno, fornita da un generatore, per forzare il decorso di una reazione di ossidoriduzione non spontanea, cioè una reazione che, in condizioni normali, non avverrebbe mai da sola.</p>
+  <p>Il dispositivo in cui avviene l'elettrolisi è chiamato cella elettrolitica, ed è costituito, in modo simile a una pila, da due elettrodi immersi in una soluzione (o in una sostanza fusa) contenente ioni liberi, ma collegati, in questo caso, a un generatore di corrente esterno, che fornisce l'energia elettrica necessaria a far procedere la reazione non spontanea.</p>
+
+  <p class="titolo-capitolo">Anodo e catodo nell'elettrolisi</p>
+  <p>Anche nell'elettrolisi, come già visto per le pile nel capitolo precedente, l'elettrodo in cui avviene l'ossidazione è chiamato anodo, mentre l'elettrodo in cui avviene la riduzione è chiamato catodo: la denominazione dei due elettrodi segue quindi lo stesso criterio già visto per le pile, basato sul tipo di semireazione che avviene in ciascuno di essi, e non sulla polarità elettrica dell'elettrodo, che invece risulta opposta rispetto a quella di una pila, proprio a causa del generatore esterno che inverte forzatamente il verso naturale del flusso di elettroni.</p>
+  <p>Il generatore esterno collegato alla cella elettrolitica fornisce infatti energia elettrica sufficiente a spingere gli elettroni a muoversi nella direzione opposta a quella che assumerebbero spontaneamente in una pila, forzando così la specie chimica meno incline a ridursi (con potenziale standard di riduzione più basso, secondo quanto visto nel capitolo precedente) a ridursi comunque al catodo, e la specie meno incline a ossidarsi a ossidarsi comunque all'anodo.</p>
+
+  <p class="titolo-capitolo">L'elettrolisi del cloruro di sodio fuso</p>
+  <p>Un esempio classico di elettrolisi è quello del cloruro di sodio fuso, cioè portato allo stato liquido riscaldandolo ben oltre il proprio punto di fusione (801 °C, come già visto nel capitolo 22), in modo che gli ioni Na<sup>+</sup> e Cl<sup>−</sup> del reticolo cristallino, già descritti nel capitolo 15 a proposito del legame ionico, siano liberi di muoversi.</p>
+  <p>Al catodo della cella elettrolitica avviene la riduzione degli ioni sodio, secondo la semireazione Na<sup>+</sup> + e<sup>−</sup> → Na, con formazione di sodio metallico liquido; all'anodo avviene invece l'ossidazione degli ioni cloruro, secondo la semireazione 2 Cl<sup>−</sup> → Cl<sub>2</sub> + 2 e<sup>−</sup>, con formazione di cloro gassoso. Questo processo, chiamato elettrolisi del cloruro di sodio fuso, rappresenta uno dei principali metodi industriali per la produzione del sodio metallico, elemento troppo reattivo, come già visto nel capitolo 13 a proposito dei metalli alcalini, per essere ottenuto mediante semplici reazioni chimiche convenzionali.</p>
+
+  <p class="titolo-capitolo">L'elettrolisi di soluzioni acquose</p>
+  <p>Quando l'elettrolisi viene condotta su una soluzione acquosa, anziché su un sale fuso, è necessario tenere conto anche della possibile partecipazione delle molecole di acqua alle semireazioni di ossidazione e di riduzione, poiché l'acqua stessa, come già visto nel capitolo 33, può subire reazioni di ossidoriduzione, in particolare venendo ridotta a idrogeno gassoso al catodo, oppure ossidata a ossigeno gassoso all'anodo, in competizione con gli ioni del sale eventualmente disciolto.</p>
+  <p>In generale, al catodo di una cella elettrolitica contenente una soluzione acquosa, tra tutte le specie chimiche potenzialmente riducibili presenti in soluzione (compresa l'acqua stessa), si riduce preferenzialmente la specie con il potenziale standard di riduzione più elevato, cioè quella con la maggiore tendenza a ridursi, secondo il concetto già introdotto nel capitolo precedente; analogamente, all'anodo si ossida preferenzialmente la specie con la maggiore tendenza a ossidarsi.</p>
+
+  <p class="titolo-capitolo">Gli usi pratici dell'elettrolisi</p>
+  <p>L'elettrolisi trova numerose applicazioni pratiche e industriali di grande importanza. La galvanoplastica (o elettrodeposizione) è una tecnica che sfrutta l'elettrolisi per ricoprire la superficie di un oggetto metallico con un sottile strato di un metallo diverso, generalmente per proteggerlo dalla corrosione o per motivi puramente estetici: l'oggetto da ricoprire viene collegato come catodo della cella elettrolitica, immerso in una soluzione contenente ioni del metallo con cui si desidera ricoprirlo, che si riducono e si depositano progressivamente, sotto forma di sottile strato metallico, sulla superficie dell'oggetto stesso.</p>
+  <p>L'elettrolisi è inoltre ampiamente utilizzata nella raffinazione elettrolitica di alcuni metalli, come il rame, per ottenere un prodotto di elevata purezza, e nella produzione industriale di numerose sostanze chimiche di base, come l'idrogeno gassoso (ottenuto per elettrolisi dell'acqua), il cloro e l'idrossido di sodio (ottenuti industrialmente, in un unico processo, per elettrolisi di una soluzione acquosa concentrata di cloruro di sodio).</p>
+
+  <p class="titolo-capitolo">Le leggi di Faraday</p>
+  <p>Il chimico e fisico inglese Michael Faraday formulò due leggi fondamentali che permettono di calcolare quantitativamente la relazione tra la quantità di carica elettrica fatta passare attraverso una cella elettrolitica e la quantità di sostanza effettivamente prodotta (o consumata) agli elettrodi durante il processo, stabilendo che la massa di sostanza trasformata a un elettrodo è direttamente proporzionale alla quantità di carica elettrica che ha attraversato la cella, e che, a parità di carica elettrica fatta passare, la quantità di sostanza trasformata dipende dal numero di elettroni scambiati nella specifica semireazione considerata.</p>
+  <p class="formula">n<sub>elettroni</sub> = Q / F</p>
+  <p>In questa formula, Q rappresenta la carica elettrica complessiva fatta passare attraverso la cella, espressa in coulomb (C), ed F rappresenta la costante di Faraday, pari alla carica elettrica trasportata da una mole di elettroni, il cui valore è F ≈ 96500 C/mol.</p>
+</div>
+<!-- fine capitolo chimica 38 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi39.html">Vai al Capitolo successivo</a></p>
+</div>
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

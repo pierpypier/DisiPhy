@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 39</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 39: introduzione alla chimica organica -->
+<div id="capitolo-39-introduzione-chimica-organica" class="capitolo-storia">
+  <p class="titolo-capitolo">39 - Introduzione alla chimica organica - Classe 5</p>
+
+  <p class="titolo-capitolo">Che cos'è la chimica organica</p>
+  <p>Tutti i capitoli precedenti hanno riguardato principalmente la chimica inorganica, cioè lo studio delle sostanze e delle reazioni che coinvolgono, in generale, tutti gli elementi della tavola periodica. La chimica organica è invece quel ramo della chimica che si occupa specificamente dello studio dei composti del carbonio, con l'eccezione di alcuni composti semplici (come l'anidride carbonica, il monossido di carbonio, i carbonati e pochi altri) che, per motivi storici, vengono tradizionalmente considerati parte della chimica inorganica.</p>
+  <p>Il nome "chimica organica" deriva da un'antica convinzione, oggi superata, secondo la quale i composti del carbonio prodotti dagli organismi viventi (da cui il termine "organico") potessero formarsi soltanto grazie a una misteriosa "forza vitale", non riproducibile in laboratorio: questa convinzione fu definitivamente confutata nel 1828, quando il chimico tedesco Friedrich Wöhler riuscì a sintetizzare in laboratorio l'urea, un composto organico, a partire da sostanze puramente inorganiche, dimostrando che i composti organici seguono le stesse leggi chimiche di tutti gli altri composti.</p>
+
+  <p class="titolo-capitolo">La versatilità del carbonio</p>
+  <p>La ragione per cui esiste un numero di composti del carbonio enormemente superiore a quello di qualsiasi altro elemento, tanto da giustificare l'esistenza di un'intera branca della chimica dedicata specificamente a essi, risiede in alcune caratteristiche particolari dell'atomo di carbonio, già in parte incontrate nei capitoli precedenti.</p>
+  <p>Il carbonio, con numero atomico Z = 6 e configurazione elettronica 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>, possiede quattro elettroni di valenza, e forma quindi tipicamente quattro legami covalenti, come già visto nel capitolo 15, raggiungendo così la configurazione stabile dell'ottetto. Questa tetravalenza permette al carbonio di legarsi contemporaneamente ad altri quattro atomi, siano essi altri atomi di carbonio oppure atomi di altri elementi.</p>
+  <p>La caratteristica più straordinaria del carbonio, tuttavia, è la sua capacità di formare lunghe catene, ramificate o lineari, e anche strutture ad anello, legandosi ripetutamente ad altri atomi di carbonio mediante legami covalenti stabili: questa proprietà, chiamata catenazione, è posseduta dal carbonio in modo molto più marcato rispetto a qualsiasi altro elemento della tavola periodica, ed è proprio alla base dell'enorme varietà strutturale dei composti organici.</p>
+
+  <p class="titolo-capitolo">L'ibridazione degli orbitali del carbonio</p>
+  <p>Per spiegare in modo rigoroso la geometria tridimensionale assunta dai legami del carbonio, che spesso non corrisponde direttamente alla semplice configurazione elettronica 2s<sup>2</sup> 2p<sup>2</sup> vista in precedenza, si introduce il concetto di ibridazione degli orbitali, secondo il quale gli orbitali atomici s e p del livello di valenza si combinano matematicamente tra loro, dando origine a un numero uguale di nuovi orbitali, chiamati orbitali ibridi, tutti equivalenti tra loro per forma ed energia.</p>
+  <p>Quando il carbonio forma quattro legami covalenti semplici, come vedremo nel prossimo capitolo a proposito degli alcani, un orbitale 2s e tre orbitali 2p si combinano per formare quattro orbitali ibridi equivalenti, chiamati orbitali sp<sup>3</sup>, orientati nello spazio secondo una geometria tetraedrica, con un angolo di circa 109,5° tra ciascuna coppia di legami.</p>
+  <p>Quando il carbonio forma invece un legame covalente doppio (come vedremo a proposito degli alcheni), un orbitale 2s e due orbitali 2p si combinano per formare tre orbitali ibridi equivalenti, chiamati orbitali sp<sup>2</sup>, orientati secondo una geometria planare triangolare, con un angolo di circa 120° tra ciascuna coppia di legami semplici, mentre l'orbitale 2p rimasto non ibridato forma il secondo legame del doppio legame. Quando infine il carbonio forma un legame covalente triplo (come vedremo a proposito degli alchini), un orbitale 2s e un solo orbitale 2p si combinano per formare due orbitali ibridi, chiamati orbitali sp, orientati secondo una geometria lineare, con un angolo di 180° tra i due legami semplici.</p>
+
+  <p class="titolo-capitolo">La formula di struttura e i gruppi funzionali</p>
+  <p>Data la complessità strutturale dei composti organici, la loro formula chimica minima (o bruta), che indica soltanto il numero di atomi di ciascun elemento presenti nella molecola, risulta spesso insufficiente a descriverne in modo univoco la struttura: composti diversi possono infatti condividere la stessa formula minima, pur avendo proprietà chimiche e fisiche completamente diverse tra loro, un fenomeno chiamato isomeria, che approfondiremo nei capitoli successivi.</p>
+  <p>Per questo motivo, in chimica organica si utilizza generalmente la formula di struttura, che indica esplicitamente come gli atomi della molecola sono effettivamente collegati tra loro mediante legami covalenti, permettendo di distinguere in modo univoco composti con la stessa formula minima ma diversa struttura.</p>
+  <p>All'interno di una molecola organica, si definisce gruppo funzionale un particolare atomo, o gruppo di atomi legati tra loro, responsabile delle proprietà chimiche caratteristiche di quella classe di composti, indipendentemente dalla lunghezza o dalla struttura del resto della molecola a cui è legato: la presenza di un dato gruppo funzionale permette di classificare i composti organici in famiglie omogenee, ciascuna caratterizzata da un comportamento chimico tipico e riconoscibile, e sarà proprio questo criterio di classificazione a guidare l'organizzazione dei prossimi capitoli, dedicati alle principali classi di composti organici.</p>
+
+  <p class="titolo-capitolo">La classificazione degli idrocarburi</p>
+  <p>I composti organici più semplici, formati esclusivamente da atomi di carbonio e di idrogeno, sono chiamati idrocarburi, e costituiscono la base strutturale a partire dalla quale si formano, per sostituzione di uno o più atomi di idrogeno con specifici gruppi funzionali, tutte le altre classi di composti organici che esamineremo nei capitoli successivi.</p>
+  <p>Gli idrocarburi si suddividono in due grandi categorie: gli idrocarburi saturi (o alcani), in cui tutti i legami tra atomi di carbonio sono legami semplici, e gli idrocarburi insaturi, in cui è presente almeno un legame doppio o triplo tra due atomi di carbonio; questi ultimi si suddividono a loro volta in alcheni (con almeno un doppio legame) e alchini (con almeno un triplo legame), che, insieme agli alcani e agli idrocarburi aromatici, saranno l'oggetto specifico dei prossimi capitoli di questo manuale.</p>
+</div>
+<!-- fine capitolo chimica 39 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi40.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

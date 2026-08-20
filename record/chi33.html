@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 33</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 33: il pH e il calcolo dell'acidità -->
+<div id="capitolo-33-ph-calcolo-acidita" class="capitolo-storia">
+  <p class="titolo-capitolo">33 - Il pH e il calcolo dell'acidità - Classe 4</p>
+
+  <p class="titolo-capitolo">L'autoionizzazione dell'acqua</p>
+  <p>Nel capitolo precedente abbiamo visto come l'acqua sia una sostanza anfotera, capace di comportarsi sia da acido sia da base. In realtà, questa doppia natura si manifesta anche in acqua pura, senza la presenza di alcun soluto: una piccolissima frazione delle molecole di acqua reagisce spontaneamente tra loro, secondo un processo chiamato autoionizzazione (o autoprotolisi) dell'acqua, in cui una molecola di acqua cede un protone a un'altra molecola di acqua.</p>
+  <p class="formula">H<sub>2</sub>O + H<sub>2</sub>O ⇌ H<sub>3</sub>O<sup>+</sup> + OH<sup>−</sup></p>
+  <p>Questo equilibrio, come ogni equilibrio chimico già visto nel capitolo 30, è caratterizzato da una propria costante di equilibrio, chiamata in questo caso prodotto ionico dell'acqua, indicata con il simbolo K<sub>w</sub>, il cui valore, a 25 °C, è pari a 1,0 × 10<sup>−14</sup>.</p>
+  <p class="formula">K<sub>w</sub> = [H<sub>3</sub>O<sup>+</sup>] · [OH<sup>−</sup>] = 1,0 × 10<sup>−14</sup> &nbsp;&nbsp;(a 25 °C)</p>
+  <p>In acqua pura, per ogni molecola di acqua che si ionizza si forma esattamente uno ione idronio e uno ione ossidrile, quindi le concentrazioni di queste due specie devono essere sempre uguali tra loro: [H<sub>3</sub>O<sup>+</sup>] = [OH<sup>−</sup>] = 1,0 × 10<sup>−7</sup> mol/L, valore che si ricava calcolando la radice quadrata di K<sub>w</sub>.</p>
+
+  <p class="titolo-capitolo">La definizione di pH</p>
+  <p>Poiché le concentrazioni di ioni idronio nelle soluzioni acquose assumono generalmente valori numerici molto piccoli, e spesso espressi mediante potenze di dieci scomode da confrontare rapidamente tra loro, il chimico danese Søren Sørensen introdusse una scala logaritmica, chiamata pH (dal francese pouvoir hydrogène, potere idrogeno), definita come l'opposto del logaritmo in base dieci della concentrazione molare di ioni idronio.</p>
+  <p class="formula">pH = −log[H<sub>3</sub>O<sup>+</sup>]</p>
+  <p>In modo analogo, si definisce anche il pOH come l'opposto del logaritmo in base dieci della concentrazione molare di ioni ossidrile.</p>
+  <p class="formula">pOH = −log[OH<sup>−</sup>]</p>
+  <p>Applicando il logaritmo a entrambi i membri dell'espressione del prodotto ionico dell'acqua vista in precedenza, si ricava una relazione molto utile tra pH e pOH, valida per qualsiasi soluzione acquosa a 25 °C.</p>
+  <p class="formula">pH + pOH = 14</p>
+  <p><em>Esempio svolto:</em> calcoliamo il pH di una soluzione con concentrazione di ioni idronio [H<sub>3</sub>O<sup>+</sup>] = 1,0 × 10<sup>−3</sup> mol/L. Applicando la definizione, pH = −log(1,0 × 10<sup>−3</sup>) = −(−3) = 3.</p>
+
+  <p class="titolo-capitolo">La scala del pH: soluzioni acide, basiche e neutre</p>
+  <p>In acqua pura, dove, come visto in precedenza, [H<sub>3</sub>O<sup>+</sup>] = 1,0 × 10<sup>−7</sup> mol/L, il pH vale esattamente 7: questo valore corrisponde, per definizione, a una soluzione neutra, cioè né acida né basica. Una soluzione si dice acida quando la concentrazione di ioni idronio è superiore a quella di una soluzione neutra, cioè quando il pH assume un valore inferiore a 7; una soluzione si dice invece basica quando la concentrazione di ioni idronio è inferiore a quella di una soluzione neutra, cioè quando il pH assume un valore superiore a 7.</p>
+  <p>È importante notare come la scala del pH sia logaritmica, e non lineare: una differenza di una singola unità di pH corrisponde a una variazione di dieci volte nella concentrazione di ioni idronio, mentre una differenza di due unità corrisponde a una variazione di cento volte, e così via, secondo le proprietà della funzione logaritmo.</p>
+  <p><em>Esempio svolto:</em> confrontiamo la concentrazione di ioni idronio di due soluzioni, la prima con pH = 3 e la seconda con pH = 5. Invertendo la definizione di pH, [H<sub>3</sub>O<sup>+</sup>] = 10<sup>−pH</sup>, quindi la prima soluzione ha [H<sub>3</sub>O<sup>+</sup>] = 10<sup>−3</sup> mol/L, mentre la seconda ha [H<sub>3</sub>O<sup>+</sup>] = 10<sup>−5</sup> mol/L: la prima soluzione, con pH inferiore, è quindi cento volte più concentrata in ioni idronio (e quindi più acida) della seconda.</p>
+
+  <p class="titolo-capitolo">Il calcolo del pH per acidi e basi forti</p>
+  <p>Un acido (o una base) si dice forte quando, disciolto in acqua, si ionizza completamente, cioè al 100%, secondo la propria reazione di dissociazione: in questo caso, la concentrazione di ioni idronio (o di ioni ossidrile) liberati in soluzione coincide esattamente con la concentrazione molare iniziale dell'acido (o della base) disciolto, rendendo il calcolo del pH particolarmente diretto.</p>
+  <p><em>Esempio svolto:</em> calcoliamo il pH di una soluzione di acido cloridrico (un acido forte) con concentrazione molare M = 0,010 mol/L. Poiché l'acido cloridrico si dissocia completamente, [H<sub>3</sub>O<sup>+</sup>] = 0,010 = 1,0 × 10<sup>−2</sup> mol/L, quindi pH = −log(1,0 × 10<sup>−2</sup>) = 2.</p>
+
+  <p class="titolo-capitolo">Il calcolo del pH per acidi e basi deboli</p>
+  <p>Un acido (o una base) si dice invece debole quando, disciolto in acqua, si ionizza soltanto parzialmente, raggiungendo una condizione di equilibrio chimico (secondo quanto già visto nel capitolo 30) tra la forma indissociata e gli ioni prodotti dalla dissociazione, caratterizzata da una propria costante di equilibrio, chiamata in questo caso costante di dissociazione acida (K<sub>a</sub>) o costante di dissociazione basica (K<sub>b</sub>), a seconda dei casi.</p>
+  <p>Per un acido debole generico HA, che si dissocia secondo l'equilibrio HA + H<sub>2</sub>O ⇌ H<sub>3</sub>O<sup>+</sup> + A<sup>−</sup>, la costante di dissociazione acida si esprime come segue.</p>
+  <p class="formula">K<sub>a</sub> = [H<sub>3</sub>O<sup>+</sup>] · [A<sup>−</sup>] / [HA]</p>
+  <p>Valori più elevati di K<sub>a</sub> indicano una maggiore tendenza dell'acido a dissociarsi, e quindi un acido debole relativamente più forte (pur restando comunque un acido debole, e non un acido forte); valori più bassi di K<sub>a</sub> indicano invece un acido debole relativamente più debole, con una minore tendenza a dissociarsi in soluzione acquosa.</p>
+</div>
+<!-- fine capitolo chimica 33 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi34.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 43</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 43: i gruppi funzionali, alcoli, eteri, aldeidi e chetoni -->
+<div id="capitolo-43-gruppi-funzionali-alcoli-eteri-aldeidi-chetoni" class="capitolo-storia">
+  <p class="titolo-capitolo">43 - I gruppi funzionali: alcoli, eteri, aldeidi e chetoni - Classe 5</p>
+
+  <p class="titolo-capitolo">Dagli idrocarburi ai gruppi funzionali ossigenati</p>
+  <p>Nei capitoli precedenti abbiamo esaminato gli idrocarburi, composti formati esclusivamente da carbonio e idrogeno. A partire da questo capitolo, esaminiamo alcune delle principali classi di composti organici che si ottengono sostituendo uno o più atomi di idrogeno di un idrocarburo con un gruppo funzionale contenente ossigeno, secondo il concetto di gruppo funzionale già introdotto nel capitolo 39.</p>
+
+  <p class="titolo-capitolo">Gli alcoli</p>
+  <p>Gli alcoli sono composti organici caratterizzati dal gruppo funzionale ossidrile (−OH), già incontrato nel capitolo 17 a proposito degli idrossidi inorganici, ma in questo caso legato covalentemente a un atomo di carbonio ibridato sp<sup>3</sup>, anziché a uno ione metallico come avveniva negli idrossidi.</p>
+  <p>Il nome IUPAC di un alcol si costruisce, in modo analogo a quanto già visto per gli alcheni nel capitolo 41, sostituendo il suffisso "-ano" dell'alcano corrispondente con il suffisso "-olo", e indicando, con un numero di posizione, l'atomo di carbonio a cui è legato il gruppo ossidrile.</p>
+  <p><em>Esempio svolto:</em> il metanolo (CH<sub>3</sub>OH) è l'alcol più semplice, con il gruppo ossidrile legato all'unico atomo di carbonio della molecola; l'etanolo (CH<sub>3</sub>−CH<sub>2</sub>OH), presente nelle bevande alcoliche e ottenuto industrialmente anche per fermentazione degli zuccheri, è l'alcol a due atomi di carbonio, con il gruppo ossidrile legato al secondo atomo di carbonio della catena.</p>
+  <p>Una proprietà fisica caratteristica degli alcoli, dovuta alla presenza del gruppo ossidrile, è la capacità di formare legami a idrogeno tra le proprie molecole, secondo il meccanismo già descritto nel capitolo 16: proprio per questo motivo, gli alcoli presentano temperature di ebollizione significativamente più elevate rispetto agli idrocarburi con un numero simile di atomi di carbonio, privi di questa capacità di formare legami a idrogeno.</p>
+
+  <p class="titolo-capitolo">Gli eteri</p>
+  <p>Gli eteri sono composti organici caratterizzati da un atomo di ossigeno legato covalentemente a due atomi di carbonio distinti, secondo lo schema generale R−O−R', dove R e R' rappresentano due catene carboniose, uguali oppure diverse tra loro.</p>
+  <p>A differenza degli alcoli, gli eteri non possiedono un atomo di idrogeno legato direttamente all'ossigeno, e non sono quindi in grado di formare legami a idrogeno tra le proprie molecole (pur potendo comunque accettare un legame a idrogeno da un'altra molecola dotata di un gruppo −OH o −NH, come l'acqua): per questo motivo, gli eteri presentano temperature di ebollizione nettamente inferiori rispetto agli alcoli isomeri corrispondenti, cioè con la stessa formula minima.</p>
+  <p><em>Esempio svolto:</em> l'etanolo (CH<sub>3</sub>−CH<sub>2</sub>OH) e il dimetiletere (CH<sub>3</sub>−O−CH<sub>3</sub>) condividono la stessa formula minima, C<sub>2</sub>H<sub>6</sub>O, un caso di isomeria di gruppo funzionale già anticipato nel capitolo 39; tuttavia, mentre l'etanolo è liquido a temperatura ambiente (temperatura di ebollizione 78 °C), grazie ai legami a idrogeno tra le sue molecole, il dimetiletere, privo di questa capacità, è aeriforme a temperatura ambiente (temperatura di ebollizione −24 °C).</p>
+
+  <p class="titolo-capitolo">Il gruppo carbonile</p>
+  <p>Le aldeidi e i chetoni, che esamineremo nei prossimi due paragrafi, condividono uno stesso gruppo funzionale di base, chiamato gruppo carbonile, costituito da un atomo di carbonio legato a un atomo di ossigeno mediante un doppio legame covalente (C=O), con il carbonio del gruppo carbonile ibridato sp<sup>2</sup>, in modo analogo a quanto già visto per gli alcheni nel capitolo 41.</p>
+  <p>Ciò che distingue le aldeidi dai chetoni è la posizione del gruppo carbonile lungo la catena carboniosa, e di conseguenza il tipo di atomi (o gruppi) direttamente legati al carbonio del gruppo carbonile, oltre all'ossigeno del doppio legame.</p>
+
+  <p class="titolo-capitolo">Le aldeidi</p>
+  <p>Le aldeidi sono composti in cui il gruppo carbonile si trova sempre all'estremità della catena carboniosa, legato quindi, oltre che all'ossigeno, a un solo atomo di carbonio (appartenente al resto della catena) e a un atomo di idrogeno, secondo lo schema generale R−CHO.</p>
+  <p>Il nome IUPAC di un'aldeide si costruisce sostituendo il suffisso "-ano" dell'alcano corrispondente con il suffisso "-ale": poiché il gruppo carbonile di un'aldeide si trova sempre all'estremità della catena, non è necessario indicarne la posizione con un numero, a differenza di quanto avveniva per gli alcoli.</p>
+  <p><em>Esempio svolto:</em> la formaldeide (o metanale, HCHO) è l'aldeide più semplice, con il gruppo carbonile legato a due atomi di idrogeno; l'acetaldeide (o etanale, CH<sub>3</sub>−CHO) è l'aldeide a due atomi di carbonio.</p>
+
+  <p class="titolo-capitolo">I chetoni</p>
+  <p>I chetoni sono composti in cui il gruppo carbonile si trova invece in una posizione interna della catena carboniosa, legato quindi, oltre che all'ossigeno, a due atomi di carbonio distinti (appartenenti entrambi al resto della molecola), secondo lo schema generale R−CO−R'.</p>
+  <p>Il nome IUPAC di un chetone si costruisce sostituendo il suffisso "-ano" dell'alcano corrispondente con il suffisso "-one", indicando, con un numero di posizione, l'atomo di carbonio a cui è legato il gruppo carbonile, in modo analogo a quanto già visto per gli alcoli.</p>
+  <p><em>Esempio svolto:</em> l'acetone (o propanone, CH<sub>3</sub>−CO−CH<sub>3</sub>), ampiamente utilizzato come solvente, è il chetone più semplice, con il gruppo carbonile legato al secondo atomo di carbonio (l'unico atomo di carbonio interno) di una catena di tre atomi.</p>
+</div>
+<!-- fine capitolo chimica 43 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi44.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

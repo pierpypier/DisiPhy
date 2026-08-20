@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 23</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 23: i passaggi di stato e i diagrammi di fase -->
+<div id="capitolo-23-passaggi-stato-diagrammi-fase" class="capitolo-storia">
+  <p class="titolo-capitolo">23 - I passaggi di stato e i diagrammi di fase - Classe 3</p>
+
+  <p class="titolo-capitolo">Riprendere i passaggi di stato con uno strumento nuovo</p>
+  <p>Nel capitolo 3 abbiamo esaminato i passaggi di stato e l'effetto della pressione su di essi in termini qualitativi, osservando ad esempio come la temperatura di ebollizione dell'acqua diminuisca in alta montagna. In questo capitolo introduciamo uno strumento grafico, il diagramma di fase, che permette di rappresentare in modo sintetico e completo, per una data sostanza, quale stato di aggregazione essa assume in funzione sia della temperatura sia della pressione contemporaneamente.</p>
+
+  <p class="titolo-capitolo">La struttura di un diagramma di fase</p>
+  <p>Un diagramma di fase è un grafico che riporta, sull'asse orizzontale, la temperatura, e sull'asse verticale, la pressione: ogni punto del diagramma corrisponde quindi a una specifica coppia di valori di temperatura e pressione, e il diagramma è suddiviso in tre regioni distinte, corrispondenti allo stato solido, allo stato liquido e allo stato aeriforme in cui la sostanza si trova stabilmente in quelle condizioni.</p>
+  <p>Le linee di confine che separano tra loro le tre regioni del diagramma rappresentano le condizioni di temperatura e pressione in cui due stati di aggregazione coesistono in equilibrio tra loro: la linea che separa la regione solida da quella liquida rappresenta le condizioni di fusione (e di solidificazione), la linea che separa la regione liquida da quella aeriforme rappresenta le condizioni di ebollizione (e di condensazione), già introdotta nel capitolo 3 a proposito della tensione di vapore, e la linea che separa la regione solida da quella aeriforme rappresenta le condizioni di sublimazione (e di brinamento).</p>
+
+  <p class="titolo-capitolo">Il punto triplo</p>
+  <p>Le tre linee di confine appena descritte si incontrano in un unico punto del diagramma, chiamato punto triplo, che rappresenta l'unica condizione di temperatura e pressione in cui i tre stati di aggregazione di una sostanza (solido, liquido e aeriforme) coesistono simultaneamente in equilibrio tra loro.</p>
+  <p>Il punto triplo di ciascuna sostanza è caratterizzato da un valore ben preciso e caratteristico di temperatura e di pressione: per l'acqua, ad esempio, il punto triplo si trova a una temperatura di 0,01 °C e a una pressione di circa 0,006 atm, valori nettamente inferiori alla pressione atmosferica normale, motivo per cui, nelle condizioni ordinarie di pressione, non è possibile osservare la coesistenza simultanea di ghiaccio, acqua liquida e vapore acqueo in equilibrio stabile tra loro.</p>
+
+  <p class="titolo-capitolo">Il punto critico</p>
+  <p>La linea di confine tra la regione liquida e quella aeriforme del diagramma di fase non prosegue indefinitamente, ma termina in un secondo punto caratteristico, chiamato punto critico, oltre il quale la distinzione tra stato liquido e stato aeriforme cessa di esistere: a temperature e pressioni superiori a quelle del punto critico, la sostanza si trova in una condizione chiamata fluido supercritico, in cui non è più possibile individuare una superficie di separazione netta tra le due fasi, come avviene invece nell'ordinaria ebollizione o condensazione.</p>
+  <p>Per l'acqua, il punto critico si trova a una temperatura di circa 374 °C e a una pressione di circa 218 atm: condizioni piuttosto estreme, raggiunte raramente nella pratica quotidiana, ma di grande importanza in alcuni processi industriali, come l'estrazione supercritica, che sfrutta le particolari proprietà solventi dell'anidride carbonica allo stato supercritico.</p>
+
+  <p class="titolo-capitolo">Leggere un diagramma di fase: trasformazioni a pressione costante</p>
+  <p>Un diagramma di fase permette di prevedere lo stato di aggregazione di una sostanza, e i passaggi di stato che essa subisce, seguendo un percorso qualsiasi all'interno del diagramma. Una trasformazione a pressione costante corrisponde, sul diagramma, a uno spostamento orizzontale, e mette in evidenza le stesse informazioni già ricavate, in forma di curva di riscaldamento, nel capitolo 3: attraversando la linea di confine tra due regioni, la sostanza subisce il corrispondente passaggio di stato.</p>
+  <p><em>Esempio svolto:</em> seguendo, sul diagramma di fase dell'acqua, un percorso orizzontale alla pressione di 1 atm, partendo da una temperatura di −20 °C (regione solida) e aumentando progressivamente la temperatura, si attraversa la linea solido-liquido a 0 °C (fusione del ghiaccio), per poi attraversare la linea liquido-aeriforme a 100 °C (ebollizione dell'acqua), esattamente come già descritto, in termini di curva di riscaldamento, nel capitolo 3.</p>
+
+  <p class="titolo-capitolo">Leggere un diagramma di fase: trasformazioni a temperatura costante</p>
+  <p>Una trasformazione a temperatura costante corrisponde invece, sul diagramma, a uno spostamento verticale, e mette in evidenza l'effetto della pressione sui passaggi di stato, già discusso qualitativamente nel capitolo 3: diminuendo la pressione a temperatura costante, ad esempio, un liquido può raggiungere la linea di confine liquido-aeriforme ed entrare in ebollizione, pur senza alcuna variazione di temperatura.</p>
+  <p>Questo tipo di percorso spiega, in modo più rigoroso e quantitativo, il motivo per cui l'acqua bolle a una temperatura inferiore a 100 °C in alta montagna: a un'altitudine maggiore, la pressione atmosferica è più bassa, e il punto rappresentativo delle condizioni ambientali si trova quindi più in basso nel diagramma di fase, intersecando la linea di confine liquido-aeriforme a una temperatura inferiore rispetto al livello del mare.</p>
+
+  <p class="titolo-capitolo">Il caso particolare dell'acqua: la linea di fusione anomala</p>
+  <p>Come già accennato nel capitolo 3, l'acqua rappresenta un'eccezione rispetto alla maggior parte delle altre sostanze per quanto riguarda l'effetto della pressione sulla temperatura di fusione: nel diagramma di fase dell'acqua, la linea di confine tra la regione solida e quella liquida ha una pendenza negativa, cioè inclinata verso sinistra, mentre nella maggior parte delle altre sostanze questa linea è inclinata verso destra, con pendenza positiva.</p>
+  <p>Questa particolarità, dovuta al fatto che il ghiaccio, a causa della struttura reticolare determinata dai legami a idrogeno già discussi nel capitolo 16, è meno denso dell'acqua liquida, comporta una conseguenza sorprendente: aumentando la pressione a temperatura costante, appena al di sotto degli 0 °C, è possibile far fondere il ghiaccio, un comportamento opposto a quello osservato nella maggior parte delle altre sostanze, in cui un aumento di pressione favorisce generalmente lo stato solido, più compatto, rispetto allo stato liquido.</p>
+</div>
+<!-- fine capitolo chimica 23 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi24.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
