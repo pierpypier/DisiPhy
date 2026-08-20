@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 12</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 12: la configurazione elettronica degli atomi -->
+<div id="capitolo-12-configurazione-elettronica" class="capitolo-storia">
+  <p class="titolo-capitolo">12 - La configurazione elettronica degli atomi - Classe 2</p>
+
+  <p class="titolo-capitolo">Dal concetto di orbita al concetto di orbitale</p>
+  <p>Nel capitolo precedente abbiamo visto come il modello di Bohr, pur avendo introdotto con successo l'idea della quantizzazione dell'energia, descrivesse gli elettroni come particelle in moto lungo orbite circolari ben definite, in analogia con il moto dei pianeti attorno al Sole. Questo modello, tuttavia, non era in grado di spiegare correttamente il comportamento di atomi con più di un elettrone, e fu progressivamente sostituito da un modello più sofisticato, basato sulla meccanica quantistica, in cui il concetto di orbita viene abbandonato a favore di quello, più astratto, di orbitale.</p>
+  <p>Un orbitale non descrive una traiettoria precisa percorsa dall'elettrone, come invece avveniva nel modello di Bohr, ma rappresenta la regione di spazio attorno al nucleo in cui è più probabile trovare l'elettrone in un dato istante: si tratta quindi di un concetto probabilistico, e non più deterministico, che riflette il fatto che, a livello subatomico, non è possibile conoscere con precisione assoluta sia la posizione sia la velocità di una particella nello stesso istante.</p>
+
+  <p class="titolo-capitolo">I numeri quantici</p>
+  <p>Ciascun orbitale, e di conseguenza lo stato di un elettrone al suo interno, è caratterizzato da un insieme di grandezze, dette numeri quantici, che ne descrivono l'energia, la forma e l'orientazione nello spazio. Il numero quantico principale, indicato con il simbolo n, e in grado di assumere valori interi positivi (1, 2, 3, ...), descrive il livello di energia principale a cui appartiene l'orbitale, ed è direttamente collegato alla distanza media dal nucleo: a valori maggiori di n corrispondono livelli di energia più elevata, e orbitali mediamente più lontani dal nucleo.</p>
+  <p>All'interno di ciascun livello energetico principale, gli orbitali si suddividono ulteriormente in sottolivelli, indicati con le lettere s, p, d, f, ciascuno caratterizzato da una forma geometrica caratteristica della regione di spazio occupata: gli orbitali di tipo s hanno forma sferica, quelli di tipo p hanno forma a doppio lobo, mentre le forme dei sottolivelli d e f sono più complesse, e verranno descritte in dettaglio in corsi di chimica più avanzati.</p>
+  <p>Ogni sottolivello contiene un numero preciso di orbitali: il sottolivello s contiene un solo orbitale, il sottolivello p ne contiene tre, il sottolivello d ne contiene cinque, e il sottolivello f ne contiene sette, ciascuno con la stessa energia mentre l'atomo non è sottoposto a campi elettrici o magnetici esterni, e diverso soltanto per orientazione nello spazio.</p>
+
+  <p class="titolo-capitolo">Il principio di esclusione di Pauli e lo spin elettronico</p>
+  <p>Oltre alla loro posizione nello spazio, gli elettroni possiedono una proprietà intrinseca, detta spin, che può assumere soltanto due valori possibili, convenzionalmente descritti come spin "verso l'alto" e spin "verso il basso", e rappresentati graficamente con due frecce di verso opposto.</p>
+  <p>Il fisico austriaco Wolfgang Pauli formulò un principio fondamentale, noto come principio di esclusione di Pauli, secondo il quale in uno stesso orbitale possono trovarsi al massimo due elettroni, e soltanto a condizione che essi abbiano spin opposto: questo principio spiega perché ogni orbitale possa ospitare esattamente due elettroni, mai di più, e permette di calcolare il numero massimo di elettroni contenuti in ciascun sottolivello, moltiplicando per due il numero di orbitali che lo compongono.</p>
+  <p>Applicando questo principio, il sottolivello s può contenere al massimo 2 elettroni, il sottolivello p al massimo 6 elettroni, il sottolivello d al massimo 10 elettroni, e il sottolivello f al massimo 14 elettroni.</p>
+
+  <p class="titolo-capitolo">Il principio di Aufbau e l'ordine di riempimento</p>
+  <p>La configurazione elettronica di un atomo, cioè la descrizione di come i suoi elettroni sono distribuiti tra i vari orbitali disponibili, si costruisce seguendo il principio di Aufbau (dal tedesco "costruzione"), secondo il quale gli elettroni occupano progressivamente gli orbitali disponibili partendo da quelli a energia più bassa, per poi passare a quelli a energia via via crescente, soltanto dopo aver riempito completamente gli orbitali di energia inferiore.</p>
+  <p>L'ordine di riempimento dei sottolivelli non segue sempre l'ordine numerico dei livelli energetici principali, a causa di sovrapposizioni energetiche tra sottolivelli appartenenti a livelli diversi: ad esempio, il sottolivello 4s viene riempito prima del sottolivello 3d, poiché possiede, in quella particolare regione della tavola periodica, un'energia leggermente inferiore. Questo ordine di riempimento può essere ricordato facilmente tramite uno schema diagonale, noto come regola della diagonale, che riporta i sottolivelli nell'ordine corretto di riempimento.</p>
+  <p>Per indicare la configurazione elettronica di un atomo si utilizza una notazione sintetica, in cui ogni sottolivello occupato viene indicato con il numero del livello principale, la lettera del sottolivello, e un esponente che indica il numero di elettroni effettivamente presenti in quel sottolivello.</p>
+  <p><em>Esempio svolto:</em> costruiamo la configurazione elettronica dell'atomo di sodio (Z = 11), che possiede 11 elettroni. Seguendo l'ordine di riempimento, i primi 2 elettroni occupano il sottolivello 1s (completo), i successivi 2 elettroni occupano il sottolivello 2s (completo), i successivi 6 elettroni occupano il sottolivello 2p (completo), e l'ultimo elettrone rimanente occupa il sottolivello 3s: la configurazione elettronica completa del sodio si scrive quindi 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup>, per un totale di 2+2+6+1 = 11 elettroni.</p>
+
+  <p class="titolo-capitolo">Gli elettroni di valenza</p>
+  <p>Gli elettroni presenti nel livello energetico principale più esterno di un atomo, cioè quello con il valore più alto di n effettivamente occupato, sono chiamati elettroni di valenza, e rivestono un'importanza particolare in chimica, poiché sono proprio questi elettroni, i più lontani dal nucleo e quindi i meno fortemente attratti da esso, a partecipare direttamente alla formazione dei legami chimici tra atomi diversi, come vedremo in un capitolo successivo.</p>
+  <p>Gli elettroni appartenenti ai livelli energetici più interni, invece, chiamati elettroni di core (o elettroni interni), sono più fortemente legati al nucleo e non partecipano generalmente alla formazione dei legami chimici, comportandosi come uno "scudo" relativamente stabile attorno al nucleo.</p>
+  <p><em>Esempio svolto:</em> nella configurazione elettronica del sodio, 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup>, il livello principale più esterno occupato è n = 3, che contiene un solo elettrone di valenza (il singolo elettrone del sottolivello 3s); i restanti 10 elettroni, appartenenti ai livelli n = 1 e n = 2, sono elettroni di core.</p>
+
+  <p class="titolo-capitolo">La configurazione elettronica e la struttura della tavola periodica</p>
+  <p>Come vedremo in dettaglio nel prossimo capitolo, la struttura stessa della tavola periodica degli elementi, con la sua organizzazione in righe (periodi) e colonne (gruppi), riflette direttamente la configurazione elettronica degli elementi: elementi appartenenti allo stesso gruppo della tavola periodica possiedono infatti configurazioni elettroniche esterne (di valenza) simili tra loro, ed è proprio questa somiglianza a spiegare le loro proprietà chimiche analoghe, che esamineremo nel capitolo successivo.</p>
+</div>
+<!-- fine capitolo chimica 12 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi13.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

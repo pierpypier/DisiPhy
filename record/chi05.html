@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 05</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 05: le tecniche di separazione dei miscugli -->
+<div id="capitolo-05-tecniche-separazione" class="capitolo-storia">
+  <p class="titolo-capitolo">05 - Le tecniche di separazione dei miscugli - Classe 1</p>
+
+  <p class="titolo-capitolo">Perché è possibile separare un miscuglio</p>
+  <p>Come visto nel capitolo precedente, i componenti di un miscuglio mantengono ciascuno la propria identità chimica, e non sono legati tra loro come avviene invece negli elementi di un composto. Proprio per questo motivo è sempre possibile, almeno in linea di principio, separare i componenti di un miscuglio sfruttando le differenze tra le loro proprietà fisiche, come lo stato di aggregazione, la densità, la solubilità o la temperatura di ebollizione, senza dover ricorrere ad alcuna trasformazione chimica.</p>
+  <p>La scelta della tecnica di separazione più adatta dipende dal tipo di miscuglio considerato (omogeneo o eterogeneo) e dalla proprietà fisica che meglio distingue i suoi componenti: esaminiamo di seguito le tecniche più comuni utilizzate in laboratorio.</p>
+
+  <p class="titolo-capitolo">La filtrazione</p>
+  <p>La filtrazione è una tecnica utilizzata per separare un solido insolubile disperso in un liquido, cioè per separare le due fasi di una sospensione, come quella già incontrata nel capitolo precedente. Il miscuglio viene fatto passare attraverso un filtro, dotato di piccoli pori che trattengono le particelle solide, più grandi dei pori, mentre lasciano passare il liquido, chiamato filtrato.</p>
+  <p>Un esempio quotidiano di filtrazione è la preparazione del caffè con la moka o con la macchina da caffè, in cui l'acqua calda attraversa il filtro trattenendo la polvere di caffè, mentre il liquido, ormai arricchito delle sostanze aromatiche, passa attraverso i fori del filtro.</p>
+
+  <p class="titolo-capitolo">La decantazione e la centrifugazione</p>
+  <p>La decantazione sfrutta la differenza di densità tra i componenti di un miscuglio eterogeneo, lasciando che la fase più densa si depositi sul fondo del recipiente per effetto della gravità, in un tempo più o meno lungo a seconda delle dimensioni delle particelle e della differenza di densità: è la tecnica con cui, lasciando riposare una sospensione di sabbia in acqua, la sabbia si deposita gradualmente sul fondo, lasciando l'acqua limpida sopra di essa.</p>
+  <p>Quando la differenza di densità tra i componenti è piccola, o le particelle disperse sono molto fini (come nel caso di alcuni colloidi), la sola forza di gravità non è sufficiente a ottenere una separazione in tempi ragionevoli: si ricorre allora alla centrifugazione, una tecnica che utilizza una forza centrifuga molto maggiore della forza di gravità, ottenuta facendo ruotare rapidamente il miscuglio, per accelerare la sedimentazione dei componenti più densi.</p>
+
+  <p class="titolo-capitolo">L'estrazione con solvente</p>
+  <p>L'estrazione con solvente sfrutta la diversa solubilità di una sostanza in due liquidi differenti, tra loro non miscibili, per separarla da un miscuglio: la sostanza da estrarre si distribuisce tra i due liquidi in proporzioni diverse, a seconda della sua maggiore affinità per l'uno o per l'altro, e si concentra prevalentemente nel liquido in cui è più solubile.</p>
+  <p>Un esempio comune è l'estrazione della caffeina dai chicchi di caffè, oppure, in ambito domestico, la preparazione di un infuso, in cui alcune sostanze presenti nelle foglie di tè (come gli aromi e la teina) passano in soluzione nell'acqua calda, che agisce da solvente, lasciando indietro la parte solida delle foglie.</p>
+
+  <p class="titolo-capitolo">La cristallizzazione</p>
+  <p>La cristallizzazione è una tecnica utilizzata per separare un soluto solido disciolto in un solvente liquido, sfruttando la diminuzione della solubilità del soluto al diminuire della temperatura, oppure favorendo l'evaporazione lenta del solvente: quando la soluzione diventa satura, cioè non può più sciogliere ulteriore soluto, quest'ultimo comincia a depositarsi sotto forma di cristalli solidi, che possono poi essere raccolti, ad esempio per filtrazione.</p>
+  <p>Un esempio noto di cristallizzazione è la produzione del sale marino, ottenuto facendo evaporare lentamente, per azione del sole e del vento, l'acqua di mare raccolta nelle apposite saline: man mano che l'acqua evapora, la soluzione diventa sempre più concentrata, fino a raggiungere la saturazione e a dare origine ai cristalli di sale.</p>
+
+  <p class="titolo-capitolo">La distillazione</p>
+  <p>La distillazione è una tecnica di separazione che sfrutta la diversa temperatura di ebollizione dei componenti di un miscuglio omogeneo, tipicamente una soluzione formata da due o più liquidi miscibili tra loro. Riscaldando gradualmente il miscuglio, il componente con la temperatura di ebollizione più bassa evapora per primo, in quantità prevalente rispetto agli altri; il vapore prodotto viene poi raffreddato e fatto condensare in un condensatore, raccogliendo così, separatamente, il componente più volatile.</p>
+  <p>Un esempio classico è la distillazione di una soluzione di acqua e alcol etilico: poiché l'alcol ha una temperatura di ebollizione (78 °C) inferiore a quella dell'acqua (100 °C), riscaldando la soluzione l'alcol evapora preferenzialmente, permettendo di ottenere, dopo condensazione del vapore, un distillato più concentrato in alcol rispetto alla soluzione di partenza.</p>
+  <p>Quando la differenza tra le temperature di ebollizione dei componenti è piccola, si ricorre alla distillazione frazionata, una variante della distillazione semplice in cui il vapore attraversa una colonna verticale, chiamata colonna di frazionamento, all'interno della quale si susseguono numerosi piccoli cicli di evaporazione e condensazione, che migliorano notevolmente l'efficienza della separazione tra componenti con temperature di ebollizione vicine tra loro.</p>
+
+  <p class="titolo-capitolo">La cromatografia</p>
+  <p>La cromatografia è una tecnica di separazione che sfrutta la diversa affinità dei componenti di un miscuglio per due fasi distinte, chiamate fase stazionaria (che rimane ferma, ad esempio un particolare tipo di carta assorbente) e fase mobile (un liquido o un gas che si muove attraverso la fase stazionaria, trascinando con sé i componenti del miscuglio).</p>
+  <p>Nella cromatografia su carta, una delle forme più semplici, una goccia del miscuglio da separare viene depositata su una striscia di carta assorbente, il cui estremo inferiore viene poi immerso in un solvente (la fase mobile): il solvente risale la carta per capillarità, trascinando con sé i diversi componenti del miscuglio a velocità diverse, a seconda della loro diversa affinità per la carta (fase stazionaria) e per il solvente (fase mobile), separandoli così in macchie distinte, distribuite lungo la striscia di carta a distanze diverse dal punto di partenza.</p>
+  <p>La cromatografia è particolarmente utile per separare e analizzare miscugli complessi presenti anche in piccolissime quantità, come nel caso della separazione dei pigmenti colorati contenuti nell'inchiostro di un pennarello, oppure dei pigmenti fotosintetici estratti dalle foglie di una pianta.</p>
+
+  <p class="titolo-capitolo">La scelta della tecnica più adatta</p>
+  <p>La scelta della tecnica di separazione da utilizzare dipende sempre dal tipo di miscuglio e dalle proprietà fisiche che distinguono i suoi componenti, e in molti casi pratici è necessario combinare più tecniche in sequenza per ottenere una separazione completa ed efficace.</p>
+  <p><em>Esempio svolto:</em> si vuole separare un miscuglio costituito da sabbia, sale da cucina e acqua. Si procede prima con una filtrazione, per separare la sabbia (insolubile) dalla soluzione di acqua e sale che l'attraversa; successivamente, la soluzione filtrata viene sottoposta a evaporazione (o a una lenta cristallizzazione), per far evaporare l'acqua e recuperare il sale sotto forma di cristalli solidi, completando così la separazione dei tre componenti del miscuglio di partenza.</p>
+</div>
+<!-- fine capitolo chimica 05 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi06.html">Vai al Capitolo successivo</a></p>
+</div>  
+
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

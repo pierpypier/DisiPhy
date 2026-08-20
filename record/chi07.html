@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 07</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 07: le leggi ponderali della chimica -->
+<div id="capitolo-07-leggi-ponderali" class="capitolo-storia">
+  <p class="titolo-capitolo">07 - Le leggi ponderali della chimica - Classe 1</p>
+
+  <p class="titolo-capitolo">Le leggi ponderali</p>
+  <p>Tra la fine del Settecento e l'inizio dell'Ottocento, un gruppo di chimici, attraverso misure sperimentali sempre più accurate delle masse coinvolte nelle reazioni chimiche, formulò alcune leggi fondamentali, dette leggi ponderali (dal latino pondus, peso), che descrivono i rapporti tra le masse dei reagenti e dei prodotti in una trasformazione chimica. Queste leggi, puramente sperimentali, gettarono le basi per lo sviluppo della teoria atomica, che vedremo nel prossimo capitolo.</p>
+
+  <p class="titolo-capitolo">La legge di conservazione della massa (Lavoisier)</p>
+  <p>La prima e più importante delle leggi ponderali fu formulata dal chimico francese Antoine-Laurent Lavoisier, e afferma che, in una trasformazione chimica avvenuta in un sistema chiuso, la massa totale dei reagenti è sempre uguale alla massa totale dei prodotti. Questa legge, già anticipata nel capitolo precedente, viene per questo chiamata anche legge di Lavoisier, ed è spesso riassunta con l'espressione "nulla si crea e nulla si distrugge, ma tutto si trasforma".</p>
+  <p class="formula">massa reagenti = massa prodotti</p>
+  <p>Per verificare sperimentalmente questa legge è indispensabile che il sistema sia chiuso, come definito nel capitolo 1: se una reazione avviene in un sistema aperto, e uno dei prodotti (ad esempio un gas) viene disperso nell'ambiente senza essere raccolto e pesato, la massa misurata dei prodotti risulterebbe apparentemente inferiore a quella dei reagenti, pur senza contraddire la legge di Lavoisier.</p>
+  <p><em>Esempio svolto:</em> in un recipiente chiuso, m<sub>zolfo</sub> = 4,0 g di zolfo reagiscono completamente con m<sub>ferro</sub> = 7,0 g di ferro, formando solfuro di ferro. Per la legge di Lavoisier, la massa del solfuro di ferro prodotto vale m<sub>prodotto</sub> = 4,0 + 7,0 = 11,0 g.</p>
+
+  <p class="titolo-capitolo">La legge delle proporzioni definite (Proust)</p>
+  <p>La seconda legge ponderale fu formulata dal chimico francese Joseph Proust, e afferma che, quando due o più elementi si combinano tra loro per formare un determinato composto, lo fanno sempre secondo un rapporto di massa fisso e costante, indipendentemente dalla quantità totale di composto considerata e dal modo in cui è stato ottenuto. Questa legge è detta anche legge di Proust, o legge delle proporzioni costanti.</p>
+  <p>Questa legge spiega, dal punto di vista sperimentale, ciò che nel capitolo 4 avevamo già osservato a proposito dei composti: la composizione di un composto è fissa e caratteristica, a differenza di quella di un miscuglio, che invece può variare liberamente.</p>
+  <p><em>Esempio svolto:</em> in ogni campione di acqua pura, indipendentemente dalla sua origine, il rapporto tra la massa di idrogeno e la massa di ossigeno contenute è sempre lo stesso, e vale circa 1 a 8. Se un campione di acqua contiene m<sub>idrogeno</sub> = 2,0 g di idrogeno, la massa di ossigeno presente nello stesso campione vale m<sub>ossigeno</sub> = 2,0 × 8 = 16,0 g, e la massa totale del campione di acqua vale quindi 2,0 + 16,0 = 18,0 g.</p>
+  <p>Una conseguenza pratica della legge di Proust è che, conoscendo il rapporto costante tra le masse dei componenti di un composto, è possibile stabilire in anticipo quale reagente sarà presente in eccesso, se i reagenti vengono mescolati in un rapporto di massa diverso da quello richiesto dalla reazione, come mostra l'esempio seguente.</p>
+  <p><em>Esempio svolto:</em> sapendo che idrogeno e ossigeno si combinano per formare acqua secondo il rapporto di massa 1 a 8, si fanno reagire m<sub>idrogeno</sub> = 5,0 g di idrogeno con m<sub>ossigeno</sub> = 30,0 g di ossigeno. Per reagire completamente con 5,0 g di idrogeno servirebbero 5,0 × 8 = 40,0 g di ossigeno; poiché ne sono disponibili solo 30,0 g, è l'ossigeno il reagente che si esaurisce per primo, mentre una parte dell'idrogeno resterà in eccesso, senza reagire.</p>
+
+  <p class="titolo-capitolo">La legge delle proporzioni multiple (Dalton)</p>
+  <p>La terza legge ponderale fu formulata dal chimico inglese John Dalton, lo stesso che, come vedremo nel prossimo capitolo, elaborò la prima moderna teoria atomica. Questa legge afferma che, quando due elementi possono combinarsi tra loro per formare composti diversi, le diverse masse di uno dei due elementi che si combinano con una stessa massa fissa dell'altro elemento stanno tra loro in rapporti esprimibili con numeri interi e generalmente piccoli.</p>
+  <p>Questa legge descrive quindi il caso, piuttosto comune, in cui due elementi non danno origine a un solo composto, ma a più composti differenti, ciascuno caratterizzato dal proprio rapporto costante di massa (in accordo con la legge di Proust), ma con rapporti diversi tra un composto e l'altro.</p>
+  <p><em>Esempio svolto:</em> carbonio e ossigeno possono combinarsi per formare due composti diversi: il monossido di carbonio (CO) e l'anidride carbonica (CO<sub>2</sub>). Considerando una massa fissa di carbonio pari a 12,0 g, questa si combina con 16,0 g di ossigeno nel monossido di carbonio, e con 32,0 g di ossigeno nell'anidride carbonica. Il rapporto tra le due masse di ossigeno vale 32,0 / 16,0 = 2, un numero intero e piccolo, in accordo con la legge di Dalton.</p>
+
+  <p class="titolo-capitolo">Il significato delle leggi ponderali</p>
+  <p>Le tre leggi ponderali esaminate in questo capitolo, pur essendo il risultato di sole osservazioni sperimentali sulle masse coinvolte nelle reazioni chimiche, senza alcun riferimento diretto alla struttura microscopica della materia, si rivelarono di importanza fondamentale per lo sviluppo successivo della chimica, poiché fornirono le basi empiriche su cui Dalton avrebbe costruito, di lì a poco, la sua teoria atomica, che permette di spiegare in modo coerente e unitario tutte e tre le leggi ponderali a partire da un unico modello della materia.</p>
+</div>
+<!-- fine capitolo chimica 07 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi08.html">Vai al Capitolo successivo</a></p>
+</div>
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

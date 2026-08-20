@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 08</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 08: la teoria atomica di Dalton -->
+<div id="capitolo-08-teoria-atomica-dalton" class="capitolo-storia">
+  <p class="titolo-capitolo">08 - La teoria atomica di Dalton - Classe 1</p>
+
+  <p class="titolo-capitolo">Le origini della teoria atomica</p>
+  <p>All'inizio dell'Ottocento, il chimico inglese John Dalton, già incontrato nel capitolo precedente a proposito della legge delle proporzioni multiple, elaborò un modello della materia capace di spiegare in modo unitario tutte le leggi ponderali fino ad allora scoperte, riprendendo e sviluppando in chiave scientifica un'idea antica, quella dell'atomo, già proposta in forma puramente filosofica dai pensatori greci Democrito e Leucippo, molti secoli prima.</p>
+  <p>A differenza dell'ipotesi filosofica greca, la teoria di Dalton non era una semplice speculazione, ma un modello scientifico, fondato su prove sperimentali concrete, capace di fare previsioni verificabili: proprio per questo motivo essa segna, convenzionalmente, l'inizio della chimica moderna come scienza quantitativa.</p>
+
+  <p class="titolo-capitolo">I postulati della teoria di Dalton</p>
+  <p>La teoria atomica di Dalton si basa su alcuni postulati fondamentali, cioè su alcune affermazioni assunte come punto di partenza, dalle quali è possibile derivare, per via logica, le leggi ponderali osservate sperimentalmente.</p>
+  <p>Il primo postulato afferma che ogni elemento è costituito da particelle piccolissime e indivisibili, chiamate atomi, che non possono essere né create né distrutte, né trasformate in atomi di un altro elemento, nel corso di una trasformazione chimica. Il secondo postulato afferma che tutti gli atomi di uno stesso elemento sono identici tra loro, in particolare hanno la stessa massa, mentre atomi di elementi diversi hanno masse diverse.</p>
+  <p>Il terzo postulato afferma che i composti si formano dalla combinazione di atomi di elementi diversi, secondo rapporti numerici semplici e costanti: ad esempio, due atomi di idrogeno si combinano sempre con un atomo di ossigeno per formare una molecola di acqua. Il quarto postulato, infine, afferma che una trasformazione chimica consiste unicamente in una riorganizzazione degli atomi coinvolti, che si separano dai legami precedenti e si ricombinano secondo nuovi rapporti, senza che gli atomi stessi vengano creati, distrutti o modificati nella loro identità.</p>
+
+  <p class="titolo-capitolo">Come la teoria di Dalton spiega la legge di Lavoisier</p>
+  <p>Il quarto postulato di Dalton spiega direttamente la legge di conservazione della massa vista nel capitolo precedente: se una trasformazione chimica è semplicemente una riorganizzazione di atomi preesistenti, che non vengono né creati né distrutti, allora il numero totale di atomi di ciascun elemento, e quindi la massa totale del sistema, deve necessariamente rimanere costante prima e dopo la reazione, purché il sistema sia chiuso.</p>
+
+  <p class="titolo-capitolo">Come la teoria di Dalton spiega la legge di Proust</p>
+  <p>Anche la legge delle proporzioni definite trova una spiegazione naturale nel modello di Dalton: se un composto è sempre formato dalla combinazione di uno stesso numero fisso di atomi di ciascun elemento (come stabilito dal terzo postulato), e se tutti gli atomi di uno stesso elemento hanno la stessa massa (come stabilito dal secondo postulato), allora il rapporto tra le masse degli elementi in un composto deve necessariamente essere sempre lo stesso, indipendentemente dalla quantità totale di composto considerata.</p>
+  <p><em>Esempio svolto:</em> se una molecola di acqua è sempre formata da due atomi di idrogeno e un atomo di ossigeno, e la massa di un atomo di ossigeno è circa sedici volte quella di un atomo di idrogeno, allora, in qualunque campione di acqua, il rapporto tra la massa di ossigeno e la massa di idrogeno deve valere sempre 16 / (2×1) = 8, esattamente il valore già incontrato nel capitolo precedente a proposito della legge di Proust.</p>
+
+  <p class="titolo-capitolo">Come la teoria di Dalton spiega la legge delle proporzioni multiple</p>
+  <p>Anche la legge delle proporzioni multiple, formulata dallo stesso Dalton, trova una spiegazione immediata nel suo modello atomico: se due elementi possono combinarsi secondo rapporti numerici semplici e diversi (come afferma il terzo postulato), formando composti differenti, allora è naturale che le masse di un elemento che si combinano con una massa fissa dell'altro stiano tra loro in rapporti esprimibili con numeri interi piccoli, poiché tali rapporti riflettono direttamente il numero, sempre intero, di atomi coinvolti in ciascun composto.</p>
+  <p><em>Esempio svolto:</em> il monossido di carbonio (CO) è formato da un atomo di carbonio e un atomo di ossigeno per ogni molecola, mentre l'anidride carbonica (CO<sub>2</sub>) è formata da un atomo di carbonio e due atomi di ossigeno per ogni molecola: il rapporto 2 a 1 tra il numero di atomi di ossigeno nei due composti, a parità di atomi di carbonio, corrisponde esattamente al rapporto di massa 2 a 1 già calcolato nel capitolo precedente.</p>
+
+  <p class="titolo-capitolo">I limiti della teoria di Dalton</p>
+  <p>La teoria atomica di Dalton, pur avendo un enorme valore storico e scientifico, presenta alcuni limiti, in parte già corretti dagli sviluppi successivi della chimica e della fisica: gli atomi, contrariamente a quanto ipotizzato da Dalton, non sono in realtà indivisibili, ma sono a loro volta costituiti da particelle più piccole, chiamate particelle subatomiche, come vedremo nei capitoli dedicati alla struttura dell'atomo.</p>
+  <p>Inoltre, atomi di uno stesso elemento non sono sempre perfettamente identici tra loro: esistono infatti atomi dello stesso elemento con masse leggermente diverse, chiamati isotopi, anch'essi oggetto di un capitolo successivo. Nonostante questi limiti, il modello di Dalton resta un punto di riferimento fondamentale, poiché introdusse per la prima volta, in modo scientificamente fondato, l'idea che la materia sia costituita da unità discrete e non infinitamente divisibile.</p>
+
+  <p class="titolo-capitolo">Dagli atomi alla massa atomica relativa</p>
+  <p>Un limite pratico della teoria di Dalton era l'impossibilità, con le tecniche sperimentali dell'epoca, di misurare la massa reale di un singolo atomo, estremamente piccola. Per questo motivo si introdusse il concetto di massa atomica relativa, cioè un numero puro che esprime quante volte la massa di un atomo di un dato elemento sia maggiore (o minore) rispetto a una massa di riferimento, convenzionalmente fissata pari a un dodicesimo della massa dell'atomo di carbonio-12.</p>
+  <p>Questa unità di riferimento, chiamata unità di massa atomica (simbolo u), permette di confrontare le masse dei diversi atomi senza dover conoscere il loro valore assoluto in chilogrammi, e sarà lo strumento di base per introdurre, nel prossimo capitolo, il concetto di mole e il numero di Avogadro.</p>
+  <p><em>Esempio svolto:</em> la massa atomica relativa dell'idrogeno vale circa 1 u, mentre quella dell'ossigeno vale circa 16 u: questo significa che un atomo di ossigeno ha una massa circa 16 volte maggiore di un atomo di idrogeno, in perfetto accordo con il rapporto di massa già incontrato in questo capitolo a proposito della molecola d'acqua.</p>
+</div>
+<!-- fine capitolo chimica 08 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi09.html">Vai al Capitolo successivo</a></p>
+</div>  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
