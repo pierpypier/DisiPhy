@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 20</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 20: i calcoli stechiometrici e il reagente limitante -->
+<div id="capitolo-20-calcoli-stechiometrici-reagente-limitante" class="capitolo-storia">
+  <p class="titolo-capitolo">20 - I calcoli stechiometrici e il reagente limitante - Classe 3</p>
+
+  <p class="titolo-capitolo">Reagenti in proporzioni non stechiometriche</p>
+  <p>Nel capitolo precedente abbiamo svolto calcoli stechiometrici assumendo, implicitamente, che i reagenti fossero sempre disponibili esattamente nelle proporzioni richieste dall'equazione bilanciata, senza che nessuno di essi risultasse in eccesso al termine della reazione. Nella pratica sperimentale, tuttavia, è molto comune mescolare i reagenti in quantità che non rispettano esattamente questo rapporto: in questi casi, uno dei reagenti si esaurisce completamente prima dell'altro, arrestando di fatto la reazione, anche se dell'altro reagente ne rimane ancora disponibile.</p>
+  <p>Il reagente che si esaurisce per primo, e che di conseguenza determina la quantità massima di prodotto ottenibile dalla reazione, è chiamato reagente limitante; il reagente che invece non si esaurisce completamente, e di cui una parte rimane inutilizzata al termine della reazione, è chiamato reagente in eccesso.</p>
+
+  <p class="titolo-capitolo">Un'analogia per comprendere il reagente limitante</p>
+  <p>Un'analogia utile per comprendere il concetto di reagente limitante è quella della preparazione di un panino, che richiede, secondo una "ricetta" fissa, 2 fette di pane e 1 fetta di formaggio per ogni panino completo. Se si dispone di 10 fette di pane e di soli 3 fette di formaggio, il numero massimo di panini realizzabili è determinato dal formaggio, che si esaurisce dopo soli 3 panini (utilizzando 6 fette di pane), lasciando 4 fette di pane inutilizzate: il formaggio, in questa analogia, svolge il ruolo del reagente limitante, mentre il pane svolge il ruolo del reagente in eccesso.</p>
+
+  <p class="titolo-capitolo">Come individuare il reagente limitante</p>
+  <p>Per individuare quale dei reagenti disponibili sia effettivamente il reagente limitante in una data reazione, si procede calcolando, per ciascun reagente disponibile, la quantità dell'altro reagente che sarebbe necessaria per farlo reagire completamente, secondo il rapporto molare stabilito dall'equazione bilanciata (in modo analogo a quanto già visto nel capitolo precedente), e confrontando questo valore calcolato con la quantità effettivamente disponibile.</p>
+  <p>In alternativa, un metodo equivalente consiste nel calcolare, per ciascun reagente disponibile, la quantità di un prodotto qualsiasi che si otterrebbe se quel reagente venisse consumato completamente, ipotizzando che l'altro reagente sia presente in quantità sufficiente: il reagente limitante è quello che, tra i due, produce la quantità minore del prodotto considerato, poiché è quello che si esaurisce per primo, limitando di conseguenza la quantità massima di prodotto ottenibile dall'intera reazione.</p>
+  <p><em>Esempio svolto:</em> nella reazione di sintesi dell'ammoniaca, N<sub>2</sub> + 3 H<sub>2</sub> → 2 NH<sub>3</sub>, si fanno reagire n(N<sub>2</sub>) = 4,0 mol di azoto con n(H<sub>2</sub>) = 9,0 mol di idrogeno. Calcoliamo quanta ammoniaca si otterrebbe da ciascun reagente, ipotizzando che l'altro sia disponibile in quantità sufficiente: dal rapporto molare 1 a 2, l'azoto disponibile produrrebbe n(NH<sub>3</sub>) = 4,0 × 2 = 8,0 mol di ammoniaca; dal rapporto molare 3 a 2, l'idrogeno disponibile produrrebbe invece n(NH<sub>3</sub>) = 9,0 × (2/3) = 6,0 mol di ammoniaca. Poiché l'idrogeno produce la quantità minore di ammoniaca, l'idrogeno è il reagente limitante, e la quantità di ammoniaca effettivamente ottenibile dalla reazione vale 6,0 mol.</p>
+
+  <p class="titolo-capitolo">Calcolare la quantità di reagente in eccesso rimasta</p>
+  <p>Una volta individuato il reagente limitante, è possibile calcolare anche la quantità di reagente in eccesso che rimane inutilizzata al termine della reazione, calcolando dapprima la quantità di reagente in eccesso effettivamente consumata dal reagente limitante (secondo il rapporto molare dell'equazione bilanciata), e sottraendo poi questo valore dalla quantità di reagente in eccesso inizialmente disponibile.</p>
+  <p><em>Esempio svolto:</em> riprendiamo l'esempio precedente, in cui l'idrogeno (9,0 mol disponibili) è risultato il reagente limitante. Calcoliamo quanto azoto viene effettivamente consumato dai 9,0 mol di idrogeno: dal rapporto molare 3 a 1 (H<sub>2</sub> a N<sub>2</sub>), l'azoto consumato vale n(N<sub>2</sub>) = 9,0 / 3 = 3,0 mol. Poiché erano inizialmente disponibili 4,0 mol di azoto, l'azoto rimasto in eccesso, non reagito, vale 4,0 − 3,0 = 1,0 mol.</p>
+
+  <p class="titolo-capitolo">La resa di una reazione</p>
+  <p>I calcoli stechiometrici svolti finora, sia in questo capitolo sia nel precedente, permettono di calcolare la resa teorica di una reazione, cioè la massima quantità di prodotto ottenibile, calcolata assumendo che la reazione avvenga in modo completo, secondo l'equazione bilanciata, senza alcuna perdita di materiale.</p>
+  <p>Nella pratica sperimentale, tuttavia, la quantità di prodotto effettivamente ottenuta, chiamata resa reale (o resa sperimentale), risulta quasi sempre inferiore alla resa teorica calcolata, a causa di diversi fattori, come reazioni secondarie indesiderate che sottraggono parte dei reagenti, perdite di materiale durante le fasi di manipolazione e purificazione del prodotto, oppure il fatto che alcune reazioni non procedono fino al completo esaurimento del reagente limitante, ma raggiungono una condizione di equilibrio, argomento che sarà approfondito in un capitolo successivo.</p>
+  <p>Il rapporto tra la resa reale e la resa teorica, espresso in percentuale, è chiamato resa percentuale della reazione, ed è un indicatore importante dell'efficienza con cui una data reazione viene condotta in pratica.</p>
+  <p class="formula">resa percentuale = (resa reale / resa teorica) × 100</p>
+  <p><em>Esempio svolto:</em> nella sintesi dell'ammoniaca dell'esempio precedente, la resa teorica calcolata era pari a 6,0 mol di NH<sub>3</sub>. Se, al termine dell'esperimento condotto in laboratorio, si ottengono effettivamente soltanto 4,5 mol di ammoniaca, la resa percentuale della reazione vale (4,5 / 6,0) × 100 = 75%.</p>
+</div>
+<!-- fine capitolo chimica 20 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi21.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

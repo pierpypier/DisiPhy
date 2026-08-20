@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 16</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 16: il legame metallico e le forze intermolecolari -->
+<div id="capitolo-16-legame-metallico-forze-intermolecolari" class="capitolo-storia">
+  <p class="titolo-capitolo">16 - Il legame metallico e le forze intermolecolari - Classe 2</p>
+
+  <p class="titolo-capitolo">Il legame metallico</p>
+  <p>Nel capitolo precedente abbiamo esaminato il legame ionico, tipico dei composti formati da metalli e non metalli, e il legame covalente, tipico dei composti formati da non metalli. Resta da esaminare il caso in cui a legarsi siano invece atomi metallici tra loro, come avviene ad esempio in un pezzo di ferro o di rame: in questo caso si parla di legame metallico, un tipo di legame chimico con caratteristiche piuttosto diverse da quelle già viste.</p>
+  <p>Gli atomi metallici, come già osservato nel capitolo 14 a proposito dell'energia di ionizzazione, cedono con relativa facilità i propri elettroni di valenza: nel legame metallico, un numero molto grande di atomi metallici cede simultaneamente i propri elettroni di valenza, che non restano più legati a un particolare atomo, ma si muovono liberamente in tutto il reticolo cristallino metallico, costituendo quello che viene chiamato, con un'immagine efficace, un "mare di elettroni delocalizzati".</p>
+  <p>Gli ioni positivi risultanti, disposti secondo un reticolo cristallino ordinato, sono tenuti insieme dall'attrazione elettrostatica reciproca con questo mare di elettroni delocalizzati, che circonda e avvolge l'intero reticolo, senza appartenere in modo specifico a nessuno ione in particolare: è proprio questa delocalizzazione degli elettroni, assente sia nel legame ionico sia nel legame covalente, a spiegare molte delle proprietà fisiche caratteristiche dei metalli, già elencate nel capitolo 13.</p>
+  <p>La buona conducibilità elettrica dei metalli si spiega, ad esempio, con la libertà di movimento degli elettroni delocalizzati, che possono spostarsi facilmente in presenza di un campo elettrico esterno, trasportando carica elettrica attraverso il materiale; la malleabilità e la duttilità dei metalli, cioè la capacità di deformarsi senza rompersi, si spiegano invece con la possibilità che gli ioni positivi del reticolo scorrano gli uni sugli altri, mantenendo comunque intatta l'attrazione complessiva con il mare di elettroni circostante, a differenza di quanto avviene nei solidi ionici, che tendono invece a fratturarsi se sottoposti a una deformazione.</p>
+
+  <p class="titolo-capitolo">Le forze intermolecolari: un legame diverso dai precedenti</p>
+  <p>I legami ionico, covalente e metallico esaminati finora sono legami forti, che tengono uniti gli atomi all'interno di una singola unità chimica (uno ione, una molecola, o un intero reticolo cristallino). Esistono tuttavia anche forze di attrazione più deboli, dette forze intermolecolari (o forze di Van der Waals, dal nome del fisico olandese che per primo le studiò sistematicamente), che agiscono invece tra molecole distinte, già formate e complete, tenendole unite tra loro senza però formare un vero e proprio legame chimico.</p>
+  <p>Le forze intermolecolari, pur essendo molto più deboli dei legami chimici veri e propri, sono comunque responsabili di proprietà fisiche macroscopiche molto importanti, come lo stato di aggregazione di una sostanza a una data temperatura (già esaminato nel capitolo 3), e i valori delle sue temperature di fusione e di ebollizione: sostanze con forze intermolecolari più intense tendono ad avere temperature di fusione e di ebollizione più elevate, poiché è necessaria più energia per separare le molecole tra loro.</p>
+
+  <p class="titolo-capitolo">Le forze dipolo-dipolo</p>
+  <p>Le forze dipolo-dipolo si manifestano tra molecole polari, cioè molecole che, come già visto nel capitolo precedente a proposito del legame covalente polare, presentano una distribuzione asimmetrica della carica elettrica, con una regione parzialmente positiva e una regione parzialmente negativa: la regione parzialmente positiva di una molecola è attratta elettrostaticamente dalla regione parzialmente negativa di una molecola vicina, generando così una forza di attrazione tra le molecole.</p>
+  <p>Questo tipo di forza intermolecolare è generalmente più intensa delle forze che esamineremo di seguito, poiché coinvolge cariche parziali reali, seppure di intensità inferiore rispetto alle cariche piene coinvolte nel legame ionico.</p>
+
+  <p class="titolo-capitolo">Il legame a idrogeno</p>
+  <p>Il legame a idrogeno (o legame idrogeno) è un caso particolare e particolarmente intenso di forza dipolo-dipolo, che si manifesta quando un atomo di idrogeno, legato covalentemente a un atomo piccolo e molto elettronegativo (tipicamente azoto, ossigeno o fluoro), viene attratto dalla regione di carica parzialmente negativa presente su un atomo altrettanto elettronegativo, appartenente a una molecola vicina.</p>
+  <p>Il legame a idrogeno, pur essendo ancora molto più debole di un legame covalente vero e proprio, è significativamente più intenso delle comuni forze dipolo-dipolo, ed è responsabile di numerose proprietà particolari dell'acqua, come la sua temperatura di ebollizione anomalmente elevata rispetto a molecole di dimensioni simili prive di legami a idrogeno, e il fatto che il ghiaccio, a differenza della maggior parte dei solidi, sia meno denso della fase liquida corrispondente, e quindi galleggi sull'acqua liquida.</p>
+  <p><em>Esempio svolto:</em> confrontando l'acqua (H<sub>2</sub>O, temperatura di ebollizione 100 °C) con l'idrogeno solforato (H<sub>2</sub>S, molecola di dimensioni simili ma priva di legami a idrogeno significativi, temperatura di ebollizione −60 °C), si osserva una differenza di ben 160 °C: questa notevole differenza, non spiegabile sulla base della sola massa molecolare, è dovuta proprio alla presenza di legami a idrogeno tra le molecole di acqua, assenti (o molto più deboli) tra le molecole di idrogeno solforato.</p>
+
+  <p class="titolo-capitolo">Le forze di London</p>
+  <p>Le forze di London (o forze di dispersione) sono il tipo di forza intermolecolare più debole tra quelle esaminate in questo capitolo, ma sono anche le uniche presenti in assoluto tra tutte le sostanze, comprese quelle formate da molecole non polari, o addirittura da singoli atomi isolati, come i gas nobili.</p>
+  <p>Queste forze si originano da fluttuazioni istantanee e casuali nella distribuzione degli elettroni attorno al nucleo, che generano, per un brevissimo istante, una piccola asimmetria di carica anche in una molecola normalmente non polare: questo dipolo istantaneo può indurre un dipolo corrispondente in una molecola vicina, generando una debole attrazione reciproca, seppure di intensità e durata molto limitate rispetto alle forze dipolo-dipolo e al legame a idrogeno.</p>
+  <p>L'intensità delle forze di London aumenta all'aumentare delle dimensioni e della massa molecolare di una sostanza, poiché molecole più grandi possiedono un maggior numero di elettroni, in grado di generare fluttuazioni di carica più intense: è per questo motivo che, tra i gas nobili, la temperatura di ebollizione aumenta procedendo dall'elio (−269 °C) allo xeno (−108 °C), pur trattandosi in tutti i casi di atomi singoli privi di qualunque altro tipo di forza intermolecolare.</p>
+</div>
+<!-- fine capitolo chimica 16 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi17.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

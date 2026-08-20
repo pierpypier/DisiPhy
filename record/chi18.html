@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 18</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 18: le reazioni chimiche e il loro bilanciamento -->
+<div id="capitolo-18-reazioni-chimiche-bilanciamento" class="capitolo-storia">
+  <p class="titolo-capitolo">18 - Le reazioni chimiche e il loro bilanciamento - Classe 2</p>
+
+  <p class="titolo-capitolo">L'equazione chimica</p>
+  <p>Come già visto nel capitolo 6, una reazione chimica è una trasformazione in cui una o più sostanze di partenza, i reagenti, si trasformano in una o più sostanze diverse, i prodotti. Per rappresentare in modo sintetico e rigoroso una reazione chimica si utilizza l'equazione chimica, in cui le formule dei reagenti, separate da un segno più, vengono scritte a sinistra di una freccia, mentre le formule dei prodotti, anch'esse separate da un segno più, vengono scritte a destra.</p>
+  <p class="formula">reagenti → prodotti</p>
+  <p>Ogni sostanza coinvolta in un'equazione chimica è preceduta da un numero, chiamato coefficiente stechiometrico, che indica il numero relativo di particelle (atomi, molecole o unità formula) di quella sostanza coinvolte nella reazione, secondo il rapporto minimo possibile tra numeri interi: quando il coefficiente stechiometrico vale 1, per convenzione non viene scritto esplicitamente.</p>
+
+  <p class="titolo-capitolo">Perché è necessario bilanciare un'equazione chimica</p>
+  <p>Come stabilito dalla legge di conservazione della massa di Lavoisier, esaminata nel capitolo 7, e spiegata a livello microscopico dal quarto postulato della teoria di Dalton, esaminato nel capitolo 8, in una reazione chimica gli atomi non vengono né creati né distrutti, ma soltanto riorganizzati: di conseguenza, il numero di atomi di ciascun elemento presente tra i reagenti deve essere sempre uguale al numero di atomi dello stesso elemento presente tra i prodotti.</p>
+  <p>Un'equazione chimica che rispetta questa condizione, cioè in cui il numero di atomi di ciascun elemento è uguale su entrambi i lati della freccia, si dice bilanciata: il processo di determinazione dei coefficienti stechiometrici corretti, che rendono un'equazione bilanciata, si chiama bilanciamento dell'equazione chimica.</p>
+  <p>È importante ricordare che, nel bilanciamento di un'equazione chimica, è possibile modificare soltanto i coefficienti stechiometrici posti davanti alle formule delle sostanze coinvolte, mai i pedici all'interno delle formule chimiche stesse: modificare un pedice, infatti, cambierebbe l'identità chimica della sostanza considerata, trasformandola in una sostanza diversa da quella realmente coinvolta nella reazione.</p>
+
+  <p class="titolo-capitolo">Il metodo di bilanciamento per tentativi</p>
+  <p>Il metodo più semplice e diffuso per bilanciare un'equazione chimica, adatto alla maggior parte delle reazioni incontrate a questo livello di studio, è il metodo per tentativi (o bilanciamento per ispezione), che procede aggiustando progressivamente i coefficienti stechiometrici, elemento per elemento, fino a raggiungere l'uguaglianza del numero di atomi su entrambi i lati dell'equazione.</p>
+  <p>Una strategia efficace consiste generalmente nel bilanciare per primi gli elementi che compaiono in una sola sostanza tra i reagenti e in una sola sostanza tra i prodotti, lasciando per ultimi gli elementi che compaiono in più sostanze contemporaneamente, poiché questi ultimi sono più facilmente influenzati dai coefficienti già scelti in precedenza per gli altri elementi.</p>
+  <p><em>Esempio svolto:</em> bilanciamo l'equazione della combustione del metano: CH<sub>4</sub> + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O. Il carbonio è già bilanciato, con un atomo per lato. Bilanciamo ora l'idrogeno: a sinistra sono presenti 4 atomi di idrogeno (nel metano), mentre a destra ne è presente solo 2 (nell'acqua); ponendo il coefficiente 2 davanti all'acqua, si ottengono 4 atomi di idrogeno anche a destra. A questo punto, contiamo gli atomi di ossigeno: a destra sono presenti 2 atomi (nella CO<sub>2</sub>) più 2 atomi (nelle due molecole di acqua), per un totale di 4 atomi di ossigeno; ponendo il coefficiente 2 davanti all'ossigeno molecolare a sinistra, si ottengono anch'essi 4 atomi di ossigeno. L'equazione bilanciata risulta quindi: CH<sub>4</sub> + 2 O<sub>2</sub> → CO<sub>2</sub> + 2 H<sub>2</sub>O.</p>
+  <p class="formula">CH<sub>4</sub> + 2 O<sub>2</sub> → CO<sub>2</sub> + 2 H<sub>2</sub>O</p>
+
+  <p class="titolo-capitolo">I principali tipi di reazione chimica</p>
+  <p>Le numerosissime reazioni chimiche conosciute possono essere raggruppate, in base allo schema generale secondo cui reagenti e prodotti sono organizzati, in alcune categorie principali, utili per riconoscere rapidamente la natura di una reazione e prevederne, almeno in linea generale, i prodotti.</p>
+  <p>Nelle reazioni di sintesi (o di combinazione), due o più sostanze reagenti, generalmente più semplici, si combinano per formare un unico prodotto, più complesso: la formazione dell'acqua a partire da idrogeno e ossigeno molecolari, già incontrata più volte nei capitoli precedenti, è un esempio tipico di reazione di sintesi.</p>
+  <p class="formula">2 H<sub>2</sub> + O<sub>2</sub> → 2 H<sub>2</sub>O</p>
+  <p>Nelle reazioni di decomposizione (o di analisi), all'opposto, un unico reagente, generalmente più complesso, si scompone in due o più prodotti, più semplici: il carbonato di calcio, riscaldato ad alta temperatura, si decompone in ossido di calcio e anidride carbonica.</p>
+  <p class="formula">CaCO<sub>3</sub> → CaO + CO<sub>2</sub></p>
+  <p>Nelle reazioni di scambio semplice (o di sostituzione), un elemento libero prende il posto di un altro elemento all'interno di un composto, liberando quest'ultimo allo stato libero: lo zinco metallico, immerso in una soluzione di acido cloridrico, sostituisce l'idrogeno del composto, liberandolo sotto forma di idrogeno gassoso.</p>
+  <p class="formula">Zn + 2 HCl → ZnCl<sub>2</sub> + H<sub>2</sub></p>
+  <p>Nelle reazioni di doppio scambio (o di metatesi), infine, due composti si scambiano reciprocamente una parte della propria struttura, dando origine a due nuovi composti: la reazione tra nitrato d'argento e cloruro di sodio, che produce cloruro d'argento (insolubile, che precipita come solido) e nitrato di sodio, è un esempio tipico di reazione di doppio scambio.</p>
+  <p class="formula">AgNO<sub>3</sub> + NaCl → AgCl + NaNO<sub>3</sub></p>
+
+  <p class="titolo-capitolo">L'equazione chimica come rapporto tra quantità di sostanza</p>
+  <p>I coefficienti stechiometrici di un'equazione bilanciata non indicano soltanto il rapporto tra i numeri di singole particelle (atomi o molecole) coinvolte nella reazione, ma, come conseguenza diretta della definizione di mole vista nel capitolo 9, indicano anche direttamente il rapporto tra le quantità di sostanza, espresse in moli, di ciascuna sostanza coinvolta: questa importante equivalenza sarà il punto di partenza del prossimo capitolo, dedicato al calcolo stechiometrico delle reazioni chimiche.</p>
+  <p><em>Esempio svolto:</em> nell'equazione bilanciata della combustione del metano, CH<sub>4</sub> + 2 O<sub>2</sub> → CO<sub>2</sub> + 2 H<sub>2</sub>O, il coefficiente 1 del metano e il coefficiente 2 dell'ossigeno indicano che, ogni volta che reagisce 1 mole di metano, sono necessarie esattamente 2 moli di ossigeno molecolare, indipendentemente dalla quantità assoluta di sostanza effettivamente coinvolta nella reazione considerata.</p>
+</div>
+<!-- fine capitolo chimica 18 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi19.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

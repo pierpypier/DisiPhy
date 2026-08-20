@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 19</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 19: la stechiometria delle reazioni chimiche -->
+<div id="capitolo-19-stechiometria-reazioni-chimiche" class="capitolo-storia">
+  <p class="titolo-capitolo">19 - La stechiometria delle reazioni chimiche - Classe 3</p>
+
+  <p class="titolo-capitolo">Che cos'è la stechiometria</p>
+  <p>Nel capitolo 18 abbiamo imparato a scrivere e bilanciare le equazioni chimiche, determinando i coefficienti stechiometrici che esprimono il rapporto tra i numeri di particelle (o, equivalentemente, tra le quantità di sostanza espresse in moli, come già visto nel capitolo 9) coinvolte in una reazione. La stechiometria è quella parte della chimica che si occupa di utilizzare questi rapporti per effettuare calcoli quantitativi sulle reazioni chimiche, permettendo di prevedere, ad esempio, quanto prodotto si otterrà da una data quantità di reagenti, o quanto reagente sarà necessario per ottenere una determinata quantità di prodotto.</p>
+  <p>I calcoli stechiometrici trovano applicazione pratica in moltissimi contesti, dall'industria chimica e farmaceutica, dove è indispensabile conoscere in anticipo le quantità esatte di materie prime necessarie e di prodotti ottenibili, fino al semplice dosaggio dei reagenti in un esperimento di laboratorio scolastico.</p>
+
+  <p class="titolo-capitolo">I rapporti molari come base del calcolo stechiometrico</p>
+  <p>Il punto di partenza di ogni calcolo stechiometrico è l'equazione chimica bilanciata, che fornisce direttamente i rapporti molari tra le sostanze coinvolte nella reazione, cioè i rapporti tra le rispettive quantità di sostanza espresse in moli: questi rapporti, determinati dai coefficienti stechiometrici, restano validi qualunque sia la quantità assoluta di sostanza effettivamente utilizzata, purché la reazione avvenga secondo la stessa equazione bilanciata.</p>
+  <p>Dato un rapporto molare noto tra due sostanze coinvolte in una reazione, e conoscendo la quantità di sostanza (in moli) disponibile o richiesta per una di esse, è possibile calcolare, mediante una semplice proporzione, la quantità di sostanza corrispondente per l'altra sostanza considerata.</p>
+  <p><em>Esempio svolto:</em> nella reazione di sintesi dell'ammoniaca, N<sub>2</sub> + 3 H<sub>2</sub> → 2 NH<sub>3</sub>, quante moli di idrogeno sono necessarie per far reagire completamente n = 2,5 mol di azoto? Dal rapporto molare stabilito dai coefficienti stechiometrici, 1 mol di N<sub>2</sub> reagisce con 3 mol di H<sub>2</sub>, quindi 2,5 mol di N<sub>2</sub> reagiscono con 2,5 × 3 = 7,5 mol di H<sub>2</sub>.</p>
+
+  <p class="titolo-capitolo">Dal calcolo stechiometrico in moli al calcolo in grammi</p>
+  <p>Nella pratica di laboratorio, le sostanze non vengono generalmente misurate direttamente in moli, ma pesate in grammi mediante una bilancia: è quindi necessario combinare il rapporto molare, ricavato dall'equazione bilanciata, con la relazione tra massa e moli vista nel capitolo 9, che coinvolge la massa molare di ciascuna sostanza.</p>
+  <p>Il percorso completo di un calcolo stechiometrico che parte dalla massa di un reagente e arriva alla massa di un prodotto, seguendo lo schema già incontrato nel capitolo 9, si articola quindi in tre passaggi successivi: dalla massa del reagente si calcolano le moli del reagente (dividendo per la sua massa molare); dalle moli del reagente si calcolano le moli del prodotto (applicando il rapporto molare dell'equazione bilanciata); dalle moli del prodotto si calcola infine la sua massa (moltiplicando per la massa molare del prodotto).</p>
+  <p><em>Esempio svolto:</em> calcoliamo la massa di anidride carbonica prodotta dalla combustione completa di m = 16,0 g di metano, secondo l'equazione già bilanciata nel capitolo precedente: CH<sub>4</sub> + 2 O<sub>2</sub> → CO<sub>2</sub> + 2 H<sub>2</sub>O. La massa molare del metano vale M(CH<sub>4</sub>) = 12 + (4 × 1) = 16 g/mol, quindi le moli di metano che reagiscono valgono n(CH<sub>4</sub>) = m / M = 16,0 / 16 = 1,0 mol. Dal rapporto molare 1 a 1 tra metano e anidride carbonica, si ottengono altrettante moli di prodotto: n(CO<sub>2</sub>) = 1,0 mol. La massa molare dell'anidride carbonica vale M(CO<sub>2</sub>) = 12 + (2 × 16) = 44 g/mol, quindi la massa di anidride carbonica prodotta vale m(CO<sub>2</sub>) = n · M = 1,0 × 44 = 44 g.</p>
+
+  <p class="titolo-capitolo">Il calcolo stechiometrico tra due prodotti o due reagenti</p>
+  <p>Lo stesso metodo esaminato finora può essere applicato per calcolare la relazione quantitativa tra due sostanze qualsiasi coinvolte in una stessa equazione bilanciata, non necessariamente limitandosi al confronto tra un reagente e un prodotto: è infatti possibile calcolare, allo stesso modo, la quantità di un reagente necessaria per ottenere una data quantità di un secondo reagente diverso dal primo, oppure la quantità di un prodotto ottenibile a partire da una data quantità di un secondo prodotto della stessa reazione.</p>
+  <p><em>Esempio svolto:</em> riprendendo la reazione di combustione del metano dell'esempio precedente, calcoliamo anche la massa di acqua prodotta insieme ai 44 g di anidride carbonica già calcolati. Dal rapporto molare 1 a 2 tra metano e acqua, a partire da n(CH<sub>4</sub>) = 1,0 mol si ottengono n(H<sub>2</sub>O) = 1,0 × 2 = 2,0 mol di acqua. La massa molare dell'acqua vale M(H<sub>2</sub>O) = (2 × 1) + 16 = 18 g/mol, quindi la massa di acqua prodotta vale m(H<sub>2</sub>O) = n · M = 2,0 × 18 = 36 g.</p>
+
+  <p class="titolo-capitolo">La verifica mediante la conservazione della massa</p>
+  <p>Un utile controllo di coerenza per un calcolo stechiometrico, che sfrutta direttamente la legge di Lavoisier vista nel capitolo 7, consiste nel verificare che la massa totale dei reagenti effettivamente consumati sia uguale alla massa totale dei prodotti ottenuti: se questa uguaglianza non è rispettata, è probabile che nel calcolo si sia commesso un errore, ad esempio nel bilanciamento dell'equazione o nel calcolo delle masse molari.</p>
+  <p><em>Esempio svolto:</em> verifichiamo la conservazione della massa nell'esempio della combustione del metano appena svolto. La massa di ossigeno consumato si calcola allo stesso modo: dal rapporto molare 1 a 2 tra metano e ossigeno, si ottengono n(O<sub>2</sub>) = 1,0 × 2 = 2,0 mol, corrispondenti, con massa molare M(O<sub>2</sub>) = 2 × 16 = 32 g/mol, a una massa m(O<sub>2</sub>) = 2,0 × 32 = 64 g. La massa totale dei reagenti vale quindi 16,0 + 64 = 80,0 g, mentre la massa totale dei prodotti vale 44 + 36 = 80 g: le due masse coincidono, confermando la correttezza del calcolo svolto.</p>
+
+  <p class="titolo-capitolo">Verso i calcoli stechiometrici più complessi</p>
+  <p>I calcoli stechiometrici svolti in questo capitolo hanno riguardato situazioni in cui i reagenti sono sempre presenti esattamente nelle proporzioni richieste dall'equazione bilanciata, senza alcun eccesso. Nella pratica sperimentale, tuttavia, è piuttosto comune che i reagenti vengano mescolati in proporzioni diverse da quelle stechiometriche, con uno di essi presente in eccesso rispetto all'altro: questa situazione, già incontrata in forma preliminare nel capitolo 7 a proposito della legge di Proust, sarà l'argomento centrale del prossimo capitolo, dedicato al concetto di reagente limitante.</p>
+</div>
+<!-- fine capitolo chimica 19 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi20.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

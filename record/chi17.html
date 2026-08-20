@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 17</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 17: la nomenclatura chimica, composti binari e ternari -->
+<div id="capitolo-17-nomenclatura-composti-binari-ternari" class="capitolo-storia">
+  <p class="titolo-capitolo">17 - La nomenclatura chimica: composti binari e ternari - Classe 2</p>
+
+  <p class="titolo-capitolo">Il bisogno di regole condivise per i nomi dei composti</p>
+  <p>Con centinaia di migliaia di composti chimici conosciuti, e nuovi composti che continuano a essere scoperti o sintetizzati, è indispensabile disporre di un sistema di regole condivise a livello internazionale per assegnare a ciascun composto un nome univoco, che ne indichi in modo chiaro e non ambiguo la composizione: questo insieme di regole è chiamato nomenclatura chimica, e in questo capitolo esamineremo le regole principali per i composti più semplici, formati da due elementi (composti binari) o da tre elementi (composti ternari).</p>
+  <p>Esistono, storicamente, due sistemi principali di nomenclatura: la nomenclatura tradizionale, più antica e ancora oggi molto diffusa nell'uso comune, e la nomenclatura IUPAC (dal nome dell'Unione Internazionale di Chimica Pura e Applicata), più recente, sistematica e priva di ambiguità, oggi raccomandata a livello internazionale. In questo capitolo esamineremo entrambi i sistemi, poiché è utile conoscerli e saperli riconoscere entrambi.</p>
+
+  <p class="titolo-capitolo">Il numero di ossidazione</p>
+  <p>Alla base di ogni sistema di nomenclatura chimica vi è il concetto di numero di ossidazione, definito come la carica elettrica (reale o soltanto convenzionale) che un atomo assumerebbe se gli elettroni di ciascun legame in cui è coinvolto venissero assegnati per intero all'atomo più elettronegativo tra i due, in accordo con quanto visto nel capitolo 14 a proposito dell'elettronegatività.</p>
+  <p>Per attribuire il numero di ossidazione agli atomi di un composto si seguono alcune regole generali: il numero di ossidazione di un elemento allo stato libero (non combinato con altri elementi) vale sempre zero; il numero di ossidazione dell'ossigeno nei composti vale generalmente −2 (con alcune eccezioni, come i perossidi); il numero di ossidazione dell'idrogeno nei composti vale generalmente +1 (tranne che negli idruri metallici, dove vale −1); la somma algebrica dei numeri di ossidazione di tutti gli atomi presenti in una molecola neutra deve sempre essere uguale a zero, mentre in uno ione poliatomico deve essere uguale alla carica complessiva dello ione.</p>
+  <p><em>Esempio svolto:</em> determiniamo il numero di ossidazione dello zolfo nel composto anidride solforica (SO<sub>3</sub>). Sapendo che l'ossigeno ha numero di ossidazione −2, e che nella molecola sono presenti 3 atomi di ossigeno, la somma dei numeri di ossidazione dell'ossigeno vale 3 × (−2) = −6. Poiché la somma complessiva deve essere zero, il numero di ossidazione dello zolfo deve valere +6, in modo che +6 + (−6) = 0.</p>
+
+  <p class="titolo-capitolo">I composti binari: gli ossidi</p>
+  <p>I composti binari sono formati dall'unione di due soli elementi diversi. Tra i composti binari più importanti vi sono gli ossidi, formati dalla combinazione dell'ossigeno con un altro elemento. Quando l'ossigeno si combina con un metallo, il composto risultante è chiamato ossido basico (o semplicemente ossido); quando l'ossigeno si combina invece con un non metallo, il composto risultante è chiamato ossido acido (o anidride).</p>
+  <p>Nella nomenclatura tradizionale, il nome di un ossido si costruisce a partire dalla parola "ossido di" (per gli ossidi basici) o "anidride" seguita dal nome dell'elemento (per gli ossidi acidi), aggiungendo, quando l'elemento può assumere più numeri di ossidazione diversi, il suffisso "-oso" per il numero di ossidazione più basso e il suffisso "-ico" per il numero di ossidazione più alto tra i due considerati.</p>
+  <p><em>Esempio svolto:</em> il ferro può assumere numero di ossidazione +2 o +3 nei suoi composti. L'ossido con numero di ossidazione +2 (FeO) si chiama, nella nomenclatura tradizionale, ossido ferroso; l'ossido con numero di ossidazione +3 (Fe<sub>2</sub>O<sub>3</sub>) si chiama invece ossido ferrico.</p>
+  <p>Nella nomenclatura IUPAC, invece, il nome di un ossido si costruisce utilizzando prefissi numerici greci (mono-, di-, tri-, tetra-, e così via) che indicano esplicitamente il numero di atomi di ciascun elemento presenti nella formula, evitando così qualunque ambiguità legata al numero di ossidazione: il prefisso "mono-" viene convenzionalmente omesso quando riferito al primo elemento della formula.</p>
+  <p><em>Esempio svolto:</em> il composto FeO si chiama, nella nomenclatura IUPAC, ossido di ferro (dove il "mono-" riferito sia al ferro sia all'ossigeno viene omesso, essendo presente un solo atomo di ciascuno); il composto Fe<sub>2</sub>O<sub>3</sub> si chiama invece triossido di diferro, poiché sono presenti 3 atomi di ossigeno e 2 atomi di ferro.</p>
+
+  <p class="titolo-capitolo">I composti binari: gli idruri e gli idracidi</p>
+  <p>Quando l'idrogeno si combina con un metallo, il composto risultante è chiamato idruro; il nome, nella nomenclatura tradizionale, si costruisce con la parola "idruro di" seguita dal nome del metallo, in modo analogo a quanto visto per gli ossidi basici.</p>
+  <p>Quando l'idrogeno si combina invece con un non metallo del gruppo degli alogeni (fluoro, cloro, bromo, iodio) o con zolfo, il composto risultante, se disciolto in acqua, si comporta come un acido, e viene per questo chiamato idracido: il nome, nella nomenclatura tradizionale, si costruisce con la parola "acido" seguita dal nome del non metallo modificato con il suffisso "-idrico".</p>
+  <p><em>Esempio svolto:</em> il composto HCl, formato da idrogeno e cloro, si chiama, nella nomenclatura tradizionale, acido cloridrico; il composto H<sub>2</sub>S, formato da idrogeno e zolfo, si chiama invece acido solfidrico.</p>
+
+  <p class="titolo-capitolo">I composti ternari: gli idrossidi</p>
+  <p>I composti ternari sono formati dall'unione di tre elementi diversi. Tra i composti ternari più importanti vi sono gli idrossidi, formati dalla combinazione di un metallo con uno o più gruppi ossidrile (OH), caratteristici di un legame covalente tra ossigeno e idrogeno, a loro volta legati ionicamente al metallo.</p>
+  <p>Il nome di un idrossido, nella nomenclatura tradizionale, si costruisce in modo analogo a quello di un ossido basico, sostituendo la parola "ossido" con la parola "idrossido", e mantenendo gli stessi suffissi "-oso" e "-ico" per distinguere eventuali diversi numeri di ossidazione del metallo.</p>
+  <p><em>Esempio svolto:</em> il composto Ca(OH)<sub>2</sub>, formato da calcio e due gruppi ossidrile, si chiama idrossido di calcio (il calcio ha un unico numero di ossidazione possibile, +2, quindi non è necessario alcun suffisso distintivo); il composto Fe(OH)<sub>3</sub>, in cui il ferro ha numero di ossidazione +3, si chiama invece idrossido ferrico.</p>
+
+  <p class="titolo-capitolo">I composti ternari: gli ossiacidi</p>
+  <p>Gli ossiacidi sono composti ternari formati dalla combinazione di idrogeno, un non metallo (o, in alcuni casi, un metallo con elevato numero di ossidazione) e ossigeno, e si ottengono concettualmente dalla reazione tra un ossido acido (anidride) e acqua, come vedremo con maggiore precisione nel prossimo capitolo dedicato alle reazioni chimiche.</p>
+  <p>Il nome di un ossiacido, nella nomenclatura tradizionale, si costruisce con la parola "acido" seguita dal nome del non metallo centrale, con lo stesso suffisso ("-oso" o "-ico") già utilizzato per la corrispondente anidride di partenza: un'anidride che termina in "-osa" dà origine, per reazione con acqua, a un acido che termina in "-oso", mentre un'anidride che termina in "-ica" dà origine a un acido che termina in "-ico".</p>
+  <p><em>Esempio svolto:</em> l'anidride solforica (SO<sub>3</sub>), reagendo con acqua, forma l'acido solforico (H<sub>2</sub>SO<sub>4</sub>), mantenendo il suffisso "-ico"; l'anidride solforosa (SO<sub>2</sub>), reagendo con acqua, forma invece l'acido solforoso (H<sub>2</sub>SO<sub>3</sub>), mantenendo il suffisso "-oso".</p>
+  <p>Per alcuni elementi, in particolare gli alogeni, che possono formare fino a quattro diversi ossiacidi con numeri di ossidazione differenti, la nomenclatura tradizionale prevede anche l'uso dei prefissi "ipo-" (per il numero di ossidazione più basso in assoluto) e "per-" (per il numero di ossidazione più alto in assoluto), combinati con i consueti suffissi "-oso" e "-ico", secondo la sequenza: acido ipo...oso, acido...oso, acido...ico, acido per...ico.</p>
+  <p><em>Esempio svolto:</em> il cloro forma quattro diversi ossiacidi, a seconda del proprio numero di ossidazione: acido ipocloroso (HClO, numero di ossidazione del cloro +1), acido cloroso (HClO<sub>2</sub>, +3), acido clorico (HClO<sub>3</sub>, +5) e acido perclorico (HClO<sub>4</sub>, +7).</p>
+
+  <p class="titolo-capitolo">I sali</p>
+  <p>I sali sono composti che si ottengono, dal punto di vista formale, sostituendo uno o più atomi di idrogeno di un acido (idracido oppure ossiacido) con uno ione metallico, oppure facendo reagire un acido con un idrossido, come vedremo con maggiore dettaglio nel capitolo dedicato alle reazioni chimiche.</p>
+  <p>Il nome di un sale derivato da un idracido, nella nomenclatura tradizionale, si costruisce sostituendo il suffisso "-idrico" dell'acido di partenza con il suffisso "-uro", seguito dal nome del metallo: l'acido cloridrico (HCl), ad esempio, dà origine a sali chiamati cloruri, come il cloruro di sodio (NaCl).</p>
+  <p>Il nome di un sale derivato da un ossiacido si costruisce invece sostituendo il suffisso "-oso" dell'acido di partenza con il suffisso "-ito", oppure il suffisso "-ico" con il suffisso "-ato", seguito dal nome del metallo: l'acido solforico (H<sub>2</sub>SO<sub>4</sub>), ad esempio, dà origine a sali chiamati solfati, come il solfato di calcio (CaSO<sub>4</sub>), mentre l'acido solforoso (H<sub>2</sub>SO<sub>3</sub>) dà origine a sali chiamati solfiti, come il solfito di calcio (CaSO<sub>3</sub>).</p>
+</div>
+<!-- fine capitolo chimica 17 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi18.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
