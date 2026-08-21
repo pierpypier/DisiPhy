@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 33</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 33: l'apparato digerente e la nutrizione -->
+<div id="capitolo-33-apparato-digerente-nutrizione" class="capitolo-storia">
+  <p class="titolo-capitolo">33 - L'apparato digerente e la nutrizione - Classe 4</p>
+
+  <p class="titolo-capitolo">La necessità della digestione</p>
+  <p>Come già accennato nel capitolo precedente a proposito del regno degli Animali, l'organismo umano è eterotrofo, cioè incapace di produrre autonomamente le proprie sostanze nutritive, e deve pertanto procurarsele dall'ambiente esterno sotto forma di alimenti: questi ultimi, tuttavia, sono costituiti in gran parte da macromolecole complesse, come i carboidrati, i lipidi e le proteine già descritti nel capitolo 17, troppo grandi per poter essere direttamente assorbite e utilizzate dalle cellule dell'organismo.</p>
+  <p>L'apparato digerente svolge quindi la funzione di trasformare gli alimenti ingeriti in molecole sufficientemente semplici da poter essere assorbite a livello intestinale e successivamente distribuite, attraverso il sangue, a tutte le cellule dell'organismo, dove verranno utilizzate a scopo energetico, secondo i processi già descritti nel capitolo 20 a proposito della respirazione cellulare, oppure come materiali da costruzione per la sintesi di nuove molecole necessarie all'organismo.</p>
+
+  <p class="titolo-capitolo">La digestione meccanica e chimica</p>
+  <p>Il processo digestivo si articola in due componenti complementari, che agiscono congiuntamente lungo l'intero percorso dell'apparato digerente: la digestione meccanica, che consiste nella frammentazione fisica del cibo in particelle sempre più piccole, aumentandone la superficie complessiva esposta all'azione degli enzimi digestivi, attraverso processi come la masticazione e i movimenti di rimescolamento delle pareti muscolari dello stomaco e dell'intestino, già introdotte nel capitolo precedente a proposito del tessuto muscolare liscio; e la digestione chimica, che consiste nella scomposizione delle macromolecole alimentari in unità più semplici, attraverso l'azione di specifici enzimi digestivi, cioè proteine catalizzatrici, già descritte nel capitolo 17, ciascuna specializzata nella scomposizione di una particolare classe di biomolecole.</p>
+
+  <p class="titolo-capitolo">La bocca e l'esofago</p>
+  <p>Il processo digestivo ha inizio nella bocca, dove il cibo viene frammentato meccanicamente dai denti, attraverso la masticazione, e mescolato con la saliva, secreta da apposite ghiandole salivari: la saliva, oltre a facilitare la formazione di un bolo alimentare omogeneo, agevolando così la successiva deglutizione, contiene un primo enzima digestivo, l'amilasi salivare, che inizia la scomposizione chimica dell'amido, il polisaccaride di riserva delle piante già descritto nel capitolo 17, in molecole più semplici.</p>
+  <p>Una volta formatosi, il bolo alimentare viene deglutito e convogliato nell'esofago, un condotto muscolare che collega la bocca allo stomaco, lungo il quale il cibo viene fatto progredire non semplicemente per effetto della gravità, ma soprattutto grazie a un movimento coordinato di contrazione delle pareti muscolari, chiamato peristalsi, che permette la progressione del cibo lungo tutto l'apparato digerente anche indipendentemente dalla posizione del corpo.</p>
+
+  <p class="titolo-capitolo">Lo stomaco</p>
+  <p>Lo stomaco è un organo cavo dalle pareti fortemente muscolari, in cui il cibo viene ulteriormente frammentato meccanicamente e mescolato con il succo gastrico, una secrezione prodotta dalle ghiandole della mucosa gastrica, contenente acido cloridrico, che conferisce all'ambiente gastrico un elevato grado di acidità, con un pH tipicamente compreso tra 1,5 e 3,5, e la pepsina, un enzima specializzato nell'avvio della digestione chimica delle proteine, scomposte in frammenti più semplici chiamati peptidi.</p>
+  <p>L'elevata acidità dell'ambiente gastrico svolge, oltre alla funzione digestiva appena descritta, anche un'importante funzione protettiva, contribuendo a eliminare la maggior parte dei microrganismi potenzialmente patogeni eventualmente presenti negli alimenti ingeriti; la parete interna dello stomaco è a sua volta protetta dall'azione fortemente corrosiva del proprio stesso succo gastrico grazie a uno spesso strato di muco protettivo, la cui alterazione o insufficienza può favorire l'insorgenza di lesioni della mucosa gastrica, chiamate ulcere. Il risultato della digestione gastrica è una massa semiliquida e densa, chiamata chimo, che viene rilasciata gradualmente, attraverso una valvola muscolare chiamata piloro, nel tratto successivo dell'apparato digerente.</p>
+
+  <p class="titolo-capitolo">L'intestino tenue</p>
+  <p>L'intestino tenue è il tratto più lungo dell'intero apparato digerente, con un'estensione complessiva di circa 6-7 metri nell'adulto, ed è la sede in cui si completa la digestione chimica degli alimenti e avviene la quasi totalità dell'assorbimento dei nutrienti: la sua prima porzione, chiamata duodeno, riceve, oltre al chimo proveniente dallo stomaco, anche le secrezioni di due importanti ghiandole annesse all'apparato digerente, il fegato e il pancreas.</p>
+  <p>Il fegato produce la bile, una secrezione che, pur non contenendo enzimi digestivi veri e propri, svolge un ruolo fondamentale nella digestione dei lipidi, emulsionandoli, cioè frammentandoli in goccioline microscopiche che ne aumentano notevolmente la superficie esposta all'azione degli enzimi digestivi specifici, in modo concettualmente non troppo dissimile da quanto avviene mescolando un detersivo con l'acqua e il grasso; la bile viene temporaneamente immagazzinata e concentrata nella cistifellea, prima di essere riversata nel duodeno al momento opportuno. Il pancreas produce invece il succo pancreatico, contenente un ricco corredo di enzimi digestivi in grado di completare la scomposizione chimica di carboidrati, proteine e lipidi, iniziata rispettivamente nella bocca e nello stomaco.</p>
+  <p>La superficie interna dell'intestino tenue, deputata all'assorbimento dei nutrienti già ridotti alle loro unità più semplici, come il glucosio, gli amminoacidi e gli acidi grassi già descritti nel capitolo 17, presenta un'architettura estremamente ripiegata, caratterizzata dalla presenza di innumerevoli piccole sporgenze digitiformi, chiamate villi intestinali, a loro volta ricoperte da microscopiche estroflessioni ancora più piccole, chiamate microvilli, che, nel loro insieme, amplificano enormemente la superficie complessiva disponibile per l'assorbimento, stimata in decine di metri quadrati, favorendo così un passaggio estremamente efficiente dei nutrienti dal lume intestinale al sangue e alla linfa sottostanti.</p>
+
+  <p class="titolo-capitolo">L'intestino crasso e l'eliminazione dei residui</p>
+  <p>Il materiale non digerito e non assorbito nell'intestino tenue, giunto nell'intestino crasso, l'ultimo tratto dell'apparato digerente, con una lunghezza di circa 1,5 metri, viene qui privato di gran parte dell'acqua residua ancora presente, attraverso un ulteriore processo di assorbimento, mentre una popolazione molto numerosa e diversificata di microrganismi, chiamata complessivamente microbiota intestinale, contribuisce alla fermentazione di alcuni residui alimentari non digeribili dall'organismo umano, come alcune fibre vegetali, producendo anche alcune vitamine di cui l'organismo umano può beneficiare.</p>
+  <p>Il materiale residuo, progressivamente compattato e privato della maggior parte dell'acqua originaria, costituisce le feci, che vengono temporaneamente immagazzinate nell'ultimo tratto dell'intestino crasso, chiamato retto, prima di essere espulse dall'organismo attraverso l'ano, al termine di un percorso digestivo complessivo che, dall'ingestione del cibo all'eliminazione dei residui non digeriti, richiede tipicamente dalle 24 alle 72 ore.</p>
+
+  <p class="titolo-capitolo">I principi nutritivi e l'alimentazione equilibrata</p>
+  <p>Al di là del processo digestivo appena descritto, un'alimentazione corretta ed equilibrata richiede un apporto adeguato e bilanciato di tutti i principi nutritivi necessari all'organismo: i carboidrati e i lipidi, già descritti nel capitolo 17, costituiscono le principali fonti di energia, rispettivamente rapida e di riserva a lungo termine; le proteine, oltre a contribuire in parte all'apporto energetico, forniscono gli amminoacidi necessari alla costruzione e al rinnovamento delle strutture cellulari dell'organismo, secondo i meccanismi già descritti nel capitolo 26.</p>
+  <p>Accanto a questi macronutrienti, necessari in quantità relativamente elevate, l'organismo richiede anche un apporto, seppur in quantità molto più ridotte, di micronutrienti, cioè vitamine e sali minerali, indispensabili al corretto svolgimento di numerosissime funzioni metaboliche e fisiologiche, spesso come componenti essenziali di enzimi o di altre molecole biologicamente attive: la mancanza prolungata, nella dieta, anche di un singolo micronutriente essenziale può causare specifiche patologie da carenza, mentre un'alimentazione varia ed equilibrata, comprendente un'ampia gamma di alimenti di origine sia vegetale sia animale, è generalmente in grado di fornire all'organismo l'insieme completo dei nutrienti di cui esso necessita per il proprio corretto funzionamento.</p>
+</div>
+<!-- fine capitolo scienze 33 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci34.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
