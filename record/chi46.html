@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 46</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 46: le biomolecole, carboidrati e lipidi -->
+<div id="capitolo-46-biomolecole-carboidrati-lipidi" class="capitolo-storia">
+  <p class="titolo-capitolo">46 - Le biomolecole: carboidrati e lipidi - Classe 5</p>
+
+  <p class="titolo-capitolo">Che cosa sono le biomolecole</p>
+  <p>Nel capitolo precedente abbiamo introdotto i polimeri naturali, come la cellulosa e le proteine, prodotti dagli organismi viventi. Le biomolecole sono, più in generale, tutte le molecole organiche prodotte e utilizzate dagli organismi viventi per le proprie funzioni biologiche fondamentali: in questo capitolo e nel prossimo esamineremo le quattro grandi classi di biomolecole, iniziando in questo capitolo con i carboidrati e i lipidi.</p>
+
+  <p class="titolo-capitolo">I monosaccaridi</p>
+  <p>I carboidrati (o glucidi) sono biomolecole costituite da carbonio, idrogeno e ossigeno, generalmente secondo un rapporto approssimativo di un atomo di carbonio, due atomi di idrogeno e un atomo di ossigeno per ciascuna unità strutturale di base. I monosaccaridi sono i carboidrati più semplici, non ulteriormente scomponibili mediante idrolisi in unità più piccole, e sono caratterizzati dalla presenza contemporanea di un gruppo carbonile (aldeidico o chetonico, già visti nel capitolo 43) e di più gruppi ossidrile lungo la propria catena carboniosa.</p>
+  <p>Il glucosio (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>), già citato nel capitolo precedente a proposito della cellulosa, è il monosaccaride più diffuso e importante dal punto di vista biologico, e costituisce la principale fonte di energia immediatamente disponibile per la maggior parte degli organismi viventi, incluso l'essere umano; in soluzione acquosa, il glucosio tende a chiudersi spontaneamente in una struttura ad anello, mediante la reazione tra il proprio gruppo carbonile e uno dei propri gruppi ossidrile, secondo un meccanismo concettualmente simile alla reazione di formazione degli eteri già vista nel capitolo 43.</p>
+
+  <p class="titolo-capitolo">I disaccaridi e i polisaccaridi</p>
+  <p>I disaccaridi sono carboidrati formati dall'unione di due unità di monosaccaride, legate tra loro mediante un legame covalente carbonio-ossigeno-carbonio, chiamato legame glicosidico, formato attraverso una reazione di condensazione analoga a quella già vista nel capitolo 45 a proposito della polimerizzazione per condensazione, con conseguente liberazione di una molecola di acqua.</p>
+  <p>Il saccarosio, il comune zucchero da cucina già incontrato più volte nei capitoli precedenti, è un disaccaride formato dall'unione di una molecola di glucosio e di una molecola di fruttosio (un altro monosaccaride, isomero del glucosio) mediante un legame glicosidico.</p>
+  <p>I polisaccaridi sono invece polimeri naturali formati dall'unione ripetuta di un numero molto elevato di unità di monosaccaride (generalmente glucosio), legate tra loro mediante numerosi legami glicosidici successivi, secondo il meccanismo generale di polimerizzazione per condensazione già visto nel capitolo 45: la cellulosa, già citata nel capitolo precedente, è un polisaccaride strutturale, componente delle pareti cellulari vegetali, mentre l'amido, presente in molti alimenti vegetali come riserva energetica, e il glicogeno, la principale riserva energetica di carboidrati negli animali, sono polisaccaridi di riserva, entrambi formati da unità di glucosio, ma legate tra loro secondo una geometria tridimensionale leggermente diversa rispetto a quella della cellulosa, ciò che li rende, a differenza della cellulosa, digeribili dall'organismo umano.</p>
+
+  <p class="titolo-capitolo">I lipidi: caratteristiche generali</p>
+  <p>I lipidi sono una classe eterogenea di biomolecole, accomunate non da una struttura chimica comune, come avviene invece per i carboidrati, ma da una proprietà fisica condivisa: la scarsa (o nulla) solubilità in acqua, e la buona solubilità in solventi organici non polari, secondo il principio "il simile scioglie il simile" già discusso nel capitolo 24, dovuta alla natura prevalentemente non polare delle catene idrocarburiche che compongono la maggior parte dei lipidi.</p>
+
+  <p class="titolo-capitolo">I trigliceridi: struttura e funzione</p>
+  <p>I trigliceridi, già introdotti nel capitolo 44 come esteri naturali del glicerolo con gli acidi grassi, costituiscono la principale forma di riserva energetica lipidica negli organismi viventi, e presentano un contenuto energetico per unità di massa significativamente superiore rispetto ai carboidrati, proprio a causa della loro struttura prevalentemente idrocarburica, ricca di legami carbonio-idrogeno e carbonio-carbonio ad alta energia.</p>
+  <p>Come già accennato nel capitolo 44, gli acidi grassi che compongono i trigliceridi si distinguono in acidi grassi saturi, privi di doppi legami carbonio-carbonio lungo la propria catena, e acidi grassi insaturi, contenenti uno o più doppi legami: i trigliceridi ricchi di acidi grassi saturi tendono a essere solidi a temperatura ambiente (i grassi propriamente detti), mentre quelli ricchi di acidi grassi insaturi tendono a essere liquidi (gli oli), a causa della diversa capacità delle rispettive molecole di impacchettarsi in modo ordinato nello stato solido.</p>
+
+  <p class="titolo-capitolo">I fosfolipidi e le membrane cellulari</p>
+  <p>I fosfolipidi sono lipidi strutturalmente simili ai trigliceridi, ma in cui uno dei tre acidi grassi legati al glicerolo è sostituito da un gruppo fosfato, generalmente legato a sua volta a un ulteriore gruppo funzionale: questa sostituzione conferisce alla molecola una caratteristica particolare, chiamata anfipaticità, cioè la presenza contemporanea di una porzione polare (la "testa" contenente il gruppo fosfato, idrofila, cioè affine all'acqua) e di una porzione non polare (le due "code" idrocarburiche residue, idrofobe, cioè non affini all'acqua).</p>
+  <p>Proprio grazie a questa struttura anfipatica, i fosfolipidi, immersi in un ambiente acquoso, si dispongono spontaneamente secondo una struttura a doppio strato, chiamata bilayer fosfolipidico, con le teste polari rivolte verso l'ambiente acquoso interno ed esterno, e le code non polari rivolte le une verso le altre, all'interno del doppio strato: questa struttura costituisce l'impalcatura fondamentale di tutte le membrane cellulari degli organismi viventi.</p>
+</div>
+<!-- fine capitolo chimica 46 -->
+
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi47.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

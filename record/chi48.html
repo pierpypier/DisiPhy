@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimica 48</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">CHIMICA</div>
+        <div class="subtitle">Piccolo manuale di chimica per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="chi00.html" title="chimica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r902.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo chimica 48: il metabolismo cellulare, cenni di biochimica -->
+<div id="capitolo-48-metabolismo-cellulare-biochimica" class="capitolo-storia">
+  <p class="titolo-capitolo">48 - Il metabolismo cellulare: cenni di biochimica - Classe 5</p>
+
+  <p class="titolo-capitolo">Che cos'è il metabolismo</p>
+  <p>Nei due capitoli precedenti abbiamo esaminato le principali classi di biomolecole che compongono gli organismi viventi. Il metabolismo è l'insieme complessivo di tutte le reazioni chimiche che avvengono all'interno di una cellula, organizzate in sequenze ordinate chiamate vie metaboliche, ciascuna delle quali trasforma progressivamente una molecola di partenza in una molecola finale, passando attraverso una serie di intermedi, mediante una successione di singole reazioni chimiche, ciascuna catalizzata da uno specifico enzima, secondo il meccanismo generale già descritto nel capitolo 29.</p>
+  <p>Le vie metaboliche si distinguono in due grandi categorie, in base al tipo di trasformazione energetica complessivamente coinvolta: le vie cataboliche e le vie anaboliche.</p>
+
+  <p class="titolo-capitolo">Catabolismo e anabolismo</p>
+  <p>Le vie cataboliche sono sequenze di reazioni che demoliscono molecole complesse (come i carboidrati e i lipidi già visti nel capitolo 46) in molecole più semplici, liberando l'energia chimica in esse contenuta: si tratta quindi, complessivamente, di processi esotermici, secondo la classificazione già vista nel capitolo 6, in cui la variazione di entalpia complessiva risulta negativa.</p>
+  <p>Le vie anaboliche sono invece sequenze di reazioni che costruiscono molecole complesse (come le proteine già viste nel capitolo 47) a partire da molecole più semplici, richiedendo un apporto netto di energia per procedere: si tratta quindi, complessivamente, di processi endotermici, in cui la variazione di entalpia complessiva risulta positiva. Il metabolismo complessivo di un organismo è quindi il risultato dell'equilibrio dinamico tra queste due categorie di vie, tra loro complementari, di reazioni.</p>
+
+  <p class="titolo-capitolo">L'ATP: la moneta energetica della cellula</p>
+  <p>Per trasferire l'energia chimica liberata dalle vie cataboliche alle vie anaboliche, che ne richiedono un apporto, la cellula utilizza una molecola intermedia particolare, chiamata ATP (adenosina trifosfato), un nucleotide (secondo la struttura generale già vista nel capitolo 47) che contiene, oltre allo zucchero e alla base azotata caratteristici, ben tre gruppi fosfato legati in sequenza.</p>
+  <p>Il legame tra il secondo e il terzo gruppo fosfato dell'ATP è un legame ad alta energia: la sua rottura per idrolisi, che libera un gruppo fosfato e trasforma l'ATP in ADP (adenosina difosfato), rilascia una quantità di energia particolarmente elevata rispetto a un comune legame covalente, rendendo questa reazione particolarmente efficiente come fonte di energia immediatamente disponibile per le reazioni cellulari che la richiedono.</p>
+  <p class="formula">ATP + H<sub>2</sub>O → ADP + P<sub>i</sub> &nbsp;&nbsp; (reazione esotermica)</p>
+  <p>L'ATP viene continuamente rigenerato a partire dall'ADP, sfruttando l'energia liberata dalle vie cataboliche, secondo un ciclo continuo che permette alla cellula di disporre costantemente di energia immediatamente utilizzabile, senza dover attendere, ogni volta, la demolizione diretta e completa delle molecole di riserva energetica.</p>
+
+  <p class="titolo-capitolo">La glicolisi</p>
+  <p>La glicolisi è la prima e più universale via catabolica per l'ossidazione del glucosio, comune praticamente a tutti gli organismi viventi, e avviene interamente nel citoplasma della cellula, senza richiedere la presenza di ossigeno (si tratta quindi di un processo anaerobico). Nel corso della glicolisi, una singola molecola di glucosio (a sei atomi di carbonio) viene progressivamente scomposta, attraverso una sequenza di reazioni catalizzate enzimaticamente, in due molecole di piruvato (a tre atomi di carbonio ciascuna), con una resa netta di due molecole di ATP e la produzione di due molecole di un trasportatore di elettroni ridotto, chiamato NADH.</p>
+  <p>Il destino successivo del piruvato prodotto dalla glicolisi dipende dalla disponibilità o meno di ossigeno: in condizioni aerobiche (in presenza di ossigeno), il piruvato viene ulteriormente ossidato attraverso le vie metaboliche che esamineremo di seguito; in condizioni anaerobiche (in assenza di ossigeno), il piruvato viene invece convertito in altri prodotti, secondo processi chiamati fermentazioni, come la fermentazione lattica (che produce acido lattico, responsabile, tra l'altro, dell'affaticamento muscolare durante uno sforzo fisico intenso) o la fermentazione alcolica (che produce etanolo e anidride carbonica, alla base della produzione di bevande alcoliche e della lievitazione del pane).</p>
+
+  <p class="titolo-capitolo">La respirazione cellulare aerobica</p>
+  <p>In presenza di ossigeno, il piruvato prodotto dalla glicolisi viene ulteriormente ossidato, all'interno di un organulo cellulare chiamato mitocondrio, attraverso una sequenza di reazioni chiamata ciclo di Krebs, che completa l'ossidazione del carbonio del piruvato fino ad anidride carbonica, producendo, insieme a una piccola quantità diretta di ATP, un numero significativo di ulteriori molecole di trasportatori di elettroni ridotti (NADH e un composto analogo, chiamato FADH<sub>2</sub>).</p>
+  <p>Questi trasportatori di elettroni ridotti cedono infine i propri elettroni a una sequenza di proteine di membrana mitocondriali, chiamata catena di trasporto degli elettroni, lungo la quale gli elettroni vengono progressivamente trasferiti fino a raggiungere, come accettore finale, proprio l'ossigeno molecolare, che si riduce ad acqua secondo una reazione redox complessiva del tipo già visto nel capitolo 36: l'energia liberata da questo trasferimento di elettroni viene sfruttata dalla cellula per sintetizzare, con un'efficienza molto maggiore rispetto alla sola glicolisi, un numero elevato di ulteriori molecole di ATP, a partire da ADP e fosfato inorganico.</p>
+  <p>Il bilancio energetico complessivo dell'ossidazione completa di una molecola di glucosio, dalla glicolisi fino alla catena di trasporto degli elettroni, risulta quindi fortemente esotermico, secondo l'equazione termochimica complessiva già incontrata, in forma semplificata, in diversi esempi dei capitoli precedenti dedicati alla termochimica.</p>
+  <p class="formula">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub> → 6 CO<sub>2</sub> + 6 H<sub>2</sub>O &nbsp;&nbsp; ΔH ≈ −2870 kJ/mol</p>
+</div>
+<!-- fine capitolo chimica 48 -->
+<div id="indice-chimica" class="capitolo-storia">
+  <p><a href="chi00.html">Torna all'indice</a></p>
+</div>
+
+
+  
+  
+  <footer>
+      Piccolo manuale di chimica per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
