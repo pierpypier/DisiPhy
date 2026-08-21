@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 09</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 09: le rocce sedimentarie e metamorfiche -->
+<div id="capitolo-09-rocce-sedimentarie-metamorfiche" class="capitolo-storia">
+  <p class="titolo-capitolo">09 - Le rocce sedimentarie e metamorfiche - Classe 1</p>
+
+  <p class="titolo-capitolo">Il processo sedimentario</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, le rocce magmatiche, ci occupiamo ora delle rocce sedimentarie, la cui formazione ha origine da un processo profondamente diverso, che ha inizio con la disgregazione delle rocce preesistenti, di qualunque tipo esse siano, a opera degli agenti atmosferici: questo processo, chiamato alterazione o degradazione meteorica, comprende sia una componente fisica, come l'azione del gelo e del disgelo dell'acqua penetrata nelle fratture della roccia, sia una componente chimica, come la reazione tra i minerali e l'acqua o i gas atmosferici, che ne modifica la composizione originaria.</p>
+  <p>I frammenti e le sostanze derivati dall'alterazione delle rocce, chiamati complessivamente sedimenti, vengono in seguito rimossi e trasportati altrove, principalmente a opera dell'acqua corrente, del vento, dei ghiacciai e della forza di gravità, secondo un processo chiamato erosione, per poi essere infine depositati, quando l'agente di trasporto perde energia, in un ambiente di sedimentazione, come il letto di un fiume, un lago o il fondale marino.</p>
+
+  <p class="titolo-capitolo">La diagenesi: dai sedimenti alla roccia</p>
+  <p>I sedimenti appena depositati sono ancora sciolti e incoerenti, privi della compattezza tipica di una roccia vera e propria: la loro trasformazione in una roccia sedimentaria compatta avviene attraverso un insieme di processi, chiamato complessivamente diagenesi, che si svolgono a temperature e pressioni relativamente basse rispetto a quelle in gioco nella cristallizzazione magmatica descritta nel capitolo precedente.</p>
+  <p>Tra i principali processi diagenetici si annoverano la compattazione, cioè la progressiva riduzione degli spazi vuoti tra i sedimenti per effetto del peso degli strati sovrastanti che si accumulano nel tempo, e la cementazione, cioè la precipitazione, negli spazi rimasti tra i granuli, di minerali disciolti nell'acqua presente tra i sedimenti stessi, come la calcite o la silice, che agiscono da vero e proprio collante, saldando definitivamente i granuli tra loro.</p>
+
+  <p class="titolo-capitolo">Le rocce sedimentarie clastiche</p>
+  <p>Le rocce sedimentarie vengono classificate, in base all'origine dei sedimenti che le costituiscono, in tre grandi categorie. Le rocce clastiche, dette anche detritiche, sono formate da frammenti di rocce preesistenti, chiamati clasti, classificati in base alle loro dimensioni: dai blocchi e ciottoli più grossolani, con diametro superiore a 2 mm, che danno origine, una volta cementati, a conglomerati o brecce a seconda che i clasti siano arrotondati o spigolosi; alla sabbia, con granuli compresi tra 2 mm e 0,06 mm, che cementata forma le arenarie; fino ai sedimenti più fini, come il limo e l'argilla, con granuli inferiori a 0,06 mm, che danno origine a rocce come le argilliti.</p>
+  <p>Le dimensioni dei clasti che compongono una roccia clastica forniscono importanti informazioni sull'energia dell'ambiente in cui il sedimento si è depositato: un ambiente ad alta energia, come un torrente montano dalla corrente vivace, è in grado di trasportare e depositare clasti di grandi dimensioni, mentre un ambiente a bassa energia, come un lago calmo o le acque profonde di un bacino marino, consente la deposizione solo dei sedimenti più fini, come limo e argilla, che rimangono in sospensione più a lungo prima di depositarsi sul fondo.</p>
+
+  <p class="titolo-capitolo">Le rocce sedimentarie organogene e chimiche</p>
+  <p>Le rocce organogene si formano dall'accumulo di resti di organismi viventi, vegetali o animali: il calcare organogeno, ad esempio, è costituito in larga parte da gusci e scheletri di organismi marini ricchi di carbonato di calcio, accumulatisi sul fondale nel corso di lunghissimi intervalli di tempo, mentre il carbone, formatosi dall'accumulo e dalla successiva trasformazione di resti vegetali in ambienti paludosi privi di ossigeno, rappresenta un caso particolare di roccia organogena di origine continentale.</p>
+  <p>Le rocce chimiche, infine, si formano per precipitazione diretta di sostanze disciolte in acqua, in modo analogo a quanto già descritto nel capitolo 7 a proposito della genesi di alcuni minerali: è il caso delle rocce evaporitiche, come il gesso e il salgemma, che si formano quando l'acqua di un bacino, in condizioni climatiche calde e con scarso ricambio idrico, evapora progressivamente, portando alla saturazione e alla successiva precipitazione dei sali in essa disciolti.</p>
+
+  <p class="titolo-capitolo">Gli strati e i fossili</p>
+  <p>Una caratteristica distintiva delle rocce sedimentarie, che le differenzia nettamente dalle rocce magmatiche descritte nel capitolo precedente, è la stratificazione, cioè l'organizzazione del materiale roccioso in strati sovrapposti, ciascuno corrispondente a un episodio di sedimentazione avvenuto in un determinato intervallo di tempo e in determinate condizioni ambientali: l'osservazione della successione degli strati permette ai geologi di ricostruire, sulla base del principio secondo cui, in una serie di strati non disturbata, gli strati più antichi si trovano alla base e quelli più recenti in superficie, la storia geologica di una determinata regione.</p>
+  <p>Le rocce sedimentarie sono inoltre l'unico tipo di roccia in grado di conservare, al proprio interno, i fossili, cioè i resti o le tracce di organismi vissuti in epoche passate, preservati grazie alla relativa rapidità con cui i sedimenti possono avvolgere e proteggere un organismo dalla decomposizione, prima ancora che i processi diagenetici trasformino il sedimento in roccia compatta: lo studio dei fossili, di cui si tornerà a parlare più diffusamente nei capitoli dedicati all'evoluzione e alla storia della Terra, costituisce una delle fonti di informazione più preziose per la ricostruzione della storia della vita sul nostro pianeta.</p>
+
+  <p class="titolo-capitolo">Il metamorfismo</p>
+  <p>Le rocce metamorfiche, come già accennato nel capitolo 7, si formano dalla trasformazione allo stato solido di rocce preesistenti, siano esse magmatiche, sedimentarie o già metamorfiche, sottoposte a condizioni di temperatura e pressione significativamente diverse da quelle in cui si erano originariamente formate, tipicamente in seguito al loro seppellimento a grandi profondità all'interno della crosta terrestre. Durante il metamorfismo, la roccia rimane costantemente allo stato solido, senza fondere come avviene invece nella formazione di un magma: i minerali che la costituiscono si riorganizzano, ricristallizzando in nuove forme più stabili nelle mutate condizioni di temperatura e pressione, talvolta dando origine anche a minerali completamente nuovi, assenti nella roccia originaria.</p>
+  <p>Si distinguono, in base alla causa prevalente della trasformazione, due principali tipi di metamorfismo: il metamorfismo di contatto, che si verifica nelle rocce circostanti l'intrusione di un corpo magmatico, la cui elevata temperatura provoca la ricristallizzazione delle rocce adiacenti in una fascia relativamente ristretta attorno all'intrusione stessa; e il metamorfismo regionale, che si verifica invece su vaste aree della crosta terrestre, tipicamente in corrispondenza delle zone di collisione tra placche tettoniche, di cui parleremo in un capitolo successivo, dove elevate pressioni e temperature agiscono congiuntamente su grandi volumi di roccia.</p>
+
+  <p class="titolo-capitolo">La struttura scistosa e le principali rocce metamorfiche</p>
+  <p>Una caratteristica tipica di molte rocce metamorfiche, in particolare di quelle formatesi per metamorfismo regionale in presenza di pressioni orientate in una direzione prevalente, è la scistosità, cioè la disposizione dei minerali lamellari o allungati, come le miche già citate nel capitolo 7, secondo piani paralleli tra loro e perpendicolari alla direzione della pressione principale, che conferisce alla roccia una tendenza a spaccarsi secondo superfici piane, per certi versi simile alla sfaldatura dei minerali descritta nel medesimo capitolo, ma osservabile qui su scala dell'intera roccia.</p>
+  <p>Tra le rocce metamorfiche più comuni si possono citare il marmo, derivato dal metamorfismo del calcare, costituito quasi interamente da cristalli di calcite ricristallizzata e privo di scistosità; il gneiss, derivato tipicamente dal metamorfismo regionale di rocce granitiche, caratterizzato da un'alternanza di bande chiare e scure; e lo scisto, o micascisto, ricco di minerali lamellari come la mica, che ne determinano una marcata scistosità e una superficie lucente e sfaldabile in lastre sottili.</p>
+</div>
+<!-- fine capitolo scienze 09 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci10.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

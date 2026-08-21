@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 18</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 18: la cellula procariote ed eucariote -->
+<div id="capitolo-18-cellula-procariote-eucariote" class="capitolo-storia">
+  <p class="titolo-capitolo">18 - La cellula procariote ed eucariote - Classe 2</p>
+
+  <p class="titolo-capitolo">La teoria cellulare</p>
+  <p>Nel capitolo 16 abbiamo introdotto la cellula come l'unità strutturale e funzionale di base di tutti gli esseri viventi, e nel capitolo precedente ne abbiamo esaminato i principali costituenti chimici, le biomolecole. In questo capitolo approfondiamo la struttura della cellula stessa, prendendo le mosse dalla teoria cellulare, uno dei principi fondamentali della biologia moderna, formulata nella prima metà dell'Ottocento sulla base delle osservazioni al microscopio ottico condotte da diversi scienziati, tra cui il botanico tedesco Matthias Schleiden e lo zoologo, sempre tedesco, Theodor Schwann.</p>
+  <p>La teoria cellulare si può riassumere in tre principi fondamentali: tutti gli organismi viventi sono costituiti da una o più cellule; la cellula è l'unità strutturale e funzionale di base di ogni organismo vivente, secondo quanto già accennato nel capitolo 16; e ogni cellula deriva sempre da un'altra cellula preesistente, attraverso il processo di divisione cellulare che approfondiremo in un capitolo successivo, escludendo quindi la possibilità di una generazione spontanea della vita a partire da materia non vivente, come si era invece a lungo ritenuto prima dell'affermazione di questa teoria.</p>
+
+  <p class="titolo-capitolo">Struttura di base comune a tutte le cellule</p>
+  <p>Nonostante l'enorme varietà di forme e dimensioni che le cellule possono assumere, esistono alcune strutture di base comuni a tutte le cellule conosciute, indipendentemente dal tipo di organismo a cui appartengono. La membrana plasmatica, costituita principalmente da un doppio strato di fosfolipidi, già descritti nel capitolo precedente, delimita la cellula separandola dall'ambiente esterno e regolandone gli scambi di sostanze, un argomento che approfondiremo nel prossimo capitolo.</p>
+  <p>All'interno della membrana plasmatica si trova il citoplasma, cioè l'insieme del materiale cellulare compreso tra la membrana stessa e il materiale genetico, costituito da un fluido acquoso, chiamato citosol, in cui sono immersi i vari componenti cellulari; e il materiale genetico, costituito da DNA secondo quanto già visto nel capitolo precedente, contenente le informazioni necessarie al funzionamento della cellula. È proprio il diverso modo in cui questo materiale genetico è organizzato all'interno della cellula a costituire il criterio fondamentale per distinguere le due grandi categorie di cellule che esamineremo in questo capitolo: le cellule procariotiche e le cellule eucariotiche.</p>
+
+  <p class="titolo-capitolo">Le dimensioni cellulari</p>
+  <p>Le cellule sono strutture di dimensioni estremamente ridotte, generalmente comprese tra circa 1 e 100 micrometri (μm), cioè tra un millesimo e un decimo di millimetro, il che le rende invisibili a occhio nudo e osservabili solo per mezzo di un microscopio, ottico oppure, per i dettagli più fini, elettronico.</p>
+  <p>Le dimensioni ridotte delle cellule non sono casuali, ma rispondono a una precisa necessità funzionale: una cellula deve infatti scambiare continuamente sostanze, come nutrienti e prodotti di scarto, con l'ambiente circostante, attraverso la propria superficie, mentre il proprio fabbisogno metabolico dipende dal volume complessivo del materiale vivente presente al suo interno. Poiché, aumentando le dimensioni di un oggetto, il suo volume cresce più rapidamente della sua superficie, una cellula eccessivamente grande finirebbe per possedere una superficie relativamente troppo piccola rispetto al proprio volume, insufficiente a garantire scambi adeguati con l'esterno: è proprio questo rapporto tra superficie e volume, sfavorevole all'aumentare delle dimensioni, a porre un limite fisico invalicabile alla crescita delle dimensioni di una singola cellula.</p>
+
+  <p class="titolo-capitolo">La cellula procariotica</p>
+  <p>Le cellule procariotiche, il cui nome deriva dal greco e significa letteralmente "prima del nucleo", sono caratterizzate da una struttura relativamente semplice, in cui il materiale genetico, costituito tipicamente da un'unica molecola di DNA circolare, non è racchiuso all'interno di un compartimento delimitato da membrana, ma si trova libero all'interno del citoplasma, in una regione chiamata nucleoide.</p>
+  <p>Gli organismi procarioti, rappresentati dai batteri e dagli archei, sono tutti organismi unicellulari, generalmente di dimensioni molto piccole rispetto alle cellule eucariotiche che esamineremo tra poco, tipicamente comprese tra 1 e 10 μm: la loro struttura interna, priva di compartimenti delimitati da membrana, risulta complessivamente più semplice rispetto a quella delle cellule eucariotiche, sebbene gli organismi procarioti mostrino comunque una notevole diversità metabolica, essendo in grado di colonizzare praticamente ogni ambiente presente sulla Terra, comprese condizioni estreme di temperatura, salinità o acidità.</p>
+
+  <p class="titolo-capitolo">La cellula eucariotica</p>
+  <p>Le cellule eucariotiche, il cui nome significa letteralmente "vero nucleo", sono invece caratterizzate dalla presenza di un nucleo, cioè di un compartimento delimitato da una doppia membrana, chiamata involucro nucleare, all'interno del quale è racchiuso il materiale genetico della cellula, organizzato in più molecole di DNA lineare associate a specifiche proteine. Gli organismi eucarioti comprendono i protisti, i funghi, le piante e gli animali, e possono essere sia unicellulari sia pluricellulari, questi ultimi caratterizzati da una notevole specializzazione delle cellule che li compongono.</p>
+  <p>Oltre alla presenza del nucleo, la cellula eucariotica si distingue da quella procariotica per la presenza, all'interno del citoplasma, di numerosi organuli cellulari, cioè di strutture specializzate, generalmente delimitate a loro volta da una membrana, ciascuna deputata a svolgere funzioni specifiche nell'ambito dell'attività cellulare complessiva: questa maggiore compartimentazione interna consente di separare, all'interno della stessa cellula, processi chimici anche molto diversi tra loro, che potrebbero altrimenti interferire reciprocamente se svolti tutti nello stesso spazio.</p>
+
+  <p class="titolo-capitolo">I principali organuli della cellula eucariotica</p>
+  <p>Tra gli organuli presenti nella cellula eucariotica, il nucleo, già descritto in precedenza, riveste un ruolo di primo piano come sede del materiale genetico e come centro di controllo delle attività cellulari. I mitocondri sono organuli delimitati da una doppia membrana, presenti nella quasi totalità delle cellule eucariotiche, deputati alla produzione della maggior parte dell'energia chimica necessaria alla cellula attraverso il processo di respirazione cellulare, che approfondiremo in un capitolo successivo: proprio per questa funzione, i mitocondri vengono spesso definiti, con un'espressione divulgativa ormai molto diffusa, le "centrali energetiche della cellula".</p>
+  <p>I cloroplasti, presenti esclusivamente nelle cellule delle piante e di alcuni protisti fotosintetici, sono organuli analogamente delimitati da doppia membrana, deputati allo svolgimento della fotosintesi clorofilliana, il processo attraverso cui l'energia luminosa viene convertita in energia chimica, che tratteremo anch'esso in un capitolo successivo. Il reticolo endoplasmatico, il complesso o apparato di Golgi e i lisosomi costituiscono, insieme ad altri organuli minori, un sistema di membrane interconnesse deputato alla sintesi, alla modificazione, al trasporto e alla degradazione di molecole prodotte dalla cellula, in particolare delle proteine descritte nel capitolo precedente.</p>
+  <p>Una particolarità strutturale distingue infine le cellule vegetali da quelle animali, pur essendo entrambe eucariotiche: le cellule vegetali possiedono, all'esterno della membrana plasmatica, una robusta parete cellulare, costituita principalmente da cellulosa già descritta nel capitolo precedente tra i polisaccaridi, che conferisce loro una forma tendenzialmente rigida e stabile, e un grande vacuolo centrale, ripieno di un liquido acquoso, che occupa gran parte del volume cellulare e svolge funzioni di sostegno e di riserva; le cellule animali, invece, sono prive sia della parete cellulare sia di un vacuolo centrale di dimensioni paragonabili, e sono delimitate esclusivamente dalla membrana plasmatica, il che conferisce loro una maggiore flessibilità di forma.</p>
+</div>
+<!-- fine capitolo scienze 18 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci19.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

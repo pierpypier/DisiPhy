@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 10</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 10: i vulcani -->
+<div id="capitolo-10-vulcani" class="capitolo-storia">
+  <p class="titolo-capitolo">10 - I vulcani - Classe 1</p>
+
+  <p class="titolo-capitolo">Che cos'è un vulcano</p>
+  <p>Nei capitoli precedenti abbiamo più volte fatto riferimento alla lava e alle eruzioni vulcaniche, a proposito della formazione delle rocce effusive: questo capitolo è dedicato a un esame più approfondito del vulcanismo, cioè dell'insieme dei fenomeni legati alla risalita del magma dall'interno della Terra fino alla superficie. Un vulcano è, nella sua accezione più comune, il rilievo topografico che si forma per accumulo di materiale lavico e piroclastico attorno al punto, chiamato bocca eruttiva o cratere, da cui il magma fuoriesce; più in generale, con il termine vulcanismo si indica l'insieme dei fenomeni, non necessariamente accompagnati dalla formazione di un rilievo, legati alla fuoriuscita di magma, gas e altri materiali dall'interno della Terra.</p>
+  <p>Il condotto attraverso cui il magma risale dalla camera magmatica, cioè dal serbatoio sotterraneo in cui il magma si accumula prima di un'eruzione, fino alla superficie, è chiamato camino vulcanico o condotto vulcanico, e può in alcuni casi ramificarsi in condotti secondari, dando origine a bocche eruttive minori, dette anche coni avventizi, disposti sui fianchi dell'edificio vulcanico principale.</p>
+
+  <p class="titolo-capitolo">I prodotti dell'attività vulcanica</p>
+  <p>Durante un'eruzione, un vulcano emette diversi tipi di materiali. La lava, come già descritto nel capitolo 8, è il magma che ha raggiunto la superficie, privato in buona parte della sua componente gassosa originaria: la sua viscosità, che dipende, come già visto, dal contenuto di silice, determina in modo decisivo la velocità con cui essa scorre e la forma delle colate laviche che ne derivano.</p>
+  <p>I materiali piroclastici, o tefra, sono invece frammenti solidi di varie dimensioni, espulsi violentemente dal vulcano durante le fasi esplosive di un'eruzione: si distinguono, in base alle dimensioni decrescenti dei frammenti, i blocchi e le bombe vulcaniche, di dimensioni superiori a 64 mm, i lapilli, con dimensioni comprese tra 2 e 64 mm, e le ceneri vulcaniche, con dimensioni inferiori a 2 mm, costituite da polvere finissima di roccia e vetro vulcanico frantumato, in grado di rimanere sospesa in atmosfera anche per periodi prolungati e di essere trasportata dai venti a grandi distanze dal vulcano di origine. Infine, i gas vulcanici, composti principalmente da vapore acqueo, anidride carbonica e composti solforati, vengono rilasciati in atmosfera in grande quantità durante le eruzioni, e la loro pressione, accumulata all'interno del magma in profondità, costituisce spesso la forza motrice che determina l'esplosività di un'eruzione.</p>
+
+  <p class="titolo-capitolo">I fattori che determinano il tipo di eruzione</p>
+  <p>Il comportamento eruttivo di un vulcano, cioè la sua tendenza a produrre eruzioni relativamente tranquille, dominate dall'effusione di colate laviche, oppure eruzioni violentemente esplosive, dominate dall'emissione di materiali piroclastici, dipende principalmente da due fattori strettamente collegati tra loro: la viscosità del magma e il contenuto di gas in esso disciolti.</p>
+  <p>Un magma basico, povero di silice e quindi poco viscoso, come già descritto nel capitolo 8, permette ai gas in esso disciolti di risalire e fuoriuscire con relativa facilità, senza accumulare pressioni eccessive, dando origine tipicamente a eruzioni effusive, caratterizzate dalla tranquilla fuoriuscita di colate laviche fluide. Un magma acido, ricco di silice e quindi molto viscoso, ostacola invece fortemente la risalita e la fuoriuscita dei gas, che tendono ad accumularsi sotto pressione all'interno del magma stesso, fino a liberarsi in modo improvviso e violento non appena la pressione supera la resistenza opposta dalle rocce sovrastanti, dando origine a eruzioni esplosive, in grado di produrre ingenti quantità di materiali piroclastici e, nei casi più violenti, di distruggere in parte l'edificio vulcanico stesso.</p>
+
+  <p class="titolo-capitolo">La forma degli edifici vulcanici</p>
+  <p>La forma di un vulcano riflette direttamente il tipo di materiali e di eruzioni che lo hanno costruito nel corso del tempo. I vulcani a scudo, come quelli caratteristici delle isole Hawaii, sono edifici molto estesi ma con pendii dolci e poco inclinati, costruiti quasi esclusivamente da colate di lava basica fluida, emesse in eruzioni prevalentemente effusive, che si distribuiscono su ampie aree prima di solidificare.</p>
+  <p>I vulcani a strati, o stratovulcani, come l'Etna o il Vesuvio, sono edifici dalla forma conica, con pendii più ripidi rispetto ai vulcani a scudo, costruiti dall'alternanza di colate laviche e di depositi di materiali piroclastici, prodotti da eruzioni di tipo misto, sia effusivo sia esplosivo, che si susseguono nel corso della storia eruttiva del vulcano. I coni di scorie, infine, sono edifici vulcanici di dimensioni relativamente piccole, con pendii molto ripidi, costruiti dall'accumulo di materiali piroclastici, in particolare lapilli e piccole bombe vulcaniche, ricadute attorno a una bocca eruttiva durante eruzioni esplosive di modesta entità.</p>
+
+  <p class="titolo-capitolo">I diversi tipi di attività eruttiva</p>
+  <p>In base alle caratteristiche osservate durante le eruzioni storiche, il vulcanismo esplosivo viene ulteriormente classificato in diverse tipologie, spesso indicate con il nome del vulcano in cui sono state osservate per la prima volta o in modo più caratteristico. Le eruzioni di tipo hawaiiano, tipiche appunto dei vulcani a scudo, sono caratterizzate da fontane di lava fluida relativamente tranquille, con scarsa componente esplosiva; le eruzioni di tipo stromboliano, dal vulcano Stromboli nelle isole Eolie, sono caratterizzate da esplosioni intermittenti e relativamente modeste, che espellono lapilli e bombe a intervalli regolari, di pochi minuti o poche decine di minuti.</p>
+  <p>Le eruzioni di tipo vulcaniano, dall'isola di Vulcano, sempre nelle Eolie, sono più violente delle precedenti, con esplosioni discontinue causate da magmi più viscosi, che generano colonne di cenere e gas innalzate rapidamente in atmosfera; le eruzioni di tipo pliniano, dal nome dello scrittore romano Plinio il Vecchio, morto durante la celebre eruzione del Vesuvio del 79 d.C. descritta dal nipote Plinio il Giovane, rappresentano il tipo di eruzione più violento ed esplosivo, capace di proiettare in atmosfera colonne di cenere e gas alte anche diverse decine di chilometri, fino a raggiungere la stratosfera, e di generare flussi piroclastici, cioè nubi ardenti di gas, cenere e frammenti di roccia ad altissima temperatura, che scendono lungo i fianchi del vulcano a velocità estremamente elevate, rappresentando uno dei fenomeni vulcanici più distruttivi e pericolosi per le popolazioni residenti nelle vicinanze.</p>
+
+  <p class="titolo-capitolo">La distribuzione geografica dei vulcani</p>
+  <p>I vulcani non sono distribuiti in modo casuale sulla superficie terrestre, ma si concentrano lungo fasce ben precise, la cui posizione, come vedremo in un capitolo successivo dedicato alla tettonica delle placche, è strettamente legata ai margini delle placche litosferiche in cui è suddiviso l'involucro più esterno del nostro pianeta. La cosiddetta Cintura di Fuoco del Pacifico, che circonda quasi interamente l'oceano Pacifico, concentra da sola circa il 75% dei vulcani attivi conosciuti sulla Terra, comprendendo alcuni tra i vulcani più noti al mondo, come il Fuji in Giappone o il Sant'Elena negli Stati Uniti.</p>
+  <p>Anche l'Italia, pur trovandosi in una posizione geograficamente più defilata rispetto alla Cintura di Fuoco, ospita alcuni tra i vulcani attivi più studiati al mondo, come l'Etna in Sicilia, il vulcano attivo più alto e più esteso d'Europa, lo Stromboli, celebre per la sua attività pressoché continua da secoli, e i Campi Flegrei, presso Napoli, un esempio di vulcano di tipo diverso, chiamato caldera, cioè una vasta depressione formatasi in seguito al collasso di un edificio vulcanico dopo un'eruzione di eccezionale violenza, avvenuta in questo caso circa 39 000 anni fa.</p>
+</div>
+<!-- fine capitolo scienze 10 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci11.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

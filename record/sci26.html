@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 26</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 26: dal DNA alle proteine, trascrizione e traduzione -->
+<div id="capitolo-26-trascrizione-traduzione" class="capitolo-storia">
+  <p class="titolo-capitolo">26 - Dal DNA alle proteine: trascrizione e traduzione - Classe 3</p>
+
+  <p class="titolo-capitolo">Il dogma centrale della biologia molecolare</p>
+  <p>Nel capitolo precedente abbiamo esaminato la struttura del DNA e il meccanismo attraverso cui esso viene fedelmente duplicato, garantendo la trasmissione dell'informazione genetica di cellula in cellula. Resta tuttavia da chiarire come tale informazione, custodita nella sequenza di basi azotate del DNA, venga effettivamente utilizzata dalla cellula per costruire le proteine descritte nel capitolo 17, le quali, come già visto, sono responsabili della gran parte delle strutture e delle funzioni cellulari.</p>
+  <p>Il flusso dell'informazione genetica all'interno della cellula segue una direzione ben precisa, riassunta nel cosiddetto dogma centrale della biologia molecolare: dal DNA, attraverso un processo chiamato trascrizione, si ottiene una molecola intermedia di RNA, già introdotto nel capitolo 17, e da questa, attraverso un secondo processo chiamato traduzione, si ottiene infine la proteina corrispondente. Questo capitolo esamina in dettaglio entrambe le tappe di questo percorso, che si potrebbe riassumere sinteticamente come il passaggio "dal DNA all'RNA, dall'RNA alla proteina".</p>
+
+  <p class="titolo-capitolo">L'RNA messaggero</p>
+  <p>L'RNA, o acido ribonucleico, condivide con il DNA la struttura generale a polimero di nucleotidi già descritta nel capitolo precedente, ma se ne differenzia per alcuni aspetti chimici fondamentali: è costituito da un solo filamento, anziché da una doppia elica; il suo zucchero è il ribosio anziché il desossiribosio; e, tra le sue quattro basi azotate, la timina è sostituita dall'uracile (U), una base pirimidinica in grado di appaiarsi comunque con l'adenina secondo la medesima logica di complementarità già descritta per il DNA.</p>
+  <p>Esistono diversi tipi di RNA, ciascuno con una funzione specifica nel processo di sintesi proteica: l'RNA messaggero, o mRNA, è il tipo di RNA direttamente coinvolto nella trascrizione, poiché ha il compito di "copiare" l'informazione genetica contenuta in un tratto specifico di DNA, corrispondente a un gene, e di trasportarla fuori dal nucleo, fino ai ribosomi presenti nel citoplasma, dove avverrà la successiva fase di traduzione.</p>
+
+  <p class="titolo-capitolo">La trascrizione</p>
+  <p>La trascrizione è il processo attraverso cui l'informazione genetica contenuta in un gene, cioè in uno specifico tratto della molecola di DNA, viene copiata in una molecola di mRNA: il processo si svolge, nelle cellule eucariotiche, all'interno del nucleo, ed è catalizzato da uno specifico enzima, chiamato RNA polimerasi, per certi versi analogo, nel suo funzionamento generale, alla DNA polimerasi già descritta nel capitolo precedente a proposito della duplicazione del DNA.</p>
+  <p>L'RNA polimerasi si lega a una specifica sequenza di DNA, chiamata promotore, che segnala l'inizio del gene da trascrivere, e procede quindi ad aprire localmente la doppia elica, utilizzando uno dei due filamenti di DNA come stampo per costruire, nucleotide dopo nucleotide, il filamento di mRNA complementare, secondo la stessa regola di appaiamento delle basi già descritta nel capitolo precedente, con la sola differenza che, in corrispondenza di ciascuna adenina presente sul filamento stampo di DNA, viene inserito nell'mRNA un uracile anziché una timina. Una volta completata la trascrizione dell'intero gene, segnalata da una specifica sequenza di terminazione, la molecola di mRNA appena sintetizzata si stacca dal DNA stampo, il quale si richiude nuovamente nella propria configurazione a doppia elica, mentre l'mRNA, dopo alcune modificazioni che qui non approfondiamo, migra dal nucleo verso il citoplasma, attraversando i pori dell'involucro nucleare già descritto nel capitolo 18.</p>
+
+  <p class="titolo-capitolo">Il codice genetico</p>
+  <p>L'informazione contenuta nella sequenza di basi dell'mRNA viene letta dalla cellula, durante la traduzione, non base per base singolarmente, ma raggruppando le basi in terzine consecutive, chiamate codoni, ciascuna delle quali corrisponde a uno specifico amminoacido, tra i venti già descritti nel capitolo 17, da inserire nella catena proteica in via di formazione: l'insieme delle corrispondenze tra i 64 possibili codoni, ottenuti dalle diverse combinazioni delle quattro basi azotate prese a gruppi di tre, e i venti amminoacidi costituisce il codice genetico.</p>
+  <p>Il codice genetico presenta alcune proprietà notevoli: è ridondante, o degenerato, poiché, essendo i codoni possibili (64) più numerosi degli amminoacidi da codificare (20), la maggior parte degli amminoacidi risulta specificata da più di un codone diverso; comprende inoltre uno specifico codone di inizio, corrispondente all'amminoacido metionina, che segnala il punto in cui deve iniziare la lettura della sequenza durante la traduzione, e tre distinti codoni di stop, che non codificano per alcun amminoacido ma segnalano invece la conclusione della catena proteica. Un'ultima proprietà di grande rilevanza biologica è la sua universalità, poiché il codice genetico risulta, con rarissime eccezioni, identico in tutti gli organismi viventi conosciuti, dal più semplice batterio fino all'uomo, una circostanza che costituisce una delle prove più solide a sostegno dell'origine comune di tutte le forme di vita presenti sulla Terra, un tema che sarà approfondito nei capitoli dedicati all'evoluzione.</p>
+
+  <p class="titolo-capitolo">La traduzione e i ribosomi</p>
+  <p>La traduzione è il processo attraverso cui la sequenza di codoni dell'mRNA viene effettivamente convertita nella corrispondente sequenza di amminoacidi, dando origine alla catena proteica: il processo avviene nel citoplasma, a livello dei ribosomi, piccoli organuli non delimitati da membrana, costituiti a loro volta da proteine e da un ulteriore tipo di RNA, chiamato RNA ribosomiale, che agiscono come una sorta di "officina molecolare" in cui avviene concretamente l'assemblaggio della proteina.</p>
+  <p>Un ruolo fondamentale nella traduzione è svolto da un terzo tipo di RNA, l'RNA transfer, o tRNA: si tratta di piccole molecole, ciascuna delle quali è specializzata nel trasportare uno specifico amminoacido fino al ribosoma, e possiede, in una propria regione, una terzina di basi, chiamata anticodone, complementare a uno specifico codone dell'mRNA. Durante la traduzione, il ribosoma scorre progressivamente lungo la molecola di mRNA, codone dopo codone, mentre le molecole di tRNA, portando ciascuna il proprio amminoacido specifico, si appaiano temporaneamente, tramite il proprio anticodone, al codone corrispondente esposto dal ribosoma, permettendo così l'aggiunta ordinata e corretta di ciascun amminoacido, uno alla volta, alla catena proteica in via di formazione, fino al raggiungimento di un codone di stop, che determina il rilascio della proteina completa dal ribosoma.</p>
+  <p><em>Esempio svolto:</em> data una porzione di filamento di DNA stampo con sequenza 3'-TAC GGG ATC-5', la trascrizione produce un mRNA con sequenza complementare 5'-AUG CCC UAG-3'. Applicando il codice genetico, il codone AUG corrisponde alla metionina e funge da codone di inizio, il codone CCC corrisponde all'amminoacido prolina, mentre il codone UAG è un codone di stop: la breve catena proteica risultante da questo tratto di gene sarà quindi composta dalla sola sequenza metionina-prolina, prima che la traduzione venga interrotta dal segnale di terminazione.</p>
+</div>
+<!-- fine capitolo scienze 26 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci27.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

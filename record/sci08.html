@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 08</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 08: le rocce magmatiche -->
+<div id="capitolo-08-rocce-magmatiche" class="capitolo-storia">
+  <p class="titolo-capitolo">08 - Le rocce magmatiche - Classe 1</p>
+
+  <p class="titolo-capitolo">Che cos'è una roccia</p>
+  <p>Nel capitolo precedente abbiamo definito i minerali come i costituenti elementari della crosta terrestre. Una roccia è invece un aggregato naturale, generalmente solido, costituito da uno o più minerali, oppure, più raramente, da materiale non cristallino come il vetro vulcanico: mentre un minerale possiede una composizione chimica e una struttura interna ben definite, una roccia è definita piuttosto dalla sua origine geologica e dall'insieme dei minerali che la compongono, presenti in proporzioni ed elementi tessiturali che possono variare anche sensibilmente da un campione all'altro della stessa roccia.</p>
+  <p>Le rocce vengono tradizionalmente suddivise in tre grandi famiglie, in base al processo geologico che le ha originate: le rocce magmatiche, o ignee, formatesi dalla solidificazione di un magma, oggetto di questo capitolo; le rocce sedimentarie, formatesi dall'accumulo e dalla successiva cementazione di sedimenti; e le rocce metamorfiche, formatesi dalla trasformazione allo stato solido di rocce preesistenti; queste ultime due famiglie saranno trattate nel prossimo capitolo.</p>
+
+  <p class="titolo-capitolo">Il magma e i suoi costituenti</p>
+  <p>Il magma è una massa di roccia fusa, cioè portata allo stato liquido dalle elevate temperature presenti negli strati più profondi della crosta terrestre e nel mantello sottostante, di cui parleremo diffusamente più avanti nel manuale. Un magma non è costituito solamente da roccia liquida, ma comprende tipicamente anche una componente solida, formata da cristalli già formatisi durante il lento raffreddamento, e una componente gassosa, costituita principalmente da vapore acqueo e anidride carbonica, disciolti nel fuso a causa dell'elevata pressione a cui il magma è sottoposto in profondità.</p>
+  <p>La composizione chimica di un magma, in particolare il suo contenuto di silice (SiO<sub>2</sub>), influenza in modo determinante due proprietà fondamentali: la viscosità, cioè la resistenza del magma a scorrere, e la temperatura di formazione. Un magma povero di silice, detto basico o mafico, con un contenuto di SiO<sub>2</sub> inferiore al 52% circa, è generalmente più fluido e si forma a temperature più elevate, comprese tra 1000 e 1200 °C; un magma ricco di silice, detto acido o felsico, con un contenuto di SiO<sub>2</sub> superiore al 65% circa, è invece molto più viscoso e si forma a temperature relativamente più basse, comprese tra 650 e 800 °C.</p>
+
+  <p class="titolo-capitolo">La cristallizzazione magmatica</p>
+  <p>Quando un magma si raffredda, i diversi minerali che lo costituiscono non cristallizzano tutti simultaneamente, ma secondo una sequenza ordinata, in funzione della loro specifica temperatura di solidificazione: i minerali con temperatura di cristallizzazione più elevata, generalmente più ricchi di ferro e magnesio, si formano per primi, mentre il fuso residuo si arricchisce progressivamente degli elementi che cristallizzano a temperature più basse, come il silicio e il potassio, fino alla formazione, per ultimi, di minerali come il quarzo, già descritto nel capitolo precedente tra i silicati.</p>
+  <p>La velocità con cui avviene il raffreddamento del magma influenza in modo determinante le dimensioni dei cristalli che si formano: un raffreddamento lento, che consente agli atomi di disporsi ordinatamente secondo il reticolo cristallino descritto nel capitolo 7, favorisce la crescita di cristalli di grandi dimensioni, ben visibili anche a occhio nudo; un raffreddamento rapido, al contrario, non lascia agli atomi il tempo sufficiente per organizzarsi in cristalli ben sviluppati, dando origine a cristalli di dimensioni molto piccole, talvolta osservabili solo al microscopio, oppure, nei casi di raffreddamento estremamente rapido, a un vetro vulcanico privo di una vera struttura cristallina.</p>
+
+  <p class="titolo-capitolo">Rocce intrusive e rocce effusive</p>
+  <p>In base al luogo in cui avviene il processo di solidificazione, le rocce magmatiche si distinguono in due grandi categorie, caratterizzate da una tessitura, cioè da un aspetto e da una dimensione dei cristalli, molto diversa tra loro. Le rocce intrusive, dette anche plutoniche, si formano dalla lenta solidificazione del magma in profondità all'interno della crosta terrestre, dove le rocce circostanti agiscono da isolante termico, rallentando notevolmente la dispersione del calore: questo raffreddamento lento, che può richiedere anche migliaia o milioni di anni, favorisce la formazione di cristalli di grandi dimensioni, ben distinguibili a occhio nudo, dando alla roccia una tessitura definita granulare o olocristallina.</p>
+  <p>Le rocce effusive, dette anche vulcaniche, si formano invece dalla rapida solidificazione della lava, cioè del magma che ha raggiunto la superficie terrestre attraverso un'eruzione vulcanica, fenomeno che approfondiremo in un capitolo successivo: a contatto con l'atmosfera o con l'acqua, la lava si raffredda in tempi molto brevi, da poche ore a pochi giorni, dando origine a una tessitura a grana fine, con cristalli piccolissimi o assenti, spesso accompagnata dalla presenza di vetro vulcanico e di piccole cavità, chiamate vescicole, formatesi dai gas che non hanno avuto il tempo di fuoriuscire dal magma prima della sua solidificazione.</p>
+
+  <p class="titolo-capitolo">Le principali rocce magmatiche</p>
+  <p>Tra le rocce magmatiche intrusive, il granito è senza dubbio la più diffusa e conosciuta: si tratta di una roccia acida, ricca di quarzo e feldspati, di colore generalmente chiaro, che costituisce una parte molto significativa della crosta continentale terrestre. Il gabbro, al contrario, è una roccia intrusiva basica, ricca di minerali contenenti ferro e magnesio, di colore scuro, che costituisce, insieme a rocce simili, gran parte della crosta oceanica.</p>
+  <p>Tra le rocce magmatiche effusive, il basalto è l'equivalente effusivo del gabbro, cioè una roccia basica a grana fine, di colore scuro, ed è la roccia magmatica più abbondante sulla superficie terrestre, poiché costituisce la maggior parte dei fondali oceanici; la riolite è invece l'equivalente effusivo del granito, ricca di silice ma a grana fine per via del rapido raffreddamento in superficie. Una menzione particolare merita l'ossidiana, un vetro vulcanico naturale, privo di struttura cristallina a causa di un raffreddamento estremamente rapido, caratterizzata da una frattura concoide, cioè simile a quella del vetro comune, che ne ha fatto, fin dalla preistoria, un materiale ricercato per la fabbricazione di strumenti da taglio.</p>
+</div>
+<!-- fine capitolo scienze 08 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci09.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

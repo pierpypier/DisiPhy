@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 20</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 20: il metabolismo energetico, respirazione e fotosintesi -->
+<div id="capitolo-20-metabolismo-energetico" class="capitolo-storia">
+  <p class="titolo-capitolo">20 - Il metabolismo energetico: respirazione e fotosintesi - Classe 2</p>
+
+  <p class="titolo-capitolo">L'energia e la vita</p>
+  <p>Nel capitolo 16 abbiamo definito il metabolismo come l'insieme delle reazioni chimiche attraverso cui un organismo vivente ricava ed utilizza energia; in questo capitolo, che conclude la sezione introduttiva di biologia cellulare del manuale, esaminiamo in dettaglio i due processi metabolici più importanti riguardo al flusso di energia negli organismi viventi: la respirazione cellulare, comune a tutti gli organismi, e la fotosintesi clorofilliana, tipica delle piante e di alcuni altri organismi.</p>
+  <p>Entrambi questi processi ruotano attorno a una molecola centrale per il metabolismo energetico di ogni cellula: l'ATP, o adenosina trifosfato, una piccola molecola che funge da vera e propria "moneta di scambio" energetica all'interno della cellula, poiché l'energia chimica immagazzinata nei suoi legami fosfato può essere liberata rapidamente e utilizzata per alimentare pressoché tutti i processi cellulari che richiedono energia, incluso il trasporto attivo già descritto nel capitolo precedente.</p>
+
+  <p class="titolo-capitolo">La respirazione cellulare</p>
+  <p>La respirazione cellulare è il processo, svolto dalla quasi totalità degli organismi viventi, attraverso cui l'energia chimica contenuta nel glucosio, il monosaccaride già descritto nel capitolo 17, viene liberata gradualmente e utilizzata per produrre ATP, con il contributo dell'ossigeno prelevato dall'ambiente esterno: si tratta, in sostanza, di una reazione catabolica di ossidazione, in cui il glucosio viene progressivamente scomposto, con liberazione, come prodotti di scarto, di anidride carbonica e acqua.</p>
+  <p class="formula">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub> → 6 CO<sub>2</sub> + 6 H<sub>2</sub>O + energia (ATP)</p>
+  <p>Nelle cellule eucariotiche, la respirazione cellulare si svolge in gran parte all'interno dei mitocondri, gli organuli già descritti nel capitolo 18, la cui struttura interna, caratterizzata da un'ampia superficie di membrana ripiegata, è specificamente adatta a ospitare le numerose reazioni chimiche, organizzate in diverse tappe successive, che compongono l'intero processo respiratorio: una prima fase, chiamata glicolisi, avviene nel citoplasma e scompone parzialmente il glucosio, mentre le fasi successive, che avvengono all'interno dei mitocondri, completano la demolizione della molecola, portando alla produzione della gran parte dell'ATP complessivamente ricavato dall'intero processo.</p>
+  <p><em>Esempio svolto:</em> la demolizione completa di una singola molecola di glucosio, attraverso la respirazione cellulare, permette alla cellula di produrre, a seconda del tipo di cellula e delle condizioni considerate, un numero di molecole di ATP compreso tipicamente tra 30 e 32: si tratta di una resa energetica molto elevata, che spiega perché la respirazione cellulare, pur essendo un processo più lento e complesso rispetto ad altre vie metaboliche alternative, rappresenti il principale meccanismo di produzione di energia per la maggior parte degli organismi pluricellulari, incluso l'uomo.</p>
+
+  <p class="titolo-capitolo">La respirazione in assenza di ossigeno: la fermentazione</p>
+  <p>Quando l'ossigeno non è disponibile in quantità sufficiente, come può accadere, ad esempio, in un muscolo umano sottoposto a uno sforzo fisico particolarmente intenso e prolungato, alcune cellule sono comunque in grado di ricavare una piccola quantità di energia dal glucosio attraverso un processo alternativo, chiamato fermentazione, che fa seguito alla sola glicolisi descritta in precedenza, senza richiedere il completamento del processo all'interno dei mitocondri.</p>
+  <p>La fermentazione produce una quantità di ATP per molecola di glucosio molto inferiore rispetto alla respirazione cellulare completa, ma presenta il vantaggio di non richiedere ossigeno: nelle cellule muscolari umane, la fermentazione lattica porta alla formazione di acido lattico come prodotto di scarto, il cui accumulo è in parte responsabile della sensazione di affaticamento muscolare avvertita durante uno sforzo intenso; in altri organismi, come i lieviti, avviene invece la fermentazione alcolica, che porta alla formazione di alcol etilico e anidride carbonica, un processo sfruttato dall'uomo fin dall'antichità nella produzione di bevande alcoliche e nella lievitazione del pane.</p>
+
+  <p class="titolo-capitolo">La fotosintesi clorofilliana</p>
+  <p>La fotosintesi clorofilliana è il processo, svolto dalle piante, dalle alghe e da alcuni batteri, attraverso cui l'energia luminosa proveniente dal Sole viene convertita in energia chimica, immagazzinata sotto forma di glucosio a partire da anidride carbonica e acqua: si tratta, in un certo senso, del processo esattamente inverso rispetto alla respirazione cellulare appena descritta, sia dal punto di vista chimico sia dal punto di vista energetico.</p>
+  <p class="formula">6 CO<sub>2</sub> + 6 H<sub>2</sub>O + energia luminosa → C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub></p>
+  <p>Nelle piante, la fotosintesi avviene principalmente all'interno dei cloroplasti, gli organuli già descritti nel capitolo 18, il cui interno contiene la clorofilla, un pigmento in grado di assorbire l'energia della luce solare, in particolare nella componente rossa e blu dello spettro visibile, mentre riflette prevalentemente la componente verde, conferendo alle piante la loro caratteristica colorazione. Il processo si articola in due fasi principali: le reazioni della fase luminosa, che avvengono nelle membrane interne del cloroplasto e utilizzano direttamente l'energia luminosa per produrre ATP e per liberare ossigeno a partire dalla scissione di molecole d'acqua; e le reazioni della fase oscura, o ciclo di Calvin, che avvengono nel fluido interno del cloroplasto e utilizzano l'ATP prodotto nella fase precedente per fissare il carbonio dell'anidride carbonica atmosferica, costruendo progressivamente la molecola di glucosio.</p>
+
+  <p class="titolo-capitolo">L'interdipendenza tra respirazione e fotosintesi</p>
+  <p>Osservando insieme le equazioni chimiche della respirazione cellulare e della fotosintesi clorofilliana, riportate in questo capitolo, si nota immediatamente come i prodotti dell'una costituiscano i materiali di partenza dell'altra, e viceversa: la fotosintesi consuma anidride carbonica e produce ossigeno e glucosio, mentre la respirazione consuma ossigeno e glucosio e produce anidride carbonica, in un ciclo strettamente interconnesso che collega il metabolismo delle piante a quello degli organismi che, come gli animali, non sono in grado di svolgere la fotosintesi.</p>
+  <p>Questa interdipendenza tra i due processi non riguarda soltanto le singole cellule, ma si estende all'intero pianeta, su scala globale: è proprio grazie all'azione combinata, nel corso di miliardi di anni, di innumerevoli organismi fotosintetici che l'atmosfera terrestre, la cui composizione chimica è stata descritta nel capitolo 13, si è progressivamente arricchita dell'ossigeno oggi indispensabile alla respirazione della maggior parte degli esseri viventi, incluso l'uomo, in un esempio particolarmente evidente di come i processi biologici e quelli propriamente geologici e atmosferici del nostro pianeta siano, in ultima analisi, profondamente e reciprocamente interconnessi tra loro.</p>
+</div>
+<!-- fine capitolo scienze 20 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci21.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

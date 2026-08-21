@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 15</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 15: l'idrosfera, acque marine e continentali -->
+<div id="capitolo-15-idrosfera" class="capitolo-storia">
+  <p class="titolo-capitolo">15 - L'idrosfera: acque marine e continentali - Classe 2</p>
+
+  <p class="titolo-capitolo">Che cos'è l'idrosfera</p>
+  <p>Dopo aver esaminato, nei due capitoli precedenti, l'involucro gassoso che avvolge la Terra, ci occupiamo ora dell'idrosfera, cioè dell'insieme di tutta l'acqua presente sul nostro pianeta, sia allo stato liquido sia allo stato solido, distribuita tra oceani, mari, fiumi, laghi, ghiacciai e falde sotterranee. L'acqua ricopre complessivamente circa il 71% della superficie terrestre, ma la sua distribuzione tra le diverse componenti dell'idrosfera è tutt'altro che uniforme: la stragrande maggioranza dell'acqua presente sulla Terra, pari a circa il 97,5% del totale, è costituita da acqua salata, contenuta principalmente negli oceani, mentre solo il restante 2,5% circa è acqua dolce, a sua volta distribuita in modo molto diseguale tra ghiacciai e calotte polari, che ne costituiscono la porzione largamente maggioritaria, acque sotterranee, e infine acque superficiali come fiumi e laghi, che rappresentano, sorprendentemente, solo una frazione molto piccola dell'intera acqua dolce disponibile sul pianeta.</p>
+
+  <p class="titolo-capitolo">Gli oceani e i mari</p>
+  <p>Gli oceani costituiscono, come già accennato, la componente largamente predominante dell'idrosfera, e vengono convenzionalmente suddivisi in cinque grandi bacini: l'oceano Pacifico, il più esteso e il più profondo di tutti, l'oceano Atlantico, l'oceano Indiano, l'oceano Antartico, che circonda il continente antartico, e l'oceano Artico, il più piccolo, situato attorno al Polo Nord e in larga parte ricoperto da banchi di ghiaccio marino. La profondità media degli oceani è di circa 3700 m, ma essa non è affatto uniforme, come già accennato nel capitolo 12 a proposito delle dorsali oceaniche: le profondità massime si registrano invece nelle fosse oceaniche, strette e profondissime depressioni che si formano in corrispondenza delle zone di subduzione descritte nello stesso capitolo, tra cui spicca la fossa delle Marianne, nell'oceano Pacifico, che con i suoi quasi 11 000 m rappresenta il punto più profondo dell'intera idrosfera terrestre.</p>
+  <p>L'acqua marina si distingue da quella dolce per la sua salinità, cioè per la quantità di sali disciolti in essa, espressa convenzionalmente in grammi di sale per ogni chilogrammo di acqua di mare, o in parti per mille (‰): il valore medio della salinità oceanica è pari a circa 35‰, ma esso può variare sensibilmente da una regione all'altra, risultando più elevato nei mari chiusi e caldi, dove l'evaporazione è particolarmente intensa, come nel Mar Rosso, e più basso nelle zone in cui l'apporto di acqua dolce da parte di grandi fiumi, oppure lo scioglimento dei ghiacci, è particolarmente rilevante.</p>
+  <p><em>Esempio svolto:</em> un campione di 2 kg di acqua di mare, fatto evaporare completamente in laboratorio, lascia sul fondo del recipiente un residuo salino di 70 g. La salinità di questo campione, espressa in parti per mille, si calcola con una semplice proporzione: se 2 kg (cioè 2000 g) di acqua contengono 70 g di sale, allora 1000 g di acqua ne conterranno S = 70 ÷ 2000 × 1000 = 35 g, cioè una salinità di 35‰, un valore perfettamente in linea con la media oceanica.</p>
+
+  <p class="titolo-capitolo">I movimenti delle acque marine</p>
+  <p>Le acque degli oceani non sono ferme, ma sono percorse da diversi tipi di movimento. Le maree, già descritte nel capitolo 6 a proposito dell'attrazione gravitazionale esercitata dalla Luna e dal Sole, rappresentano uno di questi movimenti; le onde, invece, sono increspature della superficie del mare generate principalmente dall'attrito del vento sull'acqua, la cui altezza dipende dall'intensità e dalla durata del vento stesso, oltre che dall'estensione del tratto di mare su cui esso soffia.</p>
+  <p>Le correnti marine sono invece grandi masse d'acqua che si spostano lungo percorsi relativamente stabili e prevedibili all'interno degli oceani, generate principalmente dall'azione dei venti dominanti sulla superficie del mare, come gli alisei e i venti occidentali già descritti nel capitolo precedente, ma influenzate anche dalla forza di Coriolis dovuta alla rotazione terrestre e da differenze di temperatura e salinità tra le diverse masse d'acqua. Le correnti superficiali, come la corrente del Golfo nell'Atlantico settentrionale, svolgono un ruolo climatico di primaria importanza, trasportando enormi quantità di calore dalle regioni tropicali verso le medie e alte latitudini, e contribuendo in modo determinante a rendere il clima dell'Europa occidentale significativamente più mite di quanto ci si aspetterebbe sulla base della sola latitudine.</p>
+
+  <p class="titolo-capitolo">Il ciclo dell'acqua</p>
+  <p>Il ciclo dell'acqua, o ciclo idrologico, è l'insieme dei processi attraverso cui l'acqua si trasferisce continuamente tra le diverse componenti dell'idrosfera e l'atmosfera, cambiando stato fisico e tornando, alla fine di ogni ciclo, a una condizione simile a quella di partenza. Il processo ha inizio con l'evaporazione dell'acqua superficiale, soprattutto quella oceanica, che, riscaldata dall'energia solare, passa dallo stato liquido allo stato di vapore acqueo e si disperde nell'atmosfera, dove, come già visto nel capitolo precedente, può condensare formando le nubi e successivamente ricadere al suolo sotto forma di precipitazioni.</p>
+  <p>Una volta raggiunto il suolo, l'acqua precipitata può seguire percorsi diversi: una parte scorre in superficie, dando origine al ruscellamento che alimenta fiumi e laghi, che a loro volta la riconducono, generalmente, fino al mare; una parte si infiltra nel terreno, andando ad alimentare le falde acquifere sotterranee di cui parleremo tra poco; una parte viene assorbita dalle piante e successivamente rilasciata nell'atmosfera sotto forma di vapore acqueo attraverso il fenomeno della traspirazione; e una parte, infine, può accumularsi sotto forma di neve e ghiaccio nelle regioni più fredde del pianeta, per essere restituita al ciclo solo dopo tempi anche molto lunghi.</p>
+
+  <p class="titolo-capitolo">Le acque continentali superficiali</p>
+  <p>I fiumi sono corsi d'acqua che scorrono in modo continuo lungo un percorso definito, chiamato alveo, alimentati dall'acqua raccolta in un determinato territorio, chiamato bacino idrografico, delimitato da linee di displuvio, cioè da creste montuose o rilievi che separano il bacino di un fiume da quello dei fiumi vicini. Il tratto iniziale di un fiume, in cui esso ha origine, è chiamato sorgente, e può trovarsi in corrispondenza di uno sbocco di una falda acquifera sotterranea, dello scioglimento di un ghiacciaio, oppure semplicemente della confluenza di più ruscelli minori; il punto in cui il fiume termina il proprio percorso, riversando le proprie acque in un altro corpo idrico, generalmente il mare oppure un lago, è chiamato foce, che può assumere la forma di un delta, quando il fiume si suddivide in più rami prima di raggiungere il mare depositando i propri sedimenti, oppure di un estuario, quando la foce si presenta come un'unica ampia insenatura soggetta anche all'influsso delle maree.</p>
+  <p>I laghi sono invece bacini di acqua, generalmente dolce, contenuti in una depressione della superficie terrestre, chiamata conca lacustre, che può avere origine molto diversa: tettonica, quando la depressione è dovuta a movimenti della crosta terrestre legati alla tettonica delle placche descritta nel capitolo 12; glaciale, quando la depressione è stata scavata dall'azione erosiva di un ghiacciaio; oppure vulcanica, quando il lago occupa il cratere, o la caldera, di un vulcano non più attivo, come avviene per alcuni laghi dell'Italia centrale.</p>
+
+  <p class="titolo-capitolo">Le acque sotterranee</p>
+  <p>Una parte significativa dell'acqua che si infiltra nel terreno, come già accennato, si accumula in profondità, all'interno di rocce o sedimenti sufficientemente porosi e permeabili da consentirne il passaggio e l'immagazzinamento: queste formazioni, chiamate acquiferi, sono generalmente costituite da rocce sedimentarie clastiche a granulometria medio-grossa, come le ghiaie e le sabbie già descritte nel capitolo 9, i cui spazi vuoti tra i granuli, chiamati pori, sono in grado di trattenere quantità anche molto ingenti di acqua.</p>
+  <p>L'acqua contenuta in un acquifero si dispone tipicamente al di sopra di uno strato di roccia impermeabile, che ne impedisce l'ulteriore infiltrazione in profondità, formando una vera e propria riserva idrica sotterranea, il cui limite superiore, chiamato falda acquifera, o semplicemente falda, può trovarsi a profondità molto variabili, da pochi metri fino a diverse centinaia di metri dalla superficie: l'acqua di falda può raggiungere nuovamente la superficie in modo naturale, dando origine alle sorgenti già citate in precedenza, oppure può essere estratta artificialmente dall'uomo per mezzo di pozzi, rappresentando, in molte regioni del mondo, una delle principali risorse di acqua potabile disponibili.</p>
+</div>
+<!-- fine capitolo scienze 15 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci16.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

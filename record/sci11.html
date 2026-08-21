@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 11</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 11: i terremoti -->
+<div id="capitolo-11-terremoti" class="capitolo-storia">
+  <p class="titolo-capitolo">11 - I terremoti - Classe 1</p>
+
+  <p class="titolo-capitolo">Che cos'è un terremoto</p>
+  <p>Un terremoto, o sisma, è una vibrazione improvvisa e più o meno violenta della crosta terrestre, provocata dal rilascio istantaneo di energia accumulata nelle rocce, che si propaga in tutte le direzioni sotto forma di onde elastiche, chiamate onde sismiche. Sebbene alcuni terremoti possano avere origine vulcanica, legata ai movimenti di magma e gas descritti nel capitolo precedente, oppure origine artificiale, come nel caso di grandi esplosioni, la stragrande maggioranza dei terremoti, e in particolare quelli di maggiore energia, ha invece un'origine tettonica, cioè è legata ai movimenti delle placche litosferiche di cui parleremo più diffusamente nel prossimo capitolo.</p>
+  <p>L'origine tettonica di un terremoto è spiegata dal cosiddetto modello del rimbalzo elastico: le rocce della crosta terrestre, sottoposte a sollecitazioni continue dovute ai lenti movimenti delle placche, si deformano progressivamente in modo elastico, accumulando energia proprio come una molla o un elastico sottoposti a trazione, senza tuttavia spezzarsi immediatamente, grazie all'attrito che tiene bloccate le due porzioni di roccia lungo una superficie di frattura, chiamata faglia. Quando la sollecitazione accumulata supera la resistenza offerta dall'attrito lungo la faglia, le rocce si spezzano bruscamente e si spostano l'una rispetto all'altra, tornando in parte verso una posizione non deformata e rilasciando istantaneamente, sotto forma di onde sismiche, l'energia elastica fino ad allora accumulata.</p>
+
+  <p class="titolo-capitolo">Ipocentro ed epicentro</p>
+  <p>Il punto, situato in profondità all'interno della crosta o del mantello superiore, in cui ha origine la rottura delle rocce e da cui si propagano le onde sismiche, è chiamato ipocentro o fuoco del terremoto; il punto della superficie terrestre situato esattamente in verticale sopra l'ipocentro, cioè il punto più vicino a esso in linea d'aria, è invece chiamato epicentro, e corrisponde generalmente, anche se non sempre esattamente, al punto in cui gli effetti del terremoto risultano più intensi.</p>
+  <p>In base alla profondità dell'ipocentro, i terremoti vengono classificati in superficiali, con ipocentro a profondità inferiori a 70 km, che comprendono la grande maggioranza dei terremoti distruttivi registrati; intermedi, con ipocentro tra 70 e 300 km di profondità; e profondi, con ipocentro fino a circa 700 km, oltre il quale le rocce del mantello si comportano in modo troppo plastico, come vedremo in un capitolo successivo, per accumulare le tensioni elastiche necessarie a generare un terremoto secondo il meccanismo descritto in precedenza.</p>
+
+  <p class="titolo-capitolo">Le onde sismiche</p>
+  <p>L'energia rilasciata durante un terremoto si propaga sotto forma di diversi tipi di onde sismiche, che si distinguono per la velocità di propagazione e per il tipo di movimento che imprimono alle particelle di roccia attraversate. Le onde P, o onde primarie, sono onde longitudinali, in cui le particelle di roccia oscillano nella stessa direzione di propagazione dell'onda, comprimendo ed espandendo alternativamente il materiale attraversato, in modo analogo alla propagazione del suono nell'aria: sono le onde sismiche più veloci, con una velocità tipica di circa 6-8 km/s nella crosta terrestre, e sono pertanto le prime a essere registrate da uno strumento sismico dopo un terremoto.</p>
+  <p>Le onde S, o onde secondarie, sono onde trasversali, in cui le particelle di roccia oscillano perpendicolarmente alla direzione di propagazione dell'onda: sono più lente delle onde P, con una velocità tipica di circa 3-4 km/s, e possiedono una proprietà particolarmente importante, cioè quella di non potersi propagare attraverso i materiali allo stato liquido, poiché un liquido non è in grado di trasmettere sollecitazioni di taglio come quelle richieste dal movimento trasversale di queste onde. Oltre alle onde P e alle onde S, che si propagano attraverso l'interno della Terra e sono perciò chiamate onde di volume, esistono anche le onde superficiali, che si propagano esclusivamente lungo la superficie terrestre, con una velocità inferiore a quella delle onde di volume, ma con ampiezze di oscillazione generalmente maggiori, che le rendono spesso responsabili della maggior parte dei danni osservati in occasione dei terremoti più forti.</p>
+  <p><em>Esempio svolto:</em> in una stazione sismica posta a 180 km dall'epicentro di un terremoto, le onde P vengono registrate con una velocità media di 6 km/s e le onde S con una velocità media di 3 km/s. Il tempo di arrivo delle onde P è t<sub>P</sub> = 180 km ÷ 6 km/s = 30 s, mentre quello delle onde S è t<sub>S</sub> = 180 km ÷ 3 km/s = 60 s: la differenza tra i due tempi di arrivo, pari a 30 secondi in questo caso, è proprio il principio su cui si basano i metodi utilizzati dai sismologi per calcolare la distanza di una stazione sismica dall'epicentro di un terremoto, poiché tale differenza aumenta in modo proporzionale alla distanza percorsa dalle onde.</p>
+
+  <p class="titolo-capitolo">Gli strumenti e le scale di misura</p>
+  <p>Le onde sismiche vengono registrate per mezzo di uno strumento chiamato sismografo, il quale produce un tracciato, detto sismogramma, che riporta l'ampiezza delle vibrazioni del suolo in funzione del tempo, permettendo di individuare con precisione l'istante di arrivo delle diverse onde sismiche e, come mostrato nell'esempio precedente, di risalire alla distanza dell'epicentro. Utilizzando i dati registrati da almeno tre stazioni sismiche diverse, è possibile individuare con precisione anche la posizione geografica dell'epicentro, tramite un metodo di triangolazione basato sulle rispettive distanze calcolate.</p>
+  <p>Per esprimere in modo quantitativo la "forza" di un terremoto si utilizzano due tipi di scale, concettualmente molto diverse tra loro. Le scale di intensità, come la scala Mercalli, valutano gli effetti prodotti da un terremoto sull'ambiente, sugli edifici e sulla popolazione in un determinato luogo, e forniscono pertanto un valore che può variare sensibilmente da un luogo all'altro per uno stesso terremoto, risultando generalmente più elevato in prossimità dell'epicentro. Le scale di magnitudo, come la scala Richter, storicamente la più nota, oppure la scala della magnitudo momento, oggi più utilizzata dai sismologi per i terremoti di maggiore energia, misurano invece, sulla base dell'ampiezza delle onde sismiche registrate dai sismografi, l'energia complessivamente rilasciata dal terremoto alla sorgente, fornendo pertanto un unico valore, indipendente dal luogo di osservazione, per ciascun evento sismico.</p>
+  <p class="formula">ΔE ≈ 32 × (variazione di energia per ogni unità di magnitudo)</p>
+  <p>Le scale di magnitudo, come quella Richter, sono scale di tipo logaritmico: questo significa che un aumento di una singola unità di magnitudo corrisponde a un'onda sismica di ampiezza dieci volte maggiore, e a un'energia rilasciata dal terremoto approssimativamente 32 volte superiore, un fattore che rende conto di quanto un terremoto di magnitudo 7, ad esempio, sia enormemente più energetico, e non semplicemente "il doppio", di un terremoto di magnitudo 5.</p>
+
+  <p class="titolo-capitolo">Il rischio sismico</p>
+  <p>Il rischio sismico di una determinata area, cioè la probabilità che essa subisca danni a causa di un terremoto, dipende dalla combinazione di tre fattori distinti tra loro. La pericolosità sismica esprime la probabilità che un terremoto di una certa intensità si verifichi in una determinata zona in un dato intervallo di tempo, sulla base della storia sismica nota e delle caratteristiche geologiche dell'area; la vulnerabilità esprime invece la propensione degli edifici e delle infrastrutture presenti a subire danni in caso di terremoto, un fattore fortemente influenzato dalle tecniche costruttive impiegate e dal rispetto di normative antisismiche adeguate; l'esposizione, infine, esprime il valore, in termini di vite umane, beni ed attività economiche, effettivamente presente nell'area a rischio.</p>
+  <p>A differenza della pericolosità sismica, che è una caratteristica intrinseca di un territorio difficilmente modificabile dall'azione umana, sia la vulnerabilità sia l'esposizione possono essere ridotte in modo significativo attraverso interventi mirati, come l'adeguamento antisismico degli edifici esistenti, l'adozione di tecniche costruttive antisismiche per i nuovi edifici, e una più attenta pianificazione territoriale: proprio la riduzione della vulnerabilità è, ancora oggi, il principale strumento di prevenzione a disposizione delle comunità che vivono in aree ad elevata pericolosità sismica, come gran parte del territorio italiano.</p>
+</div>
+<!-- fine capitolo scienze 11 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci12.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

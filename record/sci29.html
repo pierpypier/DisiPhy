@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 29</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 29: la teoria dell'evoluzione, Darwin e il neodarwinismo -->
+<div id="capitolo-29-evoluzione-darwin-neodarwinismo" class="capitolo-storia">
+  <p class="titolo-capitolo">29 - La teoria dell'evoluzione: Darwin e il neodarwinismo - Classe 4</p>
+
+  <p class="titolo-capitolo">Le idee prima di Darwin</p>
+  <p>Con questo capitolo si apre una nuova sezione del manuale, dedicata all'evoluzione biologica, cioè al processo attraverso cui le specie viventi si trasformano nel corso del tempo, dando origine, nel corso di ere geologiche, alla straordinaria varietà di forme di vita oggi conosciute. Prima della metà dell'Ottocento, l'idea prevalente, nel mondo scientifico occidentale, era quella del fissismo, secondo cui le specie viventi sarebbero rimaste immutate fin dalla loro origine; alcuni naturalisti, come il francese Jean-Baptiste Lamarck, agli inizi del secolo, avevano già proposto modelli di trasformazione delle specie nel tempo, ma basati su meccanismi, come l'ereditarietà dei caratteri acquisiti durante la vita di un individuo, che si sarebbero in seguito rivelati scientificamente infondati alla luce delle conoscenze sulla genetica esaminate nei capitoli precedenti.</p>
+
+  <p class="titolo-capitolo">Darwin e l'origine delle specie</p>
+  <p>Il naturalista inglese Charles Darwin, dopo un lungo viaggio di esplorazione scientifica intorno al mondo a bordo della nave Beagle, compiuto tra il 1831 e il 1836, durante il quale raccolse un'enorme quantità di osservazioni sulla distribuzione geografica e sulle caratteristiche delle specie viventi, in particolare nell'arcipelago delle Galápagos, elaborò nel corso dei decenni successivi una teoria organica sull'origine e la trasformazione delle specie, pubblicata nel 1859 nell'opera "L'origine delle specie", uno dei testi scientifici più influenti mai pubblicati.</p>
+  <p>La teoria di Darwin si fonda su alcune osservazioni fondamentali, in larga parte già note ai naturalisti del tempo, e su un meccanismo esplicativo originale che ne costituisce il contributo più innovativo. Le osservazioni di partenza sono, in sintesi: gli individui di una stessa specie mostrano tra loro una notevole variabilità, per caratteristiche fisiche e comportamentali; molte di queste variazioni sono ereditarie, cioè trasmissibili dai genitori alla prole; le popolazioni di organismi viventi tendono a produrre, potenzialmente, un numero di discendenti ben superiore a quello che le risorse disponibili nell'ambiente, come cibo e spazio, sarebbero in grado di sostenere; ne consegue, di necessità, una lotta per la sopravvivenza tra gli individui della popolazione, per l'accesso a tali risorse limitate.</p>
+
+  <p class="titolo-capitolo">La selezione naturale</p>
+  <p>Da queste osservazioni, Darwin trasse la conclusione che costituisce il cuore della sua teoria: in un contesto di risorse limitate e di variabilità individuale ereditaria, gli individui che possiedono, per pura casualità, caratteristiche più favorevoli rispetto alle condizioni ambientali in cui vivono, avranno statisticamente maggiori probabilità di sopravvivere e di riprodursi con successo, trasmettendo tali caratteristiche vantaggiose alla propria discendenza in misura maggiore rispetto agli individui meno favoriti; questo processo, ripetuto nel corso di un numero molto elevato di generazioni, viene chiamato selezione naturale, e porta progressivamente all'accumulo, all'interno di una popolazione, delle caratteristiche più favorevoli all'ambiente in cui essa vive.</p>
+  <p>È importante sottolineare come la selezione naturale non agisca creando direttamente nuove caratteristiche in base a un bisogno percepito dall'organismo, secondo un fraintendimento piuttosto diffuso nel linguaggio comune, ma operi piuttosto come un filtro su variazioni già esistenti all'interno di una popolazione, sorte in modo del tutto casuale rispetto alle esigenze ambientali: solo la sopravvivenza differenziale di queste variazioni preesistenti, e non la loro origine, è guidata, in modo tutt'altro che casuale, dalle pressioni ambientali a cui la popolazione è sottoposta, secondo un principio spesso sintetizzato, con formula efficace anche se semplificata, nell'espressione "sopravvivenza del più adatto".</p>
+
+  <p class="titolo-capitolo">Il concetto di adattamento</p>
+  <p>Nel linguaggio dell'evoluzione biologica, l'adattamento non indica un processo che un singolo individuo compie consapevolmente nel corso della propria vita, ma piuttosto una caratteristica, di natura ereditaria, che risulta vantaggiosa per la sopravvivenza e la riproduzione degli organismi che la possiedono, in un determinato ambiente e in un determinato momento storico: poiché le condizioni ambientali possono mutare nel tempo, una caratteristica vantaggiosa in un dato contesto può rivelarsi neutra o addirittura svantaggiosa qualora l'ambiente stesso si trasformi, il che spiega perché l'evoluzione non proceda verso un ipotetico organismo "perfetto" in senso assoluto, ma rappresenti piuttosto un processo continuo di adeguamento, sempre relativo e mai definitivo, alle condizioni ambientali contingenti.</p>
+  <p><em>Esempio svolto:</em> un caso storicamente molto studiato di selezione naturale osservata direttamente è quello della farfalla Biston betularia, diffusa in Inghilterra: prima della rivoluzione industriale, la forma chiara di questa farfalla, mimetizzata efficacemente sui tronchi d'albero ricoperti di licheni chiari, era largamente predominante rispetto a una rara forma scura; con l'intensificarsi dell'inquinamento industriale, che annerì progressivamente i tronchi degli alberi nelle zone urbane e industriali, la forma scura, divenuta improvvisamente più mimetica e quindi meno esposta alla predazione da parte degli uccelli, aumentò rapidamente la propria frequenza nella popolazione, fino a diventare, in alcune aree fortemente inquinate, la forma nettamente predominante, per poi tornare a diminuire, nella seconda metà del Novecento, con il miglioramento delle condizioni ambientali dovuto alle politiche di riduzione dell'inquinamento atmosferico.</p>
+
+  <p class="titolo-capitolo">Il limite della teoria di Darwin e la sintesi moderna</p>
+  <p>La teoria originale di Darwin, per quanto rivoluzionaria e sostanzialmente corretta nelle sue linee generali, presentava un limite significativo, di cui lo stesso Darwin era consapevole: essa non era in grado di spiegare, sulla base delle conoscenze scientifiche disponibili all'epoca, né l'origine della variabilità ereditaria tra gli individui, né il meccanismo preciso attraverso cui tali caratteristiche venivano effettivamente trasmesse da una generazione alla successiva, poiché i lavori di Gregor Mendel sulla genetica, già esaminati nel capitolo 23, pur essendo contemporanei a quelli di Darwin, rimasero sostanzialmente sconosciuti alla comunità scientifica per diversi decenni.</p>
+  <p>Fu solo nella prima metà del Novecento, con la cosiddetta sintesi moderna, o neodarwinismo, che la teoria dell'evoluzione per selezione naturale di Darwin venne integrata organicamente con i principi della genetica mendeliana e con le successive scoperte sulla struttura del DNA e sulle mutazioni, già esaminate nei capitoli precedenti di questo manuale: alla luce di questa sintesi, oggi pienamente accettata dalla comunità scientifica, le mutazioni genetiche casuali, insieme alla ricombinazione genetica prodotta dalla riproduzione sessuata già descritta nel capitolo 22, costituiscono la fonte primaria della variabilità ereditaria su cui agisce la selezione naturale, fornendo così la spiegazione, mancante alla teoria originaria di Darwin, sia dell'origine sia della trasmissione delle caratteristiche su cui si basa l'intero processo evolutivo.</p>
+
+  <p class="titolo-capitolo">La deriva genetica</p>
+  <p>Accanto alla selezione naturale, la sintesi moderna ha riconosciuto l'esistenza di un ulteriore meccanismo evolutivo, chiamato deriva genetica, che consiste in variazioni casuali della frequenza di specifiche varianti geniche, chiamate alleli come già descritto nel capitolo 23, all'interno di una popolazione, dovute non alla loro utilità o dannosità per la sopravvivenza, ma alla semplice casualità con cui gli individui portatori di un determinato allele si riproducono con maggiore o minore successo, indipendentemente dal loro effettivo valore adattativo.</p>
+  <p>La deriva genetica risulta particolarmente rilevante, dal punto di vista evolutivo, nelle popolazioni di piccole dimensioni, in cui le fluttuazioni casuali nella trasmissione degli alleli da una generazione alla successiva hanno un peso proporzionalmente maggiore rispetto a quanto avviene nelle popolazioni numerose: la selezione naturale e la deriva genetica agiscono quindi congiuntamente, spesso in modo difficile da distinguere nella pratica, nel determinare l'effettivo percorso evolutivo seguito da una popolazione nel corso del tempo.</p>
+</div>
+<!-- fine capitolo scienze 29 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci30.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

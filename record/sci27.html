@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 27</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 27: la regolazione genica e le mutazioni -->
+<div id="capitolo-27-regolazione-genica-mutazioni" class="capitolo-storia">
+  <p class="titolo-capitolo">27 - La regolazione genica e le mutazioni - Classe 3</p>
+
+  <p class="titolo-capitolo">Non tutti i geni sono sempre attivi</p>
+  <p>Nel capitolo precedente abbiamo descritto come l'informazione contenuta in un gene venga trascritta in mRNA e successivamente tradotta in una proteina: è importante osservare, tuttavia, che non tutti i geni presenti nel DNA di una cellula vengono trascritti contemporaneamente e con la stessa intensità in ogni momento. Un esempio particolarmente evidente di questo fatto è offerto dagli organismi pluricellulari, già introdotti nel capitolo 16: pur derivando tutte, per successive divisioni mitotiche descritte nel capitolo 21, da un'unica cellula di partenza, e possedendo quindi tutte lo stesso identico patrimonio genetico, le diverse cellule di un organismo pluricellulare si differenziano tra loro in tipi cellulari molto diversi, come le cellule nervose, muscolari o del sangue che incontreremo nei capitoli dedicati all'anatomia umana, proprio perché, in ciascun tipo cellulare, viene attivamente trascritto solo un sottoinsieme specifico dei geni complessivamente presenti nel genoma.</p>
+  <p>L'insieme dei meccanismi che permettono alla cellula di attivare o disattivare selettivamente la trascrizione dei singoli geni, in funzione del tipo cellulare, dello stadio di sviluppo dell'organismo o delle condizioni ambientali, viene chiamato regolazione genica: si tratta di un livello di controllo aggiuntivo, che si sovrappone al semplice possesso dell'informazione genetica descritta nei capitoli precedenti, e che risulta indispensabile per il corretto funzionamento di qualsiasi organismo pluricellulare.</p>
+
+  <p class="titolo-capitolo">I meccanismi della regolazione genica</p>
+  <p>La regolazione dell'espressione genica può intervenire in diversi momenti del percorso che dal DNA conduce alla proteina finale, già descritto nel capitolo precedente, sebbene il livello di controllo più diffuso ed efficiente riguardi proprio l'avvio della trascrizione stessa: specifiche proteine regolatrici, chiamate fattori di trascrizione, sono in grado di legarsi a brevi sequenze di DNA situate in prossimità del promotore di un gene, già introdotto nel capitolo precedente, favorendo oppure ostacolando il legame dell'RNA polimerasi e, di conseguenza, aumentando o diminuendo la frequenza con cui quel particolare gene viene trascritto.</p>
+  <p>Oltre alla regolazione a livello della trascrizione, la cellula dispone di ulteriori livelli di controllo, che agiscono in fasi successive: la regolazione può intervenire sulla stabilità e sulla durata di vita della molecola di mRNA una volta prodotta, sull'efficienza con cui l'mRNA viene effettivamente tradotto in proteina a livello dei ribosomi, oppure, infine, sulla stabilità e sulla durata di vita della proteina stessa una volta sintetizzata, in modo che la cellula possa modulare con grande precisione la quantità effettivamente disponibile di ciascuna proteina in ogni momento, in base alle proprie necessità funzionali.</p>
+
+  <p class="titolo-capitolo">Che cos'è una mutazione</p>
+  <p>Nonostante l'elevatissima accuratezza della duplicazione del DNA, già sottolineata nel capitolo 25 a proposito dell'attività di correzione della DNA polimerasi, la sequenza di basi di un gene può occasionalmente subire alterazioni permanenti, chiamate mutazioni: una mutazione è quindi, in termini generali, un cambiamento nella sequenza del DNA di un organismo, che può insorgere spontaneamente, a causa di rari errori sfuggiti ai meccanismi di correzione già descritti, oppure essere indotta dall'esposizione a specifici agenti esterni, chiamati agenti mutageni, come alcune radiazioni, tra cui la radiazione ultravioletta già citata nel capitolo 13 a proposito dello strato di ozono, oppure alcune sostanze chimiche.</p>
+  <p>Le mutazioni che interessano le cellule somatiche di un organismo, già descritte nel capitolo 21, rimangono generalmente confinate al singolo individuo e non vengono trasmesse alla discendenza, poiché non interessano i gameti; le mutazioni che interessano invece le cellule germinali, cioè le cellule da cui hanno origine i gameti attraverso la meiosi descritta nel capitolo 22, possono essere trasmesse alla progenie, entrando potenzialmente a far parte del patrimonio genetico ereditario della specie, e costituendo, come vedremo nei capitoli dedicati all'evoluzione, una delle principali fonti della variabilità genetica su cui agisce la selezione naturale.</p>
+
+  <p class="titolo-capitolo">Le mutazioni puntiformi</p>
+  <p>Le mutazioni puntiformi sono il tipo di mutazione più semplice, e consistono nell'alterazione di una singola base azotata all'interno della sequenza di DNA: la sostituzione è il caso più semplice, in cui una base viene semplicemente rimpiazzata da una base diversa, mentre l'inserzione e la delezione consistono, rispettivamente, nell'aggiunta o nella perdita di una o più basi all'interno della sequenza.</p>
+  <p>Gli effetti di una mutazione puntiforme sul fenotipo dell'organismo dipendono in modo determinante dal tipo specifico di alterazione e dalla sua posizione all'interno del gene, alla luce delle proprietà del codice genetico già descritte nel capitolo precedente: una sostituzione può risultare silente, se il nuovo codone risultante, grazie alla ridondanza del codice genetico, continua a specificare lo stesso amminoacido di partenza, senza quindi alcun effetto sulla proteina finale; oppure missenso, se il nuovo codone specifica un amminoacido diverso, con conseguenze sulla proteina che possono variare da trascurabili a molto gravi, a seconda dell'importanza funzionale della posizione interessata; oppure, ancora, non senso, se il nuovo codone si trasforma in un codone di stop, causando un'interruzione prematura della sintesi della proteina, generalmente non funzionale. Le mutazioni per inserzione o delezione, quando il numero di basi coinvolte non è un multiplo di tre, producono un effetto particolarmente drastico, chiamato mutazione per scivolamento del modulo di lettura, poiché alterano il raggruppamento in terzine dell'intera sequenza di codoni a valle del punto mutato, stravolgendo completamente la sequenza di amminoacidi codificata da quel punto in poi.</p>
+
+  <p class="titolo-capitolo">Le mutazioni cromosomiche</p>
+  <p>Accanto alle mutazioni puntiformi, che interessano una o poche basi all'interno di un singolo gene, esistono anche mutazioni di portata molto più ampia, chiamate mutazioni cromosomiche, che coinvolgono intere porzioni di un cromosoma, oppure il numero complessivo di cromosomi presenti nella cellula. Le mutazioni che alterano la struttura di un singolo cromosoma comprendono la delezione, cioè la perdita di un intero segmento cromosomico, la duplicazione, cioè la ripetizione di un segmento, l'inversione, cioè il capovolgimento dell'orientamento di un segmento all'interno dello stesso cromosoma, e la traslocazione, cioè lo spostamento di un segmento da un cromosoma a un altro non omologo.</p>
+  <p>Le mutazioni che alterano invece il numero complessivo di cromosomi presenti nella cellula, chiamate aneuploidie, sono spesso il risultato di errori di non disgiunzione durante la meiosi, già descritti nel capitolo 22 a proposito della sindrome di Down: si tratta, in generale, del tipo di mutazione con conseguenze fenotipiche più gravi, poiché alterando drasticamente il dosaggio di un numero molto elevato di geni contemporaneamente, spesso non risultano compatibili con un normale sviluppo dell'organismo.</p>
+
+  <p class="titolo-capitolo">Il ruolo evolutivo delle mutazioni</p>
+  <p>Sebbene il termine "mutazione" evochi spesso, nel linguaggio comune, un'idea prevalentemente negativa, è importante sottolineare come le mutazioni, dal punto di vista biologico, non siano di per sé né vantaggiose né svantaggiose, ma rappresentino semplicemente una fonte di variazione casuale nel patrimonio genetico: la maggior parte delle mutazioni che interessano il DNA di un organismo risulta, di fatto, neutra, cioè priva di effetti apprezzabili sul fenotipo, mentre solo una minoranza produce effetti significativi, che possono essere dannosi, ma occasionalmente anche vantaggiosi per l'organismo che le porta.</p>
+  <p>Proprio in virtù di questa possibilità, per quanto statisticamente rara, di produrre varianti vantaggiose, le mutazioni delle cellule germinali costituiscono, insieme al crossing over e all'assortimento indipendente già descritti nel capitolo 22 a proposito della meiosi, una delle principali fonti della variabilità genetica su cui si basa il processo dell'evoluzione per selezione naturale, che sarà esaminato in dettaglio nei prossimi capitoli di questo manuale.</p>
+</div>
+<!-- fine capitolo scienze 27 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci28.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

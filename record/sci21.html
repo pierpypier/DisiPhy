@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 21</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 21: la divisione cellulare, il ciclo cellulare e la mitosi -->
+<div id="capitolo-21-ciclo-cellulare-mitosi" class="capitolo-storia">
+  <p class="titolo-capitolo">21 - La divisione cellulare: il ciclo cellulare e la mitosi - Classe 3</p>
+
+  <p class="titolo-capitolo">La divisione cellulare come base della vita</p>
+  <p>Nel capitolo 18 abbiamo richiamato, tra i principi della teoria cellulare, l'idea che ogni cellula derivi sempre da un'altra cellula preesistente attraverso un processo di divisione: con questo capitolo iniziamo ad approfondire in dettaglio proprio questo processo, che sta alla base tanto della crescita e dello sviluppo degli organismi pluricellulari, già menzionati nel capitolo 16, quanto della riproduzione degli organismi unicellulari.</p>
+  <p>La divisione di una cellula, per dare origine a due nuove cellule, richiede necessariamente che il materiale genetico contenuto nel nucleo, descritto nel capitolo 18, venga preventivamente duplicato e successivamente distribuito in modo accurato ed equo tra le due cellule figlie, in modo che ciascuna di esse riceva un patrimonio genetico completo e identico a quello della cellula di partenza: è proprio la necessità di garantire questa accurata distribuzione del materiale genetico a rendere la divisione cellulare un processo articolato in fasi ben distinte e regolate, che esamineremo in questo capitolo.</p>
+
+  <p class="titolo-capitolo">I cromosomi</p>
+  <p>Il DNA contenuto nel nucleo di una cellula eucariotica, già descritto nel capitolo 17 tra gli acidi nucleici, non si trova disperso in modo disordinato, ma è organizzato in strutture ben definite, chiamate cromosomi, ciascuna costituita da una singola, lunghissima molecola di DNA lineare, strettamente associata a specifiche proteine, chiamate istoni, attorno a cui il filamento di DNA si avvolge ripetutamente, permettendo di compattare, all'interno del piccolo volume del nucleo cellulare, una quantità di materiale genetico che, se completamente disteso, raggiungerebbe una lunghezza di gran lunga superiore alle dimensioni della cellula stessa.</p>
+  <p>Nella maggior parte delle cellule del corpo umano, chiamate cellule somatiche, il patrimonio genetico è organizzato in 46 cromosomi, disposti in 23 coppie di cromosomi omologhi, cioè simili tra loro per forma e per il tipo di informazioni genetiche che contengono, uno di origine materna e uno di origine paterna per ciascuna coppia: una cellula che possiede due copie di ciascun cromosoma, come le cellule somatiche appena descritte, viene definita diploide, in contrapposizione alle cellule aploidi, dotate di un'unica copia di ciascun cromosoma, che incontreremo nel prossimo capitolo a proposito della riproduzione sessuata.</p>
+
+  <p class="titolo-capitolo">Il ciclo cellulare</p>
+  <p>Il ciclo cellulare è la sequenza ordinata di eventi attraverso cui una cellula cresce, duplica il proprio materiale genetico e infine si divide, dando origine a due nuove cellule figlie: esso si suddivide in due fasi principali, l'interfase e la fase mitotica, di durata molto diversa tra loro nella maggior parte delle cellule.</p>
+  <p>L'interfase è la fase più lunga del ciclo cellulare, durante la quale la cellula svolge le proprie normali funzioni metaboliche, già descritte nei capitoli precedenti, e si prepara attivamente alla divisione: essa si articola a sua volta in tre sottofasi, chiamate G1, S e G2, di cui la fase S, o fase di sintesi, è particolarmente importante poiché è proprio in questa sottofase che avviene la duplicazione dell'intero patrimonio genetico della cellula, un processo che approfondiremo nel dettaglio in un capitolo successivo dedicato alla struttura del DNA. Al termine dell'interfase, ciascun cromosoma risulta quindi duplicato in due copie identiche, chiamate cromatidi fratelli, tenute unite tra loro in una regione ristretta chiamata centromero.</p>
+
+  <p class="titolo-capitolo">Le fasi della mitosi</p>
+  <p>La mitosi è il processo di divisione del nucleo cellulare che porta alla formazione di due nuclei figli, ciascuno dotato di un patrimonio genetico identico, per numero e tipo di cromosomi, a quello della cellula madre di partenza: si tratta pertanto di un processo di divisione conservativo, adatto alla crescita e al rinnovamento dei tessuti negli organismi pluricellulari, nonché alla riproduzione asessuata già accennata nel capitolo 16 negli organismi unicellulari.</p>
+  <p>La mitosi si articola convenzionalmente in quattro fasi successive. Nella profase, i cromosomi, già duplicati durante l'interfase, si condensano progressivamente, passando da una forma filamentosa e distesa a una forma molto più compatta, mentre l'involucro nucleare, descritto nel capitolo 18, inizia a disgregarsi. Nella metafase, i cromosomi, ciascuno ancora costituito dai due cromatidi fratelli uniti al centromero, si allineano lungo un piano immaginario, situato a metà strada tra i due poli opposti della cellula, agganciati a un apparato di sottili filamenti proteici, chiamato fuso mitotico.</p>
+  <p>Nell'anafase, i due cromatidi fratelli di ciascun cromosoma si separano l'uno dall'altro e vengono trascinati, grazie all'accorciamento del fuso mitotico, verso i due poli opposti della cellula, ciascuno dei quali riceve così una copia completa e identica dell'intero patrimonio genetico. Nella telofase, infine, i cromosomi, ormai giunti ai due poli della cellula, iniziano a decondensarsi nuovamente, mentre attorno a ciascun gruppo di cromosomi si riforma un nuovo involucro nucleare, completando così la formazione di due nuclei figli distinti all'interno della stessa cellula.</p>
+
+  <p class="titolo-capitolo">La citodieresi</p>
+  <p>La divisione del nucleo cellulare descritta dalla mitosi non coincide, dal punto di vista temporale, con la divisione dell'intera cellula: quest'ultimo processo, chiamato citodieresi, avviene generalmente in sovrapposizione con la telofase, e porta alla separazione fisica del citoplasma della cellula madre, con il contenuto degli organuli già descritti nel capitolo 18, in due cellule figlie distinte, ciascuna dotata del proprio nucleo appena formato.</p>
+  <p>La citodieresi avviene con modalità differenti nelle cellule animali e in quelle vegetali, per via delle diverse caratteristiche strutturali già evidenziate nel capitolo 18: nelle cellule animali, prive di una parete cellulare rigida, la membrana plasmatica si restringe progressivamente lungo una linea equatoriale, fino a strozzarsi completamente e separare le due cellule figlie; nelle cellule vegetali, la cui parete cellulare rigida impedisce questo tipo di strozzamento, si forma invece, a partire dal centro della cellula, una nuova parete divisoria, chiamata piastra cellulare, che si estende progressivamente verso l'esterno fino a separare completamente le due cellule figlie, ciascuna delle quali si ritroverà dotata della propria parete cellulare completa.</p>
+
+  <p class="titolo-capitolo">La regolazione del ciclo cellulare</p>
+  <p>Il ciclo cellulare appena descritto non procede in modo incontrollato, ma è sottoposto a una regolazione molto precisa, basata sulla presenza, in punti specifici del ciclo, di veri e propri "posti di controllo", chiamati checkpoint, in corrispondenza dei quali la cellula verifica che le fasi precedenti si siano svolte correttamente, ad esempio che la duplicazione del DNA nella fase S sia avvenuta senza errori, prima di consentire il proseguimento del ciclo verso la fase successiva.</p>
+  <p>Questa rigorosa regolazione è di fondamentale importanza per il corretto funzionamento di un organismo pluricellulare, poiché consente di coordinare la proliferazione cellulare con le effettive necessità dell'organismo, ad esempio interrompendo la divisione una volta che un tessuto danneggiato è stato adeguatamente riparato: un'alterazione dei normali meccanismi di regolazione del ciclo cellulare, che porti le cellule a dividersi in modo incontrollato anche in assenza delle normali condizioni che dovrebbero consentirlo, è alla base della formazione dei tumori, un argomento che sarà ripreso più diffusamente nei capitoli successivi del manuale dedicati alla genetica.</p>
+</div>
+<!-- fine capitolo scienze 21 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci22.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

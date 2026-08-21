@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 24</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 24: la genetica dopo Mendel, eredità complessa -->
+<div id="capitolo-24-genetica-dopo-mendel" class="capitolo-storia">
+  <p class="titolo-capitolo">24 - La genetica dopo Mendel: eredità complessa - Classe 3</p>
+
+  <p class="titolo-capitolo">Oltre i modelli mendeliani</p>
+  <p>Nel capitolo precedente abbiamo esaminato le leggi formulate da Gregor Mendel, che descrivono con grande efficacia il comportamento ereditario di caratteri controllati da un singolo gene, dotato di due alleli in rapporto di dominanza completa l'uno sull'altro. Nei decenni successivi alla riscoperta delle leggi di Mendel, avvenuta agli inizi del Novecento, i genetisti si resero tuttavia conto che numerosi caratteri ereditari non seguono in modo così semplice e diretto gli schemi mendeliani originari, pur continuando a rispettare, alla base, gli stessi meccanismi di trasmissione dei geni attraverso i gameti già descritti nel capitolo 22 a proposito della meiosi.</p>
+  <p>Questo capitolo esamina alcune delle più importanti estensioni ed eccezioni ai modelli ereditari semplici studiati da Mendel, che permettono di rendere conto, in modo più completo e realistico, della straordinaria varietà di modalità con cui i caratteri ereditari si trasmettono di generazione in generazione negli organismi viventi, uomo compreso.</p>
+
+  <p class="titolo-capitolo">La dominanza incompleta</p>
+  <p>Nei casi di dominanza incompleta, a differenza di quanto previsto dal modello di dominanza completa studiato da Mendel, l'eterozigote, cioè l'individuo portatore di due alleli diversi per un dato gene, non manifesta lo stesso fenotipo dell'omozigote dominante, ma un fenotipo intermedio tra quelli dei due omozigoti, come se i due alleli si "mescolassero" parzialmente nella loro espressione.</p>
+  <p>Un classico esempio di dominanza incompleta si osserva nel colore dei fiori della pianta ornamentale bocca di leone: incrociando una pianta a fiori rossi, omozigote per l'allele che codifica per il colore rosso, con una pianta a fiori bianchi, omozigote per l'allele alternativo, la generazione F<sub>1</sub> risultante non presenta fiori rossi come ci si aspetterebbe in un caso di dominanza completa, bensì fiori di colore rosa, intermedio tra quello dei due genitori: incrociando poi tra loro due piante F<sub>1</sub> a fiori rosa, si ottiene, nella generazione F<sub>2</sub>, una segregazione fenotipica nel rapporto di 1 pianta a fiori rossi, 2 piante a fiori rosa, e 1 pianta a fiori bianchi, un rapporto che, pur diverso da quello 3:1 tipico della dominanza completa studiato nel capitolo precedente, riflette comunque, alla base, lo stesso rapporto genotipico 1:2:1 previsto dalla prima legge di Mendel.</p>
+
+  <p class="titolo-capitolo">La codominanza</p>
+  <p>Nei casi di codominanza, l'eterozigote non manifesta un fenotipo intermedio, come nella dominanza incompleta appena descritta, ma manifesta contemporaneamente ed entrambi pienamente i fenotipi corrispondenti ai due alleli ereditati, che risultano quindi entrambi "dominanti" allo stesso tempo, senza mescolarsi né prevalere l'uno sull'altro.</p>
+  <p>Un esempio ben noto di codominanza, particolarmente rilevante in ambito medico, è quello del sistema dei gruppi sanguigni AB0 nell'uomo, controllato da un unico gene dotato di tre alleli diversi, chiamati I<sup>A</sup>, I<sup>B</sup> e i: gli alleli I<sup>A</sup> e I<sup>B</sup> sono entrambi dominanti rispetto all'allele i, ma sono tra loro codominanti, per cui un individuo eterozigote per entrambi, con genotipo I<sup>A</sup>I<sup>B</sup>, presenta fenotipo di gruppo sanguigno AB, esprimendo contemporaneamente sulla superficie dei propri globuli rossi entrambi gli antigeni corrispondenti ai due alleli ereditati, anziché uno solo dei due come avverrebbe in un caso di semplice dominanza.</p>
+
+  <p class="titolo-capitolo">L'allelia multipla</p>
+  <p>Come già evidenziato a proposito del sistema AB0, molti geni, a differenza dei casi più semplici studiati da Mendel, in cui erano presenti solo due alleli alternativi per ciascun carattere, possiedono in realtà più di due varianti alleliche diverse presenti nella popolazione complessiva di una specie, un fenomeno chiamato allelia multipla: è importante osservare come, nonostante la presenza di più alleli a livello di popolazione, ciascun singolo individuo diploide continui comunque a possedere, per quel gene, soltanto due alleli alla volta, uno di origine paterna e uno di origine materna, secondo il meccanismo già descritto nei capitoli precedenti a proposito della meiosi e della fecondazione.</p>
+
+  <p class="titolo-capitolo">L'eredità poligenica</p>
+  <p>Diversamente dai caratteri mendeliani classici, controllati da un singolo gene, molti caratteri fenotipici di grande interesse biologico, come la statura, il colore della pelle o il peso corporeo nell'uomo, sono controllati contemporaneamente da numerosi geni diversi, ciascuno dei quali contribuisce in modo relativamente piccolo e additivo al fenotipo complessivo: questo tipo di eredità viene chiamato eredità poligenica.</p>
+  <p>A differenza dei caratteri mendeliani semplici, che si presentano tipicamente in un numero ristretto di categorie fenotipiche ben distinte tra loro, i caratteri poligenici mostrano generalmente una variazione fenotipica continua all'interno di una popolazione, distribuita secondo un andamento a campana attorno a un valore medio, poiché il numero elevato di geni coinvolti, ciascuno con un contributo limitato, consente un numero molto elevato di possibili combinazioni intermedie tra i due fenotipi estremi. L'espressione finale di un carattere poligenico, inoltre, risulta spesso ulteriormente modulata dall'interazione con fattori ambientali, come l'alimentazione nel caso della statura, rendendo la relazione tra genotipo e fenotipo, in questi casi, ancora più articolata rispetto ai semplici modelli mendeliani.</p>
+
+  <p class="titolo-capitolo">I geni associati e il crossing over</p>
+  <p>Le leggi di Mendel, e in particolare la legge dell'assortimento indipendente già richiamata nel capitolo precedente, presuppongono implicitamente che i diversi geni considerati si trovino su cromosomi diversi, in modo da poter segregare in modo del tutto indipendente l'uno dall'altro durante la meiosi, secondo quanto già descritto nel capitolo 22. Quando invece due o più geni si trovano sullo stesso cromosoma, essi vengono definiti geni associati, o "linked", e tendono a essere trasmessi insieme, come un blocco unico, dal genitore alla progenie, poiché normalmente seguono lo stesso cromosoma durante la meiosi.</p>
+  <p>Questa associazione tra geni situati sullo stesso cromosoma non è tuttavia assoluta, ma può essere parzialmente interrotta dal fenomeno del crossing over, già descritto nel capitolo precedente, che rimescola le combinazioni alleliche presenti sui due cromosomi omologhi durante la meiosi I: quanto più due geni associati si trovano fisicamente distanti tra loro lungo lo stesso cromosoma, tanto maggiore risulta la probabilità che un evento di crossing over intervenga proprio nel tratto di DNA compreso tra i due geni, separandoli e dando origine a nuove combinazioni alleliche nella progenie; questa relazione tra distanza fisica sul cromosoma e frequenza di ricombinazione osservata ha permesso ai genetisti, fin dai primi decenni del Novecento, di costruire vere e proprie mappe genetiche, che rappresentano la posizione relativa dei geni lungo un cromosoma.</p>
+
+  <p class="titolo-capitolo">L'eredità legata al sesso</p>
+  <p>Un caso particolare di associazione genica riguarda i geni situati sui cromosomi sessuali, cioè sulla coppia di cromosomi, tra le 23 già descritte nel capitolo 21, che determina il sesso di un individuo: nella specie umana, gli individui di sesso femminile possiedono due cromosomi X, mentre gli individui di sesso maschile possiedono un cromosoma X e un cromosoma Y, quest'ultimo significativamente più piccolo e contenente un numero molto minore di geni rispetto al cromosoma X.</p>
+  <p>I caratteri controllati da geni situati sul cromosoma X, chiamati caratteri legati al sesso, mostrano un particolare schema di trasmissione ereditaria, poiché un individuo di sesso maschile, possedendo un solo cromosoma X, manifesterà il fenotipo corrispondente al singolo allele presente su quel cromosoma, anche qualora tale allele sia recessivo, senza la possibilità di essere "mascherato" da un secondo allele come avverrebbe invece in un individuo di sesso femminile, dotato di due cromosomi X: questo meccanismo spiega perché alcune malattie genetiche legate al cromosoma X, come il daltonismo o l'emofilia, risultino statisticamente molto più frequenti negli individui di sesso maschile rispetto a quelli di sesso femminile, un tema che sarà ripreso più diffusamente nei capitoli dedicati alla genetica umana.</p>
+</div>
+<!-- fine capitolo scienze 24 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci25.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
