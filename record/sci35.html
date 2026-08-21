@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 35</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 35: l'apparato circolatorio e il sangue -->
+<div id="capitolo-35-apparato-circolatorio-sangue" class="capitolo-storia">
+  <p class="titolo-capitolo">35 - L'apparato circolatorio e il sangue - Classe 4</p>
+
+  <p class="titolo-capitolo">La funzione dell'apparato circolatorio</p>
+  <p>Nei due capitoli precedenti abbiamo esaminato come l'apparato digerente renda disponibili i nutrienti provenienti dagli alimenti, e come l'apparato respiratorio garantisca gli scambi di ossigeno e anidride carbonica con l'ambiente esterno: resta tuttavia da chiarire come queste sostanze, assorbite rispettivamente a livello intestinale e polmonare, possano effettivamente raggiungere le singole cellule dell'organismo, spesso situate a notevole distanza da questi organi. È proprio questo il compito dell'apparato circolatorio, un sistema di trasporto che, attraverso un liquido circolante, il sangue, distribuisce a tutte le cellule dell'organismo l'ossigeno e i nutrienti necessari, allontanando contemporaneamente l'anidride carbonica e gli altri prodotti di scarto del metabolismo cellulare.</p>
+
+  <p class="titolo-capitolo">Il sangue e i suoi componenti</p>
+  <p>Il sangue, già introdotto nel capitolo 32 come un particolare tipo di tessuto connettivo, è costituito da una componente liquida, il plasma, e da una componente cellulare, o corpuscolata, in essa sospesa: il plasma, che rappresenta circa il 55% del volume sanguigno complessivo, è costituito per la maggior parte da acqua, in cui sono disciolte numerose sostanze, tra cui proteine plasmatiche, nutrienti assorbiti a livello intestinale, ormoni e prodotti di scarto del metabolismo cellulare in transito verso gli organi deputati alla loro eliminazione.</p>
+  <p>La componente corpuscolata del sangue comprende tre tipi principali di elementi: i globuli rossi, o eritrociti, cellule prive di nucleo nella loro forma matura e ricche di emoglobina, la proteina già citata nel capitolo 17 specializzata nel legare reversibilmente l'ossigeno e a cui si deve il caratteristico colore rosso del sangue; i globuli bianchi, o leucociti, cellule di diverso tipo specializzate nella difesa dell'organismo dagli agenti patogeni, il cui funzionamento sarà approfondito nel capitolo dedicato al sistema immunitario; e le piastrine, frammenti cellulari privi di nucleo, coinvolti nel processo di coagulazione del sangue, cioè nella formazione di un tappo emostatico in grado di arrestare la fuoriuscita di sangue in caso di lesione di un vaso sanguigno.</p>
+  <p><em>Esempio svolto:</em> in un adulto sano, un millimetro cubo di sangue contiene mediamente circa 5 milioni di globuli rossi, tra 4000 e 10 000 globuli bianchi, e circa 250 000 piastrine: considerando che il volume totale di sangue circolante in un adulto di corporatura media è di circa 5 litri, cioè 5 milioni di mm³, si può stimare, per semplice moltiplicazione, un numero complessivo di globuli rossi nell'intero organismo pari a circa 5 000 000 × 5 000 000 = 2,5 × 10<sup>13</sup>, cioè circa 25 000 miliardi di globuli rossi, un valore che rende conto dell'enorme superficie complessiva disponibile per il trasporto dell'ossigeno in tutto il corpo.</p>
+
+  <p class="titolo-capitolo">Il cuore</p>
+  <p>Il cuore è l'organo muscolare cavo che, attraverso le proprie contrazioni ritmiche e involontarie, già accennate nel capitolo 32 a proposito del tessuto muscolare cardiaco, funge da vera e propria pompa per l'intero apparato circolatorio, garantendo la spinta necessaria a far progredire il sangue lungo l'intera rete dei vasi sanguigni. Il cuore umano è suddiviso internamente in quattro cavità: due cavità superiori, chiamate atri, che ricevono il sangue proveniente dalle vene, e due cavità inferiori, chiamate ventricoli, dotate di pareti muscolari più spesse e potenti, che pompano il sangue verso le arterie.</p>
+  <p>Il lato destro e il lato sinistro del cuore sono completamente separati tra loro da un setto muscolare continuo, e svolgono funzioni distinte all'interno di un sistema di circolazione doppia: il lato destro del cuore riceve il sangue povero di ossigeno proveniente da tutto l'organismo e lo pompa verso i polmoni, attraverso il circuito chiamato piccola circolazione, o circolazione polmonare, mentre il lato sinistro riceve il sangue ricco di ossigeno proveniente dai polmoni e lo pompa verso tutti i tessuti dell'organismo, attraverso il circuito chiamato grande circolazione, o circolazione sistemica.</p>
+
+  <p class="titolo-capitolo">I vasi sanguigni</p>
+  <p>I vasi sanguigni si distinguono in tre categorie principali, in base alla direzione del flusso sanguigno e alla propria struttura. Le arterie sono vasi dalle pareti spesse ed elastiche, in grado di resistere all'elevata pressione generata dalla contrazione cardiaca, e trasportano il sangue in direzione centrifuga, cioè dal cuore verso i tessuti periferici: contrariamente a una diffusa semplificazione, non tutte le arterie trasportano sangue ricco di ossigeno, poiché l'arteria polmonare, ad esempio, trasporta sangue povero di ossigeno dal cuore ai polmoni.</p>
+  <p>Le vene sono invece vasi dalle pareti più sottili e meno elastiche rispetto alle arterie, che trasportano il sangue in direzione centripeta, cioè dai tessuti periferici verso il cuore, spesso a una pressione relativamente bassa: per facilitare la risalita del sangue, in particolare dagli arti inferiori, contro l'azione della forza di gravità, molte vene sono dotate di apposite valvole interne, che impediscono il reflusso del sangue in direzione contraria e ne favoriscono la progressione, aiutata anche dalla contrazione dei muscoli scheletrici circostanti durante il movimento. I capillari, infine, sono i vasi sanguigni di calibro più piccolo, con pareti sottilissime costituite da un unico strato di cellule, che connettono la rete arteriosa a quella venosa, e che rappresentano la sede effettiva degli scambi di sostanze tra il sangue e i tessuti circostanti, in modo concettualmente analogo a quanto già descritto nel capitolo precedente a proposito degli scambi gassosi a livello degli alveoli polmonari.</p>
+
+  <p class="titolo-capitolo">La pressione sanguigna e il battito cardiaco</p>
+  <p>La pressione sanguigna è la forza che il sangue esercita sulle pareti dei vasi in cui scorre, e viene convenzionalmente misurata a livello delle arterie, indicando due valori distinti: la pressione sistolica, corrispondente al valore massimo raggiunto durante la contrazione dei ventricoli, chiamata sistole, e la pressione diastolica, corrispondente al valore minimo raggiunto durante il rilassamento dei ventricoli, chiamato diastole. Nell'adulto sano, questi valori si aggirano tipicamente attorno ai 120 mmHg per la pressione sistolica e agli 80 mmHg per quella diastolica, comunemente espressi nella forma "120 su 80".</p>
+  <p>Il ritmo delle contrazioni cardiache, chiamato frequenza cardiaca, misurato in battiti al minuto, è regolato da un particolare gruppo di cellule del tessuto muscolare cardiaco, dotate della capacità di generare spontaneamente e ritmicamente un impulso elettrico, senza necessità di uno stimolo esterno proveniente dal sistema nervoso: tale impulso si propaga poi rapidamente a tutto il tessuto muscolare cardiaco, coordinando la contrazione sincronizzata di atri e ventricoli. In un adulto sano a riposo, la frequenza cardiaca si aggira tipicamente tra 60 e 100 battiti al minuto, sebbene il sistema nervoso, agendo su questo ritmo di base, sia comunque in grado di modularne l'intensità e la frequenza in risposta a diverse condizioni, come lo sforzo fisico o lo stato emotivo.</p>
+</div>
+<!-- fine capitolo scienze 35 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci36.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+  
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

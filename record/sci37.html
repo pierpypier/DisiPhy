@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 37</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 37: il sistema nervoso -->
+<div id="capitolo-37-sistema-nervoso" class="capitolo-storia">
+  <p class="titolo-capitolo">37 - Il sistema nervoso - Classe 5</p>
+
+  <p class="titolo-capitolo">La funzione generale del sistema nervoso</p>
+  <p>Nei capitoli precedenti abbiamo più volte fatto riferimento al sistema nervoso come al principale sistema di controllo e coordinamento dell'organismo, in particolare a proposito del tessuto nervoso descritto nel capitolo 32 e del controllo della respirazione trattato nel capitolo 34: questo capitolo è dedicato a un esame più approfondito della struttura e del funzionamento di questo sistema, il cui compito generale è quello di raccogliere informazioni dall'ambiente esterno e dall'interno dell'organismo stesso, elaborarle rapidamente ed emettere risposte appropriate, coordinando così, in tempi generalmente molto brevi, l'attività dei diversi apparati dell'organismo.</p>
+  <p>Il sistema nervoso viene tradizionalmente suddiviso in due grandi componenti, tra loro strettamente interconnesse: il sistema nervoso centrale, comprendente l'encefalo e il midollo spinale, sede principale dell'elaborazione delle informazioni, e il sistema nervoso periferico, costituito dall'insieme dei nervi che collegano il sistema nervoso centrale a tutte le altre parti del corpo, trasportando informazioni sia in entrata sia in uscita.</p>
+
+  <p class="titolo-capitolo">Il neurone e l'impulso nervoso</p>
+  <p>Come già accennato nel capitolo 32, il neurone è la cellula caratteristica del tessuto nervoso, dotata di dendriti, specializzati nella ricezione dei segnali, e di un assone, specializzato nella loro trasmissione a distanza: la superficie della membrana plasmatica del neurone, già descritta nel capitolo 19, mantiene, in condizioni di riposo, una differenza di carica elettrica tra l'interno e l'esterno della cellula, chiamata potenziale di membrana, dovuta principalmente alla diseguale distribuzione di ioni sodio e potassio tra i due lati della membrana, mantenuta attiva dalla pompa sodio-potassio già descritta in quel capitolo.</p>
+  <p>Quando un neurone riceve uno stimolo sufficientemente intenso, la permeabilità della sua membrana agli ioni sodio si modifica bruscamente e localmente, dando origine a una rapida e transitoria inversione del potenziale di membrana, chiamata impulso nervoso o potenziale d'azione: questa alterazione elettrica, una volta innescata in un punto della membrana, si propaga automaticamente, punto dopo punto, lungo l'intero assone, fino a raggiungerne l'estremità, senza perdere intensità lungo il percorso, secondo un meccanismo spesso paragonato, per la sua natura "tutto o nulla", alla propagazione di una scintilla lungo una miccia.</p>
+
+  <p class="titolo-capitolo">La sinapsi</p>
+  <p>Il punto di contatto specializzato attraverso cui un neurone trasmette il proprio impulso nervoso a un secondo neurone, oppure a una cellula muscolare o ghiandolare, è chiamato sinapsi: nella maggior parte delle sinapsi del sistema nervoso umano, chiamate sinapsi chimiche, tra la membrana del neurone che trasmette il segnale e quella della cellula ricevente non esiste un contatto diretto, ma un piccolissimo spazio, chiamato fessura sinaptica.</p>
+  <p>Quando l'impulso nervoso raggiunge l'estremità dell'assone del neurone trasmittente, esso innesca il rilascio, nella fessura sinaptica, di specifiche molecole chiamate neurotrasmettitori, che diffondono rapidamente attraverso questo piccolo spazio e si legano a specifici recettori presenti sulla membrana della cellula ricevente, inducendo in essa, a seconda del tipo di neurotrasmettitore e di recettore coinvolti, una risposta eccitatoria, che favorisce l'insorgenza di un nuovo impulso nervoso nella cellula ricevente, oppure una risposta inibitoria, che al contrario la rende meno propensa a generarlo.</p>
+
+  <p class="titolo-capitolo">L'encefalo</p>
+  <p>L'encefalo, racchiuso e protetto all'interno della scatola cranica, è la struttura più complessa e voluminosa dell'intero sistema nervoso centrale, e si suddivide in diverse regioni principali, ciascuna specializzata in funzioni specifiche. Il cervello, la porzione più voluminosa ed evolutivamente più recente dell'encefalo umano, è rivestito esternamente da un sottile strato di tessuto nervoso fortemente ripiegato su se stesso, chiamato corteccia cerebrale, sede delle funzioni nervose più elevate, come il pensiero astratto, il linguaggio, la memoria e la pianificazione consapevole delle azioni, oltre che dell'elaborazione delle informazioni sensoriali provenienti dagli organi di senso e del controllo volontario dei movimenti del corpo.</p>
+  <p>Il cervelletto, situato nella parte posteriore e inferiore dell'encefalo, svolge un ruolo fondamentale nel coordinamento fine dei movimenti volontari e nel mantenimento dell'equilibrio corporeo, integrando continuamente le informazioni provenienti dai muscoli e dagli organi dell'equilibrio con i comandi motori elaborati dalla corteccia cerebrale. Il tronco encefalico, situato alla base dell'encefalo e in continuità diretta con il midollo spinale, ospita, come già accennato nel capitolo 34, i centri nervosi che regolano in modo automatico e involontario alcune funzioni vitali fondamentali, come il ritmo respiratorio e il battito cardiaco.</p>
+
+  <p class="titolo-capitolo">Il midollo spinale e i riflessi</p>
+  <p>Il midollo spinale è un lungo cordone di tessuto nervoso, protetto internamente dalla colonna vertebrale, che si estende in continuità con il tronco encefalico lungo gran parte della lunghezza del tronco: la sua funzione principale è quella di veicolare, sotto forma di impulsi nervosi, le informazioni sensoriali provenienti dal corpo verso l'encefalo, e i comandi motori elaborati dall'encefalo verso i muscoli e le ghiandole del corpo.</p>
+  <p>Oltre a questa funzione di collegamento, il midollo spinale è anche in grado di elaborare autonomamente, senza il diretto coinvolgimento dell'encefalo, alcune risposte motorie particolarmente rapide e stereotipate, chiamate riflessi: un esempio comunemente riportato è il riflesso da stiramento, come quello che si osserva percuotendo delicatamente il tendine appena sotto il ginocchio, che provoca l'estensione automatica e involontaria della gamba, attraverso un circuito nervoso estremamente breve, che coinvolge un numero molto limitato di neuroni e permette una risposta motoria straordinariamente più rapida rispetto a quanto sarebbe possibile qualora l'informazione dovesse essere elaborata dall'encefalo prima di generare una risposta.</p>
+
+  <p class="titolo-capitolo">Il sistema nervoso periferico</p>
+  <p>Il sistema nervoso periferico comprende l'insieme dei nervi, cioè di fasci di prolungamenti di neuroni, chiamati fibre nervose, che collegano il sistema nervoso centrale a tutte le altre regioni del corpo: esso si suddivide, in base al tipo di controllo esercitato, in sistema nervoso somatico, deputato al controllo volontario dei muscoli scheletrici già descritti nel capitolo 32 e alla trasmissione delle informazioni sensoriali coscienti, e sistema nervoso autonomo, deputato al controllo involontario di organi interni come il cuore, i vasi sanguigni e gli organi dell'apparato digerente.</p>
+  <p>Il sistema nervoso autonomo si articola a sua volta in due componenti dagli effetti generalmente opposti e complementari tra loro: il sistema nervoso simpatico, che si attiva prevalentemente in condizioni di allerta, stress o sforzo fisico, preparando l'organismo a una risposta rapida attraverso effetti come l'aumento della frequenza cardiaca e respiratoria e la riduzione dell'attività digestiva, secondo un meccanismo spesso descritto con l'espressione "combatti o fuggi"; e il sistema nervoso parasimpatico, che si attiva prevalentemente in condizioni di riposo, favorendo funzioni come la digestione e il rallentamento del battito cardiaco, contribuendo così, insieme al sistema simpatico, al mantenimento dell'omeostasi complessiva dell'organismo già descritta nel capitolo 32, attraverso un continuo bilanciamento tra queste due componenti dagli effetti opposti.</p>
+</div>
+<!-- fine capitolo scienze 37 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci38.html">Vai al Capitolo successivo</a></p>
+</div>
+  
+  
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

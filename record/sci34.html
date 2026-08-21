@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 34</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 34: l'apparato respiratorio -->
+<div id="capitolo-34-apparato-respiratorio" class="capitolo-storia">
+  <p class="titolo-capitolo">34 - L'apparato respiratorio - Classe 4</p>
+
+  <p class="titolo-capitolo">La necessità della respirazione</p>
+  <p>Come già visto nel capitolo 20 a proposito della respirazione cellulare, la quasi totalità delle cellule dell'organismo umano necessita di un apporto costante di ossigeno per ricavare energia dal glucosio e dalle altre molecole nutritive descritte nel capitolo precedente, producendo, come prodotto di scarto di questo processo, anidride carbonica, che deve essere allontanata dall'organismo prima che la sua concentrazione raggiunga livelli dannosi per le cellule stesse.</p>
+  <p>L'apparato respiratorio svolge, in questo contesto, la funzione di garantire un continuo scambio di gas tra l'organismo e l'ambiente esterno, prelevando ossigeno dall'aria atmosferica ed eliminando l'anidride carbonica prodotta dal metabolismo cellulare, in stretta collaborazione, come vedremo nel prossimo capitolo, con l'apparato circolatorio, incaricato di trasportare tali gas fino alle singole cellule dell'organismo e viceversa.</p>
+
+  <p class="titolo-capitolo">Le vie respiratorie superiori</p>
+  <p>L'aria inspirata attraversa, prima di raggiungere i polmoni, un percorso articolato in diverse strutture, complessivamente chiamate vie respiratorie, la cui prima porzione, detta vie aeree superiori, comprende le cavità nasali, in cui l'aria viene riscaldata, umidificata e parzialmente filtrata dalle impurità grazie all'azione della mucosa nasale, ricoperta da una fitta rete di piccoli vasi sanguigni e da minuscoli peli, chiamati ciglia vibratili, che intrappolano le particelle di polvere più grossolane presenti nell'aria.</p>
+  <p>Dalle cavità nasali, l'aria prosegue attraverso la faringe, un condotto comune sia alle vie respiratorie sia alle vie digestive già descritte nel capitolo precedente, e successivamente attraverso la laringe, una struttura cartilaginea che, oltre a rappresentare il punto di passaggio obbligato verso le vie aeree inferiori, ospita anche le corde vocali, la cui vibrazione, indotta dal passaggio dell'aria espirata, è responsabile della produzione della voce.</p>
+
+  <p class="titolo-capitolo">Le vie respiratorie inferiori</p>
+  <p>Dalla laringe, l'aria prosegue nella trachea, un condotto rigido, mantenuto costantemente pervio grazie alla presenza di anelli cartilaginei disposti lungo tutta la sua lunghezza, che si suddivide, alla sua estremità inferiore, in due bronchi principali, uno diretto al polmone destro e uno al polmone sinistro: all'interno di ciascun polmone, i bronchi si ramificano ripetutamente in bronchi di calibro sempre minore, e successivamente in condotti ancora più sottili, chiamati bronchioli, secondo una struttura ad albero fortemente ramificata, spesso paragonata, per la sua caratteristica architettura, a un albero rovesciato.</p>
+  <p>Al termine di questa fitta ramificazione, i bronchioli più sottili terminano in minuscole sacche a parete sottilissima, chiamate alveoli polmonari, presenti nei polmoni umani in un numero complessivo stimato in alcune centinaia di milioni: è proprio a livello degli alveoli, la cui superficie complessiva, grazie al loro numero elevatissimo, raggiunge un'estensione stimata di circa 70-100 m², paragonabile per certi versi, come già osservato nel capitolo precedente a proposito dei villi intestinali, all'ampiezza di un intero campo da tennis, che avviene l'effettivo scambio dei gas respiratori tra l'aria inspirata e il sangue.</p>
+
+  <p class="titolo-capitolo">Gli scambi gassosi negli alveoli</p>
+  <p>La parete di ciascun alveolo polmonare è estremamente sottile, ed è avvolta da una fittissima rete di capillari sanguigni, altrettanto sottili, così da ridurre al minimo la distanza che l'ossigeno e l'anidride carbonica devono percorrere per attraversare, per diffusione semplice, secondo il meccanismo già descritto nel capitolo 19 a proposito degli scambi attraverso la membrana cellulare, la barriera costituita dalla parete alveolare e dalla parete del capillare stesso.</p>
+  <p>Lo scambio dei gas respiratori avviene, in accordo con il principio generale della diffusione, seguendo il proprio gradiente di concentrazione, o più precisamente di pressione parziale: l'ossigeno, più concentrato nell'aria alveolare rispetto al sangue povero di ossigeno che giunge ai polmoni provenendo dal resto dell'organismo, diffonde spontaneamente dall'aria alveolare verso il sangue; l'anidride carbonica, al contrario, più concentrata nel sangue che giunge ai polmoni rispetto all'aria alveolare, diffonde spontaneamente in direzione opposta, dal sangue verso gli alveoli, da cui verrà successivamente eliminata con l'espirazione.</p>
+
+  <p class="titolo-capitolo">La meccanica respiratoria</p>
+  <p>Il movimento dell'aria all'interno e all'esterno dei polmoni, chiamato complessivamente ventilazione polmonare, non avviene per un'azione muscolare diretta dei polmoni stessi, i quali sono privi di muscolatura propria, ma è reso possibile dall'azione di due gruppi muscolari principali: il diaframma, un ampio muscolo a forma di cupola che separa la cavità toracica da quella addominale, e i muscoli intercostali, situati tra le costole.</p>
+  <p>Durante l'inspirazione, il diaframma si contrae e si abbassa, mentre i muscoli intercostali sollevano la gabbia toracica, determinando congiuntamente un aumento del volume della cavità toracica: questo aumento di volume provoca una corrispondente diminuzione della pressione dell'aria all'interno dei polmoni, al di sotto della pressione atmosferica esterna già descritta nel capitolo 13, inducendo l'aria a fluire spontaneamente dall'esterno verso l'interno dei polmoni, secondo il medesimo principio fisico già descritto in quel capitolo a proposito del vento, cioè il movimento dell'aria da una zona a pressione maggiore verso una zona a pressione minore. Durante l'espirazione, il rilassamento del diaframma e dei muscoli intercostali, favorito anche dall'elasticità naturale del tessuto polmonare stesso, riduce nuovamente il volume della cavità toracica, aumentando corrispondentemente la pressione interna dei polmoni al di sopra di quella atmosferica, e determinando così la fuoriuscita dell'aria verso l'esterno.</p>
+
+  <p class="titolo-capitolo">Il controllo della respirazione</p>
+  <p>A differenza di molte altre funzioni corporee volontarie, il ritmo della respirazione avviene, nella maggior parte del tempo, in modo automatico e involontario, regolato da specifici centri nervosi situati nel tronco encefalico, una struttura del sistema nervoso centrale che sarà descritta più diffusamente nel capitolo dedicato al sistema nervoso: questi centri regolano la frequenza e la profondità degli atti respiratori principalmente in risposta alla concentrazione di anidride carbonica presente nel sangue, piuttosto che, come si potrebbe intuitivamente pensare, in risposta diretta alla concentrazione di ossigeno.</p>
+  <p><em>Esempio svolto:</em> un adulto in condizioni di riposo compie mediamente tra 12 e 18 atti respiratori al minuto, ciascuno dei quali introduce nei polmoni un volume d'aria, chiamato volume corrente, di circa 500 ml: moltiplicando questi due valori, si può stimare il volume complessivo di aria ventilata in un minuto, chiamato volume respiratorio al minuto, pari, ad esempio, a 15 atti/min × 500 ml = 7500 ml/min, cioè 7,5 litri d'aria complessivamente movimentati dai polmoni in un solo minuto in condizioni di riposo, un valore che può aumentare anche di dieci volte o più durante uno sforzo fisico intenso, grazie all'aumento sia della frequenza sia della profondità degli atti respiratori.</p>
+</div>
+<!-- fine capitolo scienze 34 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci35.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+  
+  
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

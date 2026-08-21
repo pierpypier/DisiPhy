@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 40</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 40: l'apparato riproduttore -->
+<div id="capitolo-40-apparato-riproduttore" class="capitolo-storia">
+  <p class="titolo-capitolo">40 - L'apparato riproduttore - Classe 5</p>
+
+  <p class="titolo-capitolo">La funzione dell'apparato riproduttore</p>
+  <p>Nel capitolo 22 abbiamo esaminato, a livello cellulare, i meccanismi della riproduzione sessuata e della meiosi, che portano alla formazione dei gameti e, attraverso la fecondazione, di un nuovo individuo geneticamente unico: questo capitolo esamina, a livello anatomico e fisiologico, gli organi e i processi attraverso cui l'organismo umano produce concretamente i propri gameti e rende possibile, eventualmente, la fecondazione e lo sviluppo di un nuovo individuo.</p>
+  <p>A differenza della maggior parte degli altri apparati esaminati nei capitoli precedenti, indispensabili alla sopravvivenza del singolo individuo, l'apparato riproduttore, come già osservato in linea generale nel capitolo 16 a proposito della riproduzione, non è necessario alla sopravvivenza dell'individuo stesso, ma è essenziale alla continuità della specie nel corso delle generazioni; inoltre, esso rimane sostanzialmente immaturo e non pienamente funzionale fino al raggiungimento della pubertà, il periodo dello sviluppo, regolato dagli ormoni sessuali già introdotti nel capitolo precedente, durante il quale l'organismo acquisisce la piena capacità riproduttiva.</p>
+
+  <p class="titolo-capitolo">L'apparato riproduttore maschile</p>
+  <p>L'apparato riproduttore maschile comprende, come organi principali, i testicoli, ghiandole pari situate all'esterno della cavità addominale, all'interno di una sacca cutanea chiamata scroto, la cui posizione esterna consente di mantenere una temperatura leggermente inferiore rispetto a quella corporea interna, condizione necessaria per il corretto svolgimento della produzione degli spermatozoi, già introdotti nel capitolo 22 come gameti maschili.</p>
+  <p>I testicoli svolgono una duplice funzione, sia esocrina sia endocrina: la produzione degli spermatozoi, attraverso un processo continuativo che ha inizio con la pubertà e prosegue, seppur con un graduale calo di efficienza, per gran parte della vita adulta dell'uomo, avviene all'interno di una fitta rete di sottili condotti, chiamati tubuli seminiferi, mentre la produzione dell'ormone sessuale maschile principale, il testosterone, già accennabile tra gli ormoni steroidei descritti nel capitolo precedente, avviene a opera di specifiche cellule situate tra un tubulo e l'altro, e risulta responsabile sia del corretto svolgimento della produzione degli spermatozoi, sia dello sviluppo dei caratteri sessuali secondari maschili durante la pubertà, come l'approfondimento della voce e lo sviluppo della massa muscolare.</p>
+  <p>Gli spermatozoi prodotti nei testicoli maturano e vengono temporaneamente immagazzinati in un condotto altamente ripiegato, chiamato epididimo, prima di essere convogliati, al momento dell'eiaculazione, lungo un condotto più ampio, chiamato dotto deferente, che li conduce fino all'uretra, la quale, nell'uomo, svolge la duplice funzione di veicolare sia l'urina sia il liquido seminale, sebbene non contemporaneamente: lungo questo percorso, il liquido seminale, il fluido che veicola gli spermatozoi verso l'esterno durante l'eiaculazione, viene arricchito dalle secrezioni di diverse ghiandole accessorie, tra cui le vescicole seminali e la prostata, che forniscono nutrimento e un ambiente chimico favorevole alla sopravvivenza e alla motilità degli spermatozoi stessi.</p>
+
+  <p class="titolo-capitolo">L'apparato riproduttore femminile</p>
+  <p>L'apparato riproduttore femminile comprende, come organi principali, le ovaie, ghiandole pari situate all'interno della cavità addominale, deputate sia alla produzione delle cellule uovo, o ovociti, già introdotte nel capitolo 22 come gameti femminili, sia alla produzione degli ormoni sessuali femminili principali, gli estrogeni e il progesterone, entrambi ormoni steroidei coinvolti nella regolazione del ciclo mestruale che esamineremo tra poco, oltre che responsabili dello sviluppo dei caratteri sessuali secondari femminili durante la pubertà.</p>
+  <p>A differenza di quanto avviene nell'uomo, dove la produzione di nuovi spermatozoi prosegue continuativamente per gran parte della vita adulta, nella donna il numero complessivo di ovociti immaturi presenti nelle ovaie è già stabilito fin dalla nascita, e si riduce progressivamente nel corso della vita, attraverso la maturazione e il rilascio periodico di un singolo ovocita per ciascun ciclo mestruale, fino al loro sostanziale esaurimento in corrispondenza della menopausa, il periodo della vita femminile, generalmente collocato attorno ai 45-55 anni, che segna la conclusione naturale della capacità riproduttiva.</p>
+  <p>L'ovocita rilasciato da un'ovaia, in un processo chiamato ovulazione, viene raccolto da una struttura a forma di imbuto situata all'estremità di uno dei due tubi, chiamati tube di Falloppio o ovidotti, che collegano ciascuna ovaia all'utero: è proprio all'interno delle tube di Falloppio che avviene, generalmente, l'eventuale fecondazione dell'ovocita da parte di uno spermatozoo, qualora un rapporto sessuale sia avvenuto in prossimità del periodo dell'ovulazione. L'utero è un organo muscolare cavo, la cui parete interna, chiamata endometrio, si prepara ciclicamente ad accogliere ed eventualmente nutrire un embrione in via di sviluppo, secondo il ciclo che esamineremo nel prossimo paragrafo; la parte inferiore dell'utero, chiamata cervice uterina, si apre nella vagina, il condotto muscolare che mette in comunicazione l'utero con l'esterno del corpo.</p>
+
+  <p class="titolo-capitolo">Il ciclo mestruale</p>
+  <p>Il ciclo mestruale è un processo ciclico, regolato dalla complessa interazione tra ormoni ipofisari, già introdotti nel capitolo precedente, e ormoni ovarici, che si ripete con cadenza mediamente mensile, di circa 28 giorni, per l'intera durata della vita fertile della donna, dalla pubertà fino alla menopausa, salvo interruzioni dovute a un'eventuale gravidanza.</p>
+  <p>Nella prima parte del ciclo, sotto lo stimolo di specifici ormoni ipofisari, un ovocita inizia a maturare all'interno di una struttura ovarica chiamata follicolo, mentre la crescente produzione di estrogeni da parte del follicolo in maturazione stimola contemporaneamente l'ispessimento progressivo dell'endometrio uterino, in preparazione a un'eventuale gravidanza; a circa metà del ciclo si verifica l'ovulazione già descritta in precedenza, dopo la quale il follicolo ormai svuotato si trasforma in una struttura temporanea chiamata corpo luteo, che produce prevalentemente progesterone, il cui compito principale è quello di mantenere e completare la preparazione dell'endometrio già ispessito nella fase precedente.</p>
+  <p>Qualora non avvenga la fecondazione dell'ovocita rilasciato durante l'ovulazione, il corpo luteo degenera spontaneamente dopo circa due settimane, con conseguente brusco calo della produzione di progesterone: questo calo ormonale determina lo sfaldamento dello strato più superficiale dell'endometrio, non più sostenuto dagli ormoni necessari al suo mantenimento, il quale viene quindi eliminato attraverso la vagina, insieme a una modesta quantità di sangue, dando origine alla mestruazione, l'evento che convenzionalmente segna l'inizio di un nuovo ciclo. Qualora, al contrario, avvenga la fecondazione, l'embrione in via di sviluppo, una volta impiantatosi nell'endometrio, produce specifici segnali ormonali in grado di mantenere attivo il corpo luteo, e con esso la produzione di progesterone, impedendo così lo sfaldamento dell'endometrio e permettendo l'avvio della gravidanza.</p>
+</div>
+<!-- fine capitolo scienze 40 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci41.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

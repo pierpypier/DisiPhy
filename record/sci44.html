@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 44</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 44: il rischio geologico e idrogeologico -->
+<div id="capitolo-44-rischio-geologico-idrogeologico" class="capitolo-storia">
+  <p class="titolo-capitolo">44 - Il rischio geologico e idrogeologico - Classe 5</p>
+
+  <p class="titolo-capitolo">Dalla conoscenza alla prevenzione</p>
+  <p>Questo capitolo conclusivo del manuale riprende e integra numerosi concetti già esaminati nella prima parte del corso, dedicata alla Terra solida, all'atmosfera e all'idrosfera, per applicarli a un tema di grande rilevanza pratica e sociale: la valutazione e la gestione dei rischi legati ai fenomeni geologici e idrogeologici che interessano il territorio, con particolare riferimento alla situazione italiana, un paese geograficamente e geologicamente esposto a diverse tipologie di pericolosità naturale già descritte nei capitoli precedenti.</p>
+  <p>Come già accennato nel capitolo 11 a proposito del rischio sismico, il rischio complessivo legato a un fenomeno naturale non dipende soltanto dalla probabilità che l'evento si verifichi, ma risulta dalla combinazione di tre fattori distinti: la pericolosità, cioè la probabilità di accadimento del fenomeno in una determinata area e in un dato intervallo di tempo; la vulnerabilità, cioè la propensione di persone, edifici e infrastrutture a subire danni in conseguenza dell'evento; e l'esposizione, cioè il valore, in termini di vite umane e beni, effettivamente presente nell'area interessata: questo stesso schema concettuale, già applicato al rischio sismico, risulta altrettanto utile per comprendere e affrontare le altre tipologie di rischio esaminate in questo capitolo conclusivo.</p>
+
+  <p class="titolo-capitolo">Il rischio vulcanico e sismico: un richiamo</p>
+  <p>I capitoli 10 e 11 di questo manuale hanno già esaminato in dettaglio i meccanismi alla base del vulcanismo e dei terremoti, entrambi fenomeni strettamente legati, come descritto nel capitolo 12, alla dinamica della tettonica delle placche: l'Italia, situata in una regione di confine, per quanto complessa, tra la placca africana e quella eurasiatica, presenta un livello di pericolosità sismica e vulcanica tra i più elevati dell'intero continente europeo, come testimoniato dalla presenza di vulcani attivi ben noti, quali l'Etna, lo Stromboli e i Campi Flegrei, già menzionati nel capitolo 10, e da una storia sismica che annovera, nel corso dei secoli, numerosi eventi di forte intensità in diverse regioni della penisola.</p>
+  <p>Come già sottolineato nel capitolo 11, mentre la pericolosità sismica e vulcanica di un territorio rappresenta una caratteristica intrinseca, difficilmente modificabile dall'azione umana su scale di tempo brevi, la vulnerabilità e l'esposizione possono essere ridotte in modo significativo attraverso opportune politiche di prevenzione, come l'adeguamento antisismico degli edifici esistenti, l'adozione di normative costruttive appropriate per i nuovi edifici, e i sistemi di monitoraggio e allerta precoce dell'attività vulcanica, che permettono, nella maggior parte dei casi, di individuare per tempo i segnali premonitori di una possibile eruzione.</p>
+
+  <p class="titolo-capitolo">Il dissesto idrogeologico</p>
+  <p>Con il termine dissesto idrogeologico si indica, complessivamente, l'insieme dei fenomeni di instabilità del territorio legati all'azione dell'acqua, sia superficiale sia sotterranea, sui versanti e sui corsi d'acqua: si tratta di una categoria di rischio particolarmente rilevante per l'Italia, un paese caratterizzato da un territorio in larga parte montuoso o collinare, come già evidenziato nei capitoli dedicati alla geografia fisica, e da un reticolo idrografico spesso caratterizzato da corsi d'acqua brevi e a regime torrentizio, cioè soggetti a rapide e talvolta violente variazioni di portata in risposta a eventi meteorologici intensi.</p>
+  <p>Le due principali manifestazioni del dissesto idrogeologico sono le frane, cioè movimenti, di velocità ed entità molto variabili, di masse di roccia, detriti o terreno lungo un versante, sotto l'azione della forza di gravità, e le alluvioni, cioè l'esondazione di un corso d'acqua al di fuori del proprio alveo abituale, con conseguente allagamento delle aree circostanti, generalmente in seguito a precipitazioni particolarmente intense o prolungate.</p>
+
+  <p class="titolo-capitolo">Le frane</p>
+  <p>Le frane possono essere classificate, in base al tipo di movimento coinvolto, in diverse categorie principali: i crolli, in cui blocchi di roccia si staccano improvvisamente da un versante ripido, spesso una parete rocciosa quasi verticale, precipitando verso il basso con un movimento rapido e prevalentemente in caduta libera; gli scivolamenti, in cui una massa di terreno o di roccia si sposta lungo una superficie di rottura ben definita, con un movimento relativamente più lento e organizzato rispetto ai crolli; e le colate, in cui il materiale coinvolto, spesso mescolato con una quantità significativa di acqua, si comporta in modo simile a un fluido viscoso, scorrendo lungo il versante anche per distanze considerevoli.</p>
+  <p>Diversi fattori possono predisporre un versante al distacco di una frana, o innescarne concretamente il movimento: tra i fattori predisponenti, legati alle caratteristiche intrinseche del territorio, si annoverano la natura litologica delle rocce presenti, già descritta nei capitoli 7, 8 e 9, la pendenza del versante e la presenza di fratture o discontinuità nella roccia; tra i fattori scatenanti, che intervengono più direttamente nell'innescare il movimento franoso, si annoverano precipitazioni intense o prolungate, che aumentano la pressione dell'acqua all'interno del terreno riducendone la coesione interna, e le scosse sismiche, già descritte nel capitolo 11, che possono destabilizzare bruscamente un versante già prossimo alle condizioni di equilibrio limite.</p>
+
+  <p class="titolo-capitolo">Le alluvioni</p>
+  <p>Le alluvioni si verificano quando la portata di un corso d'acqua, cioè il volume di acqua che transita attraverso una sezione del suo alveo nell'unità di tempo, supera la capacità di deflusso dell'alveo stesso, costringendo l'acqua in eccesso a defluire al di fuori di esso, invadendo le aree circostanti, spesso definite, non a caso, pianure alluvionali, poiché storicamente costituite proprio dai sedimenti depositati nel corso di ripetuti eventi alluvionali avvenuti nel corso dei millenni.</p>
+  <p>Diversi fattori concorrono ad aumentare il rischio di alluvioni in un determinato territorio: tra i fattori naturali, un ruolo di primo piano è svolto dall'intensità e dalla durata delle precipitazioni, secondo quanto già descritto nel capitolo 14 a proposito dei fenomeni meteorologici; tra i fattori legati all'azione umana, particolarmente rilevanti in Italia, si annoverano invece l'eccessiva urbanizzazione e impermeabilizzazione del suolo nelle aree di pianura, che riduce drasticamente la capacità del terreno di assorbire l'acqua piovana per infiltrazione, secondo quanto già descritto nel capitolo 15 a proposito del ciclo dell'acqua, aumentando corrispondentemente il volume di acqua che defluisce rapidamente in superficie verso i corsi d'acqua, e la progressiva riduzione della copertura vegetale nei bacini montani, che analogamente contribuisce a un deflusso superficiale più rapido e abbondante dell'acqua piovana.</p>
+
+  <p class="titolo-capitolo">La prevenzione del dissesto idrogeologico</p>
+  <p>La prevenzione del rischio idrogeologico si basa su un insieme integrato di strategie, che spaziano dalla conoscenza scientifica del territorio alla pianificazione urbanistica, fino a interventi tecnici mirati: la realizzazione di carte della pericolosità idrogeologica, che individuano con precisione le aree del territorio maggiormente esposte al rischio di frane o di esondazioni, rappresenta uno strumento fondamentale per orientare correttamente le scelte di pianificazione urbanistica, evitando, per quanto possibile, nuove edificazioni nelle aree identificate come più pericolose.</p>
+  <p>Accanto alla pianificazione territoriale, la manutenzione ordinaria dei corsi d'acqua e dei versanti, insieme a interventi tecnici specifici, come il consolidamento dei versanti instabili o la realizzazione di opere idrauliche di regimazione dei corsi d'acqua, contribuisce significativamente a ridurre la vulnerabilità del territorio; un ruolo altrettanto importante è svolto dai moderni sistemi di allerta meteorologica e idrogeologica, che, basandosi sul monitoraggio in tempo reale delle precipitazioni e dei livelli idrometrici dei corsi d'acqua, permettono di diffondere per tempo alla popolazione avvisi di allerta, riducendo l'esposizione al rischio anche senza dover necessariamente intervenire direttamente sulle cause fisiche del fenomeno.</p>
+
+  <p class="titolo-capitolo">Una visione d'insieme</p>
+  <p>Giunti al termine di questo manuale, è utile osservare come i temi affrontati in questo capitolo conclusivo richiamino, in un certo senso, l'intero percorso compiuto: la comprensione dei fenomeni vulcanici e sismici richiede le conoscenze sulla struttura interna della Terra e sulla tettonica delle placche esaminate nei primi capitoli; la comprensione del dissesto idrogeologico richiede le conoscenze sulle rocce, sull'atmosfera e sul ciclo dell'acqua sviluppate nei capitoli successivi; e la stessa valutazione del rischio, intesa come combinazione di pericolosità, vulnerabilità ed esposizione, richiama concetti quantitativi e metodologici incontrati ripetutamente lungo l'intero manuale.</p>
+  <p>La conoscenza scientifica del proprio territorio, delle sue caratteristiche geologiche, climatiche e idrografiche, per quanto non possa mai eliminare del tutto la pericolosità intrinseca legata ai fenomeni naturali esaminati in questo capitolo conclusivo, rappresenta comunque lo strumento più efficace a disposizione delle società umane per convivere in modo più consapevole e sicuro con un pianeta la cui storia, come ampiamente illustrato nel capitolo precedente, è stata plasmata, fin dalle sue origini più remote, da processi geologici di enorme portata, gli stessi che continuano, ancora oggi, a modellare la superficie terrestre su cui viviamo.</p>
+</div>
+<!-- fine capitolo scienze 44 -->
+  
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci00.html">Torna all'indice</a></p>
+</div>  
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

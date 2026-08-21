@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 41</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 41: ecologia, ecosistemi e flussi di energia -->
+<div id="capitolo-41-ecosistemi-flussi-energia" class="capitolo-storia">
+  <p class="titolo-capitolo">41 - Ecologia: ecosistemi e flussi di energia - Classe 5</p>
+
+  <p class="titolo-capitolo">Dall'organismo all'ecosistema</p>
+  <p>Nei capitoli precedenti, dedicati all'anatomia e alla fisiologia del corpo umano, ci siamo concentrati sul funzionamento del singolo organismo, esaminato nei suoi diversi apparati e nelle sue funzioni interne: con questo capitolo, l'ultima grande sezione del manuale, spostiamo l'attenzione a un livello di organizzazione biologica più ampio, quello dell'ecologia, cioè lo studio scientifico delle relazioni tra gli organismi viventi e l'ambiente che li circonda, sia esso costituito da altri organismi viventi sia dai fattori fisici e chimici non viventi.</p>
+  <p>Il livello di organizzazione fondamentale su cui si concentra l'ecologia è l'ecosistema, definito come l'insieme, considerato nel suo complesso, di tutti gli organismi viventi presenti in una determinata area, chiamati complessivamente comunità biologica o biocenosi, insieme all'ambiente fisico non vivente in cui essi vivono e con cui interagiscono continuamente, chiamato biotopo: un ecosistema può avere dimensioni molto variabili, da una piccola pozza d'acqua fino a un'intera foresta o a un intero oceano, e si distingue per la presenza di continui scambi di materia ed energia, sia tra gli organismi viventi che lo compongono, sia tra questi ultimi e l'ambiente fisico circostante.</p>
+
+  <p class="titolo-capitolo">I livelli trofici</p>
+  <p>All'interno di un ecosistema, gli organismi viventi si distinguono, in base al modo in cui procurano l'energia e la materia necessarie al proprio sostentamento, in diverse categorie funzionali, chiamate livelli trofici. I produttori, chiamati anche organismi autotrofi, comprendono principalmente le piante e le alghe, già introdotte nel capitolo 20 a proposito della fotosintesi clorofilliana, capaci di produrre da sole le proprie sostanze nutritive a partire da sostanze inorganiche semplici e dall'energia solare, e costituiscono, in virtù di questa capacità, la base di partenza di ogni ecosistema.</p>
+  <p>I consumatori, chiamati anche organismi eterotrofi, comprendono invece tutti gli organismi, animali compresi, incapaci di produrre da soli il proprio nutrimento, e costretti a procurarselo nutrendosi di altri organismi: si distinguono, in base al tipo di alimentazione prevalente, i consumatori primari, o erbivori, che si nutrono direttamente dei produttori, i consumatori secondari, o carnivori, che si nutrono dei consumatori primari, e i consumatori terziari, che si nutrono a loro volta di altri consumatori, secondo una gerarchia che può estendersi, in linea di principio, anche a ulteriori livelli superiori. I decompositori, infine, comprendono organismi come molti funghi e batteri, già introdotti rispettivamente nei capitoli 31 e 18, capaci di demolire la materia organica morta, sia essa costituita da resti di produttori sia da resti di consumatori, restituendo così all'ambiente le sostanze inorganiche semplici da cui tale materia organica era originariamente derivata, chiudendo così il ciclo della materia all'interno dell'ecosistema.</p>
+
+  <p class="titolo-capitolo">Catene e reti alimentari</p>
+  <p>Una catena alimentare è la rappresentazione schematica e semplificata della sequenza lineare attraverso cui l'energia e la materia si trasferiscono da un livello trofico al successivo, a partire da un produttore, attraverso una serie di consumatori di livello via via crescente, fino ai decompositori: un tipico esempio di catena alimentare, in un ecosistema di prateria, potrebbe essere rappresentato dalla sequenza erba (produttore) → coniglio (consumatore primario) → volpe (consumatore secondario), seguita infine dall'azione dei decompositori sui resti organici di ciascuno di questi organismi al termine del proprio ciclo vitale.</p>
+  <p>Nella realtà, tuttavia, le relazioni alimentari all'interno di un ecosistema sono assai più complesse di quanto suggerito da una singola catena alimentare isolata, poiché la maggior parte degli organismi si nutre di più specie diverse, e viene a propria volta predato da più specie diverse, dando origine a un intreccio assai più articolato di catene alimentari interconnesse tra loro, chiamato complessivamente rete alimentare, che fornisce una rappresentazione più realistica e completa delle effettive relazioni trofiche presenti in un ecosistema.</p>
+
+  <p class="titolo-capitolo">Le piramidi ecologiche</p>
+  <p>Il flusso di energia attraverso i diversi livelli trofici di un ecosistema, già descritti in precedenza, non avviene senza perdite: a ogni passaggio da un livello trofico al successivo, gran parte dell'energia complessivamente disponibile al livello inferiore viene dispersa sotto forma di calore, principalmente a causa dei processi metabolici, come la respirazione cellulare già descritta nel capitolo 20, necessari alla sopravvivenza degli organismi di ciascun livello, e solo una frazione relativamente piccola dell'energia disponibile viene effettivamente incorporata nella biomassa degli organismi stessi, risultando quindi disponibile per il livello trofico successivo.</p>
+  <p>Questa progressiva perdita di energia lungo la catena alimentare viene efficacemente rappresentata graficamente per mezzo di una piramide ecologica, una struttura in cui ciascun livello trofico, rappresentato da uno strato orizzontale di larghezza proporzionale alla quantità di energia in esso disponibile, risulta progressivamente più stretto man mano che si sale verso i livelli trofici superiori: convenzionalmente, si stima che solamente circa il 10% dell'energia disponibile a un dato livello trofico venga effettivamente trasferita al livello trofico successivo, un valore approssimativo noto come regola del 10%.</p>
+  <p class="formula">Energia trasferita ≈ 10% dell'energia del livello trofico precedente</p>
+  <p><em>Esempio svolto:</em> applicando la regola del 10% appena descritta a un ecosistema in cui i produttori fissano complessivamente, tramite fotosintesi, un'energia stimata in 100 000 kcal, si può calcolare l'energia teoricamente disponibile ai livelli trofici successivi: i consumatori primari disporranno di circa 100 000 × 0,10 = 10 000 kcal, i consumatori secondari di circa 10 000 × 0,10 = 1000 kcal, e gli eventuali consumatori terziari di circa 1000 × 0,10 = 100 kcal, un calcolo che illustra chiaramente perché le catene alimentari raramente si estendano, in natura, oltre quattro o cinque livelli trofici successivi, dato il progressivo e drastico impoverimento energetico che si verifica a ogni passaggio, e perché, di conseguenza, il numero di individui e la biomassa complessiva tendano tipicamente a diminuire salendo verso i livelli trofici superiori di un ecosistema.</p>
+</div>
+<!-- fine capitolo scienze 41 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci42.html">Vai al Capitolo successivo</a></p>
+</div>
+  
+  
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

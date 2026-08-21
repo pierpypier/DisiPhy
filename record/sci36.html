@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 36</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 36: il sistema immunitario -->
+<div id="capitolo-36-sistema-immunitario" class="capitolo-storia">
+  <p class="titolo-capitolo">36 - Il sistema immunitario - Classe 4</p>
+
+  <p class="titolo-capitolo">La difesa dell'organismo</p>
+  <p>Nel capitolo precedente abbiamo accennato ai globuli bianchi, o leucociti, come componente del sangue specializzata nella difesa dell'organismo: questo capitolo è dedicato a un esame più approfondito del sistema immunitario, cioè dell'insieme di cellule, tessuti e organi che collaborano tra loro per proteggere l'organismo dagli agenti patogeni, come batteri, virus, funghi e parassiti, potenzialmente in grado di causare malattie infettive, nonché per riconoscere ed eliminare cellule dell'organismo stesso divenute anomale, ad esempio a causa delle mutazioni già descritte nel capitolo 27.</p>
+  <p>Le difese messe in campo dall'organismo umano contro gli agenti patogeni si articolano tradizionalmente in due grandi categorie, distinte per rapidità di risposta e grado di specificità: l'immunità innata, presente fin dalla nascita e capace di agire rapidamente ma in modo relativamente generico contro un'ampia varietà di agenti patogeni diversi; e l'immunità acquisita, che si sviluppa nel corso della vita dell'individuo in seguito al contatto con specifici agenti patogeni, e che, pur richiedendo tempi di attivazione più lunghi, è caratterizzata da un'elevatissima specificità nei confronti dell'agente patogeno che l'ha originata.</p>
+
+  <p class="titolo-capitolo">Le barriere fisiche e chimiche</p>
+  <p>La prima linea di difesa dell'organismo contro gli agenti patogeni è costituita da barriere fisiche e chimiche, che agiscono impedendo, fin dal principio, l'ingresso stesso dei patogeni all'interno dell'organismo: la pelle, grazie al tessuto epiteliale già descritto nel capitolo 32, costituisce una barriera fisica pressoché continua e impermeabile alla maggior parte dei microrganismi, mentre le mucose, che rivestono le cavità interne dell'organismo comunicanti con l'esterno, come le vie respiratorie e digestive già descritte nei capitoli precedenti, offrono una protezione analoga, pur essendo strutturalmente più delicate della pelle.</p>
+  <p>A queste barriere fisiche si affiancano diverse barriere chimiche, come l'elevata acidità del succo gastrico, già descritta nel capitolo 33, in grado di eliminare gran parte dei microrganismi ingeriti con il cibo, oppure la presenza, in diverse secrezioni corporee come la saliva e le lacrime, di enzimi specificamente in grado di danneggiare la parete cellulare di molti batteri, contribuendo così a ridurne ulteriormente la capacità di colonizzare l'organismo.</p>
+
+  <p class="titolo-capitolo">L'immunità innata</p>
+  <p>Qualora un agente patogeno riesca comunque a superare le barriere fisiche e chimiche appena descritte, penetrando all'interno dei tessuti dell'organismo, entra in azione l'immunità innata, il cui meccanismo più immediatamente evidente è rappresentato dalla risposta infiammatoria: in corrispondenza del sito di infezione o lesione, i vasi sanguigni locali si dilatano e diventano più permeabili, favorendo l'afflusso di globuli bianchi specializzati e di altre sostanze utili al contenimento dell'infezione, un processo che si manifesta esteriormente con i classici segni dell'infiammazione, cioè arrossamento, calore, gonfiore e dolore della zona interessata.</p>
+  <p>Tra le cellule protagoniste dell'immunità innata, i fagociti, un particolare tipo di globuli bianchi, svolgono un ruolo di primo piano attraverso il processo di fagocitosi, un caso particolare di endocitosi già descritta nel capitolo 19, con cui inglobano e successivamente distruggono, al proprio interno, i microrganismi patogeni incontrati: l'immunità innata, pur efficace e rapida nell'azione, agisce tuttavia in modo relativamente generico, senza distinguere in modo specifico tra i diversi tipi di agenti patogeni incontrati, e senza conservare, a differenza dell'immunità acquisita che esamineremo tra poco, una "memoria" duratura di infezioni pregresse.</p>
+
+  <p class="titolo-capitolo">L'immunità acquisita e i linfociti</p>
+  <p>L'immunità acquisita, o adattativa, si basa principalmente sull'azione di un particolare tipo di globuli bianchi, chiamati linfociti, capaci di riconoscere specificamente singoli agenti patogeni, o più precisamente specifiche molecole presenti sulla loro superficie, chiamate antigeni, e di organizzare contro di essi una risposta immunitaria altamente mirata: si distinguono due grandi categorie di linfociti, i linfociti B e i linfociti T, entrambi originati dal midollo osseo ma caratterizzati da meccanismi d'azione differenti.</p>
+  <p>I linfociti B, una volta attivati dal riconoscimento di uno specifico antigene, si differenziano in cellule specializzate nella produzione di anticorpi, cioè proteine, già menzionate nel capitolo 17, capaci di legarsi in modo estremamente specifico all'antigene che ne ha determinato la produzione, neutralizzandolo direttamente oppure segnalandone la presenza ad altre cellule del sistema immunitario, come i fagociti già descritti, che ne facilitano così l'eliminazione. I linfociti T comprendono invece diverse sottopopolazioni con funzioni distinte: i linfociti T citotossici sono in grado di riconoscere e distruggere direttamente le cellule dell'organismo infettate da agenti patogeni intracellulari, come i virus, oppure divenute anomale a causa di mutazioni, mentre i linfociti T helper, o "aiutanti", coordinano e potenziano l'intera risposta immunitaria, sia dei linfociti B sia dei linfociti T citotossici, attraverso il rilascio di specifiche molecole di segnalazione.</p>
+
+  <p class="titolo-capitolo">La memoria immunitaria</p>
+  <p>Una delle proprietà più importanti dell'immunità acquisita è la memoria immunitaria: in seguito al primo contatto con un determinato agente patogeno, alcuni linfociti B e T specifici per quell'antigene non vengono eliminati al termine della risposta immunitaria, ma persistono nell'organismo per periodi anche molto prolungati, talvolta per l'intera vita dell'individuo, sotto forma di cellule della memoria, pronte a riconoscere rapidamente lo stesso agente patogeno qualora esso si ripresenti in futuro.</p>
+  <p>Grazie a questa memoria immunitaria, un secondo contatto con lo stesso agente patogeno innesca una risposta immunitaria molto più rapida ed efficace rispetto alla prima esposizione, spesso in grado di eliminare l'agente patogeno ancora prima che esso riesca a causare sintomi apprezzabili nella persona interessata: è proprio questo il principio biologico su cui si fonda l'immunità naturale acquisita in seguito alla guarigione da una malattia infettiva, come ad esempio il morbillo o la varicella, contro cui l'organismo, dopo un primo episodio, rimane generalmente protetto per l'intera vita successiva.</p>
+
+  <p class="titolo-capitolo">La vaccinazione</p>
+  <p>La vaccinazione è una pratica medica che sfrutta direttamente il meccanismo della memoria immunitaria appena descritto, senza tuttavia esporre l'organismo ai rischi di una malattia infettiva reale: un vaccino contiene, a seconda della tipologia specifica, agenti patogeni resi inattivi o attenuati, oppure singole componenti specifiche di essi, sufficienti a essere riconosciute come antigeni dal sistema immunitario e a innescare la produzione di anticorpi specifici e di cellule della memoria, senza tuttavia essere in grado di causare la malattia vera e propria nella persona vaccinata.</p>
+  <p>Grazie a questo meccanismo, un organismo vaccinato, qualora venga successivamente in contatto con l'agente patogeno reale corrispondente, dispone già delle cellule della memoria necessarie per organizzare rapidamente una risposta immunitaria efficace, in modo del tutto analogo a quanto avverrebbe in seguito a una precedente infezione naturale, ma senza aver dovuto affrontare i rischi e i sintomi associati alla malattia stessa: la vaccinazione rappresenta, per questa ragione, uno degli strumenti di prevenzione più efficaci a disposizione della medicina moderna, avendo permesso, nel corso del Novecento e degli anni successivi, di ridurre drasticamente l'incidenza, e in alcuni casi di eradicare quasi completamente, numerose malattie infettive un tempo largamente diffuse.</p>
+</div>
+<!-- fine capitolo scienze 36 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci37.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
