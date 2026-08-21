@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 05</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 05: l'orientamento e le coordinate geografiche -->
+<div id="capitolo-05-orientamento-coordinate" class="capitolo-storia">
+  <p class="titolo-capitolo">05 - L'orientamento e le coordinate geografiche - Classe 1</p>
+
+  <p class="titolo-capitolo">Il problema dell'orientamento</p>
+  <p>Sapere individuare la propria posizione, e saper riconoscere le direzioni cardinali, è un'esigenza antica quanto l'uomo, legata a necessità pratiche come la navigazione, i viaggi terrestri e, più recentemente, la localizzazione precisa di qualsiasi punto sulla superficie terrestre. Come già visto nel capitolo precedente a proposito del moto di rotazione, il Sole sorge, con buona approssimazione, a est e tramonta a ovest, ed è proprio da questa osservazione quotidiana che deriva il metodo di orientamento più antico e intuitivo, tuttora utile in mancanza di strumenti più precisi.</p>
+  <p>Le quattro direzioni cardinali, cioè nord, sud, est e ovest, costituiscono ancora oggi il riferimento fondamentale per l'orientamento: il nord e il sud indicano le direzioni verso il Polo Nord e il Polo Sud, cioè verso i due punti in cui l'asse di rotazione terrestre, descritto nel capitolo 4, incontra idealmente la superficie del pianeta, mentre l'est e l'ovest indicano rispettivamente la direzione verso cui il Sole sorge e quella verso cui tramonta.</p>
+
+  <p class="titolo-capitolo">Gli strumenti per l'orientamento</p>
+  <p>Oltre all'osservazione del Sole, che fornisce un'indicazione affidabile solo in alcuni momenti della giornata, l'uomo ha sviluppato nel tempo strumenti più precisi e utilizzabili in ogni condizione. La bussola, il cui funzionamento sfrutta il fatto che la Terra si comporta, nel suo insieme, come un enorme magnete dotato di un proprio campo magnetico, permette di individuare in ogni momento la direzione del nord magnetico, grazie a un ago magnetizzato libero di ruotare che si allinea spontaneamente alle linee del campo magnetico terrestre.</p>
+  <p>È importante osservare che il polo nord magnetico, verso cui punta l'ago della bussola, non coincide esattamente con il polo nord geografico, cioè con il punto in cui l'asse di rotazione terrestre interseca la superficie: i due poli sono separati da una distanza di alcune centinaia di chilometri, e la loro posizione relativa varia lentamente nel corso del tempo, un fenomeno di cui occorre tenere conto, tramite opportune correzioni, nell'uso professionale della bussola. Un secondo riferimento naturale, utilizzabile durante la notte nell'emisfero settentrionale, è la Stella Polare, una stella che si trova, con ottima approssimazione, esattamente nella direzione verso cui punta il prolungamento dell'asse di rotazione terrestre dalla parte del Polo Nord, e che pertanto appare praticamente immobile nel cielo notturno, mentre tutte le altre stelle sembrano ruotarle attorno nel corso della notte.</p>
+
+  <p class="titolo-capitolo">Il reticolo geografico: paralleli e meridiani</p>
+  <p>Per poter individuare in modo univoco e preciso qualsiasi punto della superficie terrestre, non è sufficiente conoscere le direzioni cardinali, ma è necessario disporre di un vero e proprio sistema di riferimento, chiamato reticolo geografico, costituito da due famiglie di linee immaginarie tracciate sulla superficie del geoide terrestre descritto nel capitolo precedente: i paralleli e i meridiani.</p>
+  <p>I paralleli sono circonferenze immaginarie tracciate sulla superficie terrestre, tutte parallele tra loro e perpendicolari all'asse di rotazione: il più esteso tra essi, che ha lo stesso raggio del centro della Terra ed è equidistante dai due poli, è chiamato equatore, e divide il pianeta in emisfero settentrionale ed emisfero meridionale. Man mano che ci si allontana dall'equatore verso i poli, i paralleli diventano progressivamente più piccoli, fino a ridursi a un singolo punto in corrispondenza del Polo Nord e del Polo Sud stessi.</p>
+  <p>I meridiani sono invece semicirconferenze immaginarie che congiungono direttamente il Polo Nord al Polo Sud, e sono tutti tra loro uguali in lunghezza, poiché ciascuno di essi rappresenta, in sostanza, metà di una circonferenza massima passante per i due poli. Per convenzione internazionale, è stato scelto come meridiano di riferimento, chiamato meridiano fondamentale o meridiano di Greenwich, quello passante per l'Osservatorio Astronomico Reale di Greenwich, nei pressi di Londra.</p>
+
+  <p class="titolo-capitolo">La latitudine</p>
+  <p>La latitudine di un punto della superficie terrestre è l'angolo, misurato in gradi, minuti e secondi, compreso tra il piano dell'equatore e la retta che congiunge quel punto al centro della Terra: essa esprime, in sostanza, quanto un punto si trovi a nord o a sud dell'equatore, e viene indicata come latitudine Nord se il punto si trova nell'emisfero settentrionale, oppure latitudine Sud se si trova nell'emisfero meridionale.</p>
+  <p>La latitudine può assumere valori compresi tra 0°, per un punto situato esattamente sull'equatore, e 90°, per un punto situato esattamente su uno dei due poli: il Tropico del Cancro e il Tropico del Capricorno, già introdotti nel capitolo precedente a proposito delle zone astronomiche, si trovano rispettivamente a 23°27' di latitudine Nord e Sud, mentre i circoli polari artico e antartico si trovano a 66°33' di latitudine Nord e Sud.</p>
+
+  <p class="titolo-capitolo">La longitudine</p>
+  <p>La longitudine di un punto è l'angolo, sempre misurato in gradi, minuti e secondi, compreso tra il piano del meridiano fondamentale di Greenwich e il piano del meridiano passante per quel punto: essa esprime quanto un punto si trovi a est o a ovest rispetto al meridiano di riferimento, e viene indicata come longitudine Est oppure longitudine Ovest a seconda dei casi.</p>
+  <p>A differenza della latitudine, la longitudine può assumere valori compresi tra 0°, per un punto situato esattamente sul meridiano di Greenwich, e 180°, valore che identifica un unico meridiano, chiamato antimeridiano di Greenwich, situato esattamente dalla parte opposta del pianeta rispetto al meridiano fondamentale, e in prossimità del quale è stata convenzionalmente tracciata la linea del cambiamento di data.</p>
+  <p><em>Esempio svolto:</em> conoscendo la latitudine e la longitudine di un luogo, è possibile individuarne la posizione in modo del tutto univoco sulla superficie terrestre: la città di Cagliari, ad esempio, si trova a una latitudine di circa 39°13' Nord e a una longitudine di circa 9°07' Est, il che significa che essa si trova a circa 39°13' a nord dell'equatore, misurati come angolo dal centro della Terra, e a circa 9°07' a est del meridiano di Greenwich.</p>
+
+  <p class="titolo-capitolo">Fusi orari e ore locali</p>
+  <p>Poiché la Terra compie una rotazione completa di 360° in circa 24 ore, come descritto nel capitolo precedente, ogni ora di rotazione corrisponde a uno spostamento angolare di 360° ÷ 24 = 15° di longitudine.</p>
+  <p class="formula">15° di longitudine ↔ 1 ora di tempo</p>
+  <p>Su questa semplice relazione si basa la suddivisione convenzionale della superficie terrestre in 24 fusi orari, ciascuno ampio circa 15° di longitudine, all'interno del quale, per praticità, si adotta convenzionalmente la stessa ora locale, definita a partire dall'ora del meridiano centrale del fuso: procedendo verso est rispetto al meridiano di Greenwich, l'ora locale aumenta progressivamente, mentre procedendo verso ovest diminuisce, in accordo con il fatto che il Sole sorge prima nelle regioni più orientali. I confini reali dei fusi orari, per ragioni pratiche e politiche, non seguono quasi mai in modo rigoroso i meridiani teorici, ma vengono adattati ai confini nazionali o regionali.</p>
+</div>
+<!-- fine capitolo scienze 05 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci06.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 03</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 03: il Sistema Solare -->
+<div id="capitolo-03-sistema-solare" class="capitolo-storia">
+  <p class="titolo-capitolo">03 - Il Sistema Solare - Classe 1</p>
+
+  <p class="titolo-capitolo">La formazione del Sistema Solare</p>
+  <p>Come anticipato nel capitolo precedente, il Sole non è un corpo celeste isolato, ma è accompagnato da un ampio corteo di oggetti che, insieme a esso, costituiscono il Sistema Solare: pianeti, satelliti naturali, pianeti nani, asteroidi, comete e polveri interplanetarie. L'origine di questo insieme di corpi risale a circa 4,6 miliardi di anni fa, quando una nube di gas e polveri, chiamata nebulosa solare, iniziò a collassare su se stessa sotto l'effetto della propria gravità, secondo un processo analogo, per certi aspetti, a quello descritto nel capitolo 2 a proposito della nascita delle stelle.</p>
+  <p>Durante il collasso, la nebulosa assunse progressivamente la forma di un disco appiattito in rotazione, chiamato disco protoplanetario, al cui centro la materia si addensò fino a innescare le reazioni di fusione nucleare che diedero origine al Sole. Nelle regioni più esterne del disco, invece, le particelle di polvere iniziarono ad aggregarsi tra loro per collisione, formando corpi via via più grandi, chiamati planetesimi, fino ad arrivare, nel corso di alcune decine di milioni di anni, alla formazione dei pianeti e degli altri corpi minori che oggi conosciamo.</p>
+
+  <p class="titolo-capitolo">Il Sole: il centro del sistema</p>
+  <p>Il Sole, di cui abbiamo già descritto le caratteristiche generali come stella nel capitolo 2, occupa una posizione del tutto particolare all'interno del Sistema Solare: pur essendo una stella di dimensioni intermedie se confrontata con l'intera popolazione di stelle dell'Universo, esso concentra da solo circa il 99,86% dell'intera massa del Sistema Solare, mentre tutti i pianeti, i satelliti e gli altri corpi minori messi insieme costituiscono appena lo 0,14% della massa complessiva.</p>
+  <p>Questa enorme concentrazione di massa nel Sole non è casuale: è proprio la sua forza di gravità, di gran lunga dominante rispetto a quella di ogni altro corpo del sistema, a mantenere i pianeti e gli altri oggetti in orbita attorno a esso, impedendo loro di disperdersi nello spazio.</p>
+
+  <p class="titolo-capitolo">I pianeti terrestri</p>
+  <p>I quattro pianeti più vicini al Sole, cioè Mercurio, Venere, la Terra e Marte, vengono chiamati pianeti terrestri o rocciosi, poiché condividono una struttura interna solida, composta principalmente da rocce silicatiche e da un nucleo metallico ricco di ferro e nichel. Si tratta di pianeti relativamente piccoli, con dimensioni comprese tra quella di Mercurio, il più piccolo, e quella della Terra, il più grande tra i quattro, e con una densità media elevata, superiore a 3 g/cm³, coerente con la loro composizione prevalentemente rocciosa.</p>
+  <p>Mercurio, il pianeta più vicino al Sole, orbita a una distanza media di circa 0,39 unità astronomiche (UA) ed è privo di una vera e propria atmosfera, il che lo espone a escursioni termiche estreme tra il giorno e la notte. Venere, a circa 0,72 UA dal Sole, possiede invece un'atmosfera densissima, composta quasi interamente da anidride carbonica, che intrappola il calore in modo così efficace, per effetto serra, da rendere la sua superficie la più calda tra tutti i pianeti del Sistema Solare, con temperature superiori a 460 °C, nonostante la maggiore distanza dal Sole rispetto a Mercurio. La Terra, a 1 UA di distanza dal Sole per definizione, e Marte, a circa 1,52 UA, completano il gruppo dei pianeti rocciosi: quest'ultimo, spesso chiamato pianeta rosso per la colorazione dovuta agli ossidi di ferro presenti sulla sua superficie, possiede un'atmosfera molto rarefatta e conserva evidenti tracce geologiche della presenza, in epoche remote, di acqua liquida sulla propria superficie.</p>
+
+  <p class="titolo-capitolo">I pianeti giganti</p>
+  <p>Oltre l'orbita di Marte, e oltre la fascia degli asteroidi di cui parleremo più avanti, si trovano i quattro pianeti giganti, decisamente più massicci e voluminosi dei pianeti terrestri, ma con una densità media molto più bassa, poiché la loro composizione è dominata da gas e ghiacci piuttosto che da materiali rocciosi.</p>
+  <p>Giove e Saturno, rispettivamente a circa 5,20 UA e 9,58 UA dal Sole, sono chiamati giganti gassosi, poiché composti principalmente da idrogeno ed elio, gli stessi elementi che costituiscono la maggior parte della massa del Sole: Giove, in particolare, è il pianeta più massiccio del Sistema Solare, con una massa più che doppia rispetto a quella di tutti gli altri pianeti messi insieme, mentre Saturno è celebre per il suo vistoso sistema di anelli, costituiti da miliardi di frammenti di ghiaccio e roccia di dimensioni molto variabili. Urano e Nettuno, a circa 19,2 UA e 30,1 UA dal Sole, vengono invece classificati come giganti ghiacciati, poiché al loro interno, oltre a idrogeno ed elio, sono presenti in quantità significativa acqua, ammoniaca e metano allo stato di ghiaccio, sostanze che conferiscono a questi due pianeti la caratteristica colorazione bluastra.</p>
+
+  <p class="titolo-capitolo">Le leggi di Keplero e i moti planetari</p>
+  <p>Il moto dei pianeti attorno al Sole non è casuale, ma segue regole precise, formulate agli inizi del Seicento dall'astronomo tedesco Johannes Keplero sulla base di un'attenta analisi delle osservazioni astronomiche disponibili all'epoca. La prima legge di Keplero afferma che i pianeti percorrono, attorno al Sole, orbite di forma ellittica, e non circolare come si era a lungo ritenuto, con il Sole che occupa uno dei due fuochi dell'ellisse. La seconda legge stabilisce che, nel percorrere la propria orbita, un pianeta si muove più velocemente quando si trova più vicino al Sole, e più lentamente quando se ne trova più lontano, in modo tale che il segmento immaginario che congiunge il pianeta al Sole copra sempre aree uguali in intervalli di tempo uguali.</p>
+  <p>La terza legge di Keplero, infine, mette in relazione il periodo di rivoluzione di un pianeta, cioè il tempo impiegato a compiere un'orbita completa attorno al Sole, con il semiasse maggiore della sua orbita, cioè con la sua distanza media dal Sole: il quadrato del periodo di rivoluzione, espresso in anni, è direttamente proporzionale al cubo del semiasse maggiore dell'orbita, espresso in unità astronomiche.</p>
+  <p class="formula">T<sup>2</sup> = a<sup>3</sup></p>
+  <p><em>Esempio svolto:</em> utilizzando la terza legge di Keplero, è possibile calcolare il periodo di rivoluzione di Marte, sapendo che la sua distanza media dal Sole è a ≈ 1,52 UA. Elevando al cubo il valore di a si ottiene a<sup>3</sup> ≈ 3,51; il periodo di rivoluzione, espresso in anni, è quindi T ≈ √3,51 ≈ 1,87 anni, cioè circa 1 anno e 10 mesi terrestri, un valore in ottimo accordo con quello effettivamente osservato per il pianeta.</p>
+  <p>Le leggi di Keplero, formulate inizialmente su base puramente osservativa, trovarono in seguito una solida giustificazione teorica nella legge di gravitazione universale di Newton, secondo la quale ogni corpo dotato di massa esercita su ogni altro corpo una forza di attrazione gravitazionale, ed è proprio questa forza, esercitata dal Sole sui pianeti, a curvarne la traiettoria mantenendoli in orbita anziché lasciarli proseguire in linea retta nello spazio.</p>
+
+  <p class="titolo-capitolo">I corpi minori del Sistema Solare</p>
+  <p>Oltre al Sole e ai pianeti, il Sistema Solare ospita una grande varietà di corpi di dimensioni più modeste. Gli asteroidi sono corpi rocciosi di forma spesso irregolare e di dimensioni comprese tra poche decine di metri e alcune centinaia di chilometri: la maggior parte di essi si concentra nella cosiddetta fascia principale degli asteroidi, una regione compresa approssimativamente tra 2,2 e 3,2 UA dal Sole, situata tra le orbite di Marte e di Giove.</p>
+  <p>Le comete sono invece corpi costituiti da una miscela di ghiacci e polveri, spesso descritti con l'immagine di "palle di neve sporche": quando, percorrendo un'orbita fortemente ellittica, si avvicinano al Sole, il calore ricevuto provoca la sublimazione dei ghiacci superficiali, dando origine alla caratteristica chioma luminosa e alla coda, sempre orientata in direzione opposta al Sole per effetto del vento solare e della pressione della radiazione solare. Infine, i pianeti nani, come Plutone e Cerere, sono corpi celesti che, pur orbitando attorno al Sole e possedendo una forma approssimativamente sferica dovuta alla propria gravità, non sono riusciti, a differenza dei pianeti veri e propri, a "ripulire" la zona circostante la propria orbita da altri corpi di dimensioni significative.</p>
+
+  <p class="titolo-capitolo">Le regioni più esterne: fascia di Kuiper e nube di Oort</p>
+  <p>Oltre l'orbita di Nettuno si estende una vasta regione, chiamata fascia di Kuiper, popolata da un numero molto elevato di piccoli corpi ghiacciati, tra cui lo stesso Plutone: questa regione è considerata, in un certo senso, l'analogo esterno della fascia principale degli asteroidi, ma composta prevalentemente da ghiacci anziché da rocce. Ancora più lontano, a distanze stimate fino a circa 100 000 UA dal Sole, si ritiene esista un'ulteriore regione, chiamata nube di Oort, costituita da un numero enorme di nuclei cometari, che rappresenta il confine più remoto dell'influenza gravitazionale del Sole e la sorgente presunta delle comete a lunghissimo periodo, cioè di quelle che impiegano molte migliaia di anni per completare una singola orbita.</p>
+</div>
+<!-- fine capitolo scienze 03 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci04.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

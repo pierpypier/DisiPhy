@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 06</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 06: la Luna e i suoi moti -->
+<div id="capitolo-06-luna-moti" class="capitolo-storia">
+  <p class="titolo-capitolo">06 - La Luna e i suoi moti - Classe 1</p>
+
+  <p class="titolo-capitolo">La Luna: caratteristiche generali</p>
+  <p>La Luna è l'unico satellite naturale della Terra, cioè l'unico corpo celeste che orbita stabilmente attorno al nostro pianeta per effetto della sua attrazione gravitazionale. Con un raggio di circa 1737 km, poco più di un quarto di quello terrestre descritto nel capitolo 4, e una massa pari a circa 1/81 di quella della Terra, la Luna è, in proporzione al pianeta attorno a cui orbita, uno dei satelliti più grandi dell'intero Sistema Solare.</p>
+  <p>A differenza della Terra, la Luna è priva di un'atmosfera significativa e di un campo magnetico apprezzabile: questa assenza di atmosfera comporta l'assenza di fenomeni meteorologici, ma anche l'assenza di qualunque protezione dal bombardamento di piccoli meteoriti, responsabile della fitta trama di crateri da impatto che ricopre la sua superficie, e forti escursioni termiche tra il giorno e la notte lunare, che possono superare i 250 °C.</p>
+
+  <p class="titolo-capitolo">La distanza Terra-Luna</p>
+  <p>La distanza media tra la Terra e la Luna è pari a circa 384 400 km, un valore che, come già osservato nel capitolo 2 a proposito delle distanze astronomiche, risulta comunque modesto se confrontato con le distanze in gioco all'interno del Sistema Solare, e che può essere espresso anche come poco più di un secondo luce, cioè come la distanza percorsa dalla luce, alla velocità di circa 300 000 km/s, in poco più di un secondo.</p>
+  <p><em>Esempio svolto:</em> il tempo impiegato dalla luce, e quindi anche dai segnali radio, per percorrere la distanza media Terra-Luna può essere calcolato dividendo la distanza per la velocità della luce: t = 384 400 km ÷ 300 000 km/s ≈ 1,28 s. Questo breve ma percettibile ritardo è lo stesso che ha reso necessarie, durante le missioni spaziali con equipaggio umano dirette verso la Luna, opportune pause nelle comunicazioni radio tra gli astronauti e il centro di controllo a Terra.</p>
+  <p>Poiché, come già ricordato a proposito delle leggi di Keplero nel capitolo 3, anche l'orbita della Luna attorno alla Terra è di forma ellittica e non perfettamente circolare, la distanza Terra-Luna varia leggermente nel corso di ciascuna orbita, tra un valore minimo, in corrispondenza del punto detto perigeo, e un valore massimo, in corrispondenza del punto detto apogeo.</p>
+
+  <p class="titolo-capitolo">I moti della Luna e la rotazione sincrona</p>
+  <p>La Luna, come la Terra, è animata da moti propri: il moto di rivoluzione, con cui percorre la propria orbita attorno alla Terra in circa 27,3 giorni, intervallo noto come mese sidereo, e il moto di rotazione, con cui ruota attorno al proprio asse. Un aspetto particolare, e all'apparenza sorprendente, è che il periodo di rotazione della Luna attorno al proprio asse coincide esattamente con il suo periodo di rivoluzione attorno alla Terra: questo fenomeno, chiamato rotazione sincrona, ha come conseguenza diretta il fatto che la Luna rivolge sempre verso la Terra la stessa faccia, mentre la faccia opposta, spesso impropriamente chiamata "lato oscuro", ma in realtà illuminata dal Sole tanto quanto quella visibile, non può mai essere osservata direttamente dalla superficie terrestre.</p>
+  <p>La rotazione sincrona della Luna non è un caso fortuito, ma il risultato di un lento processo, chiamato blocco mareale, dovuto all'azione, protratta nel corso di miliardi di anni, delle forze di marea esercitate dalla Terra sulla Luna, di cui si parlerà più avanti in questo stesso capitolo a proposito delle maree.</p>
+
+  <p class="titolo-capitolo">Le fasi lunari</p>
+  <p>La Luna non emette luce propria, come già osservato a proposito dei pianeti nel capitolo 3, ma è visibile perché riflette la luce del Sole: la porzione di superficie lunare illuminata e visibile dalla Terra cambia progressivamente nel corso del tempo, a seconda della posizione relativa tra Sole, Terra e Luna lungo l'orbita di quest'ultima, dando origine al fenomeno delle fasi lunari.</p>
+  <p>Quando la Luna si trova tra la Terra e il Sole, la sua faccia illuminata è rivolta interamente verso il Sole e quindi non è visibile dalla Terra: questa fase si chiama novilunio, o Luna nuova. Nei giorni successivi, la porzione illuminata visibile dalla Terra aumenta progressivamente, passando per la fase di primo quarto, in cui è visibile metà del disco lunare, fino a raggiungere, quando la Terra si trova tra il Sole e la Luna, la fase di plenilunio, o Luna piena, in cui l'intero disco lunare appare illuminato. Nei giorni seguenti, la porzione illuminata visibile diminuisce nuovamente, passando per l'ultimo quarto, fino a tornare al novilunio, completando un ciclo che prende il nome di mese sinodico, della durata di circa 29,5 giorni: un intervallo leggermente più lungo del mese sidereo di 27,3 giorni citato in precedenza, poiché, nel frattempo, anche la Terra si è spostata lungo la propria orbita attorno al Sole, e la Luna deve percorrere un tratto aggiuntivo per ritrovarsi nuovamente allineata con Sole e Terra nella stessa configurazione.</p>
+
+  <p class="titolo-capitolo">Le eclissi</p>
+  <p>Quando Sole, Terra e Luna vengono a trovarsi quasi perfettamente allineati lungo la stessa retta, si può verificare il fenomeno delle eclissi. Un'eclissi di Sole si verifica quando la Luna, in fase di novilunio, si interpone esattamente tra la Terra e il Sole, proiettando la propria ombra su una porzione ristretta della superficie terrestre e oscurando, temporaneamente e solo per gli osservatori che si trovano in quella zona, la vista del Sole. Un'eclissi di Luna si verifica invece quando è la Terra, in corrispondenza del plenilunio, a interporsi tra il Sole e la Luna, proiettando la propria ombra sulla superficie lunare, che risulta visibile, quando ciò accade, da qualunque punto della Terra in cui in quel momento sia notte.</p>
+  <p>Le eclissi non si verificano a ogni novilunio o plenilunio, come ci si potrebbe aspettare, ma solo in occasioni relativamente rare: questo accade perché l'orbita della Luna attorno alla Terra è leggermente inclinata, di circa 5°, rispetto al piano dell'orbita terrestre attorno al Sole già introdotto nel capitolo 4, per cui l'allineamento perfetto tra i tre corpi si verifica solo quando il novilunio o il plenilunio cadono in prossimità dei due punti, chiamati nodi, in cui l'orbita lunare interseca il piano dell'eclittica.</p>
+
+  <p class="titolo-capitolo">Le maree</p>
+  <p>Le maree sono l'innalzamento e l'abbassamento periodico del livello del mare, osservabile lungo le coste con un ciclo che si ripete, con buona regolarità, circa due volte al giorno. Questo fenomeno è causato principalmente dall'attrazione gravitazionale esercitata dalla Luna sulle masse d'acqua degli oceani terrestri: poiché la forza di gravità diminuisce con la distanza, come già accennato a proposito della legge di gravitazione universale nel capitolo 3, la Luna attrae con maggiore intensità le acque del lato della Terra a essa più vicino, generando un rigonfiamento, mentre un secondo rigonfiamento, di intensità comparabile, si forma contemporaneamente dal lato opposto della Terra, dove l'attrazione lunare è minima e prevale invece l'effetto della forza centrifuga dovuta alla rotazione del sistema Terra-Luna attorno al comune centro di massa.</p>
+  <p>Anche il Sole, pur essendo molto più distante della Luna, contribuisce al fenomeno delle maree, sebbene con un'intensità inferiore a circa la metà rispetto a quella lunare, a causa della sua massa enormemente maggiore ma anche della sua distanza molto più grande. Quando Sole, Terra e Luna sono allineati, come accade in occasione del novilunio e del plenilunio, gli effetti mareali dei due corpi si sommano, producendo le maree più ampie, chiamate maree sizigiali; quando invece Sole e Luna si trovano ad angolo retto rispetto alla Terra, come accade in occasione dei quarti di Luna, i loro effetti si contrastano parzialmente, producendo le maree di minore ampiezza, chiamate maree di quadratura.</p>
+</div>
+<!-- fine capitolo scienze 06 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci07.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

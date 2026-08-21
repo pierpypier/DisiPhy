@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scienze - Capitolo 01</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo scienze */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">SCIENZE</div>
+        <div class="subtitle">Piccolo manuale di scienze naturali per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="sci00.html" title="scienze indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r905.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo scienze 01: il metodo scientifico e le scienze della Terra -->
+<div id="capitolo-01-metodo-scientifico-scienze-terra" class="capitolo-storia">
+  <p class="titolo-capitolo">01 - Il metodo scientifico e le scienze della Terra - Classe 1</p>
+
+  <p class="titolo-capitolo">Che cosa sono le scienze della Terra</p>
+  <p>Le scienze della Terra sono l'insieme delle discipline scientifiche che studiano il nostro pianeta, la sua posizione nell'Universo, la sua struttura interna, i fenomeni che avvengono sulla sua superficie e nell'atmosfera che lo circonda, e la sua evoluzione nel corso del tempo. Si tratta di un campo di studio molto ampio, che comprende diverse discipline specifiche, tra cui l'astronomia (lo studio dei corpi celesti e dell'Universo), la geologia (lo studio della struttura e della composizione della Terra solida), la meteorologia (lo studio dei fenomeni atmosferici) e l'oceanografia (lo studio degli ambienti marini).</p>
+  <p>Accanto alle scienze della Terra, questo manuale affronterà anche la biologia, la scienza che studia gli organismi viventi, la loro struttura, il loro funzionamento e la loro evoluzione: entrambe le discipline condividono uno stesso approccio metodologico, che esamineremo in questo primo capitolo.</p>
+
+  <p class="titolo-capitolo">Il metodo scientifico sperimentale</p>
+  <p>Il metodo scientifico è il procedimento con cui le scienze sperimentali, comprese le scienze della Terra e la biologia, indagano i fenomeni naturali, cercando di descriverli, spiegarli e prevederli in modo oggettivo e verificabile. Il metodo, formalizzato per la prima volta in modo rigoroso da Galileo Galilei, si articola in alcune fasi fondamentali, che si ripetono ciclicamente nel corso dell'indagine scientifica.</p>
+  <p>La prima fase è l'osservazione di un fenomeno naturale, condotta nel modo più accurato e sistematico possibile, spesso accompagnata da misure quantitative delle grandezze coinvolte. Sulla base delle osservazioni raccolte, lo scienziato formula un'ipotesi, cioè una possibile spiegazione del fenomeno osservato, che deve essere formulata in modo tale da poter essere verificata sperimentalmente.</p>
+  <p>La fase successiva consiste nella verifica sperimentale dell'ipotesi, condotta attraverso esperimenti controllati e ripetibili, progettati appositamente per confermare oppure smentire l'ipotesi formulata: se i risultati sperimentali confermano ripetutamente l'ipotesi, questa può essere elevata al rango di legge scientifica (una descrizione sintetica, spesso di natura matematica, di come un fenomeno si comporta) oppure, se sufficientemente generale e capace di spiegare un ampio insieme di fenomeni correlati, di teoria scientifica.</p>
+
+  <p class="titolo-capitolo">Le particolarità del metodo nelle scienze della Terra</p>
+  <p>A differenza di molte discipline sperimentali, come la fisica o la chimica già incontrate in altri manuali di questa collana, le scienze della Terra si trovano spesso a dover studiare fenomeni di scala temporale o spaziale troppo grande per essere riprodotti direttamente in laboratorio: non è possibile, ad esempio, ricreare sperimentalmente la formazione di una catena montuosa, un processo che si sviluppa nell'arco di milioni di anni, né simulare in scala reale un intero sistema climatico planetario.</p>
+  <p>Per questo motivo, le scienze della Terra fanno ampio uso di osservazioni indirette, di modelli semplificati (talvolta realizzati anche al computer, mediante simulazioni numeriche) e dello studio comparativo di fenomeni analoghi ma di dimensioni più contenute e osservabili direttamente: lo studio delle rocce e dei fossili, ad esempio, permette di ricostruire eventi avvenuti in epoche remote, applicando alle osservazioni presenti gli stessi principi fisici e chimici che regolano i fenomeni osservabili oggi.</p>
+
+  <p class="titolo-capitolo">Il principio dell'attualismo</p>
+  <p>Un principio metodologico fondamentale delle scienze della Terra, formulato per la prima volta in modo sistematico dal geologo scozzese James Hutton e successivamente sviluppato da Charles Lyell, è il principio dell'attualismo, secondo il quale i processi geologici che agiscono oggi sulla superficie terrestre e nel suo interno sono sostanzialmente gli stessi che hanno agito in passato, con la stessa intensità e secondo le stesse leggi fisiche e chimiche.</p>
+  <p>Questo principio, spesso riassunto con l'espressione "il presente è la chiave del passato", permette agli scienziati di interpretare le tracce lasciate da eventi geologici antichi, come strati rocciosi o formazioni particolari, confrontandole con i processi analoghi attualmente osservabili, ad esempio lo studio della sedimentazione in un delta fluviale attuale, che aiuta a comprendere come si siano formate rocce sedimentarie antiche con caratteristiche simili.</p>
+
+  <p class="titolo-capitolo">Le grandezze fisiche e le unità di misura</p>
+  <p>Come ogni scienza sperimentale, anche le scienze della Terra e la biologia si basano su misure quantitative delle grandezze coinvolte nei fenomeni studiati, espresse mediante il Sistema Internazionale di unità di misura: la massa in chilogrammi (kg), la lunghezza in metri (m), il tempo in secondi (s) e la temperatura assoluta in kelvin (K) sono le unità fondamentali più frequentemente utilizzate in questo ambito.</p>
+  <p>Data l'enorme varietà di scale coinvolte nei fenomeni studiati, dalle dimensioni microscopiche di un minerale fino alle distanze astronomiche tra le galassie, è spesso necessario esprimere le grandezze mediante multipli e sottomultipli del Sistema Internazionale, oppure ricorrere alla notazione scientifica (potenze di dieci), particolarmente utile per esprimere in modo compatto sia numeri estremamente grandi sia numeri estremamente piccoli.</p>
+  <p><em>Esempio svolto:</em> la distanza media tra la Terra e il Sole, pari a circa 150 000 000 km, si esprime più agevolmente in notazione scientifica come 1,5 × 10<sup>8</sup> km, oppure, convertita in metri, come 1,5 × 10<sup>11</sup> m: questa notazione, che riprenderemo nei prossimi capitoli dedicati all'astronomia, evita di dover scrivere un numero eccessivamente lungo di cifre e zeri.</p>
+
+  <p class="titolo-capitolo">Un percorso in due discipline</p>
+  <p>Nei capitoli che seguono, il percorso di questo manuale si sviluppa lungo due grandi filoni tematici, intrecciati tra loro nel corso dei cinque anni: da un lato le scienze della Terra in senso stretto, con lo studio dell'Universo, del pianeta Terra, dei minerali e delle rocce, dei fenomeni endogeni come vulcani e terremoti, e degli involucri fluidi che avvolgono il pianeta (atmosfera e idrosfera); dall'altro la biologia, con lo studio della cellula, della genetica, dell'evoluzione, del corpo umano e degli ecosistemi. Entrambi i filoni condividono lo stesso rigore metodologico appena descritto, e si intrecceranno più volte nel corso del manuale, come avviene, ad esempio, quando si studia l'origine della vita sulla Terra primordiale, o l'influenza dei fattori geologici e climatici sull'evoluzione degli organismi viventi.</p>
+</div>
+<!-- fine capitolo scienze 01 -->
+
+<div id="indice-scienze" class="capitolo-storia">
+  <p><a href="sci02.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di scienze naturali per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
