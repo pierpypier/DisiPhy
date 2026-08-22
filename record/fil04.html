@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 04</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 04: Eraclito e il divenire -->
+<div id="capitolo-04-eraclito" class="capitolo-storia">
+  <p class="titolo-capitolo">04 - Eraclito e il divenire - Classe 3</p>
+
+  <p class="titolo-capitolo">Eraclito di Efeso: un pensatore oscuro</p>
+  <p>Eraclito nacque a Efeso, città ionica dell'Asia Minore non lontana da Mileto, intorno al 540 a.C., e vi morì presumibilmente attorno al 480 a.C.: appartenente a una famiglia aristocratica, secondo la tradizione antica rinunciò a cariche pubbliche e privilegi per dedicarsi interamente alla riflessione filosofica, conducendo una vita appartata e, a quanto pare, poco incline al confronto con gli altri pensatori del suo tempo, verso i quali espresse spesso giudizi severi, non risparmiando critiche neppure a figure come Pitagora, di cui abbiamo parlato nel capitolo precedente. A differenza dei filosofi milesi, di cui conosciamo il pensiero solo attraverso testimonianze indirette, di Eraclito restano numerosi frammenti di un'opera originale, tradizionalmente nota come Sulla natura, scritta in uno stile volutamente denso, allusivo e ricco di immagini, tanto che già nell'antichità egli venne soprannominato "l'Oscuro", proprio per la difficoltà di interpretazione del suo pensiero.</p>
+
+  <p class="titolo-capitolo">Il divenire universale</p>
+  <p>Il nucleo centrale della filosofia di Eraclito è costituito dalla tesi secondo cui la realtà, nella sua essenza più profonda, non sarebbe caratterizzata dalla stabilità e dalla permanenza, come si potrebbe essere portati a credere osservando la solidità apparente delle cose che ci circondano, ma da un incessante mutamento: tutto scorre, tutto è in perenne trasformazione, e nulla, nella natura, rimane mai identico a se stesso da un istante all'altro. Per esprimere questa idea, secondo un'immagine che la tradizione successiva gli attribuisce, Eraclito ricorreva al paragone con un fiume: chi si bagna due volte nello stesso fiume, in realtà, non entra mai nella medesima acqua, poiché questa scorre e si rinnova continuamente, così come, in un certo senso, non è mai davvero lo stesso nemmeno chi vi si bagna, dal momento che anch'egli, come ogni cosa esistente, è soggetto a un continuo processo di trasformazione.</p>
+  <p>Questa concezione del divenire universale non va tuttavia intesa come una semplice constatazione di caos e disordine: per Eraclito, infatti, il mutamento incessante delle cose non è affatto privo di regola, ma obbedisce a una legge razionale precisa, che egli chiama logos, termine greco dal significato assai ricco, che indica insieme "parola", "discorso" e "ragione". Il logos costituisce, per Eraclito, la struttura razionale e ordinata che governa il divenire universale, rendendolo non un caos arbitrario, ma un processo intelligibile e regolare; la maggior parte degli uomini, tuttavia, vive senza rendersi conto dell'esistenza di questo logos comune a tutte le cose, chiuso ciascuno nella propria visione limitata e soggettiva del mondo, come se dormisse invece di vivere in stato di veglia.</p>
+
+  <p class="titolo-capitolo">L'unità e la lotta degli opposti</p>
+  <p>Una delle intuizioni più originali di Eraclito riguarda il rapporto tra gli opposti, che egli non concepisce come termini semplicemente contrapposti e inconciliabili tra loro, come si potrebbe essere portati a pensare, ma come poli di un'unica realtà, legati tra loro da un rapporto di tensione necessaria e reciproca: il caldo non potrebbe darsi senza il freddo, il giorno senza la notte, la salute senza la malattia, poiché ciascuno di questi termini acquista senso e possibilità di esistere solo in rapporto al proprio opposto. <em>Esempio:</em> Eraclito osservava come uno stesso percorso di montagna possa essere descritto, a seconda del punto di vista, come "la via in salita" o "la via in discesa": si tratta della medesima strada, ma essa risulta, a seconda della prospettiva assunta, insieme identica e diversa, proprio come accade, secondo Eraclito, per ogni coppia di opposti presente in natura.</p>
+  <p>Da questa concezione deriva l'idea, particolarmente celebre, secondo cui la guerra, intesa non tanto in senso militare quanto come lotta e tensione tra opposti, sarebbe "padre di tutte le cose", cioè il principio generatore della realtà stessa: senza il contrasto e la tensione reciproca tra forze opposte, secondo Eraclito, nulla potrebbe esistere né trasformarsi, poiché è proprio da questo continuo conflitto regolato che nasce, paradossalmente, l'armonia complessiva del cosmo, un'armonia non statica e immobile, come si potrebbe immaginare, ma dinamica, cioè fatta di tensioni contrapposte tenute insieme in un equilibrio sempre rinnovato, come accade, per fare un esempio concreto a cui lo stesso Eraclito faceva riferimento, nella corda tesa di un arco o di una lira, la cui tenuta dipende proprio dalla tensione contraria delle sue estremità.</p>
+
+  <p class="titolo-capitolo">Il fuoco come immagine del divenire</p>
+  <p>Come i filosofi di Mileto esaminati nel secondo capitolo di questo manuale, anche Eraclito si interrogò sul principio primo, l'arché, da cui avrebbe avuto origine la totalità delle cose, individuandolo nel fuoco: si tratta tuttavia di una scelta profondamente diversa da quelle di Talete o di Anassimene, poiché il fuoco non viene inteso da Eraclito come una sostanza stabile che semplicemente si trasforma in altre sostanze, ma piuttosto come l'immagine per eccellenza del divenire stesso, dal momento che il fuoco esiste solo in quanto continuamente si consuma e si rinnova, non potendo mai essere colto in uno stato di quiete o di stabilità. Scegliere il fuoco come principio primo significa dunque, per Eraclito, affermare che la sostanza ultima della realtà non è una materia stabile che permane identica attraverso i cambiamenti, come pure si poteva ricavare, sia pure in modi diversi, dal pensiero dei filosofi milesi, ma il mutamento stesso, colto ed elevato al rango di principio ultimo del reale.</p>
+
+  <p class="titolo-capitolo">La critica alla conoscenza sensibile e comune</p>
+  <p>Coerentemente con questa concezione del divenire universale, Eraclito nutriva una profonda sfiducia nei confronti della conoscenza fondata sulla semplice esperienza sensibile immediata e priva di riflessione razionale, così come nei confronti delle opinioni diffuse tra la maggioranza degli uomini: a suo giudizio, infatti, i sensi, se non guidati da un'adeguata capacità di comprensione razionale del logos, rischiano di ingannare, mostrando come stabili e permanenti realtà che, in verità, sono in perenne trasformazione. Per questa ragione Eraclito riservava un giudizio severo non solo verso la massa degli uomini comuni, incapaci di elevarsi al di sopra delle proprie opinioni particolari, ma anche verso alcuni pensatori a lui precedenti o contemporanei, sostenendo che la conoscenza di molte cose, il semplice accumulo di informazioni ed erudizione, non insegni di per sé a comprendere il senso profondo e unitario della realtà, se non è accompagnata da un'autentica capacità di intelligenza razionale.</p>
+
+  <p class="titolo-capitolo">L'eredità di Eraclito</p>
+  <p>Il pensiero di Eraclito, per la sua originalità e la sua densità speculativa, ha esercitato un'influenza profonda sulla storia della filosofia successiva, ben oltre i confini del pensiero antico: la sua concezione del divenire universale come tratto fondamentale della realtà si pone infatti in netta ed esplicita contrapposizione rispetto alla filosofia di un altro grande pensatore presocratico, Parmenide, che affronteremo nel prossimo capitolo di questo manuale, e che sosterrà, all'opposto di Eraclito, l'assoluta immutabilità e stabilità dell'essere: il confronto tra queste due posizioni, apparentemente inconciliabili, rappresenta uno dei momenti più fecondi e discussi dell'intera storia della filosofia occidentale, e continuerà a riproporsi, in forme sempre nuove, in numerosi sviluppi successivi del pensiero filosofico che incontreremo nel corso di questo manuale.</p>
+</div>
+<!-- fine capitolo filosofia 04 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil05.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

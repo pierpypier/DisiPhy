@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 11</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 11: Platone, anima, conoscenza e stato ideale -->
+<div id="capitolo-11-platone-anima-stato" class="capitolo-storia">
+  <p class="titolo-capitolo">11 - Platone: anima, conoscenza e stato ideale - Classe 3</p>
+
+  <p class="titolo-capitolo">La concezione dell'anima e il mito del carro alato</p>
+  <p>Come si è visto nel capitolo precedente di questo manuale, Platone distingue nettamente il mondo sensibile, mutevole e imperfetto, dal mondo delle idee, eterno e perfetto: coerentemente con questa impostazione, egli concepisce anche l'anima umana come una realtà immateriale ed eterna, imprigionata temporaneamente nel corpo, secondo un'immagine di origine orfico-pitagorica già incontrata a proposito dei pitagorici nel terzo capitolo di questo manuale, e destinata a sopravvivere alla morte del corpo stesso. Nel dialogo Fedro, Platone illustra la struttura interna dell'anima attraverso il celebre mito del carro alato, immaginando l'anima come un cocchiere che guida un carro trainato da due cavalli di natura opposta: un cavallo bianco, docile e ben disposto, che rappresenta la parte irascibile dell'anima, orientata verso il coraggio e l'onore, e un cavallo nero, riottoso e difficile da governare, che rappresenta la parte concupiscibile, orientata verso i desideri materiali e i piaceri corporei; il cocchiere stesso simboleggia la parte razionale dell'anima, il cui compito è quello di guidare e armonizzare le altre due parti, dirigendo l'intero carro verso la contemplazione delle idee.</p>
+  <p>Questa tripartizione dell'anima in parte razionale, irascibile e concupiscibile viene ripresa da Platone in forma più sistematica nella Repubblica, dove ciascuna delle tre parti risulta associata a una virtù specifica: alla parte razionale corrisponde la sapienza, alla parte irascibile il coraggio, e alla parte concupiscibile la temperanza, cioè la capacità di moderare i propri desideri; da un armonico equilibrio tra queste tre componenti, sotto la guida della parte razionale, deriva infine la quarta virtù cardinale, la giustizia, intesa da Platone innanzitutto come corretto ordine interiore dell'anima, prima ancora che come virtù sociale.</p>
+
+  <p class="titolo-capitolo">La conoscenza come reminiscenza</p>
+  <p>Strettamente legata alla concezione dell'anima immortale è la teoria platonica della conoscenza come reminiscenza, o anamnesi, esposta in particolare nei dialoghi Menone e Fedone: secondo questa teoria, l'anima, prima di unirsi al corpo in occasione di ciascuna nuova nascita, avrebbe già contemplato direttamente, in una condizione di esistenza puramente spirituale, il mondo perfetto delle idee; con l'unione al corpo, tuttavia, l'anima dimenticherebbe tale conoscenza originaria, che rimarrebbe però latente in essa, custodita nella memoria profonda. Imparare, per Platone, non consiste dunque nell'acquisire dall'esterno, attraverso i sensi, nozioni del tutto nuove, come sosteneva invece, in polemica implicita con questa posizione, la tradizione empirista che incontreremo più avanti in questo manuale, ma nel ricordare, attraverso un adeguato esercizio razionale guidato ad esempio dal metodo dialogico ereditato da Socrate ed esaminato nel capitolo precedente, verità che l'anima già possedeva prima della nascita.</p>
+  <p>Nel dialogo Menone, Platone illustra questa teoria attraverso un celebre episodio, in cui Socrate, interrogando con semplici domande un giovane schiavo privo di qualsiasi istruzione geometrica, lo conduce a "ricordare" da solo, senza alcun insegnamento diretto, un importante teorema geometrico relativo al raddoppio del quadrato: secondo Platone, questo esperimento dimostrerebbe che la conoscenza matematica, di cui i pitagorici avevano già sottolineato l'importanza filosofica, non deriva dall'esperienza sensibile, ma da un patrimonio di verità già presente, sia pure in forma latente, nell'anima stessa.</p>
+
+  <p class="titolo-capitolo">La linea divisa e i gradi della conoscenza</p>
+  <p>Nel sesto libro della Repubblica, immediatamente prima del mito della caverna esaminato nel capitolo precedente di questo manuale, Platone illustra attraverso l'immagine di una linea divisa in quattro segmenti i diversi gradi della conoscenza umana, distinti secondo il grado di realtà del rispettivo oggetto: ai due gradi più bassi, riferiti al mondo sensibile, corrispondono l'immaginazione, o eikasia, che ha per oggetto semplici immagini, ombre e riflessi, e la credenza, o pistis, che ha per oggetto le cose sensibili stesse; ai due gradi più alti, riferiti al mondo intelligibile delle idee, corrispondono il pensiero discorsivo, o dianoia, proprio ad esempio della matematica, che procede da ipotesi non ulteriormente dimostrate, e l'intellezione, o noesis, forma più elevata di conoscenza, che coglie direttamente le idee, e in particolare l'idea del Bene, senza il bisogno di ricorrere a ipotesi indimostrate, attraverso il solo esercizio della dialettica filosofica.</p>
+
+  <p class="titolo-capitolo">Lo stato ideale e il governo dei filosofi</p>
+  <p>Nella Repubblica, Platone applica la tripartizione dell'anima umana, già esaminata, alla struttura della città ideale, individuando in essa tre corrispondenti classi sociali: i governanti, o filosofi, corrispondenti alla parte razionale dell'anima, ai quali spetta il compito di governare in virtù della loro sapienza; i guerrieri, o guardiani, corrispondenti alla parte irascibile, incaricati della difesa della città; e i produttori, cioè artigiani, agricoltori e commercianti, corrispondenti alla parte concupiscibile, incaricati di soddisfare i bisogni materiali della collettività. Come nell'anima individuale la giustizia consiste nel corretto ordine gerarchico delle tre parti sotto la guida della ragione, così nello stato la giustizia consiste, per Platone, nel fatto che ciascuna classe svolga esclusivamente il compito per cui è per natura più adatta, senza invadere le funzioni proprie delle altre classi, sotto la guida di governanti sapienti.</p>
+  <p>Coerentemente con l'idea, già anticipata nel mito della caverna esaminato nel capitolo precedente, secondo cui solo il filosofo possiede un'autentica conoscenza del Bene, Platone sostiene, in un passo particolarmente celebre della Repubblica, che i mali della città non avranno mai fine finché i filosofi non diventeranno re, o i re non diventeranno filosofi, affidando così il governo della città a coloro che, attraverso un lunghissimo e rigoroso percorso educativo, culminante nello studio della dialettica dopo i cinquant'anni di età, sono giunti alla contemplazione diretta dell'idea del Bene. Per garantire che i governanti e i guardiani non antepongano interessi privati al bene della collettività, Platone propone inoltre, per queste due classi, l'abolizione della proprietà privata e della famiglia tradizionale, con l'educazione dei figli affidata direttamente alla comunità: una proposta radicale, dettata dall'esigenza di eliminare ogni possibile fonte di conflitto tra interesse personale e bene comune.</p>
+
+  <p class="titolo-capitolo">Le forme di governo degenerate</p>
+  <p>Sempre nella Repubblica, Platone descrive, accanto allo stato ideale governato dai filosofi, una serie di forme di governo progressivamente degenerate, ciascuna caratterizzata dal prevalere di un valore diverso da quello della sapienza: la timocrazia, fondata sulla ricerca dell'onore militare; l'oligarchia, fondata sul potere della ricchezza; la democrazia, fondata su una libertà eccessiva e priva di ordine gerarchico, che Platone giudica negativamente, anche a motivo della condanna a morte subita proprio in un regime democratico dal proprio maestro Socrate, ricordata nel capitolo precedente di questo manuale; e infine la tirannide, forma di governo peggiore in assoluto, in cui un singolo individuo, mosso dai desideri più sfrenati, domina sugli altri cittadini attraverso la violenza e il sopruso.</p>
+
+  <p class="titolo-capitolo">L'eredità del pensiero platonico</p>
+  <p>Il pensiero di Platone, nel suo complesso, rappresenta una delle costruzioni filosofiche più sistematiche e influenti dell'intera storia occidentale, capace di offrire una risposta organica ai principali problemi ereditati dai filosofi precedenti esaminati in questo manuale: dal problema del rapporto tra essere e divenire, posto da Parmenide ed Eraclito, a quello della possibilità di una conoscenza oggettiva, messa in discussione dai sofisti, fino al problema del fondamento razionale dei valori etici e politici, già al centro della riflessione di Socrate. Come vedremo nei prossimi capitoli di questo manuale, sarà proprio all'interno dell'Accademia platonica che si formerà il pensatore che, pur muovendo da un confronto critico proprio con la teoria delle idee qui esaminata, elaborerà un sistema filosofico altrettanto influente e per molti aspetti alternativo a quello del maestro: Aristotele, di cui tratteremo diffusamente nei prossimi due capitoli.</p>
+</div>
+<!-- fine capitolo filosofia 11 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil12.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

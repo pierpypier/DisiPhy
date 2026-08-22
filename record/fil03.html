@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 03</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 03: Pitagora e i pitagorici -->
+<div id="capitolo-03-pitagora" class="capitolo-storia">
+  <p class="titolo-capitolo">03 - Pitagora e i pitagorici - Classe 3</p>
+
+  <p class="titolo-capitolo">Pitagora e la comunità di Crotone</p>
+  <p>Pitagora nacque a Samo, isola dell'Egeo orientale, intorno al 570 a.C., ma trascorse la parte più importante della sua vita in Occidente: attorno al 530 a.C., infatti, emigrò a Crotone, nella Magna Grecia, cioè in quelle regioni dell'Italia meridionale colonizzate dai Greci, dove fondò una comunità che aveva insieme il carattere di una scuola filosofica, di una setta religiosa e di un'associazione politica, retta da regole di vita rigorose e in parte segrete. Come già osservato a proposito dei filosofi milesi esaminati nel capitolo precedente, anche di Pitagora non ci sono giunti scritti diretti, e la ricostruzione del suo pensiero risulta particolarmente complessa, poiché le testimonianze antiche, a partire da quelle di Aristotele, si riferiscono spesso in modo indistinto ai "pitagorici" nel loro complesso, rendendo difficile separare con certezza le dottrine del fondatore da quelle elaborate dai suoi discepoli nel corso delle generazioni successive.</p>
+  <p>I membri della comunità pitagorica seguivano uno stile di vita fondato sull'ascesi, cioè sulla disciplina e sul controllo dei desideri materiali, sulla condivisione dei beni e su una serie di precetti che regolavano ogni aspetto dell'esistenza quotidiana, dall'alimentazione al comportamento sociale: tra questi, gli antichi ricordano, ad esempio, il divieto di cibarsi di fave, la cui ragione resta a tutt'oggi incerta e oggetto di diverse interpretazioni. Questa dimensione comunitaria e religiosa, in apparenza distante dalla ricerca razionale che caratterizzava i filosofi di Mileto, non impedì tuttavia ai pitagorici di sviluppare una delle riflessioni più originali e feconde dell'intera storia del pensiero greco, in particolare nel campo della matematica e della sua relazione con la realtà naturale.</p>
+
+  <p class="titolo-capitolo">Il numero come arché</p>
+  <p>Come i filosofi milesi, anche i pitagorici si posero il problema dell'arché, cioè del principio primo da cui deriverebbe la totalità delle cose; tuttavia, mentre Talete, Anassimandro e Anassimene avevano individuato tale principio in una sostanza materiale, per quanto diversamente concepita, i pitagorici compirono un passo teorico di grande originalità, sostenendo che l'arché di tutte le cose non fosse una materia, ma il numero. Secondo questa concezione, la realtà nel suo complesso non sarebbe costituita da un'unica sostanza fisica che si trasforma, bensì sarebbe essa stessa, nella sua struttura più profonda, di natura numerica: le cose, per i pitagorici, non si limitano ad avere proprietà misurabili quantitativamente, ma sono, in un senso più radicale, dei numeri, o meglio delle relazioni tra numeri, cioè dei rapporti e delle proporzioni.</p>
+  <p>Questa intuizione nacque probabilmente dall'osservazione che molti fenomeni naturali, apparentemente eterogenei, obbediscono in realtà a rapporti numerici precisi e ricorrenti: il caso più celebre, e storicamente più influente, riguarda la scoperta, tradizionalmente attribuita a Pitagora, del legame tra la lunghezza delle corde di uno strumento musicale e l'armonia degli intervalli sonori da esse prodotti, tanto che accorciare una corda vibrante secondo rapporti numerici semplici, come 2 a 1, 3 a 2 o 4 a 3, produce rispettivamente l'ottava, la quinta e la quarta musicale, cioè gli intervalli che l'orecchio umano percepisce come particolarmente armoniosi. <em>Esempio:</em> se una corda produce una certa nota, una corda della metà della sua lunghezza produce la stessa nota all'ottava superiore, offrendo così un'evidenza concreta e udibile del fatto che un fenomeno qualitativo come l'armonia musicale nasconda, alla sua base, una struttura quantitativa precisa.</p>
+  <p>Da osservazioni di questo tipo i pitagorici trassero una convinzione filosofica di portata assai più generale, secondo cui l'intero cosmo, termine greco che significa non a caso "ordine" oltre che "mondo", sarebbe retto da proporzioni numeriche analoghe a quelle riscontrate nell'armonia musicale: da qui l'idea, poi divenuta celebre, di un'"armonia delle sfere" prodotta dal movimento ordinato dei corpi celesti, e più in generale la convinzione che comprendere razionalmente la realtà significhi, in ultima analisi, individuarne la struttura numerica sottostante.</p>
+
+  <p class="titolo-capitolo">Aritmetica, geometria e il teorema di Pitagora</p>
+  <p>I pitagorici furono tra i primi a sviluppare l'aritmetica e la geometria non come semplici tecniche pratiche di calcolo e di misurazione, quali erano state fino ad allora presso i Babilonesi e gli Egizi, ma come discipline puramente razionali, fondate su dimostrazioni rigorose e non su procedure empiriche; a questa scuola la tradizione attribuisce, tra l'altro, la dimostrazione del celebre teorema geometrico, noto ancora oggi come teorema di Pitagora, secondo cui, in un triangolo rettangolo, il quadrato costruito sull'ipotenusa è equivalente alla somma dei quadrati costruiti sui due cateti: va tuttavia precisato che tale relazione tra i lati del triangolo rettangolo era in parte già nota, dal punto di vista pratico, ad altre civiltà antiche, mentre il merito specifico attribuito ai pitagorici riguarda soprattutto il tentativo di fornirne una dimostrazione razionale e universale.</p>
+  <p>Particolare importanza rivestiva, nella riflessione pitagorica, anche lo studio delle proprietà dei numeri interi, distinti in numeri pari e numeri dispari, in numeri quadrati e numeri triangolari a seconda della figura geometrica che la loro disposizione in punti veniva a formare: un ruolo simbolico speciale era attribuito in particolare alla tetraktys, cioè alla somma dei primi quattro numeri naturali, uno più due più tre più quattro, che dà come risultato dieci, numero considerato perfetto perché riassumeva in sé, secondo i pitagorici, l'intera struttura armonica del cosmo, ed era oggetto persino di una forma di venerazione religiosa da parte dei membri della comunità.</p>
+
+  <p class="titolo-capitolo">La tavola degli opposti</p>
+  <p>Secondo la testimonianza di Aristotele, alcuni pitagorici elaborarono anche una tavola di dieci coppie di principi opposti, ritenuti alla base dell'intera realtà: tra queste coppie comparivano, ad esempio, il limite e l'illimitato, il pari e il dispari, l'uno e la molteplicità, la quiete e il movimento, la luce e le tenebre, il bene e il male. Questa concezione duale della realtà, fondata sul contrasto tra principi opposti e complementari, testimonia come, per i pitagorici, la struttura numerica del cosmo non fosse soltanto un dato quantitativo astratto, ma implicasse anche un ordine qualitativo, in cui il limite, cioè la determinazione e la misura proprie del numero, veniva considerato positivo, mentre l'illimitato, cioè l'indeterminatezza, era percepito come un principio da ordinare e regolare, in una prospettiva che presenta significative differenze rispetto, ad esempio, alla nozione di apeiron elaborata da Anassimandro e già esaminata nel capitolo precedente.</p>
+
+  <p class="titolo-capitolo">L'anima e la dottrina della metempsicosi</p>
+  <p>Accanto alla riflessione matematica e cosmologica, i pitagorici svilupparono anche una particolare concezione dell'anima umana, in parte derivata da influssi religiosi di origine orfica, cioè legati alle credenze diffuse dai seguaci del mitico poeta Orfeo: secondo questa dottrina, l'anima sarebbe una realtà distinta e indipendente dal corpo, di natura immortale, destinata a reincarnarsi ripetutamente in corpi diversi, anche animali, attraverso un processo noto come metempsicosi, o trasmigrazione delle anime, fino al raggiungimento di una condizione di purificazione definitiva.</p>
+  <p>Proprio in funzione di questo obiettivo di purificazione, o catarsi, la comunità pitagorica prescriveva ai propri membri uno stile di vita rigoroso, fondato sulla musica, sulla matematica e sulla filosofia, concepite come strumenti privilegiati per liberare l'anima dai legami con la dimensione corporea e materiale: la stessa parola greca philosophia, "amore per la sapienza", secondo un'antica tradizione sarebbe stata coniata proprio da Pitagora per indicare questa forma di ricerca disinteressata della verità, contrapposta alla ricerca di ricchezza o di potere.</p>
+
+  <p class="titolo-capitolo">L'eredità della scuola pitagorica</p>
+  <p>Il pensiero pitagorico esercitò un'influenza profonda e duratura sulla filosofia greca successiva: l'idea di una realtà ordinata secondo rapporti numerici razionali contribuì infatti a rafforzare, sia pure per vie diverse rispetto ai filosofi di Mileto, la convinzione che il mondo naturale non fosse governato dal capriccio di forze arbitrarie, ma da un ordine intelligibile, indagabile attraverso il ragionamento matematico. Come vedremo più avanti in questo manuale, elementi della riflessione pitagorica, in particolare la concezione dell'anima immortale distinta dal corpo e l'idea di una realtà autentica accessibile solo attraverso il pensiero razionale e non attraverso i sensi, avrebbero esercitato un'influenza rilevante, tra gli altri, sulla filosofia di Platone, che dedicheremo un'ampia trattazione nei capitoli successivi di questo manuale.</p>
+</div>
+<!-- fine capitolo filosofia 03 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil04.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

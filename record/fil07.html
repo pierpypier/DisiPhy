@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 07</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 07: i fisici pluralisti, Empedocle, Anassagora e Democrito -->
+<div id="capitolo-07-fisici-pluralisti" class="capitolo-storia">
+  <p class="titolo-capitolo">07 - I fisici pluralisti: Empedocle, Anassagora e Democrito - Classe 3</p>
+
+  <p class="titolo-capitolo">Il problema ereditato da Parmenide</p>
+  <p>Come si è visto negli ultimi due capitoli di questo manuale, Parmenide aveva sostenuto, con un rigore logico difeso poi da Zenone attraverso i celebri paradossi, l'assoluta unità e immutabilità dell'essere, negando su base razionale la possibilità stessa del movimento e della molteplicità: una posizione che, per quanto logicamente coerente, entrava in evidente contrasto con l'esperienza quotidiana, la quale mostra un mondo fatto di cose distinte, in continua trasformazione. Nella seconda metà del V secolo a.C. un gruppo di filosofi, tradizionalmente riuniti sotto l'etichetta di "fisici pluralisti", cercò di elaborare una soluzione capace di conciliare l'esigenza logica posta da Parmenide, secondo cui l'essere non può nascere dal nulla né ridursi al nulla, con l'evidenza sensibile della molteplicità e del mutamento: la loro strategia comune consistette nell'ammettere non un solo principio originario, ma una pluralità di principi eterni e immutabili, la cui combinazione e separazione avrebbe potuto spiegare la varietà e il divenire dei fenomeni naturali, senza per questo violare il divieto parmenideo di ammettere che qualcosa nasca dal non-essere o si dissolva in esso.</p>
+
+  <p class="titolo-capitolo">Empedocle e le quattro radici</p>
+  <p>Empedocle nacque ad Agrigento, in Sicilia, intorno al 490 a.C., e fu figura poliedrica, insieme filosofo, medico, poeta e uomo politico, avvolta già nell'antichità da un'aura leggendaria; espose il proprio pensiero in due poemi in versi, Sulla natura e le Purificazioni, di cui ci sono giunti numerosi frammenti. Alla base della sua fisica, Empedocle pose quattro elementi eterni e immutabili, da lui chiamati "radici", cioè fuoco, aria, acqua e terra: si tratta delle stesse sostanze già individuate, singolarmente, dai filosofi milesi esaminati nel secondo capitolo di questo manuale, ma qui riunite insieme come principi ugualmente originari, nessuno dei quali riducibile agli altri, la cui unione e separazione, in proporzioni diverse, darebbe origine a tutte le sostanze e a tutti i corpi esistenti in natura.</p>
+  <p>Poiché le quattro radici, prese singolarmente, restano immobili ed eterne, secondo il principio parmenideo per cui l'essere non muta, Empedocle introdusse due forze cosmiche opposte, capaci di spiegare il movimento e la combinazione degli elementi senza intaccarne l'immutabilità: l'Amore, o Philia, principio di unione e attrazione che tende a mescolare tra loro gli elementi, e l'Odio, o Neikos, principio di separazione e discordia che tende invece a dividerli. La storia del cosmo, per Empedocle, è scandita da un ciclo continuo, in cui prevale ora l'una ora l'altra di queste due forze: quando l'Amore prevale interamente, gli elementi si fondono in una totalità indifferenziata detta Sfero; quando invece prevale l'Odio, gli elementi risultano completamente separati; il mondo ordinato e vario che osserviamo esiste solo nelle fasi intermedie di questo ciclo, in cui le due forze si contendono il predominio in proporzioni diverse.</p>
+
+  <p class="titolo-capitolo">Anassagora e l'intelligenza ordinatrice</p>
+  <p>Anassagora nacque a Clazomene, città ionica dell'Asia Minore, intorno al 500 a.C., ma trascorse gran parte della propria vita ad Atene, dove fu tra l'altro in stretto rapporto con lo statista Pericle, contribuendo così a introdurre per la prima volta la riflessione filosofica nella città che sarebbe di lì a poco diventata il centro culturale più importante della Grecia, come vedremo a proposito di Socrate e Platone nei capitoli successivi di questo manuale. Anche Anassagora, come Empedocle, ammise una pluralità di principi eterni e immutabili all'origine di tutte le cose, ma concepì tali principi in modo diverso e più radicale: secondo Anassagora, esistono infiniti "semi", o omeomerie, cioè particelle originarie di ogni possibile sostanza qualitativamente determinata, come la carne, l'osso, l'oro o il sangue, presenti fin dall'origine, mescolate insieme in proporzioni diverse, in ogni cosa esistente; la natura specifica di un corpo, secondo questa teoria, dipenderebbe semplicemente dal tipo di semi che in esso risultano prevalenti.</p>
+  <p>Per spiegare come da una mescolanza originaria indistinta di infiniti semi abbia potuto formarsi l'ordine del cosmo che osserviamo, Anassagora introdusse un principio nuovo e di grande importanza filosofica, il nous, termine greco traducibile come "intelligenza" o "mente": si tratta di un principio ordinatore, distinto dalla materia e da essa indipendente, dotato di conoscenza e di potere sufficienti a imprimere un movimento rotatorio ai semi mescolati, separandoli progressivamente e dando così origine all'ordine cosmico. L'introduzione di un'intelligenza ordinatrice distinta dalla materia rappresentò una novità filosofica di grande rilievo, tanto che Aristotele, occupandosene diffusamente, avrebbe in seguito criticato Anassagora per non aver saputo sviluppare pienamente le potenzialità della propria intuizione, utilizzando il nous solo per innescare il movimento iniziale del cosmo, senza estenderne l'impiego a una spiegazione più generale e finalistica dei fenomeni naturali. Va infine ricordato che Anassagora, per aver sostenuto, tra l'altro, che il Sole non fosse una divinità ma una massa incandescente di dimensioni maggiori del Peloponneso, fu accusato di empietà e costretto ad abbandonare Atene, episodio che testimonia le difficoltà e i rischi che la nuova riflessione razionale sulla natura poteva talvolta incontrare presso l'opinione pubblica del tempo.</p>
+
+  <p class="titolo-capitolo">Leucippo e Democrito: l'atomismo</p>
+  <p>La soluzione più radicale e filosoficamente influente al problema ereditato da Parmenide venne elaborata da Leucippo, di cui si hanno notizie assai scarse, e soprattutto dal suo allievo Democrito, nato ad Abdera, in Tracia, intorno al 460 a.C.: secondo la teoria atomistica da loro fondata, la realtà è costituita da due soli principi, gli atomi, cioè corpuscoli materiali eterni, indivisibili, e pertanto identificabili con l'essere parmenideo nella sua immutabilità, e il vuoto, cioè lo spazio in cui gli atomi si muovono, identificato invece, in una mossa filosoficamente audace, con il non-essere parmenideo, del quale Leucippo e Democrito ammisero, contro il divieto esplicito di Parmenide, una qualche forma di esistenza, necessaria a rendere possibile il movimento.</p>
+  <p>Gli atomi, secondo Democrito, sono infiniti per numero e differiscono tra loro non per qualità, ma esclusivamente per proprietà quantitative e geometriche: forma, ordine e posizione nello spazio; muovendosi eternamente nel vuoto, essi si urtano, si aggregano e si separano secondo leggi meccaniche di necessità, dando origine, per semplice combinazione casuale delle loro forme e posizioni, a tutti i corpi e a tutti i fenomeni naturali osservabili, senza alcun bisogno di ricorrere, diversamente da quanto aveva fatto Anassagora, a un'intelligenza ordinatrice esterna alla materia. <em>Esempio:</em> Democrito paragonava la formazione dei corpi all'unione di lettere dell'alfabeto, in numero limitato, che combinandosi in ordini diversi possono generare un numero potenzialmente infinito di parole differenti.</p>
+  <p>Da questa concezione deriva anche un'importante distinzione gnoseologica, cioè relativa alla conoscenza: secondo Democrito, proprietà come il colore, il sapore, il calore o il freddo non appartengono realmente agli atomi e al vuoto, che sono le uniche realtà oggettive esistenti "per natura", ma dipendono unicamente dal modo in cui i nostri organi di senso reagiscono agli urti degli atomi, e sussistono pertanto solo "per convenzione", cioè in rapporto al soggetto percipiente: una distinzione tra qualità oggettive e qualità soggettive che avrebbe conosciuto, in epoca moderna, sviluppi di grande importanza nella filosofia della scienza. Sul piano etico, infine, Democrito indicò come fine della vita umana l'euthymia, cioè una condizione di serenità e di equilibrio interiore, da raggiungersi attraverso la moderazione dei desideri e l'esercizio della ragione, in una prospettiva che anticipa temi ripresi, in epoca ellenistica, dalle filosofie di cui parleremo più avanti in questo manuale.</p>
+
+  <p class="titolo-capitolo">Un bilancio dei fisici pluralisti</p>
+  <p>Pur nelle loro rilevanti differenze, Empedocle, Anassagora e Democrito condividono una medesima strategia filosofica di fondo, che ne giustifica la comune collocazione tra i fisici pluralisti: tutti e tre, infatti, per rendere conto razionalmente della molteplicità e del mutamento del mondo naturale senza contraddire il divieto parmenideo di ammettere che l'essere nasca dal nulla o vi si dissolva, spostarono il divenire dal piano della sostanza, che resta eterna e immutabile nei suoi principi ultimi, atomi, radici o semi che siano, al piano della combinazione e separazione di tali principi, concepiti come realmente esistenti e non più soggetti a nascita o a distruzione. Questo sforzo di conciliare l'eredità eleatica con l'evidenza sensibile del mutamento segna un momento di grande maturazione della riflessione razionale sulla natura, e prepara, come vedremo nel prossimo capitolo di questo manuale, un mutamento di prospettiva ancora più profondo, quando l'interesse della filosofia greca, con i sofisti e con Socrate, si sposterà progressivamente dallo studio della natura fisica all'indagine sull'uomo, sulla conoscenza e sui valori.</p>
+</div>
+<!-- fine capitolo filosofia 07 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil08.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

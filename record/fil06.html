@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 06</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 06: Zenone e i paradossi eleatici -->
+<div id="capitolo-06-zenone" class="capitolo-storia">
+  <p class="titolo-capitolo">06 - Zenone e i paradossi eleatici - Classe 3</p>
+
+  <p class="titolo-capitolo">Zenone di Elea: la difesa del maestro</p>
+  <p>Zenone nacque a Elea, la stessa città della Magna Grecia che aveva dato i natali a Parmenide, di cui abbiamo parlato nel capitolo precedente di questo manuale, intorno al 490 a.C.: allievo prediletto di Parmenide, secondo la testimonianza di Platone lo avrebbe accompagnato, insieme al maestro, in un celebre viaggio ad Atene, dove i due filosofi eleati avrebbero avuto occasione di confrontarsi con un giovane Socrate, di cui ci occuperemo più avanti in questo manuale. L'opera principale di Zenone, oggi perduta se non per pochi frammenti, era finalizzata a difendere le tesi di Parmenide sull'unità e l'immutabilità dell'essere, e in particolare a confutare l'idea, propria del senso comune, secondo cui la realtà sarebbe costituita da una molteplicità di cose distinte, soggette a movimento: a questo scopo, Zenone non procedette dimostrando direttamente la verità delle tesi del maestro, ma elaborò un metodo argomentativo del tutto nuovo, mostrando come, al contrario, le tesi opposte, cioè l'ammissione della molteplicità e del movimento, conducessero a conseguenze assurde e contraddittorie.</p>
+  <p>Questo procedimento, che consiste nel supporre per un momento vera la tesi che si intende confutare, per poi mostrare come da essa derivino conseguenze logicamente insostenibili, è noto come dimostrazione per assurdo, o riduzione all'assurdo: Aristotele, che tratteremo diffusamente più avanti in questo manuale, riconobbe a Zenone il merito di aver inventato questo metodo argomentativo, tanto da definirlo, in un'espressione poi divenuta celebre, l'inventore della dialettica, intesa come arte del ragionare per contraddizioni al fine di mettere alla prova la coerenza logica delle tesi in discussione.</p>
+
+  <p class="titolo-capitolo">I paradossi contro il movimento</p>
+  <p>I più celebri argomenti di Zenone riguardano l'impossibilità logica del movimento, e sono giunti fino a noi principalmente attraverso la testimonianza di Aristotele: si tratta di quattro paradossi, tra cui spiccano per fama e importanza quello di Achille e la tartaruga e quello della freccia scagliata, entrambi costruiti per mostrare come l'idea comune di un movimento continuo, che si svolge attraverso lo spazio e il tempo, nasconda in realtà contraddizioni logiche insanabili, qualora si accetti, come faceva il senso comune del tempo, che lo spazio e il tempo siano divisibili all'infinito in parti sempre più piccole.</p>
+
+  <p class="titolo-capitolo">Achille e la tartaruga</p>
+  <p>Nel paradosso di Achille e la tartaruga, Zenone immagina una gara tra Achille, l'eroe greco proverbiale per la sua velocità, e una tartaruga, alla quale viene concesso, per compensarne la lentezza, un piccolo vantaggio di partenza: secondo l'argomentazione di Zenone, per quanto Achille sia più veloce, non potrà mai raggiungere la tartaruga, poiché, nel tempo impiegato da Achille a colmare la distanza iniziale che lo separa dalla tartaruga, quest'ultima avrà comunque percorso un piccolo tratto ulteriore, generando così una nuova distanza da colmare; e questo processo, ripetibile all'infinito, ogni volta genera un nuovo, seppur sempre più piccolo, intervallo residuo da percorrere, cosicché Achille, sommando infiniti intervalli, non riuscirebbe mai, secondo la logica del ragionamento, a raggiungere effettivamente la tartaruga. <em>Esempio:</em> è come se, per attraversare una stanza, dovessimo prima percorrere metà della distanza, poi metà della distanza restante, poi ancora metà di quella rimanente, e così all'infinito, senza mai giungere, in teoria, all'altra estremità della stanza.</p>
+  <p>È importante osservare che Zenone non intendeva affatto negare l'evidenza empirica secondo cui, nella pratica quotidiana, un corridore veloce supera senza difficoltà uno più lento: il paradosso mirava piuttosto a mostrare come tale evidenza sensibile, quando sottoposta a un'analisi puramente logica fondata sull'ipotesi della divisibilità infinita dello spazio, generasse conclusioni contraddittorie rispetto all'esperienza, dimostrando così, in linea con l'insegnamento di Parmenide esposto nel capitolo precedente, l'inaffidabilità della conoscenza sensibile quando non sorretta da un adeguato controllo razionale.</p>
+
+  <p class="titolo-capitolo">La freccia scagliata</p>
+  <p>Un secondo paradosso di grande rilievo è quello della freccia scagliata: Zenone osserva che una freccia in volo, in ogni singolo istante considerato, occupa uno spazio esattamente pari alla propria lunghezza, e risulta pertanto, in quel preciso istante, ferma in quel punto, esattamente come lo sarebbe se fosse effettivamente immobile; ma se in ogni istante del suo percorso la freccia è ferma, allora, sommando tra loro una successione di istanti in cui la freccia risulta sempre ferma, se ne dovrebbe concludere, paradossalmente, che la freccia non si muove affatto durante l'intero tragitto, contraddicendo così l'evidenza secondo cui la freccia percorre effettivamente una traiettoria nello spazio.</p>
+
+  <p class="titolo-capitolo">Il significato filosofico dei paradossi</p>
+  <p>Al di là della loro formulazione specifica, tutti i paradossi di Zenone condividono una medesima struttura logica di fondo: essi assumono come ipotesi di partenza la divisibilità infinita dello spazio e del tempo, un'ipotesi che al senso comune poteva apparire scontata e non problematica, per poi mostrare come da tale ipotesi derivino conclusioni palesemente contraddittorie rispetto all'esperienza quotidiana del movimento. Attraverso questo procedimento, Zenone intendeva dimostrare indirettamente la fondatezza delle tesi di Parmenide sull'unità e l'immutabilità dell'essere, mostrando come l'ammissione della molteplicità e del movimento, tesi propria del senso comune e dell'esperienza sensibile, condannata da Parmenide alla sola "via dell'opinione", si riveli, se sottoposta a un rigoroso vaglio razionale, intrinsecamente contraddittoria e priva di reale fondamento logico.</p>
+
+  <p class="titolo-capitolo">L'eredità della scuola eleatica</p>
+  <p>I paradossi di Zenone, pur non essendo mai stati pienamente risolti nell'antichità, ebbero un'importanza filosofica straordinaria, ben oltre l'ambito specifico della difesa delle tesi di Parmenide: essi posero infatti per la prima volta, in termini rigorosamente razionali, il problema della struttura dello spazio, del tempo e dell'infinito, un problema che avrebbe continuato ad accompagnare la riflessione filosofica e scientifica occidentale per i secoli successivi, fino a trovare, solo in epoca moderna, con lo sviluppo del calcolo infinitesimale, strumenti matematici più adeguati ad affrontarlo. Sul piano più propriamente filosofico, la scuola eleatica, fondata da Parmenide e difesa da Zenone, lasciò in eredità alla filosofia successiva un'esigenza metodologica fondamentale, quella del rigore logico e argomentativo nella costruzione dei ragionamenti, un'esigenza che ritroveremo, sviluppata in direzioni nuove e originali, nei filosofi che tratteremo nei prossimi capitoli di questo manuale, a cominciare dai cosiddetti fisici pluralisti, impegnati a cercare una via capace di conciliare l'esigenza logica di stabilità propria di Parmenide con l'evidenza sensibile del movimento e del mutamento.</p>
+</div>
+<!-- fine capitolo filosofia 06 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil07.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

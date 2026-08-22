@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 09</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 09: Socrate, la ricerca della verità -->
+<div id="capitolo-09-socrate" class="capitolo-storia">
+  <p class="titolo-capitolo">09 - Socrate: la ricerca della verità - Classe 3</p>
+
+  <p class="titolo-capitolo">Vita di Socrate e il problema delle fonti</p>
+  <p>Socrate nacque ad Atene nel 470 o nel 469 a.C., figlio di uno scultore e di una levatrice, e visse nella città per l'intera esistenza, prendendo parte, come semplice cittadino oplita, ad alcune campagne militari della guerra del Peloponneso, ma senza mai ricoprire cariche politiche di rilievo, se non occasionali incarichi pubblici svolti con scrupolosa integrità morale. Diversamente da molti filosofi precedenti esaminati in questo manuale, Socrate non lasciò alcuno scritto, ritenendo probabilmente che la filosofia dovesse realizzarsi essenzialmente nel dialogo diretto e vivo tra le persone, e non fissarsi in testi scritti: la ricostruzione del suo pensiero risulta pertanto particolarmente complessa, e si fonda soprattutto sulle testimonianze di due suoi allievi, Platone e Senofonte, oltre che, in chiave satirica, sulla commedia Le nuvole del commediografo Aristofane, che ne offre un ritratto in parte caricaturale.</p>
+  <p>Questa difficoltà nel distinguere il pensiero storico di Socrate da quello attribuitogli, in particolare, da Platone, che lo rese protagonista della quasi totalità dei propri dialoghi filosofici, come vedremo nei prossimi capitoli di questo manuale, è nota tra gli studiosi come "problema socratico": per convenzione, si tende a considerare più fedele alla figura storica di Socrate il ritratto offerto dai dialoghi giovanili di Platone, mentre nei dialoghi della maturità Platone avrebbe progressivamente attribuito a Socrate, come personaggio letterario, anche tesi filosofiche proprie, sempre più distanti dal pensiero effettivamente sostenuto dal maestro storico.</p>
+
+  <p class="titolo-capitolo">Il rapporto con i sofisti</p>
+  <p>Come si è visto nel capitolo precedente di questo manuale, Socrate condivise con i sofisti alcuni tratti essenziali, in particolare l'interesse per l'uomo, per il dialogo e per l'indagine sui valori etici, distanziandosi così dalla precedente tradizione dei filosofi della natura; per questa ragione, egli fu talvolta accostato ai sofisti già dai suoi contemporanei, come testimonia la satira di Aristofane appena ricordata. Socrate si distanziò tuttavia in modo radicale dalle posizioni relativistiche di pensatori come Protagora, di cui si è parlato nel capitolo precedente: mentre infatti i sofisti tendevano a negare l'esistenza di una verità e di un bene oggettivi, validi per tutti gli uomini, Socrate fu fermamente convinto che tali realtà oggettive esistessero, e che il compito della filosofia consistesse proprio nel ricercarle attraverso un rigoroso esercizio della ragione, condotto in forma dialogica.</p>
+
+  <p class="titolo-capitolo">Il "conosci te stesso" e la confessione di ignoranza</p>
+  <p>Il punto di partenza della riflessione socratica è racchiuso nel celebre motto "conosci te stesso", iscritto secondo la tradizione sul tempio di Apollo a Delfi, che Socrate fece proprio invitando ciascuno a rivolgere l'indagine filosofica innanzitutto verso se stesso, verso la propria anima e i propri valori, prima ancora che verso la natura esterna. Secondo un celebre racconto riportato da Platone nell'Apologia di Socrate, un amico di Socrate, recatosi all'oracolo di Delfi, avrebbe ricevuto risposta che nessun uomo fosse più sapiente di Socrate; sorpreso da questo responso, poiché non si riteneva affatto sapiente, Socrate avrebbe iniziato a interrogare i cittadini ateniesi ritenuti esperti in vari campi, per verificare la fondatezza del responso oracolare, scoprendo che tali persone, pur credendo di possedere un sapere autentico, non erano in realtà capaci di renderne ragione in modo coerente quando sottoposte a un rigoroso esame critico.</p>
+  <p>Da questa esperienza Socrate trasse la celebre consapevolezza, spesso riassunta nella formula "so di non sapere", secondo cui la propria superiorità rispetto agli altri cittadini non consisteva nel possesso di un sapere positivo, ma proprio nella consapevolezza dei limiti della propria conoscenza, una consapevolezza che gli altri, presuntuosamente convinti di sapere, non possedevano: questa confessione di ignoranza non va tuttavia intesa come un atteggiamento scettico o rinunciatario nei confronti della verità, ma piuttosto come il presupposto indispensabile per avviare una ricerca autentica, poiché solo chi riconosce di non sapere può mettersi realmente e onestamente alla ricerca della conoscenza.</p>
+
+  <p class="titolo-capitolo">Il metodo socratico: ironia e maieutica</p>
+  <p>Per condurre questa ricerca, Socrate elaborò un metodo dialogico originale, articolato in due fasi complementari, tradizionalmente denominate ironia e maieutica: l'ironia, termine che deriva dal greco eironeia, "finzione" o "dissimulazione", consiste nel fingere di non sapere nulla riguardo all'argomento in discussione, e nell'interrogare l'interlocutore, ritenuto esperto, chiedendogli di definire con precisione la nozione oggetto di indagine, ad esempio la giustizia, il coraggio o la virtù; attraverso una serie incalzante di domande successive, Socrate conduceva progressivamente l'interlocutore a scoprire le contraddizioni e le insufficienze nascoste nella propria posizione iniziale, portandolo a riconoscere la propria ignoranza su una materia che credeva di conoscere bene.</p>
+  <p>Superata questa fase demolitoria, subentrava la fase propriamente costruttiva del dialogo, chiamata maieutica, termine che deriva dal greco maieutike techne, "arte della levatrice", in evidente riferimento al mestiere della madre di Socrate: come la levatrice non genera essa stessa il bambino, ma aiuta la partoriente a farlo venire alla luce, così Socrate riteneva che il proprio compito non fosse quello di trasmettere direttamente un sapere già confezionato all'interlocutore, come pretendevano di fare i sofisti dietro compenso, ma di aiutarlo, attraverso domande ben poste, a far emergere da sé stesso, cioè dalla propria ragione, una conoscenza più autentica e consapevole. <em>Esempio:</em> nei dialoghi platonici, Socrate interroga spesso un interlocutore convinto di sapere cosa sia il coraggio o la giustizia, e attraverso domande progressive lo conduce a riconoscere che la propria definizione iniziale, se applicata coerentemente, produce conseguenze contraddittorie, aprendo così la strada a una definizione più raffinata e ponderata.</p>
+
+  <p class="titolo-capitolo">L'intellettualismo etico</p>
+  <p>Uno dei tratti più caratteristici e discussi del pensiero socratico riguarda lo stretto legame istituito tra conoscenza e virtù, in una posizione nota agli storici della filosofia come intellettualismo etico: secondo Socrate, infatti, nessuno compie il male volontariamente e consapevolmente, ma ogni azione moralmente sbagliata deriva sempre, in ultima analisi, da un'ignoranza riguardo al vero bene, poiché chi conoscesse autenticamente ciò che è realmente bene per sé non potrebbe fare a meno di agire di conseguenza. Da questa impostazione discende la convinzione, propria di Socrate, secondo cui virtù e sapere coincidono sostanzialmente, e che, di conseguenza, la virtù stessa possa essere insegnata attraverso un adeguato percorso di conoscenza razionale: una posizione che, pur presentando indubbi elementi di difficoltà, poiché sembra non tener conto della possibilità di agire contro la propria stessa conoscenza del bene, ebbe un'influenza filosofica di primissimo piano su tutta la riflessione etica successiva.</p>
+
+  <p class="titolo-capitolo">Il processo e la morte di Socrate</p>
+  <p>Nel 399 a.C. Socrate fu processato ad Atene con due accuse principali, quella di non riconoscere gli dèi della città, introducendone di nuovi, e quella di corrompere la gioventù ateniese con il proprio insegnamento: accuse che, secondo la ricostruzione offerta da Platone nell'Apologia di Socrate, nascondevano in realtà motivazioni più profonde, legate al risentimento suscitato dalla continua attività di esame critico condotta da Socrate nei confronti dei cittadini più influenti della città, e forse anche ai sospetti di simpatie antidemocratiche derivanti dalla frequentazione, tra i suoi allievi, di figure politicamente controverse. Giudicato colpevole da una stretta maggioranza dei giudici, Socrate fu condannato a morte mediante l'assunzione di una bevanda a base di cicuta, pena che, secondo la testimonianza di Platone nel dialogo Critone e nel Fedone, accettò serenamente pur avendo la possibilità concreta di evadere dal carcere, giudicando doveroso, per coerenza con i propri stessi principi filosofici sul rispetto delle leggi della città, non sottrarsi alla sentenza ricevuta.</p>
+
+  <p class="titolo-capitolo">L'eredità di Socrate</p>
+  <p>La figura e il pensiero di Socrate ebbero un'influenza filosofica di portata straordinaria, tale da rappresentare, secondo una convenzione storiografica diffusa, uno spartiacque fondamentale nella storia della filosofia antica, che per questo motivo si è soliti definire filosofia "presocratica" per il periodo precedente, comprendente tutti i pensatori esaminati nei capitoli precedenti di questo manuale, da Talete fino ai sofisti. Dalla scuola socratica, intesa in senso ampio come l'insieme dei suoi allievi diretti e indiretti, derivarono diverse correnti filosofiche successive, alcune delle quali incontreremo più avanti in questo manuale; ma fu senza dubbio Platone, discepolo più giovane e più geniale di Socrate, a raccoglierne l'eredità in modo più sistematico e originale, elaborando, a partire dall'insegnamento del maestro, una delle costruzioni filosofiche più influenti dell'intera storia del pensiero occidentale, di cui ci occuperemo nei prossimi due capitoli di questo manuale.</p>
+</div>
+<!-- fine capitolo filosofia 09 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil10.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

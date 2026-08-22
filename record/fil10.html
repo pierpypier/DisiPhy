@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 10</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 10: Platone, la teoria delle idee -->
+<div id="capitolo-10-platone-idee" class="capitolo-storia">
+  <p class="titolo-capitolo">10 - Platone: la teoria delle idee - Classe 3</p>
+
+  <p class="titolo-capitolo">Vita di Platone e la forma del dialogo</p>
+  <p>Platone nacque ad Atene, o secondo alcune fonti a Egina, nel 428 o nel 427 a.C., da una famiglia aristocratica imparentata con alcuni protagonisti della vita politica ateniese: destinato per nascita a una carriera politica, secondo quanto egli stesso racconta nella Lettera VII, rimase profondamente colpito dalla condanna a morte di Socrate, di cui era stato allievo, avvenuta nel 399 a.C. e già trattata nel capitolo precedente di questo manuale, un evento che lo convinse della corruzione della vita politica ateniese del tempo e lo orientò definitivamente verso la riflessione filosofica. Dopo alcuni viaggi, tra cui uno in Magna Grecia e in Sicilia, dove entrò in contatto con ambienti pitagorici, esaminati nel terzo capitolo di questo manuale, Platone fondò ad Atene, intorno al 387 a.C., l'Accademia, una scuola filosofica che avrebbe avuto lunghissima durata e che rappresenta la prima istituzione organizzata di insegnamento superiore della storia occidentale.</p>
+  <p>A differenza di Socrate, che come si è visto non lasciò alcuno scritto, Platone affidò il proprio pensiero a un'ampia produzione di dialoghi filosofici, quasi tutti giunti fino a noi, nei quali Socrate compare quasi sempre come personaggio principale: questa scelta della forma dialogica non fu casuale, ma coerente con la convinzione, ereditata dal maestro, secondo cui la filosofia autentica si realizza nel confronto vivo tra posizioni diverse, e non nell'esposizione dogmatica di dottrine già definite, sebbene, come si è accennato nel capitolo precedente, nei dialoghi della maturità Platone abbia progressivamente attribuito al personaggio di Socrate anche tesi filosofiche proprie e originali.</p>
+
+  <p class="titolo-capitolo">Il problema della conoscenza e la scoperta delle idee</p>
+  <p>Il nucleo speculativo più originale del pensiero di Platone è costituito dalla cosiddetta teoria delle idee, elaborata a partire da un problema ereditato dalla riflessione dei filosofi precedenti esaminati in questo manuale: se, come sosteneva Eraclito, il mondo sensibile è caratterizzato da un mutamento incessante, in cui nulla rimane mai identico a se stesso, come può esistere, si chiede Platone, una conoscenza scientifica autentica, stabile e universalmente valida, come quella per esempio matematica, il cui oggetto non può essere soggetto a mutamento? Per rispondere a questa difficoltà, Platone ammette l'esistenza di due distinti livelli di realtà: il mondo sensibile, cioè l'insieme delle cose materiali che percepiamo attraverso i sensi, soggetto a nascita, mutamento e corruzione, secondo quanto già osservato da Eraclito; e il mondo delle idee, o forme, realtà immateriali, eterne e immutabili, conoscibili non attraverso i sensi ma soltanto attraverso l'intelletto, secondo l'insegnamento sul primato della ragione che risale, come si è visto nel quinto capitolo di questo manuale, a Parmenide.</p>
+  <p>Le idee platoniche non vanno intese come semplici concetti o rappresentazioni presenti nella mente umana, ma come realtà oggettive, esistenti indipendentemente dal pensiero di chi le conosce, e anzi, secondo Platone, dotate di un grado di realtà superiore rispetto alle cose sensibili: mentre le cose sensibili sono copie imperfette, molteplici e mutevoli, le idee corrispondenti sono invece uniche, perfette ed eterne, e costituiscono il vero modello, o paradigma, di cui le cose sensibili non sono altro che imitazioni approssimative e imperfette. <em>Esempio:</em> esistono infinite figure sensibili approssimativamente circolari, tracciate su carta o osservabili in natura, tutte imperfette se sottoposte a un esame rigoroso, mentre esiste una sola idea di cerchio, perfetta ed eterna, di cui la geometria si occupa e a cui tutte le figure sensibili approssimativamente si richiamano senza mai realmente coincidervi.</p>
+
+  <p class="titolo-capitolo">Il rapporto tra le idee e le cose sensibili</p>
+  <p>Platone descrisse il rapporto tra il mondo delle idee e il mondo sensibile attraverso due nozioni principali, quella di partecipazione e quella di imitazione: le cose sensibili, secondo la prima nozione, "partecipano" in misura maggiore o minore alla perfezione dell'idea corrispondente, ricevendone la propria determinata natura, mentre secondo la seconda nozione esse "imitano", cioè riproducono in forma imperfetta e approssimativa, il modello ideale a cui si riferiscono. Al vertice della gerarchia delle idee, Platone pone l'idea del Bene, che occupa nel mondo intelligibile una posizione analoga a quella occupata dal sole nel mondo sensibile, poiché, come il sole rende visibili le cose illuminandole e ne permette al tempo stesso la crescita e la vita, così l'idea del Bene rende conoscibili tutte le altre idee e costituisce, al tempo stesso, la causa ultima della loro stessa esistenza e del loro valore.</p>
+
+  <p class="titolo-capitolo">Il mito della caverna</p>
+  <p>Nel settimo libro dell'opera Repubblica, Platone illustrò la propria concezione della conoscenza e del rapporto tra mondo sensibile e mondo delle idee attraverso una delle immagini più celebri dell'intera storia della filosofia, nota come mito della caverna: alcuni uomini, incatenati fin dalla nascita all'interno di una caverna e costretti a guardare soltanto la parete di fondo, scambiano per l'unica realtà esistente le ombre proiettate su quella parete da alcuni oggetti portati alle loro spalle, davanti a un fuoco acceso, senza sapere nulla dell'esistenza degli oggetti reali e del fuoco che le proiettano. Uno di questi uomini, liberato dalle catene e condotto fuori dalla caverna, scopre progressivamente, con grande fatica e disagio iniziale, prima gli oggetti reali di cui aveva visto solo le ombre, poi il fuoco stesso, e infine, uscito all'aperto, il mondo illuminato dalla luce del sole, fino a poter guardare direttamente il sole stesso, simbolo dell'idea del Bene appena ricordata.</p>
+  <p>Il mito della caverna rappresenta, in forma narrativa, l'intero percorso della conoscenza umana secondo Platone: la condizione iniziale dei prigionieri, che scambiano semplici ombre per la realtà, simboleggia la condizione della maggior parte degli uomini, che si accontentano della conoscenza sensibile e delle opinioni comuni, senza mai interrogarsi sulla loro effettiva fondatezza, in una condizione non troppo dissimile da quella descritta a suo tempo da Parmenide a proposito della "via dell'opinione", ripresa nel quinto capitolo di questo manuale; il progressivo percorso di liberazione e ascesa verso l'esterno della caverna rappresenta invece il cammino filosofico di elevazione dalla conoscenza sensibile a quella intellettuale delle idee, fino alla contemplazione dell'idea del Bene, vertice e fine ultimo di ogni autentica ricerca filosofica.</p>
+
+  <p class="titolo-capitolo">Il compito del filosofo liberato</p>
+  <p>Un aspetto particolarmente significativo del mito riguarda il destino del prigioniero ormai liberato e giunto alla piena conoscenza: secondo Platone, egli non può fermarsi a godere in solitudine della verità raggiunta, ma ha il dovere morale e politico di fare ritorno all'interno della caverna, per tentare di liberare anche gli altri prigionieri ancora incatenati, sebbene questi ultimi, abituati soltanto alle ombre, rischino di deriderlo e persino di reagire con violenza nei suoi confronti, non riuscendo a comprendere né ad accettare una verità tanto distante dalla propria esperienza abituale. Questo aspetto del mito, che allude in modo piuttosto trasparente alla vicenda storica di Socrate, condannato a morte proprio dai propri concittadini per aver tentato di condurli a un esame critico delle proprie convinzioni, introduce già il tema, che Platone approfondirà nella propria concezione dello stato ideale, del ruolo politico e pedagogico che il filosofo, in quanto unico possessore di un'autentica conoscenza del Bene, sarebbe chiamato a svolgere nei confronti della collettività, tema che riprenderemo nel prossimo capitolo di questo manuale.</p>
+
+  <p class="titolo-capitolo">Il significato filosofico della teoria delle idee</p>
+  <p>La teoria delle idee costituisce, nel suo complesso, un tentativo filosoficamente assai ambizioso di fondare su basi razionali solide la possibilità di una conoscenza scientifica autentica e di un'etica oggettiva, superando al tempo stesso sia le difficoltà poste dal divenire eracliteo sia il relativismo gnoseologico e morale sostenuto dai sofisti, esaminato nell'ottavo capitolo di questo manuale: ammettendo l'esistenza di realtà stabili ed eterne, le idee, accessibili attraverso il solo esercizio della ragione, Platone ritenne di poter garantire tanto la possibilità di un sapere scientifico rigoroso, sul modello della matematica già valorizzata dai pitagorici, quanto l'esistenza di valori morali oggettivi e universalmente validi, in aperta polemica con le tesi relativistiche di Protagora. Questa impostazione, per quanto di straordinaria influenza storica, sollevò tuttavia fin dall'antichità numerose difficoltà interpretative, in particolare riguardo alla precisa natura del rapporto di partecipazione tra le idee e le cose sensibili: alcune di queste difficoltà, note come "argomento del terzo uomo", furono discusse dallo stesso Platone in un dialogo della maturità, il Parmenide, e costituiranno in seguito oggetto di critica anche da parte del suo allievo Aristotele, di cui ci occuperemo più avanti in questo manuale. Nel prossimo capitolo approfondiremo invece altri aspetti fondamentali del pensiero platonico, in particolare la concezione dell'anima, la teoria della conoscenza come reminiscenza e il progetto dello stato ideale.</p>
+</div>
+<!-- fine capitolo filosofia 10 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil11.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

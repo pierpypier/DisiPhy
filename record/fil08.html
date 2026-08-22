@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 08</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 08: i sofisti, Protagora e Gorgia -->
+<div id="capitolo-08-sofisti" class="capitolo-storia">
+  <p class="titolo-capitolo">08 - I sofisti: Protagora e Gorgia - Classe 3</p>
+
+  <p class="titolo-capitolo">Il contesto storico e culturale della sofistica</p>
+  <p>Nel corso del V secolo a.C., in particolare ad Atene, si affermò una nuova generazione di pensatori ed educatori, noti come sofisti, il cui interesse filosofico si spostò in modo decisivo dallo studio della natura fisica, che aveva caratterizzato i filosofi esaminati nei capitoli precedenti di questo manuale, da Talete fino ai fisici pluralisti, verso l'indagine sull'uomo, sulla società, sul linguaggio e sui valori. Questo mutamento di prospettiva non fu casuale, ma trovò terreno fertile nel particolare contesto storico e politico dell'Atene del tempo: lo sviluppo della democrazia ateniese, fondata sulla partecipazione diretta dei cittadini alla vita politica e sulla capacità di persuadere l'assemblea e i tribunali attraverso il discorso pubblico, creò infatti una forte domanda di educatori capaci di insegnare l'arte della parola efficace, cioè la retorica, ai giovani appartenenti alle famiglie più abbienti, desiderosi di affermarsi nella vita pubblica della città.</p>
+  <p>I sofisti, termine che deriva dal greco sophistes, "sapiente" o "esperto", furono dunque i primi intellettuali professionisti della storia greca, poiché, a differenza dei filosofi precedenti, insegnavano dietro compenso, viaggiando di città in città e offrendo un'istruzione ampia, che comprendeva retorica, grammatica, storia e nozioni di carattere politico e morale: proprio per questa attività itinerante e retribuita, oltre che per le posizioni filosofiche relativistiche che spesso sostenevano, i sofisti furono oggetto di giudizi severi da parte di autori successivi, in particolare di Platone, che ne fece spesso bersaglio polemico nei propri dialoghi, tanto da rendere il termine "sofisma" sinonimo, ancora oggi, di ragionamento ingannevole o capzioso: un giudizio che gli storici della filosofia contemporanei tendono tuttavia a considerare, almeno in parte, ingeneroso e non del tutto obiettivo.</p>
+
+  <p class="titolo-capitolo">Protagora e il relativismo conoscitivo</p>
+  <p>Protagora nacque ad Abdera, la stessa città di Democrito di cui si è parlato nel capitolo precedente, intorno al 490 a.C., e fu il più celebre e autorevole tra i sofisti, tanto da essere invitato da Pericle a redigere le leggi della colonia panellenica di Turii, fondata in Magna Grecia. Il pensiero di Protagora è racchiuso in una delle affermazioni più celebri e discusse dell'intera filosofia antica, secondo cui l'uomo è misura di tutte le cose, di quelle che sono in quanto sono, e di quelle che non sono in quanto non sono: con questa formula, tradizionalmente interpretata come espressione di un relativismo gnoseologico, cioè relativo alla conoscenza, Protagora intendeva sostenere che non esiste una verità oggettiva e universale, valida allo stesso modo per tutti gli uomini, ma che ogni cosa è, ed è conosciuta, sempre in relazione al soggetto che la percepisce e la giudica.</p>
+  <p>Secondo questa impostazione, se a due persone diverse una stessa situazione, ad esempio la temperatura di una stanza, appare in modo diverso, l'una percependola calda e l'altra fredda, non avrebbe senso, per Protagora, chiedersi quale delle due percezioni sia oggettivamente vera e quale falsa, poiché entrambe risultano ugualmente vere per il soggetto che le esperisce, non esistendo un criterio superiore e indipendente dal singolo individuo in base al quale stabilire quale opinione sia in assoluto corretta. Questa posizione relativistica si estendeva, in Protagora, anche all'ambito religioso ed etico: nel trattato Sugli dèi, di cui restano solo poche righe, egli dichiarò di non poter affermare con certezza se gli dèi esistano o meno, data l'oscurità della questione e la brevità della vita umana, un'affermazione di carattere agnostico che gli costò, secondo alcune fonti antiche, l'accusa di empietà e l'espulsione da Atene.</p>
+
+  <p class="titolo-capitolo">Gorgia e la retorica del non-essere</p>
+  <p>Gorgia nacque a Leontini, in Sicilia, intorno al 480 a.C., e fu celebre soprattutto come maestro di retorica, cioè dell'arte di persuadere attraverso il discorso, disciplina di cui è considerato uno dei principali fondatori nel mondo greco. Sul piano più propriamente filosofico, Gorgia è noto soprattutto per un breve trattato dal titolo Sul non-essere, o Sulla natura, in cui, riprendendo in chiave provocatoria e paradossale gli strumenti argomentativi elaborati dalla scuola eleatica di Parmenide e Zenone, esaminati nei capitoli quinto e sesto di questo manuale, sostenne tre tesi in apparente sequenza logica: che nulla esiste; che, anche se qualcosa esistesse, non potrebbe essere conosciuto dall'uomo; e che, anche se fosse conoscibile, non potrebbe in alcun modo essere comunicato agli altri attraverso il linguaggio.</p>
+  <p>Al di là dell'intento in parte provocatorio e retorico di questo scritto, volto a dimostrare, attraverso un uso spregiudicato e virtuosistico degli stessi strumenti logici della scuola eleatica, conclusioni opposte a quelle di Parmenide, Gorgia elaborò una riflessione filosoficamente rilevante sul potere del linguaggio: nell'orazione Encomio di Elena, un discorso scritto per difendere paradossalmente la fama di Elena di Troia dalle accuse di aver causato la guerra di Troia, Gorgia sostenne che la parola possiede un potere quasi magico sull'animo umano, capace di persuadere, ingannare e sedurre indipendentemente dalla verità oggettiva di quanto viene affermato: una riflessione che pone per la prima volta, in termini filosoficamente consapevoli, il problema del rapporto tra linguaggio, persuasione e verità.</p>
+
+  <p class="titolo-capitolo">L'arte della retorica e l'insegnamento della virtù</p>
+  <p>Un tratto comune a gran parte del movimento sofistico, oltre al relativismo gnoseologico esaminato a proposito di Protagora, riguarda la centralità attribuita alla retorica come strumento essenziale per la vita pubblica: se non esiste, come sostenevano molti sofisti, una verità oggettiva valida per tutti, allora la capacità di argomentare efficacemente a favore dell'una o dell'altra posizione, sostenendo con pari abilità argomentazioni anche opposte tra loro su una medesima questione, diviene lo strumento decisivo per orientare le decisioni dell'assemblea democratica e per prevalere nelle controversie giudiziarie. I sofisti si proponevano inoltre come maestri di areté, termine greco traducibile come "virtù" o "eccellenza", intesa non più, come nella tradizione aristocratica precedente, come qualità innata legata alla nobiltà di nascita, ma come competenza pratica e politica, insegnabile attraverso un adeguato percorso educativo: un'idea, questa, di per sé democratica e innovativa, poiché apriva in linea di principio a chiunque, indipendentemente dalla propria origine sociale, la possibilità di eccellere nella vita pubblica della città.</p>
+
+  <p class="titolo-capitolo">Il significato storico e filosofico della sofistica</p>
+  <p>Il movimento sofistico, pur nella diversità delle posizioni dei singoli autori che vi appartennero, rappresenta una svolta di importanza fondamentale nella storia della filosofia greca: spostando l'attenzione dalla natura fisica all'uomo, al linguaggio, alla conoscenza e ai valori etici e politici, i sofisti aprirono un campo di indagine, quello dell'uomo come soggetto conoscente, morale e politico, che sarebbe rimasto centrale per tutta la filosofia successiva. Proprio a partire da un confronto critico con le posizioni relativistiche dei sofisti, in particolare con l'idea che non esista una verità oggettiva e un bene valido per tutti, si sarebbe sviluppata la riflessione di Socrate, di cui ci occuperemo nel prossimo capitolo di questo manuale: un pensatore che, pur condividendo con i sofisti l'interesse per l'uomo e il valore attribuito al dialogo e all'argomentazione razionale, se ne discosterà in modo radicale nel sostenere l'esistenza di una verità e di un bene oggettivi, raggiungibili attraverso un rigoroso metodo di indagine razionale.</p>
+</div>
+<!-- fine capitolo filosofia 08 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil09.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
