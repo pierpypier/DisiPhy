@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 01</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+
+<!-- capitolo filosofia 01: che cos'è la filosofia, le origini del pensiero razionale -->
+<div id="capitolo-01-origini-filosofia" class="capitolo-storia">
+  <p class="titolo-capitolo">01 - Che cos'è la filosofia: le origini del pensiero razionale - Classe 3</p>
+
+  <p class="titolo-capitolo">Il significato della parola "filosofia"</p>
+  <p>La parola "filosofia" deriva dal greco antico philosophía, termine composto dalle parole philía, che significa amore o amicizia, e sophía, che significa sapienza: filosofia significa dunque, letteralmente, "amore per la sapienza", o "amore per il sapere". Questa etimologia, apparentemente semplice, contiene già un elemento importante per comprendere la natura di questa disciplina: chi ama il sapere non pretende di possederlo già interamente, ma è mosso da un desiderio di ricerca, da una tensione continua verso una conoscenza che non si considera mai definitivamente raggiunta.</p>
+  <p>Secondo una tradizione riportata da diversi autori antichi, sarebbe stato Pitagora, un pensatore greco vissuto nel VI secolo a.C. che incontreremo più diffusamente in un capitolo successivo di questo manuale, il primo a definirsi non "sapiente" (sophós), come pure alcuni pensatori a lui precedenti avevano fatto, ma semplicemente "amante della sapienza" (philósophos), proprio a sottolineare la differenza tra chi crede di possedere già la verità e chi, invece, riconosce i limiti della propria conoscenza e si dedica a una ricerca senza fine.</p>
+
+  <p class="titolo-capitolo">Dal mito al logos</p>
+  <p>Prima della nascita della filosofia, avvenuta, come vedremo tra poco, in un'area geografica e in un periodo storico ben precisi, le civiltà antiche spiegavano i fenomeni naturali e l'origine del mondo prevalentemente attraverso il mito, cioè attraverso racconti che attribuivano tali fenomeni all'azione di divinità ed entità soprannaturali, dotate di volontà e intenzioni proprie, spesso simili a quelle umane. Il mito, pur costituendo una forma di pensiero ricca e sofisticata, capace di trasmettere valori, tradizioni e visioni del mondo di grande complessità, non si fondava su un'argomentazione razionale controllabile e discutibile, ma sull'autorità della tradizione e del racconto tramandato.</p>
+  <p>La nascita della filosofia, tradizionalmente collocata nelle colonie greche dell'Asia Minore, nella regione della Ionia, attorno al VI secolo a.C., coincide con un cambiamento radicale nel modo di affrontare le domande fondamentali sulla natura del mondo e dell'uomo: al posto del racconto mitologico, i primi filosofi iniziarono a cercare spiegazioni fondate sul logos, termine greco che indica insieme la ragione, il discorso razionale e l'argomentazione, cioè una forma di indagine basata sull'osservazione, sul ragionamento coerente e sulla possibilità di essere messa in discussione e corretta da altri pensatori, secondo un confronto pubblico e razionale del tutto estraneo alla logica del racconto mitico.</p>
+
+  <p class="titolo-capitolo">Le condizioni storiche della nascita della filosofia</p>
+  <p>Il passaggio dal mito al logos non avvenne per caso, né in un momento qualsiasi della storia umana, ma fu reso possibile da una particolare combinazione di condizioni storiche, sociali ed economiche che si realizzò, per la prima volta, proprio nelle città greche della Ionia, come Mileto, di cui parleremo nel prossimo capitolo. Si trattava di città costiere, prospere grazie ai commerci marittimi con popoli e culture diverse, il cui continuo contatto con usi, costumi e credenze differenti dai propri contribuì probabilmente a indebolire la fiducia acritica nelle proprie tradizioni religiose e mitologiche, favorendo un atteggiamento più aperto al confronto e alla ricerca autonoma.</p>
+  <p>Un ulteriore fattore determinante fu la particolare organizzazione politica di molte città greche, in cui, a differenza delle grandi civiltà dell'Antico Oriente organizzate attorno a un potere sacerdotale o monarchico assoluto, si andava progressivamente affermando la pratica della discussione pubblica e del confronto tra opinioni diverse, tipica della vita nella pólis, la città-stato greca: questa abitudine al dibattito argomentato, esercitata nelle assemblee politiche e nei tribunali, si rivelò un terreno particolarmente fertile per lo sviluppo di un pensiero disposto a sottoporre le proprie affermazioni al vaglio critico altrui, anziché ad affermarle semplicemente in virtù di un'autorità indiscussa.</p>
+
+  <p class="titolo-capitolo">Le caratteristiche del pensiero filosofico</p>
+  <p>Pur nella grande varietà di temi, metodi e conclusioni che caratterizzano la storia della filosofia, e che questo manuale esaminerà nei capitoli successivi, è possibile individuare alcuni tratti distintivi comuni a tutto il pensiero filosofico, fin dalle sue origini. Anzitutto, la filosofia si caratterizza per la razionalità del proprio procedere, cioè per il tentativo di fondare le proprie affermazioni su argomentazioni coerenti e verificabili, piuttosto che su semplici affermazioni di autorità o su racconti tradizionali non ulteriormente giustificati.</p>
+  <p>In secondo luogo, la filosofia si distingue per la radicalità delle proprie domande, cioè per la tendenza a interrogarsi sui princìpi primi e sui fondamenti ultimi della realtà, della conoscenza e dell'agire umano, senza accontentarsi di spiegazioni parziali o di comodo: domande come "che cos'è la realtà, al di là delle apparenze?", oppure "che cosa possiamo davvero conoscere con certezza?", o ancora "che cosa rende un'azione giusta o ingiusta?", sono esempi di quelle domande radicali che da sempre caratterizzano l'indagine filosofica. Infine, la filosofia si caratterizza per la propria universalità, cioè per la pretesa di offrire risposte valide in linea di principio per ogni essere umano dotato di ragione, e non semplicemente per i membri di una particolare comunità o tradizione culturale.</p>
+
+  <p class="titolo-capitolo">Filosofia e altre forme di sapere</p>
+  <p>La filosofia, fin dalle sue origini, ha intrattenuto un rapporto stretto ma allo stesso tempo distinto con altre forme di sapere razionale, in particolare con quella che oggi chiamiamo scienza: come vedremo nel prossimo capitolo a proposito dei primi filosofi della natura, l'indagine filosofica delle origini si occupò a lungo, e in modo indistinto, sia di questioni che oggi definiremmo propriamente scientifiche, come la composizione fisica del mondo naturale, sia di questioni più propriamente filosofiche, come il senso ultimo dell'esistenza o i fondamenti della conoscenza umana.</p>
+  <p>La progressiva distinzione tra filosofia e scienze particolari, cioè la separazione tra un'indagine filosofica che si concentra sulle questioni più generali e fondative, e discipline scientifiche specifiche che studiano, con metodi sempre più specializzati, singoli aspetti della realtà naturale o umana, è un processo storico durato secoli, e in larga parte compiutosi solo in epoca moderna: ancora oggi, tuttavia, la filosofia continua a occuparsi criticamente dei fondamenti, dei metodi e dei limiti delle diverse discipline scientifiche, in un ramo di indagine chiamato filosofia della scienza, mostrando come il confine tra filosofia e altre forme di sapere resti, per sua natura, mobile e in parte permeabile.</p>
+
+  <p class="titolo-capitolo">Le grandi partizioni della filosofia</p>
+  <p>Nel corso della sua lunga storia, la riflessione filosofica si è progressivamente articolata in diversi ambiti tematici, ciascuno dedicato a un particolare ordine di domande, sebbene questi ambiti risultino spesso, nella pratica concreta del pensiero dei singoli filosofi, strettamente intrecciati tra loro. La metafisica, o ontologia, si occupa delle domande riguardanti la natura ultima della realtà, cioè che cosa esista veramente e in che modo; la gnoseologia, o teoria della conoscenza, indaga invece la natura, l'origine e i limiti della conoscenza umana, chiedendosi, ad esempio, come sia possibile distinguere una conoscenza vera da una semplice opinione.</p>
+  <p>L'etica si occupa delle domande riguardanti l'agire umano, cioè che cosa sia giusto o sbagliato fare, e su quali basi sia possibile fondare un simile giudizio; la logica studia le regole formali del ragionamento corretto, indipendentemente dal contenuto specifico degli argomenti considerati; l'estetica indaga la natura del bello e dell'arte; la filosofia politica, infine, si interroga sui fondamenti e sulle forme migliori di organizzazione della vita associata degli esseri umani. Questo insieme di ambiti tematici, che ritroveremo ripetutamente nel corso di questo manuale, applicati ai diversi autori e alle diverse correnti di pensiero che hanno segnato la storia della filosofia occidentale, costituisce ancora oggi la mappa fondamentale entro cui si orienta la riflessione filosofica.</p>
+</div>
+<!-- fine capitolo filosofia 01 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil02.html">Vai al Capitolo successivo</a></p>
+</div>    
+  
+  
+  
+  
+  
+  <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
