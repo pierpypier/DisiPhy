@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 01</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 01: il diritto e le norme giuridiche -->
+<div id="capitolo-01-diritto-norme" class="capitolo-storia">
+  <p class="titolo-capitolo">01 - Il diritto e le norme giuridiche - Classe 3</p>
+
+  <p class="titolo-capitolo">Che cos'è il diritto</p>
+  <p>Con il termine diritto si indica, nel suo significato più generale, l'insieme delle regole che disciplinano la vita di una collettività organizzata, stabilendo ciò che i singoli membri possono, devono o non possono fare nei rapporti reciproci e nei confronti della collettività stessa: si tratta di un fenomeno sociale che nasce dalla stessa esigenza di convivenza propria dell'uomo, il quale, come osservava già Aristotele definendolo animale politico, cioè per natura destinato a vivere in comunità organizzate, non potrebbe realizzare pienamente la propria esistenza al di fuori di un gruppo sociale, e ha quindi bisogno di regole condivise capaci di ordinare i rapporti tra i suoi membri, prevenendo e risolvendo i conflitti che inevitabilmente sorgono quando più individui, dotati di interessi e desideri talvolta contrastanti, si trovano a vivere e ad agire nello stesso contesto sociale.</p>
+  <p>Il termine diritto viene tradizionalmente impiegato in due accezioni distinte, sia pure strettamente collegate tra loro: il diritto oggettivo indica l'insieme delle norme giuridiche vigenti in un determinato ordinamento, cioè il complesso delle regole poste per disciplinare la vita di una collettività, come quando si parla del diritto italiano o del diritto civile; il diritto soggettivo indica invece la specifica facoltà, riconosciuta e garantita dall'ordinamento giuridico a un determinato soggetto, di agire in un certo modo o di pretendere un certo comportamento da altri, come quando si parla del diritto di proprietà di una persona su un determinato bene, o del diritto di un lavoratore a percepire il proprio salario.</p>
+
+  <p class="titolo-capitolo">La norma giuridica</p>
+  <p>L'elemento costitutivo fondamentale del diritto oggettivo è la norma giuridica, cioè una regola di comportamento rivolta ai membri di una collettività, che presenta alcuni caratteri distintivi rispetto ad altri tipi di regole sociali, come quelle morali, religiose o del semplice galateo: la norma giuridica è anzitutto generale, poiché si rivolge non a uno specifico individuo determinato, ma a un'intera categoria di soggetti individuati in astratto, come, ad esempio, "chiunque cagioni ad altri un danno ingiusto"; è inoltre astratta, poiché non disciplina un singolo caso concreto già avvenuto, ma una tipologia di situazioni ripetibile un numero indefinito di volte nel tempo, applicandosi automaticamente ogni volta che si verifichino in concreto le condizioni previste dalla norma stessa.</p>
+  <p>Un ulteriore carattere distintivo della norma giuridica è la sua coattività, cioè la sua capacità di essere imposta anche coattivamente, attraverso l'intervento della forza pubblica, nei confronti di chi non vi si conformi spontaneamente: mentre l'osservanza di una norma morale o di una regola di buona educazione dipende essenzialmente dalla libera adesione interiore del singolo individuo, senza che vi sia una sanzione esterna organizzata capace di imporne coattivamente il rispetto, la norma giuridica è invece assistita da un apparato sanzionatorio, predisposto e organizzato dallo stesso ordinamento giuridico, capace di intervenire, se necessario anche con la forza, per assicurarne l'osservanza o per ripristinare la situazione violata.</p>
+
+  <p class="titolo-capitolo">Diritto, morale e regole sociali</p>
+  <p>Proprio il carattere della coattività costituisce il criterio più comunemente impiegato per distinguere le norme giuridiche dalle norme morali e dalle altre regole sociali di comportamento, come quelle religiose o di semplice buona educazione, con le quali il diritto condivide spesso, dal punto di vista del contenuto, medesime finalità di fondo, come la tutela della vita, dell'onestà o del rispetto reciproco tra le persone: si pensi, ad esempio, al divieto di uccidere un'altra persona, che costituisce al tempo stesso un precetto morale universalmente condiviso e una norma giuridica penalmente sanzionata, oppure, al contrario, al dovere morale di essere generosi verso chi si trova in difficoltà, che pur non essendo generalmente imposto come obbligo giuridico coattivo, esprime comunque un valore la cui importanza sociale il diritto stesso può in parte riconoscere e favorire, ad esempio attraverso norme che agevolano le donazioni benefiche.</p>
+  <p><em>Esempio:</em> mentre chi non restituisce un favore ricevuto da un amico viola soltanto una regola morale o di cortesia, priva di conseguenze giuridiche coattive, chi invece non restituisce una somma di denaro ricevuta in prestito, in base a un preciso accordo contrattuale, viola una norma giuridica, e può essere per questo motivo convenuto in giudizio dal creditore e costretto, anche con l'intervento della forza pubblica, ad adempiere al proprio obbligo o a risarcire il danno causato.</p>
+
+  <p class="titolo-capitolo">La sanzione giuridica</p>
+  <p>La sanzione costituisce, come si è accennato, un elemento essenziale della norma giuridica, poiché rappresenta la conseguenza, prevista dall'ordinamento stesso, che si verifica nel caso di violazione della norma: le sanzioni giuridiche possono assumere forme diverse a seconda del ramo del diritto e del tipo di norma violata, distinguendosi in particolare tra sanzioni penali, che colpiscono personalmente l'autore di un reato attraverso pene come la reclusione o l'ammenda, previste a tutela di interessi ritenuti particolarmente rilevanti per l'intera collettività; e sanzioni civili, che mirano invece prevalentemente a ripristinare la situazione precedente alla violazione, o a compensare il danno causato, come avviene, ad esempio, attraverso l'obbligo di risarcimento del danno o l'esecuzione forzata di un obbligo contrattuale rimasto inadempiuto.</p>
+
+  <p class="titolo-capitolo">L'ordinamento giuridico</p>
+  <p>L'insieme organico e coordinato di tutte le norme giuridiche vigenti in un determinato momento storico all'interno di una data collettività costituisce l'ordinamento giuridico: si tratta di un sistema complesso e non di una semplice somma casuale di norme isolate, poiché le diverse norme che lo compongono sono tra loro collegate secondo rapporti di coerenza logica e di gerarchia, in modo tale che ogni norma trovi il proprio fondamento di validità in un'altra norma di rango superiore, secondo un ordine che sarà approfondito nel prossimo capitolo di questo manuale a proposito delle fonti del diritto. Un ordinamento giuridico, per potersi dire tale, deve inoltre possedere il carattere dell'effettività, cioè deve essere concretamente osservato dalla generalità dei consociati e, in caso di violazione, effettivamente applicato dagli organi a ciò preposti, non essendo sufficiente la sola previsione astratta delle norme su un piano puramente formale.</p>
+
+  <p class="titolo-capitolo">Le partizioni fondamentali del diritto</p>
+  <p>All'interno dell'ordinamento giuridico, per ragioni di ordine sistematico e di specializzazione delle materie trattate, si distinguono tradizionalmente diversi rami del diritto, riconducibili in prima approssimazione a due grandi partizioni: il diritto pubblico, che disciplina l'organizzazione e il funzionamento dello Stato e degli altri enti pubblici, nonché i rapporti tra questi ultimi e i singoli cittadini, in una posizione tendenzialmente non paritaria, come avviene ad esempio nel diritto costituzionale, nel diritto amministrativo o nel diritto penale; e il diritto privato, che disciplina invece i rapporti tra i singoli individui, o tra questi ultimi e le persone giuridiche private, considerati generalmente in una posizione di reciproca uguaglianza formale, come avviene ad esempio nel diritto civile, che sarà oggetto di approfondimento nei prossimi capitoli di questo manuale, a partire dalle fonti del diritto e dai soggetti giuridici, per proseguire poi con lo studio dei beni, delle obbligazioni e dei contratti.</p>
+
+  <p class="titolo-capitolo">Verso lo studio delle fonti del diritto</p>
+  <p>Comprendere che cos'è una norma giuridica e quali caratteri la distinguono dalle altre regole sociali costituisce il punto di partenza indispensabile per affrontare, in modo consapevole e ordinato, lo studio dell'intero sistema giuridico: resta tuttavia da chiarire un problema di fondamentale importanza pratica, cioè da dove traggano origine, concretamente, le norme giuridiche che compongono un determinato ordinamento, e quale rapporto di gerarchia intercorra tra le diverse tipologie di norme esistenti, come le leggi, i regolamenti o le consuetudini: a questo problema, noto come teoria delle fonti del diritto, sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 01 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir02.html">Vai al Capitolo successivo</a></p>
+</div>    
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>
