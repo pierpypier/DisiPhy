@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 04</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 04: i soggetti del diritto: la persona fisica -->
+<div id="capitolo-04-persona-fisica" class="capitolo-storia">
+  <p class="titolo-capitolo">04 - I soggetti del diritto: la persona fisica - Classe 3</p>
+
+  <p class="titolo-capitolo">La nozione di soggetto di diritto</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, che cos'è la norma giuridica, da quali fonti essa trae origine e in che modo debba essere interpretata e applicata, occorre ora individuare a chi le norme giuridiche siano concretamente rivolte: si definisce soggetto di diritto ogni entità alla quale l'ordinamento giuridico riconosce l'idoneità a essere titolare di diritti e di doveri, cioè, come si dirà tra poco, la capacità giuridica. I soggetti di diritto si distinguono tradizionalmente in due grandi categorie: le persone fisiche, cioè gli esseri umani individualmente considerati, oggetto di questo capitolo; e le persone giuridiche, cioè le organizzazioni collettive alle quali l'ordinamento riconosce, distintamente dai singoli individui che le compongono, una propria soggettività giuridica, che saranno approfondite nel prossimo capitolo di questo manuale.</p>
+
+  <p class="titolo-capitolo">La capacità giuridica e il suo acquisto</p>
+  <p>La capacità giuridica è l'idoneità di un soggetto a essere titolare di diritti e di doveri, cioè a essere, per usare un'espressione tecnica, centro di imputazione di situazioni giuridiche soggettive: si tratta di un'attitudine astratta, che prescinde completamente dalla concreta possibilità del soggetto di esercitare da sé i propri diritti, questione che sarà invece oggetto della capacità di agire, esaminata più avanti in questo stesso capitolo. Secondo quanto stabilisce l'articolo 1 del Codice civile, la capacità giuridica si acquista dal momento della nascita, intesa come il momento in cui il neonato, staccato dal corpo materno, respira autonomamente, dando così inizio a una vita separata da quella della madre.</p>
+  <p>Il medesimo articolo 1 del Codice civile prevede, al secondo comma, un'importante eccezione a tutela del concepito, cioè di colui che è stato già concepito ma non è ancora nato: i diritti che la legge riconosce a favore del concepito sono infatti subordinati all'evento della nascita, secondo un meccanismo tecnico che la dottrina definisce di capacità giuridica condizionata, poiché tali diritti, pur potendo essere acquisiti già durante la gestazione, ad esempio per successione ereditaria o per donazione, restano sospesi e produrranno effetto solo se e quando il concepito nascerà vivo.</p>
+  <p><em>Esempio:</em> se un nonno, prima ancora della nascita del nipote già concepito, dispone in suo favore un lascito testamentario, tale disposizione produrrà effetto soltanto se il nipote nascerà vivo; qualora invece il concepito non giungesse a nascere, la disposizione testamentaria in suo favore non potrà mai acquistare efficacia.</p>
+
+  <p class="titolo-capitolo">L'estinzione della capacità giuridica</p>
+  <p>La capacità giuridica accompagna la persona fisica per l'intero arco della sua esistenza e si estingue soltanto con la morte, evento che determina la cessazione della soggettività giuridica dell'individuo e apre, contestualmente, la successione nei suoi rapporti patrimoniali, secondo quanto sarà approfondito nel capitolo di questo manuale dedicato alle successioni per causa di morte. Accanto alla morte naturale, accertata secondo i criteri medico-legali oggi individuati nella cessazione irreversibile di tutte le funzioni dell'encefalo, l'ordinamento conosce anche l'istituto della dichiarazione di morte presunta, disciplinato dagli articoli 58 e seguenti del Codice civile, con cui il tribunale, decorso un determinato periodo di tempo dalla scomparsa di una persona della quale non si abbiano più notizie, può dichiarare presuntivamente avvenuta la morte, con effetti analoghi, sotto il profilo patrimoniale, a quelli della morte naturale, salva la possibilità di far cessare tali effetti qualora la persona dichiarata presuntivamente morta faccia ritorno o se ne accerti comunque l'esistenza in vita.</p>
+
+  <p class="titolo-capitolo">La capacità di agire</p>
+  <p>Distinta dalla capacità giuridica è la capacità di agire, cioè l'idoneità del soggetto a compiere validamente da sé, senza l'intervento o l'assistenza di altri soggetti, atti giuridici capaci di produrre effetti nella propria sfera giuridica, come la stipulazione di un contratto o la redazione di un testamento. A differenza della capacità giuridica, che si acquista fin dalla nascita, la capacità di agire si acquista, secondo la regola generale stabilita dall'articolo 2 del Codice civile, con il raggiungimento della maggiore età, fissata in Italia al compimento del diciottesimo anno di vita: la ragione di tale differimento risiede nella presunzione, operata dal legislatore in via generale e astratta, che solo a partire da tale età il soggetto abbia raggiunto una sufficiente maturità psicologica e intellettuale per comprendere il significato e le conseguenze dei propri atti giuridici.</p>
+
+  <p class="titolo-capitolo">L'incapacità legale del minore di età</p>
+  <p>Il minore di età, cioè colui che non ha ancora compiuto il diciottesimo anno di vita, è dunque, quale regola generale, incapace di agire, e gli atti giuridici che lo riguardano devono essere compiuti in suo nome e nel suo interesse dai genitori, che ne esercitano la responsabilità genitoriale, secondo quanto sarà più diffusamente illustrato nel capitolo di questo manuale dedicato alla filiazione e alla responsabilità genitoriale. Tale incapacità è posta dall'ordinamento a tutela dello stesso minore, per evitare che questi possa impegnarsi giuridicamente senza la necessaria maturità di giudizio; gli atti eventualmente compiuti dal minore senza la rappresentanza o l'assistenza dei genitori sono pertanto annullabili, secondo il regime dell'incapacità legale, su istanza dello stesso minore, una volta raggiunta la maggiore età, o dei suoi legali rappresentanti.</p>
+  <p><em>Approfondimento:</em> alcuni atti di particolare rilevanza personale, come il riconoscimento di un figlio naturale, possono essere compiuti anche dal minore che abbia raggiunto una determinata età, in deroga alla regola generale dell'incapacità di agire, a testimonianza del fatto che l'ordinamento tiene conto, in alcune ipotesi specifiche, di una capacità naturale di discernimento anche prima del raggiungimento della piena maggiore età.</p>
+
+  <p class="titolo-capitolo">Le limitazioni della capacità di agire nella maggiore età: interdizione e inabilitazione</p>
+  <p>Anche dopo il raggiungimento della maggiore età, la capacità di agire di un soggetto può risultare limitata o esclusa qualora questi si trovi in condizioni di infermità di mente tali da renderlo incapace di provvedere ai propri interessi: a tutela di tali soggetti l'ordinamento prevede, tra gli altri, gli istituti dell'interdizione e dell'inabilitazione, disciplinati rispettivamente dagli articoli 414 e 415 del Codice civile. L'interdizione giudiziale può essere pronunciata dal tribunale nei confronti del maggiorenne che si trovi in condizioni di abituale infermità di mente tale da renderlo incapace di provvedere ai propri interessi, e comporta l'incapacità legale assoluta di agire, con la conseguente nomina di un tutore che lo rappresenti negli atti della vita civile; l'inabilitazione, prevista per situazioni di infermità di mente non talmente grave da giustificare l'interdizione, oppure per altre condizioni specificamente previste dalla legge, come la prodigalità abituale o l'abuso di sostanze alcoliche o stupefacenti, comporta invece un'incapacità solo parziale, in base alla quale l'inabilitato può compiere da sé gli atti di ordinaria amministrazione, mentre necessita dell'assistenza di un curatore per gli atti di straordinaria amministrazione.</p>
+  <p>Accanto a questi istituti tradizionali, la legge 9 gennaio 2004, n. 6 ha introdotto nell'ordinamento italiano la figura dell'amministrazione di sostegno, disciplinata dagli articoli 404 e seguenti del Codice civile, concepita come misura di protezione più flessibile e meno invasiva rispetto all'interdizione e all'inabilitazione, destinata a persone prive in tutto o in parte di autonomia nell'espletamento delle funzioni della vita quotidiana, e finalizzata a limitare nella minor misura possibile la capacità di agire del beneficiario, il quale conserva la capacità di agire per tutti gli atti che non richiedano necessariamente la rappresentanza o l'assistenza dell'amministratore di sostegno nominato dal giudice tutelare.</p>
+
+  <p class="titolo-capitolo">Verso lo studio delle persone giuridiche</p>
+  <p>Dopo aver esaminato la persona fisica quale soggetto di diritto per eccellenza, e le vicende che ne segnano l'acquisto e l'estinzione della capacità giuridica, nonché le condizioni che ne limitano la capacità di agire, occorre ora volgere l'attenzione a un'altra fondamentale categoria di soggetti di diritto, cioè le persone giuridiche e gli altri enti collettivi, ai quali l'ordinamento riconosce, a determinate condizioni, una soggettività distinta rispetto a quella dei singoli individui che li compongono: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 04 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir05.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

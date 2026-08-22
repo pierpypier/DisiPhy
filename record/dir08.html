@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 08</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 08: i diritti reali: la proprietà -->
+<div id="capitolo-08-proprieta" class="capitolo-storia">
+  <p class="titolo-capitolo">08 - I diritti reali: la proprietà - Classe 3</p>
+
+  <p class="titolo-capitolo">La nozione di diritto reale</p>
+  <p>Dopo aver chiarito, nel capitolo precedente, che cosa si intenda per bene in senso giuridico e per patrimonio, è ora possibile esaminare la principale categoria di diritti che le persone possono vantare sui beni, cioè i diritti reali, detti anche diritti sulle cose: si tratta di diritti che attribuiscono al loro titolare un potere diretto e immediato su un determinato bene, senza la necessaria mediazione di altri soggetti, e che presentano due caratteri fondamentali, che li distinguono nettamente dai diritti di credito, oggetto di approfondimento nei capitoli successivi di questo manuale dedicati alle obbligazioni: l'assolutezza, cioè l'opponibilità del diritto nei confronti di tutti i consociati, i quali sono tenuti a un dovere generale di astensione dal turbarne l'esercizio; e l'immediatezza, cioè la possibilità per il titolare di soddisfare il proprio interesse direttamente sulla cosa, senza la necessaria cooperazione di un soggetto obbligato. I diritti reali sono inoltre soggetti al principio di tipicità, in base al quale essi non possono essere liberamente creati dall'autonomia privata, ma devono corrispondere a una delle figure espressamente previste e disciplinate dalla legge.</p>
+
+  <p class="titolo-capitolo">Il diritto di proprietà: nozione e contenuto</p>
+  <p>Il diritto di proprietà costituisce il più ampio e completo tra i diritti reali, poiché attribuisce al suo titolare il potere di godere e disporre delle cose in modo pieno ed esclusivo, entro i limiti e con l'osservanza degli obblighi stabiliti dall'ordinamento giuridico, secondo la definizione fornita dall'articolo 832 del Codice civile. Il potere di godimento consiste nella facoltà di trarre dalla cosa tutte le utilità che essa può offrire, direttamente o attraverso i suoi frutti, secondo quanto già esaminato a proposito dei frutti naturali e civili nel capitolo precedente; il potere di disposizione consiste invece nella facoltà di modificare, alienare o anche distruggere la cosa, nonché di costituire su di essa diritti a favore di terzi, come i diritti reali di godimento che saranno esaminati nel prossimo capitolo di questo manuale.</p>
+  <p>Il carattere della pienezza indica che il proprietario può, in linea di principio, esercitare sulla cosa tutte le facoltà compatibili con la sua natura, senza che sia necessaria un'espressa enumerazione delle stesse; il carattere dell'esclusività indica invece che il proprietario può escludere chiunque altro dal godimento e dalla disponibilità della cosa, salve le limitazioni previste dalla legge.</p>
+
+  <p class="titolo-capitolo">La funzione sociale della proprietà e i suoi limiti</p>
+  <p>Il diritto di proprietà, pur essendo il più ampio tra i diritti reali, non ha carattere assoluto o illimitato: l'articolo 42 della Costituzione, dopo aver riconosciuto e garantito la proprietà privata, stabilisce infatti che la legge ne determina i modi di acquisto, di godimento e i limiti, allo scopo di assicurarne la funzione sociale e di renderla accessibile a tutti, in una prospettiva che supera la concezione puramente individualistica della proprietà propria del codice civile del 1865, per affermare invece un bilanciamento tra l'interesse individuale del proprietario e l'interesse generale della collettività. Sulla base di tale principio costituzionale, la legge ordinaria prevede numerosi limiti al diritto di proprietà, di natura sia pubblicistica, come i vincoli urbanistici, paesaggistici o ambientali imposti dalla pubblica amministrazione, sia privatistica, come i limiti derivanti dai rapporti di vicinato, esaminati nel paragrafo seguente.</p>
+  <p>Tra i limiti di natura pubblicistica assume particolare rilievo l'istituto dell'espropriazione per pubblica utilità, previsto dallo stesso articolo 42 della Costituzione e disciplinato in dettaglio dal testo unico approvato con decreto del Presidente della Repubblica 8 giugno 2001, n. 327, in base al quale la proprietà privata può essere, nei casi preveduti dalla legge e salvo indennizzo, espropriata per motivi di interesse generale, come la realizzazione di un'opera pubblica.</p>
+
+  <p class="titolo-capitolo">I limiti legali della proprietà: i rapporti di vicinato</p>
+  <p>Il Codice civile disciplina, agli articoli 873 e seguenti, una serie di limitazioni legali al diritto di proprietà fondiaria, dettate allo scopo di regolare i rapporti tra proprietari di fondi confinanti, in modo da contemperare le rispettive esigenze di godimento: tra queste si ricordano le norme sulle distanze legali nelle costruzioni, che impongono di rispettare una distanza minima dal confine o dal fabbricato vicino, salve le distanze diverse stabilite dai regolamenti edilizi locali; e la disciplina delle immissioni, contenuta nell'articolo 844 del Codice civile, secondo cui il proprietario di un fondo non può impedire le immissioni di fumo o di calore, le esalazioni, i rumori, gli scuotimenti e simili propagazioni derivanti dal fondo del vicino, se non superano la normale tollerabilità, avuto anche riguardo alla condizione dei luoghi, potendo invece agire per farle cessare qualora tale soglia risulti superata, con eventuale bilanciamento, da parte del giudice, tra le esigenze della produzione e le ragioni della proprietà.</p>
+  <p><em>Esempio:</em> il rumore prodotto da un'attività artigianale collocata in una zona a destinazione mista, residenziale e produttiva, potrebbe non superare la normale tollerabilità se contenuto entro determinati limiti orari e di intensità, mentre lo stesso rumore, se percepito in un contesto prevalentemente residenziale e silenzioso, potrebbe risultare eccessivo e giustificare l'intervento del giudice a tutela del proprietario del fondo vicino.</p>
+
+  <p class="titolo-capitolo">I modi di acquisto della proprietà</p>
+  <p>La proprietà può acquistarsi secondo modi diversi, tradizionalmente distinti in due grandi categorie: i modi di acquisto a titolo originario, in cui il diritto sorge in capo al nuovo proprietario indipendentemente da un rapporto con il precedente titolare, e anzi spesso in assenza di un dante causa, come avviene per l'occupazione delle cose mobili che non sono proprietà di alcuno, disciplinata dall'articolo 923 del Codice civile, per l'invenzione delle cose smarrite, per l'accessione, disciplinata dagli articoli 934 e seguenti, in base alla quale il proprietario del suolo acquista la proprietà di ogni costruzione, piantagione od opera esistente sopra o sotto il suolo stesso, e per l'usucapione, che sarà approfondita nel capitolo di questo manuale dedicato al possesso; e i modi di acquisto a titolo derivativo, in cui il diritto si trasferisce da un soggetto a un altro sulla base di un rapporto giuridico tra i due, come avviene per il contratto, che sarà oggetto di specifica trattazione nei capitoli successivi di questo manuale, e per la successione a causa di morte, sia essa legittima o testamentaria.</p>
+
+  <p class="titolo-capitolo">Le azioni a difesa della proprietà</p>
+  <p>A tutela del diritto di proprietà, il Codice civile predispone, agli articoli 948 e seguenti, alcune azioni giudiziarie specifiche, dette azioni petitorie, esperibili dal proprietario per far accertare e tutelare il proprio diritto: tra queste si ricordano l'azione di rivendicazione, mediante la quale il proprietario che ha perduto il possesso della cosa può rivendicarla da chiunque la possieda o la detenga, per ottenerne la restituzione; l'azione negatoria, mediante la quale il proprietario può chiedere che sia dichiarata l'inesistenza di diritti reali affermati da altri sulla propria cosa, come un preteso diritto di servitù, facendo cessare le eventuali turbative in atto; l'azione di regolamento di confini, esperibile quando il confine tra due fondi risulti incerto; e l'azione per apposizione di termini, esperibile invece quando i segni di confine tra due fondi manchino del tutto o siano divenuti irriconoscibili.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dei diritti reali di godimento</p>
+  <p>Dopo aver esaminato il diritto di proprietà quale diritto reale più ampio e completo, occorre ora volgere l'attenzione a quei diritti reali che, pur attribuendo al loro titolare un potere diretto sulla cosa altrui, non giungono a comprimere integralmente le facoltà del proprietario, ma coesistono con il suo diritto, limitandolo entro l'ambito specifico previsto dalla legge: a questi diritti, detti diritti reali di godimento su cosa altrui, sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 08 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir09.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

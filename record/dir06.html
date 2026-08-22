@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 06</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 06: i diritti della personalità -->
+<div id="capitolo-06-diritti-personalita" class="capitolo-storia">
+  <p class="titolo-capitolo">06 - I diritti della personalità - Classe 3</p>
+
+  <p class="titolo-capitolo">La nozione di diritti della personalità</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, la persona fisica quale soggetto di diritto e le persone giuridiche quali organizzazioni collettive dotate di autonoma soggettività, occorre ora tornare a occuparsi della persona fisica per approfondire una categoria di diritti particolarmente rilevante, detti diritti della personalità: si tratta di quei diritti soggettivi che tutelano i valori e gli interessi essenziali della persona umana, come la vita, l'integrità fisica, il nome, l'immagine, l'onore e la riservatezza, riconosciuti a ogni individuo non in ragione di un particolare rapporto giuridico instaurato con altri soggetti, ma per il solo fatto di essere persona, e trovano il proprio fondamento primario nell'articolo 2 della Costituzione, il quale riconosce e garantisce i diritti inviolabili dell'uomo.</p>
+
+  <p class="titolo-capitolo">I caratteri dei diritti della personalità</p>
+  <p>I diritti della personalità presentano alcuni caratteri comuni che li distinguono nettamente dagli altri diritti soggettivi, in particolare da quelli di natura patrimoniale che saranno esaminati nei capitoli successivi di questo manuale: si tratta anzitutto di diritti assoluti, cioè opponibili nei confronti di tutti i consociati, i quali sono tenuti a un dovere generale di astensione dal ledere tali interessi altrui; sono inoltre diritti indisponibili, cioè non suscettibili di essere validamente ceduti a terzi, né rinunciati in via generale e definitiva da parte del loro titolare, poiché la loro tutela risponde a un interesse che l'ordinamento considera superiore alla stessa autonomia negoziale del singolo; sono infine diritti imprescrittibili, cioè non soggetti a estinguersi per il decorso del tempo, a differenza di quanto avviene, come si vedrà, per la generalità dei diritti di credito.</p>
+
+  <p class="titolo-capitolo">Il diritto alla vita e all'integrità fisica</p>
+  <p>Il più elementare tra i diritti della personalità è il diritto alla vita, presupposto necessario di ogni altro diritto, tutelato dall'ordinamento sia sul piano costituzionale, attraverso il riconoscimento dei diritti inviolabili dell'uomo, sia sul piano penale, attraverso l'incriminazione dell'omicidio e delle altre condotte lesive della vita altrui. Strettamente collegato al diritto alla vita è il diritto all'integrità fisica, tutelato in particolare dall'articolo 5 del Codice civile, il quale vieta gli atti di disposizione del proprio corpo quando essi cagionino una diminuzione permanente dell'integrità fisica, oppure siano altrimenti contrari alla legge, all'ordine pubblico o al buon costume: tale norma, pur risalendo al codice civile del 1942, va oggi necessariamente letta e interpretata alla luce dell'articolo 32 della Costituzione, che tutela la salute come fondamentale diritto dell'individuo e interesse della collettività, e in base al quale nessuno può essere obbligato a un determinato trattamento sanitario se non per disposizione di legge, la quale non può in nessun caso violare i limiti imposti dal rispetto della persona umana.</p>
+  <p><em>Esempio:</em> mentre la donazione di sangue o la donazione di un organo compatibile con la sopravvivenza del donatore, come un rene, sono generalmente ammesse dall'ordinamento in quanto non determinano una menomazione grave e permanente dell'integrità fisica e rispondono a finalità solidaristiche espressamente disciplinate dalla legge, un atto di disposizione del proprio corpo che cagionasse una mutilazione grave e permanente, privo di qualsiasi giustificazione terapeutica o normativa, risulterebbe invece contrario al divieto posto dall'articolo 5 del Codice civile.</p>
+
+  <p class="titolo-capitolo">Il diritto al nome</p>
+  <p>Un altro diritto della personalità espressamente disciplinato dal Codice civile è il diritto al nome, tutelato dagli articoli 6 e seguenti, in base ai quali ogni persona ha diritto al nome che le è stato attribuito secondo le norme che regolano lo stato civile, comprensivo del prenome e del cognome, e può agire in giudizio per far cessare il fatto lesivo qualora un terzo contesti il diritto all'uso del proprio nome, oppure ne faccia un uso indebito, cioè non autorizzato e potenzialmente lesivo, ad esempio a scopo pubblicitario o commerciale, con conseguente possibile risarcimento del danno subito.</p>
+
+  <p class="titolo-capitolo">Il diritto all'immagine e il diritto all'onore</p>
+  <p>Il diritto all'immagine, disciplinato dall'articolo 10 del Codice civile e dagli articoli 96 e 97 della legge 22 aprile 1941, n. 633 sul diritto d'autore, tutela la facoltà di ogni persona di decidere se, come e in quali circostanze la propria immagine possa essere esposta, riprodotta o messa in commercio: il consenso della persona ritratta costituisce, quale regola generale, condizione necessaria per la liceità di tali attività, salve alcune eccezioni tassativamente previste dalla legge, come nel caso in cui la riproduzione sia collegata a fatti, avvenimenti o cerimonie di interesse pubblico o svoltisi in pubblico, oppure quando la persona ritratta sia divenuta nota per l'ufficio pubblico ricoperto, purché la riproduzione non arrechi comunque pregiudizio al decoro o alla reputazione della persona stessa.</p>
+  <p>Strettamente collegato è il diritto all'onore, o alla reputazione, cioè al rispetto della considerazione sociale di cui ogni persona gode presso i terzi, tutelato in via generale sul piano civile, attraverso l'azione di risarcimento del danno per lesione della reputazione, e sul piano penale, attraverso i reati contro l'onore, come la diffamazione, disciplinata dall'articolo 595 del Codice penale.</p>
+
+  <p class="titolo-capitolo">Il diritto alla riservatezza e la protezione dei dati personali</p>
+  <p>Il diritto alla riservatezza, elaborato inizialmente in via giurisprudenziale come diritto a essere lasciati soli e a impedire la divulgazione di notizie relative alla propria sfera privata, ha trovato negli ultimi decenni una disciplina normativa sempre più articolata, oggi riconducibile in particolare al regolamento dell'Unione europea 2016/679, noto come Regolamento generale sulla protezione dei dati, comunemente indicato con l'acronimo GDPR, e al decreto legislativo 30 giugno 2003, n. 196, cosiddetto Codice della privacy, come successivamente modificato per adeguarlo alla normativa europea: tali fonti disciplinano in modo dettagliato le condizioni di liceità del trattamento dei dati personali, riconoscendo all'interessato una serie di diritti, tra cui il diritto di accesso ai propri dati, il diritto di rettifica e il diritto alla cancellazione, quest'ultimo noto anche come diritto all'oblio.</p>
+  <p><em>Approfondimento:</em> il diritto all'oblio, riconosciuto anche dalla giurisprudenza della Corte di giustizia dell'Unione europea, consiste nella facoltà della persona di ottenere, a determinate condizioni, la deindicizzazione o la rimozione di informazioni relative a fatti del proprio passato, quando la loro perdurante diffusione non risponda più a un interesse pubblico prevalente rispetto al diritto della persona a non vedere costantemente richiamati episodi ormai risalenti nel tempo.</p>
+
+  <p class="titolo-capitolo">Il diritto all'identità personale</p>
+  <p>Elaborato prevalentemente in sede giurisprudenziale e dottrinale, il diritto all'identità personale tutela l'interesse di ogni individuo a essere rappresentato, nella vita di relazione, in modo corrispondente alla propria effettiva identità storica, politica, sociale, religiosa o professionale, senza travisamenti o alterazioni che ne diano un'immagine falsata o distorta agli occhi dei terzi: tale diritto, distinto dal diritto all'onore poiché può essere leso anche da rappresentazioni non necessariamente denigratorie, ma comunque non veritiere, trova oggi un fondamento generale nell'articolo 2 della Costituzione, quale espressione della tutela della personalità dell'individuo in tutte le sue forme di manifestazione ed esplicazione.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dei beni e del patrimonio</p>
+  <p>Dopo aver esaminato i diritti che tutelano la persona in quanto tale, indipendentemente da ogni rapporto di natura patrimoniale, è ora possibile rivolgere l'attenzione a una diversa categoria di rapporti giuridici, cioè quelli aventi a oggetto i beni e le utilità economiche di cui la persona può disporre: a questo tema, e in particolare alla nozione di bene giuridico e di patrimonio, sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 06 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir07.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

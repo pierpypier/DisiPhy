@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 02</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 02: le fonti del diritto -->
+<div id="capitolo-02-fonti-diritto" class="capitolo-storia">
+  <p class="titolo-capitolo">02 - Le fonti del diritto - Classe 3</p>
+
+  <p class="titolo-capitolo">Che cosa si intende per fonti del diritto</p>
+  <p>Come si è visto nel capitolo precedente, l'ordinamento giuridico è costituito da un insieme organico e gerarchicamente ordinato di norme giuridiche, ma resta da chiarire un problema di grande rilievo pratico, cioè da dove concretamente traggano origine tali norme: si definiscono fonti del diritto tutti quegli atti e quei fatti ai quali l'ordinamento giuridico stesso attribuisce l'idoneità a produrre norme giuridiche nuove, cioè capaci di creare, modificare o estinguere diritti e obblighi validi ed efficaci nei confronti della collettività. Non si tratta, dunque, di un insieme casuale di documenti scritti, ma di un sistema ordinato, in cui ogni fonte occupa una precisa posizione rispetto alle altre, secondo criteri che verranno illustrati più avanti in questo stesso capitolo.</p>
+
+  <p class="titolo-capitolo">Fonti-atto e fonti-fatto</p>
+  <p>Le fonti del diritto si distinguono, in primo luogo, in due grandi categorie: le fonti-atto, cioè quegli atti giuridici consapevolmente posti in essere da un organo competente attraverso una procedura formale predeterminata, allo scopo specifico di produrre norme giuridiche, come avviene, ad esempio, per la legge approvata dal Parlamento; e le fonti-fatto, cioè quei comportamenti sociali che, pur non essendo il risultato di una deliberazione formale di un organo a ciò preposto, l'ordinamento giuridico riconosce comunque come idonei a produrre norme giuridiche, in quanto espressione di un comportamento tenuto in modo costante, uniforme e diffuso all'interno di una collettività, con la convinzione della sua obbligatorietà giuridica: è questo il caso della consuetudine, o uso, che sarà approfondita più avanti in questo capitolo.</p>
+  <p>Le fonti-atto sono inoltre caratterizzate dalla loro forma scritta, dalla provenienza da un organo specificamente competente a emanarle e dal rispetto di un procedimento di formazione predeterminato da altre norme di rango superiore, che ne disciplinano appunto la validità formale; le fonti-fatto, al contrario, non hanno una forma scritta predeterminata e la loro validità dipende dall'effettiva e costante osservanza del comportamento da parte della collettività, più che dal rispetto di un procedimento formale.</p>
+
+  <p class="titolo-capitolo">Il criterio gerarchico e la gerarchia delle fonti</p>
+  <p>Poiché le diverse fonti del diritto non hanno tutte lo stesso rango, cioè la stessa forza e capacità di incidere sulle altre, l'ordinamento giuridico italiano le dispone secondo una struttura gerarchica, spesso rappresentata graficamente come una piramide, in cui le fonti di grado superiore vincolano quelle di grado inferiore, che non possono validamente contraddirle, pena la loro illegittimità: al vertice di questa gerarchia si colloca la Costituzione della Repubblica italiana, entrata in vigore il 1° gennaio 1948, insieme alle leggi costituzionali e alle leggi di revisione costituzionale, che sono equiparate alla Costituzione stessa quanto a forza giuridica e possono essere adottate soltanto attraverso il particolare procedimento aggravato previsto dall'articolo 138 della Costituzione; segue, in una posizione di rango primario, la legge ordinaria dello Stato, approvata dal Parlamento secondo il procedimento previsto dagli articoli 70 e seguenti della Costituzione, insieme agli atti a essa equiparati quanto a forza giuridica, cioè il decreto legge e il decreto legislativo, che il Governo può adottare rispettivamente in casi di necessità e urgenza, salvo conversione in legge entro sessanta giorni, oppure su delega del Parlamento, secondo quanto previsto dagli articoli 76 e 77 della Costituzione; a un livello inferiore si collocano infine le fonti secondarie, tra cui i regolamenti, atti normativi emanati dal Governo o da altri organi amministrativi per disciplinare in modo più dettagliato materie già regolate, nei loro tratti essenziali, da una legge, senza però poter contraddire quest'ultima.</p>
+  <p>Alla base della gerarchia si collocano infine gli usi o consuetudini, che, come si è detto, hanno efficacia solo nei limiti in cui la legge stessa rinvia a essi, oppure per disciplinare materie non espressamente regolate da altre fonti scritte, secondo il principio per cui gli usi possono avere efficacia solo se non contrari a norme imperative di rango superiore.</p>
+  <p><em>Esempio:</em> se un regolamento governativo, emanato per disciplinare in dettaglio l'applicazione di una legge, dovesse contenere una disposizione in contrasto con quanto stabilito dalla legge stessa, tale disposizione regolamentare sarebbe illegittima, e potrebbe essere annullata dal giudice amministrativo competente proprio perché una fonte di rango inferiore non può validamente derogare a una fonte di rango superiore.</p>
+
+  <p class="titolo-capitolo">Il criterio cronologico e il criterio di specialità</p>
+  <p>Accanto al criterio gerarchico, che risolve i contrasti tra norme di rango diverso, l'ordinamento giuridico conosce altri due criteri fondamentali per risolvere le eventuali antinomie, cioè i contrasti, tra norme di pari rango: il criterio cronologico, in base al quale, tra due norme di eguale grado incompatibili tra loro, prevale quella emanata per ultima, secondo il principio per cui la legge posteriore abroga la legge anteriore nella parte in cui risultino tra loro incompatibili; e il criterio di specialità, in base al quale, tra una norma generale e una norma speciale, che disciplina in modo particolare una determinata categoria di casi rientranti astrattamente anche nell'ambito della norma generale, prevale quest'ultima norma speciale, anche se cronologicamente anteriore rispetto alla norma generale, secondo il principio per cui la legge speciale deroga alla legge generale.</p>
+  <p><em>Approfondimento:</em> questi criteri di risoluzione delle antinomie non operano isolatamente, ma sono destinati a integrarsi reciprocamente secondo un ordine di applicazione preferenziale: il criterio gerarchico prevale in linea di massima sugli altri due, poiché una norma di rango inferiore, per quanto successiva o speciale, non può validamente derogare a una norma di rango superiore.</p>
+
+  <p class="titolo-capitolo">L'efficacia della norma giuridica nel tempo</p>
+  <p>Perché una legge diventi obbligatoria per tutti i consociati, non è sufficiente che sia stata approvata dal Parlamento secondo il procedimento previsto: occorre infatti che venga promulgata dal Presidente della Repubblica, ai sensi dell'articolo 87 della Costituzione, e successivamente pubblicata sulla Gazzetta Ufficiale della Repubblica italiana, in modo da renderla conoscibile alla generalità dei cittadini. Tra la data di pubblicazione e il momento in cui la legge diventa effettivamente obbligatoria decorre normalmente un periodo detto vacatio legis, della durata ordinaria di quindici giorni, salvo che la legge stessa non preveda un termine diverso, più breve o più lungo, destinato a consentire a tutti i destinatari della norma di poterne prendere adeguata conoscenza prima di esservi vincolati.</p>
+  <p>Una legge cessa di produrre i propri effetti attraverso l'abrogazione, cioè la cessazione della sua efficacia per il futuro, che può avvenire in tre modi principali: per abrogazione espressa, quando una legge successiva dichiara esplicitamente abrogata una legge precedente; per abrogazione tacita, quando le disposizioni di una legge successiva risultano incompatibili con quelle di una legge precedente, senza che vi sia una dichiarazione espressa in tal senso; oppure per abrogazione a seguito di referendum popolare abrogativo, disciplinato dall'articolo 75 della Costituzione, mediante il quale il corpo elettorale può essere chiamato a pronunciarsi sull'abrogazione totale o parziale di una legge già in vigore. In tutti questi casi, l'abrogazione opera solo per il futuro, cioè non incide sugli effetti già prodotti dalla norma abrogata nel periodo in cui era in vigore, secondo il principio generale dell'irretroattività, per cui, salve espresse e limitate eccezioni, la legge non dispone che per l'avvenire e non ha effetto retroattivo, come ricorda l'articolo 11 delle disposizioni preliminari al Codice civile.</p>
+
+  <p class="titolo-capitolo">L'efficacia della norma giuridica nello spazio</p>
+  <p>Le norme giuridiche di un determinato ordinamento sono destinate, in linea generale, a trovare applicazione all'interno del territorio dello Stato che le ha emanate, secondo il principio di territorialità; a questo principio generale si affiancano tuttavia alcune norme particolari, che regolano i casi in cui un rapporto giuridico presenti elementi di collegamento con più ordinamenti diversi, come avviene, ad esempio, quando cittadini di Stati diversi stipulano tra loro un contratto, oppure quando occorra stabilire quale sia la legge applicabile ai rapporti di famiglia di cittadini stranieri residenti in Italia: tali norme, dette di diritto internazionale privato, esulano tuttavia dai contenuti essenziali di questo capitolo introduttivo e potranno essere richiamate, ove necessario, nei capitoli successivi dedicati a specifici istituti.</p>
+
+  <p class="titolo-capitolo">La consuetudine come fonte del diritto</p>
+  <p>Si è già accennato al fatto che la consuetudine, o uso, costituisce una fonte-fatto del diritto, distinta dalle fonti-atto scritte; essa si forma attraverso la ripetizione costante, uniforme e generale di un determinato comportamento da parte dei membri di una collettività, unita alla convinzione, diffusa tra i medesimi soggetti, che tale comportamento sia giuridicamente obbligatorio e non semplicemente conforme a un uso sociale o di cortesia: quest'ultimo elemento psicologico, detto opinio iuris ac necessitatis, distingue appunto la consuetudine giuridica dal semplice uso sociale, privo di rilevanza per l'ordinamento. Nel sistema delle fonti del diritto italiano, disciplinato dalle disposizioni preliminari al Codice civile, gli usi occupano l'ultimo posto nella gerarchia delle fonti, potendo trovare applicazione solo nelle materie regolate da leggi e regolamenti nei limiti in cui questi ultimi espressamente vi rinviano, oppure per disciplinare materie non regolate da alcuna fonte scritta, purché non contrari a norme imperative.</p>
+  <p><em>Esempio:</em> è pratica diffusa, in molte zone rurali, che il proprietario di un fondo confinante con un altro tolleri, senza opporsi, il passaggio periodico di animali al pascolo attraverso il proprio terreno in determinati periodi dell'anno: se tale comportamento si è consolidato nel tempo con le caratteristiche proprie della consuetudine, esso può assumere rilevanza giuridica come uso normativo, integrando la disciplina legale in materia di rapporti di vicinato.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dell'interpretazione della norma giuridica</p>
+  <p>Conoscere quali siano le fonti del diritto e secondo quale ordine gerarchico esse si dispongano costituisce un passaggio indispensabile per comprendere come nasce concretamente una norma giuridica, ma non è ancora sufficiente per applicarla correttamente ai casi della vita reale: resta infatti da chiarire in che modo il giudice, l'operatore del diritto o lo stesso cittadino debbano interpretare il significato di una norma giuridica, spesso formulata in termini generali e astratti, per ricavarne la regola concreta applicabile al singolo caso: a questo tema, noto come interpretazione e applicazione della norma giuridica, sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 02 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir03.html">Vai al Capitolo successivo</a></p>
+</div>    
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

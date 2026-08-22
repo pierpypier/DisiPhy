@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 05</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 05: le persone giuridiche e gli enti collettivi -->
+<div id="capitolo-05-persone-giuridiche" class="capitolo-storia">
+  <p class="titolo-capitolo">05 - Le persone giuridiche e gli enti collettivi - Classe 3</p>
+
+  <p class="titolo-capitolo">Dai singoli individui alle organizzazioni collettive</p>
+  <p>Come si è visto nel capitolo precedente, la persona fisica costituisce il soggetto di diritto per eccellenza, titolare di capacità giuridica fin dalla nascita; tuttavia la vita sociale ed economica moderna richiede assai spesso che più individui uniscano stabilmente le proprie forze, i propri beni o le proprie energie lavorative per il perseguimento di uno scopo comune, dando vita a organizzazioni collettive che, a determinate condizioni previste dalla legge, l'ordinamento giuridico riconosce come soggetti di diritto autonomi e distinti rispetto alle singole persone fisiche che le hanno costituite o che ne fanno parte: si parla, in questo caso, di persone giuridiche.</p>
+
+  <p class="titolo-capitolo">La nozione di persona giuridica e l'autonomia patrimoniale perfetta</p>
+  <p>Si definisce persona giuridica un'organizzazione di persone o di beni, alla quale l'ordinamento giuridico riconosce, in presenza dei requisiti richiesti dalla legge, una soggettività distinta rispetto a quella dei suoi membri, con la conseguenza che essa diviene titolare autonoma di diritti e di doveri, di un proprio patrimonio e di una propria capacità di agire, esercitata per il tramite dei suoi organi rappresentativi. La caratteristica più rilevante, sul piano pratico, delle persone giuridiche in senso proprio è la cosiddetta autonomia patrimoniale perfetta, in forza della quale il patrimonio dell'ente è nettamente separato da quello dei singoli soci o associati, i quali, per le obbligazioni contratte dall'ente, non rispondono con il proprio patrimonio personale, poiché delle obbligazioni sociali risponde unicamente l'ente con il proprio patrimonio.</p>
+  <p><em>Esempio:</em> se una società di capitali, dotata di personalità giuridica, non è in grado di pagare un proprio debito verso un fornitore, quest'ultimo potrà rivalersi soltanto sul patrimonio della società, e non anche sul patrimonio personale dei singoli soci, salve le limitate eccezioni previste dalla legge in caso di abuso della personalità giuridica.</p>
+
+  <p class="titolo-capitolo">Il riconoscimento della personalità giuridica</p>
+  <p>Non tutte le organizzazioni collettive acquistano automaticamente la personalità giuridica per il solo fatto di essere costituite: l'ordinamento italiano subordina infatti l'acquisto della personalità giuridica, per la generalità degli enti privati diversi dalle società, a un procedimento di riconoscimento, oggi disciplinato dal decreto del Presidente della Repubblica 10 febbraio 2000, n. 361, che ha sostituito il previgente sistema di riconoscimento governativo con un sistema di iscrizione in un apposito registro delle persone giuridiche, tenuto presso le prefetture o le regioni a seconda dei casi, previo controllo, da parte dell'autorità competente, della sussistenza dei requisiti di legge, tra cui la liceità e possibilità dello scopo perseguito e l'adeguatezza del patrimonio destinato al suo perseguimento. Per le società di capitali, come si vedrà nei capitoli di questo manuale dedicati al diritto commerciale, l'acquisto della personalità giuridica avviene invece attraverso l'iscrizione dell'atto costitutivo nel registro delle imprese, tenuto presso la camera di commercio territorialmente competente.</p>
+
+  <p class="titolo-capitolo">Associazioni, fondazioni e comitati</p>
+  <p>Tra gli enti privati non societari, il Codice civile distingue tradizionalmente tre principali figure: l'associazione, che si caratterizza come organizzazione a base personale, costituita da una pluralità di persone unite stabilmente per il perseguimento di uno scopo comune di natura non economica, come uno scopo culturale, sportivo, ricreativo o assistenziale, e nella quale la volontà collettiva si forma attraverso il funzionamento di organi, tra cui, in particolare, l'assemblea degli associati; la fondazione, che si caratterizza invece come organizzazione a base patrimoniale, costituita mediante la destinazione di un patrimonio, da parte di uno o più fondatori, al perseguimento stabile di uno scopo determinato, generalmente di utilità sociale, senza che vi sia una collettività di associati chiamata a deliberare sulla vita dell'ente; e il comitato, disciplinato dagli articoli 39 e seguenti del Codice civile, che costituisce una figura di organizzazione collettiva temporanea, priva di personalità giuridica salvo apposito riconoscimento, costituita generalmente per la raccolta di fondi destinati a uno scopo specifico e circoscritto, come un'opera di beneficenza o la realizzazione di un monumento.</p>
+
+  <p class="titolo-capitolo">Gli enti privi di personalità giuridica: le associazioni non riconosciute e i comitati</p>
+  <p>Accanto agli enti dotati di personalità giuridica, l'ordinamento riconosce come soggetti di diritto, sia pure con un regime attenuato, anche organizzazioni collettive prive di tale riconoscimento formale, come le associazioni non riconosciute, disciplinate dagli articoli 36 e seguenti del Codice civile: si tratta di enti che, pur non avendo ottenuto il riconoscimento della personalità giuridica, sono comunque considerati centri autonomi di imputazione di rapporti giuridici, dotati di un proprio fondo comune costituito dai contributi degli associati, ma privi dell'autonomia patrimoniale perfetta propria delle persone giuridiche riconosciute: per le obbligazioni assunte in nome e per conto dell'associazione non riconosciuta rispondono infatti, personalmente e solidalmente con il fondo comune, anche coloro che hanno agito in nome dell'associazione stessa, secondo quanto stabilito dall'articolo 38 del Codice civile.</p>
+  <p><em>Approfondimento:</em> il fenomeno delle associazioni non riconosciute è particolarmente diffuso nella pratica, poiché consente di dare vita a un'organizzazione collettiva stabile, come un circolo culturale o sportivo, senza dover affrontare i costi e gli adempimenti burocratici richiesti dal procedimento di riconoscimento della personalità giuridica: si tratta, tuttavia, di una scelta che espone chi agisce in nome dell'ente a una responsabilità patrimoniale personale più ampia rispetto a quella prevista per gli amministratori di un ente riconosciuto.</p>
+
+  <p class="titolo-capitolo">Gli organi delle persone giuridiche</p>
+  <p>Poiché la persona giuridica, a differenza della persona fisica, non ha una volontà propria nel senso naturalistico del termine, essa agisce necessariamente per il tramite di persone fisiche che ne compongono gli organi, cioè le strutture interne alle quali l'ordinamento e lo statuto dell'ente attribuiscono il potere di formare ed esprimere la volontà dell'ente stesso, nonché di rappresentarlo nei rapporti con i terzi: tra gli organi tipici delle persone giuridiche si distinguono, in particolare, gli organi deliberativi, come l'assemblea, chiamati a formare la volontà collettiva dell'ente su questioni di particolare rilevanza, e gli organi esecutivi o gestori, come il consiglio di amministrazione o l'amministratore unico, incaricati di dare attuazione alle deliberazioni assunte e di compiere gli atti di gestione ordinaria e straordinaria dell'ente, nonché di rappresentarlo nei confronti dei terzi.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dei diritti della personalità</p>
+  <p>Dopo aver esaminato, nei due capitoli precedenti, la persona fisica e le persone giuridiche quali soggetti di diritto, occorre ora tornare a concentrare l'attenzione sulla persona fisica, per approfondire una particolare categoria di diritti che l'ordinamento le riconosce in quanto tale, indipendentemente da ogni rapporto patrimoniale, e che sono destinati a tutelarne i valori e gli interessi essenziali, come la vita, l'integrità fisica, l'onore e l'identità personale: a questo tema, noto come diritti della personalità, sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 05 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir06.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

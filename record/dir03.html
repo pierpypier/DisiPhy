@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 03</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 03: l'interpretazione e l'applicazione della norma giuridica -->
+<div id="capitolo-03-interpretazione-norma" class="capitolo-storia">
+  <p class="titolo-capitolo">03 - L'interpretazione e l'applicazione della norma giuridica - Classe 3</p>
+
+  <p class="titolo-capitolo">Perché è necessario interpretare la norma giuridica</p>
+  <p>Come si è visto nel capitolo precedente, la norma giuridica è per sua natura generale e astratta, poiché si rivolge a un'intera categoria di soggetti e disciplina un numero indefinito di casi futuri, senza poter prevedere in anticipo ogni singola circostanza concreta che potrà presentarsi nella realtà: proprio per questo motivo, prima di poter applicare una norma a un caso specifico, occorre sempre un'operazione intellettuale preliminare, detta interpretazione, mediante la quale si ricava dal testo della norma il suo esatto significato, cioè la regola concreta di comportamento che essa esprime. Interpretare una legge non significa semplicemente leggerla, ma ricostruirne il senso, anche quando le parole utilizzate dal legislatore risultino, come spesso accade, generiche, ambigue o suscettibili di più letture diverse.</p>
+
+  <p class="titolo-capitolo">L'interpretazione letterale</p>
+  <p>Il primo criterio interpretativo, e anche il punto di partenza obbligato di ogni operazione ermeneutica, è quello dell'interpretazione letterale, o testuale, che consiste nell'attribuire alle parole della norma il significato proprio che esse hanno secondo la connessione tra loro e secondo l'uso comune della lingua, come stabilisce l'articolo 12 delle disposizioni preliminari al Codice civile, il quale prescrive che nell'applicare la legge non si può a essa attribuire altro senso che quello fatto palese dal significato proprio delle parole secondo la connessione di esse. Questo criterio, pur fondamentale, non è tuttavia sempre sufficiente da solo, poiché il significato letterale di un termine può risultare, in concreto, ambiguo, generico o comunque non decisivo per risolvere il caso specifico.</p>
+
+  <p class="titolo-capitolo">L'interpretazione logica o teleologica</p>
+  <p>Quando l'interpretazione meramente letterale non consente di ricavare con certezza il significato della norma, occorre fare ricorso all'interpretazione logica, detta anche teleologica, la quale, come precisa lo stesso articolo 12 delle disposizioni preliminari, impone di tenere conto anche dell'intenzione del legislatore, cioè della finalità pratica che la norma intende perseguire, ricostruita attraverso l'esame dei lavori preparatori, del contesto storico in cui la norma è stata emanata e della ragione pratica, detta ratio legis, che ne giustifica l'esistenza. In questo senso, interpretare una norma non significa fermarsi al dato puramente linguistico, ma comprendere quale problema concreto il legislatore abbia inteso risolvere e quale interesse abbia inteso tutelare.</p>
+  <p><em>Esempio:</em> una norma che vieti l'ingresso di veicoli in un parco pubblico, se interpretata in senso puramente letterale, potrebbe sembrare applicabile anche a una carrozzina per persone con disabilità motoria; l'interpretazione logica, che tiene conto della finalità della norma, cioè la tutela della sicurezza dei pedoni e della quiete del parco, consente invece di escludere ragionevolmente tale ipotesi dall'ambito di applicazione del divieto.</p>
+
+  <p class="titolo-capitolo">L'interpretazione sistematica</p>
+  <p>Un ulteriore criterio interpretativo è costituito dall'interpretazione sistematica, la quale muove dal presupposto che nessuna norma giuridica vive isolata, ma fa parte di un sistema ordinato e tendenzialmente coerente, quale è appunto l'ordinamento giuridico descritto nel primo capitolo di questo manuale: il significato di una singola disposizione va dunque ricostruito anche alla luce delle altre norme che disciplinano la medesima materia, o materie a essa collegate, in modo da evitare, per quanto possibile, contraddizioni interne al sistema e da garantire un'applicazione coerente e uniforme del diritto.</p>
+
+  <p class="titolo-capitolo">I tipi di interpretazione secondo il soggetto che la compie</p>
+  <p>Oltre alla distinzione fondata sui criteri appena illustrati, l'interpretazione può essere classificata anche in base al soggetto che la compie, distinguendo tra interpretazione dottrinale, compiuta dagli studiosi del diritto nelle loro opere scientifiche, priva di efficacia vincolante ma dotata spesso di grande autorevolezza culturale; interpretazione giudiziale, compiuta dai giudici nell'esercizio della loro funzione giurisdizionale, vincolante unicamente per il caso concreto deciso, salvo il particolare valore orientativo che assumono, nella prassi, le pronunce delle giurisdizioni superiori, come la Corte di Cassazione; e interpretazione autentica, compiuta dallo stesso legislatore attraverso una legge successiva che chiarisce il significato di una norma precedente, la quale si caratterizza per il fatto di avere, a differenza delle altre, efficacia retroattiva, poiché non introduce una regola nuova ma si limita a chiarire il significato di una norma già esistente fin dal momento della sua entrata in vigore.</p>
+
+  <p class="titolo-capitolo">Le lacune dell'ordinamento e l'analogia</p>
+  <p>Può accadere che, di fronte a un determinato caso concreto, non si rinvenga all'interno dell'ordinamento alcuna norma espressamente destinata a disciplinarlo: si parla, in questa ipotesi, di lacuna dell'ordinamento giuridico. Poiché il giudice non può mai rifiutarsi di decidere una controversia sottoposta al suo esame per il solo fatto che manchi una norma specifica applicabile al caso, l'articolo 12 delle disposizioni preliminari al Codice civile prevede, per colmare tali lacune, il ricorso all'analogia, distinguendo in particolare due forme: l'analogia legis, mediante la quale si applica al caso non regolato la norma dettata dal legislatore per un caso simile, cioè per una fattispecie che presenti con esso una somiglianza di ratio, cioè di ragione giustificatrice; e l'analogia iuris, alla quale si ricorre quando manchi anche una norma specifica applicabile per analogia legis, e mediante la quale si decide il caso secondo i principi generali dell'ordinamento giuridico dello Stato.</p>
+  <p>L'analogia, tuttavia, incontra due limiti fondamentali espressamente previsti dallo stesso articolo 14 delle disposizioni preliminari al Codice civile: le leggi penali e le leggi eccezionali, cioè quelle che derogano a principi generali o ad altre leggi, non si applicano oltre i casi e i tempi in esse considerati, e non possono pertanto essere estese, per via analogica, a casi diversi da quelli espressamente previsti.</p>
+  <p><em>Approfondimento:</em> il divieto di analogia in materia penale trova il proprio fondamento nel principio di legalità, sancito dall'articolo 25, secondo comma, della Costituzione, secondo cui nessuno può essere punito se non in forza di una legge che sia entrata in vigore prima del fatto commesso: consentire l'applicazione analogica delle norme penali significherebbe infatti attribuire al giudice un potere di individuare nuove fattispecie di reato, in contrasto con la riserva di legge che caratterizza la materia penale.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dei soggetti del diritto</p>
+  <p>Dopo aver chiarito che cos'è una norma giuridica, quali sono le fonti da cui essa trae origine e in che modo essa debba essere interpretata e applicata ai casi concreti, è ora possibile affrontare un ulteriore aspetto fondamentale dello studio del diritto, cioè l'individuazione dei soggetti ai quali le norme giuridiche si rivolgono, e in particolare della persona fisica, intesa come soggetto di diritto per eccellenza, titolare di diritti e di doveri fin dalla nascita: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 03 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir04.html">Vai al Capitolo successivo</a></p>
+</div> 
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>
