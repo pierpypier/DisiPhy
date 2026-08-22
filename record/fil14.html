@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 14</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 14: Epicureismo e Stoicismo -->
+<div id="capitolo-14-epicureismo-stoicismo" class="capitolo-storia">
+  <p class="titolo-capitolo">14 - Epicureismo e Stoicismo - Classe 3</p>
+
+  <p class="titolo-capitolo">Il contesto storico dell'età ellenistica</p>
+  <p>Come si è accennato al termine del capitolo precedente di questo manuale, la morte di Alessandro Magno nel 323 a.C. e quella di Aristotele l'anno successivo segnano convenzionalmente l'inizio dell'età ellenistica, un periodo storico caratterizzato dalla dissoluzione dell'unità politica del mondo greco classico, frammentato in numerosi regni retti dai successori di Alessandro, e dalla progressiva diffusione della cultura greca in un'area geografica molto più ampia, estesa fino all'Egitto e all'Asia. In questo nuovo contesto storico, segnato da una minore stabilità politica e da un affievolirsi del legame diretto tra il singolo cittadino e le sorti della propria città, la riflessione filosofica si orientò in modo nuovo, abbandonando in larga parte l'ambizioso progetto, proprio di Platone e Aristotele, esaminato negli ultimi due capitoli di questo manuale, di costruire uno stato ideale, per concentrarsi piuttosto sulla ricerca di una condizione di serenità e di equilibrio interiore, raggiungibile dal singolo individuo indipendentemente dalle vicende politiche esterne: tra le scuole filosofiche che si affermarono in questo periodo, le più importanti e durature furono l'Epicureismo e lo Stoicismo.</p>
+
+  <p class="titolo-capitolo">Epicuro e il Giardino</p>
+  <p>Epicuro nacque a Samo, la stessa isola natale di Pitagora già ricordata nel terzo capitolo di questo manuale, nel 341 a.C., e fondò ad Atene, intorno al 306 a.C., una scuola filosofica nota come il Giardino, per la sede in cui si riuniva, aperta, in modo insolito per l'epoca, anche alle donne e agli schiavi. Il pensiero di Epicuro riprende, sul piano fisico, la teoria atomistica già elaborata da Democrito, esaminata nel settimo capitolo di questo manuale, secondo cui la realtà è costituita unicamente da atomi in movimento nel vuoto, ma introduce una novità significativa, nota come "clinamen", cioè una minima e imprevedibile deviazione nella caduta rettilinea degli atomi, necessaria, secondo Epicuro, per spiegare la possibilità stessa degli urti tra gli atomi, e con essa, sul piano più propriamente filosofico, per lasciare spazio alla libertà umana contro un rigido determinismo meccanicistico.</p>
+  <p>Sul piano etico, Epicuro individuò nel piacere il fine ultimo della vita umana, ma intese tale nozione in un senso assai più raffinato di quanto il termine "epicureo" suggerisca oggi nel linguaggio comune: il vero piacere, per Epicuro, non consiste nella ricerca sfrenata e illimitata di godimenti sensibili intensi, che anzi generano spesso nuove sofferenze e dipendenze, ma in una condizione stabile di assenza di dolore fisico, chiamata aponia, e di turbamento dell'animo, chiamata atarassia: per raggiungere questa condizione, Epicuro elaborò una classificazione dei desideri umani, distinguendo quelli naturali e necessari, come il cibo essenziale alla sopravvivenza, facilmente soddisfacibili con mezzi limitati, da quelli naturali ma non necessari, come i cibi raffinati, e infine da quelli né naturali né necessari, come la ricchezza e la gloria illimitate, questi ultimi da evitare in quanto fonte di inquietudine e insoddisfazione perpetua.</p>
+  <p>Un aspetto centrale della filosofia epicurea riguarda inoltre il superamento della paura degli dèi e della morte, ritenute le principali cause dell'inquietudine umana: quanto agli dèi, Epicuro non ne negava l'esistenza, ma li concepiva come esseri perfettamente beati, disinteressati alle vicende umane e dunque non temibili; quanto alla morte, Epicuro sosteneva, con un celebre argomento razionale, che essa non dovesse essere temuta, poiché finché noi esistiamo la morte non è presente, e quando la morte sopraggiunge, noi non esistiamo più, cosicché morte e vita cosciente non si incontrano mai realmente, rendendo priva di fondamento razionale la paura che essa comunemente suscita.</p>
+
+  <p class="titolo-capitolo">Zenone di Cizio e la fondazione dello Stoicismo</p>
+  <p>Lo Stoicismo fu fondato ad Atene, intorno al 300 a.C., da Zenone di Cizio, città di Cipro, da non confondersi con l'omonimo Zenone di Elea, allievo di Parmenide, già esaminato nel sesto capitolo di questo manuale: il nome della scuola deriva dalla Stoà Poikile, cioè il "portico dipinto" della piazza principale di Atene, sotto il quale Zenone teneva le proprie lezioni. Dopo Zenone, la scuola stoica fu guidata da Cleante e successivamente da Crisippo, quest'ultimo considerato il principale sistematizzatore della dottrina stoica; lo Stoicismo, diversamente dall'Epicureismo che rimase circoscritto perlopiù al mondo greco, conobbe una fortuna straordinaria anche nel mondo romano, dove filosofi come Seneca, Epitteto e l'imperatore Marco Aurelio ne divennero autorevoli esponenti in epoca imperiale.</p>
+  <p>Sul piano fisico, gli stoici concepirono l'universo come un unico organismo vivente, interamente materiale ma percorso e organizzato da un principio razionale divino immanente, chiamato logos, riprendendo così, sia pure in un contesto teorico assai diverso, un termine già impiegato da Eraclito ed esaminato nel quarto capitolo di questo manuale: tutto ciò che accade nel mondo, secondo gli stoici, è determinato da una rigorosa e inflessibile catena causale, chiamata destino o provvidenza, che governa ogni evento naturale e umano secondo un ordine razionale necessario, senza lasciare spazio, diversamente da quanto sosteneva Epicuro con il proprio clinamen, ad alcuna forma di indeterminazione nella natura fisica.</p>
+
+  <p class="titolo-capitolo">L'etica stoica e l'apatia</p>
+  <p>Dato questo rigido determinismo cosmico, il problema etico centrale per gli stoici divenne quello di stabilire quale margine di libertà autentica rimanesse effettivamente all'uomo, e in che cosa dovesse consistere la vita virtuosa: la risposta stoica si fonda su una fondamentale distinzione tra ciò che dipende da noi, cioè i nostri giudizi, desideri e reazioni interiori, e ciò che non dipende da noi, cioè gli eventi esterni, la salute, la ricchezza, la reputazione, tutti elementi soggetti al destino e dunque, in ultima analisi, indifferenti dal punto di vista morale. La virtù, per gli stoici, consiste dunque nel vivere secondo natura, cioè in conformità con la ragione universale che governa il cosmo, accettando serenamente il corso degli eventi esterni, che non dipendono da noi, e concentrando ogni sforzo esclusivamente sul retto uso della propria volontà e dei propri giudizi, unico ambito realmente in nostro potere.</p>
+  <p>Da questa impostazione deriva l'ideale stoico dell'apatia, termine greco che indica non l'indifferenza o l'insensibilità nel senso comune moderno, ma piuttosto la liberazione dalle passioni irrazionali e perturbatrici, come la paura, il desiderio smodato o il dolore eccessivo, considerate dagli stoici giudizi errati dell'anima riguardo al valore delle cose esterne: il saggio stoico non è colui che non prova alcun sentimento, ma colui che, avendo compreso razionalmente quali cose dipendano effettivamente da lui e quali no, ha raggiunto una condizione di equilibrio interiore stabile, non turbata dal mutare imprevedibile delle circostanze esterne. <em>Esempio:</em> di fronte a una perdita materiale o a un evento doloroso non dipendente dalla propria volontà, il saggio stoico, secondo l'insegnamento in seguito ripreso da Epitteto, considera l'accaduto non come un male in sé, ma come un evento neutro rispetto alla propria virtù, la quale dipende esclusivamente dal modo, retto o errato, in cui egli sceglie di giudicarlo e di reagirvi.</p>
+
+  <p class="titolo-capitolo">Un confronto tra le due scuole</p>
+  <p>Pur muovendo entrambe dall'esigenza, tipica dell'età ellenistica, di garantire all'individuo una condizione di serenità interiore indipendente dalle vicende politiche esterne, Epicureismo e Stoicismo giunsero a conclusioni per molti aspetti opposte: mentre Epicuro fondava la propria etica sulla ricerca di un piacere stabile e sull'invito a ritirarsi dalla vita pubblica, riassunto nella celebre massima "vivi nascosto", gli stoici, al contrario, pur riconoscendo il valore della sola virtù interiore, non rinunciarono generalmente all'impegno nella vita pubblica e politica, ritenendolo anzi conforme al dovere razionale dell'uomo verso la comunità, secondo un atteggiamento che troverà, come si è accennato, largo seguito anche tra esponenti di primo piano della classe dirigente romana.</p>
+
+  <p class="titolo-capitolo">Verso lo scetticismo</p>
+  <p>Accanto a Epicureismo e Stoicismo, nel medesimo contesto storico dell'età ellenistica si sviluppò una terza importante corrente filosofica, lo Scetticismo, che, diversamente dalle prime due scuole, non individuò la via della serenità interiore nell'adesione a un preciso sistema dottrinale positivo, riguardante la natura del piacere o della virtù, ma piuttosto nella sospensione stessa di ogni giudizio definitivo sulla verità delle cose: di questa corrente filosofica, e del suo rapporto con la tradizione neoplatonica che avrebbe chiuso la stagione della filosofia antica, ci occuperemo nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo filosofia 14 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil15.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

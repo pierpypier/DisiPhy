@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 27</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 27: Kant, la Critica della Ragion Pura -->
+<div id="capitolo-27-kant-critica-ragion-pura" class="capitolo-storia">
+  <p class="titolo-capitolo">27 - Kant: la Critica della Ragion Pura - Classe 4</p>
+
+  <p class="titolo-capitolo">Vita di Kant e la genesi della filosofia critica</p>
+  <p>Immanuel Kant nacque a Königsberg, città della Prussia orientale, nel 1724, e vi trascorse l'intera esistenza, dedicandosi con straordinaria disciplina e regolarità all'insegnamento universitario e alla riflessione filosofica: come si è ricordato al termine del ventiquattresimo capitolo di questo manuale, fu la lettura delle opere di David Hume a esercitare su Kant un'influenza decisiva, risvegliandolo, secondo la sua stessa celebre affermazione, dal proprio "sonno dogmatico", cioè da un'acritica fiducia nella capacità della sola ragione metafisica tradizionale di raggiungere verità certe sulla realtà, indipendentemente da un previo esame dei propri limiti e delle proprie effettive possibilità conoscitive.</p>
+  <p>Nell'opera Critica della ragion pura, pubblicata nel 1781 e poi rielaborata in una seconda edizione nel 1787, Kant si propose un compito filosofico del tutto nuovo, che egli stesso definì "critico", intendendo con questo termine non una generica opera di confutazione, ma un'indagine preliminare, condotta dalla stessa ragione su se stessa, volta a stabilire quali siano le condizioni, la portata e i limiti legittimi della conoscenza umana, prima ancora di affrontare le tradizionali questioni metafisiche riguardanti Dio, l'anima e il mondo: un progetto che Kant riteneva necessario per superare tanto il razionalismo dogmatico della tradizione continentale, esaminato a proposito di Cartesio, Spinoza e Leibniz nel ventesimo e ventunesimo capitolo di questo manuale, quanto lo scetticismo radicale a cui era approdato l'empirismo di Hume, esaminato nel ventiquattresimo capitolo, incapace, a giudizio di Kant, di rendere pienamente conto della certezza e dell'universalità di cui godono, ad esempio, i principi della matematica e della fisica.</p>
+
+  <p class="titolo-capitolo">Il problema dei giudizi sintetici a priori</p>
+  <p>Per affrontare questo compito, Kant introduce anzitutto una distinzione fondamentale tra diversi tipi di giudizio, cioè di proposizione che unisce un soggetto a un predicato: i giudizi analitici sono quelli in cui il predicato è già implicitamente contenuto nel concetto stesso del soggetto, e la loro verità può essere stabilita per il solo principio di non contraddizione, senza bisogno di ricorrere all'esperienza, come nell'affermazione secondo cui ogni corpo è esteso; i giudizi sintetici, al contrario, sono quelli in cui il predicato aggiunge al soggetto un'informazione realmente nuova, non già contenuta nel semplice concetto di partenza, come nell'affermazione secondo cui un determinato corpo è pesante, verità conoscibile solo attraverso l'esperienza sensibile, e per questo detti anche giudizi a posteriori.</p>
+  <p>Il problema filosofico centrale che Kant si pone riguarda l'esistenza di un terzo tipo di giudizio, apparentemente paradossale ma effettivamente riscontrabile, secondo Kant, nella matematica e nella fisica pura: i giudizi sintetici a priori, cioè giudizi che, come quelli sintetici, aggiungono al soggetto una conoscenza realmente nuova, non ricavabile per semplice analisi logica del concetto di partenza, ma che, come quelli a priori, possiedono al tempo stesso i caratteri di universalità e necessità assoluta, propri solo delle verità indipendenti dall'esperienza particolare. <em>Esempio:</em> l'affermazione geometrica secondo cui la somma degli angoli interni di un triangolo è uguale a due angoli retti non deriva dalla semplice analisi del concetto di triangolo, che non contiene già in sé tale informazione, e costituisce dunque un giudizio sintetico, ma è al tempo stesso una verità universale e necessaria, valida per ogni triangolo possibile, e non semplicemente ricavata dall'osservazione empirica di alcuni triangoli particolari.</p>
+  <p>La domanda fondamentale a cui l'intera Critica della ragion pura intende rispondere è dunque: come sono possibili i giudizi sintetici a priori? Una domanda il cui esame, condotto separatamente per i tre principali ambiti della conoscenza umana, la sensibilità, l'intelletto e la ragione, struttura le tre grandi parti in cui si articola l'opera kantiana: l'Estetica trascendentale, la Logica trascendentale, a sua volta suddivisa in Analitica e Dialettica trascendentale.</p>
+
+  <p class="titolo-capitolo">La rivoluzione copernicana in filosofia</p>
+  <p>Per rispondere a questa domanda, Kant propone un capovolgimento radicale della tradizionale concezione della conoscenza, che egli stesso paragona, in un celebre passo dell'opera, alla rivoluzione astronomica compiuta da Copernico ed esaminata nel diciottesimo capitolo di questo manuale: così come Copernico aveva spiegato il movimento apparente degli astri non supponendo che essi ruotassero realmente attorno alla Terra immobile, ma ipotizzando invece che fosse l'osservatore terrestre a muoversi, allo stesso modo Kant propone di non concepire più la conoscenza umana come un semplice adeguamento passivo della mente a oggetti già dati e strutturati indipendentemente da essa, secondo l'impostazione tradizionale condivisa, pur con importanti differenze reciproche, sia dai razionalisti sia dagli empiristi precedentemente esaminati in questo manuale, ma di ipotizzare, all'opposto, che sia in parte l'oggetto stesso della conoscenza a doversi conformare, nella propria forma conoscibile, alle strutture a priori proprie della mente umana.</p>
+
+  <p class="titolo-capitolo">L'Estetica trascendentale: spazio e tempo</p>
+  <p>Nella prima parte dell'opera, l'Estetica trascendentale, Kant analizza la sensibilità, cioè la facoltà attraverso cui la mente riceve i dati grezzi dell'esperienza, chiamati intuizioni, individuando in spazio e tempo non già, come pensava la tradizione empirista, proprietà oggettive delle cose esterne conosciute attraverso l'esperienza, né, come pensava in parte la tradizione razionalista, relazioni concettuali astratte, ma forme pure a priori della sensibilità umana, cioè strutture soggettive proprie della mente, precedenti a ogni singola esperienza particolare e necessarie per renderla possibile: ogni oggetto che ci appare, secondo Kant, ci appare necessariamente ordinato nello spazio, se percepito attraverso il senso esterno, e nel tempo, forma di ogni percezione tanto esterna quanto interna, non perché spazio e tempo siano proprietà delle cose così come esistono in sé, indipendentemente da noi, ma perché costituiscono le condizioni soggettive universali attraverso cui la nostra sensibilità organizza necessariamente ogni dato sensibile ricevuto.</p>
+
+  <p class="titolo-capitolo">L'Analitica trascendentale: le categorie dell'intelletto</p>
+  <p>Nella seconda parte dell'opera, l'Analitica trascendentale, Kant esamina l'intelletto, cioè la facoltà che organizza ulteriormente, attraverso concetti puri chiamati categorie, il materiale sensibile già ordinato nello spazio e nel tempo dalla sensibilità: riprendendo, in una nuova versione filosoficamente rielaborata, la dottrina delle categorie già proposta da Aristotele ed esaminata nel dodicesimo capitolo di questo manuale, Kant individua dodici categorie fondamentali dell'intelletto, tra cui, particolarmente rilevante, quella di causa ed effetto, già sottoposta da Hume, come si è visto nel ventiquattresimo capitolo di questo manuale, a una radicale critica scettica. Diversamente da Hume, che riduceva il principio di causalità a una semplice abitudine psicologica priva di fondamento razionale oggettivo, Kant sostiene che la categoria di causalità sia invece una struttura a priori dell'intelletto stesso, necessaria affinché possa darsi un'esperienza oggettiva e ordinata dei fenomeni: proprio perché tale categoria non deriva dall'esperienza, ma è condizione soggettiva necessaria per renderla possibile, essa risulta dotata, secondo Kant, di validità universale e necessaria per ogni possibile esperienza umana, superando così, almeno per quanto riguarda l'ambito dell'esperienza fenomenica, il dubbio sollevato da Hume.</p>
+
+  <p class="titolo-capitolo">Fenomeno e noumeno</p>
+  <p>Da questa impostazione discende una distinzione di fondamentale importanza per l'intero sistema filosofico kantiano, quella tra fenomeno e noumeno: il fenomeno è la cosa così come essa ci appare, organizzata secondo le forme a priori della sensibilità, spazio e tempo, e secondo le categorie dell'intelletto, ed è l'unico oggetto possibile di una conoscenza scientifica autentica, dotata di validità universale e necessaria; il noumeno, o "cosa in sé", è invece la realtà considerata indipendentemente da ogni condizione soggettiva della nostra facoltà conoscitiva, così come essa sarebbe in se stessa, al di là del modo particolare in cui appare necessariamente alla mente umana: di questa realtà in sé, secondo Kant, l'uomo non può avere alcuna conoscenza scientifica positiva, ma solo, come vedremo, pensarne coerentemente la possibilità come limite concettuale della propria conoscenza.</p>
+
+  <p class="titolo-capitolo">La Dialettica trascendentale e i limiti della metafisica</p>
+  <p>Nella terza e ultima parte dell'opera, la Dialettica trascendentale, Kant esamina infine la ragione in senso stretto, cioè quella facoltà che tende naturalmente, ma illegittimamente, ad applicare le categorie dell'intelletto, valide solo entro i limiti dell'esperienza fenomenica possibile, anche a oggetti che eccedono tale esperienza, come Dio, l'anima immortale e il mondo considerato nella propria totalità assoluta: secondo Kant, ogni tentativo della metafisica tradizionale di dimostrare razionalmente e in modo scientificamente rigoroso l'esistenza di tali oggetti, come avevano tentato ad esempio Anselmo d'Aosta e lo stesso Cartesio con la prova ontologica di Dio, esaminata nel sedicesimo e ventesimo capitolo di questo manuale, è destinato inevitabilmente a fallire, poiché pretende di estendere l'uso delle categorie oltre i confini dell'esperienza possibile, l'unico ambito entro cui esse possano legittimamente applicarsi con validità oggettiva.</p>
+
+  <p class="titolo-capitolo">Verso la filosofia pratica e l'estetica kantiana</p>
+  <p>Con la Critica della ragion pura, Kant ridefinisce così in modo radicalmente nuovo il compito e i limiti della filosofia teoretica, distinguendo rigorosamente ciò che può essere oggetto di autentica conoscenza scientifica, cioè il mondo fenomenico dell'esperienza possibile, da ciò che, pur restando legittimamente pensabile, eccede i confini di tale conoscenza, come Dio, la libertà e l'immortalità dell'anima: proprio quest'ultimo ambito, precluso alla conoscenza teoretica rigorosa ma non per questo privo di significato per la vita umana, sarà oggetto della riflessione morale ed estetica di Kant, a cui, come vedremo nel prossimo capitolo di questo manuale, il filosofo di Königsberg dedicò altre due fondamentali opere della propria maturità, la Critica della ragion pratica e la Critica del Giudizio.</p>
+</div>
+<!-- fine capitolo filosofia 27 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil28.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

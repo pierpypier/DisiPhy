@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 16</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 16: la filosofia cristiana, patristica e scolastica -->
+<div id="capitolo-16-patristica-scolastica" class="capitolo-storia">
+  <p class="titolo-capitolo">16 - La filosofia cristiana: patristica e scolastica - Classe 3</p>
+
+  <p class="titolo-capitolo">Dalla filosofia antica al pensiero cristiano</p>
+  <p>Come si è accennato al termine del capitolo precedente di questo manuale, il neoplatonismo elaborato da Plotino tra il III e il IV secolo d.C. costituì un importante punto di incontro concettuale tra la filosofia greco-romana e il pensiero religioso cristiano, allora in piena diffusione nel mondo tardoantico: nei secoli successivi, con il progressivo consolidarsi del cristianesimo come religione dominante nell'Impero romano, si sviluppò un nuovo modo di fare filosofia, che assunse come proprio compito principale quello di comprendere razionalmente i contenuti della fede rivelata, contenuta nella Bibbia, mettendo a frutto, per questo scopo, gli strumenti concettuali elaborati dalla filosofia greca esaminata nei capitoli precedenti di questo manuale, in particolare da Platone e da Aristotele. Si usa distinguere convenzionalmente due grandi fasi in questo lungo percorso, esteso per quasi un millennio: la patristica, che comprende il pensiero degli autori cristiani, detti appunto "padri della Chiesa", attivi tra il II e l'VIII secolo circa; e la scolastica, sviluppatasi a partire dall'XI secolo all'interno delle scuole annesse alle cattedrali e, successivamente, delle prime università medievali.</p>
+
+  <p class="titolo-capitolo">Agostino d'Ippona: fede e ragione</p>
+  <p>Agostino nacque a Tagaste, nell'odierna Algeria, nel 354 d.C., e dopo un periodo giovanile di adesione al manicheismo, dottrina religiosa fondata su un rigido dualismo tra un principio del bene e un principio del male, e dopo un incontro decisivo con la filosofia neoplatonica esaminata nel capitolo precedente di questo manuale, si convertì al cristianesimo nel 386 d.C., diventando in seguito vescovo di Ippona e il più autorevole tra i padri della Chiesa latina. Nella propria riflessione, esposta in particolare nelle Confessioni, opera in cui ripercorre in forma autobiografica il proprio itinerario spirituale, e nel trattato La città di Dio, Agostino affrontò il rapporto tra fede e ragione affermando che l'una non esclude l'altra, ma anzi la ragione ha bisogno della fede come proprio punto di partenza, secondo la celebre formula, a lui attribuita dalla tradizione successiva, "credo per comprendere": la fede, cioè, non sostituisce la ragione, ma la orienta e la precede, offrendole un punto d'appoggio da cui muovere per giungere a una comprensione sempre più piena della verità.</p>
+  <p>Riprendendo e reinterpretando in chiave cristiana la teoria platonica delle idee, esaminata nel decimo capitolo di questo manuale, Agostino collocò le idee eterne non più in un mondo separato e autonomo, come aveva fatto Platone, ma direttamente nella mente di Dio, di cui costituirebbero i modelli eterni secondo cui il mondo sensibile è stato creato: una soluzione che permetteva di conciliare l'esigenza platonica di realtà stabili e immutabili, oggetto di conoscenza certa, con la concezione cristiana di un Dio creatore unico e personale. Agostino affrontò inoltre, in modo originale, il problema del tempo, definendolo non come una realtà oggettiva esistente indipendentemente dalla mente, ma come una "distensione dell'anima", cioè un'esperienza soggettiva legata alla memoria del passato, alla percezione del presente e all'attesa del futuro; e il problema del male, che egli negò potesse avere una sostanza propria e positiva, come sostenevano i manichei, definendolo piuttosto come privazione, cioè mancanza di bene, e riconducendone infine l'origine al cattivo uso che l'uomo, dotato di libero arbitrio, può fare della propria volontà.</p>
+
+  <p class="titolo-capitolo">La disputa sugli universali</p>
+  <p>Con la nascita della scolastica, a partire dall'XI secolo, uno dei problemi filosofici più intensamente discussi fu quello, ereditato indirettamente dalla contrapposizione tra Platone e Aristotele esaminata nel dodicesimo capitolo di questo manuale, della natura degli universali, cioè dei concetti generali come "uomo" o "animale", che si applicano a una molteplicità di individui: il problema consisteva nello stabilire se tali universali esistessero realmente, in qualche modo indipendente dalla mente umana, oppure fossero soltanto nomi o convenzioni linguistiche utili a raggruppare individui simili tra loro. A questo problema si diedero, nel corso del Medioevo, risposte diverse: il realismo, in continuità con l'impostazione platonica, sosteneva l'esistenza reale e autonoma degli universali; il nominalismo, all'opposto, negava agli universali qualunque realtà oggettiva, riducendoli a semplici nomi, o segni linguistici, privi di corrispondenza in una realtà distinta dagli individui concreti; una posizione intermedia, detta concettualismo, e sostenuta in particolare dal filosofo e teologo francese Pietro Abelardo, vissuto tra l'XI e il XII secolo, ammetteva invece che gli universali esistessero realmente, ma soltanto come concetti prodotti dalla mente umana a partire dall'osservazione delle somiglianze tra le cose individuali.</p>
+
+  <p class="titolo-capitolo">Anselmo d'Aosta e la prova ontologica</p>
+  <p>Anselmo, nato ad Aosta nel 1033 e divenuto in seguito arcivescovo di Canterbury, in Inghilterra, è considerato tra i fondatori della scolastica propriamente detta, e riprese la formula agostiniana "credo per comprendere" nella propria versione, altrettanto celebre, "fede in cerca di intelletto": nell'opera Proslogion elaborò un argomento filosofico di grande originalità, noto come prova ontologica dell'esistenza di Dio, che pretende di dimostrare tale esistenza a partire dalla sola definizione razionale del concetto di Dio, senza fare ricorso all'osservazione del mondo sensibile. Secondo tale argomento, se definiamo Dio come "ciò di cui non si può pensare nulla di più grande", allora, sostiene Anselmo, un simile essere non può esistere soltanto nel pensiero, poiché un essere che esistesse anche nella realtà sarebbe evidentemente più grande di uno che esistesse soltanto come pensiero; ne conseguirebbe, secondo questa argomentazione, che Dio, in quanto essere di cui non si può pensare nulla di più grande, deve necessariamente esistere anche nella realtà, e non solo nel pensiero. Va segnalato che questa dimostrazione, di grande interesse storico e logico, incontrò già in epoca medievale importanti obiezioni, in particolare da parte del monaco Gaunilo, e sarebbe stata oggetto di discussione critica anche da parte di numerosi filosofi moderni che incontreremo più avanti in questo manuale.</p>
+
+  <p class="titolo-capitolo">La riscoperta di Aristotele</p>
+  <p>Tra il XII e il XIII secolo, un evento culturale di grande importanza mutò profondamente il panorama filosofico medievale: la progressiva riscoperta, in Occidente, delle opere di Aristotele, già esaminate nel dodicesimo e nel tredicesimo capitolo di questo manuale, fino ad allora conosciute solo in modo parziale, grazie soprattutto alla mediazione di traduttori e commentatori arabi ed ebrei, tra cui va ricordato in particolare il filosofo arabo Averroè. Questa riscoperta pose alla cultura cristiana medievale un problema di grande rilievo, poiché il sistema aristotelico, fondato su premesse puramente razionali e in alcuni punti in apparente contrasto con le verità della fede, come l'eternità del mondo, negata invece dalla dottrina cristiana della creazione, richiedeva un attento lavoro di reinterpretazione e conciliazione con la dottrina cristiana tradizionale, largamente debitrice, fino a quel momento, dell'impostazione platonico-agostiniana esaminata in precedenza in questo capitolo.</p>
+
+  <p class="titolo-capitolo">Tommaso d'Aquino: le cinque vie</p>
+  <p>Il compito di conciliare organicamente la filosofia aristotelica con la dottrina cristiana fu assolto in modo particolarmente sistematico da Tommaso d'Aquino, nato nel 1225 nei pressi di Aquino, nel Lazio, ed entrato giovanissimo nell'ordine domenicano, la cui opera principale, la Summa Theologiae, rimasta incompiuta, costituisce una delle più imponenti costruzioni sistematiche dell'intera filosofia medievale. Tommaso riprese la distinzione aristotelica tra potenza e atto, esaminata nel dodicesimo capitolo di questo manuale, integrandola con la dottrina cristiana della creazione, e sostenne, in linea con l'impostazione già propria di Agostino, una netta distinzione, ma non separazione, tra fede e ragione: entrambe, per Tommaso, provengono in ultima analisi dalla medesima verità divina, e non possono dunque, correttamente intese, mai realmente contraddirsi, sebbene alcune verità, come quella della Trinità, restino accessibili soltanto per via di fede rivelata, e non dimostrabili razionalmente.</p>
+  <p>Nella Summa Theologiae, Tommaso propose cinque argomentazioni razionali a favore dell'esistenza di Dio, note come le "cinque vie", tutte fondate, diversamente dalla prova ontologica di Anselmo esaminata in precedenza in questo capitolo, sull'osservazione empirica del mondo sensibile, secondo l'impostazione aristotelica che privilegiava la conoscenza a partire dall'esperienza: tra queste, particolarmente note sono la prova basata sull'esistenza del movimento nel mondo, che richiederebbe l'esistenza di un primo motore immobile, in evidente ripresa della dottrina aristotelica esaminata nel dodicesimo capitolo di questo manuale, e la prova basata sull'ordine finalistico osservabile in natura, che richiederebbe l'esistenza di un'intelligenza ordinatrice suprema.</p>
+
+  <p class="titolo-capitolo">Verso il tramonto della scolastica</p>
+  <p>Nei secoli successivi a Tommaso d'Aquino, la riflessione scolastica conobbe ulteriori sviluppi, tra cui va ricordata, tra il XIII e il XIV secolo, la posizione del filosofo e teologo inglese Guglielmo di Ockham, sostenitore di un nominalismo rigoroso in aperta polemica con l'impostazione realista di Tommaso, e celebre per il principio metodologico, noto come "rasoio di Ockham", secondo cui, a parità di capacità esplicativa, è preferibile la spiegazione che ricorre al minor numero possibile di presupposti teorici. Con il progressivo indebolirsi, tra il XIV e il XV secolo, della sintesi organica tra fede e ragione faticosamente costruita dalla scolastica matura, e con il mutare profondo del contesto storico, sociale e culturale europeo, si preparò il terreno per una nuova stagione della filosofia occidentale, quella dell'Umanesimo e del Rinascimento, con cui, come vedremo nel prossimo capitolo di questo manuale, si apre la trattazione della filosofia moderna prevista per la classe quarta.</p>
+</div>
+<!-- fine capitolo filosofia 16 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil17.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

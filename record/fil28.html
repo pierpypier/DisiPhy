@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 28</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 28: Kant, etica ed estetica -->
+<div id="capitolo-28-kant-etica-estetica" class="capitolo-storia">
+  <p class="titolo-capitolo">28 - Kant: etica ed estetica - Classe 4</p>
+
+  <p class="titolo-capitolo">Dalla ragion pura alla ragion pratica</p>
+  <p>Come si è visto al termine del capitolo precedente di questo manuale, nella Critica della ragion pura Kant aveva stabilito che oggetti come Dio, la libertà e l'immortalità dell'anima, pur restando legittimamente pensabili, eccedono i confini della conoscenza teoretica rigorosa, propria del solo ambito dell'esperienza fenomenica: nella Critica della ragion pratica, pubblicata nel 1788, Kant si propone di esaminare se e in che modo tali oggetti, indimostrabili sul piano della conoscenza scientifica, possano nondimeno acquisire un significato positivo e concreto per l'uomo considerato non più come soggetto conoscente, ma come soggetto agente, cioè capace di agire moralmente secondo la propria libera volontà.</p>
+
+  <p class="titolo-capitolo">La ricerca di un fondamento universale della morale</p>
+  <p>Il problema centrale a cui Kant intende rispondere riguarda la possibilità di individuare un principio morale universale e necessario, valido per ogni essere razionale in quanto tale, analogamente a come nella Critica della ragion pura aveva cercato le condizioni a priori che rendono possibile una conoscenza scientifica universalmente valida: a questo scopo, Kant critica anzitutto tutte le etiche precedenti fondate su un contenuto materiale specifico, cioè su un particolare fine o oggetto empirico da perseguire, come la ricerca della felicità individuale, già centrale ad esempio nell'etica di Epicuro esaminata nel quattordicesimo capitolo di questo manuale, poiché tali principi, dipendendo da inclinazioni soggettive e da circostanze empiriche variabili da individuo a individuo, non potrebbero mai fondare un obbligo morale realmente universale e necessario, ma solo regole prudenziali contingenti, valide solo per chi già desideri quel determinato fine.</p>
+
+  <p class="titolo-capitolo">L'imperativo categorico</p>
+  <p>Diversamente da queste etiche materiali, Kant propone un'etica puramente formale, cioè fondata non su un particolare contenuto o fine da perseguire, ma sulla sola forma logica universale che ogni massima, cioè ogni principio soggettivo di azione, deve possedere per poter essere considerata moralmente valida: tale criterio formale è espresso dal celebre imperativo categorico, che Kant formula, tra le diverse versioni presenti nella propria opera, innanzitutto in questi termini, agisci soltanto secondo quella massima che tu possa volere, al tempo stesso, che diventi una legge universale. Diversamente da un imperativo ipotetico, che comanda un'azione soltanto come mezzo per raggiungere un determinato fine desiderato, del tipo "se vuoi ottenere questo risultato, allora devi fare questa cosa", l'imperativo categorico comanda incondizionatamente, senza dipendere da alcun fine o desiderio particolare, in virtù della sola forma logica di universalizzabilità della massima stessa.</p>
+  <p><em>Esempio:</em> secondo Kant, la massima secondo cui sarebbe lecito mentire pur di ottenere un proprio vantaggio personale non supera la prova dell'imperativo categorico, poiché, se universalizzata e adottata da tutti come legge generale di comportamento, condurrebbe a una contraddizione pratica: se tutti mentissero sistematicamente per proprio interesse, verrebbe meno la stessa fiducia reciproca nella parola data che rende possibile, in primo luogo, l'efficacia stessa dell'inganno.</p>
+  <p>In una diversa formulazione dello stesso imperativo categorico, nota come formula dell'umanità, Kant precisa ulteriormente il proprio principio morale, affermando che si debba agire in modo da trattare l'umanità, tanto nella propria persona quanto in quella di ogni altro, sempre anche come fine, e mai semplicemente come mezzo: questa formulazione sottolinea la dignità intrinseca e incondizionata di ogni essere razionale, il quale, proprio in virtù della propria capacità di autodeterminarsi razionalmente secondo la legge morale, non può mai essere legittimamente ridotto a semplice strumento per il conseguimento di fini altrui, per quanto questi possano apparire vantaggiosi o utili.</p>
+
+  <p class="titolo-capitolo">Il dovere e l'autonomia della volontà</p>
+  <p>Coerentemente con questa impostazione formale, Kant sostiene che il valore morale di un'azione non dipenda dalle sue conseguenze pratiche, né dall'eventuale inclinazione soggettiva, per quanto generosa, che possa accompagnarla, ma esclusivamente dal fatto che essa venga compiuta per puro rispetto verso il dovere, cioè verso la legge morale universale riconosciuta dalla propria stessa ragione, indipendentemente da ogni altro motivo concomitante: un'azione compiuta per calcolo di interesse personale, o anche solo per spontanea inclinazione emotiva favorevole, per quanto esteriormente conforme al dovere, non possiede per Kant, in senso proprio, un autentico valore morale, che risiede unicamente nella purezza dell'intenzione, cioè nel movente della volontà.</p>
+  <p>Un aspetto di grande importanza filosofica riguarda infine la nozione kantiana di autonomia della volontà: diversamente da ogni forma di eteronomia, cioè di sottomissione della volontà a una legge imposta dall'esterno, sia essa di origine religiosa, sociale o derivante da una qualunque inclinazione naturale, la legge morale, per Kant, è imposta dalla ragione stessa a se stessa, cosicché l'uomo, obbedendo alla legge morale, non obbedisce in realtà ad altro che alla propria stessa ragione razionale: proprio in questa capacità di autolegislazione razionale, e non nella semplice assenza di vincoli esterni, consiste, secondo Kant, l'autentica libertà dell'uomo, concepita non più, come nella tradizione empirista, quale semplice oggetto di conoscenza teoretica indimostrabile, ma quale postulato pratico necessario, cioè condizione indispensabile perché possa darsi, in generale, un'autentica esperienza morale.</p>
+
+  <p class="titolo-capitolo">I postulati della ragion pratica</p>
+  <p>Accanto alla libertà, Kant individua altri due postulati della ragion pratica, cioè proposizioni indimostrabili sul piano della conoscenza teoretica, ma necessarie da ammettere sul piano pratico affinché la vita morale risulti pienamente coerente e ragionevole: l'immortalità dell'anima, necessaria a rendere pensabile un processo indefinito di perfezionamento morale verso la piena conformità alla legge, mai completamente raggiungibile nel corso limitato di una singola esistenza terrena; e l'esistenza di Dio, necessaria a garantire, in una prospettiva ultraterrena, la corrispondenza finale tra virtù e felicità, cioè quel legame tra comportamento moralmente virtuoso e meritata felicità che l'esperienza terrena, da sola, non sempre garantisce in modo evidente. Va sottolineato che questi postulati non costituiscono, per Kant, vere e proprie dimostrazioni razionali dell'esistenza di Dio o dell'immortalità dell'anima, del tipo di quelle già escluse nella Critica della ragion pura, esaminata nel capitolo precedente di questo manuale, ma semplici presupposti pratici, la cui validità si fonda esclusivamente sull'esigenza morale, e non su una conoscenza teoretica positiva.</p>
+
+  <p class="titolo-capitolo">La Critica del Giudizio e il sentimento estetico</p>
+  <p>Nella terza grande opera critica, la Critica del Giudizio, pubblicata nel 1790, Kant affronta infine il problema del giudizio estetico, cioè del giudizio di gusto attraverso cui definiamo qualcosa come bello, cercando di individuare, anche in questo ambito apparentemente più soggettivo, alcuni caratteri di universalità: secondo Kant, il giudizio estetico, pur non fondandosi su un concetto oggettivo determinato, come avviene invece nel giudizio conoscitivo o in quello morale, e pur derivando da un sentimento soggettivo di piacere provato di fronte all'oggetto contemplato, pretende comunque, a differenza del semplice giudizio di gradevolezza personale legato ai gusti individuali, un'adesione universale da parte di chiunque altro, in virtù di un particolare accordo armonico, libero e disinteressato, tra le facoltà dell'immaginazione e dell'intelletto, suscitato dalla contemplazione della forma dell'oggetto bello, indipendentemente da ogni interesse pratico o utilità concreta legata al possesso dell'oggetto stesso.</p>
+
+  <p class="titolo-capitolo">L'eredità del criticismo kantiano</p>
+  <p>Il sistema filosofico elaborato da Kant nelle tre Critiche, articolato attorno alla domanda su cosa possiamo conoscere, cosa dobbiamo fare e cosa possiamo sperare, rappresenta un punto di svolta fondamentale nella storia della filosofia moderna, capace di offrire una sintesi originale tra le istanze razionalistiche e quelle empiristiche precedentemente esaminate in questo manuale, ridefinendo in modo permanente i confini e i compiti della riflessione filosofica: come vedremo nei prossimi capitoli di questo manuale, sarà proprio a partire da un confronto critico, e in parte da un tentativo di superamento, dei confini che Kant aveva posto alla conoscibilità della cosa in sé, esaminata nel capitolo precedente, che alcuni suoi allievi e successori tedeschi, a cominciare da Johann Gottlieb Fichte, avvieranno quella nuova, ambiziosa stagione filosofica nota come idealismo tedesco, di cui tratteremo nel prossimo capitolo di questo manuale, in preparazione dello studio, previsto per la classe quinta, della filosofia dell'Ottocento e del Novecento.</p>
+</div>
+<!-- fine capitolo filosofia 28 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil29.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

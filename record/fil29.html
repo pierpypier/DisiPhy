@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 29</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 29: l'idealismo tedesco, Fichte e Schelling -->
+<div id="capitolo-29-idealismo-fichte-schelling" class="capitolo-storia">
+  <p class="titolo-capitolo">29 - L'idealismo tedesco: Fichte e Schelling - Classe 4</p>
+
+  <p class="titolo-capitolo">Dal criticismo kantiano all'idealismo</p>
+  <p>Come si è accennato al termine del capitolo precedente di questo manuale, il sistema filosofico di Kant, pur di straordinaria portata innovativa, lasciava aperto un problema di grande rilievo, individuato con particolare acutezza già da alcuni suoi contemporanei: se, come Kant aveva sostenuto nella Critica della ragion pura, esaminata nel ventisettesimo capitolo di questo manuale, la conoscenza umana può raggiungere soltanto il fenomeno, cioè la cosa così come essa ci appare, organizzata dalle forme a priori della sensibilità e dalle categorie dell'intelletto, resta poco chiaro, e per certi versi contraddittorio, come si possa nel contempo ammettere l'esistenza di una cosa in sé, o noumeno, distinta dal fenomeno e a esso causalmente collegata, dal momento che la stessa nozione di causa, secondo Kant, costituisce una categoria valida solo entro i limiti dell'esperienza fenomenica, e non applicabile, per sua stessa ammissione, a una realtà situata al di là di tale esperienza.</p>
+  <p>Proprio a partire da questa difficoltà interna al sistema kantiano, alcuni filosofi tedeschi attivi tra la fine del Settecento e i primi decenni dell'Ottocento, tradizionalmente riuniti sotto l'etichetta di idealismo tedesco, ritennero necessario eliminare del tutto la residua nozione di una cosa in sé indipendente dal pensiero, sviluppando invece, con radicalità crescente, l'idea secondo cui la realtà nel suo complesso dovesse essere interamente ricondotta e derivata dall'attività stessa del soggetto pensante, in una prospettiva filosofica per l'appunto detta idealistica.</p>
+
+  <p class="titolo-capitolo">Johann Gottlieb Fichte e l'Io assoluto</p>
+  <p>Johann Gottlieb Fichte nacque in Sassonia nel 1762, e dopo un periodo di studio della filosofia kantiana, di cui si dichiarò inizialmente allievo e continuatore, elaborò, nell'opera Dottrina della scienza, pubblicata a partire dal 1794, un proprio sistema filosofico originale, fondato sulla radicale eliminazione della cosa in sé kantiana e sulla conseguente attribuzione all'Io di un ruolo assoluto e creativo nella costituzione dell'intera realtà. Secondo Fichte, il punto di partenza della filosofia non può essere un dato empirico o una presunta realtà esterna indipendente, ma un atto originario dell'Io stesso, che Fichte descrive attraverso tre momenti dialettici fondamentali: l'Io pone anzitutto se stesso, in un atto di autoaffermazione originaria e incondizionata; l'Io pone poi il non-io, cioè oppone a se stesso un mondo esterno, la natura, necessario come limite e resistenza affinché l'attività dell'Io possa concretamente esplicarsi e riconoscersi; infine, l'Io e il non-io si limitano reciprocamente all'interno dell'Io stesso, generando così, attraverso questo processo dialettico, tanto la conoscenza teoretica del mondo quanto l'agire pratico e morale.</p>
+  <p>Per Fichte, dunque, il mondo esterno, il non-io, non costituisce più, come ancora in parte in Kant, una realtà indipendente e misteriosa che agisce causalmente sulla sensibilità umana producendo il fenomeno, ma è piuttosto un prodotto, sia pure non consapevole, della stessa attività infinita e creativa dell'Io, il quale pone tale limite esterno come condizione necessaria del proprio stesso agire morale, cioè come ostacolo da via via superare attraverso un infinito sforzo pratico di autorealizzazione: la vita umana, per Fichte, coincide così con un compito morale interminabile, un continuo tendere dell'Io finito verso la piena realizzazione della propria libertà razionale, secondo un impegno etico di forte impronta pratica, coerente con l'eredità kantiana esaminata nel capitolo precedente di questo manuale.</p>
+
+  <p class="titolo-capitolo">Friedrich Schelling: dall'Io alla natura</p>
+  <p>Friedrich Wilhelm Joseph Schelling nacque nel Württemberg, in Germania, nel 1775, e fu, in giovane età, allievo e per un certo periodo stretto collaboratore di Fichte, prima di sviluppare, a partire dalla fine degli anni novanta del Settecento, un proprio percorso filosofico originale, per molti aspetti critico nei confronti dell'impostazione del maestro: mentre Fichte, come si è visto, aveva concentrato la propria riflessione quasi esclusivamente sull'attività dell'Io, riducendo la natura a semplice limite posto dall'Io stesso in funzione dell'agire morale, Schelling ritenne necessario restituire alla natura una propria autonoma dignità filosofica, non semplicemente derivata dall'Io, ma parallela e complementare a esso.</p>
+  <p>Nella propria filosofia della natura, elaborata a partire dalla fine degli anni novanta del Settecento, Schelling concepì la natura non come semplice oggetto meccanico e inerte, secondo l'impostazione ancora in parte propria della fisica moderna esaminata nel diciottesimo capitolo di questo manuale, ma come uno "spirito visibile", cioè come una realtà dinamica, attraversata da un'intelligenza inconsapevole, che si sviluppa attraverso stadi progressivi di crescente organizzazione e complessità, dalla materia inorganica fino agli organismi viventi e, infine, alla comparsa della coscienza umana: la natura, per Schelling, tenderebbe così spontaneamente, attraverso un proprio interno dinamismo dialettico articolato in forze opposte e complementari, verso la propria stessa manifestazione cosciente nello spirito umano.</p>
+  <p>Da questa impostazione Schelling elaborò una concezione nota come filosofia dell'identità, secondo cui spirito e natura, soggetto e oggetto, non costituiscono due realtà eterogenee e contrapposte, ma due manifestazioni parallele e ugualmente originarie di un unico principio assoluto indifferenziato, che precede e fonda la stessa distinzione tra pensiero ed essere: la natura può essere descritta, secondo la celebre formula impiegata da Schelling, come uno spirito non ancora pienamente cosciente di sé, mentre lo spirito umano rappresenta, complementarmente, la natura giunta finalmente alla piena consapevolezza di se stessa.</p>
+  <p><em>Esempio:</em> secondo questa prospettiva, un fenomeno naturale come il magnetismo, articolato secondo poli opposti e complementari, non costituisce per Schelling un semplice fatto meccanico privo di significato ulteriore, ma manifesta, in forma ancora inconsapevole, la medesima struttura dialettica di opposizione e unità che, a un livello più elevato di sviluppo, caratterizza anche l'attività cosciente dello spirito umano.</p>
+  <p>Schelling attribuì infine un ruolo filosofico particolarmente elevato all'intuizione estetica, cioè all'esperienza artistica, ritenendola la forma più alta e compiuta di conoscenza dell'assoluto, capace di ricongiungere intuitivamente, nell'opera d'arte, l'attività cosciente e quella inconsapevole, lo spirito e la natura, laddove il pensiero puramente concettuale e discorsivo, secondo Schelling, non riuscirebbe mai a cogliere pienamente tale identità originaria se non in forma mediata e frammentaria.</p>
+
+  <p class="titolo-capitolo">Un confronto tra Fichte e Schelling</p>
+  <p>Pur muovendo entrambi dal comune tentativo di superare la residua dualità kantiana tra fenomeno e noumeno, ricomponendo idealisticamente ogni realtà entro un unico principio originario, Fichte e Schelling giunsero a esiti filosofici significativamente diversi: mentre Fichte privilegiò il primato assoluto dell'Io e dell'agire pratico-morale, riducendo la natura a semplice funzione dell'attività etica del soggetto, Schelling restituì invece alla natura una propria autonoma dignità speculativa, ponendo spirito e natura su un piano di sostanziale parità, come due manifestazioni parallele di un medesimo principio assoluto indifferenziato, e attribuendo infine all'arte, più che alla sola filosofia morale, il compito di cogliere intuitivamente tale identità ultima.</p>
+
+  <p class="titolo-capitolo">Verso il sistema di Hegel</p>
+  <p>Le riflessioni di Fichte e di Schelling, pur nella loro originalità e nelle loro reciproche differenze, posero le premesse concettuali per l'elaborazione del sistema filosofico più ambizioso e compiuto dell'intero idealismo tedesco, quello di Georg Wilhelm Friedrich Hegel, il quale, muovendo criticamente da entrambi i propri predecessori, in particolare contestando a Schelling il carattere ancora troppo immediato e intuitivo, anziché pienamente dialettico e razionale, della propria concezione dell'identità tra spirito e natura, avrebbe elaborato, come vedremo nel prossimo capitolo di questo manuale, un grandioso sistema filosofico fondato sulla dialettica, capace di ricondurre l'intero sviluppo della realtà, della natura e della storia umana a un unico, organico processo di progressiva autorealizzazione razionale dello spirito assoluto.</p>
+</div>
+<!-- fine capitolo filosofia 29 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil30.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

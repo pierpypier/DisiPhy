@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 15</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 15: Scetticismo e neoplatonismo -->
+<div id="capitolo-15-scetticismo-neoplatonismo" class="capitolo-storia">
+  <p class="titolo-capitolo">15 - Scetticismo e neoplatonismo - Classe 3</p>
+
+  <p class="titolo-capitolo">Pirrone e le origini dello scetticismo</p>
+  <p>Come si è accennato al termine del capitolo precedente di questo manuale, accanto a Epicureismo e Stoicismo si sviluppò, nel medesimo contesto storico dell'età ellenistica, una terza importante corrente filosofica, lo Scetticismo, il cui fondatore fu Pirrone di Elide, vissuto tra il 365 e il 275 a.C. circa: secondo alcune fonti antiche, Pirrone avrebbe preso parte, al seguito di Alessandro Magno, a una spedizione in India, dove sarebbe entrato in contatto con alcuni filosofi orientali, un'esperienza che, sia pure con la cautela dovuta a un aneddoto di non facile verifica storica, avrebbe contribuito a orientarlo verso un atteggiamento di radicale sospensione del giudizio. Pirrone, al pari di Socrate esaminato nel nono capitolo di questo manuale, non lasciò alcuno scritto, e il suo pensiero ci è noto principalmente attraverso la testimonianza del proprio allievo Timone di Fliunte, oltre che, per il periodo successivo della scuola scettica, attraverso le opere del medico e filosofo Sesto Empirico, vissuto molti secoli più tardi, in età imperiale romana.</p>
+  <p>Il nucleo della posizione scettica consiste nella convinzione che, riguardo a qualunque questione teorica, sia sempre possibile contrapporre a ogni argomentazione un'argomentazione di uguale forza e validità a sostegno della tesi opposta, cosicché risulterebbe impossibile raggiungere, su alcuna questione, una conoscenza certa e definitiva: da questa impossibilità gli scettici facevano discendere l'invito alla sospensione del giudizio, chiamata in greco epoché, cioè all'astensione dal pronunciarsi in modo definitivo a favore dell'una o dell'altra posizione, riguardo a questioni che eccedano l'evidenza immediata dell'esperienza.</p>
+
+  <p class="titolo-capitolo">Dall'epoché all'atarassia</p>
+  <p>Diversamente da quanto si potrebbe supporre, la sospensione del giudizio non costituiva, per gli scettici, un fine in se stesso, ma piuttosto lo strumento per raggiungere un obiettivo pratico di grande importanza, condiviso peraltro, sia pure attraverso percorsi diversi, con le altre scuole filosofiche dell'età ellenistica esaminate nel capitolo precedente di questo manuale: l'atarassia, cioè quella medesima condizione di serenità e imperturbabilità dell'animo già incontrata a proposito di Epicuro. Secondo l'argomentazione scettica, infatti, è proprio la pretesa di possedere certezze definitive su questioni complesse, quali la natura ultima delle cose o il vero bene, a generare inquietudine e turbamento nell'animo umano, poiché espone continuamente al rischio della smentita e della delusione; rinunciando a tale pretesa, e limitandosi a seguire, nella vita pratica quotidiana, le apparenze sensibili, le inclinazioni naturali, le leggi e i costumi del proprio paese, senza pronunciarsi sulla loro verità o falsità ultima, lo scettico riterrebbe di poter conseguire, quasi come conseguenza spontanea e non ricercata direttamente, quella medesima tranquillità interiore che le altre scuole perseguivano invece attraverso l'adesione a un sistema dottrinale positivo.</p>
+  <p>Nei secoli successivi alla fondazione pirroniana, lo scetticismo antico si sviluppò lungo due direttrici principali, in parte tra loro diverse: da un lato la cosiddetta Accademia scettica, che prese temporaneamente il controllo della stessa Accademia platonica fondata da Platone, esaminata nel decimo capitolo di questo manuale, orientandone l'insegnamento, per un certo periodo storico, in senso scettico; dall'altro il pirronismo propriamente detto, ripreso e sistematizzato in età imperiale romana da Sesto Empirico, la cui opera costituisce oggi la fonte più ampia e organica per la conoscenza del pensiero scettico antico nel suo complesso.</p>
+
+  <p class="titolo-capitolo">Il contesto storico del neoplatonismo</p>
+  <p>Con il progressivo consolidarsi dell'Impero romano, e in particolare a partire dal III secolo d.C., la riflessione filosofica antica conobbe un'ultima, importante fioritura originale, nota come neoplatonismo, corrente di pensiero che, come il nome stesso indica, si richiama esplicitamente alla filosofia di Platone, esaminata nel decimo e nell'undicesimo capitolo di questo manuale, reinterpretandola tuttavia in chiave fortemente religiosa e mistica, in un contesto storico e culturale ormai assai diverso da quello della Grecia classica, caratterizzato da una crescente attenzione verso le questioni spirituali e trascendenti, che di lì a poco avrebbe favorito anche la diffusione del cristianesimo nel mondo mediterraneo.</p>
+
+  <p class="titolo-capitolo">Plotino e la dottrina dell'Uno</p>
+  <p>Il principale esponente del neoplatonismo fu Plotino, nato in Egitto intorno al 205 d.C. e attivo, nella parte finale della propria vita, soprattutto a Roma, dove fondò una propria scuola filosofica: il suo pensiero, trascritto e ordinato dopo la sua morte dall'allievo Porfirio nell'opera intitolata Enneadi, si fonda sulla dottrina di un principio primo assoluto, chiamato l'Uno, collocato da Plotino al di là della stessa distinzione tra essere e pensiero, e dunque, in un certo senso, ancora superiore all'idea del Bene già posta da Platone al vertice del mondo delle idee, esaminata nel decimo capitolo di questo manuale. Poiché l'Uno, per la propria assoluta perfezione e pienezza, non può essere direttamente identificato con nessuna delle realtà molteplici che da esso derivano, Plotino ne descrive la relazione con il resto della realtà attraverso l'immagine di un'emanazione, paragonabile alla luce che promana da una sorgente luminosa senza che questa risulti per questo diminuita: da questo processo di emanazione, articolato secondo una gerarchia decrescente di perfezione, deriverebbero in successione l'Intelletto, sede eterna delle idee platoniche, l'Anima del mondo, principio vitale che anima l'intero cosmo, e infine la materia, ultimo e più imperfetto grado della realtà, concepita da Plotino, diversamente da come pensavano gli antichi atomisti esaminati nel settimo capitolo di questo manuale, non come un principio positivo, ma quasi come una privazione, il limite estremo a cui giunge il progressivo indebolirsi dell'emanazione originaria.</p>
+  <p>Coerentemente con questa visione gerarchica della realtà, Plotino concepì il compito supremo della vita filosofica come un cammino di progressivo ritorno dell'anima umana verso l'Uno da cui essa stessa, in ultima analisi, deriva: un percorso di purificazione interiore, condotto attraverso la filosofia e la contemplazione, che nei momenti più elevati, secondo la testimonianza dello stesso Plotino riportata da Porfirio, poteva sfociare in un'esperienza di unione mistica diretta e immediata con il principio primo, non più mediata dal semplice esercizio del pensiero razionale.</p>
+
+  <p class="titolo-capitolo">La chiusura della filosofia antica e il passaggio al pensiero cristiano</p>
+  <p>Il neoplatonismo di Plotino, per la centralità attribuita a un principio trascendente unico, per l'insistenza sulla dimensione spirituale e mistica dell'esistenza umana, e per la concezione della materia come grado ultimo e imperfetto della realtà, si rivelò storicamente assai congeniale, pur nelle profonde differenze dottrinali, a un dialogo fecondo con il pensiero religioso cristiano allora in piena espansione nel mondo tardoantico: numerosi concetti e schemi argomentativi elaborati da Plotino furono infatti ripresi e reinterpretati, come vedremo nel prossimo capitolo di questo manuale, da autori cristiani di primaria importanza, in particolare da Agostino d'Ippona, contribuendo in modo decisivo a costruire il ponte concettuale tra la filosofia dell'antichità greco-romana, di cui questo capitolo segna idealmente la conclusione, e la nuova stagione della filosofia cristiana, patristica e scolastica, che occuperà l'intero Medioevo.</p>
+</div>
+<!-- fine capitolo filosofia 15 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil16.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 23</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 23: Locke e l'empirismo -->
+<div id="capitolo-23-locke-empirismo" class="capitolo-storia">
+  <p class="titolo-capitolo">23 - Locke e l'empirismo - Classe 4</p>
+
+  <p class="titolo-capitolo">John Locke e la nascita dell'empirismo britannico</p>
+  <p>John Locke nacque in Inghilterra, nel Somerset, nel 1632, e visse in un periodo storico segnato da profonde trasformazioni politiche, culminate nella cosiddetta Gloriosa Rivoluzione del 1688, che pose fine ai tentativi di restaurazione assolutistica della monarchia inglese: Locke è considerato il fondatore della tradizione filosofica nota come empirismo britannico, la quale, contrapponendosi in modo netto al razionalismo continentale già esaminato a proposito di Cartesio nel ventesimo capitolo di questo manuale, sostiene che ogni contenuto della conoscenza umana derivi, in ultima analisi, dall'esperienza, e non da idee innate presenti fin dalla nascita nella mente umana.</p>
+  <p>Nell'opera principale intitolata Saggio sull'intelletto umano, pubblicata nel 1690, Locke si propone innanzitutto di indagare criticamente l'origine, la certezza e i limiti della conoscenza umana, un'indagine di carattere gnoseologico, cioè relativa allo studio della conoscenza, che costituisce il presupposto metodologico necessario prima di affrontare qualunque altra questione filosofica: solo dopo aver stabilito con chiarezza fin dove possa realmente giungere la ragione umana, sostiene Locke, è possibile evitare inutili e infondate dispute filosofiche su questioni che eccedono i limiti propri della conoscenza umana.</p>
+
+  <p class="titolo-capitolo">La critica alle idee innate</p>
+  <p>Il punto di partenza polemico del Saggio sull'intelletto umano è costituito dalla critica alla dottrina delle idee innate, sostenuta, sia pure in forme diverse, sia dalla tradizione razionalista cartesiana esaminata nel ventesimo capitolo di questo manuale, sia da altre correnti filosofiche precedenti: secondo tale dottrina, alcune idee e principi fondamentali, come i principi logici elementari o l'idea stessa di Dio, sarebbero presenti nella mente umana fin dalla nascita, indipendentemente da qualunque esperienza sensibile. Locke contesta questa tesi con diversi argomenti, osservando in particolare come tali presunti principi innati non risultino affatto universalmente condivisi da tutti gli uomini, compresi i bambini piccoli e le popolazioni prive di un'adeguata istruzione filosofica, che sarebbero i primi a doverli manifestare con evidenza se davvero fossero impressi nella mente fin dall'origine, mentre l'osservazione mostra piuttosto una notevole variabilità di credenze e principi tra le diverse culture e i diversi individui.</p>
+
+  <p class="titolo-capitolo">La mente come tabula rasa e le idee semplici</p>
+  <p>In alternativa alla dottrina delle idee innate, Locke propone la celebre immagine della mente umana, alla nascita, come una tabula rasa, cioè come una tavoletta bianca priva di qualunque scritta o iscrizione, che riceve progressivamente il proprio contenuto conoscitivo esclusivamente attraverso l'esperienza: Locke distingue a questo proposito due diverse fonti dell'esperienza, la sensazione, cioè la percezione delle qualità degli oggetti esterni attraverso i cinque sensi, e la riflessione, cioè la percezione interna delle operazioni della propria stessa mente, come il pensare, il dubitare, il credere o il volere, resa possibile dall'osservazione del proprio funzionamento psichico.</p>
+  <p>Da queste due fonti derivano, secondo Locke, le idee semplici, cioè gli elementi conoscitivi elementari e non ulteriormente scomponibili che la mente riceve passivamente dall'esperienza, come ad esempio l'idea del colore giallo o quella del calore: a partire da tali idee semplici, la mente umana, attraverso operazioni proprie come la combinazione, il confronto e l'astrazione, costruisce successivamente idee complesse sempre più articolate, senza tuttavia poter mai produrre, secondo Locke, alcun contenuto conoscitivo realmente nuovo e indipendente dal materiale originariamente fornito dall'esperienza sensibile e riflessiva. <em>Esempio:</em> l'idea complessa di un cavallo alato, pur non corrispondendo ad alcun animale realmente esistente in natura, non costituisce comunque una vera novità assoluta per la mente, poiché risulta dalla semplice combinazione di idee semplici già singolarmente derivate dall'esperienza, quella di cavallo e quella di ala, unite insieme in un modo nuovo dall'immaginazione.</p>
+
+  <p class="titolo-capitolo">Qualità primarie e secondarie</p>
+  <p>Riprendendo, in una nuova formulazione filosofica, una distinzione già proposta da Galileo Galilei ed esaminata nel diciottesimo capitolo di questo manuale, Locke distingue tra qualità primarie degli oggetti, come l'estensione, la forma, il numero, il movimento e la solidità, che egli ritiene appartenere realmente e oggettivamente ai corpi, indipendentemente da chi li percepisce, e qualità secondarie, come i colori, i suoni, i sapori e gli odori, che invece, secondo Locke, non esistono negli oggetti così come noi le percepiamo, ma dipendono dal particolare modo in cui le qualità primarie dei corpi, agendo sui nostri organi di senso, producono in noi determinate sensazioni soggettive.</p>
+
+  <p class="titolo-capitolo">I limiti della conoscenza umana</p>
+  <p>Coerentemente con la propria impostazione empiristica, Locke sostiene che la conoscenza umana risulti soggetta a limiti significativi, assai più ristretti di quanto pretendesse la tradizione razionalistica esaminata a proposito di Cartesio: in particolare, Locke ammette una conoscenza intuitiva certa e immediata solo riguardo alla propria stessa esistenza, una conoscenza dimostrativa, cioè fondata su una catena di passaggi logici rigorosi, riguardo all'esistenza di Dio, e una conoscenza soltanto sensitiva, meno certa delle precedenti ma comunque sufficientemente affidabile per la pratica della vita, riguardo all'esistenza del mondo esterno, conosciuto attraverso le sensazioni presenti; riguardo invece alla struttura più intima e profonda delle sostanze naturali, Locke ammette che la conoscenza umana debba accontentarsi di una conoscenza probabile e non pienamente certa, poiché i sensi non consentono di penetrare fino alla costituzione ultima, o "essenza reale", dei corpi.</p>
+
+  <p class="titolo-capitolo">Il liberalismo politico di Locke</p>
+  <p>Accanto alla riflessione gnoseologica, Locke elaborò, nei Due trattati sul governo, pubblicati anch'essi nel 1690, una teoria politica di tipo contrattualistico, che riprende, pur discostandosene profondamente nelle conclusioni, lo schema concettuale già impiegato da Thomas Hobbes, esaminato nel ventiduesimo capitolo di questo manuale: diversamente da Hobbes, che concepiva lo stato di natura come una condizione di guerra generalizzata, Locke lo descrive invece come una condizione già di per sé regolata da una legge di natura razionale, che impone a ciascuno il rispetto della vita, della libertà e della proprietà altrui, sebbene priva di un'autorità comune capace di garantirne efficacemente l'osservanza in caso di controversia.</p>
+  <p>Proprio per rimediare a questa carenza, gli uomini stipulerebbero, secondo Locke, un patto sociale, ma con una finalità assai più limitata rispetto a quella ipotizzata da Hobbes: non la rinuncia totale e irrevocabile ai propri diritti naturali a favore di un sovrano assoluto, ma l'istituzione di un potere politico limitato, incaricato unicamente di tutelare più efficacemente quei medesimi diritti naturali, in particolare il diritto di proprietà, che gli individui già possedevano nello stato di natura, e non di sostituirsi a essi. Da questa impostazione discende, in Locke, la teorizzazione di un governo fondato sul consenso dei governati, sulla separazione tra potere legislativo ed esecutivo, e sul diritto dei cittadini, in caso di grave e persistente violazione dei propri diritti fondamentali da parte del sovrano, di resistere e di sciogliere il patto originario: una teoria destinata a esercitare un'influenza filosofica e storica di straordinaria portata sullo sviluppo del pensiero liberale e costituzionale moderno.</p>
+
+  <p class="titolo-capitolo">L'eredità dell'empirismo lockiano</p>
+  <p>Il pensiero di Locke, sia nella sua dimensione gnoseologica sia in quella politica, rappresenta un momento di fondamentale importanza nella storia della filosofia moderna: la sua critica alle idee innate e la sua fiducia nell'esperienza come unica fonte legittima della conoscenza umana avrebbero trovato, come vedremo nel prossimo capitolo di questo manuale, uno sviluppo ancora più radicale e per certi versi problematico nel pensiero di David Hume, il quale, portando alle estreme conseguenze i presupposti empiristici già delineati da Locke, sarebbe giunto a mettere in discussione la stessa possibilità di una conoscenza scientifica pienamente certa, aprendo così una crisi filosofica di grande rilievo, destinata a influenzare in modo decisivo, come vedremo più avanti in questo manuale, la successiva riflessione del filosofo tedesco Immanuel Kant.</p>
+</div>
+<!-- fine capitolo filosofia 23 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil24.html">Vai al Capitolo successivo</a></p>
+</div>
+  
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

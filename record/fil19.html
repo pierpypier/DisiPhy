@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 19</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 19: Bacone e il metodo induttivo -->
+<div id="capitolo-19-bacone-induzione" class="capitolo-storia">
+  <p class="titolo-capitolo">19 - Bacone e il metodo induttivo - Classe 4</p>
+
+  <p class="titolo-capitolo">Francesco Bacone e il progetto di rifondazione del sapere</p>
+  <p>Francesco Bacone nacque a Londra nel 1561, e oltre a dedicarsi alla riflessione filosofica ricoprì importanti cariche pubbliche presso la corte inglese, giungendo fino alla carica di Lord Cancelliere sotto il re Giacomo I: come si è visto al termine del capitolo precedente di questo manuale, la rivoluzione scientifica avviata da Copernico, Keplero e Galileo aveva profondamente mutato il modo di concepire la natura e il metodo per conoscerla, ma non aveva ancora trovato una sistematizzazione filosofica organica; fu proprio questo il compito che Bacone si propose, elaborando, nell'opera Novum Organum, pubblicata nel 1620, un progetto ambizioso di rifondazione complessiva del sapere umano, fondato su basi interamente nuove rispetto alla tradizione filosofica precedente.</p>
+  <p>Il titolo stesso dell'opera, che significa "nuovo strumento", allude programmaticamente a una sostituzione dell'Organon aristotelico, cioè dell'insieme degli scritti logici di Aristotele esaminati nel dodicesimo capitolo di questo manuale, fondati principalmente sul sillogismo deduttivo: secondo Bacone, il sillogismo, per quanto logicamente rigoroso, si limita infatti a esplicitare conseguenze già implicitamente contenute nelle premesse di partenza, senza fornire alcun reale accrescimento della conoscenza umana della natura, e risulta pertanto uno strumento inadeguato per il progresso scientifico, che richiede invece un metodo capace di ricavare, a partire dall'osservazione diretta dei fenomeni particolari, leggi generali autenticamente nuove.</p>
+
+  <p class="titolo-capitolo">Gli idoli della mente</p>
+  <p>Prima di esporre positivamente il proprio metodo, Bacone ritenne necessario individuare e denunciare i principali ostacoli che, a suo giudizio, impediscono all'intelletto umano di conoscere correttamente la natura, raggruppandoli sotto il nome, di sapore volutamente polemico, di "idoli", cioè false immagini o pregiudizi che la mente scambia erroneamente per la realtà stessa: Bacone ne distingue quattro tipologie principali. Gli idoli della tribù sono errori comuni a tutto il genere umano, derivanti dai limiti stessi della natura umana, come la tendenza a scorgere nella natura un ordine e una finalità maggiori di quelli effettivamente presenti, o a lasciarsi influenzare dai propri desideri nel giudicare i fatti; gli idoli della caverna, termine che riprende volutamente, sia pure in un significato diverso, l'immagine platonica esaminata nel decimo capitolo di questo manuale, sono errori propri del singolo individuo, derivanti dalla sua particolare educazione, dalle sue esperienze personali e dalle sue inclinazioni caratteriali.</p>
+  <p>Gli idoli della piazza, o del mercato, derivano invece dagli equivoci generati dall'uso comune e impreciso del linguaggio, che spesso induce a credere esistenti realtà corrispondenti a parole prive, in realtà, di un referente effettivo e ben definito nella natura; gli idoli del teatro, infine, derivano dall'eccessiva fiducia riposta nei sistemi filosofici tradizionali, tramandati come vere e proprie rappresentazioni sceniche convenzionali, che Bacone invita a sottoporre a un attento vaglio critico anziché accettare passivamente sulla base della sola autorità dei loro autori, in essi comprendendo anche, esplicitamente, gran parte della filosofia aristotelica dominante nelle scuole del proprio tempo.</p>
+
+  <p class="titolo-capitolo">Il metodo induttivo</p>
+  <p>Liberato l'intelletto da questi pregiudizi, secondo Bacone la conoscenza scientifica autentica deve procedere attraverso il metodo induttivo, cioè un procedimento che muove dall'osservazione di un numero adeguato di casi particolari per risalire, per gradi progressivi e cauti, a leggi generali sempre più ampie: diversamente da una semplice induzione per enumerazione, che si limiterebbe a generalizzare a partire dai soli casi favorevoli osservati, rischiando facili smentite in presenza di un solo caso contrario, Bacone propose un metodo induttivo più rigoroso, fondato sulla raccolta sistematica e sul confronto di tre diverse tipologie di tavole: la tavola di presenza, che raccoglie i casi in cui il fenomeno indagato è presente; la tavola di assenza, che raccoglie i casi simili ai precedenti in cui invece il fenomeno risulta assente; e la tavola dei gradi, che raccoglie i casi in cui il fenomeno si presenta con intensità variabile.</p>
+  <p><em>Esempio:</em> per indagare la natura del calore, Bacone suggerisce di raccogliere in una prima tavola tutti i casi in cui il calore è presente, come i raggi del sole o lo sfregamento tra due corpi, in una seconda tavola i casi simili ai precedenti in cui il calore è invece assente, come la luce lunare, priva di effetto riscaldante percepibile, e in una terza tavola i casi in cui il calore varia di intensità, come il fuoco più o meno vivo; confrontando sistematicamente queste tre tavole, secondo Bacone si può individuare per esclusione la caratteristica costantemente presente in tutti e soli i casi di calore, e assente in tutti i casi in cui il calore manca, giungendo così a identificarne la natura più intima, che Bacone individuò in un peculiare movimento interno rapido delle particelle di un corpo, un'intuizione che presenta significative analogie con la moderna teoria cinetica del calore, sviluppata tuttavia solo secoli più tardi su basi sperimentali assai più solide.</p>
+
+  <p class="titolo-capitolo">La scienza come dominio sulla natura</p>
+  <p>Un aspetto particolarmente originale e destinato a grande influenza storica del pensiero di Bacone riguarda la finalità stessa che egli attribuisce alla conoscenza scientifica: diversamente da una tradizione filosofica antica, esaminata nei capitoli precedenti di questo manuale, che tendeva a considerare la conoscenza teoretica, o contemplativa, come fine in se stessa, secondo quanto sostenuto ad esempio da Aristotele a proposito della vita contemplativa nel tredicesimo capitolo di questo manuale, Bacone concepì invece la scienza come strumento essenzialmente pratico, finalizzato ad accrescere il potere dell'uomo sulla natura a beneficio del miglioramento delle condizioni di vita umana, secondo la celebre formula, a lui attribuita, per cui sapere è potere. Solo conoscendo con precisione le cause e le leggi che governano i fenomeni naturali, sostiene Bacone, l'uomo può sperare di dominarli e di piegarli a proprio vantaggio pratico, un'idea che segna una svolta significativa nel rapporto tra filosofia, scienza e tecnica, destinata a caratterizzare in modo sempre più marcato la cultura occidentale dei secoli successivi.</p>
+
+  <p class="titolo-capitolo">L'eredità dell'empirismo baconiano</p>
+  <p>Il metodo induttivo elaborato da Bacone, pur presentando limiti tecnici che la logica e la filosofia della scienza successive avrebbero in parte messo in luce, in particolare riguardo alla possibilità di generalizzare con piena certezza logica a partire da un numero comunque limitato di osservazioni particolari, rappresenta la prima sistematizzazione filosofica organica dell'ideale di una conoscenza fondata sull'osservazione sistematica e sull'esperimento, e pone le basi teoriche di quella tradizione filosofica nota come empirismo, che, come vedremo più avanti in questo manuale, troverà nel pensiero inglese dei secoli successivi, in particolare in Locke e in Hume, i propri sviluppi più maturi e sistematici. Prima di affrontare questa tradizione empiristica, tuttavia, il prossimo capitolo di questo manuale sarà dedicato a un'impostazione filosofica per molti versi opposta a quella di Bacone, sviluppata sul continente europeo dal filosofo e matematico francese Renato Cartesio, il quale, pur muovendo dalla medesima esigenza di rifondare il sapere umano su basi nuove e certe, individuerà nella ragione, e non nell'esperienza sensibile, il fondamento primo e più sicuro della conoscenza.</p>
+</div>
+<!-- fine capitolo filosofia 19 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil20.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

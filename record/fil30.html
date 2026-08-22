@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 30</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 30: Hegel, il sistema dialettico -->
+<div id="capitolo-30-hegel-sistema-dialettico" class="capitolo-storia">
+  <p class="titolo-capitolo">30 - Hegel: il sistema dialettico - Classe 4</p>
+
+  <p class="titolo-capitolo">Vita di Hegel e il compimento dell'idealismo tedesco</p>
+  <p>Georg Wilhelm Friedrich Hegel nacque a Stoccarda, in Germania, nel 1770, e studiò a Tubinga, dove strinse amicizia, tra gli altri, con Schelling, esaminato nel capitolo precedente di questo manuale: dopo un periodo di formazione e di insegnamento privato, Hegel sviluppò progressivamente un proprio sistema filosofico autonomo, esposto compiutamente in opere come la Fenomenologia dello spirito, pubblicata nel 1807, la Scienza della logica, e l'Enciclopedia delle scienze filosofiche in compendio, ricoprendo negli ultimi anni della propria vita la prestigiosa cattedra di filosofia dell'Università di Berlino, dove morì nel 1831. Il sistema hegeliano rappresenta il punto di massimo compimento e sistematizzazione dell'idealismo tedesco inaugurato da Fichte e sviluppato da Schelling, esaminati nel capitolo precedente di questo manuale, portando a compimento, con rigore e ambizione senza precedenti, il tentativo di ricondurre l'intera realtà, nella sua totalità di natura, storia e pensiero, a un unico processo razionale e necessario.</p>
+
+  <p class="titolo-capitolo">L'identità di reale e razionale</p>
+  <p>Il principio fondamentale su cui si fonda l'intero sistema hegeliano è racchiuso nella celebre affermazione, tratta dai Lineamenti di filosofia del diritto, secondo cui ciò che è razionale è reale, e ciò che è reale è razionale: con questa formula, Hegel non intende affermare ingenuamente che ogni singolo fatto empirico particolare sia di per sé giustificato o approvabile, ma sostiene piuttosto che la realtà, considerata nel suo sviluppo complessivo e nella propria intima struttura processuale, non sia mai il prodotto del caso o dell'arbitrio, ma obbedisca sempre a una logica razionale interna, sia pure non immediatamente evidente all'osservazione superficiale dei singoli eventi isolati, ma comprensibile solo attraverso un'adeguata comprensione filosofica del processo storico nel suo insieme.</p>
+
+  <p class="titolo-capitolo">La dialettica: tesi, antitesi e sintesi</p>
+  <p>Lo strumento concettuale attraverso cui Hegel descrive lo sviluppo razionale della realtà è la dialettica, un metodo che riprende, sia pure trasformandola profondamente, l'antica tradizione argomentativa già inaugurata da Zenone di Elea ed esaminata nel sesto capitolo di questo manuale, ma che in Hegel non descrive più semplicemente un procedimento argomentativo soggettivo, bensì la struttura oggettiva e necessaria secondo cui si sviluppa realmente il pensiero, la natura e la storia. Il movimento dialettico hegeliano si articola tradizionalmente, sia pure con qualche semplificazione rispetto alla terminologia effettivamente impiegata da Hegel, in tre momenti successivi: la tesi, o momento astratto, in cui un concetto o una realtà si presenta inizialmente in una forma determinata e apparentemente stabile; l'antitesi, o momento negativo, in cui tale determinazione iniziale rivela in se stessa una propria intrinseca contraddizione, o limite, che ne provoca il passaggio nel proprio opposto; e la sintesi, o momento speculativo, in cui la contraddizione tra tesi e antitesi non viene semplicemente eliminata, ma superata e conservata a un livello più elevato di comprensione, in un processo che Hegel definisce con il termine tedesco Aufhebung, traducibile approssimativamente come "superamento che conserva".</p>
+  <p><em>Esempio:</em> per illustrare la logica dialettica, Hegel ricorre spesso all'immagine del bocciolo, del fiore e del frutto: il bocciolo scompare quando si schiude il fiore, e si potrebbe dire che il fiore lo confuti, così come il frutto fa apparire il fiore stesso come falsa esistenza della pianta, sostituendolo come sua verità; queste forme, tuttavia, non sono semplicemente contrapposte come incompatibili, ma costituiscono altrettanti momenti necessari di un unico processo organico di sviluppo, in cui ciascuna fase, pur negata dalla successiva, viene in essa anche conservata come premessa indispensabile.</p>
+
+  <p class="titolo-capitolo">La Fenomenologia dello spirito e le figure della coscienza</p>
+  <p>Nella Fenomenologia dello spirito, Hegel ripercorre in forma narrativa il progressivo cammino educativo attraverso cui la coscienza individuale, partendo dalle forme più elementari e immediate di conoscenza, come la semplice certezza sensibile, giunge gradualmente, attraverso una serie di figure successive, ciascuna delle quali supera dialetticamente le contraddizioni interne di quella precedente, fino alla piena consapevolezza filosofica di sé come sapere assoluto. Tra le figure più celebri esaminate nell'opera, particolare fama ha ottenuto la dialettica servo-padrone, in cui Hegel descrive come, nel confronto tra due autocoscienze che si contendono inizialmente il reciproco riconoscimento attraverso una lotta per la vita e per la morte, la posizione apparentemente subordinata del servo, costretto a lavorare sulla materia per il padrone, si riveli paradossalmente, nel corso dello sviluppo dialettico, portatrice di una maggiore autonomia spirituale rispetto a quella del padrone stesso, poiché è proprio attraverso il lavoro, cioè attraverso la trasformazione paziente e disciplinata della natura, che il servo giunge a una più matura consapevolezza di sé e delle proprie capacità, mentre il padrone, limitandosi al puro godimento immediato reso possibile dal lavoro altrui, resta in una condizione di dipendenza sostanziale proprio da colui che crede di dominare.</p>
+
+  <p class="titolo-capitolo">Lo Spirito assoluto: arte, religione e filosofia</p>
+  <p>Nel proprio sistema maturo, articolato nell'Enciclopedia delle scienze filosofiche secondo la triplice partizione di logica, filosofia della natura e filosofia dello spirito, Hegel colloca al vertice dello sviluppo dialettico complessivo lo Spirito assoluto, cioè il momento in cui lo spirito raggiunge la piena e compiuta consapevolezza di se stesso, articolandosi a sua volta in tre forme progressive: l'arte, in cui l'assoluto viene colto attraverso la mediazione della forma sensibile, secondo un'impostazione che riprende, pur distanziandosene, l'importanza già attribuita all'intuizione estetica da Schelling ed esaminata nel capitolo precedente di questo manuale; la religione, in cui l'assoluto viene colto attraverso la forma della rappresentazione, cioè attraverso immagini e simboli religiosi ancora non pienamente concettuali; e infine la filosofia, forma più elevata e compiuta di tutte, in cui l'assoluto viene finalmente colto nella forma propria e adeguata del puro concetto razionale, senza più residui di mediazione sensibile o rappresentativa, realizzando così la piena e definitiva autocomprensione razionale dello spirito.</p>
+
+  <p class="titolo-capitolo">La filosofia della storia</p>
+  <p>Un ambito di particolare importanza nel sistema hegeliano è costituito dalla filosofia della storia, esposta in specifiche lezioni universitarie pubblicate postume: secondo Hegel, la storia umana non è un susseguirsi casuale e privo di senso complessivo di eventi particolari, ma costituisce essa stessa un grande processo dialettico attraverso cui lo spirito, incarnandosi progressivamente nei diversi popoli e nelle diverse civiltà che si succedono nel tempo, procede verso una sempre più piena realizzazione della libertà, intesa non come semplice arbitrio individuale, ma come razionale autodeterminazione dello spirito stesso all'interno di istituzioni etiche e politiche adeguate, sintetizzata nella celebre immagine della storia universale come "cammino di Dio nel mondo".</p>
+  <p>Hegel attribuì inoltre un ruolo filosofico rilevante alla figura del cosiddetto "individuo cosmico-storico", cioè quelle personalità storiche di eccezionale rilievo, come ad esempio Napoleone, che, pur perseguendo consapevolmente i propri fini particolari e talvolta persino le proprie passioni personali, finiscono in realtà, inconsapevolmente, per realizzare fini più ampi e razionali dello spirito universale, secondo un meccanismo che Hegel definisce, con formula divenuta celebre, "astuzia della ragione", per cui la ragione universale si serve delle passioni e degli interessi particolari degli individui storici come proprio strumento per realizzare, a loro insaputa, i propri fini più generali.</p>
+
+  <p class="titolo-capitolo">L'eredità del pensiero hegeliano</p>
+  <p>Il sistema filosofico di Hegel rappresenta, nel proprio complesso, il tentativo più ambizioso e sistematico dell'intera storia della filosofia occidentale di ricondurre a un'unica, grandiosa costruzione razionale l'intero sviluppo della logica, della natura, della storia e dello spirito umano, portando a compimento l'intera parabola dell'idealismo tedesco inaugurata da Fichte e proseguita da Schelling, esaminati nel capitolo precedente di questo manuale. Proprio per la sua straordinaria ambizione sistematica, tuttavia, il pensiero hegeliano avrebbe suscitato, già a partire dagli anni immediatamente successivi alla morte del suo autore, reazioni critiche profondamente divergenti tra i propri stessi allievi, dando origine, come vedremo nel prossimo capitolo di questo manuale, alla contrapposizione tra la cosiddetta destra hegeliana, più incline a una lettura conservatrice e religiosamente ortodossa del sistema, e la sinistra hegeliana, di cui farà parte, tra gli altri, il giovane Karl Marx, orientata invece verso una lettura più radicale e politicamente rivoluzionaria dell'eredità dialettica hegeliana, aprendo così la strada allo studio della filosofia dell'Ottocento previsto per il programma della classe quinta.</p>
+</div>
+<!-- fine capitolo filosofia 30 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil31.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

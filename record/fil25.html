@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 25</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 25: l'Illuminismo europeo -->
+<div id="capitolo-25-illuminismo" class="capitolo-storia">
+  <p class="titolo-capitolo">25 - L'Illuminismo europeo - Classe 4</p>
+
+  <p class="titolo-capitolo">Un nuovo movimento culturale ed europeo</p>
+  <p>Nel corso del Settecento si affermò in Europa, e in particolare in Francia, in Inghilterra e nei territori di lingua tedesca, un vasto movimento culturale e filosofico noto come Illuminismo, il cui nome stesso, presente con varianti equivalenti nelle diverse lingue europee dell'epoca, come l'inglese Enlightenment o il tedesco Aufklärung, allude all'immagine della luce della ragione capace di dissipare le tenebre dell'ignoranza, della superstizione e dei pregiudizi tradizionali: l'Illuminismo raccolse ed estese a un pubblico più ampio molte delle acquisizioni filosofiche e scientifiche già maturate nei due secoli precedenti, dalla rivoluzione scientifica esaminata nel diciottesimo capitolo di questo manuale fino all'empirismo di Locke e Hume, appena esaminati negli ultimi due capitoli, traducendole in un programma culturale e civile di riforma della società.</p>
+  <p>Il filosofo tedesco Immanuel Kant, di cui ci occuperemo diffusamente nei prossimi due capitoli di questo manuale, offrì una delle definizioni più celebri e sintetiche dello spirito illuminista, invitando ciascun individuo ad avere il coraggio di servirsi della propria intelligenza in prima persona, senza affidarsi passivamente alla guida altrui: questo invito all'autonomia critica del pensiero, applicato tanto all'ambito religioso quanto a quello politico, sociale ed economico, costituisce il filo conduttore comune a tutta la vasta e articolata produzione filosofica illuminista, pur nella significativa diversità delle posizioni sostenute dai singoli autori del movimento.</p>
+
+  <p class="titolo-capitolo">La critica della religione rivelata</p>
+  <p>Uno dei bersagli polemici principali della riflessione illuminista fu la religione tradizionale, in particolare nelle sue forme dogmatiche e intollerantemente istituzionalizzate: molti filosofi illuministi, senza necessariamente giungere all'ateismo, si orientarono verso posizioni note come deismo, secondo cui l'esistenza di Dio può essere ammessa su base razionale, come causa prima e ordinatrice dell'universo, sul modello per certi aspetti già anticipato dalle prove cosmologiche di Tommaso d'Aquino esaminate nel sedicesimo capitolo di questo manuale, ma senza accettare i contenuti specifici delle diverse religioni rivelate, ritenuti frutto di tradizioni storiche particolari, spesso caratterizzate da fanatismo e intolleranza, piuttosto che di una verità universale accessibile alla sola ragione naturale.</p>
+  <p>Il filosofo francese Voltaire, pseudonimo di François-Marie Arouet, vissuto tra il 1694 e il 1778, fu tra i più influenti e polemici sostenitori di questa battaglia culturale contro il fanatismo religioso e l'intolleranza, in particolare attraverso il celebre Trattato sulla tolleranza, scritto in occasione di un noto caso giudiziario di ingiusta condanna motivata da pregiudizio religioso; pur criticando duramente le istituzioni ecclesiastiche del proprio tempo, Voltaire non giunse tuttavia all'ateismo, mantenendo una posizione sostanzialmente deistica, riassunta nella celebre affermazione secondo cui, se Dio non esistesse, sarebbe comunque necessario inventarlo, quale garante razionale dell'ordine morale.</p>
+
+  <p class="titolo-capitolo">L'Encyclopédie e la diffusione del sapere</p>
+  <p>Un'impresa culturale di straordinaria ambizione e importanza storica fu l'Encyclopédie, opera monumentale pubblicata in Francia a partire dal 1751, diretta dal filosofo Denis Diderot, vissuto tra il 1713 e il 1784, con la collaborazione del matematico e filosofo Jean-Baptiste le Rond d'Alembert: concepita come una raccolta sistematica e razionalmente organizzata dell'intero sapere umano dell'epoca, dalle scienze naturali alle arti e ai mestieri, l'Encyclopédie intendeva rendere accessibile a un pubblico quanto più ampio possibile, e non più riservato a una ristretta élite di specialisti, le conoscenze scientifiche, tecniche e filosofiche più aggiornate, in coerenza con l'ideale illuminista della diffusione della cultura come strumento di emancipazione dall'ignoranza e dal pregiudizio.</p>
+
+  <p class="titolo-capitolo">Montesquieu e la divisione dei poteri</p>
+  <p>Sul piano più propriamente politico, un contributo di grande importanza fu offerto dal filosofo e giurista francese Charles-Louis de Montesquieu, vissuto tra il 1689 e il 1755, autore dell'opera Lo spirito delle leggi, pubblicata nel 1748: riprendendo e sviluppando, con particolare ammirazione per il modello costituzionale inglese, alcuni temi già presenti nella riflessione politica di John Locke esaminata nel ventitreesimo capitolo di questo manuale, Montesquieu elaborò una teoria della separazione dei poteri statali, distinguendo il potere legislativo, incaricato di formulare le leggi, il potere esecutivo, incaricato di applicarle, e il potere giudiziario, incaricato di dirimere le controversie giuridiche, sostenendo che soltanto una loro reciproca indipendenza e un loro equilibrato bilanciamento potessero garantire efficacemente la libertà dei cittadini, prevenendo la degenerazione del potere politico in forme di dispotismo arbitrario.</p>
+
+  <p class="titolo-capitolo">L'economia politica illuminista</p>
+  <p>L'Illuminismo europeo espresse infine un rinnovato interesse anche per la riflessione economica, considerata parte integrante di una più generale scienza razionale della società: in Francia si affermò la corrente fisiocratica, secondo cui la vera fonte della ricchezza nazionale risiederebbe nella produzione agricola, e non nel commercio o nell'accumulo di metalli preziosi favorito dalle politiche mercantilistiche allora dominanti; in Scozia, l'economista e filosofo Adam Smith, vissuto tra il 1723 e il 1790, elaborò invece, nell'opera La ricchezza delle nazioni, pubblicata nel 1776, una teoria più generale del libero mercato, sostenendo che il perseguimento razionale dell'interesse individuale di ciascun operatore economico, in un contesto di libera concorrenza non ostacolata da eccessive regolamentazioni statali, potesse condurre spontaneamente, come guidato da una metaforica "mano invisibile", a un risultato complessivamente vantaggioso per l'intera collettività.</p>
+
+  <p class="titolo-capitolo">Luci e ombre dell'Illuminismo</p>
+  <p>Pur nella sua straordinaria fecondità culturale e civile, e nell'indubbio contributo offerto alla causa della tolleranza religiosa, della libertà di pensiero e della riforma razionale delle istituzioni politiche e giuridiche, il pensiero illuminista non fu esente, già presso alcuni contemporanei, da rilievi critici: in particolare, la fiducia talvolta eccessiva riposta nella capacità della sola ragione astratta di riformare radicalmente la società, senza sufficiente considerazione per la complessità delle tradizioni storiche, delle emozioni e dei legami comunitari propri delle diverse culture, sarebbe stata oggetto, come vedremo nel prossimo capitolo di questo manuale, della critica del filosofo ginevrino Jean-Jacques Rousseau, la cui riflessione, pur muovendo dal medesimo orizzonte culturale illuminista, ne rappresenta per molti versi una critica interna di grande originalità e di enorme influenza storica successiva.</p>
+</div>
+<!-- fine capitolo filosofia 25 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil26.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

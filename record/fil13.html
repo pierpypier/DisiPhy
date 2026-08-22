@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 13</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 13: Aristotele, fisica, etica e politica -->
+<div id="capitolo-13-aristotele-fisica-etica-politica" class="capitolo-storia">
+  <p class="titolo-capitolo">13 - Aristotele: fisica, etica e politica - Classe 3</p>
+
+  <p class="titolo-capitolo">La fisica aristotelica e il cosmo</p>
+  <p>Come si è visto nel capitolo precedente di questo manuale, Aristotele elaborò, accanto alla propria riflessione metafisica e logica, un ampio sistema di filosofia della natura, esposto principalmente nell'opera intitolata Fisica: alla base di questo sistema vi è la già ricordata concezione teleologica della natura, secondo cui ogni essere naturale tende, in virtù della propria forma specifica, verso il pieno compimento delle proprie potenzialità, in un processo ordinato e non casuale. Aristotele concepì inoltre l'universo come finito nello spazio e strutturato in due regioni nettamente distinte: il mondo sublunare, cioè la regione compresa tra la Terra, immobile al centro del cosmo, e la sfera della Luna, caratterizzata dalla presenza dei quattro elementi già individuati da Empedocle, ricordati nel settimo capitolo di questo manuale, cioè terra, acqua, aria e fuoco, soggetti a un movimento naturale rettilineo verso l'alto o verso il basso a seconda della loro natura; e il mondo celeste, o sovralunare, costituito da un quinto elemento incorruttibile ed eterno, l'etere, di cui sarebbero fatti gli astri e le sfere celesti, soggetti a un movimento naturale circolare e perfetto, giudicato da Aristotele più nobile del movimento rettilineo proprio del mondo sublunare.</p>
+
+  <p class="titolo-capitolo">L'anima secondo Aristotele</p>
+  <p>Nell'opera Sull'anima, Aristotele affronta il tema già trattato da Platone, esaminato nell'undicesimo capitolo di questo manuale, ma con un'impostazione profondamente diversa, coerente con la propria concezione della sostanza come unità inseparabile di materia e forma: l'anima, per Aristotele, non è una sostanza distinta e separabile dal corpo, temporaneamente unita a esso come pensava Platone, ma è essa stessa la forma del corpo vivente, cioè il principio che rende un determinato corpo organico effettivamente vivo e capace delle proprie funzioni specifiche, in modo analogo, per usare un paragone dello stesso Aristotele, alla capacità di tagliare rispetto a un'ascia. Aristotele distingue inoltre tre livelli gerarchicamente ordinati di anima, o funzioni psichiche: l'anima vegetativa, comune a tutti gli esseri viventi, comprese le piante, responsabile delle funzioni di nutrizione e riproduzione; l'anima sensitiva, propria degli animali oltre che dell'uomo, responsabile della percezione sensoriale e del movimento; e l'anima razionale, propria del solo essere umano, responsabile del pensiero e della capacità di conoscenza intellettuale.</p>
+
+  <p class="titolo-capitolo">L'etica delle virtù e la felicità</p>
+  <p>Nell'Etica Nicomachea, Aristotele affronta il problema del fine ultimo dell'agire umano, individuandolo nella felicità, in greco eudaimonia, termine che indica non tanto uno stato d'animo passeggero di piacere, quanto piuttosto una condizione di piena realizzazione e fioritura dell'esistenza umana, raggiunta attraverso un'attività svolta in conformità alla virtù propria dell'uomo, cioè, in ultima analisi, l'esercizio della ragione, facoltà che per Aristotele distingue specificamente l'essere umano dagli altri esseri viventi. A differenza di Socrate, esaminato nel nono capitolo di questo manuale, il quale sosteneva, secondo la posizione nota come intellettualismo etico, che la sola conoscenza del bene bastasse a garantire il comportamento virtuoso, Aristotele ritiene che la virtù non derivi automaticamente dalla conoscenza teorica, ma richieda un lungo esercizio pratico e un'adeguata educazione dei comportamenti fin dall'infanzia, poiché si diventa virtuosi, secondo la sua celebre affermazione, compiendo ripetutamente azioni virtuose, così come si impara un'arte esercitandola concretamente.</p>
+  <p>Aristotele definisce la virtù etica come una disposizione stabile del carattere, consistente nel saper individuare, in ogni situazione concreta, il giusto mezzo tra due opposti vizi, l'uno per eccesso e l'altro per difetto: il coraggio, ad esempio, costituisce il giusto mezzo tra la temerarietà, vizio per eccesso, e la viltà, vizio per difetto, mentre la liberalità, cioè la generosità misurata, costituisce il giusto mezzo tra la prodigalità e l'avarizia. Va precisato che questo "giusto mezzo" non va inteso come una via puramente aritmetica e uguale per tutti, ma come una misura relativa, da individuare caso per caso attraverso una virtù intellettuale specifica, la saggezza pratica, o phronesis, capace di valutare correttamente ciò che è opportuno fare nella situazione concreta, tenendo conto delle circostanze particolari.</p>
+
+  <p class="titolo-capitolo">Amicizia e vita contemplativa</p>
+  <p>Nell'Etica Nicomachea Aristotele dedica inoltre ampio spazio al tema dell'amicizia, distinguendo diverse forme di essa a seconda del motivo che le fonda, cioè l'utilità reciproca, il piacere condiviso, o infine, nella forma più autentica e duratura, la reciproca stima per il valore morale dell'altro: quest'ultima forma di amicizia, fondata sulla virtù, viene giudicata da Aristotele la più elevata, poiché duratura nel tempo e disinteressata, a differenza delle amicizie fondate sull'utilità o sul piacere, più facilmente soggette a dissolversi al venir meno delle circostanze che le avevano originate. Nell'ultimo libro dell'opera, infine, Aristotele individua nella vita contemplativa, cioè nell'esercizio puro della ragione teoretica rivolta alla conoscenza disinteressata della verità, la forma più elevata e perfetta di felicità umana, in quanto attività più simile, tra tutte quelle di cui l'uomo è capace, alla perfetta e immutabile attività di pensiero propria del motore immobile, già esaminato nel capitolo precedente di questo manuale.</p>
+
+  <p class="titolo-capitolo">La politica e le forme di governo</p>
+  <p>Nell'opera Politica, Aristotele muove dalla convinzione, espressa nella celebre definizione dell'uomo come "animale politico", cioè per natura destinato a vivere in comunità organizzate, che la polis, la città-stato greca, non rappresenti una convenzione artificiale stabilita per semplice utilità reciproca, come sostenevano invece alcuni sofisti esaminati nell'ottavo capitolo di questo manuale, ma costituisca il compimento naturale e necessario della socialità umana, senza la quale l'uomo non potrebbe realizzare pienamente la propria natura razionale. Diversamente da Platone, che nella Repubblica aveva proposto, come si è visto nell'undicesimo capitolo di questo manuale, l'abolizione della proprietà privata e della famiglia per la classe dei governanti, Aristotele difende invece, in polemica esplicita con il maestro, sia la proprietà privata sia la famiglia tradizionale, ritenendo che la loro abolizione avrebbe indebolito, anziché rafforzare, la coesione e il buon governo della città.</p>
+  <p>Nell'analisi delle forme di governo, Aristotele distingue sei tipologie principali, articolate secondo due criteri incrociati, il numero di coloro che detengono il potere, uno, pochi o molti, e la finalità, retta o degenerata, perseguita da chi governa: alle tre forme rette, orientate al bene comune, cioè la monarchia, l'aristocrazia e la cosiddetta "politia", forma di governo misto e moderato in cui governano i molti nell'interesse generale, corrispondono altrettante forme degenerate, orientate invece all'interesse particolare di chi governa, cioè rispettivamente la tirannide, l'oligarchia e la demagogia. Diversamente da Platone, che nella Repubblica aveva concepito un unico modello di stato ideale astratto, Aristotele mostra un approccio più empirico e comparativo, ritenendo che la politia, forma di governo moderata fondata su un'ampia classe media, rappresenti in concreto, per la maggior parte delle città reali, la soluzione politicamente più stabile e praticabile.</p>
+
+  <p class="titolo-capitolo">L'eredità di Aristotele</p>
+  <p>Il sistema filosofico elaborato da Aristotele, nella sua ambizione di offrire una spiegazione razionale unitaria e sistematica di ogni ambito della realtà, dalla logica alla metafisica, dalla fisica all'etica e alla politica, rappresenta insieme a quello di Platone uno dei due grandi paradigmi di riferimento dell'intera filosofia occidentale successiva, tanto da esercitare, attraverso complesse vicende di trasmissione e reinterpretazione, un'influenza determinante non solo sul pensiero greco ed ellenistico che tratteremo nei prossimi capitoli di questo manuale, ma anche, assai più avanti nella storia, sulla filosofia medievale cristiana, araba ed ebraica, che avrebbe trovato nel pensiero aristotelico uno strumento concettuale di importanza fondamentale. Con la morte di Aristotele, avvenuta nel 322 a.C., poco dopo quella del suo allievo Alessandro Magno, si chiude idealmente la grande stagione della filosofia classica greca, e si apre un nuovo periodo storico e filosofico, quello ellenistico, caratterizzato da un mutamento di prospettiva verso problemi più direttamente legati alla vita pratica e alla ricerca della serenità individuale, di cui ci occuperemo nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo filosofia 13 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil14.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

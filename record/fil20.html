@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 20</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 20: Cartesio e il razionalismo -->
+<div id="capitolo-20-cartesio-razionalismo" class="capitolo-storia">
+  <p class="titolo-capitolo">20 - Cartesio e il razionalismo - Classe 4</p>
+
+  <p class="titolo-capitolo">Renato Cartesio e il progetto di un sapere certo</p>
+  <p>Renato Cartesio, il cui nome francese originario era René Descartes, nacque a La Haye, nella regione francese della Turenna, nel 1596, e ricevette una solida formazione scientifica e filosofica presso un collegio gesuita, per poi dedicarsi, dopo alcuni anni di viaggi e di esperienza militare, a un ampio progetto di rifondazione del sapere umano su basi interamente nuove: come si è visto al termine del capitolo precedente di questo manuale, Cartesio condivideva con Francesco Bacone l'insoddisfazione per la filosofia scolastica tradizionale, esaminata nel sedicesimo capitolo di questo manuale, ma se ne discostò radicalmente nell'individuare il fondamento della conoscenza certa non nell'esperienza sensibile e nell'osservazione empirica, come Bacone, bensì nella sola ragione, dando così avvio a quella tradizione filosofica nota come razionalismo, che caratterizzerà gran parte della filosofia continentale del Seicento.</p>
+  <p>Nell'opera Discorso sul metodo, pubblicata nel 1637, e ripresa poi più sistematicamente nelle Meditazioni metafisiche, del 1641, Cartesio espose il proprio progetto filosofico, ispirato esplicitamente al modello della matematica, e in particolare della geometria, quale disciplina capace di raggiungere conclusioni certe e universalmente condivisibili a partire da pochi principi evidenti, attraverso una catena di deduzioni rigorose: l'obiettivo di Cartesio era quello di estendere questo medesimo rigore dimostrativo all'intero campo del sapere umano, filosofia compresa, individuando innanzitutto, attraverso un adeguato metodo, un fondamento assolutamente certo e indubitabile su cui costruire l'intero edificio della conoscenza.</p>
+
+  <p class="titolo-capitolo">Il metodo cartesiano</p>
+  <p>Nel Discorso sul metodo, Cartesio enuncia quattro regole fondamentali destinate a guidare correttamente l'esercizio della ragione: la regola dell'evidenza, secondo cui non si deve mai accettare come vera alcuna cosa che non si conosca evidentemente come tale, evitando ogni precipitazione e pregiudizio; la regola dell'analisi, secondo cui ogni problema complesso va scomposto nel maggior numero possibile di parti più semplici, così da poterlo affrontare con maggiore chiarezza; la regola della sintesi, secondo cui il pensiero deve poi procedere in ordine, muovendo dagli oggetti più semplici e facili da conoscere per risalire, per gradi, alla conoscenza di quelli più complessi; la regola dell'enumerazione, infine, secondo cui occorre effettuare, in ogni caso, revisioni ed elenchi così completi da avere la certezza di non aver omesso nulla di rilevante.</p>
+
+  <p class="titolo-capitolo">Il dubbio metodico</p>
+  <p>Per individuare un fondamento assolutamente certo e indubitabile su cui costruire la propria filosofia, Cartesio applicò, nelle Meditazioni metafisiche, un procedimento del tutto originale, noto come dubbio metodico: si tratta di un dubbio non fine a se stesso, come poteva essere quello praticato dagli antichi scettici esaminati nel quindicesimo capitolo di questo manuale, ma utilizzato strumentalmente, in modo provvisorio e metodico appunto, come strumento per mettere alla prova la solidità di ogni possibile fondamento della conoscenza, scartando progressivamente tutto ciò che si rivela anche solo minimamente dubitabile, fino a individuare, se possibile, un residuo ultimo assolutamente certo.</p>
+  <p>Cartesio sottopone così a dubbio, in successione, l'affidabilità dei sensi, che talvolta ingannano, come dimostra l'esperienza degli errori percettivi; la distinzione tra veglia e sonno, poiché non esisterebbe, secondo Cartesio, un criterio assolutamente certo per distinguere con sicurezza l'esperienza vigile da un sogno particolarmente vivido; e infine, nell'ipotesi più radicale ed estrema, immagina l'esistenza di un "genio maligno" ingannatore, dotato di potenza sufficiente a farci credere false anche le verità matematiche più elementari, come quelle riguardanti i numeri e le figure geometriche, ritenute fino a quel momento le conoscenze più sicure in assoluto.</p>
+
+  <p class="titolo-capitolo">Il cogito, ergo sum</p>
+  <p>Spinto fino alle sue estreme conseguenze, il dubbio metodico condusse tuttavia Cartesio a individuare un punto fermo assolutamente indubitabile: se anche si suppone, nell'ipotesi più radicale, che un genio maligno inganni continuamente il proprio pensiero riguardo a ogni possibile contenuto, resta comunque incontestabilmente certo che, per essere ingannato, occorre pur sempre che vi sia qualcuno che pensa, cioè che dubita: da questa considerazione Cartesio ricava la celebre formula, riassunta nell'espressione latina cogito, ergo sum, "penso, dunque sono", la prima verità assolutamente certa e indubitabile su cui edificare l'intero sistema filosofico, poiché l'atto stesso del dubitare, in quanto forma di pensiero, dimostra necessariamente l'esistenza di un soggetto pensante.</p>
+  <p>Va precisato che ciò di cui Cartesio si dichiara certo non è, in questa fase iniziale del proprio percorso argomentativo, l'esistenza del proprio corpo, che rimane ancora sottoposta al dubbio metodico in quanto conosciuta attraverso i sensi ingannevoli, ma soltanto l'esistenza del proprio io in quanto res cogitans, cioè "cosa pensante": da questa impostazione discende una netta separazione, nota come dualismo cartesiano, tra la res cogitans, sostanza pensante priva di estensione spaziale, e la res extensa, cioè la sostanza materiale ed estesa nello spazio, di cui fa parte anche il proprio corpo, considerate da Cartesio come due sostanze radicalmente distinte e di natura del tutto diversa tra loro.</p>
+
+  <p class="titolo-capitolo">L'esistenza di Dio come garanzia della conoscenza</p>
+  <p>Dal solo cogito, tuttavia, Cartesio non può ancora dedurre l'esistenza di un mondo esterno corrispondente alle proprie idee, poiché resta in linea di principio ancora possibile, secondo l'ipotesi del genio maligno, che tali idee siano illusorie: per superare questa difficoltà, Cartesio introduce nel proprio percorso argomentativo una dimostrazione dell'esistenza di Dio, elaborata attraverso più argomentazioni, tra cui una versione rielaborata della prova ontologica già formulata da Anselmo d'Aosta, esaminata nel sedicesimo capitolo di questo manuale: Dio, concepito come essere sommamente perfetto, non potrebbe, secondo Cartesio, essere ingannatore, poiché l'inganno costituirebbe un'imperfezione incompatibile con la sua natura perfetta.</p>
+  <p>Una volta dimostrata l'esistenza di un Dio non ingannatore, Cartesio può finalmente fondare la propria fiducia nella facoltà razionale umana, e in particolare nel criterio della chiarezza e distinzione delle idee, cioè nella convinzione che tutto ciò che viene percepito dall'intelletto in modo chiaro e distinto debba corrispondere effettivamente al vero, poiché un Dio perfetto e non ingannatore non permetterebbe che la ragione umana, se correttamente utilizzata secondo il metodo esposto in precedenza, possa sistematicamente errare riguardo a ciò che percepisce con piena evidenza: solo a questo punto del percorso argomentativo Cartesio ritiene di poter riammettere, sia pure con la dovuta cautela critica, anche l'esistenza del mondo esterno materiale e del proprio corpo.</p>
+
+  <p class="titolo-capitolo">L'eredità del razionalismo cartesiano</p>
+  <p>Il pensiero di Cartesio, per il rigore del proprio metodo, per la centralità attribuita alla soggettività pensante come punto di partenza indubitabile di ogni filosofia, e per il netto dualismo istituito tra sostanza pensante e sostanza estesa, esercitò un'influenza filosofica di primissimo piano sull'intera filosofia moderna successiva, ponendo al tempo stesso alcuni problemi di grande rilievo, non pienamente risolti dallo stesso Cartesio, come quello dell'effettiva interazione tra la res cogitans immateriale e la res extensa materiale all'interno dell'essere umano: problemi che, come vedremo nei prossimi capitoli di questo manuale, avrebbero occupato a fondo la riflessione di altri importanti filosofi razionalisti del Seicento, in particolare Baruch Spinoza e Gottfried Wilhelm Leibniz, ciascuno dei quali avrebbe proposto, muovendo da premesse in parte diverse rispetto a quelle cartesiane, una propria originale soluzione a queste difficoltà.</p>
+</div>
+<!-- fine capitolo filosofia 20 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil21.html">Vai al Capitolo successivo</a></p>
+</div>
+  
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

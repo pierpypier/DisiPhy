@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 21</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 21: Spinoza e Leibniz -->
+<div id="capitolo-21-spinoza-leibniz" class="capitolo-storia">
+  <p class="titolo-capitolo">21 - Spinoza e Leibniz - Classe 4</p>
+
+  <p class="titolo-capitolo">Il razionalismo dopo Cartesio</p>
+  <p>Come si è visto al termine del capitolo precedente di questo manuale, il dualismo cartesiano tra res cogitans e res extensa, per quanto filosoficamente fecondo, lasciava aperto un problema di grande rilievo, quello dell'effettiva interazione tra le due sostanze radicalmente distinte, la sostanza pensante e la sostanza estesa, all'interno dell'essere umano: nella seconda metà del Seicento, due grandi filosofi razionalisti, Baruch Spinoza e Gottfried Wilhelm Leibniz, elaborarono, muovendo da premesse in parte diverse rispetto a quelle cartesiane ma condividendo con Cartesio il medesimo ideale di un sapere filosofico fondato sul rigore geometrico della ragione, due originali e per molti versi opposte soluzioni a questa e ad altre difficoltà ereditate dal razionalismo cartesiano.</p>
+
+  <p class="titolo-capitolo">Baruch Spinoza e la sostanza unica</p>
+  <p>Baruch Spinoza nacque ad Amsterdam nel 1632, all'interno di una comunità di ebrei sefarditi rifugiatisi nei Paesi Bassi in seguito alle persecuzioni subite nella penisola iberica: per le posizioni filosofiche e religiose non ortodosse da lui sostenute, Spinoza fu formalmente espulso dalla propria comunità religiosa nel 1656, e visse in seguito un'esistenza appartata, dedicandosi alla riflessione filosofica e sostenendosi economicamente attraverso il lavoro di molatore di lenti ottiche. La sua opera principale, l'Etica dimostrata secondo l'ordine geometrico, pubblicata postuma nel 1677, è composta, come indica lo stesso titolo, sul modello degli Elementi di Euclide, con definizioni, assiomi, proposizioni e dimostrazioni rigorosamente concatenate tra loro, a testimonianza dell'ideale, già proprio di Cartesio ed esaminato nel capitolo precedente di questo manuale, di un sapere filosofico capace di raggiungere la medesima certezza dimostrativa della geometria.</p>
+  <p>Diversamente da Cartesio, che aveva ammesso, oltre a Dio, due distinte sostanze finite create, la sostanza pensante e la sostanza estesa, Spinoza sostiene invece l'esistenza di un'unica sostanza infinita, che egli identifica con Dio, ma anche, in una prospettiva di grande audacia filosofica e teologica, con la natura stessa, secondo la celebre formula latina Deus sive natura, "Dio, ossia la natura": questa sostanza unica, causa di se stessa ed esistente necessariamente, possiede infiniti attributi, cioè infiniti modi fondamentali di esprimere la propria essenza, di cui l'intelletto umano, tuttavia, riesce a conoscerne soltanto due, il pensiero e l'estensione, che corrispondono esattamente alle due sostanze distinte ammesse da Cartesio, ma che Spinoza reinterpreta non più come sostanze autonome e separate, bensì come due diversi attributi di un'unica medesima realtà.</p>
+  <p>Da questa impostazione, nota come monismo, cioè dottrina secondo cui esiste una sola sostanza fondamentale, discende una soluzione originale al problema dell'interazione tra mente e corpo lasciato irrisolto da Cartesio: poiché pensiero ed estensione sono, per Spinoza, due diversi attributi della medesima sostanza unica, ogni evento fisico corporeo e il corrispondente evento mentale non costituiscono due realtà causalmente interagenti tra loro, ma due espressioni parallele e perfettamente corrispondenti di un unico e medesimo evento, considerato ora sotto l'attributo dell'estensione, ora sotto l'attributo del pensiero. <em>Esempio:</em> per Spinoza, il movimento fisico del mio braccio e la mia volontà mentale di muoverlo non sono legati da un rapporto di causa ed effetto tra due sostanze distinte, ma sono, per così dire, il medesimo evento unico osservato sotto due diverse prospettive, come le due facce inseparabili di una stessa medaglia.</p>
+  <p>Sul piano etico, Spinoza sostiene che, poiché ogni cosa esistente, l'uomo compreso, non è che un modo particolare e determinato dell'unica sostanza infinita, tutto ciò che accade avviene secondo una rigorosa necessità, analoga a quella con cui, dagli assiomi della geometria, discendono necessariamente i relativi teoremi, senza alcuno spazio per un libero arbitrio inteso come capacità di sottrarsi arbitrariamente alla catena causale universale: la vera libertà umana, secondo Spinoza, non consiste dunque nell'illusoria pretesa di agire senza cause, ma nella comprensione razionale, quanto più possibile ampia e adeguata, delle cause necessarie che determinano ogni cosa, compresi i propri stessi affetti e passioni, giungendo così a una condizione di serenità interiore, che Spinoza chiama beatitudine, fondata sull'amore intellettuale verso Dio, cioè sulla contemplazione razionale della necessità e della perfezione dell'ordine cosmico universale.</p>
+
+  <p class="titolo-capitolo">Gottfried Wilhelm Leibniz e la pluralità delle monadi</p>
+  <p>Gottfried Wilhelm Leibniz nacque a Lipsia, in Germania, nel 1646, e fu figura di straordinaria versatilità intellettuale, attivo non solo in ambito filosofico, ma anche come matematico, tra l'altro co-fondatore, insieme e indipendentemente da Isaac Newton, del calcolo infinitesimale, oltre che come giurista, diplomatico e storico al servizio di diverse corti principesche tedesche. Diversamente da Spinoza, che aveva ridotto la molteplicità delle cose a manifestazioni di un'unica sostanza, Leibniz propose, nell'opera Monadologia, pubblicata postuma, una concezione radicalmente pluralistica della realtà, sostenendo che l'universo sia costituito da un'infinità di sostanze semplici, immateriali e indivisibili, che egli chiama monadi, ciascuna delle quali costituisce un centro autonomo di forza e di rappresentazione, riflettendo, secondo un proprio punto di vista particolare e irripetibile, l'intero universo.</p>
+  <p>Un aspetto di grande originalità della dottrina leibniziana riguarda il rapporto tra le monadi, le quali, secondo la celebre espressione dello stesso Leibniz, "non hanno finestre", cioè non intrattengono alcuna reale interazione causale diretta tra loro, essendo ciascuna programmata fin dall'origine, per così dire, a sviluppare autonomamente e spontaneamente il proprio contenuto interno, secondo una legge propria e indipendente da quella delle altre monadi: per spiegare come, nonostante questa assoluta indipendenza reciproca, le monadi risultino comunque perfettamente coordinate tra loro, in modo tale, ad esempio, da garantire la corrispondenza puntuale tra gli stati mentali di un individuo e i corrispondenti movimenti del proprio corpo, Leibniz ricorre all'ipotesi di un'armonia prestabilita, secondo cui Dio, nell'atto stesso della creazione, avrebbe predisposto fin dall'origine un perfetto sincronismo tra lo sviluppo interno indipendente di ciascuna monade, in modo analogo, secondo un paragone impiegato dallo stesso Leibniz, a due orologi perfettamente sincronizzati fin dall'inizio, capaci di segnare sempre la medesima ora pur senza alcun meccanismo di reciproca interazione diretta.</p>
+  <p>Leibniz affrontò inoltre, nella Teodicea, pubblicata nel 1710, il problema filosofico e teologico del male, sostenendo, con un'argomentazione divenuta poi celebre, e in seguito oggetto di aspra critica satirica da parte di alcuni filosofi illuministi che incontreremo nel prossimo capitolo di questo manuale, che il mondo effettivamente creato da Dio, pur contenendo una certa quantità di male fisico e morale, rappresenti comunque, tra tutti i mondi possibili concepibili in astratto dall'intelletto divino, il migliore possibile, poiché un Dio infinitamente sapiente, potente e buono non avrebbe potuto scegliere, nell'atto della creazione, se non la combinazione ottimale capace di massimizzare la perfezione e la varietà complessiva dell'universo, anche a costo di ammettere in esso alcuni mali particolari, funzionali però, in una prospettiva più ampia non sempre accessibile alla limitata comprensione umana, al bene generale dell'insieme.</p>
+
+  <p class="titolo-capitolo">Un confronto tra Spinoza e Leibniz</p>
+  <p>Pur muovendo entrambi dal medesimo ideale razionalistico di un sapere filosofico rigorosamente dimostrativo, ereditato da Cartesio ed esaminato nel capitolo precedente di questo manuale, Spinoza e Leibniz giunsero a esiti metafisici per molti aspetti opposti tra loro: mentre Spinoza ridusse la molteplicità delle cose esistenti a semplici modi di un'unica sostanza infinita, in una prospettiva di rigoroso monismo e necessitarismo, priva di spazio per un autentico libero arbitrio divino o umano, Leibniz difese invece, attraverso la dottrina delle monadi e dell'armonia prestabilita, una concezione pluralistica della realtà, che intendeva conciliare l'ordine razionale necessario del cosmo con il mantenimento, sia pure in una forma filosoficamente assai problematica e discussa, della libertà divina nella scelta del mondo migliore possibile tra tutti i mondi concepibili.</p>
+
+  <p class="titolo-capitolo">Verso una nuova stagione della filosofia politica</p>
+  <p>Le imponenti costruzioni metafisiche di Spinoza e Leibniz rappresentano il vertice speculativo più elevato della tradizione razionalista continentale inaugurata da Cartesio, ma non esauriscono l'intera riflessione filosofica del Seicento europeo, la quale si sviluppò, nel medesimo periodo storico, anche lungo un'altra direttrice di grande importanza, quella della filosofia politica moderna: come vedremo nel prossimo capitolo di questo manuale, sarà infatti proprio nel corso del Seicento inglese, segnato da profonde e drammatiche vicende politiche, che il filosofo Thomas Hobbes elaborerà una delle riflessioni più influenti e rigorose sull'origine razionale dello stato e sul fondamento del potere politico, aprendo la strada a quella tradizione di pensiero nota come contrattualismo.</p>
+</div>
+<!-- fine capitolo filosofia 21 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil22.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

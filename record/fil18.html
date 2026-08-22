@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 18</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 18: la rivoluzione scientifica -->
+<div id="capitolo-18-rivoluzione-scientifica" class="capitolo-storia">
+  <p class="titolo-capitolo">18 - La rivoluzione scientifica - Classe 4</p>
+
+  <p class="titolo-capitolo">Un mutamento radicale nel modo di conoscere la natura</p>
+  <p>Come si è anticipato al termine del capitolo precedente di questo manuale, tra la fine del Cinquecento e la prima metà del Seicento si compì, in Europa, quella che gli storici della scienza e della filosofia definiscono convenzionalmente rivoluzione scientifica, un mutamento radicale, per profondità e rapidità storicamente senza precedenti, nel modo di concepire la natura e il metodo più adeguato per conoscerla razionalmente: se il clima umanistico e rinascimentale esaminato nel capitolo precedente aveva favorito un rinnovato interesse per l'osservazione diretta dei fenomeni naturali, sarà solo con la rivoluzione scientifica che tale interesse si tradurrà in un metodo di indagine rigoroso e sistematico, capace di sostituire progressivamente l'autorità della tradizione aristotelico-tolemaica, esaminata nel dodicesimo, tredicesimo e sedicesimo capitolo di questo manuale, con procedure fondate sull'osservazione controllata e sulla misurazione matematica dei fenomeni.</p>
+
+  <p class="titolo-capitolo">Copernico e la rivoluzione astronomica</p>
+  <p>Il primo passo decisivo di questa trasformazione si deve all'astronomo polacco Niccolò Copernico, vissuto tra il 1473 e il 1543, il quale, nell'opera Sulle rivoluzioni dei corpi celesti, pubblicata nell'anno stesso della sua morte, propose di sostituire il modello geocentrico tradizionale, secondo cui la Terra occupava una posizione fissa al centro dell'universo, circondata dalle sfere celesti in movimento, un modello che risaliva, nella sua formulazione più autorevole, alla cosmologia aristotelica ripresa e sistematizzata dall'astronomo Tolomeo in età ellenistico-romana, con un modello eliocentrico, in cui è il Sole a occupare il centro del sistema, mentre la Terra, come gli altri pianeti allora conosciuti, ruota attorno a esso, oltre che su se stessa. Sebbene Copernico avesse elaborato la propria teoria soprattutto per ragioni di semplicità ed eleganza matematica nel calcolo dei moti celesti, più che per un'intenzione filosofica dichiaratamente rivoluzionaria, le conseguenze della sua ipotesi risultarono di portata enorme, poiché sottraevano alla Terra, e con essa all'uomo, la posizione centrale e privilegiata che la tradizione aristotelico-tolemaica, ripresa e integrata anche dalla teologia cristiana medievale esaminata nel sedicesimo capitolo di questo manuale, le aveva sempre attribuito nell'ordine del cosmo.</p>
+
+  <p class="titolo-capitolo">Keplero e le leggi del moto dei pianeti</p>
+  <p>Il modello copernicano venne ulteriormente perfezionato dall'astronomo tedesco Giovanni Keplero, vissuto tra il 1571 e il 1630, il quale, avvalendosi delle precise osservazioni astronomiche raccolte dal proprio maestro, il danese Tycho Brahe, dimostrò che i pianeti non si muovono, come si era fino ad allora supposto anche dagli stessi sostenitori del sistema copernicano, lungo orbite perfettamente circolari, ritenute da sempre le uniche compatibili con la perfezione del mondo celeste secondo l'antica distinzione aristotelica tra mondo sublunare e mondo sovralunare, esaminata nel tredicesimo capitolo di questo manuale, ma lungo orbite di forma ellittica, con il Sole collocato in uno dei due fuochi dell'ellisse. Questa scoperta, insieme alle altre due leggi formulate da Keplero sul moto dei pianeti, rappresentò un decisivo superamento non solo del modello geocentrico tradizionale, ma della stessa idea, di origine platonico-aristotelica, secondo cui il moto circolare costituisse necessariamente la forma più perfetta e propria del mondo celeste.</p>
+
+  <p class="titolo-capitolo">Galileo Galilei e il metodo scientifico</p>
+  <p>La figura che più di ogni altra incarna, sul piano filosofico e metodologico, la rivoluzione scientifica è tuttavia quella di Galileo Galilei, nato a Pisa nel 1564: perfezionato il telescopio, allora da poco inventato, ed effettuando con esso importanti osservazioni astronomiche, come le fasi di Venere, i satelliti di Giove e le montagne presenti sulla superficie della Luna, Galileo fornì significative conferme osservative a favore del sistema copernicano, contribuendo in modo decisivo alla sua progressiva accettazione presso la comunità scientifica europea, nonostante la ferma opposizione delle autorità ecclesiastiche, culminata nel celebre processo del 1633, al termine del quale Galileo fu costretto ad abiurare pubblicamente la teoria eliocentrica.</p>
+  <p>Al di là dei singoli risultati osservativi, il contributo filosoficamente più rilevante di Galileo riguarda tuttavia l'elaborazione di un metodo scientifico rigoroso, fondato sulla convinzione, espressa nella celebre immagine del libro della natura, secondo cui l'universo sarebbe scritto in linguaggio matematico, e risulterebbe dunque comprensibile solo a chi sappia leggerne i caratteri, costituiti, secondo la nota espressione dello stesso Galileo, da triangoli, cerchi e altre figure geometriche. Il metodo galileiano si articola tradizionalmente in due momenti complementari: un momento risolutivo, o analitico, in cui si osservano attentamente i fenomeni naturali per individuarne, per via sensata ed esperienza, le regolarità quantitative sottostanti, spesso isolando artificialmente, attraverso l'esperimento, le variabili rilevanti dal contesto naturale complesso in cui normalmente si presentano; e un momento compositivo, o sintetico, in cui tali regolarità vengono espresse in forma di leggi matematiche generali, dalle quali sia possibile dedurre, per via geometrica e per certe dimostrazioni, previsioni verificabili su nuovi fenomeni non ancora osservati.</p>
+  <p><em>Esempio:</em> nello studio del moto dei gravi, cioè della caduta dei corpi, Galileo non si limitò a osservare genericamente che gli oggetti cadono, ma isolò sperimentalmente, attraverso l'uso di piani inclinati che rallentavano artificialmente la caduta rendendola misurabile con gli strumenti dell'epoca, la relazione matematica precisa che lega lo spazio percorso al tempo trascorso, giungendo così a formulare la legge di caduta dei gravi in forma di rapporto quantitativo rigoroso, e non di semplice descrizione qualitativa approssimativa.</p>
+
+  <p class="titolo-capitolo">La distinzione tra qualità primarie e secondarie</p>
+  <p>Un ulteriore contributo filosofico di Galileo, destinato a esercitare grande influenza sulla filosofia moderna successiva, riguarda la distinzione tra qualità primarie e qualità secondarie degli oggetti naturali: le prime, come la forma, la grandezza, il numero, la posizione e il movimento, appartengono, secondo Galileo, oggettivamente e realmente ai corpi, indipendentemente da chi li osserva, e sono le uniche suscettibili di trattazione matematica rigorosa; le seconde, come il colore, il sapore, l'odore o il suono, dipendono invece, secondo Galileo, non da proprietà oggettive dei corpi, ma dall'interazione tra i corpi stessi e gli organi di senso di chi percepisce, e per questo non potrebbero sussistere, in quanto tali, indipendentemente da un soggetto percipiente. Questa distinzione, che riprende in forma nuova un'intuizione già presente, come si è visto nel settimo capitolo di questo manuale, in Democrito, a proposito della differenza tra ciò che esiste "per natura" e ciò che esiste "per convenzione", pone le premesse per una concezione della natura interamente descrivibile in termini quantitativi e matematici, destinata a diventare uno dei presupposti fondamentali della scienza moderna.</p>
+
+  <p class="titolo-capitolo">Il superamento della fisica aristotelica</p>
+  <p>Sul piano più propriamente fisico, Galileo contribuì in modo decisivo al superamento della fisica aristotelica esaminata nel tredicesimo capitolo di questo manuale, in particolare della distinzione tra un mondo sublunare corruttibile, soggetto a movimento naturale rettilineo, e un mondo celeste incorruttibile, soggetto a movimento naturale circolare: le osservazioni telescopiche delle montagne lunari e delle cosiddette "macchie solari" mostrarono infatti che anche i corpi celesti presentano imperfezioni e mutamenti, analoghi a quelli osservabili sulla Terra, mettendo in crisi la netta separazione qualitativa tra i due ordini di realtà su cui si fondava la cosmologia aristotelico-tolemaica. Galileo formulò inoltre, sia pure non ancora nella forma pienamente generale che avrebbe assunto in seguito nella fisica di Isaac Newton, un primo principio di inerzia, secondo cui un corpo in movimento, in assenza di forze esterne che lo contrastino, tende a conservare indefinitamente il proprio stato di moto, in aperto contrasto con la fisica aristotelica, secondo cui invece ogni movimento richiederebbe l'azione continua di un motore per potersi mantenere.</p>
+
+  <p class="titolo-capitolo">Le conseguenze filosofiche della rivoluzione scientifica</p>
+  <p>La rivoluzione scientifica ebbe conseguenze filosofiche di portata assai più ampia rispetto ai soli risultati specifici raggiunti in campo astronomico e fisico: la sostituzione di un universo finito, gerarchicamente ordinato e centrato sulla Terra, con un universo concepito come uno spazio omogeneo, retto ovunque dalle medesime leggi matematiche, senza più distinzione qualitativa tra mondo celeste e mondo terrestre, comportò infatti un profondo mutamento nella concezione stessa del posto dell'uomo nella natura, ponendo con urgenza rinnovata questioni filosofiche di grande rilievo riguardo al rapporto tra scienza e fede religiosa, tra necessità naturale e libertà umana, e riguardo al fondamento e ai limiti della conoscenza scientifica stessa: tutte questioni che, come vedremo nei prossimi capitoli di questo manuale, costituiranno il terreno privilegiato su cui si svilupperà l'intera riflessione filosofica moderna, a partire dal tentativo, compiuto dal filosofo inglese Francesco Bacone, di sistematizzare filosoficamente il nuovo metodo scientifico fondato sull'osservazione e l'esperimento.</p>
+</div>
+<!-- fine capitolo filosofia 18 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil19.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

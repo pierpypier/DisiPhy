@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 17</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 17: Umanesimo e Rinascimento -->
+<div id="capitolo-17-umanesimo-rinascimento" class="capitolo-storia">
+  <p class="titolo-capitolo">17 - Umanesimo e Rinascimento - Classe 4</p>
+
+  <p class="titolo-capitolo">Un nuovo orizzonte storico e culturale</p>
+  <p>Come si è accennato al termine del capitolo precedente di questo manuale, tra il XIV e il XV secolo il faticoso equilibrio tra fede e ragione costruito dalla scolastica matura, culminata nel pensiero di Tommaso d'Aquino, entrò progressivamente in crisi, mentre il contesto storico, sociale ed economico dell'Europa mutava in modo profondo: lo sviluppo delle città e dei commerci, l'affermarsi di una nuova classe di mercanti e banchieri, in particolare nei centri urbani dell'Italia centro-settentrionale, e la riscoperta diretta, spesso attraverso manoscritti giunti anche dal mondo bizantino dopo la caduta di Costantinopoli nel 1453, delle opere letterarie e filosofiche dell'antichità classica greca e romana, favorirono l'emergere di un nuovo clima culturale, convenzionalmente indicato con i termini di Umanesimo, per il periodo compreso indicativamente tra la metà del Trecento e la fine del Quattrocento, e di Rinascimento, per il secolo successivo, sebbene i due termini vengano spesso impiegati, soprattutto per l'ambito filosofico, in modo in parte sovrapponibile.</p>
+
+  <p class="titolo-capitolo">La centralità dell'uomo</p>
+  <p>Il tratto più caratteristico del pensiero umanistico e rinascimentale, che ne giustifica il nome stesso, riguarda una nuova e più fiduciosa concezione della dignità e delle possibilità dell'essere umano: se la filosofia medievale esaminata nel capitolo precedente di questo manuale aveva concentrato la propria attenzione soprattutto sul rapporto tra l'uomo e Dio, all'interno di una visione gerarchica e teocentrica del cosmo, gli umanisti posero invece l'uomo stesso, la sua libertà, la sua capacità creativa e la sua posizione del tutto particolare nell'ordine della natura, al centro della propria riflessione, senza necessariamente rinnegare la fede cristiana, ma affiancandole un rinnovato interesse per le lettere, le arti e le scienze proprie della tradizione classica greco-romana, riscoperte e studiate ora non più solo come strumento al servizio della teologia, ma per il loro intrinseco valore culturale e formativo.</p>
+  <p>Questa nuova fiducia nelle capacità dell'uomo trovò espressione filosofica particolarmente compiuta nell'opera di Giovanni Pico della Mirandola, filosofo nato nel 1463 nei pressi di Modena, autore del celebre Discorso sulla dignità dell'uomo, testo composto come introduzione a novecento tesi filosofiche e teologiche che Pico intendeva discutere pubblicamente a Roma: in questo scritto, Pico immagina che Dio, dopo aver assegnato a ogni altra creatura un posto e una natura fissa e determinata all'interno dell'ordine cosmico, si sia rivolto all'uomo affidandogli, unico fra tutti gli esseri, una natura indefinita, priva di collocazione prestabilita, affinché fosse egli stesso, in piena libertà, a determinare la propria condizione, potendo scegliere di degradarsi fino al livello delle creature inferiori oppure di elevarsi, attraverso la conoscenza e la virtù, fino alla condizione delle realtà divine. <em>Esempio:</em> mentre un animale nasce già interamente determinato nella propria natura specifica, incapace di modificarla, l'uomo, secondo Pico, nasce privo di una natura fissa, e proprio in questa indeterminazione originaria, che lo obbliga a scegliere consapevolmente chi diventare, risiederebbe la sua peculiare dignità rispetto a ogni altra creatura.</p>
+
+  <p class="titolo-capitolo">Il platonismo rinascimentale</p>
+  <p>Un ruolo culturale di primo piano nell'Italia del Rinascimento fu svolto dall'Accademia neoplatonica fiorentina, fondata sotto il patrocinio della famiglia dei Medici e diretta dal filosofo Marsilio Ficino, nato nel 1433, il quale si dedicò in particolare alla traduzione in latino dell'intera opera di Platone, esaminata nel decimo e nell'undicesimo capitolo di questo manuale, favorendone così una conoscenza diretta e non più mediata, come era avvenuto per larga parte del Medioevo, dalla sola tradizione aristotelica: attraverso Ficino, e in seguito lo stesso Pico della Mirandola, la filosofia rinascimentale italiana recuperò così anche l'eredità neoplatonica di Plotino, già esaminata nel quindicesimo capitolo di questo manuale, reinterpretandola in una nuova sintesi con il pensiero cristiano, particolarmente attenta alla dimensione spirituale e magico-naturalistica dell'uomo e del cosmo.</p>
+
+  <p class="titolo-capitolo">Niccolò Machiavelli e l'autonomia della politica</p>
+  <p>Un contributo filosoficamente originale e di enorme influenza storica venne, nello stesso periodo, dal fiorentino Niccolò Machiavelli, nato nel 1469, autore del celebre trattato Il Principe, composto nel 1513: diversamente dalla tradizione politica precedente, da Platone e Aristotele, esaminati nell'undicesimo e nel tredicesimo capitolo di questo manuale, fino alla riflessione politica medievale, che avevano sempre concepito la politica in stretto rapporto con l'etica e, nel Medioevo, con la teologia, Machiavelli propose una considerazione della politica come ambito autonomo, retto da leggi proprie, da studiare a partire dall'osservazione realistica e disincantata dei comportamenti umani effettivi, e non a partire da modelli ideali astratti di come gli uomini dovrebbero comportarsi.</p>
+  <p>Secondo questa impostazione, che la tradizione successiva ha talvolta riassunto, semplificando, nella formula secondo cui "il fine giustifica i mezzi", pur non essendo questa un'espressione letterale utilizzata da Machiavelli stesso, il buon governante, per conservare e rafforzare lo stato, può talvolta essere costretto ad agire in modo non conforme alla morale comune, qualora ciò risulti necessario per il bene superiore della stabilità politica: Machiavelli non intendeva con questo negare il valore della moralità in generale, ma piuttosto sottolineare come la sfera della politica, avendo per fine proprio la conservazione dello stato, non possa essere valutata secondo i medesimi criteri etici propri della morale individuale, aprendo così la strada a una riflessione sulla specificità della ragione politica che avrebbe conosciuto notevoli sviluppi nella filosofia moderna successiva.</p>
+
+  <p class="titolo-capitolo">La nuova visione della natura</p>
+  <p>Il clima culturale rinascimentale favorì infine anche un rinnovato interesse per lo studio della natura, non più affrontata prevalentemente attraverso la mediazione dei testi aristotelici tradizionali, come era avvenuto per gran parte del Medioevo, ma attraverso un contatto più diretto con l'esperienza e con l'osservazione, in un clima intellettuale che avrebbe progressivamente preparato le condizioni per la rivoluzione scientifica del secolo successivo: tra le figure di maggiore originalità in questo ambito si può ricordare Giordano Bruno, filosofo nato nel 1548, sostenitore di una concezione dell'universo infinito e popolato da infiniti mondi, in aperta rottura con la tradizione cosmologica aristotelico-tolemaica, per la quale, insieme ad altre posizioni filosofiche e teologiche non ortodosse, fu condannato al rogo a Roma nel 1600, in un episodio che segna con tragica evidenza le tensioni e i conflitti che il rinnovamento filosofico e scientifico rinascimentale poteva talvolta suscitare.</p>
+
+  <p class="titolo-capitolo">Verso la rivoluzione scientifica</p>
+  <p>Il pensiero umanistico e rinascimentale, con la sua rinnovata fiducia nelle capacità dell'uomo, con il recupero diretto delle fonti filosofiche classiche e con l'interesse crescente per un'osservazione più diretta e autonoma della natura, costituisce un importante momento di passaggio tra la filosofia medievale, esaminata nel capitolo precedente di questo manuale, e la filosofia moderna, di cui questo capitolo inaugura la trattazione prevista per il programma della classe quarta: come vedremo nel prossimo capitolo di questo manuale, sarà proprio a partire da questo nuovo clima culturale che prenderà avvio, tra la fine del Cinquecento e l'inizio del Seicento, la rivoluzione scientifica, un mutamento radicale nel modo di concepire la natura e il metodo per conoscerla, destinato a trasformare in profondità anche la riflessione filosofica successiva.</p>
+</div>
+<!-- fine capitolo filosofia 17 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil18.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

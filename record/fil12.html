@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 12</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 12: Aristotele, metafisica e logica -->
+<div id="capitolo-12-aristotele-metafisica-logica" class="capitolo-storia">
+  <p class="titolo-capitolo">12 - Aristotele: metafisica e logica - Classe 3</p>
+
+  <p class="titolo-capitolo">Vita di Aristotele e il rapporto con Platone</p>
+  <p>Aristotele nacque a Stagira, città della Calcidica nella Grecia settentrionale, nel 384 a.C., figlio di un medico alla corte macedone: a diciassette anni si trasferì ad Atene per entrare a far parte dell'Accademia fondata da Platone, esaminata nel decimo capitolo di questo manuale, dove rimase come allievo e collaboratore per circa vent'anni, fino alla morte del maestro, avvenuta nel 347 a.C. Successivamente, dopo un periodo trascorso in Asia Minore e a Mitilene, e dopo alcuni anni presso la corte macedone come precettore del giovane Alessandro, futuro Alessandro Magno, Aristotele fece ritorno ad Atene nel 335 a.C., dove fondò una propria scuola filosofica, il Liceo, chiamata anche scuola peripatetica dal termine greco peripatos, forse in riferimento al portico coperto in cui si tenevano le lezioni, o all'abitudine di discutere passeggiando. Pur avendo profondamente assimilato l'insegnamento platonico, Aristotele se ne distanziò in molti aspetti fondamentali, elaborando un sistema filosofico originale, tradizionalmente riassunto nell'espressione, tratta da un'opera a lui attribuita, secondo cui, pur amando Platone, egli riteneva doveroso anteporre la verità all'amicizia per il maestro.</p>
+  <p>Diversamente da Platone, che affidò il proprio pensiero a dialoghi destinati a un pubblico colto ma non specialistico, gran parte delle opere di Aristotele oggi conservate, come la Metafisica, la Fisica o l'Etica Nicomachea, sono in realtà appunti destinati alle lezioni tenute all'interno del Liceo, caratterizzati da uno stile per lo più asciutto, tecnico e sistematico, assai diverso dalla forma dialogica e letteraria propria del maestro.</p>
+
+  <p class="titolo-capitolo">La critica alla teoria platonica delle idee</p>
+  <p>Uno dei punti di maggiore distanza tra Aristotele e Platone riguarda proprio la teoria delle idee, esaminata nel decimo capitolo di questo manuale: secondo Aristotele, collocare le idee, cioè le essenze universali delle cose, in un mondo separato e distinto da quello sensibile, come faceva Platone, non solo non risolve, ma anzi duplica inutilmente il problema della conoscenza, poiché resta da spiegare come le cose sensibili possano davvero "partecipare" a un'idea situata in una realtà del tutto separata da esse; un'obiezione che lo stesso Platone, come si è ricordato nel decimo capitolo, aveva in parte già avvertito nel dialogo Parmenide, con la celebre difficoltà nota come "argomento del terzo uomo". Per questa ragione Aristotele sostiene che l'essenza universale delle cose, che egli chiama forma, non esiste separata dalle cose sensibili in un mondo a parte, ma è immanente, cioè presente e operante direttamente all'interno delle cose sensibili stesse, di cui costituisce la struttura intelligibile: un cavallo particolare, per Aristotele, non "partecipa" a un'idea di cavallo esistente altrove, ma possiede in se stesso, unita alla materia di cui è fatto, la propria forma specifica di cavallo.</p>
+
+  <p class="titolo-capitolo">Sostanza, materia e forma</p>
+  <p>Il concetto centrale della filosofia aristotelica è quello di sostanza, termine con cui Aristotele indica ciò che esiste "in sé e per sé", e non semplicemente come proprietà o modificazione di qualcos'altro: le sostanze, per Aristotele, sono innanzitutto le cose individuali concrete, come questo particolare cavallo o quel particolare albero, e non, come pensava Platone, le idee universali. Ogni sostanza sensibile, secondo Aristotele, risulta dalla composizione di due princìpi inseparabili, la materia, cioè il sostrato indeterminato di cui la cosa è fatta, e la forma, cioè la struttura specifica ed essenziale che organizza quella materia rendendola una determinata cosa e non un'altra: la materia, presa isolatamente, rappresenta soltanto una possibilità, o potenza, di diventare una determinata cosa, mentre la forma rappresenta l'attuazione, o atto, di tale possibilità. <em>Esempio:</em> un blocco di marmo grezzo possiede in potenza la forma di una statua, ma diviene effettivamente statua, cioè passa dalla potenza all'atto, solo quando lo scultore imprime in esso, attraverso il proprio lavoro, la forma specifica desiderata.</p>
+  <p>Questa distinzione tra potenza e atto permette ad Aristotele di spiegare, diversamente da Parmenide, esaminato nel quinto capitolo di questo manuale, come sia possibile il movimento e il divenire senza per questo ammettere che qualcosa nasca dal puro nulla: il divenire, per Aristotele, non è infatti passaggio dal non-essere assoluto all'essere, ma passaggio da uno stato di potenza, cioè di possibilità reale già in qualche modo presente nella cosa, a uno stato di atto, cioè di piena realizzazione di tale possibilità, offrendo così una soluzione originale a un problema che, come si è visto nel settimo capitolo di questo manuale, aveva già impegnato a fondo i fisici pluralisti.</p>
+
+  <p class="titolo-capitolo">Le quattro cause</p>
+  <p>Per spiegare compiutamente la realtà di ogni cosa esistente, e in particolare il suo mutamento, Aristotele individua quattro tipi di cause, cioè quattro diverse ragioni esplicative complementari tra loro: la causa materiale, cioè la materia di cui una cosa è costituita; la causa formale, cioè la forma o essenza che tale materia assume; la causa efficiente, cioè l'agente che produce concretamente il mutamento, dando avvio al passaggio dalla potenza all'atto; e la causa finale, cioè lo scopo o fine, in greco telos, in vista del quale il mutamento stesso si realizza. Aristotele attribuisce un'importanza particolare alla causa finale, ritenendo che in natura nulla avvenga a caso, ma che ogni processo naturale sia orientato verso il pieno compimento della propria forma specifica, secondo una concezione della natura di tipo teleologico, cioè finalistico, assai diversa dalla spiegazione puramente meccanica e casuale proposta in precedenza da Democrito, di cui si è parlato nel settimo capitolo di questo manuale.</p>
+
+  <p class="titolo-capitolo">Il motore immobile</p>
+  <p>Nella Metafisica, opera il cui stesso titolo deriva dalla collocazione, nell'ordinamento antico degli scritti aristotelici, "dopo la fisica", Aristotele affronta lo studio dell'essere in quanto tale, indipendentemente dalle sue particolari determinazioni sensibili, giungendo a postulare l'esistenza di una sostanza suprema, eterna, immobile e immateriale, che egli chiama motore immobile: si tratta di una causa ultima, necessaria per spiegare l'eternità del movimento cosmico, che muove tutte le altre cose senza essere a sua volta mossa da nient'altro, agendo non come causa efficiente che spinge meccanicamente, ma come causa finale, cioè come oggetto di amore e desiderio verso cui l'intero cosmo tende, in una condizione di perfetta e immutabile attività di pensiero, consistente, secondo la celebre definizione aristotelica, in un pensiero che pensa se stesso.</p>
+
+  <p class="titolo-capitolo">La logica e le categorie</p>
+  <p>Ad Aristotele si deve inoltre la fondazione della logica come disciplina autonoma e sistematica, raccolta in un gruppo di opere note complessivamente come Organon, cioè "strumento", in quanto concepite come strumento propedeutico a ogni altra forma di indagine razionale: in questo ambito, Aristotele elabora innanzitutto la dottrina delle categorie, cioè dei dieci generi supremi a cui è possibile ricondurre ogni possibile predicato attribuibile a una sostanza, come la qualità, la quantità, la relazione o il luogo, offrendo così una prima classificazione sistematica dei modi fondamentali dell'essere. Ad Aristotele si deve inoltre la formulazione rigorosa del sillogismo, cioè di un particolare tipo di ragionamento deduttivo che, a partire da due premesse poste come vere, permette di ricavare necessariamente una conclusione: un procedimento che sistematizza in forma rigorosa il tipo di argomentazione logica di cui, come si è visto a proposito di Zenone nel sesto capitolo di questo manuale, i filosofi greci facevano già uso, ma che solo con Aristotele trova una formulazione teorica esplicita e generale.</p>
+
+  <p class="titolo-capitolo">Verso la filosofia pratica di Aristotele</p>
+  <p>Il sistema filosofico elaborato da Aristotele nella Metafisica e nell'Organon, fondato sui concetti di sostanza, forma, causa e sillogismo, costituisce la base teorica su cui egli avrebbe sviluppato anche un'ampia riflessione sulla natura fisica e sulla vita pratica dell'uomo, articolata in particolare nell'ambito dell'etica e della politica: temi che, come vedremo nel prossimo capitolo di questo manuale, Aristotele affronterà con la medesima originalità e sistematicità già mostrate nella propria riflessione teoretica, elaborando in particolare, in aperta discussione critica con l'eredità di Socrate e Platone esaminata nei capitoli precedenti, una concezione della virtù e della felicità umana che avrebbe esercitato un'influenza filosofica durevole fino ai giorni nostri.</p>
+</div>
+<!-- fine capitolo filosofia 12 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil13.html">Vai al Capitolo successivo</a></p>
+</div>
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
