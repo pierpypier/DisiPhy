@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 32</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 32: Marx, materialismo storico e critica del capitalismo -->
+<div id="capitolo-32-marx-materialismo-storico" class="capitolo-storia">
+  <p class="titolo-capitolo">32 - Marx: materialismo storico e critica del capitalismo - Classe 5</p>
+
+  <p class="titolo-capitolo">Vita di Marx e la formazione hegeliana</p>
+  <p>Karl Marx nacque a Treviri, in Renania, nel 1818, e si formò filosoficamente in un ambiente fortemente segnato dall'eredità di Hegel, esaminata nel trentesimo capitolo di questo manuale, entrando in contatto, negli anni giovanili trascorsi a Berlino, con la cerchia della sinistra hegeliana esaminata nel capitolo precedente di questo manuale: costretto a lasciare la Germania per le proprie posizioni politiche radicali, Marx visse gran parte della propria esistenza in esilio, prima a Parigi e a Bruxelles, e infine a Londra, dove morì nel 1883, dedicandosi, spesso in condizioni economiche assai difficili e sostenuto dall'amico e collaboratore Friedrich Engels, alla stesura delle proprie opere principali, tra cui i Manoscritti economico-filosofici del 1844, il Manifesto del partito comunista, redatto insieme a Engels nel 1848, e la monumentale opera incompiuta Il capitale, il cui primo volume fu pubblicato nel 1867.</p>
+
+  <p class="titolo-capitolo">Il rovesciamento materialistico della dialettica hegeliana</p>
+  <p>Come si è accennato al termine del capitolo precedente di questo manuale, Marx riconobbe pienamente il merito di Feuerbach nell'aver smascherato il meccanismo dell'alienazione religiosa, restituendo centralità all'uomo concreto contro l'astrattezza dell'idealismo hegeliano, ma gli rimproverò di essersi fermato a un'analisi ancora troppo generica e astratta, priva di un'adeguata indagine delle concrete condizioni storiche e sociali in cui l'uomo reale si trova effettivamente a vivere: per Marx, infatti, non basta correggere filosoficamente l'idealismo hegeliano sostituendo all'idea assoluta l'uomo naturale e sensibile in generale, come aveva fatto Feuerbach, ma occorre comprendere l'uomo concreto sempre situato all'interno di rapporti sociali ed economici storicamente determinati, che ne condizionano in profondità la stessa coscienza.</p>
+  <p>Sul piano più propriamente metodologico, Marx riprese dalla filosofia di Hegel, esaminata nel trentesimo capitolo di questo manuale, lo strumento della dialettica, cioè l'idea di uno sviluppo storico procedente per contraddizioni e superamenti successivi, ma ne compì un rovesciamento radicale, capovolgendone il fondamento: mentre per Hegel il motore dello sviluppo storico era costituito dallo spirito, cioè da un principio essenzialmente ideale e razionale che si realizza progressivamente nella storia, per Marx il motore reale della storia va invece individuato nelle condizioni materiali di esistenza degli uomini, in particolare nel modo in cui essi organizzano, in ogni epoca storica, la produzione dei beni necessari alla propria sopravvivenza: da questo capovolgimento, riassunto nella celebre immagine secondo cui occorre rimettere la dialettica hegeliana "con i piedi per terra", dopo che Hegel l'avrebbe lasciata "capovolta sulla testa", nasce la dottrina nota come materialismo storico, o materialismo dialettico.</p>
+
+  <p class="titolo-capitolo">Struttura e sovrastruttura</p>
+  <p>Secondo il materialismo storico, ogni società, in ogni epoca della propria storia, si fonda su una struttura economica, costituita dall'insieme dei rapporti di produzione, cioè dei rapporti sociali che gli uomini instaurano tra loro nel processo di produzione dei beni materiali, in stretta relazione con le forze produttive disponibili in quel determinato momento storico, cioè con il grado di sviluppo tecnico e con gli strumenti di lavoro effettivamente utilizzabili: su questa struttura economica, secondo Marx, si erge poi una sovrastruttura, comprendente le istituzioni giuridiche e politiche, ma anche le forme di coscienza collettiva, come la religione, la filosofia, l'arte e il diritto, che non costituiscono ambiti autonomi e indipendenti, come si potrebbe ingenuamente supporre, ma risultano condizionati, in ultima istanza, proprio dalla struttura economica sottostante.</p>
+  <p>Da questa impostazione discende una tesi filosoficamente rilevante, secondo cui non è la coscienza degli uomini a determinare il loro essere sociale, ma è al contrario il loro essere sociale, cioè le concrete condizioni materiali ed economiche in cui vivono, a determinare la loro coscienza: le idee dominanti in una determinata epoca storica, secondo Marx, tendono così a riflettere, spesso in modo non consapevole, gli interessi della classe sociale che detiene il controllo dei mezzi di produzione, svolgendo talvolta una funzione ideologica, cioè di mascheramento e giustificazione apparentemente neutrale di rapporti di potere e di sfruttamento in realtà storicamente determinati e non naturali o eterni.</p>
+
+  <p class="titolo-capitolo">La lotta di classe come motore della storia</p>
+  <p>Nel Manifesto del partito comunista, Marx ed Engels sintetizzano la propria concezione della storia umana nella celebre affermazione secondo cui la storia di ogni società fino ad oggi esistita è storia di lotte tra classi sociali contrapposte, cioè tra gruppi umani definiti dalla propria diversa posizione all'interno dei rapporti di produzione, in particolare a seconda che possiedano o meno i mezzi di produzione, come la terra, le officine o i macchinari: secondo Marx, ogni epoca storica sarebbe caratterizzata da un conflitto strutturale tra una classe dominante, proprietaria dei mezzi di produzione, e una classe subordinata, costretta a vendere la propria forza lavoro per sopravvivere, un conflitto che, giunto a un determinato grado di maturazione, provocherebbe periodicamente il superamento rivoluzionario di un determinato assetto sociale ed economico e il passaggio a una nuova fase storica, secondo un processo dialettico applicato non più, come in Hegel, allo sviluppo dello spirito, ma allo sviluppo reale dei rapporti economici e sociali.</p>
+
+  <p class="titolo-capitolo">L'analisi del capitalismo e il concetto di plusvalore</p>
+  <p>Nell'opera Il capitale, Marx sottopose ad analisi rigorosa e sistematica il funzionamento specifico del modo di produzione capitalistico proprio della propria epoca, caratterizzato dalla contrapposizione tra la borghesia, classe proprietaria dei mezzi di produzione, e il proletariato, classe dei lavoratori salariati privi di tali mezzi e costretti, per sopravvivere, a vendere sul mercato la propria forza lavoro: al centro di questa analisi si colloca il concetto di plusvalore, elaborato da Marx a partire da una rielaborazione critica della teoria del valore-lavoro già presente, in forma diversa, nell'economia politica classica di autori come Adam Smith, esaminato nel venticinquesimo capitolo di questo manuale.</p>
+  <p>Secondo Marx, il valore di una merce dipende, in ultima analisi, dalla quantità di lavoro socialmente necessario per produrla; anche la forza lavoro dell'operaio, venduta sul mercato al capitalista in cambio di un salario, costituisce a sua volta una merce, il cui valore corrisponde al costo dei beni necessari alla sussistenza e alla riproduzione del lavoratore stesso: tuttavia, sostiene Marx, la forza lavoro possiede una caratteristica del tutto peculiare rispetto a ogni altra merce, poiché è in grado di produrre, nel corso della giornata lavorativa, un valore complessivamente superiore a quello corrispondente al proprio stesso costo di sussistenza, cioè al salario effettivamente percepito. <em>Esempio:</em> se in poche ore di lavoro giornaliero l'operaio produce già un valore sufficiente a coprire il proprio salario, le ore di lavoro rimanenti, pur ugualmente retribuite secondo il medesimo salario complessivo pattuito, generano un valore aggiuntivo, non remunerato all'operaio, che Marx chiama appunto plusvalore, e che viene invece trattenuto dal capitalista come profitto.</p>
+  <p>Questa estrazione sistematica di plusvalore costituisce, secondo Marx, il meccanismo strutturale dello sfruttamento proprio del modo di produzione capitalistico, non riconducibile alla semplice cattiveria individuale di singoli imprenditori, ma insito nella stessa logica oggettiva del sistema economico capitalistico, fondato sulla proprietà privata dei mezzi di produzione e sulla vendita della forza lavoro come merce.</p>
+
+  <p class="titolo-capitolo">Alienazione del lavoro e prospettiva rivoluzionaria</p>
+  <p>Già nei Manoscritti economico-filosofici del 1844, Marx aveva descritto, riprendendo in un nuovo contesto il concetto di alienazione già impiegato da Feuerbach in ambito religioso ed esaminato nel capitolo precedente di questo manuale, la condizione del lavoratore all'interno del sistema capitalistico come una forma di alienazione del lavoro, articolata secondo diversi aspetti complementari: l'operaio risulta alienato rispetto al prodotto del proprio lavoro, che non gli appartiene ma diviene proprietà del capitalista; alienato rispetto alla stessa attività lavorativa, vissuta non come libera espressione delle proprie capacità creative, ma come attività coatta e ripetitiva imposta dall'esterno; alienato, di conseguenza, anche rispetto alla propria natura specificamente umana, cioè alla propria capacità di lavorare creativamente e consapevolmente sulla natura; e infine alienato rispetto agli altri uomini, con cui il rapporto viene mediato e ridotto a mera relazione di concorrenza economica.</p>
+  <p>Da questa analisi complessiva delle contraddizioni proprie del sistema capitalistico, Marx trasse la convinzione, di natura insieme teorica e politicamente militante, che tali contraddizioni fossero destinate, con lo sviluppo storico, ad acuirsi progressivamente fino a rendere necessario e storicamente inevitabile un rovesciamento rivoluzionario dei rapporti di produzione esistenti da parte del proletariato, conducendo, attraverso una fase transitoria di dittatura del proletariato, all'instaurazione di una società comunista, fondata sull'abolizione della proprietà privata dei mezzi di produzione e sul superamento, non più semplicemente teorico ma pratico e storico, delle diverse forme di alienazione precedentemente descritte.</p>
+
+  <p class="titolo-capitolo">L'eredità filosofica e storica di Marx</p>
+  <p>Il pensiero di Marx, per l'originalità della propria analisi critica del capitalismo e per la propria concezione materialistica della storia, ha esercitato un'influenza storica e filosofica di portata straordinaria nel corso dell'intero Novecento, ispirando, in forme e con esiti storici assai diversi tra loro, movimenti politici, rivoluzioni e regimi che hanno segnato profondamente la storia contemporanea, ben oltre l'ambito propriamente filosofico. Come vedremo nei prossimi capitoli di questo manuale, la seconda metà dell'Ottocento, oltre allo sviluppo e alla diffusione del pensiero marxista, conobbe anche altre importanti correnti filosofiche, per molti aspetti distanti dalla prospettiva di Marx, come la riflessione sulla volontà e sul pessimismo elaborata da Arthur Schopenhauer, di cui ci occuperemo nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo filosofia 32 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil33.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

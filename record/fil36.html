@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 36</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 36: Nietzsche, la crisi dei valori -->
+<div id="capitolo-36-nietzsche-crisi-valori" class="capitolo-storia">
+  <p class="titolo-capitolo">36 - Nietzsche: la crisi dei valori - Classe 5</p>
+
+  <p class="titolo-capitolo">Vita di Nietzsche e la formazione filologica</p>
+  <p>Friedrich Nietzsche nacque a Röcken, in Sassonia, nel 1844, e mostrò fin da giovanissimo straordinarie doti di studioso, tanto da ottenere, ancora prima del conseguimento del dottorato, la cattedra di filologia classica presso l'università di Basilea: fu proprio a partire da questa solida formazione sui testi della Grecia antica, in particolare sulla tragedia greca, che Nietzsche avviò la propria riflessione filosofica, esposta fin dalla prima importante opera, La nascita della tragedia, pubblicata nel 1872, per poi abbandonare progressivamente l'insegnamento accademico, a causa di una salute sempre più cagionevole, e dedicarsi interamente, negli anni successivi, alla propria produzione filosofica, caratterizzata da uno stile spesso aforistico, provocatorio e volutamente non sistematico, fino al crollo psichico definitivo che lo colpì nel 1889, e alla morte, sopraggiunta nel 1900.</p>
+
+  <p class="titolo-capitolo">Apollineo e dionisiaco</p>
+  <p>Ne La nascita della tragedia, Nietzsche individua alla base della cultura e dell'arte greca antica, già esaminata nei primi capitoli di questo manuale, due principi opposti e complementari tra loro, che egli chiama, riprendendo i nomi di due divinità greche, apollineo e dionisiaco: l'apollineo rappresenta il principio della misura, dell'ordine razionale, dell'armonia formale e dell'individuazione, cioè della chiara distinzione tra le singole forme; il dionisiaco rappresenta invece il principio opposto, quello dell'ebbrezza, dell'istinto vitale incontrollato, del caos primordiale e della dissoluzione dei confini individuali in un'unità indistinta e travolgente. Secondo Nietzsche, la grandezza ineguagliata della tragedia greca antica, in particolare quella di Eschilo e Sofocle, sarebbe consistita proprio nella straordinaria capacità di tenere insieme, in un equilibrio fecondo e mai più raggiunto nella storia successiva della cultura occidentale, questi due principi opposti, laddove la filosofia razionalistica inaugurata da Socrate, esaminato nel nono capitolo di questo manuale, avrebbe successivamente privilegiato in modo unilaterale il solo principio apollineo della ragione ordinatrice, soffocando la componente dionisiaca istintuale e vitale, a tutto danno, secondo Nietzsche, della pienezza e della vitalità dell'esistenza umana.</p>
+
+  <p class="titolo-capitolo">La morte di Dio</p>
+  <p>Il tema filosofico più celebre e influente dell'intera riflessione nietzschiana è senza dubbio quello della morte di Dio, annunciato in particolare nell'opera La gaia scienza, pubblicata nel 1882, attraverso il celebre racconto dell'uomo folle che, con una lanterna accesa in pieno giorno, corre per la piazza gridando di cercare Dio, per poi annunciare agli astanti sbigottiti e increduli che Dio è morto, e che siamo stati noi stessi, con le nostre stesse mani, a ucciderlo: con questa immagine provocatoria, Nietzsche non intende semplicemente affermare, in senso ateo, la non esistenza empirica di una divinità, quanto piuttosto denunciare il progressivo, ma ancora largamente inconsapevole, venir meno, nella cultura europea moderna, di ogni credibilità autentica dei valori religiosi, morali e metafisici tradizionali, che per secoli avevano fornito all'esistenza umana un fondamento e un senso ultimo garantito.</p>
+  <p>Questo evento epocale, secondo Nietzsche, apre una fase storica di grande pericolo ma anche di straordinaria possibilità, che egli definisce nichilismo, termine che indica la condizione in cui i valori supremi tradizionali, un tempo ritenuti oggettivi e assoluti, si svalutano progressivamente, lasciando l'uomo europeo privo di punti di riferimento stabili: Nietzsche distingue tuttavia tra un nichilismo passivo, incapace di reagire creativamente a questa perdita di senso e limitato a subirla con rassegnazione o disperazione, e un nichilismo attivo, capace invece di attraversare fino in fondo questa crisi radicale dei valori come condizione necessaria per l'elaborazione di nuovi valori autenticamente affermativi della vita.</p>
+
+  <p class="titolo-capitolo">La critica della morale e la genealogia dei valori</p>
+  <p>Nell'opera Genealogia della morale, pubblicata nel 1887, Nietzsche sviluppa un'originale indagine storico-filosofica sull'origine dei valori morali tradizionali, in particolare della distinzione tra bene e male propria della morale cristiana ed europea, sostenendo che tali valori non siano affatto eterni e oggettivi, come la tradizione filosofica e religiosa aveva sempre preteso, ma il prodotto storico di un preciso processo psicologico e sociale, che Nietzsche chiama risentimento: secondo questa ricostruzione genealogica, la morale tradizionale, che Nietzsche definisce polemicamente "morale degli schiavi", sarebbe nata storicamente come reazione rancorosa dei deboli e degli oppressi nei confronti dei forti, i quali, incapaci di affermarsi direttamente attraverso la forza vitale, avrebbero finito per rovesciare i valori originari propri di una più antica "morale dei signori", fondata sulla forza, sulla fierezza e sull'affermazione gioiosa della vita, sostituendo a tali valori, giudicati ormai come "male", nuovi valori opposti, come l'umiltà, la mansuetudine e la compassione, dichiarati invece "bene" proprio in quanto capaci di svalutare e limitare la forza vitale altrui temuta e invidiata.</p>
+
+  <p class="titolo-capitolo">L'oltreuomo e la volontà di potenza</p>
+  <p>Nell'opera Così parlò Zarathustra, pubblicata in più parti tra il 1883 e il 1885, e scritta in una forma letteraria particolarmente elaborata, a metà tra il poema filosofico e la parodia dei testi sacri religiosi, Nietzsche presenta, attraverso le parole del profeta persiano Zarathustra, la propria proposta filosofica positiva successiva alla diagnosi della morte di Dio e del nichilismo: la figura dell'oltreuomo, termine con cui Nietzsche indica un nuovo tipo di umanità, non ancora esistente ma auspicata, capace di superare la morale tradizionale del risentimento appena esaminata, e di affermare liberamente e creativamente nuovi valori, radicati non più in un fondamento trascendente esterno alla vita, come Dio o un ordine morale oggettivo assoluto, ma nella vita stessa, colta nella propria intima essenza, che Nietzsche identifica con la volontà di potenza, cioè con un impulso creativo e affermativo fondamentale, proprio di ogni essere vivente, teso al proprio continuo accrescimento, superamento e intensificazione, distinto dalla semplice volontà di sopravvivenza o dalla cieca volontà irrazionale già teorizzata da Schopenhauer, esaminata nel trentatreesimo capitolo di questo manuale, poiché per Nietzsche tale volontà non è affatto negativa, ma pienamente affermativa e gioiosamente creatrice.</p>
+  <p><em>Esempio:</em> Nietzsche descrive metaforicamente, all'inizio dello Zarathustra, tre successive metamorfosi dello spirito umano, paragonate a un cammello, che porta docilmente il peso dei valori e dei doveri imposti dalla tradizione, a un leone, che si ribella distruggendo criticamente tali valori ereditati in nome della propria libertà, e infine a un fanciullo, simbolo dell'oltreuomo, capace di creare liberamente e gioiosamente nuovi valori propri, senza più il peso del risentimento verso la tradizione appena superata, ma con l'innocenza e la spontaneità creativa proprie del gioco infantile.</p>
+
+  <p class="titolo-capitolo">L'eterno ritorno dell'uguale</p>
+  <p>Un'ultima dottrina di particolare rilievo e di non facile interpretazione, esposta anch'essa nello Zarathustra, è quella dell'eterno ritorno dell'uguale, secondo cui Nietzsche ipotizza che ogni singolo istante dell'esistenza, con tutte le proprie gioie e i propri dolori, sia destinato a ripetersi identicamente per un numero infinito di volte, in un ciclo cosmico privo di inizio e di fine: al di là della difficile questione di stabilire se Nietzsche intendesse tale dottrina come un'ipotesi cosmologica in senso proprio o piuttosto come un esperimento etico-esistenziale, il suo significato filosofico principale consiste nell'offrire un criterio radicale per valutare la piena affermazione della propria vita, invitando idealmente ciascun individuo a chiedersi se sarebbe disposto a volere che ogni singolo istante della propria esistenza, così come effettivamente vissuto, ritornasse identicamente per l'eternità, in una prova estrema di accettazione gioiosa e incondizionata dell'intera propria esistenza, senza rimpianti né desiderio di un'esistenza diversa da quella realmente vissuta.</p>
+
+  <p class="titolo-capitolo">L'eredità filosofica di Nietzsche</p>
+  <p>Il pensiero di Nietzsche, per la propria radicale critica della metafisica, della religione e della morale tradizionale occidentale, e per l'originalità delle proprie proposte filosofiche positive, come l'oltreuomo, la volontà di potenza e l'eterno ritorno, ha esercitato un'influenza filosofica e culturale di straordinaria portata sull'intero pensiero del Novecento, pur essendo stato talvolta oggetto, soprattutto nella prima metà del secolo, di strumentalizzazioni ideologiche del tutto estranee, e anzi contrarie, alle sue effettive intenzioni filosofiche. Come vedremo nei prossimi capitoli di questo manuale, la crisi dei fondamenti tradizionali della conoscenza e dell'esistenza umana diagnosticata da Nietzsche troverà ulteriori e diversi sviluppi, nel corso del Novecento, in ambiti differenti della riflessione filosofica, a cominciare dall'indagine sull'inconscio elaborata dal medico viennese Sigmund Freud, di cui ci occuperemo nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo filosofia 36 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil37.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

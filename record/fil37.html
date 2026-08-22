@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 37</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 37: Freud e la psicoanalisi -->
+<div id="capitolo-37-freud-psicoanalisi" class="capitolo-storia">
+  <p class="titolo-capitolo">37 - Freud e la psicoanalisi - Classe 5</p>
+
+  <p class="titolo-capitolo">Sigmund Freud e la scoperta dell'inconscio</p>
+  <p>Sigmund Freud nacque a Freiberg, in Moravia, nel 1856, e si formò come medico e neurologo a Vienna, città in cui avrebbe sviluppato, a partire dagli ultimi anni dell'Ottocento, la propria originale teoria della mente umana, nota come psicoanalisi: come si è visto al termine del capitolo precedente di questo manuale, la crisi dei fondamenti tradizionali della razionalità occidentale diagnosticata da Nietzsche trovò, nella riflessione freudiana, un ulteriore e per molti versi complementare sviluppo, sia pure condotto con strumenti concettuali e finalità in larga parte diverse, poiché Freud non si proponeva anzitutto un compito filosofico, ma clinico e scientifico, occupandosi in particolare della cura dei disturbi nervosi allora definiti isteria, attraverso l'osservazione clinica di pazienti, in stretta collaborazione, nella fase iniziale della propria ricerca, con il medico viennese Josef Breuer.</p>
+  <p>Il nucleo teorico più rivoluzionario dell'opera di Freud, esposto in particolare ne L'interpretazione dei sogni, pubblicata nel 1899, consiste nella scoperta, o quantomeno nella sistematizzazione scientifica rigorosa, dell'esistenza di una vasta regione della vita psichica sottratta al controllo della coscienza, che Freud chiama inconscio: diversamente dalla tradizione filosofica occidentale precedente, che tendeva a identificare la mente umana essenzialmente con la coscienza razionale, da Cartesio, esaminato nel ventesimo capitolo di questo manuale, fino a gran parte della filosofia moderna successiva, Freud sostenne che la maggior parte dei processi psichici che determinano concretamente il comportamento, i pensieri e persino le patologie nervose dell'individuo si svolgano al di fuori della consapevolezza cosciente, in una dimensione psichica autonoma, dotata di proprie leggi di funzionamento specifiche, distinte da quelle del pensiero razionale cosciente.</p>
+
+  <p class="titolo-capitolo">La prima topica: conscio, preconscio e inconscio</p>
+  <p>Nella propria prima sistematizzazione teorica dell'apparato psichico, nota come prima topica, Freud distingue tre diverse istanze, o regioni, della vita psichica: il conscio, corrispondente ai contenuti mentali di cui l'individuo è in quel momento direttamente consapevole; il preconscio, comprendente i contenuti non attualmente presenti alla coscienza, ma da essa richiamabili con un ordinario sforzo di attenzione, come un ricordo momentaneamente non presente alla mente ma facilmente rievocabile; e l'inconscio propriamente detto, comprendente invece contenuti psichici, in gran parte di natura pulsionale e legati a esperienze rimosse, del tutto inaccessibili alla coscienza ordinaria, se non attraverso specifiche procedure interpretative elaborate dalla stessa psicoanalisi.</p>
+
+  <p class="titolo-capitolo">La rimozione e l'interpretazione dei sogni</p>
+  <p>Un concetto centrale della teoria freudiana è quello di rimozione, cioè il meccanismo psichico attraverso cui determinati contenuti mentali, in particolare desideri e pulsioni ritenuti inaccettabili o socialmente inammissibili, vengono attivamente allontanati dalla coscienza e relegati nell'inconscio, senza tuttavia perdere per questo la propria carica psichica ed energetica, che continua a esercitare un'influenza indiretta e spesso patologica sul comportamento cosciente dell'individuo, manifestandosi in forme mascherate e trasfigurate, come i sintomi nevrotici, i lapsus linguistici, gli atti mancati e, in particolare, i sogni.</p>
+  <p>Proprio ai sogni Freud dedicò un'attenzione teorica particolarmente approfondita, ritenendoli, secondo la propria celebre definizione, "la via regia per la conoscenza dell'inconscio": distinguendo tra il contenuto manifesto del sogno, cioè la narrazione ricordata al risveglio, spesso incoerente e priva di senso apparente, e il contenuto latente, cioè il significato profondo e autentico, di natura desiderativa, nascosto dietro tale narrazione, Freud sostenne che ogni sogno rappresenti, sia pure in forma mascherata e simbolica, l'appagamento allucinatorio di un desiderio inconscio, reso irriconoscibile dal lavoro onirico, cioè da un insieme di meccanismi psichici, come la condensazione e lo spostamento, capaci di trasformare e mascherare i contenuti latenti inaccettabili in immagini oniriche manifeste apparentemente innocue, così da eludere la censura esercitata anche durante il sonno da un'istanza psichica di controllo.</p>
+
+  <p class="titolo-capitolo">La seconda topica: Es, Io e Super-io</p>
+  <p>Nella propria produzione più matura, in particolare nell'opera L'Io e l'Es, pubblicata nel 1922, Freud riformulò la propria concezione dell'apparato psichico secondo un nuovo modello, noto come seconda topica, articolato in tre istanze distinte, non più coincidenti direttamente con la precedente tripartizione tra conscio, preconscio e inconscio, ma configurate come vere e proprie strutture dinamiche in reciproco conflitto: l'Es, cioè il polo pulsionale della personalità, interamente inconscio, sede delle pulsioni istintuali primarie, in particolare quelle di natura sessuale, che Freud chiama libido, e regolato unicamente dal principio di piacere, cioè dalla tendenza a scaricare immediatamente ogni tensione pulsionale, senza alcun riguardo per la realtà esterna o per le norme sociali; l'Io, istanza mediatrice in parte cosciente e in parte inconscia, incaricata di conciliare, secondo il principio di realtà, le pulsioni provenienti dall'Es con i vincoli e le possibilità effettivamente offerte dal mondo esterno; e il Super-io, istanza interiorizzata, in gran parte inconscia, che rappresenta le norme morali e i divieti trasmessi soprattutto dalle figure genitoriali durante l'infanzia, esercitando una funzione di giudizio critico e talvolta di severa autocensura nei confronti dell'Io.</p>
+  <p><em>Esempio:</em> secondo il modello freudiano, l'Io si trova costantemente a mediare tra richieste contrastanti, paragonabile a un cavaliere che deve tenere a freno un cavallo dotato di energia propria molto superiore alla sua, l'Es, orientando la direzione della propria corsa secondo le condizioni reali del terreno da percorrere, la realtà esterna, e assecondando al contempo, per quanto possibile, le esigenze morali imposte da un severo giudice interiore che osserva costantemente ogni sua mossa, il Super-io.</p>
+
+  <p class="titolo-capitolo">Lo sviluppo psicosessuale e il complesso di Edipo</p>
+  <p>Un ulteriore aspetto centrale della teoria freudiana riguarda la concezione dello sviluppo psichico infantile come un percorso articolato in successive fasi psicosessuali, ciascuna caratterizzata dalla concentrazione della libido su una diversa zona corporea, dalla fase orale a quella anale fino alla fase genitale propriamente detta: nell'ambito di questo sviluppo, Freud attribuì un'importanza teorica centrale al cosiddetto complesso di Edipo, termine tratto dalla figura del celebre eroe della mitologia e della tragedia greca già incontrata indirettamente nei primi capitoli di questo manuale a proposito della cultura greca antica, con cui Freud designa un'intensa e conflittuale dinamica affettiva che si svilupperebbe, secondo la sua teoria, nel bambino tra i tre e i cinque anni di età circa, caratterizzata da un desiderio inconscio di possesso esclusivo nei confronti del genitore di sesso opposto e da un correlato sentimento di rivalità, ambivalenza e timore nei confronti del genitore dello stesso sesso: il superamento di tale complesso, attraverso la progressiva identificazione con il genitore rivale e l'interiorizzazione delle relative norme morali, contribuirebbe in modo decisivo, secondo Freud, alla formazione stessa del Super-io.</p>
+
+  <p class="titolo-capitolo">L'eredità filosofica e culturale della psicoanalisi</p>
+  <p>Il pensiero di Freud, pur nato in un contesto propriamente clinico e scientifico, esercitò un'influenza filosofica e culturale di portata straordinaria sull'intero Novecento, contribuendo, insieme alla crisi dei fondamenti razionalistici tradizionali già diagnosticata da Nietzsche ed esaminata nel capitolo precedente di questo manuale, a mettere profondamente in discussione l'immagine tradizionale dell'uomo come soggetto trasparente a se stesso, pienamente padrone delle proprie scelte e motivazioni coscienti, in favore di una concezione più complessa e problematica della soggettività umana, attraversata da conflitti e determinazioni in larga parte inconsapevoli. Come vedremo nei prossimi capitoli di questo manuale, questa profonda ridefinizione filosofica della soggettività, della coscienza e dell'esperienza umana troverà ulteriori sviluppi, nel corso del Novecento, in ambiti filosofici differenti, a cominciare dalla riflessione fenomenologica di Edmund Husserl, di cui ci occuperemo nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo filosofia 37 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil38.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

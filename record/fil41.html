@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 41</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 41: la Scuola di Francoforte -->
+<div id="capitolo-41-scuola-francoforte" class="capitolo-storia">
+  <p class="titolo-capitolo">41 - La Scuola di Francoforte - Classe 5</p>
+
+  <p class="titolo-capitolo">Origini dell'Istituto per la ricerca sociale</p>
+  <p>Con l'espressione Scuola di Francoforte si indica convenzionalmente un gruppo di filosofi e studiosi di scienze sociali attivi, a partire dal 1923, presso l'Istituto per la ricerca sociale fondato in quell'anno a Francoforte sul Meno, in Germania: costretti all'esilio dall'avvento del nazionalsocialismo negli anni Trenta del Novecento, in quanto in gran parte di origine ebraica e di orientamento politico marxista, i principali esponenti della scuola, tra cui Max Horkheimer, Theodor Adorno ed Herbert Marcuse, trascorsero un lungo periodo negli Stati Uniti, prima di fare in parte ritorno in Germania nel secondo dopoguerra: proprio questa esperienza diretta, insieme del totalitarismo nazista in Europa e della società industriale avanzata di stampo americano, avrebbe segnato in profondità la loro comune riflessione filosofica, nota complessivamente come Teoria critica della società.</p>
+  <p>Il progetto filosofico della Scuola di Francoforte, esposto programmaticamente da Horkheimer nel saggio Teoria tradizionale e teoria critica, del 1937, si distanzia consapevolmente sia dalla tradizione filosofica idealistica, sia da un impiego puramente descrittivo e neutrale delle scienze sociali, proponendo invece una riflessione filosofica dichiaratamente impegnata, capace di svelare criticamente le contraddizioni e le ingiustizie nascoste nella società esistente, in aperta continuità, sia pure rielaborata in modo originale, con l'eredità del pensiero di Karl Marx, esaminata nel trentaduesimo capitolo di questo manuale, ma anche, come si vedrà, con importanti elementi tratti dalla psicoanalisi di Freud, esaminata nel trentasettesimo capitolo.</p>
+
+  <p class="titolo-capitolo">La dialettica dell'illuminismo</p>
+  <p>Nell'opera Dialettica dell'illuminismo, scritta insieme da Horkheimer e Adorno e pubblicata nel 1947, gli autori sviluppano una tesi filosofica di grande portata storica e teorica, riguardante il destino paradossale della ragione occidentale: secondo questa analisi, il processo di illuminismo, inteso in senso assai più ampio del solo movimento culturale settecentesco già esaminato nel venticinquesimo capitolo di questo manuale, e riferito piuttosto all'intero e millenario sforzo umano di liberazione dalla paura della natura attraverso l'esercizio della ragione, avrebbe finito, nel proprio stesso svolgimento storico, per rovesciarsi paradossalmente nel proprio opposto, cioè in una nuova forma di dominio e di irrazionalità mascherata.</p>
+  <p>Secondo Horkheimer e Adorno, infatti, la ragione occidentale, nel proprio tentativo di dominare razionalmente la natura attraverso la scienza e la tecnica, avrebbe progressivamente ridotto ogni cosa, compreso lo stesso essere umano, a semplice oggetto calcolabile, misurabile e manipolabile secondo criteri di pura efficienza strumentale, in un processo che gli autori definiscono critica della ragione strumentale: questa ragione, ridotta a mero calcolo di mezzi efficaci per il raggiungimento di scopi dati, senza più alcuna capacità di interrogarsi criticamente sulla legittimità e sul valore degli scopi stessi, avrebbe finito per rivolgersi anche contro l'uomo medesimo, producendo, nelle sue manifestazioni storiche più drammatiche, come il totalitarismo nazista e l'industria culturale di massa, nuove e più sofisticate forme di dominio e di alienazione, non più dissimili, nella loro logica di fondo, dal primitivo dominio mitico sulla natura da cui l'illuminismo avrebbe preteso di emanciparsi definitivamente.</p>
+
+  <p class="titolo-capitolo">L'industria culturale</p>
+  <p>Un concetto di particolare originalità elaborato in questa stessa opera è quello di industria culturale, con cui Horkheimer e Adorno designano criticamente la produzione di massa di beni culturali, come il cinema, la radio e la musica leggera, tipica della società capitalistica avanzata del proprio tempo, in particolare quella statunitense osservata direttamente dagli autori durante il periodo dell'esilio: diversamente da quanto una prospettiva superficiale potrebbe suggerire, gli autori sostengono che tali prodotti culturali, pur presentandosi apparentemente come libera espressione dei gusti e delle preferenze individuali del pubblico, in realtà rispondano a logiche standardizzate di produzione seriale, analoghe a quelle già impiegate nell'industria manifatturiera, finendo per omologare i gusti, i pensieri e i bisogni degli individui, e per neutralizzarne la capacità critica autonoma, riducendo l'arte e l'intrattenimento a semplice merce di consumo passivo, funzionale al mantenimento dell'ordine sociale esistente.</p>
+
+  <p class="titolo-capitolo">Marcuse e la critica della società a una dimensione</p>
+  <p>Herbert Marcuse, altro importante esponente della Scuola di Francoforte, sviluppò nell'opera L'uomo a una dimensione, pubblicata nel 1964, un'analisi critica della società industriale avanzata contemporanea, sostenendo che tale società, pur garantendo un benessere materiale diffuso e un'apparente pluralità di scelte e di consumi individuali, tenda in realtà a produrre una progressiva omologazione del pensiero e dei bisogni umani, integrando e neutralizzando preventivamente ogni forma di reale dissenso critico, attraverso la creazione artificiale di bisogni indotti dal sistema economico stesso, che Marcuse definisce falsi bisogni, distinti dai bisogni autentici dell'individuo, non immediatamente riconoscibili come tali proprio perché il sistema sociale stesso ne impedisce la piena consapevolezza critica.</p>
+  <p>Marcuse esercitò, per queste sue posizioni critiche nei confronti della società dei consumi e per l'attenzione dedicata al tema della liberazione, anche attraverso una rielaborazione originale della psicoanalisi freudiana, un'influenza culturale particolarmente rilevante sui movimenti giovanili di contestazione sviluppatisi in Europa e negli Stati Uniti tra la fine degli anni Sessanta e l'inizio degli anni Settanta del Novecento, che videro in lui uno dei propri principali riferimenti filosofici.</p>
+
+  <p class="titolo-capitolo">L'eredità della Scuola di Francoforte</p>
+  <p>Il pensiero della Scuola di Francoforte, per la propria capacità di coniugare l'eredità della critica marxista della società capitalistica con nuovi strumenti concettuali tratti dalla psicoanalisi e da un'originale riflessione sulla ragione strumentale e sulla cultura di massa, esercitò un'influenza filosofica e culturale duratura sulla riflessione novecentesca, ben oltre l'ambito ristretto dei propri autori originari, ponendo con forza il problema del rapporto tra ragione, potere e libertà nella società contemporanea. Come vedremo nei prossimi capitoli di questo manuale, questo stesso ambito problematico, relativo ai criteri e ai limiti della razionalità scientifica moderna, sarà affrontato, con strumenti concettuali ed esiti filosofici assai diversi, dall'epistemologia contemporanea, a partire dalla riflessione di Karl Popper, di cui ci occuperemo nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo filosofia 41 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil42.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

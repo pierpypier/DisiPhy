@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 38</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 38: Husserl e la fenomenologia -->
+<div id="capitolo-38-husserl-fenomenologia" class="capitolo-storia">
+  <p class="titolo-capitolo">38 - Husserl e la fenomenologia - Classe 5</p>
+
+  <p class="titolo-capitolo">Edmund Husserl e la crisi delle scienze europee</p>
+  <p>Edmund Husserl nacque a Prossnitz, in Moravia, nel 1859, e si formò inizialmente come matematico, prima di dedicarsi interamente alla riflessione filosofica, fondando quella corrente di pensiero nota come fenomenologia, destinata a esercitare un'influenza filosofica di primissimo piano sull'intero Novecento europeo: come si è visto al termine del capitolo precedente di questo manuale, tanto Nietzsche quanto Freud avevano contribuito, sia pure con strumenti concettuali assai diversi, a mettere in crisi l'immagine tradizionale di un soggetto razionale pienamente trasparente a se stesso; Husserl si mosse in una direzione filosofica differente, non rinunciando alla fiducia nella possibilità di un sapere rigoroso, ma cercando piuttosto di rifondarlo su basi più solide di quelle offerte dalle scienze positive del proprio tempo, delle quali denunciò, in particolare nell'opera tarda La crisi delle scienze europee, pubblicata incompiuta nel 1936, un progressivo e pericoloso allontanamento dal mondo dell'esperienza vissuta concreta, a favore di un'astrazione matematizzante sempre più distante dai reali bisogni conoscitivi ed esistenziali dell'uomo europeo.</p>
+
+  <p class="titolo-capitolo">Il ritorno alle cose stesse</p>
+  <p>Nell'opera Ricerche logiche, pubblicata tra il 1900 e il 1901, Husserl formulò il celebre motto programmatico della propria filosofia, l'invito a tornare "alle cose stesse", con cui intendeva proporre un metodo filosofico capace di descrivere i fenomeni così come essi si presentano direttamente alla coscienza, senza sovrapporre a tale descrizione pregiudizi teorici precostituiti, provenienti sia dal senso comune sia dalle teorie scientifiche già elaborate: da questo programma metodologico deriva il nome stesso della fenomenologia, disciplina intesa da Husserl come descrizione rigorosa dei fenomeni, cioè di ciò che appare alla coscienza, colti nella propria essenza strutturale, e non semplicemente registrati nella loro fattualità empirica contingente, secondo un'accezione del termine "fenomeno" per molti versi diversa da quella già impiegata da Kant ed esaminata nel ventisettesimo capitolo di questo manuale.</p>
+
+  <p class="titolo-capitolo">L'intenzionalità della coscienza</p>
+  <p>Un concetto centrale della fenomenologia husserliana, ripreso e rielaborato criticamente dal filosofo e psicologo austriaco Franz Brentano, maestro di Husserl, è quello di intenzionalità, cioè la caratteristica strutturale fondamentale di ogni atto di coscienza di essere sempre, per propria essenziale costituzione, coscienza di qualcosa: secondo Husserl, non esiste un pensiero puro e vuoto, privo di un proprio oggetto correlativo, poiché ogni percezione è sempre percezione di un oggetto percepito, ogni ricordo è sempre ricordo di qualcosa di rammentato, e ogni desiderio è sempre desiderio di un oggetto desiderato: questa relazione intenzionale, che lega inscindibilmente l'atto della coscienza, chiamato da Husserl noesi, al proprio corrispondente oggetto intenzionale, chiamato noema, permette di superare la tradizionale contrapposizione, propria di gran parte della filosofia moderna precedente, tra un soggetto conoscente interiore e un mondo oggettivo esterno separato da esso, poiché soggetto e oggetto, secondo Husserl, si costituiscono sempre reciprocamente all'interno del medesimo atto intenzionale di coscienza.</p>
+
+  <p class="titolo-capitolo">L'epoché fenomenologica e la riduzione</p>
+  <p>Per accedere a una descrizione rigorosa delle strutture essenziali della coscienza, non contaminata da presupposti teorici indebiti, Husserl elaborò un particolare procedimento metodologico, denominato epoché fenomenologica, termine che riprende volutamente, sia pure con un significato filosofico assai diverso, quello già impiegato dagli antichi scettici ed esaminato nel quindicesimo capitolo di questo manuale: l'epoché consiste in un atto di sospensione metodica del giudizio, non riguardante tuttavia la verità o falsità di specifiche affermazioni particolari, come nello scetticismo antico, ma riguardante piuttosto la generale convinzione, propria dell'atteggiamento naturale e non filosoficamente riflesso con cui normalmente viviamo, secondo cui il mondo esterno esisterebbe in modo indipendente dalla coscienza che lo percepisce.</p>
+  <p>Attraverso questa sospensione metodica, che Husserl definisce anche "messa tra parentesi" del mondo esterno, la coscienza filosofica non nega l'esistenza del mondo, ma si astiene provvisoriamente dal pronunciarsi su di essa, per potersi concentrare esclusivamente sulla descrizione rigorosa di come il mondo stesso si presenti, si dia e si strutturi all'interno dell'esperienza cosciente: questo procedimento, chiamato anche riduzione fenomenologica, permetterebbe così di cogliere, al di là delle singole variazioni empiriche contingenti, le strutture essenziali e invarianti proprie di ogni possibile esperienza cosciente, attraverso un ulteriore procedimento metodologico, chiamato da Husserl variazione eidetica, consistente nell'immaginare variazioni progressive di un determinato oggetto o fenomeno fino a individuarne, per contrasto, i tratti essenziali che ne rendono possibile il riconoscimento in quanto tale.</p>
+  <p><em>Esempio:</em> per cogliere l'essenza invariante di un oggetto come un tavolo, secondo il metodo della variazione eidetica si può immaginare di modificarne liberamente forma, colore, materiale e dimensioni, verificando quali caratteristiche, come la funzione di superficie orizzontale sostenuta da elementi di appoggio, restino costanti attraverso ogni possibile variazione, e quali invece risultino accidentali e non essenziali alla nozione stessa di tavolo.</p>
+
+  <p class="titolo-capitolo">Il mondo della vita</p>
+  <p>Nell'opera tarda già ricordata, La crisi delle scienze europee, Husserl introdusse un ulteriore concetto filosofico di grande influenza sulla riflessione filosofica successiva, quello di mondo della vita, o Lebenswelt, con cui indica il mondo dell'esperienza quotidiana, immediata e prescientifica, entro cui ogni essere umano vive concretamente e che precede, sul piano logico ed esistenziale, ogni successiva costruzione teorica scientifica astratta, per quanto necessaria e legittima essa possa essere: secondo Husserl, la crisi profonda della cultura europea del proprio tempo, manifestatasi anche nelle drammatiche vicende storiche e politiche degli anni immediatamente precedenti alla propria morte, deriverebbe in ultima analisi proprio dall'aver progressivamente dimenticato questo fondamentale radicamento della conoscenza scientifica nel mondo della vita concreta, sostituendo a esso, in modo unilaterale e potenzialmente disumanizzante, un'immagine puramente astratta, quantitativa e matematizzata della realtà, incapace di render conto del senso autentico dell'esperienza umana vissuta.</p>
+
+  <p class="titolo-capitolo">L'eredità filosofica della fenomenologia</p>
+  <p>Il metodo fenomenologico elaborato da Husserl, per il proprio rigore descrittivo e per la centralità attribuita alla struttura intenzionale della coscienza e al mondo dell'esperienza vissuta, esercitò un'influenza filosofica determinante su gran parte della riflessione filosofica europea del Novecento, ben oltre l'ambito della scuola fenomenologica in senso stretto: tra gli allievi e i continuatori più significativi dell'impostazione husserliana, sia pure sviluppata in direzioni originali e per molti aspetti divergenti rispetto al proprio maestro, va ricordato in particolare Martin Heidegger, il quale, muovendo criticamente dal metodo fenomenologico appena esaminato, elaborerà, come vedremo nel prossimo capitolo di questo manuale, una delle riflessioni filosofiche più originali e influenti dell'intero Novecento, incentrata sul problema del senso dell'essere e sull'analisi esistenziale dell'esistenza umana concreta.</p>
+</div>
+<!-- fine capitolo filosofia 38 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil39.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

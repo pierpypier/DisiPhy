@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 40</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 40: Wittgenstein e la filosofia del linguaggio -->
+<div id="capitolo-40-wittgenstein-filosofia-linguaggio" class="capitolo-storia">
+  <p class="titolo-capitolo">40 - Wittgenstein e la filosofia del linguaggio - Classe 5</p>
+
+  <p class="titolo-capitolo">Ludwig Wittgenstein: una vicenda filosofica in due fasi</p>
+  <p>Ludwig Wittgenstein nacque a Vienna nel 1889, all'interno di una delle famiglie più ricche e colte dell'Impero austro-ungarico, e dopo iniziali studi di ingegneria si dedicò alla filosofia sotto la guida del logico e filosofo britannico Bertrand Russell, presso l'università di Cambridge: come si è visto al termine del trentanovesimo capitolo di questo manuale, dedicato a Heidegger, il Novecento filosofico europeo, oltre agli sviluppi della fenomenologia e dell'esistenzialismo, conobbe anche un diverso e per molti versi complementare filone di ricerca, quello della filosofia del linguaggio, di cui Wittgenstein rappresenta senza dubbio il pensatore più originale e influente, autore, con straordinaria singolarità, di due distinte e per molti aspetti contrapposte fasi filosofiche, entrambe di enorme rilievo storico.</p>
+
+  <p class="titolo-capitolo">Il Tractatus logico-philosophicus e la teoria figurativa</p>
+  <p>Nella propria prima fase di riflessione, esposta nell'unica opera filosofica pubblicata in vita, il Tractatus logico-philosophicus, del 1921, Wittgenstein elaborò una teoria del linguaggio, nota come teoria figurativa, o pittorica, secondo cui il linguaggio significante avrebbe come funzione fondamentale quella di raffigurare, o rispecchiare, attraverso la propria struttura logica interna, la struttura logica del mondo stesso: secondo questa impostazione, ogni proposizione dotata di senso descriverebbe uno specifico stato di cose possibile, componendosi di nomi semplici corrispondenti agli oggetti elementari costitutivi della realtà, in un rapporto di corrispondenza strutturale rigorosa tra linguaggio e mondo, per cui la forma logica della proposizione rispecchierebbe, come un'immagine o un modello, la forma logica del fatto da essa rappresentato.</p>
+  <p>Da questa concezione del linguaggio come raffigurazione logica della realtà, Wittgenstein traeva conseguenze filosofiche di grande portata riguardo ai confini stessi del linguaggio sensato: proposizioni che pretendessero di parlare di ciò che eccede i limiti del mondo fattuale osservabile, come gran parte delle tradizionali proposizioni della metafisica, dell'etica o della religione, non sarebbero, secondo Wittgenstein, propriamente false, ma prive di senso in senso logico stretto, poiché non riuscirebbero a raffigurare alcuno stato di cose determinato e verificabile: da qui la celebre affermazione conclusiva del Tractatus, secondo cui su ciò di cui non si può parlare, cioè su ciò che eccede i limiti del linguaggio sensato, occorre tacere, un'affermazione che non intendeva tuttavia negare, secondo molti interpreti, l'importanza esistenziale delle questioni etiche, estetiche e religiose, quanto piuttosto sottolinearne l'ineffabilità, cioè l'impossibilità di essere adeguatamente espresse attraverso il linguaggio propriamente descrittivo.</p>
+
+  <p class="titolo-capitolo">La svolta verso le Ricerche filosofiche</p>
+  <p>Dopo la pubblicazione del Tractatus, convinto di aver risolto in modo definitivo i problemi filosofici fondamentali relativi al linguaggio, Wittgenstein abbandonò per alcuni anni l'attività filosofica accademica, dedicandosi ad altre occupazioni; il successivo ritorno alla riflessione filosofica, a partire dalla fine degli anni Venti, lo condusse tuttavia a un ripensamento radicale e critico delle proprie precedenti posizioni, esposto compiutamente nell'opera Ricerche filosofiche, pubblicata postuma nel 1953, che rappresenta la seconda e per molti aspetti opposta fase del proprio percorso filosofico.</p>
+
+  <p class="titolo-capitolo">I giochi linguistici</p>
+  <p>Nelle Ricerche filosofiche, Wittgenstein abbandona la pretesa, propria del Tractatus, di individuare un'unica struttura logica universale sottostante a ogni possibile linguaggio significante, sostituendola con una concezione assai più flessibile e pluralistica del linguaggio, incentrata sulla nozione di gioco linguistico: secondo questa nuova impostazione, il significato di una parola o di un'espressione linguistica non va ricercato in un presunto rapporto di corrispondenza fissa e universale con la realtà, secondo lo schema figurativo precedentemente sostenuto, ma nel suo concreto uso all'interno di specifiche pratiche linguistiche e sociali, storicamente e culturalmente variabili, che Wittgenstein definisce appunto giochi linguistici, ciascuno regolato da proprie regole condivise, non riducibili a un'unica logica universale sottostante, analogamente a come esistono giochi assai diversi tra loro, come gli scacchi o il calcio, ciascuno regolato da regole proprie e specifiche, senza un'unica essenza comune a tutti i giochi possibili.</p>
+  <p><em>Esempio:</em> secondo Wittgenstein, comprendere il significato di una parola come "gioco" non richiede di individuarne una presunta essenza comune e universale, condivisa da ogni singolo gioco esistente, ma piuttosto di riconoscere tra i diversi giochi una rete di "somiglianze di famiglia", cioè una serie di somiglianze parziali e incrociate, analoghe a quelle riscontrabili tra i diversi membri di una stessa famiglia, che si sovrappongono e si intrecciano tra loro senza che vi sia un unico tratto comune condiviso da tutti quanti.</p>
+
+  <p class="titolo-capitolo">La critica al linguaggio privato</p>
+  <p>Un altro aspetto di grande rilievo filosofico delle Ricerche filosofiche riguarda la celebre argomentazione, nota come critica del linguaggio privato, con cui Wittgenstein contesta la possibilità filosofica di un linguaggio comprensibile, in linea di principio, a un solo individuo, riferito esclusivamente alle proprie sensazioni ed esperienze interiori private, secondo un'impostazione per molti versi debitrice, sia pure indirettamente, della tradizione filosofica moderna inaugurata da Cartesio ed esaminata nel ventesimo capitolo di questo manuale, con la sua concezione di una soggettività interiore privilegiatamente trasparente a se stessa: secondo Wittgenstein, il significato delle parole, anche di quelle che sembrano riferirsi a esperienze interiori del tutto private, come il dolore, dipende invece necessariamente da regole d'uso condivise pubblicamente all'interno di una comunità linguistica, poiché soltanto un criterio pubblicamente verificabile e condiviso può garantire l'uso corretto e coerente di una parola nel tempo, rendendo così impossibile, in linea di principio, un linguaggio comprensibile a un unico parlante isolato dalla comunità.</p>
+
+  <p class="titolo-capitolo">La filosofia come terapia</p>
+  <p>Coerentemente con questa nuova impostazione, Wittgenstein giunse a ridefinire radicalmente anche la propria concezione del compito stesso della filosofia: molti tradizionali problemi filosofici, secondo la sua nuova prospettiva, non deriverebbero da autentiche difficoltà concettuali da risolvere attraverso nuove teorie esplicative, ma da un uso fuorviante e improprio del linguaggio ordinario, generato quando le parole vengono impiegate al di fuori del proprio contesto d'uso abituale e appropriato, in una sorta di vacanza dal proprio normale funzionamento pratico: il compito della filosofia, secondo questa concezione, non consisterebbe dunque nel costruire nuove teorie esplicative, sul modello delle scienze naturali, ma piuttosto in un'attività essenzialmente terapeutica e chiarificatrice, volta a dissolvere le confusioni concettuali generate da un uso improprio del linguaggio, riconducendo le parole, secondo la nota espressione dello stesso Wittgenstein, al loro corretto e ordinario impiego quotidiano.</p>
+
+  <p class="titolo-capitolo">L'eredità filosofica di Wittgenstein</p>
+  <p>Il pensiero di Wittgenstein, in entrambe le proprie fasi filosofiche, esercitò un'influenza filosofica di straordinaria portata sull'intera filosofia analitica del linguaggio sviluppatasi nel corso del Novecento, in particolare nel mondo anglosassone, contribuendo in modo decisivo a porre il linguaggio, la sua struttura logica e le sue concrete pratiche d'uso, al centro della riflessione filosofica contemporanea. Come vedremo nel prossimo capitolo di questo manuale, la riflessione filosofica novecentesca si sarebbe sviluppata, accanto a questo filone dedicato al linguaggio, anche in un'altra direzione di grande rilievo storico e culturale, quella della critica filosofica della società e della ragione strumentale, elaborata dagli esponenti della Scuola di Francoforte.</p>
+</div>
+<!-- fine capitolo filosofia 40 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil41.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

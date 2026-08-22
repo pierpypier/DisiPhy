@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 31</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 31: la sinistra hegeliana e Feuerbach -->
+<div id="capitolo-31-sinistra-hegeliana-feuerbach" class="capitolo-storia">
+  <p class="titolo-capitolo">31 - La sinistra hegeliana e Feuerbach - Classe 5</p>
+
+  <p class="titolo-capitolo">La scuola hegeliana e la questione religiosa</p>
+  <p>Come si è accennato al termine del trentesimo capitolo di questo manuale, dopo la morte di Hegel, avvenuta nel 1831, la scuola dei suoi allievi si divise progressivamente in due schieramenti contrapposti, denominati convenzionalmente destra e sinistra hegeliana, la cui distinzione, sorta inizialmente a proposito dell'interpretazione da dare al rapporto tra il sistema hegeliano e la religione cristiana, si sarebbe presto estesa anche all'ambito più propriamente politico: la destra hegeliana, detta anche vecchia hegeliana, tendeva a leggere il sistema del maestro in chiave sostanzialmente conservatrice, ritenendo che l'identificazione hegeliana tra spirito assoluto e religione cristiana, esaminata a proposito delle tre forme dello spirito assoluto nel capitolo precedente di questo manuale, giustificasse filosoficamente l'ordine religioso e politico allora vigente in Prussia; la sinistra hegeliana, detta anche giovane hegeliana, sostenne invece un'interpretazione assai più critica e radicale della dialettica hegeliana, applicandola non più a giustificazione dell'esistente, ma come strumento per la sua trasformazione critica e rivoluzionaria.</p>
+
+  <p class="titolo-capitolo">Ludwig Feuerbach e la critica della religione</p>
+  <p>Il principale esponente della sinistra hegeliana, e figura di transizione di grande importanza verso il pensiero di Karl Marx, di cui ci occuperemo nel prossimo capitolo di questo manuale, fu Ludwig Feuerbach, nato in Baviera nel 1804: nell'opera principale, L'essenza del cristianesimo, pubblicata nel 1841, Feuerbach sottopose a un'incisiva critica filosofica la religione, e in particolare la religione cristiana, sostenendo una tesi di segno opposto rispetto a quella tradizionale, secondo cui non sarebbe Dio ad aver creato l'uomo a propria immagine, ma sarebbe piuttosto l'uomo ad aver creato Dio proiettando fuori di sé, in una figura divina immaginaria situata in un cielo trascendente, le proprie migliori qualità, come la ragione, l'amore e la volontà, portate però a un grado di perfezione infinita e assoluta, estraniandole così dalla propria concreta natura umana finita.</p>
+  <p>Questo procedimento, che Feuerbach chiama alienazione religiosa, termine che deriva dal latino alienus, "estraneo", comporterebbe per l'uomo una conseguenza paradossale e per Feuerbach profondamente dannosa: quanto più l'uomo attribuisce a Dio, cioè a questa propria proiezione immaginaria, ricchezza, potenza e perfezione, tanto più egli stesso, per contrasto, si impoverisce e si svuota, considerandosi una creatura debole, peccaminosa e dipendente da un essere superiore che, in realtà, altro non è se non la propria stessa essenza, alienata e proiettata fuori di sé. <em>Esempio:</em> secondo Feuerbach, l'attributo divino dell'onnipotenza non è altro che la proiezione, portata a un grado infinito e situata in un essere immaginario esterno, del desiderio umano, reale ma limitato, di superare la propria condizione di finitezza e di debolezza, un desiderio che, alienato in Dio, finisce per lasciare l'uomo reale ancora più consapevole, per contrasto, della propria piccolezza.</p>
+
+  <p class="titolo-capitolo">Il rovesciamento del rapporto soggetto-predicato</p>
+  <p>Sul piano più propriamente filosofico e metodologico, Feuerbach criticò inoltre l'intero impianto speculativo del sistema hegeliano, esaminato negli ultimi due capitoli di questo manuale, accusandolo di compiere, riguardo al rapporto tra pensiero ed essere, un errore strutturalmente analogo a quello già individuato a proposito della religione: così come la teologia tradizionale, secondo Feuerbach, aveva trasformato in soggetto autonomo un semplice predicato dell'uomo reale, cioè le sue qualità più elevate proiettate in Dio, allo stesso modo Hegel, nel proprio idealismo, avrebbe trasformato l'idea, o lo spirito, in soggetto primo e autonomo della realtà, riducendo invece la natura e l'uomo concreto, sensibile e corporeo a semplice predicato, cioè a momento derivato e subordinato di tale idea assoluta. Per correggere questa impostazione, che Feuerbach definisce polemicamente come una forma mascherata di teologia, egli propone un rovesciamento metodologico radicale, restituendo all'uomo concreto, sensibile e naturale, e non più all'idea astratta, il ruolo di soggetto primo ed effettivamente reale della filosofia: da questa impostazione deriva la definizione della propria filosofia come umanismo naturalistico, fondato sulla centralità dell'uomo reale, corporeo e sensibile, in luogo dell'astratto spirito assoluto hegeliano.</p>
+
+  <p class="titolo-capitolo">L'uomo come essere naturale e sensibile</p>
+  <p>Diversamente dall'impostazione idealistica di Hegel, per la quale, come si è visto nel trentesimo capitolo di questo manuale, la realtà autentica coincide in ultima analisi con il pensiero razionale e concettuale, Feuerbach insiste sulla dimensione corporea, sensibile e naturale dell'essere umano, ritenendo che l'uomo non possa essere adeguatamente compreso come pura autocoscienza pensante, secondo lo schema idealistico ereditato in ultima analisi da Cartesio ed esaminato nel ventesimo capitolo di questo manuale, ma debba essere considerato innanzitutto come essere naturale, dotato di un corpo, di bisogni concreti e di relazioni intersoggettive reali con altri uomini in carne e ossa: proprio in questa dimensione relazionale e intersoggettiva, riassunta nella celebre formula secondo cui il vero rapporto tra io e tu costituirebbe la base autentica di ogni filosofia, e non nell'astratta autocoscienza individuale isolata, Feuerbach individua il fondamento concreto di un nuovo modo di intendere la filosofia, non più come sistema speculativo astratto, ma come riflessione radicata nella concreta esistenza materiale e comunitaria dell'uomo.</p>
+
+  <p class="titolo-capitolo">L'importanza storica della sinistra hegeliana</p>
+  <p>Oltre a Feuerbach, la sinistra hegeliana annoverò diversi altri esponenti attivi soprattutto in ambito religioso e storico-critico, impegnati in una lettura demistificante dei testi sacri e delle tradizioni religiose, in linea con lo spirito critico complessivo del movimento: nel loro insieme, questi autori contribuirono a orientare l'eredità del sistema hegeliano, esaminata nel capitolo precedente di questo manuale, verso esiti filosofici opposti a quelli della destra hegeliana, aprendo la strada a una filosofia intesa non più come giustificazione teorica dell'esistente, secondo la formula hegeliana della razionalità del reale, ma come strumento critico di trasformazione della realtà sociale, religiosa e politica.</p>
+
+  <p class="titolo-capitolo">Verso il pensiero di Marx</p>
+  <p>La critica feuerbachiana dell'alienazione religiosa, per quanto circoscritta all'ambito propriamente teologico e filosofico, avrebbe esercitato un'influenza determinante su un giovane studioso tedesco, Karl Marx, il quale, pur riconoscendo pienamente il merito storico di Feuerbach nell'aver smascherato il meccanismo dell'alienazione religiosa e nell'aver restituito centralità all'uomo concreto e sensibile contro l'astrattezza dell'idealismo hegeliano, gli avrebbe tuttavia rimproverato, come vedremo nel prossimo capitolo di questo manuale, di essersi fermato a un'analisi ancora insufficiente, limitata alla sola sfera religiosa e ideologica, senza indagarne adeguatamente le radici concrete nei rapporti economici e sociali reali, dando così avvio a quella critica del capitalismo e della società borghese che costituirà il nucleo del materialismo storico marxiano.</p>
+</div>
+<!-- fine capitolo filosofia 31 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil32.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

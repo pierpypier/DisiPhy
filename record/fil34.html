@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 34</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 34: Kierkegaard, l'esistenza e la fede -->
+<div id="capitolo-34-kierkegaard-esistenza-fede" class="capitolo-storia">
+  <p class="titolo-capitolo">34 - Kierkegaard: l'esistenza e la fede - Classe 5</p>
+
+  <p class="titolo-capitolo">Vita di Kierkegaard e la critica al sistema hegeliano</p>
+  <p>Søren Kierkegaard nacque a Copenaghen, in Danimarca, nel 1813, all'interno di una famiglia profondamente segnata da una religiosità austera e da un cupo senso di colpa, trasmesso soprattutto dal padre, elementi che avrebbero profondamente influenzato la sua intera riflessione filosofica ed esistenziale: come già Schopenhauer, esaminato nel capitolo precedente di questo manuale, anche Kierkegaard sviluppò la propria filosofia in aperta e radicale polemica con il sistema di Hegel, esaminato nel trentesimo capitolo di questo manuale, allora dominante nella cultura filosofica europea, ma muovendo da un punto di vista del tutto diverso rispetto a quello dello stesso Schopenhauer.</p>
+  <p>Secondo Kierkegaard, il difetto fondamentale del sistema hegeliano, con la propria pretesa di ricondurre l'intera realtà, compresa la storia umana, a un unico grandioso processo dialettico razionale, esaminato nel trentesimo capitolo di questo manuale, consiste nell'aver dimenticato e dissolto, all'interno delle proprie categorie universali e astratte, l'esistenza concreta e irripetibile del singolo individuo: per Hegel, sostiene Kierkegaard con tono spesso polemico e provocatorio, tipico del proprio stile filosofico e letterario particolarmente originale, l'individuo concreto conta solo in quanto momento transitorio e sacrificabile di un processo storico universale che lo trascende, mentre per Kierkegaard è proprio l'esistenza singola e irripetibile di ciascun individuo, con le proprie scelte concrete, le proprie angosce e la propria irriducibile soggettività, a costituire il vero e unico oggetto di un'autentica riflessione filosofica.</p>
+
+  <p class="titolo-capitolo">La verità come soggettività</p>
+  <p>Da questa impostazione deriva una delle affermazioni più celebri e caratteristiche del pensiero di Kierkegaard, secondo cui la verità che realmente conta per l'esistenza del singolo individuo non è la verità oggettiva e universale propria della conoscenza scientifica o del sistema filosofico astratto, ma la verità soggettiva, cioè quella verità che l'individuo fa propria attraverso un personale, rischioso e mai definitivamente garantito atto di scelta e di impegno esistenziale: non basta, secondo Kierkegaard, conoscere astrattamente e teoricamente una verità, come si potrebbe conoscere un teorema geometrico o una legge fisica, ma occorre viverla concretamente, facendone il principio ispiratore della propria esistenza personale, con un coinvolgimento totale della propria libertà e della propria responsabilità individuale, non riducibile a semplice adesione intellettuale.</p>
+
+  <p class="titolo-capitolo">Gli stadi dell'esistenza: la vita estetica</p>
+  <p>Nell'opera Aut-Aut, pubblicata nel 1843, e in altri scritti successivi, Kierkegaard descrive tre possibili modalità fondamentali, o stadi, secondo cui l'esistenza umana individuale può concretamente svolgersi, ciascuno caratterizzato da un diverso rapporto con la propria libertà e responsabilità personale: il primo stadio, definito vita estetica, corrisponde all'esistenza dell'individuo che vive esclusivamente alla ricerca del piacere immediato e della varietà sempre nuova delle esperienze sensibili, rifiutando ogni impegno stabile e definitivo che possa limitare la propria libertà di scelta momentanea, esemplificato da Kierkegaard attraverso la figura letteraria del seduttore, incapace di un legame autentico e duraturo con un'altra persona. Questo tipo di esistenza, tuttavia, secondo Kierkegaard, conduce inevitabilmente, nel lungo periodo, a una condizione di insoddisfazione e di disperazione, poiché la ricerca del piacere immediato e sempre rinnovato, priva di un principio unificatore stabile, non riesce mai a colmare durevolmente il vuoto esistenziale dell'individuo, esponendolo, quando la varietà delle esperienze possibili si esaurisce, a un profondo senso di noia e di vuoto interiore.</p>
+
+  <p class="titolo-capitolo">Gli stadi dell'esistenza: la vita etica</p>
+  <p>Il secondo stadio, definito vita etica, corrisponde invece all'esistenza dell'individuo che sceglie di assumere stabilmente, attraverso un preciso e responsabile atto di volontà, doveri e impegni duraturi nel tempo, come il matrimonio o una determinata professione, accettando così di sottoporre la propria libertà individuale a norme e principi universali validi per tutti, secondo un modello per certi versi vicino, sia pure in un contesto filosofico assai diverso, all'etica del dovere già elaborata da Kant ed esaminata nel ventottesimo capitolo di questo manuale. Pur rappresentando, secondo Kierkegaard, un innegabile progresso rispetto alla dispersione priva di stabilità propria della vita estetica, poiché introduce nell'esistenza individuale coerenza, responsabilità e continuità nel tempo, anche la vita etica presenta tuttavia, secondo Kierkegaard, un limite strutturale non trascurabile: fondandosi sull'osservanza di norme e doveri universali, essa rischia infatti di far perdere di vista, ancora una volta, l'irriducibile singolarità e unicità dell'individuo concreto, appiattendolo sul rispetto di regole generali valide indistintamente per chiunque.</p>
+
+  <p class="titolo-capitolo">Gli stadi dell'esistenza: la vita religiosa</p>
+  <p>Il terzo e ultimo stadio, definito vita religiosa, rappresenta per Kierkegaard il livello più alto e autentico dell'esistenza umana, raggiungibile non attraverso un semplice sviluppo logico e necessario a partire dai due stadi precedenti, secondo lo schema dialettico proprio del sistema hegeliano criticato in apertura di questo capitolo, ma soltanto attraverso un salto, cioè un atto radicale e imprevedibile di libertà personale, non giustificabile per via puramente razionale, con cui l'individuo si affida totalmente e incondizionatamente a Dio, superando così anche i limiti propri della sola vita etica fondata su norme universali. Per illustrare filosoficamente questo stadio religioso, Kierkegaard fa ripetutamente riferimento, in particolare nell'opera Timore e tremore, del 1843, alla vicenda biblica del patriarca Abramo, chiamato da Dio a sacrificare il proprio figlio Isacco: agli occhi della sola morale universale, esaminata a proposito della vita etica, l'azione di Abramo, disposto a sacrificare la propria stessa creatura, risulterebbe un atto ingiustificabile e persino aberrante, ma proprio in questa disponibilità di Abramo a sospendere, in nome della propria fede personale, la validità stessa della norma etica universale, in ciò che Kierkegaard chiama "sospensione teleologica dell'etica", si manifesterebbe, secondo Kierkegaard, l'autentico paradosso della fede religiosa, non riducibile né alla logica razionale del sistema filosofico, né alla semplice osservanza di doveri morali universalmente validi.</p>
+
+  <p class="titolo-capitolo">Angoscia e disperazione</p>
+  <p>Un contributo filosofico di particolare originalità e di grande influenza sulla successiva riflessione esistenzialista, che incontreremo più avanti in questo manuale, riguarda l'analisi kierkegaardiana di due condizioni psicologiche ed esistenziali fondamentali, l'angoscia e la disperazione: l'angoscia, esaminata in particolare nell'opera Il concetto dell'angoscia, del 1844, viene descritta da Kierkegaard come il sentimento provato dall'individuo di fronte alla propria stessa libertà, cioè di fronte all'infinita possibilità di scelta che gli si presenta innanzi, priva di alcuna garanzia oggettiva capace di indicare con certezza quale scelta compiere: diversamente dalla paura, che ha sempre un oggetto determinato e concreto di cui si teme, l'angoscia, secondo la celebre definizione kierkegaardiana, sarebbe piuttosto "la vertigine della libertà", cioè un sentimento privo di un oggetto specifico e determinato, generato dalla stessa apertura vertiginosa della libertà personale davanti al possibile.</p>
+  <p>La disperazione, esaminata invece nell'opera La malattia mortale, del 1849, viene descritta da Kierkegaard come una condizione ancora più radicale, consistente in un rapporto malato che l'individuo instaura con il proprio stesso io, o nel rifiuto di essere se stesso secondo la propria autentica vocazione individuale, o al contrario nella disperata pretesa di volersi costruire da sé, in totale autonomia, senza alcun riferimento a un fondamento più alto: secondo Kierkegaard, solo un rapporto autentico e pienamente consapevole con Dio, raggiunto attraverso il salto della fede proprio dello stadio religioso, potrebbe realmente guarire l'individuo da questa condizione strutturale di disperazione, radicata nella stessa costituzione finita e insieme spirituale dell'essere umano.</p>
+
+  <p class="titolo-capitolo">L'eredità filosofica di Kierkegaard</p>
+  <p>Il pensiero di Kierkegaard, per la centralità attribuita all'esistenza concreta e irripetibile del singolo individuo contro ogni pretesa di sistema filosofico universale e astratto, e per l'analisi originale di condizioni esistenziali come l'angoscia, la disperazione e la libertà, viene generalmente considerato, insieme alle riflessioni di Schopenhauer esaminate nel capitolo precedente di questo manuale, uno dei principali precursori della filosofia esistenzialista, che si svilupperà pienamente solo nel corso del Novecento, come vedremo più avanti in questo manuale a proposito di Heidegger. Nel prossimo capitolo di questo manuale, tuttavia, ci occuperemo di un'altra importante corrente filosofica sviluppatasi nella seconda metà dell'Ottocento, per molti versi opposta sia all'idealismo hegeliano sia alla riflessione esistenziale di Schopenhauer e Kierkegaard: il Positivismo, e in particolare il pensiero del filosofo francese Auguste Comte, fondato su una rinnovata fiducia nel sapere scientifico come unico modello legittimo di conoscenza razionale.</p>
+</div>
+<!-- fine capitolo filosofia 34 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil35.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

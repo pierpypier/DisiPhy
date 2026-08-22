@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 43</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 43: Arendt e la filosofia politica del Novecento -->
+<div id="capitolo-43-arendt-filosofia-politica" class="capitolo-storia">
+  <p class="titolo-capitolo">43 - Arendt e la filosofia politica del Novecento - Classe 5</p>
+
+  <p class="titolo-capitolo">Hannah Arendt e l'esperienza diretta del totalitarismo</p>
+  <p>Hannah Arendt nacque a Hannover, in Germania, nel 1906, e si formò filosoficamente all'università di Marburgo, dove fu allieva, tra gli altri, di Martin Heidegger, esaminato nel trentanovesimo capitolo di questo manuale, per poi essere costretta, in quanto ebrea, a lasciare la Germania dopo l'ascesa al potere del nazionalsocialismo, trascorrendo un periodo di esilio prima in Francia e poi, dal 1941, negli Stati Uniti, dove sviluppò la parte più matura e originale della propria riflessione filosofica e politica: proprio questa diretta esperienza biografica delle persecuzioni razziali e dell'esilio forzato avrebbe segnato in profondità l'intera produzione di Arendt, orientandola verso un'analisi filosofica rigorosa dei totalitarismi novecenteschi e, più in generale, verso una rinnovata riflessione sulla natura dell'agire politico.</p>
+
+  <p class="titolo-capitolo">Le origini del totalitarismo</p>
+  <p>Nell'opera Le origini del totalitarismo, pubblicata nel 1951, Arendt condusse un'ampia analisi storico-filosofica delle radici politiche e sociali dei due grandi regimi totalitari del Novecento, quello nazista in Germania e quello staliniano in Unione Sovietica, individuando in essi un fenomeno politico del tutto inedito rispetto alle precedenti forme storiche di tirannide o di dispotismo tradizionale già analizzate, ad esempio, da Aristotele nel tredicesimo capitolo di questo manuale: secondo Arendt, ciò che distingue radicalmente il totalitarismo novecentesco da ogni precedente forma di governo autoritario non è soltanto l'assenza di libertà politica, ma la pretesa, sostenuta attraverso un pervasivo apparato ideologico e di terrore poliziesco, di dominare totalmente ogni ambito dell'esistenza umana, pubblica e privata, fino a voler ridefinire la natura stessa dell'uomo, riducendo gli individui a elementi intercambiabili e privi di reale spontaneità, secondo una logica di dominio assai più radicale e pervasiva di quella propria delle tradizionali tirannidi storiche.</p>
+  <p>Un aspetto di particolare rilievo di questa analisi riguarda la funzione strutturale del terrore e della violenza nei regimi totalitari, non concepiti da Arendt come semplici strumenti contingenti al servizio del potere, ma come elementi costitutivi ed essenziali del sistema totalitario stesso, finalizzati non soltanto a reprimere il dissenso politico esplicito, come già avveniva nelle tirannidi tradizionali, ma a distruggere sistematicamente, attraverso i campi di concentramento e di sterminio, la stessa capacità umana di agire spontaneamente e di pensare autonomamente, riducendo l'individuo a mera funzione passiva del sistema.</p>
+
+  <p class="titolo-capitolo">La banalità del male</p>
+  <p>Un contributo filosofico di particolare originalità e di grande influenza culturale successiva è costituito dal celebre concetto di "banalità del male", elaborato da Arendt nell'opera La banalità del male, pubblicata nel 1963, a seguito della propria diretta esperienza di osservatrice, per conto della rivista statunitense The New Yorker, del processo celebrato a Gerusalemme nel 1961 contro il gerarca nazista Adolf Eichmann, uno dei principali organizzatori logistici dello sterminio degli ebrei europei: osservando direttamente il comportamento dell'imputato durante il processo, Arendt rimase colpita non tanto dall'eventuale presenza in lui di un'eccezionale e mostruosa malvagità personale, quanto piuttosto, al contrario, dalla sua sconcertante e inquietante normalità, dalla sua incapacità di pensare criticamente e autonomamente le conseguenze delle proprie azioni, e dalla sua acritica sottomissione burocratica agli ordini ricevuti dall'alto.</p>
+  <p>Da questa osservazione diretta, Arendt trasse una tesi filosofica di grande portata e al tempo stesso di notevole complessità interpretativa, secondo cui il male estremo commesso da Eichmann, e più in generale dagli esecutori burocratici dello sterminio nazista, non deriverebbe necessariamente da un'intenzione demoniaca o da convinzioni ideologiche particolarmente radicate, ma piuttosto, in misura significativa, da una superficialità di pensiero, cioè da un'incapacità o da un rifiuto di esercitare autonomamente il proprio giudizio critico personale, limitandosi a eseguire meccanicamente le procedure burocratiche e gli ordini ricevuti, senza mai realmente interrogarsi, in prima persona, sul loro effettivo significato morale: una tesi che, pur suscitando all'epoca vivaci polemiche e discussioni critiche, anche riguardo alla sua effettiva applicabilità al caso specifico di Eichmann, ha esercitato un'influenza filosofica duratura sulla riflessione novecentesca relativa al rapporto tra obbedienza, responsabilità individuale e capacità critica di giudizio.</p>
+
+  <p class="titolo-capitolo">Vita activa: lavoro, opera e azione</p>
+  <p>Nell'opera Vita activa, pubblicata nel 1958, Arendt elaborò un'originale analisi filosofica delle diverse forme dell'agire umano, distinguendo tre attività fondamentali, tra loro gerarchicamente distinte: il lavoro, cioè l'attività biologica necessaria alla pura sopravvivenza fisica dell'uomo, caratterizzata da un ciclo ripetitivo e privo di prodotti duraturi, come la produzione e il consumo di beni destinati a esaurirsi rapidamente; l'opera, cioè l'attività attraverso cui l'uomo produce oggetti e artefatti duraturi, capaci di costituire un mondo stabile e relativamente permanente, distinto dal semplice ciclo naturale della vita biologica; e infine l'azione, considerata da Arendt la più propriamente umana e politica tra le tre attività, consistente nell'agire e nel parlare pubblicamente insieme ad altri esseri umani all'interno di uno spazio comune di relazione, attraverso cui ciascun individuo può manifestare pubblicamente, in modo irripetibile, la propria unicità personale.</p>
+  <p>Proprio a questa nozione di azione, Arendt collega strettamente il concetto filosofico di natalità, con cui intende la capacità umana, radicata nel fatto stesso di essere nati, cioè di rappresentare sempre un nuovo inizio nel mondo, di dare avvio, attraverso l'azione pubblica condivisa con altri, a processi storici realmente nuovi e non semplicemente deducibili in modo necessario dalle circostanze precedenti, in aperta polemica implicita con ogni forma di determinismo storico, incluso quello già criticato da Popper con il termine di storicismo, esaminato nel capitolo precedente di questo manuale.</p>
+
+  <p class="titolo-capitolo">La sfera pubblica e la pluralità umana</p>
+  <p>Coerentemente con la centralità attribuita all'azione politica condivisa, Arendt insiste sull'importanza filosofica della pluralità umana, cioè sul fatto che il mondo sia abitato da una molteplicità di individui distinti e irripetibili, ciascuno capace di una prospettiva propria e originale sulla realtà comune, condizione ritenuta da Arendt indispensabile per l'esistenza stessa di un autentico spazio pubblico di confronto politico, distinto sia dalla sfera privata domestica, tradizionalmente associata, fin dall'antichità classica esaminata nei primi capitoli di questo manuale, alla mera sopravvivenza biologica, sia dall'omologazione anonima e passiva propria delle società di massa novecentesche, già analizzata criticamente, sia pure con altri strumenti concettuali, dagli esponenti della Scuola di Francoforte esaminati nel quarantunesimo capitolo di questo manuale.</p>
+
+  <p class="titolo-capitolo">L'eredità filosofica di Hannah Arendt</p>
+  <p>Il pensiero di Hannah Arendt, per la propria capacità di coniugare un'analisi storico-filosofica rigorosa dei totalitarismi novecenteschi con un'originale riflessione teorica sulla natura dell'agire politico, sulla responsabilità individuale e sul valore della pluralità umana, esercitò un'influenza filosofica duratura sulla riflessione politica contemporanea, contribuendo in modo significativo a ripensare criticamente, alla luce delle drammatiche esperienze storiche del Novecento, categorie filosofiche tradizionali come quelle di potere, di libertà e di responsabilità morale. Come vedremo nell'ultimo capitolo di questo manuale, la riflessione filosofica novecentesca, oltre agli sviluppi in ambito politico ed epistemologico fin qui esaminati, avrebbe conosciuto anche importanti sviluppi in ambiti più specificamente legati alle nuove frontiere scientifiche e tecnologiche, come la bioetica e la filosofia della mente, di cui ci occuperemo nel capitolo conclusivo di questo manuale.</p>
+</div>
+<!-- fine capitolo filosofia 43 -->
+
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil44.html">Vai al Capitolo successivo</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>

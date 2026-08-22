@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filosofia - Capitolo 44</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo filosofia */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">FILOSOFIA</div>
+        <div class="subtitle">Piccolo manuale di filosofia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="fil00.html" title="filosofia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r006.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo filosofia 44: le nuove frontiere, bioetica e filosofia della mente -->
+<div id="capitolo-44-bioetica-filosofia-mente" class="capitolo-storia">
+  <p class="titolo-capitolo">44 - Le nuove frontiere: bioetica e filosofia della mente - Classe 5</p>
+
+  <p class="titolo-capitolo">Nuove domande per la filosofia contemporanea</p>
+  <p>Come si è accennato al termine del capitolo precedente di questo manuale, la seconda metà del Novecento e i primi decenni del nuovo secolo hanno visto la riflessione filosofica confrontarsi con problemi in larga parte inediti rispetto a quelli affrontati dagli autori esaminati nei capitoli precedenti di questo manuale, generati soprattutto dagli straordinari sviluppi delle scienze biomediche, dell'informatica e delle neuroscienze: due ambiti in particolare, la bioetica e la filosofia della mente, hanno assunto in questo contesto un rilievo filosofico crescente, ponendo interrogativi che intrecciano strettamente la riflessione filosofica tradizionale, ereditata dai grandi sistemi etici e metafisici già esaminati in questo manuale, con questioni scientifiche e tecnologiche di grande complessità e attualità.</p>
+
+  <p class="titolo-capitolo">La nascita della bioetica</p>
+  <p>Il termine bioetica venne impiegato per la prima volta in ambito filosofico e scientifico agli inizi degli anni Settanta del Novecento, per indicare quella disciplina di confine tra filosofia morale, medicina e biologia, dedicata alla riflessione critica sui problemi etici sollevati dai progressi delle scienze della vita e delle tecnologie biomediche: la nascita di questa disciplina fu favorita, in particolare, dai rapidi sviluppi tecnologici che, a partire dalla metà del Novecento, resero possibili interventi fino ad allora impensabili sul corpo umano, sulla nascita e sulla fine della vita, ponendo la riflessione filosofica ed etica di fronte a scelte concrete di enorme delicatezza, non sempre risolvibili attraverso la semplice applicazione dei sistemi etici tradizionali già esaminati in questo manuale, da quello aristotelico delle virtù fino a quello kantiano del dovere.</p>
+  <p>Tra gli approcci filosofici più influenti nel dibattito bioetico contemporaneo va ricordato in particolare il cosiddetto principialismo, elaborato negli Stati Uniti a partire dagli anni Settanta, che propone di orientare le decisioni in ambito biomedico attraverso quattro principi fondamentali tra loro complementari: il principio di autonomia, che tutela il diritto della persona a decidere liberamente e consapevolmente riguardo alla propria salute e al proprio corpo; il principio di beneficialità, che impegna a operare per il bene concreto del paziente; il principio di non maleficità, che impone di evitare in ogni caso di arrecare danno; e il principio di giustizia, che richiede un'equa distribuzione delle risorse sanitarie disponibili tra i diversi individui e gruppi sociali.</p>
+
+  <p class="titolo-capitolo">Questioni bioetiche di inizio e fine vita</p>
+  <p>Tra i temi più discussi nell'ambito della bioetica contemporanea vi sono quelli relativi all'inizio della vita umana, come le tecniche di procreazione medicalmente assistita, la diagnosi genetica preimpianto e, più recentemente, le tecniche di editing genetico, capaci di intervenire direttamente sul patrimonio ereditario degli organismi viventi, sollevando interrogativi filosofici di grande complessità riguardo ai limiti legittimi dell'intervento umano sulla natura biologica delle future generazioni; parallelamente, altrettanto centrali risultano le questioni relative alla fine della vita, come quelle concernenti le cure palliative, l'accanimento terapeutico e le diverse forme di eutanasia, questioni che richiamano direttamente, sia pure in un contesto tecnologico del tutto nuovo, l'antico interrogativo filosofico sul valore e sul senso della vita umana, già affrontato, in prospettive assai diverse tra loro, da filosofi come Epicuro, esaminato nel quattordicesimo capitolo di questo manuale, a proposito del rapporto tra l'uomo e la propria finitudine mortale.</p>
+
+  <p class="titolo-capitolo">Il problema mente-corpo</p>
+  <p>Accanto alla bioetica, un secondo ambito di grande sviluppo nella filosofia contemporanea è costituito dalla filosofia della mente, disciplina dedicata all'indagine filosofica sulla natura della coscienza, del pensiero e della loro relazione con il cervello e il sistema nervoso: il problema filosofico centrale di questo ambito, noto come problema mente-corpo, affonda le proprie radici già nel dualismo cartesiano tra res cogitans e res extensa, esaminato nel ventesimo capitolo di questo manuale, ma ha assunto, alla luce dei recenti sviluppi delle neuroscienze, forme e articolazioni filosofiche del tutto nuove, non più formulabili semplicemente nei termini della metafisica moderna.</p>
+  <p>Nel dibattito filosofico contemporaneo, tra le principali posizioni sostenute riguardo al rapporto tra mente e cervello si possono distinguere, sia pure schematicamente, alcune impostazioni caratteristiche: il fisicalismo, o materialismo, secondo cui gli stati mentali coincidono, in ultima analisi, con stati fisici del cervello, senza residuo di una sostanza mentale autonoma e distinta, in aperta continuità critica con la tradizione materialistica già rappresentata, in epoca antica, da Democrito, esaminato nel settimo capitolo di questo manuale; il funzionalismo, secondo cui gli stati mentali vanno definiti non in base alla loro particolare costituzione fisica sottostante, ma in base al ruolo causale e funzionale che essi svolgono, rendendo così in linea di principio possibile che stati mentali analoghi possano realizzarsi anche in sostrati fisici diversi da quello biologico, come i moderni sistemi artificiali; e il dualismo delle proprietà, secondo cui, pur ammettendo che la mente non costituisca una sostanza separata e autonoma rispetto al cervello, gli stati mentali coscienti possiedano tuttavia proprietà qualitative irriducibili alla sola descrizione fisica oggettiva del cervello stesso.</p>
+
+  <p class="titolo-capitolo">Il problema difficile della coscienza</p>
+  <p>Un aspetto particolarmente discusso nel dibattito filosofico contemporaneo riguarda quello che alcuni filosofi hanno definito il "problema difficile" della coscienza, distinto dai più circoscritti problemi, pur complessi, relativi alla spiegazione scientifica dei meccanismi neurali sottostanti alle diverse funzioni cognitive: tale problema riguarda la difficoltà filosofica di spiegare in modo pienamente soddisfacente come e perché ai processi fisici e neurali del cervello sia associata un'esperienza soggettiva qualitativa, cioè un particolare modo soggettivo in cui è come essere quel determinato soggetto cosciente, un aspetto dell'esperienza mentale che, secondo alcuni filosofi contemporanei, resterebbe difficilmente riducibile, anche a fronte di una conoscenza neuroscientifica sempre più completa e dettagliata dei correlati fisici della coscienza, alla sola descrizione oggettiva e impersonale propria delle scienze naturali.</p>
+  <p><em>Approfondimento:</em> per illustrare questa difficoltà, alcuni filosofi contemporanei hanno proposto celebri esperimenti mentali, come quello di uno scienziato che, pur conoscendo in modo completo ed esaustivo ogni informazione fisica relativa alla percezione dei colori, senza tuttavia averne mai fatto personalmente esperienza diretta, sembrerebbe comunque apprendere qualcosa di autenticamente nuovo nel momento in cui, per la prima volta, vedesse concretamente un colore: un esperimento mentale che, secondo alcuni interpreti, mostrerebbe come la sola conoscenza fisica oggettiva, per quanto completa, non esaurisca interamente la comprensione dell'esperienza soggettiva cosciente.</p>
+
+  <p class="titolo-capitolo">Intelligenza artificiale e questioni etiche contemporanee</p>
+  <p>I recenti e rapidi sviluppi dei sistemi di intelligenza artificiale hanno infine posto la riflessione filosofica contemporanea di fronte a interrogativi ulteriori, che intrecciano strettamente la filosofia della mente appena esaminata con questioni più propriamente etiche e sociali: da un lato, ci si interroga filosoficamente se e in quale misura sistemi artificiali sempre più sofisticati possano essere considerati dotati, in linea di principio, di autentici stati mentali o di una qualche forma di esperienza cosciente, oppure se debbano essere considerati sempre e comunque semplici simulazioni prive di reale interiorità soggettiva; dall'altro lato, si pongono questioni più direttamente etiche relative alla responsabilità morale e giuridica delle decisioni assunte, in ambiti sempre più numerosi, con l'ausilio o attraverso sistemi automatizzati, e al possibile impatto di tali tecnologie sull'autonomia, sulla libertà e sull'occupazione lavorativa umana, temi che, pur nella loro assoluta novità storica, richiamano da vicino questioni filosofiche più generali già affrontate in questo manuale, come quella del rapporto tra scienza, tecnica e responsabilità etica, discussa a proposito della critica della ragione strumentale della Scuola di Francoforte nel quarantunesimo capitolo di questo manuale.</p>
+
+  <p class="titolo-capitolo">Conclusione del percorso filosofico</p>
+  <p>Giunti al termine di questo manuale, il percorso compiuto insieme, dai primi tentativi dei filosofi di Mileto di spiegare razionalmente l'origine del cosmo, esaminati nel secondo capitolo, fino alle più recenti questioni sollevate dalla bioetica e dalla filosofia della mente appena affrontate in questo ultimo capitolo, mostra con chiarezza come la filosofia, pur mutando radicalmente nel tempo i propri strumenti concettuali, i propri linguaggi e i propri specifici oggetti di indagine, abbia conservato, lungo l'intero arco della propria storia plurimillenaria, un medesimo spirito di fondo: quello di un pensiero critico e razionale, mai definitivamente concluso, sempre capace di interrogare criticamente le certezze acquisite di ciascuna epoca storica, e di rinnovarsi costantemente di fronte a problemi e sfide sempre nuove, in un dialogo ininterrotto tra la tradizione ereditata dal passato e le domande, non meno urgenti, poste dal presente.</p>
+</div>
+<!-- fine capitolo filosofia 44 -->
+  
+<div id="indice-filosofia" class="capitolo-storia">
+  <p><a href="fil00.html">Torna all'indice</a></p>
+</div>
+
+  
+  
+    <footer>
+      Piccolo manuale di filosofia per le scuole superiori
+    </footer>
+
+  </div>
+</body>
+  </html>
