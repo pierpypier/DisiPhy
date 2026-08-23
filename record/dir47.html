@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 47</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 47: la pubblica amministrazione -->
+<div id="capitolo-47-pubblica-amministrazione" class="capitolo-storia">
+  <p class="titolo-capitolo">47 - La Pubblica Amministrazione - Classe 5</p>
+
+  <p class="titolo-capitolo">La nozione di Pubblica Amministrazione e la funzione amministrativa</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, gli organi costituzionali dello Stato e l'articolazione territoriale della Repubblica, occorre ora esaminare, più in generale, l'organizzazione e i principi fondamentali dell'attività della Pubblica Amministrazione, cioè di quel complesso di soggetti pubblici, statali e territoriali, cui è affidato l'esercizio della funzione amministrativa: si tratta della funzione statale diretta a curare in concreto gli interessi della collettività, dando attuazione, nei singoli casi concreti, agli indirizzi politici determinati dagli organi di governo e alle leggi approvate dal Parlamento, secondo quanto già anticipato nel capitolo di questo manuale dedicato al Governo a proposito della funzione esecutiva.</p>
+
+  <p class="titolo-capitolo">I principi costituzionali dell'attività amministrativa</p>
+  <p>L'articolo 97 della Costituzione, come integrato dalla legge costituzionale 20 aprile 2012, n. 1, stabilisce che le pubbliche amministrazioni, in coerenza con l'ordinamento dell'Unione europea, assicurano l'equilibrio dei bilanci e la sostenibilità del debito pubblico, e che i pubblici uffici sono organizzati secondo disposizioni di legge, in modo che siano assicurati il buon andamento e l'imparzialità dell'amministrazione: da tale disposizione si ricavano due fondamentali principi costituzionali dell'azione amministrativa, cioè il principio di buon andamento, che impone alla Pubblica Amministrazione di operare secondo criteri di efficienza, efficacia ed economicità, perseguendo nel modo migliore possibile gli interessi pubblici a essa affidati; e il principio di imparzialità, che impone alla Pubblica Amministrazione di agire senza favoritismi o discriminazioni ingiustificate nei confronti dei cittadini con cui entra in contatto, trattando in modo eguale situazioni eguali.</p>
+  <p>Il medesimo articolo 97, quarto comma, stabilisce inoltre che agli impieghi nelle pubbliche amministrazioni si accede mediante concorso, salvi i casi stabiliti dalla legge, quale ulteriore e specifica applicazione del principio di imparzialità già richiamato, diretta a garantire che la selezione del personale destinato a operare nell'amministrazione pubblica avvenga sulla base di criteri oggettivi e trasparenti, di merito e di competenza, e non secondo logiche di natura clientelare o comunque estranee alla effettiva capacità professionale dei candidati.</p>
+
+  <p class="titolo-capitolo">Il principio di legalità dell'azione amministrativa</p>
+  <p>Accanto ai principi espressamente enunciati dall'articolo 97, l'attività della Pubblica Amministrazione è governata dal principio di legalità, elaborato dalla dottrina e dalla giurisprudenza a partire dalla lettura sistematica di diverse disposizioni costituzionali, in base al quale ogni potere esercitato dalla Pubblica Amministrazione deve trovare il proprio fondamento in una previa norma di legge, che ne delimiti i presupposti, i contenuti e le modalità di esercizio: tale principio, che costituisce un'applicazione specifica, in ambito amministrativo, del più generale principio dello Stato di diritto, si distingue tradizionalmente in legalità in senso formale, che richiede la mera esistenza di una base legale per l'esercizio del potere amministrativo, e legalità in senso sostanziale, più rigorosa, che richiede altresì che la legge disciplini in modo sufficientemente puntuale i presupposti e i limiti dell'esercizio di tale potere, riducendo per quanto possibile la discrezionalità amministrativa.</p>
+  <p><em>Approfondimento:</em> la discrezionalità amministrativa, cioè il margine di valutazione e di scelta che la legge riserva alla Pubblica Amministrazione nell'esercizio di determinati poteri, non va confusa con l'arbitrio, poiché essa deve comunque essere esercitata nel rispetto dei principi generali dell'azione amministrativa, tra cui in particolare il principio di ragionevolezza e di proporzionalità, sindacabili dal giudice amministrativo in sede di controllo di legittimità sull'atto amministrativo, secondo quanto sarà esaminato nel paragrafo seguente.</p>
+
+  <p class="titolo-capitolo">L'atto amministrativo e il provvedimento</p>
+  <p>L'atto amministrativo costituisce la manifestazione tipica dell'esercizio della funzione amministrativa, e si distingue in diverse categorie a seconda del suo contenuto e dei suoi effetti: tra queste assume particolare rilievo il provvedimento amministrativo, cioè l'atto con cui la Pubblica Amministrazione, nell'esercizio di un potere autoritativo a essa attribuito dalla legge, incide unilateralmente sulla sfera giuridica dei destinatari, costituendo, modificando o estinguendo situazioni giuridiche soggettive in capo a essi, come avviene, ad esempio, per il già richiamato permesso di costruire, o per un provvedimento di espropriazione per pubblica utilità, già esaminato nel capitolo di questo manuale dedicato al diritto di proprietà. Il procedimento amministrativo, disciplinato in via generale dalla legge 7 agosto 1990, n. 241, individua la sequenza di atti e di attività attraverso cui si forma il provvedimento finale, garantendo, tra l'altro, la partecipazione dei soggetti interessati al procedimento stesso, secondo il principio del giusto procedimento.</p>
+  <p><em>Esempio:</em> il procedimento diretto al rilascio di un'autorizzazione commerciale si articola, secondo la disciplina generale della legge n. 241 del 1990, in una fase di iniziativa, generalmente su istanza di parte, una fase istruttoria, nel corso della quale l'amministrazione acquisisce e valuta gli elementi rilevanti per la decisione, e una fase decisoria, che si conclude con l'adozione del provvedimento finale, di accoglimento o di rigetto dell'istanza presentata dal richiedente.</p>
+
+  <p class="titolo-capitolo">Diritti soggettivi e interessi legittimi</p>
+  <p>Nei rapporti con la Pubblica Amministrazione, il cittadino può essere titolare, a seconda dei casi, di un diritto soggettivo, cioè di una posizione giuridica pienamente tutelata dall'ordinamento indipendentemente dall'esercizio di un potere discrezionale dell'amministrazione, oppure di un interesse legittimo, cioè di una posizione giuridica soggettiva che trova tutela nella pretesa a che l'amministrazione, nell'esercizio del proprio potere discrezionale, agisca correttamente e nel rispetto delle norme che ne disciplinano l'azione: tale distinzione, di matrice storicamente risalente nell'ordinamento italiano, si riflette, come già accennato nel capitolo di questo manuale dedicato alla Magistratura, sul riparto di giurisdizione tra il giudice ordinario, competente in via generale per la tutela dei diritti soggettivi, e il giudice amministrativo, competente invece, quale regola generale, per la tutela degli interessi legittimi nei confronti degli atti della Pubblica Amministrazione.</p>
+
+  <p class="titolo-capitolo">La giustizia amministrativa</p>
+  <p>La tutela giurisdizionale nei confronti degli atti della Pubblica Amministrazione è affidata, come già anticipato nel capitolo di questo manuale dedicato alla Magistratura, al giudice amministrativo, articolato in un doppio grado di giudizio: i Tribunali Amministrativi Regionali, istituiti presso ciascuna Regione dalla legge 6 dicembre 1971, n. 1034, competenti in primo grado per l'impugnazione dei provvedimenti amministrativi lesivi di un interesse legittimo del ricorrente; e il Consiglio di Stato, quale organo di secondo grado, competente a decidere sugli appelli proposti avverso le sentenze dei Tribunali Amministrativi Regionali, nonché titolare, secondo l'articolo 100 della Costituzione, di funzioni consultive in materia amministrativa, esercitate in particolare attraverso l'espressione di pareri sugli schemi di atti normativi del Governo.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dell'Unione Europea</p>
+  <p>Dopo aver esaminato la Pubblica Amministrazione, i principi costituzionali che ne governano l'azione e gli strumenti di tutela giurisdizionale a disposizione dei cittadini nei suoi confronti, occorre ora volgere l'attenzione a un livello di governo ulteriore rispetto a quello statale e regionale fin qui esaminato, cioè l'Unione Europea, quale organizzazione sovranazionale di cui l'Italia fa parte fin dalle sue origini: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 47 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir48.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

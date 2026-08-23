@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 49</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 49: il diritto internazionale e la tutela dei diritti umani -->
+<div id="capitolo-49-diritto-internazionale-diritti-umani" class="capitolo-storia">
+  <p class="titolo-capitolo">49 - Il diritto internazionale e la tutela dei diritti umani - Classe 5</p>
+
+  <p class="titolo-capitolo">La nozione di diritto internazionale</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, l'Unione Europea quale organizzazione sovranazionale di cui l'Italia fa parte, occorre ora concludere questo manuale con l'esame del diritto internazionale in senso più ampio: si definisce diritto internazionale l'insieme delle norme giuridiche che disciplinano i rapporti tra gli Stati sovrani, e più in generale tra i soggetti della comunità internazionale, a partire dalle organizzazioni internazionali istituite dagli Stati stessi. A differenza del diritto interno di ciascuno Stato, caratterizzato, come si è visto nel capitolo di questo manuale dedicato alle fonti del diritto, da un sistema gerarchicamente ordinato di fonti facenti capo a un'autorità sovraordinata, il diritto internazionale si caratterizza per l'assenza di un'autorità sovraordinata agli Stati, i quali restano, quale regola generale, gli unici soggetti originari dell'ordinamento internazionale, dotati di piena sovranità secondo quanto già esaminato nel capitolo di questo manuale dedicato allo Stato.</p>
+
+  <p class="titolo-capitolo">Le fonti del diritto internazionale</p>
+  <p>Le principali fonti del diritto internazionale sono la consuetudine internazionale, cioè la ripetizione costante e uniforme di un determinato comportamento da parte della generalità degli Stati, accompagnata dalla convinzione della sua obbligatorietà giuridica, secondo un meccanismo di formazione per certi versi analogo a quello della consuetudine già esaminata nel capitolo di questo manuale dedicato alle fonti del diritto interno; e il trattato internazionale, cioè l'accordo scritto concluso tra due o più Stati, o tra Stati e organizzazioni internazionali, diretto a produrre effetti giuridici vincolanti tra le parti secondo il principio consuetudinario pacta sunt servanda, disciplinato in dettaglio, quanto al procedimento di formazione, dalla Convenzione di Vienna sul diritto dei trattati del 1969. L'articolo 10 della Costituzione italiana, richiamato anch'esso già nel capitolo di questo manuale dedicato ai principi fondamentali, stabilisce che l'ordinamento giuridico italiano si conforma alle norme del diritto internazionale generalmente riconosciute, prevedendo così un meccanismo di adattamento automatico del diritto interno alle norme consuetudinarie internazionali, mentre l'adattamento ai trattati internazionali richiede, quale regola generale, un apposito atto interno di esecuzione, generalmente una legge di ratifica ed esecuzione.</p>
+  <p><em>Approfondimento:</em> è opportuno distinguere, con riguardo al diritto internazionale, tra diritto internazionale generale, cioè quello vincolante per la generalità degli Stati indipendentemente dalla loro specifica adesione, come le norme consuetudinarie appena richiamate, e diritto internazionale particolare, cioè quello derivante da trattati che vincolano soltanto gli Stati che vi hanno espressamente aderito, secondo il principio di relatività degli effetti dei trattati, per cui un trattato internazionale non produce, quale regola generale, effetti giuridici nei confronti degli Stati terzi che non vi abbiano preso parte.</p>
+
+  <p class="titolo-capitolo">L'Organizzazione delle Nazioni Unite</p>
+  <p>Tra le organizzazioni internazionali di maggiore rilevanza, l'Organizzazione delle Nazioni Unite, istituita con la Carta di San Francisco del 26 giugno 1945, all'esito del secondo conflitto mondiale, persegue, secondo l'articolo 1 della propria Carta istitutiva, il mantenimento della pace e della sicurezza internazionale, lo sviluppo di relazioni amichevoli tra le Nazioni fondate sul rispetto del principio di autodeterminazione dei popoli, e la promozione della cooperazione internazionale nella soluzione dei problemi di carattere economico, sociale, culturale e umanitario. Tra i principali organi delle Nazioni Unite si ricordano l'Assemblea Generale, composta da rappresentanti di tutti gli Stati membri, con funzioni prevalentemente deliberative e di indirizzo generale; il Consiglio di Sicurezza, composto da quindici membri, di cui cinque permanenti dotati di potere di veto, cui è affidata la responsabilità principale per il mantenimento della pace e della sicurezza internazionale, potendo tra l'altro autorizzare l'uso della forza in caso di minaccia alla pace; e la Corte Internazionale di Giustizia, con sede all'Aja, competente a dirimere le controversie giuridiche tra Stati che ne accettino la giurisdizione.</p>
+
+  <p class="titolo-capitolo">La Dichiarazione Universale dei Diritti dell'Uomo</p>
+  <p>Un momento di fondamentale importanza nell'evoluzione della tutela internazionale dei diritti umani è rappresentato dalla Dichiarazione Universale dei Diritti dell'Uomo, approvata dall'Assemblea Generale delle Nazioni Unite il 10 dicembre 1948, la quale, pur non avendo di per sé natura di trattato internazionale giuridicamente vincolante, ha esercitato un'influenza storica e culturale di straordinaria portata, enunciando in trenta articoli i diritti fondamentali riconosciuti a ogni essere umano, indipendentemente dalla propria nazionalità, e ponendosi come modello di riferimento per la successiva elaborazione di numerosi trattati internazionali giuridicamente vincolanti in materia di diritti umani, tra cui il Patto internazionale sui diritti civili e politici e il Patto internazionale sui diritti economici, sociali e culturali, entrambi adottati dalle Nazioni Unite nel 1966.</p>
+  <p><em>Esempio:</em> il diritto alla libertà personale, già esaminato nel capitolo di questo manuale dedicato ai diritti e ai doveri dei cittadini con riguardo all'articolo 13 della Costituzione italiana, trova un preciso corrispondente nell'articolo 3 della Dichiarazione Universale dei Diritti dell'Uomo, il quale riconosce a ogni individuo il diritto alla vita, alla libertà e alla sicurezza della propria persona, a testimonianza della stretta continuità concettuale che lega la tutela costituzionale interna dei diritti fondamentali alla loro parallela tutela nell'ordinamento internazionale.</p>
+
+  <p class="titolo-capitolo">La Convenzione europea dei diritti dell'uomo</p>
+  <p>Nell'ambito regionale europeo, la Convenzione europea per la salvaguardia dei diritti dell'uomo e delle libertà fondamentali, firmata a Roma il 4 novembre 1950 nell'ambito del Consiglio d'Europa, organizzazione internazionale distinta dall'Unione europea già esaminata nel capitolo precedente di questo manuale, ha istituito un sistema di tutela dei diritti umani particolarmente avanzato, imperniato sulla Corte europea dei diritti dell'uomo, con sede a Strasburgo, dinanzi alla quale ogni persona che ritenga di aver subito, da parte di uno Stato aderente alla Convenzione, la violazione di uno dei diritti in essa garantiti, può, dopo aver esaurito i rimedi giurisdizionali interni disponibili nel proprio Stato, presentare un ricorso individuale, ottenendo, in caso di accoglimento, una pronuncia di condanna dello Stato responsabile, con effetti rilevanti anche sull'ordinamento interno dello Stato stesso, secondo quanto elaborato in proposito anche dalla giurisprudenza della Corte Costituzionale italiana già esaminata nel capitolo di questo manuale a essa dedicato.</p>
+
+  <p class="titolo-capitolo">Conclusione del percorso di studio</p>
+  <p>Con l'esame del diritto internazionale e degli strumenti di tutela dei diritti umani si conclude il percorso di studio proposto da questo manuale, che ha condotto lo studente dai concetti fondamentali del diritto e delle norme giuridiche, attraverso l'intero sistema del diritto privato, civile, commerciale, del lavoro e di famiglia, fino all'organizzazione costituzionale della Repubblica italiana e alla sua proiezione nell'ordinamento europeo e internazionale: si tratta di un percorso che, muovendo dalle fondamenta teoriche della norma giuridica, ha inteso offrire allo studente gli strumenti concettuali necessari per comprendere, con rigore ma anche con la necessaria chiarezza didattica, il funzionamento dell'ordinamento giuridico nel suo complesso, quale sistema unitario e coerente al servizio della persona umana e della sua dignità.</p>
+</div>
+<!-- fine capitolo diritto 49 -->
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir00.html">Torna all'indice</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

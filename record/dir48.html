@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 48</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 48: l'unione europea: istituzioni e funzionamento -->
+<div id="capitolo-48-unione-europea" class="capitolo-storia">
+  <p class="titolo-capitolo">48 - L'Unione Europea: istituzioni e funzionamento - Classe 5</p>
+
+  <p class="titolo-capitolo">Dalle origini dell'integrazione europea all'Unione Europea</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, l'organizzazione costituzionale della Repubblica italiana, occorre ora volgere l'attenzione a un livello di governo ulteriore rispetto a quello statale e regionale, cioè l'Unione Europea, quale organizzazione sovranazionale di cui l'Italia fa parte fin dalle sue origini: il processo di integrazione europea prese avvio con la Comunità Europea del Carbone e dell'Acciaio, istituita dal Trattato di Parigi del 1951, e proseguì con i Trattati di Roma del 1957, istitutivi della Comunità Economica Europea e della Comunità Europea dell'Energia Atomica, fino a giungere, attraverso un progressivo ampliamento delle competenze e del numero degli Stati membri, al Trattato di Maastricht del 1992, che istituì formalmente l'Unione Europea, e al Trattato di Lisbona, firmato nel 2007 ed entrato in vigore nel 2009, che ha profondamente riformato l'assetto istituzionale dell'Unione, definendone la struttura oggi vigente attraverso il Trattato sull'Unione europea e il Trattato sul funzionamento dell'Unione europea.</p>
+
+  <p class="titolo-capitolo">Il fondamento costituzionale dell'appartenenza dell'Italia all'Unione Europea</p>
+  <p>La partecipazione dell'Italia al processo di integrazione europea trova il proprio fondamento costituzionale, come già evidenziato nel capitolo di questo manuale dedicato ai principi fondamentali della Costituzione, nell'articolo 11, il quale consente, in condizioni di parità con gli altri Stati, le limitazioni di sovranità necessarie a un ordinamento che assicuri la pace e la giustizia fra le Nazioni: su tale base, la giurisprudenza costituzionale ha progressivamente riconosciuto la particolare posizione del diritto dell'Unione europea nell'ambito del sistema delle fonti già esaminato nel capitolo di questo manuale a esso dedicato, elaborando il principio della diretta applicabilità dei regolamenti europei e della prevalenza del diritto dell'Unione sul diritto interno confliggente, fermo restando il limite dei cosiddetti controlimiti, cioè dei principi supremi dell'ordinamento costituzionale italiano e dei diritti inalienabili della persona umana, che restano sottratti anche al potere di limitazione della sovranità consentito dall'articolo 11.</p>
+
+  <p class="titolo-capitolo">Il Parlamento europeo</p>
+  <p>Il Parlamento europeo, disciplinato dagli articoli 14 del Trattato sull'Unione europea e 223 e seguenti del Trattato sul funzionamento dell'Unione europea, è l'organo che rappresenta direttamente i cittadini dell'Unione, eletto a suffragio universale diretto ogni cinque anni dai cittadini di tutti gli Stati membri, secondo un sistema elettorale che, pur lasciando ampi margini di autonomia ai singoli Stati membri nella determinazione delle modalità concrete di voto, deve comunque rispettare, secondo l'ordinamento italiano, il criterio proporzionale: il Parlamento europeo esercita, congiuntamente al Consiglio dell'Unione europea che sarà esaminato nel paragrafo seguente, la funzione legislativa e la funzione di bilancio, ed esercita inoltre funzioni di controllo politico e consultive, tra cui, in particolare, l'approvazione della nomina del Presidente della Commissione europea e della Commissione nel suo complesso.</p>
+
+  <p class="titolo-capitolo">Il Consiglio dell'Unione europea e il Consiglio europeo</p>
+  <p>Occorre distinguere, tra le istituzioni dell'Unione europea, il Consiglio dell'Unione europea, disciplinato dagli articoli 16 del Trattato sull'Unione europea, composto da un rappresentante di ciascuno Stato membro a livello ministeriale, la cui composizione varia a seconda della materia trattata, che esercita, congiuntamente al Parlamento europeo, la funzione legislativa e di bilancio, votando generalmente secondo il criterio della maggioranza qualificata; dal Consiglio europeo, disciplinato dall'articolo 15 del medesimo Trattato, composto dai Capi di Stato o di Governo degli Stati membri, dal proprio Presidente e dal Presidente della Commissione, che non esercita funzioni legislative in senso proprio, ma dà all'Unione gli impulsi necessari al suo sviluppo e ne definisce gli orientamenti e le priorità politiche generali, secondo una funzione di indirizzo politico di natura strategica.</p>
+  <p><em>Approfondimento:</em> la distinzione tra le due istituzioni, spesso fonte di confusione per l'analogia terminologica, si fonda dunque su un duplice criterio: da un lato, la composizione, ministeriale nel Consiglio dell'Unione europea e di vertice, cioè costituita dai Capi di Stato o di Governo, nel Consiglio europeo; dall'altro, la funzione esercitata, di natura essenzialmente legislativa e normativa nel primo caso, e di indirizzo politico generale, priva di efficacia normativa diretta, nel secondo caso.</p>
+
+  <p class="titolo-capitolo">La Commissione europea</p>
+  <p>La Commissione europea, disciplinata dall'articolo 17 del Trattato sull'Unione europea, è composta da un cittadino per ciascuno Stato membro, compreso il suo Presidente e l'Alto rappresentante dell'Unione per gli affari esteri e la politica di sicurezza, ed esercita una funzione paragonabile, sotto alcuni profili, a quella di un organo esecutivo a livello sovranazionale: promuove l'interesse generale dell'Unione, vigila sull'applicazione dei Trattati e del diritto dell'Unione da parte degli Stati membri, esercitando a tal fine, se necessario, il potere di avviare una procedura di infrazione nei confronti dello Stato inadempiente davanti alla Corte di giustizia dell'Unione europea, e dispone, salvo eccezioni specificamente previste dai Trattati, del potere esclusivo di iniziativa legislativa, presentando le proposte di atti legislativi dell'Unione al Parlamento europeo e al Consiglio.</p>
+  <p><em>Esempio:</em> se uno Stato membro non recepisce correttamente, entro i termini stabiliti, una direttiva dell'Unione europea nel proprio ordinamento interno, secondo quanto già esaminato in via generale a proposito delle fonti del diritto dell'Unione, la Commissione europea può avviare nei suoi confronti una procedura di infrazione, che può condurre, in caso di persistente inadempimento, a una pronuncia della Corte di giustizia dell'Unione europea, eventualmente accompagnata dall'irrogazione di sanzioni pecuniarie a carico dello Stato inadempiente.</p>
+
+  <p class="titolo-capitolo">La Corte di giustizia dell'Unione europea</p>
+  <p>La Corte di giustizia dell'Unione europea, disciplinata dall'articolo 19 del Trattato sull'Unione europea, con sede in Lussemburgo, assicura il rispetto del diritto dell'Unione nell'interpretazione e nell'applicazione dei Trattati, esercitando, tra le altre, la funzione di risolvere i ricorsi per infrazione promossi dalla Commissione europea o da altri Stati membri nei confronti di uno Stato inadempiente, e la funzione, di particolare rilievo pratico per i giudici nazionali, di pronunciarsi in via pregiudiziale, su richiesta di un giudice di uno Stato membro, sull'interpretazione del diritto dell'Unione o sulla validità di un atto adottato dalle istituzioni europee, allo scopo di garantire un'applicazione uniforme del diritto dell'Unione in tutti gli Stati membri.</p>
+
+  <p class="titolo-capitolo">Le fonti del diritto dell'Unione europea</p>
+  <p>Il diritto dell'Unione europea si distingue tradizionalmente in diritto primario, costituito dai Trattati istitutivi e dai loro successivi emendamenti, che occupano una posizione di vertice nel sistema delle fonti dell'Unione, e diritto derivato, costituito dagli atti adottati dalle istituzioni dell'Unione in applicazione dei Trattati stessi, tra cui, in particolare, il regolamento, disciplinato dall'articolo 288 del Trattato sul funzionamento dell'Unione europea, che ha portata generale ed è direttamente applicabile in ciascuno degli Stati membri senza necessità di un atto interno di recepimento; e la direttiva, che vincola invece lo Stato membro cui è rivolta per quanto riguarda il risultato da raggiungere, lasciando alle autorità nazionali la competenza in merito alla forma e ai mezzi da adottare per il suo recepimento entro il termine da essa stabilito.</p>
+
+  <p class="titolo-capitolo">Verso lo studio del diritto internazionale e della tutela dei diritti umani</p>
+  <p>Dopo aver esaminato l'Unione Europea, le sue principali istituzioni e le fonti del diritto da essa prodotte, occorre ora concludere questo manuale con l'esame del diritto internazionale in senso più ampio, e degli strumenti attraverso cui la comunità internazionale garantisce la tutela dei diritti umani fondamentali della persona: a questi temi sarà dedicato l'ultimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 48 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir49.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>
