@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 44</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 44: la magistratura e la funzione giurisdizionale -->
+<div id="capitolo-44-magistratura-funzione-giurisdizionale" class="capitolo-storia">
+  <p class="titolo-capitolo">44 - La Magistratura e la funzione giurisdizionale - Classe 5</p>
+
+  <p class="titolo-capitolo">La funzione giurisdizionale e il principio di indipendenza della Magistratura</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, il Parlamento, il Governo e il Presidente della Repubblica, occorre ora esaminare un ulteriore fondamentale potere dello Stato, disciplinato dal titolo quarto della parte seconda della Costituzione, agli articoli 101 e seguenti: si tratta della Magistratura, cui è affidato l'esercizio della funzione giurisdizionale, cioè quella funzione statale diretta ad applicare in concreto la legge ai singoli casi controversi, risolvendo le liti che insorgono tra i cittadini, oppure tra i cittadini e la Pubblica Amministrazione, e ad accertare la responsabilità penale degli autori di reati. L'articolo 101, secondo comma, della Costituzione sancisce il principio fondamentale secondo cui i giudici sono soggetti soltanto alla legge, sancendo così l'indipendenza della Magistratura da ogni altro potere dello Stato, in particolare dal potere esecutivo e da quello legislativo, quale essenziale garanzia di imparzialità nell'esercizio della funzione giurisdizionale.</p>
+
+  <p class="titolo-capitolo">L'indipendenza esterna e l'indipendenza interna della Magistratura</p>
+  <p>L'indipendenza della Magistratura si articola tradizionalmente in due distinti profili: l'indipendenza esterna, che riguarda i rapporti tra il potere giudiziario e gli altri poteri dello Stato, garantita in particolare dall'articolo 104 della Costituzione, il quale sancisce che la Magistratura costituisce un ordine autonomo e indipendente da ogni altro potere; e l'indipendenza interna, che riguarda invece i rapporti tra i singoli magistrati all'interno dell'ordine giudiziario, garantita dal principio secondo cui i magistrati si distinguono fra loro soltanto per diversità di funzioni, e non già per un rapporto di gerarchia interna analogo a quello esistente, ad esempio, nell'ambito dell'organizzazione amministrativa, in coerenza con la natura diffusa e non concentrata della funzione giurisdizionale.</p>
+
+  <p class="titolo-capitolo">Il Consiglio Superiore della Magistratura</p>
+  <p>A garanzia dell'indipendenza della Magistratura, l'articolo 104 della Costituzione istituisce il Consiglio Superiore della Magistratura, presieduto, secondo quanto già esaminato nel capitolo precedente di questo manuale, dal Presidente della Repubblica, e composto, oltre che dal Primo presidente e dal Procuratore generale della Corte di Cassazione, che ne fanno parte di diritto, da membri eletti per due terzi da tutti i magistrati ordinari tra gli appartenenti alle varie categorie, secondo la componente detta togata, e per un terzo dal Parlamento in seduta comune tra professori ordinari di università in materie giuridiche ed avvocati dopo quindici anni di esercizio, secondo la componente detta laica. Al Consiglio Superiore della Magistratura spettano, secondo l'articolo 105 della Costituzione, le assunzioni, le assegnazioni e i trasferimenti, le promozioni e i provvedimenti disciplinari nei riguardi dei magistrati, sottraendo così tali delicate decisioni, di fondamentale importanza per la carriera e la posizione dei singoli magistrati, a qualsiasi ingerenza del potere esecutivo.</p>
+  <p><em>Approfondimento:</em> la presenza, all'interno del Consiglio Superiore della Magistratura, di una componente laica eletta dal Parlamento, accanto alla componente togata eletta dagli stessi magistrati, risponde all'esigenza di evitare che l'organo di autogoverno della Magistratura si trasformi in un organismo di natura meramente corporativa, garantendo invece un equilibrato collegamento con la rappresentanza politica, pur nel rispetto del principio di indipendenza della funzione giurisdizionale dagli altri poteri dello Stato.</p>
+
+  <p class="titolo-capitolo">Il pubblico ministero</p>
+  <p>Accanto ai giudici, cui è affidata in senso proprio la funzione di decidere le controversie, l'ordinamento giudiziario italiano prevede la figura del pubblico ministero, disciplinato dall'articolo 107, ultimo comma, e dall'articolo 112 della Costituzione, quale magistrato cui è affidato l'esercizio dell'azione penale, che l'articolo 112 qualifica espressamente come obbligatoria: tale obbligatorietà, che distingue il modello italiano da altri ordinamenti in cui l'esercizio dell'azione penale è invece rimesso a valutazioni di opportunità dell'organo dell'accusa, risponde all'esigenza di garantire l'uguaglianza dei cittadini di fronte alla legge penale, sottraendo la decisione di procedere penalmente a valutazioni discrezionali potenzialmente influenzabili da considerazioni politiche o di altra natura estranea al merito della singola vicenda.</p>
+
+  <p class="titolo-capitolo">La giurisdizione ordinaria e le giurisdizioni speciali</p>
+  <p>L'articolo 102 della Costituzione affida la funzione giurisdizionale ai magistrati ordinari, istituiti e regolati dalle norme sull'ordinamento giudiziario, vietando espressamente l'istituzione di giudici straordinari o di giudici speciali, salvo le eccezioni espressamente previste dalla stessa Costituzione: la giurisdizione ordinaria si articola, quanto alla materia trattata, in giurisdizione civile, diretta a risolvere le controversie tra privati relative a diritti soggettivi, secondo quanto già esaminato nei numerosi capitoli di questo manuale dedicati al diritto civile e commerciale, e giurisdizione penale, diretta ad accertare la responsabilità penale degli autori di reati. Accanto alla giurisdizione ordinaria, la Costituzione stessa prevede, agli articoli 103 e seguenti, alcune giurisdizioni speciali, tra cui in particolare la giurisdizione amministrativa, affidata al Consiglio di Stato e agli altri organi di giustizia amministrativa, competente per la tutela degli interessi legittimi nei confronti della Pubblica Amministrazione, secondo quanto sarà approfondito nel capitolo di questo manuale a essa dedicato, e la giurisdizione contabile, affidata alla Corte dei conti, competente in particolare per le materie di contabilità pubblica.</p>
+  <p><em>Esempio:</em> se un cittadino intende contestare la legittimità di un provvedimento amministrativo che gli ha negato il rilascio di un'autorizzazione edilizia, ritenendo lesa una propria posizione di interesse legittimo, dovrà rivolgersi al giudice amministrativo, competente secondo la ripartizione di giurisdizione stabilita dalla Costituzione, e non al giudice ordinario, competente invece, quale regola generale, per la tutela dei diritti soggettivi.</p>
+
+  <p class="titolo-capitolo">I principi costituzionali del processo: il giusto processo</p>
+  <p>L'articolo 111 della Costituzione, come modificato dalla legge costituzionale 23 novembre 1999, n. 2, disciplina il principio del giusto processo, stabilendo che la giurisdizione si attua mediante il giusto processo regolato dalla legge, che ogni processo si svolge nel contraddittorio tra le parti, in condizioni di parità, davanti a un giudice terzo e imparziale, e che la legge ne assicura la ragionevole durata: tali principi, che trovano corrispondenza anche nell'articolo 6 della Convenzione europea dei diritti dell'uomo, costituiscono oggi un parametro fondamentale di legittimità costituzionale della disciplina processuale, sia civile sia penale, e attribuiscono specifico rilievo, nel processo penale, al principio del contraddittorio nella formazione della prova, secondo quanto disciplinato dal terzo comma del medesimo articolo 111.</p>
+
+  <p class="titolo-capitolo">Verso lo studio della Corte Costituzionale</p>
+  <p>Dopo aver esaminato la Magistratura e i principi costituzionali che ne garantiscono l'indipendenza e ne disciplinano l'esercizio della funzione giurisdizionale, occorre ora volgere l'attenzione a un ulteriore e fondamentale organo di garanzia costituzionale, già più volte richiamato nei capitoli precedenti di questo manuale, cioè la Corte Costituzionale, cui è affidato il compito di sindacare la conformità delle leggi alla Costituzione: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 44 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir45.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

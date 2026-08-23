@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 39</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 39: la costituzione italiana: caratteri e principi fondamentali -->
+<div id="capitolo-39-costituzione-caratteri-principi" class="capitolo-storia">
+  <p class="titolo-capitolo">39 - La Costituzione italiana: caratteri e principi fondamentali - Classe 5</p>
+
+  <p class="titolo-capitolo">Dalle forme di governo alla Costituzione italiana</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, le forme di Stato e le forme di governo storicamente affermatesi, occorre ora volgere l'attenzione specificamente all'ordinamento costituzionale della Repubblica italiana, esaminandone anzitutto i caratteri generali del testo costituzionale e i principi fondamentali che ne costituiscono il nucleo essenziale e non modificabile, ai quali si ispira l'intero ordinamento repubblicano.</p>
+
+  <p class="titolo-capitolo">La genesi storica della Costituzione</p>
+  <p>La Costituzione della Repubblica italiana fu approvata dall'Assemblea Costituente il 22 dicembre 1947, promulgata dal Capo provvisorio dello Stato il 27 dicembre 1947 ed entrò in vigore, come già ricordato nel capitolo di questo manuale dedicato alle fonti del diritto, il 1° gennaio 1948: l'Assemblea Costituente, eletta a suffragio universale il 2 giugno 1946, contestualmente al referendum istituzionale con cui il popolo italiano scelse la forma repubblicana in luogo di quella monarchica, era composta da rappresentanti dei diversi partiti politici che avevano animato la resistenza al regime fascista e la ricostruzione democratica del Paese, e giunse all'approvazione del testo costituzionale attraverso un ampio lavoro di mediazione tra le diverse culture politiche presenti in Assemblea, in particolare quella cattolica, quella liberale e quella social-comunista, dando vita a un testo di sintesi e di compromesso tra visioni ideologicamente distanti tra loro.</p>
+
+  <p class="titolo-capitolo">I caratteri della Costituzione italiana</p>
+  <p>La Costituzione italiana presenta alcuni caratteri fondamentali che la contraddistinguono nettamente rispetto allo Statuto albertino, la precedente carta costituzionale concessa dal Re Carlo Alberto di Savoia nel 1848 e rimasta formalmente in vigore fino all'entrata in vigore della nuova Costituzione: si tratta anzitutto di una Costituzione votata, cioè approvata da un'assemblea eletta dal popolo, a differenza dello Statuto albertino, che era invece una Costituzione ottriata, cioè concessa unilateralmente dal sovrano; è inoltre una Costituzione rigida, secondo quanto già esaminato nel capitolo di questo manuale dedicato alle fonti del diritto, cioè modificabile solo attraverso il particolare procedimento aggravato previsto dall'articolo 138, a differenza dello Statuto albertino, che era invece una Costituzione flessibile, modificabile con legge ordinaria; è infine una Costituzione lunga, cioè non limitata alla sola organizzazione dei pubblici poteri, ma comprensiva di un'ampia disciplina dei diritti e dei doveri dei cittadini, e caratterizzata da un impianto marcatamente programmatico in molte delle sue disposizioni, specialmente in materia di diritti sociali, secondo quanto già accennato a proposito del modello di Stato sociale esaminato nel capitolo precedente.</p>
+  <p><em>Approfondimento:</em> il carattere della rigidità costituzionale, garantito dal procedimento aggravato di revisione previsto dall'articolo 138, è ulteriormente presidiato dall'istituzione della Corte costituzionale, disciplinata dagli articoli 134 e seguenti della Costituzione e oggetto di specifico approfondimento in un successivo capitolo di questo manuale, la quale ha il compito di sindacare la conformità delle leggi ordinarie alla Costituzione, assicurando in tal modo l'effettiva superiorità gerarchica di quest'ultima rispetto alla legislazione ordinaria, secondo il criterio gerarchico già esaminato nel capitolo di questo manuale dedicato alle fonti del diritto.</p>
+
+  <p class="titolo-capitolo">La struttura della Costituzione</p>
+  <p>La Costituzione italiana si articola in centotrentanove articoli, oltre a diciotto disposizioni transitorie e finali, ed è suddivisa in una parte introduttiva, dedicata ai principi fondamentali, comprensiva dei primi dodici articoli, e in due parti principali: la parte prima, dedicata ai diritti e ai doveri dei cittadini, articolata a sua volta in quattro titoli, relativi rispettivamente ai rapporti civili, ai rapporti etico-sociali, ai rapporti economici e ai rapporti politici; e la parte seconda, dedicata all'ordinamento della Repubblica, comprensiva della disciplina del Parlamento, del Presidente della Repubblica, del Governo, della Magistratura, delle Regioni, delle Province e dei Comuni, e delle garanzie costituzionali, tra cui la disciplina della revisione costituzionale e della Corte costituzionale.</p>
+
+  <p class="titolo-capitolo">Il principio democratico e il principio lavorista</p>
+  <p>Tra i principi fondamentali, l'articolo 1 della Costituzione sancisce che l'Italia è una Repubblica democratica, fondata sul lavoro, e che la sovranità appartiene al popolo, che la esercita nelle forme e nei limiti della Costituzione: da tale disposizione si ricavano due fondamentali principi, cui si ispira l'intero ordinamento repubblicano, cioè il principio democratico, in base al quale ogni potere pubblico trova la propria legittimazione, diretta o indiretta, nella volontà popolare, esercitata attraverso gli strumenti della democrazia rappresentativa e, in misura più limitata, della democrazia diretta, come il referendum, disciplinato dagli articoli 75 e 138 della Costituzione; e il principio lavorista, che qualifica il lavoro non soltanto come valore economico, ma come fondamento stesso della Repubblica, in coerenza con il riconoscimento e la tutela del lavoro in tutte le sue forme, sancito dall'articolo 35 e già richiamato nel capitolo di questo manuale dedicato al lavoro subordinato.</p>
+
+  <p class="titolo-capitolo">Il principio personalista e il principio pluralista</p>
+  <p>L'articolo 2 della Costituzione, già richiamato più volte nei precedenti capitoli di questo manuale a proposito dei diritti della personalità, sancisce il principio personalista, in base al quale la Repubblica riconosce e garantisce i diritti inviolabili dell'uomo, sia come singolo, sia nelle formazioni sociali ove si svolge la sua personalità, ponendo così la persona umana, con la sua intrinseca dignità, al centro dell'intero ordinamento costituzionale; il medesimo articolo sancisce inoltre il principio pluralista, riconoscendo e garantendo i diritti inviolabili non soltanto in capo al singolo individuo isolatamente considerato, ma anche nell'ambito delle formazioni sociali intermedie tra individuo e Stato, come la famiglia, le associazioni, i sindacati e i partiti politici, nelle quali la persona sviluppa e realizza la propria personalità in una dimensione relazionale e comunitaria.</p>
+
+  <p class="titolo-capitolo">Il principio di uguaglianza formale e sostanziale</p>
+  <p>L'articolo 3 della Costituzione sancisce, al primo comma, il principio di uguaglianza formale, in base al quale tutti i cittadini hanno pari dignità sociale e sono eguali davanti alla legge, senza distinzione di sesso, di razza, di lingua, di religione, di opinioni politiche, di condizioni personali e sociali; il secondo comma dello stesso articolo, già richiamato nel capitolo precedente di questo manuale, sancisce inoltre il principio di uguaglianza sostanziale, in base al quale è compito della Repubblica rimuovere gli ostacoli di ordine economico e sociale che, limitando di fatto la libertà e l'uguaglianza dei cittadini, impediscono il pieno sviluppo della persona umana e l'effettiva partecipazione di tutti i lavoratori all'organizzazione politica, economica e sociale del Paese: si tratta di una disposizione di fondamentale importanza, che qualifica in senso sostanziale, e non meramente formale, il modello di Stato sociale accolto dalla Costituzione italiana.</p>
+  <p><em>Esempio:</em> le misure di sostegno economico al diritto allo studio, come le borse di studio destinate agli studenti capaci e meritevoli ma privi di mezzi, previste dall'articolo 34 della Costituzione, costituiscono una concreta attuazione del principio di uguaglianza sostanziale sancito dall'articolo 3, secondo comma, poiché sono dirette a rimuovere un ostacolo di natura economica che, altrimenti, impedirebbe a determinati cittadini di godere effettivamente, e non solo sulla carta, del diritto allo studio riconosciuto in astratto dalla Costituzione a tutti indistintamente.</p>
+
+  <p class="titolo-capitolo">Altri principi fondamentali: internazionalismo, laicità, autonomie locali</p>
+  <p>Tra gli ulteriori principi fondamentali sanciti dai primi dodici articoli della Costituzione si ricordano, in particolare, il principio internazionalista, sancito dall'articolo 11, in base al quale l'Italia ripudia la guerra come strumento di offesa alla libertà degli altri popoli e come mezzo di risoluzione delle controversie internazionali, e consente le limitazioni di sovranità necessarie a un ordinamento che assicuri la pace e la giustizia fra le Nazioni, già richiamato nel capitolo precedente di questo manuale; il principio delle autonomie locali, sancito dall'articolo 5, in base al quale la Repubblica, pur una e indivisibile, riconosce e promuove le autonomie locali, secondo quanto sarà approfondito nel capitolo di questo manuale dedicato alle Regioni e agli enti locali; e il principio di laicità dello Stato, elaborato dalla giurisprudenza costituzionale a partire dalla lettura sistematica di diverse disposizioni costituzionali, tra cui in particolare l'articolo 8, che sancisce l'eguale libertà di tutte le confessioni religiose davanti alla legge, pur senza che tale principio sia espressamente enunciato in una specifica disposizione costituzionale.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dei diritti e dei doveri dei cittadini</p>
+  <p>Dopo aver esaminato i caratteri generali della Costituzione italiana e i principi fondamentali sanciti dai suoi primi dodici articoli, occorre ora approfondire specificamente il contenuto della parte prima della Costituzione, dedicata ai diritti e ai doveri dei cittadini, esaminando in particolare le principali libertà civili, i diritti sociali ed economici e i doveri costituzionalmente imposti ai cittadini: a questi temi sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 39 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir40.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

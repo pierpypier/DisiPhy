@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 37</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 37: lo stato: elementi costitutivi e forme di stato -->
+<div id="capitolo-37-stato-elementi-forme" class="capitolo-storia">
+  <p class="titolo-capitolo">37 - Lo Stato: elementi costitutivi e forme di Stato - Classe 5</p>
+
+  <p class="titolo-capitolo">Dal diritto privato al diritto pubblico</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, il diritto civile, il diritto commerciale, il diritto di famiglia e il diritto del lavoro, tutti riconducibili alla più ampia branca del diritto privato, occorre ora aprire una nuova e fondamentale parte di questo manuale, dedicata al diritto pubblico, cioè a quella branca del diritto che disciplina l'organizzazione e il funzionamento dello Stato e degli altri enti pubblici, nonché i loro rapporti con i cittadini: il punto di partenza necessario di questo studio è costituito dalla nozione stessa di Stato e dai suoi elementi costitutivi.</p>
+
+  <p class="titolo-capitolo">La nozione di Stato e i suoi elementi costitutivi</p>
+  <p>Lo Stato può essere definito, secondo l'elaborazione tradizionale della dottrina giuspubblicistica, come un ente sovrano che esercita il proprio potere di governo su una collettività di persone stabilmente stanziata su un determinato territorio: da questa definizione si ricavano i tre elementi costitutivi dello Stato, tradizionalmente individuati dalla dottrina, che devono sussistere congiuntamente perché possa parlarsi di Stato in senso proprio: il popolo, cioè l'insieme delle persone fisiche che, in ragione del possesso della cittadinanza, sono stabilmente sottoposte alla sovranità di un determinato Stato; il territorio, cioè lo spazio geografico entro il quale lo Stato esercita in modo esclusivo la propria sovranità, comprensivo non soltanto della superficie terrestre ma anche del sottosuolo, dello spazio aereo sovrastante e, per gli Stati che vi si affaccino, del mare territoriale; e la sovranità, cioè il potere originario e supremo di comando che lo Stato esercita sul proprio popolo e sul proprio territorio, non derivato da alcun altro potere superiore, e tendenzialmente esclusivo rispetto a ogni altra autorità concorrente.</p>
+  <p><em>Approfondimento:</em> il carattere di originarietà della sovranità statale, tradizionalmente affermato dalla dottrina, va oggi necessariamente riletto alla luce del fenomeno dell'integrazione sovranazionale, in particolare di quella europea, che comporta, come si vedrà in un successivo capitolo di questo manuale dedicato all'Unione europea, alcune limitazioni volontariamente accettate dagli Stati membri all'esercizio della propria sovranità in determinate materie, in coerenza del resto con quanto espressamente previsto dall'articolo 11 della Costituzione italiana, che consente, in condizioni di parità con gli altri Stati, le limitazioni di sovranità necessarie a un ordinamento che assicuri la pace e la giustizia fra le Nazioni.</p>
+
+  <p class="titolo-capitolo">Popolo, popolazione e cittadinanza</p>
+  <p>È opportuno distinguere, con riguardo al primo elemento costitutivo dello Stato, la nozione di popolo da quella di popolazione: mentre il popolo comprende l'insieme dei cittadini di un determinato Stato, indipendentemente dal luogo in cui essi si trovino effettivamente a risiedere, anche all'estero, la popolazione comprende invece la generalità delle persone che si trovano, anche solo temporaneamente, sul territorio dello Stato, cittadini e stranieri indistintamente. Il criterio che determina l'appartenenza al popolo di un determinato Stato è la cittadinanza, disciplinata in Italia dalla legge 5 febbraio 1992, n. 91, la quale privilegia, quale criterio prevalente di attribuzione automatica della cittadinanza per nascita, lo ius sanguinis, in base al quale è cittadino italiano il figlio di padre o di madre cittadini, indipendentemente dal luogo di nascita, a differenza del criterio dello ius soli, adottato invece da altri ordinamenti, in base al quale la cittadinanza si acquisisce automaticamente per il solo fatto della nascita sul territorio dello Stato.</p>
+
+  <p class="titolo-capitolo">Le forme di Stato: la classificazione secondo il rapporto autorità-libertà</p>
+  <p>Una prima e fondamentale classificazione delle forme di Stato, cioè dei diversi modelli storicamente assunti dal rapporto tra i poteri pubblici e la libertà dei cittadini, distingue tra lo Stato assoluto, storicamente affermatosi in Europa a partire dal Cinquecento, caratterizzato dalla concentrazione di ogni potere nella persona del sovrano, non sottoposto ad alcun limite giuridico nell'esercizio della propria autorità; lo Stato liberale, affermatosi a partire dalle rivoluzioni settecentesche, caratterizzato dal riconoscimento di alcuni diritti e libertà fondamentali dei cittadini nei confronti dello Stato, e dalla sottoposizione dei pubblici poteri al principio di legalità; e lo Stato sociale, o Stato democratico-sociale, affermatosi nel corso del Novecento, e proprio anche del nostro attuale ordinamento costituzionale, caratterizzato dal riconoscimento, accanto ai tradizionali diritti di libertà, di diritti sociali che impongono allo Stato non solo un obbligo di astensione ma anche un obbligo di intervento attivo, diretto a rimuovere gli ostacoli di ordine economico e sociale che limitano di fatto l'uguaglianza dei cittadini, secondo quanto sarà esaminato più diffusamente nel capitolo di questo manuale dedicato ai principi fondamentali della Costituzione italiana.</p>
+  <p><em>Esempio:</em> l'articolo 3, secondo comma, della Costituzione italiana, che impegna la Repubblica a rimuovere gli ostacoli di ordine economico e sociale che, limitando di fatto la libertà e l'uguaglianza dei cittadini, impediscono il pieno sviluppo della persona umana, costituisce una tipica espressione del modello di Stato sociale, poiché non si limita a garantire un'uguaglianza meramente formale davanti alla legge, ma impone allo Stato un ruolo attivo nella promozione di un'uguaglianza sostanziale tra i cittadini.</p>
+
+  <p class="titolo-capitolo">Lo Stato unitario, lo Stato federale e lo Stato regionale</p>
+  <p>Una diversa classificazione delle forme di Stato, fondata questa volta sul criterio della distribuzione territoriale del potere politico, distingue tra lo Stato unitario, caratterizzato dalla concentrazione della sovranità in capo a un unico centro di potere, che esercita la propria autorità in modo uniforme su tutto il territorio nazionale, salva l'eventuale articolazione in enti territoriali dotati di mera autonomia amministrativa; lo Stato federale, caratterizzato invece dalla ripartizione della sovranità tra lo Stato centrale, detto Stato federale in senso stretto, e gli Stati membri, detti Stati federati, ciascuno dei quali conserva una propria autonoma potestà legislativa in determinate materie, secondo un modello storicamente adottato, tra gli altri, dagli Stati Uniti d'America e dalla Repubblica Federale di Germania; e lo Stato regionale, quale forma intermedia tra i due modelli precedenti, caratterizzato dal riconoscimento, a favore di enti territoriali intermedi, come le Regioni nel nostro ordinamento, di una potestà legislativa in determinate materie, pur restando la sovranità nel suo complesso unitariamente concentrata in capo allo Stato centrale, secondo il modello adottato, come si vedrà in un successivo capitolo di questo manuale, dalla Repubblica italiana.</p>
+
+  <p class="titolo-capitolo">Verso lo studio delle forme di governo</p>
+  <p>Dopo aver esaminato la nozione di Stato, i suoi elementi costitutivi e le principali classificazioni delle forme di Stato, occorre ora esaminare una diversa e altrettanto fondamentale classificazione, relativa non più alla distribuzione territoriale del potere, ma al modo in cui i diversi organi costituzionali di uno Stato si rapportano tra loro nell'esercizio della funzione di governo: a questo tema, noto come forme di governo, sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 37 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir38.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

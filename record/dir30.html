@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 30</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 30: il matrimonio e le unioni civili -->
+<div id="capitolo-30-matrimonio-unioni-civili" class="capitolo-storia">
+  <p class="titolo-capitolo">30 - Il matrimonio e le unioni civili - Classe 4</p>
+
+  <p class="titolo-capitolo">Dal diritto commerciale al diritto di famiglia</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, il diritto commerciale e le sue principali istituzioni, occorre ora volgere l'attenzione a una diversa e fondamentale branca del diritto civile, cioè il diritto di famiglia, disciplinato in via generale dal libro primo del Codice civile e, sotto il profilo dei principi fondamentali, dagli articoli 29, 30 e 31 della Costituzione, i quali riconoscono i diritti della famiglia quale società naturale fondata sul matrimonio, tutelano il diritto e il dovere dei genitori di mantenere, istruire ed educare i figli, e impongono alla Repubblica di agevolare, con misure economiche e altre provvidenze, la formazione della famiglia e l'adempimento dei relativi compiti.</p>
+
+  <p class="titolo-capitolo">La nozione di matrimonio e i suoi effetti</p>
+  <p>Il matrimonio è l'atto giuridico con cui due persone costituiscono tra loro un vincolo di natura personale e patrimoniale, disciplinato dagli articoli 79 e seguenti del Codice civile, dal quale derivano diritti e doveri reciproci: l'articolo 143 del Codice civile, come modificato dalla legge 19 maggio 1975, n. 151, di riforma del diritto di famiglia, stabilisce che dal matrimonio deriva l'obbligo reciproco alla fedeltà, all'assistenza morale e materiale, alla collaborazione nell'interesse della famiglia e alla coabitazione, ponendo i coniugi su un piano di piena parità giuridica e morale, in attuazione del principio di uguaglianza tra i coniugi sancito dall'articolo 29 della Costituzione, in radicale discontinuità rispetto all'originario impianto del Codice civile del 1942, che attribuiva invece al marito la posizione di capo della famiglia.</p>
+
+  <p class="titolo-capitolo">I requisiti e gli impedimenti matrimoniali</p>
+  <p>Perché il matrimonio possa essere validamente contratto, occorre che sussistano determinati requisiti, e che non ricorrano i cosiddetti impedimenti matrimoniali, disciplinati dagli articoli 84 e seguenti del Codice civile: tra i requisiti si ricorda anzitutto la capacità matrimoniale, che si acquista, quale regola generale, con il raggiungimento della maggiore età, salva la possibilità, per il minore che abbia compiuto sedici anni, di essere autorizzato al matrimonio dal tribunale per i minorenni, accertata la sua maturità psicofisica e la fondatezza delle ragioni addotte; tra gli impedimenti, distinti in impedimenti dirimenti, la cui violazione comporta l'invalidità del matrimonio, e impedimenti meramente impedienti, la cui violazione comporta invece soltanto una sanzione di natura patrimoniale, si ricordano il vincolo di un precedente matrimonio non sciolto, disciplinato dall'articolo 86, e i rapporti di parentela, affinità, adozione o affiliazione entro determinati gradi, disciplinati dagli articoli 87 e seguenti, posti a tutela della coesione familiare e della salute della prole.</p>
+  <p><em>Approfondimento:</em> l'articolo 86 del Codice civile, vietando il matrimonio a chi sia già vincolato da un matrimonio precedente non sciolto, sancisce il principio di monogamia proprio dell'ordinamento italiano, coerente con il modello di famiglia accolto dalla nostra tradizione giuridica e culturale: la violazione di tale divieto integra, oltre alla causa di invalidità del secondo matrimonio disciplinata dall'articolo 117, anche una specifica fattispecie di reato, disciplinata dall'articolo 556 del Codice penale sotto il nome di bigamia.</p>
+
+  <p class="titolo-capitolo">Le forme di celebrazione del matrimonio</p>
+  <p>Il nostro ordinamento conosce due principali forme di celebrazione del matrimonio, disciplinate rispettivamente dal Codice civile e dalla legislazione concordataria: il matrimonio civile, disciplinato dagli articoli 106 e seguenti del Codice civile, celebrato pubblicamente dall'ufficiale dello stato civile del comune alla presenza di due testimoni; e il matrimonio concordatario, disciplinato dalla legge 25 marzo 1985, n. 121, di ratifica dell'Accordo di modificazione del Concordato lateranense, celebrato secondo il rito religioso cattolico, i cui effetti civili si producono mediante la successiva trascrizione dell'atto nei registri dello stato civile, previa verifica, da parte dell'ufficiale competente, dell'assenza di impedimenti previsti dalla legge civile: si tratta di un meccanismo che consente al matrimonio religioso di produrre, attraverso la trascrizione, i medesimi effetti giuridici del matrimonio civile, pur restando disciplinato, quanto ai suoi requisiti sostanziali di celebrazione, dal diritto canonico.</p>
+
+  <p class="titolo-capitolo">L'invalidità del matrimonio</p>
+  <p>Il matrimonio può essere colpito da invalidità, disciplinata dagli articoli 117 e seguenti del Codice civile, per la violazione degli impedimenti dirimenti già richiamati, oppure per vizi del consenso analoghi, sia pure con una disciplina specificamente adattata alla peculiarità dell'atto matrimoniale, a quelli già esaminati a proposito del contratto nel capitolo di questo manuale dedicato all'invalidità contrattuale, come l'errore essenziale sull'identità della persona o su alcune sue qualità personali, disciplinato dall'articolo 122, o la violenza morale, disciplinata dall'articolo 122 stesso: l'azione di annullamento del matrimonio, a differenza di quella relativa al contratto, presenta caratteri e limiti specifici, tra cui, in particolare, l'istituto della sanatoria per coabitazione, disciplinato dall'articolo 123, in base al quale l'azione di annullamento non può più essere proposta se i coniugi hanno coabitato come tali per un anno dopo che è cessata la causa dell'invalidità.</p>
+  <p><em>Esempio:</em> se un coniuge scopre, dopo la celebrazione del matrimonio, che l'altro coniuge gli aveva volontariamente occultato una circostanza personale essenziale, tale da aver determinato in modo decisivo la formazione del consenso matrimoniale, come una condanna penale per delitto non colposo alla reclusione superiore a cinque anni, potrà chiedere l'annullamento del matrimonio per errore, purché eserciti l'azione entro il termine di legge e non sia nel frattempo maturata la sanatoria per coabitazione ultrannuale.</p>
+
+  <p class="titolo-capitolo">L'unione civile tra persone dello stesso sesso</p>
+  <p>La legge 20 maggio 2016, n. 76, ha introdotto nel nostro ordinamento l'istituto dell'unione civile tra persone dello stesso sesso, quale specifica formazione sociale ai sensi degli articoli 2 e 3 della Costituzione, costituita mediante dichiarazione resa da entrambe le parti all'ufficiale dello stato civile alla presenza di due testimoni: dall'unione civile derivano, secondo quanto previsto dalla medesima legge, diritti e doveri reciproci in larga parte assimilabili a quelli derivanti dal matrimonio, tra cui l'obbligo di assistenza morale e materiale e di coabitazione, il regime patrimoniale legale della comunione dei beni salvo diversa convenzione, e i diritti successori tra le parti dell'unione, secondo un modello che, pur non identificandosi integralmente con il matrimonio, in particolare per l'assenza dell'obbligo di fedeltà espressamente previsto per i coniugi e per la diversa disciplina dello scioglimento, ne riproduce sostanzialmente la struttura sotto il profilo della tutela personale e patrimoniale delle parti.</p>
+  <p>La medesima legge n. 76 del 2016 disciplina inoltre, distintamente dall'unione civile, la convivenza di fatto, riconoscendo specifici diritti ai conviventi non uniti da matrimonio o unione civile, come il diritto di visita e di assistenza in caso di malattia o ricovero, il diritto di abitazione nella casa di comune residenza in caso di morte del convivente proprietario, e la possibilità di regolare i rapporti patrimoniali attraverso un apposito contratto di convivenza.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dei rapporti patrimoniali tra coniugi</p>
+  <p>Dopo aver esaminato la nozione di matrimonio, i suoi requisiti, le forme di celebrazione, l'invalidità e l'istituto dell'unione civile, occorre ora approfondire in modo specifico i rapporti patrimoniali che si instaurano tra i coniugi in conseguenza del matrimonio, cioè il regime patrimoniale della famiglia, con particolare riguardo alla comunione legale dei beni e alle alternative a essa previste dall'ordinamento: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 30 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir31.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

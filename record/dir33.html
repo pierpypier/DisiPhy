@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 33</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 33: la separazione e il divorzio -->
+<div id="capitolo-33-separazione-divorzio" class="capitolo-storia">
+  <p class="titolo-capitolo">33 - La separazione e il divorzio - Classe 4</p>
+
+  <p class="titolo-capitolo">Le vicende patologiche del rapporto matrimoniale</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, il matrimonio, i rapporti patrimoniali tra coniugi e la filiazione, occorre ora esaminare le vicende patologiche che possono interessare il rapporto matrimoniale, quando la comunione di vita tra i coniugi entri in crisi in modo tale da non poter più proseguire: l'ordinamento italiano disciplina, a tal fine, due distinti istituti, tra loro consequenziali mais non necessariamente entrambi destinati a operare, cioè la separazione personale dei coniugi, che allenta il vincolo matrimoniale senza scioglierlo, e il divorzio, che ne determina invece lo scioglimento definitivo, secondo quanto sarà esaminato nei paragrafi seguenti.</p>
+
+  <p class="titolo-capitolo">La separazione personale dei coniugi</p>
+  <p>La separazione personale, disciplinata dagli articoli 150 e seguenti del Codice civile, sospende alcuni degli effetti tipici del matrimonio, in particolare l'obbligo di coabitazione e l'obbligo di fedeltà, senza tuttavia sciogliere il vincolo matrimoniale, che permane fino all'eventuale successiva pronuncia di divorzio: la separazione può essere consensuale, quando i coniugi concordano le condizioni della separazione, sottoponendole all'omologazione del tribunale, oppure giudiziale, disciplinata dall'articolo 151, quando i coniugi non trovino un accordo, e uno di essi chieda al tribunale di pronunciare la separazione, sussistendo fatti tali da rendere intollerabile la prosecuzione della convivenza o da recare grave pregiudizio all'educazione della prole.</p>
+  <p>L'articolo 151, secondo comma, del Codice civile prevede inoltre che il giudice, pronunciando la separazione, dichiari, ove ne ricorrano le circostanze e ne sia richiesto, a quale dei coniugi sia addebitabile la separazione, in considerazione del suo comportamento contrario ai doveri che derivano dal matrimonio: la dichiarazione di addebito, pur non incidendo sullo status personale dei coniugi, produce importanti conseguenze patrimoniali, poiché il coniuge cui la separazione sia addebitata perde, secondo l'articolo 548, il diritto a succedere al coniuge separato in caso di morte di quest'ultimo, salvo il diritto a un assegno vitalizio a determinate condizioni, e perde altresì, secondo l'articolo 156, il diritto a percepire l'assegno di mantenimento, potendo ottenere, se in stato di bisogno, solo gli alimenti.</p>
+  <p><em>Esempio:</em> se durante il matrimonio uno dei coniugi intraprende una relazione extraconiugale che determina la crisi irreversibile del rapporto, l'altro coniuge, nel procedimento di separazione giudiziale, può chiedere che venga dichiarato l'addebito della separazione a carico del coniuge responsabile della violazione dell'obbligo di fedeltà, con le conseguenze patrimoniali e successorie sopra descritte.</p>
+
+  <p class="titolo-capitolo">Gli effetti della separazione: l'assegno di mantenimento</p>
+  <p>La separazione personale, pur non sciogliendo il vincolo matrimoniale, produce rilevanti conseguenze sul piano patrimoniale: l'articolo 156 del Codice civile prevede che il giudice, pronunciando la separazione, stabilisca a vantaggio del coniuge cui non sia addebitabile la separazione, e che non abbia adeguati redditi propri, il diritto di ricevere dall'altro coniuge quanto è necessario al suo mantenimento, tenuto conto delle circostanze e dei redditi dell'obbligato, secondo un importo che il giudice determina caso per caso, avendo riguardo, tra l'altro, alla durata del matrimonio e al tenore di vita mantenuto durante la convivenza coniugale.</p>
+
+  <p class="titolo-capitolo">Il divorzio e le sue cause</p>
+  <p>Il divorzio, disciplinato dalla legge 1° dicembre 1970, n. 898, come successivamente modificata, determina lo scioglimento del matrimonio civile, o la cessazione degli effetti civili del matrimonio concordatario, e può essere pronunciato dal tribunale al ricorrere di specifiche cause tassativamente previste dalla legge, tra cui, quella di gran lunga più frequente nella prassi, la separazione giudiziale o consensuale dei coniugi protrattasi ininterrottamente da almeno sei mesi, se consensuale o senza opposizione, oppure da almeno un anno, se giudiziale, decorrenti dalla comparizione dei coniugi davanti al presidente del tribunale nella procedura di separazione, termini così ridotti dalla legge 6 maggio 2015, n. 55, rispetto ai più lunghi periodi originariamente previsti.</p>
+  <p><em>Approfondimento:</em> accanto alla causa più diffusa della pregressa separazione, la legge sul divorzio prevede alcune ulteriori cause, di applicazione più circoscritta, tra cui la condanna dell'altro coniuge per determinati e gravi reati, il mancato consumarsi del matrimonio, e la rettificazione di attribuzione di sesso di uno dei coniugi, disciplinata dalla legge 14 aprile 1982, n. 164, in presenza della quale il matrimonio, pur non essendo automaticamente sciolto, può essere sciolto su domanda di uno dei coniugi.</p>
+
+  <p class="titolo-capitolo">Il divorzio breve e la negoziazione assistita</p>
+  <p>Oltre alla già richiamata riduzione dei termini di separazione necessari per accedere al divorzio, disposta dalla legge sul cosiddetto divorzio breve del 2015, il legislatore ha introdotto, con il decreto-legge 12 settembre 2014, n. 132, convertito con modificazioni dalla legge 10 novembre 2014, n. 162, procedure semplificate per la separazione e il divorzio, alternative al tradizionale procedimento giudiziale, tra cui la negoziazione assistita da avvocati, che consente ai coniugi di raggiungere un accordo di separazione o di divorzio con l'assistenza di legali, senza la necessità di un procedimento giudiziale in senso proprio, e la separazione e il divorzio innanzi all'ufficiale dello stato civile, esperibile in assenza di figli minori, o di figli maggiorenni incapaci o portatori di grave disabilità, e in assenza di patti di trasferimento patrimoniale tra i coniugi.</p>
+
+  <p class="titolo-capitolo">L'assegno divorzile</p>
+  <p>Anche a seguito del divorzio, l'articolo 5, sesto comma, della legge n. 898 del 1970 prevede la possibilità che il tribunale attribuisca a favore di uno dei coniugi un assegno divorzile, quando questi non abbia mezzi adeguati o non possa comunque procurarseli per ragioni obiettive: a differenza dell'assegno di mantenimento previsto per la separazione, che tendenzialmente mira a conservare il tenore di vita goduto durante il matrimonio, l'assegno divorzile, secondo l'evoluzione giurisprudenziale più recente, assume una funzione non più meramente assistenziale ma anche compensativa e perequativa, tenendo conto del contributo fornito dal richiedente alla formazione del patrimonio comune e di quello dell'altro coniuge, nonché delle condizioni dei coniugi, delle ragioni della decisione e della durata del matrimonio.</p>
+
+  <p class="titolo-capitolo">L'affidamento dei figli in caso di separazione o divorzio</p>
+  <p>Sia nella separazione sia nel divorzio, particolare rilievo assumono, secondo quanto già anticipato nel capitolo di questo manuale dedicato alla responsabilità genitoriale, le decisioni relative all'affidamento dei figli minori, disciplinate dall'articolo 337-ter del Codice civile, il quale, in attuazione del principio di bigenitorialità, stabilisce che il figlio minore ha il diritto di mantenere un rapporto equilibrato e continuativo con ciascuno dei genitori, ricevendo cura, educazione, istruzione e assistenza morale da entrambi, indicando quale regola generale l'affidamento condiviso a entrambi i genitori, salvo che l'affidamento a uno solo di essi sia ritenuto dal giudice contrario all'interesse del minore.</p>
+
+  <p class="titolo-capitolo">Verso lo studio delle successioni per causa di morte</p>
+  <p>Dopo aver esaminato la separazione e il divorzio, quali vicende che possono interessare il rapporto matrimoniale nel corso della vita dei coniugi, occorre ora volgere l'attenzione a un'ultima e fondamentale vicenda del diritto di famiglia, cioè quella relativa alla trasmissione del patrimonio di una persona dopo la sua morte: a questo tema, noto come successioni per causa di morte, sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 33 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir34.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

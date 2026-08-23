@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 41</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 41: il parlamento -->
+<div id="capitolo-41-parlamento" class="capitolo-storia">
+  <p class="titolo-capitolo">41 - Il Parlamento - Classe 5</p>
+
+  <p class="titolo-capitolo">Il Parlamento quale organo rappresentativo della sovranità popolare</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, i principi fondamentali della Costituzione e i diritti e doveri dei cittadini, è ora possibile passare all'esame della parte seconda della Costituzione, dedicata all'ordinamento della Repubblica, a partire dal Parlamento, disciplinato dagli articoli 55 e seguenti della Costituzione: quale organo costituzionale titolare della funzione legislativa, il Parlamento rappresenta, secondo il principio democratico già esaminato nel capitolo di questo manuale dedicato ai principi fondamentali, la sede in cui si esprime direttamente la sovranità popolare, poiché i suoi componenti sono eletti dal corpo elettorale secondo quanto stabilito dall'articolo 48 della Costituzione.</p>
+
+  <p class="titolo-capitolo">Il bicameralismo italiano</p>
+  <p>L'articolo 55 della Costituzione stabilisce che il Parlamento si compone della Camera dei deputati e del Senato della Repubblica, adottando così il nostro ordinamento un sistema bicamerale, cioè caratterizzato dalla presenza di due distinte assemblee legislative: il bicameralismo italiano è tradizionalmente definito paritario, o perfetto, poiché le due Camere sono titolari delle medesime funzioni e dei medesimi poteri, sia sul piano legislativo, sia su quello del rapporto fiduciario con il Governo, secondo quanto sarà approfondito nel capitolo di questo manuale dedicato al Governo, a differenza di quanto avviene in altri ordinamenti bicamerali, come quello tedesco o quello francese, nei quali le due Camere sono invece titolari di funzioni e di un peso politico differenziati. La composizione numerica delle due Camere, originariamente più ampia, è stata ridotta dalla legge costituzionale 19 ottobre 2020, n. 1, che ha stabilito in quattrocento il numero dei deputati e in duecento il numero dei senatori elettivi, oltre ai senatori a vita di cui si dirà nel paragrafo seguente.</p>
+  <p><em>Approfondimento:</em> pur essendo le due Camere titolari delle medesime funzioni, esse si distinguono per alcuni profili relativi alla loro composizione: mentre l'elettorato attivo per la Camera dei deputati spetta, secondo l'articolo 56 della Costituzione, a tutti i cittadini maggiorenni, l'elettorato attivo per il Senato spettava, prima della riforma costituzionale del 2021 relativa all'abbassamento dell'età per l'elezione del Senato, ai soli cittadini che avessero compiuto venticinque anni, mentre oggi, a seguito della legge costituzionale 19 ottobre 2021, n. 1, anche per il Senato l'elettorato attivo spetta ai cittadini maggiorenni, in analogia con quanto già previsto per la Camera.</p>
+
+  <p class="titolo-capitolo">I senatori a vita</p>
+  <p>L'articolo 59 della Costituzione disciplina la figura dei senatori a vita, prevedendo che il Presidente della Repubblica può nominare senatori a vita cittadini che hanno illustrato la Patria per altissimi meriti nel campo sociale, scientifico, artistico e letterario, in numero non superiore a cinque, e che ogni ex Presidente della Repubblica è senatore a vita di diritto, salvo rinuncia: si tratta di una componente non elettiva del Senato, che si affianca ai senatori eletti dal corpo elettorale, e che risponde alla finalità di arricchire il dibattito parlamentare con l'apporto di personalità di particolare prestigio ed esperienza, pur nel rispetto del principio democratico che informa la generale composizione elettiva delle due Camere.</p>
+
+  <p class="titolo-capitolo">La legislatura e lo scioglimento anticipato delle Camere</p>
+  <p>La durata in carica delle due Camere, detta legislatura, è fissata dall'articolo 60 della Costituzione in cinque anni, prorogabile soltanto in caso di guerra e con apposita legge; il Presidente della Repubblica, secondo l'articolo 88 della Costituzione, che sarà approfondito nel capitolo di questo manuale a esso dedicato, può tuttavia sciogliere anticipatamente le Camere, o anche una sola di esse, sentiti i rispettivi Presidenti, quando la situazione politica non consenta la formazione di una maggioranza stabile in grado di sostenere il Governo, secondo quanto meglio si comprenderà nel capitolo di questo manuale dedicato al Governo stesso, con la conseguenza di determinare nuove elezioni e l'inizio di una nuova legislatura.</p>
+
+  <p class="titolo-capitolo">Lo status dei parlamentari: il divieto di mandato imperativo e le immunità</p>
+  <p>L'articolo 67 della Costituzione sancisce che ogni membro del Parlamento rappresenta la Nazione ed esercita le sue funzioni senza vincolo di mandato: tale disposizione, nota come divieto di mandato imperativo, comporta che il parlamentare, una volta eletto, non è giuridicamente vincolato dalle direttive del partito o della coalizione nelle cui liste è stato eletto, potendo in ogni momento mutare il proprio orientamento politico, ad esempio cambiando gruppo parlamentare, senza che ciò comporti la perdita del mandato ricevuto dagli elettori. A tutela dell'indipendenza dei parlamentari nell'esercizio delle proprie funzioni, l'articolo 68 della Costituzione prevede inoltre alcune immunità, tra cui l'insindacabilità per le opinioni espresse e i voti dati nell'esercizio delle funzioni parlamentari, e specifiche garanzie procedimentali, quale l'autorizzazione della Camera di appartenenza, richieste per l'adozione di determinate misure restrittive della libertà personale nei confronti dei parlamentari.</p>
+  <p><em>Esempio:</em> se un deputato, nel corso di un intervento in aula, esprime giudizi critici, anche aspri, nei confronti dell'operato del Governo, tale dichiarazione, in quanto resa nell'esercizio delle funzioni parlamentari, è coperta dall'insindacabilità prevista dall'articolo 68 della Costituzione, e non può dunque dar luogo a responsabilità civile o penale nei confronti del parlamentare che l'ha resa, a differenza di quanto potrebbe avvenire per dichiarazioni analoghe rese al di fuori dell'esercizio di tali funzioni.</p>
+
+  <p class="titolo-capitolo">L'organizzazione interna delle Camere</p>
+  <p>Ciascuna Camera elegge, tra i propri componenti, secondo l'articolo 63 della Costituzione, un Presidente e un ufficio di presidenza, ed è organizzata al proprio interno in gruppi parlamentari, corrispondenti generalmente ai partiti o alle coalizioni politiche presenti in Parlamento, e in Commissioni parlamentari permanenti, competenti per specifiche materie, incaricate dell'esame preliminare dei progetti di legge prima della loro discussione in aula, secondo quanto sarà approfondito nel capitolo di questo manuale dedicato al procedimento legislativo. Ciascuna Camera adotta inoltre, secondo l'articolo 64, un proprio regolamento parlamentare, approvato a maggioranza assoluta dei propri componenti, con cui disciplina in dettaglio il proprio funzionamento interno, in attuazione del principio di autonomia costituzionalmente riconosciuto agli organi parlamentari.</p>
+
+  <p class="titolo-capitolo">Le funzioni del Parlamento</p>
+  <p>Il Parlamento è titolare, in primo luogo, della funzione legislativa, esercitata collettivamente dalle due Camere secondo il procedimento disciplinato dagli articoli 70 e seguenti della Costituzione; è titolare, inoltre, della funzione di indirizzo e controllo politico nei confronti del Governo, esercitata in particolare attraverso il rapporto di fiducia già richiamato in questo capitolo e attraverso strumenti quali le interrogazioni e le interpellanze parlamentari; ed esercita infine, in seduta comune dei propri componenti secondo quanto previsto dall'articolo 55, ultimo comma, della Costituzione, alcune funzioni elettive di particolare rilievo costituzionale, tra cui l'elezione del Presidente della Repubblica, secondo quanto sarà approfondito nel capitolo di questo manuale a esso dedicato.</p>
+
+  <p class="titolo-capitolo">Verso lo studio del Governo</p>
+  <p>Dopo aver esaminato la struttura, l'organizzazione e le funzioni del Parlamento, occorre ora volgere l'attenzione a un altro fondamentale organo costituzionale, titolare del potere esecutivo e legato al Parlamento dal rapporto di fiducia già più volte richiamato in questo capitolo, cioè il Governo della Repubblica: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 41 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir42.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

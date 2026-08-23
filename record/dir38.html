@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 38</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 38: le forme di governo -->
+<div id="capitolo-38-forme-governo" class="capitolo-storia">
+  <p class="titolo-capitolo">38 - Le forme di governo - Classe 5</p>
+
+  <p class="titolo-capitolo">La nozione di forma di governo</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la nozione di Stato, i suoi elementi costitutivi e le principali forme di Stato, occorre ora esaminare una diversa e altrettanto fondamentale classificazione, relativa al modo in cui i diversi organi costituzionali di uno Stato si rapportano tra loro nell'esercizio della funzione di governo: si definisce forma di governo l'insieme delle regole e delle prassi che disciplinano la distribuzione e i reciproci rapporti tra i poteri dello Stato, in particolare tra il potere legislativo, il potere esecutivo e il Capo dello Stato, secondo modelli che si sono storicamente affermati in stretta connessione con l'evoluzione delle forme di Stato già esaminate nel capitolo precedente di questo manuale.</p>
+
+  <p class="titolo-capitolo">La monarchia costituzionale e la monarchia parlamentare</p>
+  <p>Tra i modelli storicamente affermatisi a partire dallo Stato liberale ottocentesco, si distingue anzitutto la monarchia costituzionale, caratterizzata da una netta separazione dei poteri tra il sovrano, titolare del potere esecutivo e dotato di ampi poteri personali, e il Parlamento, titolare del potere legislativo, con un Governo responsabile primariamente nei confronti del sovrano; da tale modello si è progressivamente evoluta, in molti ordinamenti europei, la monarchia parlamentare, nella quale il sovrano conserva la titolarità formale del potere esecutivo, ma lo esercita per il tramite di un Governo che deve godere della fiducia del Parlamento, secondo il principio della responsabilità politica dell'esecutivo nei confronti dell'organo rappresentativo della sovranità popolare, mentre il sovrano assume un ruolo prevalentemente rappresentativo e di garanzia, sostanzialmente estraneo all'indirizzo politico concreto del Paese.</p>
+
+  <p class="titolo-capitolo">La forma di governo parlamentare</p>
+  <p>La forma di governo parlamentare, adottata dalla generalità degli Stati europei contemporanei, tra cui l'Italia, secondo quanto sarà approfondito nei capitoli di questo manuale dedicati agli organi costituzionali della Repubblica italiana, si caratterizza per il rapporto di fiducia che deve sussistere tra il Governo e il Parlamento: il Governo, per poter legittimamente rimanere in carica ed esercitare le proprie funzioni, deve infatti godere della fiducia del Parlamento, la quale può essere revocata in qualsiasi momento attraverso lo strumento della mozione di sfiducia, con la conseguenza che il Governo è tenuto a dimettersi qualora perda tale fiducia; il Capo dello Stato, che nella generalità degli ordinamenti parlamentari può assumere la forma di un monarca, come nel Regno Unito, o di un Presidente della Repubblica eletto con modalità indirette, come in Italia e in Germania, riveste generalmente un ruolo di garanzia e di rappresentanza dell'unità nazionale, estraneo alla concreta gestione dell'indirizzo politico, che spetta invece al Governo, sostenuto dalla maggioranza parlamentare.</p>
+  <p><em>Approfondimento:</em> all'interno del più ampio genere della forma di governo parlamentare, la dottrina distingue ulteriori sottotipi in base al grado di stabilità e di razionalizzazione del rapporto fiduciario, tra cui il parlamentarismo maggioritario, caratterizzato da un sistema elettorale ed elementi istituzionali che favoriscono la formazione di stabili maggioranze parlamentari a sostegno del Governo, come nel Regno Unito, e il parlamentarismo a debole razionalizzazione, caratterizzato invece da una maggiore instabilità dei rapporti tra Governo e Parlamento, dovuta anche alla frammentazione del sistema partitico, quale si è storicamente riscontrata, pur con significative differenze rispetto al periodo immediatamente successivo all'entrata in vigore della Costituzione, anche nell'esperienza repubblicana italiana.</p>
+
+  <p class="titolo-capitolo">La forma di governo presidenziale</p>
+  <p>La forma di governo presidenziale, il cui modello storico di riferimento è costituito dagli Stati Uniti d'America, si caratterizza per una più netta separazione tra il potere legislativo, affidato al Parlamento, e il potere esecutivo, affidato a un Presidente eletto direttamente dal corpo elettorale, e non dal Parlamento, per un mandato di durata predeterminata: a differenza della forma di governo parlamentare, nella forma di governo presidenziale non sussiste un rapporto di fiducia tra il Presidente e il Parlamento, nel senso che quest'ultimo non può, quale regola generale, sfiduciare il Presidente costringendolo alle dimissioni, così come il Presidente non può sciogliere anticipatamente il Parlamento, secondo un modello di rigida separazione dei poteri temperato, nella prassi costituzionale statunitense, da un articolato sistema di reciproci controlli e bilanciamenti, noto con l'espressione anglosassone di checks and balances.</p>
+
+  <p class="titolo-capitolo">La forma di governo semipresidenziale</p>
+  <p>La forma di governo semipresidenziale, il cui modello storico di riferimento è rappresentato dalla Quinta Repubblica francese, istituita con la Costituzione del 1958, si colloca in posizione intermedia tra la forma di governo parlamentare e quella presidenziale, presentando elementi propri di entrambi i modelli: da un lato, infatti, il Presidente della Repubblica è eletto direttamente dal corpo elettorale, secondo il modello proprio della forma di governo presidenziale, ed è titolare di rilevanti poteri personali di indirizzo politico, in particolare in materia di politica estera e di difesa; dall'altro lato, tuttavia, sussiste un Governo, guidato da un Primo ministro, che deve godere della fiducia del Parlamento, secondo il modello proprio della forma di governo parlamentare, con la conseguenza che il sistema può funzionare in modo diverso a seconda che il Presidente della Repubblica e la maggioranza parlamentare esprimano il medesimo orientamento politico, oppure orientamenti contrapposti, dando luogo, in quest'ultimo caso, al fenomeno noto come coabitazione.</p>
+  <p><em>Esempio:</em> quando in Francia il Presidente della Repubblica appartiene a uno schieramento politico diverso da quello che ha ottenuto la maggioranza dei seggi all'Assemblea nazionale, il Presidente è tenuto a nominare come Primo ministro un esponente della maggioranza parlamentare, dando luogo al fenomeno della coabitazione, nel corso della quale il Presidente conserva le proprie prerogative in materia di politica estera e di difesa, mentre la gestione della politica interna è sostanzialmente affidata al Governo, espressione della maggioranza parlamentare.</p>
+
+  <p class="titolo-capitolo">La forma di governo direttoriale</p>
+  <p>Un ulteriore modello, adottato da un numero assai limitato di ordinamenti, tra cui in particolare la Confederazione Svizzera, è rappresentato dalla forma di governo direttoriale, caratterizzata dall'attribuzione del potere esecutivo non a un singolo organo monocratico, come un Presidente o un Primo ministro, ma a un collegio, detto direttorio, eletto dal Parlamento per un periodo di tempo predeterminato e non revocabile, quale regola generale, prima della sua scadenza, secondo un modello che privilegia la stabilità e la collegialità dell'organo esecutivo rispetto alla concentrazione del potere in un unico soggetto.</p>
+
+  <p class="titolo-capitolo">Verso lo studio della Costituzione italiana</p>
+  <p>Dopo aver esaminato le principali forme di governo storicamente affermatesi, occorre ora volgere l'attenzione specificamente all'ordinamento costituzionale della Repubblica italiana, esaminandone anzitutto i caratteri generali e i principi fondamentali sanciti dalla Costituzione, entrata in vigore, come già ricordato in un precedente capitolo di questo manuale, il 1° gennaio 1948: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 38 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir39.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

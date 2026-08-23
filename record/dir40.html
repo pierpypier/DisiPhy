@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 40</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 40: i diritti e i doveri dei cittadini -->
+<div id="capitolo-40-diritti-doveri-cittadini" class="capitolo-storia">
+  <p class="titolo-capitolo">40 - I diritti e i doveri dei cittadini - Classe 5</p>
+
+  <p class="titolo-capitolo">La struttura della parte prima della Costituzione</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, i caratteri generali della Costituzione italiana e i principi fondamentali sanciti dai suoi primi dodici articoli, occorre ora approfondire il contenuto della parte prima della Costituzione, dedicata ai diritti e ai doveri dei cittadini, e articolata, come già accennato, in quattro titoli, relativi rispettivamente ai rapporti civili, ai rapporti etico-sociali, ai rapporti economici e ai rapporti politici: si tratta della sezione della Costituzione che dà concreta attuazione, nei diversi ambiti dell'esperienza umana e sociale, ai principi personalista e pluralista già esaminati nel capitolo precedente di questo manuale.</p>
+
+  <p class="titolo-capitolo">I rapporti civili: la libertà personale</p>
+  <p>Il titolo primo della parte prima, dedicato ai rapporti civili, si apre con la disciplina della libertà personale, sancita dall'articolo 13 della Costituzione come inviolabile, e sottoposta a una riserva di legge e di giurisdizione, in base alla quale non è ammessa alcuna forma di detenzione, di ispezione o perquisizione personale, né qualsiasi altra restrizione della libertà personale, se non per atto motivato dell'autorità giudiziaria e nei soli casi e modi previsti dalla legge: si tratta di una delle libertà civili più risalenti nella tradizione costituzionale, posta a diretta tutela dell'integrità fisica e della dignità della persona umana, già esaminata sotto altro profilo nel capitolo di questo manuale dedicato ai diritti della personalità. Il medesimo articolo 13 disciplina, quale eccezione alla riserva di giurisdizione, i provvedimenti provvisori adottabili dall'autorità di pubblica sicurezza in casi eccezionali di necessità e urgenza, tassativamente indicati dalla legge, i quali devono comunque essere comunicati entro quarantotto ore all'autorità giudiziaria e da questa convalidati, a pena di revoca e di perdita di ogni effetto.</p>
+  <p><em>Approfondimento:</em> la riserva di legge e di giurisdizione che caratterizza l'articolo 13 della Costituzione si ritrova, con formulazioni sostanzialmente analoghe, anche in relazione ad altre libertà civili disciplinate dai successivi articoli, come la libertà di domicilio, sancita dall'articolo 14, e la libertà e segretezza della corrispondenza e di ogni altra forma di comunicazione, sancita dall'articolo 15, a testimonianza di un disegno costituzionale unitario, diretto a garantire che ogni limitazione delle libertà fondamentali della persona sia sottoposta al duplice controllo del Parlamento, quale organo rappresentativo della sovranità popolare, e della Magistratura, quale organo indipendente e imparziale.</p>
+
+  <p class="titolo-capitolo">Le libertà di circolazione, di riunione e di associazione</p>
+  <p>Il titolo primo disciplina inoltre, agli articoli 16 e seguenti, ulteriori libertà civili di fondamentale importanza: la libertà di circolazione e di soggiorno, sancita dall'articolo 16, in base alla quale ogni cittadino può circolare e soggiornare liberamente in qualsiasi parte del territorio nazionale, salve le limitazioni che la legge stabilisce in via generale per motivi di sanità o di sicurezza; la libertà di riunione, sancita dall'articolo 17, riconosciuta ai cittadini che si riuniscano pacificamente e senz'armi, senza obbligo di preavviso per le riunioni in luogo privato o aperto al pubblico, e con obbligo di preavviso, ma non di autorizzazione, per le riunioni in luogo pubblico; e la libertà di associazione, sancita dall'articolo 18, in base alla quale i cittadini hanno diritto di associarsi liberamente, senza autorizzazione, per fini che non sono vietati ai singoli dalla legge penale, con il solo divieto espresso delle associazioni segrete e di quelle che perseguano, anche indirettamente, scopi politici mediante organizzazioni di carattere militare.</p>
+
+  <p class="titolo-capitolo">La libertà religiosa e la libertà di manifestazione del pensiero</p>
+  <p>L'articolo 19 della Costituzione riconosce a tutti il diritto di professare liberamente la propria fede religiosa in qualsiasi forma, individuale o associata, di farne propaganda e di esercitarne in privato o in pubblico il culto, purché non si tratti di riti contrari al buon costume, in coerenza con il principio di laicità dello Stato già richiamato nel capitolo precedente di questo manuale; l'articolo 21, tra le disposizioni costituzionali di maggiore rilievo per il funzionamento di un ordinamento democratico, sancisce che tutti hanno diritto di manifestare liberamente il proprio pensiero con la parola, lo scritto e ogni altro mezzo di diffusione, ponendo il divieto di sottoporre la stampa ad autorizzazioni o censure preventive, salvo che si tratti di stampa oscena, o comunque contraria al buon costume, per la quale la legge stabilisce provvedimenti adeguati.</p>
+  <p><em>Esempio:</em> se un'autorità amministrativa pretendesse di sottoporre la pubblicazione di un quotidiano a una preventiva autorizzazione discrezionale, valutando in anticipo il contenuto degli articoli prima della loro diffusione, tale pretesa risulterebbe in aperto contrasto con il divieto di censura preventiva sancito dall'articolo 21 della Costituzione, il quale ammette esclusivamente, e solo in presenza di determinate condizioni, un controllo successivo alla pubblicazione, affidato all'autorità giudiziaria.</p>
+
+  <p class="titolo-capitolo">I rapporti etico-sociali: famiglia, salute, istruzione</p>
+  <p>Il titolo secondo della parte prima, dedicato ai rapporti etico-sociali, disciplina, agli articoli 29 e seguenti, la tutela della famiglia, già ampiamente esaminata nei capitoli di questo manuale dedicati al diritto di famiglia; l'articolo 32, già richiamato nel capitolo di questo manuale dedicato ai diritti della personalità, tutela la salute come fondamentale diritto dell'individuo e interesse della collettività, garantendo cure gratuite agli indigenti attraverso il Servizio sanitario nazionale, disciplinato dalla legge 23 dicembre 1978, n. 833; e gli articoli 33 e 34 disciplinano il diritto all'istruzione, sancendo la libertà dell'arte e della scienza e del loro insegnamento, l'obbligo per la Repubblica di istituire scuole statali per tutti gli ordini e gradi, e l'obbligo e la gratuità dell'istruzione inferiore per almeno otto anni, con il diritto dei capaci e meritevoli, anche se privi di mezzi, di raggiungere i gradi più alti degli studi, secondo il principio di uguaglianza sostanziale già esaminato nel capitolo precedente di questo manuale.</p>
+
+  <p class="titolo-capitolo">I rapporti economici e i rapporti politici</p>
+  <p>Il titolo terzo, dedicato ai rapporti economici, disciplina, tra gli altri, il già più volte richiamato diritto al lavoro sancito dall'articolo 35, il diritto sindacale e il diritto di sciopero, sanciti rispettivamente dagli articoli 39 e 40, la libertà di iniziativa economica privata, sancita dall'articolo 41 e già richiamata nei capitoli di questo manuale dedicati al diritto commerciale, e la proprietà privata, sancita dall'articolo 42 e già ampiamente esaminata nel capitolo di questo manuale dedicato ai diritti reali; il titolo quarto, dedicato ai rapporti politici, disciplina invece, agli articoli 48 e seguenti, il diritto di voto, riconosciuto a tutti i cittadini, uomini e donne, che abbiano raggiunto la maggiore età, quale diritto personale, eguale, libero e segreto, il cui esercizio è considerato dovere civico, il diritto di accesso ai pubblici uffici in condizioni di eguaglianza, e il diritto di associarsi liberamente in partiti politici per concorrere, con metodo democratico, a determinare la politica nazionale, secondo quanto sarà approfondito nel capitolo di questo manuale dedicato al Parlamento.</p>
+
+  <p class="titolo-capitolo">I doveri costituzionali</p>
+  <p>Accanto ai diritti fin qui esaminati, la Costituzione impone ai cittadini alcuni fondamentali doveri, a partire dal dovere di fedeltà alla Repubblica e di osservanza della Costituzione e delle leggi, sancito in via generale dall'articolo 54, e specificato, per i cittadini cui siano affidate funzioni pubbliche, dall'obbligo di adempierle con disciplina e onore, prestando giuramento nei casi stabiliti dalla legge; si ricordano inoltre il dovere di concorrere alle spese pubbliche in ragione della propria capacità contributiva, sancito dall'articolo 53, secondo il principio di progressività del sistema tributario italiano, e, storicamente, il dovere di difesa della Patria, sancito dall'articolo 52 come sacro dovere del cittadino, disposizione che, pur risalendo al contesto storico in cui fu redatta la Costituzione, caratterizzato dall'esistenza del servizio militare obbligatorio, oggi sospeso a partire dal 2005, conserva comunque una rilevanza costituzionale in relazione ai doveri di solidarietà verso la collettività nazionale.</p>
+
+  <p class="titolo-capitolo">Verso lo studio del Parlamento</p>
+  <p>Dopo aver esaminato i principali diritti e doveri costituzionalmente riconosciuti ai cittadini, è ora possibile passare all'esame della parte seconda della Costituzione, dedicata all'ordinamento della Repubblica, a partire dal Parlamento, quale organo titolare della funzione legislativa e rappresentativo, per eccellenza, della sovranità popolare: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 40 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir41.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>
