@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 02</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 02: la letteratura religiosa delle origini -->
+<div id="capitolo-02-letteratura-religiosa" class="capitolo-storia">
+  <p class="titolo-capitolo">02 - La letteratura religiosa delle Origini: san Francesco d'Assisi e Jacopone da Todi - Classe 3</p>
+
+  <p class="titolo-capitolo">Il rinnovamento religioso del Duecento</p>
+  <p>Come si è visto nel capitolo precedente, tra la fine del XII e l'inizio del XIII secolo l'Italia centro-settentrionale conobbe una fase di intense trasformazioni economiche e sociali, legate soprattutto allo sviluppo dei Comuni e a una nuova vitalità della vita cittadina: in questo contesto si diffusero anche importanti movimenti di rinnovamento religioso, che nascevano dall'esigenza, avvertita da ampi strati della popolazione, di un ritorno a una fede più semplice, autentica e vicina al messaggio evangelico, in reazione tanto alla ricchezza e al potere temporale di parte del clero, quanto all'aridità formale di certa dottrina ufficiale.</p>
+  <p>In questo clima nacquero nuovi ordini religiosi, come quello francescano e quello domenicano, che scelsero di vivere tra la gente, nelle città, predicando in volgare per farsi comprendere anche da chi non conosceva il latino: proprio questa scelta di comunicare direttamente con il popolo contribuì in modo decisivo alla nascita di una prima, importante produzione letteraria in lingua volgare a carattere religioso, che costituisce, insieme alla Scuola siciliana di cui si parlerà nel prossimo capitolo, una delle due grandi correnti delle origini della letteratura italiana.</p>
+
+  <p class="titolo-capitolo">San Francesco d'Assisi: vita e spiritualità</p>
+  <p>Francesco, nato ad Assisi, in Umbria, tra il 1181 e il 1182 da una famiglia di ricchi mercanti, trascorse la giovinezza tra gli agi tipici del suo ceto sociale, prima di attraversare una profonda crisi spirituale che lo condusse, negli anni successivi al 1206, ad abbandonare progressivamente i beni familiari per abbracciare un ideale di vita fondato sulla povertà assoluta, sull'umiltà e sull'amore per ogni creatura, considerata come segno della bontà divina.</p>
+  <p>Intorno a questo ideale si raccolse rapidamente un gruppo di seguaci, dando origine all'Ordine dei Frati Minori, ufficialmente approvato dalla Chiesa nel 1209: la spiritualità francescana si distingueva per una visione positiva e fraterna della natura, vista non come luogo di tentazione da fuggire, ma come manifestazione dell'amore di Dio verso gli uomini, un atteggiamento che avrà un riflesso diretto anche nella sua produzione poetica.</p>
+
+  <p class="titolo-capitolo">Il Cantico delle creature</p>
+  <p>L'opera più importante attribuita a san Francesco, e considerata dalla critica il primo testo poetico della letteratura italiana composto con piena consapevolezza artistica, è il Cantico delle creature, noto anche come Cantico di frate Sole, databile intorno al 1224-1226, cioè verso la fine della vita del santo, e composto in un volgare umbro fortemente influenzato dal latino liturgico.</p>
+  <p>Il componimento si presenta come una lode rivolta a Dio attraverso l'elenco delle sue creature, dal sole alla luna, dal vento all'acqua, dal fuoco alla terra, ciascuna delle quali viene definita fratello o sorella, a testimonianza di quel rapporto di fraternità universale che costituisce il nucleo della spiritualità francescana; nelle ultime strofe, aggiunte probabilmente in un momento successivo, il testo introduce anche il tema del perdono reciproco tra gli uomini e quello della morte, accolta con serenità come parte naturale del disegno divino.</p>
+  <p><em>Approfondimento:</em> dal punto di vista linguistico e metrico, il Cantico si presenta come un testo di transizione, ancora vicino alla prosa ritmica latina più che alla poesia volgare che si svilupperà nei decenni successivi, ma proprio per questo motivo viene considerato un documento fondamentale per comprendere il momento in cui il volgare italiano comincia a essere impiegato consapevolmente anche per la trattazione di temi elevati, non più soltanto per usi pratici o quotidiani.</p>
+
+  <p class="titolo-capitolo">Il genere della lauda</p>
+  <p>Accanto al Cantico delle creature, la spiritualità francescana e più in generale il fervore religioso del Duecento favorirono la diffusione di un genere poetico specifico, la lauda, cioè un componimento di argomento religioso, spesso destinato al canto corale, composto in volgare per essere compreso e recitato anche dai fedeli non colti riuniti nelle confraternite laicali: le laude, semplici nella forma metrica e nel linguaggio, trattavano temi come la lode a Dio, alla Vergine Maria o ai santi, la meditazione sulla Passione di Cristo, o l'invito alla penitenza e al pentimento dei peccati.</p>
+  <p>Questo genere ebbe una larghissima diffusione popolare, soprattutto a partire dalla seconda metà del Duecento, anche in relazione ai movimenti dei disciplinati o flagellanti, gruppi di fedeli che praticavano forme di penitenza pubblica e che si riunivano in confraternite per il canto comunitario delle laude, spesso raccolte in appositi laudari, tra cui il più noto è il Laudario di Cortona.</p>
+
+  <p class="titolo-capitolo">Jacopone da Todi: vita e conversione religiosa</p>
+  <p>Il maggiore autore di laude del Duecento fu Jacopone da Todi, al secolo Jacopo dei Benedetti, nato a Todi, in Umbria, intorno al 1230-1236: prima di dedicarsi alla vita religiosa, Jacopone esercitò la professione di notaio, conducendo un'esistenza agiata, ma la morte improvvisa e drammatica della giovane moglie, avvenuta secondo la tradizione durante il crollo di un solaio in occasione di una festa, lo indusse a una radicale conversione, che lo portò dapprima a una vita di penitenza itinerante e successivamente, intorno al 1278, a entrare nell'Ordine francescano come frate laico.</p>
+  <p>All'interno dell'Ordine francescano, Jacopone aderì alla corrente più rigorosa e radicale, quella degli Spirituali, favorevoli a un'interpretazione estremamente severa dell'ideale di povertà predicato da san Francesco: questa scelta lo portò a entrare in conflitto con papa Bonifacio VIII, tanto da subire, dopo il 1298, la scomunica e la reclusione in un convento, da cui fu liberato solamente nel 1303, dopo l'elezione di papa Benedetto XI, e dove morì pochi anni dopo, nel 1306.</p>
+
+  <p class="titolo-capitolo">La poesia di Jacopone: tra misticismo e drammaticità</p>
+  <p>La produzione poetica di Jacopone da Todi, tramandata in un insieme di laude di argomento vario, spazia da toni di aspra polemica contro la corruzione ecclesiastica e la mondanità del clero, a componimenti di intensa e talvolta estrema tensione mistica, nei quali il poeta esprime il desiderio di un annullamento totale di sé nell'amore per Dio, fino a testi di grande pathos drammatico, costruiti attraverso il dialogo tra più voci, secondo moduli che anticipano in parte le forme della futura sacra rappresentazione teatrale.</p>
+  <p>Tra le sue laude più celebri e studiate nella tradizione scolastica figura quella dedicata al dolore della Vergine Maria ai piedi della croce, comunemente nota come Pianto della Madonna, costruita come un serrato dialogo drammatico tra la Madonna, un messaggero e la voce narrante, capace di rendere con grande intensità emotiva la partecipazione umana e materna al dolore per la morte del figlio.</p>
+  <p><em>Esempio:</em> mentre il Cantico delle creature di san Francesco esprime una religiosità serena, contemplativa e in armonia con il creato, la poesia di Jacopone da Todi tende invece verso toni più tormentati e drammatici, oscillando tra l'invettiva morale, l'estasi mistica e la partecipazione emotiva al dolore, a testimonianza della varietà di accenti che la letteratura religiosa delle Origini seppe raggiungere nell'arco di pochi decenni.</p>
+
+  <p class="titolo-capitolo">Il valore storico-letterario della letteratura religiosa delle Origini</p>
+  <p>La produzione di san Francesco e di Jacopone da Todi, per quanto nata da finalità essenzialmente religiose e non da un'intenzione propriamente artistica nel senso moderno del termine, riveste un'importanza fondamentale nella storia della letteratura italiana, poiché dimostra come il volgare, fino a quel momento impiegato quasi soltanto per usi pratici, potesse farsi strumento di espressione poetica capace di toccare i temi più alti, come il rapporto tra l'uomo, la natura e il divino, o l'esperienza del dolore e della morte.</p>
+  <p>Questa esperienza, sviluppatasi in Italia centrale e legata a un contesto religioso e popolare, si affiancò cronologicamente, senza tuttavia intrecciarsi direttamente con essa, a un'altra e diversa esperienza poetica, di argomento non religioso ma amoroso, e nata in un ambiente non popolare ma cortigiano: quella della Scuola siciliana, sorta alla corte dell'imperatore Federico II, che sarà oggetto del prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 02 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let03.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

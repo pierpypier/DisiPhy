@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 04</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 04: il dolce stil novo, guinizzelli e cavalcanti -->
+<div id="capitolo-04-dolce-stil-novo" class="capitolo-storia">
+  <p class="titolo-capitolo">04 - Il Dolce Stil Novo: Guido Guinizzelli e Guido Cavalcanti - Classe 3</p>
+
+  <p class="titolo-capitolo">Dal guittonismo a una nuova poesia d'amore</p>
+  <p>Come si è visto nel capitolo precedente, nella seconda metà del Duecento la poesia toscana, sull'onda dell'eredità della Scuola siciliana, si era sviluppata soprattutto attraverso la figura di Guittone d'Arezzo, il cui stile complesso e ricercato aveva finito per improntare gran parte della produzione poetica coeva: proprio in reazione a questo modello, tra la fine degli anni Settanta del Duecento e i primi anni del secolo successivo, si affermò in ambito prima bolognese e poi fiorentino un nuovo modo di intendere la poesia d'amore, che la tradizione critica, sulla scorta di una celebre definizione dantesca, ha chiamato Dolce Stil Novo.</p>
+  <p>L'espressione, che indica una poesia dal linguaggio dolce, cioè armonioso e limpido, e allo stesso tempo nuovo rispetto alla tradizione precedente, fu impiegata da Dante stesso, all'interno della Commedia, per descrivere retrospettivamente l'esperienza poetica a cui anch'egli aveva partecipato da giovane, insieme a un gruppo ristretto di autori accomunati da una comune ispirazione, pur nella diversità delle singole personalità artistiche.</p>
+
+  <p class="titolo-capitolo">Caratteri generali dello Stilnovo</p>
+  <p>I poeti stilnovisti condividevano alcuni tratti fondamentali: anzitutto un ideale di stile limpido, musicale e privo delle asprezze e delle difficoltà lessicali tipiche del guittonismo; in secondo luogo una concezione dell'amore non più legata, come nella tradizione cortese, all'idea del servizio feudale reso alla donna amata, ma reinterpretata alla luce di categorie filosofiche e teologiche, con un forte influsso della cultura universitaria del tempo, in particolare della filosofia aristotelica rielaborata dalla Scolastica.</p>
+  <p>Elemento centrale della nuova poetica è l'idea secondo cui l'amore possa nascere soltanto in un cuore gentile, cioè nobile non per nascita o censo ma per intima disposizione morale e spirituale, e l'immagine della donna amata, spesso definita angelicata, cioè paragonata a una creatura celeste, la cui sola presenza o il cui saluto sono capaci di produrre nell'animo dell'amante effetti quasi miracolosi, elevandolo moralmente e spiritualmente.</p>
+
+  <p class="titolo-capitolo">Guido Guinizzelli: vita e ruolo di iniziatore</p>
+  <p>Il poeta a cui viene generalmente riconosciuto il ruolo di iniziatore dello Stilnovo è Guido Guinizzelli, nato a Bologna intorno al 1235 e morto in esilio a Monselice, presso Padova, nel 1276: appartenente a una famiglia di orientamento politico ghibellino, fu costretto a lasciare Bologna in seguito a un rovescio politico che colpì la sua fazione, e trascorse per questo motivo gli ultimi anni della propria vita lontano dalla città natale.</p>
+  <p>Pur componendo anche testi ancora vicini, per temi e forme, alla tradizione siciliana e guittoniana, Guinizzelli è ricordato soprattutto per una canzone considerata il manifesto teorico della nuova poetica, nella quale il poeta espone in termini quasi filosofici il principio secondo cui l'amore risiede necessariamente nel cuore gentile, così come, per usare un paragone naturalistico caro al poeta, certe qualità si manifestano solo in determinate condizioni naturali, stabilendo un parallelo tra la nobiltà d'animo e le leggi che regolano il mondo naturale.</p>
+
+  <p class="titolo-capitolo">La poetica di Guinizzelli: amore e gentilezza del cuore</p>
+  <p>Nella poesia di Guinizzelli l'amore viene descritto come un sentimento che nobilita l'animo di chi lo prova, avvicinandolo, per la sua purezza, alla sfera del divino: la donna amata è presentata come immagine terrena di una bellezza e di una perfezione che rimandano direttamente a Dio, tanto che la contemplazione della sua figura può essere paragonata a un'esperienza di elevazione quasi religiosa, capace di orientare l'amante verso il bene e la virtù.</p>
+  <p>Questa concezione, che unisce linguaggio amoroso e linguaggio teologico, rappresenta una delle novità più significative introdotte da Guinizzelli, e sarà ripresa e ulteriormente sviluppata dai poeti successivi, in particolare da Dante, che nella Vita nuova e nella Commedia porterà alle estreme conseguenze l'idea della donna amata come tramite tra l'uomo e la dimensione divina.</p>
+
+  <p class="titolo-capitolo">Guido Cavalcanti: vita e personalità</p>
+  <p>Se Guinizzelli viene considerato il precursore e l'iniziatore teorico dello Stilnovo, il poeta che ne rappresenta forse l'esponente più originale e radicale fu Guido Cavalcanti, nato a Firenze intorno al 1258 da un'importante famiglia di parte guelfa, e morto nella stessa città nell'agosto del 1300, poco dopo essere stato colpito, insieme ad altri esponenti di primo piano delle fazioni cittadine, da un provvedimento di esilio temporaneo deciso dal governo comunale fiorentino, di cui faceva parte, in quei mesi, lo stesso Dante Alighieri, legato a Cavalcanti da un rapporto di amicizia e reciproca ammirazione poetica.</p>
+  <p>Cavalcanti fu una figura di rilievo anche sul piano intellettuale, essendo attratto dalla filosofia naturale e dalle correnti di pensiero di ispirazione averroistica diffuse nell'ambiente universitario del tempo, particolarmente attente allo studio delle passioni umane secondo un approccio razionale e quasi scientifico, un interesse che si riflette in modo evidente nella sua produzione poetica.</p>
+
+  <p class="titolo-capitolo">La poetica di Cavalcanti: l'amore come passione dolorosa</p>
+  <p>A differenza della visione più serena e ottimistica di Guinizzelli, la poesia di Cavalcanti presenta l'amore come un'esperienza drammatica e dolorosa, capace di sconvolgere l'equilibrio interiore dell'amante fin quasi a comprometterne la ragione e l'integrità fisica: l'innamoramento viene descritto attraverso un linguaggio quasi clinico, che ne analizza gli effetti sui cosiddetti spiriti vitali, cioè secondo la fisiologia medievale, le sottili sostanze che regolavano le funzioni del corpo e della mente, sconvolti dalla passione amorosa fino a produrre stati di angoscia, tremore e talvolta la stessa vicinanza alla morte.</p>
+  <p>La componente filosofica del pensiero di Cavalcanti trova la sua espressione più compiuta in una celebre canzone dottrinale, nella quale il poeta offre una vera e propria trattazione teorica sulla natura dell'amore, definendolo non come virtù ma come passione irrazionale, che ha sede nella parte sensitiva dell'anima e non in quella razionale, in una prospettiva più cupa e problematica rispetto all'elevazione spirituale cantata da Guinizzelli.</p>
+  <p><em>Esempio:</em> mentre Guinizzelli tende a rappresentare l'incontro con la donna amata come fonte di elevazione morale e quasi religiosa, Cavalcanti insiste piuttosto sugli effetti destabilizzanti della passione, descrivendo l'amore come una forza che si impone all'amante dall'esterno, sottraendogli il controllo di sé, in una visione tragica e pessimistica della condizione umana.</p>
+
+  <p class="titolo-capitolo">Guinizzelli e Cavalcanti a confronto</p>
+  <p>Il confronto tra i due maggiori esponenti della prima fase dello Stilnovo permette di cogliere la ricchezza e la varietà interna a questa corrente poetica, che pur muovendo da presupposti comuni, come l'attenzione filosofica al fenomeno amoroso e l'ideale di un cuore gentile predisposto ad amare, giunge a esiti tra loro assai diversi: più fiducioso e in armonia con una visione provvidenziale del mondo quello di Guinizzelli, più inquieto, problematico e vicino a una concezione tragica dell'esistenza quello di Cavalcanti.</p>
+  <p>Questa tensione tra le due prospettive, quella dell'amore come via di elevazione spirituale e quella dell'amore come passione dolorosa e distruttiva, costituirà un punto di riferimento imprescindibile per la generazione successiva di poeti, e in particolare per Dante Alighieri, che nella propria opera saprà raccogliere l'eredità di entrambi i maestri, per poi superarla in una sintesi del tutto personale.</p>
+
+  <p class="titolo-capitolo">Verso gli altri esponenti dello Stilnovo</p>
+  <p>Accanto a Guinizzelli e Cavalcanti, la stagione dello Stilnovo fiorentino annoverò altri poeti di rilievo, come Lapo Gianni e Cino da Pistoia, quest'ultimo destinato a fare da tramite, per ragioni anagrafiche e di amicizia personale, tra l'esperienza stilnovistica e quella, di poco successiva, di Francesco Petrarca; ma la figura che porterà a compimento e insieme supererà l'esperienza dello Stilnovo sarà, come si vedrà nei capitoli seguenti di questo manuale, Dante Alighieri, la cui opera giovanile, la Vita nuova, rappresenta insieme il punto d'arrivo e il congedo da questa straordinaria stagione della lirica italiana delle origini.</p>
+</div>
+<!-- fine capitolo letteratura 04 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let05.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

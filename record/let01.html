@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 01</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 01: il contesto storico-culturale delle origini e la nascita del volgare -->
+<div id="capitolo-01-origini-volgare" class="capitolo-storia">
+  <p class="titolo-capitolo">01 - Il contesto storico-culturale delle Origini e la nascita del volgare italiano - Classe 3</p>
+
+  <p class="titolo-capitolo">Il quadro storico dell'Alto Medioevo</p>
+  <p>Per comprendere la nascita della letteratura italiana occorre partire da un lungo periodo di trasformazioni che, a partire dalla caduta dell'Impero romano d'Occidente nel 476 d.C., interessò l'intera Europa occidentale: la disgregazione dell'unità politica e amministrativa romana, le invasioni di popolazioni germaniche, la progressiva ruralizzazione della società e il ridimensionamento della vita urbana determinarono, nei secoli che vanno dal V all'XI, un profondo mutamento anche sul piano linguistico e culturale, con la formazione in Europa di una società feudale frammentata in una molteplicità di poteri locali, e con la Chiesa che rimase, in questo periodo, la principale depositaria e trasmettitrice della cultura scritta, custodita soprattutto nei monasteri e riservata a una ristrettissima cerchia di persone colte, in grado di leggere e scrivere in latino.</p>
+  <p>In questo contesto il latino, lingua ufficiale dell'amministrazione, della liturgia e della cultura scritta, continuò a essere impiegato dai pochi dotti nella sua forma colta e normata, detta latino classico o latino medievale a seconda dei casi, mentre la popolazione comune, nella vita quotidiana, parlava ormai da tempo lingue sensibilmente diverse, nate dalla lenta e naturale evoluzione del latino parlato, o latino volgare, cioè del latino d'uso comune, meno formale e più soggetto a modifiche rispetto a quello scritto e insegnato nelle scuole.</p>
+
+  <p class="titolo-capitolo">Dal latino ai volgari: la nascita delle lingue romanze</p>
+  <p>Il termine volgare, che nel linguaggio comune ha oggi spesso un'accezione negativa, in ambito storico-linguistico indica semplicemente la lingua parlata dal popolo, cioè dal vulgus, distinta dal latino letterario riservato ai dotti: nei diversi territori un tempo appartenuti all'Impero romano, il latino parlato si trasformò gradualmente, nell'arco di alcuni secoli, in lingue nuove e differenziate tra loro, dette lingue romanze o neolatine, tra cui l'italiano, il francese, lo spagnolo, il portoghese, il romeno e altre lingue e dialetti minori: tale trasformazione fu il risultato di un lungo processo di mutamento fonetico, morfologico e lessicale, favorito anche dal contatto con le lingue delle popolazioni germaniche insediatesi nei diversi territori, e procedette in modo differenziato da regione a regione, dando origine, all'interno della stessa penisola italiana, a una notevole varietà di parlate locali.</p>
+  <p>Questo processo di differenziazione linguistica fu inoltre favorito, in Italia, dalla mancanza per lungo tempo di un potere politico unitario capace di imporre un modello linguistico comune: a differenza della Francia o della Spagna, che pure conobbero anch'esse una notevole frammentazione dialettale, l'Italia rimase per secoli divisa in una pluralità di stati regionali, ciascuno dei quali sviluppò una propria varietà di volgare, con caratteri fonetici, morfologici e lessicali distinti, tanto che ancora oggi, accanto alla lingua italiana comune, sopravvivono numerosi dialetti regionali che testimoniano questa antica frammentazione linguistica.</p>
+
+  <p class="titolo-capitolo">I primi documenti in volgare italiano</p>
+  <p>Le prime tracce scritte del volgare italiano risalgono all'Alto Medioevo e si presentano come testimonianze isolate e occasionali, inserite quasi sempre all'interno di testi in latino, a riprova del fatto che per lungo tempo il volgare rimase una lingua esclusivamente parlata, priva di una propria tradizione scritta autonoma: tra le più antiche attestazioni si ricorda il cosiddetto Indovinello veronese, un breve indovinello in forma di gioco enigmistico, databile tra la fine dell'VIII e l'inizio del IX secolo, conservato in un manoscritto della Biblioteca Capitolare di Verona, nel quale compaiono forme linguistiche che presentano già tratti chiaramente distinti dal latino classico.</p>
+  <p>Un documento di natura diversa, ma altrettanto importante per la storia della lingua italiana, è costituito dai cosiddetti Placiti cassinesi, o placiti campani, un gruppo di quattro brevi testimonianze giudiziarie relative a controversie sui confini di terreni appartenenti all'abbazia di Montecassino, databili tra il 960 e il 963: si tratta di formule con cui alcuni testimoni, chiamati a deporre davanti al giudice, dichiaravano di riconoscere l'appartenenza di determinati terreni al monastero, e vengono considerati il primo documento in cui il volgare italiano viene messo per iscritto in modo consapevole, per essere compreso da chi non conosceva il latino, segnando così una tappa fondamentale nel percorso di emancipazione del volgare dalla lingua latina.</p>
+  <p><em>Approfondimento:</em> questi primi documenti non hanno alcun valore letterario in senso proprio, trattandosi di testi pratici, giuridici o di semplice intrattenimento, ma sono estremamente preziosi per la storia della lingua, poiché permettono di ricostruire, attraverso l'analisi delle forme linguistiche impiegate, le tappe della progressiva trasformazione del latino parlato nelle diverse varietà di volgare italiano.</p>
+
+  <p class="titolo-capitolo">Il plurilinguismo dell'Italia medievale</p>
+  <p>Fino al Duecento inoltrato, l'Italia si presentava dunque come un territorio caratterizzato da un accentuato plurilinguismo, nel quale convivevano il latino, impiegato negli atti ufficiali, nella liturgia e negli scritti dei dotti, il volgare, parlato dalla popolazione comune e privo ancora di un prestigio culturale paragonabile a quello del latino, e in alcune aree anche lingue di origine straniera, come il provenzale, cioè la lingua d'oc parlata nel sud della Francia, che ebbe una notevole diffusione tra i letterati delle corti italiane, soprattutto settentrionali, grazie alla circolazione della poesia trobadorica.</p>
+  <p>Il volgare, in questa fase, non godeva ancora di una considerazione paragonabile a quella del latino: la lingua latina restava infatti l'unica ritenuta degna di essere impiegata per la trattazione di argomenti elevati, come la filosofia, la teologia o la scienza, mentre il volgare veniva considerato adatto soltanto a usi pratici e quotidiani, oppure a componimenti di intrattenimento destinati a un pubblico non colto: la progressiva affermazione del volgare come lingua letteraria a pieno titolo, capace di trattare anche i temi più elevati, sarà infatti il risultato di un lento processo, che avrà inizio proprio a partire dal Duecento e che troverà il suo momento più alto, come si vedrà nei capitoli successivi di questo manuale, nell'opera di Dante Alighieri.</p>
+
+  <p class="titolo-capitolo">Le corti, i Comuni e le prime condizioni per una letteratura in volgare</p>
+  <p>Le condizioni storiche che resero possibile, a partire dal Duecento, la nascita di una vera e propria letteratura in lingua volgare furono legate a importanti trasformazioni economiche e sociali che interessarono in particolare l'Italia centro-settentrionale: lo sviluppo dei Comuni, cioè delle nuove forme di organizzazione politica cittadina sorte a partire dall'XI secolo, favorì infatti la crescita di una borghesia mercantile e artigiana, portatrice di nuovi interessi culturali e di una nuova sensibilità, meno legata ai valori tradizionali della società feudale e più attenta alla vita pratica, agli scambi commerciali e all'organizzazione della vita cittadina.</p>
+  <p>Accanto ai Comuni dell'Italia centro-settentrionale, un ruolo culturale di primo piano fu svolto, nella prima metà del Duecento, dalla corte siciliana dell'imperatore Federico II di Svevia, un ambiente raffinato e colto, aperto agli influssi della cultura araba, greca ed ebraica, oltre che a quella provenzale, nel quale, come si vedrà nel capitolo dedicato alla Scuola siciliana, nacque il primo gruppo organico di poeti che scelsero consapevolmente il volgare come lingua della poesia amorosa, ispirandosi ai modelli della lirica trobadorica provenzale ma traducendone i temi e le forme in una lingua nuova.</p>
+
+  <p class="titolo-capitolo">Verso la nascita di una letteratura italiana</p>
+  <p>Il cammino che condusse dalle prime, sporadiche attestazioni scritte del volgare, come l'Indovinello veronese o i Placiti cassinesi, alla nascita di una letteratura in volgare pienamente consapevole delle proprie possibilità espressive, fu dunque lungo e graduale, e richiese il concorso di più fattori: da un lato la progressiva maturazione linguistica dei volgari italiani, dall'altro il mutamento delle condizioni sociali e culturali, con la nascita di nuovi ambienti, come le corti signorili e i Comuni cittadini, capaci di sostenere e promuovere una produzione letteraria non più legata esclusivamente al latino.</p>
+  <p>Nei prossimi capitoli di questo manuale si seguirà proprio questo percorso, a partire dalla letteratura religiosa delle Origini, che rappresenta la prima forma di poesia in volgare dotata di una piena consapevolezza artistica, per poi ripercorrere la nascita della Scuola siciliana, la successiva diffusione della lirica in Italia centrale, fino ad arrivare, attraverso il Dolce Stil Novo, ai grandi autori del Trecento che daranno al volgare fiorentino, in particolare, un prestigio letterario destinato a porre le basi della moderna lingua italiana.</p>
+</div>
+<!-- fine capitolo letteratura 01 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let02.html">Vai al Capitolo successivo</a></p>
+</div>    
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

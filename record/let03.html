@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 03</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 03: la scuola siciliana e i poeti siculo-toscani -->
+<div id="capitolo-03-scuola-siciliana" class="capitolo-storia">
+  <p class="titolo-capitolo">03 - La Scuola siciliana e i poeti siculo-toscani - Classe 3</p>
+
+  <p class="titolo-capitolo">La corte di Federico II e il contesto storico</p>
+  <p>Mentre in Italia centrale, come si è visto nel capitolo precedente, si sviluppava una letteratura religiosa in volgare legata ai movimenti di rinnovamento spirituale del Duecento, nell'Italia meridionale prendeva forma, in un ambiente sociale e culturale del tutto diverso, la prima esperienza di poesia in volgare interamente dedicata al tema amoroso: essa nacque presso la corte dell'imperatore Federico II di Svevia, che resse l'Impero e il Regno di Sicilia dal 1220 fino alla morte, avvenuta nel 1250, e che fece della propria corte, con sede prevalentemente a Palermo, uno dei centri culturali più raffinati e aperti dell'Europa del tempo.</p>
+  <p>Alla corte federiciana convivevano influssi culturali diversi, arabi, greco-bizantini ed ebraici, insieme alla tradizione latina e a quella romanza, in un clima di studio enciclopedico che spaziava dalla filosofia alla scienza, dal diritto alla poesia: fu proprio in questo ambiente, frequentato da funzionari, notai e uomini di legge al servizio dell'imperatore, che nacque, intorno agli anni Trenta del Duecento, il primo gruppo organico di poeti italiani, tradizionalmente indicato con il nome di Scuola siciliana.</p>
+
+  <p class="titolo-capitolo">Caratteri generali della Scuola siciliana</p>
+  <p>I poeti della Scuola siciliana furono per lo più funzionari e giuristi legati all'amministrazione imperiale, non giullari o musicisti di professione, e proprio per questo la loro poesia, a differenza di quella dei trovatori provenzali a cui si ispiravano, era concepita per essere letta e non cantata, priva di un accompagnamento musicale: si trattava inoltre di una produzione scritta in una lingua letteraria artificiale, un volgare siciliano illustre, cioè non coincidente con il siciliano effettivamente parlato, ma elaborato appositamente come lingua nobile e adatta alla poesia, sul modello, per struttura e vocabolario, del provenzale trobadorico.</p>
+  <p>Un aspetto importante, che sarà approfondito più avanti, è che i testi della Scuola siciliana sono giunti fino a noi quasi sempre attraverso copie realizzate da amanuensi toscani, i quali, trascrivendo i componimenti, ne adattarono in parte la grafia e la pronuncia alle abitudini linguistiche toscane: questo fenomeno, detto tradizionalmente toscanizzazione dei testi siciliani, rende oggi difficile ricostruire con precisione l'aspetto originario della lingua poetica siciliana.</p>
+
+  <p class="titolo-capitolo">I temi e il modello dell'amor cortese</p>
+  <p>Dal punto di vista tematico, i poeti siciliani ripresero il tema dell'amor cortese elaborato dai trovatori provenzali, cioè l'idea di un amore raffinato e nobilitante, vissuto dal poeta-amante come devoto omaggio verso una donna idealizzata, generalmente irraggiungibile, alla quale ci si rivolge con atteggiamento di rispettosa sottomissione, sul modello del rapporto feudale tra vassallo e signore.</p>
+  <p>Rispetto ai modelli provenzali, tuttavia, i poeti siciliani tesero ad attenuare la componente più concretamente sociale e cortigiana dell'amor cortese, privandolo di molti riferimenti puntuali alla vita di corte, per concentrarsi maggiormente sull'analisi interiore del sentimento amoroso e delle sue conseguenze psicologiche, in una direzione che sarà poi ripresa e approfondita, come si vedrà nei capitoli successivi, dal Dolce Stil Novo.</p>
+
+  <p class="titolo-capitolo">Giacomo da Lentini e l'invenzione del sonetto</p>
+  <p>La figura più rappresentativa della Scuola siciliana fu Giacomo da Lentini, notaio e funzionario alla corte di Federico II, attivo nel secondo quarto del Duecento, al quale la tradizione critica attribuisce l'invenzione del sonetto, cioè della forma metrica composta da quattordici versi endecasillabi organizzati in due quartine e due terzine, destinata a diventare una delle strutture poetiche più fortunate e durature dell'intera letteratura italiana ed europea.</p>
+  <p>Nella sua produzione poetica, tramandata soprattutto attraverso sonetti e canzoni di argomento amoroso, Giacomo da Lentini mostra una spiccata attenzione per l'analisi psicologica dell'innamoramento, spesso paragonato a fenomeni naturali o a processi conoscitivi, in una direzione che, sviluppata dai poeti successivi, condurrà infine alla riflessione più filosofica sull'amore propria degli Stilnovisti.</p>
+
+  <p class="titolo-capitolo">Altri esponenti della Scuola siciliana</p>
+  <p>Accanto a Giacomo da Lentini operarono altri poeti legati alla corte federiciana, tra cui si ricordano Pier della Vigna, alto funzionario e consigliere dell'imperatore, caduto poi in disgrazia e morto suicida nel 1249; Guido delle Colonne, giudice messinese autore di raffinate canzoni d'amore; Iacopo Mostacci, anch'egli funzionario di corte; e Rinaldo d'Aquino, appartenente a una nobile famiglia del Regno, autore di componimenti che si distinguono per una maggiore varietà di toni, compreso il genere del compianto in prima persona femminile per la partenza dell'amato crociato.</p>
+  <p>Nell'insieme, la produzione della Scuola siciliana, pur muovendosi entro un repertorio tematico relativamente ristretto e fortemente codificato, mostra al proprio interno una notevole varietà di soluzioni stilistiche e di sfumature psicologiche, a testimonianza della vitalità di questa prima stagione della poesia italiana.</p>
+
+  <p class="titolo-capitolo">La fine della Scuola siciliana e la diffusione in Toscana</p>
+  <p>L'esperienza della Scuola siciliana in senso stretto ebbe una durata relativamente breve, legata alle sorti della dinastia sveva: con la morte di Federico II nel 1250, e ancor più dopo la sconfitta e la morte del figlio Manfredi nella battaglia di Benevento del 1266, che segnò la fine del dominio svevo nell'Italia meridionale a favore della casa angioina, l'ambiente di corte che aveva sostenuto questa produzione poetica venne meno.</p>
+  <p>Nonostante la scomparsa del contesto storico che l'aveva generata, la poesia siciliana non si estinse, ma conobbe una rapida e fortunata diffusione nell'Italia centrale, in particolare in Toscana, dove i testi vennero letti, copiati e imitati da un nuovo gruppo di poeti, dando origine al fenomeno noto come Siculo-toscanismo o Scuola siculo-toscana.</p>
+
+  <p class="titolo-capitolo">I poeti siculo-toscani e Guittone d'Arezzo</p>
+  <p>I poeti siculo-toscani, attivi soprattutto nella seconda metà del Duecento, ripresero i temi e le forme metriche della Scuola siciliana, in particolare il sonetto e la canzone, adattandoli però alla propria lingua e sensibilità, e ampliando progressivamente il repertorio tematico oltre il tema strettamente amoroso, per includere anche argomenti politici, morali e religiosi, legati alla vita civile e comunale dell'Italia centrale del tempo.</p>
+  <p>La figura di maggior rilievo di questa fase fu Guittone d'Arezzo, vissuto tra il 1235 circa e il 1294, autore in un primo tempo di rime amorose sul modello siciliano, e successivamente, dopo un'esperienza di conversione religiosa che lo portò a entrare nell'ordine laicale dei Cavalieri di Santa Maria detti anche Frati Gaudenti, di componimenti di argomento morale, politico e religioso, caratterizzati da uno stile complesso e ricercato, spesso improntato a una densità linguistica ed espressiva considerevole.</p>
+  <p><em>Approfondimento:</em> Guittone d'Arezzo esercitò un'influenza tanto ampia sui poeti toscani a lui contemporanei e immediatamente successivi da dare il nome a una vera e propria tendenza, detta guittonismo, che i poeti del Dolce Stil Novo, come si vedrà nel prossimo capitolo, sentiranno il bisogno di superare polemicamente, proponendo un ideale di poesia amorosa fondato su uno stile ritenuto più naturale, limpido e filosoficamente elevato.</p>
+
+  <p class="titolo-capitolo">Il valore storico della Scuola siciliana e siculo-toscana</p>
+  <p>Nel loro insieme, l'esperienza della Scuola siciliana e quella dei poeti siculo-toscani rivestono un'importanza decisiva nella storia della letteratura italiana, poiché segnano il momento in cui il volgare, già impiegato per finalità religiose come si è visto a proposito di san Francesco e di Jacopone da Todi, viene per la prima volta utilizzato in modo sistematico e consapevole anche per la poesia d'amore, elaborando forme metriche, come il sonetto e la canzone, e un lessico poetico destinati a rimanere patrimonio permanente della tradizione letteraria italiana.</p>
+  <p>Sarà proprio a partire da questa eredità linguistica e tematica, rielaborata criticamente e superata negli esiti stilistici del guittonismo, che prenderà avvio, in ambito bolognese e poi fiorentino, la nuova stagione poetica del Dolce Stil Novo, di cui si tratterà nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 03 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let04.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>
