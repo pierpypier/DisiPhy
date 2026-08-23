@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 17</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 17: il mandato e la rappresentanza -->
+<div id="capitolo-17-mandato-rappresentanza" class="capitolo-storia">
+  <p class="titolo-capitolo">17 - Il mandato e la rappresentanza - Classe 3</p>
+
+  <p class="titolo-capitolo">La nozione di mandato</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, la compravendita e la locazione, quali contratti diretti rispettivamente al trasferimento della proprietà e alla concessione in godimento di un bene, occorre ora esaminare una diversa categoria di contratti tipici, aventi per oggetto lo svolgimento di un'attività nell'interesse altrui: la principale figura di questa categoria è il mandato, definito dall'articolo 1703 del Codice civile come il contratto con il quale una parte, detta mandatario, si obbliga a compiere uno o più atti giuridici per conto dell'altra, detta mandante. Il mandato si distingue dagli altri contratti aventi per oggetto un facere, come il contratto d'opera o l'appalto, che saranno esaminati nei paragrafi seguenti, per il fatto che l'attività dedotta in contratto consiste specificamente nel compimento di atti giuridici, cioè di atti destinati a produrre effetti nella sfera giuridica del mandante, come la conclusione di un contratto o il compimento di un pagamento.</p>
+
+  <p class="titolo-capitolo">Mandato con e senza rappresentanza</p>
+  <p>Il mandato può essere conferito con o senza rappresentanza, a seconda che il mandatario agisca spendendo il nome del mandante, oppure in nome proprio: nel primo caso, disciplinato dall'articolo 1704 del Codice civile, il mandatario che agisce in nome del mandante, cioè con rappresentanza, produce direttamente in capo a quest'ultimo gli effetti degli atti compiuti, secondo il meccanismo generale della rappresentanza che sarà approfondito nel paragrafo seguente; nel secondo caso, disciplinato dall'articolo 1705, il mandatario che agisce in nome proprio, cioè senza rappresentanza, acquista egli stesso i diritti e assume egli stesso gli obblighi derivanti dagli atti compiuti con i terzi, ancorché questi abbiano avuto conoscenza del mandato, salvo il successivo obbligo del mandatario di ritrasferire al mandante quanto acquistato in esecuzione dell'incarico.</p>
+  <p><em>Esempio:</em> se un soggetto conferisce a un agente immobiliare l'incarico di individuare un acquirente per il proprio appartamento, ma è lo stesso proprietario a concludere personalmente il contratto di compravendita con l'acquirente individuato, l'agente ha agito quale semplice mediatore o mandatario senza rappresentanza nella fase di ricerca, mentre il contratto finale produce direttamente i propri effetti in capo al proprietario, che vi ha personalmente partecipato.</p>
+
+  <p class="titolo-capitolo">La rappresentanza</p>
+  <p>La rappresentanza, disciplinata in via generale dagli articoli 1387 e seguenti del Codice civile, è l'istituto in forza del quale un soggetto, detto rappresentante, compie un atto giuridico in nome e per conto di un altro soggetto, detto rappresentato, con la conseguenza che gli effetti dell'atto si producono direttamente in capo a quest'ultimo, come se lo avesse compiuto egli stesso, purché il rappresentante agisca nei limiti delle facoltà conferitegli. Il potere di rappresentanza può avere fonte legale, come nel caso dei genitori che rappresentano il figlio minore già esaminato nel capitolo di questo manuale dedicato alla persona fisica, oppure fonte volontaria, mediante il conferimento di una procura, cioè un negozio giuridico unilaterale con il quale il rappresentato attribuisce al rappresentante il potere di agire in suo nome, distinto dal rapporto di mandato che può eventualmente accompagnarla e che ne costituisce il rapporto interno sottostante.</p>
+  <p><em>Approfondimento:</em> è importante non confondere il mandato con la procura: il primo è un contratto che disciplina il rapporto interno tra mandante e mandatario, obbligando quest'ultimo a compiere l'incarico affidatogli; la seconda è invece un atto unilaterale, meramente autorizzativo, con cui il rappresentato conferisce al rappresentante il potere di agire efficacemente nei suoi confronti verso i terzi. Le due figure, pur potendo accompagnarsi nella prassi, come avviene tipicamente nel mandato con rappresentanza, restano concettualmente distinte, tanto che è possibile conferire una procura senza che vi sia un sottostante contratto di mandato, come avviene talora nei rapporti di cortesia.</p>
+
+  <p class="titolo-capitolo">Gli obblighi del mandatario e del mandante</p>
+  <p>Il mandatario è tenuto, secondo l'articolo 1710 del Codice civile, a eseguire l'incarico affidatogli con la diligenza del buon padre di famiglia, salvo che il mandato sia gratuito, nel qual caso la responsabilità per colpa è valutata con minor rigore, e a comunicare senza ritardo al mandante l'esecuzione del mandato, secondo l'articolo 1712; il mandante, a sua volta, è tenuto, secondo l'articolo 1719, a somministrare al mandatario i mezzi necessari per l'esecuzione del mandato e per l'adempimento delle obbligazioni che a tal fine il mandatario abbia contratto in proprio nome, nonché a rimborsargli le anticipazioni fatte, con i relativi interessi, e a corrispondergli il compenso pattuito, qualora il mandato non sia gratuito, essendo quest'ultimo, secondo l'articolo 1709, il regime presunto salvo diversa volontà delle parti.</p>
+
+  <p class="titolo-capitolo">L'estinzione del mandato</p>
+  <p>Il mandato si estingue, secondo l'articolo 1722 del Codice civile, per la scadenza del termine eventualmente fissato o per il compimento dell'affare per cui è stato conferito, per la revoca da parte del mandante, per la rinuncia da parte del mandatario, e per la morte, l'interdizione o l'inabilitazione del mandante o del mandatario, salve le eccezioni previste dalla legge per il caso in cui il mandato sia stato conferito anche nell'interesse del mandatario o di terzi. La revoca del mandato da parte del mandante, pur potendo essere sempre esercitata quale espressione della fiducia personale che caratterizza il rapporto, può tuttavia comportare, se intempestiva o priva di giusta causa in presenza di un mandato oneroso a tempo determinato o per affare determinato, l'obbligo di risarcire il danno cagionato al mandatario, secondo quanto previsto dall'articolo 1725.</p>
+
+  <p class="titolo-capitolo">La commissione e la spedizione quali figure speciali di mandato</p>
+  <p>Il Codice civile disciplina, agli articoli 1731 e seguenti, la commissione, quale mandato che ha per oggetto l'acquisto o la vendita di beni per conto del committente e in nome del commissionario, il quale agisce dunque, per definizione, senza rappresentanza; disciplina inoltre, agli articoli 1737 e seguenti, la spedizione, quale mandato con cui lo spedizioniere assume l'obbligo di concludere, in nome proprio e per conto del mandante, detto committente, un contratto di trasporto e di compiere le operazioni accessorie: entrambe le figure, pur presentando una disciplina specifica dettata dalle peculiari esigenze del commercio, restano riconducibili, quanto alla loro struttura di fondo, allo schema generale del mandato senza rappresentanza già esaminato in questo capitolo.</p>
+
+  <p class="titolo-capitolo">Verso lo studio del lavoro subordinato e autonomo</p>
+  <p>Dopo aver esaminato il mandato e la rappresentanza, quali istituti attraverso cui un soggetto può agire, con effetti giuridici, nell'interesse o in nome di un altro, occorre ora volgere l'attenzione a una diversa e fondamentale categoria di rapporti giuridici, aventi per oggetto lo svolgimento di un'attività lavorativa, distinguendo in particolare tra il lavoro subordinato e il lavoro autonomo: a questi temi sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 17 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir18.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

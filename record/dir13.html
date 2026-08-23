@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 13</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 13: il contratto: nozione ed elementi essenziali -->
+<div id="capitolo-13-contratto-nozione-elementi" class="capitolo-storia">
+  <p class="titolo-capitolo">13 - Il contratto: nozione ed elementi essenziali - Classe 3</p>
+
+  <p class="titolo-capitolo">La nozione di contratto</p>
+  <p>Come si è anticipato nel capitolo dedicato alle obbligazioni, il contratto costituisce la fonte più diffusa e importante delle obbligazioni, oltre che, più in generale, lo strumento principale attraverso il quale i privati regolano i propri rapporti giuridici patrimoniali: l'articolo 1321 del Codice civile lo definisce come l'accordo di due o più parti per costituire, regolare o estinguere tra loro un rapporto giuridico patrimoniale. Da questa definizione emergono già alcuni elementi essenziali della nozione, che saranno approfonditi nel corso del capitolo: la necessità di un accordo, cioè di un incontro delle volontà di almeno due parti, e la natura patrimoniale del rapporto giuridico che ne costituisce l'oggetto, elemento questo che distingue il contratto da altri atti giuridici bilaterali o plurilaterali privi di tale carattere, come il matrimonio, che sarà esaminato nei capitoli di questo manuale dedicati al diritto di famiglia.</p>
+
+  <p class="titolo-capitolo">Il principio dell'autonomia contrattuale</p>
+  <p>Il Codice civile riconosce alle parti un'ampia autonomia contrattuale, disciplinata dall'articolo 1322, in base alla quale esse possono liberamente determinare il contenuto del contratto nei limiti imposti dalla legge, e possono altresì concludere contratti che non appartengano ai tipi aventi una disciplina particolare, cioè i cosiddetti contratti atipici, purché siano diretti a realizzare interessi meritevoli di tutela secondo l'ordinamento giuridico. Tale principio, che trova il proprio fondamento costituzionale nella libertà di iniziativa economica privata riconosciuta dall'articolo 41 della Costituzione, si contrappone alla tipicità che caratterizza, come si è visto nei capitoli precedenti, i diritti reali, e riflette la diversa funzione del contratto quale strumento elastico e adattabile alle mutevoli esigenze della vita economica e sociale.</p>
+
+  <p class="titolo-capitolo">Gli elementi essenziali del contratto</p>
+  <p>L'articolo 1325 del Codice civile individua quattro elementi, detti requisiti essenziali, la cui presenza è indispensabile perché un contratto possa dirsi validamente costituito: l'accordo delle parti, cioè l'incontro delle rispettive volontà su tutti gli elementi del contratto, che sarà approfondito nel paragrafo seguente; la causa, cioè la funzione economico-sociale che il contratto è diretto a realizzare, e che deve essere lecita, secondo quanto stabilito dall'articolo 1343 del Codice civile; l'oggetto, cioè il contenuto della prestazione o delle prestazioni dedotte in contratto, che deve essere possibile, lecito, determinato o determinabile, ai sensi dell'articolo 1346; e infine la forma, quando essa sia prescritta dalla legge a pena di nullità, secondo il principio generale di libertà delle forme che regola, salve tali eccezioni, la generalità dei contratti.</p>
+
+  <p class="titolo-capitolo">L'accordo delle parti: proposta e accettazione</p>
+  <p>L'accordo contrattuale si forma, secondo lo schema tipico disciplinato dagli articoli 1326 e seguenti del Codice civile, attraverso l'incontro di due dichiarazioni di volontà, dette proposta e accettazione: il contratto si considera concluso, secondo l'articolo 1326, nel momento in cui chi ha fatto la proposta ha conoscenza dell'accettazione dell'altra parte, adottando così il legislatore, quale regola generale, il cosiddetto principio della cognizione, temperato peraltro dalla presunzione di conoscenza prevista dall'articolo 1335, in base alla quale la proposta, l'accettazione e ogni altra dichiarazione diretta a una determinata persona si reputano conosciute nel momento in cui giungono all'indirizzo del destinatario, salvo che questi provi di essere stato, senza sua colpa, nell'impossibilità di averne notizia.</p>
+  <p>La proposta può essere revocata dal proponente finché il contratto non sia concluso, secondo l'articolo 1328 del Codice civile, salvo che il proponente si sia obbligato a mantenerla ferma per un certo tempo, dando luogo in tal caso alla proposta irrevocabile disciplinata dall'articolo 1329; l'accettazione, a sua volta, deve giungere al proponente nel termine da lui stabilito, o in quello ordinariamente necessario secondo la natura dell'affare, e deve essere conforme alla proposta, poiché un'accettazione che modifichi anche solo parzialmente i termini della proposta originaria equivale, secondo l'articolo 1326, a una nuova proposta.</p>
+  <p><em>Esempio:</em> se un commerciante propone la vendita di un determinato bene a un prezzo indicato, e il potenziale acquirente risponde dichiarandosi disposto ad acquistarlo ma a un prezzo inferiore, tale risposta non costituisce un'accettazione della proposta originaria, bensì una controproposta, che a sua volta necessiterà dell'accettazione del commerciante perché il contratto possa dirsi concluso.</p>
+
+  <p class="titolo-capitolo">La causa del contratto</p>
+  <p>La causa del contratto, secondo l'impostazione tradizionale e tuttora maggioritaria, si identifica con la funzione economico-sociale del tipo contrattuale, cioè con l'interesse tipico che l'ordinamento riconosce meritevole di tutela per quel determinato schema negoziale, a prescindere dai motivi particolari e soggettivi che hanno spinto le singole parti a contrarre: mentre la causa deve essere sempre lecita, pena la nullità del contratto secondo l'articolo 1343, i motivi individuali sono generalmente irrilevanti ai fini della validità del contratto, salvo l'ipotesi specifica del motivo illecito comune a entrambe le parti, disciplinata dall'articolo 1345, che si verifica quando il contratto sia stato concluso da entrambe le parti esclusivamente per un motivo illecito comune a entrambe.</p>
+
+  <p class="titolo-capitolo">L'oggetto e la forma del contratto</p>
+  <p>L'oggetto del contratto deve possedere, secondo l'articolo 1346 del Codice civile, i requisiti della possibilità, intesa sia come possibilità materiale sia come possibilità giuridica della prestazione, della liceità, e della determinatezza o quantomeno determinabilità, cioè della possibilità di individuare con sufficiente precisione il contenuto delle prestazioni dedotte in contratto, anche facendo riferimento a criteri esterni, come il prezzo di mercato di un determinato bene in un dato momento. Quanto alla forma, il principio generale è quello della libertà delle forme, in base al quale le parti possono manifestare il proprio consenso anche verbalmente o per fatti concludenti, salvo che la legge richieda espressamente una forma determinata a pena di nullità, come avviene, ai sensi dell'articolo 1350 del Codice civile, per i contratti che trasferiscono la proprietà di beni immobili o che costituiscono, modificano o trasferiscono diritti reali su di essi, per i quali è richiesta la forma scritta.</p>
+
+  <p class="titolo-capitolo">Gli elementi accidentali del contratto</p>
+  <p>Accanto agli elementi essenziali, la cui presenza è necessaria per la validità del contratto, le parti possono inserire nel regolamento contrattuale ulteriori clausole, dette elementi accidentali, la cui presenza non è indispensabile ma, una volta apposte, entrano a far parte del contenuto vincolante del contratto: si tratta, in particolare, della condizione, disciplinata dagli articoli 1353 e seguenti del Codice civile, mediante la quale le parti subordinano l'efficacia o la risoluzione del contratto al verificarsi di un avvenimento futuro e incerto; del termine, mediante il quale le parti fissano il momento a partire dal quale, o fino al quale, il contratto produrrà i propri effetti; e del modo, o onere, che può accompagnare in particolare le liberalità, imponendo al beneficiario un determinato obbligo di comportamento.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dell'invalidità del contratto</p>
+  <p>Dopo aver esaminato gli elementi che devono concorrere perché un contratto possa dirsi validamente ed efficacemente costituito, occorre ora chiarire quali conseguenze derivino dalla mancanza o dal vizio di uno di tali elementi, distinguendo in particolare tra le diverse forme di invalidità del contratto, cioè la nullità e l'annullabilità, e i vizi della volontà che possono inficiare la validità del consenso prestato dalle parti: a questi temi sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 13 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir14.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

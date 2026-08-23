@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 14</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 14: l'invalidità del contratto e i vizi della volontà -->
+<div id="capitolo-14-invalidita-contratto" class="capitolo-storia">
+  <p class="titolo-capitolo">14 - L'invalidità del contratto e i vizi della volontà - Classe 3</p>
+
+  <p class="titolo-capitolo">La nozione di invalidità del contratto</p>
+  <p>Nel capitolo precedente si sono esaminati gli elementi essenziali che devono concorrere perché un contratto sia validamente costituito, cioè l'accordo, la causa, l'oggetto e, quando richiesta, la forma; occorre ora esaminare le conseguenze che derivano dalla mancanza, o dal vizio, di uno di tali elementi: si parla, in questi casi, di invalidità del contratto, che il Codice civile disciplina attraverso due distinte figure, profondamente diverse quanto a presupposti ed effetti, cioè la nullità e l'annullabilità, delle quali occorre chiarire anzitutto la reciproca differenza.</p>
+
+  <p class="titolo-capitolo">La nullità del contratto</p>
+  <p>La nullità, disciplinata dagli articoli 1418 e seguenti del Codice civile, colpisce il contratto affetto dai vizi più gravi, tali da impedire radicalmente la produzione dei suoi effetti fin dall'origine: l'articolo 1418 individua, tra le cause di nullità, la contrarietà a norme imperative, salvo che la legge disponga diversamente, la mancanza di uno dei requisiti indicati dall'articolo 1325, cioè degli elementi essenziali esaminati nel capitolo precedente, l'illiceità della causa o dei motivi nei casi previsti dalla legge, e gli altri casi espressamente stabiliti dalla legge, tra cui, ad esempio, la mancanza della forma scritta quando essa sia richiesta a pena di nullità. Il contratto nullo non produce alcun effetto fin dal momento della sua conclusione, secondo il principio per cui quod nullum est nullum producit effectum; l'azione di nullità può essere fatta valere da chiunque vi abbia interesse, non è soggetta a prescrizione, salvi gli effetti dell'usucapione e della prescrizione delle azioni di ripetizione, e può inoltre essere rilevata d'ufficio dal giudice, cioè anche senza che sia stata specificamente richiesta dalle parti in causa.</p>
+  <p><em>Approfondimento:</em> l'articolo 1419 del Codice civile disciplina la nullità parziale, stabilendo che la nullità di singole clausole importa la nullità dell'intero contratto solo se risulta che i contraenti non lo avrebbero concluso senza quella parte del suo contenuto colpita da nullità, in applicazione del più generale principio di conservazione del contratto, per cui l'ordinamento tende a preferire, ove possibile, la salvezza dell'accordo raggiunto dalle parti rispetto alla sua totale caducazione.</p>
+
+  <p class="titolo-capitolo">L'annullabilità del contratto</p>
+  <p>L'annullabilità, disciplinata dagli articoli 1425 e seguenti del Codice civile, colpisce invece il contratto affetto da vizi meno gravi rispetto a quelli che determinano la nullità, e precisamente il contratto concluso da una parte incapace di agire, secondo quanto già esaminato nel capitolo di questo manuale dedicato alla persona fisica, oppure il contratto il cui consenso sia stato prestato per errore, estorto con violenza o carpito con dolo, cioè affetto da uno dei vizi della volontà che saranno esaminati nel paragrafo seguente. A differenza del contratto nullo, il contratto annullabile produce i propri effetti fino a quando non intervenga una pronuncia giudiziale di annullamento, che può essere richiesta soltanto dalla parte nel cui interesse l'annullabilità è prevista dalla legge, entro il termine di prescrizione di cinque anni, ai sensi dell'articolo 1442 del Codice civile, decorrente da momenti diversi a seconda della causa di annullabilità: dal giorno in cui è cessata la violenza, in cui è stato scoperto l'errore o il dolo, oppure dal giorno in cui è cessato lo stato di incapacità.</p>
+  <p>Il contratto annullabile può inoltre essere sanato attraverso la convalida, disciplinata dall'articolo 1444 del Codice civile, mediante la quale la parte legittimata a chiedere l'annullamento dichiara di volerlo confermare, oppure vi dà volontariamente esecuzione conoscendo il motivo di annullabilità, precludendosi così la possibilità di far valere successivamente il vizio del contratto.</p>
+
+  <p class="titolo-capitolo">I vizi della volontà: l'errore</p>
+  <p>Tra i vizi della volontà che possono determinare l'annullabilità del contratto, il primo esaminato dal Codice civile, agli articoli 1428 e seguenti, è l'errore, cioè la falsa rappresentazione della realtà in cui è incorsa una delle parti nel momento della conclusione del contratto: perché l'errore sia rilevante ai fini dell'annullamento, esso deve essere, secondo l'articolo 1429, essenziale, cioè tale da incidere su elementi determinanti del consenso, come la natura o l'oggetto del contratto, l'identità dell'oggetto della prestazione, o le qualità dell'oggetto stesso, purché tali qualità, secondo il comune apprezzamento, debbano ritenersi determinanti del consenso; l'errore deve inoltre essere riconoscibile dall'altro contraente, secondo l'articolo 1431, cioè tale che, in relazione al contenuto, alle circostanze del contratto o alla qualità dei contraenti, una persona di normale diligenza avrebbe potuto rilevarlo.</p>
+  <p><em>Esempio:</em> se un acquirente acquista un mobile ritenendolo erroneamente un pezzo d'antiquariato autentico, mentre si tratta in realtà di una riproduzione moderna, e tale errata convinzione sulle qualità del bene ha determinato in modo essenziale la sua decisione di concludere l'affare, egli potrà chiedere l'annullamento del contratto per errore, sempre che tale errore fosse riconoscibile dal venditore secondo le circostanze del caso concreto.</p>
+
+  <p class="titolo-capitolo">I vizi della volontà: il dolo</p>
+  <p>Il dolo, disciplinato dagli articoli 1439 e seguenti del Codice civile, consiste nell'inganno posto in essere da una delle parti, o da un terzo con la conoscenza della parte che ne ha tratto vantaggio, mediante raggiri tali da indurre l'altra parte a concludere un contratto che, senza tali raggiri, non avrebbe concluso: a differenza dell'errore, che può derivare anche da una falsa rappresentazione spontanea della realtà, il dolo presuppone sempre un comportamento ingannevole intenzionalmente posto in essere per trarre in inganno l'altro contraente. L'articolo 1440 disciplina inoltre il cosiddetto dolo incidente, che ricorre quando i raggiri non sono stati tali da determinare il consenso, ma senza di essi il contratto sarebbe stato concluso a condizioni diverse: in tal caso il contratto rimane valido, ma l'autore del dolo risponde del risarcimento del danno cagionato all'altra parte.</p>
+
+  <p class="titolo-capitolo">I vizi della volontà: la violenza morale</p>
+  <p>La violenza, disciplinata dagli articoli 1434 e seguenti del Codice civile, rileva ai fini dell'annullabilità del contratto quando si tratti di violenza morale, detta anche minaccia, cioè della prospettazione di un male ingiusto e notevole alla persona o ai beni del contraente, o di persone a lui vicine, tale da determinarlo a concludere un contratto che altrimenti non avrebbe concluso: si distingue nettamente dalla violenza fisica, che, escludendo del tutto la volontà del soggetto, non dà luogo ad annullabilità ma addirittura all'inesistenza del consenso, e quindi, secondo l'opinione dottrinale prevalente, alla nullità del contratto. L'articolo 1438 precisa inoltre che il timore riverenziale, cioè il timore di dispiacere a persone verso cui si è tenuti a un particolare rispetto o riguardo, non è di per sé causa di annullamento del contratto, salvo che si sia unito a minacce tali da determinare il consenso.</p>
+
+  <p class="titolo-capitolo">La rescissione del contratto</p>
+  <p>Accanto alla nullità e all'annullabilità, il Codice civile disciplina, agli articoli 1447 e seguenti, un'ulteriore figura di invalidità in senso lato, cioè la rescissione, che si applica in due ipotesi tassativamente previste: il contratto concluso in stato di pericolo, quando una parte ha assunto obbligazioni a condizioni inique per la necessità, nota alla controparte, di salvare sé o altri dal pericolo attuale di un danno grave alla persona; e il contratto concluso in stato di bisogno, disciplinato dall'articolo 1448, quando una parte ha approfittato dello stato di bisogno dell'altra per farsi promettere o dare vantaggi ingiusti in misura tale da determinare una sproporzione tra le prestazioni superiore alla metà del valore, elemento questo detto lesione. L'azione di rescissione, a differenza dell'azione di nullità, si prescrive nel breve termine di un anno dalla conclusione del contratto.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dei singoli contratti tipici</p>
+  <p>Dopo aver esaminato gli elementi essenziali del contratto e le forme di invalidità che possono colpirlo, è ora possibile passare all'esame delle principali figure di contratti tipici, cioè quei contratti che il legislatore ha specificamente disciplinato in ragione della loro diffusione e importanza pratica, a partire dalla compravendita, che sarà oggetto del prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 14 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir15.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

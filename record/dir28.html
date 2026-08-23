@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 28</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 28: la cambiale e l'assegno -->
+<div id="capitolo-28-cambiale-assegno" class="capitolo-storia">
+  <p class="titolo-capitolo">28 - La cambiale e l'assegno - Classe 4</p>
+
+  <p class="titolo-capitolo">Dai titoli di credito in generale ai titoli cambiari</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la nozione generale di titolo di credito, i suoi caratteri fondamentali e le diverse leggi di circolazione, occorre ora esaminare le due principali figure di titoli di credito utilizzate nella prassi commerciale e bancaria, cioè la cambiale e l'assegno, disciplinati rispettivamente dal regio decreto 14 dicembre 1933, n. 1669, e dal regio decreto 21 dicembre 1933, n. 1736, che restano tuttora, pur risalendo all'epoca corporativa, le fonti normative di riferimento per tali istituti, salve le successive modificazioni intervenute nel tempo.</p>
+
+  <p class="titolo-capitolo">La nozione e le funzioni della cambiale</p>
+  <p>La cambiale è un titolo di credito all'ordine che incorpora l'obbligazione di pagare, a scadenza determinata, una somma di denaro, e si presenta, quale regola generale, in due distinte forme: la cambiale tratta, con la quale un soggetto, detto traente, ordina a un altro soggetto, detto trattario, di pagare una determinata somma a favore di un terzo, detto prenditore, oppure allo stesso traente; e il vaglia cambiario, detto anche pagherò cambiario, con il quale un soggetto, detto emittente, promette direttamente di pagare una determinata somma a favore di un prenditore. La cambiale assolve, nella prassi commerciale, una duplice funzione: da un lato, quella di mezzo di pagamento differito nel tempo, poiché consente al debitore di procrastinare l'adempimento a una data futura; dall'altro, quella di strumento di credito, poiché il prenditore della cambiale può a sua volta cederla a terzi, anche prima della scadenza, ottenendo così immediata liquidità attraverso l'operazione bancaria dello sconto.</p>
+
+  <p class="titolo-capitolo">I requisiti formali della cambiale</p>
+  <p>La cambiale è un titolo che richiede, per la propria validità, il rispetto di rigorosi requisiti di forma, tassativamente elencati dalla legge cambiaria, tra cui la denominazione di cambiale inserita nel contesto del titolo, l'ordine incondizionato di pagare una somma determinata, per la cambiale tratta, o la promessa incondizionata di pagare, per il vaglia cambiario, il nome del trattario, per la sola cambiale tratta, l'indicazione della scadenza, l'indicazione del luogo di pagamento, il nome del prenditore, l'indicazione della data e del luogo di emissione, e la sottoscrizione del traente o dell'emittente: la mancanza di uno di tali requisiti comporta, quale regola generale, che il documento non valga come cambiale, salve alcune ipotesi di presunzione legale espressamente previste dalla legge cambiaria per sopperire a determinate lacune, come la presunzione che, in mancanza di indicazione del luogo di pagamento, si intenda tale il luogo indicato accanto al nome del trattario.</p>
+  <p><em>Approfondimento:</em> il rigore formale che caratterizza la cambiale, comune del resto alla generalità dei titoli di credito, risponde all'esigenza di garantire la piena leggibilità e affidabilità del documento a tutti i soggetti che, nel corso della sua circolazione, dovranno fare affidamento esclusivamente su quanto risulta scritto sul titolo, secondo il principio di letteralità già esaminato nel capitolo precedente di questo manuale: proprio per questo motivo, la disciplina cambiaria non ammette equipollenti o formule alternative rispetto a quelle tassativamente stabilite dalla legge per l'indicazione dei requisiti essenziali del titolo.</p>
+
+  <p class="titolo-capitolo">L'avallo e l'accettazione</p>
+  <p>La legge cambiaria disciplina due istituti che rafforzano la garanzia del pagamento cambiario: l'avallo, mediante il quale un terzo, detto avallante, garantisce il pagamento della cambiale per uno degli obbligati cambiari, detto avallato, assumendo una responsabilità autonoma e non meramente accessoria rispetto a quella dell'avallato, in coerenza con il principio di autonomia dei titoli di credito già esaminato nel capitolo precedente; e l'accettazione, istituto proprio della sola cambiale tratta, mediante la quale il trattario, sottoscrivendo il titolo, si obbliga cambiariamente a effettuare il pagamento alla scadenza, assumendo la qualifica di obbligato principale, mentre prima dell'accettazione il trattario resta estraneo al rapporto cambiario, pur essendo destinatario dell'ordine di pagamento impartitogli dal traente.</p>
+  <p><em>Esempio:</em> se il titolare di una piccola impresa artigiana ha bisogno di una garanzia aggiuntiva per ottenere una dilazione di pagamento da un proprio fornitore, un familiare o un socio può prestare avallo sulla cambiale emessa a garanzia del pagamento, obbligandosi in tal modo, in via autonoma, a garantirne il buon fine nei confronti del prenditore o dei successivi giratari del titolo.</p>
+
+  <p class="titolo-capitolo">Il protesto e l'azione cambiaria</p>
+  <p>Qualora il debitore cambiario non adempia alla scadenza, il possessore del titolo, per conservare l'azione cambiaria di regresso nei confronti degli obbligati di garanzia, come i giranti e i loro avallanti, deve procedere, salvo espressa dispensa contenuta nel titolo, alla levata del protesto, cioè all'accertamento formale del mancato pagamento, compiuto da un pubblico ufficiale a ciò abilitato, generalmente un notaio o un ufficiale giudiziario, entro precisi termini stabiliti dalla legge cambiaria: il protesto, oltre alla funzione di conservare l'azione di regresso, produce l'effetto, di rilevante importanza pratica, di determinare l'iscrizione del debitore protestato in un apposito registro informatico dei protesti, con conseguenze negative sulla sua affidabilità commerciale e creditizia. Il possessore della cambiale insoddisfatta può inoltre avvalersi, secondo la disciplina cambiaria, di un procedimento di ingiunzione particolarmente rapido, in ragione della natura di titolo esecutivo che la cambiale, se in regola con il bollo previsto dalla legge fiscale, assume di per sé.</p>
+
+  <p class="titolo-capitolo">L'assegno bancario</p>
+  <p>L'assegno bancario è un titolo di credito che contiene l'ordine, rivolto da un soggetto, detto traente, alla propria banca, detta trattaria, presso cui il traente dispone di fondi disponibili, di pagare a vista una determinata somma a favore di un beneficiario, o al portatore del titolo: a differenza della cambiale, che può essere emessa a scadenza differita nel tempo, l'assegno bancario è per sua natura pagabile a vista, cioè al momento della sua presentazione, ed è soggetto a un termine di presentazione per il pagamento, decorso il quale, pur restando valido, il possessore perde alcune garanzie previste dalla legge, come la possibilità di esercitare l'azione di regresso nei confronti dei giranti senza la previa levata del protesto.</p>
+
+  <p class="titolo-capitolo">L'assegno circolare</p>
+  <p>Distinto dall'assegno bancario è l'assegno circolare, disciplinato dagli articoli 82 e seguenti del medesimo regio decreto n. 1736 del 1933, il quale può essere emesso soltanto da un istituto di credito autorizzato dalla Banca d'Italia, previo deposito presso l'istituto stesso della somma corrispondente all'importo dell'assegno: a differenza dell'assegno bancario, in cui il traente è il cliente della banca e il pagamento è subordinato all'effettiva disponibilità dei fondi sul conto, nell'assegno circolare è la stessa banca emittente a promettere direttamente il pagamento, offrendo così al beneficiario una maggiore garanzia di solvibilità, poiché la provvista risulta già accantonata dalla banca al momento dell'emissione del titolo.</p>
+
+  <p class="titolo-capitolo">Verso lo studio della crisi d'impresa e delle procedure concorsuali</p>
+  <p>Dopo aver esaminato la cambiale e l'assegno, quali principali titoli di credito utilizzati nella prassi commerciale e bancaria, occorre ora volgere l'attenzione a un tema di grande rilevanza pratica per l'imprenditore commerciale, cioè le conseguenze giuridiche dell'insolvenza e della crisi economica dell'impresa, disciplinate oggi dal codice della crisi d'impresa e dell'insolvenza: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 28 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir29.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

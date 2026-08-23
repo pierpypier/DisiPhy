@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 16</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 16: la locazione -->
+<div id="capitolo-16-locazione" class="capitolo-storia">
+  <p class="titolo-capitolo">16 - La locazione - Classe 3</p>
+
+  <p class="titolo-capitolo">La nozione di locazione</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la compravendita quale contratto diretto al trasferimento della proprietà di un bene, occorre ora esaminare una diversa figura contrattuale, altrettanto diffusa nella pratica quotidiana, con cui un bene viene concesso non in proprietà ma in semplice godimento temporaneo: si tratta della locazione, definita dall'articolo 1571 del Codice civile come il contratto con il quale una parte, detta locatore, si obbliga a far godere all'altra, detta conduttore, una cosa mobile o immobile per un dato tempo, verso un determinato corrispettivo, detto canone. A differenza della compravendita, che produce il trasferimento definitivo del diritto di proprietà, la locazione ha natura essenzialmente temporanea e produce effetti obbligatori, non reali, poiché il conduttore acquista non la proprietà del bene ma un semplice diritto personale di godimento, restando la proprietà in capo al locatore, secondo quanto già evidenziato a proposito della distinzione tra possesso e detenzione esaminata nel capitolo di questo manuale a essa dedicato.</p>
+
+  <p class="titolo-capitolo">Gli obblighi del locatore</p>
+  <p>Il locatore è tenuto, secondo l'articolo 1575 del Codice civile, a tre obblighi principali: consegnare al conduttore la cosa locata in buono stato di manutenzione; mantenerla in stato da servire all'uso convenuto durante tutta la durata della locazione, provvedendo, secondo l'articolo 1576, alle riparazioni necessarie, eccettuate quelle di piccola manutenzione che sono invece a carico del conduttore; e garantirne il pacifico godimento durante la locazione, secondo l'articolo 1585, sia per quanto riguarda le molestie di diritto, cioè le pretese avanzate da terzi che vantino diritti sulla cosa locata, sia, indirettamente, agevolando la difesa del conduttore contro le molestie di mero fatto, per le quali quest'ultimo può comunque agire direttamente nei confronti del molestatore avvalendosi delle azioni possessorie già esaminate nel capitolo di questo manuale dedicato al possesso.</p>
+
+  <p class="titolo-capitolo">Gli obblighi del conduttore</p>
+  <p>Il conduttore, a sua volta, è tenuto, secondo l'articolo 1587 del Codice civile, a prendere in consegna la cosa e a osservare la diligenza del buon padre di famiglia nel servirsene per l'uso determinato nel contratto o per l'uso che può altrimenti presumersi dalle circostanze; a dare al locatore il corrispettivo pattuito, cioè il canone, nei termini convenuti; e a restituire la cosa al locatore nello stesso stato in cui l'ha ricevuta, secondo quanto risulta dalla descrizione fattane dai contraenti, salvo il deterioramento o il consumo risultante dall'uso della cosa in conformità del contratto. Il conduttore risponde inoltre, secondo l'articolo 1588, della perdita e del deterioramento della cosa che avvengano durante la locazione, anche se derivanti da incendio, se non prova che siano avvenuti per causa a lui non imputabile.</p>
+  <p><em>Esempio:</em> se il conduttore di un appartamento lo utilizza secondo la sua ordinaria destinazione abitativa, il naturale deterioramento delle pareti o dei pavimenti dovuto al normale trascorrere del tempo non costituisce inadempimento; diversamente, un danno arrecato all'immobile per un uso negligente o difforme da quello convenuto potrà comportare la responsabilità del conduttore e l'obbligo di risarcire il danno corrispondente.</p>
+
+  <p class="titolo-capitolo">La durata della locazione e la locazione di immobili urbani</p>
+  <p>Mentre il Codice civile disciplina in via generale la locazione di cose mobili e immobili, la locazione di immobili urbani, cioè destinati a uso abitativo o a uso diverso, come quello commerciale o professionale, è oggi regolata prevalentemente da leggi speciali, in particolare dalla legge 27 luglio 1978, n. 392, per le locazioni a uso diverso da quello abitativo, e dalla legge 9 dicembre 1998, n. 431, per le locazioni a uso abitativo, le quali derogano in più punti alla disciplina generale del Codice civile, prevedendo, tra l'altro, durate minime legali del contratto e discipline specifiche per il rinnovo e la disdetta, allo scopo di assicurare una maggiore stabilità del rapporto a tutela del conduttore, considerato generalmente la parte contrattualmente più debole.</p>
+  <p><em>Approfondimento:</em> la legge n. 431 del 1998 disciplina, tra le diverse tipologie contrattuali, il contratto di locazione a canone libero, della durata di quattro anni rinnovabili automaticamente per altri quattro salvo disdetta motivata del locatore nei casi previsti dalla legge, e il contratto di locazione a canone concordato, di durata inferiore ma con canone calmierato sulla base di appositi accordi territoriali tra le organizzazioni dei proprietari e degli inquilini, a fronte del quale sono generalmente previste agevolazioni fiscali per il locatore.</p>
+
+  <p class="titolo-capitolo">La sublocazione e la cessione del contratto di locazione</p>
+  <p>Il Codice civile disciplina, all'articolo 1594, la facoltà del conduttore di sublocare la cosa locatagli, cioè di concederne a sua volta il godimento a un terzo, detto subconduttore, salvo che tale facoltà sia stata esclusa dal contratto o dalla legge, e sempre che il conduttore non ecceda, nel farlo, l'uso convenuto della cosa; distinta dalla sublocazione è la cessione del contratto di locazione, mediante la quale il conduttore trasferisce a un terzo, con il consenso del locatore, la propria intera posizione contrattuale, sostituendo così il cessionario a se stesso in tutti i rapporti derivanti dal contratto, a differenza della sublocazione in cui il conduttore originario resta comunque parte del rapporto principale nei confronti del locatore.</p>
+
+  <p class="titolo-capitolo">L'affitto quale figura speciale di locazione</p>
+  <p>Il Codice civile disciplina infine, agli articoli 1615 e seguenti, la figura dell'affitto, quale forma speciale di locazione avente per oggetto il godimento di una cosa produttiva, mobile o immobile, con la particolarità che l'affittuario ha l'obbligo, ulteriore rispetto a quelli propri della locazione ordinaria, di curare la gestione della cosa in conformità della destinazione economica di essa e dell'interesse della produzione, come avviene tipicamente nell'affitto di un fondo rustico destinato alla coltivazione agricola, disciplinato altresì da specifiche disposizioni della legislazione speciale in materia di contratti agrari.</p>
+
+  <p class="titolo-capitolo">Verso lo studio del mandato e degli altri contratti di collaborazione</p>
+  <p>Dopo aver esaminato la compravendita e la locazione, quali contratti diretti rispettivamente al trasferimento della proprietà e alla concessione in godimento di un bene, è ora possibile passare all'esame di una diversa categoria di contratti tipici, aventi per oggetto non il trasferimento o il godimento di un bene, ma lo svolgimento di un'attività nell'interesse altrui: a partire dal mandato, tale categoria sarà oggetto del prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 16 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir17.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

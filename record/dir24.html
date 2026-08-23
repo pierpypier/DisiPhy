@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 24</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 24: la società a responsabilità limitata -->
+<div id="capitolo-24-societa-responsabilita-limitata" class="capitolo-storia">
+  <p class="titolo-capitolo">24 - La società a responsabilità limitata - Classe 3</p>
+
+  <p class="titolo-capitolo">La nozione di società a responsabilità limitata</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la società per azioni quale modello societario di riferimento per le imprese di maggiori dimensioni, occorre ora esaminare la società a responsabilità limitata, disciplinata dagli articoli 2462 e seguenti del Codice civile, quale modello di società di capitali pensato per imprese generalmente di dimensioni più contenute, caratterizzato da una struttura organizzativa più semplice e flessibile rispetto a quella della società per azioni, pur conservandone i caratteri fondamentali della personalità giuridica e dell'autonomia patrimoniale perfetta: secondo l'articolo 2462, infatti, anche nella società a responsabilità limitata per le obbligazioni sociali risponde soltanto la società con il proprio patrimonio, mentre i soci non rispondono personalmente, salva la medesima eccezione, già esaminata a proposito della società per azioni, relativa al socio unico che non abbia rispettato le condizioni di pubblicità e integrale liberazione dei conferimenti previste dalla legge.</p>
+
+  <p class="titolo-capitolo">Le quote di partecipazione</p>
+  <p>A differenza della società per azioni, in cui il capitale sociale è suddiviso in azioni, nella società a responsabilità limitata la partecipazione dei soci è rappresentata da quote, che possono essere di ammontare diverso tra loro in relazione alla misura dei rispettivi conferimenti, e la cui titolarità è generalmente accertata mediante l'iscrizione nel registro delle imprese, senza l'emissione di titoli di credito rappresentativi della partecipazione, secondo un regime di circolazione più semplice ma al tempo stesso meno standardizzato rispetto a quello delle azioni. L'articolo 2463 del Codice civile stabilisce che il capitale sociale della società a responsabilità limitata non è soggetto, a differenza di quanto previsto per la società per azioni, a un importo minimo significativo, potendo essere costituito anche con un capitale pari a un solo euro, secondo quanto previsto per la società a responsabilità limitata semplificata, purché i conferimenti siano effettuati in denaro e versati integralmente agli amministratori.</p>
+  <p><em>Approfondimento:</em> la possibilità di costituire una società a responsabilità limitata con un capitale sociale particolarmente contenuto risponde all'esigenza, sempre più avvertita dal legislatore nell'ultimo ventennio, di agevolare l'accesso all'esercizio dell'attività d'impresa in forma societaria, specialmente per i soggetti più giovani o per le imprese di piccole dimensioni, riducendo le barriere economiche di ingresso pur mantenendo inalterato il beneficio della responsabilità limitata: tale scelta, tuttavia, espone la società al rischio di una sottocapitalizzazione, controbilanciata dall'obbligo di destinare a riserva legale una parte degli utili fino al raggiungimento di determinate soglie previste dalla legge.</p>
+
+  <p class="titolo-capitolo">L'organizzazione della società a responsabilità limitata</p>
+  <p>La società a responsabilità limitata è caratterizzata da un'organizzazione interna più flessibile rispetto a quella della società per azioni, potendo lo statuto sociale attribuire ampi margini di autonomia ai soci nella determinazione delle regole di funzionamento della società: l'organo deliberativo è rappresentato dalla decisione dei soci, che l'articolo 2479 del Codice civile consente di assumere non necessariamente mediante una deliberazione assembleare in senso proprio, ma anche mediante consultazione scritta o consenso espresso per iscritto, salvo che si tratti di decisioni riguardanti le modificazioni dell'atto costitutivo o operazioni che comportano una sostanziale modificazione dell'oggetto sociale, per le quali è invece necessaria la deliberazione assembleare; l'amministrazione è affidata a uno o più amministratori, la cui nomina e i cui poteri sono regolati con ampia libertà dall'atto costitutivo, potendo l'organo amministrativo essere composto anche da soggetti non soci.</p>
+
+  <p class="titolo-capitolo">Il controllo nella società a responsabilità limitata</p>
+  <p>Diversamente dalla società per azioni, nella società a responsabilità limitata la nomina dell'organo di controllo, cioè del collegio sindacale o del sindaco unico, non è sempre obbligatoria, ma è richiesta soltanto al ricorrere di determinate condizioni previste dall'articolo 2477 del Codice civile, relative in particolare al superamento di determinate soglie dimensionali riguardanti l'attivo patrimoniale, i ricavi o il numero di dipendenti, oppure all'obbligo di redigere il bilancio consolidato, oppure ancora al controllo di una società obbligata alla revisione legale dei conti: al di fuori di tali ipotesi, i soci che non partecipano all'amministrazione conservano comunque, secondo l'articolo 2476, un penetrante diritto di controllo individuale, potendo avere notizia dallo svolgimento degli affari sociali e consultare, anche tramite professionisti di loro fiducia, i libri sociali e i documenti relativi all'amministrazione.</p>
+  <p><em>Esempio:</em> in una piccola società a responsabilità limitata a conduzione familiare, priva di collegio sindacale in quanto non tenuta alla sua nomina obbligatoria, un socio che non partecipi direttamente alla gestione può comunque esercitare il proprio diritto di controllo individuale, chiedendo di consultare la documentazione contabile della società per verificare la correttezza della gestione svolta dagli amministratori.</p>
+
+  <p class="titolo-capitolo">La responsabilità degli amministratori</p>
+  <p>Gli amministratori della società a responsabilità limitata sono tenuti, al pari di quelli della società per azioni, ad adempiere i doveri a essi imposti dalla legge e dall'atto costitutivo con la diligenza richiesta dalla natura dell'incarico e dalle loro specifiche competenze, e rispondono solidalmente verso la società dei danni derivanti dall'inosservanza di tali doveri, secondo quanto previsto dall'articolo 2476 del Codice civile: la medesima disposizione prevede inoltre che sono solidalmente responsabili con gli amministratori, ai fini risarcitori, anche i soci che abbiano intenzionalmente deciso o autorizzato il compimento di atti dannosi per la società, i soci o i terzi, in coerenza con il maggiore coinvolgimento dei soci nella gestione che caratterizza, rispetto alla società per azioni, il modello della società a responsabilità limitata.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dello scioglimento e della liquidazione delle società</p>
+  <p>Dopo aver esaminato le principali caratteristiche delle società di persone e delle società di capitali, occorre ora volgere l'attenzione alle vicende che possono condurre alla cessazione dell'attività sociale, cioè lo scioglimento e la successiva liquidazione della società, con particolare riguardo alle regole comuni previste per le società di capitali: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 24 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir25.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 19</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 19: l'imprenditore e l'impresa -->
+<div id="capitolo-19-imprenditore-impresa" class="capitolo-storia">
+  <p class="titolo-capitolo">19 - L'imprenditore e l'impresa - Classe 3</p>
+
+  <p class="titolo-capitolo">Dal lavoro subordinato alla figura dell'imprenditore</p>
+  <p>Nel capitolo precedente si è esaminata la distinzione tra lavoro subordinato e lavoro autonomo, evidenziando come il lavoratore subordinato presti la propria attività alle dipendenze e sotto la direzione di un imprenditore, il quale ne organizza il lavoro assumendone il relativo rischio economico: occorre ora esaminare più da vicino questa figura, che riveste un ruolo centrale nell'intero sistema economico, e la nozione giuridica di impresa quale attività da essa esercitata, aprendo così lo studio del diritto commerciale, che occuperà i prossimi capitoli di questo manuale.</p>
+
+  <p class="titolo-capitolo">La nozione di imprenditore</p>
+  <p>L'articolo 2082 del Codice civile definisce imprenditore chi esercita professionalmente un'attività economica organizzata al fine della produzione o dello scambio di beni o di servizi. Da questa definizione si ricavano quattro elementi essenziali della nozione di imprenditore: l'esercizio di un'attività, cioè il compimento di una serie coordinata e non occasionale di atti, e non di un singolo atto isolato; l'economicità dell'attività, intesa come idoneità della stessa a coprire, quantomeno tendenzialmente, i costi con i ricavi, elemento che distingue l'attività d'impresa dall'attività meramente eudonomistica priva di finalità di scambio sul mercato; l'organizzazione, cioè l'impiego coordinato di fattori produttivi, come il capitale e il lavoro altrui, elemento che distingue l'imprenditore dal lavoratore autonomo esaminato nel capitolo precedente; e la professionalità, intesa come esercizio abituale e non meramente occasionale dell'attività, pur non essendo necessario che essa sia svolta in via esclusiva o continuativa senza interruzioni, potendo anche trattarsi di un'attività stagionale.</p>
+  <p><em>Approfondimento:</em> l'organizzazione richiesta dall'articolo 2082 non deve necessariamente tradursi nell'impiego di lavoro altrui o di un apparato produttivo complesso: anche l'imprenditore che organizzi la propria attività avvalendosi prevalentemente del proprio lavoro personale, purché coordinato con altri fattori produttivi, come strumenti e capitali, anche minimi, può assumere la qualifica di imprenditore, distinguendosi in tal caso dal lavoratore autonomo non tanto per la presenza di collaboratori, quanto per il grado di organizzazione impiegato e per l'assunzione del rischio d'impresa.</p>
+
+  <p class="titolo-capitolo">Le categorie di imprenditori: piccolo imprenditore e imprenditore agricolo</p>
+  <p>Il Codice civile distingue, accanto alla figura generale dell'imprenditore, alcune categorie particolari, sottoposte a uno statuto giuridico parzialmente differenziato: il piccolo imprenditore, disciplinato dall'articolo 2083, comprende i coltivatori diretti del fondo, gli artigiani, i piccoli commercianti e coloro che esercitano un'attività professionale organizzata prevalentemente con il lavoro proprio e dei componenti della famiglia, ed è sottoposto a uno statuto attenuato rispetto a quello dell'imprenditore ordinario, essendo esonerato, tra l'altro, dall'obbligo di tenuta delle scritture contabili e dall'assoggettamento alle procedure concorsuali maggiori; l'imprenditore agricolo, disciplinato dall'articolo 2135, come successivamente modificato, è colui che esercita una delle attività agricole tipiche, cioè la coltivazione del fondo, la selvicoltura, l'allevamento di animali e le attività connesse, ed è sottoposto anch'esso a un regime di favore rispetto all'imprenditore commerciale, in ragione della particolare natura, tradizionalmente meno rischiosa per i terzi, dell'attività agricola.</p>
+
+  <p class="titolo-capitolo">L'imprenditore commerciale e il suo particolare statuto</p>
+  <p>Si contrappone all'imprenditore agricolo l'imprenditore commerciale, disciplinato dall'articolo 2195 del Codice civile, il quale esercita una o più tra le attività industriali dirette alla produzione di beni o servizi, le attività intermediarie nella circolazione dei beni, le attività di trasporto, le attività bancarie o assicurative, e le attività ausiliarie alle precedenti: a tale categoria, ritenuta dal legislatore particolarmente rilevante per l'affidamento dei terzi che con essa entrano in contatto, si applica uno statuto speciale più rigoroso rispetto a quello dell'imprenditore agricolo e del piccolo imprenditore, comprendente in particolare l'obbligo di iscrizione nel registro delle imprese con effetti di pubblicità dichiarativa, disciplinato dagli articoli 2195 e seguenti, l'obbligo di tenuta delle scritture contabili, disciplinato dagli articoli 2214 e seguenti, e l'assoggettamento, in caso di crisi, alle procedure concorsuali disciplinate dal codice della crisi d'impresa e dell'insolvenza, di cui al decreto legislativo 12 gennaio 2019, n. 14.</p>
+  <p><em>Esempio:</em> un imprenditore che gestisce una fabbrica di mobili acquista la materia prima, la lavora attraverso un'organizzazione di macchinari e di dipendenti, e vende il prodotto finito sul mercato, esercitando così un'attività industriale rientrante tra quelle commerciali indicate dall'articolo 2195, con conseguente assoggettamento all'intero statuto dell'imprenditore commerciale, compreso l'obbligo di tenuta delle scritture contabili.</p>
+
+  <p class="titolo-capitolo">L'azienda</p>
+  <p>Distinta dalla nozione di impresa, che indica l'attività svolta dall'imprenditore, è la nozione di azienda, definita dall'articolo 2555 del Codice civile come il complesso dei beni organizzati dall'imprenditore per l'esercizio dell'impresa: l'azienda costituisce dunque lo strumento, cioè l'insieme organizzato dei beni materiali e immateriali, come i macchinari, le merci, i marchi e i brevetti, di cui l'imprenditore si avvale per svolgere la propria attività, e rappresenta, secondo quanto già accennato nel capitolo di questo manuale dedicato ai beni, una tipica universalità di beni mobili e immobili. Il Codice civile disciplina, agli articoli 2556 e seguenti, il trasferimento dell'azienda, prevedendo, tra l'altro, che l'alienante debba astenersi, per il periodo di cinque anni dal trasferimento, dall'iniziare una nuova impresa che per l'oggetto, l'ubicazione o altre circostanze sia idonea a sviare la clientela dell'azienda ceduta, secondo il divieto di concorrenza previsto dall'articolo 2557.</p>
+
+  <p class="titolo-capitolo">I segni distintivi dell'impresa</p>
+  <p>Il Codice civile disciplina, agli articoli 2563 e seguenti, i segni distintivi dell'impresa, cioè quei simboli attraverso i quali l'imprenditore individua se stesso e i propri prodotti sul mercato, distinguendoli da quelli dei concorrenti: si tratta, in particolare, della ditta, cioè il nome commerciale sotto il quale l'imprenditore esercita la propria attività; dell'insegna, cioè il segno distintivo dei locali in cui l'attività d'impresa viene esercitata; e del marchio, disciplinato in modo più approfondito dal codice della proprietà industriale, cioè il segno distintivo utilizzato per contraddistinguere i prodotti o i servizi offerti dall'impresa, suscettibile di registrazione e di conseguente tutela esclusiva su tutto il territorio nazionale.</p>
+
+  <p class="titolo-capitolo">Verso lo studio della disciplina della concorrenza</p>
+  <p>Dopo aver esaminato la nozione di imprenditore, le sue diverse categorie e la nozione di azienda quale complesso di beni organizzato per l'esercizio dell'impresa, occorre ora volgere l'attenzione alla disciplina della concorrenza tra imprenditori, cioè alle regole che governano il confronto competitivo sul mercato e che tutelano, insieme, l'interesse degli imprenditori concorrenti, dei consumatori e del mercato nel suo complesso: a questo tema sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 19 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir20.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>

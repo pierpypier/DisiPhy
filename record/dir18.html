@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diritto - Capitolo 18</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">DIRITTO</div>
+        <div class="subtitle">Piccolo manuale di diritto</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="dir00.html" title="diritto indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r319.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo diritto 18: il lavoro subordinato e il lavoro autonomo -->
+<div id="capitolo-18-lavoro-subordinato-autonomo" class="capitolo-storia">
+  <p class="titolo-capitolo">18 - Il lavoro subordinato e il lavoro autonomo - Classe 3</p>
+
+  <p class="titolo-capitolo">Il lavoro come oggetto di rapporti giuridici</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, il mandato e la rappresentanza quali istituti attraverso cui un soggetto può agire nell'interesse o in nome di un altro, occorre ora esaminare una diversa e fondamentale categoria di rapporti giuridici, aventi per oggetto lo svolgimento, da parte di una persona, di un'attività lavorativa a favore di un altro soggetto: il Codice civile, nel libro quinto dedicato al lavoro, distingue in proposito due grandi modelli contrattuali, profondamente diversi quanto a disciplina applicabile, cioè il lavoro subordinato e il lavoro autonomo, la cui reciproca distinzione costituisce uno dei temi centrali dell'intera materia giuslavoristica.</p>
+
+  <p class="titolo-capitolo">La nozione di lavoro subordinato</p>
+  <p>L'articolo 2094 del Codice civile definisce prestatore di lavoro subordinato chi si obbliga, mediante retribuzione, a collaborare nell'impresa, prestando il proprio lavoro intellettuale o manuale alle dipendenze e sotto la direzione dell'imprenditore: l'elemento qualificante di tale definizione, e criterio distintivo fondamentale rispetto al lavoro autonomo, è la subordinazione, intesa come assoggettamento del lavoratore al potere direttivo, organizzativo e disciplinare del datore di lavoro, il quale stabilisce le modalità di esecuzione della prestazione, gli orari di lavoro e le direttive da seguire, mentre il lavoratore mette a disposizione le proprie energie lavorative, senza assumere il rischio economico dell'attività svolta, rischio che grava invece interamente sul datore di lavoro.</p>
+  <p><em>Approfondimento:</em> la qualificazione di un rapporto di lavoro come subordinato o autonomo non dipende dal nomen iuris attribuito dalle parti al contratto stipulato, ma dalle concrete modalità di svolgimento del rapporto: secondo l'orientamento consolidato della giurisprudenza, quando in concreto il lavoratore risulti soggetto al potere direttivo, organizzativo e disciplinare del committente, il rapporto deve essere qualificato come lavoro subordinato indipendentemente dalla qualificazione formale datagli dalle parti, con conseguente applicazione dell'intera disciplina protettiva prevista per tale tipologia di rapporto.</p>
+
+  <p class="titolo-capitolo">I diritti fondamentali del lavoratore subordinato</p>
+  <p>Il rapporto di lavoro subordinato è caratterizzato da un'ampia disciplina di tutela del lavoratore, considerato la parte contrattualmente più debole del rapporto, disciplina che trova il proprio fondamento primario negli articoli 35 e seguenti della Costituzione, i quali riconoscono la tutela del lavoro in tutte le sue forme e applicazioni, il diritto a una retribuzione proporzionata alla quantità e qualità del lavoro prestato e in ogni caso sufficiente ad assicurare a sé e alla famiglia un'esistenza libera e dignitosa, secondo l'articolo 36, il diritto al riposo settimanale e alle ferie annuali retribuite, cui il lavoratore non può rinunciare, e la tutela specifica del lavoro femminile e minorile, secondo l'articolo 37. A tali principi costituzionali si affianca una disciplina di dettaglio contenuta nel Codice civile e in un'articolata legislazione speciale, tra cui assume particolare rilievo lo Statuto dei lavoratori, approvato con legge 20 maggio 1970, n. 300, che disciplina tra l'altro la libertà e la dignità del lavoratore nei luoghi di lavoro e la tutela contro i licenziamenti illegittimi.</p>
+
+  <p class="titolo-capitolo">Gli obblighi del lavoratore subordinato</p>
+  <p>A fronte di tali diritti, il lavoratore subordinato è tenuto, secondo gli articoli 2104 e seguenti del Codice civile, all'obbligo di diligenza, da valutarsi in relazione alla natura della prestazione dovuta, all'interesse dell'impresa e a quello superiore della produzione nazionale; all'obbligo di obbedienza, cioè al rispetto delle disposizioni per l'esecuzione e per la disciplina del lavoro impartite dall'imprenditore e dai suoi collaboratori dai quali gerarchicamente dipende; e all'obbligo di fedeltà, disciplinato dall'articolo 2105, in base al quale il lavoratore non deve trattare affari, per conto proprio o di terzi, in concorrenza con l'imprenditore, né divulgare notizie attinenti all'organizzazione e ai metodi di produzione dell'impresa, o farne uso in modo da poterle recare pregiudizio.</p>
+
+  <p class="titolo-capitolo">Il contratto collettivo di lavoro</p>
+  <p>Un aspetto peculiare della disciplina del lavoro subordinato è costituito dalla contrattazione collettiva, cioè dalla negoziazione condotta tra le associazioni sindacali dei lavoratori e le associazioni dei datori di lavoro, o i singoli datori di lavoro, con cui si stabiliscono le condizioni economiche e normative applicabili ai rapporti di lavoro individuali di una determinata categoria produttiva: pur non avendo, nel nostro ordinamento, piena efficacia erga omnes, in ragione della mancata attuazione dell'articolo 39 della Costituzione, il contratto collettivo nazionale di lavoro costituisce, nella prassi, la fonte primaria di disciplina economica e normativa della generalità dei rapporti di lavoro subordinato, e i suoi contenuti sono generalmente richiamati anche nei contratti individuali di lavoro.</p>
+
+  <p class="titolo-capitolo">La nozione di lavoro autonomo</p>
+  <p>Il lavoro autonomo, disciplinato in via generale dagli articoli 2222 e seguenti del Codice civile, ricorre quando una persona si obbliga a compiere, verso un corrispettivo, un'opera o un servizio, con lavoro prevalentemente proprio e senza vincolo di subordinazione nei confronti del committente: a differenza del lavoratore subordinato, il lavoratore autonomo organizza liberamente il proprio lavoro, decidendo autonomamente tempi e modalità di esecuzione della prestazione, e assume su di sé il rischio economico dell'attività svolta, potendo conseguire un utile o subire una perdita a seconda dell'andamento della propria attività, mentre il lavoratore subordinato percepisce comunque la propria retribuzione indipendentemente dai risultati economici conseguiti dall'impresa.</p>
+  <p><em>Esempio:</em> un avvocato che presta la propria assistenza legale a un cliente, organizzando autonomamente il proprio tempo di lavoro e la propria strategia difensiva, senza sottostare alle direttive del cliente circa le modalità di svolgimento della prestazione professionale, è un tipico esempio di lavoratore autonomo, mentre un impiegato che presta la propria attività alle dipendenze di un'azienda, seguendo le direttive del proprio superiore gerarchico e rispettando un determinato orario di lavoro, è un tipico esempio di lavoratore subordinato.</p>
+
+  <p class="titolo-capitolo">Il contratto d'opera e le professioni intellettuali</p>
+  <p>All'interno della categoria del lavoro autonomo, il Codice civile disciplina in particolare, agli articoli 2222 e seguenti, il contratto d'opera, avente per oggetto il compimento di un'opera o di un servizio determinato, e, con disciplina specifica contenuta negli articoli 2229 e seguenti, le professioni intellettuali, per l'esercizio delle quali è richiesta, per determinate attività espressamente individuate dalla legge, l'iscrizione in appositi albi o elenchi, come avviene per le professioni di avvocato, medico o ingegnere: il professionista intellettuale, secondo l'articolo 2236, se la prestazione implica la soluzione di problemi tecnici di speciale difficoltà, non risponde dei danni se non in caso di dolo o colpa grave, in deroga al più rigoroso criterio di diligenza ordinariamente applicabile.</p>
+
+  <p class="titolo-capitolo">Verso lo studio dell'imprenditore e dell'impresa</p>
+  <p>Dopo aver esaminato la distinzione tra lavoro subordinato e lavoro autonomo, e le principali figure contrattuali riconducibili a ciascuna categoria, occorre ora volgere l'attenzione alla figura di colui che, nell'ambito del rapporto di lavoro subordinato, riveste il ruolo di datore di lavoro, cioè l'imprenditore, e alla nozione giuridica di impresa quale attività da lui esercitata: a questi temi sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo diritto 18 -->
+
+<div id="indice-diritto" class="capitolo-storia">
+  <p><a href="dir19.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+  
+    <footer>
+      Piccolo manuale di diritto
+    </footer>
+
+  </div>
+</body>
+  </html>
