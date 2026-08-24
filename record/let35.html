@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 35</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 35: verga, i malavoglia e mastro-don gesualdo -->
+<div id="capitolo-35-verga-malavoglia-gesualdo" class="capitolo-storia">
+  <p class="titolo-capitolo">35 - Verga: I Malavoglia e Mastro-don Gesualdo - Classe 5</p>
+
+  <p class="titolo-capitolo">Il progetto del ciclo dei Vinti</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la formazione della poetica verista di Giovanni Verga e la sua prima applicazione nelle raccolte di novelle Vita dei campi e Novelle rusticane, ci si sofferma ora sui due romanzi che l'autore riuscì effettivamente a portare a compimento nell'ambito del già ricordato progetto del ciclo dei Vinti: I Malavoglia, pubblicato nel 1881, e Mastro-don Gesualdo, pubblicato nel 1889, entrambi concepiti come tappe di un più ampio percorso narrativo dedicato alla rappresentazione della lotta per l'esistenza e per il miglioramento sociale attraverso i diversi strati della società siciliana e italiana del proprio tempo.</p>
+  <p>Nella prefazione ai Malavoglia, Verga espone con chiarezza il senso complessivo del progetto, presentando il ciclo come lo studio di un medesimo processo, quello della cosiddetta fiumana del progresso, immagine con cui l'autore rappresenta il generale movimento storico di trasformazione economica e sociale dell'Ottocento, osservato tuttavia non dal punto di vista di chi ne trae vantaggio, ma da quello di coloro che, tentando di inserirsi in questo movimento per migliorare la propria condizione, vengono travolti e sconfitti dalle sue stesse dinamiche, i cosiddetti vinti che danno il nome all'intero ciclo.</p>
+
+  <p class="titolo-capitolo">I Malavoglia: l'ambientazione e la trama</p>
+  <p>Il romanzo I Malavoglia è ambientato ad Aci Trezza, piccolo borgo di pescatori sulla costa orientale della Sicilia, negli anni immediatamente successivi all'Unità d'Italia, e narra la vicenda della famiglia Toscano, soprannominata appunto Malavoglia per antifrasi, cioè con un soprannome che ne indica ironicamente l'esatto contrario del carattere realmente posseduto dai suoi membri, in realtà laboriosi e operosi: al centro della narrazione si trova il tentativo, promosso dal giovane e intraprendente 'Ntoni, di migliorare le precarie condizioni economiche della famiglia attraverso un'operazione commerciale, l'acquisto a credito di un carico di lupini da rivendere in altri porti.</p>
+  <p>Il naufragio della barca di famiglia, la Provvidenza, durante il viaggio di trasporto di questa merce, dà avvio a una catena ininterrotta di sciagure che colpiscono progressivamente l'intero nucleo familiare: la perdita del carico e il conseguente indebitamento, la morte in mare del nonno Bastianazzo, la successiva perdita della casa di famiglia, la celebre casa del nespolo, pignorata per saldare i debiti contratti, e infine una serie di ulteriori lutti e disgrazie che si abbattono sui vari componenti della famiglia, in un progressivo disgregarsi dei legami familiari e comunitari che avevano fino a quel momento garantito, sia pure a fatica, la sopravvivenza del nucleo.</p>
+
+  <p class="titolo-capitolo">Padron 'Ntoni e il conflitto generazionale</p>
+  <p>Figura centrale del romanzo, e portavoce dei valori tradizionali della cultura contadina e marinara siciliana, è il vecchio Padron 'Ntoni, capofamiglia legato a un'etica del lavoro, della religione popolare e dell'attaccamento alla casa e alla tradizione familiare, riassunta nei numerosi proverbi e detti popolari che costellano il romanzo, e in aperto contrasto con l'irrequietezza del nipote maggiore, il giovane 'Ntoni, che, dopo un periodo di servizio militare lontano dal proprio paese natale, torna ad Aci Trezza portando con sé un'inquietudine e un desiderio di cambiamento incompatibili con l'ideale dell'ostrica già incontrato nel capitolo precedente di questo manuale.</p>
+  <p>Questo conflitto tra le generazioni, e più in generale tra l'aspirazione a un miglioramento della propria condizione sociale e la fedeltà ai valori tradizionali della comunità di origine, costituisce uno dei nuclei tematici centrali del romanzo, e trova il proprio esito più amaro nella parabola finale del giovane 'Ntoni, che, dopo aver abbandonato il paese natale in cerca di fortuna altrove, vi fa ritorno soltanto per constatare la definitiva disgregazione della propria famiglia, per poi ripartire nuovamente, ormai consapevole dell'impossibilità di un reale reinserimento nella comunità che aveva un tempo abbandonato.</p>
+
+  <p class="titolo-capitolo">Lo stile corale e il coro popolare</p>
+  <p>Sul piano stilistico, I Malavoglia rappresentano l'applicazione più compiuta e sistematica dei princìpi dell'impersonalità narrativa e della regressione già delineati nel capitolo precedente: l'intera narrazione è infatti condotta, per la gran parte del romanzo, attraverso il punto di vista collettivo della piccola comunità di Aci Trezza, che commenta, giudica e talvolta persino travisa le vicende della famiglia Malavoglia secondo la propria mentalità popolare, fatta di proverbi, superstizioni e un rigido senso morale tradizionale, in un procedimento narrativo che la critica ha definito coro popolare.</p>
+  <p>Questa tecnica narrativa corale, unita a un linguaggio fortemente influenzato dalla sintassi e dal lessico del dialetto siciliano, pur restando l'opera scritta in lingua italiana, contribuisce a restituire con straordinaria efficacia l'atmosfera, la mentalità e i valori della piccola comunità marinara rappresentata, in perfetta coerenza con l'ideale verghiano di un'assoluta oggettività e impersonalità della voce narrante.</p>
+
+  <p class="titolo-capitolo">Mastro-don Gesualdo: la trama</p>
+  <p>Il secondo romanzo del ciclo dei Vinti portato a compimento da Verga, Mastro-don Gesualdo, pubblicato nel 1889, si sposta su un diverso livello sociale rispetto a quello popolare e marinaro dei Malavoglia, per raccontare la vicenda di Gesualdo Motta, muratore siciliano di umili origini che, attraverso un'infaticabile e quasi ossessiva attività lavorativa, riesce a costruire nel corso della propria esistenza una notevole fortuna economica, elevandosi progressivamente dal proprio originario status sociale fino a diventare un ricco proprietario terriero.</p>
+  <p>Il titolo stesso dell'opera, che unisce l'appellativo popolare di mastro, riferito al suo mestiere originario di muratore, al titolo nobiliare di don, che Gesualdo acquisisce grazie alla propria ascesa economica e sociale, culminata nel matrimonio con Bianca Trao, discendente di un'antica ma ormai decaduta famiglia aristocratica locale, sintetizza efficacemente il tema centrale del romanzo, quello dell'ambigua e mai del tutto compiuta collocazione sociale del protagonista, sospeso per l'intera esistenza tra il mondo popolare da cui proviene e quello aristocratico a cui aspira senza mai riuscire a esservi pienamente accolto.</p>
+
+  <p class="titolo-capitolo">La solitudine di Gesualdo</p>
+  <p>A differenza della famiglia Malavoglia, unita, almeno inizialmente, da un forte senso di solidarietà e di appartenenza comunitaria, Gesualdo Motta è invece rappresentato da Verga come una figura profondamente sola, sia sul piano familiare, poiché il proprio matrimonio con Bianca Trao, contratto più per calcolo sociale che per reale affetto, non gli garantisce mai una piena serenità coniugale, sia sul piano più generale della propria collocazione sociale, poiché la propria origine popolare gli impedisce di essere realmente accettato dall'aristocrazia locale, mentre la propria ricchezza acquisita lo allontana ormai irrimediabilmente dal mondo popolare di provenienza.</p>
+  <p>Questa condizione di isolamento esistenziale, aggravata negli ultimi anni della vita del protagonista da una malattia che lo conduce lentamente alla morte, culmina nella parte finale del romanzo, ambientata nel palazzo nobiliare del proprio genero, dove Gesualdo, ormai malato e prossimo alla fine, viene trattato dalla servitù di casa con un'indifferenza e persino un disprezzo che sottolineano, in modo particolarmente amaro, la sostanziale solitudine e il fallimento umano, al di là del pur concreto successo economico, dell'intera parabola esistenziale del personaggio.</p>
+  <p><em>Approfondimento:</em> il destino di Gesualdo, sconfitto sul piano affettivo ed esistenziale nonostante il pieno successo economico raggiunto, mostra come la concezione della lotta per l'esistenza elaborata da Verga nel ciclo dei Vinti non riguardi soltanto la sconfitta materiale ed economica degli strati sociali più umili, già rappresentata nei Malavoglia, ma investa più in generale la stessa possibilità di una piena realizzazione umana, indipendentemente dal successo o dall'insuccesso ottenuto sul piano strettamente economico e sociale.</p>
+
+  <p class="titolo-capitolo">Il progetto incompiuto e l'abbandono della narrativa</p>
+  <p>Come si è già accennato nel capitolo precedente, il ciclo dei Vinti, concepito originariamente in cinque romanzi, rimase incompiuto dopo la pubblicazione di questi primi due capitoli, poiché Verga, negli ultimi decenni della propria vita, trascorsi in gran parte a Catania, dove fece ritorno definitivamente a partire dagli anni Novanta dell'Ottocento, abbandonò progressivamente l'attività di romanziere, dedicandosi soltanto occasionalmente alla scrittura teatrale e giornalistica, senza mai portare a compimento gli ulteriori romanzi previsti dal progetto originario.</p>
+  <p>Le ragioni di questo progressivo abbandono della narrativa sono state variamente interpretate dalla critica, che ha individuato tra le possibili cause sia una crescente difficoltà dello scrittore a mantenere coerente, negli ambienti sociali più elevati previsti dai romanzi successivi del ciclo, il rigoroso principio dell'impersonalità narrativa elaborato per la rappresentazione del mondo popolare siciliano, sia un più generale mutamento del gusto letterario italiano, che negli ultimi decenni dell'Ottocento si sarebbe orientato verso nuove sensibilità estetiche, di cui si tratterà nei prossimi capitoli di questo manuale a proposito del Decadentismo.</p>
+
+  <p class="titolo-capitolo">Gli ultimi anni e l'eredità di Verga</p>
+  <p>Verga morì a Catania il 27 gennaio del 1922, dopo aver ricevuto negli ultimi anni della propria vita importanti riconoscimenti pubblici, tra cui la nomina a senatore del Regno d'Italia nel 1920, sebbene la sua opera fosse rimasta per lungo tempo relativamente poco valorizzata dalla critica ufficiale del proprio tempo, che ne riconobbe pienamente la grandezza soprattutto a partire dagli studi condotti nel corso del Novecento.</p>
+  <p>L'opera di Verga, e in particolare il rigoroso metodo dell'impersonalità narrativa e della regressione elaborato nei Malavoglia, esercitò un'influenza determinante sulla successiva narrativa italiana del Novecento, ponendo le basi per una rappresentazione della realtà sociale libera da idealizzazioni consolatorie e capace di dare piena dignità letteraria anche ai mondi popolari e periferici della società italiana: proprio a un diverso e per molti versi opposto orientamento della sensibilità letteraria italiana di fine Ottocento, quello del Decadentismo, sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 35 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let36.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

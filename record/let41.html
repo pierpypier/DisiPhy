@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 41</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 41: pirandello, i romanzi, il fu mattia pascal e uno nessuno e centomila -->
+<div id="capitolo-41-pirandello-romanzi" class="capitolo-storia">
+  <p class="titolo-capitolo">41 - Pirandello: i romanzi (Il fu Mattia Pascal, Uno, nessuno e centomila) - Classe 5</p>
+
+  <p class="titolo-capitolo">La produzione romanzesca di Pirandello</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la poetica dell'umorismo e la vastissima produzione novellistica di Luigi Pirandello, ci si sofferma ora sulla sua produzione romanzesca, che applica su scala più ampia e distesa i medesimi princìpi filosofici e narrativi già delineati a proposito delle novelle: nel corso della propria attività letteraria Pirandello compose complessivamente sette romanzi, tra i quali si distinguono per importanza e fortuna critica, in particolare, Il fu Mattia Pascal, pubblicato nel 1904, e Uno, nessuno e centomila, la cui composizione, protrattasi per un lungo periodo, giunse a conclusione soltanto nel 1926.</p>
+
+  <p class="titolo-capitolo">Il fu Mattia Pascal: la trama</p>
+  <p>Il romanzo Il fu Mattia Pascal, che rappresenta la prima grande affermazione narrativa di Pirandello a livello nazionale, narra la vicenda di Mattia Pascal, modesto bibliotecario di provincia oppresso da un'esistenza priva di soddisfazioni, sia sul piano professionale sia su quello familiare, segnato da un matrimonio infelice e da una soffocante convivenza con la propria suocera: allontanatosi temporaneamente dal proprio paese natale e recatosi a Montecarlo, dove vince una considerevole somma di denaro al casinò, Mattia scopre casualmente, leggendo un giornale, di essere stato dichiarato morto in seguito al ritrovamento di un cadavere non identificato, erroneamente riconosciuto dai propri stessi familiari come il suo.</p>
+  <p>Colto da questa inattesa scoperta, Mattia decide di cogliere l'occasione per abbandonare definitivamente la propria vecchia identità e la soffocante esistenza precedente, assumendo un nuovo nome, Adriano Meis, e tentando di costruirsi altrove una nuova vita, libera dai vincoli e dalle sofferenze della propria precedente condizione familiare e sociale.</p>
+
+  <p class="titolo-capitolo">Il fallimento della nuova identità</p>
+  <p>L'esperimento di Mattia Pascal, divenuto Adriano Meis, si rivela tuttavia ben presto fallimentare: privo di uno stato civile ufficialmente riconosciuto, poiché legalmente morto, il protagonista si scopre nell'impossibilità pratica di stabilire relazioni sociali stabili e autentiche, di sposarsi con la donna di cui si innamora nella propria nuova vita, o persino di denunciare alle autorità un furto subito, trovandosi imprigionato in una condizione di totale precarietà giuridica e sociale che gli impedisce, paradossalmente, di vivere pienamente proprio quella libertà che aveva inizialmente cercato attraverso la fuga dalla propria identità originaria.</p>
+  <p>Costretto da questa impasse a inscenare un secondo, fittizio suicidio del proprio alter ego Adriano Meis, Mattia decide infine di fare ritorno al proprio paese natale sotto la propria vera identità, scoprendo tuttavia che, nel frattempo, la propria moglie si è già risposata con un altro uomo, rendendo impossibile un pieno reinserimento del protagonista nella propria vita precedente: il romanzo si conclude con Mattia Pascal costretto a vivere in una condizione di sospensione permanente, non più riconosciuto ufficialmente come vivo dallo stato civile, e per questo definitivamente escluso da qualsiasi possibilità di piena reintegrazione sociale.</p>
+  <p><em>Approfondimento:</em> la vicenda di Mattia Pascal, con il proprio fallimentare tentativo di costruirsi una nuova identità libera dai vincoli sociali precedenti, illustra con particolare efficacia narrativa il già ricordato tema pirandelliano del contrasto tra vita e forma, dimostrando come, secondo la visione dell'autore, sia impossibile per l'individuo sottrarsi del tutto alle forme sociali che la civiltà impone, poiché anche la più radicale fuga da un'identità precedente si scontra inevitabilmente con la necessità di assumerne, presto o tardi, una nuova, altrettanto limitante e socialmente condizionata.</p>
+
+  <p class="titolo-capitolo">Le innovazioni narrative del romanzo</p>
+  <p>Sul piano tecnico e narrativo, Il fu Mattia Pascal segna un'importante svolta rispetto alla tradizione del romanzo italiano ottocentesco: la narrazione, condotta in prima persona dallo stesso protagonista, che racconta retrospettivamente le proprie vicende dopo essere ormai tornato, sia pure in condizione anomala, al proprio paese natale, presenta fin dalle prime pagine un tono ironico e straniato, capace di guardare con un certo distacco critico anche alle proprie stesse traversie, in una prospettiva narrativa del tutto coerente con la poetica dell'umorismo già delineata nel capitolo precedente.</p>
+  <p>Questa scelta narrativa, unita alla vicenda paradossale e per molti versi grottesca del protagonista, contribuisce a fare del romanzo un'opera di rottura rispetto ai modelli narrativi precedenti, capace di dare voce, attraverso una vicenda apparentemente fantastica e improbabile, ad alcune delle inquietudini più profonde e autentiche dell'uomo del primo Novecento, già delineate in un capitolo precedente di questo manuale, relative alla crisi dell'identità individuale e alla difficoltà di un pieno inserimento sociale dell'individuo moderno.</p>
+
+  <p class="titolo-capitolo">Uno, nessuno e centomila: la genesi</p>
+  <p>L'ultimo romanzo composto da Pirandello, Uno, nessuno e centomila, la cui elaborazione, iniziata già nel secondo decennio del Novecento, giunse a conclusione soltanto nel 1925, con pubblicazione nel 1926, rappresenta l'esito più radicale e conclusivo della riflessione pirandelliana sulla crisi dell'identità personale, già ampiamente delineata sia nel capitolo precedente a proposito della poetica dell'umorismo, sia in questo stesso capitolo a proposito de Il fu Mattia Pascal.</p>
+  <p>Il romanzo prende il proprio avvio da un episodio apparentemente insignificante: il protagonista, il giovane Vitangelo Moscarda, viene a sapere dalla propria moglie che il proprio naso, osservato con distratta consuetudine per tutta la vita, presenta in realtà una lieve ma percettibile imperfezione fisica, mai notata prima da lui stesso: questa banale osservazione innesca nel protagonista un processo di riflessione sempre più radicale e inquietante sulla propria stessa identità, che lo conduce progressivamente alla scoperta che l'immagine che ciascuno degli altri si è fatta di lui nel corso degli anni, in base ai rispettivi punti di vista e alle rispettive relazioni con lui intrattenute, non coincide affatto con l'immagine che egli stesso aveva sempre avuto di sé.</p>
+
+  <p class="titolo-capitolo">Le centomila maschere e l'annullamento dell'io</p>
+  <p>Attraverso questo processo di progressiva e sempre più angosciosa presa di coscienza, Vitangelo Moscarda giunge alla conclusione, riassunta emblematicamente nel titolo stesso del romanzo, di essere in realtà non un'unica e coerente persona, ma piuttosto centomila immagini diverse, cioè altrettante maschere sociali distinte quante sono le persone che lo conoscono e che, ciascuna secondo la propria specifica prospettiva soggettiva, si sono costruite nel tempo una propria personale e parziale immagine di lui, nessuna delle quali coincidente pienamente né con le altre né con un presunto nucleo autentico e originario della propria identità, che il protagonista scopre infine di non possedere affatto, essendo dunque, in questo senso paradossale, nessuno.</p>
+  <p>Portando alle estreme conseguenze questa scoperta, Moscarda decide infine di distruggere sistematicamente, attraverso una serie di gesti volutamente eccentrici e scandalosi agli occhi della propria comunità, tutte le forme sociali attraverso cui era stato fino ad allora identificato, dalla propria attività professionale ai propri beni materiali, fino a ritirarsi, nella conclusione del romanzo, in una condizione di totale spoliazione sociale e materiale, che gli permette tuttavia di raggiungere una sorta di paradossale e per certi versi mistica pacificazione interiore, fondata sulla rinuncia definitiva a ogni tentativo di fissare stabilmente la propria identità in un'unica e definitiva forma.</p>
+
+  <p class="titolo-capitolo">Il significato filosofico del romanzo</p>
+  <p>Uno, nessuno e centomila rappresenta, nel percorso della produzione pirandelliana, l'approdo più radicale e conclusivo della riflessione sul relativismo conoscitivo e sulla molteplicità dell'identità personale già delineata nel capitolo precedente, poiché porta alle estreme conseguenze logiche l'idea secondo cui non esiste alcun nucleo stabile e autentico di identità individuale, ma soltanto una molteplicità irriducibile di immagini soggettive e parziali, costruite dagli altri e dallo stesso soggetto in base a punti di vista sempre relativi e mai definitivamente coincidenti tra loro.</p>
+  <p>Questo esito, per quanto radicale e per certi versi disturbante sul piano filosofico ed esistenziale, si conclude tuttavia, nel romanzo, non in una disperazione priva di sbocco, ma in una sorta di serena accettazione, da parte del protagonista, della propria condizione di continuo divenire, priva di forme fisse e definitive, in una prospettiva che rappresenta, all'interno dell'intera opera pirandelliana, l'esito più maturo e filosoficamente compiuto della riflessione dell'autore sul rapporto tra vita e forma già più volte incontrato in questo manuale.</p>
+
+  <p class="titolo-capitolo">Verso la produzione teatrale</p>
+  <p>I temi e le tecniche narrative esaminate in questo capitolo a proposito dei romanzi pirandelliani, in particolare la crisi dell'identità individuale, il relativismo conoscitivo e il contrasto irriducibile tra vita e forma, troveranno una parallela e per molti versi ancora più rivoluzionaria elaborazione nella produzione teatrale di Pirandello, che l'autore sviluppò a partire dagli stessi anni e per gran parte del resto della propria vita, portando sul palcoscenico, attraverso tecniche drammaturgiche di straordinaria innovazione, le medesime inquietudini filosofiche ed esistenziali già esaminate in questo e nel precedente capitolo di questo manuale.</p>
+  <p>Sarà proprio a questa straordinaria e rivoluzionaria produzione teatrale, e in particolare al capolavoro Sei personaggi in cerca d'autore, che sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 41 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let42.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

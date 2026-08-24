@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 45</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 45: giuseppe ungaretti, l'allegria e la poesia della guerra -->
+<div id="capitolo-45-ungaretti-allegria" class="capitolo-storia">
+  <p class="titolo-capitolo">45 - Giuseppe Ungaretti: L'Allegria e la poesia della guerra - Classe 5</p>
+
+  <p class="titolo-capitolo">Un poeta nato in Egitto</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, le esperienze del Crepuscolarismo e del Futurismo, prime avanguardie della poesia italiana del Novecento, ci si sofferma ora sulla figura che porta a piena maturità artistica quel rinnovamento del linguaggio poetico già avviato dai movimenti appena esaminati: Giuseppe Ungaretti, nato ad Alessandria d'Egitto l'8 febbraio del 1888, da una famiglia di origini toscane emigrata in Egitto per lavoro, dove il padre era impiegato nei cantieri per la costruzione del Canale di Suez.</p>
+  <p>La formazione giovanile di Ungaretti, trascorsa in un ambiente cosmopolita e multiculturale come quello di Alessandria, crocevia di lingue, culture e tradizioni diverse, si arricchì ulteriormente a partire dal 1912, quando il poeta si trasferì a Parigi per proseguire gli studi alla Sorbona, entrando in questi anni in contatto diretto con l'ambiente delle avanguardie artistiche e letterarie europee, e in particolare con il poeta francese Guillaume Apollinaire, la cui amicizia e la cui poetica ebbero un'influenza significativa sulla successiva elaborazione stilistica di Ungaretti.</p>
+
+  <p class="titolo-capitolo">L'esperienza della trincea</p>
+  <p>Allo scoppio della Prima guerra mondiale, e in seguito all'entrata in guerra dell'Italia nel 1915, Ungaretti si arruolò come soldato semplice nell'esercito italiano, prestando servizio come fante sul fronte del Carso, uno dei teatri più duri e sanguinosi dell'intero conflitto, caratterizzato da un territorio roccioso e da combattimenti di trincea di eccezionale ferocia: proprio questa diretta ed esistenziale esperienza della guerra, vissuta non da osservatore ma da soldato semplice esposto in prima persona al pericolo quotidiano della morte, costituisce il nucleo generativo della prima e più importante raccolta poetica di Ungaretti.</p>
+  <p>A differenza della retorica trionfalistica e celebrativa con cui altri intellettuali italiani, incluso lo stesso D'Annunzio già incontrato in un capitolo precedente di questo manuale, avevano affrontato il tema della guerra, la poesia di Ungaretti nasce da un'esperienza di sofferenza fisica ed esistenziale vissuta in prima persona, che restituisce dell'evento bellico un'immagine spoglia di ogni retorica, fondata sulla precarietà della vita umana e sulla fraternità tra i soldati accomunati dalla medesima condizione di pericolo.</p>
+
+  <p class="titolo-capitolo">La genesi de L'Allegria: da Il porto sepolto alla redazione definitiva</p>
+  <p>La raccolta poetica che raccoglie i componimenti composti da Ungaretti durante gli anni della guerra ebbe una complessa storia editoriale, articolata in più fasi successive: una prima e più ridotta edizione, intitolata Il porto sepolto, fu pubblicata direttamente al fronte nel 1916, in un'edizione artigianale stampata a Udine; una successiva edizione ampliata, con il titolo Allegria di naufragi, apparve nel 1919; infine, dopo un'ulteriore revisione, la raccolta assunse il titolo definitivo di L'Allegria nell'edizione del 1931, che ne fissò la struttura complessiva.</p>
+  <p>Il titolo stesso della raccolta, apparentemente in contrasto con la drammaticità dei temi trattati, allude a un paradossale ma autentico sentimento di attaccamento alla vita che il poeta sperimenta proprio nel momento di massima vicinanza alla morte, come se l'esperienza estrema della guerra e del pericolo costante fosse capace di restituire, per contrasto, un senso più intenso e immediato del valore stesso dell'esistenza.</p>
+
+  <p class="titolo-capitolo">La poetica della parola essenziale</p>
+  <p>Sul piano stilistico, L'Allegria rappresenta una delle rivoluzioni più radicali dell'intera storia della poesia italiana, poiché Ungaretti elabora in questa raccolta un linguaggio di estrema essenzialità, fondato sulla drastica riduzione del verso, spesso composto da una sola parola isolata, e sulla quasi totale abolizione della punteggiatura tradizionale, sostituita da un uso sapiente degli spazi bianchi e delle interruzioni di riga, capaci di isolare e mettere in risalto ogni singola parola scelta dal poeta.</p>
+  <p>Questa scelta stilistica, che porta alle estreme conseguenze la ricerca di sintesi espressiva già in parte anticipata dalle sperimentazioni futuriste incontrate nel capitolo precedente, sia pure in una direzione di maggiore rigore e controllo formale rispetto alla dirompente sperimentazione marinettiana, nasce dalla convinzione di Ungaretti secondo cui, nella condizione estrema vissuta dal soldato al fronte, ogni parola superflua e ogni artificio retorico tradizionale dovessero essere eliminati, per restituire alla parola poetica il proprio valore originario ed essenziale, quasi sacrale, capace di scaturire direttamente dall'urgenza dell'esperienza vissuta.</p>
+  <p><em>Approfondimento:</em> questa poetica della parola scarna ed essenziale, capace di condensare in pochi termini isolati un'intera esperienza emotiva ed esistenziale, verrà successivamente definita dalla critica con il termine Ermetismo, movimento poetico che troverà il proprio pieno sviluppo negli anni Trenta del Novecento a opera di una nuova generazione di poeti, ma che riconosce proprio nell'esperienza poetica di Ungaretti uno dei propri fondamentali punti di riferimento e di origine.</p>
+
+  <p class="titolo-capitolo">I temi della raccolta: la fratellanza e la precarietà della vita</p>
+  <p>Tra i temi ricorrenti de L'Allegria si distingue anzitutto quello della fraternità tra i soldati, accomunati dalla medesima condizione di sofferenza e di pericolo costante, un sentimento di solidarietà umana che emerge con particolare intensità in componimenti dedicati al cameratismo tra commilitoni e al dolore condiviso per la perdita di compagni caduti in battaglia, spesso ricordati attraverso il semplice richiamo del proprio nome e della propria provenienza geografica, in un procedimento che restituisce dignità e concretezza individuale a ciascuna delle vittime del conflitto.</p>
+  <p>Accanto a questo tema si colloca quello, strettamente connesso, della precarietà radicale dell'esistenza umana, vissuta dal soldato in trincea con un'intensità e una concretezza sconosciute alla vita ordinaria, in cui la vicinanza quotidiana della morte rende paradossalmente ancora più intenso e prezioso ogni istante di vita, ogni percezione sensoriale, ogni legame umano, in una tensione costante tra la consapevolezza della fragilità dell'esistenza e un profondo, quasi disperato attaccamento alla vita stessa.</p>
+
+  <p class="titolo-capitolo">Il paesaggio e la memoria: i fiumi e le radici del poeta</p>
+  <p>Accanto ai componimenti direttamente legati all'esperienza bellica, L'Allegria comprende anche testi di carattere più propriamente memoriale e identitario, nei quali Ungaretti riflette sulla propria storia personale e sulle proprie radici, in un percorso di ricerca della propria identità che intreccia la memoria dei luoghi vissuti, dall'Egitto natale alla Francia della formazione giovanile fino all'Italia della guerra, in un itinerario simbolico che il poeta ricostruisce attraverso l'immagine di diversi fiumi legati alle diverse tappe della propria esistenza, ciascuno associato a un momento specifico della propria vicenda biografica e spirituale.</p>
+  <p>Questi componimenti di carattere più intimo e meditativo, pur nascendo anch'essi nel contesto dell'esperienza bellica, mostrano come la poesia di Ungaretti, pur muovendo dall'urgenza drammatica della guerra, si apra a una riflessione più ampia sul senso dell'identità personale, della memoria e dell'appartenenza, temi che troveranno ulteriori sviluppi nella produzione successiva del poeta.</p>
+
+  <p class="titolo-capitolo">La produzione successiva: dall'Allegria al Dolore</p>
+  <p>Dopo l'esperienza de L'Allegria, la poesia di Ungaretti conobbe, nel corso dei decenni successivi, un'evoluzione stilistica significativa, orientata verso un progressivo recupero di forme metriche più tradizionali e di una sintassi meno frammentata: nella raccolta Sentimento del tempo, pubblicata nel 1933, il poeta approfondisce una riflessione più meditativa sul tempo, sulla memoria e sul sacro, adottando un linguaggio di maggiore compostezza formale rispetto alla scarnificazione estrema de L'Allegria.</p>
+  <p>Un'ulteriore e dolorosa raccolta, Il dolore, pubblicata nel 1947, raccoglie invece componimenti legati a lutti personali, in particolare alla morte del fratello e soprattutto a quella del figlio Antonietto, scomparso prematuramente, insieme a una rinnovata riflessione sulle tragedie della Seconda guerra mondiale, confermando come l'intera opera poetica di Ungaretti, dalla giovanile esperienza della trincea fino alla piena maturità, resti costantemente attraversata da una densa e mai retorica meditazione sulla precarietà della vita umana di fronte alla sofferenza e alla morte.</p>
+
+  <p class="titolo-capitolo">L'eredità di Ungaretti</p>
+  <p>Ungaretti, che insegnò letteratura italiana anche presso l'Università di San Paolo, in Brasile, e successivamente presso l'Università di Roma, morì a Milano il 2 giugno del 1970, dopo una lunga e prestigiosa carriera che ne aveva fatto una delle voci più autorevoli e internazionalmente riconosciute della poesia italiana del Novecento.</p>
+  <p>La rivoluzione stilistica operata da Ungaretti con L'Allegria, fondata sulla ricerca della parola essenziale e sulla rottura delle strutture metriche e sintattiche tradizionali, esercitò un'influenza determinante sulla successiva poesia italiana del Novecento, aprendo la strada, come si vedrà nei prossimi capitoli di questo manuale, all'esperienza di altri due grandi poeti del secolo, Umberto Saba ed Eugenio Montale, capaci di sviluppare, ciascuno secondo la propria originale sensibilità, ulteriori e diverse risposte poetiche alla medesima crisi esistenziale del proprio tempo.</p>
+</div>
+<!-- fine capitolo letteratura 45 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let46.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

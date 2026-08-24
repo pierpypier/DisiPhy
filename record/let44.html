@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 44</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 44: crepuscolari e futuristi, la poesia italiana del primo novecento -->
+<div id="capitolo-44-crepuscolari-futuristi" class="capitolo-storia">
+  <p class="titolo-capitolo">44 - Crepuscolari e Futuristi: la poesia italiana del primo Novecento - Classe 5</p>
+
+  <p class="titolo-capitolo">Dalla narrativa alla poesia del primo Novecento</p>
+  <p>Dopo aver concluso, nei capitoli precedenti, il percorso dedicato ai grandi narratori italiani del primo Novecento, Pirandello e Svevo, ci si rivolge ora alla parallela stagione della poesia italiana degli stessi decenni, segnata dalla nascita di due movimenti tra loro profondamente diversi ma entrambi nati in aperta reazione al modello poetico dominante di fine Ottocento, quello rappresentato dall'opera di Gabriele D'Annunzio, già esaminata in un capitolo precedente di questo manuale: il Crepuscolarismo e il Futurismo, sviluppatisi quasi contemporaneamente nel primo decennio del Novecento, ma orientati verso direzioni artistiche ed esistenziali del tutto opposte.</p>
+
+  <p class="titolo-capitolo">L'origine del termine Crepuscolarismo</p>
+  <p>Il termine crepuscolari, destinato a diventare l'etichetta convenzionale con cui la critica letteraria indica un gruppo di giovani poeti attivi in Italia nel primo decennio del Novecento, fu coniato nel 1910 dal critico letterario Giuseppe Antonio Borgese, il quale, recensendo le opere di questi autori, ne colse l'atmosfera dimessa, malinconica e in qualche modo declinante, paragonabile appunto alla luce incerta e sfumata del crepuscolo, momento di passaggio tra il giorno e la notte, scelto come immagine efficace per descrivere una poesia che si presentava consapevolmente come un tramonto, cioè come la fine di una grande tradizione poetica ottocentesca ormai esaurita.</p>
+  <p>Questa immagine, per quanto nata da un'osservazione critica esterna al movimento stesso, colse efficacemente uno dei tratti più caratteristici della sensibilità crepuscolare, fondata su un consapevole ripiegamento verso toni dimessi, quotidiani e privi di qualsiasi ambizione eroica o celebrativa, in aperta e polemica contrapposizione rispetto ai modelli poetici allora dominanti, sia quello sontuoso ed esteticamente trionfante di D'Annunzio, sia, in parte, quello più raffinato ma comunque ancora aulico della tradizione classica precedente.</p>
+
+  <p class="titolo-capitolo">I caratteri della poesia crepuscolare</p>
+  <p>Sul piano tematico, i poeti crepuscolari scelsero di rivolgere la propria attenzione poetica a un mondo di piccole cose quotidiane, dimesse e apparentemente prive di rilievo, come oggetti domestici, ambienti provinciali, esistenze grigie e prive di eventi straordinari, in aperta e programmatica rinuncia a qualsiasi pretesa di grandezza eroica o di afflato vitalistico, in polemica esplicita con l'esaltazione del superuomo e della vita intesa come opera d'arte già incontrata a proposito di D'Annunzio in un capitolo precedente di questo manuale.</p>
+  <p>Sul piano più propriamente esistenziale, la poesia crepuscolare esprime un diffuso senso di stanchezza, di malinconia e di rinuncia, spesso accompagnato da un atteggiamento di ironica autocommiserazione verso la propria stessa condizione di poeti ormai consapevoli di non poter più aspirare, dopo la grande stagione ottocentesca appena conclusa, a un ruolo di primo piano nella società, e per questo ripiegati su una dimensione privata, provinciale e sostanzialmente rassegnata dell'esistenza.</p>
+
+  <p class="titolo-capitolo">Guido Gozzano e Sergio Corazzini</p>
+  <p>Il maggiore esponente del Crepuscolarismo italiano fu Guido Gozzano, poeta torinese nato nel 1883 e morto prematuramente nel 1916 a causa della tubercolosi, autore in particolare della raccolta I colloqui, pubblicata nel 1911, nella quale sviluppò con straordinaria consapevolezza stilistica i temi tipici del movimento: tra i componimenti più celebri di questa raccolta si ricorda La signorina Felicita ovvero la Felicità, ampio poemetto nel quale il poeta rievoca, con un tono sospeso tra ironia e nostalgia, un amore mai realmente vissuto per una modesta e provinciale signorina di provincia, incarnazione di una felicità semplice e dimessa a cui il poeta stesso, consapevole della propria inettitudine sentimentale ed esistenziale, sceglie infine di rinunciare.</p>
+  <p>Un altro importante esponente del movimento fu Sergio Corazzini, poeta romano morto giovanissimo, a soli vent'anni, nel 1907, anch'egli a causa della tubercolosi, la cui produzione poetica, ancora più intrisa di malinconia e di consapevole rinuncia alla vita rispetto a quella di Gozzano, esprime con particolare intensità il tema della fragilità fisica ed esistenziale del poeta, dichiaratamente incapace, come egli stesso affermò in un celebre componimento programmatico, di considerarsi un vero poeta nel senso tradizionale ed enfatico del termine, ma soltanto un fanciullo che piange, in aperta e programmatica rinuncia a qualsiasi ruolo profetico o celebrativo della propria arte poetica.</p>
+
+  <p class="titolo-capitolo">Altri poeti crepuscolari</p>
+  <p>Accanto a Gozzano e Corazzini, il movimento crepuscolare annoverò altri autori di rilievo, tra cui si ricordano Marino Moretti, la cui produzione poetica insiste con particolare efficacia sulla rappresentazione di ambienti provinciali e di esistenze femminili dimesse e rassegnate, e Corrado Govoni, poeta che, dopo una prima fase di produzione ancora vicina alla sensibilità crepuscolare, aderirà successivamente, come si vedrà tra poco, al movimento futurista, a testimonianza della permeabilità e degli scambi reciproci esistenti tra le diverse esperienze poetiche del primo Novecento italiano.</p>
+  <p>Nel complesso, la stagione crepuscolare, per quanto relativamente breve e circoscritta cronologicamente al primo decennio del secolo, ebbe un'importanza storica considerevole, poiché rappresentò il primo e più radicale tentativo, nel panorama della poesia italiana del Novecento, di rompere definitivamente con la tradizione aulica e celebrativa ereditata dall'Ottocento, aprendo la strada a una poesia capace di trattare, con dignità artistica piena, anche i temi più dimessi e quotidiani dell'esistenza.</p>
+
+  <p class="titolo-capitolo">Il Futurismo: la nascita del movimento</p>
+  <p>In aperta e radicale antitesi rispetto alla malinconica rinuncia crepuscolare appena esaminata, si sviluppò negli stessi anni un secondo e ben più clamoroso movimento d'avanguardia, il Futurismo, fondato ufficialmente dallo scrittore Filippo Tommaso Marinetti con la pubblicazione, il 20 febbraio del 1909, sul quotidiano parigino Le Figaro, del Manifesto del Futurismo, testo programmatico nel quale Marinetti espose con toni volutamente provocatori e aggressivi i princìpi fondamentali del nuovo movimento.</p>
+  <p>Il Futurismo, a differenza del Crepuscolarismo, non si limitò mai a una dimensione puramente letteraria, ma si propose fin dall'inizio come un movimento culturale totale, capace di investire ogni ambito dell'espressione artistica, dalla pittura alla scultura, dalla musica al teatro, dalla moda alla stessa organizzazione della vita quotidiana, in nome di un radicale rifiuto della tradizione culturale del passato e di un'esaltazione totale della modernità industriale e tecnologica.</p>
+
+  <p class="titolo-capitolo">I princìpi del Manifesto futurista</p>
+  <p>Nel Manifesto del 1909, Marinetti proclamò con enfasi provocatoria l'esaltazione della velocità, del dinamismo e delle nuove macchine moderne, come l'automobile, ritenute simboli di una bellezza nuova e superiore rispetto a quella tradizionalmente celebrata dall'arte del passato, insieme a un'aperta e programmatica ostilità verso ogni forma di culto della tradizione, arrivando a proporre provocatoriamente la distruzione di musei, biblioteche e accademie, considerati luoghi di sterile conservazione del passato incompatibili con lo spirito dinamico e proiettato verso il futuro rivendicato dal movimento.</p>
+  <p>Il Manifesto futurista esprimeva inoltre un'esaltazione della guerra, definita provocatoriamente sola igiene del mondo, e un orientamento fortemente nazionalista e interventista, destinato a tradursi, negli anni immediatamente successivi, in un attivo sostegno degli aderenti al movimento nei confronti dell'intervento italiano nella Prima guerra mondiale, e successivamente, per una parte significativa degli stessi futuristi, in un'adesione al nascente movimento fascista.</p>
+
+  <p class="titolo-capitolo">Le parole in libertà e la rivoluzione del linguaggio</p>
+  <p>Sul piano più specificamente letterario, Marinetti espose i princìpi del rinnovamento linguistico e stilistico futurista in un successivo testo teorico, il Manifesto tecnico della letteratura futurista, pubblicato nel 1912, nel quale propose la tecnica delle cosiddette parole in libertà, cioè una scrittura poetica radicalmente svincolata dalle tradizionali regole della sintassi e della punteggiatura, fondata sull'abolizione degli aggettivi, degli avverbi e della punteggiatura tradizionale, sull'uso di verbi all'infinito anziché coniugati, e su un impiego sistematico dell'analogia più ardita e dell'onomatopea, allo scopo di restituire sulla pagina, con la massima immediatezza possibile, la simultaneità e la velocità della percezione sensoriale moderna.</p>
+  <p>Questa rivoluzione linguistica, applicata concretamente dallo stesso Marinetti in opere come Zang Tumb Tumb, pubblicata nel 1914 e ispirata alle proprie esperienze come corrispondente di guerra durante il conflitto balcanico, nella quale il poeta tenta di riprodurre tipograficamente, attraverso l'uso di caratteri di diversa grandezza e disposizione sulla pagina, il fragore e la concitazione di una battaglia, rappresenta uno dei tentativi più radicali dell'intera storia della poesia italiana di rompere con la tradizione linguistica e formale ereditata dai secoli precedenti.</p>
+
+  <p class="titolo-capitolo">Aldo Palazzeschi tra Crepuscolarismo e Futurismo</p>
+  <p>Una figura di particolare interesse, per la propria posizione di transizione tra le due esperienze poetiche esaminate in questo capitolo, è quella di Aldo Palazzeschi, poeta fiorentino inizialmente vicino alla sensibilità crepuscolare, autore della celebre e ironica poesia Chi sono?, e successivamente aderente, sia pure per un periodo relativamente limitato, al movimento futurista, distinguendosi tuttavia sempre, all'interno di quest'ultimo, per un tono più giocoso, ironico e meno aggressivamente ideologico rispetto a quello tipico di Marinetti, come dimostra in particolare la celebre poesia E lasciatemi divertire, manifesto di una poetica giocosa e liberamente sperimentale, fondata sull'invenzione fonica e sul gioco verbale.</p>
+  <p>La parabola artistica di Palazzeschi, capace di attraversare con originalità entrambe le esperienze poetiche esaminate in questo capitolo senza mai identificarsi pienamente con nessuna delle due, testimonia efficacemente la ricchezza e la varietà interna della sperimentazione poetica italiana del primo Novecento, in un momento storico di grande fermento e di profondo rinnovamento delle forme e dei linguaggi poetici tradizionali.</p>
+
+  <p class="titolo-capitolo">Il valore storico dei due movimenti e apertura ai capitoli successivi</p>
+  <p>Sia il Crepuscolarismo sia il Futurismo, pur nella loro radicale diversità di toni e di ideologia, condivisero il merito storico di aver definitivamente rotto con la tradizione poetica aulica ereditata dall'Ottocento, incarnata in particolare dal modello dannunziano già esaminato in un capitolo precedente di questo manuale, aprendo la strada a un rinnovamento profondo dei temi, del linguaggio e della stessa concezione della poesia, destinato a influenzare, sia pure in modo diverso, gran parte della successiva poesia italiana del Novecento.</p>
+  <p>Proprio a partire da questo terreno di sperimentazione e di rinnovamento formale, ma muovendosi verso esiti poetici di ben maggiore compiutezza e profondità rispetto alle due esperienze esaminate in questo capitolo, si svilupperà, come si vedrà nei prossimi capitoli di questo manuale, la grande stagione della poesia italiana del pieno Novecento, a partire dalla figura di Giuseppe Ungaretti, di cui si tratterà nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 44 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let45.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

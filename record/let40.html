@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 40</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 40: luigi pirandello, la poetica dell'umorismo e le novelle -->
+<div id="capitolo-40-pirandello-umorismo-novelle" class="capitolo-storia">
+  <p class="titolo-capitolo">40 - Luigi Pirandello: la poetica dell'umorismo e le novelle - Classe 5</p>
+
+  <p class="titolo-capitolo">Origini siciliane e formazione</p>
+  <p>Dopo aver delineato, nel capitolo precedente, il quadro generale della crisi del romanzo e del soggetto nella cultura europea di primo Novecento, ci si sofferma ora sul primo dei due grandi narratori italiani capaci di dare voce artistica a questa crisi, Luigi Pirandello, nato a Girgenti, l'odierna Agrigento, in Sicilia, il 28 giugno del 1867, da una famiglia benestante legata al commercio dello zolfo, allora importante risorsa economica dell'isola.</p>
+  <p>Dopo gli studi liceali in Sicilia, Pirandello si iscrisse dapprima all'Università di Palermo e successivamente a quella di Roma, per completare infine la propria formazione presso l'Università di Bonn, in Germania, dove nel 1891 conseguì il dottorato con una tesi di argomento linguistico dedicata al dialetto della propria città natale: questa formazione filologica e linguistica, condotta in un ambiente accademico tedesco fortemente influenzato dalla cultura filosofica e psicologica europea di fine Ottocento, contribuì in modo significativo alla successiva elaborazione della complessa riflessione filosofica ed esistenziale che caratterizza l'intera opera pirandelliana.</p>
+
+  <p class="titolo-capitolo">Il dissesto economico e la crisi familiare</p>
+  <p>Rientrato in Italia, Pirandello si stabilì a Roma, dove intraprese l'attività di insegnante e iniziò a dedicarsi alla scrittura letteraria, mentre sul piano familiare, nel 1894, sposò Maria Antonietta Portulano, figlia di un socio in affari del padre, secondo un matrimonio combinato per ragioni prevalentemente economiche più che per un'autentica scelta affettiva reciproca: la vita coniugale di Pirandello fu segnata, a partire dal 1903, da un evento di gravissima importanza biografica, quando l'allagamento della miniera di zolfo che costituiva la principale fonte di reddito sia della famiglia dello scrittore sia di quella della moglie determinò un improvviso e drammatico dissesto economico, privando Pirandello di gran parte del proprio patrimonio.</p>
+  <p>Questo tracollo finanziario ebbe conseguenze ancora più gravi sul piano personale e familiare, poiché la moglie Antonietta, già di per sé di carattere fragile, sviluppò in seguito a questo trauma una grave forma di paranoia, caratterizzata in particolare da una morbosa gelosia nei confronti del marito, che la condusse, nel corso degli anni successivi, a un progressivo aggravamento delle proprie condizioni psichiche, fino al ricovero definitivo in una casa di cura nel 1919: questa drammatica esperienza familiare, vissuta da Pirandello con grande sofferenza personale per oltre un quindicennio, ebbe un'influenza profonda e diretta sulla sua riflessione artistica e filosofica, in particolare sul tema centrale della follia e della fragilità dell'identità individuale.</p>
+
+  <p class="titolo-capitolo">L'umorismo: il saggio teorico</p>
+  <p>La concezione artistica e filosofica di Pirandello trovò la propria formulazione teorica più organica nel saggio L'umorismo, pubblicato in una prima redazione nel 1908: in questo testo, Pirandello elabora una distinzione fondamentale tra il comico e l'umoristico, che costituisce la chiave interpretativa privilegiata per comprendere l'intera sua produzione narrativa e teatrale successiva.</p>
+  <p>Secondo Pirandello, il comico nasce dalla semplice percezione di un contrario, cioè di una situazione che appare in contrasto con quanto ci si aspetterebbe normalmente, generando un immediato effetto di riso, privo tuttavia di ulteriori implicazioni riflessive; l'umoristico, al contrario, si genera quando a questa prima e immediata percezione del contrario segue un secondo momento, definito da Pirandello sentimento del contrario, in cui la riflessione dello scrittore, approfondendo le ragioni profonde, spesso dolorose, che si celano dietro la situazione apparentemente comica osservata, trasforma il riso iniziale in un sentimento più complesso, venato di pietà e di comprensione verso la sofferenza nascosta dietro l'apparenza ridicola o contraddittoria del comportamento umano osservato.</p>
+  <p><em>Esempio:</em> Pirandello stesso, nel saggio L'umorismo, propone l'esempio di una donna anziana, vistosamente truccata e abbigliata in modo eccessivamente giovanile: a un primo sguardo superficiale, tale immagine può apparire semplicemente comica, per il contrasto tra l'età della donna e il suo aspetto; ma se si riflette sulle ragioni di questo comportamento, magari intuendo che la donna agisce così per tentare disperatamente di trattenere l'affetto di un marito più giovane, il riso iniziale si trasforma in un sentimento più complesso di comprensione e di pietà per la sofferenza nascosta dietro quell'apparenza inizialmente ridicola.</p>
+
+  <p class="titolo-capitolo">Il relativismo conoscitivo e la molteplicità dell'io</p>
+  <p>Alla base della poetica dell'umorismo si colloca una più ampia visione filosofica, sviluppata da Pirandello in stretta connessione con il clima di crisi delle certezze già delineato nel capitolo precedente di questo manuale: secondo questa concezione, non esiste un'unica e stabile identità personale, ma piuttosto una molteplicità di maschere sociali diverse, che ciascun individuo indossa a seconda delle circostanze e delle relazioni in cui si trova coinvolto, senza che sia possibile individuare, dietro queste molteplici maschere, un nucleo autentico e stabile di identità personale.</p>
+  <p>Analogamente, secondo Pirandello, ogni tentativo di conoscere oggettivamente la realtà esterna, e in particolare gli altri individui, è destinato a scontrarsi con l'impossibilità di superare la soggettività del proprio punto di vista, poiché ciascuno costruisce della realtà e delle persone che lo circondano un'immagine parziale e inevitabilmente distorta dalla propria specifica prospettiva, condannando così l'individuo a una condizione di sostanziale incomunicabilità e di solitudine esistenziale, anche all'interno delle relazioni apparentemente più intime e consuete.</p>
+
+  <p class="titolo-capitolo">La vita e la forma</p>
+  <p>Un ulteriore concetto centrale nella riflessione filosofica di Pirandello è quello del contrasto tra la vita e la forma: secondo questa concezione, la vita è per sua natura un flusso continuo, mutevole e privo di una struttura fissa e definitiva, mentre la società, attraverso le proprie convenzioni sociali, le istituzioni e i ruoli che impone agli individui, costringe questo flusso vitale entro forme rigide e cristallizzate, come le identità sociali, le relazioni familiari o professionali, che finiscono per imprigionare l'autentica fluidità della vita entro schemi artificiosi e limitanti.</p>
+  <p>Questo conflitto irrisolvibile tra la mutevolezza intrinseca della vita e la rigidità delle forme sociali imposte dalla convivenza civile costituisce uno dei temi più ricorrenti dell'intera produzione pirandelliana, sia narrativa sia teatrale, e trova spesso la propria massima manifestazione drammatica nel momento in cui un personaggio, per circostanze eccezionali, si trova improvvisamente a percepire con lucidità la propria condizione di prigioniero di una forma sociale non più coincidente con la propria autentica identità interiore.</p>
+
+  <p class="titolo-capitolo">Novelle per un anno: il progetto narrativo</p>
+  <p>La vastissima produzione novellistica di Pirandello, che l'autore raccolse progressivamente, negli ultimi decenni della propria vita, sotto il titolo complessivo di Novelle per un anno, concepito idealmente come una raccolta di trecentosessantacinque racconti, uno per ogni giorno dell'anno, sebbene il progetto non fu mai portato a piena e definitiva conclusione, costituisce un laboratorio narrativo di straordinaria ricchezza, nel quale l'autore applica sistematicamente, attraverso una grande varietà di situazioni e di personaggi, i princìpi teorici dell'umorismo e del relativismo conoscitivo appena delineati in questo capitolo.</p>
+  <p>Le novelle pirandelliane, ambientate in gran parte nella Sicilia natale dell'autore ma anche, in misura crescente nella produzione più matura, negli ambienti piccolo-borghesi della Roma dei primi del Novecento, mettono in scena una straordinaria galleria di personaggi colti nel momento critico in cui la propria abituale forma sociale entra improvvisamente in crisi, rivelando l'assurdità, la sofferenza o la contraddizione nascoste dietro un'apparente normalità quotidiana.</p>
+
+  <p class="titolo-capitolo">Il treno ha fischiato e la fuga dalla forma</p>
+  <p>Tra le novelle più celebri e rappresentative di questa produzione si ricorda Il treno ha fischiato, che narra la vicenda di un modesto impiegato, Belluca, oppresso da un'esistenza monotona e priva di qualsiasi spazio di libertà personale, sia sul lavoro sia in una soffocante situazione familiare, il quale, dopo aver udito nella notte il fischio lontano di un treno in transito, vive un'improvvisa e apparentemente incomprensibile crisi psicologica, che lo conduce, almeno per un breve momento, a un'immaginaria evasione mentale verso mondi lontani e sconosciuti, unica forma di libertà concessa alla propria altrimenti totalmente costretta esistenza quotidiana.</p>
+  <p>Questa novella, come molte altre della vastissima produzione pirandelliana, mostra con particolare efficacia il tema del contrasto tra vita e forma già delineato in questo capitolo, rappresentando attraverso un episodio apparentemente minimo e quotidiano l'irruzione improvvisa, sia pure temporanea e in ultima analisi illusoria, di un anelito di autentica libertà vitale all'interno di un'esistenza altrimenti rigidamente imprigionata dalle convenzioni sociali e familiari.</p>
+
+  <p class="titolo-capitolo">Verso i romanzi e il teatro</p>
+  <p>La riflessione teorica sull'umorismo e la vastissima sperimentazione narrativa condotta attraverso le novelle appena esaminate costituiscono il fondamento concettuale e stilistico su cui Pirandello costruirà, negli stessi anni e nei decenni immediatamente successivi, sia la propria produzione romanzesca, di cui si tratterà nel prossimo capitolo di questo manuale, sia la propria rivoluzionaria produzione teatrale, che sarà oggetto del capitolo successivo, entrambe fondate sui medesimi princìpi filosofici e sulla medesima sensibilità artistica appena delineati in questo capitolo.</p>
+  <p>Proprio a partire da questa solida base teorica e da questo straordinario laboratorio narrativo rappresentato dalle novelle, si potrà comprendere pienamente, nei prossimi capitoli di questo manuale, la straordinaria capacità di Pirandello di rinnovare in profondità, sia sul piano dei contenuti sia su quello delle tecniche narrative e drammaturgiche, l'intera tradizione letteraria italiana del proprio tempo.</p>
+</div>
+<!-- fine capitolo letteratura 40 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let41.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>
