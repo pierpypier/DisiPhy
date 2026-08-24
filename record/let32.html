@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 32</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 32: leopardi, le operette morali -->
+<div id="capitolo-32-leopardi-operette-morali" class="capitolo-storia">
+  <p class="titolo-capitolo">32 - Leopardi: le Operette morali - Classe 4</p>
+
+  <p class="titolo-capitolo">Genesi e struttura della raccolta</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, i Canti e l'intero percorso della produzione poetica di Giacomo Leopardi, ci si sofferma ora sull'altra grande faccia della sua opera, quella affidata alla prosa filosofica delle Operette morali, raccolta di ventiquattro componimenti in prosa la cui redazione principale risale al 1824, un anno di intensa attività creativa per il poeta, sebbene alcuni testi siano stati aggiunti o rivisti negli anni successivi, fino alla pubblicazione definitiva dell'opera nel 1834.</p>
+  <p>Diversamente dai Canti, fondati sulla forma poetica e su una forte componente lirica e autobiografica, le Operette morali affidano la riflessione filosofica leopardiana a una scrittura in prosa di impianto prevalentemente dialogico o narrativo, spesso venata da un'ironia sottile e amara, che permette a Leopardi di affrontare in modo più disteso e argomentativo, sebbene mai privo di afflato poetico, i grandi temi della propria visione del mondo già delineata nei capitoli precedenti di questo manuale.</p>
+
+  <p class="titolo-capitolo">Il genere del dialogo filosofico</p>
+  <p>La forma prevalente adottata da Leopardi in gran parte delle Operette morali è quella del dialogo filosofico, genere di antica tradizione classica, già incontrato in questo manuale a proposito di altri autori come Platone attraverso Marsilio Ficino o Baldassarre Castiglione nel Cortegiano, che Leopardi rielabora tuttavia in una direzione del tutto originale, spesso costruendo situazioni paradossali o surreali, popolate da personaggi allegorici, figure mitologiche reinterpretate in chiave moderna, o addirittura da elementi della natura personificati, come la stessa Natura o la Terra, capaci di dialogare direttamente con l'uomo o con altre entità immaginarie.</p>
+  <p>Questa scelta formale, apparentemente leggera e fantastica, permette in realtà a Leopardi di trattare con grande libertà speculativa, senza il vincolo di un'esposizione sistematica in prima persona, alcuni dei temi filosofici più radicali della propria riflessione, affidandoli alla dinamica del confronto dialettico tra punti di vista diversi, spesso in aperto contrasto tra loro.</p>
+
+  <p class="titolo-capitolo">Il Dialogo della Natura e di un Islandese</p>
+  <p>Tra i testi più celebri e rappresentativi della raccolta si distingue il Dialogo della Natura e di un Islandese, nel quale un viaggiatore islandese, in fuga per tutta la vita dalle asperità climatiche del proprio paese d'origine alla ricerca di un luogo in cui vivere sereno e al riparo dalle avversità naturali, si trova infine a dialogare direttamente, in un remoto deserto africano, con la Natura stessa, personificata come un'immensa e indifferente figura femminile.</p>
+  <p>Nel corso del dialogo, la Natura rivela all'islandese, con gelida e impassibile franchezza, di essere del tutto indifferente alla felicità o all'infelicità delle proprie creature, avendo come unico fine la conservazione e il rinnovamento perpetuo delle specie viventi, indipendentemente dalla sofferenza dei singoli individui che le compongono: questo testo rappresenta una delle espressioni più dirette e compiute della concezione di pessimismo cosmico e di natura matrigna già delineata nel capitolo precedente di questo manuale a proposito del pensiero leopardiano.</p>
+  <p><em>Approfondimento:</em> la vicenda narrata nel dialogo, con il proprio andamento quasi favolistico e la conclusione improvvisa e beffarda, in cui l'islandese, nel bel mezzo della conversazione, viene inaspettatamente travolto e ucciso da un evento naturale imprevisto, costituisce un esempio emblematico della tecnica narrativa leopardiana, capace di tradurre in immagini concrete e memorabili, quasi apologhi morali, le astratte argomentazioni filosofiche sviluppate nello Zibaldone.</p>
+
+  <p class="titolo-capitolo">Il Dialogo di un venditore di almanacchi e di un passeggere</p>
+  <p>Un altro testo di grande importanza e di apparente semplicità è il Dialogo di un venditore di almanacchi e di un passeggere, ambientato nella cornice quotidiana e popolare del giorno di fine anno, nel quale un passante interroga un venditore di calendari sulle proprie speranze per l'anno che sta per iniziare, ricevendo risposte che, nella loro schiettezza popolaresca, rivelano in realtà una lucida e spontanea consapevolezza della vanità di ogni attesa di felicità futura, sempre proiettata dall'uomo verso un domani che, una volta divenuto presente, si rivela puntualmente deludente.</p>
+  <p>Attraverso questo scambio apparentemente dimesso tra due personaggi comuni, privi di qualsiasi elaborazione filosofica esplicita, Leopardi riesce a comunicare con grande efficacia ed economia espressiva uno dei nuclei più profondi della propria riflessione sulla teoria del piacere già incontrata nel capitolo precedente, dimostrando come la propria visione pessimistica dell'esistenza non nasca da un'astratta speculazione intellettuale, ma trovi conferma anche nella spontanea saggezza dell'uomo comune.</p>
+
+  <p class="titolo-capitolo">Il Dialogo di Torquato Tasso e del suo genio familiare</p>
+  <p>Di particolare interesse è anche il Dialogo di Torquato Tasso e del suo genio familiare, nel quale Leopardi immagina un colloquio immaginario tra il celebre poeta cinquecentesco, del quale la tradizione biografica tramandava una vita segnata da inquietudine psicologica e da crisi personali, e una sorta di spirito guida o genio, con cui Tasso discute del tema della noia, definita da Leopardi come una delle esperienze più autenticamente rivelatrici della condizione umana, poiché si manifesta proprio nei momenti di assenza di desideri immediati da soddisfare, mostrando così, in negativo, l'insopprimibile e mai pienamente soddisfatta tensione dell'uomo verso un piacere che nessuna condizione concreta riesce mai a colmare stabilmente.</p>
+  <p>La scelta di Leopardi di affidare questa riflessione proprio alla figura di Torquato Tasso, autore già indirettamente evocato in questo manuale a proposito della tradizione del poema epico-cavalleresco erede di Ariosto, non è casuale, poiché la vicenda biografica dello sfortunato poeta cinquecentesco, tradizionalmente associata a una condizione di sofferenza psicologica e di incomprensione, offriva a Leopardi un modello storico particolarmente adatto a incarnare, con la propria autorevolezza letteraria, la riflessione sulla noia e sull'infelicità che l'autore stesso andava sviluppando.</p>
+
+  <p class="titolo-capitolo">Il Dialogo di Plotino e di Porfirio</p>
+  <p>Un testo di particolare rilievo per comprendere l'evoluzione del pensiero leopardiano verso la fase finale già delineata nel capitolo precedente è il Dialogo di Plotino e di Porfirio, composto più tardi rispetto al nucleo principale della raccolta, nel quale Leopardi mette in scena un colloquio tra i due celebri filosofi neoplatonici dell'antichità, incentrato sul tema del suicidio: nel dialogo, Plotino dissuade l'allievo Porfirio, tentato dal togliersi la vita a causa della propria disperazione esistenziale, non attraverso facili consolazioni, ma riconoscendo pienamente la fondatezza razionale della sofferenza umana, e proponendo tuttavia, come alternativa al gesto estremo, la ricerca di una solidarietà reciproca tra gli uomini, capace di offrire un conforto, per quanto limitato, alla comune condizione di infelicità.</p>
+  <p>Questo testo anticipa, in forma dialogica e argomentativa, la stessa riflessione che troverà la propria espressione poetica più compiuta, come si è visto nel capitolo precedente, nel componimento conclusivo dei Canti, La ginestra, confermando la stretta continuità tematica e filosofica esistente tra la produzione in prosa delle Operette morali e quella poetica dei Canti, pur nella diversità delle rispettive forme espressive.</p>
+
+  <p class="titolo-capitolo">Lo stile delle Operette morali</p>
+  <p>Sul piano stilistico, le Operette morali si distinguono per una prosa di straordinaria eleganza e precisione, caratterizzata da un equilibrio sapiente tra rigore argomentativo e sottile ironia, spesso venata di un umorismo amaro e paradossale, che permette a Leopardi di trattare con apparente distacco e leggerezza formale temi filosofici di estrema gravità, senza mai scadere né in un tono eccessivamente dimesso e leggero né in una pesantezza dottrinale che ne avrebbe compromesso l'efficacia comunicativa.</p>
+  <p>Questa capacità di coniugare profondità filosofica e levità stilistica, attraverso l'uso sapiente del dialogo, dell'apologo e della narrazione allegorica, rende le Operette morali un unicum nel panorama della prosa filosofica italiana dell'Ottocento, capace di dialogare, sul piano dei contenuti, con la grande tradizione filosofica occidentale, da quella classica greco-latina fino al pensiero moderno, e insieme di offrire, sul piano stilistico, un modello di scrittura saggistica di straordinaria modernità ed efficacia.</p>
+
+  <p class="titolo-capitolo">Bilancio dell'opera leopardiana e apertura al secondo Ottocento</p>
+  <p>Con questo capitolo si conclude il percorso dedicato a Giacomo Leopardi, la cui opera, tra la produzione poetica dei Canti e quella in prosa delle Operette morali, rappresenta uno dei vertici assoluti dell'intera letteratura italiana, per la capacità di coniugare rigore filosofico, straordinaria padronanza formale e un'autentica e mai retorica partecipazione emotiva ai grandi interrogativi dell'esistenza umana.</p>
+  <p>Con la conclusione di questo capitolo termina anche il percorso di questo manuale dedicato alla Classe 4, che ha ripercorso la letteratura italiana dal Barocco secentesco fino al Romanticismo di Manzoni e Leopardi: nei prossimi capitoli, dedicati alla Classe 5, si affronterà la letteratura italiana della seconda metà dell'Ottocento e del Novecento, a partire dal Verismo di Giovanni Verga e dal più ampio contesto storico-culturale del Positivismo europeo, di cui si tratterà nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 32 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let33.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>
