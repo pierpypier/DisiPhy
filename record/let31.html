@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 31</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 31: leopardi, i canti -->
+<div id="capitolo-31-leopardi-canti" class="capitolo-storia">
+  <p class="titolo-capitolo">31 - Leopardi: i Canti - Classe 4</p>
+
+  <p class="titolo-capitolo">La genesi e la struttura della raccolta</p>
+  <p>Dopo aver ricostruito, nel capitolo precedente, la vita e lo sviluppo del pensiero filosofico di Giacomo Leopardi, dal pessimismo storico al pessimismo cosmico fino alla riflessione finale sulla solidarietà tra gli uomini, ci si sofferma ora sulla sua opera poetica maggiore, i Canti, raccolta lirica alla quale il poeta lavorò per gran parte della propria esistenza, sottoponendola a più riprese a un attento e meditato lavoro di organizzazione e revisione, fino all'edizione definitiva, curata dallo stesso Leopardi negli ultimi mesi di vita e pubblicata postuma a Napoli nel 1845, pochi anni dopo la morte del poeta, avvenuta come si è visto nel 1837.</p>
+  <p>I Canti non costituiscono una raccolta organizzata secondo un unico criterio tematico o cronologico rigido, ma piuttosto un percorso interiore che, componimento dopo componimento, ripercorre e insieme scandisce le diverse fasi dell'evoluzione biografica e filosofica del poeta, dalle prime prove giovanili di intonazione civile e patriottica fino alle ultime, mature riflessioni sulla condizione dell'uomo di fronte alla natura, culminate nel testamento poetico e ideale rappresentato dall'ultimo componimento della raccolta, La ginestra, di cui si tratterà nella parte conclusiva di questo capitolo.</p>
+
+  <p class="titolo-capitolo">Le canzoni civili e patriottiche giovanili</p>
+  <p>I primi componimenti inclusi nei Canti, composti tra il 1818 e il 1822, appartengono al genere della canzone, forma metrica di alta tradizione letteraria già incontrata più volte in questo manuale, e sono caratterizzati da un'intonazione prevalentemente civile e patriottica, non ancora segnata dalla piena maturazione del pensiero pessimistico leopardiano: tra questi si ricordano in particolare la canzone All'Italia, nella quale il giovane poeta esprime un accorato lamento per le condizioni di decadenza politica e morale della propria patria, ancora divisa e priva di indipendenza, secondo un tema di forte attualità nel clima risorgimentale già incontrato in un capitolo precedente di questo manuale, e la canzone Sopra il monumento di Dante che si preparava in Firenze, ispirata da un progetto di erezione di un monumento funebre dedicato al grande poeta trecentesco, e occasione per Leopardi di riflettere sul contrasto tra la grandezza del passato letterario italiano e la mediocrità del presente.</p>
+  <p>Queste prime prove poetiche, pur non ancora pienamente rappresentative della successiva e più originale riflessione filosofica del poeta, mostrano già una notevole padronanza formale e una vena di accorata partecipazione emotiva ai destini della propria patria, in linea con la sensibilità patriottica diffusa tra gli intellettuali italiani di quegli anni.</p>
+
+  <p class="titolo-capitolo">I piccoli idilli e la poetica del vago e indefinito</p>
+  <p>Un momento di svolta fondamentale nella produzione poetica di Leopardi è rappresentato dai cosiddetti piccoli idilli, gruppo di brevi componimenti composti tra il 1819 e il 1821, nei quali il poeta abbandona progressivamente i toni più apertamente civili delle canzoni giovanili per orientarsi verso una poesia di carattere più intimo e meditativo, direttamente legata, come si è visto nel capitolo precedente, alla teoria del vago e indefinito elaborata nello stesso periodo nelle pagine dello Zibaldone.</p>
+  <p>Il componimento più celebre di questo gruppo, e forse dell'intera produzione leopardiana, è L'infinito, breve idillio nel quale il poeta, dalla propria condizione di osservatore raccolto in un luogo appartato della campagna recanatese, davanti a un orizzonte in parte precluso alla vista da un ostacolo naturale, sviluppa una riflessione sulla capacità dell'immaginazione umana di superare i limiti concreti della percezione sensibile, aprendo la mente a una dimensione di spazio e di tempo illimitati, in un'esperienza che, pur nascendo da un senso iniziale di smarrimento quasi doloroso di fronte all'idea dell'infinito, si risolve infine in un sentimento di intensa e per certi versi consolatoria dolcezza.</p>
+  <p><em>Approfondimento:</em> L'infinito rappresenta l'esempio più compiuto della poetica leopardiana del vago e indefinito già delineata nel capitolo precedente, poiché mostra come la mancanza di una percezione visiva completa e definita di un dato paesaggio, lungi dal costituire un limite, si trasformi per il poeta in un'occasione privilegiata affinché l'immaginazione possa proiettarsi oltre i confini del reale, generando quella sensazione di piacere legata proprio all'assenza di limiti precisi che la teoria leopardiana pone alla base della propria estetica.</p>
+
+  <p class="titolo-capitolo">Altri idilli giovanili: la luna e il ricordo</p>
+  <p>Accanto a L'infinito, il gruppo dei piccoli idilli comprende altri componimenti di analoga intonazione meditativa, come Alla luna, nel quale il poeta si rivolge direttamente all'astro notturno, spesso presente nella sua poesia come presenza confidente e silenziosa testimone del proprio dolore esistenziale, evocando il ricordo di un momento di sofferenza vissuto in un tempo ormai lontano, e riflettendo sul valore, insieme doloroso e in parte consolatorio, della memoria del proprio passato.</p>
+  <p>In questi componimenti giovanili emerge già con chiarezza uno dei tratti stilistici più caratteristici e duraturi della poesia leopardiana, quello di un paesaggio naturale, per quanto concretamente osservato e circostanziato nei propri dettagli, sempre trasfigurato in specchio degli stati d'animo del poeta, secondo un procedimento che la critica ha definito paesaggio interiore, capace di fondere insieme l'osservazione diretta della realtà e la proiezione soggettiva del proprio sentimento.</p>
+
+  <p class="titolo-capitolo">Il ciclo delle canzoni del suicidio</p>
+  <p>Tra il 1821 e il 1822, in un periodo di particolare crisi personale legata anche alle già ricordate difficoltà familiari e di salute, Leopardi compose un gruppo di componimenti di tono assai più cupo e drammatico, tradizionalmente indicati dalla critica con l'espressione canzoni del ciclo del suicidio, tra cui si ricordano in particolare Bruto minore, dedicata alla figura storica del senatore romano che si tolse la vita dopo la sconfitta nella battaglia di Filippi, e Ultimo canto di Saffo, ispirata alla figura della poetessa greca dell'antichità, di cui la tradizione tramandava, in modo peraltro leggendario, la fine per suicidio.</p>
+  <p>In questi due componimenti, Leopardi affronta con particolare intensità drammatica il tema della sofferenza esistenziale e della disperazione di fronte a un'esistenza priva di senso e di soddisfazione, riflettendo, attraverso la voce di questi due personaggi storici e leggendari, sulla condizione di chi, dotato di straordinarie qualità morali o intellettuali, si trova comunque condannato a un'infelicità profonda dalla stessa indifferenza della sorte o della natura verso le proprie aspirazioni.</p>
+
+  <p class="titolo-capitolo">I grandi idilli: i canti pisano-recanatesi</p>
+  <p>Dopo un periodo di relativo silenzio poetico, dedicato prevalentemente all'attività erudita ed editoriale, Leopardi tornò alla poesia lirica tra il 1828 e il 1830, componendo il gruppo di testi noto alla critica come grandi idilli, o canti pisano-recanatesi, dal nome delle due città in cui furono in gran parte composti: si tratta di componimenti di maggiore ampiezza e complessità rispetto ai piccoli idilli giovanili, nei quali la riflessione filosofica matura del poeta, ormai orientata verso il pessimismo cosmico delineato nel capitolo precedente, si fonde con un'intensa componente autobiografica e memoriale.</p>
+  <p>Tra i componimenti più celebri di questo gruppo si ricordano A Silvia, dedicato al ricordo di una giovane concittadina di Leopardi, morta prematuramente, la cui vicenda personale diventa per il poeta occasione di una più ampia riflessione sulla vanità delle speranze giovanili, destinate a essere sempre deluse dal confronto con la realtà; Le ricordanze, ampio componimento dedicato al ricordo della propria giovinezza trascorsa a Recanati, tra i luoghi e le persone della propria adolescenza; La quiete dopo la tempesta e Il sabato del villaggio, entrambi incentrati sul tema dell'attesa e dell'anticipazione del piacere, ritenuta da Leopardi più intensa e autentica della sua stessa realizzazione; e il Canto notturno di un pastore errante dell'Asia, nel quale il poeta, attraverso la voce immaginaria di un pastore asiatico che si interroga sul senso della propria esistenza rivolgendosi alla luna, sviluppa una delle riflessioni più radicali e universali sull'enigma della sofferenza e del significato della vita.</p>
+
+  <p class="titolo-capitolo">Il ciclo di Aspasia</p>
+  <p>Negli anni immediatamente successivi, tra il 1831 e il 1834, in gran parte durante il soggiorno fiorentino già ricordato nel capitolo precedente, Leopardi compose un ulteriore gruppo di componimenti, noto come ciclo di Aspasia, ispirato a un'infelice esperienza sentimentale vissuta dal poeta nei confronti di una donna fiorentina, alla quale Leopardi attribuì nei propri versi il nome allusivo e classicheggiante di Aspasia: tra questi componimenti si ricordano in particolare A se stesso, breve e intensissimo testo nel quale il poeta, deluso definitivamente anche dall'illusione amorosa, si rivolge al proprio cuore invitandolo a rinunciare per sempre a ogni ulteriore illusione, e Aspasia stessa, nella quale Leopardi analizza con lucidità quasi impietosa il meccanismo per cui l'immagine idealizzata della donna amata, frutto della proiezione del proprio desiderio, si riveli inevitabilmente diversa dalla persona reale, una volta venuto meno l'incanto dell'illusione amorosa.</p>
+  <p>Questo ciclo di componimenti segna un ulteriore approfondimento della riflessione leopardiana sul tema dell'illusione, applicata questa volta specificamente all'esperienza amorosa, e conferma la piena maturazione, in questa fase della produzione poetica dell'autore, della concezione di pessimismo cosmico già delineata nel capitolo precedente.</p>
+
+  <p class="titolo-capitolo">La ginestra: il testamento poetico e filosofico</p>
+  <p>L'ultimo e più ampio componimento della raccolta, composto negli ultimi mesi di vita del poeta durante il soggiorno napoletano già ricordato nel capitolo precedente, è La ginestra, o il fiore del deserto, considerato dalla critica il testamento poetico e filosofico di Leopardi, nel quale confluiscono e trovano una sintesi conclusiva tutti i principali temi della sua riflessione: il componimento prende spunto dall'immagine di un umile fiore, la ginestra appunto, che cresce spontaneamente sulle pendici desolate e aride del Vesuvio, in un territorio periodicamente devastato dalle eruzioni del vulcano, e che Leopardi assume come simbolo di una dignitosa e consapevole accettazione della propria condizione di fragilità di fronte a una natura indifferente e potenzialmente distruttiva.</p>
+  <p>Nel componimento Leopardi rivolge una severa polemica contro quelle filosofie e ideologie del proprio tempo, di ispirazione ancora ottimistica e provvidenzialistica, che a suo giudizio illudevano gli uomini circa un presunto progresso naturale e provvidenziale della storia, contrapponendo a questo ottimismo ritenuto ingenuo e infondato la già ricordata proposta di una solidarietà consapevole e attiva tra tutti gli esseri umani, accomunati dalla medesima condizione di fragilità di fronte alla potenza indifferente della natura, in un atteggiamento che, pur muovendo da premesse profondamente pessimistiche, si traduce in un implicito appello alla dignità civile e alla fratellanza tra gli uomini.</p>
+
+  <p class="titolo-capitolo">Lo stile e la lingua poetica di Leopardi</p>
+  <p>Sul piano stilistico, la poesia di Leopardi si distingue per un equilibrio del tutto originale tra la solidità della tradizione classica, in particolare la lezione di Petrarca e della grande poesia italiana del Trecento già incontrata in capitoli precedenti di questo manuale, e una straordinaria capacità di introspezione psicologica ed esistenziale del tutto moderna: il poeta elabora un linguaggio di apparente semplicità, fondato su un lessico volutamente limitato ma di estrema precisione ed efficacia evocativa, e su un uso sapiente dell'endecasillabo e del settenario sciolti, cioè privi di rima, che conferiscono ai propri versi un andamento musicale libero e naturale, capace di seguire con grande flessibilità il movimento del pensiero e dell'emozione.</p>
+  <p>Questa straordinaria capacità di conciliare rigore formale classicista e profondità di introspezione moderna rende i Canti uno dei vertici assoluti dell'intera poesia italiana, la cui influenza si farà sentire, come si vedrà nei capitoli successivi di questo manuale dedicati al secondo Ottocento e al Novecento, su gran parte della successiva tradizione lirica italiana: prima di affrontare questo ulteriore sviluppo, tuttavia, occorrerà esaminare, nel prossimo capitolo di questo manuale, l'altra grande faccia della produzione leopardiana, quella in prosa filosofica delle Operette morali.</p>
+</div>
+<!-- fine capitolo letteratura 31 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let32.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

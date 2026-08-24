@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 20</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 20: l'illuminismo, contesto storico-culturale in europa e in italia -->
+<div id="capitolo-20-illuminismo" class="capitolo-storia">
+  <p class="titolo-capitolo">20 - L'Illuminismo: contesto storico-culturale in Europa e in Italia - Classe 4</p>
+
+  <p class="titolo-capitolo">Il Settecento e la nuova fiducia nella ragione</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, l'esperienza dell'Arcadia e il suo tentativo di riforma del gusto poetico tra la fine del Seicento e i primi decenni del Settecento, si giunge ora a un movimento culturale di portata assai più ampia, capace di investire non soltanto la letteratura ma l'intero orizzonte del sapere europeo del XVIII secolo: l'Illuminismo, termine con cui si indica quel vasto movimento di pensiero che pone al centro della propria riflessione la fiducia nella ragione umana come strumento privilegiato per comprendere la realtà, migliorare la società e liberare l'uomo dai pregiudizi, dalle superstizioni e dalle forme di autorità considerate non fondate su basi razionali.</p>
+  <p>Il termine stesso, illuminismo, e i suoi equivalenti nelle altre lingue europee, come l'inglese enlightenment o il tedesco Aufklärung, alludono metaforicamente all'immagine della luce della ragione capace di dissipare le tenebre dell'ignoranza e del pregiudizio, un'immagine che riassume efficacemente l'ambizione riformatrice e insieme fiduciosa nel progresso che caratterizza l'intero movimento.</p>
+
+  <p class="titolo-capitolo">Le radici filosofiche: Cartesio, Newton, Locke</p>
+  <p>Le premesse filosofiche dell'Illuminismo affondano le proprie radici nel secolo precedente, in particolare nel razionalismo del filosofo francese René Descartes, che nella prima metà del Seicento aveva posto le basi di un metodo di conoscenza fondato sul dubbio sistematico e sulla ricerca di verità evidenti e dimostrabili con rigore quasi matematico, e nella rivoluzione scientifica inaugurata, tra gli altri, dallo stesso Galileo Galilei incontrato nel capitolo precedente, e portata a compimento, nella seconda metà del Seicento, dal fisico inglese Isaac Newton, la cui opera contribuì a diffondere l'idea di un universo governato da leggi razionali e matematicamente descrivibili.</p>
+  <p>Un ulteriore contributo decisivo venne dalla filosofia empirista inglese, in particolare dal pensiero di John Locke, che tra la fine del Seicento e i primi anni del Settecento elaborò una teoria della conoscenza fondata sull'esperienza sensibile piuttosto che su idee innate, e una riflessione politica incentrata sui diritti naturali dell'individuo, sulla tolleranza religiosa e sui limiti del potere politico, temi destinati a esercitare un'influenza profonda sull'intero pensiero illuministico successivo.</p>
+
+  <p class="titolo-capitolo">L'Illuminismo francese: gli enciclopedisti</p>
+  <p>Il centro propulsore e più influente dell'Illuminismo europeo fu senza dubbio la Francia, dove operarono, nel corso del Settecento, alcune delle figure più rappresentative del movimento: Voltaire, pseudonimo di François-Marie Arouet, celebre per la propria instancabile battaglia contro il fanatismo religioso e per la difesa della tolleranza; Montesquieu, autore di un'importante riflessione sulla divisione dei poteri dello stato come garanzia contro il dispotismo; e Jean-Jacques Rousseau, la cui riflessione sulla società, sulla diseguaglianza e sull'educazione ebbe un'influenza determinante anche sulla successiva cultura romantica.</p>
+  <p>Un'impresa culturale di straordinaria importanza, capace di riassumere e diffondere su scala europea l'intero patrimonio del sapere illuministico, fu la compilazione dell'Encyclopédie, vasta opera enciclopedica pubblicata in Francia a partire dal 1751 sotto la direzione di Denis Diderot e Jean-Baptiste d'Alembert, con la collaborazione dei principali intellettuali del tempo: l'opera, organizzata secondo un criterio razionale e sistematico del sapere umano, dalle scienze alle arti, dalle tecniche artigianali alla filosofia, divenne il simbolo stesso dell'ambizione illuministica di rendere accessibile e razionalmente organizzata l'intera conoscenza umana.</p>
+
+  <p class="titolo-capitolo">I temi centrali del pensiero illuministico</p>
+  <p>Pur nella varietà delle posizioni dei singoli pensatori e nelle diverse declinazioni nazionali che il movimento assunse nei vari paesi europei, è possibile individuare alcuni temi comuni all'intera cultura illuministica: la fiducia nel progresso, cioè la convinzione che la conoscenza razionale e l'applicazione pratica delle scienze potessero condurre a un costante miglioramento delle condizioni materiali e morali dell'umanità; la critica serrata verso ogni forma di superstizione religiosa e di intolleranza confessionale, in nome di una religiosità più razionale o di un'aperta tolleranza tra le diverse fedi; e una riflessione giuridica e politica orientata alla riforma delle istituzioni esistenti, in direzione di una maggiore uguaglianza e di una razionalizzazione degli ordinamenti statali.</p>
+  <p>Accanto a questi temi si colloca inoltre un rinnovato interesse per le scienze economiche, con lo sviluppo di nuove teorie sul commercio, sulla produzione agricola e sull'organizzazione della ricchezza, e una crescente attenzione verso il diritto penale, con la richiesta, largamente diffusa tra gli intellettuali illuministi, di una riforma delle leggi e delle pene in senso più umano e proporzionato, in polemica con le pratiche giudiziarie tradizionali, spesso fondate su procedure arbitrarie e su punizioni sproporzionatamente crudeli.</p>
+
+  <p class="titolo-capitolo">L'Illuminismo in Italia: un movimento diviso in centri regionali</p>
+  <p>Diversamente da quanto avvenuto in Francia, dove l'Illuminismo trovò un centro culturale unitario nella capitale Parigi, in Italia il movimento illuministico si sviluppò in modo più frammentato, secondo la persistente divisione politica della penisola in stati regionali già più volte incontrata in questo manuale, dando vita a diversi centri di elaborazione culturale, tra i quali si distinsero in particolare Milano e Napoli, oltre a un più circoscritto ma significativo cenacolo veneziano legato all'attività teatrale di Carlo Goldoni, di cui si tratterà nel prossimo capitolo di questo manuale.</p>
+  <p>Nonostante questa frammentazione territoriale, gli intellettuali illuministi italiani condivisero con i colleghi europei i medesimi ideali di fondo, adattandoli tuttavia alle specifiche condizioni politiche, economiche e sociali dei diversi stati della penisola, in un dialogo costante con la cultura francese e inglese, di cui conoscevano e discutevano direttamente le opere principali.</p>
+
+  <p class="titolo-capitolo">Il centro milanese: Verri e Beccaria</p>
+  <p>Il più importante e organizzato centro dell'Illuminismo italiano fu quello milanese, sviluppatosi attorno alla figura di Pietro Verri, che insieme al fratello Alessandro e ad altri intellettuali lombardi fondò nel 1764 l'Accademia dei Pugni, un circolo di discussione e di elaborazione culturale il cui organo di diffusione fu la rivista Il Caffè, pubblicata tra il 1764 e il 1766, modellata esplicitamente sull'esempio dei periodici culturali inglesi e francesi, e dedicata alla discussione di temi economici, giuridici, scientifici e di costume, in uno stile volutamente agile e accessibile a un pubblico colto ma non necessariamente specialistico.</p>
+  <p>Proprio in seno a questo ambiente milanese maturò l'opera che rappresenta forse il contributo italiano più influente e duraturo alla cultura illuministica europea: Dei delitti e delle pene, breve ma densissimo trattato pubblicato nel 1764 da Cesare Beccaria, giovane giurista milanese legato al circolo di Pietro Verri, nel quale l'autore sviluppa una lucida e rigorosa critica al sistema penale del proprio tempo, condannando in particolare la pratica della tortura giudiziaria e sostenendo, in una delle argomentazioni più celebri e influenti dell'intera cultura illuministica, l'abolizione della pena di morte, ritenuta inefficace, moralmente ingiustificabile e contraria agli stessi principi del diritto naturale.</p>
+
+  <p class="titolo-capitolo">Il centro napoletano: Genovesi e la riflessione economica</p>
+  <p>Un secondo importante centro dell'Illuminismo italiano si sviluppò a Napoli, allora capitale di un vasto regno meridionale, attorno alla figura dell'abate Antonio Genovesi, titolare a partire dal 1754 della prima cattedra universitaria europea specificamente dedicata all'economia politica, disciplina di cui Genovesi fu tra i principali fondatori nel panorama italiano: l'Illuminismo napoletano si caratterizzò per una particolare attenzione ai problemi economici e sociali del Mezzogiorno d'Italia, segnato da un'economia in gran parte ancora fondata su rapporti feudali e da forti squilibri sociali, che gli intellettuali illuministi napoletani si adoperarono a denunciare e a proporre di riformare.</p>
+  <p>All'ambiente napoletano appartennero anche altre figure di rilievo, come Gaetano Filangieri, autore di un'importante opera di riflessione sulla riforma legislativa, la Scienza della legislazione, pubblicata a partire dal 1780, che ebbe una notevole risonanza anche fuori dai confini italiani, contribuendo a diffondere le istanze riformatrici dell'Illuminismo meridionale in tutta Europa.</p>
+
+  <p class="titolo-capitolo">Il dispotismo illuminato e le riforme in Italia</p>
+  <p>Le idee dell'Illuminismo non restarono confinate al solo ambito della discussione intellettuale, ma trovarono in diversi stati italiani, come del resto in altre parti d'Europa, un'applicazione concreta attraverso l'azione di alcuni sovrani che la storiografia definisce con l'espressione dispotismo illuminato: si tratta di monarchi che, pur conservando pienamente nelle proprie mani il potere assoluto, si fecero promotori di riforme ispirate agli ideali illuministici, in materia di amministrazione, di economia, di giustizia e di istruzione pubblica.</p>
+  <p>In Italia, esempi significativi di questa politica riformatrice si ebbero soprattutto nella Lombardia austriaca, sotto il governo dell'imperatrice Maria Teresa d'Austria e successivamente del figlio Giuseppe II, e nel Granducato di Toscana, retto dal 1765 dal granduca Pietro Leopoldo, che nel 1786 promosse un'importante riforma del diritto penale, tra le prime in Europa ad abolire ufficialmente la pena di morte, applicando concretamente, in questo caso specifico, le idee sostenute pochi anni prima da Beccaria nel proprio trattato.</p>
+
+  <p class="titolo-capitolo">Verso la letteratura dell'Illuminismo italiano</p>
+  <p>Il clima culturale appena descritto, fondato sulla fiducia nella ragione, sull'impegno riformatore e sulla critica dei pregiudizi e delle istituzioni tradizionali ritenute irrazionali, influenzò profondamente anche la produzione letteraria italiana del Settecento, orientandola verso nuovi generi e nuove finalità, non più incentrate, come nella tradizione arcadica appena esaminata nel capitolo precedente, sulla sola ricerca di un'eleganza formale fine a se stessa, ma su un rinnovato impegno civile e sociale.</p>
+  <p>Sarà proprio a partire da questo terreno culturale che si svilupperanno le esperienze letterarie di cui si tratterà nei prossimi capitoli di questo manuale: la riforma del teatro comico avviata da Carlo Goldoni, la satira sociale di Giuseppe Parini e la produzione tragica di Vittorio Alfieri, tre autori diversi per temperamento e per scelte stilistiche, ma tutti profondamente segnati, ciascuno a proprio modo, dal clima intellettuale dell'Illuminismo settecentesco appena delineato in questo capitolo.</p>
+</div>
+<!-- fine capitolo letteratura 20 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let21.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

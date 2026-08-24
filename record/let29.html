@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 29</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 29: manzoni, i promessi sposi -->
+<div id="capitolo-29-promessi-sposi" class="capitolo-storia">
+  <p class="titolo-capitolo">29 - Manzoni: I promessi sposi - Classe 4</p>
+
+  <p class="titolo-capitolo">Un romanzo elaborato in tre redazioni</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la produzione lirica e teatrale di Alessandro Manzoni, ci si sofferma ora sull'opera a cui lo scrittore legò in modo definitivo il proprio nome: il romanzo I promessi sposi, la cui composizione ed elaborazione impegnò Manzoni per circa un ventennio, attraverso tre diverse redazioni successive, ciascuna delle quali testimonia un preciso momento della maturazione artistica e linguistica dell'autore.</p>
+  <p>Una prima stesura, oggi nota con il titolo di Fermo e Lucia, dal nome originario dei due protagonisti, fu composta tra il 1821 e il 1823, ma non venne mai pubblicata dallo stesso Manzoni, che la ritenne un'opera ancora acerba, appesantita da eccessive digressioni storiche ed erudite; una seconda redazione, profondamente rivista sia sul piano narrativo sia su quello linguistico, fu pubblicata in tre volumi tra il 1825 e il 1827, ed è comunemente indicata dalla critica come Ventisettana; infine, dopo un ulteriore e lungo lavoro di revisione linguistica di cui si dirà tra poco, l'edizione definitiva del romanzo, nota come Quarantana, fu pubblicata a dispense, arricchita da illustrazioni del disegnatore Francesco Gonin, tra il 1840 e il 1842.</p>
+
+  <p class="titolo-capitolo">La questione della lingua e il soggiorno fiorentino</p>
+  <p>Uno degli aspetti più significativi del lungo lavoro di revisione condotto da Manzoni riguarda proprio la lingua del romanzo: insoddisfatto della varietà linguistica, ancora fortemente segnata da elementi lombardi e da un certo eclettismo colto, impiegata nella redazione del 1827, Manzoni intraprese, nel 1827 stesso, un soggiorno di studio a Firenze, allo scopo dichiarato di verificare direttamente, attraverso l'ascolto del parlato vivo delle persone colte fiorentine, quale fosse la lingua italiana effettivamente più viva e comunicativa del proprio tempo.</p>
+  <p>Questa operazione, che lo stesso Manzoni definì scherzosamente come un risciacquare i panni in Arno, condusse alla stesura della Quarantana, profondamente rivista dal punto di vista lessicale e sintattico in direzione di un fiorentino colto e contemporaneo, scelto da Manzoni non più, come era stato per la precedente proposta di Pietro Bembo incontrata in un capitolo precedente di questo manuale, sulla base di un modello letterario trecentesco fisso e astratto, ma sulla base dell'uso vivo e concreto parlato dalle persone colte della città che Manzoni riteneva depositaria della migliore tradizione linguistica italiana: questa scelta ebbe un'influenza decisiva sulla successiva codificazione della lingua italiana moderna, anche in vista della futura unificazione politica del paese.</p>
+
+  <p class="titolo-capitolo">La finzione del manoscritto e l'ambientazione storica</p>
+  <p>Sul piano della struttura narrativa, Manzoni presenta il proprio romanzo attraverso un espediente letterario di lunga tradizione, quello della finzione del manoscritto ritrovato: nell'introduzione dell'opera, l'autore finge di aver rinvenuto e trascritto, ammodernandone la lingua, un anonimo manoscritto secentesco, redatto da un ipotetico cronista dell'epoca, da cui sarebbe tratta l'intera vicenda narrata, un espediente che permette a Manzoni di conferire alla propria narrazione un'apparenza di autenticità documentaria, coerente con il già ricordato principio del vero storico.</p>
+  <p>La vicenda del romanzo è ambientata nella Lombardia del Seicento, all'epoca della dominazione spagnola già incontrata in un capitolo precedente di questo manuale a proposito del Barocco, tra il 1628 e il 1630, un periodo storico che Manzoni ricostruisce con grande rigore documentario, attingendo a fonti storiche autentiche del tempo, in particolare alle cronache del giurista milanese Giuseppe Ripamonti, per rappresentare fedelmente gli eventi collettivi che fanno da sfondo alla vicenda dei protagonisti.</p>
+
+  <p class="titolo-capitolo">La trama e i due protagonisti</p>
+  <p>Al centro della vicenda si trovano due giovani popolani di un piccolo paese sulle rive del lago di Como, Renzo Tramaglino, filatore di seta, e Lucia Mondella, promessi sposi il cui matrimonio, già fissato, viene impedito dalla prepotenza del signorotto locale Don Rodrigo, che, per un capriccio della propria vanità e per una scommessa fatta con il cugino Attilio, decide di impedire con la forza le nozze, minacciando il curato del paese, Don Abbondio, uomo pavido e privo di coraggio civile, affinché rifiuti di celebrare il matrimonio.</p>
+  <p>Costretti a fuggire dal proprio paese per sottrarsi alle mire di Don Rodrigo, con l'aiuto del coraggioso e generoso frate cappuccino Fra Cristoforo, Renzo e Lucia intraprendono due percorsi separati e paralleli, destinati a incrociarsi soltanto al termine di innumerevoli peripezie: Renzo si dirige verso Milano, dove si trova coinvolto, suo malgrado, nei tumulti popolari per il rincaro del pane, i cosiddetti tumulti di San Martino del 1628, ed è costretto a fuggire nuovamente, questa volta nel territorio della vicina Repubblica di Venezia, per sottrarsi a un mandato di cattura ingiustamente spiccato contro di lui; Lucia, dal canto proprio, trova rifugio in un convento di Monza, dove viene però coinvolta in una torbida vicenda legata alla monaca che la accoglie, e successivamente rapita, su istigazione dello stesso Don Rodrigo, e condotta nel castello di un potente e temuto signore feudale, l'Innominato.</p>
+
+  <p class="titolo-capitolo">Gertrude, l'Innominato e il tema della conversione</p>
+  <p>Tra i personaggi di maggiore spessore psicologico e morale del romanzo si distingue Gertrude, la monaca di Monza, figura tragica di giovane costretta dalla propria famiglia, per ragioni di convenienza economica e sociale, a prendere il velo religioso senza una reale vocazione, la cui debolezza morale, esasperata da questa violenza familiare subita, la condurrà a complicità sempre più gravi, fino a favorire il rapimento della stessa Lucia.</p>
+  <p>Ancora più rilevante, sul piano tematico, è la figura dell'Innominato, feudatario dedito per tutta la vita al crimine e alla sopraffazione violenta, che proprio nel momento in cui tiene prigioniera Lucia attraversa un'improvvisa e travolgente crisi di coscienza, condotta a maturazione dall'incontro diretto con il cardinale Federigo Borromeo, arcivescovo di Milano realmente esistito, figura storica di grande rilievo morale che Manzoni introduce nel romanzo come esempio di autentica ed efficace carità cristiana, in contrasto con la vuota formalità religiosa mostrata da altri personaggi del romanzo, come lo stesso Don Abbondio.</p>
+  <p><em>Approfondimento:</em> la conversione dell'Innominato rappresenta uno dei momenti più intensi e teologicamente significativi dell'intero romanzo, poiché mostra concretamente, attraverso la vicenda di un singolo individuo, quel tema della Provvidenza divina capace di trarre un bene morale anche dalle situazioni apparentemente più negative e violente, che costituisce, come si vedrà, uno dei nuclei portanti dell'intera visione manzoniana della storia.</p>
+
+  <p class="titolo-capitolo">La carestia, la guerra e la peste: gli affreschi storici</p>
+  <p>Accanto alla vicenda dei due protagonisti, Manzoni inserisce nel romanzo ampie e dettagliate ricostruzioni di eventi storici collettivi, che fanno da sfondo e insieme condizionano direttamente le sorti dei personaggi: la già ricordata carestia del 1628, con la conseguente rivolta popolare per il pane a Milano; la guerra per la successione al Ducato di Mantova, che portò in Lombardia, al seguito delle truppe imperiali tedesche, i cosiddetti lanzichenecchi, soldati mercenari la cui marcia attraverso il territorio lombardo veicolò, secondo la ricostruzione storica accolta da Manzoni, il contagio della terribile epidemia di peste che colpì Milano nel 1630, già indirettamente evocata in questo manuale a proposito del contesto storico del Seicento.</p>
+  <p>La descrizione della peste milanese, a cui Manzoni dedica numerosi capitoli della parte conclusiva del romanzo, rappresenta uno dei momenti di maggiore intensità narrativa e documentaria dell'intera opera, poiché lo scrittore, oltre a seguire da vicino le vicende dei propri personaggi, ricostruisce con grande ampiezza il quadro collettivo del contagio, delle sue conseguenze sociali e morali, e delle reazioni, spesso segnate da superstizione e violenza, come la caccia ai cosiddetti untori, cioè a presunti diffusori volontari del morbo, della popolazione milanese colpita dalla tragedia.</p>
+
+  <p class="titolo-capitolo">La Provvidenza e il tema degli umili</p>
+  <p>Un elemento centrale della visione del mondo espressa nel romanzo è il concetto di Provvidenza divina, già incontrato in un capitolo precedente di questo manuale a proposito della tragedia Adelchi: secondo la concezione religiosa di Manzoni, la storia umana, per quanto segnata da ingiustizie, sopraffazioni e sofferenze apparentemente prive di senso, è in realtà orientata, attraverso vie spesso misteriose e non immediatamente comprensibili agli uomini, verso un disegno più ampio di bene, del quale le vicende dei singoli individui, incluse le loro stesse sofferenze, costituiscono parte integrante.</p>
+  <p>Coerentemente con questa visione, Manzoni sceglie di porre al centro della propria narrazione non personaggi di rango elevato, secondo la tradizione consueta del romanzo storico europeo, ma due semplici popolani, Renzo e Lucia, dando così voce e dignità letteraria, per la prima volta in modo così sistematico nella letteratura italiana, alla condizione e alla prospettiva degli umili, cioè delle classi popolari prive di potere e di rilievo storico ufficiale, ma non per questo meno degne di essere rappresentate con partecipazione e rispetto.</p>
+
+  <p class="titolo-capitolo">Il finale e la saggezza di Renzo</p>
+  <p>Il romanzo si conclude, dopo il superamento della peste e delle numerose peripezie narrate, con il finalmente possibile matrimonio tra Renzo e Lucia, sopravvissuti entrambi al contagio e liberi ormai dalla minaccia rappresentata da Don Rodrigo, morto a sua volta di peste: le ultime pagine dell'opera sono dedicate a una riflessione, affidata alle parole dello stesso Renzo, sul senso complessivo delle vicende vissute, sintetizzata nella celebre formula secondo cui i guai spesso derivano da un comportamento colpevole, ma che anche quando non se ne ha colpa diretta, la fiducia in Dio e un comportamento onesto possono comunque addolcire le conseguenze delle avversità, senza tuttavia offrire mai alcuna garanzia di un'esistenza priva di sofferenza.</p>
+  <p>Questa conclusione, lontana da un facile ottimismo consolatorio ma insieme non priva di una sobria fiducia religiosa, riassume efficacemente l'equilibrio complessivo della visione manzoniana della vita, sospesa tra il riconoscimento realistico dell'ingiustizia e della sofferenza presenti nella storia umana e la fiducia, di natura squisitamente religiosa, in un disegno provvidenziale capace di darvi comunque un senso ultimo.</p>
+
+  <p class="titolo-capitolo">L'importanza storica del romanzo</p>
+  <p>I promessi sposi rappresentano, nel panorama della letteratura italiana dell'Ottocento, un'opera di fondamentale importanza sia sul piano artistico sia su quello storico-culturale: sul piano artistico, per la straordinaria capacità di Manzoni di fondere insieme rigore storico-documentario, approfondita analisi psicologica dei personaggi e una visione morale e religiosa coerente e meditata; sul piano storico-culturale, per il contributo decisivo offerto dal romanzo, anche grazie alla revisione linguistica della Quarantana già ricordata in questo capitolo, alla definizione di un modello di lingua italiana moderna, unitaria e comunicativa, in un momento storico, quello del Risorgimento, in cui la questione di una lingua nazionale condivisa assumeva un'importanza non soltanto letteraria ma anche direttamente civile e politica.</p>
+  <p>Proprio a un'altra grande e per molti versi assai diversa voce della poesia italiana dell'Ottocento, quella di Giacomo Leopardi, contemporaneo di Manzoni ma animato da una visione filosofica ed esistenziale profondamente differente da quella appena esaminata, saranno dedicati i prossimi capitoli di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 29 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let30.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

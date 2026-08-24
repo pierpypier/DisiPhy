@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 26</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 26: foscolo, i sonetti e i sepolcri -->
+<div id="capitolo-26-foscolo-sonetti-sepolcri" class="capitolo-storia">
+  <p class="titolo-capitolo">26 - Foscolo: i Sonetti e i Sepolcri - Classe 4</p>
+
+  <p class="titolo-capitolo">Dalla prosa del romanzo alla misura della lirica</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la vita di Ugo Foscolo e il suo romanzo giovanile, le Ultime lettere di Jacopo Ortis, ci si sofferma ora sulla produzione poetica del maturo Foscolo, che rappresenta il momento di più alta e compiuta elaborazione artistica dei temi già emersi, in forma più concitata e diretta, nel romanzo esaminato in precedenza: a differenza della prosa spezzata e febbrile dell'Ortis, la poesia lirica di Foscolo si caratterizza per un controllo formale assai più rigoroso, ereditato dalla lezione classicista già delineata in un capitolo precedente di questo manuale, capace tuttavia di veicolare, entro una misura formale sorvegliata, un'analoga intensità di riflessione esistenziale.</p>
+
+  <p class="titolo-capitolo">I Sonetti: struttura e temi principali</p>
+  <p>La produzione lirica matura di Foscolo comprende un ristretto ma densissimo gruppo di componimenti, tra cui spiccano innanzitutto alcuni sonetti, forma metrica di antichissima tradizione italiana già incontrata fin dai primi capitoli di questo manuale a proposito della Scuola siciliana, qui ripresa da Foscolo con straordinaria intensità espressiva: tra i sonetti più noti si ricordano quello dedicato al fratello Giovanni, morto suicida nel 1801, quello dedicato alla propria terra natale, l'isola greca di Zante già incontrata nel capitolo precedente, e quelli dedicati ai temi della sera e del sonno, intesi come immagini allusive e consolatorie della morte.</p>
+  <p>In questi componimenti, di dimensioni assai contenute rispetto alla vastità tematica affrontata, Foscolo condensa, con estrema densità linguistica ed espressiva, alcuni dei motivi centrali della propria intera riflessione poetica: il rimpianto per la patria e per gli affetti familiari perduti, l'ossessione per il tema della morte, vissuta con un'angoscia tutta moderna e priva di consolazione religiosa tradizionale, e la ricerca di immagini e situazioni capaci di offrire, sia pure temporaneamente, un sollievo a questa condizione di inquietudine esistenziale.</p>
+
+  <p class="titolo-capitolo">Il materialismo filosofico di Foscolo</p>
+  <p>Per comprendere pienamente la riflessione sulla morte che percorre l'intera opera poetica di Foscolo, occorre ricordare la particolare posizione filosofica dell'autore, formatosi alla scuola del pensiero materialista e sensista diffuso in ambito illuministico, secondo cui non esiste alcuna forma di sopravvivenza dell'anima dopo la morte del corpo, né alcuna provvidenza divina capace di dare un senso trascendente alla vicenda umana: per Foscolo, la morte rappresenta dunque un annientamento totale e definitivo della persona, privo di qualsiasi consolazione religiosa nel senso tradizionale del termine.</p>
+  <p>Proprio a partire da questa premessa filosofica, radicalmente diversa dalla concezione cristiana della morte come passaggio verso una vita ultraterrena già incontrata a più riprese in questo manuale, in particolare a proposito di Dante, Foscolo elabora la propria originale ricerca di forme alternative di consolazione, non più fondate sulla fede religiosa ma su valori laici, come la memoria, gli affetti familiari e civili, e la funzione stessa della poesia e dell'arte, capace di conservare nel tempo il ricordo delle grandi personalità e delle grandi vicende umane.</p>
+
+  <p class="titolo-capitolo">La genesi dei Sepolcri: l'editto napoleonico di Saint-Cloud</p>
+  <p>L'opera poetica più importante e più celebre di Foscolo, il carme intitolato Dei Sepolcri, composto e pubblicato nel 1807, nasce da un'occasione storica precisa: l'estensione all'Italia, avvenuta nel 1806, di un editto emanato in Francia dal governo napoleonico a Saint-Cloud, che imponeva nuove norme igieniche in materia di sepoltura, tra cui l'obbligo di seppellire i defunti in cimiteri collocati fuori dalle mura cittadine, con tombe anonime e uniformi, in nome di un principio di uguaglianza civile anche di fronte alla morte, in contrasto con la tradizionale consuetudine, soprattutto per le personalità più illustri, di essere sepolti all'interno delle chiese cittadine, con monumenti funebri individuali e spesso di grande valore artistico.</p>
+  <p>Questa disposizione legislativa, discussa animatamente tra gli intellettuali italiani del tempo, fu l'occasione immediata che spinse Foscolo a comporre il proprio carme, dedicato all'amico Ippolito Pindemonte, anch'egli poeta e favorevole, in un primo momento, alle posizioni contrarie alla nuova legislazione, un'opera che tuttavia, muovendo da questo specifico spunto polemico, si allarga ben presto a una riflessione assai più ampia e universale sul significato stesso della morte, della memoria e della funzione della poesia.</p>
+
+  <p class="titolo-capitolo">La struttura argomentativa del carme</p>
+  <p>Il carme Dei Sepolcri, composto in versi endecasillabi sciolti per un totale di circa trecento versi, si presenta come un unico e ininterrotto flusso argomentativo, privo di divisioni interne esplicite, che si sviluppa attraverso una successione di ampie sezioni tematiche, ciascuna dedicata all'approfondimento di un diverso aspetto della riflessione generale sul valore delle tombe e della memoria dei defunti.</p>
+  <p>Nella prima parte del componimento, Foscolo affronta direttamente la questione dell'utilità delle tombe per i vivi, sostenendo, in aperta polemica con la nuova legislazione napoleonica, che pur non potendo esse offrire alcun reale beneficio ai defunti stessi, secondo la propria già ricordata concezione materialistica della morte, le tombe abbiano tuttavia un'importante funzione civile e affettiva per i vivi, poiché costituiscono un luogo concreto in cui alimentare e conservare nel tempo il ricordo dei propri cari e delle grandi personalità del passato.</p>
+
+  <p class="titolo-capitolo">Le tombe come memoria civile: Santa Croce</p>
+  <p>Nella parte centrale del carme, Foscolo sviluppa in modo particolarmente suggestivo il tema della funzione civile della memoria dei grandi uomini, evocando la basilica fiorentina di Santa Croce, che custodisce le tombe di importanti personalità della storia e della cultura italiana già incontrate in questo manuale, come Machiavelli e Michelangelo, e presentando la visita a questi sepolcri illustri come un'esperienza capace di suscitare nel visitatore un sentimento di continuità ideale con le grandi glorie del passato nazionale, e di infondere, per questa via, un rinnovato slancio verso le più alte imprese civili e patriottiche.</p>
+  <p>In questa sezione del carme, particolarmente sentita in un momento storico segnato, come si è visto a proposito di Alfieri e dello stesso Foscolo, dall'aspirazione a un futuro riscatto nazionale dell'Italia ancora politicamente divisa e in gran parte dominata da potenze straniere, la riflessione sulle tombe si carica di un'esplicita valenza patriottica e risorgimentale, che farà dei Sepolcri uno dei testi più letti e amati dalle successive generazioni di patrioti italiani nel corso dell'Ottocento.</p>
+
+  <p class="titolo-capitolo">Il valore eternatore della poesia</p>
+  <p>La riflessione del carme raggiunge il proprio culmine nella parte conclusiva, dedicata al tema della funzione eternatrice della poesia, cioè della sua capacità di conservare e tramandare nel tempo, ben oltre il limite della memoria diretta e delle stesse tombe fisiche, destinate anch'esse, come ogni cosa materiale, a un inevitabile disfacimento nel corso dei secoli, il ricordo delle grandi imprese e delle grandi personalità umane, affidandolo alla parola scritta e cantata dai poeti.</p>
+  <p>A questo proposito, Foscolo evoca, nelle ultime sezioni del carme, l'esempio della civiltà greca antica, e in particolare della poesia omerica, capace di conservare, attraverso il racconto poetico, la memoria di eroi e di città distrutte da secoli, come la stessa Troia, dimostrando così, con questo esempio storico di lunghissima durata, come solo la poesia possieda un potere di conservazione della memoria umana superiore a quello di qualsiasi monumento materiale, per quanto imponente e duraturo.</p>
+  <p><em>Approfondimento:</em> il concetto di poesia come strumento eternatore, capace di sconfiggere l'oblio e il disfacimento a cui è invece condannata ogni realtà materiale, rappresenta uno dei nuclei filosofici più originali dell'intera opera foscoliana, e permette di comprendere come, pur muovendo da una concezione della morte radicalmente negativa e priva di consolazione religiosa, Foscolo sia riuscito a elaborare un sistema di valori laici, fondato sulla memoria, sugli affetti civili e sulla funzione stessa dell'arte, capace di restituire un senso, per quanto non trascendente, all'esistenza e all'agire umano.</p>
+
+  <p class="titolo-capitolo">Lo stile dei Sepolcri</p>
+  <p>Sul piano stilistico, Dei Sepolcri rappresenta un vertice assoluto della poesia italiana neoclassica, per la densità concettuale del proprio linguaggio, la sapiente costruzione sintattica, spesso caratterizzata da lunghi periodi che si dispiegano attraverso continue subordinate senza mai perdere di chiarezza argomentativa, e per l'uso misurato ma efficacissimo di immagini e riferimenti alla mitologia e alla storia classica, secondo un modello di compostezza formale che riprende, elevandola a straordinari esiti espressivi, la lezione neoclassica già delineata in un capitolo precedente di questo manuale.</p>
+  <p>Questa capacità di conciliare, entro un'unica opera, il rigore formale dell'eredità classicista e un'intensità di pensiero e di sentimento del tutto moderna, fa dei Sepolcri, insieme ai Sonetti già esaminati in questo capitolo, il vertice della produzione poetica di Foscolo, e uno dei testi più importanti dell'intera letteratura italiana tra Sette e Ottocento, capace di preparare, attraverso la propria stessa complessità, il terreno per la successiva fioritura della sensibilità romantica, di cui si tratterà nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 26 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let27.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

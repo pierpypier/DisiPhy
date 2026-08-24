@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 30</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 30: giacomo leopardi, la vita e il pensiero -->
+<div id="capitolo-30-leopardi-vita-pensiero" class="capitolo-storia">
+  <p class="titolo-capitolo">30 - Giacomo Leopardi: la vita e il pensiero - Classe 4</p>
+
+  <p class="titolo-capitolo">Recanati e la famiglia Leopardi</p>
+  <p>Dopo aver concluso, nei capitoli precedenti, il percorso dedicato ad Alessandro Manzoni, ci si rivolge ora alla seconda grande voce della poesia italiana dell'Ottocento, Giacomo Leopardi, figura per molti versi isolata rispetto al movimento romantico ufficiale già delineato in un capitolo precedente di questo manuale, e portatrice di una riflessione filosofica ed esistenziale di straordinaria originalità e coerenza: Leopardi nacque a Recanati, piccola cittadina delle Marche allora appartenente allo Stato Pontificio, il 29 giugno del 1798, primogenito di una famiglia della piccola nobiltà provinciale.</p>
+  <p>Il padre, il conte Monaldo Leopardi, uomo di cultura ma di orientamento politico e religioso fermamente conservatore, e la madre, la marchesa Adelaide Antici, donna di rigidissima e austera osservanza religiosa, improntarono l'educazione familiare a una disciplina severa e a un controllo pressoché totale sulla vita quotidiana dei figli, in un ambiente domestico che il giovane Giacomo avvertì fin da presto come angusto e soffocante, sia sul piano intellettuale sia su quello affettivo.</p>
+
+  <p class="titolo-capitolo">Gli anni della formazione: lo studio matto e disperatissimo</p>
+  <p>Dotato di straordinarie capacità intellettuali, Leopardi ebbe accesso, fin dall'infanzia, alla vastissima biblioteca paterna, che gli permise di intraprendere, sotto la guida di alcuni precettori e in gran parte da autodidatta, un percorso di formazione culturale di eccezionale ampiezza e precocità: già in giovanissima età apprese perfettamente il latino e il greco antico, oltre all'ebraico e a diverse lingue moderne, dedicandosi con straordinaria intensità allo studio della filologia classica, della storia, della filosofia e delle scienze.</p>
+  <p>Questo periodo di studio, che lo stesso Leopardi definì in età più matura con l'espressione di studio matto e disperatissimo, condotto per anni con un'applicazione ininterrotta e priva di qualsiasi svago o attività fisica adeguata, ebbe conseguenze gravi e permanenti sulla salute del poeta, minando irrimediabilmente la sua costituzione fisica già delicata, e provocando la curvatura della colonna vertebrale e i gravi problemi alla vista che lo accompagnarono per il resto della propria esistenza, contribuendo non poco ad alimentare quel senso di isolamento ed esclusione dalla vita che caratterizzerà profondamente la sua riflessione poetica e filosofica.</p>
+
+  <p class="titolo-capitolo">L'amicizia epistolare con Pietro Giordani</p>
+  <p>Un momento di grande importanza nella maturazione intellettuale del giovane Leopardi fu l'avvio, nel 1817, di un fitto scambio epistolare con Pietro Giordani, letterato già incontrato in un capitolo precedente di questo manuale a proposito della polemica classico-romantica, il quale, pur mantenendo posizioni di orientamento classicista in quel dibattito, seppe riconoscere fin da subito lo straordinario talento del giovane recanatese, incoraggiandolo con calore e affetto a coltivare la propria vocazione letteraria, e sostenendolo nel proprio desiderio, a lungo contrastato dalla famiglia, di poter lasciare Recanati per un ambiente culturale più stimolante.</p>
+  <p>Questa amicizia, che Leopardi visse con grande intensità emotiva, rappresentò per il giovane poeta una delle poche autentiche occasioni di dialogo intellettuale paritario in un periodo di vita altrimenti segnato da un profondo isolamento, alimentando in lui la consapevolezza, sempre più dolorosa, della distanza tra le proprie straordinarie capacità intellettuali e le ristrette possibilità di realizzazione personale offerte dall'ambiente familiare e provinciale in cui si trovava a vivere.</p>
+
+  <p class="titolo-capitolo">La crisi giovanile e il passaggio dall'erudizione alla poesia</p>
+  <p>Attorno al 1819, Leopardi attraversò un momento di profonda crisi personale, aggravata anche da un tentativo fallito di fuga da Recanati, scoperto e impedito dal padre, e da un aggravarsi delle proprie condizioni di salute, in particolare della vista, che per un periodo gli impedì quasi del tutto la lettura e lo studio: fu proprio in questo momento di sofferenza fisica e psicologica che Leopardi maturò quello che la critica definisce il passaggio dall'erudizione al bello, cioè un progressivo spostamento del proprio interesse intellettuale dagli studi filologici ed eruditi della prima giovinezza verso la creazione poetica e la riflessione filosofica in senso proprio.</p>
+  <p>A questo stesso periodo risale anche l'inizio della composizione dello Zibaldone di pensieri, un vastissimo diario intellettuale, rimasto inedito fino a dopo la morte del poeta, nel quale Leopardi annotò, tra il 1817 e il 1832, riflessioni filosofiche, appunti di poetica, osservazioni linguistiche ed erudite, costituendo un documento di eccezionale importanza per ricostruire, giorno per giorno, la progressiva elaborazione del pensiero leopardiano.</p>
+
+  <p class="titolo-capitolo">Il pessimismo storico: la natura benigna e il danno della ragione</p>
+  <p>Nella prima fase della propria riflessione filosofica, sviluppata soprattutto nel corso degli anni Venti dell'Ottocento, Leopardi elaborò una concezione nota alla critica come pessimismo storico, fondata su un'idea, non priva di suggestioni tratte dal pensiero del filosofo francese Jean-Jacques Rousseau, secondo cui l'infelicità dell'uomo non sarebbe una condizione originaria e insuperabile, ma il risultato di un preciso processo storico: gli antichi, secondo questa prospettiva, vivevano in un rapporto più immediato e armonioso con la natura, sorretti da illusioni vitali, come la gloria, l'amor di patria e le speranze, capaci di rendere sopportabile e persino gioiosa l'esistenza, nonostante la sofferenza fosse comunque presente.</p>
+  <p>Con il progressivo sviluppo della civiltà e in particolare con l'affermarsi della ragione moderna, capace di svelare razionalmente la vanità e l'infondatezza di tali illusioni, l'uomo moderno si sarebbe invece progressivamente allontanato dalla natura, perdendo la capacità di credere alle illusioni consolatorie proprie degli antichi, e cadendo per questo in una condizione di infelicità e di noia assai più radicale e priva di sollievo rispetto a quella sperimentata dalle epoche precedenti: in questa fase del proprio pensiero, dunque, la natura viene ancora concepita da Leopardi come originariamente benigna verso l'uomo, mentre è la ragione, disvelando la vanità delle illusioni, a rendersi responsabile dell'infelicità moderna.</p>
+
+  <p class="titolo-capitolo">La teoria del piacere</p>
+  <p>Strettamente connessa a questa riflessione storica è la cosiddetta teoria del piacere, elaborata da Leopardi soprattutto nelle pagine dello Zibaldone, secondo cui l'uomo, per propria natura, desidera un piacere infinito, sia per intensità sia per durata, che tuttavia nessun piacere concreto e reale, per sua stessa natura finito e limitato, può mai effettivamente soddisfare: da questo scarto strutturale e insuperabile tra il desiderio infinito dell'uomo e la finitezza di ogni possibile appagamento concreto deriva, secondo Leopardi, la condizione permanente di insoddisfazione e di noia che caratterizza l'esistenza umana, ben oltre le singole circostanze storiche o biografiche.</p>
+  <p>Proprio in relazione a questa teoria, Leopardi attribuisce un ruolo fondamentale all'immaginazione e a ciò che egli definisce il vago e indefinito, cioè quella capacità, propria soprattutto dell'infanzia e della gioventù e più diffusa presso gli antichi che non presso i moderni, di percepire la realtà attraverso immagini non nettamente definite nei propri contorni, come la lontananza, l'infinito spaziale e temporale, l'incertezza del ricordo, capaci di alimentare l'illusione di un piacere non ancora delimitato e dunque, temporaneamente, non ancora deluso dal confronto con la realtà finita.</p>
+  <p><em>Approfondimento:</em> secondo questa teoria, anche la memoria e il ricordo, in particolare quello legato agli anni dell'infanzia e della prima giovinezza, svolgono per Leopardi una funzione poetica ed esistenziale di grande importanza, poiché permettono di rievocare, attraverso la lontananza temporale, quel senso di indefinita possibilità e di illusione vitale che l'esperienza diretta e presente della realtà, sempre delimitata e finita, non è più in grado di offrire.</p>
+
+  <p class="titolo-capitolo">Il pessimismo cosmico: la natura matrigna</p>
+  <p>A partire dalla fine degli anni Venti e soprattutto nel corso degli anni Trenta dell'Ottocento, il pensiero di Leopardi conobbe un ulteriore e decisivo sviluppo, verso quella che la critica definisce concezione di pessimismo cosmico: in questa fase più matura della propria riflessione, Leopardi abbandona progressivamente l'idea di un'infelicità dovuta a un processo storico di allontanamento dalla natura, per giungere alla convinzione assai più radicale che la sofferenza sia una condizione originaria e strutturale, propria non soltanto dell'uomo ma di ogni essere vivente, indipendentemente dall'epoca storica considerata.</p>
+  <p>In questa nuova prospettiva, la natura stessa, lungi dall'essere una madre benevola e provvidente verso le proprie creature, come Leopardi aveva in parte ancora supposto nella fase del pessimismo storico, viene ora concepita come una forza cieca, indifferente e sostanzialmente ostile al destino di felicità dei singoli individui, interessata soltanto alla conservazione e riproduzione delle specie viventi nel loro complesso, e del tutto incurante della sofferenza dei singoli esseri che la compongono: da questa concezione deriva la celebre immagine, ricorrente in numerosi scritti del periodo, della natura non più come madre ma come matrigna dell'umanità e di ogni creatura vivente.</p>
+
+  <p class="titolo-capitolo">La solidarietà tra gli uomini: la fase finale del pensiero</p>
+  <p>Nell'ultima fase della propria riflessione, corrispondente agli anni finali della vita del poeta, trascorsi come si vedrà soprattutto a Napoli, il pensiero di Leopardi conobbe un ulteriore sviluppo, orientato verso l'elaborazione di una possibile, per quanto limitata, risposta collettiva alla condizione di sofferenza universale appena descritta: di fronte all'indifferenza e all'ostilità della natura verso il genere umano, Leopardi giunge a teorizzare la necessità di una solidarietà attiva e consapevole tra gli uomini, capace di sostituire gli sterili e illusori conflitti reciproci con un'alleanza comune contro la comune e reale nemica rappresentata dalla natura stessa.</p>
+  <p>Questa riflessione finale, sviluppata soprattutto nel grande componimento poetico noto come La ginestra, di cui si tratterà più diffusamente in un capitolo successivo di questo manuale dedicato ai Canti, rappresenta l'esito più maturo e per molti versi più costruttivo dell'intero percorso filosofico di Leopardi, capace di trarre, dalla lucida e per nulla consolatoria consapevolezza della condizione umana, non una rassegnazione passiva, ma un appello alla dignità e alla solidarietà civile tra gli uomini.</p>
+
+  <p class="titolo-capitolo">Gli ultimi anni: Firenze, Antonio Ranieri e Napoli</p>
+  <p>Dopo alcuni soggiorni giovanili in diverse città italiane, tra cui Roma, Milano e Bologna, sempre segnati da un senso di delusione rispetto alle proprie aspettative intellettuali, Leopardi trascorse un periodo significativo della propria vita a Firenze, tra la fine degli anni Venti e i primi anni Trenta dell'Ottocento, dove strinse amicizia con il giovane intellettuale napoletano Antonio Ranieri, destinato a diventare il più fedele compagno degli ultimi anni della sua vita, assistendolo con costante dedizione nonostante le sempre più precarie condizioni di salute del poeta.</p>
+  <p>Nel 1833 Leopardi si trasferì, insieme allo stesso Ranieri, a Napoli, dove trascorse gli ultimi anni della propria esistenza, alternando periodi trascorsi in città a soggiorni nella vicina località di Torre del Greco, alle pendici del Vesuvio, luogo che ispirerà direttamente, come si vedrà, la già citata Ginestra: qui Leopardi morì il 14 giugno del 1837, poco più che trentottenne, colto dalle conseguenze di un attacco della grave epidemia di colera che in quello stesso anno colpì duramente la città partenopea, aggravate dalle già precarie condizioni di salute che lo avevano accompagnato per tutta la vita.</p>
+
+  <p class="titolo-capitolo">L'eredità filosofica e poetica di Leopardi</p>
+  <p>Il pensiero di Leopardi, per la lucidità e il rigore con cui affronta il tema della sofferenza umana, della vanità delle illusioni e della condizione dell'uomo di fronte a un universo indifferente al proprio destino, occupa un posto del tutto singolare nel panorama della cultura italiana ed europea dell'Ottocento, distante sia dall'ottimismo religioso e provvidenziale di Manzoni, già esaminato nei capitoli precedenti di questo manuale, sia dalle tendenze più genericamente sentimentali ed evasive di parte della cultura romantica coeva.</p>
+  <p>Proprio a partire da questo impianto filosofico, di straordinaria coerenza e profondità, si potrà comprendere pienamente, come si vedrà nei prossimi due capitoli di questo manuale, la produzione poetica dei Canti e quella in prosa delle Operette morali, nelle quali Leopardi seppe tradurre in forme artistiche di altissimo livello la propria riflessione sull'esistenza umana, senza mai scadere in un'arida esposizione teorica, ma dando sempre voce, attraverso il linguaggio della poesia e della prosa filosofica, all'intera gamma delle emozioni e delle domande più profonde dell'animo umano.</p>
+</div>
+<!-- fine capitolo letteratura 30 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let31.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>
