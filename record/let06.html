@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 06</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 06: dante alighieri, vita e opere minori -->
+<div id="capitolo-06-dante-vita-opere-minori" class="capitolo-storia">
+  <p class="titolo-capitolo">06 - Dante Alighieri: la vita e le opere minori - Classe 3</p>
+
+  <p class="titolo-capitolo">La giovinezza fiorentina</p>
+  <p>Dopo aver ripercorso, nei capitoli precedenti, le principali esperienze poetiche delle Origini, dalla letteratura religiosa alla Scuola siciliana, dal Dolce Stil Novo alla poesia comico-realistica, si giunge ora alla figura che porterà a compimento e insieme supererà tutte queste tradizioni: Dante Alighieri, nato a Firenze tra la fine di maggio e l'inizio di giugno del 1265, da una famiglia di piccola nobiltà di orientamento guelfo, non particolarmente ricca ma di antico lignaggio.</p>
+  <p>Rimasto orfano di madre in giovane età, Dante ricevette una solida formazione culturale, che spaziava dalla retorica alla filosofia, dalla teologia alle scienze del tempo, e che secondo un'antica tradizione, non priva di incertezze sul piano documentario, sarebbe stata favorita anche dal contatto con Brunetto Latini, uomo politico e letterato fiorentino di cultura enciclopedica; sul piano affettivo, la vita di Dante fu segnata in modo decisivo dall'incontro, avvenuto quando il poeta aveva nove anni, con una fanciulla fiorentina identificata dalla tradizione critica con Beatrice Portinari, incontro che avrebbe determinato la nascita di un amore destinato a diventare il fulcro della sua prima grande opera, la Vita nuova.</p>
+
+  <p class="titolo-capitolo">L'impegno politico e l'esilio</p>
+  <p>Come era consuetudine per i cittadini fiorentini che intendessero partecipare attivamente alla vita pubblica del Comune, Dante si iscrisse a una delle corporazioni professionali, l'Arte dei Medici e degli Speziali, e intraprese una carriera politica che lo portò, nel 1300, a ricoprire la carica di priore, la più alta magistratura della Firenze comunale, in un periodo in cui la città era attraversata da profonde divisioni interne alla stessa fazione guelfa, divisa tra la fazione dei Guelfi Bianchi, a cui Dante apparteneva, e quella dei Guelfi Neri.</p>
+  <p>La situazione precipitò nel 1301, quando l'intervento militare e politico di Carlo di Valois, chiamato a Firenze con l'appoggio di papa Bonifacio VIII, favorì l'ascesa al potere dei Guelfi Neri e l'allontanamento violento dei loro avversari: Dante, che si trovava in quei mesi lontano dalla città in qualità di ambasciatore presso la Curia romana, fu condannato in contumacia nel 1302, con l'accusa di corruzione e altri reati politici, alla pena dell'esilio e, in caso di mancato pagamento di una forte ammenda, anche alla condanna a morte in caso di cattura: da quel momento Dante non fece mai più ritorno nella sua città natale.</p>
+
+  <p class="titolo-capitolo">Gli anni dell'esilio e la morte</p>
+  <p>Ebbe così inizio per Dante un lungo periodo di esilio, trascorso peregrinando tra diverse corti e città dell'Italia centro-settentrionale, ospite di vari signori, tra cui si ricordano i Malaspina in Lunigiana e, soprattutto negli ultimi anni, Cangrande della Scala a Verona, presso la cui corte il poeta trovò per qualche tempo un rifugio più stabile: proprio l'esperienza dolorosa dell'esilio, con il suo carico di umiliazioni e di riflessione sul senso della giustizia terrena e divina, influenzerà profondamente la sua produzione successiva, in particolare la Commedia, che sarà oggetto dei prossimi capitoli di questo manuale.</p>
+  <p>Gli ultimi anni della vita di Dante si svolsero a Ravenna, presso la corte di Guido Novello da Polenta, dove il poeta poté godere di un ambiente più sereno e circondarsi anche dei propri figli: qui Dante morì nella notte tra il 13 e il 14 settembre del 1321, probabilmente a causa della malaria contratta durante un viaggio diplomatico a Venezia, e qui tuttora si trova la sua tomba, nonostante i ripetuti tentativi, nel corso dei secoli, di riportarne le spoglie a Firenze.</p>
+
+  <p class="titolo-capitolo">La Vita nuova: struttura e contenuto</p>
+  <p>La prima grande opera di Dante è la Vita nuova, composta presumibilmente tra il 1293 e il 1295, quando il poeta aveva circa trent'anni: si tratta di un'opera dalla struttura del tutto originale nel panorama letterario del tempo, chiamata prosimetro, poiché alterna parti in prosa, di carattere narrativo e di commento, a componimenti poetici, in prevalenza sonetti e canzoni, scritti in anni precedenti e qui raccolti e reinterpretati alla luce di un disegno unitario.</p>
+  <p>Il libro racconta, in forma insieme autobiografica e simbolica, la storia dell'amore del poeta per Beatrice, dal primo incontro nell'infanzia fino alla morte prematura della donna, avvenuta secondo la tradizione critica nel 1290, passando attraverso le diverse fasi di questo sentimento: l'iniziale turbamento fisico e psicologico provocato dalla vista dell'amata, la successiva elaborazione di una concezione più spirituale e quasi religiosa dell'amore, erede della lezione di Guinizzelli, fino alla trasfigurazione di Beatrice in una figura di salvezza, capace di orientare l'anima del poeta verso il bene.</p>
+  <p><em>Approfondimento:</em> la Vita nuova si chiude con l'annuncio di un proposito ambizioso, quello di non voler più scrivere di Beatrice finché non fosse stato in grado di farlo in modo degno della donna amata: questa dichiarazione viene tradizionalmente interpretata dalla critica come un primo, embrionale annuncio del futuro capolavoro dantesco, la Commedia, nella quale Beatrice tornerà a svolgere un ruolo fondamentale come guida del poeta nel Paradiso.</p>
+
+  <p class="titolo-capitolo">Le Rime: la produzione lirica minore</p>
+  <p>Accanto alla Vita nuova, che raccoglie soltanto una parte della sua produzione giovanile, Dante compose nel corso della vita un consistente numero di componimenti lirici indipendenti, tramandati con il titolo convenzionale di Rime, e comprendenti sonetti e canzoni di argomento vario: testi ancora vicini alla tradizione stilnovistica, componimenti di argomento filosofico e dottrinale, e le cosiddette rime petrose, un gruppo di testi caratterizzati da un linguaggio aspro e da immagini di durezza minerale, dedicati a una donna insensibile all'amore del poeta, che rappresentano un'importante eccezione rispetto al tono generalmente più armonioso della lirica dantesca.</p>
+
+  <p class="titolo-capitolo">Il Convivio: un'enciclopedia del sapere in volgare</p>
+  <p>Negli anni immediatamente successivi all'inizio dell'esilio, tra il 1304 e il 1307 circa, Dante intraprese la composizione del Convivio, un'opera in prosa concepita come un commento filosofico e allegorico ad alcune canzoni dottrinali già scritte dal poeta: il titolo allude all'immagine di un banchetto di sapienza, che Dante intendeva imbandire per tutti coloro che, non conoscendo il latino, erano di fatto esclusi dall'accesso diretto alla cultura filosofica del tempo.</p>
+  <p>L'opera, rimasta incompiuta dopo la stesura di quattro trattati su un progetto iniziale che ne prevedeva quindici, testimonia da un lato il vasto e articolato interesse di Dante per la filosofia, in particolare per il pensiero aristotelico rielaborato dalla tradizione scolastica, e dall'altro la sua crescente fiducia nelle possibilità del volgare come lingua adatta anche alla trattazione di argomenti filosofici elevati, una convinzione che troverà la sua piena realizzazione proprio nella Commedia.</p>
+
+  <p class="titolo-capitolo">Il De vulgari eloquentia: la riflessione sulla lingua</p>
+  <p>Contemporaneamente al Convivio, Dante compose in lingua latina un trattato dedicato specificamente alla questione della lingua volgare, il De vulgari eloquentia, anch'esso rimasto incompiuto: in quest'opera il poeta passa in rassegna i principali volgari parlati nella penisola italiana, valutandone criticamente pregi e difetti, alla ricerca di un ideale volgare illustre, cioè di una lingua letteraria che, pur non identificandosi con nessun dialetto parlato in una specifica regione, ne rappresenti idealmente la sintesi più nobile ed elevata.</p>
+  <p>Nel trattato Dante affronta inoltre il tema degli stili e dei generi poetici più adatti al volgare illustre, individuando nella canzone, tra le forme metriche disponibili, quella più nobile e complessa, adatta alla trattazione dei temi più elevati, come le armi, l'amore e la virtù, secondo una gerarchia degli argomenti e degli stili che rispecchia da vicino la cultura retorica del tempo.</p>
+
+  <p class="titolo-capitolo">Il De Monarchia e le altre opere latine</p>
+  <p>Tra le opere latine di Dante occupa un posto di rilievo anche il De Monarchia, trattato di argomento politico composto probabilmente negli anni immediatamente precedenti la stesura del Paradiso, nel quale il poeta sostiene la necessità di un potere temporale universale, l'Impero, autonomo e indipendente dall'autorità spirituale del Papato, in una prospettiva di netta separazione tra i due poteri, ciascuno dei quali riceverebbe la propria legittimità direttamente da Dio, senza intermediazione reciproca.</p>
+  <p>Completano il quadro delle opere minori dantesche un insieme di lettere in lingua latina, indirizzate a personaggi politici e religiosi del tempo e utili anche per ricostruire le vicende biografiche del poeta, oltre ad alcune egloghe in latino, composte negli ultimi anni di vita in risposta a un dotto bolognese, e un breve trattato di argomento scientifico, la Questio de aqua et terra, testimonianza ulteriore della vastità degli interessi culturali di Dante.</p>
+
+  <p class="titolo-capitolo">Verso la Commedia</p>
+  <p>L'insieme delle opere minori qui esaminate mostra con chiarezza la straordinaria varietà di interessi di Dante, capace di muoversi con identica competenza tra poesia lirica, filosofia, linguistica e teoria politica, e permette di comprendere come il poeta sia giunto, negli anni della maturità e dell'esilio, a concepire un'opera capace di racchiudere in sé tutte queste diverse componenti del proprio sapere: la Commedia, alla cui genesi, struttura e significato allegorico sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 06 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let07.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

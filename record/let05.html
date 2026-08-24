@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 05</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 05: la poesia comico-realistica e cecco angiolieri -->
+<div id="capitolo-05-poesia-comico-realistica" class="capitolo-storia">
+  <p class="titolo-capitolo">05 - La poesia comico-realistica: Cecco Angiolieri - Classe 3</p>
+
+  <p class="titolo-capitolo">Una corrente alternativa allo Stilnovo</p>
+  <p>Accanto alla poesia d'amore di ispirazione cortese e filosofica che si è ripercorsa nei capitoli precedenti, dalla Scuola siciliana fino al Dolce Stil Novo di Guinizzelli e Cavalcanti, si sviluppò nel corso del Duecento, in parte parallelamente e in parte in aperta reazione a essa, un diverso filone poetico, comunemente definito poesia comico-realistica o poesia giocosa, che si proponeva scopi e utilizzava toni radicalmente opposti rispetto alla lirica aulica coeva.</p>
+  <p>Se la poesia stilnovistica elaborava un linguaggio elevato e un'immagine idealizzata della donna e dell'amore, la poesia comico-realistica scelse invece di rappresentare, con toni scherzosi, satirici e volutamente irriverenti, gli aspetti più concreti e talvolta più bassi della vita quotidiana, come i rapporti con il denaro, il gioco d'azzardo, la taverna, i conflitti familiari o le delusioni amorose vissute in chiave tutt'altro che idealizzata, offrendo così un contrappunto realistico e dissacrante alla poesia aulica del tempo.</p>
+
+  <p class="titolo-capitolo">Origini e caratteri del genere giocoso</p>
+  <p>Le radici di questo genere affondano in parte nella tradizione goliardica medievale, cioè nella poesia satirica e parodistica composta in ambiente studentesco e clericale, e in parte in una consapevole volontà di parodia nei confronti dei modelli poetici più prestigiosi, siciliani, guittoniani e stilnovistici, di cui la poesia comica riprendeva spesso le forme metriche, in particolare il sonetto, rovesciandone però sistematicamente i contenuti e il registro linguistico.</p>
+  <p>Dal punto di vista stilistico, la poesia comico-realistica si caratterizza per l'uso di un lessico quotidiano e talvolta volutamente triviale, per il ricorso frequente all'iperbole e al paradosso a fini umoristici, e per una forte componente autobiografica e teatrale, con il poeta che costruisce spesso di se stesso una maschera letteraria coerente, fatta di difetti, vizi e insoddisfazioni, più che un ritratto realistico in senso stretto.</p>
+
+  <p class="titolo-capitolo">Rustico Filippi e Folgore da San Gimignano</p>
+  <p>Tra i primi rappresentanti di questo filone si ricorda Rustico Filippi, poeta fiorentino attivo nella seconda metà del Duecento, autore sia di rime d'amore in stile cortese sia di sonetti burleschi rivolti contro bersagli personali, caratterizzati da un linguaggio aggressivo e da un uso sistematico dell'invettiva e della caricatura fisica e morale dei personaggi presi di mira.</p>
+  <p>Attivo tra la fine del Duecento e i primi decenni del Trecento fu invece Folgore da San Gimignano, ricordato soprattutto per due cicli di sonetti costruiti secondo uno schema enumerativo, l'uno dedicato ai mesi dell'anno, l'altro ai giorni della settimana, nei quali il poeta immagina di descrivere, per ciascuna unità di tempo, i piaceri e i passatempi tipici della vita di una brigata di giovani nobili, tra banchetti, cacce, tornei e divertimenti cortesi, in una rappresentazione gioiosa e idealizzata della vita mondana.</p>
+
+  <p class="titolo-capitolo">Cecco Angiolieri: vita e personalità</p>
+  <p>Il maggiore e più originale interprete della poesia comico-realistica fu tuttavia Cecco Angiolieri, nato a Siena intorno al 1260 da una famiglia agiata, e morto nella stessa città entro il 1312 circa: la sua vita, per quanto se ne può ricostruire attraverso documenti d'archivio, fu segnata da difficoltà economiche, nonostante l'origine familiare benestante, da una condotta turbolenta, testimoniata anche da alcuni episodi di violenza e da pene pecuniarie subite dal poeta, e da un rapporto conflittuale con l'ambiente familiare, in particolare con il padre.</p>
+  <p>È importante sottolineare come, secondo l'orientamento prevalente della critica moderna, il ritratto che Cecco offre di sé nei propri sonetti, fatto di miseria, dissolutezza, pigrizia e conflitto perenne con la famiglia, vada considerato non tanto come un resoconto autobiografico attendibile, quanto come una vera e propria maschera letteraria, costruita ad arte secondo le convenzioni proprie del genere comico-realistico, in cui l'iperbole e l'autoironia sono strumenti espressivi consapevoli più che testimonianze dirette di fatti realmente accaduti.</p>
+
+  <p class="titolo-capitolo">I temi della poesia di Cecco: denaro, gioco, conflitti familiari</p>
+  <p>Nella produzione poetica di Cecco Angiolieri, interamente affidata alla forma del sonetto, ricorrono con insistenza alcuni temi tipici del genere: il rimpianto per la mancanza di denaro, presentato spesso come l'unico vero bene desiderabile, capace perfino di sostituire l'amore stesso nella scala dei valori del poeta; la passione per il gioco d'azzardo, fonte di continue perdite e nuove miserie; il difficile rapporto con il padre, avaro e severo, di cui il poeta arriva a immaginare provocatoriamente e in tono paradossale perfino la morte, pur di poterne ereditare i beni.</p>
+  <p>Accanto a questi temi trova largo spazio anche l'amore, ma vissuto in una prospettiva completamente rovesciata rispetto a quella stilnovistica: la donna amata da Cecco, tradizionalmente identificata dai commentatori con il nome fittizio di Becchina, non è affatto una figura angelicata e distante, ma una popolana capricciosa e talvolta ostile, con la quale il poeta intrattiene un rapporto fatto di litigi, gelosie e continue insoddisfazioni, in aperta parodia dell'immagine idealizzata della donna propria della lirica aulica.</p>
+
+  <p class="titolo-capitolo">Lo stile: parodia, iperbole e registro basso</p>
+  <p>Sul piano stilistico, la poesia di Cecco Angiolieri si distingue per un uso sapiente del paradosso e dell'iperbole, tecniche attraverso cui il poeta amplifica in modo grottesco e volutamente eccessivo i propri difetti, i propri desideri o le proprie disgrazie, generando un effetto comico basato sul contrasto tra la gravità apparente delle affermazioni e la loro evidente esagerazione irreale.</p>
+  <p>Cecco impiega inoltre con grande efficacia un lessico concreto e quotidiano, lontano dal linguaggio filosofico e raffinato degli Stilnovisti, e costruisce spesso i propri sonetti attorno a un'idea centrale ribadita e intensificata di verso in verso, secondo una tecnica compositiva che rende i suoi testi immediatamente riconoscibili per la loro efficacia ritmica e la loro vivacità espressiva.</p>
+  <p><em>Esempio:</em> uno dei procedimenti più caratteristici di Cecco consiste nell'immaginare situazioni palesemente impossibili o assurde, come il desiderio di vedere sconvolto l'intero ordine naturale e sociale del mondo, per esprimere in forma iperbolica e paradossale il proprio stato di insofferenza verso la realtà quotidiana, un procedimento che rivela la piena consapevolezza tecnica e la raffinatezza letteraria sottese all'apparente immediatezza dei suoi versi.</p>
+
+  <p class="titolo-capitolo">Il rapporto con Dante e con lo Stilnovo</p>
+  <p>Alla tradizione manoscritta è legata anche la memoria di uno scambio poetico, sotto forma di sonetti di invettiva reciproca, tra Cecco Angiolieri e Dante Alighieri, sebbene l'effettiva autenticità e la reale portata biografica di questa presunta polemica personale siano oggi valutate dalla critica con una certa cautela filologica, più che come documento sicuro di un'inimicizia realmente vissuta tra i due poeti.</p>
+  <p>Al di là della questione specifica di questo scambio, resta comunque significativo il fatto che la poesia comico-realistica si sia sviluppata in costante dialogo, per contrasto e per parodia, con la poesia aulica coeva, dimostrando come nella Toscana del secondo Duecento coesistessero e si confrontassero due sensibilità letterarie profondamente diverse ma reciprocamente consapevoli l'una dell'altra.</p>
+
+  <p class="titolo-capitolo">Il valore storico-letterario della poesia comica</p>
+  <p>La poesia comico-realistica, e in particolare l'opera di Cecco Angiolieri, riveste un'importanza notevole nella storia della letteratura italiana delle origini, poiché dimostra la varietà di registri e di funzioni che il volgare poetico aveva ormai raggiunto entro la fine del Duecento, capace non solo di esprimere l'elevazione spirituale della lirica stilnovistica, ma anche la comicità, la satira sociale e la rappresentazione, per quanto stilizzata, della vita quotidiana.</p>
+  <p>Questa tradizione giocosa, pur restando per sua natura un fenomeno marginale rispetto al filone principale della grande poesia delle origini, lascerà tracce significative nella letteratura italiana successiva, e sarà bene tenerla presente nei prossimi capitoli di questo manuale, dedicati alla figura di Dante Alighieri, la cui opera fu capace di dialogare, accogliendone alcuni elementi in chiave polemica, sia con la tradizione stilnovistica sia con quella comico-realistica appena esaminata.</p>
+</div>
+<!-- fine capitolo letteratura 05 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let06.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

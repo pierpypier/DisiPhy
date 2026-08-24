@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 15</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 15: niccolò machiavelli, il pensiero politico e il principe -->
+<div id="capitolo-15-machiavelli-principe" class="capitolo-storia">
+  <p class="titolo-capitolo">15 - Niccolò Machiavelli: il pensiero politico e il Principe - Classe 3</p>
+
+  <p class="titolo-capitolo">Firenze tra Repubblica e crisi politica</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la figura di Ludovico Ariosto e il suo capolavoro cavalleresco, ci si sposta ora su un diverso versante della cultura del primo Cinquecento italiano, quello della riflessione politica, incarnato dalla figura di Niccolò Machiavelli, la cui opera nasce direttamente dalla drammatica esperienza storica vissuta dalla città di Firenze e, più in generale, dall'intera penisola italiana tra la fine del Quattrocento e i primi decenni del secolo successivo, segnata, come si è già accennato, dalle guerre d'Italia e dal continuo intervento delle potenze straniere negli equilibri politici italiani.</p>
+  <p>Firenze, dopo la cacciata della famiglia Medici avvenuta nel 1494, in concomitanza con la discesa di Carlo VIII di Francia, tornò per un ventennio a un governo di tipo repubblicano, prima di vedere restaurato il potere signorile della stessa famiglia Medici nel 1512: proprio all'interno di questa parabola politica si colloca l'intera vicenda biografica e intellettuale di Machiavelli.</p>
+
+  <p class="titolo-capitolo">La carriera politica al servizio della Repubblica</p>
+  <p>Niccolò Machiavelli nacque a Firenze il 3 maggio del 1469, da una famiglia di antica tradizione cittadina ma di condizioni economiche modeste, appartenente al ceto dei giuristi e dei funzionari pubblici: ricevette una formazione culturale fondata soprattutto sui classici latini, che restò per tutta la vita il suo principale punto di riferimento intellettuale, insieme all'esperienza diretta della politica del proprio tempo.</p>
+  <p>Nel 1498, in seguito alla caduta del governo del frate domenicano Girolamo Savonarola, che per alcuni anni aveva guidato Firenze in una direzione di rigorosa riforma religiosa e morale, Machiavelli fu nominato segretario della seconda cancelleria della Repubblica fiorentina, incarico che mantenne per quattordici anni, occupandosi in particolare degli affari militari e diplomatici della città: in questa veste ebbe modo di condurre numerose missioni presso corti e sovrani stranieri, incontrando personalmente figure di rilievo assoluto della politica del tempo, come il duca Cesare Borgia, detto il Valentino, la cui abilità politica e militare colpì profondamente Machiavelli e ne influenzò in modo decisivo la successiva riflessione teorica.</p>
+
+  <p class="titolo-capitolo">La caduta della Repubblica e l'esilio a Sant'Andrea in Percussina</p>
+  <p>Nel 1512, con l'appoggio militare spagnolo, la famiglia Medici tornò al potere a Firenze, ponendo fine all'esperienza repubblicana a cui Machiavelli aveva legato la propria intera carriera: come conseguenza diretta di questo mutamento politico, Machiavelli fu destituito da ogni incarico pubblico e, l'anno successivo, nel 1513, fu ingiustamente coinvolto in una congiura anti-medicea, per cui subì l'arresto e il tortura, prima di essere infine rilasciato per mancanza di prove sufficienti.</p>
+  <p>Allontanato definitivamente dalla vita politica attiva, Machiavelli si ritirò nella piccola proprietà di famiglia a Sant'Andrea in Percussina, nei pressi di Firenze, dove trascorse gli anni successivi in una condizione di forzato e sofferto isolamento dagli affari pubblici, dedicandosi però, proprio in questo periodo, alla propria straordinaria attività di scrittore politico e letterario, di cui Il Principe rappresenta il primo e più celebre risultato.</p>
+
+  <p class="titolo-capitolo">Il Principe: genesi e struttura dell'opera</p>
+  <p>Composto nella seconda metà del 1513, secondo quanto lo stesso Machiavelli racconta in una celebre lettera indirizzata all'amico Francesco Vettori, Il Principe fu concepito dall'autore anche nella speranza, rimasta delusa, di poter rientrare in qualche modo nella vita politica attiva, offrendo ai nuovi signori di Firenze un trattato dedicato all'arte del governo: l'opera, dedicata inizialmente a Giuliano de' Medici e poi, nella redazione definitiva, a Lorenzo di Piero de' Medici, circolò a lungo manoscritta e fu pubblicata soltanto nel 1532, cinque anni dopo la morte dell'autore.</p>
+  <p>Il trattato, composto in ventisei capitoli, affronta in modo sistematico i diversi aspetti dell'arte del governo: i tipi di principato esistenti e i modi in cui essi possono essere acquisiti e mantenuti, l'organizzazione delle forze militari, il comportamento più opportuno che un principe deve tenere verso i propri sudditi e verso gli altri stati, fino alla conclusione dell'opera, nella quale Machiavelli rivolge un accorato appello, di forte intonazione retorica e patriottica, affinché sorga un principe capace di liberare l'Italia dalla dominazione straniera.</p>
+
+  <p class="titolo-capitolo">La verità effettuale e l'autonomia della politica</p>
+  <p>L'aspetto più innovativo e insieme più controverso del pensiero espresso nel Principe consiste nel metodo con cui Machiavelli affronta la materia politica: l'autore dichiara infatti esplicitamente di voler descrivere non come gli uomini e gli stati dovrebbero comportarsi secondo un ideale astratto di perfezione morale, ma come essi effettivamente si comportano nella realtà concreta dei fatti, un approccio che la critica ha definito realismo politico, fondato sulla ricerca di quella che lo stesso Machiavelli chiama la verità effettuale della cosa.</p>
+  <p>Questo metodo comporta una netta separazione tra la sfera della politica e quella della morale tradizionale, di impronta religiosa e cristiana: secondo Machiavelli, il fine di conservare e rafforzare lo stato può giustificare, da parte del governante, il ricorso anche a mezzi normalmente considerati riprovevoli sul piano etico individuale, come l'inganno o la violenza, qualora essi si rivelino necessari per garantire la stabilità politica e il bene comune della collettività; questa concezione, che ha dato origine nel linguaggio corrente all'espressione machiavellico per indicare un comportamento spregiudicato, va tuttavia intesa nel proprio specifico contesto storico e teorico, come tentativo di fondare una scienza politica autonoma, e non come un'apologia indiscriminata della slealtà o della crudeltà.</p>
+
+  <p class="titolo-capitolo">Virtù e fortuna</p>
+  <p>Due concetti chiave attraversano l'intera riflessione politica di Machiavelli, quelli di virtù e di fortuna: con il termine fortuna l'autore indica l'insieme delle circostanze imprevedibili e mutevoli che condizionano dall'esterno l'agire umano e la storia degli stati, paragonata da Machiavelli, in una celebre immagine contenuta nel venticinquesimo capitolo del Principe, a un fiume in piena, capace di travolgere tutto ciò che incontra sul proprio cammino se non adeguatamente arginato.</p>
+  <p>Con il termine virtù, che nel linguaggio machiavelliano non ha il significato di virtù morale in senso tradizionale, l'autore indica invece l'insieme delle capacità personali del governante, quali l'energia, la prontezza decisionale, l'abilità strategica e la capacità di adattarsi rapidamente alle circostanze mutevoli: secondo Machiavelli, un principe dotato di autentica virtù può arginare almeno in parte gli effetti imprevedibili della fortuna, pur senza poterla mai controllare del tutto, in un rapporto di continua e mai definitivamente risolta tensione tra le due forze.</p>
+  <p><em>Esempio:</em> l'esempio più celebre di questa combinazione tra virtù personale e favore della fortuna, ripetutamente richiamato da Machiavelli nel Principe, è offerto dalla figura storica di Cesare Borgia, la cui rapida ascesa politica, dovuta a un'eccezionale abilità strategica, viene tuttavia presentata dallo stesso autore anche come esempio di come un mutamento improvviso della fortuna, quale fu la morte del padre papa Alessandro VI, possa vanificare in breve tempo anche i successi ottenuti con la massima virtù.</p>
+
+  <p class="titolo-capitolo">I Discorsi sopra la prima deca di Tito Livio</p>
+  <p>Accanto al Principe, e in parte contemporaneamente a esso, Machiavelli attese alla composizione di un'altra importante opera di teoria politica, i Discorsi sopra la prima deca di Tito Livio, pubblicati anch'essi postumi nel 1531: si tratta di un ampio commento, in forma di riflessione libera e non sistematica, alla storia della Roma repubblicana narrata dallo storico latino Tito Livio, attraverso cui Machiavelli sviluppa una approfondita analisi delle forme di governo migliori per garantire la libertà e la stabilità di uno stato.</p>
+  <p>A differenza del Principe, incentrato sulla figura del singolo governante e sui principati, i Discorsi esprimono una preferenza dichiarata di Machiavelli per il governo repubblicano, ritenuto capace, grazie al coinvolgimento attivo di più cittadini nella vita pubblica e al confronto dialettico tra i diversi interessi sociali, di garantire nel tempo una maggiore stabilità politica e una più solida difesa della libertà collettiva rispetto al governo di un solo uomo, per quanto virtuoso; questa apparente contraddizione rispetto al Principe è stata a lungo dibattuta dalla critica, che tende oggi a interpretarla non come un ripensamento ideologico, ma come l'applicazione di uno stesso metodo di analisi realistica a due situazioni storiche e politiche differenti, quella eccezionale di uno stato da fondare o da salvare e quella ordinaria di uno stato repubblicano già consolidato.</p>
+
+  <p class="titolo-capitolo">Le altre opere: storia, arte militare e teatro comico</p>
+  <p>La produzione di Machiavelli non si limitò alla sola riflessione teorica sulla politica, ma toccò anche altri generi letterari: tra le opere storiografiche si ricordano le Istorie fiorentine, commissionate allo scrittore dalla stessa famiglia Medici e dedicate alla ricostruzione delle vicende della città di Firenze dalle origini fino ai propri tempi; tra gli scritti di argomento militare si ricorda invece l'Arte della guerra, trattato in forma di dialogo dedicato all'organizzazione degli eserciti, nel quale Machiavelli sostiene, in linea con le proprie convinzioni politiche, la superiorità di un esercito composto da cittadini rispetto alle truppe mercenarie allora largamente impiegate dagli stati italiani.</p>
+  <p>Machiavelli fu inoltre autore di una delle commedie più importanti e rappresentate del teatro rinascimentale italiano, la Mandragola, composta probabilmente intorno al 1518: si tratta di un'opera di ambientazione fiorentina contemporanea, costruita attorno a un intreccio di inganni amorosi, nella quale, dietro l'apparente leggerezza della trama comica, la critica ha individuato una riflessione più profonda sulla corruzione dei costumi e sulla capacità dell'intelligenza pratica di piegare a proprio vantaggio le circostanze, temi non estranei alla stessa riflessione politica dell'autore.</p>
+
+  <p class="titolo-capitolo">Gli ultimi anni e l'eredità del pensiero machiavelliano</p>
+  <p>Machiavelli morì a Firenze il 21 giugno del 1527, pochi anni dopo aver assistito, con profondo turbamento, al Sacco di Roma, evento che confermò ai suoi occhi la debolezza politica e militare dell'Italia divisa, tema già al centro delle proprie riflessioni: negli ultimi mesi di vita, con il temporaneo ritorno di un governo repubblicano a Firenze, sperò invano di poter essere reintegrato in un ruolo pubblico, ma la sua passata collaborazione con i Medici gli precluse ormai la fiducia dei nuovi governanti repubblicani.</p>
+  <p>L'opera di Machiavelli, e in particolare il Principe, ebbe una fortuna critica assai complessa e spesso controversa nei secoli successivi, oscillando tra la condanna morale, che portò l'opera a essere inserita nell'Indice dei libri proibiti della Chiesa cattolica, e il riconoscimento, sempre più netto a partire dall'età moderna, del suo straordinario valore come fondatore di una moderna scienza politica, basata sull'osservazione realistica dei fatti storici piuttosto che su astratti principi ideali: sarà proprio a partire da questa temperie storica e culturale che, nel prossimo capitolo di questo manuale, si concluderà il percorso dedicato al Rinascimento italiano, con le figure di Francesco Guicciardini, Baldassarre Castiglione e Pietro Bembo.</p>
+</div>
+<!-- fine capitolo letteratura 15 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let16.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

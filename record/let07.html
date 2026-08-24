@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 07</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 07: dante, la commedia - genesi, struttura e allegoria -->
+<div id="capitolo-07-commedia-genesi-struttura" class="capitolo-storia">
+  <p class="titolo-capitolo">07 - Dante: la Commedia - genesi, struttura e allegoria - Classe 3</p>
+
+  <p class="titolo-capitolo">Il titolo dell'opera: Comedìa e Divina Commedia</p>
+  <p>Dopo aver ripercorso, nel capitolo precedente, la vita di Dante Alighieri e le sue opere minori, ci si sofferma ora sul capolavoro assoluto della sua produzione, quello che la tradizione ha tramandato con il nome di Divina Commedia: è bene precisare, tuttavia, che lo stesso Dante intitolò la propria opera semplicemente Comedìa, secondo la grafia e la pronuncia del tempo, senza alcun riferimento esplicito alla dimensione divina, aggettivo che venne accostato al titolo soltanto in epoca successiva, a partire dal Cinquecento, come omaggio alla grandiosità e alla sacralità dei contenuti trattati, e che si diffuse poi stabilmente nell'uso comune.</p>
+  <p>La scelta del termine comedìa da parte di Dante non va intesa nel senso moderno del genere teatrale brillante o umoristico, ma rimanda piuttosto a una precisa categoria della poetica medievale, che distingueva le opere non tanto in base al loro contenuto scherzoso o serio, quanto in base allo sviluppo della vicenda narrata e al registro linguistico impiegato, come si vedrà più avanti in questo stesso capitolo.</p>
+
+  <p class="titolo-capitolo">La genesi e la datazione dell'opera</p>
+  <p>La composizione della Commedia occupò Dante per un arco di tempo assai lungo, coincidente in gran parte con gli anni dell'esilio: sebbene manchino documenti che permettano di stabilire con assoluta certezza le date di composizione delle singole parti, la critica concorda nel collocare l'inizio della stesura dell'Inferno intorno al 1304-1307 e la sua conclusione entro il 1309 circa; il Purgatorio sarebbe stato composto negli anni immediatamente successivi, tra il 1308 e il 1312 circa, mentre il Paradiso, l'ultima e più tarda delle tre cantiche, occupò Dante fin quasi alla morte, sopraggiunta come si è visto nel 1321, e viene generalmente datato tra il 1316 e il 1321.</p>
+  <p>L'opera, dunque, accompagnò Dante per quasi tutto il periodo dell'esilio, riflettendo nel proprio impianto e nei propri contenuti tanto la maturazione spirituale e intellettuale del poeta, quanto la sua esperienza diretta di sofferenza politica e morale, elementi che confluiscono nel poema trasfigurati in una dimensione universale, non più soltanto personale.</p>
+
+  <p class="titolo-capitolo">Il genere letterario: la commedia secondo la poetica medievale</p>
+  <p>Secondo la retorica e la poetica del Medioevo, che riprendevano in modo semplificato categorie di origine classica, la tragedia era il genere caratterizzato da un inizio sereno e da una conclusione infelice o luttuosa, espresso in uno stile elevato e sostenuto; la commedia, al contrario, era il genere che presentava una vicenda dall'inizio turbolento o doloroso ma dall'esito lieto e positivo, e che ammetteva, accanto allo stile elevato, anche l'uso di un registro linguistico più semplice e dimesso, vicino al parlato comune.</p>
+  <p>Il poema dantesco risponde pienamente a questa definizione: la vicenda narrata inizia infatti con lo smarrimento del protagonista in una condizione di angoscia e di pericolo morale, la celebre selva oscura da cui si apre il primo canto dell'Inferno, per concludersi, al termine di un lungo cammino, con la visione beatifica di Dio nell'ultimo canto del Paradiso, un epilogo di assoluta felicità: a ciò si aggiunge la varietà stilistica dell'opera, che alterna, a seconda delle situazioni e dei personaggi incontrati, un registro aspro e talvolta scurrile, soprattutto nell'Inferno, a uno stile progressivamente più elevato e solenne, man mano che il viaggio del protagonista si avvicina a Dio.</p>
+
+  <p class="titolo-capitolo">La struttura architettonica: cantiche, canti, terzine</p>
+  <p>Sul piano strutturale, la Commedia si presenta come un'opera di straordinaria organicità e simmetria, costruita secondo un rigoroso disegno numerico: il poema si divide in tre cantiche, corrispondenti ai tre regni dell'oltretomba cristiano attraversati dal protagonista, Inferno, Purgatorio e Paradiso, ciascuna delle quali si compone di trentatré canti, ad eccezione dell'Inferno, che ne conta trentaquattro a causa di un canto introduttivo, di carattere proemiale, che apre l'intera opera.</p>
+  <p>Il numero complessivo dei canti risulta pertanto pari a cento, cifra che nella simbologia numerica medievale rappresentava il numero perfetto per eccellenza, in quanto multiplo del dieci, a sua volta considerato numero di perfezione poiché somma dei primi quattro numeri naturali; questa architettura numerica non è frutto del caso, ma riflette la volontà dell'autore di conferire all'opera un valore simbolico coerente con i contenuti sacri e universali che essa intende rappresentare.</p>
+
+  <p class="titolo-capitolo">La terzina dantesca</p>
+  <p>Per la propria opera Dante elaborò e impiegò per la prima volta in modo sistematico una forma metrica di grande originalità, destinata a essere ricordata proprio come terzina dantesca o terza rima: si tratta di una successione di terzine di versi endecasillabi, legate tra loro da uno schema di rime incatenate, in cui il verso centrale di ogni terzina fa rima con il primo e il terzo verso della terzina successiva, secondo uno schema che si può rappresentare come ABA, BCB, CDC, e così via, fino alla chiusura di ogni canto con un verso isolato che completa l'ultima rima.</p>
+  <p>Questa struttura, oltre a conferire al poema un'andatura ritmica continua e progressiva, che accompagna il lettore lungo il racconto senza soluzione di continuità, presenta un'evidente valenza simbolica, poiché la terzina, fondata sul numero tre, richiama esplicitamente il mistero della Trinità divina, tema centrale della cultura religiosa medievale e dell'intero impianto teologico della Commedia.</p>
+
+  <p class="titolo-capitolo">Il valore simbolico dei numeri</p>
+  <p>Come si è già accennato, l'intera architettura della Commedia è governata da un fitto sistema di corrispondenze numeriche, che nella mentalità medievale non avevano valore puramente decorativo, ma esprimevano verità profonde sull'ordine armonico e provvidenziale dell'universo creato da Dio: il numero tre, presente nella tripartizione delle cantiche e nella struttura della terzina, rimanda alla Trinità; il numero nove, multiplo di tre e legato in modo particolare alla figura di Beatrice fin dalla Vita nuova, ricorre più volte nell'organizzazione dei gironi infernali e dei cieli del Paradiso; il numero dieci e il numero cento, come si è visto, simboleggiano la perfezione e la totalità.</p>
+  <p>Questa attenzione quasi ossessiva alla simbologia numerica testimonia la concezione dell'opera che Dante stesso doveva avere: non un semplice racconto di fantasia, ma una costruzione intellettuale rigorosissima, pensata per rispecchiare, nella propria struttura formale, l'ordine razionale e provvidenziale che secondo la teologia medievale governa l'intero universo creato.</p>
+
+  <p class="titolo-capitolo">I quattro sensi della Scrittura e l'allegoria dantesca</p>
+  <p>Un aspetto fondamentale per comprendere il significato profondo della Commedia è costituito dal suo carattere allegorico, esplicitamente dichiarato dallo stesso Dante in una lettera indirizzata a Cangrande della Scala, nella quale il poeta applica alla propria opera un metodo interpretativo elaborato in origine dagli esegeti medievali per la lettura della Sacra Scrittura, quello dei cosiddetti quattro sensi: il senso letterale, cioè il racconto degli eventi così come vengono narrati; il senso allegorico, che individua nella lettera un significato simbolico più profondo; il senso morale, che ricava dal testo un insegnamento etico applicabile alla vita del lettore; e il senso anagogico, che eleva il racconto a una dimensione escatologica, cioè relativa ai destini ultimi dell'uomo e della sua salvezza.</p>
+  <p>Applicato alla Commedia, questo metodo interpretativo permette di leggere il viaggio ultraterreno del protagonista non soltanto come un resoconto fantastico dell'aldilà, ma anche, sul piano allegorico e morale, come il simbolo del cammino che ogni uomo è chiamato a compiere nella propria esistenza terrena, un percorso di allontanamento dal peccato, rappresentato dalla discesa attraverso l'Inferno, di progressiva purificazione, rappresentata dall'ascesa del monte del Purgatorio, e di elevazione verso la conoscenza e la contemplazione di Dio, rappresentata dal viaggio attraverso i cieli del Paradiso.</p>
+
+  <p class="titolo-capitolo">Le finalità dell'opera</p>
+  <p>Nella medesima lettera a Cangrande, Dante chiarisce anche quale fosse, a proprio giudizio, la finalità ultima della Commedia: un intento non puramente speculativo o contemplativo, ma essenzialmente pratico e morale, volto a condurre l'umanità, ancora immersa in una condizione di traviamento spirituale simile a quella da cui muove lo stesso protagonista all'inizio del poema, verso uno stato di rettitudine e di felicità, tanto terrena quanto eterna.</p>
+  <p>Questa dichiarata finalità etica e universale spiega perché la Commedia, pur nascendo dall'esperienza personalissima dell'esilio e della crisi morale di Dante, si configuri come un'opera rivolta all'intera umanità, capace di parlare, attraverso il racconto di un viaggio individuale, a ogni lettore chiamato a riflettere sul senso del bene, del male e del proprio destino: sarà proprio a partire da questa struttura e da questo impianto allegorico che, nei prossimi capitoli di questo manuale, si potranno esaminare più da vicino i contenuti e i personaggi delle tre cantiche, a cominciare dall'Inferno.</p>
+</div>
+<!-- fine capitolo letteratura 07 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let08.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

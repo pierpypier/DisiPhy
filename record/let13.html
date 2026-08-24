@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 13</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 13: il poema cavalleresco, pulci, boiardo e la tradizione cortese -->
+<div id="capitolo-13-poema-cavalleresco" class="capitolo-storia">
+  <p class="titolo-capitolo">13 - Il poema cavalleresco: Pulci, Boiardo e la tradizione cortese - Classe 3</p>
+
+  <p class="titolo-capitolo">Le origini: il ciclo carolingio e il ciclo bretone</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, il contesto storico-culturale dell'Umanesimo e la riscoperta erudita dei classici, ci si rivolge ora a un genere letterario di tutt'altra origine, quello del poema cavalleresco, che affonda le proprie radici in due grandi tradizioni narrative medievali sviluppatesi originariamente in Francia: il ciclo carolingio, o materia di Francia, incentrato sulle imprese guerresche di Carlo Magno e dei suoi paladini nella lotta contro i Saraceni, e improntato a valori quali la fedeltà vassallatica, l'onore militare e la difesa della fede cristiana; e il ciclo bretone, o materia di Bretagna, incentrato invece sulle vicende del leggendario re Artù e dei cavalieri della Tavola Rotonda, ambientato in un clima fiabesco e ricco di elementi magici e fantastici, e maggiormente incentrato sui temi dell'amore cortese e dell'avventura individuale.</p>
+  <p>Queste due tradizioni narrative, giunte in Italia già a partire dal Medioevo attraverso la circolazione di testi francesi e franco-veneti, mantennero a lungo caratteri distinti: il ciclo carolingio, più marcatamente guerresco e votato ai valori della comunità cristiana, e quello bretone, più orientato verso l'individuo, l'amore e il meraviglioso, senza che i due filoni si intrecciassero in modo sistematico, una fusione che sarà invece uno degli elementi di maggiore originalità dell'opera di Boiardo, come si vedrà più avanti in questo capitolo.</p>
+
+  <p class="titolo-capitolo">I cantari: una tradizione narrativa popolare</p>
+  <p>Prima di giungere ai grandi poemi cavallereschi colti del Quattro e Cinquecento, occorre ricordare l'esistenza, fin dal Trecento, di una fiorente tradizione narrativa popolare in Italia, quella dei cosiddetti cantari: si tratta di componimenti narrativi in ottava rima, cioè in strofe di otto versi endecasillabi con uno schema di rime fisso, destinati a essere recitati o cantati pubblicamente nelle piazze dai cosiddetti cantastorie o canterini, di fronte a un pubblico eterogeneo e in gran parte non colto.</p>
+  <p>I cantari, che attingevano liberamente sia al materiale del ciclo carolingio sia a quello del ciclo bretone, oltre che a vicende di argomento classico o a storie di invenzione, elaborarono un linguaggio semplice, formulare e ripetitivo, adatto alla fruizione orale, e diffusero capillarmente in tutta Italia, anche presso un pubblico privo di istruzione letteraria, la conoscenza dei principali personaggi ed episodi della materia cavalleresca, costituendo il terreno di coltura da cui nasceranno, nel corso del Quattrocento, i grandi poemi cavallereschi in forma letteraria elaborata.</p>
+
+  <p class="titolo-capitolo">Il contesto delle corti signorili del secondo Quattrocento</p>
+  <p>Come si è visto nel capitolo precedente a proposito dell'Umanesimo, il secondo Quattrocento italiano fu caratterizzato dalla fioritura di numerose corti signorili, ciascuna delle quali competeva con le altre per prestigio culturale, ospitando artisti, letterati e intellettuali di rilievo: proprio in due di questi ambienti di corte, quello mediceo di Firenze e quello estense di Ferrara, presero forma, nella seconda metà del secolo, le due opere fondamentali di questo capitolo, il Morgante di Luigi Pulci e l'Orlando innamorato di Matteo Maria Boiardo.</p>
+  <p>Se la cultura umanistica, come si è visto, si rivolgeva soprattutto allo studio filologico ed erudito dei classici greci e latini, il poema cavalleresco rappresentò invece, nello stesso torno di anni, la via attraverso cui la materia narrativa di origine medievale e popolare venne accolta, rielaborata e nobilitata dalla cultura delle corti, dando vita a un genere capace di conciliare l'intrattenimento di più immediata presa con una scrittura letterariamente sorvegliata.</p>
+
+  <p class="titolo-capitolo">Luigi Pulci e l'ambiente laurenziano</p>
+  <p>Luigi Pulci nacque a Firenze nel 1432, da una famiglia nobile ma economicamente decaduta, e trovò accoglienza e protezione presso la famiglia dei Medici, in particolare grazie al legame di amicizia e di consuetudine letteraria stretto con Lorenzo il Magnifico, che tra la fine degli anni Sessanta e gli anni Settanta del Quattrocento resse di fatto il governo di Firenze e ne fece, con la propria corte, uno dei principali centri culturali d'Italia.</p>
+  <p>Fu proprio su richiesta della famiglia Medici, e in particolare della madre di Lorenzo, Lucrezia Tornabuoni, che Pulci diede avvio, agli inizi degli anni Sessanta del Quattrocento, alla composizione del proprio poema cavalleresco maggiore, il Morgante, la cui redazione, in un primo tempo limitata a ventitré cantari, fu successivamente ampliata dall'autore fino a raggiungere, nell'edizione completa pubblicata nel 1483, ventotto cantari complessivi.</p>
+
+  <p class="titolo-capitolo">Il Morgante: struttura e caratteri</p>
+  <p>Il Morgante, composto in ottava rima sul modello della tradizione dei cantari popolari appena ricordata, narra le vicende del paladino Orlando e degli altri cavalieri al servizio di Carlo Magno, riprendendo dunque la materia del ciclo carolingio, ma trattandola con un tono spiccatamente comico e parodistico, ben lontano dalla solennità epica della tradizione originaria: il titolo dell'opera deriva dal nome di uno dei personaggi più celebri del poema, il gigante Morgante, dapprima nemico e poi fedele compagno di Orlando, figura caratterizzata da una forza smisurata unita a una bonaria ingenuità.</p>
+  <p>Accanto a Morgante, altro personaggio fondamentale del poema è il mezzo gigante Margutte, figura ancora più marcatamente comica e dissacrante, portatore di una visione scettica e materialistica dell'esistenza, dichiaratamente priva di qualsiasi fede religiosa o morale, che rappresenta uno degli episodi più originali e discussi dell'intera opera pulciana.</p>
+  <p><em>Approfondimento:</em> il tono comico e parodistico del Morgante, che spesso rovescia in chiave grottesca e burlesca i moduli tipici della tradizione epico-cavalleresca, non va interpretato come un semplice intento dissacratorio verso i valori della materia carolingia, quanto piuttosto come l'esito di un gusto tutto fiorentino e laurenziano per la mescolanza dei registri, capace di alternare, nello stesso poema, momenti di autentica commozione a episodi di aperta comicità popolaresca.</p>
+
+  <p class="titolo-capitolo">Matteo Maria Boiardo e la corte estense</p>
+  <p>Un percorso e un ambiente culturale diversi caratterizzano invece l'altro grande poema cavalleresco di questo periodo: Matteo Maria Boiardo nacque nel 1441 nei pressi di Scandiano, in territorio emiliano, da una famiglia nobile legata alla corte estense di Ferrara, presso la quale lo stesso Boiardo ricoprì importanti incarichi amministrativi e diplomatici, giungendo infine alla nomina di capitano della città di Reggio Emilia.</p>
+  <p>La corte estense di Ferrara, retta in quegli anni dalla famiglia d'Este, rappresentava uno degli ambienti più raffinati e colti dell'Italia del secondo Quattrocento, particolarmente aperto, rispetto ad altre corti, alla tradizione narrativa cavalleresca di origine francese, per ragioni di antichi legami dinastici e culturali con la Francia: fu in questo contesto che Boiardo diede avvio, presumibilmente intorno al 1476x83, alla composizione del proprio poema maggiore, l'Orlando innamorato.</p>
+
+  <p class="titolo-capitolo">L'Orlando innamorato: la fusione dei due cicli</p>
+  <p>L'elemento di maggiore originalità dell'Orlando innamorato, come già lascia intuire il titolo stesso dell'opera, consiste nella fusione, fino ad allora non sistematicamente realizzata, tra il ciclo carolingio e il ciclo bretone: Boiardo immagina infatti che il severo e valoroso paladino Orlando, figura tradizionalmente associata ai valori guerreschi e alla fedeltà a Carlo Magno secondo la materia di Francia, si innamori perdutamente della bellissima principessa pagana Angelica, giunta alla corte di Carlo Magno da lontani regni orientali, dando così ingresso, nell'universo carolingio, ai temi dell'amore, dell'avventura e del meraviglioso propri della materia bretone.</p>
+  <p>Questa fusione dei due cicli narrativi permise a Boiardo di costruire un poema di straordinaria varietà e ricchezza inventiva, popolato da un numero elevatissimo di personaggi, di duelli, di incantesimi, di viaggi in terre lontane e fantastiche, e caratterizzato da una narrazione fitta di intrecci paralleli, spesso interrotti e ripresi secondo la tecnica narrativa dell'entrelacement, ereditata dalla tradizione dei romanzi bretoni medievali, capace di tenere costantemente viva la curiosità del lettore.</p>
+
+  <p class="titolo-capitolo">Il poema incompiuto e l'eredità per Ariosto</p>
+  <p>L'Orlando innamorato, pubblicato da Boiardo in due parti, la prima composta da due libri apparsa nel 1483 e la seconda, comprendente un terzo libro, edita alcuni anni più tardi, rimase infine incompiuto: la stesura si interrompe infatti bruscamente nel corso del nono canto del terzo libro, in un momento in cui lo stesso Boiardo, come egli stesso lascia intendere nelle ultime ottave del poema, si trovava a dover interrompere la propria attività letteraria a causa della grave crisi politica e militare che nel 1494 sconvolse l'Italia, con la discesa della spedizione militare del re di Francia Carlo VIII, evento che di lì a poco avrebbe segnato l'inizio di un lungo periodo di guerre e di ingerenze straniere nella penisola.</p>
+  <p>Boiardo morì proprio in quello stesso anno, il 1494, lasciando il proprio poema privo di conclusione: l'opera, tuttavia, ebbe una fortuna immediata e duratura, tanto da essere ripresa esplicitamente, pochi anni dopo, da un altro poeta legato anch'esso alla corte estense di Ferrara, Ludovico Ariosto, che scelse di continuare idealmente la narrazione interrotta da Boiardo componendo il proprio capolavoro, l'Orlando furioso, di cui si tratterà nel prossimo capitolo di questo manuale, dedicato al pieno sviluppo del Rinascimento italiano.</p>
+</div>
+<!-- fine capitolo letteratura 13 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let14.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

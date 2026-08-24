@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 11</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 11: giovanni boccaccio, la vita e il decameron -->
+<div id="capitolo-11-boccaccio-decameron" class="capitolo-storia">
+  <p class="titolo-capitolo">11 - Giovanni Boccaccio: la vita e il Decameron - Classe 3</p>
+
+  <p class="titolo-capitolo">Il terzo grande protagonista del Trecento</p>
+  <p>Dopo aver esaminato, nei capitoli precedenti, le figure di Dante Alighieri e di Francesco Petrarca, si giunge ora al terzo grande autore che la tradizione critica riunisce sotto la denominazione di Tre Corone della letteratura italiana del Trecento: Giovanni Boccaccio, che rispetto ai due maestri appena incontrati rappresenta una novità profonda, poiché la sua opera più celebre, il Decameron, si allontana decisamente dai temi religiosi e filosofici di Dante e Petrarca per rivolgersi a una rappresentazione ampia, varia e concreta della società e della vita quotidiana del proprio tempo.</p>
+
+  <p class="titolo-capitolo">Origini, giovinezza e gli anni napoletani</p>
+  <p>Giovanni Boccaccio nacque nel 1313, probabilmente a Certaldo, in Toscana, o forse a Firenze, figlio naturale di Boccaccino di Chellino, mercante fiorentino legato alla potente compagnia bancaria dei Bardi: attorno al 1327 il giovane Boccaccio fu inviato dal padre a Napoli, dove avrebbe dovuto avviarsi alla pratica mercantile e bancaria presso la filiale napoletana della stessa compagnia, un'attività per la quale, tuttavia, mostrò fin da subito scarsissima inclinazione.</p>
+  <p>Gli anni napoletani, trascorsi in seguito anche negli studi di diritto canonico, furono per Boccaccio decisivi sul piano culturale: la vivace corte angioina di re Roberto d'Angiò gli offrì infatti l'occasione di frequentare un ambiente colto e raffinato, e di dedicarsi con crescente passione alla letteratura, coltivando al contempo un amore, secondo la tradizione ispirato a una donna chiamata nelle sue opere Fiammetta, identificata da un'antica ma incerta tradizione critica con Maria d'Aquino, presunta figlia naturale dello stesso re Roberto.</p>
+
+  <p class="titolo-capitolo">Le opere della giovinezza napoletana</p>
+  <p>Al periodo napoletano risalgono le prime opere di Boccaccio, composte in volgare e caratterizzate da una notevole sperimentazione di generi letterari diversi: tra queste si ricordano il Filocolo, romanzo in prosa di argomento cavalleresco e amoroso; il Filostrato, poemetto narrativo in ottave incentrato sulla vicenda d'amore e tradimento tra Troiolo e Criseida, ambientata nel contesto della guerra di Troia; e la Teseida delle nozze di Emilia, poema epico-cavalleresco anch'esso in ottave, considerato tra i primi tentativi di applicare al volgare italiano le forme e i temi propri del grande poema epico classico.</p>
+  <p>Queste opere giovanili, per quanto ancora acerbe rispetto ai risultati della piena maturità dello scrittore, testimoniano già alcuni tratti che caratterizzeranno la sua produzione successiva, come il gusto per la narrazione articolata e avventurosa, l'attenzione alla psicologia dei personaggi, specialmente in ambito amoroso, e una notevole capacità di fondere insieme, in modo originale, la tradizione narrativa medievale e i modelli della cultura classica.</p>
+
+  <p class="titolo-capitolo">Il ritorno a Firenze e la crisi economica dei Bardi</p>
+  <p>Intorno al 1340-1341, in seguito al fallimento della compagnia bancaria dei Bardi, che coinvolse pesantemente anche le finanze familiari, Boccaccio fu costretto a lasciare Napoli e a fare ritorno a Firenze, dove visse per il resto della propria vita, pur alternando questo soggiorno principale a diversi viaggi e incarichi diplomatici per conto del Comune fiorentino, che gli affidò più volte anche delicate missioni presso signori e potentati italiani.</p>
+  <p>Il ritorno in una città sensibilmente diversa dalla raffinata corte napoletana, più legata ai valori pratici e mercantili della vita comunale, contribuì probabilmente a orientare la scrittura di Boccaccio verso una rappresentazione più concreta e realistica della società contemporanea, un percorso che troverà il proprio esito più compiuto nell'opera a cui si dedicherà negli anni immediatamente successivi.</p>
+
+  <p class="titolo-capitolo">La peste del 1348 e la genesi del Decameron</p>
+  <p>Un evento drammatico segnò in modo decisivo la vita di Boccaccio e la genesi della sua opera maggiore: nel 1348 Firenze, come gran parte dell'Europa, fu colpita da una violentissima epidemia di peste, passata alla storia come peste nera, che causò un numero altissimo di vittime e sconvolse profondamente l'ordine sociale, morale e religioso della città, minando alla base la fiducia in molte delle certezze tradizionali.</p>
+  <p>Proprio a questo drammatico evento Boccaccio scelse di ambientare la cornice narrativa della propria opera più celebre, il Decameron, la cui composizione occupò l'autore negli anni immediatamente successivi alla peste, all'incirca tra il 1349 e il 1351, sebbene l'opera abbia conosciuto in seguito ulteriori revisioni da parte dello stesso autore.</p>
+
+  <p class="titolo-capitolo">La cornice narrativa del Decameron</p>
+  <p>Il titolo Decameron, di origine greca, significa letteralmente dieci giorni, e fa riferimento all'impianto narrativo dell'opera: dieci giovani fiorentini, sette donne e tre uomini, decidono di allontanarsi dalla città sconvolta dalla peste per rifugiarsi in alcune ville isolate della campagna toscana, dove trascorrono il tempo raccontandosi a turno delle novelle, secondo un tema stabilito ogni giorno da un re o da una regina eletti di volta in volta tra i membri della brigata.</p>
+  <p>Questa struttura, detta appunto cornice, non ha soltanto una funzione organizzativa, ma esprime anche un preciso significato simbolico: di fronte al disordine morale e sociale provocato dalla peste, descritto da Boccaccio nella celebre introduzione alla prima giornata con toni di grande crudezza realistica, i dieci giovani ricostruiscono, all'interno del loro rifugio, un piccolo mondo ordinato, retto da regole condivise di cortesia, misura e armonia, in cui la narrazione stessa diventa strumento di conforto e di ricostruzione civile.</p>
+
+  <p class="titolo-capitolo">La struttura e l'organizzazione dei racconti</p>
+  <p>L'opera si compone complessivamente di cento novelle, dieci per ciascuna delle dieci giornate, per un totale che riproduce, non casualmente, lo stesso numero perfetto già incontrato a proposito della struttura della Commedia dantesca: ciascuna giornata, ad eccezione della quarta e della nona, che restano a tema libero, è dedicata a un argomento specifico, stabilito di volta in volta dal re o dalla regina di turno, come le vicende a lieto fine dopo eventi dolorosi, le beffe ingegnose, o le storie di amanti sfortunati.</p>
+  <p>Completano la struttura dell'opera un proemio iniziale, in cui l'autore dichiara di dedicare la propria opera in particolare alle donne innamorate, ritenute più bisognose di svago e conforto rispetto agli uomini, una introduzione generale alla prima giornata, con la già ricordata descrizione della peste fiorentina, e una conclusione finale dell'autore, in cui Boccaccio difende la propria opera da possibili critiche morali, rivendicandone la varietà e la libertà narrativa.</p>
+
+  <p class="titolo-capitolo">I temi: la fortuna, l'ingegno e la molteplicità del reale</p>
+  <p>Al centro del Decameron si trovano alcuni grandi temi ricorrenti, che ne costituiscono l'ossatura concettuale: la fortuna, intesa come forza imprevedibile che governa le vicende umane, capace di ribaltare in un istante le sorti dei personaggi, in bene o in male; e l'ingegno, cioè l'intelligenza pratica e la capacità di adattamento con cui l'uomo, pur non potendo controllare la fortuna, riesce spesso a volgerla a proprio favore, attraverso l'astuzia, la prontezza di spirito o l'abilità nel linguaggio.</p>
+  <p>Accanto a questi temi, l'opera si distingue per l'straordinaria varietà dei propri contenuti e dei propri personaggi, che spaziano dai mercanti ai nobili, dai religiosi ai contadini, dagli intellettuali alle persone di più umile condizione, restituendo un affresco corale e realistico della società del tempo, osservata con uno sguardo curioso, spesso ironico, e generalmente più incline alla comprensione indulgente delle debolezze umane che alla condanna moralistica.</p>
+  <p><em>Esempio:</em> è il caso di molte novelle dedicate a religiosi ipocriti o a mariti ingannati, nelle quali Boccaccio non intende tanto colpire con asprezza le istituzioni ecclesiastiche o matrimoniali in sé, quanto piuttosto mettere in scena, con divertita comprensione, la naturale astuzia e vitalità con cui i personaggi, specialmente quelli di più umile origine, sanno destreggiarsi tra le convenzioni sociali del proprio tempo.</p>
+
+  <p class="titolo-capitolo">Lo stile del Decameron</p>
+  <p>Sul piano linguistico e stilistico, il Decameron rappresenta un momento fondamentale nella storia della prosa italiana: Boccaccio elabora infatti un periodare complesso e armonioso, costruito secondo il modello della prosa latina di ascendenza ciceroniana, fatto di ampie subordinazioni e di un attento equilibrio ritmico tra le diverse parti del periodo, capace tuttavia di adattarsi, novella per novella, ai diversi registri richiesti dai personaggi e dalle situazioni narrate, dal linguaggio più elevato a quello più popolare e comico.</p>
+  <p>Questa duttilità stilistica, unita alla straordinaria varietà tematica dell'opera, farà del Decameron un modello fondamentale per la successiva prosa narrativa italiana ed europea, al punto da essere assunto, insieme al Canzoniere di Petrarca già incontrato nel capitolo precedente, come uno dei testi di riferimento nella successiva codificazione cinquecentesca della lingua letteraria italiana.</p>
+
+  <p class="titolo-capitolo">Gli ultimi anni: l'amicizia con Petrarca e il rapporto con Dante</p>
+  <p>Un evento di grande importanza nella biografia intellettuale di Boccaccio fu l'incontro personale con Francesco Petrarca, avvenuto nel 1350, da cui nacque un rapporto di profonda amicizia e reciproca stima, destinato a durare fino alla morte del maestro: sotto l'influsso di Petrarca, Boccaccio si dedicò negli ultimi decenni della propria vita sempre più agli studi eruditi in lingua latina, componendo opere enciclopediche come il De casibus virorum illustrium, dedicato alle vicende di uomini illustri travolti dalla sorte avversa, il De mulieribus claris, raccolta di biografie di donne celebri della storia e della mitologia, e la Genealogia deorum gentilium, vasta trattazione sulla mitologia classica.</p>
+  <p>Boccaccio fu inoltre tra i primi grandi ammiratori e studiosi dell'opera di Dante, di cui scrisse una biografia, il Trattatello in laude di Dante, e le cui opere contribuì a diffondere anche attraverso un ciclo di pubbliche letture della Commedia, tenute a Firenze nel 1373 e rimaste interrotte per il sopraggiungere della malattia: Boccaccio morì a Certaldo il 21 dicembre del 1375, appena un anno dopo la scomparsa di Petrarca, chiudendo così, quasi simbolicamente, la grande stagione delle Tre Corone di cui si è trattato in questi capitoli, e aprendo la strada, come si vedrà nel prossimo capitolo di questo manuale, alla nuova temperie culturale dell'Umanesimo.</p>
+</div>
+<!-- fine capitolo letteratura 11 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let12.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

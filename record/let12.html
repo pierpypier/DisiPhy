@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 12</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 12: l'umanesimo, contesto storico-culturale e riscoperta dei classici -->
+<div id="capitolo-12-umanesimo" class="capitolo-storia">
+  <p class="titolo-capitolo">12 - L'Umanesimo: contesto storico-culturale e la riscoperta dei classici - Classe 3</p>
+
+  <p class="titolo-capitolo">Dal Trecento al Quattrocento: un nuovo contesto storico</p>
+  <p>Con la scomparsa di Boccaccio, avvenuta nel 1375, come si è visto nel capitolo precedente, si chiude idealmente la grande stagione delle Tre Corone del Trecento italiano, e si apre un nuovo periodo della storia culturale italiana, quello dell'Umanesimo, che occupa gran parte del secolo successivo, il Quattrocento: si tratta di un'epoca segnata da profonde trasformazioni politiche, con il progressivo passaggio, in molte città italiane, dalle forme di governo comunale a quelle signorili, cioè al potere concentrato nelle mani di singole famiglie, come i Medici a Firenze, gli Este a Ferrara, i Gonzaga a Mantova o gli Sforza a Milano.</p>
+  <p>Sul piano politico generale, l'Italia del Quattrocento si presentò come un mosaico di stati regionali indipendenti, spesso in conflitto tra loro, la cui rivalità trovò un temporaneo equilibrio a partire dalla Pace di Lodi del 1454, che sancì per alcuni decenni una condizione di sostanziale stabilità tra le principali potenze della penisola: fu proprio in questo clima di relativa pace e di fioritura delle corti signorili, sempre più impegnate a competere tra loro anche sul piano del prestigio culturale, che l'Umanesimo poté svilupparsi e affermarsi come il grande movimento intellettuale dell'epoca.</p>
+
+  <p class="titolo-capitolo">Il significato del termine e gli studia humanitatis</p>
+  <p>Il termine Umanesimo, di conio moderno, deriva dall'espressione latina studia humanitatis, con cui gli intellettuali del Quattrocento indicavano un preciso insieme di discipline, considerate le più adatte a formare pienamente l'uomo nella sua dimensione civile e morale: la grammatica, la retorica, la poesia, la storia e la filosofia morale, studiate non più attraverso i manuali e i compendi tipici della cultura scolastica medievale, ma direttamente sui testi originali degli autori antichi, greci e latini.</p>
+  <p>Rispetto alla cultura del Medioevo, in cui lo studio della filosofia e delle scienze si era concentrato prevalentemente nelle università, secondo un metodo, quello scolastico, fondato sulla logica aristotelica e sulla disputa razionale, gli umanisti proposero un modello culturale diverso, incentrato sulla filologia, cioè sullo studio rigoroso e critico dei testi antichi nella loro forma originaria, e su un ideale di formazione dell'uomo non più orientato soltanto alla speculazione teologica, ma alla piena realizzazione delle capacità intellettuali, morali e civili proprie dell'essere umano.</p>
+
+  <p class="titolo-capitolo">La riscoperta dei classici latini e greci</p>
+  <p>Come si è già accennato a proposito di Petrarca, considerato il precursore di questo movimento, uno dei tratti distintivi dell'Umanesimo fu la febbrile ricerca di manoscritti antichi andati dispersi o dimenticati nelle biblioteche monastiche durante il Medioevo: questa attività, proseguita e intensificata nel corso del Quattrocento da numerosi dotti ed eruditi, tra cui si ricorda in particolare Poggio Bracciolini, segretario papale attivo nella prima metà del secolo, permise il recupero di numerose opere latine considerate perdute, tra cui testi di Cicerone, di Quintiliano e del poeta Lucrezio.</p>
+  <p>Accanto al recupero dei testi latini, un aspetto di assoluta novità rispetto al secolo precedente fu la riscoperta sistematica della lingua e della letteratura greca antica, fino ad allora conosciuta in Occidente solo in modo frammentario e indiretto: un ruolo decisivo in questo senso fu svolto dal dotto bizantino Manuele Crisolora, chiamato a insegnare il greco a Firenze a partire dal 1397, e dal successivo afflusso di studiosi greci in Italia, favorito anche dalla crescente instabilità dell'Impero bizantino, giunto infine al termine con la caduta di Costantinopoli nel 1453.</p>
+
+  <p class="titolo-capitolo">Firenze e l'Umanesimo civile</p>
+  <p>Un ruolo di primo piano nella nascita e nello sviluppo dell'Umanesimo fu svolto dalla città di Firenze, dove si sviluppò in particolare una corrente definita dalla critica moderna Umanesimo civile, il cui esponente più rappresentativo fu il cancelliere della Repubblica fiorentina Coluccio Salutati, attivo tra la fine del Trecento e i primi anni del Quattrocento: a differenza di una concezione della cultura ripiegata sullo studio erudito fine a se stesso, gli umanisti civili fiorentini sostenevano la necessità di mettere la cultura classica al servizio dell'impegno politico e sociale, in difesa dei valori repubblicani della propria città.</p>
+  <p>Erede di questa impostazione fu Leonardo Bruni, allievo di Salutati e a sua volta cancelliere della Repubblica fiorentina nella prima metà del Quattrocento, autore tra l'altro di un'importante Storia del popolo fiorentino, opera nella quale l'autore applicò per la prima volta in modo sistematico il metodo storiografico e filologico umanistico alla ricostruzione delle vicende della propria città, in polemica con le ricostruzioni leggendarie tramandate dalla tradizione medievale.</p>
+
+  <p class="titolo-capitolo">La filologia umanistica: Lorenzo Valla</p>
+  <p>Il rigore filologico degli umanisti, cioè la capacità di analizzare criticamente i testi antichi per stabilirne l'autenticità, la datazione e il corretto significato, trovò il proprio esponente più acuto in Lorenzo Valla, dotto attivo nella prima metà del Quattrocento presso diverse corti italiane, tra cui quella aragonese di Napoli: a Valla si deve una delle dimostrazioni filologiche più celebri e influenti dell'intero Umanesimo, quella con cui, in un trattato composto intorno al 1440, egli dimostrò, attraverso un'analisi linguistica e storica del testo, la falsità della cosiddetta Donazione di Costantino, un documento fino ad allora ritenuto autentico e utilizzato per legittimare il potere temporale del Papato.</p>
+  <p>Questa dimostrazione, condotta con metodo rigorosamente scientifico attraverso l'analisi di anacronismi linguistici e di incongruenze storiche presenti nel testo, mostra con chiarezza uno dei tratti più moderni e innovativi della filologia umanistica, capace di applicare al testo antico un vaglio critico rigoroso, indipendente da qualsiasi autorità tradizionalmente riconosciuta, sia essa religiosa o politica.</p>
+
+  <p class="titolo-capitolo">Il neoplatonismo fiorentino: Ficino e Pico della Mirandola</p>
+  <p>Nella seconda metà del Quattrocento, sotto la protezione della famiglia Medici, e in particolare di Cosimo il Vecchio e successivamente del nipote Lorenzo il Magnifico, si sviluppò a Firenze un'importante corrente di pensiero filosofico, nota come neoplatonismo fiorentino, il cui principale esponente fu Marsilio Ficino, filosofo e traduttore incaricato dai Medici di tradurre in latino l'intera opera di Platone, fino ad allora poco conosciuta in Occidente, e di fondare un'accademia dedicata allo studio del pensiero platonico, nota come Accademia neoplatonica fiorentina.</p>
+  <p>Legato a questo ambiente fu anche Giovanni Pico della Mirandola, filosofo di straordinaria erudizione, autore di un celebre discorso, composto nel 1486 e noto con il titolo, attribuito postumo, di Oratio de hominis dignitate, nel quale l'autore esalta la dignità dell'uomo, definito capace, grazie al libero arbitrio concesso da Dio, di determinare da sé la propria natura e il proprio destino, elevandosi fino al livello degli angeli o degradandosi fino a quello degli animali: questo testo è generalmente considerato una delle espressioni più alte e compiute dell'antropologia umanistica rinascimentale.</p>
+
+  <p class="titolo-capitolo">Le corti signorili e la diffusione della cultura umanistica</p>
+  <p>Come si è già accennato, l'Umanesimo non fu un fenomeno circoscritto alla sola Firenze, ma si diffuse rapidamente in tutte le principali corti italiane, ciascuna delle quali competeva con le altre nel promuovere e ospitare letterati, artisti e biblioteche prestigiose: si ricordano in particolare la corte estense di Ferrara, quella dei Montefeltro a Urbino, celebre per la raffinata biblioteca voluta dal duca Federico, e quella aragonese di Napoli, che accolse tra gli altri lo stesso Lorenzo Valla.</p>
+  <p>Questa diffusione capillare della cultura umanistica presso le corti signorili contribuì in modo decisivo a diffondere in tutta Italia il nuovo modello educativo e culturale elaborato dagli umanisti, fondato sullo studio diretto dei classici e su un ideale di formazione integrale della persona, che avrebbe trovato, come si vedrà nei capitoli successivi di questo manuale, la propria piena maturazione artistica e letteraria nella successiva stagione del Rinascimento.</p>
+
+  <p class="titolo-capitolo">L'invenzione della stampa e la diffusione del sapere</p>
+  <p>Un evento di portata straordinaria per la diffusione della cultura umanistica fu l'invenzione della stampa a caratteri mobili, realizzata in Germania da Johann Gutenberg intorno alla metà del Quattrocento, e giunta in Italia entro pochi anni, con le prime tipografie attive a Subiaco e a Roma già nella seconda metà degli anni Sessanta del secolo: la stampa permise per la prima volta nella storia la riproduzione rapida ed economica di un numero elevato di copie di uno stesso testo, sostituendo la lenta e costosa copiatura manuale praticata fino ad allora dagli amanuensi.</p>
+  <p>Questa innovazione tecnica ebbe un impatto decisivo proprio sulla diffusione delle opere recuperate e studiate dagli umanisti, contribuendo a diffondere su scala assai più ampia rispetto al passato i testi classici riscoperti e le opere degli stessi autori umanistici: sarà proprio a partire da queste basi culturali e tecniche che, come si vedrà nel prossimo capitolo di questo manuale, si svilupperà la tradizione del poema cavalleresco tra Quattro e Cinquecento, con le figure di Pulci e Boiardo.</p>
+</div>
+<!-- fine capitolo letteratura 12 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let13.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

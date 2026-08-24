@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 10</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 10: francesco petrarca, vita, opere latine e canzoniere -->
+<div id="capitolo-10-petrarca" class="capitolo-storia">
+  <p class="titolo-capitolo">10 - Francesco Petrarca: la vita, le opere latine e il Canzoniere - Classe 3</p>
+
+  <p class="titolo-capitolo">Un nuovo tipo di intellettuale</p>
+  <p>Dopo aver concluso, nei capitoli precedenti, il percorso dedicato a Dante Alighieri, ci si rivolge ora a un'altra figura fondamentale della letteratura italiana del Trecento, Francesco Petrarca, un autore che rispetto a Dante rappresenta per molti aspetti una novità profonda, non soltanto sul piano dei contenuti e dello stile, ma anche nel modo stesso di concepire il ruolo dell'intellettuale e del letterato, sempre più orientato verso lo studio dei classici antichi e verso una dimensione di vita cosmopolita, non più legata in modo esclusivo, come era stato per Dante, alle vicende politiche di una singola città.</p>
+  <p>Questa differenza di prospettiva, che si vedrà emergere in modo evidente nel corso del capitolo, rende Petrarca una figura di cerniera tra la cultura medievale, di cui pure conserva tratti significativi, e la nuova temperie culturale che di lì a poco avrebbe preso il nome di Umanesimo, movimento di cui lo stesso Petrarca è generalmente considerato il primo grande iniziatore.</p>
+
+  <p class="titolo-capitolo">La vita tra Francia e Italia</p>
+  <p>Francesco Petrarca nacque ad Arezzo il 20 luglio del 1304, da Ser Petracco, notaio fiorentino che, come il padre di Dante fu anch'egli coinvolto nelle lotte tra le fazioni guelfe di Firenze, e fu costretto poco dopo la nascita del figlio a lasciare la città in circostanze di esilio politico, analoghe a quelle già incontrate a proposito di Dante nei capitoli precedenti; la famiglia si trasferì infine, quando Francesco era ancora bambino, nei pressi di Avignone, nel sud della Francia, dove in quegli stessi anni si era stabilita la sede della corte papale, in seguito al trasferimento del papato voluto da Clemente V nel 1309, un evento che la storiografia definisce cattività avignonese.</p>
+  <p>Fu proprio in questo ambiente francese, e non in Italia, che Petrarca trascorse gran parte della propria infanzia e giovinezza, un elemento importante per comprendere la sua formazione culturale, aperta fin dall'inizio a una dimensione europea più ampia rispetto a quella, prevalentemente fiorentina e italiana, che aveva caratterizzato l'esperienza di Dante.</p>
+
+  <p class="titolo-capitolo">La formazione, gli studi giuridici e la vocazione letteraria</p>
+  <p>Seguendo la volontà paterna, Petrarca fu avviato agli studi di diritto, che frequentò dapprima presso l'università di Montpellier e successivamente presso quella di Bologna, allora tra i centri più prestigiosi d'Europa per lo studio delle leggi: gli studi giuridici, tuttavia, non incontrarono mai il reale interesse del giovane Petrarca, sempre più attratto dalla lettura degli autori latini classici, in particolare Cicerone e Virgilio, tanto che, dopo la morte del padre avvenuta nel 1326, egli abbandonò definitivamente gli studi di legge per dedicarsi interamente alla propria vocazione letteraria.</p>
+  <p>Per garantirsi un sostentamento economico che gli permettesse di dedicarsi agli studi, Petrarca prese gli ordini religiosi minori, che gli consentivano di ricevere benefici ecclesiastici pur senza obbligarlo al sacerdozio vero e proprio, ed entrò al servizio della potente famiglia romana dei Colonna, ottenendo in tal modo la possibilità di viaggiare, di frequentare le corti e le biblioteche di mezza Europa, e di dedicare gran parte della propria esistenza alla ricerca e allo studio dei testi antichi.</p>
+
+  <p class="titolo-capitolo">L'incontro con Laura</p>
+  <p>Secondo quanto lo stesso Petrarca dichiara nella propria opera poetica, il 6 aprile del 1327, giorno di Venerdì Santo, nella chiesa di Santa Chiara ad Avignone, il poeta incontrò per la prima volta una donna a cui diede il nome di Laura, e della quale si hanno scarsissime notizie biografiche certe al di fuori di quanto racconta la stessa opera petrarchesca: a questa figura femminile, e all'amore da essa suscitato, Petrarca dedicherà la propria opera poetica volgare più importante, il Canzoniere, di cui si tratterà più avanti in questo capitolo.</p>
+  <p>Petrarca stesso, nella propria opera, gioca più volte sull'ambiguità e sulla ricchezza semantica del nome Laura, che richiama sia la pianta del lauro, simbolo della gloria poetica secondo la tradizione classica, sia il sostantivo aura, cioè il soffio leggero del vento, quasi a suggerire fin dal nome stesso della donna amata la fusione, tipica di tutta la poetica petrarchesca, tra il desiderio d'amore e l'aspirazione alla gloria letteraria.</p>
+
+  <p class="titolo-capitolo">La riscoperta dei classici e la nascita dell'Umanesimo</p>
+  <p>L'attività più caratteristica e storicamente più rilevante di Petrarca fu senza dubbio la sua incessante ricerca di manoscritti antichi, condotta viaggiando per le biblioteche monastiche di tutta Europa, alla ricerca di opere degli autori latini classici andate disperse o dimenticate nel corso del Medioevo: tra i risultati più importanti di questa ricerca si ricorda il celebre ritrovamento, avvenuto a Verona nel 1345, di un manoscritto contenente le lettere private di Cicerone indirizzate all'amico Attico, un testo che rivelò al poeta e ai suoi contemporanei un'immagine più intima e complessa del grande oratore romano, fino ad allora conosciuto soprattutto attraverso i suoi scritti pubblici.</p>
+  <p>Questa passione filologica ed erudita per il recupero e lo studio diretto dei testi classici, condotta con un rigore metodologico nuovo rispetto alla cultura medievale, valse a Petrarca il riconoscimento tradizionale di iniziatore dell'Umanesimo, movimento culturale che, come si vedrà in un capitolo successivo di questo manuale, porrà al centro dei propri interessi lo studio degli auctores antichi e la riscoperta della dignità dell'uomo secondo i modelli della classicità greca e latina.</p>
+
+  <p class="titolo-capitolo">Le opere latine: tra vita attiva e vita contemplativa</p>
+  <p>Coerentemente con la propria formazione classicista, Petrarca riservò alla lingua latina, considerata lingua di prestigio superiore rispetto al volgare, la maggior parte della propria produzione più ambiziosa: tra le opere latine più importanti si ricorda l'Africa, poema epico incompiuto dedicato alle imprese del condottiero romano Scipione l'Africano, composto sul modello dell'Eneide virgiliana, e che valse a Petrarca, nel 1341, la solenne incoronazione poetica sul Campidoglio a Roma, cerimonia con cui la città eterna intendeva riconoscere pubblicamente il poeta come erede della grande tradizione classica.</p>
+  <p>Di particolare importanza è anche il Secretum, opera in forma di dialogo composta in tre libri, nella quale Petrarca immagina un colloquio intimo e drammatico con sant'Agostino, alla presenza silenziosa della personificazione della Verità: nel dialogo il poeta mette in scena il proprio tormento interiore, diviso tra l'attrazione per i beni terreni, in particolare la gloria letteraria e l'amore per Laura, e l'aspirazione a una vita più autenticamente spirituale, orientata verso la salvezza dell'anima, un conflitto che costituisce, come si vedrà, il nucleo tematico centrale anche della sua opera poetica in volgare.</p>
+  <p>Completano il quadro delle opere latine trattati di argomento morale, come il De vita solitaria e il De otio religioso, dedicati all'elogio della vita appartata dedicata allo studio, e un vastissimo epistolario, raccolto in due grandi collezioni note come Familiares e Seniles, attraverso il quale Petrarca intrattenne rapporti intellettuali con i più importanti dotti del proprio tempo, contribuendo a diffondere in tutta Europa il nuovo ideale culturale umanistico.</p>
+
+  <p class="titolo-capitolo">Il Canzoniere: genesi e struttura</p>
+  <p>L'opera in volgare più importante di Petrarca è il Canzoniere, conosciuto anche con il titolo originale latino di Rerum vulgarium fragmenta, cioè frammenti di cose in volgare: si tratta di una raccolta di trecentosessantasei componimenti poetici, per la maggior parte sonetti, insieme a canzoni, sestine, ballate e madrigali, alla quale il poeta lavorò per gran parte della propria vita, sottoponendola a continue revisioni fino agli ultimi anni.</p>
+  <p>La raccolta è tradizionalmente divisa in due grandi sezioni, corrispondenti alle cosiddette rime in vita e rime in morte di Laura, separate idealmente dalla notizia della morte della donna amata, avvenuta secondo la tradizione nel 1348, probabilmente a causa della peste che in quell'anno colpì duramente l'Europa: questa bipartizione permette a Petrarca di sviluppare, nella seconda parte dell'opera, una riflessione ancora più profonda sul senso del tempo, della memoria e della fugacità delle cose terrene.</p>
+
+  <p class="titolo-capitolo">I temi e lo stile del Canzoniere</p>
+  <p>Rispetto alla poesia stilnovistica già incontrata nei capitoli precedenti, e in particolare rispetto alla concezione dell'amore elaborata da Dante nella Vita nuova, il Canzoniere di Petrarca presenta una sensibilità profondamente diversa: l'amore per Laura non conduce mai, come accadeva per Beatrice, a una piena e serena trasfigurazione religiosa, ma resta fino alla fine un sentimento umano, terreno e conflittuale, vissuto dal poeta con un'oscillazione costante tra il desiderio e il senso di colpa, tra l'attrazione per la bellezza della donna amata e la consapevolezza della vanità di ogni affetto terreno rispetto alla cura dell'anima.</p>
+  <p>Questo conflitto interiore, già anticipato nel Secretum, costituisce il vero filo conduttore dell'intera raccolta, e si accompagna a un'analisi psicologica estremamente raffinata dei moti dell'animo del poeta, condotta con uno stile di straordinaria eleganza formale, fondato sulla ricerca di un equilibrio musicale e armonico del verso, sull'uso sapiente di figure retoriche come l'antitesi e il parallelismo, e su un lessico selezionato secondo un rigoroso criterio di decoro stilistico.</p>
+  <p><em>Approfondimento:</em> a differenza di Dante, che nella Commedia impiega una lingua deliberatamente plurilingue e capace di accogliere anche i registri più bassi e concreti, Petrarca elabora nel Canzoniere una lingua poetica unitaria e costantemente elevata, fondata su un numero relativamente ristretto di parole e immagini, riproposte e variate con grande cura in tutta la raccolta: proprio questa coerenza stilistica farà del Canzoniere, come si vedrà, il modello linguistico e formale di riferimento per gran parte della successiva poesia lirica italiana ed europea.</p>
+
+  <p class="titolo-capitolo">Gli ultimi anni e l'eredità di Petrarca</p>
+  <p>Dopo una vita trascorsa tra continui viaggi e soggiorni presso diverse corti signorili italiane, tra cui quella dei Visconti a Milano e quella dei Carraresi a Padova, Petrarca trascorse gli ultimi anni della propria esistenza nel piccolo borgo di Arquà, sui Colli Euganei, dove morì nella notte tra il 18 e il 19 luglio del 1374, secondo una tradizione, non del tutto verificabile, mentre era intento alla lettura di un libro.</p>
+  <p>L'influsso di Petrarca sulla letteratura successiva fu immenso, tanto da dare origine a un vero e proprio fenomeno storico-letterario, noto come petrarchismo, cioè l'imitazione diffusa, nei secoli successivi e in tutta Europa, dei temi, delle immagini e dello stile del Canzoniere: prima di approfondire questo aspetto, tuttavia, occorrerà esaminare, nel prossimo capitolo di questo manuale, la figura del terzo grande autore del Trecento italiano, Giovanni Boccaccio, e la sua opera maggiore, il Decameron.</p>
+</div>
+<!-- fine capitolo letteratura 10 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let11.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

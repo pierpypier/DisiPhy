@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 17</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 17: il barocco, contesto storico-culturale e giovan battista marino -->
+<div id="capitolo-17-barocco-marino" class="capitolo-storia">
+  <p class="titolo-capitolo">17 - Il Barocco: contesto storico-culturale e Giovan Battista Marino - Classe 4</p>
+
+  <p class="titolo-capitolo">Dal Rinascimento al Seicento: una nuova epoca</p>
+  <p>Con la conclusione del percorso dedicato al Rinascimento italiano, affrontato nei capitoli precedenti di questo manuale, si apre ora un nuovo periodo della storia letteraria italiana, quello del Seicento, comunemente definito con il termine Barocco: un'epoca profondamente diversa da quella appena esaminata, sia sul piano storico-politico sia su quello della sensibilità culturale, segnata da una crisi radicale di molte delle certezze che avevano caratterizzato l'età rinascimentale.</p>
+  <p>Il termine Barocco, di origine incerta ma probabilmente derivato da un vocabolo portoghese usato per indicare una perla dalla forma irregolare, fu impiegato in origine in senso spregiativo, per indicare un gusto artistico e letterario ritenuto eccessivo, artificioso e privo della misura e dell'armonia proprie della tradizione classica: soltanto la critica moderna ha restituito a questo termine un significato più neutro e storicamente fondato, riconoscendo nel Barocco uno stile e una sensibilità autonomi, espressione coerente della particolare temperie culturale del Seicento europeo.</p>
+
+  <p class="titolo-capitolo">La crisi politica: l'Italia sotto il dominio straniero</p>
+  <p>Sul piano politico, il Seicento italiano si apre all'insegna di una condizione di sostanziale subalternità rispetto alle grandi potenze europee, in particolare la Spagna, che dopo la Pace di Cateau-Cambrésis del 1559, con cui si erano concluse le guerre d'Italia già incontrate nei capitoli precedenti, esercitava un controllo diretto o indiretto sulla gran parte della penisola, dal Ducato di Milano al Regno di Napoli: questa condizione di dipendenza politica ed economica dalle potenze straniere contribuì a un generale clima di sfiducia e di ripiegamento, ben diverso dal fervore civile e culturale che aveva caratterizzato l'età dei Comuni e delle signorie rinascimentali.</p>
+  <p>A questa crisi politica si accompagnò, in alcune fasi del secolo, anche una grave crisi economica e demografica, aggravata da ricorrenti epidemie di peste, tra cui quella che colpì duramente l'Italia settentrionale nel 1630, evento che contribuì ulteriormente a diffondere, nella cultura del tempo, un senso di precarietà e di instabilità dell'esistenza umana.</p>
+
+  <p class="titolo-capitolo">La Controriforma e il nuovo clima religioso</p>
+  <p>Un fattore determinante nel definire il clima culturale del Seicento fu inoltre la Controriforma cattolica, cioè l'insieme delle misure dottrinali e disciplinari adottate dalla Chiesa di Roma in risposta alla Riforma protestante avviata da Martin Lutero nel 1517, e sancite in particolare dal Concilio di Trento, riunitosi a più riprese tra il 1545 e il 1563: la Chiesa post-tridentina rafforzò notevolmente il proprio controllo sulla vita culturale e intellettuale, attraverso strumenti come l'Indice dei libri proibiti e l'azione dell'Inquisizione, condizionando in modo significativo la produzione letteraria e scientifica del tempo.</p>
+  <p>In questo contesto si inserisce anche il celebre caso di Galileo Galilei, di cui si tratterà diffusamente nel prossimo capitolo di questo manuale, e più in generale una diffusa tensione tra la nuova sensibilità scientifica, sempre più orientata verso l'osservazione diretta della natura, e l'autorità dottrinale della Chiesa, tensione che costituisce uno dei tratti più caratteristici e problematici dell'intero secolo.</p>
+
+  <p class="titolo-capitolo">Una nuova visione del mondo e dell'uomo</p>
+  <p>Accanto alla crisi politica e religiosa, il Seicento fu attraversato anche da una profonda trasformazione della visione scientifica dell'universo, legata agli sviluppi dell'astronomia moderna: le scoperte di Copernico, Keplero e, come si vedrà, dello stesso Galilei misero progressivamente in discussione il tradizionale sistema tolemaico geocentrico, che per secoli aveva collocato la terra, e con essa l'uomo, al centro immutabile del creato, sostituendolo con una visione dell'universo assai più vasta, complessa e per molti aspetti inquietante.</p>
+  <p>Questo mutamento di prospettiva ebbe conseguenze profonde anche sul piano culturale e letterario, contribuendo a diffondere, in molti autori del Seicento, un senso di instabilità, di relatività e di meraviglia di fronte a un mondo che appariva sempre più mutevole, difficile da ridurre a categorie stabili e definitive, un clima psicologico e intellettuale che trova un preciso riflesso nell'estetica letteraria barocca.</p>
+
+  <p class="titolo-capitolo">L'estetica barocca: meraviglia e concetto</p>
+  <p>Sul piano specificamente letterario, la poetica barocca si fonda su un ideale estetico radicalmente diverso da quello classicista, fondato sulla misura e sull'equilibrio, che aveva caratterizzato gran parte della tradizione rinascimentale: al centro della nuova sensibilità si colloca il principio della meraviglia, cioè la ricerca, da parte del poeta, di uno stupore intellettuale ed emotivo nel lettore, ottenuto attraverso l'invenzione di immagini, paragoni e accostamenti quanto più possibile originali, arditi e sorprendenti.</p>
+  <p>Lo strumento retorico principale attraverso cui si persegue questo effetto è il cosiddetto concetto, cioè un'associazione ingegnosa e inattesa tra realtà anche molto lontane tra loro, spesso costruita attraverso l'uso sistematico della metafora, dell'iperbole, dell'antitesi e del gioco di parole: proprio la teoria di questo procedimento retorico fu oggetto, più avanti nel secolo, di un'importante trattazione da parte del letterato piemontese Emanuele Tesauro, autore di un trattato dedicato specificamente all'arte del concetto ingegnoso.</p>
+
+  <p class="titolo-capitolo">Giovan Battista Marino: vita</p>
+  <p>Il maggiore e più rappresentativo poeta italiano del Barocco fu Giovan Battista Marino, nato a Napoli il 14 ottobre del 1569, da una famiglia di ceto medio: dopo una giovinezza avventurosa e non priva di episodi turbolenti, che lo condussero anche a un breve periodo di carcerazione, Marino si trasferì a Roma e successivamente in altre corti italiane, prima di trascorrere un lungo periodo, tra il 1615 e il 1623, presso la corte di Francia, sotto la protezione della regina Maria de' Medici.</p>
+  <p>Fu proprio durante il soggiorno francese che Marino portò a compimento la propria opera maggiore, pubblicata a Parigi nel 1623, mentre gli ultimi anni della sua vita, trascorsi nuovamente in Italia, videro il poeta godere di un successo e di una fama straordinari, prima della morte, sopraggiunta a Napoli nel 1625, poco dopo il trionfale ritorno in patria.</p>
+
+  <p class="titolo-capitolo">L'Adone: struttura e contenuto</p>
+  <p>L'opera più importante di Marino è l'Adone, un vastissimo poema mitologico in ottava rima, articolato in venti canti per un totale di oltre quarantamila versi, che lo rendono uno dei poemi più lunghi dell'intera letteratura italiana: la vicenda narrata, tratta dalla mitologia classica e in particolare dalle Metamorfosi del poeta latino Ovidio, racconta l'amore tra la dea Venere e il giovane e bellissimo cacciatore Adone, fino alla tragica morte di quest'ultimo, ucciso da un cinghiale durante una battuta di caccia.</p>
+  <p>Attorno a questo nucleo narrativo relativamente semplice, Marino costruisce un'opera di straordinaria ricchezza descrittiva e digressiva, inserendo un numero elevatissimo di episodi secondari, favole mitologiche, descrizioni allegoriche e digressioni erudite su temi i più vari, dalla botanica alla musica, dall'astronomia alla pittura, secondo un gusto tipicamente barocco per l'accumulo, la varietà e la meraviglia descrittiva, più che per la linearità e la compattezza della trama.</p>
+  <p><em>Approfondimento:</em> l'Adone rappresenta in modo esemplare la concezione poetica di Marino, il quale sosteneva apertamente che il fine proprio della poesia dovesse essere, prima ancora che l'insegnamento morale tradizionalmente attribuito alla letteratura, la capacità di suscitare stupore e meraviglia nel lettore, attraverso l'invenzione continua di immagini sorprendenti e di accostamenti inattesi tra le cose.</p>
+
+  <p class="titolo-capitolo">Lo stile di Marino</p>
+  <p>Sul piano stilistico, la poesia di Marino si distingue per un uso sistematico e virtuosistico delle principali figure retoriche care all'estetica barocca: la metafora ardita, capace di accostare realtà molto distanti tra loro; l'iperbole, che amplifica ogni immagine oltre la misura consueta; l'antitesi, che gioca sul contrasto tra opposti; e un gusto spiccato per la musicalità del verso, ottenuta attraverso un sapiente uso di assonanze, allitterazioni e giochi fonici.</p>
+  <p>Questo virtuosismo stilistico, se da un lato valse a Marino un'immensa fama presso i propri contemporanei, dall'altro espose la sua opera, soprattutto a partire dai secoli successivi, alla critica di un eccessivo compiacimento formale, fine a se stesso più che funzionale a una reale profondità di contenuto, un giudizio che la critica più recente ha in parte rivisto, riconoscendo alla poesia di Marino una propria originale coerenza estetica, pienamente rappresentativa della sensibilità barocca.</p>
+
+  <p class="titolo-capitolo">Il Marinismo: fortuna e diffusione</p>
+  <p>Il successo straordinario riscosso da Marino, sia in Italia sia in altri paesi europei, diede origine a un vero e proprio movimento letterario, noto come Marinismo, che ebbe una vastissima diffusione per gran parte del Seicento: numerosi poeti, sia italiani sia stranieri, si dedicarono all'imitazione dello stile e dei procedimenti retorici mariniani, spesso portandoli a un ulteriore estremismo formale, alla ricerca di effetti di sorpresa e di virtuosismo sempre più accentuati.</p>
+  <p>Questa fortuna imitativa, se da un lato testimonia l'influenza determinante esercitata da Marino sulla poesia europea del proprio tempo, dall'altro contribuì col tempo a una certa maniera ripetitiva del gusto barocco, che sarà oggetto, nel corso del Settecento, di una netta reazione critica da parte dei sostenitori di un ritorno alla misura e alla semplicità classica, come si vedrà nei capitoli successivi di questo manuale dedicati all'Arcadia e all'Illuminismo.</p>
+
+  <p class="titolo-capitolo">Il valore storico-letterario del Barocco italiano</p>
+  <p>Al di là dei giudizi critici altalenanti che nel corso dei secoli hanno accompagnato la ricezione della poesia barocca, l'esperienza di Marino e del Marinismo riveste un'importanza fondamentale per comprendere la sensibilità culturale del Seicento italiano ed europeo, segnata, come si è visto in apertura di questo capitolo, da una profonda crisi delle certezze rinascimentali e da una nuova, inquieta percezione della complessità e della mutevolezza del reale, di cui la ricerca ossessiva della meraviglia poetica costituisce un'espressione coerente e storicamente significativa.</p>
+  <p>Proprio in questo stesso clima di rinnovamento e di crisi si inserisce anche una diversa e per molti versi opposta esperienza intellettuale, quella della nuova scienza sperimentale, che nello stesso torno di anni in cui Marino componeva l'Adone stava mettendo profondamente in discussione, attraverso il metodo dell'osservazione diretta della natura, le antiche certezze cosmologiche: sarà proprio questa vicenda, incarnata dalla figura di Galileo Galilei, a essere affrontata nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 17 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let18.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

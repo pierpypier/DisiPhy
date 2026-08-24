@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 16</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 16: guicciardini, castiglione e la questione della lingua -->
+<div id="capitolo-16-guicciardini-castiglione-bembo" class="capitolo-storia">
+  <p class="titolo-capitolo">16 - Guicciardini, Castiglione e la questione della lingua - Classe 3</p>
+
+  <p class="titolo-capitolo">Il tramonto del Rinascimento italiano</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la figura di Niccolò Machiavelli e la sua riflessione sulla politica, si concludono in questo capitolo, dedicato a tre diverse figure del primo Cinquecento italiano, i temi affrontati nella parte di questo manuale relativa al Rinascimento: Francesco Guicciardini e Baldassarre Castiglione, infatti, condividono con Machiavelli lo stesso torno di anni e la stessa temperie storica, segnata dalle guerre d'Italia e dalla progressiva perdita di autonomia politica degli stati della penisola, mentre Pietro Bembo, di cui si dirà nella parte finale del capitolo, porta a compimento in questi stessi decenni un dibattito culturale di primaria importanza, quello sulla lingua letteraria italiana.</p>
+
+  <p class="titolo-capitolo">Francesco Guicciardini: vita e formazione</p>
+  <p>Francesco Guicciardini nacque a Firenze il 6 marzo del 1483, da una famiglia aristocratica di antica tradizione politica, e ricevette una solida formazione giuridica, coronata da un dottorato in diritto conseguito a soli ventitré anni: la sua carriera pubblica, a differenza di quella di Machiavelli, incontrato nel capitolo precedente, si svolse in gran parte al servizio non della Repubblica fiorentina ma della Chiesa romana, come governatore di diverse città dello Stato Pontificio e come consigliere di due papi della famiglia Medici, Leone X e Clemente VII, incarichi che gli permisero di osservare da vicino, e da una posizione di grande responsabilità, le vicende politiche e diplomatiche dell'Italia del proprio tempo.</p>
+  <p>Anche Guicciardini, come Machiavelli, conobbe negli ultimi anni di vita l'amarezza dell'esclusione dalla vita politica attiva, in seguito al ritorno del governo mediceo a Firenze nel 1530 e ai mutati equilibri di potere all'interno della stessa famiglia Medici, che ne resero progressivamente marginale il ruolo: si ritirò infine nella propria villa di Arcetri, presso Firenze, dove morì nel 1540, dedicando gli ultimi anni della propria esistenza alla stesura della propria opera storiografica maggiore.</p>
+
+  <p class="titolo-capitolo">I Ricordi: la saggezza pratica e il particulare</p>
+  <p>Tra il 1512 e gli ultimi anni di vita, Guicciardini compose e più volte rielaborò una raccolta di brevi massime di riflessione politica e morale, nota con il titolo di Ricordi, nella quale l'autore raccoglie, in forma di aforismi indipendenti tra loro, osservazioni pratiche maturate dalla propria esperienza diretta di uomo di governo, relative alla natura umana, ai meccanismi del potere e alla condotta più prudente da tenere nelle diverse circostanze della vita pubblica e privata.</p>
+  <p>Un concetto centrale nel pensiero di Guicciardini, che emerge con chiarezza dai Ricordi, è quello del cosiddetto particulare, termine con cui l'autore indica l'interesse concreto e specifico del singolo individuo, spesso in conflitto con quello della collettività: a differenza di Machiavelli, che pur riconoscendo l'importanza degli interessi particolari tende comunque a cercare princìpi politici di validità generale, Guicciardini mostra una sfiducia più radicale verso la possibilità di individuare leggi storiche universalmente valide, insistendo piuttosto sulla necessità di valutare ogni situazione politica nella propria irripetibile particolarità, attraverso quella che egli stesso chiama discrezione, cioè la capacità di giudizio pratico e prudente adattata di volta in volta alle circostanze concrete.</p>
+
+  <p class="titolo-capitolo">Guicciardini e Machiavelli a confronto</p>
+  <p>Il confronto tra Guicciardini e Machiavelli, entrambi testimoni diretti della crisi politica italiana del primo Cinquecento, permette di cogliere due sensibilità storiografiche e politiche per molti versi complementari ma anche profondamente diverse: se Machiavelli, come si è visto nel capitolo precedente, tende a costruire modelli e princìpi di validità generale, fondati sull'osservazione degli esempi della storia antica, in particolare romana, Guicciardini si mostra assai più scettico verso la possibilità di ricavare dalla storia leggi universali, insistendo piuttosto sulla varietà infinita e spesso imprevedibile delle situazioni umane.</p>
+  <p>Anche sul piano del giudizio storico complessivo, Guicciardini appare generalmente più pessimista rispetto a Machiavelli: mentre quest'ultimo conclude il Principe con un appassionato appello alla possibilità di un riscatto politico dell'Italia, Guicciardini tende a una visione più disincantata e rassegnata delle vicende umane, dominate a suo giudizio dal caso e dagli interessi particolari più che da un disegno provvidenziale o da leggi storiche razionalmente comprensibili.</p>
+
+  <p class="titolo-capitolo">La Storia d'Italia: il capolavoro storiografico</p>
+  <p>L'opera maggiore di Guicciardini è la Storia d'Italia, alla quale l'autore si dedicò negli ultimi anni della propria vita, a partire dal 1537, lasciandola sostanzialmente compiuta ma non definitivamente rivista al momento della morte: si tratta di un'ampia ricostruzione degli eventi politici e militari che interessarono l'Italia dal 1494, anno della discesa di Carlo VIII di Francia già incontrata più volte in questo manuale, fino al 1534, coprendo dunque l'intero arco delle guerre d'Italia.</p>
+  <p>L'opera è considerata dalla critica moderna uno dei vertici della storiografia europea del Cinquecento, per il rigore con cui Guicciardini analizza le cause profonde degli eventi storici, per la capacità di ricostruire con equilibrio le motivazioni e gli interessi dei diversi protagonisti politici del tempo, e per uno stile di prosa complesso e meditato, costruito attraverso lunghi periodi subordinati che riflettono la volontà dell'autore di dar conto, con la massima precisione possibile, della molteplicità delle cause che concorrono a determinare ogni evento storico.</p>
+
+  <p class="titolo-capitolo">Baldassarre Castiglione e la corte di Urbino</p>
+  <p>Un'esperienza culturale diversa, ma altrettanto rappresentativa della temperie rinascimentale, è quella di Baldassarre Castiglione, nato nei pressi di Mantova nel 1478, da una famiglia nobile legata alla corte dei Gonzaga: dopo una prima formazione presso la corte mantovana, Castiglione trascorse un periodo particolarmente significativo della propria vita presso la raffinata corte dei Montefeltro a Urbino, retta in quegli anni dal duca Guidobaldo e dalla consorte Elisabetta Gonzaga, considerata tra le più colte ed eleganti dell'intera Italia rinascimentale.</p>
+  <p>Proprio all'ambiente e alla società di questa corte, evocata con affettuosa nostalgia a distanza di anni, Castiglione dedicò la propria opera maggiore, Il Cortegiano, un dialogo in quattro libri redatto in diverse fasi tra il 1508 e il 1524 circa, e pubblicato infine nel 1528, pochi mesi prima della morte dell'autore, avvenuta a Toledo, in Spagna, dove Castiglione si trovava come nunzio apostolico presso la corte dell'imperatore Carlo V.</p>
+
+  <p class="titolo-capitolo">Il Cortegiano: il modello dell'uomo di corte</p>
+  <p>Il Cortegiano è costruito nella forma del dialogo, genere di ascendenza classica particolarmente diffuso nella trattatistica rinascimentale, e immagina una serie di conversazioni, svoltesi realmente o idealmente presso la corte di Urbino nell'arco di quattro serate, tra i più illustri cortigiani e le dame della corte, impegnati a discutere collettivamente quali debbano essere le qualità ideali del perfetto uomo di corte, e, nell'ultimo libro, della perfetta donna di palazzo.</p>
+  <p>Il ritratto che emerge dal dialogo delinea una figura di straordinaria completezza, capace di eccellere tanto nelle arti militari quanto in quelle letterarie e artistiche, dotata di eleganza nei modi, di equilibrio nel comportamento e di una raffinata cultura umanistica, ma soprattutto in grado di mettere in pratica una qualità che Castiglione stesso definisce con il termine sprezzatura, cioè la capacità di compiere anche le azioni più difficili e studiate con un'apparente naturalezza e disinvoltura, dissimulando ogni sforzo o artificio, in modo da suscitare grazia e ammirazione senza dare mai l'impressione di ostentazione.</p>
+  <p><em>Approfondimento:</em> il modello del cortegiano delineato da Castiglione non ha soltanto un valore descrittivo, ma esprime un vero e proprio ideale pedagogico ed estetico, quello dell'uomo rinascimentale come opera d'arte compiuta, in cui virtù morali, competenze pratiche e raffinatezza formale si fondono in un equilibrio armonico: proprio per questo carattere di modello universale, l'opera ebbe una fortuna europea straordinaria, venendo tradotta e imitata in numerosi paesi come testo di riferimento per l'educazione della nobiltà di corte.</p>
+
+  <p class="titolo-capitolo">La questione della lingua nel Cinquecento</p>
+  <p>Accanto alla riflessione politica e a quella sul comportamento cortigiano, il primo Cinquecento italiano fu attraversato da un ampio ed importante dibattito culturale, noto come questione della lingua, incentrato sul problema di quale varietà linguistica dovesse essere adottata come modello per la lingua letteraria italiana, in un momento storico in cui, come si è visto fin dai primi capitoli di questo manuale, l'Italia restava divisa in una molteplicità di stati e di varietà linguistiche regionali.</p>
+  <p>A questo dibattito parteciparono posizioni diverse e talvolta contrapposte: lo stesso Machiavelli, incontrato nel capitolo precedente, sosteneva l'adozione del fiorentino vivo e parlato al proprio tempo come base della lingua letteraria; l'umanista vicentino Gian Giorgio Trissino proponeva invece l'elaborazione di una lingua cortigiana comune, che attingesse in modo eclettico ai diversi volgari italiani illustri, sul modello già teorizzato secoli prima da Dante nel De vulgari eloquentia, incontrato in un capitolo precedente di questo manuale.</p>
+
+  <p class="titolo-capitolo">Pietro Bembo e le Prose della volgar lingua</p>
+  <p>La posizione che ebbe infine la maggiore fortuna storica in questo dibattito fu quella elaborata da Pietro Bembo, letterato veneziano nato nel 1470 e destinato a diventare, negli ultimi anni della propria vita, cardinale della Chiesa cattolica: nella sua opera Prose della volgar lingua, pubblicata nel 1525 e redatta anch'essa in forma di dialogo, Bembo sostenne la necessità di fondare la lingua letteraria italiana non sul fiorentino parlato contemporaneo, ritenuto ormai troppo mutevole e regionale, ma su un modello linguistico fisso e già consacrato dalla tradizione, individuato nel fiorentino letterario del Trecento.</p>
+  <p>In particolare, Bembo indicò come modelli da imitare, per la prosa, il Boccaccio del Decameron, già incontrato in un capitolo precedente di questo manuale, e, per la poesia, il Petrarca del Canzoniere, ritenuto insuperabile esempio di armonia ed eleganza stilistica: questa proposta, nota come classicismo bembesco, ebbe un'influenza determinante sulla successiva codificazione della lingua letteraria italiana, contribuendo a fissare per secoli, fino all'Ottocento inoltrato, un modello linguistico fondato sull'imitazione dei grandi autori del Trecento fiorentino, indipendentemente dalle trasformazioni che la lingua parlata avrebbe nel frattempo conosciuto.</p>
+
+  <p class="titolo-capitolo">Bilancio del Rinascimento e apertura al capitolo successivo</p>
+  <p>Con questo capitolo si conclude il percorso dedicato al Rinascimento italiano, che ha permesso di ripercorrere, dalla riscoperta umanistica dei classici fino alla piena maturità artistica e letteraria del Cinquecento, un'epoca di straordinaria vitalità culturale, capace di esprimersi in forme diversissime tra loro, dal poema cavalleresco di Ariosto alla riflessione politica di Machiavelli e Guicciardini, fino al trattato sul comportamento cortigiano di Castiglione e alla sistemazione linguistica proposta da Bembo.</p>
+  <p>Proprio questa straordinaria fioritura culturale, tuttavia, si sviluppò all'interno di un quadro politico sempre più fragile e compromesso dalle guerre d'Italia e dalla crescente ingerenza delle potenze straniere nella penisola: sarà proprio a partire dalla crisi politica e religiosa che investirà l'Italia e l'Europa nel corso del Cinquecento, con la Riforma protestante e la successiva Controriforma cattolica, che prenderà avvio, come si vedrà nel prossimo capitolo di questo manuale, la nuova temperie culturale del Barocco.</p>
+</div>
+<!-- fine capitolo letteratura 16 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let17.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>
