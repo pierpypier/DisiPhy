@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 07 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 07: Sistemi di equazioni di primo grado -->
+<div class="capitolo-storia" id="esercizi-07-sistemi-equazioni">
+
+<p class="titolo-capitolo">07 - Esercizi svolti: sistemi di equazioni di primo grado</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Metodo di sostituzione</p>
+<p><em>Esempio:</em> Risolvere il sistema formato da x + y = 9 e x - y = 3.</p>
+<p>Dalla prima equazione ricaviamo x in funzione di y.</p>
+<p class="formula">x = 9 - y</p>
+<p>Sostituiamo nella seconda equazione.</p>
+<p class="formula">(9 - y) - y = 3 → 9 - 2y = 3 → -2y = -6 → y = 3</p>
+<p>Sostituendo y = 3 nell'espressione trovata per x otteniamo x = 9 - 3 = 6. La soluzione è (x, y) = (6, 3). Verifichiamo: 6 + 3 = 9 e 6 - 3 = 3, entrambe verificate.</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Sostituzione con incognita già isolata</p>
+<p><em>Esempio:</em> Risolvere il sistema formato da y = 2x - 1 e 3x + y = 14.</p>
+<p>La prima equazione fornisce già y in funzione di x: sostituiamo direttamente nella seconda.</p>
+<p class="formula">3x + (2x - 1) = 14 → 5x - 1 = 14 → 5x = 15 → x = 3</p>
+<p>Sostituendo x = 3 nella prima equazione otteniamo y = 2×3 - 1 = 5. La soluzione è (x, y) = (3, 5). Verifichiamo: 3×3 + 5 = 14, corretto.</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Metodo di riduzione diretta</p>
+<p><em>Esempio:</em> Risolvere il sistema formato da x + y = 10 e x - y = 2.</p>
+<p>I coefficienti di y sono già opposti (+1 e -1): sommando membro a membro, la y si elimina.</p>
+<p class="formula">(x + y) + (x - y) = 10 + 2 → 2x = 12 → x = 6</p>
+<p>Sostituendo x = 6 nella seconda equazione: 6 - y = 2, da cui y = 4. La soluzione è (x, y) = (6, 4). Verifichiamo: 6 + 4 = 10 e 6 - 4 = 2.</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Riduzione con moltiplicazione preliminare</p>
+<p><em>Esempio:</em> Risolvere il sistema formato da 3x + 2y = 16 e x + y = 7.</p>
+<p>I coefficienti di y non sono opposti: moltiplichiamo la seconda equazione per -2, in modo da renderli tali.</p>
+<p class="formula">3x + 2y = 16 e -2x - 2y = -14</p>
+<p>Sommando membro a membro, la y si elimina.</p>
+<p class="formula">3x + 2y - 2x - 2y = 16 - 14 → x = 2</p>
+<p>Sostituendo x = 2 nella seconda equazione originale: 2 + y = 7, da cui y = 5. La soluzione è (x, y) = (2, 5). Verifichiamo: 3×2 + 2×5 = 6 + 10 = 16.</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Metodo del confronto</p>
+<p><em>Esempio:</em> Risolvere il sistema formato da x + 2y = 12 e x - y = 3.</p>
+<p>Ricaviamo x da entrambe le equazioni.</p>
+<p class="formula">x = 12 - 2y e x = 3 + y</p>
+<p>Poiché entrambe le espressioni sono uguali a x, le uguagliamo tra loro.</p>
+<p class="formula">12 - 2y = 3 + y → 12 - 3 = y + 2y → 9 = 3y → y = 3</p>
+<p>Sostituendo y = 3 troviamo x = 3 + 3 = 6. La soluzione è (x, y) = (6, 3). Verifichiamo: 6 + 2×3 = 12.</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Metodo di Cramer</p>
+<p><em>Esempio:</em> Risolvere con il metodo di Cramer il sistema formato da x + y = 7 e 2x - y = 2.</p>
+<p>I coefficienti sono a<sub>1</sub>=1, b<sub>1</sub>=1, c<sub>1</sub>=7, a<sub>2</sub>=2, b<sub>2</sub>=-1, c<sub>2</sub>=2.</p>
+<p class="formula">D = 1×(-1) - 2×1 = -1 - 2 = -3</p>
+<p class="formula">D<sub>x</sub> = 7×(-1) - 2×1 = -7 - 2 = -9 → x = -9 / -3 = 3</p>
+<p class="formula">D<sub>y</sub> = 1×2 - 2×7 = 2 - 14 = -12 → y = -12 / -3 = 4</p>
+<p>La soluzione è (x, y) = (3, 4). Verifichiamo: 3 + 4 = 7 e 2×3 - 4 = 2.</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Sistema determinato</p>
+<p><em>Esempio:</em> Verificare che il sistema formato da x - y = 1 e 2x + y = 11 sia determinato, e risolverlo.</p>
+<p>Calcoliamo il determinante D: a<sub>1</sub>=1, b<sub>1</sub>=-1, a<sub>2</sub>=2, b<sub>2</sub>=1.</p>
+<p class="formula">D = 1×1 - 2×(-1) = 1 + 2 = 3</p>
+<p>Poiché D è diverso da zero, il sistema è determinato e ammette una sola soluzione. Risolviamo per sostituzione: dalla prima equazione x = y + 1.</p>
+<p class="formula">2(y + 1) + y = 11 → 3y + 2 = 11 → y = 3 → x = 4</p>
+<p>La soluzione è (x, y) = (4, 3). Verifichiamo: 4 - 3 = 1 e 2×4 + 3 = 11.</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Sistema impossibile</p>
+<p><em>Esempio:</em> Analizzare il sistema formato da x + y = 5 e 2x + 2y = 12.</p>
+<p>Calcoliamo i determinanti: a<sub>1</sub>=1, b<sub>1</sub>=1, c<sub>1</sub>=5, a<sub>2</sub>=2, b<sub>2</sub>=2, c<sub>2</sub>=12.</p>
+<p class="formula">D = 1×2 - 2×1 = 2 - 2 = 0</p>
+<p class="formula">D<sub>x</sub> = 5×2 - 12×1 = 10 - 12 = -2</p>
+<p>Poiché D = 0 ma D<sub>x</sub> è diverso da zero, il sistema è impossibile: non esiste alcuna coppia (x, y) che soddisfi entrambe le equazioni. Del resto, dividendo la seconda equazione per 2 si ottiene x + y = 6, in contraddizione con la prima equazione x + y = 5.</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Sistema indeterminato</p>
+<p><em>Esempio:</em> Analizzare il sistema formato da x + y = 5 e 2x + 2y = 10.</p>
+<p>Calcoliamo i determinanti: a<sub>1</sub>=1, b<sub>1</sub>=1, c<sub>1</sub>=5, a<sub>2</sub>=2, b<sub>2</sub>=2, c<sub>2</sub>=10.</p>
+<p class="formula">D = 1×2 - 2×1 = 0 &nbsp;&nbsp;&nbsp; D<sub>x</sub> = 5×2 - 10×1 = 0 &nbsp;&nbsp;&nbsp; D<sub>y</sub> = 1×10 - 2×5 = 0</p>
+<p>Poiché D, D<sub>x</sub> e D<sub>y</sub> sono tutti nulli, il sistema è indeterminato: ha infinite soluzioni, perché la seconda equazione è semplicemente il doppio della prima e rappresenta la stessa relazione tra x e y.</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Problema: somma e multiplo</p>
+<p><em>Esempio:</em> La somma di due numeri è 24 e uno dei due è il triplo dell'altro. Trovare i due numeri.</p>
+<p>Chiamiamo x e y i due numeri, con x il maggiore.</p>
+<p class="formula">
+<span class="frazione"><span>x + y = 24</span><span>x = 3y</span></span>
+</p>
+<p>Sostituiamo x = 3y nella prima equazione.</p>
+<p class="formula">3y + y = 24 → 4y = 24 → y = 6 → x = 3×6 = 18</p>
+<p>I due numeri sono 18 e 6. Verifichiamo: 18 + 6 = 24 e 18 = 3×6.</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Problema geometrico</p>
+<p><em>Esempio:</em> Un rettangolo ha perimetro 30 cm; la base supera l'altezza di 3 cm. Trovare le dimensioni del rettangolo.</p>
+<p>Chiamiamo x la base e y l'altezza. Il perimetro è il doppio della somma dei lati, e la base supera l'altezza di 3 cm.</p>
+<p class="formula">
+<span class="frazione"><span>2(x + y) = 30</span><span>x = y + 3</span></span>
+</p>
+<p>Dalla prima equazione ricaviamo x + y = 15. Sostituiamo x = y + 3.</p>
+<p class="formula">(y + 3) + y = 15 → 2y + 3 = 15 → 2y = 12 → y = 6 → x = 9</p>
+<p>Il rettangolo ha base 9 cm e altezza 6 cm. Verifichiamo: 2×(9 + 6) = 30 e 9 - 6 = 3.</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo con denominatore</p>
+<p><em>Esempio:</em> Risolvere il sistema formato da x/2 + y = 5 e x - y = 1.</p>
+<p>Dalla seconda equazione ricaviamo x = y + 1, e sostituiamo nella prima, eliminando poi il denominatore.</p>
+<p class="formula">(y + 1)/2 + y = 5</p>
+<p>Moltiplichiamo tutto per 2 per eliminare il denominatore.</p>
+<p class="formula">(y + 1) + 2y = 10 → 3y + 1 = 10 → 3y = 9 → y = 3</p>
+<p>Sostituendo y = 3 in x = y + 1 otteniamo x = 4. La soluzione è (x, y) = (4, 3). Verifichiamo: 4/2 + 3 = 2 + 3 = 5 e 4 - 3 = 1.</p>
+
+</div>
+<!-- fine esercizi matematica 07 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat07.html">Torna alla teoria (Capitolo 07)</a></p>
+  <p><a href="mat08.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
