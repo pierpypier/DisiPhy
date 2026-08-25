@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 46</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 46: umberto saba e il canzoniere -->
+<div id="capitolo-46-saba-canzoniere" class="capitolo-storia">
+  <p class="titolo-capitolo">46 - Umberto Saba e il Canzoniere - Classe 5</p>
+
+  <p class="titolo-capitolo">Trieste e un'infanzia segnata dall'assenza del padre</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la rivoluzione stilistica operata da Giuseppe Ungaretti con L'Allegria, ci si sofferma ora su un altro grande poeta italiano del Novecento, la cui opera si sviluppa lungo un percorso stilistico ed esistenziale profondamente diverso da quello ungarettiano: Umberto Saba, pseudonimo di Umberto Poli, nato a Trieste il 9 marzo del 1883, città che, come si è già visto in un capitolo precedente di questo manuale a proposito di Italo Svevo, rappresentava allora un crocevia di culture diverse, italiana, mitteleuropea ed ebraica, ancora appartenente all'Impero austro-ungarico fino al termine della Prima guerra mondiale.</p>
+  <p>L'infanzia di Saba fu segnata da una condizione familiare dolorosa e complessa: il padre, di origine cristiana, abbandonò la madre, di famiglia ebraica, ancor prima della nascita del poeta, che fu affidato nei primi anni di vita a una balia slovena, Peppa Sabaz, il cui cognome, lievemente modificato, sarà scelto dal poeta come proprio pseudonimo letterario in età matura, quasi a voler onorare simbolicamente questa figura affettiva sostitutiva incontrata nella primissima infanzia, in un contesto familiare fin da subito caratterizzato dall'assenza della figura paterna.</p>
+
+  <p class="titolo-capitolo">La psicoanalisi e la conoscenza di sé</p>
+  <p>Come già evidenziato a proposito di Italo Svevo in un capitolo precedente di questo manuale, anche Saba, complice il medesimo contesto culturale triestino particolarmente ricettivo verso la cultura mitteleuropea, ebbe modo di conoscere direttamente, a partire dai primi anni Venti del Novecento, gli studi psicoanalitici di Sigmund Freud, sottoponendosi egli stesso, in un periodo di grave crisi psicologica legato anche alla propria complessa vicenda familiare e coniugale, a un percorso di analisi condotto da un allievo diretto dello stesso Freud.</p>
+  <p>Questa diretta esperienza psicoanalitica influenzò in modo significativo la concezione stessa che Saba elaborò della propria attività poetica, concepita non come ricerca di un virtuosismo stilistico fine a se stesso, ma come autentico strumento di conoscenza e di esplorazione della propria interiorità, in un percorso di progressiva e mai conclusa comprensione di sé che il poeta stesso paragonò, in alcuni propri scritti teorici, a un vero e proprio processo di natura terapeutica.</p>
+
+  <p class="titolo-capitolo">Il Canzoniere: un'opera unica e in continua crescita</p>
+  <p>A differenza della maggior parte dei poeti italiani del Novecento, che strutturarono la propria produzione poetica in raccolte distinte pubblicate separatamente nel corso del tempo, Saba scelse di raccogliere l'intera propria opera poetica sotto un unico e comprensivo titolo, il Canzoniere, termine che richiama esplicitamente, come si vedrà, la grande tradizione della lirica italiana antica, in particolare quella petrarchesca già incontrata in un capitolo precedente di questo manuale, riorganizzando progressivamente, nelle successive edizioni pubblicate nel corso della propria vita, l'intera propria produzione secondo un ordine non rigidamente cronologico ma piuttosto ideale e biografico.</p>
+  <p>Questa scelta compositiva, di per sé assai originale nel panorama della poesia italiana del Novecento, testimonia la concezione stessa che Saba aveva della propria opera, intesa non come una sequenza di componimenti autonomi tra loro, ma come un unico, organico racconto poetico della propria intera esistenza, capace di ripercorrere, componimento dopo componimento, le diverse fasi della propria vicenda biografica, sentimentale e intellettuale.</p>
+
+  <p class="titolo-capitolo">La poetica dell'onestà</p>
+  <p>Un concetto fondamentale per comprendere la poetica di Saba è quello che lo stesso poeta definì onestà, termine con cui egli intendeva non un semplice principio morale astratto, ma una precisa scelta stilistica ed espressiva, fondata sul rifiuto di ogni artificio retorico superfluo, di ogni ricerca di originalità fine a se stessa e di ogni compiacimento estetizzante, in favore di una poesia capace di esprimere con verità e immediatezza, per quanto sempre filtrata dal necessario lavoro della forma poetica, la propria autentica esperienza interiore.</p>
+  <p>Questa concezione dell'onestà poetica pone Saba in una posizione singolare e per certi versi appartata rispetto alle principali correnti della poesia italiana del proprio tempo, sia rispetto alla rivoluzione formale operata da Ungaretti già esaminata nel capitolo precedente, sia rispetto, come si vedrà nei prossimi capitoli di questo manuale, alla più cifrata e allusiva poesia di Eugenio Montale, poiché Saba scelse consapevolmente di mantenere un legame più diretto con la tradizione metrica e linguistica della poesia italiana precedente, in particolare quella ottocentesca, senza per questo rinunciare a una piena originalità e modernità di contenuti.</p>
+  <p><em>Esempio:</em> la scelta di Saba di dedicare componimenti poetici a temi ritenuti tradizionalmente non poetici o addirittura prosaici, come la propria stessa attività di libraio antiquario, esercitata a Trieste per gran parte della vita, o l'affetto quotidiano per la propria famiglia e persino per il proprio cane, testimonia efficacemente questa poetica dell'onestà, fondata sulla convinzione che la poesia autentica possa e debba trovare ispirazione anche nelle esperienze più semplici e quotidiane dell'esistenza, purché vissute e raccontate con sincerità.</p>
+
+  <p class="titolo-capitolo">I temi del Canzoniere: la famiglia, Trieste, l'amore</p>
+  <p>Tra i temi più ricorrenti dell'intero Canzoniere si distingue anzitutto quello della famiglia, rievocata da Saba attraverso il ricordo della complessa e mai del tutto risolta relazione con la figura materna, di quella assente del padre, e successivamente attraverso l'affetto per la propria moglie Lina e per la figlia Linuccia, in una serie di componimenti di grande intensità affettiva che ripercorrono le diverse tappe della propria vita familiare.</p>
+  <p>Un ulteriore tema centrale è costituito dalla città di Trieste stessa, rievocata da Saba con un affetto insieme intimo e critico, attraverso la descrizione di luoghi concreti e quotidiani della città, dai caffè alle strade del centro, fino al porto e alle colline circostanti, in una poesia capace di fondere insieme l'osservazione realistica del paesaggio urbano e una più profonda riflessione simbolica sul proprio rapporto, mai semplice né scontato, con la propria città natale.</p>
+
+  <p class="titolo-capitolo">La malinconia e la ricerca della serenità</p>
+  <p>Un ulteriore tratto caratteristico della poesia di Saba è una diffusa vena di malinconia, legata sia alle già ricordate difficoltà personali e familiari dell'autore, sia a una più generale e mai completamente risolta ricerca di un equilibrio interiore, spesso ostacolato da crisi depressive che accompagnarono il poeta per gran parte della propria esistenza: proprio questa condizione di fragilità psicologica, affrontata dal poeta con la già ricordata esperienza psicoanalitica, costituisce uno dei nuclei più autentici e ricorrenti dell'intera sua produzione poetica.</p>
+  <p>Nonostante questa persistente vena malinconica, la poesia di Saba non scade tuttavia mai in un tono di disperazione priva di sbocco, mantenendo sempre, anche nei componimenti più segnati dalla sofferenza personale, una ricerca costante, per quanto spesso frustrata, di serenità e di riconciliazione con la propria esistenza, attraverso l'affetto familiare, l'osservazione della natura e degli animali, e il valore consolatorio della scrittura poetica stessa.</p>
+
+  <p class="titolo-capitolo">Le leggi razziali e gli ultimi anni</p>
+  <p>A causa della propria origine ebraica materna, Saba, come già si è avuto modo di accennare a proposito del più generale contesto storico del Novecento italiano, fu direttamente colpito dalle leggi razziali promulgate dal regime fascista nel 1938, che lo costrinsero a interrompere la propria attività professionale di libraio e, negli anni della Seconda guerra mondiale, a nascondersi per sottrarsi alla persecuzione antisemita, trovando rifugio dapprima a Parigi e successivamente, dopo l'armistizio dell'Italia con gli Alleati nel 1943, a Firenze, sotto falsa identità, protetto dalla solidarietà di alcuni amici scrittori, tra cui lo stesso Eugenio Montale.</p>
+  <p>Sopravvissuto alla guerra e tornato a Trieste, Saba trascorse gli ultimi anni della propria vita continuando a rielaborare e ad ampliare il proprio Canzoniere, fino alla morte, sopraggiunta a Gorizia il 25 agosto del 1957, pochi mesi dopo quella della moglie Lina, alla quale il poeta era rimasto legato per l'intera esistenza nonostante le difficoltà e le crisi personali più volte incontrate in questo capitolo.</p>
+
+  <p class="titolo-capitolo">L'eredità di Saba nella poesia italiana del Novecento</p>
+  <p>L'opera di Saba, con la propria scelta di un linguaggio poetico apparentemente semplice e tradizionale ma capace di una straordinaria profondità di introspezione psicologica ed esistenziale, occupa un posto del tutto originale nel panorama della poesia italiana del Novecento, distinto sia dalla rivoluzione formale ungarettiana sia, come si vedrà nel prossimo capitolo di questo manuale, dalla poetica più cifrata e allusiva di Eugenio Montale, dimostrando come la grande poesia del Novecento italiano abbia saputo esprimersi attraverso percorsi stilistici tra loro assai differenti mantenendo tuttavia una comune, profonda tensione verso l'autenticità dell'espressione poetica.</p>
+  <p>Proprio a Eugenio Montale, terzo grande protagonista, insieme a Ungaretti e Saba, della lirica italiana del Novecento, e alla sua riflessione sul cosiddetto male di vivere, sarà dedicato il prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 46 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let47.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

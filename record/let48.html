@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 48</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 48: montale, le occasioni e la bufera e altro -->
+<div id="capitolo-48-montale-occasioni-bufera" class="capitolo-storia">
+  <p class="titolo-capitolo">48 - Montale: Le occasioni e la Bufera e altro - Classe 5</p>
+
+  <p class="titolo-capitolo">Dalla Liguria a Firenze</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, la prima e fondamentale raccolta poetica di Eugenio Montale, Ossi di seppia, e la centrale riflessione sul male di vivere che la caratterizza, ci si sofferma ora sullo sviluppo successivo della produzione poetica dell'autore, a partire dal trasferimento del poeta, avvenuto nel 1927, dalla natia Genova a Firenze, città allora tra i più importanti centri della vita culturale e letteraria italiana, dove Montale entrò in contatto con l'ambiente intellettuale gravitante attorno alla rivista Solaria, e dove diresse, dal 1929 al 1938, il prestigioso Gabinetto scientifico letterario Vieusseux, importante istituzione culturale fiorentina.</p>
+  <p>Proprio a causa del proprio dichiarato antifascismo, testimoniato in particolare dal rifiuto di iscriversi al Partito Nazionale Fascista, Montale fu allontanato dalla direzione del Vieusseux nel 1938, un episodio che testimonia con chiarezza la posizione di sostanziale e coerente estraneità dell'autore rispetto al regime allora al potere in Italia, coerente del resto con quell'atteggiamento di lucido e disincantato scetticismo verso ogni ideologia rassicurante già osservato nel capitolo precedente a proposito di Ossi di seppia.</p>
+
+  <p class="titolo-capitolo">Le occasioni: genesi e novità della raccolta</p>
+  <p>La seconda importante raccolta poetica di Montale, Le occasioni, fu pubblicata nel 1939, raccogliendo componimenti composti nel corso del decennio precedente, in gran parte proprio durante il soggiorno fiorentino appena ricordato: il titolo stesso della raccolta allude a un preciso principio compositivo, secondo cui ciascun componimento poetico nasce da una specifica occasione, cioè da un episodio, un incontro o un oggetto concreto dell'esperienza quotidiana del poeta, assunto come punto di partenza per una più ampia riflessione esistenziale, secondo una modalità che approfondisce ulteriormente la tecnica del correlativo oggettivo già incontrata nel capitolo precedente a proposito di Ossi di seppia.</p>
+  <p>Rispetto alla raccolta precedente, Le occasioni si distingue per un linguaggio poetico ancora più allusivo, ellittico e criptico, spesso costruito attraverso riferimenti autobiografici e circostanze private del tutto interne all'esperienza personale del poeta, e per questo non sempre immediatamente decifrabili da parte del lettore, secondo una tendenza all'oscurità espressiva che avvicina questa fase della produzione montaliana alla contemporanea esperienza della poesia ermetica, movimento poetico sviluppatosi in Italia proprio in questi stessi anni, di cui si avrà modo di accennare più avanti in questo capitolo.</p>
+
+  <p class="titolo-capitolo">La figura di Clizia</p>
+  <p>Un elemento di grande importanza nella raccolta Le occasioni è rappresentato dalla presenza di una figura femminile, indicata dal poeta con il nome allusivo di Clizia, generalmente identificata dalla critica con l'americanista Irma Brandeis, con la quale Montale ebbe una relazione sentimentale negli anni Trenta del Novecento: la figura di Clizia, presente in numerosi componimenti della raccolta, assume nella poesia montaliana un valore che trascende la semplice dimensione biografica e sentimentale, per farsi simbolo di una possibile, sia pure sempre elusiva e mai pienamente raggiunta, salvezza spirituale e conoscitiva.</p>
+  <p>In questo senso, la figura di Clizia rappresenta per Montale una sorta di erede, sia pure profondamente reinterpretata alla luce della sensibilità novecentesca, della tradizione della donna-angelo già incontrata in questo manuale a proposito di Dante e della sua Beatrice, capace di offrire al poeta, attraverso il ricordo e l'assenza più che attraverso una presenza reale e costante, un fragile ma prezioso barlume di quel varco verso un senso ultimo dell'esistenza già incontrato nel capitolo precedente a proposito di Ossi di seppia, sebbene anche in questo caso la salvezza resti sempre sospesa e mai definitivamente conquistata.</p>
+
+  <p class="titolo-capitolo">I mottetti</p>
+  <p>All'interno della raccolta Le occasioni occupa un posto di particolare rilievo il gruppo di componimenti brevi noto come Mottetti, ventenne serie di testi di dimensioni ridotte, caratterizzati da un'estrema concentrazione espressiva e da un linguaggio ancora più ellittico e allusivo rispetto al resto della raccolta, nei quali il poeta condensa, attraverso immagini fulminee e apparentemente frammentarie, la propria riflessione sul tema dell'assenza e del ricordo della donna amata, secondo una tecnica di straordinaria densità simbolica che rappresenta uno dei vertici stilistici dell'intera produzione montaliana.</p>
+  <p>La brevità e la concentrazione espressiva di questi componimenti, unite alla loro struttura fortemente allusiva e non immediatamente esplicita, testimoniano il progressivo affinamento della tecnica poetica di Montale verso forme di comunicazione sempre più indirette e cifrate, in una direzione che, come si è già accennato, presenta significative affinità con la contemporanea esperienza della poesia ermetica, movimento a cui tuttavia Montale non aderì mai formalmente, mantenendo sempre una propria originale e distinta fisionomia poetica.</p>
+
+  <p class="titolo-capitolo">La bufera e altro: il contesto della guerra</p>
+  <p>La terza importante raccolta poetica di Montale, La bufera e altro, fu pubblicata nel 1956, raccogliendo componimenti composti nel corso di un lungo periodo di tempo, che si estende dagli ultimi anni Trenta fino alla metà degli anni Cinquanta del Novecento, e che comprende dunque anche l'intero drammatico periodo della Seconda guerra mondiale e delle sue immediate conseguenze storiche e morali per l'Italia e per l'Europa intera.</p>
+  <p>Il titolo stesso della raccolta, che allude metaforicamente alla bufera storica rappresentata dal conflitto mondiale e dalle sue devastanti conseguenze morali e materiali, testimonia come in questa fase della propria produzione Montale abbia progressivamente ampliato la propria riflessione poetica, includendo accanto ai temi più propriamente esistenziali e privati già incontrati nelle raccolte precedenti, anche una più diretta ed esplicita considerazione della tragedia storica e collettiva vissuta dall'umanità del proprio tempo.</p>
+
+  <p class="titolo-capitolo">La figura di Volpe e il rapporto con Clizia</p>
+  <p>Accanto alla già ricordata figura di Clizia, ancora presente in alcuni componimenti della nuova raccolta, La bufera e altro introduce una nuova figura femminile, indicata dal poeta con il nome allusivo di Volpe, generalmente identificata con la scrittrice Maria Luisa Spaziani, con la quale Montale intrattenne una relazione sentimentale negli anni immediatamente successivi alla guerra: la presenza di questa nuova figura, dotata di caratteristiche e di una simbologia in parte diverse rispetto a quella di Clizia, più legata a una dimensione sensuale e terrena dell'amore rispetto alla valenza quasi salvifica attribuita alla precedente figura femminile, arricchisce ulteriormente la complessità tematica e simbolica dell'intera raccolta.</p>
+  <p>Questa compresenza di figure femminili diverse, ciascuna portatrice di una propria specifica valenza simbolica ed esistenziale, testimonia la crescente complessità e stratificazione tematica della produzione montaliana matura, capace di intrecciare, in un'unica e coerente visione poetica, la riflessione sulla storia collettiva, quella sulla propria vicenda biografica e sentimentale, e quella più propriamente filosofica sul senso ultimo dell'esistenza umana già ampiamente delineata nei capitoli precedenti di questo manuale a proposito di Ossi di seppia.</p>
+  <p><em>Approfondimento:</em> la scelta di Montale di attribuire alle proprie figure femminili nomi allusivi e simbolici, anziché indicarle direttamente con il proprio nome reale, si inserisce coerentemente nella già ricordata poetica dell'allusione e della reticenza espressiva propria dell'intera produzione dell'autore, secondo cui l'esperienza biografica personale, per quanto sempre presente come sostrato concreto della poesia, viene costantemente trasfigurata e universalizzata attraverso il filtro della metafora e del simbolo poetico.</p>
+
+  <p class="titolo-capitolo">L'Ermetismo: un cenno necessario</p>
+  <p>Per meglio comprendere il contesto in cui si inserisce la produzione poetica montaliana degli anni Trenta e Quaranta, occorre ricordare brevemente l'esperienza del già citato Ermetismo, movimento poetico sviluppatosi in Italia proprio in questi decenni, il cui nome allude alla proverbiale oscurità e difficoltà interpretativa dei componimenti dei poeti a esso riconducibili, caratterizzati da un linguaggio fortemente analogico ed ellittico, da una drastica riduzione della componente narrativa e discorsiva del testo poetico, e da un'attenzione quasi esclusiva per la parola poetica intesa come portatrice di un significato allusivo e mai completamente esplicito.</p>
+  <p>Sebbene Montale non abbia mai aderito formalmente a questo movimento, mantenendo sempre, come si è visto, un legame più diretto con il dato concreto ed esperienziale attraverso la tecnica del correlativo oggettivo, la sua produzione degli anni Trenta e Quaranta condivide con l'esperienza ermetica alcuni tratti stilistici significativi, in particolare la già ricordata tendenza a un linguaggio allusivo, ellittico e di difficile e mai scontata interpretazione.</p>
+
+  <p class="titolo-capitolo">Gli ultimi anni e il Premio Nobel</p>
+  <p>Nel corso dei decenni successivi alla pubblicazione de La bufera e altro, Montale continuò la propria attività poetica e saggistica, dedicandosi anche a un'intensa attività giornalistica, in particolare come critico letterario e musicale del quotidiano Corriere della Sera, e componendo, negli ultimi anni della propria vita, ulteriori raccolte poetiche caratterizzate da un tono più colloquiale e talvolta ironico rispetto alla produzione precedente, tra cui si ricorda in particolare Satura, pubblicata nel 1971.</p>
+  <p>Il prestigio internazionale raggiunto dalla poesia montaliana fu ufficialmente sancito nel 1975, quando l'autore fu insignito del Premio Nobel per la letteratura, massimo riconoscimento internazionale già assegnato in precedenza, come si è visto in un capitolo precedente di questo manuale, anche a Luigi Pirandello: Montale morì a Milano il 12 settembre del 1981, dopo una lunghissima e prestigiosa carriera che ne aveva fatto una delle voci più autorevoli e universalmente riconosciute dell'intera poesia europea del Novecento.</p>
+
+  <p class="titolo-capitolo">Bilancio della poesia montaliana e apertura ai capitoli successivi</p>
+  <p>L'opera poetica di Montale, dalla scarna e aspra riflessione esistenziale di Ossi di seppia fino alla crescente complessità simbolica e storica de Le occasioni e de La bufera e altro, rappresenta uno dei vertici assoluti dell'intera poesia italiana del Novecento, capace di coniugare un rigoroso controllo formale con una delle riflessioni più lucide e disincantate sulla condizione dell'uomo moderno prodotte dall'intera cultura europea del secolo.</p>
+  <p>Con la conclusione di questo capitolo si chiude il percorso dedicato alla grande poesia italiana della prima metà del Novecento: nei prossimi e ultimi capitoli di questo manuale ci si volgerà alla narrativa italiana del secondo dopoguerra, a partire dall'esperienza del Neorealismo e dalle opere di Cesare Pavese, Beppe Fenoglio e Italo Calvino, di cui si tratterà nel prossimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 48 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let49.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

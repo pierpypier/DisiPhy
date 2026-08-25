@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 49</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 49: il neorealismo, pavese, fenoglio e calvino -->
+<div id="capitolo-49-neorealismo" class="capitolo-storia">
+  <p class="titolo-capitolo">49 - Il Neorealismo: Pavese, Fenoglio e Calvino - Classe 5</p>
+
+  <p class="titolo-capitolo">L'Italia del secondo dopoguerra</p>
+  <p>Dopo aver concluso, nel capitolo precedente, il percorso dedicato alla grande poesia italiana della prima metà del Novecento, con Ungaretti, Saba e Montale, ci si rivolge ora, negli ultimi due capitoli di questo manuale, alla narrativa italiana del secondo dopoguerra, a partire dall'esperienza nota come Neorealismo, sviluppatasi in Italia nell'immediato secondo dopoguerra, tra la fine della Seconda guerra mondiale, conclusasi nel 1945, e la metà degli anni Cinquanta del Novecento, in un momento storico segnato dalla drammatica eredità del conflitto appena concluso, della dittatura fascista e della guerra di Resistenza contro l'occupazione nazista e la Repubblica di Salò.</p>
+  <p>In questo contesto di ricostruzione materiale e morale del paese, un'intera generazione di scrittori italiani, molti dei quali avevano partecipato direttamente, come partigiani o come testimoni diretti, alle vicende della guerra e della Resistenza, sentì l'esigenza di una letteratura capace di rappresentare con immediatezza e verità la realtà sociale e storica appena vissuta, in aperta continuità ideale, sia pure con sensibilità nuove, con la tradizione dell'osservazione realistica della società già incontrata in questo manuale a proposito del Verismo di Giovanni Verga.</p>
+
+  <p class="titolo-capitolo">I caratteri generali del Neorealismo</p>
+  <p>Il Neorealismo, termine impiegato originariamente in ambito cinematografico per indicare l'esperienza di registi come Roberto Rossellini e Vittorio De Sica, e successivamente esteso anche alla narrativa letteraria del medesimo periodo, si caratterizza per alcuni tratti comuni: l'attenzione privilegiata verso i temi della guerra, della Resistenza partigiana e delle difficili condizioni di vita delle classi popolari nell'Italia del dopoguerra; un linguaggio narrativo tendenzialmente semplice e diretto, spesso arricchito da forme dialettali o regionali, in polemica con la tradizione letteraria più aulica ed elaborata; e un impegno civile e morale dichiarato, teso a testimoniare, attraverso la narrazione, le sofferenze e le speranze di un intero popolo appena uscito dalla dittatura e dal conflitto bellico.</p>
+  <p>Un'opera generalmente considerata tra le prime e più significative espressioni di questa nuova sensibilità narrativa fu Uomini e no, romanzo pubblicato nel 1945 dallo scrittore siciliano Elio Vittorini, ambientato durante la Resistenza milanese, che insieme ad altre opere coeve contribuì a definire i tratti distintivi della nuova narrativa italiana del dopoguerra, prima che le tre figure a cui è dedicato questo capitolo, Cesare Pavese, Beppe Fenoglio e Italo Calvino, ne sviluppassero, ciascuna secondo una propria originale sensibilità, gli esiti più maturi e artisticamente compiuti.</p>
+
+  <p class="titolo-capitolo">Cesare Pavese: vita e formazione</p>
+  <p>Cesare Pavese nacque a Santo Stefano Belbo, piccolo paese delle Langhe piemontesi, il 9 settembre del 1908, e trascorse gran parte della propria vita a Torino, dove si formò culturalmente e dove sviluppò, parallelamente alla propria attività di scrittore, un'intensa attività di traduttore e studioso della letteratura angloamericana, in particolare di autori come Herman Melville e Sinclair Lewis, contribuendo in modo decisivo, attraverso il proprio lavoro presso la casa editrice Einaudi, a diffondere in Italia la conoscenza della narrativa statunitense contemporanea.</p>
+  <p>Durante il regime fascista, Pavese fu condannato al confino in Calabria per la propria vicinanza ad ambienti antifascisti, sebbene non abbia preso parte direttamente, per ragioni di salute e di temperamento personale, alla lotta armata della Resistenza; nel dopoguerra si iscrisse al Partito Comunista Italiano, mantenendo tuttavia sempre, nella propria produzione narrativa, un atteggiamento più meditativo e simbolico che direttamente e schiettamente politico.</p>
+
+  <p class="titolo-capitolo">Il mito, la campagna e la città nell'opera di Pavese</p>
+  <p>La narrativa di Pavese, pur condividendo con l'esperienza neorealista l'attenzione per gli ambienti popolari e per il paesaggio delle proprie terre d'origine, le Langhe piemontesi, si distingue per una componente simbolica e mitica assai marcata, che l'autore stesso teorizzò in propri scritti saggistici, secondo cui i luoghi e le esperienze dell'infanzia, in particolare quelli legati alla campagna natale, assumerebbero per l'individuo adulto un valore quasi archetipico, capace di caricarsi di significati simbolici che trascendono la loro semplice dimensione realistica e autobiografica.</p>
+  <p>Tra le opere principali di Pavese si ricordano Paesi tuoi, pubblicato nel 1941 e ambientato nel mondo contadino piemontese, La casa in collina, pubblicato nel 1948, che affronta direttamente il tema della guerra e della Resistenza attraverso la vicenda di un intellettuale in difficoltà a scegliere un pieno impegno attivo nella lotta partigiana, e La luna e i falò, ultima e più matura opera dell'autore, pubblicata nel 1950, nella quale il protagonista, tornato dopo anni di emigrazione in America al proprio paese natale nelle Langhe, ripercorre il proprio passato e le trasformazioni subite dalla propria terra d'origine in seguito alla guerra, in una riflessione di grande intensità simbolica sul rapporto tra le proprie radici e la propria identità adulta.</p>
+  <p><em>Approfondimento:</em> Pavese tenne per gran parte della propria vita un diario personale, pubblicato postumo con il titolo Il mestiere di vivere, che costituisce un documento di straordinaria importanza per comprendere il travagliato percorso intellettuale ed esistenziale dell'autore, segnato da una persistente e mai risolta inquietudine personale, culminata nel suicidio dello scrittore, avvenuto a Torino il 27 agosto del 1950.</p>
+
+  <p class="titolo-capitolo">Beppe Fenoglio: vita e l'esperienza diretta della Resistenza</p>
+  <p>Beppe Fenoglio nacque ad Alba, nelle Langhe piemontesi, il primo marzo del 1922, e a differenza di Pavese partecipò direttamente, in prima persona, alla guerra partigiana, arruolandosi tra le formazioni della Resistenza attive nella propria zona d'origine: questa esperienza diretta del combattimento partigiano, vissuta non come testimonianza esterna ma come coinvolgimento personale e concreto, costituisce il nucleo generativo e insieme il tratto distintivo dell'intera sua produzione narrativa, più direttamente autobiografica rispetto a quella di Pavese.</p>
+  <p>Tra le opere principali di Fenoglio si ricordano Una questione privata, romanzo pubblicato postumo nel 1963, poco dopo la morte dell'autore, che intreccia la vicenda della lotta partigiana a quella di una gelosia amorosa personale del protagonista, e soprattutto Il partigiano Johnny, ampio romanzo rimasto incompiuto e pubblicato postumo in edizione filologicamente definitiva soltanto molti anni dopo la morte dell'autore, considerato oggi uno dei capolavori assoluti della narrativa italiana sulla Resistenza, per la capacità di restituire, senza alcuna retorica celebrativa, la concreta e spesso caotica esperienza quotidiana della guerra partigiana.</p>
+  <p>Un tratto stilistico assai originale della prosa di Fenoglio, in particolare ne Il partigiano Johnny, è il frequente ricorso a un linguaggio fortemente anglicizzato, con termini e strutture sintattiche mutuate dalla lingua inglese, studiata dallo scrittore con grande passione, e impiegata come strumento espressivo per rendere con maggiore efficacia la tensione e la concitazione degli eventi bellici narrati: Fenoglio morì prematuramente a Torino il 18 febbraio del 1963, appena quarantunenne, a causa di un tumore, lasciando gran parte della propria opera in uno stato di incompiutezza editoriale che ha richiesto, nei decenni successivi, un complesso lavoro filologico di ricostruzione da parte degli studiosi.</p>
+
+  <p class="titolo-capitolo">Italo Calvino: dagli esordi neorealisti al Sentiero dei nidi di ragno</p>
+  <p>Italo Calvino nacque a Santiago de Las Vegas, presso L'Avana, a Cuba, il 15 ottobre del 1923, da genitori italiani temporaneamente residenti nell'isola caraibica per ragioni professionali legate agli studi botanici del padre, per poi trasferirsi ancora bambino in Italia, a Sanremo, dove trascorse l'infanzia e la giovinezza; come Fenoglio, anche Calvino partecipò direttamente alla guerra partigiana, combattendo tra le formazioni della Resistenza attive in Liguria.</p>
+  <p>La prima opera narrativa di Calvino, il romanzo Il sentiero dei nidi di ragno, pubblicato nel 1947, è ambientata proprio nel contesto della guerra partigiana ligure, ma se ne distingue per una scelta narrativa originale, poiché la vicenda bellica viene raccontata attraverso il punto di vista di un bambino, Pin, che osserva gli eventi della guerra con uno sguardo insieme ingenuo e disincantato, capace di restituire, attraverso questa prospettiva particolare, un'immagine della Resistenza lontana sia dalla retorica eroica sia da un facile realismo documentario, e più vicina, per certi aspetti, a un registro fiabesco e avventuroso.</p>
+
+  <p class="titolo-capitolo">Dal Neorealismo alla narrativa fantastica: la trilogia degli antenati</p>
+  <p>Proprio a partire da questa originale declinazione fin dagli esordi, Calvino sviluppò, nel corso degli anni Cinquanta, un progressivo allontanamento dai canoni più strettamente realistici della narrativa neorealista, orientandosi verso una narrativa di carattere fantastico e allegorico, che trovò la propria espressione più compiuta nella cosiddetta trilogia de I nostri antenati, comprendente i romanzi Il visconte dimezzato, pubblicato nel 1952, Il barone rampante, pubblicato nel 1957, e Il cavaliere inesistente, pubblicato nel 1959, ciascuno costruito attorno a una situazione narrativa paradossale e fantastica, utilizzata dall'autore come strumento allegorico per riflettere su temi di attualità esistenziale e morale, come l'integrità della persona, la libertà individuale e il rapporto tra l'uomo e la società.</p>
+  <p>Questo progressivo allontanamento dai moduli narrativi più strettamente neorealisti, che pure Calvino non rinnegò mai completamente, testimonia la vitalità e la capacità di rinnovamento della narrativa italiana del secondo dopoguerra, capace di evolvere, nel giro di pochi anni, verso nuove e originali forme espressive, pur mantenendo un legame ideale con l'impegno civile e morale che aveva caratterizzato fin dall'origine l'esperienza neorealista.</p>
+
+  <p class="titolo-capitolo">Gli sviluppi successivi dell'opera di Calvino</p>
+  <p>Nei decenni successivi, proseguendo questo percorso di continua sperimentazione narrativa, Calvino approdò a esiti di crescente complessità concettuale e formale, componendo opere come Le città invisibili, pubblicato nel 1972, raccolta di brevi e suggestive descrizioni di città immaginarie inserite in una cornice dialogica tra il viaggiatore veneziano Marco Polo e l'imperatore mongolo Kublai Khan, e Se una notte d'inverno un viaggiatore, pubblicato nel 1979, romanzo di straordinaria originalità strutturale, costruito come un gioco combinatorio di incipit narrativi diversi, rivolto direttamente al lettore come protagonista stesso dell'esperienza di lettura.</p>
+  <p>Questi ultimi sviluppi della produzione calviniana, di carattere sempre più sperimentale e riflessivo sulla stessa natura della narrazione letteraria, testimoniano la straordinaria capacità dell'autore di rinnovarsi costantemente nel corso di una lunga carriera, fino alla morte, sopraggiunta a Siena il 19 settembre del 1985, che consacra Calvino come una delle voci più originali e internazionalmente riconosciute dell'intera narrativa italiana del secondo Novecento.</p>
+
+  <p class="titolo-capitolo">Verso l'ultimo capitolo del manuale</p>
+  <p>L'esperienza neorealista, con i suoi tre maggiori interpreti qui esaminati, Pavese, Fenoglio e Calvino, ciascuno capace di sviluppare, a partire da un comune terreno storico e ideale legato alla guerra e alla Resistenza, un proprio originalissimo percorso narrativo, rappresenta uno dei momenti più fecondi e significativi dell'intera narrativa italiana del Novecento, ponendo le basi per gli ulteriori sviluppi della narrativa italiana della seconda metà del secolo.</p>
+  <p>Proprio a questi ulteriori sviluppi, e in particolare alla letteratura della testimonianza sulla tragedia della deportazione e dei campi di sterminio nazisti, incarnata dalla figura di Primo Levi, sarà dedicato l'ultimo capitolo di questo manuale.</p>
+</div>
+<!-- fine capitolo letteratura 49 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let50.html">Vai al Capitolo successivo</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>

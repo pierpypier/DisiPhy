@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letteratura - Capitolo 50</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo diritto */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">LETTERATURA</div>
+        <div class="subtitle">Piccolo manuale di letteratura italiana</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="let00.html" title="letteratura indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r311.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+      </div>
+    
+<!-- capitolo letteratura 50: la narrativa del secondo novecento e la testimonianza, primo levi -->
+<div id="capitolo-50-primo-levi-testimonianza" class="capitolo-storia">
+  <p class="titolo-capitolo">50 - La narrativa del secondo Novecento e la testimonianza: Primo Levi - Classe 5</p>
+
+  <p class="titolo-capitolo">La letteratura della testimonianza</p>
+  <p>Dopo aver esaminato, nel capitolo precedente, l'esperienza del Neorealismo attraverso le figure di Cesare Pavese, Beppe Fenoglio e Italo Calvino, si conclude questo manuale con un genere letterario di straordinaria importanza storica e morale, sviluppatosi nel secondo dopoguerra parallelamente e in parte in continuità con la narrativa neorealista già esaminata: la letteratura della testimonianza, dedicata al racconto diretto e documentario delle esperienze di deportazione, prigionia e sterminio vissute da milioni di persone durante la Seconda guerra mondiale, in particolare nei campi di concentramento e di sterminio nazisti.</p>
+  <p>Questo genere letterario, che condivide con il Neorealismo l'esigenza di una narrazione fedele e priva di retorica di eventi storici di eccezionale gravità, si distingue tuttavia per la propria specifica origine autobiografica diretta, poiché gli autori che vi si dedicarono furono, nella grande maggioranza dei casi, sopravvissuti in prima persona alle esperienze narrate, e scelsero la scrittura come strumento per elaborare e trasmettere alle generazioni successive una memoria di eventi che rischiavano altrimenti di essere dimenticati o inadeguatamente compresi.</p>
+
+  <p class="titolo-capitolo">Primo Levi: vita e formazione</p>
+  <p>Il maggiore rappresentante italiano di questo genere letterario fu Primo Levi, nato a Torino il 31 luglio del 1919, da una famiglia della borghesia ebraica torinese, che si laureò in chimica nel 1941, in un periodo in cui le già ricordate leggi razziali del 1938, incontrate in questo manuale a proposito di Umberto Saba, avevano reso estremamente difficile, per un cittadino italiano di origine ebraica, il completamento degli studi universitari e l'accesso alle professioni.</p>
+  <p>Dopo l'armistizio dell'Italia con gli Alleati nell'settembre del 1943 e la conseguente occupazione tedesca di gran parte del territorio italiano, Levi si unì a un gruppo partigiano attivo in Valle d'Aosta, ma fu catturato dalle milizie fasciste già nel dicembre dello stesso anno; in quanto ebreo, fu successivamente consegnato alle autorità tedesche e deportato, nel febbraio del 1944, al campo di concentramento e sterminio di Auschwitz, in Polonia, dove rimase prigioniero fino alla liberazione del campo da parte dell'Armata Rossa sovietica, nel gennaio del 1945.</p>
+
+  <p class="titolo-capitolo">Se questo è un uomo: la genesi dell'opera</p>
+  <p>L'esperienza della deportazione e della prigionia ad Auschwitz costituisce il nucleo generativo della prima e più importante opera di Primo Levi, Se questo è un uomo, scritta nell'immediato dopoguerra e pubblicata in una prima edizione, presso un piccolo editore, nel 1947, sebbene l'opera abbia incontrato inizialmente una diffusione assai limitata, per poi conoscere una ben più ampia e meritata fortuna editoriale soltanto a partire dalla ripubblicazione presso un grande editore nel 1958.</p>
+  <p>Il titolo dell'opera, tratto da una breve poesia posta dall'autore in apertura del volume, pone fin dall'inizio la domanda centrale a cui l'intera opera intende rispondere: quella circa la possibilità stessa di continuare a definire uomini gli esseri umani ridotti, nel sistema concentrazionario nazista, a una condizione di totale disumanizzazione, privati sistematicamente non soltanto della libertà e della dignità, ma della stessa possibilità di riconoscersi reciprocamente come appartenenti a una comune umanità.</p>
+
+  <p class="titolo-capitolo">Lo stile: la testimonianza razionale e misurata</p>
+  <p>Un aspetto di straordinaria importanza per comprendere l'originalità e l'efficacia dell'opera di Levi riguarda la scelta stilistica compiuta dall'autore, formatosi come si è visto negli studi scientifici, di raccontare l'esperienza concentrazionaria con un linguaggio di estrema chiarezza, precisione e misura, volutamente privo di effusioni patetiche, di toni eccessivamente drammatici o di un'esplicita e diretta condanna morale dei propri aguzzini, in favore di una descrizione quanto più possibile lucida, analitica e razionale dei meccanismi di funzionamento del campo di sterminio.</p>
+  <p>Questa scelta stilistica, apparentemente paradossale considerata l'estrema gravità degli eventi narrati, si rivela in realtà di straordinaria efficacia comunicativa e morale, poiché permette al lettore di comprendere con particolare chiarezza, senza la mediazione di un'eccessiva retorica emotiva che rischierebbe di allontanare o di anestetizzare la comprensione, l'assurdità e l'orrore di un sistema organizzato con metodica e burocratica razionalità proprio al fine della sistematica distruzione fisica e morale degli esseri umani.</p>
+  <p><em>Approfondimento:</em> Levi stesso motivò questa scelta stilistica con la convinzione che il compito primario dello scrittore testimone fosse quello di comprendere e far comprendere razionalmente un evento storico di per sé difficilmente comprensibile secondo le normali categorie della ragione umana, piuttosto che quello di suscitare nel lettore una reazione puramente emotiva, per quanto legittima, che avrebbe rischiato di non favorire una piena ed effettiva presa di coscienza storica e morale dei meccanismi che avevano reso possibile una simile tragedia.</p>
+
+  <p class="titolo-capitolo">I temi centrali dell'opera</p>
+  <p>Tra i temi centrali di Se questo è un uomo si distingue anzitutto quello della sistematica disumanizzazione del prigioniero, ottenuta dal sistema concentrazionario attraverso la privazione sistematica del nome, sostituito da un numero tatuato sul braccio, degli oggetti personali, degli affetti familiari e persino delle più elementari condizioni igieniche e materiali di sopravvivenza, in un processo di progressiva riduzione dell'essere umano a una condizione di pura sopravvivenza fisica, priva di qualsiasi margine di dignità o di autonomia individuale.</p>
+  <p>Accanto a questo tema, l'opera sviluppa un'attenta e per certi versi impietosa analisi delle diverse strategie di sopravvivenza adottate dai prigionieri all'interno del campo, mostrando come le condizioni estreme del lager mettessero a dura prova, e talvolta corrompessero irrimediabilmente, anche i legami di solidarietà umana tra gli stessi prigionieri, costretti spesso, per il proprio istinto di sopravvivenza, a comportamenti moralmente ambigui o addirittura riprovevoli, in una riflessione che Levi approfondirà ulteriormente, alcuni decenni più tardi, in un'opera specificamente dedicata a questo tema, I sommersi e i salvati, pubblicata nel 1986.</p>
+
+  <p class="titolo-capitolo">La zona grigia</p>
+  <p>Proprio in quest'ultima opera, Levi elaborò un concetto di straordinaria importanza per la comprensione morale del sistema concentrazionario, quello della cosiddetta zona grigia, con cui l'autore indica quella complessa e moralmente ambigua area di prigionieri che, per ottenere condizioni di sopravvivenza lievemente migliori rispetto alla massa degli altri deportati, accettavano di collaborare, in varia misura, con il sistema di oppressione nazista, ricoprendo ruoli di responsabilità all'interno della gerarchia interna del campo stesso.</p>
+  <p>Questa riflessione, di grande complessità e onestà intellettuale, dimostra come la produzione di Levi, ben lontana da qualsiasi facile schematismo moralistico che distinguesse nettamente vittime innocenti e persecutori colpevoli, si sia sempre confrontata con la complessità morale reale delle situazioni estreme vissute nei campi di sterminio, in coerenza con quella ricerca di comprensione razionale e non semplificatoria già evidenziata a proposito dello stile dell'opera precedente.</p>
+
+  <p class="titolo-capitolo">Le altre opere di Primo Levi</p>
+  <p>Accanto a Se questo è un uomo, Levi compose nel corso della propria vita numerose altre opere, tra cui si ricordano La tregua, pubblicata nel 1963, che racconta il lungo e avventuroso viaggio di ritorno dell'autore da Auschwitz all'Italia, attraverso un percorso che lo condusse, in modo del tutto inatteso, ad attraversare gran parte dell'Europa orientale prima di poter fare ritorno a casa; e Il sistema periodico, pubblicato nel 1975, opera di straordinaria originalità strutturale, nella quale l'autore intreccia racconti autobiografici, riflessioni scientifiche e narrazioni di fantasia, ciascuno intitolato al nome di un elemento chimico, a testimonianza della costante e mai abbandonata passione dell'autore per la propria originaria formazione scientifica.</p>
+  <p>L'insieme di questa produzione, unita all'attività di conferenziere e testimone pubblico che Levi svolse per gran parte della propria vita, contribuì in modo decisivo a mantenere viva, nella coscienza collettiva italiana ed europea, la memoria della tragedia della Shoah, in un'opera di testimonianza e di trasmissione della memoria storica di valore civile e morale insostituibile.</p>
+
+  <p class="titolo-capitolo">La morte di Primo Levi</p>
+  <p>Primo Levi morì a Torino l'11 aprile del 1987, in circostanze mai del tutto chiarite con assoluta certezza, precipitando dalla tromba delle scale del proprio appartamento: sebbene l'ipotesi più diffusa tra gli studiosi sia quella del suicidio, forse legato a una ricaduta della depressione che aveva colpito lo scrittore negli ultimi mesi di vita, la questione resta oggetto di un dibattito critico non del tutto risolto, che esula tuttavia dai fini di questo manuale.</p>
+  <p>L'opera di Primo Levi, per la sua straordinaria capacità di coniugare rigore testimoniale, lucidità morale e altissimo valore letterario, resta una delle testimonianze più importanti e universalmente riconosciute dell'intera letteratura europea del Novecento sulla tragedia della Shoah, e un monito destinato a mantenere viva, per le generazioni future, la memoria di uno degli eventi più drammatici della storia dell'umanità.</p>
+
+  <p class="titolo-capitolo">Conclusione del manuale</p>
+  <p>Con questo capitolo si conclude il percorso di questo manuale di letteratura italiana, che ha ripercorso, dalle Origini medievali fino alla narrativa italiana della seconda metà del Novecento, oltre otto secoli di storia letteraria, attraverso le voci e le opere dei maggiori autori che hanno contribuito a formare, arricchire e rinnovare nel tempo la lingua e la cultura italiana.</p>
+  <p>Dalla nascita del volgare fino alla testimonianza sulla tragedia della Shoah appena esaminata, il percorso qui delineato ha inteso offrire un quadro il più possibile organico e rigoroso dei principali movimenti letterari, autori e opere che compongono il patrimonio letterario italiano, nella speranza che possa costituire uno strumento utile e stimolante per lo studio e l'approfondimento di questa straordinaria tradizione culturale.</p>
+</div>
+<!-- fine capitolo letteratura 50 -->
+
+<div id="indice-letteratura" class="capitolo-storia">
+  <p><a href="let00.html">Torna all'indice</a></p>
+</div>
+
+
+
+
+
+  
+    <footer>
+      Piccolo manuale di letteratura italiana
+    </footer>
+
+  </div>
+</body>
+  </html>
