@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 03 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 03: Scomposizione di polinomi -->
+<div class="capitolo-storia" id="esercizi-03-scomposizione-polinomi">
+
+<p class="titolo-capitolo">03 - Esercizi svolti: scomposizione di polinomi</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Raccoglimento a fattor comune totale</p>
+<p><em>Esempio:</em> Scomporre il polinomio 8x<sup>4</sup> - 12x<sup>3</sup> + 4x<sup>2</sup>.</p>
+<p>Il M.C.D. tra i coefficienti 8, 12 e 4 è 4; la parte letterale comune con esponente minimo è x<sup>2</sup>. Il fattore comune è quindi 4x<sup>2</sup>.</p>
+<p class="formula">8x<sup>4</sup> - 12x<sup>3</sup> + 4x<sup>2</sup> = 4x<sup>2</sup> × (2x<sup>2</sup> - 3x + 1)</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Raccoglimento con fattore letterale e numerico</p>
+<p><em>Esempio:</em> Scomporre 15a<sup>3</sup>b<sup>2</sup> - 10a<sup>2</sup>b<sup>3</sup> + 5a<sup>2</sup>b<sup>2</sup>.</p>
+<p>Il M.C.D. dei coefficienti 15, 10 e 5 è 5; per le lettere si prendono gli esponenti minimi: a<sup>2</sup> e b<sup>2</sup>. Il fattore comune è 5a<sup>2</sup>b<sup>2</sup>.</p>
+<p class="formula">15a<sup>3</sup>b<sup>2</sup> - 10a<sup>2</sup>b<sup>3</sup> + 5a<sup>2</sup>b<sup>2</sup> = 5a<sup>2</sup>b<sup>2</sup> × (3a - 2b + 1)</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Raccoglimento parziale</p>
+<p><em>Esempio:</em> Scomporre il polinomio 3x<sup>2</sup> + 3xy - 2x - 2y.</p>
+<p>Raggruppiamo i primi due termini e gli ultimi due, cercando un fattore comune in ciascun gruppo.</p>
+<p class="formula">3x<sup>2</sup> + 3xy - 2x - 2y = 3x(x + y) - 2(x + y)</p>
+<p>Ora (x + y) è un fattore comune ai due gruppi e si può raccogliere ulteriormente.</p>
+<p class="formula">3x(x + y) - 2(x + y) = (x + y) × (3x - 2)</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Raccoglimento parziale con riordino dei termini</p>
+<p><em>Esempio:</em> Scomporre ax - by + ay - bx.</p>
+<p>Raggruppando così com'è scritto (ax con by) non si trova un fattore comune: conviene riordinare i termini in modo da avvicinare quelli con fattori comuni.</p>
+<p class="formula">ax - by + ay - bx = ax + ay - bx - by = a(x + y) - b(x + y) = (x + y) × (a - b)</p>
+<p><em>Approfondimento:</em> quando il primo raggruppamento non funziona, prima di rinunciare conviene sempre provare a riordinare i quattro termini in un ordine diverso.</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Differenza di due quadrati</p>
+<p><em>Esempio:</em> Scomporre 9x<sup>2</sup> - 25y<sup>2</sup>.</p>
+<p>Riconosciamo che 9x<sup>2</sup> è il quadrato di 3x e che 25y<sup>2</sup> è il quadrato di 5y.</p>
+<p class="formula">9x<sup>2</sup> - 25y<sup>2</sup> = (3x)<sup>2</sup> - (5y)<sup>2</sup> = (3x + 5y) × (3x - 5y)</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Raccoglimento seguito da differenza di quadrati</p>
+<p><em>Esempio:</em> Scomporre completamente 2x<sup>3</sup> - 8x.</p>
+<p>Conviene sempre controllare prima il raccoglimento totale: qui il fattore comune è 2x.</p>
+<p class="formula">2x<sup>3</sup> - 8x = 2x × (x<sup>2</sup> - 4)</p>
+<p>All'interno della parentesi compare ora una differenza di quadrati, che si può scomporre ulteriormente.</p>
+<p class="formula">2x × (x<sup>2</sup> - 4) = 2x × (x + 2) × (x - 2)</p>
+<p><em>Approfondimento:</em> una scomposizione si dice completa solo quando nessuno dei fattori ottenuti può essere ulteriormente scomposto.</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Trinomio quadrato di un binomio</p>
+<p><em>Esempio:</em> Verificare se il trinomio 4x<sup>2</sup> - 12x + 9 è il quadrato di un binomio, e scomporlo.</p>
+<p>Il primo termine 4x<sup>2</sup> è il quadrato di 2x, il terzo termine 9 è il quadrato di 3. Controlliamo il doppio prodotto: 2 × (2x) × 3 = 12x, che coincide con il termine centrale (a meno del segno).</p>
+<p class="formula">4x<sup>2</sup> - 12x + 9 = (2x)<sup>2</sup> - 2×(2x)×3 + 3<sup>2</sup> = (2x - 3)<sup>2</sup></p>
+
+<p class="titolo-capitolo">Esercizio 8 - Riconoscere un trinomio non scomponibile con questa regola</p>
+<p><em>Esempio:</em> Verificare se x<sup>2</sup> + 5x + 9 è il quadrato di un binomio.</p>
+<p>Il primo termine x<sup>2</sup> è il quadrato di x, il terzo termine 9 è il quadrato di 3, ma il doppio prodotto atteso sarebbe 2 × x × 3 = 6x, diverso dal termine centrale 5x del trinomio. Questo trinomio non è quindi il quadrato di un binomio e va scomposto (se possibile) con un altro metodo.</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Trinomio notevole di secondo grado</p>
+<p><em>Esempio:</em> Scomporre x<sup>2</sup> - 7x + 12.</p>
+<p>Cerchiamo due numeri il cui prodotto sia 12 e la cui somma sia -7: si tratta di -3 e -4, infatti (-3) × (-4) = 12 e (-3) + (-4) = -7.</p>
+<p class="formula">x<sup>2</sup> - 7x + 12 = (x - 3) × (x - 4)</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Trinomio notevole con termine noto negativo</p>
+<p><em>Esempio:</em> Scomporre x<sup>2</sup> + 3x - 10.</p>
+<p>Cerchiamo due numeri il cui prodotto sia -10 e la cui somma sia 3: si tratta di 5 e -2, poiché 5 × (-2) = -10 e 5 + (-2) = 3.</p>
+<p class="formula">x<sup>2</sup> + 3x - 10 = (x + 5) × (x - 2)</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Somma e differenza di due cubi</p>
+<p><em>Esempio:</em> Scomporre x<sup>3</sup> + 27 e a<sup>3</sup> - 1.</p>
+<p>Riconosciamo x<sup>3</sup> + 27 come somma di cubi, con x<sup>3</sup> cubo di x e 27 cubo di 3.</p>
+<p class="formula">x<sup>3</sup> + 27 = x<sup>3</sup> + 3<sup>3</sup> = (x + 3) × (x<sup>2</sup> - 3x + 9)</p>
+<p>Allo stesso modo, a<sup>3</sup> - 1 è una differenza di cubi, con a<sup>3</sup> cubo di a e 1 cubo di 1.</p>
+<p class="formula">a<sup>3</sup> - 1 = a<sup>3</sup> - 1<sup>3</sup> = (a - 1) × (a<sup>2</sup> + a + 1)</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: scelta del metodo</p>
+<p><em>Esempio:</em> Scomporre completamente il polinomio 3x<sup>3</sup> - 3x<sup>2</sup> - 18x, individuando in ordine tutte le tecniche necessarie.</p>
+<p>Si controlla prima il raccoglimento totale: il fattore comune a tutti i termini è 3x.</p>
+<p class="formula">3x<sup>3</sup> - 3x<sup>2</sup> - 18x = 3x × (x<sup>2</sup> - x - 6)</p>
+<p>All'interno della parentesi si riconosce un trinomio notevole di secondo grado: cerchiamo due numeri il cui prodotto sia -6 e la cui somma sia -1, cioè -3 e 2.</p>
+<p class="formula">3x × (x<sup>2</sup> - x - 6) = 3x × (x - 3) × (x + 2)</p>
+<p><em>Approfondimento:</em> questo esercizio mostra bene il metodo generale: prima si cerca sempre il raccoglimento totale, poi si osserva se ciò che resta corrisponde a un prodotto notevole o a un trinomio notevole di secondo grado.</p>
+
+</div>
+<!-- fine esercizi matematica 03 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat03.html">Torna alla teoria (Capitolo 03)</a></p>
+  <p><a href="mat04.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
