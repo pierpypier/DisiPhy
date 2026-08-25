@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 15 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 15: Parallelogrammi e trapezi -->
+<div class="capitolo-storia" id="esercizi-15-parallelogrammi-trapezi">
+
+<p class="titolo-capitolo">15 - Esercizi svolti: parallelogrammi e trapezi</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Somma degli angoli di un quadrilatero</p>
+<p><em>Esempio:</em> Un quadrilatero convesso ha tre angoli di 80°, 95° e 120°. Calcolare il quarto angolo.</p>
+<p>La somma degli angoli interni di un quadrilatero convesso è sempre 360°.</p>
+<p class="formula">360° - 80° - 95° - 120° = 65°</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Lati opposti di un parallelogramma</p>
+<p><em>Esempio:</em> In un parallelogramma un lato misura 12 cm. Quanto misura il lato ad esso opposto?</p>
+<p>In ogni parallelogramma i lati opposti sono sempre congruenti tra loro.</p>
+<p class="formula">lato opposto = 12 cm</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Angoli di un parallelogramma</p>
+<p><em>Esempio:</em> In un parallelogramma un angolo misura 65°. Calcolare gli altri tre angoli.</p>
+<p>L'angolo opposto a quello dato è congruente ad esso, quindi misura anch'esso 65°. I due angoli consecutivi (adiacenti allo stesso lato) sono invece supplementari all'angolo dato.</p>
+<p class="formula">180° - 65° = 115°</p>
+<p>Gli angoli del parallelogramma sono quindi 65°, 115°, 65° e 115°.</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Diagonali di un parallelogramma</p>
+<p><em>Esempio:</em> Le due diagonali di un parallelogramma misurano rispettivamente 14 cm e 10 cm. Calcolare la lunghezza dei quattro segmenti in cui il loro punto di intersezione le divide.</p>
+<p>Le diagonali di un parallelogramma si tagliano scambievolmente per metà.</p>
+<p class="formula">14 cm / 2 = 7 cm &nbsp;&nbsp;&nbsp; 10 cm / 2 = 5 cm</p>
+<p>La prima diagonale è divisa in due segmenti di 7 cm ciascuno, la seconda in due segmenti di 5 cm ciascuno.</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Diagonali del rettangolo</p>
+<p><em>Esempio:</em> In un rettangolo una diagonale misura 13 cm. Quanto misura l'altra diagonale?</p>
+<p>Nel rettangolo, oltre a tagliarsi a metà come in ogni parallelogramma, le due diagonali sono anche congruenti tra loro.</p>
+<p class="formula">altra diagonale = 13 cm</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Lato del rombo dalle diagonali</p>
+<p><em>Esempio:</em> Un rombo ha le diagonali di 10 cm e 24 cm. Calcolare la lunghezza del lato.</p>
+<p>Le diagonali del rombo si tagliano a metà e perpendicolarmente, formando quattro triangoli rettangoli congruenti con cateti pari alle semidiagonali.</p>
+<p class="formula">semidiagonali: 10/2 = 5 cm e 24/2 = 12 cm</p>
+<p>Applichiamo il teorema di Pitagora ai cateti di 5 cm e 12 cm.</p>
+<p class="formula">lato = √(5<sup>2</sup> + 12<sup>2</sup>) = √(25 + 144) = √169 = 13 cm</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Lato del quadrato dalla diagonale</p>
+<p><em>Esempio:</em> Un quadrato ha la diagonale di 8√2 cm. Calcolare la lunghezza del lato.</p>
+<p>Nel quadrato la diagonale è legata al lato dalla relazione diagonale = lato × √2, conseguenza diretta del teorema di Pitagora applicato ai due lati uguali.</p>
+<p class="formula">lato = diagonale / √2 = 8√2 / √2 = 8 cm</p>
+<p>Verifichiamo con Pitagora: 8<sup>2</sup> + 8<sup>2</sup> = 64 + 64 = 128, e (8√2)<sup>2</sup> = 64 × 2 = 128.</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Mediana del trapezio dalle basi</p>
+<p><em>Esempio:</em> Un trapezio ha base maggiore di 22 cm e base minore di 14 cm. Calcolare la lunghezza della mediana.</p>
+<p>La mediana del trapezio è pari alla semisomma delle due basi.</p>
+<p class="formula">mediana = (22 + 14) / 2 = 36 / 2 = 18 cm</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Trovare una base dalla mediana</p>
+<p><em>Esempio:</em> La mediana di un trapezio misura 15 cm e la base minore misura 9 cm. Calcolare la base maggiore.</p>
+<p>Invertiamo la formula della mediana per ricavare la base maggiore.</p>
+<p class="formula">mediana = (B + b) / 2 → 15 = (B + 9) / 2 → 30 = B + 9 → B = 21 cm</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Angoli del trapezio isoscele</p>
+<p><em>Esempio:</em> In un trapezio isoscele, un angolo alla base maggiore misura 70°. Calcolare gli altri angoli.</p>
+<p>Nel trapezio isoscele gli angoli adiacenti a ciascuna base sono congruenti tra loro: l'altro angolo alla base maggiore misura quindi anch'esso 70°. Gli angoli alla base minore sono invece supplementari a quelli alla base maggiore, essendo le basi parallele tagliate dal lato obliquo.</p>
+<p class="formula">180° - 70° = 110°</p>
+<p>Gli angoli del trapezio isoscele sono quindi 70°, 70°, 110° e 110°.</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Teorema del fascio di rette parallele</p>
+<p><em>Esempio:</em> Un fascio di rette parallele taglia due trasversali. Sulla prima trasversale i segmenti misurano AB = 6 cm e BC = 9 cm; sulla seconda trasversale il segmento corrispondente misura A'B' = 4 cm. Calcolare B'C'.</p>
+<p>Per il teorema del fascio di rette parallele, i segmenti corrispondenti sulle due trasversali sono direttamente proporzionali.</p>
+<p class="formula">AB : A'B' = BC : B'C' → 6 : 4 = 9 : B'C'</p>
+<p class="formula">B'C' = (9 × 4) / 6 = 36 / 6 = 6 cm</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: area e lato di un rombo</p>
+<p><em>Esempio:</em> Un rombo ha area 60 cm<sup>2</sup> e una diagonale di 15 cm. Calcolare l'altra diagonale e la lunghezza del lato.</p>
+<p>L'area del rombo è pari al semiprodotto delle due diagonali: invertiamo la formula per trovare la diagonale mancante.</p>
+<p class="formula">area = (d<sub>1</sub> × d<sub>2</sub>) / 2 → 60 = (15 × d<sub>2</sub>) / 2 → d<sub>2</sub> = 120 / 15 = 8 cm</p>
+<p>Calcoliamo ora il lato a partire dalle semidiagonali, applicando il teorema di Pitagora.</p>
+<p class="formula">semidiagonali: 15/2 = 7,5 cm e 8/2 = 4 cm</p>
+<p class="formula">lato = √(7,5<sup>2</sup> + 4<sup>2</sup>) = √(56,25 + 16) = √72,25 = 8,5 cm</p>
+
+</div>
+<!-- fine esercizi matematica 15 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat15.html">Torna alla teoria (Capitolo 15)</a></p>
+  <p><a href="mat16.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

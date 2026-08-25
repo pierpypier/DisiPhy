@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 16 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 16: Circonferenza e cerchio -->
+<div class="capitolo-storia" id="esercizi-16-circonferenza-cerchio">
+
+<p class="titolo-capitolo">16 - Esercizi svolti: circonferenza e cerchio</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Relazione tra raggio e diametro</p>
+<p><em>Esempio:</em> Una circonferenza ha raggio 8 cm; un'altra ha diametro 30 cm. Calcolare il diametro della prima e il raggio della seconda.</p>
+<p>Il diametro è sempre il doppio del raggio.</p>
+<p class="formula">d = 2r = 2 × 8 cm = 16 cm</p>
+<p class="formula">r = d / 2 = 30 cm / 2 = 15 cm</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Posizioni reciproche tra retta e circonferenza</p>
+<p><em>Esempio:</em> Una circonferenza ha raggio 7 cm. Classificare la posizione di tre rette che distano dal centro rispettivamente 10 cm, 7 cm e 4 cm.</p>
+<p>Confrontiamo ciascuna distanza con il raggio di 7 cm.</p>
+<p>La prima retta, a distanza 10 cm &gt; 7 cm, è esterna alla circonferenza. La seconda, a distanza 7 cm = 7 cm, è tangente. La terza, a distanza 4 cm &lt; 7 cm, è secante.</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Posizioni reciproche tra due circonferenze</p>
+<p><em>Esempio:</em> Due circonferenze hanno raggi 5 cm e 3 cm, e i loro centri distano 9 cm. Stabilire la loro posizione reciproca.</p>
+<p>Calcoliamo somma e differenza dei raggi.</p>
+<p class="formula">somma dei raggi = 5 + 3 = 8 cm &nbsp;&nbsp;&nbsp; differenza dei raggi = 5 - 3 = 2 cm</p>
+<p>La distanza tra i centri, 9 cm, è maggiore della somma dei raggi (8 cm): le due circonferenze sono quindi esterne, senza punti in comune.</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Angolo al centro e angolo alla circonferenza</p>
+<p><em>Esempio:</em> Un angolo alla circonferenza misura 35°. Calcolare l'angolo al centro che insiste sullo stesso arco. Successivamente, dato un angolo al centro di 100°, calcolare il corrispondente angolo alla circonferenza.</p>
+<p>Per il teorema dell'angolo al centro e alla circonferenza, il primo è sempre il doppio del secondo.</p>
+<p class="formula">angolo al centro = 2 × 35° = 70°</p>
+<p class="formula">angolo alla circonferenza = 100° / 2 = 50°</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Teorema di Talete sulla circonferenza</p>
+<p><em>Esempio:</em> Un triangolo è inscritto in una semicirconferenza, con l'ipotenusa coincidente con il diametro. Che tipo di triangolo è, e perché?</p>
+<p>L'angolo alla circonferenza opposto al diametro insiste su un arco che è una semicirconferenza, il cui angolo al centro corrispondente è un angolo piatto di 180°.</p>
+<p class="formula">angolo alla circonferenza = 180° / 2 = 90°</p>
+<p>L'angolo opposto all'ipotenusa è quindi retto: il triangolo è necessariamente un triangolo rettangolo.</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Quadrilatero inscritto in una circonferenza</p>
+<p><em>Esempio:</em> Un quadrilatero inscritto in una circonferenza ha due angoli consecutivi di 110° e 80°. Calcolare gli altri due angoli.</p>
+<p>Un quadrilatero è inscrivibile in una circonferenza se e solo se ha gli angoli opposti supplementari.</p>
+<p class="formula">180° - 110° = 70° &nbsp;&nbsp;&nbsp; 180° - 80° = 100°</p>
+<p>Gli angoli del quadrilatero sono quindi 110°, 80°, 70° e 100°. Verifichiamo che la somma sia 360°: 110° + 80° + 70° + 100° = 360°.</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Quadrilatero circoscritto a una circonferenza</p>
+<p><em>Esempio:</em> Un quadrilatero circoscritto a una circonferenza ha tre lati di 8 cm, 6 cm e 10 cm, disposti in ordine (AB, BC, CD). Calcolare la lunghezza del quarto lato DA.</p>
+<p>Un quadrilatero è circoscrivibile a una circonferenza se e solo se le somme dei lati opposti sono congruenti tra loro.</p>
+<p class="formula">AB + CD = BC + DA → 8 + 10 = 6 + DA → DA = 18 - 6 = 12 cm</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Lunghezza della circonferenza e area del cerchio</p>
+<p><em>Esempio:</em> Calcolare la lunghezza della circonferenza e l'area del cerchio con raggio 10 cm, approssimando π a 3,14.</p>
+<p class="formula">C = 2πr = 2 × 3,14 × 10 = 62,8 cm</p>
+<p class="formula">A = πr<sup>2</sup> = 3,14 × 10<sup>2</sup> = 3,14 × 100 = 314 cm<sup>2</sup></p>
+
+<p class="titolo-capitolo">Esercizio 9 - Trovare il raggio dalla lunghezza della circonferenza</p>
+<p><em>Esempio:</em> Una circonferenza ha lunghezza 37,68 cm. Calcolare il raggio, approssimando π a 3,14.</p>
+<p>Invertiamo la formula della lunghezza della circonferenza.</p>
+<p class="formula">C = 2πr → r = C / (2π) = 37,68 / (2 × 3,14) = 37,68 / 6,28 = 6 cm</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Lunghezza di un arco</p>
+<p><em>Esempio:</em> Calcolare la lunghezza dell'arco corrispondente a un angolo al centro di 60° in una circonferenza di raggio 9 cm, con π ≈ 3,14.</p>
+<p>La lunghezza dell'arco è una frazione della circonferenza completa, proporzionale all'angolo al centro rispetto all'angolo giro.</p>
+<p class="formula">lunghezza arco = 2πr × (α / 360°) = 2 × 3,14 × 9 × (60° / 360°) = 56,52 × (1/6) = 9,42 cm</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Area di un settore circolare</p>
+<p><em>Esempio:</em> Calcolare l'area del settore circolare corrispondente a un angolo al centro di 90° in un cerchio di raggio 12 cm, con π ≈ 3,14.</p>
+<p class="formula">area settore = πr<sup>2</sup> × (α / 360°) = 3,14 × 12<sup>2</sup> × (90° / 360°) = 3,14 × 144 × 0,25 = 452,16 × 0,25 = 113,04 cm<sup>2</sup></p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: dal problema inverso alle formule dirette</p>
+<p><em>Esempio:</em> Un cerchio ha area 78,5 cm<sup>2</sup>. Calcolare il raggio del cerchio e, successivamente, la lunghezza della circonferenza corrispondente, con π ≈ 3,14.</p>
+<p>Invertiamo la formula dell'area per trovare il raggio.</p>
+<p class="formula">A = πr<sup>2</sup> → r<sup>2</sup> = A / π = 78,5 / 3,14 = 25 → r = √25 = 5 cm</p>
+<p>Ora che conosciamo il raggio, calcoliamo la lunghezza della circonferenza.</p>
+<p class="formula">C = 2πr = 2 × 3,14 × 5 = 31,4 cm</p>
+
+</div>
+<!-- fine esercizi matematica 16 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat16.html">Torna alla teoria (Capitolo 16)</a></p>
+  <p><a href="mat17.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

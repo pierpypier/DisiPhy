@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 22 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 22: Introduzione alle funzioni -->
+<div class="capitolo-storia" id="esercizi-22-introduzione-funzioni">
+
+<p class="titolo-capitolo">22 - Esercizi svolti: introduzione alle funzioni</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Valutare una funzione in un punto</p>
+<p><em>Esempio:</em> Data la funzione f(x) = 2x<sup>2</sup> - 3x + 1, calcolare f(3).</p>
+<p class="formula">f(3) = 2×3<sup>2</sup> - 3×3 + 1 = 18 - 9 + 1 = 10</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Dominio di una funzione fratta</p>
+<p><em>Esempio:</em> Determinare il dominio della funzione f(x) = (x + 1) / (x - 4).</p>
+<p>Essendo una funzione fratta, occorre escludere il valore che annulla il denominatore.</p>
+<p class="formula">x - 4 ≠ 0 → x ≠ 4</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Dominio con radicale di indice pari</p>
+<p><em>Esempio:</em> Determinare il dominio della funzione f(x) = √(3x - 9).</p>
+<p>Il radicando deve essere non negativo, poiché l'indice della radice è pari.</p>
+<p class="formula">3x - 9 ≥ 0 → x ≥ 3</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Dominio con radicale e frazione combinati</p>
+<p><em>Esempio:</em> Determinare il dominio della funzione f(x) = √(x + 2) / (x - 1).</p>
+<p>Imponiamo contemporaneamente che il radicando sia non negativo e che il denominatore sia diverso da zero.</p>
+<p class="formula">x + 2 ≥ 0 e x - 1 ≠ 0 → x ≥ -2, con x ≠ 1</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Verificare che una funzione sia pari</p>
+<p><em>Esempio:</em> Verificare se la funzione f(x) = 3x<sup>4</sup> - 2x<sup>2</sup> + 5 è pari.</p>
+<p>Calcoliamo f(-x) e confrontiamolo con f(x).</p>
+<p class="formula">f(-x) = 3(-x)<sup>4</sup> - 2(-x)<sup>2</sup> + 5 = 3x<sup>4</sup> - 2x<sup>2</sup> + 5 = f(x)</p>
+<p>Poiché f(-x) = f(x), la funzione è pari.</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Verificare che una funzione sia dispari</p>
+<p><em>Esempio:</em> Verificare se la funzione f(x) = 5x<sup>3</sup> - 2x è dispari.</p>
+<p class="formula">f(-x) = 5(-x)<sup>3</sup> - 2(-x) = -5x<sup>3</sup> + 2x = -(5x<sup>3</sup> - 2x) = -f(x)</p>
+<p>Poiché f(-x) = -f(x), la funzione è dispari.</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Una funzione né pari né dispari</p>
+<p><em>Esempio:</em> Verificare che la funzione f(x) = x<sup>2</sup> + x non sia né pari né dispari, usando x = 1 come controesempio.</p>
+<p>Calcoliamo f(1) e f(-1).</p>
+<p class="formula">f(1) = 1<sup>2</sup> + 1 = 2 &nbsp;&nbsp;&nbsp; f(-1) = (-1)<sup>2</sup> + (-1) = 1 - 1 = 0</p>
+<p>Poiché f(-1) = 0 non è uguale a f(1) = 2, la funzione non è pari. Poiché f(-1) = 0 non è nemmeno uguale a -f(1) = -2, la funzione non è nemmeno dispari: non ha quindi alcuna delle due simmetrie.</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Funzione lineare: coefficiente angolare e intercetta</p>
+<p><em>Esempio:</em> Data la funzione y = 3x - 7, individuare il coefficiente angolare m e l'intercetta q, e calcolare il valore di y per x = 4.</p>
+<p class="formula">m = 3, q = -7</p>
+<p class="formula">y = 3×4 - 7 = 12 - 7 = 5</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Funzione quadratica: valutazione in un punto</p>
+<p><em>Esempio:</em> Data la funzione y = 2x<sup>2</sup> - 4x + 1, calcolare il valore di y per x = 3.</p>
+<p class="formula">y = 2×3<sup>2</sup> - 4×3 + 1 = 18 - 12 + 1 = 7</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Funzione omografica: dominio e valutazione</p>
+<p><em>Esempio:</em> Data la funzione y = 6/x, determinare il dominio e calcolare il valore di y per x = 2.</p>
+<p class="formula">Dominio: x ≠ 0</p>
+<p class="formula">y = 6/2 = 3</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Verificare l'iniettività di una funzione</p>
+<p><em>Esempio:</em> Verificare se la funzione f(x) = 2x + 5 è iniettiva, e confrontarla con g(x) = x<sup>2</sup>, che non lo è.</p>
+<p>Per verificare l'iniettività di f, supponiamo che f(x<sub>1</sub>) = f(x<sub>2</sub>) e vediamo se questo implica necessariamente x<sub>1</sub> = x<sub>2</sub>.</p>
+<p class="formula">2x<sub>1</sub> + 5 = 2x<sub>2</sub> + 5 → 2x<sub>1</sub> = 2x<sub>2</sub> → x<sub>1</sub> = x<sub>2</sub></p>
+<p>La funzione f è quindi iniettiva. La funzione g(x) = x<sup>2</sup>, invece, non è iniettiva: basta osservare che g(2) = 4 e g(-2) = 4, cioè due valori distinti di x danno la stessa immagine.</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: dominio e parità insieme</p>
+<p><em>Esempio:</em> Data la funzione f(x) = x<sup>2</sup> / (x<sup>2</sup> - 4), determinare il dominio e verificare se la funzione è pari.</p>
+<p>Per il dominio, imponiamo che il denominatore sia diverso da zero.</p>
+<p class="formula">x<sup>2</sup> - 4 ≠ 0 → x ≠ -2, x ≠ 2</p>
+<p>Verifichiamo ora la parità, calcolando f(-x).</p>
+<p class="formula">f(-x) = (-x)<sup>2</sup> / [(-x)<sup>2</sup> - 4] = x<sup>2</sup> / (x<sup>2</sup> - 4) = f(x)</p>
+<p>Poiché f(-x) = f(x), la funzione è pari, e il suo dominio, essendo simmetrico rispetto allo zero (esclude sia -2 che 2), è coerente con questa simmetria.</p>
+
+</div>
+<!-- fine esercizi matematica 22 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat22.html">Torna alla teoria (Capitolo 22)</a></p>
+  <p><a href="mat23.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
