@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 02 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 02: Calcolo letterale - monomi e polinomi -->
+<div class="capitolo-storia" id="esercizi-02-calcolo-letterale">
+
+<p class="titolo-capitolo">02 - Esercizi svolti: monomi e polinomi</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Riconoscere e classificare un monomio</p>
+<p><em>Esempio:</em> Dato il monomio -6x<sup>3</sup>y<sup>2</sup>, individuare coefficiente, parte letterale e grado.</p>
+<p>Il coefficiente è -6, la parte letterale è x<sup>3</sup>y<sup>2</sup>. Il grado rispetto a x è 3, il grado rispetto a y è 2.</p>
+<p class="formula">grado complessivo = 3 + 2 = 5</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Somma di monomi simili</p>
+<p><em>Esempio:</em> Semplificare 7a<sup>2</sup>b - 3a<sup>2</sup>b + a<sup>2</sup>b.</p>
+<p>I tre monomi hanno la stessa parte letterale a<sup>2</sup>b, quindi sono simili: si sommano i coefficienti.</p>
+<p class="formula">7a<sup>2</sup>b - 3a<sup>2</sup>b + a<sup>2</sup>b = (7 - 3 + 1)a<sup>2</sup>b = 5a<sup>2</sup>b</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Prodotto di monomi</p>
+<p><em>Esempio:</em> Calcolare il prodotto (-2x<sup>2</sup>y) × (5xy<sup>3</sup>) × (-x).</p>
+<p>Si moltiplicano tra loro i coefficienti e si sommano gli esponenti delle lettere uguali.</p>
+<p class="formula">(-2 × 5 × -1) × (x<sup>2</sup> × x × x) × (y × y<sup>3</sup>) = 10x<sup>4</sup>y<sup>4</sup></p>
+
+<p class="titolo-capitolo">Esercizio 4 - Divisione tra monomi</p>
+<p><em>Esempio:</em> Eseguire la divisione (18x<sup>4</sup>y<sup>3</sup>z) : (6x<sup>2</sup>y).</p>
+<p>Si dividono i coefficienti e si sottraggono gli esponenti delle lettere comuni; la lettera z, assente nel divisore, resta invariata al numeratore.</p>
+<p class="formula">(18 : 6) × x<sup>4 - 2</sup> × y<sup>3 - 1</sup> × z = 3x<sup>2</sup>y<sup>2</sup>z</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Potenza di un monomio</p>
+<p><em>Esempio:</em> Calcolare (-3x<sup>2</sup>y<sup>4</sup>)<sup>2</sup>.</p>
+<p>Attenzione al segno: elevando a potenza pari un coefficiente negativo il risultato diventa positivo.</p>
+<p class="formula">(-3x<sup>2</sup>y<sup>4</sup>)<sup>2</sup> = (-3)<sup>2</sup> × x<sup>2×2</sup> × y<sup>4×2</sup> = 9x<sup>4</sup>y<sup>8</sup></p>
+
+<p class="titolo-capitolo">Esercizio 6 - M.C.D. e m.c.m. tra monomi</p>
+<p><em>Esempio:</em> Calcolare M.C.D. e m.c.m. tra 8a<sup>3</sup>b<sup>2</sup> e 20a b<sup>4</sup>c.</p>
+<p>Il M.C.D. tra i coefficienti 8 e 20 è 4; per la parte letterale si prendono gli esponenti minimi delle lettere comuni: a<sup>1</sup> e b<sup>2</sup> (c non è comune, quindi non entra nel M.C.D.).</p>
+<p class="formula">M.C.D. = 4ab<sup>2</sup></p>
+<p>Il m.c.m. tra 8 e 20 è 40; per la parte letterale si prendono gli esponenti massimi di tutte le lettere presenti, comuni o no: a<sup>3</sup>, b<sup>4</sup>, c<sup>1</sup>.</p>
+<p class="formula">m.c.m. = 40a<sup>3</sup>b<sup>4</sup>c</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Somma algebrica di polinomi</p>
+<p><em>Esempio:</em> Dati A = 4x<sup>2</sup> - 3x + 2 e B = -2x<sup>2</sup> + x - 5, calcolare A + B e A - B.</p>
+<p class="formula">A + B = (4 - 2)x<sup>2</sup> + (-3 + 1)x + (2 - 5) = 2x<sup>2</sup> - 2x - 3</p>
+<p>Per la differenza si cambia segno a ogni termine di B prima di sommare.</p>
+<p class="formula">A - B = (4 + 2)x<sup>2</sup> + (-3 - 1)x + (2 + 5) = 6x<sup>2</sup> - 4x + 7</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Prodotto tra polinomi</p>
+<p><em>Esempio:</em> Eseguire il prodotto (2x - 3) × (x<sup>2</sup> + x - 4).</p>
+<p>Si moltiplica ogni termine del primo polinomio per ogni termine del secondo, poi si riducono i monomi simili.</p>
+<p class="formula">2x×x<sup>2</sup> + 2x×x - 2x×4 - 3×x<sup>2</sup> - 3×x + 3×4</p>
+<p class="formula">= 2x<sup>3</sup> + 2x<sup>2</sup> - 8x - 3x<sup>2</sup> - 3x + 12 = 2x<sup>3</sup> - x<sup>2</sup> - 11x + 12</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Quadrato di un binomio</p>
+<p><em>Esempio:</em> Sviluppare (3x - 2y)<sup>2</sup> usando il prodotto notevole.</p>
+<p class="formula">(3x - 2y)<sup>2</sup> = (3x)<sup>2</sup> - 2×(3x)×(2y) + (2y)<sup>2</sup> = 9x<sup>2</sup> - 12xy + 4y<sup>2</sup></p>
+<p><em>Approfondimento:</em> conviene sempre controllare il segno del doppio prodotto: è negativo quando i due termini del binomio hanno segni discordi tra loro nella sottrazione.</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Somma per differenza</p>
+<p><em>Esempio:</em> Calcolare (5x + 3y) × (5x - 3y) riconoscendo il prodotto notevole.</p>
+<p>I due fattori hanno gli stessi termini ma segno centrale opposto: si applica direttamente la differenza dei quadrati, senza sviluppare i quattro prodotti.</p>
+<p class="formula">(5x + 3y) × (5x - 3y) = (5x)<sup>2</sup> - (3y)<sup>2</sup> = 25x<sup>2</sup> - 9y<sup>2</sup></p>
+
+<p class="titolo-capitolo">Esercizio 11 - Cubo di un binomio</p>
+<p><em>Esempio:</em> Sviluppare (x + 2)<sup>3</sup> applicando la formula del cubo di binomio.</p>
+<p class="formula">(x + 2)<sup>3</sup> = x<sup>3</sup> + 3×x<sup>2</sup>×2 + 3×x×2<sup>2</sup> + 2<sup>3</sup> = x<sup>3</sup> + 6x<sup>2</sup> + 12x + 8</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo</p>
+<p><em>Esempio:</em> Semplificare l'espressione (2x + 1)<sup>2</sup> - (2x - 1)<sup>2</sup>, prima con i prodotti notevoli e poi verificando con lo sviluppo completo.</p>
+<p class="formula">(2x + 1)<sup>2</sup> = 4x<sup>2</sup> + 4x + 1 &nbsp;&nbsp;&nbsp; (2x - 1)<sup>2</sup> = 4x<sup>2</sup> - 4x + 1</p>
+<p class="formula">(2x + 1)<sup>2</sup> - (2x - 1)<sup>2</sup> = (4x<sup>2</sup> + 4x + 1) - (4x<sup>2</sup> - 4x + 1) = 8x</p>
+<p><em>Approfondimento:</em> lo stesso risultato si ottiene più rapidamente riconoscendo che l'espressione è una differenza di quadrati [(2x+1)+(2x-1)]×[(2x+1)-(2x-1)] = (4x)×(2) = 8x.</p>
+
+</div>
+<!-- fine esercizi matematica 02 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat02.html">Torna alla teoria (Capitolo 02)</a></p>
+  <p><a href="mat03.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
