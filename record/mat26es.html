@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 26 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 26: L'ellisse -->
+<div class="capitolo-storia" id="esercizi-26-ellisse">
+
+<p class="titolo-capitolo">26 - Esercizi svolti: l'ellisse</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Semiassi e vertici dall'equazione</p>
+<p><em>Esempio:</em> Determinare i semiassi e i vertici dell'ellisse x<sup>2</sup>/16 + y<sup>2</sup>/4 = 1.</p>
+<p class="formula">a<sup>2</sup> = 16 → a = 4 &nbsp;&nbsp;&nbsp; b<sup>2</sup> = 4 → b = 2</p>
+<p class="formula">vertici: (±4, 0) , (0, ±2)</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Fuochi con ellisse allungata sull'asse x</p>
+<p><em>Esempio:</em> Determinare i fuochi dell'ellisse x<sup>2</sup>/36 + y<sup>2</sup>/20 = 1.</p>
+<p>Qui a<sup>2</sup> = 36 e b<sup>2</sup> = 20: poiché a<sup>2</sup> &gt; b<sup>2</sup>, i fuochi sono sull'asse x.</p>
+<p class="formula">c<sup>2</sup> = 36 - 20 = 16 → c = 4</p>
+<p class="formula">F<sub>1</sub>(-4, 0) , F<sub>2</sub>(4, 0)</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Fuochi con ellisse allungata sull'asse y</p>
+<p><em>Esempio:</em> Determinare i fuochi dell'ellisse x<sup>2</sup>/9 + y<sup>2</sup>/25 = 1.</p>
+<p>Qui a<sup>2</sup> = 9 e b<sup>2</sup> = 25: poiché b<sup>2</sup> &gt; a<sup>2</sup>, i fuochi sono sull'asse y.</p>
+<p class="formula">c<sup>2</sup> = 25 - 9 = 16 → c = 4</p>
+<p class="formula">F<sub>1</sub>(0, -4) , F<sub>2</sub>(0, 4)</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Eccentricità</p>
+<p><em>Esempio:</em> Calcolare l'eccentricità dell'ellisse x<sup>2</sup>/25 + y<sup>2</sup>/16 = 1.</p>
+<p>Qui a = 5 (semiasse maggiore) e b = 4.</p>
+<p class="formula">c<sup>2</sup> = 25 - 16 = 9 → c = 3</p>
+<p class="formula">e = c / a = 3/5 = 0,6</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Ellisse traslata rispetto al centro</p>
+<p><em>Esempio:</em> Scrivere l'equazione dell'ellisse con centro C(2, -3) e semiassi a = 5, b = 3.</p>
+<p class="formula">(x - 2)<sup>2</sup>/25 + (y - (-3))<sup>2</sup>/9 = 1 → (x-2)<sup>2</sup>/25 + (y+3)<sup>2</sup>/9 = 1</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Retta secante all'ellisse</p>
+<p><em>Esempio:</em> Verificare se la retta y = x - 1 interseca l'ellisse x<sup>2</sup>/9 + y<sup>2</sup> = 1.</p>
+<p class="formula">x<sup>2</sup>/9 + (x-1)<sup>2</sup> = 1</p>
+<p>Moltiplichiamo tutto per 9 per eliminare il denominatore.</p>
+<p class="formula">x<sup>2</sup> + 9(x-1)<sup>2</sup> = 9 → x<sup>2</sup> + 9x<sup>2</sup> - 18x + 9 = 9 → 10x<sup>2</sup> - 18x = 0</p>
+<p>Raccogliendo x otteniamo x(10x - 18) = 0, quindi x = 0 oppure x = 1,8: essendoci due soluzioni distinte, la retta è secante all'ellisse in due punti.</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Retta tangente all'ellisse</p>
+<p><em>Esempio:</em> Verificare se la retta y = x + 2 è tangente all'ellisse x<sup>2</sup>/3 + y<sup>2</sup> = 1.</p>
+<p class="formula">x<sup>2</sup>/3 + (x+2)<sup>2</sup> = 1</p>
+<p>Moltiplichiamo tutto per 3.</p>
+<p class="formula">x<sup>2</sup> + 3(x+2)<sup>2</sup> = 3 → x<sup>2</sup> + 3x<sup>2</sup> + 12x + 12 = 3 → 4x<sup>2</sup> + 12x + 9 = 0</p>
+<p class="formula">Δ = 12<sup>2</sup> - 4×4×9 = 144 - 144 = 0</p>
+<p>Il discriminante è nullo: la retta è tangente. Il punto di tangenza ha ascissa x = -12/8 = -1,5 e ordinata y = -1,5 + 2 = 0,5. Verifichiamo che il punto (-1,5 ; 0,5) appartenga all'ellisse: (-1,5)<sup>2</sup>/3 + 0,5<sup>2</sup> = 0,75 + 0,25 = 1.</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Retta esterna all'ellisse</p>
+<p><em>Esempio:</em> Verificare la posizione della retta y = x + 3 rispetto all'ellisse x<sup>2</sup>/4 + y<sup>2</sup> = 1.</p>
+<p class="formula">x<sup>2</sup>/4 + (x+3)<sup>2</sup> = 1 → x<sup>2</sup> + 4(x+3)<sup>2</sup> = 4 → 5x<sup>2</sup> + 24x + 32 = 0</p>
+<p class="formula">Δ = 24<sup>2</sup> - 4×5×32 = 576 - 640 = -64</p>
+<p>Il discriminante è negativo: la retta è esterna all'ellisse, senza alcun punto in comune.</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Costruire l'ellisse dai vertici</p>
+<p><em>Esempio:</em> Scrivere l'equazione dell'ellisse con vertici (±6, 0) e (0, ±2).</p>
+<p class="formula">a = 6, b = 2 → x<sup>2</sup>/36 + y<sup>2</sup>/4 = 1</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Costruire l'ellisse da un vertice e un fuoco</p>
+<p><em>Esempio:</em> Un'ellisse con fuochi sull'asse x ha un vertice in A(5, 0) e un fuoco in F(3, 0). Scrivere la sua equazione.</p>
+<p>Dal vertice ricaviamo a = 5, dal fuoco ricaviamo c = 3.</p>
+<p class="formula">b<sup>2</sup> = a<sup>2</sup> - c<sup>2</sup> = 25 - 9 = 16</p>
+<p class="formula">x<sup>2</sup>/25 + y<sup>2</sup>/16 = 1</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Il caso limite: ellisse degenere in circonferenza</p>
+<p><em>Esempio:</em> Cosa diventa l'equazione dell'ellisse se a = b = 7?</p>
+<p class="formula">x<sup>2</sup>/49 + y<sup>2</sup>/49 = 1 → x<sup>2</sup> + y<sup>2</sup> = 49</p>
+<p>Quando i due semiassi sono uguali, l'ellisse degenera in una circonferenza di raggio 7, coerentemente con il fatto che la circonferenza è un caso particolare di ellisse con eccentricità nulla.</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: dai parametri all'equazione fino a un punto specifico</p>
+<p><em>Esempio:</em> Un'ellisse ha semiasse maggiore a = 10 e semidistanza focale c = 6, con fuochi sull'asse x. Determinare b, l'eccentricità, l'equazione dell'ellisse, e l'ordinata dei punti dell'ellisse con ascissa x = 8.</p>
+<p class="formula">b<sup>2</sup> = a<sup>2</sup> - c<sup>2</sup> = 100 - 36 = 64 → b = 8</p>
+<p class="formula">e = c/a = 6/10 = 0,6</p>
+<p class="formula">x<sup>2</sup>/100 + y<sup>2</sup>/64 = 1</p>
+<p>Sostituiamo x = 8 nell'equazione per trovare y.</p>
+<p class="formula">64/100 + y<sup>2</sup>/64 = 1 → y<sup>2</sup>/64 = 0,36 → y<sup>2</sup> = 23,04 → y = ±4,8</p>
+
+</div>
+<!-- fine esercizi matematica 26 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat26.html">Torna alla teoria (Capitolo 26)</a></p>
+  <p><a href="mat27.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 29 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 29: Funzioni composte e inverse -->
+<div class="capitolo-storia" id="esercizi-29-funzioni-composte-inverse">
+
+<p class="titolo-capitolo">29 - Esercizi svolti: proprietà, funzioni composte e inverse</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Verificare che una funzione sia crescente</p>
+<p><em>Esempio:</em> Verificare che la funzione f(x) = 3x - 1 sia crescente su tutto il suo dominio.</p>
+<p>Prendiamo due valori generici x<sub>1</sub> e x<sub>2</sub>, con x<sub>1</sub> &lt; x<sub>2</sub>, e calcoliamo la differenza f(x<sub>2</sub>) - f(x<sub>1</sub>).</p>
+<p class="formula">f(x<sub>2</sub>) - f(x<sub>1</sub>) = (3x<sub>2</sub> - 1) - (3x<sub>1</sub> - 1) = 3(x<sub>2</sub> - x<sub>1</sub>)</p>
+<p>Poiché x<sub>2</sub> - x<sub>1</sub> &gt; 0 (per ipotesi) e il coefficiente 3 è positivo, la differenza è sempre positiva: quindi f(x<sub>2</sub>) &gt; f(x<sub>1</sub>), e la funzione è crescente.</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Verificare che una funzione sia decrescente</p>
+<p><em>Esempio:</em> Verificare che la funzione f(x) = -2x + 5 sia decrescente su tutto il suo dominio.</p>
+<p class="formula">f(x<sub>2</sub>) - f(x<sub>1</sub>) = (-2x<sub>2</sub> + 5) - (-2x<sub>1</sub> + 5) = -2(x<sub>2</sub> - x<sub>1</sub>)</p>
+<p>Poiché x<sub>2</sub> - x<sub>1</sub> &gt; 0 ma il coefficiente è -2 (negativo), la differenza risulta sempre negativa: quindi f(x<sub>2</sub>) &lt; f(x<sub>1</sub>), e la funzione è decrescente.</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Funzione composta g∘f</p>
+<p><em>Esempio:</em> Date f(x) = x - 3 e g(x) = 2x<sup>2</sup>, calcolare (g ∘ f)(x).</p>
+<p class="formula">(g ∘ f)(x) = g(f(x)) = g(x-3) = 2(x-3)<sup>2</sup> = 2x<sup>2</sup> - 12x + 18</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Funzione composta f∘g e confronto</p>
+<p><em>Esempio:</em> Con le stesse funzioni f(x) = x - 3 e g(x) = 2x<sup>2</sup> dell'esercizio precedente, calcolare (f ∘ g)(x) e confrontare il risultato.</p>
+<p class="formula">(f ∘ g)(x) = f(g(x)) = f(2x<sup>2</sup>) = 2x<sup>2</sup> - 3</p>
+<p>Confrontando con il risultato dell'esercizio precedente, 2x<sup>2</sup> - 12x + 18 e 2x<sup>2</sup> - 3 sono espressioni diverse: la composizione, ancora una volta, non è commutativa.</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Funzione composta valutata in un punto</p>
+<p><em>Esempio:</em> Date f(x) = x + 1 e g(x) = x<sup>2</sup>, calcolare (g ∘ f)(3).</p>
+<p class="formula">f(3) = 3 + 1 = 4</p>
+<p class="formula">(g ∘ f)(3) = g(4) = 4<sup>2</sup> = 16</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Funzione inversa di una retta</p>
+<p><em>Esempio:</em> Determinare la funzione inversa di f(x) = 5x - 2.</p>
+<p>Scriviamo y = 5x - 2 e scambiamo x e y.</p>
+<p class="formula">x = 5y - 2 → 5y = x + 2 → y = (x + 2) / 5</p>
+<p class="formula">f<sup>-1</sup>(x) = (x + 2) / 5</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Verificare l'inversa tramite composizione</p>
+<p><em>Esempio:</em> Verificare che f<sup>-1</sup>(x) = (x + 2) / 5 sia davvero l'inversa di f(x) = 5x - 2, calcolando f<sup>-1</sup>(f(x)).</p>
+<p class="formula">f<sup>-1</sup>(f(x)) = f<sup>-1</sup>(5x - 2) = [(5x - 2) + 2] / 5 = 5x / 5 = x</p>
+<p>Poiché si ottiene esattamente x, la funzione inversa trovata è corretta.</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Funzione inversa di una funzione fratta</p>
+<p><em>Esempio:</em> Determinare la funzione inversa di f(x) = (x + 1) / (x - 2).</p>
+<p>Scriviamo y = (x+1)/(x-2), scambiamo x e y, e risolviamo rispetto alla nuova y.</p>
+<p class="formula">x = (y+1) / (y-2) → x(y-2) = y+1 → xy - 2x = y + 1</p>
+<p class="formula">xy - y = 2x + 1 → y(x-1) = 2x+1 → y = (2x+1) / (x-1)</p>
+<p class="formula">f<sup>-1</sup>(x) = (2x + 1) / (x - 1)</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Punto simmetrico sul grafico dell'inversa</p>
+<p><em>Esempio:</em> La funzione f(x) = 3x + 6 passa per il punto (0, 6). Determinare il punto corrispondente sul grafico della funzione inversa.</p>
+<p>Il grafico dell'inversa è simmetrico rispetto alla retta y = x: al punto (0, 6) corrisponde quindi il punto (6, 0).</p>
+<p>Verifichiamo calcolando l'inversa: f<sup>-1</sup>(x) = (x-6)/3, quindi f<sup>-1</sup>(6) = (6-6)/3 = 0, confermando che l'inversa passa proprio per (6, 0).</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Funzione non biiettiva e restrizione del dominio</p>
+<p><em>Esempio:</em> La funzione f(x) = x<sup>2</sup> + 4 non è iniettiva su tutto ℝ. Verificarlo, poi determinarne l'inversa restringendo il dominio a x ≥ 0.</p>
+<p class="formula">f(1) = 1 + 4 = 5 &nbsp;&nbsp;&nbsp; f(-1) = 1 + 4 = 5</p>
+<p>Poiché f(1) = f(-1) pur essendo 1 diverso da -1, la funzione non è iniettiva su tutto ℝ. Restringiamo il dominio a x ≥ 0, dove la funzione è crescente e quindi biiettiva.</p>
+<p class="formula">y = x<sup>2</sup> + 4 → x = y<sup>2</sup> + 4 → y<sup>2</sup> = x - 4 → y = √(x-4)</p>
+<p class="formula">f<sup>-1</sup>(x) = √(x - 4) , con dominio x ≥ 4</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Funzione inversa di una funzione cubica</p>
+<p><em>Esempio:</em> Determinare la funzione inversa di f(x) = x<sup>3</sup> + 2, sapendo che è biiettiva su tutto ℝ essendo monotona crescente.</p>
+<p class="formula">y = x<sup>3</sup> + 2 → x = y<sup>3</sup> + 2 → y<sup>3</sup> = x - 2 → y = ∛(x-2)</p>
+<p class="formula">f<sup>-1</sup>(x) = ∛(x - 2)</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: composizione e poi inversa</p>
+<p><em>Esempio:</em> Date f(x) = 2x - 1 e g(x) = x + 3, calcolare h(x) = (g ∘ f)(x), determinarne la funzione inversa, e verificare il risultato tramite composizione.</p>
+<p class="formula">h(x) = (g ∘ f)(x) = g(f(x)) = (2x - 1) + 3 = 2x + 2</p>
+<p>Determiniamo ora l'inversa di h.</p>
+<p class="formula">y = 2x + 2 → x = 2y + 2 → 2y = x - 2 → y = (x-2)/2</p>
+<p class="formula">h<sup>-1</sup>(x) = (x-2) / 2</p>
+<p>Verifichiamo componendo h con la sua inversa.</p>
+<p class="formula">h<sup>-1</sup>(h(x)) = h<sup>-1</sup>(2x+2) = [(2x+2) - 2] / 2 = 2x/2 = x</p>
+
+</div>
+<!-- fine esercizi matematica 29 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat29.html">Torna alla teoria (Capitolo 29)</a></p>
+  <p><a href="mat30.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
