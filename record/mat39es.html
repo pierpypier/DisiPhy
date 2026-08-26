@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 39 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 39: Le derivate -->
+<div class="capitolo-storia" id="esercizi-39-derivate">
+
+<p class="titolo-capitolo">39 - Esercizi svolti: le derivate</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Derivata per definizione: funzione cubica</p>
+<p><em>Esempio:</em> Calcolare, applicando la definizione, la derivata di f(x) = x<sup>3</sup> in un punto generico x<sub>0</sub>.</p>
+<p>Calcoliamo il rapporto incrementale, sviluppando il cubo del binomio.</p>
+<p class="formula">[(x<sub>0</sub>+h)<sup>3</sup> - x<sub>0</sub><sup>3</sup>] / h = [3x<sub>0</sub><sup>2</sup>h + 3x<sub>0</sub>h<sup>2</sup> + h<sup>3</sup>] / h = 3x<sub>0</sub><sup>2</sup> + 3x<sub>0</sub>h + h<sup>2</sup></p>
+<p>Calcoliamo il limite per h che tende a 0.</p>
+<p class="formula">f'(x<sub>0</sub>) = lim<sub>h→0</sub> (3x<sub>0</sub><sup>2</sup> + 3x<sub>0</sub>h + h<sup>2</sup>) = 3x<sub>0</sub><sup>2</sup></p>
+<p>La funzione derivata è quindi f'(x) = 3x<sup>2</sup>.</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Derivata per definizione: funzione lineare</p>
+<p><em>Esempio:</em> Calcolare, applicando la definizione, la derivata di f(x) = 3x + 2.</p>
+<p class="formula">[3(x<sub>0</sub>+h)+2 - (3x<sub>0</sub>+2)] / h = 3h / h = 3</p>
+<p class="formula">f'(x<sub>0</sub>) = lim<sub>h→0</sub> 3 = 3</p>
+<p>Coerentemente con l'interpretazione geometrica, la derivata di una retta è costante e uguale al suo coefficiente angolare.</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Derivate fondamentali: potenza</p>
+<p><em>Esempio:</em> Calcolare la derivata di f(x) = x<sup>5</sup>.</p>
+<p class="formula">f'(x) = 5x<sup>4</sup></p>
+
+<p class="titolo-capitolo">Esercizio 4 - Derivate fondamentali: esponenziale e logaritmo</p>
+<p><em>Esempio:</em> Calcolare la derivata di f(x) = e<sup>x</sup> + ln x.</p>
+<p class="formula">f'(x) = e<sup>x</sup> + 1/x</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Regola della somma</p>
+<p><em>Esempio:</em> Calcolare la derivata di f(x) = 3x<sup>2</sup> + 5x - 7.</p>
+<p class="formula">f'(x) = 6x + 5</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Regola del prodotto</p>
+<p><em>Esempio:</em> Calcolare la derivata di f(x) = x<sup>3</sup> × cos x.</p>
+<p>Applichiamo la regola di Leibniz, con f<sub>1</sub>(x) = x<sup>3</sup> e f<sub>2</sub>(x) = cos x.</p>
+<p class="formula">f'(x) = 3x<sup>2</sup> × cos x + x<sup>3</sup> × (-sin x) = 3x<sup>2</sup> cos x - x<sup>3</sup> sin x</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Regola del quoziente</p>
+<p><em>Esempio:</em> Calcolare la derivata di f(x) = (x<sup>2</sup>+1) / (x-2).</p>
+<p class="formula">f'(x) = [2x(x-2) - (x<sup>2</sup>+1)(1)] / (x-2)<sup>2</sup> = [2x<sup>2</sup>-4x-x<sup>2</sup>-1] / (x-2)<sup>2</sup></p>
+<p class="formula">= (x<sup>2</sup>-4x-1) / (x-2)<sup>2</sup></p>
+
+<p class="titolo-capitolo">Esercizio 8 - Funzione composta: potenza di un binomio</p>
+<p><em>Esempio:</em> Calcolare la derivata di f(x) = (3x+1)<sup>4</sup>.</p>
+<p>Pensiamo f come composizione di g(t) = t<sup>4</sup>, esterna, e h(x) = 3x+1, interna. Applichiamo la regola della catena.</p>
+<p class="formula">f'(x) = 4(3x+1)<sup>3</sup> × 3 = 12(3x+1)<sup>3</sup></p>
+
+<p class="titolo-capitolo">Esercizio 9 - Funzione composta: esponenziale</p>
+<p><em>Esempio:</em> Calcolare la derivata di f(x) = e<sup>2x<sup>2</sup></sup>.</p>
+<p>Pensiamo f come composizione di g(t) = e<sup>t</sup>, esterna, e h(x) = 2x<sup>2</sup>, interna.</p>
+<p class="formula">f'(x) = e<sup>2x<sup>2</sup></sup> × 4x = 4x × e<sup>2x<sup>2</sup></sup></p>
+
+<p class="titolo-capitolo">Esercizio 10 - Catena di composizione più lunga</p>
+<p><em>Esempio:</em> Calcolare la derivata di f(x) = sin(√x).</p>
+<p>Pensiamo f come composizione di g(t) = sin(t), esterna, e h(x) = √x, interna, la cui derivata è 1/(2√x).</p>
+<p class="formula">f'(x) = cos(√x) × 1/(2√x) = cos(√x) / (2√x)</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Equazione della retta tangente</p>
+<p><em>Esempio:</em> Scrivere l'equazione della retta tangente al grafico di f(x) = x<sup>2</sup> nel punto di ascissa x<sub>0</sub> = 3.</p>
+<p>Calcoliamo il valore della funzione e della derivata in x<sub>0</sub> = 3.</p>
+<p class="formula">f(3) = 9 &nbsp;&nbsp;&nbsp; f'(x) = 2x → f'(3) = 6</p>
+<p>Applichiamo la formula della retta tangente.</p>
+<p class="formula">y - 9 = 6(x - 3) → y = 6x - 18 + 9 → y = 6x - 9</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: un punto angoloso</p>
+<p><em>Esempio:</em> Verificare che la funzione f(x) = |x-2| presenti un punto angoloso in x = 2, calcolando le derivate destra e sinistra.</p>
+<p>Per x &gt; 2, f(x) = x-2, quindi f'(x) = 1. Per x &lt; 2, f(x) = -(x-2) = 2-x, quindi f'(x) = -1.</p>
+<p class="formula">f'<sub>+</sub>(2) = 1 &nbsp;&nbsp;&nbsp; f'<sub>-</sub>(2) = -1</p>
+<p>I due limiti del rapporto incrementale esistono entrambi ma sono diversi tra loro: x = 2 è quindi un punto angoloso per f(x), coerentemente con quanto visto per la funzione valore assoluto.</p>
+
+</div>
+<!-- fine esercizi matematica 39 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat39.html">Torna alla teoria (Capitolo 39)</a></p>
+  <p><a href="mat40.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

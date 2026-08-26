@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 38 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 38: La continuità delle funzioni -->
+<div class="capitolo-storia" id="esercizi-38-continuita-funzioni">
+
+<p class="titolo-capitolo">38 - Esercizi svolti: la continuità delle funzioni</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Verificare la continuità di una funzione polinomiale</p>
+<p><em>Esempio:</em> Verificare che f(x) = 2x<sup>2</sup> - 5x + 3 sia continua in x = 1.</p>
+<p>Essendo una funzione polinomiale, il limite per x che tende a 1 si calcola per sostituzione diretta.</p>
+<p class="formula">lim<sub>x→1</sub> f(x) = 2(1)<sup>2</sup> - 5(1) + 3 = 2 - 5 + 3 = 0</p>
+<p>Poiché f(1) = 0 coincide con il limite trovato, la funzione è continua in x = 1.</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Verificare la continuità di una funzione fratta nel dominio</p>
+<p><em>Esempio:</em> Verificare che f(x) = (x+1) / (x-3) sia continua in x = 0.</p>
+<p>Il punto x = 0 appartiene al dominio, poiché diverso da 3. Essendo una funzione razionale, continua nel proprio dominio, il limite si calcola per sostituzione.</p>
+<p class="formula">lim<sub>x→0</sub> f(x) = (0+1) / (0-3) = -1/3 = f(0)</p>
+<p>Poiché limite e valore della funzione coincidono, f è continua in x = 0.</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Discontinuità di prima specie</p>
+<p><em>Esempio:</em> Data la funzione definita a tratti f(x) = x+1 per x &lt; 2 e f(x) = x-1 per x ≥ 2, classificare il comportamento in x = 2.</p>
+<p class="formula">lim<sub>x→2<sup>-</sup></sub> f(x) = 2+1 = 3 &nbsp;&nbsp;&nbsp; lim<sub>x→2<sup>+</sup></sub> f(x) = 2-1 = 1</p>
+<p>I due limiti esistono, sono finiti, ma sono diversi tra loro: si tratta quindi di una discontinuità di prima specie, con salto pari a |3-1| = 2.</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Discontinuità di seconda specie</p>
+<p><em>Esempio:</em> Classificare il comportamento della funzione f(x) = 1/(x-1)<sup>2</sup> nel punto x = 1.</p>
+<p>Come già visto nel capitolo sui limiti, per un denominatore che tende a zero rimanendo sempre positivo (essendo un quadrato), il limite è infinito.</p>
+<p class="formula">lim<sub>x→1</sub> f(x) = +∞</p>
+<p>Poiché il limite è infinito, si tratta di una discontinuità di seconda specie.</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Discontinuità di terza specie (eliminabile)</p>
+<p><em>Esempio:</em> Classificare il comportamento della funzione f(x) = (x<sup>2</sup>-9)/(x-3), non definita in x = 3.</p>
+<p>Scomponendo il numeratore come differenza di quadrati e semplificando, come visto nel capitolo sui limiti, si trova che il limite esiste ed è finito.</p>
+<p class="formula">lim<sub>x→3</sub> (x<sup>2</sup>-9)/(x-3) = lim<sub>x→3</sub> (x+3) = 6</p>
+<p>La funzione non è definita in x = 3, ma il limite esiste finito: si tratta di una discontinuità di terza specie, eliminabile ponendo f(3) = 6.</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Teorema di esistenza degli zeri</p>
+<p><em>Esempio:</em> Verificare che f(x) = x<sup>3</sup> - 3x + 1 abbia almeno uno zero nell'intervallo [0, 1].</p>
+<p class="formula">f(0) = 0 - 0 + 1 = 1 &nbsp;&nbsp;&nbsp; f(1) = 1 - 3 + 1 = -1</p>
+<p>Poiché f(0) è positivo e f(1) è negativo, per il teorema di esistenza degli zeri esiste almeno un punto c in (0, 1) in cui f(c) = 0.</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Teorema di esistenza degli zeri su un secondo intervallo</p>
+<p><em>Esempio:</em> Verificare che la stessa funzione f(x) = x<sup>3</sup> - 3x + 1 dell'esercizio precedente abbia almeno uno zero anche nell'intervallo [1, 2].</p>
+<p class="formula">f(1) = -1 &nbsp;&nbsp;&nbsp; f(2) = 8 - 6 + 1 = 3</p>
+<p>Poiché f(1) è negativo e f(2) è positivo, esiste almeno un altro zero in (1, 2): questo mostra come una funzione possa avere più zeri, ciascuno individuabile applicando il teorema su intervalli diversi.</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Teorema di Weierstrass: un'ipotesi mancante</p>
+<p><em>Esempio:</em> Considerare la funzione f(x) = 1/x sull'intervallo aperto (0, 1). Il teorema di Weierstrass garantisce l'esistenza di un massimo assoluto?</p>
+<p>L'intervallo (0, 1) non è chiuso: manca quindi una delle ipotesi del teorema. Infatti, avvicinandosi a x = 0, i valori di f(x) crescono senza limite, quindi la funzione non è nemmeno limitata superiormente in questo intervallo, e non esiste alcun massimo assoluto.</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Teorema di Weierstrass applicato correttamente</p>
+<p><em>Esempio:</em> Verificare le condizioni del teorema di Weierstrass per f(x) = x<sup>2</sup> sull'intervallo chiuso e limitato [-2, 3], e individuare massimo e minimo assoluti.</p>
+<p>La funzione è continua su un intervallo chiuso e limitato: il teorema garantisce quindi l'esistenza di massimo e minimo assoluti. Calcoliamo i valori agli estremi e nel vertice della parabola.</p>
+<p class="formula">f(-2) = 4 &nbsp;&nbsp;&nbsp; f(0) = 0 &nbsp;&nbsp;&nbsp; f(3) = 9</p>
+<p>Il minimo assoluto è 0, raggiunto in x = 0; il massimo assoluto è 9, raggiunto in x = 3.</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Teorema dei valori intermedi</p>
+<p><em>Esempio:</em> Data f(x) = x<sup>2</sup>+1, continua sull'intervallo [0, 3], stabilire se esiste un punto c in (0, 3) tale che f(c) = 5.</p>
+<p class="formula">f(0) = 1 &nbsp;&nbsp;&nbsp; f(3) = 10</p>
+<p>Poiché 5 è compreso tra f(0) = 1 e f(3) = 10, per il teorema dei valori intermedi esiste almeno un punto c in cui f(c) = 5. Verifichiamo che si può trovare esplicitamente: f(2) = 4+1 = 5, quindi c = 2.</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Trovare un parametro per la continuità</p>
+<p><em>Esempio:</em> Data la funzione a tratti f(x) = kx+3 per x &lt; 1 e f(x) = x<sup>2</sup>+1 per x ≥ 1, determinare k affinché f sia continua in x = 1.</p>
+<p class="formula">lim<sub>x→1<sup>-</sup></sub> f(x) = k+3 &nbsp;&nbsp;&nbsp; lim<sub>x→1<sup>+</sup></sub> f(x) = f(1) = 1+1 = 2</p>
+<p>Per la continuità, i due limiti devono coincidere.</p>
+<p class="formula">k+3 = 2 → k = -1</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: parametro e discontinuità alternativa</p>
+<p><em>Esempio:</em> Data la funzione a tratti f(x) = x<sup>2</sup>-1 per x ≤ 2 e f(x) = 2x+m per x &gt; 2, determinare m per la continuità in x = 2, e descrivere cosa accadrebbe con un valore diverso di m.</p>
+<p class="formula">lim<sub>x→2<sup>-</sup></sub> f(x) = 2<sup>2</sup>-1 = 3 &nbsp;&nbsp;&nbsp; lim<sub>x→2<sup>+</sup></sub> f(x) = 2(2)+m = 4+m</p>
+<p>Per la continuità in x = 2, imponiamo l'uguaglianza dei due limiti.</p>
+<p class="formula">4+m = 3 → m = -1</p>
+<p>Se invece si scegliesse, ad esempio, m = 0, si otterrebbe lim<sub>x→2<sup>+</sup></sub> f(x) = 4, diverso dal limite sinistro (3): la funzione presenterebbe in questo caso una discontinuità di prima specie in x = 2, con salto pari a |4-3| = 1.</p>
+
+</div>
+<!-- fine esercizi matematica 38 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat38.html">Torna alla teoria (Capitolo 38)</a></p>
+  <p><a href="mat39.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
