@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 33 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 33: Trigonometria - risoluzione dei triangoli -->
+<div class="capitolo-storia" id="esercizi-33-risoluzione-triangoli">
+
+<p class="titolo-capitolo">33 - Esercizi svolti: risoluzione dei triangoli</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Primo teorema: trovare un cateto dall'ipotenusa</p>
+<p><em>Esempio:</em> In un triangolo rettangolo, l'ipotenusa misura 8√2 cm e un angolo acuto misura 45°. Calcolare il cateto opposto a questo angolo.</p>
+<p class="formula">cateto = 8√2 × sin(45°) = 8√2 × (√2/2) = 8 cm</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Secondo teorema: trovare un cateto dall'altro cateto</p>
+<p><em>Esempio:</em> In un triangolo rettangolo, un cateto misura 6 cm. Calcolare il cateto ad esso opposto un angolo di 60°.</p>
+<p class="formula">cateto<sub>2</sub> = cateto<sub>1</sub> × tan(60°) = 6 × √3 = 6√3 cm</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Trovare l'ipotenusa da un cateto e un angolo</p>
+<p><em>Esempio:</em> In un triangolo rettangolo, un cateto misura 9 cm ed è opposto a un angolo di 30°. Calcolare l'ipotenusa.</p>
+<p>Invertiamo il primo teorema sui triangoli rettangoli.</p>
+<p class="formula">ipotenusa = cateto / sin(30°) = 9 / 0,5 = 18 cm</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Area di un triangolo con la trigonometria</p>
+<p><em>Esempio:</em> Calcolare l'area di un triangolo con due lati di 10 cm e 12 cm e angolo compreso di 30°.</p>
+<p class="formula">Area = (10 × 12 × sin(30°)) / 2 = (120 × 0,5) / 2 = 60/2 = 30 cm<sup>2</sup></p>
+
+<p class="titolo-capitolo">Esercizio 5 - Teorema dei seni: risolvere un triangolo con due angoli e un lato</p>
+<p><em>Esempio:</em> In un triangolo, il lato a misura 10 cm, l'angolo α misura 30° e l'angolo β misura 90°. Calcolare gli altri due elementi mancanti.</p>
+<p>Calcoliamo prima il terzo angolo per differenza da 180°.</p>
+<p class="formula">γ = 180° - 30° - 90° = 60°</p>
+<p>Applichiamo ora il teorema dei seni per trovare b e c.</p>
+<p class="formula">b = a × sin β / sin α = 10 × sin(90°) / sin(30°) = 10 × 1 / 0,5 = 20 cm</p>
+<p class="formula">c = a × sin γ / sin α = 10 × sin(60°) / sin(30°) = 10 × (√3/2) / 0,5 = 10√3 cm</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Teorema dei seni: trovare un angolo</p>
+<p><em>Esempio:</em> In un triangolo, il lato a misura 5 cm con angolo opposto α = 30°, mentre il lato b misura 5√3 cm. Calcolare l'angolo β.</p>
+<p class="formula">sin β = b × sin α / a = 5√3 × 0,5 / 5 = √3/2</p>
+<p class="formula">β = 60°</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Teorema del coseno: trovare un lato</p>
+<p><em>Esempio:</em> In un triangolo, i lati b = 8 cm e c = 5 cm formano un angolo α = 60°. Calcolare il lato a.</p>
+<p class="formula">a<sup>2</sup> = 8<sup>2</sup> + 5<sup>2</sup> - 2×8×5×cos(60°) = 64 + 25 - 80×0,5 = 89 - 40 = 49</p>
+<p class="formula">a = √49 = 7 cm</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Teorema del coseno invertito: trovare un angolo dai tre lati</p>
+<p><em>Esempio:</em> Un triangolo ha lati 5 cm, 6 cm e 7 cm. Calcolare l'angolo opposto al lato di 7 cm.</p>
+<p class="formula">cos α = (5<sup>2</sup> + 6<sup>2</sup> - 7<sup>2</sup>) / (2×5×6) = (25 + 36 - 49) / 60 = 12/60 = 0,2</p>
+<p class="formula">α = arccos(0,2) ≈ 78,46°</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Applicazione pratica: distanza inaccessibile</p>
+<p><em>Esempio:</em> Da due punti A e B distanti 100 m, si osserva un punto C non raggiungibile direttamente. L'angolo in A tra AB e AC misura 50°, l'angolo in B tra AB e BC misura 70°. Calcolare la distanza AC.</p>
+<p>Calcoliamo prima il terzo angolo del triangolo, quello in C.</p>
+<p class="formula">γ = 180° - 50° - 70° = 60°</p>
+<p>Il lato AB (100 m) è opposto all'angolo in C; il lato AC è opposto all'angolo in B. Applichiamo il teorema dei seni.</p>
+<p class="formula">AC = AB × sin(70°) / sin(60°) ≈ 100 × 0,940 / 0,866 ≈ 108,5 m</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Il teorema di Pitagora come caso particolare del teorema del coseno</p>
+<p><em>Esempio:</em> Verificare che il teorema del coseno si riduce al teorema di Pitagora per un angolo di 90°, usando cateti di 6 cm e 8 cm.</p>
+<p>Poiché cos(90°) = 0, il termine correttivo del teorema del coseno si annulla.</p>
+<p class="formula">a<sup>2</sup> = 6<sup>2</sup> + 8<sup>2</sup> - 2×6×8×cos(90°) = 36 + 64 - 0 = 100</p>
+<p class="formula">a = √100 = 10 cm</p>
+<p>Il risultato coincide esattamente con quanto darebbe il teorema di Pitagora applicato agli stessi cateti.</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Area di un triangolo noti tutti e tre i lati</p>
+<p><em>Esempio:</em> Un triangolo ha lati 5 cm, 6 cm e 7 cm (lo stesso dell'Esercizio 8). Calcolare la sua area, sapendo che l'angolo tra i lati 5 e 6 (opposto al lato 7) ha coseno 0,2.</p>
+<p>Calcoliamo il seno dell'angolo a partire dal coseno noto, usando la prima relazione fondamentale.</p>
+<p class="formula">sin α = √(1 - 0,2<sup>2</sup>) = √(1 - 0,04) = √0,96 ≈ 0,98</p>
+<p>Applichiamo ora la formula dell'area trigonometrica ai due lati che comprendono questo angolo.</p>
+<p class="formula">Area = (5 × 6 × 0,98) / 2 ≈ 29,4 / 2 ≈ 14,7 cm<sup>2</sup></p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: risoluzione completa di un triangolo</p>
+<p><em>Esempio:</em> Risolvere completamente il triangolo con b = 8 cm, c = 5 cm e angolo compreso α = 60° (lo stesso dell'Esercizio 7), determinando il lato mancante, i due angoli mancanti e l'area.</p>
+<p>Dall'Esercizio 7 sappiamo già che a = 7 cm. Calcoliamo ora l'angolo β con il teorema del coseno invertito.</p>
+<p class="formula">cos β = (a<sup>2</sup> + c<sup>2</sup> - b<sup>2</sup>) / (2ac) = (49 + 25 - 64) / (2×7×5) = 10/70 ≈ 0,143</p>
+<p class="formula">β = arccos(0,143) ≈ 81,79°</p>
+<p>Troviamo il terzo angolo per differenza da 180°.</p>
+<p class="formula">γ = 180° - 60° - 81,79° = 38,21°</p>
+<p>Calcoliamo infine l'area con la formula trigonometrica.</p>
+<p class="formula">Area = (b × c × sin α) / 2 = (8 × 5 × sin(60°)) / 2 = (40 × (√3/2)) / 2 = 10√3 ≈ 17,32 cm<sup>2</sup></p>
+<p>Il triangolo è quindi completamente risolto: a = 7 cm, b = 8 cm, c = 5 cm, α = 60°, β ≈ 81,79°, γ ≈ 38,21°, con somma degli angoli pari a 180° e area di circa 17,32 cm<sup>2</sup>.</p>
+
+</div>
+<!-- fine esercizi matematica 33 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat33.html">Torna alla teoria (Capitolo 33)</a></p>
+  <p><a href="mat34.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

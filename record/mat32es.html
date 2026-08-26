@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 32 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 32: Equazioni e disequazioni goniometriche -->
+<div class="capitolo-storia" id="esercizi-32-equazioni-disequazioni-goniometriche">
+
+<p class="titolo-capitolo">32 - Esercizi svolti: equazioni e disequazioni goniometriche</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Equazione elementare in seno</p>
+<p><em>Esempio:</em> Risolvere l'equazione sin x = √2/2.</p>
+<p>Sappiamo che sin(π/4) = √2/2, quindi α = π/4.</p>
+<p class="formula">x = π/4 + 2kπ ∨ x = π - π/4 + 2kπ = 3π/4 + 2kπ , con k ∈ ℤ</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Equazione elementare in coseno</p>
+<p><em>Esempio:</em> Risolvere l'equazione cos x = -1/2.</p>
+<p>Cerchiamo l'angolo del primo giro il cui coseno vale -1/2: sappiamo che cos(2π/3) = -1/2, quindi α = 2π/3.</p>
+<p class="formula">x = ±2π/3 + 2kπ , con k ∈ ℤ</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Equazione elementare in tangente</p>
+<p><em>Esempio:</em> Risolvere l'equazione tan x = 1.</p>
+<p>Sappiamo che tan(π/4) = 1, quindi α = π/4.</p>
+<p class="formula">x = π/4 + kπ , con k ∈ ℤ</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Equazione impossibile</p>
+<p><em>Esempio:</em> Risolvere l'equazione sin x = 2.</p>
+<p>Poiché il seno di un angolo non può mai superare 1 in valore assoluto, questa equazione non ha soluzioni: è impossibile.</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Equazione omogenea in seno e coseno</p>
+<p><em>Esempio:</em> Risolvere l'equazione √3 sin x - cos x = 0.</p>
+<p>Verifichiamo che cos x = 0 non sia soluzione: se lo fosse, dovrebbe esserlo anche sin x = 0, il che è impossibile per la prima relazione fondamentale. Dividiamo quindi tutto per cos x.</p>
+<p class="formula">√3 tan x - 1 = 0 → tan x = 1/√3 = √3/3</p>
+<p>Riconosciamo questo come il valore notevole della tangente di 30°.</p>
+<p class="formula">x = π/6 + kπ , con k ∈ ℤ</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Disequazione elementare in seno</p>
+<p><em>Esempio:</em> Risolvere la disequazione sin x &lt; 1/2, nell'intervallo [0, 2π).</p>
+<p>I punti in cui sin x = 1/2 sono x = π/6 e x = 5π/6. L'ordinata è minore di 1/2 al di fuori dell'arco compreso tra questi due angoli.</p>
+<p class="formula">0 ≤ x &lt; π/6 ∨ 5π/6 &lt; x &lt; 2π</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Disequazione elementare in coseno</p>
+<p><em>Esempio:</em> Risolvere la disequazione cos x &gt; √2/2, nell'intervallo [0, 2π).</p>
+<p>I punti in cui cos x = √2/2 sono x = π/4 e x = 7π/4. L'ascissa è maggiore di √2/2 nell'arco vicino a x = 0, cioè all'esterno dell'intervallo tra questi due angoli.</p>
+<p class="formula">0 ≤ x &lt; π/4 ∨ 7π/4 &lt; x &lt; 2π</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Disequazione elementare in tangente</p>
+<p><em>Esempio:</em> Risolvere la disequazione tan x &gt; 1, nell'intervallo (-π/2, π/2).</p>
+<p>Sappiamo che tan(π/4) = 1. Essendo la tangente crescente in questo intervallo, la disequazione è verificata per gli angoli maggiori di π/4, fino all'asintoto verticale.</p>
+<p class="formula">π/4 &lt; x &lt; π/2</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Sistema di disequazioni: seno negativo e coseno positivo</p>
+<p><em>Esempio:</em> Risolvere il sistema formato da sin x &lt; 0 e cos x &gt; 0, nell'intervallo [0, 2π).</p>
+<p>La prima disequazione è verificata nel terzo e quarto quadrante (π &lt; x &lt; 2π). La seconda è verificata nel primo e quarto quadrante (0 ≤ x &lt; π/2 ∨ 3π/2 &lt; x &lt; 2π).</p>
+<p>L'intersezione dei due archi corrisponde esattamente al quarto quadrante, l'unico in cui il seno è negativo e il coseno è positivo contemporaneamente.</p>
+<p class="formula">3π/2 &lt; x &lt; 2π</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Sistema di disequazioni: seno e tangente positivi</p>
+<p><em>Esempio:</em> Risolvere il sistema formato da sin x &gt; 0 e tan x &gt; 0, nell'intervallo [0, 2π).</p>
+<p>La prima disequazione è verificata nel primo e secondo quadrante (0 &lt; x &lt; π). La seconda è verificata nel primo e terzo quadrante (0 &lt; x &lt; π/2 ∨ π &lt; x &lt; 3π/2).</p>
+<p>L'intersezione dei due archi corrisponde al solo primo quadrante, dove sia il seno sia la tangente sono positivi.</p>
+<p class="formula">0 &lt; x &lt; π/2</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Equazione elementare con valore negativo del seno</p>
+<p><em>Esempio:</em> Risolvere l'equazione sin x = -1/2.</p>
+<p>Conviene scegliere come angolo di riferimento α = -π/6, dato che sin(-π/6) = -1/2.</p>
+<p class="formula">x = -π/6 + 2kπ ∨ x = π - (-π/6) + 2kπ = 7π/6 + 2kπ , con k ∈ ℤ</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: equazione con condizione aggiuntiva</p>
+<p><em>Esempio:</em> Tra le soluzioni dell'equazione cos x = 1/2 nell'intervallo [0, 2π), trovare quelle che soddisfano anche la condizione sin x &gt; 0.</p>
+<p>Le soluzioni dell'equazione cos x = 1/2 nell'intervallo dato sono due.</p>
+<p class="formula">x = π/3 ∨ x = 5π/3</p>
+<p>Verifichiamo il segno del seno in entrambi i casi: sin(π/3) = √3/2, che è positivo, mentre sin(5π/3) = -√3/2, che è negativo. Solo la prima soluzione soddisfa la condizione richiesta.</p>
+<p class="formula">x = π/3</p>
+
+</div>
+<!-- fine esercizi matematica 32 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat32.html">Torna alla teoria (Capitolo 32)</a></p>
+  <p><a href="mat33.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

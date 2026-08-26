@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 31 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 31: Goniometria - le funzioni goniometriche -->
+<div class="capitolo-storia" id="esercizi-31-funzioni-goniometriche">
+
+<p class="titolo-capitolo">31 - Esercizi svolti: le funzioni goniometriche</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Conversione da gradi a radianti</p>
+<p><em>Esempio:</em> Convertire 135° in radianti.</p>
+<p class="formula">135° × (π / 180°) = 3π/4 rad</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Conversione da radianti a gradi</p>
+<p><em>Esempio:</em> Convertire 5π/6 radianti in gradi.</p>
+<p class="formula">(5π/6) × (180° / π) = 5 × 30° = 150°</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Prima relazione fondamentale: trovare il coseno</p>
+<p><em>Esempio:</em> Sapendo che sin α = 3/5 e che α è un angolo del primo quadrante, calcolare cos α.</p>
+<p>Applichiamo la prima relazione fondamentale della goniometria.</p>
+<p class="formula">cos<sup>2</sup> α = 1 - sin<sup>2</sup> α = 1 - 9/25 = 16/25</p>
+<p>Nel primo quadrante il coseno è positivo, quindi scegliamo la radice positiva.</p>
+<p class="formula">cos α = 4/5</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Prima relazione fondamentale: trovare il seno</p>
+<p><em>Esempio:</em> Sapendo che cos α = -5/13 e che α è un angolo del secondo quadrante, calcolare sin α.</p>
+<p class="formula">sin<sup>2</sup> α = 1 - cos<sup>2</sup> α = 1 - 25/169 = 144/169</p>
+<p>Nel secondo quadrante il seno è positivo.</p>
+<p class="formula">sin α = 12/13</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Calcolo della tangente da seno e coseno</p>
+<p><em>Esempio:</em> Sapendo che sin α = 3/5 e cos α = 4/5, calcolare tan α.</p>
+<p class="formula">tan α = sin α / cos α = (3/5) / (4/5) = 3/4</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Somma di valori notevoli</p>
+<p><em>Esempio:</em> Calcolare sin(60°) + cos(30°).</p>
+<p>Entrambi i valori, per gli angoli notevoli, sono √3/2.</p>
+<p class="formula">sin(60°) + cos(30°) = √3/2 + √3/2 = √3</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Prodotto di valori notevoli</p>
+<p><em>Esempio:</em> Calcolare tan(45°) × tan(60°).</p>
+<p class="formula">tan(45°) × tan(60°) = 1 × √3 = √3</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Angoli associati: angolo supplementare</p>
+<p><em>Esempio:</em> Calcolare cos(150°) sfruttando la relazione sugli angoli supplementari, scrivendo 150° = 180° - 30°.</p>
+<p class="formula">cos(150°) = cos(180° - 30°) = -cos(30°) = -√3/2</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Angoli associati: angolo opposto</p>
+<p><em>Esempio:</em> Calcolare sin(-60°).</p>
+<p class="formula">sin(-60°) = -sin(60°) = -√3/2</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Angoli associati: angoli complementari</p>
+<p><em>Esempio:</em> Calcolare cos(60°) sfruttando la relazione con il seno di 30°, angoli complementari tra loro.</p>
+<p class="formula">cos(60°) = cos(90° - 30°) = sin(30°) = 1/2</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Angolo del terzo quadrante</p>
+<p><em>Esempio:</em> Calcolare sin(210°) e cos(210°), scrivendo 210° = 180° + 30°.</p>
+<p>Nel terzo quadrante sia il seno sia il coseno sono negativi. Sfruttando la simmetria della circonferenza goniometrica rispetto all'origine, valgono le relazioni sin(180°+α) = -sin α e cos(180°+α) = -cos α, coerenti con il fatto che, ruotando di ulteriori 180°, il punto P si porta nella posizione diametralmente opposta.</p>
+<p class="formula">sin(210°) = sin(180° + 30°) = -sin(30°) = -1/2</p>
+<p class="formula">cos(210°) = cos(180° + 30°) = -cos(30°) = -√3/2</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: periodicità e angoli associati</p>
+<p><em>Esempio:</em> Calcolare sin(750°), sfruttando la periodicità della funzione seno.</p>
+<p>Poiché la funzione seno ha periodo 360°, sottraiamo un multiplo di 360° fino a ottenere un angolo compreso tra 0° e 360°.</p>
+<p class="formula">750° - 2×360° = 750° - 720° = 30°</p>
+<p>Possiamo quindi calcolare direttamente il valore per l'angolo equivalente di 30°, un angolo notevole del primo quadrante.</p>
+<p class="formula">sin(750°) = sin(30°) = 1/2</p>
+
+</div>
+<!-- fine esercizi matematica 31 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat31.html">Torna alla teoria (Capitolo 31)</a></p>
+  <p><a href="mat32.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
