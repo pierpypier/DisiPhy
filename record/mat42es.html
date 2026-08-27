@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 42 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 42: Gli integrali indefiniti -->
+<div class="capitolo-storia" id="esercizi-42-integrali-indefiniti">
+
+<p class="titolo-capitolo">42 - Esercizi svolti: gli integrali indefiniti</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Integrale fondamentale della potenza</p>
+<p><em>Esempio:</em> Calcolare ∫ x<sup>6</sup> dx.</p>
+<p class="formula">∫ x<sup>6</sup> dx = x<sup>7</sup>/7 + c</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Integrale di 1/x con coefficiente</p>
+<p><em>Esempio:</em> Calcolare ∫ 5/x dx.</p>
+<p class="formula">∫ 5/x dx = 5 × ln|x| + c</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Integrale della funzione esponenziale</p>
+<p><em>Esempio:</em> Calcolare ∫ 3e<sup>x</sup> dx.</p>
+<p class="formula">∫ 3e<sup>x</sup> dx = 3e<sup>x</sup> + c</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Integrale di seno e coseno con segni</p>
+<p><em>Esempio:</em> Calcolare ∫ (2 sin x - 3 cos x) dx.</p>
+<p class="formula">∫ (2 sin x - 3 cos x) dx = -2 cos x - 3 sin x + c</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Linearità applicata a un trinomio</p>
+<p><em>Esempio:</em> Calcolare ∫ (4x<sup>3</sup> - 6x + 7) dx.</p>
+<p class="formula">∫ (4x<sup>3</sup> - 6x + 7) dx = 4×(x<sup>4</sup>/4) - 6×(x<sup>2</sup>/2) + 7x + c = x<sup>4</sup> - 3x<sup>2</sup> + 7x + c</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Integrazione per sostituzione con esponenziale</p>
+<p><em>Esempio:</em> Calcolare ∫ 3x<sup>2</sup> × e<sup>x<sup>3</sup></sup> dx.</p>
+<p>Riconosciamo che 3x<sup>2</sup> è proprio la derivata di x<sup>3</sup>: poniamo t = x<sup>3</sup>, da cui dt = 3x<sup>2</sup> dx.</p>
+<p class="formula">∫ 3x<sup>2</sup> × e<sup>x<sup>3</sup></sup> dx = ∫ e<sup>t</sup> dt = e<sup>t</sup> + c = e<sup>x<sup>3</sup></sup> + c</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Integrazione per sostituzione con funzione goniometrica</p>
+<p><em>Esempio:</em> Calcolare ∫ cos(x) × sin<sup>2</sup>(x) dx.</p>
+<p>Riconosciamo che cos(x) è proprio la derivata di sin(x): poniamo t = sin(x), da cui dt = cos(x) dx.</p>
+<p class="formula">∫ cos(x) × sin<sup>2</sup>(x) dx = ∫ t<sup>2</sup> dt = t<sup>3</sup>/3 + c = sin<sup>3</sup>(x)/3 + c</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Integrazione per parti: polinomio per seno</p>
+<p><em>Esempio:</em> Calcolare ∫ x × sin(x) dx.</p>
+<p>Scegliamo f(x) = x come fattore finito e g'(x) = sin(x) come fattore differenziale, la cui primitiva è -cos(x).</p>
+<p class="formula">∫ x × sin(x) dx = x × (-cos x) - ∫ 1 × (-cos x) dx = -x cos x + ∫ cos x dx</p>
+<p class="formula">= -x cos x + sin x + c</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Integrazione per parti applicata due volte</p>
+<p><em>Esempio:</em> Calcolare ∫ x<sup>2</sup> × e<sup>x</sup> dx.</p>
+<p>Scegliamo f(x) = x<sup>2</sup> come fattore finito e g'(x) = e<sup>x</sup> come fattore differenziale.</p>
+<p class="formula">∫ x<sup>2</sup>e<sup>x</sup> dx = x<sup>2</sup>e<sup>x</sup> - ∫ 2x × e<sup>x</sup> dx</p>
+<p>Il nuovo integrale richiede un'ulteriore integrazione per parti, con f(x) = 2x e g'(x) = e<sup>x</sup>.</p>
+<p class="formula">∫ 2x × e<sup>x</sup> dx = 2x × e<sup>x</sup> - ∫ 2 × e<sup>x</sup> dx = 2x e<sup>x</sup> - 2e<sup>x</sup></p>
+<p>Sostituiamo nel risultato precedente.</p>
+<p class="formula">∫ x<sup>2</sup>e<sup>x</sup> dx = x<sup>2</sup>e<sup>x</sup> - (2x e<sup>x</sup> - 2e<sup>x</sup>) + c = e<sup>x</sup>(x<sup>2</sup>-2x+2) + c</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Funzione razionale fratta: caso f'(x)/f(x)</p>
+<p><em>Esempio:</em> Calcolare ∫ (4x-1) / (2x<sup>2</sup>-x+5) dx.</p>
+<p>Notiamo che il numeratore 4x-1 è proprio la derivata del denominatore 2x<sup>2</sup>-x+5: si tratta quindi di un caso riconducibile direttamente alla formula ∫ f'(x)/f(x) dx = ln|f(x)| + c.</p>
+<p class="formula">∫ (4x-1) / (2x<sup>2</sup>-x+5) dx = ln|2x<sup>2</sup>-x+5| + c</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Funzione razionale fratta con denominatore scomponibile</p>
+<p><em>Esempio:</em> Calcolare ∫ 1 / (x<sup>2</sup>-1) dx.</p>
+<p>Scomponiamo il denominatore come differenza di quadrati: x<sup>2</sup>-1 = (x-1)(x+1). Cerchiamo due costanti A e B tali che 1/[(x-1)(x+1)] = A/(x-1) + B/(x+1).</p>
+<p class="formula">A(x+1) + B(x-1) = 1</p>
+<p>Ponendo x = 1 otteniamo 2A = 1, quindi A = 1/2. Ponendo x = -1 otteniamo -2B = 1, quindi B = -1/2.</p>
+<p class="formula">∫ 1/(x<sup>2</sup>-1) dx = (1/2) ln|x-1| - (1/2) ln|x+1| + c</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: sostituzione con verifica per derivazione</p>
+<p><em>Esempio:</em> Calcolare ∫ 2x × cos(x<sup>2</sup>) dx e verificare il risultato derivando.</p>
+<p>Riconosciamo che 2x è proprio la derivata di x<sup>2</sup>: poniamo t = x<sup>2</sup>, da cui dt = 2x dx.</p>
+<p class="formula">∫ 2x × cos(x<sup>2</sup>) dx = ∫ cos(t) dt = sin(t) + c = sin(x<sup>2</sup>) + c</p>
+<p>Verifichiamo derivando il risultato ottenuto, applicando la regola della catena.</p>
+<p class="formula">D[sin(x<sup>2</sup>) + c] = cos(x<sup>2</sup>) × 2x = 2x × cos(x<sup>2</sup>)</p>
+<p>Il risultato coincide esattamente con la funzione integranda di partenza, confermando la correttezza del calcolo.</p>
+
+</div>
+<!-- fine esercizi matematica 42 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat42.html">Torna alla teoria (Capitolo 42)</a></p>
+  <p><a href="mat43.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

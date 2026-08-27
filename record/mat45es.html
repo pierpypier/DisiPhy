@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 45 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 45: Calcolo combinatorio -->
+<div class="capitolo-storia" id="esercizi-45-calcolo-combinatorio">
+
+<p class="titolo-capitolo">45 - Esercizi svolti: calcolo combinatorio</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Principio fondamentale del conteggio</p>
+<p><em>Esempio:</em> Un ristorante offre 5 antipasti, 4 primi piatti e 3 dolci. Quanti menù completi, composti da un antipasto, un primo e un dolce, si possono comporre?</p>
+<p class="formula">numero totale = 5 × 4 × 3 = 60</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Calcolo del fattoriale</p>
+<p><em>Esempio:</em> Calcolare 7!.</p>
+<p class="formula">7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Permutazioni semplici</p>
+<p><em>Esempio:</em> In quanti modi diversi si possono disporre in fila 6 libri distinti?</p>
+<p class="formula">P<sub>6</sub> = 6! = 720</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Permutazioni con ripetizione</p>
+<p><em>Esempio:</em> Calcolare quanti anagrammi si possono formare con le lettere della parola MATEMATICA, che ha 10 lettere, di cui la M si ripete 2 volte, la A si ripete 3 volte e la T si ripete 2 volte.</p>
+<p class="formula">P<sub>10</sub><sup>(2,3,2)</sup> = 10! / (2! × 3! × 2!) = 3628800 / (2×6×2) = 3628800/24 = 151200</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Disposizioni semplici</p>
+<p><em>Esempio:</em> In quanti modi si possono assegnare i primi 4 posti in classifica (1°, 2°, 3° e 4°) tra 10 concorrenti?</p>
+<p>Poiché l'ordine conta e non si utilizzano tutti gli elementi, si tratta di una disposizione di 10 elementi presi 4 alla volta.</p>
+<p class="formula">D<sub>10,4</sub> = 10! / (10-4)! = 10! / 6! = 10 × 9 × 8 × 7 = 5040</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Disposizioni con ripetizione</p>
+<p><em>Esempio:</em> Quante targhe di 3 lettere si possono formare usando un alfabeto di 21 lettere, ammettendo la ripetizione delle lettere?</p>
+<p class="formula">D'<sub>21,3</sub> = 21<sup>3</sup> = 9261</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Combinazioni semplici</p>
+<p><em>Esempio:</em> In quanti modi si possono scegliere 4 carte da un mazzo di 40, senza tenere conto dell'ordine di estrazione?</p>
+<p class="formula">C<sub>40,4</sub> = 40! / (4! × 36!) = (40×39×38×37) / (4×3×2×1) = 2193360/24 = 91390</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Coefficiente binomiale: calcolo diretto</p>
+<p><em>Esempio:</em> Calcolare il coefficiente binomiale C<sub>9,3</sub> ("9 su 3").</p>
+<p class="formula">C<sub>9,3</sub> = 9! / (3! × 6!) = (9×8×7) / (3×2×1) = 504/6 = 84</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Binomio di Newton: sviluppo di (a+b)<sup>4</sup></p>
+<p><em>Esempio:</em> Sviluppare (a+b)<sup>4</sup> utilizzando i coefficienti binomiali.</p>
+<p>I coefficienti binomiali per n = 4 sono C<sub>4,0</sub>=1, C<sub>4,1</sub>=4, C<sub>4,2</sub>=6, C<sub>4,3</sub>=4, C<sub>4,4</sub>=1.</p>
+<p class="formula">(a+b)<sup>4</sup> = a<sup>4</sup> + 4a<sup>3</sup>b + 6a<sup>2</sup>b<sup>2</sup> + 4ab<sup>3</sup> + b<sup>4</sup></p>
+
+<p class="titolo-capitolo">Esercizio 10 - Triangolo di Tartaglia: verifica di una riga</p>
+<p><em>Esempio:</em> Verificare che la riga del triangolo di Tartaglia corrispondente a n = 5 sia 1, 5, 10, 10, 5, 1, calcolando i coefficienti binomiali corrispondenti.</p>
+<p class="formula">C<sub>5,0</sub>=1 , C<sub>5,1</sub>=5 , C<sub>5,2</sub>=10 , C<sub>5,3</sub>=10 , C<sub>5,4</sub>=5 , C<sub>5,5</sub>=1</p>
+<p>Verifichiamo per esempio C<sub>5,2</sub> = 5!/(2!×3!) = 120/(2×6) = 120/12 = 10, coerente con quanto atteso.</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Combinazioni con un vincolo</p>
+<p><em>Esempio:</em> In un gruppo di 12 persone, in quanti modi si può formare un comitato di 3 persone, sapendo che una persona specifica deve farne necessariamente parte?</p>
+<p>Se una persona è già fissata nel comitato, resta da scegliere le altre 2 persone tra le restanti 11.</p>
+<p class="formula">C<sub>11,2</sub> = 11! / (2! × 9!) = (11×10)/2 = 110/2 = 55</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: confronto tra permutazioni, disposizioni e combinazioni</p>
+<p><em>Esempio:</em> Da un gruppo di 6 persone, calcolare: a) in quanti modi si possono disporre tutte e 6 in fila; b) in quanti modi si possono scegliere e ordinare 3 di esse per assegnare 3 premi diversi (oro, argento, bronzo); c) in quanti modi si possono semplicemente scegliere 3 di esse, senza assegnare premi diversi.</p>
+<p class="formula">a) permutazioni: P<sub>6</sub> = 6! = 720</p>
+<p class="formula">b) disposizioni: D<sub>6,3</sub> = 6!/(6-3)! = 6!/3! = 6×5×4 = 120</p>
+<p class="formula">c) combinazioni: C<sub>6,3</sub> = 6!/(3!×3!) = 720/(6×6) = 20</p>
+<p>Il confronto mostra chiaramente come, riducendo progressivamente i vincoli sul conteggio (dall'ordinare tutti gli elementi, all'ordinarne solo alcuni, fino a sceglierne alcuni senza ordine), il numero di possibilità diminuisca: 720 &gt; 120 &gt; 20.</p>
+
+</div>
+<!-- fine esercizi matematica 45 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat45.html">Torna alla teoria (Capitolo 45)</a></p>
+  <p><a href="mat46.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 44 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 44: Cenni di equazioni differenziali -->
+<div class="capitolo-storia" id="esercizi-44-equazioni-differenziali">
+
+<p class="titolo-capitolo">44 - Esercizi svolti: cenni di equazioni differenziali</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Equazione differenziale y' = f(x): soluzione generale</p>
+<p><em>Esempio:</em> Risolvere l'equazione differenziale y' = 4x<sup>3</sup> - 2x.</p>
+<p>La soluzione generale si ottiene integrando il secondo membro.</p>
+<p class="formula">y = ∫ (4x<sup>3</sup> - 2x) dx = x<sup>4</sup> - x<sup>2</sup> + c</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Problema di Cauchy associato</p>
+<p><em>Esempio:</em> Risolvere il problema di Cauchy formato dall'equazione y' = 4x<sup>3</sup> - 2x (dall'Esercizio 1) e dalla condizione y(1) = 3.</p>
+<p>Partiamo dalla soluzione generale già trovata e imponiamo la condizione iniziale.</p>
+<p class="formula">3 = 1<sup>4</sup> - 1<sup>2</sup> + c → 3 = 0 + c → c = 3</p>
+<p>La soluzione particolare è quindi y = x<sup>4</sup> - x<sup>2</sup> + 3.</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Equazione differenziale con funzione trigonometrica</p>
+<p><em>Esempio:</em> Risolvere l'equazione differenziale y' = cos x.</p>
+<p class="formula">y = ∫ cos x dx = sin x + c</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Problema di Cauchy trigonometrico</p>
+<p><em>Esempio:</em> Risolvere il problema di Cauchy formato dall'equazione y' = cos x (dall'Esercizio 3) e dalla condizione y(0) = 2.</p>
+<p class="formula">2 = sin(0) + c → 2 = 0 + c → c = 2</p>
+<p>La soluzione particolare è quindi y = sin x + 2.</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Equazione a variabili separabili</p>
+<p><em>Esempio:</em> Risolvere l'equazione differenziale y' = 2xy.</p>
+<p>Riscriviamo come dy/dx = 2xy, e separiamo le variabili.</p>
+<p class="formula">dy/y = 2x dx</p>
+<p>Integriamo entrambi i membri separatamente.</p>
+<p class="formula">∫ dy/y = ∫ 2x dx → ln|y| = x<sup>2</sup> + c<sub>1</sub></p>
+<p>Esplicitiamo y applicando l'esponenziale, e assorbendo le costanti come nel capitolo.</p>
+<p class="formula">y = c × e<sup>x<sup>2</sup></sup></p>
+
+<p class="titolo-capitolo">Esercizio 6 - Problema di Cauchy a variabili separabili</p>
+<p><em>Esempio:</em> Risolvere il problema di Cauchy formato dall'equazione y' = 2xy (dall'Esercizio 5) e dalla condizione y(0) = 5.</p>
+<p>Imponiamo la condizione iniziale sulla soluzione generale trovata.</p>
+<p class="formula">5 = c × e<sup>0</sup> = c → c = 5</p>
+<p>La soluzione particolare è quindi y = 5 × e<sup>x<sup>2</sup></sup>. Verifichiamo derivando: y' = 5 × 2x × e<sup>x<sup>2</sup></sup> = 2x × (5e<sup>x<sup>2</sup></sup>) = 2xy, coerente con l'equazione di partenza.</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Equazione a variabili separabili: caso y'=y/x</p>
+<p><em>Esempio:</em> Risolvere l'equazione differenziale y' = y/x, per x &gt; 0.</p>
+<p class="formula">dy/y = dx/x → ln|y| = ln|x| + c<sub>1</sub> → y = c × x</p>
+<p>Verifichiamo per sostituzione: se y = cx, allora y' = c, e y/x = cx/x = c, coerenti tra loro.</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Applicazione: decadimento radioattivo</p>
+<p><em>Esempio:</em> Una sostanza radioattiva ha costante di decadimento k = 0,1 e quantità iniziale N<sub>0</sub> = 200 g. Calcolare la quantità di sostanza rimasta dopo 10 unità di tempo.</p>
+<p>Applichiamo la formula del decadimento esponenziale vista nel capitolo.</p>
+<p class="formula">N(t) = N<sub>0</sub> × e<sup>-kt</sup> = 200 × e<sup>-0,1×10</sup> = 200 × e<sup>-1</sup> ≈ 200 × 0,368 ≈ 73,58 g</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Applicazione: crescita esponenziale</p>
+<p><em>Esempio:</em> Una popolazione batterica cresce con costante k = 0,05 e popolazione iniziale N<sub>0</sub> = 1000. Calcolare la popolazione dopo 20 unità di tempo.</p>
+<p>Nel caso di crescita, la costante ha segno positivo nell'esponente.</p>
+<p class="formula">N(t) = N<sub>0</sub> × e<sup>kt</sup> = 1000 × e<sup>0,05×20</sup> = 1000 × e<sup>1</sup> ≈ 1000 × 2,718 ≈ 2718,28</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Tempo di dimezzamento</p>
+<p><em>Esempio:</em> Per la sostanza radioattiva dell'Esercizio 8 (k = 0,1), calcolare il tempo di dimezzamento, cioè il tempo necessario perché la quantità si riduca alla metà.</p>
+<p>Imponiamo N(t) = N<sub>0</sub>/2 nella formula del decadimento.</p>
+<p class="formula">N<sub>0</sub>/2 = N<sub>0</sub> × e<sup>-kt</sup> → 1/2 = e<sup>-0,1t</sup> → ln(1/2) = -0,1t</p>
+<p class="formula">t = ln(2) / 0,1 ≈ 0,693 / 0,1 ≈ 6,93</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Equazione a variabili separabili: caso y'=x/y</p>
+<p><em>Esempio:</em> Risolvere l'equazione differenziale y' = x/y, con y &gt; 0.</p>
+<p>Separiamo le variabili portando la y (con dy) al primo membro.</p>
+<p class="formula">y dy = x dx</p>
+<p>Integriamo entrambi i membri.</p>
+<p class="formula">∫ y dy = ∫ x dx → y<sup>2</sup>/2 = x<sup>2</sup>/2 + c<sub>1</sub> → y<sup>2</sup> = x<sup>2</sup> + c</p>
+<p>La soluzione, in questo caso, resta espressa in forma implicita; esplicitando per y &gt; 0 si ottiene y = √(x<sup>2</sup>+c).</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: problema di Cauchy con applicazione fisica</p>
+<p><em>Esempio:</em> Risolvere il problema di Cauchy formato dall'equazione y' = -3y e dalla condizione y(0) = 50, poi calcolare y(2).</p>
+<p>Separiamo le variabili come negli esercizi precedenti.</p>
+<p class="formula">dy/y = -3 dx → ln|y| = -3x + c<sub>1</sub> → y = c × e<sup>-3x</sup></p>
+<p>Imponiamo la condizione iniziale.</p>
+<p class="formula">50 = c × e<sup>0</sup> = c → c = 50</p>
+<p>La soluzione particolare è quindi y = 50 × e<sup>-3x</sup>, che rappresenta un decadimento esponenziale con costante k = 3. Calcoliamo infine il valore richiesto.</p>
+<p class="formula">y(2) = 50 × e<sup>-3×2</sup> = 50 × e<sup>-6</sup> ≈ 50 × 0,00248 ≈ 0,124</p>
+
+</div>
+<!-- fine esercizi matematica 44 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat44.html">Torna alla teoria (Capitolo 44)</a></p>
+  <p><a href="mat45.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
