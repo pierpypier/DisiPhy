@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 46 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 46: Probabilità - approfondimenti -->
+<div class="capitolo-storia" id="esercizi-46-probabilita-approfondimenti">
+
+<p class="titolo-capitolo">46 - Esercizi svolti: probabilità, approfondimenti</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Probabilità con calcolo combinatorio</p>
+<p><em>Esempio:</em> Calcolare la probabilità di indovinare 5 numeri su 40 estratti, senza tenere conto dell'ordine.</p>
+<p>Il numero di combinazioni possibili di 40 numeri presi 5 alla volta è dato da C<sub>40,5</sub>.</p>
+<p class="formula">C<sub>40,5</sub> = 40! / (5! × 35!) = 658.008</p>
+<p class="formula">P(vittoria) = 1 / 658.008 ≈ 0,0000015</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Teorema della probabilità totale</p>
+<p><em>Esempio:</em> Tre scatole contengono palline rosse e blu: la scatola A ha 4 rosse e 6 blu, la B ha 5 rosse e 5 blu, la C ha 2 rosse e 8 blu. Si sceglie una scatola a caso (probabilità 1/3 ciascuna) e si estrae una pallina. Calcolare la probabilità di estrarre una pallina rossa.</p>
+<p class="formula">P(rossa) = P(A)×P(rossa|A) + P(B)×P(rossa|B) + P(C)×P(rossa|C)</p>
+<p class="formula">= (1/3)×(4/10) + (1/3)×(5/10) + (1/3)×(2/10) = (1/3)×(11/10) = 11/30</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Teorema di Bayes: completare l'esempio delle due urne</p>
+<p><em>Esempio:</em> Riprendendo l'esempio delle due urne del capitolo (urna A: 3 rosse, 2 blu; urna B: 1 rossa, 4 blu; P(rossa) = 2/5), calcolare la probabilità che, avendo estratto una pallina rossa, essa provenga dall'urna B.</p>
+<p class="formula">P(B|rossa) = [P(B)×P(rossa|B)] / P(rossa) = [(1/2)×(1/5)] / (2/5) = (1/10) / (2/5) = 1/4</p>
+<p>Verifichiamo la coerenza con quanto trovato nel capitolo per l'urna A: P(A|rossa) + P(B|rossa) = 3/4 + 1/4 = 1, come deve essere.</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Teorema di Bayes: test diagnostico</p>
+<p><em>Esempio:</em> Una malattia colpisce l'1% della popolazione. Un test diagnostico ha sensibilità del 95% (rileva correttamente il 95% dei malati) e specificità del 90% (dà esito negativo nel 90% dei sani, quindi il 10% dei sani risulta positivo per errore). Calcolare la probabilità che una persona risultata positiva al test sia realmente malata.</p>
+<p>Applichiamo prima il teorema della probabilità totale per calcolare P(positivo).</p>
+<p class="formula">P(positivo) = 0,01×0,95 + 0,99×0,10 = 0,0095 + 0,099 = 0,1085</p>
+<p>Applichiamo ora il teorema di Bayes.</p>
+<p class="formula">P(malato|positivo) = (0,01×0,95) / 0,1085 = 0,0095/0,1085 ≈ 0,0876 ≈ 8,76%</p>
+<p><em>Approfondimento:</em> nonostante il test sembri molto affidabile, la probabilità di essere realmente malati dopo un risultato positivo resta bassa, perché la malattia è rara nella popolazione: questo fenomeno controintuitivo è tipico delle applicazioni del teorema di Bayes in ambito diagnostico.</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Schema di Bernoulli: caso intermedio</p>
+<p><em>Esempio:</em> Calcolare la probabilità di ottenere esattamente 2 successi su 4 prove indipendenti, con probabilità di successo p = 0,3 in ciascuna prova.</p>
+<p class="formula">P(2 successi su 4) = C<sub>4,2</sub> × 0,3<sup>2</sup> × 0,7<sup>2</sup> = 6 × 0,09 × 0,49 ≈ 0,2646</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Schema di Bernoulli: nessun successo</p>
+<p><em>Esempio:</em> Calcolare la probabilità di non ottenere mai testa in 6 lanci di una moneta equilibrata.</p>
+<p class="formula">P(0 successi su 6) = C<sub>6,0</sub> × (1/2)<sup>0</sup> × (1/2)<sup>6</sup> = 1 × 1 × 1/64 = 1/64</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Schema di Bernoulli: tutti successi</p>
+<p><em>Esempio:</em> Un tiratore ha probabilità 0,8 di colpire il bersaglio a ogni tentativo. Calcolare la probabilità che colpisca il bersaglio in tutti e 5 i tentativi.</p>
+<p class="formula">P(5 successi su 5) = C<sub>5,5</sub> × 0,8<sup>5</sup> × 0,2<sup>0</sup> = 1 × 0,32768 × 1 ≈ 0,328 (32,8%)</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Valore atteso con tre esiti</p>
+<p><em>Esempio:</em> Un gioco assegna 20 € con probabilità 1/10, 5 € con probabilità 3/10, e 0 € con probabilità 6/10. Calcolare il valore atteso della vincita.</p>
+<p class="formula">E(X) = 20×(1/10) + 5×(3/10) + 0×(6/10) = 2 + 1,5 + 0 = 3,5 €</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Valore atteso di un dado truccato</p>
+<p><em>Esempio:</em> Un dado è truccato in modo che P(6) = 0,5, mentre ciascuno degli altri cinque numeri ha probabilità 0,1. Calcolare il valore atteso del punteggio.</p>
+<p class="formula">E(X) = 1×0,1 + 2×0,1 + 3×0,1 + 4×0,1 + 5×0,1 + 6×0,5</p>
+<p class="formula">= 0,1+0,2+0,3+0,4+0,5+3,0 = 4,5</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Valore atteso di uno schema di Bernoulli</p>
+<p><em>Esempio:</em> Verificare che, per lo schema di Bernoulli dell'esempio del capitolo (5 lanci di moneta, p = 1/2), il valore atteso del numero di teste sia n×p, calcolandolo direttamente come somma dei valori pesati.</p>
+<p>I coefficienti binomiali per n = 5 sono 1, 5, 10, 10, 5, 1, ciascuno moltiplicato per (1/2)<sup>5</sup> = 1/32.</p>
+<p class="formula">E(X) = (0×1 + 1×5 + 2×10 + 3×10 + 4×5 + 5×1) × (1/32) = 80/32 = 2,5</p>
+<p>Il risultato coincide esattamente con n×p = 5×0,5 = 2,5, confermando che il valore atteso di uno schema di Bernoulli è sempre pari al prodotto tra il numero di prove e la probabilità di successo.</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Probabilità con combinazioni: carte da gioco</p>
+<p><em>Esempio:</em> Pescando 5 carte da un mazzo di 52, calcolare la probabilità di ottenere esattamente 2 assi.</p>
+<p>I casi favorevoli si ottengono scegliendo 2 assi tra i 4 disponibili, e le altre 3 carte tra le 48 non-asso.</p>
+<p class="formula">casi favorevoli = C<sub>4,2</sub> × C<sub>48,3</sub> = 6 × 17.296 = 103.776</p>
+<p class="formula">casi possibili = C<sub>52,5</sub> = 2.598.960</p>
+<p class="formula">P(esattamente 2 assi) = 103.776 / 2.598.960 ≈ 0,0399 (circa 3,99%)</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: probabilità totale e Bayes nella produzione industriale</p>
+<p><em>Esempio:</em> Una fabbrica ha due macchine: M1 produce il 60% dei pezzi, con il 2% di essi difettosi; M2 produce il restante 40%, con il 5% di difettosi. Calcolare la probabilità che un pezzo scelto a caso sia difettoso, e poi la probabilità che un pezzo difettoso provenga dalla macchina M2.</p>
+<p>Applichiamo il teorema della probabilità totale.</p>
+<p class="formula">P(difettoso) = P(M1)×P(dif|M1) + P(M2)×P(dif|M2) = 0,6×0,02 + 0,4×0,05 = 0,012 + 0,02 = 0,032</p>
+<p>Applichiamo ora il teorema di Bayes.</p>
+<p class="formula">P(M2|difettoso) = [P(M2)×P(dif|M2)] / P(difettoso) = 0,02/0,032 = 0,625 (62,5%)</p>
+<p>Nonostante M2 produca meno pezzi di M1, contribuisce alla maggioranza dei pezzi difettosi, essendo il suo tasso di difettosità più alto.</p>
+
+</div>
+<!-- fine esercizi matematica 46 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat46.html">Torna alla teoria (Capitolo 46)</a></p>
+  <p><a href="mat47.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 47 - Esercizi</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 47: Distribuzioni di probabilità -->
+<div class="capitolo-storia" id="esercizi-47-distribuzioni-probabilita">
+
+<p class="titolo-capitolo">47 - Esercizi svolti: distribuzioni di probabilità</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Verificare una distribuzione di probabilità</p>
+<p><em>Esempio:</em> Una variabile aleatoria X assume i valori 1, 2, 3, 4 con probabilità rispettivamente 0,1, 0,3, 0,4 e 0,2. Verificare che si tratti di una distribuzione di probabilità valida.</p>
+<p class="formula">0,1 + 0,3 + 0,4 + 0,2 = 1</p>
+<p>La somma delle probabilità è effettivamente 1: la distribuzione è valida.</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Valore atteso e varianza per definizione</p>
+<p><em>Esempio:</em> Calcolare valore atteso e varianza della variabile X dell'Esercizio 1.</p>
+<p class="formula">E(X) = 1×0,1 + 2×0,3 + 3×0,4 + 4×0,2 = 0,1+0,6+1,2+0,8 = 2,7</p>
+<p>Calcoliamo ora la varianza usando la definizione, con gli scarti dal valore atteso.</p>
+<p class="formula">Var(X) = (1-2,7)<sup>2</sup>×0,1 + (2-2,7)<sup>2</sup>×0,3 + (3-2,7)<sup>2</sup>×0,4 + (4-2,7)<sup>2</sup>×0,2</p>
+<p class="formula">= 0,289 + 0,147 + 0,036 + 0,338 = 0,81</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Varianza con la formula alternativa</p>
+<p><em>Esempio:</em> Verificare il risultato dell'Esercizio 2 calcolando la varianza con la formula Var(X) = E(X<sup>2</sup>) - [E(X)]<sup>2</sup>.</p>
+<p class="formula">E(X<sup>2</sup>) = 1<sup>2</sup>×0,1 + 2<sup>2</sup>×0,3 + 3<sup>2</sup>×0,4 + 4<sup>2</sup>×0,2 = 0,1+1,2+3,6+3,2 = 8,1</p>
+<p class="formula">Var(X) = 8,1 - 2,7<sup>2</sup> = 8,1 - 7,29 = 0,81</p>
+<p>Il risultato coincide esattamente con quello ottenuto nell'Esercizio 2 con la definizione diretta.</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Valore atteso e varianza di una binomiale</p>
+<p><em>Esempio:</em> Lanciando 20 volte un dado, calcolare valore atteso e varianza del numero di volte in cui esce un 6 (p = 1/6).</p>
+<p class="formula">E(X) = n×p = 20×(1/6) = 20/6 ≈ 3,33</p>
+<p class="formula">Var(X) = n×p×(1-p) = 20×(1/6)×(5/6) = 100/36 ≈ 2,78</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Calcolo di una probabilità binomiale specifica</p>
+<p><em>Esempio:</em> Un evento ha probabilità di successo p = 0,4 a ogni prova. Calcolare la probabilità di ottenere esattamente 2 successi su 6 prove.</p>
+<p class="formula">P(X=2) = C<sub>6,2</sub> × 0,4<sup>2</sup> × 0,6<sup>4</sup> = 15 × 0,16 × 0,1296 ≈ 0,311</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Deviazione standard di una binomiale</p>
+<p><em>Esempio:</em> Calcolare varianza e deviazione standard di una variabile binomiale con n = 8 e p = 0,25.</p>
+<p class="formula">Var(X) = 8 × 0,25 × 0,75 = 1,5</p>
+<p class="formula">σ(X) = √1,5 ≈ 1,22</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Verificare una funzione di densità</p>
+<p><em>Esempio:</em> Verificare che f(x) = 2x, per 0 ≤ x ≤ 1 (e zero altrove), sia una funzione di densità di probabilità valida.</p>
+<p>Verifichiamo che l'integrale su tutto il supporto valga 1.</p>
+<p class="formula">∫<sub>0</sub><sup>1</sup> 2x dx = [x<sup>2</sup>]<sub>0</sub><sup>1</sup> = 1 - 0 = 1</p>
+<p>La funzione è quindi una densità di probabilità valida (essendo anche sempre non negativa nel suo dominio).</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Calcolare una probabilità con la densità</p>
+<p><em>Esempio:</em> Utilizzando la densità f(x) = 2x dell'Esercizio 7, calcolare P(0,2 ≤ X ≤ 0,5).</p>
+<p class="formula">P(0,2 ≤ X ≤ 0,5) = ∫<sub>0,2</sub><sup>0,5</sup> 2x dx = [x<sup>2</sup>]<sub>0,2</sub><sup>0,5</sup> = 0,25 - 0,04 = 0,21</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Standardizzazione</p>
+<p><em>Esempio:</em> Un test ha punteggi distribuiti normalmente con media μ = 100 e deviazione standard σ = 15. Calcolare il valore standardizzato z corrispondente a un punteggio X = 130.</p>
+<p class="formula">Z = (X-μ)/σ = (130-100)/15 = 30/15 = 2</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Applicazione della regola 68-95-99,7</p>
+<p><em>Esempio:</em> Per la stessa distribuzione dell'Esercizio 9 (μ = 100, σ = 15), determinare l'intervallo che contiene circa il 95% dei punteggi.</p>
+<p>Per la regola empirica, circa il 95% dei valori cade entro due deviazioni standard dalla media.</p>
+<p class="formula">[μ-2σ, μ+2σ] = [100-30, 100+30] = [70, 130]</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Problema inverso: trovare la deviazione standard</p>
+<p><em>Esempio:</em> Una distribuzione normale ha media μ = 50, e si sa che circa il 68% dei valori cade nell'intervallo [45, 55]. Calcolare la deviazione standard σ.</p>
+<p>Per la regola empirica, l'intervallo che contiene il 68% dei valori è [μ-σ, μ+σ].</p>
+<p class="formula">μ+σ = 55 → σ = 55 - 50 = 5</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo: binomiale con approssimazione normale</p>
+<p><em>Esempio:</em> Un'urna contiene palline con probabilità p = 0,5 di estrarre una pallina rossa. Si effettuano 400 estrazioni con reinserimento. Calcolare valore atteso, varianza e deviazione standard del numero di palline rosse estratte, e stimare l'intervallo in cui cadrà tale numero con probabilità di circa il 95%.</p>
+<p class="formula">E(X) = 400 × 0,5 = 200</p>
+<p class="formula">Var(X) = 400 × 0,5 × 0,5 = 100 → σ(X) = √100 = 10</p>
+<p>Per n così grande, la distribuzione binomiale si approssima bene a una distribuzione normale con media 200 e deviazione standard 10: applichiamo quindi la regola 68-95-99,7.</p>
+<p class="formula">[E(X)-2σ, E(X)+2σ] = [200-20, 200+20] = [180, 220]</p>
+<p>Con probabilità di circa il 95%, il numero di palline rosse estratte su 400 prove sarà compreso tra 180 e 220.</p>
+
+</div>
+<!-- fine esercizi matematica 47 -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat47.html">Torna alla teoria (Capitolo 47)</a></p>
+  <p><a href="mat48.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
