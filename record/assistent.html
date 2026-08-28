@@ -873,9 +873,15 @@ function applyConfigToUI(){
   const nomeParte = config.nome && config.nome.trim() !== '' ? ` ${config.nome.trim()}` : '';
   document.getElementById('greetLine1').textContent = `${salutoEffettivo}${nomeParte}`;
 
-  // Citazione/frase motivazionale del giorno (cambia ogni giorno, stabile nell'arco della giornata)
+  // Citazione/frase motivazionale (cambia ogni ora di giorno, fissa durante la pausa notturna)
   document.getElementById('greetQuote').textContent = '"' + getQuoteOfDay() + '"';
 }
+
+// Ricontrolla periodicamente la fascia oraria, così la citazione si aggiorna
+// da sola al cambio dell'ora anche se la pagina resta aperta (senza ricaricare).
+setInterval(() => {
+  document.getElementById('greetQuote').textContent = '"' + getQuoteOfDay() + '"';
+}, 5 * 60 * 1000); // ogni 5 minuti
 
 /**
  * Calcola il saluto da mostrare. Se l'utente ha scelto "auto" (o non ha
@@ -894,8 +900,10 @@ function getSalutoEffettivo(){
 }
 
 /* ================================================================
-   CITAZIONE DEL MOMENTO — 4 fasce orarie (06-10, 10-14, 14-18, 18-06),
-   scelta CASUALE ma senza ripetizioni: uso la tecnica del "sacchetto
+   CITAZIONE DEL MOMENTO — cambia OGNI ORA durante il giorno,
+   tranne nella pausa notturna (da NOTTE_INIZIO a NOTTE_FINE, vedi
+   sotto), dove resta fissa per tutta la notte.
+   Scelta CASUALE ma senza ripetizioni: uso la tecnica del "sacchetto
    mescolato" (shuffle bag). Tutti gli indici delle frasi vengono
    mescolati una volta e pescati uno alla volta senza reinserimento:
    finché il sacchetto non si svuota, nessuna frase può ripetersi.
@@ -914,21 +922,29 @@ const LS_QUOTE_STATE = 'assistant_quote_state_v1';
  * sola fascia continua, le ore prima delle 6 vengono attribuite
  * alla data del giorno precedente (la "notte" che è iniziata ieri).
  */
+// Ora di inizio e fine della pausa notturna (nessun cambio di frase in questo intervallo).
+// NOTTE_INIZIO=18 e NOTTE_FINE=6 significa: dalle 18:00 alle 06:00 la frase resta fissa.
+const NOTTE_INIZIO = 18;
+const NOTTE_FINE = 6;
+
 function getFasciaId(now){
   const h = now.getHours();
-  let slotNum;
-  if(h >= 6 && h < 10) slotNum = 0;
-  else if(h >= 10 && h < 14) slotNum = 1;
-  else if(h >= 14 && h < 18) slotNum = 2;
-  else slotNum = 3; // 18:00-06:00 del giorno dopo
+
+  // Fascia notturna: dalle NOTTE_INIZIO fino a NOTTE_FINE del giorno dopo,
+  // trattata come UN unico slot continuo (nessun cambio ogni ora).
+  const inNotte = (h >= NOTTE_INIZIO || h < NOTTE_FINE);
 
   const riferimento = new Date(now);
-  if(h < 6) riferimento.setDate(riferimento.getDate() - 1);
+  if(h < NOTTE_FINE) riferimento.setDate(riferimento.getDate() - 1);
 
   const y = riferimento.getFullYear();
   const m = String(riferimento.getMonth() + 1).padStart(2, '0');
   const d = String(riferimento.getDate()).padStart(2, '0');
-  return `${y}-${m}-${d}_${slotNum}`;
+
+  // Di giorno: una fascia per ogni ora (slot = ora stessa, es. "09", "14"...).
+  // Di notte: un unico slot fisso "notte".
+  const slot = inNotte ? 'notte' : String(h).padStart(2, '0');
+  return `${y}-${m}-${d}_${slot}`;
 }
 
 /** Mescola un array con l'algoritmo Fisher-Yates (non modifica l'originale). */
