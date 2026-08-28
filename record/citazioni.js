@@ -2402,6 +2402,106 @@ Il cuore ha le sue ragioni che la ragione non conosce. — Blaise Pascal
 L'uomo è soltanto una canna, la più debole della natura, ma è una canna pensante. — Blaise Pascal
 Non importa quanto vai piano, l'importante è non fermarsi mai. — attribuita a Confucio
 Chi impara senza pensare è perduto, chi pensa senza imparare è in pericolo. — Confucio
+Il Giappone è un arcipelago composto da migliaia di isole, ma la gran parte della popolazione vive su quattro isole principali. — Curiosità sul Giappone
+Il monte Fuji, la vetta più alta del Giappone, è anche un vulcano tuttora considerato attivo. — Curiosità sul Giappone
+Il Giappone si trova su una delle zone sismiche più attive del pianeta, lungo la cosiddetta cintura di fuoco del Pacifico. — Curiosità sul Giappone
+Le case tradizionali giapponesi utilizzano tatami, stuoie di paglia intrecciata, come rivestimento del pavimento. — Curiosità sul Giappone
+Il futon giapponese tradizionale viene riposto durante il giorno per liberare spazio nella stanza. — Curiosità sul Giappone
+La cerimonia del tè, cha no yu, segue regole precise tramandate da secoli nella cultura giapponese. — Curiosità sul Giappone
+L'ikebana è l'arte tradizionale giapponese della composizione floreale. — Curiosità sul Giappone
+L'origami, l'arte di piegare la carta, ha origini antiche nella cultura giapponese. — Curiosità sul Giappone
+Il kimono tradizionale si indossa avvolgendolo sempre da sinistra verso destra, tranne per i defunti. — Curiosità sul Giappone
+I torii sono i portali tipici che segnano l'ingresso ai santuari shintoisti giapponesi. — Curiosità sul Giappone
+Il sumo è considerato lo sport nazionale del Giappone, con una tradizione che affonda le radici nell'antichità. — Curiosità sul Giappone
+Il judo, disciplina marziale giapponese, fu ideato da Jigoro Kano alla fine dell'Ottocento. — Curiosità sul Giappone
+Il karate ha origini legate all'isola di Okinawa, prima di diffondersi in tutto il Giappone. — Curiosità sul Giappone
+Il sushi tradizionale nacque originariamente come metodo di conservazione del pesce tramite fermentazione con il riso. — Curiosità sul Giappone
+Il ramen, oggi piatto simbolo della cucina giapponese, ha in realtà origini legate alla cucina cinese. — Curiosità sul Giappone
+Il sakè è una bevanda alcolica ottenuta dalla fermentazione del riso. — Curiosità sul Giappone
+Il bento è un pasto tradizionale giapponese preparato in un contenitore diviso in scomparti. — Curiosità sul Giappone
+Il wagyu è una razza bovina giapponese nota per la carne particolarmente marmorizzata. — Curiosità sul Giappone
+Il tofu, pur associato alla cucina giapponese, ha origini antiche nella tradizione culinaria cinese. — Curiosità sul Giappone
+Gli onsen sono sorgenti termali naturali molto diffuse in tutto il territorio giapponese. — Curiosità sul Giappone
+Le scimmie macaco della regione di Nagano sono note per immergersi nelle sorgenti termali durante l'inverno. — Curiosità sul Giappone
+I treni ad alta velocità giapponesi, gli shinkansen, sono noti per l'estrema puntualità del servizio. — Curiosità sul Giappone
+Il primo shinkansen entrò in servizio nel 1964, in occasione delle Olimpiadi di Tokyo. — Curiosità sul Giappone
+I distributori automatici sono estremamente diffusi in Giappone, con prodotti che vanno dalle bevande al cibo caldo. — Curiosità sul Giappone
+Gli hotel capsula offrono in Giappone alloggi minimi ma funzionali, pensati soprattutto per soggiorni brevi. — Curiosità sul Giappone
+La scrittura giapponese utilizza tre sistemi combinati: kanji, hiragana e katakana. — Curiosità sul Giappone
+I kanji sono caratteri di origine cinese adottati e adattati nella scrittura giapponese. — Curiosità sul Giappone
+La lingua giapponese possiede un ricco sistema di forme di cortesia e rispetto, chiamato keigo. — Curiosità sul Giappone
+L'hanami è la tradizione di ammirare la fioritura dei ciliegi in primavera. — Curiosità sul Giappone
+I fiori di ciliegio, sakura, fioriscono per un periodo molto breve ogni anno. — Curiosità sul Giappone
+Il Giappone attraversa quattro stagioni ben distinte, ciascuna celebrata con festività ed eventi specifici. — Curiosità sul Giappone
+I matsuri sono festival tradizionali giapponesi legati spesso a santuari e ricorrenze stagionali. — Curiosità sul Giappone
+Il fuoco d'artificio, hanabi, è un elemento tradizionale delle celebrazioni estive giapponesi. — Curiosità sul Giappone
+L'haiku è una forma poetica giapponese composta tradizionalmente da diciassette sillabe. — Curiosità sul Giappone
+Il manga, il fumetto giapponese, ha una tradizione narrativa e stilistica molto diversificata per generi ed età. — Curiosità sul Giappone
+L'anime, l'animazione giapponese, è diventato un fenomeno culturale conosciuto in tutto il mondo. — Curiosità sul Giappone
+Il teatro kabuki è una forma di spettacolo tradizionale giapponese che unisce recitazione, danza e musica. — Curiosità sul Giappone
+Il teatro no, più antico del kabuki, utilizza maschere e movimenti stilizzati. — Curiosità sul Giappone
+I bonsai sono alberi coltivati in miniatura secondo tecniche tradizionali di potatura e cura. — Curiosità sul Giappone
+Il koi, una varietà ornamentale di carpa, è allevato tradizionalmente negli stagni giapponesi. — Curiosità sul Giappone
+I gatti maneki-neko, con la zampa alzata, sono considerati portafortuna nella cultura popolare giapponese. — Curiosità sul Giappone
+Gli origami a forma di gru sono tradizionalmente associati a un augurio di salute e longevità. — Curiosità sul Giappone
+Il Giappone ha una delle aspettative di vita medie più alte al mondo. — Curiosità sul Giappone
+La dieta tradizionale giapponese è spesso associata a un elevato consumo di pesce, riso e verdure. — Curiosità sul Giappone
+Il Giappone conta un numero elevato di persone centenarie rispetto alla popolazione totale. — Curiosità sul Giappone
+I robot sono ampiamente utilizzati in Giappone in settori come l'industria e l'assistenza. — Curiosità sul Giappone
+Il karaoke, nato in Giappone, è oggi diffuso in tutto il mondo come forma di intrattenimento. — Curiosità sul Giappone
+Il pachinko è un popolare gioco meccanico diffuso nelle sale gioco giapponesi. — Curiosità sul Giappone
+Il baseball è uno degli sport più seguiti in Giappone dopo la sua introduzione nell'Ottocento. — Curiosità sul Giappone
+Il calcio ha guadagnato grande popolarità in Giappone soprattutto a partire dagli anni Novanta. — Curiosità sul Giappone
+Il Giappone ospita numerosi vulcani attivi oltre al monte Fuji. — Curiosità sul Giappone
+Le scie di tifoni interessano regolarmente il Giappone durante la stagione estiva e autunnale. — Curiosità sul Giappone
+Il Giappone dispone di un sistema di allerta sismica capace di avvisare la popolazione pochi secondi prima di un terremoto. — Curiosità sul Giappone
+Gli edifici giapponesi moderni sono progettati con tecniche antisismiche molto avanzate. — Curiosità sul Giappone
+Tokyo è una delle aree metropolitane più popolose al mondo. — Curiosità sul Giappone
+Kyoto fu capitale imperiale del Giappone per oltre mille anni. — Curiosità sul Giappone
+Il palazzo imperiale di Tokyo è la residenza ufficiale dell'imperatore del Giappone. — Curiosità sul Giappone
+Il Giappone ha una monarchia che rivendica una delle linee di successione più antiche al mondo. — Curiosità sul Giappone
+Lo shintoismo e il buddhismo convivono e si intrecciano da secoli nella cultura religiosa giapponese. — Curiosità sul Giappone
+I templi buddhisti e i santuari shintoisti sono spesso visitati per ricorrenze e riti di passaggio diversi. — Curiosità sul Giappone
+Il Giappone celebra il capodanno, oshogatsu, con riti e usanze molto sentite dalla popolazione. — Curiosità sul Giappone
+Mangiare soba, spaghetti di grano saraceno, la notte di capodanno è una tradizione diffusa in Giappone. — Curiosità sul Giappone
+Il Giappone ha sviluppato una fitta rete ferroviaria che collega efficacemente città e regioni. — Curiosità sul Giappone
+Molte stazioni ferroviarie giapponesi utilizzano melodie musicali distintive per annunciare l'arrivo dei treni. — Curiosità sul Giappone
+Il Giappone produce automobili ed elettronica di consumo esportate in tutto il mondo. — Curiosità sul Giappone
+Il Giappone è tra i maggiori produttori mondiali di robotica industriale. — Curiosità sul Giappone
+La cultura del riciclo e della raccolta differenziata è molto sviluppata nelle città giapponesi. — Curiosità sul Giappone
+Togliersi le scarpe prima di entrare in casa è un'usanza diffusa e rispettata in Giappone. — Curiosità sul Giappone
+Gli inchini sono un gesto comune di saluto e rispetto nella cultura giapponese. — Curiosità sul Giappone
+Il biglietto da visita, meishi, viene scambiato seguendo un preciso rituale di cortesia in ambito lavorativo. — Curiosità sul Giappone
+Il Giappone ha una lunga tradizione nella produzione di ceramiche artigianali, come quelle di Arita e Kutani. — Curiosità sul Giappone
+La lacca giapponese, urushi, è utilizzata da secoli per decorare oggetti artigianali e mobili. — Curiosità sul Giappone
+Le spade katana, forgiate con tecniche tradizionali, erano l'arma simbolo della classe dei samurai. — Curiosità sul Giappone
+La calligrafia, shodo, è considerata in Giappone una forma d'arte oltre che di scrittura. — Curiosità sul Giappone
+Il Giappone ha sviluppato una propria tradizione cinematografica riconosciuta a livello internazionale, con registi come Akira Kurosawa. — Curiosità sul Giappone
+Le maschere del teatro no sono realizzate artigianalmente e rappresentano personaggi ed emozioni codificate. — Curiosità sul Giappone
+Il Giappone possiede una fitta rete di templi e santuari inseriti nel patrimonio dell'Unesco. — Curiosità sul Giappone
+Il castello di Himeji è uno degli esempi meglio conservati di architettura castellana giapponese. — Curiosità sul Giappone
+I giardini giapponesi tradizionali seguono principi estetici legati all'armonia tra elementi naturali e artificiali. — Curiosità sul Giappone
+Il concetto di wabi-sabi valorizza la bellezza dell'imperfezione e della transitorietà delle cose. — Curiosità sul Giappone
+Il concetto di ma, il vuoto o intervallo, ha un ruolo importante nell'estetica giapponese tradizionale. — Curiosità sul Giappone
+Il Giappone ha una fitta rete di convenience store aperti ventiquattro ore su ventiquattro. — Curiosità sul Giappone
+La popolazione giapponese sta affrontando da anni un progressivo invecchiamento demografico. — Curiosità sul Giappone
+Il Giappone importa la gran parte delle materie prime energetiche necessarie al proprio fabbisogno. — Curiosità sul Giappone
+Le città giapponesi utilizzano ampiamente segnaletica e mappe pensate per orientare i visitatori stranieri. — Curiosità sul Giappone
+Il Giappone ha ospitato le Olimpiadi estive sia nel 1964 sia nel 2021, quest'ultima rinviata di un anno per la pandemia. — Curiosità sul Giappone
+Molti templi e santuari giapponesi vendono amuleti, omamori, ritenuti portatori di buona sorte. — Curiosità sul Giappone
+Le fortune scritte, omikuji, vengono estratte nei santuari per conoscere le previsioni sul proprio futuro. — Curiosità sul Giappone
+Il Giappone conserva numerose tradizioni artigianali tramandate di generazione in generazione all'interno delle famiglie. — Curiosità sul Giappone
+La pesca e l'acquacoltura hanno un ruolo economico e culturale importante per il Giappone, paese circondato dal mare. — Curiosità sul Giappone
+Il tè verde, in diverse varietà, è la bevanda più diffusa nella vita quotidiana giapponese. — Curiosità sul Giappone
+Il matcha, tè verde in polvere, è utilizzato sia nella cerimonia del tè sia in molte preparazioni dolciarie. — Curiosità sul Giappone
+Il Giappone produce e consuma grandi quantità di riso, alimento centrale della propria cucina. — Curiosità sul Giappone
+Le scuole giapponesi prevedono spesso la partecipazione degli studenti alla pulizia quotidiana degli ambienti scolastici. — Curiosità sul Giappone
+L'anno scolastico in Giappone inizia tradizionalmente in primavera, in coincidenza con la fioritura dei ciliegi. — Curiosità sul Giappone
+Il Giappone ha una lunga tradizione nella produzione di strumenti musicali tradizionali come lo shamisen e il koto. — Curiosità sul Giappone
+La musica tradizionale giapponese gagaku è una delle forme musicali di corte più antiche ancora eseguite al mondo. — Curiosità sul Giappone
+Molte città costiere giapponesi hanno sviluppato sistemi di dighe e barriere per la protezione dagli tsunami. — Curiosità sul Giappone
+Il Giappone ha attraversato un lungo periodo di isolamento internazionale, noto come sakoku, durato circa due secoli in epoca Edo. — Curiosità sul Giappone
+Il Giappone si aprì nuovamente ai commerci internazionali a metà dell'Ottocento, avviando un periodo di rapida modernizzazione. — Curiosità sul Giappone
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
