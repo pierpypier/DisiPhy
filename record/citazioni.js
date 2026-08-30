@@ -2802,6 +2802,106 @@ La regione del sud-est asiatico ospita numerose comunità di pescatori che vivon
 Le lanterne colorate sono utilizzate durante diverse festività tradizionali nei paesi del sud-est asiatico. — Curiosità sul sud-est asiatico
 Il festival delle luci di Loi Krathong, in Thailandia, prevede il rilascio di piccole barche galleggianti sui corsi d'acqua. — Curiosità sul sud-est asiatico
 Il sud-est asiatico comprende sia paesi a maggioranza musulmana sia paesi a maggioranza buddhista e cristiana. — Curiosità sul sud-est asiatico
+Il Medio Oriente comprende paesi come Arabia Saudita, Emirati Arabi Uniti, Qatar, Kuwait, Bahrein, Oman, Yemen, Iraq, Iran, Giordania, Libano, Siria, Israele e i territori palestinesi. — Curiosità sul Medio Oriente
+La regione mediorientale è considerata una delle culle delle prime civiltà urbane della storia umana. — Curiosità sul Medio Oriente
+La Mezzaluna Fertile, che comprende parte del Medio Oriente, favorì lo sviluppo dell'agricoltura fin dall'antichità. — Curiosità sul Medio Oriente
+Il fiume Tigri e il fiume Eufrate attraversano l'Iraq, terra dell'antica Mesopotamia. — Curiosità sul Medio Oriente
+La scrittura cuneiforme, tra le più antiche al mondo, nacque in Mesopotamia, nell'attuale Iraq. — Curiosità sul Medio Oriente
+L'antica città di Babilonia sorgeva lungo il corso del fiume Eufrate, nell'attuale Iraq. — Curiosità sul Medio Oriente
+La città di Petra, in Giordania, fu scavata direttamente nella roccia dagli antichi nabatei. — Curiosità sul Medio Oriente
+Petra rimase a lungo sconosciuta al mondo occidentale, prima di essere riscoperta nell'Ottocento. — Curiosità sul Medio Oriente
+La città di Gerusalemme è considerata luogo sacro da ebraismo, cristianesimo e islam. — Curiosità sul Medio Oriente
+La Mecca, in Arabia Saudita, è la città più sacra dell'islam e meta del pellegrinaggio annuale del hajj. — Curiosità sul Medio Oriente
+Medina, in Arabia Saudita, è la seconda città più sacra per i musulmani. — Curiosità sul Medio Oriente
+La lingua araba è parlata come lingua ufficiale in gran parte dei paesi del Medio Oriente. — Curiosità sul Medio Oriente
+L'alfabeto arabo si scrive da destra verso sinistra. — Curiosità sul Medio Oriente
+Il persiano, o farsi, è la lingua ufficiale dell'Iran, distinta dall'arabo per origine e struttura. — Curiosità sul Medio Oriente
+L'ebraico moderno, lingua ufficiale di Israele, fu rivitalizzato a partire dalla fine dell'Ottocento. — Curiosità sul Medio Oriente
+Il caffè arabo, qahwa, viene tradizionalmente servito con datteri come segno di ospitalità. — Curiosità sul Medio Oriente
+I datteri sono un alimento tradizionale molto diffuso nella cucina e nella cultura del Medio Oriente. — Curiosità sul Medio Oriente
+L'hummus, purea di ceci con tahina, è un piatto diffuso in numerosi paesi mediorientali. — Curiosità sul Medio Oriente
+Il pane pita, o pane arabo, accompagna tradizionalmente molti piatti della cucina mediorientale. — Curiosità sul Medio Oriente
+Il kebab, in diverse varianti, è un piatto molto diffuso in tutta la regione mediorientale. — Curiosità sul Medio Oriente
+Il tè viene servito con grande cura e rappresenta un gesto di ospitalità in molte culture mediorientali. — Curiosità sul Medio Oriente
+Il deserto arabico occupa gran parte della penisola arabica, tra Arabia Saudita e paesi vicini. — Curiosità sul Medio Oriente
+Il deserto del Rub al-Khali, o quarto vuoto, è una delle aree desertiche più estese al mondo. — Curiosità sul Medio Oriente
+Dubai, negli Emirati Arabi Uniti, ospita il Burj Khalifa, tra gli edifici più alti al mondo. — Curiosità sul Medio Oriente
+Gli Emirati Arabi Uniti sono una federazione composta da sette emirati distinti. — Curiosità sul Medio Oriente
+Il Qatar, piccolo stato del Golfo Persico, ha un'economia fortemente legata alle risorse di gas naturale. — Curiosità sul Medio Oriente
+L'Arabia Saudita possiede alcune delle maggiori riserve di petrolio al mondo. — Curiosità sul Medio Oriente
+Il Kuwait, situato lungo il Golfo Persico, fu al centro di importanti eventi storici nel Novecento. — Curiosità sul Medio Oriente
+Il Bahrein è uno stato insulare situato nel Golfo Persico. — Curiosità sul Medio Oriente
+L'Oman è noto per la sua costa lungo il Golfo di Oman e il Mar Arabico. — Curiosità sul Medio Oriente
+Lo Yemen ospita l'antica città di Sana'a, nota per la sua architettura in mattoni di fango. — Curiosità sul Medio Oriente
+La città vecchia di Sana'a è riconosciuta come patrimonio dell'Unesco per il suo valore storico. — Curiosità sul Medio Oriente
+Il Libano ospita le rovine dell'antica città romana di Baalbek, con templi imponenti. — Curiosità sul Medio Oriente
+Beirut, capitale del Libano, fu storicamente un importante centro commerciale e culturale del Mediterraneo orientale. — Curiosità sul Medio Oriente
+La Siria custodisce l'antica città di Palmira, un tempo importante crocevia commerciale carovaniero. — Curiosità sul Medio Oriente
+Damasco, capitale della Siria, è considerata tra le città abitate ininterrottamente più antiche del mondo. — Curiosità sul Medio Oriente
+L'Iran, in epoca antica, fu sede del vasto impero persiano achemenide. — Curiosità sul Medio Oriente
+La città di Persepoli, in Iran, fu un'importante capitale cerimoniale dell'antico impero persiano. — Curiosità sul Medio Oriente
+I tappeti persiani sono rinomati in tutto il mondo per la loro qualità artigianale e i motivi decorativi. — Curiosità sul Medio Oriente
+La poesia persiana classica, con autori come Hafez e Rumi, ha una lunga e influente tradizione letteraria. — Curiosità sul Medio Oriente
+Il Mar Morto, tra Israele e Giordania, è uno dei corpi d'acqua più salati al mondo. — Curiosità sul Medio Oriente
+Il Mar Morto si trova nel punto più basso della superficie terrestre emersa. — Curiosità sul Medio Oriente
+La regione del Medio Oriente ospita alcune delle più antiche vie carovaniere commerciali della storia. — Curiosità sul Medio Oriente
+L'incenso e la mirra erano merci preziose scambiate lungo antiche rotte commerciali della penisola arabica. — Curiosità sul Medio Oriente
+La calligrafia araba è considerata una forma d'arte di grande importanza nella cultura islamica. — Curiosità sul Medio Oriente
+Le moschee mediorientali spesso presentano minareti e cortili decorati con motivi geometrici e floreali. — Curiosità sul Medio Oriente
+La grande moschea di Damasco è tra i luoghi di culto islamico più antichi ancora in uso. — Curiosità sul Medio Oriente
+La cupola della roccia, a Gerusalemme, è uno dei più antichi monumenti islamici esistenti. — Curiosità sul Medio Oriente
+Il calendario islamico è lunare e conta gli anni a partire dall'egira, il viaggio di Maometto verso Medina. — Curiosità sul Medio Oriente
+Il mese di Ramadan prevede il digiuno diurno per i musulmani praticanti in tutto il mondo. — Curiosità sul Medio Oriente
+Il souq, mercato tradizionale coperto, è un elemento caratteristico di molte città mediorientali. — Curiosità sul Medio Oriente
+La spezia dello zafferano è coltivata e utilizzata da secoli nella cucina iraniana. — Curiosità sul Medio Oriente
+Il narghilè, pipa ad acqua tradizionale, è diffuso in diversi paesi del Medio Oriente per il consumo di tabacco aromatizzato. — Curiosità sul Medio Oriente
+La musica araba tradizionale utilizza strumenti come l'oud, un liuto a corde pizzicate. — Curiosità sul Medio Oriente
+Le mille e una notte, raccolta di racconti di origine mediorientale, ha influenzato profondamente la letteratura mondiale. — Curiosità sul Medio Oriente
+L'antica città di Ur, in Iraq, è associata dalla tradizione biblica alla figura di Abramo. — Curiosità sul Medio Oriente
+Il codice di Hammurabi, tra i più antichi testi legali conosciuti, proviene dall'antica Babilonia. — Curiosità sul Medio Oriente
+La ziggurat era una struttura templare a gradoni tipica dell'antica architettura mesopotamica. — Curiosità sul Medio Oriente
+Il Golfo Persico è una risorsa fondamentale per l'estrazione e il trasporto di petrolio e gas naturale. — Curiosità sul Medio Oriente
+La città di Aqaba, in Giordania, è l'unico sbocco marittimo del paese. — Curiosità sul Medio Oriente
+Il deserto del Wadi Rum, in Giordania, è noto per i suoi paesaggi rocciosi e sabbiosi spettacolari. — Curiosità sul Medio Oriente
+I beduini sono popolazioni tradizionalmente nomadi che abitano da secoli le zone desertiche del Medio Oriente. — Curiosità sul Medio Oriente
+Le tende tradizionali beduine sono realizzate con tessuti di pelo di capra o di cammello. — Curiosità sul Medio Oriente
+Il cammello dromedario è un animale storicamente fondamentale per i trasporti nelle zone desertiche mediorientali. — Curiosità sul Medio Oriente
+La falconeria è una tradizione venatoria antica, ancora praticata in diversi paesi del Golfo. — Curiosità sul Medio Oriente
+Le perle naturali del Golfo Persico furono per secoli una risorsa economica importante prima della diffusione del petrolio. — Curiosità sul Medio Oriente
+La città di Istanbul, sebbene talvolta associata al Medio Oriente, si trova a cavallo tra Europa e Asia. — Curiosità sul Medio Oriente
+L'antica Persia sviluppò un sofisticato sistema stradale per collegare le diverse province dell'impero. — Curiosità sul Medio Oriente
+Il giardino persiano tradizionale, chahar bagh, è organizzato secondo uno schema geometrico simmetrico. — Curiosità sul Medio Oriente
+L'architettura islamica ha sviluppato nei secoli tecniche decorative complesse basate su motivi geometrici ripetuti. — Curiosità sul Medio Oriente
+Le antiche rotte dell'incenso collegavano la penisola arabica meridionale con il bacino del Mediterraneo. — Curiosità sul Medio Oriente
+Il monte Ararat, spesso associato al racconto biblico del diluvio, si trova nell'area di confine tra Turchia, Iran e Armenia. — Curiosità sul Medio Oriente
+La città di Ninive, antica capitale assira, sorgeva nell'attuale territorio iracheno. — Curiosità sul Medio Oriente
+La biblioteca di Ninive conservava migliaia di tavolette cuneiformi con testi letterari, religiosi e amministrativi. — Curiosità sul Medio Oriente
+L'antica città fenicia di Tiro, nell'attuale Libano, fu un importante centro commerciale e marittimo. — Curiosità sul Medio Oriente
+I fenici, originari dell'area libanese, diffusero il proprio alfabeto in tutto il Mediterraneo. — Curiosità sul Medio Oriente
+Il cedro del Libano è un albero simbolo del paese, presente anche sulla sua bandiera nazionale. — Curiosità sul Medio Oriente
+La regione del Kurdistan si estende tra Turchia, Iraq, Iran e Siria, abitata da popolazioni curde. — Curiosità sul Medio Oriente
+La lingua curda comprende diverse varianti parlate nelle regioni abitate dal popolo curdo. — Curiosità sul Medio Oriente
+Il tè nero è la bevanda più diffusa nella vita quotidiana di paesi come Iran e Turchia. — Curiosità sul Medio Oriente
+Il baklava, dolce a base di pasta sfoglia, miele e frutta secca, è diffuso in tutto il Medio Oriente. — Curiosità sul Medio Oriente
+Il melograno è un frutto simbolico e molto utilizzato nella cucina di diversi paesi mediorientali. — Curiosità sul Medio Oriente
+Le spezie come cumino, coriandolo e cardamomo caratterizzano molti piatti della tradizione culinaria mediorientale. — Curiosità sul Medio Oriente
+La città di Aleppo, in Siria, fu per secoli un importante centro commerciale lungo le rotte carovaniere. — Curiosità sul Medio Oriente
+Il sapone di Aleppo, prodotto tradizionalmente con olio d'oliva e alloro, ha una storia secolare. — Curiosità sul Medio Oriente
+Il Mar Rosso separa la penisola arabica dal continente africano ed è ricco di biodiversità marina. — Curiosità sul Medio Oriente
+Le barriere coralline del Mar Rosso attirano subacquei da tutto il mondo per la loro varietà di specie. — Curiosità sul Medio Oriente
+Il canale di Suez, pur trovandosi in Egitto, collega il Mar Mediterraneo al Mar Rosso ed è cruciale per i commerci con il Medio Oriente. — Curiosità sul Medio Oriente
+La città di Gerico, vicino al fiume Giordano, è considerata tra gli insediamenti umani più antichi conosciuti. — Curiosità sul Medio Oriente
+Il fiume Giordano ha un'importanza storica e religiosa per diverse tradizioni della regione. — Curiosità sul Medio Oriente
+La città di Gerusalemme ospita monumenti sacri per tre grandi religioni monoteiste all'interno delle sue mura antiche. — Curiosità sul Medio Oriente
+Le lampade a olio decorate sono un tradizionale oggetto artigianale diffuso in diverse culture mediorientali. — Curiosità sul Medio Oriente
+La ceramica smaltata blu e turchese è tipica della tradizione artigianale di diversi paesi della regione. — Curiosità sul Medio Oriente
+Il vetro soffiato ha una lunga tradizione artigianale in alcune città storiche del Medio Oriente, come Hebron. — Curiosità sul Medio Oriente
+La danza tradizionale con la spada è praticata in alcune celebrazioni popolari della penisola arabica. — Curiosità sul Medio Oriente
+Il folklore mediorientale comprende numerose leggende e racconti tramandati oralmente di generazione in generazione. — Curiosità sul Medio Oriente
+L'astronomia e la matematica ebbero un importante sviluppo nel mondo islamico medievale, con centri di studio in Medio Oriente. — Curiosità sul Medio Oriente
+La casa della saggezza di Baghdad fu un rinomato centro di traduzione e studio in epoca medievale. — Curiosità sul Medio Oriente
+Il termine algebra deriva da un'opera matematica scritta in lingua araba nel medioevo. — Curiosità sul Medio Oriente
+Le città storiche del Medio Oriente custodiscono un ricco patrimonio di architettura religiosa e civile. — Curiosità sul Medio Oriente
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
