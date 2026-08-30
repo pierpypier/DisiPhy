@@ -2702,6 +2702,106 @@ Il fiume Mekong nasce sull'altopiano tibetano cinese prima di attraversare diver
 La Cina è tra i paesi con la maggiore diversità paesaggistica, dalle catene montuose ai deserti fino alle coste tropicali. — Curiosità sulla Cina
 Il deserto del Gobi si estende tra la Cina settentrionale e la Mongolia. — Curiosità sulla Cina
 Le città cinesi ospitano spesso mercati notturni animati da cibo di strada e piccoli commerci. — Curiosità sulla Cina
+Il sud-est asiatico comprende paesi come Thailandia, Vietnam, Cambogia, Laos, Myanmar, Malesia, Singapore, Indonesia, Filippine e Brunei. — Curiosità sul sud-est asiatico
+L'Indonesia è composta da migliaia di isole, rendendola uno degli arcipelaghi più estesi al mondo. — Curiosità sul sud-est asiatico
+L'Indonesia è il paese a maggioranza musulmana più popoloso del mondo. — Curiosità sul sud-est asiatico
+Giacarta, capitale dell'Indonesia, è una delle megalopoli più popolose del sud-est asiatico. — Curiosità sul sud-est asiatico
+L'isola di Bali, in Indonesia, è nota per la sua cultura induista distinta dal resto del paese. — Curiosità sul sud-est asiatico
+Il tempio di Borobudur, in Indonesia, è uno dei più grandi monumenti buddhisti al mondo. — Curiosità sul sud-est asiatico
+Il drago di Komodo, il più grande rettile vivente, è originario di alcune isole indonesiane. — Curiosità sul sud-est asiatico
+La Thailandia non fu mai colonizzata da potenze europee, a differenza di molti paesi vicini. — Curiosità sul sud-est asiatico
+Bangkok, capitale della Thailandia, ospita numerosi templi buddhisti di grande importanza religiosa. — Curiosità sul sud-est asiatico
+Il tempio del Buddha di smeraldo, a Bangkok, custodisce una delle statue più venerate della Thailandia. — Curiosità sul sud-est asiatico
+Il muay thai, arte marziale tradizionale thailandese, è conosciuto anche come boxe thailandese. — Curiosità sul sud-est asiatico
+Gli elefanti sono animali tradizionalmente legati alla cultura e alla storia della Thailandia. — Curiosità sul sud-est asiatico
+Il Vietnam fu diviso in due stati distinti tra il 1954 e il 1975, prima della riunificazione. — Curiosità sul sud-est asiatico
+La baia di Ha Long, in Vietnam, è nota per le sue formazioni calcaree che emergono dal mare. — Curiosità sul sud-est asiatico
+Il caffè vietnamita viene tradizionalmente preparato con un filtro metallico goccia a goccia. — Curiosità sul sud-est asiatico
+La cucina vietnamita è nota per piatti come il pho, una zuppa di noodle molto diffusa nel paese. — Curiosità sul sud-est asiatico
+Il tempio di Angkor Wat, in Cambogia, è il più grande complesso religioso del mondo per estensione. — Curiosità sul sud-est asiatico
+Angkor Wat fu costruito nel XII secolo come tempio induista, prima di diventare anche buddhista. — Curiosità sul sud-est asiatico
+La Cambogia ha attraversato nella propria storia periodi di grande splendore e periodi di forte instabilità politica. — Curiosità sul sud-est asiatico
+Il Laos è uno dei pochi paesi del sud-est asiatico privo di sbocco sul mare. — Curiosità sul sud-est asiatico
+Il fiume Mekong attraversa diversi paesi del sud-est asiatico, tra cui Laos, Thailandia, Cambogia e Vietnam. — Curiosità sul sud-est asiatico
+Il Mekong è tra i fiumi più lunghi dell'Asia e una risorsa fondamentale per l'agricoltura regionale. — Curiosità sul sud-est asiatico
+Il Myanmar, ex Birmania, custodisce numerosi templi buddhisti nella regione storica di Bagan. — Curiosità sul sud-est asiatico
+La pianura di Bagan ospita migliaia di antichi templi e pagode costruiti in epoca medievale. — Curiosità sul sud-est asiatico
+La Malesia è divisa geograficamente in due parti principali, separate dal mar cinese meridionale. — Curiosità sul sud-est asiatico
+Le Petronas Towers, a Kuala Lumpur, furono per un periodo gli edifici più alti del mondo. — Curiosità sul sud-est asiatico
+La Malesia è composta da diverse etnie, tra cui malesi, cinesi e indiani, con culture e religioni differenti. — Curiosità sul sud-est asiatico
+Singapore è una città-stato tra le più piccole al mondo per estensione territoriale. — Curiosità sul sud-est asiatico
+Singapore è nota per le rigide normative su ordine pubblico e pulizia urbana. — Curiosità sul sud-est asiatico
+Il porto di Singapore è tra i più trafficati al mondo per il commercio marittimo internazionale. — Curiosità sul sud-est asiatico
+Le Filippine sono composte da migliaia di isole nell'Oceano Pacifico occidentale. — Curiosità sul sud-est asiatico
+Le Filippine furono a lungo colonia spagnola, prima di passare sotto controllo statunitense nel XX secolo. — Curiosità sul sud-est asiatico
+La lingua filippina, tagalog, convive ufficialmente con l'inglese nelle Filippine. — Curiosità sul sud-est asiatico
+Il Brunei, piccolo stato del sud-est asiatico, ha un'economia fortemente legata alle risorse petrolifere. — Curiosità sul sud-est asiatico
+Il sultanato del Brunei è una delle monarchie assolute ancora esistenti nel mondo contemporaneo. — Curiosità sul sud-est asiatico
+Il sud-est asiatico ospita foreste pluviali tra le più ricche di biodiversità al mondo. — Curiosità sul sud-est asiatico
+L'orango, primate arboricolo, è originario delle foreste di Borneo e Sumatra. — Curiosità sul sud-est asiatico
+La tigre di Sumatra è una sottospecie di tigre a rischio di estinzione presente in Indonesia. — Curiosità sul sud-est asiatico
+Il riso è l'alimento base della dieta in gran parte dei paesi del sud-est asiatico. — Curiosità sul sud-est asiatico
+La coltivazione del riso in terrazze è diffusa in diverse zone montuose della regione, come nelle Filippine. — Curiosità sul sud-est asiatico
+Le terrazze di riso di Banaue, nelle Filippine, furono realizzate secoli fa dalle popolazioni locali. — Curiosità sul sud-est asiatico
+Il buddhismo theravada è la tradizione religiosa prevalente in paesi come Thailandia, Cambogia, Laos e Myanmar. — Curiosità sul sud-est asiatico
+L'induismo, oggi minoritario nel sud-est asiatico, ha lasciato importanti tracce architettoniche e culturali nella regione. — Curiosità sul sud-est asiatico
+L'islam è la religione maggioritaria in Indonesia, Malesia e Brunei. — Curiosità sul sud-est asiatico
+Il cristianesimo è la religione prevalente nelle Filippine, in seguito alla lunga colonizzazione spagnola. — Curiosità sul sud-est asiatico
+Le spezie del sud-est asiatico, come pepe e chiodi di garofano, furono a lungo ricercate dai commercianti europei. — Curiosità sul sud-est asiatico
+Le isole Molucche, in Indonesia, erano storicamente note come le isole delle spezie. — Curiosità sul sud-est asiatico
+Il tuk tuk è un mezzo di trasporto diffuso in diverse città del sud-est asiatico, tra cui Bangkok. — Curiosità sul sud-est asiatico
+I mercati galleggianti sono una tradizione commerciale ancora presente in alcune zone della Thailandia. — Curiosità sul sud-est asiatico
+Il tempio di Preah Vihear, tra Cambogia e Thailandia, è stato oggetto di dispute territoriali nel corso del tempo. — Curiosità sul sud-est asiatico
+La città di Luang Prabang, in Laos, è nota per i suoi templi buddhisti e l'architettura coloniale francese. — Curiosità sul sud-est asiatico
+Diversi paesi del sud-est asiatico furono colonie europee prima di ottenere l'indipendenza nel corso del Novecento. — Curiosità sul sud-est asiatico
+Il Vietnam, la Cambogia e il Laos furono un tempo parte dell'Indocina francese. — Curiosità sul sud-est asiatico
+La Malesia e Singapore furono a lungo sotto influenza britannica prima della loro indipendenza. — Curiosità sul sud-est asiatico
+L'Indonesia fu colonia olandese per secoli, con il nome di Indie orientali olandesi. — Curiosità sul sud-est asiatico
+Il tempo monsonico caratterizza il clima di gran parte del sud-est asiatico, con stagioni secche e piovose distinte. — Curiosità sul sud-est asiatico
+Le foreste pluviali del sud-est asiatico ospitano numerose specie di piante utilizzate nella medicina tradizionale locale. — Curiosità sul sud-est asiatico
+Il durian, frutto tropicale diffuso nella regione, è noto per il suo odore intenso e caratteristico. — Curiosità sul sud-est asiatico
+Il mango, frutto molto diffuso nel sud-est asiatico, viene utilizzato sia fresco sia in numerose preparazioni culinarie. — Curiosità sul sud-est asiatico
+Il cocco è largamente utilizzato nella cucina e nell'artigianato di molte comunità costiere della regione. — Curiosità sul sud-est asiatico
+Le barche tradizionali con la prua decorata sono comuni in diverse comunità di pescatori del sud-est asiatico. — Curiosità sul sud-est asiatico
+Le case su palafitte sono una soluzione architettonica diffusa in aree soggette a inondazioni stagionali della regione. — Curiosità sul sud-est asiatico
+Il gamelan, orchestra tradizionale a percussione, è tipico della cultura musicale di Indonesia e Bali. — Curiosità sul sud-est asiatico
+Il wayang kulit, teatro delle ombre indonesiano, utilizza marionette di cuoio per raccontare antiche storie. — Curiosità sul sud-est asiatico
+La danza tradizionale khmer è parte importante del patrimonio culturale della Cambogia. — Curiosità sul sud-est asiatico
+Il sud-est asiatico è attraversato periodicamente da tifoni, soprattutto lungo le coste orientali della regione. — Curiosità sul sud-est asiatico
+Le Filippine sono frequentemente interessate da tifoni provenienti dall'oceano Pacifico. — Curiosità sul sud-est asiatico
+L'arcipelago indonesiano si trova su una zona ad alta attività sismica e vulcanica. — Curiosità sul sud-est asiatico
+Il vulcano Krakatoa, in Indonesia, fu protagonista di una delle eruzioni più devastanti della storia moderna nel 1883. — Curiosità sul sud-est asiatico
+Il monte Bromo, in Indonesia, è un vulcano attivo meta di escursioni turistiche. — Curiosità sul sud-est asiatico
+La città di Hoi An, in Vietnam, conserva un centro storico riconosciuto dall'Unesco. — Curiosità sul sud-est asiatico
+Il delta del Mekong, in Vietnam, è una delle aree agricole più fertili del sud-est asiatico. — Curiosità sul sud-est asiatico
+La coltivazione del riso nel delta del Mekong sostiene una parte significativa della produzione agricola vietnamita. — Curiosità sul sud-est asiatico
+Le Filippine ospitano una delle barriere coralline più ricche di biodiversità marina al mondo. — Curiosità sul sud-est asiatico
+Il triangolo dei coralli, che comprende parte del sud-est asiatico, è un'area di grande importanza per la vita marina. — Curiosità sul sud-est asiatico
+La città di Malacca, in Malesia, fu storicamente un importante snodo commerciale tra Oriente e Occidente. — Curiosità sul sud-est asiatico
+Lo stretto di Malacca è ancora oggi una delle rotte marittime commerciali più trafficate al mondo. — Curiosità sul sud-est asiatico
+Il badminton è uno sport particolarmente popolare in diversi paesi del sud-est asiatico, come Indonesia e Malesia. — Curiosità sul sud-est asiatico
+Il sepak takraw, sport tradizionale del sud-est asiatico, si gioca colpendo una palla di rattan senza usare le mani. — Curiosità sul sud-est asiatico
+La lingua indonesiana, bahasa Indonesia, fu scelta come lingua nazionale unificante per un paese linguisticamente molto diversificato. — Curiosità sul sud-est asiatico
+Nelle Filippine si parlano oltre cento lingue e dialetti locali diversi. — Curiosità sul sud-est asiatico
+Il tempio di Shwedagon, in Myanmar, è ricoperto da lamine d'oro ed è un importante luogo di culto buddhista. — Curiosità sul sud-est asiatico
+Il fiume Irrawaddy attraversa il Myanmar da nord a sud, sostenendo l'agricoltura del paese. — Curiosità sul sud-est asiatico
+La città di Yangon fu per lungo tempo la capitale del Myanmar, prima del trasferimento a Naypyidaw. — Curiosità sul sud-est asiatico
+Il sud-est asiatico è stato per secoli un crocevia commerciale tra India, Cina e mondo arabo. — Curiosità sul sud-est asiatico
+Le spezie e i tessuti pregiati del sud-est asiatico furono a lungo merci ricercate lungo le rotte marittime asiatiche. — Curiosità sul sud-est asiatico
+Il tempio di My Son, in Vietnam, conserva rovine di antichi santuari induisti del regno champa. — Curiosità sul sud-est asiatico
+Il regno champa fu un'antica civiltà che si sviluppò nell'attuale Vietnam centrale. — Curiosità sul sud-est asiatico
+L'antico regno di Sukhothai è considerato tra le prime entità politiche significative della storia thailandese. — Curiosità sul sud-est asiatico
+Il regno di Ayutthaya fu per secoli un importante centro politico e commerciale nel sud-est asiatico. — Curiosità sul sud-est asiatico
+L'impero Khmer, con capitale Angkor, dominò gran parte del sud-est asiatico continentale nel medioevo. — Curiosità sul sud-est asiatico
+Le lingue austronesiane sono parlate in gran parte delle isole del sud-est asiatico, incluse Filippine e Indonesia. — Curiosità sul sud-est asiatico
+Le lingue austroasiatiche, come il vietnamita e il khmer, sono diffuse nella parte continentale della regione. — Curiosità sul sud-est asiatico
+Il sud-est asiatico è oggi una delle aree a più rapida crescita economica e demografica al mondo. — Curiosità sul sud-est asiatico
+Il turismo rappresenta una risorsa economica fondamentale per molti paesi del sud-est asiatico. — Curiosità sul sud-est asiatico
+Le isole Gili, in Indonesia, sono note per le spiagge e le acque cristalline che le circondano. — Curiosità sul sud-est asiatico
+La regione del sud-est asiatico ospita numerose comunità di pescatori che vivono lungo coste e fiumi. — Curiosità sul sud-est asiatico
+Le lanterne colorate sono utilizzate durante diverse festività tradizionali nei paesi del sud-est asiatico. — Curiosità sul sud-est asiatico
+Il festival delle luci di Loi Krathong, in Thailandia, prevede il rilascio di piccole barche galleggianti sui corsi d'acqua. — Curiosità sul sud-est asiatico
+Il sud-est asiatico comprende sia paesi a maggioranza musulmana sia paesi a maggioranza buddhista e cristiana. — Curiosità sul sud-est asiatico
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
