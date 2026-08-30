@@ -3202,6 +3202,106 @@ Antiche pitture rupestri nel Sahara testimoniano la presenza di animali oggi non
 La giungla, la savana e il deserto rappresentano tre dei principali biomi terrestri, ciascuno con caratteristiche climatiche ed ecologiche distinte. — Curiosità su giungla, savana e deserto
 Le foreste pluviali, le savane e i deserti insieme ospitano una parte significativa della biodiversità globale del pianeta. — Curiosità su giungla, savana e deserto
 Il capibara, il più grande roditore vivente, abita zone paludose e giungle sudamericane. — Curiosità su giungla, savana e deserto
+La Grecia è geograficamente il paese più orientale dell'Europa mediterranea meridionale. — Curiosità sul sud Europa
+Atene, capitale della Grecia, ospita l'Acropoli, complesso monumentale simbolo dell'antichità classica. — Curiosità sul sud Europa
+La Grecia comprende migliaia di isole sparse nel mar Egeo e nel mar Ionio. — Curiosità sul sud Europa
+Creta è la più grande isola greca e culla dell'antica civiltà minoica. — Curiosità sul sud Europa
+Santorini, isola greca, deve la sua caratteristica forma a un'antica eruzione vulcanica. — Curiosità sul sud Europa
+Il monte Olimpo, in Grecia, era considerato nella mitologia la dimora degli dei. — Curiosità sul sud Europa
+Cipro, isola del Mediterraneo orientale, è divisa amministrativamente in due parti distinte. — Curiosità sul sud Europa
+Malta, piccolo arcipelago nel Mediterraneo, conserva templi megalitici tra i più antichi al mondo. — Curiosità sul sud Europa
+La lingua maltese è l'unica lingua semitica ufficiale dell'Unione Europea. — Curiosità sul sud Europa
+L'Albania si affaccia sia sul mar Adriatico sia sul mar Ionio. — Curiosità sul sud Europa
+La Macedonia del Nord ospita l'antico lago di Ohrid, tra i più antichi laghi d'Europa. — Curiosità sul sud Europa
+Il Montenegro prende il nome dalle montagne scure che caratterizzano gran parte del suo territorio. — Curiosità sul sud Europa
+Le bocche di Cattaro, in Montenegro, formano una delle baie più suggestive del Mediterraneo. — Curiosità sul sud Europa
+La Bosnia ed Erzegovina ospita la città di Mostar, nota per lo storico ponte ricostruito sul fiume Neretva. — Curiosità sul sud Europa
+La Croazia si sviluppa lungo una lunga costa adriatica ricca di isole. — Curiosità sul sud Europa
+La città di Dubrovnik, in Croazia, conserva imponenti mura difensive medievali. — Curiosità sul sud Europa
+Il parco nazionale dei laghi di Plitvice, in Croazia, è noto per le sue cascate e acque turchesi. — Curiosità sul sud Europa
+La Slovenia unisce paesaggi alpini a una breve ma suggestiva costa adriatica. — Curiosità sul sud Europa
+Le grotte di Postumia, in Slovenia, formano uno dei più estesi sistemi carsici d'Europa. — Curiosità sul sud Europa
+L'Italia ha una forma geografica caratteristica, spesso paragonata a uno stivale. — Curiosità sul sud Europa
+La Sicilia è la più grande isola del Mediterraneo. — Curiosità sul sud Europa
+L'Etna, in Sicilia, è tra i vulcani attivi più alti e monitorati d'Europa. — Curiosità sul sud Europa
+La Sardegna conserva numerose costruzioni preistoriche note come nuraghi. — Curiosità sul sud Europa
+Roma, capitale d'Italia, custodisce al proprio interno anche lo stato indipendente della Città del Vaticano. — Curiosità sul sud Europa
+La Città del Vaticano è lo stato indipendente più piccolo al mondo per estensione territoriale. — Curiosità sul sud Europa
+San Marino è tra le repubbliche più antiche ancora esistenti al mondo. — Curiosità sul sud Europa
+Il Principato di Monaco, sulla costa mediterranea francese, è tra gli stati più densamente popolati al mondo. — Curiosità sul sud Europa
+La Costa Azzurra, nel sud della Francia, è nota per le sue città costiere e il clima mite. — Curiosità sul sud Europa
+La Corsica, isola francese nel Mediterraneo, ha una forte identità culturale distinta. — Curiosità sul sud Europa
+La Spagna ospita città storiche come Toledo e Granada, testimoni di secoli di convivenza tra culture diverse. — Curiosità sul sud Europa
+L'Alhambra di Granada testimonia l'influenza islamica medievale nella penisola iberica. — Curiosità sul sud Europa
+Le isole Baleari, al largo della costa spagnola, comprendono Maiorca, Minorca e Ibiza. — Curiosità sul sud Europa
+Le isole Canarie, sebbene vicine all'Africa, appartengono politicamente alla Spagna. — Curiosità sul sud Europa
+Barcellona, in Catalogna, è nota per l'architettura modernista di Antoni Gaudí. — Curiosità sul sud Europa
+La Sagrada Familia, a Barcellona, è in costruzione da oltre un secolo. — Curiosità sul sud Europa
+Il Portogallo fu tra le prime potenze marittime europee a intraprendere grandi esplorazioni oceaniche. — Curiosità sul sud Europa
+Lisbona, capitale del Portogallo, si affaccia sull'estuario del fiume Tago. — Curiosità sul sud Europa
+Il fado è un genere musicale tradizionale portoghese legato a temi malinconici. — Curiosità sul sud Europa
+Le isole Azzorre, nell'oceano Atlantico, appartengono politicamente al Portogallo. — Curiosità sul sud Europa
+L'isola di Madeira, portoghese, è nota per il clima mite e i paesaggi vulcanici. — Curiosità sul sud Europa
+Il Mar Mediterraneo bagna le coste di tutti i paesi dell'Europa meridionale. — Curiosità sul sud Europa
+Il clima mediterraneo è caratterizzato da estati calde e secche e inverni miti e piovosi. — Curiosità sul sud Europa
+L'ulivo è una pianta simbolo della tradizione agricola dell'Europa mediterranea. — Curiosità sul sud Europa
+La vite è coltivata da millenni in gran parte dei paesi del sud Europa. — Curiosità sul sud Europa
+Il vino greco, con tradizioni antichissime, comprende varietà come il retsina, aromatizzato alla resina di pino. — Curiosità sul sud Europa
+Il vino italiano è tra i più esportati al mondo, con centinaia di varietà regionali. — Curiosità sul sud Europa
+Il vino spagnolo, come il rioja, ha una lunga tradizione produttiva nella penisola iberica. — Curiosità sul sud Europa
+Il porto, vino liquoroso portoghese, prende il nome dalla città di Porto. — Curiosità sul sud Europa
+L'olio d'oliva è un ingrediente base della dieta mediterranea in tutti i paesi del sud Europa. — Curiosità sul sud Europa
+La dieta mediterranea è riconosciuta come patrimonio culturale immateriale dell'umanità dall'Unesco. — Curiosità sul sud Europa
+Il pomodoro, oggi centrale nella cucina mediterranea, giunse in Europa solo dopo la scoperta delle Americhe. — Curiosità sul sud Europa
+La pasta è un alimento simbolo della cucina italiana, con centinaia di formati regionali diversi. — Curiosità sul sud Europa
+La paella è un piatto tradizionale spagnolo originario della regione di Valencia. — Curiosità sul sud Europa
+Il bacalhau, baccalà essiccato, è un ingrediente centrale della cucina tradizionale portoghese. — Curiosità sul sud Europa
+Il moussaka è un piatto tradizionale a base di melanzane diffuso in Grecia e nei Balcani mediterranei. — Curiosità sul sud Europa
+Il feta, formaggio a base di latte di pecora o capra, è un prodotto tradizionale greco. — Curiosità sul sud Europa
+Le Alpi occidentali si affacciano anche sulla costa mediterranea della Francia e dell'Italia. — Curiosità sul sud Europa
+Gli Appennini attraversano l'intera penisola italiana da nord a sud. — Curiosità sul sud Europa
+I Pirenei separano la Spagna dal resto del continente europeo. — Curiosità sul sud Europa
+Il fiume Tago attraversa sia la Spagna sia il Portogallo prima di sfociare nell'Atlantico. — Curiosità sul sud Europa
+Il fiume Ebro è tra i principali corsi d'acqua della penisola iberica. — Curiosità sul sud Europa
+Il fiume Po è il più lungo fiume italiano e attraversa l'intera pianura padana. — Curiosità sul sud Europa
+L'antica civiltà minoica si sviluppò a Creta prima della civiltà micenea continentale greca. — Curiosità sul sud Europa
+La civiltà etrusca fiorì nell'Italia centrale prima dell'espansione della potenza romana. — Curiosità sul sud Europa
+L'impero romano ebbe origine nella penisola italiana e si estese su gran parte del Mediterraneo. — Curiosità sul sud Europa
+La dominazione islamica medievale lasciò profonde tracce architettoniche e culturali nella penisola iberica. — Curiosità sul sud Europa
+La Reconquista, conclusasi nel 1492, segnò la fine della dominazione islamica in Spagna. — Curiosità sul sud Europa
+L'impero bizantino ebbe stretti legami storici e culturali con la Grecia e parte dei Balcani. — Curiosità sul sud Europa
+L'impero ottomano dominò per secoli gran parte dei Balcani meridionali, incluse alcune regioni della Grecia. — Curiosità sul sud Europa
+Il Rinascimento, nato in Italia, influenzò profondamente l'arte europea a partire dal Quattrocento. — Curiosità sul sud Europa
+Le repubbliche marinare italiane, come Venezia e Genova, dominarono a lungo i commerci nel Mediterraneo. — Curiosità sul sud Europa
+Il flamenco è una forma d'arte tradizionale spagnola che unisce canto, chitarra e danza. — Curiosità sul sud Europa
+Il sirtaki, danza greca popolare, fu in realtà creato appositamente per un film del Novecento. — Curiosità sul sud Europa
+La tarantella è una danza tradizionale diffusa in diverse regioni dell'Italia meridionale. — Curiosità sul sud Europa
+Le feste dei santi patroni sono un'occasione tradizionale di celebrazione in numerose città del sud Europa. — Curiosità sul sud Europa
+Le processioni religiose della settimana santa hanno una lunga tradizione in Spagna, Italia e Portogallo. — Curiosità sul sud Europa
+Il carnevale ha manifestazioni tradizionali molto diverse tra le città del sud Europa. — Curiosità sul sud Europa
+Il calcio è tradizionalmente lo sport più seguito nei paesi mediterranei europei. — Curiosità sul sud Europa
+Il ciclismo ha una lunga tradizione sportiva sia in Italia sia in Spagna e Francia meridionale. — Curiosità sul sud Europa
+Le corride, tradizione controversa spagnola, restano oggi al centro di un ampio dibattito pubblico. — Curiosità sul sud Europa
+La ceramica dipinta è una tradizione artigianale diffusa in diverse regioni dell'Italia e della Spagna meridionale. — Curiosità sul sud Europa
+Le maioliche, ceramiche smaltate, presero il nome dall'isola di Maiorca, snodo commerciale medievale. — Curiosità sul sud Europa
+Il vetro di Murano, vicino Venezia, è rinomato per la sua lavorazione artigianale secolare. — Curiosità sul sud Europa
+Le città storiche del sud Europa combinano spesso architettura romana, medievale e rinascimentale. — Curiosità sul sud Europa
+Il sud Europa ospita numerosi siti archeologici e culturali riconosciuti dal patrimonio dell'Unesco. — Curiosità sul sud Europa
+Pompei ed Ercolano, in Italia, furono sepolte dall'eruzione del Vesuvio nel 79 d.C. — Curiosità sul sud Europa
+Il Vesuvio, vicino Napoli, è tra i vulcani più monitorati al mondo per la sua vicinanza a zone densamente abitate. — Curiosità sul sud Europa
+I templi di Paestum, in Italia meridionale, sono tra i meglio conservati dell'architettura greca antica. — Curiosità sul sud Europa
+La Magna Grecia comprendeva antiche colonie greche fondate nell'Italia meridionale e in Sicilia. — Curiosità sul sud Europa
+Il tempio della Concordia, ad Agrigento, è tra i templi dorici meglio conservati al mondo. — Curiosità sul sud Europa
+La città di Delfi, in Grecia, ospitava nell'antichità un celebre oracolo sacro ad Apollo. — Curiosità sul sud Europa
+Il sud Europa presenta un'elevata attività sismica in diverse aree, in particolare lungo la dorsale mediterranea. — Curiosità sul sud Europa
+Le isole Eolie, a nord della Sicilia, comprendono vulcani attivi come Stromboli e Vulcano. — Curiosità sul sud Europa
+Lo Stromboli è noto per la sua attività eruttiva pressoché continua nel corso dei secoli. — Curiosità sul sud Europa
+Il turismo costiero rappresenta una risorsa economica fondamentale per gran parte dei paesi del sud Europa. — Curiosità sul sud Europa
+Le spiagge della costa dalmata, in Croazia, sono meta turistica per le acque limpide e le isole vicine. — Curiosità sul sud Europa
+La lingua greca moderna deriva direttamente dal greco antico, pur con notevoli evoluzioni nel tempo. — Curiosità sul sud Europa
+Le lingue romanze, tra cui italiano, spagnolo, portoghese e francese, derivano tutte dal latino. — Curiosità sul sud Europa
+Il catalano è una lingua romanza parlata in Catalogna e in altre regioni della Spagna orientale. — Curiosità sul sud Europa
+Il sud Europa ospita una straordinaria varietà di paesaggi, dalle coste mediterranee alle catene montuose interne. — Curiosità sul sud Europa
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
