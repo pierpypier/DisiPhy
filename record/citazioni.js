@@ -3002,6 +3002,106 @@ La Russia ha una lunga tradizione nella produzione e nel commercio di pellicce, 
 Il museo del Cremlino conserva armi, gioielli e oggetti storici appartenuti agli zar russi. — Curiosità sulla Russia
 La Russia rimane oggi uno dei principali attori geopolitici ed economici a livello mondiale. — Curiosità sulla Russia
 Il balletto del teatro Bol'soj, a Mosca, è tra le compagnie di danza più prestigiose al mondo. — Curiosità sulla Russia
+L'Africa è il secondo continente più esteso al mondo dopo l'Asia. — Curiosità sull'Africa
+L'Africa ospita oltre cinquanta stati indipendenti, con un'enorme diversità culturale e linguistica. — Curiosità sull'Africa
+Il deserto del Sahara è il più grande deserto caldo del mondo. — Curiosità sull'Africa
+Il fiume Nilo è tradizionalmente considerato il fiume più lungo del mondo. — Curiosità sull'Africa
+Il fiume Congo attraversa una delle foreste pluviali più estese e ricche di biodiversità del pianeta. — Curiosità sull'Africa
+Il monte Kilimangiaro, in Tanzania, è la vetta più alta del continente africano. — Curiosità sull'Africa
+Il Kilimangiaro è un vulcano, sebbene attualmente non attivo. — Curiosità sull'Africa
+La grande valle del Rift attraversa gran parte dell'Africa orientale con un sistema di fratture geologiche. — Curiosità sull'Africa
+L'Africa ospita alcune delle più antiche testimonianze fossili dell'evoluzione umana. — Curiosità sull'Africa
+Numerosi ritrovamenti paleoantropologici in Africa orientale hanno contribuito a ricostruire la storia dell'evoluzione umana. — Curiosità sull'Africa
+L'antico Egitto, situato nel nord-est del continente, è tra le più antiche civiltà della storia umana. — Curiosità sull'Africa
+Le piramidi di Giza, in Egitto, sono tra le costruzioni monumentali più celebri al mondo. — Curiosità sull'Africa
+Il regno di Kush, nell'attuale Sudan, ebbe stretti legami storici e culturali con l'antico Egitto. — Curiosità sull'Africa
+L'antico regno di Axum, nell'attuale Etiopia, fu un importante centro commerciale e religioso dell'Africa orientale. — Curiosità sull'Africa
+L'impero del Mali, nell'Africa occidentale medievale, fu noto per la sua ricchezza in oro. — Curiosità sull'Africa
+La città di Timbuctù, in Mali, fu un importante centro commerciale e di studi islamici nel medioevo. — Curiosità sull'Africa
+L'impero Songhai succedette a quello del Mali come potenza dominante dell'Africa occidentale medievale. — Curiosità sull'Africa
+Il regno dello Zimbabwe medievale costruì grandi strutture in pietra, oggi note come Grande Zimbabwe. — Curiosità sull'Africa
+Il deserto del Kalahari si estende su gran parte dell'Africa meridionale. — Curiosità sull'Africa
+Il deserto della Namibia ospita alcune delle dune di sabbia più alte del mondo. — Curiosità sull'Africa
+Le cascate Vittoria, tra Zambia e Zimbabwe, sono tra le cascate più imponenti del pianeta. — Curiosità sull'Africa
+Il lago Vittoria è il più grande lago dell'Africa per superficie. — Curiosità sull'Africa
+Il lago Tanganica è tra i laghi più profondi al mondo, situato nell'Africa centrale. — Curiosità sull'Africa
+La savana africana ospita una straordinaria varietà di grandi mammiferi erbivori e carnivori. — Curiosità sull'Africa
+Il leone è tradizionalmente considerato un simbolo di forza e regalità in molte culture africane. — Curiosità sull'Africa
+L'elefante africano è il più grande mammifero terrestre esistente. — Curiosità sull'Africa
+La giraffa, animale simbolo delle savane africane, è il mammifero terrestre più alto al mondo. — Curiosità sull'Africa
+Il gorilla di montagna vive in alcune limitate aree dell'Africa centrale, tra Rwanda, Uganda e Congo. — Curiosità sull'Africa
+Lo scimpanzé, tra i parenti più stretti dell'uomo, è originario delle foreste africane. — Curiosità sull'Africa
+Il rinoceronte bianco e quello nero sono entrambi originari dell'Africa e oggi specie protette. — Curiosità sull'Africa
+La grande migrazione annuale di gnu e zebre avviene tra Serengeti e Masai Mara, tra Tanzania e Kenya. — Curiosità sull'Africa
+Il parco nazionale del Serengeti, in Tanzania, è noto per la sua straordinaria concentrazione di fauna selvatica. — Curiosità sull'Africa
+L'Africa ospita migliaia di lingue diverse, appartenenti a numerose famiglie linguistiche distinte. — Curiosità sull'Africa
+Lo swahili è una lingua diffusa in gran parte dell'Africa orientale, utilizzata anche come lingua franca. — Curiosità sull'Africa
+L'amarico è la lingua ufficiale dell'Etiopia e utilizza un proprio sistema di scrittura. — Curiosità sull'Africa
+L'Etiopia non fu mai colonizzata stabilmente da potenze europee, mantenendo la propria indipendenza per gran parte della sua storia. — Curiosità sull'Africa
+Il calendario etiope segue un computo del tempo diverso da quello gregoriano comunemente usato in occidente. — Curiosità sull'Africa
+Il caffè ha origini storiche legate alla regione etiope, secondo tradizioni e leggende locali. — Curiosità sull'Africa
+Le chiese scavate nella roccia di Lalibela, in Etiopia, sono un importante sito religioso e architettonico. — Curiosità sull'Africa
+Il Marocco ospita città storiche come Fes e Marrakech, note per i loro tradizionali souq. — Curiosità sull'Africa
+Il deserto del Sahara marocchino è meta di escursioni tra dune e oasi. — Curiosità sull'Africa
+La Tunisia conserva importanti resti archeologici dell'antica città di Cartagine. — Curiosità sull'Africa
+Cartagine fu un'antica potenza marittima del Mediterraneo, in stretta relazione storica con Roma. — Curiosità sull'Africa
+L'Algeria è geograficamente il paese più esteso del continente africano. — Curiosità sull'Africa
+La Nigeria è il paese africano più popoloso. — Curiosità sull'Africa
+Il Sudafrica ospita tre capitali distinte, ciascuna con funzioni amministrative diverse. — Curiosità sull'Africa
+Il Sudafrica è noto per la sua straordinaria diversità di ecosistemi, dalle savane alle coste oceaniche. — Curiosità sull'Africa
+Il Capo di Buona Speranza, in Sudafrica, segna simbolicamente l'incontro tra Oceano Atlantico e Indiano. — Curiosità sull'Africa
+Il Kenya è noto a livello internazionale per i suoi atleti specializzati nella corsa di fondo e mezzofondo. — Curiosità sull'Africa
+Il Ghana fu tra le prime nazioni dell'Africa subsahariana a ottenere l'indipendenza, nel 1957. — Curiosità sull'Africa
+Il Senegal ospita l'isola di Gorée, luogo simbolico legato alla storia della tratta atlantica degli schiavi. — Curiosità sull'Africa
+La tratta atlantica degli schiavi coinvolse per secoli numerose regioni costiere dell'Africa occidentale. — Curiosità sull'Africa
+Il vodou, praticato in alcune regioni dell'Africa occidentale, ha influenzato religioni sincretiche diffuse anche nelle Americhe. — Curiosità sull'Africa
+La musica africana tradizionale utilizza spesso strumenti a percussione come i tamburi djembe. — Curiosità sull'Africa
+La kora, strumento a corde dell'Africa occidentale, è tradizionalmente suonata dai griot, custodi orali della storia locale. — Curiosità sull'Africa
+I griot sono figure tradizionali che tramandano oralmente storia, genealogie e racconti in diverse culture dell'Africa occidentale. — Curiosità sull'Africa
+Le maschere tradizionali africane hanno spesso funzioni rituali legate a cerimonie e credenze religiose. — Curiosità sull'Africa
+L'arte tessile africana comprende tecniche e motivi molto diversi da regione a regione. — Curiosità sull'Africa
+Il tessuto kente, originario del Ghana, è realizzato tradizionalmente con motivi geometrici colorati. — Curiosità sull'Africa
+La batik è una tecnica di tintura tessile diffusa in diverse regioni africane. — Curiosità sull'Africa
+Le piramidi nubiane, in Sudan, sono più numerose ma generalmente più piccole rispetto a quelle egizie. — Curiosità sull'Africa
+Il deserto del Namib è considerato uno dei deserti più antichi del pianeta. — Curiosità sull'Africa
+Il Madagascar, grande isola al largo delle coste orientali africane, ospita numerose specie animali endemiche. — Curiosità sull'Africa
+Il lemure è un primate originario esclusivamente del Madagascar. — Curiosità sull'Africa
+Il baobab è un albero simbolo di diverse regioni africane, capace di immagazzinare grandi quantità d'acqua nel tronco. — Curiosità sull'Africa
+L'Africa ospita una delle più grandi riserve mondiali di minerali preziosi, tra cui oro e diamanti. — Curiosità sull'Africa
+Il Botswana è tra i principali produttori mondiali di diamanti. — Curiosità sull'Africa
+La Repubblica Democratica del Congo possiede vaste risorse minerarie, tra cui rame e cobalto. — Curiosità sull'Africa
+Il fiume Niger attraversa diversi paesi dell'Africa occidentale, sostenendo agricoltura e commerci locali. — Curiosità sull'Africa
+Il delta interno del Niger, in Mali, forma un ecosistema fluviale unico nel cuore del Sahel. — Curiosità sull'Africa
+Il Sahel è una fascia di transizione climatica tra il deserto del Sahara e le savane più a sud. — Curiosità sull'Africa
+Le popolazioni tuareg, tradizionalmente nomadi, abitano da secoli le regioni sahariane dell'Africa occidentale e centrale. — Curiosità sull'Africa
+I masai, popolazione dell'Africa orientale, sono noti per le loro tradizioni pastorali e i caratteristici abiti colorati. — Curiosità sull'Africa
+La danza tradizionale masai comprende salti verticali eseguiti durante cerimonie rituali. — Curiosità sull'Africa
+Le popolazioni pigmee dell'Africa centrale vivono tradizionalmente nelle foreste equatoriali. — Curiosità sull'Africa
+L'Africa ospita una straordinaria varietà di uccelli, tra cui lo struzzo, il più grande uccello vivente. — Curiosità sull'Africa
+Lo struzzo, pur non potendo volare, è capace di correre a velocità molto elevate. — Curiosità sull'Africa
+Il ghepardo è l'animale terrestre più veloce al mondo ed è originario delle savane africane. — Curiosità sull'Africa
+La zebra presenta un motivo a strisce unico per ogni singolo esemplare. — Curiosità sull'Africa
+Il coccodrillo del Nilo è uno dei più grandi rettili predatori ancora esistenti. — Curiosità sull'Africa
+L'ippopotamo, pur vivendo prevalentemente in acqua, è considerato uno degli animali più pericolosi dell'Africa. — Curiosità sull'Africa
+Il fiume Zambesi alimenta le cascate Vittoria prima di proseguire il proprio corso verso l'oceano Indiano. — Curiosità sull'Africa
+Il Continente africano attraversa l'equatore, presentando climi molto diversi tra nord e sud. — Curiosità sull'Africa
+L'Africa ospita numerosi parchi nazionali dedicati alla conservazione della fauna selvatica. — Curiosità sull'Africa
+Il turismo naturalistico, safari incluso, rappresenta una risorsa economica importante per diversi paesi africani. — Curiosità sull'Africa
+L'Africa ha vissuto processi di colonizzazione europea particolarmente intensi tra Ottocento e Novecento. — Curiosità sull'Africa
+La maggior parte dei paesi africani ottenne l'indipendenza politica nel corso del ventesimo secolo. — Curiosità sull'Africa
+L'Unione Africana promuove la cooperazione politica ed economica tra gli stati del continente. — Curiosità sull'Africa
+Il fiume Nilo attraversa più paesi africani, rendendo la gestione delle sue acque una questione condivisa tra stati diversi. — Curiosità sull'Africa
+Le piramidi di Meroe, in Sudan, testimoniano l'antica civiltà kushita legata culturalmente all'Egitto. — Curiosità sull'Africa
+Il calcio è lo sport più popolare in gran parte dei paesi africani. — Curiosità sull'Africa
+La coppa d'Africa è la principale competizione calcistica continentale tra le nazionali africane. — Curiosità sull'Africa
+L'atletica leggera vede tradizionalmente atleti dell'Africa orientale eccellere nelle discipline di resistenza. — Curiosità sull'Africa
+L'Africa possiede numerosi siti naturali e culturali riconosciuti dal patrimonio dell'Unesco. — Curiosità sull'Africa
+La foresta pluviale del bacino del Congo è la seconda più estesa al mondo dopo quella amazzonica. — Curiosità sull'Africa
+Il fiume Congo è tra i fiumi più profondi del mondo in alcuni tratti del suo corso. — Curiosità sull'Africa
+L'Africa ospita comunità di pescatori tradizionali lungo laghi, fiumi e coste oceaniche. — Curiosità sull'Africa
+Il cous cous, piatto tradizionale nordafricano, è diffuso soprattutto in Marocco, Algeria e Tunisia. — Curiosità sull'Africa
+Il tè alla menta è tradizionalmente servito con particolare cerimoniosità in diversi paesi del Maghreb. — Curiosità sull'Africa
+L'Africa continua oggi a rappresentare un continente di grande diversità culturale, ambientale ed economica. — Curiosità sull'Africa
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
