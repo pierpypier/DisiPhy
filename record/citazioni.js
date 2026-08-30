@@ -2502,6 +2502,106 @@ La musica tradizionale giapponese gagaku è una delle forme musicali di corte pi
 Molte città costiere giapponesi hanno sviluppato sistemi di dighe e barriere per la protezione dagli tsunami. — Curiosità sul Giappone
 Il Giappone ha attraversato un lungo periodo di isolamento internazionale, noto come sakoku, durato circa due secoli in epoca Edo. — Curiosità sul Giappone
 Il Giappone si aprì nuovamente ai commerci internazionali a metà dell'Ottocento, avviando un periodo di rapida modernizzazione. — Curiosità sul Giappone
+L'Australia è l'unico paese al mondo a occupare per intero un continente. — Curiosità sull'Australia
+L'Australia è geograficamente anche la più grande isola del pianeta. — Curiosità sull'Australia
+Gran parte del territorio australiano è occupato da zone desertiche o semi-aride, note come outback. — Curiosità sull'Australia
+La barriera corallina australiana è la più estesa struttura corallina del mondo. — Curiosità sull'Australia
+La grande barriera corallina è visibile anche dallo spazio per la sua enorme estensione. — Curiosità sull'Australia
+L'Australia ospita numerose specie animali che non si trovano naturalmente in nessun altro luogo del mondo. — Curiosità sull'Australia
+I canguri sono marsupiali simbolo dell'Australia, capaci di grandi balzi grazie alle zampe posteriori. — Curiosità sull'Australia
+I koala si nutrono quasi esclusivamente di foglie di eucalipto. — Curiosità sull'Australia
+L'ornitorinco, animale australiano, è uno dei pochi mammiferi al mondo a deporre uova. — Curiosità sull'Australia
+Il diavolo della Tasmania è un marsupiale carnivoro presente sull'isola di Tasmania. — Curiosità sull'Australia
+Il wombat, marsupiale australiano, produce escrementi di forma cubica. — Curiosità sull'Australia
+L'emù è il secondo uccello vivente più grande al mondo dopo lo struzzo, ed è originario dell'Australia. — Curiosità sull'Australia
+L'Australia ospita numerose specie di serpenti velenosi, tra le più pericolose al mondo. — Curiosità sull'Australia
+Il dingo, canide selvatico australiano, giunse nel continente migliaia di anni fa. — Curiosità sull'Australia
+Uluru, conosciuto anche come Ayers Rock, è un imponente monolito sacro per le popolazioni aborigene. — Curiosità sull'Australia
+Le popolazioni aborigene australiane rappresentano una delle culture continuamente abitate più antiche del mondo. — Curiosità sull'Australia
+Il didgeridoo è uno strumento a fiato tradizionale delle popolazioni aborigene australiane. — Curiosità sull'Australia
+La pittura aborigena tradizionale utilizza spesso puntini e simboli per raccontare storie e territori. — Curiosità sull'Australia
+Il tempo del sogno, dreamtime, indica il complesso sistema di credenze cosmologiche aborigene. — Curiosità sull'Australia
+L'Australia fu abitata dalle popolazioni indigene per decine di migliaia di anni prima dell'arrivo degli europei. — Curiosità sull'Australia
+Il navigatore James Cook esplorò la costa orientale dell'Australia nel 1770 per conto della corona britannica. — Curiosità sull'Australia
+La prima colonia britannica in Australia fu fondata nel 1788 nell'attuale area di Sydney. — Curiosità sull'Australia
+L'Australia fu inizialmente utilizzata dagli inglesi anche come colonia penale. — Curiosità sull'Australia
+La corsa all'oro dell'Ottocento portò un forte aumento della popolazione in diverse regioni australiane. — Curiosità sull'Australia
+L'Australia divenne una federazione di stati indipendente nel 1901. — Curiosità sull'Australia
+Canberra fu scelta come capitale federale dell'Australia come compromesso tra Sydney e Melbourne. — Curiosità sull'Australia
+Sydney ospita l'iconica Opera House, inaugurata nel 1973. — Curiosità sull'Australia
+Il ponte del porto di Sydney è tra le strutture più famose e fotografate dell'Australia. — Curiosità sull'Australia
+L'Australia è suddivisa in sei stati e due territori principali. — Curiosità sull'Australia
+La maggior parte della popolazione australiana vive lungo le coste orientali e sud-orientali del paese. — Curiosità sull'Australia
+Il clima australiano varia notevolmente, dalle zone tropicali del nord a quelle temperate del sud. — Curiosità sull'Australia
+L'Australia si trova nell'emisfero australe, quindi le sue stagioni sono opposte a quelle dell'emisfero settentrionale. — Curiosità sull'Australia
+Il Natale in Australia cade in piena estate, spesso festeggiato anche in spiaggia. — Curiosità sull'Australia
+L'Australia ha una popolazione relativamente bassa rispetto alla sua enorme estensione territoriale. — Curiosità sull'Australia
+Gran parte del territorio australiano è scarsamente popolato a causa delle condizioni climatiche aride dell'interno. — Curiosità sull'Australia
+L'eucalipto è una pianta molto diffusa in Australia e alla base dell'alimentazione dei koala. — Curiosità sull'Australia
+L'Australia produce e esporta grandi quantità di lana, grazie a vasti allevamenti di pecore. — Curiosità sull'Australia
+Il settore minerario, in particolare ferro e carbone, ha un ruolo importante nell'economia australiana. — Curiosità sull'Australia
+Il vino australiano, prodotto soprattutto in regioni come la Barossa Valley, è esportato in tutto il mondo. — Curiosità sull'Australia
+Il cricket e il rugby sono tra gli sport più seguiti e praticati in Australia. — Curiosità sull'Australia
+Il football australiano, l'AFL, è uno sport nato e diffuso principalmente in Australia. — Curiosità sull'Australia
+L'Australia ha ospitato le Olimpiadi estive sia nel 1956 sia nel 2000, entrambe le volte in ambito nazionale. — Curiosità sull'Australia
+Il nuoto è tradizionalmente uno degli sport in cui l'Australia eccelle a livello internazionale. — Curiosità sull'Australia
+Le grandi distanze interne hanno reso l'aviazione un mezzo di trasporto fondamentale in Australia. — Curiosità sull'Australia
+Il servizio medico aereo, Flying Doctor Service, fornisce assistenza sanitaria alle comunità isolate dell'outback. — Curiosità sull'Australia
+Molti bambini che vivono in zone remote dell'Australia seguono lezioni scolastiche a distanza. — Curiosità sull'Australia
+L'Australia ospita numerosi parchi nazionali che proteggono ecosistemi unici al mondo. — Curiosità sull'Australia
+La Tasmania, isola a sud dell'Australia continentale, presenta una natura particolarmente selvaggia e incontaminata. — Curiosità sull'Australia
+La Great Ocean Road, sulla costa sud-orientale, è famosa per i suoi panorami costieri. — Curiosità sull'Australia
+I Dodici Apostoli sono formazioni rocciose calcaree situate lungo la costa vittoriana australiana. — Curiosità sull'Australia
+L'Australia possiede vaste riserve desertiche, tra cui il grande deserto Vittoria e il deserto di Simpson. — Curiosità sull'Australia
+Il fiume Murray è tra i corsi d'acqua più lunghi e importanti dell'Australia. — Curiosità sull'Australia
+L'Australia è soggetta a periodici incendi boschivi, favoriti dal clima caldo e secco di alcune regioni. — Curiosità sull'Australia
+Alcune piante australiane, come alcune specie di eucalipto, si sono adattate a rigenerarsi dopo gli incendi. — Curiosità sull'Australia
+L'Australia adotta la guida a sinistra, come eredità del proprio passato coloniale britannico. — Curiosità sull'Australia
+La lingua ufficiale dell'Australia è l'inglese, con un accento e alcune espressioni distintive. — Curiosità sull'Australia
+L'Australia riconosce ufficialmente centinaia di lingue aborigene, molte delle quali oggi parlate da poche persone. — Curiosità sull'Australia
+Il termine barbecue, molto diffuso in Australia, indica una tradizione sociale molto sentita nel paese. — Curiosità sull'Australia
+La vegemite, una crema salata a base di estratto di lievito, è un alimento tipico della colazione australiana. — Curiosità sull'Australia
+La torta pavlova, a base di meringa e frutta, è rivendicata sia dall'Australia sia dalla Nuova Zelanda come propria origine. — Curiosità sull'Australia
+Il surf è uno sport e uno stile di vita molto diffuso lungo le coste australiane. — Curiosità sull'Australia
+Bondi Beach, a Sydney, è una delle spiagge più conosciute al mondo. — Curiosità sull'Australia
+L'Australia ha sviluppato un sistema scolastico e universitario che attira ogni anno numerosi studenti internazionali. — Curiosità sull'Australia
+Melbourne è spesso citata tra le città con la migliore qualità della vita al mondo. — Curiosità sull'Australia
+Perth, sulla costa occidentale, è tra le città più isolate al mondo rispetto ad altri grandi centri urbani. — Curiosità sull'Australia
+L'Australia ha un proprio sistema di monarchia costituzionale, con il monarca britannico come capo di stato simbolico. — Curiosità sull'Australia
+La bandiera australiana comprende la Union Jack e la costellazione della Croce del Sud. — Curiosità sull'Australia
+La Croce del Sud è una costellazione ben visibile dal cielo australiano ed è un simbolo nazionale. — Curiosità sull'Australia
+L'Australia è tra i paesi con la più alta percentuale di popolazione nata all'estero. — Curiosità sull'Australia
+L'immigrazione ha contribuito a rendere l'Australia una società multiculturale nel corso del Novecento. — Curiosità sull'Australia
+L'Australia ha una lunga tradizione nell'allevamento ovino, che ha caratterizzato per decenni la sua economia rurale. — Curiosità sull'Australia
+Le miniere di opale, come quelle di Coober Pedy, rendono l'Australia tra i maggiori produttori mondiali di questa pietra. — Curiosità sull'Australia
+La città di Coober Pedy è nota anche per le abitazioni scavate nel sottosuolo, utili contro il caldo estremo. — Curiosità sull'Australia
+L'Australia ospita specie animali marine come lo squalo bianco lungo alcune delle sue coste. — Curiosità sull'Australia
+Le meduse scatola, presenti nelle acque tropicali australiane, sono tra gli animali marini più pericolosi al mondo. — Curiosità sull'Australia
+I ragni funnel-web, originari dell'area di Sydney, sono considerati tra i ragni più velenosi al mondo. — Curiosità sull'Australia
+L'Australia ha introdotto specie non autoctone, come i conigli, che nel tempo sono diventate un problema ecologico. — Curiosità sull'Australia
+I rospi delle canne, introdotti per il controllo dei parassiti agricoli, si sono diffusi come specie invasiva in Australia. — Curiosità sull'Australia
+L'Australia occidentale ospita un lago dalle acque naturalmente rosa, chiamato lago Hillier. — Curiosità sull'Australia
+Il Kakadu National Park, nel Territorio del Nord, custodisce importanti siti di arte rupestre aborigena. — Curiosità sull'Australia
+L'Australia possiede numerosi siti naturali e culturali riconosciuti dal patrimonio dell'Unesco. — Curiosità sull'Australia
+Il termine outback indica genericamente le vaste zone remote e scarsamente popolate dell'interno australiano. — Curiosità sull'Australia
+Le lunghe distanze stradali dell'outback rendono i viaggi in auto un'esperienza particolarmente impegnativa. — Curiosità sull'Australia
+L'Australia ospita alcune delle strade più lunghe e rettilinee al mondo, come parte della Eyre Highway. — Curiosità sull'Australia
+Il treno Ghan collega Adelaide a Darwin attraversando l'entroterra australiano da sud a nord. — Curiosità sull'Australia
+L'Australia ha una fitta rete di stazioni meteorologiche per monitorare condizioni climatiche spesso estreme. — Curiosità sull'Australia
+Le tempeste di sabbia possono interessare periodicamente alcune regioni interne dell'Australia. — Curiosità sull'Australia
+L'Australia partecipa attivamente alla ricerca scientifica in Antartide, grazie alla vicinanza geografica del continente. — Curiosità sull'Australia
+Il vino, la carne bovina e i prodotti caseari sono tra le principali esportazioni agricole dell'Australia. — Curiosità sull'Australia
+L'Australia ha sviluppato negli anni una fiorente industria cinematografica, con registi conosciuti a livello internazionale. — Curiosità sull'Australia
+Molte città costiere australiane hanno sviluppato una forte cultura legata al surf e alla vita all'aperto. — Curiosità sull'Australia
+L'Australia ha una lunga tradizione nell'allevamento e nella competizione di cavalli da corsa. — Curiosità sull'Australia
+La Melbourne Cup è una delle corse ippiche più seguite e attese dell'anno in Australia. — Curiosità sull'Australia
+L'Australia ha stretti legami storici e commerciali con il Regno Unito, pur avendo un'identità nazionale distinta. — Curiosità sull'Australia
+La popolazione australiana si concentra soprattutto in un ristretto numero di grandi aree metropolitane costiere. — Curiosità sull'Australia
+L'Australia ha adottato nel tempo politiche di conservazione per proteggere specie animali a rischio di estinzione. — Curiosità sull'Australia
+Il canguro e l'emù compaiono entrambi nello stemma nazionale australiano. — Curiosità sull'Australia
+L'Australia celebra ogni anno l'Australia Day, in memoria dell'arrivo della prima flotta britannica nel 1788. — Curiosità sull'Australia
+L'Anzac Day, celebrato in Australia e Nuova Zelanda, ricorda i caduti delle forze armate dei due paesi. — Curiosità sull'Australia
+L'Australia è oggi riconosciuta come una delle nazioni più multiculturali e urbanizzate al mondo. — Curiosità sull'Australia
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
