@@ -2902,6 +2902,106 @@ L'astronomia e la matematica ebbero un importante sviluppo nel mondo islamico me
 La casa della saggezza di Baghdad fu un rinomato centro di traduzione e studio in epoca medievale. — Curiosità sul Medio Oriente
 Il termine algebra deriva da un'opera matematica scritta in lingua araba nel medioevo. — Curiosità sul Medio Oriente
 Le città storiche del Medio Oriente custodiscono un ricco patrimonio di architettura religiosa e civile. — Curiosità sul Medio Oriente
+La Russia è il paese più esteso al mondo per superficie territoriale. — Curiosità sulla Russia
+Il territorio russo si estende su undici fusi orari differenti. — Curiosità sulla Russia
+La Russia occupa parte sia del continente europeo sia di quello asiatico. — Curiosità sulla Russia
+Gli Urali sono tradizionalmente considerati il confine naturale tra Europa e Asia in territorio russo. — Curiosità sulla Russia
+Il lago Bajkal, in Siberia, è il lago più profondo e uno dei più antichi del mondo. — Curiosità sulla Russia
+Il lago Bajkal contiene una porzione significativa dell'acqua dolce liquida non ghiacciata del pianeta. — Curiosità sulla Russia
+La Siberia occupa gran parte del territorio russo, con un clima spesso rigido e continentale. — Curiosità sulla Russia
+Alcune zone della Siberia registrano tra le temperature più fredde mai misurate in aree abitate. — Curiosità sulla Russia
+Il fiume Volga è il fiume più lungo d'Europa e attraversa gran parte della Russia occidentale. — Curiosità sulla Russia
+La ferrovia transiberiana collega Mosca a Vladivostok attraversando l'intero continente asiatico russo. — Curiosità sulla Russia
+La ferrovia transiberiana è tra le linee ferroviarie continue più lunghe al mondo. — Curiosità sulla Russia
+Mosca, capitale della Russia, ospita il Cremlino, storico centro del potere politico russo. — Curiosità sulla Russia
+La Piazza Rossa, a Mosca, prende il nome da un termine russo che significa anche bella. — Curiosità sulla Russia
+La cattedrale di San Basilio, sulla Piazza Rossa, è nota per le sue cupole colorate a forma di cipolla. — Curiosità sulla Russia
+San Pietroburgo fu fondata da Pietro il Grande all'inizio del Settecento come nuova capitale imperiale. — Curiosità sulla Russia
+San Pietroburgo è nota per le sue notti bianche, periodo estivo con luce quasi continua. — Curiosità sulla Russia
+Il museo dell'Ermitage, a San Pietroburgo, custodisce una delle collezioni d'arte più vaste al mondo. — Curiosità sulla Russia
+L'alfabeto cirillico, usato per la lingua russa, prende il nome dal monaco Cirillo. — Curiosità sulla Russia
+La lingua russa appartiene al gruppo delle lingue slave orientali. — Curiosità sulla Russia
+La letteratura russa dell'Ottocento comprende autori celebri come Tolstoj, Dostoevskij e Puskin. — Curiosità sulla Russia
+Il balletto russo, con compagnie come il Bol'soj, è riconosciuto come una delle massime espressioni della danza classica. — Curiosità sulla Russia
+La musica classica russa annovera compositori come Cajkovskij, Rachmaninov e Musorgskij. — Curiosità sulla Russia
+Le uova di Fabergé, create per la famiglia imperiale russa, sono oggi opere d'arte molto ricercate. — Curiosità sulla Russia
+Le matrioske, bambole russe una dentro l'altra, sono un tradizionale souvenir artigianale russo. — Curiosità sulla Russia
+La vodka è una bevanda alcolica tradizionalmente associata alla cultura russa. — Curiosità sulla Russia
+Il borsch, zuppa a base di barbabietola, è un piatto tradizionale diffuso in Russia e in altri paesi dell'Europa orientale. — Curiosità sulla Russia
+I blini, sottili frittelle di grano saraceno o farina, sono un piatto tradizionale della cucina russa. — Curiosità sulla Russia
+Il caviale, uova di storione, è considerato in Russia una prelibatezza tradizionale. — Curiosità sulla Russia
+Il tè viene tradizionalmente preparato in Russia utilizzando il samovar, un bollitore metallico caratteristico. — Curiosità sulla Russia
+La Russia zarista fu governata per secoli da una dinastia imperiale, fino agli inizi del Novecento. — Curiosità sulla Russia
+Pietro il Grande promosse profonde riforme di modernizzazione della Russia tra Seicento e Settecento. — Curiosità sulla Russia
+Caterina la Grande governò la Russia nella seconda metà del Settecento, favorendo l'espansione territoriale dell'impero. — Curiosità sulla Russia
+La rivoluzione russa del 1917 pose fine al governo zarista e portò alla nascita dell'Unione Sovietica. — Curiosità sulla Russia
+L'Unione Sovietica fu la più vasta federazione statale della storia del Novecento. — Curiosità sulla Russia
+L'Unione Sovietica si dissolse ufficialmente nel dicembre del 1991. — Curiosità sulla Russia
+La Federazione Russa è nata come stato indipendente dopo la dissoluzione dell'Unione Sovietica. — Curiosità sulla Russia
+La Russia fu il primo paese a mandare un essere umano nello spazio, con la missione di Jurij Gagarin nel 1961. — Curiosità sulla Russia
+Lo Sputnik, lanciato dall'Unione Sovietica nel 1957, fu il primo satellite artificiale della storia. — Curiosità sulla Russia
+La città di Baikonur, oggi in Kazakistan, ospita lo storico cosmodromo utilizzato dal programma spaziale sovietico e russo. — Curiosità sulla Russia
+La Russia ha sviluppato una lunga tradizione nella ricerca scientifica in ambito matematico e fisico. — Curiosità sulla Russia
+Il tavolo periodico degli elementi fu formulato dal chimico russo Dmitrij Mendeleev nell'Ottocento. — Curiosità sulla Russia
+La Russia possiede vaste riserve naturali di gas, petrolio e minerali. — Curiosità sulla Russia
+Le foreste russe, in particolare la taiga siberiana, coprono una porzione enorme del territorio nazionale. — Curiosità sulla Russia
+La tigre siberiana è la sottospecie di tigre più grande al mondo e vive nelle foreste dell'estremo oriente russo. — Curiosità sulla Russia
+L'orso bruno è un animale simbolicamente associato alla Russia nella cultura popolare. — Curiosità sulla Russia
+La renna è un animale tradizionalmente allevato dalle popolazioni indigene del nord della Russia. — Curiosità sulla Russia
+La penisola della Kamchatka, in estremo oriente russo, è nota per i suoi numerosi vulcani attivi. — Curiosità sulla Russia
+Il clima russo varia enormemente, dalle zone artiche del nord a quelle più temperate del sud-ovest. — Curiosità sulla Russia
+Il Circolo Polare Artico attraversa il territorio settentrionale della Russia. — Curiosità sulla Russia
+La città di Vladivostok si affaccia sull'oceano Pacifico, all'estremità orientale della Russia. — Curiosità sulla Russia
+Il Cremlino di Mosca comprende al proprio interno diverse cattedrali storiche oltre alla sede del governo. — Curiosità sulla Russia
+La metropolitana di Mosca è nota per le stazioni riccamente decorate, costruite a partire dagli anni Trenta. — Curiosità sulla Russia
+Il monastero di Sergiev Posad è uno dei principali centri spirituali della chiesa ortodossa russa. — Curiosità sulla Russia
+La chiesa ortodossa russa segue il calendario giuliano per alcune festività religiose tradizionali. — Curiosità sulla Russia
+Il Natale ortodosso russo viene celebrato il 7 gennaio, secondo il calendario giuliano. — Curiosità sulla Russia
+Le icone religiose dipinte hanno una lunga tradizione artistica nella cultura ortodossa russa. — Curiosità sulla Russia
+Le città d'oro, un percorso turistico storico, comprendono alcune delle più antiche città della Russia europea. — Curiosità sulla Russia
+La città di Novgorod è tra i più antichi centri urbani della storia russa medievale. — Curiosità sulla Russia
+Il principato di Kiev è considerato dalla storiografia una delle origini storiche comuni di Russia, Ucraina e Bielorussia. — Curiosità sulla Russia
+La dominazione mongola influenzò profondamente la storia della Russia medievale per diversi secoli. — Curiosità sulla Russia
+Ivan il Terribile fu il primo sovrano russo a essere incoronato con il titolo di zar, nel Cinquecento. — Curiosità sulla Russia
+Il termine zar deriva dal latino Cesare, ripreso come titolo dai sovrani russi. — Curiosità sulla Russia
+La Russia respinse l'invasione napoleonica del 1812, episodio raccontato anche nella letteratura russa. — Curiosità sulla Russia
+Il romanzo Guerra e pace, di Tolstoj, narra eventi legati alla campagna napoleonica in Russia. — Curiosità sulla Russia
+La Russia partecipò attivamente alla seconda guerra mondiale, subendo perdite umane molto elevate. — Curiosità sulla Russia
+La battaglia di Stalingrado, combattuta anche sul suolo russo, fu una delle più decisive della seconda guerra mondiale. — Curiosità sulla Russia
+La Russia ha sviluppato una fitta rete ferroviaria per collegare le sue vaste regioni interne. — Curiosità sulla Russia
+Le città russe spesso combinano architettura storica e imponenti edifici di epoca sovietica. — Curiosità sulla Russia
+I grattacieli noti come le sette sorelle furono costruiti a Mosca in epoca staliniana. — Curiosità sulla Russia
+La Russia possiede numerosi siti naturali e culturali riconosciuti dal patrimonio dell'Unesco. — Curiosità sulla Russia
+Il palazzo d'inverno, a San Pietroburgo, fu per secoli residenza ufficiale degli zar russi. — Curiosità sulla Russia
+La reggia di Peterhof, vicino San Pietroburgo, è celebre per i suoi giochi d'acqua e fontane monumentali. — Curiosità sulla Russia
+La città di Sochi, sul Mar Nero, ha ospitato le Olimpiadi invernali nel 2014. — Curiosità sulla Russia
+La Russia ha ospitato i mondiali di calcio nel 2018, distribuiti su diverse città del paese. — Curiosità sulla Russia
+L'hockey su ghiaccio è uno degli sport più seguiti e praticati in Russia. — Curiosità sulla Russia
+Gli scacchi hanno una lunga tradizione competitiva in Russia, con numerosi campioni del mondo. — Curiosità sulla Russia
+La Russia possiede una ricca tradizione nel balletto classico, con scuole storiche come quella del teatro Mariinskij. — Curiosità sulla Russia
+Il festival del ghiaccio e della neve, in alcune città russe, presenta sculture elaborate realizzate durante l'inverno. — Curiosità sulla Russia
+Le case tradizionali in legno, izbe, sono tipiche delle zone rurali della Russia. — Curiosità sulla Russia
+La città di Kazan', capitale del Tatarstan, mostra una convivenza storica tra tradizione islamica e ortodossa. — Curiosità sulla Russia
+La Russia comprende oltre cento gruppi etnici differenti, riconosciuti ufficialmente all'interno della federazione. — Curiosità sulla Russia
+Il tatarismo e altre culture regionali contribuiscono alla diversità etnica e linguistica della Russia. — Curiosità sulla Russia
+Il fiume Ob è tra i principali corsi d'acqua della Siberia occidentale. — Curiosità sulla Russia
+Il fiume Lena attraversa gran parte della Siberia orientale prima di sfociare nel mare artico. — Curiosità sulla Russia
+La regione della Carelia, nel nord-ovest della Russia, è nota per i suoi numerosi laghi e foreste. — Curiosità sulla Russia
+La città di Murmansk, oltre il Circolo Polare Artico, è tra i maggiori centri urbani artici al mondo. — Curiosità sulla Russia
+L'aurora boreale è visibile nelle regioni settentrionali della Russia durante i mesi più bui dell'anno. — Curiosità sulla Russia
+La Russia possiede una lunga tradizione nella produzione artigianale di lacca dipinta, come a Palekh. — Curiosità sulla Russia
+Le uova decorate con motivi tradizionali sono un elemento tipico dell'artigianato popolare russo. — Curiosità sulla Russia
+La danza folkloristica russa comprende movimenti acrobatici caratteristici, come lo squat kazachok. — Curiosità sulla Russia
+Il circo russo ha una lunga tradizione artistica, con scuole specializzate nella formazione degli artisti. — Curiosità sulla Russia
+La Russia ha sviluppato importanti tradizioni cinematografiche fin dai primi decenni del Novecento sovietico. — Curiosità sulla Russia
+Il montaggio cinematografico sovietico influenzò profondamente la storia del linguaggio filmico mondiale. — Curiosità sulla Russia
+La città di Ekaterinburg segna simbolicamente il confine tra la Russia europea e quella asiatica. — Curiosità sulla Russia
+Le steppe russe meridionali sono storicamente associate a popolazioni nomadi e all'allevamento equino. — Curiosità sulla Russia
+Il cavallo ha da sempre un ruolo importante nella cultura e nella storia militare russa. — Curiosità sulla Russia
+La Russia ha una lunga tradizione nella produzione e nel commercio di pellicce, fin dall'epoca zarista. — Curiosità sulla Russia
+Il museo del Cremlino conserva armi, gioielli e oggetti storici appartenuti agli zar russi. — Curiosità sulla Russia
+La Russia rimane oggi uno dei principali attori geopolitici ed economici a livello mondiale. — Curiosità sulla Russia
+Il balletto del teatro Bol'soj, a Mosca, è tra le compagnie di danza più prestigiose al mondo. — Curiosità sulla Russia
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
