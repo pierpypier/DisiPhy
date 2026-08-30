@@ -2602,6 +2602,106 @@ Il canguro e l'emù compaiono entrambi nello stemma nazionale australiano. — C
 L'Australia celebra ogni anno l'Australia Day, in memoria dell'arrivo della prima flotta britannica nel 1788. — Curiosità sull'Australia
 L'Anzac Day, celebrato in Australia e Nuova Zelanda, ricorda i caduti delle forze armate dei due paesi. — Curiosità sull'Australia
 L'Australia è oggi riconosciuta come una delle nazioni più multiculturali e urbanizzate al mondo. — Curiosità sull'Australia
+La Cina è il paese più popoloso al mondo insieme all'India, con oltre un miliardo di abitanti. — Curiosità sulla Cina
+La grande muraglia cinese si estende per migliaia di chilometri attraverso il nord del paese. — Curiosità sulla Cina
+La grande muraglia non è visibile a occhio nudo dallo spazio, contrariamente a un luogo comune diffuso. — Curiosità sulla Cina
+La Cina ha una delle storie scritte continue più lunghe al mondo, risalente a migliaia di anni fa. — Curiosità sulla Cina
+La scrittura cinese utilizza caratteri logografici anziché un alfabeto fonetico. — Curiosità sulla Cina
+Il cinese mandarino è la lingua con il maggior numero di parlanti nativi al mondo. — Curiosità sulla Cina
+In Cina si parlano numerose lingue e dialetti regionali, non sempre reciprocamente comprensibili. — Curiosità sulla Cina
+La carta, la polvere da sparo, la bussola e la stampa sono considerate tra le principali invenzioni cinesi antiche. — Curiosità sulla Cina
+La seta era prodotta in Cina già in epoca antica, dando origine alla celebre via commerciale omonima. — Curiosità sulla Cina
+La via della seta collegava la Cina all'Europa attraverso una rete di rotte commerciali terrestri e marittime. — Curiosità sulla Cina
+L'esercito di terracotta, scoperto nel 1974, custodisce migliaia di statue realizzate per il primo imperatore cinese. — Curiosità sulla Cina
+La città proibita di Pechino fu residenza imperiale per secoli, durante le dinastie Ming e Qing. — Curiosità sulla Cina
+La città proibita prende il nome dal fatto che l'accesso era vietato ai comuni cittadini in epoca imperiale. — Curiosità sulla Cina
+Il fiume Yangtze è il fiume più lungo dell'Asia e tra i più lunghi al mondo. — Curiosità sulla Cina
+Il fiume Giallo, Huang He, è considerato una delle culle della civiltà cinese antica. — Curiosità sulla Cina
+La diga delle Tre Gole, sul fiume Yangtze, è una delle più grandi opere idroelettriche al mondo. — Curiosità sulla Cina
+Il panda gigante è un animale simbolo della Cina, oggi protetto in numerose riserve naturali. — Curiosità sulla Cina
+I panda giganti si nutrono quasi esclusivamente di bambù. — Curiosità sulla Cina
+Il capodanno cinese segue il calendario lunare e cade in un periodo variabile tra gennaio e febbraio. — Curiosità sulla Cina
+Ogni anno del calendario cinese è associato a uno dei dodici animali dello zodiaco tradizionale. — Curiosità sulla Cina
+Il tè ha origini antichissime in Cina, dove la sua coltivazione e preparazione sono parte della cultura tradizionale. — Curiosità sulla Cina
+La cerimonia del tè cinese segue rituali precisi legati all'ospitalità e al rispetto reciproco. — Curiosità sulla Cina
+La cucina cinese varia enormemente da regione a regione, con tradizioni culinarie molto diverse tra loro. — Curiosità sulla Cina
+Le bacchette sono lo strumento tradizionale per mangiare nella cultura cinese. — Curiosità sulla Cina
+Il riso è l'alimento base della dieta in gran parte della Cina meridionale. — Curiosità sulla Cina
+Nel nord della Cina, la dieta tradizionale si basa maggiormente su grano e prodotti derivati. — Curiosità sulla Cina
+Confucio, filosofo vissuto nel VI-V secolo a.C., ha profondamente influenzato la cultura e l'etica cinese. — Curiosità sulla Cina
+Il taoismo, filosofia e religione cinese, si ispira agli insegnamenti attribuiti a Lao Tzu. — Curiosità sulla Cina
+Il buddhismo giunse in Cina dall'India e si diffuse ampiamente a partire dai primi secoli dopo Cristo. — Curiosità sulla Cina
+Il simbolo dello yin e yang rappresenta l'equilibrio tra forze complementari nella filosofia cinese tradizionale. — Curiosità sulla Cina
+La medicina tradizionale cinese comprende pratiche come l'agopuntura, diffusa da secoli nel paese. — Curiosità sulla Cina
+Il feng shui è una pratica tradizionale cinese legata alla disposizione armoniosa degli spazi. — Curiosità sulla Cina
+Le arti marziali cinesi, come il kung fu, hanno una lunga tradizione storica e culturale. — Curiosità sulla Cina
+Il tai chi, praticato oggi in tutto il mondo, ha origini nelle arti marziali tradizionali cinesi. — Curiosità sulla Cina
+La porcellana cinese, prodotta fin dall'antichità, ha dato il nome comune con cui è conosciuta in molte lingue. — Curiosità sulla Cina
+La città di Jingdezhen è storicamente famosa per la produzione di porcellana di alta qualità. — Curiosità sulla Cina
+La calligrafia è considerata in Cina una forma d'arte di grande prestigio culturale. — Curiosità sulla Cina
+La pittura tradizionale cinese utilizza spesso inchiostro e pennelli su carta o seta. — Curiosità sulla Cina
+Il drago è un simbolo tradizionale cinese associato a potere, fortuna e prosperità. — Curiosità sulla Cina
+La danza del leone e del drago sono tradizioni diffuse durante le celebrazioni del capodanno cinese. — Curiosità sulla Cina
+La città di Xi'an fu per secoli capitale di diverse dinastie imperiali cinesi. — Curiosità sulla Cina
+Pechino è oggi la capitale della Repubblica Popolare Cinese. — Curiosità sulla Cina
+Shanghai è una delle città più popolose e importanti a livello economico della Cina moderna. — Curiosità sulla Cina
+Hong Kong, con un proprio sistema amministrativo distinto, è tornata sotto sovranità cinese nel 1997. — Curiosità sulla Cina
+Il treno ad alta velocità cinese collega efficacemente numerose grandi città del paese. — Curiosità sulla Cina
+La Cina possiede una delle reti ferroviarie ad alta velocità più estese al mondo. — Curiosità sulla Cina
+La Cina ha sviluppato un proprio programma spaziale, con missioni verso l'orbita terrestre e la Luna. — Curiosità sulla Cina
+La stazione spaziale cinese Tiangong è stata assemblata in orbita nel corso degli ultimi anni. — Curiosità sulla Cina
+La Cina è tra i maggiori produttori mondiali di beni manifatturieri ed elettronici. — Curiosità sulla Cina
+Molte città cinesi hanno vissuto una rapida urbanizzazione a partire dagli ultimi decenni del Novecento. — Curiosità sulla Cina
+Il fiume Yangtze attraversa alcune delle regioni più densamente popolate della Cina centrale e orientale. — Curiosità sulla Cina
+La Cina possiede una fitta rete di templi buddhisti e taoisti sparsi su tutto il territorio. — Curiosità sulla Cina
+Il monte Tai è uno dei cinque monti sacri della tradizione cinese, meta di pellegrinaggi da secoli. — Curiosità sulla Cina
+La Cina ha sviluppato nei secoli un sofisticato sistema di esami imperiali per selezionare i funzionari statali. — Curiosità sulla Cina
+Il sistema degli esami imperiali cinesi rimase in vigore, con modifiche, per oltre un millennio. — Curiosità sulla Cina
+La dinastia Han diede il nome all'etnia maggioritaria della popolazione cinese odierna. — Curiosità sulla Cina
+La Cina riconosce ufficialmente numerose minoranze etniche oltre alla maggioranza han. — Curiosità sulla Cina
+Il fumetto tradizionale cinese, manhua, ha una storia distinta rispetto ai fumetti giapponesi o occidentali. — Curiosità sulla Cina
+L'opera di Pechino è una forma teatrale tradizionale che unisce canto, recitazione, acrobazia e trucco elaborato. — Curiosità sulla Cina
+Le maschere colorate dell'opera cinese rappresentano tratti caratteriali codificati dei personaggi. — Curiosità sulla Cina
+Il gioco del mahjong, molto diffuso in Cina, si gioca tradizionalmente con tessere numerate e simboliche. — Curiosità sulla Cina
+Il go, antico gioco da tavolo strategico, ha origini cinesi risalenti a migliaia di anni fa. — Curiosità sulla Cina
+Le lanterne colorate sono un elemento tradizionale delle celebrazioni cinesi, in particolare durante il festival delle lanterne. — Curiosità sulla Cina
+Il festival di metà autunno celebra la luna piena con il consumo tipico dei mooncake. — Curiosità sulla Cina
+La Cina ha sviluppato nei secoli tecniche avanzate di irrigazione per sostenere l'agricoltura su larga scala. — Curiosità sulla Cina
+Il bambù è una pianta molto diffusa in Cina, utilizzata per costruzioni, oggetti e come alimento per i panda. — Curiosità sulla Cina
+La Cina possiede numerosi siti naturali e culturali riconosciuti dal patrimonio dell'Unesco. — Curiosità sulla Cina
+Il paesaggio carsico della regione dello Guilin è noto per le sue caratteristiche formazioni calcaree. — Curiosità sulla Cina
+Il monte Everest, pur situato al confine, è accessibile anche dal versante tibetano cinese. — Curiosità sulla Cina
+Il Tibet, regione autonoma della Cina, ospita un'antica tradizione culturale e religiosa buddhista. — Curiosità sulla Cina
+La Cina ha un'estensione territoriale tale da comprendere più fusi orari geografici, pur adottandone ufficialmente uno solo. — Curiosità sulla Cina
+Le città cinesi moderne combinano spesso grattacieli contemporanei e quartieri storici tradizionali. — Curiosità sulla Cina
+La Cina ha sviluppato negli ultimi decenni una fitta rete di metropolitane nelle principali città. — Curiosità sulla Cina
+Il fiume Perla attraversa la regione economica del delta del Guangdong, tra le più industrializzate del paese. — Curiosità sulla Cina
+La Cina è uno dei principali produttori ed esportatori mondiali di prodotti tessili. — Curiosità sulla Cina
+Il commercio della porcellana e della seta ha reso la Cina un punto di riferimento economico fin dall'antichità. — Curiosità sulla Cina
+La cucina cantonese, originaria del sud della Cina, è tra le più conosciute a livello internazionale. — Curiosità sulla Cina
+Il tofu, alimento derivato dalla soia, ha origini antiche nella tradizione culinaria cinese. — Curiosità sulla Cina
+La Cina è tra i principali produttori mondiali di riso, grano e altri cereali. — Curiosità sulla Cina
+Il concetto filosofico del qi indica un'energia vitale centrale in diverse tradizioni cinesi, incluse medicina e arti marziali. — Curiosità sulla Cina
+Il colore rosso è tradizionalmente associato in Cina a fortuna, gioia e prosperità. — Curiosità sulla Cina
+Il numero otto è considerato particolarmente fortunato nella cultura popolare cinese. — Curiosità sulla Cina
+Il numero quattro è spesso evitato in Cina per la sua somiglianza fonetica con la parola morte. — Curiosità sulla Cina
+La Cina celebra la festa delle barche drago, legata a un'antica leggenda e a gare remiere tradizionali. — Curiosità sulla Cina
+Il ping pong è uno sport particolarmente popolare e praticato a ogni livello in Cina. — Curiosità sulla Cina
+La Cina ha ospitato le Olimpiadi estive a Pechino nel 2008 e quelle invernali nel 2022. — Curiosità sulla Cina
+La Grande Sala del Popolo, a Pechino, è sede di importanti funzioni politiche e cerimoniali cinesi. — Curiosità sulla Cina
+Il fiume Yangtze ospita al suo interno anche numerose isole fluviali abitate. — Curiosità sulla Cina
+La Cina ha una lunga tradizione nella coltivazione e lavorazione della giada, pietra considerata preziosa e simbolica. — Curiosità sulla Cina
+La giada era tradizionalmente associata in Cina a purezza, virtù e longevità. — Curiosità sulla Cina
+Il fiume Yangtze scorre per gran parte del suo corso attraverso gole e canyon spettacolari. — Curiosità sulla Cina
+La Cina ha sviluppato antiche tecniche di stampa a caratteri mobili, precedenti a quelle europee. — Curiosità sulla Cina
+La polvere da sparo, inventata in Cina, fu inizialmente utilizzata anche per scopi rituali e non solo bellici. — Curiosità sulla Cina
+La bussola magnetica, sviluppata in Cina, ebbe un ruolo fondamentale per la navigazione successiva in tutto il mondo. — Curiosità sulla Cina
+Le tombe imperiali cinesi, come quelle della dinastia Ming, custodiscono importanti testimonianze storiche e artistiche. — Curiosità sulla Cina
+La Cina possiede una fitta rete di grotte artistiche buddhiste, come quelle di Mogao lungo la via della seta. — Curiosità sulla Cina
+Il fiume Mekong nasce sull'altopiano tibetano cinese prima di attraversare diversi paesi del sud-est asiatico. — Curiosità sulla Cina
+La Cina è tra i paesi con la maggiore diversità paesaggistica, dalle catene montuose ai deserti fino alle coste tropicali. — Curiosità sulla Cina
+Il deserto del Gobi si estende tra la Cina settentrionale e la Mongolia. — Curiosità sulla Cina
+Le città cinesi ospitano spesso mercati notturni animati da cibo di strada e piccoli commerci. — Curiosità sulla Cina
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
