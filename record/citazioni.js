@@ -3302,6 +3302,106 @@ La lingua greca moderna deriva direttamente dal greco antico, pur con notevoli e
 Le lingue romanze, tra cui italiano, spagnolo, portoghese e francese, derivano tutte dal latino. — Curiosità sul sud Europa
 Il catalano è una lingua romanza parlata in Catalogna e in altre regioni della Spagna orientale. — Curiosità sul sud Europa
 Il sud Europa ospita una straordinaria varietà di paesaggi, dalle coste mediterranee alle catene montuose interne. — Curiosità sul sud Europa
+La Polonia è il paese più esteso dell'Europa centrale per superficie territoriale. — Curiosità sul centro Europa
+Cracovia fu per secoli la capitale storica della Polonia prima del trasferimento a Varsavia. — Curiosità sul centro Europa
+La miniera di sale di Wieliczka, vicino Cracovia, è scavata e decorata da secoli di attività estrattiva. — Curiosità sul centro Europa
+Il fiume Vistola attraversa la Polonia da sud a nord fino al Mar Baltico. — Curiosità sul centro Europa
+La foresta di Bialowieza, tra Polonia e Bielorussia, conserva una delle ultime foreste primarie d'Europa. — Curiosità sul centro Europa
+Il bisonte europeo sopravvive allo stato selvatico soprattutto nella foresta di Bialowieza. — Curiosità sul centro Europa
+La Slesia, regione storica polacca, fu a lungo contesa tra diverse potenze dell'Europa centrale. — Curiosità sul centro Europa
+La Repubblica Ceca è tradizionalmente suddivisa nelle regioni storiche di Boemia e Moravia. — Curiosità sul centro Europa
+Praga è soprannominata la città delle cento torri per la ricchezza dei suoi campanili e guglie storiche. — Curiosità sul centro Europa
+L'orologio astronomico di Praga, risalente al medioevo, è ancora funzionante e visitabile. — Curiosità sul centro Europa
+La Repubblica Ceca è tra i maggiori produttori mondiali di birra per consumo pro capite. — Curiosità sul centro Europa
+La regione della Moravia è nota anche per una tradizione vinicola distinta da quella boema. — Curiosità sul centro Europa
+La Slovacchia condivide con l'Ucraina un tratto di confine orientale dell'Europa centrale. — Curiosità sul centro Europa
+I monti Tatra, tra Slovacchia e Polonia, ospitano le vette più elevate dei Carpazi occidentali. — Curiosità sul centro Europa
+Bratislava, capitale della Slovacchia, si trova a breve distanza sia dall'Austria sia dall'Ungheria. — Curiosità sul centro Europa
+L'Ungheria è attraversata dal fiume Danubio, che divide la capitale Budapest in due parti storiche. — Curiosità sul centro Europa
+Il lago Balaton, in Ungheria, è tra i più grandi laghi dell'Europa centrale. — Curiosità sul centro Europa
+La puszta, vasta pianura ungherese, era tradizionalmente legata all'allevamento equino e bovino. — Curiosità sul centro Europa
+L'Austria è geograficamente in gran parte occupata da rilievi alpini. — Curiosità sul centro Europa
+Vienna fu per secoli capitale dell'impero asburgico, potenza multietnica dell'Europa centrale. — Curiosità sul centro Europa
+Il palazzo di Schönbrunn, a Vienna, fu residenza estiva della famiglia imperiale asburgica. — Curiosità sul centro Europa
+Salisburgo, città austriaca, diede i natali al compositore Wolfgang Amadeus Mozart. — Curiosità sul centro Europa
+L'Austria ha una lunga tradizione nella musica classica, con centri storici come Vienna e Salisburgo. — Curiosità sul centro Europa
+La Germania è tra le principali potenze economiche dell'Europa centrale contemporanea. — Curiosità sul centro Europa
+Il fiume Reno attraversa la Germania da sud a nord-ovest, sostenendo un'intensa attività commerciale. — Curiosità sul centro Europa
+La foresta nera, nel sud-ovest della Germania, prende il nome dalla fitta vegetazione di conifere. — Curiosità sul centro Europa
+Il castello di Neuschwanstein, in Baviera, fu fatto costruire dal re Ludovico II nell'Ottocento. — Curiosità sul centro Europa
+Berlino fu divisa da un muro tra il 1961 e il 1989, simbolo della divisione politica del dopoguerra. — Curiosità sul centro Europa
+Monaco di Baviera è nota per l'Oktoberfest, tradizionale festa popolare legata alla birra. — Curiosità sul centro Europa
+La Germania ha una lunga tradizione nella produzione automobilistica e ingegneristica. — Curiosità sul centro Europa
+La Svizzera è divisa in cantoni con un elevato grado di autonomia amministrativa. — Curiosità sul centro Europa
+La Svizzera riconosce ufficialmente quattro lingue nazionali: tedesco, francese, italiano e romancio. — Curiosità sul centro Europa
+Le Alpi svizzere ospitano il Cervino, una delle vette più fotografate e riconoscibili d'Europa. — Curiosità sul centro Europa
+Il ghiacciaio dell'Aletsch, in Svizzera, è tra i più estesi delle Alpi. — Curiosità sul centro Europa
+La Svizzera è nota per la tradizione orologiera, sviluppata a partire dal Cinquecento. — Curiosità sul centro Europa
+Ginevra, città svizzera, ospita numerose organizzazioni internazionali. — Curiosità sul centro Europa
+Il Liechtenstein è uno dei più piccoli stati indipendenti al mondo, incastonato tra Svizzera e Austria. — Curiosità sul centro Europa
+Il Liechtenstein non possiede un proprio esercito permanente dal XIX secolo. — Curiosità sul centro Europa
+L'Europa centrale comprende storicamente aree un tempo parte dell'impero austro-ungarico. — Curiosità sul centro Europa
+L'impero austro-ungarico riuniva popoli e lingue molto diverse fino al termine della prima guerra mondiale. — Curiosità sul centro Europa
+La dissoluzione dell'impero austro-ungarico, nel 1918, portò alla nascita di nuovi stati nazionali in Europa centrale. — Curiosità sul centro Europa
+La Cecoslovacchia, nata nel 1918, si divise pacificamente in Repubblica Ceca e Slovacchia nel 1993. — Curiosità sul centro Europa
+La cortina di ferro attraversava simbolicamente il cuore dell'Europa centrale durante la guerra fredda. — Curiosità sul centro Europa
+Il patto di Varsavia legava militarmente diversi paesi dell'Europa centrale e orientale all'Unione Sovietica. — Curiosità sul centro Europa
+La caduta del muro di Berlino, nel 1989, avviò profonde trasformazioni politiche in tutta l'Europa centrale. — Curiosità sul centro Europa
+La Polonia, l'Ungheria, la Repubblica Ceca e la Slovacchia formano il cosiddetto gruppo di Visegrad. — Curiosità sul centro Europa
+I Carpazi attraversano diversi paesi dell'Europa centrale, tra cui Polonia, Slovacchia e Repubblica Ceca. — Curiosità sul centro Europa
+Il fiume Elba nasce in territorio ceco prima di attraversare la Germania fino al Mare del Nord. — Curiosità sul centro Europa
+La città di Norimberga, in Germania, conserva un centro storico medievale ben preservato. — Curiosità sul centro Europa
+Il duomo di Colonia, in Germania, fu completato dopo secoli di lavori interrotti e ripresi. — Curiosità sul centro Europa
+La Repubblica Ceca ospita numerosi castelli medievali sparsi su tutto il territorio nazionale. — Curiosità sul centro Europa
+Il castello di Praga è tra i complessi castellani antichi più estesi al mondo. — Curiosità sul centro Europa
+Budapest ospita terme storiche alimentate da sorgenti naturali presenti nel sottosuolo urbano. — Curiosità sul centro Europa
+L'Ungheria è tra i paesi europei con la maggiore tradizione nell'uso terapeutico delle acque termali. — Curiosità sul centro Europa
+La cucina ungherese utilizza ampiamente la paprika come spezia caratteristica. — Curiosità sul centro Europa
+Il gulasch, piatto a base di carne e paprika, è tradizionalmente associato alla cucina ungherese. — Curiosità sul centro Europa
+La cucina austriaca è nota per dolci tradizionali come la sacher torte, originaria di Vienna. — Curiosità sul centro Europa
+Il wiener schnitzel, cotoletta impanata, è un piatto tradizionale austriaco molto diffuso. — Curiosità sul centro Europa
+La cucina tedesca varia notevolmente da regione a regione, con specialità legate a carne, patate e cavolo. — Curiosità sul centro Europa
+Il cioccolato svizzero ha una tradizione produttiva rinomata a livello internazionale. — Curiosità sul centro Europa
+Il formaggio svizzero, come l'emmental, è conosciuto per i suoi caratteristici fori. — Curiosità sul centro Europa
+La Polonia ha una lunga tradizione nella produzione di vodka, bevanda diffusa in tutta l'Europa centro-orientale. — Curiosità sul centro Europa
+Il pierogi, raviolo ripieno tradizionale polacco, si prepara con diversi ripieni dolci o salati. — Curiosità sul centro Europa
+La Slovacchia conserva numerosi villaggi tradizionali con architettura in legno tipica dei Carpazi. — Curiosità sul centro Europa
+L'Europa centrale ha dato i natali a numerosi compositori di musica classica, tra cui austriaci e tedeschi. — Curiosità sul centro Europa
+Ludwig van Beethoven trascorse gran parte della propria vita a Vienna, pur essendo nato a Bonn. — Curiosità sul centro Europa
+Johann Sebastian Bach nacque e operò prevalentemente in territorio tedesco nel Settecento. — Curiosità sul centro Europa
+Franz Kafka, scrittore di lingua tedesca, nacque e visse a lungo a Praga. — Curiosità sul centro Europa
+L'università di Praga, fondata nel 1348, è tra le più antiche istituzioni accademiche dell'Europa centrale. — Curiosità sul centro Europa
+L'università di Cracovia, fondata nel Trecento, è tra le più antiche della Polonia. — Curiosità sul centro Europa
+La riforma protestante, avviata da Martin Lutero, ebbe origine in territorio tedesco nel XVI secolo. — Curiosità sul centro Europa
+La dieta di Worms, nel 1521, fu un evento chiave della prima fase della riforma protestante tedesca. — Curiosità sul centro Europa
+La Baviera, regione tedesca meridionale, conserva forti tradizioni popolari legate a costumi e feste locali. — Curiosità sul centro Europa
+La Foresta Boema, tra Repubblica Ceca e Germania, ospita ampie aree naturali protette. — Curiosità sul centro Europa
+Il fiume Morava attraversa la Moravia prima di confluire nel Danubio. — Curiosità sul centro Europa
+Vienna fu a lungo un importante centro per la produzione e il commercio di caffè in Europa centrale. — Curiosità sul centro Europa
+I caffè storici viennesi sono tradizionalmente luoghi di incontro culturale e intellettuale. — Curiosità sul centro Europa
+La Polonia ha una lunga tradizione ambrarina, legata alla lavorazione dell'ambra baltica. — Curiosità sul centro Europa
+La via dell'ambra collegava in epoca antica il Mar Baltico con il Mediterraneo, attraversando l'Europa centrale. — Curiosità sul centro Europa
+Il castello di Malbork, in Polonia, è tra le fortezze in mattoni medievali più estese d'Europa. — Curiosità sul centro Europa
+L'Europa centrale ha vissuto profonde migrazioni di popoli durante il periodo altomedievale. — Curiosità sul centro Europa
+Le popolazioni slave si stanziarono in gran parte dell'Europa centrale e orientale a partire dall'altomedioevo. — Curiosità sul centro Europa
+Gli Asburgo governarono per secoli su un vasto territorio multietnico dell'Europa centrale. — Curiosità sul centro Europa
+La città di Bratislava fu per un periodo sede di incoronazione dei sovrani ungheresi. — Curiosità sul centro Europa
+La Slovacchia ospita numerosi castelli, tra cui quello di Spis, tra i più grandi complessi castellani d'Europa. — Curiosità sul centro Europa
+L'Europa centrale presenta un clima prevalentemente continentale, con inverni freddi ed estati calde. — Curiosità sul centro Europa
+Le foreste di conifere e latifoglie coprono ampie porzioni del territorio dell'Europa centrale. — Curiosità sul centro Europa
+Il lupo e la lince sono tornati a popolare alcune aree boschive dell'Europa centrale negli ultimi decenni. — Curiosità sul centro Europa
+La Germania ha una fitta rete autostradale, nota anche per tratti privi di limite di velocità generale. — Curiosità sul centro Europa
+La Svizzera ha sviluppato una fitta ed efficiente rete ferroviaria attraverso il territorio alpino. — Curiosità sul centro Europa
+Il traforo del San Gottardo, in Svizzera, è tra i tunnel ferroviari più lunghi al mondo. — Curiosità sul centro Europa
+L'Austria ha una lunga tradizione negli sport invernali, praticati soprattutto sulle Alpi orientali. — Curiosità sul centro Europa
+La Polonia ha sviluppato negli ultimi decenni una crescita economica significativa dopo la caduta del comunismo. — Curiosità sul centro Europa
+La Repubblica Ceca è tra i paesi con la maggiore densità di castelli e manieri storici in Europa. — Curiosità sul centro Europa
+L'Ungheria conserva una forte identità culturale distinta rispetto ai popoli slavi e germanici vicini. — Curiosità sul centro Europa
+La lingua ungherese appartiene al gruppo ugro-finnico, distinto dalla maggioranza delle lingue europee circostanti. — Curiosità sul centro Europa
+Il tedesco è parlato ufficialmente in Germania, Austria e in parte della Svizzera e del Liechtenstein. — Curiosità sul centro Europa
+Le lingue slave occidentali, come polacco, ceco e slovacco, sono reciprocamente comprensibili in una certa misura. — Curiosità sul centro Europa
+L'Europa centrale ha una lunga tradizione nella lavorazione del vetro, in particolare in Boemia. — Curiosità sul centro Europa
+Il cristallo di Boemia è rinomato a livello internazionale per la qualità della sua lavorazione artigianale. — Curiosità sul centro Europa
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
