@@ -4102,6 +4102,106 @@ La natura non conosce salti bruschi, ma solo trasformazioni lente e continue. �
 Classificare il mondo vivente è un atto di umiltà prima ancora che di scienza. — attribuita a Linneo
 Ogni specie porta in sé un nome che racconta la sua storia naturale. — attribuita a Linneo
 La diversità della vita è la prova più semplice e più grande della fecondità della natura. — attribuita a Linneo
+Gli oceani coprono circa il settantuno per cento della superficie terrestre.
+Il Pacifico è il più esteso e il più profondo tra i cinque oceani del pianeta.
+La Fossa delle Marianne, nell'Oceano Pacifico, è il punto più profondo conosciuto degli oceani terrestri.
+Il punto più profondo della Fossa delle Marianne è chiamato Challenger Deep.
+La profondità media degli oceani si stima attorno ai tremilasettecento metri.
+L'acqua marina appare blu principalmente perché assorbe le lunghe lunghezze d'onda della luce e riflette quelle più corte.
+Le maree sono generate soprattutto dall'attrazione gravitazionale della Luna, con un contributo anche del Sole.
+La Grande Barriera Corallina, al largo dell'Australia, è la più estesa struttura corallina del mondo.
+Le sorgenti idrotermali sui fondali oceanici ospitano forme di vita che ricavano energia dalla chemiosintesi anziché dalla luce solare.
+La dorsale medio-oceanica è la catena montuosa più lunga della Terra, quasi interamente sommersa.
+La circolazione termoalina trasporta calore e sali attraverso gli oceani di tutto il pianeta, influenzando i climi regionali.
+La Corrente del Golfo trasporta acque calde dai Caraibi verso l'Europa settentrionale.
+Il fitoplancton marino produce una parte significativa dell'ossigeno presente nell'atmosfera terrestre.
+Gran parte dei fondali oceanici resta ancora oggi meno esplorata rispetto alla superficie della Luna.
+Il batiscafo Trieste raggiunse per la prima volta il Challenger Deep nel 1960, con a bordo Jacques Piccard e Don Walsh.
+Nel 2012 il regista James Cameron compì una discesa in solitaria fino al Challenger Deep a bordo del sommergibile Deepsea Challenger.
+Il relitto del Titanic fu individuato sul fondale dell'Atlantico solo nel 1985.
+Le grandi correnti oceaniche circolari sono chiamate gyre e concentrano al loro interno rifiuti galleggianti come la plastica.
+Il cosiddetto Great Pacific Garbage Patch è un'accumulazione di detriti plastici nell'Oceano Pacifico settentrionale.
+La Corrente Circumpolare Antartica è la corrente oceanica più estesa al mondo per portata d'acqua trasportata.
+Il fenomeno climatico El Niño altera periodicamente le temperature superficiali del Pacifico tropicale, con effetti su scala globale.
+Il cosiddetto anello di fuoco del Pacifico è una fascia di intensa attività sismica e vulcanica che circonda l'oceano.
+Nelle profondità oceaniche la temperatura dell'acqua si mantiene generalmente vicina allo zero grado Celsius.
+Molte creature abissali producono luce propria attraverso un fenomeno chiamato bioluminescenza.
+Il calamaro gigante può raggiungere dimensioni di diversi metri di lunghezza, tra i più grandi invertebrati conosciuti.
+Il calamaro colossale, che vive nelle acque antartiche, possiede occhi tra i più grandi del regno animale.
+I pesci abissali come il pesce rana degli abissi utilizzano un'appendice luminosa per attirare le prede nel buio totale.
+Le onde più alte mai registrate dagli strumenti hanno superato i venti metri di altezza durante forti tempeste oceaniche.
+Le cosiddette onde anomale, o rogue wave, possono formarsi improvvisamente e superare di molto l'altezza delle onde circostanti.
+Gli tsunami sono generalmente causati da terremoti sottomarini, eruzioni vulcaniche o grandi frane costiere.
+La salinità media dell'acqua di mare si aggira intorno al tre e mezzo per cento.
+Il Mar Baltico ha una salinità significativamente più bassa rispetto all'oceano aperto, a causa dei numerosi fiumi che vi confluiscono.
+Il Mar Mediterraneo è un mare quasi completamente chiuso, collegato all'oceano solo attraverso lo stretto di Gibilterra.
+Il Canale di Suez collega il Mar Mediterraneo al Mar Rosso, evitando la circumnavigazione dell'Africa.
+Il Bosforo e i Dardanelli sono stretti che collegano il Mar Nero al Mar Mediterraneo attraverso il Mar di Marmara.
+Il Mar Nero presenta acque profonde prive di ossigeno, dove la decomposizione organica avviene senza l'intervento dei batteri aerobici.
+Il Mar Caspio è la più grande distesa d'acqua interna del mondo, spesso classificata come lago per la sua natura chiusa.
+Il Mar Morto ha una concentrazione di sale talmente elevata da rendere la balneazione particolarmente agevole al galleggiamento.
+Il Mar dei Sargassi, nell'Atlantico settentrionale, è delimitato non da coste ma da correnti oceaniche circolari.
+Il Mar Rosso deve probabilmente il proprio nome a fioriture periodiche di alghe che ne colorano la superficie.
+Le barriere coralline atollo, secondo l'ipotesi formulata da Charles Darwin, si formano attorno a isole vulcaniche che lentamente sprofondano.
+Le foreste di kelp, alghe marine giganti, formano ecosistemi sottomarini paragonabili per ricchezza alle foreste terrestri.
+Le mangrovie costiere proteggono le coste tropicali dall'erosione e dalle mareggiate.
+Il suono si propaga nell'acqua marina a una velocità molto maggiore rispetto all'aria.
+L'acidificazione degli oceani è legata all'assorbimento di anidride carbonica atmosferica da parte delle acque marine.
+Lo sbiancamento dei coralli si verifica quando questi espellono le alghe simbiotiche a causa di stress ambientali come l'aumento della temperatura.
+La spedizione della nave Challenger, tra il 1872 e il 1876, è considerata la prima grande spedizione oceanografica scientifica della storia.
+Il termine oceanografia si è affermato proprio a partire dagli studi condotti nell'Ottocento sulle profondità marine.
+Alcune correnti oceaniche fredde, come la Corrente di Humboldt, favoriscono un'eccezionale abbondanza di vita marina lungo le coste che attraversano.
+La Baia di Fundy, in Canada, registra alcune delle maree più ampie mai misurate al mondo.
+Esistono cascate sottomarine formate dal contrasto tra masse d'acqua di diversa densità, come quella nello Stretto di Danimarca.
+I cavi sottomarini in fibra ottica trasportano oggi la maggior parte del traffico internet intercontinentale.
+La prima circumnavigazione del globo fu completata nel Cinquecento dalla spedizione avviata da Ferdinando Magellano, che però morì durante il viaggio.
+Il capitano James Cook condusse importanti spedizioni di esplorazione nell'Oceano Pacifico nel corso del Settecento.
+Le zone abissali oceaniche restano prive di luce solare al di sotto di circa mille metri di profondità.
+La pressione sul fondo della Fossa delle Marianne supera di centinaia di volte quella presente al livello del mare.
+I granchi e i gamberi delle sorgenti idrotermali si sono adattati a vivere in acque estremamente calde e ricche di sostanze chimiche.
+Gli abissi oceanici ospitano montagne sottomarine, chiamate guyot, spesso più alte di molte catene montuose terrestri.
+Le correnti oceaniche superficiali sono influenzate soprattutto dai venti dominanti, mentre quelle profonde dipendono da differenze di densità.
+La leggenda del cosiddetto Triangolo delle Bermuda ha origine da una serie di sparizioni di navi e aerei mai del tutto chiarite, pur senza basi scientifiche consolidate.
+Alcuni squali sono capaci di percepire campi elettrici minimi generati dai muscoli delle prede nascoste.
+Le tartarughe marine, dopo la schiusa, ritrovano spesso la spiaggia natale grazie all'orientamento magnetico.
+Le megattere producono canti complessi che possono propagarsi per decine di chilometri sott'acqua.
+I fondali oceanici custodiscono depositi minerari, tra cui i cosiddetti noduli polimetallici ricchi di manganese e altri metalli.
+L'Oceano Indiano è delimitato da Africa, Asia e Australia ed è attraversato da rotte commerciali storiche millenarie.
+L'Oceano Atlantico si allarga di alcuni centimetri ogni anno a causa dell'espansione della dorsale medio-atlantica.
+Le isole vulcaniche oceaniche, come le Hawaii, si formano per l'attività di punti caldi nel mantello terrestre.
+I ghiacciai marini e le calotte polari contribuiscono in modo significativo alla regolazione del livello globale dei mari.
+La profondità media dell'Oceano Artico è nettamente inferiore rispetto a quella degli altri oceani.
+Il livello del mare non è uniforme su tutto il pianeta, ma varia leggermente in base a fattori gravitazionali e geologici locali.
+La subsidenza dei fondali oceanici lungo le fosse tettoniche è associata alla formazione di forti terremoti sottomarini.
+Nei mari polari la formazione di ghiaccio marino espelle sale, aumentando la densità e la salinità dell'acqua circostante.
+Alcuni pesci abissali sono privi di occhi funzionanti, avendo perso nel corso dell'evoluzione la necessità della vista.
+Le praterie di posidonia, presenti nel Mar Mediterraneo, svolgono un ruolo importante nell'assorbimento di anidride carbonica.
+L'invenzione dell'autorespiratore subacqueo, sviluppato a metà del Novecento, rese possibile l'esplorazione ricreativa e scientifica dei fondali marini.
+Le immersioni profonde comportano rischi come la malattia da decompressione, dovuta alla formazione di bolle di azoto nei tessuti.
+I pesci pipistrello e altri organismi bentonici vivono adattati a muoversi sul fondale oceanico anziché nuotare liberamente.
+Le zone costiere note come estuari rappresentano un punto di incontro tra acque dolci fluviali e acque marine salate.
+La barriera corallina più antica conosciuta si è formata nel corso di migliaia di anni di crescita progressiva dei polipi corallini.
+Le correnti di risalita, o upwelling, portano in superficie acque profonde ricche di nutrienti, favorendo la pesca in molte aree costiere.
+L'Oceano Pacifico ospita più della metà dell'acqua libera presente sulla superficie terrestre.
+Il fondale oceanico presenta rilievi e depressioni paragonabili, e in alcuni casi superiori, a quelli osservabili sulla terraferma.
+Le maree più marcate si verificano generalmente durante le fasi di luna piena e di luna nuova, quando Sole e Luna si allineano.
+Le acque del Mar Mediterraneo hanno una salinità superiore rispetto a quella media dell'Oceano Atlantico.
+Le spugne marine sono tra gli organismi pluricellulari più antichi ancora presenti negli oceani odierni.
+I coralli sono organismi animali coloniali, non piante, nonostante il loro aspetto spesso ricordi la vegetazione.
+Gli abissi oceanici custodiscono ancora oggi numerose specie non descritte scientificamente.
+Le correnti oceaniche profonde possono impiegare secoli per completare un intero ciclo di circolazione globale.
+I ghiacci marini artici ed antartici riflettono una parte significativa della radiazione solare, contribuendo a regolare il clima terrestre.
+Solo una piccola percentuale dei fondali oceanici è stata mappata con dettaglio comparabile a quello della superficie terrestre.
+Chi ha visto una volta l'oceano non smette mai di sentirne il richiamo, anche lontano dalla costa. — attribuita a James Cook
+Il mare non appartiene a nessun sovrano, ma insegna umiltà a chiunque osi attraversarlo. — attribuita a James Cook
+Navigare senza meta è perdersi, ma navigare con troppa certezza è non aver mai visto una tempesta. — attribuita a Ferdinando Magellano
+Il vero confine del mondo non è la terra che finisce, ma il coraggio che si esaurisce. — attribuita a Ferdinando Magellano
+Le profondità del mare custodiscono più segreti di quanti la scienza umana abbia finora osato immaginare. — attribuita a Matthew Fontaine Maury
+Studiare le correnti significa leggere la scrittura invisibile con cui l'oceano governa i climi della Terra. — attribuita a Matthew Fontaine Maury
+Ogni scandaglio calato negli abissi racconta una storia che la superficie del mare non lascia intuire. — attribuita a Charles Wyville Thomson
+La scienza del mare comincia dove finisce la vista, nell'oscurità delle grandi profondità. — attribuita a Charles Wyville Thomson
+L'oceano non conosce confini, eppure disegna i confini di ogni continente che bagna. — attribuita a James Cook
+Chi esplora gli abissi scopre che la vita trova sempre una via, anche nel buio più totale. — attribuita a Charles Wyville Thomson
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
