@@ -3502,6 +3502,606 @@ Il Mare del Nord separa le coste orientali del Regno Unito da quelle di Norvegia
 La città di Bergen è tra le più piovose d'Europa a causa della sua posizione geografica esposta all'Atlantico. — Curiosità sul nord Europa
 Le renne sami vengono ancora oggi marcate con incisioni tradizionali alle orecchie per identificarne la proprietà. — Curiosità sul nord Europa
 Il nord Europa ospita alcune delle università più antiche della regione, come quella di Uppsala in Svezia. — Curiosità sul nord Europa
+L'Alaska fu acquistata dagli Stati Uniti dalla Russia nel 1867.
+Le Hawaii sono l'unico stato americano composto interamente da isole.
+Il Denali, in Alaska, è la vetta più alta del Nord America.
+Il fiume Mississippi è uno dei corsi d'acqua più lunghi del Nord America.
+La Statua della Libertà fu un dono della Francia agli Stati Uniti, inaugurata nel 1886.
+Il Grand Canyon, in Arizona, è stato scavato nel corso di milioni di anni dal fiume Colorado.
+Le Cascate del Niagara si trovano al confine tra Stati Uniti e Canada.
+Il Parco di Yellowstone, istituito nel 1872, è considerato il primo parco nazionale al mondo.
+Il Texas fu una repubblica indipendente prima di entrare a far parte degli Stati Uniti nel 1845.
+Washington D.C. non appartiene a nessuno dei cinquanta stati, ma è un distretto federale.
+Gli Stati Uniti sono composti da cinquanta stati e da un distretto federale.
+Il Rhode Island è il più piccolo stato americano per superficie.
+L'Alaska è lo stato più esteso degli Stati Uniti per superficie.
+La California è lo stato più popoloso degli Stati Uniti.
+Nella Valle della Morte, in California, sono state registrate alcune delle temperature più alte mai misurate sulla Terra.
+Il Monte Rushmore, nel South Dakota, raffigura i volti di quattro presidenti scolpiti nella roccia.
+La bandiera degli Stati Uniti è comunemente chiamata Stars and Stripes.
+Le tredici strisce della bandiera americana rappresentano le tredici colonie originarie.
+La Dichiarazione di Indipendenza degli Stati Uniti fu adottata il 4 luglio 1776.
+La Costituzione degli Stati Uniti, entrata in vigore nel 1789, è tra le più antiche costituzioni scritte ancora attive.
+George Washington fu il primo presidente degli Stati Uniti.
+La Casa Bianca è la residenza ufficiale del presidente dal 1800.
+Gli Stati Uniti raggiunsero il numero di cinquanta stati solo nel 1959, con l'ingresso di Alaska e Hawaii.
+Il gioco del basket fu inventato nel 1891 da James Naismith in Massachusetts.
+Il baseball è spesso definito il passatempo nazionale statunitense.
+Le Montagne Rocciose attraversano numerosi stati dell'ovest americano.
+Il Golden Gate Bridge di San Francisco fu completato nel 1937.
+Hollywood, quartiere di Los Angeles, è diventata sinonimo dell'industria cinematografica americana.
+Il jazz è un genere musicale nato negli Stati Uniti, in particolare a New Orleans.
+La Route 66 collegava Chicago a Los Angeles ed è diventata un simbolo del viaggio su strada americano.
+Le Great Plains occupano una vasta area della parte centrale degli Stati Uniti.
+Il Lago Superiore è il più esteso dei cinque Grandi Laghi.
+I Grandi Laghi contengono una parte significativa dell'acqua dolce superficiale del pianeta.
+New York fu fondata dagli olandesi con il nome di Nuova Amsterdam.
+Wall Street, a New York, è considerata il principale centro finanziario degli Stati Uniti.
+Il ponte di Brooklyn, a New York, fu completato nel 1883.
+Nel 1969 la missione Apollo 11 portò i primi uomini a camminare sulla Luna.
+L'equipaggio dell'Apollo 11 era composto da Neil Armstrong, Buzz Aldrin e Michael Collins.
+La NASA, l'agenzia spaziale statunitense, fu fondata nel 1958.
+La Silicon Valley, in California, è diventata uno dei principali centri mondiali dell'informatica.
+Il primo grattacielo moderno fu costruito a Chicago nel 1885.
+L'Empire State Building, a New York, fu per anni l'edificio più alto del mondo.
+Il Central Park di New York fu progettato da Frederick Law Olmsted e Calvert Vaux.
+La Liberty Bell, custodita a Filadelfia, è un simbolo dell'indipendenza americana.
+Filadelfia fu la capitale degli Stati Uniti prima che lo diventasse Washington.
+Il Mount Vernon, in Virginia, fu la residenza di George Washington.
+Il Ringraziamento, festa nazionale americana, si celebra il quarto giovedì di novembre.
+Il 4 luglio è la festa nazionale che celebra l'indipendenza degli Stati Uniti.
+Le Cascate del Niagara producono energia idroelettrica per Stati Uniti e Canada.
+Il deserto del Mojave si estende tra California, Nevada, Arizona e Utah.
+Le Everglades, in Florida, sono un'estesa area umida subtropicale.
+Le sequoie della California comprendono alcuni tra gli alberi più alti e longevi del pianeta.
+Il ponte Golden Gate è famoso per il suo colore arancione internazionale.
+La Corsa all'Oro della California, iniziata nel 1848, attirò migliaia di cercatori da tutto il mondo.
+Il Pony Express garantì per breve tempo un servizio postale rapido tra Missouri e California.
+La ferrovia transcontinentale statunitense fu completata nel 1869.
+Il Mount Whitney, in California, è la vetta più alta degli Stati Uniti contigui.
+Il Death Valley è il punto più basso del Nord America.
+Chicago è soprannominata Windy City.
+New Orleans è nota per le sue radici musicali creole e per il Mardi Gras.
+Il Superbowl è l'evento sportivo televisivo più seguito negli Stati Uniti.
+Il football americano si sviluppò a partire da varianti ottocentesche del rugby e del calcio.
+La Coca-Cola fu inventata ad Atlanta nel 1886 da un farmacista.
+Il primo hamburger venduto commercialmente negli Stati Uniti risale probabilmente alla fine dell'Ottocento.
+L'aeroporto di Atlanta è tra i più trafficati al mondo per numero di passeggeri.
+Le Isole Hawaii sono di origine vulcanica.
+Il vulcano Kilauea, alle Hawaii, è uno dei più attivi al mondo.
+Il fiume Colorado attraversa sette stati prima di raggiungere il Golfo della California.
+Il deserto del Sonora ospita il cactus saguaro, simbolo dell'Arizona.
+La Biblioteca del Congresso, a Washington, è una delle più grandi biblioteche al mondo.
+Lo Smithsonian Institution comprende numerosi musei gratuiti nella capitale americana.
+Il Lincoln Memorial fu dedicato nel 1922 in onore del presidente Abraham Lincoln.
+La Casa Bianca fu ricostruita dopo essere stata incendiata nel 1814.
+Benjamin Franklin fu tra i firmatari della Dichiarazione di Indipendenza e un noto scienziato.
+La chiave del successo sta nella perseveranza, non nel talento isolato. — attribuita a Benjamin Franklin
+Chi sacrifica la libertà per la sicurezza non merita né l'una né l'altra. — attribuita a Benjamin Franklin
+Non rimandare a domani ciò che puoi fare oggi. — attribuita a Benjamin Franklin
+Il compito supremo è quello di lottare per la libertà umana. — attribuita a Abraham Lincoln
+Con malizia verso nessuno, con carità verso tutti. — Abraham Lincoln
+Un governo del popolo, dal popolo, per il popolo. — Abraham Lincoln
+La conoscenza rende umili i grandi, stupisce i comuni e inorgoglisce i piccoli. — attribuita a Thomas Jefferson
+Sono un grande sostenitore della fortuna, e trovo che più lavoro più ne ho. — attribuita a Thomas Jefferson
+La natura non fa nulla invano. — attribuita a Thomas Jefferson
+Chiunque abbia il coraggio di pensare con la propria testa appare pericoloso a chi pensa con quella degli altri. — attribuita a Ralph Waldo Emerson
+Non è l'uomo che detiene la verità, ma la verità che sostiene l'uomo. — attribuita a Ralph Waldo Emerson
+Sono andato nei boschi perché volevo vivere con saggezza. — attribuita a Henry David Thoreau
+La maggior parte degli uomini vive una vita di quieta disperazione. — attribuita a Henry David Thoreau
+Il segreto per andare avanti è cominciare. — attribuita a Mark Twain
+Fra vent'anni sarai più deluso dalle cose che non hai fatto che da quelle che hai fatto. — attribuita a Mark Twain
+La verità è più strana della finzione, perché la finzione deve avere un senso. — attribuita a Mark Twain
+Il fiume Hudson prende il nome dall'esploratore Henry Hudson.
+Il Mississippi attraversa dieci stati durante il suo corso verso il Golfo del Messico.
+La prima università statunitense fu Harvard, fondata nel 1636.
+La West Point Academy è una delle più antiche accademie militari statunitensi.
+Il Pentagono, sede del Dipartimento della Difesa, è uno degli edifici per uffici più grandi al mondo.
+Il Air Force One è il nome usato per l'aereo presidenziale in volo.
+Le Cascate del Niagara sono in realtà tre cascate distinte.
+Il fenomeno delle tornado alley riguarda un'area del centro degli Stati Uniti soggetta a frequenti tornado.
+Il Monte Rainier, nello stato di Washington, è un vulcano attivo coperto di ghiacciai.
+La città di Boston fu teatro di eventi chiave della Rivoluzione americana.
+Il Canale di Panama collega l'Oceano Atlantico e l'Oceano Pacifico e fu completato nel 1914.
+Il Costa Rica abolì il proprio esercito nel 1948.
+Tikal, in Guatemala, è uno dei più importanti siti archeologici della civiltà Maya.
+Il Belize è l'unico paese dell'America Centrale la cui lingua ufficiale è l'inglese.
+Il Lago di Nicaragua ospita una delle rare popolazioni di squali d'acqua dolce al mondo.
+Secondo la tradizione, il nome Honduras deriverebbe dalla profondità delle acque costiere osservate dai primi navigatori spagnoli.
+El Salvador è il paese più piccolo per superficie dell'America Centrale continentale.
+Il Nicaragua è soprannominato la terra dei laghi e dei vulcani.
+Il tipico cappello Panama, nonostante il nome, ha origini ecuadoriane e non panamensi.
+Copán, in Honduras, conserva importanti rovine dell'antica civiltà Maya.
+Antigua Guatemala fu capitale coloniale del Guatemala ed è oggi patrimonio dell'umanità UNESCO.
+La barriera corallina del Belize è la seconda più estesa al mondo dopo quella australiana.
+Il Costa Rica ospita una percentuale di biodiversità mondiale molto elevata rispetto alla sua superficie.
+Il vulcano Arenal è uno dei più noti simboli naturali del Costa Rica.
+Il Canale di Panama fu ampliato con nuove chiuse inaugurate nel 2016.
+Il fiume San Juan segna parte del confine tra Nicaragua e Costa Rica.
+L'istmo di Panama collega geograficamente il Nord America al Sud America.
+L'America Centrale è tradizionalmente composta da sette paesi: Guatemala, Belize, Honduras, El Salvador, Nicaragua, Costa Rica e Panama.
+La civiltà Maya si sviluppò in gran parte del territorio centroamericano.
+Il quetzal, uccello simbolo del Guatemala, dà anche il nome alla valuta nazionale.
+Managua è la capitale del Nicaragua.
+San José è la capitale del Costa Rica.
+Tegucigalpa è la capitale dell'Honduras.
+San Salvador è la capitale di El Salvador.
+Panama City è la capitale di Panama.
+Belmopan è la capitale del Belize, una città pianificata di piccole dimensioni.
+Città del Guatemala è la capitale e la città più popolosa del Guatemala.
+Il caffè è tra le principali esportazioni di diversi paesi centroamericani.
+Il Parco Nazionale del Corcovado, in Costa Rica, è noto per la sua straordinaria biodiversità.
+Il Belize ospita al suo interno il grande cratere sommerso noto come Blue Hole.
+Il lago di Atitlán, in Guatemala, è circondato da tre vulcani.
+Panama fu per secoli un punto di passaggio strategico tra i due oceani.
+Il Nicaragua ha due grandi laghi, il Lago di Managua e il Lago di Nicaragua.
+Il vulcano Poás, in Costa Rica, ha uno dei crateri attivi più grandi al mondo.
+La foresta pluviale del Darién, tra Panama e Colombia, è una delle regioni meno accessibili delle Americhe.
+Il Rio Dulce, in Guatemala, collega il Lago di Izabal ai Caraibi.
+Il Congresso di Panama del 1826 fu convocato per discutere l'unione delle nuove repubbliche americane.
+La lingua garifuna, parlata lungo le coste caraibiche dell'America Centrale, ha origini afro-indigene.
+Il Belize fu una colonia britannica fino al 1981, quando ottenne l'indipendenza.
+Il Canale di Panama fu gestito dagli Stati Uniti fino al passaggio di consegne al governo panamense nel 1999.
+Canada è il secondo paese più esteso al mondo per superficie.
+Canada ha due lingue ufficiali, l'inglese e il francese.
+Ottawa è la capitale del Canada.
+Il Canada è suddiviso in dieci province e tre territori.
+La foglia d'acero sulla bandiera canadese fu adottata ufficialmente nel 1965.
+Le Cascate del Niagara sono condivise tra Canada e Stati Uniti.
+La CN Tower di Toronto fu per anni la struttura autoportante più alta del mondo.
+Il Canada possiede la costa più lunga di qualsiasi paese al mondo.
+L'hockey su ghiaccio è considerato lo sport nazionale invernale del Canada.
+Il lacrosse è ufficialmente lo sport nazionale estivo del Canada.
+Il Canada nacque come stato federale con la Confederazione del 1867.
+La Royal Canadian Mounted Police è riconoscibile per la sua storica uniforme rossa.
+Le Montagne Rocciose si estendono anche nella parte occidentale del Canada.
+Il Canada conta un numero di laghi superiore a quello di qualsiasi altro paese al mondo.
+La Baia di Hudson prende il nome dall'esploratore Henry Hudson.
+L'arcipelago artico canadese comprende numerose isole nella parte più settentrionale del paese.
+Quebec City, fondata da Samuel de Champlain nel 1608, è tra le città più antiche del Canada.
+Il Canada, in particolare il Quebec, è il maggiore produttore mondiale di sciroppo d'acero.
+Toronto è la città più popolosa del Canada.
+Vancouver è spesso citata tra le città più vivibili al mondo.
+Il Canada condivide con gli Stati Uniti il confine internazionale terrestre più lungo al mondo.
+Il New Brunswick è l'unica provincia canadese ufficialmente bilingue.
+L'inno nazionale del Canada si intitola O Canada.
+La ferrovia Canadian Pacific, completata nel 1885, collegò per la prima volta le coste atlantica e pacifica del paese.
+I popoli Inuit abitano da secoli le regioni settentrionali del Canada.
+La festa nazionale del Canada, il Canada Day, si celebra il primo luglio.
+La Peace Tower si trova nell'edificio del Parlamento canadese a Ottawa.
+La moneta da un dollaro canadese è soprannominata loonie per l'immagine dell'uccello acquatico che raffigura.
+La moneta da due dollari canadesi è soprannominata toonie.
+Il Banff National Park, istituito nel 1885, fu il primo parco nazionale del Canada.
+Il territorio canadese si estende su sei fusi orari.
+La Great Bear Rainforest, nella Columbia Britannica, è una delle più vaste foreste pluviali temperate al mondo.
+Churchill, nel Manitoba, è conosciuta come la capitale mondiale degli orsi polari.
+Lo Scudo Canadese è una delle formazioni geologiche più antiche ed estese del pianeta.
+L'aurora boreale è visibile con frequenza nelle regioni settentrionali del Canada.
+Il castoro è, insieme alla foglia d'acero, uno dei simboli nazionali del Canada.
+Il ghiacciaio Athabasca, in Alberta, è una delle mete più visitate delle Montagne Rocciose canadesi.
+L'isola di Baffin è la più grande isola del Canada e una delle più grandi al mondo.
+Il Canada ospita la strada panoramica Icefields Parkway, tra le più spettacolari al mondo.
+La città di Montreal è la seconda città più popolosa del Canada e un importante centro francofono.
+Il Canada ha contribuito in modo significativo agli sforzi bellici alleati durante la Prima e la Seconda guerra mondiale.
+Il fiume San Lorenzo collega i Grandi Laghi all'Oceano Atlantico attraverso il territorio canadese.
+La provincia dell'Alberta è nota per i suoi vasti giacimenti di sabbie bituminose.
+Terranova fu l'ultima provincia a entrare a far parte del Canada, nel 1949.
+Il Canada è tra i maggiori produttori mondiali di potassio e uranio.
+La bandiera del Canada viene comunemente chiamata Maple Leaf Flag.
+Panama e Canada, pur lontanissimi geograficamente, condividono il fatto di essere attraversati da importanti vie d'acqua strategiche.
+Il volo diretto più breve tra Nord e Sud America passa storicamente proprio attraverso l'istmo di Panama.
+La provincia canadese della Columbia Britannica prende il nome dal fiume Columbia.
+Il totem, scultura tradizionale delle popolazioni indigene della costa nordoccidentale, è un simbolo culturale del Canada occidentale.
+La libertà di un popolo si misura dalla capacità di autogovernarsi con giustizia. — attribuita a Simón Bolívar
+Non c'è vittoria più grande di quella ottenuta senza spargere il sangue dei propri fratelli. — attribuita a Simón Bolívar
+Un popolo ignorante è uno strumento cieco della propria distruzione. — attribuita a Simón Bolívar
+La conoscenza dei nuovi mondi si conquista solo attraversando ciò che ancora non ha nome. — attribuita a Vasco Núñez de Balboa
+Fondare una nuova terra significa piantare insieme il coraggio e la pazienza. — attribuita a Samuel de Champlain
+Il vero esploratore non cerca la gloria, ma la conoscenza del mondo. — attribuita a Samuel de Champlain
+Un paese si costruisce giorno per giorno, con il lavoro paziente di molte generazioni. — attribuita a John Alexander Macdonald
+L'unione di popoli diversi, se fondata sul rispetto, diventa una forza e non una debolezza. — attribuita a Wilfrid Laurier
+Il ghiaccio e la distanza non fermano chi porta con sé un'idea di casa. — attribuita a Henry Hudson
+Chi solca mari sconosciuti porta sempre con sé la propria patria nel cuore. — attribuita a Henry Hudson
+Il Sud America comprende dodici paesi indipendenti oltre alla Guyana Francese, territorio d'oltremare francese.
+Il Brasile è il paese più esteso e più popoloso del Sud America.
+Il portoghese è la lingua ufficiale del Brasile, unico grande paese sudamericano non di lingua spagnola.
+Il fiume Rio delle Amazzoni è per volume d'acqua il più grande fiume del mondo.
+La foresta amazzonica si estende su nove paesi sudamericani.
+La Cordigliera delle Ande è la catena montuosa più lunga del mondo.
+L'Aconcagua, in Argentina, è la vetta più alta delle Ande e dell'intero emisfero occidentale.
+Il Lago Titicaca, tra Perù e Bolivia, è il lago navigabile più alto del mondo.
+Il deserto di Atacama, in Cile, è considerato uno dei luoghi più aridi della Terra.
+Le Cascate di Iguazú si trovano al confine tra Argentina e Brasile.
+Il Salar de Uyuni, in Bolivia, è la distesa di sale più grande del mondo.
+Machu Picchu, in Perù, fu un'antica città Inca situata sulle Ande.
+L'Impero Inca ebbe il suo centro nella città di Cusco, in Perù.
+Le Isole Galápagos, in Ecuador, ispirarono le osservazioni di Charles Darwin sull'evoluzione.
+Il Cristo Redentore domina la città di Rio de Janeiro dall'alto del Corcovado.
+Il Carnevale di Rio de Janeiro è tra le manifestazioni popolari più celebri al mondo.
+Buenos Aires è la capitale dell'Argentina.
+Santiago è la capitale del Cile.
+Lima è la capitale del Perù.
+Bogotá è la capitale della Colombia.
+Caracas è la capitale del Venezuela.
+Quito è la capitale dell'Ecuador.
+Sucre è la capitale costituzionale della Bolivia, mentre La Paz ne è la sede del governo.
+Asunción è la capitale del Paraguay.
+Montevideo è la capitale dell'Uruguay.
+Georgetown è la capitale della Guyana.
+Paramaribo è la capitale del Suriname.
+Brasília, capitale del Brasile, fu costruita appositamente a partire dal 1956.
+Il tango, genere musicale e di danza, nacque tra Argentina e Uruguay a fine Ottocento.
+La samba è tra i generi musicali più rappresentativi della cultura brasiliana.
+Il Cile si estende per oltre quattromila chilometri lungo la costa del Pacifico.
+L'Uruguay fu tra i primi paesi al mondo a introdurre il voto segreto obbligatorio.
+Il Paraguay ha due lingue ufficiali, lo spagnolo e il guaranì.
+La Colombia è tra i maggiori produttori mondiali di caffè.
+Il Venezuela possiede alcune delle riserve di petrolio accertate più grandi al mondo.
+Il Salto Ángel, in Venezuela, è la cascata con il salto più alto del mondo.
+La città di Cartagena, in Colombia, conserva un centro storico coloniale fortificato.
+L'isola di Pasqua, con i suoi celebri moai, appartiene al Cile pur trovandosi nell'Oceano Pacifico.
+La Patagonia si estende tra Argentina e Cile nella parte meridionale del continente.
+Il Perù coltiva un numero eccezionalmente alto di varietà di patate, alimento originario delle Ande.
+La quinoa è un cereale originario della regione andina, coltivato da millenni.
+Il condor delle Ande è tra gli uccelli volatori più grandi al mondo.
+Il Rio delle Amazzoni non ha un solo ponte lungo l'intero corso principale.
+Le linee di Nazca, in Perù, sono enormi geoglifi tracciati sul terreno desertico.
+La civiltà Chavín, in Perù, è una delle culture più antiche delle Ande.
+Il lago Maracaibo, in Venezuela, è tra i più grandi laghi naturali del Sud America.
+L'Ecuador prende il nome dalla linea equatoriale che attraversa il suo territorio.
+Il vulcano Cotopaxi, in Ecuador, è tra i vulcani attivi più alti del mondo.
+Il ghiacciaio Perito Moreno, in Argentina, è uno dei pochi ghiacciai ancora in avanzamento.
+Il fiume Paraná è tra i corsi d'acqua più lunghi del Sud America.
+La diga di Itaipú, tra Brasile e Paraguay, fu per anni la più grande centrale idroelettrica al mondo.
+Il calcio è lo sport più seguito nella maggior parte dei paesi sudamericani.
+La Coppa America, torneo calcistico continentale, è la più antica competizione internazionale per nazionali ancora disputata.
+La Bolivia ha due capitali, un caso raro tra gli stati del mondo.
+Il pisco è un distillato d'uva rivendicato sia dal Perù sia dal Cile come prodotto tipico.
+La foresta amazzonica ospita una delle biodiversità più ricche del pianeta.
+L'Orinoco è tra i fiumi principali del Venezuela e della Colombia.
+Il deserto della Guajira si trova tra Colombia e Venezuela, affacciato sui Caraibi.
+La città di Potosí, in Bolivia, fu un centro minerario d'argento tra i più importanti del mondo coloniale.
+Il Sud America fu attraversato dalle spedizioni di Simón Bolívar durante le guerre d'indipendenza del primo Ottocento.
+José de San Martín contribuì all'indipendenza di Argentina, Cile e Perù.
+Il Sud America ospita la foresta pluviale più estesa del pianeta, l'Amazzonia.
+Il fiume delle Amazzoni sfocia nell'Oceano Atlantico attraverso un enorme delta.
+Le Ande attraversano sette paesi sudamericani da nord a sud.
+Il clima del Sud America varia enormemente, dai deserti aridi alle foreste tropicali fino ai ghiacciai antartici.
+La Terra del Fuoco è l'arcipelago più meridionale dell'America, condiviso tra Argentina e Cile.
+Ushuaia, in Argentina, è spesso definita la città più australe del mondo.
+Il fiume Magdalena è tra le principali vie d'acqua della Colombia.
+Il caffè colombiano è coltivato prevalentemente sulle pendici andine, tra ottocento e duemila metri di altitudine.
+La cultura Nazca in Perù realizzò complessi sistemi idrici sotterranei chiamati puquios.
+Il vulcano Villarrica, in Cile, è tra i più attivi del paese.
+Il tucano è un uccello simbolo della fauna tropicale sudamericana.
+Il giaguaro è il più grande felino delle Americhe e vive in gran parte del territorio amazzonico.
+Il lama e l'alpaca sono animali domestici tipici delle regioni andine.
+Il fiume delle Amazzoni cambia periodicamente livello a causa delle piogge stagionali.
+La Colombia è uno dei paesi con la maggiore varietà di specie di uccelli al mondo.
+Il Cile è tra i maggiori produttori mondiali di rame.
+Il vino cileno e quello argentino sono tra i più esportati del Sud America.
+Il malbec è un vitigno diventato particolarmente celebre in Argentina.
+La città di Cusco fu la capitale dell'Impero Inca prima della conquista spagnola.
+Il Salar de Uyuni, dopo le piogge, si trasforma in un enorme specchio naturale.
+Le isole Galápagos devono il nome alle grandi tartarughe terrestri che le abitano.
+Il Rio delle Amazzoni attraversa il Perù, la Colombia e il Brasile prima di sfociare nell'Atlantico.
+Il Suriname è tra i paesi più boscosi del mondo in rapporto alla propria superficie.
+La Guyana fu una colonia britannica fino all'indipendenza ottenuta nel 1966.
+Il Suriname fu una colonia olandese fino all'indipendenza ottenuta nel 1975.
+Il fiume delle Amazzoni ospita specie uniche come il delfino di fiume rosa.
+Le città coloniali di Quito e Cartagena sono entrambe patrimonio dell'umanità UNESCO.
+Il ghiaccio della Patagonia meridionale forma uno dei più grandi campi di ghiaccio non polari al mondo.
+La Colombia si affaccia sia sull'Oceano Pacifico sia sul Mar dei Caraibi.
+La libertà non si mendica, si conquista col ferro in mano. — attribuita a Simón Bolívar
+Sarò ciò che tu vuoi che io sia, ma libero. — attribuita a Simón Bolívar
+Il coraggio della patria si misura nella costanza dei suoi figli, non nella grandezza dei suoi eserciti. — attribuita a José de San Martín
+Sarete quello che dovete essere, o non sarete nulla. — attribuita a José de San Martín
+La natura non conosce confini tracciati dagli uomini, ma solo equilibri da rispettare. — attribuita a Alexander von Humboldt
+Ogni pianta e ogni pietra raccontano la storia della terra che le ha generate. — attribuita a Alexander von Humboldt
+La lotta per la libertà dell'America è la lotta per la libertà di tutti i popoli oppressi. — attribuita a Simón Bolívar
+Un continente nuovo richiede leggi nuove, non le vecchie catene di un mondo antico. — attribuita a Simón Bolívar
+Chi osserva la natura con pazienza scopre leggi che la fretta non rivela mai. — attribuita a Charles Darwin
+Non è la specie più forte a sopravvivere, ma quella più capace di adattarsi al cambiamento. — attribuita a Charles Darwin
+L'Antartide è il continente più freddo della Terra.
+Alla base russa di Vostok, in Antartide, fu registrata nel 1983 una delle temperature più basse mai misurate al suolo, circa -89 gradi Celsius.
+L'Antartide non ha una popolazione umana permanente, ma solo personale scientifico che si alterna nelle basi di ricerca.
+Il Trattato Antartico, firmato nel 1959, regola le attività internazionali nel continente e ne vieta usi militari.
+L'Antartide è ricoperta da una calotta di ghiaccio che in alcuni punti supera i due chilometri di spessore.
+Il Monte Erebus, in Antartide, è uno dei rari vulcani attivi delle regioni polari.
+Il norvegese Roald Amundsen fu il primo a raggiungere il Polo Sud, nel dicembre 1911.
+La spedizione britannica di Robert Falcon Scott raggiunse il Polo Sud circa un mese dopo Amundsen, nel gennaio 1912.
+Robert Falcon Scott e i suoi compagni morirono durante il viaggio di ritorno dal Polo Sud.
+Nonostante le abbondanti nevicate sui rilievi, l'Antartide è classificata come il più grande deserto del mondo per la scarsissima quantità di precipitazioni.
+I pinguini imperatore sono tra le poche specie che si riproducono in Antartide durante il rigido inverno polare.
+In Antartide non vivono mammiferi terrestri nativi, a differenza dell'Artico.
+Si stima che i ghiacci antartici custodiscano una parte molto rilevante dell'acqua dolce presente sulla Terra.
+L'Antartide è più estesa dell'intero continente europeo.
+La stazione scientifica situata esattamente al Polo Sud è chiamata Amundsen-Scott South Pole Station.
+Nelle basi antartiche il fuso orario utilizzato spesso corrisponde a quello del paese di appartenenza della base stessa.
+I fossili ritrovati in Antartide dimostrano che il continente ospitò foreste in epoche geologiche molto più calde.
+Il Lago Vostok è un vasto lago sotto i ghiacci antartici, rimasto isolato per milioni di anni.
+La Barriera di Ross è una delle piattaforme di ghiaccio galleggiante più estese dell'Antartide.
+Geograficamente l'Antartide viene divisa in Antartide Orientale e Antartide Occidentale.
+Nessuna popolazione indigena ha mai abitato stabilmente il continente antartico.
+Al Polo Sud il sole sorge e tramonta una sola volta all'anno, alternando circa sei mesi di luce e sei mesi di buio.
+Il cosiddetto buco dell'ozono fu osservato per la prima volta sopra l'Antartide negli anni Ottanta.
+Si stima che l'Antartide custodisca la stragrande maggioranza del ghiaccio presente sulla Terra.
+Il krill antartico costituisce la base dell'alimentazione di molte specie marine della regione.
+I Monti Transantartici separano l'Antartide Orientale da quella Occidentale.
+Il Massiccio Vinson è la vetta più alta dell'Antartide.
+Alcune aree antartiche, dove il vento espone il ghiaccio antico, favoriscono il ritrovamento di meteoriti.
+La base McMurdo, gestita dagli Stati Uniti, è la più grande stazione di ricerca in Antartide.
+A differenza dell'Antartide, che è un continente, l'Artico è costituito prevalentemente da un oceano ricoperto di ghiaccio.
+Il Polo Nord geografico non si trova su terraferma, ma su ghiaccio marino galleggiante sull'Oceano Artico.
+Gli orsi polari vivono esclusivamente nelle regioni artiche e non in Antartide.
+Le regioni artiche comprendono territori appartenenti a diversi paesi, tra cui Stati Uniti, Canada, Russia e Norvegia.
+L'esploratore Robert Peary sostenne di aver raggiunto il Polo Nord nel 1909, ma la rivendicazione resta storicamente contestata.
+Nelle regioni artiche, in estate, il sole può rimanere visibile anche a mezzanotte, fenomeno noto come sole di mezzanotte.
+Gran parte della tundra artica poggia su un sottosuolo perennemente ghiacciato chiamato permafrost.
+L'aurora boreale è visibile con maggiore frequenza nelle regioni vicine al Circolo Polare Artico.
+L'Oceano Artico è il più piccolo tra i cinque oceani del pianeta.
+Le osservazioni satellitari condotte dal 1979 mostrano una progressiva riduzione dell'estensione dei ghiacci marini artici.
+L'arcipelago delle Svalbard appartiene alla Norvegia.
+Nelle Svalbard si trova la Global Seed Vault, un deposito che conserva campioni di semi da tutto il mondo a scopo di conservazione.
+I popoli Inuit abitano da millenni le regioni artiche di Canada, Groenlandia, Alaska e Russia.
+Le renne, chiamate caribù in Nord America, compiono lunghe migrazioni stagionali nella tundra artica.
+Il narvalo, cetaceo dotato di un lungo dente a spirale, vive nelle acque artiche.
+La volpe artica cambia il colore del proprio mantello a seconda della stagione per mimetizzarsi meglio.
+L'aurora boreale è generata dall'interazione tra particelle cariche provenienti dal Sole e l'atmosfera terrestre.
+La Groenlandia è la più grande isola del mondo che non sia considerata un continente.
+La Groenlandia è un territorio autonomo appartenente al Regno di Danimarca.
+Gran parte della Groenlandia è ricoperta da una calotta glaciale seconda per estensione solo a quella antartica.
+Secondo alcune stime scientifiche, lo scioglimento completo della calotta glaciale groenlandese potrebbe far innalzare significativamente il livello dei mari, sebbene i tempi restino oggetto di studio.
+Secondo le saghe islandesi, il navigatore Erik il Rosso avrebbe chiamato l'isola Groenlandia, terra verde, per attirare coloni.
+Erik il Rosso fondò i primi insediamenti norreni in Groenlandia intorno all'anno 985.
+La popolazione della Groenlandia vive quasi interamente lungo le coste, nelle aree libere dai ghiacci.
+Nuuk è la capitale della Groenlandia.
+La Groenlandia ha una delle densità di popolazione più basse al mondo.
+La popolazione indigena della Groenlandia è composta in gran parte da Inuit, noti localmente come Kalaallit.
+Il groenlandese e il danese sono entrambi lingue ufficiali della Groenlandia.
+Gli insediamenti norreni in Groenlandia scomparvero misteriosamente intorno al Quattrocento, per cause ancora dibattute dagli storici.
+Lo squalo della Groenlandia è tra i vertebrati più longevi conosciuti, con una durata di vita che può superare i due secoli.
+In Groenlandia non esistono strade che collegano le diverse città, e gli spostamenti avvengono principalmente in barca, aereo o slitta.
+Geologicamente la Groenlandia appartiene alla placca continentale nordamericana.
+La Danimarca gestisce la politica estera e la difesa della Groenlandia, che mantiene invece un ampio governo autonomo interno.
+Il fiordo glaciale di Ilulissat, in Groenlandia, è patrimonio dell'umanità UNESCO per i suoi imponenti ghiacciai in movimento.
+I cani da slitta hanno rappresentato per secoli il principale mezzo di trasporto nelle regioni artiche e in Groenlandia.
+Il norvegese Fridtjof Nansen attraversò la Groenlandia con gli sci nel 1888, in una delle prime spedizioni artiche moderne.
+La Groenlandia ospita alcuni tra i fiordi più profondi e spettacolari del mondo.
+L'Antartide, a differenza dell'Artico, non ha mai avuto insediamenti umani stabili prima dell'epoca delle spedizioni scientifiche.
+Il ghiaccio marino artico si riduce tipicamente al minimo verso la fine dell'estate boreale, a settembre.
+La calotta glaciale della Groenlandia si è formata nel corso di milioni di anni di accumulo di neve compressa.
+Le spedizioni polari di inizio Novecento utilizzavano slitte trainate da cani e pony per attraversare i ghiacci.
+L'esploratore anglo-irlandese Ernest Shackleton guidò diverse spedizioni verso l'Antartide nei primi decenni del Novecento.
+La nave Endurance di Shackleton rimase intrappolata e infine distrutta dai ghiacci antartici nel 1915.
+L'equipaggio della spedizione Endurance sopravvisse quasi due anni tra i ghiacci prima di essere tratto in salvo.
+Nell'Artico vivono anche popolazioni umane stabili, mentre in Antartide la presenza umana resta legata esclusivamente alla ricerca scientifica.
+Il permafrost artico può custodire resti di piante e animali rimasti congelati per migliaia di anni.
+Le auroree polari, boreale e australe, sono fenomeni simmetrici osservabili rispettivamente vicino ai due poli.
+La costa groenlandese è ricca di iceberg generati dal distacco di grandi blocchi dai ghiacciai.
+L'Antartide non appartiene a nessuno stato sovrano, pur ospitando basi scientifiche di numerosi paesi.
+Diverse nazioni mantengono rivendicazioni territoriali in Antartide, che il Trattato Antartico ha di fatto sospeso senza risolverle.
+Il clima estremo dell'Antartide rende la crescita vegetale limitata quasi esclusivamente a muschi e licheni.
+La foca di Weddell è una delle specie di mammiferi marini che vivono più a sud, nelle acque antartiche.
+L'esploratore norvegese Fridtjof Nansen ricevette il premio Nobel per la pace per il suo impegno umanitario dopo le sue imprese artiche.
+Le spedizioni verso il Polo Sud dell'inizio del Novecento erano spesso finanziate da governi nazionali in una sorta di competizione internazionale.
+La Groenlandia fu una colonia danese fino a ottenere lo status di territorio autonomo nel corso del Novecento.
+L'oceano che circonda l'Antartide viene talvolta indicato come Oceano Antartico o Oceano Meridionale.
+Le isole Svalbard si trovano a poche centinaia di chilometri dal Polo Nord.
+Il ghiaccio marino, a differenza dei ghiacciai continentali, si forma direttamente dal congelamento dell'acqua di mare.
+La ricerca scientifica in Antartide comprende lo studio di carote di ghiaccio che conservano informazioni sul clima di centinaia di migliaia di anni fa.
+L'Antartide è priva di un fuso orario ufficiale unico, data l'assenza di una popolazione civile stabile.
+Gli iceberg più grandi del mondo si staccano generalmente dalle piattaforme di ghiaccio antartiche.
+Vittoria e tragedia furono per me la stessa strada, percorsa con lo stesso passo. — attribuita a Robert Falcon Scott
+L'avventura è solo un disagio considerato con distacco. — attribuita a Robert Falcon Scott
+La vittoria attende chi ha tutto in ordine, e questa si chiama fortuna. — attribuita a Roald Amundsen
+Ho imparato che ciò che sembra impossibile diventa raggiungibile con metodo e pazienza. — attribuita a Roald Amundsen
+Per uomini di spirito autentico, il fallimento è l'unico vero peccato. — attribuita a Ernest Shackleton
+A volte bisogna ritirarsi per poter un giorno avanzare di nuovo. — attribuita a Ernest Shackleton
+Il pericolo maggiore nella vita è non rischiare nulla. — attribuita a Fridtjof Nansen
+Ciò che è difficile richiede solo un po' più di tempo, ciò che è impossibile un po' di più. — attribuita a Fridtjof Nansen
+Il vero esploratore non teme il ghiaccio, teme solo di fermarsi prima di aver capito. — attribuita a Robert Peary
+Il silenzio dei ghiacci insegna una pazienza che nessun libro può dare. — attribuita a Robert Peary
+La savana è un bioma caratterizzato da vaste praterie con alberi sparsi, tipico delle regioni tropicali con stagioni ben distinte.
+Il termine savana deriva da una parola di origine caraibica usata per indicare le pianure erbose.
+La savana africana occupa gran parte dell'Africa subsahariana, dal Senegal al Sudafrica.
+Il Serengeti, in Tanzania, è una delle savane più celebri e studiate al mondo.
+Ogni anno milioni di gnu attraversano il Serengeti e il Masai Mara in una delle più grandi migrazioni animali della Terra.
+I leoni vivono in gruppi sociali chiamati branchi, un comportamento raro tra i grandi felini.
+Le giraffe sono i mammiferi terrestri più alti al mondo, con un collo che può superare i due metri di lunghezza.
+L'elefante africano di savana è il più grande animale terrestre vivente.
+Le strisce delle zebre sono uniche per ogni individuo, come impronte digitali.
+Il ghepardo è l'animale terrestre più veloce al mondo su brevi distanze.
+Le acacie, con la loro caratteristica chioma appiattita, sono tra gli alberi simbolo della savana africana.
+La savana alterna una lunga stagione secca a una più breve stagione delle piogge.
+Gli incendi stagionali, spesso di origine naturale, contribuiscono a mantenere l'equilibrio ecologico della savana.
+I babbuini vivono in gruppi sociali complessi con gerarchie ben definite.
+Le iene, spesso considerate solo spazzine, sono in realtà abili cacciatrici in gruppo.
+Il rinoceronte bianco è tra i grandi erbivori della savana africana ed è oggi una specie minacciata.
+La savana non è esclusiva dell'Africa: esiste anche in Sud America e in Australia.
+Il Cerrado, in Brasile, è una delle savane tropicali più estese e biodiverse del mondo.
+I Llanos, tra Venezuela e Colombia, sono vaste pianure erbose paragonabili alla savana africana.
+I termitai della savana possono raggiungere diversi metri di altezza.
+I suoli della savana sono spesso poveri di nutrienti a causa del dilavamento delle piogge stagionali.
+L'espressione big five, oggi usata nel turismo safari, fu coniata originariamente dai cacciatori.
+I bufali cafri si spostano in mandrie numerose per difendersi meglio dai predatori.
+Numerose specie di antilopi, come impala e gazzelle, popolano le savane africane.
+Lo struzzo, il più grande uccello vivente, è tipico degli ambienti aperti della savana.
+La savana tropicale del nord dell'Australia ospita una fauna unica, diversa da quella africana.
+Le foreste pluviali tropicali coprono meno del dieci per cento delle terre emerse ma ospitano più della metà delle specie animali e vegetali conosciute.
+L'Amazzonia è la più estesa foresta pluviale tropicale del pianeta.
+Il bacino del fiume Congo ospita la seconda foresta pluviale più estesa al mondo.
+Le foreste del Borneo sono considerate tra gli ecosistemi di giungla più antichi della Terra.
+La giungla presenta più strati di vegetazione, chiamati emergente, canopy, sottobosco e suolo forestale.
+Gli oranghi vivono esclusivamente nelle foreste pluviali di Borneo e Sumatra.
+I gorilla di pianura e di montagna abitano le foreste del bacino del Congo.
+Le rane freccia velenosa vivono nelle giungle centroamericane e sudamericane.
+L'anaconda, uno dei serpenti più grandi al mondo, vive nelle zone umide e nelle giungle del Sud America.
+L'Amazzonia viene spesso definita il polmone verde del pianeta, anche se il suo reale contributo netto all'ossigeno atmosferico è oggetto di discussione scientifica.
+Le epifite, come molte orchidee, crescono appoggiate sui rami degli alberi senza radicarsi nel suolo.
+Le liane sono piante rampicanti che si arrampicano sugli alberi della giungla in cerca di luce.
+Nelle foreste pluviali tropicali le precipitazioni annue possono superare i duemila millimetri.
+Il fitto fogliame della canopy lascia filtrare solo una piccola parte della luce solare fino al suolo della giungla.
+Numerose piante medicinali utilizzate nella farmacologia moderna provengono dalle foreste pluviali tropicali.
+I tucani, con il loro becco colorato, vivono nella canopy delle foreste centroamericane e sudamericane.
+La ceiba, o albero del kapok, può raggiungere altezze notevoli, superando la canopy della foresta.
+Numerosi popoli indigeni abitano da secoli le foreste pluviali dell'Amazzonia e del bacino del Congo.
+Il giaguaro è il predatore apicale delle foreste pluviali americane.
+La tigre del Bengala vive anche nelle foreste di mangrovie delle Sundarban, tra India e Bangladesh.
+La deforestazione rappresenta una delle principali minacce per gli ecosistemi di foresta pluviale in tutto il mondo.
+Le formiche tagliafoglie coltivano funghi all'interno dei loro nidi sotterranei nella giungla.
+I bradipi trascorrono quasi tutta la vita sugli alberi della foresta pluviale, muovendosi molto lentamente.
+Le piranha popolano numerosi fiumi e affluenti dell'Amazzonia.
+La farfalla Morpho, dalle ali blu iridescenti, è tra gli insetti più noti delle foreste sudamericane.
+Le temperature nella foresta pluviale tropicale restano relativamente stabili durante tutto l'anno.
+Alcune regioni della giungla asiatica ospitano estese foreste di bambù.
+Le mangrovie costituiscono un particolare tipo di foresta che cresce lungo le coste tropicali, tra acqua dolce e salata.
+Molte piante della giungla fioriscono in momenti diversi dell'anno per proteggere i propri semi dai predatori.
+Le piante del sottobosco spesso sviluppano foglie molto larghe per catturare la scarsa luce filtrata dalla canopy.
+Le foreste pluviali, pur occupando una piccola porzione della superficie terrestre, ospitano circa la metà delle specie oggi conosciute.
+Le foreste del bacino del Congo sono la principale casa dei gorilla di pianura occidentale.
+Le foreste del Borneo si sono formate oltre cento milioni di anni fa, tra le più antiche al mondo.
+Sia la savana sia la giungla si trovano prevalentemente nelle fasce tropicali del pianeta.
+La savana riceve generalmente meno precipitazioni della giungla, motivo per cui presenta meno alberi e più spazi aperti.
+Entrambi i biomi ospitano un'elevata biodiversità, ma con adattamenti molto diversi tra le specie che li abitano.
+Il leopardo è uno dei pochi grandi felini capace di vivere sia in savana sia in ambienti di foresta.
+I coccodrilli del Nilo abitano fiumi e paludi ai margini di molte savane africane.
+Le pozze d'acqua stagionali della savana sono fondamentali per la sopravvivenza della fauna durante la stagione secca.
+Il facocero, parente selvatico del maiale, è comune nelle savane africane.
+Il licaone, o cane selvatico africano, caccia in branchi altamente organizzati nella savana.
+La savana ospita alcune delle più grandi concentrazioni di erbivori di grandi dimensioni al mondo.
+Gli avvoltoi svolgono un ruolo ecologico fondamentale ripulendo le carcasse nella savana.
+Nella foresta pluviale molte specie animali sono attive prevalentemente di notte per evitare il caldo diurno.
+Il pitone reticolato, tra i serpenti più lunghi al mondo, vive nelle foreste del sud-est asiatico.
+Le scimmie urlatrici, tipiche delle giungle centro e sudamericane, emettono richiami udibili a diversi chilometri di distanza.
+Il fiume Congo attraversa la seconda foresta pluviale più estesa del pianeta.
+Le radici a contrafforte di alcuni alberi della giungla forniscono stabilità nel terreno spesso poco profondo.
+La savana del Serengeti prende il nome da un termine masai che significa terra infinita.
+Molte specie di uccelli migratori trascorrono parte dell'anno nelle savane africane prima di tornare in Europa o Asia.
+Il baobab, con il suo tronco enorme capace di immagazzinare acqua, è un albero simbolo delle savane africane.
+Le termiti della savana svolgono un ruolo ecologico importante nella decomposizione della materia organica.
+Nella giungla amazzonica vivono più specie di alberi in un solo ettaro che in intere regioni temperate.
+I pipistrelli della frutta contribuiscono all'impollinazione e alla dispersione dei semi nelle foreste tropicali.
+Il coccodrillo americano vive nelle zone umide ai margini delle foreste pluviali del continente americano.
+La savana e la giungla insieme ospitano una parte molto significativa della biodiversità terrestre complessiva.
+Le grandi felci arboree sono tipiche del sottobosco umido delle foreste pluviali.
+Molte piante della savana hanno radici molto profonde per raggiungere l'acqua durante la stagione secca.
+Il picchio muratore africano e altre specie di uccelli nidificano nelle cavità degli alberi della savana.
+La foresta pluviale amazzonica produce una quantità di umidità che influenza il clima di intere regioni del Sud America.
+La savana del Kalahari, nell'Africa meridionale, è semi-arida e ospita una fauna adattata alla scarsità d'acqua.
+Le lucciole di alcune foreste tropicali del sud-est asiatico si sincronizzano lampeggiando tutte insieme.
+Il numero di specie di insetti in un singolo albero di foresta pluviale può superare quello di un intero paese temperato.
+Molti safari fotografici moderni si svolgono proprio nelle savane dell'Africa orientale e meridionale.
+Chi cammina nella savana all'alba impara a leggere il territorio dai segni lasciati dagli animali durante la notte. — attribuita a David Livingstone
+L'Africa rivela i suoi segreti solo a chi ha la pazienza di attraversarla passo dopo passo. — attribuita a David Livingstone
+Ogni fiume che ho seguito mi ha insegnato più di quanto avessi imparato nei libri. — attribuita a David Livingstone
+Il cuore dell'Africa non si conquista, si comprende con umiltà. — attribuita a Henry Morton Stanley
+Nella foresta più fitta, l'uomo impara quanto poco conosca davvero della natura. — attribuita a Henry Morton Stanley
+La varietà infinita della foresta tropicale è la prova più eloquente della potenza della natura. — attribuita a Alfred Russel Wallace
+Osservando ogni piccola creatura della giungla si intravede il disegno immenso della vita. — attribuita a Alfred Russel Wallace
+La natura non fa salti, ma nella giungla ogni passaggio sembra un piccolo miracolo. — attribuita a Alfred Russel Wallace
+Chi esplora la foresta equatoriale impara che il silenzio non esiste mai davvero. — attribuita a Alexander von Humboldt
+Ogni specie che scompare dalla savana porta con sé un pezzo di equilibrio che non tornerà. — attribuita a Alexander von Humboldt
+Il polpo ha tre cuori e il suo sangue è di colore blu a causa di una proteina a base di rame.
+La balenottera azzurra è l'animale più grande mai esistito sulla Terra, comprese le specie di dinosauri conosciute.
+Il colibrì è l'unico uccello in grado di volare all'indietro.
+Il cuore di un colibrì può battere centinaia di volte al minuto durante il volo.
+Il camaleonte cambia colore soprattutto per comunicare e regolare la temperatura corporea, non solo per mimetizzarsi.
+Il drago di Komodo è la specie di lucertola vivente più grande al mondo.
+Lo squillo gambero pistola, o mantide marina, può colpire le prede a una velocità tale da generare un lampo di calore momentaneo nell'acqua.
+L'axolotl è un anfibio capace di rigenerare arti, coda e persino parti di organi interni.
+L'ornitorinco è uno dei pochissimi mammiferi che depone uova invece di partorire.
+I maschi di ornitorinco possiedono uno sperone velenoso sulle zampe posteriori.
+L'echidna, come l'ornitorinco, è un mammifero che depone uova, chiamato monotrema.
+I koala dormono in media fino a venti ore al giorno per risparmiare energia.
+I canguri hanno difficoltà a muoversi camminando all'indietro, per la struttura delle loro zampe.
+I vombati producono escrementi di forma cubica, un caso unico nel regno animale.
+Le api comunicano la posizione del cibo alle compagne attraverso la cosiddetta danza dell'addome.
+Le formiche possono trasportare carichi molte volte superiori al proprio peso corporeo.
+I gufi possono ruotare la testa fino a circa duecentosettanta gradi grazie a particolari adattamenti del collo.
+Il piumaggio dei gufi è strutturato in modo da rendere il loro volo quasi silenzioso.
+Il falco pellegrino è l'animale più veloce al mondo durante le sue picchiate in caccia.
+I pipistrelli sono gli unici mammiferi capaci di un volo vero e proprio, non solo di planare.
+I delfini utilizzano fischi distintivi che funzionano come veri e propri nomi individuali.
+Gli squali popolano gli oceani da centinaia di milioni di anni, ben prima della comparsa degli alberi sulla Terra.
+Le lontre marine si tengono per mano mentre dormono, per evitare di allontanarsi tra loro nella corrente.
+Il polpo mimetico è capace di imitare l'aspetto e i movimenti di diverse altre specie marine.
+Alcune meduse, come Turritopsis dohrnii, possono tornare a uno stadio giovanile dopo aver raggiunto la maturità.
+I tardigradi possono sopravvivere a condizioni estreme, incluse basse pressioni simili a quelle dello spazio.
+Il cranio dei picchi è dotato di strutture che assorbono gli urti ripetuti durante la ricerca di cibo nel legno.
+Alcune specie di lumache possono restare in letargo per anni in condizioni di scarsità d'acqua.
+Le stelle marine possono rigenerare un braccio perduto, e in alcune specie un braccio può rigenerare l'intero corpo.
+Le seppie possono modificare rapidamente sia il colore sia la consistenza della propria pelle.
+L'anguilla elettrica è capace di generare scariche elettriche sufficienti a stordire piccole prede.
+Gli ippopotami secernono una sostanza rossastra che agisce da protezione naturale per la pelle contro sole e infezioni.
+Il colore rosa dei fenicotteri deriva dai pigmenti presenti negli organismi di cui si nutrono.
+I pinguini Adelia, durante il corteggiamento, offrono un ciottolo alla compagna come segno di interesse.
+Gli albatri riescono a percorrere lunghissime distanze planando, sfruttando le correnti d'aria sopra l'oceano.
+Alcune specie di pesci pagliaccio possono cambiare sesso nel corso della propria vita.
+I ratti talpa nudi mostrano una resistenza insolita ai tumori e vivono più a lungo della maggior parte dei roditori.
+Alcune specie di tartarughe possono assorbire ossigeno attraverso la cloaca durante l'ibernazione subacquea.
+La lingua del camaleonte può estendersi per una lunghezza superiore a quella del suo intero corpo.
+Il panda gigante trascorre gran parte della giornata a nutrirsi di bambù.
+I lupi comunicano tramite ululati con timbri riconoscibili individualmente all'interno del branco.
+I castori costruiscono dighe capaci di modificare in modo significativo l'ecosistema circostante.
+Le farfalle monarca compiono migrazioni di migliaia di chilometri nell'arco di più generazioni.
+I salmoni tornano spesso a riprodursi nello stesso corso d'acqua in cui sono nati.
+Nei cavallucci marini è il maschio a portare e a far nascere i piccoli.
+Lo scoppio generato dal colpo della mantide marina può produrre una brevissima emissione di luce chiamata sonoluminescenza.
+Uno scarafaggio può sopravvivere per giorni anche dopo la perdita della testa, grazie al suo sistema nervoso decentralizzato.
+I tardigradi hanno mostrato una notevole resistenza anche a forti dosi di radiazioni.
+Il cuore di una balenottera azzurra ha dimensioni paragonabili a quelle di una piccola automobile.
+Gli elefanti marini possono immergersi a profondità di centinaia di metri per cacciare.
+I pipistrelli vampiro condividono pasti di sangue con i compagni di rifugio che non sono riusciti a nutrirsi.
+Alcuni ragni si spostano nell'aria producendo fili di seta trasportati dal vento, un comportamento chiamato ballooning.
+Il miele, se conservato correttamente, può restare commestibile per periodi molto lunghi grazie alle sue proprietà naturali.
+I corvidi, come cornacchie e corvi, sono in grado di utilizzare strumenti e riconoscere volti umani.
+Alcuni pappagalli possono imparare e riprodurre parole umane, associandole in alcuni casi a concetti semplici.
+Gli elefanti mostrano comportamenti di attenzione verso i resti di membri deceduti del proprio gruppo.
+Le fusa dei gatti rientrano in una gamma di frequenze che secondo alcuni studi potrebbe favorire la guarigione ossea.
+I serpenti a sonagli possiedono organi sensibili al calore che permettono loro di individuare prede a sangue caldo.
+Lo squalo elefante è, dopo lo squalo balena, il secondo pesce vivente più grande.
+Lo squalo balena è il pesce più grande oggi esistente, nonostante si nutra principalmente di plancton.
+Il numbat si nutre quasi esclusivamente di termiti, catturate con una lunga lingua appiccicosa.
+L'oritteropo scava gallerie sotterranee molto estese per rifugio e ricerca di cibo.
+Il pangolino è l'unico mammifero interamente ricoperto da scaglie cheratiniche.
+Il riccio si arrotola su se stesso mostrando gli aculei come principale forma di difesa.
+I suricati si alternano nel ruolo di sentinella per sorvegliare l'arrivo di eventuali predatori.
+Il periofthalmo, o pesce saltafango, riesce a sopravvivere fuori dall'acqua per periodi prolungati.
+Alcune specie di geco possono camminare su superfici verticali grazie a minuscole strutture sulle zampe.
+Alcune colonie di formiche possono estendersi su territori vastissimi, formando le cosiddette supercolonie.
+Alcuni studi suggeriscono che le api siano in grado di distinguere tra volti umani diversi.
+I corvi mostrano comportamenti che indicano una capacità di pianificazione per eventi futuri.
+Le tartarughe marine si orientano durante le migrazioni sfruttando il campo magnetico terrestre.
+L'anguilla europea compie una lunga migrazione fino al Mar dei Sargassi per riprodursi.
+Il pesce luna, o mola mola, è tra i pesci ossei più grandi e depone un numero straordinario di uova.
+Alcune specie di meduse non possiedono né cervello né cuore, pur essendo capaci di nuotare e cacciare.
+I granchi eremiti cambiano periodicamente la conchiglia che utilizzano come rifugio, adattandola alla propria crescita.
+Le lucertole di alcune specie possono staccare volontariamente la coda per sfuggire ai predatori.
+I pesci pipistrello camminano letteralmente sul fondale marino grazie a pinne modificate simili a zampe.
+Gli struzzi, pur non potendo volare, sono tra gli animali terrestri più veloci nella corsa.
+Le formiche del deserto si orientano contando i propri passi durante gli spostamenti.
+Alcuni pesci d'acqua dolce, come i ciclidi, mostrano complesse cure parentali verso la prole.
+I ricci di mare possono vivere per decenni, alcune specie anche oltre un secolo.
+Le libellule sono tra gli insetti volatori più abili, capaci di manovre aeree estremamente precise.
+Le formiche operaie possono comunicare attraverso segnali chimici chiamati feromoni.
+I pesci pagliaccio vivono in simbiosi con gli anemoni marini, ai cui tentacoli urticanti sono immuni.
+Alcuni pipistrelli si orientano nel buio tramite ecolocalizzazione, emettendo ultrasuoni e analizzandone l'eco.
+I capodogli emettono i suoni più potenti tra tutti gli animali marini conosciuti.
+Alcune specie di rane possono sopravvivere al congelamento parziale del proprio corpo durante l'inverno.
+I gechi leopardo, a differenza di molti altri rettili, hanno palpebre mobili simili a quelle dei mammiferi.
+I pesci elettrici utilizzano organi specializzati per generare campi elettrici a scopo di caccia o comunicazione.
+Le civette hanno un udito così sviluppato da poter localizzare le prede anche al buio completo, solo tramite il suono.
+Nulla ha valore se non lo si osserva con l'occhio della curiosità paziente. — attribuita ad Aristotele
+La natura non compie nulla senza uno scopo, per quanto piccola sia la creatura osservata. — attribuita ad Aristotele
+Chi studia gli animali impara più sull'ordine del mondo che chi studia soltanto le stelle. — attribuita ad Aristotele
+La natura è ovunque generosa, basta avere occhi capaci di riconoscerlo. — attribuita a Plinio il Vecchio
+Non esiste creatura, per quanto minuscola, priva di una propria meraviglia da raccontare. — attribuita a Plinio il Vecchio
+Osservare senza pregiudizio è il primo passo per comprendere la varietà della vita. — attribuita a Georges-Louis Leclerc de Buffon
+La natura non conosce salti bruschi, ma solo trasformazioni lente e continue. — attribuita a Georges-Louis Leclerc de Buffon
+Classificare il mondo vivente è un atto di umiltà prima ancora che di scienza. — attribuita a Linneo
+Ogni specie porta in sé un nome che racconta la sua storia naturale. — attribuita a Linneo
+La diversità della vita è la prova più semplice e più grande della fecondità della natura. — attribuita a Linneo
 Il tempo non si trova, si organizza.
 `;
 const QUOTES = QUOTES_RAW.split('\n').map(s => s.trim()).filter(s => s.length > 0);
