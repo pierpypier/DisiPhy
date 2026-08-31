@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 04</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 04: la crisi dei missili di cuba -->
+<div id="appendice-04-crisi-cuba" class="capitolo-storia">
+  <p class="titolo-capitolo">04 - La crisi dei missili di Cuba - 1962</p>
+
+  <p class="titolo-capitolo">Cuba e la rivoluzione castrista</p>
+  <p>Nel 1959, un movimento rivoluzionario guidato da Fidel Castro rovesciò il regime del dittatore Fulgencio Batista a Cuba, un'isola caraibica situata a poche centinaia di chilometri dalle coste degli Stati Uniti, dando vita nel giro di pochi anni a un governo di orientamento sempre più apertamente comunista.</p>
+  <p>Questo sviluppo preoccupò fortemente gli Stati Uniti, che videro nella nascita di un regime comunista così vicino ai propri confini una minaccia diretta alla propria sicurezza nazionale, in un contesto storico dominato dalla contrapposizione ideologica della guerra fredda con l'Unione Sovietica.</p>
+  <p>Nel 1961, un tentativo statunitense di rovesciare Castro attraverso lo sbarco di un gruppo di esuli cubani anticastristi nella Baia dei Porci si concluse con un clamoroso fallimento, spingendo Cuba a rafforzare ulteriormente i propri legami politici e militari con l'Unione Sovietica.</p>
+
+  <p class="titolo-capitolo">L'installazione dei missili sovietici</p>
+  <p>Nel corso del 1962, l'Unione Sovietica, guidata dal leader Nikita Chruščёv, decise di installare segretamente a Cuba alcune basi missilistiche dotate di testate nucleari, con l'obiettivo dichiarato di difendere l'isola da un possibile nuovo attacco statunitense, ma anche con il calcolo strategico di riequilibrare il divario missilistico esistente allora a favore degli Stati Uniti.</p>
+  <p>Questi missili, se effettivamente installati e operativi, avrebbero potuto raggiungere gran parte del territorio statunitense in pochi minuti, rappresentando una minaccia militare diretta e senza precedenti per la sicurezza nazionale americana.</p>
+
+  <p class="titolo-capitolo">La scoperta della crisi</p>
+  <p>Il 14 ottobre del 1962, un aereo spia statunitense U-2, durante una missione di ricognizione fotografica sull'isola, individuò chiaramente le installazioni missilistiche sovietiche in costruzione, fornendo al presidente statunitense John Fitzgerald Kennedy prove concrete della minaccia in atto.</p>
+  <p>Nei giorni immediatamente successivi, il governo statunitense si trovò a dover valutare con estrema urgenza diverse opzioni di risposta, che spaziavano da un attacco militare diretto e immediato contro le basi missilistiche, fino a soluzioni diplomatiche più caute, in un clima di grandissima tensione e segretezza.</p>
+
+  <p class="titolo-capitolo">Il blocco navale e i giorni più critici</p>
+  <p>Il 22 ottobre del 1962, Kennedy annunciò pubblicamente alla nazione la scoperta dei missili sovietici a Cuba, e dispose l'istituzione di un blocco navale attorno all'isola, definito ufficialmente "quarantena" per motivi di diritto internazionale, con l'obiettivo di impedire l'arrivo di ulteriori materiali militari sovietici.</p>
+  <p>Nei giorni successivi, il mondo intero visse con enorme apprensione l'evolversi della crisi, mentre navi sovietiche dirette verso Cuba si avvicinavano pericolosamente alla linea del blocco navale statunitense, in un confronto diretto che rischiava in qualsiasi momento di sfociare in un conflitto armato aperto tra le due superpotenze nucleari.</p>
+  <p>Il momento di massima tensione fu raggiunto il 27 ottobre, giornata ricordata dagli storici come "sabato nero", quando un aereo spia statunitense venne abbattuto sopra Cuba, e un sommergibile sovietico armato con siluri nucleari, sottoposto a un intenso pressing da parte di navi militari americane, rischiò di lanciare un attacco nucleare, evitato solo grazie alla decisione di uno dei suoi ufficiali di non autorizzare il lancio.</p>
+
+  <p class="titolo-capitolo">La soluzione diplomatica</p>
+  <p>Proprio mentre la tensione militare rischiava di sfuggire a ogni controllo, i canali diplomatici tra Washington e Mosca, sia ufficiali che segreti, riuscirono a trovare un accordo che permise di disinnescare la crisi senza ricorrere a un conflitto armato diretto.</p>
+  <p>Sulla base di questo accordo, l'Unione Sovietica si impegnò a ritirare i propri missili da Cuba, in cambio dell'impegno pubblico degli Stati Uniti a non invadere militarmente l'isola in futuro, oltre a un accordo segreto, reso noto solo molti anni più tardi, con cui gli Stati Uniti si impegnavano a ritirare, in un secondo momento, propri missili nucleari precedentemente installati in Turchia, ai confini con l'Unione Sovietica.</p>
+  <p>Il 28 ottobre del 1962, l'annuncio del ritiro sovietico pose ufficialmente fine ai tredici giorni di altissima tensione internazionale, che sono considerati ancora oggi dagli storici il momento in cui il mondo si è trovato più vicino a un conflitto nucleare diretto tra le due superpotenze della guerra fredda.</p>
+
+  <p class="titolo-capitolo">Le conseguenze della crisi</p>
+  <p>L'esperienza drammatica di questi tredici giorni convinse sia gli Stati Uniti che l'Unione Sovietica della necessità di stabilire canali di comunicazione diretti e più rapidi tra le due superpotenze, portando l'anno successivo, nel 1963, all'istituzione della cosiddetta "linea rossa", un collegamento telefonico diretto tra la Casa Bianca e il Cremlino, pensato per gestire con maggiore rapidità future situazioni di crisi.</p>
+  <p>La crisi dei missili di Cuba contribuì inoltre ad avviare, negli anni immediatamente successivi, i primi accordi internazionali per limitare la sperimentazione e la diffusione delle armi nucleari, come il trattato per la messa al bando parziale degli esperimenti nucleari, firmato già nel 1963, un primo passo verso la più ampia stagione di distensione tra le due superpotenze che avrebbe caratterizzato gli anni successivi della guerra fredda.</p>
+</div>
+<!-- fine appendice 04 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app05.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>
