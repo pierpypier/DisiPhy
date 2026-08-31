@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 01</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 01: l'assassinio di kennedy -->
+<div id="appendice-01-kennedy" class="capitolo-storia">
+  <p class="titolo-capitolo">01 - L'assassinio di Kennedy - 1963</p>
+
+  <p class="titolo-capitolo">Il contesto: l'America di Kennedy</p>
+  <p>John Fitzgerald Kennedy divenne presidente degli Stati Uniti nel gennaio del 1961, all'età di soli 43 anni, il più giovane presidente mai eletto fino ad allora nella storia americana, e rappresentò per molti americani un simbolo di rinnovamento e di speranza dopo gli anni più rigidi della guerra fredda.</p>
+  <p>Il suo governo dovette affrontare fin da subito momenti di grande tensione internazionale, come il fallito sbarco alla Baia dei Porci a Cuba, nel 1961, e soprattutto la drammatica crisi dei missili di Cuba, nel 1962, che portò il mondo pericolosamente vicino a un conflitto nucleare con l'Unione Sovietica.</p>
+  <p>Sul piano interno, Kennedy si era anche esposto a favore di importanti riforme sui diritti civili degli afroamericani, un tema politicamente delicato e divisivo, soprattutto negli stati del sud degli Stati Uniti, dove la segregazione razziale era ancora largamente praticata.</p>
+
+  <p class="titolo-capitolo">Il viaggio a Dallas</p>
+  <p>Il 22 novembre del 1963, il presidente Kennedy si trovava in visita a Dallas, in Texas, insieme alla moglie Jacqueline, nell'ambito di un viaggio politico pensato per rafforzare il proprio consenso in vista delle elezioni presidenziali dell'anno successivo.</p>
+  <p>Il corteo presidenziale attraversava le vie del centro cittadino a bordo di un'auto scoperta, seguendo un percorso reso pubblico nei giorni precedenti, quando, verso mezzogiorno, mentre l'auto transitava per Dealey Plaza, furono esplosi diversi colpi d'arma da fuoco contro il presidente.</p>
+
+  <p class="titolo-capitolo">L'attentato e le prime ore</p>
+  <p>Kennedy fu colpito gravemente alla testa e al collo, e venne immediatamente trasportato al vicino ospedale Parkland Memorial, dove i medici, nonostante i tentativi di soccorso, dichiararono il decesso poco dopo l'arrivo.</p>
+  <p>La notizia dell'assassinio si diffuse rapidamente in tutto il mondo attraverso radio e televisione, suscitando un'ondata di shock e cordoglio non solo negli Stati Uniti, ma anche a livello internazionale, data la giovane età del presidente e la popolarità di cui godeva.</p>
+  <p>Poche ore dopo l'attentato, il vicepresidente Lyndon B. Johnson prestò giuramento a bordo dell'aereo presidenziale, sull'aeroporto di Dallas, assumendo immediatamente la carica di presidente, secondo quanto previsto dalla Costituzione statunitense in caso di morte del presidente in carica.</p>
+
+  <p class="titolo-capitolo">Lee Harvey Oswald</p>
+  <p>Poco dopo l'attentato, la polizia di Dallas arrestò Lee Harvey Oswald, un ex marine con trascorsi politici di simpatia filo-comunista, che lavorava in un deposito di libri scolastici situato lungo il percorso del corteo presidenziale, da dove secondo le indagini sarebbero partiti i colpi mortali.</p>
+  <p>Oswald negò sempre pubblicamente la propria responsabilità nell'attentato, ma non ebbe mai la possibilità di essere processato: due giorni dopo l'arresto, il 24 novembre, fu a sua volta ucciso a colpi di pistola da Jack Ruby, un gestore di locali notturni di Dallas, mentre veniva trasferito sotto scorta tra due strutture di detenzione, un episodio ripreso in diretta dalle telecamere televisive.</p>
+
+  <p class="titolo-capitolo">La Commissione Warren</p>
+  <p>Nei mesi successivi all'attentato, il nuovo presidente Johnson istituì una commissione d'inchiesta ufficiale, presieduta dal giudice della Corte Suprema Earl Warren e per questo nota come Commissione Warren, con l'incarico di indagare sulle circostanze dell'assassinio.</p>
+  <p>Nel 1964, la Commissione pubblicò le proprie conclusioni ufficiali, secondo cui Lee Harvey Oswald avrebbe agito da solo, senza complici, sparando dal sesto piano del deposito di libri con un fucile di sua proprietà.</p>
+  <p>Queste conclusioni, pur essendo la posizione ufficiale delle autorità statunitensi, non riuscirono a placare i dubbi di larga parte dell'opinione pubblica, sia per alcuni aspetti tecnici della ricostruzione balistica ritenuti poco convincenti da diversi osservatori, sia per il contesto generale di sospetto legato alla morte dello stesso Oswald prima di un processo pubblico.</p>
+
+  <p class="titolo-capitolo">Un dibattito storico ancora aperto</p>
+  <p>Nei decenni successivi, l'assassinio di Kennedy è diventato uno degli eventi storici più discussi e analizzati del Novecento, dando origine a numerose teorie alternative rispetto alla versione ufficiale, che ipotizzano il coinvolgimento di altri soggetti, dai servizi segreti statunitensi alla mafia, fino al governo cubano o sovietico.</p>
+  <p>Nessuna di queste teorie alternative ha finora trovato conferme definitive e universalmente accettate dagli storici, e la comunità storica e scientifica rimane divisa tra chi ritiene sostanzialmente valida la ricostruzione della Commissione Warren e chi continua a ritenere probabile un qualche livello di cospirazione, ancora oggi non del tutto chiarito.</p>
+  <p>Proprio per l'ampia diffusione di dubbi e sospetti tra la popolazione, negli anni successivi il Congresso degli Stati Uniti riaprì in parte le indagini, e ha progressivamente disposto la desecretazione di migliaia di documenti governativi relativi al caso, un processo che è proseguito fino a tempi recenti senza però risolvere in modo definitivo tutte le domande ancora aperte.</p>
+
+  <p class="titolo-capitolo">L'eredità di Kennedy</p>
+  <p>Al di là delle circostanze mai del tutto chiarite della sua morte, la figura di Kennedy è rimasta nella memoria collettiva statunitense e mondiale come simbolo di un'epoca di grandi speranze e cambiamenti, associata a momenti come l'annuncio del programma spaziale che avrebbe portato l'uomo sulla Luna, e all'impegno, seppur non completato durante la sua presidenza, a favore dei diritti civili.</p>
+  <p>La sua morte improvvisa e violenta, trasmessa quasi in tempo reale attraverso i nuovi mezzi di comunicazione di massa, contribuì inoltre a rafforzare il ruolo della televisione come strumento centrale nella percezione pubblica degli eventi storici, un fenomeno che avrebbe caratterizzato sempre di più la storia contemporanea nei decenni successivi.</p>
+</div>
+<!-- fine appendice 01 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app02.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>

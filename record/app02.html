@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 02</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 02: le guerre del golfo -->
+<div id="appendice-02-guerre-golfo" class="capitolo-storia">
+  <p class="titolo-capitolo">02 - Le guerre del Golfo - 1990-2003</p>
+
+  <p class="titolo-capitolo">Le premesse: Iraq e Kuwait</p>
+  <p>Alla fine degli anni '80, l'Iraq del dittatore Saddam Hussein usciva economicamente stremato da una lunghissima guerra contro l'Iran, durata dal 1980 al 1988, che aveva causato enormi perdite umane e un pesante indebitamento verso diversi paesi arabi vicini, tra cui proprio il piccolo ma ricchissimo emirato del Kuwait.</p>
+  <p>Saddam Hussein accusava il Kuwait di aver contribuito ad abbassare il prezzo internazionale del petrolio attraverso una produzione eccessiva, danneggiando ulteriormente l'economia irachena, e rivendicava inoltre antiche pretese territoriali su questo piccolo stato, storicamente legato all'area irachena.</p>
+
+  <p class="titolo-capitolo">L'invasione del Kuwait</p>
+  <p>Il 2 agosto del 1990, le forze armate irachene invasero improvvisamente il Kuwait, occupandolo in pochi giorni e dichiarandone l'annessione come nuova provincia dell'Iraq, un'azione che venne immediatamente condannata dalla comunità internazionale come una palese violazione della sovranità di uno stato indipendente.</p>
+  <p>Le Nazioni Unite approvarono rapidamente una serie di risoluzioni che imponevano sanzioni economiche all'Iraq e autorizzavano, in caso di mancato ritiro, l'uso della forza militare per liberare il Kuwait, dando così una copertura legale internazionale a un eventuale intervento armato.</p>
+
+  <p class="titolo-capitolo">La prima guerra del Golfo</p>
+  <p>Di fronte al rifiuto di Saddam Hussein di ritirare le proprie truppe, si formò un'ampia coalizione internazionale, guidata dagli Stati Uniti del presidente George H. W. Bush e composta da decine di paesi, tra cui numerosi stati arabi, che nel gennaio del 1991 diede inizio a un'operazione militare chiamata "Tempesta nel deserto".</p>
+  <p>Il conflitto si articolò in una prima fase di intensi bombardamenti aerei sulle postazioni e infrastrutture militari irachene, seguita da un'offensiva di terra particolarmente rapida, che nel giro di circa cento ore costrinse le forze irachene a ritirarsi in disordine dal Kuwait, ponendo di fatto fine al conflitto nel febbraio del 1991.</p>
+  <p>Questa guerra, seguita in diretta televisiva da milioni di spettatori in tutto il mondo grazie alle nuove tecnologie di trasmissione satellitare, mostrò anche l'uso di armamenti tecnologicamente avanzati, come i missili guidati con precisione, che contribuirono a definire una nuova immagine mediatica dei conflitti contemporanei.</p>
+  <p>Al termine del conflitto, la coalizione internazionale scelse comunque di non spingersi fino al rovesciamento del regime di Saddam Hussein, limitandosi a liberare il Kuwait e imponendo all'Iraq severe sanzioni economiche e limitazioni militari, incluso il controllo internazionale sul disarmo di eventuali armi non convenzionali.</p>
+
+  <p class="titolo-capitolo">Gli anni tra le due guerre</p>
+  <p>Nel corso degli anni '90, l'Iraq rimase sottoposto a un regime di sanzioni economiche internazionali particolarmente severo, che ebbe conseguenze pesanti sulla popolazione civile del paese, mentre Saddam Hussein rimaneva saldamente al potere, spesso in aperto contrasto con le ispezioni internazionali incaricate di verificare l'effettivo smantellamento di eventuali programmi di armamento non convenzionale.</p>
+  <p>Questo lungo periodo di tensione, aggravato dal clima internazionale successivo agli attentati dell'11 settembre 2001, pose le premesse per un nuovo intervento militare, questa volta con l'obiettivo dichiarato non più di liberare un territorio occupato, ma di rovesciare direttamente il regime iracheno.</p>
+
+  <p class="titolo-capitolo">La seconda guerra del Golfo</p>
+  <p>Nel marzo del 2003, gli Stati Uniti del presidente George W. Bush, insieme a un numero più ristretto di alleati rispetto al 1991, tra cui in particolare la Gran Bretagna, avviarono un nuovo intervento militare contro l'Iraq, con la motivazione ufficiale che il regime di Saddam Hussein possedesse armi di distruzione di massa e rappresentasse quindi una minaccia diretta per la sicurezza internazionale.</p>
+  <p>A differenza della prima guerra del Golfo, questo intervento non ottenne un'esplicita autorizzazione da parte del Consiglio di Sicurezza delle Nazioni Unite, e incontrò significative opposizioni anche tra tradizionali alleati occidentali degli Stati Uniti, come Francia e Germania, oltre a suscitare vaste manifestazioni di protesta in tutto il mondo.</p>
+  <p>L'offensiva militare portò rapidamente, nel giro di poche settimane, al crollo del regime di Saddam Hussein, catturato alcuni mesi più tardi e successivamente processato e condannato a morte da un tribunale iracheno nel 2006.</p>
+  <p>Le indagini condotte negli anni successivi al conflitto non trovarono però prove concrete dell'esistenza di armi di distruzione di massa in Iraq, la principale motivazione ufficiale addotta per giustificare l'intervento, un elemento che alimentò un acceso dibattito politico e storico sulla legittimità e le reali motivazioni della guerra.</p>
+
+  <p class="titolo-capitolo">Le conseguenze di lungo periodo</p>
+  <p>Dopo la caduta di Saddam Hussein, l'Iraq attraversò un lunghissimo periodo di instabilità politica e violenza settaria, con scontri tra le diverse componenti religiose ed etniche del paese, sciiti, sunniti e curdi, che avevano convissuto per decenni sotto il controllo autoritario del regime baathista.</p>
+  <p>Questa instabilità, unita al vuoto di potere lasciato dal crollo dello stato iracheno, avrebbe contribuito, negli anni successivi, alla nascita di nuove organizzazioni radicali armate nella regione, che avrebbero ulteriormente aggravato l'instabilità del Medio Oriente per il decennio successivo.</p>
+  <p>Le due guerre del Golfo rimangono ancora oggi oggetto di analisi e dibattito storico e politico, sia per le loro conseguenze dirette sulla regione mediorientale, sia per il precedente che posero riguardo alla legittimità internazionale degli interventi militari unilaterali, un tema di grande attualità nel dibattito sulle relazioni internazionali contemporanee.</p>
+</div>
+<!-- fine appendice 02 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app03.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>

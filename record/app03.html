@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 03</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 03: l'apartheid e nelson mandela -->
+<div id="appendice-03-apartheid" class="capitolo-storia">
+  <p class="titolo-capitolo">03 - L'apartheid e Nelson Mandela - 1948-1994</p>
+
+  <p class="titolo-capitolo">Le origini della segregazione in Sudafrica</p>
+  <p>Il Sudafrica, colonizzato nel corso dei secoli sia da coloni olandesi, chiamati Boeri o Afrikaner, sia successivamente da coloni britannici, era già caratterizzato da tempo da forti discriminazioni nei confronti della popolazione nera locale, ampiamente maggioritaria dal punto di vista numerico ma esclusa dal potere politico ed economico del paese.</p>
+  <p>Nel 1948, il Partito Nazionale, espressione della minoranza bianca di origine afrikaner, vinse le elezioni e diede avvio a un sistema di segregazione razziale formalizzato per legge, chiamato apartheid, termine che nella lingua afrikaans significa letteralmente "separazione".</p>
+
+  <p class="titolo-capitolo">Il sistema dell'apartheid</p>
+  <p>Il regime dell'apartheid si basava su una rigida classificazione della popolazione in gruppi razziali distinti, principalmente bianchi, neri, meticci e asiatici, a ciascuno dei quali corrispondevano diritti, opportunità e libertà di movimento profondamente diseguali.</p>
+  <p>La popolazione nera, pur rappresentando la stragrande maggioranza degli abitanti del paese, fu privata del diritto di voto, costretta a vivere in aree residenziali separate e spesso periferiche, e obbligata a portare con sé documenti speciali per potersi spostare o lavorare nelle aree riservate alla popolazione bianca.</p>
+  <p>Il sistema prevedeva inoltre la creazione di cosiddetti "bantustan", territori teoricamente autonomi destinati alla popolazione nera, ma in realtà privi di reali risorse economiche e di piena sovranità politica, pensati anche per privare formalmente milioni di sudafricani neri della cittadinanza sudafricana stessa.</p>
+  <p>Anche l'istruzione, la sanità e i servizi pubblici erano rigidamente separati tra le diverse componenti razziali della popolazione, con risorse e qualità estremamente diseguali a sfavore della popolazione nera, meticcia e asiatica.</p>
+
+  <p class="titolo-capitolo">L'African National Congress e la resistenza</p>
+  <p>Contro questo sistema di segregazione si sviluppò nel corso dei decenni un movimento di resistenza sempre più organizzato, guidato principalmente dall'African National Congress, un'organizzazione politica fondata già nel 1912 con l'obiettivo di difendere i diritti della popolazione nera sudafricana.</p>
+  <p>Tra i leader più importanti di questo movimento emerse la figura di Nelson Mandela, avvocato e attivista politico, che negli anni '50 e '60 divenne una delle voci più autorevoli nella lotta contro l'apartheid, inizialmente attraverso forme di protesta non violenta, ispirate anche al modello di Gandhi in India.</p>
+  <p>Di fronte alla durissima repressione del governo sudafricano nei confronti di ogni forma di dissenso, incluso il drammatico massacro di Sharpeville del 1960, in cui la polizia aprì il fuoco su una manifestazione pacifica causando decine di morti, l'African National Congress decise di affiancare alla protesta non violenta anche una componente di lotta armata clandestina.</p>
+
+  <p class="titolo-capitolo">L'arresto e la prigionia di Mandela</p>
+  <p>Nel 1962, Nelson Mandela fu arrestato dalle autorità sudafricane, e nel 1964, al termine di un celebre processo passato alla storia come processo di Rivonia, fu condannato all'ergastolo con l'accusa di sabotaggio e cospirazione contro lo stato.</p>
+  <p>Mandela trascorse complessivamente 27 anni in prigione, gran parte dei quali nella durissima prigione dell'isola di Robben Island, diventando nel frattempo, anche dall'interno del carcere, un simbolo internazionale sempre più forte della lotta contro il razzismo e la segregazione, mentre la comunità internazionale intensificava progressivamente le pressioni diplomatiche ed economiche, tramite sanzioni, nei confronti del governo sudafricano.</p>
+
+  <p class="titolo-capitolo">La fine dell'apartheid</p>
+  <p>Tra la fine degli anni '80 e l'inizio degli anni '90, la crescente pressione internazionale, unita alle difficoltà economiche interne e ai mutamenti nel contesto geopolitico mondiale legati alla fine della guerra fredda, spinsero il governo sudafricano, guidato dal presidente Frederik de Klerk, ad avviare un percorso di superamento del sistema dell'apartheid.</p>
+  <p>Nel 1990, dopo ventisette anni di detenzione, Nelson Mandela fu finalmente liberato, un evento seguito con enorme attenzione in tutto il mondo, e nei anni immediatamente successivi Mandela e de Klerk negoziarono insieme, pur partendo da posizioni storicamente opposte, il complesso e delicato passaggio verso un Sudafrica democratico e multirazziale.</p>
+  <p>Per questo comune impegno nel processo di pacifica transizione politica, Mandela e de Klerk ricevettero congiuntamente il premio Nobel per la pace nel 1993, un riconoscimento che sottolineava l'importanza del dialogo tra le parti per il superamento pacifico di un sistema di oppressione radicato da decenni.</p>
+
+  <p class="titolo-capitolo">Le prime elezioni multirazziali e la presidenza di Mandela</p>
+  <p>Nel 1994 si tennero le prime elezioni politiche sudafricane a suffragio universale, aperte per la prima volta nella storia del paese anche alla popolazione nera, meticcia e asiatica, un evento storico che vide una partecipazione popolare straordinaria, con lunghissime file di cittadini in attesa di poter votare per la prima volta nella propria vita.</p>
+  <p>Queste elezioni furono vinte dall'African National Congress, e Nelson Mandela divenne il primo presidente nero della storia del Sudafrica, guidando il paese in un delicato processo di riconciliazione nazionale, che prevedeva anche l'istituzione di una Commissione per la Verità e la Riconciliazione, incaricata di fare luce sui crimini commessi durante il periodo dell'apartheid, privilegiando il perdono e la ricostruzione sociale rispetto alla vendetta.</p>
+  <p>L'esperienza sudafricana della fine dell'apartheid, e in particolare l'approccio scelto da Mandela per gestire la transizione senza scatenare una guerra civile su base razziale, è rimasta un riferimento importante nella storia contemporanea per la gestione di transizioni politiche complesse in società profondamente divise, anche se il paese continua ancora oggi ad affrontare pesanti eredità economiche e sociali legate ai decenni di segregazione.</p>
+</div>
+<!-- fine appendice 03 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app04.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>
