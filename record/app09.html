@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 09</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 09: cernobyl -->
+<div id="appendice-09-chernobyl" class="capitolo-storia">
+  <p class="titolo-capitolo">09 - Černobyl' - 1986</p>
+
+  <p class="titolo-capitolo">La centrale nucleare di Černobyl'</p>
+  <p>Negli anni '70 e '80, l'Unione Sovietica aveva costruito, come molte altre nazioni industrializzate dell'epoca, una rete di centrali nucleari destinate alla produzione di energia elettrica, considerata una fonte energetica moderna, efficiente e relativamente economica rispetto ai combustibili fossili tradizionali.</p>
+  <p>Tra queste centrali vi era quella di Černobyl', situata in Ucraina, allora una delle repubbliche dell'Unione Sovietica, a pochi chilometri dal confine con la Bielorussia, un impianto composto da quattro reattori nucleari e considerato uno dei più grandi e importanti di tutta l'Unione Sovietica.</p>
+
+  <p class="titolo-capitolo">La notte dell'incidente</p>
+  <p>Nella notte tra il 25 e il 26 aprile del 1986, durante un test di sicurezza condotto sul reattore numero quattro dell'impianto, una serie di errori umani, uniti a gravi difetti di progettazione del reattore stesso, portò a un improvviso e incontrollato aumento della potenza del reattore.</p>
+  <p>Questo sovraccarico provocò due violente esplosioni che distrussero il tetto e parte della struttura del reattore, disperdendo nell'atmosfera un'enorme quantità di materiale radioattivo, in quello che è considerato ancora oggi il più grave incidente nucleare civile della storia.</p>
+
+  <p class="titolo-capitolo">La gestione dell'emergenza</p>
+  <p>Nelle ore e nei giorni immediatamente successivi all'esplosione, le autorità sovietiche non informarono tempestivamente né la popolazione locale né la comunità internazionale della reale gravità dell'incidente, un atteggiamento di segretezza tipico del sistema politico sovietico dell'epoca, che ritardò pericolosamente le necessarie misure di protezione per i cittadini esposti alle radiazioni.</p>
+  <p>Solo dopo che alcuni impianti nucleari in Svezia rilevarono livelli anomali di radioattività nell'atmosfera, riconducibili all'incidente sovietico, le autorità di Mosca furono costrette ad ammettere pubblicamente quanto accaduto, alcuni giorni dopo l'esplosione.</p>
+  <p>La città di Pryp'jat', situata a pochi chilometri dalla centrale e costruita appositamente per ospitare i lavoratori dell'impianto e le loro famiglie, fu evacuata solo il giorno successivo all'incidente, esponendo nel frattempo migliaia di residenti a livelli elevati di radiazioni, e rimane ancora oggi una città completamente abbandonata.</p>
+
+  <p class="titolo-capitolo">I liquidatori e il sarcofago di contenimento</p>
+  <p>Per contenere la dispersione di materiale radioattivo e spegnere l'incendio provocato dall'esplosione, le autorità sovietiche mobilitarono centinaia di migliaia di persone, chiamate "liquidatori", tra militari, vigili del fuoco, minatori e personale tecnico, molti dei quali vennero esposti a dosi di radiazioni estremamente elevate, spesso senza un'adeguata protezione o consapevolezza dei rischi reali a cui andavano incontro.</p>
+  <p>Nei mesi successivi all'incidente, fu costruita una struttura di contenimento in cemento e acciaio, chiamata "sarcofago", con l'obiettivo di racchiudere il reattore danneggiato e limitare ulteriori dispersioni di materiale radioattivo nell'ambiente circostante, una struttura che sarebbe stata sostituita, decenni più tardi, da un nuovo e più moderno rivestimento di sicurezza.</p>
+
+  <p class="titolo-capitolo">Le conseguenze sulla popolazione e sull'ambiente</p>
+  <p>L'incidente di Černobyl' contaminò con materiale radioattivo vaste aree dell'Ucraina, della Bielorussia e della Russia, oltre a diffondere, seppure in quantità minori, radiazioni anche su gran parte dell'Europa, incluso il territorio italiano, dove furono temporaneamente adottate misure precauzionali riguardanti il consumo di alcuni prodotti alimentari.</p>
+  <p>Le conseguenze sanitarie dirette e indirette dell'incidente sono state oggetto di studi e stime diverse da parte degli esperti: se il numero di morti immediate, causate direttamente dall'esplosione e dall'esposizione acuta alle radiazioni nei giorni successivi, fu relativamente limitato, gli effetti a lungo termine sulla salute della popolazione esposta, in particolare un aumento significativo dei casi di tumore alla tiroide tra i bambini della zona, sono stati più ampi e ancora oggetto di studio da parte della comunità scientifica internazionale.</p>
+  <p>Un'ampia area intorno alla centrale, chiamata "zona di esclusione", che si estende per circa trenta chilometri attorno all'impianto, rimane ancora oggi in gran parte inabitabile per l'uomo a causa della persistente contaminazione radioattiva del suolo, anche se paradossalmente questa assenza prolungata di attività umana ha favorito, nel corso dei decenni, un sorprendente ritorno della fauna selvatica nella regione.</p>
+
+  <p class="titolo-capitolo">L'impatto politico e simbolico dell'incidente</p>
+  <p>Il disastro di Černobyl' ebbe conseguenze significative anche sul piano politico, mettendo a nudo, agli occhi della stessa opinione pubblica sovietica e internazionale, i limiti e le contraddizioni del sistema di segretezza e di gestione dell'informazione tipico dell'Unione Sovietica, contribuendo a rafforzare, secondo diversi storici, la politica di maggiore trasparenza avviata proprio in quegli anni dal leader sovietico Michail Gorbačёv, chiamata glasnost.</p>
+  <p>L'incidente contribuì inoltre ad alimentare, in molti paesi del mondo, un più ampio e duraturo dibattito pubblico sulla sicurezza dell'energia nucleare, un dibattito destinato a riaccendersi con ancora maggiore intensità decenni più tardi, in occasione di un altro grave incidente nucleare avvenuto in Giappone, a Fukushima, nel 2011.</p>
+</div>
+<!-- fine appendice 09 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app10.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>

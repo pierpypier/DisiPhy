@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 13</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 13: il genocidio in ruanda -->
+<div id="appendice-13-genocidio-ruanda" class="capitolo-storia">
+  <p class="titolo-capitolo">13 - Il genocidio in Ruanda - 1994</p>
+
+  <p class="titolo-capitolo">Hutu e Tutsi: le radici di una divisione</p>
+  <p>Il Ruanda, un piccolo paese dell'Africa centrale, era abitato da due principali gruppi etnici, gli Hutu, ampiamente maggioritari dal punto di vista numerico, e i Tutsi, una minoranza che tuttavia, in epoca precoloniale, aveva spesso occupato posizioni sociali ed economiche di maggior prestigio.</p>
+  <p>Durante il periodo coloniale, prima sotto la Germania e poi, dopo la prima guerra mondiale, sotto il Belgio, le autorità coloniali europee irrigidirono e istituzionalizzarono questa distinzione tra Hutu e Tutsi, introducendo documenti d'identità basati sull'appartenenza etnica e favorendo sistematicamente i Tutsi in ruoli amministrativi, contribuendo a trasformare quella che era in parte anche una differenza sociale e di status in una rigida categoria etnica, fonte di crescenti tensioni.</p>
+  <p>Dopo l'indipendenza del Ruanda dal Belgio, ottenuta nel 1962, il potere passò alla maggioranza Hutu, e nei decenni successivi si susseguirono diversi episodi di violenza tra le due comunità, alimentati anche da una crescente propaganda che presentava i Tutsi come una minaccia per la maggioranza Hutu del paese.</p>
+
+  <p class="titolo-capitolo">La guerra civile e gli accordi di Arusha</p>
+  <p>Nel 1990, un gruppo armato composto in gran parte da esuli Tutsi, il Fronte Patriottico Ruandese, invase il Ruanda dal vicino Uganda, dando inizio a una guerra civile che si protrasse per alcuni anni, alimentando ulteriormente le tensioni etniche interne al paese.</p>
+  <p>Nel 1993, dopo lunghe trattative internazionali, il governo ruandese e il Fronte Patriottico Ruandese firmarono gli accordi di pace di Arusha, che prevedevano la formazione di un governo di transizione condiviso tra le diverse forze politiche del paese, un accordo che però incontrò una fortissima opposizione da parte degli estremisti Hutu, contrari a qualsiasi forma di condivisione del potere con i Tutsi.</p>
+
+  <p class="titolo-capitolo">L'inizio del genocidio</p>
+  <p>Il 6 aprile del 1994, l'aereo su cui viaggiava il presidente ruandese Juvénal Habyarimana, di etnia Hutu, fu abbattuto da un missile mentre si stava avvicinando all'aeroporto della capitale Kigali, un attentato le cui responsabilità non sono mai state accertate in modo definitivo, ma che fu immediatamente utilizzato dagli estremisti Hutu come pretesto per scatenare un massacro pianificato da tempo contro la popolazione Tutsi.</p>
+  <p>Nel giro di poche ore dall'attentato, milizie Hutu organizzate, chiamate Interahamwe, insieme a membri dell'esercito regolare e a un numero enorme di civili Hutu istigati da un'intensa propaganda diffusa anche attraverso la radio, iniziarono un massacro sistematico della popolazione Tutsi e degli Hutu moderati considerati favorevoli agli accordi di pace.</p>
+
+  <p class="titolo-capitolo">Cento giorni di violenza</p>
+  <p>Nel corso di circa cento giorni, tra aprile e luglio del 1994, questo massacro pianificato causò la morte di circa ottocentomila persone, secondo le stime più diffuse tra gli storici, la stragrande maggioranza delle quali appartenenti alla minoranza Tutsi, in quello che gli storici considerano uno dei genocidi più rapidi e intensi della storia moderna per il numero di vittime concentrato in un periodo di tempo così breve.</p>
+  <p>Le violenze furono caratterizzate da un'estrema brutalità e da una capillare organizzazione, con liste di persone da uccidere preparate in anticipo, posti di blocco allestiti per identificare le vittime attraverso i documenti d'identità etnici introdotti in epoca coloniale, e una partecipazione di massa che coinvolse, secondo le ricostruzioni storiche, un numero molto ampio di cittadini comuni, spinti dalla propaganda, dalla paura o dalla coercizione delle milizie.</p>
+
+  <p class="titolo-capitolo">La comunità internazionale e le sue responsabilità</p>
+  <p>Uno degli aspetti più discussi e criticati di questa tragedia riguarda il comportamento della comunità internazionale, che, pur essendo a conoscenza di informazioni che segnalavano il rischio di un massacro pianificato, non intervenne in modo efficace per fermarlo: le Nazioni Unite mantennero sul posto un contingente di caschi blu numericamente insufficiente e con un mandato troppo limitato per intervenire attivamente, mentre diverse potenze internazionali scelsero di non utilizzare pubblicamente il termine "genocidio" nelle prime settimane, un termine che avrebbe comportato, secondo le convenzioni internazionali, un obbligo giuridico di intervento.</p>
+  <p>Questa mancata risposta internazionale è stata riconosciuta, negli anni successivi, come un grave fallimento da parte delle stesse Nazioni Unite e di diversi governi occidentali, ed è diventata un caso di studio fondamentale nel dibattito internazionale sulla prevenzione dei genocidi e sulla responsabilità della comunità internazionale di proteggere le popolazioni civili da simili atrocità.</p>
+
+  <p class="titolo-capitolo">La fine del genocidio e la ricostruzione</p>
+  <p>Il genocidio si concluse nel luglio del 1994, quando il Fronte Patriottico Ruandese riuscì a conquistare il controllo militare del paese, ponendo fine ai massacri ma provocando anche una massiccia fuga di rifugiati, tra cui numerosi responsabili delle violenze, verso i paesi vicini, in particolare verso l'allora Zaire, l'attuale Repubblica Democratica del Congo.</p>
+  <p>Nel corso dei decenni successivi, il Ruanda ha intrapreso un complesso e per molti aspetti ancora in corso percorso di ricostruzione e riconciliazione nazionale, che ha previsto sia processi giudiziari internazionali per i principali responsabili del genocidio, condotti da un tribunale penale internazionale appositamente istituito dalle Nazioni Unite, sia forme di giustizia comunitaria locale, chiamate "gacaca", pensate per favorire un difficile ma necessario percorso di convivenza tra le comunità dopo una tragedia di tali proporzioni.</p>
+</div>
+<!-- fine appendice 13 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app14.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>

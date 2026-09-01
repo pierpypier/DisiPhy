@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 11</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 11: le stragi di falcone e borsellino -->
+<div id="appendice-11-falcone-borsellino" class="capitolo-storia">
+  <p class="titolo-capitolo">11 - Le stragi di Falcone e Borsellino - 1992</p>
+
+  <p class="titolo-capitolo">Il contesto: mafia e stato negli anni '80</p>
+  <p>Nel corso degli anni '80, la mafia siciliana, chiamata Cosa Nostra, aveva raggiunto un livello di potere economico e militare molto elevato, alimentato soprattutto dagli enormi profitti derivanti dal traffico internazionale di droga, e non esitava a colpire direttamente rappresentanti dello stato, magistrati, politici e forze dell'ordine che ne ostacolavano le attività.</p>
+  <p>In questo contesto emerse il lavoro di un gruppo di magistrati palermitani, in particolare Giovanni Falcone e Paolo Borsellino, che svilupparono un nuovo metodo di indagine, basato sulla collaborazione tra diversi uffici giudiziari e sull'utilizzo sistematico delle testimonianze di alcuni membri della mafia stessa, divenuti collaboratori di giustizia, i cosiddetti "pentiti", tra cui il più noto fu Tommaso Buscetta.</p>
+
+  <p class="titolo-capitolo">Il maxiprocesso di Palermo</p>
+  <p>Il lavoro investigativo di Falcone, Borsellino e degli altri magistrati del cosiddetto "pool antimafia" di Palermo portò, tra il 1986 e il 1987, alla celebrazione del maxiprocesso, un procedimento giudiziario senza precedenti che vide alla sbarra centinaia di imputati accusati di appartenere a Cosa Nostra.</p>
+  <p>Il processo si concluse nel 1987 con centinaia di condanne, molte delle quali confermate in via definitiva dalla Corte di Cassazione nel gennaio del 1992, un risultato che rappresentò un duro colpo per l'organizzazione mafiosa e che, secondo diverse ricostruzioni giudiziarie successive, contribuì a inasprire la determinazione di Cosa Nostra a reagire con la violenza contro lo stato.</p>
+
+  <p class="titolo-capitolo">La strage di Capaci</p>
+  <p>Il 23 maggio del 1992, Giovanni Falcone, che nel frattempo si era trasferito a Roma per ricoprire un incarico al Ministero di Grazia e Giustizia, stava rientrando in Sicilia insieme alla moglie Francesca Morvillo, anch'essa magistrata, e alla propria scorta, quando, lungo l'autostrada nei pressi di Capaci, un ordigno esplosivo di enorme potenza, fatto detonare a distanza dagli attentatori, provocò un'esplosione che distrusse un tratto di autostrada.</p>
+  <p>Nell'attentato persero la vita Giovanni Falcone, la moglie Francesca Morvillo e i tre agenti della scorta, Antonio Montinaro, Rocco Dicillo e Vito Schifani, un evento che sconvolse profondamente l'opinione pubblica italiana per la violenza e la spettacolarità dell'azione, chiaramente pensata anche per avere un fortissimo impatto mediatico e simbolico.</p>
+
+  <p class="titolo-capitolo">La strage di via D'Amelio</p>
+  <p>Appena 57 giorni dopo la strage di Capaci, il 19 luglio del 1992, un'altra autobomba esplose in via D'Amelio, a Palermo, mentre Paolo Borsellino, amico e collega di lunga data di Giovanni Falcone, si trovava davanti al portone dell'abitazione della propria madre, insieme agli agenti della sua scorta.</p>
+  <p>Nell'attentato morirono Paolo Borsellino e cinque agenti della sua scorta: Agostino Catalano, Emanuela Loi, prima donna appartenente alla polizia di stato a perdere la vita in servizio, Vincenzo Li Muli, Walter Eddie Cosina e Claudio Traina.</p>
+  <p>La rapidità con cui questo secondo, gravissimo attentato seguì il primo alimentò fin da subito, tra magistrati, giornalisti e opinione pubblica, l'ipotesi che Borsellino fosse stato ucciso in fretta perché stava proseguendo, dopo la morte dell'amico Falcone, indagini particolarmente delicate e pericolose per l'organizzazione mafiosa.</p>
+
+  <p class="titolo-capitolo">Le indagini e i depistaggi</p>
+  <p>Le indagini sulla strage di via D'Amelio furono per anni caratterizzate da gravi errori giudiziari e da quelli che le stesse istituzioni italiane avrebbero riconosciuto, molto tempo dopo, come veri e propri depistaggi: un uomo, Vincenzo Scarantino, fu indotto con pressioni indebite a fornire una falsa confessione, che portò alla condanna di diverse persone in seguito riconosciute innocenti.</p>
+  <p>Solo grazie a nuove indagini avviate negli anni 2000 fu possibile ricostruire più correttamente la reale catena di responsabilità nell'organizzazione dell'attentato, un percorso giudiziario complesso che ha messo in luce, insieme alla ferocia dell'attacco mafioso, anche gravi carenze e responsabilità all'interno di alcuni apparati investigativi dello stato coinvolti nelle prime indagini.</p>
+
+  <p class="titolo-capitolo">La reazione dello stato e la memoria civile</p>
+  <p>Le stragi di Capaci e via D'Amelio, per la loro violenza e per il fatto di aver colpito così direttamente e ravvicinatamente due tra i magistrati più impegnati nella lotta alla mafia, provocarono una fortissima reazione dell'opinione pubblica e delle istituzioni italiane, portando a un deciso inasprimento della legislazione antimafia e a un rafforzamento dei mezzi a disposizione delle forze dell'ordine e della magistratura.</p>
+  <p>Negli anni immediatamente successivi alle stragi, le indagini e la pressione investigativa portarono alla cattura di numerosi importanti boss mafiosi, tra cui Salvatore Riina, considerato il capo di Cosa Nostra e mandante delle stragi, arrestato nel gennaio del 1993.</p>
+  <p>Le figure di Giovanni Falcone e Paolo Borsellino sono diventate, nel corso dei decenni successivi, simboli fondamentali dell'impegno civile contro la mafia in Italia, ricordati ogni anno il 23 maggio e il 19 luglio con cerimonie ufficiali e iniziative educative, in particolare nelle scuole, pensate per mantenere viva la memoria del loro sacrificio e per promuovere tra le nuove generazioni una cultura della legalità.</p>
+</div>
+<!-- fine appendice 11 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app12.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>

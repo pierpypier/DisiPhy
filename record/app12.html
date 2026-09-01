@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 12</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 12: tangentopoli e mani pulite -->
+<div id="appendice-12-tangentopoli" class="capitolo-storia">
+  <p class="titolo-capitolo">12 - Tangentopoli e Mani Pulite - 1992-1994</p>
+
+  <p class="titolo-capitolo">Il sistema politico italiano prima di Tangentopoli</p>
+  <p>Nel corso dei decenni della cosiddetta prima Repubblica italiana, cioè il periodo compreso tra la fine della seconda guerra mondiale e i primi anni '90, il sistema politico del paese era rimasto sostanzialmente stabile, dominato principalmente dalla Democrazia Cristiana, che aveva guidato quasi ininterrottamente i governi italiani, spesso in coalizione con altri partiti minori, come il Partito Socialista Italiano.</p>
+  <p>Nel corso di questo lungo periodo si era progressivamente consolidato, in diverse aree del paese e a vari livelli istituzionali, un diffuso sistema di finanziamento illecito dei partiti politici, basato sulla richiesta sistematica di tangenti, cioè somme di denaro versate illegalmente da imprenditori privati in cambio dell'assegnazione di appalti pubblici o di altri favori da parte di amministratori e funzionari pubblici.</p>
+
+  <p class="titolo-capitolo">L'inizio dell'inchiesta Mani Pulite</p>
+  <p>Il 17 febbraio del 1992, un magistrato della Procura di Milano, Antonio Di Pietro, fece arrestare Mario Chiesa, un dirigente amministrativo del Partito Socialista Italiano a Milano, colto in flagrante mentre riceveva una tangente da un imprenditore, un episodio apparentemente circoscritto che si sarebbe rivelato l'inizio di un'inchiesta giudiziaria di proporzioni straordinarie.</p>
+  <p>A partire da questo primo arresto, le indagini condotte dal pool di magistrati della Procura di Milano, diventato noto con il nome dell'inchiesta stessa, "Mani Pulite", si allargarono rapidamente, grazie anche alle dichiarazioni di numerosi indagati che, per ottenere sconti di pena, decisero di collaborare con la giustizia, rivelando l'esistenza di un sistema di corruzione molto più ampio ed esteso di quanto inizialmente ipotizzato.</p>
+
+  <p class="titolo-capitolo">La diffusione dello scandalo</p>
+  <p>Nel corso del 1992 e del 1993, l'inchiesta Mani Pulite si estese progressivamente a numerose altre città italiane, coinvolgendo migliaia di amministratori pubblici, imprenditori e dirigenti di partito appartenenti praticamente a tutte le principali forze politiche del paese, un fenomeno di corruzione così diffuso da essere ricordato con il termine complessivo di "Tangentopoli".</p>
+  <p>Le indagini rivelarono che il sistema di tangenti coinvolgeva settori economici fondamentali, come le grandi opere pubbliche, gli appalti per infrastrutture e servizi, e persino il finanziamento delle campagne elettorali, in un meccanismo che aveva finito per intrecciare in modo sistematico politica e affari privati a livello nazionale.</p>
+
+  <p class="titolo-capitolo">Le conseguenze politiche</p>
+  <p>Lo scandalo di Tangentopoli ebbe conseguenze politiche devastanti per i partiti tradizionali che avevano governato l'Italia per decenni: la Democrazia Cristiana e il Partito Socialista Italiano, i due partiti più direttamente coinvolti nelle indagini, persero rapidamente gran parte del proprio consenso elettorale, fino a sciogliersi o trasformarsi radicalmente nel giro di pochi anni.</p>
+  <p>Numerosi importanti esponenti politici, amministratori e imprenditori furono coinvolti in procedimenti giudiziari, alcuni dei quali si conclusero con condanne, mentre altri, complice anche la complessità e la lunghezza dei processi italiani, si conclusero con l'estinzione dei reati per prescrizione, un elemento che alimentò critiche sia da parte di chi riteneva l'azione giudiziaria eccessiva, sia da parte di chi la considerava non sufficientemente efficace nel punire tutti i responsabili.</p>
+  <p>Questo terremoto politico e giudiziario, sommato ad altri fattori come le pressioni economiche internazionali e i cambiamenti nel sistema elettorale, contribuì in modo determinante alla fine di quella che gli storici chiamano prima Repubblica, aprendo la strada, a partire dalla metà degli anni '90, a un nuovo assetto politico italiano, caratterizzato dalla nascita di nuovi partiti e movimenti politici e da un sistema elettorale profondamente riformato.</p>
+
+  <p class="titolo-capitolo">Un bilancio storico complesso</p>
+  <p>L'inchiesta Mani Pulite e lo scandalo di Tangentopoli rimangono ancora oggi oggetto di un dibattito storico e politico non del tutto concluso: se da un lato l'azione della magistratura contribuì a portare alla luce un sistema di corruzione realmente esteso e radicato, dall'altro alcuni storici e osservatori hanno sollevato interrogativi sul ruolo assunto in quegli anni dai media e dall'opinione pubblica, e sul rapporto talvolta problematico tra giustizia e politica in un momento di forte pressione mediatica sui procedimenti in corso.</p>
+  <p>Al di là delle diverse interpretazioni storiche e politiche, Tangentopoli rappresenta comunque uno spartiacque fondamentale nella storia della Repubblica italiana, un evento che modificò profondamente il sistema dei partiti, la percezione pubblica della classe politica e il rapporto tra cittadini e istituzioni, con conseguenze ancora oggi rilevanti per comprendere l'evoluzione della vita politica italiana degli ultimi decenni.</p>
+</div>
+<!-- fine appendice 12 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app13.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>
