@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 17</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 17: l'invenzione di internet e del world wide web -->
+<div id="appendice-17-internet-web" class="capitolo-storia">
+  <p class="titolo-capitolo">17 - L'invenzione di internet e del World Wide Web - 1969-1991</p>
+
+  <p class="titolo-capitolo">Le origini militari e accademiche di internet</p>
+  <p>Le prime basi tecniche di quella che sarebbe poi diventata internet risalgono agli anni '60, nel pieno della guerra fredda, quando il ministero della Difesa statunitense finanziò un progetto di ricerca, chiamato ARPANET, con l'obiettivo di sviluppare una rete di comunicazione tra computer capace di continuare a funzionare anche in caso di danneggiamento parziale, ad esempio a seguito di un attacco militare.</p>
+  <p>Il 29 ottobre del 1969, avvenne il primo collegamento della rete ARPANET tra due computer, situati rispettivamente presso l'Università della California a Los Angeles e lo Stanford Research Institute, un evento considerato convenzionalmente l'atto di nascita tecnico di internet, anche se all'epoca la rete collegava solo un numero molto limitato di istituzioni di ricerca e università statunitensi.</p>
+  <p>Nel corso degli anni '70, la rete si ampliò progressivamente, includendo altre università e centri di ricerca, e vennero sviluppati protocolli tecnici fondamentali per il funzionamento di internet come lo conosciamo oggi, in particolare il protocollo TCP/IP, elaborato tra la fine degli anni '70 e l'inizio degli anni '80, che permise di collegare tra loro reti di computer diverse, ponendo le basi tecniche per una rete davvero globale.</p>
+
+  <p class="titolo-capitolo">La diffusione della rete negli anni '80</p>
+  <p>Nel corso degli anni '80, la rete internet, ancora utilizzata quasi esclusivamente da ricercatori universitari, scienziati e istituzioni governative, continuò a crescere ed estendersi, sia negli Stati Uniti che, progressivamente, in altri paesi del mondo, grazie anche alla realizzazione di nuove infrastrutture di collegamento tra reti diverse.</p>
+  <p>In questo periodo si diffusero anche i primi strumenti di comunicazione basati su internet, come la posta elettronica, che permetteva di scambiare messaggi di testo tra utenti collegati alla rete, uno strumento destinato a diventare, nei decenni successivi, uno dei mezzi di comunicazione più diffusi al mondo.</p>
+  <p>Nonostante questi sviluppi, l'utilizzo di internet in questo periodo rimaneva comunque riservato a un numero relativamente ristretto di persone con competenze tecniche specifiche, dato che l'accesso alle informazioni presenti in rete richiedeva l'uso di comandi complessi e non esisteva ancora un sistema semplice e intuitivo per navigare tra i diversi contenuti disponibili.</p>
+
+  <p class="titolo-capitolo">Tim Berners-Lee e la nascita del World Wide Web</p>
+  <p>Nel 1989, Tim Berners-Lee, un informatico britannico che lavorava presso il CERN, il grande laboratorio europeo di ricerca sulla fisica delle particelle situato a Ginevra, in Svizzera, propose ai propri superiori un progetto per semplificare radicalmente la condivisione e la consultazione di informazioni tra i ricercatori del centro, sparsi in diverse parti del mondo.</p>
+  <p>L'idea di Berners-Lee prevedeva la creazione di un sistema basato su documenti collegati tra loro attraverso collegamenti ipertestuali, cioè parole o frasi cliccabili che avrebbero permesso di passare rapidamente da un documento all'altro, anche se conservati su computer diversi, un concetto che avrebbe dato origine a quello che oggi chiamiamo World Wide Web, spesso abbreviato semplicemente come "web".</p>
+  <p>Per realizzare concretamente questo progetto, Berners-Lee sviluppò tra il 1989 e il 1990 alcuni elementi tecnici fondamentali ancora oggi alla base del funzionamento del web: il linguaggio HTML, utilizzato per creare le pagine web, il protocollo HTTP, utilizzato per trasferire i dati tra i computer collegati alla rete, e il concetto stesso di indirizzo web, chiamato URL, utilizzato per identificare univocamente ogni pagina disponibile in rete.</p>
+
+  <p class="titolo-capitolo">Il primo sito web e la diffusione pubblica</p>
+  <p>Il 6 agosto del 1991, Berners-Lee rese pubblicamente disponibile, per la prima volta, il primo sito web della storia, ospitato sui server del CERN, dando così ufficialmente inizio all'era del World Wide Web accessibile, almeno in linea teorica, a chiunque disponesse di un computer collegato alla rete internet.</p>
+  <p>Nei primi anni successivi alla sua creazione, il web rimase ancora uno strumento utilizzato principalmente in ambito accademico e scientifico, ma la situazione cambiò rapidamente a partire dalla metà degli anni '90, con la diffusione dei primi browser di facile utilizzo, cioè i programmi che permettono di visualizzare le pagine web, e con la progressiva riduzione dei costi di accesso a internet per il grande pubblico.</p>
+
+  <p class="titolo-capitolo">Una scelta fondamentale: il web come bene comune</p>
+  <p>Un elemento di grande importanza storica, spesso sottolineato dagli studiosi della storia della tecnologia, riguarda la decisione presa da Berners-Lee e dal CERN, nel 1993, di rendere pubblicamente disponibile la tecnologia alla base del World Wide Web senza richiedere il pagamento di alcun diritto o licenza per il suo utilizzo, una scelta che favorì enormemente la rapida adozione e diffusione del web in tutto il mondo, invece di limitarne l'uso a poche aziende o istituzioni disposte a pagarne i diritti.</p>
+
+  <p class="titolo-capitolo">Le conseguenze storiche della rivoluzione digitale</p>
+  <p>La combinazione tra la rete internet, sviluppata a partire dagli anni '60 e '70, e il World Wide Web, creato da Berners-Lee all'inizio degli anni '90, ha dato origine a una delle trasformazioni tecnologiche, economiche e sociali più profonde e rapide dell'intera storia umana, modificando radicalmente, nel giro di pochi decenni, il modo in cui le persone comunicano, si informano, lavorano, fanno acquisti e intrattengono relazioni sociali.</p>
+  <p>Questa rivoluzione digitale, il cui sviluppo si intreccia strettamente con il più ampio processo di globalizzazione economica avvenuto negli stessi decenni, ha posto anche nuove sfide e interrogativi, dalla protezione della privacy personale alla diffusione di disinformazione online, dal divario digitale tra chi ha e chi non ha accesso alla rete, fino alle profonde trasformazioni del mercato del lavoro, temi che continuano ancora oggi a essere al centro del dibattito pubblico e politico internazionale sulla società digitale contemporanea.</p>
+</div>
+<!-- fine appendice 17 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app18.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>
