@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 28</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 28: invenzioni dal cannocchiale al computer -->
+<div id="appendice-28-invenzioni-cannocchiale-computer" class="capitolo-storia">
+  <p class="titolo-capitolo">28 - Invenzioni: dal cannocchiale al computer - dal 1600 al 1950</p>
+
+  <p class="titolo-capitolo">L'invenzione del cannocchiale</p>
+  <p>Nei primi anni del Seicento, in Olanda, alcuni artigiani specializzati nella lavorazione delle lenti scoprirono che combinando due lenti di forma opportuna all'interno di un tubo era possibile ingrandire notevolmente la visione di oggetti lontani, dando origine al cannocchiale, uno strumento che si diffuse rapidamente in tutta Europa.</p>
+  <p>Come abbiamo visto nel capitolo dedicato alla rivoluzione scientifica, fu Galileo Galilei, a partire dal 1609, a perfezionare notevolmente questo strumento e a utilizzarlo per primo in modo sistematico per l'osservazione astronomica, scoprendo elementi come i satelliti di Giove e fornendo prove osservative fondamentali a sostegno del modello eliocentrico dell'universo.</p>
+  <p>Pochi decenni più tardi, la stessa combinazione di lenti, applicata in modo diverso, permise anche di sviluppare il microscopio, uno strumento capace di ingrandire oggetti piccolissimi, che avrebbe aperto la strada, nei secoli successivi, alla scoperta di un intero mondo di organismi microscopici fino ad allora del tutto invisibili all'occhio umano.</p>
+
+  <p class="titolo-capitolo">Le prime macchine calcolatrici</p>
+  <p>Nel 1642, il filosofo e matematico francese Blaise Pascal, ancora adolescente, costruì una delle prime macchine calcolatrici meccaniche della storia, pensata per aiutare il proprio padre, funzionario incaricato della riscossione delle tasse, a eseguire più rapidamente addizioni e sottrazioni attraverso un sistema di ruote dentate collegate tra loro.</p>
+  <p>Alcuni decenni più tardi, il filosofo e matematico tedesco Gottfried Wilhelm Leibniz perfezionò ulteriormente questo tipo di dispositivo, sviluppando una macchina capace di eseguire anche moltiplicazioni e divisioni, ponendo così le basi concettuali per lo sviluppo, nei secoli successivi, di calcolatrici meccaniche sempre più sofisticate.</p>
+
+  <p class="titolo-capitolo">Le schede perforate e il primo calcolatore programmabile</p>
+  <p>Un contributo importante e per certi versi inaspettato alla storia del calcolo automatico arrivò dal mondo della tessitura: nel 1804, l'inventore francese Joseph Marie Jacquard sviluppò un telaio meccanico capace di produrre automaticamente tessuti con disegni complessi, seguendo le istruzioni codificate su schede di cartone perforate, un principio che si sarebbe rivelato fondamentale anche in ambiti molto diversi dalla tessitura.</p>
+  <p>Nella prima metà dell'Ottocento, il matematico britannico Charles Babbage progettò infatti una "macchina analitica", un dispositivo meccanico concepito per eseguire automaticamente calcoli complessi seguendo istruzioni fornite tramite schede perforate simili a quelle di Jacquard, un progetto straordinariamente avanzato per la propria epoca, considerato ancora oggi da molti storici della tecnologia un vero e proprio antenato concettuale del computer moderno, anche se la macchina non fu mai completamente costruita per i limiti tecnici e i costi dell'epoca.</p>
+  <p>Un contributo fondamentale al progetto di Babbage venne dalla matematica britannica Ada Lovelace, che scrisse quello che è considerato il primo algoritmo della storia pensato per essere eseguito da una macchina, guadagnandosi per questo il titolo, riconosciuto dagli storici dell'informatica, di prima programmatrice della storia.</p>
+
+  <p class="titolo-capitolo">Le schede perforate diventano strumento di calcolo</p>
+  <p>Alla fine dell'Ottocento, l'ingegnere statunitense Herman Hollerith sviluppò un sistema di macchine capaci di leggere ed elaborare automaticamente dati registrati su schede perforate, un'invenzione utilizzata con grande successo per accelerare l'elaborazione dei dati del censimento della popolazione degli Stati Uniti del 1890, dimostrando concretamente il potenziale pratico del calcolo automatico su grandi quantità di informazioni.</p>
+  <p>L'azienda fondata da Hollerith per commercializzare queste macchine sarebbe confluita, nei decenni successivi, in una società che avrebbe assunto il nome di International Business Machines, meglio conosciuta con l'acronimo IBM, destinata a diventare una delle protagoniste fondamentali della storia dell'informatica del Novecento.</p>
+
+  <p class="titolo-capitolo">Alan Turing e le basi teoriche dell'informatica</p>
+  <p>Negli anni '30 del Novecento, il matematico britannico Alan Turing elaborò importanti fondamenti teorici della moderna informatica, descrivendo concettualmente un dispositivo capace, almeno in linea di principio, di eseguire qualsiasi tipo di calcolo automatizzabile, un modello teorico ancora oggi conosciuto come "macchina di Turing", alla base della moderna teoria dell'informatica.</p>
+  <p>Durante la seconda guerra mondiale, Turing mise concretamente in pratica queste conoscenze teoriche lavorando, presso il centro britannico di Bletchley Park, alla decrittazione dei codici segreti utilizzati dalle forze armate tedesche, un contributo che secondo diversi storici accelerò significativamente la fine del conflitto in Europa.</p>
+
+  <p class="titolo-capitolo">I primi computer elettronici</p>
+  <p>Proprio le necessità belliche della seconda guerra mondiale accelerarono notevolmente lo sviluppo dei primi calcolatori elettronici, macchine che, a differenza dei precedenti dispositivi meccanici, utilizzavano componenti elettronici, in particolare le valvole termoioniche, per eseguire calcoli a una velocità enormemente superiore rispetto a qualsiasi macchina meccanica precedente.</p>
+  <p>Nel 1946, negli Stati Uniti, entrò in funzione l'ENIAC, considerato generalmente il primo computer elettronico digitale di uso generale della storia, una macchina enorme, che occupava un'intera stanza e pesava diverse tonnellate, ma capace di eseguire calcoli complessi, come quelli necessari per la balistica militare, migliaia di volte più velocemente rispetto ai metodi di calcolo tradizionali.</p>
+  <p>Questi primi, ingombranti calcolatori elettronici rappresentano il punto di partenza di uno sviluppo tecnologico straordinariamente rapido, che nel giro di pochi decenni avrebbe portato, come vedremo in un'altra appendice dedicata più specificamente all'evoluzione dei trasporti e in quella dedicata a internet, a computer sempre più piccoli, potenti ed economici, fino ai moderni dispositivi che utilizziamo quotidianamente, capaci di eseguire in una frazione di secondo calcoli che avrebbero richiesto anni di lavoro ai primi calcolatori del dopoguerra.</p>
+</div>
+<!-- fine appendice 28 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app29.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>

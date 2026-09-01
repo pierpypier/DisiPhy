@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 27</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 27: invenzioni dall'elettricità alla bomba atomica -->
+<div id="appendice-27-invenzioni-elettricita-atomica" class="capitolo-storia">
+  <p class="titolo-capitolo">27 - Invenzioni: dall'elettricità alla bomba atomica - dal 1800 al 1945</p>
+
+  <p class="titolo-capitolo">La prima pila elettrica</p>
+  <p>Nel 1800, il fisico italiano Alessandro Volta presentò la prima pila elettrica della storia, un dispositivo capace di produrre una corrente elettrica continua attraverso l'alternanza di dischi di metalli diversi separati da panni imbevuti in una soluzione acida, un'invenzione che per la prima volta permise agli scienziati di disporre di una fonte di elettricità stabile e controllabile, aprendo la strada a decenni di intensa sperimentazione scientifica.</p>
+  <p>Grazie a questa invenzione, i ricercatori europei poterono studiare sistematicamente i fenomeni elettrici, scoprendo nei decenni successivi le strette relazioni esistenti tra elettricità e magnetismo, un campo di studi che avrebbe portato a scoperte di importanza fondamentale per lo sviluppo tecnologico successivo.</p>
+
+  <p class="titolo-capitolo">Faraday e l'elettromagnetismo</p>
+  <p>Nel 1831, lo scienziato britannico Michael Faraday scoprì il fenomeno dell'induzione elettromagnetica, dimostrando che il movimento di un magnete in prossimità di un filo conduttore era in grado di generare una corrente elettrica, una scoperta che costituisce ancora oggi il principio fondamentale su cui si basa la produzione di elettricità su larga scala attraverso i generatori.</p>
+  <p>Le scoperte di Faraday, insieme al lavoro teorico di altri scienziati come lo scozzese James Clerk Maxwell, che negli anni '60 dell'Ottocento formulò le equazioni matematiche capaci di descrivere in modo unificato elettricità, magnetismo e luce, posero le basi scientifiche per tutte le applicazioni pratiche dell'elettricità sviluppate nei decenni successivi.</p>
+
+  <p class="titolo-capitolo">L'elettricità entra nella vita quotidiana</p>
+  <p>Nella seconda metà dell'Ottocento, numerosi inventori e imprenditori trasformarono queste scoperte scientifiche in applicazioni pratiche destinate a cambiare radicalmente la vita quotidiana: nel 1879, l'inventore statunitense Thomas Edison perfezionò una lampadina a incandescenza sufficientemente duratura ed economica da poter essere prodotta e commercializzata su larga scala, aprendo la strada alla progressiva illuminazione elettrica di case e città.</p>
+  <p>Poco dopo, l'ingegnere serbo-americano Nikola Tesla sviluppò tecnologie fondamentali per la trasmissione della corrente elettrica alternata su lunghe distanze, un sistema che si sarebbe rivelato più efficiente rispetto alla corrente continua sostenuta da Edison, e che ancora oggi costituisce la base delle moderne reti di distribuzione elettrica.</p>
+  <p>Questa nuova disponibilità di energia elettrica trasformò profondamente l'industria, permettendo di alimentare macchinari con un'efficienza e una flessibilità sconosciute all'epoca della sola macchina a vapore, e contribuì in modo determinante allo sviluppo della seconda rivoluzione industriale, di cui abbiamo parlato in un capitolo precedente.</p>
+
+  <p class="titolo-capitolo">Le scoperte sulla struttura dell'atomo</p>
+  <p>All'inizio del Novecento, la fisica visse una fase di straordinario rinnovamento, legata soprattutto allo studio della struttura intima della materia: nel 1911, il fisico neozelandese Ernest Rutherford dimostrò che l'atomo, fino ad allora considerato la più piccola unità indivisibile della materia, possedeva in realtà una struttura interna, composta da un piccolissimo ma densissimo nucleo centrale circondato da elettroni in movimento.</p>
+  <p>Negli anni e nei decenni successivi, il lavoro di numerosi altri fisici, tra cui Niels Bohr e successivamente Enrico Fermi, permise di comprendere sempre meglio la struttura del nucleo atomico e le forze che lo tengono unito, aprendo la strada, a partire dagli anni '30 del Novecento, alla scoperta che il nucleo di alcuni elementi particolarmente pesanti, come l'uranio, poteva essere scisso, liberando in questo processo, chiamato fissione nucleare, una quantità di energia enormemente superiore a quella liberata da qualsiasi reazione chimica conosciuta fino ad allora.</p>
+
+  <p class="titolo-capitolo">Dal laboratorio scientifico all'arma bellica</p>
+  <p>La scoperta della fissione nucleare, avvenuta nel 1938 grazie al lavoro dei fisici tedeschi Otto Hahn e Fritz Strassmann, assunse un'importanza drammatica nel contesto della crescente tensione internazionale che avrebbe portato, l'anno successivo, allo scoppio della seconda guerra mondiale, dato che appariva teoricamente possibile sfruttare questa enorme energia anche per scopi militari.</p>
+  <p>Preoccupati dalla possibilità che la Germania nazista potesse sviluppare per prima un'arma basata su questo principio, alcuni importanti scienziati rifugiati in Europa, tra cui lo stesso Albert Einstein, sollecitarono il governo statunitense ad avviare un proprio programma di ricerca in questo campo, dando origine, a partire dal 1942, al Progetto Manhattan, un imponente sforzo scientifico e industriale segreto che coinvolse migliaia di ricercatori e tecnici in diverse strutture degli Stati Uniti.</p>
+  <p>Come abbiamo già visto nel capitolo dedicato alla seconda guerra mondiale, questo progetto portò, nell'estate del 1945, alla realizzazione delle prime bombe atomiche della storia, utilizzate dagli Stati Uniti contro le città giapponesi di Hiroshima e Nagasaki, un evento che pose fine al conflitto ma che inaugurò anche una nuova e inquietante epoca storica, segnata dalla possibilità concreta di una distruzione su scala planetaria.</p>
+
+  <p class="titolo-capitolo">Un'eredità scientifica dalle due facce</p>
+  <p>La storia che va dalla pila di Volta alla bomba atomica mostra con particolare chiarezza come le scoperte scientifiche fondamentali, nate spesso dalla pura curiosità intellettuale di studiare i fenomeni naturali, possano nel tempo condurre ad applicazioni pratiche di segno molto diverso, capaci sia di migliorare radicalmente la vita quotidiana di miliardi di persone, come nel caso dell'elettricità, sia di mettere a disposizione dell'umanità strumenti di distruzione di potenza senza precedenti.</p>
+  <p>Questa duplice natura della scoperta scientifica, capace di generare sia straordinario progresso che gravi rischi, avrebbe alimentato negli anni successivi alla guerra un ampio dibattito etico e politico sulla responsabilità degli scienziati e sul controllo internazionale delle tecnologie più pericolose, un dibattito che, come vedremo, avrebbe caratterizzato profondamente anche gli anni della guerra fredda.</p>
+</div>
+<!-- fine appendice 27 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app28.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>
