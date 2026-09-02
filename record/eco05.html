@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 05</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 05: il mercato e la formazione dei prezzi -->
+<div id="capitolo-05-mercato-formazione-prezzi" class="capitolo-storia">
+  <p class="titolo-capitolo">05 - Il mercato e la formazione dei prezzi - Classe 1</p>
+
+  <p class="titolo-capitolo">Che cos'è un mercato in economia</p>
+  <p>Nel linguaggio comune, la parola "mercato" fa pensare a un luogo fisico, come la piazza del paese dove si vendono frutta e verdura, ma in economia il termine ha un significato molto più ampio: un mercato è l'insieme di tutte le relazioni, gli scambi e gli accordi che avvengono tra venditori e compratori di un determinato bene o servizio, indipendentemente dal fatto che questi si incontrino fisicamente in uno stesso luogo.</p>
+  <p>Secondo questa definizione più ampia, anche gli acquisti fatti online, le contrattazioni telefoniche tra un'azienda e un fornitore, o le compravendite di azioni gestite tramite computer da un capo all'altro del mondo, fanno parte a pieno titolo di un mercato, pur non prevedendo alcun incontro fisico diretto tra le parti.</p>
+
+  <p class="titolo-capitolo">Diversi tipi di mercato</p>
+  <p>I mercati possono essere classificati secondo diversi criteri: in base all'estensione geografica, si distingue tra mercati locali, come quello della frutta di un piccolo paese, mercati nazionali, come quello dell'energia elettrica in un intero Paese, e mercati internazionali o globali, come quello del petrolio o quello delle valute, in cui gli scambi avvengono tra soggetti di tutto il mondo.</p>
+  <p>In base al tipo di bene scambiato, si distingue invece tra mercati dei beni e servizi, in cui vengono scambiati prodotti destinati al consumo o all'uso produttivo, e mercati dei fattori produttivi, come il mercato del lavoro, in cui le imprese "acquistano" le prestazioni lavorative delle famiglie, o il mercato dei capitali, in cui si scambiano risorse finanziarie da investire.</p>
+
+  <p class="titolo-capitolo">Il prezzo come segnale</p>
+  <p>Come abbiamo visto nel capitolo precedente, il prezzo di un bene si forma dall'incontro tra domanda e offerta, ma il ruolo del prezzo in un'economia di mercato va ben oltre la semplice determinazione di quanto costa un prodotto: il prezzo funziona infatti come un segnale che trasmette informazioni fondamentali a tutti i partecipanti al mercato, senza che sia necessaria alcuna pianificazione centralizzata.</p>
+  <p>Se, ad esempio, il prezzo di una determinata materia prima aumenta improvvisamente, questo segnale comunica ai produttori che quella risorsa è diventata più scarsa o più richiesta, incentivandoli a cercare materiali alternativi o a utilizzarla in modo più efficiente, mentre comunica ai consumatori che potrebbe convenire ridurne il consumo o cercare prodotti sostitutivi, un meccanismo di coordinamento spontaneo che l'economista Adam Smith, di cui parleremo meglio in un capitolo successivo dedicato alla storia del pensiero economico, descrisse con la celebre metafora della "mano invisibile" del mercato.</p>
+
+  <p class="titolo-capitolo">Quando lo Stato interviene sui prezzi: il prezzo massimo</p>
+  <p>In alcune situazioni, i governi decidono di intervenire direttamente sul libero funzionamento del mercato, fissando per legge un prezzo massimo, cioè un tetto al di sopra del quale un bene non può essere venduto, generalmente con l'obiettivo di rendere un bene essenziale più accessibile alla popolazione, ad esempio nel caso degli affitti di alcune abitazioni in determinate città.</p>
+  <p>Se questo prezzo massimo viene fissato a un livello inferiore rispetto al prezzo di equilibrio che si formerebbe naturalmente sul mercato, si crea però una situazione di eccesso di domanda: facciamo un esempio numerico, immaginando che il prezzo di equilibrio di un certo tipo di appartamento in affitto sarebbe di 700 € al mese, ma lo Stato fissa per legge un prezzo massimo di 500 € al mese.</p>
+  <p class="formula">Domanda a 500 € > Offerta a 500 €</p>
+  <p>A questo prezzo più basso, un numero maggiore di persone vorrebbe affittare quell'appartamento rispetto a quanti proprietari sono disposti a offrirlo a quella cifra, generando una carenza di alloggi disponibili, con il rischio di lunghe liste d'attesa o di mercati paralleli non regolamentati in cui il bene viene comunque scambiato a un prezzo più alto di quello ufficiale.</p>
+
+  <p class="titolo-capitolo">Quando lo Stato interviene sui prezzi: il prezzo minimo</p>
+  <p>Al contrario, uno Stato può anche fissare un prezzo minimo, cioè una soglia al di sotto della quale un bene o un servizio non può essere venduto, generalmente con l'obiettivo di garantire un reddito adeguato a chi lo offre, come nel caso del salario minimo, cioè una retribuzione oraria o mensile al di sotto della quale un lavoratore non può essere legalmente pagato.</p>
+  <p>Se questo prezzo minimo viene fissato a un livello superiore rispetto al prezzo di equilibrio, si genera invece una situazione di eccesso di offerta: nel caso del mercato del lavoro, questo si traduce in un numero di persone disposte a lavorare a quel salario superiore al numero di posizioni che le imprese sono disposte a offrire a quella cifra, un effetto che alcuni economisti indicano come possibile causa di disoccupazione, anche se il dibattito su questo tema, e sull'entità reale di questo effetto nella pratica, resta tuttora aperto tra gli studiosi ed è influenzato da numerosi altri fattori del mercato del lavoro.</p>
+
+  <p class="titolo-capitolo">Il valore informativo dei prezzi liberi</p>
+  <p>Questi esempi ci mostrano come i prezzi, quando possono variare liberamente in base a domanda e offerta, svolgano un ruolo importante nel coordinare le decisioni di milioni di consumatori e produttori diversi, senza che nessuno debba conoscere o pianificare centralmente tutte le informazioni necessarie a far funzionare un intero sistema economico.</p>
+  <p>Allo stesso tempo, come vedremo meglio nei capitoli successivi dedicati alle diverse forme di mercato e alla politica economica, esistono situazioni in cui il libero funzionamento del mercato non produce risultati considerati socialmente desiderabili, ed è proprio in questi casi che si apre il dibattito, ancora oggi molto vivo tra economisti e responsabili politici, su quando e come sia opportuno che lo Stato intervenga per correggere o integrare il funzionamento spontaneo dei mercati.</p>
+</div>
+<!-- fine capitolo economia 05 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco06.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>

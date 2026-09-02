@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 33</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 33: civiltà precolombiane - maya, aztechi, inca -->
+<div id="appendice-33-civilta-precolombiane" class="capitolo-storia">
+  <p class="titolo-capitolo">33 - Civiltà precolombiane: Maya, Aztechi, Inca - dal 2.000 a.C. al 1533 d.C.</p>
+
+  <p class="titolo-capitolo">Un continente isolato</p>
+  <p>Per migliaia di anni, dopo l'arrivo dei primi esseri umani nelle Americhe attraverso l'antico ponte di terra che collegava l'Asia all'Alaska, le popolazioni del continente americano si svilupparono in quasi totale isolamento rispetto al resto del mondo, dando origine a civiltà originali, con proprie religioni, tecnologie e forme di organizzazione politica, del tutto indipendenti dagli sviluppi paralleli avvenuti in Europa, Asia e Africa.</p>
+  <p>Il termine "precolombiano" indica proprio questo lunghissimo periodo di storia americana, precedente all'arrivo di Cristoforo Colombo nel 1492 e alla successiva conquista europea, di cui abbiamo già parlato nel capitolo dedicato alle scoperte geografiche.</p>
+
+  <p class="titolo-capitolo">La civiltà maya</p>
+  <p>La civiltà maya si sviluppò a partire da circa il 2.000 a.C. nella regione centroamericana che comprende oggi il sud del Messico, il Guatemala, il Belize e parti di Honduras ed El Salvador, raggiungendo il proprio massimo splendore, chiamato dagli storici periodo classico, tra il 250 e il 900 d.C. circa.</p>
+  <p>A differenza di altre grandi civiltà americane, i Maya non formarono mai un unico impero centralizzato, ma si organizzarono in numerose città-stato indipendenti, spesso in competizione o in guerra tra loro, come Tikal, Palenque e Copán, ciascuna dotata di imponenti templi piramidali, palazzi e osservatori astronomici.</p>
+  <p>I Maya svilupparono conoscenze scientifiche straordinariamente avanzate per la propria epoca, elaborando un calendario estremamente preciso basato su complesse osservazioni astronomiche, e uno dei pochissimi sistemi di scrittura geroglifica sviluppati autonomamente nelle Americhe, oltre a concepire in modo indipendente il concetto matematico dello zero.</p>
+  <p>Attorno al IX secolo d.C., per ragioni ancora oggi dibattute tra gli storici, che includono ipotesi come siccità prolungate, esaurimento delle risorse agricole e conflitti interni, molte delle grandi città maya del periodo classico furono progressivamente abbandonate, anche se comunità maya continuarono a vivere nella regione, in forme politiche più ridotte, fino all'arrivo degli spagnoli nel XVI secolo.</p>
+
+  <p class="titolo-capitolo">L'impero azteco</p>
+  <p>Nel corso del XIV secolo, nella valle centrale del Messico, un popolo chiamato Mexica, meglio conosciuto come Aztechi, fondò la propria capitale, Tenochtitlan, costruita su un'isola al centro di un lago e collegata alla terraferma tramite lunghe strade rialzate, una città che al momento del suo massimo splendore contava probabilmente più abitanti di qualsiasi città europea contemporanea.</p>
+  <p>Attraverso una politica di alleanze e conquiste militari, gli Aztechi costruirono nel corso del Quattrocento e dell'inizio del Cinquecento un vasto impero, che imponeva il pagamento di tributi regolari alle popolazioni sottomesse, mantenendo però spesso i governanti locali al proprio posto, un sistema di dominio indiretto piuttosto che di occupazione diretta.</p>
+  <p>La religione azteca, caratterizzata da un ampio pantheon di divinità legate ai fenomeni naturali e al ciclo agricolo, prevedeva la pratica del sacrificio umano, un elemento che aveva un ruolo centrale nella cosmologia azteca, legato alla convinzione religiosa che fosse necessario nutrire con sangue umano gli dèi per garantire la continuità dell'universo.</p>
+  <p>Nel 1519, l'impero azteco, allora guidato dall'imperatore Montezuma II, entrò in contatto con la spedizione spagnola guidata da Hernán Cortés: sfruttando abilmente il malcontento di alcuni popoli sottomessi dagli Aztechi, che si allearono con gli spagnoli, oltre alla superiorità tecnologica europea e alla devastante diffusione di malattie come il vaiolo, contro cui la popolazione locale non aveva alcuna difesa immunitaria, Cortés riuscì a conquistare Tenochtitlan nel 1521, ponendo fine all'impero azteco.</p>
+
+  <p class="titolo-capitolo">L'impero Inca</p>
+  <p>Lungo la catena montuosa delle Ande, nell'America meridionale, si sviluppò a partire dal XIII secolo la civiltà Inca, che nel corso del XV secolo si espanse fino a diventare il più vasto impero mai esistito nelle Americhe precolombiane, estendendosi per migliaia di chilometri lungo la costa occidentale del continente, dall'attuale Ecuador fino al Cile settentrionale.</p>
+  <p>La capitale dell'impero, Cusco, situata nell'attuale Perù, era il centro amministrativo e religioso di un sistema statale straordinariamente organizzato, capace di gestire un territorio vastissimo e geograficamente complesso grazie a un'efficiente rete di strade selciate che attraversava le montagne andine, un sistema di comunicazione basato su corridori specializzati chiamati "chasqui", e un metodo di registrazione delle informazioni basato su cordicelle annodate di colori diversi, chiamato "quipu", utilizzato in assenza di un vero e proprio sistema di scrittura.</p>
+  <p>Gli Inca svilupparono inoltre notevoli competenze in ingegneria e agricoltura, costruendo terrazzamenti coltivabili sui ripidi pendii montani e complessi sistemi di irrigazione, oltre a realizzare opere architettoniche di grande precisione, come la celebre città di Machu Picchu, costruita con blocchi di pietra incastrati tra loro con tale precisione da non necessitare di malta.</p>
+  <p>Nel 1532, l'esploratore spagnolo Francisco Pizarro, alla guida di un piccolo gruppo di soldati, approfittò di una guerra civile appena conclusa tra due pretendenti al trono Inca per catturare l'imperatore Atahualpa, e nonostante il pagamento di un enorme riscatto in oro e argento, lo fece giustiziare nel 1533, un evento che segnò l'inizio del crollo definitivo dell'impero Inca sotto il dominio coloniale spagnolo.</p>
+
+  <p class="titolo-capitolo">Un'eredità che continua</p>
+  <p>Nonostante la conquista europea abbia posto fine all'indipendenza politica di queste grandi civiltà, causando un crollo demografico drammatico tra le popolazioni indigene americane, soprattutto a causa delle epidemie portate dagli europei, l'eredità culturale di Maya, Aztechi e Inca non è scomparsa: milioni di discendenti di questi popoli vivono ancora oggi in America centrale e meridionale, molti dei quali continuano a parlare le lingue tradizionali, come il nahuatl azteco, le diverse lingue maya o il quechua degli Inca, e a preservare tradizioni culturali e religiose che affondano le proprie radici in queste antiche e sofisticate civiltà precolombiane.</p>
+</div>
+<!-- fine appendice 33 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app34.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>

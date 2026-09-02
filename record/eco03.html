@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 03</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 03: il sistema economico e i suoi soggetti -->
+<div id="capitolo-03-sistema-economico-soggetti" class="capitolo-storia">
+  <p class="titolo-capitolo">03 - Il sistema economico e i suoi soggetti - Classe 1</p>
+
+  <p class="titolo-capitolo">Che cos'è un sistema economico</p>
+  <p>Un sistema economico è l'insieme organizzato di soggetti, regole e relazioni attraverso cui una società produce, distribuisce e consuma beni e servizi, rispondendo così ai tre problemi economici fondamentali di cui abbiamo parlato nel primo capitolo: cosa produrre, come produrre e per chi produrre.</p>
+  <p>All'interno di questo sistema, diversi soggetti economici svolgono ruoli specifici e interagiscono continuamente tra loro, scambiandosi beni, servizi, denaro e informazioni: i principali sono le famiglie, le imprese, la pubblica amministrazione e il resto del mondo, che analizzeremo uno per uno in questo capitolo.</p>
+
+  <p class="titolo-capitolo">Le famiglie</p>
+  <p>Le famiglie, in senso economico, sono l'insieme di tutti i singoli individui e nuclei familiari che vivono nel sistema economico, e svolgono un duplice ruolo fondamentale: da un lato sono consumatrici di beni e servizi, utilizzando il proprio reddito per acquistare tutto ciò che serve a soddisfare i propri bisogni; dall'altro sono anche fornitrici di fattori produttivi, in particolare di lavoro, che mettono a disposizione delle imprese in cambio di uno stipendio o salario.</p>
+  <p>Le famiglie possono inoltre possedere altri fattori produttivi, come terreni o capitali risparmiati, che possono affittare o investire, ricavandone rispettivamente una rendita o un interesse, forme di reddito che si aggiungono a quello derivante dal lavoro.</p>
+
+  <p class="titolo-capitolo">Le imprese</p>
+  <p>Le imprese sono i soggetti economici che organizzano i fattori produttivi, cioè lavoro, capitale e materie prime, per produrre beni e servizi da vendere sul mercato, con l'obiettivo generale di ottenere un profitto, cioè una differenza positiva tra i ricavi ottenuti dalla vendita e i costi sostenuti per la produzione.</p>
+  <p>Facciamo un semplice esempio numerico: se un'impresa vende in un mese prodotti per un totale di 15.000 € e sostiene costi complessivi, tra materie prime, stipendi e altre spese, pari a 11.000 €, il suo profitto mensile si calcola come differenza tra le due cifre.</p>
+  <p class="formula">15.000 € − 11.000 € = 4.000 € di profitto</p>
+  <p>Le imprese possono avere dimensioni molto diverse, da una piccola bottega artigiana a una multinazionale con migliaia di dipendenti, e possono operare in tre grandi settori: il settore primario, che comprende agricoltura, allevamento, pesca ed estrazione di materie prime; il settore secondario, che comprende l'industria e le attività di trasformazione; e il settore terziario, che comprende i servizi, come commercio, trasporti, sanità e istruzione.</p>
+
+  <p class="titolo-capitolo">La pubblica amministrazione</p>
+  <p>La pubblica amministrazione, chiamata anche settore pubblico o Stato in senso ampio, comprende lo Stato centrale, le Regioni, i Comuni e gli altri enti pubblici, e svolge diverse funzioni economiche fondamentali all'interno del sistema.</p>
+  <p>Da un lato, la pubblica amministrazione produce essa stessa beni e servizi, spesso di tipo collettivo come abbiamo visto nel capitolo precedente, ad esempio l'istruzione pubblica, la sanità o la sicurezza; dall'altro, raccoglie risorse dai cittadini e dalle imprese attraverso le tasse, per poi ridistribuirle sotto forma di servizi pubblici, pensioni, sussidi e altre forme di spesa pubblica.</p>
+  <p>La pubblica amministrazione svolge inoltre un ruolo di regolazione dell'intero sistema economico, stabilendo le regole del gioco attraverso leggi e normative, ad esempio quelle che tutelano i lavoratori, i consumatori o l'ambiente, un tema che approfondiremo meglio nei capitoli dedicati alla politica economica.</p>
+
+  <p class="titolo-capitolo">Il resto del mondo</p>
+  <p>L'ultimo grande soggetto economico è il cosiddetto "resto del mondo", cioè l'insieme di tutti i soggetti economici, famiglie, imprese e governi, che si trovano al di fuori dei confini nazionali del sistema economico che stiamo considerando, ma con cui quest'ultimo intrattiene comunque relazioni economiche.</p>
+  <p>Queste relazioni avvengono principalmente attraverso le esportazioni, cioè la vendita di beni e servizi nazionali verso l'estero, e le importazioni, cioè l'acquisto di beni e servizi prodotti all'estero, oltre che attraverso movimenti di capitali, come gli investimenti che imprese o governi stranieri effettuano nel nostro Paese, o viceversa.</p>
+  <p>Nessuna economia moderna, per quanto grande, funziona oggi in totale isolamento dal resto del mondo, un tema che diventerà centrale quando affronteremo, più avanti nel manuale, i capitoli dedicati al commercio internazionale e alla globalizzazione.</p>
+
+  <p class="titolo-capitolo">Un flusso continuo di scambi</p>
+  <p>Questi quattro soggetti economici non agiscono isolatamente, ma sono legati tra loro da un flusso continuo e circolare di scambi: le famiglie forniscono lavoro alle imprese e ricevono in cambio un reddito, che utilizzano in parte per acquistare beni e servizi dalle imprese stesse, richiudendo così il cerchio.</p>
+  <p>A questo circuito si aggiungono i flussi verso e dalla pubblica amministrazione, che riceve tasse da famiglie e imprese e restituisce servizi pubblici e trasferimenti, e quelli verso e dal resto del mondo, attraverso importazioni ed esportazioni: l'insieme di questi scambi costituisce, nel loro complesso, il funzionamento quotidiano dell'intero sistema economico di un Paese.</p>
+</div>
+<!-- fine capitolo economia 03 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco04.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>
