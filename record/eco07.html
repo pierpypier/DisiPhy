@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 07</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 07: il ruolo delle imprese -->
+<div id="capitolo-07-ruolo-imprese" class="capitolo-storia">
+  <p class="titolo-capitolo">07 - Il ruolo delle imprese - Classe 2</p>
+
+  <p class="titolo-capitolo">Che cos'è un'impresa</p>
+  <p>Un'impresa è un'organizzazione che combina lavoro, capitale, risorse naturali e capacità imprenditoriale allo scopo di produrre beni o servizi da destinare alla vendita sul mercato, assumendosi il rischio economico legato a questa attività, cioè la possibilità che i ricavi ottenuti non siano sufficienti a coprire i costi sostenuti.</p>
+  <p>Le imprese svolgono un ruolo fondamentale in ogni sistema economico moderno: sono infatti i soggetti che trasformano le risorse disponibili in prodotti e servizi utili ai consumatori, che creano posti di lavoro assumendo dipendenti, e che generano reddito distribuito sotto forma di salari, interessi, affitti e profitti a chi partecipa in vario modo al processo produttivo.</p>
+  <p>Ogni impresa, indipendentemente dalle sue dimensioni, deve prendere continuamente decisioni su cosa produrre, quanto produrre, con quali tecniche produttive e a quale prezzo vendere, cercando di conciliare l'obiettivo di ottenere un profitto con i vincoli imposti dalla concorrenza, dalle risorse disponibili e, sempre più spesso, da considerazioni sociali e ambientali.</p>
+
+  <p class="titolo-capitolo">Le diverse dimensioni delle imprese</p>
+  <p>Le imprese possono essere classificate in base alla loro dimensione, misurata solitamente attraverso il numero di dipendenti, il fatturato annuo oppure il totale dell'attivo di bilancio: si distinguono così le microimprese, che hanno pochi dipendenti e un fatturato molto contenuto, le piccole e medie imprese, spesso indicate con la sigla PMI, e le grandi imprese, che possono contare anche su migliaia di dipendenti e operare in più Paesi contemporaneamente.</p>
+  <p>In molti Paesi europei, tra cui l'Italia, il tessuto produttivo è caratterizzato da una fortissima presenza di piccole e medie imprese, spesso a conduzione familiare, che rappresentano la grande maggioranza delle imprese attive e una quota molto rilevante dell'occupazione complessiva, pur avendo generalmente meno risorse a disposizione rispetto alle grandi imprese per investire in ricerca, innovazione o espansione sui mercati internazionali.</p>
+
+  <p class="titolo-capitolo">Le forme giuridiche dell'impresa</p>
+  <p>Oltre alla dimensione, le imprese si distinguono anche in base alla loro forma giuridica, cioè al modo in cui la legge regola la loro costituzione, la responsabilità dei soci verso i debiti dell'impresa e la ripartizione dei profitti: nell'impresa individuale, la più semplice tra le forme possibili, un'unica persona fisica è titolare dell'attività e risponde con il proprio patrimonio personale delle obbligazioni assunte.</p>
+  <p>Nelle società di persone, come le società in nome collettivo, più soci si associano per svolgere insieme l'attività d'impresa, mantenendo comunque, in genere, una responsabilità personale piena verso i debiti sociali, mentre nelle società di capitali, come la società a responsabilità limitata o la società per azioni, la responsabilità dei soci è invece limitata al capitale che essi hanno effettivamente conferito, con il patrimonio personale dei singoli soci che resta, di norma, separato da quello della società.</p>
+  <p>Questa distinzione è particolarmente importante perché influisce sulla disponibilità delle persone a investire in un'attività imprenditoriale: la responsabilità limitata riduce infatti il rischio personale legato all'investimento, incentivando la nascita di imprese anche di grandi dimensioni, che richiedono capitali ingenti raccolti da un numero elevato di soci o azionisti.</p>
+
+  <p class="titolo-capitolo">I settori produttivi</p>
+  <p>L'attività delle imprese viene tradizionalmente suddivisa in tre grandi settori produttivi: il settore primario comprende le attività legate direttamente allo sfruttamento delle risorse naturali, come l'agricoltura, l'allevamento, la pesca e l'estrazione mineraria, il settore secondario riguarda le attività di trasformazione delle materie prime in prodotti finiti, come l'industria manifatturiera e l'edilizia, mentre il settore terziario include la produzione di servizi, come il commercio, i trasporti, il turismo, la sanità e l'istruzione.</p>
+  <p>Nel corso dell'ultimo secolo, nelle economie più avanzate si è osservato uno spostamento progressivo dell'occupazione e della produzione dal settore primario verso il settore secondario, e successivamente da questo verso il settore terziario, un fenomeno che gli economisti definiscono "terziarizzazione" dell'economia, e che ha portato oggi il settore dei servizi a rappresentare, in Paesi come l'Italia, la quota nettamente maggioritaria del prodotto interno lordo complessivo.</p>
+
+  <p class="titolo-capitolo">Ricavi, costi e profitto</p>
+  <p>Per valutare l'andamento della propria attività, ogni impresa deve calcolare periodicamente i propri ricavi totali, cioè la somma di quanto incassato dalla vendita dei beni o servizi prodotti, e confrontarli con i propri costi totali, cioè l'insieme di tutte le spese sostenute per produrre, tra cui materie prime, salari, affitti, energia e interessi sui finanziamenti ricevuti.</p>
+  <p>La differenza tra ricavi totali e costi totali costituisce il profitto dell'impresa, che risulta positivo, ed è quindi chiamato utile, quando i ricavi superano i costi, mentre risulta negativo, ed è chiamato perdita, quando accade il contrario, una situazione che, se protratta a lungo nel tempo, può portare l'impresa a dover cessare l'attività.</p>
+  <p class="formula">Ricavi 180.000 € − Costi 150.000 € = Profitto 30.000 €</p>
+  <p>Immaginiamo, ad esempio, un'impresa che in un anno ottiene ricavi complessivi per 180.000 € e sostiene costi complessivi per 150.000 €: il calcolo mostra un profitto di 30.000 €, un risultato che l'imprenditore potrà scegliere di reinvestire nell'attività, distribuire tra i soci oppure accantonare come riserva per far fronte a esigenze future.</p>
+
+  <p class="titolo-capitolo">Non solo profitto: le finalità dell'impresa</p>
+  <p>Tradizionalmente, gli economisti hanno considerato la massimizzazione del profitto come l'obiettivo principale che guida le decisioni di un'impresa, un'ipotesi utile per costruire modelli economici semplici e prevedibili sul comportamento dei produttori.</p>
+  <p>Negli ultimi decenni, tuttavia, si è sviluppato un dibattito, ancora aperto tra studiosi e imprenditori, sul fatto che le imprese moderne perseguano davvero solo il profitto o considerino invece anche altri obiettivi, come la crescita di lungo periodo, la reputazione presso i clienti, il benessere dei propri dipendenti e l'impatto ambientale e sociale della propria attività, elementi spesso raccolti sotto l'espressione di "responsabilità sociale d'impresa".</p>
+</div>
+<!-- fine capitolo economia 07 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco00.html">Torna all'indice</a></p>
+  <p><a href="eco08.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>

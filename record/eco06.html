@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 06</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 06: le forme di mercato -->
+<div id="capitolo-06-forme-mercato-concorrenza-monopolio" class="capitolo-storia">
+  <p class="titolo-capitolo">06 - Le forme di mercato: concorrenza e monopolio - Classe 2</p>
+
+  <p class="titolo-capitolo">Perché esistono forme di mercato diverse</p>
+  <p>Nel capitolo precedente abbiamo visto come il prezzo si formi dall'incontro tra domanda e offerta, ma questo meccanismo non funziona sempre allo stesso modo: il modo in cui un mercato si comporta dipende infatti da quante imprese vi operano, da quanto sono simili o diverse tra loro le merci che vendono, e da quanto è facile per una nuova impresa entrare a competere con le altre.</p>
+  <p>Gli economisti chiamano "forme di mercato" o "strutture di mercato" queste diverse situazioni, che vengono di solito ordinate lungo una scala che va dalla massima concorrenza possibile, con moltissime imprese in competizione tra loro, fino alla situazione opposta, in cui un'unica impresa domina completamente il mercato.</p>
+  <p>Conoscere le principali forme di mercato è utile perché permette di capire meglio situazioni molto diverse che incontriamo nella vita quotidiana, dal fruttivendolo sotto casa, che compete con decine di negozi simili, fino al gestore della rete elettrica della propria città, che spesso non ha alcun concorrente diretto.</p>
+
+  <p class="titolo-capitolo">La concorrenza perfetta</p>
+  <p>La concorrenza perfetta è un modello teorico che gli economisti utilizzano come punto di riferimento ideale, anche se nella realtà è molto difficile trovare un mercato che ne rispetti tutte le condizioni in modo rigoroso: si tratta di una situazione in cui operano moltissime imprese, ciascuna di dimensioni così piccole rispetto al mercato complessivo da non poter influenzare da sola il prezzo di vendita.</p>
+  <p>In un mercato di questo tipo, tutte le imprese vendono un prodotto praticamente identico, ogni impresa e ogni consumatore conoscono perfettamente prezzi e caratteristiche di ciò che viene scambiato, e non esistono ostacoli rilevanti che impediscano a una nuova impresa di entrare nel mercato o a un'impresa già presente di uscirne.</p>
+  <p>In queste condizioni, ogni singola impresa è costretta ad accettare il prezzo stabilito dall'incontro complessivo tra domanda e offerta, senza poter praticare un prezzo più alto, perché i clienti si rivolgerebbero immediatamente a un concorrente che vende lo stesso identico prodotto a un prezzo inferiore.</p>
+  <p>Alcuni mercati agricoli di beni molto simili tra loro, come certi cereali di base scambiati su mercati internazionali, vengono spesso presi a esempio come casi che si avvicinano abbastanza a questo modello teorico, pur senza rispettarne in modo perfetto tutte le condizioni.</p>
+
+  <p class="titolo-capitolo">Il monopolio</p>
+  <p>All'estremo opposto della scala troviamo il monopolio, una forma di mercato in cui un'unica impresa è l'unica venditrice di un determinato bene o servizio, per il quale non esistono sostituti validi disponibili sul mercato, e in cui altre imprese non possono entrare a competere, spesso a causa di barriere all'entrata molto elevate.</p>
+  <p>Queste barriere possono avere origini diverse: talvolta derivano dal possesso esclusivo di una risorsa naturale fondamentale, talvolta da un brevetto che protegge legalmente un'invenzione per un certo numero di anni, e talvolta dal fatto che i costi fissi necessari per avviare l'attività sono talmente elevati da rendere impossibile, o comunque poco conveniente, la presenza di più imprese nello stesso mercato.</p>
+  <p>Quest'ultimo caso viene chiamato dagli economisti "monopolio naturale", ed è tipico di alcuni servizi come la distribuzione dell'acqua potabile o della corrente elettrica in una città: costruire una seconda rete di tubature o di cavi elettrici parallela a quella già esistente comporterebbe costi così elevati da non convenire a nessuna impresa, per cui in questi settori spesso opera un unico gestore, la cui attività viene però regolata dallo Stato proprio per evitare abusi.</p>
+  <p>Poiché l'impresa monopolista non teme la concorrenza diretta di altre imprese, essa ha la possibilità di scegliere il prezzo di vendita in modo da massimizzare i propri profitti, fissando di norma un prezzo più alto e una quantità venduta più bassa rispetto a quanto accadrebbe in un mercato concorrenziale, una situazione che molti economisti considerano svantaggiosa per i consumatori, motivo per cui in molti Paesi esistono leggi antitrust pensate per limitare o vigilare sulle situazioni di monopolio.</p>
+
+  <p class="titolo-capitolo">Un esempio numerico: prezzo e quantità nel monopolio</p>
+  <p>Per capire meglio in modo semplificato la logica del monopolio, immaginiamo un'impresa che è l'unica fornitrice di un certo servizio in una piccola città e che, analizzando i propri costi e la disponibilità a pagare dei clienti, valuta due possibili strategie di prezzo.</p>
+  <p class="formula">Prezzo 40 € × 1.000 unità = Ricavo 40.000 €</p>
+  <p>Con la prima strategia, fissando il prezzo a 40 € a unità, l'impresa riesce a vendere 1.000 unità del servizio, ottenendo così un ricavo complessivo di 40.000 €.</p>
+  <p class="formula">Prezzo 55 € × 850 unità = Ricavo 46.750 €</p>
+  <p>Con la seconda strategia, invece, l'impresa alza il prezzo a 55 € a unità: poiché il prezzo più alto scoraggia alcuni clienti, la quantità venduta scende a 850 unità, ma il ricavo complessivo sale a 46.750 €, un risultato migliore per l'impresa monopolista, che quindi sceglierà, a parità di altre condizioni, la seconda strategia, pur sapendo di servire un numero minore di clienti rispetto a quanti ne servirebbe in un mercato concorrenziale allo stesso prezzo più basso.</p>
+
+  <p class="titolo-capitolo">La concorrenza monopolistica</p>
+  <p>Tra i due estremi della concorrenza perfetta e del monopolio si collocano altre forme di mercato più diffuse nella realtà quotidiana, come la concorrenza monopolistica, in cui operano molte imprese, l'entrata di nuove imprese è relativamente libera, ma ciascuna vende un prodotto leggermente differenziato rispetto a quello dei concorrenti, ad esempio per marchio, qualità percepita o servizi aggiuntivi offerti insieme al bene principale.</p>
+  <p>Questa piccola differenziazione dà a ogni impresa un margine limitato di controllo sul proprio prezzo, perché alcuni clienti restano fedeli a un determinato marchio anche se un concorrente offre un prodotto molto simile a un prezzo leggermente inferiore: bar, ristoranti, parrucchieri o negozi di abbigliamento di una stessa città sono spesso citati come esempi di questa forma di mercato, molto comune nei settori dei servizi al consumatore.</p>
+
+  <p class="titolo-capitolo">L'oligopolio</p>
+  <p>Un'altra forma di mercato molto diffusa, specialmente in settori che richiedono grandi investimenti iniziali, è l'oligopolio, una situazione in cui poche imprese di grandi dimensioni si dividono la maggior parte del mercato, come accade tipicamente nei settori delle automobili, delle compagnie aeree o delle telecomunicazioni.</p>
+  <p>Nell'oligopolio, a differenza della concorrenza perfetta, ogni impresa è abbastanza grande da influenzare il mercato con le proprie scelte, e questo porta le imprese a tenere costantemente conto delle probabili reazioni delle concorrenti prima di decidere, ad esempio, se modificare un prezzo o lanciare un nuovo prodotto, una situazione di forte interdipendenza reciproca che rende il comportamento delle imprese oligopolistiche più difficile da prevedere rispetto a quello delle imprese che operano nelle altre forme di mercato.</p>
+  <p>In alcuni casi le imprese di un oligopolio possono anche essere tentate di accordarsi tra loro per fissare insieme i prezzi o dividersi il mercato, dando vita a quello che viene chiamato un cartello: si tratta però di pratiche che nella maggior parte dei Paesi sono vietate dalla legge, proprio perché danneggiano i consumatori riducendo artificialmente la concorrenza, ed è per questo motivo che esistono autorità pubbliche incaricate di vigilare sul rispetto delle regole della concorrenza.</p>
+</div>
+<!-- fine capitolo economia 06 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco00.html">Torna all'indice</a></p>
+  <p><a href="eco07.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>
