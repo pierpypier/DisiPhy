@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 30</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 30: la tratta degli schiavi -->
+<div id="appendice-30-tratta-schiavi" class="capitolo-storia">
+  <p class="titolo-capitolo">30 - La tratta degli schiavi - dal XVI al XIX secolo</p>
+
+  <p class="titolo-capitolo">Le origini della tratta atlantica</p>
+  <p>Come abbiamo accennato nel capitolo dedicato alle scoperte geografiche, a partire dal Cinquecento le potenze europee, in particolare Portogallo e Spagna, e successivamente anche Gran Bretagna, Francia e Paesi Bassi, avviarono la colonizzazione di ampie zone del continente americano, dove si svilupparono grandi piantagioni destinate alla coltivazione di prodotti molto richiesti in Europa, come zucchero, cotone e tabacco.</p>
+  <p>Queste piantagioni richiedevano un'enorme quantità di manodopera, che le potenze coloniali europee decisero di reperire attraverso la deportazione forzata di milioni di persone dall'Africa, dando origine a quella che gli storici chiamano tratta atlantica degli schiavi, uno dei più grandi e tragici trasferimenti forzati di popolazione della storia umana.</p>
+
+  <p class="titolo-capitolo">Il commercio triangolare</p>
+  <p>La tratta atlantica si sviluppò secondo uno schema commerciale che gli storici chiamano "commercio triangolare", articolato in tre tratte principali: dall'Europa verso le coste dell'Africa occidentale venivano trasportate merci manifatturiere, come armi da fuoco, tessuti e alcolici, scambiate con mercanti e sovrani locali africani in cambio di prigionieri, spesso catturati durante conflitti tra diversi regni e popolazioni africane.</p>
+  <p>Da queste coste africane, le navi trasportavano poi gli schiavi attraverso l'oceano Atlantico verso le Americhe, in una traversata chiamata "passaggio di mezzo", per poi tornare infine in Europa cariche delle materie prime coloniali prodotte grazie proprio al lavoro forzato degli schiavi deportati, completando così il circuito commerciale.</p>
+
+  <p class="titolo-capitolo">Il passaggio di mezzo</p>
+  <p>La traversata atlantica rappresentava una delle fasi più drammatiche dell'intero processo di deportazione: gli schiavi venivano stipati nelle stive delle navi in condizioni di sovraffollamento estremo, incatenati e privi di adeguato spazio, cibo, acqua e igiene per un viaggio che poteva durare diverse settimane.</p>
+  <p>A causa di queste condizioni disumane, unite alla diffusione di malattie e alla disperazione psicologica dei prigionieri, gli storici stimano che una percentuale considerevole degli schiavi imbarcati, mediamente attorno al 15%, ma con punte molto più alte in singole traversate particolarmente sfortunate, non sopravvivesse al viaggio, un dato che da solo restituisce la drammaticità di questo commercio.</p>
+
+  <p class="titolo-capitolo">Le dimensioni complessive della tratta</p>
+  <p>Nel corso dei circa quattro secoli in cui fu attiva, tra il XVI e il XIX secolo, la tratta atlantica degli schiavi deportò complessivamente, secondo le stime più accreditate tra gli storici, oltre dodici milioni di africani verso le Americhe, con destinazioni principali i Caraibi e il Brasile, dove il tasso di mortalità nelle piantagioni era particolarmente elevato, e in misura minore, ma comunque significativa, verso le colonie nordamericane che sarebbero poi diventate gli Stati Uniti.</p>
+  <p>Una volta giunti a destinazione, gli schiavi venivano venduti come proprietà, privati di ogni diritto personale, spesso separati dai propri familiari, e costretti a lavorare nelle piantagioni in condizioni durissime, sottoposti all'autorità pressoché assoluta dei proprietari, un sistema di sfruttamento che si sarebbe protratto per generazioni, dato che anche i figli nati da genitori schiavi ereditavano automaticamente questa condizione.</p>
+
+  <p class="titolo-capitolo">I movimenti abolizionisti</p>
+  <p>A partire dalla seconda metà del Settecento, in Europa e nelle stesse colonie americane si sviluppò progressivamente un movimento di opinione contrario alla schiavitù, chiamato abolizionismo, sostenuto sia da motivazioni religiose ed etiche, in particolare da diverse confessioni cristiane come i quaccheri, sia dai principi illuministi sui diritti naturali dell'individuo, che apparivano sempre più difficilmente conciliabili con la pratica della schiavitù.</p>
+  <p>Questo movimento ottenne i primi importanti risultati legislativi tra la fine del Settecento e l'inizio dell'Ottocento: la Gran Bretagna abolì il commercio degli schiavi nel 1807 e la schiavitù stessa nei propri territori coloniali nel 1833, mentre la Francia, dopo un primo tentativo durante la rivoluzione francese poi revocato da Napoleone, abolì definitivamente la schiavitù nel 1848.</p>
+
+  <p class="titolo-capitolo">L'abolizione negli Stati Uniti e l'eredità storica</p>
+  <p>Negli Stati Uniti, come abbiamo visto in un'altra appendice dedicata alla guerra civile americana, la schiavitù rimase legale negli stati del sud fino al 1865, quando fu abolita definitivamente attraverso il tredicesimo emendamento della Costituzione, al termine di un sanguinoso conflitto in cui la questione della schiavitù ebbe un ruolo centrale.</p>
+  <p>Il Brasile fu l'ultimo paese delle Americhe ad abolire formalmente la schiavitù, solo nel 1888, un dato che testimonia come questa pratica, pur progressivamente messa fuori legge in gran parte del mondo occidentale nel corso dell'Ottocento, sia rimasta attiva fino a un'epoca storicamente molto recente.</p>
+  <p>Le conseguenze della tratta atlantica e della schiavitù sono rimaste profondamente radicate nella storia successiva delle società americane, contribuendo in modo determinante, come abbiamo visto, alla nascita di sistemi di discriminazione razziale come le leggi Jim Crow negli Stati Uniti, e ponendo le basi demografiche e culturali delle importanti comunità afrodiscendenti oggi presenti in tutto il continente americano, la cui storia, cultura e lotta per i pieni diritti civili rappresenta ancora oggi un capitolo fondamentale per comprendere le società contemporanee di questi paesi.</p>
+</div>
+<!-- fine appendice 30 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="app31.html">Vai alla Appendice successiva</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>

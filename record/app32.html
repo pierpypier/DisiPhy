@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appendice 32</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo appendici */
+    .capitolo-storia{
+      background:#f5f0fa;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #7b3fa0;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#2b1f38;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#5c2680;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">APPENDICI</div>
+        <div class="subtitle">Approfondimenti su fatti storici particolarmente importanti</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="appendici00.html" title="appendici indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r014.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutte le appendici</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- appendice 32: le mafie -->
+<div id="appendice-32-le-mafie" class="capitolo-storia">
+  <p class="titolo-capitolo">32 - Le mafie - dal XIX al XXI secolo</p>
+
+  <p class="titolo-capitolo">Che cos'è una mafia</p>
+  <p>Con il termine mafia si indica generalmente un'organizzazione criminale strutturata, caratterizzata da regole interne rigide, una forte gerarchia, il controllo violento di un determinato territorio e la capacità di infiltrarsi, spesso attraverso la corruzione e l'intimidazione, nell'economia legale e talvolta anche nelle istituzioni pubbliche.</p>
+  <p>In Italia, questo fenomeno ha assunto nel corso della storia caratteristiche e nomi diversi a seconda della regione di origine: la mafia siciliana, propriamente chiamata Cosa Nostra, la camorra napoletana, la 'ndrangheta calabrese e la sacra corona unita pugliese, quattro organizzazioni distinte per storia e organizzazione interna, ma accomunate da logiche di funzionamento per certi versi simili.</p>
+
+  <p class="titolo-capitolo">Le origini ottocentesche</p>
+  <p>Le origini delle mafie italiane risalgono all'Ottocento, in un contesto storico caratterizzato, soprattutto nelle regioni del sud Italia, da una debole presenza dello stato centrale, da forti disuguaglianze sociali legate al possesso della terra, e da una tradizione consolidata di risoluzione privata dei conflitti, al di fuori dei canali legali ufficiali.</p>
+  <p>In Sicilia, in particolare, le prime organizzazioni che sarebbero poi confluite in quella che chiamiamo Cosa Nostra si formarono spesso attorno alla figura del "gabellotto", un intermediario che, per conto dei grandi proprietari terrieri spesso assenti dalle proprie tenute, gestiva di fatto il controllo delle terre e della manodopera agricola, esercitando un potere informale ma pervasivo sulla popolazione locale.</p>
+
+  <p class="titolo-capitolo">L'evoluzione nel Novecento</p>
+  <p>Nel corso del ventennio fascista, il regime di Mussolini condusse una dura campagna repressiva contro la mafia siciliana, affidata in particolare al prefetto Cesare Mori, un'azione che indebolì temporaneamente l'organizzazione ma non riuscì a eliminarla del tutto, anche perché la repressione fascista si accompagnò spesso a un uso strumentale e politico delle accuse di mafiosità contro oppositori del regime.</p>
+  <p>Dopo la seconda guerra mondiale, le organizzazioni mafiose ripresero forza, sfruttando in particolare le opportunità economiche legate alla ricostruzione postbellica e, dagli anni '50 in poi, il boom edilizio nelle grandi città del sud, un settore che si prestava particolarmente bene all'infiltrazione mafiosa attraverso il controllo di appalti, forniture e manodopera.</p>
+  <p>Un salto di qualità fondamentale per la potenza economica delle mafie italiane avvenne a partire dagli anni '70 e soprattutto '80, con l'ingresso in modo sempre più massiccio nel traffico internazionale di stupefacenti, un'attività estremamente redditizia che moltiplicò enormemente le risorse finanziarie a disposizione delle organizzazioni criminali, come abbiamo visto anche nell'appendice dedicata a Falcone e Borsellino.</p>
+
+  <p class="titolo-capitolo">La camorra napoletana</p>
+  <p>La camorra, diffusa soprattutto nella città di Napoli e in altre zone della Campania, si distingue storicamente da Cosa Nostra per una struttura organizzativa generalmente più frammentata e orizzontale, composta da numerosi clan spesso in aperta e sanguinosa competizione tra loro per il controllo del territorio, piuttosto che da un'unica struttura gerarchica centralizzata.</p>
+  <p>Questa caratteristica ha reso storicamente la camorra un fenomeno particolarmente violento, con frequenti e sanguinose faide tra clan rivali, ma allo stesso tempo, proprio per questa frammentazione, anche più difficile da colpire attraverso un'unica grande strategia investigativa, a differenza di quanto avvenuto con il maxiprocesso contro Cosa Nostra.</p>
+
+  <p class="titolo-capitolo">La 'ndrangheta calabrese</p>
+  <p>La 'ndrangheta, originaria della Calabria, ha invece mantenuto nel tempo una struttura organizzativa fortemente basata sui legami di sangue tra i membri delle diverse "'ndrine", cioè le famiglie mafiose di base, un elemento che ha reso storicamente questa organizzazione particolarmente impermeabile alle infiltrazioni investigative e alla collaborazione con la giustizia da parte dei propri membri, proprio per la forza dei legami familiari interni.</p>
+  <p>Proprio questa caratteristica, unita a una gestione particolarmente efficiente del traffico internazionale di cocaina verso l'Europa, ha fatto sì che, secondo numerosi analisti e inquirenti, la 'ndrangheta sia diventata nel corso degli ultimi decenni l'organizzazione mafiosa italiana economicamente più potente e diffusa a livello internazionale, con ramificazioni accertate in numerosi paesi europei ed extraeuropei.</p>
+
+  <p class="titolo-capitolo">La sacra corona unita pugliese</p>
+  <p>La sacra corona unita, sviluppatasi in Puglia a partire dagli anni '80, rappresenta l'organizzazione mafiosa italiana di più recente formazione tra le quattro principali, e ha storicamente sfruttato la particolare posizione geografica della regione, affacciata sull'Adriatico e quindi strategica per i traffici illeciti, in particolare di sigarette di contrabbando e successivamente di droga, provenienti dai Balcani.</p>
+
+  <p class="titolo-capitolo">La risposta dello stato e la sfida contemporanea</p>
+  <p>Come abbiamo visto in dettaglio nell'appendice dedicata alle stragi di Capaci e via D'Amelio, l'azione investigativa e giudiziaria contro le organizzazioni mafiose ha conosciuto un momento di svolta fondamentale tra gli anni '80 e '90, con il maxiprocesso di Palermo e, successivamente, un progressivo rafforzamento degli strumenti legislativi a disposizione dello stato, come il carcere duro previsto dall'articolo 41-bis per i mafiosi più pericolosi e la confisca dei beni acquisiti illecitamente dai clan.</p>
+  <p>Nonostante questi importanti progressi, che hanno portato nel corso dei decenni alla cattura di numerosi latitanti storici e a colpi durissimi inferti a diverse organizzazioni, gli osservatori e gli inquirenti concordano nel ritenere che il fenomeno mafioso, pur avendo modificato profondamente le proprie forme rispetto al passato, privilegiando oggi un profilo più discreto e un'infiltrazione silenziosa nell'economia legale piuttosto che la violenza eclatante degli anni '80 e '90, rimanga tuttora una sfida importante e non del tutto risolta per lo stato italiano e, sempre più, anche per numerosi altri paesi europei ed extraeuropei coinvolti nelle sue reti economiche e finanziarie internazionali.</p>
+</div>
+<!-- fine appendice 32 -->
+
+<div id="indice-appendici-nav" class="capitolo-storia">
+  <p><a href="appendici00.html">Torna all'indice delle appendici</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di storia - Appendici
+    </footer>
+
+  </div>
+</body>
+  </html>
