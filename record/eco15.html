@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 15</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 15: il ciclo economico -->
+<div id="capitolo-15-ciclo-economico" class="capitolo-storia">
+  <p class="titolo-capitolo">15 - Il ciclo economico - Classe 3</p>
+
+  <p class="titolo-capitolo">Che cos'è il ciclo economico</p>
+  <p>Osservando l'andamento del PIL di un Paese nel corso di molti anni, si nota che la crescita economica non procede mai in modo perfettamente regolare, ma alterna fasi di espansione, in cui la produzione e l'occupazione crescono, a fasi di rallentamento o addirittura di contrazione, in cui la produzione ristagna o diminuisce: questo susseguirsi di fasi diverse viene chiamato ciclo economico.</p>
+  <p>È importante sottolineare che il termine "ciclo" non implica una perfetta regolarità o prevedibilità di questi movimenti, né una durata costante delle diverse fasi: la lunghezza e l'intensità delle fasi di espansione e di rallentamento variano infatti considerevolmente da un ciclo all'altro e da un Paese all'altro.</p>
+
+  <p class="titolo-capitolo">Le fasi del ciclo economico</p>
+  <p>Gli economisti individuano generalmente quattro fasi principali all'interno di un ciclo economico: l'espansione, in cui il PIL, l'occupazione e i consumi crescono in modo sostenuto, il picco, cioè il punto più alto raggiunto dall'attività economica prima dell'inizio di un rallentamento, la recessione, in cui il PIL diminuisce per un periodo prolungato, e il punto di minimo, dopo il quale l'economia inizia una nuova fase di ripresa ed espansione.</p>
+  <p>Convenzionalmente, molti economisti ed enti statistici considerano una recessione come una diminuzione del PIL registrata per almeno due trimestri consecutivi, anche se questa definizione è puramente tecnica e non tiene necessariamente conto di tutti gli aspetti rilevanti, come la profondità del calo o la sua diffusione tra i diversi settori dell'economia.</p>
+
+  <p class="titolo-capitolo">Le cause delle fluttuazioni economiche</p>
+  <p>Le cause che possono innescare una fase di rallentamento o di recessione sono molteplici e spesso interconnesse tra loro: possono derivare da shock esterni, come un forte e improvviso aumento del prezzo delle materie prime energetiche, da una crisi del sistema finanziario, che riduce la disponibilità di credito per famiglie e imprese, oppure da un calo della fiducia di consumatori e imprenditori, che porta a rinviare consumi e investimenti.</p>
+  <p>Su quali siano le cause principali delle fluttuazioni economiche esiste un ampio dibattito tra le diverse scuole di pensiero economico: alcuni economisti attribuiscono un ruolo centrale alle variazioni della domanda aggregata complessiva, altri sottolineano soprattutto l'importanza di shock dal lato dell'offerta produttiva, e altri ancora insistono sul ruolo determinante del sistema finanziario e del credito nell'amplificare o attenuare le oscillazioni dell'economia reale.</p>
+
+  <p class="titolo-capitolo">Un esempio numerico: identificare una recessione</p>
+  <p>Immaginiamo che il PIL trimestrale di un Paese, misurato in miliardi di euro a prezzi costanti, sia pari a 500 nel primo trimestre di un anno, a 495 nel secondo trimestre e a 490 nel terzo trimestre.</p>
+  <p class="formula">(495 − 500) ÷ 500 × 100 = −1% ; (490 − 495) ÷ 495 × 100 ≈ −1%</p>
+  <p>In questo caso, il PIL è diminuito di circa l'1% sia dal primo al secondo trimestre sia dal secondo al terzo trimestre: poiché si tratta di due trimestri consecutivi di calo, secondo la definizione tecnica più comune l'economia di quel Paese si troverebbe formalmente in una fase di recessione.</p>
+
+  <p class="titolo-capitolo">Gli indicatori anticipatori e coincidenti</p>
+  <p>Per cercare di anticipare l'andamento futuro dell'economia, economisti e istituti di statistica monitorano costantemente alcuni indicatori economici, distinguendo tra indicatori anticipatori, che tendono a modificarsi prima dei cambiamenti nel ciclo economico complessivo, come la fiducia di consumatori e imprese o gli ordini di nuovi macchinari, e indicatori coincidenti, che si muovono più o meno in parallelo con l'andamento generale dell'economia, come il livello di occupazione o la produzione industriale.</p>
+  <p>Nonostante l'utilizzo di questi strumenti, prevedere con precisione i punti di svolta del ciclo economico, cioè il momento esatto in cui un'espansione si trasforma in rallentamento o viceversa, resta un compito particolarmente difficile, tanto che raramente gli economisti riescono a concordare in anticipo su quando e con quale intensità si manifesterà la successiva fase del ciclo.</p>
+
+  <p class="titolo-capitolo">Le politiche di stabilizzazione</p>
+  <p>Proprio per attenuare l'ampiezza delle fluttuazioni del ciclo economico e i loro effetti negativi, in particolare sull'occupazione, i governi e le banche centrali dispongono di strumenti di politica economica, chiamati politiche di stabilizzazione, che possono agire sia dal lato della politica fiscale, attraverso la spesa pubblica e la tassazione, sia dal lato della politica monetaria, attraverso i tassi di interesse e la quantità di moneta in circolazione, argomenti che saranno approfonditi nei prossimi capitoli.</p>
+</div>
+<!-- fine capitolo economia 15 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco00.html">Torna all'indice</a></p>
+  <p><a href="eco16.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 10</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 10: il sistema bancario -->
+<div id="capitolo-10-sistema-bancario" class="capitolo-storia">
+  <p class="titolo-capitolo">10 - Il sistema bancario - Classe 2</p>
+
+  <p class="titolo-capitolo">Che cosa fanno le banche</p>
+  <p>Le banche sono imprese che svolgono un'attività particolare all'interno del sistema economico: da un lato raccolgono il risparmio di famiglie e imprese sotto forma di depositi, dall'altro utilizzano una parte di queste risorse per concedere prestiti a chi ha bisogno di finanziare un acquisto, un investimento o un'attività produttiva.</p>
+  <p>Questa funzione di intermediazione tra chi ha risorse disponibili in un dato momento e chi invece ne ha bisogno è fondamentale per il funzionamento di un'economia moderna, perché permette di mettere in contatto risparmiatori e soggetti finanziariamente bisognosi che, altrimenti, difficilmente riuscirebbero a incontrarsi direttamente e ad accordarsi sulle condizioni di un prestito.</p>
+  <p>Oltre alla raccolta di depositi e alla concessione di prestiti, le banche offrono oggi molti altri servizi, come la gestione dei pagamenti, la custodia di titoli e valori, la consulenza finanziaria e l'accesso a strumenti di investimento, diventando così un punto di riferimento centrale nella vita economica quotidiana di famiglie e imprese.</p>
+
+  <p class="titolo-capitolo">La riserva frazionaria e la creazione di moneta</p>
+  <p>Quando una banca riceve un deposito, non è tenuta a conservarne l'intero ammontare nei propri caveau o sui propri conti presso la banca centrale, ma solo una parte, chiamata riserva, mentre il resto può essere concesso in prestito ad altri clienti: questo meccanismo, detto sistema a riserva frazionaria, è alla base del moderno sistema bancario.</p>
+  <p>Il meccanismo della riserva frazionaria comporta una conseguenza importante: quando una banca concede un prestito, la somma prestata viene spesso versata sul conto corrente di chi la riceve, e da lì può essere nuovamente depositata, in tutto o in parte, presso la stessa banca o presso un'altra banca, che a sua volta potrà prestarne un'ulteriore quota, generando così, nel complesso del sistema bancario, una quantità di moneta bancaria disponibile superiore rispetto ai depositi originariamente raccolti.</p>
+  <p>Questo processo, che gli economisti chiamano creazione di moneta bancaria, mostra come le banche non si limitino a trasferire risorse già esistenti, ma contribuiscano attivamente, entro i limiti stabiliti dalle norme di vigilanza, ad ampliare la quantità di moneta effettivamente circolante nell'economia.</p>
+
+  <p class="titolo-capitolo">Un esempio numerico: dal deposito al prestito</p>
+  <p>Immaginiamo una banca che riceve un deposito di 20.000 € e che, in base alle regole di vigilanza a cui è sottoposta, deve trattenere come riserva il 10% di ogni deposito ricevuto, potendo prestare il resto ai propri clienti.</p>
+  <p class="formula">20.000 € × 10% = Riserva 2.000 € → Prestito disponibile 18.000 €</p>
+  <p>In base a questo calcolo, la banca trattiene come riserva 2.000 € e può concedere in prestito i restanti 18.000 €: se questa somma, una volta prestata, venisse depositata presso un'altra banca, quest'ultima potrebbe a sua volta trattenerne il 10% come riserva e prestarne il resto, dando origine a un nuovo giro di depositi e prestiti che, ripetuto più volte nel sistema bancario complessivo, amplifica progressivamente la quantità iniziale di moneta depositata.</p>
+
+  <p class="titolo-capitolo">La banca centrale e la vigilanza sul sistema bancario</p>
+  <p>Per evitare che il sistema bancario assuma rischi eccessivi, che potrebbero mettere in pericolo i risparmi depositati dai cittadini, l'attività delle banche è sottoposta a regole precise e a un'attività di vigilanza esercitata dalla banca centrale del Paese o dell'area valutaria di riferimento, come, per i Paesi che utilizzano l'euro, la Banca Centrale Europea in collaborazione con le banche centrali nazionali.</p>
+  <p>La banca centrale stabilisce, tra l'altro, il livello minimo di riserva che le banche devono mantenere, fornisce liquidità alle banche stesse in caso di necessità, e fissa i tassi di interesse di riferimento per l'intero sistema economico, uno strumento fondamentale attraverso cui viene condotta la politica monetaria, di cui parleremo in modo più approfondito in un capitolo successivo.</p>
+
+  <p class="titolo-capitolo">Il rischio bancario e la fiducia dei depositanti</p>
+  <p>Poiché una banca non conserva mai l'intero ammontare dei depositi ricevuti, il suo funzionamento si regge in larga parte sulla fiducia dei depositanti nel fatto che, quando lo desiderano, potranno riavere indietro il proprio denaro, una fiducia che può venir meno in situazioni di crisi, dando origine a fenomeni noti come le corse agli sportelli, in cui molti depositanti cercano contemporaneamente di ritirare i propri risparmi.</p>
+  <p>Per rafforzare la fiducia dei risparmiatori e limitare il rischio di simili episodi, in molti Paesi esistono sistemi di garanzia dei depositi, che assicurano ai depositanti il rimborso, fino a un certo importo massimo, anche nel caso in cui la banca in cui hanno depositato i propri risparmi dovesse trovarsi in grave difficoltà finanziaria o venire posta in liquidazione.</p>
+</div>
+<!-- fine capitolo economia 10 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco00.html">Torna all'indice</a></p>
+  <p><a href="eco11.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>

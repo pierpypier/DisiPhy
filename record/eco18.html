@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 18</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 18: il debito pubblico -->
+<div id="capitolo-18-debito-pubblico" class="capitolo-storia">
+  <p class="titolo-capitolo">18 - Il debito pubblico - Classe 3</p>
+
+  <p class="titolo-capitolo">Che cos'è il debito pubblico</p>
+  <p>Il debito pubblico è l'ammontare complessivo delle somme che uno Stato ha preso in prestito nel corso del tempo e non ha ancora restituito: quando, come abbiamo visto nel capitolo precedente, le uscite pubbliche superano le entrate in un determinato anno, lo Stato deve reperire le risorse mancanti indebitandosi, di norma emettendo titoli di Stato acquistati da risparmiatori, banche, fondi di investimento e altri investitori istituzionali, sia nazionali sia esteri.</p>
+  <p>Il debito pubblico complessivo di un Paese in un dato momento corrisponde quindi alla somma di tutti i disavanzi di bilancio accumulati negli anni precedenti, al netto degli eventuali avanzi realizzati in altri periodi, e rappresenta un'eredità che si trasmette nel tempo, influenzando le scelte di bilancio anche dei governi futuri.</p>
+
+  <p class="titolo-capitolo">Come si finanzia il debito pubblico</p>
+  <p>Per finanziare il proprio debito, lo Stato emette titoli di Stato, cioè strumenti finanziari con cui si impegna a restituire, a una data scadenza futura, la somma ricevuta in prestito, corrispondendo nel frattempo un interesse periodico a chi ha acquistato il titolo: in Italia, i titoli di Stato più noti sono i BOT, con scadenza breve, e i BTP, con scadenze più lunghe.</p>
+  <p>Il tasso di interesse che lo Stato deve offrire per collocare i propri titoli dipende da diversi fattori, tra cui il livello generale dei tassi di interesse nell'economia e la percezione, da parte degli investitori, del rischio legato alla capacità di quello Stato di onorare puntualmente i propri debiti in futuro: Stati considerati più affidabili riescono generalmente a indebitarsi a tassi di interesse più contenuti rispetto a Stati percepiti come più rischiosi.</p>
+
+  <p class="titolo-capitolo">Il rapporto tra debito pubblico e PIL</p>
+  <p>Per valutare la sostenibilità del debito pubblico di un Paese, gli economisti non guardano generalmente al suo valore assoluto, ma al rapporto tra debito pubblico e PIL, un indicatore che permette di confrontare la dimensione del debito con la capacità produttiva complessiva dell'economia che dovrà, in ultima analisi, generare le risorse necessarie a ripagarlo.</p>
+  <p class="formula">Debito pubblico 2.700 miliardi € ÷ PIL 1.800 miliardi € × 100 = 150%</p>
+  <p>Se, ad esempio, il debito pubblico di un Paese ammontasse a 2.700 miliardi di euro e il suo PIL a 1.800 miliardi di euro, il rapporto tra debito pubblico e PIL risulterebbe pari al 150%, un valore che indica come il debito accumulato superi di una volta e mezza il valore della produzione realizzata da quel Paese in un anno.</p>
+
+  <p class="titolo-capitolo">La sostenibilità del debito pubblico</p>
+  <p>Un debito pubblico elevato non comporta necessariamente, di per sé, una situazione di crisi imminente, ma pone il problema della sua sostenibilità nel tempo: se il tasso di interesse medio pagato sul debito supera stabilmente il tasso di crescita del PIL, il rapporto tra debito e PIL tende infatti ad aumentare progressivamente nel tempo, anche in assenza di nuovi disavanzi di bilancio, rendendo sempre più oneroso per lo Stato il pagamento degli interessi.</p>
+  <p>Su quale sia il livello di debito pubblico da considerare eccessivo o pericoloso non esiste un consenso univoco tra gli economisti: alcuni ritengono che soglie specifiche del rapporto debito su PIL debbano essere considerate un segnale di allarme, mentre altri sottolineano come la sostenibilità del debito dipenda da molti altri fattori, come la composizione del debito stesso, la sua scadenza media, chi lo detiene, e le prospettive di crescita economica del Paese nel medio e lungo periodo.</p>
+
+  <p class="titolo-capitolo">Il pagamento degli interessi e i suoi effetti</p>
+  <p>Un debito pubblico elevato comporta, per lo Stato, un consistente esborso annuale destinato al pagamento degli interessi sui titoli emessi, una spesa che riduce le risorse effettivamente disponibili per altre finalità, come la sanità, l'istruzione o gli investimenti pubblici, e che può risultare particolarmente onerosa nei periodi in cui i tassi di interesse generali dell'economia risultano più elevati.</p>
+  <p>Per questo motivo, la gestione del debito pubblico rappresenta una delle sfide più delicate per i governi di molti Paesi, che devono cercare un equilibrio tra il sostegno all'economia nel breve periodo, spesso realizzato attraverso politiche fiscali espansive, e la necessità di garantire, nel medio e lungo periodo, la sostenibilità dei propri conti pubblici agli occhi dei mercati finanziari internazionali.</p>
+</div>
+<!-- fine capitolo economia 18 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco00.html">Torna all'indice</a></p>
+  <p><a href="eco19.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>
