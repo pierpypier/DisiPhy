@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 38</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 38: educazione finanziaria personale -->
+<div id="capitolo-38-educazione-finanziaria-personale" class="capitolo-storia">
+  <p class="titolo-capitolo">38 - Educazione finanziaria personale - Classe 5</p>
+
+  <p class="titolo-capitolo">Perché è importante l'educazione finanziaria</p>
+  <p>Nel corso di questo manuale abbiamo analizzato l'economia soprattutto dal punto di vista dei suoi meccanismi generali, come il funzionamento dei mercati, il ruolo delle imprese o le politiche economiche adottate dagli Stati: accanto a questa dimensione più generale, esiste una dimensione più personale dell'economia, che riguarda le scelte finanziarie che ciascun individuo si trova ad affrontare nel corso della propria vita.</p>
+  <p>L'educazione finanziaria personale riguarda proprio l'insieme delle conoscenze e delle competenze che permettono a una persona di gestire in modo consapevole il proprio denaro, di comprendere i principali strumenti finanziari a propria disposizione e di prendere decisioni economiche informate, riducendo il rischio di commettere errori che potrebbero avere conseguenze rilevanti sulla propria situazione economica futura.</p>
+
+  <p class="titolo-capitolo">Il budget personale</p>
+  <p>Uno strumento fondamentale per la gestione consapevole delle proprie finanze personali è il budget, cioè un piano che mette a confronto le entrate disponibili in un determinato periodo, come lo stipendio o altre fonti di reddito, con le uscite previste, distinguendo generalmente tra spese fisse, come l'affitto o le utenze domestiche, e spese variabili, come quelle per il tempo libero o gli acquisti non essenziali.</p>
+  <p class="formula">Entrate mensili 1.600 € − Spese fisse 900 € − Spese variabili 500 € = Risparmio 200 €</p>
+  <p>Se, ad esempio, una persona percepisce entrate mensili pari a 1.600 €, sostiene spese fisse per 900 € e spese variabili per 500 €, il budget mensile evidenzia una capacità di risparmio pari a 200 €: costruire regolarmente un budget di questo tipo permette di individuare con chiarezza dove vengono effettivamente destinate le proprie risorse economiche, e di valutare consapevolmente eventuali margini per accantonare risparmio o per ridurre alcune voci di spesa.</p>
+
+  <p class="titolo-capitolo">Il credito al consumo</p>
+  <p>Molte persone, nel corso della propria vita, ricorrono a forme di credito al consumo, cioè prestiti concessi da banche o altre società finanziarie per l'acquisto di beni o servizi, come un elettrodomestico, un'automobile o, come già visto in un capitolo precedente, un'abitazione attraverso un mutuo ipotecario.</p>
+  <p>Prima di ricorrere a una forma di credito, è importante comprendere con chiarezza le condizioni economiche applicate, in particolare il tasso di interesse richiesto e la durata complessiva del rimborso, poiché queste condizioni determinano l'importo complessivo che si dovrà restituire, che risulta sempre superiore alla somma effettivamente ricevuta in prestito, come già mostrato dagli esempi numerici sugli interessi presentati nei capitoli precedenti di questo manuale.</p>
+
+  <p class="titolo-capitolo">Il risparmio e la pianificazione di lungo periodo</p>
+  <p>Come già discusso nel capitolo dedicato al risparmio e agli investimenti, accantonare regolarmente una parte del proprio reddito permette di costruire nel tempo una riserva finanziaria utile ad affrontare spese impreviste, oppure a realizzare progetti futuri, come proseguire gli studi, acquistare un'abitazione o garantirsi un'integrazione al proprio reddito una volta raggiunta l'età pensionabile.</p>
+  <p>Una pratica spesso suggerita dagli esperti di educazione finanziaria consiste nel costituire, prima di ogni altra forma di risparmio o investimento, un fondo di emergenza, cioè una somma di denaro facilmente disponibile, pensata per far fronte a spese impreviste senza dover ricorrere immediatamente a forme di indebitamento, che possono comportare, come visto, costi aggiuntivi sotto forma di interessi.</p>
+
+  <p class="titolo-capitolo">Riconoscere le truffe finanziarie</p>
+  <p>Un ulteriore aspetto importante dell'educazione finanziaria personale riguarda la capacità di riconoscere possibili truffe o proposte di investimento non affidabili: gli esperti del settore suggeriscono generalmente di diffidare da proposte che promettono rendimenti molto elevati in tempi brevi e con un rischio dichiarato come nullo, poiché, come già visto nel capitolo dedicato ai mercati finanziari, a un rendimento atteso più alto corrisponde generalmente, sui mercati finanziari regolamentati, un livello di rischio più elevato.</p>
+  <p>Verificare sempre che un intermediario finanziario sia effettivamente autorizzato a operare dalle autorità di vigilanza competenti nel proprio Paese, e diffidare da chi esercita pressioni per ottenere decisioni economiche rapide e poco ponderate, rappresentano ulteriori accorgimenti generalmente consigliati per proteggersi da possibili truffe finanziarie, un tema che assume un'importanza crescente in un contesto in cui, come visto nel capitolo dedicato all'economia digitale, sempre più proposte di investimento vengono presentate anche attraverso canali online.</p>
+</div>
+<!-- fine capitolo economia 38 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco00.html">Torna all'indice</a></p>
+  <p><a href="eco39.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 36</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 36: l'economia digitale -->
+<div id="capitolo-36-economia-digitale" class="capitolo-storia">
+  <p class="titolo-capitolo">36 - L'economia digitale - Classe 5</p>
+
+  <p class="titolo-capitolo">Che cos'è l'economia digitale</p>
+  <p>L'economia digitale comprende l'insieme delle attività economiche che si basano sull'utilizzo delle tecnologie digitali, come internet, i dispositivi mobili, i software e le piattaforme online, un settore che negli ultimi decenni ha assunto un ruolo sempre più centrale in gran parte delle economie moderne, trasformando profondamente il modo in cui vengono prodotti, distribuiti e consumati molti beni e servizi.</p>
+  <p>A differenza dei beni fisici tradizionali, molti prodotti dell'economia digitale, come software, contenuti multimediali o servizi online, presentano caratteristiche economiche particolari: possono essere riprodotti e distribuiti a un costo marginale molto basso, spesso vicino allo zero, una volta che il primo esemplare è stato realizzato, un aspetto che differenzia profondamente l'economia digitale da molti settori produttivi tradizionali analizzati nei capitoli precedenti.</p>
+
+  <p class="titolo-capitolo">Le piattaforme digitali e gli effetti di rete</p>
+  <p>Un elemento centrale dell'economia digitale contemporanea è rappresentato dalle piattaforme digitali, cioè imprese che offrono un ambiente digitale, spesso sotto forma di applicazione o sito web, che mette in contatto diverse categorie di utenti, come acquirenti e venditori, conducenti e passeggeri, o creatori di contenuti e pubblico, generando valore proprio dall'intermediazione tra questi diversi gruppi.</p>
+  <p>Molte piattaforme digitali beneficiano di quelli che gli economisti chiamano effetti di rete, cioè situazioni in cui il valore di un servizio per un utente aumenta all'aumentare del numero complessivo di utenti che lo utilizzano: un social network, ad esempio, diventa tanto più utile quante più persone vi sono già iscritte, un meccanismo che può favorire, in alcuni mercati digitali, una forte concentrazione attorno a poche grandi piattaforme dominanti, un tema strettamente collegato alle forme di mercato già analizzate in un capitolo precedente.</p>
+
+  <p class="titolo-capitolo">I dati come risorsa economica</p>
+  <p>Nell'economia digitale, i dati raccolti dalle imprese sull'attività e sulle preferenze degli utenti hanno assunto un valore economico crescente, poiché permettono, tra le altre cose, di offrire pubblicità più mirata, di personalizzare i servizi offerti e di sviluppare nuovi prodotti basati sull'analisi di grandi quantità di informazioni: molte imprese digitali finanziano infatti i propri servizi, spesso offerti gratuitamente agli utenti, proprio attraverso i ricavi pubblicitari resi possibili dalla raccolta e dall'analisi di questi dati.</p>
+  <p>Questo modello di business ha sollevato importanti questioni economiche e normative, riguardanti in particolare la tutela della privacy degli utenti e la necessità di regole chiare su come i dati personali possano essere raccolti, utilizzati e condivisi dalle imprese, un tema su cui, negli ultimi anni, molti Paesi e organizzazioni internazionali hanno introdotto normative specifiche a tutela dei cittadini.</p>
+
+  <p class="titolo-capitolo">La concorrenza nei mercati digitali</p>
+  <p>Le caratteristiche particolari dei mercati digitali, come gli effetti di rete e i bassi costi di riproduzione dei beni digitali già descritti, hanno posto agli economisti e ai regolatori nuove sfide riguardo alla tutela della concorrenza, un tema già affrontato in termini generali in un capitolo precedente di questo manuale: alcune grandi piattaforme digitali hanno infatti raggiunto posizioni di mercato molto forti in settori specifici, sollevando interrogativi su come applicare in modo efficace le tradizionali normative antitrust a un contesto economico caratterizzato da dinamiche in parte diverse rispetto ai mercati tradizionali di beni fisici.</p>
+  <p>Su come regolamentare al meglio i mercati digitali, bilanciando la tutela della concorrenza e dell'innovazione con la protezione dei consumatori, esiste un dibattito ancora aperto tra economisti e legislatori di diversi Paesi, che ha portato negli ultimi anni all'introduzione, in diverse aree del mondo, di normative specificamente pensate per il contesto delle grandi piattaforme digitali.</p>
+
+  <p class="titolo-capitolo">L'impatto sul mercato del lavoro</p>
+  <p>L'economia digitale ha inoltre trasformato profondamente alcuni aspetti del mercato del lavoro già analizzato in un capitolo precedente, favorendo, tra l'altro, la diffusione del lavoro a distanza reso possibile dalle tecnologie digitali, e la nascita di nuove forme di lavoro legate alle piattaforme digitali, come quelle impegnate nella consegna di beni o nel trasporto di persone, spesso caratterizzate da un elevato grado di flessibilità organizzativa, ma anche, secondo alcune analisi, da minori tutele contrattuali rispetto alle forme più tradizionali di lavoro dipendente, un tema su cui si sono sviluppate, negli ultimi anni, importanti discussioni normative in diversi Paesi.</p>
+</div>
+<!-- fine capitolo economia 36 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco00.html">Torna all'indice</a></p>
+  <p><a href="eco37.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>
