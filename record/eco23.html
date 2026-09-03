@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 23</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 23: i tassi di cambio -->
+<div id="capitolo-23-tassi-cambio" class="capitolo-storia">
+  <p class="titolo-capitolo">23 - I tassi di cambio - Classe 4</p>
+
+  <p class="titolo-capitolo">Che cos'è un tasso di cambio</p>
+  <p>Il tasso di cambio è il prezzo di una moneta espresso in termini di un'altra moneta, cioè il numero di unità di una valuta necessarie per acquistarne una unità di un'altra: quando, ad esempio, un tasso di cambio tra euro e dollaro statunitense è pari a 1,10, significa che con un euro è possibile acquistare 1,10 dollari statunitensi.</p>
+  <p>I tassi di cambio sono fondamentali per il commercio internazionale e per i movimenti di capitali tra Paesi diversi, poiché determinano, in ultima analisi, il prezzo relativo dei beni, dei servizi e delle attività finanziarie espresse in valute diverse, influenzando così la convenienza delle esportazioni, delle importazioni e degli investimenti internazionali.</p>
+
+  <p class="titolo-capitolo">I regimi di cambio: fisso e flessibile</p>
+  <p>Storicamente, i Paesi hanno adottato regimi di cambio molto diversi tra loro: in un regime di cambio flessibile, o fluttuante, il valore di una moneta rispetto alle altre viene determinato liberamente dall'incontro tra domanda e offerta di quella valuta sui mercati finanziari internazionali, senza interventi diretti da parte delle autorità monetarie.</p>
+  <p>In un regime di cambio fisso, invece, la banca centrale di un Paese si impegna a mantenere il valore della propria moneta ancorato a un livello prestabilito rispetto a un'altra valuta di riferimento, o a un paniere di valute, intervenendo se necessario sui mercati per acquistare o vendere la propria moneta in modo da difendere il livello di cambio fissato.</p>
+  <p>Esistono infine regimi intermedi, come i cambi amministrati, in cui la banca centrale lascia fluttuare la propria moneta entro una fascia di oscillazione predefinita, intervenendo solo quando il tasso di cambio si avvicina ai limiti di tale fascia, un compromesso tra la flessibilità del cambio fluttuante e la stabilità offerta da un cambio fisso.</p>
+
+  <p class="titolo-capitolo">Che cosa determina le variazioni del cambio</p>
+  <p>In un regime di cambio flessibile, il valore di una moneta rispetto a un'altra dipende da numerosi fattori, come il differenziale dei tassi di interesse tra i due Paesi, che influenza l'attrattiva relativa degli investimenti finanziari denominati in ciascuna valuta, il differenziale di inflazione, che nel lungo periodo tende a riflettersi sul valore delle diverse monete, e l'andamento della bilancia dei pagamenti descritta nel capitolo precedente, oltre alle aspettative degli operatori dei mercati finanziari sull'andamento futuro dell'economia dei Paesi coinvolti.</p>
+  <p>Quando una moneta si rafforza rispetto a un'altra, si parla di apprezzamento, mentre quando una moneta perde valore rispetto a un'altra si parla di deprezzamento, termini utilizzati per i regimi di cambio flessibile; nei regimi di cambio fisso, le stesse dinamiche vengono chiamate rispettivamente rivalutazione e svalutazione, quando derivano da una decisione esplicita delle autorità monetarie di modificare il livello di cambio fissato.</p>
+
+  <p class="titolo-capitolo">Un esempio numerico: il costo di un viaggio all'estero</p>
+  <p>Per comprendere concretamente l'effetto di una variazione del tasso di cambio, immaginiamo un turista europeo che deve pagare un soggiorno negli Stati Uniti del costo di 2.000 dollari, confrontando due diversi tassi di cambio tra euro e dollaro.</p>
+  <p class="formula">2.000 $ ÷ 1,10 ≈ 1.818 € ; 2.000 $ ÷ 1,00 = 2.000 €</p>
+  <p>Con un tasso di cambio di 1,10 dollari per ogni euro, il turista dovrebbe spendere circa 1.818 €, mentre se l'euro si deprezzasse fino a un cambio di 1,00, cioè alla parità con il dollaro, lo stesso soggiorno gli costerebbe 2.000 €: questo esempio mostra come un deprezzamento della moneta nazionale renda più costosi, per i residenti di quel Paese, i beni e i servizi acquistati in valuta estera.</p>
+
+  <p class="titolo-capitolo">Gli effetti del tasso di cambio sul commercio</p>
+  <p>Le variazioni del tasso di cambio hanno effetti rilevanti anche sul commercio internazionale di un Paese: un deprezzamento della moneta nazionale tende a rendere le esportazioni di quel Paese più economiche, e quindi più competitive, per gli acquirenti esteri, mentre rende le importazioni più costose per i residenti del Paese stesso, un meccanismo che, secondo molti economisti, può contribuire a ridurre un eventuale disavanzo commerciale nel medio periodo.</p>
+  <p>Al contrario, un apprezzamento della moneta nazionale tende a rendere le esportazioni più costose per gli acquirenti esteri e le importazioni più economiche per i residenti, un effetto che può favorire i consumatori nazionali, ma che può al tempo stesso penalizzare le imprese esportatrici del Paese, esposte a una maggiore concorrenza da parte di produttori stranieri sui mercati internazionali.</p>
+</div>
+<!-- fine capitolo economia 23 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco00.html">Torna all'indice</a></p>
+  <p><a href="eco24.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>

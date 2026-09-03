@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 28</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 28: i sistemi economici capitalismo e socialismo -->
+<div id="capitolo-28-sistemi-economici-capitalismo-socialismo" class="capitolo-storia">
+  <p class="titolo-capitolo">28 - I sistemi economici: capitalismo e socialismo - Classe 4</p>
+
+  <p class="titolo-capitolo">Che cos'è un sistema economico</p>
+  <p>Un sistema economico è l'insieme delle regole, delle istituzioni e delle relazioni attraverso cui una società organizza la produzione, la distribuzione e lo scambio di beni e servizi, rispondendo a domande fondamentali come che cosa produrre, come produrlo e per chi produrlo, con risorse che sono sempre limitate rispetto ai bisogni della popolazione, come ricordato fin dal primo capitolo di questo manuale.</p>
+  <p>Nel corso della storia, e ancora oggi tra i diversi Paesi del mondo, sono esistiti e coesistono sistemi economici anche molto diversi tra loro, che si differenziano soprattutto per il ruolo attribuito alla proprietà privata dei mezzi di produzione e per il grado di intervento dello Stato nelle decisioni economiche fondamentali.</p>
+
+  <p class="titolo-capitolo">Il sistema economico capitalistico</p>
+  <p>Il capitalismo è un sistema economico basato sulla proprietà privata dei mezzi di produzione, come terreni, macchinari e imprese, e sul mercato come principale meccanismo attraverso cui vengono prese le decisioni economiche fondamentali, secondo le logiche di domanda, offerta e prezzo già descritte nei primi capitoli di questo manuale.</p>
+  <p>Nei sistemi capitalistici, gli individui e le imprese sono liberi, entro i limiti stabiliti dalle leggi vigenti, di decidere autonomamente che cosa produrre, quanto produrre e a quale prezzo vendere, guidati principalmente dalla ricerca del proprio interesse economico, secondo un meccanismo che, come visto nel capitolo dedicato al pensiero di Adam Smith, alcuni economisti ritengono in grado di condurre, nel complesso, a risultati vantaggiosi anche per l'intera collettività.</p>
+  <p>Anche all'interno dei sistemi capitalistici esistono, tuttavia, differenze significative nel grado di intervento pubblico nell'economia: alcuni Paesi capitalistici prevedono un ruolo relativamente limitato dello Stato, mentre altri, spesso definiti economie sociali di mercato, combinano il mercato e la proprietà privata con un intervento pubblico più esteso, ad esempio attraverso sistemi di welfare, servizi pubblici universali e una regolamentazione più incisiva delle attività economiche.</p>
+
+  <p class="titolo-capitolo">Il sistema economico socialista</p>
+  <p>Il socialismo, nella sua forma più tradizionale, è un sistema economico basato sulla proprietà collettiva o statale dei principali mezzi di produzione, e su una pianificazione centralizzata dell'economia, in cui è generalmente un'autorità pubblica, e non il libero incontro tra domanda e offerta sul mercato, a decidere che cosa produrre, in quali quantità e come distribuire le risorse tra i diversi settori dell'economia e tra i diversi membri della società.</p>
+  <p>Nel corso del Novecento, diversi Paesi, in particolare l'Unione Sovietica e altri Stati dell'Europa orientale, adottarono sistemi economici di pianificazione centralizzata di questo tipo, con l'obiettivo dichiarato di ridurre le disuguaglianze economiche e garantire un'occupazione stabile per l'intera popolazione, sperimentando tuttavia, secondo la valutazione della maggior parte degli economisti, difficoltà significative nel coordinare in modo efficiente la produzione su scala nazionale, con conseguenze come carenze ricorrenti di determinati beni e una minore capacità di innovazione rispetto alle economie di mercato.</p>
+
+  <p class="titolo-capitolo">Sistemi misti ed economie contemporanee</p>
+  <p>Nella pratica, quasi nessuna economia contemporanea corrisponde in modo puro a uno solo di questi due modelli teorici: la maggior parte dei Paesi del mondo, incluse le principali economie occidentali come l'Italia, presenta oggi un sistema economico misto, in cui coesistono un'ampia proprietà privata dei mezzi di produzione e un ruolo comunque significativo dello Stato nell'economia, ad esempio attraverso la regolamentazione dei mercati, la fornitura diretta di alcuni servizi pubblici essenziali, come sanità e istruzione, e politiche di redistribuzione del reddito attraverso il sistema fiscale e il sistema di welfare.</p>
+  <p>Anche Paesi come la Cina, pur mantenendo un forte controllo statale su settori strategici dell'economia e un sistema politico a partito unico, hanno introdotto negli ultimi decenni ampi spazi di proprietà privata e di mercato, dando vita a un modello economico peculiare, spesso definito dagli osservatori come "socialismo di mercato", che combina elementi tradizionalmente associati a sistemi economici diversi.</p>
+
+  <p class="titolo-capitolo">Un dibattito ancora aperto</p>
+  <p>Sul grado ottimale di intervento pubblico nell'economia, e sull'equilibrio più adeguato tra proprietà privata, mercato e proprietà o regolazione pubblica, esiste tuttora un ampio dibattito tra economisti, politici e cittadini di orientamenti diversi: alcuni sottolineano soprattutto i vantaggi dei mercati concorrenziali in termini di efficienza economica e capacità di innovazione, mentre altri evidenziano la necessità di un intervento pubblico più ampio per correggere le disuguaglianze e le imperfezioni che il solo mercato, secondo la loro valutazione, non è in grado di risolvere autonomamente, un confronto di idee che continua a influenzare, ancora oggi, le scelte economiche e politiche dei diversi Paesi del mondo.</p>
+</div>
+<!-- fine capitolo economia 28 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco00.html">Torna all'indice</a></p>
+  <p><a href="eco29.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>

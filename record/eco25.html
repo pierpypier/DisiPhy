@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Economia 25</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo economia */
+    .capitolo-storia{
+      background:#eafaf1;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e8f5e;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#173a2c;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#146c46;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile esempi numerici */
+    .capitolo-storia p.formula{
+      background:#dff5e8;
+      border:1px solid #b9e6cb;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0f5c39;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">ECONOMIA</div>
+        <div class="subtitle">Piccolo manuale di economia per le scuole superiori</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="eco00.html" title="economia indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r600.jpg" alt="r600" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- capitolo economia 25: l'unione europea e l'euro -->
+<div id="capitolo-25-unione-europea-euro" class="capitolo-storia">
+  <p class="titolo-capitolo">25 - L'Unione Europea e l'euro - Classe 4</p>
+
+  <p class="titolo-capitolo">Le origini dell'integrazione europea</p>
+  <p>Il processo di integrazione economica europea nasce nel secondo dopoguerra, con l'obiettivo di legare tra loro, in modo così stretto da rendere impensabile un nuovo conflitto, le economie dei Paesi europei usciti devastati dalla Seconda guerra mondiale: le prime forme di cooperazione riguardarono settori economici specifici, come il carbone e l'acciaio, e portarono progressivamente, nel corso dei decenni successivi, alla creazione di istituzioni comuni sempre più ampie e articolate.</p>
+  <p>Da queste prime esperienze si è sviluppata, attraverso una serie di trattati internazionali, l'attuale Unione Europea, un'organizzazione che riunisce oggi numerosi Paesi europei, i quali hanno scelto di condividere alcune importanti competenze economiche e politiche, pur mantenendo la propria sovranità nazionale in molti altri ambiti.</p>
+
+  <p class="titolo-capitolo">Il mercato unico europeo</p>
+  <p>Uno dei pilastri fondamentali dell'Unione Europea è il mercato unico, basato sulla libera circolazione di beni, servizi, capitali e persone tra i Paesi membri, un principio che ha portato all'eliminazione della gran parte delle barriere doganali e normative che in passato ostacolavano gli scambi economici tra i diversi Stati europei.</p>
+  <p>Grazie al mercato unico, un'impresa con sede in un Paese membro può, in linea di principio, vendere i propri prodotti in qualsiasi altro Paese dell'Unione senza dover affrontare dazi doganali o normative eccessivamente diverse da quelle del proprio Paese d'origine, mentre i cittadini europei possono spostarsi, studiare e lavorare con relativa facilità in un altro Stato membro, contribuendo a una progressiva integrazione delle economie e delle società europee.</p>
+
+  <p class="titolo-capitolo">La nascita dell'euro</p>
+  <p>Un ulteriore passo dell'integrazione economica europea è stata l'introduzione dell'euro, la moneta unica adottata da un gruppo di Paesi membri dell'Unione Europea, che formano quella che viene chiamata area euro o eurozona: l'euro è stato introdotto come moneta contabile alla fine degli anni Novanta del Novecento e ha sostituito le monete nazionali dei Paesi partecipanti a partire dai primi anni Duemila.</p>
+  <p>Adottare una moneta unica comporta, come già accennato in un capitolo precedente, l'eliminazione dei costi legati al cambio di valuta e delle incertezze legate alle oscillazioni dei tassi di cambio tra i Paesi partecipanti, ma comporta anche la rinuncia, da parte dei singoli Stati, alla possibilità di gestire in modo autonomo la propria politica monetaria e il proprio tasso di cambio, strumenti che in passato venivano talvolta utilizzati dai singoli Paesi per far fronte a specifiche difficoltà economiche nazionali.</p>
+
+  <p class="titolo-capitolo">I criteri di convergenza e la disciplina di bilancio</p>
+  <p>Per poter adottare l'euro, i Paesi membri dell'Unione Europea devono rispettare alcuni requisiti economici, chiamati criteri di convergenza, che riguardano, tra l'altro, il livello di inflazione, i tassi di interesse a lungo termine e la situazione dei conti pubblici, in particolare il rapporto tra debito pubblico e PIL e quello tra disavanzo pubblico e PIL, già introdotti nei capitoli precedenti.</p>
+  <p>Anche dopo l'adozione dell'euro, i Paesi membri dell'area euro sono tenuti a rispettare regole comuni di disciplina di bilancio, pensate per garantire la sostenibilità complessiva delle finanze pubbliche dell'intera area valutaria, poiché eventuali squilibri gravi nei conti pubblici di un singolo Paese membro potrebbero, secondo molti economisti, avere ripercussioni sull'intera area euro, data la forte interconnessione economica e finanziaria tra i Paesi che condividono la stessa moneta.</p>
+
+  <p class="titolo-capitolo">Vantaggi e sfide di una moneta unica</p>
+  <p>Sull'esperienza complessiva dell'euro, e sulla convenienza di aderire a una moneta unica condivisa con Paesi dalle economie non sempre omogenee tra loro, esiste un dibattito articolato tra economisti: alcuni sottolineano i vantaggi ottenuti in termini di stabilità dei prezzi, integrazione dei mercati finanziari e semplificazione degli scambi commerciali all'interno dell'area euro, mentre altri evidenziano le difficoltà che possono derivare, per singoli Paesi membri, dall'impossibilità di utilizzare autonomamente la politica monetaria o la svalutazione della propria moneta per rispondere a difficoltà economiche specificamente nazionali, un tema che è emerso con particolare evidenza durante alcune crisi economiche attraversate dall'area euro nel corso della sua storia.</p>
+</div>
+<!-- fine capitolo economia 25 -->
+
+<div id="indice-economia-nav" class="capitolo-storia">
+  <p><a href="eco00.html">Torna all'indice</a></p>
+  <p><a href="eco26.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di economia
+    </footer>
+
+  </div>
+</body>
+  </html>
