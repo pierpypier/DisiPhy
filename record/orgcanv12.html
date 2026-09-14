@@ -737,12 +737,12 @@
       <button id="btnMenu" class="btn secondary menu-btn" title="Menù">☰</button>
       <div id="menuDropdown" class="menu-dropdown hidden">
         <button id="btnprevious" class="menu-item" title="Torna alla Dashboard">⬅️ <span>Dashboard</span></button>
-
+  <div class="toolbar-row">
     <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
     <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
     <div class="color-dot color-red" data-color="#dc2626" title="Rosso"></div>
     <div class="color-dot color-white" data-color="#ffffff" title="Bianco"></div>
-    
+  </div>
     
       <input type="range" id="thickness" min="1" max="5" step="1" value="2">
       <span class="val" id="thicknessVal">2</span>
@@ -756,7 +756,7 @@
         <button id="btnExport" class="menu-item" title="Esporta forme, ancore e testi in un file">💾 <span>Salva dati disegno</span></button>
         <button id="btnImport" class="menu-item" title="Importa forme, ancore e testi da un file">📂 <span>Carica dati disegno</span></button>
         <button id="btnPrint" class="menu-item" title="Stampa">🖨️ <span>Stampa</span></button>
-        <button id="btnClear" class="menu-item menu-item-danger" title="Cancella tutto">🗑️ <span>Svuota tutto</span></button>
+        
          <button id="btnMeasure" class="btn secondary" title="Misura: tocca 2 punti (anche punti di ancoraggio) per ottenere la distanza in mm">📐</button>
     <button id="btnSelect" class="btn secondary" title="Seleziona / Sposta / Modifica forma">👆</button>
            <button id="btnLine" class="btn secondary" title="Riga">\</button>
@@ -776,15 +776,16 @@
     <button id="btnDraw" class="btn secondary" title="Matita">✏️</button>
     <button id="btnErase" class="btn secondary" title="Gomma">🧽</button>
     <button id="btnNone" class="btn active" title="Sposta / zoom">✋</button>
+    <button id="btnClear" class="menu-item menu-item-danger" title="Cancella tutto">🗑️ <span>Svuota tutto</span></button>
   </div>
   
   <!-- RIGA 2: Forme, Opzioni Tratto, Sfondi e Righelli -->
-  <div class="toolbar-row">
 
 
 
 
-    </div>
+
+
 
 
     <input type="file" id="bgFileInput" accept="image/*" style="display:none">
