@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Documenti Viaggio</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  :root{
+    --bg:#f6f8fb; --card:#ffffff; --accent:#1e88e5; --muted:#6b7280;
+    --danger:#E3DCC9; --shadow:0 6px 18px rgba(20,30,50,0.06); --radius:12px; --max-width:1080px;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px; display:flex; justify-content:center; color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  .nav { display: flex; justify-content: center; gap: 10px; padding: 5px 0; margin-bottom: 10px; flex-wrap: wrap; }
+  .nav-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #000; font-size: 14px; transition: opacity 0.2s ease; }
+  .nav-item img { width: 84px; height: 84px; margin-bottom: 1px; transition: transform 0.2s ease; }
+  .nav-item:hover img { transform: scale(1.05); }
+  .nav-item:hover { opacity: 0.85; }
+  @media (max-width: 600px) { .nav { gap: 10px; } .nav-item img { width: 60px; height: 60px; } .nav-item span { font-size: 12px; } }
+
+  .card{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; margin-bottom:18px; }
+  .section-title{ font-size:18px; font-weight:800; color:var(--accent); margin:0 0 12px 0; }
+  .hint{ font-size:12px; color:var(--muted); margin-top:-6px; margin-bottom:12px; }
+  .empty-note{ background:#fff8e6; border:1px solid #f0dfa8; border-radius:10px; padding:12px 14px; font-size:13px; color:#7a5c00; margin-bottom:16px; }
+
+  .travel-nav-divider{ border:none; border-top:1px solid #e6e9ef; margin:24px 0 14px 0; }
+  .travel-nav{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+  .travel-nav-item{ display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none; color:#374151; font-size:11px; font-weight:700; }
+  .travel-nav-item .icon{ width:46px; height:46px; border-radius:50%; background:#eef2f7; display:flex; align-items:center; justify-content:center; font-size:20px; transition:transform 0.15s ease, background 0.15s ease; }
+  .travel-nav-item:hover .icon{ transform:scale(1.06); }
+  .travel-nav-item.active .icon{ background:var(--accent); }
+  .travel-nav-item.active span.lbl{ color:var(--accent); }
+
+  .btn{ border:none; border-radius:8px; padding:7px 12px; font-weight:700; font-size:13px; cursor:pointer; }
+  .btn-danger{ background:var(--danger); color:#7a3b1f; }
+  .btn-add{ background:#eaf6ec; color:#2f7a3d; }
+  .btn-small{ padding:4px 9px; font-size:12px; }
+
+  .viaggiatore-card{ background:#fbfcfe; border:1px solid #e3e8f0; border-radius:var(--radius); padding:14px; margin-bottom:16px; box-shadow:var(--shadow); }
+  .viaggiatore-head{ display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; }
+  .viaggiatore-title-input{ flex:1; font-size:17px; font-weight:800; color:#0f172a; border:none; border-bottom:2px solid transparent; background:transparent; padding:2px 0; }
+  .viaggiatore-title-input:focus{ border-bottom-color:var(--accent); outline:none; }
+
+  .doc-row{ display:flex; align-items:center; gap:8px; background:#f7f9fc; border:1px solid #e6e9ef; border-radius:8px; padding:7px 10px; margin-bottom:6px; }
+  .doc-row input[type=text]{ flex:1; padding:5px 7px; border-radius:6px; border:1px solid #e6e9ef; font-size:13px; font-family:inherit; }
+  .doc-row.pronto input[type=text]{ text-decoration:line-through; color:var(--muted); }
+
+  .add-wrap{ text-align:center; margin-top:8px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item"><img src="rimage/orga4.png" alt="Organizer"><span> NOTE </span></a>
+    <a href="caldsp.html" class="nav-item"><img src="rimage/calicon.png" alt="Calendario dsp"><span> DATE </span></a>
+    <a href="check01.html" class="nav-item"><img src="rimage/check02.png" alt="Checklist"><span>LISTE</span></a>
+    <a href="strweb.html" class="nav-item"><img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84"><span> WEB </span></a>
+    <a href="dashconsolle.html" class="nav-item"><img src="rimage/opzioni.png" alt="Opzioni"><span> ADD </span></a>
+  </nav>
+
+  <div class="card">
+    <div class="section-title">📄 Documenti di viaggio</div>
+    <div class="hint">Un elenco documenti per ogni viaggiatore: passaporto, biglietti, patente, carta d'identità...</div>
+
+    <div id="emptyNote" class="empty-note" style="display:none;">Nessun viaggiatore ancora inserito. Usa "Aggiungi viaggiatore" per iniziare.</div>
+    <div id="viaggiatoriContainer"></div>
+    <div class="add-wrap">
+      <button class="btn btn-add" id="btnAddViaggiatore">➕ Aggiungi viaggiatore</button>
+    </div>
+  </div>
+
+  <hr class="travel-nav-divider">
+  <nav class="travel-nav">
+    <a href="travel.html" class="travel-nav-item"><div class="icon">✈️</div><span class="lbl">Viaggio</span></a>
+    <a href="travel-valigie.html" class="travel-nav-item"><div class="icon">🧳</div><span class="lbl">Valigie</span></a>
+    <a href="travel-documenti.html" class="travel-nav-item active"><div class="icon">📄</div><span class="lbl">Documenti</span></a>
+  </nav>
+
+</div>
+
+<script>
+const LS_DOCUMENTI = 'travel_documenti';
+
+function leggiArray(key){
+  try{ const raw = localStorage.getItem(key); const p = raw ? JSON.parse(raw) : []; return Array.isArray(p) ? p : []; }
+  catch(e){ return []; }
+}
+function salva(key, val){ localStorage.setItem(key, JSON.stringify(val)); }
+function escapeHtml(s){
+  if(s === null || s === undefined) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function nuovoId(prefix){ return prefix + '_' + Date.now() + '_' + Math.floor(Math.random()*10000); }
+
+let viaggiatori = leggiArray(LS_DOCUMENTI);
+
+function nuovoViaggiatore(){
+  return { id: nuovoId('viag'), nome: 'Nuovo viaggiatore', documenti: [] };
+}
+function trovaViaggiatore(id){ return viaggiatori.find(v => v.id === id); }
+
+function aggiungiViaggiatore(){
+  viaggiatori.push(nuovoViaggiatore());
+  salva(LS_DOCUMENTI, viaggiatori);
+  render();
+}
+function eliminaViaggiatore(id){
+  if(!confirm('Eliminare questo viaggiatore e tutti i suoi documenti?')) return;
+  viaggiatori = viaggiatori.filter(v => v.id !== id);
+  salva(LS_DOCUMENTI, viaggiatori);
+  render();
+}
+function aggiungiDocumento(viagId){
+  trovaViaggiatore(viagId).documenti.push({id: nuovoId('doc'), testo:'', pronto:false});
+  salva(LS_DOCUMENTI, viaggiatori);
+  render();
+}
+function eliminaDocumento(viagId, docId){
+  const v = trovaViaggiatore(viagId);
+  v.documenti = v.documenti.filter(d => d.id !== docId);
+  salva(LS_DOCUMENTI, viaggiatori);
+  render();
+}
+
+function render(){
+  const container = document.getElementById('viaggiatoriContainer');
+  document.getElementById('emptyNote').style.display = viaggiatori.length === 0 ? 'block' : 'none';
+  container.innerHTML = viaggiatori.map(v => `
+    <div class="viaggiatore-card">
+      <div class="viaggiatore-head">
+        <input type="text" class="viaggiatore-title-input" value="${escapeHtml(v.nome)}" data-action="edit-viag-nome" data-viag="${v.id}">
+        <button class="btn btn-danger btn-small" data-action="del-viag" data-viag="${v.id}">🗑️ Elimina</button>
+      </div>
+      ${v.documenti.map(doc => `
+        <div class="doc-row ${doc.pronto?'pronto':''}">
+          <input type="checkbox" ${doc.pronto?'checked':''} data-action="toggle-doc" data-viag="${v.id}" data-doc="${doc.id}">
+          <input type="text" placeholder="Es. Passaporto, Biglietto aereo, Patente..." value="${escapeHtml(doc.testo)}" data-action="edit-doc" data-viag="${v.id}" data-doc="${doc.id}">
+          <button class="btn btn-danger btn-small" data-action="del-doc" data-viag="${v.id}" data-doc="${doc.id}">🗑️</button>
+        </div>
+      `).join('')}
+      <div class="add-wrap" style="margin-top:10px;">
+        <button class="btn btn-add btn-small" data-action="add-doc" data-viag="${v.id}">➕ Aggiungi documento</button>
+      </div>
+    </div>
+  `).join('');
+
+  attachListeners();
+}
+
+function attachListeners(){
+  const c = document.getElementById('viaggiatoriContainer');
+  c.querySelectorAll('[data-action="del-viag"]').forEach(b => b.addEventListener('click', () => eliminaViaggiatore(b.dataset.viag)));
+  c.querySelectorAll('[data-action="edit-viag-nome"]').forEach(el => el.addEventListener('input', () => {
+    trovaViaggiatore(el.dataset.viag).nome = el.value; salva(LS_DOCUMENTI, viaggiatori);
+  }));
+  c.querySelectorAll('[data-action="add-doc"]').forEach(b => b.addEventListener('click', () => aggiungiDocumento(b.dataset.viag)));
+  c.querySelectorAll('[data-action="del-doc"]').forEach(b => b.addEventListener('click', () => eliminaDocumento(b.dataset.viag, b.dataset.doc)));
+  c.querySelectorAll('[data-action="toggle-doc"]').forEach(el => el.addEventListener('click', () => {
+    const v = trovaViaggiatore(el.dataset.viag);
+    v.documenti.find(d => d.id === el.dataset.doc).pronto = el.checked;
+    salva(LS_DOCUMENTI, viaggiatori); render();
+  }));
+  c.querySelectorAll('[data-action="edit-doc"]').forEach(el => el.addEventListener('input', () => {
+    const v = trovaViaggiatore(el.dataset.viag);
+    v.documenti.find(d => d.id === el.dataset.doc).testo = el.value;
+    salva(LS_DOCUMENTI, viaggiatori);
+  }));
+}
+
+document.getElementById('btnAddViaggiatore').addEventListener('click', aggiungiViaggiatore);
+window.addEventListener('DOMContentLoaded', render);
+</script>
+</body>
+</html>

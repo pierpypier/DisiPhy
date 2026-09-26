@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Viaggio</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  :root{
+    --bg:#f6f8fb;
+    --card:#ffffff;
+    --accent:#1e88e5;
+    --cal-accent:#2b6cb0;
+    --muted:#6b7280;
+    --success:#C3D2BF;
+    --danger:#E3DCC9;
+    --shadow:0 6px 18px rgba(20,30,50,0.06);
+    --radius:12px;
+    --max-width:1080px;
+    --ok:#2f7a3d;
+    --warn:#b8442c;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  /* Nav superiore — identica al resto della suite */
+  .nav {
+    display: flex; justify-content: center; gap: 10px;
+    padding: 5px 0; margin-bottom: 10px; flex-wrap: wrap;
+  }
+  .nav-item {
+    display: flex; flex-direction: column; align-items: center;
+    text-decoration: none; color: #000; font-size: 14px; transition: opacity 0.2s ease;
+  }
+  .nav-item img { width: 84px; height: 84px; margin-bottom: 1px; transition: transform 0.2s ease; }
+  .nav-item:hover img { transform: scale(1.05); }
+  .nav-item:hover { opacity: 0.85; }
+  @media (max-width: 600px) {
+    .nav { gap: 10px; }
+    .nav-item img { width: 60px; height: 60px; }
+    .nav-item span { font-size: 12px; }
+  }
+
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:16px;
+    margin-bottom:18px;
+  }
+  .section-title{ font-size:18px; font-weight:800; color:var(--accent); margin:0 0 12px 0; }
+  .hint{ font-size:12px; color:var(--muted); margin-top:-6px; margin-bottom:12px; }
+
+  /* Tabs principali */
+  .tabs{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+  .tab-btn{ background:#eef2f7; border:none; border-radius:999px; padding:8px 16px; font-weight:700; font-size:13px; color:#374151; cursor:pointer; }
+  .tab-btn.active{ background:var(--accent); color:#fff; }
+  .tab-panel{ display:none; }
+  .tab-panel.active{ display:block; }
+
+  /* Nav secondaria inferiore (tra i 3 file travel) */
+  .travel-nav-divider{ border:none; border-top:1px solid #e6e9ef; margin:24px 0 14px 0; }
+  .travel-nav{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+  .travel-nav-item{ display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none; color:#374151; font-size:11px; font-weight:700; }
+  .travel-nav-item .icon{
+    width:46px; height:46px; border-radius:50%; background:#eef2f7;
+    display:flex; align-items:center; justify-content:center; font-size:20px;
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .travel-nav-item:hover .icon{ transform:scale(1.06); }
+  .travel-nav-item.active .icon{ background:var(--accent); }
+  .travel-nav-item.active span.lbl{ color:var(--accent); }
+
+  /* Form generico */
+  .field-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:12px; margin-bottom:12px; }
+  .field label{ display:block; font-weight:700; color:var(--muted); font-size:12px; margin-bottom:5px; }
+  .field input, .field select{
+    width:100%; padding:9px 11px; border-radius:8px;
+    border:1px solid #e6e9ef; font-size:14px; font-family:inherit;
+  }
+  .field-check{ display:flex; align-items:center; gap:8px; margin-top:6px; }
+  .field-check label{ font-weight:700; color:var(--muted); font-size:13px; margin:0; }
+
+  /* Hero box totali */
+  .hero-box{
+    background:linear-gradient(135deg,#e6f0ff 0%,#ffffff 100%);
+    border-radius:14px; padding:20px; text-align:center; margin-bottom:20px;
+  }
+  .hero-box .hero-label{ font-size:13px; font-weight:700; color:var(--muted); margin-bottom:6px; }
+  .hero-box .hero-value{ font-size:34px; font-weight:800; color:var(--accent); }
+
+  .saldi-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:10px; margin-bottom:8px; }
+  .saldo-box{ background:#f7f9fc; border:1px solid #e6e9ef; border-radius:10px; padding:14px; }
+  .saldo-box .saldo-label{ font-size:12px; color:var(--muted); font-weight:700; margin-bottom:4px; }
+  .saldo-box .saldo-value{ font-size:20px; font-weight:800; color:#111827; }
+
+  .empty-note{
+    background:#fff8e6; border:1px solid #f0dfa8; border-radius:10px;
+    padding:12px 14px; font-size:13px; color:#7a5c00; margin-bottom:16px;
+  }
+
+  /* Card destinazione */
+  .dest-card{
+    background:#fbfcfe; border:1px solid #e3e8f0; border-radius:var(--radius);
+    padding:14px; margin-bottom:16px; box-shadow:var(--shadow);
+  }
+  .dest-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
+  .dest-head-left{ flex:1; min-width:220px; }
+  .dest-title-input{
+    width:100%; font-size:17px; font-weight:800; color:#0f172a;
+    border:none; border-bottom:2px solid transparent; background:transparent;
+    padding:2px 0; margin-bottom:6px;
+  }
+  .dest-title-input:focus{ border-bottom-color:var(--accent); outline:none; }
+  .dest-dates{ display:flex; gap:10px; flex-wrap:wrap; font-size:12px; color:var(--muted); }
+  .dest-dates .field{ min-width:140px; }
+  .btn{
+    border:none; border-radius:8px; padding:7px 12px; font-weight:700; font-size:13px; cursor:pointer;
+  }
+  .btn-danger{ background:var(--danger); color:#7a3b1f; }
+  .btn-primary{ background:var(--accent); color:#fff; }
+  .btn-add{ background:#eaf6ec; color:#2f7a3d; }
+  .btn-small{ padding:4px 9px; font-size:12px; }
+
+  .ritorno-flag{ display:flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:var(--warn); margin-bottom:8px; }
+
+  /* Accordion dentro card destinazione */
+  .accordion{ border-top:1px solid #e6e9ef; }
+  .accordion-head{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:10px 4px; cursor:pointer; font-weight:700; font-size:14px; color:#1f2a3d;
+  }
+  .accordion-head .chev{ transition:transform 0.2s ease; color:var(--muted); }
+  .accordion.open .accordion-head .chev{ transform:rotate(90deg); }
+  .accordion-body{ display:none; padding:4px 4px 14px 4px; }
+  .accordion.open .accordion-body{ display:block; }
+
+  /* Righe liste dinamiche (luoghi, shopping, pasti) */
+  .row-list{ display:flex; flex-direction:column; gap:8px; margin-bottom:10px; }
+  .row-item{
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+    background:#f7f9fc; border:1px solid #e6e9ef; border-radius:8px; padding:8px 10px;
+  }
+  .row-item input[type=text], .row-item input[type=number], .row-item input[type=date], .row-item input[type=time], .row-item select{
+    padding:6px 8px; border-radius:6px; border:1px solid #e6e9ef; font-size:13px; font-family:inherit;
+  }
+  .row-item .flex1{ flex:1; min-width:110px; }
+  .row-item.completato{ opacity:0.55; }
+  .row-item.completato input[type=text]{ text-decoration:line-through; }
+
+  .meal-row{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; background:#f7f9fc; border:1px solid #e6e9ef; border-radius:8px; padding:8px 10px; margin-bottom:6px; }
+  .meal-row .meal-date{ font-weight:700; font-size:13px; min-width:100px; }
+  .meal-chip{ display:flex; align-items:center; gap:5px; font-size:12px; color:var(--muted); }
+  .meal-total{ margin-left:auto; font-weight:800; color:var(--accent); font-size:13px; }
+
+  .reminder-day{ margin-bottom:14px; }
+  .reminder-day-title{ font-weight:800; color:var(--cal-accent); font-size:14px; margin-bottom:6px; border-bottom:1px solid #e6e9ef; padding-bottom:4px; }
+  .reminder-item{ font-size:13px; color:#334155; padding:4px 0 4px 8px; border-left:3px solid var(--accent); margin-bottom:4px; background:#f7f9fc; border-radius:0 6px 6px 0; }
+
+  .add-dest-wrap{ text-align:center; margin-top:6px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- NAV SUPERIORE — identica al resto della suite -->
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item">
+      <img src="rimage/orga4.png" alt="Organizer">
+      <span> NOTE </span>
+    </a>
+    <a href="caldsp.html" class="nav-item">
+      <img src="rimage/calicon.png" alt="Calendario dsp">
+      <span> DATE </span>
+    </a>
+    <a href="check01.html" class="nav-item">
+      <img src="rimage/check02.png" alt="Checklist">
+      <span>LISTE</span>
+    </a>
+    <a href="strweb.html" class="nav-item">
+      <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+      <span> WEB </span>
+    </a>
+    <a href="dashconsolle.html" class="nav-item">
+      <img src="rimage/opzioni.png" alt="Opzioni">
+      <span> ADD </span>
+    </a>
+  </nav>
+
+  <div class="card">
+    <div class="section-title">✈️ Pianificazione Viaggio</div>
+    <div class="hint">Tutto parte dalla data di partenza e termina con il rientro a casa. I dati si salvano automaticamente.</div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tabGenerale">Generale</button>
+      <button class="tab-btn" data-tab="tabTratta">Tratta partenza</button>
+      <button class="tab-btn" data-tab="tabDest">Destinazioni</button>
+      <button class="tab-btn" data-tab="tabRiepilogo">Riepilogo costi</button>
+      <button class="tab-btn" data-tab="tabReminder">Reminder</button>
+    </div>
+
+    <!-- ============ TAB GENERALE ============ -->
+    <div class="tab-panel active" id="tabGenerale">
+      <div class="field-grid">
+        <div class="field"><label>Data partenza viaggio</label><input type="date" id="genDataPartenza"></div>
+        <div class="field"><label>Ora partenza</label><input type="time" id="genOraPartenza"></div>
+        <div class="field"><label>Data rientro a casa</label><input type="date" id="genDataRientro"></div>
+        <div class="field"><label>Ora rientro</label><input type="time" id="genOraRientro"></div>
+      </div>
+      <div class="saldi-grid" style="margin-bottom:16px;">
+        <div class="saldo-box"><div class="saldo-label">Giorni totali</div><div class="saldo-value" id="genGiorniTotali">—</div></div>
+        <div class="saldo-box"><div class="saldo-label">Notti totali</div><div class="saldo-value" id="genNottiTotali">—</div></div>
+      </div>
+      <div class="field-grid">
+        <div class="field"><label>Adulti</label><input type="number" id="genAdulti" min="0" value="1"></div>
+        <div class="field"><label>Bambini</label><input type="number" id="genBambini" min="0" value="0"></div>
+        <div class="field"><label>Budget colazione (€/persona)</label><input type="number" id="genBudgetColazione" min="0" step="0.5" value="5"></div>
+        <div class="field"><label>Budget pranzo (€/persona)</label><input type="number" id="genBudgetPranzo" min="0" step="0.5" value="15"></div>
+        <div class="field"><label>Budget cena (€/persona)</label><input type="number" id="genBudgetCena" min="0" step="0.5" value="20"></div>
+      </div>
+      <div class="hint">I budget pasto si applicano automaticamente al calcolo dei pasti fuori casa in ogni destinazione.</div>
+    </div>
+
+    <!-- ============ TAB TRATTA PARTENZA ============ -->
+    <div class="tab-panel" id="tabTratta">
+      <div class="field-grid">
+        <div class="field"><label>Mezzo</label>
+          <select id="trattaMezzo">
+            <option value="aereo">✈️ Aereo</option>
+            <option value="nave">🚢 Nave</option>
+            <option value="treno">🚆 Treno</option>
+            <option value="bus">🚌 Bus</option>
+            <option value="auto">🚗 Auto</option>
+          </select>
+        </div>
+        <div class="field"><label>Costo (€)</label><input type="number" id="trattaCosto" min="0" step="0.01" value="0"></div>
+        <div class="field"><label>Tipo biglietto</label>
+          <select id="trattaAndataRitorno">
+            <option value="solo-andata">Solo andata</option>
+            <option value="andata-ritorno">Andata e ritorno</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-grid">
+        <div class="field"><label>Data partenza</label><input type="date" id="trattaDataPartenza"></div>
+        <div class="field"><label>Ora partenza</label><input type="time" id="trattaOraPartenza"></div>
+        <div class="field"><label>Data arrivo a destinazione</label><input type="date" id="trattaDataArrivo"></div>
+        <div class="field"><label>Ora arrivo</label><input type="time" id="trattaOraArrivo"></div>
+      </div>
+      <div class="saldi-grid">
+        <div class="saldo-box"><div class="saldo-label">Durata tragitto</div><div class="saldo-value" id="trattaDurata">—</div></div>
+      </div>
+    </div>
+
+    <!-- ============ TAB DESTINAZIONI ============ -->
+    <div class="tab-panel" id="tabDest">
+      <div id="emptyDestNote" class="empty-note" style="display:none;">Nessuna destinazione ancora inserita. Usa "Aggiungi destinazione" qui sotto per iniziare.</div>
+      <div id="destContainer"></div>
+      <div class="add-dest-wrap">
+        <button class="btn btn-add" id="btnAddDest">➕ Aggiungi destinazione</button>
+      </div>
+    </div>
+
+    <!-- ============ TAB RIEPILOGO ============ -->
+    <div class="tab-panel" id="tabRiepilogo">
+      <div class="hero-box">
+        <div class="hero-label">Totale generale del viaggio</div>
+        <div class="hero-value" id="riepTotaleGenerale">0,00 €</div>
+      </div>
+      <div class="saldi-grid">
+        <div class="saldo-box"><div class="saldo-label">🍽️ Pasti</div><div class="saldo-value" id="riepPasti">—</div></div>
+        <div class="saldo-box"><div class="saldo-label">🚗 Trasporti</div><div class="saldo-value" id="riepTrasporti">—</div></div>
+        <div class="saldo-box"><div class="saldo-label">🏨 Alloggi</div><div class="saldo-value" id="riepAlloggi">—</div></div>
+        <div class="saldo-box"><div class="saldo-label">🛍️ Shopping</div><div class="saldo-value" id="riepShopping">—</div></div>
+        <div class="saldo-box"><div class="saldo-label">📍 Biglietti attività</div><div class="saldo-value" id="riepAttivita">—</div></div>
+      </div>
+    </div>
+
+    <!-- ============ TAB REMINDER ============ -->
+    <div class="tab-panel" id="tabReminder">
+      <div id="emptyReminderNote" class="empty-note" style="display:none;">Nessun evento ancora programmato.</div>
+      <div id="reminderContainer"></div>
+    </div>
+
+  </div>
+
+  <!-- NAV SECONDARIA — moduli viaggio -->
+  <hr class="travel-nav-divider">
+  <nav class="travel-nav">
+    <a href="travel.html" class="travel-nav-item active">
+      <div class="icon">✈️</div>
+      <span class="lbl">Viaggio</span>
+    </a>
+    <a href="travel-valigie.html" class="travel-nav-item">
+      <div class="icon">🧳</div>
+      <span class="lbl">Valigie</span>
+    </a>
+    <a href="travel-documenti.html" class="travel-nav-item">
+      <div class="icon">📄</div>
+      <span class="lbl">Documenti</span>
+    </a>
+  </nav>
+
+</div>
+
+<script>
+/* ================================================================
+   CHIAVI LOCALSTORAGE
+   ================================================================ */
+const LS_GENERALE = 'travel_generale';
+const LS_TRATTA   = 'travel_trattaPartenza';
+const LS_DEST     = 'travel_destinazioni';
+
+/* ================================================================
+   HELPER
+   ================================================================ */
+function leggiOggetto(key, fallback){
+  try{
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  }catch(e){ console.warn('Errore lettura '+key, e); return fallback; }
+}
+function leggiArray(key){
+  try{
+    const raw = localStorage.getItem(key);
+    const parsed = raw ? JSON.parse(raw) : [];
+    return Array.isArray(parsed) ? parsed : [];
+  }catch(e){ return []; }
+}
+function salva(key, val){ localStorage.setItem(key, JSON.stringify(val)); }
+function eur(n){
+  if(typeof n !== 'number' || isNaN(n)) n = 0;
+  return n.toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' €';
+}
+function escapeHtml(s){
+  if(s === null || s === undefined) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function nuovoId(prefix){ return prefix + '_' + Date.now() + '_' + Math.floor(Math.random()*10000); }
+
+function dataOra(d, t){
+  if(!d) return null;
+  return new Date(d + 'T' + (t || '00:00') + ':00');
+}
+function diffGiorni(d1, d2){
+  if(!d1 || !d2) return null;
+  const a = new Date(d1 + 'T00:00:00');
+  const b = new Date(d2 + 'T00:00:00');
+  return Math.round((b - a) / 86400000);
+}
+function formattaDurata(ms){
+  if(ms === null || isNaN(ms) || ms < 0) return '—';
+  const tot = Math.round(ms / 60000);
+  const giorni = Math.floor(tot / 1440);
+  const ore = Math.floor((tot % 1440) / 60);
+  const minuti = tot % 60;
+  let parti = [];
+  if(giorni > 0) parti.push(giorni + 'g');
+  if(ore > 0) parti.push(ore + 'h');
+  if(minuti > 0 || parti.length === 0) parti.push(minuti + 'min');
+  return parti.join(' ');
+}
+function elencoDate(dataInizio, dataFine){
+  const out = [];
+  if(!dataInizio || !dataFine) return out;
+  let cur = new Date(dataInizio + 'T00:00:00');
+  const fine = new Date(dataFine + 'T00:00:00');
+  if(cur > fine) return out;
+  while(cur <= fine){
+    out.push(cur.toISOString().slice(0,10));
+    cur.setDate(cur.getDate() + 1);
+  }
+  return out;
+}
+function formattaDataIt(iso){
+  if(!iso) return '';
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString('it-IT', {weekday:'short', day:'2-digit', month:'short'});
+}
+
+/* ================================================================
+   STATO
+   ================================================================ */
+let generale = leggiOggetto(LS_GENERALE, {
+  dataPartenza:'', oraPartenza:'', dataRientro:'', oraRientro:'',
+  adulti:1, bambini:0, budgetColazione:5, budgetPranzo:15, budgetCena:20
+});
+let tratta = leggiOggetto(LS_TRATTA, {
+  mezzo:'aereo', costo:0, andataRitorno:'solo-andata',
+  dataPartenza:'', oraPartenza:'', dataArrivo:'', oraArrivo:''
+});
+let destinazioni = leggiArray(LS_DEST);
+
+/* ================================================================
+   TAB GENERALE
+   ================================================================ */
+function initGenerale(){
+  document.getElementById('genDataPartenza').value = generale.dataPartenza || '';
+  document.getElementById('genOraPartenza').value = generale.oraPartenza || '';
+  document.getElementById('genDataRientro').value = generale.dataRientro || '';
+  document.getElementById('genOraRientro').value = generale.oraRientro || '';
+  document.getElementById('genAdulti').value = generale.adulti;
+  document.getElementById('genBambini').value = generale.bambini;
+  document.getElementById('genBudgetColazione').value = generale.budgetColazione;
+  document.getElementById('genBudgetPranzo').value = generale.budgetPranzo;
+  document.getElementById('genBudgetCena').value = generale.budgetCena;
+
+  ['genDataPartenza','genOraPartenza','genDataRientro','genOraRientro','genAdulti','genBambini','genBudgetColazione','genBudgetPranzo','genBudgetCena'].forEach(id => {
+    document.getElementById(id).addEventListener('input', salvaGenerale);
+  });
+  renderGenerale();
+}
+function salvaGenerale(){
+  generale = {
+    dataPartenza: document.getElementById('genDataPartenza').value,
+    oraPartenza: document.getElementById('genOraPartenza').value,
+    dataRientro: document.getElementById('genDataRientro').value,
+    oraRientro: document.getElementById('genOraRientro').value,
+    adulti: parseInt(document.getElementById('genAdulti').value,10) || 0,
+    bambini: parseInt(document.getElementById('genBambini').value,10) || 0,
+    budgetColazione: parseFloat(document.getElementById('genBudgetColazione').value) || 0,
+    budgetPranzo: parseFloat(document.getElementById('genBudgetPranzo').value) || 0,
+    budgetCena: parseFloat(document.getElementById('genBudgetCena').value) || 0
+  };
+  salva(LS_GENERALE, generale);
+  renderGenerale();
+  ricalcolaTuttiPastiEsistenti();
+  renderDestinazioni();
+  renderRiepilogo();
+}
+function renderGenerale(){
+  const giorni = diffGiorni(generale.dataPartenza, generale.dataRientro);
+  document.getElementById('genGiorniTotali').textContent = (giorni !== null && giorni >= 0) ? (giorni + 1) : '—';
+  document.getElementById('genNottiTotali').textContent = (giorni !== null && giorni >= 0) ? giorni : '—';
+}
+function totalePersone(){ return (generale.adulti || 0) + (generale.bambini || 0); }
+
+/* ================================================================
+   TAB TRATTA DI PARTENZA
+   ================================================================ */
+function initTratta(){
+  document.getElementById('trattaMezzo').value = tratta.mezzo || 'aereo';
+  document.getElementById('trattaCosto').value = tratta.costo || 0;
+  document.getElementById('trattaAndataRitorno').value = tratta.andataRitorno || 'solo-andata';
+  document.getElementById('trattaDataPartenza').value = tratta.dataPartenza || '';
+  document.getElementById('trattaOraPartenza').value = tratta.oraPartenza || '';
+  document.getElementById('trattaDataArrivo').value = tratta.dataArrivo || '';
+  document.getElementById('trattaOraArrivo').value = tratta.oraArrivo || '';
+
+  ['trattaMezzo','trattaCosto','trattaAndataRitorno','trattaDataPartenza','trattaOraPartenza','trattaDataArrivo','trattaOraArrivo'].forEach(id => {
+    document.getElementById(id).addEventListener('input', salvaTratta);
+  });
+  renderTratta();
+}
+function salvaTratta(){
+  tratta = {
+    mezzo: document.getElementById('trattaMezzo').value,
+    costo: parseFloat(document.getElementById('trattaCosto').value) || 0,
+    andataRitorno: document.getElementById('trattaAndataRitorno').value,
+    dataPartenza: document.getElementById('trattaDataPartenza').value,
+    oraPartenza: document.getElementById('trattaOraPartenza').value,
+    dataArrivo: document.getElementById('trattaDataArrivo').value,
+    oraArrivo: document.getElementById('trattaOraArrivo').value
+  };
+  salva(LS_TRATTA, tratta);
+  renderTratta();
+  renderRiepilogo();
+  renderReminder();
+}
+function renderTratta(){
+  const p = dataOra(tratta.dataPartenza, tratta.oraPartenza);
+  const a = dataOra(tratta.dataArrivo, tratta.oraArrivo);
+  document.getElementById('trattaDurata').textContent = (p && a) ? formattaDurata(a - p) : '—';
+}
+
+/* ================================================================
+   DESTINAZIONI — logica pasti automatica
+   ================================================================ */
+function calcolaDefaultPasto(dataIso, dest){
+  // Default automatico in base a checkin/checkout e orari
+  const isCheckin = dataIso === dest.checkinData;
+  const isCheckout = dataIso === dest.checkoutData;
+  let colazione = true, pranzo = true, cena = true;
+
+  if(isCheckin && !isCheckout){
+    colazione = false; // si presume colazione fatta altrove/in viaggio
+    const oraArr = dest.checkinOra || '14:00';
+    pranzo = oraArr <= '14:00';
+    cena = oraArr <= '20:00';
+  }
+  if(isCheckout && !isCheckin){
+    const oraPart = dest.checkoutOra || '10:00';
+    pranzo = oraPart > '14:00';
+    cena = false;
+  }
+  if(isCheckin && isCheckout){
+    // stessa data: soggiorno lampo, valuta entrambi gli orari
+    const oraArr = dest.checkinOra || '14:00';
+    const oraPart = dest.checkoutOra || '20:00';
+    colazione = oraArr <= '09:00';
+    pranzo = oraArr <= '14:00' && oraPart >= '13:00';
+    cena = oraPart >= '20:00';
+  }
+  return {colazione, pranzo, cena};
+}
+function ricalcolaPastiDestinazione(dest){
+  if(dest.ritorno) { dest.pasti = {}; return; }
+  const date = elencoDate(dest.checkinData, dest.checkoutData);
+  const nuovi = {};
+  date.forEach(iso => {
+    if(dest.pasti && dest.pasti[iso]){
+      nuovi[iso] = dest.pasti[iso]; // mantiene le modifiche manuali già fatte
+    } else {
+      nuovi[iso] = calcolaDefaultPasto(iso, dest);
+    }
+  });
+  dest.pasti = nuovi;
+}
+function ricalcolaTuttiPastiEsistenti(){
+  destinazioni.forEach(d => ricalcolaPastiDestinazione(d));
+  salva(LS_DEST, destinazioni);
+}
+function costoPastiGiorno(pastiGiorno){
+  const persone = totalePersone();
+  let tot = 0;
+  if(pastiGiorno.colazione) tot += (generale.budgetColazione || 0) * persone;
+  if(pastiGiorno.pranzo) tot += (generale.budgetPranzo || 0) * persone;
+  if(pastiGiorno.cena) tot += (generale.budgetCena || 0) * persone;
+  return tot;
+}
+function costoPastiDestinazione(dest){
+  if(!dest.pasti) return 0;
+  return Object.values(dest.pasti).reduce((s,p) => s + costoPastiGiorno(p), 0);
+}
+
+/* ================================================================
+   DESTINAZIONI — CRUD
+   ================================================================ */
+function nuovaDestinazione(){
+  return {
+    id: nuovoId('dest'),
+    nome: 'Nuova destinazione',
+    checkinData:'', checkinOra:'',
+    checkoutData:'', checkoutOra:'',
+    ritorno:false,
+    mezzoArrivo:'aereo', costoMezzoArrivo:0,
+    alloggio:{ tipo:'hotel', indirizzo:'', email:'', telefono:'', referente:'', costoNotte:0 },
+    luoghi:[], shopping:[], pasti:{},
+    accOpen:{ mezzo:true, alloggio:false, luoghi:false, shopping:false, pasti:false }
+  };
+}
+function aggiungiDestinazione(){
+  destinazioni.push(nuovaDestinazione());
+  salva(LS_DEST, destinazioni);
+  renderDestinazioni();
+  renderRiepilogo();
+  renderReminder();
+}
+function eliminaDestinazione(id){
+  if(!confirm('Eliminare questa destinazione e tutti i suoi dati (alloggio, luoghi, shopping, pasti)?')) return;
+  destinazioni = destinazioni.filter(d => d.id !== id);
+  salva(LS_DEST, destinazioni);
+  renderDestinazioni();
+  renderRiepilogo();
+  renderReminder();
+}
+function trovaDest(id){ return destinazioni.find(d => d.id === id); }
+
+function toggleAccordion(destId, chiave){
+  const d = trovaDest(destId);
+  if(!d) return;
+  d.accOpen[chiave] = !d.accOpen[chiave];
+  salva(LS_DEST, destinazioni);
+  renderDestinazioni();
+}
+
+/* ---- Render principale destinazioni ---- */
+function renderDestinazioni(){
+  const container = document.getElementById('destContainer');
+  document.getElementById('emptyDestNote').style.display = destinazioni.length === 0 ? 'block' : 'none';
+  container.innerHTML = '';
+
+  destinazioni.forEach(dest => {
+    const notti = (!dest.ritorno && dest.checkinData && dest.checkoutData) ? Math.max(diffGiorni(dest.checkinData, dest.checkoutData), 0) : 0;
+    const costoAlloggioTot = notti * (Number(dest.alloggio.costoNotte) || 0);
+    const costoLuoghiTot = dest.luoghi.reduce((s,l)=>s+(Number(l.costo)||0),0);
+    const costoShoppingTot = dest.shopping.reduce((s,l)=>s+(Number(l.costo)||0),0);
+    const costoPastiTot = costoPastiDestinazione(dest);
+
+    const wrap = document.createElement('div');
+    wrap.className = 'dest-card';
+    wrap.innerHTML = `
+      <div class="dest-head">
+        <div class="dest-head-left">
+          <input type="text" class="dest-title-input" value="${escapeHtml(dest.nome)}" data-field="nome" data-dest="${dest.id}">
+          <div class="ritorno-flag">
+            <input type="checkbox" id="ritorno_${dest.id}" ${dest.ritorno ? 'checked' : ''} data-field="ritorno" data-dest="${dest.id}">
+            <label for="ritorno_${dest.id}">🏠 Questo è il rientro finale (nessun alloggio/pasti/attività qui)</label>
+          </div>
+          <div class="dest-dates" ${dest.ritorno ? 'style="display:none"' : ''}>
+            <div class="field"><label>Check-in</label><input type="date" value="${dest.checkinData}" data-field="checkinData" data-dest="${dest.id}"></div>
+            <div class="field"><label>Ora check-in</label><input type="time" value="${dest.checkinOra}" data-field="checkinOra" data-dest="${dest.id}"></div>
+            <div class="field"><label>Check-out</label><input type="date" value="${dest.checkoutData}" data-field="checkoutData" data-dest="${dest.id}"></div>
+            <div class="field"><label>Ora check-out</label><input type="time" value="${dest.checkoutOra}" data-field="checkoutOra" data-dest="${dest.id}"></div>
+          </div>
+          ${!dest.ritorno ? `<div class="hint" style="margin:6px 0 0 0;">${notti} notti — alloggio ${eur(costoAlloggioTot)} · pasti ${eur(costoPastiTot)} · attività ${eur(costoLuoghiTot)} · shopping ${eur(costoShoppingTot)}</div>` : ''}
+        </div>
+        <button class="btn btn-danger btn-small" data-action="elimina-dest" data-dest="${dest.id}">🗑️ Elimina</button>
+      </div>
+
+      <div class="accordion ${dest.accOpen.mezzo ? 'open':''}">
+        <div class="accordion-head" data-action="toggle-acc" data-dest="${dest.id}" data-acc="mezzo">
+          <span>🚗 Come arrivo qui</span><span class="chev">▸</span>
+        </div>
+        <div class="accordion-body">
+          <div class="field-grid">
+            <div class="field"><label>Mezzo</label>
+              <select data-field="mezzoArrivo" data-dest="${dest.id}">
+                <option value="aereo" ${dest.mezzoArrivo==='aereo'?'selected':''}>✈️ Aereo</option>
+                <option value="nave" ${dest.mezzoArrivo==='nave'?'selected':''}>🚢 Nave</option>
+                <option value="treno" ${dest.mezzoArrivo==='treno'?'selected':''}>🚆 Treno</option>
+                <option value="bus" ${dest.mezzoArrivo==='bus'?'selected':''}>🚌 Bus</option>
+                <option value="auto-noleggio" ${dest.mezzoArrivo==='auto-noleggio'?'selected':''}>🚗 Auto a noleggio</option>
+                <option value="auto-propria" ${dest.mezzoArrivo==='auto-propria'?'selected':''}>🚙 Auto propria</option>
+              </select>
+            </div>
+            <div class="field"><label>Costo (€)</label><input type="number" min="0" step="0.01" value="${dest.costoMezzoArrivo}" data-field="costoMezzoArrivo" data-dest="${dest.id}"></div>
+          </div>
+        </div>
+      </div>
+
+      ${!dest.ritorno ? `
+      <div class="accordion ${dest.accOpen.alloggio ? 'open':''}">
+        <div class="accordion-head" data-action="toggle-acc" data-dest="${dest.id}" data-acc="alloggio">
+          <span>🏨 Alloggio</span><span class="chev">▸</span>
+        </div>
+        <div class="accordion-body">
+          <div class="field-grid">
+            <div class="field"><label>Tipo</label>
+              <select data-field="alloggio.tipo" data-dest="${dest.id}">
+                <option value="hotel" ${dest.alloggio.tipo==='hotel'?'selected':''}>Hotel</option>
+                <option value="bb" ${dest.alloggio.tipo==='bb'?'selected':''}>B&B</option>
+                <option value="appartamento" ${dest.alloggio.tipo==='appartamento'?'selected':''}>Appartamento</option>
+              </select>
+            </div>
+            <div class="field"><label>Costo a notte (€)</label><input type="number" min="0" step="0.01" value="${dest.alloggio.costoNotte}" data-field="alloggio.costoNotte" data-dest="${dest.id}"></div>
+          </div>
+          <div class="field-grid">
+            <div class="field"><label>Indirizzo</label><input type="text" value="${escapeHtml(dest.alloggio.indirizzo)}" data-field="alloggio.indirizzo" data-dest="${dest.id}"></div>
+            <div class="field"><label>Nome referente</label><input type="text" value="${escapeHtml(dest.alloggio.referente)}" data-field="alloggio.referente" data-dest="${dest.id}"></div>
+            <div class="field"><label>Email</label><input type="text" value="${escapeHtml(dest.alloggio.email)}" data-field="alloggio.email" data-dest="${dest.id}"></div>
+            <div class="field"><label>Telefono</label><input type="text" value="${escapeHtml(dest.alloggio.telefono)}" data-field="alloggio.telefono" data-dest="${dest.id}"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion ${dest.accOpen.luoghi ? 'open':''}">
+        <div class="accordion-head" data-action="toggle-acc" data-dest="${dest.id}" data-acc="luoghi">
+          <span>📍 Luoghi e attività (${dest.luoghi.length})</span><span class="chev">▸</span>
+        </div>
+        <div class="accordion-body">
+          <div class="row-list">
+            ${dest.luoghi.map(l => `
+              <div class="row-item ${l.completato ? 'completato':''}">
+                <input type="checkbox" ${l.completato?'checked':''} data-action="toggle-luogo" data-dest="${dest.id}" data-item="${l.id}" title="Completato">
+                <input type="text" class="flex1" placeholder="Nome luogo/attività" value="${escapeHtml(l.nome)}" data-action="edit-luogo" data-field="nome" data-dest="${dest.id}" data-item="${l.id}">
+                <input type="date" value="${l.data}" data-action="edit-luogo" data-field="data" data-dest="${dest.id}" data-item="${l.id}">
+                <input type="time" value="${l.ora}" data-action="edit-luogo" data-field="ora" data-dest="${dest.id}" data-item="${l.id}">
+                <select data-action="edit-luogo" data-field="mezzo" data-dest="${dest.id}" data-item="${l.id}">
+                  <option value="a-piedi" ${l.mezzo==='a-piedi'?'selected':''}>🚶 A piedi</option>
+                  <option value="auto" ${l.mezzo==='auto'?'selected':''}>🚗 Auto</option>
+                  <option value="bus" ${l.mezzo==='bus'?'selected':''}>🚌 Bus</option>
+                  <option value="treno" ${l.mezzo==='treno'?'selected':''}>🚆 Treno</option>
+                  <option value="taxi" ${l.mezzo==='taxi'?'selected':''}>🚕 Taxi</option>
+                </select>
+                <input type="number" min="0" step="0.01" placeholder="Costo €" style="width:90px" value="${l.costo}" data-action="edit-luogo" data-field="costo" data-dest="${dest.id}" data-item="${l.id}">
+                <button class="btn btn-danger btn-small" data-action="del-luogo" data-dest="${dest.id}" data-item="${l.id}">🗑️</button>
+              </div>
+            `).join('')}
+          </div>
+          <button class="btn btn-add btn-small" data-action="add-luogo" data-dest="${dest.id}">➕ Aggiungi luogo/attività</button>
+        </div>
+      </div>
+
+      <div class="accordion ${dest.accOpen.shopping ? 'open':''}">
+        <div class="accordion-head" data-action="toggle-acc" data-dest="${dest.id}" data-acc="shopping">
+          <span>🛍️ Shopping (${dest.shopping.length})</span><span class="chev">▸</span>
+        </div>
+        <div class="accordion-body">
+          <div class="row-list">
+            ${dest.shopping.map(s => `
+              <div class="row-item">
+                <input type="text" class="flex1" placeholder="Descrizione" value="${escapeHtml(s.descrizione)}" data-action="edit-shop" data-field="descrizione" data-dest="${dest.id}" data-item="${s.id}">
+                <input type="number" min="0" step="0.01" placeholder="Costo €" style="width:100px" value="${s.costo}" data-action="edit-shop" data-field="costo" data-dest="${dest.id}" data-item="${s.id}">
+                <button class="btn btn-danger btn-small" data-action="del-shop" data-dest="${dest.id}" data-item="${s.id}">🗑️</button>
+              </div>
+            `).join('')}
+          </div>
+          <button class="btn btn-add btn-small" data-action="add-shop" data-dest="${dest.id}">➕ Aggiungi voce shopping</button>
+        </div>
+      </div>
+
+      <div class="accordion ${dest.accOpen.pasti ? 'open':''}">
+        <div class="accordion-head" data-action="toggle-acc" data-dest="${dest.id}" data-acc="pasti">
+          <span>🍽️ Pasti fuori casa</span><span class="chev">▸</span>
+        </div>
+        <div class="accordion-body">
+          <div class="hint">Calcolati automaticamente da check-in/check-out e orari; puoi correggerli manualmente in ogni riga.</div>
+          ${Object.keys(dest.pasti).sort().map(iso => {
+            const p = dest.pasti[iso];
+            return `
+            <div class="meal-row">
+              <span class="meal-date">${formattaDataIt(iso)}</span>
+              <label class="meal-chip"><input type="checkbox" ${p.colazione?'checked':''} data-action="edit-pasto" data-dest="${dest.id}" data-data="${iso}" data-pasto="colazione"> Colazione</label>
+              <label class="meal-chip"><input type="checkbox" ${p.pranzo?'checked':''} data-action="edit-pasto" data-dest="${dest.id}" data-data="${iso}" data-pasto="pranzo"> Pranzo</label>
+              <label class="meal-chip"><input type="checkbox" ${p.cena?'checked':''} data-action="edit-pasto" data-dest="${dest.id}" data-data="${iso}" data-pasto="cena"> Cena</label>
+              <span class="meal-total">${eur(costoPastiGiorno(p))}</span>
+            </div>`;
+          }).join('') || '<div class="hint">Imposta check-in e check-out per generare i pasti.</div>'}
+        </div>
+      </div>
+      ` : ''}
+    `;
+    container.appendChild(wrap);
+  });
+
+  attachDestListeners();
+}
+
+function attachDestListeners(){
+  const container = document.getElementById('destContainer');
+
+  container.querySelectorAll('[data-action="elimina-dest"]').forEach(b => b.addEventListener('click', () => eliminaDestinazione(b.dataset.dest)));
+  container.querySelectorAll('[data-action="toggle-acc"]').forEach(b => b.addEventListener('click', () => toggleAccordion(b.dataset.dest, b.dataset.acc)));
+
+  container.querySelectorAll('[data-field]').forEach(el => {
+    el.addEventListener('input', () => {
+      const dest = trovaDest(el.dataset.dest);
+      if(!dest) return;
+      const field = el.dataset.field;
+      const val = el.type === 'checkbox' ? el.checked : el.value;
+      if(field.includes('.')){
+        const [obj, key] = field.split('.');
+        dest[obj][key] = (el.type === 'number') ? (parseFloat(val)||0) : val;
+      } else {
+        dest[field] = (el.type === 'number') ? (parseFloat(val)||0) : val;
+      }
+      if(['checkinData','checkinOra','checkoutData','checkoutOra','ritorno'].includes(field)){
+        ricalcolaPastiDestinazione(dest);
+      }
+      salva(LS_DEST, destinazioni);
+      renderDestinazioni();
+      renderRiepilogo();
+      renderReminder();
+    });
+  });
+
+  // Luoghi
+  container.querySelectorAll('[data-action="add-luogo"]').forEach(b => b.addEventListener('click', () => {
+    const dest = trovaDest(b.dataset.dest);
+    dest.luoghi.push({id:nuovoId('luogo'), nome:'', data:'', ora:'', mezzo:'a-piedi', costo:0, completato:false});
+    salva(LS_DEST, destinazioni); renderDestinazioni(); renderRiepilogo(); renderReminder();
+  }));
+  container.querySelectorAll('[data-action="del-luogo"]').forEach(b => b.addEventListener('click', () => {
+    if(!confirm('Eliminare questo luogo/attività?')) return;
+    const dest = trovaDest(b.dataset.dest);
+    dest.luoghi = dest.luoghi.filter(l => l.id !== b.dataset.item);
+    salva(LS_DEST, destinazioni); renderDestinazioni(); renderRiepilogo(); renderReminder();
+  }));
+  container.querySelectorAll('[data-action="toggle-luogo"]').forEach(b => b.addEventListener('click', () => {
+    const dest = trovaDest(b.dataset.dest);
+    const l = dest.luoghi.find(x => x.id === b.dataset.item);
+    l.completato = b.checked;
+    salva(LS_DEST, destinazioni); renderDestinazioni();
+  }));
+  container.querySelectorAll('[data-action="edit-luogo"]').forEach(el => el.addEventListener('input', () => {
+    const dest = trovaDest(el.dataset.dest);
+    const l = dest.luoghi.find(x => x.id === el.dataset.item);
+    l[el.dataset.field] = (el.type === 'number') ? (parseFloat(el.value)||0) : el.value;
+    salva(LS_DEST, destinazioni);
+    renderRiepilogo(); renderReminder();
+    if(el.dataset.field !== 'nome' && el.dataset.field !== 'costo') renderDestinazioni();
+  }));
+
+  // Shopping
+  container.querySelectorAll('[data-action="add-shop"]').forEach(b => b.addEventListener('click', () => {
+    const dest = trovaDest(b.dataset.dest);
+    dest.shopping.push({id:nuovoId('shop'), descrizione:'', costo:0});
+    salva(LS_DEST, destinazioni); renderDestinazioni(); renderRiepilogo();
+  }));
+  container.querySelectorAll('[data-action="del-shop"]').forEach(b => b.addEventListener('click', () => {
+    if(!confirm('Eliminare questa voce shopping?')) return;
+    const dest = trovaDest(b.dataset.dest);
+    dest.shopping = dest.shopping.filter(s => s.id !== b.dataset.item);
+    salva(LS_DEST, destinazioni); renderDestinazioni(); renderRiepilogo();
+  }));
+  container.querySelectorAll('[data-action="edit-shop"]').forEach(el => el.addEventListener('input', () => {
+    const dest = trovaDest(el.dataset.dest);
+    const s = dest.shopping.find(x => x.id === el.dataset.item);
+    s[el.dataset.field] = (el.type === 'number') ? (parseFloat(el.value)||0) : el.value;
+    salva(LS_DEST, destinazioni);
+    renderRiepilogo();
+  }));
+
+  // Pasti
+  container.querySelectorAll('[data-action="edit-pasto"]').forEach(el => el.addEventListener('change', () => {
+    const dest = trovaDest(el.dataset.dest);
+    dest.pasti[el.dataset.data][el.dataset.pasto] = el.checked;
+    salva(LS_DEST, destinazioni);
+    renderDestinazioni(); renderRiepilogo();
+  }));
+}
+
+/* ================================================================
+   RIEPILOGO COSTI
+   ================================================================ */
+function renderRiepilogo(){
+  let totPasti = 0, totTrasporti = tratta.costo || 0, totAlloggi = 0, totShopping = 0, totAttivita = 0;
+
+  destinazioni.forEach(dest => {
+    totTrasporti += Number(dest.costoMezzoArrivo) || 0;
+    if(!dest.ritorno){
+      const notti = (dest.checkinData && dest.checkoutData) ? Math.max(diffGiorni(dest.checkinData, dest.checkoutData), 0) : 0;
+      totAlloggi += notti * (Number(dest.alloggio.costoNotte) || 0);
+      totShopping += dest.shopping.reduce((s,x)=>s+(Number(x.costo)||0),0);
+      totAttivita += dest.luoghi.reduce((s,x)=>s+(Number(x.costo)||0),0);
+      totPasti += costoPastiDestinazione(dest);
+    }
+  });
+
+  document.getElementById('riepPasti').textContent = eur(totPasti);
+  document.getElementById('riepTrasporti').textContent = eur(totTrasporti);
+  document.getElementById('riepAlloggi').textContent = eur(totAlloggi);
+  document.getElementById('riepShopping').textContent = eur(totShopping);
+  document.getElementById('riepAttivita').textContent = eur(totAttivita);
+  document.getElementById('riepTotaleGenerale').textContent = eur(totPasti+totTrasporti+totAlloggi+totShopping+totAttivita);
+}
+
+/* ================================================================
+   REMINDER — vista cronologica
+   ================================================================ */
+function renderReminder(){
+  const eventi = {}; // data -> [testi]
+  function push(iso, testo){
+    if(!iso) return;
+    if(!eventi[iso]) eventi[iso] = [];
+    eventi[iso].push(testo);
+  }
+
+  if(tratta.dataPartenza) push(tratta.dataPartenza, `🚀 Partenza (${tratta.mezzo}) ore ${tratta.oraPartenza || '—'}`);
+  if(tratta.dataArrivo) push(tratta.dataArrivo, `🛬 Arrivo alla prima destinazione ore ${tratta.oraArrivo || '—'}`);
+
+  destinazioni.forEach(dest => {
+    if(dest.ritorno){
+      if(dest.checkinData) push(dest.checkinData, `🏠 Rientro a casa`);
+      return;
+    }
+    if(dest.checkinData) push(dest.checkinData, `🏨 Check-in a "${dest.nome}" ore ${dest.checkinOra || '—'}`);
+    if(dest.checkoutData) push(dest.checkoutData, `🚪 Check-out da "${dest.nome}" ore ${dest.checkoutOra || '—'}`);
+    dest.luoghi.forEach(l => {
+      if(l.data) push(l.data, `📍 ${l.nome || '(luogo senza nome)'} — ${dest.nome}${l.ora ? ' ore '+l.ora : ''}`);
+    });
+  });
+
+  const dateOrdinate = Object.keys(eventi).sort();
+  const container = document.getElementById('reminderContainer');
+  document.getElementById('emptyReminderNote').style.display = dateOrdinate.length === 0 ? 'block' : 'none';
+  container.innerHTML = dateOrdinate.map(iso => `
+    <div class="reminder-day">
+      <div class="reminder-day-title">${formattaDataIt(iso)} — ${iso}</div>
+      ${eventi[iso].map(t => `<div class="reminder-item">${escapeHtml(t)}</div>`).join('')}
+    </div>
+  `).join('');
+}
+
+/* ================================================================
+   TABS
+   ================================================================ */
+function initTabs(){
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+}
+
+/* ================================================================
+   INIT
+   ================================================================ */
+document.getElementById('btnAddDest').addEventListener('click', aggiungiDestinazione);
+
+window.addEventListener('DOMContentLoaded', () => {
+  initTabs();
+  initGenerale();
+  initTratta();
+  ricalcolaTuttiPastiEsistenti();
+  renderDestinazioni();
+  renderRiepilogo();
+  renderReminder();
+});
+</script>
+</body>
+</html>

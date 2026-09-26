@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Valigie</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  :root{
+    --bg:#f6f8fb; --card:#ffffff; --accent:#1e88e5; --muted:#6b7280;
+    --danger:#E3DCC9; --shadow:0 6px 18px rgba(20,30,50,0.06); --radius:12px; --max-width:1080px;
+    --warn:#b8442c;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px; display:flex; justify-content:center; color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  .nav { display: flex; justify-content: center; gap: 10px; padding: 5px 0; margin-bottom: 10px; flex-wrap: wrap; }
+  .nav-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #000; font-size: 14px; transition: opacity 0.2s ease; }
+  .nav-item img { width: 84px; height: 84px; margin-bottom: 1px; transition: transform 0.2s ease; }
+  .nav-item:hover img { transform: scale(1.05); }
+  .nav-item:hover { opacity: 0.85; }
+  @media (max-width: 600px) { .nav { gap: 10px; } .nav-item img { width: 60px; height: 60px; } .nav-item span { font-size: 12px; } }
+
+  .card{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; margin-bottom:18px; }
+  .section-title{ font-size:18px; font-weight:800; color:var(--accent); margin:0 0 12px 0; }
+  .hint{ font-size:12px; color:var(--muted); margin-top:-6px; margin-bottom:12px; }
+  .empty-note{ background:#fff8e6; border:1px solid #f0dfa8; border-radius:10px; padding:12px 14px; font-size:13px; color:#7a5c00; margin-bottom:16px; }
+
+  .travel-nav-divider{ border:none; border-top:1px solid #e6e9ef; margin:24px 0 14px 0; }
+  .travel-nav{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+  .travel-nav-item{ display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none; color:#374151; font-size:11px; font-weight:700; }
+  .travel-nav-item .icon{ width:46px; height:46px; border-radius:50%; background:#eef2f7; display:flex; align-items:center; justify-content:center; font-size:20px; transition:transform 0.15s ease, background 0.15s ease; }
+  .travel-nav-item:hover .icon{ transform:scale(1.06); }
+  .travel-nav-item.active .icon{ background:var(--accent); }
+  .travel-nav-item.active span.lbl{ color:var(--accent); }
+
+  .btn{ border:none; border-radius:8px; padding:7px 12px; font-weight:700; font-size:13px; cursor:pointer; }
+  .btn-danger{ background:var(--danger); color:#7a3b1f; }
+  .btn-add{ background:#eaf6ec; color:#2f7a3d; }
+  .btn-small{ padding:4px 9px; font-size:12px; }
+
+  .valigia-card{ background:#fbfcfe; border:1px solid #e3e8f0; border-radius:var(--radius); padding:14px; margin-bottom:16px; box-shadow:var(--shadow); }
+  .valigia-head{ display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; }
+  .valigia-title-input{ flex:1; font-size:17px; font-weight:800; color:#0f172a; border:none; border-bottom:2px solid transparent; background:transparent; padding:2px 0; }
+  .valigia-title-input:focus{ border-bottom-color:var(--accent); outline:none; }
+
+  .categoria-block{ border-top:1px solid #e6e9ef; padding-top:10px; margin-top:10px; }
+  .categoria-head{ display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:8px; }
+  .categoria-title-input{ font-weight:700; font-size:14px; color:#1f2a3d; border:none; border-bottom:1px dashed #cbd5e1; background:transparent; padding:2px 0; flex:1; }
+  .categoria-title-input:focus{ border-bottom-color:var(--accent); outline:none; }
+
+  .voce-row{ display:flex; align-items:center; gap:8px; background:#f7f9fc; border:1px solid #e6e9ef; border-radius:8px; padding:7px 10px; margin-bottom:6px; }
+  .voce-row input[type=text]{ flex:1; padding:5px 7px; border-radius:6px; border:1px solid #e6e9ef; font-size:13px; font-family:inherit; }
+  .voce-row.fatto input[type=text]{ text-decoration:line-through; color:var(--muted); }
+
+  .add-wrap{ text-align:center; margin-top:8px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item"><img src="rimage/orga4.png" alt="Organizer"><span> NOTE </span></a>
+    <a href="caldsp.html" class="nav-item"><img src="rimage/calicon.png" alt="Calendario dsp"><span> DATE </span></a>
+    <a href="check01.html" class="nav-item"><img src="rimage/check02.png" alt="Checklist"><span>LISTE</span></a>
+    <a href="strweb.html" class="nav-item"><img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84"><span> WEB </span></a>
+    <a href="dashconsolle.html" class="nav-item"><img src="rimage/opzioni.png" alt="Opzioni"><span> ADD </span></a>
+  </nav>
+
+  <div class="card">
+    <div class="section-title">🧳 Valigie</div>
+    <div class="hint">Crea una valigia per persona (o una sola per tutti), con categorie personalizzabili e voci da spuntare.</div>
+
+    <div id="emptyNote" class="empty-note" style="display:none;">Nessuna valigia ancora creata. Usa "Aggiungi valigia" per iniziare.</div>
+    <div id="valigieContainer"></div>
+    <div class="add-wrap">
+      <button class="btn btn-add" id="btnAddValigia">➕ Aggiungi valigia</button>
+    </div>
+  </div>
+
+  <hr class="travel-nav-divider">
+  <nav class="travel-nav">
+    <a href="travel.html" class="travel-nav-item"><div class="icon">✈️</div><span class="lbl">Viaggio</span></a>
+    <a href="travel-valigie.html" class="travel-nav-item active"><div class="icon">🧳</div><span class="lbl">Valigie</span></a>
+    <a href="travel-documenti.html" class="travel-nav-item"><div class="icon">📄</div><span class="lbl">Documenti</span></a>
+  </nav>
+
+</div>
+
+<script>
+const LS_VALIGIE = 'travel_valigie';
+
+function leggiArray(key){
+  try{ const raw = localStorage.getItem(key); const p = raw ? JSON.parse(raw) : []; return Array.isArray(p) ? p : []; }
+  catch(e){ return []; }
+}
+function salva(key, val){ localStorage.setItem(key, JSON.stringify(val)); }
+function escapeHtml(s){
+  if(s === null || s === undefined) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function nuovoId(prefix){ return prefix + '_' + Date.now() + '_' + Math.floor(Math.random()*10000); }
+
+let valigie = leggiArray(LS_VALIGIE);
+
+function nuovaValigia(){
+  return { id: nuovoId('val'), nome: 'Nuova valigia', categorie: [] };
+}
+function nuovaCategoria(){
+  return { id: nuovoId('cat'), nome: 'Nuova categoria', voci: [] };
+}
+function trovaValigia(id){ return valigie.find(v => v.id === id); }
+function trovaCategoria(valigiaId, catId){
+  const v = trovaValigia(valigiaId);
+  return v ? v.categorie.find(c => c.id === catId) : null;
+}
+
+function aggiungiValigia(){
+  valigie.push(nuovaValigia());
+  salva(LS_VALIGIE, valigie);
+  render();
+}
+function eliminaValigia(id){
+  if(!confirm('Eliminare questa valigia e tutto il suo contenuto?')) return;
+  valigie = valigie.filter(v => v.id !== id);
+  salva(LS_VALIGIE, valigie);
+  render();
+}
+function aggiungiCategoria(valigiaId){
+  const v = trovaValigia(valigiaId);
+  v.categorie.push(nuovaCategoria());
+  salva(LS_VALIGIE, valigie);
+  render();
+}
+function eliminaCategoria(valigiaId, catId){
+  if(!confirm('Eliminare questa categoria e tutte le sue voci?')) return;
+  const v = trovaValigia(valigiaId);
+  v.categorie = v.categorie.filter(c => c.id !== catId);
+  salva(LS_VALIGIE, valigie);
+  render();
+}
+function aggiungiVoce(valigiaId, catId){
+  const c = trovaCategoria(valigiaId, catId);
+  c.voci.push({id: nuovoId('voce'), testo:'', fatto:false});
+  salva(LS_VALIGIE, valigie);
+  render();
+}
+function eliminaVoce(valigiaId, catId, voceId){
+  const c = trovaCategoria(valigiaId, catId);
+  c.voci = c.voci.filter(x => x.id !== voceId);
+  salva(LS_VALIGIE, valigie);
+  render();
+}
+
+function render(){
+  const container = document.getElementById('valigieContainer');
+  document.getElementById('emptyNote').style.display = valigie.length === 0 ? 'block' : 'none';
+  container.innerHTML = valigie.map(v => `
+    <div class="valigia-card">
+      <div class="valigia-head">
+        <input type="text" class="valigia-title-input" value="${escapeHtml(v.nome)}" data-action="edit-valigia-nome" data-valigia="${v.id}">
+        <button class="btn btn-danger btn-small" data-action="del-valigia" data-valigia="${v.id}">🗑️ Elimina</button>
+      </div>
+      ${v.categorie.map(c => `
+        <div class="categoria-block">
+          <div class="categoria-head">
+            <input type="text" class="categoria-title-input" value="${escapeHtml(c.nome)}" data-action="edit-cat-nome" data-valigia="${v.id}" data-cat="${c.id}">
+            <button class="btn btn-danger btn-small" data-action="del-cat" data-valigia="${v.id}" data-cat="${c.id}">🗑️</button>
+          </div>
+          ${c.voci.map(voce => `
+            <div class="voce-row ${voce.fatto?'fatto':''}">
+              <input type="checkbox" ${voce.fatto?'checked':''} data-action="toggle-voce" data-valigia="${v.id}" data-cat="${c.id}" data-voce="${voce.id}">
+              <input type="text" placeholder="Es. Cappotto, Scarpe da trekking..." value="${escapeHtml(voce.testo)}" data-action="edit-voce" data-valigia="${v.id}" data-cat="${c.id}" data-voce="${voce.id}">
+              <button class="btn btn-danger btn-small" data-action="del-voce" data-valigia="${v.id}" data-cat="${c.id}" data-voce="${voce.id}">🗑️</button>
+            </div>
+          `).join('')}
+          <button class="btn btn-add btn-small" data-action="add-voce" data-valigia="${v.id}" data-cat="${c.id}">➕ Aggiungi voce</button>
+        </div>
+      `).join('')}
+      <div class="add-wrap" style="margin-top:14px;">
+        <button class="btn btn-add btn-small" data-action="add-cat" data-valigia="${v.id}">➕ Aggiungi categoria</button>
+      </div>
+    </div>
+  `).join('');
+
+  attachListeners();
+}
+
+function attachListeners(){
+  const c = document.getElementById('valigieContainer');
+  c.querySelectorAll('[data-action="del-valigia"]').forEach(b => b.addEventListener('click', () => eliminaValigia(b.dataset.valigia)));
+  c.querySelectorAll('[data-action="edit-valigia-nome"]').forEach(el => el.addEventListener('input', () => {
+    trovaValigia(el.dataset.valigia).nome = el.value; salva(LS_VALIGIE, valigie);
+  }));
+  c.querySelectorAll('[data-action="add-cat"]').forEach(b => b.addEventListener('click', () => aggiungiCategoria(b.dataset.valigia)));
+  c.querySelectorAll('[data-action="del-cat"]').forEach(b => b.addEventListener('click', () => eliminaCategoria(b.dataset.valigia, b.dataset.cat)));
+  c.querySelectorAll('[data-action="edit-cat-nome"]').forEach(el => el.addEventListener('input', () => {
+    trovaCategoria(el.dataset.valigia, el.dataset.cat).nome = el.value; salva(LS_VALIGIE, valigie);
+  }));
+  c.querySelectorAll('[data-action="add-voce"]').forEach(b => b.addEventListener('click', () => aggiungiVoce(b.dataset.valigia, b.dataset.cat)));
+  c.querySelectorAll('[data-action="del-voce"]').forEach(b => b.addEventListener('click', () => eliminaVoce(b.dataset.valigia, b.dataset.cat, b.dataset.voce)));
+  c.querySelectorAll('[data-action="toggle-voce"]').forEach(el => el.addEventListener('click', () => {
+    const cat = trovaCategoria(el.dataset.valigia, el.dataset.cat);
+    cat.voci.find(x => x.id === el.dataset.voce).fatto = el.checked;
+    salva(LS_VALIGIE, valigie); render();
+  }));
+  c.querySelectorAll('[data-action="edit-voce"]').forEach(el => el.addEventListener('input', () => {
+    const cat = trovaCategoria(el.dataset.valigia, el.dataset.cat);
+    cat.voci.find(x => x.id === el.dataset.voce).testo = el.value;
+    salva(LS_VALIGIE, valigie);
+  }));
+}
+
+document.getElementById('btnAddValigia').addEventListener('click', aggiungiValigia);
+window.addEventListener('DOMContentLoaded', render);
+</script>
+</body>
+</html>
