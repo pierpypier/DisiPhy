@@ -174,6 +174,18 @@
   .reminder-item{ font-size:13px; color:#334155; padding:4px 0 4px 8px; border-left:3px solid var(--accent); margin-bottom:4px; background:#f7f9fc; border-radius:0 6px 6px 0; }
 
   .add-dest-wrap{ text-align:center; margin-top:6px; }
+
+  /* Blocchi mezzo di trasporto dentro "Come arrivo qui" */
+  .mezzo-item{
+    background:#f7f9fc; border:1px solid #e6e9ef; border-radius:8px;
+    padding:10px 10px 12px 10px; margin-bottom:10px;
+  }
+  .mezzo-item-head{
+    display:flex; justify-content:space-between; align-items:center;
+    margin-bottom:8px; font-weight:700; font-size:13px; color:#1f2a3d;
+  }
+  .mezzo-item .field-grid{ margin-bottom:8px; }
+  .mezzo-item .hint{ margin:0; font-weight:700; color:#374151; }
 </style>
 </head>
 <body>
@@ -205,12 +217,11 @@
   </nav>
 
   <div class="card">
-    <div class="section-title">✈️ Pianificazione Viaggio</div>
+    <div class="section-title" id="pageTitle">✈️ Pianificazione Viaggio</div>
     <div class="hint">Tutto parte dalla data di partenza e termina con il rientro a casa. I dati si salvano automaticamente.</div>
 
     <div class="tabs">
       <button class="tab-btn active" data-tab="tabGenerale">Generale</button>
-      <button class="tab-btn" data-tab="tabTratta">Tratta partenza</button>
       <button class="tab-btn" data-tab="tabDest">Destinazioni</button>
       <button class="tab-btn" data-tab="tabRiepilogo">Riepilogo costi</button>
       <button class="tab-btn" data-tab="tabReminder">Reminder</button>
@@ -218,6 +229,9 @@
 
     <!-- ============ TAB GENERALE ============ -->
     <div class="tab-panel active" id="tabGenerale">
+      <div class="field-grid">
+        <div class="field" style="grid-column:1/-1;"><label>Nome del viaggio</label><input type="text" id="genNomeViaggio" placeholder="Es. Vacanza in Toscana, Giro delle isole..."></div>
+      </div>
       <div class="field-grid">
         <div class="field"><label>Data partenza viaggio</label><input type="date" id="genDataPartenza"></div>
         <div class="field"><label>Ora partenza</label><input type="time" id="genOraPartenza"></div>
@@ -236,37 +250,6 @@
         <div class="field"><label>Budget cena (€/persona)</label><input type="number" id="genBudgetCena" min="0" step="0.5" value="20"></div>
       </div>
       <div class="hint">I budget pasto si applicano automaticamente al calcolo dei pasti fuori casa in ogni destinazione.</div>
-    </div>
-
-    <!-- ============ TAB TRATTA PARTENZA ============ -->
-    <div class="tab-panel" id="tabTratta">
-      <div class="field-grid">
-        <div class="field"><label>Mezzo</label>
-          <select id="trattaMezzo">
-            <option value="aereo">✈️ Aereo</option>
-            <option value="nave">🚢 Nave</option>
-            <option value="treno">🚆 Treno</option>
-            <option value="bus">🚌 Bus</option>
-            <option value="auto">🚗 Auto</option>
-          </select>
-        </div>
-        <div class="field"><label>Costo (€)</label><input type="number" id="trattaCosto" min="0" step="0.01" value="0"></div>
-        <div class="field"><label>Tipo biglietto</label>
-          <select id="trattaAndataRitorno">
-            <option value="solo-andata">Solo andata</option>
-            <option value="andata-ritorno">Andata e ritorno</option>
-          </select>
-        </div>
-      </div>
-      <div class="field-grid">
-        <div class="field"><label>Data partenza</label><input type="date" id="trattaDataPartenza"></div>
-        <div class="field"><label>Ora partenza</label><input type="time" id="trattaOraPartenza"></div>
-        <div class="field"><label>Data arrivo a destinazione</label><input type="date" id="trattaDataArrivo"></div>
-        <div class="field"><label>Ora arrivo</label><input type="time" id="trattaOraArrivo"></div>
-      </div>
-      <div class="saldi-grid">
-        <div class="saldo-box"><div class="saldo-label">Durata tragitto</div><div class="saldo-value" id="trattaDurata">—</div></div>
-      </div>
     </div>
 
     <!-- ============ TAB DESTINAZIONI ============ -->
@@ -325,7 +308,6 @@
    CHIAVI LOCALSTORAGE
    ================================================================ */
 const LS_GENERALE = 'travel_generale';
-const LS_TRATTA   = 'travel_trattaPartenza';
 const LS_DEST     = 'travel_destinazioni';
 
 /* ================================================================
@@ -377,6 +359,15 @@ function formattaDurata(ms){
   if(minuti > 0 || parti.length === 0) parti.push(minuti + 'min');
   return parti.join(' ');
 }
+/* Formatta una Date in YYYY-MM-DD usando i valori LOCALI (getFullYear/getMonth/getDate),
+   mai toISOString(): toISOString() converte in UTC e con fusi orari avanti rispetto
+   a UTC (es. Italia) fa scalare la data indietro di un giorno. */
+function isoLocale(d){
+  const y = d.getFullYear();
+  const m = String(d.getMonth()+1).padStart(2,'0');
+  const g = String(d.getDate()).padStart(2,'0');
+  return `${y}-${m}-${g}`;
+}
 function elencoDate(dataInizio, dataFine){
   const out = [];
   if(!dataInizio || !dataFine) return out;
@@ -384,7 +375,7 @@ function elencoDate(dataInizio, dataFine){
   const fine = new Date(dataFine + 'T00:00:00');
   if(cur > fine) return out;
   while(cur <= fine){
-    out.push(cur.toISOString().slice(0,10));
+    out.push(isoLocale(cur));
     cur.setDate(cur.getDate() + 1);
   }
   return out;
@@ -394,24 +385,60 @@ function formattaDataIt(iso){
   const d = new Date(iso + 'T00:00:00');
   return d.toLocaleDateString('it-IT', {weekday:'short', day:'2-digit', month:'short'});
 }
+function iconaMezzo(tipo){
+  return {aereo:'✈️', treno:'🚆', nave:'🚢', bus:'🚌', 'auto-noleggio':'🚗', 'auto-propria':'🚙', taxi:'🚕', altro:'🔹'}[tipo] || '🔹';
+}
+function labelMezzo(tipo){
+  return {aereo:'Aereo', treno:'Treno', nave:'Nave/traghetto', bus:'Bus', 'auto-noleggio':'Auto a noleggio', 'auto-propria':'Auto propria', taxi:'Taxi/NCC', altro:'Altro'}[tipo] || 'Mezzo';
+}
 
 /* ================================================================
    STATO
    ================================================================ */
 let generale = leggiOggetto(LS_GENERALE, {
-  dataPartenza:'', oraPartenza:'', dataRientro:'', oraRientro:'',
+  nomeViaggio:'', dataPartenza:'', oraPartenza:'', dataRientro:'', oraRientro:'',
   adulti:1, bambini:0, budgetColazione:5, budgetPranzo:15, budgetCena:20
 });
-let tratta = leggiOggetto(LS_TRATTA, {
-  mezzo:'aereo', costo:0, andataRitorno:'solo-andata',
-  dataPartenza:'', oraPartenza:'', dataArrivo:'', oraArrivo:''
-});
 let destinazioni = leggiArray(LS_DEST);
+migraDestinazioni();
+
+/* Le vecchie destinazioni salvate avevano un solo mezzo (mezzoArrivo/costoMezzoArrivo).
+   Le convertiamo in un array "mezzi", così ogni destinazione può avere più tratte
+   (es. aereo + treno + taxi) senza perdere i dati già inseriti. */
+function nuovoMezzo(){
+  return {
+    id: nuovoId('mezzo'), tipo:'aereo',
+    luogoPartenza:'', numero:'',
+    dataPartenza:'', oraPartenza:'',
+    dataArrivo:'', oraArrivo:'',
+    luogoArrivo:'', costo:0
+  };
+}
+function migraDestinazioni(){
+  let modificato = false;
+  destinazioni.forEach(d => {
+    if(!Array.isArray(d.mezzi)){
+      const m = nuovoMezzo();
+      if(d.mezzoArrivo) m.tipo = d.mezzoArrivo;
+      if(d.costoMezzoArrivo) m.costo = Number(d.costoMezzoArrivo) || 0;
+      d.mezzi = [m];
+      delete d.mezzoArrivo;
+      delete d.costoMezzoArrivo;
+      modificato = true;
+    }
+    if(!Array.isArray(d.extraPasti)){
+      d.extraPasti = [];
+      modificato = true;
+    }
+  });
+  if(modificato) salva(LS_DEST, destinazioni);
+}
 
 /* ================================================================
    TAB GENERALE
    ================================================================ */
 function initGenerale(){
+  document.getElementById('genNomeViaggio').value = generale.nomeViaggio || '';
   document.getElementById('genDataPartenza').value = generale.dataPartenza || '';
   document.getElementById('genOraPartenza').value = generale.oraPartenza || '';
   document.getElementById('genDataRientro').value = generale.dataRientro || '';
@@ -422,73 +449,70 @@ function initGenerale(){
   document.getElementById('genBudgetPranzo').value = generale.budgetPranzo;
   document.getElementById('genBudgetCena').value = generale.budgetCena;
 
-  ['genDataPartenza','genOraPartenza','genDataRientro','genOraRientro','genAdulti','genBambini','genBudgetColazione','genBudgetPranzo','genBudgetCena'].forEach(id => {
-    document.getElementById(id).addEventListener('input', salvaGenerale);
+  // Campo nome viaggio: solo aggiornamento leggero (titolo pagina), nessun full-render
+  document.getElementById('genNomeViaggio').addEventListener('input', (e) => {
+    generale.nomeViaggio = e.target.value;
+    salva(LS_GENERALE, generale);
+    aggiornaTitoloPagina();
   });
+
+  // Adulti/bambini/budget: incidono sui totali pasti, ma non serve ridisegnare i campi di testo
+  // delle destinazioni — solo ricalcolare importi già visibili
+  ['genAdulti','genBambini','genBudgetColazione','genBudgetPranzo','genBudgetCena'].forEach(id => {
+    document.getElementById(id).addEventListener('input', () => {
+      salvaGenerale(false);
+      renderDestPastiTotali();
+      renderRiepilogo();
+    });
+  });
+
+  // Date/ore partenza-rientro: cambiano solo su selezione (change), non a ogni carattere
+  ['genDataPartenza','genOraPartenza','genDataRientro','genOraRientro'].forEach(id => {
+    document.getElementById(id).addEventListener('change', () => {
+      salvaGenerale(true);
+      renderRiepilogo();
+    });
+  });
+
   renderGenerale();
+  aggiornaTitoloPagina();
 }
 function salvaGenerale(){
-  generale = {
-    dataPartenza: document.getElementById('genDataPartenza').value,
-    oraPartenza: document.getElementById('genOraPartenza').value,
-    dataRientro: document.getElementById('genDataRientro').value,
-    oraRientro: document.getElementById('genOraRientro').value,
-    adulti: parseInt(document.getElementById('genAdulti').value,10) || 0,
-    bambini: parseInt(document.getElementById('genBambini').value,10) || 0,
-    budgetColazione: parseFloat(document.getElementById('genBudgetColazione').value) || 0,
-    budgetPranzo: parseFloat(document.getElementById('genBudgetPranzo').value) || 0,
-    budgetCena: parseFloat(document.getElementById('genBudgetCena').value) || 0
-  };
+  generale.dataPartenza = document.getElementById('genDataPartenza').value;
+  generale.oraPartenza = document.getElementById('genOraPartenza').value;
+  generale.dataRientro = document.getElementById('genDataRientro').value;
+  generale.oraRientro = document.getElementById('genOraRientro').value;
+  generale.adulti = parseInt(document.getElementById('genAdulti').value,10) || 0;
+  generale.bambini = parseInt(document.getElementById('genBambini').value,10) || 0;
+  generale.budgetColazione = parseFloat(document.getElementById('genBudgetColazione').value) || 0;
+  generale.budgetPranzo = parseFloat(document.getElementById('genBudgetPranzo').value) || 0;
+  generale.budgetCena = parseFloat(document.getElementById('genBudgetCena').value) || 0;
   salva(LS_GENERALE, generale);
   renderGenerale();
-  ricalcolaTuttiPastiEsistenti();
-  renderDestinazioni();
-  renderRiepilogo();
 }
 function renderGenerale(){
   const giorni = diffGiorni(generale.dataPartenza, generale.dataRientro);
   document.getElementById('genGiorniTotali').textContent = (giorni !== null && giorni >= 0) ? (giorni + 1) : '—';
   document.getElementById('genNottiTotali').textContent = (giorni !== null && giorni >= 0) ? giorni : '—';
 }
-function totalePersone(){ return (generale.adulti || 0) + (generale.bambini || 0); }
-
-/* ================================================================
-   TAB TRATTA DI PARTENZA
-   ================================================================ */
-function initTratta(){
-  document.getElementById('trattaMezzo').value = tratta.mezzo || 'aereo';
-  document.getElementById('trattaCosto').value = tratta.costo || 0;
-  document.getElementById('trattaAndataRitorno').value = tratta.andataRitorno || 'solo-andata';
-  document.getElementById('trattaDataPartenza').value = tratta.dataPartenza || '';
-  document.getElementById('trattaOraPartenza').value = tratta.oraPartenza || '';
-  document.getElementById('trattaDataArrivo').value = tratta.dataArrivo || '';
-  document.getElementById('trattaOraArrivo').value = tratta.oraArrivo || '';
-
-  ['trattaMezzo','trattaCosto','trattaAndataRitorno','trattaDataPartenza','trattaOraPartenza','trattaDataArrivo','trattaOraArrivo'].forEach(id => {
-    document.getElementById(id).addEventListener('input', salvaTratta);
+function aggiornaTitoloPagina(){
+  const t = document.getElementById('pageTitle');
+  t.textContent = generale.nomeViaggio ? ('✈️ ' + generale.nomeViaggio) : '✈️ Pianificazione Viaggio';
+}
+/* Aggiorna solo gli importi dei pasti già visibili in ogni card destinazione,
+   senza ridisegnare i campi di testo (evita di perdere il focus mentre si scrive) */
+function renderDestPastiTotali(){
+  destinazioni.forEach(dest => {
+    if(dest.ritorno) return;
+    updateDestHint(dest);
+    document.querySelectorAll('.meal-row[data-dest-id="'+dest.id+'"]').forEach(row => {
+      const iso = row.dataset.data;
+      const p = dest.pasti[iso];
+      if(p){ row.querySelector('.meal-total').textContent = eur(costoPastiGiorno(p)); }
+    });
   });
-  renderTratta();
 }
-function salvaTratta(){
-  tratta = {
-    mezzo: document.getElementById('trattaMezzo').value,
-    costo: parseFloat(document.getElementById('trattaCosto').value) || 0,
-    andataRitorno: document.getElementById('trattaAndataRitorno').value,
-    dataPartenza: document.getElementById('trattaDataPartenza').value,
-    oraPartenza: document.getElementById('trattaOraPartenza').value,
-    dataArrivo: document.getElementById('trattaDataArrivo').value,
-    oraArrivo: document.getElementById('trattaOraArrivo').value
-  };
-  salva(LS_TRATTA, tratta);
-  renderTratta();
-  renderRiepilogo();
-  renderReminder();
-}
-function renderTratta(){
-  const p = dataOra(tratta.dataPartenza, tratta.oraPartenza);
-  const a = dataOra(tratta.dataArrivo, tratta.oraArrivo);
-  document.getElementById('trattaDurata').textContent = (p && a) ? formattaDurata(a - p) : '—';
-}
+function totalePersone(){ return (generale.adulti || 0) + (generale.bambini || 0); }
 
 /* ================================================================
    DESTINAZIONI — logica pasti automatica
@@ -546,8 +570,10 @@ function costoPastiGiorno(pastiGiorno){
   return tot;
 }
 function costoPastiDestinazione(dest){
-  if(!dest.pasti) return 0;
-  return Object.values(dest.pasti).reduce((s,p) => s + costoPastiGiorno(p), 0);
+  let tot = 0;
+  if(dest.pasti) tot += Object.values(dest.pasti).reduce((s,p) => s + costoPastiGiorno(p), 0);
+  if(dest.extraPasti) tot += dest.extraPasti.reduce((s,e) => s + (Number(e.costo)||0), 0);
+  return tot;
 }
 
 /* ================================================================
@@ -556,13 +582,13 @@ function costoPastiDestinazione(dest){
 function nuovaDestinazione(){
   return {
     id: nuovoId('dest'),
-    nome: 'Nuova destinazione',
+    nome: '',
     checkinData:'', checkinOra:'',
     checkoutData:'', checkoutOra:'',
     ritorno:false,
-    mezzoArrivo:'aereo', costoMezzoArrivo:0,
+    mezzi:[nuovoMezzo()],
     alloggio:{ tipo:'hotel', indirizzo:'', email:'', telefono:'', referente:'', costoNotte:0 },
-    luoghi:[], shopping:[], pasti:{},
+    luoghi:[], shopping:[], pasti:{}, extraPasti:[],
     accOpen:{ mezzo:true, alloggio:false, luoghi:false, shopping:false, pasti:false }
   };
 }
@@ -583,12 +609,73 @@ function eliminaDestinazione(id){
 }
 function trovaDest(id){ return destinazioni.find(d => d.id === id); }
 
+/* Aggiorna solo la riga di sintesi (notti/alloggio/pasti/attività/shopping)
+   di UNA destinazione, senza toccare gli input — evita di far perdere il focus
+   mentre l'utente sta scrivendo in un campo della stessa card. */
+function updateDestHint(dest){
+  const el = document.getElementById('hint-'+dest.id);
+  if(!el) return;
+  const costoMezziTot = (dest.mezzi||[]).reduce((s,m)=>s+(Number(m.costo)||0),0);
+  if(dest.ritorno){
+    el.textContent = `trasporto ${eur(costoMezziTot)}`;
+    return;
+  }
+  const notti = (dest.checkinData && dest.checkoutData) ? Math.max(diffGiorni(dest.checkinData, dest.checkoutData), 0) : 0;
+  const costoAlloggioTot = notti * (Number(dest.alloggio.costoNotte) || 0);
+  const costoLuoghiTot = dest.luoghi.reduce((s,l)=>s+(Number(l.costo)||0),0);
+  const costoShoppingTot = dest.shopping.reduce((s,l)=>s+(Number(l.costo)||0),0);
+  const costoPastiTot = costoPastiDestinazione(dest);
+  el.textContent = `${notti} notti — trasporto ${eur(costoMezziTot)} · alloggio ${eur(costoAlloggioTot)} · pasti ${eur(costoPastiTot)} · attività ${eur(costoLuoghiTot)} · shopping ${eur(costoShoppingTot)}`;
+}
+
 function toggleAccordion(destId, chiave){
   const d = trovaDest(destId);
   if(!d) return;
   d.accOpen[chiave] = !d.accOpen[chiave];
   salva(LS_DEST, destinazioni);
   renderDestinazioni();
+}
+
+/* Disegna il singolo blocco di una tratta di trasporto (aereo, treno, taxi...)
+   dentro l'accordion "Come arrivo qui" di una destinazione. */
+function renderMezzoBlock(dest, m, idx){
+  const p = dataOra(m.dataPartenza, m.oraPartenza);
+  const a = dataOra(m.dataArrivo, m.oraArrivo);
+  const durata = (p && a) ? formattaDurata(a - p) : '—';
+  return `
+    <div class="mezzo-item">
+      <div class="mezzo-item-head">
+        <span>${idx+1}. ${iconaMezzo(m.tipo)} ${labelMezzo(m.tipo)}</span>
+        <button class="btn btn-danger btn-small" data-action="del-mezzo" data-dest="${dest.id}" data-item="${m.id}">🗑️</button>
+      </div>
+      <div class="field-grid">
+        <div class="field"><label>Mezzo</label>
+          <select data-action="edit-mezzo" data-field="tipo" data-dest="${dest.id}" data-item="${m.id}">
+            <option value="aereo" ${m.tipo==='aereo'?'selected':''}>✈️ Aereo</option>
+            <option value="treno" ${m.tipo==='treno'?'selected':''}>🚆 Treno</option>
+            <option value="nave" ${m.tipo==='nave'?'selected':''}>🚢 Nave/traghetto</option>
+            <option value="bus" ${m.tipo==='bus'?'selected':''}>🚌 Bus</option>
+            <option value="auto-noleggio" ${m.tipo==='auto-noleggio'?'selected':''}>🚗 Auto a noleggio</option>
+            <option value="auto-propria" ${m.tipo==='auto-propria'?'selected':''}>🚙 Auto propria</option>
+            <option value="taxi" ${m.tipo==='taxi'?'selected':''}>🚕 Taxi/NCC</option>
+            <option value="altro" ${m.tipo==='altro'?'selected':''}>🔹 Altro</option>
+          </select>
+        </div>
+        <div class="field"><label>N. volo/treno (facoltativo)</label><input type="text" placeholder="Es. FR1234" value="${escapeHtml(m.numero)}" data-action="edit-mezzo" data-field="numero" data-dest="${dest.id}" data-item="${m.id}"></div>
+        <div class="field"><label>Costo (€)</label><input type="number" min="0" step="0.01" value="${m.costo}" data-action="edit-mezzo" data-field="costo" data-dest="${dest.id}" data-item="${m.id}"></div>
+      </div>
+      <div class="field-grid">
+        <div class="field"><label>Da (aeroporto/stazione/luogo)</label><input type="text" placeholder="Es. Milano Malpensa T1" value="${escapeHtml(m.luogoPartenza)}" data-action="edit-mezzo" data-field="luogoPartenza" data-dest="${dest.id}" data-item="${m.id}"></div>
+        <div class="field"><label>Data partenza</label><input type="date" value="${m.dataPartenza}" data-action="edit-mezzo" data-field="dataPartenza" data-dest="${dest.id}" data-item="${m.id}"></div>
+        <div class="field"><label>Ora partenza</label><input type="time" value="${m.oraPartenza}" data-action="edit-mezzo" data-field="oraPartenza" data-dest="${dest.id}" data-item="${m.id}"></div>
+      </div>
+      <div class="field-grid">
+        <div class="field"><label>A (aeroporto/stazione/luogo)</label><input type="text" placeholder="Es. Aeroporto di Nizza" value="${escapeHtml(m.luogoArrivo)}" data-action="edit-mezzo" data-field="luogoArrivo" data-dest="${dest.id}" data-item="${m.id}"></div>
+        <div class="field"><label>Data arrivo</label><input type="date" value="${m.dataArrivo}" data-action="edit-mezzo" data-field="dataArrivo" data-dest="${dest.id}" data-item="${m.id}"></div>
+        <div class="field"><label>Ora arrivo</label><input type="time" value="${m.oraArrivo}" data-action="edit-mezzo" data-field="oraArrivo" data-dest="${dest.id}" data-item="${m.id}"></div>
+      </div>
+      <div class="hint" id="mezzo-durata-${m.id}">Durata tragitto: ${durata}</div>
+    </div>`;
 }
 
 /* ---- Render principale destinazioni ---- */
@@ -603,13 +690,14 @@ function renderDestinazioni(){
     const costoLuoghiTot = dest.luoghi.reduce((s,l)=>s+(Number(l.costo)||0),0);
     const costoShoppingTot = dest.shopping.reduce((s,l)=>s+(Number(l.costo)||0),0);
     const costoPastiTot = costoPastiDestinazione(dest);
+    const costoMezziTot = (dest.mezzi||[]).reduce((s,m)=>s+(Number(m.costo)||0),0);
 
     const wrap = document.createElement('div');
     wrap.className = 'dest-card';
     wrap.innerHTML = `
       <div class="dest-head">
         <div class="dest-head-left">
-          <input type="text" class="dest-title-input" value="${escapeHtml(dest.nome)}" data-field="nome" data-dest="${dest.id}">
+          <input type="text" class="dest-title-input" placeholder="Nome destinazione (es. Firenze)" value="${escapeHtml(dest.nome)}" data-field="nome" data-dest="${dest.id}">
           <div class="ritorno-flag">
             <input type="checkbox" id="ritorno_${dest.id}" ${dest.ritorno ? 'checked' : ''} data-field="ritorno" data-dest="${dest.id}">
             <label for="ritorno_${dest.id}">🏠 Questo è il rientro finale (nessun alloggio/pasti/attività qui)</label>
@@ -620,29 +708,21 @@ function renderDestinazioni(){
             <div class="field"><label>Check-out</label><input type="date" value="${dest.checkoutData}" data-field="checkoutData" data-dest="${dest.id}"></div>
             <div class="field"><label>Ora check-out</label><input type="time" value="${dest.checkoutOra}" data-field="checkoutOra" data-dest="${dest.id}"></div>
           </div>
-          ${!dest.ritorno ? `<div class="hint" style="margin:6px 0 0 0;">${notti} notti — alloggio ${eur(costoAlloggioTot)} · pasti ${eur(costoPastiTot)} · attività ${eur(costoLuoghiTot)} · shopping ${eur(costoShoppingTot)}</div>` : ''}
+          <div class="hint" id="hint-${dest.id}" style="margin:6px 0 0 0;">${dest.ritorno ? `trasporto ${eur(costoMezziTot)}` : `${notti} notti — trasporto ${eur(costoMezziTot)} · alloggio ${eur(costoAlloggioTot)} · pasti ${eur(costoPastiTot)} · attività ${eur(costoLuoghiTot)} · shopping ${eur(costoShoppingTot)}`}</div>
         </div>
         <button class="btn btn-danger btn-small" data-action="elimina-dest" data-dest="${dest.id}">🗑️ Elimina</button>
       </div>
 
       <div class="accordion ${dest.accOpen.mezzo ? 'open':''}">
         <div class="accordion-head" data-action="toggle-acc" data-dest="${dest.id}" data-acc="mezzo">
-          <span>🚗 Come arrivo qui</span><span class="chev">▸</span>
+          <span>🚗 Come arrivo qui (${dest.mezzi.length})</span><span class="chev">▸</span>
         </div>
         <div class="accordion-body">
-          <div class="field-grid">
-            <div class="field"><label>Mezzo</label>
-              <select data-field="mezzoArrivo" data-dest="${dest.id}">
-                <option value="aereo" ${dest.mezzoArrivo==='aereo'?'selected':''}>✈️ Aereo</option>
-                <option value="nave" ${dest.mezzoArrivo==='nave'?'selected':''}>🚢 Nave</option>
-                <option value="treno" ${dest.mezzoArrivo==='treno'?'selected':''}>🚆 Treno</option>
-                <option value="bus" ${dest.mezzoArrivo==='bus'?'selected':''}>🚌 Bus</option>
-                <option value="auto-noleggio" ${dest.mezzoArrivo==='auto-noleggio'?'selected':''}>🚗 Auto a noleggio</option>
-                <option value="auto-propria" ${dest.mezzoArrivo==='auto-propria'?'selected':''}>🚙 Auto propria</option>
-              </select>
-            </div>
-            <div class="field"><label>Costo (€)</label><input type="number" min="0" step="0.01" value="${dest.costoMezzoArrivo}" data-field="costoMezzoArrivo" data-dest="${dest.id}"></div>
+          <div class="hint">Se per arrivare qui servono più mezzi (es. aereo + treno + taxi), aggiungili uno dopo l'altro, nell'ordine in cui li prendi.</div>
+          <div class="row-list">
+            ${dest.mezzi.map((m, idx) => renderMezzoBlock(dest, m, idx)).join('')}
           </div>
+          <button class="btn btn-add btn-small" data-action="add-mezzo" data-dest="${dest.id}">➕ Aggiungi mezzo</button>
         </div>
       </div>
 
@@ -663,10 +743,10 @@ function renderDestinazioni(){
             <div class="field"><label>Costo a notte (€)</label><input type="number" min="0" step="0.01" value="${dest.alloggio.costoNotte}" data-field="alloggio.costoNotte" data-dest="${dest.id}"></div>
           </div>
           <div class="field-grid">
-            <div class="field"><label>Indirizzo</label><input type="text" value="${escapeHtml(dest.alloggio.indirizzo)}" data-field="alloggio.indirizzo" data-dest="${dest.id}"></div>
-            <div class="field"><label>Nome referente</label><input type="text" value="${escapeHtml(dest.alloggio.referente)}" data-field="alloggio.referente" data-dest="${dest.id}"></div>
-            <div class="field"><label>Email</label><input type="text" value="${escapeHtml(dest.alloggio.email)}" data-field="alloggio.email" data-dest="${dest.id}"></div>
-            <div class="field"><label>Telefono</label><input type="text" value="${escapeHtml(dest.alloggio.telefono)}" data-field="alloggio.telefono" data-dest="${dest.id}"></div>
+            <div class="field"><label>Indirizzo</label><input type="text" placeholder="Via, città" value="${escapeHtml(dest.alloggio.indirizzo)}" data-field="alloggio.indirizzo" data-dest="${dest.id}"></div>
+            <div class="field"><label>Nome referente</label><input type="text" placeholder="Persona di contatto" value="${escapeHtml(dest.alloggio.referente)}" data-field="alloggio.referente" data-dest="${dest.id}"></div>
+            <div class="field"><label>Email</label><input type="text" placeholder="email@esempio.it" value="${escapeHtml(dest.alloggio.email)}" data-field="alloggio.email" data-dest="${dest.id}"></div>
+            <div class="field"><label>Telefono</label><input type="text" placeholder="+39..." value="${escapeHtml(dest.alloggio.telefono)}" data-field="alloggio.telefono" data-dest="${dest.id}"></div>
           </div>
         </div>
       </div>
@@ -680,7 +760,7 @@ function renderDestinazioni(){
             ${dest.luoghi.map(l => `
               <div class="row-item ${l.completato ? 'completato':''}">
                 <input type="checkbox" ${l.completato?'checked':''} data-action="toggle-luogo" data-dest="${dest.id}" data-item="${l.id}" title="Completato">
-                <input type="text" class="flex1" placeholder="Nome luogo/attività" value="${escapeHtml(l.nome)}" data-action="edit-luogo" data-field="nome" data-dest="${dest.id}" data-item="${l.id}">
+                <input type="text" class="flex1" placeholder="Es. Duomo, Galleria degli Uffizi..." value="${escapeHtml(l.nome)}" data-action="edit-luogo" data-field="nome" data-dest="${dest.id}" data-item="${l.id}">
                 <input type="date" value="${l.data}" data-action="edit-luogo" data-field="data" data-dest="${dest.id}" data-item="${l.id}">
                 <input type="time" value="${l.ora}" data-action="edit-luogo" data-field="ora" data-dest="${dest.id}" data-item="${l.id}">
                 <select data-action="edit-luogo" data-field="mezzo" data-dest="${dest.id}" data-item="${l.id}">
@@ -722,11 +802,11 @@ function renderDestinazioni(){
           <span>🍽️ Pasti fuori casa</span><span class="chev">▸</span>
         </div>
         <div class="accordion-body">
-          <div class="hint">Calcolati automaticamente da check-in/check-out e orari; puoi correggerli manualmente in ogni riga.</div>
+          <div class="hint">Calcolati automaticamente da check-in/check-out e orari; puoi correggerli manualmente in ogni riga (es. se sei già arrivato in zona ma il check-in in hotel è più tardi).</div>
           ${Object.keys(dest.pasti).sort().map(iso => {
             const p = dest.pasti[iso];
             return `
-            <div class="meal-row">
+            <div class="meal-row" data-dest-id="${dest.id}" data-data="${iso}">
               <span class="meal-date">${formattaDataIt(iso)}</span>
               <label class="meal-chip"><input type="checkbox" ${p.colazione?'checked':''} data-action="edit-pasto" data-dest="${dest.id}" data-data="${iso}" data-pasto="colazione"> Colazione</label>
               <label class="meal-chip"><input type="checkbox" ${p.pranzo?'checked':''} data-action="edit-pasto" data-dest="${dest.id}" data-data="${iso}" data-pasto="pranzo"> Pranzo</label>
@@ -734,6 +814,19 @@ function renderDestinazioni(){
               <span class="meal-total">${eur(costoPastiGiorno(p))}</span>
             </div>`;
           }).join('') || '<div class="hint">Imposta check-in e check-out per generare i pasti.</div>'}
+
+          <div class="hint" style="margin-top:12px;">Pasti extra fuori dagli schemi (es. arrivato in zona di mattina ma check-in la sera, spuntino, pasto in aeroporto/stazione...):</div>
+          <div class="row-list">
+            ${dest.extraPasti.map(e => `
+              <div class="row-item">
+                <input type="date" value="${e.data}" data-action="edit-extra-pasto" data-field="data" data-dest="${dest.id}" data-item="${e.id}">
+                <input type="text" class="flex1" placeholder="Es. Pranzo in aeroporto" value="${escapeHtml(e.descrizione)}" data-action="edit-extra-pasto" data-field="descrizione" data-dest="${dest.id}" data-item="${e.id}">
+                <input type="number" min="0" step="0.01" placeholder="Costo €" style="width:100px" value="${e.costo}" data-action="edit-extra-pasto" data-field="costo" data-dest="${dest.id}" data-item="${e.id}">
+                <button class="btn btn-danger btn-small" data-action="del-extra-pasto" data-dest="${dest.id}" data-item="${e.id}">🗑️</button>
+              </div>
+            `).join('')}
+          </div>
+          <button class="btn btn-add btn-small" data-action="add-extra-pasto" data-dest="${dest.id}">➕ Aggiungi pasto extra</button>
         </div>
       </div>
       ` : ''}
@@ -744,26 +837,65 @@ function renderDestinazioni(){
   attachDestListeners();
 }
 
+/* Campi che, se cambiati, richiedono un ridisegno strutturale della card
+   (compaiono/scompaiono sezioni, cambiano le righe pasto). Su questi si
+   ridisegna, ma solo al termine della scelta (evento "change"), mai a ogni
+   carattere digitato. */
+const CAMPI_STRUTTURALI = ['checkinData','checkinOra','checkoutData','checkoutOra','ritorno','alloggio.tipo'];
+
+function leggiEAggiornaCampo(el){
+  const dest = trovaDest(el.dataset.dest);
+  if(!dest) return null;
+  const field = el.dataset.field;
+  const val = el.type === 'checkbox' ? el.checked : el.value;
+  if(field.includes('.')){
+    const [obj, key] = field.split('.');
+    dest[obj][key] = (el.type === 'number') ? (parseFloat(val)||0) : val;
+  } else {
+    dest[field] = (el.type === 'number') ? (parseFloat(val)||0) : val;
+  }
+  return {dest, field};
+}
+
 function attachDestListeners(){
   const container = document.getElementById('destContainer');
 
   container.querySelectorAll('[data-action="elimina-dest"]').forEach(b => b.addEventListener('click', () => eliminaDestinazione(b.dataset.dest)));
-  container.querySelectorAll('[data-action="toggle-acc"]').forEach(b => b.addEventListener('click', () => toggleAccordion(b.dataset.dest, b.dataset.acc)));
 
+  // Accordion: aggiorna solo la classe "open", nessun full-render (evita di
+  // perdere la posizione di scroll e di ricostruire tutti i campi)
+  container.querySelectorAll('[data-action="toggle-acc"]').forEach(b => b.addEventListener('click', () => {
+    const dest = trovaDest(b.dataset.dest);
+    dest.accOpen[b.dataset.acc] = !dest.accOpen[b.dataset.acc];
+    salva(LS_DEST, destinazioni);
+    b.closest('.accordion').classList.toggle('open');
+  }));
+
+  // Campi di testo/numero semplici (nome, indirizzo, email, telefono, referente,
+  // costoNotte): SOLO salvataggio + aggiornamento leggero.
+  // Nessun full-render mentre si digita, altrimenti l'input perde il focus
+  // dopo ogni carattere (bug tastiera che "scompare").
   container.querySelectorAll('[data-field]').forEach(el => {
+    if(CAMPI_STRUTTURALI.includes(el.dataset.field)) return; // gestiti sotto
     el.addEventListener('input', () => {
-      const dest = trovaDest(el.dataset.dest);
-      if(!dest) return;
-      const field = el.dataset.field;
-      const val = el.type === 'checkbox' ? el.checked : el.value;
-      if(field.includes('.')){
-        const [obj, key] = field.split('.');
-        dest[obj][key] = (el.type === 'number') ? (parseFloat(val)||0) : val;
-      } else {
-        dest[field] = (el.type === 'number') ? (parseFloat(val)||0) : val;
-      }
-      if(['checkinData','checkinOra','checkoutData','checkoutOra','ritorno'].includes(field)){
-        ricalcolaPastiDestinazione(dest);
+      const r = leggiEAggiornaCampo(el);
+      if(!r) return;
+      salva(LS_DEST, destinazioni);
+      updateDestHint(r.dest);
+      renderRiepilogo();
+      if(r.field === 'nome') renderReminder();
+    });
+  });
+
+  // Campi strutturali (date/ore check-in/out, tipo alloggio, mezzo, rientro):
+  // ridisegno completo, ma solo a scelta conclusa ("change"), non ad ogni tasto.
+  container.querySelectorAll('[data-field]').forEach(el => {
+    if(!CAMPI_STRUTTURALI.includes(el.dataset.field)) return;
+    el.addEventListener('change', () => {
+      const r = leggiEAggiornaCampo(el);
+      if(!r) return;
+      if(['checkinData','checkinOra','checkoutData','checkoutOra','ritorno'].includes(r.field)){
+        ricalcolaPastiDestinazione(r.dest);
       }
       salva(LS_DEST, destinazioni);
       renderDestinazioni();
@@ -784,19 +916,74 @@ function attachDestListeners(){
     dest.luoghi = dest.luoghi.filter(l => l.id !== b.dataset.item);
     salva(LS_DEST, destinazioni); renderDestinazioni(); renderRiepilogo(); renderReminder();
   }));
-  container.querySelectorAll('[data-action="toggle-luogo"]').forEach(b => b.addEventListener('click', () => {
+  container.querySelectorAll('[data-action="toggle-luogo"]').forEach(b => b.addEventListener('change', () => {
     const dest = trovaDest(b.dataset.dest);
     const l = dest.luoghi.find(x => x.id === b.dataset.item);
     l.completato = b.checked;
-    salva(LS_DEST, destinazioni); renderDestinazioni();
+    salva(LS_DEST, destinazioni);
+    b.closest('.row-item').classList.toggle('completato', l.completato);
   }));
+  // Nome/data/ora/mezzo/costo del luogo: mai full-render, solo salvataggio +
+  // aggiornamento di riepilogo/reminder (che vivono in un contenitore diverso
+  // e quindi non tolgono il focus al campo che si sta scrivendo).
   container.querySelectorAll('[data-action="edit-luogo"]').forEach(el => el.addEventListener('input', () => {
     const dest = trovaDest(el.dataset.dest);
     const l = dest.luoghi.find(x => x.id === el.dataset.item);
     l[el.dataset.field] = (el.type === 'number') ? (parseFloat(el.value)||0) : el.value;
     salva(LS_DEST, destinazioni);
-    renderRiepilogo(); renderReminder();
-    if(el.dataset.field !== 'nome' && el.dataset.field !== 'costo') renderDestinazioni();
+    if(el.dataset.field === 'costo'){ updateDestHint(dest); renderRiepilogo(); }
+    if(el.dataset.field === 'data' || el.dataset.field === 'nome') renderReminder();
+  }));
+
+  // Mezzi di trasporto ("Come arrivo qui")
+  container.querySelectorAll('[data-action="add-mezzo"]').forEach(b => b.addEventListener('click', () => {
+    const dest = trovaDest(b.dataset.dest);
+    dest.mezzi.push(nuovoMezzo());
+    salva(LS_DEST, destinazioni); renderDestinazioni(); renderRiepilogo(); renderReminder();
+  }));
+  container.querySelectorAll('[data-action="del-mezzo"]').forEach(b => b.addEventListener('click', () => {
+    if(!confirm('Eliminare questa tratta di trasporto?')) return;
+    const dest = trovaDest(b.dataset.dest);
+    dest.mezzi = dest.mezzi.filter(m => m.id !== b.dataset.item);
+    if(dest.mezzi.length === 0) dest.mezzi.push(nuovoMezzo());
+    salva(LS_DEST, destinazioni); renderDestinazioni(); renderRiepilogo(); renderReminder();
+  }));
+  // Campi del mezzo: mai full-render (evita di perdere il focus mentre si scrive);
+  // aggiorniamo solo la durata mostrata nel blocco, l'hint della card e il riepilogo.
+  container.querySelectorAll('[data-action="edit-mezzo"]').forEach(el => el.addEventListener('input', () => {
+    const dest = trovaDest(el.dataset.dest);
+    const m = dest.mezzi.find(x => x.id === el.dataset.item);
+    m[el.dataset.field] = (el.type === 'number') ? (parseFloat(el.value)||0) : el.value;
+    salva(LS_DEST, destinazioni);
+    if(el.dataset.field === 'costo'){ updateDestHint(dest); renderRiepilogo(); }
+    if(['dataPartenza','oraPartenza','dataArrivo','oraArrivo'].includes(el.dataset.field)){
+      const p = dataOra(m.dataPartenza, m.oraPartenza);
+      const a = dataOra(m.dataArrivo, m.oraArrivo);
+      const durataEl = document.getElementById('mezzo-durata-'+m.id);
+      if(durataEl) durataEl.textContent = 'Durata tragitto: ' + ((p && a) ? formattaDurata(a - p) : '—');
+      renderReminder();
+    }
+  }));
+
+  // Pasti extra manuali (fuori dallo schema automatico colazione/pranzo/cena)
+  container.querySelectorAll('[data-action="add-extra-pasto"]').forEach(b => b.addEventListener('click', () => {
+    const dest = trovaDest(b.dataset.dest);
+    dest.extraPasti.push({id:nuovoId('extrapasto'), data: dest.checkinData || '', descrizione:'', costo:0});
+    salva(LS_DEST, destinazioni); renderDestinazioni(); renderRiepilogo();
+  }));
+  container.querySelectorAll('[data-action="del-extra-pasto"]').forEach(b => b.addEventListener('click', () => {
+    if(!confirm('Eliminare questo pasto extra?')) return;
+    const dest = trovaDest(b.dataset.dest);
+    dest.extraPasti = dest.extraPasti.filter(e => e.id !== b.dataset.item);
+    salva(LS_DEST, destinazioni); renderDestinazioni(); renderRiepilogo();
+  }));
+  container.querySelectorAll('[data-action="edit-extra-pasto"]').forEach(el => el.addEventListener('input', () => {
+    const dest = trovaDest(el.dataset.dest);
+    const e = dest.extraPasti.find(x => x.id === el.dataset.item);
+    e[el.dataset.field] = (el.type === 'number') ? (parseFloat(el.value)||0) : el.value;
+    salva(LS_DEST, destinazioni);
+    updateDestHint(dest);
+    renderRiepilogo();
   }));
 
   // Shopping
@@ -816,15 +1003,18 @@ function attachDestListeners(){
     const s = dest.shopping.find(x => x.id === el.dataset.item);
     s[el.dataset.field] = (el.type === 'number') ? (parseFloat(el.value)||0) : el.value;
     salva(LS_DEST, destinazioni);
-    renderRiepilogo();
+    if(el.dataset.field === 'costo'){ updateDestHint(dest); renderRiepilogo(); }
   }));
 
-  // Pasti
+  // Pasti: flag manuale, cambia solo il totale della riga (nessun full-render)
   container.querySelectorAll('[data-action="edit-pasto"]').forEach(el => el.addEventListener('change', () => {
     const dest = trovaDest(el.dataset.dest);
     dest.pasti[el.dataset.data][el.dataset.pasto] = el.checked;
     salva(LS_DEST, destinazioni);
-    renderDestinazioni(); renderRiepilogo();
+    const row = el.closest('.meal-row');
+    row.querySelector('.meal-total').textContent = eur(costoPastiGiorno(dest.pasti[el.dataset.data]));
+    updateDestHint(dest);
+    renderRiepilogo();
   }));
 }
 
@@ -832,10 +1022,10 @@ function attachDestListeners(){
    RIEPILOGO COSTI
    ================================================================ */
 function renderRiepilogo(){
-  let totPasti = 0, totTrasporti = tratta.costo || 0, totAlloggi = 0, totShopping = 0, totAttivita = 0;
+  let totPasti = 0, totTrasporti = 0, totAlloggi = 0, totShopping = 0, totAttivita = 0;
 
   destinazioni.forEach(dest => {
-    totTrasporti += Number(dest.costoMezzoArrivo) || 0;
+    totTrasporti += (dest.mezzi||[]).reduce((s,m)=>s+(Number(m.costo)||0),0);
     if(!dest.ritorno){
       const notti = (dest.checkinData && dest.checkoutData) ? Math.max(diffGiorni(dest.checkinData, dest.checkoutData), 0) : 0;
       totAlloggi += notti * (Number(dest.alloggio.costoNotte) || 0);
@@ -864,10 +1054,12 @@ function renderReminder(){
     eventi[iso].push(testo);
   }
 
-  if(tratta.dataPartenza) push(tratta.dataPartenza, `🚀 Partenza (${tratta.mezzo}) ore ${tratta.oraPartenza || '—'}`);
-  if(tratta.dataArrivo) push(tratta.dataArrivo, `🛬 Arrivo alla prima destinazione ore ${tratta.oraArrivo || '—'}`);
-
   destinazioni.forEach(dest => {
+    (dest.mezzi||[]).forEach(m => {
+      const etichetta = `${iconaMezzo(m.tipo)} ${labelMezzo(m.tipo)}${m.numero ? ' '+m.numero : ''}`;
+      if(m.dataPartenza) push(m.dataPartenza, `${etichetta} — partenza verso "${dest.nome || 'destinazione'}"${m.oraPartenza ? ' ore '+m.oraPartenza : ''}${m.luogoPartenza ? ' da '+m.luogoPartenza : ''}`);
+      if(m.dataArrivo) push(m.dataArrivo, `${etichetta} — arrivo a "${dest.nome || 'destinazione'}"${m.oraArrivo ? ' ore '+m.oraArrivo : ''}${m.luogoArrivo ? ' presso '+m.luogoArrivo : ''}`);
+    });
     if(dest.ritorno){
       if(dest.checkinData) push(dest.checkinData, `🏠 Rientro a casa`);
       return;
@@ -912,7 +1104,6 @@ document.getElementById('btnAddDest').addEventListener('click', aggiungiDestinaz
 window.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initGenerale();
-  initTratta();
   ricalcolaTuttiPastiEsistenti();
   renderDestinazioni();
   renderRiepilogo();
