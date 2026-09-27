@@ -186,11 +186,43 @@
   }
   .mezzo-item .field-grid{ margin-bottom:8px; }
   .mezzo-item .hint{ margin:0; font-weight:700; color:#374151; }
+
+  /* ================= REPORT STAMPABILE ================= */
+  #reportStampa{ display:none; }
+  .report-header{ text-align:center; margin-bottom:18px; }
+  .report-header h1{ margin:0 0 6px 0; font-size:24px; }
+  .report-meta{ color:#374151; font-size:13px; }
+  .report-section{ margin-bottom:22px; }
+  .report-section > h2{
+    font-size:16px; border-bottom:2px solid #1e88e5; padding-bottom:4px; margin-bottom:10px;
+  }
+  .report-table{ width:100%; border-collapse:collapse; font-size:14px; }
+  .report-table td{ padding:4px 6px; border-bottom:1px solid #e6e9ef; }
+  .report-table tr.tot td{ font-weight:700; border-top:2px solid #1e88e5; border-bottom:none; }
+  .report-dest{
+    border:1px solid #d7dce5; border-radius:8px; padding:12px 14px; margin-bottom:14px;
+    break-inside:avoid; page-break-inside:avoid;
+  }
+  .report-dest h3{ margin:0 0 4px 0; font-size:16px; }
+  .report-sub{ color:#374151; font-size:13px; margin-bottom:8px; }
+  .report-block{ margin:8px 0; }
+  .report-block-title{ font-weight:700; font-size:13px; color:#1e88e5; margin-bottom:3px; }
+  .report-line{ font-size:13px; margin:2px 0; }
+  .report-line.tot{ font-weight:700; margin-top:6px; }
+  .reminder-day-print{ margin-bottom:8px; break-inside:avoid; }
+  .reminder-day-print-title{ font-weight:700; font-size:13px; margin-bottom:2px; }
+
+  @media print{
+    #appContainer, .travel-nav-divider{ display:none !important; }
+    #reportStampa{ display:block !important; }
+    body{ background:#fff; padding:0; display:block; }
+    @page{ margin:16mm 14mm; }
+  }
 </style>
 </head>
 <body>
 
-<div class="container">
+<div class="container" id="appContainer">
 
   <!-- NAV SUPERIORE — identica al resto della suite -->
   <nav class="nav">
@@ -218,7 +250,10 @@
 
   <div class="card">
     <div class="section-title" id="pageTitle">✈️ Pianificazione Viaggio</div>
-    <div class="hint">Tutto parte dalla data di partenza e termina con il rientro a casa. I dati si salvano automaticamente.</div>
+    <div class="hint" style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+      <span>Tutto parte dalla data di partenza e termina con il rientro a casa. I dati si salvano automaticamente.</span>
+      <button class="btn btn-add btn-small" id="btnStampaReport" style="white-space:nowrap;">🖨️ Stampa report</button>
+    </div>
 
     <div class="tabs">
       <button class="tab-btn active" data-tab="tabGenerale">Generale</button>
@@ -302,6 +337,11 @@
   </nav>
 
 </div>
+
+<!-- ============ REPORT STAMPABILE ============
+     Nascosto normalmente; viene mostrato SOLO in stampa/anteprima di stampa,
+     al posto dell'app interattiva (vedi regole @media print). -->
+<div id="reportStampa"></div>
 
 <script>
 /* ================================================================
@@ -390,6 +430,9 @@ function iconaMezzo(tipo){
 }
 function labelMezzo(tipo){
   return {aereo:'Aereo', treno:'Treno', nave:'Nave/traghetto', bus:'Bus', 'auto-noleggio':'Auto a noleggio', 'auto-propria':'Auto propria', taxi:'Taxi/NCC', altro:'Altro'}[tipo] || 'Mezzo';
+}
+function labelAlloggio(tipo){
+  return {hotel:'Hotel', bb:'B&B', appartamento:'Appartamento'}[tipo] || tipo || 'Alloggio';
 }
 
 /* ================================================================
@@ -1046,14 +1089,15 @@ function renderRiepilogo(){
 /* ================================================================
    REMINDER — vista cronologica
    ================================================================ */
-function renderReminder(){
-  const eventi = {}; // data -> [testi]
+/* Costruisce la mappa data -> [eventi] usata sia dal tab Reminder sia dal report
+   stampabile, così le due viste restano sempre coerenti. */
+function costruisciEventi(){
+  const eventi = {};
   function push(iso, testo){
     if(!iso) return;
     if(!eventi[iso]) eventi[iso] = [];
     eventi[iso].push(testo);
   }
-
   destinazioni.forEach(dest => {
     (dest.mezzi||[]).forEach(m => {
       const etichetta = `${iconaMezzo(m.tipo)} ${labelMezzo(m.tipo)}${m.numero ? ' '+m.numero : ''}`;
@@ -1070,8 +1114,11 @@ function renderReminder(){
       if(l.data) push(l.data, `📍 ${l.nome || '(luogo senza nome)'} — ${dest.nome}${l.ora ? ' ore '+l.ora : ''}`);
     });
   });
+  return { eventi, dateOrdinate: Object.keys(eventi).sort() };
+}
 
-  const dateOrdinate = Object.keys(eventi).sort();
+function renderReminder(){
+  const { eventi, dateOrdinate } = costruisciEventi();
   const container = document.getElementById('reminderContainer');
   document.getElementById('emptyReminderNote').style.display = dateOrdinate.length === 0 ? 'block' : 'none';
   container.innerHTML = dateOrdinate.map(iso => `
@@ -1080,6 +1127,140 @@ function renderReminder(){
       ${eventi[iso].map(t => `<div class="reminder-item">${escapeHtml(t)}</div>`).join('')}
     </div>
   `).join('');
+}
+
+/* ================================================================
+   REPORT STAMPABILE
+   ================================================================ */
+function renderDestReport(dest){
+  const notti = (!dest.ritorno && dest.checkinData && dest.checkoutData) ? Math.max(diffGiorni(dest.checkinData, dest.checkoutData), 0) : 0;
+  const costoAlloggioTot = notti * (Number(dest.alloggio.costoNotte) || 0);
+  const costoLuoghiTot = dest.luoghi.reduce((s,l)=>s+(Number(l.costo)||0),0);
+  const costoShoppingTot = dest.shopping.reduce((s,l)=>s+(Number(l.costo)||0),0);
+  const costoPastiTot = costoPastiDestinazione(dest);
+  const costoMezziTot = (dest.mezzi||[]).reduce((s,m)=>s+(Number(m.costo)||0),0);
+  const totaleDest = costoMezziTot + costoAlloggioTot + costoPastiTot + costoLuoghiTot + costoShoppingTot;
+
+  const bloccoMezzi = (dest.mezzi||[]).length ? `
+    <div class="report-block">
+      <div class="report-block-title">Come arrivare</div>
+      ${dest.mezzi.map(m => `<div class="report-line">${iconaMezzo(m.tipo)} ${labelMezzo(m.tipo)}${m.numero?' '+escapeHtml(m.numero):''} — ${escapeHtml(m.luogoPartenza)||'?'} (${formattaDataIt(m.dataPartenza)}${m.oraPartenza?' ore '+m.oraPartenza:''}) → ${escapeHtml(m.luogoArrivo)||'?'} (${formattaDataIt(m.dataArrivo)}${m.oraArrivo?' ore '+m.oraArrivo:''}) — ${eur(m.costo)}</div>`).join('')}
+    </div>` : '';
+
+  if(dest.ritorno){
+    return `
+    <div class="report-dest">
+      <h3>🏠 Rientro a casa</h3>
+      ${dest.checkinData ? `<div class="report-sub">${formattaDataIt(dest.checkinData)}${dest.checkinOra?' ore '+dest.checkinOra:''}</div>` : ''}
+      ${bloccoMezzi}
+      <div class="report-line tot">Totale rientro: ${eur(totaleDest)}</div>
+    </div>`;
+  }
+
+  const righePasti = Object.keys(dest.pasti).sort().map(iso => {
+    const p = dest.pasti[iso];
+    const voci = [p.colazione && 'colazione', p.pranzo && 'pranzo', p.cena && 'cena'].filter(Boolean);
+    return `<div class="report-line">${formattaDataIt(iso)}: ${voci.length ? voci.join(', ') : 'nessun pasto previsto'} — ${eur(costoPastiGiorno(p))}</div>`;
+  }).join('') + (dest.extraPasti||[]).map(e => `<div class="report-line">${formattaDataIt(e.data)}: ${escapeHtml(e.descrizione)||'pasto extra'} — ${eur(e.costo)}</div>`).join('');
+
+  return `
+    <div class="report-dest">
+      <h3>📍 ${escapeHtml(dest.nome) || 'Destinazione'}</h3>
+      <div class="report-sub">${formattaDataIt(dest.checkinData)} → ${formattaDataIt(dest.checkoutData)} (${notti} notti)</div>
+
+      ${bloccoMezzi}
+
+      <div class="report-block">
+        <div class="report-block-title">Alloggio</div>
+        <div class="report-line">${labelAlloggio(dest.alloggio.tipo)}${dest.alloggio.indirizzo ? ' — '+escapeHtml(dest.alloggio.indirizzo) : ''}</div>
+        ${dest.alloggio.referente ? `<div class="report-line">Referente: ${escapeHtml(dest.alloggio.referente)}</div>` : ''}
+        ${dest.alloggio.telefono ? `<div class="report-line">Tel: ${escapeHtml(dest.alloggio.telefono)}</div>` : ''}
+        ${dest.alloggio.email ? `<div class="report-line">Email: ${escapeHtml(dest.alloggio.email)}</div>` : ''}
+        <div class="report-line">Costo a notte: ${eur(dest.alloggio.costoNotte)} × ${notti} notti = ${eur(costoAlloggioTot)}</div>
+      </div>
+
+      <div class="report-block">
+        <div class="report-block-title">Pasti</div>
+        ${righePasti || '<div class="report-line">Nessun pasto registrato.</div>'}
+        <div class="report-line tot">Totale pasti: ${eur(costoPastiTot)}</div>
+      </div>
+
+      ${dest.luoghi.length ? `
+      <div class="report-block">
+        <div class="report-block-title">Luoghi e attività</div>
+        ${dest.luoghi.map(l => `<div class="report-line">${l.completato?'✅':'◻️'} ${escapeHtml(l.nome)||'—'}${l.data?' — '+formattaDataIt(l.data):''}${l.ora?' ore '+l.ora:''} — ${eur(l.costo)}</div>`).join('')}
+      </div>` : ''}
+
+      ${dest.shopping.length ? `
+      <div class="report-block">
+        <div class="report-block-title">Shopping</div>
+        ${dest.shopping.map(s => `<div class="report-line">${escapeHtml(s.descrizione)||'—'} — ${eur(s.costo)}</div>`).join('')}
+      </div>` : ''}
+
+      <div class="report-line tot">Totale destinazione: ${eur(totaleDest)}</div>
+    </div>`;
+}
+
+function generaReportStampa(){
+  let totPasti=0, totTrasporti=0, totAlloggi=0, totShopping=0, totAttivita=0;
+  destinazioni.forEach(dest => {
+    totTrasporti += (dest.mezzi||[]).reduce((s,m)=>s+(Number(m.costo)||0),0);
+    if(!dest.ritorno){
+      const notti = (dest.checkinData && dest.checkoutData) ? Math.max(diffGiorni(dest.checkinData, dest.checkoutData), 0) : 0;
+      totAlloggi += notti * (Number(dest.alloggio.costoNotte) || 0);
+      totAttivita += dest.luoghi.reduce((s,l)=>s+(Number(l.costo)||0),0);
+      totShopping += dest.shopping.reduce((s,l)=>s+(Number(l.costo)||0),0);
+      totPasti += costoPastiDestinazione(dest);
+    } else {
+      totPasti += costoPastiDestinazione(dest);
+    }
+  });
+  const totale = totPasti + totTrasporti + totAlloggi + totShopping + totAttivita;
+
+  const { eventi, dateOrdinate } = costruisciEventi();
+
+  document.getElementById('reportStampa').innerHTML = `
+    <div class="report-header">
+      <h1>✈️ ${escapeHtml(generale.nomeViaggio) || 'Piano di viaggio'}</h1>
+      <div class="report-meta">
+        Partenza: ${formattaDataIt(generale.dataPartenza) || '—'}${generale.oraPartenza ? ' ore '+generale.oraPartenza : ''}
+        &nbsp;·&nbsp; Rientro: ${formattaDataIt(generale.dataRientro) || '—'}${generale.oraRientro ? ' ore '+generale.oraRientro : ''}
+        <br>Partecipanti: ${generale.adulti || 0} adulti, ${generale.bambini || 0} bambini
+      </div>
+    </div>
+
+    <div class="report-section">
+      <h2>Riepilogo costi</h2>
+      <table class="report-table">
+        <tr><td>🚗 Trasporti</td><td>${eur(totTrasporti)}</td></tr>
+        <tr><td>🏨 Alloggi</td><td>${eur(totAlloggi)}</td></tr>
+        <tr><td>🍽️ Pasti</td><td>${eur(totPasti)}</td></tr>
+        <tr><td>📍 Biglietti attività</td><td>${eur(totAttivita)}</td></tr>
+        <tr><td>🛍️ Shopping</td><td>${eur(totShopping)}</td></tr>
+        <tr class="tot"><td>Totale generale</td><td>${eur(totale)}</td></tr>
+      </table>
+    </div>
+
+    <div class="report-section">
+      <h2>Itinerario</h2>
+      ${destinazioni.map(renderDestReport).join('') || '<div class="report-line">Nessuna destinazione inserita.</div>'}
+    </div>
+
+    <div class="report-section">
+      <h2>Promemoria cronologico</h2>
+      ${dateOrdinate.map(iso => `
+        <div class="reminder-day-print">
+          <div class="reminder-day-print-title">${formattaDataIt(iso)} — ${iso}</div>
+          ${eventi[iso].map(t => `<div class="report-line">${escapeHtml(t)}</div>`).join('')}
+        </div>
+      `).join('') || '<div class="report-line">Nessun evento programmato.</div>'}
+    </div>
+  `;
+}
+
+function stampaReport(){
+  generaReportStampa();
+  window.print();
 }
 
 /* ================================================================
@@ -1100,6 +1281,7 @@ function initTabs(){
    INIT
    ================================================================ */
 document.getElementById('btnAddDest').addEventListener('click', aggiungiDestinazione);
+document.getElementById('btnStampaReport').addEventListener('click', stampaReport);
 
 window.addEventListener('DOMContentLoaded', () => {
   initTabs();
