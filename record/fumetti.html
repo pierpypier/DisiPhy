@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Organizer — Creatore Fumetti</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  :root{
+    --bg:#f6f8fb;
+    --card:#ffffff;
+    --accent:#1e88e5;
+    --muted:#6b7280;
+    --danger:#E3DCC9;
+    --shadow:0 6px 18px rgba(20,30,50,0.06);
+    --radius:12px;
+    --max-width:1080px;
+    --warn:#b8442c;
+    --yellow:#ffe066;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px;
+    display:flex; justify-content:center;
+    color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  .card{
+    background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+    padding:16px; margin-bottom:18px;
+  }
+  .section-title{ font-size:18px; font-weight:800; color:var(--accent); margin:0 0 12px 0; }
+  .hint{ font-size:12px; color:var(--muted); margin:6px 0 0 0; text-align:center; }
+
+  /* ===================== TOOLBAR — solo icone ===================== */
+  .toolbar{ display:flex; flex-wrap:wrap; gap:16px; justify-content:center; align-items:center; }
+  .tool-group{ display:flex; gap:8px; flex-wrap:wrap; }
+  .icon-btn{
+    width:42px; height:42px; border-radius:50%;
+    background:#eef2f7; border:none; color:#374151;
+    font-size:18px; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; transition:transform .1s ease, background .15s ease;
+  }
+  .icon-btn:hover{ background:#e1e9f7; }
+  .icon-btn:active{ transform:scale(0.93); }
+  .icon-btn.danger{ background:var(--danger); color:#7a3b1f; }
+  .icon-btn.accent{ background:var(--accent); color:#fff; }
+  .tool-sep{ width:1px; background:#e6e9ef; margin:2px 4px; }
+  @media (max-width:560px){ .tool-sep{ display:none; } }
+
+  /* ===================== STAGE / FOGLIO ===================== */
+  .stage{ display:flex; justify-content:center; padding:6px 0 4px; }
+  .sheet{
+    position:relative;
+    width:min(94vw, 620px);
+    aspect-ratio:210/297;
+    background:#fdfbf5;
+    border-radius:8px;
+    box-shadow:0 10px 26px rgba(20,30,50,0.14), 0 0 0 1px #e6e9ef;
+    display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr 1fr;
+    gap:10px; padding:12px; --u:6px;
+  }
+
+  /* ===================== PANNELLO / VIGNETTA ===================== */
+  .panel{
+    position:relative; background:#eef2f7;
+    border:4px solid #111; border-radius:4px;
+    overflow:hidden; touch-action:none; user-select:none;
+  }
+  .panel .empty-state{
+    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:5px; color:var(--muted); font-size:11px; font-weight:700; text-align:center; padding:6px;
+    pointer-events:none;
+  }
+  .panel .empty-state .ic{ font-size:20px; opacity:0.7; }
+  .panel img.panel-img{ position:absolute; top:0; left:0; max-width:none; max-height:none; display:block; pointer-events:none; }
+  .panel-tools{ position:absolute; top:4px; right:4px; display:flex; gap:4px; z-index:5; }
+  .panel-tools button{
+    width:24px; height:24px; border-radius:50%; background:rgba(17,17,17,0.68); color:#fff; border:none;
+    font-size:12px; cursor:pointer; display:flex; align-items:center; justify-content:center;
+  }
+  .panel-tools button:hover{ background:var(--accent); }
+  .panel input[type=file]{ display:none; }
+
+  /* Maniglia di ridimensionamento immagine (zoom diretto) */
+  .img-resize-handle{
+    position:absolute; bottom:3px; right:3px; width:22px; height:22px; border-radius:50%;
+    background:rgba(30,136,229,0.85); color:#fff; font-size:12px;
+    display:none; align-items:center; justify-content:center; cursor:nwse-resize; z-index:5;
+  }
+  .panel.has-img .img-resize-handle{ display:flex; }
+
+  /* ===================== OVERLAY (fumetti/didascalie) ===================== */
+  .overlay{ position:absolute; min-width:60px; min-height:40px; z-index:20; cursor:grab; touch-action:none; }
+  .overlay .handle, .overlay .del-btn, .overlay .resize-handle, .overlay .flip-btn{
+    position:absolute; border-radius:50%; color:#fff; font-size:12px;
+    display:none; align-items:center; justify-content:center; z-index:2; box-shadow:0 2px 6px rgba(0,0,0,0.3);
+  }
+  .overlay .handle{ top:-13px; left:-13px; width:26px; height:26px; background:var(--accent); cursor:move; }
+  .overlay .del-btn{ top:-13px; right:-13px; width:24px; height:24px; background:var(--warn); font-weight:900; cursor:pointer; border:none; }
+  .overlay .resize-handle{ bottom:-13px; right:-13px; width:24px; height:24px; background:#2f7a3d; cursor:nwse-resize; }
+  .overlay .flip-btn{ bottom:-13px; left:-13px; width:24px; height:24px; background:#7b1fa2; font-weight:900; cursor:pointer; border:none; padding:0; }
+  .overlay.selected .handle, .overlay.selected .del-btn, .overlay.selected .resize-handle, .overlay.selected .flip-btn{ display:flex; }
+  .overlay.selected .bubble-shape{ outline:2px dashed var(--accent); outline-offset:3px; }
+
+  .bubble-shape{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; position:relative; }
+  .overlay .content{ outline:none; text-align:center; word-break:break-word; width:100%; line-height:1.22; }
+
+  /* Tutte le misure dei fumetti sono in "u" = 1% della larghezza del foglio (--u, impostata via JS).
+     Così bordi, testo, codine e pallini scalano insieme al layout e l'export JPG risulta identico allo schermo. */
+  .overlay .tail, .overlay .dots{ position:absolute; pointer-events:none; overflow:visible; z-index:1; }
+  .overlay .tail{ left:0; top:calc(100% - var(--u)); width:calc(var(--u)*12); height:calc(var(--u)*6); }
+  .overlay .dots{ left:calc(30% - var(--u)*5); top:100%; width:calc(var(--u)*10); height:calc(var(--u)*8); }
+  .overlay.flip .tail{ left:auto; right:0; transform:scaleX(-1); }
+  .overlay.flip .dots{ left:auto; right:calc(30% - var(--u)*5); transform:scaleX(-1); }
+
+  /* Fumetto parlato */
+  .overlay.balloon .bubble-shape{ background:#fff; border:calc(var(--u)*0.4) solid #111; border-radius:calc(var(--u)*3.5); padding:calc(var(--u)*1.6) calc(var(--u)*2.2); }
+  .overlay.balloon .content{ font-size:calc(var(--u)*2.6); font-weight:600; }
+
+  /* Fumetto pensiero */
+  .overlay.thought .bubble-shape{ background:#fff; border:calc(var(--u)*0.4) solid #111; border-radius:50%; padding:calc(var(--u)*1.4) 13%; }
+  .overlay.thought .content{ font-size:calc(var(--u)*2.6); font-weight:600; font-style:italic; }
+
+  /* Onomatopea / esplosione */
+  .overlay.burst .bubble-shape{
+    background:linear-gradient(135deg,#ffe066,#ffb703); border:calc(var(--u)*0.4) solid #111;
+    clip-path: polygon(50% 0%, 61% 20%, 82% 8%, 80% 32%, 100% 35%, 86% 52%,
+                        100% 68%, 80% 70%, 82% 92%, 61% 80%, 50% 100%, 39% 80%,
+                        18% 92%, 20% 70%, 0% 68%, 14% 52%, 0% 35%, 20% 32%,
+                        18% 8%, 39% 20%);
+    padding:calc(var(--u)*2.6);
+  }
+  .overlay.burst .content{
+    font-family:'Arial Black', Impact, Haettenschweiler, sans-serif; font-weight:900; font-size:calc(var(--u)*3.3);
+    text-transform:uppercase; letter-spacing:calc(var(--u)*0.08); color:#111;
+  }
+
+  /* Didascalia narrativa */
+  .overlay.caption .bubble-shape{ background:var(--yellow); border:calc(var(--u)*0.4) solid #111; border-radius:2px; padding:calc(var(--u)*1.3) calc(var(--u)*1.9); box-shadow:calc(var(--u)*0.5) calc(var(--u)*0.5) 0 rgba(0,0,0,0.18); }
+  .overlay.caption .content{ font-size:calc(var(--u)*2.4); font-weight:700; font-style:italic; }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card">
+    <div class="section-title">📖 Creatore di Tavole a Fumetti</div>
+
+    <div class="toolbar">
+      <div class="tool-group">
+        <button class="icon-btn danger" id="btnClear" title="Nuovo / Pulisci tutto">🗑️</button>
+      </div>
+      <div class="tool-sep"></div>
+      <div class="tool-group">
+        <button class="icon-btn" data-add="balloon" title="Fumetto parlato">💬</button>
+        <button class="icon-btn" data-add="thought" title="Fumetto pensiero">☁️</button>
+        <button class="icon-btn" data-add="burst" title="Onomatopea">💥</button>
+        <button class="icon-btn" data-add="caption" title="Didascalia narrativa">📃</button>
+      </div>
+      <div class="tool-sep"></div>
+      <div class="tool-group">
+        <button class="icon-btn accent" id="btnExport" title="Esporta JPG">⬇️</button>
+      </div>
+    </div>
+    <div class="hint">Trascina per spostare le immagini · rotellina/pinch/maniglia blu per zoom · clic su un fumetto per spostarlo, scriverci o ridimensionarlo (maniglia verde) · maniglia viola ⇄ per specchiarlo a destra/sinistra</div>
+  </div>
+
+  <div class="stage">
+    <div class="sheet" id="sheet"></div>
+  </div>
+
+</div>
+
+<script>
+/* =====================================================================
+   STATO E PERSISTENZA
+   ===================================================================== */
+const LS_KEY = 'fumetti_tavola_v1';
+const N_PANNELLI = 6;
+
+function statoIniziale(){
+  return {
+    panels: Array.from({length:N_PANNELLI}, () => ({
+      imgSrc:null, naturalW:0, naturalH:0, scaleMult:1, offsetX:0, offsetY:0
+    })),
+    overlays: []
+  };
+}
+function carica(){
+  try{
+    const raw = localStorage.getItem(LS_KEY);
+    if(!raw) return statoIniziale();
+    const parsed = JSON.parse(raw);
+    if(!parsed.panels || parsed.panels.length !== N_PANNELLI) return statoIniziale();
+    parsed.overlays = (parsed.overlays || []).map(o => ({ h: o.h || 12, ...o }));
+    return parsed;
+  }catch(e){ return statoIniziale(); }
+}
+function salva(){
+  try{ localStorage.setItem(LS_KEY, JSON.stringify(stato)); }
+  catch(e){ console.warn('Salvataggio non riuscito (spazio locale esaurito?)', e); }
+}
+
+let stato = carica();
+const sheet = document.getElementById('sheet');
+
+/* =====================================================================
+   PANNELLI
+   ===================================================================== */
+function creaPannelloDOM(idx){
+  const p = document.createElement('div');
+  p.className = 'panel';
+  p.dataset.idx = idx;
+  p.innerHTML = `
+    <div class="empty-state"><span class="ic">🖼️</span><span>Vignetta ${idx+1}<br>tocca per caricare</span></div>
+    <img class="panel-img" style="display:none;">
+    <div class="panel-tools">
+      <button class="btn-upload" title="Carica immagine">➕</button>
+      <button class="btn-remove" title="Rimuovi immagine" style="display:none;">✖</button>
+    </div>
+    <div class="img-resize-handle" title="Ridimensiona immagine">⤡</div>
+    <input type="file" accept="image/*">
+  `;
+  sheet.appendChild(p);
+  return p;
+}
+function renderPannello(idx){
+  const p = sheet.querySelector(`.panel[data-idx="${idx}"]`);
+  const data = stato.panels[idx];
+  const img = p.querySelector('.panel-img');
+  const emptyState = p.querySelector('.empty-state');
+  const btnRemove = p.querySelector('.btn-remove');
+
+  if(data.imgSrc){
+    img.src = data.imgSrc;
+    img.style.display = 'block';
+    emptyState.style.display = 'none';
+    btnRemove.style.display = 'flex';
+    p.classList.add('has-img');
+    posizionaImmagine(idx);
+  } else {
+    img.style.display = 'none';
+    emptyState.style.display = 'flex';
+    btnRemove.style.display = 'none';
+    p.classList.remove('has-img');
+  }
+}
+function scalaCover(data, panelW, panelH){
+  if(!data.naturalW || !data.naturalH) return 1;
+  return Math.max(panelW / data.naturalW, panelH / data.naturalH);
+}
+function posizionaImmagine(idx){
+  const p = sheet.querySelector(`.panel[data-idx="${idx}"]`);
+  const data = stato.panels[idx];
+  const img = p.querySelector('.panel-img');
+  if(!data.imgSrc) return;
+
+  const panelW = p.clientWidth, panelH = p.clientHeight;
+  const cover = scalaCover(data, panelW, panelH);
+  const scalaFinale = cover * data.scaleMult;
+  const dispW = data.naturalW * scalaFinale;
+  const dispH = data.naturalH * scalaFinale;
+
+  const minX = Math.min(0, panelW - dispW);
+  const minY = Math.min(0, panelH - dispH);
+  data.offsetX = Math.max(minX, Math.min(0, data.offsetX));
+  data.offsetY = Math.max(minY, Math.min(0, data.offsetY));
+
+  img.style.width = dispW + 'px';
+  img.style.height = dispH + 'px';
+  img.style.left = data.offsetX + 'px';
+  img.style.top = data.offsetY + 'px';
+}
+function ridimensionaImmagine(file, callback){
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const img = new Image();
+    img.onload = () => {
+      const MAX = 1100;
+      let w = img.naturalWidth, h = img.naturalHeight;
+      if(w > MAX || h > MAX){
+        const r = Math.min(MAX/w, MAX/h);
+        w = Math.round(w*r); h = Math.round(h*r);
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      callback(canvas.toDataURL('image/jpeg', 0.87), w, h);
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function collegaEventiPannello(idx){
+  const p = sheet.querySelector(`.panel[data-idx="${idx}"]`);
+  const fileInput = p.querySelector('input[type=file]');
+  const btnUpload = p.querySelector('.btn-upload');
+  const btnRemove = p.querySelector('.btn-remove');
+  const resizeHandle = p.querySelector('.img-resize-handle');
+
+  btnUpload.addEventListener('click', (e) => { e.stopPropagation(); fileInput.click(); });
+  p.querySelector('.empty-state').addEventListener('click', () => fileInput.click());
+
+  fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];
+    if(!file) return;
+    ridimensionaImmagine(file, (dataUrl, w, h) => {
+      stato.panels[idx] = { imgSrc:dataUrl, naturalW:w, naturalH:h, scaleMult:1, offsetX:0, offsetY:0 };
+      renderPannello(idx);
+      salva();
+    });
+    fileInput.value = '';
+  });
+
+  btnRemove.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if(!confirm('Rimuovere questa immagine?')) return;
+    stato.panels[idx] = { imgSrc:null, naturalW:0, naturalH:0, scaleMult:1, offsetX:0, offsetY:0 };
+    renderPannello(idx);
+    salva();
+  });
+
+  // Pan con puntatore
+  let dragging = false, startX=0, startY=0, startOffX=0, startOffY=0;
+  p.addEventListener('pointerdown', (e) => {
+    if(!stato.panels[idx].imgSrc) return;
+    if(e.target.closest('.panel-tools') || e.target.closest('.img-resize-handle')) return;
+    dragging = true;
+    p.setPointerCapture(e.pointerId);
+    startX = e.clientX; startY = e.clientY;
+    startOffX = stato.panels[idx].offsetX; startOffY = stato.panels[idx].offsetY;
+  });
+  p.addEventListener('pointermove', (e) => {
+    if(!dragging) return;
+    stato.panels[idx].offsetX = startOffX + (e.clientX - startX);
+    stato.panels[idx].offsetY = startOffY + (e.clientY - startY);
+    posizionaImmagine(idx);
+  });
+  function fineDrag(){ if(dragging){ dragging = false; salva(); } }
+  p.addEventListener('pointerup', fineDrag);
+  p.addEventListener('pointercancel', fineDrag);
+
+  // Zoom con rotellina
+  p.addEventListener('wheel', (e) => {
+    if(!stato.panels[idx].imgSrc) return;
+    e.preventDefault();
+    const delta = e.deltaY > 0 ? -0.06 : 0.06;
+    stato.panels[idx].scaleMult = Math.max(1, Math.min(5, stato.panels[idx].scaleMult + delta));
+    posizionaImmagine(idx); salva();
+  }, { passive:false });
+
+  // Pinch-to-zoom
+  let pinchStartDist = null, pinchStartScale = 1;
+  p.addEventListener('touchstart', (e) => {
+    if(e.touches.length === 2 && stato.panels[idx].imgSrc){
+      const [t1,t2] = e.touches;
+      pinchStartDist = Math.hypot(t2.clientX-t1.clientX, t2.clientY-t1.clientY);
+      pinchStartScale = stato.panels[idx].scaleMult;
+    }
+  }, { passive:true });
+  p.addEventListener('touchmove', (e) => {
+    if(e.touches.length === 2 && pinchStartDist){
+      const [t1,t2] = e.touches;
+      const dist = Math.hypot(t2.clientX-t1.clientX, t2.clientY-t1.clientY);
+      stato.panels[idx].scaleMult = Math.max(1, Math.min(5, pinchStartScale * (dist/pinchStartDist)));
+      posizionaImmagine(idx);
+    }
+  }, { passive:true });
+  p.addEventListener('touchend', (e) => { if(e.touches.length < 2){ pinchStartDist = null; salva(); } });
+
+  // Maniglia di ridimensionamento diretto (drag = zoom in/out)
+  let resizing = false, rStartX=0, rStartY=0, rStartScale=1;
+  resizeHandle.addEventListener('pointerdown', (e) => {
+    e.stopPropagation();
+    if(!stato.panels[idx].imgSrc) return;
+    resizing = true;
+    resizeHandle.setPointerCapture(e.pointerId);
+    rStartX = e.clientX; rStartY = e.clientY;
+    rStartScale = stato.panels[idx].scaleMult;
+  });
+  resizeHandle.addEventListener('pointermove', (e) => {
+    if(!resizing) return;
+    const delta = ((e.clientX - rStartX) + (e.clientY - rStartY)) / 160;
+    stato.panels[idx].scaleMult = Math.max(1, Math.min(5, rStartScale + delta));
+    posizionaImmagine(idx);
+  });
+  function fineResize(){ if(resizing){ resizing = false; salva(); } }
+  resizeHandle.addEventListener('pointerup', fineResize);
+  resizeHandle.addEventListener('pointercancel', fineResize);
+}
+
+/* =====================================================================
+   OVERLAY: fumetti e didascalie
+   ===================================================================== */
+/* Geometria condivisa tra schermo (SVG) ed export (canvas), in unità "u" = 1% larghezza foglio */
+const TAIL = { x0:4, x1:7.5, ax:3, ay:3.4 };                      // codina del parlato (base sul bordo basso)
+const DOTS = [ {dx:0, dy:1.5, r:1.1}, {dx:-2, dy:3.6, r:0.72}, {dx:-3.2, dy:4.9, r:0.5} ]; // pallini (ancorati al 30% della larghezza)
+const DOTS_ANCHOR = 0.30, BORDO_U = 0.4, DOT_BORDO_U = 0.35, LINE_H = 1.22;
+const EXTRA_BASSO_PCT = { balloon:2.7, thought:4.2, burst:0, caption:0 }; // spazio sotto al fumetto occupato da codina/pallini
+const PAD_X_U = { balloon:2.2, burst:2.6, caption:1.9 };          // padding orizzontale (thought = 13% della larghezza)
+
+function aggiornaUnita(){ sheet.style.setProperty('--u', (sheet.offsetWidth/100) + 'px'); }
+new ResizeObserver(aggiornaUnita).observe(sheet);
+aggiornaUnita();
+
+const TESTO_DEFAULT = { balloon:'Testo...', thought:'Sto pensando...', burst:'BOOM!', caption:'Narrazione...' };
+const DIM_DEFAULT = {
+  balloon:{w:32,h:14}, thought:{w:32,h:16}, burst:{w:26,h:16}, caption:{w:34,h:10}
+};
+
+function nuovoOverlayId(){ return 'ov_' + Date.now() + '_' + Math.floor(Math.random()*10000); }
+
+function aggiungiOverlay(tipo){
+  const n = stato.overlays.length;
+  const d = DIM_DEFAULT[tipo];
+  const ov = {
+    id: nuovoOverlayId(), tipo,
+    x: 12 + (n % 4) * 4, y: 8 + (n % 5) * 6,
+    w: d.w, h: d.h,
+    testo: TESTO_DEFAULT[tipo]
+  };
+  stato.overlays.push(ov);
+  renderOverlay(ov);
+  salva();
+}
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function renderOverlay(ov){
+  const el = document.createElement('div');
+  el.className = 'overlay ' + ov.tipo;
+  el.dataset.id = ov.id;
+  el.style.left = ov.x + '%';
+  el.style.top = ov.y + '%';
+  el.style.width = ov.w + '%';
+  el.style.height = ov.h + '%';
+
+  if(ov.flip) el.classList.add('flip');
+
+  let formaExtra = '';
+  if(ov.tipo === 'balloon'){
+    formaExtra = `<svg class="tail" viewBox="0 -1 12 6" aria-hidden="true">
+      <polygon points="${TAIL.x0},${-BORDO_U} ${TAIL.x1},${-BORDO_U} ${TAIL.x1},0 ${TAIL.ax},${TAIL.ay} ${TAIL.x0},0" fill="#fff"/>
+      <polyline points="${TAIL.x0},0 ${TAIL.ax},${TAIL.ay} ${TAIL.x1},0" fill="none" stroke="#111" stroke-width="${BORDO_U}" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`;
+  } else if(ov.tipo === 'thought'){
+    formaExtra = `<svg class="dots" viewBox="0 0 10 8" aria-hidden="true">` +
+      DOTS.map(d => `<circle cx="${5+d.dx}" cy="${d.dy}" r="${d.r}" fill="#fff" stroke="#111" stroke-width="${DOT_BORDO_U}"/>`).join('') +
+      `</svg>`;
+  }
+  const flipBtn = (ov.tipo === 'balloon' || ov.tipo === 'thought') ? '<button class="flip-btn" title="Specchia (parla a destra/sinistra)">⇄</button>' : '';
+
+  el.innerHTML = `
+    <div class="handle" title="Sposta">✥</div>
+    <button class="del-btn" title="Elimina">✕</button>
+    <div class="resize-handle" title="Ridimensiona">⤡</div>
+    ${flipBtn}
+    <div class="bubble-shape">
+      <div class="content" contenteditable="true" spellcheck="false">${escapeHtml(ov.testo)}</div>
+    </div>
+    ${formaExtra}
+  `;
+  sheet.appendChild(el);
+  collegaEventiOverlay(el, ov);
+}
+
+function collegaEventiOverlay(el, ov){
+  const content = el.querySelector('.content');
+  const handle = el.querySelector('.handle');
+  const delBtn = el.querySelector('.del-btn');
+  const resizeHandle = el.querySelector('.resize-handle');
+  const flipBtnEl = el.querySelector('.flip-btn');
+
+  if(flipBtnEl){
+    flipBtnEl.addEventListener('pointerdown', (e) => e.stopPropagation());
+    flipBtnEl.addEventListener('click', (e) => {
+      e.stopPropagation();
+      ov.flip = !ov.flip;
+      el.classList.toggle('flip', ov.flip);
+      salva();
+    });
+  }
+
+  el.addEventListener('pointerdown', (e) => {
+    if(e.target === handle || e.target === resizeHandle) return;
+    deselezionaTutti();
+    el.classList.add('selected');
+  });
+
+  content.addEventListener('input', () => { ov.testo = content.innerText; salva(); });
+
+  delBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if(!confirm('Eliminare questo elemento?')) return;
+    stato.overlays = stato.overlays.filter(o => o.id !== ov.id);
+    el.remove();
+    salva();
+  });
+
+  // Spostamento (maniglia blu)
+  let dragging = false, startX=0, startY=0, startXp=0, startYp=0;
+  handle.addEventListener('pointerdown', (e) => {
+    e.stopPropagation();
+    dragging = true;
+    handle.setPointerCapture(e.pointerId);
+    startX = e.clientX; startY = e.clientY;
+    startXp = ov.x; startYp = ov.y;
+  });
+  handle.addEventListener('pointermove', (e) => {
+    if(!dragging) return;
+    const rect = sheet.getBoundingClientRect();
+    const dxPerc = (e.clientX - startX) / rect.width * 100;
+    const dyPerc = (e.clientY - startY) / rect.height * 100;
+    ov.x = Math.max(0, Math.min(100 - ov.w, startXp + dxPerc));
+    ov.y = Math.max(0, Math.min(100 - ov.h - EXTRA_BASSO_PCT[ov.tipo], startYp + dyPerc));
+    el.style.left = ov.x + '%'; el.style.top = ov.y + '%';
+  });
+  function fineDrag(){ if(dragging){ dragging = false; salva(); } }
+  handle.addEventListener('pointerup', fineDrag);
+  handle.addEventListener('pointercancel', fineDrag);
+
+  // Ridimensionamento (maniglia verde)
+  let resizing = false, rsStartX=0, rsStartY=0, rsStartW=0, rsStartH=0;
+  resizeHandle.addEventListener('pointerdown', (e) => {
+    e.stopPropagation();
+    resizing = true;
+    resizeHandle.setPointerCapture(e.pointerId);
+    rsStartX = e.clientX; rsStartY = e.clientY;
+    rsStartW = ov.w; rsStartH = ov.h;
+  });
+  resizeHandle.addEventListener('pointermove', (e) => {
+    if(!resizing) return;
+    const rect = sheet.getBoundingClientRect();
+    const dwPerc = (e.clientX - rsStartX) / rect.width * 100;
+    const dhPerc = (e.clientY - rsStartY) / rect.height * 100;
+    ov.w = Math.max(14, Math.min(100 - ov.x, rsStartW + dwPerc));
+    ov.h = Math.max(7, Math.min(100 - ov.y - EXTRA_BASSO_PCT[ov.tipo], rsStartH + dhPerc));
+    el.style.width = ov.w + '%'; el.style.height = ov.h + '%';
+  });
+  function fineResize(){ if(resizing){ resizing = false; salva(); } }
+  resizeHandle.addEventListener('pointerup', fineResize);
+  resizeHandle.addEventListener('pointercancel', fineResize);
+}
+
+function deselezionaTutti(){ sheet.querySelectorAll('.overlay.selected').forEach(o => o.classList.remove('selected')); }
+sheet.addEventListener('pointerdown', (e) => { if(!e.target.closest('.overlay')) deselezionaTutti(); });
+
+/* =====================================================================
+   TOOLBAR
+   ===================================================================== */
+document.querySelectorAll('[data-add]').forEach(btn => btn.addEventListener('click', () => aggiungiOverlay(btn.dataset.add)));
+
+document.getElementById('btnClear').addEventListener('click', () => {
+  if(!confirm('Vuoi davvero cancellare tutta la tavola (immagini, fumetti e didascalie)? L\'operazione non è reversibile.')) return;
+  stato = statoIniziale();
+  salva();
+  ricostruisciTavola();
+});
+document.getElementById('btnExport').addEventListener('click', esportaJPG);
+
+/* =====================================================================
+   EXPORT JPG (Canvas)
+   ===================================================================== */
+function wrapTestoCanvas(ctx, testo, maxWidth){
+  if(!testo.trim()) return [''];
+  const parole = testo.trim().split(/\s+/);
+  const righe = []; let riga = '';
+  parole.forEach(parola => {
+    const prova = riga ? riga + ' ' + parola : parola;
+    if(ctx.measureText(prova).width > maxWidth && riga){ righe.push(riga); riga = parola; }
+    else riga = prova;
+  });
+  if(riga) righe.push(riga);
+  return righe;
+}
+function roundRectPath(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);
+  ctx.arcTo(x+w,y,x+w,y+h,r);
+  ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r);
+  ctx.arcTo(x,y,x+w,y,r);
+  ctx.closePath();
+}
+/* Stessi punti percentuali del clip-path CSS della classe .overlay.burst .bubble-shape:
+   riprodotti qui stirando x e y in base a w e h SEPARATAMENTE, esattamente come fa
+   il clip-path a schermo — così la stella esportata combacia sempre con quella
+   visualizzata, anche quando il fumetto viene ridimensionato in modo non quadrato. */
+const PUNTI_STELLA = [
+  [50,0],[61,20],[82,8],[80,32],[100,35],[86,52],[100,68],[80,70],[82,92],[61,80],
+  [50,100],[39,80],[18,92],[20,70],[0,68],[14,52],[0,35],[20,32],[18,8],[39,20]
+];
+function disegnaStellaEsatta(ctx, x, y, w, h){
+  ctx.beginPath();
+  PUNTI_STELLA.forEach((pt, i) => {
+    const px = x + (pt[0]/100)*w, py = y + (pt[1]/100)*h;
+    if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+  });
+  ctx.closePath();
+}
+function disegnaFormaOverlay(ctx, tipo, x, y, w, h, u, flip){
+  const lw = BORDO_U*u;
+  ctx.lineWidth = lw; ctx.strokeStyle = '#111'; ctx.lineJoin = 'miter'; ctx.lineCap = 'butt';
+
+  ctx.save();
+  if(flip){ ctx.translate(2*x + w, 0); ctx.scale(-1, 1); }   // specchia attorno al centro del fumetto
+
+  if(tipo === 'balloon'){
+    ctx.fillStyle = '#fff';
+    const r = Math.min(3.5*u - lw/2, (w-lw)/2, (h-lw)/2);
+    roundRectPath(ctx, x+lw/2, y+lw/2, w-lw, h-lw, r); ctx.fill(); ctx.stroke();
+    // codina: stessa geometria dello SVG a schermo
+    const yb = y + h, T = TAIL;
+    ctx.beginPath();
+    ctx.moveTo(x+T.x0*u, yb-lw); ctx.lineTo(x+T.x1*u, yb-lw); ctx.lineTo(x+T.x1*u, yb);
+    ctx.lineTo(x+T.ax*u, yb+T.ay*u); ctx.lineTo(x+T.x0*u, yb); ctx.closePath();
+    ctx.fillStyle = '#fff'; ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(x+T.x0*u, yb); ctx.lineTo(x+T.ax*u, yb+T.ay*u); ctx.lineTo(x+T.x1*u, yb);
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.stroke();
+  } else if(tipo === 'thought'){
+    ctx.fillStyle = '#fff';
+    ctx.beginPath();
+    ctx.ellipse(x+w/2, y+h/2, (w-lw)/2, (h-lw)/2, 0, 0, Math.PI*2);
+    ctx.fill(); ctx.stroke();
+    // pallini: dimensioni fisse in u, come a schermo (non più legate a w/h del fumetto)
+    ctx.lineWidth = DOT_BORDO_U*u;
+    DOTS.forEach(d => {
+      ctx.beginPath();
+      ctx.arc(x + w*DOTS_ANCHOR + d.dx*u, y + h + d.dy*u, d.r*u, 0, Math.PI*2);
+      ctx.fillStyle = '#fff'; ctx.fill(); ctx.stroke();
+    });
+  } else if(tipo === 'burst'){
+    disegnaStellaEsatta(ctx, x, y, w, h);
+    const grad = ctx.createLinearGradient(x,y,x+w,y+h);
+    grad.addColorStop(0,'#ffe066'); grad.addColorStop(1,'#ffb703');
+    ctx.fillStyle = grad; ctx.fill(); ctx.stroke();
+  } else {
+    ctx.fillStyle = '#ffe066';
+    ctx.fillRect(x+lw/2, y+lw/2, w-lw, h-lw); ctx.strokeRect(x+lw/2, y+lw/2, w-lw, h-lw);
+  }
+  ctx.restore();
+}
+
+async function esportaJPG(){
+  deselezionaTutti();
+  await new Promise(r => setTimeout(r, 50));
+
+  const rect = sheet.getBoundingClientRect();
+  const scaleExport = Math.max(2, 1800 / rect.width);   // risoluzione alta anche da telefono
+  const u = rect.width / 100;                          // stessa unità usata dal CSS (--u)
+  const canvas = document.createElement('canvas');
+  canvas.width = rect.width * scaleExport;
+  canvas.height = rect.height * scaleExport;
+  const ctx = canvas.getContext('2d');
+  ctx.scale(scaleExport, scaleExport);
+
+  ctx.fillStyle = '#fdfbf5';
+  ctx.fillRect(0,0,rect.width, rect.height);
+
+  sheet.querySelectorAll('.panel').forEach(p => {
+    const pr = p.getBoundingClientRect();
+    const px = pr.left - rect.left, py = pr.top - rect.top;
+    ctx.fillStyle = '#eef2f7';
+    ctx.fillRect(px,py,pr.width,pr.height);
+
+    const img = p.querySelector('.panel-img');
+    if(img && img.style.display !== 'none' && img.complete){
+      ctx.save();
+      ctx.beginPath(); ctx.rect(px,py,pr.width,pr.height); ctx.clip();
+      const ir = img.getBoundingClientRect();
+      ctx.drawImage(img, ir.left-rect.left, ir.top-rect.top, ir.width, ir.height);
+      ctx.restore();
+    }
+    ctx.lineWidth = 4; ctx.strokeStyle = '#111';
+    ctx.strokeRect(px+2, py+2, pr.width-4, pr.height-4);
+  });
+
+  sheet.querySelectorAll('.overlay').forEach(el => {
+    const ov = stato.overlays.find(o => o.id === el.dataset.id);
+    if(!ov) return;
+    const shape = el.querySelector('.bubble-shape');
+    const sr = shape.getBoundingClientRect();
+    const x = sr.left - rect.left, y = sr.top - rect.top, w = sr.width, h = sr.height;
+
+    disegnaFormaOverlay(ctx, ov.tipo, x, y, w, h, u, !!ov.flip);
+
+    const cs = getComputedStyle(el.querySelector('.content'));
+    const fontPx = parseFloat(cs.fontSize) || 15;
+    const fontFam = (ov.tipo === 'burst') ? "'Arial Black', Impact, sans-serif" : (cs.fontFamily || 'sans-serif');
+    const fontWeight = (ov.tipo === 'burst') ? '900' : (cs.fontWeight || '600');
+    const fontStyle = (ov.tipo === 'thought' || ov.tipo === 'caption') ? 'italic' : 'normal';
+    let testo = ov.testo || '';
+    if(ov.tipo === 'burst') testo = testo.toUpperCase();
+
+    ctx.fillStyle = '#111'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.font = `${fontStyle} ${fontWeight} ${fontPx}px ${fontFam}`;
+    if('letterSpacing' in ctx) ctx.letterSpacing = (ov.tipo === 'burst') ? (BORDO_U*0.2*u) + 'px' : '0px';
+
+    // larghezza utile del testo = come il padding CSS
+    const padX = (ov.tipo === 'thought') ? w*0.13 : PAD_X_U[ov.tipo]*u;
+    const maxW = Math.max(10, w - 2*BORDO_U*u - 2*padX);
+    const righe = [];
+    testo.split('\n').forEach(par => wrapTestoCanvas(ctx, par, maxW).forEach(r => righe.push(r)));
+    const lineHeight = fontPx * LINE_H;
+    const startY = y + h/2 - ((righe.length-1)*lineHeight)/2;
+    righe.forEach((riga, i) => ctx.fillText(riga, x + w/2, startY + i*lineHeight));
+    if('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+  });
+
+  canvas.toBlob((blob) => {
+    if(!blob){ alert('Esportazione non riuscita. Riprova.'); return; }
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'tavola-fumetto.jpg';
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(url);
+  }, 'image/jpeg', 0.92);
+}
+
+/* =====================================================================
+   COSTRUZIONE TAVOLA
+   ===================================================================== */
+function ricostruisciTavola(){
+  sheet.innerHTML = '';
+  for(let i=0; i<N_PANNELLI; i++){ creaPannelloDOM(i); renderPannello(i); collegaEventiPannello(i); }
+  stato.overlays.forEach(ov => renderOverlay(ov));
+}
+window.addEventListener('resize', () => { for(let i=0; i<N_PANNELLI; i++) posizionaImmagine(i); });
+
+ricostruisciTavola();
+</script>
+</body>
+</html>
