@@ -509,6 +509,87 @@
     margin-left:auto;
   }
   .link-to-page:hover{ text-decoration:underline; }
+
+  /* ============================================================
+     WIDGET Q&A GEMINI — stesso linguaggio grafico delle card
+     ============================================================ */
+  .qa-widget{
+    background:linear-gradient(135deg,#e6f0ff 0%,#ffffff 100%);
+    border:1px solid #d6e4fb;
+  }
+  .qa-widget textarea{
+    width:100%;
+    min-height:70px;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid #e6e9ef;
+    font-size:15px;
+    font-family:inherit;
+    resize:vertical;
+    background:#fff;
+  }
+  .qa-widget textarea:focus{
+    outline:2px solid rgba(30,136,229,.35);
+    border-color:var(--accent);
+  }
+  .qa-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:10px 0;
+    flex-wrap:wrap;
+  }
+  .qa-btn{
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    padding:9px 22px;
+    font-weight:700;
+    font-size:14px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+  }
+  .qa-btn:hover:not(:disabled){ filter:brightness(1.08); }
+  .qa-btn:disabled{ opacity:.65; cursor:wait; }
+  .qa-hint{ font-size:12px; color:var(--muted); }
+  .qa-reset-key{
+    margin-left:auto;
+    background:none;
+    border:none;
+    color:var(--muted);
+    font-size:12px;
+    text-decoration:underline;
+    cursor:pointer;
+    padding:0;
+  }
+  .qa-answer{
+    background:#fff;
+    border:1px solid #e6e9ef;
+    border-radius:10px;
+    padding:12px 14px;
+    font-size:15px;
+    line-height:1.5;
+    white-space:pre-wrap;
+    word-break:break-word;
+    min-height:48px;
+    color:#0f172a;
+  }
+  .qa-answer.placeholder{ color:var(--muted); font-style:italic; }
+  .qa-answer.error{ color:#991b1b; background:#fef2f2; border-color:#fecaca; }
+  .qa-sources{
+    margin-top:8px;
+    font-size:12px;
+    color:var(--muted);
+  }
+  .qa-sources a{
+    color:var(--cal-accent);
+    text-decoration:none;
+    font-weight:700;
+    margin-right:10px;
+    white-space:nowrap;
+  }
+  .qa-sources a:hover{ text-decoration:underline; }
 </style>
 </head>
 <body>
@@ -685,6 +766,21 @@
     </div>
 
     <div class="config-save-note">Le preferenze vengono salvate automaticamente.</div>
+  </div>
+
+  <!-- ============================================================
+       WIDGET Q&A (Gemini + ricerca Google in tempo reale)
+       ============================================================ -->
+  <div class="card qa-widget">
+    <div class="section-title">🤖 Chiedi all'assistente</div>
+    <textarea id="qaInput" placeholder="Es. Quali sono le principali notizie di oggi?"></textarea>
+    <div class="qa-actions">
+      <button class="qa-btn" id="qaBtn">Chiedi</button>
+      <span class="qa-hint">Ctrl + Invio per inviare</span>
+      <button class="qa-reset-key" id="qaResetKey" type="button">🔑 Cambia chiave API</button>
+    </div>
+    <div class="qa-answer placeholder" id="qaAnswer">La risposta apparirà qui.</div>
+    <div class="qa-sources" id="qaSources"></div>
   </div>
 
   <!-- ============================================================
@@ -1634,11 +1730,129 @@ function refreshAll(){
 }
 
 /* ================================================================
+   10) WIDGET Q&A — Gemini con ricerca Google in tempo reale
+   La chiave API viene chiesta una sola volta e salvata in
+   localStorage con la chiave 'gemini_api_key'.
+   ================================================================ */
+const LS_GEMINI_KEY = 'gemini_api_key';
+const GEMINI_MODEL  = 'gemini-2.5-flash';
+
+function qaFormat(text){
+  // Escape HTML, poi **grassetto** -> <strong>
+  return escapeHtml(text).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+}
+
+function qaShowSources(data){
+  const box = document.getElementById('qaSources');
+  box.innerHTML = '';
+  const chunks = data && data.candidates && data.candidates[0] &&
+                 data.candidates[0].groundingMetadata &&
+                 data.candidates[0].groundingMetadata.groundingChunks;
+  if(!Array.isArray(chunks)) return;
+  const links = chunks
+    .filter(c => c.web && /^https?:\/\//.test(c.web.uri || ''))
+    .slice(0, 6)
+    .map(c => `<a href="${escapeHtml(c.web.uri)}" target="_blank" rel="noopener">${escapeHtml(c.web.title || 'fonte')}</a>`);
+  if(links.length) box.innerHTML = 'Fonti: ' + links.join('');
+}
+
+async function askGemini(){
+  const input  = document.getElementById('qaInput');
+  const btn    = document.getElementById('qaBtn');
+  const answer = document.getElementById('qaAnswer');
+  const question = input.value.trim();
+
+  if(!question){
+    answer.className = 'qa-answer placeholder';
+    answer.textContent = 'Scrivi prima una domanda.';
+    return;
+  }
+
+  // Chiave API: da localStorage, altrimenti la chiedo e la salvo
+  let apiKey = localStorage.getItem(LS_GEMINI_KEY);
+  if(!apiKey){
+    apiKey = (prompt('Inserisci la tua chiave API di Google Gemini (la ottieni gratis su aistudio.google.com):') || '').trim();
+    if(!apiKey) return;
+    localStorage.setItem(LS_GEMINI_KEY, apiKey);
+  }
+
+  // Stato di caricamento
+  btn.disabled = true;
+  btn.textContent = 'Ricerca in corso...';
+  answer.className = 'qa-answer placeholder';
+  answer.textContent = 'Ricerca in corso...';
+  document.getElementById('qaSources').innerHTML = '';
+
+  try{
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${encodeURIComponent(apiKey)}`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        systemInstruction: { parts: [{ text: 'Rispondi sempre in italiano, in modo chiaro e sintetico.' }] },
+        contents: [{ role: 'user', parts: [{ text: question }] }],
+        tools: [{ googleSearch: {} }]
+      })
+    });
+    const data = await res.json().catch(() => ({}));
+
+    if(!res.ok){
+      const msg = (data.error && data.error.message) || ('Errore HTTP ' + res.status);
+      // Chiave non valida: la rimuovo così verrà richiesta di nuovo
+      if(res.status === 400 || res.status === 401 || res.status === 403){
+        if(/api key|API_KEY|permission/i.test(msg)) localStorage.removeItem(LS_GEMINI_KEY);
+      }
+      throw new Error(msg);
+    }
+
+    const parts = data.candidates && data.candidates[0] && data.candidates[0].content &&
+                  data.candidates[0].content.parts;
+    const text = Array.isArray(parts) ? parts.map(p => p.text || '').join('').trim() : '';
+
+    if(!text){
+      answer.className = 'qa-answer placeholder';
+      answer.textContent = 'Nessuna risposta ricevuta. Prova a riformulare la domanda.';
+    }else{
+      answer.className = 'qa-answer';
+      answer.innerHTML = qaFormat(text);
+      qaShowSources(data);
+    }
+  }catch(err){
+    console.warn('Errore Gemini', err);
+    answer.className = 'qa-answer error';
+    answer.textContent = 'Errore: ' + err.message;
+  }finally{
+    btn.disabled = false;
+    btn.textContent = 'Chiedi';
+  }
+}
+
+function initQaWidget(){
+  document.getElementById('qaBtn').addEventListener('click', askGemini);
+  document.getElementById('qaInput').addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' && (e.ctrlKey || e.metaKey)){
+      e.preventDefault();
+      askGemini();
+    }
+  });
+  document.getElementById('qaResetKey').addEventListener('click', () => {
+    const nuova = (prompt('Inserisci la nuova chiave API di Gemini (lascia vuoto per cancellare quella salvata):') || '').trim();
+    if(nuova){
+      localStorage.setItem(LS_GEMINI_KEY, nuova);
+      alert('Chiave aggiornata.');
+    }else{
+      localStorage.removeItem(LS_GEMINI_KEY);
+    }
+  });
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
   initConfigPanel();
   refreshAll();
+  initQaWidget();
 
   // Spese in scadenza: apri/chiudi il pannello
   document.getElementById('toggleSpeseBtn').addEventListener('click', () => {
