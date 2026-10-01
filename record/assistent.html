@@ -509,6 +509,38 @@
     margin-left:auto;
   }
   .link-to-page:hover{ text-decoration:underline; }
+
+  .qa-btn{
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    padding:9px 22px;
+    font-weight:700;
+    font-size:14px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+  }
+  .qa-btn:hover:not(:disabled){ filter:brightness(1.08); }
+
+  /* ============================================================
+     WIDGET RICERCA WEB SEMPLICE (apre Google in una nuova scheda)
+     ============================================================ */
+  .search-row{ display:flex; gap:8px; flex-wrap:wrap; }
+  .search-row input[type="text"]{
+    flex:1;
+    min-width:180px;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid #e6e9ef;
+    font-size:15px;
+    font-family:inherit;
+  }
+  .search-row input[type="text"]:focus{
+    outline:2px solid rgba(30,136,229,.35);
+    border-color:var(--accent);
+  }
+  .qa-btn.secondary{ background:#e6eefc; color:var(--accent); }
 </style>
 </head>
 <body>
@@ -685,6 +717,18 @@
     </div>
 
     <div class="config-save-note">Le preferenze vengono salvate automaticamente.</div>
+  </div>
+
+  <!-- ============================================================
+       RICERCA WEB SEMPLICE (nessuna chiave API: apre Google)
+       ============================================================ -->
+  <div class="card">
+    <div class="section-title">🔍 Cerca sul web</div>
+    <div class="search-row">
+      <input type="text" id="webSearchInput" placeholder="Cerca su Google...">
+      <button class="qa-btn" id="webSearchBtn">Cerca</button>
+      <button class="qa-btn secondary" id="webNewsBtn">📰 Notizie</button>
+    </div>
   </div>
 
   <!-- ============================================================
@@ -1634,11 +1678,44 @@ function refreshAll(){
 }
 
 /* ================================================================
+   RICERCA WEB SEMPLICE — apre Google in una nuova scheda.
+   "Cerca": ricerca normale. "Notizie": ricerca nella sezione Notizie
+   (se il campo è vuoto apre direttamente Google Notizie Italia).
+   ================================================================ */
+function initWebSearch(){
+  const input = document.getElementById('webSearchInput');
+
+  function apri(url){
+    window.open(url, '_blank', 'noopener');
+  }
+  function cerca(){
+    const q = input.value.trim();
+    if(!q){ input.focus(); return; }
+    apri('https://www.google.com/search?q=' + encodeURIComponent(q));
+  }
+  function notizie(){
+    const q = input.value.trim();
+    if(!q){
+      apri('https://news.google.com/?hl=it&gl=IT&ceid=IT:it');
+    }else{
+      apri('https://www.google.com/search?tbm=nws&q=' + encodeURIComponent(q));
+    }
+  }
+
+  document.getElementById('webSearchBtn').addEventListener('click', cerca);
+  document.getElementById('webNewsBtn').addEventListener('click', notizie);
+  input.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter'){ e.preventDefault(); cerca(); }
+  });
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
   initConfigPanel();
   refreshAll();
+  initWebSearch();
 
   // Spese in scadenza: apri/chiudi il pannello
   document.getElementById('toggleSpeseBtn').addEventListener('click', () => {
