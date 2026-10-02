@@ -764,10 +764,10 @@
     <input type="text" id="mailSubject" placeholder="Oggetto (facoltativo)">
     <textarea id="mailBody" placeholder="Scrivi qui il testo della mail..."></textarea>
     <div class="mail-actions">
-      <button class="qa-btn" id="mailGmailBtn">Invia con Gmail</button>
-      <button class="qa-btn secondary" id="mailAppBtn">App di posta</button>
+      <button class="qa-btn" id="mailSendBtn">Invia mail</button>
+      <button class="qa-btn secondary" id="mailWebBtn">Gmail web</button>
     </div>
-    <div class="mail-note">Si apre Gmail con tutto già compilato: premi "Invia" lì per spedirla.</div>
+    <div class="mail-note">Su telefono si apre l'app di posta predefinita; su computer si apre Gmail. La mail è già compilata: premi "Invia" lì.</div>
   </div>
 
   <!-- ============================================================
@@ -1749,13 +1749,18 @@ function initWebSearch(){
 }
 
 /* ================================================================
-   MAIL — compone la mail e apre Gmail (o l'app di posta) già
-   compilato. L'invio finale è il tuo clic su "Invia" in Gmail.
+   MAIL — compone la mail già compilata.
+   Telefono: mailto: (apre l'app di posta predefinita, es. Gmail).
+   Computer: finestra di composizione di Gmail web.
+   L'invio finale è il tuo clic su "Invia".
    ================================================================ */
 function initMailWidget(){
   const to      = document.getElementById('mailTo');
   const subject = document.getElementById('mailSubject');
   const body    = document.getElementById('mailBody');
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+                   (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
 
   function leggi(){
     const dest = to.value.trim();
@@ -1767,24 +1772,33 @@ function initMailWidget(){
     return { dest, su: subject.value.trim(), testo: body.value };
   }
 
-  document.getElementById('mailGmailBtn').addEventListener('click', () => {
-    const m = leggi(); if(!m) return;
+  function apriMailto(m){
+    // L'indirizzo NON va codificato (la @ deve restare così com'è)
+    window.location.href = 'mailto:' + m.dest
+      + '?subject=' + encodeURIComponent(m.su)
+      + '&body=' + encodeURIComponent(m.testo);
+  }
+
+  function apriGmailWeb(m){
     const url = 'https://mail.google.com/mail/?view=cm&fs=1'
       + '&to=' + encodeURIComponent(m.dest)
       + '&su=' + encodeURIComponent(m.su)
       + '&body=' + encodeURIComponent(m.testo);
     if(url.length > 7000){
-      alert('Il testo è troppo lungo per essere passato a Gmail: accorcialo o incollalo direttamente in Gmail.');
+      alert('Il testo è troppo lungo per essere passato a Gmail: accorcialo.');
       return;
     }
     window.open(url, '_blank', 'noopener');
+  }
+
+  document.getElementById('mailSendBtn').addEventListener('click', () => {
+    const m = leggi(); if(!m) return;
+    if(isMobile) apriMailto(m); else apriGmailWeb(m);
   });
 
-  document.getElementById('mailAppBtn').addEventListener('click', () => {
+  document.getElementById('mailWebBtn').addEventListener('click', () => {
     const m = leggi(); if(!m) return;
-    window.location.href = 'mailto:' + encodeURIComponent(m.dest)
-      + '?subject=' + encodeURIComponent(m.su)
-      + '&body=' + encodeURIComponent(m.testo);
+    apriGmailWeb(m);
   });
 }
 
