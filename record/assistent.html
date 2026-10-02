@@ -566,6 +566,31 @@
   }
   .mail-actions{ display:flex; gap:8px; flex-wrap:wrap; }
   .mail-note{ font-size:12px; color:var(--muted); margin-top:8px; }
+
+  /* ============================================================
+     WIDGET CALENDARIO + MAPS (riusano lo stile di .mail-widget)
+     ============================================================ */
+  .mail-widget input[type="date"],
+  .mail-widget input[type="time"],
+  .mail-widget select{
+    width:100%;
+    padding:10px 12px;
+    margin-bottom:8px;
+    border-radius:10px;
+    border:1px solid #e6e9ef;
+    font-size:15px;
+    font-family:inherit;
+    background:#fff;
+  }
+  .mail-widget select:focus,
+  .mail-widget input[type="date"]:focus,
+  .mail-widget input[type="time"]:focus{
+    outline:2px solid rgba(30,136,229,.35);
+    border-color:var(--accent);
+  }
+  .util-row{ display:flex; gap:8px; flex-wrap:wrap; }
+  .util-row > div{ flex:1; min-width:110px; }
+  .util-label{ display:block; font-size:12px; color:var(--muted); margin-bottom:2px; }
 </style>
 </head>
 <body>
@@ -828,6 +853,46 @@
       <button class="qa-btn" id="waSendBtn">Invia su WhatsApp</button>
     </div>
     <div class="mail-note">Si apre WhatsApp con il messaggio già scritto: premi "Invia" lì. Un numero italiano senza prefisso riceve +39 in automatico.</div>
+  </div>
+
+  <!-- ============================================================
+       CALENDARIO (Google Calendar già compilato oppure file .ics)
+       ============================================================ -->
+  <div class="card mail-widget">
+    <div class="section-title">📅 Aggiungi al calendario</div>
+    <input type="text" id="calTitle" placeholder="Titolo (es. Visita medica)">
+    <div class="util-row">
+      <div><label class="util-label" for="calDate">Data</label><input type="date" id="calDate"></div>
+      <div><label class="util-label" for="calStart">Inizio</label><input type="time" id="calStart"></div>
+      <div><label class="util-label" for="calEnd">Fine</label><input type="time" id="calEnd"></div>
+    </div>
+    <input type="text" id="calPlace" placeholder="Luogo (facoltativo)">
+    <textarea id="calNotes" placeholder="Note (facoltativo)" style="min-height:60px;"></textarea>
+    <div class="mail-actions">
+      <button class="qa-btn" id="calGoogleBtn">Google Calendar</button>
+      <button class="qa-btn secondary" id="calIcsBtn">Scarica .ics</button>
+    </div>
+    <div class="mail-note">Senza orario l'evento è "tutto il giorno"; senza ora di fine dura un'ora. Il file .ics si apre con il calendario del telefono o del computer.</div>
+  </div>
+
+  <!-- ============================================================
+       MAPS (cerca un luogo o calcola il percorso)
+       ============================================================ -->
+  <div class="card mail-widget">
+    <div class="section-title">🗺️ Maps</div>
+    <input type="text" id="mapDest" placeholder="Luogo o indirizzo di destinazione">
+    <input type="text" id="mapOrigin" placeholder="Partenza (vuoto = la tua posizione)">
+    <select id="mapMode">
+      <option value="driving">🚗 In auto</option>
+      <option value="walking">🚶 A piedi</option>
+      <option value="transit">🚆 Mezzi pubblici</option>
+      <option value="bicycling">🚲 In bici</option>
+    </select>
+    <div class="mail-actions">
+      <button class="qa-btn" id="mapSearchBtn">Cerca su Maps</button>
+      <button class="qa-btn secondary" id="mapDirBtn">Indicazioni</button>
+    </div>
+    <div class="mail-note">Da telefono si apre l'app Maps, da computer Google Maps in una nuova scheda.</div>
   </div>
 
 
@@ -1847,6 +1912,134 @@ function initWhatsAppWidget(){
 }
 
 /* ================================================================
+   CALENDARIO — apre Google Calendar già compilato oppure scarica
+   un file .ics. Senza orario: evento "tutto il giorno".
+   ================================================================ */
+function utPad2(n){ return String(n).padStart(2, '0'); }
+function utDay(d){ return d.getFullYear() + utPad2(d.getMonth()+1) + utPad2(d.getDate()); }
+function utLocal(d){ return utDay(d) + 'T' + utPad2(d.getHours()) + utPad2(d.getMinutes()) + '00'; }
+
+function initCalendarWidget(){
+  const title = document.getElementById('calTitle');
+  const date  = document.getElementById('calDate');
+  const start = document.getElementById('calStart');
+  const end   = document.getElementById('calEnd');
+  const place = document.getElementById('calPlace');
+  const notes = document.getElementById('calNotes');
+
+  // Data di default: oggi (ora locale)
+  const now = new Date();
+  date.value = now.getFullYear() + '-' + utPad2(now.getMonth()+1) + '-' + utPad2(now.getDate());
+
+  function leggiEvento(){
+    const t = title.value.trim();
+    if(!t){ alert('Scrivi un titolo per l\'evento.'); title.focus(); return null; }
+    if(!date.value){ alert('Scegli una data.'); date.focus(); return null; }
+
+    const [y, m, d] = date.value.split('-').map(Number);
+    let dtStart, dtEnd, allDay = false;
+
+    if(start.value){
+      const [h, mi] = start.value.split(':').map(Number);
+      dtStart = new Date(y, m-1, d, h, mi);
+      if(end.value){
+        const [eh, emi] = end.value.split(':').map(Number);
+        dtEnd = new Date(y, m-1, d, eh, emi);
+        if(dtEnd <= dtStart){
+          alert('L\'ora di fine deve essere dopo quella di inizio.');
+          end.focus();
+          return null;
+        }
+      }else{
+        dtEnd = new Date(dtStart.getTime() + 60*60*1000);
+      }
+    }else{
+      allDay = true;
+      dtStart = new Date(y, m-1, d);
+      dtEnd   = new Date(y, m-1, d + 1);   // fine esclusiva
+    }
+    return { t, dtStart, dtEnd, allDay, luogo: place.value.trim(), note: notes.value.trim() };
+  }
+
+  document.getElementById('calGoogleBtn').addEventListener('click', () => {
+    const e = leggiEvento(); if(!e) return;
+    const dates = e.allDay
+      ? utDay(e.dtStart) + '/' + utDay(e.dtEnd)
+      : utLocal(e.dtStart) + '/' + utLocal(e.dtEnd);
+    const url = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+      + '&text='     + encodeURIComponent(e.t)
+      + '&dates='    + dates
+      + '&details='  + encodeURIComponent(e.note)
+      + '&location=' + encodeURIComponent(e.luogo);
+    window.open(url, '_blank', 'noopener');
+  });
+
+  function icsEscape(str){
+    return String(str).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
+  }
+
+  document.getElementById('calIcsBtn').addEventListener('click', () => {
+    const e = leggiEvento(); if(!e) return;
+    const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+    const righe = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Assistent//IT',
+      'CALSCALE:GREGORIAN',
+      'BEGIN:VEVENT',
+      'UID:' + Date.now() + '-' + Math.floor(Math.random()*1e6) + '@assistent',
+      'DTSTAMP:' + stamp,
+      e.allDay ? 'DTSTART;VALUE=DATE:' + utDay(e.dtStart) : 'DTSTART:' + utLocal(e.dtStart),
+      e.allDay ? 'DTEND;VALUE=DATE:'   + utDay(e.dtEnd)   : 'DTEND:'   + utLocal(e.dtEnd),
+      'SUMMARY:' + icsEscape(e.t)
+    ];
+    if(e.luogo) righe.push('LOCATION:'    + icsEscape(e.luogo));
+    if(e.note)  righe.push('DESCRIPTION:' + icsEscape(e.note));
+    righe.push('END:VEVENT', 'END:VCALENDAR');
+
+    const blob = new Blob([righe.join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' });
+    const url  = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = (e.t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'evento') + '.ics';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  });
+}
+
+/* ================================================================
+   MAPS — cerca un luogo o apre le indicazioni stradali.
+   ================================================================ */
+function initMapsWidget(){
+  const dest = document.getElementById('mapDest');
+  const orig = document.getElementById('mapOrigin');
+  const mode = document.getElementById('mapMode');
+
+  function cerca(){
+    const q = dest.value.trim();
+    if(!q){ dest.focus(); return; }
+    window.open('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q), '_blank', 'noopener');
+  }
+  function indicazioni(){
+    const q = dest.value.trim();
+    if(!q){ alert('Scrivi la destinazione.'); dest.focus(); return; }
+    let url = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(q)
+            + '&travelmode=' + encodeURIComponent(mode.value);
+    const o = orig.value.trim();
+    if(o) url += '&origin=' + encodeURIComponent(o);
+    window.open(url, '_blank', 'noopener');
+  }
+
+  document.getElementById('mapSearchBtn').addEventListener('click', cerca);
+  document.getElementById('mapDirBtn').addEventListener('click', indicazioni);
+  dest.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter'){ e.preventDefault(); cerca(); }
+  });
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
@@ -1855,6 +2048,8 @@ window.addEventListener('DOMContentLoaded', () => {
   initWebSearch();
   initMailWidget();
   initWhatsAppWidget();
+  initCalendarWidget();
+  initMapsWidget();
 
   // Spese in scadenza: apri/chiudi il pannello
   document.getElementById('toggleSpeseBtn').addEventListener('click', () => {
