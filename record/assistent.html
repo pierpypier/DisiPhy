@@ -751,39 +751,12 @@
     <div class="section-title">🔍 Cerca sul web</div>
     <div class="search-row">
       <input type="text" id="webSearchInput" placeholder="Cerca su Google...">
-      <button class="qa-btn" id="webSearchBtn">Cerca</button>
-      <button class="qa-btn secondary" id="webNewsBtn">📰 Notizie</button>
+      <button class="qa-btn" id="webSearchBtn">🔍</button>
+      <button class="qa-btn secondary" id="webNewsBtn">📰</button>
     </div>
   </div>
 
-  <!-- ============================================================
-       MAIL (apre Gmail con destinatario, oggetto e testo compilati)
-       ============================================================ -->
-  <div class="card mail-widget">
-    <div class="section-title">✉️ Scrivi una mail</div>
-    <input type="email" id="mailTo" placeholder="Destinatario (es. nome@email.it)" autocomplete="off">
-    <input type="text" id="mailSubject" placeholder="Oggetto (facoltativo)">
-    <textarea id="mailBody" placeholder="Scrivi qui il testo della mail..."></textarea>
-    <div class="mail-actions">
-      <button class="qa-btn" id="mailSendBtn">Invia mail</button>
-      <button class="qa-btn secondary" id="mailWebBtn">Gmail web</button>
-    </div>
-    <div class="mail-note">Su telefono si apre l'app di posta predefinita; su computer si apre Gmail. La mail è già compilata: premi "Invia" lì.</div>
-  </div>
-
-  <!-- ============================================================
-       WHATSAPP (apre la chat con il messaggio già scritto)
-       ============================================================ -->
-  <div class="card mail-widget">
-    <div class="section-title">💬 Scrivi su WhatsApp</div>
-    <input type="tel" id="waNumber" placeholder="Numero (es. 333 1234567) — vuoto per scegliere il contatto" autocomplete="off">
-    <textarea id="waText" placeholder="Scrivi qui il messaggio..."></textarea>
-    <div class="mail-actions">
-      <button class="qa-btn" id="waSendBtn">Invia su WhatsApp</button>
-    </div>
-    <div class="mail-note">Si apre WhatsApp con il messaggio già scritto: premi "Invia" lì. Un numero italiano senza prefisso riceve +39 in automatico.</div>
-  </div>
-
+ 
   <!-- ============================================================
        IMPEGNI DI OGGI (da cal_events_v1 — caldsp.html)
        ============================================================ -->
@@ -829,6 +802,33 @@
     <div class="item-list" id="notesList"></div>
   </div>
 
+ <!-- ============================================================
+       MAIL (apre Gmail con destinatario, oggetto e testo compilati)
+       ============================================================ -->
+  <div class="card mail-widget">
+    <div class="section-title">✉️ Scrivi una mail</div>
+    <input type="email" id="mailTo" placeholder="Destinatario (es. nome@email.it)" autocomplete="off">
+    <input type="text" id="mailSubject" placeholder="Oggetto (facoltativo)">
+    <textarea id="mailBody" placeholder="Scrivi qui il testo della mail..."></textarea>
+    <div class="mail-actions">
+      <button class="qa-btn" id="mailSendBtn">Invia mail</button>
+      <button class="qa-btn secondary" id="mailWebBtn">Gmail web</button>
+    </div>
+    <div class="mail-note">Su telefono si apre l'app di posta predefinita; su computer si apre Gmail. La mail è già compilata: premi "Invia" lì.</div>
+  </div>
+
+  <!-- ============================================================
+       WHATSAPP (apre la chat con il messaggio già scritto)
+       ============================================================ -->
+  <div class="card mail-widget">
+    <div class="section-title">💬 Scrivi su WhatsApp</div>
+    <input type="tel" id="waNumber" placeholder="Numero (es. 333 1234567) — vuoto per scegliere il contatto" autocomplete="off">
+    <textarea id="waText" placeholder="Scrivi qui il messaggio..."></textarea>
+    <div class="mail-actions">
+      <button class="qa-btn" id="waSendBtn">Invia su WhatsApp</button>
+    </div>
+    <div class="mail-note">Si apre WhatsApp con il messaggio già scritto: premi "Invia" lì. Un numero italiano senza prefisso riceve +39 in automatico.</div>
+  </div>
 
 
   <!-- ============================================================
