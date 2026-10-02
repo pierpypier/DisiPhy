@@ -546,6 +546,7 @@
      WIDGET MAIL — compone la mail e apre Gmail già compilato
      ============================================================ */
   .mail-widget input[type="email"],
+  .mail-widget input[type="tel"],
   .mail-widget input[type="text"],
   .mail-widget textarea{
     width:100%;
@@ -750,12 +751,38 @@
     <div class="section-title">🔍 Cerca sul web</div>
     <div class="search-row">
       <input type="text" id="webSearchInput" placeholder="Cerca su Google...">
-      <button class="qa-btn" id="webSearchBtn">🔍</button>
-      <button class="qa-btn secondary" id="webNewsBtn">📰</button>
+      <button class="qa-btn" id="webSearchBtn">Cerca</button>
+      <button class="qa-btn secondary" id="webNewsBtn">📰 Notizie</button>
     </div>
   </div>
 
+  <!-- ============================================================
+       MAIL (apre Gmail con destinatario, oggetto e testo compilati)
+       ============================================================ -->
+  <div class="card mail-widget">
+    <div class="section-title">✉️ Scrivi una mail</div>
+    <input type="email" id="mailTo" placeholder="Destinatario (es. nome@email.it)" autocomplete="off">
+    <input type="text" id="mailSubject" placeholder="Oggetto (facoltativo)">
+    <textarea id="mailBody" placeholder="Scrivi qui il testo della mail..."></textarea>
+    <div class="mail-actions">
+      <button class="qa-btn" id="mailSendBtn">Invia mail</button>
+      <button class="qa-btn secondary" id="mailWebBtn">Gmail web</button>
+    </div>
+    <div class="mail-note">Su telefono si apre l'app di posta predefinita; su computer si apre Gmail. La mail è già compilata: premi "Invia" lì.</div>
+  </div>
 
+  <!-- ============================================================
+       WHATSAPP (apre la chat con il messaggio già scritto)
+       ============================================================ -->
+  <div class="card mail-widget">
+    <div class="section-title">💬 Scrivi su WhatsApp</div>
+    <input type="tel" id="waNumber" placeholder="Numero (es. 333 1234567) — vuoto per scegliere il contatto" autocomplete="off">
+    <textarea id="waText" placeholder="Scrivi qui il messaggio..."></textarea>
+    <div class="mail-actions">
+      <button class="qa-btn" id="waSendBtn">Invia su WhatsApp</button>
+    </div>
+    <div class="mail-note">Si apre WhatsApp con il messaggio già scritto: premi "Invia" lì. Un numero italiano senza prefisso riceve +39 in automatico.</div>
+  </div>
 
   <!-- ============================================================
        IMPEGNI DI OGGI (da cal_events_v1 — caldsp.html)
@@ -802,20 +829,7 @@
     <div class="item-list" id="notesList"></div>
   </div>
 
-  <!-- ============================================================
-       MAIL (apre Gmail con destinatario, oggetto e testo compilati)
-       ============================================================ -->
-  <div class="card mail-widget">
-    <div class="section-title">✉️ Scrivi una mail</div>
-    <input type="email" id="mailTo" placeholder="Destinatario (es. nome@email.it)" autocomplete="off">
-    <input type="text" id="mailSubject" placeholder="Oggetto (facoltativo)">
-    <textarea id="mailBody" placeholder="Scrivi qui il testo della mail..."></textarea>
-    <div class="mail-actions">
-      <button class="qa-btn" id="mailSendBtn">Invia mail</button>
-      <button class="qa-btn secondary" id="mailWebBtn">Gmail web</button>
-    </div>
-    <div class="mail-note">Su telefono si apre l'app di posta predefinita; su computer si apre Gmail. La mail è già compilata: premi "Invia" lì.</div>
-  </div>
+
 
   <!-- ============================================================
        IMPEGNI E IDEE IN PROGRAMMA (da organizer_tessere_config_v1 — planner2.html)
@@ -1803,6 +1817,36 @@ function initMailWidget(){
 }
 
 /* ================================================================
+   WHATSAPP — apre wa.me con numero e testo già compilati.
+   Senza numero si apre WhatsApp per scegliere il contatto.
+   L'invio finale è il tuo clic su "Invia" in WhatsApp.
+   ================================================================ */
+function initWhatsAppWidget(){
+  const num  = document.getElementById('waNumber');
+  const text = document.getElementById('waText');
+
+  function normalizza(raw){
+    let n = raw.replace(/[^\d+]/g, '');      // tieni solo cifre e +
+    if(n.startsWith('+')) n = n.slice(1);
+    else if(n.startsWith('00')) n = n.slice(2);
+    else if(/^3\d{8,9}$/.test(n)) n = '39' + n;  // cellulare italiano senza prefisso
+    return n.replace(/\D/g, '');
+  }
+
+  document.getElementById('waSendBtn').addEventListener('click', () => {
+    const raw = num.value.trim();
+    const n = raw ? normalizza(raw) : '';
+    if(raw && (n.length < 8 || n.length > 15)){
+      alert('Numero non valido. Usa il formato con prefisso, ad esempio +39 333 1234567.');
+      num.focus();
+      return;
+    }
+    const url = 'https://wa.me/' + n + '?text=' + encodeURIComponent(text.value);
+    window.open(url, '_blank', 'noopener');
+  });
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
@@ -1810,6 +1854,7 @@ window.addEventListener('DOMContentLoaded', () => {
   refreshAll();
   initWebSearch();
   initMailWidget();
+  initWhatsAppWidget();
 
   // Spese in scadenza: apri/chiudi il pannello
   document.getElementById('toggleSpeseBtn').addEventListener('click', () => {
