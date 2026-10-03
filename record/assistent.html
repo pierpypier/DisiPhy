@@ -593,7 +593,16 @@
   .util-label{ display:block; font-size:12px; color:var(--muted); margin-bottom:2px; }
 
   /* Righe dei pulsanti Mostra/Nascondi + Apri app nelle card utility */
-  .util-toggle-row{ display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px 0; }
+  .util-toggle-row{ display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-start; margin:0 0 12px 0; }
+  /* Cestino (🗺️✉️💬📆): a destra della riga, senza didascalia */
+  .util-trash{ margin-left:auto; padding:8px 12px; }
+  /* Pallino rosso sul pulsante quando nella card c'è una bozza salvata */
+  .config-toggle-btn.has-draft::after{
+    content:' ●';
+    color:#e53935;
+    font-size:10px;
+    vertical-align:middle;
+  }
   .mail-widget .spese-panel.open{ display:block; }
 
   .mail-widget input[type="file"]{
@@ -879,6 +888,7 @@
   <div class="card mail-widget">
     <div class="config-toggle-wrap util-toggle-row">
       <button class="config-toggle-btn" id="toggleMailBtn" data-panel="mailPanel">✉️ Scrivi E-mail</button>
+      <button class="config-toggle-btn util-trash" id="trashMail" data-draft="mail" title="Cancella il contenuto" aria-label="Cancella il contenuto">🗑️</button>
     </div>
     <div class="spese-panel" id="mailPanel">
     <input type="email" id="mailTo" placeholder="Destinatario (es. nome@email.it)" autocomplete="off">
@@ -898,6 +908,7 @@
   <div class="card mail-widget">
     <div class="config-toggle-wrap util-toggle-row">
       <button class="config-toggle-btn" id="toggleWaBtn" data-panel="waPanel">💬 Scrivi su WhatsApp</button>
+      <button class="config-toggle-btn util-trash" id="trashWa" data-draft="wa" title="Cancella il contenuto" aria-label="Cancella il contenuto">🗑️</button>
     </div>
     <div class="spese-panel" id="waPanel">
     <input type="tel" id="waNumber" placeholder="Numero (es. 333 1234567) — vuoto per scegliere il contatto" autocomplete="off">
@@ -933,6 +944,7 @@
     <div class="config-toggle-wrap util-toggle-row">
       <button class="config-toggle-btn" id="toggleCalBtn" data-panel="calPanel">📆 Calendar</button>
       <button class="config-toggle-btn" id="openCalBtn">🗓️ Apri</button>
+      <button class="config-toggle-btn util-trash" id="trashCal" data-draft="cal" title="Cancella il contenuto" aria-label="Cancella il contenuto">🗑️</button>
     </div>
     <div class="spese-panel" id="calPanel">
     <input type="text" id="calTitle" placeholder="Titolo (es. cena di lavoro)">
@@ -958,6 +970,7 @@
     <div class="config-toggle-wrap util-toggle-row">
       <button class="config-toggle-btn" id="toggleMapBtn" data-panel="mapPanel">🗺️ Maps</button>
       <button class="config-toggle-btn" id="openMapBtn">🗺️ Apri</button>
+      <button class="config-toggle-btn util-trash" id="trashMap" data-draft="map" title="Cancella il contenuto" aria-label="Cancella il contenuto">🗑️</button>
     </div>
     <div class="spese-panel" id="mapPanel">
     <input type="text" id="mapDest" placeholder="Luogo o indirizzo di destinazione">
@@ -2173,6 +2186,117 @@ function initShareWidget(){
 }
 
 /* ================================================================
+   BOZZE — salva in localStorage il contenuto delle card mail,
+   WhatsApp, calendario e Maps, così si può riprendere più tardi.
+   Chiave 'organizer_bozze_v1' (inizia con "organizer_": viene quindi
+   inclusa nel "Backup dati"). Il cestino 🗑️ cancella la bozza della card.
+   ================================================================ */
+const LS_DRAFTS = 'organizer_bozze_v1';
+const DRAFT_GROUPS = {
+  mail: { fields: ['mailTo','mailSubject','mailBody'],                          toggle: 'toggleMailBtn' },
+  wa:   { fields: ['waNumber','waText'],                                         toggle: 'toggleWaBtn'   },
+  cal:  { fields: ['calTitle','calDate','calStart','calEnd','calPlace','calNotes'], toggle: 'toggleCalBtn'  },
+  map:  { fields: ['mapDest','mapOrigin','mapMode'],                             toggle: 'toggleMapBtn'  }
+};
+
+function draftDefault(id){
+  if(id === 'calDate') return todayYMD();
+  if(id === 'mapMode') return 'driving';
+  return '';
+}
+
+function draftsRead(){
+  try{
+    const raw = localStorage.getItem(LS_DRAFTS);
+    const obj = raw ? JSON.parse(raw) : {};
+    return (obj && typeof obj === 'object' && !Array.isArray(obj)) ? obj : {};
+  }catch(e){
+    console.warn('Errore lettura bozze', e);
+    return {};
+  }
+}
+
+function draftsWrite(obj){
+  try{
+    localStorage.setItem(LS_DRAFTS, JSON.stringify(obj));
+  }catch(e){
+    console.warn('Errore salvataggio bozze', e);
+  }
+}
+
+// La card ha del contenuto "vero" se almeno un campo differisce dal valore di partenza
+function draftHasContent(group){
+  return DRAFT_GROUPS[group].fields.some(id => {
+    const el = document.getElementById(id);
+    return el && String(el.value).trim() !== '' && el.value !== draftDefault(id);
+  });
+}
+
+function draftUpdateBadge(group){
+  const btn = document.getElementById(DRAFT_GROUPS[group].toggle);
+  if(btn) btn.classList.toggle('has-draft', draftHasContent(group));
+}
+
+function draftSave(group){
+  const all = draftsRead();
+  if(draftHasContent(group)){
+    const data = {};
+    DRAFT_GROUPS[group].fields.forEach(id => {
+      const el = document.getElementById(id);
+      if(el) data[id] = el.value;
+    });
+    all[group] = data;
+  }else{
+    delete all[group];
+  }
+  draftsWrite(all);
+  draftUpdateBadge(group);
+}
+
+function draftClear(group){
+  if(draftHasContent(group) && !confirm('Cancellare il contenuto salvato di questa card?')) return;
+  DRAFT_GROUPS[group].fields.forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.value = draftDefault(id);
+  });
+  const all = draftsRead();
+  delete all[group];
+  draftsWrite(all);
+  draftUpdateBadge(group);
+}
+
+function initDrafts(){
+  const saved = draftsRead();
+
+  Object.keys(DRAFT_GROUPS).forEach(group => {
+    const g = DRAFT_GROUPS[group];
+
+    // Ripristina i campi salvati
+    if(saved[group] && typeof saved[group] === 'object'){
+      g.fields.forEach(id => {
+        const el = document.getElementById(id);
+        if(el && typeof saved[group][id] === 'string') el.value = saved[group][id];
+      });
+    }
+
+    // Salva a ogni modifica
+    g.fields.forEach(id => {
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.addEventListener('input',  () => draftSave(group));
+      el.addEventListener('change', () => draftSave(group));
+    });
+
+    draftUpdateBadge(group);
+  });
+
+  // Cestini
+  document.querySelectorAll('[data-draft]').forEach(btn => {
+    btn.addEventListener('click', () => draftClear(btn.dataset.draft));
+  });
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
@@ -2185,6 +2309,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initMapsWidget();
   initUtilToggles();
   initShareWidget();
+  initDrafts();
 
   // Spese in scadenza: apri/chiudi il pannello
   document.getElementById('toggleSpeseBtn').addEventListener('click', () => {
