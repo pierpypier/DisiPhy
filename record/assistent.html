@@ -641,7 +641,7 @@
   <div class="card assistant-banner">
     <div class="assistant-bubble">
       <div class="greet-line1" id="greetLine1">Ciao!</div>
-      <div class="greet-line2">ecco una panoramica degli impegni di oggi, alcune note da ricordare, le attività da svolgere e le idee in programma</div>
+      <div class="greet-line2">ecco una panoramica degli impegni di oggi 🙂. Note, attività e idee in programma.</div>
       <div class="greet-quote" id="greetQuote"></div>
     </div>
     <div class="assistant-image-wrap">
@@ -840,6 +840,20 @@
     </div>
   </div>
 
+    <!-- ============================================================
+       IMPEGNI E IDEE IN PROGRAMMA (da organizer_tessere_config_v1 — planner2.html)
+       ============================================================ -->
+  <div class="card">
+    <div class="config-toggle-wrap util-toggle-row" style="align-items:center;">
+      <button class="config-toggle-btn" id="togglePlanBtn" data-panel="planPanel">💡 Progetti e idee in programma</button>
+      <a href="planner2.html" class="link-to-page">vai al planner →</a>
+    </div>
+    <div class="spese-panel" id="planPanel">
+      <div class="plan-grid" id="planList"></div>
+    </div>
+  </div>
+  
+  
  <!-- ============================================================
        MAIL (apre Gmail con destinatario, oggetto e testo compilati)
        ============================================================ -->
@@ -865,7 +879,6 @@
   <div class="card mail-widget">
     <div class="config-toggle-wrap util-toggle-row">
       <button class="config-toggle-btn" id="toggleWaBtn" data-panel="waPanel">💬 Scrivi su WhatsApp</button>
-      <button class="config-toggle-btn" id="openWaBtn">💬 Apri WhatsApp</button>
     </div>
     <div class="spese-panel" id="waPanel">
     <input type="tel" id="waNumber" placeholder="Numero (es. 333 1234567) — vuoto per scegliere il contatto" autocomplete="off">
@@ -888,9 +901,9 @@
     <textarea id="shareText" placeholder="Testo da condividere (facoltativo se alleghi un file)..."></textarea>
     <input type="file" id="shareFile" multiple>
     <div class="mail-actions">
-      <button class="qa-btn" id="shareBtn">Condividi</button>
+      <button class="qa-btn" id="shareBtn">Condividi file</button>
     </div>
-    <div class="mail-note">Si apre il menu di condivisione: scegli l'app (WhatsApp, Telegram, posta...) e poi il contatto. Funziona soprattutto da telefono; da computer spesso non è disponibile e il testo viene copiato negli appunti.</div>
+    <div class="mail-note">Si apre il menu di condivisione: scegli l'app (WhatsApp, Telegram, posta...) e poi il contatto.</div>
     </div>
   </div>
 
@@ -899,7 +912,7 @@
        ============================================================ -->
   <div class="card mail-widget">
     <div class="config-toggle-wrap util-toggle-row">
-      <button class="config-toggle-btn" id="toggleCalBtn" data-panel="calPanel">📆 Aggiungi in Calendar</button>
+      <button class="config-toggle-btn" id="toggleCalBtn" data-panel="calPanel">📆 Calendar</button>
       <button class="config-toggle-btn" id="openCalBtn">🗓️ Apri</button>
     </div>
     <div class="spese-panel" id="calPanel">
@@ -924,7 +937,7 @@
        ============================================================ -->
   <div class="card mail-widget">
     <div class="config-toggle-wrap util-toggle-row">
-      <button class="config-toggle-btn" id="toggleMapBtn" data-panel="mapPanel">🗺️ Cerca in Maps</button>
+      <button class="config-toggle-btn" id="toggleMapBtn" data-panel="mapPanel">🗺️ Maps</button>
       <button class="config-toggle-btn" id="openMapBtn">🗺️ Apri</button>
     </div>
     <div class="spese-panel" id="mapPanel">
@@ -945,18 +958,6 @@
   </div>
 
 
-  <!-- ============================================================
-       IMPEGNI E IDEE IN PROGRAMMA (da organizer_tessere_config_v1 — planner2.html)
-       ============================================================ -->
-  <div class="card">
-    <div class="config-toggle-wrap util-toggle-row" style="align-items:center;">
-      <button class="config-toggle-btn" id="togglePlanBtn" data-panel="planPanel">💡 Progetti e idee in programma</button>
-      <a href="planner2.html" class="link-to-page">vai al planner →</a>
-    </div>
-    <div class="spese-panel" id="planPanel">
-      <div class="plan-grid" id="planList"></div>
-    </div>
-  </div>
 
   <!-- ============================================================
        SPESE IN SCADENZA (da banca_spese_v1 — bancaconti.html)
