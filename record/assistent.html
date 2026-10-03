@@ -595,6 +595,13 @@
   /* Righe dei pulsanti Mostra/Nascondi + Apri app nelle card utility */
   .util-toggle-row{ display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px 0; }
   .mail-widget .spese-panel.open{ display:block; }
+
+  .mail-widget input[type="file"]{
+    width:100%;
+    margin-bottom:8px;
+    font-size:14px;
+    font-family:inherit;
+  }
 </style>
 </head>
 <body>
@@ -824,11 +831,13 @@
        RICORDA ANCHE (da dsp_records_v1 — organizer4.html)
        ============================================================ -->
   <div class="card">
-    <div class="section-title">
-      📝 Note da ricordare
+    <div class="config-toggle-wrap util-toggle-row" style="align-items:center;">
+      <button class="config-toggle-btn" id="toggleNotesBtn" data-panel="notesPanel">📝 Note da ricordare</button>
       <a href="organizer4.html" class="link-to-page">vai alle note →</a>
     </div>
-    <div class="item-list" id="notesList"></div>
+    <div class="spese-panel" id="notesPanel">
+      <div class="item-list" id="notesList"></div>
+    </div>
   </div>
 
  <!-- ============================================================
@@ -856,6 +865,7 @@
   <div class="card mail-widget">
     <div class="config-toggle-wrap util-toggle-row">
       <button class="config-toggle-btn" id="toggleWaBtn" data-panel="waPanel">💬 Scrivi su WhatsApp</button>
+      <button class="config-toggle-btn" id="openWaBtn">💬 Apri WhatsApp</button>
     </div>
     <div class="spese-panel" id="waPanel">
     <input type="tel" id="waNumber" placeholder="Numero (es. 333 1234567) — vuoto per scegliere il contatto" autocomplete="off">
@@ -864,6 +874,23 @@
       <button class="qa-btn" id="waSendBtn">Invia su WhatsApp</button>
     </div>
     <div class="mail-note">Si apre WhatsApp con il messaggio già scritto: premi "Invia" lì. Un numero italiano senza prefisso riceve +39 in automatico.</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CONDIVIDI (menu di condivisione del telefono: testo e/o file)
+       ============================================================ -->
+  <div class="card mail-widget">
+    <div class="config-toggle-wrap util-toggle-row">
+      <button class="config-toggle-btn" id="toggleShareBtn" data-panel="sharePanel">📤 Condividi</button>
+    </div>
+    <div class="spese-panel" id="sharePanel">
+    <textarea id="shareText" placeholder="Testo da condividere (facoltativo se alleghi un file)..."></textarea>
+    <input type="file" id="shareFile" multiple>
+    <div class="mail-actions">
+      <button class="qa-btn" id="shareBtn">Condividi</button>
+    </div>
+    <div class="mail-note">Si apre il menu di condivisione: scegli l'app (WhatsApp, Telegram, posta...) e poi il contatto. Funziona soprattutto da telefono; da computer spesso non è disponibile e il testo viene copiato negli appunti.</div>
     </div>
   </div>
 
@@ -922,11 +949,13 @@
        IMPEGNI E IDEE IN PROGRAMMA (da organizer_tessere_config_v1 — planner2.html)
        ============================================================ -->
   <div class="card">
-    <div class="section-title">
-      💡 Progetti e idee in programma
+    <div class="config-toggle-wrap util-toggle-row" style="align-items:center;">
+      <button class="config-toggle-btn" id="togglePlanBtn" data-panel="planPanel">💡 Progetti e idee in programma</button>
       <a href="planner2.html" class="link-to-page">vai al planner →</a>
     </div>
-    <div class="plan-grid" id="planList"></div>
+    <div class="spese-panel" id="planPanel">
+      <div class="plan-grid" id="planList"></div>
+    </div>
   </div>
 
   <!-- ============================================================
@@ -2075,15 +2104,75 @@ function initUtilToggles(){
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
                    (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
 
-  document.getElementById('openCalBtn').addEventListener('click', () => {
-    window.open('https://calendar.google.com/', '_blank', 'noopener');
+  // Un pulsante può mancare dall'HTML: in quel caso non si blocca niente
+  function su(id, fn){
+    const el = document.getElementById(id);
+    if(el) el.addEventListener('click', fn);
+  }
+  su('openCalBtn', () => window.open('https://calendar.google.com/', '_blank', 'noopener'));
+  su('openMapBtn', () => window.open('https://www.google.com/maps', '_blank', 'noopener'));
+  su('openWaBtn', () => {
+    const ua = navigator.userAgent;
+    if(/Android/i.test(ua)){
+      // Android: intent esplicito verso l'app; se non installata, apre il sito
+      window.location.href = 'intent://send/#Intent;scheme=whatsapp;package=com.whatsapp;'
+        + 'S.browser_fallback_url=' + encodeURIComponent('https://wa.me/') + ';end';
+    }else if(isMobile){
+      // iPhone/iPad: schema dell'app
+      window.location.href = 'whatsapp://send';
+    }else{
+      window.open('https://web.whatsapp.com/', '_blank', 'noopener');
+    }
   });
-  document.getElementById('openMapBtn').addEventListener('click', () => {
-    window.open('https://www.google.com/maps', '_blank', 'noopener');
-  });
-  document.getElementById('openWaBtn').addEventListener('click', () => {
-    if(isMobile) window.location.href = 'whatsapp://send';   // apre l'app
-    else window.open('https://web.whatsapp.com/', '_blank', 'noopener');
+}
+
+/* ================================================================
+   CONDIVIDI — menu di condivisione del dispositivo (testo e/o file).
+   Se il browser non lo supporta, il testo viene copiato negli appunti.
+   ================================================================ */
+function initShareWidget(){
+  const text = document.getElementById('shareText');
+  const file = document.getElementById('shareFile');
+  const btn  = document.getElementById('shareBtn');
+  if(!btn) return;
+
+  btn.addEventListener('click', async () => {
+    const t = text.value.trim();
+    const files = Array.from(file.files || []);
+    if(!t && files.length === 0){
+      alert('Scrivi un testo o scegli un file da condividere.');
+      return;
+    }
+
+    if(!navigator.share){
+      if(t && navigator.clipboard && navigator.clipboard.writeText){
+        try{
+          await navigator.clipboard.writeText(t);
+          alert('Questo browser non ha il menu di condivisione: il testo è stato copiato negli appunti.');
+          return;
+        }catch(e){ /* passa al messaggio generico */ }
+      }
+      alert('Questo browser non supporta la condivisione. Prova dal telefono.');
+      return;
+    }
+
+    const data = {};
+    if(t) data.text = t;
+    if(files.length){
+      if(navigator.canShare && navigator.canShare({ files })){
+        data.files = files;
+      }else if(t){
+        alert('Questo browser non può condividere file: condivido solo il testo.');
+      }else{
+        alert('Questo browser non può condividere file. Prova dal telefono.');
+        return;
+      }
+    }
+    try{
+      await navigator.share(data);
+    }catch(e){
+      if(e && e.name !== 'AbortError') alert('Condivisione non riuscita: ' + e.message);
+    }
   });
 }
 
@@ -2099,6 +2188,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initCalendarWidget();
   initMapsWidget();
   initUtilToggles();
+  initShareWidget();
 
   // Spese in scadenza: apri/chiudi il pannello
   document.getElementById('toggleSpeseBtn').addEventListener('click', () => {
