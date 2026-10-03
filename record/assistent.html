@@ -591,6 +591,10 @@
   .util-row{ display:flex; gap:8px; flex-wrap:wrap; }
   .util-row > div{ flex:1; min-width:110px; }
   .util-label{ display:block; font-size:12px; color:var(--muted); margin-bottom:2px; }
+
+  /* Righe dei pulsanti Mostra/Nascondi + Apri app nelle card utility */
+  .util-toggle-row{ display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px 0; }
+  .mail-widget .spese-panel.open{ display:block; }
 </style>
 </head>
 <body>
@@ -831,7 +835,10 @@
        MAIL (apre Gmail con destinatario, oggetto e testo compilati)
        ============================================================ -->
   <div class="card mail-widget">
-    <div class="section-title">✉️ Scrivi una mail</div>
+    <div class="config-toggle-wrap util-toggle-row">
+      <button class="config-toggle-btn" id="toggleMailBtn" data-panel="mailPanel">✉️ Scrivi E-mail</button>
+    </div>
+    <div class="spese-panel" id="mailPanel">
     <input type="email" id="mailTo" placeholder="Destinatario (es. nome@email.it)" autocomplete="off">
     <input type="text" id="mailSubject" placeholder="Oggetto (facoltativo)">
     <textarea id="mailBody" placeholder="Scrivi qui il testo della mail..."></textarea>
@@ -840,27 +847,36 @@
       <button class="qa-btn secondary" id="mailWebBtn">Gmail web</button>
     </div>
     <div class="mail-note">Su telefono si apre l'app di posta predefinita; su computer si apre Gmail. La mail è già compilata: premi "Invia" lì.</div>
+    </div>
   </div>
 
   <!-- ============================================================
        WHATSAPP (apre la chat con il messaggio già scritto)
        ============================================================ -->
   <div class="card mail-widget">
-    <div class="section-title">💬 Scrivi su WhatsApp</div>
+    <div class="config-toggle-wrap util-toggle-row">
+      <button class="config-toggle-btn" id="toggleWaBtn" data-panel="waPanel">💬 Scrivi su WhatsApp</button>
+    </div>
+    <div class="spese-panel" id="waPanel">
     <input type="tel" id="waNumber" placeholder="Numero (es. 333 1234567) — vuoto per scegliere il contatto" autocomplete="off">
     <textarea id="waText" placeholder="Scrivi qui il messaggio..."></textarea>
     <div class="mail-actions">
       <button class="qa-btn" id="waSendBtn">Invia su WhatsApp</button>
     </div>
     <div class="mail-note">Si apre WhatsApp con il messaggio già scritto: premi "Invia" lì. Un numero italiano senza prefisso riceve +39 in automatico.</div>
+    </div>
   </div>
 
   <!-- ============================================================
        CALENDARIO (Google Calendar già compilato oppure file .ics)
        ============================================================ -->
   <div class="card mail-widget">
-    <div class="section-title">📅 Aggiungi a Calendar</div>
-    <input type="text" id="calTitle" placeholder="Titolo (es. pranzo di lavoro)">
+    <div class="config-toggle-wrap util-toggle-row">
+      <button class="config-toggle-btn" id="toggleCalBtn" data-panel="calPanel">📆 Aggiungi in Calendar</button>
+      <button class="config-toggle-btn" id="openCalBtn">🗓️ Apri</button>
+    </div>
+    <div class="spese-panel" id="calPanel">
+    <input type="text" id="calTitle" placeholder="Titolo (es. cena di lavoro)">
     <div class="util-row">
       <div><label class="util-label" for="calDate">Data</label><input type="date" id="calDate"></div>
       <div><label class="util-label" for="calStart">Inizio</label><input type="time" id="calStart"></div>
@@ -873,13 +889,18 @@
       <button class="qa-btn secondary" id="calIcsBtn">Scarica .ics</button>
     </div>
     <div class="mail-note">Senza orario l'evento è "tutto il giorno"; senza ora di fine dura un'ora. Il file .ics si apre con il calendario del telefono o del computer.</div>
+    </div>
   </div>
 
   <!-- ============================================================
        MAPS (cerca un luogo o calcola il percorso)
        ============================================================ -->
   <div class="card mail-widget">
-    <div class="section-title">🗺️ Maps</div>
+    <div class="config-toggle-wrap util-toggle-row">
+      <button class="config-toggle-btn" id="toggleMapBtn" data-panel="mapPanel">🗺️ Cerca in Maps</button>
+      <button class="config-toggle-btn" id="openMapBtn">🗺️ Apri</button>
+    </div>
+    <div class="spese-panel" id="mapPanel">
     <input type="text" id="mapDest" placeholder="Luogo o indirizzo di destinazione">
     <input type="text" id="mapOrigin" placeholder="Partenza (vuoto = la tua posizione)">
     <select id="mapMode">
@@ -893,6 +914,7 @@
       <button class="qa-btn secondary" id="mapDirBtn">Indicazioni</button>
     </div>
     <div class="mail-note">Da telefono si apre l'app Maps, da computer Google Maps in una nuova scheda.</div>
+    </div>
   </div>
 
 
@@ -2040,6 +2062,32 @@ function initMapsWidget(){
 }
 
 /* ================================================================
+   CARD UTILITY A SCOMPARSA + pulsanti "Apri app"
+   ================================================================ */
+function initUtilToggles(){
+  document.querySelectorAll('.util-toggle-row [data-panel]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = document.getElementById(btn.dataset.panel);
+      if(panel) panel.classList.toggle('open');
+    });
+  });
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+                   (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
+
+  document.getElementById('openCalBtn').addEventListener('click', () => {
+    window.open('https://calendar.google.com/', '_blank', 'noopener');
+  });
+  document.getElementById('openMapBtn').addEventListener('click', () => {
+    window.open('https://www.google.com/maps', '_blank', 'noopener');
+  });
+  document.getElementById('openWaBtn').addEventListener('click', () => {
+    if(isMobile) window.location.href = 'whatsapp://send';   // apre l'app
+    else window.open('https://web.whatsapp.com/', '_blank', 'noopener');
+  });
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
@@ -2050,6 +2098,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initWhatsAppWidget();
   initCalendarWidget();
   initMapsWidget();
+  initUtilToggles();
 
   // Spese in scadenza: apri/chiudi il pannello
   document.getElementById('toggleSpeseBtn').addEventListener('click', () => {
