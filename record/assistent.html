@@ -900,9 +900,29 @@
       <div class="plan-grid" id="planList"></div>
     </div>
   </div>
+    
+  <!-- ============================================================
+       SPESE IN SCADENZA (da banca_spese_v1 — bancaconti.html)
+       ============================================================ -->
+  <div class="card">
+    <div class="section-title">
+      💳 Agenda finanziaria
+      <a href="bancaconti.html" class="link-to-page">vai al gestionale conti →</a>
+    </div>
+    <div class="config-toggle-wrap" style="margin:0 0 12px 0;">
+      <button class="config-toggle-btn" id="toggleSpeseBtn">🔽 Mostra/Nascondi scadenze</button>
+    </div>
+    <div class="spese-panel" id="spesePanel">
+      <div id="speseScaduteBox"></div>
+      <div id="speseSettimanaBox"></div>
+      <div id="speseMeseBox"></div>
+      <div class="empty-msg" id="speseEmptyMsg" style="display:none;">Nessuna spesa in scadenza nei prossimi giorni.</div>
+      <div id="disponibilitaContiBox"></div>
+    </div>
+  </div>
 
     <!-- ============================================================
-       LETTERA (compila i campi e stampa/salva in PDF su foglio A4)
+     LETTERA (compila i campi e stampa/salva in PDF su foglio A4)
        ============================================================ -->
   <div class="card mail-widget">
     <div class="config-toggle-wrap util-toggle-row">
@@ -942,26 +962,6 @@
       <button class="qa-btn" id="letterPrintBtn">🖨️ Stampa</button>
     </div>
     <div class="mail-note">Si apre la finestra di stampa: scegli "Salva come PDF" (formato A4) oppure la tua stampante. I campi lasciati vuoti non compaiono nella lettera.</div>
-    </div>
-  </div>
-
-  <!-- ============================================================
-       SPESE IN SCADENZA (da banca_spese_v1 — bancaconti.html)
-       ============================================================ -->
-  <div class="card">
-    <div class="section-title">
-      💳 Agenda finanziaria
-      <a href="bancaconti.html" class="link-to-page">vai al gestionale conti →</a>
-    </div>
-    <div class="config-toggle-wrap" style="margin:0 0 12px 0;">
-      <button class="config-toggle-btn" id="toggleSpeseBtn">🔽 Mostra/Nascondi scadenze</button>
-    </div>
-    <div class="spese-panel" id="spesePanel">
-      <div id="speseScaduteBox"></div>
-      <div id="speseSettimanaBox"></div>
-      <div id="speseMeseBox"></div>
-      <div class="empty-msg" id="speseEmptyMsg" style="display:none;">Nessuna spesa in scadenza nei prossimi giorni.</div>
-      <div id="disponibilitaContiBox"></div>
     </div>
   </div>
   
