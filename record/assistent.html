@@ -611,6 +611,45 @@
     font-size:14px;
     font-family:inherit;
   }
+
+  /* ============================================================
+     LETTERA — campi nella card + layout di stampa A4
+     ============================================================ */
+  .letter-field{ margin-bottom:8px; }
+  .letter-field .util-label{ margin-bottom:3px; }
+  .letter-field textarea, .letter-field input{ margin-bottom:0; }
+
+  /* Il documento di stampa non si vede a schermo */
+  #letterPrint{ display:none; }
+
+  @page{ size:A4; margin:22mm 20mm; }
+
+  @media print{
+    body.printing-letter{
+      background:#fff !important;
+      padding:0 !important;
+      margin:0 !important;
+      display:block !important;
+    }
+    body.printing-letter .container{ display:none !important; }
+    body.printing-letter #letterPrint{
+      display:block !important;
+      font-family:"Times New Roman",Georgia,serif;
+      font-size:12pt;
+      line-height:1.45;
+      color:#000;
+    }
+    #letterPrint .lp-block{ white-space:pre-wrap; overflow-wrap:anywhere; }
+    #letterPrint .lp-from{ text-align:left; }
+    #letterPrint .lp-to{ width:50%; margin:1.45em 0 0 auto; text-align:left; }
+    #letterPrint .lp-subject{ margin-top:1.45em; width:100%; font-weight:bold; }
+    #letterPrint .lp-body{ margin-top:1.45em; width:100%; text-align:justify; hyphens:auto; }
+    #letterPrint .lp-place{ margin-top:2.9em; text-align:left; }
+    #letterPrint .lp-sign{ margin-top:1.45em; text-align:right; }
+    #letterPrint .lp-extra{ margin-top:2.9em; width:100%; font-size:11pt; }
+    #letterPrint .lp-from, #letterPrint .lp-to, #letterPrint .lp-subject,
+    #letterPrint .lp-place, #letterPrint .lp-sign{ break-inside:avoid; }
+  }
 </style>
 </head>
 <body>
@@ -863,6 +902,50 @@
   </div>
 
     <!-- ============================================================
+       LETTERA (compila i campi e stampa/salva in PDF su foglio A4)
+       ============================================================ -->
+  <div class="card mail-widget">
+    <div class="config-toggle-wrap util-toggle-row">
+      <button class="config-toggle-btn" id="toggleLetterBtn" data-panel="letterPanel">📄 Scrivi Lettera</button>
+      <button class="config-toggle-btn util-trash" id="trashLetter" data-draft="letter" title="Cancella il contenuto" aria-label="Cancella il contenuto">🗑️</button>
+    </div>
+    <div class="spese-panel" id="letterPanel">
+    <div class="letter-field">
+      <label class="util-label" for="letFrom">Mittente</label>
+      <textarea id="letFrom" style="min-height:70px;" placeholder="Nome, indirizzo, recapiti..."></textarea>
+    </div>
+    <div class="letter-field">
+      <label class="util-label" for="letTo">Destinatario</label>
+      <textarea id="letTo" style="min-height:70px;" placeholder="Nome, indirizzo..."></textarea>
+    </div>
+    <div class="letter-field">
+      <label class="util-label" for="letSubject">Oggetto</label>
+      <input type="text" id="letSubject" placeholder="Oggetto della comunicazione">
+    </div>
+    <div class="letter-field">
+      <label class="util-label" for="letBody">Testo della comunicazione</label>
+      <textarea id="letBody" style="min-height:200px;" placeholder="Gentile..., "></textarea>
+    </div>
+    <div class="util-row">
+      <div class="letter-field"><label class="util-label" for="letPlace">Luogo</label><input type="text" id="letPlace" placeholder="Es. Milano"></div>
+      <div class="letter-field"><label class="util-label" for="letDate">Data</label><input type="date" id="letDate"></div>
+    </div>
+    <div class="letter-field">
+      <label class="util-label" for="letSign">Firma</label>
+      <input type="text" id="letSign" placeholder="Nome e cognome">
+    </div>
+    <div class="letter-field">
+      <label class="util-label" for="letExtra">Allegati e/o Post scriptum</label>
+      <textarea id="letExtra" style="min-height:80px;" placeholder="Es. Allegati: 1) copia documento... &#10;P.S. ..."></textarea>
+    </div>
+    <div class="mail-actions">
+      <button class="qa-btn" id="letterPrintBtn">🖨️ Stampa</button>
+    </div>
+    <div class="mail-note">Si apre la finestra di stampa: scegli "Salva come PDF" (formato A4) oppure la tua stampante. I campi lasciati vuoti non compaiono nella lettera.</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
        SPESE IN SCADENZA (da banca_spese_v1 — bancaconti.html)
        ============================================================ -->
   <div class="card">
@@ -1021,6 +1104,9 @@
 
   
 </div>
+
+<!-- Documento della lettera: compilato al momento della stampa, visibile solo in stampa -->
+<div id="letterPrint" aria-hidden="true"></div>
 
 <!-- Frasi motivazionali/citazioni: caricate da file esterno, separate
      dalla logica della pagina. Deve stare PRIMA dello script principale,
@@ -2200,11 +2286,12 @@ const DRAFT_GROUPS = {
   map:  { fields: ['mapDest','mapOrigin','mapMode'],                             toggle: 'toggleMapBtn'  },
   // Condividi: il testo si salva; il file scelto no (il browser non permette di ripristinarlo),
   // ma conta per il pallino e viene svuotato dal cestino.
-  share:{ fields: ['shareText'], transient: ['shareFile'],                      toggle: 'toggleShareBtn' }
+  share:{ fields: ['shareText'], transient: ['shareFile'],                      toggle: 'toggleShareBtn' },
+  letter:{ fields: ['letFrom','letTo','letSubject','letBody','letPlace','letDate','letSign','letExtra'], toggle: 'toggleLetterBtn' }
 };
 
 function draftDefault(id){
-  if(id === 'calDate') return todayYMD();
+  if(id === 'calDate' || id === 'letDate') return todayYMD();
   if(id === 'mapMode') return 'driving';
   return '';
 }
@@ -2317,6 +2404,76 @@ function initDrafts(){
 }
 
 /* ================================================================
+   LETTERA — compone il documento A4 e apre la finestra di stampa
+   (da lì: "Salva come PDF" oppure stampante).
+   Layout: mittente in alto a sinistra; destinatario sotto, a destra;
+   oggetto a tutta larghezza; corpo; luogo e data a sinistra; firma
+   sotto, a destra; allegati / P.S. a tutta larghezza.
+   ================================================================ */
+let letterPrintStamp = 0;
+
+function initLetterWidget(){
+  const val = id => (document.getElementById(id).value || '').trim();
+  const btn = document.getElementById('letterPrintBtn');
+  const out = document.getElementById('letterPrint');
+  if(!btn || !out) return;
+
+  // Data di partenza: oggi (se non c'è già una data salvata)
+  const dEl = document.getElementById('letDate');
+  if(dEl && !dEl.value) dEl.value = todayYMD();
+
+  function dataLunga(ymd){
+    if(!ymd) return '';
+    const d = new Date(ymd + 'T00:00:00');
+    return isNaN(d.getTime()) ? ymd : d.toLocaleDateString('it-IT', { day:'numeric', month:'long', year:'numeric' });
+  }
+
+  function blocco(cls, testo, prefisso){
+    if(!testo) return '';
+    return '<div class="lp-block ' + cls + '">' + (prefisso || '') + escapeHtml(testo) + '</div>';
+  }
+
+  btn.addEventListener('click', () => {
+    const dati = {
+      da: val('letFrom'), a: val('letTo'), ogg: val('letSubject'), corpo: val('letBody'),
+      luogo: val('letPlace'), data: dataLunga(document.getElementById('letDate').value),
+      firma: val('letSign'), extra: val('letExtra')
+    };
+    if(!dati.da && !dati.a && !dati.ogg && !dati.corpo && !dati.firma && !dati.extra){
+      alert('La lettera è vuota: scrivi almeno il testo della comunicazione.');
+      return;
+    }
+
+    const luogoData = [dati.luogo, dati.data].filter(Boolean).join(', ');
+
+    out.innerHTML =
+        blocco('lp-from', dati.da)
+      + blocco('lp-to', dati.a)
+      + blocco('lp-subject', dati.ogg, 'Oggetto: ')
+      + blocco('lp-body', dati.corpo)
+      + blocco('lp-place', luogoData)
+      + blocco('lp-sign', dati.firma)
+      + blocco('lp-extra', dati.extra);
+
+    document.body.classList.add('printing-letter');
+    letterPrintStamp = Date.now();
+    window.print();
+  });
+
+  // Finita la stampa si torna alla pagina normale
+  window.addEventListener('afterprint', () => {
+    document.body.classList.remove('printing-letter');
+  });
+  // Se la classe fosse rimasta (alcuni telefoni non inviano "afterprint"), una stampa
+  // normale della pagina successiva non deve uscire con la sola lettera.
+  window.addEventListener('beforeprint', () => {
+    if(Date.now() - letterPrintStamp > 3000){
+      document.body.classList.remove('printing-letter');
+    }
+  });
+}
+
+/* ================================================================
    AVVIO
    ================================================================ */
 window.addEventListener('DOMContentLoaded', () => {
@@ -2330,6 +2487,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initUtilToggles();
   initShareWidget();
   initDrafts();
+  initLetterWidget();
 
   // Spese in scadenza: apri/chiudi il pannello
   document.getElementById('toggleSpeseBtn').addEventListener('click', () => {
