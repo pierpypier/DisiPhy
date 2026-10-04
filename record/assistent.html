@@ -926,6 +926,7 @@
   <div class="card mail-widget">
     <div class="config-toggle-wrap util-toggle-row">
       <button class="config-toggle-btn" id="toggleShareBtn" data-panel="sharePanel">📤 Condividi</button>
+      <button class="config-toggle-btn util-trash" id="trashShare" data-draft="share" title="Cancella il contenuto" aria-label="Cancella il contenuto">🗑️</button>
     </div>
     <div class="spese-panel" id="sharePanel">
     <textarea id="shareText" placeholder="Testo da condividere (facoltativo se alleghi un file)..."></textarea>
@@ -2196,7 +2197,10 @@ const DRAFT_GROUPS = {
   mail: { fields: ['mailTo','mailSubject','mailBody'],                          toggle: 'toggleMailBtn' },
   wa:   { fields: ['waNumber','waText'],                                         toggle: 'toggleWaBtn'   },
   cal:  { fields: ['calTitle','calDate','calStart','calEnd','calPlace','calNotes'], toggle: 'toggleCalBtn'  },
-  map:  { fields: ['mapDest','mapOrigin','mapMode'],                             toggle: 'toggleMapBtn'  }
+  map:  { fields: ['mapDest','mapOrigin','mapMode'],                             toggle: 'toggleMapBtn'  },
+  // Condividi: il testo si salva; il file scelto no (il browser non permette di ripristinarlo),
+  // ma conta per il pallino e viene svuotato dal cestino.
+  share:{ fields: ['shareText'], transient: ['shareFile'],                      toggle: 'toggleShareBtn' }
 };
 
 function draftDefault(id){
@@ -2225,10 +2229,17 @@ function draftsWrite(obj){
 }
 
 // La card ha del contenuto "vero" se almeno un campo differisce dal valore di partenza
-function draftHasContent(group){
+function draftHasSavedContent(group){
   return DRAFT_GROUPS[group].fields.some(id => {
     const el = document.getElementById(id);
     return el && String(el.value).trim() !== '' && el.value !== draftDefault(id);
+  });
+}
+function draftHasContent(group){
+  if(draftHasSavedContent(group)) return true;
+  return (DRAFT_GROUPS[group].transient || []).some(id => {
+    const el = document.getElementById(id);
+    return el && el.value !== '';
   });
 }
 
@@ -2239,7 +2250,7 @@ function draftUpdateBadge(group){
 
 function draftSave(group){
   const all = draftsRead();
-  if(draftHasContent(group)){
+  if(draftHasSavedContent(group)){
     const data = {};
     DRAFT_GROUPS[group].fields.forEach(id => {
       const el = document.getElementById(id);
@@ -2258,6 +2269,10 @@ function draftClear(group){
   DRAFT_GROUPS[group].fields.forEach(id => {
     const el = document.getElementById(id);
     if(el) el.value = draftDefault(id);
+  });
+  (DRAFT_GROUPS[group].transient || []).forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.value = '';          // svuota il file scelto
   });
   const all = draftsRead();
   delete all[group];
@@ -2285,6 +2300,11 @@ function initDrafts(){
       if(!el) return;
       el.addEventListener('input',  () => draftSave(group));
       el.addEventListener('change', () => draftSave(group));
+    });
+
+    (g.transient || []).forEach(id => {
+      const el = document.getElementById(id);
+      if(el) el.addEventListener('change', () => draftSave(group));
     });
 
     draftUpdateBadge(group);
