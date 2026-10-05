@@ -64,15 +64,15 @@
 
   /* Control bar under the road */
   #pad{display:flex;align-items:center;justify-content:space-between;
-    height:calc(var(--u)*108);padding:0 calc(var(--u)*14);
+    height:calc(var(--u)*300);padding:0 calc(var(--u)*24);
     background:linear-gradient(180deg,#14072e,#07021a);border-top:2px solid rgba(110,231,255,.55);
     box-shadow:0 -6px 24px rgba(122,44,255,.35)}
-  .tb{width:calc(var(--u)*190);height:calc(var(--u)*80);border-radius:calc(var(--u)*22);
-    font-size:calc(var(--u)*36);font-weight:900;color:#fff;cursor:pointer;
+  .tb{width:calc(var(--u)*280);height:calc(var(--u)*280);border-radius:50%;
+    font-size:calc(var(--u)*112);font-weight:900;color:#fff;cursor:pointer;
     background:rgba(20,0,50,.7);border:2px solid rgba(110,231,255,.75);box-shadow:0 0 14px rgba(110,231,255,.25) inset;
     display:flex;align-items:center;justify-content:center;touch-action:none;
     user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
-  .tb.brake{width:calc(var(--u)*230);font-size:calc(var(--u)*24);letter-spacing:.14em;border-color:rgba(255,77,109,.85);
+  .tb.brake{border-radius:calc(var(--u)*44);font-size:calc(var(--u)*46);letter-spacing:.1em;border-color:rgba(255,77,109,.85);
     box-shadow:0 0 14px rgba(255,77,109,.3) inset}
   .tb.on{background:rgba(255,42,109,.65);transform:scale(.96)}
 </style>
@@ -122,8 +122,8 @@
 
   /* ---------- scaling UI ---------- */
   function resize() {
-    // stage 16:9 + barra comandi (12% dell'altezza strada): tutto deve stare nella finestra
-    const w = Math.max(320, Math.min(innerWidth, innerHeight / 0.675));
+    // stage 16:9 + barra comandi alta (300u su 960u di larghezza): tutto deve stare nella finestra
+    const w = Math.max(320, Math.min(innerWidth, innerHeight / 0.875));
     wrap.style.width = w + 'px';
     wrap.style.setProperty('--u', (w / 960) + 'px');
   }
