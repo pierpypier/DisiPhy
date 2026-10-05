@@ -12,11 +12,12 @@ html,body{height:100%;margin:0}
 body{background:#05051a;color:var(--fg);font-family:monospace;display:flex;flex-direction:column;user-select:none;-webkit-user-select:none;touch-action:none;overflow:hidden}
 canvas{flex:1;min-height:0;width:100%;object-fit:contain;image-rendering:pixelated;image-rendering:crisp-edges}
 #pad{display:none;justify-content:space-between;align-items:center;padding:6px 14px}
-#cross{display:grid;grid-template-columns:repeat(3,56px);grid-template-rows:repeat(3,42px);gap:5px}
+#cross{display:grid;grid-template-columns:repeat(2,68px);gap:0 34px;justify-items:center;align-items:center;margin-left:min(7vw,28px)}
 #pad button{border:2px solid var(--acc);border-radius:12px;background:var(--btn);color:var(--fg);font:bold 20px monospace;touch-action:none}
 #pad button.on,#pad button:active{background:var(--acc);color:#000}
-#cross .u{grid-area:1/2}#cross .l{grid-area:2/1}#cross .r{grid-area:2/3}#cross .d{grid-area:3/2}
-#bomb{width:92px;height:92px;border-radius:50%!important;border-color:#ff4a6a!important;font-size:14px!important}
+#cross button{width:68px;height:68px;padding:0;border-radius:50%;font-size:29px}
+#cross .u{grid-area:1/1/2/3;margin-bottom:-17px}#cross .l{grid-area:2/1}#cross .r{grid-area:2/2}#cross .d{grid-area:3/1/4/3;margin-top:-17px}
+#bomb{width:68px;height:68px;padding:0;border-radius:50%!important;border-color:#ff4a6a!important;font-size:12px!important}
 @media (pointer:coarse){#pad{display:flex}}
 #foot{display:flex;justify-content:flex-end;padding:2px 8px 6px}
 #foot a{font:bold 11px monospace;color:var(--fg);text-decoration:none;border:1px solid var(--acc);border-radius:8px;padding:4px 8px;background:var(--btn);opacity:.85}

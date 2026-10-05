@@ -12,8 +12,8 @@ html,body{height:100%;margin:0}
 body{background:#10163a;color:var(--fg);font-family:monospace;display:flex;flex-direction:column;user-select:none;-webkit-user-select:none;touch-action:none;overflow:hidden}
 canvas{flex:1;min-height:0;width:100%;object-fit:contain;image-rendering:pixelated;image-rendering:crisp-edges}
 #pad{display:none;justify-content:space-between;align-items:center;padding:8px 14px}
-#pad div{display:flex;gap:10px}
-#pad button{width:68px;height:68px;border:2px solid var(--acc);border-radius:14px;background:var(--btn);color:var(--fg);font:bold 22px monospace;touch-action:none}
+#pad div{display:flex;gap:14px}#pad div:first-child{gap:6px}#pad div:first-child button{width:84px;height:84px;font-size:36px}
+#pad button{width:68px;height:68px;padding:0;border:2px solid var(--acc);border-radius:50%;background:var(--btn);color:var(--fg);font:bold 29px monospace;touch-action:none}
 #pad button.sm{font-size:12px}
 #pad button.on,#pad button:active{background:var(--acc);color:#000}
 @media (pointer:coarse){#pad{display:flex}}

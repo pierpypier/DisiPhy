@@ -62,21 +62,21 @@
 
   /* Control bar under the playfield */
   #pad{display:flex;align-items:center;justify-content:space-between;
-    height:calc(var(--u)*388);padding:0 calc(var(--u)*24);
+    height:var(--padh,calc(var(--u)*388));padding:0 calc(var(--u)*24);
     background:linear-gradient(180deg,#14072e,#07021a);border-top:2px solid rgba(110,231,255,.55);
     box-shadow:0 -6px 24px rgba(122,44,255,.35)}
   .grp{display:flex;gap:calc(var(--u)*12)}
-  .dpad{display:grid;grid-template-columns:auto auto;gap:0 calc(var(--u)*36);justify-items:center;align-items:center}
+  .dpad{display:grid;grid-template-columns:auto auto;gap:0 calc(var(--ds,calc(var(--u)*112))*.5);justify-items:center;align-items:center;flex:none}
   .dpad .up,.dpad .down{grid-column:1 / span 2}
-  .dpad .up{margin-bottom:calc(var(--u)*-28)}
-  .dpad .down{margin-top:calc(var(--u)*-28)}
-  .tb{width:calc(var(--u)*140);height:calc(var(--u)*140);border-radius:50%;
-    font-size:calc(var(--u)*56);font-weight:900;color:#fff;cursor:pointer;
+  .dpad .up{margin-bottom:calc(var(--ds,calc(var(--u)*112))*-.25)}
+  .dpad .down{margin-top:calc(var(--ds,calc(var(--u)*112))*-.25)}
+  .tb{width:var(--ds,calc(var(--u)*112));height:var(--ds,calc(var(--u)*112));border-radius:50%;
+    font-size:calc(var(--ds,calc(var(--u)*112))*.42);font-weight:900;color:#fff;cursor:pointer;
     background:rgba(20,0,50,.7);border:2px solid rgba(110,231,255,.75);box-shadow:0 0 14px rgba(110,231,255,.25) inset;
     display:flex;align-items:center;justify-content:center;touch-action:none;
     user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
   .tb.mid{border-color:rgba(255,226,122,.8);box-shadow:0 0 14px rgba(255,226,122,.2) inset}
-  .tb.jump{width:calc(var(--u)*220);height:calc(var(--u)*220);font-size:calc(var(--u)*34);letter-spacing:.08em;border-color:rgba(255,77,109,.85);
+  .tb.jump{font-size:calc(var(--ds,calc(var(--u)*112))*.2);letter-spacing:.04em;border-color:rgba(255,77,109,.85);
     box-shadow:0 0 14px rgba(255,77,109,.3) inset}
   .tb.on{background:rgba(255,42,109,.65);transform:scale(.96)}
 </style>
@@ -130,7 +130,17 @@
   function resize() {
     const w = Math.max(320, Math.min(innerWidth, innerHeight / 0.97));
     wrap.style.width = w + 'px';
-    wrap.style.setProperty('--u', (w / 960) + 'px');
+    const u = w / 960;
+    wrap.style.setProperty('--u', u + 'px');
+    // controlli ingranditi (stessa disposizione di City Fury): usa lo spazio libero sotto lo schermo
+    const PADU = 388;
+    const free = Math.max(0, innerHeight - 0.5625 * w - PADU * u);
+    const padH = PADU * u + Math.min(free, 120);
+    const byH = (padH - 12) / 2.5;                      // croce alta 2.5 pulsanti
+    const byW = (w - 48 * u - 10) / 3.5;                // croce (2.5) + tasto SALTA (1)
+    const ds = Math.max(112 * u, Math.min(68, byH, byW));
+    wrap.style.setProperty('--ds', ds + 'px');
+    wrap.style.setProperty('--padh', padH + 'px');
   }
   window.addEventListener('resize', resize); resize();
 
