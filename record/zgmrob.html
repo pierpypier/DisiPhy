@@ -61,22 +61,25 @@
   .keys kbd{display:inline-block;padding:0 calc(var(--u)*7);border:1px solid #6ee7ff;border-radius:calc(var(--u)*5);color:#6ee7ff;margin:0 2px}
 
   /* Control bar under the playfield */
-  #pad{display:flex;align-items:center;justify-content:space-between;
-    height:var(--padh,calc(var(--u)*388));padding:0 calc(var(--u)*24);
+  #pad{position:relative;
+    height:var(--padh,calc(var(--u)*388));
     background:linear-gradient(180deg,#14072e,#07021a);border-top:2px solid rgba(110,231,255,.55);
     box-shadow:0 -6px 24px rgba(122,44,255,.35)}
-  .grp{display:flex;gap:calc(var(--u)*12)}
-  .dpad{display:grid;grid-template-columns:auto auto;gap:0 calc(var(--ds,calc(var(--u)*112))*.5);justify-items:center;align-items:center;flex:none}
-  .dpad .up,.dpad .down{grid-column:1 / span 2}
-  .dpad .up{margin-bottom:calc(var(--ds,calc(var(--u)*112))*-.25)}
-  .dpad .down{margin-top:calc(var(--ds,calc(var(--u)*112))*-.25)}
-  .tb{width:var(--ds,calc(var(--u)*112));height:var(--ds,calc(var(--u)*112));border-radius:50%;
-    font-size:calc(var(--ds,calc(var(--u)*112))*.42);font-weight:900;color:#fff;cursor:pointer;
+  .grp,.dpad{display:contents}
+  /* croce direzionale centrata nello schermo (--cx = centro croce); SALTA a distanza --m dal bordo destro */
+  .tb{position:absolute;top:calc(var(--t) + var(--ds)*.75)}
+  .tb[data-k=up]{top:var(--t);left:calc(var(--cx) - var(--ds)/2)}
+  .tb[data-k=down]{top:calc(var(--t) + var(--ds)*1.5);left:calc(var(--cx) - var(--ds)/2)}
+  .tb[data-k=left]{left:calc(var(--cx) - var(--ds)*1.5 - var(--g))}
+  .tb[data-k=right]{left:calc(var(--cx) + var(--ds)/2 + var(--g))}
+  .tb[data-k=jump]{right:var(--m)}
+  .tb{width:var(--ds);height:var(--ds);border-radius:50%;
+    font-size:calc(var(--ds)*.42);font-weight:900;color:#fff;cursor:pointer;
     background:rgba(20,0,50,.7);border:2px solid rgba(110,231,255,.75);box-shadow:0 0 14px rgba(110,231,255,.25) inset;
     display:flex;align-items:center;justify-content:center;touch-action:none;
     user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
   .tb.mid{border-color:rgba(255,226,122,.8);box-shadow:0 0 14px rgba(255,226,122,.2) inset}
-  .tb.jump{font-size:calc(var(--ds,calc(var(--u)*112))*.2);letter-spacing:.04em;border-color:rgba(255,77,109,.85);
+  .tb.jump{font-size:calc(var(--ds)*.2);letter-spacing:.04em;border-color:rgba(255,77,109,.85);
     box-shadow:0 0 14px rgba(255,77,109,.3) inset}
   .tb.on{background:rgba(255,42,109,.65);transform:scale(.96)}
 </style>
@@ -137,9 +140,18 @@
     const free = Math.max(0, innerHeight - 0.5625 * w - PADU * u);
     const padH = PADU * u + Math.min(free, 120);
     const byH = (padH - 12) / 2.5;                      // croce alta 2.5 pulsanti
-    const byW = (w - 48 * u - 10) / 3.5;                // croce (2.5) + tasto SALTA (1)
-    const ds = Math.max(112 * u, Math.min(68, byH, byW));
+    const m = Math.max(12, 24 * u);                     // distanza dai bordi
+    const g = 5;                                        // spazio tra i pulsanti
+    const byW = (w - 2 * m - 3 * g) / 4;                // croce (3 pulsanti) + SALTA
+    let ds = Math.max(112 * u * 1.1, Math.min(68 * 1.1, byH, byW)) * 1.1;   // +10% ulteriore
+    ds = Math.max(36, Math.min(ds, byW, byH));
+    // croce il piu' possibile al centro dello schermo, senza toccare SALTA
+    const cx = Math.min(w / 2, w - m - 2.5 * ds - 2 * g);
     wrap.style.setProperty('--ds', ds + 'px');
+    wrap.style.setProperty('--m', m + 'px');
+    wrap.style.setProperty('--g', g + 'px');
+    wrap.style.setProperty('--cx', cx + 'px');
+    wrap.style.setProperty('--t', ((padH - 2.5 * ds) / 2) + 'px');
     wrap.style.setProperty('--padh', padH + 'px');
   }
   window.addEventListener('resize', resize); resize();

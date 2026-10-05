@@ -11,10 +11,10 @@
 html,body{height:100%;margin:0}
 body{background:#000;color:var(--fg);font-family:monospace;display:flex;flex-direction:column;user-select:none;-webkit-user-select:none;touch-action:none;overflow:hidden}
 canvas{flex:1;min-height:0;width:100%;object-fit:contain;image-rendering:pixelated;image-rendering:crisp-edges}
-#pad{display:none;grid-template-columns:repeat(2,68px);gap:0 34px;justify-content:center;justify-items:center;align-items:center;padding:6px 12px}
-#pad button{width:68px;height:68px;padding:0;border:2px solid var(--acc);border-radius:50%;background:var(--btn);color:var(--fg);font:bold 29px monospace;touch-action:none}
+#pad{--d:74.8px;display:none;grid-template-columns:repeat(2,var(--d));gap:0 calc(var(--d)*2.5);justify-content:center;justify-items:center;align-items:center;padding:6px 12px}
+#pad button{width:var(--d);height:var(--d);padding:0;border:2px solid var(--acc);border-radius:50%;background:var(--btn);color:var(--fg);font:bold 32px monospace;touch-action:none}
 #pad button:active{background:var(--acc);color:#000}
-#pad .u{grid-area:1/1/2/3;margin-bottom:-17px}#pad .l{grid-area:2/1}#pad .r{grid-area:2/2}#pad .d{grid-area:3/1/4/3;margin-top:-17px}
+#pad .u{grid-area:1/1/2/3;margin-bottom:calc(var(--d)*-.25)}#pad .l{grid-area:2/1}#pad .r{grid-area:2/2}#pad .d{grid-area:3/1/4/3;margin-top:calc(var(--d)*-.25)}
 @media (pointer:coarse){#pad{display:grid}}
 #foot{display:flex;justify-content:flex-end;padding:2px 8px 6px}
 #foot a{font:bold 11px monospace;color:var(--fg);text-decoration:none;border:1px solid var(--acc);border-radius:8px;padding:4px 8px;background:var(--btn);opacity:.85}

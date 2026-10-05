@@ -12,11 +12,11 @@ html,body{height:100%;margin:0}
 body{background:#070b1e;color:var(--fg);font-family:monospace;display:flex;flex-direction:column;user-select:none;-webkit-user-select:none;touch-action:none;overflow:hidden}
 canvas{flex:1;min-height:0;width:100%;object-fit:contain;image-rendering:pixelated;image-rendering:crisp-edges}
 #pad{display:none;justify-content:space-between;align-items:center;padding:6px 14px}
-#cross{display:grid;grid-template-columns:repeat(2,80px);gap:0 40px;justify-items:center;align-items:center;margin-left:min(7vw,28px)}
+#cross{--d:88px;flex:1;min-width:0;display:grid;grid-template-columns:var(--d) 1fr var(--d);gap:0;justify-items:center;align-items:center;margin-left:min(7vw,28px);margin-right:5px}
 #pad button{border:2px solid var(--acc);border-radius:12px;background:var(--btn);color:var(--fg);font:bold 20px monospace;touch-action:none}
 #pad button.on,#pad button:active{background:var(--acc);color:#000}
-#cross button{width:80px;height:80px;padding:0;border-radius:50%;font-size:34px}
-#cross .u{grid-area:1/1/2/3;margin-bottom:-20px}#cross .l{grid-area:2/1}#cross .r{grid-area:2/2}#cross .d{grid-area:3/1/4/3;margin-top:-20px}
+#cross button{width:var(--d);height:var(--d);padding:0;border-radius:50%;font-size:37px}
+#cross .u{grid-area:1/1/2/4;margin-bottom:calc(var(--d)*-.25)}#cross .l{grid-area:2/1;justify-self:start}#cross .r{grid-area:2/3;justify-self:end}#cross .d{grid-area:3/1/4/4;margin-top:calc(var(--d)*-.25)}
 #side{display:flex;flex-direction:column;gap:8px}
 #side button{width:96px;height:56px;font-size:13px}
 @media (pointer:coarse){#pad{display:flex}}

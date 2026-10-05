@@ -133,7 +133,7 @@
   const W = 960, H = 540, $ = id => document.getElementById(id), wrap = $('wrap');
 
   function resize() {
-    const PADU = 298; // altezza barra comandi in unità --u
+    const PADU = 328; // altezza barra comandi in unità --u (+10% per pulsanti piu' grandi)
     const w = Math.max(320, Math.min(innerWidth, innerHeight / (0.5625 + PADU / 960)));
     wrap.style.width = w + 'px';
     const u = w / 960;
@@ -142,8 +142,8 @@
     const free = Math.max(0, innerHeight - 0.5625 * w - PADU * u);
     const padH = PADU * u + Math.min(free, 120);
     const byH = (padH - 12) / 2.5;                      // croce alta 2.5 pulsanti
-    const byW = (w - 36 * u - 10) / 5;                // croce + triangolo azioni affiancati
-    const ds = Math.max(112 * u, Math.min(68, byH, byW));
+    const byW = (w - 36 * u - 4) / 5;                // croce + triangolo azioni affiancati
+    const ds = Math.min(Math.max(112 * u, Math.min(68, byH, byW)) * 1.1, byW);   // +10%
     wrap.style.setProperty('--ds', ds + 'px');
     wrap.style.setProperty('--padh', padH + 'px');
   }
