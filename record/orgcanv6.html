@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Organizer — Lavagna con micro lavagne</title>
+<style>
+  :root {
+    --cal-bg: #f7f7fb;
+    --cal-card: #ffffff;
+    --cal-accent: #1e88e5;
+    --cal-muted: #666666;
+    --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    margin: 8px;
+    background: var(--cal-bg);
+    color: #111;
+    padding-bottom: 20px;
+  }
+
+  .container { max-width: 1000px; width: 100%; margin: 0 auto; }
+  .card { background: var(--cal-card); border-radius: 8px; padding: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.06); margin-bottom: 20px; text-align: center; }
+  .header h1 { font-size: 22px; color: #155a8a; margin: 0 0 15px 0; }
+
+  /* --- Palette colori --- */
+  .color-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.1s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .color-dot:hover { transform: scale(1.1); }
+  .color-blue { background: #1e40af; }
+  .color-black { background: #000000; }
+  .color-red { background: #dc2626; }
+  .color-yellow { background: #facc15; }
+  .color-green { background: #16a34a; }
+  .color-white { background: #ffffff; border-color: #cbd5e1; }
+  .color-fuchsia { background: #d9189b; }
+  .color-dot.selected { border-color: #000; box-shadow: 0 0 5px rgba(0,0,0,0.4); transform: scale(1.15); }
+
+  /* --- Toolbar fissa su 2 righe --- */
+  .toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transform-origin: 0 0;
+    will-change: transform;
+  }
+  .toolbar-row { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+  .btn {
+    background: var(--cal-accent);
+    color: #fff;
+    border: 0;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    min-width: 40px;
+    transition: opacity 0.2s;
+  }
+  .btn:hover { opacity: 0.9; }
+  .btn.secondary { background: #edf2f7; color: #4a5568; border: 1px solid #cbd5e0; }
+  .btn.active { box-shadow: 0 0 0 3px rgba(30,136,229, 0.4); outline: none; }
+  .btn.danger { background: #d9534f; color: #fff; }
+  .btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+  .thickness-wrap {
+    display: flex; align-items: center; gap: 6px; font-size: 14px; color: #4a5568;
+    background: #edf2f7; border: 1px solid #cbd5e0; border-radius: 6px; padding: 4px 10px;
+  }
+  .thickness-wrap input[type=range] { width: 75px; }
+  .thickness-wrap span.val { min-width: 35px; text-align: center; font-weight: 600; }
+
+  /* --- Menù a tendina strumenti --- */
+  .cur-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-left: 5px; border: 1px solid #64748b; vertical-align: middle; background: #1e40af; }
+  .tools-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 8px;
+    width: min(360px, calc(100% - 16px));
+    max-height: 75vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    padding: 12px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .tools-menu.open { display: flex; }
+  .menu-colors { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 4px 0; }
+  .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .menu-item { display: flex; align-items: center; justify-content: flex-start; gap: 8px; font-size: 14px; text-align: left; padding: 10px; }
+  .menu-item.wide { grid-column: 1 / -1; }
+  .menu-sep { height: 1px; background: #e2e8f0; }
+  .menu-sizes { display: flex; align-items: center; gap: 8px; }
+  .menu-label { font-size: 14px; color: #4a5568; font-weight: 600; }
+  .size-btn { flex: 1; padding: 10px 6px; }
+
+  /* --- Area di disegno --- */
+  .canvas-container {
+    width: 100%;
+    overflow: visible;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+  }
+  .stage { position: relative; width: 100%; max-width: 1000px; margin: 0 auto; background: #fff; }
+
+  /* Livello sfondo: sotto il disegno, visibile sia in uso sia in stampa */
+  #bgBox { position: absolute; inset: 0; overflow: hidden; z-index: 0; pointer-events: none; }
+  #bgBox.empty { display: none; }
+  #bgBox img { display: block; width: 100%; height: auto; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  canvas#board {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 1000 / 1414;
+    background: transparent;
+  }
+  body[data-mode="none"] canvas.drawable { touch-action: auto; cursor: grab; }
+  body:not([data-mode="none"]) canvas.drawable { touch-action: none; cursor: crosshair; }
+
+  /* Livello degli elementi (micro lavagne e testi): coordinate in percentuale, font in cqw */
+  #layer {
+    position: absolute;
+    inset: 0;
+    container-type: inline-size;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .item { position: absolute; pointer-events: auto; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .item.board { background: #fff; outline: 1px solid #94a3b8; }
+  .item.board canvas { display: block; width: 100%; height: 100%; }
+  .item.board.selected { outline: 2px solid var(--cal-accent); }
+
+  .item.text .txt {
+    position: absolute; inset: 0;
+    overflow: hidden;
+    padding: 0.6cqw;
+    font-family: var(--font);
+    font-size: 2.2cqw;
+    line-height: 1.25;
+    white-space: pre-wrap;
+    word-break: break-word;
+    text-align: left;
+    outline: none;
+    background: transparent;
+    cursor: text;
+  }
+  .item.text.selected { outline: 1px dashed var(--cal-accent); }
+
+  /* Comandi visibili solo con l'elemento selezionato */
+  .ui { display: none; position: absolute; z-index: 5; touch-action: none; user-select: none; -webkit-user-select: none; }
+  .item.selected .ui { display: flex; }
+  .ui.round {
+    width: 32px; height: 32px; border-radius: 50%; border: 0; padding: 0;
+    align-items: center; justify-content: center; font-size: 15px; color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3); cursor: pointer;
+  }
+  .ui.grab { left: 0; top: -38px; background: var(--cal-accent); cursor: grab; }
+  .ui.del { right: 0; top: -38px; background: #d9534f; }
+  .ui.resize {
+    right: 0; bottom: 0; width: 28px; height: 28px; cursor: nwse-resize;
+    background: linear-gradient(135deg, transparent 50%, var(--cal-accent) 50%);
+  }
+
+  .ruler { position: fixed; z-index: 500; cursor: grab; touch-action: none; user-select: none; }
+  .ruler.hidden { display: none; }
+  .ruler img { width: 100%; height: 100%; display: block; pointer-events: none; object-fit: fill; border: 1px solid #334155; background: rgba(255,255,255,0.88); }
+  .ruler-vertical { width: 50px; height: 1414px; }
+  .ruler-horizontal { height: 50px; width: 1000px; }
+  .ruler-rotate-handle {
+    position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+    width: 26px; height: 26px; border-radius: 50%; background: #1e88e5; color: #fff;
+    display: flex; align-items: center; justify-content: center; font-size: 14px; cursor: grab;
+    box-shadow: 0 2px 4px rgba(0,0,0,.25); touch-action: none; z-index: 510;
+  }
+
+  @media print {
+    body { background: #fff; margin: 0; padding: 0 !important; }
+    .toolbar, .header h1, .ruler, .ui { display: none !important; }
+    .container { max-width: 100%; width: 100%; margin: 0; padding: 0; }
+    .card { padding: 0; box-shadow: none; border: none; margin: 0; }
+    .canvas-container { border: none; box-shadow: none; }
+    .item.board, .item.board.selected { outline: 1px solid #94a3b8; }
+    .item.text.selected { outline: none; }
+    @page { size: A4; margin: 10mm; }
+    canvas#board, .item { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  }
+</style>
+</head>
+
+<body data-mode="none">
+
+<div class="toolbar">
+  <div class="toolbar-row">
+    <button id="btnprevious" class="btn secondary" title="Indietro">⬅️</button>
+    <button id="btnUndo" class="btn secondary" title="Annulla ultima azione" disabled>↩️</button>
+    <button id="btnDraw" class="btn secondary" title="Matita">✏️</button>
+    <button id="btnErase" class="btn secondary" title="Gomma">🧽</button>
+    <button id="btnNone" class="btn active" title="Sposta / zoom">✋</button>
+    <button id="btnTools" class="btn secondary" aria-label="Strumenti">☰<span class="cur-dot" id="curDot"></span></button>
+  </div>
+
+  <div class="toolbar-row">
+    <button id="btnLine" class="btn secondary" title="Riga">\</button>
+    <button id="btnRect" class="btn secondary" title="Rettangolo">▭</button>
+    <button id="btnCircle" class="btn secondary" title="Cerchio">⬤</button>
+
+    <div class="thickness-wrap" title="Spessore della linea / gomma">
+      <input type="range" id="thickness" min="1" max="5" step="1" value="2">
+      <span class="val" id="thicknessVal">2px</span>
+    </div>
+  </div>
+
+  <div class="tools-menu" id="toolsMenu">
+    <div class="menu-colors">
+      <div class="color-dot color-blue selected" data-color="#1e40af" title="Blu"></div>
+      <div class="color-dot color-black" data-color="#000000" title="Nero"></div>
+      <div class="color-dot color-red" data-color="#dc2626" title="Rosso"></div>
+      <div class="color-dot color-yellow" data-color="#facc15" title="Giallo"></div>
+      <div class="color-dot color-green" data-color="#16a34a" title="Verde"></div>
+      <div class="color-dot color-white" data-color="#ffffff" title="Bianco"></div>
+      <div class="color-dot color-fuchsia" data-color="#d9189b" title="Fucsia"></div>
+    </div>
+    <div class="menu-sep"></div>
+    <div class="menu-sizes">
+      <span class="menu-label">Testo</span>
+      <button class="btn secondary size-btn" data-size="22" style="font-size:13px" title="Dimensione attuale">A 12pt</button>
+      <button class="btn secondary size-btn" data-size="26" style="font-size:15px" title="+2 pt">A 14pt</button>
+      <button class="btn secondary size-btn" data-size="30" style="font-size:17px" title="+4 pt">A 16pt</button>
+    </div>
+    <div class="menu-sep"></div>
+    <div class="menu-grid">
+      <button id="btnAddBoard" class="btn secondary menu-item">🗒️ Aggiungi lavagna</button>
+      <button id="btnAddText" class="btn secondary menu-item"><b style="font-family:Georgia,serif">T</b> Aggiungi testo</button>
+      <button id="btnRuler" class="btn secondary menu-item">📏 Righelli</button>
+      <button id="btnBgUpload" class="btn secondary menu-item">🖼️ Carica sfondo</button>
+      <button id="btnBgReset" class="btn secondary menu-item">♻️ Ripristina sfondo</button>
+      <button id="btnPrint" class="btn secondary menu-item">🖨️ Stampa</button>
+      <button id="btnSaveJpg" class="btn secondary menu-item">💾 Salva JPG</button>
+      <button id="btnSaveData" class="btn secondary menu-item">📤 Salva dati</button>
+      <button id="btnLoadData" class="btn secondary menu-item">📥 Carica dati</button>
+      <button id="btnClear" class="btn danger menu-item">🗑️ Svuota tutto</button>
+    </div>
+    <input type="file" id="bgFileInput" accept="image/*" style="display:none">
+    <input type="file" id="dataFileInput" accept=".json,application/json" style="display:none">
+  </div>
+</div>
+
+<div class="card">
+  <header class="header"><h1>Lavagna</h1></header>
+
+  <div class="canvas-container">
+    <div class="stage" id="stage">
+      <div id="bgBox" class="empty"><img id="bgEl" alt=""></div>
+      <canvas id="board" class="drawable" width="1000" height="1414"></canvas>
+      <div id="layer"></div>
+    </div>
+  </div>
+</div>
+
+<div id="rulerV" class="ruler ruler-vertical hidden">
+  <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
+  <img src="rimage/rulev.png" alt="Righello Verticale">
+</div>
+<div id="rulerH" class="ruler ruler-horizontal hidden">
+  <div class="ruler-rotate-handle" title="Ruota righello">⟳</div>
+  <img src="rimage/ruleh.png" alt="Righello Orizzontale">
+</div>
+
+<script>
+(() => {
+  const W = 1000, H = 1414;               // unità logiche della pagina (proporzione A4)
+  const LS_KEY = 'organizer_lavagna_micro_v1';
+  const MAX_UNDO = 15;
+  const FONT = "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif";
+  const ERASER_SIZES = [2, 4, 8, 12, 20];
+  const MIN_BOARD = { w: 120, h: 90 };
+  const MIN_TEXT = { w: 120, h: 50 };
+
+  const $ = id => document.getElementById(id);
+  const canvas = $('board');
+  const ctx = canvas.getContext('2d');
+  const layer = $('layer');
+  const toolbar = document.querySelector('.toolbar');
+
+  const btnprevious = $('btnprevious'), btnUndo = $('btnUndo'), btnDraw = $('btnDraw'),
+        btnErase = $('btnErase'), btnNone = $('btnNone'), btnClear = $('btnClear'),
+        btnPrint = $('btnPrint'), btnSaveJpg = $('btnSaveJpg'),
+        btnLine = $('btnLine'), btnRect = $('btnRect'), btnCircle = $('btnCircle'),
+        btnAddBoard = $('btnAddBoard'), btnAddText = $('btnAddText'),
+        thicknessInput = $('thickness'), thicknessVal = $('thicknessVal');
+  const allModeButtons = [btnDraw, btnErase, btnNone, btnLine, btnRect, btnCircle];
+
+  let currentMode = 'none';
+  let currentColor = '#1e40af';
+  let currentThickness = 2;
+  let currentTextSize = 22;   // unità pagina (≈12pt su A4 stampato)
+
+  const items = [];          // micro lavagne e caselle di testo
+  let selected = null;
+  let zTop = 0;
+  const undoStack = [];
+
+  const isShapeMode = () => currentMode === 'line' || currentMode === 'rect' || currentMode === 'circle';
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const stageScale = () => canvas.getBoundingClientRect().width / W;
+
+  /* ---------------- Salvataggio / stato ---------------- */
+  function serialize() {
+    return {
+      v: 1,
+      z: zTop,
+      main: canvas.toDataURL('image/png'),
+      items: items.map(it => it.type === 'board'
+        ? { type: 'board', x: it.x, y: it.y, w: it.w, h: it.h, z: it.z, data: it.cv.toDataURL('image/png') }
+        : { type: 'text', x: it.x, y: it.y, w: it.w, h: it.h, z: it.z, text: it.txt.innerText.replace(/\n$/, ''), color: it.color, size: it.size })
+    };
+  }
+
+  let warned = false;
+  function save() {
+    try {
+      localStorage.setItem(LS_KEY, JSON.stringify(serialize()));
+    } catch (err) {
+      if (!warned) { warned = true; alert('Spazio di salvataggio locale esaurito: le ultime modifiche potrebbero non essere salvate.'); }
+    }
+  }
+  let saveTimer = null;
+  function scheduleSave() { clearTimeout(saveTimer); saveTimer = setTimeout(save, 400); }
+
+  function loadInto(cv, url) {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload = () => {
+        const c = cv.getContext('2d');
+        c.clearRect(0, 0, cv.width, cv.height);
+        c.drawImage(img, 0, 0);
+        resolve();
+      };
+      img.onerror = () => resolve();
+      img.src = url;
+    });
+  }
+
+  function restoreState(st) {
+    deselect(true);
+    items.splice(0).forEach(it => it.el.remove());
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (!st) return Promise.resolve();
+    zTop = st.z || 0;
+    const jobs = [];
+    if (st.main) jobs.push(loadInto(canvas, st.main));
+    (st.items || []).forEach(m => { const it = createItem(m); if (it.ready) jobs.push(it.ready); });
+    return Promise.all(jobs);
+  }
+
+  function pushUndo() {
+    try {
+      undoStack.push(serialize());
+      if (undoStack.length > MAX_UNDO) undoStack.shift();
+      btnUndo.disabled = false;
+    } catch (err) {}
+  }
+  function undo() {
+    if (!undoStack.length) return;
+    const p = restoreState(undoStack.pop());
+    btnUndo.disabled = undoStack.length === 0;
+    p.then(save);
+  }
+
+  /* ---------------- Disegno su un canvas (lavagna e micro lavagne) ---------------- */
+  function attachDrawing(cv) {
+    const c = cv.getContext('2d');
+    let drawing = false, pid = null, start = null, last = null, saved = null;
+
+    const coords = e => {
+      const r = cv.getBoundingClientRect();
+      return { x: (e.clientX - r.left) * cv.width / r.width, y: (e.clientY - r.top) * cv.height / r.height };
+    };
+    const prep = () => {
+      c.lineCap = 'round'; c.lineJoin = 'round';
+      c.lineWidth = currentThickness; c.strokeStyle = currentColor;
+      c.globalCompositeOperation = 'source-over';
+    };
+
+    cv.addEventListener('pointerdown', e => {
+      if (currentMode === 'none' || drawing) return;
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      e.preventDefault();
+      try { cv.setPointerCapture(e.pointerId); } catch (_) {}
+      pushUndo();
+      drawing = true; pid = e.pointerId;
+      const p = coords(e);
+      start = p; last = p;
+      prep();
+      if (isShapeMode()) {
+        saved = c.getImageData(0, 0, cv.width, cv.height);
+      } else if (currentMode === 'draw') {
+        c.beginPath(); c.moveTo(p.x, p.y); c.lineTo(p.x, p.y); c.stroke();
+      } else if (currentMode === 'erase') {
+        c.save(); c.globalCompositeOperation = 'destination-out';
+        c.beginPath(); c.moveTo(p.x, p.y); c.lineTo(p.x, p.y); c.stroke(); c.restore();
+      }
+    });
+
+    cv.addEventListener('pointermove', e => {
+      if (!drawing || e.pointerId !== pid) return;
+      e.preventDefault();
+      const p = coords(e);
+      prep();
+      if (currentMode === 'draw') {
+        c.beginPath(); c.moveTo(last.x, last.y); c.lineTo(p.x, p.y); c.stroke();
+      } else if (currentMode === 'erase') {
+        c.save(); c.globalCompositeOperation = 'destination-out';
+        c.beginPath(); c.moveTo(last.x, last.y); c.lineTo(p.x, p.y); c.stroke(); c.restore();
+      } else if (isShapeMode() && saved) {
+        c.putImageData(saved, 0, 0);
+        prep();
+        c.beginPath();
+        if (currentMode === 'line') {
+          c.moveTo(start.x, start.y); c.lineTo(p.x, p.y);
+        } else if (currentMode === 'rect') {
+          c.rect(start.x, start.y, p.x - start.x, p.y - start.y);
+        } else {
+          const r = Math.hypot(p.x - start.x, p.y - start.y);
+          c.arc(start.x, start.y, r, 0, Math.PI * 2);
+        }
+        c.stroke();
+      }
+      last = p;
+    });
+
+    const end = e => {
+      if (!drawing || (e && e.pointerId !== pid)) return;
+      drawing = false; saved = null;
+      save();
+    };
+    cv.addEventListener('pointerup', end);
+    cv.addEventListener('pointercancel', end);
+  }
+  attachDrawing(canvas);
+
+  /* ---------------- Elementi: micro lavagne e caselle di testo ---------------- */
+  function applyGeom(it) {
+    const s = it.el.style;
+    s.left = (it.x / W * 100) + '%';
+    s.top = (it.y / H * 100) + '%';
+    s.width = (it.w / W * 100) + '%';
+    s.height = (it.h / H * 100) + '%';
+  }
+
+  function makeUi(cls, label, title) {
+    const b = document.createElement(label ? 'button' : 'div');
+    b.className = 'ui ' + cls + (label ? ' round' : '');
+    if (label) b.textContent = label;
+    b.title = title;
+    return b;
+  }
+
+  function createItem(m) {
+    const it = { type: m.type, x: m.x, y: m.y, w: m.w, h: m.h, z: m.z || 0, color: m.color || currentColor };
+    if (!it.z) it.z = ++zTop; else if (it.z > zTop) zTop = it.z;
+    it.size = m.size || 22;
+
+    const el = document.createElement('div');
+    el.className = 'item ' + it.type;
+    el.style.zIndex = it.z;
+    it.el = el;
+
+    if (it.type === 'board') {
+      const cv = document.createElement('canvas');
+      cv.className = 'drawable';
+      cv.width = Math.round(it.w); cv.height = Math.round(it.h);
+      el.appendChild(cv);
+      it.cv = cv;
+      attachDrawing(cv);
+      if (m.data) it.ready = loadInto(cv, m.data);
+    } else {
+      const t = document.createElement('div');
+      t.className = 'txt';
+      t.contentEditable = 'true';
+      t.spellcheck = false;
+      t.style.color = it.color;
+      t.style.fontSize = (it.size / 10) + 'cqw';
+      t.textContent = m.text || '';
+      t.addEventListener('input', scheduleSave);
+      t.addEventListener('paste', e => {
+        e.preventDefault();
+        const txt = (e.clipboardData || window.clipboardData).getData('text');
+        document.execCommand('insertText', false, txt);
+      });
+      el.appendChild(t);
+      it.txt = t;
+    }
+
+    const grab = makeUi('grab', '✥', 'Trascina');
+    const del = makeUi('del', '✕', 'Elimina');
+    const rsz = makeUi('resize', '', 'Ridimensiona');
+    el.append(grab, del, rsz);
+
+    // Spostamento
+    let mv = null;
+    grab.addEventListener('pointerdown', e => {
+      e.preventDefault();
+      mv = { sx: e.clientX, sy: e.clientY, ox: it.x, oy: it.y, pushed: false };
+      grab.setPointerCapture(e.pointerId);
+    });
+    grab.addEventListener('pointermove', e => {
+      if (!mv) return;
+      const s = stageScale();
+      const dx = (e.clientX - mv.sx) / s, dy = (e.clientY - mv.sy) / s;
+      if (!mv.pushed) {
+        if (Math.abs(dx) < 2 && Math.abs(dy) < 2) return;
+        pushUndo(); mv.pushed = true;
+      }
+      it.x = clamp(mv.ox + dx, 0, W - it.w);
+      it.y = clamp(mv.oy + dy, 0, H - it.h);
+      applyGeom(it);
+    });
+    const endMove = () => { if (mv && mv.pushed) save(); mv = null; };
+    grab.addEventListener('pointerup', endMove);
+    grab.addEventListener('pointercancel', endMove);
+
+    // Ridimensionamento
+    let rs = null;
+    const min = it.type === 'board' ? MIN_BOARD : MIN_TEXT;
+    rsz.addEventListener('pointerdown', e => {
+      e.preventDefault();
+      rs = { sx: e.clientX, sy: e.clientY, ow: it.w, oh: it.h, pushed: false };
+      rsz.setPointerCapture(e.pointerId);
+    });
+    rsz.addEventListener('pointermove', e => {
+      if (!rs) return;
+      const s = stageScale();
+      const dx = (e.clientX - rs.sx) / s, dy = (e.clientY - rs.sy) / s;
+      if (!rs.pushed) {
+        if (Math.abs(dx) < 2 && Math.abs(dy) < 2) return;
+        pushUndo(); rs.pushed = true;
+      }
+      const nw = clamp(rs.ow + dx, min.w, W - it.x);
+      const nh = clamp(rs.oh + dy, min.h, H - it.y);
+      if (it.type === 'board') resizeBitmap(it, nw, nh);
+      it.w = nw; it.h = nh;
+      applyGeom(it);
+    });
+    const endRs = () => { if (rs && rs.pushed) save(); rs = null; };
+    rsz.addEventListener('pointerup', endRs);
+    rsz.addEventListener('pointercancel', endRs);
+
+    // Eliminazione
+    del.addEventListener('click', () => {
+      pushUndo();
+      removeItem(it);
+      save();
+    });
+
+    layer.appendChild(el);
+    items.push(it);
+    applyGeom(it);
+    return it;
+  }
+
+  function resizeBitmap(it, nw, nh) {
+    const cv = it.cv;
+    const w = Math.round(nw), h = Math.round(nh);
+    if (w === cv.width && h === cv.height) return;
+    const tmp = document.createElement('canvas');
+    tmp.width = cv.width; tmp.height = cv.height;
+    tmp.getContext('2d').drawImage(cv, 0, 0);
+    cv.width = w; cv.height = h;
+    cv.getContext('2d').drawImage(tmp, 0, 0);
+  }
+
+  function removeItem(it) {
+    if (selected === it) selected = null;
+    const i = items.indexOf(it);
+    if (i >= 0) items.splice(i, 1);
+    it.el.remove();
+  }
+
+  function select(it) {
+    if (selected === it) return;
+    deselect();
+    selected = it;
+    it.el.classList.add('selected');
+    it.z = ++zTop;
+    it.el.style.zIndex = it.z;
+    updateSizeButtons();
+  }
+
+  function deselect(silent) {
+    const it = selected;
+    if (!it) return;
+    selected = null;
+    updateSizeButtons();
+    it.el.classList.remove('selected');
+    if (it.el.contains(document.activeElement)) document.activeElement.blur();
+    if (it.type === 'text' && !it.txt.textContent.trim()) {
+      removeItem(it);
+      if (!silent) save();
+    }
+  }
+
+  // Tocco/clic ovunque: seleziona l'elemento toccato oppure deseleziona
+  document.addEventListener('pointerdown', e => {
+    const t = e.target;
+    if (!(t instanceof Element)) return;
+    if (!t.closest('.tools-menu') && !t.closest('#btnTools')) closeMenu();
+    if (t.closest('.toolbar') || t.closest('.ruler')) return;
+    const itEl = t.closest('.item');
+    if (itEl) {
+      const it = items.find(i => i.el === itEl);
+      if (it) select(it);
+      return;
+    }
+    deselect();
+  }, true);
+
+  function addItem(type) {
+    pushUndo();
+    const w = type === 'board' ? 320 : 280;
+    const h = type === 'board' ? 240 : 90;
+    const rect = canvas.getBoundingClientRect();
+    const s = rect.width / W;
+    const vv = window.visualViewport;
+    const vx = vv ? vv.offsetLeft + vv.width / 2 : window.innerWidth / 2;
+    const bottom = vv ? vv.offsetTop + vv.height : window.innerHeight;
+    const vy = (toolbar.getBoundingClientRect().bottom + bottom) / 2;
+    const x = clamp((vx - rect.left) / s - w / 2, 0, W - w);
+    const y = clamp((vy - rect.top) / s - h / 2, 0, H - h);
+    const it = createItem({ type, x, y, w, h, size: currentTextSize });
+    deselect();
+    select(it);
+    save();
+    if (type === 'text') it.txt.focus();
+  }
+  btnAddBoard.addEventListener('click', () => addItem('board'));
+  btnAddText.addEventListener('click', () => addItem('text'));
+
+  /* ---------------- Strumenti ---------------- */
+  function updateThickness() {
+    const val = parseInt(thicknessInput.value, 10);
+    if (currentMode === 'erase') {
+      currentThickness = ERASER_SIZES[val - 1];
+    } else {
+      currentThickness = val;
+    }
+    thicknessVal.textContent = currentThickness + 'px';
+  }
+
+  function setActiveTool(mode, activeBtn) {
+    currentMode = mode;
+    document.body.dataset.mode = mode;
+    allModeButtons.forEach(b => { b.classList.remove('active'); b.classList.add('secondary'); });
+    activeBtn.classList.add('active');
+    activeBtn.classList.remove('secondary');
+    updateThickness();
+  }
+
+  btnDraw.addEventListener('click', () => setActiveTool('draw', btnDraw));
+  btnErase.addEventListener('click', () => setActiveTool('erase', btnErase));
+  btnNone.addEventListener('click', () => setActiveTool('none', btnNone));
+  btnLine.addEventListener('click', () => setActiveTool('line', btnLine));
+  btnRect.addEventListener('click', () => setActiveTool('rect', btnRect));
+  btnCircle.addEventListener('click', () => setActiveTool('circle', btnCircle));
+  setActiveTool('none', btnNone);
+
+  btnUndo.addEventListener('click', undo);
+  btnprevious.addEventListener('click', () => { window.location.href = 'dashconsolle.html'; });
+
+  document.querySelectorAll('.color-dot').forEach(dot => {
+    dot.addEventListener('click', e => {
+      document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+      e.currentTarget.classList.add('selected');
+      currentColor = e.currentTarget.getAttribute('data-color');
+      $('curDot').style.background = currentColor;
+      if (currentMode === 'erase') setActiveTool('draw', btnDraw);
+      if (selected && selected.type === 'text') {
+        selected.color = currentColor;
+        selected.txt.style.color = currentColor;
+        save();
+      }
+    });
+  });
+
+  thicknessInput.addEventListener('input', updateThickness);
+
+  btnClear.addEventListener('click', () => {
+    if (confirm('Vuoi cancellare tutto (disegno, micro lavagne e testi)?')) {
+      pushUndo();
+      deselect(true);
+      items.splice(0).forEach(it => it.el.remove());
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      save();
+    }
+  });
+
+  btnPrint.addEventListener('click', () => { deselect(); window.print(); });
+
+  /* ---------------- Sfondo (non salvato in localStorage; stampabile ed esportabile) ---------------- */
+  const btnBgUpload = $('btnBgUpload'), btnBgReset = $('btnBgReset'), bgFileInput = $('bgFileInput');
+  const bgBox = $('bgBox'), bgEl = $('bgEl');
+  let bgImg = null;   // usata per l'esportazione JPG
+  let bgData = null;  // data URL (solo nel file "Salva dati", mai nel localStorage)
+
+  function setBackground(src) {
+    bgData = src;
+    bgImg = new Image();
+    bgImg.src = src;
+    bgEl.src = src;
+    bgBox.classList.remove('empty');
+  }
+  function clearBackground() {
+    bgData = null; bgImg = null;
+    bgEl.removeAttribute('src');
+    bgBox.classList.add('empty');
+  }
+
+  btnBgUpload.addEventListener('click', () => bgFileInput.click());
+  bgFileInput.addEventListener('change', e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => setBackground(reader.result);
+    reader.readAsDataURL(file);
+    bgFileInput.value = '';
+  });
+  btnBgReset.addEventListener('click', clearBackground);
+
+  /* ---------------- Menù strumenti ---------------- */
+  const btnTools = $('btnTools'), toolsMenu = $('toolsMenu');
+  function closeMenu() { toolsMenu.classList.remove('open'); }
+  btnTools.addEventListener('click', () => toolsMenu.classList.toggle('open'));
+  toolsMenu.addEventListener('click', e => {
+    if (e.target.closest('.menu-item') || e.target.closest('.color-dot') || e.target.closest('.size-btn')) closeMenu();
+  });
+
+  function updateSizeButtons() {
+    const cur = selected && selected.type === 'text' ? selected.size : currentTextSize;
+    document.querySelectorAll('.size-btn').forEach(b => {
+      const on = Number(b.dataset.size) === cur;
+      b.classList.toggle('active', on);
+      b.classList.toggle('secondary', !on);
+    });
+  }
+  document.querySelectorAll('.size-btn').forEach(b => b.addEventListener('click', () => {
+    const size = Number(b.dataset.size);
+    currentTextSize = size;
+    if (selected && selected.type === 'text') {
+      selected.size = size;
+      selected.txt.style.fontSize = (size / 10) + 'cqw';
+      save();
+    }
+    updateSizeButtons();
+  }));
+  updateSizeButtons();
+
+  /* ---------------- Salva / carica dati (file JSON) ---------------- */
+  const btnSaveData = $('btnSaveData'), btnLoadData = $('btnLoadData'), dataFileInput = $('dataFileInput');
+
+  btnSaveData.addEventListener('click', () => {
+    const data = serialize();
+    data.app = 'organizer-lavagna-micro';
+    if (bgData) data.bg = bgData;
+    const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+    const d = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    const name = `lavagna_dati_${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}_${pad(d.getHours())}${pad(d.getMinutes())}.json`;
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  });
+
+  btnLoadData.addEventListener('click', () => dataFileInput.click());
+  dataFileInput.addEventListener('change', e => {
+    const file = e.target.files[0];
+    dataFileInput.value = '';
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      let st;
+      try {
+        st = JSON.parse(reader.result);
+        if (!st || !Array.isArray(st.items) || typeof st.main !== 'string') throw new Error('formato');
+      } catch (err) {
+        alert('File non valido: scegli un file salvato con "Salva dati".');
+        return;
+      }
+      if (!confirm('Caricando i dati sostituirai quelli attuali. Continuare?')) return;
+      pushUndo();
+      if (typeof st.bg === 'string' && st.bg.startsWith('data:image')) setBackground(st.bg);
+      restoreState(st).then(save);
+    };
+    reader.readAsText(file);
+  });
+
+  /* ---------------- Salva immagine JPG (A4) ---------------- */
+  function drawTextItem(c, it, s) {
+    const box = it.el.getBoundingClientRect();
+    const fontPx = parseFloat(getComputedStyle(it.txt).fontSize) / s;
+    c.save();
+    c.beginPath(); c.rect(it.x, it.y, it.w, it.h); c.clip();
+    c.font = `${fontPx}px ${FONT}`;
+    c.fillStyle = it.color;
+    c.textBaseline = 'alphabetic';
+    const m = c.measureText('M');
+    const asc = m.fontBoundingBoxAscent || fontPx * 0.9;
+    const walker = document.createTreeWalker(it.txt, NodeFilter.SHOW_TEXT);
+    const range = document.createRange();
+    let node;
+    while ((node = walker.nextNode())) {
+      const str = node.data;
+      for (let i = 0; i < str.length;) {
+        const cp = str.codePointAt(i);
+        const len = cp > 0xffff ? 2 : 1;
+        const ch = str.substr(i, len);
+        i += len;
+        if (/\s/.test(ch)) continue;
+        range.setStart(node, i - len);
+        range.setEnd(node, i);
+        const r = range.getClientRects()[0];
+        if (!r) continue;
+        c.fillText(ch, it.x + (r.left - box.left) / s, it.y + (r.top - box.top) / s + asc);
+      }
+    }
+    c.restore();
+  }
+
+  function saveJpg() {
+    deselect();
+    const K = 2;
+    const out = document.createElement('canvas');
+    out.width = W * K; out.height = H * K;
+    const c = out.getContext('2d');
+    c.scale(K, K);
+    c.fillStyle = '#ffffff';
+    c.fillRect(0, 0, W, H);
+    if (bgImg && bgImg.complete && bgImg.naturalWidth) {
+      c.drawImage(bgImg, 0, 0, W, bgImg.naturalHeight * W / bgImg.naturalWidth);
+    }
+    c.drawImage(canvas, 0, 0);
+
+    const s = stageScale();
+    [...items].sort((a, b) => a.z - b.z).forEach(it => {
+      if (it.type === 'board') {
+        c.fillStyle = '#ffffff';
+        c.fillRect(it.x, it.y, it.w, it.h);
+        c.drawImage(it.cv, it.x, it.y, it.w, it.h);
+        c.strokeStyle = '#94a3b8'; c.lineWidth = 1.5;
+        c.strokeRect(it.x, it.y, it.w, it.h);
+      } else {
+        drawTextItem(c, it, s);
+      }
+    });
+
+    const d = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    const name = `lavagna_${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}_${pad(d.getHours())}${pad(d.getMinutes())}.jpg`;
+    out.toBlob(blob => {
+      if (!blob) return;
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = name;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
+    }, 'image/jpeg', 0.92);
+  }
+  btnSaveJpg.addEventListener('click', saveJpg);
+
+  /* ---------------- Toolbar fissa durante il pinch-zoom ---------------- */
+  function keepToolbarFixed() {
+    if (!window.visualViewport) return;
+    const vv = window.visualViewport;
+    toolbar.style.transform = `translate(${vv.offsetLeft}px, ${vv.offsetTop}px) scale(${1 / vv.scale})`;
+  }
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('scroll', keepToolbarFixed);
+    window.visualViewport.addEventListener('resize', keepToolbarFixed);
+    keepToolbarFixed();
+  }
+  function adjustBodyPadding() {
+    document.body.style.paddingTop = (toolbar.offsetHeight + 10) + 'px';
+  }
+  window.addEventListener('resize', adjustBodyPadding);
+
+  /* ---------------- Righelli ---------------- */
+  function initRuler(rulerEl, orientation, getDefaultRect) {
+    const rotateHandle = rulerEl.querySelector('.ruler-rotate-handle');
+    let angle = 0, pos = { x: 0, y: 0 };
+    let dragStart = null, dragStartPos = null;
+    let rotating = false, rotateStartAngle = 0, rotateStartRulerAngle = 0;
+
+    function applyTransform() {
+      rulerEl.style.left = pos.x + 'px';
+      rulerEl.style.top = pos.y + 'px';
+      rulerEl.style.transform = `rotate(${angle}deg)`;
+    }
+    function resetToDefault() {
+      const d = getDefaultRect();
+      if (orientation === 'vertical') rulerEl.style.height = d.length + 'px';
+      else rulerEl.style.width = d.length + 'px';
+      pos = { x: d.x, y: d.y };
+      angle = 0;
+      applyTransform();
+    }
+
+    rulerEl.addEventListener('pointerdown', e => {
+      if (e.target === rotateHandle) return;
+      dragStart = { x: e.clientX, y: e.clientY };
+      dragStartPos = { x: pos.x, y: pos.y };
+      rulerEl.setPointerCapture(e.pointerId);
+    });
+    rulerEl.addEventListener('pointermove', e => {
+      if (!dragStart) return;
+      pos.x = dragStartPos.x + (e.clientX - dragStart.x);
+      pos.y = dragStartPos.y + (e.clientY - dragStart.y);
+      applyTransform();
+    });
+    rulerEl.addEventListener('pointerup', () => { dragStart = null; });
+    rulerEl.addEventListener('pointercancel', () => { dragStart = null; });
+
+    rotateHandle.addEventListener('pointerdown', e => {
+      e.stopPropagation();
+      const r = rulerEl.getBoundingClientRect();
+      rotateStartAngle = Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2));
+      rotateStartRulerAngle = angle;
+      rotating = true;
+      rotateHandle.setPointerCapture(e.pointerId);
+    });
+    rotateHandle.addEventListener('pointermove', e => {
+      if (!rotating) return;
+      const r = rulerEl.getBoundingClientRect();
+      const a = Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2));
+      angle = rotateStartRulerAngle + (a - rotateStartAngle) * (180 / Math.PI);
+      applyTransform();
+    });
+    rotateHandle.addEventListener('pointerup', e => { rotating = false; e.stopPropagation(); });
+    rotateHandle.addEventListener('pointercancel', () => { rotating = false; });
+
+    return { resetToDefault };
+  }
+
+  const getContainerRect = () => document.querySelector('.canvas-container').getBoundingClientRect();
+  const rulerV = $('rulerV'), rulerH = $('rulerH'), btnRuler = $('btnRuler');
+  const rulerVCtl = initRuler(rulerV, 'vertical', () => {
+    const r = getContainerRect();
+    return { x: r.left + 8, y: r.top + 10, length: r.height };
+  });
+  const rulerHCtl = initRuler(rulerH, 'horizontal', () => {
+    const r = getContainerRect();
+    return { x: r.left + 10, y: r.top + 8, length: r.width };
+  });
+  btnRuler.addEventListener('click', () => {
+    const hiddenNow = rulerV.classList.toggle('hidden');
+    rulerH.classList.toggle('hidden', hiddenNow);
+    if (!hiddenNow) { rulerVCtl.resetToDefault(); rulerHCtl.resetToDefault(); }
+  });
+
+  /* ---------------- Avvio ---------------- */
+  window.addEventListener('load', () => {
+    try {
+      const raw = localStorage.getItem(LS_KEY);
+      if (raw) restoreState(JSON.parse(raw));
+    } catch (err) {}
+    adjustBodyPadding();
+    rulerVCtl.resetToDefault();
+    rulerHCtl.resetToDefault();
+  });
+  window.addEventListener('pagehide', save);
+  window.addEventListener('beforeprint', () => deselect());
+})();
+</script>
+</body>
+</html>
