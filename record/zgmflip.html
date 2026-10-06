@@ -12,20 +12,20 @@ html,body{height:100%;margin:0}
 body{background:#0a0620;color:var(--fg);font-family:monospace;display:flex;flex-direction:column;user-select:none;-webkit-user-select:none;touch-action:none;overflow:hidden}
 canvas{flex:1;min-height:0;width:100%;object-fit:contain;image-rendering:auto}
 #pad{display:none;gap:10px;padding:8px 12px}
-#pad button{flex:1;height:70px;border:2px solid var(--acc);border-radius:14px;background:var(--btn);color:var(--fg);font:bold 16px monospace;touch-action:none}
+#pad button{flex:1;height:140px;border:2px solid var(--acc);border-radius:14px;background:var(--btn);color:var(--fg);font:bold 16px monospace;touch-action:none}
 #pad button.mid{flex:.8;border-color:#ff6aa8}
 #pad button.on,#pad button:active{background:var(--acc);color:#000}
 @media (pointer:coarse){#pad{display:flex}}
-#foot{display:flex;justify-content:flex-end;padding:2px 8px 6px}
+#foot{display:flex;justify-content:flex-end;padding:6px 8px 4px}
 #foot a{font:bold 11px monospace;color:var(--fg);text-decoration:none;border:1px solid var(--acc);border-radius:8px;padding:4px 8px;background:var(--btn);opacity:.85}
 </style>
 </head>
 <body>
+<div id="foot"><a href="dashconsolle.html">⌂ Console</a></div>
 <canvas id="c" width="320" height="480"></canvas>
 <div id="pad">
   <button data-k="L">◀ SX</button><button class="mid" data-k="P">LANCIA</button><button data-k="R">DX ▶</button>
 </div>
-<div id="foot"><a href="dashconsolle.html">⌂ Console</a></div>
 <script>
 (()=>{
 const cv=document.getElementById('c'),ctx=cv.getContext('2d'),W=320,H=480,SK='pinball_best';
