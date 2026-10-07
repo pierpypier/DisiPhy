@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matematica 05 - Equazioni con espressioni complesse</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow:0 8px 24px rgba(20,30,50,0.06);
+      --radius:12px;
+      --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+      padding:20px;
+      display:flex;
+      justify-content:center;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .header{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .subtitle{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* stile barra di navigazione */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
+    
+    /* fine stile barra di navigazione */
+
+
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      align-items:start;
+    }
+
+    .item{
+      background:#fbfdff;
+      border-radius:10px;
+      border:1px solid #eef2f7;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(20,30,50,0.08); }
+
+    .thumb{
+      width:100%;
+      height:400px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .thumbsel{
+      width:100%;
+      height:200px;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .thumbsel img{
+      width:70%;
+      height:70%;
+      object-fit:cover;
+      display:block;
+    }
+
+
+
+    
+    .meta{
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .meta .name{
+      font-weight:800;
+      font-size:14px;
+      color:#0f172a;
+    }
+    .meta .desc{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.3;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+      text-align:center;
+    }
+
+    footer{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media (max-width:520px){
+      .thumb{ height:400px; }
+    }
+
+    /* stile capitolo matematica */
+    .capitolo-storia{
+      background:#f0f6ff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px 22px;
+      margin-bottom:18px;
+      border-left:4px solid #1e88e5;
+      font-family:Georgia,'Times New Roman',serif;
+      color:#16233a;
+      line-height:1.6;
+    }
+    .capitolo-storia .titolo-capitolo{
+      font-weight:800;
+      font-size:16px;
+      color:#0d5aa7;
+      margin:0 0 10px 0;
+    }
+    .capitolo-storia p{
+      margin:0 0 12px 0;
+      font-size:14.5px;
+    }
+    .capitolo-storia p:last-child{
+      margin-bottom:0;
+    }
+
+    /* stile formule matematiche */
+    .capitolo-storia p.formula{
+      background:#eaf2fd;
+      border:1px solid #cfe1f7;
+      border-radius:8px;
+      padding:10px 14px;
+      font-family:'Cambria Math',Georgia,serif;
+      font-size:15px;
+      color:#0d3a66;
+      text-align:center;
+    }
+    .frazione{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      vertical-align:middle;
+      margin:0 4px;
+      font-size:0.95em;
+    }
+    .frazione .num{
+      border-bottom:1.5px solid #0d3a66;
+      padding:0 4px 2px 4px;
+      line-height:1.1;
+    }
+    .frazione .den{
+      padding:2px 4px 0 4px;
+      line-height:1.1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+<!-- barra navigazione -->
+<nav class="nav">
+<a href="organizer4.html" class="nav-item">
+    <img src="rimage/orga4.png" alt="Organizer">
+    <span> NOTE </span>
+  </a>
+    <a href="caldsp.html" class="nav-item">
+    <img src="rimage/calicon.png" alt="Calendario dsp">
+    <span> DATE </span>
+    </a>
+  <a href="check01.html" class="nav-item">
+    <img src="rimage/check02.png" alt="Checklist">
+    <span>LISTE</span>
+  </a>
+  <a href="strweb.html" class="nav-item">
+    <img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84">
+    <span> WEB </span>
+  </a>
+  <a href="dashconsolle.html" class="nav-item">
+    <img src="rimage/opzioni.png" alt="Opzioni">
+    <span> ADD </span>
+  </a>
+</nav>
+<!-- fine barra navigazione -->
+      
+
+    <div class="card header" aria-hidden="false">
+      <div>
+        <div class="title">MATEMATICA</div>
+        <div class="subtitle">Piccolo manuale di matematica e geometria</div>
+      </div>
+   
+
+    </div>
+      
+<div class="card">
+<div class="grid">
+ <div class="name"></div>
+      <div class="note"></div>
+
+   <!-- Corpo pagina -->
+<a class="item" href="mat00.html" title="matematica indice">
+          <div class="thumbsel" aria-hidden="true">
+            <img src="rimage/r903.jpg" alt="r100" loading="lazy" decoding="async" width="100" height="200">
+          </div>
+          <div class="meta">
+            <div class="name">TORNA ALL'INDICE</div>
+            <div class="desc">Vedi Tutti i capitoli</div>
+          </div>  
+</a>
+</div> 
+      </div>
+    
+<!-- esercizi svolti matematica 05: Equazioni di primo grado -->
+<div class="capitolo-storia" id="esercizi-05-complesse">
+
+<p class="titolo-capitolo">05 - Esercizi avanzati: equazioni con espressioni algebriche complesse</p>
+
+<p>I seguenti 12 esercizi propongono equazioni di primo grado i cui membri sono costruiti con espressioni algebriche più lunghe del solito: somme, differenze, prodotti di binomi e frazioni algebriche. I primi 6 esercizi hanno l'incognita soltanto al numeratore delle frazioni; i successivi 6 hanno l'incognita anche al denominatore, e richiedono quindi di imporre prima le condizioni di esistenza (C.E.) e di verificare, alla fine, che la soluzione trovata le rispetti.</p>
+
+<p class="titolo-capitolo">Esercizio 1 - Somme e differenze di frazioni algebriche (incognita al numeratore)</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula">&minus;<span class="frazione"><span class="num">x&minus;2</span><span class="den">2</span></span> + (x&minus;5) = <span class="frazione"><span class="num">x+1</span><span class="den">3</span></span> &minus; 3</p>
+<p>Portiamo tutte le frazioni allo stesso denominatore comune, che in questo caso è 6, moltiplicando ogni termine per 6.</p>
+<p class="formula">&minus;3(x&minus;2) + 6(x&minus;5) = 2(x+1) &minus; 18</p>
+<p>Eliminiamo le parentesi, applicando la proprietà distributiva.</p>
+<p class="formula">&minus;3x+6 + 6x&minus;30 = 2x+2 &minus; 18</p>
+<p>Riduciamo i termini simili in ciascun membro.</p>
+<p class="formula">3x &minus; 24 = 2x &minus; 16</p>
+<p>Isoliamo la x portando i termini numerici a destra e quelli con la x a sinistra.</p>
+<p class="formula">3x &minus; 2x = &minus;16 + 24 &rarr; x = 8</p>
+<p>Verifichiamo sostituendo x = 8 nell'equazione di partenza: primo membro = &minus;(8&minus;2)/2 + (8&minus;5) = &minus;3+3 = 0; secondo membro = (8+1)/3 &minus; 3 = 3&minus;3 = 0. I due membri coincidono.</p>
+
+<p class="titolo-capitolo">Esercizio 2 - Due frazioni a sinistra, una a destra (incognita al numeratore)</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula">&minus;<span class="frazione"><span class="num">x+7</span><span class="den">4</span></span> &minus; <span class="frazione"><span class="num">x+5</span><span class="den">4</span></span> = &minus;2&middot;<span class="frazione"><span class="num">x&minus;6</span><span class="den">5</span></span> &minus; 5</p>
+<p>I due termini a sinistra hanno già lo stesso denominatore (4): li riscriviamo come un'unica frazione, sommando i numeratori con il segno meno davanti a entrambi.</p>
+<p class="formula">&minus;<span class="frazione"><span class="num">(x+7)+(x+5)</span><span class="den">4</span></span> = &minus;<span class="frazione"><span class="num">2(x&minus;6)</span><span class="den">5</span></span> &minus; 5</p>
+<p>Il m.c.m. tra i denominatori 4 e 5 è 20: moltiplichiamo ogni termine per 20.</p>
+<p class="formula">&minus;5[(x+7)+(x+5)] = &minus;4&middot;2(x&minus;6) &minus; 100</p>
+<p>Eliminiamo le parentesi.</p>
+<p class="formula">&minus;5(2x+12) = &minus;8(x&minus;6) &minus; 100 &rarr; &minus;10x&minus;60 = &minus;8x+48&minus;100</p>
+<p>Riduciamo i termini simili e isoliamo la x.</p>
+<p class="formula">&minus;10x&minus;60 = &minus;8x&minus;52 &rarr; &minus;10x+8x = &minus;52+60 &rarr; &minus;2x = 8 &rarr; x = &minus;4</p>
+<p>Verifichiamo: primo membro = &minus;(&minus;4+7)/4 &minus; (&minus;4+5)/4 = &minus;3/4&minus;1/4 = &minus;1; secondo membro = &minus;2&middot;(&minus;4&minus;6)/5 &minus; 5 = &minus;2&middot;(&minus;2)&minus;5 = 4&minus;5 = &minus;1. Coincidono.</p>
+
+<p class="titolo-capitolo">Esercizio 3 - Prodotti di binomi che si semplificano (incognita al numeratore)</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula">&minus;<span class="frazione"><span class="num">(x&minus;2)(x+3)</span><span class="den">6</span></span> + <span class="frazione"><span class="num">(x&minus;1)(x+4)</span><span class="den">6</span></span> = <span class="frazione"><span class="num">x&minus;1</span><span class="den">2</span></span> + <span class="frazione"><span class="num">1</span><span class="den">3</span></span></p>
+<p>I due prodotti a sinistra hanno lo stesso denominatore: li raccogliamo in un'unica frazione, poi sviluppiamo i prodotti al numeratore.</p>
+<p class="formula">(x&minus;1)(x+4) &minus; (x&minus;2)(x+3) = (x<sup>2</sup>+3x&minus;4) &minus; (x<sup>2</sup>+x&minus;6) = 2x+2</p>
+<p>Nota come i termini x<sup>2</sup> si cancellino tra loro: l'equazione resta quindi di primo grado, nonostante la presenza dei prodotti.</p>
+<p class="formula"><span class="frazione"><span class="num">2x+2</span><span class="den">6</span></span> = <span class="frazione"><span class="num">x&minus;1</span><span class="den">2</span></span> + <span class="frazione"><span class="num">1</span><span class="den">3</span></span></p>
+<p>Il m.c.m. tra i denominatori 6, 2 e 3 è 6: moltiplichiamo ogni termine per 6.</p>
+<p class="formula">2x+2 = 3(x&minus;1) + 2</p>
+<p>Eliminiamo la parentesi e riduciamo i termini simili.</p>
+<p class="formula">2x+2 = 3x&minus;3+2 &rarr; 2x+2 = 3x&minus;1</p>
+<p>Isoliamo la x.</p>
+<p class="formula">2 + 1 = 3x &minus; 2x &rarr; x = 3</p>
+<p>Verifichiamo sostituendo x = 3: primo membro = &minus;(1)(6)/6 + (2)(7)/6 = &minus;1+14/6 = &minus;6/6+14/6 = 8/6 = 4/3; secondo membro = 2/2+1/3 = 1+1/3 = 4/3. Coincidono.</p>
+
+<p class="titolo-capitolo">Esercizio 4 - Differenza di due prodotti su denominatore diverso dal resto (incognita al numeratore)</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula"><span class="frazione"><span class="num">(x+5)(x&minus;1) &minus; (x+2)(x+3)</span><span class="den">8</span></span> = <span class="frazione"><span class="num">x+1</span><span class="den">4</span></span> + <span class="frazione"><span class="num">x+5</span><span class="den">8</span></span> &minus; 2</p>
+<p>Sviluppiamo i due prodotti al numeratore di sinistra.</p>
+<p class="formula">(x+5)(x&minus;1) = x<sup>2</sup>+4x&minus;5 &nbsp;&nbsp;&nbsp; (x+2)(x+3) = x<sup>2</sup>+5x+6</p>
+<p>Sottraendo, anche qui i termini x<sup>2</sup> si cancellano.</p>
+<p class="formula">(x<sup>2</sup>+4x&minus;5) &minus; (x<sup>2</sup>+5x+6) = &minus;x&minus;11</p>
+<p>L'equazione diventa quindi:</p>
+<p class="formula"><span class="frazione"><span class="num">&minus;x&minus;11</span><span class="den">8</span></span> = <span class="frazione"><span class="num">x+1</span><span class="den">4</span></span> + <span class="frazione"><span class="num">x+5</span><span class="den">8</span></span> &minus; 2</p>
+<p>Moltiplichiamo tutti i termini per 8, il m.c.m. dei denominatori.</p>
+<p class="formula">&minus;x&minus;11 = 2(x+1) + (x+5) &minus; 16</p>
+<p>Eliminiamo le parentesi e riduciamo i termini simili a destra.</p>
+<p class="formula">&minus;x&minus;11 = 2x+2+x+5&minus;16 &rarr; &minus;x&minus;11 = 3x&minus;9</p>
+<p>Isoliamo la x.</p>
+<p class="formula">&minus;11+9 = 3x+x &rarr; &minus;2 = 4x &rarr; x = &minus;<span class="frazione"><span class="num">1</span><span class="den">2</span></span></p>
+<p>Verifichiamo sostituendo x = &minus;1/2 nell'equazione originale: il calcolo conferma l'uguaglianza tra i due membri (entrambi uguali a &minus;21/16).</p>
+
+<p class="titolo-capitolo">Esercizio 5 - Tre termini frazionari (incognita al numeratore)</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula">&minus;2&middot;<span class="frazione"><span class="num">x+4</span><span class="den">3</span></span> + <span class="frazione"><span class="num">x+3</span><span class="den">2</span></span> = <span class="frazione"><span class="num">x+5</span><span class="den">6</span></span></p>
+<p>Il m.c.m. tra i denominatori 3, 2 e 6 è 6: moltiplichiamo ogni termine per 6.</p>
+<p class="formula">&minus;4(x+4) + 3(x+3) = x+5</p>
+<p>Eliminiamo le parentesi.</p>
+<p class="formula">&minus;4x&minus;16 + 3x+9 = x+5</p>
+<p>Riduciamo i termini simili a sinistra.</p>
+<p class="formula">&minus;x&minus;7 = x+5</p>
+<p>Isoliamo la x.</p>
+<p class="formula">&minus;7&minus;5 = x+x &rarr; &minus;12 = 2x &rarr; x = &minus;6</p>
+<p>Verifichiamo: primo membro = &minus;2&middot;(&minus;6+4)/3 + (&minus;6+3)/2 = &minus;2&middot;(&minus;2/3) + (&minus;3/2) = 4/3&minus;3/2 = 8/6&minus;9/6 = &minus;1/6; secondo membro = (&minus;6+5)/6 = &minus;1/6. Coincidono.</p>
+
+<p class="titolo-capitolo">Esercizio 6 - Esercizio riepilogativo di tipo A: prodotti e frazioni insieme</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula">&minus;<span class="frazione"><span class="num">(x&minus;7)(x+1)</span><span class="den">8</span></span> + <span class="frazione"><span class="num">(x&minus;3)(x+5)</span><span class="den">8</span></span> = <span class="frazione"><span class="num">x</span><span class="den">2</span></span> &minus; <span class="frazione"><span class="num">1</span><span class="den">4</span></span></p>
+<p>Sviluppiamo i due prodotti al numeratore di sinistra.</p>
+<p class="formula">(x&minus;3)(x+5) = x<sup>2</sup>+2x&minus;15 &nbsp;&nbsp;&nbsp; (x&minus;7)(x+1) = x<sup>2</sup>&minus;6x&minus;7</p>
+<p>Sottraendo, i termini x<sup>2</sup> si cancellano ancora una volta.</p>
+<p class="formula">(x<sup>2</sup>+2x&minus;15) &minus; (x<sup>2</sup>&minus;6x&minus;7) = 8x&minus;8</p>
+<p>L'equazione diventa:</p>
+<p class="formula"><span class="frazione"><span class="num">8x&minus;8</span><span class="den">8</span></span> = <span class="frazione"><span class="num">x</span><span class="den">2</span></span> &minus; <span class="frazione"><span class="num">1</span><span class="den">4</span></span></p>
+<p>Semplifichiamo la frazione a sinistra (dividendo numeratore e denominatore per 8) e moltiplichiamo tutto per 4.</p>
+<p class="formula">x&minus;1 = <span class="frazione"><span class="num">x</span><span class="den">2</span></span> &minus; <span class="frazione"><span class="num">1</span><span class="den">4</span></span> &rarr; 4x&minus;4 = 2x&minus;1</p>
+<p>Isoliamo la x.</p>
+<p class="formula">4x&minus;2x = &minus;1+4 &rarr; 2x = 3 &rarr; x = <span class="frazione"><span class="num">3</span><span class="den">2</span></span></p>
+<p>Verifichiamo sostituendo x = 3/2: entrambi i membri dell'equazione risultano uguali a 1/2, confermando la soluzione.</p>
+
+<p class="titolo-capitolo">Esercizio 7 - Incognita anche al denominatore: caso semplice</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula"><span class="frazione"><span class="num">2x+3</span><span class="den">x&minus;1</span></span> = 5</p>
+<p>Poiché l'incognita compare anche al denominatore, imponiamo prima la condizione di esistenza.</p>
+<p class="formula">C.E.: x&minus;1 &ne; 0 &rarr; x &ne; 1</p>
+<p>Moltiplichiamo entrambi i membri per (x&minus;1), eliminando il denominatore.</p>
+<p class="formula">2x+3 = 5(x&minus;1)</p>
+<p>Eliminiamo la parentesi.</p>
+<p class="formula">2x+3 = 5x&minus;5</p>
+<p>Isoliamo la x.</p>
+<p class="formula">3+5 = 5x&minus;2x &rarr; 8 = 3x &rarr; x = <span class="frazione"><span class="num">8</span><span class="den">3</span></span></p>
+<p>Confrontiamo con la C.E.: 8/3 è diverso da 1, quindi la soluzione è accettabile.</p>
+
+<p class="titolo-capitolo">Esercizio 8 - Stesso denominatore su entrambi i termini di un membro</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula"><span class="frazione"><span class="num">3x&minus;1</span><span class="den">x+2</span></span> = 2 + <span class="frazione"><span class="num">1</span><span class="den">x+2</span></span></p>
+<p class="formula">C.E.: x+2 &ne; 0 &rarr; x &ne; &minus;2</p>
+<p>Moltiplichiamo ogni termine per (x+2), il denominatore comune.</p>
+<p class="formula">3x&minus;1 = 2(x+2) + 1</p>
+<p>Eliminiamo la parentesi e riduciamo i termini simili a destra.</p>
+<p class="formula">3x&minus;1 = 2x+4+1 &rarr; 3x&minus;1 = 2x+5</p>
+<p>Isoliamo la x.</p>
+<p class="formula">3x&minus;2x = 5+1 &rarr; x = 6</p>
+<p>Confrontiamo con la C.E.: 6 è diverso da &minus;2, quindi la soluzione è accettabile.</p>
+
+<p class="titolo-capitolo">Esercizio 9 - Numeratore scomponibile che semplifica il denominatore</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula"><span class="frazione"><span class="num">x<sup>2</sup>+2x&minus;15</span><span class="den">x&minus;3</span></span> &minus; <span class="frazione"><span class="num">x&minus;4</span><span class="den">2</span></span> = <span class="frazione"><span class="num">x+10</span><span class="den">3</span></span></p>
+<p class="formula">C.E.: x&minus;3 &ne; 0 &rarr; x &ne; 3</p>
+<p>Scomponiamo il numeratore della prima frazione: x<sup>2</sup>+2x&minus;15 = (x&minus;3)(x+5), poiché 5&times;(&minus;3)=&minus;15 e 5+(&minus;3)=2. Il fattore (x&minus;3) si semplifica con il denominatore.</p>
+<p class="formula"><span class="frazione"><span class="num">(x&minus;3)(x+5)</span><span class="den">x&minus;3</span></span> = x+5 &nbsp;&nbsp;(per x &ne; 3)</p>
+<p>L'equazione diventa quindi un'equazione senza più l'incognita al denominatore.</p>
+<p class="formula">(x+5) &minus; <span class="frazione"><span class="num">x&minus;4</span><span class="den">2</span></span> = <span class="frazione"><span class="num">x+10</span><span class="den">3</span></span></p>
+<p>Moltiplichiamo tutto per 6, il m.c.m. tra 2 e 3.</p>
+<p class="formula">6(x+5) &minus; 3(x&minus;4) = 2(x+10)</p>
+<p>Eliminiamo le parentesi.</p>
+<p class="formula">6x+30 &minus; 3x+12 = 2x+20</p>
+<p>Riduciamo i termini simili.</p>
+<p class="formula">3x+42 = 2x+20</p>
+<p>Isoliamo la x.</p>
+<p class="formula">3x&minus;2x = 20&minus;42 &rarr; x = &minus;22</p>
+<p>Confrontiamo con la C.E.: &minus;22 è diverso da 3, quindi la soluzione è accettabile.</p>
+
+<p class="titolo-capitolo">Esercizio 10 - Stesso denominatore, equazione più articolata</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula"><span class="frazione"><span class="num">5x&minus;2</span><span class="den">x+4</span></span> &minus; 3 = <span class="frazione"><span class="num">x+10</span><span class="den">x+4</span></span></p>
+<p class="formula">C.E.: x+4 &ne; 0 &rarr; x &ne; &minus;4</p>
+<p>Moltiplichiamo ogni termine per (x+4).</p>
+<p class="formula">5x&minus;2 &minus; 3(x+4) = x+10</p>
+<p>Eliminiamo la parentesi.</p>
+<p class="formula">5x&minus;2&minus;3x&minus;12 = x+10</p>
+<p>Riduciamo i termini simili a sinistra.</p>
+<p class="formula">2x&minus;14 = x+10</p>
+<p>Isoliamo la x.</p>
+<p class="formula">2x&minus;x = 10+14 &rarr; x = 24</p>
+<p>Confrontiamo con la C.E.: 24 è diverso da &minus;4, quindi la soluzione è accettabile.</p>
+
+<p class="titolo-capitolo">Esercizio 11 - Numeratore scomponibile combinato con altre frazioni</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula"><span class="frazione"><span class="num">x<sup>2</sup>&minus;x&minus;6</span><span class="den">x+2</span></span> + <span class="frazione"><span class="num">2x&minus;1</span><span class="den">5</span></span> = <span class="frazione"><span class="num">3x+1</span><span class="den">10</span></span></p>
+<p class="formula">C.E.: x+2 &ne; 0 &rarr; x &ne; &minus;2</p>
+<p>Scomponiamo il numeratore della prima frazione: x<sup>2</sup>&minus;x&minus;6 = (x+2)(x&minus;3), poiché (&minus;3)&times;2=&minus;6 e (&minus;3)+2=&minus;1. Il fattore (x+2) si semplifica con il denominatore.</p>
+<p class="formula"><span class="frazione"><span class="num">(x+2)(x&minus;3)</span><span class="den">x+2</span></span> = x&minus;3 &nbsp;&nbsp;(per x &ne; &minus;2)</p>
+<p>L'equazione diventa:</p>
+<p class="formula">(x&minus;3) + <span class="frazione"><span class="num">2x&minus;1</span><span class="den">5</span></span> = <span class="frazione"><span class="num">3x+1</span><span class="den">10</span></span></p>
+<p>Moltiplichiamo tutto per 10, il m.c.m. tra 5 e 10.</p>
+<p class="formula">10(x&minus;3) + 2(2x&minus;1) = 3x+1</p>
+<p>Eliminiamo le parentesi.</p>
+<p class="formula">10x&minus;30+4x&minus;2 = 3x+1</p>
+<p>Riduciamo i termini simili a sinistra.</p>
+<p class="formula">14x&minus;32 = 3x+1</p>
+<p>Isoliamo la x.</p>
+<p class="formula">14x&minus;3x = 1+32 &rarr; 11x = 33 &rarr; x = 3</p>
+<p>Confrontiamo con la C.E.: 3 è diverso da &minus;2, quindi la soluzione è accettabile.</p>
+
+<p class="titolo-capitolo">Esercizio 12 - Esercizio riepilogativo di tipo B</p>
+<p><em>Esempio:</em> Risolvere l'equazione:</p>
+<p class="formula"><span class="frazione"><span class="num">4x+1</span><span class="den">2x&minus;1</span></span> + 2 = <span class="frazione"><span class="num">7x&minus;3</span><span class="den">2x&minus;1</span></span></p>
+<p class="formula">C.E.: 2x&minus;1 &ne; 0 &rarr; x &ne; <span class="frazione"><span class="num">1</span><span class="den">2</span></span></p>
+<p>Moltiplichiamo ogni termine per (2x&minus;1), il denominatore comune.</p>
+<p class="formula">4x+1 + 2(2x&minus;1) = 7x&minus;3</p>
+<p>Eliminiamo la parentesi.</p>
+<p class="formula">4x+1+4x&minus;2 = 7x&minus;3</p>
+<p>Riduciamo i termini simili a sinistra.</p>
+<p class="formula">8x&minus;1 = 7x&minus;3</p>
+<p>Isoliamo la x.</p>
+<p class="formula">8x&minus;7x = &minus;3+1 &rarr; x = &minus;2</p>
+<p>Confrontiamo con la C.E.: &minus;2 è diverso da 1/2, quindi la soluzione è accettabile. Verifichiamo sostituendo x = &minus;2 nell'equazione originale: primo membro = (&minus;8+1)/(&minus;4&minus;1) + 2 = (&minus;7)/(&minus;5) + 2 = 7/5+10/5 = 17/5; secondo membro = (&minus;14&minus;3)/(&minus;4&minus;1) = (&minus;17)/(&minus;5) = 17/5. I due membri coincidono.</p>
+
+</div>
+<!-- fine esercizi matematica 05 complesse -->
+
+<div id="indice-matematica" class="capitolo-storia">
+  <p><a href="mat05.html">Torna alla teoria (Capitolo 05)</a></p>
+  <p><a href="mat05es.html">Torna agli esercizi base</a></p>
+  <p><a href="mat06.html">Vai al Capitolo successivo</a></p>
+</div>
+    
+
+    <footer>
+      Piccolo manuale di matematica e geometria
+    </footer>
+
+  </div>
+</body>
+  </html>
