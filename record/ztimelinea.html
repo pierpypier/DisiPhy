@@ -103,6 +103,7 @@
   .fld{ flex:1; min-width:130px; }
   .fld.small{ flex:0 0 140px; }
   .hint{ font-weight:400; }
+  .yhint{ font-size:12px; color:var(--muted); font-weight:700; margin:-2px 0 10px 2px; }
   .empty-msg{ color:var(--muted); font-size:14px; font-style:italic; padding:6px 2px; }
   .add-row{ display:flex; justify-content:center; margin-top:4px; }
 
@@ -177,7 +178,7 @@
     <button class="qa-btn" id="tlBtn">📈 CREA</button>
     <button class="config-toggle-btn" id="printBtn">🖨️</button>
     <button class="config-toggle-btn" id="imgBtn">🖼️</button>
-    <button class="config-toggle-btn" id="imgBtn"><a href="ztimelineb.html">↔️</a></button>
+    <button class="config-toggle-btn"><a href="ztimelineb.html">↔️</a></button>
     <button class="config-toggle-btn backup-btn" id="saveBtn">💾</button>
     <button class="config-toggle-btn restore-btn" id="loadBtn">📂</button>
     <input type="file" id="loadFile" accept=".json,application/json" style="display:none">
@@ -234,7 +235,7 @@
 
   /* ---------- utilità ---------- */
   function uid(){ return 'c' + Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
-  function newItem(mode){ return { id:uid(), mode:mode||'date', date:'', time:'', dir:'-', num:'', unit:'by', desc:'' }; }
+  function newItem(mode){ return { id:uid(), mode:mode||'date', date:'', time:'', dir:'-', era:'bc', num:'', unit:'by', desc:'' }; }
   function say(t){ msgEl.textContent = t; clearTimeout(say._t); say._t = setTimeout(function(){ msgEl.textContent=''; }, 3500); }
 
   function save(){
@@ -259,9 +260,10 @@
   }
   function normalize(it){
     var n = newItem(it && it.mode);
-    if (['date','period','today'].indexOf(n.mode) < 0) n.mode = 'date';
+    if (['date','period','today','year'].indexOf(n.mode) < 0) n.mode = 'date';
     n.date = String(it.date||''); n.time = String(it.time||'');
     n.dir = it.dir === '+' ? '+' : '-';
+    n.era = it.era === 'ad' ? 'ad' : 'bc';
     n.num = String(it.num == null ? '' : it.num);
     n.unit = UNITS[it.unit] ? it.unit : 'y';
     n.desc = String(it.desc||'');
@@ -306,6 +308,7 @@
     state.items.forEach(function(it, idx){
       var modeSel = h('select', {}, [
         opt(it.mode,'date','📅 Data precisa'),
+        opt(it.mode,'year','🏛️ Anno a.C. / d.C.'),
         opt(it.mode,'period','↔️ Periodo da oggi'),
         opt(it.mode,'today','📍 Data odierna')
       ]);
@@ -319,7 +322,7 @@
 
       var head = h('div', {'class':'tcard-head'}, [h('span', {'class':'tcard-num', text:'Card ' + (idx+1)}), modeSel, del]);
 
-      var fields = h('div', {'class':'tcard-fields'});
+      var fields = h('div', {'class':'tcard-fields'}), yHint = null;
 
       var timeIn = h('input', {type:'time'}); timeIn.value = it.time;
       timeIn.oninput = function(){ it.time = timeIn.value; save(); };
@@ -332,6 +335,23 @@
         fields.appendChild(timeFld);
       } else if (it.mode === 'today') {
         fields.appendChild(timeFld);
+      } else if (it.mode === 'year') {
+        var eraSel = h('select', {}, [opt(it.era,'bc','a.C. (avanti Cristo)'), opt(it.era,'ad','d.C. (dopo Cristo)')]);
+        yHint = h('div', {'class':'yhint'});
+        var refreshHint = function(){
+          var yi = yearInfo(it);
+          yHint.textContent = yi ? '≈ ' + yi.ago + ' (senza anno 0)' : 'Inserisci un anno (es. 753)';
+        };
+        eraSel.onchange = function(){ it.era = eraSel.value; save(); refreshHint(); };
+        var yIn = h('input', {type:'text', inputmode:'numeric', placeholder:'es. 753'}); yIn.value = it.num;
+        yIn.oninput = function(){
+          var v = yIn.value.trim();
+          if (/^[-−–]/.test(v)) { it.era='bc'; eraSel.value='bc'; v = v.replace(/^[-−–]\s*/,''); yIn.value = v; }
+          it.num = v; save(); refreshHint();
+        };
+        fields.appendChild(field('Anno', yIn, 'small'));
+        fields.appendChild(field('Era', eraSel));
+        refreshHint();
       } else {
         var dirSel = h('select', {}, [opt(it.dir,'-','− Passato'), opt(it.dir,'+','+ Futuro')]);
         dirSel.onchange = function(){ it.dir = dirSel.value; save(); };
@@ -354,13 +374,26 @@
       var descWrap = h('div', {'class':'fld'}); descWrap.style.minWidth = '100%';
       descWrap.appendChild(h('label', {text:'Descrizione'})); descWrap.appendChild(dIn2);
 
-      var card = h('div', {'class':'tcard'}, [head, fields, descWrap]);
+      var card = h('div', {'class':'tcard'}, [head, fields, yHint, descWrap]);
       cardList.appendChild(card);
     });
     autoGrowAll();
   }
 
   /* ---------- calcolo posizione temporale ---------- */
+  // Anno a.C./d.C. con convenzione storica: nessun anno 0 (1 a.C. è seguito da 1 d.C.)
+  function yearInfo(it){
+    var n = parseInt(String(it.num).replace(/[^\d]/g, ''), 10);
+    if (!isFinite(n) || n < 1) return null;
+    var Y = new Date().getFullYear();
+    var a = it.era === 'ad' ? n : 1 - n;           // anno astronomico equivalente
+    var v = a - Y;                                  // anni rispetto all'anno corrente
+    var f = new Intl.NumberFormat('it-IT', {maximumFractionDigits:0});
+    var ago = v < 0 ? f.format(-v) + (v === -1 ? ' anno fa' : ' anni fa')
+            : v === 0 ? 'quest\'anno'
+            : 'tra ' + f.format(v) + (v === 1 ? ' anno' : ' anni');
+    return { v:v, label:f.format(n) + (it.era === 'ad' ? ' d.C.' : ' a.C.'), ago:ago };
+  }
   function compute(it){
     var now = new Date();
     if (it.mode === 'period') {
@@ -370,6 +403,10 @@
       var yrs = n * UNITS[it.unit].mul * (it.dir === '-' ? -1 : 1);
       var fmt = new Intl.NumberFormat('it-IT', {maximumFractionDigits:6}).format(n);
       return { v:yrs, label:(it.dir==='-'?'−':'+') + fmt + ' ' + UNITS[it.unit].label, today:false };
+    }
+    if (it.mode === 'year') {
+      var yi = yearInfo(it);
+      return yi ? { v:yi.v, label:yi.label, today:false } : null;
     }
     if (it.mode === 'today') {
       var d = new Date(now);
