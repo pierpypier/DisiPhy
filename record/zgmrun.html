@@ -262,7 +262,7 @@
      - in accelerazione: il tono sale in ogni marcia e ricade ad ogni cambio (1→2→3→4→5)
      - dopo uno scontro / rallentando: scalate di marcia in sequenza (5→4→3→...) */
   const GEAR_TOP = [0.2, 0.4, 0.6, 0.8, 1.0];   // fondo-giri di ogni marcia (frazione della velocità massima)
-  const GEAR_UP_RATE = 0.2 / 3;                  // il "regime virtuale" sale di una marcia in ~3 secondi
+  const GEAR_UP_RATE = 0.2 / 5;                  // il "regime virtuale" sale di una marcia in ~3 secondi
   const GEAR_DOWN_RATE = 0.9;                    // e scende molto più in fretta (scalate in sequenza dopo scontri o frenate)
   let gear = 0, gearCd = 0, gearDip = 0, gearV = 0;   // gearV = velocità "sentita" dal suono (segue sp con ritardo)
   function gearSim(sp, dt) {
@@ -453,7 +453,7 @@
   vig.addColorStop(0, 'rgba(0,0,0,0)'); vig.addColorStop(1, 'rgba(0,0,0,.55)');
 
   /* ---------- temi di sfondo (solo grafica: cambiano col punteggio) ---------- */
-  const THEME_PTS = 600;   // punti per ogni cambio di sfondo
+  const THEME_PTS = 900;   // punti per ogni cambio di sfondo
   const rnd = (a, b) => a + Math.random() * (b - a);
   const poly2 = (g, c, p) => { g.fillStyle = c; g.beginPath(); p.forEach((q, i) => i ? g.lineTo(q[0], q[1]) : g.moveTo(q[0], q[1])); g.closePath(); g.fill(); };
   const rect = (g, c, x, y, w, h) => { g.fillStyle = c; g.fillRect(x, y, w, h); };
