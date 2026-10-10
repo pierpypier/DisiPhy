@@ -72,7 +72,7 @@ let SA=0,SS=0,from=0,ni=1,RS=1,oy=150,v=0,tt=0,sa=1,sp=100,ps=1,gp=0,pb=0,pax=0,
 const pl={x:160,y:400};
 function beep(f,d,ty,vv){try{if(!aud)return;const n=aud.currentTime,o=aud.createOscillator(),g=aud.createGain();o.type=ty||'square';o.frequency.setValueAtTime(f,n);o.frequency.exponentialRampToValueAtTime(Math.max(30,f*.4),n+d);g.gain.setValueAtTime(vv||.03,n);g.gain.exponentialRampToValueAtTime(.001,n+d);o.connect(g);g.connect(aud.destination);o.start();o.stop(n+d)}catch(e){}}
 const say=(m,s=1.6)=>{msg=m;msgT=s};
-function newRoute(){do ni=rnd()*26|0;while(ni==SA);RS=rnd()*3|0;seq=[];dur=[];DT=0;let p=-1;for(let i=0;i<4;i++){let q;do q=rnd()*5|0;while(q==p);p=q;seq.push(q);const d=10+rnd()*2.5;dur.push(d);DT+=d}}
+function newRoute(){do ni=rnd()*26|0;while(ni==SA);RS=rnd()*3|0;seq=[];dur=[];DT=0;let p=-1;for(let i=0;i<5;i++){let q;do q=rnd()*5|0;while(q==p);p=q;seq.push(q);const d=12+rnd()*3;dur.push(d);DT+=d}}
 function start(){sc=0;lives=2;fuel=80;ice=off=shield=0;legs=0;SA=rnd()*26|0;SS=rnd()*3|0;oy=150;pl.x=RXS[SS];pl.y=400;ps=1;pax=0;np=90+rnd()*110|0;pb=0;gp=1;dec=[];en=[];tk=[];pt=[];newRoute();st='gnd';say('BENVENUTO A BORDO!')}
 function takeoff(){from=SA;st='take';tt=0;v=0;th=seq[0];bgc=cols[th].slice();prog=0;app=warn=0;dec=[];en=[];tk=[];tkT=2;enT=2;oy=150;sa=1;ps=1;legs++}
 function land(){if(st!='fly'||!app)return;if(400-oy>900||Math.abs(pl.x-RXS[SS])>27){fuel-=6;say('FUORI CORRIDOIO!');beep(120,.2);return}st='land'}
@@ -87,18 +87,18 @@ function decor(dt,spawn){dec.forEach(d=>d.y+=sp*dt);dec=dec.filter(d=>d.y<H+40);
 function upd(dt){
 t+=dt;if(msgT>0)msgT-=dt;if(inv>0)inv-=dt;
 pt.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.l-=dt});pt=pt.filter(p=>p.l>0);
-if(st=='gnd'){if(gp==0){pb-=45*dt;if(pb<=0){pb=0;gp=1;const b=500+pax*5+(fuel|0)*2;sc+=b;say('+'+b+' PUNTI!',2.5);fuel=Math.min(100,fuel+45);ice=off=0;np=70+rnd()*130|0}}else if(gp==1){pb+=45*dt;if(pb>=np){pb=pax=np;gp=2}}}
+if(st=='gnd'){if(gp==0){pb-=45*dt;if(pb<=0){pb=0;gp=1;const b=500+pax*5+(fuel|0)*2;sc+=b;say('+'+b+' PUNTI!',2.5);fuel=Math.min(100,fuel+35);ice=off=0;np=70+rnd()*130|0}}else if(gp==1){pb+=45*dt;if(pb>=np){pb=pax=np;gp=2}}}
 else if(st=='take'){tt+=dt;v=Math.min(190,v+90*dt);oy+=v*dt;if(tt>2.2)mv(dt);else pl.x+=(RXS[SS]-pl.x)*5*dt;ps=1+Math.min(.25,Math.max(0,tt-2)*.15);sa=Math.max(0,1-(tt-2)/2.6);sp=Math.min(v,100);decor(dt,tt>2.3);if(tt>4.6){st='fly';sa=0}}
 else if(st=='land'){const tg=150;v=Math.max(0,Math.min(100,(tg-oy)*1.6));oy+=v*dt;pl.x+=(RXS[SS]-pl.x)*4*dt;pl.y+=(400-pl.y)*3*dt;ps+=(1-ps)*3*dt;if(tg-oy<3){st='gnd';gp=0;pb=pax;newRoute();dec=[];en=[];tk=[]}}
 else if(st=='fly'){
 const rate=(ice>70?.6:1)*(off>70?.7:1);sp=100*rate;mv(dt);ps+=(1-ps)*3*dt;
 if(!app){prog+=dt*rate;if(prog>=DT-10)warn=1;if(prog>=DT-7){app=1;warn=0;oy=-910;SA=ni;SS=RS;en=en.filter(e=>e.y>H)}}else{oy+=sp*dt;if(400-oy<60)die('ATTERRAGGIO MANCATO')}
-let c=0,i=0;while(i<3&&prog>=c+dur[i]){c+=dur[i];i++}th=seq[i];for(let j=0;j<3;j++)bgc[j]+=(cols[th][j]-bgc[j])*Math.min(1,dt*1.2);
-fuel-=dt*2.8*(1+(ice>70?.3:0)+(off>70?.3:0));ice=Math.min(100,ice+dt*(th==4?5:th==0?3:1.8));off=Math.min(100,off+dt*2.2);if(fuel<=0)die('CARBURANTE ESAURITO');
+let c=0,i=0;while(i<3&&prog>=c+dur[i]){c+=dur[i];i++}th=seq[i];for(let j=0;j<4;j++)bgc[j]+=(cols[th][j]-bgc[j])*Math.min(1,dt*1.2);
+fuel-=dt*3.2*(1+(ice>70?.3:0)+(off>70?.3:0));ice=Math.min(100,ice+dt*(th==4?5:th==0?3:1.8));off=Math.min(100,off+dt*2.2);if(fuel<=0)die('CARBURANTE ESAURITO');
 decor(dt,1);
-tkT-=dt;if(tkT<=0){tkT=.9+rnd()*1.1;const r=rnd();tk.push({x:20+rnd()*280,y:-14,t:r<.42?0:r<.62?1:r<.82?2:r<.92?3:4})}
-enT-=dt;if(enT<=0&&!warn&&!app){enT=.9+rnd()*1.3;en.push({x:30+rnd()*260,y:-24,vy:rnd()<.3?-45:40+rnd()*50,ph:rnd()*6,c:Math.floor(rnd()*4)})}
-tk.forEach(o=>{o.y+=sp*dt;if(Math.hypot(o.x-pl.x,o.y-pl.y)<14){o.y=999;sc+=15;beep(700,.12,'sine',.05);if(o.t==0)fuel=Math.min(100,fuel+28);else if(o.t==1)ice=Math.max(0,ice-55);else if(o.t==2)off=Math.max(0,off-55);else if(o.t==3)shield=1;else lives=Math.min(5,lives+1)}});tk=tk.filter(o=>o.y<H+20);
+tkT-=dt;if(tkT<=0){tkT=1.5+rnd()*1.5;const r=rnd();tk.push({x:20+rnd()*280,y:-14,t:r<.42?0:r<.62?1:r<.82?2:r<.92?3:4})}
+enT-=dt;if(enT<=0&&!warn&&!app){enT=.5+rnd()*0.8;en.push({x:30+rnd()*260,y:-24,vy:rnd()<.3?-45:50+rnd()*60,ph:rnd()*6,c:Math.floor(rnd()*4)})}
+tk.forEach(o=>{o.y+=sp*dt;if(Math.hypot(o.x-pl.x,o.y-pl.y)<14){o.y=999;sc+=15;beep(700,.12,'sine',.05);if(o.t==0)fuel=Math.min(100,fuel+20);else if(o.t==1)ice=Math.max(0,ice-55);else if(o.t==2)off=Math.max(0,off-55);else if(o.t==3)shield=1;else lives=Math.min(5,lives+1)}});tk=tk.filter(o=>o.y<H+20);
 en.forEach(e=>{e.y+=(sp+e.vy)*dt;e.x+=Math.sin(t*.8+e.ph)*20*dt;if(Math.hypot(e.x-pl.x,e.y-pl.y)<14&&e.y<H){hit('COLLISIONE IN VOLO');e.y=999}});en=en.filter(e=>e.y<H+30)}
 }
 // ---- Disegno
