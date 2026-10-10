@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Gas medicinali · Catalogo</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  :root{
+    --bg:#f6f8fb; --card:#ffffff; --accent:#1e88e5; --muted:#6b7280;
+    --danger:#E3DCC9; --shadow:0 6px 18px rgba(20,30,50,0.06); --radius:12px; --max-width:1080px;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px; display:flex; justify-content:center; color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  .nav { display:flex; justify-content:center; gap:10px; padding:5px 0; margin-bottom:10px; flex-wrap:wrap; }
+  .nav-item { display:flex; flex-direction:column; align-items:center; text-decoration:none; color:#000; font-size:14px; transition:opacity 0.2s ease; }
+  .nav-item img { width:84px; height:84px; margin-bottom:1px; transition:transform 0.2s ease; }
+  .nav-item:hover img { transform:scale(1.05); }
+  .nav-item:hover { opacity:0.85; }
+  @media (max-width:600px){ .nav{ gap:10px; } .nav-item img{ width:60px; height:60px; } .nav-item span{ font-size:12px; } }
+
+  .card{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; margin-bottom:18px; }
+  .section-title{ font-size:18px; font-weight:800; color:var(--accent); margin:0 0 12px 0; }
+  .hint{ font-size:12px; color:var(--muted); margin-top:-6px; margin-bottom:12px; }
+  .empty-note{ background:#fff8e6; border:1px solid #f0dfa8; border-radius:10px; padding:12px 14px; font-size:13px; color:#7a5c00; margin-bottom:16px; }
+
+  .travel-nav-divider{ border:none; border-top:1px solid #e6e9ef; margin:24px 0 14px 0; }
+  .travel-nav{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+  .travel-nav-item{ display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none; color:#374151; font-size:11px; font-weight:700; }
+  .travel-nav-item .icon{ width:46px; height:46px; border-radius:50%; background:#eef2f7; display:flex; align-items:center; justify-content:center; font-size:20px; transition:transform .15s ease, background .15s ease; }
+  .travel-nav-item:hover .icon{ transform:scale(1.06); }
+  .travel-nav-item.active .icon{ background:var(--accent); }
+  .travel-nav-item.active span.lbl{ color:var(--accent); }
+
+  .field-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin-bottom:12px; }
+  .field label{ display:block; font-weight:700; color:var(--muted); font-size:12px; margin-bottom:5px; }
+  .field input, .field select, .field textarea{ width:100%; padding:9px 11px; border-radius:8px; border:1px solid #e6e9ef; font-size:14px; font-family:inherit; }
+  .field textarea{ min-height:60px; resize:vertical; }
+
+  .btn{ border:none; border-radius:8px; padding:7px 12px; font-weight:700; font-size:13px; cursor:pointer; }
+  .btn-danger{ background:var(--danger); color:#7a3b1f; }
+  .btn-add{ background:#eaf6ec; color:#2f7a3d; }
+  .btn-small{ padding:4px 9px; font-size:12px; }
+
+  .sez-head{ display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+  .sez-head .section-title{ margin:0; }
+  .search{ padding:7px 11px; border-radius:8px; border:1px solid #e6e9ef; font-size:13px; min-width:180px; }
+
+  .item-card{ background:#fbfcfe; border:1px solid #e3e8f0; border-radius:var(--radius); margin-bottom:10px; box-shadow:var(--shadow); }
+  .item-head{ display:flex; justify-content:space-between; align-items:center; gap:10px; padding:10px 14px; cursor:pointer; }
+  .item-sum{ font-weight:700; font-size:14px; color:#1f2a3d; flex:1; min-width:0; }
+  .item-sum small{ display:block; font-weight:600; color:var(--muted); font-size:12px; margin-top:2px; }
+  .chev{ color:var(--muted); transition:transform .2s ease; }
+  .item-card.open .chev{ transform:rotate(90deg); }
+  .item-body{ display:none; padding:4px 14px 14px 14px; border-top:1px solid #e6e9ef; }
+  .item-card.open .item-body{ display:block; padding-top:12px; }
+  .add-wrap{ text-align:center; margin-top:6px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item"><img src="rimage/orga4.png" alt="Organizer"><span> NOTE </span></a>
+    <a href="caldsp.html" class="nav-item"><img src="rimage/calicon.png" alt="Calendario dsp"><span> DATE </span></a>
+    <a href="check01.html" class="nav-item"><img src="rimage/check02.png" alt="Checklist"><span>LISTE</span></a>
+    <a href="strweb.html" class="nav-item"><img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84"><span> WEB </span></a>
+    <a href="dashconsolle.html" class="nav-item"><img src="rimage/opzioni.png" alt="Opzioni"><span> ADD </span></a>
+  </nav>
+
+  <!-- UNITA' TERMINALI -->
+  <div class="card">
+    <div class="sez-head">
+      <div class="section-title">🔌 Unità terminali (UT)</div>
+      <input type="text" class="search" placeholder="Cerca codice, marca, gas..." data-search="ut">
+    </div>
+    <div class="hint">Le prese ai posti letto. Il tipo di sostituzione scelto qui è il valore predefinito: nel censimento si può cambiare per la singola postazione.</div>
+    <div id="emptyUt" class="empty-note" style="display:none;">Nessuna unità terminale in catalogo. Usa "Aggiungi unità terminale".</div>
+    <div id="listaUt"></div>
+    <div class="add-wrap"><button class="btn btn-add" data-add="ut">➕ Aggiungi unità terminale</button></div>
+  </div>
+
+  <!-- RIDUTTORI -->
+  <div class="card">
+    <div class="sez-head">
+      <div class="section-title">🎛️ Riduttori di II stadio (RD)</div>
+      <input type="text" class="search" placeholder="Cerca codice, marca, gas..." data-search="rd">
+    </div>
+    <div class="hint">I riduttori che compongono i quadri di riduzione.</div>
+    <div id="emptyRd" class="empty-note" style="display:none;">Nessun riduttore in catalogo. Usa "Aggiungi riduttore".</div>
+    <div id="listaRd"></div>
+    <div class="add-wrap"><button class="btn btn-add" data-add="rd">➕ Aggiungi riduttore</button></div>
+  </div>
+
+  <hr class="travel-nav-divider">
+  <nav class="travel-nav">
+    <a href="gas-catalogo.html" class="travel-nav-item active"><div class="icon">📚</div><span class="lbl">Catalogo</span></a>
+    <a href="gas-censimento.html" class="travel-nav-item"><div class="icon">🏥</div><span class="lbl">Censimento</span></a>
+    <a href="gas-riepilogo.html" class="travel-nav-item"><div class="icon">📊</div><span class="lbl">Riepilogo</span></a>
+    <a href="gas-impostazioni.html" class="travel-nav-item"><div class="icon">⚙️</div><span class="lbl">Impostazioni</span></a>
+  </nav>
+
+</div>
+
+<script>
+const LS_CONFIG   = 'gas_config';
+const LS_CATALOGO = 'gas_catalogo';
+
+const DEF_GAS = [
+  ['o2','Ossigeno'],['n2o',"Protossido d'azoto"],['aria4','Aria 4 bar'],['aria8','Aria 8 bar'],
+  ['co2','CO2'],['n2','Azoto'],['he','Elio'],['ar','Argon'],['evac','Evacuazione'],['vuoto','Vuoto']
+];
+const DEF_TIPI_UT = [['uni','UNI'],['afnor','AFNOR'],['nist','NIST'],['ega','EGA']];
+
+function leggiOggetto(key, fallback){
+  try{ const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : fallback; }
+  catch(e){ return fallback; }
+}
+function salva(key, val){ localStorage.setItem(key, JSON.stringify(val)); }
+function escapeHtml(s){
+  if(s === null || s === undefined) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function nuovoId(prefix){ return prefix + '_' + Date.now() + '_' + Math.floor(Math.random()*10000); }
+function eur(n){
+  if(typeof n !== 'number' || isNaN(n)) n = 0;
+  return n.toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' €';
+}
+
+/* Gas e tipi: gli id sono stabili (x1..x3 = voci personalizzate), così rinominare
+   una voce libera nelle Impostazioni non rompe il catalogo già compilato. */
+function leggiConfig(){
+  return Object.assign({gasExtra:['','',''], tipiExtra:['','',''], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+}
+function elencoGas(){
+  const c = leggiConfig();
+  const out = DEF_GAS.map(g => ({id:g[0], nome:g[1]}));
+  c.gasExtra.forEach((n,i) => { if(n) out.push({id:'x'+(i+1), nome:n}); });
+  return out;
+}
+function elencoTipiUt(){
+  const c = leggiConfig();
+  const out = DEF_TIPI_UT.map(t => ({id:t[0], nome:t[1]}));
+  c.tipiExtra.forEach((n,i) => { if(n) out.push({id:'x'+(i+1), nome:n}); });
+  return out;
+}
+function nomeGas(id){ const g = elencoGas().find(x => x.id === id); return g ? g.nome : '—'; }
+function nomeTipoUt(id){ const t = elencoTipiUt().find(x => x.id === id); return t ? t.nome : '—'; }
+
+/* ================= STATO ================= */
+let catalogo = Object.assign({ut:[], rd:[]}, leggiOggetto(LS_CATALOGO, {}));
+if(!Array.isArray(catalogo.ut)) catalogo.ut = [];
+if(!Array.isArray(catalogo.rd)) catalogo.rd = [];
+
+function nuovaUt(){
+  return { id:nuovoId('ut'), codice:'', descrizione:'Completamento', gas:'o2', tipo:'uni', marca:'',
+           sostituzione:'completo', costoCompleto:0, costoKit:0, note:'', open:true };
+}
+function nuovoRd(){
+  return { id:nuovoId('rd'), codice:'', descrizione:'Riduttore di II stadio', gas:'o2', tipo:'', marca:'',
+           sostituzione:'completo', costoCompleto:0, costoKit:0, note:'', open:true };
+}
+function lista(sez){ return catalogo[sez]; }
+function trova(sez, id){ return catalogo[sez].find(x => x.id === id); }
+
+/* ================= RENDER ================= */
+function riassunto(sez, it){
+  const tipo = sez === 'ut' ? nomeTipoUt(it.tipo) : (it.tipo || '—');
+  const titolo = escapeHtml(it.codice || '(senza codice)') + ' — ' + escapeHtml(it.descrizione || '');
+  const sotto = [nomeGas(it.gas), tipo, it.marca || 'marca —'].map(escapeHtml).join(' · ');
+  return `${titolo}<small>${sotto}</small>`;
+}
+function opzioniSostituzione(sez, val){
+  const lab = sez === 'ut' ? 'completamento' : 'riduttore';
+  return [['completo','Solo '+lab+' intero'],['kit','Solo kit'],['entrambi','Entrambi']]
+    .map(o => `<option value="${o[0]}" ${val===o[0]?'selected':''}>${o[1]}</option>`).join('');
+}
+function renderCard(sez, it){
+  const gasOpts = elencoGas().map(g => `<option value="${g.id}" ${it.gas===g.id?'selected':''}>${escapeHtml(g.nome)}</option>`).join('');
+  const lab = sez === 'ut' ? 'completamento' : 'riduttore';
+  let tipoField;
+  if(sez === 'ut'){
+    tipoField = `<select data-f="tipo">${elencoTipiUt().map(t => `<option value="${t.id}" ${it.tipo===t.id?'selected':''}>${escapeHtml(t.nome)}</option>`).join('')}</select>`;
+  } else {
+    tipoField = `<input type="text" data-f="tipo" list="tipiRd" placeholder="Es. 10→4 bar, singolo, doppio..." value="${escapeHtml(it.tipo)}">`;
+  }
+  const showCompleto = it.sostituzione !== 'kit';
+  const showKit = it.sostituzione !== 'completo';
+  return `
+  <div class="item-card ${it.open?'open':''}" data-sez="${sez}" data-id="${it.id}">
+    <div class="item-head" data-toggle>
+      <div class="item-sum" data-sum>${riassunto(sez, it)}</div>
+      <button class="btn btn-danger btn-small" data-del title="Elimina">🗑️</button>
+      <span class="chev">▸</span>
+    </div>
+    <div class="item-body">
+      <div class="field-grid">
+        <div class="field"><label>Codice</label><input type="text" data-f="codice" value="${escapeHtml(it.codice)}"></div>
+        <div class="field"><label>Descrizione</label><input type="text" data-f="descrizione" value="${escapeHtml(it.descrizione)}"></div>
+        <div class="field"><label>Marca</label><input type="text" data-f="marca" list="marche" value="${escapeHtml(it.marca)}"></div>
+      </div>
+      <div class="field-grid">
+        <div class="field"><label>Gas</label><select data-f="gas">${gasOpts}</select></div>
+        <div class="field"><label>Tipo</label>${tipoField}</div>
+        <div class="field"><label>Sostituzione prevista</label><select data-f="sostituzione">${opzioniSostituzione(sez, it.sostituzione)}</select></div>
+      </div>
+      <div class="field-grid">
+        <div class="field" data-costo="completo" style="${showCompleto?'':'display:none'}"><label>Costo unitario ${lab} intero (€)</label><input type="number" min="0" step="0.01" data-f="costoCompleto" value="${it.costoCompleto}"></div>
+        <div class="field" data-costo="kit" style="${showKit?'':'display:none'}"><label>Costo unitario kit sostituzione (€)</label><input type="number" min="0" step="0.01" data-f="costoKit" value="${it.costoKit}"></div>
+      </div>
+      <div class="field"><label>Note</label><textarea data-f="note">${escapeHtml(it.note)}</textarea></div>
+    </div>
+  </div>`;
+}
+function render(sez){
+  const cont = document.getElementById(sez === 'ut' ? 'listaUt' : 'listaRd');
+  document.getElementById(sez === 'ut' ? 'emptyUt' : 'emptyRd').style.display = lista(sez).length ? 'none' : 'block';
+  cont.innerHTML = lista(sez).map(it => renderCard(sez, it)).join('');
+  applicaFiltro(sez);
+}
+function aggiornaDatalist(){
+  const marche = new Set(), tipiRd = new Set();
+  lista('ut').concat(lista('rd')).forEach(i => { if(i.marca) marche.add(i.marca); });
+  lista('rd').forEach(i => { if(i.tipo) tipiRd.add(i.tipo); });
+  document.getElementById('marche').innerHTML = [...marche].sort().map(m => `<option value="${escapeHtml(m)}">`).join('');
+  document.getElementById('tipiRd').innerHTML = [...tipiRd].sort().map(m => `<option value="${escapeHtml(m)}">`).join('');
+}
+
+/* ================= FILTRO RICERCA ================= */
+function applicaFiltro(sez){
+  const q = (document.querySelector('[data-search="'+sez+'"]').value || '').trim().toLowerCase();
+  document.querySelectorAll('#'+(sez==='ut'?'listaUt':'listaRd')+' .item-card').forEach(card => {
+    const it = trova(sez, card.dataset.id);
+    const testo = [it.codice, it.descrizione, it.marca, nomeGas(it.gas), sez==='ut'?nomeTipoUt(it.tipo):it.tipo].join(' ').toLowerCase();
+    card.style.display = (!q || testo.includes(q)) ? '' : 'none';
+  });
+}
+
+/* ================= EVENTI (delegati: nessun re-render mentre si digita) ================= */
+document.addEventListener('click', e => {
+  const addBtn = e.target.closest('[data-add]');
+  if(addBtn){
+    const sez = addBtn.dataset.add;
+    lista(sez).push(sez === 'ut' ? nuovaUt() : nuovoRd());
+    salva(LS_CATALOGO, catalogo);
+    render(sez);
+    return;
+  }
+  const card = e.target.closest('.item-card');
+  if(!card) return;
+  const sez = card.dataset.sez, it = trova(sez, card.dataset.id);
+  if(e.target.closest('[data-del]')){
+    if(!confirm('Eliminare questa voce dal catalogo?\nSe è già usata nel censimento resterà senza riferimento.')) return;
+    catalogo[sez] = catalogo[sez].filter(x => x.id !== it.id);
+    salva(LS_CATALOGO, catalogo);
+    render(sez); aggiornaDatalist();
+    return;
+  }
+  if(e.target.closest('[data-toggle]')){
+    it.open = !it.open;
+    salva(LS_CATALOGO, catalogo);
+    card.classList.toggle('open');
+  }
+});
+
+function onModifica(e){
+  const el = e.target;
+  const campo = el.dataset && el.dataset.f;
+  if(!campo) return;
+  const card = el.closest('.item-card');
+  const sez = card.dataset.sez, it = trova(sez, card.dataset.id);
+  it[campo] = (el.type === 'number') ? (parseFloat(el.value) || 0) : el.value;
+  salva(LS_CATALOGO, catalogo);
+  card.querySelector('[data-sum]').innerHTML = riassunto(sez, it);
+  if(campo === 'sostituzione'){
+    card.querySelector('[data-costo="completo"]').style.display = it.sostituzione !== 'kit' ? '' : 'none';
+    card.querySelector('[data-costo="kit"]').style.display = it.sostituzione !== 'completo' ? '' : 'none';
+  }
+  if(campo === 'marca' || campo === 'tipo') aggiornaDatalist();
+}
+document.addEventListener('input', onModifica);
+document.addEventListener('change', onModifica);
+
+document.querySelectorAll('[data-search]').forEach(inp => inp.addEventListener('input', () => applicaFiltro(inp.dataset.search)));
+
+window.addEventListener('DOMContentLoaded', () => {
+  const dl1 = document.createElement('datalist'); dl1.id = 'marche';
+  const dl2 = document.createElement('datalist'); dl2.id = 'tipiRd';
+  document.body.appendChild(dl1); document.body.appendChild(dl2);
+  render('ut'); render('rd'); aggiornaDatalist();
+});
+</script>
+</body>
+</html>

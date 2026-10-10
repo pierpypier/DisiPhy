@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Gas medicinali · Censimento</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  :root{
+    --bg:#f6f8fb; --card:#ffffff; --accent:#1e88e5; --muted:#6b7280;
+    --danger:#E3DCC9; --shadow:0 6px 18px rgba(20,30,50,0.06); --radius:12px; --max-width:1080px;
+    --warn:#b8442c;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px; display:flex; justify-content:center; color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  .nav { display:flex; justify-content:center; gap:10px; padding:5px 0; margin-bottom:10px; flex-wrap:wrap; }
+  .nav-item { display:flex; flex-direction:column; align-items:center; text-decoration:none; color:#000; font-size:14px; transition:opacity 0.2s ease; }
+  .nav-item img { width:84px; height:84px; margin-bottom:1px; transition:transform 0.2s ease; }
+  .nav-item:hover img { transform:scale(1.05); }
+  .nav-item:hover { opacity:0.85; }
+  @media (max-width:600px){ .nav{ gap:10px; } .nav-item img{ width:60px; height:60px; } .nav-item span{ font-size:12px; } }
+
+  .card{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; margin-bottom:18px; }
+  .section-title{ font-size:18px; font-weight:800; color:var(--accent); margin:0 0 12px 0; }
+  .hint{ font-size:12px; color:var(--muted); margin-top:-6px; margin-bottom:12px; }
+  .empty-note{ background:#fff8e6; border:1px solid #f0dfa8; border-radius:10px; padding:12px 14px; font-size:13px; color:#7a5c00; margin-bottom:16px; }
+  .empty-note a{ color:#7a5c00; font-weight:800; }
+
+  .travel-nav-divider{ border:none; border-top:1px solid #e6e9ef; margin:24px 0 14px 0; }
+  .travel-nav{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+  .travel-nav-item{ display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none; color:#374151; font-size:11px; font-weight:700; }
+  .travel-nav-item .icon{ width:46px; height:46px; border-radius:50%; background:#eef2f7; display:flex; align-items:center; justify-content:center; font-size:20px; transition:transform .15s ease, background .15s ease; }
+  .travel-nav-item:hover .icon{ transform:scale(1.06); }
+  .travel-nav-item.active .icon{ background:var(--accent); }
+  .travel-nav-item.active span.lbl{ color:var(--accent); }
+
+  .field-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin-bottom:12px; }
+  .field label{ display:block; font-weight:700; color:var(--muted); font-size:12px; margin-bottom:5px; }
+  .field input, .field select, .field textarea{ width:100%; padding:9px 11px; border-radius:8px; border:1px solid #e6e9ef; font-size:14px; font-family:inherit; }
+  .field textarea{ min-height:56px; resize:vertical; }
+
+  .btn{ border:none; border-radius:8px; padding:7px 12px; font-weight:700; font-size:13px; cursor:pointer; }
+  .btn-danger{ background:var(--danger); color:#7a3b1f; }
+  .btn-primary{ background:var(--accent); color:#fff; }
+  .btn-add{ background:#eaf6ec; color:#2f7a3d; }
+  .btn-soft{ background:#eef2f7; color:#374151; }
+  .btn-small{ padding:4px 9px; font-size:12px; }
+  .add-wrap{ text-align:center; margin-top:8px; }
+
+  /* Tab presidi */
+  .pres-tabs{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; align-items:center; }
+  .pres-tab{ background:#eef2f7; border:none; border-radius:999px; padding:8px 16px; font-weight:700; font-size:13px; color:#374151; cursor:pointer; }
+  .pres-tab.active{ background:var(--accent); color:#fff; }
+
+  /* Card apribili (reparto, postazione) */
+  .item-card{ background:#fbfcfe; border:1px solid #e3e8f0; border-radius:var(--radius); margin-bottom:12px; box-shadow:var(--shadow); }
+  .item-head{ display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 14px; cursor:pointer; }
+  .item-sum{ font-weight:700; font-size:14px; color:#1f2a3d; flex:1; min-width:0; }
+  .item-sum small{ display:block; font-weight:600; color:var(--muted); font-size:12px; margin-top:2px; }
+  .chev{ color:var(--muted); transition:transform .2s ease; }
+  .item-card.open > .item-head .chev{ transform:rotate(90deg); }
+  .item-body{ display:none; padding:12px 14px 14px 14px; border-top:1px solid #e6e9ef; }
+  .item-card.open > .item-body{ display:block; }
+
+  /* Accordion interni al reparto */
+  .acc{ border-top:1px solid #e6e9ef; margin-top:6px; }
+  .acc-head{ display:flex; justify-content:space-between; align-items:center; padding:10px 4px; cursor:pointer; font-weight:800; font-size:14px; color:#1f2a3d; }
+  .acc.open > .acc-head .chev{ transform:rotate(90deg); }
+  .acc-body{ display:none; padding:4px 0 12px 0; }
+  .acc.open > .acc-body{ display:block; }
+
+  .sub-card{ background:#f7f9fc; border:1px solid #e3e8f0; border-radius:10px; padding:10px; margin-bottom:10px; }
+  .sub-head{ display:flex; gap:8px; align-items:center; margin-bottom:8px; }
+  .sub-head input{ flex:1; font-weight:800; font-size:14px; border:none; border-bottom:1px dashed #cbd5e1; background:transparent; padding:3px 0; font-family:inherit; }
+  .sub-head input:focus{ border-bottom-color:var(--accent); outline:none; }
+
+  .row-item{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; background:#fff; border:1px solid #e6e9ef; border-radius:8px; padding:8px 10px; margin-bottom:6px; }
+  .row-item select, .row-item input[type=text], .row-item input[type=number]{ padding:6px 8px; border-radius:6px; border:1px solid #e6e9ef; font-size:13px; font-family:inherit; max-width:100%; }
+  .row-item .grow{ flex:1; min-width:140px; }
+  .row-item .w70{ width:70px; } .row-item .w90{ width:90px; }
+  .row-item label.chk{ font-size:12px; font-weight:700; color:var(--muted); display:flex; align-items:center; gap:4px; }
+  .calc{ font-size:12px; font-weight:800; color:var(--accent); white-space:nowrap; }
+  .row-lbl{ font-size:11px; font-weight:700; color:var(--muted); }
+
+  .post-card .item-head{ padding:8px 12px; }
+  .post-card .item-body{ padding:10px 12px 12px 12px; }
+
+  .avvisi{ background:#fdf0ec; border:1px solid #f0c4b6; border-radius:10px; padding:10px 12px; font-size:12px; color:var(--warn); margin:10px 0; }
+  .avvisi ul{ margin:4px 0 0 0; padding-left:18px; }
+
+  .riep{ margin-top:14px; border-top:2px solid #e3e8f0; padding-top:12px; }
+  .riep-title{ font-weight:800; font-size:14px; color:var(--accent); margin-bottom:8px; }
+  .tbl-wrap{ overflow-x:auto; margin-bottom:10px; }
+  .tbl{ width:100%; border-collapse:collapse; font-size:12px; }
+  .tbl th, .tbl td{ padding:6px 8px; border-bottom:1px solid #e6e9ef; text-align:left; white-space:nowrap; }
+  .tbl th{ background:#f1f5fa; color:#374151; font-weight:800; }
+  .tbl td.num, .tbl th.num{ text-align:right; }
+  .tbl tfoot td{ font-weight:800; background:#f7f9fc; }
+
+  .saldi-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:8px; }
+  .saldo-box{ background:#f7f9fc; border:1px solid #e6e9ef; border-radius:10px; padding:12px; }
+  .saldo-box .saldo-label{ font-size:12px; color:var(--muted); font-weight:700; margin-bottom:4px; }
+  .saldo-box .saldo-value{ font-size:18px; font-weight:800; color:#111827; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item"><img src="rimage/orga4.png" alt="Organizer"><span> NOTE </span></a>
+    <a href="caldsp.html" class="nav-item"><img src="rimage/calicon.png" alt="Calendario dsp"><span> DATE </span></a>
+    <a href="check01.html" class="nav-item"><img src="rimage/check02.png" alt="Checklist"><span>LISTE</span></a>
+    <a href="strweb.html" class="nav-item"><img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84"><span> WEB </span></a>
+    <a href="dashconsolle.html" class="nav-item"><img src="rimage/opzioni.png" alt="Opzioni"><span> ADD </span></a>
+  </nav>
+
+  <div class="card">
+    <div class="section-title">🏥 Censimento impianti</div>
+    <div class="hint">Presidio → reparti → quadri di riduzione (riduttori e montanti) e postazioni (unità terminali). Le voci si scelgono dal catalogo. I dati si salvano automaticamente.</div>
+    <div id="catalogoVuoto" class="empty-note" style="display:none;">Il catalogo è incompleto: servono almeno un riduttore e un'unità terminale. <a href="gas-catalogo.html">Vai al catalogo</a>.</div>
+    <div class="pres-tabs" id="presTabs"></div>
+    <div id="presArea"></div>
+  </div>
+
+  <hr class="travel-nav-divider">
+  <nav class="travel-nav">
+    <a href="gas-catalogo.html" class="travel-nav-item"><div class="icon">📚</div><span class="lbl">Catalogo</span></a>
+    <a href="gas-censimento.html" class="travel-nav-item active"><div class="icon">🏥</div><span class="lbl">Censimento</span></a>
+    <a href="gas-riepilogo.html" class="travel-nav-item"><div class="icon">📊</div><span class="lbl">Riepilogo</span></a>
+    <a href="gas-impostazioni.html" class="travel-nav-item"><div class="icon">⚙️</div><span class="lbl">Impostazioni</span></a>
+  </nav>
+
+</div>
+
+<datalist id="montanti"></datalist>
+
+<script src="gas-core.js"></script>
+<script>
+/* ================================================================
+   STATO
+   ================================================================ */
+let cat = leggiCatalogo();
+let cfg = leggiConfig();
+let presidi = leggiPresidi();
+let ui = Object.assign({presId:''}, leggiOggetto(LS_UI, {}));
+
+const SOST_LAB  = {completo:'Completo', kit:'Kit', entrambi:'Completo + kit'};
+const SOST_OPTS = [{v:'',l:'Come da catalogo'},{v:'completo',l:'Solo completo'},{v:'kit',l:'Solo kit'},{v:'entrambi',l:'Entrambi'}];
+
+function salvaPresidi(){ salva(LS_PRESIDI, presidi); }
+function salvaUi(){ salva(LS_UI, ui); }
+
+function presAttivo(){
+  let p = presidi.find(x => x.id === ui.presId);
+  if(!p && presidi.length){ p = presidi[0]; ui.presId = p.id; salvaUi(); }
+  return p || null;
+}
+function trovaRep(id){ const p = presAttivo(); return p ? p.reparti.find(r => r.id === id) : null; }
+
+/* ================================================================
+   OGGETTI NUOVI
+   ================================================================ */
+function nuovoPresidio(){ return {id:nuovoId('pres'), nome:'', indirizzo:'', referente:'', reparti:[]}; }
+function nuovoReparto(){
+  return {id:nuovoId('rep'), nome:'', piano:'', freq:'LF', note:'', open:true,
+          acc:{quadri:true, postazioni:true}, quadri:[], postazioni:[]};
+}
+function nuovoQuadro(rep){ return {id:nuovoId('q'), nome:'Quadro ' + (rep.quadri.length + 1), riduttori:[]}; }
+function nuovoRiduttore(){
+  return {id:nuovoId('rdi'), rdId: cat.rd.length ? cat.rd[0].id : '', montante:'', utAlimentate:'', sost:'', allarme:false, note:''};
+}
+
+/* Allinea gas → tipo → marca → codice di una riga UT: se la scelta a monte cambia,
+   i livelli successivi passano al primo valore disponibile nel catalogo. */
+function riallinea(u){
+  const items = cat.ut.filter(x => x.gas === u.gas);
+  const tipi = uniq(items.map(x => x.tipo));
+  if(tipi.indexOf(u.tipo) === -1) u.tipo = tipi.length ? tipi[0] : '';
+  const iT = items.filter(x => x.tipo === u.tipo);
+  const marche = uniq(iT.map(x => x.marca || ''));
+  if(marche.indexOf(u.marca) === -1) u.marca = marche.length ? marche[0] : '';
+  const iM = iT.filter(x => (x.marca || '') === u.marca);
+  if(!iM.some(x => x.id === u.utId)) u.utId = iM.length ? iM[0].id : '';
+}
+function nuovaUtRiga(){
+  const g = elencoGas().find(x => cat.ut.some(i => i.gas === x.id));
+  const u = {id:nuovoId('uti'), gas: g ? g.id : 'o2', tipo:'', marca:'', utId:'', sost:'', note:''};
+  riallinea(u);
+  return u;
+}
+function nuovaPostazione(rep){
+  return {id:nuovoId('post'), nome:'Postazione ' + (rep.postazioni.length + 1), quantita:1, open:true, note:'', ut:[nuovaUtRiga()]};
+}
+function clonaPostazione(p){
+  const c = JSON.parse(JSON.stringify(p));
+  c.id = nuovoId('post'); c.open = true; c.nome = (p.nome || 'Postazione') + ' (copia)';
+  c.ut.forEach(u => { u.id = nuovoId('uti'); });
+  return c;
+}
+
+/* ================================================================
+   HTML — pezzi riutilizzabili
+   ================================================================ */
+function optHtml(list, cur){
+  return list.map(o => `<option value="${escapeHtml(o.v)}" ${String(o.v) === String(cur) ? 'selected' : ''}>${escapeHtml(o.l)}</option>`).join('');
+}
+
+function repTitle(rep){ return rep.nome || '(reparto senza nome)'; }
+function repSub(rep){
+  const ag = aggregaReparto(rep, cat, cfg);
+  const s = sommaRighe(ag.righe);
+  return `Piano ${escapeHtml(rep.piano || '—')} · ${rep.freq === 'HF' ? 'HF' : 'LF'} · ${s.rd} RD · ${s.ut} UT · ciclo ${eur(s.ciclo)} · annuo ${eur(s.annuo)}`;
+}
+function postSummary(p){
+  const parti = (p.ut || []).map(u => {
+    const it = cat.ut.find(x => x.id === u.utId);
+    return it ? `${nomeGas(it.gas)} ${nomeTipoUt(it.tipo)}` : '⚠ voce mancante';
+  });
+  return `${escapeHtml(p.nome || '(senza nome)')} <span style="color:var(--accent)">×${Number(p.quantita) || 0}</span><small>${escapeHtml(parti.join(' · ') || 'nessuna unità terminale')}</small>`;
+}
+
+function rigaRiduttoreHtml(rep, q, r){
+  const opts = cat.rd.map(x => ({v:x.id, l:`${nomeGas(x.gas)} · ${x.codice || '(senza codice)'}${x.tipo ? ' · ' + x.tipo : ''}${x.marca ? ' · ' + x.marca : ''}`}));
+  if(r.rdId && !cat.rd.some(x => x.id === r.rdId)) opts.unshift({v:r.rdId, l:'⚠ voce non più in catalogo'});
+  if(!r.rdId) opts.unshift({v:'', l:'— scegli dal catalogo —'});
+  return `
+  <div class="row-item" data-rd="${r.id}">
+    <select class="grow" data-t="rd" data-f="rdId">${optHtml(opts, r.rdId)}</select>
+    <span class="row-lbl">Montante</span>
+    <input type="text" class="w70" maxlength="3" list="montanti" placeholder="A" style="text-transform:uppercase" value="${escapeHtml(r.montante)}" data-t="rd" data-f="montante">
+    <span class="row-lbl">UT alimentate</span>
+    <input type="number" class="w90" min="0" step="1" placeholder="auto" value="${r.utAlimentate === '' || r.utAlimentate === undefined ? '' : r.utAlimentate}" data-t="rd" data-f="utAlimentate">
+    <span class="calc" data-calc-rd="${r.id}"></span>
+    <select data-t="rd" data-f="sost" title="Sostituzione">${optHtml(SOST_OPTS, r.sost)}</select>
+    <label class="chk"><input type="checkbox" ${r.allarme ? 'checked' : ''} data-t="rd" data-f="allarme"> Allarme</label>
+    <input type="text" class="grow" placeholder="Note" value="${escapeHtml(r.note)}" data-t="rd" data-f="note">
+    <button class="btn btn-danger btn-small" data-act="del-rd">🗑️</button>
+  </div>`;
+}
+
+function quadroHtml(rep, q){
+  return `
+  <div class="sub-card" data-q="${q.id}">
+    <div class="sub-head">
+      <input type="text" placeholder="Nome quadro (es. Quadro A)" value="${escapeHtml(q.nome)}" data-t="q" data-f="nome">
+      <button class="btn btn-danger btn-small" data-act="del-q" title="Elimina quadro">🗑️</button>
+    </div>
+    ${q.riduttori.map(r => rigaRiduttoreHtml(rep, q, r)).join('')}
+    <button class="btn btn-add btn-small" data-act="add-rd">➕ Aggiungi riduttore</button>
+  </div>`;
+}
+
+function utRigaHtml(p, u){
+  const gasList = elencoGas().filter(g => cat.ut.some(i => i.gas === g.id)).map(g => ({v:g.id, l:g.nome}));
+  if(!gasList.some(g => g.v === u.gas)) gasList.unshift({v:u.gas, l:nomeGas(u.gas)});
+  const items = cat.ut.filter(x => x.gas === u.gas);
+  const tipi = uniq(items.map(x => x.tipo)).map(t => ({v:t, l:nomeTipoUt(t)}));
+  const iT = items.filter(x => x.tipo === u.tipo);
+  const marche = uniq(iT.map(x => x.marca || '')).map(m => ({v:m, l:m || '(senza marca)'}));
+  const iM = iT.filter(x => (x.marca || '') === u.marca);
+  const codici = iM.map(x => ({v:x.id, l:`${x.codice || '(senza codice)'}${x.descrizione ? ' — ' + x.descrizione : ''}`}));
+  if(u.utId && !cat.ut.some(x => x.id === u.utId)) codici.unshift({v:u.utId, l:'⚠ voce non più in catalogo'});
+  const vuoto = (arr, msg) => arr.length ? arr : [{v:'', l:msg}];
+  return `
+  <div class="row-item" data-ut="${u.id}">
+    <select data-t="ut" data-f="gas" title="Gas">${optHtml(gasList.length ? gasList : [{v:'',l:'— catalogo UT vuoto —'}], u.gas)}</select>
+    <select data-t="ut" data-f="tipo" title="Tipo">${optHtml(vuoto(tipi,'—'), u.tipo)}</select>
+    <select data-t="ut" data-f="marca" title="Marca">${optHtml(vuoto(marche,'—'), u.marca)}</select>
+    <select class="grow" data-t="ut" data-f="utId" title="Codice">${optHtml(vuoto(codici,'— nessuna voce —'), u.utId)}</select>
+    <select data-t="ut" data-f="sost" title="Sostituzione">${optHtml(SOST_OPTS, u.sost)}</select>
+    <input type="text" class="grow" placeholder="Note" value="${escapeHtml(u.note)}" data-t="ut" data-f="note">
+    <button class="btn btn-danger btn-small" data-act="del-ut">🗑️</button>
+  </div>`;
+}
+
+function postazioneHtml(rep, p){
+  return `
+  <div class="item-card post-card ${p.open ? 'open' : ''}" data-post="${p.id}">
+    <div class="item-head" data-act="toggle-post">
+      <div class="item-sum" data-sum-post="${p.id}">${postSummary(p)}</div>
+      <button class="btn btn-soft btn-small" data-act="dup-post" title="Duplica">⧉</button>
+      <button class="btn btn-danger btn-small" data-act="del-post" title="Elimina">🗑️</button>
+      <span class="chev">▸</span>
+    </div>
+    <div class="item-body">
+      <div class="field-grid">
+        <div class="field"><label>Nome postazione</label><input type="text" value="${escapeHtml(p.nome)}" data-t="post" data-f="nome"></div>
+        <div class="field"><label>Quantità (postazioni identiche)</label><input type="number" min="1" step="1" value="${p.quantita}" data-t="post" data-f="quantita"></div>
+      </div>
+      ${p.ut.map(u => utRigaHtml(p, u)).join('')}
+      <button class="btn btn-add btn-small" data-act="add-ut">➕ Aggiungi unità terminale</button>
+      <div class="field" style="margin-top:10px;"><label>Note postazione</label><input type="text" value="${escapeHtml(p.note)}" data-t="post" data-f="note"></div>
+    </div>
+  </div>`;
+}
+
+function riepRepHtml(rep){
+  const ag = aggregaReparto(rep, cat, cfg);
+  if(!ag.righe.length) return '<div class="hint" style="margin:0;">Nessun elemento ancora censito in questo reparto.</div>';
+  const s = sommaRighe(ag.righe);
+  const gasIds = uniq(ag.righe.map(r => r.gas));
+  const perGas = gasIds.map(g => {
+    const rr = ag.righe.filter(r => r.gas === g);
+    const ss = sommaRighe(rr);
+    return `<tr><td>${escapeHtml(nomeGas(g))}</td><td class="num">${ss.rd}</td><td class="num">${ss.ut}</td><td class="num">${eur(ss.ciclo)}</td><td class="num">${eur(ss.annuo)}</td></tr>`;
+  }).join('');
+  const righe = ag.righe.map(r => `
+    <tr><td>${r.sez === 'rd' ? 'RD' : 'UT'}</td><td>${escapeHtml(nomeGas(r.gas))}</td><td>${escapeHtml(r.codice || '—')}</td>
+    <td>${escapeHtml(r.tipo || '—')}</td><td>${escapeHtml(r.marca || '—')}</td><td>${SOST_LAB[r.sost] || ''}</td>
+    <td class="num">${r.qta}</td><td class="num">${eur(r.unitario)}</td><td class="num">${eur(r.ciclo)}</td><td class="num">${eur(r.annuo)}</td></tr>`).join('');
+  return `
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Gas</th><th class="num">Riduttori</th><th class="num">UT</th><th class="num">Costo ciclo</th><th class="num">Spesa annua</th></tr></thead>
+      <tbody>${perGas}</tbody>
+      <tfoot><tr><td>Totale reparto</td><td class="num">${s.rd}</td><td class="num">${s.ut}</td><td class="num">${eur(s.ciclo)}</td><td class="num">${eur(s.annuo)}</td></tr></tfoot>
+    </table></div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th></th><th>Gas</th><th>Codice</th><th>Tipo</th><th>Marca</th><th>Sostituzione</th><th class="num">Q.tà</th><th class="num">Unitario</th><th class="num">Costo ciclo</th><th class="num">Spesa annua (${ag.freq}/anno)</th></tr></thead>
+      <tbody>${righe}</tbody>
+      <tfoot><tr><td colspan="6">Totale</td><td class="num">${s.rd + s.ut}</td><td></td><td class="num">${eur(s.ciclo)}</td><td class="num">${eur(s.annuo)}</td></tr></tfoot>
+    </table></div>
+    ${ag.mancanti ? `<div class="hint" style="margin:0;">⚠ ${ag.mancanti} voce/i riferite a elementi eliminati dal catalogo non sono conteggiate.</div>` : ''}`;
+}
+
+function avvisiHtml(rep){
+  const a = alimentazioneReparto(rep, cat).avvisi;
+  if(!a.length) return '';
+  return `<div class="avvisi"><b>⚠ Controlli di coerenza</b><ul>${a.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul></div>`;
+}
+
+function repHtml(rep){
+  const ac = rep.acc || {};
+  return `
+  <div class="item-card rep-card ${rep.open ? 'open' : ''}" data-rep="${rep.id}">
+    <div class="item-head" data-act="toggle-rep">
+      <div class="item-sum"><span data-rep-title>${escapeHtml(repTitle(rep))}</span><small data-rep-sub>${repSub(rep)}</small></div>
+      <button class="btn btn-danger btn-small" data-act="del-rep" title="Elimina reparto">🗑️</button>
+      <span class="chev">▸</span>
+    </div>
+    <div class="item-body">
+      <div class="field-grid">
+        <div class="field"><label>Nome reparto</label><input type="text" placeholder="Es. Rianimazione" value="${escapeHtml(rep.nome)}" data-t="rep" data-f="nome"></div>
+        <div class="field"><label>Piano</label><input type="text" placeholder="Es. -1, T, 2" value="${escapeHtml(rep.piano)}" data-t="rep" data-f="piano"></div>
+        <div class="field"><label>Frequenza di sostituzione</label>
+          <select data-t="rep" data-f="freq">
+            <option value="LF" ${rep.freq !== 'HF' ? 'selected' : ''}>LF — bassa frequenza</option>
+            <option value="HF" ${rep.freq === 'HF' ? 'selected' : ''}>HF — alta frequenza</option>
+          </select>
+        </div>
+      </div>
+      <div class="field" style="margin-bottom:6px;"><label>Note reparto</label><input type="text" value="${escapeHtml(rep.note)}" data-t="rep" data-f="note"></div>
+
+      <div class="acc ${ac.quadri ? 'open' : ''}">
+        <div class="acc-head" data-act="toggle-acc" data-acc="quadri"><span>🎛️ Quadri di riduzione (<span data-cnt-q>${rep.quadri.length}</span>)</span><span class="chev">▸</span></div>
+        <div class="acc-body">
+          <div class="hint">Ogni quadro raggruppa i riduttori, anche di gas diversi. Per ogni riduttore indica la montante; le UT alimentate si calcolano da sole se lasci vuoto.</div>
+          ${rep.quadri.map(q => quadroHtml(rep, q)).join('')}
+          <button class="btn btn-add btn-small" data-act="add-q">➕ Aggiungi quadro di riduzione</button>
+        </div>
+      </div>
+
+      <div class="acc ${ac.postazioni ? 'open' : ''}">
+        <div class="acc-head" data-act="toggle-acc" data-acc="postazioni"><span>🛏️ Postazioni gas medicinali (<span data-cnt-p>${rep.postazioni.length}</span>)</span><span class="chev">▸</span></div>
+        <div class="acc-body">
+          <div class="hint">Una postazione può essere unica (quantità 1) oppure ripetuta (es. 30 identiche). Con ⧉ si duplica una postazione.</div>
+          ${rep.postazioni.map(p => postazioneHtml(rep, p)).join('')}
+          <button class="btn btn-add btn-small" data-act="add-post">➕ Aggiungi postazione</button>
+        </div>
+      </div>
+
+      <div data-avvisi>${avvisiHtml(rep)}</div>
+      <div class="riep">
+        <div class="riep-title">📊 Riepilogo reparto</div>
+        <div data-riep>${riepRepHtml(rep)}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ================================================================
+   RENDER
+   ================================================================ */
+function renderTabs(){
+  const box = document.getElementById('presTabs');
+  box.innerHTML = presidi.map((p, i) =>
+    `<button class="pres-tab ${p.id === ui.presId ? 'active' : ''}" data-act="pres-tab" data-id="${p.id}">${escapeHtml(p.nome || ('Presidio ' + (i + 1)))}</button>`).join('') +
+    (presidi.length < MAX_PRESIDI ? `<button class="btn btn-add" data-act="add-pres">➕ Aggiungi presidio</button>` : '');
+}
+
+function renderPresidio(){
+  const area = document.getElementById('presArea');
+  const p = presAttivo();
+  if(!p){
+    area.innerHTML = `<div class="empty-note">Nessun presidio ancora inserito. Usa "Aggiungi presidio" per iniziare (fino a ${MAX_PRESIDI}).</div>`;
+    return;
+  }
+  area.innerHTML = `
+    <div class="item-card open" style="cursor:default;">
+      <div class="item-body" style="display:block;border-top:none;">
+        <div class="field-grid">
+          <div class="field"><label>Nome presidio</label><input type="text" placeholder="Es. Ospedale Civile" value="${escapeHtml(p.nome)}" data-t="pres" data-f="nome"></div>
+          <div class="field"><label>Indirizzo</label><input type="text" value="${escapeHtml(p.indirizzo)}" data-t="pres" data-f="indirizzo"></div>
+          <div class="field"><label>Referente (facoltativo)</label><input type="text" value="${escapeHtml(p.referente)}" data-t="pres" data-f="referente"></div>
+        </div>
+        <div style="text-align:right;"><button class="btn btn-danger btn-small" data-act="del-pres">🗑️ Elimina presidio</button></div>
+      </div>
+    </div>
+    <div class="saldi-grid" id="totPres"></div>
+    <div class="section-title" style="margin-top:14px;">Reparti</div>
+    <div id="repContainer">${p.reparti.map(repHtml).join('')}</div>
+    <div class="add-wrap"><button class="btn btn-add" data-act="add-rep">➕ Aggiungi reparto</button></div>`;
+  renderTot();
+}
+
+function renderTot(){
+  const p = presAttivo();
+  if(!p) return;
+  let rd = 0, ut = 0, ciclo = 0, annuo = 0;
+  const lettere = new Set();
+  p.reparti.forEach(rep => {
+    const s = sommaRighe(aggregaReparto(rep, cat, cfg).righe);
+    rd += s.rd; ut += s.ut; ciclo += s.ciclo; annuo += s.annuo;
+    rep.quadri.forEach(q => q.riduttori.forEach(r => { if(r.montante) lettere.add(r.montante); }));
+  });
+  const box = document.getElementById('totPres');
+  if(box) box.innerHTML = `
+    <div class="saldo-box"><div class="saldo-label">Reparti</div><div class="saldo-value">${p.reparti.length}</div></div>
+    <div class="saldo-box"><div class="saldo-label">Riduttori</div><div class="saldo-value">${rd}</div></div>
+    <div class="saldo-box"><div class="saldo-label">Unità terminali</div><div class="saldo-value">${ut}</div></div>
+    <div class="saldo-box"><div class="saldo-label">Costo ciclo presidio</div><div class="saldo-value">${eur(ciclo)}</div></div>
+    <div class="saldo-box"><div class="saldo-label">Spesa annua presidio</div><div class="saldo-value">${eur(annuo)}</div></div>`;
+  document.getElementById('montanti').innerHTML = Array.from(lettere).sort().map(l => `<option value="${escapeHtml(l)}">`).join('');
+}
+
+/* Aggiornamento "leggero" di un reparto: nessun campo viene ridisegnato,
+   quindi non si perde il focus mentre si scrive. */
+function refreshRep(rep){
+  const el = document.querySelector('.rep-card[data-rep="' + rep.id + '"]');
+  if(!el) return;
+  el.querySelector('[data-rep-title]').textContent = repTitle(rep);
+  el.querySelector('[data-rep-sub]').innerHTML = repSub(rep);
+  el.querySelector('[data-cnt-q]').textContent = rep.quadri.length;
+  el.querySelector('[data-cnt-p]').textContent = rep.postazioni.length;
+  const al = alimentazioneReparto(rep, cat);
+  el.querySelectorAll('[data-calc-rd]').forEach(span => {
+    const id = span.dataset.calcRd;
+    let manuale = false;
+    rep.quadri.forEach(q => q.riduttori.forEach(r => { if(r.id === id && r.utAlimentate !== '' && r.utAlimentate !== undefined) manuale = true; }));
+    const n = al.perRd[id];
+    span.textContent = (n === undefined) ? '' : ((manuale ? '→ ' : 'auto → ') + n + ' UT');
+  });
+  rep.postazioni.forEach(p => {
+    const s = el.querySelector('[data-sum-post="' + p.id + '"]');
+    if(s) s.innerHTML = postSummary(p);
+  });
+  el.querySelector('[data-avvisi]').innerHTML = avvisiHtml(rep);
+  el.querySelector('[data-riep]').innerHTML = riepRepHtml(rep);
+  renderTot();
+}
+function fillCalc(rep){ refreshRep(rep); }
+
+function rerenderRep(rep){
+  const el = document.querySelector('.rep-card[data-rep="' + rep.id + '"]');
+  if(!el) return;
+  const tmp = document.createElement('div');
+  tmp.innerHTML = repHtml(rep);
+  el.replaceWith(tmp.firstElementChild);
+  refreshRep(rep);
+}
+function renderAll(){
+  presAttivo();
+  renderTabs();
+  renderPresidio();
+  const p = presAttivo();
+  if(p) p.reparti.forEach(fillCalc);
+  document.getElementById('catalogoVuoto').style.display = (cat.rd.length && cat.ut.length) ? 'none' : 'block';
+}
+
+/* ================================================================
+   EVENTI (delegati)
+   ================================================================ */
+function ctx(el){
+  const g = (sel, k) => { const n = el.closest(sel); return n ? n.dataset[k] : null; };
+  const p = presAttivo();
+  const rep = p ? p.reparti.find(r => r.id === g('[data-rep]', 'rep')) : null;
+  const q = rep ? rep.quadri.find(x => x.id === g('[data-q]', 'q')) : null;
+  const rd = q ? q.riduttori.find(x => x.id === g('[data-rd]', 'rd')) : null;
+  const post = rep ? rep.postazioni.find(x => x.id === g('[data-post]', 'post')) : null;
+  const ut = post ? post.ut.find(x => x.id === g('[data-ut]', 'ut')) : null;
+  return {p, rep, q, rd, post, ut};
+}
+
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-act]');
+  if(!a) return;
+  const act = a.dataset.act;
+  const c = ctx(a);
+
+  if(act === 'pres-tab'){ ui.presId = a.dataset.id; salvaUi(); renderAll(); return; }
+  if(act === 'add-pres'){
+    if(presidi.length >= MAX_PRESIDI) return;
+    const np = nuovoPresidio(); presidi.push(np); ui.presId = np.id;
+    salvaPresidi(); salvaUi(); renderAll(); return;
+  }
+  if(act === 'del-pres'){
+    if(!confirm('Eliminare questo presidio con tutti i reparti, quadri e postazioni?')) return;
+    presidi = presidi.filter(x => x.id !== c.p.id); ui.presId = '';
+    salvaPresidi(); salvaUi(); renderAll(); return;
+  }
+  if(act === 'add-rep'){
+    const r = nuovoReparto(); c.p.reparti.push(r); salvaPresidi();
+    const cont = document.getElementById('repContainer');
+    const tmp = document.createElement('div'); tmp.innerHTML = repHtml(r);
+    cont.appendChild(tmp.firstElementChild); refreshRep(r); return;
+  }
+  if(!c.rep) return;
+
+  switch(act){
+    case 'toggle-rep': c.rep.open = !c.rep.open; salvaPresidi(); a.closest('.rep-card').classList.toggle('open'); return;
+    case 'del-rep':
+      if(!confirm('Eliminare questo reparto con tutti i suoi quadri e postazioni?')) return;
+      c.p.reparti = c.p.reparti.filter(x => x.id !== c.rep.id); salvaPresidi();
+      a.closest('.rep-card').remove(); renderTot(); return;
+    case 'toggle-acc': {
+      const k = a.dataset.acc; c.rep.acc = c.rep.acc || {}; c.rep.acc[k] = !c.rep.acc[k]; salvaPresidi();
+      a.closest('.acc').classList.toggle('open'); return;
+    }
+    case 'add-q': c.rep.quadri.push(nuovoQuadro(c.rep)); break;
+    case 'del-q':
+      if(!confirm('Eliminare questo quadro e i suoi riduttori?')) return;
+      c.rep.quadri = c.rep.quadri.filter(x => x.id !== c.q.id); break;
+    case 'add-rd': c.q.riduttori.push(nuovoRiduttore()); break;
+    case 'del-rd': c.q.riduttori = c.q.riduttori.filter(x => x.id !== c.rd.id); break;
+    case 'add-post': c.rep.postazioni.push(nuovaPostazione(c.rep)); break;
+    case 'dup-post': {
+      const i = c.rep.postazioni.indexOf(c.post);
+      c.rep.postazioni.splice(i + 1, 0, clonaPostazione(c.post)); break;
+    }
+    case 'del-post':
+      if(!confirm('Eliminare questa postazione?')) return;
+      c.rep.postazioni = c.rep.postazioni.filter(x => x.id !== c.post.id); break;
+    case 'toggle-post': c.post.open = !c.post.open; salvaPresidi(); a.closest('.post-card').classList.toggle('open'); return;
+    case 'add-ut': c.post.ut.push(nuovaUtRiga()); break;
+    case 'del-ut': c.post.ut = c.post.ut.filter(x => x.id !== c.ut.id); break;
+    default: return;
+  }
+  salvaPresidi();
+  rerenderRep(c.rep);
+});
+
+function onModifica(e){
+  const el = e.target;
+  const t = el.dataset && el.dataset.t;
+  if(!t) return;
+  const f = el.dataset.f;
+  const c = ctx(el);
+  const obj = {pres:c.p, rep:c.rep, q:c.q, rd:c.rd, post:c.post, ut:c.ut}[t];
+  if(!obj) return;
+
+  let val;
+  if(el.type === 'checkbox') val = el.checked;
+  else if(f === 'utAlimentate') val = el.value === '' ? '' : Math.max(0, parseInt(el.value, 10) || 0);
+  else if(f === 'quantita') val = Math.max(0, parseInt(el.value, 10) || 0);
+  else if(f === 'montante'){ val = el.value.toUpperCase().trim(); if(el.value !== val) el.value = val; }
+  else val = el.value;
+  obj[f] = val;
+
+  const strutturale = (t === 'ut' && (f === 'gas' || f === 'tipo' || f === 'marca'));
+  if(strutturale) riallinea(obj);
+  salvaPresidi();
+
+  if(t === 'pres'){
+    renderTabs();
+    return;
+  }
+  if(strutturale && e.type === 'change'){ rerenderRep(c.rep); return; }
+  if(strutturale) return;
+  refreshRep(c.rep);
+}
+document.addEventListener('input', onModifica);
+document.addEventListener('change', onModifica);
+
+window.addEventListener('DOMContentLoaded', renderAll);
+</script>
+</body>
+</html>

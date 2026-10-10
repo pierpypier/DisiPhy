@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Gas medicinali · Impostazioni</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  :root{
+    --bg:#f6f8fb; --card:#ffffff; --accent:#1e88e5; --muted:#6b7280;
+    --danger:#E3DCC9; --shadow:0 6px 18px rgba(20,30,50,0.06); --radius:12px; --max-width:1080px;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px; display:flex; justify-content:center; color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  .nav { display:flex; justify-content:center; gap:10px; padding:5px 0; margin-bottom:10px; flex-wrap:wrap; }
+  .nav-item { display:flex; flex-direction:column; align-items:center; text-decoration:none; color:#000; font-size:14px; transition:opacity 0.2s ease; }
+  .nav-item img { width:84px; height:84px; margin-bottom:1px; transition:transform 0.2s ease; }
+  .nav-item:hover img { transform:scale(1.05); }
+  .nav-item:hover { opacity:0.85; }
+  @media (max-width:600px){ .nav{ gap:10px; } .nav-item img{ width:60px; height:60px; } .nav-item span{ font-size:12px; } }
+
+  .card{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; margin-bottom:18px; }
+  .section-title{ font-size:18px; font-weight:800; color:var(--accent); margin:0 0 12px 0; }
+  .hint{ font-size:12px; color:var(--muted); margin-top:-6px; margin-bottom:12px; }
+
+  .travel-nav-divider{ border:none; border-top:1px solid #e6e9ef; margin:24px 0 14px 0; }
+  .travel-nav{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+  .travel-nav-item{ display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none; color:#374151; font-size:11px; font-weight:700; }
+  .travel-nav-item .icon{ width:46px; height:46px; border-radius:50%; background:#eef2f7; display:flex; align-items:center; justify-content:center; font-size:20px; transition:transform .15s ease, background .15s ease; }
+  .travel-nav-item:hover .icon{ transform:scale(1.06); }
+  .travel-nav-item.active .icon{ background:var(--accent); }
+  .travel-nav-item.active span.lbl{ color:var(--accent); }
+
+  .field-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-bottom:12px; }
+  .field label{ display:block; font-weight:700; color:var(--muted); font-size:12px; margin-bottom:5px; }
+  .field input, .field select{ width:100%; padding:9px 11px; border-radius:8px; border:1px solid #e6e9ef; font-size:14px; font-family:inherit; }
+  .fixed-list{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px; }
+  .chip{ background:#eef2f7; border-radius:999px; padding:5px 12px; font-size:12px; font-weight:700; color:#374151; }
+  .sub-title{ font-weight:800; font-size:14px; color:#1f2a3d; margin:14px 0 6px 0; }
+
+  .btn{ border:none; border-radius:8px; padding:8px 14px; font-weight:700; font-size:13px; cursor:pointer; }
+  .btn-primary{ background:var(--accent); color:#fff; }
+  .btn-danger{ background:var(--danger); color:#7a3b1f; }
+  .btn-add{ background:#eaf6ec; color:#2f7a3d; }
+  .btn-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .msg{ font-size:13px; font-weight:700; margin-top:10px; }
+  .msg.ok{ color:#2f7a3d; } .msg.err{ color:#b8442c; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item"><img src="rimage/orga4.png" alt="Organizer"><span> NOTE </span></a>
+    <a href="caldsp.html" class="nav-item"><img src="rimage/calicon.png" alt="Calendario dsp"><span> DATE </span></a>
+    <a href="check01.html" class="nav-item"><img src="rimage/check02.png" alt="Checklist"><span>LISTE</span></a>
+    <a href="strweb.html" class="nav-item"><img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84"><span> WEB </span></a>
+    <a href="dashconsolle.html" class="nav-item"><img src="rimage/opzioni.png" alt="Opzioni"><span> ADD </span></a>
+  </nav>
+
+  <!-- GAS E TIPI -->
+  <div class="card">
+    <div class="section-title">⚙️ Gas e tipi</div>
+    <div class="hint">I gas e i tipi fissi sono sempre disponibili. Le 3 voci libere compaiono nei menù del catalogo e del censimento solo se compilate.</div>
+
+    <div class="sub-title">Gas fissi</div>
+    <div class="fixed-list" id="gasFissi"></div>
+    <div class="sub-title">Gas personalizzati (3 voci)</div>
+    <div class="field-grid" id="gasExtra"></div>
+
+    <div class="sub-title">Tipi unità terminali fissi</div>
+    <div class="fixed-list" id="tipiFissi"></div>
+    <div class="sub-title">Tipi personalizzati unità terminali (3 voci)</div>
+    <div class="field-grid" id="tipiExtra"></div>
+  </div>
+
+  <!-- FREQUENZE -->
+  <div class="card">
+    <div class="section-title">🔁 Frequenza di sostituzione</div>
+    <div class="hint">Numero di sostituzioni all'anno applicato ai reparti marcati LF (bassa frequenza) o HF (alta frequenza). Moltiplica sostituzione completa, kit o entrambi.</div>
+    <div class="field-grid">
+      <div class="field"><label>LF — sostituzioni / anno</label><input type="number" id="freqLF" min="0" step="0.1"></div>
+      <div class="field"><label>HF — sostituzioni / anno</label><input type="number" id="freqHF" min="0" step="0.1"></div>
+    </div>
+  </div>
+
+  <!-- DATI -->
+  <div class="card">
+    <div class="section-title">💾 Salva / carica dati</div>
+    <div class="hint">Il file contiene catalogo, censimento, presidi e impostazioni del modulo gas medicinali.</div>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="btnSalva">⬇️ Salva dati (file)</button>
+      <button class="btn btn-add" id="btnCarica">⬆️ Carica dati (file)</button>
+      <button class="btn btn-danger" id="btnAzzera">🗑️ Azzera tutto</button>
+      <input type="file" id="fileInput" accept=".json,application/json" style="display:none">
+    </div>
+    <div class="msg" id="msg"></div>
+  </div>
+
+  <hr class="travel-nav-divider">
+  <nav class="travel-nav">
+    <a href="gas-catalogo.html" class="travel-nav-item"><div class="icon">📚</div><span class="lbl">Catalogo</span></a>
+    <a href="gas-censimento.html" class="travel-nav-item"><div class="icon">🏥</div><span class="lbl">Censimento</span></a>
+    <a href="gas-riepilogo.html" class="travel-nav-item"><div class="icon">📊</div><span class="lbl">Riepilogo</span></a>
+    <a href="gas-impostazioni.html" class="travel-nav-item active"><div class="icon">⚙️</div><span class="lbl">Impostazioni</span></a>
+  </nav>
+
+</div>
+
+<script>
+const LS_CONFIG = 'gas_config';
+const DEF_GAS = [
+  ['o2','Ossigeno'],['n2o',"Protossido d'azoto"],['aria4','Aria 4 bar'],['aria8','Aria 8 bar'],
+  ['co2','CO2'],['n2','Azoto'],['he','Elio'],['ar','Argon'],['evac','Evacuazione'],['vuoto','Vuoto']
+];
+const DEF_TIPI_UT = ['UNI','AFNOR','NIST','EGA'];
+
+function leggiOggetto(key, fallback){
+  try{ const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : fallback; }
+  catch(e){ return fallback; }
+}
+function salva(key, val){ localStorage.setItem(key, JSON.stringify(val)); }
+function escapeHtml(s){
+  if(s === null || s === undefined) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+let config = Object.assign({gasExtra:['','',''], tipiExtra:['','',''], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+
+function render(){
+  document.getElementById('gasFissi').innerHTML = DEF_GAS.map(g => `<span class="chip">${escapeHtml(g[1])}</span>`).join('');
+  document.getElementById('tipiFissi').innerHTML = DEF_TIPI_UT.map(t => `<span class="chip">${escapeHtml(t)}</span>`).join('');
+  document.getElementById('gasExtra').innerHTML = config.gasExtra.map((v,i) =>
+    `<div class="field"><label>Gas personalizzato ${i+1}</label><input type="text" placeholder="(vuoto = non usato)" value="${escapeHtml(v)}" data-k="gasExtra" data-i="${i}"></div>`).join('');
+  document.getElementById('tipiExtra').innerHTML = config.tipiExtra.map((v,i) =>
+    `<div class="field"><label>Tipo personalizzato ${i+1}</label><input type="text" placeholder="(vuoto = non usato)" value="${escapeHtml(v)}" data-k="tipiExtra" data-i="${i}"></div>`).join('');
+  document.getElementById('freqLF').value = config.freqLF;
+  document.getElementById('freqHF').value = config.freqHF;
+}
+
+function mostraMsg(testo, ok){
+  const m = document.getElementById('msg');
+  m.textContent = testo;
+  m.className = 'msg ' + (ok ? 'ok' : 'err');
+}
+
+document.addEventListener('input', e => {
+  const el = e.target;
+  if(el.dataset && el.dataset.k){
+    config[el.dataset.k][parseInt(el.dataset.i,10)] = el.value.trim();
+    salva(LS_CONFIG, config);
+  }
+  if(el.id === 'freqLF'){ config.freqLF = parseFloat(el.value) || 0; salva(LS_CONFIG, config); }
+  if(el.id === 'freqHF'){ config.freqHF = parseFloat(el.value) || 0; salva(LS_CONFIG, config); }
+});
+
+function chiaviGas(){
+  const out = [];
+  for(let i=0; i<localStorage.length; i++){
+    const k = localStorage.key(i);
+    if(k && k.indexOf('gas_') === 0) out.push(k);
+  }
+  return out;
+}
+
+document.getElementById('btnSalva').addEventListener('click', () => {
+  const dati = {};
+  chiaviGas().forEach(k => { dati[k] = leggiOggetto(k, null); });
+  const blob = new Blob([JSON.stringify({tipo:'gas-medicinali', versione:1, dati}, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  const d = new Date();
+  const stamp = d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'gas-medicinali-' + stamp + '.json';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  mostraMsg('File salvato.', true);
+});
+
+document.getElementById('btnCarica').addEventListener('click', () => document.getElementById('fileInput').click());
+document.getElementById('fileInput').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try{
+      const obj = JSON.parse(reader.result);
+      if(!obj || obj.tipo !== 'gas-medicinali' || !obj.dati) throw new Error('formato');
+      if(!confirm('Caricare il file sostituirà tutti i dati attuali del modulo gas. Continuare?')) return;
+      chiaviGas().forEach(k => localStorage.removeItem(k));
+      Object.keys(obj.dati).forEach(k => { if(k.indexOf('gas_') === 0) salva(k, obj.dati[k]); });
+      config = Object.assign({gasExtra:['','',''], tipiExtra:['','',''], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+      render();
+      mostraMsg('Dati caricati.', true);
+    }catch(err){
+      mostraMsg('File non valido: non è un salvataggio del modulo gas medicinali.', false);
+    }
+    e.target.value = '';
+  };
+  reader.readAsText(file);
+});
+
+document.getElementById('btnAzzera').addEventListener('click', () => {
+  if(!confirm('Eliminare TUTTI i dati gas (catalogo, censimento, impostazioni)? Salva prima un file se vuoi conservarli.')) return;
+  chiaviGas().forEach(k => localStorage.removeItem(k));
+  config = {gasExtra:['','',''], tipiExtra:['','',''], freqLF:1, freqHF:3};
+  render();
+  mostraMsg('Dati azzerati.', true);
+});
+
+window.addEventListener('DOMContentLoaded', render);
+</script>
+</body>
+</html>

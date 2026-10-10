@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Gas medicinali · Riepilogo</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style id="pageStyle">@page{ size:A4 landscape; margin:10mm; }</style>
+<style>
+  :root{
+    --bg:#f6f8fb; --card:#ffffff; --accent:#1e88e5; --muted:#6b7280;
+    --danger:#E3DCC9; --shadow:0 6px 18px rgba(20,30,50,0.06); --radius:12px; --max-width:1080px;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px; display:flex; justify-content:center; color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  .nav { display:flex; justify-content:center; gap:10px; padding:5px 0; margin-bottom:10px; flex-wrap:wrap; }
+  .nav-item { display:flex; flex-direction:column; align-items:center; text-decoration:none; color:#000; font-size:14px; transition:opacity 0.2s ease; }
+  .nav-item img { width:84px; height:84px; margin-bottom:1px; transition:transform 0.2s ease; }
+  .nav-item:hover img { transform:scale(1.05); }
+  .nav-item:hover { opacity:0.85; }
+  @media (max-width:600px){ .nav{ gap:10px; } .nav-item img{ width:60px; height:60px; } .nav-item span{ font-size:12px; } }
+
+  .card{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; margin-bottom:18px; }
+  .section-title{ font-size:18px; font-weight:800; color:var(--accent); margin:0; }
+  .hint{ font-size:12px; color:var(--muted); margin:4px 0 12px 0; }
+  .empty-note{ background:#fff8e6; border:1px solid #f0dfa8; border-radius:10px; padding:12px 14px; font-size:13px; color:#7a5c00; margin-bottom:12px; }
+
+  .travel-nav-divider{ border:none; border-top:1px solid #e6e9ef; margin:24px 0 14px 0; }
+  .travel-nav{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+  .travel-nav-item{ display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none; color:#374151; font-size:11px; font-weight:700; }
+  .travel-nav-item .icon{ width:46px; height:46px; border-radius:50%; background:#eef2f7; display:flex; align-items:center; justify-content:center; font-size:20px; transition:transform .15s ease, background .15s ease; }
+  .travel-nav-item:hover .icon{ transform:scale(1.06); }
+  .travel-nav-item.active .icon{ background:var(--accent); }
+  .travel-nav-item.active span.lbl{ color:var(--accent); }
+
+  .btn{ border:none; border-radius:8px; padding:7px 12px; font-weight:700; font-size:13px; cursor:pointer; }
+  .btn-primary{ background:var(--accent); color:#fff; }
+  .btn-soft{ background:#eef2f7; color:#374151; }
+  .btn-small{ padding:4px 9px; font-size:12px; }
+
+  .filters-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:12px; }
+  .field label{ display:block; font-weight:700; color:var(--muted); font-size:12px; margin-bottom:4px; }
+  .field select{ width:100%; padding:8px 10px; border-radius:8px; border:1px solid #e6e9ef; font-size:13px; font-family:inherit; }
+  .btn-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+
+  .sez-head{ display:flex; justify-content:space-between; align-items:center; gap:10px; }
+  .tbl-wrap{ overflow-x:auto; margin-bottom:6px; }
+  .tbl{ width:100%; border-collapse:collapse; font-size:12px; }
+  .tbl th, .tbl td{ padding:6px 8px; border-bottom:1px solid #e6e9ef; text-align:left; }
+  .tbl th{ background:#f1f5fa; color:#374151; font-weight:800; }
+  .tbl td.num, .tbl th.num{ text-align:right; white-space:nowrap; }
+  .tbl tr.sub td{ background:#f7f9fc; font-weight:800; }
+  .tbl tr.tot td{ background:#e6f0ff; font-weight:800; border-top:2px solid #b8d2f5; }
+  .note-mont{ background:#fff8e6; border:1px solid #f0dfa8; border-radius:8px; padding:8px 10px; font-size:12px; color:#7a5c00; margin-bottom:8px; }
+
+  .print-head{ display:none; }
+
+  @media print{
+    body{ background:#fff; padding:0; display:block; font-size:11px; }
+    .nav, .travel-nav, .travel-nav-divider, .no-print{ display:none !important; }
+    .container{ max-width:none; }
+    .print-head{ display:block; margin-bottom:8mm; border-bottom:2px solid #1e88e5; padding-bottom:4mm; }
+    .print-head h1{ font-size:16px; margin:0 0 3px 0; color:#1e88e5; }
+    .print-head div{ font-size:10px; color:#374151; }
+    .card{ box-shadow:none; border-radius:0; padding:0; margin-bottom:8mm; }
+    .section-title{ font-size:13px; }
+    .hint{ font-size:9px; }
+    .tbl-wrap{ overflow:visible; }
+    .tbl{ font-size:9px; }
+    .tbl th, .tbl td{ padding:3px 5px; }
+    .tbl thead{ display:table-header-group; }
+    .tbl tr{ break-inside:avoid; }
+    .sez-head{ break-after:avoid; }
+    body[data-print] .sez:not(.print-target){ display:none !important; }
+    .tbl th, .tbl tr.sub td, .tbl tr.tot td{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="nav">
+    <a href="organizer4.html" class="nav-item"><img src="rimage/orga4.png" alt="Organizer"><span> NOTE </span></a>
+    <a href="caldsp.html" class="nav-item"><img src="rimage/calicon.png" alt="Calendario dsp"><span> DATE </span></a>
+    <a href="check01.html" class="nav-item"><img src="rimage/check02.png" alt="Checklist"><span>LISTE</span></a>
+    <a href="strweb.html" class="nav-item"><img src="rimage/webicon.png" alt="Strumenti web" loading="lazy" decoding="async" width="84" height="84"><span> WEB </span></a>
+    <a href="dashconsolle.html" class="nav-item"><img src="rimage/opzioni.png" alt="Opzioni"><span> ADD </span></a>
+  </nav>
+
+  <div class="print-head" id="printHead"></div>
+
+  <!-- FILTRI -->
+  <div class="card no-print">
+    <div class="section-title">📊 Riepilogo impianti gas medicinali</div>
+    <div class="hint">I filtri si applicano a tutte le tabelle. Ogni sezione si stampa singolarmente; "Stampa tutto" stampa il riepilogo completo.</div>
+    <div class="filters-grid" id="filtri"></div>
+    <div class="btn-row">
+      <button class="btn btn-soft" id="btnReset">↺ Azzera filtri</button>
+      <div class="field" style="min-width:160px;">
+        <select id="selOrient"><option value="landscape">Stampa A4 orizzontale</option><option value="portrait">Stampa A4 verticale</option></select>
+      </div>
+      <button class="btn btn-primary" id="btnStampaTutto">🖨️ Stampa tutto</button>
+    </div>
+  </div>
+
+  <div id="avvisoVuoto" class="empty-note" style="display:none;">Nessun dato da riepilogare: compila prima <a href="gas-catalogo.html">catalogo</a> e <a href="gas-censimento.html">censimento</a>.</div>
+  <div id="sezioni"></div>
+
+  <hr class="travel-nav-divider">
+  <nav class="travel-nav">
+    <a href="gas-catalogo.html" class="travel-nav-item"><div class="icon">📚</div><span class="lbl">Catalogo</span></a>
+    <a href="gas-censimento.html" class="travel-nav-item"><div class="icon">🏥</div><span class="lbl">Censimento</span></a>
+    <a href="gas-riepilogo.html" class="travel-nav-item active"><div class="icon">📊</div><span class="lbl">Riepilogo</span></a>
+    <a href="gas-impostazioni.html" class="travel-nav-item"><div class="icon">⚙️</div><span class="lbl">Impostazioni</span></a>
+  </nav>
+
+</div>
+
+<script src="gas-core.js"></script>
+<script>
+/* ================================================================
+   DATI: tabella piatta di "fatti" (una riga per riduttore / per UT di postazione)
+   ================================================================ */
+const cat = leggiCatalogo();
+const cfg = leggiConfig();
+const presidi = leggiPresidi();
+const SOST_LAB = {completo:'Completo', kit:'Kit', entrambi:'Completo + kit'};
+
+function nomePres(p, i){ return p.nome || ('Presidio ' + (i + 1)); }
+function lblPiano(p){ return p === '' ? '(senza piano)' : 'Piano ' + p; }
+
+function costruisciFatti(){
+  const fatti = [];
+  presidi.forEach((p, pi) => {
+    (p.reparti || []).forEach(rep => {
+      const al = alimentazioneReparto(rep, cat);
+      const fr = freqReparto(rep, cfg);
+      const base = {
+        pi, presId:p.id, presNome:nomePres(p, pi),
+        piano:String(rep.piano || '').trim(), repId:rep.id, repNome:rep.nome || '(reparto senza nome)',
+        freq: rep.freq === 'HF' ? 'HF' : 'LF', fr
+      };
+      (rep.quadri || []).forEach(q => (q.riduttori || []).forEach(r => {
+        const it = cat.rd.find(x => x.id === r.rdId);
+        if(!it) return;
+        const sost = sostEff(it, r.sost), unit = costoCiclo(it, sost);
+        fatti.push(Object.assign({}, base, {
+          sez:'rd', gas:it.gas, itemId:it.id, codice:it.codice || '', tipo:it.tipo || '', marca:it.marca || '',
+          sost, qta:1, ciclo:unit, annuo:unit * fr,
+          montante:String(r.montante || '').trim().toUpperCase(), utAl:al.perRd[r.id] || 0
+        }));
+      }));
+      (rep.postazioni || []).forEach(po => {
+        const q = Number(po.quantita) || 0;
+        (po.ut || []).forEach(u => {
+          const it = cat.ut.find(x => x.id === u.utId);
+          if(!it) return;
+          const sost = sostEff(it, u.sost), unit = costoCiclo(it, sost);
+          fatti.push(Object.assign({}, base, {
+            sez:'ut', gas:it.gas, itemId:it.id, codice:it.codice || '', tipo:nomeTipoUt(it.tipo), marca:it.marca || '',
+            sost, qta:q, ciclo:q * unit, annuo:q * unit * fr, montante:'', utAl:0
+          }));
+        });
+      });
+    });
+  });
+  return fatti;
+}
+const FATTI = costruisciFatti();
+
+/* ================================================================
+   FILTRI
+   ================================================================ */
+const FILTRI_DEF = [
+  {k:'pres', l:'Presidio'}, {k:'piano', l:'Piano'}, {k:'rep', l:'Reparto'}, {k:'gas', l:'Gas'},
+  {k:'tipo', l:'Tipo'}, {k:'marca', l:'Marca'}, {k:'mont', l:'Montante'}, {k:'freq', l:'Frequenza'}
+];
+let f = {pres:'', piano:'', rep:'', gas:'', tipo:'', marca:'', mont:'', freq:''};
+
+function cmpPiano(a, b){
+  if(a === b) return 0;
+  if(a === '') return 1; if(b === '') return -1;
+  const na = Number(a), nb = Number(b);
+  if(!isNaN(na) && !isNaN(nb)) return na - nb;
+  return a.localeCompare(b, 'it', {numeric:true});
+}
+
+function opzioniFiltro(k){
+  const multi = presidi.length > 1;
+  const tutte = ['', 'Tutti'];
+  let out = [];
+  if(k === 'pres') out = presidi.map((p, i) => [p.id, nomePres(p, i)]);
+  if(k === 'piano'){
+    const set = uniq(FATTI.map(r => r.piano)).sort(cmpPiano);
+    out = set.map(v => [v === '' ? '__none' : v, lblPiano(v)]);
+  }
+  if(k === 'rep'){
+    const visti = {};
+    FATTI.forEach(r => { visti[r.repId] = r; });
+    presidi.forEach((p, pi) => (p.reparti || []).forEach(rep => {
+      out.push([rep.id, (multi ? nomePres(p, pi) + ' — ' : '') + (rep.nome || '(senza nome)') + (rep.piano ? ' (p. ' + rep.piano + ')' : '')]);
+    }));
+  }
+  if(k === 'gas'){
+    const usati = uniq(FATTI.map(r => r.gas));
+    out = elencoGas().filter(g => usati.indexOf(g.id) !== -1).map(g => [g.id, g.nome]);
+  }
+  if(k === 'tipo') out = uniq(FATTI.map(r => r.tipo).filter(Boolean)).sort((a,b) => a.localeCompare(b,'it')).map(t => [t, t]);
+  if(k === 'marca') out = uniq(FATTI.map(r => r.marca).filter(Boolean)).sort((a,b) => a.localeCompare(b,'it')).map(t => [t, t]);
+  if(k === 'mont'){
+    const l = uniq(FATTI.filter(r => r.sez === 'rd' && r.montante).map(r => r.montante)).sort();
+    out = l.map(x => [x, 'Montante ' + x]);
+    if(FATTI.some(r => r.sez === 'rd' && !r.montante)) out.push(['-', '(non assegnata)']);
+  }
+  if(k === 'freq') out = [['LF', 'LF — bassa frequenza'], ['HF', 'HF — alta frequenza']];
+  return [tutte].concat(out);
+}
+
+function renderFiltri(){
+  document.getElementById('filtri').innerHTML = FILTRI_DEF.map(d => `
+    <div class="field"><label>${d.l}</label>
+      <select data-filtro="${d.k}">${opzioniFiltro(d.k).map(o => `<option value="${escapeHtml(o[0])}" ${f[d.k] === o[0] ? 'selected' : ''}>${escapeHtml(o[1])}</option>`).join('')}</select>
+    </div>`).join('');
+}
+
+function passa(r){
+  if(f.pres && r.presId !== f.pres) return false;
+  if(f.piano && (r.piano === '' ? '__none' : r.piano) !== f.piano) return false;
+  if(f.rep && r.repId !== f.rep) return false;
+  if(f.gas && r.gas !== f.gas) return false;
+  if(f.tipo && r.tipo !== f.tipo) return false;
+  if(f.marca && r.marca !== f.marca) return false;
+  if(f.freq && r.freq !== f.freq) return false;
+  /* Il montante riguarda i riduttori: le UT non hanno una montante propria */
+  if(f.mont && r.sez === 'rd' && (f.mont === '-' ? r.montante !== '' : r.montante !== f.mont)) return false;
+  return true;
+}
+
+function descrizioneFiltri(){
+  const parti = [];
+  FILTRI_DEF.forEach(d => {
+    if(!f[d.k]) return;
+    const o = opzioniFiltro(d.k).find(x => x[0] === f[d.k]);
+    parti.push(d.l + ': ' + (o ? o[1] : f[d.k]));
+  });
+  return parti.length ? parti.join(' · ') : 'nessun filtro (dati completi)';
+}
+
+/* ================================================================
+   AGGREGAZIONE E TABELLE
+   ================================================================ */
+const MET = {
+  qta:   {h:'Q.tà',        f:v => String(v)},
+  ciclo: {h:'Costo ciclo', f:v => eur(v)},
+  annuo: {h:'Spesa annua', f:v => eur(v)},
+  ut:    {h:'UT alimentate', f:v => String(v)}
+};
+function nuovoAcc(){ return {qta:0, ciclo:0, annuo:0, ut:0, per:{}}; }
+function addAcc(a, r){
+  a.qta += r.qta; a.ciclo += r.ciclo; a.annuo += r.annuo; a.ut += (r.utAl || 0);
+  const p = a.per[r.presId] = a.per[r.presId] || {qta:0, ciclo:0, annuo:0, ut:0};
+  p.qta += r.qta; p.ciclo += r.ciclo; p.annuo += r.annuo; p.ut += (r.utAl || 0);
+}
+function vuota(){ return '<div class="hint">Nessun dato per i filtri selezionati.</div>'; }
+
+/* spec: {desc:[{h,v(r)}], key(r), sub(r)?, subLabel(r)?, perField?, metrics:[..], totLabel} */
+function tabella(rows, pres, spec){
+  if(!rows.length) return vuota();
+  const groups = [], idx = {};
+  rows.forEach(r => {
+    const k = spec.key(r);
+    if(!(k in idx)){ idx[k] = groups.length; groups.push({r, acc:nuovoAcc()}); }
+    addAcc(groups[idx[k]].acc, r);
+  });
+  const perCols = (spec.perField && pres.length > 1) ? pres : [];
+  const nDesc = spec.desc.length;
+
+  const head = '<tr>' + spec.desc.map(d => `<th>${d.h}</th>`).join('') +
+    perCols.map(p => `<th class="num">${MET[spec.perField].h}<br>${escapeHtml(p.nome)}</th>`).join('') +
+    spec.metrics.map(m => `<th class="num">${MET[m].h}${spec.perField && perCols.length ? '<br>totale' : ''}</th>`).join('') + '</tr>';
+
+  function celleValori(acc){
+    return perCols.map(p => `<td class="num">${MET[spec.perField].f((acc.per[p.id] || {})[spec.perField] || 0)}</td>`).join('') +
+           spec.metrics.map(m => `<td class="num">${MET[m].f(acc[m])}</td>`).join('');
+  }
+
+  let body = '', subAcc = null, subRow = null;
+  const chiudiSub = () => {
+    if(subAcc && spec.sub) body += `<tr class="sub"><td colspan="${nDesc}">${escapeHtml(spec.subLabel(subRow))}</td>${celleValori(subAcc)}</tr>`;
+  };
+  const tot = nuovoAcc();
+  groups.forEach((g, i) => {
+    if(spec.sub){
+      const s = spec.sub(g.r);
+      if(subRow === null || spec.sub(subRow) !== s){ chiudiSub(); subAcc = nuovoAcc(); subRow = g.r; }
+      mergeAcc(subAcc, g.acc);
+    }
+    mergeAcc(tot, g.acc);
+    body += '<tr>' + spec.desc.map(d => `<td>${escapeHtml(d.v(g.r))}</td>`).join('') + celleValori(g.acc) + '</tr>';
+  });
+  chiudiSub();
+  body += `<tr class="tot"><td colspan="${nDesc}">${escapeHtml(spec.totLabel || 'Totale complessivo')}</td>${celleValori(tot)}</tr>`;
+  return `<div class="tbl-wrap"><table class="tbl"><thead>${head}</thead><tbody>${body}</tbody></table></div>`;
+}
+function mergeAcc(t, a){
+  t.qta += a.qta; t.ciclo += a.ciclo; t.annuo += a.annuo; t.ut += a.ut;
+  Object.keys(a.per).forEach(k => {
+    const p = t.per[k] = t.per[k] || {qta:0, ciclo:0, annuo:0, ut:0};
+    p.qta += a.per[k].qta; p.ciclo += a.per[k].ciclo; p.annuo += a.per[k].annuo; p.ut += a.per[k].ut;
+  });
+}
+
+/* Tabella a doppia entrata: righe (piano/reparto) × colonne (gas) + totale */
+function pivot(rows, keyFn, labelFn, cmp, titoloRiga){
+  if(!rows.length) return vuota();
+  const gasUsati = elencoGas().filter(g => rows.some(r => r.gas === g.id));
+  const gruppi = {}, ordine = [];
+  rows.forEach(r => {
+    const k = keyFn(r);
+    if(!gruppi[k]){ gruppi[k] = {r, per:{}, tot:0}; ordine.push(k); }
+    gruppi[k].per[r.gas] = (gruppi[k].per[r.gas] || 0) + r.qta;
+    gruppi[k].tot += r.qta;
+  });
+  ordine.sort((a, b) => cmp(gruppi[a].r, gruppi[b].r));
+  const totCol = {}; let totTot = 0;
+  const body = ordine.map(k => {
+    const g = gruppi[k];
+    gasUsati.forEach(x => { totCol[x.id] = (totCol[x.id] || 0) + (g.per[x.id] || 0); });
+    totTot += g.tot;
+    return `<tr><td>${escapeHtml(labelFn(g.r))}</td>${gasUsati.map(x => `<td class="num">${g.per[x.id] || 0}</td>`).join('')}<td class="num"><b>${g.tot}</b></td></tr>`;
+  }).join('');
+  return `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>${titoloRiga}</th>${gasUsati.map(x => `<th class="num">${escapeHtml(x.nome)}</th>`).join('')}<th class="num">Totale</th></tr></thead>
+    <tbody>${body}</tbody>
+    <tbody><tr class="tot"><td>Totale</td>${gasUsati.map(x => `<td class="num">${totCol[x.id] || 0}</td>`).join('')}<td class="num">${totTot}</td></tr></tbody></table></div>`;
+}
+
+/* ================================================================
+   SEZIONI
+   ================================================================ */
+function ordGas(a, b){ return nomeGas(a).localeCompare(nomeGas(b), 'it'); }
+
+function sezioni(rows, pres){
+  const multi = pres.length > 1;
+  const rd = rows.filter(r => r.sez === 'rd'), ut = rows.filter(r => r.sez === 'ut');
+  const lblP = r => (multi ? r.presNome + ' · ' : '');
+  const out = [];
+
+  /* 0 — riepilogo per presidio */
+  (function(){
+    if(!rows.length){ out.push({id:'s0', t:'🏥 Riepilogo per presidio', h:'', html:vuota()}); return; }
+    const righe = pres.map(p => {
+      const rr = rows.filter(r => r.presId === p.id);
+      const s = sommaRighe(rr.map(r => ({sez:r.sez, qta:r.qta, ciclo:r.ciclo, annuo:r.annuo})));
+      return {p, reparti:uniq(rr.map(r => r.repId)).length, s};
+    }).filter(x => x.s.rd + x.s.ut > 0 || x.reparti > 0);
+    const tot = righe.reduce((a, x) => ({rep:a.rep + x.reparti, rd:a.rd + x.s.rd, ut:a.ut + x.s.ut, ciclo:a.ciclo + x.s.ciclo, annuo:a.annuo + x.s.annuo}), {rep:0, rd:0, ut:0, ciclo:0, annuo:0});
+    const tr = x => `<td class="num">${x.rep}</td><td class="num">${x.rd}</td><td class="num">${x.ut}</td><td class="num">${eur(x.ciclo)}</td><td class="num">${eur(x.annuo)}</td>`;
+    const html = `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Presidio</th><th class="num">Reparti</th><th class="num">Riduttori</th><th class="num">Unità terminali</th><th class="num">Costo ciclo (una sostituzione)</th><th class="num">Spesa annua</th></tr></thead><tbody>
+      ${righe.map((x, i) => `<tr><td>${escapeHtml(x.p.nome)}</td>${tr({rep:x.reparti, rd:x.s.rd, ut:x.s.ut, ciclo:x.s.ciclo, annuo:x.s.annuo})}</tr>`).join('')}
+      <tr class="tot"><td>${righe.length > 1 ? 'Totale complessivo' : 'Totale'}</td>${tr(tot)}</tr></tbody></table></div>`;
+    out.push({id:'s0', t:'🏥 Riepilogo per presidio', h:'Costo ciclo = costo di una sostituzione di tutti gli elementi; spesa annua = costo ciclo × frequenza LF/HF del reparto (LF ' + cfg.freqLF + '/anno, HF ' + cfg.freqHF + '/anno).', html});
+  })();
+
+  const descComuni = r => [
+    {h:'Gas', v:r => nomeGas(r.gas)}, {h:'Codice', v:r => r.codice || '—'},
+    {h:'Tipo', v:r => r.tipo || '—'}, {h:'Marca', v:r => r.marca || '—'}, {h:'Sostituzione', v:r => SOST_LAB[r.sost] || ''}
+  ];
+  const sortCosti = (a, b) => ordGas(a.gas, b.gas) || a.codice.localeCompare(b.codice, 'it') || a.sost.localeCompare(b.sost);
+  const nota = f.mont ? '<div class="note-mont">Il filtro Montante non si applica alle unità terminali (non hanno una montante propria): per le UT alimentate da una montante vedi la sezione "Montanti".</div>' : '';
+
+  /* 1 — unità terminali: quantità e costo */
+  out.push({id:'s1', t:'🔌 Unità terminali — quantità e costo', h:'Divise per gas, codice, tipo e marca, con subtotale per gas. Costo ciclo = quantità × costo della sostituzione prevista.',
+    html: nota + tabella(ut.slice().sort(sortCosti), pres, {
+      desc:descComuni(), key:r => r.gas + '|' + r.itemId + '|' + r.sost, sub:r => r.gas, subLabel:r => 'Totale ' + nomeGas(r.gas),
+      perField:'qta', metrics:['qta', 'ciclo'], totLabel:'Totale unità terminali'})});
+
+  /* 2 — riduttori: quantità e costo */
+  out.push({id:'s2', t:'🎛️ Riduttori — quantità e costo', h:'Divisi per gas, codice, tipo e marca, con subtotale per gas.',
+    html: tabella(rd.slice().sort(sortCosti), pres, {
+      desc:descComuni(), key:r => r.gas + '|' + r.itemId + '|' + r.sost, sub:r => r.gas, subLabel:r => 'Totale ' + nomeGas(r.gas),
+      perField:'qta', metrics:['qta', 'ciclo'], totLabel:'Totale riduttori'})});
+
+  /* 3 — montanti */
+  out.push({id:'s3', t:'🧭 Montanti — riduttori e prese alimentate', h:'Per ogni montante e gas: riduttori alimentati e unità terminali da essi servite. Dove non indicato a mano, le UT sono ripartite equamente tra i riduttori dello stesso gas del reparto.',
+    html: tabella(rd.slice().sort((a, b) => a.pi - b.pi || (a.montante || '~').localeCompare(b.montante || '~') || ordGas(a.gas, b.gas)), pres, {
+      desc:[
+        ...(multi ? [{h:'Presidio', v:r => r.presNome}] : []),
+        {h:'Montante', v:r => r.montante || '(non assegnata)'}, {h:'Gas', v:r => nomeGas(r.gas)}],
+      key:r => r.presId + '|' + r.montante + '|' + r.gas, sub:r => r.presId + '|' + r.montante,
+      subLabel:r => 'Totale montante ' + (r.montante || '(non assegnata)') + (multi ? ' — ' + r.presNome : ''),
+      metrics:['qta', 'ut'], totLabel:'Totale'}).replace('<th class="num">Q.tà</th>', '<th class="num">Riduttori</th>')});
+
+  /* 4 — riduttori per piano */
+  out.push({id:'s4', t:'🏢 Riduttori per piano', h:'Per gas e totale.',
+    html: pivot(rd, r => r.presId + '|' + r.piano, r => lblP(r) + lblPiano(r.piano), (a, b) => a.pi - b.pi || cmpPiano(a.piano, b.piano), 'Piano')});
+
+  /* 5 — riduttori per reparto */
+  out.push({id:'s5', t:'🚪 Riduttori per reparto', h:'Per gas e totale.',
+    html: pivot(rd, r => r.repId, r => lblP(r) + r.repNome + (r.piano ? ' (piano ' + r.piano + ')' : ''), (a, b) => a.pi - b.pi || cmpPiano(a.piano, b.piano) || a.repNome.localeCompare(b.repNome, 'it'), 'Reparto')});
+
+  /* 6 — prese per piano */
+  out.push({id:'s6', t:'🏢 Unità terminali (prese) per piano', h:'Divise per gas, tipo e marca, con totale per piano.',
+    html: nota + tabella(ut.slice().sort((a, b) => a.pi - b.pi || cmpPiano(a.piano, b.piano) || ordGas(a.gas, b.gas) || a.tipo.localeCompare(b.tipo, 'it') || a.marca.localeCompare(b.marca, 'it')), pres, {
+      desc:[...(multi ? [{h:'Presidio', v:r => r.presNome}] : []), {h:'Piano', v:r => lblPiano(r.piano)}, {h:'Gas', v:r => nomeGas(r.gas)}, {h:'Tipo', v:r => r.tipo || '—'}, {h:'Marca', v:r => r.marca || '—'}],
+      key:r => r.presId + '|' + r.piano + '|' + r.gas + '|' + r.tipo + '|' + r.marca, sub:r => r.presId + '|' + r.piano,
+      subLabel:r => 'Totale ' + lblPiano(r.piano) + (multi ? ' — ' + r.presNome : ''), metrics:['qta'], totLabel:'Totale unità terminali'})});
+
+  /* 7 — prese per reparto */
+  out.push({id:'s7', t:'🚪 Unità terminali (prese) per reparto', h:'Per gas e totale.',
+    html: nota + pivot(ut, r => r.repId, r => lblP(r) + r.repNome + (r.piano ? ' (piano ' + r.piano + ')' : ''), (a, b) => a.pi - b.pi || cmpPiano(a.piano, b.piano) || a.repNome.localeCompare(b.repNome, 'it'), 'Reparto')});
+
+  /* 8 — spesa annuale */
+  out.push({id:'s8', t:'💶 Spesa annuale di sostituzione', h:'Quantità × costo della sostituzione prevista × frequenza annua del reparto (LF ' + cfg.freqLF + ' · HF ' + cfg.freqHF + ' sostituzioni/anno). Totali parziali per LF e HF e complessivo.',
+    html: tabella(rows.slice().sort((a, b) => (a.freq === b.freq ? 0 : a.freq === 'LF' ? -1 : 1) || (a.sez === b.sez ? 0 : a.sez === 'rd' ? -1 : 1) || sortCosti(a, b)), pres, {
+      desc:[{h:'Freq.', v:r => r.freq}, {h:'Elem.', v:r => r.sez === 'rd' ? 'Riduttore' : 'UT'}, {h:'Gas', v:r => nomeGas(r.gas)}, {h:'Codice', v:r => r.codice || '—'},
+            {h:'Tipo', v:r => r.tipo || '—'}, {h:'Marca', v:r => r.marca || '—'}, {h:'Sostituzione', v:r => SOST_LAB[r.sost] || ''}, {h:'Sost./anno', v:r => String(r.fr)}],
+      key:r => r.freq + '|' + r.sez + '|' + r.gas + '|' + r.itemId + '|' + r.sost, sub:r => r.freq,
+      subLabel:r => 'Totale ' + r.freq + ' (' + (r.freq === 'HF' ? cfg.freqHF : cfg.freqLF) + ' sostituzioni/anno)',
+      perField:'annuo', metrics:['qta', 'annuo'], totLabel:'Totale complessivo spesa annua'})});
+
+  return out;
+}
+
+/* ================================================================
+   RENDER
+   ================================================================ */
+function render(){
+  const rows = FATTI.filter(passa);
+  let pres = presidi.map((p, i) => ({id:p.id, nome:nomePres(p, i)}));
+  if(f.pres) pres = pres.filter(p => p.id === f.pres);
+  const sez = sezioni(rows, pres);
+  document.getElementById('sezioni').innerHTML = sez.map(s => `
+    <div class="card sez" id="${s.id}">
+      <div class="sez-head"><div class="section-title">${s.t}</div><button class="btn btn-soft btn-small no-print" data-print="${s.id}">🖨️ Stampa</button></div>
+      <div class="hint">${escapeHtml(s.h || '')}</div>
+      ${s.html}
+    </div>`).join('');
+  document.getElementById('avvisoVuoto').style.display = FATTI.length ? 'none' : 'block';
+  if(!FATTI.length) document.getElementById('sezioni').innerHTML = '';
+}
+
+function preparaIntestazioneStampa(titolo){
+  const d = new Date();
+  document.getElementById('printHead').innerHTML =
+    `<h1>Impianti gas medicinali — ${escapeHtml(titolo)}</h1>
+     <div>Stampato il ${d.toLocaleDateString('it-IT')} · Presidi: ${escapeHtml(presidi.map((p, i) => nomePres(p, i)).join(', ') || '—')}</div>
+     <div>Filtri: ${escapeHtml(descrizioneFiltri())}</div>`;
+}
+function stampa(secId){
+  if(secId){
+    document.body.setAttribute('data-print', '1');
+    const el = document.getElementById(secId);
+    el.classList.add('print-target');
+    preparaIntestazioneStampa(el.querySelector('.section-title').textContent);
+  } else {
+    preparaIntestazioneStampa('Riepilogo completo');
+  }
+  window.print();
+}
+window.addEventListener('afterprint', () => {
+  document.body.removeAttribute('data-print');
+  document.querySelectorAll('.print-target').forEach(e => e.classList.remove('print-target'));
+});
+
+document.addEventListener('change', e => {
+  const k = e.target.dataset && e.target.dataset.filtro;
+  if(!k) return;
+  f[k] = e.target.value;
+  render();
+});
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-print]');
+  if(b) stampa(b.dataset.print);
+});
+document.getElementById('btnReset').addEventListener('click', () => {
+  f = {pres:'', piano:'', rep:'', gas:'', tipo:'', marca:'', mont:'', freq:''};
+  renderFiltri(); render();
+});
+document.getElementById('btnStampaTutto').addEventListener('click', () => stampa(null));
+document.getElementById('selOrient').addEventListener('change', e => {
+  document.getElementById('pageStyle').textContent = '@page{ size:A4 ' + e.target.value + '; margin:10mm; }';
+});
+
+window.addEventListener('DOMContentLoaded', () => { renderFiltri(); render(); });
+</script>
+</body>
+</html>
