@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Organizer — Gas medicinali · Listino</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="rimage/dspimage192.png">
+<link rel="icon" href="rimage/dspimage192.png">
+
+<style>
+  :root{
+    --bg:#f6f8fb; --card:#ffffff; --accent:#1e88e5; --muted:#6b7280;
+    --danger:#E3DCC9; --shadow:0 6px 18px rgba(20,30,50,0.06); --radius:12px; --max-width:1080px;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg) 100%);
+    padding:20px; display:flex; justify-content:center; color:#0f172a;
+  }
+  .container{ width:100%; max-width:var(--max-width); }
+
+  .card{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; margin-bottom:18px; }
+  .section-title{ font-size:18px; font-weight:800; color:var(--accent); margin:0 0 12px 0; }
+  .hint{ font-size:12px; color:var(--muted); margin-bottom:12px; }
+  .empty-note{ background:#fff8e6; border:1px solid #f0dfa8; border-radius:10px; padding:12px 14px; font-size:13px; color:#7a5c00; margin-bottom:12px; }
+
+  .travel-nav-divider{ border:none; border-top:1px solid #e6e9ef; margin:24px 0 14px 0; }
+  .travel-nav{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:12px; }
+  .travel-nav-item{ display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none; color:#374151; font-size:11px; font-weight:700; }
+  .travel-nav-item .icon{ width:46px; height:46px; border-radius:50%; background:#eef2f7; display:flex; align-items:center; justify-content:center; font-size:20px; transition:transform .15s ease, background .15s ease; }
+  .travel-nav-item:hover .icon{ transform:scale(1.06); }
+  .travel-nav-item.active .icon{ background:var(--accent); }
+  .travel-nav-item.active span.lbl{ color:var(--accent); }
+
+  .btn{ border:none; border-radius:8px; padding:7px 12px; font-weight:700; font-size:13px; cursor:pointer; }
+  .btn-danger{ background:var(--danger); color:#7a3b1f; }
+  .btn-add{ background:#eaf6ec; color:#2f7a3d; }
+  .btn-xls{ background:#e8f0fe; color:#1a57b5; }
+  .btn-main{ background:var(--accent); color:#fff; padding:10px 16px; font-size:14px; }
+  .btn-main:disabled{ background:#b9c6d6; cursor:not-allowed; }
+  .btn-row{ display:flex; gap:8px; flex-wrap:wrap; margin:10px 0; }
+
+  .tabs{ display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+  .tab{ flex:1; min-width:150px; border:1px solid #e3e8f0; background:#fbfcfe; border-radius:10px; padding:10px 12px; font-weight:700; font-size:14px; cursor:pointer; color:#374151; }
+  .tab.active{ background:var(--accent); color:#fff; border-color:var(--accent); }
+  .tab small{ font-weight:600; opacity:.85; margin-left:4px; }
+
+  .filters{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:8px; margin-bottom:8px; }
+  .filters input[type=text], .filters select{ width:100%; padding:8px 10px; border-radius:8px; border:1px solid #e6e9ef; font-size:13px; font-family:inherit; }
+  .only-sel{ display:flex; align-items:center; gap:6px; font-size:13px; font-weight:600; color:#374151; }
+
+  .counter{ font-size:13px; font-weight:700; color:#1f2a3d; margin:6px 0 10px 0; }
+  .counter span{ color:var(--accent); }
+
+  .li{ display:flex; gap:10px; align-items:flex-start; padding:9px 12px; border:1px solid #e3e8f0; border-radius:10px; margin-bottom:6px; background:#fbfcfe; cursor:pointer; }
+  .li.sel{ background:#eaf3fe; border-color:#9cc5f5; }
+  .li input{ margin-top:3px; width:18px; height:18px; flex:none; }
+  .li-txt{ min-width:0; font-size:14px; font-weight:700; color:#1f2a3d; word-break:break-word; }
+  .li-txt small{ display:block; font-weight:600; color:var(--muted); font-size:12px; margin-top:2px; }
+  .warn{ color:#b45309; }
+  .more-wrap{ text-align:center; margin-top:8px; }
+
+  .gen-box{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  .gen-box .txt{ font-size:14px; font-weight:700; }
+  .gen-box .txt small{ display:block; font-weight:600; color:var(--muted); font-size:12px; margin-top:2px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="travel-nav">
+    <a href="gas-listino.html" class="travel-nav-item active"><div class="icon">📋</div><span class="lbl">Listino</span></a>
+    <a href="gas-catalogo.html" class="travel-nav-item"><div class="icon">📚</div><span class="lbl">Catalogo</span></a>
+    <a href="gas-censimento.html" class="travel-nav-item"><div class="icon">🏥</div><span class="lbl">Censimento</span></a>
+    <a href="gas-riepilogo.html" class="travel-nav-item"><div class="icon">📊</div><span class="lbl">Riepilogo</span></a>
+    <a href="gas-impostazioni.html" class="travel-nav-item"><div class="icon">⚙️</div><span class="lbl">Impostazioni</span></a>
+  </nav>
+
+  <div class="card">
+    <div class="section-title">📋 Listino completo</div>
+    <div class="hint">Carica qui il listino da Excel (stesso formato del catalogo, fogli UT e RD), spunta le voci che ti servono e genera l'Excel da importare nel Catalogo. Il listino non influisce sul censimento.</div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="ut">🔌 Unità terminali <small id="cntUt"></small></button>
+      <button class="tab" data-tab="rd">🎛️ Riduttori <small id="cntRd"></small></button>
+    </div>
+
+    <div class="filters">
+      <input type="text" id="fCerca" placeholder="Cerca codice, descrizione, marca...">
+      <select id="fGas"></select>
+      <select id="fMarca"></select>
+      <label class="only-sel"><input type="checkbox" id="fSoloSel"> Solo selezionate</label>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-xls" id="btnImporta">📥 Importa listino da Excel</button>
+      <button class="btn btn-add" id="btnSelTutte">☑️ Seleziona le filtrate</button>
+      <button class="btn btn-add" id="btnDeselTutte">⬜ Deseleziona le filtrate</button>
+      <button class="btn btn-danger" id="btnSvuota">🗑️ Svuota questa sezione</button>
+    </div>
+
+    <div class="counter" id="counter"></div>
+    <div id="emptyNote" class="empty-note" style="display:none;"></div>
+    <div id="lista"></div>
+    <div class="more-wrap"><button class="btn btn-xls" id="btnPiu" style="display:none;">Mostra altre voci</button></div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">📤 Genera Excel per il Catalogo</div>
+    <div class="gen-box">
+      <div class="txt"><span id="genRiepilogo"></span><small>Contiene solo le voci spuntate, nello stesso formato: fogli UT e RD. Importalo poi dal Catalogo con "Importa da Excel" (una volta per UT e una per RD).</small></div>
+      <button class="btn btn-main" id="btnGenera">Genera Excel</button>
+    </div>
+  </div>
+
+  <hr class="travel-nav-divider">
+  <nav class="travel-nav">
+    <a href="gas-listino.html" class="travel-nav-item active"><div class="icon">📋</div><span class="lbl">Listino</span></a>
+    <a href="gas-catalogo.html" class="travel-nav-item"><div class="icon">📚</div><span class="lbl">Catalogo</span></a>
+    <a href="gas-censimento.html" class="travel-nav-item"><div class="icon">🏥</div><span class="lbl">Censimento</span></a>
+    <a href="gas-riepilogo.html" class="travel-nav-item"><div class="icon">📊</div><span class="lbl">Riepilogo</span></a>
+    <a href="gas-impostazioni.html" class="travel-nav-item"><div class="icon">⚙️</div><span class="lbl">Impostazioni</span></a>
+  </nav>
+
+</div>
+
+<input type="file" id="fileXls" accept=".xlsx,.xls,.csv" style="display:none">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script>
+const LS_CONFIG  = 'gas_config';
+const LS_LISTINO = 'gas_listino';      // chiave nuova: non tocca gas_catalogo né il censimento
+const PAGINA = 100;                    // voci mostrate per volta (listini da migliaia di righe)
+
+const DEF_GAS = [
+  ['o2','Ossigeno'],['n2o',"Protossido d'azoto"],['aria4','Aria 4 bar'],['aria8','Aria 8 bar'],
+  ['co2','CO2'],['n2','Azoto'],['he','Elio'],['ar','Argon'],['evac','Evacuazione'],['vuoto','Vuoto']
+];
+const DEF_TIPI_UT = [['uni','UNI'],['afnor','AFNOR'],['nist','NIST'],['ega','EGA']];
+const XLS_COLONNE = ['codice','descrizione','marca','gas','tipo','sostituzione','costoCompleto','costoKit','note'];
+
+function leggiOggetto(key, fallback){
+  try{ const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : fallback; }
+  catch(e){ return fallback; }
+}
+function escapeHtml(s){
+  if(s === null || s === undefined) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function eur(n){
+  if(typeof n !== 'number' || isNaN(n)) n = 0;
+  return n.toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' €';
+}
+function norm(s){ return String(s === null || s === undefined ? '' : s).trim().toLowerCase().replace(/[^a-z0-9]/g,''); }
+
+/* Gas e tipi UT, come nel Catalogo (servono solo per segnalare le voci non riconosciute) */
+function leggiConfig(){
+  return Object.assign({gasExtra:['','',''], tipiExtra:['','',''], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+}
+function elencoGas(){
+  const c = leggiConfig();
+  const out = DEF_GAS.map(g => ({id:g[0], nome:g[1]}));
+  c.gasExtra.forEach((n,i) => { if(n) out.push({id:'x'+(i+1), nome:n}); });
+  return out;
+}
+function elencoTipiUt(){
+  const c = leggiConfig();
+  const out = DEF_TIPI_UT.map(t => ({id:t[0], nome:t[1]}));
+  c.tipiExtra.forEach((n,i) => { if(n) out.push({id:'x'+(i+1), nome:n}); });
+  return out;
+}
+function riconosciuto(elenco, valore){
+  const k = norm(valore);
+  return !!k && elenco.some(x => norm(x.nome) === k || norm(x.id) === k);
+}
+
+/* ================= STATO ================= */
+let listino = Object.assign({ut:[], rd:[]}, leggiOggetto(LS_LISTINO, {}));
+if(!Array.isArray(listino.ut)) listino.ut = [];
+if(!Array.isArray(listino.rd)) listino.rd = [];
+let sez = 'ut';
+let limite = PAGINA;
+
+function salva(){
+  try{ localStorage.setItem(LS_LISTINO, JSON.stringify(listino)); }
+  catch(e){ alert('Spazio del browser esaurito: il listino è troppo grande per essere salvato.'); }
+}
+function chiave(it){ return norm(it.codice) + '|' + norm(it.marca); }
+
+/* ================= FILTRI ================= */
+function indiciFiltrati(){
+  const q = document.getElementById('fCerca').value.trim().toLowerCase();
+  const gas = document.getElementById('fGas').value;
+  const marca = document.getElementById('fMarca').value;
+  const solo = document.getElementById('fSoloSel').checked;
+  const out = [];
+  listino[sez].forEach((it, i) => {
+    if(solo && !it.sel) return;
+    if(gas && it.gas !== gas) return;
+    if(marca && it.marca !== marca) return;
+    if(q){
+      const testo = [it.codice, it.descrizione, it.marca, it.gas, it.tipo].join(' ').toLowerCase();
+      if(!testo.includes(q)) return;
+    }
+    out.push(i);
+  });
+  return out;
+}
+function aggiornaFiltri(){
+  const selGas = document.getElementById('fGas'), selMarca = document.getElementById('fMarca');
+  const gasAtt = selGas.value, marcaAtt = selMarca.value;
+  const gas = new Set(), marche = new Set();
+  listino[sez].forEach(it => { if(it.gas) gas.add(it.gas); if(it.marca) marche.add(it.marca); });
+  const opt = (arr, tutti) => '<option value="">'+tutti+'</option>' +
+    [...arr].sort((a,b) => a.localeCompare(b,'it')).map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+  selGas.innerHTML = opt(gas, 'Tutti i gas');
+  selMarca.innerHTML = opt(marche, 'Tutte le marche');
+  selGas.value = gas.has(gasAtt) ? gasAtt : '';
+  selMarca.value = marche.has(marcaAtt) ? marcaAtt : '';
+}
+
+/* ================= RENDER ================= */
+function costiTesto(it){
+  const c = eur(it.costoCompleto), k = eur(it.costoKit);
+  if(it.sostituzione === 'kit') return 'kit ' + k;
+  if(it.sostituzione === 'entrambi') return 'intero ' + c + ' · kit ' + k;
+  return 'intero ' + c;
+}
+function rigaHtml(it, i){
+  const gasOk = riconosciuto(elencoGas(), it.gas);
+  const tipoOk = sez === 'rd' || riconosciuto(elencoTipiUt(), it.tipo);
+  const avviso = (gasOk && tipoOk) ? '' :
+    ' <span class="warn" title="Gas o tipo non presente in Impostazioni: nel Catalogo la riga verrebbe scartata">⚠️ '+
+    (!gasOk ? 'gas' : '') + (!gasOk && !tipoOk ? ' e ' : '') + (!tipoOk ? 'tipo' : '') + ' non riconosciuto</span>';
+  const sotto = [it.gas || 'gas —', it.tipo || 'tipo —', it.marca || 'marca —', costiTesto(it)].map(escapeHtml).join(' · ');
+  return `<label class="li ${it.sel?'sel':''}"><input type="checkbox" data-i="${i}" ${it.sel?'checked':''}>` +
+         `<div class="li-txt">${escapeHtml(it.codice || '(senza codice)')} — ${escapeHtml(it.descrizione || '')}${avviso}<small>${sotto}</small></div></label>`;
+}
+function conteggi(){
+  ['ut','rd'].forEach(s => {
+    const tot = listino[s].length, sel = listino[s].filter(x => x.sel).length;
+    document.getElementById(s === 'ut' ? 'cntUt' : 'cntRd').textContent = '(' + sel + '/' + tot + ')';
+  });
+  const nUt = listino.ut.filter(x => x.sel).length, nRd = listino.rd.filter(x => x.sel).length;
+  document.getElementById('genRiepilogo').textContent = nUt + ' unità terminali + ' + nRd + ' riduttori selezionati';
+  document.getElementById('btnGenera').disabled = (nUt + nRd) === 0;
+}
+function render(){
+  const idx = indiciFiltrati();
+  const tot = listino[sez].length;
+  const sel = listino[sez].filter(x => x.sel).length;
+  const nota = document.getElementById('emptyNote');
+  if(!tot){
+    nota.style.display = 'block';
+    nota.textContent = 'Il listino ' + (sez === 'ut' ? 'delle unità terminali' : 'dei riduttori') + ' è vuoto. Usa "Importa listino da Excel".';
+  } else if(!idx.length){
+    nota.style.display = 'block';
+    nota.textContent = 'Nessuna voce corrisponde ai filtri.';
+  } else nota.style.display = 'none';
+
+  document.getElementById('counter').innerHTML =
+    'Selezionate <span>' + sel + '</span> su ' + tot + ' · filtrate ' + idx.length;
+  document.getElementById('lista').innerHTML =
+    idx.slice(0, limite).map(i => rigaHtml(listino[sez][i], i)).join('');
+  const piu = document.getElementById('btnPiu');
+  piu.style.display = idx.length > limite ? '' : 'none';
+  piu.textContent = 'Mostra altre voci (' + Math.min(PAGINA, idx.length - limite) + ' di ' + (idx.length - limite) + ' rimanenti)';
+  conteggi();
+}
+function aggiornaTab(){
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === sez));
+}
+
+/* ================= EVENTI ================= */
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+  sez = t.dataset.tab; limite = PAGINA;
+  document.getElementById('fCerca').value = '';
+  document.getElementById('fSoloSel').checked = false;
+  document.getElementById('fGas').value = ''; document.getElementById('fMarca').value = '';
+  aggiornaTab(); aggiornaFiltri(); render();
+}));
+['fCerca','fGas','fMarca','fSoloSel'].forEach(id => {
+  const el = document.getElementById(id);
+  el.addEventListener(id === 'fCerca' ? 'input' : 'change', () => { limite = PAGINA; render(); });
+});
+document.getElementById('btnPiu').addEventListener('click', () => { limite += PAGINA; render(); });
+
+document.getElementById('lista').addEventListener('change', e => {
+  const cb = e.target.closest('input[data-i]');
+  if(!cb) return;
+  listino[sez][+cb.dataset.i].sel = cb.checked;
+  cb.closest('.li').classList.toggle('sel', cb.checked);
+  salva();
+  const sel = listino[sez].filter(x => x.sel).length;
+  const idx = indiciFiltrati().length;
+  document.getElementById('counter').innerHTML = 'Selezionate <span>' + sel + '</span> su ' + listino[sez].length + ' · filtrate ' + idx;
+  conteggi();
+});
+document.getElementById('btnSelTutte').addEventListener('click', () => {
+  const idx = indiciFiltrati();
+  if(!idx.length) return;
+  if(idx.length > 300 && !confirm('Selezionare tutte le ' + idx.length + ' voci filtrate?')) return;
+  idx.forEach(i => { listino[sez][i].sel = true; });
+  salva(); render();
+});
+document.getElementById('btnDeselTutte').addEventListener('click', () => {
+  indiciFiltrati().forEach(i => { listino[sez][i].sel = false; });
+  salva(); render();
+});
+document.getElementById('btnSvuota').addEventListener('click', () => {
+  if(!listino[sez].length) return;
+  if(!confirm('Svuotare il listino ' + (sez === 'ut' ? 'delle unità terminali' : 'dei riduttori') + '?\nIl Catalogo e il censimento non vengono toccati.')) return;
+  listino[sez] = []; salva(); limite = PAGINA; aggiornaFiltri(); render();
+});
+
+/* ================= IMPORTA LISTINO ================= */
+function xlsDisponibile(){
+  if(typeof XLSX === 'undefined'){ alert('Libreria Excel non caricata (serve connessione al primo utilizzo).'); return false; }
+  return true;
+}
+function leggiNumero(v){
+  if(typeof v === 'number') return isNaN(v) ? 0 : v;
+  let s = String(v === null || v === undefined ? '' : v).replace(/[€\s]/g,'');
+  if(!s) return 0;
+  if(s.includes(',') && s.includes('.')) s = s.replace(/\./g,'').replace(',','.');
+  else if(s.includes(',')) s = s.replace(',','.');
+  const n = parseFloat(s);
+  return isNaN(n) ? 0 : n;
+}
+function leggiSostituzione(v){
+  const k = norm(v);
+  if(!k) return 'completo';
+  if(k === 'completo' || k === 'kit' || k === 'entrambi') return k;
+  if(k === 'intero' || k === 'solointero' || k.startsWith('solocompleta') || k.startsWith('solori')) return 'completo';
+  if(k === 'solokit') return 'kit';
+  return null;
+}
+function trovaFoglio(wb){
+  const nome = wb.SheetNames.find(n => norm(n) === sez);
+  if(nome) return wb.Sheets[nome];
+  return wb.SheetNames.length === 1 ? wb.Sheets[wb.SheetNames[0]] : null;
+}
+document.getElementById('btnImporta').addEventListener('click', () => {
+  if(!xlsDisponibile()) return;
+  const f = document.getElementById('fileXls'); f.value = ''; f.click();
+});
+document.getElementById('fileXls').addEventListener('change', e => {
+  const file = e.target.files && e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try{
+      const wb = XLSX.read(ev.target.result, {type:'array'});
+      const ws = trovaFoglio(wb);
+      if(!ws){ alert('Nel file non trovo un foglio chiamato "'+sez.toUpperCase()+'".'); return; }
+      const righe = XLSX.utils.sheet_to_json(ws, {defval:'', raw:true});
+      if(!righe.length){ alert('Il foglio è vuoto.'); return; }
+
+      const mappa = new Map();
+      listino[sez].forEach((it, i) => { if(chiave(it) !== '|') mappa.set(chiave(it), i); });
+      let nuove = 0, agg = 0, vuote = 0, sostDef = 0;
+
+      righe.forEach(r0 => {
+        const r = {};
+        Object.keys(r0).forEach(k => { r[norm(k)] = r0[k]; });
+        const t = x => String(x === undefined || x === null ? '' : x).trim();
+        const dati = { codice:t(r.codice), descrizione:t(r.descrizione), marca:t(r.marca),
+                       gas:t(r.gas), tipo:t(r.tipo), sostituzione:'completo',
+                       costoCompleto:leggiNumero(r.costocompleto), costoKit:leggiNumero(r.costokit), note:t(r.note) };
+        if(!dati.codice && !dati.descrizione){ vuote++; return; }
+        const s = leggiSostituzione(r.sostituzione);
+        if(s === null) sostDef++;
+        dati.sostituzione = s || 'completo';
+
+        const k = chiave(dati);
+        const pos = (dati.codice && mappa.has(k)) ? mappa.get(k) : -1;
+        if(pos >= 0){
+          dati.sel = !!listino[sez][pos].sel;          // il flag non si perde reimportando
+          listino[sez][pos] = dati; agg++;
+        } else {
+          dati.sel = false;
+          listino[sez].push(dati);
+          if(dati.codice) mappa.set(k, listino[sez].length - 1);
+          nuove++;
+        }
+      });
+
+      salva(); limite = PAGINA; aggiornaFiltri(); render();
+      const nonRic = listino[sez].filter(it => !riconosciuto(elencoGas(), it.gas) || (sez === 'ut' && !riconosciuto(elencoTipiUt(), it.tipo))).length;
+      let msg = 'Listino importato.\nAggiunte: '+nuove+'\nAggiornate: '+agg+'\nRighe vuote ignorate: '+vuote;
+      if(sostDef) msg += '\nSostituzione non valida (impostata su "completo"): '+sostDef;
+      if(nonRic) msg += '\n\nAttenzione: '+nonRic+' voci hanno gas o tipo non presenti in Impostazioni (segnate con ⚠️). Nel Catalogo verrebbero scartate.';
+      alert(msg);
+    }catch(err){
+      alert('Impossibile leggere il file: ' + err.message);
+    }
+  };
+  reader.readAsArrayBuffer(file);
+});
+
+/* ================= GENERA EXCEL PER IL CATALOGO ================= */
+function foglioDa(righe){
+  const ws = XLSX.utils.json_to_sheet(righe, {header:XLS_COLONNE});
+  ws['!cols'] = [14,28,16,18,14,14,14,12,30].map(w => ({wch:w}));
+  return ws;
+}
+document.getElementById('btnGenera').addEventListener('click', () => {
+  if(!xlsDisponibile()) return;
+  const estrai = s => listino[s].filter(x => x.sel).map(x => ({
+    codice:x.codice, descrizione:x.descrizione, marca:x.marca, gas:x.gas, tipo:x.tipo,
+    sostituzione:x.sostituzione, costoCompleto:x.costoCompleto, costoKit:x.costoKit, note:x.note }));
+  const ut = estrai('ut'), rd = estrai('rd');
+  if(!ut.length && !rd.length){ alert('Non hai spuntato nessuna voce.'); return; }
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, foglioDa(ut), 'UT');
+  XLSX.utils.book_append_sheet(wb, foglioDa(rd), 'RD');
+  XLSX.writeFile(wb, 'gas-catalogo-selezione.xlsx');
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  aggiornaTab(); aggiornaFiltri(); render();
+});
+</script>
+</body>
+</html>
