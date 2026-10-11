@@ -357,44 +357,51 @@ function pivot(rows, keyFn, labelFn, cmp, titoloRiga){
    ================================================================ */
 function ordGas(a, b){ return nomeGas(a).localeCompare(nomeGas(b), 'it'); }
 
-/* ---- Conteggi unità terminali per marca / tipo / gas (filtri propri della card) ---- */
-let fu = {gas:'', marca:'', tipo:''};
+/* ---- Conteggi per marca / tipo / gas (UT e riduttori), con filtri propri di ciascuna card ---- */
+let fu = {ut:{gas:'', marca:'', tipo:''}, rd:{gas:'', marca:'', tipo:''}};
 const NOMARCA = '(senza marca)';
-function utConteggi(ut, pres){
-  if(!ut.length) return vuota();
-  const gasOpt = elencoGas().filter(g => ut.some(r => r.gas === g.id)).map(g => [g.id, g.nome]);
-  const marcaOpt = uniq(ut.map(r => r.marca)).sort((a, b) => a.localeCompare(b, 'it')).map(m => [m === '' ? '__none' : m, m === '' ? NOMARCA : m]);
-  const tipoOpt = uniq(ut.map(r => r.tipo)).sort((a, b) => a.localeCompare(b, 'it')).map(t => [t, t]);
+const NONE = '__none';
+function conteggi(s, rows, pres){
+  if(!rows.length) return vuota();
+  const st = fu[s];
+  const nn = v => v === '' ? NONE : v;
+  const lbM = m => m === '' ? NOMARCA : m;
+  const lbT = t => t === '' ? '(senza tipo)' : t;
+  const ord = (a, b) => (a === '' ? 1 : b === '' ? -1 : a.localeCompare(b, 'it'));
+  const gasOpt = elencoGas().filter(g => rows.some(r => r.gas === g.id)).map(g => [g.id, g.nome]);
+  const marcaOpt = uniq(rows.map(r => r.marca)).sort(ord).map(m => [nn(m), lbM(m)]);
+  const tipoOpt = uniq(rows.map(r => r.tipo)).sort(ord).map(t => [nn(t), lbT(t)]);
   const ok = (v, opts) => v === '' || opts.some(o => o[0] === v);
-  if(!ok(fu.gas, gasOpt)) fu.gas = '';
-  if(!ok(fu.marca, marcaOpt)) fu.marca = '';
-  if(!ok(fu.tipo, tipoOpt)) fu.tipo = '';
+  if(!ok(st.gas, gasOpt)) st.gas = '';
+  if(!ok(st.marca, marcaOpt)) st.marca = '';
+  if(!ok(st.tipo, tipoOpt)) st.tipo = '';
 
-  const sub = ut.filter(r =>
-    (!fu.gas || r.gas === fu.gas) &&
-    (!fu.marca || (r.marca === '' ? '__none' : r.marca) === fu.marca) &&
-    (!fu.tipo || r.tipo === fu.tipo));
+  const sub = rows.filter(r =>
+    (!st.gas || r.gas === st.gas) &&
+    (!st.marca || nn(r.marca) === st.marca) &&
+    (!st.tipo || nn(r.tipo) === st.tipo));
   const tot = sub.reduce((a, r) => a + r.qta, 0);
 
-  const sel = (k, l, opts) => `<div class="field"><label>${l}</label><select data-utf="${k}"><option value="">Tutti</option>` +
-    opts.map(o => `<option value="${escapeHtml(o[0])}" ${fu[k] === o[0] ? 'selected' : ''}>${escapeHtml(o[1])}</option>`).join('') + '</select></div>';
+  const sel = (k, l, opts) => `<div class="field"><label>${l}</label><select data-cnt="${s}" data-utf="${k}"><option value="">Tutti</option>` +
+    opts.map(o => `<option value="${escapeHtml(o[0])}" ${st[k] === o[0] ? 'selected' : ''}>${escapeHtml(o[1])}</option>`).join('') + '</select></div>';
   const parti = [];
-  if(fu.gas) parti.push(nomeGas(fu.gas));
-  if(fu.marca) parti.push('marca ' + (fu.marca === '__none' ? NOMARCA : fu.marca));
-  if(fu.tipo) parti.push('tipo ' + fu.tipo);
-  const desc = parti.length ? parti.join(' · ') : 'tutte le unità terminali';
+  if(st.gas) parti.push(nomeGas(st.gas));
+  if(st.marca) parti.push('marca ' + (st.marca === NONE ? NOMARCA : st.marca));
+  if(st.tipo) parti.push('tipo ' + (st.tipo === NONE ? '(senza tipo)' : st.tipo));
+  const desc = parti.length ? parti.join(' · ') : (s === 'ut' ? 'tutte le unità terminali' : 'tutti i riduttori');
+  const nome = s === 'ut' ? 'unità terminali' : 'riduttori';
 
-  const t1 = tabella(sub.slice().sort((a, b) => (a.marca || '~').localeCompare(b.marca || '~', 'it')), pres, {
-    desc:[{h:'Marca', v:r => r.marca || NOMARCA}], key:r => r.marca, perField:'qta', metrics:['qta'], totLabel:'Totale'});
-  const t2 = tabella(sub.slice().sort((a, b) => a.tipo.localeCompare(b.tipo, 'it')), pres, {
-    desc:[{h:'Tipo', v:r => r.tipo || '—'}], key:r => r.tipo, perField:'qta', metrics:['qta'], totLabel:'Totale'});
-  const t3 = tabella(sub.slice().sort((a, b) => ordGas(a.gas, b.gas) || (a.marca || '~').localeCompare(b.marca || '~', 'it') || a.tipo.localeCompare(b.tipo, 'it')), pres, {
-    desc:[{h:'Gas', v:r => nomeGas(r.gas)}, {h:'Marca', v:r => r.marca || NOMARCA}, {h:'Tipo', v:r => r.tipo || '—'}],
+  const t1 = tabella(sub.slice().sort((a, b) => ord(a.marca, b.marca)), pres, {
+    desc:[{h:'Marca', v:r => lbM(r.marca)}], key:r => r.marca, perField:'qta', metrics:['qta'], totLabel:'Totale'});
+  const t2 = tabella(sub.slice().sort((a, b) => ord(a.tipo, b.tipo)), pres, {
+    desc:[{h:'Tipo', v:r => lbT(r.tipo)}], key:r => r.tipo, perField:'qta', metrics:['qta'], totLabel:'Totale'});
+  const t3 = tabella(sub.slice().sort((a, b) => ordGas(a.gas, b.gas) || ord(a.marca, b.marca) || ord(a.tipo, b.tipo)), pres, {
+    desc:[{h:'Gas', v:r => nomeGas(r.gas)}, {h:'Marca', v:r => lbM(r.marca)}, {h:'Tipo', v:r => lbT(r.tipo)}],
     key:r => r.gas + '|' + r.marca + '|' + r.tipo, perField:'qta', metrics:['qta'], totLabel:'Totale'});
 
   return `<div class="filters-grid no-print">${sel('gas', 'Gas', gasOpt)}${sel('marca', 'Marca', marcaOpt)}${sel('tipo', 'Tipo', tipoOpt)}
-      <div class="field"><label>&nbsp;</label><button class="btn btn-soft" data-utreset>↺ Azzera</button></div></div>
-    <div class="ut-tot"><b>${tot}</b> unità terminali — ${escapeHtml(desc)}</div>
+      <div class="field"><label>&nbsp;</label><button class="btn btn-soft" data-cntreset="${s}">↺ Azzera</button></div></div>
+    <div class="ut-tot"><b>${tot}</b> ${nome} — ${escapeHtml(desc)}</div>
     <div class="mini-grid">
       <div><div class="mini-t">Per marca</div>${t1}</div>
       <div><div class="mini-t">Per tipo</div>${t2}</div>
@@ -402,14 +409,15 @@ function utConteggi(ut, pres){
     <div class="mini-t">Per gas, marca e tipo</div>${t3}`;
 }
 document.addEventListener('change', e => {
-  const k = e.target.dataset && e.target.dataset.utf;
-  if(!k) return;
-  fu[k] = e.target.value;
+  const d = e.target.dataset;
+  if(!d || !d.utf || !d.cnt) return;
+  fu[d.cnt][d.utf] = e.target.value;
   render();
 });
 document.addEventListener('click', e => {
-  if(!e.target.closest('[data-utreset]')) return;
-  fu = {gas:'', marca:'', tipo:''};
+  const b = e.target.closest('[data-cntreset]');
+  if(!b) return;
+  fu[b.dataset.cntreset] = {gas:'', marca:'', tipo:''};
   render();
 });
 
@@ -450,13 +458,17 @@ function sezioni(rows, pres){
 
   /* 1b — unità terminali: conteggi per marca, tipo, gas */
   out.push({id:'s9', t:'🔢 Unità terminali — conteggi per marca, tipo e gas', h:'Quante unità terminali per marca, per tipo e per combinazione gas · marca · tipo. Scegli gas, marca e tipo per restringere i conteggi; valgono anche i filtri generali in alto.',
-    html: utConteggi(ut, pres)});
+    html: conteggi('ut', ut, pres)});
 
   /* 2 — riduttori: quantità e costo */
   out.push({id:'s2', t:'🎛️ Riduttori — quantità e costo', h:'Divisi per gas, codice, tipo e marca, con subtotale per gas.',
     html: tabella(rd.slice().sort(sortCosti), pres, {
       desc:descComuni(), key:r => r.gas + '|' + r.itemId + '|' + r.sost, sub:r => r.gas, subLabel:r => 'Totale ' + nomeGas(r.gas),
       perField:'qta', metrics:['qta', 'ciclo'], totLabel:'Totale riduttori'})});
+
+  /* 2b — riduttori: conteggi per marca, tipo, gas */
+  out.push({id:'s10', t:'🔢 Riduttori — conteggi per marca, tipo e gas', h:'Quanti riduttori per marca, per tipo e per combinazione gas · marca · tipo. Scegli gas, marca e tipo per restringere i conteggi; valgono anche i filtri generali in alto.',
+    html: conteggi('rd', rd, pres)});
 
   /* 3 — montanti */
   out.push({id:'s3', t:'🧭 Montanti — riduttori e prese alimentate', h:'Per ogni montante e gas: riduttori alimentati e unità terminali da essi servite. Dove non indicato a mano, le UT sono ripartite equamente tra i riduttori dello stesso gas del reparto.',
