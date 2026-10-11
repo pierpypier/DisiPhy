@@ -54,6 +54,8 @@
   .btn-danger{ background:var(--danger); color:#7a3b1f; }
   .btn-add{ background:#eaf6ec; color:#2f7a3d; }
   .btn-small{ padding:4px 9px; font-size:12px; }
+  .btn-xls{ background:#e8f0fe; color:#1a57b5; margin-left:6px; }
+  .add-wrap .btn{ margin-top:4px; }
 
   .sez-head{ display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
   .sez-head .section-title{ margin:0; }
@@ -75,7 +77,7 @@
 <div class="container">
 
   <nav class="travel-nav">
-    <a href="gas-listino.html" class="travel-nav-item"><div class="icon">📋</div><span class="lbl">Listino</span></a>
+    <a href="gas-catalogo.html" class="travel-nav-item"><div class="icon">📚</div><span class="lbl">Catalogo</span></a>
     <a href="gas-censimento.html" class="travel-nav-item"><div class="icon">🏥</div><span class="lbl">Censimento</span></a>
     <a href="gas-riepilogo.html" class="travel-nav-item active"><div class="icon">📊</div><span class="lbl">Riepilogo</span></a>
     <a href="gas-impostazioni.html" class="travel-nav-item"><div class="icon">⚙️</div><span class="lbl">Impostazioni</span></a>
@@ -90,7 +92,12 @@
     <div class="hint">Le prese ai posti letto. Il tipo di sostituzione scelto qui è il valore predefinito: nel censimento si può cambiare per la singola postazione.</div>
     <div id="emptyUt" class="empty-note" style="display:none;">Nessuna unità terminale in catalogo. Usa "Aggiungi unità terminale".</div>
     <div id="listaUt"></div>
-    <div class="add-wrap"><button class="btn btn-add" data-add="ut">➕ Aggiungi unità terminale</button></div>
+    <div class="add-wrap">
+      <button class="btn btn-add" data-add="ut">➕ Aggiungi unità terminale</button>
+      <button class="btn btn-xls" data-import="ut">📥 Importa da Excel</button>
+      <button class="btn btn-xls" data-export="ut">📤 Esporta</button>
+      <button class="btn btn-xls" data-modello="ut">📄 Modello</button>
+    </div>
   </div>
 
   <!-- RIDUTTORI -->
@@ -102,7 +109,12 @@
     <div class="hint">I riduttori che compongono i quadri di riduzione.</div>
     <div id="emptyRd" class="empty-note" style="display:none;">Nessun riduttore in catalogo. Usa "Aggiungi riduttore".</div>
     <div id="listaRd"></div>
-    <div class="add-wrap"><button class="btn btn-add" data-add="rd">➕ Aggiungi riduttore</button></div>
+    <div class="add-wrap">
+      <button class="btn btn-add" data-add="rd">➕ Aggiungi riduttore</button>
+      <button class="btn btn-xls" data-import="rd">📥 Importa da Excel</button>
+      <button class="btn btn-xls" data-export="rd">📤 Esporta</button>
+      <button class="btn btn-xls" data-modello="rd">📄 Modello</button>
+    </div>
   </div>
 
   <hr class="travel-nav-divider">
@@ -115,6 +127,8 @@
 
 </div>
 
+<input type="file" id="fileXls" accept=".xlsx,.xls,.csv" style="display:none">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
 const LS_CONFIG   = 'gas_config';
 const LS_CATALOGO = 'gas_catalogo';
@@ -295,6 +309,157 @@ document.addEventListener('input', onModifica);
 document.addEventListener('change', onModifica);
 
 document.querySelectorAll('[data-search]').forEach(inp => inp.addEventListener('input', () => applicaFiltro(inp.dataset.search)));
+
+/* ================= EXCEL: IMPORTA / ESPORTA =================
+   Intestazioni (riga 1) di ciascun foglio ("UT" e "RD"):
+   codice | descrizione | marca | gas | tipo | sostituzione | costoCompleto | costoKit | note
+   gas e tipo (UT) si scrivono come NOME; vengono convertiti negli id interni.
+   Chiave di aggiornamento: codice + marca (la voce esistente mantiene il suo id,
+   così il censimento non perde il riferimento). */
+const XLS_COLONNE = ['codice','descrizione','marca','gas','tipo','sostituzione','costoCompleto','costoKit','note'];
+const SOSTITUZIONI = ['completo','kit','entrambi'];
+
+function norm(s){ return String(s === null || s === undefined ? '' : s).trim().toLowerCase().replace(/[^a-z0-9]/g,''); }
+function xlsDisponibile(){
+  if(typeof XLSX === 'undefined'){ alert('Libreria Excel non caricata (serve connessione al primo utilizzo).'); return false; }
+  return true;
+}
+function leggiNumero(v){
+  if(typeof v === 'number') return isNaN(v) ? 0 : v;
+  let s = String(v === null || v === undefined ? '' : v).replace(/[€\s]/g,'');
+  if(!s) return 0;
+  if(s.includes(',') && s.includes('.')) s = s.replace(/\./g,'').replace(',','.');
+  else if(s.includes(',')) s = s.replace(',','.');
+  const n = parseFloat(s);
+  return isNaN(n) ? 0 : n;
+}
+function idDaNome(elenco, valore){
+  const k = norm(valore);
+  if(!k) return null;
+  const t = elenco.find(x => norm(x.nome) === k || norm(x.id) === k);
+  return t ? t.id : null;
+}
+function leggiSostituzione(v){
+  const k = norm(v);
+  if(!k) return 'completo';
+  if(SOSTITUZIONI.includes(k)) return k;
+  if(k === 'intero' || k.startsWith('solocompleta') || k.startsWith('solori') || k.startsWith('solointero')) return 'completo';
+  if(k === 'solokit') return 'kit';
+  return null;
+}
+function trovaFoglio(wb, sez){
+  const nome = wb.SheetNames.find(n => norm(n) === sez);
+  if(nome) return wb.Sheets[nome];
+  return wb.SheetNames.length === 1 ? wb.Sheets[wb.SheetNames[0]] : null;
+}
+
+function importaDaFile(sez, file){
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try{
+      const wb = XLSX.read(ev.target.result, {type:'array'});
+      const ws = trovaFoglio(wb, sez);
+      if(!ws){ alert('Nel file non trovo un foglio chiamato "'+sez.toUpperCase()+'".'); return; }
+      const righe = XLSX.utils.sheet_to_json(ws, {defval:'', raw:true});
+      if(!righe.length){ alert('Il foglio è vuoto.'); return; }
+
+      const gasEl = elencoGas(), tipiEl = elencoTipiUt();
+      const nuove = [], agg = [], errori = [];
+
+      righe.forEach((r0, i) => {
+        const r = {};
+        Object.keys(r0).forEach(k => { r[norm(k)] = r0[k]; });
+        const n = i + 2;
+        const codice = String(r.codice === undefined ? '' : r.codice).trim();
+        const descrizione = String(r.descrizione === undefined ? '' : r.descrizione).trim();
+        const marca = String(r.marca === undefined ? '' : r.marca).trim();
+        if(!codice && !descrizione && !marca) return;           // riga vuota
+
+        const gas = idDaNome(gasEl, r.gas);
+        if(!gas){ errori.push('Riga '+n+': gas "'+(r.gas||'')+'" non riconosciuto'); return; }
+        let tipo;
+        if(sez === 'ut'){
+          tipo = idDaNome(tipiEl, r.tipo);
+          if(!tipo){ errori.push('Riga '+n+': tipo "'+(r.tipo||'')+'" non riconosciuto'); return; }
+        } else {
+          tipo = String(r.tipo === undefined ? '' : r.tipo).trim();
+        }
+        const sost = leggiSostituzione(r.sostituzione);
+        if(!sost){ errori.push('Riga '+n+': sostituzione "'+r.sostituzione+'" non valida (usa completo, kit o entrambi)'); return; }
+
+        const dati = { codice, descrizione, marca, gas, tipo, sostituzione:sost,
+                       costoCompleto:leggiNumero(r.costocompleto), costoKit:leggiNumero(r.costokit),
+                       note:String(r.note === undefined ? '' : r.note) };
+        const esistente = codice ? lista(sez).find(x => norm(x.codice) === norm(codice) && norm(x.marca) === norm(marca)) : null;
+        if(esistente){ Object.assign(esistente, dati); agg.push(n); }
+        else {
+          const base = sez === 'ut' ? nuovaUt() : nuovoRd();
+          base.open = false;
+          lista(sez).push(Object.assign(base, dati));
+          nuove.push(n);
+        }
+      });
+
+      salva(LS_CATALOGO, catalogo);
+      render(sez); aggiornaDatalist();
+      let msg = 'Importazione completata.\nAggiunte: '+nuove.length+'\nAggiornate: '+agg.length+'\nScartate: '+errori.length;
+      if(errori.length) msg += '\n\n' + errori.slice(0,15).join('\n') + (errori.length > 15 ? '\n…' : '');
+      alert(msg);
+    }catch(err){
+      alert('Impossibile leggere il file: ' + err.message);
+    }
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+function righeExport(sez){
+  const gasEl = elencoGas(), tipiEl = elencoTipiUt();
+  const righe = lista(sez).map(it => ({
+    codice:it.codice, descrizione:it.descrizione, marca:it.marca,
+    gas:(gasEl.find(g => g.id === it.gas) || {nome:''}).nome,
+    tipo: sez === 'ut' ? (tipiEl.find(t => t.id === it.tipo) || {nome:''}).nome : it.tipo,
+    sostituzione:it.sostituzione, costoCompleto:it.costoCompleto, costoKit:it.costoKit, note:it.note
+  }));
+  return righe;
+}
+function foglioDa(sez, righe){
+  const ws = XLSX.utils.json_to_sheet(righe, {header:XLS_COLONNE});
+  ws['!cols'] = [14,28,16,18,14,14,14,12,30].map(w => ({wch:w}));
+  return ws;
+}
+function scaricaCartella(nomeFile, fogli){
+  const wb = XLSX.utils.book_new();
+  fogli.forEach(f => XLSX.utils.book_append_sheet(wb, f.ws, f.nome));
+  XLSX.writeFile(wb, nomeFile);
+}
+
+let sezioneImport = null;
+document.addEventListener('click', e => {
+  const imp = e.target.closest('[data-import]');
+  const exp = e.target.closest('[data-export]');
+  const mod = e.target.closest('[data-modello]');
+  if(!imp && !exp && !mod) return;
+  if(!xlsDisponibile()) return;
+  if(imp){ sezioneImport = imp.dataset.import; const f = document.getElementById('fileXls'); f.value = ''; f.click(); return; }
+  if(exp){
+    const sez = exp.dataset.export;
+    scaricaCartella('gas-catalogo-'+sez+'.xlsx', [{nome:sez.toUpperCase(), ws:foglioDa(sez, righeExport(sez))}]);
+    return;
+  }
+  scaricaCartella('gas-catalogo-modello.xlsx', [
+    {nome:'UT', ws:foglioDa('ut', [esempio('ut')])},
+    {nome:'RD', ws:foglioDa('rd', [esempio('rd')])}
+  ]);
+});
+function esempio(sez){
+  return { codice:'ESEMPIO-001', descrizione: sez==='ut' ? 'Completamento' : 'Riduttore di II stadio',
+           marca:'Marca', gas:'Ossigeno', tipo: sez==='ut' ? 'UNI' : '10→4 bar',
+           sostituzione:'completo', costoCompleto:0, costoKit:0, note:'' };
+}
+document.getElementById('fileXls').addEventListener('change', e => {
+  const f = e.target.files && e.target.files[0];
+  if(f && sezioneImport) importaDaFile(sezioneImport, f);
+});
 
 window.addEventListener('DOMContentLoaded', () => {
   const dl1 = document.createElement('datalist'); dl1.id = 'marche';
