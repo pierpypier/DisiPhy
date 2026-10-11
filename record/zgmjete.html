@@ -49,8 +49,8 @@ let Q=LV[lv],best=0;
 const bkey=()=>lv==2?SK:SK+'_'+lv;
 function loadBest(){best=0;try{best=+localStorage.getItem(bkey())||0}catch(e){}}
 loadBest();
-const N=['Cagliari','Roma','Napoli','Firenze','Venezia','Milano','Berna','Parigi','Barcellona','Monaco','Amsterdam','Atene','Santorini','Mosca','Dubai','Hong Kong','Tokyo','New York','Londra','Copenaghen','Sydney','Il Cairo','San Paolo','Los Angeles','Nuova Delhi','Catania'];
-const G='gggggggggggssgsugugggsussg',GC={g:'#6f9a4a',s:'#d6bb78',u:'#7b8791'},RXS=[58,160,262],RL=760;
+const N=['Cagliari','Roma','Napoli','Firenze','Venezia','Milano','Berna','Parigi','Barcellona','Monaco','Amsterdam','Atene','Santorini','Mosca','Dubai','Hong Kong','Tokyo','New York','Londra','Copenaghen','Sydney','Il Cairo','San Paolo','Los Angeles','Nuova Delhi','Catania','Torino','Bologna','Genova','Palermo','Pisa','Lisbona','Praga','Istanbul','Rio de Janeiro','Pechino','Vienna','Berlino','Budapest','Edimburgo','Singapore','Bangkok','Città del Capo','Buenos Aires','San Francisco','Marrakech','Verona','Siena','Matera','Bari','Trieste','Madrid','Mumbai','Seul','Toronto','Bruxelles','Alghero','Lecce','Assisi','Ravenna','Siracusa','Reykjavik','Petra','Kyoto','Machu Picchu','Città del Messico'];
+const G='gggggggggggssgsugugggsussg'+'ggusgggggs'+'gggggggggs'+'ggsggsgggg'+'ggggsusggg',GC={g:'#6f9a4a',s:'#d6bb78',u:'#7b8791'},RXS=[58,160,262],RL=760;
 const cols=[[58,128,220],[24,104,176],[84,152,64],[220,186,104],[226,238,248]];
 const TH=[['c','c','c'],['c','b','b','b'],['c','t','t','t','l'],['p','p','p','l'],['f','f','f','l']];
 const R=(c,x,y,w,h)=>{X.fillStyle=c;X.fillRect(x,y,w,h)};
@@ -89,15 +89,95 @@ const LM=[
 (x,y)=>{R('#8a98a8',x-30,y-6,60,3);L2('#e0e8f0',3,x-8,y-6,x+8,y-46);L2('#e0e8f0',3,x+8,y-6,x-8,y-46);for(let i=1;i<4;i++){L2('#aab',1,x,y-40,x-i*9,y-6);L2('#aab',1,x,y-40,x+i*9,y-6)}},
 (x,y)=>{P('#a08a50',x-32,y,x-8,y-20,x+32,y);T('HOLLYWOOD',x,y-22,'#fff',6);L2('#7a5a2a',2,x-28,y,x-28,y-18);for(let i=0;i<5;i++)L2('#2f8a2f',2,x-28,y-18,x-28+Math.cos(i*1.3)*8,y-18+Math.sin(i*1.3)*6-3)},
 (x,y)=>{R('#d8a878',x-14,y-30,28,30);R('#c89868',x-17,y-35,34,5);R('#3a2a20',x-6,y-20,12,20);D('#3a2a20',x,y-20,6);R('#e8a030',x-1,y-42,2,7)},
-(x,y)=>{P('#4a4440',x-34,y,x,y-36,x+34,y);P('#ff4a1a',x-4,y-33,x+4,y-33,x+1,y-20);O('#bbb',x+4,y-42,6,.6);O('#aaa',x+10,y-50,8,.4);R('#6a6a6a',x+16,y-9,11,9);R('#6a6a6a',x+26,y-7,2,6);R('#ddd',x+25,y-4,1,3)}];
+(x,y)=>{P('#4a4440',x-34,y,x,y-36,x+34,y);P('#ff4a1a',x-4,y-33,x+4,y-33,x+1,y-20);O('#bbb',x+4,y-42,6,.6);O('#aaa',x+10,y-50,8,.4);R('#6a6a6a',x+16,y-9,11,9);R('#6a6a6a',x+26,y-7,2,6);R('#ddd',x+25,y-4,1,3)},
+// 26 Torino - Mole Antonelliana
+(x,y)=>{R('#d8c8a0',x-13,y-12,26,12);for(let i=0;i<5;i++)R('#a89870',x-11+i*5,y-10,2,10);R('#c8b890',x-9,y-26,18,14);R('#d8c8a0',x-11,y-28,22,3);P('#6a8a70',x-9,y-28,x,y-40,x+9,y-28);R('#d8c8a0',x-4,y-40,8,6);P('#6a8a70',x-4,y-40,x,y-47,x+4,y-40);R('#8a8a7a',x-1,y-64,2,18);O('#ffd040',x,y-66,1.8)},
+// 27 Bologna - Due Torri
+(x,y)=>{R('#b89868',x-16,y-4,36,4);P('#b85a3c',x-11,y-4,x-10,y-58,x-1,y-58,x,y-4);R('#8a3a28',x-12,y-62,12,5);for(let i=0;i<4;i++)R('#3a2018',x-7,y-14-i*10,2,4);P('#c8683e',x+4,y-4,x+9,y-36,x+18,y-33,x+13,y-4);P('#8a3a28',x+8,y-39,x+19,y-35,x+18,y-32,x+9,y-35);R('#3a2018',x+11,y-18,2,4);R('#3a2018',x+11,y-27,2,4)},
+// 28 Genova - Lanterna
+(x,y)=>{R('#2a7ac0',x-30,y-3,60,3);R('#8a7a60',x-16,y-9,32,6);R('#a09070',x-12,y-12,24,4);R('#e8e0c8',x-6,y-32,12,22);R('#d8d0b8',x-4,y-44,8,12);R('#e8e0c8',x-7,y-46,14,3);O('#ffe080',x,y-52,7,.25);R('#fff4b0',x-2,y-54,4,8);P('#8a5a3a',x-4,y-54,x,y-60,x+4,y-54);R('#3a3a3a',x-1,y-26,2,5);R('#3a3a3a',x-1,y-40,2,3)},
+// 29 Palermo - Teatro Massimo
+(x,y)=>{R('#e8d8b0',x-26,y-12,52,12);for(let i=0;i<6;i++)R('#f4ecd0',x-22+i*8,y-10,3,10);P('#d8c898',x-26,y-12,x,y-22,x+26,y-12);D('#6aa090',x,y-22,10);R('#e8d8b0',x-2,y-36,4,4);O('#6aa090',x,y-38,2);PM(x+32,y)},
+// 30 Pisa - Torre pendente e Duomo
+(x,y)=>{R('#e8e0c8',x+4,y-14,26,14);P('#b8603a',x+3,y-14,x+17,y-20,x+31,y-14);for(let i=0;i<5;i++)R('#9a9078',x+7+i*5,y-10,2,10);X.save();X.translate(x-8,y);X.rotate(.1);for(let i=0;i<8;i++){R('#f4f0e4',-7,-7-i*6,14,6);R('#b8b09a',-5,-5-i*6,2,4);R('#b8b09a',-1,-5-i*6,2,4);R('#b8b09a',3,-5-i*6,2,4)}R('#d8d0b8',-5,-57,10,5);R('#6a6a6a',-4,-55,8,2);X.restore()},
+// 31 Lisbona - Torre di Belem
+(x,y)=>{R('#2a7ac0',x-30,y-3,60,3);R('#e8dcc0',x-16,y-14,32,11);for(let i=0;i<5;i++)R('#e8dcc0',x-16+i*7,y-17,4,3);R('#efe4c8',x-7,y-36,14,22);for(let i=0;i<3;i++)R('#c8a870',x-4+i*4,y-30,2,5);R('#efe4c8',x-8,y-40,16,4);D('#d8c8a0',x-7,y-40,3);D('#d8c8a0',x+7,y-40,3);P('#d8c8a0',x-3,y-40,x,y-47,x+3,y-40);R('#c04a3a',x,y-54,1,7);P('#c04a3a',x+1,y-54,x+7,y-52,x+1,y-50)},
+// 32 Praga - Chiesa di Tyn
+(x,y)=>{R('#7a7468',x-16,y-22,32,22);P('#6a6458',x-16,y-22,x,y-34,x+16,y-22);R('#8a8478',x-18,y-46,9,46);R('#8a8478',x+9,y-46,9,46);P('#2a3a3a',x-19,y-46,x-13.5,y-66,x-8,y-46);P('#2a3a3a',x+8,y-46,x+13.5,y-66,x+19,y-46);for(let i=0;i<3;i++){R('#2a2a2a',x-15,y-40+i*10,2,5);R('#2a2a2a',x+12,y-40+i*10,2,5)}O('#ffd040',x-13.5,y-68,1.8);O('#ffd040',x+13.5,y-68,1.8)},
+// 33 Istanbul - Santa Sofia
+(x,y)=>{R('#d8b890',x-20,y-14,40,14);D('#c8a880',x-12,y-14,9);D('#c8a880',x+12,y-14,9);D('#8a9aa0',x,y-16,14);R('#d8b030',x-1,y-34,2,4);[-27,27].forEach(m=>{R('#efe8d8',x+m-2,y-40,4,40);R('#b8a888',x+m-3,y-28,6,2);P('#8a9aa0',x+m-3,y-40,x+m,y-48,x+m+3,y-40)});R('#6a4a30',x-1,y-9,3,9)},
+// 34 Rio de Janeiro - Cristo Redentore
+(x,y)=>{P('#3a6a3a',x-32,y,x,y-32,x+32,y);P('#4a8a4a',x-4,y-26,x,y-32,x+12,y-14);R('#cfcfcf',x-4,y-36,8,5);R('#fff',x-1.5,y-52,3,17);O('#fff',x,y-54,2.4);R('#fff',x-12,y-49,24,3);O('#fff',x+16,y-40,5,.4)},
+// 35 Pechino - Tempio del Cielo
+(x,y)=>{R('#e8e0d0',x-24,y-4,48,4);R('#f0e8d8',x-19,y-8,38,4);R('#f4ecdc',x-14,y-12,28,4);R('#b83a2a',x-9,y-22,18,10);P('#2a5ab0',x-17,y-22,x-8,y-30,x+8,y-30,x+17,y-22);P('#2a5ab0',x-12,y-30,x-6,y-37,x+6,y-37,x+12,y-30);P('#2a5ab0',x-8,y-37,x-3,y-44,x+3,y-44,x+8,y-37);R('#ffd040',x-.5,y-52,1,6);O('#ffd040',x,y-47,2.2)},
+// 36 Vienna - Stephansdom
+(x,y)=>{R('#b8aa90',x-26,y-14,34,14);P('#c8883a',x-27,y-14,x-20,y-28,x+4,y-28,x+10,y-14);for(let i=0;i<5;i++)L2('#3a8a8a',1.5,x-22+i*6,y-27,x-19+i*6,y-16);R('#b8aa90',x+8,y-40,12,40);R('#a89a80',x+7,y-42,14,3);P('#a89a80',x+7,y-42,x+14,y-70,x+21,y-42);R('#3a3a3a',x+12,y-30,3,6);R('#3a3a3a',x+12,y-18,3,6);R('#ddd',x+13.5,y-76,1,6)},
+// 37 Berlino - Porta di Brandeburgo
+(x,y)=>{R('#e8e0c8',x-28,y-4,56,4);for(let i=0;i<6;i++)R('#f0e8d0',x-24+i*9.5,y-30,5,26);R('#d8d0b8',x-28,y-36,56,6);R('#e8e0c8',x-14,y-42,28,6);R('#7a9a6a',x-9,y-48,18,6);for(let i=0;i<4;i++)O('#7a9a6a',x-7+i*4.6,y-51,2.4);R('#7a9a6a',x+7,y-57,2,9);O('#7a9a6a',x+8,y-58,2)},
+// 38 Budapest - Parlamento
+(x,y)=>{R('#2a7ac0',x-32,y-3,64,3);R('#e8e0d0',x-28,y-16,56,13);for(let i=0;i<10;i++)R('#9a8a70',x-26+i*5.6,y-12,2,8);P('#d8d0c0',x-28,y-16,x-22,y-24,x-16,y-16);P('#d8d0c0',x+16,y-16,x+22,y-24,x+28,y-16);R('#e8e0d0',x-8,y-26,16,12);D('#c8402a',x,y-26,9);P('#d8d0c0',x-2,y-35,x,y-50,x+2,y-35);O('#ffd040',x,y-51,1.5);[-20,20].forEach(d=>P('#d8d0c0',x+d-2,y-24,x+d,y-34,x+d+2,y-24))},
+// 39 Edimburgo - Castello
+(x,y)=>{P('#6a6a62',x-30,y,x-24,y-22,x+22,y-22,x+30,y);R('#8a8a80',x-20,y-38,36,16);for(let i=0;i<7;i++)R('#8a8a80',x-20+i*5.3,y-41,3,3);R('#7a7a70',x-8,y-52,14,14);for(let i=0;i<3;i++)R('#7a7a70',x-8+i*5,y-55,3,3);R('#222',x-3,y-46,4,5);R('#222',x-14,y-34,3,5);R('#222',x+8,y-34,3,5);R('#ddd',x+6,y-62,1,10);P('#2a4a9a',x+7,y-62,x+14,y-60,x+7,y-58)},
+// 40 Singapore - Marina Bay Sands
+(x,y)=>{R('#2a7ac0',x-30,y-3,60,3);R('#9ab4c8',x-22,y-44,10,44);R('#a8c0d4',x-5,y-46,10,46);R('#8aa4b8',x+12,y-44,10,44);for(let j=0;j<5;j++){R('#e8f4ff',x-20,y-38+j*8,6,2);R('#e8f4ff',x-3,y-40+j*8,6,2);R('#e8f4ff',x+14,y-38+j*8,6,2)}R('#dfe8ee',x-28,y-50,58,4);P('#dfe8ee',x+30,y-50,x+36,y-52,x+30,y-46);for(let i=0;i<5;i++)O('#3a8a3a',x-14+i*7,y-52,2.5)},
+// 41 Bangkok - Wat Arun
+(x,y)=>{R('#e8e0d0',x-24,y-6,48,6);P('#f4ecdc',x-12,y-6,x-4,y-50,x+4,y-50,x+12,y-6);R('#c8b898',x-9,y-18,18,2);R('#c8b898',x-7,y-30,14,2);R('#c8b898',x-5,y-40,10,2);P('#f4ecdc',x-4,y-50,x,y-62,x+4,y-50);R('#d8b030',x-.5,y-70,1,8);[-20,20].forEach(d=>{P('#efe8d8',x+d-5,y-6,x+d-1.5,y-26,x+d+1.5,y-26,x+d+5,y-6);P('#efe8d8',x+d-1.5,y-26,x+d,y-33,x+d+1.5,y-26)});for(let i=0;i<3;i++)O('#4a9a8a',x,y-12-i*11,1.6)},
+// 42 Citta del Capo - Table Mountain
+(x,y)=>{P('#6a7a58',x-32,y,x-24,y-30,x-18,y-34,x+18,y-34,x+26,y-30,x+32,y);P('#8a8a6a',x-18,y-34,x+18,y-34,x+20,y-28,x-20,y-28);for(let i=0;i<5;i++)L2('#5a6a48',1,x-24+i*10,y-28,x-26+i*11,y-4);O('#fff',x-12,y-37,6,.55);O('#fff',x,y-39,8,.6);O('#fff',x+13,y-37,6,.55)},
+// 43 Buenos Aires - Obelisco
+(x,y)=>{R('#9a9aa0',x-20,y-3,40,3);P('#f0f0f4',x-5,y-3,x-2.5,y-58,x+2.5,y-58,x+5,y-3);P('#d8d8e0',x+1,y-3,x+2.5,y-58,x+5,y-3);P('#f0f0f4',x-2.5,y-58,x,y-66,x+2.5,y-58);R('#556',x-1,y-52,2,3);O('#3a8a3a',x-18,y-7,5);O('#3a8a3a',x+18,y-7,5)},
+// 44 San Francisco - Golden Gate
+(x,y)=>{R('#2a7ac0',x-32,y-3,64,4);R('#c0402a',x-32,y-16,64,3);[-18,18].forEach(d=>{R('#c0402a',x+d-2,y-48,4,46);R('#c0402a',x+d-4,y-36,8,2);R('#c0402a',x+d-4,y-26,8,2)});X.strokeStyle='#c0402a';X.lineWidth=1.5;X.beginPath();X.moveTo(x-32,y-16);X.lineTo(x-18,y-48);X.quadraticCurveTo(x,y-20,x+18,y-48);X.lineTo(x+32,y-16);X.stroke();for(let i=-12;i<=12;i+=4)L2('#c0402a',.7,x+i,y-16,x+i,y-34-i*i*14/324);O('#fff',x-24,y-40,7,.35);O('#fff',x+22,y-34,6,.3)},
+// 45 Marrakech - Koutoubia
+(x,y)=>{R('#c8905a',x-8,y-44,16,44);R('#b8804a',x-8,y-44,3,44);R('#a8703a',x-9,y-46,18,3);R('#2a8a7a',x-8,y-34,16,2);R('#b8804a',x-4,y-54,8,8);D('#a8703a',x,y-54,4);O('#e0b030',x,y-59,1.5);O('#e0b030',x,y-62,1.1);for(let j=0;j<4;j++){R('#6a3a1a',x-3,y-40+j*9,2,5);R('#6a3a1a',x+2,y-40+j*9,2,5)}PM(x+22,y);PM(x-22,y)},
+// 46 Verona - Arena
+(x,y)=>{R('#e0c8a0',x-30,y-20,60,20);R('#e0c8a0',x-30,y-28,24,8);E('#c8a878',x,y-21,26,4);E('#a88858',x,y-21,20,2.5);for(let r=0;r<2;r++)for(let i=0;i<9;i++){R('#7a5a3a',x-27+i*6.2,y-6-r*8,3.6,5);D('#7a5a3a',x-25.2+i*6.2,y-6-r*8,1.8)}for(let i=0;i<4;i++){R('#7a5a3a',x-28+i*6,y-26,3,4);D('#7a5a3a',x-26.5+i*6,y-26,1.5)}},
+// 47 Siena - Torre del Mangia e Palazzo Pubblico
+(x,y)=>{R('#c06a40',x-30,y-16,34,16);for(let i=0;i<7;i++)R('#c06a40',x-30+i*5,y-19,3,3);for(let i=0;i<6;i++)R('#4a2a1a',x-27+i*5.4,y-12,2,6);R('#b85a38',x+4,y-52,9,52);R('#e8d8b8',x+2,y-62,13,10);for(let i=0;i<4;i++)R('#e8d8b8',x+2+i*3.5,y-65,2,3);R('#222',x+7,y-58,3,4);R('#4a2a1a',x+7,y-44,2,5);R('#4a2a1a',x+7,y-30,2,5)},
+// 48 Matera - Sassi
+(x,y)=>{P('#9a7a4a',x-31,y,x-24,y-14,x-12,y-28,x+8,y-36,x+24,y-22,x+31,y);[[6,-26,10,9],[5,-18,20,9],[2,-6,30,9]].forEach(([n,x0,yy,st])=>{for(let i=0;i<n;i++){R('#d8b878',x+x0+i*st,y-yy,8,7);R('#4a2a1a',x+x0+2+i*st,y-yy+3,3,4);D('#4a2a1a',x+x0+3.5+i*st,y-yy+3,1.5)}})},
+// 49 Bari - Basilica di San Nicola
+(x,y)=>{R('#e8dcc0',x-18,y-26,36,26);P('#d8ccb0',x-18,y-26,x,y-38,x+18,y-26);R('#e8dcc0',x-24,y-38,12,38);R('#e8dcc0',x+12,y-38,12,38);R('#d8ccb0',x-25,y-41,14,3);R('#d8ccb0',x+11,y-41,14,3);R('#6a5a3a',x-20,y-30,3,6);R('#6a5a3a',x+17,y-30,3,6);R('#6a5a3a',x-20,y-18,3,6);R('#6a5a3a',x+17,y-18,3,6);O('#c8b890',x,y-24,6);O('#8a7a5a',x,y-24,4);R('#4a3a2a',x-3,y-12,6,12);D('#4a3a2a',x,y-12,3)},
+// 50 Trieste - Castello di Miramare
+(x,y)=>{R('#2a7ac0',x-32,y-3,64,3);R('#8a8a78',x-26,y-8,52,5);R('#f4f0e4',x-20,y-24,36,16);for(let i=0;i<8;i++)R('#f4f0e4',x-20+i*4.6,y-27,3,3);R('#f4f0e4',x+8,y-42,12,22);for(let i=0;i<3;i++)R('#f4f0e4',x+8+i*4.5,y-45,3,3);R('#6a7a8a',x+12,y-34,3,6);R('#6a7a8a',x-14,y-18,3,6);R('#6a7a8a',x-4,y-18,3,6);R('#6a7a8a',x+2,y-18,3,6)},
+// 51 Madrid - Puerta de Alcala
+(x,y)=>{R('#e8e0d0',x-30,y-24,60,24);R('#d8d0c0',x-30,y-26,60,3);P('#e8e0d0',x-10,y-26,x,y-34,x+10,y-26);R('#d8d0c0',x-3,y-31,6,4);R('#3a3a3a',x-6,y-14,12,14);D('#3a3a3a',x,y-14,6);[-19,19].forEach(d=>{R('#3a3a3a',x+d-4,y-12,8,12);D('#3a3a3a',x+d,y-12,4)});[-12,12].forEach(d=>R('#c8c0b0',x+d-1.5,y-24,3,22))},
+// 52 Mumbai - Gateway of India
+(x,y)=>{R('#2a7ac0',x-30,y-3,60,4);R('#b89058',x-20,y-8,40,5);R('#d8b068',x-17,y-34,34,26);R('#3a2a1a',x-7,y-22,14,14);D('#3a2a1a',x,y-22,7);D('#c8a050',x,y-34,10);[-16,16].forEach(d=>{R('#d8b068',x+d-3,y-42,6,10);D('#c8a050',x+d,y-42,3)})},
+// 53 Seul - N Seoul Tower
+(x,y)=>{P('#4a8a3a',x-30,y,x-10,y-18,x+14,y-18,x+30,y);R('#c8c8d0',x-1.5,y-48,3,30);E('#d8d8e0',x,y-44,7,3.5);R('#e0e0e8',x-4,y-46,8,5);R('#a8a8b0',x-.5,y-62,1,14);R('#d33',x-.5,y-64,1,3);O('#2a6a2a',x-20,y-8,5);O('#2a6a2a',x+20,y-8,5)},
+// 54 Toronto - CN Tower
+(x,y)=>{R('#2a7ac0',x-30,y-3,60,3);R('#7a8aa0',x-24,y-14,8,11);R('#8a9ab0',x+14,y-18,9,15);P('#c8c8d0',x-5,y-3,x-1.2,y-48,x+1.2,y-48,x+5,y-3);E('#d0d0d8',x,y-44,7,4);E('#e8e8f0',x-1,y-45,3,1.5);R('#a8a8b0',x-1,y-68,2,22);R('#d33',x-1,y-70,2,3)},
+// 55 Bruxelles - Atomium
+(x,y)=>{const S=[[0,-60],[-16,-45],[16,-45],[0,-34],[-16,-20],[16,-20],[0,-8]],Lk=[[0,1],[0,2],[1,3],[2,3],[3,4],[3,5],[4,6],[5,6],[0,3],[3,6],[1,4],[2,5]];Lk.forEach(([a,b])=>L2('#9aa4b0',3,x+S[a][0],y+S[a][1],x+S[b][0],y+S[b][1]));S.forEach(([d,e])=>{O('#c8d0d8',x+d,y+e,6.5);O('#fff',x+d-2,y+e-2,2,.7)})},
+// 56 Alghero - Bastioni e torre
+(x,y)=>{R('#2a7ac0',x-32,y-3,64,3);R('#c8a070',x-30,y-16,60,13);for(let i=0;i<10;i++)R('#c8a070',x-30+i*6.3,y-19,3.5,3);R('#b89060',x-30,y-5,60,2);R('#d0a878',x+8,y-34,18,31);for(let i=0;i<5;i++)R('#d0a878',x+8+i*4,y-37,2.6,3);R('#4a2a1a',x+14,y-26,4,6);R('#4a2a1a',x+14,y-14,4,6);R('#4a2a1a',x-22,y-12,3,5);R('#4a2a1a',x-8,y-12,3,5)},
+// 57 Lecce - Basilica di Santa Croce
+(x,y)=>{R('#e0c488',x-22,y-34,44,34);R('#d0b478',x-22,y-36,44,3);P('#d0b478',x-22,y-36,x,y-46,x+22,y-36);for(let i=0;i<6;i++)O('#c8a868',x-14+i*5.6,y-34,1.2);for(let i=0;i<5;i++)R('#c8a868',x-20+i*9,y-30,2,26);R('#3a2a1a',x-4,y-14,8,14);D('#3a2a1a',x,y-14,4);O('#c8a868',x,y-24,7);O('#a88848',x,y-24,5);O('#e0c488',x,y-24,2);R('#6a4a28',x-16,y-12,4,8);R('#6a4a28',x+12,y-12,4,8)},
+// 58 Assisi - Basilica di San Francesco
+(x,y)=>{P('#5a8a4a',x-32,y,x-20,y-12,x+32,y-8,x+34,y);R('#d8b8a0',x-28,y-20,56,12);for(let i=0;i<8;i++){R('#8a6a5a',x-25+i*6.8,y-16,4,6);D('#8a6a5a',x-23+i*6.8,y-16,2)}R('#e0c8b0',x-10,y-32,24,12);P('#d0b8a0',x-11,y-32,x+2,y-38,x+15,y-32);O('#b89888',x+2,y-27,3);R('#e0c8b0',x+16,y-48,8,28);P('#c8a888',x+15,y-48,x+20,y-56,x+25,y-48);R('#6a5a4a',x+19,y-42,2,6)},
+// 59 Ravenna - San Vitale
+(x,y)=>{R('#b86a48',x-18,y-14,36,14);R('#a85a38',x-18,y-14,36,2);R('#c87a52',x-12,y-28,24,14);D('#8a4a30',x,y-28,12);R('#c87a52',x-2,y-44,4,5);P('#8a4a30',x-3,y-44,x,y-50,x+3,y-44);R('#3a2018',x-9,y-9,3,6);R('#3a2018',x+6,y-9,3,6);R('#3a2018',x-6,y-24,3,6);R('#3a2018',x+3,y-24,3,6);R('#3a2018',x-1,y-24,2,6)},
+// 60 Siracusa - Tempio di Apollo
+(x,y)=>{R('#c8b890',x-26,y-4,52,4);for(let i=0;i<6;i++){const h=i==3?13:26;R('#d8c8a0',x-24+i*9,y-4-h,5,h);if(i!=3)R('#c8b890',x-25+i*9,y-4-h-2,7,3)}R('#d8c8a0',x-26,y-36,34,5);P('#d0c098',x-26,y-36,x-6,y-45,x+8,y-36)},
+// 61 Reykjavik - Hallgrimskirkja
+(x,y)=>{R('#e8e8ee',x-4,y-58,8,58);P('#e8e8ee',x-4,y-58,x,y-68,x+4,y-58);R('#e0e0e8',x-8,y-40,4,40);R('#e0e0e8',x-12,y-28,4,28);R('#e0e0e8',x-16,y-18,4,18);R('#e0e0e8',x-20,y-10,4,10);R('#e0e0e8',x+4,y-40,4,40);R('#e0e0e8',x+8,y-28,4,28);R('#e0e0e8',x+12,y-18,4,18);R('#e0e0e8',x+16,y-10,4,10);R('#9ab0c8',x-1.5,y-50,3,8);R('#9ab0c8',x-1.5,y-34,3,8);R('#ccc',x-.5,y-74,1,6);R('#ccc',x-2,y-72,4,1)},
+// 62 Petra - Al-Khazneh
+(x,y)=>{P('#b86a4a',x-30,y,x-30,y-52,x+30,y-52,x+30,y);R('#d08a68',x-18,y-46,36,46);R('#c07a58',x-18,y-46,36,3);for(let i=0;i<4;i++)R('#e0a080',x-16+i*10,y-30,4,24);R('#e0a080',x-6,y-44,12,14);D('#d08a68',x,y-44,6);R('#e0a080',x-5,y-38,2,8);R('#e0a080',x+3,y-38,2,8);O('#c07a58',x,y-52,2);R('#2a1a10',x-4,y-18,8,18);D('#2a1a10',x,y-18,4)},
+// 63 Kyoto - Kinkaku-ji
+(x,y)=>{R('#2a7ac0',x-30,y-3,60,5);R('#e8c038',x-16,y-14,32,10);R('#d8a828',x-18,y-14,36,2);R('#e8c038',x-12,y-26,24,10);R('#d8a828',x-14,y-26,28,2);R('#e8c038',x-8,y-36,16,9);P('#4a3a2a',x-10,y-36,x,y-44,x+10,y-36);O('#e8c038',x,y-46,2);R('#7a4a1a',x-12,y-10,24,3);O('#2a6a2a',x-24,y-10,6);O('#2a6a2a',x+24,y-8,5)},
+// 64 Machu Picchu - Huayna Picchu
+(x,y)=>{P('#4a7a4a',x-30,y,x-6,y-52,x+4,y-56,x+30,y);P('#3a6a3a',x+4,y-56,x+30,y,x+10,y);for(let i=0;i<4;i++)L2('#8aaa6a',1.5,x-24+i*5,y-6-i*8,x+22-i*5,y-6-i*8);O('#fff',x+8,y-52,6,.5)},
+// 65 Citta del Messico - Angelo dell'Indipendenza
+(x,y)=>{R('#c8c0b0',x-14,y-4,28,4);R('#d8d0c0',x-10,y-8,20,4);R('#e8e0d0',x-5,y-12,10,4);R('#e8e0d0',x-3,y-48,6,36);R('#c8c0b0',x-4,y-52,8,5);O('#e8c030',x,y-58,3);R('#e8c030',x-1,y-64,2,7);P('#e8c030',x-1,y-60,x-9,y-66,x-1,y-56);P('#e8c030',x+1,y-60,x+9,y-66,x+1,y-56)}];
 // ---- Stato
 const k={l:0,r:0,u:0,d:0};let st='title',sc=0,lives=2,fuel=80,ice=0,off=0,shield=0,inv=0,legs=0,t=0,msg='',msgT=0,aud=null;
 let SA=0,SS=0,from=0,ni=1,RS=1,oy=150,v=0,tt=0,sa=1,sp=100,ps=1,gp=0,pb=0,pax=0,np=0,prog=0,DT=30,dur=[],seq=[],th=0,app=0,warn=0,bgc=cols[0].slice(),dec=[],en=[],tk=[],pt=[],tkT=1,enT=4,dT=0,why='',pdir=1,tl=-1;
 const pl={x:160,y:400};
 function beep(f,d,ty,vv){try{if(!aud)return;const n=aud.currentTime,o=aud.createOscillator(),g=aud.createGain();o.type=ty||'square';o.frequency.setValueAtTime(f,n);o.frequency.exponentialRampToValueAtTime(Math.max(30,f*.4),n+d);g.gain.setValueAtTime(vv||.03,n);g.gain.exponentialRampToValueAtTime(.001,n+d);o.connect(g);g.connect(aud.destination);o.start();o.stop(n+d)}catch(e){}}
 const say=(m,s=1.6)=>{msg=m;msgT=s};
-function newRoute(){do ni=rnd()*26|0;while(ni==SA);RS=rnd()*3|0;seq=[];dur=[];DT=0;let p=-1;for(let i=0;i<5;i++){let q;do q=rnd()*5|0;while(q==p);p=q;seq.push(q);const d=Q.d0+rnd()*Q.dv;dur.push(d);DT+=d}}
-function start(){Q=LV[lv];sc=0;lives=Q.lives;fuel=Q.fs;ice=off=shield=0;legs=0;SA=rnd()*26|0;SS=rnd()*3|0;oy=150;pl.x=RXS[SS];pl.y=400;ps=1;pdir=-1;pax=0;np=90+rnd()*110|0;pb=0;gp=1;dec=[];en=[];tk=[];pt=[];newRoute();st='gnd';say('BENVENUTO A BORDO!')}
+function newRoute(){do ni=rnd()*N.length|0;while(ni==SA);RS=rnd()*3|0;seq=[];dur=[];DT=0;let p=-1;for(let i=0;i<5;i++){let q;do q=rnd()*5|0;while(q==p);p=q;seq.push(q);const d=Q.d0+rnd()*Q.dv;dur.push(d);DT+=d}}
+function start(){Q=LV[lv];sc=0;lives=Q.lives;fuel=Q.fs;ice=off=shield=0;legs=0;SA=rnd()*N.length|0;SS=rnd()*3|0;oy=150;pl.x=RXS[SS];pl.y=400;ps=1;pdir=-1;pax=0;np=90+rnd()*110|0;pb=0;gp=1;dec=[];en=[];tk=[];pt=[];newRoute();st='gnd';say('BENVENUTO A BORDO!')}
 function takeoff(){from=SA;st='back';th=seq[0];bgc=cols[th].slice();prog=0;app=warn=0;dec=[];en=[];tk=[];tkT=2;enT=2;sa=1;ps=1;legs++}
 function land(){if(st!='fly'||!app)return;const ly=400-oy;if(ly>RL+380)return;if(ly>RL)return die('FUORI PISTA: ATTERRATO TROPPO PRESTO');if(ly<RL*.75)return die('FUORI PISTA: ATTERRATO TROPPO TARDI');if(Math.abs(pl.x-RXS[SS])>27)return die('FUORI PISTA: NON ALLINEATO');st='land';sc+=100;say('ATTERRAGGIO PERFETTO! +100')}
 function die(r){if(st=='dead')return;st='dead';why=r;beep(90,.8,'sawtooth',.06);for(let i=0;i<40;i++){const a=rnd()*6.3,s=30+rnd()*90;pt.push({x:pl.x,y:pl.y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,l:.6+rnd()*.8,c:['#ff9a1a','#ffd040','#fff','#c33'][i%4]})}if(sc>best){best=sc;try{localStorage.setItem(bkey(),String(best))}catch(e){}}}
@@ -132,7 +212,7 @@ function jet(x,y,s,c,w,down){X.save();X.translate(x,y);if(typeof down=='number')
 const EC=[['#f0d060','#d0a030'],['#7ac0f8','#3070c0'],['#f09aa8','#c04060'],['#a0e8b0','#40a060']];
 function dr(d){const s=d.s,x=d.x,y=d.y;if(d.k=='b'){R('#6a3a1a',x-6,y,12,4);P('#fff',x,y-9,x+6,y,x,y);O('#fff',x,y+9,3,.5);O('#fff',x,y+14,2,.3)}else if(d.k=='t'){O('#1d4a1d',x+2,y+2,7*s);O('#3a8a30',x,y,7*s);O('#58aa48',x-2,y-2,3*s)}else if(d.k=='l'){E('#e8e0b0',x,y,24*s,14*s);E('#2a74c0',x,y,22*s,12*s);E('#4a94e0',x-3,y-2,12*s,6*s)}else if(d.k=='p'){O('#7a5a2a',x,y,2);for(let i=0;i<6;i++)L2('#2f8a2f',3,x,y,x+Math.cos(i*1.05)*10*s,y+Math.sin(i*1.05)*10*s)}else if(d.k=='f'){P('#1f5a35',x-8*s,y+8*s,x,y-12*s,x+8*s,y+8*s);P('#2d7a48',x-6*s,y+3*s,x,y-12*s,x+6*s,y+3*s);P('#fff',x-3*s,y-6*s,x,y-12*s,x+3*s,y-6*s)}}
 function cloud(d){const s=d.s,x=d.x,y=d.y;O('#fff',x,y,14*s,.26);O('#fff',x+12*s,y+3,10*s,.26);O('#fff',x-12*s,y+4,9*s,.26);O('#fff',x,y,8*s,.3)}
-const ENV='shshwumusmwhsfdsmsussduhus',PAL='AAAAAABBABBCCBEEEEBBEDEDDA',WB='#2a7ac0';
+const ENV='shshwumusmwhsfdsmsussduhus'+'mhssusussm'+'uuuhsususd'+'uhhsshsmsf'+'shhfsmdfmm',PAL='AAAAAABBABBCCBEEEEBBEDEDDA'+'DABDAAACBB'+'BBABEDBBBD'+'AADCBAEEEB'+'DDBACBDBDD',WB='#2a7ac0';
 const WC={A:['#efe3cc','#d9a77f','#e6c568','#e8b898'],B:['#c4ccd6','#b8a89a','#d8d0c0','#a8b8c8'],C:['#fff','#f4f0e8','#fff','#e8eef8'],D:['#d8b878','#c8a060','#e0c890','#b89058'],E:['#5a7a9a','#4a6a8a','#6a8aaa','#7a9ab8']},RF={A:'#b8442e',B:'#4a5a6a'};
 const sr=(n,ci)=>{const z=Math.sin(n*127.1+ci*311.7)*43758.5;return z-Math.floor(z)};
 const SC=(c,w,x,y,r,a=0,b=7)=>{X.strokeStyle=c;X.lineWidth=w;X.beginPath();X.arc(x,y,r,a,b);X.stroke()};
@@ -163,7 +243,87 @@ const SUB=[
 (x,y)=>{R('#d02a2a',x-26,y-24,52,5);R('#d02a2a',x-26,y-24,4,24);R('#d02a2a',x+22,y-24,4,24);R('#9ac0d8',x-20,y-19,40,12)},
 (x,y)=>{SC('#fff',2,x,y-22,16);for(let i=0;i<4;i++)L2('#fff',1,x+Math.cos(i*.78)*16,y-22+Math.sin(i*.78)*16,x-Math.cos(i*.78)*16,y-22-Math.sin(i*.78)*16);L2('#fff',2,x,y-22,x-8,y);L2('#fff',2,x,y-22,x+8,y);PM(x+26,y);PM(x-26,y)},
 (x,y)=>{P('#c8603a',x-7,y,x-3,y-52,x+3,y-52,x+7,y);R('#a8482a',x-6,y-18,12,2);R('#a8482a',x-5,y-34,10,2);R('#e8d0a0',x-5,y-52,10,3);R('#e8d0a0',x-2,y-56,4,5)},
-(x,y)=>{R('#5a5a5e',x-15,y-22,30,22);P('#d8d0c0',x-15,y-22,x,y-33,x+15,y-22);for(let i=0;i<3;i++)R('#d8d0c0',x-10+i*8,y-18,4,14);D('#c8c0b0',x,y-22,6)}];
+(x,y)=>{R('#5a5a5e',x-15,y-22,30,22);P('#d8d0c0',x-15,y-22,x,y-33,x+15,y-22);for(let i=0;i<3;i++)R('#d8d0c0',x-10+i*8,y-18,4,14);D('#c8c0b0',x,y-22,6)},
+// 26 Torino - Basilica di Superga
+(x,y)=>{P('#4a8a3a',x-28,y,x-6,y-10,x+28,y);R('#e8dcc0',x-12,y-24,24,14);for(let i=0;i<4;i++)R('#fff8e8',x-10+i*6,y-22,3,10);P('#d8cca8',x-13,y-24,x,y-29,x+13,y-24);D('#8a7a60',x,y-29,8);R('#e8dcc0',x-1,y-40,2,4)},
+// 27 Bologna - Santuario di San Luca
+(x,y)=>{P('#4a8a3a',x-30,y,x-6,y-12,x+30,y);R('#e8c8a0',x-14,y-24,28,12);for(let i=0;i<5;i++)R('#c89a70',x-12+i*6,y-20,3,8);D('#b8503a',x,y-24,8);R('#e8c8a0',x-1,y-35,2,4);R('#b8503a',x-15,y-12,30,2)},
+// 28 Genova - Galeone
+(x,y)=>{R(WB,x-28,y-3,56,5);P('#6a3a1a',x-20,y-12,x+20,y-12,x+14,y-3,x-14,y-3);R('#8a5a2a',x-18,y-14,36,3);R('#4a2a10',x-1,y-42,2,30);R('#4a2a10',x-14,y-32,2,20);R('#4a2a10',x+12,y-30,2,18);P('#f4f0e4',x+1,y-40,x+11,y-32,x+1,y-24);P('#f4f0e4',x-1,y-40,x-11,y-32,x-1,y-24);P('#f4f0e4',x-12,y-30,x-5,y-26,x-12,y-20);R('#c83a2a',x+1,y-46,6,3)},
+// 29 Palermo - Monte Pellegrino
+(x,y)=>{P('#8a7a5a',x-30,y,x-10,y-34,x+4,y-30,x+30,y);P('#a89a7a',x-10,y-34,x+4,y-30,x-2,y-10);P('#6a5a3a',x-14,y-20,x-10,y-34,x-6,y-20);R('#f0e8d0',x-8,y-39,8,5);R('#c8402a',x-5,y-42,1,3);PM(x-28,y-2);PM(x+26,y-2)},
+// 30 Pisa - Battistero
+(x,y)=>{R('#f0ead8',x-14,y-14,28,14);for(let i=0;i<7;i++)R('#c8c0a8',x-12+i*4,y-12,1.5,12);R('#e8e0c8',x-14,y-17,28,3);D('#e8e0c8',x,y-17,12);for(let i=0;i<4;i++)L2('#c8b890',1,x,y-29,x-10+i*6.5,y-18);O('#d8c8a0',x,y-31,2.5);R('#c8b890',x-1,y-36,2,5)},
+// 31 Lisbona - Ponte 25 de Abril
+(x,y)=>{R(WB,x-30,y-3,60,4);R('#8a8a90',x-30,y-12,60,3);R('#c83a2a',x-16,y-40,3,28);R('#c83a2a',x+13,y-40,3,28);R('#c83a2a',x-17,y-28,5,2);R('#c83a2a',x+12,y-28,5,2);X.strokeStyle='#c83a2a';X.lineWidth=1.5;X.beginPath();X.moveTo(x-30,y-12);X.lineTo(x-14.5,y-40);X.quadraticCurveTo(x,y-26,x+14.5,y-40);X.lineTo(x+30,y-12);X.stroke();for(let i=-10;i<=10;i+=5)L2('#c83a2a',.7,x+i,y-12,x+i,y-26-i*i/14)},
+// 32 Praga - Ponte Carlo
+(x,y)=>{R(WB,x-30,y-3,60,4);R('#7a7468',x-24,y-12,48,4);for(let i=0;i<5;i++)R('#6a6458',x-22+i*11,y-8,4,6);R('#6a6458',x-30,y-26,8,26);P('#2a3a3a',x-31,y-26,x-26,y-38,x-21,y-26);R('#6a6458',x+22,y-20,8,20);P('#2a3a3a',x+21,y-20,x+26,y-30,x+31,y-20);for(let i=0;i<4;i++)R('#222',x-14+i*9,y-17,2,5)},
+// 33 Istanbul - Torre di Galata
+(x,y)=>{R('#c8b898',x-7,y-40,14,40);R('#b8a888',x-9,y-40,18,3);R('#c8b898',x-8,y-46,16,6);P('#5a6a70',x-9,y-46,x,y-60,x+9,y-46);R('#3a3a3a',x-1,y-30,2,5);R('#3a3a3a',x-1,y-18,2,5);R('#3a3a3a',x-1,y-8,2,6);O('#d8b030',x,y-61,1.5)},
+// 34 Rio de Janeiro - Pan di Zucchero
+(x,y)=>{R(WB,x-30,y-3,60,4);D('#8a8a7e',x-6,y-2,20);D('#5a9a4a',x-6,y-14,8);D('#5a8a4a',x+18,y-2,11);L2('#222',1,x-6,y-22,x+18,y-13);R('#d33',x+4,y-20,4,3)},
+// 35 Pechino - Grande Muraglia
+(x,y)=>{R('#8a8a7e',x-30,y-12,60,12);for(let i=0;i<10;i++)R('#8a8a7e',x-30+i*6.5,y-15,3.5,3);R('#7a7a6e',x-22,y-26,14,14);P('#a04a2a',x-24,y-26,x-15,y-32,x-6,y-26);R('#7a7a6e',x+8,y-26,14,14);P('#a04a2a',x+6,y-26,x+15,y-32,x+24,y-26);R('#222',x-17,y-22,4,3);R('#222',x+13,y-22,4,3)},
+// 36 Vienna - Riesenrad
+(x,y)=>{SC('#b8402a',2,x,y-26,22);SC('#b8402a',1,x,y-26,12);for(let i=0;i<8;i++){const a=i*.785;L2('#b8402a',1,x+Math.cos(a)*22,y-26+Math.sin(a)*22,x-Math.cos(a)*22,y-26-Math.sin(a)*22);R(i%2?'#e8c040':'#c83a2a',x+Math.cos(a)*22-2,y-26+Math.sin(a)*22-2,5,5)}L2('#8a2a1a',2,x,y-26,x-12,y);L2('#8a2a1a',2,x,y-26,x+12,y)},
+// 37 Berlino - Fernsehturm
+(x,y)=>{R('#8a8a90',x-9,y-1,18,1);P('#b8b8be',x-4,y,x-1.2,y-40,x+1.2,y-40,x+4,y);O('#d0d0d8',x,y-40,8);O('#e8e8f0',x-2,y-42,3);R('#a8a8b0',x-.8,y-60,1.6,14);R('#c83a2a',x-.8,y-62,1.6,4)},
+// 38 Budapest - Ponte delle Catene
+(x,y)=>{R(WB,x-32,y-3,64,4);R('#9a9a8a',x-32,y-12,64,3);[-14,14].forEach(d=>{R('#d8d0b8',x+d-4,y-34,8,32);R('#c8c0a8',x+d-5,y-36,10,3)});X.strokeStyle='#444';X.lineWidth=1.2;X.beginPath();X.moveTo(x-32,y-12);X.lineTo(x-14,y-35);X.quadraticCurveTo(x,y-22,x+14,y-35);X.lineTo(x+32,y-12);X.stroke();for(let i=-8;i<=8;i+=4)L2('#444',.6,x+i,y-12,x+i,y-28.5-i*i*6.5/196)},
+// 39 Edimburgo - Scott Monument
+(x,y)=>{R('#4a4a4a',x-12,y-2,24,2);R('#5a5a52',x-10,y-16,20,14);P('#4a4a42',x-8,y-16,x-4,y-40,x+4,y-40,x+8,y-16);P('#4a4a42',x-4,y-40,x,y-64,x+4,y-40);P('#4a4a42',x-9,y-16,x-11,y-30,x-6,y-16);P('#4a4a42',x+9,y-16,x+11,y-30,x+6,y-16);R('#6a6a60',x-8,y-24,16,2);R('#6a6a60',x-6,y-32,12,2);R('#222',x-1,y-12,2,6)},
+// 40 Singapore - Supertree Grove
+(x,y)=>{[[-18,34],[0,44],[18,30]].forEach(([d,h])=>{P('#6a5a4a',x+d-2,y,x+d-1,y-h,x+d+1,y-h,x+d+2,y);E('#2a9a5a',x+d,y-h-2,11,5);E('#4aba7a',x+d,y-h-4,8,3);O('#e84a9a',x+d-4,y-h-2,1.5);O('#f0c030',x+d+3,y-h-3,1.5)})},
+// 41 Bangkok - Grand Palace
+(x,y)=>{R('#f0e8d0',x-16,y-10,32,10);R('#c83a2a',x-16,y-12,32,3);P('#e8b830',x-9,y-12,x-5,y-34,x+5,y-34,x+9,y-12);R('#c8982a',x-7,y-20,14,2);R('#c8982a',x-6,y-27,12,2);P('#e8b830',x-5,y-34,x,y-52,x+5,y-34);O('#fff',x,y-53,1.4);P('#c83a2a',x-24,y-10,x-19,y-18,x-14,y-10);P('#c83a2a',x+14,y-10,x+19,y-18,x+24,y-10)},
+// 42 Citta del Capo - Faro di Cape Point
+(x,y)=>{R(WB,x-30,y-2,60,4);P('#7a6a58',x-30,y,x-26,y-14,x+10,y-14,x+16,y);R('#f4f0e4',x-4,y-34,8,20);R('#c83a2a',x-4,y-28,8,4);R('#444',x-6,y-36,12,2);P('#c83a2a',x-3,y-36,x,y-42,x+3,y-36);O('#ffe080',x,y-34,6,.25)},
+// 43 Buenos Aires - Casa Rosada
+(x,y)=>{R('#e8a0a8',x-28,y-20,56,20);R('#f0b0b8',x-8,y-26,16,26);R('#c07880',x-28,y-22,56,2);for(let i=0;i<7;i++)if(i!=3)R('#9ac0d8',x-24+i*7,y-16,3,7);R('#c87880',x-3,y-10,6,10);R('#f4f0e4',x-1,y-36,2,10);R('#6ab8e8',x+1,y-36,6,2)},
+// 44 San Francisco - Alcatraz
+(x,y)=>{R(WB,x-30,y-3,60,5);P('#8a8a78',x-24,y,x-18,y-8,x+18,y-8,x+26,y);R('#c8c0a8',x-14,y-18,28,10);R('#b0a890',x-14,y-20,28,3);for(let i=0;i<5;i++)R('#4a4a4a',x-12+i*5.5,y-15,2,4);R('#e8e0d0',x+12,y-30,5,12);P('#c83a2a',x+11,y-30,x+14.5,y-35,x+18,y-30)},
+// 45 Marrakech - Atlante
+(x,y)=>{P('#8a6a4a',x-32,y,x-16,y-34,x,y);P('#7a5a3a',x-10,y,x+8,y-44,x+30,y);P('#fff',x-20,y-26,x-16,y-34,x-12,y-26);P('#fff',x+3,y-33,x+8,y-44,x+13,y-33);PM(x-26,y);PM(x+28,y)},
+// 46 Verona - Torre dei Lamberti
+(x,y)=>{R('#b8603a',x-7,y-34,14,34);R('#d8c8a8',x-7,y-12,14,2);R('#d8c8a8',x-6,y-52,12,18);P('#6a7a8a',x-7,y-52,x,y-62,x+7,y-52);O('#fff',x,y-26,3);O('#333',x,y-26,1);R('#222',x-2,y-46,4,6)},
+// 47 Siena - Duomo
+(x,y)=>{D('#d8d0c0',x+8,y-30,9);R('#f0ece0',x-16,y-26,32,26);for(let i=0;i<6;i++)R('#2a2a2a',x-16,y-24+i*4,32,1.5);P('#f0ece0',x-16,y-26,x,y-38,x+16,y-26);O('#c84a3a',x,y-22,4);O('#fff',x,y-22,1.5);R('#3a2a1a',x-8,y-10,4,10);R('#3a2a1a',x-2,y-10,4,10);R('#3a2a1a',x+4,y-10,4,10)},
+// 48 Matera - Cattedrale
+(x,y)=>{P('#8a7a5a',x-26,y,x-14,y-10,x+16,y-10,x+28,y);R('#d8c8a0',x-14,y-26,22,16);P('#c8b890',x-15,y-26,x-3,y-34,x+9,y-26);O('#a89868',x-3,y-20,3);R('#d8c8a0',x+10,y-44,8,34);R('#c8b890',x+9,y-46,10,3);P('#a08850',x+10,y-46,x+14,y-54,x+18,y-46);R('#3a2a1a',x+13,y-40,2,6);R('#3a2a1a',x-5,y-16,4,6)},
+// 49 Bari - Castello Svevo
+(x,y)=>{R('#c8b890',x-24,y-16,48,16);R('#b8a880',x-28,y-24,10,24);R('#b8a880',x+18,y-24,10,24);R('#d8c8a0',x-8,y-28,16,12);for(let i=0;i<8;i++)R('#c8b890',x-24+i*6,y-19,3,3);R('#b8a880',x-28,y-27,3,3);R('#b8a880',x-22,y-27,3,3);R('#b8a880',x+19,y-27,3,3);R('#b8a880',x+25,y-27,3,3);R(WB,x-30,y-2,60,3);R('#4a3a2a',x-3,y-9,6,9);D('#4a3a2a',x,y-9,3)},
+// 50 Trieste - Faro della Vittoria
+(x,y)=>{R('#e8e0d0',x-10,y-8,20,8);R('#d8d0c0',x-6,y-14,12,6);R('#e8e0d0',x-4,y-48,8,34);R('#c8c0b0',x-5,y-50,10,3);R('#fff4b0',x-3,y-56,6,6);P('#8a9a8a',x-3,y-56,x,y-62,x+3,y-56);R('#6a8a7a',x-1,y-70,2,8);R('#6a8a7a',x-5,y-68,10,2)},
+// 51 Madrid - Palazzo Reale
+(x,y)=>{R('#e8e0d0',x-28,y-18,56,18);for(let i=0;i<10;i++)R('#c8c0b0',x-25+i*5.5,y-16,2,12);R('#d8d0c0',x-28,y-22,56,4);for(let i=0;i<14;i++)R('#e8e0d0',x-28+i*4,y-26,2,4);P('#d8d0c0',x-12,y-22,x,y-32,x+12,y-22)},
+// 52 Mumbai - Haji Ali
+(x,y)=>{R(WB,x-30,y-2,60,4);R('#a8a8a0',x-30,y-4,24,2);R('#f4f4ee',x-6,y-16,18,12);D('#f4f4ee',x+3,y-16,8);R('#e8e8e0',x-10,y-30,3,26);R('#e8e8e0',x+13,y-30,3,26);D('#d8d8d0',x-8.5,y-30,2.5);D('#d8d8d0',x+14.5,y-30,2.5);R('#2a8a6a',x-1,y-26,2,4)},
+// 53 Seul - Gyeongbokgung
+(x,y)=>{R('#b8b8b0',x-26,y-4,52,4);R('#a8a8a0',x-22,y-8,44,4);for(let i=0;i<6;i++)R('#b83a2a',x-18+i*7,y-22,3,14);R('#7a5a3a',x-20,y-24,40,3);P('#3a4a5a',x-30,y-26,x-22,y-24,x+22,y-24,x+30,y-26,x+22,y-32,x-22,y-32);R('#b83a2a',x-12,y-34,24,2);P('#3a4a5a',x-22,y-36,x-16,y-34,x+16,y-34,x+22,y-36,x+16,y-42,x-16,y-42)},
+// 54 Toronto - Rogers Centre
+(x,y)=>{R('#8a8a90',x-24,y-6,48,6);D('#b8b8c0',x,y-6,24);SC('#9a9aa2',1,x,y-6,16,Math.PI,0);SC('#9a9aa2',1,x,y-6,8,Math.PI,0);R('#d33',x+14,y-12,2,6)},
+// 55 Bruxelles - Municipio
+(x,y)=>{R('#c8c0a8',x-26,y-22,40,22);for(let i=0;i<7;i++){R('#6a6a60',x-23+i*5.5,y-18,2,6);R('#6a6a60',x-23+i*5.5,y-9,2,5)}P('#8a8a80',x-27,y-22,x-6,y-30,x+15,y-22);R('#c8c0a8',x-9,y-42,8,20);R('#b8b098',x-10,y-46,10,5);P('#b8b098',x-9,y-46,x-5,y-68,x-1,y-46);O('#e8c030',x-5,y-70,1.6);R('#444',x-6,y-38,2,4)},
+// 56 Alghero - Capo Caccia
+(x,y)=>{R(WB,x-32,y-3,64,4);P('#a89870',x-30,y,x-24,y-18,x-6,y-26,x+22,y-24,x+28,y);R('#f4f0e4',x+4,y-40,5,15);P('#c83a2a',x+3,y-40,x+6.5,y-45,x+10,y-40);R('#222',x+5,y-34,2,3)},
+// 57 Lecce - Campanile
+(x,y)=>{R('#e0c488',x-8,y-24,16,24);R('#d8bc80',x-7,y-38,14,14);R('#e0c488',x-5,y-50,10,12);R('#d8bc80',x-3.5,y-58,7,8);P('#b89868',x-4,y-58,x,y-66,x+4,y-58);R('#3a2a1a',x-1.5,y-18,3,7);R('#3a2a1a',x-1.5,y-34,3,5);R('#3a2a1a',x-1,y-46,2,5)},
+// 58 Assisi - Santa Maria degli Angeli
+(x,y)=>{D('#a89888',x,y-24,16);R('#c8b8a8',x-3,y-44,6,6);R('#e8dcc8',x-18,y-14,36,14);P('#d8ccb8',x-18,y-14,x,y-24,x+18,y-14);R('#c8bca8',x-3,y-10,6,10);R('#e8c030',x-1,y-30,2,6);O('#e8c030',x,y-31,1.6)},
+// 59 Ravenna - Sant'Apollinare in Classe
+(x,y)=>{R('#b86a48',x-22,y-18,26,18);P('#8a4a30',x-23,y-18,x-9,y-28,x+5,y-18);R('#3a2018',x-12,y-10,6,10);R('#c07a52',x+10,y-46,10,46);R('#d08a60',x+9,y-48,12,3);P('#8a4a30',x+9,y-48,x+15,y-56,x+21,y-48);R('#3a2018',x+13,y-40,2,5);R('#3a2018',x+13,y-28,2,5)},
+// 60 Siracusa - Teatro Greco
+(x,y)=>{D('#d8d0c0',x,y,28);D('#c8c0b0',x,y,22);D('#b8b0a0',x,y,16);D('#a8a090',x,y,10);D('#7a9a6a',x,y,5);for(let i=0;i<=6;i++){const a=Math.PI+i*.5236;L2('#a89880',1,x+Math.cos(a)*5,y+Math.sin(a)*5,x+Math.cos(a)*28,y+Math.sin(a)*28)}},
+// 61 Reykjavik - Harpa
+(x,y)=>{R(WB,x-30,y-2,60,3);for(let i=0;i<8;i++)R(['#4aa8c8','#6ac8a8','#3a88b8','#8ad8c8'][i%4],x-26+i*6.5,y-24+(i%2)*3,6,22-(i%2)*3)},
+// 62 Petra - Siq
+(x,y)=>{P('#a85a3a',x-30,y,x-30,y-46,x-18,y-40,x-8,y-20,x-5,y);P('#a85a3a',x+30,y,x+30,y-46,x+18,y-40,x+8,y-20,x+5,y);P('#d8b078',x-5,y,x+5,y,x+1,y-24,x-1,y-24);L2('#8a4a2a',1,x-26,y-10,x-8,y-16);L2('#8a4a2a',1,x+26,y-12,x+8,y-18);L2('#8a4a2a',1,x-26,y-26,x-14,y-30)},
+// 63 Kyoto - Fushimi Inari
+(x,y)=>{P('#a89870',x-18,y,x-6,y-34,x+6,y-34,x+18,y);for(let i=4;i>=0;i--){const s2=1-i*.15,yy=y-i*7;R('#c83a2a',x-12*s2,yy-24*s2,3*s2,24*s2);R('#c83a2a',x+9*s2,yy-24*s2,3*s2,24*s2);R('#c83a2a',x-14*s2,yy-26*s2,28*s2,3*s2);R('#222',x-13*s2,yy-28*s2,26*s2,2*s2)}},
+// 64 Machu Picchu - Rovine
+(x,y)=>{P('#6a9a5a',x-30,y,x-20,y-8,x+20,y-8,x+30,y);for(let i=0;i<3;i++){R('#a8a090',x-20+i*14,y-18,10,10);P('#c8a860',x-21+i*14,y-18,x-15+i*14,y-26,x-9+i*14,y-18)}L2('#8aaa6a',1.5,x-28,y-4,x+28,y-4);R('#e8e0d0',x+20,y-14,6,4);R('#e8e0d0',x+25,y-18,2,5);R('#e8e0d0',x+20,y-10,1.5,4);R('#e8e0d0',x+24,y-10,1.5,4)},
+// 65 Citta del Messico - Piramide
+(x,y)=>{for(let i=0;i<5;i++)R(i%2?'#b89868':'#c8a878',x-28+i*4.5,y-7*(i+1),56-i*9,7);P('#e0c898',x-6,y,x-2,y-35,x+2,y-35,x+6,y);R('#c8a878',x-6,y-42,12,7)}];
 function bld(x,y,ci,n){const p=PAL[ci],e=p=='E',h=e?22+sr(n,ci)*30|0:14+sr(n,ci)*14|0,w=e?20:22;R('#0003',x+3,y-2,w,4);R(WC[p][n%4],x,y-h,w,h);if(e){for(let j=4;j<h-3;j+=6)for(let i=3;i<w-4;i+=6)R('#bfe4ff',x+i,y-h+j,3,3);R('#2a3a4a',x,y-h,w,2)}else{R('#0004',x+w-4,y-h,4,h);R('#5a4a3a',x+w/2-2,y-7,4,7);R('#8ab',x+3,y-h+5,4,4);R('#8ab',x+w-9,y-h+5,4,4);if(p=='C')D(n%2?'#2a6ac0':'#f4f0e8',x+w/2,y-h,7);else if(p=='D')R('#a07040',x-1,y-h-2,w+2,3);else P(RF[p],x-2,y-h,x+w/2,y-h-8,x+w+2,y-h)}}
 function env(e,a,b,fr,y,ci){const w=b-a,r=n=>sr(n,ci),T1=(i,k,s)=>dr({k,x:a+r(i)*w,y:y+10+r(i+50)*500,s:s||1.1});
 if(e=='s'){const bw=w>200?60:28,bx=fr?b-bw:a;R(WB,bx,y-300,bw,1100);R('#e8d8a0',fr?bx-12:a+bw,y-300,12,1100);for(let l=-280;l<540;l+=30)R('#bfe4ff',bx+4+r(l)*(bw-14),y+l,10,2);for(let i=0;i<7;i++){const l=30+i*75;O(['#e04a3a','#f0c030','#3a8ae0'][i%3],fr?bx-6:a+bw+6,y+l,4.5);R('#fff',bx+8+r(i)*(bw-20),y+l+20,9,3)}for(let i=0;i<5;i++)T1(i+9,'t',.9)}
