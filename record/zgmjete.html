@@ -31,26 +31,26 @@ canvas{flex:1;min-height:0;width:100%;object-fit:contain;image-rendering:pixelat
 </style></head><body>
 <div id="top"><a id="back" href="zgmjetf.html" tabindex="-1">Mode F</a><button id="mb">Livelli</button></div>
 <canvas id="c" width="320" height="480"></canvas>
-<div id="menu"><h1>FLY LINE</h1><p class="y">Vola da città a città</p><p>Raccogli C=carburante, *=antigelo, radar, scudi e vite. Evita gli aerei!</p><p class="c">L = atterra (nella zona verde) · F = decolla</p><p class="y">SCEGLI IL LIVELLO</p><div id="lvs"></div><p id="lvd" class="c"></p><button id="go">VOLA!</button><p id="rec"></p></div>
+<div id="menu"><h1>FLY LINE</h1><p class="y">Vola da città a città</p><p>Raccogli C=carburante, *=antigelo, radar, scudi e quota (voli sopra il traffico). Evita gli aerei!</p><p class="c">L = atterra (nella zona verde) · F = decolla</p><p class="y">SCEGLI IL LIVELLO</p><div id="lvs"></div><p id="lvd" class="c"></p><button id="go">VOLA!</button><p id="rec"></p></div>
 <div id="pad"><div id="cross"><button class="u" data-k="u">▲</button><button class="l" data-k="l">◀</button><button class="r" data-k="r">▶</button><button class="d" data-k="d">▼</button></div>
 <div id="act"><button id="bL">L</button><button id="bF">F</button></div></div>
 <script>
 (()=>{
 const cv=document.getElementById('c'),X=cv.getContext('2d'),W=320,H=480,rnd=Math.random,SK='skyliner_best';
 const LV=[
-{n:'PRINCIPIANTE',d0:8,dv:3,fr:1.4,fs:100,gf:60,fb:35,ti:.7,tv:.8,ei:1.8,ev:1.6,es:.7,ir:.5,lives:4,desc:'Voli brevi · 4 vite · carburante abbondante · pochi aerei lenti'},
-{n:'FACILE',d0:11,dv:3,fr:1.8,fs:90,gf:50,fb:30,ti:.9,tv:1,ei:1.3,ev:1.4,es:.85,ir:.75,lives:3,desc:'Voli medio-brevi · 3 vite · molti gettoni · aerei rari'},
-{n:'MEDIO',d0:14,dv:4,fr:2.3,fs:80,gf:45,fb:25,ti:1.1,tv:1.3,ei:.7,ev:1,es:1,ir:1,lives:2,desc:'Voli standard · 2 vite · gettoni regolari · traffico normale'},
-{n:'ESPERTO',d0:17,dv:4,fr:2.5,fs:75,gf:40,fb:24,ti:1.4,tv:1.2,ei:.55,ev:.8,es:1.15,ir:1.2,lives:2,desc:'Voli lunghi · 2 vite · gettoni più rari · traffico intenso'},
-{n:'DIFFICILE',d0:19,dv:4,fr:2.7,fs:70,gf:35,fb:23,ti:1.5,tv:1.3,ei:.42,ev:.65,es:1.3,ir:1.4,lives:1,desc:'Voli lunghi · 1 sola vita · poco carburante · aerei veloci'},
-{n:'DIFFICILISSIMO',d0:21,dv:5,fr:2.8,fs:65,gf:30,fb:22,ti:1.6,tv:1.4,ei:.3,ev:.5,es:1.5,ir:1.7,lives:1,desc:'Voli lunghissimi · 1 sola vita · gettoni rarissimi · aerei velocissimi e fitti'}];
+{n:'PRINCIPIANTE',d0:8,dv:3,fr:1.4,fs:100,gf:60,fb:35,ti:.7,tv:.8,ei:2.4,ev:2,es:.6,ir:.5,qd:6,qp:.2,desc:'Voli brevi · quota 6s frequente · carburante abbondante · pochi aerei lenti'},
+{n:'FACILE',d0:11,dv:3,fr:1.8,fs:90,gf:50,fb:30,ti:.9,tv:1,ei:1.6,ev:1.5,es:.8,ir:.75,qd:6,qp:.15,desc:'Voli medio-brevi · quota 6s · molti gettoni · aerei rari'},
+{n:'MEDIO',d0:14,dv:4,fr:2.3,fs:80,gf:45,fb:25,ti:1.1,tv:1.3,ei:.9,ev:1.1,es:.95,ir:1,qd:5,qp:.1,desc:'Voli standard · quota 5s · gettoni regolari · traffico normale'},
+{n:'ESPERTO',d0:17,dv:4,fr:2.5,fs:75,gf:40,fb:24,ti:1.4,tv:1.2,ei:.6,ev:.85,es:1.1,ir:1.2,qd:5,qp:.07,desc:'Voli lunghi · quota 5s · gettoni più rari · traffico intenso'},
+{n:'DIFFICILE',d0:19,dv:4,fr:2.7,fs:70,gf:35,fb:23,ti:1.5,tv:1.3,ei:.42,ev:.65,es:1.3,ir:1.4,qd:4,qp:.05,desc:'Voli lunghi · quota 4s rara · poco carburante · aerei veloci'},
+{n:'DIFFICILISSIMO',d0:21,dv:5,fr:2.8,fs:65,gf:30,fb:22,ti:1.6,tv:1.4,ei:.3,ev:.5,es:1.5,ir:1.7,qd:4,qp:.03,desc:'Voli lunghissimi · quota 4s rarissima · gettoni rarissimi · aerei velocissimi e fitti'}];
 const LK='skyliner_lv';let lv=2;try{lv=Math.max(0,Math.min(LV.length-1,+localStorage.getItem(LK)))}catch(e){}if(isNaN(lv))lv=2;
 let Q=LV[lv],best=0;
 const bkey=()=>lv==2?SK:SK+'_'+lv;
 function loadBest(){best=0;try{best=+localStorage.getItem(bkey())||0}catch(e){}}
 loadBest();
-const N=['Cagliari','Roma','Napoli','Firenze','Venezia','Milano','Berna','Parigi','Barcellona','Monaco','Amsterdam','Atene','Santorini','Mosca','Dubai','Hong Kong','Tokyo','New York','Londra','Copenaghen','Sydney','Il Cairo','San Paolo','Los Angeles','Nuova Delhi','Catania','Torino','Bologna','Genova','Palermo','Pisa','Lisbona','Praga','Istanbul','Rio de Janeiro','Pechino','Vienna','Berlino','Budapest','Edimburgo','Singapore','Bangkok','Città del Capo','Buenos Aires','San Francisco','Marrakech','Verona','Siena','Matera','Bari','Trieste','Madrid','Mumbai','Seul','Toronto','Bruxelles','Alghero','Lecce','Assisi','Ravenna','Siracusa','Reykjavik','Petra','Kyoto','Machu Picchu','Città del Messico','Dublino','Stoccolma','San Pietroburgo','Dubrovnik','Siem Reap','Kuala Lumpur','Shanghai',"L'Avana",'Chicago','Casablanca','San Gimignano','Urbino','Pompei','Cortina','Rimini','Agra','Hanoi','Colonia','Honolulu','Helsinki','Alberobello','Agrigento','Capri','Lucca','Padova','Jaipur','Zermatt','Mont Saint-Michel','Osaka','Bali','Abu Dhabi','Taipei','Kathmandu','Lhasa','Samarcanda','Washington','Cracovia','Tallinn','Uluru','Luxor'];
-const G='gggggggggggssgsugugggsussg'+'ggusgggggs'+'gggggggggs'+'ggsggsgggg'+'ggggsusggg'+'gggggggggs'+'ggsgssgggg'+'gsgggsgsgg'+'sggssgggss',GC={g:'#6f9a4a',s:'#d6bb78',u:'#7b8791'},RXS=[58,160,262],RL=760;
+const N=['Cagliari','Roma','Napoli','Firenze','Venezia','Milano','Berna','Parigi','Barcellona','Monaco','Amsterdam','Atene','Santorini','Mosca','Dubai','Hong Kong','Tokyo','New York','Londra','Copenaghen','Sydney','Il Cairo','San Paolo','Los Angeles','Nuova Delhi','Catania','Torino','Bologna','Genova','Palermo','Pisa','Lisbona','Praga','Istanbul','Rio de Janeiro','Pechino','Vienna','Berlino','Budapest','Edimburgo','Singapore','Bangkok','Città del Capo','Buenos Aires','San Francisco','Marrakech','Verona','Siena','Matera','Bari','Trieste','Madrid','Mumbai','Seul','Toronto','Bruxelles','Alghero','Lecce','Assisi','Ravenna','Siracusa','Reykjavik','Petra','Kyoto','Machu Picchu','Città del Messico','Dublino','Stoccolma','San Pietroburgo','Dubrovnik','Siem Reap','Kuala Lumpur','Shanghai',"L'Avana",'Chicago','Casablanca','San Gimignano','Urbino','Pompei','Cortina','Rimini','Agra','Hanoi','Colonia','Honolulu','Helsinki','Alberobello','Agrigento','Capri','Lucca','Padova','Jaipur','Zermatt','Mont Saint-Michel','Osaka','Bali','Abu Dhabi','Taipei','Kathmandu','Lhasa','Samarcanda','Washington','Cracovia','Tallinn','Uluru','Luxor','Salisburgo','Amalfi','Las Vegas','Seattle','Bruges','Gerusalemme','Oslo','Siviglia','Auckland','Cusco','Cartagena','Miami','Rotterdam','Mostar','Bergen','Marsiglia','Valencia','Bilbao','Porto','Cappadocia','Granada','Oxford','Vancouver','Monte Carlo','Lione','Hallstatt','Varanasi','Santiago de Compostela','Manarola','Banff','Doha','Zanzibar','Tromsø','Chefchaouen'];
+const G='gggggggggggssgsugugggsussg'+'ggusgggggs'+'gggggggggs'+'ggsggsgggg'+'ggggsusggg'+'gggggggggs'+'ggsgssgggg'+'gsgggsgsgg'+'sggssgggss'+'ggsggsgggg'+'gsgggsgggs'+'ggggggsggg'+'ssug',GC={g:'#6f9a4a',s:'#d6bb78',u:'#7b8791'},RXS=[58,160,262],RL=760;
 const cols=[[58,128,220],[24,104,176],[84,152,64],[220,186,104],[226,238,248]];
 const TH=[['c','c','c'],['c','b','b','b'],['c','t','t','t','l'],['p','p','p','l'],['f','f','f','l']];
 const R=(c,x,y,w,h)=>{X.fillStyle=c;X.fillRect(x,y,w,h)};
@@ -249,50 +249,118 @@ const LM=[
 // 104 Uluru
 (x,y)=>{R('#d8b078',x-32,y-3,64,3);P('#b8503a',x-32,y-3,x-28,y-16,x-18,y-24,x-4,y-27,x+10,y-26,x+22,y-20,x+30,y-12,x+32,y-3);P('#d86a4a',x-18,y-24,x-4,y-27,x+10,y-26,x,y-18);L2('#9a3a2a',1.2,x-20,y-20,x-22,y-4);L2('#9a3a2a',1.2,x-8,y-26,x-8,y-4);L2('#9a3a2a',1.2,x+6,y-25,x+8,y-4);L2('#9a3a2a',1.2,x+18,y-20,x+22,y-5);for(let i=0;i<5;i++)E('#6a8a4a',x-28+i*14,y-3,4,2)},
 // 105 Luxor - Karnak
-(x,y)=>{R('#d8b878',x-30,y-3,60,3);P('#d8b070',x-28,y-3,x-24,y-34,x-6,y-34,x-4,y-3);P('#d8b070',x+4,y-3,x+6,y-34,x+24,y-34,x+28,y-3);R('#c8a060',x-24,y-38,18,4);R('#c8a060',x+6,y-38,18,4);R('#3a2a1a',x-4,y-22,8,19);R('#c8a060',x-4,y-24,8,2);L2('#a88848',1,x-20,y-30,x-20,y-8);L2('#a88848',1,x-13,y-30,x-13,y-8);L2('#a88848',1,x+13,y-30,x+13,y-8);L2('#a88848',1,x+20,y-30,x+20,y-8);R('#8a5a2a',x-20,y-50,1.2,12);R('#c83a2a',x-19,y-50,6,3);R('#8a5a2a',x+19,y-50,1.2,12);R('#c83a2a',x+20,y-50,6,3)}];
+(x,y)=>{R('#d8b878',x-30,y-3,60,3);P('#d8b070',x-28,y-3,x-24,y-34,x-6,y-34,x-4,y-3);P('#d8b070',x+4,y-3,x+6,y-34,x+24,y-34,x+28,y-3);R('#c8a060',x-24,y-38,18,4);R('#c8a060',x+6,y-38,18,4);R('#3a2a1a',x-4,y-22,8,19);R('#c8a060',x-4,y-24,8,2);L2('#a88848',1,x-20,y-30,x-20,y-8);L2('#a88848',1,x-13,y-30,x-13,y-8);L2('#a88848',1,x+13,y-30,x+13,y-8);L2('#a88848',1,x+20,y-30,x+20,y-8);R('#8a5a2a',x-20,y-50,1.2,12);R('#c83a2a',x-19,y-50,6,3);R('#8a5a2a',x+19,y-50,1.2,12);R('#c83a2a',x+20,y-50,6,3)},
+// 106 Salisburgo - Fortezza Hohensalzburg
+(x,y)=>{P('#5a8a4a',x-32,y,x-14,y-24,x+14,y-24,x+32,y);R('#e8e0cc',x-20,y-42,40,18);for(let i=0;i<8;i++)R('#e8e0cc',x-20+i*5.2,y-45,3,3);R('#d8d0bc',x-6,y-54,12,12);P('#6a8a70',x-7,y-54,x,y-62,x+7,y-54);R('#e8e0cc',x+14,y-52,8,10);P('#8a4a30',x+13,y-52,x+18,y-58,x+23,y-52);R('#3a2a1a',x-12,y-36,3,5);R('#3a2a1a',x+2,y-36,3,5);R('#ddd',x-1,y-72,1,10);P('#c83a2a',x,y-72,x+7,y-70,x,y-68)},
+// 107 Amalfi - Duomo di Sant'Andrea
+(x,y)=>{R('#2a7ac0',x-32,y-3,64,3);R('#d8c8a0',x-24,y-8,48,5);R('#efe4c8',x-14,y-30,28,22);P('#d8b878',x-14,y-30,x,y-38,x+14,y-30);R('#c8a050',x-14,y-30,28,2);R('#3a2a1a',x-3,y-18,6,10);D('#3a2a1a',x,y-18,3);R('#e8d8b0',x+16,y-50,9,42);R('#3a8a6a',x+16,y-52,9,6);P('#3a8a6a',x+16,y-52,x+20.5,y-60,x+25,y-52);R('#d8b070',x+16,y-34,9,3);O('#e8c030',x+20.5,y-62,1.5)},
+// 108 Las Vegas - Stratosphere e Strip
+(x,y)=>{R('#d8c090',x-32,y-3,64,3);R('#c8a070',x-30,y-18,16,15);R('#c83a8a',x-30,y-20,16,2);R('#3a6ac0',x+12,y-30,14,27);R('#e8c030',x-12,y-24,10,21);P('#222',x+26,y-3,x+30,y-14,x+34,y-3);P('#c8c8d0',x-2,y-3,x-.8,y-52,x+.8,y-52,x+2,y-3);E('#e8e8f0',x,y-44,7,3.5);E('#d33',x,y-46,4,1.5);R('#c8c8d0',x-.5,y-70,1,18);O('#d33',x,y-71,1.5);for(let j=0;j<4;j++){R('#ffe080',x+15,y-26+j*6,3,2);R('#ffe080',x-27,y-15+j*3,3,1.5)}},
+// 109 Seattle - Space Needle
+(x,y)=>{R(WB,x-32,y-3,64,3);P('#aab8cc',x+10,y-3,x+22,y-26,x+32,y-3);P('#fff',x+18,y-18,x+22,y-26,x+26,y-18);P('#e8e8ee',x-9,y-3,x-1.5,y-34,x+1.5,y-34,x+9,y-3);R('#c8c8d0',x-1,y-40,2,8);E('#d8d8e4',x,y-42,16,4);E('#8ac0d8',x,y-44,10,2.5);R('#e86a3a',x-14,y-41,28,1.5);R('#c8c8d0',x-.7,y-62,1.4,16);O('#d33',x,y-63,1.4)},
+// 110 Bruges - Belfort
+(x,y)=>{R(WB,x-32,y-3,64,3);R('#b8603a',x-28,y-16,20,13);P('#8a3a28',x-29,y-16,x-18,y-24,x-7,y-16);R('#c07a52',x-4,y-48,16,45);R('#b0683e',x-5,y-50,18,3);R('#8a4a30',x-2,y-58,12,8);P('#4a5a5a',x-3,y-58,x+4,y-70,x+11,y-58);R('#e8c030',x+3.5,y-76,1,6);O('#fff',x+4,y-40,4);O('#333',x+4,y-40,1.2);R('#2a1a10',x+2,y-30,4,6);R('#2a1a10',x+2,y-16,4,6);R('#c87a52',x+14,y-12,16,9);P('#8a3a28',x+13,y-12,x+22,y-19,x+31,y-12)},
+// 111 Gerusalemme - Cupola della Roccia
+(x,y)=>{P('#b8a070',x-32,y,x-20,y-8,x+20,y-8,x+32,y);R('#3a6ac0',x-16,y-24,32,16);for(let i=0;i<6;i++)R('#e8e0d0',x-14+i*5.4,y-22,2,12);R('#2a5ab0',x-16,y-26,32,3);D('#e8c030',x,y-26,13);R('#e8c030',x-.5,y-44,1,6);O('#e8c030',x,y-44,2);R('#c8b890',x+20,y-34,5,34);P('#c8b890',x+19,y-34,x+22.5,y-44,x+26,y-34)},
+// 112 Oslo - Opera House
+(x,y)=>{R(WB,x-32,y-3,64,3);P('#f4f4f8',x-30,y-3,x-8,y-8,x+10,y-32,x+30,y-8,x+30,y-3);P('#d8dce6',x+10,y-32,x+30,y-8,x+30,y-3,x+14,y-3);R('#9ac0d8',x-22,y-12,14,8);L2('#bcc4d0',1,x-14,y-9,x-4,y-22);L2('#bcc4d0',1,x-4,y-9,x+6,y-22);R('#e8e8ee',x+26,y-18,2,8)},
+// 113 Siviglia - Cattedrale e Giralda
+(x,y)=>{R('#e0c488',x-26,y-18,32,18);for(let i=0;i<5;i++)R('#c8a868',x-22+i*6,y-14,3,8);R('#c8a060',x-26,y-20,32,3);R('#d8b070',x+8,y-52,12,52);R('#c8a060',x+8,y-36,12,2);R('#c8a060',x+8,y-24,12,2);for(let i=0;i<3;i++)R('#4a2a18',x+13,y-46+i*10,2,6);R('#e8d0a0',x+9,y-60,10,8);P('#c8a060',x+9,y-60,x+14,y-68,x+19,y-60);O('#e8c030',x+14,y-70,2);R('#c8a060',x+13,y-74,2,4)},
+// 114 Auckland - Sky Tower
+(x,y)=>{R(WB,x-32,y-3,64,3);P('#5a8a5a',x+8,y-3,x+22,y-22,x+34,y-3);R('#7a8aa0',x-26,y-14,10,11);P('#d0d0d8',x-4,y-3,x-1.5,y-50,x+1.5,y-50,x+4,y-3);E('#e0e0e8',x,y-46,8,4);E('#9ab0c8',x,y-47,5,2);E('#c8c8d0',x,y-38,4,1.5);R('#c8c8d0',x-1,y-70,2,20);R('#d33',x-1,y-72,2,3)},
+// 115 Cusco - Cattedrale e Ande
+(x,y)=>{P('#6a8a5a',x-32,y,x-16,y-40,x,y-26,x+14,y-46,x+32,y);P('#fff',x+10,y-38,x+14,y-46,x+18,y-38);R('#c8b090',x-14,y-18,28,18);R('#a88858',x-14,y-20,28,2);R('#c8b090',x-18,y-36,8,36);R('#c8b090',x+10,y-36,8,36);P('#8a5a3a',x-19,y-36,x-14,y-44,x-9,y-36);P('#8a5a3a',x+9,y-36,x+14,y-44,x+19,y-36);R('#3a2a1a',x-3,y-12,6,12);D('#3a2a1a',x,y-12,3)},
+// 116 Cartagena - Torre del Reloj
+(x,y)=>{R('#2a7ac0',x-32,y-3,64,3);R('#e8b848',x-28,y-16,56,13);for(let i=0;i<8;i++)R('#c8602a',x-26+i*7,y-12,4,6);R('#d8a838',x-28,y-18,56,3);R('#f0d078',x-8,y-44,16,28);R('#d8a838',x-9,y-46,18,3);O('#fff',x,y-38,4);O('#333',x,y-38,1.2);R('#3a2a1a',x-3,y-16,6,13);D('#3a2a1a',x,y-16,3);P('#c8602a',x-9,y-46,x,y-54,x+9,y-46);O('#e8c030',x,y-56,1.5)},
+// 117 Miami - Art Deco
+(x,y)=>{R('#a8d0e0',x-32,y-3,64,3);R('#f4a0c0',x-24,y-22,20,19);R('#7ad0e0',x-4,y-30,16,27);R('#f8e0a0',x+12,y-18,18,15);R('#fff',x-24,y-24,20,2);R('#fff',x-4,y-32,16,2);R('#e84a8a',x+3,y-40,2,8);for(let j=0;j<3;j++){R('#fff',x+2,y-26+j*7,4,3);R('#fff',x-20+j*6,y-16,3,4)}PM(x-28,y);PM(x+32,y)},
+// 118 Rotterdam - Erasmusbrug
+(x,y)=>{R(WB,x-32,y-3,64,4);R('#9a9aa0',x-32,y-12,64,3);P('#f4f4f8',x-9,y-12,x-4,y-12,x-3,y-62,x-5,y-62);L2('#f4f4f8',1,x-4,y-58,x+30,y-12);L2('#f4f4f8',1,x-4,y-52,x+22,y-12);L2('#f4f4f8',1,x-4,y-46,x+14,y-12);L2('#f4f4f8',1,x-4,y-40,x+6,y-12);L2('#f4f4f8',1,x-4,y-58,x-30,y-12);L2('#f4f4f8',1,x-4,y-50,x-20,y-12)},
+// 119 Mostar - Stari Most
+(x,y)=>{R('#4ab8a8',x-32,y-3,64,3);R('#9a9a88',x-32,y-16,12,13);R('#9a9a88',x+20,y-16,12,13);SC('#d8d0b8',5,x,y-5,24,Math.PI,0);R('#d8d0b8',x-31,y-32,7,16);P('#8a8a78',x-32,y-32,x-27.5,y-38,x-23,y-32);R('#d8d0b8',x+24,y-32,7,16);P('#8a8a78',x+23,y-32,x+27.5,y-38,x+32,y-32)},
+// 120 Bergen - Bryggen
+(x,y)=>{R(WB,x-32,y-3,64,3);[['#c8402a',-28],['#e8c030',-18],['#f4f0e4',-8],['#c8402a',2],['#3a7ac0',12],['#e8a030',22]].forEach(([c,d],i)=>{const h=24+(i%3)*5;R(c,x+d,y-3-h,9,h);P(c,x+d-1,y-3-h,x+d+4.5,y-3-h-8,x+d+10,y-3-h);R('#f4f0e4',x+d+3,y-3-h+6,3,4);R('#f4f0e4',x+d+3,y-3-h+14,3,4)})},
+// 121 Marsiglia - Notre-Dame de la Garde
+(x,y)=>{R(WB,x-32,y-3,64,3);P('#8a8a70',x-32,y-3,x-14,y-24,x+14,y-24,x+32,y-3);R('#e8dcc0',x-14,y-38,28,14);for(let i=0;i<4;i++)R('#a89878',x-12+i*7,y-34,3,8);R('#e8dcc0',x-5,y-52,10,14);R('#d8c8a0',x-4,y-58,8,6);P('#d8c8a0',x-4,y-58,x,y-64,x+4,y-58);R('#e8c030',x-2,y-76,4,12);O('#e8c030',x,y-78,3.5)},
+// 122 Valencia - Citta delle Arti e delle Scienze
+(x,y)=>{R('#7ad0e0',x-32,y-3,64,3);E('#f4f8fc',x-10,y-12,22,10);E('#7ab0d0',x-10,y-10,10,4);R('#c8d4dc',x-28,y-8,56,5);P('#f4f8fc',x+10,y-3,x+14,y-64,x+18,y-3);for(let i=1;i<5;i++){L2('#f4f8fc',.8,x+14,y-60,x+14-i*8,y-8);L2('#f4f8fc',.8,x+14,y-60,x+14+i*3,y-8)}},
+// 123 Bilbao - Guggenheim
+(x,y)=>{R('#4a8ac8',x-32,y-3,64,3);E('#c8ccd4',x-8,y-14,22,10);E('#b0b8c4',x+8,y-22,14,12);E('#d8dce4',x-14,y-24,12,10);E('#9aa4b0',x+14,y-12,14,8);E('#e4e8ee',x-4,y-30,10,7);L2('#8a94a0',1,x-20,y-14,x+6,y-24);O('#fff',x-8,y-32,2,.6)},
+// 124 Porto - Ponte Dom Luis I
+(x,y)=>{R(WB,x-32,y-3,64,4);SC('#5a5a66',3,x,y-10,26,Math.PI,0);R('#5a5a66',x-32,y-42,64,3);R('#5a5a66',x-26,y-12,52,2);for(let i=-3;i<=3;i++){const h=Math.sqrt(676-i*i*49);L2('#5a5a66',.8,x+i*7,y-10-h,x+i*7,y-40)}for(let i=0;i<4;i++)R(['#c8603a','#e8d0a0'][i%2],x-32+i*5,y-18-(i%2)*3,5,15)},
+// 125 Cappadocia - Camini delle fate
+(x,y)=>{R('#d8b078',x-32,y-3,64,3);[[-22,22,8],[-8,34,10],[8,28,9],[22,20,8]].forEach(([d,h,w])=>{P('#d8a878',x+d-w,y-3,x+d-w/3,y-h,x+d+w/3,y-h,x+d+w,y-3);E('#b8805a',x+d,y-h-1,w/2+1,3);R('#3a2a1a',x+d-1,y-12,2,4)});E('#e84a3a',x+2,y-62,9,11);E('#f0c030',x+2,y-62,3,11);P('#e84a3a',x-6,y-58,x+10,y-58,x+3,y-48,x+1,y-48);R('#7a4a2a',x,y-48,4,3)},
+// 126 Granada - Alhambra
+(x,y)=>{P('#5a8a4a',x-32,y,x-16,y-14,x+20,y-12,x+32,y);R('#c8805a',x-26,y-30,52,18);for(let i=0;i<10;i++)R('#c8805a',x-26+i*5.8,y-33,3.5,3);R('#d8906a',x-18,y-46,12,16);R('#d8906a',x+6,y-42,16,12);for(let i=0;i<3;i++)R('#d8906a',x-18+i*4.5,y-49,3,3);R('#3a1a10',x-3,y-24,6,12);D('#3a1a10',x,y-24,3);R('#3a1a10',x-12,y-40,3,6);R('#3a1a10',x+12,y-37,3,5);E('#2a5a2a',x+28,y-12,3,10)},
+// 127 Oxford - Radcliffe Camera
+(x,y)=>{R('#d8c8a0',x-20,y-4,40,4);R('#e0d0a8',x-16,y-22,32,18);for(let i=0;i<6;i++)R('#c8b888',x-14+i*5.6,y-20,2.2,14);R('#d0c098',x-16,y-24,32,3);D('#9aa8a0',x,y-24,15);R('#d0c098',x-4,y-42,8,6);D('#9aa8a0',x,y-42,4);R('#c8b888',x-.5,y-52,1,6);R('#d8c8a0',x-30,y-34,5,34);P('#c8b888',x-31,y-34,x-27.5,y-46,x-24,y-34)},
+// 128 Vancouver - Canada Place
+(x,y)=>{R(WB,x-32,y-3,64,3);P('#7a8aa8',x-32,y-3,x-18,y-30,x-6,y-3);P('#fff',x-22,y-22,x-18,y-30,x-14,y-22);P('#7a8aa8',x+4,y-3,x+18,y-36,x+32,y-3);P('#fff',x+13,y-26,x+18,y-36,x+23,y-26);R('#c8ccd4',x-22,y-8,44,5);[-16,-6,4,14].forEach(d=>P('#f4f4f8',x+d-6,y-8,x+d,y-20,x+d+6,y-8));R('#e8e8ee',x-22,y-9,44,2)},
+// 129 Monte Carlo - Casino
+(x,y)=>{R(WB,x-32,y-3,64,3);R('#e8dcc0',x-24,y-22,48,19);for(let i=0;i<8;i++)R('#c8b890',x-20+i*5.6,y-18,2,12);R('#d8ccb0',x-24,y-24,48,3);P('#6aa090',x-24,y-24,x-8,y-32,x+8,y-32,x+24,y-24);[-22,22].forEach(d=>{R('#e8dcc0',x+d-5,y-44,10,22);P('#6aa090',x+d-6,y-44,x+d,y-54,x+d+6,y-44);O('#e8c030',x+d,y-55,1.4)});R('#3a2a1a',x-4,y-10,8,7)},
+// 130 Lione - Basilica di Fourviere
+(x,y)=>{P('#5a8a4a',x-32,y,x-14,y-22,x+14,y-22,x+32,y);R('#efe4c8',x-14,y-38,28,16);for(let i=0;i<4;i++)R('#c8b890',x-12+i*7,y-34,3,8);[-12,12].forEach(d=>{R('#efe4c8',x+d-4,y-52,8,16);P('#8a9a8a',x+d-5,y-52,x+d,y-62,x+d+5,y-52)});R('#d8cca8',x-4,y-48,8,10);P('#8a9a8a',x-5,y-48,x,y-58,x+5,y-48);P('#b8c0cc',x+18,y-22,x+22.5,y-72,x+23.5,y-72,x+28,y-22)},
+// 131 Hallstatt - Villaggio sul lago
+(x,y)=>{R(WB,x-32,y-3,64,3);P('#7a8a9a',x-32,y-3,x-10,y-46,x+10,y-30,x+32,y-3);P('#fff',x-14,y-38,x-10,y-46,x-4,y-36);R('#f4f0e4',x-10,y-24,10,20);P('#4a6a5a',x-11,y-24,x-5,y-46,x+1,y-24);R('#f4f0e4',x+4,y-16,14,13);P('#8a4a30',x+3,y-16,x+11,y-24,x+19,y-16);R('#e8c070',x+20,y-12,10,9);P('#8a4a30',x+19,y-12,x+25,y-18,x+31,y-12)},
+// 132 Varanasi - Ghat sul Gange
+(x,y)=>{R('#a8c0c8',x-32,y-3,64,3);for(let i=0;i<4;i++)R(i%2?'#c8b890':'#d8c8a0',x-30,y-4-i*4,60,4);P('#e8a050',x-18,y-30,x-10,y-52,x-2,y-30);R('#d88a30',x-18,y-30,16,16);P('#e8a050',x+6,y-26,x+13,y-44,x+20,y-26);R('#d88a30',x+6,y-26,14,12);O('#e8c030',x-10,y-53,1.5);O('#e8c030',x+13,y-45,1.4);R('#8a6a4a',x+24,y-14,1,12);D('#c83a2a',x+24.5,y-14,6)},
+// 133 Santiago de Compostela - Cattedrale
+(x,y)=>{R('#c8c0a8',x-24,y-18,48,18);R('#b8b098',x-24,y-20,48,3);[-16,16].forEach(d=>{R('#c8c0a8',x+d-6,y-44,12,26);R('#b8b098',x+d-7,y-46,14,3);P('#b8b098',x+d-6,y-46,x+d,y-62,x+d+6,y-46);R('#3a3a3a',x+d-1,y-38,2,6)});R('#d0c8b0',x-8,y-30,16,12);D('#b8b098',x,y-30,8);R('#3a2a1a',x-4,y-12,8,12);D('#3a2a1a',x,y-12,4);R('#e8c030',x-.5,y-46,1,6)},
+// 134 Manarola - Cinque Terre
+(x,y)=>{R(WB,x-32,y-3,64,3);P('#7a6a58',x-32,y-3,x-26,y-20,x-10,y-34,x+22,y-30,x+32,y-3);[['#e8a030',-24,6],['#d8604a',-16,12],['#e8d078',-8,18],['#e89a8a',0,14],['#8aa8c8',8,22],['#d8b078',16,16],['#e8a030',-12,28],['#d8604a',4,32]].forEach(([c,d,h])=>{R(c,x+d,y-3-h,8,8);R('#3a2a1a',x+d+3,y-3-h+3,2,3);R('#8a4a30',x+d,y-3-h-2,8,2)})},
+// 135 Banff - Fairmont e Montagne Rocciose
+(x,y)=>{P('#7a8aa0',x-34,y,x-14,y-50,x+4,y-24,x+18,y-56,x+34,y);P('#fff',x-19,y-40,x-14,y-50,x-8,y-38,x-12,y-36);P('#fff',x+13,y-44,x+18,y-56,x+24,y-42,x+19,y-39);for(let i=0;i<7;i++)P('#2a5a2a',x-32+i*9,y,x-28+i*9,y-12,x-24+i*9,y);R('#c8b090',x-12,y-14,24,14);P('#3a8a6a',x-12,y-14,x-6,y-26,x,y-14);P('#3a8a6a',x,y-14,x+6,y-24,x+12,y-14);R('#c8b090',x-18,y-10,6,10);P('#3a8a6a',x-19,y-10,x-15,y-18,x-11,y-10)},
+// 136 Doha - Museo d'Arte Islamica
+(x,y)=>{R(WB,x-32,y-3,64,3);R('#e8e0cc',x-20,y-16,40,13);R('#d8d0bc',x-14,y-30,28,14);R('#e8e0cc',x-8,y-42,16,12);R('#d8d0bc',x-3,y-54,6,12);R('#3a3a3a',x-1,y-24,2,6);R('#3a3a3a',x-6,y-9,12,6);R('#3a3a3a',x-1,y-38,2,5);PM(x+28,y);PM(x-28,y)},
+// 137 Zanzibar - Casa delle Meraviglie
+(x,y)=>{R(WB,x-32,y-3,64,3);R('#f4f0e4',x-22,y-28,44,25);R('#c8a878',x-22,y-18,44,2);R('#c8a878',x-22,y-10,44,2);for(let i=0;i<7;i++){R('#8a6a3a',x-20+i*6,y-26,2,6);R('#8a6a3a',x-20+i*6,y-15,2,6)}R('#6a3a1a',x-3,y-10,6,7);R('#f4f0e4',x-4,y-48,8,20);R('#d8c8a8',x-5,y-50,10,3);O('#fff',x,y-40,3.5);O('#333',x,y-40,1.1);P('#c83a2a',x-5,y-50,x,y-56,x+5,y-50)},
+// 138 Tromso - Cattedrale Artica
+(x,y)=>{P('#fff',x-32,y,x-10,y-18,x+8,y-14,x+32,y);O('#4aff9a',x-20,y-56,10,.25);O('#8a4aff',x-4,y-62,8,.2);P('#f4f8fc',x-14,y-3,x-2,y-44,x+14,y-3);P('#d0dcec',x+2,y-3,x+5,y-30,x+14,y-3);R('#9ac0e0',x-3,y-38,3,30);R('#e8f0f8',x+16,y-34,5,34);R('#7ab0d8',x+17,y-30,3,10)},
+// 139 Chefchaouen - Medina blu
+(x,y)=>{P('#6a7a68',x-34,y,x-18,y-30,x+18,y-34,x+34,y);[[-26,22],[-14,30],[-2,24],[10,34],[22,26]].forEach(([d,h],i)=>{R(['#6aa8d8','#8ac0e8','#4a88c8','#a8d0f0','#5a98d0'][i],x+d,y-h,11,h);R('#e8f4ff',x+d,y-h,11,1.5);R('#2a4a7a',x+d+3,y-h+6,3,5)})}];
 // ---- Stato
-const k={l:0,r:0,u:0,d:0};let st='title',sc=0,lives=2,fuel=80,ice=0,off=0,shield=0,inv=0,legs=0,t=0,msg='',msgT=0,aud=null;
+const k={l:0,r:0,u:0,d:0};let st='title',sc=0,alt=0,fuel=80,ice=100,off=100,shield=0,inv=0,legs=0,t=0,msg='',msgT=0,aud=null;
 let SA=0,SS=0,from=0,ni=1,RS=1,oy=150,v=0,tt=0,sa=1,sp=100,ps=1,gp=0,pb=0,pax=0,np=0,prog=0,DT=30,dur=[],seq=[],th=0,app=0,warn=0,bgc=cols[0].slice(),dec=[],en=[],tk=[],pt=[],tkT=1,enT=4,dT=0,why='',pdir=1,tl=-1;
 const pl={x:160,y:400};
 function beep(f,d,ty,vv){try{if(!aud)return;const n=aud.currentTime,o=aud.createOscillator(),g=aud.createGain();o.type=ty||'square';o.frequency.setValueAtTime(f,n);o.frequency.exponentialRampToValueAtTime(Math.max(30,f*.4),n+d);g.gain.setValueAtTime(vv||.03,n);g.gain.exponentialRampToValueAtTime(.001,n+d);o.connect(g);g.connect(aud.destination);o.start();o.stop(n+d)}catch(e){}}
 const say=(m,s=1.6)=>{msg=m;msgT=s};
 function newRoute(){do ni=rnd()*N.length|0;while(ni==SA);RS=rnd()*3|0;seq=[];dur=[];DT=0;let p=-1;for(let i=0;i<5;i++){let q;do q=rnd()*5|0;while(q==p);p=q;seq.push(q);const d=Q.d0+rnd()*Q.dv;dur.push(d);DT+=d}}
-function start(){Q=LV[lv];sc=0;lives=Q.lives;fuel=Q.fs;ice=off=shield=0;legs=0;SA=rnd()*N.length|0;SS=rnd()*3|0;oy=150;pl.x=RXS[SS];pl.y=400;ps=1;pdir=-1;pax=0;np=90+rnd()*110|0;pb=0;gp=1;dec=[];en=[];tk=[];pt=[];newRoute();st='gnd';say('BENVENUTO A BORDO!')}
+function start(){Q=LV[lv];sc=0;alt=0;fuel=Q.fs;ice=off=100;shield=0;legs=0;SA=rnd()*N.length|0;SS=rnd()*3|0;oy=150;pl.x=RXS[SS];pl.y=400;ps=1;pdir=-1;pax=0;np=90+rnd()*110|0;pb=0;gp=1;dec=[];en=[];tk=[];pt=[];newRoute();st='gnd';say('BENVENUTO A BORDO!')}
 function takeoff(){from=SA;st='back';th=seq[0];bgc=cols[th].slice();prog=0;app=warn=0;dec=[];en=[];tk=[];tkT=2;enT=2;sa=1;ps=1;legs++}
 function land(){if(st!='fly'||!app)return;const ly=400-oy;if(ly>RL+380)return;if(ly>RL)return die('FUORI PISTA: ATTERRATO TROPPO PRESTO');if(ly<RL*.75)return die('FUORI PISTA: ATTERRATO TROPPO TARDI');if(Math.abs(pl.x-RXS[SS])>27)return die('FUORI PISTA: NON ALLINEATO');st='land';sc+=100;say('ATTERRAGGIO PERFETTO! +100')}
 function die(r){if(st=='dead')return;st='dead';why=r;beep(90,.8,'sawtooth',.06);for(let i=0;i<40;i++){const a=rnd()*6.3,s=30+rnd()*90;pt.push({x:pl.x,y:pl.y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,l:.6+rnd()*.8,c:['#ff9a1a','#ffd040','#fff','#c33'][i%4]})}if(sc>best){best=sc;try{localStorage.setItem(bkey(),String(best))}catch(e){}}}
-function hit(r){if(inv>0)return;if(shield){shield=0;inv=1.5;beep(200,.2);return}if(lives>1){lives--;inv=2;beep(120,.3,'sawtooth');say('COLPITO! -1 VITA');return}die(r)}
+function hit(r){if(alt>0||inv>0)return;if(shield){shield=0;inv=1.5;beep(200,.2);return}die(r)}
 let eo=null;
 function initEng(){if(!aud||eo)return;try{const o1=aud.createOscillator(),o2=aud.createOscillator(),f=aud.createBiquadFilter(),g=aud.createGain();o1.type='sawtooth';o2.type='square';f.type='lowpass';g.gain.value=0;o1.connect(f);o2.connect(f);f.connect(g);g.connect(aud.destination);o1.start();o2.start();eo={o1,o2,f,g}}catch(e){}}
 function engine(){if(!eo)return;const n=aud.currentTime,on=st=='gnd'||st=='take'||st=='fly'||st=='land'||st=='back'||st=='taxi';let s=st=='take'?v/240:st=='back'||st=='taxi'?.15:st=='fly'?.2+.5*sp/100+(k.u?.15:0):st=='land'?v/100*.4:0;const f=50+s*95;eo.o1.frequency.setTargetAtTime(f,n,.1);eo.o2.frequency.setTargetAtTime(f*1.51,n,.1);eo.f.frequency.setTargetAtTime(250+s*900,n,.1);eo.g.gain.setTargetAtTime(!on?0:st=='gnd'?.012:.02+s*.035,n,.15)}
 function fAct(){if(!aud)try{aud=new(window.AudioContext||window.webkitAudioContext)()}catch(e){}initEng();if(aud&&aud.state=='suspended')aud.resume();if(st=='title'||st=='dead')start();else if(st=='gnd'&&gp==2)takeoff()}
-function mv(dt){const dx=k.r-k.l,dy=k.d-k.u,m=Math.hypot(dx,dy)||1,s=125*(ice>70?.65:1);pl.x=Math.max(14,Math.min(306,pl.x+dx/m*s*dt));pl.y=Math.max(110,Math.min(450,pl.y+dy/m*s*dt))}
+function mv(dt){const dx=k.r-k.l,dy=k.d-k.u,m=Math.hypot(dx,dy)||1,s=125*(ice<30?.65:1);pl.x=Math.max(14,Math.min(306,pl.x+dx/m*s*dt));pl.y=Math.max(110,Math.min(450,pl.y+dy/m*s*dt))}
 function decor(dt,spawn){dec.forEach(d=>d.y+=sp*dt);dec=dec.filter(d=>d.y<H+40);dT-=dt;if(spawn&&dT<=0){dT=.3;if(rnd()<.55){const a=TH[th];dec.push({k:a[rnd()*a.length|0],x:rnd()*W,y:-30,s:.7+rnd()*.7})}}}
 function upd(dt){
 t+=dt;if(msgT>0)msgT-=dt;if(inv>0)inv-=dt;
 pt.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.l-=dt});pt=pt.filter(p=>p.l>0);
-if(st=='gnd'){if(gp==0){pb-=45*dt;if(pb<=0){pb=0;gp=1;const b=500+pax*5+(fuel|0)*2;sc+=b;say('+'+b+' PUNTI!',2.5);fuel=Math.min(100,fuel+Q.gf);ice=off=0;np=70+rnd()*130|0}}else if(gp==1){pb+=45*dt;if(pb>=np){pb=pax=np;gp=2}}}
+if(st=='gnd'){if(gp==0){pb-=45*dt;if(pb<=0){pb=0;gp=1;const b=500+pax*5+(fuel|0)*2;sc+=b;say('+'+b+' PUNTI!',2.5);fuel=Math.min(100,fuel+Q.gf);ice=off=100;np=70+rnd()*130|0}}else if(gp==1){pb+=45*dt;if(pb>=np){pb=pax=np;gp=2}}}
 else if(st=='back'){pl.x+=(RXS[SS]-pl.x)*4*dt;pl.y+=(400-pl.y)*3*dt;const tb=400-(RL-20);if(oy>tb+2)oy=Math.max(tb,oy-110*dt);else{pdir=Math.min(1,pdir+1.8*dt);if(pdir>=1){st='take';tt=0;v=0;tl=-1}}}
 else if(st=='take'){tt+=dt;v=Math.min(240,v+140*dt);oy+=v*dt;if(tl<0&&400-oy<80)tl=tt;const q=tl<0?0:tt-tl;if(q>.2)mv(dt);else pl.x+=(RXS[SS]-pl.x)*5*dt;ps=1+Math.min(.25,q*.15);sa=Math.max(0,1-q/2);sp=Math.min(v,100);decor(dt,q>.3);if(q>2.2){st='fly';sa=0}}
 else if(st=='land'){const tg=400-40;v=Math.max(12,Math.min(90,(tg-oy)*1.3));oy+=v*dt;pl.x+=(RXS[SS]-pl.x)*4*dt;pl.y+=(400-pl.y)*3*dt;ps+=(1-ps)*3*dt;if(tg-oy<4){st='taxi';pb=pax;newRoute();dec=[];en=[];tk=[]}}
 else if(st=='taxi'){pdir=Math.max(-1,pdir-1.8*dt);if(pdir<=-1){oy-=70*dt;if(oy<=150){oy=150;st='gnd';gp=0}}}
 else if(st=='fly'){
-const rate=(ice>70?.6:1)*(off>70?.7:1);sp=(app?80:100)*rate;mv(dt);ps+=(1-ps)*3*dt;
-if(!app){prog+=dt*rate;if(prog>=DT-10)warn=1;if(prog>=DT-7){app=1;warn=0;oy=-(RL+390);SA=ni;SS=RS;en=en.filter(e=>e.y>H)}}else{oy+=sp*dt;if(400-oy<RL*.75)die('ATTERRAGGIO MANCATO: TROPPO TARDI')}
+const rate=(ice<30?.6:1)*(off<30?.7:1);sp=(app?80:100)*rate;mv(dt);if(alt>0)alt=Math.max(0,alt-dt);ps+=((alt>0?1.25:1)-ps)*3*dt;
+if(!app){prog+=dt*rate;if(prog>=DT-10)warn=1;if(prog>=DT-7){app=1;warn=0;alt=0;oy=-(RL+390);SA=ni;SS=RS;en=en.filter(e=>e.y>H)}}else{oy+=sp*dt;if(400-oy<RL*.75)die('ATTERRAGGIO MANCATO: TROPPO TARDI')}
 let c=0,i=0;while(i<4&&prog>=c+dur[i]){c+=dur[i];i++}th=seq[i];for(let j=0;j<3;j++)bgc[j]+=(cols[th][j]-bgc[j])*Math.min(1,dt*1.2);
-fuel-=dt*Q.fr*(1+(ice>70?.3:0)+(off>70?.3:0));ice=Math.min(100,ice+dt*Q.ir*(th==4?5:th==0?3:1.8));off=Math.min(100,off+dt*Q.ir*2.2);if(fuel<=0)die('CARBURANTE ESAURITO');
+fuel-=dt*Q.fr*(1+(ice<30?.3:0)+(off<30?.3:0));ice=Math.max(0,ice-dt*Q.ir*(th==4?5:th==0?3:1.8));off=Math.max(0,off-dt*Q.ir*2.2);if(fuel<=0)die('CARBURANTE ESAURITO');
 decor(dt,1);
-tkT-=dt;if(tkT<=0){tkT=Q.ti+rnd()*Q.tv;const r=rnd();tk.push({x:20+rnd()*280,y:-14,t:r<.42?0:r<.62?1:r<.82?2:r<.92?3:4})}
+tkT-=dt;if(tkT<=0){tkT=Q.ti+rnd()*Q.tv;const r=rnd()*(.92+Q.qp);tk.push({x:20+rnd()*280,y:-14,t:r<.42?0:r<.62?1:r<.82?2:r<.92?3:4})}
 enT-=dt;if(enT<=0&&!warn&&!app){enT=Q.ei+rnd()*Q.ev;en.push({x:30+rnd()*260,y:-24,vy:(rnd()<.3?-45:50+rnd()*60)*Q.es,ph:rnd()*6,c:Math.floor(rnd()*4)})}
-tk.forEach(o=>{o.y+=sp*dt;if(Math.hypot(o.x-pl.x,o.y-pl.y)<14){o.y=999;sc+=15;beep(700,.12,'sine',.05);if(o.t==0)fuel=Math.min(100,fuel+Q.fb);else if(o.t==1)ice=Math.max(0,ice-55);else if(o.t==2)off=Math.max(0,off-55);else if(o.t==3)shield=1;else lives=Math.min(Q.lives+3,lives+1)}});tk=tk.filter(o=>o.y<H+20);
-en.forEach(e=>{e.y+=(sp+e.vy)*dt;e.x+=Math.sin(t*.8+e.ph)*20*dt;if(Math.hypot(e.x-pl.x,e.y-pl.y)<14&&e.y<H){hit('COLLISIONE IN VOLO');e.y=999}});en=en.filter(e=>e.y<H+30)}
+tk.forEach(o=>{o.y+=sp*dt;if(Math.hypot(o.x-pl.x,o.y-pl.y)<14){o.y=999;sc+=15;beep(700,.12,'sine',.05);if(o.t==0)fuel=Math.min(100,fuel+Q.fb);else if(o.t==1)ice=Math.min(100,ice+55);else if(o.t==2)off=Math.min(100,off+55);else if(o.t==3)shield=1;else{alt=Q.qd;say('QUOTA ALTA!',1.6)}}});tk=tk.filter(o=>o.y<H+20);
+en.forEach(e=>{e.y+=(sp+e.vy)*dt;e.x+=Math.sin(t*.8+e.ph)*20*dt;if(alt<=0&&Math.hypot(e.x-pl.x,e.y-pl.y)<14&&e.y<H){hit('COLLISIONE IN VOLO');e.y=999}});en=en.filter(e=>e.y<H+30)}
 }
 // ---- Disegno
 function jet(x,y,s,c,w,down){X.save();X.translate(x,y);if(typeof down=='number'){X.rotate((1-down)*Math.PI/2);X.scale(s,s)}else X.scale(s,s*(down?-1:1));P(w,-2,-2,-17,6,-17,9,-2,6);P(w,2,-2,17,6,17,9,2,6);P(w,-2,10,-8,14,-8,16,-2,14);P(w,2,10,8,14,8,16,2,14);R('#556',-10,3,3,5);R('#556',7,3,3,5);R(c,-2,-12,4,26);P(c,-2,-12,0,-17,2,-12);R('#bcd',-1,-11,2,2);R('#678',-1,-5,2,1);R('#678',-1,-2,2,1);R('#678',-1,1,2,1);R(down===true?'#2a6':'#d33',-2,11,4,2);X.restore()}
 const EC=[['#f0d060','#d0a030'],['#7ac0f8','#3070c0'],['#f09aa8','#c04060'],['#a0e8b0','#40a060']];
 function dr(d){const s=d.s,x=d.x,y=d.y;if(d.k=='b'){R('#6a3a1a',x-6,y,12,4);P('#fff',x,y-9,x+6,y,x,y);O('#fff',x,y+9,3,.5);O('#fff',x,y+14,2,.3)}else if(d.k=='t'){O('#1d4a1d',x+2,y+2,7*s);O('#3a8a30',x,y,7*s);O('#58aa48',x-2,y-2,3*s)}else if(d.k=='l'){E('#e8e0b0',x,y,24*s,14*s);E('#2a74c0',x,y,22*s,12*s);E('#4a94e0',x-3,y-2,12*s,6*s)}else if(d.k=='p'){O('#7a5a2a',x,y,2);for(let i=0;i<6;i++)L2('#2f8a2f',3,x,y,x+Math.cos(i*1.05)*10*s,y+Math.sin(i*1.05)*10*s)}else if(d.k=='f'){P('#1f5a35',x-8*s,y+8*s,x,y-12*s,x+8*s,y+8*s);P('#2d7a48',x-6*s,y+3*s,x,y-12*s,x+6*s,y+3*s);P('#fff',x-3*s,y-6*s,x,y-12*s,x+3*s,y-6*s)}}
 function cloud(d){const s=d.s,x=d.x,y=d.y;O('#fff',x,y,14*s,.26);O('#fff',x+12*s,y+3,10*s,.26);O('#fff',x-12*s,y+4,9*s,.26);O('#fff',x,y,8*s,.3)}
-const ENV='shshwumusmwhsfdsmsussduhus'+'mhssusussm'+'uuuhsususd'+'uhhsshsmsf'+'shhfsmdfmm'+'ususffusss'+'hhmmsuuuss'+'hhsfuhmsus'+'smmmduusdu',PAL='AAAAAABBABBCCBEEEEBBEDEDDA'+'DABDAAACBB'+'BBABEDBBBD'+'AADCBAEEEB'+'DDBACBDBDD'+'AABADEEAEC'+'DADBADDBEC'+'CDCAADBBED'+'CEDCDBAADD',WB='#2a7ac0';
+const ENV='shshwumusmwhsfdsmsussduhus'+'mhssusussm'+'uuuhsususd'+'uhhsshsmsf'+'shhfsmdfmm'+'ususffusss'+'hhmmsuuuss'+'hhsfuhmsus'+'smmmduusdu'+'msdswhsusm'+'sswmmsshud'+'mussuwufsm'+'ssmm',PAL='AAAAAABBABBCCBEEEEBBEDEDDA'+'DABDAAACBB'+'BBABEDBBBD'+'AADCBAEEEB'+'DDBACBDBDD'+'AABADEEAEC'+'DADBADDBEC'+'CDCAADBBED'+'CEDCDBAADD'+'AADEADCAED'+'ACEDADABAD'+'DDEAAADBAB'+'DDAE',WB='#2a7ac0';
 const WC={A:['#efe3cc','#d9a77f','#e6c568','#e8b898'],B:['#c4ccd6','#b8a89a','#d8d0c0','#a8b8c8'],C:['#fff','#f4f0e8','#fff','#e8eef8'],D:['#d8b878','#c8a060','#e0c890','#b89058'],E:['#5a7a9a','#4a6a8a','#6a8aaa','#7a9ab8']},RF={A:'#b8442e',B:'#4a5a6a'};
 const sr=(n,ci)=>{const z=Math.sin(n*127.1+ci*311.7)*43758.5;return z-Math.floor(z)};
 const SC=(c,w,x,y,r,a=0,b=7)=>{X.strokeStyle=c;X.lineWidth=w;X.beginPath();X.arc(x,y,r,a,b);X.stroke()};
@@ -483,7 +551,75 @@ const SUB=[
 // 104 Uluru - Kata Tjuta
 (x,y)=>{R('#d8b078',x-32,y-2,64,2);D('#a8503a',x-18,y-2,14);D('#b8603a',x,y-2,18);D('#a8503a',x+20,y-2,13);D('#c8704a',x-6,y-2,10);L2('#8a3a2a',1,x-6,y-18,x-8,y-2);L2('#8a3a2a',1,x+8,y-14,x+10,y-2);L2('#8a3a2a',1,x+20,y-12,x+21,y-2)},
 // 105 Luxor - Sala ipostila
-(x,y)=>{R('#d8b878',x-30,y-3,60,3);for(let i=0;i<6;i++){R('#e0c088',x-28+i*10,y-34,6,31);P('#e0c088',x-30+i*10,y-34,x-25+i*10,y-40,x-20+i*10,y-34)}R('#c8a060',x-30,y-44,60,4)}];
+(x,y)=>{R('#d8b878',x-30,y-3,60,3);for(let i=0;i<6;i++){R('#e0c088',x-28+i*10,y-34,6,31);P('#e0c088',x-30+i*10,y-34,x-25+i*10,y-40,x-20+i*10,y-34)}R('#c8a060',x-30,y-44,60,4)},
+// 106 Salisburgo - Cattedrale
+(x,y)=>{R('#e0d8c4',x-16,y-20,32,20);R('#d0c8b4',x-20,y-34,8,34);R('#d0c8b4',x+12,y-34,8,34);P('#5a8a7a',x-21,y-34,x-16,y-44,x-11,y-34);P('#5a8a7a',x+11,y-34,x+16,y-44,x+21,y-34);D('#5a8a7a',x,y-20,10);R('#3a2a1a',x-3,y-10,6,10)},
+// 107 Amalfi - Costiera
+(x,y)=>{R(WB,x-30,y-3,60,4);P('#8a8a6a',x-28,y-2,x-20,y-30,x+20,y-34,x+30,y-2);['#e8b848','#e89a8a','#f4f0e4','#e8d078','#d8704a'].forEach((c,i)=>{R(c,x-18+i*8,y-12-(i%2)*8,7,7);R('#3a6a9a',x-16+i*8,y-10-(i%2)*8,2,3)})},
+// 108 Las Vegas - Insegna
+(x,y)=>{R('#888',x-1,y-18,2,18);P('#f4f0e8',x,y-50,x+16,y-34,x,y-18,x-16,y-34);T('LV',x,y-31,'#d33',9);for(let i=0;i<4;i++)O('#ffe080',x+(i<2?-1:1)*(i%2?14:8),y-34+(i%2?4:-6),1.4)},
+// 109 Seattle - Pike Place Market
+(x,y)=>{R('#b8503a',x-20,y-12,40,12);R('#2a6a3a',x-22,y-16,44,4);R('#f4f0e8',x-14,y-30,28,12);T('MARKET',x,y-21,'#d33',7);for(let i=0;i<5;i++)R(i%2?'#fff':'#d33',x-18+i*7,y-12,6,3)},
+// 110 Bruges - Case sul canale
+(x,y)=>{R(WB,x-30,y-3,60,4);[['#c8603a',-26],['#e8d0a0',-14],['#b8503a',-2],['#e8c8a0',10],['#c8603a',20]].forEach(([c,d],i)=>{const h=18+(i%3)*6;R(c,x+d,y-3-h,11,h);R(c,x+d+3,y-3-h-4,5,4);R('#3a2a1a',x+d+4,y-3-h+4,3,4)})},
+// 111 Gerusalemme - Mura e Porta di Damasco
+(x,y)=>{R('#d8c090',x-30,y-24,60,24);for(let i=0;i<10;i++)R('#d8c090',x-30+i*6.3,y-27,3.5,3);for(let r=0;r<4;r++)L2('#b8a070',.8,x-30,y-5-r*6,x+30,y-5-r*6);R('#3a2a1a',x-5,y-14,10,14);D('#3a2a1a',x,y-14,5);R('#d8c090',x+16,y-36,10,12);P('#b8a070',x+15,y-36,x+21,y-44,x+27,y-36)},
+// 112 Oslo - Trampolino di Holmenkollen
+(x,y)=>{P('#4a8a3a',x-30,y,x-6,y-22,x+30,y);L2('#c8c8d0',3,x-20,y-48,x+4,y-24);L2('#c8c8d0',3,x+4,y-24,x+12,y-18);R('#c8c8d0',x-22,y-52,6,8);L2('#888',1.5,x-20,y-44,x-20,y-14);L2('#888',1.5,x-12,y-40,x-12,y-20);L2('#888',1,x-20,y-44,x-12,y-30)},
+// 113 Siviglia - Plaza de Espana
+(x,y)=>{R('#c87a52',x-28,y-18,56,18);R('#e8d8b0',x-28,y-20,56,3);for(let i=0;i<8;i++)R('#3a6ac0',x-24+i*7,y-14,3,8);[-26,26].forEach(d=>{R('#c87a52',x+d-4,y-38,8,38);P('#8a4a30',x+d-5,y-38,x+d,y-46,x+d+5,y-38)})},
+// 114 Auckland - Barche a vela
+(x,y)=>{R(WB,x-30,y-3,60,5);[[-16,1],[2,.8],[18,.9]].forEach(([d,s])=>{R('#7a4a2a',x+d-8*s,y-8,16*s,3);P('#f4f4f4',x+d,y-9,x+d,y-34*s,x+d+10*s,y-9);P('#d0dae8',x+d-1,y-9,x+d-1,y-26*s,x+d-8*s,y-9)})},
+// 115 Cusco - Sacsayhuaman
+(x,y)=>{P('#6a9a5a',x-30,y,x-20,y-8,x+20,y-8,x+30,y);for(let r=0;r<3;r++){const w=48-r*10;R('#a8a090',x-w/2,y-10-r*7,w,6);for(let i=0;i<5;i++)L2('#7a7468',.8,x-w/2+i*w/5,y-10-r*7,x-w/2+i*w/5,y-4-r*7)}},
+// 116 Cartagena - Case coloniali
+(x,y)=>{[[-28,'#e87a8a',18,20],[-9,'#4ab8c8',18,24],[10,'#f0d078',18,18]].forEach(([d,c,w,h])=>{R(c,x+d,y-h,w,h);R('#5a3a1a',x+d,y-h+9,w,2);R('#5a3a1a',x+d+3,y-h+11,2,3);R('#3a2a1a',x+d+w/2-1.5,y-8,3,8)});PM(x+30,y)},
+// 117 Miami - Torretta bagnino
+(x,y)=>{R('#e8d8a8',x-30,y-3,60,3);R('#f4f4f4',x-8,y-18,16,12);R('#e84a3a',x-9,y-20,18,3);R('#7a5a3a',x-7,y-6,2,6);R('#7a5a3a',x+5,y-6,2,6);R('#3a8ad8',x-3,y-15,6,5);R('#444',x+1,y-34,1,14);P('#e84a3a',x+2,y-34,x+10,y-31,x+2,y-28);PM(x+24,y);PM(x-24,y)},
+// 118 Rotterdam - Case cubiche
+(x,y)=>{[[-16,22],[4,26],[22,22]].forEach(([d,h])=>{R('#8a8a80',x+d-2,y-h+8,4,h-8);P('#e8c030',x+d,y-h-12,x+d+13,y-h,x+d,y-h+12,x+d-13,y-h);P('#c8a020',x+d,y-h-12,x+d+13,y-h,x+d,y-h);R('#7ab0d8',x+d-3,y-h-2,6,5)})},
+// 119 Mostar - Moschea
+(x,y)=>{R('#e8e0c8',x-14,y-12,28,12);D('#8a9a90',x-2,y-12,11);R('#f0ece0',x+12,y-40,5,40);P('#8a9a90',x+11,y-40,x+14.5,y-50,x+18,y-40);R('#c8b890',x+11,y-30,7,2);R('#3a2a1a',x-8,y-7,4,7)},
+// 120 Bergen - Funicolare Floibanen
+(x,y)=>{P('#4a8a3a',x-32,y,x-10,y-24,x+30,y-44,x+32,y);L2('#444',1.5,x-26,y-4,x+26,y-42);R('#c83a2a',x-2,y-26,10,6);R('#f4f0e4',x,y-25,3,3)},
+// 121 Marsiglia - Vieux-Port
+(x,y)=>{R(WB,x-30,y-3,60,5);[-18,0,18].forEach((d,i)=>{R('#f4f0e8',x+d-8,y-8,16,4);R('#c83a2a',x+d-8,y-6,16,2);R('#8a6a4a',x+d,y-30+i*3,1.2,22-i*3)})},
+// 122 Valencia - Torres de Serranos
+(x,y)=>{R('#d8c8a0',x-20,y-30,14,30);R('#d8c8a0',x+6,y-30,14,30);R('#e0d0b0',x-6,y-24,12,24);for(let i=0;i<3;i++){R('#d8c8a0',x-20+i*5,y-33,3,3);R('#d8c8a0',x+6+i*5,y-33,3,3)}R('#3a2a1a',x-4,y-14,8,14);D('#3a2a1a',x,y-14,4)},
+// 123 Bilbao - Puppy
+(x,y)=>{R('#4a8a3a',x-10,y-22,20,22);O('#e84a6a',x-6,y-16,3);O('#f0c030',x+2,y-10,3);O('#f4f0e8',x+4,y-18,3);O('#e84a6a',x-2,y-6,3);O('#4a8a3a',x,y-28,7);O('#e84a6a',x+2,y-28,2.5)},
+// 124 Porto - Torre dos Clerigos
+(x,y)=>{R('#c8c8c0',x-8,y-14,16,14);R('#d0d0c8',x-6,y-52,12,38);R('#b8b8b0',x-7,y-34,14,2);R('#b8b8b0',x-7,y-48,14,2);P('#a8a8a0',x-6,y-52,x,y-66,x+6,y-52);R('#3a3a3a',x-1,y-42,2,5);R('#3a3a3a',x-1,y-28,2,5);R('#3a3a3a',x-1,y-18,2,5)},
+// 125 Cappadocia - Rocca di Uchisar
+(x,y)=>{P('#c8a070',x-18,y,x-14,y-30,x-6,y-48,x+6,y-48,x+14,y-30,x+18,y);for(let i=0;i<6;i++)R('#3a2a1a',x-6+(i%2)*8,y-12-i*5,3,3);R('#3a2a1a',x-3,y-8,6,8);D('#3a2a1a',x,y-8,3);E('#b88858',x,y-49,7,3)},
+// 126 Granada - Patio dei Leoni
+(x,y)=>{R('#e8d8b0',x-24,y-20,48,20);for(let i=0;i<8;i++){R('#c8b890',x-22+i*6,y-16,2,16);D('#c8b890',x-21+i*6,y-16,3)}R('#d8c898',x-24,y-22,48,3);E('#8ac0d8',x,y-3,9,2.5);R('#c8c0b0',x-3,y-9,6,6)},
+// 127 Oxford - Ponte dei Sospiri
+(x,y)=>{R('#d8c8a0',x-26,y-30,12,30);R('#d8c8a0',x+14,y-30,12,30);for(let i=0;i<3;i++){R('#d8c8a0',x-26+i*4.5,y-33,3,3);R('#d8c8a0',x+14+i*4.5,y-33,3,3)}R('#e0d0a8',x-14,y-24,28,9);for(let i=0;i<4;i++)R('#7a6a4a',x-12+i*7,y-22,3,5);R('#2a2a2a',x-7,y-12,14,12);D('#2a2a2a',x,y-12,7)},
+// 128 Vancouver - Totem
+(x,y)=>{R('#8a5a2a',x-5,y-50,10,50);for(let i=0;i<4;i++){R(['#c83a2a','#2a8a6a','#e8c030','#3a3a3a'][i],x-5,y-48+i*12,10,10);O('#fff',x-2,y-43+i*12,1.4);O('#fff',x+2,y-43+i*12,1.4)}R('#8a5a2a',x-12,y-34,24,3);P('#c83a2a',x-5,y-50,x,y-58,x+5,y-50)},
+// 129 Monte Carlo - Yacht
+(x,y)=>{R(WB,x-30,y-3,60,5);P('#f4f4f8',x-24,y-8,x+24,y-8,x+16,y-2,x-20,y-2);R('#2a3a5a',x-24,y-8,48,2);R('#f4f4f8',x-12,y-16,22,8);R('#9ac0d8',x-10,y-14,18,3);R('#f4f4f8',x-4,y-22,10,6);R('#888',x+1,y-30,1,8)},
+// 130 Lione - Vieux Lyon
+(x,y)=>{R(WB,x-30,y-3,60,4);[['#e8b068',-27],['#d8604a',-16],['#e8d078',-5],['#8aa8c8',6],['#e89a8a',17]].forEach(([c,d],i)=>{const h=26-(i%2)*6;R(c,x+d,y-3-h,10,h);P('#8a4a30',x+d-1,y-3-h,x+d+5,y-3-h-5,x+d+11,y-3-h);R('#3a2a1a',x+d+2,y-3-h+5,2,4);R('#3a2a1a',x+d+6,y-3-h+13,2,4)})},
+// 131 Hallstatt - Barca di legno
+(x,y)=>{R(WB,x-30,y-3,60,5);P('#8a5a2a',x-16,y-8,x+16,y-8,x+10,y-2,x-12,y-2);R('#6a4a2a',x-1,y-24,1.5,16);P('#f4f0e4',x+1,y-24,x+10,y-10,x+1,y-10);O('#f4f4f4',x+22,y-6,3);R('#f4f4f4',x+24,y-12,2,7);O('#f4f4f4',x+25,y-13,2)},
+// 132 Varanasi - Barca con diya
+(x,y)=>{R('#7ab0c8',x-30,y-3,60,5);P('#8a5a2a',x-18,y-9,x+18,y-9,x+12,y-3,x-14,y-3);R('#d83a2a',x-18,y-11,36,2);R('#e8c030',x-3,y-17,6,2);P('#ff9a1a',x,y-26,x+3,y-18,x-3,y-18);O('#fff',x,y-20,1.5)},
+// 133 Santiago de Compostela - Conchiglia del pellegrino
+(x,y)=>{for(let i=0;i<7;i++)L2('#e8c030',3,x-12,y-6,x-12+Math.cos(Math.PI+i*.52)*18,y-6+Math.sin(Math.PI+i*.52)*18);O('#d8a820',x-12,y-6,3);R('#7a5a2a',x+8,y-48,2.4,48);O('#c8a050',x+9,y-36,4);R('#c83a2a',x+4,y-30,10,2)},
+// 134 Manarola - Barche a riva
+(x,y)=>{R(WB,x-30,y-3,60,5);[[-18,'#e84a3a'],[0,'#3a8ad8'],[18,'#f0c030']].forEach(([d,c])=>{P(c,x+d-9,y-8,x+d+9,y-8,x+d+5,y-2,x+d-5,y-2);R('#f4f0e8',x+d-9,y-9,18,1.5)})},
+// 135 Banff - Lago con canoa
+(x,y)=>{E('#4ac8c0',x,y-6,30,6);E('#2a9aa0',x,y-6,22,4);P('#c83a2a',x-8,y-9,x+8,y-9,x+5,y-5,x-5,y-5);L2('#7a5a2a',1.5,x-4,y-13,x+8,y-3);for(let i=0;i<3;i++)P('#2a5a2a',x-30+i*4,y-4,x-27+i*4,y-22,x-24+i*4,y-4)},
+// 136 Doha - Dhow
+(x,y)=>{R(WB,x-30,y-3,60,5);P('#8a5a2a',x-20,y-8,x+20,y-8,x+14,y-2,x-14,y-2);R('#6a4a2a',x-2,y-34,2,26);P('#f4f0e4',x,y-34,x+16,y-10,x,y-10);P('#e8d8a8',x-2,y-30,x-14,y-10,x-2,y-10)},
+// 137 Zanzibar - Porta intagliata
+(x,y)=>{R('#e8d8b8',x-16,y-34,32,34);R('#6a3a1a',x-8,y-24,16,24);D('#6a3a1a',x,y-24,8);for(let i=0;i<4;i++)O('#d8a820',x-5+(i%2)*10,y-18+(i>1?7:0),1.4);R('#c8a820',x-1,y-24,2,24);R('#8a5a2a',x-18,y-36,36,3)},
+// 138 Tromso - Case e aurora
+(x,y)=>{R('#fff',x-30,y-3,60,3);[-18,0,18].forEach((d,i)=>{R(['#c83a2a','#e8c030','#3a7ac0'][i],x+d-7,y-18,14,15);P('#f4f8fc',x+d-8,y-18,x+d,y-26,x+d+8,y-18);R('#ffe080',x+d-2,y-12,4,4)});O('#4aff9a',x-10,y-44,12,.3);O('#8a4aff',x+14,y-48,9,.25)},
+// 139 Chefchaouen - Scalinata blu
+(x,y)=>{for(let i=0;i<5;i++)R(i%2?'#8ac0e8':'#6aa8d8',x-24,y-4-i*5,48,5);R('#2a4a7a',x-5,y-20,10,20);D('#2a4a7a',x,y-20,5);O('#c8603a',x-18,y-10,4);O('#3a8a3a',x-18,y-14,2.5);O('#c8603a',x+18,y-16,4)}];
 function bld(x,y,ci,n){const p=PAL[ci],e=p=='E',h=e?22+sr(n,ci)*30|0:14+sr(n,ci)*14|0,w=e?20:22;R('#0003',x+3,y-2,w,4);R(WC[p][n%4],x,y-h,w,h);if(e){for(let j=4;j<h-3;j+=6)for(let i=3;i<w-4;i+=6)R('#bfe4ff',x+i,y-h+j,3,3);R('#2a3a4a',x,y-h,w,2)}else{R('#0004',x+w-4,y-h,4,h);R('#5a4a3a',x+w/2-2,y-7,4,7);R('#8ab',x+3,y-h+5,4,4);R('#8ab',x+w-9,y-h+5,4,4);if(p=='C')D(n%2?'#2a6ac0':'#f4f0e8',x+w/2,y-h,7);else if(p=='D')R('#a07040',x-1,y-h-2,w+2,3);else P(RF[p],x-2,y-h,x+w/2,y-h-8,x+w+2,y-h)}}
 function env(e,a,b,fr,y,ci){const w=b-a,r=n=>sr(n,ci),T1=(i,k,s)=>dr({k,x:a+r(i)*w,y:y+10+r(i+50)*500,s:s||1.1});
 if(e=='s'){const bw=w>200?60:28,bx=fr?b-bw:a;R(WB,bx,y-300,bw,1100);R('#e8d8a0',fr?bx-12:a+bw,y-300,12,1100);for(let l=-280;l<540;l+=30)R('#bfe4ff',bx+4+r(l)*(bw-14),y+l,10,2);for(let i=0;i<7;i++){const l=30+i*75;O(['#e04a3a','#f0c030','#3a8ae0'][i%3],fr?bx-6:a+bw+6,y+l,4.5);R('#fff',bx+8+r(i)*(bw-20),y+l+20,9,3)}for(let i=0;i<5;i++)T1(i+9,'t',.9)}
@@ -503,11 +639,11 @@ if(di==0){E('rgba(0,0,0,.2)',lx+6,y+272,36,7);E('rgba(0,0,0,.2)',lx+4,y+422,30,5
 function scene(ci,sd,a){if(a<=0)return;X.globalAlpha=a;const y=oy,rx=RXS[sd];R(GC[G[ci]],0,y-300,W,1100);city(ci,sd,y);R('#3b3e45',rx-16,y,32,RL);R('#ddd',rx-16,y,2,RL);R('#ddd',rx+14,y,2,RL);for(let l=12;l<RL-30;l+=26)R('#eee',rx-1,y+l,2,13);for(let i=0;i<4;i++){R('#eee',rx-12+i*7,y+4,4,12);R('#eee',rx-12+i*7,y+RL-16,4,12)}
 if(st=='fly'&&app){R('rgba(80,255,120,.3)',rx-14,y+RL*.75,28,RL*.25);for(let l=0;l<3;l++)P('rgba(200,255,200,.7)',rx-8,y+RL-20-l*30,rx,y+RL-32-l*30,rx+8,y+RL-20-l*30)}
 for(let l=RL;l<RL+380;l+=18){R('#ffe14a',rx-28,y+l,2,9);R('#ffe14a',rx+26,y+l,2,9)}for(let l=RL+40;l<RL+380;l+=80)R('#ffe14a',rx-28,y+l,56,1);X.globalAlpha=1}
-function tok(o){const x=o.x,y=o.y+Math.sin(t*5+o.x)*2;if(o.t==0){O('#ff9a1a',x,y,9);O('#ffd070',x-2,y-2,4);T('C',x,y+4,'#222',10)}else if(o.t==1){O('#2a8ac0',x,y,9);for(let i=0;i<3;i++)L2('#dff',1.5,x+Math.cos(i*1.05)*6,y+Math.sin(i*1.05)*6,x-Math.cos(i*1.05)*6,y-Math.sin(i*1.05)*6)}else if(o.t==2){O('#1a4a2a',x,y,9);X.strokeStyle='#6fff8f';X.lineWidth=1;X.beginPath();X.arc(x,y,6,0,7);X.stroke();X.beginPath();X.arc(x,y,3,0,7);X.stroke();L2('#6fff8f',1,x,y,x+Math.cos(t*4)*6,y+Math.sin(t*4)*6)}else if(o.t==3){O('#2a5ab0',x,y,9);T('S',x,y+4,'#bdf',10)}else{O('#4a1a2a',x,y,9);T('♥',x,y+4,'#ff5a7a',11)}}
+function tok(o){const x=o.x,y=o.y+Math.sin(t*5+o.x)*2;if(o.t==0){O('#ff9a1a',x,y,9);O('#ffd070',x-2,y-2,4);T('C',x,y+4,'#222',10)}else if(o.t==1){O('#2a8ac0',x,y,9);for(let i=0;i<3;i++)L2('#dff',1.5,x+Math.cos(i*1.05)*6,y+Math.sin(i*1.05)*6,x-Math.cos(i*1.05)*6,y-Math.sin(i*1.05)*6)}else if(o.t==2){O('#1a4a2a',x,y,9);X.strokeStyle='#6fff8f';X.lineWidth=1;X.beginPath();X.arc(x,y,6,0,7);X.stroke();X.beginPath();X.arc(x,y,3,0,7);X.stroke();L2('#6fff8f',1,x,y,x+Math.cos(t*4)*6,y+Math.sin(t*4)*6)}else if(o.t==3){O('#2a5ab0',x,y,9);T('S',x,y+4,'#bdf',10)}else{O('#5a2aa0',x,y,9);P('#e8dcff',x-5,y+1,x,y-5,x+5,y+1);P('#e8dcff',x-5,y+6,x,y,x+5,y+6)}}
 function hud(){
 if(['gnd','land','taxi','back'].includes(st)||st=='take'&&(tl<0||tt-tl<1)){T(N[SA].toUpperCase(),160,22,'#ffe14a',18)}
-if(st=='fly'||st=='take'&&tl>=0&&tt-tl>=1){T(N[from].toUpperCase()+' → '+N[ni].toUpperCase(),160,13,'#fff',11);T('CARB',4,26,'#ffd070',8,'left');BAR(30,19,130,9,fuel,100,fuel<25&&(t*6|0)%2?'#f33':'#ff9a1a');T('PUNTI '+sc,316,26,'#fff',9,'right');T('GEL',4,40,'#8ef',8,'left');BAR(26,34,56,7,ice,100,ice>70?'#f55':'#4ac8ff');T('ROTTA',90,40,'#9f9',8,'left');BAR(124,34,56,7,off,100,off>70?'#f55':'#4aff7a');T('♥'.repeat(lives),316,40,'#ff5a7a',10,'right');if(shield)T('SCUDO',316,52,'#8cf',8,'right');
-if(ice>70&&(t*4|0)%2)T('GHIACCIO! RALLENTI',160,60,'#8ef',9);else if(off>70&&(t*4|0)%2)T('FUORI ROTTA! RALLENTI',160,60,'#9f9',9)}
+if(st=='fly'||st=='take'&&tl>=0&&tt-tl>=1){T(N[from].toUpperCase()+' → '+N[ni].toUpperCase(),160,13,'#fff',11);T('CARB',4,26,'#ffd070',8,'left');BAR(30,19,130,9,fuel,100,fuel<25&&(t*6|0)%2?'#f33':'#ff9a1a');T('PUNTI '+sc,316,26,'#fff',9,'right');T('GEL',4,40,'#8ef',8,'left');BAR(26,34,56,7,ice,100,ice<30?'#f55':'#4ac8ff');T('ROTTA',90,40,'#9f9',8,'left');BAR(124,34,56,7,off,100,off<30?'#f55':'#4aff7a');if(alt>0){T('QUOTA',200,40,'#c9a8ff',8,'left');BAR(234,34,82,7,alt,Q.qd,alt<1.5&&(t*8|0)%2?'#fff':'#a070ff')}if(shield)T('SCUDO',316,52,'#8cf',8,'right');
+if(ice<30&&(t*4|0)%2)T('ANTIGELO BASSO! RALLENTI',160,60,'#8ef',9);else if(off<30&&(t*4|0)%2)T('ROTTA BASSA! RALLENTI',160,60,'#9f9',9)}
 if(warn){T('ARRIVO A '+N[ni].toUpperCase(),160,150,'#ffe14a',12);T(Math.ceil(DT-7-prog),160,205,'#fff',44)}
 if(app&&st=='fly'){const ly=400-oy,al=Math.abs(pl.x-RXS[SS])<27;if(ly>RL)T(al?'IN CORRIDOIO: ATTENDI LA PISTA':'ENTRA NEL CORRIDOIO',160,120,'#ffe14a',10);else if(al){if((t*5|0)%2)T('PREMI L ORA!',160,120,'#6f6',16)}else T('ALLINEATI!',160,120,'#f66',12)}
 if(st=='gnd'){T(gp==0?'SBARCO PASSEGGERI':gp==1?'IMBARCO PASSEGGERI':(t*3|0)%2?'PRONTI! PREMI F PER DECOLLARE':'',160,44,gp==2?'#6f6':'#fff',9);BAR(60,50,200,12,pb,200,gp==0?'#ff9a1a':'#4aff7a');T(Math.round(pb)+' / 200',160,60,'#fff',8);T('PROSSIMA: '+N[ni].toUpperCase(),160,78,'#8cf',9);T('PUNTI '+sc,160,92,'#fff',9)}
@@ -518,7 +654,7 @@ if(st=='title')return;
 dec.forEach(d=>d.k!='c'&&dr(d));
 if(st=='take')scene(SA,SS,sa);else if(['gnd','land','taxi','back'].includes(st)||(st=='fly'&&app))scene(SA,SS,1);
 tk.forEach(tok);en.forEach(e=>SH(e.x,e.y,1,e.vy>0,12));if(st!='dead')SH(pl.x,pl.y,ps,pdir,10+(ps-1)*70);en.forEach(e=>jet(e.x,e.y,1,EC[e.c][0],EC[e.c][1],e.vy>0));
-if(st!='dead'&&!(inv>0&&(t*12|0)%2)){jet(pl.x,pl.y,ps,'#fff','#c8d4e8',pdir);if(shield){X.strokeStyle='#6af';X.lineWidth=2;X.beginPath();X.arc(pl.x,pl.y,16,0,7);X.stroke()}}
+if(st!='dead'&&!(inv>0&&(t*12|0)%2)){jet(pl.x,pl.y,ps,'#fff','#c8d4e8',pdir);if(shield){X.strokeStyle='#6af';X.lineWidth=2;X.beginPath();X.arc(pl.x,pl.y,16,0,7);X.stroke()}if(alt>0&&(alt>1.5||(t*10|0)%2)){X.strokeStyle='#b48cff';X.lineWidth=2;X.setLineDash([4,3]);X.beginPath();X.arc(pl.x,pl.y,21,0,7);X.stroke();X.setLineDash([])}}
 dec.forEach(d=>d.k=='c'&&cloud(d));
 pt.forEach(p=>O(p.c,p.x,p.y,2.5,Math.min(1,p.l)));
 hud();
