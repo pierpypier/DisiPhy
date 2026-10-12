@@ -31,7 +31,7 @@
   /* Barra località (sopra lo schermo di gioco) */
   #place{height:calc(var(--u)*40);display:flex;align-items:center;justify-content:center;
     background:linear-gradient(180deg,#07021a,#14072e);border-bottom:1px solid rgba(110,231,255,.35);pointer-events:none}
-  #placeTxt{font-size:calc(var(--u)*18);font-weight:800;font-style:italic;letter-spacing:.3em;
+  #placeTxt{font-size:calc(var(--u)*26);font-weight:800;font-style:italic;letter-spacing:.3em;
     color:#6ee7ff;opacity:.55;white-space:nowrap}
   #placeTxt.new{animation:placein 6.5s ease-in-out forwards}
   @keyframes placein{
@@ -93,7 +93,7 @@
 <div id="wrap">
 <div id="place"><span id="placeTxt"></span></div>
 <div id="stage">
-  <canvas id="c" width="960" height="540"></canvas>
+  <canvas id="c" width="960" height="640"></canvas>
 
   <div id="hud">
     <div class="box"><b>TEMPO</b><span id="time">45</span></div>
