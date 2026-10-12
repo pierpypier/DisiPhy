@@ -29,9 +29,9 @@
   @keyframes blink{to{opacity:.35}}
 
   /* Barra località (sopra lo schermo di gioco) */
-  #place{height:calc(var(--u)*40);display:flex;align-items:center;justify-content:center;
+  #place{height:calc(var(--u)*120);display:flex;align-items:center;justify-content:center;
     background:linear-gradient(180deg,#07021a,#14072e);border-bottom:1px solid rgba(110,231,255,.35);pointer-events:none}
-  #placeTxt{font-size:calc(var(--u)*26);font-weight:800;font-style:italic;letter-spacing:.3em;
+  #placeTxt{font-size:calc(var(--u)*54);font-weight:800;font-style:italic;letter-spacing:.3em;
     color:#6ee7ff;opacity:.55;white-space:nowrap}
   #placeTxt.new{animation:placein 6.5s ease-in-out forwards}
   @keyframes placein{
@@ -93,7 +93,7 @@
 <div id="wrap">
 <div id="place"><span id="placeTxt"></span></div>
 <div id="stage">
-  <canvas id="c" width="960" height="640"></canvas>
+  <canvas id="c" width="960" height="540"></canvas>
 
   <div id="hud">
     <div class="box"><b>TEMPO</b><span id="time">45</span></div>
@@ -138,10 +138,11 @@
 
   /* ---------- scaling UI ---------- */
   function resize() {
-    // stage 16:9 + barra comandi alta (300u su 960u di larghezza): tutto deve stare nella finestra
-    const w = Math.max(320, Math.min(innerWidth, innerHeight / 0.92));
+    // barra località (120u) + stage 16:9 (540u) + barra comandi (300u) = 960u su 960u di larghezza: tutto deve stare nella finestra
+    const w = Math.max(320, Math.min(innerWidth, innerHeight / 1.01));
     wrap.style.width = w + 'px';
     wrap.style.setProperty('--u', (w / 960) + 'px');
+    fitPlace();
   }
   window.addEventListener('resize', resize); resize();
 
@@ -278,7 +279,7 @@
      - in accelerazione: il tono sale in ogni marcia e ricade ad ogni cambio (1→2→3→4→5)
      - dopo uno scontro / rallentando: scalate di marcia in sequenza (5→4→3→...) */
   const GEAR_TOP = [0.2, 0.4, 0.6, 0.8, 1.0];        // "velocità audio" (frazione del massimo) a fondo-giri di ogni marcia: 5 marce di pari ampiezza
-  const GEAR_UP_RATE = 0.2 / 6;     // la velocità audio sale di 0.2 (= una marcia) ogni 6 secondi in accelerazione
+  const GEAR_UP_RATE = 0.2 / 5;     // la velocità audio sale di 0.2 (= una marcia) ogni 5 secondi in accelerazione
   const GEAR_DOWN_RATE = 0.2 / 1;   // in scalata/rallentamento scende di una marcia al secondo
   let av = 0;                        // velocità audio: insegue la velocità reale, ma sale lentamente
   let gear = 0, gearCd = 0, gearDip = 0;
@@ -1610,6 +1611,16 @@ T('Kolkata',['#c86a4a','#f0a870','#fce0b0'],['#6a8a4a','#5e7e40'],FS('#9a8a8a'),
     placeName = n;
     const s = $('placeTxt'); s.className = ''; s.textContent = n ? '◆ ' + n.toUpperCase() + ' ◆' : '';
     void s.offsetWidth; if (n) s.className = 'new';
+    fitPlace();
+  }
+  // nomi lunghi (es. "Città del Messico"): riduce prima la spaziatura, poi il corpo, solo se non entrano nella barra
+  function fitPlace() {
+    const s = $('placeTxt'), box = $('place');
+    if (!s || !box) return;
+    s.style.letterSpacing = ''; s.style.fontSize = '';
+    const avail = box.clientWidth * 0.96;
+    if (s.offsetWidth > avail) s.style.letterSpacing = '.1em';
+    if (s.offsetWidth > avail) s.style.fontSize = 'calc(var(--u)*54*' + (avail / s.offsetWidth).toFixed(3) + ')';
   }
 
   /* ---------- input ---------- */
