@@ -1042,6 +1042,7 @@
     <div class="mail-actions">
       <button class="qa-btn" id="calGoogleBtn">Google Calendar</button>
       <button class="qa-btn secondary" id="calIcsBtn">Scarica .ics</button>
+      <button class="qa-btn secondary" id="calLocalBtn">Salva solo in caldsp</button>
     </div>
     <div class="mail-note">Senza orario l'evento è "tutto il giorno"; senza ora di fine dura un'ora. Il file .ics si apre con il calendario del telefono o del computer.</div>
     </div>
@@ -2129,7 +2130,7 @@ function initCalendarWidget(){
     if(e.luogo) desc += ' @ ' + e.luogo;
     if(e.note)  desc += ' — ' + e.note;
 
-    if(events.some(ev => ev.date === dateStr && (ev.time || '') === timeStr && ev.desc === desc)) return;
+    if(events.some(ev => ev.date === dateStr && (ev.time || '') === timeStr && ev.desc === desc)) return 'dup';
 
     events.push({
       id: 'ce' + Math.random().toString(36).slice(2, 9),
@@ -2142,13 +2143,14 @@ function initCalendarWidget(){
       localStorage.setItem(LS_CAL_EVENTS, JSON.stringify(events));
     }catch(err){
       console.error('Errore salvataggio cal_events_v1', err);
-      alert('Evento aperto su Google Calendar, ma non salvato in caldsp: spazio locale esaurito o permessi negati.');
-      return;
+      alert('Evento non salvato in caldsp: spazio locale esaurito o permessi negati.');
+      return 'err';
     }
     // aggiorna subito "Impegni di oggi", "Prossimi 7 giorni" e i badge
     renderTodayEvents();
     renderUpcomingEvents();
     renderStats();
+    return 'ok';
   }
 
   document.getElementById('calGoogleBtn').addEventListener('click', () => {
@@ -2163,6 +2165,18 @@ function initCalendarWidget(){
       + '&details='  + encodeURIComponent(e.note)
       + '&location=' + encodeURIComponent(e.luogo);
     window.open(url, '_blank', 'noopener');
+  });
+
+  // Salva solo in caldsp, senza aprire Google Calendar
+  document.getElementById('calLocalBtn').addEventListener('click', (ev) => {
+    const e = leggiEvento(); if(!e) return;
+    const esito = salvaInCaldsp(e);
+    if(esito === 'err') return;
+    const btn = ev.currentTarget;
+    const testo = btn.textContent;
+    btn.textContent = esito === 'dup' ? 'Già presente ✓' : 'Salvato ✓';
+    btn.disabled = true;
+    setTimeout(() => { btn.textContent = testo; btn.disabled = false; }, 1800);
   });
 
   function icsEscape(str){
