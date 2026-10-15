@@ -2108,8 +2108,52 @@ function initCalendarWidget(){
     return { t, dtStart, dtEnd, allDay, luogo: place.value.trim(), note: notes.value.trim() };
   }
 
+  /* Salva l'evento anche in cal_events_v1 (stesso formato di caldsp.html):
+     {id, date:'YYYY-MM-DD', time:'HH:MM', desc, completed}.
+     Evita i doppioni se si preme due volte lo stesso evento. */
+  function salvaInCaldsp(e){
+    let events = [];
+    try{
+      const raw = localStorage.getItem(LS_CAL_EVENTS);
+      if(raw){
+        const parsed = JSON.parse(raw);
+        if(Array.isArray(parsed)) events = parsed;
+      }
+    }catch(err){
+      console.warn('Errore lettura cal_events_v1', err);
+    }
+
+    const dateStr = e.dtStart.getFullYear() + '-' + utPad2(e.dtStart.getMonth()+1) + '-' + utPad2(e.dtStart.getDate());
+    const timeStr = e.allDay ? '' : utPad2(e.dtStart.getHours()) + ':' + utPad2(e.dtStart.getMinutes());
+    let desc = e.t;
+    if(e.luogo) desc += ' @ ' + e.luogo;
+    if(e.note)  desc += ' — ' + e.note;
+
+    if(events.some(ev => ev.date === dateStr && (ev.time || '') === timeStr && ev.desc === desc)) return;
+
+    events.push({
+      id: 'ce' + Math.random().toString(36).slice(2, 9),
+      date: dateStr,
+      time: timeStr,
+      desc: desc,
+      completed: false
+    });
+    try{
+      localStorage.setItem(LS_CAL_EVENTS, JSON.stringify(events));
+    }catch(err){
+      console.error('Errore salvataggio cal_events_v1', err);
+      alert('Evento aperto su Google Calendar, ma non salvato in caldsp: spazio locale esaurito o permessi negati.');
+      return;
+    }
+    // aggiorna subito "Impegni di oggi", "Prossimi 7 giorni" e i badge
+    renderTodayEvents();
+    renderUpcomingEvents();
+    renderStats();
+  }
+
   document.getElementById('calGoogleBtn').addEventListener('click', () => {
     const e = leggiEvento(); if(!e) return;
+    salvaInCaldsp(e);
     const dates = e.allDay
       ? utDay(e.dtStart) + '/' + utDay(e.dtEnd)
       : utLocal(e.dtStart) + '/' + utLocal(e.dtEnd);
