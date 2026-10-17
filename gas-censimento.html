@@ -114,6 +114,23 @@
   .saldo-box{ background:#f7f9fc; border:1px solid #e6e9ef; border-radius:10px; padding:12px; }
   .saldo-box .saldo-label{ font-size:12px; color:var(--muted); font-weight:700; margin-bottom:4px; }
   .saldo-box .saldo-value{ font-size:18px; font-weight:800; color:#111827; }
+
+  /* ===== Personalizzazioni censimento ===== */
+  /* Nome presidio: dimensione raddoppiata */
+  .field.pres-nome label{ font-size:24px; margin-bottom:8px; }
+  .field.pres-nome input{ font-size:28px; padding:12px 14px; }
+
+  /* Reparto: nome x3, bianco su blu molto scuro */
+  .rep-card > .item-head{ background:#06143a; border-radius:calc(var(--radius) - 1px); }
+  .rep-card.open > .item-head{ border-radius:calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0; }
+  .rep-card > .item-head .item-sum{ font-size:42px; color:#fff; line-height:1.15; overflow-wrap:anywhere; }
+  .rep-card > .item-head .item-sum small{ color:#cbd5e1; }
+  /* Freccia di estensione x8, piu' distante dal cestino */
+  .rep-card > .item-head .chev{ font-size:112px; line-height:.8; color:#fff; margin-left:28px; flex-shrink:0; }
+
+  /* Linea di separazione 8px tra i reparti (colore blu dei titoli) */
+  .rep-card{ margin-bottom:26px; position:relative; }
+  .rep-card:not(:last-child)::after{ content:""; position:absolute; left:0; right:0; bottom:-17px; height:8px; background:var(--accent); border-radius:4px; }
 </style>
 </head>
 <body>
@@ -411,7 +428,7 @@ function renderPresidio(){
     <div class="item-card open" style="cursor:default;">
       <div class="item-body" style="display:block;border-top:none;">
         <div class="field-grid">
-          <div class="field"><label>Nome presidio</label><input type="text" placeholder="Es. Ospedale Civile" value="${escapeHtml(p.nome)}" data-t="pres" data-f="nome"></div>
+          <div class="field pres-nome"><label>Nome presidio</label><input type="text" placeholder="Es. Ospedale Civile" value="${escapeHtml(p.nome)}" data-t="pres" data-f="nome"></div>
           <div class="field"><label>Indirizzo</label><input type="text" value="${escapeHtml(p.indirizzo)}" data-t="pres" data-f="indirizzo"></div>
           <div class="field"><label>Referente (facoltativo)</label><input type="text" value="${escapeHtml(p.referente)}" data-t="pres" data-f="referente"></div>
         </div>
