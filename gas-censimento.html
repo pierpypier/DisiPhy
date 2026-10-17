@@ -116,17 +116,25 @@
   .saldo-box .saldo-value{ font-size:18px; font-weight:800; color:#111827; }
 
   /* ===== Personalizzazioni censimento ===== */
-  /* Nome presidio: dimensione raddoppiata */
-  .field.pres-nome label{ font-size:24px; margin-bottom:8px; }
-  .field.pres-nome input{ font-size:28px; padding:12px 14px; }
+  /* Schede presidi in alto: dimensione raddoppiata */
+  .pres-tab{ font-size:26px; padding:16px 32px; }
+  .pres-tabs .btn-add{ font-size:26px; padding:14px 24px; }
 
-  /* Reparto: nome x3, bianco su blu molto scuro */
-  .rep-card > .item-head{ background:#06143a; border-radius:calc(var(--radius) - 1px); }
+  /* Reparto: testata a griglia. Nome a tutta larghezza, sotto note a sinistra e bottoni a destra */
+  .rep-card > .item-head{
+    display:grid; grid-template-columns:1fr auto auto; align-items:center; column-gap:8px; row-gap:6px;
+    background:#06143a; border-radius:calc(var(--radius) - 1px);
+  }
   .rep-card.open > .item-head{ border-radius:calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0; }
-  .rep-card > .item-head .item-sum{ font-size:42px; color:#fff; line-height:1.15; overflow-wrap:anywhere; }
-  .rep-card > .item-head .item-sum small{ color:#cbd5e1; }
-  /* Freccia di estensione x8, piu' distante dal cestino */
-  .rep-card > .item-head .chev{ font-size:112px; line-height:.8; color:#fff; margin-left:28px; flex-shrink:0; }
+  .rep-card > .item-head .item-sum{ display:contents; }
+  .rep-card > .item-head [data-rep-title]{
+    grid-column:1 / -1; grid-row:1; display:block; width:100%;
+    font-size:33.6px; font-weight:700; color:#fff; line-height:1.15; overflow-wrap:anywhere;
+  }
+  .rep-card > .item-head .item-sum small{ grid-column:1; grid-row:2; margin:0; color:#cbd5e1; }
+  .rep-card > .item-head .btn-danger{ grid-column:2; grid-row:2; }
+  /* Freccia: 89.6px (112 -20%), distanza dal cestino 22.4px (28 -20%) */
+  .rep-card > .item-head .chev{ grid-column:3; grid-row:2; font-size:89.6px; line-height:.8; color:#fff; margin-left:22.4px; }
 
   /* Linea di separazione 8px tra i reparti (colore blu dei titoli) */
   .rep-card{ margin-bottom:26px; position:relative; }
@@ -428,7 +436,7 @@ function renderPresidio(){
     <div class="item-card open" style="cursor:default;">
       <div class="item-body" style="display:block;border-top:none;">
         <div class="field-grid">
-          <div class="field pres-nome"><label>Nome presidio</label><input type="text" placeholder="Es. Ospedale Civile" value="${escapeHtml(p.nome)}" data-t="pres" data-f="nome"></div>
+          <div class="field"><label>Nome presidio</label><input type="text" placeholder="Es. Ospedale Civile" value="${escapeHtml(p.nome)}" data-t="pres" data-f="nome"></div>
           <div class="field"><label>Indirizzo</label><input type="text" value="${escapeHtml(p.indirizzo)}" data-t="pres" data-f="indirizzo"></div>
           <div class="field"><label>Referente (facoltativo)</label><input type="text" value="${escapeHtml(p.referente)}" data-t="pres" data-f="referente"></div>
         </div>
