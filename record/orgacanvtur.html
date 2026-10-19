@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Organizer — Lavagna a Cursore</title>
+<style>
+  :root {
+    --cal-bg: #f7f7fb;
+    --cal-card: #ffffff;
+    --cal-accent: #1e88e5;
+    --cal-muted: #666666;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    margin: 8px;
+    background: var(--cal-bg);
+    color: #111;
+  }
+
+  .container { max-width: 1000px; width: 100%; margin: 0 auto; }
+  .card { background: var(--cal-card); border-radius: 8px; padding: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.06); margin-bottom: 10px; }
+
+  /* --- Barre fisse (sempre visibili, anche con zoom) --- */
+  .toolbar, .bottombar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 8px 10px;
+    transform-origin: 0 0;
+    will-change: transform;
+  }
+  .toolbar { box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+  .bottombar {
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  .toolbar-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn {
+    background: var(--cal-accent);
+    color: #fff;
+    border: 0;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    min-width: 40px;
+    min-height: 34px;
+    transition: opacity 0.2s;
+    touch-action: manipulation;
+  }
+  .btn:hover { opacity: 0.9; }
+  .btn.secondary { background: #edf2f7; color: #4a5568; border: 1px solid #cbd5e0; }
+  .btn.active { box-shadow: 0 0 0 3px rgba(30,136,229, 0.4); outline: none; }
+  .btn.danger { background: #d9534f; color: #fff; }
+
+  .link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  /* --- Menù a tendina --- */
+  .menu-dropdown-wrap { position: relative; display: inline-block; }
+  .menu-btn { font-size: 14px; font-weight: 700; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
+  .cur-dot { width: 14px; height: 14px; border-radius: 50%; border: 1px solid #888; display: inline-block; background: #1e40af; }
+  .menu-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    max-height: calc(100vh - 230px);
+    min-height: 160px;
+    overflow-y: auto;
+    background: #eaf1fb;
+    border: 2px solid #1a3c5a;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.25);
+    padding: 6px;
+    gap: 4px;
+  }
+  .menu-dropdown.hidden { display: none; }
+  .menu-section-title { font-size: 12px; font-weight: 700; color: #1a3c5a; text-transform: uppercase; letter-spacing: .04em; margin: 4px 2px 0; }
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+    background: #ffffff;
+    color: #1a3c5a;
+    border: 1px solid #d7e3f2;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .menu-item span { flex: 1; }
+  .menu-item:hover { background: #c9a86a; color: #1a3c5a; border-color: #c9a86a; }
+  .menu-item-danger { color: #b91c1c; }
+  .menu-item-danger:hover { background: #dc2626; color: #fff; border-color: #dc2626; }
+
+  /* Palette colori */
+  .palette { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; justify-items: center; padding: 4px 2px; }
+  .color-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.1s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .color-dot:hover { transform: scale(1.1); }
+  .color-dot.light { border-color: #cbd5e0; }
+  .color-dot.selected { border-color: #000; box-shadow: 0 0 5px rgba(0,0,0,0.4); transform: scale(1.15); }
+
+  /* Spessori */
+  .thick-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .thick-btn {
+    background: #fff;
+    border: 2px solid #d7e3f2;
+    border-radius: 6px;
+    padding: 5px 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1a3c5a;
+  }
+  .thick-btn i { display: block; width: 70%; background: #1a3c5a; border-radius: 99px; }
+  .thick-btn.selected { border-color: var(--cal-accent); background: #e3f1fd; }
+
+  /* Gradi + coordinate */
+  .field, .readout {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #4a5568;
+    background: #edf2f7;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 4px 8px;
+    min-height: 34px;
+  }
+  .field input {
+    width: 64px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    padding: 3px 4px;
+    text-align: right;
+    background: #fff;
+    color: #111;
+  }
+  .readout b { font-family: ui-monospace, Menlo, Consolas, monospace; min-width: 5.4ch; text-align: right; color: #111; font-size: 13px; }
+
+  /* --- Area di disegno --- */
+  .stage {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 1000 / 1414;
+    margin: 0 auto;
+    background: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px #e2e8f0;
+    border-radius: 2px;
+    container-type: inline-size;
+  }
+  #imageLayer, #board {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+  }
+  #imageLayer { z-index: 1; }
+  #board { z-index: 2; display: block; }
+
+  .stage-img {
+    position: absolute;
+    display: block;
+    pointer-events: auto;
+    cursor: move;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .sel-box {
+    position: absolute;
+    z-index: 3;
+    border: 2px dashed var(--cal-accent);
+    pointer-events: none;
+  }
+  .sel-box.hidden { display: none; }
+  .sel-handle, .sel-del {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    pointer-events: auto;
+    touch-action: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,.4);
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .sel-handle { right: -8px; bottom: -8px; background: var(--cal-accent); cursor: nwse-resize; border: 2px solid #fff; }
+  .sel-handle::before { content: "⤡"; }
+  .sel-del { right: -8px; top: -8px; background: #d9534f; cursor: pointer; border: 2px solid #fff; }
+
+  /* Cursore: punto centrale 1px, stanghette 4px x 2px, distanza dal punto 3px */
+  #cursor {
+    position: absolute;
+    z-index: 4;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    background: linear-gradient(#e11d48, #e11d48) no-repeat 7px 7px / 1px 1px;
+  }
+  #cursor::before, #cursor::after { content: ""; position: absolute; }
+  #cursor::before {
+    left: 0; top: 6px; width: 15px; height: 2px;
+    background: linear-gradient(to right, #e11d48 0 4px, transparent 4px 11px, #e11d48 11px 15px);
+  }
+  #cursor::after {
+    left: 6px; top: 0; width: 2px; height: 15px;
+    background: linear-gradient(to bottom, #e11d48 0 4px, transparent 4px 11px, #e11d48 11px 15px);
+  }
+
+  /* --- Direzionali a croce --- */
+  .dpad {
+    display: grid;
+    grid-template-columns: repeat(3, 44px);
+    grid-template-rows: repeat(3, 44px);
+    gap: 4px;
+  }
+  .dbtn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--cal-accent);
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .dbtn.pressed { background: #0b5fa8; transform: scale(.93); box-shadow: 0 0 0 3px rgba(30,136,229,.4); }
+  .dbtn[data-dir="up"]    { grid-column: 2; grid-row: 1; }
+  .dbtn[data-dir="left"]  { grid-column: 1; grid-row: 2; }
+  .dbtn[data-dir="right"] { grid-column: 3; grid-row: 2; }
+  .dbtn[data-dir="down"]  { grid-column: 2; grid-row: 3; }
+
+  .modes { display: flex; flex-direction: column; gap: 6px; }
+  .mode-btn, .act-btn { width: 52px; height: 42px; padding: 4px; font-size: 21px; display: flex; align-items: center; justify-content: center; gap: 4px; white-space: nowrap; }
+  .bottombar { gap: 16px; }
+  .stage-emoji {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  }
+  .stage-emoji.grabbed { outline: 2px dashed #f59e0b; border-radius: 6px; }
+
+  .emoji-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .emoji-btn {
+    background: #fff;
+    border: 1px solid #d7e3f2;
+    border-radius: 6px;
+    height: 36px;
+    font-size: 21px;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  }
+  .emoji-btn:hover { background: #c9a86a; }
+
+  @media print {
+    body { background: #fff; margin: 0; padding: 0 !important; }
+    .toolbar, .bottombar, #cursor, .sel-box { display: none !important; }
+    .card { box-shadow: none; padding: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- BARRA SUPERIORE -->
+<div class="toolbar" id="topBar">
+  <div class="toolbar-row">
+    <a href="assistent.html" class="btn secondary link-btn" title="Vai all'assistente">🤖</a>
+
+    <div class="menu-dropdown-wrap">
+      <button id="btnMenu" class="btn secondary menu-btn" title="Strumenti"><span class="cur-dot" id="curDot"></span>🛠️</button>
+      <div id="menuDropdown" class="menu-dropdown hidden">
+        <div class="menu-section-title">Colore</div>
+        <div class="palette" id="palette"></div>
+        <div class="menu-section-title">Spessore linea</div>
+        <div class="thick-row" id="thickRow"></div>
+        <div class="menu-section-title">Oggetti</div>
+        <div class="emoji-grid" id="emojiGrid"></div>
+        <button id="btnClear" class="menu-item menu-item-danger" title="Cancella tutto">🗑️ <span>Cancella tutto</span></button>
+        <button id="btnLoadImage" class="menu-item" title="Carica immagini dal dispositivo">🖼️ <span>Carica immagini</span></button>
+        <button id="btnSaveImage" class="menu-item" title="Salva il disegno come immagine PNG">📷 <span>Salva immagine</span></button>
+        <button id="btnExport" class="menu-item" title="Salva i dati del disegno in un file">💾 <span>Salva dati</span></button>
+        <button id="btnImport" class="menu-item" title="Carica i dati del disegno da un file">📂 <span>Carica dati</span></button>
+      </div>
+    </div>
+
+    <label class="field" title="Inclinazione della linea in gradi (0 = orizzontale)">
+      <input id="angleInput" type="number" value="0" step="any" inputmode="decimal">°
+    </label>
+    <div class="readout" title="Posizione X del cursore (px) dallo spigolo alto a sinistra"><b id="posX">0.0</b></div>
+    <div class="readout" title="Posizione Y del cursore (px) dallo spigolo alto a sinistra"><b id="posY">0.0</b></div>
+  </div>
+</div>
+
+<!-- LAVAGNA -->
+<div class="container">
+  <div class="card">
+    <div class="stage" id="stage">
+      <div id="imageLayer"></div>
+      <canvas id="board" width="2000" height="2828"></canvas>
+      <div class="sel-box hidden" id="selBox">
+        <div class="sel-del" id="selDel" title="Rimuovi immagine">✕</div>
+        <div class="sel-handle" id="selHandle" title="Ridimensiona"></div>
+      </div>
+      <div id="cursor"></div>
+    </div>
+  </div>
+</div>
+
+<!-- BARRA INFERIORE: direzionali + modalità -->
+<div class="bottombar" id="bottomBar">
+  <div class="dpad">
+    <button class="dbtn" data-dir="up" aria-label="Su">▲</button>
+    <button class="dbtn" data-dir="left" aria-label="Sinistra">◀</button>
+    <button class="dbtn" data-dir="right" aria-label="Destra">▶</button>
+    <button class="dbtn" data-dir="down" aria-label="Giù">▼</button>
+  </div>
+  <div class="modes">
+    <button class="btn secondary mode-btn" data-mode="draw" title="Disegna: muovendo il cursore traccia il tratto">✏️</button>
+    <button class="btn active mode-btn" data-mode="none" title="Rilascia: il cursore si muove senza disegnare">✋</button>
+    <button class="btn secondary mode-btn" data-mode="erase" title="Gomma: muovendo il cursore cancella">🧽</button>
+  </div>
+  <div class="modes">
+    <button id="btnGrab" class="btn secondary act-btn" title="Afferra l'oggetto sotto il cursore: poi muoviti con i direzionali per spostarlo">🤏</button>
+    <button id="btnDrop" class="btn secondary act-btn" title="Posa l'oggetto afferrato nel punto attuale">📍</button>
+  </div>
+</div>
+
+<input type="file" id="imgInput" accept="image/*" multiple style="display:none">
+<input type="file" id="dataInput" accept=".json,application/json" style="display:none">
+
+<script>
+(() => {
+  const W = 1000, H = 1414, S = 2;           // coordinate logiche e fattore di risoluzione del canvas
+  const COLORS = [
+    ['Nero', '#000000'], ['Grigio', '#6b7280'], ['Bianco', '#ffffff'], ['Rosso', '#dc2626'], ['Arancione', '#f97316'],
+    ['Giallo', '#facc15'], ['Verde', '#16a34a'], ['Azzurro', '#0ea5e9'], ['Blu', '#1e40af'], ['Viola', '#7c3aed']
+  ];
+  const WIDTHS = [2, 4, 6, 8, 10, 12];
+
+  const $ = (id) => document.getElementById(id);
+  const stage = $('stage'), canvas = $('board'), cursorEl = $('cursor');
+  const topBar = $('topBar'), bottomBar = $('bottomBar');
+  const ctx = canvas.getContext('2d');
+  ctx.setTransform(S, 0, 0, S, 0, 0);
+
+  const state = { x: 100, y: 100, mode: 'none', color: '#1e40af', width: 4, angle: 0 };
+  let strokes = [];
+  let cur = null;
+  let images = [];
+  let selected = null;
+  let grabbed = null;
+  const LS_KEY = 'lavagnaCursore.v1';
+  let saveT = 0;
+
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+  /* ---------- Salvataggio automatico (localStorage): disegno e oggetti ---------- */
+  function buildData(withImages) {
+    const d = {
+      app: 'lavagna-cursore', version: 1,
+      angle: state.angle, color: state.color, width: state.width,
+      cursor: { x: state.x, y: state.y },
+      strokes,
+      objects: images.filter((i) => i.type === 'emoji').map((i) => ({ e: i.e, x: i.x, y: i.y, w: i.w }))
+    };
+    d.images = withImages ? images.filter((i) => i.type === 'img').map((i) => ({ src: i.src, x: i.x, y: i.y, w: i.w, h: i.h })) : [];
+    return d;
+  }
+  function saveLocal() {
+    try { localStorage.setItem(LS_KEY, JSON.stringify(buildData(false))); } catch (_) {}
+  }
+  function scheduleSave() { clearTimeout(saveT); saveT = setTimeout(saveLocal, 400); }
+  window.addEventListener('pagehide', saveLocal);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveLocal(); });
+  function restoreLocal() {
+    try {
+      const raw = localStorage.getItem(LS_KEY);
+      if (!raw) return;
+      const d = JSON.parse(raw);
+      if (!d || !Array.isArray(d.strokes)) return;
+      strokes = d.strokes.filter((st) => st && Array.isArray(st.p));
+      redraw();
+      for (const o of (d.objects || [])) if (o && o.e) createEmoji(o.e, +o.x || 0, +o.y || 0, +o.w || 80);
+      if (typeof d.angle === 'number') { state.angle = d.angle; angleInput.value = d.angle; }
+      if (d.color) selectColor(d.color);
+      if (WIDTHS.includes(d.width)) selectWidth(d.width);
+      if (d.cursor) setCursor(+d.cursor.x || 0, +d.cursor.y || 0);
+      deselect();
+    } catch (_) {}
+  }
+
+  /* ---------- Barre sempre visibili (anche con pinch-zoom) ---------- */
+  function fixBars() {
+    const vv = window.visualViewport;
+    if (!vv) {
+      topBar.style.transform = '';
+      bottomBar.style.top = 'auto';
+      bottomBar.style.bottom = '0';
+      return;
+    }
+    const s = 1 / vv.scale;
+    topBar.style.transform = `translate(${vv.offsetLeft}px, ${vv.offsetTop}px) scale(${s})`;
+    const y = vv.offsetTop + vv.height - bottomBar.offsetHeight * s;
+    bottomBar.style.transform = `translate(${vv.offsetLeft}px, ${y}px) scale(${s})`;
+  }
+  function adjustPadding() {
+    document.body.style.paddingTop = (topBar.offsetHeight + 10) + 'px';
+    document.body.style.paddingBottom = (bottomBar.offsetHeight + 16) + 'px';
+    fixBars();
+  }
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('scroll', fixBars);
+    window.visualViewport.addEventListener('resize', fixBars);
+  }
+  window.addEventListener('resize', adjustPadding);
+  window.addEventListener('orientationchange', adjustPadding);
+  if (window.ResizeObserver) {
+    const ro = new ResizeObserver(adjustPadding);
+    ro.observe(topBar); ro.observe(bottomBar);
+  }
+
+  /* ---------- Cursore ---------- */
+  function setCursor(x, y) {
+    state.x = clamp(x, 0, W);
+    state.y = clamp(y, 0, H);
+    cursorEl.style.left = (state.x / W * 100) + '%';
+    cursorEl.style.top = (state.y / H * 100) + '%';
+    updateReadout();
+    scheduleSave();
+  }
+  // Coordinate in px dello schermo, dallo spigolo alto a sinistra della lavagna
+  function updateReadout() {
+    const k = stage.clientWidth / W;
+    $('posX').textContent = (state.x * k).toFixed(1);
+    $('posY').textContent = (state.y * k).toFixed(1);
+  }
+  window.addEventListener('resize', updateReadout);
+
+  function ensureVisible() {
+    const vv = window.visualViewport;
+    const sc = vv ? vv.scale : 1;
+    const offT = vv ? vv.offsetTop : 0, offL = vv ? vv.offsetLeft : 0;
+    const vw = vv ? vv.width : window.innerWidth, vh = vv ? vv.height : window.innerHeight;
+    const r = cursorEl.getBoundingClientRect();
+    const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    const top = offT + topBar.offsetHeight / sc + 20;
+    const bottom = offT + vh - bottomBar.offsetHeight / sc - 20;
+    const left = offL + 20 / sc, right = offL + vw - 20 / sc;
+    let dx = 0, dy = 0;
+    if (cy < top) dy = cy - top; else if (cy > bottom) dy = cy - bottom;
+    if (cx < left) dx = cx - left; else if (cx > right) dx = cx - right;
+    if (dx || dy) window.scrollBy(dx, dy);
+  }
+
+  /* ---------- Tratti ---------- */
+  function drawSegment(st, a, b) {
+    ctx.save();
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.globalCompositeOperation = st.m === 'erase' ? 'destination-out' : 'source-over';
+    ctx.strokeStyle = st.c;
+    ctx.lineWidth = st.w;
+    ctx.beginPath();
+    ctx.moveTo(a[0], a[1]);
+    ctx.lineTo(b[0], b[1]);
+    ctx.stroke();
+    ctx.restore();
+  }
+  function redraw() {
+    ctx.clearRect(0, 0, W, H);
+    scheduleSave();
+    for (const st of strokes) {
+      for (let i = 1; i < st.p.length; i++) drawSegment(st, st.p[i - 1], st.p[i]);
+    }
+  }
+  function endStroke() { cur = null; scheduleSave(); }
+
+  function stepMove(dx, dy) {
+    const nx = clamp(state.x + dx, 0, W), ny = clamp(state.y + dy, 0, H);
+    if (nx === state.x && ny === state.y) return;
+    if (state.mode !== 'none') {
+      if (!cur) {
+        cur = { m: state.mode, c: state.color, w: state.mode === 'erase' ? state.width * 2 + 4 : state.width, p: [[+state.x.toFixed(2), +state.y.toFixed(2)]] };
+        strokes.push(cur);
+      }
+      const a = cur.p[cur.p.length - 1];
+      const b = [+nx.toFixed(2), +ny.toFixed(2)];
+      cur.p.push(b);
+      drawSegment(cur, a, b);
+    }
+    if (grabbed) {
+      grabbed.x += nx - state.x;
+      grabbed.y += ny - state.y;
+      applyItem(grabbed);
+      if (selected === grabbed) updateSel();
+    }
+    setCursor(nx, ny);
+  }
+
+  /* ---------- Movimento con i direzionali ---------- */
+  // Il sistema di movimento ruota con i gradi: Destra segue l'angolo impostato,
+  // Su è perpendicolare (angolo + 90°). Con 0° → orizzontale / verticale.
+  const held = new Set();
+  let holdStart = 0, last = 0, raf = 0;
+
+  // 1 px dello schermo espresso in unità della lavagna
+  const unit = () => W / stage.clientWidth;
+
+  function dirVec() {
+    const t = state.angle * Math.PI / 180, c = Math.cos(t), s = Math.sin(t);
+    const R = [c, -s], U = [-s, -c];
+    let vx = 0, vy = 0;
+    if (held.has('right')) { vx += R[0]; vy += R[1]; }
+    if (held.has('left'))  { vx -= R[0]; vy -= R[1]; }
+    if (held.has('up'))    { vx += U[0]; vy += U[1]; }
+    if (held.has('down'))  { vx -= U[0]; vy -= U[1]; }
+    const l = Math.hypot(vx, vy);
+    return l < 1e-9 ? null : [vx / l, vy / l];
+  }
+  function loop(t) {
+    if (!held.size) { raf = 0; return; }
+    const dt = Math.min((t - last) / 1000, 0.05);
+    last = t;
+    const hold = (t - holdStart) / 1000;
+    const speed = hold < 0.35 ? 0 : 10 + Math.min((hold - 0.35) / 2.5, 1) * 90;   // px schermo / secondo
+    const v = dirVec();
+    if (v) { const u = unit() * speed * dt; stepMove(v[0] * u, v[1] * u); ensureVisible(); }
+    raf = requestAnimationFrame(loop);
+  }
+  function press(d) {
+    if (held.has(d)) return;
+    if (!held.size) { holdStart = performance.now(); last = holdStart; }
+    held.add(d);
+    const v = dirVec();
+    if (v) { const u = unit() * 0.1; stepMove(v[0] * u, v[1] * u); ensureVisible(); }      // un tocco = 0,1 px sullo schermo
+    if (!raf) raf = requestAnimationFrame(loop);
+  }
+  function release(d) {
+    held.delete(d);
+    if (!held.size) {
+      endStroke();
+      if (raf) { cancelAnimationFrame(raf); raf = 0; }
+    }
+  }
+  function releaseAll() { [...held].forEach(release); document.querySelectorAll('.dbtn.pressed').forEach(b => b.classList.remove('pressed')); }
+
+  document.querySelectorAll('.dbtn').forEach((b) => {
+    const d = b.dataset.dir;
+    b.addEventListener('pointerdown', (e) => {
+      e.preventDefault();
+      try { b.setPointerCapture(e.pointerId); } catch (_) {}
+      b.classList.add('pressed');
+      press(d);
+    });
+    const end = () => { if (b.classList.contains('pressed')) { b.classList.remove('pressed'); release(d); } };
+    b.addEventListener('pointerup', end);
+    b.addEventListener('pointercancel', end);
+    b.addEventListener('lostpointercapture', end);
+    b.addEventListener('contextmenu', (e) => e.preventDefault());
+  });
+  window.addEventListener('blur', releaseAll);
+
+  // Tastiera (comodo su PC)
+  const KEYS = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right' };
+  document.addEventListener('keydown', (e) => {
+    const d = KEYS[e.key];
+    if (!d || /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
+    e.preventDefault();
+    if (!e.repeat) press(d);
+  });
+  document.addEventListener('keyup', (e) => {
+    const d = KEYS[e.key];
+    if (d) release(d);
+  });
+
+  /* ---------- Modalità: disegna / rilascia / gomma ---------- */
+  function setMode(m) {
+    drop();
+    endStroke();
+    state.mode = m;
+    document.querySelectorAll('.mode-btn').forEach((b) => {
+      const on = b.dataset.mode === m;
+      b.classList.toggle('active', on);
+      b.classList.toggle('secondary', !on);
+    });
+  }
+  document.querySelectorAll('.mode-btn').forEach((b) => b.addEventListener('click', () => setMode(b.dataset.mode)));
+
+  /* ---------- Gradi ---------- */
+  const angleInput = $('angleInput');
+  function readAngle() {
+    const v = parseFloat(angleInput.value);
+    state.angle = isFinite(v) ? v : 0;
+    endStroke();
+  }
+  angleInput.addEventListener('input', readAngle);
+  angleInput.addEventListener('change', readAngle);
+  angleInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') angleInput.blur(); });
+
+  /* ---------- Menù a tendina ---------- */
+  const menuDropdown = $('menuDropdown');
+  $('btnMenu').addEventListener('click', (e) => { e.stopPropagation(); menuDropdown.classList.toggle('hidden'); });
+  menuDropdown.querySelectorAll('.menu-item').forEach((it) => it.addEventListener('click', () => menuDropdown.classList.add('hidden')));
+  document.addEventListener('click', (e) => {
+    if (!menuDropdown.classList.contains('hidden') && !e.target.closest('.menu-dropdown-wrap')) menuDropdown.classList.add('hidden');
+  });
+
+  // Palette
+  const palette = $('palette');
+  COLORS.forEach(([name, hex]) => {
+    const dot = document.createElement('div');
+    dot.className = 'color-dot' + (hex === '#ffffff' || hex === '#facc15' ? ' light' : '');
+    dot.style.background = hex;
+    dot.title = name;
+    dot.dataset.color = hex;
+    dot.addEventListener('click', () => selectColor(hex));
+    palette.appendChild(dot);
+  });
+  function selectColor(hex) {
+    endStroke();
+    state.color = hex;
+    palette.querySelectorAll('.color-dot').forEach((d) => d.classList.toggle('selected', d.dataset.color === hex));
+    $('curDot').style.background = hex;
+  }
+
+  // Spessori
+  const thickRow = $('thickRow');
+  WIDTHS.forEach((w) => {
+    const b = document.createElement('button');
+    b.className = 'thick-btn';
+    b.dataset.w = w;
+    b.innerHTML = `${w} px<i style="height:${w}px"></i>`;
+    b.addEventListener('click', () => selectWidth(w));
+    thickRow.appendChild(b);
+  });
+  function selectWidth(w) {
+    endStroke();
+    state.width = w;
+    thickRow.querySelectorAll('.thick-btn').forEach((b) => b.classList.toggle('selected', +b.dataset.w === w));
+  }
+
+  /* ---------- Immagini ---------- */
+  const imageLayer = $('imageLayer'), selBox = $('selBox');
+
+  function loadImg(src) {
+    return new Promise((ok, ko) => { const i = new Image(); i.onload = () => ok(i); i.onerror = ko; i.src = src; });
+  }
+  function readFile(file, asText) {
+    return new Promise((ok, ko) => {
+      const fr = new FileReader();
+      fr.onload = () => ok(fr.result);
+      fr.onerror = ko;
+      asText ? fr.readAsText(file) : fr.readAsDataURL(file);
+    });
+  }
+  async function prepareImage(file) {
+    const dataUrl = await readFile(file, false);
+    const img = await loadImg(dataUrl);
+    const max = 1600, m = Math.max(img.naturalWidth, img.naturalHeight);
+    if (m <= max) return { src: dataUrl, img };
+    const k = max / m;
+    const c = document.createElement('canvas');
+    c.width = Math.round(img.naturalWidth * k);
+    c.height = Math.round(img.naturalHeight * k);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    const alpha = /png|gif|webp|svg/.test(file.type);
+    const src = c.toDataURL(alpha ? 'image/png' : 'image/jpeg', 0.9);
+    return { src, img: await loadImg(src) };
+  }
+
+  function applyItem(it) {
+    const s = it.el.style;
+    s.left = (it.x / W * 100) + '%';
+    s.top = (it.y / H * 100) + '%';
+    s.width = (it.w / W * 100) + '%';
+    s.height = (it.h / H * 100) + '%';
+    if (it.type === 'emoji') s.fontSize = (it.w / W * 100 * 0.82) + 'cqw';
+    scheduleSave();
+  }
+  function updateSel() {
+    if (!selected) return;
+    const s = selBox.style, it = selected;
+    s.left = (it.x / W * 100) + '%';
+    s.top = (it.y / H * 100) + '%';
+    s.width = (it.w / W * 100) + '%';
+    s.height = (it.h / H * 100) + '%';
+  }
+  function select(it) { selected = it; selBox.classList.remove('hidden'); updateSel(); }
+  function deselect() { selected = null; selBox.classList.add('hidden'); }
+
+  function mountItem(it) {
+    const el = it.el;
+    imageLayer.appendChild(el);
+    images.push(it);
+    applyItem(it);
+    el.addEventListener('pointerdown', (e) => {
+      e.preventDefault(); e.stopPropagation();
+      select(it);
+      const k = stage.clientWidth / W;
+      const sx = e.clientX, sy = e.clientY, ox = it.x, oy = it.y;
+      try { el.setPointerCapture(e.pointerId); } catch (_) {}
+      const mv = (ev) => { it.x = ox + (ev.clientX - sx) / k; it.y = oy + (ev.clientY - sy) / k; applyItem(it); updateSel(); };
+      const up = () => { el.removeEventListener('pointermove', mv); el.removeEventListener('pointerup', up); el.removeEventListener('pointercancel', up); };
+      el.addEventListener('pointermove', mv);
+      el.addEventListener('pointerup', up);
+      el.addEventListener('pointercancel', up);
+    });
+    return it;
+  }
+  function createItem({ src, img, x, y, w, h }) {
+    if (w === undefined) {
+      const k = Math.min(400 / img.naturalWidth, 400 / img.naturalHeight);
+      w = img.naturalWidth * k; h = img.naturalHeight * k;
+      x = clamp(state.x - w / 2, 0, Math.max(0, W - w));
+      y = clamp(state.y - h / 2, 0, Math.max(0, H - h));
+    }
+    const el = document.createElement('img');
+    el.className = 'stage-img';
+    el.src = src;
+    el.draggable = false;
+    return mountItem({ type: 'img', src, img, el, x, y, w, h });
+  }
+  function createEmoji(e, x, y, w = 80) {
+    if (x === undefined) {
+      x = clamp(state.x - w / 2, 0, Math.max(0, W - w));
+      y = clamp(state.y - w / 2, 0, Math.max(0, H - w));
+    }
+    const el = document.createElement('div');
+    el.className = 'stage-img stage-emoji';
+    el.textContent = e;
+    return mountItem({ type: 'emoji', e, el, x, y, w, h: w });
+  }
+  function removeItem(it) {
+    if (grabbed === it) drop();
+    it.el.remove();
+    images = images.filter((i) => i !== it);
+    scheduleSave();
+    if (selected === it) deselect();
+  }
+
+  // Maniglia di ridimensionamento (proporzioni mantenute)
+  $('selHandle').addEventListener('pointerdown', (e) => {
+    const it = selected;
+    if (!it) return;
+    e.preventDefault(); e.stopPropagation();
+    const handle = e.currentTarget;
+    const k = stage.clientWidth / W;
+    const sx = e.clientX, sy = e.clientY, ow = it.w, ratio = it.h / it.w;
+    try { handle.setPointerCapture(e.pointerId); } catch (_) {}
+    const mv = (ev) => {
+      const dx = (ev.clientX - sx) / k, dy = (ev.clientY - sy) / k;
+      const d = Math.abs(dx) > Math.abs(dy / ratio) ? dx : dy / ratio;
+      it.w = Math.max(30, ow + d);
+      it.h = it.w * ratio;
+      applyItem(it); updateSel();
+    };
+    const up = () => { handle.removeEventListener('pointermove', mv); handle.removeEventListener('pointerup', up); handle.removeEventListener('pointercancel', up); };
+    handle.addEventListener('pointermove', mv);
+    handle.addEventListener('pointerup', up);
+    handle.addEventListener('pointercancel', up);
+  });
+  $('selDel').addEventListener('pointerdown', (e) => {
+    e.preventDefault(); e.stopPropagation();
+    if (selected) removeItem(selected);
+  });
+  // Un clic/tocco fuori dall'immagine nasconde la maniglia
+  document.addEventListener('pointerdown', () => deselect());
+
+  /* ---------- Oggetti: aggiungi, afferra, posa ---------- */
+  const OBJECTS = [
+    "\u{1F9CD}\u{1F3FB}", "\u{1F9CD}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F6B6}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F6B6}\u{1F3FB}",
+    "🦖", "🦕", "🦬", "🐃", "🐂", "🦌", "🐖", "🦏", "🦣", "🐘", "🦓", "🐫", "🦍", "🦒", "🦙", "🐑", "🐄",
+    "🚙", "🚗", "🛻", "🚑", "🚒", "🚓", "🚕", "🚌", "🛺",
+    "\u{1F3DB}\uFE0F", "🕍", "🕌", "🗿", "🏦", "🏯", "🏬", "🏰", "🏫", "🏥", "🏨", "🏤", "🏣",
+    "\u{1F3D8}\uFE0F", "🏡", "🏠", "\u{1F3DA}\uFE0F", "🧱",
+    "⚫", "🔴", "🟪", "⬛", "⬜", "🟩", "🟥", "🟦", "🔳", "\u25AB\uFE0F", "\u25FB\uFE0F", "\u25FC\uFE0F", "🔲",
+    "\u{1FAC8}", "🌳", "🌲", "\u{1FABE}", "🌴", "🌵", "\u{1F6D8}", "🪨",
+    "\u26F0\uFE0F", "\u{1F3D4}\uFE0F", "🌋", "🦈", "🐋", "🐳", "🐬", "🦩", "🐠",
+    "🚢", "\u{1F6F3}\uFE0F", "\u{1F6E5}\uFE0F", "🚤", "🛸", "🚀"
+  ];
+  const emojiGrid = $('emojiGrid');
+  OBJECTS.forEach((e) => {
+    const b = document.createElement('button');
+    b.className = 'emoji-btn';
+    b.textContent = e;
+    b.addEventListener('click', () => {
+      select(createEmoji(e));
+      menuDropdown.classList.add('hidden');
+    });
+    emojiGrid.appendChild(b);
+  });
+
+  function updateGrabUI() {
+    const on = !!grabbed;
+    $('btnGrab').classList.toggle('active', on);
+    $('btnGrab').classList.toggle('secondary', !on);
+  }
+  function drop() {
+    if (grabbed) grabbed.el.classList.remove('grabbed');
+    grabbed = null;
+    updateGrabUI();
+  }
+  function grab() {
+    if (grabbed) return;
+    setMode('none');
+    for (let i = images.length - 1; i >= 0; i--) {
+      const it = images[i];
+      if (it.type !== 'emoji') continue;
+      if (state.x >= it.x && state.x <= it.x + it.w && state.y >= it.y && state.y <= it.y + it.h) {
+        grabbed = it;
+        images.splice(i, 1); images.push(it);       // porta l'oggetto in primo piano
+        imageLayer.appendChild(it.el);
+        it.el.classList.add('grabbed');
+        break;
+      }
+    }
+    updateGrabUI();
+  }
+  $('btnGrab').addEventListener('click', grab);
+  $('btnDrop').addEventListener('click', drop);
+
+  /* ---------- Azioni del menù ---------- */
+  function download(blob, name) {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+  }
+  function stamp() {
+    const d = new Date(), p = (n) => String(n).padStart(2, '0');
+    return `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}`;
+  }
+
+  $('btnClear').addEventListener('click', () => {
+    if (!confirm('Cancellare tutto il disegno e le immagini?')) return;
+    endStroke();
+    strokes = [];
+    [...images].forEach(removeItem);
+    redraw();
+  });
+
+  $('btnLoadImage').addEventListener('click', () => $('imgInput').click());
+  $('imgInput').addEventListener('change', async (e) => {
+    const files = [...e.target.files];
+    e.target.value = '';
+    let n = 0;
+    for (const f of files) {
+      if (!f.type.startsWith('image/')) continue;
+      try {
+        const p = await prepareImage(f);
+        const it = createItem(p);
+        // piccolo scostamento per non sovrapporre perfettamente più immagini
+        if (n > 0) { it.x = clamp(it.x + 24 * n, 0, Math.max(0, W - it.w)); it.y = clamp(it.y + 24 * n, 0, Math.max(0, H - it.h)); applyItem(it); }
+        select(it);
+        n++;
+      } catch (_) { alert('Impossibile caricare: ' + f.name); }
+    }
+  });
+
+  $('btnSaveImage').addEventListener('click', () => {
+    const o = document.createElement('canvas');
+    o.width = W * S; o.height = H * S;
+    const oc = o.getContext('2d');
+    oc.fillStyle = '#ffffff';
+    oc.fillRect(0, 0, o.width, o.height);
+    for (const it of images) {
+      if (it.type === 'emoji') {
+        oc.font = `${it.w * 0.82 * S}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif`;
+        oc.textAlign = 'center';
+        oc.textBaseline = 'middle';
+        oc.fillText(it.e, (it.x + it.w / 2) * S, (it.y + it.h / 2) * S);
+      } else {
+        oc.drawImage(it.img, it.x * S, it.y * S, it.w * S, it.h * S);
+      }
+    }
+    oc.drawImage(canvas, 0, 0);
+    o.toBlob((b) => { if (b) download(b, `lavagna-${stamp()}.png`); }, 'image/png');
+  });
+
+  $('btnExport').addEventListener('click', () => {
+    const data = buildData(true);
+    download(new Blob([JSON.stringify(data)], { type: 'application/json' }), `lavagna-dati-${stamp()}.json`);
+  });
+
+  $('btnImport').addEventListener('click', () => $('dataInput').click());
+  $('dataInput').addEventListener('change', async (e) => {
+    const f = e.target.files[0];
+    e.target.value = '';
+    if (!f) return;
+    try {
+      const d = JSON.parse(await readFile(f, true));
+      if (!d || d.app !== 'lavagna-cursore' || !Array.isArray(d.strokes)) throw new Error('formato');
+      endStroke();
+      [...images].forEach(removeItem);
+      strokes = d.strokes.filter((s) => s && Array.isArray(s.p));
+      redraw();
+      for (const im of (d.images || [])) {
+        const img = await loadImg(im.src);
+        createItem({ src: im.src, img, x: im.x, y: im.y, w: im.w, h: im.h });
+      }
+      for (const o of (d.objects || [])) if (o && o.e) createEmoji(o.e, +o.x || 0, +o.y || 0, +o.w || 80);
+      if (typeof d.angle === 'number') { state.angle = d.angle; angleInput.value = d.angle; }
+      if (d.color) selectColor(d.color);
+      if (WIDTHS.includes(d.width)) selectWidth(d.width);
+      if (d.cursor) setCursor(+d.cursor.x || 0, +d.cursor.y || 0);
+      deselect();
+    } catch (_) {
+      alert('File dati non valido.');
+    }
+  });
+
+  /* ---------- Avvio ---------- */
+  selectColor(state.color);
+  selectWidth(state.width);
+  setCursor(state.x, state.y);
+  restoreLocal();
+  window.addEventListener('load', adjustPadding);
+  adjustPadding();
+})();
+</script>
+</body>
+</html>
