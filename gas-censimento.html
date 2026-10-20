@@ -220,6 +220,28 @@ function riallinea(u){
   const iM = iT.filter(x => (x.marca || '') === u.marca);
   if(!iM.some(x => x.id === u.utId)) u.utId = iM.length ? iM[0].id : '';
 }
+/* Riduttore: gas → marca → codice, come per le UT.
+   Gas e marca NON vengono salvati: si ricavano dalla voce di catalogo (rdId),
+   così il dato salvato resta identico e compatibile con gli altri file. */
+function rdSel(r){
+  const it = cat.rd.find(x => x.id === r.rdId);
+  if(it) return {gas: it.gas, marca: it.marca || '', trovato: true};
+  const g = elencoGas().find(x => cat.rd.some(i => i.gas === x.id));
+  const gas = g ? g.id : '';
+  const m = uniq(cat.rd.filter(x => x.gas === gas).map(x => x.marca || ''));
+  return {gas, marca: m.length ? m[0] : '', trovato: false};
+}
+/* Se cambia gas o marca, i livelli successivi passano al primo valore disponibile. */
+function riallineaRd(r, campo, valore){
+  const s = rdSel(r);
+  const gas = campo === 'gas' ? valore : s.gas;
+  let marca = campo === 'gas' ? s.marca : valore;
+  const iG = cat.rd.filter(x => x.gas === gas);
+  const marche = uniq(iG.map(x => x.marca || ''));
+  if(marche.indexOf(marca) === -1) marca = marche.length ? marche[0] : '';
+  const iM = iG.filter(x => (x.marca || '') === marca);
+  r.rdId = iM.length ? iM[0].id : '';
+}
 function nuovaUtRiga(){
   const g = elencoGas().find(x => cat.ut.some(i => i.gas === x.id));
   const u = {id:nuovoId('uti'), gas: g ? g.id : 'o2', tipo:'', marca:'', utId:'', sost:'', note:''};
@@ -258,12 +280,20 @@ function postSummary(p){
 }
 
 function rigaRiduttoreHtml(rep, q, r){
-  const opts = cat.rd.map(x => ({v:x.id, l:`${nomeGas(x.gas)} · ${x.codice || '(senza codice)'}${x.tipo ? ' · ' + x.tipo : ''}${x.marca ? ' · ' + x.marca : ''}`}));
-  if(r.rdId && !cat.rd.some(x => x.id === r.rdId)) opts.unshift({v:r.rdId, l:'⚠ voce non più in catalogo'});
+  const sel = rdSel(r);
+  const gasList = elencoGas().filter(g => cat.rd.some(i => i.gas === g.id)).map(g => ({v:g.id, l:g.nome}));
+  const iG = cat.rd.filter(x => x.gas === sel.gas);
+  const marche = uniq(iG.map(x => x.marca || '')).map(m => ({v:m, l:m || '(senza marca)'}));
+  const iM = iG.filter(x => (x.marca || '') === sel.marca);
+  const opts = iM.map(x => ({v:x.id, l:`${x.codice || '(senza codice)'}${x.tipo ? ' · ' + x.tipo : ''}`}));
+  if(r.rdId && !sel.trovato) opts.unshift({v:r.rdId, l:'⚠ voce non più in catalogo'});
   if(!r.rdId) opts.unshift({v:'', l:'— scegli dal catalogo —'});
+  const vuoto = (arr, msg) => arr.length ? arr : [{v:'', l:msg}];
   return `
   <div class="row-item" data-rd="${r.id}">
-    <select class="grow" data-t="rd" data-f="rdId">${optHtml(opts, r.rdId)}</select>
+    <select data-t="rd" data-f="gas" title="Gas">${optHtml(vuoto(gasList,'— catalogo RD vuoto —'), sel.gas)}</select>
+    <select data-t="rd" data-f="marca" title="Marca">${optHtml(vuoto(marche,'—'), sel.marca)}</select>
+    <select class="grow" data-t="rd" data-f="rdId" title="Codice">${optHtml(vuoto(opts,'— nessuna voce —'), r.rdId)}</select>
     <span class="row-lbl">Montante</span>
     <input type="text" class="w70" maxlength="3" list="montanti" placeholder="A" style="text-transform:uppercase" value="${escapeHtml(r.montante)}" data-t="rd" data-f="montante">
     <span class="row-lbl">UT alimentate</span>
@@ -595,6 +625,16 @@ function onModifica(e){
   const obj = {pres:c.p, rep:c.rep, q:c.q, rd:c.rd, post:c.post, ut:c.ut}[t];
   if(!obj) return;
 
+  /* Riduttore: gas e marca sono campi "virtuali", non si salvano: ricalcolano rdId. */
+  if(t === 'rd' && (f === 'gas' || f === 'marca')){
+    if(e.type !== 'change') return;
+    riallineaRd(obj, f, el.value);
+    salvaPresidi();
+    rerenderRep(c.rep);
+    return;
+  }
+  const rdAnomalo = (t === 'rd' && f === 'rdId' && !cat.rd.some(x => x.id === obj.rdId));
+
   let val;
   if(el.type === 'checkbox') val = el.checked;
   else if(f === 'utAlimentate') val = el.value === '' ? '' : Math.max(0, parseInt(el.value, 10) || 0);
@@ -611,6 +651,7 @@ function onModifica(e){
     renderTabs();
     return;
   }
+  if(rdAnomalo && e.type === 'change'){ rerenderRep(c.rep); return; }
   if(strutturale && e.type === 'change'){ rerenderRep(c.rep); return; }
   if(strutturale) return;
   refreshRep(c.rep);
