@@ -70,6 +70,10 @@
   .item-body{ display:none; padding:4px 14px 14px 14px; border-top:1px solid #e6e9ef; }
   .item-card.open .item-body{ display:block; padding-top:12px; }
   .add-wrap{ text-align:center; margin-top:6px; }
+
+  /* Sfondi per distinguere le sezioni: UT giallo chiaro, riduttori celeste chiaro */
+  .card-ut{ background:#fff8d6; }
+  .card-rd{ background:#e3f2fd; }
 </style>
 </head>
 <body>
@@ -77,14 +81,14 @@
 <div class="container">
 
   <nav class="travel-nav">
-    <a href="gas-listino.html" class="travel-nav-item"><div class="icon">📋</div><span class="lbl">Listino</span></a>
+    <a href="gas-catalogo.html" class="travel-nav-item active"><div class="icon">📚</div><span class="lbl">Catalogo</span></a>
     <a href="gas-censimento.html" class="travel-nav-item"><div class="icon">🏥</div><span class="lbl">Censimento</span></a>
     <a href="gas-riepilogo.html" class="travel-nav-item"><div class="icon">📊</div><span class="lbl">Riepilogo</span></a>
     <a href="gas-impostazioni.html" class="travel-nav-item"><div class="icon">⚙️</div><span class="lbl">Impostazioni</span></a>
   </nav>
 
   <!-- UNITA' TERMINALI -->
-  <div class="card">
+  <div class="card card-ut">
     <div class="sez-head">
       <div class="section-title">🔌 Unità terminali (UT)</div>
       <input type="text" class="search" placeholder="Cerca codice, marca, gas..." data-search="ut">
@@ -97,11 +101,12 @@
       <button class="btn btn-xls" data-import="ut">📥 Importa da Excel</button>
       <button class="btn btn-xls" data-export="ut">📤 Esporta</button>
       <button class="btn btn-xls" data-modello="ut">📄 Modello</button>
+      <button class="btn btn-danger" data-azzera="ut">🗑️ Azzera UT</button>
     </div>
   </div>
 
   <!-- RIDUTTORI -->
-  <div class="card">
+  <div class="card card-rd">
     <div class="sez-head">
       <div class="section-title">🎛️ Riduttori di II stadio (RD)</div>
       <input type="text" class="search" placeholder="Cerca codice, marca, gas..." data-search="rd">
@@ -114,6 +119,7 @@
       <button class="btn btn-xls" data-import="rd">📥 Importa da Excel</button>
       <button class="btn btn-xls" data-export="rd">📤 Esporta</button>
       <button class="btn btn-xls" data-modello="rd">📄 Modello</button>
+      <button class="btn btn-danger" data-azzera="rd">🗑️ Azzera riduttori</button>
     </div>
   </div>
 
@@ -154,10 +160,17 @@ function eur(n){
   return n.toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' €';
 }
 
-/* Gas e tipi: gli id sono stabili (x1..x3 = voci personalizzate), così rinominare
+/* Gas e tipi: gli id sono stabili (x1..x8 = voci personalizzate), così rinominare
    una voce libera nelle Impostazioni non rompe il catalogo già compilato. */
+const N_EXTRA = 8;
+function padExtra(a){
+  return Array.from({length:N_EXTRA}, (_, i) => (Array.isArray(a) && a[i]) ? String(a[i]) : '');
+}
 function leggiConfig(){
-  return Object.assign({gasExtra:['','',''], tipiExtra:['','',''], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+  const c = Object.assign({gasExtra:[], tipiExtra:[], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+  c.gasExtra = padExtra(c.gasExtra);
+  c.tipiExtra = padExtra(c.tipiExtra);
+  return c;
 }
 function elencoGas(){
   const c = leggiConfig();
@@ -309,6 +322,20 @@ document.addEventListener('input', onModifica);
 document.addEventListener('change', onModifica);
 
 document.querySelectorAll('[data-search]').forEach(inp => inp.addEventListener('input', () => applicaFiltro(inp.dataset.search)));
+
+/* ================= AZZERA VOCI DI UNA SEZIONE ================= */
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-azzera]');
+  if(!b) return;
+  const sez = b.dataset.azzera;
+  const nome = sez === 'ut' ? 'le unità terminali' : 'i riduttori';
+  const n = lista(sez).length;
+  if(!n){ alert('Non ci sono voci da eliminare.'); return; }
+  if(!confirm('Eliminare TUTTE le ' + n + ' voci: ' + nome + ' del catalogo?\nLe voci già usate nel censimento resteranno senza riferimento.\nSe vuoi conservarle, esportale prima.')) return;
+  catalogo[sez] = [];
+  salva(LS_CATALOGO, catalogo);
+  render(sez); aggiornaDatalist();
+});
 
 /* ================= EXCEL: IMPORTA / ESPORTA =================
    Intestazioni (riga 1) di ciascun foglio ("UT" e "RD"):

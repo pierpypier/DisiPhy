@@ -98,6 +98,10 @@
   .post-card .item-head{ padding:8px 12px; }
   .post-card .item-body{ padding:10px 12px 12px 12px; }
 
+  /* Sfondi per distinguere: quadri di riduzione (riduttori) celeste chiaro, postazioni (UT) giallo chiaro */
+  .sub-card{ background:#e3f2fd; border-color:#bbdefb; }
+  .item-card.post-card{ background:#fff8d6; border-color:#f0e2a0; }
+
   .avvisi{ background:#fdf0ec; border:1px solid #f0c4b6; border-radius:10px; padding:10px 12px; font-size:12px; color:var(--warn); margin:10px 0; }
   .avvisi ul{ margin:4px 0 0 0; padding-left:18px; }
 
@@ -172,6 +176,7 @@
 
 <datalist id="montanti"></datalist>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="gas-core.js"></script>
 <script>
 /* ================================================================
@@ -438,7 +443,10 @@ function repHtml(rep){
 
       <div data-avvisi>${avvisiHtml(rep)}</div>
       <div class="riep">
-        <div class="riep-title">📊 Riepilogo reparto</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+          <div class="riep-title" style="margin-bottom:0;">📊 Riepilogo reparto</div>
+          <button class="btn btn-primary btn-small" data-act="export-rep">📥 Esporta reparto in Excel</button>
+        </div>
         <div data-riep>${riepRepHtml(rep)}</div>
       </div>
     </div>
@@ -584,6 +592,7 @@ document.addEventListener('click', e => {
   if(!c.rep) return;
 
   switch(act){
+    case 'export-rep': esportaRepExcel(c.p, c.rep); return;
     case 'toggle-rep': c.rep.open = !c.rep.open; salvaPresidi(); a.closest('.rep-card').classList.toggle('open'); return;
     case 'del-rep':
       if(!confirm('Eliminare questo reparto con tutti i suoi quadri e postazioni?')) return;
@@ -658,6 +667,100 @@ function onModifica(e){
 }
 document.addEventListener('input', onModifica);
 document.addEventListener('change', onModifica);
+
+/* ================================================================
+   ESPORTAZIONE EXCEL DI UN REPARTO
+   Fogli: Reparto (dati generali), Riduttori, Postazioni UT, Riepilogo
+   ================================================================ */
+function cellEur(v){ return {t:'n', v:Number(v) || 0, z:'#,##0.00 "€"'}; }
+function cellNum(v){ return {t:'n', v:Number(v) || 0}; }
+function foglioDaAoa(aoa){
+  const ws = XLSX.utils.aoa_to_sheet(aoa);
+  const w = [];
+  aoa.forEach(r => r.forEach((c, i) => {
+    const l = String(c && typeof c === 'object' ? (c.z ? Number(c.v).toFixed(2) + ' €' : c.v) : (c === undefined || c === null ? '' : c)).length;
+    w[i] = Math.max(w[i] || 8, Math.min(l + 2, 50));
+  }));
+  ws['!cols'] = w.map(x => ({wch:x}));
+  return ws;
+}
+function nomeFileSicuro(s){
+  return String(s || '').replace(/[^\p{L}\p{N}\-_ ]/gu, '').trim().replace(/\s+/g, '_');
+}
+function esportaRepExcel(p, rep){
+  if(typeof XLSX === 'undefined'){ alert('Libreria Excel non caricata: controlla la connessione e ricarica la pagina.'); return; }
+  const ag = aggregaReparto(rep, cat, cfg);
+  const s = sommaRighe(ag.righe);
+  const al = alimentazioneReparto(rep, cat);
+  const fr = freqReparto(rep, cfg);
+  const d = new Date();
+  const wb = XLSX.utils.book_new();
+
+  /* 1 — dati generali */
+  XLSX.utils.book_append_sheet(wb, foglioDaAoa([
+    ['Censimento impianti gas medicinali — Reparto'],
+    [],
+    ['Presidio', p.nome || ''],
+    ['Indirizzo', p.indirizzo || ''],
+    ['Reparto', rep.nome || ''],
+    ['Piano', rep.piano || ''],
+    ['Frequenza di sostituzione', (rep.freq === 'HF' ? 'HF — alta frequenza' : 'LF — bassa frequenza') + ' (' + fr + ' sostituzioni/anno)'],
+    ['Note reparto', rep.note || ''],
+    ['Esportato il', d.toLocaleDateString('it-IT') + ' ' + d.toLocaleTimeString('it-IT')]
+  ]), 'Reparto');
+
+  /* 2 — riduttori */
+  const rdAoa = [['Quadro', 'Gas', 'Marca', 'Codice', 'Tipo', 'Montante', 'UT alimentate', 'Calcolo UT', 'Sostituzione', 'Allarme', 'Note', 'Costo ciclo', 'Spesa annua']];
+  rep.quadri.forEach(q => q.riduttori.forEach(r => {
+    const it = cat.rd.find(x => x.id === r.rdId);
+    const manuale = r.utAlimentate !== '' && r.utAlimentate !== undefined && r.utAlimentate !== null;
+    if(!it){
+      rdAoa.push([q.nome || '', '(voce non più in catalogo)', '', '', '', r.montante || '', '', '', '', r.allarme ? 'Sì' : 'No', r.note || '', cellEur(0), cellEur(0)]);
+      return;
+    }
+    const sost = sostEff(it, r.sost), unit = costoCiclo(it, sost);
+    rdAoa.push([q.nome || '', nomeGas(it.gas), it.marca || '', it.codice || '', it.tipo || '', r.montante || '',
+      cellNum(al.perRd[r.id] || 0), manuale ? 'manuale' : 'auto', SOST_LAB[sost] || '', r.allarme ? 'Sì' : 'No', r.note || '',
+      cellEur(unit), cellEur(unit * fr)]);
+  }));
+  XLSX.utils.book_append_sheet(wb, foglioDaAoa(rdAoa), 'Riduttori');
+
+  /* 3 — postazioni e unità terminali */
+  const utAoa = [['Postazione', 'Quantità', 'Gas', 'Tipo', 'Marca', 'Codice', 'Descrizione', 'Sostituzione', 'Note UT', 'Note postazione', 'Costo unitario', 'Costo ciclo', 'Spesa annua']];
+  rep.postazioni.forEach(po => {
+    const qta = Number(po.quantita) || 0;
+    (po.ut || []).forEach(u => {
+      const it = cat.ut.find(x => x.id === u.utId);
+      if(!it){
+        utAoa.push([po.nome || '', cellNum(qta), '(voce non più in catalogo)', '', '', '', '', '', u.note || '', po.note || '', cellEur(0), cellEur(0), cellEur(0)]);
+        return;
+      }
+      const sost = sostEff(it, u.sost), unit = costoCiclo(it, sost);
+      utAoa.push([po.nome || '', cellNum(qta), nomeGas(it.gas), nomeTipoUt(it.tipo), it.marca || '', it.codice || '', it.descrizione || '',
+        SOST_LAB[sost] || '', u.note || '', po.note || '', cellEur(unit), cellEur(qta * unit), cellEur(qta * unit * fr)]);
+    });
+  });
+  XLSX.utils.book_append_sheet(wb, foglioDaAoa(utAoa), 'Postazioni UT');
+
+  /* 4 — riepilogo per gas e dettaglio aggregato */
+  const rie = [['Gas', 'Riduttori', 'UT', 'Costo ciclo', 'Spesa annua']];
+  uniq(ag.righe.map(r => r.gas)).forEach(g => {
+    const ss = sommaRighe(ag.righe.filter(r => r.gas === g));
+    rie.push([nomeGas(g), cellNum(ss.rd), cellNum(ss.ut), cellEur(ss.ciclo), cellEur(ss.annuo)]);
+  });
+  rie.push(['Totale reparto', cellNum(s.rd), cellNum(s.ut), cellEur(s.ciclo), cellEur(s.annuo)]);
+  rie.push([]);
+  rie.push(['Elemento', 'Gas', 'Codice', 'Tipo', 'Marca', 'Sostituzione', 'Q.tà', 'Unitario', 'Costo ciclo', 'Spesa annua (' + ag.freq + '/anno)']);
+  ag.righe.forEach(r => rie.push([r.sez === 'rd' ? 'Riduttore' : 'UT', nomeGas(r.gas), r.codice || '', r.tipo || '', r.marca || '',
+    SOST_LAB[r.sost] || '', cellNum(r.qta), cellEur(r.unitario), cellEur(r.ciclo), cellEur(r.annuo)]));
+  rie.push(['Totale', '', '', '', '', '', cellNum(s.rd + s.ut), '', cellEur(s.ciclo), cellEur(s.annuo)]);
+  XLSX.utils.book_append_sheet(wb, foglioDaAoa(rie), 'Riepilogo');
+
+  const pad = x => String(x).padStart(2, '0');
+  const data = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  const nomeFile = 'censimento_' + [nomeFileSicuro(p.nome), nomeFileSicuro(rep.nome)].filter(Boolean).join('_') + '_' + data + '.xlsx';
+  XLSX.writeFile(wb, nomeFile.replace('censimento__', 'censimento_'));
+}
 
 window.addEventListener('DOMContentLoaded', renderAll);
 </script>

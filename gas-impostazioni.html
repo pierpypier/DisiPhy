@@ -73,16 +73,16 @@
   <!-- GAS E TIPI -->
   <div class="card">
     <div class="section-title">⚙️ Gas e tipi</div>
-    <div class="hint">I gas e i tipi fissi sono sempre disponibili. Le 3 voci libere compaiono nei menù del catalogo e del censimento solo se compilate.</div>
+    <div class="hint">I gas e i tipi fissi sono sempre disponibili. Le 8 voci libere compaiono nei menù del catalogo e del censimento solo se compilate.</div>
 
     <div class="sub-title">Gas fissi</div>
     <div class="fixed-list" id="gasFissi"></div>
-    <div class="sub-title">Gas personalizzati (3 voci)</div>
+    <div class="sub-title">Gas personalizzati (8 voci)</div>
     <div class="field-grid" id="gasExtra"></div>
 
     <div class="sub-title">Tipi unità terminali fissi</div>
     <div class="fixed-list" id="tipiFissi"></div>
-    <div class="sub-title">Tipi personalizzati unità terminali (3 voci)</div>
+    <div class="sub-title">Tipi personalizzati unità terminali (8 voci)</div>
     <div class="field-grid" id="tipiExtra"></div>
   </div>
 
@@ -137,7 +137,17 @@ function escapeHtml(s){
   return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
-let config = Object.assign({gasExtra:['','',''], tipiExtra:['','',''], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+const N_EXTRA = 8;   /* voci personalizzate per gas e per tipi UT (id x1..x8) */
+function padExtra(a){
+  return Array.from({length:N_EXTRA}, (_, i) => (Array.isArray(a) && a[i]) ? String(a[i]) : '');
+}
+function leggiConfig(){
+  const c = Object.assign({gasExtra:[], tipiExtra:[], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+  c.gasExtra = padExtra(c.gasExtra);
+  c.tipiExtra = padExtra(c.tipiExtra);
+  return c;
+}
+let config = leggiConfig();
 
 function render(){
   document.getElementById('gasFissi').innerHTML = DEF_GAS.map(g => `<span class="chip">${escapeHtml(g[1])}</span>`).join('');
@@ -201,7 +211,7 @@ document.getElementById('fileInput').addEventListener('change', e => {
       if(!confirm('Caricare il file sostituirà tutti i dati attuali del modulo gas. Continuare?')) return;
       chiaviGas().forEach(k => localStorage.removeItem(k));
       Object.keys(obj.dati).forEach(k => { if(k.indexOf('gas_') === 0) salva(k, obj.dati[k]); });
-      config = Object.assign({gasExtra:['','',''], tipiExtra:['','',''], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+      config = leggiConfig();
       render();
       mostraMsg('Dati caricati.', true);
     }catch(err){
@@ -215,7 +225,7 @@ document.getElementById('fileInput').addEventListener('change', e => {
 document.getElementById('btnAzzera').addEventListener('click', () => {
   if(!confirm('Eliminare TUTTI i dati gas (catalogo, censimento, impostazioni)? Salva prima un file se vuoi conservarli.')) return;
   chiaviGas().forEach(k => localStorage.removeItem(k));
-  config = {gasExtra:['','',''], tipiExtra:['','',''], freqLF:1, freqHF:3};
+  config = leggiConfig();
   render();
   mostraMsg('Dati azzerati.', true);
 });
