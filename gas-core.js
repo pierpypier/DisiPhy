@@ -32,8 +32,15 @@ function eur(n){
 function uniq(a){ return Array.from(new Set(a)); }
 
 /* ---------- configurazione, gas e tipi ---------- */
+const N_EXTRA = 8;   /* voci personalizzate per gas e per tipi UT (id x1..x8) */
+function padExtra(a){
+  return Array.from({length:N_EXTRA}, (_, i) => (Array.isArray(a) && a[i]) ? String(a[i]) : '');
+}
 function leggiConfig(){
-  return Object.assign({gasExtra:['','',''], tipiExtra:['','',''], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+  const c = Object.assign({gasExtra:[], tipiExtra:[], freqLF:1, freqHF:3}, leggiOggetto(LS_CONFIG, {}));
+  c.gasExtra = padExtra(c.gasExtra);
+  c.tipiExtra = padExtra(c.tipiExtra);
+  return c;
 }
 function elencoGas(){
   const c = leggiConfig();
