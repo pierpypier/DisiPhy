@@ -163,10 +163,10 @@ function costruisciFatti(){
       (rep.quadri || []).forEach(q => (q.riduttori || []).forEach(r => {
         const it = cat.rd.find(x => x.id === r.rdId);
         if(!it) return;
-        const sost = sostEff(it, r.sost), unit = costoCiclo(it, sost);
+        const sost = sostEff(it, r.sost), unit = costoCiclo(it, sost), qr = qtaRd(r);
         fatti.push(Object.assign({}, base, {
           sez:'rd', gas:it.gas, itemId:it.id, codice:it.codice || '', tipo:it.tipo || '', marca:it.marca || '',
-          sost, qta:1, ciclo:unit, annuo:unit * fr,
+          sost, qta:qr, ciclo:qr * unit, annuo:qr * unit * fr,
           montante:String(r.montante || '').trim().toUpperCase(), utAl:al.perRd[r.id] || 0
         }));
       }));

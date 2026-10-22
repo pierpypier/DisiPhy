@@ -69,6 +69,12 @@ function leggiPresidi(){
   return Array.isArray(p) ? p : [];
 }
 
+/* Quantità di riduttori identici di una riga di quadro (dati vecchi senza campo = 1) */
+function qtaRd(r){
+  const n = parseInt(r && r.quantita, 10);
+  return n >= 1 ? n : 1;
+}
+
 /* ---------- costi ---------- */
 /* Sostituzione effettiva: il valore scelto nel censimento prevale su quello del catalogo */
 function sostEff(item, override){
@@ -125,10 +131,15 @@ function alimentazioneReparto(rep, cat){
     man.forEach(r => { const n = Number(r.utAlimentate) || 0; perRd[r.id] = n; sumMan += n; });
 
     if(auto.length){
+      /* la ripartizione avviene tra i riduttori fisici: una riga con quantità N ne vale N */
+      const unita = auto.reduce((a, r) => a + qtaRd(r), 0);
       const resto = Math.max(tot - sumMan, 0);
-      const base = Math.floor(resto / auto.length);
-      let extra = resto - base * auto.length;
-      auto.forEach(r => { perRd[r.id] = base + (extra > 0 ? 1 : 0); if(extra > 0) extra--; });
+      const base = Math.floor(resto / unita);
+      let extra = resto - base * unita;
+      auto.forEach(r => {
+        const q = qtaRd(r), e = Math.min(extra, q);
+        perRd[r.id] = base * q + e; extra -= e;
+      });
     }
 
     if(rds.length === 0 && tot > 0){
@@ -174,7 +185,7 @@ function aggregaReparto(rep, cat, cfg){
   (rep.quadri || []).forEach(q => (q.riduttori || []).forEach(r => {
     const it = cat.rd.find(x => x.id === r.rdId);
     if(!it){ mancanti++; return; }
-    aggiungi('rd', it, r.sost, 1);
+    aggiungi('rd', it, r.sost, qtaRd(r));
   }));
   (rep.postazioni || []).forEach(p => {
     const q = Number(p.quantita) || 0;
