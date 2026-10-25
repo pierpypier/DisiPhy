@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover"><title>La mia bolla</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#05000f;overflow:hidden;color:#fff;font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;user-select:none;-webkit-user-select:none;touch-action:none}
+body{display:flex;align-items:center;justify-content:center}
+#stage{position:relative;width:480px;height:870px;flex:none;overflow:hidden;background:#05000f;box-shadow:0 0 60px rgba(122,44,255,.35)}
+canvas{position:absolute;left:0;top:0;width:480px;height:520px;display:block}
+#mu{position:absolute;right:10px;top:8px;width:34px;height:28px;z-index:15;border-radius:999px;border:1px solid rgba(255,255,255,.6);background:rgba(10,0,30,.6);color:#fff;font-size:14px;cursor:pointer}
+#tb{position:absolute;left:0;top:520px;width:480px;height:240px;padding:10px 14px;background:linear-gradient(180deg,#140a30,#0a0420);border-top:2px solid rgba(110,231,255,.55);box-shadow:0 -6px 24px rgba(122,44,255,.3);overflow:hidden}
+#who{font:800 italic 14px "Trebuchet MS",sans-serif;letter-spacing:.08em;color:#ffe27a;height:18px;text-transform:uppercase}
+#tx{font-size:14.5px;line-height:1.36;color:#ece8ff;margin:4px 0 8px;min-height:44px;max-height:128px;overflow:hidden}
+#op{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.ch{font:700 13px "Trebuchet MS",sans-serif;color:#e8e0ff;text-align:left;background:rgba(30,10,70,.8);border:1px solid rgba(110,231,255,.6);border-radius:10px;padding:7px 9px;cursor:pointer;line-height:1.2}
+.ch:active{background:rgba(110,231,255,.35)}
+.ch:last-child:nth-child(odd){grid-column:span 2}
+#pc{position:absolute;left:0;top:760px;width:480px;height:110px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:linear-gradient(180deg,#14072e,#07021a);border-top:2px solid rgba(110,231,255,.35)}
+.bt{width:88px;height:88px;border-radius:50%;font-size:40px;font-weight:900;color:#fff;cursor:pointer;background:rgba(20,0,50,.7);border:2px solid rgba(110,231,255,.75);display:flex;align-items:center;justify-content:center;touch-action:none;-webkit-tap-highlight-color:transparent}
+.bt.on{background:rgba(110,231,255,.4);transform:scale(.95)}
+#ac{width:150px;height:76px;border-radius:38px;border:2px solid #fff;font:800 15px "Trebuchet MS",sans-serif;color:#fff;background:rgba(60,40,110,.7);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;line-height:1.15;text-align:center}
+#ac span{font-size:26px}
+#ac.hot{background:linear-gradient(135deg,#00e5ff,#7a2cff);box-shadow:0 0 20px rgba(0,229,255,.7)}
+#ov{position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at center,rgba(20,5,50,.7),rgba(5,0,15,.95))}
+#ov.hide{display:none}
+h1{font-size:68px;line-height:.95;font-style:italic;font-weight:900;letter-spacing:.03em;background:linear-gradient(180deg,#ffe27a 10%,#ff7ab0 55%,#7a8cff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(160,100,255,.7))}
+h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit-text-fill-color:#6ee7ff;margin-top:10px}
+#sub{margin:18px 30px 16px;font-size:15px;line-height:1.5;color:#dcd4ff}
+#wl{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:0 20px 20px}
+.lb{font:700 13px "Trebuchet MS",sans-serif;color:#dcd4ff;background:rgba(20,0,50,.7);border:1px solid rgba(110,231,255,.6);border-radius:999px;padding:6px 12px;cursor:pointer}
+.lb.on{background:linear-gradient(135deg,#00e5ff,#7a2cff);color:#fff;border-color:#fff}
+#go{font:inherit;font-weight:900;font-style:italic;letter-spacing:.12em;font-size:22px;color:#fff;cursor:pointer;padding:12px 40px;border-radius:999px;border:2px solid #fff;background:linear-gradient(135deg,#ff7ab0,#7a2cff);box-shadow:0 0 24px rgba(160,100,255,.7)}
+</style></head><body>
+<div id="stage"><canvas id="c" width="480" height="520"></canvas>
+<button id="mu">🔊</button>
+<div id="tb"><div id="who"></div><div id="tx"></div><div id="op"></div></div>
+<div id="pc"><div class="bt" id="bl">◀</div><div id="ac"></div><div class="bt" id="br">▶</div></div>
+<div id="ov"><div><h1>LA MIA<br>BOLLA<small>MONDI DI RICORDI, SOGNI E DESIDERI</small></h1>
+<p id="sub">Cammina ◀ ▶, parla con chi incontri, scegli cosa dire. Nessuna fretta, nessun punteggio. Ogni tanto si apre un varco verso un altro mondo.</p>
+<div id="wl"></div><button id="go">ENTRA</button></div></div></div>
+<!-- Carica prima il nucleo, poi i mondi (l'ordine qui = ordine nel menu), infine il motore.
+     Per aggiungere un mondo: crea mondi/nuovo.js e aggiungi una riga <script> prima di motore.js -->
+<script src="nucleo/disegno.js"></script>
+<script src="nucleo/elementi.js"></script>
+<script src="nucleo/mondi.js"></script>
+<script src="mondi/grecia.js"></script>
+<script src="mondi/cagliari.js"></script>
+<script src="mondi/pasadena.js"></script>
+<script src="nucleo/motore.js"></script>
+</body></html>
