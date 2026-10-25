@@ -5,5 +5,6 @@ LA MIA BOLLA - struttura
   nucleo/mondi.js     meccanismo dei dialoghi a domande casuali
   nucleo/motore.js    camminata, dialoghi, portali, audio
   mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno
+                      (grecia, cagliari, pasadena, castello)
 Nuovo mondo: crea mondi/nome.js e aggiungi la riga <script> in bolla.html prima di motore.js.
 Tieni la cartella unita: non spostare i file singolarmente.
