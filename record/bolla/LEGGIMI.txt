@@ -5,10 +5,18 @@ LA MIA BOLLA - struttura
                       bucato, edicola votiva, vespa, bancarella, funicolare, pizzeria, Duomo, tufo,
                       stazione, Santa Maria Novella, Duomo di Firenze, Palazzo Vecchio, Ponte Vecchio,
                       gondola, vaporetto, Ca' d'Oro, ponte di Rialto, Pescaria, bacaro, San Marco, Campanile,
-                      Palazzo Ducale, Ponte dei Sospiri, Arsenale, vetri di Murano...)
+                      Palazzo Ducale, Ponte dei Sospiri, Arsenale, vetri di Murano, lampioni, targhe stradali, Ape,
+                      Panda, edicola di giornali, Grotta della Vipera, chiesa di Sant'Avendrace, cancello e tombe di
+                      Tuvixeddu, melograni, muretti a secco, tavoli del Corso, Municipio di via Roma, traghetto, gru,
+                      stazione di Cagliari...)
   nucleo/mondi.js     meccanismo dei dialoghi a domande casuali
   nucleo/motore.js    camminata, dialoghi, portali, audio
   mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno
-                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia)
+                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace)
+  mondi/avendrace.js  Cagliari da Sant'Avendrace a via Roma: la giornata scorre da sinistra a destra
+                      (mattina in via Montello e sul viale, pomeriggio a Tuvixeddu e all'Orto dei Cappuccini,
+                      sera sul Corso, in via Roma, al porto e alla stazione). 10 personaggi: Lello, Signora Maria,
+                      Antioco l'edicolante, Nicola, Tonino il guardiano, Ilaria la guida, Massimo, Efisio il barista,
+                      Luca, Marco. Usa la variabile globale AVCAM (definita in elementi.js) per far scurire gli oggetti verso sera.
 Nuovo mondo: crea mondi/nome.js e aggiungi la riga <script> in bolla.html prima di motore.js.
 Tieni la cartella unita: non spostare i file singolarmente.
