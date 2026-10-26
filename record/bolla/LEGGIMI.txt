@@ -3,10 +3,12 @@ LA MIA BOLLA - struttura
   nucleo/disegno.js   funzioni di disegno e personaggi generici
   nucleo/elementi.js  libreria oggetti (templi, palme, divano, lavagna, Big Ben, ruota panoramica, Tower Bridge,
                       bucato, edicola votiva, vespa, bancarella, funicolare, pizzeria, Duomo, tufo,
-                      stazione, Santa Maria Novella, Duomo di Firenze, Palazzo Vecchio, Ponte Vecchio...)
+                      stazione, Santa Maria Novella, Duomo di Firenze, Palazzo Vecchio, Ponte Vecchio,
+                      gondola, vaporetto, Ca' d'Oro, ponte di Rialto, Pescaria, bacaro, San Marco, Campanile,
+                      Palazzo Ducale, Ponte dei Sospiri, Arsenale, vetri di Murano...)
   nucleo/mondi.js     meccanismo dei dialoghi a domande casuali
   nucleo/motore.js    camminata, dialoghi, portali, audio
   mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno
-                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze)
+                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia)
 Nuovo mondo: crea mondi/nome.js e aggiungi la riga <script> in bolla.html prima di motore.js.
 Tieni la cartella unita: non spostare i file singolarmente.
