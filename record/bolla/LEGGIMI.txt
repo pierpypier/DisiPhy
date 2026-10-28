@@ -10,11 +10,14 @@ LA MIA BOLLA - struttura
                       Tuvixeddu, melograni, muretti a secco, tavoli del Corso, Municipio di via Roma, traghetto, gru,
                       stazione di Cagliari, Colosseo, Arco di Costantino, Foro Romano, Colonna Traiana, Vittoriano,
                       Campidoglio, Fontana di Trevi, Pantheon, Sant'Agnese in Agone, Fontana dei Quattro Fiumi, angeli del
-                      Ponte Sant'Angelo, Castel Sant'Angelo, San Pietro, nasoni, pini marittimi, taxi...)
+                      Ponte Sant'Angelo, Castel Sant'Angelo, San Pietro, nasoni, pini marittimi, taxi, Darsena, Naviglio Grande, Vicolo dei
+                      Lavandai, Porta Ticinese, Colonne di San Lorenzo, tram Ventotto, Sant'Ambrogio, Santa Maria delle Grazie,
+                      Vigna di Leonardo, Castello Sforzesco, Arco della Pace, Torre Branca, Brera, Scala, Galleria, Duomo con
+                      la Madonnina, Quadrilatero, Piazza Gae Aulenti, Bosco Verticale, Pirellone, Stazione Centrale, Binario 21...)
   nucleo/mondi.js     meccanismo dei dialoghi a domande casuali
   nucleo/motore.js    camminata, dialoghi, portali, audio
   mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno (12 per roma)
-                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma)
+                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma, milano)
   mondi/avendrace.js  Cagliari da Sant'Avendrace a via Roma: la giornata scorre da sinistra a destra
                       (mattina in via Montello e sul viale, pomeriggio a Tuvixeddu e all'Orto dei Cappuccini,
                       sera sul Corso, in via Roma, al porto e alla stazione). 10 personaggi: Lello, Signora Maria,
@@ -27,5 +30,13 @@ LA MIA BOLLA - struttura
                       Raffaello, Aldo il pittore di Navona, l'imperatore Adriano, Daniel la Guardia Svizzera. Come avendrace.js usa
                       la variabile globale AVCAM (definita in elementi.js) per far scurire gli oggetti verso sera; i suoi oggetti
                       nuovi in elementi.js hanno il prefisso "rm" (rmcolosseo, rmtrevi, rmpantheon, rmcastello...).
+  mondi/milano.js     Milano da Darsena a Porta Nuova: una giornata intera da sinistra a destra (alba ai Navigli, mattina a San Lorenzo
+                      e Sant'Ambrogio, mezzogiorno al Castello, pomeriggio a Brera, tramonto fra Scala, Galleria e Duomo, sera nel
+                      Quadrilatero e a Porta Nuova, notte alla Stazione Centrale; in fondo al binario c'è il varco). 8 personaggi,
+                      12 battute ciascuno, testi presi da milano.txt: Giovanni il vecchio del Naviglio, Gino il tranviere,
+                      Sant'Ambrogio, Leonardo da Vinci, Rosetta la maschera della Scala, Alessandro Manzoni, Giuseppe Verdi,
+                      Chiara l'architetta di Porta Nuova. Ha una sua luce (funzione nf di Milano, in fondo a elementi.js) e usa
+                      AVCAM; i suoi oggetti in elementi.js hanno il prefisso "mi" (midarsena, miduomo, migalleria, mistazione...);
+                      milamp, mitarga, mialbero, mitavolo ecc. sono gli oggetti di Cagliari/Roma con la luce di Milano.
 Nuovo mondo: crea mondi/nome.js e aggiungi la riga <script> in bolla.html prima di motore.js.
 Tieni la cartella unita: non spostare i file singolarmente.
