@@ -8,15 +8,24 @@ LA MIA BOLLA - struttura
                       Palazzo Ducale, Ponte dei Sospiri, Arsenale, vetri di Murano, lampioni, targhe stradali, Ape,
                       Panda, edicola di giornali, Grotta della Vipera, chiesa di Sant'Avendrace, cancello e tombe di
                       Tuvixeddu, melograni, muretti a secco, tavoli del Corso, Municipio di via Roma, traghetto, gru,
-                      stazione di Cagliari...)
+                      stazione di Cagliari, Colosseo, Arco di Costantino, Foro Romano, Colonna Traiana, Vittoriano,
+                      Campidoglio, Fontana di Trevi, Pantheon, Sant'Agnese in Agone, Fontana dei Quattro Fiumi, angeli del
+                      Ponte Sant'Angelo, Castel Sant'Angelo, San Pietro, nasoni, pini marittimi, taxi...)
   nucleo/mondi.js     meccanismo dei dialoghi a domande casuali
   nucleo/motore.js    camminata, dialoghi, portali, audio
-  mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno
-                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace)
+  mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno (12 per roma)
+                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma)
   mondi/avendrace.js  Cagliari da Sant'Avendrace a via Roma: la giornata scorre da sinistra a destra
                       (mattina in via Montello e sul viale, pomeriggio a Tuvixeddu e all'Orto dei Cappuccini,
                       sera sul Corso, in via Roma, al porto e alla stazione). 10 personaggi: Lello, Signora Maria,
                       Antioco l'edicolante, Nicola, Tonino il guardiano, Ilaria la guida, Massimo, Efisio il barista,
                       Luca, Marco. Usa la variabile globale AVCAM (definita in elementi.js) per far scurire gli oggetti verso sera.
+  mondi/roma.js       Roma dal Colosseo a San Pietro: la giornata scorre da sinistra a destra (mattina al Colosseo e al Foro,
+                      mezzogiorno a Piazza Venezia e al Campidoglio, pomeriggio a Trevi e al Pantheon, tramonto a Piazza Navona
+                      e sul Tevere, sera a Castel Sant'Angelo e in piazza San Pietro). 10 personaggi, 12 battute ciascuno: Gaio il
+                      gladiatore, Chiara la guida, Giulio Cesare, Lucio il legionario di Traiano, Sandro il tassista, Ugo l'oste,
+                      Raffaello, Aldo il pittore di Navona, l'imperatore Adriano, Daniel la Guardia Svizzera. Come avendrace.js usa
+                      la variabile globale AVCAM (definita in elementi.js) per far scurire gli oggetti verso sera; i suoi oggetti
+                      nuovi in elementi.js hanno il prefisso "rm" (rmcolosseo, rmtrevi, rmpantheon, rmcastello...).
 Nuovo mondo: crea mondi/nome.js e aggiungi la riga <script> in bolla.html prima di motore.js.
 Tieni la cartella unita: non spostare i file singolarmente.
