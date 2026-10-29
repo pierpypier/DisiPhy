@@ -13,11 +13,15 @@ LA MIA BOLLA - struttura
                       Ponte Sant'Angelo, Castel Sant'Angelo, San Pietro, nasoni, pini marittimi, taxi, Darsena, Naviglio Grande, Vicolo dei
                       Lavandai, Porta Ticinese, Colonne di San Lorenzo, tram Ventotto, Sant'Ambrogio, Santa Maria delle Grazie,
                       Vigna di Leonardo, Castello Sforzesco, Arco della Pace, Torre Branca, Brera, Scala, Galleria, Duomo con
-                      la Madonnina, Quadrilatero, Piazza Gae Aulenti, Bosco Verticale, Pirellone, Stazione Centrale, Binario 21...)
+                      la Madonnina, Quadrilatero, Piazza Gae Aulenti, Bosco Verticale, Pirellone, Stazione Centrale, Binario 21, Ballarò, Carmine Maggiore, Palazzo dei Normanni, Cappella Palatina,
+                      San Giovanni degli Eremiti, Porta Nuova di Palermo, Cattedrale, Tombe reali, carretto siciliano, Quattro Canti,
+                      Fontana Pretoria, Martorana, San Cataldo, Porta Carini, Vucciria, Teatro Massimo, Politeama, teatrino dei pupi,
+                      ficus di Piazza Marina, Steri, Porta Felice, Foro Italico, Cala, Mondello, Charleston, Monte Pellegrino,
+                      santuario di Santa Rosalia...)
   nucleo/mondi.js     meccanismo dei dialoghi a domande casuali
   nucleo/motore.js    camminata, dialoghi, portali, audio
   mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno (12 per roma)
-                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma, milano)
+                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma, milano, palermo)
   mondi/avendrace.js  Cagliari da Sant'Avendrace a via Roma: la giornata scorre da sinistra a destra
                       (mattina in via Montello e sul viale, pomeriggio a Tuvixeddu e all'Orto dei Cappuccini,
                       sera sul Corso, in via Roma, al porto e alla stazione). 10 personaggi: Lello, Signora Maria,
@@ -38,5 +42,16 @@ LA MIA BOLLA - struttura
                       Chiara l'architetta di Porta Nuova. Ha una sua luce (funzione nf di Milano, in fondo a elementi.js) e usa
                       AVCAM; i suoi oggetti in elementi.js hanno il prefisso "mi" (midarsena, miduomo, migalleria, mistazione...);
                       milamp, mitarga, mialbero, mitavolo ecc. sono gli oggetti di Cagliari/Roma con la luce di Milano.
+  mondi/palermo.js    Palermo da Ballarò a Monte Pellegrino: una giornata intera da sinistra a destra (alba al mercato di Ballarò,
+                      mattina ai Normanni e in Cattedrale, mezzogiorno ai Quattro Canti, primo pomeriggio al Capo e alla Vucciria,
+                      pomeriggio al Teatro Massimo e al Politeama, tardo pomeriggio nella Kalsa, tramonto al Foro Italico e alla
+                      Cala, sera a Mondello, notte sul Monte Pellegrino; in fondo alla grotta di Santa Rosalia c'è il varco).
+                      31 tappe e 8 personaggi, 12 battute ciascuno, testi presi da palermo.txt: Nino il venditore di Ballarò,
+                      Ruggero II, Federico II, Turi il puparo, Franca Florio, Goethe, Tano il pescatore, Santa Rosalia.
+                      Ha una sua luce (funzione nf di Palermo, in fondo a elementi.js) e usa AVCAM; i suoi oggetti in
+                      elementi.js hanno il prefisso "pl" (plballaro, plcarmine, plnormanni, plcattedrale, plpretoria,
+                      plmassimo, plcala, plcharleston, plsantuario, plvarco...); pllamp, pltarga, plpalma, plape, plgelato,
+                      plficodindia ecc. sono gli oggetti di Cagliari con la luce di Palermo. Le tappe di "look" sono scelte
+                      a metà strada fra un luogo e il successivo, così il testo corrisponde sempre a quello che hai davanti.
 Nuovo mondo: crea mondi/nome.js e aggiungi la riga <script> in bolla.html prima di motore.js.
 Tieni la cartella unita: non spostare i file singolarmente.
