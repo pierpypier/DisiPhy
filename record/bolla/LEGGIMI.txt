@@ -21,7 +21,7 @@ LA MIA BOLLA - struttura
   nucleo/mondi.js     meccanismo dei dialoghi a domande casuali
   nucleo/motore.js    camminata, dialoghi, portali, audio
   mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno (12 per roma)
-                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma, milano, palermo)
+                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma, milano, palermo, bologna)
   mondi/avendrace.js  Cagliari da Sant'Avendrace a via Roma: la giornata scorre da sinistra a destra
                       (mattina in via Montello e sul viale, pomeriggio a Tuvixeddu e all'Orto dei Cappuccini,
                       sera sul Corso, in via Roma, al porto e alla stazione). 10 personaggi: Lello, Signora Maria,
@@ -53,5 +53,20 @@ LA MIA BOLLA - struttura
                       plmassimo, plcala, plcharleston, plsantuario, plvarco...); pllamp, pltarga, plpalma, plape, plgelato,
                       plficodindia ecc. sono gli oggetti di Cagliari con la luce di Palermo. Le tappe di "look" sono scelte
                       a metà strada fra un luogo e il successivo, così il testo corrisponde sempre a quello che hai davanti.
+  mondi/bologna.js    Bologna dai canali alla Stazione Centrale: una giornata intera da sinistra a destra (alba ai canali nascosti,
+                      mattina nel Quadrilatero, tarda mattina in Piazza Maggiore, mezzogiorno alle Due Torri, primo pomeriggio
+                      all'Archiginnasio, pomeriggio a Santo Stefano e in via Fondazza, tramonto sul portico di San Luca, sera in
+                      Piazza Verdi, notte alla Stazione Centrale; in fondo al binario c'e' il varco). 30 tappe e 8 personaggi,
+                      12 battute ciascuno, testi presi da bologna.txt: Bruno il vecchio del Canale, Marisa la sfoglina,
+                      San Petronio, Lucio Dalla, Dante Alighieri, Laura Bassi, Giorgio Morandi, Giulia la studentessa fuorisede.
+                      Ha una sua luce (funzione nf di Bologna, nel blocco "bo" in fondo a elementi.js) e usa AVCAM; i suoi
+                      oggetti in elementi.js hanno il prefisso "bo" (bofinestrella, botorresotto, bonavile, boquadrilatero,
+                      bopescherie, boosteria, bopiazza, bonettuno, bopetronio, bopodesta, boaccursio, boasinelli, bogarisenda,
+                      bomercanzia, bostradamaggiore, boarchiginnasio, boteatroanat, bogalvani, bosantostefano, bopilato,
+                      bofondazza, bosaragozza, bomeloncello, boportico, bosanluca, boteatrocomunale, bopiazzaverdi, bostazione,
+                      boorologio, bovarco...); bolamp, botarga, bobici, bopalma, botavolo, boalbero, bofestoni sono gli oggetti
+                      di Cagliari con la luce di Bologna. Le tappe di "look" sono scelte a meta' strada fra un luogo e il
+                      successivo, cosi' il testo corrisponde sempre a quello che hai davanti. La tappa "Sala Stabat Mater"
+                      non ha un oggetto proprio: e' un testo fra il Teatro Anatomico e Santo Stefano.
 Nuovo mondo: crea mondi/nome.js e aggiungi la riga <script> in bolla.html prima di motore.js.
 Tieni la cartella unita: non spostare i file singolarmente.
