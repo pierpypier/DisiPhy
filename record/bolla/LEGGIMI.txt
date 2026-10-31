@@ -21,7 +21,7 @@ LA MIA BOLLA - struttura
   nucleo/mondi.js     meccanismo dei dialoghi a domande casuali
   nucleo/motore.js    camminata, dialoghi, portali, audio
   mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno (12 per roma)
-                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma, milano, palermo, bologna)
+                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma, milano, palermo, bologna, parigi)
   mondi/avendrace.js  Cagliari da Sant'Avendrace a via Roma: la giornata scorre da sinistra a destra
                       (mattina in via Montello e sul viale, pomeriggio a Tuvixeddu e all'Orto dei Cappuccini,
                       sera sul Corso, in via Roma, al porto e alla stazione). 10 personaggi: Lello, Signora Maria,
@@ -68,5 +68,23 @@ LA MIA BOLLA - struttura
                       di Cagliari con la luce di Bologna. Le tappe di "look" sono scelte a meta' strada fra un luogo e il
                       successivo, cosi' il testo corrisponde sempre a quello che hai davanti. La tappa "Sala Stabat Mater"
                       non ha un oggetto proprio: e' un testo fra il Teatro Anatomico e Santo Stefano.
+  mondi/parigi.js     Parigi dalla Torre Eiffel a Gare du Nord: una giornata intera da sinistra a destra (alba al Trocadero con la
+                      Torre nella foschia, mattina sugli Champs-Elysees e all'Arco di Trionfo, tarda mattina alle Tuileries e al
+                      Louvre, mezzogiorno sull'Ile de la Cite e lungo la Senna, primo pomeriggio nel Quartiere Latino, pomeriggio
+                      dorato nel Marais, tramonto a Montmartre, sera a Pigalle e al Moulin Rouge, notte alla Gare du Nord; in fondo
+                      al binario c'e' il varco). 36 tappe e 8 personaggi, 12 battute ciascuno, testi presi da parigi.txt: Gustave
+                      Eiffel, Napoleone Bonaparte, Marcel il bouquiniste, Marie Curie, Victor Hugo, Theo il pittore di Place du
+                      Tertre, Henri de Toulouse-Lautrec, Ines la responsabile dell'accoglienza.
+                      Ha una sua luce (funzione nf di Parigi, nel blocco "pa" in fondo a elementi.js) e usa AVCAM; i suoi oggetti
+                      in elementi.js hanno il prefisso "pa" (patrocadero, paeiffel, papontiena, pacarosello, pavendeur, paarco,
+                      paavenue, paconcorde, patuileries, pacarrousel, palouvre, papontdesarts, papontneuf, pavertgalant,
+                      pabouquinistes, pasainte, panotredame, pashakespeare, pasorbona, papantheon, paluxembourg, pavosges,
+                      parosiers, paabbesses, patertre, pasacrecoeur, palapin, pamoulinrouge, papigalle, pamartyrs, pagare,
+                      pabinari, pavarco...); palamp, pabanc, pakiosque, pametro, pacarretto, pasedie, paplatano, patiglio, pamorris,
+                      papiccioni, pataxi, pavalige sono gli arredi di Parigi; patarga, pabici, paalbero, patavolo sono gli oggetti
+                      di Cagliari con la luce di Parigi. Le tappe di "look" sono scelte a meta' strada fra un luogo e il successivo,
+                      cosi' il testo corrisponde sempre a quello che hai davanti. Le tappe "I 72 nomi", "Il Milite Ignoto e la
+                      Fiamma", "Mona Lisa e Venere di Milo", "Maison de Victor Hugo" e "Le statue delle citta'" non hanno un
+                      oggetto proprio: sono testi legati al monumento vicino (Torre, Arco, Louvre, Place des Vosges, Gare du Nord).
 Nuovo mondo: crea mondi/nome.js e aggiungi la riga <script> in bolla.html prima di motore.js.
 Tieni la cartella unita: non spostare i file singolarmente.
