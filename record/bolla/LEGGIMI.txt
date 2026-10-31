@@ -17,11 +17,15 @@ LA MIA BOLLA - struttura
                       San Giovanni degli Eremiti, Porta Nuova di Palermo, Cattedrale, Tombe reali, carretto siciliano, Quattro Canti,
                       Fontana Pretoria, Martorana, San Cataldo, Porta Carini, Vucciria, Teatro Massimo, Politeama, teatrino dei pupi,
                       ficus di Piazza Marina, Steri, Porta Felice, Foro Italico, Cala, Mondello, Charleston, Monte Pellegrino,
-                      santuario di Santa Rosalia...)
+                      santuario di Santa Rosalia, Castle Clinton, traghetto di Staten Island, Statua della Liberta', Ellis Island,
+                      Charging Bull, Borsa di New York, Federal Hall, Trinity Church, Memoriale dell'11 settembre, Brooklyn Bridge,
+                      Little Italy, Lombardi's, Chinatown, Katz's, Arco di Washington Square, Village Vanguard, Flatiron, Empire State,
+                      Grand Central, Chrysler, Biblioteca Pubblica, San Patrizio, Rockefeller Center, Top of the Rock, Times Square,
+                      Broadway, il Mall, Bethesda Terrace, Bow Bridge, Strawberry Fields...)
   nucleo/mondi.js     meccanismo dei dialoghi a domande casuali
   nucleo/motore.js    camminata, dialoghi, portali, audio
   mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno (12 per roma)
-                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma, milano, palermo, bologna, parigi)
+                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma, milano, palermo, bologna, parigi, newyork)
   mondi/avendrace.js  Cagliari da Sant'Avendrace a via Roma: la giornata scorre da sinistra a destra
                       (mattina in via Montello e sul viale, pomeriggio a Tuvixeddu e all'Orto dei Cappuccini,
                       sera sul Corso, in via Roma, al porto e alla stazione). 10 personaggi: Lello, Signora Maria,
@@ -86,5 +90,22 @@ LA MIA BOLLA - struttura
                       cosi' il testo corrisponde sempre a quello che hai davanti. Le tappe "I 72 nomi", "Il Milite Ignoto e la
                       Fiamma", "Mona Lisa e Venere di Milo", "Maison de Victor Hugo" e "Le statue delle citta'" non hanno un
                       oggetto proprio: sono testi legati al monumento vicino (Torre, Arco, Louvre, Place des Vosges, Gare du Nord).
+  mondi/newyork.js    New York dal porto a Central Park: una giornata intera da sinistra a destra (alba a Battery Park sul porto con
+                      la Statua della Liberta' e Ellis Island, mattina a Wall Street e al Memoriale dell'11 settembre, tarda mattina
+                      sul Brooklyn Bridge, mezzogiorno a Little Italy, Chinatown e al Lower East Side, primo pomeriggio nel Greenwich
+                      Village, pomeriggio al Flatiron e all'Empire State, tardo pomeriggio a Grand Central, al Chrysler e alla
+                      Biblioteca, tramonto a San Patrizio e Rockefeller Center, sera a Times Square e a Broadway, notte a Central
+                      Park; in fondo al Mall, sotto gli olmi, c'e' il varco). 34 tappe e 8 personaggi, 12 battute ciascuno, testi
+                      presi da newyork.txt: Emma Lazarus, Alexander Hamilton, Emily Roebling, Sal il pizzaiolo, Jane Jacobs, Dolores
+                      la tassista, George Gershwin, Frederick Law Olmsted. Ha una sua luce (funzione nf di New York, nel blocco "ny"
+                      in fondo a elementi.js) e usa AVCAM; i suoi oggetti in elementi.js hanno il prefisso "ny" (nybattery, nyferry,
+                      nyliberty, nyellis, nybull, nyborsa, nyfederal, nytrinity, nymemoriale, nybrooklyn, nypasserella,
+                      nylittleitaly, nylombardi, nychinatown, nykatz, nyarco, nyparco, nyvanguard, nyflatiron, nyempire,
+                      nygrandcentral, nysoffitto, nychrysler, nybiblioteca, nysanpatrizio, nyrockefeller, nytoprock, nytimes,
+                      nybroadway, nymall, nybethesda, nybow, nystrawberry, nyvarco...); nytarga, nylamp, nylampp, nypanca, nyhotdog,
+                      nybitta, nytaxi, nyvapore, nycarrozza, nyolmo, nyplatano, nybandiera sono gli arredi di New York; nybici e
+                      nytavolo sono oggetti di Cagliari con la luce di New York. Le tappe di "look" sono scelte a meta' strada fra
+                      un luogo e il successivo, cosi' il testo corrisponde sempre a quello che hai davanti. I caratteri cinesi delle
+                      insegne di Chinatown usano i font del dispositivo.
 Nuovo mondo: crea mondi/nome.js e aggiungi la riga <script> in bolla.html prima di motore.js.
 Tieni la cartella unita: non spostare i file singolarmente.
