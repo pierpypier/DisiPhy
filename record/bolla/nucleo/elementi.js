@@ -2943,8 +2943,8 @@ PR.paarco=PA((g,x,y,t,a,k)=>{const S='#e0d4b6',S2='#cfc2a2';
  rect(g,S2,x-140,y-270,280,10);rect(g,'#bfb292',x-140,y-262,280,3);for(let q=0;q<14;q++){dot(g,'#c9bc9a',x-122+q*18.8,y-244,6.4);dot(g,'#e8dcc0',x-122+q*18.8,y-244,4)}
  rect(g,S2,x-138,y-224,276,7);rect(g,'rgba(0,0,0,.08)',x-134,y-217,268,4);for(let q=0;q<46;q++)rect(g,'rgba(110,92,64,.32)',x-128+q*5.6,y-212,2.2,12+hr(q)*4);rect(g,S2,x-138,y-196,276,6);
  /* gruppi scolpiti sui pilastri */
- [[-128,-54],[54,128]].forEach((p,j)=>{rect(g,'#d6c9a8',p[0]+4,y-186,p[1]-p[0]-8,152);rect(g,'rgba(0,0,0,.09)',p[0]+4,y-186,p[1]-p[0]-8,4);
-  for(let q=0;q<26;q++){const gx=p[0]+10+hr(q*3+j)*(p[1]-p[0]-26),gy=y-176+hr(q*5+j)*130;el(g,hr(q)>.5?'#cdbf9c':'#e6dbc2',gx,gy,5+hr(q+2)*7,6+hr(q+4)*9)}
+ [[-128,-54],[54,128]].forEach((p,j)=>{rect(g,'#d6c9a8',x+p[0]+4,y-186,p[1]-p[0]-8,152);rect(g,'rgba(0,0,0,.09)',x+p[0]+4,y-186,p[1]-p[0]-8,4);
+  for(let q=0;q<26;q++){const gx=x+p[0]+10+hr(q*3+j)*(p[1]-p[0]-26),gy=y-176+hr(q*5+j)*130;el(g,hr(q)>.5?'#cdbf9c':'#e6dbc2',gx,gy,5+hr(q+2)*7,6+hr(q+4)*9)}
   if(j){poly(g,'#c9bc98',[[x+78,y-150],[x+66,y-176],[x+80,y-168],[x+92,y-184],[x+96,y-166],[x+112,y-176],[x+104,y-146]]);dot(g,'#dccfae',x+88,y-142,7);ln(g,'#c4b692',3,[x+88,y-136,x+104,y-124])}
   else{el(g,'#cdbf9c',x-92,y-100,18,36);dot(g,'#dccfae',x-92,y-146,8);ln(g,'#c4b692',3.4,[x-80,y-122,x-60,y-150])}});
  /* la grande apertura e il Milite Ignoto */
