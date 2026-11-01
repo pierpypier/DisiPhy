@@ -1,27 +1,13 @@
-=== DA INCOLLARE IN LEGGIMI.txt (nell'elenco dei mondi) ===
-
-PECHINO · Dalla Piazza alla Stazione        (file: mondi/pechino.js, id: 'pechino')
-  Un'intera giornata da sinistra a destra, larga 17000 px, 8 zone, 30 tappe con testo ("look"):
-    1 Piazza Tiananmen (alba)            Porta di Tiananmen, Monumento agli Eroi, Alzabandiera, Palazzo del Popolo e Museo
-    2 Città Proibita (mattina)           Porta Meridiana, Sala dell'Armonia Suprema, Corte e Museo, collina Jingshan
-    3 Hutong e Shichahai (mezzogiorno)   lago, Nanluoguxiang, Siheyuan, casa-museo di Lao She
-    4 Tempio del Cielo (primo pomeriggio) Sala della Preghiera, Altare Circolare, Muro dell'Eco, parco
-    5 Palazzo d'Estate (pomeriggio)      lago Kunming, Lungo Corridoio, Barca di Marmo, Ponte dei Diciassette Archi
-    6 Grande Muraglia a Mutianyu (tramonto) Muraglia, torre di guardia, funivia e slittino
-    7 Qianmen e Dashilan (sera)          Zhengyangmen, tram storico, Dashilan, Quanjude, tanghulu
-    8 Stazione Sud (notte)               stazione, treni ad alta velocità, varco finale (portale a W-130)
-  Personaggi (id, posizione): pe_wang 1580, pe_yongle 3390, pe_laoshe 6490, pe_li 8660,
-    pe_cixi 9860, pe_qi 12210, pe_mei 14870, pe_chen 16520. Ognuno ha 12 domande in prima persona (TOPX, da pechino.txt).
-  Livelli: cielo (k .02), orizzonte lontano con monti e Muraglia (k .05), profili intermedi (k .2), facciate di strada (k 1),
-    vita (piccioni, gazze, rondini, gatti, tram, ciclisti) e terreno diverso per ogni zona.
-  Luce: funzione nf() in elementi.js (buio da 0 a 1 lungo il percorso); usa la variabile globale AVCAM.
-
-elementi.js -> nuovo blocco in fondo "elementi per Pechino": tutti gli oggetti hanno nomi che iniziano per "pe"
-  (peporta, peobelisco, pealza, pepalazzi, pewumen, petaihe, pecorte, pejing, peshichahai, penanluo, pesiheyuan, pelaoshe,
-   peqinian, pealtare, peeco, peparco, pekunming, pecorridoio, pebarca, peponte17, pemutianyu, petorre, pefunivia, petavola,
-   pezheng, petram, pedashilan, pequanjude, petanghulu, pestazione, pegaotie, pechiosco, pevarco + minori: pelamp, pelanterne,
-   pepino, pecipr, pesalice, pecachi, pebici, pepanca, pegruppo, peguardia, peaiuola, pevasca, peombrello, pecartello,
-   pecestino, pegru, petarga). Strumenti esportati in PR._pe. Nulla di quanto esisteva prima è stato modificato.
-
-ATTIVAZIONE: in index.html, accanto agli altri mondi (e PRIMA di motore.js), aggiungere
-  <script src="mondi/pechino.js"></script>
+DA INCOLLARE IN LEGGIMI.txt (il file originale non era tra gli allegati)
+------------------------------------------------------------------------
+MONDO: Torino · Dal Valentino a Porta Nuova   (id: torino)
+  File: mondi/torino.js   — oggetti in nucleo/elementi.js (blocco "elementi per Torino", nomi che iniziano per "to")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/torino.js"></script>
+  Percorso (larghezza 17400): 8 zone, da sinistra a destra, un'intera giornata:
+     1 Parco del Valentino e Po (alba) · 2 Mole Antonelliana (mattina) · 3 Piazza Castello e Palazzo Carignano (tarda mattina)
+     4 Museo Egizio (mezzogiorno) · 5 Piazza San Carlo, Bicerin, Quadrilatero (primo pomeriggio)
+     6 Portici di via Po e Piazza Vittorio (pomeriggio) · 7 Superga (tramonto) · 8 Porta Nuova (notte, varco in fondo al binario)
+  Personaggi (12 battute ciascuno, l'ultima è il saluto): Sara, Alessandro Antonelli, Cavour, Champollion,
+     Franca (Bicerin), Primo Levi, Gianni (tifoso granata), Mario (capostazione)
+  Testi: da torino.txt (definitivi); 32 tappe da "Osserva".
