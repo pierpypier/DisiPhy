@@ -1,111 +1,27 @@
-LA MIA BOLLA - struttura
-  bolla.html          pagina da aprire (carica gli altri file)
-  nucleo/disegno.js   funzioni di disegno e personaggi generici
-  nucleo/elementi.js  libreria oggetti (templi, palme, divano, lavagna, Big Ben, ruota panoramica, Tower Bridge,
-                      bucato, edicola votiva, vespa, bancarella, funicolare, pizzeria, Duomo, tufo,
-                      stazione, Santa Maria Novella, Duomo di Firenze, Palazzo Vecchio, Ponte Vecchio,
-                      gondola, vaporetto, Ca' d'Oro, ponte di Rialto, Pescaria, bacaro, San Marco, Campanile,
-                      Palazzo Ducale, Ponte dei Sospiri, Arsenale, vetri di Murano, lampioni, targhe stradali, Ape,
-                      Panda, edicola di giornali, Grotta della Vipera, chiesa di Sant'Avendrace, cancello e tombe di
-                      Tuvixeddu, melograni, muretti a secco, tavoli del Corso, Municipio di via Roma, traghetto, gru,
-                      stazione di Cagliari, Colosseo, Arco di Costantino, Foro Romano, Colonna Traiana, Vittoriano,
-                      Campidoglio, Fontana di Trevi, Pantheon, Sant'Agnese in Agone, Fontana dei Quattro Fiumi, angeli del
-                      Ponte Sant'Angelo, Castel Sant'Angelo, San Pietro, nasoni, pini marittimi, taxi, Darsena, Naviglio Grande, Vicolo dei
-                      Lavandai, Porta Ticinese, Colonne di San Lorenzo, tram Ventotto, Sant'Ambrogio, Santa Maria delle Grazie,
-                      Vigna di Leonardo, Castello Sforzesco, Arco della Pace, Torre Branca, Brera, Scala, Galleria, Duomo con
-                      la Madonnina, Quadrilatero, Piazza Gae Aulenti, Bosco Verticale, Pirellone, Stazione Centrale, Binario 21, Ballarò, Carmine Maggiore, Palazzo dei Normanni, Cappella Palatina,
-                      San Giovanni degli Eremiti, Porta Nuova di Palermo, Cattedrale, Tombe reali, carretto siciliano, Quattro Canti,
-                      Fontana Pretoria, Martorana, San Cataldo, Porta Carini, Vucciria, Teatro Massimo, Politeama, teatrino dei pupi,
-                      ficus di Piazza Marina, Steri, Porta Felice, Foro Italico, Cala, Mondello, Charleston, Monte Pellegrino,
-                      santuario di Santa Rosalia, Castle Clinton, traghetto di Staten Island, Statua della Liberta', Ellis Island,
-                      Charging Bull, Borsa di New York, Federal Hall, Trinity Church, Memoriale dell'11 settembre, Brooklyn Bridge,
-                      Little Italy, Lombardi's, Chinatown, Katz's, Arco di Washington Square, Village Vanguard, Flatiron, Empire State,
-                      Grand Central, Chrysler, Biblioteca Pubblica, San Patrizio, Rockefeller Center, Top of the Rock, Times Square,
-                      Broadway, il Mall, Bethesda Terrace, Bow Bridge, Strawberry Fields...)
-  nucleo/mondi.js     meccanismo dei dialoghi a domande casuali
-  nucleo/motore.js    camminata, dialoghi, portali, audio
-  mondi/*.js          un file per mondo: sfondo, personaggi, 30 battute ciascuno (12 per roma)
-                      (grecia, cagliari, pasadena, castello, londra, napoli, firenze, venezia, avendrace, roma, milano, palermo, bologna, parigi, newyork)
-  mondi/avendrace.js  Cagliari da Sant'Avendrace a via Roma: la giornata scorre da sinistra a destra
-                      (mattina in via Montello e sul viale, pomeriggio a Tuvixeddu e all'Orto dei Cappuccini,
-                      sera sul Corso, in via Roma, al porto e alla stazione). 10 personaggi: Lello, Signora Maria,
-                      Antioco l'edicolante, Nicola, Tonino il guardiano, Ilaria la guida, Massimo, Efisio il barista,
-                      Luca, Marco. Usa la variabile globale AVCAM (definita in elementi.js) per far scurire gli oggetti verso sera.
-  mondi/roma.js       Roma dal Colosseo a San Pietro: la giornata scorre da sinistra a destra (mattina al Colosseo e al Foro,
-                      mezzogiorno a Piazza Venezia e al Campidoglio, pomeriggio a Trevi e al Pantheon, tramonto a Piazza Navona
-                      e sul Tevere, sera a Castel Sant'Angelo e in piazza San Pietro). 10 personaggi, 12 battute ciascuno: Gaio il
-                      gladiatore, Chiara la guida, Giulio Cesare, Lucio il legionario di Traiano, Sandro il tassista, Ugo l'oste,
-                      Raffaello, Aldo il pittore di Navona, l'imperatore Adriano, Daniel la Guardia Svizzera. Come avendrace.js usa
-                      la variabile globale AVCAM (definita in elementi.js) per far scurire gli oggetti verso sera; i suoi oggetti
-                      nuovi in elementi.js hanno il prefisso "rm" (rmcolosseo, rmtrevi, rmpantheon, rmcastello...).
-  mondi/milano.js     Milano da Darsena a Porta Nuova: una giornata intera da sinistra a destra (alba ai Navigli, mattina a San Lorenzo
-                      e Sant'Ambrogio, mezzogiorno al Castello, pomeriggio a Brera, tramonto fra Scala, Galleria e Duomo, sera nel
-                      Quadrilatero e a Porta Nuova, notte alla Stazione Centrale; in fondo al binario c'è il varco). 8 personaggi,
-                      12 battute ciascuno, testi presi da milano.txt: Giovanni il vecchio del Naviglio, Gino il tranviere,
-                      Sant'Ambrogio, Leonardo da Vinci, Rosetta la maschera della Scala, Alessandro Manzoni, Giuseppe Verdi,
-                      Chiara l'architetta di Porta Nuova. Ha una sua luce (funzione nf di Milano, in fondo a elementi.js) e usa
-                      AVCAM; i suoi oggetti in elementi.js hanno il prefisso "mi" (midarsena, miduomo, migalleria, mistazione...);
-                      milamp, mitarga, mialbero, mitavolo ecc. sono gli oggetti di Cagliari/Roma con la luce di Milano.
-  mondi/palermo.js    Palermo da Ballarò a Monte Pellegrino: una giornata intera da sinistra a destra (alba al mercato di Ballarò,
-                      mattina ai Normanni e in Cattedrale, mezzogiorno ai Quattro Canti, primo pomeriggio al Capo e alla Vucciria,
-                      pomeriggio al Teatro Massimo e al Politeama, tardo pomeriggio nella Kalsa, tramonto al Foro Italico e alla
-                      Cala, sera a Mondello, notte sul Monte Pellegrino; in fondo alla grotta di Santa Rosalia c'è il varco).
-                      31 tappe e 8 personaggi, 12 battute ciascuno, testi presi da palermo.txt: Nino il venditore di Ballarò,
-                      Ruggero II, Federico II, Turi il puparo, Franca Florio, Goethe, Tano il pescatore, Santa Rosalia.
-                      Ha una sua luce (funzione nf di Palermo, in fondo a elementi.js) e usa AVCAM; i suoi oggetti in
-                      elementi.js hanno il prefisso "pl" (plballaro, plcarmine, plnormanni, plcattedrale, plpretoria,
-                      plmassimo, plcala, plcharleston, plsantuario, plvarco...); pllamp, pltarga, plpalma, plape, plgelato,
-                      plficodindia ecc. sono gli oggetti di Cagliari con la luce di Palermo. Le tappe di "look" sono scelte
-                      a metà strada fra un luogo e il successivo, così il testo corrisponde sempre a quello che hai davanti.
-  mondi/bologna.js    Bologna dai canali alla Stazione Centrale: una giornata intera da sinistra a destra (alba ai canali nascosti,
-                      mattina nel Quadrilatero, tarda mattina in Piazza Maggiore, mezzogiorno alle Due Torri, primo pomeriggio
-                      all'Archiginnasio, pomeriggio a Santo Stefano e in via Fondazza, tramonto sul portico di San Luca, sera in
-                      Piazza Verdi, notte alla Stazione Centrale; in fondo al binario c'e' il varco). 30 tappe e 8 personaggi,
-                      12 battute ciascuno, testi presi da bologna.txt: Bruno il vecchio del Canale, Marisa la sfoglina,
-                      San Petronio, Lucio Dalla, Dante Alighieri, Laura Bassi, Giorgio Morandi, Giulia la studentessa fuorisede.
-                      Ha una sua luce (funzione nf di Bologna, nel blocco "bo" in fondo a elementi.js) e usa AVCAM; i suoi
-                      oggetti in elementi.js hanno il prefisso "bo" (bofinestrella, botorresotto, bonavile, boquadrilatero,
-                      bopescherie, boosteria, bopiazza, bonettuno, bopetronio, bopodesta, boaccursio, boasinelli, bogarisenda,
-                      bomercanzia, bostradamaggiore, boarchiginnasio, boteatroanat, bogalvani, bosantostefano, bopilato,
-                      bofondazza, bosaragozza, bomeloncello, boportico, bosanluca, boteatrocomunale, bopiazzaverdi, bostazione,
-                      boorologio, bovarco...); bolamp, botarga, bobici, bopalma, botavolo, boalbero, bofestoni sono gli oggetti
-                      di Cagliari con la luce di Bologna. Le tappe di "look" sono scelte a meta' strada fra un luogo e il
-                      successivo, cosi' il testo corrisponde sempre a quello che hai davanti. La tappa "Sala Stabat Mater"
-                      non ha un oggetto proprio: e' un testo fra il Teatro Anatomico e Santo Stefano.
-  mondi/parigi.js     Parigi dalla Torre Eiffel a Gare du Nord: una giornata intera da sinistra a destra (alba al Trocadero con la
-                      Torre nella foschia, mattina sugli Champs-Elysees e all'Arco di Trionfo, tarda mattina alle Tuileries e al
-                      Louvre, mezzogiorno sull'Ile de la Cite e lungo la Senna, primo pomeriggio nel Quartiere Latino, pomeriggio
-                      dorato nel Marais, tramonto a Montmartre, sera a Pigalle e al Moulin Rouge, notte alla Gare du Nord; in fondo
-                      al binario c'e' il varco). 36 tappe e 8 personaggi, 12 battute ciascuno, testi presi da parigi.txt: Gustave
-                      Eiffel, Napoleone Bonaparte, Marcel il bouquiniste, Marie Curie, Victor Hugo, Theo il pittore di Place du
-                      Tertre, Henri de Toulouse-Lautrec, Ines la responsabile dell'accoglienza.
-                      Ha una sua luce (funzione nf di Parigi, nel blocco "pa" in fondo a elementi.js) e usa AVCAM; i suoi oggetti
-                      in elementi.js hanno il prefisso "pa" (patrocadero, paeiffel, papontiena, pacarosello, pavendeur, paarco,
-                      paavenue, paconcorde, patuileries, pacarrousel, palouvre, papontdesarts, papontneuf, pavertgalant,
-                      pabouquinistes, pasainte, panotredame, pashakespeare, pasorbona, papantheon, paluxembourg, pavosges,
-                      parosiers, paabbesses, patertre, pasacrecoeur, palapin, pamoulinrouge, papigalle, pamartyrs, pagare,
-                      pabinari, pavarco...); palamp, pabanc, pakiosque, pametro, pacarretto, pasedie, paplatano, patiglio, pamorris,
-                      papiccioni, pataxi, pavalige sono gli arredi di Parigi; patarga, pabici, paalbero, patavolo sono gli oggetti
-                      di Cagliari con la luce di Parigi. Le tappe di "look" sono scelte a meta' strada fra un luogo e il successivo,
-                      cosi' il testo corrisponde sempre a quello che hai davanti. Le tappe "I 72 nomi", "Il Milite Ignoto e la
-                      Fiamma", "Mona Lisa e Venere di Milo", "Maison de Victor Hugo" e "Le statue delle citta'" non hanno un
-                      oggetto proprio: sono testi legati al monumento vicino (Torre, Arco, Louvre, Place des Vosges, Gare du Nord).
-  mondi/newyork.js    New York dal porto a Central Park: una giornata intera da sinistra a destra (alba a Battery Park sul porto con
-                      la Statua della Liberta' e Ellis Island, mattina a Wall Street e al Memoriale dell'11 settembre, tarda mattina
-                      sul Brooklyn Bridge, mezzogiorno a Little Italy, Chinatown e al Lower East Side, primo pomeriggio nel Greenwich
-                      Village, pomeriggio al Flatiron e all'Empire State, tardo pomeriggio a Grand Central, al Chrysler e alla
-                      Biblioteca, tramonto a San Patrizio e Rockefeller Center, sera a Times Square e a Broadway, notte a Central
-                      Park; in fondo al Mall, sotto gli olmi, c'e' il varco). 34 tappe e 8 personaggi, 12 battute ciascuno, testi
-                      presi da newyork.txt: Emma Lazarus, Alexander Hamilton, Emily Roebling, Sal il pizzaiolo, Jane Jacobs, Dolores
-                      la tassista, George Gershwin, Frederick Law Olmsted. Ha una sua luce (funzione nf di New York, nel blocco "ny"
-                      in fondo a elementi.js) e usa AVCAM; i suoi oggetti in elementi.js hanno il prefisso "ny" (nybattery, nyferry,
-                      nyliberty, nyellis, nybull, nyborsa, nyfederal, nytrinity, nymemoriale, nybrooklyn, nypasserella,
-                      nylittleitaly, nylombardi, nychinatown, nykatz, nyarco, nyparco, nyvanguard, nyflatiron, nyempire,
-                      nygrandcentral, nysoffitto, nychrysler, nybiblioteca, nysanpatrizio, nyrockefeller, nytoprock, nytimes,
-                      nybroadway, nymall, nybethesda, nybow, nystrawberry, nyvarco...); nytarga, nylamp, nylampp, nypanca, nyhotdog,
-                      nybitta, nytaxi, nyvapore, nycarrozza, nyolmo, nyplatano, nybandiera sono gli arredi di New York; nybici e
-                      nytavolo sono oggetti di Cagliari con la luce di New York. Le tappe di "look" sono scelte a meta' strada fra
-                      un luogo e il successivo, cosi' il testo corrisponde sempre a quello che hai davanti. I caratteri cinesi delle
-                      insegne di Chinatown usano i font del dispositivo.
-Nuovo mondo: crea mondi/nome.js e aggiungi la riga <script> in bolla.html prima di motore.js.
-Tieni la cartella unita: non spostare i file singolarmente.
+=== DA INCOLLARE IN LEGGIMI.txt (nell'elenco dei mondi) ===
+
+PECHINO · Dalla Piazza alla Stazione        (file: mondi/pechino.js, id: 'pechino')
+  Un'intera giornata da sinistra a destra, larga 17000 px, 8 zone, 30 tappe con testo ("look"):
+    1 Piazza Tiananmen (alba)            Porta di Tiananmen, Monumento agli Eroi, Alzabandiera, Palazzo del Popolo e Museo
+    2 Città Proibita (mattina)           Porta Meridiana, Sala dell'Armonia Suprema, Corte e Museo, collina Jingshan
+    3 Hutong e Shichahai (mezzogiorno)   lago, Nanluoguxiang, Siheyuan, casa-museo di Lao She
+    4 Tempio del Cielo (primo pomeriggio) Sala della Preghiera, Altare Circolare, Muro dell'Eco, parco
+    5 Palazzo d'Estate (pomeriggio)      lago Kunming, Lungo Corridoio, Barca di Marmo, Ponte dei Diciassette Archi
+    6 Grande Muraglia a Mutianyu (tramonto) Muraglia, torre di guardia, funivia e slittino
+    7 Qianmen e Dashilan (sera)          Zhengyangmen, tram storico, Dashilan, Quanjude, tanghulu
+    8 Stazione Sud (notte)               stazione, treni ad alta velocità, varco finale (portale a W-130)
+  Personaggi (id, posizione): pe_wang 1580, pe_yongle 3390, pe_laoshe 6490, pe_li 8660,
+    pe_cixi 9860, pe_qi 12210, pe_mei 14870, pe_chen 16520. Ognuno ha 12 domande in prima persona (TOPX, da pechino.txt).
+  Livelli: cielo (k .02), orizzonte lontano con monti e Muraglia (k .05), profili intermedi (k .2), facciate di strada (k 1),
+    vita (piccioni, gazze, rondini, gatti, tram, ciclisti) e terreno diverso per ogni zona.
+  Luce: funzione nf() in elementi.js (buio da 0 a 1 lungo il percorso); usa la variabile globale AVCAM.
+
+elementi.js -> nuovo blocco in fondo "elementi per Pechino": tutti gli oggetti hanno nomi che iniziano per "pe"
+  (peporta, peobelisco, pealza, pepalazzi, pewumen, petaihe, pecorte, pejing, peshichahai, penanluo, pesiheyuan, pelaoshe,
+   peqinian, pealtare, peeco, peparco, pekunming, pecorridoio, pebarca, peponte17, pemutianyu, petorre, pefunivia, petavola,
+   pezheng, petram, pedashilan, pequanjude, petanghulu, pestazione, pegaotie, pechiosco, pevarco + minori: pelamp, pelanterne,
+   pepino, pecipr, pesalice, pecachi, pebici, pepanca, pegruppo, peguardia, peaiuola, pevasca, peombrello, pecartello,
+   pecestino, pegru, petarga). Strumenti esportati in PR._pe. Nulla di quanto esisteva prima è stato modificato.
+
+ATTIVAZIONE: in index.html, accanto agli altri mondi (e PRIMA di motore.js), aggiungere
+  <script src="mondi/pechino.js"></script>
