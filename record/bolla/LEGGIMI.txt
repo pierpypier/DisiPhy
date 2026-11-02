@@ -24,3 +24,18 @@ MONDO: Sydney · Da Bondi Beach alla Central Station   (id: sydney)
      Lachlan Macquarie, Linh (Haymarket), Duke Kahanamoku, Ruby (Luna Park), Dave (capostazione)
   Testi: da sydney.txt (definitivi, usati senza riscriverli); 32 tappe da "Osserva".
   Nota: la città sorge sulla terra del popolo Gadigal (nazione Eora); il tono verso la storia aborigena e coloniale è sobrio e rispettoso.
+
+MONDO: Rio de Janeiro · Da Copacabana al Maracanã   (id: rio)
+  File: mondi/rio.js   — oggetti in nucleo/elementi.js (blocco "elementi per Rio de Janeiro", nomi che iniziano per "ri")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/rio.js"></script>
+  Percorso (larghezza 19800): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Leme e Copacabana (alba) · 2 Arpoador e Ipanema (mattina) · 3 Jardim Botânico e Lagoa (tarda mattina)
+     4 Corcovado e Cristo Redentor (mezzogiorno) · 5 Centro storico: Praça XV, Candelária, Theatro Municipal, Confeitaria Colombo, Museu do Amanhã (primo pomeriggio)
+     6 Santa Teresa (pomeriggio) · 7 Urca e Pão de Açúcar (tramonto) · 8 Lapa e Pedra do Sal (sera) · 9 Maracanã (notte, varco in fondo al tunnel verso il campo)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta): Seu Nelson (pescatore), Bia (istruttrice di surf), Rodrigo (guida del Corcovado),
+     Machado de Assis, Zeca (conducente del bonde), Dona Nilza, Chico (musicista della Lapa), Carol (guida del Maracanã)
+  Testi: da rio.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 37 tappe da "Luoghi".
+  Nota: i temi dolorosi (Cais do Valongo, incidente del bonde del 2011, Maracanazo) sono trattati con tono sobrio e rispettoso.
+  Nota tecnica: il mondo usa il solo "nf" di Rio (luce del giorno che scorre fino alla notte) esportato come PR._ri; non modifica motore né altri mondi.
+
