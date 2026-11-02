@@ -11,3 +11,16 @@ MONDO: Torino · Dal Valentino a Porta Nuova   (id: torino)
   Personaggi (12 battute ciascuno, l'ultima è il saluto): Sara, Alessandro Antonelli, Cavour, Champollion,
      Franca (Bicerin), Primo Levi, Gianni (tifoso granata), Mario (capostazione)
   Testi: da torino.txt (definitivi); 32 tappe da "Osserva".
+
+MONDO: Sydney · Da Bondi Beach alla Central Station   (id: sydney)
+  File: mondi/sydney.js   — oggetti in nucleo/elementi.js (blocco "elementi per Sydney", nomi che iniziano per "sy")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/sydney.js"></script>
+  Percorso (larghezza 17400): 8 zone, da sinistra a destra, un'intera giornata:
+     1 Bondi Beach (alba) · 2 The Rocks e Harbour Bridge (mattina) · 3 Circular Quay e Opera House (tarda mattina)
+     4 Royal Botanic Garden e Mrs Macquarie's Chair (mezzogiorno) · 5 Chinatown e Darling Harbour (primo pomeriggio)
+     6 Manly e Freshwater (pomeriggio) · 7 Luna Park e Milsons Point (tramonto) · 8 Central Station (notte, varco in fondo al binario)
+  Personaggi (12 battute ciascuno, l'ultima è il saluto): Gaz (bagnino), Bennelong, Jørn Utzon,
+     Lachlan Macquarie, Linh (Haymarket), Duke Kahanamoku, Ruby (Luna Park), Dave (capostazione)
+  Testi: da sydney.txt (definitivi, usati senza riscriverli); 32 tappe da "Osserva".
+  Nota: la città sorge sulla terra del popolo Gadigal (nazione Eora); il tono verso la storia aborigena e coloniale è sobrio e rispettoso.
