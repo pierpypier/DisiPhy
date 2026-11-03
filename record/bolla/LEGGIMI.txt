@@ -1,5 +1,21 @@
 DA INCOLLARE IN LEGGIMI.txt (il file originale non era tra gli allegati)
 ------------------------------------------------------------------------
+MONDO: Madrid · Dal Tempio di Debod alla Stazione di Atocha   (id: madrid)
+  File: mondi/madrid.js   — oggetti in nucleo/elementi.js (blocco "elementi per Madrid", nomi che iniziano per "md")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/madrid.js"></script>
+  Percorso (larghezza 23000): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Tempio di Debod e Parque del Oeste, Plaza de España (alba) · 2 Plaza de Oriente, Palazzo Reale, Almudena, Giardini di Sabatini (mattina)
+     3 Plaza Mayor, Mercado de San Miguel, Cuchilleros, Puerta del Sol, Orso e Corbezzolo (tarda mattina) · 4 La Latina: El Rastro, Cava Baja, San Isidro (ora dell'aperitivo)
+     5 Barrio de las Letras: Huertas, Casa di Cervantes, Trinitarie, Prado, Nettuno (primo pomeriggio) · 6 Retiro: Puerta de Alcalá, Estanque, Palacio de Cristal, Angelo Caduto (pomeriggio)
+     7 Cibeles, Palazzo di Cibeles, Metrópolis, Gran Vía (tramonto) · 8 Malasaña: Dos de Mayo, Manuela Malasaña, bar e negozi vintage, San Ildefonso (sera)
+     9 Stazione di Atocha, giardino tropicale, binari dell'alta velocità (notte, varco in fondo al binario)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta): Paco (pensionato con il cane), Manolo (panini ai calamari), Pilar (tabernera di La Latina),
+     Miguel de Cervantes, Nacho (barche del lago), Rafa (tassista), Lola (barista di Malasaña), Inés (capotreno dell'alta velocità)
+  Testi: da madrid.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 36 tappe da "Testo:".
+  Nota: i temi dolorosi (prigionia e morte di Cervantes, insurrezione del 2 maggio 1808) sono trattati con tono sobrio e rispettoso.
+  Nota tecnica: il mondo usa il solo "nf" di Madrid (luce che scorre dall'alba alla notte) esportato come PR._md; non modifica motore né altri mondi.
+
 MONDO: Torino · Dal Valentino a Porta Nuova   (id: torino)
   File: mondi/torino.js   — oggetti in nucleo/elementi.js (blocco "elementi per Torino", nomi che iniziano per "to")
   Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
