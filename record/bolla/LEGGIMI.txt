@@ -55,3 +55,19 @@ MONDO: Rio de Janeiro · Da Copacabana al Maracanã   (id: rio)
   Nota: i temi dolorosi (Cais do Valongo, incidente del bonde del 2011, Maracanazo) sono trattati con tono sobrio e rispettoso.
   Nota tecnica: il mondo usa il solo "nf" di Rio (luce del giorno che scorre fino alla notte) esportato come PR._ri; non modifica motore né altri mondi.
 
+MONDO: Berlino · Da Charlottenburg a Kreuzberg   (id: berlino)
+  File: mondi/berlino.js   — oggetti in nucleo/elementi.js (blocco "elementi per Berlino", nomi che iniziano per "be")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/berlino.js"></script>
+  Percorso (larghezza 21600): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Gedächtniskirche, Kurfürstendamm, KaDeWe, targa di Herta Heuwer (alba) · 2 Zoo, Tiergarten, Siegessäule, Schloss Bellevue (mattina)
+     3 Reichstag, Porta di Brandeburgo, Memoriale agli ebrei assassinati d'Europa (tarda mattina) · 4 Unter den Linden, Università Humboldt, Bebelplatz (mezzogiorno)
+     5 Museumsinsel, Neues Museum e Nefertiti, Duomo, Humboldt Forum (primo pomeriggio) · 6 Fernsehturm, Alexanderplatz, Rotes Rathaus e Neptunbrunnen, Nikolaiviertel (primo pomeriggio)
+     7 Potsdamer Platz, Checkpoint Charlie, linea del Muro (pomeriggio dorato) · 8 East Side Gallery, Bacio fraterno, Oberbaumbrücke (tramonto e crepuscolo)
+     9 Späti, viadotto della U1, arco di mattoni (notte di Kreuzberg, varco in fondo al cortile)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Ayşe (edicola), Jonas (guida in bicicletta), Brigitte (berlinese dell'89),
+     Alexander von Humboldt, Lena (guida della Museumsinsel), Dieter (tassista), Mia (studentessa d'arte), Tobi (barista)
+  Testi: da berlino.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 31 tappe da "Testo:".
+  Vita: volpi urbane all'alba e di notte, scoiattoli e un cinghiale nel Tiergarten, cigni, cornacchie, gabbiani sulla Spree, pipistrelli al crepuscolo, il treno giallo sul viadotto.
+  Nota: i temi dolorosi (il Muro, il Memoriale, i roghi di libri della Bebelplatz, la guerra) sono trattati con tono sobrio e rispettoso.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._be) e riusa da Madrid solo cas e pers (PR._md); non modifica motore né altri mondi.
