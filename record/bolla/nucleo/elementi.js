@@ -6529,3 +6529,557 @@ PR.beVarco=BE((g,x,y,t,a,k)=>{const pu=.7+.3*Math.sin(t*3);
 
 PR._be={BE,nf,lit,fin,bal,mat,cupo,col,front,tiglio,platano,quercia,betulla,pino,cespo,berl,folla,pers};
 })();
+
+/* ---------- elementi per Gerusalemme · Dal mercato al Monte degli Ulivi (mondi/gerusalemme.js) ---------- */
+/* Nomi che iniziano per "ge". Hanno la loro luce (nf di Gerusalemme): la giornata scorre da sinistra (alba al mercato di Mahane Yehuda)
+   a destra (notte sul Monte degli Ulivi) e usano la variabile globale AVCAM come gli altri mondi "lunghi".
+   Non toccano nulla di quanto esiste prima di questo blocco. */
+(function(){
+const A=PR._av,rect=A.rect,poly=A.poly,dot=A.dot,el=A.el,ar=A.ar,pa=A.pa,tn=A.tn,txt=A.txt,glow=A.glow,cl=A.cl;
+const {ln,gatto}=PR._rm;
+const {pers,gente,cipr,pino}=PR._md;
+const LIT='rgb(255,226,150)';
+const IR='#2c2a28',PS='#e6d2a2',PS2='#d4bc86',PS3='#b9a06a',PS4='#f2e4be',LG='#7a5a38',LG2='#5a3e24',OR='#e6b83c',OR2='#c8962a',BL='#2a62a8',TQ='#2a9aa8',VE='#2a6a46';
+/* luce di Gerusalemme: [posizione nel mondo, buio da 0 (giorno) a 1 (notte)] */
+const NF=[[0,.1],[1200,0],[14200,0],[15600,.04],[16500,.08],[17300,.18],[18100,.3],[18900,.52],[19700,.8],[20500,1]];
+const nf=wx=>{if(wx<=NF[0][0])return NF[0][1];for(let i=1;i<NF.length;i++)if(wx<=NF[i][0]){const a=NF[i-1],b=NF[i];return a[1]+(b[1]-a[1])*(wx-a[0])/(b[0]-a[0])}return 1};
+const GE=f=>(g,x,y,t,a)=>{A.setDK(nf(x+AVCAM));f(g,x,y,t,a,A.getDK())};
+const lit=(k,i)=>k>.3&&hr(i)>.35;
+
+/* ---- attrezzi comuni ---- */
+/* muratura di pietra di Gerusalemme: corsi di blocchi e giunti */
+const pie=(g,c,x,y,w,h,s)=>{rect(g,c,x,y,w,h);for(let r=0;r<h/14;r++){rect(g,'rgba(110,80,30,.12)',x,y+r*14+13,w,1);const off=(r%2)*15;for(let q=0;q<w/30;q++)rect(g,'rgba(110,80,30,.1)',x+off+q*30,y+r*14,1,13)}for(let q=0;q<w*h/1100;q++)rect(g,'rgba(255,248,224,'+(.05+hr(q+s)*.08)+')',x+hr(q*3+s)*(w-12),y+hr(q*5+s)*(h-6),7+hr(q+1)*10,5)};
+/* cupola a mezzo ellisse, base a y */
+const dome=(g,c,x,y,r,h)=>{g.fillStyle=tn(c);g.beginPath();g.ellipse(x,y,r,h,0,Math.PI,0);g.fill();g.save();g.beginPath();g.ellipse(x,y,r,h,0,Math.PI,0);g.clip();rect(g,'rgba(255,255,255,.18)',x-r,y-h,r*.55,h);rect(g,'rgba(0,0,0,.14)',x+r*.35,y-h,r,h);g.restore()};
+/* tetto a cono */
+const cono=(g,c,x,y,w,h)=>{poly(g,c,[[x-w/2,y],[x,y-h],[x+w/2,y]]);poly(g,'rgba(255,255,255,.14)',[[x-w/2,y],[x,y-h],[x-w*.1,y]]);poly(g,'rgba(0,0,0,.14)',[[x+w*.15,y],[x,y-h],[x+w/2,y]])};
+/* merli: blocchi quadrati sopra il bordo y, larghi s */
+const merl=(g,c,x,y,w,s)=>{s=s||11;for(let q=0;q<Math.floor(w/(s*2));q++){rect(g,c,x+q*s*2+s/2,y-s,s,s);rect(g,'rgba(255,255,255,.22)',x+q*s*2+s/2,y-s,2,s)}};
+/* finestra ad arco con vetro (si accende la sera); sh = colore delle persiane */
+const fnt=(g,x,y,w,h,k,i,sh)=>{ar(g,'#3a3024',x-1.5,y+h+1.5,w+3,h+3);ar(g,lit(k,i)?LIT:'#6a8aa0',x,y+h,w,h);rect(g,'rgba(255,255,255,.22)',x+w/2-.5,y+w/2,1,h-w/2);if(sh){rect(g,sh,x-5,y+w/2,4,h-w/2);rect(g,sh,x+w+1,y+w/2,4,h-w/2)}};
+/* porta ad arco di legno, base a y */
+const port=(g,c,x,y,w,h)=>{ar(g,'#3a2a1c',x-3,y,w+6,h+3);ar(g,c,x,y,w,h);rect(g,'rgba(0,0,0,.25)',x+w/2-.5,y-h+w/2,1,h-w/2);dot(g,OR2,x+w*.75,y-h*.4,1.6)};
+/* cassa di legno con frutta */
+const cassa=(g,x,y,w,h,c,n)=>{rect(g,LG,x,y-h,w,h);rect(g,'rgba(0,0,0,.22)',x,y-h*.5,w,1.4);rect(g,'rgba(255,255,255,.12)',x,y-h,w,2);if(c)for(let q=0;q<(n||5);q++)dot(g,c[q%c.length],x+4+q*(w-8)/Math.max(1,(n||5)-1),y-h-1-(q%2)*2,3.4)};
+/* tenda a strisce, inclinata, da x a x+w con bordo alto y */
+const tenda=(g,x,y,w,c1,c2,h)=>{h=h||16;const n=Math.max(2,Math.round(w/12)),sw=w/n;for(let q=0;q<n;q++)poly(g,q%2?c2:c1,[[x+q*sw,y],[x+(q+1)*sw,y],[x+(q+1)*sw+1,y+h],[x+q*sw-1,y+h]]);for(let q=0;q<n;q++)dot(g,q%2?c2:c1,x+q*sw+sw/2,y+h,sw/2);rect(g,'rgba(0,0,0,.14)',x,y,w,3)};
+/* pila di frutta o verdura */
+const mucchio=(g,x,y,w,c,r)=>{r=r||3.4;const n=Math.floor(w/(r*1.7));for(let row=0;row<3;row++)for(let q=0;q<n-row;q++)dot(g,c[(q+row)%c.length],x-(n-row)*r*.85+q*r*1.7+r*.85,y-r-row*r*1.5,r)};
+
+/* ---- alberi ---- */
+const ulivo=(g,x,y,s,t)=>{s=s||1;ln(g,'#6a5a46',9*s,[x,y,x-6*s,y-26*s,x+2*s,y-40*s]);ln(g,'#6a5a46',6*s,[x-2*s,y-24*s,x+10*s,y-40*s,x+20*s,y-56*s]);ln(g,'#6a5a46',5*s,[x-3*s,y-36*s,x-20*s,y-52*s]);ln(g,'#7a6850',3*s,[x,y-34*s,x+4*s,y-56*s]);
+ [[-2,-66,40,22,'#8a9e72'],[-30,-58,26,16,'#7a9064'],[32,-64,28,18,'#96aa7e'],[8,-80,28,15,'#a4b88c'],[-14,-76,22,13,'#8a9e72']].forEach(c=>{el(g,c[4],x+c[0]*s,y+c[1]*s,c[2]*s,c[3]*s);el(g,'rgba(255,255,230,.12)',x+(c[0]-c[2]*.2)*s,y+(c[1]-c[3]*.3)*s,c[2]*.5*s,c[3]*.35*s)});
+ if(t!==undefined)for(let q=0;q<2;q++){const u=(t*.1+q/2)%1;dot(g,'#b8c890',x+Math.sin(u*8+q*2)*26*s,y-80*s+u*78*s,1.4)}};
+PR.geUlivo=GE((g,x,y,t,a)=>ulivo(g,x,y,a||1,t));
+PR.geCipresso=GE((g,x,y,t,a)=>cipr(g,x,y,a||120));
+PR.gePino=GE((g,x,y,t,a)=>pino(g,x,y,a||1));
+
+/* =========================== arredo urbano comune =========================== */
+/* cartello di via in tre lingue: il nome in lettere latine e due righe di scrittura (ebraico e arabo) */
+PR.geTarga=GE((g,x,y,t,a,k)=>{const w=Math.max(100,a.length*6+26);rect(g,IR,x-1.6,y-92,3.2,92);rect(g,'#3a3e44',x-6,y-8,12,8);rect(g,'#2a4a8a',x-w/2-2,y-136,w+4,40);rect(g,'#f4f0e0',x-w/2,y-134,w,36);txt(g,a,x,y-120,9,'#1c3a78');
+ for(let q=0;q<2;q++){const yy=y-108+q*9;for(let u=0;u<9;u++)rect(g,'#1c3a78',x-w/2+8+u*(w-16)/9,yy-(u%3==1?2:0),(w-16)/9-3,1.6+(u%2))}if(k>.2)glow(g,x,y-116,w*.7,'255,214,130',.2*k)});
+/* lampione di ferro con lanterna (a=1: secondo braccio) */
+PR.geLampione=GE((g,x,y,t,a,k)=>{const c='#2e2c2a';rect(g,c,x-6,y-8,12,8);rect(g,c,x-3,y-104,6,96);rect(g,c,x-5,y-108,10,5);poly(g,c,[[x-10,y-112],[x+10,y-112],[x+7,y-122],[x-7,y-122]]);rect(g,k>.15?LIT:'#efe4c6',x-7,y-138,14,18);rect(g,c,x-9,y-141,18,4);poly(g,c,[[x-9,y-141],[x+9,y-141],[x,y-150]]);
+ if(a){ln(g,c,3,[x,y-96,x+12,y-102,x+28,y-98]);rect(g,k>.15?LIT:'#efe4c6',x+24,y-96,8,10);if(k>.15)glow(g,x+28,y-92,34,'255,214,130',.35*k)}if(k>.15)glow(g,x,y-128,56,'255,214,130',.5*k)});
+PR.gePanca=GE((g,x,y,t,a,k)=>{rect(g,PS2,x-46,y-26,92,8);rect(g,PS4,x-46,y-26,92,3);rect(g,PS3,x-44,y-18,6,18);rect(g,PS3,x+38,y-18,6,18);rect(g,'rgba(0,0,0,.14)',x-44,y-18,88,3)});
+PR.geGatto=GE((g,x,y,t,a,k)=>gatto(g,x,y,t,a||'#c9873a'));
+/* asino (a=0) o mulo scuro (a=1) con le ceste di vimini */
+PR.geAsino=GE((g,x,y,t,a,k)=>{const c=a==1?'#5a4a3e':'#8a7a6a',d=a==1?'#3a2e26':'#6a5a4c',sw=Math.sin(t*1.5)*2;el(g,c,x,y-46,36,15);poly(g,c,[[x+28,y-54],[x+44,y-80],[x+54,y-76],[x+44,y-48]]);poly(g,c,[[x+46,y-80],[x+64,y-76],[x+64,y-66],[x+50,y-66]]);poly(g,c,[[x+44,y-80],[x+42,y-96],[x+49,y-82]]);poly(g,c,[[x+49,y-80],[x+51,y-96],[x+55,y-80]]);dot(g,'#14110f',x+53,y-74,1.4);el(g,'#d8d0c0',x+61,y-68,5,3.4);
+ [[-26,0],[-14,1],[16,0],[28,1]].forEach(l=>ln(g,d,5,[x+l[0],y-38,x+l[0]+(l[1]?2:0),y]));ln(g,d,3,[x-36,y-52,x-42,y-34+sw]);
+ [[-24,'#b8884a'],[8,'#a8783a']].forEach(b=>{rect(g,b[1],x+b[0],y-62,18,22);for(let q=0;q<4;q++)rect(g,'rgba(0,0,0,.18)',x+b[0],y-60+q*5,18,1.2);rect(g,'rgba(255,255,255,.14)',x+b[0],y-62,18,2)});if(a==1)for(let q=0;q<5;q++)dot(g,'#5a6a3a',x-18+q*3.4,y-64,2.4)});
+PR.geVasi=GE((g,x,y,t,a,k)=>{for(let q=0;q<4;q++){const bx=x-48+q*32,h=18+(q%2)*6;poly(g,'#b8643a',[[bx-9,y-h],[bx+9,y-h],[bx+6,y],[bx-6,y]]);rect(g,'#a05430',bx-10,y-h-3,20,4);for(let u=0;u<5;u++)ln(g,'#3a8a3a',2,[bx,y-h-2,bx+(u-2)*5,y-h-18-(u%2)*6]);if(q%2)dot(g,'#e8402a',bx+2,y-h-24,3.4)}});
+/* bancarella di souvenir sotto un tendone verde, con sciarpe e piccoli oggetti */
+PR.geBancaSouv=GE((g,x,y,t,a,k)=>{rect(g,LG,x-44,y-34,88,5);rect(g,LG2,x-40,y-30,5,30);rect(g,LG2,x+35,y-30,5,30);rect(g,LG2,x-42,y-100,3,66);rect(g,LG2,x+39,y-100,3,66);tenda(g,x-50,y-102,100,'#2a7a5a','#f4f0e6',14);
+ ['#c8402a','#2a62a8','#e8c04a','#8a4a9a','#2a9aa8'].forEach((c,q)=>rect(g,c,x-38+q*16,y-86,10,26-(q%2)*5));for(let q=0;q<6;q++){rect(g,['#f4f0e6','#c8402a','#2a62a8'][q%3],x-34+q*13,y-42,9,8);dot(g,'#e8c04a',x-30+q*13,y-46,2)}});
+/* carretto delle ciambelle al sesamo (ka'ak) */
+PR.geCiambelle=GE((g,x,y,t,a,k)=>{rect(g,'#3a6a8a',x-42,y-44,84,28);rect(g,'rgba(255,255,255,.14)',x-42,y-44,84,3);rect(g,'#2a4a64',x-42,y-26,84,3);rect(g,'rgba(190,225,240,.5)',x-36,y-72,50,28);for(let q=0;q<4;q++)g.save(),g.strokeStyle=tn('#c8904a'),g.lineWidth=3.4,g.beginPath(),g.ellipse(x-24+q*11,y-52,6,4,0,0,7),g.stroke(),g.restore();
+ [-28,28].forEach(o=>{dot(g,'#2a2a2e',x+o,y-11,10);dot(g,'#8a8a90',x+o,y-11,4)});ln(g,'#8a8e94',2.4,[x+24,y-44,x+24,y-98]);for(let q=0;q<6;q++){g.save();g.strokeStyle=tn(q%2?'#d8a45a':'#c8904a');g.lineWidth=3.6;g.beginPath();g.ellipse(x+24,y-52-q*7,8,3.4,0,0,7);g.stroke();g.restore()}for(let q=0;q<14;q++)rect(g,'#f4ecd0',x+17+(q*7)%14,y-54-(q*5)%36,1.4,1.4)});
+/* tavolini di caffè con sedie (a = colore delle sedie) e un passero */
+PR.geCaffe=GE((g,x,y,t,a,k)=>{a=a||'#2a7a8a';[-44,4,52].forEach((o,i)=>{rect(g,'#6a6a70',x+o-12,y-30,24,3);rect(g,'#6a6a70',x+o-1,y-30,2,30);rect(g,'#6a6a70',x+o-9,y-2,18,2);ln(g,a,3,[x+o-22,y-4,x+o-20,y-22,x+o-12,y-22]);ln(g,a,3,[x+o+22,y-4,x+o+20,y-22,x+o+12,y-22]);rect(g,'#f4f0e6',x+o-6,y-38,5,8);rect(g,'#c8402a',x+o+2,y-37,4,7)});
+ const j=Math.abs(Math.sin(t*4))*3;el(g,'#8a6a4a',x+4,y-38-j,4,2.6);dot(g,'#6a4a2a',x+8,y-40-j,1.8)});
+/* cassette di olive e frutta impilate */
+PR.geCassette=GE((g,x,y,t,a,k)=>{cassa(g,x-46,y,26,16,['#e8802a','#d8402a','#f2c82a'],4);cassa(g,x-18,y,26,16,['#5a6a2a','#2a2a22','#6a7a3a'],4);cassa(g,x+10,y,26,16,['#c8282a','#8a2a4a'],4);cassa(g,x-32,y-16,26,16,['#e8c82a','#f2a82a'],4);cassa(g,x-4,y-16,26,16,['#6a9a2a','#8aaa3a'],4)});
+/* colombi che beccano per terra */
+PR.geColombi=GE((g,x,y,t,a,k)=>{for(let q=0;q<4;q++){const bx=x-30+q*20,p=Math.max(0,Math.sin(t*3+q*2))*3;el(g,q%2?'#8a8e98':'#a8acb4',bx,y-7+p*.3,6,4);dot(g,q%2?'#6a6e78':'#8a8e98',bx+5-p*.4,y-11+p,2.6);poly(g,'#e8a0a0',[[bx+7-p*.4,y-11+p],[bx+10-p,y-10+p*1.6],[bx+7-p*.4,y-9+p]]);rect(g,'#c8506a',bx-1,y-4,1,4);rect(g,'#c8506a',bx+2,y-4,1,4)}});
+/* fontana rotonda con i beccucci (per le abluzioni e per lavarsi le mani) */
+PR.geFontana=GE((g,x,y,t,a,k)=>{rect(g,PS3,x-34,y-14,68,14);rect(g,PS2,x-30,y-30,60,18);rect(g,PS4,x-34,y-16,68,3);rect(g,'#7ab4cc',x-26,y-32,52,4);rect(g,PS2,x-8,y-60,16,30);poly(g,PS3,[[x-14,y-60],[x+14,y-60],[x+8,y-70],[x-8,y-70]]);[-22,-8,8,22].forEach((o,i)=>{rect(g,'#8a8e94',x+o-1.4,y-30,2.8,6);g.strokeStyle='rgba(180,225,255,.8)';g.lineWidth=1.6;g.beginPath();g.moveTo(x+o,y-24);g.lineTo(x+o+(o<0?-2:2),y-14+(t*30+i*7)%6);g.stroke()})});
+/* gruppo di visitatori con la bandierina della guida */
+PR.geTour=GE((g,x,y,t,a,k)=>{ln(g,'#6a6a70',2,[x-34,y,x-34,y-124]);poly(g,'#f2c82a',[[x-34,y-124],[x-8,y-117],[x-34,y-108]]);pers(g,x-30,y,t,{s:.66,top:'#2a62a8',bot:'#3a3a46',hair:'#4a2a1a'});gente(g,x+20,y+2,t,4,a||5)});
+/* fascio di luce che entra da una apertura nel soffitto dei vicoli coperti */
+PR.geRaggio=GE((g,x,y,t,a,k)=>{const w=a||50;poly(g,'rgba(255,230,160,.16)',[[x-w*.3,y-300],[x+w*.3,y-300],[x+w*.8,y],[x-w*.4,y]]);poly(g,'rgba(255,240,190,.12)',[[x-w*.1,y-300],[x+w*.12,y-300],[x+w*.45,y],[x-w*.05,y]]);for(let q=0;q<5;q++)dot(g,'rgba(255,248,210,'+(.35*(.5+.5*Math.sin(t*1.6+q)))+')',x+Math.sin(t*.5+q*2)*w*.3,y-250+((t*14+q*47)%240),1.4)});
+
+/* ---- casa di pietra di Gerusalemme: muro color miele, finestre ad arco, tetto piatto con serbatoio e pannello solare, cupolino o lamiera ----
+   o: wall, cor, sh (persiane), sparse (poche finestre), roof 'f'|'d'|'tin', gt 'arc'|'shop'|'door'|'', sc (colore tenda) */
+function casa(g,x,w,h,i,k,o){const gt=372,top=gt-h,n=Math.max(2,Math.floor(w/40)),fl=Math.max(1,Math.floor((h-60)/40));
+ pie(g,o.wall,x,top,w,h,i);rect(g,'rgba(255,255,255,.14)',x,top,5,h);rect(g,'rgba(0,0,0,.13)',x+w-12,top,12,h);
+ for(let r=0;r<fl;r++)for(let q=0;q<n;q++){if(o.sparse&&hr(i*7+r*3+q)>.5)continue;fnt(g,x+12+q*(w-40)/Math.max(1,n-1),gt-(r+1)*40-38,14,24,k,i*13+r*7+q,o.sh&&hr(i+q)>.5?o.sh:null)}
+ rect(g,o.cor||PS3,x-3,top-4,w+6,6);
+ if(o.roof=='tin'){poly(g,'#8e969e',[[x-6,top-4],[x+14,top-26],[x+w-14,top-26],[x+w+6,top-4]]);for(let q=0;q<w/8;q++)rect(g,'rgba(255,255,255,.2)',x+q*8,top-24,1.4,20);rect(g,'rgba(0,0,0,.2)',x-6,top-6,w+12,3)}
+ else if(o.roof=='d'){rect(g,o.cor||PS3,x-3,top-12,w+6,8);dome(g,'#eadfc4',x+w*.5,top-12,w*.2,w*.2);dot(g,OR,x+w*.5,top-12-w*.2-3,2)}
+ else{rect(g,o.cor||PS3,x-3,top-12,w+6,8);if(hr(i*5)>.4){const tx=x+w*(.3+.4*hr(i)),ty=top-12;rect(g,'#7a7a7a',tx-9,ty-9,2,9);rect(g,'#7a7a7a',tx+7,ty-9,2,9);el(g,'#eef0f2',tx,ty-17,10,8);rect(g,'rgba(0,0,0,.12)',tx+2,ty-23,8,12);if(hr(i*3)>.5){poly(g,'#2a3a5a',[[tx+16,ty],[tx+34,ty],[tx+34,ty-14]]);rect(g,'#c8ccd0',tx+16,ty-1,18,2)}}}
+ if(o.gt=='arc'){const nn=Math.max(2,Math.floor(w/46)),aw=w/nn;for(let q=0;q<nn;q++)ar(g,'#2a1c10',x+q*aw+7,gt-4,aw-14,58);rect(g,o.cor||PS3,x,gt-64,w,4)}
+ else if(o.gt=='shop'){rect(g,'#2a2018',x+8,gt-56,w-16,50);rect(g,k>.2?LIT:'#4a3a2a',x+12,gt-52,w-24,40);poly(g,o.sc||'#c8402a',[[x+4,gt-62],[x+w-4,gt-62],[x+w-1,gt-46],[x+1,gt-46]]);for(let q=0;q<w/14;q++)rect(g,'rgba(255,255,255,.55)',x+6+q*14,gt-62,7,16)}
+ else if(o.gt=='door'){port(g,'#6a4428',x+w/2-12,gt-6,24,50)}
+ rect(g,'rgba(0,0,0,.18)',x,gt-8,w,8)}
+
+/* =========================== ZONA 1 · Mercato di Mahane Yehuda =========================== */
+/* --- Shuk: la lunga corsia coperta, due file di banchi stracolmi, i vetri del tetto, le lampadine --- */
+PR.geShuk=GE((g,x,y,t,a,k)=>{
+ poly(g,'#7e868e',[[x-250,y-240],[x-214,y-282],[x+214,y-282],[x+250,y-240]]);rect(g,'#5e666e',x-250,y-242,500,10);
+ for(let q=0;q<9;q++){rect(g,'rgba(176,220,238,.6)',x-190+q*44,y-276,32,20);rect(g,'rgba(255,255,255,.28)',x-190+q*44,y-276,32,3)}
+ [-236,-118,0,118,236].forEach(o=>{rect(g,'#4a525a',x+o-3,y-236,6,236);ln(g,'#4a525a',3,[x+o,y-232,x+o+58,y-244])});
+ for(let q=0;q<12;q++){const bx=x-210+q*38,by=y-216-(q%3)*5;ln(g,'#2a2a2e',1,[bx,y-232,bx,by]);dot(g,k>.1?LIT:'#f4ecc8',bx,by,3);glow(g,bx,by,22,'255,220,140',.28+.3*k)}
+ /* banco sinistro: arance, mele, pomodori */
+ rect(g,LG,x-224,y-58,134,6);rect(g,LG2,x-220,y-52,6,52);rect(g,LG2,x-98,y-52,6,52);rect(g,'#6a4a2a',x-220,y-40,128,30);rect(g,'rgba(255,255,255,.1)',x-220,y-40,128,3);
+ ln(g,LG2,3,[x-226,y-170,x-226,y-58]);ln(g,LG2,3,[x-88,y-170,x-88,y-58]);tenda(g,x-232,y-172,152,'#c8402a','#f4f0e6',18);
+ mucchio(g,x-196,y-58,52,['#e8802a','#f2a82a'],4.6);mucchio(g,x-142,y-58,48,['#d8302a','#c8282a','#e84a3a'],4.2);cassa(g,x-112,y-58,22,16,['#8aaa3a','#6a9a2a'],3);
+ rect(g,'#2a302c',x-208,y-132,40,28);rect(g,'#7a5a34',x-210,y-134,44,3);for(let q=0;q<3;q++)rect(g,'rgba(255,255,255,.7)',x-203,y-126+q*7,22+q*3,1.6);
+ /* banco destro: olive in bacinelle, noci, datteri */
+ rect(g,LG,x+90,y-58,134,6);rect(g,LG2,x+94,y-52,6,52);rect(g,LG2,x+216,y-52,6,52);rect(g,'#6a4a2a',x+92,y-40,128,30);
+ ln(g,LG2,3,[x+88,y-170,x+88,y-58]);ln(g,LG2,3,[x+226,y-170,x+226,y-58]);tenda(g,x+80,y-172,152,'#2a7a5a','#f2c82a',18);
+ [[106,'#4a5a2a'],[142,'#1e1e22'],[178,'#8a9a4a']].forEach(b=>{poly(g,'#c8c8c4',[[x+b[0]-17,y-58],[x+b[0]+17,y-58],[x+b[0]+13,y-44],[x+b[0]-13,y-44]]);el(g,b[1],x+b[0],y-60,16,6);for(let q=0;q<6;q++)dot(g,'rgba(255,255,255,.28)',x+b[0]-10+q*4,y-62+(q%2)*2,1)});
+ mucchio(g,x+198,y-58,34,['#a8784a','#8a5a32','#c89a5a'],3.4);rect(g,'#2a302c',x+186,y-132,40,28);rect(g,'#7a5a34',x+184,y-134,44,3);for(let q=0;q<3;q++)rect(g,'rgba(255,255,255,.7)',x+192,y-126+q*7,22,1.6);
+ gente(g,x,y+2,t,3,7)});
+/* --- Eitz Chaim: la stradina stretta, tende colorate, cassette impilate, il cartello a lettere nere --- */
+PR.geEitz=GE((g,x,y,t,a,k)=>{
+ tenda(g,x-230,y-190,230,'#2a62a8','#f4f0e6',20);tenda(g,x+10,y-196,224,'#e8a02a','#c8402a',20);ln(g,LG2,3,[x-228,y-190,x-228,y-50]);ln(g,LG2,3,[x+4,y-194,x+4,y-50]);ln(g,LG2,3,[x+232,y-196,x+232,y-50]);
+ rect(g,LG,x-224,y-50,120,5);rect(g,'#6a4a2a',x-222,y-44,116,34);mucchio(g,x-190,y-50,50,['#6a9a2a','#8aaa3a'],4);mucchio(g,x-134,y-50,50,['#c8282a','#e84a3a'],4);
+ cassa(g,x+20,y,30,20,['#f2c82a','#e8c04a'],4);cassa(g,x+20,y-20,30,20,['#e8802a'],4);cassa(g,x+54,y,30,20,['#8a2a4a','#6a1a3a'],4);cassa(g,x+54,y-20,30,20,['#6a9a2a'],4);cassa(g,x+88,y,30,20,['#d8302a'],4);
+ /* cartello di via a lettere nere */
+ rect(g,'#f4f0e0',x-60,y-176,120,22);rect(g,'#2a2a2e',x-60,y-176,120,2);rect(g,'#2a2a2e',x-60,y-156,120,2);txt(g,'EITZ CHAIM',x,y-160,12,'#14110f');ln(g,IR,2,[x-52,y-154,x-52,y-146]);ln(g,IR,2,[x+52,y-154,x+52,y-146]);
+ /* cesti e lampadine */
+ for(let q=0;q<7;q++){const bx=x-200+q*66;ln(g,'#2a2a2e',1,[bx,y-188,bx,y-172]);dot(g,k>.1?LIT:'#f4ecc8',bx,y-170,2.8);glow(g,bx,y-170,20,'255,220,140',.26+.3*k)}
+ gatto(g,x-96,y,t,'#d8a060');gente(g,x+160,y+2,t,2,15);
+ /* carrello della spesa */
+ ln(g,'#8a8e94',2,[x-30,y-14,x-30,y-52,x-8,y-52]);rect(g,'#3a5a8a',x-28,y-48,24,28);dot(g,'#2a2a2e',x-26,y-6,5);dot(g,'#2a2a2e',x-6,y-6,5)});
+/* --- Spezie e dolci: sacchi aperti di tutti i colori, barattoli, halva a blocchi, datteri, bilancia a piatti --- */
+PR.geSpezie=GE((g,x,y,t,a,k)=>{
+ ln(g,LG2,3,[x-186,y-190,x-186,y-40]);ln(g,LG2,3,[x+186,y-190,x+186,y-40]);tenda(g,x-196,y-192,392,'#e8b020','#f4f0e6',22);
+ /* scaffale con barattoli */
+ rect(g,LG2,x-176,y-150,352,4);rect(g,LG2,x-176,y-118,352,4);for(let q=0;q<14;q++){const c=['#c8281e','#e8b020','#6a8a2a','#8a4a22','#e8802a','#f4f0e6','#8a2a4a'][q%7];rect(g,'rgba(210,235,245,.6)',x-170+q*25,y-168,16,18);rect(g,c,x-169+q*25,y-162,14,11);rect(g,'rgba(210,235,245,.6)',x-170+q*25,y-136,16,18);rect(g,c,x-169+q*25,y-130+(q%2)*2,14,9)}
+ /* banco con sacchi e coni di spezie */
+ rect(g,LG,x-190,y-54,380,6);rect(g,'#6a4a2a',x-186,y-48,372,40);
+ ['#c8281e','#e8b020','#6a8a2a','#8a4a22','#e8802a','#b8402a','#d8c070','#6a3a1a'].forEach((c,q)=>{const bx=x-170+q*46;rect(g,'#c8b890',bx-14,y-76,28,24);rect(g,'rgba(0,0,0,.14)',bx-14,y-76,4,24);poly(g,c,[[bx-13,y-76],[bx+13,y-76],[bx+5,y-90],[bx-5,y-90]]);el(g,c,bx,y-90,5,2);rect(g,'rgba(255,255,255,.2)',bx-9,y-86,3,8)});
+ /* halva con i pistacchi, datteri, caramelle */
+ [[-150,'#e8dcb0'],[-96,'#8a5a32']].forEach((b,q)=>{rect(g,b[1],x+b[0],y-46-4,44,16);rect(g,'rgba(255,255,255,.2)',x+b[0],y-50,44,3);for(let u=0;u<7;u++)dot(g,'#7a9a3a',x+b[0]+4+u*6,y-44+(u%2)*3,1.6)});
+ mucchio(g,x+14,y-54,50,['#6a3a1a','#8a4a22'],3.6);for(let q=0;q<10;q++)dot(g,['#e8402a','#f2c82a','#4aa86a','#e86aa8','#2a8ac8'][q%5],x+84+(q%5)*9,y-60+Math.floor(q/5)*8,3.2);
+ /* bilancia a piatti */
+ ln(g,'#8a8e94',2,[x+160,y-58,x+160,y-118]);ln(g,'#8a8e94',2,[x+136,y-112,x+184,y-112]);[x+136,x+184].forEach(bx=>{ln(g,'#8a8e94',1,[bx,y-112,bx-8,y-94,bx+8,y-94,bx,y-112]);el(g,'#c8a838',bx,y-93,10,2.4)})});
+/* --- Il mercato di sera: saracinesche dipinte con i murales, tavolini con le lucine, un musicista --- */
+PR.geSera=GE((g,x,y,t,a,k)=>{
+ [[-230,'#4a6a8a',0],[-120,'#8a4a6a',1],[-10,'#4a8a7a',2]].forEach(s=>{const bx=x+s[0];rect(g,s[1],bx,y-190,108,190);for(let q=0;q<26;q++)rect(g,'rgba(0,0,0,.14)',bx,y-190+q*7.3,108,1.2);rect(g,'rgba(255,255,255,.12)',bx,y-190,4,190);rect(g,'#2a2a2e',bx-4,y-196,116,8);
+  const m=[['#f2c82a','#e8402a','#2a8ac8'],['#4aa86a','#e86aa8','#f4f0e6'],['#8a4ad0','#f2a82a','#2ac8b8']][s[2]];dot(g,m[0],bx+34,y-130,22);dot(g,m[1],bx+66,y-96,18);el(g,m[2],bx+50,y-56,36,12);dot(g,'#14110f',bx+28,y-134,2.4);dot(g,'#14110f',bx+40,y-134,2.4);ln(g,'#14110f',2,[bx+28,y-122,bx+34,y-118,bx+42,y-122]);for(let q=0;q<5;q++)rect(g,m[q%3],bx+10+q*18,y-26+(q%2)*6,10,4)});
+ /* lucine e tavolini */
+ for(let q=0;q<14;q++){const bx=x-240+q*38,by=y-170+Math.sin(q*1.1)*8+(q%2)*4;if(q)ln(g,'rgba(40,30,20,.6)',1,[bx-38,y-170+Math.sin((q-1)*1.1)*8+((q-1)%2)*4,bx,by]);dot(g,LIT,bx,by,2.6);glow(g,bx,by,26,'255,214,130',.35+.3*k)}
+ [120,176,232].forEach((o,i)=>{rect(g,'#3a3a40',x+o-12,y-30,24,3);rect(g,'#3a3a40',x+o-1,y-30,2,30);rect(g,'#f4ecc8',x+o-3,y-37,6,7);glow(g,x+o,y-34,14,'255,220,150',.4)});
+ pers(g,x+110,y-4,t,{s:.62,top:'#c8503a',bot:'#2a3a5a',hair:'#2a1a10'});pers(g,x+150,y-4,t,{f:-1,s:.62,top:'#2a8a7a',bot:'#3a3a46',hair:'#6a4a2a'});
+ /* musicista con la chitarra */
+ fig(g,x+264,y,t,{f:-1,s:.9,skin:tn('#d8a078'),top:tn('#3a4a6a'),bot:tn('#2a2a36'),hair:tn('#2a1a10'),acc:(g2,b)=>{el(g2,tn('#b8742a'),8,-52,13,9,-.5);rect(g2,tn('#14110f'),6,-56,3,3);ln(g2,tn('#6a3a1a'),3,[14,-56,34,-72]);dot(g2,tn('#c8a838'),38,-75,2.2)}})});
+
+/* =========================== ZONA 2 · Porta di Jaffa e Cittadella =========================== */
+/* --- Porta di Jaffa: la torre di pietra chiara col portale ad angolo, l'iscrizione, la breccia con la rampa --- */
+PR.geJaffa=GE((g,x,y,t,a,k)=>{
+ pie(g,PS,x-330,y-148,220,148,3);merl(g,PS,x-330,y-148,220,12);rect(g,PS2,x-332,y-152,224,6);
+ pie(g,PS,x+110,y-148,240,148,5);merl(g,PS,x+110,y-148,240,12);rect(g,PS2,x+108,y-152,244,6);
+ /* breccia nel muro: apertura larga con la rampa */
+ rect(g,'#c8b078',x+150,y-148,92,148);ar(g,'#2a1c10',x+156,y,80,122);poly(g,PS3,[[x+156,y],[x+236,y],[x+236,y-24],[x+156,y-4]]);for(let q=0;q<6;q++)rect(g,'rgba(0,0,0,.14)',x+156+q*13,y-24+q*0,1,24);
+ /* torre */
+ pie(g,PS,x-104,y-256,208,256,7);rect(g,PS2,x-112,y-272,224,16);for(let q=0;q<9;q++)ar(g,'#6a5a3c',x-102+q*24,y-256,12,14);merl(g,PS,x-112,y-272,224,13);
+ rect(g,'rgba(255,255,255,.16)',x-104,y-256,6,256);rect(g,'rgba(0,0,0,.14)',x+80,y-256,24,256);
+ /* portale a gomito */
+ ar(g,PS4,x-44,y,88,140);ar(g,'#1e160e',x-34,y,68,128);ar(g,'#34281a',x-12,y,46,96);rect(g,'rgba(0,0,0,.3)',x-34,y-30,22,30);
+ /* iscrizione sopra l'arco */
+ rect(g,PS4,x-46,y-206,92,30);rect(g,PS3,x-43,y-203,86,24);for(let r=0;r<3;r++)for(let q=0;q<11;q++)rect(g,'#6a5a3c',x-38+q*7.2,y-199+r*7,5,1.8+((q+r)%3)*.6);
+ /* feritoie e finestrelle */
+ [-70,70].forEach(o=>ar(g,'#2a1c10',x+o-5,y-120,10,40));
+ gente(g,x-4,y+2,t,4,11);
+ /* passanti con una carriola di ciambelle? no: una guida con il cartellino */
+ pers(g,x-60,y+2,t,{s:.64,top:'#2a62a8',bot:'#2a2a36',hair:'#2a1a10'})});
+/* --- Cittadella: la fortezza di grandi pietre, il fossato asciutto col ponte, il minareto sottile --- */
+PR.geCittadella=GE((g,x,y,t,a,k)=>{
+ /* minareto, la moschea e gli ulivi del cortile dietro le mura */
+ rect(g,PS4,x+78,y-318,20,160);rect(g,PS2,x+88,y-318,10,160);rect(g,PS2,x+72,y-262,32,6);rect(g,PS3,x+74,y-258,28,3);ar(g,'#6a5a3c',x+84,y-300,8,14);cono(g,'#8a929a',x+88,y-318,24,40);dot(g,OR,x+88,y-360,2);
+ dome(g,'#d8d0c4',x-60,y-170,40,30);ulivo(g,x+30,y-168,.5,t);ulivo(g,x-120,y-166,.5);
+ /* base a scarpata */
+ poly(g,PS3,[[x-260,y-22],[x-238,y-96],[x+238,y-96],[x+260,y-22]]);for(let r=0;r<5;r++)rect(g,'rgba(80,60,30,.14)',x-250+r*4,y-30-r*13,500-r*8,1.2);
+ /* torri squadrate e cortina */
+ [[-240,98,220],[142,98,220]].forEach((b,i)=>{pie(g,PS,x+b[0],y-b[2],b[1],b[2]-70,i+3);merl(g,PS,x+b[0]-2,y-b[2],b[1]+4,12);rect(g,PS2,x+b[0]-4,y-b[2]-3,b[1]+8,5);ar(g,'#2a1c10',x+b[0]+b[1]/2-4,y-b[2]+60,8,34)});
+ pie(g,PS,x-142,y-176,284,106,9);merl(g,PS,x-146,y-176,292,12);rect(g,PS2,x-148,y-179,296,5);
+ [-90,0,90].forEach(o=>ar(g,'#2a1c10',x+o-4,y-100,8,30));
+ rect(g,'rgba(255,255,255,.14)',x-240,y-220,5,150);
+ /* fossato asciutto e ponte */
+ rect(g,'#a89466',x-250,y-2,500,22);rect(g,'#8a784e',x-250,y-2,500,4);for(let q=0;q<16;q++)rect(g,'rgba(60,40,10,.2)',x-244+q*31,y+6+(q%3)*4,16,3);
+ rect(g,PS2,x-40,y-14,80,14);ar(g,'#6a5a3c',x-26,y+18,52,34);rect(g,PS4,x-42,y-17,84,4);ar(g,'#1e160e',x-26,y-70,52,70);
+ gente(g,x,y+4,t,3,17)});
+/* --- Mura di Solimano: la lunga muraglia che sale e scende, i merli, le torrette, gli ulivi sotto --- */
+PR.geMura=GE((g,x,y,t,a,k)=>{
+ [[-290,150,150],[-136,170,176],[26,170,206],[186,150,176]].forEach((s,i)=>{pie(g,PS,x+s[0],y-s[2],s[1],s[2],i*5+2);merl(g,PS,x+s[0]-2,y-s[2],s[1]+4,12);rect(g,PS2,x+s[0]-4,y-s[2]-3,s[1]+8,5);rect(g,'rgba(255,255,255,.14)',x+s[0],y-s[2],5,s[2]);for(let q=0;q<3;q++)ar(g,'#2a1c10',x+s[0]+22+q*46,y-s[2]+54,6,26)});
+ /* torrette quadrate */
+ [-136,26,186].forEach((o,i)=>{pie(g,PS2,x+o-20,y-250+(i==1?-6:i==2?20:0)+(i==0?30:0),40,80,i*3+11);merl(g,PS2,x+o-22,y-250+(i==1?-6:i==2?20:0)+(i==0?30:0),44,10)});
+ /* gradino di terra, erbe secche e ulivi sotto le mura */
+ rect(g,'#b8a478',x-300,y-14,600,14);for(let q=0;q<26;q++)rect(g,'rgba(90,110,40,.5)',x-296+q*23,y-16-(q%3)*2,10,5);
+ ulivo(g,x-230,y,.7,t);ulivo(g,x+120,y,.8,t);pers(g,x-30,y+4,t,{s:.62,top:'#c8503a',bot:'#2a3a5a',hair:'#2a1a10'});pers(g,x+4,y+4,t,{f:-1,s:.62,top:'#2a8a7a',bot:'#3a3a46',hair:'#6a4a2a'})});
+
+/* =========================== ZONA 3 · Quartiere Armeno e Monte Sion =========================== */
+/* --- Botteghe di ceramica armena: la bottega stretta, i piatti dipinti di blu, giallo, turchese e verde --- */
+const piatto=(g,cx,cy,r,s)=>{dot(g,'#f4f0e6',cx,cy,r);dot(g,s==1?'#2a62a8':s==2?'#2a9aa8':'#e8c030',cx,cy,r*.82);dot(g,'#f4f0e6',cx,cy,r*.62);for(let q=0;q<6;q++){const an=q*1.047;dot(g,s==1?'#e8c030':s==2?'#2a62a8':'#2a8a5a',cx+Math.cos(an)*r*.42,cy+Math.sin(an)*r*.42,r*.14)}dot(g,s==1?'#c8402a':'#2a62a8',cx,cy,r*.16)};
+PR.geCeramica=GE((g,x,y,t,a,k)=>{
+ pie(g,PS,x-170,y-236,340,236,19);rect(g,PS2,x-174,y-240,348,8);rect(g,'rgba(255,255,255,.14)',x-170,y-236,6,236);
+ /* piatti sulla facciata */
+ for(let q=0;q<7;q++)piatto(g,x-132+q*44,y-196+(q%2)*6,15,q%3+1);for(let q=0;q<5;q++)piatto(g,x-110+q*50,y-166+(q%2)*4,11,(q+1)%3+1);
+ /* vano della bottega con scaffali di ceramiche */
+ ar(g,'#3a2a1c',x-100,y,200,150);rect(g,'#6a4a32',x-92,y-120,184,116);for(let r=0;r<3;r++){rect(g,LG2,x-92,y-100+r*34,184,4);for(let q=0;q<8;q++){const c=['#2a62a8','#e8c030','#2a9aa8','#2a8a5a'][(q+r)%4];rect(g,c,x-84+q*22,y-120+r*34+10,14,10+(q%2)*5);dot(g,'#f4f0e6',x-77+q*22,y-120+r*34+14,2.4)}}
+ /* tornio e forno */
+ el(g,'#6a4a32',x+60,y-26,24,8);rect(g,'#8a6a4a',x+52,y-52,16,26);dot(g,'#c88a5a',x+60,y-58,9);poly(g,'#7a5a4a',[[x-90,y],[x-90,y-50],[x-52,y-64],[x-52,y]]);ar(g,'#c85a1a',x-82,y-4,26,30);glow(g,x-70,y-24,26,'255,140,50',.45);
+ /* insegna con lettere armene */
+ rect(g,'#2a3a6a',x-60,y-228,120,26);rect(g,'#e8c030',x-60,y-228,120,2);for(let q=0;q<10;q++){ln(g,'#f4ecd0',1.6,[x-50+q*10,y-212,x-48+q*10,y-220,x-45+q*10,y-212])}
+ /* grandi vasi dipinti all'esterno */
+ [[-190,.9],[196,1.1]].forEach(v=>{const bx=x+v[0],s=v[1];poly(g,'#f4f0e6',[[bx-16*s,y-60*s],[bx+16*s,y-60*s],[bx+24*s,y-30*s],[bx+14*s,y],[bx-14*s,y],[bx-24*s,y-30*s]]);rect(g,'#2a62a8',bx-22*s,y-34*s,44*s,8*s);for(let q=0;q<4;q++)dot(g,'#e8c030',bx-12*s+q*8*s,y-47*s,2.4*s);rect(g,'#2a9aa8',bx-12*s,y-62*s,24*s,4*s)})});
+/* --- Cattedrale armena di San Giacomo: l'alto muro, il portale ad arco, la croce di pietra, la lampada --- */
+PR.geArmena=GE((g,x,y,t,a,k)=>{
+ /* torre con il tetto a cono dietro il muro */
+ pie(g,PS2,x-136,y-330,56,150,13);cono(g,'#8a929a',x-108,y-330,70,60);for(let q=0;q<2;q++)ar(g,'#4a3a2a',x-122+q*22,y-290,10,32);
+ pie(g,PS,x-180,y-260,360,260,21);rect(g,PS2,x-184,y-264,368,8);rect(g,'rgba(255,255,255,.14)',x-180,y-260,6,260);rect(g,'rgba(0,0,0,.12)',x+152,y-260,28,260);
+ /* portale decorato */
+ ar(g,PS4,x-52,y,104,164);ar(g,PS2,x-44,y,88,154);ar(g,'#3a2418',x-36,y,72,142);for(let r=0;r<5;r++)for(let q=0;q<3;q++)dot(g,'#8a8e94',x-22+q*22,y-110+r*22,1.8);rect(g,'rgba(0,0,0,.3)',x,y-130,1.4,130);
+ for(let q=0;q<11;q++)dot(g,'rgba(120,90,40,.5)',x-40+q*8,y-148-Math.sin(q/10*Math.PI)*14,1.6);
+ /* piccole finestre decorate */
+ [-130,-90,90,130].forEach((o,i)=>{ar(g,PS4,x+o-8,y-170,16,36);ar(g,'#4a5a6a',x+o-5,y-172,10,30);rect(g,'rgba(255,255,255,.3)',x+o-.5,y-166,1,22)});
+ /* croce di pietra scolpita (khachkar) */
+ rect(g,PS3,x+80,y-124,32,124);rect(g,PS4,x+80,y-124,32,3);rect(g,'#8a6a3a',x+94,y-110,4,64);rect(g,'#8a6a3a',x+82,y-92,28,4);for(let q=0;q<5;q++)dot(g,'#8a6a3a',x+86+q*5,y-36,1.6);rect(g,PS3,x+76,y-6,40,6);
+ /* lampada appesa */
+ ln(g,IR,1.6,[x-80,y-190,x-80,y-170]);rect(g,IR,x-86,y-172,12,3);rect(g,k>.15?LIT:'#d8c898',x-84,y-168,8,12);glow(g,x-80,y-162,34,'255,214,130',.3+.4*k);
+ PR.geVasi(g,x-120,y,t,0);gatto(g,x-30,y,t,'#6a6a72')});
+/* --- Monte Sion: la collina con ulivi e cipressi, l'abbazia della Dormizione e il Cenacolo --- */
+PR.geSion=GE((g,x,y,t,a,k)=>{
+ /* collina */
+ g.fillStyle=tn('#9aa062');g.beginPath();g.moveTo(x-330,y);g.quadraticCurveTo(x-200,y-70,x-60,y-86);g.quadraticCurveTo(x+120,y-100,x+330,y);g.closePath();g.fill();for(let q=0;q<14;q++)rect(g,'rgba(70,90,30,.3)',x-300+q*43,y-30-(q%4)*10,14,4);
+ /* abbazia: corpo rotondo con quattro torrette e il tetto a cono */
+ pie(g,PS,x+40,y-230,130,230,23);rect(g,'rgba(255,255,255,.16)',x+40,y-230,6,230);rect(g,'rgba(0,0,0,.14)',x+146,y-230,24,230);
+ [x+38,x+148].forEach((tx,i)=>{pie(g,PS2,tx-6,y-270,30,50,i+9);cono(g,'#6a8a7a',tx+9,y-270,38,34)});
+ cono(g,'#5a7a6a',x+105,y-230,142,100);rect(g,'rgba(255,255,255,.12)',x+60,y-230,30,6);ar(g,'#2a1c10',x+88,y,34,84);ar(g,'#6a5a3c',x+96,y-130,18,44);for(let q=0;q<3;q++)ar(g,'#4a5a6a',x+62+q*36,y-184,12,36);
+ /* Cenacolo: sala a volte gotiche sul piano superiore */
+ pie(g,PS,x-250,y-150,150,150,29);rect(g,PS2,x-254,y-154,158,6);for(let q=0;q<3;q++){poly(g,'#3a3024',[[x-232+q*42,y-100],[x-232+q*42,y-122],[x-222+q*42,y-140],[x-212+q*42,y-122],[x-212+q*42,y-100]]);poly(g,'#6a8aa0',[[x-229+q*42,y-102],[x-229+q*42,y-121],[x-222+q*42,y-135],[x-215+q*42,y-121],[x-215+q*42,y-102]])}
+ ar(g,'#2a1c10',x-190,y,36,52);rect(g,'#6a3a5a',x-184,y-26,24,18);rect(g,'#8a5a7a',x-186,y-30,28,4);
+ gente(g,x-96,y+2,t,4,21);ulivo(g,x-300,y,.8,t);PR.geCipresso(g,x-276,y,150);PR.geCipresso(g,x+250,y,170);ulivo(g,x+240,y,.9,t)});
+/* --- Porta di Sion: l'arco basso col gomito, la pietra segnata dai colpi del 1948 --- */
+PR.geSionPorta=GE((g,x,y,t,a,k)=>{
+ ulivo(g,x-190,y,.9,t);PR.geCipresso(g,x+200,y,160);
+ pie(g,PS,x-170,y-150,340,150,31);merl(g,PS,x-174,y-150,348,12);rect(g,PS2,x-176,y-153,352,6);
+ pie(g,PS,x-86,y-240,172,240,37);rect(g,PS2,x-92,y-254,184,14);merl(g,PS,x-92,y-254,184,13);for(let q=0;q<7;q++)ar(g,'#6a5a3c',x-84+q*24,y-240,12,14);
+ ar(g,PS4,x-40,y,80,114);ar(g,'#1e160e',x-32,y,64,104);ar(g,'#34281a',x-10,y,40,74);rect(g,'rgba(255,255,255,.14)',x-86,y-240,5,240);
+ /* i segni dei combattimenti: piccoli fori e scheggiature */
+ for(let q=0;q<34;q++){const px=x-82+hr(q*3+5)*164,py=y-232+hr(q*7+2)*216;if(px>x-46&&px<x+46&&py>y-118)continue;dot(g,'rgba(70,50,28,.6)',px,py,1+hr(q)*1.8);dot(g,'rgba(255,248,224,.35)',px+1.6,py-1.6,.9)}
+ gente(g,x+4,y+2,t,3,25)});
+
+/* =========================== ZONA 4 · Santo Sepolcro =========================== */
+/* --- Cortile e facciata: la facciata scura con due portali ad arco e finestre sopra, il campanile, la fila di pellegrini --- */
+PR.geCortile=GE((g,x,y,t,a,k)=>{const D='#b09a72',D2='#9a8660',D3='#c4b088';
+ dome(g,'#8a8e94',x-30,y-262,92,58);rect(g,'#6a6e74',x-34,y-324,8,12);dot(g,OR2,x-30,y-326,3);
+ pie(g,PS2,x+170,y-340,72,340,41);rect(g,D2,x+164,y-346,84,8);ar(g,'#2a1c10',x+196,y-250,16,50);ar(g,'#2a1c10',x+196,y-170,16,40);cono(g,'#8a8e94',x+206,y-346,76,26);
+ pie(g,D,x-200,y-262,380,262,43);rect(g,D2,x-204,y-266,388,8);rect(g,D2,x-204,y-150,388,5);rect(g,'rgba(255,255,255,.12)',x-200,y-262,6,262);
+ /* due portali: quello di destra murato */
+ [[-120,0],[20,1]].forEach(p=>{const bx=x+p[0];ar(g,D3,bx-8,y,136,150);ar(g,D2,bx-2,y,124,142);ar(g,p[1]?'#a8946a':'#1e160e',bx+4,y,112,134);if(p[1])for(let r=0;r<8;r++)rect(g,'rgba(60,40,10,.2)',bx+4,y-130+r*16,112,1);rect(g,'rgba(0,0,0,.35)',bx+60,y-132,1.4,132);ar(g,'rgba(0,0,0,.25)',bx+14,y-12,40,56)});
+ /* finestre sopra i portali */
+ [-130,-70,10,70].forEach((o,i)=>{ar(g,D3,x+o-4,y-176,46,76);ar(g,'#3a3024',x+o,y-178,38,70);rect(g,'rgba(255,255,255,.16)',x+o+18,y-170,1.6,60)});
+ for(let q=0;q<5;q++)ar(g,'#2a1c10',x-176+q*70,y-224,14,34);
+ /* la fila silenziosa dei pellegrini */
+ gente(g,x-80,y+4,t,5,41);gente(g,x+90,y+6,t,3,45)});
+/* --- La scala immobile: una piccola scala di legno sbiadita, appoggiata al davanzale del secondo piano --- */
+PR.geScala=GE((g,x,y,t,a,k)=>{const D='#b09a72',D2='#9a8660',D3='#c4b088';
+ pie(g,D,x-190,y-320,380,320,47);rect(g,D2,x-194,y-324,388,8);rect(g,'rgba(255,255,255,.12)',x-190,y-320,6,320);
+ /* finestre dei piani alti */
+ [-110,-50,50,110].forEach(o=>{ar(g,D3,x+o-4,y-296,40,66);ar(g,'#3a3024',x+o,y-298,32,60)});
+ /* la finestra del davanzale con la scala */
+ ar(g,D3,x-30,y-196,60,92);ar(g,'#2a2018',x-22,y-198,44,82);rect(g,'rgba(255,255,255,.12)',x-1,y-190,2,60);rect(g,D3,x-38,y-206,76,10);rect(g,D2,x-38,y-198,76,2);
+ /* cornicione sul portale */
+ rect(g,D3,x-130,y-130,260,12);rect(g,D2,x-130,y-118,260,3);ar(g,'#8a7650',x-70,y,140,112);ar(g,'#1e160e',x-62,y,124,104);rect(g,D2,x-130,y-4,260,4);
+ /* la scala: due staggi e sei pioli, sbiaditi dal tempo */
+ const W='#dcc89a',W2='#b8a070';ln(g,W,4.4,[x-14,y-130,x-8,y-206]);ln(g,W,4.4,[x+8,y-130,x+14,y-206]);ln(g,W2,1.4,[x-12,y-132,x-6,y-206]);for(let q=0;q<6;q++){const u=(q+.6)/6.4;ln(g,W2,3.2,[x-14+u*6,y-130-u*76,x+8+u*6,y-130-u*76])}
+ /* un piccione sulla scala */
+ const pj=Math.abs(Math.sin(t*.8))*1;el(g,'#8a8e98',x+14,y-173-pj,6,4);dot(g,'#6a6e78',x+19,y-177-pj,2.6);poly(g,'#e8a0a0',[[x+21,y-177-pj],[x+24,y-176-pj],[x+21,y-175-pj]]);
+ gente(g,x-150,y+4,t,2,51);gente(g,x+150,y+4,t,2,55)});
+/* --- La basilica e l'Edicola: la grande rotonda scura, la luce dall'alto, il piccolo edificio di marmo con le lampade --- */
+PR.geBasilica=GE((g,x,y,t,a,k)=>{
+ pie(g,'#a89466',x-250,y-348,500,348,61);rect(g,'#8a784e',x-254,y-352,508,8);
+ const arco=()=>{g.beginPath();g.moveTo(x-160,y);g.lineTo(x-160,y-150);g.arc(x,y-150,160,Math.PI,0);g.lineTo(x+160,y);g.closePath()};
+ ar(g,'#c4b088',x-170,y,340,330);g.save();arco();const gr=g.createLinearGradient(0,y-310,0,y);gr.addColorStop(0,tn('#2a2236'));gr.addColorStop(1,tn('#4a3a34'));g.fillStyle=gr;g.fill();g.clip();
+ /* la cupola vista da sotto, con l'apertura da cui scende la luce */
+ for(let q=0;q<6;q++){g.strokeStyle=tn('rgba(140,120,90,.55)');g.lineWidth=2;g.beginPath();g.ellipse(x,y-290+q*5,22+q*20,8+q*9,0,Math.PI,0);g.stroke()}
+ dot(g,'rgba(255,244,200,.9)',x,y-298,10);poly(g,'rgba(255,236,170,.2)',[[x-10,y-298],[x+10,y-298],[x+86,y],[x-86,y]]);poly(g,'rgba(255,240,190,.16)',[[x-4,y-298],[x+4,y-298],[x+34,y],[x-34,y]]);
+ /* colonne massicce */
+ [-136,-92,92,136].forEach((o,i)=>{rect(g,tn('#5a4a3e'),x+o-14,y-200,28,200);rect(g,'rgba(255,255,255,.1)',x+o-14,y-200,6,200);rect(g,tn('#6a5a4a'),x+o-18,y-206,36,8)});
+ /* icone e lampade appese */
+ for(let q=0;q<5;q++){const lx=x-120+q*60,ly=y-210+(q%2)*14;ln(g,'#8a8e94',1,[lx,y-250,lx,ly]);el(g,'#d8d8e0',lx,ly+4,5,7);glow(g,lx,ly+4,26,'255,210,130',.5+.2*Math.sin(t*3+q))}
+ /* l'Edicola: due ambienti di marmo chiaro con la cupolina */
+ rect(g,tn('#5a4a3e'),x-80,y-10,160,10);rect(g,tn('#d8c0a8'),x-52,y-96,104,86);rect(g,tn('#e8d4bc'),x-52,y-96,104,5);rect(g,'rgba(0,0,0,.14)',x+30,y-96,22,86);rect(g,tn('#c8a888'),x-70,y-62,24,52);rect(g,tn('#e8d4bc'),x-72,y-64,28,4);
+ for(let q=0;q<4;q++){rect(g,tn('#c8a888'),x-44+q*28,y-90,5,76)}dome(g,'#c8a888',x,y-96,32,28);dot(g,OR2,x,y-128,3);ar(g,tn('#1a1214'),x-12,y-10,24,52);
+ for(let q=0;q<7;q++){const cx=x-48+q*16;rect(g,'#f4ecd0',cx,y-22,3,12);dot(g,'#ffb838',cx+1.5,y-25,1.8+Math.sin(t*9+q)*.6);glow(g,cx+1.5,y-25,12,'255,190,80',.5)}
+ /* i fedeli in fila, in penombra */
+ [[-130,-1],[-112,-1],[-94,-1],[96,1],[114,1],[132,1]].forEach((p,i)=>pers(g,x+p[0],y-2,t,{f:p[1],s:.56,top:['#3a3a46','#5a3a3a','#2a4a5a','#4a4a3a'][i%4],bot:'#1a1a22',hair:'#2a1a10'}));
+ g.restore()});
+/* --- Le chiese e lo Status Quo: il portone di legno a due battenti, le tonache di colori diversi, l'uomo con le chiavi --- */
+PR.geStatusQuo=GE((g,x,y,t,a,k)=>{const D='#b09a72',D2='#9a8660',D3='#c4b088';
+ pie(g,D,x-230,y-300,460,300,71);rect(g,D2,x-234,y-304,468,8);
+ ar(g,D3,x-82,y,164,230);ar(g,D2,x-74,y,148,220);
+ /* il portone: un battente chiuso e uno aperto, con le borchie di ferro */
+ ar(g,'#4a3020',x-66,y,132,208);poly(g,'#2a1a10',[[x-66,y],[x-66,y-208+66],[x-20,y-170],[x-20,y-10]]);for(let r=0;r<7;r++)rect(g,'#2a2a2e',x-62,y-188+r*26,40,3);ln(g,'#5a3a24',2,[x,y,x,y-142]);for(let r=0;r<6;r++)for(let q=0;q<2;q++)dot(g,'#8a8e94',x+14+q*30,y-30-r*28,1.8);rect(g,'#2a2a2e',x+2,y-120,58,3);rect(g,'#2a2a2e',x+2,y-60,58,3);ar(g,'#1a1214',x-60,y-6,34,150);
+ /* lampade e candele */
+ [-110,110].forEach((o,i)=>{ln(g,IR,1.4,[x+o,y-270,x+o,y-232]);el(g,'#d8d8e0',x+o,y-226,7,10);glow(g,x+o,y-226,32,'255,210,130',.45+.2*Math.sin(t*3+i))});
+ rect(g,'#5a4a3e',x+130,y-52,40,6);rect(g,'#5a4a3e',x+148,y-46,4,46);for(let q=0;q<9;q++){rect(g,'#f4ecd0',x+132+q*4,y-64,2.4,12);dot(g,'#ffb838',x+133+q*4,y-67,1.6+Math.sin(t*9+q)*.5)}glow(g,x+150,y-66,26,'255,190,80',.45);
+ /* frati e sacerdoti di comunità diverse */
+ pers(g,x-150,y+4,t,{long:1,s:.74,top:'#6a4a2a',bot:'#6a4a2a',hair:'#3a2a1a'});pers(g,x+86,y+4,t,{f:-1,long:1,s:.74,top:'#1a1a1e',bot:'#1a1a1e',hair:'#5a5a5a'});pers(g,x+112,y+6,t,{f:-1,long:1,s:.7,top:'#e8e4d8',bot:'#e8e4d8',hair:'#2a1a10'});
+ /* l'uomo che porta le chiavi */
+ pers(g,x-190,y+6,t,{s:.7,top:'#4a6a8a',bot:'#2a2a36',hair:'#2a1a10'});ln(g,'#8a8e94',2,[x-176,y-34,x-176,y-52]);dot(g,'#8a8e94',x-176,y-55,3.4);rect(g,'#8a8e94',x-178,y-34,6,2)});
+
+/* =========================== ZONA 5 · Porta di Damasco e mura =========================== */
+/* --- Porta di Damasco: le due torri, i piccoli omini di pietra al posto dei merli, la scalinata larga, i banchi sotto --- */
+PR.geDamasco=GE((g,x,y,t,a,k)=>{
+ const stat=(px,py)=>{rect(g,PS2,px-3,py-10,6,10);dot(g,PS2,px,py-13,3.6);rect(g,'rgba(255,255,255,.3)',px-3,py-10,2,10)};
+ pie(g,PS,x-250,y-190,140,190,81);pie(g,PS,x+110,y-190,140,190,83);
+ pie(g,PS,x-130,y-300,260,300,85);rect(g,PS2,x-136,y-306,272,8);for(let q=0;q<10;q++)stat(x-120+q*26,y-306);
+ pie(g,PS,x-250,y-270,130,150,87);rect(g,PS2,x-256,y-274,142,6);for(let q=0;q<5;q++)stat(x-240+q*26,y-274);
+ pie(g,PS,x+120,y-270,130,150,89);rect(g,PS2,x+114,y-274,142,6);for(let q=0;q<5;q++)stat(x+130+q*26,y-274);
+ rect(g,PS2,x-250,y-194,500,5);for(let q=0;q<9;q++)ar(g,'#6a5a3c',x-120+q*28,y-300,12,14);
+ /* arco ad angolo e iscrizione */
+ ar(g,PS4,x-62,y-34,124,186);ar(g,'#1e160e',x-52,y-34,104,174);ar(g,'#34281a',x-20,y-34,72,126);rect(g,PS4,x-40,y-230,80,24);rect(g,PS3,x-37,y-227,74,18);for(let q=0;q<10;q++)rect(g,'#6a5a3c',x-32+q*7,y-222+(q%3),5,2);
+ [-190,190].forEach(o=>ar(g,'#2a1c10',x+o-5,y-130,10,40));
+ /* la scalinata larga e i banchi di frutta e di focacce */
+ [[460,0],[420,9],[380,18],[340,27]].forEach((s,i)=>{rect(g,i%2?PS2:PS3,x-s[0]/2,y-s[1]-9,s[0],9);rect(g,PS4,x-s[0]/2,y-s[1]-9,s[0],2)});
+ PR.geCiambelle(g,x-290,y,t,0);cassa(g,x+226,y,30,20,['#e8802a','#f2a82a'],4);cassa(g,x+260,y,30,20,['#d8302a','#8aaa3a'],4);
+ pers(g,x-80,y-30,t,{s:.6,top:'#c8503a',bot:'#2a3a5a',hair:'#2a1a10'});pers(g,x-30,y-37,t,{f:-1,s:.6,top:'#2a8a7a',bot:'#3a3a46',hair:'#6a4a2a'});pers(g,x+60,y-25,t,{f:-1,s:.6,top:'#e8c04a',bot:'#4a3a2a',hair:'#2a1a10'})});
+/* --- Porta dei Leoni: la porta ad arco nel muro, le due "pantere" scolpite ai lati, la valle e gli ulivi --- */
+PR.geLeoni=GE((g,x,y,t,a,k)=>{
+ g.fillStyle=tn('#a8a468');g.beginPath();g.moveTo(x+90,y);g.quadraticCurveTo(x+190,y-30,x+320,y-84);g.lineTo(x+320,y);g.closePath();g.fill();ulivo(g,x+210,y-22,.8,t);ulivo(g,x+290,y-52,.7,t);
+ pie(g,PS,x-300,y-170,300,170,91);merl(g,PS,x-304,y-170,308,12);rect(g,PS2,x-306,y-174,312,5);
+ pie(g,PS,x-76,y-230,152,230,93);rect(g,PS2,x-82,y-244,164,14);merl(g,PS,x-82,y-244,164,13);rect(g,'rgba(255,255,255,.14)',x-76,y-230,5,230);
+ ar(g,PS4,x-36,y,72,120);ar(g,'#1e160e',x-29,y,58,112);ar(g,'#34281a',x-8,y,36,80);
+ /* le due pantere */
+ const pan=(px,s)=>{g.save();g.translate(px,y-112);g.scale(s,1);rect(g,PS3,-34,-22,68,44);rect(g,PS4,-34,-22,68,2);el(g,'#b89860',0,2,22,9);dot(g,'#b89860',20,-6,7);poly(g,'#b89860',[[16,-12],[18,-19],[22,-12]]);dot(g,'#4a3a22',23,-6,1);[[-14,0],[-6,2],[8,0],[16,2]].forEach(l=>ln(g,'#b89860',4,[l[0],8,l[0],17]));ln(g,'#b89860',3,[-20,0,-30,-4,-30,-16,-24,-18]);dot(g,'#8a6a3a',-24,-18,3);g.restore()};pan(x-78+10,1);pan(x+78-10,-1);
+ gente(g,x-4,y+4,t,2,57);PR.geGatto(g,x-190,y,t,'#d8d0c0')});
+/* --- La Porta d'Oro: due archi murati nel muro est, la luce che li fa brillare, il cimitero davanti --- */
+PR.geOro=GE((g,x,y,t,a,k)=>{
+ pie(g,PS,x-310,y-180,620,180,95);merl(g,PS,x-314,y-180,628,12);rect(g,PS2,x-316,y-184,632,5);
+ pie(g,PS,x-130,y-214,260,214,97);rect(g,PS2,x-136,y-220,272,8);rect(g,'rgba(255,255,255,.14)',x-130,y-214,6,214);
+ /* i due archi riempiti di pietra */
+ [-62,62].forEach(o=>{ar(g,PS4,x+o-50,y-6,100,150);ar(g,PS3,x+o-42,y-6,84,142);g.save();g.beginPath();g.rect(x+o-42,y-148,84,142);g.clip();for(let r=0;r<9;r++){rect(g,'rgba(60,40,10,.22)',x+o-42,y-146+r*16,84,1.4);for(let q=0;q<4;q++)rect(g,'rgba(60,40,10,.18)',x+o-40+q*22+(r%2)*10,y-146+r*16,1.4,15)}g.restore();dot(g,PS4,x+o,y-148,5)});
+ glow(g,x,y-90,170,'255,226,150',.34+.12*Math.sin(t*2));
+ /* prato e tombe bianche del cimitero */
+ rect(g,'#8aa456',x-300,y-14,600,14);for(let q=0;q<28;q++)rect(g,'rgba(60,90,30,.4)',x-296+q*22,y-12+(q%3)*3,9,4);
+ for(let r=0;r<2;r++)for(let q=0;q<9;q++){const bx=x-270+q*60+r*26;rect(g,'#d8d4c8',bx,y-14+r*6,34,12-r*2);rect(g,'#f0ece0',bx,y-14+r*6,34,3)}
+ PR.geCipresso(g,x-250,y,150);PR.geCipresso(g,x+250,y,170);ulivo(g,x+180,y,.8,t)});
+
+/* =========================== ZONA 6 · Via Dolorosa e suq =========================== */
+/* --- Via Dolorosa: la stradina in salita fra muri di pietra, le targhe numerate, i pellegrini con la croce, un frate --- */
+PR.geDolorosa=GE((g,x,y,t,a,k)=>{
+ pie(g,PS2,x-240,y-300,480,300,101);rect(g,PS3,x-244,y-304,488,8);
+ [-170,-40,110].forEach((o,i)=>{port(g,['#6a4428','#2a5a4a','#5a3a5a'][i],x+o-16,y-70,32,86)});
+ /* la targa numerata */
+ rect(g,'#2a2a2e',x-82,y-196,44,34);rect(g,PS4,x-80,y-194,40,30);txt(g,'IV',x-60,y-172,16,'#4a3a22');rect(g,'#2a2a2e',x+60,y-210,36,28);rect(g,PS4,x+62,y-208,32,24);txt(g,'V',x+78,y-190,15,'#4a3a22');
+ [-110,10,150].forEach((o,i)=>{ar(g,'#3a3024',x+o-5,y-244,18,40);ar(g,'#6a8aa0',x+o-2,y-246,12,34)});
+ /* gradini che salgono */
+ for(let q=0;q<7;q++){rect(g,q%2?PS2:PS3,x-120+q*34,y-(q+1)*10,34+(240-q*34)*0,10+q*10-q*0);rect(g,PS4,x-120+q*34,y-(q+1)*10,34,2)}
+ /* pellegrini con una croce di legno e un frate */
+ const cx=x-70,cy=y-32;ln(g,'#6a4a2a',5,[cx,cy,cx,cy-96]);ln(g,'#6a4a2a',5,[cx-22,cy-72,cx+22,cy-72]);
+ pers(g,x-92,y-14,t,{s:.66,top:'#2a62a8',bot:'#2a2a36',hair:'#4a2a1a'});pers(g,x-62,y-24,t,{s:.66,top:'#c8402a',bot:'#3a3a46',hair:'#2a1a10'});pers(g,x-20,y-34,t,{s:.66,top:'#2a8a5a',bot:'#2a2a36',hair:'#8a6a3a'});pers(g,x+30,y-44,t,{long:1,s:.7,top:'#6a4a2a',bot:'#6a4a2a',hair:'#3a2a1a'});
+ rect(g,'rgba(255,230,160,.16)',x-60,y-300,30,300);rect(g,'rgba(255,230,160,.12)',x+70,y-300,22,300)});
+/* --- Arco dell'Ecce Homo: il grande arco di pietra che attraversa la strada, con le case sopra --- */
+PR.geEcce=GE((g,x,y,t,a,k)=>{
+ dome(g,'#8a9aa0',x+196,y-296,34,24);
+ g.save();g.beginPath();g.moveTo(x-230,y-340);g.lineTo(x+230,y-340);g.lineTo(x+230,y);g.lineTo(x+136,y);g.lineTo(x+136,y-168);g.arc(x,y-168,136,0,Math.PI,true);g.lineTo(x-136,y);g.lineTo(x-230,y);g.closePath();g.clip();pie(g,PS2,x-230,y-340,460,340,111);g.restore();
+ g.strokeStyle=tn(PS4);g.lineWidth=7;g.beginPath();g.arc(x,y-168,138,Math.PI,0);g.stroke();g.strokeStyle=tn(PS3);g.lineWidth=3;g.beginPath();g.arc(x,y-168,130,Math.PI,0);g.stroke();dot(g,PS4,x,y-306,6);
+ rect(g,PS3,x-230,y-342,460,6);[-170,-70,70,170].forEach((o,i)=>{ar(g,'#3a3024',x+o-9,y-296,20,44);ar(g,lit(k,i+3)?LIT:'#6a8aa0',x+o-6,y-298,14,38);rect(g,PS3,x+o-12,y-258,26,4)});
+ rect(g,'rgba(255,255,255,.12)',x-230,y-340,6,340);
+ gente(g,x-20,y+4,t,3,63);pers(g,x+56,y+6,t,{f:-1,long:1,s:.72,top:'#6a4a2a',bot:'#6a4a2a',hair:'#3a2a1a'})});
+/* --- Il suq: il vicolo coperto dalle volte di pietra, tessuti e lanterne appese, spezie, un venditore su uno sgabello --- */
+PR.geSuq=GE((g,x,y,t,a,k)=>{
+ rect(g,PS2,x-270,y-330,540,70);for(let q=0;q<6;q++){ar(g,'#6a5a3c',x-264+q*90,y-260,80,64);g.strokeStyle=tn(PS4);g.lineWidth=3;g.beginPath();g.arc(x-224+q*90,y-296,40,Math.PI,0);g.stroke()}
+ rect(g,PS3,x-270,y-262,540,6);
+ [-134,46].forEach(o=>{poly(g,'rgba(255,226,150,.2)',[[x+o-16,y-262],[x+o+16,y-262],[x+o+70,y],[x+o-30,y]]);poly(g,'rgba(255,240,190,.12)',[[x+o-6,y-262],[x+o+8,y-262],[x+o+30,y],[x+o-6,y]])});
+ /* banco di tessuti a sinistra */
+ rect(g,LG,x-260,y-48,150,6);rect(g,'#6a4a2a',x-258,y-42,146,40);ln(g,LG2,3,[x-262,y-150,x-262,y-48]);ln(g,LG2,3,[x-108,y-150,x-108,y-48]);ln(g,LG2,3,[x-264,y-150,x-106,y-150]);
+ ['#c8402a','#2a62a8','#e8c04a','#8a4a9a','#2a9aa8','#e86aa8','#4aa86a'].forEach((c,q)=>{poly(g,c,[[x-256+q*21,y-150],[x-238+q*21,y-150],[x-236+q*21,y-96-(q%3)*10],[x-258+q*21,y-100-(q%2)*8]]);rect(g,'rgba(255,255,255,.2)',x-256+q*21,y-150,3,50)});
+ /* lanterne di metallo appese */
+ [[-60,70],[-10,100],[50,80],[100,110]].forEach((l,i)=>{const ly=y-262+l[1];ln(g,'#2a2a2e',1,[x+l[0],y-262,x+l[0],ly]);rect(g,'#8a6a2a',x+l[0]-7,ly,14,20);poly(g,'#8a6a2a',[[x+l[0]-9,ly],[x+l[0]+9,ly],[x+l[0],ly-8]]);for(let q=0;q<3;q++)rect(g,LIT,x+l[0]-4,ly+5+q*5,3,3);glow(g,x+l[0],ly+12,24,'255,200,110',.4)});
+ /* banco di spezie e frutta secca a destra */
+ rect(g,LG,x+110,y-50,150,6);rect(g,'#6a4a2a',x+112,y-44,146,42);mucchio(g,x+144,y-50,40,['#c8281e','#e8b020'],4.2);mucchio(g,x+196,y-50,44,['#6a3a1a','#8a4a22','#c89a5a'],3.8);rect(g,'#c8b890',x+232,y-72,22,22);poly(g,'#6a8a2a',[[x+233,y-72],[x+253,y-72],[x+246,y-82],[x+240,y-82]]);
+ /* il venditore seduto sullo sgabello */
+ rect(g,'#5a3e24',x+88,y-26,22,4);rect(g,'#5a3e24',x+90,y-22,3,22);rect(g,'#5a3e24',x+105,y-22,3,22);pers(g,x+100,y-22,t,{f:-1,s:.62,top:'#8a4a3a',bot:'#4a3a2a',hair:'#8a8a8a'});
+ gente(g,x-30,y+4,t,3,67)});
+/* --- Pasticceria e knafeh: la grande teglia rotonda dorata, i vassoi di dolci di semola e di pistacchi, i bicchieri di tè --- */
+PR.gePasticceria=GE((g,x,y,t,a,k)=>{
+ pie(g,PS2,x-210,y-290,420,290,121);rect(g,PS3,x-214,y-294,428,6);
+ [[-150,'#e8a860'],[-100,'#c8402a'],[-50,'#e8d890']].forEach((s,i)=>{ar(g,'#3a2a1c',x+s[0]-20,y-100,40,70);rect(g,LG2,x+s[0]-20,y-80,40,3);rect(g,LG2,x+s[0]-20,y-58,40,3);for(let q=0;q<4;q++){rect(g,s[1],x+s[0]-16+q*9,y-92,7,10);rect(g,'#e8d890',x+s[0]-16+q*9,y-70,7,10)}});
+ /* insegna */
+ rect(g,'#2a3a6a',x-60,y-258,120,30);rect(g,'#e8c030',x-60,y-258,120,2);txt(g,'KNAFEH',x,y-238,13,'#f4ecd0');for(let q=0;q<8;q++)ln(g,'#f4ecd0',1,[x-44+q*12,y-231,x-42+q*12,y-234,x-39+q*12,y-231]);
+ ln(g,IR,1.4,[x+130,y-290,x+130,y-250]);rect(g,'#d8c898',x+124,y-252,12,16);glow(g,x+130,y-244,30,'255,214,130',.3+.3*k);
+ /* il bancone */
+ rect(g,'#5a3a2a',x-10,y-66,210,66);rect(g,'rgba(255,255,255,.1)',x-10,y-66,210,3);rect(g,'#e8dcc0',x-18,y-72,226,8);rect(g,'rgba(0,0,0,.14)',x-18,y-66,226,2);
+ /* la grande teglia di knafeh, tagliata a porzioni, con i pistacchi */
+ el(g,'#a8a8a0',x+70,y-80,70,13);el(g,'#e8a020',x+70,y-82,62,10);el(g,'#f2b83a',x+66,y-83,46,6);for(let q=0;q<5;q++)ln(g,'rgba(120,60,10,.4)',1.2,[x+70,y-82,x+70+Math.cos(q*1.26)*62,y-82+Math.sin(q*1.26)*10]);for(let q=0;q<22;q++)dot(g,'#7aa03a',x+20+hr(q*3)*100,y-85+hr(q*5)*7,1.5);
+ /* vassoi di dolci */
+ [[140,'#d8b068'],[170,'#8a6a3a']].forEach((v,i)=>{rect(g,'#b8b8b0',x+v[0]-18,y-80,36,5);for(let q=0;q<5;q++)poly(g,v[1],[[x+v[0]-16+q*7,y-80],[x+v[0]-10+q*7,y-80],[x+v[0]-12+q*7,y-90],[x+v[0]-18+q*7,y-90]])});
+ /* bicchieri di tè e piattini di carta */
+ for(let q=0;q<3;q++){rect(g,'rgba(210,235,245,.7)',x+8+q*14,y-84,7,12);rect(g,'#c86a1a',x+9+q*14,y-80,5,7)}rect(g,'#f4f0e6',x+170,y-76,18,3)});
+
+/* =========================== ZONA 7 · Quartiere Ebraico e Muro Occidentale =========================== */
+/* colonna antica con capitello a foglie */
+const colA=(g,x,y,h,w)=>{rect(g,PS4,x-w/2,y-h,w,h);for(let q=0;q<4;q++)rect(g,'rgba(110,80,30,.16)',x-w/2+2+q*(w-4)/4,y-h,1.2,h);rect(g,'rgba(255,255,255,.3)',x-w/2,y-h,w*.24,h);rect(g,'rgba(0,0,0,.14)',x+w*.16,y-h,w*.34,h);
+ rect(g,PS3,x-w*.64,y-h-6,w*1.28,6);for(let q=-2;q<=2;q++)poly(g,PS2,[[x+q*w*.22-w*.12,y-h],[x+q*w*.22+w*.12,y-h],[x+q*w*.26,y-h-w*.5]]);rect(g,PS3,x-w*.56,y-h-w*.5-3,w*1.12,4);rect(g,PS3,x-w*.62,y-5,w*1.24,5)};
+/* --- Cardo: la grande strada colonnata scavata, sotto il tetto a volta, con negozi e caffè moderni ai lati --- */
+PR.geCardo=GE((g,x,y,t,a,k)=>{
+ rect(g,PS2,x-280,y-312,560,86);const cx=[-240,-144,-48,48,144,240];
+ for(let q=0;q<5;q++){const b0=x+cx[q],b1=x+cx[q+1];ar(g,'#5a4a30',b0+8,y-170,b1-b0-16,108);g.strokeStyle=tn(PS4);g.lineWidth=4;g.beginPath();g.arc((b0+b1)/2,y-224,(b1-b0)/2-8,Math.PI,0);g.stroke()}
+ rect(g,PS3,x-280,y-228,560,6);
+ /* negozi e caffè sul fondo, tra le colonne */
+ for(let q=0;q<5;q++){const b0=x+cx[q]+14,w=(cx[q+1]-cx[q])-28;rect(g,'#2a2018',b0,y-120,w,114);rect(g,k>.1?LIT:'#7a9ab4',b0+4,y-114,w-8,70);rect(g,'rgba(255,255,255,.22)',b0+4,y-114,w-8,3);poly(g,['#c8402a','#2a62a8','#2a8a5a','#e8a02a','#8a4a9a'][q],[[b0-2,y-126],[b0+w+2,y-126],[b0+w+4,y-112],[b0-4,y-112]]);rect(g,'#14110f',b0+w*.3,y-40,w*.4,32)}
+ cx.forEach(o=>colA(g,x+o,y,170,22));
+ /* lastre antiche del pavimento */
+ rect(g,PS4,x-280,y-6,560,6);for(let q=0;q<14;q++)rect(g,'rgba(110,80,30,.2)',x-280+q*40,y-6,1.4,6);
+ gente(g,x-60,y+4,t,3,71);pers(g,x+90,y+4,t,{f:-1,s:.64,top:'#d8c49a',bot:'#7a6a4a',hair:'#2a1a10'});PR.geCaffe(g,x+176,y,t,'#c8402a')});
+/* --- Sinagoga Hurva: l'alta arcata aperta, la cupola bianca sul tamburo, la piazza coi tavolini --- */
+PR.geHurva=GE((g,x,y,t,a,k)=>{
+ rect(g,'#f0ece0',x-70,y-338,140,48);for(let q=0;q<5;q++)ar(g,'#6a8aa0',x-58+q*26,y-296,12,24);rect(g,PS3,x-76,y-292,152,5);dome(g,'#f6f2e8',x,y-338,86,70);dot(g,OR,x,y-412,3.4);rect(g,OR,x-.8,y-420,1.6,10);
+ g.save();g.beginPath();g.moveTo(x-130,y-290);g.lineTo(x+130,y-290);g.lineTo(x+130,y);g.lineTo(x+54,y);g.lineTo(x+54,y-176);g.arc(x,y-176,54,0,Math.PI,true);g.lineTo(x-54,y);g.lineTo(x-130,y);g.closePath();g.clip();pie(g,'#efe4c8',x-130,y-290,260,290,131);g.restore();
+ g.strokeStyle=tn(PS4);g.lineWidth=6;g.beginPath();g.arc(x,y-176,56,Math.PI,0);g.stroke();rect(g,PS3,x-134,y-294,268,8);rect(g,'rgba(255,255,255,.16)',x-130,y-290,6,290);
+ [-100,100].forEach(o=>{for(let r=0;r<2;r++)ar(g,'#3a3024',x+o-9,y-220-r*84,18,44)});
+ [-210,-158,170,222].forEach((o,i)=>{rect(g,'#e8e0cc',x+o-1,y-70,2.4,70);g.fillStyle=tn(['#e8e0cc','#d8a050'][i%2]);g.beginPath();g.ellipse(x+o,y-70,28,11,0,Math.PI,0);g.fill();rect(g,'#3a3a40',x+o-16,y-26,32,3);rect(g,'#3a3a40',x+o-1,y-26,2,26)});
+ /* ragazzi che giocano nella piazza */
+ [[-90,1],[-60,-1],[70,1],[104,-1]].forEach((p,i)=>pers(g,x+p[0],y+6,t+i,{f:p[1],s:.44,top:['#c8402a','#2a62a8','#2a8a5a','#e8c04a'][i],bot:'#2a2a36',hair:'#2a1a10'}));
+ dot(g,'#e8402a',x-75+Math.sin(t*3)*14,y-20-Math.abs(Math.sin(t*3))*20,4)});
+/* --- Muro Occidentale: le grandi pietre, i biglietti nelle fessure, la piazza con le zone separate, la cupola dorata sopra --- */
+PR.geMuro=GE((g,x,y,t,a,k)=>{
+ rect(g,'#2a62a8',x+120,y-336,150,60);for(let q=0;q<7;q++){rect(g,q%2?'#2a9aa8':'#f4f0e6',x+128+q*20,y-326,10,38);ar(g,'#14407a',x+130+q*20,y-296,6,18)}rect(g,OR2,x+120,y-340,150,5);dome(g,OR,x+195,y-340,76,66);rect(g,'rgba(255,240,180,.4)',x+160,y-390,16,40);dot(g,OR2,x+195,y-408,3);rect(g,OR2,x+194,y-416,1.6,10);glow(g,x+195,y-370,110,'255,200,110',.34+.12*Math.sin(t*2));
+ /* il muro: file di blocchi, grandi in basso e piccoli in alto */
+ let yy=y,r=0;const x0=x-250,x1=x+270;
+ while(yy>y-282){const h=Math.max(16,38-r*2),w=Math.max(34,132-r*7),ty=yy-h;rect(g,['#d8c496','#d0bc8c','#dccaa0','#c8b484'][r%4],x0,ty,x1-x0,h);rect(g,'rgba(0,0,0,.2)',x0,yy-1.4,x1-x0,1.4);rect(g,'rgba(255,255,255,.14)',x0,ty,x1-x0,2);
+  const off=(r*37)%w;for(let q=-1;q<(x1-x0)/w+1;q++){const bx=x0+off+q*w;if(bx>x0&&bx<x1)rect(g,'rgba(0,0,0,.2)',bx,ty,1.6,h);const bw=hr(r*9+q)*.6;rect(g,'rgba(80,60,30,'+(.04+bw*.08)+')',Math.max(x0,bx+3),ty+3,Math.min(w-8,x1-bx),h-6)}yy=ty;r++}
+ /* biglietti di preghiera nelle fessure e ciuffi di capperi */
+ for(let q=0;q<110;q++){const bx=x0+6+hr(q*3+2)*(x1-x0-12),by=y-24-hr(q*7+1)*190;rect(g,'#f4f0e6',bx,by,3.4+hr(q)*2,2.4);}
+ for(let q=0;q<9;q++){const bx=x0+30+hr(q*5)*(x1-x0-60),by=y-120-hr(q*3+8)*150;for(let u=0;u<5;u++)ln(g,'#5a8a3a',1.8,[bx,by,bx+(u-2)*5,by-8-(u%2)*5]);dot(g,'#e8c0d0',bx+3,by-10,1.6)}
+ rect(g,'rgba(255,255,255,.1)',x0,y-282,6,282);rect(g,PS2,x0-4,y-290,x1-x0+8,10);
+ /* la piazza: barriera fra le due zone, sedie, fedeli, libri */
+ rect(g,'#6a6e78',x+56,y-34,4,34);rect(g,'#6a6e78',x+56,y-34,70,3);for(let q=0;q<8;q++)rect(g,'#6a6e78',x+56+q*9,y-34,1.4,22);
+ [-210,-170,-130,-76,-30,12].forEach((o,i)=>pers(g,x+o,y+4+(i%2)*4,t+i,{f:1,s:.64,top:i%2?'#f4f0e6':'#1a1a22',bot:'#1a1a22',hair:'#1a1a1e'}));
+ [150,186,222].forEach((o,i)=>pers(g,x+o,y+4+(i%2)*4,t+i,{f:1,s:.62,long:1,top:['#8a3a5a','#2a62a8','#2a8a5a'][i],bot:['#8a3a5a','#2a62a8','#2a8a5a'][i],hair:['#2a1a10','#8a5a2a','#4a2a1a'][i]}));
+[-100,60].forEach(o=>{rect(g,'#f4f0e6',x+o-8,y-14,14,3);rect(g,'#f4f0e6',x+o-8,y-26,2,12);rect(g,'#f4f0e6',x+o+4,y-14,2,14)})});
+/* --- Arco di Wilson: la grande volta di pietra sopra la sala coperta, gli scaffali di libri, la luce bassa --- */
+PR.geWilson=GE((g,x,y,t,a,k)=>{
+ pie(g,PS,x-260,y-330,520,330,141);rect(g,PS2,x-264,y-334,528,8);rect(g,'rgba(255,255,255,.14)',x-260,y-330,6,330);
+ const arco=()=>{g.beginPath();g.moveTo(x-200,y);g.lineTo(x-200,y-150);g.arc(x,y-150,200,Math.PI,0);g.lineTo(x+200,y);g.closePath()};
+ g.strokeStyle=tn(PS4);g.lineWidth=10;g.beginPath();g.arc(x,y-150,205,Math.PI,0);g.stroke();
+ g.save();arco();g.fillStyle=tn('#2a2420');g.fill();g.clip();
+ for(let q=0;q<4;q++){g.strokeStyle=tn('rgba(200,180,130,.3)');g.lineWidth=3;g.beginPath();g.arc(x,y-150,60+q*38,Math.PI,0);g.stroke()}
+ /* scaffali di libri a sinistra */
+ rect(g,tn('#3a2a1c'),x-196,y-150,100,150);for(let r=0;r<5;r++){rect(g,'#2a1a10',x-196,y-142+r*28,100,3);for(let q=0;q<12;q++)rect(g,['#6a2a2a','#2a3a5a','#8a6a2a','#3a5a3a','#4a4a4a'][(q+r)%5],x-192+q*8,y-136+r*28,6,22-(q%3)*2)}
+ /* un tratto del Muro sul lato destro */
+ for(let r=0;r<9;r++){rect(g,['#8a7a58','#7a6a4a','#907f5c'][r%3],x+40,y-16-r*20,170,20);rect(g,'rgba(0,0,0,.3)',x+40,y-1-r*20,170,1.4);for(let q=0;q<2;q++)rect(g,'rgba(0,0,0,.3)',x+40+((r*47+q*83)%160),y-20-r*20,1.4,20)}
+ for(let q=0;q<26;q++)rect(g,'#e8e0cc',x+46+hr(q*3)*160,y-20-hr(q*7)*170,3,2);
+ /* lampade basse e fedeli con i libri */
+ [-60,0,60].forEach((o,i)=>{ln(g,'#8a8e94',1,[x+o,y-300,x+o,y-246]);el(g,'#d8c898',x+o,y-242,5,7);glow(g,x+o,y-242,34,'255,200,110',.4+.2*Math.sin(t*2+i))});
+ [-70,-20,12].forEach((o,i)=>pers(g,x+o,y-2,t+i,{f:i==2?1:1,s:.62,top:i%2?'#f4f0e6':'#1a1a22',bot:'#1a1a22',hair:'#1a1a1e'}));
+ g.restore()});
+
+/* =========================== ZONA 8 · Spianata delle Moschee =========================== */
+/* --- La Spianata: l'ampia terrazza di lastre chiare, prati, cipressi e ulivi, un arco isolato, le fontanelle --- */
+PR.geSpianata=GE((g,x,y,t,a,k)=>{
+ rect(g,'#8aa456',x-320,y-16,640,16);for(let q=0;q<30;q++)rect(g,'rgba(60,90,30,.4)',x-316+q*21,y-14+(q%3)*3,9,4);
+ PR.geCipresso(g,x-290,y-6,170);PR.geCipresso(g,x-262,y-6,140);ulivo(g,x-190,y-8,1,t);ulivo(g,x+220,y-8,.9,t);PR.geCipresso(g,x+290,y-6,180);
+ /* l'arco isolato (qanatir): due colonne sottili e un arco */
+ [-60,60].forEach(o=>{rect(g,PS4,x+o-6,y-120,12,114);rect(g,'rgba(255,255,255,.3)',x+o-6,y-120,3,114);rect(g,PS3,x+o-9,y-124,18,6)});g.strokeStyle=tn(PS4);g.lineWidth=11;g.beginPath();g.arc(x,y-124,60,Math.PI,0);g.stroke();g.strokeStyle=tn(PS3);g.lineWidth=3;g.beginPath();g.arc(x,y-124,55,Math.PI,0);g.stroke();
+ for(let q=0;q<5;q++)rect(g,q%2?PS2:PS3,x-90+q*0,y-5-q*0,180,5);
+ /* fontanella delle abluzioni */
+ PR.geFontana(g,x+130,y,t,0);PR.gePanca(g,x-140,y,t,0);
+ /* bambini che giocano sul prato e gruppi di visitatori */
+ [[-200,1],[-174,-1],[184,1]].forEach((p,i)=>pers(g,x+p[0],y+6,t+i*2,{f:p[1],s:.42,top:['#e8402a','#2a8ac8','#f2c82a'][i],bot:'#2a2a36',hair:'#2a1a10'}));dot(g,'#f4f0e6',x-187+Math.sin(t*3)*12,y-14-Math.abs(Math.sin(t*3))*16,3.4);
+ gente(g,x+40,y+6,t,3,77)});
+/* --- Cupola della Roccia: il santuario ottagonale con le piastrelle blu, turchesi e gialle, la grande cupola d'oro --- */
+PR.geCupola=GE((g,x,y,t,a,k)=>{
+ glow(g,x,y-250,200,'255,190,120',.4+.1*Math.sin(t*1.6));
+ /* terrazza di lastre con le scalinate */
+ rect(g,PS4,x-290,y-14,580,14);rect(g,PS3,x-290,y-14,580,3);for(let q=0;q<3;q++)rect(g,PS2,x-260-q*10,y-4-q*0,520+q*20,4);
+ /* base ottagonale: marmo in basso, piastrelle in alto */
+ rect(g,'#e8dcc0',x-176,y-76,352,62);rect(g,'rgba(0,0,0,.1)',x-176,y-76,352,3);
+ rect(g,'#2a62a8',x-176,y-156,352,80);rect(g,OR2,x-176,y-158,352,3);rect(g,OR2,x-176,y-78,352,3);
+ for(let q=0;q<7;q++){const bx=x-170+q*50;ar(g,'#f4f0e6',bx+4,y-80,42,70);ar(g,'#14407a',bx+8,y-82,34,64);for(let u=0;u<3;u++)dot(g,['#e8c030','#2a9aa8','#f4f0e6'][u],bx+25,y-132+u*14,3.2);for(let u=0;u<4;u++){dot(g,'#2a9aa8',bx+12,y-128+u*12,2);dot(g,'#e8c030',bx+38,y-126+u*12,2)}}
+ [-176,176].forEach(o=>rect(g,'rgba(0,0,0,.18)',x+o-(o<0?0:12),y-156,12,142));
+ /* portale centrale */
+ ar(g,PS4,x-30,y-14,60,86);ar(g,'#2a1c10',x-23,y-14,46,76);ar(g,'#6a4a2a',x-15,y-14,30,58);
+ /* tamburo con la fascia di scritte e le finestre */
+ rect(g,'#14407a',x-116,y-216,232,62);rect(g,OR2,x-116,y-218,232,3);rect(g,OR2,x-116,y-156,232,3);for(let q=0;q<16;q++){ar(g,'#f4f0e6',x-108+q*14,y-166,8,26);ar(g,'#0a1a3a',x-107+q*14,y-168,6,22);rect(g,'#e8c030',x-110+q*14,y-200,10,2.4);rect(g,'#2a9aa8',x-110+q*14,y-194,10,2.4)}
+ /* la cupola d'oro */
+ dome(g,OR,x,y-218,112,98);g.save();g.beginPath();g.ellipse(x,y-218,112,98,0,Math.PI,0);g.clip();for(let q=0;q<9;q++)rect(g,'rgba(255,255,255,'+(.06+(q%2)*.06)+')',x-100+q*24,y-316,10,98);rect(g,'rgba(255,250,200,.34)',x-80,y-300,34,70);g.restore();
+ rect(g,OR2,x-113,y-220,226,4);rect(g,OR2,x-1.6,y-336,3.2,22);dot(g,OR,x,y-340,4)});
+/* --- Moschea di al-Aqsa: il lungo edificio chiaro col portico, la cupola grigio argento, il minareto accanto --- */
+PR.geAqsa=GE((g,x,y,t,a,k)=>{
+ rect(g,PS4,x-300,y-12,600,12);rect(g,PS3,x-300,y-12,600,3);
+ /* minareto quadrato con il balcone e il tetto a cono */
+ pie(g,PS,x+190,y-330,44,318,151);rect(g,PS3,x+184,y-278,56,7);rect(g,PS3,x+186,y-336,52,8);ar(g,'#3a3024',x+204,y-300,16,34);ar(g,'#3a3024',x+204,y-228,16,34);cono(g,'#8a929a',x+212,y-336,56,50);dot(g,OR,x+212,y-390,2);
+ /* edificio lungo, frontone centrale e cupola grigio argento */
+ dome(g,'#aeb4be',x-30,y-186,62,52);rect(g,OR2,x-33,y-246,66,4);
+ pie(g,PS,x-260,y-120,440,108,153);rect(g,PS2,x-264,y-124,448,6);
+ poly(g,PS,[[x-90,y-124],[x-30,y-186],[x+30,y-186],[x+90,y-124]]);poly(g,'rgba(255,255,255,.14)',[[x-90,y-124],[x-30,y-186],[x-30,y-124]]);ar(g,'#3a3024',x-12,y-134,24,44);
+ for(let q=0;q<11;q++){if(q==5)continue;ar(g,'#2a1c10',x-250+q*40,y-12,28,84);rect(g,PS3,x-252+q*40,y-90,32,4)}
+ /* fedeli con le scarpe in mano */
+ [[-190,1],[-130,1],[-70,-1],[60,1],[110,-1]].forEach((p,i)=>{pers(g,x+p[0],y+6,t+i,{f:p[1],s:.64,top:['#f4f0e6','#2a62a8','#2a2a36','#c8c0a8','#2a6a5a'][i],bot:['#3a3a46','#2a2a36','#f4f0e6','#3a3a46','#2a2a36'][i],hair:['#2a1a10','#6a4a2a','#2a1a10','#8a8a8a','#2a1a10'][i]});rect(g,'#4a3a2a',x+p[0]+p[1]*9,y-12,6,3)})});
+
+/* =========================== ZONA 9 · Monte degli Ulivi di notte =========================== */
+/* terrazza di pietra a secco con ulivi, per i tratti fra i monumenti */
+PR.geTerrazza=GE((g,x,y,t,a,k)=>{rect(g,'#7a6a52',x-120,y-34,240,34);for(let r=0;r<3;r++)for(let q=0;q<8;q++)rect(g,['#8a7a60','#6a5a44','#9a8a6c'][(q+r)%3],x-118+q*30+(r%2)*10,y-32+r*11,26,9);rect(g,'rgba(255,255,255,.1)',x-120,y-34,240,2);ulivo(g,x-60,y-34,.8,t);ulivo(g,x+60,y-34,.7,t)});
+/* cesti di olive e un mulo */
+PR.geOlive=GE((g,x,y,t,a,k)=>{[[-30,0],[0,0],[30,0],[-14,-18],[16,-18]].forEach((p,i)=>{rect(g,'#9a6a3a',x+p[0]-13,y+p[1]-18,26,18);for(let q=0;q<4;q++)rect(g,'rgba(0,0,0,.2)',x+p[0]-13,y+p[1]-16+q*4.5,26,1.2);for(let q=0;q<7;q++)dot(g,i%2?'#4a5a2a':'#2a2a22',x+p[0]-9+q*3,y+p[1]-20-(q%2)*2,2.2)})});
+/* --- Panorama dal Monte degli Ulivi: il belvedere di pietra col parapetto, le lanterne dei bar, un olivo in primo piano --- */
+PR.gePanorama=GE((g,x,y,t,a,k)=>{
+ rect(g,'#8a7a60',x-270,y-62,540,62);for(let r=0;r<4;r++)for(let q=0;q<10;q++)rect(g,['#9a8a6c','#7a6a50','#a8987a'][(q+r)%3],x-268+q*54+(r%2)*16,y-60+r*14,50,12);rect(g,'#b8a888',x-276,y-70,552,10);rect(g,'rgba(255,255,255,.18)',x-276,y-70,552,3);
+ [-200,0,200].forEach((o,i)=>{rect(g,IR,x+o-3,y-170,6,100);rect(g,IR,x+o-6,y-174,12,6)});
+ for(let q=0;q<2;q++){const a0=x-200+q*200;g.strokeStyle='rgba(30,26,22,.8)';g.lineWidth=1.4;g.beginPath();g.moveTo(a0,y-170);g.quadraticCurveTo(a0+100,y-140,a0+200,y-170);g.stroke();for(let u=1;u<6;u++){const f=u/6,lx=a0+f*200,ly=y-170+Math.sin(f*Math.PI)*30;rect(g,'#d8b868',lx-3,ly,6,9);rect(g,LIT,lx-2,ly+2,4,5);glow(g,lx,ly+5,22,'255,200,110',.5+.2*Math.sin(t*3+u+q))}}
+ PR.gePanca(g,x-110,y-62,t,0);PR.gePanca(g,x+110,y-62,t,0);
+ [-30,30].forEach((o,i)=>pers(g,x+o,y-62,t+i,{f:1,s:.6,top:['#3a4a6a','#8a3a3a'][i],bot:'#2a2a36',hair:'#2a1a10'}));
+ ulivo(g,x-230,y,1.1,t);rect(g,'#3a3a40',x+130,y-90,26,5);rect(g,'#3a3a40',x+141,y-86,4,24)});
+/* --- Getsemani: il giardino chiuso da un muretto, gli olivi antichissimi dai tronchi cavi, le aiuole --- */
+const olivoAnt=(g,x,y,s,t)=>{s=s||1;g.fillStyle=tn('#6a5a48');g.beginPath();g.moveTo(x-30*s,y);g.quadraticCurveTo(x-26*s,y-26*s,x-34*s,y-46*s);g.quadraticCurveTo(x-18*s,y-40*s,x-8*s,y-64*s);g.quadraticCurveTo(x+4*s,y-50*s,x+16*s,y-66*s);g.quadraticCurveTo(x+16*s,y-34*s,x+34*s,y);g.closePath();g.fill();
+ g.fillStyle=tn('#2a2018');g.beginPath();g.moveTo(x-6*s,y);g.quadraticCurveTo(x-10*s,y-22*s,x-2*s,y-34*s);g.quadraticCurveTo(x+8*s,y-22*s,x+8*s,y);g.closePath();g.fill();
+ for(let q=0;q<7;q++)ln(g,'rgba(40,30,20,.35)',1.2,[x-24*s+q*8*s,y-4*s,x-22*s+q*7*s,y-40*s]);ln(g,'#6a5a48',7*s,[x-8*s,y-60*s,x-34*s,y-92*s]);ln(g,'#6a5a48',7*s,[x+6*s,y-62*s,x+34*s,y-96*s]);
+ [[0,-100,58,30,'#8a9e72'],[-44,-90,34,22,'#7a9064'],[48,-96,36,24,'#96aa7e'],[8,-124,38,20,'#a4b88c'],[-20,-116,28,16,'#8a9e72']].forEach(c=>{el(g,c[4],x+c[0]*s,y+c[1]*s,c[2]*s,c[3]*s);el(g,'rgba(255,255,230,.12)',x+(c[0]-c[2]*.2)*s,y+(c[1]-c[3]*.3)*s,c[2]*.5*s,c[3]*.35*s)})};
+PR.geGetsemani=GE((g,x,y,t,a,k)=>{
+ rect(g,'#7a6a52',x-290,y-52,580,52);for(let r=0;r<3;r++)for(let q=0;q<12;q++)rect(g,['#8a7a60','#6a5a44','#9a8a6c'][(q+r)%3],x-288+q*48+(r%2)*14,y-50+r*16,44,13);rect(g,'#a8987a',x-296,y-58,592,8);
+ olivoAnt(g,x-190,y-52,.95,t);olivoAnt(g,x-20,y-52,1.15,t);olivoAnt(g,x+170,y-52,.9,t);
+ /* cancello di ferro, aiuole e sentiero di ghiaia */
+ rect(g,IR,x+80,y-110,4,110);rect(g,IR,x+120,y-110,4,110);for(let q=0;q<8;q++)rect(g,IR,x+84+q*5,y-96,1.6,90);rect(g,IR,x+80,y-98,44,3);ar(g,'#2a2a2e',x+84,y-110,36,14);
+ rect(g,'#b8a888',x-80,y-12,120,12);for(let q=0;q<16;q++)rect(g,'rgba(60,40,20,.3)',x-76+q*7,y-8+(q%3)*2,3,2);
+ for(let q=0;q<9;q++){const bx=x-270+q*34;ln(g,'#3a6a2a',2,[bx,y-52,bx+(q%3-1)*2,y-62-(q%3)*3]);dot(g,['#d8283a','#f2c82a','#f4a0b8','#f4f0e6'][q%4],bx+(q%3-1)*2,y-64-(q%3)*3,3.4)}
+ rect(g,'#2a2a2e',x+190,y-84,2.4,34);rect(g,'#f4f0e0',x+160,y-98,60,26);txt(g,'SILENZIO',x+190,y-84,8,'#2a4a8a');txt(g,'SILENCE',x+190,y-76,7,'#2a4a8a');
+ [-250,40].forEach((o,i)=>{rect(g,IR,x+o-2,y-34,4,34);rect(g,k>.15?LIT:'#d8c898',x+o-6,y-48,12,14);glow(g,x+o,y-42,30,'255,214,130',.45*k)});
+ PR.geGatto(g,x+130,y,t,'#6a6a72')});
+/* --- Chiesa di tutte le Nazioni: la facciata a colonne con il mosaico d'oro, le dodici piccole cupole, le vetrate viola --- */
+PR.geNazioni=GE((g,x,y,t,a,k)=>{
+ [-4,-3,-2,-1,0,1,2,3,4,5,6,7].forEach((q,i)=>{const bx=x-198+i*34;dome(g,'#c8a838',bx,y-290,16,14);rect(g,'#a89464',bx-14,y-290,28,14)});
+ pie(g,'#d8c8a0',x-180,y-276,360,276,161);rect(g,PS3,x-184,y-280,368,8);
+ poly(g,PS,[[x-140,y-276],[x,y-348],[x+140,y-276]]);poly(g,'#d8b43a',[[x-124,y-282],[x,y-340],[x+124,y-282]]);
+ for(let r=0;r<9;r++)for(let q=0;q<22;q++){if(hr(r*31+q*7)>.55)continue;const px=x-110+q*10,py=y-286-r*6;if(Math.abs(px-x)<(60-(r*6.6)+34)&&py>y-340)rect(g,['#e8c850','#c89a2a','#f4dc78','#2a6aa8','#8a2a6a'][(q+r)%5],px,py,8,5)}
+ dot(g,'#2a62a8',x,y-312,13);dot(g,'#f4dc78',x,y-312,9);rect(g,'#2a1c10',x-1.6,y-364,3.2,22);rect(g,'#2a1c10',x-8,y-356,16,3.2);
+ [-124,-62,62,124].forEach(o=>{rect(g,PS4,x+o-11,y-232,22,232);rect(g,'rgba(255,255,255,.28)',x+o-11,y-232,6,232);rect(g,'rgba(0,0,0,.14)',x+o+2,y-232,9,232);rect(g,PS3,x+o-15,y-240,30,9);rect(g,PS3,x+o-14,y-6,28,6)});
+ rect(g,PS3,x-150,y-242,300,10);
+ ar(g,'#2a1c10',x-30,y-6,60,150);ar(g,'#4a2a6a',x-24,y-6,48,140);for(let q=0;q<3;q++)rect(g,'rgba(180,140,255,.3)',x-20+q*14,y-130,2,120);
+ [-93,93].forEach(o=>{ar(g,'#2a1c10',x+o-14,y-70,28,100);ar(g,'#5a3a8a',x+o-10,y-72,20,92);glow(g,x+o,y-90,40,'170,120,255',.45*k)});
+ glow(g,x,y-90,120,'170,120,255',.32*k);
+ gente(g,x-4,y+8,t,3,81)});
+/* --- Varco finale: la Porta d'Oro murata nelle mura illuminate, la luce che filtra fra le pietre come se si aprisse --- */
+PR.geVarco=GE((g,x,y,t,a,k)=>{const pu=.7+.3*Math.sin(t*3);
+ pie(g,'#c8b078',x-300,y-232,600,232,171);rect(g,'rgba(255,255,255,.12)',x-300,y-232,8,232);
+ merl(g,'#c8b078',x-304,y-232,608,13);rect(g,'#a89464',x-306,y-236,612,6);
+ /* proiettori da terra che illuminano le mura */
+ [-250,-120,150,260].forEach((o,i)=>{rect(g,'#2a2a2e',x+o-9,y-12,18,12);poly(g,'#4a4a52',[[x+o-8,y-12],[x+o+8,y-12],[x+o+4,y-22],[x+o-4,y-22]]);poly(g,'rgba(255,232,170,.22)',[[x+o-6,y-22],[x+o+6,y-22],[x+o+54,y-230],[x+o-54,y-230]]);glow(g,x+o,y-24,30,'255,230,160',.5)});
+ /* i due archi murati, da cui filtra la luce */
+ [-30,50].forEach((o,i)=>{const ax=x+o;ar(g,'#e8d8a8',ax-44,y,88,164);ar(g,'#fffbe8',ax-37,y,74,156);g.save();g.beginPath();g.rect(ax-37,y-156,74,156);g.clip();
+  for(let r=0;r<10;r++){rect(g,'rgba(120,96,50,.78)',ax-37,y-154+r*16,74,13);for(let q=0;q<3;q++)rect(g,'rgba(120,96,50,.78)',ax-37+((r%2)*14)+q*30,y-154+r*16,2,0)}
+  for(let r=0;r<10;r++){const off=(r%2)*18;for(let q=-1;q<4;q++)rect(g,'rgba(255,252,230,.95)',ax-37+off+q*36,y-154+r*16,2.2,13)}
+  g.restore();ar(g,'rgba(255,250,220,'+(.25*pu)+')',ax-37,y,74,156)});
+ glow(g,x+10,y-86,230,'255,246,210',.6*pu);glow(g,x+10,y-86,120,'255,255,240',.8*pu);
+ for(let q=0;q<10;q++){const an=-Math.PI/2+(q-4.5)*.28,r1=40,r2=150+30*Math.sin(t*2+q);ln(g,'rgba(255,250,220,'+(.16*pu)+')',5,[x+10+Math.cos(an)*r1,y-86+Math.sin(an)*r1,x+10+Math.cos(an)*r2,y-86+Math.sin(an)*r2])}
+ /* il prato e le tombe davanti, qualche ulivo */
+ rect(g,'#5a7a3a',x-300,y-10,600,10);for(let q=0;q<9;q++){const bx=x-270+q*62;rect(g,'#c8c4b8',bx,y-12+(q%2)*4,32,10);rect(g,'#e0dcd0',bx,y-12+(q%2)*4,32,3)}
+ ulivo(g,x-250,y,.9,t);ulivo(g,x+270,y,.8,t)});
+
+PR._ge={nf,lit,casa,pie,dome,cono,merl,fnt,port,ulivo,olivoAnt,tenda,mucchio,cassa,colA,pers,gente,ln};
+})();
