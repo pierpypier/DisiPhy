@@ -66,26 +66,88 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 <script>
 const testoDialogo = document.getElementById('tx');
 
+// Creazione del selettore vocale
+const contenitoreVoce = document.createElement('div');
+contenitoreVoce.style.margin = '8px 0';
+contenitoreVoce.style.fontSize = '14px';
+
+const etichettaVoce = document.createElement('label');
+etichettaVoce.textContent = 'Voce: ';
+etichettaVoce.htmlFor = 'selettoreVoce';
+
+const selettoreVoce = document.createElement('select');
+selettoreVoce.id = 'selettoreVoce';
+selettoreVoce.style.padding = '5px';
+selettoreVoce.style.maxWidth = '100%';
+
+contenitoreVoce.appendChild(etichettaVoce);
+contenitoreVoce.appendChild(selettoreVoce);
+
+// Inserisce il selettore prima dei dialoghi
+testoDialogo.parentNode.insertBefore(contenitoreVoce, testoDialogo);
+
+let vociDisponibili = [];
+let voceScelta = null;
+
+// Carica le voci disponibili
+function caricaVoci() {
+    vociDisponibili = speechSynthesis.getVoices();
+
+    selettoreVoce.innerHTML = '';
+
+    const predefinita = document.createElement('option');
+    predefinita.value = '';
+    predefinita.textContent = 'Voce predefinita';
+    selettoreVoce.appendChild(predefinita);
+
+    vociDisponibili.forEach((voce, indice) => {
+        const opzione = document.createElement('option');
+        opzione.value = indice;
+        opzione.textContent = voce.name + ' (' + voce.lang + ')';
+        selettoreVoce.appendChild(opzione);
+    });
+}
+
+// Alcuni browser caricano le voci in ritardo
+caricaVoci();
+speechSynthesis.addEventListener('voiceschanged', caricaVoci);
+
+// Memorizza la voce selezionata
+selettoreVoce.addEventListener('change', function() {
+    voceScelta = this.value === ''
+        ? null
+        : vociDisponibili[Number(this.value)];
+});
+
+// Aspetto del testo cliccabile
 testoDialogo.style.cursor = 'pointer';
 testoDialogo.title = 'Tocca per ascoltare il dialogo';
 
+// Riproduzione del dialogo
 testoDialogo.addEventListener('click', function() {
     const testo = this.innerText.trim();
     if (!testo) return;
 
     if (!('speechSynthesis' in window)) {
-        alert('La sintesi vocale non è supportata da questo browser.');
+        alert('La sintesi vocale non è supportata.');
         return;
     }
 
     speechSynthesis.cancel();
 
     const voce = new SpeechSynthesisUtterance(testo);
-    voce.lang = 'it-IT';
+
+    if (voceScelta) {
+        voce.voice = voceScelta;
+        voce.lang = voceScelta.lang;
+    } else {
+        voce.lang = 'it-IT';
+    }
+
     voce.rate = 1;
     voce.pitch = 1;
 
     speechSynthesis.speak(voce);
 });
-</script>     
+     </script>     
 </body></html>
