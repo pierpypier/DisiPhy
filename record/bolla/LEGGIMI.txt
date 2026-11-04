@@ -71,3 +71,20 @@ MONDO: Berlino · Da Charlottenburg a Kreuzberg   (id: berlino)
   Vita: volpi urbane all'alba e di notte, scoiattoli e un cinghiale nel Tiergarten, cigni, cornacchie, gabbiani sulla Spree, pipistrelli al crepuscolo, il treno giallo sul viadotto.
   Nota: i temi dolorosi (il Muro, il Memoriale, i roghi di libri della Bebelplatz, la guerra) sono trattati con tono sobrio e rispettoso.
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._be) e riusa da Madrid solo cas e pers (PR._md); non modifica motore né altri mondi.
+
+MONDO: Gerusalemme · Dal mercato al Monte degli Ulivi   (id: gerusalemme)
+  File: mondi/gerusalemme.js   — oggetti in nucleo/elementi.js (blocco "elementi per Gerusalemme", nomi che iniziano per "ge")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/gerusalemme.js"></script>
+  Percorso (larghezza 22400): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Mercato di Mahane Yehuda: lo shuk, Eitz Chaim, spezie e dolci, il mercato di sera (alba) · 2 Porta di Jaffa, Cittadella di Davide, Mura di Solimano (mattina)
+     3 Botteghe di ceramica armena, Cattedrale di San Giacomo, Monte Sion, Porta di Sion (tarda mattina) · 4 Santo Sepolcro: cortile, scala immobile, Edicola, Status Quo (mezzogiorno)
+     5 Porta di Damasco, Porta dei Leoni, Porta d'Oro (primo pomeriggio) · 6 Via Dolorosa, arco dell'Ecce Homo, suq coperto, pasticceria del knafeh (pomeriggio)
+     7 Cardo, sinagoga Hurva, Muro Occidentale, Arco di Wilson (tardo pomeriggio) · 8 Spianata delle Moschee: prati e fontane, Cupola della Roccia, al-Aqsa (tramonto)
+     9 Monte degli Ulivi: belvedere, Getsemani, Chiesa di Tutte le Nazioni, Porta d'Oro murata (notte, varco davanti alle mura illuminate)
+  Personaggi (12 battute ciascuno, l'ultima è il saluto): Yossi (spezie), Nadia (guida della Cittadella), Garo (ceramista armeno), Fra' Marco (francescano),
+     Solimano il Magnifico, Samir (pasticciere), Dana (archeologa), Ibrahim (custode dell'oliveto)
+  Testi: da gerusalemme.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 33 tappe da "Testo:".
+  Nota: i temi religiosi e storici sono trattati con il tono sobrio e rispettoso della scheda, senza prendere parte; non compaiono bandiere né simboli politici.
+  Nota tecnica: il mondo usa il proprio "nf" (luce che scorre dall'alba alla notte, esportato come PR._ge) e riusa pers, gente, cipr e pino di Madrid (PR._md) e ln e gatto di Roma (PR._rm); non modifica motore né altri mondi.
+
