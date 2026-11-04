@@ -63,4 +63,29 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 <script src="mondi/madrid.js"></script>   
 <script src="mondi/berlino.js"></script>     
 <script src="nucleo/motore.js"></script>
+<script>
+const testoDialogo = document.getElementById('tx');
+
+testoDialogo.style.cursor = 'pointer';
+testoDialogo.title = 'Tocca per ascoltare il dialogo';
+
+testoDialogo.addEventListener('click', function() {
+    const testo = this.innerText.trim();
+    if (!testo) return;
+
+    if (!('speechSynthesis' in window)) {
+        alert('La sintesi vocale non è supportata da questo browser.');
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    const voce = new SpeechSynthesisUtterance(testo);
+    voce.lang = 'it-IT';
+    voce.rate = 1;
+    voce.pitch = 1;
+
+    speechSynthesis.speak(voce);
+});
+</script>     
 </body></html>
