@@ -88,3 +88,21 @@ MONDO: Gerusalemme · Dal mercato al Monte degli Ulivi   (id: gerusalemme)
   Nota: i temi religiosi e storici sono trattati con il tono sobrio e rispettoso della scheda, senza prendere parte; non compaiono bandiere né simboli politici.
   Nota tecnica: il mondo usa il proprio "nf" (luce che scorre dall'alba alla notte, esportato come PR._ge) e riusa pers, gente, cipr e pino di Madrid (PR._md) e ln e gatto di Roma (PR._rm); non modifica motore né altri mondi.
 
+
+MONDO: Città del Messico · Dalla Merced a Garibaldi   (id: cittadelmessico)
+  File: mondi/cittadelmessico.js   — oggetti in nucleo/elementi.js (blocco "elementi per Città del Messico", nomi che iniziano per "cm")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/cittadelmessico.js"></script>
+  Percorso (larghezza 24600): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Mercato della Merced: tettoie, navate dei chiles, Mercado de Sonora, Mercado de Jamaica (alba) · 2 Zócalo, Templo Mayor, Pietra di Coyolxauhqui, Cattedrale, Palacio Nacional (mattina)
+     3 Via Madero, Casa de los Azulejos, Torre Latinoamericana, Palacio de Bellas Artes (tarda mattina) · 4 Roma e Condesa: Plaza Río de Janeiro, Parque México, taqueria, fonda (primo pomeriggio)
+     5 Paseo de la Reforma, Ángel de la Independencia, Metro, la Reforma in autunno con i cempasúchil (pomeriggio) · 6 Bosque de Chapultepec: lago, Museo de Antropología, Piedra del Sol, Castillo, Niños Héroes (pomeriggio inoltrato)
+     7 Coyoacán: Plaza Hidalgo e Jardín Centenario, Casa Azul, Mercado, laboratorio di alebrijes (tardo pomeriggio) · 8 Xochimilco: trajineras, chinampas, barche con cibo e mariachi, axolotl, Isla de las Muñecas (tramonto)
+     9 Plaza Garibaldi: mariachi, Salón Tenampa, Museo del Tequila e del Mezcal, arco di cempasúchil con l'ofrenda (notte, varco sotto l'arco)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Doña Lupe (chiles), Moctezuma II, Don Chucho (organillero), Beto (taquero),
+     Ximena (guida di Chapultepec), Rocío (alebrijes), Toño (trajinero), Don Rafa (mariachi)
+  Testi: da messicocity.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 39 tappe da "Testo:".
+  Vita: piccioni nello Zócalo, zanates (uccelli neri) sui cavi, passeri, colibrì e farfalle a Chapultepec, scoiattoli sul prato, anatre sui laghetti, aironi sui canali, cavallette che saltano nel cesto, passanti e ciclisti.
+  Nota: i temi dolorosi e storici (Coyolxauhqui, Moctezuma, Niños Héroes, Isla de las Muñecas) sono trattati con tono sobrio e rispettoso, come nella scheda.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._cm) e riusa da Gerusalemme solo tenda, mucchio, cassa, dome, cono, merl e pie (PR._ge), da Madrid pers e gente (PR._md), da Roma ln e gatto (PR._rm); non modifica motore né altri mondi.
+  Nota nome: il titolo del mondo è abbreviato ("Dalla Merced a Garibaldi") perché quello lungo non entra nell'intestazione del motore.
