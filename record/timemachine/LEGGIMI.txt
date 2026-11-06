@@ -1,0 +1,126 @@
+DA INCOLLARE IN LEGGIMI.txt (il file originale non era tra gli allegati)
+------------------------------------------------------------------------
+MONDO: Madrid · Dal Tempio di Debod alla Stazione di Atocha   (id: madrid)
+  File: mondi/madrid.js   — oggetti in nucleo/elementi.js (blocco "elementi per Madrid", nomi che iniziano per "md")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/madrid.js"></script>
+  Percorso (larghezza 23000): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Tempio di Debod e Parque del Oeste, Plaza de España (alba) · 2 Plaza de Oriente, Palazzo Reale, Almudena, Giardini di Sabatini (mattina)
+     3 Plaza Mayor, Mercado de San Miguel, Cuchilleros, Puerta del Sol, Orso e Corbezzolo (tarda mattina) · 4 La Latina: El Rastro, Cava Baja, San Isidro (ora dell'aperitivo)
+     5 Barrio de las Letras: Huertas, Casa di Cervantes, Trinitarie, Prado, Nettuno (primo pomeriggio) · 6 Retiro: Puerta de Alcalá, Estanque, Palacio de Cristal, Angelo Caduto (pomeriggio)
+     7 Cibeles, Palazzo di Cibeles, Metrópolis, Gran Vía (tramonto) · 8 Malasaña: Dos de Mayo, Manuela Malasaña, bar e negozi vintage, San Ildefonso (sera)
+     9 Stazione di Atocha, giardino tropicale, binari dell'alta velocità (notte, varco in fondo al binario)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta): Paco (pensionato con il cane), Manolo (panini ai calamari), Pilar (tabernera di La Latina),
+     Miguel de Cervantes, Nacho (barche del lago), Rafa (tassista), Lola (barista di Malasaña), Inés (capotreno dell'alta velocità)
+  Testi: da madrid.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 36 tappe da "Testo:".
+  Nota: i temi dolorosi (prigionia e morte di Cervantes, insurrezione del 2 maggio 1808) sono trattati con tono sobrio e rispettoso.
+  Nota tecnica: il mondo usa il solo "nf" di Madrid (luce che scorre dall'alba alla notte) esportato come PR._md; non modifica motore né altri mondi.
+
+MONDO: Torino · Dal Valentino a Porta Nuova   (id: torino)
+  File: mondi/torino.js   — oggetti in nucleo/elementi.js (blocco "elementi per Torino", nomi che iniziano per "to")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/torino.js"></script>
+  Percorso (larghezza 17400): 8 zone, da sinistra a destra, un'intera giornata:
+     1 Parco del Valentino e Po (alba) · 2 Mole Antonelliana (mattina) · 3 Piazza Castello e Palazzo Carignano (tarda mattina)
+     4 Museo Egizio (mezzogiorno) · 5 Piazza San Carlo, Bicerin, Quadrilatero (primo pomeriggio)
+     6 Portici di via Po e Piazza Vittorio (pomeriggio) · 7 Superga (tramonto) · 8 Porta Nuova (notte, varco in fondo al binario)
+  Personaggi (12 battute ciascuno, l'ultima è il saluto): Sara, Alessandro Antonelli, Cavour, Champollion,
+     Franca (Bicerin), Primo Levi, Gianni (tifoso granata), Mario (capostazione)
+  Testi: da torino.txt (definitivi); 32 tappe da "Osserva".
+
+MONDO: Sydney · Da Bondi Beach alla Central Station   (id: sydney)
+  File: mondi/sydney.js   — oggetti in nucleo/elementi.js (blocco "elementi per Sydney", nomi che iniziano per "sy")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/sydney.js"></script>
+  Percorso (larghezza 17400): 8 zone, da sinistra a destra, un'intera giornata:
+     1 Bondi Beach (alba) · 2 The Rocks e Harbour Bridge (mattina) · 3 Circular Quay e Opera House (tarda mattina)
+     4 Royal Botanic Garden e Mrs Macquarie's Chair (mezzogiorno) · 5 Chinatown e Darling Harbour (primo pomeriggio)
+     6 Manly e Freshwater (pomeriggio) · 7 Luna Park e Milsons Point (tramonto) · 8 Central Station (notte, varco in fondo al binario)
+  Personaggi (12 battute ciascuno, l'ultima è il saluto): Gaz (bagnino), Bennelong, Jørn Utzon,
+     Lachlan Macquarie, Linh (Haymarket), Duke Kahanamoku, Ruby (Luna Park), Dave (capostazione)
+  Testi: da sydney.txt (definitivi, usati senza riscriverli); 32 tappe da "Osserva".
+  Nota: la città sorge sulla terra del popolo Gadigal (nazione Eora); il tono verso la storia aborigena e coloniale è sobrio e rispettoso.
+
+MONDO: Rio de Janeiro · Da Copacabana al Maracanã   (id: rio)
+  File: mondi/rio.js   — oggetti in nucleo/elementi.js (blocco "elementi per Rio de Janeiro", nomi che iniziano per "ri")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/rio.js"></script>
+  Percorso (larghezza 19800): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Leme e Copacabana (alba) · 2 Arpoador e Ipanema (mattina) · 3 Jardim Botânico e Lagoa (tarda mattina)
+     4 Corcovado e Cristo Redentor (mezzogiorno) · 5 Centro storico: Praça XV, Candelária, Theatro Municipal, Confeitaria Colombo, Museu do Amanhã (primo pomeriggio)
+     6 Santa Teresa (pomeriggio) · 7 Urca e Pão de Açúcar (tramonto) · 8 Lapa e Pedra do Sal (sera) · 9 Maracanã (notte, varco in fondo al tunnel verso il campo)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta): Seu Nelson (pescatore), Bia (istruttrice di surf), Rodrigo (guida del Corcovado),
+     Machado de Assis, Zeca (conducente del bonde), Dona Nilza, Chico (musicista della Lapa), Carol (guida del Maracanã)
+  Testi: da rio.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 37 tappe da "Luoghi".
+  Nota: i temi dolorosi (Cais do Valongo, incidente del bonde del 2011, Maracanazo) sono trattati con tono sobrio e rispettoso.
+  Nota tecnica: il mondo usa il solo "nf" di Rio (luce del giorno che scorre fino alla notte) esportato come PR._ri; non modifica motore né altri mondi.
+
+MONDO: Berlino · Da Charlottenburg a Kreuzberg   (id: berlino)
+  File: mondi/berlino.js   — oggetti in nucleo/elementi.js (blocco "elementi per Berlino", nomi che iniziano per "be")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/berlino.js"></script>
+  Percorso (larghezza 21600): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Gedächtniskirche, Kurfürstendamm, KaDeWe, targa di Herta Heuwer (alba) · 2 Zoo, Tiergarten, Siegessäule, Schloss Bellevue (mattina)
+     3 Reichstag, Porta di Brandeburgo, Memoriale agli ebrei assassinati d'Europa (tarda mattina) · 4 Unter den Linden, Università Humboldt, Bebelplatz (mezzogiorno)
+     5 Museumsinsel, Neues Museum e Nefertiti, Duomo, Humboldt Forum (primo pomeriggio) · 6 Fernsehturm, Alexanderplatz, Rotes Rathaus e Neptunbrunnen, Nikolaiviertel (primo pomeriggio)
+     7 Potsdamer Platz, Checkpoint Charlie, linea del Muro (pomeriggio dorato) · 8 East Side Gallery, Bacio fraterno, Oberbaumbrücke (tramonto e crepuscolo)
+     9 Späti, viadotto della U1, arco di mattoni (notte di Kreuzberg, varco in fondo al cortile)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Ayşe (edicola), Jonas (guida in bicicletta), Brigitte (berlinese dell'89),
+     Alexander von Humboldt, Lena (guida della Museumsinsel), Dieter (tassista), Mia (studentessa d'arte), Tobi (barista)
+  Testi: da berlino.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 31 tappe da "Testo:".
+  Vita: volpi urbane all'alba e di notte, scoiattoli e un cinghiale nel Tiergarten, cigni, cornacchie, gabbiani sulla Spree, pipistrelli al crepuscolo, il treno giallo sul viadotto.
+  Nota: i temi dolorosi (il Muro, il Memoriale, i roghi di libri della Bebelplatz, la guerra) sono trattati con tono sobrio e rispettoso.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._be) e riusa da Madrid solo cas e pers (PR._md); non modifica motore né altri mondi.
+
+MONDO: Gerusalemme · Dal mercato al Monte degli Ulivi   (id: gerusalemme)
+  File: mondi/gerusalemme.js   — oggetti in nucleo/elementi.js (blocco "elementi per Gerusalemme", nomi che iniziano per "ge")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/gerusalemme.js"></script>
+  Percorso (larghezza 22400): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Mercato di Mahane Yehuda: lo shuk, Eitz Chaim, spezie e dolci, il mercato di sera (alba) · 2 Porta di Jaffa, Cittadella di Davide, Mura di Solimano (mattina)
+     3 Botteghe di ceramica armena, Cattedrale di San Giacomo, Monte Sion, Porta di Sion (tarda mattina) · 4 Santo Sepolcro: cortile, scala immobile, Edicola, Status Quo (mezzogiorno)
+     5 Porta di Damasco, Porta dei Leoni, Porta d'Oro (primo pomeriggio) · 6 Via Dolorosa, arco dell'Ecce Homo, suq coperto, pasticceria del knafeh (pomeriggio)
+     7 Cardo, sinagoga Hurva, Muro Occidentale, Arco di Wilson (tardo pomeriggio) · 8 Spianata delle Moschee: prati e fontane, Cupola della Roccia, al-Aqsa (tramonto)
+     9 Monte degli Ulivi: belvedere, Getsemani, Chiesa di Tutte le Nazioni, Porta d'Oro murata (notte, varco davanti alle mura illuminate)
+  Personaggi (12 battute ciascuno, l'ultima è il saluto): Yossi (spezie), Nadia (guida della Cittadella), Garo (ceramista armeno), Fra' Marco (francescano),
+     Solimano il Magnifico, Samir (pasticciere), Dana (archeologa), Ibrahim (custode dell'oliveto)
+  Testi: da gerusalemme.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 33 tappe da "Testo:".
+  Nota: i temi religiosi e storici sono trattati con il tono sobrio e rispettoso della scheda, senza prendere parte; non compaiono bandiere né simboli politici.
+  Nota tecnica: il mondo usa il proprio "nf" (luce che scorre dall'alba alla notte, esportato come PR._ge) e riusa pers, gente, cipr e pino di Madrid (PR._md) e ln e gatto di Roma (PR._rm); non modifica motore né altri mondi.
+
+
+MONDO: Città del Messico · Dalla Merced a Garibaldi   (id: cittadelmessico)
+  File: mondi/cittadelmessico.js   — oggetti in nucleo/elementi.js (blocco "elementi per Città del Messico", nomi che iniziano per "cm")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/cittadelmessico.js"></script>
+  Percorso (larghezza 24600): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Mercato della Merced: tettoie, navate dei chiles, Mercado de Sonora, Mercado de Jamaica (alba) · 2 Zócalo, Templo Mayor, Pietra di Coyolxauhqui, Cattedrale, Palacio Nacional (mattina)
+     3 Via Madero, Casa de los Azulejos, Torre Latinoamericana, Palacio de Bellas Artes (tarda mattina) · 4 Roma e Condesa: Plaza Río de Janeiro, Parque México, taqueria, fonda (primo pomeriggio)
+     5 Paseo de la Reforma, Ángel de la Independencia, Metro, la Reforma in autunno con i cempasúchil (pomeriggio) · 6 Bosque de Chapultepec: lago, Museo de Antropología, Piedra del Sol, Castillo, Niños Héroes (pomeriggio inoltrato)
+     7 Coyoacán: Plaza Hidalgo e Jardín Centenario, Casa Azul, Mercado, laboratorio di alebrijes (tardo pomeriggio) · 8 Xochimilco: trajineras, chinampas, barche con cibo e mariachi, axolotl, Isla de las Muñecas (tramonto)
+     9 Plaza Garibaldi: mariachi, Salón Tenampa, Museo del Tequila e del Mezcal, arco di cempasúchil con l'ofrenda (notte, varco sotto l'arco)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Doña Lupe (chiles), Moctezuma II, Don Chucho (organillero), Beto (taquero),
+     Ximena (guida di Chapultepec), Rocío (alebrijes), Toño (trajinero), Don Rafa (mariachi)
+  Testi: da messicocity.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 39 tappe da "Testo:".
+  Vita: piccioni nello Zócalo, zanates (uccelli neri) sui cavi, passeri, colibrì e farfalle a Chapultepec, scoiattoli sul prato, anatre sui laghetti, aironi sui canali, cavallette che saltano nel cesto, passanti e ciclisti.
+  Nota: i temi dolorosi e storici (Coyolxauhqui, Moctezuma, Niños Héroes, Isla de las Muñecas) sono trattati con tono sobrio e rispettoso, come nella scheda.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._cm) e riusa da Gerusalemme solo tenda, mucchio, cassa, dome, cono, merl e pie (PR._ge), da Madrid pers e gente (PR._md), da Roma ln e gatto (PR._rm); non modifica motore né altri mondi.
+  Nota nome: il titolo del mondo è abbreviato ("Dalla Merced a Garibaldi") perché quello lungo non entra nell'intestazione del motore.
+
+MONDO: Nairobi · Dal Parco Nazionale alla Stazione dei Treni   (id: nairobi)
+  File: mondi/nairobi.js   — oggetti in nucleo/elementi.js (blocco "elementi per Nairobi", nomi che iniziano per "nb")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/nairobi.js"></script>
+  Percorso (larghezza 23200): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Parco Nazionale di Nairobi: cancello e skyline, leoni e giraffe davanti ai grattacieli, luogo del rogo dell'avorio, rinoceronti neri (alba) · 2 Langata e Karen: Giraffe Centre, orfanotrofio degli elefanti, Museo Karen Blixen (mattina)
+     3 Centro: KICC, statua di Dedan Kimathi, lo "stage" dei matatu (tarda mattina) · 4 City Market, Moschea Jamia, Jeevanjee Gardens (mezzogiorno) · 5 Uhuru Park, Freedom Corner, Fontana Nyayo di Central Park (primo pomeriggio)
+     6 Museo Nazionale, Ragazzo del Turkana, Snake Park (pomeriggio dorato) · 7 Foresta di Karura: ingresso, cascata, grotte Mau Mau, bosco di bambù e chiesa abbandonata (tramonto)
+     8 Il mtaa e la nyama choma: macelleria-griglia, duka e agente M-Pesa, la tavola con ugali e Tusker (sera) · 9 Stazione ferroviaria, Museo ferroviario, Madaraka Express, binario con il varco in fondo (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Wanjiru (ranger), Juma (makanga del matatu), Mama Akinyi (frutta e verdura), Wangari Maathai,
+     Njeri (guida del Museo Nazionale), Kevin (sviluppatore di app), Mzee Kariuki (maestro della griglia), Mzee Ochieng (ex ferroviere, seduto su una panchina del binario)
+  Testi: da nairobi.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 30 tappe da "Testo:".
+  Vita: nibbi neri e ibis sacri in volo, un aereo che scende verso l'aeroporto, cicogne marabù in cima agli alberi, giraffe, zebre, ippopotami e rinoceronti, scimmie e dik-dik a Karura,
+     cani e gatti di quartiere, passanti, pipistrelli attorno ai lampioni di notte.
+  Nota: i temi dolorosi e storici (colonizzazione, Mau Mau, sciopero della fame del 1992, costruzione della ferrovia) sono trattati con tono sobrio e rispettoso, come nella scheda; le leggende sono presentate con "si dice".
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._nb, insieme a pers, gp e ai disegni di alberi e animali riusati dal mondo) e riusa da Roma solo ln e gatto (PR._rm); non modifica motore né altri mondi.
+  Nota nome: il titolo è quello completo della scheda, come per Madrid; nell'intestazione del motore sporge un po' dalla pastiglia. Se preferisci, puoi abbreviarlo in "Nairobi · Dal Parco alla Stazione" nella riga addWorld(...) di mondi/nairobi.js.
