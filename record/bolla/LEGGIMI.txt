@@ -124,3 +124,22 @@ MONDO: Nairobi · Dal Parco Nazionale alla Stazione dei Treni   (id: nairobi)
   Nota: i temi dolorosi e storici (colonizzazione, Mau Mau, sciopero della fame del 1992, costruzione della ferrovia) sono trattati con tono sobrio e rispettoso, come nella scheda; le leggende sono presentate con "si dice".
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._nb, insieme a pers, gp e ai disegni di alberi e animali riusati dal mondo) e riusa da Roma solo ln e gatto (PR._rm); non modifica motore né altri mondi.
   Nota nome: il titolo è quello completo della scheda, come per Madrid; nell'intestazione del motore sporge un po' dalla pastiglia. Se preferisci, puoi abbreviarlo in "Nairobi · Dal Parco alla Stazione" nella riga addWorld(...) di mondi/nairobi.js.
+
+MONDO: Medina di Fez · Dalla Porta Blu all’Arco di Zellige   (id: medinadifez)
+  File: mondi/medinadifez.js   — oggetti in nucleo/elementi.js (blocco "elementi per Medina di Fez", nomi che iniziano per "fz")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/medinadifez.js"></script>
+  Percorso (larghezza 21800): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Bab Bou Jeloud (la Porta Blu), colazione sotto la porta, Talaa Kebira, il richiamo dell'alba sui tetti (alba) · 2 Qarawiyyin, la biblioteca, santuario di Moulay Idriss II, l'Oued Fès (mattina)
+     3 Concerie Chouara: le vasche, i colori, le terrazze e la menta (tarda mattina) · 4 Place Seffarine, madrasa Attarine, madrasa Bou Inania, Dar al-Magana (mezzogiorno)
+     5 Fontana di Nejjarine, Museo del legno, souk degli Attarine, la tavola di Fez (primo pomeriggio) · 6 Fès el-Jdid e il Mechouar, le porte del Palazzo Reale, il Mellah, il laboratorio di zellige (pomeriggio)
+     7 Borj Nord, Tombe Merinidi, il tramonto sulla medina (tardo pomeriggio) · 8 Il forno, l'hammam, la fontana e il vicolo (crepuscolo; nessun personaggio fisso, come da scheda)
+     9 La Porta Blu di notte, la musica nei caffè, varco sotto il grande arco di zellige blu e verde (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Zineb (msemen), Fatima al-Fihri, Youssef (conciatore), Si Brahim (ramaio),
+     Lalla Latifa (cuoca), Maâlem Mustapha (zellige), Imane (studentessa di architettura), Hamid (musicista)
+  Testi: da medina.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 32 tappe da "Testo:".
+  Vita: piccioni e passeri, rondini e rondoni nel cielo del tramonto, asini carichi, gatti sui muretti, facchini e passanti, lanterne che oscillano e petali di fiori d'arancio nel varco.
+  Nota: i temi storici e religiosi (santuario, madrase, Mellah e patrimonio ebraico) sono trattati con tono sobrio e rispettoso; le tradizioni non provate sono presentate con "si dice" o "secondo la tradizione".
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._fz, insieme agli attrezzi comuni) e riusa da Roma solo ln e gatto (PR._rm) e da Madrid solo pers e gente (PR._md); non modifica motore né altri mondi.
+  Nota nome: il titolo della scheda è abbreviato ("Dalla Porta Blu all'Arco di Zellige") per stare nell'intestazione del motore.
+  Nota file: il nome è "medinadifez.js" (senza spazi), come "cittadelmessico.js".
