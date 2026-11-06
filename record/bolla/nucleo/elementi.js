@@ -8189,3 +8189,492 @@ PR.nbvarco=NB((g,x,y,t,a,k)=>{rect(g,'#6a6e78',x-200,y-6,400,6);const pu=.7+.3*M
 
 PR._nb={nf,NB,lit,pers,gp,ranger,acacia,jaca,eucal,fico,cedro,bambu,felci,erba,cespu,giraffa,zebra,leone,rino,ippo,elefantino,scimmia,marabu,dikdik,ibis,uccello,jeep,matatu,loco,vagone,lamp,ln,gatto};
 })();
+
+/* ---------- elementi per Medina di Fez · Dalla Porta Blu all’Arco di Zellige (mondi/medinadifez.js) ---------- */
+/* Nomi che iniziano per "fz". Hanno la loro luce (nf di Fez): la giornata scorre da sinistra (alba a Bab Bou Jeloud)
+   a destra (notte sotto la Porta Blu) e usano la variabile globale AVCAM come gli altri mondi "lunghi".
+   Riusano da Roma solo ln e gatto, da Madrid solo pers e gente. Non toccano nulla di quanto esiste prima di questo blocco. */
+(function(){
+const A=PR._av,rect=A.rect,poly=A.poly,dot=A.dot,el=A.el,ar=A.ar,pa=A.pa,tn=A.tn,txt=A.txt,glow=A.glow,cl=A.cl;
+const {ln,gatto}=PR._rm;
+const {pers,gente}=PR._md;
+const LIT='rgb(255,214,130)',BLN='rgb(46,102,214)',VRN='rgb(36,150,96)';
+const SA='#d8b27a',SA2='#c49660',SA3='#a87848',BL='#1f4fa8',BL2='#2f6ad0',VR='#1f8a56',VR2='#2aa86c',CD='#6a4226',CD2='#8a5a34',CD3='#4a2c18',RA='#c8702a',RA2='#ecaa58',ST='#f0e8d4',ST2='#d8cfb4',IR='#2a2622';
+/* luce di Fez: [posizione nel mondo, buio da 0 (giorno) a 1 (notte)] */
+const NF=[[0,.16],[1500,0],[14900,0],[15800,.07],[16900,.2],[17500,.36],[18300,.56],[19100,.76],[20000,.9],[21000,1]];
+const nf=wx=>{if(wx<=NF[0][0])return NF[0][1];for(let i=1;i<NF.length;i++)if(wx<=NF[i][0]){const a=NF[i-1],b=NF[i];return a[1]+(b[1]-a[1])*(wx-a[0])/(b[0]-a[0])}return 1};
+const FZ=f=>(g,x,y,t,a)=>{A.setDK(nf(x+AVCAM));f(g,x,y,t,a,A.getDK())};
+const lit=(k,i)=>k>.25&&hr(i)>.3;
+
+/* ---- attrezzi comuni ---- */
+/* arco a ferro di cavallo: sinistra x, base y, larghezza w, altezza h */
+const fer=(g,c,x,y,w,h)=>{const r=w/2,cy=y-h+r;dot(g,c,x+r,cy,r*1.07);poly(g,c,[[x+r*.08,cy+r*.55],[x,y],[x+w,y],[x+w-r*.08,cy+r*.55]]);rect(g,c,x,cy,w,h-r)};
+/* stella a otto punte */
+const star8=(g,c,x,y,r)=>{const p=[];for(let q=0;q<16;q++){const a=q*Math.PI/8-Math.PI/2,rr=q%2?r*.62:r;p.push([x+Math.cos(a)*rr,y+Math.sin(a)*rr])}poly(g,c,p)};
+/* mosaico di zellige: scacchiera di tessere blu, verdi e bianche */
+const zel=(g,x,y,w,h,s)=>{rect(g,ST,x,y,w,h);for(let a=0;a<w/6;a++)for(let b=0;b<h/6;b++){const q=(a+b+(s||0))%4;if(q==0)rect(g,BL,x+a*6,y+b*6,5.4,5.4);else if(q==2)rect(g,hr(a*3+b)>.5?VR:BL2,x+a*6,y+b*6,5.4,5.4);else if(q==1&&hr(a+b*5)>.7)rect(g,'#e8b830',x+a*6+1,y+b*6+1,3,3)}};
+/* tegole smaltate verdi: tetto a piramide (centro x, base y, larghezza w, altezza h) */
+const tegole=(g,x,y,w,h,c)=>{c=c||VR;poly(g,c,[[x-w/2,y],[x-w*.12,y-h],[x+w*.12,y-h],[x+w/2,y]]);for(let r=0;r<h/5;r++)rect(g,'rgba(0,0,0,.14)',x-w/2+r*w*.07,y-r*5-1,w-r*w*.14,1);rect(g,'rgba(255,255,255,.18)',x-w*.1,y-h,3,h);dot(g,'#e8b830',x,y-h-4,3);rect(g,'#e8b830',x-1,y-h-9,2,6)};
+/* minareto quadrato: sinistra x, base y, larghezza w, altezza h, colore delle tegole c */
+const mina=(g,x,y,w,h,c,k,i)=>{rect(g,SA,x,y-h,w,h);rect(g,'rgba(255,255,255,.2)',x,y-h,4,h);rect(g,'rgba(0,0,0,.14)',x+w-8,y-h,8,h);
+ for(let q=0;q<3;q++){const yy=y-h*.78+q*h*.1;poly(g,'rgba(255,255,255,.35)',[[x+w/2,yy],[x+w*.8,yy+h*.05],[x+w/2,yy+h*.1],[x+w*.2,yy+h*.05]])}
+ rect(g,c,x-1,y-h*.5,w+2,h*.05);rect(g,c,x-1,y-h-h*.04,w+2,h*.05);
+ const ww=w*.62,xx=x+w*.19;rect(g,SA2,xx,y-h-h*.2,ww,h*.16);rect(g,lit(k,i)?LIT:'#3a2c20',xx+ww*.3,y-h-h*.17,ww*.4,h*.1);tegole(g,x+w/2,y-h-h*.2,ww*1.2,h*.1,c);
+ poly(g,'#e8b830',[[x+w/2-2,y-h-h*.32],[x+w/2,y-h-h*.4],[x+w/2+2,y-h-h*.32]]);dot(g,'#e8b830',x+w/2,y-h-h*.43,2.2);dot(g,'#e8b830',x+w/2,y-h-h*.36,1.8)};
+/* lanterna di ferro appesa */
+const lamp=(g,x,y,k,s)=>{s=s||1;ln(g,IR,1.4,[x,y-18*s,x,y]);poly(g,IR,[[x-6*s,y],[x+6*s,y],[x+4*s,y+3*s],[x-4*s,y+3*s]]);rect(g,k>.12?LIT:'#d8c08a',x-4.4*s,y+3*s,8.8*s,12*s);rect(g,IR,x-.6,y+3*s,1.2,12*s);poly(g,IR,[[x-5*s,y+15*s],[x+5*s,y+15*s],[x+2*s,y+19*s],[x-2*s,y+19*s]]);if(k>.1)glow(g,x,y+9*s,44*s,'255,200,110',.45*k)};
+/* porta di cedro intagliato: sinistra x, base y, larghezza w, altezza h */
+const pcd=(g,x,y,w,h)=>{rect(g,CD3,x-3,y-h-3,w+6,h+3);rect(g,CD,x,y-h,w,h);rect(g,CD2,x+1,y-h+1,w/2-1,h-1);for(let r=1;r<5;r++)rect(g,'rgba(0,0,0,.2)',x,y-h+r*h/5,w,1);for(let q=0;q<4;q++)for(let r=0;r<5;r++)dot(g,'#c8a040',x+w*(.14+q*.24),y-h*(.1+r*.18),1.3);rect(g,'rgba(0,0,0,.35)',x+w/2-.6,y-h,1.2,h);dot(g,'#c8a040',x+w/2-5,y-h*.5,2.4);dot(g,'#c8a040',x+w/2+5,y-h*.5,2.4)};
+/* parasole/teli di tessuto steso: da x a x+w, quota y */
+const telo=(g,x,y,w,c1,c2,n)=>{n=n||Math.max(2,Math.floor(w/18));for(let q=0;q<n;q++)poly(g,q%2?c2:c1,[[x+q*w/n,y],[x+(q+1)*w/n,y],[x+(q+1)*w/n+2,y+10],[x+q*w/n+2,y+10]])};
+/* casa del vicolo: muro di sabbia, piani di finestre piccole, balconi di legno, tetto; o={wall,win,bal,roof,door,awn} */
+function casa(g,x,w,h,i,k,o){const gt=372,top=gt-h,fl=Math.max(2,Math.floor((h-40)/36)),n=Math.max(2,Math.floor(w/42));
+ rect(g,o.wall,x,top,w,h);rect(g,'rgba(255,255,255,.14)',x,top,5,h);rect(g,'rgba(0,0,0,.14)',x+w-12,top,12,h);for(let q=0;q<h/9;q++)if(hr(i*5+q)>.7)rect(g,'rgba(0,0,0,.05)',x+hr(q+i)*(w-14),top+q*9,12+hr(q)*20,3);
+ for(let r=0;r<fl;r++)for(let q=0;q<n;q++){const wx=x+12+q*(w-36)/(n-1),wy=gt-(r+1)*36-34,l=lit(k,i*13+r*7+q);
+  if(o.win=='ar'){rect(g,'#3a2c20',wx-1.5,wy+4,15,22);dot(g,'#3a2c20',wx+6,wy+5,7.5);rect(g,l?LIT:'#4a5a6a',wx,wy+5,12,20);dot(g,l?LIT:'#4a5a6a',wx+6,wy+6,6);rect(g,'rgba(0,0,0,.22)',wx+5.4,wy,1.2,26)}
+  else{rect(g,'#3a2c20',wx-1.5,wy-1.5,15,18);rect(g,l?LIT:'#4a5a6a',wx,wy,12,15);rect(g,'rgba(0,0,0,.25)',wx+5.4,wy,1.2,15);rect(g,'rgba(0,0,0,.25)',wx,wy+7,12,1.2)}
+  if(o.bal&&(r+q)%2==0){rect(g,CD2,wx-4,wy+22,20,3);rect(g,CD3,wx-3,wy+10,18,12);for(let s=0;s<5;s++)rect(g,'rgba(0,0,0,.35)',wx-2+s*3.6,wy+11,1.4,10);rect(g,CD2,wx-4,wy+8,20,3)}}
+ rect(g,'rgba(0,0,0,.22)',x-2,top-3,w+4,5);
+ if(o.roof=='v'){for(let q=0;q<Math.floor(w/22);q++){const hc=['#b83a2a','#e8b030','#2a5aa8','#c86a2a'][(q+i)%4];poly(g,hc,[[x+q*22+2,top-3],[x+q*22+20,top-3],[x+q*22+17,top+18],[x+q*22+5,top+14]])}}
+ else if(o.roof=='g'){tegole(g,x+w/2,top-3,w*.9,24)}
+ else{for(let q=0;q<w/14;q++)rect(g,o.wall,x+q*14,top-8,9,6);if(hr(i)>.5){rect(g,'#9a9ea4',x+w*.6,top-18,14,2);ln(g,'#7a7e84',1,[x+w*.6+7,top-16,x+w*.6+7,top-8])}if(hr(i+3)>.6){ar(g,SA2,x+w*.2,top-3,10,18)}}
+ if(o.door=='cedar'){pcd(g,x+w/2-14,gt-4,28,50)}
+ else if(o.door=='arch'){fer(g,'#2a1c14',x+w/2-15,gt-4,30,58);fer(g,k>.2?'rgb(255,200,120)':'#6a4a30',x+w/2-11,gt-4,22,52);rect(g,'rgba(0,0,0,.25)',x+w/2-11,gt-4,22,8)}
+ else if(o.door=='shop'){rect(g,'#2a1c14',x+8,gt-62,w-16,58);rect(g,k>.2?'rgb(255,214,140)':'#5a4030',x+12,gt-58,w-24,50);for(let q=0;q<5;q++)rect(g,['#c8402a','#e8b030','#2a5aa8','#2a8a5a','#f0ead8'][(q+i)%5],x+14+q*(w-34)/5,gt-48,(w-34)/5-2,14)}
+ if(o.awn)telo(g,x+4,gt-70,w-8,o.awn,ST,Math.floor(w/14));
+ rect(g,'rgba(0,0,0,.2)',x,gt-8,w,8)}
+
+/* =========================== arredo urbano comune =========================== */
+PR.fztarga=FZ((g,x,y,t,a,k)=>{const w=Math.max(96,a.length*5.8+22);rect(g,IR,x-1.6,y-90,3.2,90);rect(g,'#3a3e44',x-6,y-8,12,8);rect(g,BL,x-w/2-2,y-130,w+4,32);rect(g,ST,x-w/2,y-128,w,28);rect(g,BL,x-w/2+3,y-125,w-6,1.4);rect(g,BL,x-w/2+3,y-104,w-6,1.4);txt(g,a,x,y-109,9,'#1c3a78');if(k>.2)glow(g,x,y-114,w*.7,'255,214,130',.22*k)});
+PR.fzlampione=FZ((g,x,y,t,a,k)=>{rect(g,IR,x-2,y-120,4,120);rect(g,IR,x-6,y-8,12,8);ln(g,IR,2,[x,y-112,x+16,y-124]);lamp(g,x+16,y-124,k,1.1)});
+PR.fzgatto=FZ((g,x,y,t,a,k)=>gatto(g,x,y,t,a||'#c9873a'));
+PR.fzasino=FZ((g,x,y,t,a,k)=>{const c=a?'#4a4038':'#8a7a6a',b=Math.sin(t*2)*1;el(g,c,x,y-46+b,32,15);poly(g,c,[[x+24,y-52+b],[x+38,y-74+b],[x+46,y-72+b],[x+36,y-46+b]]);poly(g,c,[[x+38,y-74+b],[x+50,y-74+b],[x+53,y-66+b],[x+42,y-62+b]]);poly(g,c,[[x+38,y-74+b],[x+36,y-90+b],[x+41,y-76+b]]);poly(g,c,[[x+42,y-74+b],[x+44,y-90+b],[x+46,y-75+b]]);dot(g,'#14110f',x+46,y-70+b,1.2);
+ [[-22,0],[-10,0],[12,0],[24,0]].forEach((l,i)=>ln(g,c,5,[x+l[0],y-38,x+l[0]+(i%2?2:-2),y]));ln(g,c,2.6,[x-32,y-50+b,x-40,y-34+Math.sin(t*3)*3]);
+ poly(g,'#c8b078',[[x-24,y-58+b],[x-30,y-82+b],[x+6,y-82+b],[x+12,y-58+b]]);poly(g,a?'#b8402a':'#d8c898',[[x-14,y-60+b],[x-18,y-88+b],[x+16,y-88+b],[x+20,y-60+b]]);rect(g,'rgba(0,0,0,.18)',x-24,y-62+b,34,2);rect(g,'#2a5aa8',x-26,y-72+b,34,4)});
+PR.fzcarretto=FZ((g,x,y,t,a,k)=>{rect(g,CD2,x-26,y-34,52,5);for(let q=0;q<5;q++)rect(g,CD,x-24+q*10,y-52,2,18);rect(g,CD,x-26,y-52,52,3);[ -18,18].forEach(o=>{dot(g,'#2a2622',x+o,y-12,11);dot(g,'#8a8a90',x+o,y-12,4)});ln(g,CD,3,[x+24,y-34,x+56,y-30]);for(let q=0;q<4;q++)el(g,['#e8802a','#d8402a','#e8c030','#4a9a3a'][q],x-16+q*11,y-58,6,5)});
+PR.fzmenta=FZ((g,x,y,t,a,k)=>{poly(g,'#8a6a3a',[[x-18,y],[x-20,y-24],[x+20,y-24],[x+18,y]]);rect(g,'#6a4a22',x-20,y-18,40,2);for(let q=0;q<9;q++){ln(g,'#2f8a3a',2.2,[x-14+q*3.5,y-24,x-18+q*4.5,y-44-hr(q)*10]);dot(g,'#4aaa4a',x-18+q*4.5,y-46-hr(q)*10,3)}});
+PR.fzsgabelli=FZ((g,x,y,t,a,k)=>{[-36,0,36].forEach((o,i)=>{rect(g,CD,x+o-10,y-22,20,4);ln(g,CD3,2.4,[x+o-8,y-18,x+o-10,y]);ln(g,CD3,2.4,[x+o+8,y-18,x+o+10,y])});rect(g,'#d8d0b8',x-70,y-60,0,0)});
+PR.fzpiccioni=FZ((g,x,y,t,a,k)=>{for(let q=0;q<5;q++){const bx=x-34+q*17+Math.sin(t*.7+q)*3;el(g,'#8a8e98',bx,y-6,6,4.5);dot(g,'#6a6e78',bx+5,y-10,3);dot(g,'#4a8a6a',bx+3,y-8,1.6);ln(g,'#c86a5a',1,[bx-1,y-3,bx-1,y]);ln(g,'#c86a5a',1,[bx+2,y-3,bx+2,y])}});
+PR.fzvaso=FZ((g,x,y,t,a,k)=>{poly(g,'#c8702a',[[x-12,y],[x-14,y-24],[x+14,y-24],[x+12,y]]);rect(g,'#a85a20',x-15,y-27,30,4);for(let q=0;q<7;q++){ln(g,'#2f8a3a',2.4,[x,y-26,x-22+q*7.4,y-46-hr(q+a)*14]);dot(g,'#3aa04a',x-22+q*7.4,y-48-hr(q+a)*14,4)}dot(g,'#e8402a',x-8,y-52,2.6);dot(g,'#f2c82a',x+10,y-46,2.4)});
+
+/* =========================== ZONA 1 · Bab Bou Jeloud e Talaa Kebira =========================== */
+/* --- Bab Bou Jeloud: tre archi a ferro di cavallo in zellige blu, la porta vecchia accanto, il minareto della Bou Inania nell’arco (a=1: di notte, illuminata) --- */
+PR.fzporta=FZ((g,x,y,t,a,k)=>{const n=a==1,B=n?BLN:BL,B2=n?'rgb(70,130,236)':BL2,G=n?VRN:VR;
+ /* la porta vecchia, più bassa e sobria */
+ rect(g,SA,x+168,y-122,86,122);rect(g,SA2,x+168,y-126,86,6);fer(g,'#2a1c14',x+190,y-4,42,88);fer(g,k>.2?'rgb(255,190,110)':'#7a5a3a',x+194,y-4,34,80);for(let q=0;q<8;q++)rect(g,SA2,x+168+q*12,y-134,8,8);
+ /* il minareto della Bou Inania, dietro la porta */
+ mina(g,x-22,y-100,44,150,G,k,7);
+ /* il corpo della porta */
+ rect(g,B,x-150,y-170,300,170);rect(g,'rgba(0,0,0,.18)',x+130,y-170,20,170);rect(g,'rgba(255,255,255,.14)',x-150,y-170,6,170);
+ for(let q=0;q<11;q++)for(let r=0;r<6;r++)if((q+r)%2==0)rect(g,B2,x-146+q*27,y-166+r*27,18,18);
+ for(let q=0;q<10;q++){poly(g,ST,[[x-150+q*30,y-176],[x-142+q*30,y-176],[x-142+q*30,y-182],[x-146+q*30,y-186],[x-150+q*30,y-182]])}
+ rect(g,ST,x-152,y-176,304,7);rect(g,G,x-152,y-171,304,2.4);
+ /* tre archi: blu all’esterno, verde nel bordo interno */
+ const arc=(cx,w,h)=>{fer(g,ST,cx-w/2-5,y,w+10,h+6);fer(g,G,cx-w/2-2,y,w+4,h+3);fer(g,'#1c1612',cx-w/2,y,w,h);if(a!=1)fer(g,'rgba(255,214,150,.3)',cx-w/2+3,y,w-6,h-4)};
+ arc(x,76,138);arc(x-100,46,92);arc(x+100,46,92);
+ /* dentro l’arco centrale: la luce della medina oltre la porta */
+ const gr=g.createLinearGradient(0,y-130,0,y);gr.addColorStop(0,n?'rgba(255,190,110,.5)':'rgba(255,230,180,.55)');gr.addColorStop(1,'rgba(255,200,120,.1)');g.fillStyle=gr;g.fillRect(x-30,y-120,60,120);
+ star8(g,'#e8b830',x-100,y-126,9);star8(g,ST,x+100,y-126,9);star8(g,'#e8b830',x,y-170+4,0);
+ [[-50,-146],[50,-146],[-50,-110],[50,-110]].forEach((p,i)=>star8(g,i<2?'#e8b830':ST,x+p[0],y+p[1]-20,8));
+ if(n){const gr2=g.createLinearGradient(0,y,0,y-190);gr2.addColorStop(0,'rgba(120,170,255,.55)');gr2.addColorStop(1,'rgba(120,170,255,0)');g.fillStyle=gr2;g.fillRect(x-150,y-190,300,190);glow(g,x,y-90,170,'110,160,255',.28);[-100,100].forEach(o=>lamp(g,x+o,y-176,k,1.2))}
+ else{lamp(g,x-100,y-176,k,1.1);lamp(g,x+100,y-176,k,1.1)}
+ rect(g,'#9a948a',x-156,y-3,312,3)});
+/* --- colazione sotto la porta: pentoloni fumanti, la piastra del msemen, vassoi di harcha, bicchieri di tè con la menta --- */
+PR.fzcolazione=FZ((g,x,y,t,a,k)=>{rect(g,'#2a5aa8',x-84,y-34,168,5);rect(g,'#f0ead8',x-84,y-30,168,22);for(let q=0;q<14;q++){dot(g,'#d85a7a',x-80+q*12,y-24,2.2);dot(g,'#4a9a5a',x-76+q*12,y-14,1.6)}
+ [-60,-30,30,60].forEach(o=>{rect(g,CD,x+o-3,y-8,6,8)});
+ /* pentoloni con il vapore */
+ [[-60,22,'#9aa0a8'],[-28,18,'#c8702a']].forEach((p,i)=>{rect(g,p[2],x+p[0]-p[1]/2,y-34-p[1]*.8,p[1],p[1]*.8);rect(g,'rgba(0,0,0,.2)',x+p[0]-p[1]/2,y-34-p[1]*.2,p[1],3);el(g,'#d8c890',x+p[0],y-34-p[1]*.8,p[1]/2-1,3);for(let q=0;q<4;q++){const u=(t*.4+q/4+i*.3)%1;el(g,'rgba(240,240,240,'+(.5*(1-u))+')',x+p[0]+Math.sin(u*5+q+i)*7,y-44-p[1]-u*46,6+u*5,4+u*4)}});
+ /* la piastra */
+ rect(g,'#2a2622',x+8,y-42,46,8);el(g,'#4a4a50',x+31,y-43,24,4);glow(g,x+31,y-34,40,'255,150,60',.5);rect(g,'#e8802a',x+14,y-33,34,2);el(g,'#e8c068',x+22,y-45,9,3);el(g,'#e8c068',x+40,y-45,8,2.6);ln(g,'#8a8e94',2,[x+44,y-47,x+66,y-64]);
+ /* harcha e bicchieri */
+ for(let q=0;q<4;q++)el(g,'#d8a850',x+66+q*5,y-36-q,8,2.6);for(let q=0;q<3;q++){rect(g,'rgba(220,235,240,.8)',x-5+q*8,y-44,5,9);rect(g,'#4aaa4a',x-4+q*8,y-48,3,6)}
+ /* tettoia dipinta e lanterna */
+ poly(g,'#c8402a',[[x-96,y-112],[x+96,y-112],[x+84,y-92],[x-84,y-92]]);for(let q=0;q<6;q++)poly(g,ST,[[x-96+q*32+16,y-112],[x-96+q*32+32,y-112],[x-84+q*28+28,y-92],[x-84+q*28+14,y-92]]);rect(g,CD,x-86,y-92,3,58);rect(g,CD,x+83,y-92,3,58);rect(g,'#2a5aa8',x-40,y-96,80,14);txt(g,'MSEMEN · BISSARA',x,y-85,6.6,'#f0ead8');lamp(g,x+60,y-92,k,1)});
+/* --- Talaa Kebira: il vicolo in salita, coperto da teli e travi, con le botteghe di babouches e di menta; la luce a strisce --- */
+PR.fztalaa=FZ((g,x,y,t,a,k)=>{rect(g,'#3a2c20',x-150,y-150,300,150);rect(g,SA2,x-150,y-150,300,150);rect(g,'#1c1410',x-100,y-136,200,136);
+ /* travi e teli */
+ for(let q=0;q<6;q++){rect(g,CD,x-150+q*52,y-158,6,12);ln(g,CD3,3,[x-152,y-150+q*3,x+152,y-146+q*3])}
+ const cc=['#c8402a','#2a5aa8','#e8b030','#2a8a5a'];for(let q=0;q<4;q++)poly(g,cc[q],[[x-150+q*76,y-160],[x-74+q*76,y-160],[x-70+q*76,y-142],[x-154+q*76,y-142]]);
+ /* luce a strisce */
+ for(let q=0;q<5;q++)poly(g,'rgba(255,230,160,'+(.1*(1-k))+')',[[x-100+q*36,y-140],[x-86+q*36,y-140],[x-60+q*36,y],[x-90+q*36,y]]);
+ /* botteghe e babouches */
+ for(let q=0;q<5;q++){const bx=x-140+q*58;rect(g,'#2a1c14',bx,y-96,48,92);rect(g,k>.2?'rgb(255,200,120)':'#6a4a30',bx+3,y-92,42,86);rect(g,CD2,bx-2,y-98,52,4);for(let r=0;r<3;r++)for(let s=0;s<3;s++){const hx=bx+8+s*14,hy=y-86+r*20;ln(g,'#8a8e94',1,[hx,hy-4,hx,hy]);el(g,['#e8b030','#c8402a','#2a5aa8','#2a8a5a','#d8a0b8','#f0ead8'][(q+r*3+s)%6],hx+1,hy+4,4,6)}rect(g,'#6a4a22',bx+4,y-24,40,3);for(let s=0;s<5;s++)dot(g,['#e8802a','#d8402a','#e8c030'][s%3],bx+8+s*8,y-28,3.4)}
+ lamp(g,x-40,y-140,k,1);lamp(g,x+60,y-140,k,1)});
+/* --- l’alba sui tetti: tetti piatti con antenne e panni, il minareto con l’altoparlante, un gatto sul muretto --- */
+PR.fzalba=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-110,y-64,120,64);rect(g,'rgba(0,0,0,.14)',x-20,y-64,30,64);for(let q=0;q<10;q++)rect(g,SA2,x-110+q*12,y-72,8,8);rect(g,SA2,x-112,y-68,124,5);
+ mina(g,x+20,y,38,200,VR,k,3);rect(g,'#3a3e44',x+34,y-232,10,5);rect(g,'#3a3e44',x+39,y-236,2,4);
+ /* antenne paraboliche e panni stesi */
+ el(g,'#d8d8d4',x-86,y-84,10,6,-.5);ln(g,'#7a7e84',1.4,[x-86,y-80,x-86,y-72]);el(g,'#e8e8e4',x-52,y-86,9,5.4,.4);ln(g,'#7a7e84',1.4,[x-52,y-82,x-52,y-72]);
+ ln(g,'#6a6e74',1,[x-104,y-100,x-30,y-96]);[[-96,'#c8402a'],[-80,'#f0ead8'],[-66,'#2a5aa8'],[-50,'#e8b030'],[-38,'#f0ead8']].forEach((p,i)=>{poly(g,p[1],[[x+p[0],y-100+i*.9],[x+p[0]+10,y-99.4+i*.9],[x+p[0]+9+Math.sin(t*2+i)*1.4,y-86+i*.9],[x+p[0]+1,y-86+i*.9]])});
+ gatto(g,x-14,y-72,t,'#6a6a70')});
+/* --- un banchetto di verdure fresche all’alba (cassette, menta, cipolle) --- */
+PR.fzverdure=FZ((g,x,y,t,a,k)=>{rect(g,CD2,x-44,y-24,88,5);[-34,0,34].forEach(o=>{rect(g,CD,x+o-3,y-20,5,20)});for(let q=0;q<4;q++){rect(g,'#8a6a3a',x-42+q*21,y-40,18,14);for(let s=0;s<5;s++)dot(g,['#4aa04a','#e8802a','#d84a3a','#e8c030'][q],x-38+q*21+s*3.4,y-42-hr(q*5+s)*3,3)}
+ poly(g,'#2a8a5a',[[x-50,y-98],[x+50,y-98],[x+40,y-80],[x-40,y-80]]);rect(g,CD,x-46,y-80,3,56);rect(g,CD,x+43,y-80,3,56)});
+
+/* =========================== ZONA 2 · Qarawiyyin e santuario di Moulay Idriss II =========================== */
+/* --- fontanella di zellige con il rubinetto di rame --- */
+PR.fzfontanella=FZ((g,x,y,t,a,k)=>{zel(g,x-18,y-70,36,66,1);rect(g,'#9a948a',x-22,y-6,44,6);rect(g,CD,x-22,y-76,44,6);poly(g,CD2,[[x-26,y-76],[x+26,y-76],[x+18,y-90],[x-18,y-90]]);rect(g,'#c88a3a',x-3,y-48,6,10);for(let q=0;q<3;q++)dot(g,'rgba(180,225,255,.85)',x,y-36+((t*40+q*7)%24),1.4);el(g,'rgba(120,180,220,.7)',x,y-5,12,2.4)});
+/* --- Qarawiyyin: il grande portale di cedro intagliato, il vestibolo con il lampadario, i tetti di tegole verdi e il minareto --- */
+PR.fzqara=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-150,y-130,300,130);rect(g,'rgba(255,255,255,.14)',x-150,y-130,6,130);rect(g,'rgba(0,0,0,.14)',x+138,y-130,12,130);
+ /* tetti verdi a file e il minareto */
+ for(let q=0;q<4;q++)tegole(g,x-110+q*52,y-130,60,36);mina(g,x+96,y-130,46,130,VR,k,5);
+ /* il portale */
+ rect(g,CD3,x-48,y-122,96,122);fer(g,ST,x-40,y,80,116);fer(g,'#1c1612',x-33,y,66,106);
+ rect(g,k>.15?'rgb(255,200,120)':'#6a4a30',x-33,y-4,66,6);fer(g,k>.15?'rgb(255,214,150)':'#7a5a38',x-30,y-6,60,98);
+ /* vestibolo: lampadario e il cortile in fondo */
+ for(let q=0;q<5;q++){const cx=x-22+q*11;rect(g,'rgba(40,24,10,.5)',cx,y-80,2,76)}
+ ln(g,'#c8a040',1.4,[x,y-96,x,y-80]);dot(g,'#e8c068',x,y-76,7);for(let q=0;q<6;q++)dot(g,LIT,x-9+q*3.6,y-70,1.6);glow(g,x,y-72,50,'255,210,130',.5);
+ pcd(g,x-33,y-4,16,76);pcd(g,x+17,y-4,16,76);
+ /* cornice di stucco e tettuccio di cedro */
+ poly(g,CD2,[[x-60,y-126],[x+60,y-126],[x+48,y-138],[x-48,y-138]]);for(let q=0;q<8;q++)rect(g,CD3,x-52+q*13,y-134,5,8);tegole(g,x,y-138,130,20);
+ lamp(g,x-60,y-100,k,1);lamp(g,x+60,y-100,k,1);zel(g,x-150,y-30,34,30,2)});
+/* --- La biblioteca: la sala di lettura con soffitto di cedro dipinto, il cortile con la fontana, il tetto con i pannelli solari --- */
+PR.fzbiblio=FZ((g,x,y,t,a,k)=>{rect(g,SA2,x-120,y-110,240,110);rect(g,'rgba(255,255,255,.14)',x-120,y-110,5,110);
+ /* tetto con i pannelli solari */
+ rect(g,SA3,x-124,y-116,248,7);for(let q=0;q<4;q++){poly(g,'#2a3a5a',[[x-100+q*44,y-116],[x-62+q*44,y-116],[x-68+q*44,y-130],[x-106+q*44,y-130]]);rect(g,'rgba(255,255,255,.2)',x-98+q*44,y-128,30,1)}
+ /* la sala di lettura vista dalla grande vetrata */
+ rect(g,CD3,x-104,y-96,134,86);rect(g,k>.15?'rgb(255,222,160)':'#9a8a6a',x-100,y-92,126,78);for(let q=0;q<9;q++){rect(g,['#c8402a','#2a5aa8','#e8b030','#2a8a5a'][q%4],x-98+q*14.2,y-92,12,6);rect(g,CD2,x-98+q*14.2,y-86,12,2)}
+ for(let r=0;r<3;r++){rect(g,CD,x-100,y-76+r*18,126,2.4);for(let q=0;q<20;q++)rect(g,['#6a3a2a','#2a4a6a','#8a6a3a','#3a5a3a'][(q+r)%4],x-98+q*6.2,y-92+(r+1)*18-14+(q%3),4,13-(q%3))}
+ rect(g,CD,x-100,y-26,126,5);for(let q=0;q<3;q++){rect(g,'#f0ead8',x-86+q*40,y-34,22,8);rect(g,CD3,x-86+q*40,y-26,2,24)}
+ /* la teca con i manoscritti scuri e la porta robusta */
+ rect(g,'#1c1612',x+38,y-98,70,6);rect(g,'#3a3e44',x+42,y-70,62,66);rect(g,'rgba(170,215,235,.55)',x+46,y-66,54,50);rect(g,'#6a4a2a',x+52,y-34,42,12);rect(g,'#c8a868',x+58,y-40,16,5);rect(g,'#a88858',x+76,y-38,14,4);
+ rect(g,'#1c3a58',x+54,y-96,40,10);txt(g,'BIBLIOTHÈQUE',x+74,y-88,5.6,'#f0ead8');
+ /* fontana nel cortile */
+ zel(g,x+112,y-24,26,24,3);rect(g,'#7a7e84',x+112,y-2,26,2);0});
+/* --- Santuario di Moulay Idriss II: portale di cedro scolpito con la sbarra bassa, il tetto verde a piramide, il minareto alto --- */
+PR.fzmoulay=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-130,y-110,260,110);rect(g,'rgba(0,0,0,.14)',x+118,y-110,12,110);
+ mina(g,x+78,y-110,42,200,VR,k,9);
+ tegole(g,x-30,y-110,230,86,VR2);for(let q=0;q<12;q++)rect(g,'rgba(255,255,255,.12)',x-30-100+q*17,y-110-q*0,1.4,0);
+ /* il portale alto */
+ rect(g,CD3,x-62,y-108,60,108);fer(g,ST,x-56,y,48,98);fer(g,CD,x-52,y,40,90);for(let q=0;q<4;q++)rect(g,'rgba(0,0,0,.2)',x-52+q*10,y-82,1,82);rect(g,'rgba(0,0,0,.35)',x-33,y-82,1.2,82);for(let r=0;r<5;r++)for(let q=0;q<3;q++)dot(g,'#c8a040',x-46+q*12+(r%2)*3,y-12-r*14,1.5);
+ /* la sbarra bassa di legno */
+ rect(g,CD2,x-84,y-26,100,4);rect(g,CD3,x-82,y-26,4,26);rect(g,CD3,x+10,y-26,4,26);rect(g,CD2,x-84,y-14,100,3);
+ /* lanterne di ottone */
+ [-72,18].forEach(o=>{lamp(g,x+o,y-98,k,1.1)});
+ /* fedeli ai lati e incenso */
+ pers(g,x+34,y,t,{s:.8,top:'#d8d0b8',bot:'#d8d0b8',hair:'#2a1a10'});pers(g,x-100,y,t,{s:.8,top:'#e8e0cc',bot:'#6a4a3a'});
+ for(let q=0;q<4;q++){const u=(t*.3+q/4)%1;el(g,'rgba(235,235,235,'+(.4*(1-u))+')',x+50+Math.sin(u*6+q)*8,y-30-u*70,3+u*5,3+u*5)}rect(g,'#c8a040',x+46,y-8,8,8)});
+/* --- l’Oued Fès: il ponticello di pietra sull’acqua scura stretta fra due muri, panni stesi, scalini, verde fra le pietre --- */
+PR.fzfiume=FZ((g,x,y,t,a,k)=>{rect(g,SA3,x-130,y-62,260,62);for(let r=0;r<6;r++)for(let q=0;q<13;q++)if(hr(q*5+r+a)>.45)rect(g,'rgba(0,0,0,.08)',x-130+q*20+(r%2)*10,y-58+r*10,18,8);
+ rect(g,'#1c2630',x-60,y-62,120,62);const gr=g.createLinearGradient(0,y-62,0,y);gr.addColorStop(0,'#2a3a48');gr.addColorStop(1,'#12202a');g.fillStyle=gr;g.fillRect(x-56,y-58,112,58);for(let q=0;q<6;q++)rect(g,'rgba(160,200,225,.3)',x-50+((q*23+t*14)%100),y-10-q*7,14,1.4);
+ /* l’arco del ponticello */
+ rect(g,SA2,x-72,y-84,144,26);rect(g,SA3,x-76,y-90,152,8);for(let q=0;q<9;q++)rect(g,SA2,x-76+q*17,y-96,12,7);
+ g.fillStyle=tn(SA2);g.beginPath();g.moveTo(x-66,y);g.lineTo(x-66,y-48);g.quadraticCurveTo(x,y-96,x+66,y-48);g.lineTo(x+66,y);g.lineTo(x+56,y);g.lineTo(x+56,y-46);g.quadraticCurveTo(x,y-84,x-56,y-46);g.lineTo(x-56,y);g.closePath();g.fill();
+ /* panni stesi e pianticelle */
+ ln(g,'#6a6e74',1,[x-130,y-110,x-70,y-104]);[[-124,'#f0ead8'],[-110,'#2a5aa8'],[-96,'#c8402a'],[-84,'#f0ead8']].forEach((p,i)=>poly(g,p[1],[[x+p[0],y-110+i],[x+p[0]+11,y-109+i],[x+p[0]+10+Math.sin(t*2+i)*1.4,y-92+i],[x+p[0]+1,y-92+i]]));
+ for(let q=0;q<6;q++)ln(g,'#3a9a4a',1.6,[x-124+q*40,y-62,x-122+q*40,y-70-hr(q)*6]);
+ /* scalini e fontanella */
+ for(let q=0;q<4;q++)rect(g,SA,x+68+q*10,y-8-q*8,12,8+q*8)});
+/* --- venditori di candele e di profumi: cera bianca e colorata, boccette, un incensiere che fuma --- */
+PR.fzcandele=FZ((g,x,y,t,a,k)=>{rect(g,CD2,x-46,y-30,92,5);[-40,40].forEach(o=>rect(g,CD,x+o-3,y-26,5,26));poly(g,'#2a8a5a',[[x-54,y-96],[x+54,y-96],[x+44,y-76],[x-44,y-76]]);
+ for(let q=0;q<8;q++){const hh=18+(q%3)*8;rect(g,['#f0ead8','#e8b030','#c8402a','#2a5aa8','#f0ead8','#d8a0b8','#2a8a5a','#f0ead8'][q],x-40+q*10,y-30-hh,7,hh);dot(g,'#ffcc66',x-36.5+q*10,y-32-hh,2)}
+ for(let q=0;q<4;q++){rect(g,['#d8a0b8','#e8c068','#8ac8e8','#a0d8a0'][q],x+14+q*7,y-42,5,12);rect(g,'#c8a040',x+15+q*7,y-45,3,3)}
+ rect(g,'#c8a040',x+36,y-38,10,8);for(let q=0;q<4;q++){const u=(t*.3+q/4)%1;el(g,'rgba(235,235,235,'+(.42*(1-u))+')',x+41+Math.sin(u*6+q)*6,y-42-u*50,2.6+u*4,2.6+u*4)}});
+/* --- Cartello discreto in più lingue sulla soglia di un luogo di preghiera --- */
+PR.fzcartello=FZ((g,x,y,t,a,k)=>{rect(g,IR,x-1.4,y-70,2.8,70);rect(g,'#2a5aa8',x-24,y-100,48,32);rect(g,ST,x-22,y-98,44,28);txt(g,'PRIÈRE',x,y-88,7,'#1c3a78');txt(g,'صلاة',x,y-76,8,'#1c3a78')});
+
+/* =========================== ZONA 3 · Concerie Chouara =========================== */
+/* una vasca rotonda di pietra vista dall’alto: bordo, liquido di colore c */
+const vasca=(g,x,y,rx,ry,c,t,s)=>{el(g,'#b8a888',x,y,rx+3,ry+2);el(g,'#8a7a62',x,y+1,rx+3,ry+1.6);el(g,c,x,y,rx,ry);el(g,'rgba(255,255,255,.18)',x-rx*.3,y-ry*.3,rx*.5,ry*.35);if(t!==undefined&&hr(s)>.5)rect(g,'rgba(255,255,255,.3)',x-rx*.5+((t*8+s*9)%(rx)),y,6,1)};
+/* --- Chouara: decine di vasche rotonde di pietra con i colori, uomini nell’acqua, pelli a mucchi, il muro di case tutt’intorno --- */
+PR.fzchouara=FZ((g,x,y,t,a,k)=>{
+ /* il muro di case ocra intorno alle vasche */
+ for(let q=0;q<10;q++){const hh=64+hr(q*3)*40;rect(g,[SA,SA2,'#cfa468','#d8b888'][q%4],x-210+q*42,y-96-hh,42,hh+20);rect(g,'rgba(0,0,0,.12)',x-210+q*42+34,y-96-hh,8,hh+20);for(let r=0;r<hh/26;r++)rect(g,lit(k,q*5+r)?LIT:'#4a3a2c',x-202+q*42,y-86-hh+r*26,8,10);rect(g,SA3,x-212+q*42,y-100-hh,46,5);
+  if(hr(q)>.55)for(let s=0;s<3;s++){const hc=['#b83a2a','#e8b030','#2a5aa8'][(q+s)%3];poly(g,hc,[[x-206+q*42+s*12,y-96-hh+4],[x-196+q*42+s*12,y-96-hh+4],[x-197+q*42+s*12,y-96-hh+22],[x-205+q*42+s*12,y-96-hh+20]])}}
+ /* il piano delle vasche */
+ rect(g,'#a89878',x-212,y-86,424,86);for(let r=0;r<5;r++)rect(g,'rgba(0,0,0,.06)',x-212,y-80+r*17,424,2);
+ const C=['#f0ead8','#c8402a','#e8b030','#2a5aa8','#e8802a','#3a9a5a','#f0ead8','#8a5a34','#c8402a','#f0ead8','#e8b030','#2a5aa8'];
+ for(let r=0;r<4;r++){const n=8-(r>>1),yy=y-70+r*21,rx=24+r*3.4,ry=7+r*2.4;for(let q=0;q<n;q++){const xx=x-190+q*(380/(n-1))+(r%2)*10;vasca(g,xx,yy,rx,ry,C[(q*5+r*3)%12],t,q+r*9);
+   if(hr(q*3+r)>.62){const wy=yy+1;pers(g,xx,wy+8,t+q,{s:.5,top:['#c8402a','#2a5aa8','#e8e0cc'][(q+r)%3],bot:'#3a3e48',hair:'#2a1a10'});el(g,C[(q*5+r*3)%12],xx,wy+3,rx*.8,ry*.5)}}}
+ /* mucchi di pelli */
+ [[-180,'#c8402a'],[170,'#e8b030'],[-60,'#2a5aa8'],[90,'#8a5a34']].forEach((p,i)=>{for(let q=0;q<4;q++)el(g,p[1],x+p[0]+q*3,y-6-q*4,16-q*2,4);rect(g,'rgba(0,0,0,.14)',x+p[0]-16,y-4,30,2)});
+ /* terrazza con la ringhiera in primo piano */
+ rect(g,'#d8ceb6',x-212,y-12,424,12);rect(g,IR,x-212,y-30,424,2);for(let q=0;q<22;q++)rect(g,IR,x-210+q*19.2,y-30,1.6,18)});
+/* --- Le vasche e i colori: un conciatore che impasta una pelle coi piedi, secchi con le polveri, mani macchiate, vapore --- */
+PR.fzvasche=FZ((g,x,y,t,a,k)=>{vasca(g,x,y-30,70,18,'#c8402a',t,3);el(g,'#d8503a',x,y-30,62,15);
+ /* il conciatore dentro la vasca */
+ pers(g,x-4,y-28,t*2,{s:.8,top:'#c8e0f0',bot:'#3a3e48',hair:'#2a1a10',skin:'#b88660'});el(g,'#c8402a',x-4,y-28,36,6);rect(g,'rgba(255,255,255,.2)',x-30,y-28,60,1);
+ /* mucchi di pelli rosse, gialle, blu */
+ [[-90,'#e8b030'],[-80,'#2a5aa8'],[80,'#c8402a'],[92,'#e8802a']].forEach((p,i)=>{for(let q=0;q<5;q++)el(g,p[1],x+p[0],y-4-q*4,22-q*2,4.4)});
+ /* secchi con le polveri colorate */
+ [[-50,'#e8b030'],[46,'#2a5aa8'],[62,'#c8402a']].forEach((p,i)=>{poly(g,'#8a8e94',[[x+p[0]-8,y],[x+p[0]-10,y-14],[x+p[0]+10,y-14],[x+p[0]+8,y]]);el(g,p[1],x+p[0],y-14,10,3)});
+ for(let q=0;q<3;q++){const u=(t*.25+q/3)%1;el(g,'rgba(240,240,240,'+(.3*(1-u))+')',x-20+q*22+Math.sin(u*5)*6,y-48-u*40,10+u*8,5+u*5)}});
+/* --- Le terrazze e la menta: ringhiera di ferro, pile di borse e di babouches, il commesso che porge il rametto, i tetti con le pelli --- */
+PR.fzterrazza=FZ((g,x,y,t,a,k)=>{rect(g,'#d8ceb6',x-140,y-8,280,8);rect(g,SA,x-140,y-120,280,112);rect(g,'rgba(0,0,0,.12)',x+126,y-120,14,112);rect(g,SA2,x-142,y-124,284,6);
+ for(let q=0;q<6;q++)poly(g,['#b83a2a','#e8b030','#2a5aa8','#c86a2a','#2a8a5a','#e8b030'][q],[[x-130+q*22,y-124],[x-112+q*22,y-124],[x-114+q*22,y-106],[x-128+q*22,y-110]]);
+ rect(g,IR,x-140,y-40,280,2);for(let q=0;q<15;q++)rect(g,IR,x-138+q*19.6,y-40,1.6,32);
+ /* scaffali con borse, giacche e babouches */
+ for(let r=0;r<3;r++){rect(g,CD2,x-130,y-96+r*28,150,3);for(let q=0;q<6;q++){const c=['#c8402a','#e8b030','#2a5aa8','#8a5a34','#e8802a','#2a8a5a'][(q+r*2)%6];rect(g,c,x-124+q*24,y-114+r*28,18,14);rect(g,'rgba(0,0,0,.18)',x-124+q*24,y-104+r*28,18,2);ln(g,'#6a4a22',1.4,[x-120+q*24,y-114+r*28,x-116+q*24,y-120+r*28,x-110+q*24,y-114+r*28])}}
+ for(let q=0;q<4;q++)for(let s=0;s<2;s++)el(g,['#e8b030','#c8402a','#2a5aa8','#f0ead8'][q],x+36+q*18,y-18-s*7,8,4);
+ /* il commesso con il rametto di menta */
+ pers(g,x+36,y-8,t,{s:.95,top:'#f0e8d0',bot:'#3a3e48',hair:'#2a1a10'});ln(g,'#d8a078',3,[x+28,y-70,x+14,y-62]);ln(g,'#2f8a3a',1.6,[x+14,y-62,x+8,y-70]);dot(g,'#4aaa4a',x+7,y-71,3);dot(g,'#4aaa4a',x+11,y-68,2.6);
+ rect(g,'#c8402a',x-100,y-136,130,14);txt(g,'MAROQUINERIE',x-35,y-125,8,'#f0ead8')});
+/* --- le pelli stese ad asciugare sui tetti: rosse, gialle e blu, con i piccioni --- */
+PR.fzpelli=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-100,y-46,200,46);rect(g,SA2,x-102,y-50,204,6);for(let q=0;q<9;q++){const hc=['#c8402a','#e8b030','#2a5aa8','#e8802a','#8a5a34'][q%5];poly(g,hc,[[x-96+q*22,y-48],[x-76+q*22,y-48],[x-74+q*22,y-20],[x-84+q*22,y-12],[x-94+q*22,y-24]]);rect(g,'rgba(0,0,0,.14)',x-96+q*22,y-48,20,3)}
+ for(let q=0;q<3;q++){const bx=x-70+q*60;el(g,'#8a8e98',bx,y-54,5,3.6);dot(g,'#6a6e78',bx+4,y-58,2.6)}});
+
+/* =========================== ZONA 4 · Place Seffarine, Attarine e Bou Inania =========================== */
+/* pila di rame lucido: vassoi, teiere, pentole; con i riflessi che scintillano */
+const rame=(g,x,y,t,s)=>{for(let q=0;q<3;q++){el(g,q%2?RA:RA2,x,y-4-q*6,22-q*2,4);rect(g,'rgba(0,0,0,.2)',x-20,y-q*6,40,1)}poly(g,RA2,[[x-8,y-22],[x+8,y-22],[x+12,y-34],[x-12,y-34]]);rect(g,'#8a4a1a',x-3,y-38,6,4);ln(g,RA,2,[x+10,y-32,x+20,y-26,x+11,y-24]);if(Math.sin(t*3+s)>.85)dot(g,'rgba(255,250,220,.9)',x-3+s%5,y-28,1.6)};
+/* --- Place Seffarine: la piazza dei ramai, le botteghe di rame, i tavolini del caffè, la madrasa con l’ingresso basso, l’hammam --- */
+PR.fzseffarine=FZ((g,x,y,t,a,k)=>{rect(g,'#5a3c26',x-170,y-130,340,130);rect(g,'rgba(255,255,255,.1)',x-170,y-130,5,130);rect(g,SA3,x-174,y-136,348,8);
+ /* il muro scuro di cedro con gli scaffali di rame */
+ for(let r=0;r<3;r++){rect(g,CD2,x-160,y-100+r*30,230,3);for(let q=0;q<9;q++)rame(g,x-146+q*24,y-98+r*30,t,q+r*3)}
+ /* martelli appesi e lampade di rame */
+ for(let q=0;q<5;q++){ln(g,'#6a6e74',1.4,[x+88+q*14,y-112,x+88+q*14,y-96]);rect(g,'#6a6e74',x+84+q*14,y-98,8,3)}for(let q=0;q<3;q++){poly(g,RA2,[[x+92+q*22,y-62],[x+108+q*22,y-62],[x+104+q*22,y-44],[x+96+q*22,y-44]]);ln(g,RA,1.4,[x+100+q*22,y-62,x+100+q*22,y-74])}
+ /* ingresso basso della madrasa */
+ rect(g,SA,x+110,y-60,50,60);fer(g,'#2a1c14',x+122,y,26,48);zel(g,x+112,y-62,46,8,1);
+ /* parasole e tavolini del caffè */
+ poly(g,'#f0ead8',[[x-60,y-86],[x+10,y-86],[x+24,y-70],[x-74,y-70]]);for(let q=0;q<4;q++)poly(g,'#c8402a',[[x-60+q*18,y-86],[x-50+q*18,y-86],[x-54+q*18,y-70],[x-64+q*18,y-70]]);rect(g,CD,x-27,y-70,3,70);
+ [-48,-4,40].forEach(o=>{rect(g,'#6a6e74',x+o-9,y-24,18,2);rect(g,'#6a6e74',x+o-1,y-22,2,22);ln(g,'#c8a868',2,[x+o-18,y,x+o-17,y-14,x+o-12,y-14]);rect(g,'rgba(220,235,240,.8)',x+o-3,y-31,3,6)});
+ /* il bagliore dei metalli e l’eco dei martelli */
+ for(let q=0;q<4;q++){const s=Math.max(0,Math.sin(t*4+q*1.7));if(s>.6)dot(g,'rgba(255,250,210,'+s+')',x-120+q*60,y-60-q*8,2+s)}});
+/* --- Madrasa Attarine: il piccolo cortile con la fontana al centro, lo zellige, lo stucco bianco intagliato, le travi di cedro e la luce che scende --- */
+PR.fzattarine=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-120,y-150,240,150);rect(g,SA3,x-124,y-156,248,8);rect(g,CD2,x-128,y-166,256,12);for(let q=0;q<14;q++)rect(g,CD3,x-124+q*18,y-160,8,6);
+ /* facciata: portale e finestre con schermi di legno */
+ rect(g,ST2,x-38,y-136,76,136);rect(g,ST,x-34,y-132,68,132);for(let r=0;r<10;r++)for(let q=0;q<6;q++)if((r+q)%2==0)rect(g,'rgba(120,100,70,.16)',x-34+q*11.3,y-132+r*13,9,9);
+ fer(g,CD3,x-26,y,52,116);fer(g,'#1c1612',x-22,y,44,108);
+ /* nel cortile: fontana e pavimento di zellige */
+ rect(g,k>.15?'rgb(255,226,170)':'#e8dcc0',x-22,y-100,44,96);zel(g,x-22,y-30,44,26,2);el(g,'#2a6ab8',x,y-24,14,4);el(g,'rgba(180,220,245,.8)',x,y-25,10,2.6);rect(g,ST,x-3,y-36,6,12);dot(g,'rgba(190,230,255,.8)',x,y-40+Math.sin(t*5)*1.5,2.2);
+ rect(g,'rgba(255,240,190,.35)',x-14,y-100,10,68);poly(g,'rgba(255,240,190,'+(.2*(1-k))+')',[[x-18,y-108],[x+2,y-108],[x+18,y-4],[x-4,y-4]]);
+ /* le finestrelle laterali con gli schermi di legno */
+ [-100,-80,66,86].forEach(o=>{rect(g,CD3,x+o-1,y-120,18,26);rect(g,k>.2?LIT:'#4a5a6a',x+o+1,y-118,14,22);for(let s=0;s<4;s++)rect(g,CD2,x+o+1+s*3.8,y-118,1.4,22);for(let s=0;s<4;s++)rect(g,CD2,x+o+1,y-116+s*5.6,14,1.4)});
+ zel(g,x-120,y-26,40,26,1);zel(g,x+80,y-26,40,26,3)});
+/* --- Madrasa Bou Inania: il grande portale di cedro scolpito, il minareto di tegole verdi, ombre geometriche sul pavimento --- */
+PR.fzbouinania=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-130,y-140,260,140);rect(g,'rgba(0,0,0,.14)',x+118,y-140,12,140);rect(g,'rgba(255,255,255,.14)',x-130,y-140,5,140);
+ mina(g,x+60,y-140,52,160,VR,k,4);for(let q=0;q<3;q++)for(let r=0;r<6;r++){rect(g,VR2,x+64+q*14,y-168+r*16,10,10);rect(g,VR,x+70+q*14,y-162+r*16,4,4)}
+ /* il portale con la trabeazione di cedro */
+ rect(g,CD3,x-84,y-132,104,132);zel(g,x-80,y-128,96,18,2);fer(g,ST,x-60,y,60,108);fer(g,'#1c1612',x-54,y,48,100);
+ pcd(g,x-54,y-4,24,86);pcd(g,x-30,y-4,24,86);fer(g,'rgba(255,230,160,.18)',x-54,y-4,48,90);
+ poly(g,CD2,[[x-96,y-136],[x+32,y-136],[x+20,y-150],[x-84,y-150]]);for(let q=0;q<9;q++)rect(g,CD3,x-90+q*14,y-146,6,9);tegole(g,x-32,y-150,150,18);
+ lamp(g,x-70,y-100,k,1);lamp(g,x+10,y-100,k,1);
+ /* ombre geometriche e persone che guardano */
+ for(let q=0;q<5;q++)poly(g,'rgba(40,24,10,.12)',[[x-100+q*36,y-6],[x-82+q*36,y-14],[x-64+q*36,y-6],[x-82+q*36,y-1]]);
+ pers(g,x+34,y,t,{s:.85,top:'#e8e0cc',bot:'#5a4a3a'});pers(g,x+48,y,t+1,{s:.85,top:'#3a6a9a',bot:'#2a2a36',hair:'#c8b890'})});
+/* --- Dar al-Magana: l’orologio ad acqua, la parete con le piccole finestre e le porticine, le mensole di cedro e le ciotole di ottone --- */
+PR.fzclock=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-110,y-170,220,170);rect(g,'rgba(255,255,255,.14)',x-110,y-170,5,170);rect(g,'rgba(0,0,0,.14)',x+98,y-170,12,170);rect(g,CD2,x-114,y-176,228,10);for(let q=0;q<11;q++)rect(g,CD3,x-108+q*20,y-168,7,8);
+ for(let q=0;q<13;q++){const bx=x-100+q*16;rect(g,CD3,bx-1,y-148,13,20);rect(g,'#14110f',bx,y-146,11,16);poly(g,CD2,[[bx-2,y-110],[bx+14,y-110],[bx+10,y-104],[bx+2,y-104]])}
+ for(let q=0;q<12;q++){const bx=x-92+q*16;rect(g,CD,bx,y-100,8,16);el(g,'#c8a040',bx+4,y-80,6.4,3.4);rect(g,'#a88830',bx-2.4,y-82,13,2);if(Math.sin(t*3+q*1.1)>.9)dot(g,'rgba(255,250,200,.9)',bx+2,y-82,1.6)}
+ rect(g,SA3,x-110,y-60,220,6);pcd(g,x-20,y,40,60);ln(g,'#c8a040',1.2,[x+60,y-120,x+60,y-30]);lamp(g,x+80,y-60,k,1)});
+/* --- fontanella-riposo: una vasca di rame con le brocche --- */
+PR.fzrame=FZ((g,x,y,t,a,k)=>{rect(g,CD2,x-50,y-24,100,5);[-44,44].forEach(o=>rect(g,CD,x+o-3,y-20,5,20));for(let q=0;q<6;q++){const bx=x-40+q*16;rame(g,bx,y-26,t,q)}poly(g,'#c8402a',[[x-56,y-86],[x+56,y-86],[x+46,y-66],[x-46,y-66]]);rect(g,CD,x-46,y-66,3,42);rect(g,CD,x+43,y-66,3,42)});
+
+/* =========================== ZONA 5 · Place Nejjarine e il souk delle spezie =========================== */
+/* --- Fontana di Nejjarine: nicchia di zellige con stelle, due colonne, tettuccio di cedro intagliato, un rubinetto di metallo --- */
+PR.fznejjarine=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-90,y-170,180,170);rect(g,'rgba(0,0,0,.12)',x+80,y-170,10,170);
+ zel(g,x-52,y-130,104,120,1);for(let r=0;r<3;r++)for(let q=0;q<3;q++)star8(g,(q+r)%2?'#e8b830':'#2a8a5a',x-30+q*30,y-110+r*34,9);
+ /* la nicchia */
+ fer(g,'#14100c',x-24,y-10,48,86);fer(g,'rgb(60,120,200)',x-20,y-10,40,80);fer(g,'#1c3a68',x-16,y-10,32,70);
+ rect(g,'#8a8e94',x-14,y-30,28,3);rect(g,'#c8a040',x-3,y-52,6,10);for(let q=0;q<4;q++)rect(g,'rgba(190,230,255,.85)',x-.8,y-42+((t*45+q*6)%30),1.6,5);el(g,'rgba(120,180,225,.8)',x,y-10,22,3.4);
+ /* colonne e tettuccio di cedro intagliato */
+ [-44,44].forEach(o=>{rect(g,ST,x+o-5,y-130,10,120);rect(g,'rgba(0,0,0,.14)',x+o+1,y-130,4,120);rect(g,'#2a8a5a',x+o-7,y-134,14,6)});
+ poly(g,CD2,[[x-76,y-134],[x+76,y-134],[x+62,y-160],[x-62,y-160]]);for(let q=0;q<10;q++){rect(g,CD3,x-68+q*14,y-156,5,18);dot(g,CD3,x-66+q*14,y-138,2.4)}poly(g,CD3,[[x-80,y-134],[x+80,y-134],[x+84,y-128],[x-84,y-128]]);tegole(g,x,y-160,150,20);
+ rect(g,'#9a948a',x-60,y-4,120,4);pers(g,x+62,y,t,{s:.85,top:'#d8c8a8',bot:'#4a3a2a'})});
+/* --- il fondouk di Nejjarine: il Museo del legno, le gallerie di cedro intagliato su tre piani attorno al cortile, il portale ad arco a ferro di cavallo --- */
+PR.fzfondouk=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-130,y-190,260,190);rect(g,'rgba(255,255,255,.14)',x-130,y-190,6,190);rect(g,'rgba(0,0,0,.14)',x+116,y-190,14,190);rect(g,SA3,x-134,y-196,268,8);
+ /* il cortile visto attraverso il portale: tre gallerie di cedro */
+ rect(g,k>.15?'rgb(255,222,160)':'#e0d2ae',x-70,y-176,140,172);for(let f=0;f<3;f++){const yy=y-150+f*50;rect(g,CD2,x-70,yy,140,5);for(let q=0;q<12;q++){rect(g,CD3,x-68+q*12,yy-26,3,26);ar(g,CD,x-64+q*12,yy,8,18)}rect(g,CD,x-70,yy-28,140,3);for(let q=0;q<8;q++)rect(g,'rgba(0,0,0,.22)',x-68+q*18,yy-24,1.2,22)}
+ /* il grande portale */
+ fer(g,ST,x-40,y,80,120);fer(g,CD3,x-34,y,68,112);fer(g,'#1c1612',x-28,y,56,104);pcd(g,x-28,y-4,28,92);pcd(g,x,y-4,28,92);
+ /* schermi di legno alle finestre dei piani alti */
+ [-118,86].forEach(o=>{for(let r=0;r<3;r++){rect(g,CD3,x+o-1,y-176+r*50,32,36);rect(g,k>.2?LIT:'#4a5a6a',x+o+1,y-174+r*50,28,32);for(let s=0;s<5;s++)rect(g,CD2,x+o+1+s*6.4,y-174+r*50,1.6,32);for(let s=0;s<4;s++)rect(g,CD2,x+o+1,y-172+r*50+s*8,28,1.6)}});
+ rect(g,'#1c3a58',x-50,y-132,100,12);txt(g,'MUSÉE DU BOIS',x,y-123,7,'#f0ead8');lamp(g,x-52,y-100,k,1);lamp(g,x+52,y-100,k,1)});
+/* --- Souk degli Attarine: coni di spezie colorate, sacchi aperti, barattoli di vetro, erbe secche, bilance, un mercante seduto --- */
+PR.fzspezie=FZ((g,x,y,t,a,k)=>{rect(g,SA2,x-140,y-150,280,150);rect(g,'rgba(0,0,0,.16)',x-140,y-150,280,16);rect(g,CD2,x-142,y-140,284,6);for(let q=0;q<7;q++)rect(g,CD3,x-140+q*47,y-142,4,12);
+ /* mensole con i barattoli di vetro */
+ for(let r=0;r<2;r++){rect(g,CD,x-130,y-124+r*30,260,3);for(let q=0;q<10;q++){const c=['#e8b030','#c8402a','#e8802a','#f0ead8','#8a5a34','#4a8a3a'][(q+r)%6];rect(g,'rgba(210,230,235,.5)',x-124+q*26,y-144+r*30+14,16,16);rect(g,c,x-122+q*26,y-138+r*30+14,12,10);rect(g,'#8a8e94',x-124+q*26,y-146+r*30+14,16,3)}}
+ /* erbe secche appese */
+ for(let q=0;q<6;q++){ln(g,'#8a6a3a',1,[x-110+q*34,y-86,x-110+q*34,y-74]);for(let s=0;s<4;s++)ln(g,['#6a8a3a','#9a8a4a','#b87a4a'][q%3],1.8,[x-110+q*34,y-74,x-114+q*34+s*3,y-58])}
+ /* il banco con i coni di spezie */
+ rect(g,CD,x-130,y-34,260,6);rect(g,CD2,x-130,y-28,260,28);const C=['#e8b030','#c8402a','#e8802a','#a8602a','#4a8a3a','#8a2a2a','#f0c050','#d8a050'];
+ for(let q=0;q<8;q++){const bx=x-114+q*33;poly(g,C[q],[[bx-13,y-34],[bx,y-60-(q%3)*4],[bx+13,y-34]]);el(g,C[q],bx,y-34,13,3.4);poly(g,'rgba(255,255,255,.16)',[[bx-4,y-36],[bx,y-58-(q%3)*4],[bx-8,y-36]])}
+ for(let q=0;q<3;q++){rect(g,'#c8b078',x+88+q*10,y-44,8,10);dot(g,'#8a6a3a',x+92+q*10,y-46,3)}
+ pers(g,x-30,y-4,t,{s:.8,top:'#e8e0cc',bot:'#6a4a3a',hair:'#2a1a10'});ln(g,'#c8b078',1.6,[x-20,y-34,x-20,y-48]);ln(g,'#c8b078',2.4,[x-28,y-48,x-12,y-48])});
+/* --- La cucina e la tavola di Fez: nicchia con pentole e mestoli, tavola bassa con couscous, pastilla, tajine, teiera d’argento, pane --- */
+PR.fztavola=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-130,y-150,260,150);rect(g,'rgba(255,255,255,.14)',x-130,y-150,5,150);rect(g,SA3,x-134,y-156,268,8);
+ /* la nicchia della cucina con le mensole */
+ fer(g,'#2a1c14',x-110,y-4,90,120);rect(g,k>.12?'rgb(255,214,150)':'#8a6a48',x-104,y-100,78,96);for(let r=0;r<3;r++){rect(g,CD2,x-104,y-82+r*26,78,3);for(let q=0;q<4;q++){const hh=12+(q+r)%3*4;rect(g,[RA,'#9aa0a8','#c8402a','#d8c890'][(q+r)%4],x-98+q*18,y-84+r*26-hh,13,hh);el(g,RA2,x-91.5+q*18,y-84+r*26-hh,7,2)}}
+ for(let q=0;q<4;q++){ln(g,'#6a6e74',1.2,[x-98+q*18,y-108,x-98+q*18,y-96]);rect(g,'#c8a868',x-100+q*18,y-96,5,9)}
+ /* finestrella con tendina a fiori */
+ rect(g,CD3,x+50,y-112,36,36);rect(g,'#9ac8e0',x+52,y-110,32,32);poly(g,'#f0ead8',[[x+52,y-110],[x+68,y-110],[x+52,y-90]]);for(let q=0;q<5;q++)dot(g,'#d85a7a',x+56+q*5,y-104+(q%2)*4,1.8);
+ /* la tavola bassa */
+ rect(g,CD,x-30,y-26,150,5);[-24,100].forEach(o=>rect(g,CD3,x+o,y-22,5,22));rect(g,'#2a5aa8',x-24,y-30,138,4);
+ /* couscous con le verdure */
+ el(g,'#f0ead8',x+6,y-34,28,5);for(let q=0;q<12;q++)dot(g,'#f0d890',x-14+q*3.2,y-42-Math.sin(q*.5)*6,3.6);dot(g,'#e8802a',x-10,y-46,3);dot(g,'#4a9a3a',x+10,y-48,3);dot(g,'#f0ead8',x,y-50,2.6);
+ /* pastilla con lo zucchero a velo */
+ el(g,'#d8a850',x+58,y-33,20,4);el(g,'#f6f2e6',x+58,y-36,17,3);for(let q=0;q<4;q++)ln(g,'#c8a868',.8,[x+44+q*7,y-38,x+50+q*7,y-34]);
+ /* tajine con il coperchio conico */
+ el(g,RA,x+96,y-32,14,3.4);poly(g,'#b8602a',[[x+84,y-33],[x+90,y-34],[x+96,y-58],[x+102,y-34],[x+108,y-33]]);dot(g,'#6a3a1a',x+96,y-59,2);for(let q=0;q<3;q++){const u=(t*.3+q/3)%1;el(g,'rgba(240,240,240,'+(.4*(1-u))+')',x+96+Math.sin(u*5+q)*4,y-62-u*30,3+u*4,3+u*4)}
+ /* teiera d’argento e bicchieri; pane tondo */
+ rect(g,'#c8ccd0',x-12,y-46,10,14);poly(g,'#c8ccd0',[[x-14,y-46],[x,y-46],[x-4,y-54],[x-10,y-54]]);ln(g,'#c8ccd0',2,[x-2,y-42,x+6,y-38]);for(let q=0;q<3;q++){rect(g,'rgba(220,235,240,.8)',x-30+q*5,y-38,3,8);rect(g,'#4aaa4a',x-30+q*5,y-41,2.4,3)}
+ for(let q=0;q<3;q++)el(g,'#d8a850',x+30+q*8,y-31-q*3,9,2.4)});
+/* --- bottega dei falegnami: sedie e cassapanche di cedro intagliato, assi, trucioli --- */
+PR.fzfalegnami=FZ((g,x,y,t,a,k)=>{rect(g,CD2,x-90,y-100,180,100);rect(g,'rgba(0,0,0,.18)',x-90,y-100,180,10);for(let q=0;q<9;q++)rect(g,'rgba(0,0,0,.1)',x-90+q*20,y-100,1.4,100);
+ /* assi appoggiate */
+ for(let q=0;q<5;q++)rect(g,['#c8a070','#b88a58','#d8b080'][q%3],x-80+q*9,y-96,7,86);
+ /* sedie e cassapanche intagliate */
+ [-10,40].forEach(o=>{rect(g,CD3,x+o,y-52,26,3);rect(g,CD3,x+o,y-50,3,50);rect(g,CD3,x+o+23,y-50,3,50);rect(g,CD3,x+o,y-80,3,28);rect(g,CD3,x+o+23,y-80,3,28);for(let q=0;q<4;q++)rect(g,CD,x+o+4+q*5,y-78,2,26)});
+ rect(g,CD,x+70,y-34,60,34);rect(g,CD3,x+70,y-34,60,4);for(let q=0;q<5;q++)star8(g,'#c8a040',x+80+q*10,y-18,3.4);
+ for(let q=0;q<7;q++)ln(g,'#e8d8b0',1.2,[x-100+q*12,y-2,x-96+q*12,y-5,x-92+q*12,y-1])});
+/* --- vassoio di dolci con il miele: chebakia, m’hencha a spirale, sellou --- */
+PR.fzdolci=FZ((g,x,y,t,a,k)=>{rect(g,CD2,x-50,y-30,100,5);[-44,44].forEach(o=>rect(g,CD,x+o-3,y-26,5,26));el(g,'#c8ccd0',x-20,y-36,26,4);for(let q=0;q<8;q++)el(g,'#a8602a',x-38+q*5.6,y-38-(q%2)*2,4,3);for(let q=0;q<8;q++)dot(g,'#f0e0a0',x-38+q*5.6,y-40-(q%2)*2,1);
+ el(g,'#c8ccd0',x+28,y-36,22,4);g.strokeStyle=tn('#d8a850');g.lineWidth=3;g.beginPath();for(let q=0;q<40;q++){const u=q/40,r=2+u*14;g.lineTo(x+28+Math.cos(u*13)*r,y-38+Math.sin(u*13)*r*.34)}g.stroke();dot(g,'#f6f2e6',x+28,y-39,2);
+ poly(g,'#2a8a5a',[[x-56,y-96],[x+56,y-96],[x+46,y-78],[x-46,y-78]]);rect(g,CD,x-46,y-78,3,48);rect(g,CD,x+43,y-78,3,48);for(let q=0;q<3;q++)dot(g,'#f2c82a',x-20+q*20,y-86,2)});
+
+/* =========================== ZONA 6 · Fès el-Jdid, le porte reali e il Mellah =========================== */
+/* --- Il Mechouar: la grande piazza fortificata, alte mura merlate chiare con un arco, persone minuscole, il minareto sullo sfondo --- */
+PR.fzmechouar=FZ((g,x,y,t,a,k)=>{const W='#e6d8b8',W2='#d4c4a0';mina(g,x+130,y-110,34,120,VR,k,2);
+ rect(g,W,x-200,y-130,400,130);rect(g,'rgba(255,255,255,.18)',x-200,y-130,6,130);rect(g,'rgba(0,0,0,.1)',x+186,y-130,14,130);for(let q=0;q<20;q++){rect(g,W,x-200+q*20,y-142,13,14);rect(g,W2,x-200+q*20+9,y-142,4,14)}
+ rect(g,W2,x-204,y-132,408,4);fer(g,'#2a2018',x-34,y,68,96);fer(g,k>.2?'rgb(255,210,140)':'#5a4a38',x-28,y,56,88);for(let q=0;q<2;q++)ar(g,'#2a2018',x-160+q*270,y-30,24,70);
+ for(let q=0;q<3;q++)rect(g,W2,x-178+q*140,y-96,22,3);
+ /* il grande selciato quasi vuoto e persone minuscole */
+ rect(g,'#d8cdb0',x-210,y-4,420,4);for(let q=0;q<5;q++)pers(g,x-150+q*70+hr(q)*20,y-2,t+q,{s:.38,top:['#c8402a','#2a5aa8','#e8e0cc','#2a8a5a','#e8b030'][q],bot:'#4a3a2a'})});
+/* --- Le porte del Palazzo Reale: sette grandi porte di ottone con motivi geometrici, cornici di zellige verde e blu, tettucci di cedro --- */
+PR.fzottone=FZ((g,x,y,t,a,k)=>{rect(g,'#e6d8b8',x-170,y-150,340,150);rect(g,'rgba(255,255,255,.18)',x-170,y-150,6,150);rect(g,'rgba(0,0,0,.1)',x+158,y-150,12,150);rect(g,'#d4c4a0',x-174,y-154,348,6);
+ /* tettuccio di cedro con tegole verdi */
+ poly(g,CD2,[[x-176,y-142],[x+176,y-142],[x+160,y-168],[x-160,y-168]]);for(let q=0;q<14;q++)rect(g,CD3,x-168+q*25,y-164,8,20);rect(g,VR,x-160,y-174,320,8);
+ for(let q=0;q<7;q++){const bx=x-160+q*46;zel(g,bx,y-136,40,100,q);fer(g,ST,bx+3,y,34,98);fer(g,'rgb(200,150,40)',bx+5,y,30,94);
+  const gr=g.createLinearGradient(bx,0,bx+34,0);gr.addColorStop(0,'rgba(255,230,140,.9)');gr.addColorStop(.5,'rgba(190,130,30,.5)');gr.addColorStop(1,'rgba(255,215,120,.9)');g.fillStyle=gr;g.fillRect(bx+5,y-60,30,56);
+    for(let r=0;r<3;r++)for(let s=0;s<2;s++)star8(g,'rgba(110,64,18,.75)',bx+13+s*14,y-20-r*22,5);dot(g,'rgb(110,64,18)',bx+17,y-48,3.4);
+  const sw=(Math.sin(t*1.4+q*.6)+1)/2;if(sw>.7)rect(g,'rgba(255,255,230,'+((sw-.7)*2)+')',bx+8,y-80,5,70)}
+ lamp(g,x-176,y-120,k,1.2);lamp(g,x+176,y-120,k,1.2)});
+/* --- Il Mellah: case a più piani con i balconi di legno sporgenti sulla strada, e la piccola sinagoga con lampade appese --- */
+PR.fzmellah=FZ((g,x,y,t,a,k)=>{for(let q=0;q<3;q++){const bx=x-120+q*84,hh=150+q%2*20;rect(g,['#e0d0b0','#d8c8a8','#e8dcc0'][q],bx,y-hh,84,hh);rect(g,'rgba(0,0,0,.1)',bx+72,y-hh,12,hh);rect(g,'rgba(255,255,255,.14)',bx,y-hh,4,hh);
+  for(let r=0;r<3;r++){const by=y-hh+16+r*40;rect(g,CD2,bx+8,by+22,68,4);rect(g,CD3,bx+10,by+4,64,18);rect(g,k>.2&&hr(q*4+r)>.3?LIT:'#5a4a3a',bx+14,by+6,16,13);rect(g,k>.2&&hr(q*5+r)>.3?LIT:'#5a4a3a',bx+44,by+6,16,13);for(let s=0;s<9;s++)rect(g,'rgba(0,0,0,.3)',bx+11+s*7.2,by+4,1.4,18);rect(g,CD2,bx+6,by,72,5)}
+  rect(g,CD2,bx-2,y-hh-5,88,6)}
+ /* la sinagoga: porta ad arco e lampada appesa */
+ rect(g,'#d0c0a0',x+130,y-110,66,110);fer(g,CD3,x+144,y,38,70);fer(g,k>.15?'rgb(255,214,150)':'#6a5030',x+148,y,30,62);lamp(g,x+163,y-94,k,1.3);lamp(g,x+163,y-62,k,.9);rect(g,CD2,x+128,y-114,70,6);rect(g,'#2a5aa8',x+140,y-100,46,10)});
+/* --- il cimitero con le tombe bianche in pendio, i cipressi, i gatti sui muretti --- */
+PR.fzcimitero=FZ((g,x,y,t,a,k)=>{poly(g,'#c8b88a',[[x-130,y],[x-130,y-30],[x+130,y-90],[x+130,y]]);for(let r=0;r<4;r++)for(let q=0;q<9;q++){const bx=x-120+q*26,by=y-6-r*13-q*(60/9)*.7+q*0;rect(g,'#f4f0e6',bx,by-10+r*0,16,8);rect(g,'rgba(0,0,0,.14)',bx+11,by-10,5,8);el(g,'#f4f0e6',bx+8,by-10,8,2.4)}
+ cipr(g,x-100,y-34,70);cipr(g,x+110,y-92,80);rect(g,SA3,x-134,y-4,268,5);gatto(g,x+30,y-52,t,'#d8d0c0')});
+const cipr=(g,x,y,h)=>{poly(g,'#1d3a28',[[x-h*.1,y],[x-h*.12,y-h*.5],[x,y-h],[x+h*.12,y-h*.5],[x+h*.1,y]]);rect(g,'rgba(255,255,255,.06)',x-h*.08,y-h*.8,h*.05,h*.7)};
+/* --- Il laboratorio di zellige: mucchietti di pezzi colorati, pannelli di stelle a otto punte, tessere fresche di forno, allievi, polvere d’argilla --- */
+PR.fzzellige=FZ((g,x,y,t,a,k)=>{rect(g,SA2,x-150,y-130,300,130);rect(g,'rgba(255,255,255,.12)',x-150,y-130,5,130);rect(g,SA3,x-154,y-136,308,8);
+ /* il pannello di stelle sul muro */
+ rect(g,ST,x-120,y-120,110,86);for(let r=0;r<3;r++)for(let q=0;q<4;q++){star8(g,(q+r)%2?BL:VR,x-100+q*27,y-100+r*26,13);star8(g,'#e8b830',x-100+q*27,y-100+r*26,5);rect(g,BL2,x-113+q*27,y-113+r*26,2,2)}
+ rect(g,CD3,x-124,y-124,118,2.4);rect(g,CD3,x-124,y-34,118,2.4);
+ /* tessere impilate e mucchietti di pezzi colorati */
+ for(let q=0;q<5;q++){rect(g,['#1f4fa8','#2a8a5a','#f0ead8','#e8b830','#2f6ad0'][q],x+8+q*3,y-92+q*0,0,0);for(let s=0;s<6;s++)rect(g,['#1f4fa8','#2a8a5a','#f0ead8','#e8b830','#2f6ad0'][q],x+20+q*24,y-30-s*3.4,20,3)}
+ rect(g,CD,x-130,y-24,260,6);rect(g,CD2,x-130,y-18,260,18);for(let q=0;q<14;q++)dot(g,['#1f4fa8','#2a8a5a','#f0ead8','#e8b830','#2f6ad0'][q%5],x-120+q*18,y-26,5+hr(q)*3);
+ /* gli allievi che ordinano i pezzi */
+ pers(g,x-88,y-4,t,{s:.8,top:'#c8d0e0',bot:'#3a3e48',hair:'#2a1a10'});pers(g,x+110,y-4,t+1,{s:.8,top:'#e8c040',bot:'#3a3e48',hair:'#14110f'});
+ for(let q=0;q<6;q++){const u=(t*.4+q/6)%1;dot(g,'rgba(200,170,130,'+(.4*(1-u))+')',x-30+q*14+Math.sin(u*6)*5,y-38-u*34,2+u*2)}if(Math.sin(t*5)>.7)rect(g,'rgba(255,255,255,.6)',x+4,y-46,3,3)});
+
+/* =========================== ZONA 7 · Borj Nord e Tombe Merinidi =========================== */
+/* --- Borj Nord: il forte massiccio e quadrato di mattoni color terra con i merli, i cannoni antichi, la terrazza sul tetto --- */
+PR.fzborj=FZ((g,x,y,t,a,k)=>{const E='#b0764a',E2='#8a5a38';rect(g,E,x-150,y-150,300,150);rect(g,'rgba(255,255,255,.12)',x-150,y-150,6,150);rect(g,'rgba(0,0,0,.16)',x+134,y-150,16,150);
+ for(let r=0;r<20;r++)rect(g,'rgba(40,14,4,.1)',x-150,y-146+r*7.5,300,1);for(let q=0;q<26;q++)rect(g,'rgba(40,14,4,.08)',x-150+q*11.6+(q%2)*5,y-140+(q%7)*20,5,6);
+ for(let q=0;q<14;q++)rect(g,E,x-150+q*22,y-166,15,18);rect(g,E2,x-154,y-152,308,6);
+ /* feritoie e porta ad arco */
+ [-110,-70,70,110].forEach(o=>{rect(g,'#2a1810',x+o-2,y-110,4,22);rect(g,'#2a1810',x+o-2,y-70,4,22)});fer(g,'#2a1810',x-22,y,44,70);fer(g,k>.2?'rgb(255,200,120)':'#6a4a30',x-17,y,34,62);
+ /* due cannoni sul bastione */
+ [[-100,1],[90,-1]].forEach(c=>{const cx=x+c[0];ln(g,'#2a2a2e',9,[cx-c[1]*20,y-176,cx+c[1]*22,y-182]);dot(g,'#2a2a2e',cx+c[1]*24,y-182,6);dot(g,'#4a4a50',cx+c[1]*26,y-182,2.6);dot(g,'#5a3a22',cx-c[1]*10,y-172,9);dot(g,'#3a2616',cx-c[1]*10,y-172,4)});
+ rect(g,'#2a5aa8',x+36,y-124,70,16);txt(g,'MUSÉE DES ARMES',x+71,y-113,5.6,'#f0ead8')});
+/* --- Le Tombe Merinidi: muri di mattoni color terra con archi vuoti che incorniciano il cielo, un sentiero fra le rovine, persone sedute sui muri --- */
+PR.fztombemer=FZ((g,x,y,t,a,k)=>{const E='#a8704a';for(let q=0;q<3;q++){const bx=x-150+q*104,hh=120-q%2*24;rect(g,E,bx,y-hh,84,hh);rect(g,'rgba(255,255,255,.1)',bx,y-hh,4,hh);rect(g,'rgba(0,0,0,.16)',bx+72,y-hh,12,hh);for(let r=0;r<hh/7;r++)rect(g,'rgba(40,14,4,.1)',bx,y-hh+r*7,84,1);
+  /* arco vuoto: il cielo del tramonto si vede attraverso */
+  const gr=g.createLinearGradient(0,y-hh,0,y);gr.addColorStop(0,'#f2a05a');gr.addColorStop(1,'#ec7a4c');g.fillStyle=gr;g.beginPath();g.moveTo(bx+22,y);g.lineTo(bx+22,y-hh*.55);g.quadraticCurveTo(bx+42,y-hh*.95,bx+62,y-hh*.55);g.lineTo(bx+62,y);g.closePath();g.fill();
+  rect(g,'rgba(60,20,8,.5)',bx+22,y-hh*.55,3,hh*.55);
+  for(let s=0;s<4;s++)rect(g,E,bx+(s*24)+(s%2)*4,y-hh-5,12,hr(q*5+s)>.5?6:0)}
+ rect(g,'#9a6a40',x-160,y-6,320,6);for(let q=0;q<12;q++)rect(g,'rgba(40,14,4,.18)',x-150+q*26,y-5,10,1.6);
+ /* persone sedute sui muri e erba secca */
+ pers(g,x-90,y-96,t,{s:.5,top:'#2a5aa8',bot:'#3a3e48'});pers(g,x-80,y-96,t+1,{s:.5,top:'#e8e0cc',bot:'#6a4a3a',hair:'#c8b890'});pers(g,x+120,y-84,t,{s:.5,top:'#c8402a',bot:'#2a2a36'});
+ for(let q=0;q<10;q++)ln(g,'#a89a50',1.2,[x-150+q*32,y,x-148+q*32+(q%3-1)*3,y-10-hr(q)*8])});
+/* --- Il belvedere sul tramonto: il muretto basso sul pendio, il venditore di acqua e di semi di zucca, i fotografi con i treppiedi, le famiglie --- */
+PR.fzpanorama=FZ((g,x,y,t,a,k)=>{rect(g,'#c8a878',x-130,y-34,260,34);rect(g,'#b89868',x-134,y-40,268,8);for(let q=0;q<13;q++)rect(g,'rgba(0,0,0,.1)',x-130+q*20,y-34,1.4,34);
+ /* il venditore con il carretto */
+ rect(g,CD2,x-110,y-48,50,5);rect(g,CD,x-108,y-43,4,43);rect(g,CD,x-66,y-43,4,43);for(let q=0;q<3;q++){rect(g,'rgba(200,230,245,.7)',x-104+q*8,y-62,6,14);rect(g,'#2a5aa8',x-104+q*8,y-52,6,3)}for(let q=0;q<4;q++)el(g,'#c8a868',x-82+q*5,y-52,4,3);poly(g,'#e8802a',[[x-116,y-90],[x-54,y-90],[x-60,y-72],[x-110,y-72]]);rect(g,CD3,x-86,y-72,2.4,24);
+ pers(g,x-38,y,t,{s:.9,top:'#e0d8c0',bot:'#4a3a2a',hair:'#2a1a10'});
+ /* i fotografi e le famiglie */
+ ln(g,'#2a2a2e',2,[x+20,y-14,x+30,y-52,x+40,y-14]);ln(g,'#2a2a2e',2,[x+30,y-52,x+30,y-14]);rect(g,'#2a2a2e',x+24,y-62,14,10);dot(g,'#4a6a8a',x+36,y-57,3.4);pers(g,x+48,y,t,{s:.9,top:'#2a2a36',bot:'#2a3a5a',hair:'#14110f'});
+ pers(g,x+80,y,t+1,{s:.9,top:'#c8402a',bot:'#2a2a36',hair:'#2a1a10'});pers(g,x+96,y,t+2,{s:.55,top:'#e8b030',bot:'#2a5aa8',hair:'#14110f'});pers(g,x+110,y,t+3,{s:.55,top:'#2a8a5a',bot:'#4a3a2a',hair:'#2a1a10'})});
+/* --- muretto di pietra basso (per sedersi), con un gatto --- */
+PR.fzmuretto=FZ((g,x,y,t,a,k)=>{rect(g,'#c8a878',x-60,y-30,120,30);rect(g,'#b89868',x-64,y-36,128,8);for(let q=0;q<6;q++)rect(g,'rgba(0,0,0,.1)',x-60+q*20,y-30,1.4,30);if(a)gatto(g,x+30,y-36,t,a)});
+
+/* =========================== ZONA 8 · Il quartiere al crepuscolo =========================== */
+/* --- Il forno comune: il camino di mattoni, l’ingresso basso, il fornaio con la lunga pala, vassoi di pani coperti da un panno --- */
+PR.fzforno=FZ((g,x,y,t,a,k)=>{rect(g,SA2,x-100,y-110,200,110);rect(g,'rgba(255,255,255,.12)',x-100,y-110,5,110);rect(g,'rgba(0,0,0,.14)',x+88,y-110,12,110);rect(g,SA3,x-104,y-116,208,8);
+ /* il camino di mattoni con il fumo */
+ rect(g,'#a8553a',x+40,y-190,26,80);rect(g,'rgba(0,0,0,.2)',x+58,y-190,8,80);rect(g,'#8a3a28',x+37,y-194,32,6);for(let r=0;r<10;r++)rect(g,'rgba(40,12,4,.18)',x+40,y-186+r*8,26,1);
+ for(let q=0;q<4;q++){const u=(t*.22+q/4)%1;el(g,'rgba(210,210,215,'+(.5*(1-u))+')',x+53+Math.sin(u*5+q)*10,y-200-u*70,6+u*10,5+u*8)}
+ /* l’ingresso basso e il calore */
+ fer(g,'#2a1810',x-46,y,56,64);fer(g,'rgb(255,150,60)',x-40,y,44,56);glow(g,x-18,y-26,70,'255,150,60',.6);fer(g,'rgb(255,210,120)',x-34,y,32,42);
+ /* il fornaio con la pala */
+ pers(g,x-66,y,t,{s:1,top:'#f0ead8',bot:'#6a5a4a',hair:'#8a8a8a'});ln(g,'#8a6a3a',2.6,[x-56,y-64,x-26,y-30]);ellipse(g,x-24,y-28);
+ /* vassoi di pani rotondi coperti da un panno, in fila */
+ rect(g,CD2,x+8,y-22,92,4);[-0,26,52].forEach((o,i)=>{rect(g,CD,x+14+o,y-18,2,18);el(g,'#d8a850',x+30+o,y-30,13,3.4);poly(g,['#c8402a','#f0ead8','#2a5aa8'][i],[[x+16+o,y-30],[x+44+o,y-30],[x+40+o,y-24],[x+20+o,y-24]]);for(let q=0;q<3;q++)dot(g,'rgba(255,255,255,.5)',x+22+o+q*8,y-27,1.2)});
+ lamp(g,x+80,y-86,k,1);if(k>.15)glow(g,x-20,y-30,100,'255,160,70',.3*k)});
+const ellipse=(g,x,y)=>{el(g,'#6a4a22',x,y,10,3.4)};
+/* --- L’hammam: il piccolo ingresso con la porta di legno, la cupola sul tetto, i secchi di rame, il vapore dalla finestrella, la tenda --- */
+PR.fzhammam=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-80,y-100,160,100);rect(g,'rgba(0,0,0,.14)',x+68,y-100,12,100);rect(g,'rgba(255,255,255,.14)',x-80,y-100,5,100);
+ /* le cupolette sul tetto con i vetri a stella */
+ [-40,30].forEach((o,i)=>{g.fillStyle=tn(ST);g.beginPath();g.ellipse(x+o,y-100,26,24-i*4,0,Math.PI,0);g.fill();rect(g,SA3,x+o-28,y-102,56,4);for(let q=0;q<3;q++)dot(g,k>.15?LIT:'#7a8a9a',x+o-10+q*10,y-112+(q%2)*-3,1.6)});
+ /* la porta bassa con la tenda */
+ fer(g,'#2a1810',x-18,y,44,64);poly(g,'#8a3a2a',[[x-14,y-62],[x+22,y-62],[x+18,y],[x-10,y]]);for(let q=0;q<5;q++)rect(g,'#d8b050',x-12+q*6.4,y-62,1.6,62);rect(g,CD3,x-18,y-66,44,4);
+ /* finestrella con il vapore */
+ rect(g,CD3,x+40,y-66,18,20);rect(g,k>.15?LIT:'#5a6a7a',x+42,y-64,14,16);for(let q=0;q<4;q++){const u=(t*.25+q/4)%1;el(g,'rgba(240,240,244,'+(.5*(1-u))+')',x+49+Math.sin(u*5+q)*5,y-70-u*50,5+u*7,4+u*6)}
+ /* secchi di rame, sapone nero, guanto */
+ [-60,-46].forEach((o,i)=>{poly(g,RA2,[[x+o-6,y],[x+o-8,y-14],[x+o+8,y-14],[x+o+6,y]]);ln(g,RA,1.4,[x+o-7,y-14,x+o,y-24,x+o+7,y-14])});rect(g,'#2a2018',x+60,y-12,12,12);rect(g,'#c8402a',x+66,y-8,10,4);
+ rect(g,'#2a5aa8',x-44,y-90,60,12);txt(g,'HAMMAM',x-14,y-81,7,'#f0ead8');lamp(g,x+30,y-80,k,.9)});
+/* --- La fontana del quartiere: piastrelle blu e verdi, panchine di pietra, una teiera su un tavolino, la lampada sulla mensola --- */
+PR.fzfontana=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-80,y-120,160,120);rect(g,'rgba(0,0,0,.14)',x+68,y-120,12,120);zel(g,x-26,y-90,52,70,2);fer(g,'#14100c',x-14,y-30,28,50);fer(g,'rgb(60,120,200)',x-11,y-30,22,46);rect(g,'#c8a040',x-3,y-52,6,9);for(let q=0;q<3;q++)rect(g,'rgba(190,230,255,.8)',x-.7,y-44+((t*45+q*8)%26),1.4,5);
+ poly(g,CD2,[[x-36,y-92],[x+36,y-92],[x+28,y-108],[x-28,y-108]]);rect(g,'#9a948a',x-30,y-30,60,5);
+ /* panchine di pietra */
+ rect(g,'#b8a888',x-78,y-24,40,24);rect(g,'#a89878',x-80,y-28,44,6);rect(g,'#b8a888',x+40,y-24,38,24);rect(g,'#a89878',x+38,y-28,42,6);
+ /* tavolino con la teiera */
+ rect(g,CD,x+4,y-30,22,3);rect(g,CD3,x+14,y-27,2,27);rect(g,'#c8ccd0',x+8,y-40,8,10);poly(g,'#c8ccd0',[[x+6,y-40],[x+18,y-40],[x+14,y-46],[x+10,y-46]]);rect(g,'rgba(220,235,240,.8)',x+19,y-36,3,6);
+ lamp(g,x-60,y-100,k,1.1);ln(g,CD3,3,[x-60,y-116,x-60,y-100]);pers(g,x-58,y,t,{s:.5,top:'#c8402a',bot:'#2a5aa8',hair:'#2a1a10'});pers(g,x-48,y,t+1,{s:.5,top:'#e8b030',bot:'#4a3a2a'})});
+/* --- La piccola moschea del quartiere: il minareto, la porta ad arco, la scuola coranica accanto --- */
+PR.fzmoschea=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-90,y-96,180,96);rect(g,'rgba(0,0,0,.14)',x+78,y-96,12,96);mina(g,x+34,y-96,40,120,VR,k,6);tegole(g,x-40,y-96,100,26);
+ fer(g,ST,x-70,y,60,68);fer(g,'#1c1612',x-64,y,48,60);fer(g,k>.15?'rgb(255,214,150)':'#6a5030',x-60,y,40,54);for(let q=0;q<4;q++)rect(g,'rgba(0,0,0,.16)',x-58+q*9,y-50,1.2,50);lamp(g,x-76,y-70,k,1);
+ zel(g,x-76,y-14,12,14,1)});
+/* --- bambini che giocano, donne con i sacchetti, uomini seduti davanti ai caffè --- */
+PR.fzbambini=FZ((g,x,y,t,a,k)=>{for(let q=0;q<4;q++){const bx=x-30+q*20+Math.sin(t*1.5+q*2)*10;pers(g,bx,y,t*2+q,{f:q%2?1:-1,s:.52+hr(q)*.08,top:['#c8402a','#2a5aa8','#e8b030','#2a8a5a'][q],bot:['#3a3e48','#4a3a2a'][q%2],hair:'#14110f'})}dot(g,'#e8402a',x+Math.sin(t*3)*40,y-10-Math.abs(Math.sin(t*3))*14,3.6)});
+PR.fzdonna=FZ((g,x,y,t,a,k)=>{pers(g,x,y,t,{s:.95,top:'#8a3a6a',bot:'#8a3a6a',hair:'#14110f',long:1,acc:(g2,b)=>{rect(g2,tn('#c8402a'),-9,-114+b,18,8);rect(g2,tn('#a8a090'),-18,-52,8,16)}});if(a){rect(g,CD,x-12,y-100,22,4);el(g,'#d8a850',x,y-104,12,3);poly(g,'#f0ead8',[[x-12,y-102],[x+12,y-102],[x+10,y-98],[x-10,y-98]])}});
+PR.fzcaffetto=FZ((g,x,y,t,a,k)=>{[-40,0,40].forEach((o,i)=>{ln(g,'#c8a868',3,[x+o-12,y,x+o-12,y-20,x+o-4,y-22,x+o+6,y-22]);ln(g,'#c8a868',2.4,[x+o-12,y-20,x+o-12,y-42]);rect(g,'#6a6e74',x+o+14,y-24,16,2);rect(g,'#6a6e74',x+o+21,y-22,2,22);rect(g,'rgba(220,235,240,.8)',x+o+18,y-32,3,8)});for(let q=0;q<2;q++)pers(g,x-34+q*36,y,t+q,{s:.88,top:['#c8c0b0','#8a8a9a'][q],bot:'#3a3e48',hair:['#c8b890','#14110f'][q]})});
+
+/* =========================== ZONA 9 · La Porta Blu di notte =========================== */
+PR.fzportanotte=(g,x,y,t)=>PR.fzporta(g,x,y,t,1);
+/* --- La musica nei caffè: tavolini bassi e tappeti, sedie di vimini, un oud appoggiato, la darbuka, le teiere e i bicchieri, le lanterne che oscillano --- */
+PR.fzcaffe=FZ((g,x,y,t,a,k)=>{rect(g,SA,x-110,y-120,220,120);rect(g,'rgba(255,255,255,.1)',x-110,y-120,5,120);
+ /* terrazza con lanterne colorate che oscillano */
+ rect(g,CD2,x-114,y-124,228,6);rect(g,CD3,x-112,y-120,224,3);for(let q=0;q<5;q++){const lx=x-90+q*45+Math.sin(t*1.3+q)*2,c=['255,90,90','90,200,120','255,200,70','90,150,255','255,140,60'][q];ln(g,'#2a2018',1,[lx,y-120,lx,y-104]);rect(g,'rgb('+c+')',lx-5,y-104,10,14);rect(g,'rgba(255,255,255,.4)',lx-3,y-102,2.4,10);glow(g,lx,y-97,44,c,.55*Math.max(.3,k))}
+ /* l’interno illuminato e i tappeti */
+ fer(g,'#2a1810',x-60,y,120,84);fer(g,k>.15?'rgb(255,200,120)':'#8a6a48',x-40,y-4,80,84);rect(g,'#8a2a2a',x-80,y-10,160,10);for(let q=0;q<10;q++)rect(g,['#e8b030','#2a5aa8','#f0ead8'][q%3],x-76+q*16,y-8,8,6);rect(g,'#2a5aa8',x-76,y-2,152,2);
+ /* tavolini bassi con teiere e bicchieri */
+ [-70,0,70].forEach((o,i)=>{el(g,'#6a6e74',x+o,y-20,16,3);rect(g,'#6a6e74',x+o-1,y-20,2,20);rect(g,'#c8ccd0',x+o-3,y-32,6,10);poly(g,'#c8ccd0',[[x+o-4,y-32],[x+o+4,y-32],[x+o+1,y-37],[x+o-1,y-37]]);rect(g,'rgba(255,230,160,.8)',x+o+7,y-27,3,7)});
+ /* la darbuka e un oud appoggiato alla sedia di vimini */
+ poly(g,'#a85a2a',[[x+84,y-20],[x+98,y-20],[x+94,y],[x+88,y]]);el(g,'#e8d8b0',x+91,y-20,7,2.4);ln(g,'#c8a868',3,[x+104,y,x+104,y-24,x+116,y-26]);ln(g,'#c8a868',2.4,[x+104,y-24,x+104,y-46]);
+ /* una rete di lucine */
+ for(let q=0;q<16;q++)dot(g,'rgba(255,230,160,'+(.5+.4*Math.sin(t*3+q))+')',x-100+q*13,y-116+Math.sin(q*.8)*4,1.6)});
+/* --- fila di lucine e lanterne di vetro colorato tra due pali --- */
+PR.fzlanterne=FZ((g,x,y,t,a,k)=>{const w=a||160;rect(g,IR,x-w/2-2,y-130,4,130);rect(g,IR,x+w/2-2,y-130,4,130);ln(g,'#2a2018',1.2,[x-w/2,y-128,x-w/4,y-116,x,y-112,x+w/4,y-116,x+w/2,y-128]);for(let q=0;q<7;q++){const u=q/6,lx=x-w/2+u*w,ly=y-128+Math.sin(u*Math.PI)*16,c=['255,90,90','90,200,120','255,200,70','90,150,255','255,140,60','230,120,200','255,200,70'][q];rect(g,'rgb('+c+')',lx-4,ly,8,11);poly(g,IR,[[lx-5,ly],[lx+5,ly],[lx,ly-5]]);glow(g,lx,ly+6,34,c,.5*Math.max(.25,k))}});
+/* --- banchetto di dolci e di frutta secca: datteri, fichi, mandorle, miele --- */
+PR.fzdolcibanco=FZ((g,x,y,t,a,k)=>{rect(g,CD2,x-50,y-30,100,5);[-44,44].forEach(o=>rect(g,CD,x+o-3,y-26,5,26));rect(g,'#2a5aa8',x-50,y-26,100,26);for(let q=0;q<5;q++){const c=['#6a3a1a','#c8a050','#e8d8a0','#8a5a34','#c8402a'][q];poly(g,c,[[x-42+q*17,y-30],[x-34+q*17,y-44],[x-26+q*17,y-30]]);el(g,c,x-34+q*17,y-30,8,2.6)}
+ poly(g,'#c8402a',[[x-56,y-92],[x+56,y-92],[x+46,y-76],[x-46,y-76]]);for(let q=0;q<5;q++)dot(g,LIT,x-40+q*20,y-74,2.2);if(k>.15)glow(g,x,y-60,70,'255,200,110',.35*k)});
+/* --- bambini con i palloncini --- */
+PR.fzpalloncini=FZ((g,x,y,t,a,k)=>{pers(g,x,y,t,{s:.6,top:'#e8b030',bot:'#2a5aa8',hair:'#14110f'});pers(g,x+16,y,t+1,{s:.58,top:'#d85a7a',bot:'#4a3a2a',hair:'#2a1a10'});const cc=['#e8402a','#f2c82a','#2a8ac8','#4aa84a','#e86aa8'];for(let q=0;q<5;q++){const bx=x+8+(q-2)*11+Math.sin(t*1.4+q)*2,by=y-110-(q%2)*14-Math.cos(t*1.2+q)*2;ln(g,'rgba(200,200,200,.55)',.8,[x+4,y-52,bx,by+8]);el(g,cc[q],bx,by,6.4,8.2);el(g,'rgba(255,255,255,.4)',bx-2,by-3,2,3)}});
+/* --- Varco finale: il grande arco a ferro di cavallo di zellige, blu cobalto che sfuma nel verde, con le stelle a otto punte; la luce calda passa fra le stelle; lanterne e petali di fiori d’arancio --- */
+PR.fzvarco=(g,x,y,t)=>{A.setDK(nf(x+AVCAM));const pu=.7+.3*Math.sin(t*3),W=122,H=268;
+ /* il pavimento lucido e il riflesso */
+ rect(g,'#8a8478',x-270,y-6,540,6);const gl=g.createRadialGradient(x,y,4,x,y,150);gl.addColorStop(0,'rgba(255,230,160,'+(.7*pu)+')');gl.addColorStop(1,'rgba(255,200,120,0)');g.fillStyle=gl;g.fillRect(x-150,y-30,300,60);
+ /* la luce dietro l’arco */
+ const gr=g.createRadialGradient(x,y-120,2,x,y-120,230);gr.addColorStop(0,'rgba(255,255,255,'+(.8*pu)+')');gr.addColorStop(.3,'rgba(255,214,140,'+(.45*pu)+')');gr.addColorStop(1,'rgba(255,200,140,0)');g.fillStyle=gr;g.fillRect(x-250,y-360,500,400);
+ /* i muri ai lati e il corpo dell’arco: blu cobalto con le tessere, bordi verdi verso l’interno */
+ rect(g,SA,x-W-100,y-214,100,214);rect(g,SA,x+W,y-214,100,214);rect(g,SA2,x-W-104,y-218,108,6);rect(g,SA2,x+W-4,y-218,108,6);for(let q=0;q<7;q++){rect(g,SA,x-W-100+q*15,y-232,10,14);rect(g,SA,x+W+q*15,y-232,10,14)}
+ rect(g,BLN,x-W-12,y-H,2*W+24,H);for(let q=0;q<10;q++)for(let r=0;r<10;r++)if((q+r)%2==0)rect(g,'rgb(70,130,236)',x-W-8+q*26,y-H+4+r*26,17,17);
+ fer(g,'rgb(236,228,206)',x-W+6,y,2*W-12,H-34);fer(g,VRN,x-W+16,y,2*W-32,H-48);fer(g,'rgb(250,246,230)',x-W+28,y,2*W-56,H-64);
+ /* l’apertura: la luce passa fra le stelle */
+ fer(g,'rgb(255,250,230)',x-W+40,y,2*W-80,H-84);const g2=g.createRadialGradient(x,y-120,4,x,y-120,110);g2.addColorStop(0,'rgba(255,255,255,'+pu+')');g2.addColorStop(.6,'rgba(255,226,150,'+(.9*pu)+')');g2.addColorStop(1,'rgba(255,196,110,.75)');g.fillStyle=g2;g.fillRect(x-W+40,y-120,2*W-80,120);
+ /* stelle a otto punte lungo la fascia dell’arco */
+ for(let q=0;q<9;q++){const a2=Math.PI+q*Math.PI/8,px=x+Math.cos(a2)*(W-6)*.86,py=y-H*.6+Math.sin(a2)*(W-6)*.9;star8(g,q%2?'rgb(232,184,48)':'rgb(30,80,170)',px,py,9+(q%2)*2);star8(g,'rgba(255,248,210,'+pu+')',px,py,3.6)}
+ [[-W+12,-40],[-W+12,-90],[-W+12,-140],[W-12,-40],[W-12,-90],[W-12,-140]].forEach((p,i)=>{star8(g,i%2?'rgb(232,184,48)':'rgb(250,246,230)',x+p[0],y+p[1],7);star8(g,'rgba(255,230,160,'+pu+')',x+p[0],y+p[1],2.6)});
+ star8(g,'rgb(232,184,48)',x,y-H+24,11);star8(g,'rgba(255,248,210,'+pu+')',x,y-H+24,4.6);
+ /* lanterne appese ai lati */
+ [-W-50,W+50].forEach(o=>{lamp(g,x+o,y-198,1,1.6);glow(g,x+o,y-174,60,'255,210,130',.5)});
+ /* petali di fiori d’arancio sul selciato e nell’aria */
+ for(let q=0;q<22;q++){const px=x-150+hr(q*3)*300,u=(t*.12+q*.07)%1;el(g,'rgba(250,248,240,.9)',px,y-3-hr(q)*2,3.2,1.2);if(q<10)el(g,'rgba(255,250,240,'+(.8*(1-u))+')',x-60+hr(q*7)*120+Math.sin(t+q)*8,y-30-u*210,2.4,1.6)}};
+
+/* esporta gli attrezzi per il mondo */
+PR._fz={nf,FZ,lit,fer,star8,zel,tegole,mina,lamp,pcd,telo,casa,cipr,pers,gente,gatto,ln};
+})();
