@@ -106,3 +106,21 @@ MONDO: Città del Messico · Dalla Merced a Garibaldi   (id: cittadelmessico)
   Nota: i temi dolorosi e storici (Coyolxauhqui, Moctezuma, Niños Héroes, Isla de las Muñecas) sono trattati con tono sobrio e rispettoso, come nella scheda.
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._cm) e riusa da Gerusalemme solo tenda, mucchio, cassa, dome, cono, merl e pie (PR._ge), da Madrid pers e gente (PR._md), da Roma ln e gatto (PR._rm); non modifica motore né altri mondi.
   Nota nome: il titolo del mondo è abbreviato ("Dalla Merced a Garibaldi") perché quello lungo non entra nell'intestazione del motore.
+
+MONDO: Nairobi · Dal Parco Nazionale alla Stazione dei Treni   (id: nairobi)
+  File: mondi/nairobi.js   — oggetti in nucleo/elementi.js (blocco "elementi per Nairobi", nomi che iniziano per "nb")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/nairobi.js"></script>
+  Percorso (larghezza 23200): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Parco Nazionale di Nairobi: cancello e skyline, leoni e giraffe davanti ai grattacieli, luogo del rogo dell'avorio, rinoceronti neri (alba) · 2 Langata e Karen: Giraffe Centre, orfanotrofio degli elefanti, Museo Karen Blixen (mattina)
+     3 Centro: KICC, statua di Dedan Kimathi, lo "stage" dei matatu (tarda mattina) · 4 City Market, Moschea Jamia, Jeevanjee Gardens (mezzogiorno) · 5 Uhuru Park, Freedom Corner, Fontana Nyayo di Central Park (primo pomeriggio)
+     6 Museo Nazionale, Ragazzo del Turkana, Snake Park (pomeriggio dorato) · 7 Foresta di Karura: ingresso, cascata, grotte Mau Mau, bosco di bambù e chiesa abbandonata (tramonto)
+     8 Il mtaa e la nyama choma: macelleria-griglia, duka e agente M-Pesa, la tavola con ugali e Tusker (sera) · 9 Stazione ferroviaria, Museo ferroviario, Madaraka Express, binario con il varco in fondo (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Wanjiru (ranger), Juma (makanga del matatu), Mama Akinyi (frutta e verdura), Wangari Maathai,
+     Njeri (guida del Museo Nazionale), Kevin (sviluppatore di app), Mzee Kariuki (maestro della griglia), Mzee Ochieng (ex ferroviere, seduto su una panchina del binario)
+  Testi: da nairobi.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 30 tappe da "Testo:".
+  Vita: nibbi neri e ibis sacri in volo, un aereo che scende verso l'aeroporto, cicogne marabù in cima agli alberi, giraffe, zebre, ippopotami e rinoceronti, scimmie e dik-dik a Karura,
+     cani e gatti di quartiere, passanti, pipistrelli attorno ai lampioni di notte.
+  Nota: i temi dolorosi e storici (colonizzazione, Mau Mau, sciopero della fame del 1992, costruzione della ferrovia) sono trattati con tono sobrio e rispettoso, come nella scheda; le leggende sono presentate con "si dice".
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._nb, insieme a pers, gp e ai disegni di alberi e animali riusati dal mondo) e riusa da Roma solo ln e gatto (PR._rm); non modifica motore né altri mondi.
+  Nota nome: il titolo è quello completo della scheda, come per Madrid; nell'intestazione del motore sporge un po' dalla pastiglia. Se preferisci, puoi abbreviarlo in "Nairobi · Dal Parco alla Stazione" nella riga addWorld(...) di mondi/nairobi.js.
