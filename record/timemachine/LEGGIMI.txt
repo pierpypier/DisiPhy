@@ -124,3 +124,21 @@ MONDO: Nairobi · Dal Parco Nazionale alla Stazione dei Treni   (id: nairobi)
   Nota: i temi dolorosi e storici (colonizzazione, Mau Mau, sciopero della fame del 1992, costruzione della ferrovia) sono trattati con tono sobrio e rispettoso, come nella scheda; le leggende sono presentate con "si dice".
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._nb, insieme a pers, gp e ai disegni di alberi e animali riusati dal mondo) e riusa da Roma solo ln e gatto (PR._rm); non modifica motore né altri mondi.
   Nota nome: il titolo è quello completo della scheda, come per Madrid; nell'intestazione del motore sporge un po' dalla pastiglia. Se preferisci, puoi abbreviarlo in "Nairobi · Dal Parco alla Stazione" nella riga addWorld(...) di mondi/nairobi.js.
+
+MONDO: Mesopotamia · Dai campi di Sumer alla Porta di Ishtar   (id: mesopotamia)
+  File: mondi/mesopotamia.js   — oggetti in nucleo/elementi.js (blocco "elementi per Mesopotamia", nomi che iniziano per "ms")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/mesopotamia.js"></script>
+  Percorso (larghezza 22600): 8 zone, da sinistra a destra, un'intera giornata (e quasi tremila anni di storia: il tempo si piega):
+     1 Campi d'orzo, canali, shaduf, paludi e case di canne, villaggio (alba, Sumer) · 2 Uruk: mura, Tempio Bianco, Eanna e vaso di Warka, prime tavolette (mattina)
+     3 Nippur: Casa delle tavolette, argilla e calamo, tempio di Enlil, sigilli e lettere (tarda mattina) · 4 Ur: ziggurat, Giparu e disco di Enheduanna, tombe reali, case e botteghe (mezzogiorno)
+     5 Babilonia di Hammurabi: città sull'Eufrate, stele delle leggi, palazzo e lettere, tempio di Marduk (primo pomeriggio) · 6 Il porto, la taverna, bilance e contratti, il forno e gli stufati (pomeriggio)
+     7 Ninive: mura e porte, tori alati, biblioteca di Assurbanipal, rilievi della caccia al leone e del banchetto (tardo pomeriggio)
+     8 Babilonia di Nabucodonosor: Via Processionale, Porta di Ishtar, Esagila ed Etemenanki, giardini pensili, terrazza degli astronomi, varco sotto la Porta (tramonto e notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Ur-Lamma (irrigatore), Gilgamesh, Ur-Ningal (maestro scriba), Enheduanna (sacerdotessa di Ur),
+     Hammurabi, Amat-Shamash (taverniera), Assurbanipal, Nabucodonosor II
+  Testi: da mesopotamia.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 34 tappe da "Testo:".
+  Vita: aironi e ibis in volo, rondini e cornacchie sui tetti, asini con le ceste, pecore, cani da guardia, dromedari nelle ultime zone, passanti, pipistrelli attorno alle torce di notte.
+  Nota: i temi dolorosi (tombe reali, guerre, caduta di Ninive) sono trattati con tono sobrio e rispettoso; leggende e tradizioni non provate (Gilgamesh, diluvio, giardini pensili, Etemenanki e Torre di Babele) sono presentate con "si dice" o "secondo la tradizione".
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._ms, insieme a man, gente, palma, animali e costruzioni) e riusa da Roma solo ln e gatto (PR._rm); il varco finale è disegnato nell'apertura della Porta di Ishtar, dove il motore mette il portale; non modifica motore né altri mondi.
+  Nota nome: il titolo è quello completo della scheda, come per Madrid e Nairobi; nell'intestazione del motore sporge un po' dalla pastiglia. Se preferisci, puoi abbreviarlo in "Mesopotamia · Da Sumer alla Porta di Ishtar" nella riga addWorld(...) di mondi/mesopotamia.js.
