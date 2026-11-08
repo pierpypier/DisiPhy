@@ -160,3 +160,22 @@ MONDO: Firenze 2 · Dalla Stazione all’Arno   (id: firenze2)
   Nota: i temi dolorosi (alluvione del 1966, rogo di Savonarola, esilio di Dante, peste, ponti del 1944) sono trattati con tono sobrio e rispettoso; le leggende sono presentate con "si dice".
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._f2, insieme alla facciata "pal" e agli attrezzi di marmo) e riusa da Madrid solo fin, col, cupo, pers, gente e gli alberi (PR._md) e da Roma ln e gatto (PR._rm); non modifica motore né altri mondi.
   Nota nome: il mondo si chiama "Firenze 2" per distinguerlo da quello già esistente (mondi/firenze.js); gli id degli NPC iniziano per "f2_".
+
+MONDO: Londra 2 · Dal Serpentine al Meridiano   (id: londra2)
+  File: mondi/londra2.js   — oggetti in nucleo/elementi.js (blocco "elementi per Londra 2", nomi che iniziano per "l2")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/londra2.js"></script>
+  Percorso (larghezza 20000): 8 zone, da sinistra a destra, un'intera giornata:
+     1 Kensington Gardens e Hyde Park: Albert Memorial e Royal Albert Hall, Peter Pan, Serpentine e Lido, Rotten Row (alba) · 2 Buckingham Palace e il cambio della guardia, St James's Park e i pellicani, Big Ben e Palazzo di Westminster, Abbazia di Westminster (mattina)
+     3 Trafalgar Square e Colonna di Nelson, Covent Garden, St Paul's Covent Garden e il Punch (tarda mattina) · 4 La Tube: ingresso e scale mobili, Baker Street, Embankment e "Mind the gap" (mezzogiorno, sottoterra)
+     5 Cattedrale di St Paul, Millennium Bridge e Tate Modern, Shakespeare's Globe, Borough Market (primo pomeriggio) · 6 London Bridge, Monumento al Grande Incendio, All Hallows by the Tower (pomeriggio dorato)
+     7 Torre di Londra, i corvi e gli Yeoman Warders, Tower Bridge (tramonto) · 8 Cutty Sark e tunnel pedonale, Old Royal Naval College, Trafalgar Tavern, Royal Observatory e meridiano (sera e notte; varco: il raggio verde sulla collina)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; Graham ne ha 11, come nel file di testo): Jo (nuotatrice del Serpentine), Colin (tassista nero), Charles Dickens, Ravi (macchinista della Tube),
+     Sally (fruttivendola di Borough Market), Samuel Pepys, Graham (Yeoman Warder), Maureen (Trafalgar Tavern)
+  Testi: da londra2.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 29 tappe da "Testo:".
+  Vita: parrocchetti verdi a Kensington Gardens, cavalli e cavalieri su Rotten Row, cigni, anatre e nuotatori al Serpentine, pellicani, piccioni a Trafalgar e Covent Garden, mimo, giocoliere e cantante lirico,
+     treni che entrano ed escono dalle banchine, gabbiani sul Tamigi, corvi alla Torre, volpe e pipistrelli di sera, fuochi d'artificio lontani dopo il crepuscolo.
+  Nota: i temi dolorosi (Grande Incendio, infanzia di Dickens, fine dei due scrittori) sono trattati con tono sobrio e rispettoso; le leggende sono presentate con "si dice".
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._l2, insieme a ippo, salice e folla) e riusa da Madrid solo mat, cas, cupo, col, plat, olmo, pino, cedro, cipr, pers, gente, fin, bal e arco (PR._md) e da Roma ln e gatto (PR._rm); non modifica motore né altri mondi.
+  Nota Tube: nella zona 4 le pareti di piastrelle riempiono tutta l'altezza dello schermo (si è sottoterra); la luce lì resta quella del giorno.
+  Nota nome: il titolo della scheda è abbreviato ("Dal Serpentine al Meridiano") per stare nell'intestazione del motore; il mondo si chiama "Londra 2" per distinguerlo da quello già esistente (mondi/londra.js); gli id degli NPC iniziano per "l2_".
