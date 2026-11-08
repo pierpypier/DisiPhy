@@ -8701,3 +8701,296 @@ PR.egvarco=EG((g,x,y,t,a,k)=>{const pu=.8+.2*Math.sin(t*3);acqua(g,x-190,y+22,15
 
 PR._eg={nf,lit:M.lit,pers,man,gente,TUN,SKN,MC,OCR,palma,canne,cesp,acqua,bue,pecora,asino,cane,airone,volo,mud,merli,zigg,casa,porta,leone,ln,gatto,pap,pilone,piram,seduto,sacerdote,osiri,colosso,babbuino,braciere,vaso,sfingeAr,statuaC,oca,croco,ippo,sciacallo,cavallo,falco,masso,woman,sack,ger,roccia,faroDraw,EG};
 })();
+
+
+/* ---------- elementi per i Fenici · Dalle città del cedro alle stelle dell'Atlantico (mondi/fenici.js) ---------- */
+/* Nomi che iniziano per "fe". Hanno la loro luce (nf dei Fenici): la giornata scorre da sinistra (alba a Biblo) a destra (notte a Gadir)
+   e usano la variabile globale AVCAM come gli altri mondi "lunghi". Riusano da Mesopotamia (PR._ms) persone, animali, mattoni e case,
+   dall'Egitto (PR._eg) braciere, vaso, sack, cavallo, coccodrillo, ippopotamo, falco, oca; da Roma (PR._rm) solo ln e gatto.
+   Non toccano nulla di quanto esiste prima di questo blocco. */
+(function(){
+const A=PR._av,rect=A.rect,poly=A.poly,dot=A.dot,el=A.el,ar=A.ar,tn=A.tn,txt=A.txt,glow=A.glow,cl=A.cl;
+const {ln:ln0,gatto}=PR._rm;
+const ln=(g,c,w,p)=>ln0(g,tn(c),w,p);
+const M=PR._ms,E=PR._eg,{SKN,pers,man,palma,acqua,bue,pecora,asino,cane,airone,volo,mud,merli,casa,porta}=M,{braciere,vaso,sack,seduto,woman,cavallo,croco,ippo,falco,oca}=E;
+const LIT='rgb(255,206,120)',BIT='#2c2622',CAL='#f0ead8',CAL2='#d8d0b8',OC='#d8b070',OC2='#b88a50',TER='#b4583a',CED='#8a3a22',PUR='#7a2a8a',PUR2='#a03a6a',GLD='#e0b84a',PIN='#3a5a3a',BRZ='#b8903a';
+const PAL=['#f0e6cc','#7a2a8a','#d8b070','#2f6ab0','#b4583a','#e0c060'];
+/* luce dei Fenici: [posizione nel mondo, buio da 0 (giorno) a 1 (notte)] */
+const NF=[[0,.08],[1400,0],[16000,0],[16900,.06],[17800,.14],[18700,.3],[19500,.58],[20300,.8],[21300,.9],[22600,.95]];
+const nf=wx=>{if(wx<=NF[0][0])return NF[0][1];for(let i=1;i<NF.length;i++)if(wx<=NF[i][0]){const a=NF[i-1],b=NF[i];return a[1]+(b[1]-a[1])*(wx-a[0])/(b[0]-a[0])}return 1};
+const FE=f=>(g,x,y,t,a)=>{A.setDK(nf(x+AVCAM));f(g,x,y,t,a,A.getDK())};
+const lit=(k,i)=>k>.3&&hr(i)>.35;
+const fp=(g,x,y,t,o)=>man(g,x,y,t,Object.assign({s:.6,kilt:PAL[0]},o));
+const folla=(g,x,y,t,n,seed)=>{for(let q=0;q<n;q++){const r=hr(seed+q*7);man(g,x+q*22-n*11,y+(q%2)*5,t+q*1.3,{f:q%3?1:-1,s:.54+r*.1,ph:q,kilt:PAL[(q*2+seed)%6],long:q%4==1,robe:PAL[(q+seed)%6],skin:['#d0996c','#c88e64','#b87c54','#dca880'][(q+seed)%4]})}};
+const mare=(g,x,y,rx,ry,t,c)=>{acqua(g,x,y,rx,ry,t,c||'#2a86b4')};
+const pila=(g,x,y,w,h,c,n)=>{rect(g,c,x,y-h,w,h);rect(g,'rgba(255,255,255,.14)',x,y-h,Math.min(5,w*.1),h);rect(g,'rgba(0,0,0,.14)',x+w-Math.min(8,w*.14),y-h,Math.min(8,w*.14),h);for(let r=1;r<h/(n||12);r++)rect(g,'rgba(0,0,0,.07)',x,y-h+r*(n||12),w,1)};
+const fumo=(g,x,y,t,n,c)=>{for(let q=0;q<n;q++){const u=(t*.4+q/n)%1;el(g,c||'rgba(210,210,210,'+(.4*(1-u))+')',x+Math.sin(t*1.5+q)*8,y-u*60,6+u*10,4+u*6)}};
+/* nave mercantile panciuta: vela quadrata a strisce, prua a testa di cavallo. Guarda a destra */
+const nave=(g,x,y,s,t,f,sc)=>{g.save();g.translate(x,y+Math.sin(t*1.4+x)*1.6);g.rotate(Math.sin(t*1.1+x)*.02);g.scale((f||1)*s,s);const c=sc||PUR;
+ poly(g,'#8a5a38',[[-64,-26],[-54,2],[42,2],[60,-12],[64,-40],[58,-34],[56,-22]]);poly(g,'#6a4228',[[-54,2],[42,2],[60,-12],[58,-6],[40,6],[-50,6]]);rect(g,CAL,-62,-27,118,4);rect(g,PUR,-60,-23,114,2);
+ ln(g,'#6a4228',4,[-64,-26,-72,-44,-66,-52]);dot(g,'#6a4228',-66,-53,3);ln(g,'#6a4228',5,[60,-14,62,-40]);el(g,'#8a5a38',64,-46,8,5.4);poly(g,'#8a5a38',[[60,-50],[58,-60],[64,-52]]);dot(g,'#f4f0e4',66,-47,1.4);
+ ln(g,'#5a3e22',3.4,[0,-26,0,-104]);ln(g,'#5a3e22',3,[-30,-100,30,-100]);poly(g,CAL,[[-28,-98],[28,-98],[26,-34],[-26,-34]]);for(let q=0;q<5;q++)rect(g,q%2?c:CAL,-28+q*11.2,-98,5.6,64);rect(g,'rgba(0,0,0,.1)',12,-98,16,64);
+ ln(g,'#5a3e22',3,[-56,-20,-72,6]);rect(g,'#4a3220',-72,4,6,3);for(let q=0;q<3;q++)vaso(g,-30+q*14,-26,.55,'#b4683a');el(g,'rgba(255,255,255,.35)',0,3,56,2);g.restore()};
+/* galea da guerra lunga, con rostro di bronzo e remi */
+const galea=(g,x,y,s,t,f,rem)=>{g.save();g.translate(x,y+Math.sin(t*1.3+x)*1.2);g.scale((f||1)*s,s);
+ poly(g,'#6a4a30',[[-100,-18],[-92,0],[86,0],[106,-14],[100,-26],[90,-18]]);rect(g,'#8a5a38',-96,-20,186,5);for(let q=0;q<14;q++)dot(g,q%2?'#c8402a':'#e8d8a0',-88+q*13,-22,3.4);
+ poly(g,BRZ,[[100,-6],[128,-1],[100,0]]);ln(g,'#6a4a30',4,[-100,-18,-108,-34]);ln(g,'#5a3e22',2.4,[0,-24,0,-70]);poly(g,'#e8e0cc',[[-22,-66],[22,-66],[20,-54],[-20,-54]]);
+ for(let q=0;q<9;q++){const sw=Math.sin(t*3+q*.4)*7;ln(g,'#7a5a38',1.8,[-76+q*17,-8,-82+q*17+sw,10])}el(g,'rgba(255,255,255,.3)',0,2,96,2);g.restore()};
+/* elefante di guerra (guarda a destra) con il guidatore sul collo */
+const fel=(g,x,y,s,t,f,dr)=>{g.save();g.translate(x,y);g.scale((f||1)*s,s);const C='#7a7480',C2='#625c68',w=Math.sin(t*2.4)*5;
+ [[-30,-1],[-12,1],[16,-1],[34,1]].forEach((l,i)=>{const sw=i%2?w:-w;ln(g,i%2?C2:C,15,[l[0],-46,l[0]+sw,-4]);rect(g,'#3a3640',l[0]+sw-8,-5,16,5)});
+ el(g,C,0,-64,50,34);el(g,'rgba(255,255,255,.08)',-8,-80,30,10);el(g,C,50,-74,22,24);el(g,C2,40,-72,12,22);
+ g.strokeStyle=tn(C);g.lineWidth=11;g.lineCap='round';g.beginPath();g.moveTo(66,-64);g.quadraticCurveTo(84,-40,78+Math.sin(t*1.6)*5,-14);g.stroke();g.lineCap='butt';
+ ln(g,'#f0ead0',3.6,[64,-60,84,-54,92,-68]);dot(g,'#14110f',62,-80,1.6);ln(g,C2,3,[-48,-70,-56,-52+Math.sin(t*2)*3]);
+ g.restore()};
+/* due masse di roccia scura (Colonne d'Ercole) */
+const rupe=(g,x,y,w,h,c,c2)=>{poly(g,c,[[x-w/2,y],[x-w*.42,y-h*.5],[x-w*.3,y-h*.7],[x-w*.12,y-h],[x+w*.05,y-h*.92],[x+w*.2,y-h*.6],[x+w*.38,y-h*.4],[x+w/2,y]]);poly(g,c2,[[x+w*.05,y-h*.92],[x+w*.2,y-h*.6],[x+w*.38,y-h*.4],[x+w/2,y],[x+w*.1,y]]);for(let q=0;q<7;q++)ln(g,'rgba(0,0,0,.18)',1.6,[x-w*.3+q*w*.12,y-h*.2,x-w*.28+q*w*.12,y-h*.5-hr(q)*h*.3])};
+/* telaio verticale, stele con segno di Tanit */
+const tanit=(g,x,y,h,c)=>{const w=h*.3;ln(g,c,h*.07,[x-w,y,x,y-h*.62,x+w,y,x-w,y]);ln(g,c,h*.06,[x-w*1.5,y-h*.38,x+w*1.5,y-h*.38]);dot(g,c,x,y-h*.78,h*.1);ln(g,c,h*.05,[x-w*1.4,y-h*.38,x-w*1.5,y-h*.5]);ln(g,c,h*.05,[x+w*1.4,y-h*.38,x+w*1.5,y-h*.5])};
+const stela=(g,x,y,w,h,c,sg)=>{g.fillStyle=tn(c);g.beginPath();g.moveTo(x-w/2,y);g.lineTo(x-w/2,y-h+w*.4);g.lineTo(x,y-h);g.lineTo(x+w/2,y-h+w*.4);g.lineTo(x+w/2,y);g.closePath();g.fill();rect(g,'rgba(0,0,0,.14)',x+w*.15,y-h+w*.3,w*.35,h-w*.3);rect(g,'rgba(255,255,255,.18)',x-w/2,y-h+w*.4,w*.12,h-w*.4);if(sg)tanit(g,x,y-h*.1,h*.6,'rgba(60,40,20,.55)')};
+const anf=(g,x,y,s,c)=>{s=s||1;g.fillStyle=tn(c||'#c0603a');g.beginPath();g.moveTo(x-5*s,y-36*s);g.quadraticCurveTo(x-18*s,y-20*s,x-5*s,y);g.lineTo(x+5*s,y);g.quadraticCurveTo(x+18*s,y-20*s,x+5*s,y-36*s);g.closePath();g.fill();rect(g,c||'#c0603a',x-5*s,y-44*s,10*s,10*s);rect(g,'#1a0e08',x-12*s,y-24*s,24*s,2*s);ln(g,'#8a4a2a',2*s,[x-5*s,y-42*s,x-12*s,y-34*s]);ln(g,'#8a4a2a',2*s,[x+5*s,y-42*s,x+12*s,y-34*s])};
+const cedro=(g,x,y,s,t)=>{s=s||1;ln(g,'#5a3e28',7*s,[x,y,x+3*s,y-40*s,x,y-70*s]);[[0,-66,44,8],[-18,-52,30,7],[22,-44,32,7],[-6,-82,30,7],[10,-98,22,6]].forEach((p,i)=>{el(g,i%2?'#2e5030':'#3a6038',x+p[0]*s,y+p[1]*s,p[2]*s,p[3]*s);el(g,'rgba(255,255,255,.08)',x+p[0]*s-6*s,y+p[1]*s-2*s,p[2]*s*.5,p[3]*s*.4)})};
+const olivo=(g,x,y,s)=>{s=s||1;poly(g,'#6a5a48',[[x-6*s,y],[x-3*s,y-26*s],[x-10*s,y-44*s],[x-1*s,y-38*s],[x+4*s,y-48*s],[x+3*s,y-26*s],[x+8*s,y]]);[[-18,-52,20,12,'#8fa57a'],[8,-60,22,13,'#a3b88a'],[22,-46,16,10,'#8fa57a'],[-2,-70,16,10,'#b3c79a']].forEach(a=>el(g,a[4],x+a[0]*s,y+a[1]*s,a[2]*s,a[3]*s))};
+const melog=(g,x,y,s)=>{s=s||1;ln(g,'#6a4a32',3.6*s,[x,y,x+2*s,y-26*s]);el(g,'#5a8a3a',x,y-38*s,17*s,15*s);el(g,'#6a9a44',x-6*s,y-44*s,10*s,8*s);for(let q=0;q<5;q++)dot(g,'#d8402a',x+(q-2)*6*s,y-36*s+(q%2)*7*s-4*s,3.2*s)};
+const ficoA=(g,x,y,s)=>{s=s||1;ln(g,'#7a6a5a',8*s,[x,y,x-4*s,y-30*s,x+2*s,y-52*s]);[[-26,-66,34,18],[16,-70,34,17],[-4,-90,30,16],[34,-56,22,12],[-38,-52,20,12]].forEach((p,i)=>el(g,i%2?'#4a7a38':'#5a8a44',x+p[0]*s,y+p[1]*s,p[2]*s,p[3]*s));for(let q=0;q<4;q++)dot(g,'#8a4a6a',x-24*s+q*14*s,y-52*s+(q%2)*6*s,2.6*s)};
+
+/* ============ ZONA 1 · Biblo e la costa del cedro ============ */
+PR.fetarga=FE((g,x,y,t,a,k)=>{const w=Math.max(96,a.length*7+26);rect(g,BIT,x-2,y-60,4,60);rect(g,'rgba(0,0,0,.2)',x-w/2-2,y-92,w+4,34);rect(g,'#c8a070',x-w/2,y-90,w,30);rect(g,PUR,x-w/2,y-90,w,3);rect(g,'rgba(255,255,255,.3)',x-w/2+3,y-86,w-6,1.2);txt(g,a,x,y-70,9.5,'#3a2410');if(k>.25)glow(g,x,y-78,w*.7,'255,200,110',.2*k)});
+PR.fepalma=FE((g,x,y,t,a)=>{palma(g,x,y,a||1,t)});
+PR.fecedro=FE((g,x,y,t,a)=>{cedro(g,x,y,a||1,t)});
+PR.feulivo=FE((g,x,y,t,a)=>{olivo(g,x,y,a||1)});
+PR.fepino=FE((g,x,y,t,a)=>{a=a||1;ln(g,'#5a3e28',5*a,[x,y,x+2*a,y-56*a]);el(g,'#3a5a3a',x+2*a,y-76*a,20*a,26*a);el(g,'#4a6a44',x-6*a,y-84*a,12*a,14*a)});
+PR.fecesta=FE((g,x,y,t,a)=>{for(let q=0;q<3;q++){el(g,'#b88a50',x-24+q*24,y-9,12,9);rect(g,'#8a6a3a',x-36+q*24,y-14,24,2.4)}for(let q=0;q<5;q++){ln(g,'#e8e0c0',4,[x-30+q*6,y-14,x-26+q*6,y-26]);rect(g,'#c8a468',x-20,y-12,6,3)}for(let q=0;q<4;q++)rect(g,'#e8dcb8',x+34+q*6,y-10-q*5,26,5)});
+PR.feanfore=FE((g,x,y,t,a)=>{const n=a||5;rect(g,'#b8a888',x-12,y-60,n*20+10,6);for(let q=0;q<n;q++)anf(g,x+q*20,y,1.2+(q%2)*.1)});
+PR.feancora=FE((g,x,y,t,a)=>{el(g,'#8a8a8e',x,y-22,16,24);el(g,'rgba(255,255,255,.2)',x-5,y-28,5,12);dot(g,'#3a3a3e',x,y-30,4);ln(g,'#7a5a38',3,[x,y-46,x+10,y-70,x+60,y-10])});
+PR.fereti=FE((g,x,y,t,a)=>{ln(g,'#6a4a28',3,[x-60,y,x-60,y-70]);ln(g,'#6a4a28',3,[x+60,y,x+60,y-70]);ln(g,'#6a4a28',2,[x-60,y-70,x+60,y-70]);for(let q=0;q<13;q++){ln(g,'rgba(70,60,40,.7)',1,[x-56+q*9.4,y-70,x-54+q*9.4+Math.sin(t+q)*1.4,y-14]);}for(let r=0;r<5;r++)ln(g,'rgba(70,60,40,.5)',1,[x-58,y-62+r*11,x+58,y-60+r*11]);for(let q=0;q<4;q++)dot(g,'#c8c0a0',x-48+q*30,y-12,2)});
+PR.fetronchi=FE((g,x,y,t,a)=>{for(let r=0;r<3;r++)for(let q=0;q<4-r;q++){const tx=x-44+q*30+r*15,ty=y-8-r*15;rect(g,CED,tx-70+30,ty-7,120,14);rect(g,'#a8503a',tx-70+30,ty-7,120,3);el(g,'#c8704a',tx+50,ty,6,7);el(g,'#8a3a22',tx+50,ty,3,3.6)}ln(g,'#7a6a4a',2,[x-60,y-52,x+60,y-52]);ln(g,'#7a6a4a',2,[x-62,y-4,x+66,y-20])});
+PR.fetettoia=FE((g,x,y,t,a,k)=>{for(const s of[-1,1])ln(g,'#6a4a28',4,[x+s*70,y,x+s*70,y-100+(s>0?8:0)]);poly(g,'#c8a468',[[x-84,y-102],[x+84,y-94],[x+90,y-82],[x-90,y-90]]);for(let q=0;q<14;q++)rect(g,'rgba(80,50,10,.28)',x-84+q*12,y-102+q*.5,1.6,12);
+ rect(g,'#7a5a34',x+30,y-18,70,18);for(let q=0;q<5;q++){el(g,'#e8dcb8',x+40+q*12,y-24,5.6,5.6);dot(g,'#c8b888',x+40+q*12,y-24,2.6)}rect(g,'#8a6a3a',x-60,y-8,30,8);rect(g,'#c8b078',x-58,y-14,26,6);if(k>.25)glow(g,x,y-70,70,'255,200,110',.2*k)});
+PR.febiblo=FE((g,x,y,t,a,k)=>{poly(g,'#a89870',[[x-300,y+4],[x-250,y-70],[x-120,y-96],[x+80,y-100],[x+240,y-84],[x+310,y+4]]);
+ [[-250,60,90,CAL2],[-190,50,120,CAL],[-130,56,100,'#e0d4b8'],[40,60,130,CAL],[100,50,100,CAL2],[160,56,116,'#e4d8bc'],[220,50,88,CAL]].forEach((b,i)=>{pila(g,x+b[0],y-4,b[1],b[2],b[3],10);rect(g,'#9a8a68',x+b[0]-3,y-4-b[2]-4,b[1]+6,5);ar(g,'#2a2018',x+b[0]+b[1]*.38,y-4,12,22);for(let r=0;r<Math.floor(b[2]/40);r++)rect(g,lit(k,i*5+r)?LIT:'#4a3a2c',x+b[0]+8,y-4-b[2]+14+r*34,7,12)});
+ pila(g,x-60,y-4,100,70,CAL,10);rect(g,'#9a8a68',x-64,y-78,108,6);for(let q=0;q<5;q++)rect(g,'rgba(0,0,0,.12)',x-60+q*20,y-70,2,62);ar(g,'#3a2a1a',x-22,y-4,34,52);
+ poly(g,'#d8d0b8',[[x+14,y-4],[x+18,y-150],[x+22,y-4]]);rect(g,'#d8d0b8',x+12,y-78,12,74);poly(g,'#f0ead8',[[x+10,y-78],[x+18,y-170],[x+26,y-78]]);rect(g,'rgba(0,0,0,.14)',x+18,y-78,8,74);
+ for(let q=0;q<3;q++)ln(g,'#e8e0c8',4,[x-250+q*12,y-4,x-246+q*12,y-14]);fp(g,x+130,y+10,t,{f:-1,s:.62,acc:(g2,b)=>{rect(g2,'#c8a468',8,-66,12,8)}});folla(g,x-100,y+12,t,3,3);
+ mare(g,x-320,y+20,90,10,t,'#7ab0c4');mare(g,x+330,y+20,90,10,t,'#7ab0c4')});
+PR.fecantiere=FE((g,x,y,t,a,k)=>{
+ poly(g,'#7a5a3a',[[x-170,y+2],[x-160,y-30],[x-80,y-52],[x+30,y-52],[x+80,y-30],[x+110,y-72],[x+120,y-60],[x+96,y+2]]);for(let q=0;q<9;q++)ln(g,'#c8a070',3.4,[x-150+q*20,y-6,x-146+q*20,y-48+Math.abs(q-4)*3]);ln(g,'#a8803a',3,[x-160,y-30,x+80,y-30]);for(let q=0;q<7;q++)ln(g,'#7a5a38',2,[x-140+q*30,y-44,x-130+q*30,y-4]);
+ ln(g,'#5a3e28',3,[x-170,y-30,x-90,y-96]);ln(g,'#5a3e28',3,[x+70,y-30,x-10,y-96]);ln(g,'#5a3e28',2,[x-130,y-66,x+30,y-66]);
+ for(let q=0;q<3;q++){const tx=x+150+q*40;rect(g,CED,tx-30,y-8-q*0,120,14);el(g,'#c8704a',tx+90,y-1,6,7)}
+ const ox=x-330;bue(g,ox,y+6,1,t,1);bue(g,ox+52,y+8,1.02,t+1,1);rect(g,CED,ox-120,y-10,110,16);rect(g,'#a8503a',ox-120,y-10,110,3);ln(g,'#7a6a4a',2,[ox+10,y-30,ox-60,y-6]);fp(g,ox-20,y+16,t,{f:-1,s:.58});
+ fp(g,x-110,y+12,t,{s:.62,acc:(g2,b)=>{ln(g2,'#5a3e22',2.6,[8,-84+b,22,-100,26,-86]);poly(g2,'#8a8a92',[[22,-102],[32,-98],[28,-88],[22,-90]])}});fp(g,x-20,y+14,t+1,{f:-1,s:.62,acc:(g2,b)=>{ln(g2,'#5a3e22',2.4,[-9,-84+b,-24,-70])}});
+ fumo(g,x+30,y-20,t,4,'rgba(60,50,45,.35)');rect(g,'#4a3a28',x+10,y-18,16,18);el(g,'#2a1e14',x+18,y-18,8,3)});
+PR.fealfabeto=FE((g,x,y,t,a,k)=>{rect(g,'#7a5a34',x-80,y-46,160,8);rect(g,'#5a3e24',x-72,y-38,6,38);rect(g,'#5a3e24',x+66,y-38,6,38);rect(g,'#e8dcb8',x-56,y-54,60,9);for(let q=0;q<12;q++)rect(g,'rgba(70,40,15,.55)',x-52+q*4.6,y-52,1.6,5);ln(g,'#c8b070',3,[x+30,y-48,x+60,y-58]);ln(g,'#7a5a34',2.4,[x+60,y-58,x+70,y-68]);
+ const tx=x-20,ty=y-190;poly(g,'#c8b490',[[tx-50,ty],[tx+50,ty],[tx+54,ty+110],[tx-54,ty+110]]);rect(g,'rgba(255,255,255,.2)',tx-50,ty,6,110);rect(g,'#6a5a48',tx-3,ty+110,6,92);
+ for(let r=0;r<4;r++)for(let q=0;q<5;q++){const sx=tx+36-q*18,sy=ty+14+r*24;if((q+r)%3==0)ln(g,'rgba(50,30,10,.7)',2,[sx,sy,sx-8,sy,sx-8,sy+12]);else if((q*2+r)%3==1)ln(g,'rgba(50,30,10,.7)',2,[sx-8,sy,sx,sy+6,sx-8,sy+12,sx,sy+12]);else{ln(g,'rgba(50,30,10,.7)',2,[sx,sy,sx-8,sy+6]);ln(g,'rgba(50,30,10,.7)',2,[sx-8,sy,sx,sy+12])}}
+ rect(g,'#f0e8d0',x+74,y-96,50,52);ln(g,'#b88a50',2,[x+74,y-96,x+124,y-96]);ln(g,'rgba(50,30,10,.8)',2.6,[x+84,y-86,x+84,y-70,x+92,y-70,x+92,y-86,x+84,y-86]);ln(g,'rgba(50,30,10,.8)',2.6,[x+100,y-86,x+112,y-78,x+100,y-70,x+112,y-62]);
+ fp(g,x+10,y+4,t,{f:-1,s:.7,acc:(g2,b)=>{ln(g2,SKN,3.4,[-9,-84+b,-18,-68]);ln(g2,'#c8b070',2,[-18,-68,-24,-70])}});if(k>.3)glow(g,x,y-60,80,'255,200,110',.2*k)});
+PR.fesarcofago=FE((g,x,y,t,a,k)=>{poly(g,'#a89070',[[x-210,y+2],[x-170,y-64],[x+40,y-80],[x+220,y-50],[x+250,y+2]]);rect(g,'#2a1c10',x-190,y-24,38,26);
+ pila(g,x-70,y-12,150,50,'#d8c8a4',9);rect(g,'#c8b88c',x-76,y-64,162,10);for(let q=0;q<2;q++){const lx=x-60+q*120;el(g,'#c8b88c',lx+10,y-80,24,14);poly(g,'#c8b88c',[[lx,y-66],[lx+4,y-80],[lx+18,y-80],[lx+22,y-66]]);dot(g,'#c8b88c',lx+22,y-86,7);ln(g,'#9a8a6a',2,[lx+4,y-76,lx+14,y-76])}
+ rect(g,'#d0c09a',x-72,y-94,154,14);for(let q=0;q<17;q++)rect(g,'rgba(50,30,10,.55)',x-68+q*8.6,y-90+(q%2)*2,3,6);
+ seduto(g,x-30,y-20,'#b84a3a',1.1);rect(g,'#8a6a40',x-6,y-32,16,14);for(let q=0;q<5;q++)fp(g,x+20+q*10,y-8,t+q,{s:.28,kilt:'#8a7a5a'});
+ for(let q=0;q<3;q++){ln(g,'#4a8a3a',1.6,[x+120+q*8,y,x+118+q*8,y-24]);dot(g,'#f0e0f0',x+118+q*8,y-26,3)}
+ ln(g,'#2a1c10',3,[x+170,y-4,x+170,y-34]);rect(g,'#2a1c10',x+158,y-8,26,5)});
+
+/* ============ ZONA 2 · Tiro, l'isola della porpora ============ */
+PR.feisola=FE((g,x,y,t,a,k)=>{mare(g,x,y+22,330,22,t,'#2a86b4');el(g,'rgba(255,255,255,.2)',x,y+14,300,4);
+ poly(g,'#b8aa88',[[x-260,y+14],[x-250,y-30],[x+250,y-30],[x+262,y+14]]);rect(g,'#9a8c6a',x-262,y+10,524,6);
+ [[-230,70,150],[-150,56,190],[-84,64,136],[0,58,210],[70,66,160],[140,54,196],[210,56,140]].forEach((b,i)=>{const bx=x+b[0];pila(g,bx-b[1]/2,y-28,b[1],b[2]-30,i%2?CAL:'#e4d8bc',11);rect(g,'#9a8a68',bx-b[1]/2-3,y-28-b[2]+30-5,b[1]+6,5);for(let r=0;r<Math.floor((b[2]-30)/36);r++)for(let q=0;q<2;q++)rect(g,lit(k,i*7+r+q)?LIT:'#4a3a2c',bx-b[1]/2+10+q*(b[1]/2-6),y-28-b[2]+30+14+r*34,7,12);if(i%3==0)for(let q=0;q<3;q++)rect(g,[PUR,PUR2,'#c8402a'][q],bx-b[1]/2+4+q*(b[1]/3),y-28-b[2]+40,b[1]/3-2,9)});
+ for(const s of[-1,1]){const tx=x+s*250;pila(g,tx-22,y-28,44,230,'#d8ccaa',12);merli(g,tx-22,y-258,44,'#bfb08a',4);rect(g,'#2a1c10',tx-3,y-200,6,22)}
+ merli(g,x-250,y-30,500,'#bfb08a',30);for(let q=0;q<9;q++)ar(g,'#6a5c44',x-190+q*52,y+12,14,22);
+ for(let q=0;q<5;q++)rect(g,'#c8b88c',x-120+q*60,y-10,24,24-q%2*0);
+ nave(g,x-300,y+30,.55,t,1);nave(g,x+300,y+34,.55,t+1,-1,PUR2);galea(g,x-170,y+38,.45,t+2,1);nave(g,x+170,y+36,.5,t+3,1,'#2f6ab0');
+ for(let q=0;q<6;q++)ln(g,'rgba(255,255,255,.4)',1.2,[x-80+q*30,y+30+q%2*4,x-60+q*30,y+30+q%2*4])});
+PR.femurici=FE((g,x,y,t,a,k)=>{
+ for(let q=0;q<16;q++){const mx=x-150+q*14+hr(q)*6,my=y-6-hr(q*3)*40*Math.sin(q/15*Math.PI),r=7+hr(q*5)*5;el(g,'#d8c4a0',mx,my,r,r*.8);ln(g,'#b8a07a',1.4,[mx-r*.6,my-r*.5,mx-r,my-r*1.2]);ln(g,'#b8a07a',1.4,[mx+r*.6,my-r*.5,mx+r,my-r*1.2]);dot(g,'#c8b490',mx,my,r*.4)}
+ el(g,'#d0bc98',x-80,y-6,90,26);el(g,'#c8b490',x-60,y-26,56,18);for(let q=0;q<22;q++){const mx=x-130+q*7+hr(q+2)*3,my=y-14-hr(q*7)*20;ln(g,'#b8a07a',1.6,[mx,my,mx-2,my-8]);ln(g,'#b8a07a',1.6,[mx+4,my,mx+6,my-7])}
+ for(let q=0;q<3;q++){const bx=x+100+q*24;el(g,'#8a6a3a',bx,y-10,11,10);rect(g,'#6a4a28',bx-11,y-16,22,3);for(let r=0;r<5;r++)dot(g,'#d8c4a0',bx-6+r*3,y-18,2.6)}
+ for(let q=0;q<3;q++)fp(g,x+60+q*26,y+16,t+q,{s:.56,f:q%2?1:-1,kilt:'#e8dcc0',skin:'#c0805a',acc:(g2,b)=>{ln(g2,'#6a2a7a',4.6,[8,-84+b,16,-64]);ln(g2,'#6a2a7a',4.6,[-8,-84+b,-14,-66])}});
+ ln(g,'#7a7a6a',2,[x+40,y-60,x+40,y-6]);fumo(g,x+30,y-30,t,3,'rgba(150,130,140,.45)')});
+PR.fetini=FE((g,x,y,t,a,k)=>{
+ for(const s of[-1,1])for(let q=0;q<2;q++)ln(g,'#6a4a28',3,[x+s*170+q*s*-20,y,x+s*170+q*s*-20,y-90]);ln(g,'#6a4a28',2.4,[x-170,y-88,x-150,y-88]);ln(g,'#6a4a28',2.4,[x+150,y-88,x+170,y-88]);
+ [[-160,'#7a2a8a'],[-140,'#c8402a'],[-120,'#a03a6a'],[135,'#6a2a8a'],[155,'#a8203a']].forEach((p,i)=>{for(let r=0;r<2;r++){poly(g,p[1],[[x+p[0]-8,y-86+r*0],[x+p[0]+8,y-86],[x+p[0]+6,y-30+i%3*4],[x+p[0]-6,y-30+i%3*4]]);for(let q=0;q<5;q++)rect(g,'rgba(0,0,0,.12)',x+p[0]-8,y-82+q*10,16,1.2)}});
+ for(let q=0;q<3;q++){const bx=x-70+q*62;el(g,'#8a8478',bx,y-22,30,28);rect(g,'#8a8478',bx-30,y-34,60,14);el(g,q%2?'#7a2a8a':'#a03a6a',bx,y-34,26,7);el(g,'rgba(255,200,230,.35)',bx-8,y-35,10,2.4);for(let r=0;r<3;r++)el(g,'rgba(255,255,255,'+(.4*(1-(t*.5+r*.3)%1))+')',bx+Math.sin(t*3+r+q)*8,y-38-((t*10+r*8)%14),3,1.6)}
+ for(let q=0;q<3;q++){fumo(g,x-70+q*62,y-50,t+q,3,'rgba(90,70,95,.4)');ln(g,'#3a2a1a',3,[x-70+q*62,y+2,x-70+q*62-6,y-20])}
+ fp(g,x+98,y+14,t,{f:-1,s:.64,skin:'#c8906a',acc:(g2,b)=>{ln(g2,'#5a1a6a',5,[-9,-84+b,-14,-70]);ln(g2,'#5a1a6a',5,[9,-84+b,18,-72]);ln(g2,'#6a4a2a',2.4,[18,-72,40,-50])}});
+ fp(g,x-120,y+16,t+1,{s:.6,acc:(g2,b)=>{ln(g2,'#5a1a6a',5,[9,-84+b,18,-68])}})});
+PR.femelqart=FE((g,x,y,t,a,k)=>{pila(g,x-170,y-4,340,26,CAL2,13);pila(g,x-140,y-30,280,100,CAL,13);rect(g,'#9a8a68',x-146,y-134,292,8);merli(g,x-146,y-134,292,'#c8b88c',22);
+ ar(g,'#2a1c10',x-26,y-4,52,88);rect(g,GLD,x-30,y-96,60,4);for(let q=0;q<2;q++)rect(g,'#e0d4b0',x-70+q*120,y-120,12,90);
+ const c1=x-100,c2=x+100;rect(g,GLD,c1-9,y-190,18,186);rect(g,'rgba(255,255,255,.35)',c1-9,y-190,5,186);rect(g,'#9a7a20',c1-12,y-196,24,8);rect(g,'rgba(0,0,0,.2)',c1+3,y-190,6,186);glow(g,c1,y-120,60,'255,220,110',.2);
+ rect(g,'#3aa86a',c2-9,y-190,18,186);rect(g,'rgba(255,255,255,.3)',c2-9,y-190,5,186);rect(g,'#2a7a4a',c2-12,y-196,24,8);rect(g,'rgba(0,0,0,.2)',c2+3,y-190,6,186);glow(g,c2,y-120,60,'80,255,160',.14+.26*k);
+ rect(g,'#b8a888',x-200,y-18,50,18);rect(g,'#8a7a5a',x-196,y-26,42,8);el(g,'rgba(255,170,60,.9)',x-175,y-34+Math.sin(t*9)*1,6,9);fumo(g,x-175,y-40,t,4);
+ for(let q=0;q<3;q++)man(g,x+130+q*24,y+10,t+q,{s:.6,long:1,robe:CAL,hair:SKN,f:-1,acc:(g2,b)=>{rect(g2,'#e8dcc0',-12,-118+b,24,8)}});for(let q=0;q<3;q++){el(g,'#b08850',x+66+q*14,y+8,8,5);}});
+PR.fezattera=FE((g,x,y,t,a,k)=>{mare(g,x-40,y+22,230,17,t,'#2a86b4');for(let r=0;r<2;r++)for(let q=0;q<5;q++){const bx=x-150+q*26-r*0;rect(g,CED,bx-90+60,y+8-r*10-8,150,12);rect(g,'#a8503a',bx-90+60,y+8-r*10-8,150,3);el(g,'#c8704a',bx+60,y+2-r*10,6,6)}ln(g,'#7a6a4a',2,[x-190,y-6,x-250,y-14]);
+ nave(g,x-300,y+14,.8,t,1);ln(g,'#7a6a4a',2.4,[x-260,y-14,x-190,y-4]);
+ pila(g,x+100,y-6,130,40,'#c8b88c',10);for(let q=0;q<4;q++)rect(g,'#c8b078',x+110+q*24,y-48,16,12);
+ for(let q=0;q<4;q++){el(g,'#c8b078',x+124+q*14,y-8,7,8);rect(g,'#c8b078',x+121+q*14,y-18,6,5)}for(let q=0;q<3;q++)anf(g,x+196+q*12,y,.8,'#b4683a');
+ man(g,x+160,y+12,t,{f:-1,s:.74,long:1,robe:'#7a2a8a',hair:'#3a2a20',fr:GLD,acc:(g2,b)=>{rect(g2,GLD,-8,-116+b,16,4);ln(g2,GLD,2.4,[-14,-80,-14,-110])}});for(let q=0;q<3;q++)fp(g,x+60+q*20,y+16,t+q,{s:.56,acc:(g2,b)=>{ln(g2,'#5a3e22',2.4,[9,-84+b,22,-98]);poly(g2,'#8a8a92',[[20,-100],[30,-96],[26,-88]])}})});
+
+/* ============ ZONA 3 · Cartagine: la collina di Byrsa e la città nuova ============ */
+const tendaP=(g,x,y,w,h,c)=>{poly(g,c,[[x-w/2,y],[x,y-h],[x+w/2,y]]);poly(g,'rgba(0,0,0,.16)',[[x,y-h],[x+w/2,y],[x+w*.1,y]]);ln(g,'#4a3a28',1.6,[x,y-h,x,y-h-8]);ar(g,'#2a2018',x-w*.1,y,w*.2,h*.55)};
+PR.femura=FE((g,x,y,t,a,k)=>{pila(g,x-120,y-4,240,56,'#d8c8a4',9);merli(g,x-120,y-60,240,'#c8b88c',16);pila(g,x-130,y-4,36,92,'#d0c09a',9);merli(g,x-130,y-96,36,'#bfb08a',3);ar(g,'#2a1c10',x-14,y-4,28,40);pila(g,x+70,y-60,50,40,'#c8b88c',9);
+ for(let q=0;q<3;q++){const tx=x+170+q*60;tendaP(g,tx,y,52,40,['#e8dcc0','#d8c8a0','#e0d4b8'][q])}rect(g,'#6a5a48',x+150,y-6,12,6)});
+PR.fecartagine=FE((g,x,y,t,a,k)=>{mare(g,x+10,y+24,300,18,t,'#3ab0c0');poly(g,'#c8a870',[[x-240,y+14],[x-200,y-6],[x+160,y-10],[x+230,y+14]]);
+ poly(g,'#a89070',[[x-80,y-4],[x-50,y-70],[x-10,y-92],[x+30,y-70],[x+60,y-4]]);rect(g,'rgba(0,0,0,.14)',x+4,y-90,40,86);for(let q=0;q<5;q++)rect(g,'rgba(60,40,20,.2)',x-60+q*22,y-62+q*8,26,2);
+ [[-200,56,40],[-140,60,52],[100,64,44],[170,50,36]].forEach((b,i)=>{pila(g,x+b[0],y-4,b[1],b[2],i%2?CAL:'#e8dfc8',10);rect(g,'#b8a888',x+b[0]-3,y-4-b[2]-4,b[1]+6,5);ar(g,'#2a2018',x+b[0]+b[1]*.4,y-4,12,22)});
+ for(let q=0;q<4;q++)tendaP(g,x-30+q*34,y+10,42,34,['#e8dcc0','#d8c8a0','#c8b090','#e0d4b8'][q]);
+ galea(g,x-210,y+30,.42,t,1);nave(g,x+200,y+34,.5,t+1,-1);nave(g,x-110,y+36,.5,t+2,1,PUR2);for(let q=0;q<3;q++)ln(g,'#6a4a30',3,[x+120+q*14,y+4,x+120+q*14,y-18]);
+ folla(g,x+60,y+16,t,3,5)});
+PR.fepelle=FE((g,x,y,t,a,k)=>{poly(g,'#b8a07a',[[x-60,y+2],[x-20,y-110],[x+40,y-118],[x+100,y-100],[x+170,y+2]]);rect(g,'rgba(0,0,0,.12)',x+30,y-116,24,110);
+ g.strokeStyle=tn('#6a4228');g.lineWidth=3;g.beginPath();g.ellipse(x+40,y-112,48,8,0,0,7);g.stroke();for(let q=0;q<8;q++)dot(g,'#4a2a18',x+40+Math.cos(q*.8)*48,y-112+Math.sin(q*.8)*8,1.4);
+ for(let q=0;q<4;q++)tendaP(g,x-170+q*34,y+8,42,32,['#e8dcc0','#d8c8a0','#e0d4b8','#c8b090'][q]);
+ const hx=x-230;poly(g,'#6a4228',[[hx-40,y-6],[hx-20,y-26],[hx+50,y-22],[hx+70,y-6],[hx+36,y+4],[hx-12,y+4]]);dot(g,'#5a3a22',hx+66,y-12,7);ln(g,'#e8e0c8',2.4,[hx+66,y-18,hx+72,y-26]);ln(g,'#4a2a18',1.6,[hx-30,y-6,hx+60,y-16,hx+70,y-8]);
+ fp(g,hx-60,y+10,t,{s:.6,f:1,acc:(g2,b)=>{ln(g2,'#5a3e22',2.4,[9,-84+b,22,-70]);poly(g2,'#8a8a92',[[20,-72],[32,-70],[24,-62]])}});fp(g,hx+90,y+12,t+1,{s:.6,f:-1,kilt:'#a8503a',acc:(g2,b)=>{ln(g2,'#5a3e22',2.4,[-9,-84+b,-22,-70]);poly(g2,'#8a8a92',[[-20,-72],[-32,-70],[-24,-62]])}});
+ man(g,x-300,y+8,t,{s:.66,f:-1,kilt:'#c8402a',skin:'#b87c54',hair:'#1a120c',acc:(g2,b)=>{ln(g2,tn(SKN),3.4,[-9,-84+b,-24,-92]);ln(g2,'#e8e0c8',2,[-24,-92,-34,-72])}});for(let q=0;q<2;q++)fp(g,x+190+q*26,y+14,t+q,{s:.54,f:q?1:-1})});
+PR.fetanit=FE((g,x,y,t,a,k)=>{
+ stela(g,x-30,y,60,170,'#d8cdb0',0);const sx=x-30;tanit(g,sx,y-70,110,'rgba(70,40,20,.75)');dot(g,'rgba(70,40,20,.75)',sx,y-146,0);
+ el(g,'#f4ecd0',sx,y-186,14,14);el(g,'#d8cdb0',sx+6,y-190,13,13);
+ pila(g,x+60,y-4,130,60,CAL,9);rect(g,'#c8b88c',x+54,y-68,142,8);ar(g,'#2a1c10',x+110,y-4,30,40);rect(g,'#bfb08a',x+212,y-26,40,26);el(g,'#4a4a4e',x+232,y-28,17,4);el(g,'rgba(255,170,60,.9)',x+232,y-36+Math.sin(t*9),4,7);fumo(g,x+232,y-40,t,5,'rgba(220,220,230,.4)');
+ for(let q=0;q<3;q++)man(g,x-130+q*22,y+10,t+q,{s:.62,long:1,robe:CAL,hair:'#3a2a20',f:1,acc:(g2,b)=>{poly(g2,'rgba(240,235,225,.9)',[[-10,-116+b],[14,-116+b],[18,-60],[-14,-60]])}});
+ for(let q=0;q<3;q++){el(g,'#b88a50',x-70+q*10,y-6,9,5);dot(g,'#c8402a',x-72+q*10,y-12,2.4);}rect(g,'#e8dcb8',x-140,y-8,30,8)});
+PR.fetofet=FE((g,x,y,t,a,k)=>{rect(g,'#c8b894',x-210,y-4,420,8);for(let r=0;r<3;r++)for(let q=0;q<14;q++){const sx=x-190+q*29+(r%2)*10,sy=y-4+r*14,h=34+hr(q*3+r)*18-r*4;stela(g,sx,sy,13,h,r%2?'#d0c4a4':'#e0d4b4',hr(q+r*7)>.45);}
+ for(let q=0;q<7;q++){el(g,'#b4683a',x-170+q*54,y+24,7,5);rect(g,'#b4683a',x-174+q*54,y+17,8,3)}
+ for(let q=0;q<3;q++)rect(g,'#bfb08a',x-210+q*210,y+1,0,0);ln(g,'#bfb08a',3,[x-214,y+8,x-214,y-50]);ln(g,'#bfb08a',3,[x+214,y+8,x+214,y-50])});
+
+/* ============ ZONA 4 · I porti di Cartagine ============ */
+PR.feportomerc=FE((g,x,y,t,a,k)=>{pila(g,x-300,y-2,600,12,'#b8a888',9);mare(g,x,y+26,260,20,t,'#3a9cc4');el(g,'#2a7aa8',x,y+28,230,14);
+ [[-270,100],[-130,80],[130,90],[260,110]].forEach((b,i)=>{pila(g,x+b[0]-45,y-8,90,50+i%2*14,i%2?'#e4dac0':CAL,10);rect(g,'#9a8a68',x+b[0]-48,y-8-50-i%2*14-4,96,5);ar(g,'#2a2018',x+b[0]-10,y-8,22,34);ar(g,'#2a2018',x+b[0]+22,y-8,16,26)});
+ nave(g,x-90,y+28,.75,t,1);nave(g,x+70,y+34,.8,t+1,-1,PUR2);nave(g,x+190,y+30,.55,t+2,1,'#2f6ab0');
+ for(let q=0;q<4;q++)fp(g,x-250+q*20,y+4,t+q,{s:.56,f:1,ph:q,acc:(g2,b)=>{el(g2,'#b4683a',-2,-110+b,7,12)}});for(let q=0;q<3;q++)anf(g,x-180+q*12,y,.9);
+ ln(g,'#4a4a52',3,[x+250,y+30,x+250,y-8]);for(let q=0;q<5;q++)dot(g,'#6a6a72',x+250,y+24-q*6,2.4);ln(g,'#6a6a72',2,[x+250,y-6,x+210,y+22]);fp(g,x-110,y+4,t,{s:.6,f:-1,kilt:'#7a2a8a',acc:(g2,b)=>{ln(g2,GLD,2,[-9,-84+b,-22,-96]);rect(g2,'#e8dcb8',-34,-102,12,8)}})});
+PR.feportocirc=FE((g,x,y,t,a,k)=>{
+ poly(g,'#b8aa88',[[x-300,y+4],[x-300,y-40],[x-250,y-60],[x+250,y-60],[x+300,y-40],[x+300,y+4]]);merli(g,x-300,y-60,600,'#a89a78',36);
+ el(g,'#2a86b4',x,y+10,230,30);el(g,'#3a9cc4',x,y+4,214,22);el(g,'rgba(255,255,255,.18)',x-50,y+2,80,4);
+ for(let q=0;q<9;q++){const sx=x-250+q*62,col=q*0;rect(g,'#c8b88c',sx-4,y-70,8,68);ar(g,'#5a4a38',sx+8,y-8,38,62);ar(g,'#3a2e22',sx+13,y-8,28,52);rect(g,'#d8d0b8',sx-6,y-74,12,5);if(q%2==0)poly(g,'#7a4a2a',[[sx+14,y-8],[sx+34,y-8],[sx+30,y-30],[sx+18,y-30]])}
+ pila(g,x-30,y+4,60,50,'#d8ccaa',9);rect(g,'#c8b88c',x-34,y-48,68,5);pila(g,x-12,y-42,24,64,'#e0d4b4',9);merli(g,x-12,y-106,24,'#c8b88c',2);
+ for(let q=0;q<3;q++)galea(g,x-160+q*160,y+22,.32,t+q,q%2?-1:1);ln(g,'#6a4a28',3,[x+20,y+4,x+100,y+18]);rect(g,'#7a5a34',x+60,y+14,40,4)});
+PR.feammiraglio=FE((g,x,y,t,a,k)=>{mare(g,x,y+22,250,17,t,'#2a86b4');el(g,'#b8a888',x,y+8,150,22);el(g,'#d0c4a0',x,y+2,140,14);pila(g,x-90,y-4,100,68,CAL,9);rect(g,'#c8b88c',x-96,y-74,112,8);rect(g,'#7a5a34',x-90,y-82,100,6);for(let q=0;q<4;q++)rect(g,'#6a4a2a',x-84+q*24,y-82,4,10);ar(g,'#2a1c10',x-60,y-4,24,38);rect(g,lit(k,3)?LIT:'#4a3a2c',x-22,y-52,10,14);
+ pila(g,x+22,y-2,46,150,'#e0d4b4',10);merli(g,x+22,y-152,46,'#c8b88c',4);rect(g,'#2a1c10',x+40,y-110,10,20);rect(g,'#2a1c10',x+40,y-60,10,20);
+ man(g,x-100,y-76,t,{s:.62,f:1,kilt:'#e8e0d0',acc:(g2,b)=>{rect(g2,'#c8402a',-12,-86+b,24,10);el(g2,'#b8903a',1,-112+b,13,8);poly(g2,'#c8402a',[[-12,-90+b],[-20,-50],[-6,-50]])}});
+ man(g,x+90,y+8,t,{s:.6,f:-1,kilt:'#e0c060',acc:(g2,b)=>{ln(g2,tn(SKN),3.6,[-9,-84+b,-26,-106]);ln(g2,BRZ,4,[-26,-106,-44,-114]);poly(g2,BRZ,[[-44,-120],[-52,-110],[-44,-108]])}});
+ ln(g,'#7a5a34',4,[x-150,y+14,x-250,y+14]);for(let q=0;q<5;q++)rect(g,'#6a4a2a',x-250+q*20,y+14,3,10);galea(g,x+200,y+30,.4,t,-1);nave(g,x-190,y+34,.5,t+1,1)});
+PR.fecantierep=FE((g,x,y,t,a,k)=>{
+ poly(g,'#7a5a3a',[[x-150,y+2],[x-140,y-22],[x-90,y-48],[x+60,y-52],[x+130,y-24],[x+170,y-56],[x+176,y-44],[x+150,y+2]]);for(let q=0;q<9;q++)ln(g,'#c8a070',3.2,[x-130+q*26,y-4,x-124+q*26,y-44+Math.abs(q-4)*4]);for(let r=0;r<2;r++)ln(g,'#a8803a',3,[x-140,y-16-r*14,x+120,y-22-r*14]);
+ rect(g,'#6a4a2a',x-170,y-8,10,8);rect(g,'#6a4a2a',x+150,y-8,10,8);ln(g,'#5a3e28',3,[x-150,y-20,x-80,y-90]);ln(g,'#5a3e28',3,[x+110,y-20,x+30,y-90]);
+ for(let q=0;q<3;q++){rect(g,'#4a3a2a',x+210+q*26,y-26,20,26);el(g,'#2a1e14',x+220+q*26,y-26,10,3);rect(g,'rgba(255,255,255,.1)',x+212+q*26,y-26,3,26);fumo(g,x+220+q*26,y-28,t+q,3,'rgba(50,40,40,.35)')}
+ poly(g,BRZ,[[x+280,y-6],[x+330,y-14],[x+280,y-20]]);rect(g,'#6a4a2a',x+276,y-22,6,22);
+ for(let q=0;q<6;q++)el(g,'#e0c898',x-190+q*40+hr(q)*10,y+8+(q%2)*4,5,1.6);
+ fp(g,x-70,y+14,t,{s:.64,acc:(g2,b)=>{const u=Math.sin(t*5)*10;ln(g2,'#5a3e22',2.6,[9,-84+b,22,-100+u]);rect(g2,'#8a6a40',18,-106+u,10,8)}});fp(g,x+10,y+14,t+1,{s:.62,f:-1,acc:(g2,b)=>{ln(g2,'#5a3e22',2.4,[-9,-84+b,-24,-70]);rect(g2,'#c8a468',-34,-76,14,8)}});fp(g,x+80,y+16,t+2,{s:.62,acc:(g2,b)=>{ln(g2,'#5a3e22',2.6,[9,-84+b,24,-96]);ln(g2,'#6a4a2a',1.6,[22,-98,28,-92])}})});
+
+/* ============ ZONA 5 · La campagna di Cartagine e il Capo Bon ============ */
+const pozzo=(g,x,y,t)=>{el(g,'#8a8478',x,y-4,20,7);rect(g,'#9a9488',x-18,y-26,36,24);el(g,'#2a2018',x,y-26,16,5);ln(g,'#5a3e22',3.4,[x-18,y-26,x-18,y-70]);ln(g,'#5a3e22',3.4,[x+18,y-26,x+18,y-70]);ln(g,'#5a3e22',3,[x-22,y-70,x+22,y-70]);dot(g,'#6a4a2a',x,y-72,5);const u=Math.sin(t*.8)*6;ln(g,'#b8a888',1.2,[x,y-70,x,y-40+u]);rect(g,'#8a6a40',x-6,y-40+u,12,10);poly(g,'#7a4a2a',[[x-6,y-30+u],[x+6,y-30+u],[x+4,y-24+u],[x-4,y-24+u]])};
+const canale=(g,x,y,w,t)=>{rect(g,'#7a9aa4',x-w/2,y-3,w,6);rect(g,'rgba(255,255,255,.35)',x-w/2,y-2,w,1.4);rect(g,'#8a5a3a',x-w/2,y+3,w,2);for(let q=0;q<w/30;q++)rect(g,'rgba(255,255,255,.4)',x-w/2+q*30+(t*10)%30,y-1,8,1.2)};
+PR.fegiardino=FE((g,x,y,t,a,k)=>{rect(g,'#9a5a3a',x-230,y-6,460,12);canale(g,x,y+4,440,t);
+ for(let q=0;q<4;q++)melog(g,x-190+q*40,y-4,1.1+(q%2)*.1);ficoA(g,x-18,y-4,.8);olivo(g,x+50,y-4,.9);olivo(g,x+110,y-6,1);palma(g,x+180,y-4,.8,t);palma(g,x+222,y-2,.64,t+1);pozzo(g,x-230,y+8,t);
+ for(let q=0;q<3;q++){el(g,'#b88a50',x-100+q*16,y+12,9,5);for(let r=0;r<3;r++)dot(g,['#d8402a','#8a4a6a','#c8b040'][q],x-103+q*16+r*3,y+9,2.2)}
+ fp(g,x+40,y+16,t,{s:.64,f:-1,long:0,acc:(g2,b)=>{ln(g2,'#5a3e22',2.4,[-9,-84+b,-24,-72]);poly(g2,'#8a8a92',[[-24,-76],[-34,-70],[-24,-66]])}})});
+PR.fegrano=FE((g,x,y,t,a)=>{const w=a||320;rect(g,'#b8964a',x-w/2,y-6,w,8);for(let q=0;q<w/5;q++){const bx=x-w/2+q*5+hr(q*2)*2,hh=40+hr(q*3)*16,sw=Math.sin(t*1.3+q*.5)*3;ln(g,q%3?'#e0bc50':'#cfa63c',1.7,[bx,y,bx+sw*.4,y-hh*.55,bx+sw,y-hh]);ln(g,'#ecc860',2.6,[bx+sw,y-hh,bx+sw+.5,y-hh-9])}});
+PR.fearatro=FE((g,x,y,t,a,k)=>{rect(g,'#b8964a',x-210,y-6,420,8);
+ for(let q=0;q<42;q++){const bx=x-210+q*10+hr(q)*3,hh=36+hr(q*3)*14,sw=Math.sin(t*1.3+q*.5)*3;ln(g,'#e0bc50',1.7,[bx,y,bx+sw*.4,y-hh*.5,bx+sw,y-hh]);ln(g,'#ecc860',2.6,[bx+sw,y-hh,bx+sw,y-hh-9])}
+ const ox=x-70;bue(g,ox,y+14,1.02,t,1);bue(g,ox+52,y+16,1.05,t+1,1);ln(g,'#e8e0c8',2.6,[ox+92,y-34,ox+88,y-52,ox+96,y-58]);rect(g,'#6a4a2a',ox-14,y-48,100,4);
+ ln(g,'#5a3e22',3.6,[ox+82,y-46,ox+140,y-20,ox+156,y+16]);ln(g,'#5a3e22',2.6,[ox+110,y-32,ox+118,y-8]);poly(g,'#6a6a72',[[ox+152,y+16],[ox+164,y+16],[ox+160,y+4]]);
+ man(g,ox+176,y+18,t,{f:-1,s:.82,kilt:'#e0d4b0',acc:(g2,b)=>{el(g2,'#d8c070',-1,-114+b,19,4);dot(g2,'#d8c070',-1,-114+b,9);ln(g2,'#5a3e22',2.4,[8,-84+b,20,-54,22,-40])}});
+ for(let q=0;q<3;q++){const mx=x+120+q*34;man(g,mx,y+16,t+q,{s:.6,f:q%2?1:-1,kilt:['#e0d4b0','#c8a888'][q%2],acc:(g2,b)=>{const u=Math.sin(t*3+q)*5;ln(g2,tn(SKN),3.4,[8,-84+b,16,-70+u]);ln(g2,'#8a8a92',2.4,[16,-70+u,26,-80+u,28,-70+u])}})}
+ el(g,'#a8864a',x+130,y+30,50,8);for(let q=0;q<5;q++){ln(g,'#e0bc50',3.4,[x+100+q*14,y+26,x+104+q*14,y+16]);}for(let q=0;q<3;q++)sack(g,x+180+q*8,y+34-q%2*4)});
+PR.fevasca=FE((g,x,y,t,a,k)=>{el(g,'#8a7a64',x-90,y-14,60,26);rect(g,'#8a7a64',x-150,y-34,120,24);el(g,'#7a2a4a',x-90,y-34,56,9);el(g,'rgba(255,160,200,.25)',x-110,y-35,18,3);
+ for(let q=0;q<3;q++){const px=x-120+q*28;man(g,px,y-30,t+q*.8,{s:.5,f:q%2?1:-1,kilt:'#e8dcc0',skin:'#c0805a',ph:q*1.2,acc:(g2,b)=>{ln(g2,tn(SKN),3,[-9,-84+b,-14,-96]);ln(g2,tn(SKN),3,[9,-84+b,14,-96])}})}
+ rect(g,'#c8a468',x+20,y-6,90,6);for(let q=0;q<8;q++)for(let r=0;r<2;r++)dot(g,['#8a4a6a','#c8b040'][(q+r)%2],x+28+q*10,y-10-r*5,3.4);rect(g,'#c8a468',x+30,y+10,80,6);for(let q=0;q<8;q++)dot(g,'#6a3a5a',x+38+q*9,y+8,3);
+ rect(g,'#6a4a2a',x+160,y-72,10,72);rect(g,'#6a4a2a',x+210,y-72,10,72);rect(g,'#7a5a34',x+160,y-80,60,10);ln(g,'#7a5a34',8,[x+160,y-46,x+260,y-34]);rect(g,'#9a9488',x+240,y-12,36,12);el(g,'#9a9488',x+260,y-34,5,28);
+ el(g,'#6a6a58',x+190,y-8,26,6);for(let q=0;q<4;q++)dot(g,'#6a7a38',x+180+q*8,y-10,3);for(let q=0;q<4;q++)anf(g,x+290+q*14,y,1,'#b4683a')});
+PR.fealveari=FE((g,x,y,t,a,k)=>{for(const s of[-1,1])ln(g,'#6a4a28',4,[x+s*120,y,x+s*120,y-100]);poly(g,'#c8a468',[[x-130,y-102],[x+130,y-96],[x+136,y-84],[x-136,y-90]]);for(let q=0;q<20;q++)rect(g,'rgba(80,50,10,.25)',x-128+q*13,y-102,1.4,12);
+ for(let r=0;r<2;r++)for(let q=0;q<4;q++){const hx=x-95+q*50,hy=y-14-r*26;el(g,'#b4683a',hx,hy-12,14,12);rect(g,'#b4683a',hx-14,hy-24,28,24);el(g,'#8a4a2a',hx,hy-24,14,3.4);dot(g,'#2a1810',hx,hy-12,3);rect(g,'rgba(255,255,255,.14)',hx-12,hy-24,3,24);rect(g,'rgba(60,20,0,.22)',hx-14,hy-10,28,2)}
+ for(let q=0;q<10;q++){const bx=x-120+hr(q)*240+Math.sin(t*3+q)*8,by=y-70+Math.sin(t*4+q*2)*14;dot(g,'#3a2a10',bx,by,1.4);dot(g,'#e8c040',bx+1.4,by,1.2)}
+ fp(g,x+150,y+14,t,{f:-1,s:.64,long:1,robe:'#d8b070',acc:(g2,b)=>{poly(g2,'rgba(240,235,225,.55)',[[-14,-120+b],[14,-120+b],[16,-96+b],[-16,-96+b]]);rect(g2,'#6a6a72',-24,-68,8,10);fumo(g2,-20,-72,t,3,'rgba(190,190,190,.5)')}});
+ rect(g,'#7a5a34',x-210,y-22,70,8);rect(g,'#6a4a2a',x-206,y-14,4,14);rect(g,'#6a4a2a',x-148,y-14,4,14);rect(g,'#f0e8d0',x-200,y-34,34,12);ln(g,'rgba(50,30,10,.7)',1.6,[x-196,y-30,x-170,y-30]);ln(g,'rgba(50,30,10,.7)',1.6,[x-196,y-26,x-176,y-26]);for(let q=0;q<3;q++){el(g,'#c88a2a',x-156+q*8,y-26,4,4)}});
+PR.fefico=FE((g,x,y,t,a,k)=>{ficoA(g,x,y,1.7);el(g,'rgba(0,0,0,.14)',x,y+4,90,8);el(g,'#8a8478',x-130,y-6,50,14);el(g,'#7ab0c0',x-130,y-9,42,9);el(g,'rgba(255,255,255,.3)',x-140,y-10,14,2);rect(g,'#8a8478',x-184,y-22,10,20);rect(g,'#8a8478',x-86,y-22,10,20);rect(g,'#6a4a2a',x+60,y-12,60,5);rect(g,'#6a4a2a',x+66,y-7,4,7);rect(g,'#6a4a2a',x+110,y-7,4,7);ln(g,'#7a9a48',2,[x-180,y-30,x-170,y-44]);canale(g,x+170,y+8,120,t)});
+
+/* ============ ZONA 6 · Il mercato e il Senato di Cartagine ============ */
+const tenda=(g,tx,y,w,c,h)=>{h=h||96;ln(g,'#6a4a28',3.4,[tx-w/2,y,tx-w/2,y-h]);ln(g,'#6a4a28',3.4,[tx+w/2,y,tx+w/2,y-h+10]);poly(g,c,[[tx-w/2-8,y-h],[tx+w/2+8,y-h+10],[tx+w/2+14,y-h+26],[tx-w/2-14,y-h+16]]);for(let q=0;q<5;q++)poly(g,'rgba(255,255,255,.55)',[[tx-w/2-8+q*(w+16)/5,y-h+q*2],[tx-w/2+2+q*(w+16)/5,y-h+1+q*2],[tx-w/2-2+q*(w+16)/5+3,y-h+18+q*2],[tx-w/2-10+q*(w+16)/5,y-h+16+q*2]])};
+const bilancia=(g,x,y,t)=>{ln(g,'#6a4a28',3,[x,y,x,y-50]);ln(g,'#6a4a28',2.6,[x-26,y-50,x+26,y-50+Math.sin(t*.8)]);for(const s of[-1,1]){ln(g,'#4a3a22',1,[x+s*26,y-50,x+s*26-6,y-36]);ln(g,'#4a3a22',1,[x+s*26,y-50,x+s*26+6,y-36]);el(g,BRZ,x+s*26,y-35,8,2.4)}};
+const telaioF=(g,x,y,t,k)=>{ln(g,'#6a4a28',5,[x-34,y,x-34,y-150]);ln(g,'#6a4a28',5,[x+34,y,x+34,y-150]);ln(g,'#6a4a28',4,[x-38,y-146,x+38,y-146]);ln(g,'#6a4a28',4,[x-38,y-110,x+38,y-110]);for(let q=0;q<15;q++){const c=['#7a2a8a','#e8d8b0','#c8402a'][Math.floor(q/3)%3];ln(g,c,1.6,[x-30+q*4.3,y-146,x-30+q*4.3,y-30]);}
+ for(let q=0;q<8;q++){el(g,'#b4683a',x-30+q*8.4,y-24,3.6,6);ln(g,'#9a8a6a',.8,[x-30+q*8.4,y-30,x-30+q*8.4,y-80])}rect(g,'#7a2a8a',x-30,y-146,60,34);for(let q=0;q<6;q++)rect(g,'rgba(255,255,255,.3)',x-30,y-142+q*5,60,1.4)};
+PR.femercato=FE((g,x,y,t,a,k)=>{tenda(g,x-140,y,120,'#c8402a');tenda(g,x+10,y,110,'#2f6ab0',90);tenda(g,x+160,y,100,'#7a2a8a');
+ for(let q=0;q<3;q++){const bx=x-160+q*150;rect(g,'#8a6a3a',bx,y-24,80,8);rect(g,'#6a4a2a',bx+4,y-16,4,16);rect(g,'#6a4a2a',bx+72,y-16,4,16);for(let r=0;r<5;r++)dot(g,['#d8402a','#e0b84a','#8a4a6a','#6a9a3a','#c88a2a'][(r+q)%5],bx+10+r*14,y-31,6)}
+ bilancia(g,x-60,y+4,t);for(let q=0;q<3;q++){el(g,'#f0e8d0',x+60+q*14,y+8,7,9);ln(g,'rgba(80,50,20,.5)',.8,[x+56+q*14,y+6,x+64+q*14,y+6])}
+ asino(g,x+250,y+14,1,t,-1);folla(g,x-30,y+14,t,4,2);fp(g,x+100,y+16,t,{s:.62,f:-1,kilt:'#e0c060',acc:(g2,b)=>{ln(g2,tn(SKN),3.4,[-9,-84+b,-20,-92])}});
+ for(let q=0;q<3;q++){rect(g,'#9a8a5a',x-210+q*14,y-14+q%2*0,12,14);dot(g,'#c8b078',x-204+q*14,y-16,5)}if(k>.1)glow(g,x,y-60,200,'255,200,110',.18)});
+PR.fetelaio=FE((g,x,y,t,a,k)=>{telaioF(g,x,y,t,k);woman(g,x-72,y+14,t);for(let q=0;q<4;q++){ln(g,['#7a2a8a','#c8402a','#e0c060','#a03a6a'][q],4,[x+80,y-120+q*0,x+80,y-60]);}ln(g,'#6a4a28',2.4,[x+60,y-122,x+130,y-122]);for(let q=0;q<4;q++){const sx=x+70+q*16;poly(g,['#7a2a8a','#c8402a','#e0c060','#a03a6a'][q],[[sx-5,y-120],[sx+5,y-120],[sx+3,y-70],[sx-3,y-70]])}
+ for(let q=0;q<3;q++){ln(g,'#6a4a28',1.6,[x-110+q*8,y-8,x-108+q*8,y-30]);el(g,'#e8dcc0',x-110+q*8,y-32,3,5)}for(let q=0;q<3;q++){el(g,'#b08850',x+130+q*14,y+4,9,5)}if(k>.2)glow(g,x,y-90,90,'255,200,110',.2*k)});
+PR.fesenato=FE((g,x,y,t,a,k)=>{pila(g,x-200,y-4,400,40,'#e0d0ac',10);pila(g,x-130,y-40,260,110,'#ead8b4',10);rect(g,'#9a7444',x-138,y-156,276,8);poly(g,'#c8a468',[[x-138,y-156],[x,y-196],[x+138,y-156]]);poly(g,'#b8946a',[[x-120,y-158],[x,y-188],[x+120,y-158]]);
+ for(let q=0;q<7;q++){rect(g,'#f0e6c8',x-120+q*40,y-40,12,70);rect(g,'rgba(0,0,0,.14)',x-110+q*40,y-40,3,70);rect(g,'#d8c8a0',x-123+q*40,y-44,18,5)}
+ ar(g,'#2a1c10',x-26,y-4,52,72);rect(g,PUR,x-130,y-40,260,4);for(let q=0;q<10;q++)rect(g,'#c8b888',x-190+q*0,y-4,0,0);
+ for(let r=0;r<4;r++)rect(g,'#c8b88c',x-190+r*12,y-r*8-6,380-r*24,8);
+ for(const s of[-1,1]){const gx=x+s*214;fp(g,gx,y+14,t,{s:.62,f:-s,kilt:'#e0d0b0',acc:(g2,b)=>{ln(g2,'#5a3e22',2.4,[s*9,-84+b,s*14,-130]);poly(g2,'#8a8a92',[[s*13,-132],[s*17,-132],[s*15,-142]])}})}
+ for(let q=0;q<5;q++)man(g,x-90+q*40,y-24-0,t+q,{s:.46,long:1,robe:['#e8e0d0','#d8c8a0'][q%2],hair:'#c8c0b0',f:q%2?1:-1,ph:q});
+ for(const s of[-1,1])man(g,x+s*50,y+36,t,{s:.62,long:1,robe:'#f0e6cc',hair:'#3a2a20',f:s,fr:'#7a2a8a',acc:(g2,b)=>{rect(g2,'#7a2a8a',-12,-90+b,24,4);rect(g2,'#7a2a8a',-14,-30,28,4)}})});
+PR.femuraelef=FE((g,x,y,t,a,k)=>{pila(g,x-260,y-4,520,132,'#d8c49c',12);for(let r=0;r<3;r++)rect(g,'rgba(0,0,0,.1)',x-260,y-44-r*40,520,2);merli(g,x-260,y-136,520,'#bfaa80',36);
+ for(const s of[-1,1])for(let q=0;q<2;q++){const tx=x+s*(210-q*0);pila(g,tx-26+q*0,y-4,52,190,'#e0cca4',12);merli(g,tx-26,y-194,52,'#bfaa80',4);rect(g,'#2a1c10',tx-3,y-150,6,22);break}
+ for(let q=0;q<4;q++){const ax=x-170+q*80;if(q==2)continue;ar(g,'#2a1e14',ax-22,y-4,44,70);ar(g,'#4a3a2a',ax-16,y-4,32,62);for(let r=0;r<2;r++)rect(g,'rgba(120,80,40,.5)',ax-14,y-10-r*18,28,3)}
+ fel(g,x+80,y+4,.95,t,1);man(g,x+78,y-60,t,{s:.5,kilt:'#e8e0d0',acc:(g2,b)=>{ln(g2,'#5a3e22',2,[8,-84+b,20,-98])}});
+ cavallo(g,x-210,y+18,.7,t,1,'#8a6a3a');cavallo(g,x-140,y+22,.7,t+1,-1,'#6a4a2a');fp(g,x-100,y+16,t,{s:.58,f:1,acc:(g2,b)=>{ln(g2,'#5a3e22',2.4,[9,-84+b,14,-130])}});for(let q=0;q<3;q++)fp(g,x+190+q*20,y+14,t+q,{s:.6,f:-1,acc:(g2,b)=>{ln(g2,'#5a3e22',2.4,[-9,-84+b,-14,-126])}});glow(g,x,y-50,260,'255,170,80',.14)});
+PR.febanco=FE((g,x,y,t,a,k)=>{tenda(g,x,y,150,'#e0b040',104);rect(g,'#8a6a3a',x-70,y-26,140,9);rect(g,'#6a4a2a',x-66,y-17,4,17);rect(g,'#6a4a2a',x+62,y-17,4,17);for(let q=0;q<9;q++)rect(g,['#7a2a8a','#e8d8b0','#c8402a','#2f6ab0'][q%4],x-64+q*14,y-36,12,10);bilancia(g,x+100,y+4,t);el(g,'#f0e8d0',x-100,y+6,7,9);ln(g,'#6a4a28',2,[x-80,y-10,x-80,y-60]);ln(g,'#7a2a8a',3,[x-80,y-60,x-70,y-40])});
+
+/* ============ ZONA 7 · Annibale: dalla Spagna alle Alpi, da Canne a Zama ============ */
+const soldato=(g,x,y,t,i,f,s)=>man(g,x,y,t,{s:s||.56,f:f||1,ph:i,kilt:['#e8e0cc','#a8503a','#c8a888'][i%3],skin:['#c0805a','#d0996c','#b87c54'][i%3],acc:(g2,b)=>{el(g2,'#8a8a92',1,-112+b,13,8);rect(g2,'#8a8a92',-13,-112+b,26,4);ln(g2,'#5a3e22',2,[10,-84+b,16,-150]);poly(g2,'#9a9aa2',[[14,-150],[18,-150],[16,-162]]);dot(g2,i%2?'#c8402a':'#e0c060',-14,-76,9)}});
+const fuoco=(g,x,y,t,k)=>{for(let q=0;q<5;q++)ln(g,'#5a3e22',3,[x-12+q*6,y,x-4+q*2,y-8]);const fl=Math.sin(t*9+x)*2;poly(g,'rgba(255,130,30,.95)',[[x-10,y-6],[x+fl,y-34],[x+10,y-6]]);poly(g,'rgba(255,220,100,.95)',[[x-5,y-6],[x+fl*.5,y-22],[x+5,y-6]]);glow(g,x,y-14,70,'255,150,60',.4+.3*k);fumo(g,x,y-30,t,4,'rgba(80,70,70,.3)')};
+const stend=(g,x,y,t,c)=>{ln(g,'#6a4a28',3,[x,y,x,y-120]);dot(g,GLD,x,y-124,5);const sw=Math.sin(t*2+x)*3;poly(g,c||'#c8402a',[[x,y-116],[x+34+sw,y-110],[x+30+sw,y-86],[x,y-90]]);el(g,GLD,x+16+sw*.5,y-100,6,6);rect(g,'#c8402a',x-8,y-18,16,0)};
+PR.festendardo=FE((g,x,y,t,a)=>{stend(g,x,y,t,a)});
+PR.fefuoco=FE((g,x,y,t,a,k)=>{fuoco(g,x,y,t,k);for(let q=0;q<2;q++)fp(g,x+30+q*20,y+8,t+q,{s:.5,f:-1,kilt:'#a8503a'})});
+PR.fecartagena=FE((g,x,y,t,a,k)=>{mare(g,x,y+26,320,20,t,'#2a5a8a');poly(g,'#7a6a4a',[[x-340,y+10],[x-300,y-80],[x-230,y-110],[x-170,y-70],[x-140,y+6]]);poly(g,'#6a5a3e',[[x+340,y+10],[x+300,y-70],[x+240,y-100],[x+170,y-64],[x+150,y+6]]);
+ poly(g,'#a89870',[[x-150,y+10],[x-130,y-30],[x+140,y-34],[x+160,y+10]]);for(let q=0;q<5;q++){const bx=x-120+q*52;pila(g,bx,y-26,44,40+hr(q)*30,q%2?CAL:'#e0d4b8',10);ar(g,'#2a2018',bx+14,y-26,14,22)}pila(g,x-18,y-26,36,90,'#d8ccaa',10);merli(g,x-18,y-118,36,'#bfb08a',3);merli(g,x-150,y-28,300,'#a89a78',20);
+ galea(g,x-210,y+34,.5,t,1);nave(g,x+210,y+36,.55,t+1,-1);galea(g,x+90,y+40,.45,t+2,-1);
+ for(let q=0;q<3;q++){fp(g,x-250+q*22,y+4,t+q,{s:.5,f:1,acc:(g2,b)=>{el(g2,'#8a7a8a',4,-114+b,8,10);ln(g2,tn(SKN),3,[-9,-84+b,-14,-100])}})}for(let q=0;q<3;q++)soldato(g,x+240+q*20,y+8,t+q,q,-1,.5)});
+PR.ferodano=FE((g,x,y,t,a,k)=>{el(g,'#3a5a88',x-60,y+14,260,22);el(g,'#4a6a98',x-60,y+10,240,14);el(g,'rgba(255,200,150,.35)',x-40,y+10,100,3);
+ ln(g,'#5a3e22',5,[x-170,y+8,x-70,y+8]);ln(g,'#5a3e22',5,[x-170,y+14,x-70,y+14]);for(let q=0;q<6;q++)ln(g,'#7a5a34',3,[x-166+q*18,y+4,x-166+q*18,y+18]);el(g,'#6a5a3a',x-120,y+2,48,5);fel(g,x-120,y+2,.7,t,1,1);
+ poly(g,'#9a9ca8',[[x+80,y+4],[x+110,y-90],[x+140,y-130],[x+190,y-110],[x+250,y-60],[x+300,y+4]]);poly(g,'#f4f4fa',[[x+140,y-130],[x+160,y-100],[x+130,y-96],[x+120,y-110]]);poly(g,'#f4f4fa',[[x+190,y-110],[x+220,y-76],[x+190,y-80],[x+176,y-92]]);poly(g,'rgba(255,255,255,.7)',[[x+250,y-60],[x+270,y-34],[x+244,y-40]]);ln(g,'#5a4a3a',3,[x+90,y+2,x+130,y-30,x+170,y-56,x+210,y-76]);
+ for(let q=0;q<8;q++)soldato(g,x+100+q*18+(q>3?10:0),y-q*7+4,t+q*.4,q,1,.4);for(let q=0;q<3;q++)asino(g,x+60+q*34,y+14-q*3,.5,t+q,1);cavallo(g,x+30,y+16,.5,t,1,'#7a5a3a');
+ ln(g,'rgba(255,255,255,.35)',1,[x+60,y-110,x+80,y-108]);for(let q=0;q<10;q++)dot(g,'rgba(255,255,255,.8)',x+100+((t*30+q*37)%200),y-120+q*9+Math.sin(t+q)*4,1.2)});
+PR.fecanne=FE((g,x,y,t,a,k)=>{el(g,'#c8844a',x,y+2,330,16);rect(g,'rgba(210,120,70,.28)',x-320,y-40,640,46);
+ for(let q=0;q<10;q++){const px=x-250+q*50;soldato(g,px,y+8-(q%2)*3,t+q*.5,q,1,.46);soldato(g,px+10,y-4,t+q*.7,q+1,-1,.46)}
+ for(let q=0;q<4;q++)for(let r=0;r<2;r++)cavallo(g,x-300+q*36,y+16-r*10,.4,t+q,1,['#8a5a3a','#6a4a2a'][r]);for(let q=0;q<4;q++)cavallo(g,x+250-q*36,y+16-(q%2)*8,.4,t+q+1,-1,'#7a5a3a');
+ fel(g,x-40,y-6,.5,t,1);fel(g,x+40,y-8,.5,t+1,-1);
+ stend(g,x-120,y+6,t,'#c8402a');stend(g,x+110,y+6,t,'#7a2a8a');ln(g,'#7a98a8',5,[x-330,y-12,x-200,y-16,x-60,y-10,x+60,y-14,x+200,y-10,x+330,y-14]);
+ for(let q=0;q<14;q++)el(g,'rgba(210,120,70,'+(.35*(1-((t*.3+q*.2)%1)))+')',x-300+q*46+Math.sin(t+q)*8,y-24-((t*8+q*7)%36),24,10);if(k>-1)glow(g,x,y-30,260,'255,120,60',.14)});
+PR.fezama=FE((g,x,y,t,a,k)=>{el(g,'#d8b070',x,y+2,320,14);
+ for(let q=0;q<4;q++)fel(g,x-250+q*54,y+12-(q%2)*4,.62,t+q,1);
+ for(let q=0;q<12;q++){const px=x+10+q*18;soldato(g,px,y+4-(q%2)*4,t+q*.5,q,-1,.46)}for(let q=0;q<3;q++)stend(g,x+30+q*72,y+6,t,'#c8402a');
+ poly(g,'#b89a62',[[x+240,y+4],[x+270,y-50],[x+330,y-54],[x+360,y+4]]);man(g,x+300,y-52,t,{s:.6,f:-1,kilt:'#e8e0cc',acc:(g2,b)=>{poly(g2,'#c8402a',[[-12,-90+b],[-22,-40],[-6,-44]]);el(g2,'#8a8a92',1,-112+b,13,8);poly(g2,'#c8402a',[[-6,-122+b],[0,-136+b],[8,-122+b]])}});
+ for(let q=0;q<3;q++)cavallo(g,x-300+q*18,y-24-q*4,.28,t+q,1,'#7a5a3a');for(let q=0;q<10;q++)el(g,'rgba(220,150,80,'+(.4*(1-((t*.3+q*.2)%1)))+')',x-280+q*60+Math.sin(t+q)*8,y-28-((t*9+q*7)%40),28,10)});
+PR.fetendacom=FE((g,x,y,t,a,k)=>{poly(g,'#6a5a3e',[[x-200,y+4],[x-140,y-24],[x+140,y-24],[x+210,y+4]]);poly(g,'#7a4a2a',[[x-90,y-20],[x-60,y-100],[x+60,y-100],[x+92,y-20]]);poly(g,'#8a5a38',[[x-60,y-100],[x,y-124],[x+60,y-100]]);ln(g,'#4a3a28',2,[x,y-124,x,y-140]);poly(g,'#c8402a',[[x,y-140],[x+22,y-134],[x,y-128]]);poly(g,'#2a1810',[[x-16,y-20],[x-8,y-76],[x+8,y-76],[x+16,y-20]]);rect(g,'rgba(0,0,0,.18)',x+20,y-100,40,80);
+ for(let q=0;q<3;q++){ln(g,'#5a3e22',2.4,[x-130+q*8,y-8,x-126+q*8,y-70]);poly(g,'#9a9aa2',[[x-132+q*8,y-70],[x-124+q*8,y-70],[x-128+q*8,y-82]])}el(g,'#8a8a92',x-150,y-4,12,12);el(g,'#8a8a92',x-150,y-4,6,6);glow(g,x,y-50,100,'255,150,60',.2+.25*k);fuoco(g,x+150,y+6,t,k)});
+
+/* ============ ZONA 8 · Gadir e l'Atlantico ============ */
+const mareN=(g,x,y,rx,ry,t,c)=>{acqua(g,x,y,rx,ry,t,c||'#1a3a68')};
+const torciaF=(g,x,y,t,k)=>{ln(g,'#6a4a28',3.4,[x,y,x,y-82]);poly(g,'#8a6a30',[[x-8,y-82],[x+8,y-82],[x+5,y-94],[x-5,y-94]]);const fl=Math.sin(t*9+x)*1.6;poly(g,'rgba(255,140,40,.95)',[[x-6,y-94],[x,y-116+fl],[x+6,y-94]]);poly(g,'rgba(255,220,100,.95)',[[x-3,y-94],[x,y-106+fl],[x+3,y-94]]);glow(g,x,y-100,70,'255,170,70',.3+.35*k)};
+PR.fetorcia=FE((g,x,y,t,a,k)=>{torciaF(g,x,y,t,k)});
+const lanterna=(g,x,y,t)=>{rect(g,'#3a2a1a',x-4,y-8,8,12);rect(g,'rgba(255,214,130,.95)',x-3,y-6,6,8);glow(g,x,y-2,50,'255,190,90',.55+.15*Math.sin(t*5))};
+PR.fegadir=FE((g,x,y,t,a,k)=>{mareN(g,x,y+26,340,20,t,'#16346a');
+ poly(g,'#6a6a6e',[[x-250,y+14],[x-240,y-8],[x+200,y-10],[x+250,y+14]]);
+ [[-220,60,80],[-150,50,110],[-90,64,90],[-20,56,130],[50,60,100],[110,50,120],[170,56,86]].forEach((b,i)=>{pila(g,x+b[0],y-8,b[1],b[2],i%2?CAL:'#e4dcc8',10);rect(g,'#9a9078',x+b[0]-3,y-8-b[2]-4,b[1]+6,5);ar(g,'#2a2018',x+b[0]+b[1]*.4,y-8,12,24);for(let r=0;r<Math.floor(b[2]/36);r++)rect(g,lit(k,i*7+r)?LIT:'#3a3a4a',x+b[0]+10,y-8-b[2]+14+r*32,7,12);if(lit(k,i))glow(g,x+b[0]+b[1]/2,y-8-b[2]*.5,40,'255,200,110',.22*k)});
+ el(g,'#4a4a52',x+270,y+14,60,12);pila(g,x+250,y+4,40,40,'#d8d0b8',9);pila(g,x+260,y-34,20,100,'#e0d8c0',10);merli(g,x+260,y-136,20,'#bfb7a0',2);for(const s of[-1,1])ln(g,'#e0b84a',2,[x+270+s*10,y-70,x+270+s*10,y-82]);glow(g,x+270,y-120,50,'255,190,90',.5*k);
+ for(let q=0;q<4;q++){rect(g,'#7a8a96',x-250+q*0,y-0,0,0)}for(let q=0;q<3;q++){rect(g,'#c8d4de',x-290-q*0,y+12,0,0)}
+ for(let q=0;q<3;q++){rect(g,'#8a98a4',x-330+q*54,y-4,48,16);rect(g,'rgba(210,225,240,.6)',x-328+q*54,y-2,44,10);rect(g,'rgba(255,255,255,.3)',x-326+q*54,y-2,40,2)}
+ nave(g,x-200,y+36,.55,t,1);nave(g,x+90,y+40,.5,t+1,-1,PUR2);for(let q=0;q<4;q++){const lx=x-100+q*66;torciaF(g,lx,y+10,t+q,k)}for(let q=0;q<3;q++)rect(g,'#d8d4c8',x+100+q*12,y+4-q*5,22,5)});
+PR.fecolonne=FE((g,x,y,t,a,k)=>{mareN(g,x,y+24,300,22,t,'#10285a');rupe(g,x-200,y+10,280,230,'#3a3e52','#2a2e42');rupe(g,x+210,y+10,260,260,'#3a3e52','#2a2e42');
+ poly(g,'rgba(180,200,230,.18)',[[x-250,y-100],[x-200,y-210],[x-190,y-60]]);poly(g,'rgba(180,200,230,.16)',[[x+180,y-80],[x+210,y-250],[x+240,y-60]]);
+ for(let q=0;q<9;q++){const wx=x-230+q*56+Math.sin(t*1.4+q)*6;ln(g,'rgba(255,255,255,.55)',2,[wx,y+14+(q%3)*5,wx+10,y+10+(q%3)*5,wx+20,y+14+(q%3)*5])}
+ nave(g,x+5,y+28,.7,t,1,PUR2);lanterna(g,x-46,y-22,t);glow(g,x,y+28,120,'255,190,90',.2);ln(g,'rgba(255,200,120,.35)',2,[x-60,y+34,x-120,y+36]);
+ for(let q=0;q<3;q++){const fx=x-190+q*20;glow(g,fx,y-30-q*30,24,'255,190,90',.4*k);dot(g,'#ffd890',fx,y-30-q*30,1.4)}});
+PR.feperiplo=FE((g,x,y,t,a,k)=>{mareN(g,x-30,y+24,300,20,t,'#16346a');poly(g,'#a89068',[[x-340,y+12],[x-320,y-6],[x-110,y-8],[x-80,y+12]]);palma(g,x-300,y,.5,t);palma(g,x-270,y,.42,t+1);
+ galea(g,x-250,y+36,.4,t,1);nave(g,x-150,y+40,.4,t+1,1);galea(g,x-70,y+44,.4,t+2,1);
+ el(g,'#3a4a52',x+90,y+18,120,14);el(g,'#4a6a60',x+90,y+16,104,9);croco(g,x+60,y+16,1.1,t,1);ippo(g,x+120,y+16,1.1,t,-1);dot(g,'rgba(255,255,255,.5)',x+150,y+10+Math.sin(t*2)*1.5,1.6);
+ poly(g,'#4a3a3a',[[x+190,y+6],[x+230,y-80],[x+260,y-150],[x+290,y-80],[x+340,y+6]]);poly(g,'rgba(0,0,0,.25)',[[x+260,y-150],[x+290,y-80],[x+340,y+6],[x+270,y+6]]);
+ const fl=Math.sin(t*7)*2;poly(g,'rgba(255,90,30,.95)',[[x+246,y-148],[x+260,y-176+fl],[x+274,y-148]]);poly(g,'rgba(255,200,80,.95)',[[x+254,y-148],[x+260,y-164+fl],[x+268,y-148]]);glow(g,x+260,y-156,90,'255,110,40',.55+.1*Math.sin(t*5));
+ [[x+205,y-6],[x+300,y-4],[x+330,y]].forEach((p,i)=>{rupe(g,p[0],p[1]+4,50,36,'#5a4a48','#3a2e30');g.save();g.translate(p[0]+6,p[1]-30);el(g,'#2a2226',0,0,7,9);dot(g,'#2a2226',0,-12,5);ln(g,'#2a2226',3,[-6,-4,-12,6]);ln(g,'#2a2226',3,[6,-4,12,6]);dot(g,'rgba(255,230,160,.8)',2,-12,1);g.restore()})});
+PR.fenaveann=FE((g,x,y,t,a,k)=>{mareN(g,x,y+22,200,18,t,'#16346a');nave(g,x,y+22,1.05,t,1,PUR);lanterna(g,x+66,y-52,t);ln(g,'#7a6a4a',3,[x-120,y+8,x-70,y+8]);pila(g,x-210,y+4,100,14,'#7a7a82',9);rect(g,'#9a9aa4',x-210,y+2,100,3);for(let q=0;q<3;q++)rect(g,'#c8c4b8',x-190+q*26,y-6-q*0,22,8);for(let q=0;q<2;q++)anf(g,x-120+q*14,y+4,.8)});
+PR.festella=FE((g,x,y,t,a,k)=>{mareN(g,x,y+22,260,22,t,'#0e2250');for(let q=0;q<8;q++)ln(g,'rgba(255,214,140,.35)',1.6,[x-30+Math.sin(t+q)*6,y+30+q*3,x+30+Math.sin(t+q)*6,y+30+q*3]);
+ g.save();g.translate(x,y+22+Math.sin(t*1.3)*1.6);g.rotate(Math.sin(t*1.1)*.025);poly(g,'#6a4228',[[-80,-30],[-68,4],[56,4],[80,-14],[84,-46],[78,-38],[72,-26]]);rect(g,'#8a5a38',-78,-31,150,4);ln(g,'#6a4228',4,[-80,-30,-90,-52,-84,-62]);ln(g,'#5a3e22',3.6,[0,-30,0,-124]);ln(g,'#5a3e22',3,[-36,-118,36,-118]);poly(g,'rgba(230,220,200,.88)',[[-34,-116],[34,-116],[32,-40],[-32,-40]]);for(let q=0;q<5;q++)rect(g,q%2?'rgba(122,42,138,.85)':'rgba(230,220,200,.9)',-34+q*13.6,-116,6.8,76);g.restore();
+ lanterna(g,x+84,y-30,t);man(g,x-60,y+14,t,{s:.8,f:1,kilt:'#2a2a3a',acc:(g2,b)=>{ln(g2,tn(SKN),3.6,[8,-84+b,16,-112+b]);ln(g2,'#5a3e22',3,[-8,-84,-16,-50])}});glow(g,x,y-40,160,'255,190,90',.12)});
+PR.fevarco=FE((g,x,y,t,a,k)=>{const pu=.8+.2*Math.sin(t*3);mareN(g,x-170,y+22,190,16,t,'#12306a');mareN(g,x+200,y+22,150,14,t,'#12306a');
+ rect(g,'#5a4a38',x-250,y+2,130,8);for(let q=0;q<7;q++)rect(g,'#3a2e22',x-244+q*20,y+8,5,16);for(let q=0;q<2;q++)torciaF(g,x-232+q*60,y+2,t+q,k);
+ nave(g,x-10,y+26,1.1,t,1,PUR2);lanterna(g,x+72,y-50,t);ln(g,'rgba(255,214,140,.5)',3,[x-150,y+32,x-80,y+34]);ln(g,'rgba(255,214,140,.35)',3,[x-230,y+36,x-150,y+38]);
+ const gr=g.createRadialGradient(x,y-120,6,x,y-120,250);gr.addColorStop(0,'rgba(255,255,255,'+pu+')');gr.addColorStop(.3,'rgba(200,215,255,'+.4*pu+')');gr.addColorStop(1,'rgba(150,170,255,0)');g.fillStyle=gr;g.fillRect(x-250,y-370,500,420);
+ for(let q=0;q<7;q++)dot(g,'rgba(255,255,255,'+(.5*pu)+')',x+Math.sin(t*.8+q*2)*80,y-40-((t*18+q*36)%240),1.6+q%3)});
+
+PR._fe={nf,FE,lit,PAL,fp,folla,mare,pila,fumo,nave,galea,fel,rupe,tanit,stela,anf,cedro,olivo,melog,ficoA,soldato,tendaP,mud,merli,casa,palma,SKN,man,pers,asino,pecora,cane,airone,volo,cavallo,croco,ippo,falco,oca,ln,gatto};
+})();
