@@ -179,3 +179,24 @@ MONDO: Londra 2 · Dal Serpentine al Meridiano   (id: londra2)
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._l2, insieme a ippo, salice e folla) e riusa da Madrid solo mat, cas, cupo, col, plat, olmo, pino, cedro, cipr, pers, gente, fin, bal e arco (PR._md) e da Roma ln e gatto (PR._rm); non modifica motore né altri mondi.
   Nota Tube: nella zona 4 le pareti di piastrelle riempiono tutta l'altezza dello schermo (si è sottoterra); la luce lì resta quella del giorno.
   Nota nome: il titolo della scheda è abbreviato ("Dal Serpentine al Meridiano") per stare nell'intestazione del motore; il mondo si chiama "Londra 2" per distinguerlo da quello già esistente (mondi/londra.js); gli id degli NPC iniziano per "l2_".
+
+MONDO: Napoli 2 · Da Porta Nolana al golfo   (id: napoli2)
+  File: mondi/napoli2.js   — oggetti in nucleo/elementi.js (blocco "elementi per Napoli 2", nomi che iniziano per "n2")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/napoli2.js"></script>
+  Percorso (larghezza 26630): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Porta Nolana e il mercato del pesce, Porta Capuana, il caffè sospeso, la sfogliatella (alba) · 2 Spaccanapoli, Gesù Nuovo e Santa Chiara, Cappella Sansevero, San Gregorio Armeno (mattina)
+     3 Via dei Tribunali e le pizzerie, Duomo e San Gennaro, Pio Monte della Misericordia, Piazza San Gaetano e Napoli sotterranea (tarda mattina) · 4 Rione Sanità: Ponte, Palazzo dello Spagnolo, catacombe di San Gennaro, Fontanelle, casa di Totò (mezzogiorno)
+     5 Via Toledo e i Quartieri Spagnoli, Galleria Umberto I e Teatro San Carlo, Gran Caffè Gambrinus, Piazza del Plebiscito e Maschio Angioino (primo pomeriggio) · 6 Borgo Marinari, Castel dell'Ovo, la sirena Partenope, Santa Lucia (pomeriggio dorato)
+     7 Mergellina, Piedigrotta, tomba di Virgilio e Crypta Neapolitana, Palazzo Donn'Anna e Marechiaro, Parco Virgiliano di Posillipo (tardo pomeriggio) · 8 Funicolari, Certosa di San Martino, Castel Sant'Elmo, belvedere sul golfo (tramonto)
+     9 Lungomare liberato, Rotonda Diaz, Via Partenope e Castel dell'Ovo di notte, il Vesuvio sotto la luna (notte; varco: la luce dorata sul mare, in fondo al lungomare)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta): Gennaro (pescivendolo di Porta Nolana), Assunta (presepaia di San Gregorio Armeno), Ciro (pizzaiolo di Via dei Tribunali), Totò (principe della risata),
+     Enzo (barista del Gambrinus), Nando (vecchio pescatore del Borgo Marinari), Virgilio (il poeta), Awa (studentessa sul belvedere)
+  Testi: da napoli2.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 39 tappe da "Testo:" (compreso il varco finale) e il testo di introduzione.
+  Vita: gabbiani sul mercato e sul golfo, piccioni a San Gaetano e al Plebiscito, rondoni sopra i tetti fino al tramonto, passanti nelle vie, corridori e ciclisti sul lungomare, bucato steso, gatti, barche che dondolano,
+     fiamma animata nel forno della pizzeria, lucine del presepe, funicolari che salgono e scendono, aliscafo e barche a vela a Mergellina, carrozza al Plebiscito, luna e scia sul mare di notte.
+  Nota: i temi delicati (catacombe, Cimitero delle Fontanelle, Napoli sotterranea) sono trattati con tono sobrio e rispettoso; le leggende sono presentate con "si dice".
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._n2, insieme a tor, tenda, stesi, nicchia, scoglio, acqua, gozzo e agli attrezzi comuni) e riusa da Madrid solo cas, cupo, mat, fin, col, equ, pino, cedro, cipr, pers e gente (PR._md) e da Roma ln e gatto (PR._rm);
+     dal mondo Napoli già esistente riusa PR.bucato e PR.edicola (zone 1-3, di giorno). Alberi: gli olmi e i platani di Madrid sono gialli d'autunno, perciò il mondo ha il suo leccio verde e la sua palma (definiti dentro napoli2.js). Non modifica motore né altri mondi.
+  Nota nome: il titolo della scheda è abbreviato ("Da Porta Nolana al golfo") per stare nell'intestazione del motore; il mondo si chiama "Napoli 2" per distinguerlo da quello già esistente (mondi/napoli.js); gli id degli NPC iniziano per "n2_".
+  Nota varco: il portale è quello del motore (in fondo al mondo); gli oggetti n2varco e n2vesuvio gli fanno da cornice (luce dorata sul mare sotto la luna e il Vesuvio).
