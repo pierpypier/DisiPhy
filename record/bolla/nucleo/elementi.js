@@ -9256,3 +9256,535 @@ PR.f2luci=F2((g,x,y,t,a,k)=>{for(let q=0;q<(a||6);q++){const fx=x+q*26;ln(g,IR,1
 
 PR._f2={nf,F2,pal,lant,anello,stemma,tab,fasce,acu,arc,pan,sassi,into};
 })();
+
+/* ---------- elementi per Londra 2 · Dal Serpentine alla Linea del Meridiano (mondi/londra2.js) ---------- */
+/* Nomi che iniziano per "l2". Hanno la loro luce (nf di Londra 2): la giornata scorre da sinistra (alba al Serpentine)
+   a destra (notte a Greenwich) e usano la variabile globale AVCAM come gli altri mondi "lunghi".
+   Non toccano nulla di quanto esiste prima di questo blocco. */
+(function(){
+const A=PR._av,rect=A.rect,poly=A.poly,dot=A.dot,el=A.el,ar=A.ar,pa=A.pa,tn=A.tn,txt=A.txt,glow=A.glow,cl=A.cl;
+const {ln,gatto}=PR._rm;
+const {mat,cas,cupo,col,plat,olmo,pino,cedro,cipr,pers,gente,fin,bal,arco}=PR._md;
+const LIT='rgb(255,226,150)';
+const IR='#26292e',VG='#1f3a2a',ST='#e8e0cc',ST2='#d4ccb4',ST3='#b8b09a',HN='#cdb27a',HN2='#b39862',BR='#9a4a38',BR2='#7e3a2c',RS='#c8281e',GD='#d8b448',GL='#7a9ab4',SL='#2e3138',AC='#6a7480';
+/* luce di Londra 2: [posizione nel mondo, buio da 0 (giorno) a 1 (notte)]; sottoterra (zona 4) la luce è sempre quella del giorno */
+const NF=[[0,.14],[900,0],[11800,0],[12800,.05],[13800,.18],[14700,.4],[15600,.58],[16400,.74],[17300,.88],[18300,1]];
+const nf=wx=>{if(wx<=NF[0][0])return NF[0][1];for(let i=1;i<NF.length;i++)if(wx<=NF[i][0]){const a=NF[i-1],b=NF[i];return a[1]+(b[1]-a[1])*(wx-a[0])/(b[0]-a[0])}return 1};
+const L2=f=>(g,x,y,t,a)=>{A.setDK(nf(x+AVCAM));f(g,x,y,t,a,A.getDK())};
+const lit=(k,i)=>k>.3&&hr(i)>.35;
+const bs=(g,c,x,y,w,h)=>rect(g,c,x,y-h,w,h);
+const hd=(g,c,x,y,rx,ry)=>{g.fillStyle=tn(c);g.beginPath();g.ellipse(x,y,Math.max(0,rx),Math.max(0,ry),0,Math.PI,0);g.fill()};
+const grid=(g,x,y,w,h,r,c,k,i,wc,ww,wh)=>{for(let a=0;a<r;a++)for(let b=0;b<c;b++){const wx=x+(b+.5)*w/c-ww/2,wy=y+(a+.5)*h/r-wh/2;rect(g,lit(k,i*17+a*5+b)?LIT:wc,wx,wy,ww,wh);rect(g,'rgba(0,0,0,.26)',wx,wy,ww,1.4)}};
+const jack=(g,x,y,t,s)=>{s=s||1;ln(g,'#8a8e94',2*s,[x,y,x,y-64*s]);g.save();g.translate(x,y-64*s);const w=Math.sin(t*3+x)*1.6*s;
+ rect(g,'#1c3a8a',0,0,36*s,22*s);ln(g,'#f4f0e6',4*s,[0,0,36*s,22*s]);ln(g,'#f4f0e6',4*s,[36*s,0,0,22*s]);ln(g,'#c8281e',1.4*s,[0,0,36*s,22*s]);ln(g,'#c8281e',1.4*s,[36*s,0,0,22*s]);
+ rect(g,'#f4f0e6',14*s,0,8*s,22*s);rect(g,'#f4f0e6',0,7*s,36*s,8*s);rect(g,'#c8281e',16*s,0,4*s,22*s);rect(g,'#c8281e',0,9*s,36*s,4*s);g.restore()};
+const bus=(g,x,y,k,ad)=>{rect(g,RS,x-62,y-86,124,76);rect(g,'#a01e16',x-62,y-18,124,8);rect(g,'rgba(255,255,255,.12)',x-62,y-86,124,3);rect(g,'#14110f',x-62,y-52,124,3);
+ for(let q=0;q<6;q++){rect(g,k>.2?LIT:'#4a6070',x-56+q*19,y-80,15,20);rect(g,k>.2?LIT:'#4a6070',x-56+q*19,y-46,15,20)}
+ rect(g,ad||'#f2c82a',x-56,y-24,70,10);txt(g,'LONDON',x-22,y-16,7,'#2a2a2e');rect(g,'#14110f',x+46,y-50,14,38);rect(g,'#f2a82a',x+48,y-90,22,6);
+ [-38,38].forEach(o=>{dot(g,'#14110f',x+o,y-8,10);dot(g,'#8a8a90',x+o,y-8,4.4)});if(k>.2)glow(g,x+66,y-20,40,'255,226,150',.5)};
+const taxi=(g,x,y,k)=>{poly(g,'#16161a',[[x-56,y-8],[x-56,y-30],[x-36,y-34],[x-22,y-58],[x+16,y-58],[x+34,y-36],[x+56,y-30],[x+56,y-8]]);
+ poly(g,'#6a8296',[[x-30,y-36],[x-18,y-54],[x-2,y-54],[x-2,y-36]]);poly(g,'#6a8296',[[x+2,y-36],[x+2,y-54],[x+14,y-54],[x+28,y-36]]);
+ rect(g,'#e8c82a',x-9,y-65,18,7);txt(g,'TAXI',x,y-59,6,'#2a2a2e');[-34,34].forEach(o=>{dot(g,'#0c0c10',x+o,y-8,9);dot(g,'#8a8a90',x+o,y-8,3.6)});rect(g,k>.1?'#fff0b0':'#e8e0c0',x+52,y-26,5,6);if(k>.2)glow(g,x+60,y-24,44,'255,226,150',.5)};
+const cab=(g,x,y,k)=>{rect(g,RS,x-14,y-84,28,84);hd(g,RS,x,y-84,14,8);rect(g,'rgba(0,0,0,.22)',x+6,y-84,8,84);for(let a=0;a<3;a++)for(let b=0;b<2;b++)rect(g,k>.2?LIT:'#d8e4ec',x-10+b*10,y-78+a*17,8,13);rect(g,RS,x-14,y-30,28,3);rect(g,'#14110f',x-16,y-3,32,3);rect(g,'rgba(255,255,255,.16)',x-14,y-84,3,84);if(k>.2)glow(g,x,y-50,36,'255,200,120',.3)};
+const post=(g,x,y)=>{rect(g,RS,x-8,y-46,16,46);hd(g,RS,x,y-46,8,5);rect(g,'#14110f',x-5,y-34,10,2.6);rect(g,'#14110f',x-9,y-4,18,4)};
+const lamp=(g,x,y,k,gr)=>{const c=gr?VG:IR;rect(g,c,x-5,y-8,10,8);rect(g,c,x-2.2,y-112,4.4,104);rect(g,c,x-4,y-96,8,3);ln(g,c,2,[x,y-110,x+10,y-120,x+16,y-114]);poly(g,c,[[x+10,y-114],[x+22,y-114],[x+19,y-108],[x+13,y-108]]);dot(g,k>.15?LIT:'#e8dcc0',x+16,y-111,3.6);if(k>.15)glow(g,x+16,y-111,40,'255,214,130',.42*k)};
+const benc=(g,x,y,c)=>{c=c||'#5a3a22';rect(g,c,x-40,y-30,80,5);rect(g,c,x-40,y-22,80,5);bs(g,c,x-40,y-46,80,4);bs(g,c,x-40,y-56,80,4);rect(g,IR,x-36,y-56,4,56);rect(g,IR,x+32,y-56,4,56)};
+const noil=(g,x,y)=>{poly(g,'#16181c',[[x-8,y],[x-9,y-30],[x+9,y-30],[x+8,y]]);rect(g,'#3a3e44',x-10,y-32,20,3);rect(g,'#6a6e74',x-5,y-22,10,2)};
+const tazza=(g,x,y,k)=>{rect(g,'#f4f0e6',x-30,y-34,60,5);rect(g,'#8a6a3a',x-28,y-30,4,30);rect(g,'#8a6a3a',x+24,y-30,4,30);rect(g,'#2a6a46',x-34,y-78,68,44);rect(g,'#f4f0e6',x-30,y-72,60,10);txt(g,'TEA · COFFEE',x,y-64,6,'#2a6a46');rect(g,'#6a3a22',x-26,y-52,52,18);rect(g,k>.2?LIT:'#e8d8b0',x-22,y-48,20,10);poly(g,'#2a6a46',[[x-38,y-78],[x+38,y-78],[x+30,y-90],[x-30,y-90]])};
+
+/* ---- alberi inglesi: platano ingiallito e ippocastano ---- */
+const ippo=(g,x,y,s,t)=>{s=s||1;rect(g,'#5a4430',x-5*s,y-50*s,10*s,50*s);ln(g,'#5a4430',5*s,[x,y-44*s,x-22*s,y-80*s]);ln(g,'#5a4430',5*s,[x,y-48*s,x+24*s,y-84*s]);
+ [[0,-100,50,32,'#a8942e'],[-34,-84,30,22,'#8a8a30'],[36,-88,32,24,'#b8a038'],[4,-124,34,22,'#c4a83a'],[-14,-110,24,18,'#9a8a2e']].forEach(c=>{el(g,c[4],x+c[0]*s,y+c[1]*s,c[2]*s,c[3]*s);el(g,'rgba(255,255,255,.08)',x+(c[0]-c[2]*.2)*s,y+(c[1]-c[3]*.4)*s,c[2]*.5*s,c[3]*.4*s)});
+ if(t!==undefined)for(let q=0;q<3;q++){const u=(t*.12+q/3+hr(x))%1;dot(g,'#c8a02e',x+Math.sin(u*8+q*2)*30*s,y-120*s+u*118*s,1.7)}};
+const salice=(g,x,y,s,t)=>{s=s||1;ln(g,'#4a3a28',7*s,[x,y,x+3*s,y-44*s,x-2*s,y-78*s]);el(g,'#8a9a4a',x,y-84*s,46*s,22*s);for(let q=0;q<13;q++){const bx=x-44*s+q*7.4*s,sw=Math.sin(t*1.1+q*.7)*2.4;ln(g,q%2?'#9aa854':'#7a8a3c',1.8*s,[bx,y-82*s,bx+sw,y-50*s,bx+sw*1.4,y-22*s-(q%3)*6*s])}};
+/* persone di sfondo con cappotto e sciarpa */
+const cap=(g,x,y,t,o)=>pers(g,x,y,t,Object.assign({top:'#3a3e4a',bot:'#2a2a36'},o));
+const folla=(g,x,y,t,n,seed)=>{const T=['#3a3e4a','#8a3a2a','#2a4a6a','#c8b890','#4a4a52','#6a2a4a','#2a5a4a','#e8e0d0'];for(let q=0;q<n;q++){const r=hr(seed+q*7);pers(g,x+q*20-n*10,y+(q%2)*5,t+q*1.3,{f:q%3?1:-1,s:.58+r*.12,ph:q,skin:['#e8b890','#d8a880','#c88a64','#8a5a3a'][q%4],top:T[(q*3+seed)%8],bot:['#2a2a36','#2a3a5a','#3a3a3e'][q%3],hair:['#1d120c','#4a3020','#c8b890','#2a1a10','#8a8a8a'][q%5]})}};
+
+/* =========================== arredo urbano comune =========================== */
+/* cartello di strada: bianco con bordo nero e il nome della via */
+PR.l2targa=L2((g,x,y,t,a,k)=>{const w=Math.max(90,a.length*6+22);rect(g,IR,x-1.6,y-90,3.2,90);rect(g,'#14110f',x-w/2-2,y-126,w+4,30);rect(g,'#f4f0e6',x-w/2,y-124,w,26);rect(g,'#14110f',x-w/2+3,y-121,w-6,1.2);rect(g,'#14110f',x-w/2+3,y-101,w-6,1.2);txt(g,a,x,y-106,9.5,'#14110f');rect(g,'#c8281e',x-w/2,y-98,w,2);if(k>.2)glow(g,x,y-110,w*.8,'255,226,150',.18)});
+PR.l2lampione=L2((g,x,y,t,a,k)=>lamp(g,x,y,k,a));
+PR.l2panca=L2((g,x,y,t,a,k)=>benc(g,x,y,a==1?'#2a5a3a':a==2?'#8a8e94':null));
+PR.l2cestino=L2((g,x,y,t,a,k)=>noil(g,x,y));
+PR.l2cabina=L2((g,x,y,t,a,k)=>cab(g,x,y,k));
+PR.l2posta=L2((g,x,y,t,a,k)=>post(g,x,y));
+PR.l2bus=L2((g,x,y,t,a,k)=>bus(g,x,y,k,a));
+PR.l2taxi=L2((g,x,y,t,a,k)=>taxi(g,x,y,k));
+PR.l2tea=L2((g,x,y,t,a,k)=>tazza(g,x,y,k));
+PR.l2salice=L2((g,x,y,t,a)=>salice(g,x,y,a||1,t));
+PR.l2ippo=L2((g,x,y,t,a)=>ippo(g,x,y,a||1,t));
+PR.l2platano=L2((g,x,y,t,a)=>plat(g,x,y,a||1,t));
+PR.l2folla=L2((g,x,y,t,a)=>folla(g,x,y,t,a&&a[0]||4,a&&a[1]||3));
+PR.l2fermata=L2((g,x,y,t,a,k)=>{rect(g,'#c8281e',x-2,y-120,4,120);rect(g,'#f4f0e6',x-17,y-144,34,26);dot(g,'#c8281e',x,y-131,10);dot(g,'#f4f0e6',x,y-131,6.4);txt(g,'BUS STOP',x,y-114,5.4,'#c8281e');bs(g,'#8a8e94',x+20,y,4,70);rect(g,'rgba(160,200,220,.4)',x+24,y-72,56,64);rect(g,'#8a8e94',x+20,y-76,64,4);if(k>.2)glow(g,x+50,y-40,50,'255,226,150',.25)});
+PR.l2correre=L2((g,x,y,t,a,k)=>{const sp=a||40;for(let i=0;i<2;i++){const wx=((t*sp*(1+i*.3)+i*140)%520)-260;pers(g,x+wx,y+i*4,t*3.4,{f:1,s:.7,top:['#e8505a','#2a8a9a'][i],bot:'#2a2a36',skin:'#e0b090'})}});
+PR.l2cane=L2((g,x,y,t,a,k)=>{pers(g,x,y,t,{s:.84,top:a||'#8a3a2a',bot:'#2a3a5a'});const c='#b8803a';ln(g,'#6a4a2a',1.2,[x+12,y-52,x+34,y-18]);el(g,c,x+40,y-16,12,6.5);dot(g,c,x+50,y-23,5);poly(g,c,[[x+47,y-27],[x+50,y-33],[x+53,y-26]]);[-6,0,8,13].forEach(o=>rect(g,'#9a6a2a',x+40+o,y-12,2.6,12+Math.sin(t*6+o)*1.4));ln(g,c,3.2,[x+28,y-18,x+22,y-26+Math.sin(t*6)*3])});
+PR.l2scoiattolo=L2((g,x,y,t,a,k)=>{const c='#8a8e94',h=Math.abs(Math.sin(t*5+x))*4;el(g,c,x,y-9-h,8,5);dot(g,c,x+8,y-14-h,3.8);poly(g,c,[[x+7,y-17-h],[x+8,y-22-h],[x+10,y-17-h]]);ln(g,'#a8acb2',4,[x-6,y-10-h,x-14,y-22-h,x-10,y-34]);dot(g,'#14110f',x+10,y-15-h,.9)});
+PR.l2volpe=L2((g,x,y,t,a,k)=>{if(k<.3)return;const c='#c8602a',s=Math.sin(t*5),h=Math.abs(s)*2;el(g,c,x,y-14-h,16,7);dot(g,c,x+17,y-17-h,5.4);poly(g,c,[[x+14,y-20-h],[x+16,y-28-h],[x+19,y-21-h]]);poly(g,c,[[x+19,y-20-h],[x+22,y-27-h],[x+23,y-19-h]]);poly(g,'#f4f0e6',[[x+19,y-14-h],[x+24,y-14-h],[x+22,y-11-h]]);[[-10,0],[-4,1],[8,0],[13,1]].forEach((l,i)=>ln(g,'#2a1a10',2.4,[x+l[0],y-10,x+l[0]+s*(i%2?3:-3),y]));ln(g,c,5,[x-14,y-16-h,x-30,y-12,x-34,y-20]);dot(g,'#14110f',x+21,y-18-h,.9);dot(g,'#fff6c8',x+21,y-18-h,.4)});
+PR.l2caldarroste=L2((g,x,y,t,a,k)=>{rect(g,'#6a4a2a',x-28,y-30,56,5);rect(g,'#3a2a22',x-28,y-60,56,30);rect(g,'#14110f',x-24,y-70,48,10);rect(g,k>.1?'#ff9a3a':'#7a3a1a',x-20,y-68,40,5);[-22,22].forEach(o=>dot(g,'#14110f',x+o,y-6,6.4));txt(g,'HOT CHESTNUTS',x,y-44,5,'#f2c82a');for(let q=0;q<4;q++)el(g,'rgba(230,230,230,'+(.34*(1-((t*.5+q/4)%1)))+')',x+Math.sin(t+q)*5,y-80-((t*.5+q/4)%1)*30,5,4);pers(g,x-48,y,t,{s:.9,top:'#6a3a2a',bot:'#2a2a36',hair:'#4a4a4a'})});
+
+/* =========================== ZONA 1 · Hyde Park e Kensington Gardens =========================== */
+/* --- Albert Memorial e Royal Albert Hall: il baldacchino gotico dorato davanti alla grande rotonda di mattoni rossi con la cupola di vetro --- */
+PR.l2albert=L2((g,x,y,t,a,k)=>{const hx=x+100;
+ /* Royal Albert Hall, dietro: tamburo di mattoni, fregio chiaro, finestre, cupola di vetro e ferro */
+ mat(g,BR,hx-160,y-150,320,120,3);bs(g,'#e8dcc0',hx-160,y-92,320,12);for(let q=0;q<18;q++)rect(g,'rgba(120,80,40,.3)',hx-156+q*17,y-90,9,8);
+ for(let q=0;q<13;q++){const wx=hx-150+q*23;ar(g,'#3a2a22',wx,y-112,11,26);if(k>.3)rect(g,LIT,wx+2,y-122,7,12)}
+ rect(g,'#c8b890',hx-164,y-154,328,7);hd(g,'#9ab4c4',hx,y-154,130,56);for(let q=-4;q<=4;q++)ln(g,'#5a6a72',1.6,[hx,y-210,hx+q*29,y-154]);ln(g,'#5a6a72',1.6,[hx-126,y-164,hx+126,y-164]);rect(g,'#5a6a72',hx-4,y-222,8,14);
+ if(k>.3)glow(g,hx,y-150,160,'255,214,130',.22);
+ /* Albert Memorial: gradini di granito, gruppi di statue agli angoli, baldacchino con guglia, statua dorata seduta */
+ const sx=x-90;rect(g,'#a8a392',sx-86,y-14,172,14);rect(g,'#b8b2a0',sx-74,y-30,148,16);rect(g,'#c8c2ae',sx-62,y-46,124,16);
+ [-66,66].forEach((o,i)=>{rect(g,'#9a948a',sx+o-12,y-62,24,18);el(g,'#6a7a62',sx+o,y-70,14,9);dot(g,'#6a7a62',sx+o+(i?-7:7),y-80,5);poly(g,'#6a7a62',[[sx+o-8,y-72],[sx+o+8,y-72],[sx+o+4,y-92],[sx+o-4,y-92]])});
+ rect(g,'#8a7a62',sx-44,y-120,88,74);rect(g,'#d8b448',sx-46,y-122,92,5);rect(g,'#2a4a7a',sx-40,y-116,80,5);for(let q=0;q<8;q++)rect(g,q%2?'#a83a2a':'#e8d8a0',sx-40+q*10,y-110,10,5);
+ [-36,-12,12,36].forEach(o=>{rect(g,'#6a5a46',sx+o-3,y-174,6,54);rect(g,'#d8b448',sx+o-4,y-176,8,4)});
+ /* la statua dorata di Alberto seduto, con il libro */
+ poly(g,'#d8b448',[[sx-12,y-122],[sx-14,y-146],[sx+14,y-146],[sx+16,y-122]]);dot(g,'#d8b448',sx,y-152,6);rect(g,'#b8902f',sx+8,y-138,10,7);rect(g,'rgba(255,255,255,.3)',sx-12,y-146,5,22);
+ /* tetto a gabbia: quattro gable, la guglia centrale e la croce */
+ [-36,0,36].forEach(o=>{poly(g,'#c8a848',[[sx+o-17,y-176],[sx+o,y-202],[sx+o+17,y-176]]);poly(g,'#2a5a8a',[[sx+o-9,y-178],[sx+o,y-194],[sx+o+9,y-178]])});
+ poly(g,'#c8a848',[[sx-14,y-200],[sx,y-262],[sx+14,y-200]]);poly(g,'#a83a2a',[[sx-7,y-204],[sx,y-246],[sx+7,y-204]]);ln(g,GD,3,[sx,y-262,sx,y-282]);ln(g,GD,3,[sx-6,y-274,sx+6,y-274]);dot(g,GD,sx,y-286,2.4);
+ if(k>.25)glow(g,sx,y-170,70,'255,226,150',.3)});
+/* --- Statua di Peter Pan: il bronzo sul tronco, coperto di fate, topi, scoiattoli e conigli; pappagalli verdi sui rami --- */
+PR.l2peter=L2((g,x,y,t,a,k)=>{ippo(g,x-120,y,1.25,t);ippo(g,x+170,y,1.1,t);
+ el(g,'#a89c80',x,y+2,70,7);poly(g,'#6a5a38',[[x-26,y],[x-20,y-40],[x-12,y-72],[x+10,y-76],[x+22,y-40],[x+28,y]]);
+ /* fate, topi, conigli, scoiattoli sul tronco */
+ [[-18,-20],[16,-34],[-8,-52],[14,-58]].forEach((p,i)=>{dot(g,'#7a6a40',x+p[0],y+p[1],3.6);ln(g,'#7a6a40',1.4,[x+p[0],y+p[1],x+p[0]+(i%2?5:-5),y+p[1]-6])});
+ [[-24,-8],[22,-14]].forEach(p=>{el(g,'#7a6a40',x+p[0],y+p[1],6,4);dot(g,'#7a6a40',x+p[0]+5,y+p[1]-4,2.6)});
+ /* Peter: un ragazzino in piedi, suona il flauto */
+ poly(g,'#5a6a48',[[x-6,y-76],[x-8,y-110],[x+8,y-110],[x+6,y-76]]);dot(g,'#5a6a48',x,y-116,6);poly(g,'#5a6a48',[[x-6,y-120],[x+8,y-122],[x+4,y-130]]);ln(g,'#5a6a48',2.8,[x+6,y-104,x+14,y-112,x+8,y-116]);ln(g,'#4a5a3a',1.8,[x+6,y-116,x+22,y-112]);rect(g,'rgba(255,255,255,.2)',x-6,y-110,3,32);
+ /* pappagalli verdi: sui rami e uno sulla mano di chi li nutre */
+ [[-130,-96],[-100,-132],[170,-120],[196,-90]].forEach((p,i)=>{const w=Math.sin(t*9+i*2)*(i%2?1.8:0);dot(g,'#3aa83a',x+p[0],y+p[1],4.6);poly(g,'#2a8a2a',[[x+p[0]-3,y+p[1]],[x+p[0]-15,y+p[1]+8+w],[x+p[0]-2,y+p[1]+3]]);dot(g,'#d8283a',x+p[0]+3,y+p[1]-1,1.2)});
+ pers(g,x+96,y+4,t,{s:.9,top:'#c8503a',bot:'#2a3a5a'});ln(g,'#e8b890',2.6,[x+104,y-60,x+120,y-74]);dot(g,'#3aa83a',x+121,y-78,3.4);pers(g,x-60,y+6,t,{s:.5,top:'#e8c04a',bot:'#2a4a8a'});rect(g,'#14110f',x+60,y-58,6,5)});
+/* --- Il Serpentine: il lago lungo e curvo, la foschia, il Lido, le sdraio, le barche, i cigni e i nuotatori con la cuffia colorata --- */
+PR.l2serpentine=L2((g,x,y,t,a,k)=>{
+ /* sponda lontana e Lido */
+ rect(g,'#7a8a5a',x-255,y-72,510,12);bs(g,'#e4dcc4',x+130,y-60,130,30);rect(g,'#c8c0a8',x+124,y-92,142,6);rect(g,'#a89e84',x+130,y-60,130,3);for(let q=0;q<5;q++)rect(g,k>.3?LIT:'#4a6070',x+142+q*22,y-84,12,16);txt(g,'THE LIDO',x+195,y-100,6,'#5a5648');
+ for(let q=0;q<3;q++)ippo(g,x-220+q*70,y-62,.5+q%2*.1);
+ /* specchio d'acqua scuro con la foschia che sale */
+ el(g,'#4a5e68',x,y-44,255,24);el(g,'#5e747e',x-30,y-48,210,13);for(let q=0;q<8;q++)el(g,'rgba(255,255,255,.2)',x-220+q*60+Math.sin(t*.8+q)*10,y-44+(q%3)*6,26,1.6);
+ for(let q=0;q<5;q++){const u=(t*.05+q/5)%1;el(g,'rgba(255,238,238,'+(.26*Math.sin(u*Math.PI))+')',x-240+q*120+Math.sin(t*.3+q)*20,y-60-u*30,70,12)}
+ /* barche a remi, pedalò, cigni, anatre, un airone */
+ [[-170,'#c8402a'],[-30,'#2a6aa8'],[110,'#f4f0e6']].forEach((b,i)=>{const bx=x+b[0],by=y-44+Math.sin(t*1.2+i)*1.6;poly(g,b[1],[[bx-26,by-8],[bx-18,by+3],[bx+18,by+3],[bx+28,by-8]]);rect(g,'rgba(0,0,0,.2)',bx-20,by-1,40,2);if(i<2)pers(g,bx,by-2,t,{s:.4,top:'#8a3a2a'});if(i==2){el(g,'#f4a0b8',bx,by-12,12,6);dot(g,'#f4f0e6',bx+10,by-18,3.4)}});
+ [[-100,0],[60,1],[-210,1]].forEach((s,i)=>{const sx=x+s[0]+Math.sin(t*.4+i)*8,sy=y-40;el(g,'#f4f0e6',sx,sy,12,6);ln(g,'#f4f0e6',3,[sx+8,sy-2,sx+12,sy-12,sx+16,sy-16]);poly(g,'#e88a2a',[[sx+16,sy-16],[sx+21,sy-15],[sx+16,sy-13]]);el(g,'rgba(255,255,255,.4)',sx,sy+5,14,1.6)});
+ for(let q=0;q<4;q++){const dx=x-30+q*34+Math.sin(t*.7+q)*5;el(g,q%2?'#8a7a5a':'#5a6a42',dx,y-34,6,3.6);dot(g,q%2?'#8a7a5a':'#2a6a42',dx+5,y-38,2.6)}
+ ln(g,'#7a8088',2.4,[x-230,y-56,x-230,y-80]);ln(g,'#7a8088',2.4,[x-234,y-80,x-224,y-82,x-220,y-84]);el(g,'#8a9098',x-230,y-66,5,7);
+ /* nuotatori con cuffie colorate */
+ [[-60,'#ffd82a'],[-20,'#ff6a9a'],[30,'#ff8a2a'],[80,'#f4f0e6']].forEach((s,i)=>{const sx=x+s[0]+Math.sin(t*.5+i)*6,sy=y-46+Math.sin(t*2+i*2)*1.4;el(g,'#e0b090',sx,sy+2,8,3);dot(g,s[1],sx+8,sy,3.8);ln(g,'#e0b090',2,[sx-2,sy,sx+4+Math.sin(t*4+i)*4,sy-6]);el(g,'rgba(255,255,255,.4)',sx,sy+4,10,1.4)});
+ /* sdraio a righe impilate e panchina sulla riva */
+ for(let q=0;q<5;q++){const cx=x+138+q*20;poly(g,['#e8c04a','#2a8ac8','#c8402a','#4aa86a','#f4a0b8'][q],[[cx-7,y-6],[cx-6,y-30],[cx+5,y-30],[cx+6,y-6]]);rect(g,'rgba(255,255,255,.7)',cx-6,y-22,11,3);rect(g,'rgba(255,255,255,.7)',cx-6,y-14,11,3)}
+ benc(g,x-30,y,'#5a3a22')});
+/* --- Rotten Row: la larga pista di sabbia, cavalli con i cavalieri dal casco nero, il cancello monumentale in fondo, i platani a filari --- */
+const cavallo=(g,x,y,s,c,ph,t)=>{g.save();g.translate(x,y);g.scale(s,s);const b=Math.sin(t*6+ph)*2;el(g,c,0,-46+b,28,14);poly(g,c,[[18,-52+b],[28,-80+b],[38,-78+b],[30,-46+b]]);poly(g,c,[[34,-80+b],[48,-80+b],[48,-71+b],[36,-70+b]]);poly(g,'#14110f',[[26,-82+b],[32,-90+b],[32,-80+b]]);
+ [[-20,0],[-10,1],[12,0],[22,1]].forEach((l,i)=>{const sw=Math.sin(t*6+ph+i*1.6)*7;ln(g,c,4.4,[l[0],-40+b,l[0]+sw,-18,l[0]+sw*1.3,0])});ln(g,'#14110f',4,[-28,-52+b,-40,-46,-38,-24+Math.sin(t*5+ph)*4]);
+ rect(g,'#14110f',-4,-84+b,8,4);poly(g,'#8a1a1a',[[-6,-84+b],[6,-84+b],[5,-62+b],[-5,-62+b]]);dot(g,'#e0b090',0,-96+b,5);hd(g,'#14110f',0,-97+b,6,6);ln(g,'#e0b090',2.6,[4,-82+b,14,-74+b,20,-76+b]);g.restore()};
+PR.l2rotten=L2((g,x,y,t,a,k)=>{
+ [-230,-110,10,130,250].forEach((o,i)=>plat(g,x+o,y-30,1.3,t));
+ /* cancello monumentale all'estremità: tre arcate di pietra, cancelli neri con punte dorate */
+ const cx=x+180;rect(g,ST2,cx-110,y-120,220,90);rect(g,ST,cx-116,y-126,232,8);[-96,-32,32,96].forEach(o=>{rect(g,ST,cx+o-10,y-118,20,88);rect(g,ST3,cx+o-12,y-124,24,5)});
+ [-64,0,64].forEach(o=>{ar(g,'#14110f',cx+o-22,y-30,44,66);for(let q=0;q<9;q++)ln(g,'#3a3e44',1.4,[cx+o-20+q*5,y-30,cx+o-20+q*5,y-90]);for(let q=0;q<9;q++)dot(g,GD,cx+o-20+q*5,y-92,1.2)});
+ /* cavalli sulla pista di sabbia */
+ [[-160,'#6a3a22',0],[-60,'#2a2a2e',1.6],[60,'#8a8e90',3.2]].forEach((c,i)=>{const wx=((t*(46+i*8)+i*180)%720)-360;cavallo(g,x+wx*.8+c[0]*.3,y-28,.86,c[1],c[2],t)});
+ PR.l2correre(g,x-80,y+4,t,30)});
+
+/* =========================== ZONA 2 · St James's Park, Buckingham Palace e Westminster =========================== */
+/* --- Buckingham Palace: la lunga facciata di pietra chiara con il balcone, la bandiera, i cancelli neri e dorati --- */
+PR.l2buck=L2((g,x,y,t,a,k)=>{
+ rect(g,ST,x-250,y-142,500,112);rect(g,'rgba(255,255,255,.2)',x-250,y-142,6,112);rect(g,'rgba(0,0,0,.1)',x+236,y-142,14,112);rect(g,ST2,x-254,y-146,508,6);rect(g,ST3,x-254,y-34,508,5);
+ for(let q=0;q<30;q++)rect(g,ST3,x-248+q*16.6,y-154,6,10);rect(g,ST2,x-254,y-148,508,4);
+ grid(g,x-240,y-138,170,100,3,10,k,3,'#4a6070',9,19);grid(g,x+70,y-138,170,100,3,10,k,5,'#4a6070',9,19);
+ /* corpo centrale con portico a quattro colonne, balcone e frontone */
+ rect(g,ST2,x-70,y-166,140,136);rect(g,ST,x-70,y-166,140,5);poly(g,ST,[[x-76,y-166],[x,y-196],[x+76,y-166]]);poly(g,ST2,[[x-60,y-168],[x,y-190],[x+60,y-168]]);
+ [-52,-18,18,52].forEach(o=>{rect(g,ST,x+o-5,y-130,10,96);rect(g,'rgba(0,0,0,.12)',x+o+1,y-130,4,96)});rect(g,ST,x-62,y-134,124,6);for(let q=0;q<16;q++)rect(g,IR,x-60+q*7.6,y-128,1.6,8);
+ ar(g,k>.3?LIT:'#3a4a58',x-12,y-60,24,50);rect(g,ST3,x-30,y-92,60,3);
+ jack(g,x+4,y-196,t,1.2);
+ /* cancelli neri e dorati con le lance, pilastri di pietra */
+ for(let q=0;q<64;q++){const fx=x-250+q*7.8;rect(g,IR,fx,y-46,1.8,46);if(q%2==0)poly(g,GD,[[fx-1,y-46],[fx+1,y-54],[fx+3,y-46]])}rect(g,IR,x-252,y-30,504,3);rect(g,IR,x-252,y-16,504,2);
+ [-250,-120,0,120,250].forEach(o=>{rect(g,ST2,x+o-10,y-72,20,72);rect(g,ST,x+o-12,y-76,24,6);dot(g,GD,x+o,y-82,4)});
+ if(k>.3)glow(g,x,y-100,200,'255,214,130',.22)});
+/* --- il Victoria Memorial: marmo bianco, Vittoria alata dorata; il cambio della guardia con la banda e la folla ai cancelli --- */
+PR.l2vittoria=L2((g,x,y,t,a,k)=>{rect(g,'#c8c4b4',x-50,y-12,100,12);rect(g,'#d8d4c4',x-40,y-24,80,12);bs(g,'#ece8dc',x-26,y-24,52,100);rect(g,'rgba(0,0,0,.1)',x+10,y-124,16,100);rect(g,'#d8d4c4',x-32,y-128,64,6);
+ poly(g,'#ece8dc',[[x-22,y-128],[x-18,y-170],[x+18,y-170],[x+22,y-128]]);rect(g,'#f4f0e6',x-14,y-176,28,6);
+ /* la Vittoria alata: figura dorata, ali spiegate, braccia in alto */
+ poly(g,GD,[[x-6,y-176],[x-8,y-208],[x+8,y-208],[x+6,y-176]]);dot(g,GD,x,y-214,5);poly(g,GD,[[x-6,y-196],[x-34,y-226],[x-30,y-200]]);poly(g,GD,[[x+6,y-196],[x+34,y-226],[x+30,y-200]]);ln(g,GD,2.6,[x+4,y-204,x+14,y-228]);dot(g,GD,x+15,y-232,3);
+ [[-36,'#b8903a'],[36,'#b8903a']].forEach(o=>{el(g,o[1],x+o[0],y-34,9,6);poly(g,o[1],[[x+o[0]-5,y-36],[x+o[0],y-52],[x+o[0]+5,y-36]])});
+ if(k>.25)glow(g,x,y-200,40,'255,226,150',.3);
+ folla(g,x-120,y+6,t,4,11);folla(g,x+130,y+6,t,5,23)});
+PR.l2guardia=L2((g,x,y,t,a,k)=>{
+ /* soldati con la giubba rossa e il colbacco di pelo nero, in formazione, e la banda */
+ for(let i=0;i<5;i++){const gx=x-100+i*50,b=Math.sin(t*4+i)*1;fig(g,gx,y+(i%2)*3,t*1.4,{f:1,s:1,skin:tn('#e0b090'),top:tn('#c8281e'),bot:tn('#1a1a2a'),hair:tn('#1a1a1a'),ph:i*.3,acc:(g2,b2)=>{poly(g2,tn('#14110f'),[[-9,-108+b2],[9,-108+b2],[10,-134+b2],[-10,-134+b2]]);rect(g2,tn('#e8e0d0'),-12,-92+b2,24,3);ln(g2,'#2a2a2e',2,[16,-92,16,-6]);rect(g2,tn('#e8c82a'),-1,-90+b2,2,40)}})}
+  /* banda: tre musicisti con ottoni e un tamburo */
+ for(let i=0;i<3;i++){const gx=x+170+i*34;fig(g,gx,y-4,t*1.2,{f:-1,s:.9,skin:tn('#e0b090'),top:tn('#c8281e'),bot:tn('#1a1a2a'),hair:tn('#1a1a1a'),acc:(g2,b2)=>{poly(g2,tn('#14110f'),[[-8,-108+b2],[8,-108+b2],[9,-128+b2],[-9,-128+b2]]);dot(g2,GD,-14,-86,6);ln(g2,GD,3,[-10,-86,-30,-90]);if(i==1){el(g2,'#e8e0d0',-12,-70,10,12);rect(g2,'#8a1a1a',-22,-76,20,4)}}})}
+ });
+/* --- la baracchetta verde dei tassisti e il taxi nero con la luce gialla (Colin) --- */
+PR.l2baracchetta=L2((g,x,y,t,a,k)=>{taxi(g,x-100,y+4,k);bs(g,'#2f6a46',x-20,y,100,74);rect(g,'#1f4a34',x-24,y-78,108,8);poly(g,'#1f4a34',[[x-26,y-76],[x+30,y-102],[x+86,y-76]]);rect(g,'#ece4cc',x-4,y-52,36,24);rect(g,k>.2?LIT:'#7a98ac',x,y-48,28,16);rect(g,'#8a6a3a',x-4,y-30,36,4);rect(g,'#3a2418',x+44,y-50,24,48);dot(g,GD,x+64,y-26,1.6);txt(g,'CABMEN',x+30,y-86,6.4,'#e8dcc0');
+ [0,1,2].forEach(q=>rect(g,'#1f4a34',x-18+q*3,y-18,2,18));for(let q=0;q<3;q++)el(g,'rgba(230,230,230,'+(.3*(1-((t*.5+q/3)%1)))+')',x+20+Math.sin(t+q)*4,y-96-((t*.5+q/3)%1)*26,5,4)});
+/* --- St James's Park e i pellicani: il lago stretto, il ponte pedonale, i salici, i pellicani sulla riva, i tetti di Whitehall e la ruota --- */
+const pellicano=(g,x,y,s,t,dorme)=>{g.save();g.translate(x,y);g.scale(s,s);el(g,'#f4f0e6',0,-18,16,11);poly(g,'#f4f0e6',[[-14,-20],[-24,-16],[-12,-10]]);ln(g,'#e8e0d0',4,[10,-22,14,-34,10,-40]);dot(g,'#f4f0e6',dorme?8:12,dorme?-30:-42,6);
+ poly(g,'#e8802a',[[dorme?12:16,dorme?-30:-43],[dorme?4:34,dorme?-20:-38],[dorme?12:16,dorme?-24:-37]]);ln(g,'#e88a2a',2.4,[-2,-8,-2,0]);ln(g,'#e88a2a',2.4,[5,-8,5,0]);dot(g,'#14110f',dorme?10:14,dorme?-31:-43,.9);g.restore()};
+PR.l2stjames=L2((g,x,y,t,a,k)=>{
+ /* sullo sfondo: i tetti con le torrette di Whitehall e la ruota panoramica */
+ rect(g,'#c8c0a8',x-260,y-120,160,50);poly(g,SL,[[x-264,y-120],[x-240,y-140],[x-120,y-140],[x-96,y-120]]);for(let q=0;q<3;q++){rect(g,'#b8b09a',x-244+q*50,y-170,18,30);poly(g,SL,[[x-246+q*50,y-170],[x-235+q*50,y-188],[x-224+q*50,y-170]])}
+ grid(g,x-254,y-116,148,44,2,8,k,41,'#4a6070',8,13);
+ ln(g,'#9a9ea6',1.6,[x+190,y-254,x+190,y-126]);ln(g,'#9a9ea6',1.6,[x+126,y-190,x+254,y-190]);for(let q=0;q<8;q++){const an=q*Math.PI/4;ln(g,'#9a9ea6',1,[x+190,y-190,x+190+Math.cos(an)*64,y-190+Math.sin(an)*64]);dot(g,'#e8e0d0',x+190+Math.cos(an+t*.02)*64,y-190+Math.sin(an+t*.02)*64,2.4)}
+ g.save();g.strokeStyle=tn('#9a9ea6');g.lineWidth=2;g.beginPath();g.arc(x+190,y-190,64,0,7);g.stroke();g.restore();
+ /* il lago stretto con il ponte pedonale */
+ el(g,'#62808c',x,y-38,255,18);el(g,'#7a98a4',x-20,y-41,210,8);for(let q=0;q<7;q++)el(g,'rgba(255,255,255,.3)',x-190+q*64+Math.sin(t+q)*8,y-38+(q%3)*5,20,1.4);
+ rect(g,'#3a3e44',x-60,y-74,120,5);for(let q=0;q<8;q++)rect(g,'#3a3e44',x-60+q*16,y-70,2,14);poly(g,'#3a3e44',[[x-60,y-70],[x-68,y-40],[x-60,y-40]]);poly(g,'#3a3e44',[[x+60,y-70],[x+68,y-40],[x+60,y-40]]);
+ salice(g,x-200,y-30,1.2,t);salice(g,x+215,y-24,1.1,t);
+ /* pellicani sulla riva, uno dorme su un sasso; anatre e oche; uno scoiattolo */
+ el(g,'#8a8478',x-110,y-8,16,7);pellicano(g,x-110,y-10,1,t,true);pellicano(g,x-50,y+2,1.1,t,false);pellicano(g,x+30,y-2,.9,t,false);pellicano(g,x+120,y+6,1,t,true);
+ for(let q=0;q<4;q++){const dx=x-170+q*80+Math.sin(t*.6+q)*10;el(g,q%2?'#4a3a2a':'#5a6a42',dx,y-32,6,3.6);dot(g,q%2?'#4a3a2a':'#2a6a42',dx+5,y-36,2.6)}
+ PR.l2scoiattolo(g,x+170,y+2,t)});
+/* --- il Big Ben e il Palazzo di Westminster: la torre gotica color miele, il quadrante dorato, il ponte con gli autobus rossi --- */
+PR.l2bigben=L2((g,x,y,t,a,k)=>{
+ /* il palazzo lungo: pietra color miele, pinnacoli, finestre alte */
+ bs(g,HN,x+36,y-20,224,104);rect(g,HN2,x+36,y-124,224,5);for(let q=0;q<14;q++){rect(g,HN2,x+42+q*16,y-136,5,12);poly(g,HN2,[[x+41+q*16,y-136],[x+44.5+q*16,y-148],[x+48+q*16,y-136]])}
+ for(let r=0;r<2;r++)for(let q=0;q<13;q++){ar(g,k>.3&&hr(q*3+r)>.4?LIT:'#4a6070',x+42+q*16.4,y-24-r*40,8,28)}
+ [[x+120,78],[x+200,92]].forEach(p=>{rect(g,HN,p[0],y-20-p[1],26,p[1]);poly(g,HN2,[[p[0]-3,y-20-p[1]],[p[0]+13,y-20-p[1]-34],[p[0]+29,y-20-p[1]]]);ln(g,HN2,1.6,[p[0]+13,y-54-p[1],p[0]+13,y-66-p[1]])});
+ /* la torre dell'orologio (Elizabeth Tower): fusto sottile, quadrante con numeri romani dorati, tetto a punta */
+ const tx=x-30;bs(g,HN,tx-30,y-20,60,150);for(let q=0;q<4;q++)rect(g,'rgba(0,0,0,.08)',tx-28+q*14,y-170,2,150);rect(g,'rgba(255,255,255,.16)',tx-30,y-170,6,150);rect(g,'rgba(0,0,0,.12)',tx+16,y-170,14,150);
+ for(let q=0;q<4;q++)ar(g,'#5a4a32',tx-22+q*14,y-160,6,30);
+ bs(g,HN2,tx-34,y-170,68,10);bs(g,HN,tx-32,y-180,64,110);rect(g,HN2,tx-34,y-286,68,10);
+ el(g,'#f2ecd4',tx,y-236,24,24);g.save();g.strokeStyle=tn('#c89a2a');g.lineWidth=2.4;g.beginPath();g.arc(tx,y-236,24,0,7);g.stroke();g.restore();
+ for(let q=0;q<12;q++){const an=q*Math.PI/6;ln(g,'#3a3020',q%3?1.2:2.2,[tx+Math.sin(an)*18,y-236-Math.cos(an)*18,tx+Math.sin(an)*22,y-236-Math.cos(an)*22])}
+ const mn=(t*.15)%12;ln(g,'#14110f',2,[tx,y-236,tx+Math.sin(mn*Math.PI/6)*18,y-236-Math.cos(mn*Math.PI/6)*18]);ln(g,'#14110f',2.8,[tx,y-236,tx+Math.sin(2.2)*11,y-236-Math.cos(2.2)*11]);if(k>.25)glow(g,tx,y-236,56,'255,226,150',.5);
+ bs(g,HN2,tx-34,y-264,68,6);poly(g,'#4a5a5a',[[tx-38,y-290],[tx,y-352],[tx+38,y-290]]);poly(g,'#5a6a6a',[[tx-28,y-292],[tx,y-340],[tx+8,y-292]]);ln(g,GD,2.4,[tx,y-352,tx,y-374]);dot(g,GD,tx,y-376,2.6);
+ [-30,30].forEach(o=>{poly(g,HN2,[[tx+o-5,y-290],[tx+o,y-306],[tx+o+5,y-290]])});
+ /* il ponte di Westminster con le ringhiere verdi, l'autobus rosso e il taxi nero */
+ rect(g,'#2f6a46',x-250,y-18,500,8);for(let q=0;q<62;q++)rect(g,'#2f6a46',x-250+q*8,y-30,1.6,12);rect(g,'#2f6a46',x-250,y-32,500,3)});
+/* --- l'Abbazia di Westminster: la facciata gotica con le due torri, il rosone, il portale --- */
+PR.l2abbey=L2((g,x,y,t,a,k)=>{const C='#d4ccb4',C2='#b8b09a';
+ bs(g,C,x-110,y-6,220,130);rect(g,'rgba(255,255,255,.2)',x-110,y-136,6,130);rect(g,'rgba(0,0,0,.1)',x+96,y-136,14,130);
+ [-82,82].forEach((o,i)=>{bs(g,C,x+o-34,y-6,68,246);rect(g,'rgba(0,0,0,.1)',x+o+16,y-252,18,246);for(let r=0;r<3;r++){ar(g,'#3a4a58',x+o-12,y-100-r*50,24,40);ln(g,C2,1.4,[x+o,y-130-r*50,x+o,y-100-r*50])}
+  poly(g,C2,[[x+o-40,y-252],[x+o,y-300],[x+o+40,y-252]]);poly(g,C,[[x+o-32,y-254],[x+o,y-292],[x+o+10,y-254]]);[-30,30].forEach(p=>{rect(g,C2,x+o+p-4,y-266,8,18);poly(g,C2,[[x+o+p-5,y-266],[x+o+p,y-282],[x+o+p+5,y-266]])})});
+ /* il rosone e il grande finestrone */
+ dot(g,C2,x,y-112,32);dot(g,'#3a5a7a',x,y-112,28);for(let q=0;q<12;q++){const an=q*Math.PI/6;ln(g,C2,1.6,[x,y-112,x+Math.cos(an)*28,y-112+Math.sin(an)*28])}dot(g,C2,x,y-112,6);dot(g,'#a83a2a',x,y-112,3.6);if(k>.3)glow(g,x,y-112,50,'255,200,120',.3);
+ ar(g,'#2a3a4a',x-22,y-146,44,64);ar(g,'#5a7a9a',x-17,y-142,34,54);ln(g,C2,1.4,[x,y-146,x,y-92]);poly(g,C2,[[x-30,y-146],[x,y-188],[x+30,y-146]]);
+ /* portale ad arco acuto */
+ poly(g,'#1a1612',[[x-22,y-6],[x-22,y-56],[x,y-84],[x+22,y-56],[x+22,y-6]]);poly(g,C2,[[x-28,y-6],[x-28,y-58],[x,y-94],[x+28,y-58],[x+28,y-6],[x+22,y-6],[x+22,y-56],[x,y-84],[x-22,y-56],[x-22,y-6]]);
+ for(let q=0;q<6;q++){rect(g,C2,x-112+q*44,y-6,8,60);poly(g,C2,[[x-114+q*44,y-6],[x-110+q*44,y-6],[x-116+q*44-6,y+0]])}
+ folla(g,x-60,y+8,t,6,31);folla(g,x+70,y+8,t,5,47)});
+
+/* =========================== ZONA 3 · Trafalgar Square e Covent Garden =========================== */
+/* --- Trafalgar Square: la colonna di Nelson con l'ammiraglio, i quattro leoni di bronzo, le fontane con i tritoni, la National Gallery --- */
+const leone=(g,x,y,s,f)=>{g.save();g.translate(x,y);g.scale(s*f,s);const c='#5a4a30';rect(g,'#b8b09a',-30,-14,60,14);el(g,c,0,-28,26,12);poly(g,c,[[16,-30],[22,-50],[34,-48],[30,-26]]);dot(g,c,30,-50,8);el(g,'#4a3a22',30,-48,10,10);poly(g,c,[[22,-60],[26,-62],[28,-56]]);[[-18,0],[-8,0],[10,0],[20,0]].forEach(l=>rect(g,c,l[0]-3,-18,6,6));ln(g,c,4,[-26,-30,-38,-24,-34,-14]);dot(g,'#14110f',34,-52,1.1);g.restore()};
+PR.l2trafalgar=L2((g,x,y,t,a,k)=>{
+ /* la National Gallery dietro: colonnato e cupola */
+ bs(g,ST2,x-140,y-14,260,86);rect(g,ST,x-146,y-102,272,6);for(let q=0;q<11;q++){rect(g,ST,x-124+q*22,y-96,9,78);rect(g,'rgba(0,0,0,.1)',x-119+q*22,y-96,4,78)}poly(g,ST,[[x-86,y-100],[x-6,y-128],[x+74,y-100]]);
+ rect(g,'#c8c0a8',x-30,y-142,56,18);hd(g,'#8a9aa4',x-2,y-142,24,22);rect(g,ST3,x-6,y-176,8,16);ln(g,GD,1.6,[x-2,y-176,x-2,y-186]);
+ /* le due fontane con tritoni e delfini */
+ [-210,196].forEach((o,i)=>{el(g,'#b8b09a',x+o,y-8,60,13);el(g,'#7ac0d8',x+o,y-12,52,9);rect(g,ST3,x+o-6,y-54,12,44);el(g,'#b8b09a',x+o,y-54,18,5);
+  for(let q=-2;q<=2;q++){g.strokeStyle='rgba(190,235,255,.85)';g.lineWidth=1.8;g.beginPath();g.moveTo(x+o,y-60);g.quadraticCurveTo(x+o+q*10,y-90+Math.abs(q)*8+Math.sin(t*3+q)*3,x+o+q*18,y-14);g.stroke()}
+  [-30,30].forEach(s=>{el(g,'#4a4a3a',x+o+s,y-16,9,5);poly(g,'#4a4a3a',[[x+o+s-3,y-18],[x+o+s,y-34],[x+o+s+4,y-18]])})});
+ /* colonna di Nelson: piedistallo con rilievi, fusto di granito, capitello, l'ammiraglio in cima */
+ const cx=x-8;rect(g,'#a8a392',cx-34,y-12,68,12);rect(g,'#b8b2a0',cx-28,y-22,56,10);rect(g,'#c8c2ae',cx-22,y-70,44,48);rect(g,'rgba(0,0,0,.14)',cx+8,y-70,14,48);rect(g,'#8a7a50',cx-17,y-62,34,28);
+ rect(g,'#a8a18c',cx-9,y-290,18,222);rect(g,'rgba(255,255,255,.22)',cx-9,y-290,5,222);rect(g,'rgba(0,0,0,.22)',cx+3,y-290,6,222);for(let q=0;q<8;q++)rect(g,'rgba(0,0,0,.09)',cx-9,y-280+q*26,18,1.4);
+ rect(g,'#d8d2be',cx-14,y-296,28,8);poly(g,'#8a7a50',[[cx-16,y-296],[cx-12,y-312],[cx+12,y-312],[cx+16,y-296]]);rect(g,'#c8c2ae',cx-12,y-316,24,5);
+ poly(g,'#5a6a5a',[[cx-4,y-316],[cx-5,y-338],[cx+5,y-338],[cx+4,y-316]]);dot(g,'#5a6a5a',cx,y-343,3.6);poly(g,'#4a5a4a',[[cx-6,y-346],[cx+6,y-346],[cx+3,y-350],[cx-3,y-350]]);
+ /* i quattro leoni di bronzo seduti alla base */
+ leone(g,cx-54,y-12,.9,-1);leone(g,cx+54,y-12,.9,1);leone(g,cx-30,y+4,.8,-1);leone(g,cx+30,y+4,.8,1);
+ /* il quarto basamento con una scultura moderna: un cavallo-ombra di forme semplici, azzurro */
+ rect(g,'#c8c2ae',x+80,y-26,36,26);el(g,'#4a9ac8',x+98,y-42,13,16);ln(g,'#4a9ac8',3,[x+98,y-54,x+92,y-70]);dot(g,'#4a9ac8',x+92,y-72,3.6);
+ folla(g,x+10,y+10,t,4,5);for(let i=0;i<5;i++){const px=x-120+i*52+Math.sin(t*.9+i)*6,py=y+2+(i%3)*5;el(g,'#8a8e94',px,py,5,2.4);dot(g,'#8a8e94',px+4,py-3,2.1)}});
+/* --- Covent Garden: la tettoia di ferro e vetro, la piazza lastricata con il mimo, il giocoliere, il cantante lirico e la folla che fa cerchio --- */
+PR.l2covent=L2((g,x,y,t,a,k)=>{
+ /* la grande tettoia: pilastri di ferro verde scuro, tetto di vetro, bancarelle sotto */
+ rect(g,'#1f3a2e',x-210,y-110,420,6);for(let q=0;q<10;q++){rect(g,'#1f3a2e',x-206+q*45,y-110,4,100)}for(let q=0;q<9;q++)for(let r=0;r<2;r++)rect(g,k>.2?'rgba(255,226,150,.5)':'rgba(180,215,235,.55)',x-200+q*45,y-148+r*20,41,16);
+ poly(g,'#1f3a2e',[[x-214,y-112],[x,y-170],[x+214,y-112]]);for(let q=0;q<=9;q++)ln(g,'#1f3a2e',1.4,[x-200+q*44,y-114,x,y-170]);rect(g,'rgba(180,215,235,.5)',x-30,y-130,60,16);
+ rect(g,'#6a6048',x-206,y-60,412,50);rect(g,'rgba(255,200,120,.3)',x-206,y-60,412,5);
+ [[-170,'#c8402a'],[-100,'#e8c04a'],[-30,'#4aa86a'],[40,'#2a8ac8'],[110,'#8a4ad0'],[170,'#e86a3a']].forEach((s,i)=>{rect(g,'#3a2a1a',x+s[0]-22,y-52,44,5);poly(g,s[1],[[x+s[0]-26,y-52],[x+s[0]+26,y-52],[x+s[0]+20,y-68],[x+s[0]-20,y-68]]);for(let q=0;q<4;q++)dot(g,['#e8402a','#f2c82a','#f4f0e6','#8a4ad0'][(q+i)%4],x+s[0]-14+q*9,y-44,3.4)});
+ txt(g,'COVENT GARDEN',x,y-118,9,'#f4f0e6');
+ /* davanti: artisti di strada e folla ad anello */
+ const cx=x-20;folla(g,cx-70,y+8,t,5,2);folla(g,cx+70,y+8,t,5,9);
+ /* il mimo: viso bianco, maglia a righe, bombetta, in posa su una cassetta */
+ rect(g,'#6a4a2a',cx-14,y-14,28,14);fig(g,cx,y-14,t*.2,{f:1,s:.92,skin:'#f4f0e6',top:'#f4f0e6',bot:'#14110f',hair:'#14110f',acc:(g2,b)=>{for(let q=0;q<5;q++)rect(g2,'#14110f',-12,-86+q*8,24,3);rect(g2,'#14110f',-10,-114+b,20,5);rect(g2,'#14110f',-7,-122+b,14,9);ln(g2,'#f4f0e6',3,[14,-84,26,-70+Math.sin(t*2)*6])}});
+ /* il giocoliere, tre palline in aria, cappello per le monete */
+ fig(g,cx-100,y+6,t,{f:1,s:.88,skin:tn('#d8a880'),top:tn('#c8402a'),bot:tn('#2a2a3a'),hair:tn('#2a1a10'),acc:(g2,b)=>{ln(g2,'#d8a880',3.4,[12,-84,20,-100]);ln(g2,'#d8a880',3.4,[-12,-84,-20,-100])}});
+ for(let q=0;q<3;q++){const u=(t*1.4+q/3)%1,bx=cx-100+Math.cos(u*6.28)*18,by=y-132-Math.abs(Math.sin(u*3.14))*34;dot(g,['#f2c82a','#e8402a','#2a8ac8'][q],bx,by,4)}
+ el(g,'#14110f',cx-60,y+16,8,2.6);
+ /* il cantante lirico: abito scuro, mano sul petto, bocca aperta, note che salgono */
+ fig(g,cx+110,y+4,t,{f:-1,s:.95,skin:tn('#e0b090'),top:tn('#1a1a2a'),bot:tn('#1a1a2a'),hair:tn('#4a3a28'),acc:(g2,b)=>{rect(g2,'#f4f0e6',-3,-88,6,28);ln(g2,tn('#1a1a2a'),5,[-10,-82,2,-76]);el(g2,'#3a1a1a',6,-99+b,2.6,2)}});
+ for(let q=0;q<3;q++){const u=(t*.4+q/3)%1;g.save();g.globalAlpha=.7*(1-u);txt(g,['♪','♫','♪'][q],cx+90-q*8+Math.sin(u*6)*6,y-120-u*50,13,'#c8a838');g.restore()}
+ for(let q=0;q<5;q++)rect(g,['#e8402a','#f2c82a','#f4f0e6','#8a4ad0','#4aa86a'][q],x-190+q*10,y-10,8,8)});
+/* --- St Paul's Covent Garden, la «chiesa degli attori»: il portico di Inigo Jones, il giardino, la targa; il pub e il teatrino del Punch --- */
+PR.l2stpaulcg=L2((g,x,y,t,a,k)=>{
+ /* la chiesa: mattoni e pietra, portico a colonne con frontone basso */
+ mat(g,'#a8553a',x-130,y-130,260,120,4);rect(g,ST,x-136,y-134,272,6);poly(g,ST,[[x-110,y-132],[x,y-168],[x+110,y-132]]);poly(g,'#a8553a',[[x-96,y-136],[x,y-162],[x+96,y-136]]);
+ rect(g,ST2,x-100,y-132,200,6);[-84,-48,-12,24,60,96].forEach(o=>{if(o<=70){rect(g,ST,x+o-7,y-126,14,116);rect(g,'rgba(0,0,0,.12)',x+o+1,y-126,5,116);rect(g,ST2,x+o-10,y-130,20,6);rect(g,ST2,x+o-10,y-10,20,6)}});
+ rect(g,'#2a1e16',x-74,y-120,148,110);[-60,-24,12,48].forEach(o=>{ar(g,k>.2?LIT:'#4a6070',x+o,y-96,20,50)});
+ /* giardino chiuso da un muro, la targa commemorativa sotto il portico */
+ mat(g,'#a8553a',x+130,y-60,100,50,8);rect(g,ST2,x+128,y-64,104,5);for(let q=0;q<2;q++)ippo(g,x+160+q*44,y-52,.55);
+ rect(g,'#8a7a52',x-34,y-70,30,22);rect(g,'#e8dcc0',x-31,y-67,24,16);for(let q=0;q<4;q++)rect(g,'rgba(80,60,30,.5)',x-28,y-64+q*3.6,18,1);
+ /* il pub di fronte, con il balcone e l'insegna dipinta */
+ bs(g,'#2a4a3a',x-290,y-6,150,120);rect(g,'#1a3a2a',x-290,y-124,150,6);grid(g,x-282,y-116,134,64,2,4,k,17,'#4a6070',16,22);rect(g,IR,x-282,y-52,134,2.4);for(let q=0;q<17;q++)rect(g,IR,x-282+q*8,y-62,1.2,10);
+ rect(g,'#14110f',x-262,y-44,90,36);rect(g,k>.2?'rgba(255,200,110,.9)':'#7a5a3a',x-258,y-40,82,28);ln(g,'#5a4a32',2,[x-132,y-100,x-122,y-100]);rect(g,'#8a2a1a',x-124,y-110,18,22);dot(g,GD,x-115,y-99,5);
+ /* il teatrino del Punch: baracca a righe rosse e bianche con due burattini che saltano */
+ const bx=x+130;poly(g,'#c8281e',[[bx-26,y-84],[bx+26,y-84],[bx+22,y-130],[bx-22,y-130]]);for(let q=0;q<5;q++)rect(g,'#f4f0e6',bx-26+q*10.4+3,y-130,5,46);rect(g,'#14110f',bx-18,y-74,36,3);bs(g,'#c8281e',bx-24,y-4,48,80);for(let q=0;q<5;q++)rect(g,'#f4f0e6',bx-24+q*9.6+2,y-82,4.6,78);
+ rect(g,'#2a1a1a',bx-16,y-78,32,32);const p=Math.sin(t*5)*5;dot(g,'#e8a880',bx-6,y-60+p,6);poly(g,'#c8281e',[[bx-12,y-62+p],[bx-1,y-62+p],[bx-8,y-76+p]]);dot(g,'#e8d870',bx+8,y-58-p,5.4);poly(g,'#3a3a4a',[[bx+3,y-60-p],[bx+13,y-60-p],[bx+8,y-72-p]]);ln(g,'#8a6a3a',2.4,[bx+14,y-50,bx+26,y-62]);
+ folla(g,bx-40,y+6,t,4,13)});
+
+/* =========================== ZONA 4 · La Tube =========================== */
+const roundel=(g,x,y,r,name,k)=>{g.save();g.strokeStyle=tn('#d8281e');g.lineWidth=r*.3;g.beginPath();g.arc(x,y,r*.85,0,7);g.stroke();g.restore();rect(g,'#1c3a8a',x-r*1.25,y-r*.2,r*2.5,r*.4);txt(g,name,x,y+r*.1,Math.max(4.4,r*.26),'#f4f0e6')};
+PR.l2roundel=L2((g,x,y,t,a,k)=>{rect(g,IR,x-1.6,y-90,3.2,90);roundel(g,x,y-130,26,a||'WAY OUT',k);if(k>.2)glow(g,x,y-130,50,'255,226,150',.2)});
+/* la mappa a colori delle linee: un diagramma, non una mappa geografica */
+PR.l2mappa=L2((g,x,y,t,a,k)=>{rect(g,'#3a3e44',x-52,y-146,104,86);rect(g,'#f4f0e6',x-49,y-143,98,80);[['#d8281e',[-40,-30,-10,-30,6,-14,40,-14]],['#0098d8',[-40,-4,-20,-4,0,16,20,16,40,0]],['#0a7a3a',[-30,-40,-30,-10,-12,8,-12,28]],['#f2c82a',[-40,22,-14,22,10,-2,34,-2]],['#8a4a9a',[-6,-40,-6,-14,24,14,40,14]],['#14110f',[14,-40,14,-14,14,28]]].forEach(l=>{const p=l[1];ln(g,l[0],2.4,p.map((v,i)=>i%2?y-100+v:x+v));for(let i=0;i<p.length;i+=2)dot(g,'#f4f0e6',x+p[i],y-100+p[i+1],1.8)});txt(g,'TUBE MAP',x,y-48,5,'#3a3e44');rect(g,IR,x-50,y-58,100,2);rect(g,IR,x-4,y-58,8,58)});
+PR.l2panca_t=L2((g,x,y,t,a,k)=>{rect(g,'#8a8e96',x-40,y-30,80,6);rect(g,'#6a6e76',x-40,y-24,80,3);rect(g,IR,x-36,y-24,4,24);rect(g,IR,x+32,y-24,4,24);rect(g,'#8a8e96',x-40,y-56,80,18)});
+PR.l2busker=L2((g,x,y,t,a,k)=>{fig(g,x,y,t,{f:1,s:.96,skin:tn('#c88a64'),top:tn('#4a6a4a'),bot:tn('#2a2a36'),hair:tn('#1a1210'),acc:(g2,b)=>{rect(g2,'#3a3a46',-13,-114+b,26,5);el(g2,'#b8803a',8,-62,12,9);dot(g2,'#14110f',8,-62,3.4);ln(g2,'#6a3a1a',3,[16,-66,36,-86]);ln(g2,'#e0b090',3,[-10,-78,8,-64])}});rect(g,'#2a2a2e',x+30,y-4,26,4);dot(g,GD,x+38,y-5,1.4);dot(g,GD,x+46,y-5,1.4);
+ for(let q=0;q<3;q++){const u=(t*.45+q/3)%1;g.save();g.globalAlpha=.7*(1-u);txt(g,['♪','♫','♪'][q],x+46+Math.sin(u*5+q)*8,y-90-u*40,12,'#c8a838');g.restore()}});
+/* treno: corpo stretto e tondeggiante con la fascia colorata della linea; arriva, si ferma, riparte (ciclo di 16 secondi) */
+const treno=(g,x,y,t,col,dir,k)=>{const cyc=(t+x*.01)%16,u=cyc<5?1-Math.pow(1-cyc/5,2):cyc<11?1:1+Math.pow((cyc-11)/5,2),tx=x+(dir>0?(1-u)*-520:(1-u)*520);if(u>=1.6||u<=-.2)return;
+ for(let c=0;c<3;c++){const cx=tx+c*134*dir;poly(g,'#8a8e96',[[cx-62,y],[cx-62,y-52],[cx-52,y-62],[cx+52,y-62],[cx+62,y-52],[cx+62,y]]);rect(g,col,cx-62,y-24,124,6);rect(g,'rgba(255,255,255,.2)',cx-62,y-60,124,3);for(let q=0;q<4;q++)rect(g,k>.1||true?'rgba(255,238,190,.95)':'#7a98ac',cx-54+q*28,y-52,20,22);rect(g,'rgba(0,0,0,.4)',cx-2,y-62,4,62);rect(g,'#2a2e34',cx-62,y-4,124,4)}
+ const fx=tx+(dir>0?-62:62+134*2),hx=dir>0?tx-62:tx+134*2+62;dot(g,'#fff6c8',hx,y-18,3);glow(g,hx,y-18,34,'255,240,200',.5)};
+/* ---- ingresso, tornelli e scale mobili ---- */
+PR.l2ingresso=L2((g,x,y,t,a,k)=>{const top=y-452;
+ rect(g,'#d8d2be',x-250,top,32,452);rect(g,'rgba(0,0,0,.12)',x-226,top,8,452);rect(g,ST3,x-254,y-322,40,8);
+ roundel(g,x-120,y-250,40,'COVENT GARDEN',k);ln(g,IR,2,[x-120,y-290,x-120,y-322]);if(k>.1||true)glow(g,x-120,y-250,70,'255,226,150',.1);
+ /* tornelli con i lettori gialli */
+ [-40,6,52].forEach((o,i)=>{rect(g,'#6a6e76',x+o,y-56,22,50);rect(g,'#8a8e96',x+o,y-58,22,6);rect(g,'#e8c82a',x+o+4,y-70,14,12);if((Math.floor(t*1.2)+i)%3==0)dot(g,'#4aff6a',x+o+11,y-64,2.4);rect(g,'#14110f',x+o+2,y-6,18,2)});
+ /* scala mobile che scende nel buio: nastro diagonale con i gradini che scorrono, corrimano, persone ferme a destra e che camminano a sinistra */
+ const ex=x+120;poly(g,'#14110f',[[ex-10,y-120],[ex+170,y-10],[ex+170,y+36],[ex-10,y+36]]);poly(g,'#6a6e76',[[ex,y-100],[ex+170,y+4],[ex+170,y+14],[ex,y-90]]);
+ for(let q=0;q<14;q++){const u=((q+t*2)%14)/14;ln(g,'#2a2e34',1.8,[ex+u*170,y-100+u*104,ex+u*170,y-92+u*104])}
+ ln(g,'#1a1a1e',5,[ex,y-124,ex+170,y-24]);ln(g,'#2a2e34',2,[ex,y-124,ex,y-100]);
+ [[.2,1],[.42,1],[.34,0]].forEach((p,i)=>{const px=ex+p[0]*170+(p[1]?0:Math.sin(t*2)*0),py=y-100+p[0]*104;pers(g,px,py+(p[1]?10:0),t*(p[1]?0:3),{s:.55,f:-1,top:['#3a3e4a','#8a3a2a','#2a4a6a'][i],bot:'#2a2a36'})});
+ if(k>-1)glow(g,ex+120,y-10,60,'255,200,120',.18);
+ /* il cartello blu: stai fermo a destra, cammina a sinistra */
+ rect(g,'#2a4a8a',x-210,y-120,56,40);txt(g,'STAND ON',x-182,y-104,5.4,'#f4f0e6');txt(g,'THE RIGHT',x-182,y-96,5.4,'#f4f0e6');ln(g,'#f4f0e6',1.6,[x-196,y-88,x-168,y-88]);rect(g,IR,x-184,y-80,3,80)});
+/* ---- Baker Street: pareti di piastrelle chiare con le sagome di Sherlock, archi di mattoni, un treno che entra ---- */
+const sagoma=(g,x,y,s)=>{g.save();g.translate(x,y);g.scale(s,s);const c='#14110f';dot(g,c,0,-30,6.4);poly(g,c,[[-6,-30],[-12,-36],[-4,-40],[6,-37],[10,-33],[4,-31]]);poly(g,c,[[-8,-26],[-9,-6],[10,-6],[8,-26]]);poly(g,c,[[2,-33],[8,-31],[3,-28]]);ln(g,c,2.2,[6,-27,18,-24,20,-27]);dot(g,c,20,-28,2.6);rect(g,c,-8,-6,5,12);rect(g,c,3,-6,5,12);g.restore()};
+PR.l2baker=L2((g,x,y,t,a,k)=>{
+ /* parete di piastrelle chiare con le sagome ripetute, cornice scura in alto, archi di mattoni */
+ rect(g,'#e4dcc4',x-250,y-218,500,166);for(let q=0;q<33;q++)rect(g,'rgba(0,0,0,.07)',x-250+q*15.2,y-218,1,166);for(let r=0;r<11;r++)rect(g,'rgba(0,0,0,.06)',x-250,y-218+r*15.2,500,1);
+ rect(g,'#14110f',x-250,y-218,500,10);rect(g,'#2a4a8a',x-250,y-52,500,6);
+ for(let r=0;r<2;r++)for(let q=0;q<11;q++)sagoma(g,x-232+q*44+(r%2)*22,y-132+r*54,1.1);
+ [-250,-125,0,125,250].forEach(o=>{rect(g,BR,x+o-8,y-218,16,166);mat(g,BR,x+o-8,y-218,16,166,o)});
+ /* il treno, una fascia magenta (Metropolitan line), poi la sagoma del detective all'esterno: statua col cappello e la pipa */
+ treno(g,x-60,y-50,t,'#9b0058',1,k);
+ rect(g,'#c8d0d8',x+190,y-54,50,4);poly(g,'#4a4a4e',[[x+202,y-56],[x+204,y-100],[x+226,y-100],[x+228,y-56]]);dot(g,'#4a4a4e',x+215,y-106,7);poly(g,'#4a4a4e',[[x+207,y-110],[x+223,y-112],[x+225,y-106],[x+209,y-106]]);ln(g,'#4a4a4e',2,[x+221,y-102,x+232,y-96])});
+/* ---- Embankment: la banchina curva, il bordo giallo, «Mind the gap» dipinto, il treno stretto, il tabellone con i minuti, la signora che ascolta ---- */
+PR.l2embank=L2((g,x,y,t,a,k)=>{
+ /* parete a volta: piastrelle chiare, travi di ferro, lucernari */
+ rect(g,'#d8d0b8',x-250,y-214,500,162);for(let q=0;q<33;q++)rect(g,'rgba(0,0,0,.07)',x-250+q*15.2,y-214,1,162);rect(g,'#14110f',x-250,y-214,500,8);rect(g,'#2a2a2e',x-250,y-52,500,6);
+ for(let q=0;q<5;q++){const bx=x-250+q*125;ar(g,'#14110f',bx+8,y-52,110,150);ar(g,'#c8b890',bx+14,y-52,98,142);rect(g,'rgba(255,238,190,.35)',bx+14,y-196,98,10)}
+ /* tabellone dei minuti ai treni */
+ rect(g,'#0a0a0e',x-84,y-170,168,50);rect(g,'#2a2a2e',x-86,y-172,172,3);const bl=Math.floor(t*1.6)%2;txt(g,'NORTHERN LINE',x,y-156,7,'#f2a82a');txt(g,'1  Morden via Bank',x-12,y-143,6.4,'#f2a82a');txt(g,bl?'2 min':'2 min',x+60,y-143,6.4,'#f2a82a');txt(g,'2  High Barnet  5 min',x,y-131,6.4,'#f2a82a');
+ treno(g,x+10,y-50,t+3,'#14110f',-1,k);
+ /* «Mind the gap» dipinto sul bordo, la signora che ascolta con un sorriso e i cerchi della voce */
+ txt(g,'MIND THE GAP',x-90,y-22,13,'#e8c82a');txt(g,'MIND THE GAP',x+150,y-22,13,'#e8c82a');
+ rect(g,'#6a6e76',x-180,y-30,50,5);rect(g,IR,x-176,y-25,3,25);rect(g,IR,x-136,y-25,3,25);pers(g,x-155,y-22,t*.1,{s:.74,top:'#6a2a4a',bot:'#2a2a36',hair:'#c8c8c8',f:1});dot(g,'#3a1a1a',x-150,y-80,1.4);
+ rect(g,'#2a2e34',x-60,y-110,34,12);for(let q=0;q<4;q++)rect(g,'#14110f',x-56+q*7,y-107,3,6);for(let q=0;q<3;q++){const u=(t*.8+q/3)%1;g.save();g.globalAlpha=.55*(1-u);g.strokeStyle='#f2c82a';g.lineWidth=1.4;g.beginPath();g.arc(x-60,y-104,6+u*26,Math.PI*1.3,Math.PI*.7+Math.PI*2);g.stroke();g.restore()}});
+PR.l2uscita=L2((g,x,y,t,a,k)=>{const top=y-452;rect(g,'#d8d2be',x+218,top,32,452);rect(g,'rgba(0,0,0,.12)',x+210,top,8,452);rect(g,'#14110f',x+60,y-150,120,34);rect(g,'#2a8a3a',x+64,y-146,112,26);txt(g,'WAY OUT  →',x+120,y-128,13,'#f4f0e6');rect(g,IR,x+118,y-116,4,30);if(k>-1)glow(g,x+120,y-134,90,'120,255,160',.1);folla(g,x-70,y+8,t,3,61)});
+
+/* =========================== ZONA 5 · St Paul's, South Bank e Borough Market =========================== */
+/* --- la Cattedrale di St Paul: la cupola grandissima con la lanterna, la palla dorata e la croce; il colonnato a due ordini, le due torri campanarie --- */
+PR.l2stpaul=L2((g,x,y,t,a,k)=>{const C='#d8d4c4',C2='#b8b4a2',C3='#9a9688';
+ /* facciata: due ordini di colonne, frontone, torri ai lati */
+ bs(g,C,x-130,y-6,260,96);rect(g,'rgba(255,255,255,.2)',x-130,y-102,6,96);rect(g,'rgba(0,0,0,.1)',x+116,y-102,14,96);
+ for(let q=0;q<10;q++){rect(g,C2,x-108+q*24,y-30,8,58);rect(g,'rgba(0,0,0,.12)',x-103+q*24,y-30,3,58)}rect(g,C2,x-120,y-34,240,6);
+ poly(g,C,[[x-74,y-112],[x,y-142],[x+74,y-112]]);rect(g,C2,x-78,y-112,156,6);for(let q=0;q<6;q++){rect(g,C2,x-66+q*24,y-104,8,40);rect(g,'rgba(0,0,0,.12)',x-61+q*24,y-104,3,40)}
+ [-100,100].forEach(o=>{bs(g,C,x+o-26,y-74,52,148);rect(g,'rgba(0,0,0,.1)',x+o+8,y-222,18,148);for(let r=0;r<2;r++)ar(g,'#3a4a58',x+o-9,y-100-r*34,18,26);rect(g,C2,x+o-30,y-218,60,6);hd(g,C,x+o,y-224,20,24);rect(g,C2,x+o-2,y-264,4,18);dot(g,GD,x+o,y-268,3)});
+ ar(g,'#2a2a2e',x-18,y-6,36,56);if(k>.2)rect(g,LIT,x-12,y-44,24,34);
+ /* la cupola: tamburo con colonne, calotta di pietra grigia, lanterna, palla dorata, croce */
+ bs(g,C,x-62,y-142,124,46);for(let q=0;q<16;q++)rect(g,C2,x-58+q*7.6,y-134,3.4,32);rect(g,C2,x-66,y-146,132,6);rect(g,C2,x-66,y-100,132,5);
+ hd(g,'#a8a8a0',x,y-146,56,92);for(let q=-3;q<=3;q++)ln(g,'rgba(80,80,80,.25)',1.2,[x,y-238,x+q*16,y-146]);rect(g,'rgba(255,255,255,.18)',x-48,y-196,12,48);
+ rect(g,C2,x-14,y-262,28,24);for(let q=0;q<4;q++)rect(g,C3,x-12+q*7,y-256,3,16);hd(g,C2,x,y-262,16,22);rect(g,C2,x-3,y-296,6,14);dot(g,GD,x,y-300,6);ln(g,GD,2.6,[x,y-306,x,y-326]);ln(g,GD,2.6,[x-6,y-318,x+6,y-318]);
+ if(k>.3)glow(g,x,y-120,150,'255,214,130',.18);
+ /* il piazzale con il bus rosso e i passanti */
+ bus(g,x+180,y+6,k,'#e8e0d0');folla(g,x-70,y+10,t,5,71)});
+/* --- Millennium Bridge e Tate Modern: il ponte sottile di acciaio con i cavi bassi, la cupola dietro; il grande edificio di mattoni scuri con la ciminiera --- */
+PR.l2millennium=L2((g,x,y,t,a,k)=>{
+ /* il fiume e la riva sud: la Tate Modern, ciminiera quadrata con la fascia di vetro in cima */
+ rect(g,'#6a7a84',x-260,y-74,520,50);el(g,'rgba(255,255,255,.18)',x-100,y-52,120,3);el(g,'rgba(255,255,255,.18)',x+90,y-44,90,2.4);
+ mat(g,'#5a4a3e',x+60,y-190,200,126,9);for(let r=0;r<4;r++)for(let q=0;q<9;q++)rect(g,k>.3&&hr(q+r*9)>.5?LIT:'#3a3a40',x+70+q*21,y-176+r*26,11,16);
+ mat(g,'#5a4a3e',x+86,y-300,34,112,6);rect(g,'#ece4cc',x+84,y-310,38,12);rect(g,k>.2?'rgba(255,238,190,.9)':'rgba(220,230,240,.8)',x+86,y-308,34,8);rect(g,'#3a2a22',x+84,y-312,38,2);
+ /* la cupola di St Paul's, piccola e lontana, a sinistra */
+ hd(g,'#a8a8a0',x-160,y-120,26,34);rect(g,'#d8d4c4',x-176,y-124,32,16);rect(g,'#b8b4a2',x-163,y-168,6,16);dot(g,GD,x-160,y-172,2.6);bs(g,'#d8d4c4',x-200,y-84,80,30);
+ /* il ponte: piano di assi e metallo, cavi di sospensione bassi ai due lati */
+ rect(g,'#8a8e96',x-260,y-30,520,5);rect(g,'#aab0b8',x-260,y-26,520,3);for(let q=0;q<66;q++)rect(g,'rgba(0,0,0,.18)',x-260+q*8,y-26,1,3);
+ [-170,0,170].forEach(o=>{rect(g,'#aab0b8',x+o-3,y-60,6,36);rect(g,'#8a8e96',x+o-8,y-24,16,8)});
+ g.save();g.strokeStyle=tn('#8a929c');g.lineWidth=2;g.beginPath();g.moveTo(x-260,y-34);g.quadraticCurveTo(x-170,y-66,x-170,y-60);g.quadraticCurveTo(x-85,y-26,x,y-60);g.quadraticCurveTo(x+85,y-26,x+170,y-60);g.quadraticCurveTo(x+170,y-66,x+260,y-34);g.stroke();g.restore();
+ for(let q=0;q<30;q++)ln(g,'rgba(130,140,150,.6)',.9,[x-250+q*17,y-32,x-250+q*17,y-34-Math.max(0,22-Math.abs(((q*17)%170)-85)*.26)]);
+ folla(g,x-60,y+14,t,4,81);folla(g,x+70,y+14,t,3,83);rect(g,'#aab0b8',x-260,y-3,520,3)});
+/* --- Shakespeare's Globe: l'edificio rotondo a venti lati, pareti bianche e travi scure, il tetto di paglia, la folla in cappotto che entra --- */
+PR.l2globe=L2((g,x,y,t,a,k)=>{
+ poly(g,'#f0e8d4',[[x-110,y-6],[x-104,y-122],[x+104,y-122],[x+110,y-6]]);for(let q=0;q<10;q++){rect(g,'#3a2a1a',x-102+q*21,y-122,4,116)}for(let r=0;r<3;r++)rect(g,'#3a2a1a',x-108+r*2,y-100+r*34,216-r*4,4);
+ for(let r=0;r<3;r++)for(let q=0;q<9;q++)rect(g,k>.3&&hr(q+r*9)>.5?LIT:'#3a3a40',x-92+q*21,y-98+r*34,9,13);
+ /* il tetto di paglia a due falde e la parte centrale scoperta */
+ poly(g,'#b8964a',[[x-116,y-122],[x-92,y-156],[x-30,y-166],[x-20,y-150],[x+20,y-150],[x+30,y-166],[x+92,y-156],[x+116,y-122]]);for(let q=0;q<14;q++)rect(g,'rgba(80,50,10,.18)',x-100+q*14,y-150+Math.abs(q-7)*2.4,2,26);rect(g,'rgba(255,255,255,.14)',x-116,y-128,232,3);
+ rect(g,'#3a2a1a',x-20,y-150,40,3);rect(g,'#c8281e',x+36,y-190,30,20);rect(g,'#3a2a1a',x+36,y-198,3,28);rect(g,'#3a2a1a',x-128,y-4,256,4);
+ /* il porticato sul lato del fiume e le colonne */
+ for(let q=0;q<11;q++){rect(g,'#6a4a30',x-108+q*21.6,y-34,5,28)}rect(g,'#6a4a30',x-112,y-38,224,4);
+ txt(g,"SHAKESPEARE'S GLOBE",x,y-176,8.4,'#3a2a1a');
+ folla(g,x-90,y+10,t,6,91);folla(g,x+60,y+10,t,6,93);if(k>.25)glow(g,x,y-70,130,'255,214,130',.2)});
+/* --- Borough Market: tettoie di ferro verde scuro e vetro, arcate ferroviarie di mattoni sopra, banchi con cassette di frutta, il George Inn --- */
+PR.l2borough=L2((g,x,y,t,a,k)=>{
+ /* arcate ferroviarie di mattoni e il viadotto sopra il mercato */
+ mat(g,'#8a4a38',x-260,y-218,330,34,5);rect(g,'#3a3a40',x-260,y-188,330,6);for(let q=0;q<5;q++){rect(g,BR2,x-250+q*66,y-182,10,176);ar(g,'#2a1e16',x-236+q*66,y-8,46,150)}rect(g,'#2a2e34',x-262,y-224,334,8);
+ /* la tettoia di ferro verde e vetro */
+ rect(g,'#1f3a2e',x-250,y-96,320,5);for(let q=0;q<9;q++)rect(g,'#1f3a2e',x-246+q*40,y-96,4,88);poly(g,'#1f3a2e',[[x-254,y-96],[x-90,y-124],[x+74,y-96]]);rect(g,k>.2?'rgba(255,226,150,.4)':'rgba(180,215,235,.55)',x-230,y-110,280,10);
+ /* i banchi: cassette di frutta, forme di formaggio, pani, funghi, olive */
+ [[-210,'#c8402a'],[-130,'#e8c04a'],[-50,'#8a5a2a'],[30,'#4aa86a']].forEach((s,i)=>{rect(g,'#6a4a2a',x+s[0]-30,y-34,60,5);rect(g,s[1],x+s[0]-30,y-70,60,14);for(let q=0;q<6;q++){const c=[['#d8283a','#e8802a','#6ac84a'],['#f2d66a','#e8c04a','#f4e8b0'],['#b8803a','#d8a050','#8a5a2a'],['#e8e0c8','#a89a7a','#8a4a2a']][i];dot(g,c[q%3],x+s[0]-24+q*9,y-40+(q%2)*2,4.2)}rect(g,'#2a2a2e',x+s[0]-20,y-52,26,12);txt(g,['PEARS','CHEESE','BREAD','FUNGHI'][i],x+s[0]-7,y-43,5,'#f4f0e6')});
+ /* il George Inn: locanda con ballatoi di legno scuro su un cortile di ciottoli */
+ const ix=x+190;bs(g,'#8a4a38',ix-60,y-6,130,150);rect(g,'#f4f0e6',ix-60,y-100,130,6);for(let r=0;r<2;r++){rect(g,'#2a1e14',ix-60,y-52-r*50,130,5);for(let q=0;q<14;q++)rect(g,'#2a1e14',ix-60+q*9.4,y-70-r*50,1.8,18);rect(g,'#2a1e14',ix-60,y-72-r*50,130,2.6)}
+ for(let r=0;r<2;r++)for(let q=0;q<4;q++)rect(g,k>.25?LIT:'#4a6070',ix-50+q*30,y-46-r*50,16,20);rect(g,'#2a1e14',ix-58,y-146,128,6);poly(g,SL,[[ix-64,y-146],[ix,y-174],[ix+74,y-146]]);rect(g,'#14110f',ix-12,y-40,24,34);txt(g,'THE GEORGE',ix,y-110,6.4,'#2a1e14')});
+/* --- Sally: il banco di frutta e verdura con la lavagnetta dei prezzi e le cassette di legno --- */
+PR.l2banco=L2((g,x,y,t,a,k)=>{rect(g,'#6a4a2a',x-60,y-30,120,5);rect(g,'#6a4a2a',x-56,y-26,5,26);rect(g,'#6a4a2a',x+50,y-26,5,26);poly(g,'#2a6a46',[[x-70,y-96],[x+70,y-96],[x+60,y-72],[x-60,y-72]]);for(let q=0;q<7;q++)rect(g,'#f4f0e6',x-68+q*20+4,y-96,10,24);rect(g,'#6a4a2a',x-60,y-74,3,48);rect(g,'#6a4a2a',x+58,y-74,3,48);
+ for(let q=0;q<12;q++){const cx=x-52+q*9.4,cy=y-34-(q%3)*4;dot(g,['#d8283a','#6ac84a','#e8c04a','#e8802a','#8a4a9a','#a8d84a'][q%6],cx,cy,4.4);dot(g,'rgba(255,255,255,.3)',cx-1,cy-1.4,1.2)}
+ rect(g,'#2a302c',x+34,y-62,28,24);for(let q=0;q<4;q++)rect(g,'rgba(255,255,255,.55)',x+37,y-58+q*5.4,16+(q%2)*5,1.2);txt(g,'APPLES £2',x+48,y-42,4.6,'#f2c82a');
+ for(let q=0;q<3;q++){rect(g,'#8a6a3a',x-82+q*10,y-18-q*10,26,10);rect(g,'#6a4a2a',x-82+q*10,y-10-q*10,26,2)}dot(g,'#d8283a',x-70,y-38,5)});
+
+/* =========================== ZONA 6 · London Bridge e il Monumento =========================== */
+/* --- London Bridge: il ponte largo e piatto di cemento chiaro, il Tamigi grigio-oro, le torri della City e la punta di vetro dello Shard --- */
+PR.l2lbridge=L2((g,x,y,t,a,k)=>{
+ /* il fiume con i riflessi dorati e i battelli */
+ rect(g,'#7a7e78',x-260,y-118,520,86);rect(g,'rgba(230,190,110,.35)',x-260,y-118,520,30);for(let q=0;q<10;q++)el(g,'rgba(255,220,140,.4)',x-230+q*52+Math.sin(t+q)*8,y-100+(q%4)*10,20,1.8);
+ /* lo Shard a sud (destra), le torri della City a nord (sinistra), una gru */
+ poly(g,'#b8ccd8',[[x+150,y-118],[x+166,y-330],[x+182,y-118]]);poly(g,'rgba(255,255,255,.28)',[[x+150,y-118],[x+166,y-330],[x+162,y-118]]);for(let q=0;q<10;q++)ln(g,'rgba(60,80,100,.3)',.8,[x+152+q*0,y-130-q*20,x+180-q*1.4,y-130-q*20]);
+ [[x-240,70,168],[x-170,56,206],[x-110,64,148]].forEach((b,i)=>{rect(g,GL,b[0],y-b[2]-30,b[1],b[2]);rect(g,'rgba(255,255,255,.18)',b[0],y-b[2]-30,6,b[2]);for(let r=0;r<b[2]/18;r++)if(k>.3)for(let q=0;q<b[1]/14;q++)if(hr(i*50+r*7+q)>.5)rect(g,LIT,b[0]+3+q*14,y-b[2]-26+r*18,8,6)});
+ /* battelli sul fiume */
+ [[-70,'#f4f0e6'],[90,'#c8402a']].forEach((b,i)=>{const bx=x+b[0]+Math.sin(t*.3+i)*14,by=y-56;poly(g,b[1],[[bx-26,by-10],[bx-18,by+2],[bx+22,by+2],[bx+30,by-10]]);rect(g,'rgba(0,0,0,.2)',bx-20,by-4,44,2);rect(g,'#3a4a58',bx-14,by-20,26,10)});
+ /* il ponte: parapetto di cemento con ringhiera bassa, autobus e taxi sulla carreggiata */
+ rect(g,'#c8c4b4',x-260,y-34,520,10);rect(g,'#a8a498',x-260,y-26,520,3);for(let q=0;q<65;q++)rect(g,'#8a8e94',x-260+q*8,y-44,1.6,10);rect(g,'#8a8e94',x-260,y-46,520,2.4);
+ bus(g,x-130,y+12,k);taxi(g,x+60,y+14,k);folla(g,x+150,y+14,t,3,101)});
+/* --- Il Monumento: la colonna di pietra bianca scanalata su un alto piedistallo con rilievi, l'urna dorata con le fiamme, la balconata --- */
+PR.l2monumento=L2((g,x,y,t,a,k)=>{const C='#e4e0d0',C2='#c8c4b2';
+ /* palazzi di pietra e uffici di vetro intorno */
+ bs(g,'#c8b890',x-260,y-14,120,150);grid(g,x-254,y-160,108,140,6,5,k,61,'#4a6070',10,14);bs(g,'#d4c8a4',x+140,y-14,120,120);grid(g,x+146,y-130,108,110,5,5,k,67,'#4a6070',10,14);
+ rect(g,'#9ab4c4',x+210,y-300,50,290);rect(g,'rgba(255,255,255,.2)',x+210,y-300,6,290);if(k>.3)for(let r=0;r<16;r++)for(let q=0;q<4;q++)if(hr(r*5+q)>.5)rect(g,LIT,x+214+q*11,y-292+r*18,7,6);
+ /* piedistallo alto con rilievi, fusto scanalato, balconata, urna dorata con le fiamme */
+ rect(g,C2,x-40,y-14,80,14);bs(g,C,x-32,y-14,64,92);rect(g,'rgba(255,255,255,.2)',x-32,y-106,8,92);rect(g,'rgba(0,0,0,.14)',x+12,y-106,20,92);rect(g,'#b8b4a0',x-24,y-92,48,40);rect(g,'#d4d0c0',x-20,y-88,40,32);dot(g,'#a8a490',x,y-72,8);ln(g,'#a8a490',2,[x-14,y-60,x+14,y-60]);
+ rect(g,C2,x-36,y-110,72,6);poly(g,C,[[x-12,y-106],[x-13,y-300],[x+13,y-300],[x+12,y-106]]);for(let q=0;q<7;q++)rect(g,'rgba(0,0,0,.11)',x-10+q*3.2,y-300,1.2,194);rect(g,'rgba(255,255,255,.3)',x-12,y-300,5,194);rect(g,'rgba(0,0,0,.16)',x+4,y-300,9,194);
+ rect(g,C2,x-20,y-306,40,8);rect(g,C,x-22,y-312,44,5);for(let q=0;q<11;q++)rect(g,'#6a6a62',x-20+q*4,y-322,1.4,10);rect(g,C2,x-22,y-324,44,3);
+ el(g,GD,x,y-340,10,12);rect(g,'#b8902f',x-5,y-330,10,6);for(let q=0;q<7;q++){const fl=Math.sin(t*5+q)*2;poly(g,q%2?'#ffb02a':'#ffd84a',[[x-8+q*2.6,y-346],[x-5+q*2.6+fl,y-368-q%3*8],[x-1+q*2.6,y-346]])}if(k>.1)glow(g,x,y-350,50,'255,190,90',.4);else glow(g,x,y-350,40,'255,200,100',.22);
+ /* ringhiera di ferro, pochi alberi, ombre lunghe */
+ for(let q=0;q<14;q++)rect(g,IR,x-60+q*9,y-26,1.8,26);rect(g,IR,x-60,y-26,124,2);rect(g,IR,x-60,y-8,124,2);poly(g,'rgba(20,20,40,.18)',[[x+34,y],[x+150,y+14],[x+140,y+22],[x+20,y+6]]);
+ ippo(g,x-150,y+4,.9,t);folla(g,x+70,y+16,t,3,111)});
+/* --- All Hallows by the Tower: la chiesa bassa con la torre quadrata di mattoni, il portale ad arco, il giardino; si intravede la Torre di Londra --- */
+PR.l2allhallows=L2((g,x,y,t,a,k)=>{
+ /* sullo sfondo, il grattacielo a forma di cetriolo e una torre di vetro */
+ el(g,'#a8c4d4',x+190,y-230,22,66);poly(g,'#a8c4d4',[[x+174,y-196],[x+206,y-196],[x+200,y-130],[x+180,y-130]]);for(let q=0;q<6;q++)ln(g,'rgba(60,90,110,.4)',1,[x+170+q*3,y-290+q*16,x+210-q*3,y-290+q*16]);rect(g,'#9ab4c4',x+100,y-250,36,236);rect(g,'rgba(255,255,255,.18)',x+100,y-250,5,236);
+ mat(g,'#9a4a38',x-170,y-10,230,96,13);rect(g,ST2,x-176,y-108,242,6);for(let q=0;q<5;q++){ar(g,k>.2?LIT:'#4a6070',x-150+q*42,y-48,18,50)}rect(g,'#3a2a22',x-158,y-60,200,3);
+ /* torre quadrata di mattoni, merli, bandiera */
+ mat(g,'#a8553a',x+34,y-10,70,176,15);rect(g,ST2,x+30,y-176,78,8);for(let q=0;q<5;q++)rect(g,ST2,x+34+q*15,y-188,9,14);ar(g,'#3a2a22',x+56,y-130,26,56);ar(g,'#3a4a58',x+60,y-126,18,48);jack(g,x+70,y-188,t,.8);
+ poly(g,ST,[[x+46,y-8],[x+46,y-44],[x+70,y-62],[x+94,y-44],[x+94,y-8]]);poly(g,'#14110f',[[x+52,y-8],[x+52,y-42],[x+70,y-56],[x+88,y-42],[x+88,y-8]]);
+ ippo(g,x-190,y+2,1.1,t);ippo(g,x+160,y+4,1,t);folla(g,x-40,y+12,t,3,121);PR.l2cane(g,x+120,y+14,t,'#2a5a4a')});
+
+/* =========================== ZONA 7 · Torre di Londra e Tower Bridge =========================== */
+/* --- La Torre di Londra: la Torre Bianca squadrata con le quattro torrette, le mura merlate con torri rotonde, il prato verde, la bandiera --- */
+PR.l2torre=L2((g,x,y,t,a,k)=>{const C='#e0d8c0',C2='#c4bba0',C3='#a8a088';
+ /* mura merlate e torri rotonde */
+ rect(g,C2,x-258,y-82,516,66);for(let q=0;q<34;q++)rect(g,C2,x-258+q*15,y-94,9,13);rect(g,'rgba(0,0,0,.12)',x-258,y-24,516,8);
+ [-236,-130,200,236].forEach((o,i)=>{bs(g,C2,x+o-20,y-16,40,112);rect(g,'rgba(0,0,0,.12)',x+o+6,y-128,14,112);for(let q=0;q<4;q++)rect(g,C2,x+o-22+q*11,y-140,8,13);poly(g,'#4a4e5a',[[x+o-24,y-128],[x+o,y-158],[x+o+24,y-128]]);rect(g,'#1a1612',x+o-3,y-88,6,18)});
+ /* la Torre Bianca: blocco squadrato a quattro piani con una torretta a ogni angolo */
+ bs(g,C,x-84,y-14,168,170);rect(g,'rgba(255,255,255,.2)',x-84,y-184,7,170);rect(g,'rgba(0,0,0,.12)',x+66,y-184,18,170);for(let r=0;r<4;r++)rect(g,'rgba(0,0,0,.08)',x-84,y-52-r*38,168,2);
+ for(let r=0;r<3;r++)for(let q=0;q<4;q++)ar(g,k>.3&&hr(r*4+q)>.4?LIT:'#2a2a2e',x-62+q*36,y-52-r*38,10,22);
+ [-84,84].forEach((o,i)=>{bs(g,C,x+o-18,y-100,36,100+(i?0:0));rect(g,C2,x+o-20,y-196,40,6);poly(g,'#4a4e5a',[[x+o-22,y-196],[x+o,y-224],[x+o+22,y-196]]);ln(g,'#8a8e94',1.4,[x+o,y-224,x+o,y-240]);poly(g,'#c8281e',[[x+o,y-240],[x+o+12,y-236],[x+o,y-232]])});
+ [-84,84].forEach(o=>{rect(g,C,x+o-18,y-184,36,88);rect(g,'rgba(0,0,0,.1)',x+o+6,y-184,12,88)});
+ for(let q=0;q<9;q++)rect(g,C,x-84+q*19,y-196,10,13);
+ jack(g,x,y-236,t,1.1);
+ /* la porta sul fiume ad arco ribassato, prato verde, guardie */
+ rect(g,'#4a8a3a',x-258,y-8,516,10);poly(g,'#14110f',[[x-30,y-4],[x-30,y-26],[x-12,y-34],[x+12,y-34],[x+30,y-26],[x+30,y-4]]);
+ for(let q=0;q<10;q++)ln(g,'#3a3e44',1.4,[x-130+q*26,y+2,x-130+q*26,y-10]);ln(g,'#3a3e44',2,[x-140,y-6,x+120,y-6]);
+ if(k>.25)glow(g,x,y-100,200,'255,170,90',.2)});
+/* --- I corvi della Torre: grossi corvi neri e lucidi che camminano sul prato e saltellano sui muri; catene e pali bassi --- */
+const corvo=(g,x,y,t,i,s)=>{const c='#14161c',w=Math.sin(t*3+i*1.7)>.93?1:0,h=Math.abs(Math.sin(t*4+i*2))*2.4;g.save();g.translate(x,y);g.scale(s,s);el(g,c,0,-12-h,11,6.6);dot(g,c,10,-18-h,4.4);poly(g,'#2a2e36',[[13,-19-h],[20,-17-h],[13,-16-h]]);poly(g,c,[[-9,-12-h],[-20,-8-h],[-10,-7-h]]);ln(g,'#2a2a2e',1.4,[-2,-8-h,-2+Math.sin(t*4+i)*2,0]);ln(g,'#2a2a2e',1.4,[3,-8-h,3-Math.sin(t*4+i)*2,0]);dot(g,'#e8e8e8',11,-19-h,.8);g.restore()};
+PR.l2corvi=L2((g,x,y,t,a,k)=>{
+ rect(g,'#4a8a3a',x-240,y-26,480,32);for(let q=0;q<40;q++)rect(g,'rgba(40,100,40,.25)',x-236+q*12,y-24+hr(q)*24,3,4);
+ for(let q=0;q<12;q++){rect(g,IR,x-230+q*42,y-30,3.4,30);dot(g,'#3a3e44',x-228+q*42,y-31,3)}g.save();g.strokeStyle=tn('#3a3e44');g.lineWidth=1.8;for(let q=0;q<11;q++){g.beginPath();g.moveTo(x-228+q*42,y-28);g.quadraticCurveTo(x-207+q*42,y-16,x-186+q*42,y-28);g.stroke()}g.restore();
+ corvo(g,x-170,y+4,t,0,1.2);corvo(g,x-90,y+10,t,1,1.1);corvo(g,x+50,y+6,t,2,1.25);corvo(g,x+130,y+12,t,3,1.1);corvo(g,x+190,y+2,t,4,1.2);
+ /* un corvo sul muro e uno in volo */
+ rect(g,'#c4bba0',x-80,y-90,60,64);rect(g,'#a8a088',x-84,y-94,68,6);corvo(g,x-50,y-94,t,5,1.1);
+ const fx=((t*60)%700)-300;g.save();g.translate(x+fx,y-170+Math.sin(t*2)*10);const w=Math.sin(t*12)*7;poly(g,'#14161c',[[-12,0],[-20,-6+w],[-4,-1]]);poly(g,'#14161c',[[12,0],[20,-6+w],[4,-1]]);el(g,'#14161c',0,0,9,4);g.restore()});
+/* --- Tower Bridge: le due torri gotiche, le passerelle azzurre, i ponti mobili, le luci che si accendono, i battelli sul fiume --- */
+PR.l2tbridge=L2((g,x,y,t,a,k)=>{const C='#d8d0b8',C2='#b8b09a',B='#4a8ac8';
+ /* fiume grigio e oro con i riflessi, battelli */
+ rect(g,'#7a8088',x-255,y-78,510,52);rect(g,'rgba(240,170,80,.3)',x-255,y-78,510,20);for(let q=0;q<12;q++)el(g,'rgba(255,200,120,.4)',x-240+q*50+Math.sin(t+q)*8,y-62+(q%4)*8,18,1.6);
+ [[-190,'#f4f0e6'],[180,'#c8402a']].forEach((b,i)=>{const bx=x+b[0]+Math.sin(t*.3+i)*12,by=y-34;poly(g,b[1],[[bx-26,by-10],[bx-18,by+2],[bx+22,by+2],[bx+30,by-10]]);rect(g,'#3a4a58',bx-14,by-20,26,10)});
+ /* le due torri, con tetti a punta e pinnacoli; la passerella alta azzurra tra le torri; la carreggiata con le due ali mobili (si alzano un poco, piano) */
+ const lift=Math.max(0,Math.sin(t*.35))*0,tw=[-100,100];
+ tw.forEach(o=>{bs(g,C,x+o-28,y-26,56,276);rect(g,'rgba(255,255,255,.2)',x+o-28,y-302,6,276);rect(g,'rgba(0,0,0,.12)',x+o+12,y-302,16,276);for(let r=0;r<5;r++){ar(g,'#3a4a58',x+o-16,y-56-r*40,12,26);ar(g,'#3a4a58',x+o+4,y-56-r*40,12,26);if(k>.3)ar(g,LIT,x+o-14,y-54-r*40,8,22)}
+  poly(g,'#4a5a6a',[[x+o-34,y-300],[x+o,y-358],[x+o+34,y-300]]);poly(g,'#5a6a7a',[[x+o-26,y-302],[x+o,y-348],[x+o+8,y-302]]);[-26,26].forEach(p=>{rect(g,C2,x+o+p-5,y-296,10,22);poly(g,C2,[[x+o+p-6,y-296],[x+o+p,y-318],[x+o+p+6,y-296]])});ln(g,C2,2,[x+o,y-358,x+o,y-374])});
+ rect(g,B,x-72,y-266,144,10);rect(g,'#f4f0e6',x-72,y-258,144,3);for(let q=0;q<18;q++)rect(g,B,x-72+q*8,y-256,2,18);rect(g,B,x-72,y-240,144,4);for(let q=0;q<24;q++)rect(g,'#f4f0e6',x-70+q*6,y-266,1.4,4);
+ /* catene di sospensione azzurre dalle torri alle rive */
+ g.save();g.strokeStyle=tn(B);g.lineWidth=3;g.beginPath();g.moveTo(x-255,y-60);g.quadraticCurveTo(x-200,y-66,x-100,y-300);g.stroke();g.beginPath();g.moveTo(x+255,y-60);g.quadraticCurveTo(x+200,y-66,x+100,y-300);g.stroke();g.restore();
+ for(let q=0;q<10;q++){ln(g,'rgba(74,138,200,.7)',1,[x-250+q*20,y-36,x-250+q*20,y-60-(q<5?q*6:0)]);ln(g,'rgba(74,138,200,.7)',1,[x+250-q*20,y-36,x+250-q*20,y-60-(q<5?q*6:0)])}
+ /* carreggiata bianca e azzurra */
+ rect(g,B,x-255,y-40,510,8);rect(g,'#f4f0e6',x-255,y-34,510,3);for(let q=0;q<64;q++)rect(g,B,x-255+q*8,y-32,1.6,6);
+ /* luci che si accendono al crepuscolo */
+ if(k>.2)for(let q=0;q<19;q++)dot(g,LIT,x-250+q*27,y-40,2);if(k>.2){glow(g,x-100,y-250,70,'255,214,130',.25);glow(g,x+100,y-250,70,'255,214,130',.25)}
+ /* al tramonto la luce accende la pietra */
+ const sun=cl(1-Math.abs(k-.25)/.2,0,1)*.2;if(sun>.01){rect(g,'rgba(255,120,50,'+sun+')',x-128,y-302,56,276);rect(g,'rgba(255,120,50,'+sun+')',x+72,y-302,56,276)}});
+
+/* =========================== ZONA 8 · Greenwich =========================== */
+/* --- la Cutty Sark: lo scafo scuro sollevato su una struttura di vetro, tre alberi altissimi con il sartiame; accanto la rotonda del tunnel pedonale --- */
+PR.l2cutty=L2((g,x,y,t,a,k)=>{
+ /* la base di vetro lungo la banchina */
+ poly(g,'rgba(150,190,210,.55)',[[x-190,y-40],[x+190,y-40],[x+170,y-4],[x-170,y-4]]);for(let q=0;q<17;q++)ln(g,'rgba(60,90,110,.6)',1.2,[x-176+q*22,y-40,x-160+q*20,y-6]);rect(g,'#5a6a74',x-172,y-6,344,3);
+ /* lo scafo scuro con la fascia dorata, la prua appuntita, la poppa */
+ poly(g,'#1c1c22',[[x-186,y-84],[x+200,y-84],[x+176,y-42],[x-150,y-42]]);poly(g,'#1c1c22',[[x+186,y-84],[x+232,y-92],[x+176,y-42]]);rect(g,GD,x-176,y-80,356,3);rect(g,'#c8281e',x-170,y-48,320,3);for(let q=0;q<14;q++)dot(g,'#3a3a44',x-150+q*24,y-66,2.4);
+ rect(g,'#6a4a2a',x-150,y-98,60,14);rect(g,'#3a2a1a',x-150,y-102,60,4);
+ /* tre alberi con i pennoni e il sartiame; vele raccolte */
+ [[-110,250],[10,296],[120,260]].forEach((m,i)=>{const mx=x+m[0],th=m[1];rect(g,'#4a3a28',mx-3,y-84-th,6,th);for(let r=0;r<4;r++){const yy=y-110-r*(th-70)/4,w=60-r*10;rect(g,'#4a3a28',mx-w/2,yy,w,3);poly(g,'rgba(232,224,204,.75)',[[mx-w/2+2,yy+3],[mx+w/2-2,yy+3],[mx+w/2-6,yy+14],[mx-w/2+6,yy+14]])}
+  ln(g,'rgba(40,36,30,.6)',.9,[mx,y-84-th,x-186,y-86]);ln(g,'rgba(40,36,30,.6)',.9,[mx,y-84-th,x+232,y-92]);ln(g,'rgba(40,36,30,.6)',.9,[mx,y-90-th*.6,mx+50,y-86]);ln(g,'rgba(40,36,30,.6)',.9,[mx,y-90-th*.6,mx-50,y-86])});
+ if(k>.4)for(let q=0;q<10;q++)dot(g,LIT,x-160+q*36,y-8,2);
+ /* la rotonda del tunnel pedonale: base di mattoni e cupola di vetro */
+ const rx=x+232;mat(g,'#a8a088',rx-26,y-6,52,52,3);hd(g,'rgba(160,200,220,.6)',rx,y-54,28,26);ln(g,'#5a6a72',1.2,[rx,y-80,rx,y-54]);for(let q=-2;q<=2;q++)ln(g,'#5a6a72',1.2,[rx,y-80,rx+q*12,y-54]);ar(g,'#14110f',rx-8,y-4,16,28);if(k>.3){glow(g,rx,y-30,50,'255,226,150',.3)}
+ /* sulla banchina: passanti e una panchina */
+ folla(g,x-90,y+12,t,3,131)});
+/* --- l'Old Royal Naval College e la Queen's House: gli edifici gemelli con le alte cupole, il viale d'erba che guida lo sguardo alla casa bianca con la loggia --- */
+PR.l2naval=L2((g,x,y,t,a,k)=>{const C='#e0dac6',C2='#c4bea8',C3='#a8a490';
+ /* il viale d'erba tra i due edifici, fino alla casa bianca (Queen's House) in fondo */
+ poly(g,'#5a8a46',[[x-50,y-6],[x-14,y-92],[x+14,y-92],[x+50,y-6]]);poly(g,'rgba(255,255,255,.14)',[[x-6,y-6],[x-2,y-92],[x+2,y-92],[x+6,y-6]]);
+ bs(g,'#f4f0e6',x-44,y-92,88,46);rect(g,'#d8d4c4',x-48,y-140,96,5);rect(g,'rgba(0,0,0,.1)',x+20,y-138,28,46);for(let q=0;q<7;q++)rect(g,'#f4f0e6',x-30+q*10,y-124,4,32);rect(g,'#d8d4c4',x-34,y-126,68,3);rect(g,'#c8c4b2',x-34,y-92,68,3);for(let q=0;q<5;q++)ar(g,k>.2?LIT:'#4a6070',x-34+q*14,y-94,8,24);
+ poly(g,C3,[[x-46,y-140],[x,y-156],[x+46,y-140]]);
+ /* i due edifici gemelli: colonnati, tamburi, cupole alte */
+ [-150,150].forEach((o,i)=>{const bx=x+o;bs(g,C,bx-70,y-6,140,130);rect(g,'rgba(255,255,255,.2)',bx-70,y-136,6,130);rect(g,'rgba(0,0,0,.1)',bx+56,y-136,14,130);for(let q=0;q<8;q++){rect(g,C2,bx-60+q*17,y-96,6,86);rect(g,'rgba(0,0,0,.1)',bx-56+q*17,y-96,2,86)}rect(g,C2,bx-72,y-100,144,6);rect(g,C2,bx-72,y-10,144,5);
+  for(let q=0;q<6;q++)ar(g,k>.2&&hr(q+i*7)>.4?LIT:'#3a4a58',bx-56+q*19,y-26,10,28);
+  rect(g,C2,bx-40,y-148,80,26);for(let q=0;q<6;q++)rect(g,C,bx-36+q*13,y-142,5,16);bs(g,C,bx-32,y-148,64,28);for(let q=0;q<8;q++)rect(g,C2,bx-30+q*8,y-174,3,26);rect(g,C2,bx-34,y-178,68,6);
+  hd(g,'#7a8a96',bx,y-178,32,56);for(let q=-2;q<=2;q++)ln(g,'rgba(255,255,255,.2)',1.2,[bx,y-234,bx+q*13,y-178]);rect(g,C2,bx-6,y-250,12,18);rect(g,GD,bx-1.4,y-268,2.8,18);dot(g,GD,bx,y-270,3)});
+ if(k>.3)glow(g,x,y-100,200,'255,214,130',.16);folla(g,x,y+14,t,2,141)});
+/* --- la Trafalgar Tavern: l'edificio Regency chiaro con le grandi finestre a baia sul fiume, i balconi di ferro, la terrazza con le stufe a fungo --- */
+PR.l2tavern=L2((g,x,y,t,a,k)=>{
+ /* il fiume dietro, con il riflesso delle luci */
+ rect(g,'#2a3a52',x-260,y-96,520,60);for(let q=0;q<14;q++)rect(g,'rgba(255,214,130,'+(.14+(q%3)*.08)+')',x-240+q*36,y-92+(q%4)*10,3,22);
+ /* l'edificio: tre baie semicircolari, balconi di ferro, tetto piano con parapetto */
+ bs(g,'#e8dfc4',x-210,y-14,420,134);rect(g,'rgba(255,255,255,.2)',x-210,y-134,6,134);rect(g,'rgba(0,0,0,.1)',x+196,y-134,14,134);rect(g,'#d0c6a8',x-216,y-140,432,8);rect(g,'#c4b894',x-216,y-146,432,6);for(let q=0;q<22;q++)rect(g,'#c4b894',x-210+q*19.6,y-152,10,6);
+ [-120,0,120].forEach((o,i)=>{const bx=x+o;hd(g,'#d8ceb0',bx,y-14,38,0);for(let r=0;r<2;r++){const wy=y-70-r*52;rect(g,'#c4b894',bx-38,wy-2,76,4);for(let q=0;q<3;q++){ar(g,k>.1?'#ffd070':'#9ab4c4',bx-32+q*22,wy+34,16,34);rect(g,'rgba(0,0,0,.2)',bx-32+q*22,wy,16,2)}rect(g,IR,bx-40,wy+34,80,2.4);for(let q=0;q<21;q++)rect(g,IR,bx-40+q*4,wy+26,1,8)}});
+ rect(g,'#14110f',x-70,y-134,140,18);txt(g,'TRAFALGAR TAVERN',x,y-121,10,k>.1?'#ffd070':'#e8dcc0');
+ /* la terrazza: tavolini, sedie, stufe a fungo che brillano, lucine */
+ rect(g,'#6a5a44',x-216,y-8,432,8);for(let q=0;q<4;q++){const tx=x-170+q*104;rect(g,'#2a2a2e',x+(tx-x)-18,y-26,36,3);rect(g,'#2a2a2e',tx-1,y-26,2,22);ln(g,'#2a2a2e',2.4,[tx-26,y-4,tx-22,y-14,tx-14,y-14]);ln(g,'#2a2a2e',2.4,[tx+26,y-4,tx+22,y-14,tx+14,y-14]);dot(g,'#f4f0e6',tx-6,y-29,2.6);rect(g,'#e8c04a',tx+3,y-33,4,7);if(k>.2){dot(g,'#ffd070',tx,y-30,1.4)}}
+ [-100,-4,100,200].forEach(o=>{rect(g,'#3a3e44',x+o-1.6,y-82,3.2,78);hd(g,'#4a4e54',x+o,y-82,15,9);if(k>.1){glow(g,x+o,y-72,44,'255,150,60',.45)}rect(g,'#3a3e44',x+o-6,y-4,12,4)});
+ if(k>.3){for(let q=0;q<22;q++)dot(g,['#ffd070','#ff9a5a','#ffe8b0'][q%3],x-210+q*19.6,y-16+Math.sin(q)*1.5,1.5)}
+ pers(g,x-30,y+12,t,{s:.6,top:'#3a3e4a'});pers(g,x+60,y+10,t,{s:.6,top:'#8a3a2a',f:-1})});
+const stufa=(g,x,y,k)=>{rect(g,'#3a3e44',x-1.6,y-86,3.2,82);hd(g,'#4a4e54',x,y-86,15,9);rect(g,'#3a3e44',x-6,y-4,12,4);if(k>.1)glow(g,x,y-70,44,'255,150,60',.45)};
+PR.l2stufa=L2((g,x,y,t,a,k)=>stufa(g,x,y,k));
+/* il pontile con i battelli attraccati, gli anelli di ormeggio, i cartelli del Tamigi */
+PR.l2pontile=L2((g,x,y,t,a,k)=>{rect(g,'#2a3a52',x-120,y-60,260,36);for(let q=0;q<6;q++)rect(g,'rgba(255,214,130,.2)',x-110+q*42,y-56+(q%3)*8,3,14);rect(g,'#6a5a44',x-100,y-26,200,6);for(let q=0;q<6;q++)rect(g,IR,x-96+q*38,y-20,3,20);
+ const by=y-30+Math.sin(t*.9)*1.4;poly(g,'#f4f0e6',[[x-70,by-14],[x-60,by+2],[x+60,by+2],[x+78,by-14]]);rect(g,'#1c3a6a',x-62,by-24,110,12);for(let q=0;q<6;q++)rect(g,k>.2?LIT:'#7a98ac',x-56+q*17,by-22,11,7);rect(g,'#c8281e',x-70,by-14,148,3);
+ rect(g,'#1c3a6a',x+110,y-76,36,24);txt(g,'THAMES',x+128,y-60,5.4,'#f4f0e6');rect(g,IR,x+126,y-52,3,52)});
+PR.l2bancarella=L2((g,x,y,t,a,k)=>{rect(g,'#6a4a2a',x-44,y-30,88,5);poly(g,'#3a5a8a',[[x-50,y-84],[x+50,y-84],[x+44,y-30],[x-44,y-30]]);for(let q=0;q<4;q++)rect(g,'rgba(0,0,0,.16)',x-44+q*24,y-84,3,54);rect(g,'#6a4a2a',x-46,y-84,3,84);rect(g,'#6a4a2a',x+44,y-84,3,84);for(let q=0;q<3;q++)rect(g,['#8a3a2a','#e8c04a','#4aa86a'][q],x-30+q*24,y-22,20,12);pers(g,x+70,y+4,t,{s:.8,top:'#2a5a4a',bot:'#2a2a36'});rect(g,'#8a6a3a',x+52,y-28,14,14)});
+/* --- il Royal Observatory: la collina erbosa, l'edificio di mattoni rossi con la torretta e la palla rossa; la striscia di metallo del meridiano, l'orologio a 24 ore --- */
+PR.l2observ=L2((g,x,y,t,a,k)=>{
+ /* la collina del parco con il prato e i sentieri */
+ poly(g,'#4a7a3a',[[x-260,y-8],[x-150,y-70],[x-40,y-124],[x+60,y-132],[x+170,y-92],[x+260,y-8]]);poly(g,'rgba(255,255,255,.1)',[[x-150,y-70],[x-40,y-124],[x-60,y-100]]);poly(g,'#a8a088',[[x-30,y-8],[x+4,y-8],[x+16,y-124],[x+8,y-124]]);
+ ippo(g,x-200,y-24,.9,t);ippo(g,x+210,y-20,.85,t);
+ /* l'Osservatorio: edificio di mattoni rossi, torretta ottagonale, palla rossa su un'asta */
+ mat(g,BR,x-80,y-126,150,54,6);rect(g,'#e8dcc0',x-84,y-130,158,6);for(let q=0;q<6;q++)ar(g,k>.2?LIT:'#3a2a22',x-70+q*22,y-96,10,22);
+ mat(g,'#a8553a',x-14,y-168,48,40,17);poly(g,'#4a4e5a',[[x-18,y-168],[x+10,y-190],[x+38,y-168]]);ar(g,k>.2?LIT:'#3a2a22',x+2,y-158,16,24);ln(g,'#8a8e94',2,[x+10,y-190,x+10,y-214]);
+ /* la palla rossa in cima: all'una scende; di sera sta in alto */
+ dot(g,'#d8281e',x+10,y-218,8);dot(g,'rgba(255,255,255,.4)',x+8,y-221,2.6);
+ /* l'orologio a 24 ore vicino al cancello */
+ rect(g,'#14110f',x+86,y-84,40,40);dot(g,'#f4f0e6',x+106,y-64,15);for(let q=0;q<24;q++){const an=q*Math.PI/12;ln(g,'#14110f',q%6?.8:1.6,[x+106+Math.sin(an)*12,y-64-Math.cos(an)*12,x+106+Math.sin(an)*15,y-64-Math.cos(an)*15])}const hh=(t*.1)%24;ln(g,'#14110f',1.8,[x+106,y-64,x+106+Math.sin(hh*Math.PI/12)*10,y-64-Math.cos(hh*Math.PI/12)*10]);ln(g,'#c8281e',1.2,[x+106,y-64,x+106+Math.sin(t*.6)*13,y-64-Math.cos(t*.6)*13]);rect(g,'#14110f',x+104,y-48,4,48);
+ /* il cortile: la striscia di metallo del meridiano e i turisti con un piede di qua e uno di là */
+ rect(g,'#9a9488',x-110,y-18,230,18);const gl=.5+.5*Math.sin(t*2);rect(g,'rgba(255,255,255,'+(.3+.25*gl)+')',x-110,y-10,230,2.4);ln(g,'#e8e8f0',3,[x+14,y-18,x+14,y]);if(k>.2)glow(g,x+14,y-8,60,'180,255,200',.35);
+ [[-60,-1],[14,1],[70,-1]].forEach((p,i)=>pers(g,x+p[0],y+10,t*.2,{s:.7,top:['#c8503a','#2a6aa8','#e8c04a'][i],bot:'#2a3a5a',f:p[1]}));
+ txt(g,'0°',x+14,y+26,8,'#f4f0e6')});
+/* --- il varco finale: un tetto scuro di mattoni, un raggio verde sottile che sale nel cielo nero e si perde oltre la città illuminata --- */
+PR.l2raggio=L2((g,x,y,t,a,k)=>{
+ poly(g,'#4a7a3a',[[x-200,y-4],[x-80,y-60],[x+80,y-66],[x+200,y-4]]);
+ mat(g,'#3a1a16',x-70,y-110,140,44,6);poly(g,'#2a1612',[[x-76,y-110],[x-50,y-136],[x+50,y-136],[x+76,y-110]]);for(let q=0;q<5;q++)rect(g,k>.3?'rgba(255,226,150,.8)':'#2a2a2e',x-56+q*24,y-100,10,16);
+ /* il raggio: una linea verde luminosa che parte dal tetto e sale verso nord, sopra la città, con un bagliore morbido */
+ const pul=.75+.25*Math.sin(t*2.4);g.save();g.globalCompositeOperation='lighter';
+ [[14,.10,'60,255,120'],[8,.18,'60,255,120'],[3.6,.55,'120,255,170'],[1.4,.95,'230,255,240']].forEach(l=>{g.strokeStyle='rgba('+l[2]+','+(l[1]*pul)+')';g.lineWidth=l[0];g.lineCap='round';g.beginPath();g.moveTo(x,y-136);g.lineTo(x-440,y-470);g.stroke()});g.restore();
+ glow(g,x,y-136,50,'80,255,140',.45*pul);
+ for(let q=0;q<6;q++){const u=(t*.3+q/6)%1;dot(g,'rgba(160,255,200,'+(.6*(1-u))+')',x-u*300,y-136-u*220,1.8)}});
+
+PR._l2={nf,lit,ippo,salice,folla};
+})();
