@@ -159,3 +159,21 @@ MONDO: Antico Egitto · Dai campi del Nilo al Faro di Alessandria   (id: egitto)
   Nota: i temi dolorosi (mummificazione, morte, guerre, fine dell'Egitto indipendente) sono trattati con tono sobrio e rispettoso; le tradizioni e le questioni discusse restano con "si dice" / "secondo gli studiosi", come nella scheda.
   Nota tecnica: il mondo usa la stessa luce "nf" e le stesse 8 zone orarie di Mesopotamia (PR._eg esporta nf e gli oggetti riusati: persone, palme, animali, mattoni, case) e riusa da Mesopotamia anche msshaduf, mstarga e mstorcia; da Roma solo ln e gatto (PR._rm). Non modifica motore né altri mondi.
   Nota nome: il titolo è quello completo della scheda; nell'intestazione del motore sporge un po' dalla pastiglia. Se preferisci, puoi abbreviarlo in "Antico Egitto · Dal Nilo al Faro" nella riga addWorld(...) di mondi/egitto.js.
+
+MONDO: Fenici · Dalle città del cedro alle stelle dell'Atlantico   (id: fenici)
+  File: mondi/fenici.js   — oggetti in nucleo/elementi.js (blocco "elementi per i Fenici", nomi che iniziano per "fe")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/fenici.js"></script>
+  Percorso (larghezza 22600): 8 zone, da sinistra a destra, un'intera giornata (e circa novecento anni di storia: il tempo si piega):
+     1 Biblo: città di pietra, tempio e obelisco, cedro e cantieri, alfabeto di ventidue segni, sarcofago di Ahiram (alba) · 2 Tiro: l'isola fortificata, la porpora e i murici, tempio di Melqart, le navi di Hiram e il cedro per Salomone (mattina)
+     3 Cartagine: Qart-Hadasht, la pelle di bue e la collina di Byrsa, Tanit e Baal Hammon, il recinto delle stele (mezzogiorno) · 4 I porti di Cartagine: porto dei mercanti, porto circolare, isola dell'ammiraglio, cantiere e navi a pezzi (primo pomeriggio)
+     5 La campagna e il Capo Bon: giardini e melograni, grano e aratro, vino e olio, api e libro di Magone (pomeriggio) · 6 Il mercato e il Senato: banchi, telaio e lana viola, sufeti e Senato, mura triple e stalle degli elefanti (tardo pomeriggio)
+     7 Annibale: Qart-Hadasht di Spagna, Rodano e Alpi, Canne, Zama (tramonto) · 8 Gadir e l'Atlantico: la città ai confini del mondo, Colonne d'Ercole, il periplo di Annone, la stella dei marinai, la nave con la lanterna che salpa (crepuscolo e notte, varco sotto la stella)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Eshmunyaton (scriba di Biblo), Hiram I (re di Tiro), Elissa (principessa fondatrice), Yatanbaal (carpentiere navale),
+     Magone (agronomo), Amatbaal (tessitrice e mercante), Annibale Barca, Annone il Navigatore
+  Testi: da fenici.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 33 tappe da "Testo:".
+  Vita: gabbiani e cormorani, fenicotteri rosa sopra la laguna, falchi e nibbi, cicogne sui tetti, asini, cani, gatti, pecore, cavalli numidi, elefanti di guerra, coccodrilli e ippopotami del periplo, passanti, pipistrelli di notte.
+  Cielo: sole che attraversa la giornata, luna sottile e stelle di notte; le stelle girano lentamente attorno alla stella polare, con l'Orsa Minore, e la stella si fa più grande verso il varco.
+  Nota: i temi dolorosi (tofet, guerre, distruzione di Cartagine) sono trattati con tono sobrio e rispettoso; tradizioni e questioni discusse (Elissa, Enea, Ahiram, Annone, valico di Annibale) restano con "si dice" / "secondo la tradizione", come nella scheda.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._fe, insieme a navi, elefante, alberi e altri disegni riusabili) e riusa da Mesopotamia (PR._ms) persone, animali, mattoni e case, dall'Egitto (PR._eg) braciere, vaso, cavallo, coccodrillo, ippopotamo, e da Roma solo ln e gatto; non modifica motore né altri mondi.
+  Nota nome: nell'intestazione del motore il titolo occupa quasi tutta la pastiglia ("Fenici" compare grande all'ingresso, il resto come sottotitolo). Se preferisci, puoi abbreviarlo in "Fenici · Dal cedro alle stelle" nella riga addWorld(...) di mondi/fenici.js.
