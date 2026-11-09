@@ -177,3 +177,22 @@ MONDO: Fenici · Dalle città del cedro alle stelle dell'Atlantico   (id: fenici
   Nota: i temi dolorosi (tofet, guerre, distruzione di Cartagine) sono trattati con tono sobrio e rispettoso; tradizioni e questioni discusse (Elissa, Enea, Ahiram, Annone, valico di Annibale) restano con "si dice" / "secondo la tradizione", come nella scheda.
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._fe, insieme a navi, elefante, alberi e altri disegni riusabili) e riusa da Mesopotamia (PR._ms) persone, animali, mattoni e case, dall'Egitto (PR._eg) braciere, vaso, cavallo, coccodrillo, ippopotamo, e da Roma solo ln e gatto; non modifica motore né altri mondi.
   Nota nome: nell'intestazione del motore il titolo occupa quasi tutta la pastiglia ("Fenici" compare grande all'ingresso, il resto come sottotitolo). Se preferisci, puoi abbreviarlo in "Fenici · Dal cedro alle stelle" nella riga addWorld(...) di mondi/fenici.js.
+
+MONDO: Greci · Dagli uliveti dell'Attica alle stelle di Capo Sunio   (id: greci)
+  File: mondi/greci.js   — oggetti in nucleo/elementi.js (blocco "elementi per i Greci", nomi che iniziano per "gr")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/greci.js"></script>
+  Percorso (larghezza 23000): 8 zone, da sinistra a destra, un'intera giornata (e più di tre secoli e mezzo di storia, da Omero a Socrate: il tempo si piega):
+     1 Uliveti dell'Attica: ulivi all'alba, raccolta e frantoio, orzo, vigne e miele, casa del contadino (alba) · 2 Il Pireo: i tre porti, le case delle triremi, la trireme, Lunghe Mura e mercato del porto (primo mattino)
+     3 Acropoli: Propilei, Partenone in costruzione, Atena Parthenos, ulivo di Atena e Atena Promachos (mattina) · 4 Agorà con Tholos e tempio di Efesto, mercato e monete con la civetta, Pnice, teatro di Dioniso (tarda mattina)
+     5 Delfi: Via Sacra e tesori, tempio di Apollo e omphalos, fonte Castalia, stadio dei Giochi Pitici (mezzogiorno) · 6 Termopili: il passo fra monte e mare, muro dei Focesi, accampamento dei Greci, sentiero nascosto (primo pomeriggio)
+     7 Olimpia: bosco sacro e altare di Zeus, tempio di Zeus con la statua di Fidia, stadio, palestra e ginnasio (pomeriggio)
+     8 Capo Sunio: tempio di Poseidone, il mare e le navi, le vele nere di Egeo, le stelle e i miti, varco nella scalinata di stelle verso l'Olimpo (tramonto e notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Nicarco (contadino), Eumene (rematore di trireme), Fidia (scultore), Socrate,
+     Aristonice (la Pizia), Leonida (re di Sparta), Milone di Crotone (lottatore), Omero (il poeta)
+  Testi: da greci.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 33 tappe da "Testo:".
+  Vita: gabbiani, rondini, civetta all'alba, falchi e aquile su Delfi e Olimpia, capre, pecore, asini con le ceste, cani, gatti, cavalli, passanti, delfini, pipistrelli di notte.
+  Cielo: sole che attraversa la giornata, tramonto rosso e viola, luna sottile e stelle di notte con Orione, l'Orsa e le Pleiadi; l'Olimpo innevato appare in lontananza verso il varco.
+  Nota: i temi dolorosi (schiavitù, iloti, guerra, la morte di Leonida e dei suoi uomini, la condanna di Socrate) sono trattati con tono sobrio e rispettoso; miti e questioni discusse restano con "si dice" / "secondo la tradizione", come nella scheda.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._gr, insieme a colonne, templi, trireme, ulivi, opliti e altri disegni riusabili) e riusa da Fenici (PR._fe) persone, animali e navi, da Mesopotamia (PR._ms) il bue, dall'Egitto (PR._eg) braciere e vaso, da Roma solo ln e gatto; non modifica motore né altri mondi.
+  Nota nome: il titolo sta nella pastiglia dell'intestazione ("Greci" compare grande all'ingresso, il resto come sottotitolo). Se preferisci, puoi abbreviarlo in "Greci · Dall'Attica a Sunio" nella riga addWorld(...) di mondi/greci.js.
