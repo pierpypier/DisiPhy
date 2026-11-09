@@ -196,3 +196,22 @@ MONDO: Greci · Dagli uliveti dell'Attica alle stelle di Capo Sunio   (id: greci
   Nota: i temi dolorosi (schiavitù, iloti, guerra, la morte di Leonida e dei suoi uomini, la condanna di Socrate) sono trattati con tono sobrio e rispettoso; miti e questioni discusse restano con "si dice" / "secondo la tradizione", come nella scheda.
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._gr, insieme a colonne, templi, trireme, ulivi, opliti e altri disegni riusabili) e riusa da Fenici (PR._fe) persone, animali e navi, da Mesopotamia (PR._ms) il bue, dall'Egitto (PR._eg) braciere e vaso, da Roma solo ln e gatto; non modifica motore né altri mondi.
   Nota nome: il titolo sta nella pastiglia dell'intestazione ("Greci" compare grande all'ingresso, il resto come sottotitolo). Se preferisci, puoi abbreviarlo in "Greci · Dall'Attica a Sunio" nella riga addWorld(...) di mondi/greci.js.
+
+MONDO: Roma antica · Dai sette colli alle luci dell'impero   (id: anticaroma)
+  File: mondi/anticaroma.js   — oggetti in nucleo/elementi.js (blocco "elementi per Roma antica", nomi che iniziano per "ra")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/anticaroma.js"></script>
+  Percorso (larghezza 26200): 8 zone, da sinistra a destra, un'intera giornata (e quasi mille anni di storia, dalle origini a Caracalla: il tempo si piega):
+     1 Il Tevere e il porto fluviale: isola Tiberina, la lupa e i sette colli, Cloaca Maxima, anfore e Monte Testaccio (alba) · 2 Foro Romano: Curia, Rostri, tempio di Vesta (mattina, Repubblica)
+     3 Palatino: casa di Augusto e di Livia, cantiere di marmo, Ara Pacis e mausoleo (tarda mattina) · 4 Fori Imperiali: Foro di Traiano, Basilica Ulpia e biblioteche, Colonna Traiana, Mercati di Traiano (mezzogiorno)
+     5 Colosseo: anfiteatro, telone, arena e sotterranei, ludus, giorno di giochi (primo pomeriggio) · 6 Circo Massimo: la pista, i dodici cancelli, la spina con l'obelisco, le quattro fazioni (pomeriggio)
+     7 Terme di Caracalla: edificio di mattoni, percorso del bagno, sotterranei dei forni, giardini e statue, taverna (tardo pomeriggio) · 8 Insulae, ronda dei vigili, Pantheon (portico e interno con la cupola), varco nel raggio di luna dell'oculo (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Tito (barcaiolo), Cicerone, Augusto, Apollodoro di Damasco,
+     Cresto (gladiatore), Diocle (auriga), Prisca (taverniera davanti alle terme), Sesto (vigile del fuoco)
+  Testi: da romani.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 35 tappe da "Testo:" (l'ultima è "Sotto l'oculo, Roma continua.").
+  Vita: gabbiani sul fiume, rondini, rapaci sopra i Fori, buoi, asini con le ceste, cani, gatti, pecore, cavalli da corsa, passanti in toga e in tunica, pipistrelli di notte.
+  Cielo: sole che attraversa la giornata, nebbiolina rosa dell'alba, polvere dorata al Colosseo, tramonto arancione e rosato sulle Terme, luna e stelle di notte; dentro il Pantheon la cupola a cassettoni e il raggio di luna sull'oculo (il varco).
+  Nota: i temi dolorosi (schiavitù, giochi dell'arena, esecuzioni, guerre civili, incendi) sono trattati con tono sobrio e rispettoso; tradizioni e questioni discusse restano con "si dice" / "secondo la tradizione", come nella scheda.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._ra, insieme a persone in tunica e in toga, folla, colonne corinzie, fronte di tempio e altri disegni riusabili) e riusa dai Greci (PR._gr) ulivi, cipressi, pini, anfore, statue, torce e animali, dai Fenici (PR._fe) la base delle persone; non modifica motore né altri mondi.
+  Nota nome: il titolo è quello della scheda; nell'intestazione del motore sporge un po' dalla pastiglia ("Roma antica" compare grande all'ingresso, il resto come sottotitolo). Se preferisci, puoi abbreviarlo in "Roma antica · Dai colli alle luci" nella riga addWorld(...) di mondi/anticaroma.js.
+  Nota file: il nome "anticaroma" evita ogni confronto con mondi/roma.js (Roma moderna, "Dal Colosseo a San Pietro").
