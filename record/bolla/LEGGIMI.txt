@@ -220,3 +220,24 @@ MONDO: Venezia 2 · Dalla Ferrovia alla Giudecca   (id: venezia2)
      Il canale sta "dietro" chi cammina (fascia d'acqua sopra la riva, con i riflessi dei palazzi); non modifica motore né altri mondi: elementi.js è identico a prima, con in più il solo blocco "v2" in fondo.
   Nota nome: il mondo si chiama "Venezia 2" per distinguerlo da quello già esistente; gli id degli NPC iniziano per "v2_".
   Nota varco: il portale è quello del motore (in fondo al mondo, a 22270); l'oggetto v2varco gli fa da cornice (sentiero di luce dorata sull'acqua fra le briccole).
+
+MONDO: Mosca · Dalle Colline dei Passeri alle Tre Stazioni   (id: mosca)
+  File: mondi/mosca.js   — oggetti in nucleo/elementi.js (blocco "elementi per Mosca", nomi che iniziano per "mo")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/mosca.js"></script>
+  Percorso (larghezza 26000): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Colline dei Passeri: terrazza panoramica, ponte della metropolitana, Università Lomonosov, convento di Novodevičij (alba) · 2 Arbat: via pedonale, casa di Puškin e statua degli sposi, muro di Viktor Coj, Teatro Vachtangov e Turandot (mattina)
+     3 Cattedrale di Cristo Salvatore, Museo Puškin, Ponte Lužkov con gli alberi dei lucchetti, Ottobre Rosso (tarda mattina) · 4 Piazza Rossa, San Basilio, Torre Spasskaja, GUM, Cannone e Campana dello Zar (mezzogiorno)
+     5 Metropolitana: ingresso e scale mobili, Ploščad' Revoljucii, Majakovskaja, Novoslobodskaja (primo pomeriggio, sottoterra) · 6 Zamoskvorečje, Galleria Tret'jakov, parco Muzeon, monumento a Pietro il Grande (pomeriggio dorato)
+     7 Parco Zarjad'e, Ponte Fluttuante, mura di Kitaj-gorod, via Varvarka (tramonto) · 8 Teatro Bolšoj, Tverskaja, Piazza Puškin, Stagni del Patriarca (sera)
+     9 Piazza delle Tre Stazioni, stazione Jaroslavskij, Komsomol'skaja, binari della Transiberiana (notte, varco in fondo al binario)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Katja (studentessa di fisica), Aleksandr Puškin, Valentina (gelataia del GUM), Sergej (macchinista della metropolitana),
+     Olga (restauratrice della Tret'jakov), Artëm (fattorino in bicicletta), Irina (maschera del Bolšoj), Svetlana (provodnica della Transiberiana)
+  Testi: da mosca.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 38 tappe da "Testo:" (compreso il varco finale) e il testo di introduzione.
+  Vita: cornacchie grigie, piccioni sulle piazze, passeri sulle Colline, gabbiani sulla Moscova, anatre allo stagno di Novodevičij, corridori e passanti con il cane, scoiattolo al Muzeon, treno nel tubo di vetro del ponte della metropolitana,
+     treno che entra in stazione nella zona 5, battello sotto il Ponte Fluttuante, auto con i fari sulla Tverskaja, orologi della Spasskaja e della Jaroslavskij con le lancette in movimento.
+  Nota: i temi dolorosi (demolizione della cattedrale nel 1931, morte di Puškin, epoca sovietica) sono trattati con tono sobrio e rispettoso; le leggende sono presentate con "si dice"; nessun verso di Puškin o di canzoni; niente bandiere né simboli politici.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._mo, insieme agli attrezzi comuni: cupole a cipolla, merli, torri, mura, casa, alberi d'autunno) e riusa da Madrid solo lit, bal, arco, mat, equ, pers e gente (PR._md) e da Roma ln (PR._rm); non modifica motore né altri mondi.
+     Nella zona 5 si è sottoterra: il salone a volta è disegnato dal cielo e dai livelli del mondo, la luce resta quella del giorno (calda e artificiale).
+  Nota nome: il titolo è quello completo della scheda, come per Madrid e Nairobi; nell'intestazione del motore sta appena nella pastiglia. Se preferisci, puoi abbreviarlo in "Mosca · Dai Passeri alle Tre Stazioni" nella riga addWorld(...) di mondi/mosca.js.
+  Nota varco: il portale è quello del motore (in fondo al mondo, a 25870); l'oggetto movarco gli fa da cornice (il treno in sosta e la luce in fondo al binario). Gli id degli NPC iniziano per "mo_".
