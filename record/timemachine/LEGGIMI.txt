@@ -215,3 +215,22 @@ MONDO: Roma antica · Dai sette colli alle luci dell'impero   (id: anticaroma)
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._ra, insieme a persone in tunica e in toga, folla, colonne corinzie, fronte di tempio e altri disegni riusabili) e riusa dai Greci (PR._gr) ulivi, cipressi, pini, anfore, statue, torce e animali, dai Fenici (PR._fe) la base delle persone; non modifica motore né altri mondi.
   Nota nome: il titolo è quello della scheda; nell'intestazione del motore sporge un po' dalla pastiglia ("Roma antica" compare grande all'ingresso, il resto come sottotitolo). Se preferisci, puoi abbreviarlo in "Roma antica · Dai colli alle luci" nella riga addWorld(...) di mondi/anticaroma.js.
   Nota file: il nome "anticaroma" evita ogni confronto con mondi/roma.js (Roma moderna, "Dal Colosseo a San Pietro").
+
+MONDO: Medioevo · Dai campi del feudo alle stelle di Venezia   (id: medioevo)
+  File: mondi/medioevo.js   — oggetti in nucleo/elementi.js (blocco "elementi per il Medioevo", nomi che iniziano per "mv")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/medioevo.js"></script>
+  Percorso (larghezza 24000): 8 zone, da sinistra a destra, un'intera giornata (e più di due secoli e mezzo di storia, dal 1077 di Canossa al 1348 della peste: il tempo si piega):
+     1 Campi e villaggio del feudo: nebbia, aratro pesante e tre campi, mulino, forno e decima, casa, pieve e campana (alba) · 2 Castello di Canossa: la rupe, la sala della contessa, il cortile del cavaliere, la porta del perdono (primo mattino)
+     3 Abbazia: chiesa e campanile, chiostro e le ore, scriptorium, orto dei semplici e infermeria (mattina) · 4 Siena: case-torri e campana del Comune, cantiere del Duomo con la gru a ruota, botteghe delle Arti, piazza e mercato (tarda mattina)
+     5 Assisi e monte Subasio: città di pietra rosata, San Damiano, Porziuncola, Greccio e il presepe (mezzogiorno) · 6 Firenze: Battistero e cantiere di Santa Reparata, Palazzo dei Priori, banco dei fiorini, Arno e tintori (primo pomeriggio)
+     7 Via Francigena: ponte con il pedaggio, locanda e ospizio, romei, palmieri e pellegrini, villaggio dopo la grande moria (pomeriggio) · 8 Venezia: la città sull'acqua, San Marco e il Palazzo del doge, Arsenale e galee, spezie, seta e vetro, le stelle dei naviganti, molo con le due colonne,
+        varco finale: la rotta di Marco Polo verso l'Oriente (tramonto e notte, varco sotto le stelle)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Gualtiero (contadino), Matilde di Canossa, Frate Anselmo (monaco copista), Mastro Lapo (capomastro del Duomo),
+     Francesco d'Assisi, Dante Alighieri, Berta (ostessa della Francigena), Marco Polo
+  Testi: da medioevo.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 34 tappe da "Testo:".
+  Vita: corvi nei campi, rondini, falchi, gabbiani e cormorani sulla laguna, pipistrelli di notte, buoi, cani, gatti, galline, maiali, pecore, asini, cavalli, passanti (contadini, monaci, mercanti, pellegrini), un'ombra di lupo ai margini del bosco.
+  Cielo: sole che attraversa la giornata, nebbia rosata dell'alba, neve sulle cime dell'Appennino, luce dorata a Firenze, tramonto rosso e viola sulla laguna, luna sottile e stelle di notte che girano attorno alla Stella Polare; in fondo la via luminosa di stelle verso l'Oriente.
+  Nota: i temi dolorosi (servitù, peste, scomuniche, guerre, Quarta Crociata) sono trattati con tono sobrio e rispettoso, senza immagini macabre; tradizioni e questioni discusse (tre giorni di Enrico IV, ora et labora, occhiali, lupo di Gubbio, Beatrice, vittime della peste, reliquie di San Marco, il Milione) restano con "si dice" / "secondo la tradizione", come nella scheda.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._mv, insieme a persone, edifici e disegni riusabili) e riusa dai Greci (PR._gr) ulivi, cipressi, pini, buoi, capre, galline, anfore, e dai Fenici (PR._fe) persone, animali e uccelli; non modifica motore né altri mondi.
+  Nota nome: il titolo è quello completo della scheda; nell'intestazione del motore sporge un po' dalla pastiglia. Se preferisci, puoi abbreviarlo in "Medioevo · Dai campi a Venezia" nella riga addWorld(...) di mondi/medioevo.js.
