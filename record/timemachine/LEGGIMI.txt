@@ -234,3 +234,21 @@ MONDO: Medioevo · Dai campi del feudo alle stelle di Venezia   (id: medioevo)
   Nota: i temi dolorosi (servitù, peste, scomuniche, guerre, Quarta Crociata) sono trattati con tono sobrio e rispettoso, senza immagini macabre; tradizioni e questioni discusse (tre giorni di Enrico IV, ora et labora, occhiali, lupo di Gubbio, Beatrice, vittime della peste, reliquie di San Marco, il Milione) restano con "si dice" / "secondo la tradizione", come nella scheda.
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._mv, insieme a persone, edifici e disegni riusabili) e riusa dai Greci (PR._gr) ulivi, cipressi, pini, buoi, capre, galline, anfore, e dai Fenici (PR._fe) persone, animali e uccelli; non modifica motore né altri mondi.
   Nota nome: il titolo è quello completo della scheda; nell'intestazione del motore sporge un po' dalla pastiglia. Se preferisci, puoi abbreviarlo in "Medioevo · Dai campi a Venezia" nella riga addWorld(...) di mondi/medioevo.js.
+
+MONDO: Rinascimento · Dalle botteghe di Firenze alle corti d'Italia   (id: rinascimento)
+  File: mondi/rinascimento.js   — oggetti in nucleo/elementi.js (blocco "elementi per il Rinascimento", nomi che iniziano per "rn")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/rinascimento.js"></script>
+  Percorso (larghezza 25700): 8 zone, da sinistra a destra, un'intera giornata (e più di un secolo e mezzo di storia, dalla Firenze di Brunelleschi alla Mantova di Isabella: il tempo si piega):
+     1 Arno: Arno e barche, ponte con le botteghe, tintori, Arti della lana e della seta (alba) · 2 Duomo: Santa Maria del Fiore, la cupola senza armature, argano, orologio, Battistero (mattino)
+     3 Mercato: fiorino, banco del cambiavalute, libri, sete, i Medici (mattina) · 4 Botteghe: bottega, colori, David, Palazzo della Signoria, ritratto (mezzogiorno)
+     5 Roma: Roma dei papi, cantiere di San Pietro, Cappella Sistina, la volta, le Stanze (primo pomeriggio) · 6 Venezia: laguna, Arsenale, Rialto, Murano, lazzaretto (pomeriggio)
+     7 Stamperia: calle, torchio, corsivo, delfino e àncora, privilegio di stampa (tramonto) · 8 Mantova: palazzo, banchetto, musica, studiolo di Isabella, camera dipinta, varco: l'oculo luminoso sotto il cielo dipinto (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Bartolo (tintore), Filippo Brunelleschi, Lapo (cambiavalute), Leonardo da Vinci,
+     Michelangelo, Zuan (arsenalotto), Aldo Manuzio, Isabella d'Este
+  Testi: da rinascimento.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 40 tappe da "Testo:" (l'ultima è "Sotto il cielo dipinto, il Rinascimento continua.").
+  Vita: rondini, falchi, gabbiani sulla laguna, pipistrelli di notte, cani, gatti, asini, cavalli, passanti in abiti del Quattrocento.
+  Cielo: sole che attraversa la giornata, nebbia rosata dell'alba, velo dorato su Roma, tramonto arancione e viola sulla laguna, luna e stelle di notte; all'orizzonte colline, cupola e torri di Firenze, Colosseo e gru di San Pietro, campanili e vele, lago e palazzo di Mantova con le finestre accese.
+  Nota: i temi delicati (peste, guerre d'Italia, potere dei papi e dei signori) sono trattati con tono sobrio e rispettoso; tradizioni e questioni discusse restano come nella scheda.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._rn, insieme a ponti, banchi, botteghe, gondole, candelabri e altri disegni riusabili) e riusa dal Medioevo (PR._mv) persone e merlature, dai Fenici (PR._fe) animali e navi, dai Greci (PR._gr) ulivi, cipressi e pini; non modifica motore né altri mondi.
+  Nota nome: il titolo è quello della scheda; nell'intestazione del motore sporge un po' dalla pastiglia ("Rinascimento" compare grande all'ingresso, il resto come sottotitolo). Se preferisci, puoi abbreviarlo in "Rinascimento · Dalle botteghe alle corti" nella riga addWorld(...) di mondi/rinascimento.js.
