@@ -241,3 +241,24 @@ MONDO: Mosca · Dalle Colline dei Passeri alle Tre Stazioni   (id: mosca)
      Nella zona 5 si è sottoterra: il salone a volta è disegnato dal cielo e dai livelli del mondo, la luce resta quella del giorno (calda e artificiale).
   Nota nome: il titolo è quello completo della scheda, come per Madrid e Nairobi; nell'intestazione del motore sta appena nella pastiglia. Se preferisci, puoi abbreviarlo in "Mosca · Dai Passeri alle Tre Stazioni" nella riga addWorld(...) di mondi/mosca.js.
   Nota varco: il portale è quello del motore (in fondo al mondo, a 25870); l'oggetto movarco gli fa da cornice (il treno in sosta e la luce in fondo al binario). Gli id degli NPC iniziano per "mo_".
+
+MONDO: Nuova Delhi · Dal Gurdwara Bangla Sahib all’India Gate   (id: nuovadelhi)
+  File: mondi/nuovadelhi.js   — oggetti in nucleo/elementi.js (blocco "elementi per Nuova Delhi", nomi che iniziano per "nd")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/nuovadelhi.js"></script>
+  Percorso (larghezza 21400): 8 zone, da sinistra a destra, un'intera giornata:
+     1 Gurdwara Bangla Sahib: portale e pennone, sarovar con il tempio dorato, langar, sala dei canti (alba) · 2 Connaught Place: portici bianchi, Central Park e metro, Palika Bazaar, tempio di Hanuman (mattina)
+     3 Jantar Mantar: ingresso, Samrat Yantra, Jai Prakash e Ram Yantra, la strada dei sit-in, baoli di Agrasen (tarda mattina) · 4 Raisina Hill: i due Segretariati, Rashtrapati Bhavan, Colonna di Jaipur, Kartavya Path (mezzogiorno)
+     5 Khan Market: il mercato, la libreria, i caffè, la frutta (primo pomeriggio) · 6 Tomba di Humayun: portale, tomba di Isa Khan, mausoleo, charbagh, Nila Gumbad e tomba del Barbiere (tardo pomeriggio)
+     7 Lodhi Gardens: cancello, Bara Gumbad e Shisha Gumbad, Sikandar Lodi, ponte Athpula (tramonto) · 8 India Gate: l'arco, il baldacchino e il memoriale, il viale con le famiglie, il varco (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Harjinder (volontario del langar), Rajesh (autista di autorisciò), Anjali (guida astronoma), Sir Edwin Lutyens (architetto),
+     Vikram (libraio di Khan Market), Zoya (restauratrice), Sunita (signora delle camminate), Mohan (venditore di kulfi)
+  Testi: da newdelhi.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 33 tappe da "Testo:" (compreso il varco finale) e il testo di introduzione.
+  Vita: parrocchetti verdi, nibbi nel cielo di giorno, piccioni al Gurdwara e a CP, passeri, pipistrelli della frutta al crepuscolo, scimmie sui tetti e sui muretti, pavoni ai Lodhi, cani e gatti, vapore dei pentoloni del langar,
+     note dei canti nella sala, fontanelle e acqua che scorre nel charbagh, la stella di vetro della Colonna di Jaipur che pulsa, la fiamma del memoriale, luci colorate dei giocattoli e brace del carretto di pannocchie, sole che scende, luna e stelle.
+  Nota: i temi delicati (le proteste al Jantar Mantar, la storia delle dinastie, la Partizione dietro Khan Market) sono trattati con tono sobrio e rispettoso; gli striscioni dei sit-in hanno solo segni scritti a mano, senza parole né slogan.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._nd, insieme agli attrezzi comuni: cupole, chhatri, merli, colonnati, alberi di neem, peepal, gulmohar e ashoka, persone con turbante e dupatta) e riusa da Madrid solo pers e gente (PR._md)
+     e da Roma solo ln e gatto (PR._rm); non modifica motore né altri mondi: elementi.js è identico a prima, con in più il solo blocco "nd" in fondo.
+  Nota nome: il titolo è quello completo della scheda, come per Madrid, Nairobi e Mosca; nell'intestazione del motore sporge un po' dalla pastiglia. Se preferisci, puoi abbreviarlo in "Nuova Delhi · Dal Gurdwara all’India Gate" nella riga addWorld (name).
+  Nota varco: il portale è quello del motore (in fondo al mondo, a 21270); l'oggetto ndvarco gli fa da cornice (l'arco visto da sotto, con la luce dorata che si allunga lungo il viale). Gli id degli NPC iniziano per "nd_".
+  Nota bandiere: a Central Park c'è il pennone con la bandiera e al Gurdwara lo stendardo color zafferano, come richiesto dalla scheda; non compaiono altre bandiere o simboli politici.
