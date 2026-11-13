@@ -283,3 +283,27 @@ MONDO: Santorini · Da Kamari al tramonto di Oia   (id: santorini)
   Nota nome: il titolo della scheda è "Santorini · Dalla spiaggia nera di Kamari al tramonto di Oia"; l'ho abbreviato in "Santorini · Da Kamari al tramonto di Oia" perché stia nella pastiglia dell'intestazione. Se preferisci quello completo, cambialo nella riga addWorld (name) di mondi/santorini.js: sporgerà un po' dalla pastiglia.
   Nota varco: il portale è quello del motore (in fondo al mondo, a 20870); l'oggetto snvarco gli fa da cornice (la scala che scende al mare, le lampadine e la strada di luce dorata sull'acqua). Gli id degli NPC iniziano per "sn_".
   Nota scritte: i cartelli (KAMARI, PYRGOS, AKROTIRI, FIRA, IMEROVIGLI, OIA, ecc.) sono in greco e in inglese, come nella scheda; nessun marchio reale né nome di locale.
+
+MONDO: Vienna · Dal Naschmarkt alla notte di Grinzing   (id: vienna)
+  File: mondi/vienna.js   — oggetti in nucleo/elementi.js (blocco "elementi per Vienna", nomi che iniziano per "wi")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/vienna.js"></script>
+  Percorso (larghezza 28701): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Naschmarkt: banchi, olive e spezie, mercatino delle pulci, Majolikahaus e Medaillonhaus (alba) · 2 Karlsplatz: Karlskirche, Secessione, padiglioni di Otto Wagner, Musikverein (mattina)
+     3 Stephansplatz e Graben: Duomo di Santo Stefano, Steffl e Pummerin, il tetto di tegole, Pestsäule, Fiaker (tarda mattina) · 4 Hofburg e Heldenplatz: Michaelertrakt, Scuola Spagnola, lipizzani, Museo Sisi, Cappella Imperiale (mezzogiorno)
+     5 Il Ring: tram, Staatsoper, Parlamento e Municipio, caffè viennese, Sachertorte e strudel, Würstelstand (primo pomeriggio) · 6 Belvedere: Hochstrahlbrunnen, Belvedere Superiore, giardino barocco, Salone di Marmo, Hundertwasserhaus (pomeriggio)
+     7 Prater: Hauptallee, Wurstelprater, Riesenrad, Schweizerhaus e lángos (pomeriggio inoltrato) · 8 Schönbrunn: castello, Sala degli Specchi, giardini e Gloriette, Tiergarten, Palmenhaus (tardo pomeriggio)
+     9 Grinzing: stradine e tram 38, Heuriger, vigne, Kahlenberg (tramonto, sera e notte; varco in fondo: un grande arco di rami di pino, il "Buschen", con lanterne e lucine)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Frau Gerti (venditrice di verdura e sottaceti), Herr Franz (il Fiaker), Katharina (cavallerizza dei lipizzani),
+     Herr Karl (cameriere del caffè), Sophie (guida del Belvedere), Pepi (gestore di una giostra), Maria Teresa d'Asburgo, Annemarie (viticoltrice). Nessun personaggio fisso a Karlsplatz, come da scheda.
+  Testi: da vienna.txt (definitivi, usati senza riscriverli; solo l'apostrofo e le virgolette sono resi tipografici); 43 tappe da "Testo:" (compreso il varco finale) e il testo di introduzione.
+  Vita: piccioni e passeri nelle piazze, cornacchie nere nel cielo, tram rossi e bianchi che passano a Karlsplatz e sul Ring, un Fiaker che attraversa il centro, corridori sulla Hauptallee,
+     cavallo bianco impennato nella Scuola Spagnola, getti del Hochstrahlbrunnen, ruota del Prater e giostra a catene che girano, trenino Liliput, vapore del Würstelstand e dei lángos, brace e fumo delle castagne,
+     lampadine dei banchi e del Prater, lucine e lanterne dell'Heuriger, musica di fisarmonica e violino, sole che scende dietro il Wienerwald, luna, stelle e mare di luci della città dal Kahlenberg.
+  Nota: i temi dolorosi (l'assedio del 1683, le epidemie di peste, i bombardamenti del 1945, l'occupazione del dopoguerra) sono trattati con tono sobrio e rispettoso.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._wi, insieme agli attrezzi comuni: cupole, statuine, ippocastani e tigli d'autunno, tram, cavalli, casse di verdura, tendoni, lampadine) e da Madrid riusa solo
+     gli attrezzi comuni (PR._md: cas, fin, bal, arco, col, equ, plat, pino, cedro, cipr, pers...) e da Roma ln e gatto (PR._rm); non modifica motore né altri mondi: elementi.js è identico a prima, con in più il solo blocco "wi" in fondo.
+  Nota oggetti larghi: il motore disegna un oggetto solo quando il suo punto x è vicino allo schermo; per i monumenti più larghi di circa 520 px (Duomo, Belvedere, Gloriette, Kahlenberg, vigne, ecc.) nell'elenco props ci sono
+     due voci "wiW" (centro ±100) che ne disegnano una sola, così non spariscono di colpo ai bordi. Se sposti uno di questi oggetti, sposta entrambe le voci dello stesso nome.
+  Nota varco: il portale è quello del motore (in fondo al mondo, a 28571); l'oggetto wivarco gli fa da cornice (arco di pino con lanterne). Gli id degli NPC iniziano per "wi_" e le battute sono in TOPX.
+  Nota bandiere: sui pennoni dell'Hofburg e del Ring compaiono le bandiere rosso-bianco-rosso, come da scheda; nessun altro simbolo politico. I cartelli (NASCHMARKT, KARLSPLATZ, ecc.) sono in tedesco, con i nomi dei luoghi.
