@@ -307,3 +307,27 @@ MONDO: Vienna · Dal Naschmarkt alla notte di Grinzing   (id: vienna)
      due voci "wiW" (centro ±100) che ne disegnano una sola, così non spariscono di colpo ai bordi. Se sposti uno di questi oggetti, sposta entrambe le voci dello stesso nome.
   Nota varco: il portale è quello del motore (in fondo al mondo, a 28571); l'oggetto wivarco gli fa da cornice (arco di pino con lanterne). Gli id degli NPC iniziano per "wi_" e le battute sono in TOPX.
   Nota bandiere: sui pennoni dell'Hofburg e del Ring compaiono le bandiere rosso-bianco-rosso, come da scheda; nessun altro simbolo politico. I cartelli (NASCHMARKT, KARLSPLATZ, ecc.) sono in tedesco, con i nomi dei luoghi.
+
+MONDO: Barcellona · Dalla Boqueria alla Font Màgica   (id: barcellona)
+  File: mondi/barcellona.js   — oggetti in nucleo/elementi.js (blocco "elementi per Barcellona", nomi che iniziano per "bc")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/barcellona.js"></script>
+  Percorso (larghezza 27500): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Boqueria e Rambla: Font de Canaletes, mosaico di Miró e Liceu, mercato della Boqueria, banco del pesce, Plaça Reial con i lampioni di Gaudí (alba) · 2 Barri Gòtic: Barcino e le mura romane, cattedrale e le oche del chiostro, Plaça Sant Jaume, ponte del Bisbe, Plaça Sant Felip Neri (mattina)
+     3 Born e Ciutadella: Santa Maria del Mar, Born Centre de Cultura i Memòria, Carrer Montcada e Museu Picasso, Arc de Triomf, cascata e laghetto del parco (tarda mattina) · 4 Barceloneta: case di pescatori, bar delle bombe, baracchino sulla spiaggia, "els cubs", Port Vell e funivia (mezzogiorno)
+     5 Eixample e Passeig de Gràcia: incrocio smussato di Cerdà, piastrelle esagonali (panot) e panchina-lampione, Illa de la Discòrdia, La Pedrera (primo pomeriggio) · 6 Sagrada Família: facciata della Natività, della Passione, la foresta di colonne dentro, torre di Gesù Cristo (pomeriggio)
+     7 Gràcia e Park Güell: Plaça del Sol e Plaça de la Vila, torre umana (castell), Park Güell con la salamandra, Casa-Museu Gaudí (tardo pomeriggio) · 8 Montjuïc: Palau Nacional, belvedere, Poble Espanyol, Anella Olímpica, castello (tramonto)
+     9 Plaça d'Espanya e Font Màgica: Torri Veneziane e arena, Avinguda de la Reina Maria Cristina, Font Màgica con i getti colorati (sera e notte; varco in fondo: l'ultimo getto della fontana, che sale illuminato davanti al Palau Nacional)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Pep (pescivendolo della Boqueria), Núria (guida del Barri Gòtic), Laia (fornaia del Born), Manel (vecchio pescatore della Barceloneta),
+     Carme (architetta, sul Passeig de Gràcia), Antoni Gaudí (davanti alla facciata della Natività), Aina (casteller a Gràcia), Amina (restauratrice del museo, al belvedere di Montjuïc).
+  Testi: da barcellona.txt (definitivi, usati senza riscriverli; solo l'apostrofo e le virgolette sono resi tipografici); 38 tappe da "Testo:" (compreso il varco finale) e il testo di introduzione.
+  Vita: piccioni e rondoni nel cielo, gabbiani sul mare e a Montjuïc, pappagalli verdi che volano e stanno sulle palme, tredici oche nel chiostro, anatre e barche a remi alla Ciutadella, cabina rossa della funivia sul cavo (Port Vell e castello),
+     getti e cannelle delle fontane, bandierine e decorazioni di carta di Gràcia, castell che oscilla, gelati e biciclette, lancetta dell'orologio di Gràcia, sole che scende dietro Montjuïc, luna e stelle, mare di luci della città,
+     lampioni accesi, finestre illuminate e i getti colorati della Font Màgica che cambiano tinta a tempo.
+  Nota: i temi dolorosi (la caduta della città nel 1714, il bombardamento del 1938, l'incidente di Gaudí) sono trattati con tono sobrio e rispettoso; le leggende sono presentate con "si dice".
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._bc, insieme agli attrezzi comuni: platani verdi, palme, lampioni, tavolini, guglie, rosoni, gradini, bandierine, cupole, mosaici, gru) e da Madrid riusa solo
+     gli attrezzi comuni (PR._md: cas, fin, bal, arco, mat, cupo, pers, gente, pino, cipr...) e da Roma ln e gatto (PR._rm); non modifica motore né altri mondi: nucleo/elementi.js è identico a prima, con in più il solo blocco "bc" in fondo.
+  Nota oggetti larghi: per i monumenti più larghi di circa 520 px (Plaça Sant Jaume, Palau Nacional, Plaça d'Espanya, Font Màgica) nell'elenco props ci sono due voci "bcW" (centro ±100) che ne disegnano una sola, così non spariscono
+     di colpo ai bordi. Se sposti uno di questi oggetti, sposta entrambe le voci dello stesso nome.
+  Nota varco: il portale è quello del motore (in fondo al mondo, a 27370); l'oggetto bcvarco gli fa da cornice (getto altissimo di blu e oro davanti al Palau Nacional illuminato). Gli id degli NPC iniziano per "bc_" e le battute sono in TOPX.
+  Nota scritte: i cartelli (LA RAMBLA, BARRI GÒTIC, LA BARCELONETA, PASSEIG DE GRÀCIA, SAGRADA FAMÍLIA, GRÀCIA, MONTJUÏC, PLAÇA D'ESPANYA, ecc.) sono in catalano, come nella scheda; nessun marchio reale né nome di locale oltre ai luoghi.
