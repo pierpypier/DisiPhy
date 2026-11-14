@@ -353,3 +353,27 @@ MONDO: Los Angeles · Dall’alba sul molo a Union Station   (id: losangeles)
   Nota nome: il titolo della scheda è abbreviato (“Dall’alba sul molo a Union Station”) per stare nell'intestazione del motore; gli id degli NPC iniziano per "la_" e le battute sono in TOPX. Il nome di Lupe è "Lupe, la venditrice di Olvera" per stare nel pulsante.
   Nota varco: il portale è quello del motore (in fondo al mondo, a 24670); l'oggetto lavarco gli fa da cornice (treno in sosta e luce dorata in fondo al binario).
   Nota scritte: i cartelli (SANTA MONICA, OCEAN FRONT WALK, MUSEUM ROW, WALK OF FAME, BROADWAY, EL PUEBLO, LITTLE TOKYO, GRIFFITH PARK, GRAND AVENUE, UNION STATION, ecc.) sono in inglese; nessun ideogramma.
+
+MONDO: Copenaghen · Dalla Sirenetta alla Centrale   (id: copenaghen)
+  File: mondi/copenaghen.js   — oggetti in nucleo/elementi.js (blocco "elementi per Copenaghen", nomi che iniziano per "cp")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/copenaghen.js"></script>
+  Percorso (larghezza 23600): 9 zone, da sinistra a destra, un'intera giornata d'autunno:
+     1 Langelinie e Kastellet: la Sirenetta, la fontana di Gefion, la fortezza a stella (alba) · 2 Amalienborg, cambio della guardia, Chiesa di Marmo, Opera di Holmen (mattina)
+     3 Nyhavn, le case di Andersen, il Ponte dei Baci (mezzogiorno) · 4 Strøget e Fontana delle Cicogne, Torre Rotonda, Torvehallerne, Rosenborg (primo pomeriggio)
+     5 Slotsholmen: Christiansborg, il suo sottosuolo, la Børsen in cantiere (pomeriggio) · 6 Christianshavn: canali, Chiesa del Salvatore, Christiania, Ponte Circolare (pomeriggio dorato)
+     7 Islands Brygge: bagno del porto, Serpente della Bicicletta, lungomare (tramonto) · 8 Municipio, Tivoli, Glyptotek (sera)
+     9 Kødbyen, Stazione Centrale, binari e treni (notte, varco in fondo al binario)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Hans Christian Andersen, Freja (nuotatrice d'inverno), Jonas (soldato della Guardia Reale),
+     Birgitte (pasticciera di Torvehallerne), Henrik (carpentiere della Børsen), Lars (papà con la bici cargo), Sofie (studentessa che lavora a Tivoli), Karen (capotreno)
+  Testi: da copenaghen.txt (definitivi, usati senza riscriverli; solo l'apostrofo e le virgolette sono resi tipografici); 31 tappe da "Testo:" e il testo di introduzione.
+  Vita: gabbiani sul porto, cornacchie grigie, piccioni nelle piazze, foglie d'autunno che cadono, ciclisti che passano, anatre nel fossato del Kastellet, mulino con le pale che girano, cigni sul canale, scoiattolo a Rosenborg,
+     tuffatore alla torre del bagno, ciclisti sul Ponte dei Baci e sul Serpente, montagna russa di Tivoli, getti delle fontane, orologi con le lancette in movimento, luci della città, luna e stelle.
+  Nota: i temi dolorosi (la morte di Andersen, l'incendio della Børsen, la prigionia di Leonora Christina) sono trattati con tono sobrio e rispettoso, come nella scheda; le leggende sono presentate con "si dice".
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._cp, insieme agli attrezzi comuni: faggi e tigli d'autunno, biciclette, lanterne, barche d'epoca, guglie e cupole di rame, orologi) e riusa solo pers (PR._md) e ln (PR._rm);
+     non modifica motore né altri mondi: nucleo/elementi.js è identico a prima, con in più il solo blocco "cp" in fondo.
+  Nota acqua: il porto e i canali sono disegnati nel terreno (fascia d'acqua "dietro" chi cammina, con il bordo di banchina); le zone con acqua sono nell'array WATER di mondi/copenaghen.js.
+  Nota oggetti larghi: per i monumenti più larghi di circa 520 px (Amalienborg, Nyhavn, Christiansborg, Børsen, Stazione Centrale) nell'elenco props ci sono due voci "cpW" (centro ±100) che ne disegnano una sola. Se sposti uno di questi oggetti, sposta entrambe le voci.
+  Nota nome: il titolo della scheda è abbreviato ("Dalla Sirenetta alla Centrale") per stare nell'intestazione del motore; gli id degli NPC iniziano per "cp_" e le battute sono in TOPX. I nomi nei pulsanti sono abbreviati ("Lars, il papà con la bici cargo", ecc.).
+  Nota varco: il portale è quello del motore (in fondo al mondo, a 23470); l'oggetto cpvarco gli fa da cornice (treno in sosta e luce dorata in fondo al binario).
+  Nota scritte: i cartelli (LANGELINIE, KASTELLET, AMALIENBORG, STRØGET, SLOTSHOLMEN, CHRISTIANSHAVN, ISLANDS BRYGGE, RÅDHUSPLADSEN, VESTERBROGADE, ecc.) sono in danese, con i nomi dei luoghi; la bandiera è il Dannebrog, come da scheda.
