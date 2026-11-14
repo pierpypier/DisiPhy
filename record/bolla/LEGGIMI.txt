@@ -331,3 +331,25 @@ MONDO: Barcellona · Dalla Boqueria alla Font Màgica   (id: barcellona)
      di colpo ai bordi. Se sposti uno di questi oggetti, sposta entrambe le voci dello stesso nome.
   Nota varco: il portale è quello del motore (in fondo al mondo, a 27370); l'oggetto bcvarco gli fa da cornice (getto altissimo di blu e oro davanti al Palau Nacional illuminato). Gli id degli NPC iniziano per "bc_" e le battute sono in TOPX.
   Nota scritte: i cartelli (LA RAMBLA, BARRI GÒTIC, LA BARCELONETA, PASSEIG DE GRÀCIA, SAGRADA FAMÍLIA, GRÀCIA, MONTJUÏC, PLAÇA D'ESPANYA, ecc.) sono in catalano, come nella scheda; nessun marchio reale né nome di locale oltre ai luoghi.
+
+MONDO: Los Angeles · Dall’alba sul molo a Union Station   (id: losangeles)
+  File: mondi/losangeles.js   — oggetti in nucleo/elementi.js (blocco "elementi per Los Angeles", nomi che iniziano per "la")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/losangeles.js"></script>
+  Percorso (larghezza 24800): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Santa Monica e Venice Beach: molo con ruota panoramica e carosello, cartello End of the Trail (Route 66), torretta dei bagnini, Ocean Front Walk, Muscle Beach, skatepark, canali (alba) · 2 Museum Row: La Brea Tar Pits e mammut, Museo Page, Urban Light, Petersen, Farmers Market (mattina)
+     3 Hollywood Boulevard: Walk of Fame, TCL Chinese Theatre, Dolby Theatre, Capitol Records (tarda mattina) · 4 Centro storico: Grand Central Market, Bradbury Building, Angels Flight, muro di Biddy Mason (mezzogiorno)
+     5 El Pueblo: La Plaza e La Placita, Avila Adobe, Olvera Street, Pico House e caserma dei pompieri (primo pomeriggio) · 6 Little Tokyo, Museo Giapponese-Americano e Go For Broke, Arts District, Sixth Street Viaduct (pomeriggio dorato)
+     7 Griffith Park: Osservatorio, telescopio Zeiss e pendolo, Segno di Hollywood, sentieri e animali (tramonto) · 8 Bunker Hill: Disney Hall, Cattedrale, The Broad, Music Center e Grand Park (sera)
+     9 Union Station: facciata e torre, sala d'attesa e Fred Harvey, binari dei treni a lunga percorrenza, varco in fondo al binario (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; Priya e Lupe ne hanno 11, come nel file di testo; l'ultima è sempre il saluto): Dani (bagnina), Priya (paleontologa),
+     Charlie Chaplin, Biddy Mason, Lupe (Olvera Street), Kenji (pasticciere di mochi), Ruben (guardaparco), Marcus (capotreno). Nessun personaggio fisso nella zona 8, come da scheda.
+  Testi: da losangeles.txt (definitivi, usati senza riscriverli; solo l'apostrofo e le virgolette sono resi tipografici); 38 tappe da "Testo:" (compreso il varco finale) e il testo di introduzione.
+  Vita: gabbiani e pellicani sul molo, piccioni, pappagalli verdi, cornacchie, falco sulle colline, coyote e cervo mulo a Griffith Park, anatre nei canali, skater nella conca, mammut che affondano fra le bolle d'asfalto,
+     ruota panoramica e funicolare in movimento, orologi del Farmers Market e di Union Station, pendolo di Foucault, getti di Grand Park, luci della città, lampioni di Urban Light che si accendono la sera, treni in sosta.
+  Nota: i temi delicati (schiavitù e libertà di Biddy Mason, Little Tokyo in guerra, terremoto del 1994, il puma P-22) sono trattati con tono sobrio e rispettoso; le leggende sono presentate con "si dice"; le persone in costume sulla Walk of Fame restano figure generiche.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._la, insieme a palme, alberi, lampioni, treno e altri attrezzi) e riusa solo pers (PR._md) e ln, gatto (PR._rm); non modifica motore né altri mondi: elementi.js è identico a prima, con in più il solo blocco "la" in fondo.
+  Nota oggetti larghi: per i monumenti più larghi di circa 520 px (Disney Hall e Union Station) nell'elenco props ci sono due voci "laW" (centro ±100) che ne disegnano una sola. Se sposti uno di questi oggetti, sposta entrambe le voci dello stesso nome.
+  Nota nome: il titolo della scheda è abbreviato (“Dall’alba sul molo a Union Station”) per stare nell'intestazione del motore; gli id degli NPC iniziano per "la_" e le battute sono in TOPX. Il nome di Lupe è "Lupe, la venditrice di Olvera" per stare nel pulsante.
+  Nota varco: il portale è quello del motore (in fondo al mondo, a 24670); l'oggetto lavarco gli fa da cornice (treno in sosta e luce dorata in fondo al binario).
+  Nota scritte: i cartelli (SANTA MONICA, OCEAN FRONT WALK, MUSEUM ROW, WALK OF FAME, BROADWAY, EL PUEBLO, LITTLE TOKYO, GRIFFITH PARK, GRAND AVENUE, UNION STATION, ecc.) sono in inglese; nessun ideogramma.
