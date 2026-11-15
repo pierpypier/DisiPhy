@@ -377,3 +377,30 @@ MONDO: Copenaghen · Dalla Sirenetta alla Centrale   (id: copenaghen)
   Nota nome: il titolo della scheda è abbreviato ("Dalla Sirenetta alla Centrale") per stare nell'intestazione del motore; gli id degli NPC iniziano per "cp_" e le battute sono in TOPX. I nomi nei pulsanti sono abbreviati ("Lars, il papà con la bici cargo", ecc.).
   Nota varco: il portale è quello del motore (in fondo al mondo, a 23470); l'oggetto cpvarco gli fa da cornice (treno in sosta e luce dorata in fondo al binario).
   Nota scritte: i cartelli (LANGELINIE, KASTELLET, AMALIENBORG, STRØGET, SLOTSHOLMEN, CHRISTIANSHAVN, ISLANDS BRYGGE, RÅDHUSPLADSEN, VESTERBROGADE, ecc.) sono in danese, con i nomi dei luoghi; la bandiera è il Dannebrog, come da scheda.
+
+MONDO: Tokyo · Da Tsukiji alla Tokyo Tower   (id: tokyo)
+  File: mondi/tokyo.js   — oggetti in nucleo/elementi.js (blocco "elementi per Tokyo", nomi che iniziano per "tk")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/tokyo.js"></script>
+  Percorso (larghezza 26900): 9 zone, da sinistra a destra, un'intera giornata d'autunno:
+     1 Tsukiji e Ginza: mercato esterno, banco del tamagoyaki, Tsukiji Hongan-ji, torre dell'orologio di Ginza, Kabukiza (alba) · 2 Asakusa: Kaminarimon, Nakamise e Hōzōmon, Sensō-ji con incenso e omikuji, Asakusa Jinja (mattina)
+     3 Fiume Sumida e Ryōgoku: Skytree, Museo Hokusai, Kokugikan e il sumo (tarda mattina) · 4 Stazione di Tokyo e Palazzo Imperiale: stazione di mattoni, bento, fossato e mura, basamento del mastio (mezzogiorno)
+     5 Akihabara e Ueno: Akihabara, Kanda Myōjin, parco di Ueno e zoo, stagno Shinobazu (primo pomeriggio) · 6 Shinjuku: stazione, palazzo del governo (Tochō), Omoide Yokochō, Golden Gai, Kabukichō e Godzilla (tardo pomeriggio)
+     7 Harajuku e Meiji Jingū: torii e foresta, botti di sake e di vino, sala principale ed ema, Takeshita-dōri e Omotesandō (tramonto) · 8 Shibuya: Hachikō, lo Scramble, Shibuya Sky, i vicoli al neon (crepuscolo)
+     9 Tokyo Tower e Zōjō-ji: la porta Sangedatsumon con i Jizō, il parco di Shiba, la Tokyo Tower, il varco (notte; nessun personaggio fisso, come da scheda)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Sachiko (tamagoyaki), Ryō (risciò di Asakusa), Katsushika Hokusai, Tokugawa Ieyasu,
+     Kenta (commesso dei videogiochi, ad Akihabara), Hiroshi (impiegato di Shinjuku), Yui (miko del Meiji Jingū), Mio (studentessa di Shibuya)
+  Testi: da tokyo.txt (definitivi, usati senza riscriverli; solo l'apostrofo e le virgolette sono resi tipografici); 37 tappe da "Testo:" (compreso il varco finale) e il testo di introduzione.
+  Vita: corvi sui cavi e nel cielo, piccioni nelle piazze, gabbiani sul fiume e alla baia, cormorani e barche a cigno allo stagno, battello turistico sul Sumida, treni sui viadotti di Shinjuku e Omoide Yokochō,
+     fumo d'incenso e vapore dei banchi, orologio di Ginza con le lancette in movimento, Godzilla che ruggisce ogni nove secondi circa, schermi del neon che cambiano colore, la folla dello Scramble che attraversa in tutte le direzioni,
+     girandole dei Jizō che girano, lanterne che oscillano, sole che scende, luna e stelle, mare di luci della città, Tokyo Tower accesa.
+  Nota: i temi dolorosi (terremoto del 1923, bombardamenti del 1945, incendio di Meireki del 1657) sono trattati con tono sobrio e rispettoso; le leggende sono presentate con "si dice" o "secondo la leggenda".
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._tk, insieme agli attrezzi comuni: persone, alberi d'autunno, insegne verticali, lanterne, tetti giapponesi, pagoda, treni, taxi, la Tokyo Tower) e riusa solo pers (PR._md) e ln, gatto (PR._rm);
+     non modifica motore né altri mondi: nucleo/elementi.js è identico a prima, con in più il solo blocco "tk" in fondo.
+  Nota oggetti larghi: per i monumenti più larghi di circa 520 px (Nakamise, Sensō-ji, stazione di Tokyo, Palazzo Imperiale, Scramble) nell'elenco props ci sono due voci "tkW" (centro ±100) che ne disegnano una sola.
+     Se sposti uno di questi oggetti, sposta entrambe le voci dello stesso nome.
+  Nota nome: il titolo della scheda ("Dal mercato di Tsukiji alla Tokyo Tower") è abbreviato in "Da Tsukiji alla Tokyo Tower" per stare nell'intestazione del motore; nel pulsante i nomi sono abbreviati (es. "Kenta, il commesso dei videogiochi").
+     Se preferisci il titolo completo, cambialo nella riga addWorld (name) di mondi/tokyo.js.
+  Nota varco: il portale è quello del motore (in fondo al mondo, a 26770); l'oggetto tkvarco gli fa da cornice (la Tokyo Tower accesa in primo piano, la porta rossa dello Zōjō-ji e una luce calda che si apre). Gli id degli NPC iniziano per "tk_" e le battute sono in TOPX.
+  Nota scritte: i cartelli (TSUKIJI, GINZA, ASAKUSA, SUMIDA, RYŌGOKU, MARUNOUCHI, AKIHABARA, SHINJUKU, HARAJUKU, SHIBUYA, SHIBA, ecc.) sono in caratteri latini (romaji); i caratteri giapponesi sono resi solo come segni di pennello, nessun marchio reale.
+
