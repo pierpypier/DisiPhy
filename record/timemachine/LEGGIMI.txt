@@ -328,3 +328,22 @@ MONDO: Novecento · Dalle navi alla rete   (id: novecento)
   Nota: i temi dolorosi (emigrazione, guerra, leggi razziali, bombardamenti, stragi di mafia) sono trattati con tono sobrio e rispettoso, senza immagini macabre; Falcone parla dal 1987, gli altri personaggi dalla loro epoca; tradizioni e questioni discusse restano come nella scheda.
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._nv, insieme a folla, 500, Vespa, auto, biciclette, televisore, schermi, bandiere, macerie, lenzuola e altri disegni riusabili) e riusa dal Medioevo (PR._mv), dai Fenici (PR._fe), dai Greci (PR._gr), dal Rinascimento (PR._rn) e dall'Ottocento (PR._ot) persone, edifici, animali, treni, navi e lampioni; non modifica motore né altri mondi: nucleo/elementi.js è identico a prima, con il solo blocco del Novecento aggiunto in fondo.
   Nota nome: il titolo completo della scheda ("Il secolo delle macchine e delle idee, dal porto di Genova alla rete del mondo") non entrava nella pastiglia dell'intestazione; nella riga addWorld(...) di mondi/novecento.js è abbreviato in "Novecento · Dalle navi alla rete". Puoi ripristinare il titolo completo, se preferisci.
+
+MONDO: Dai barbari a Carlo Magno · Dalle rive del Reno alla notte di Natale dell'800   (id: barbari)
+  File: mondi/barbari.js   — oggetti in nucleo/elementi.js (blocco "elementi per i Barbari", nomi che iniziano per "ba")
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/barbari.js"></script>
+  Percorso (larghezza 24810): 8 zone, da sinistra a destra, un'intera giornata (e più di tre secoli di storia, dal V secolo all'800: il tempo si piega):
+     1 Le rive del Reno: il villaggio franco, la foresta, i migranti, la casa lunga (alba) · 2 Ravenna di Teodorico: la mensa del re, il mausoleo, San Vitale, Boezio (mattina)
+     3 Costantinopoli di Giustiniano e Teodora: le mura, l'Ippodromo, Santa Sofia, le leggi, la guerra, la seta (tarda mattina) · 4 Roma e Montecassino: il Foro in rovina, Gregorio e la peste del 590, San Pietro e il Laterano, la Regola, lo scriptorium (mezzogiorno)
+     5 Pavia e Monza: i Longobardi, la Pannonia, il Tesoro e la corona ferrea di Teodolinda, la tomba, l'editto, Cividale (primo pomeriggio) · 6 La laguna veneta: isole, Torcello, saline, il molo, il doge, Eraclea e Ravenna (pomeriggio)
+     7 Il regno dei Franchi: Poitiers, l'assedio, Roncisvalle, Aquisgrana, la scuola palatina, la libreria, i missi, Lindisfarne (tardo pomeriggio)
+     8 Roma, San Pietro: la piazza di notte con le torce, i candelabri, Leone III, la corona, l'impero, varco finale: le grandi porte della basilica si aprono su un cielo che si schiarisce (notte, varco)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Hariulfo (contadino franco), Teodorico il Grande, Teodora (imperatrice), Fra' Eusebio (monaco copista),
+     Teodolinda (regina dei Longobardi), Marino (pescatore e saliniere), Alcuino di York, Carlo Magno
+  Testi: da barbari.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 49 tappe.
+  Vita: corvi e uccelli, oche, capre, pecore, buoi, cavalli, cani, gatti, passanti in abiti dell'epoca (franchi, goti, bizantini, longobardi, monaci, soldati, pellegrini).
+  Cielo: alba grigio-rosata sul Reno, mattina chiara, luce del Bosforo, sole alto, pomeriggio dorato e laguna argentea, arancione morbido, crepuscolo e notte di dicembre con luna e stelle.
+  Nota: i temi dolorosi (guerre, invasioni, peste, conversioni imposte, uccisioni) sono trattati con tono sobrio e rispettoso; tradizioni e questioni discusse restano con "si dice" / "secondo la tradizione", come nella scheda. L'interno di San Pietro non è disegnato: il varco finale è la porta aperta sulla luce.
+  Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._ba, insieme a soldati, cavalieri, campanili di mattoni, laguna e altri disegni riusabili) e riusa dal Medioevo (PR._mv), dai Fenici (PR._fe), dai Greci (PR._gr) e da Roma antica (PR._ra) persone, edifici, animali e alberi; non modifica motore né altri mondi: nucleo/elementi.js è identico a prima, con il solo blocco dei Barbari aggiunto in fondo.
+  Nota nome: il titolo completo è "Dai barbari a Carlo Magno · Dal Reno a San Pietro", ma sporgeva dalla pastiglia dell'intestazione; nella riga addWorld(...) di mondi/barbari.js (costante WNAME) è abbreviato in "Dai barbari a Carlo Magno". Puoi ripristinare il titolo completo, se preferisci.
