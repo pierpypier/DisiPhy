@@ -347,3 +347,22 @@ MONDO: Dai barbari a Carlo Magno · Dalle rive del Reno alla notte di Natale del
   Nota: i temi dolorosi (guerre, invasioni, peste, conversioni imposte, uccisioni) sono trattati con tono sobrio e rispettoso; tradizioni e questioni discusse restano con "si dice" / "secondo la tradizione", come nella scheda. L'interno di San Pietro non è disegnato: il varco finale è la porta aperta sulla luce.
   Nota tecnica: il mondo ha la sua luce "nf" (esportata come PR._ba, insieme a soldati, cavalieri, campanili di mattoni, laguna e altri disegni riusabili) e riusa dal Medioevo (PR._mv), dai Fenici (PR._fe), dai Greci (PR._gr) e da Roma antica (PR._ra) persone, edifici, animali e alberi; non modifica motore né altri mondi: nucleo/elementi.js è identico a prima, con il solo blocco dei Barbari aggiunto in fondo.
   Nota nome: il titolo completo è "Dai barbari a Carlo Magno · Dal Reno a San Pietro", ma sporgeva dalla pastiglia dell'intestazione; nella riga addWorld(...) di mondi/barbari.js (costante WNAME) è abbreviato in "Dai barbari a Carlo Magno". Puoi ripristinare il titolo completo, se preferisci.
+
+MONDO: I Maya · Dalla milpa dell'alba alla notte dei giorni contati   (id: maya)
+  File: mondi/maya.js   — oggetti (nomi che iniziano per "my") definiti dentro lo stesso file: elementi.js NON è stato modificato
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/maya.js"></script>
+  Percorso (larghezza 27840): 8 zone, da sinistra a destra, un'intera giornata:
+     1 La milpa e le prime grandi città: El Mirador, La Danta, San Bartolo, la ceiba (alba, Petén) · 2 Palenque: Pakal, il Palazzo, il Tempio delle Iscrizioni, il sarcofago e la tomba (mattina presto)
+     3 Tikal: Teotihuacan, il silenzio e la rivincita, Templi I e II, le travi di Basilea, i gruppi gemelli (mattina) · 4 Yaxchilán: l'ansa del fiume, Lady Xook, gli architravi, il rito del sangue, i tessuti (mezzogiorno)
+     5 Copán: scultori, Scalinata dei Geroglifici, 18 Coniglio, scrittura, numeri e zero, calendario, libri di corteccia (primo pomeriggio) · 6 Chichén Itzá: El Castillo e Kukulcán, Gran Campo, cenote, Caracol, Codice di Dresda (pomeriggio)
+     7 Tulum e la costa: canoe del cacao, Guanaja 1502, Grijalva 1518, Cozumel e Ixchel, Gonzalo Guerrero, conquista dello Yucatán, Maní 1562, un italiano che scrive dell'America (tardo pomeriggio)
+     8 Chichicastenango: Santo Tomás, Popol Vuh, il libro che viaggia, il conto dei giorni, il 2012, leggere di nuovo i glifi, i Maya di oggi; varco finale: i fuochi di copal si spengono e il cielo sopra il vulcano si schiarisce (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Nikte' (contadina della milpa), K'inich Janaab' Pakal, Jasaw Chan K'awiil, Lady Xook,
+     Chan K'in (scriba di Copán), B'alam (giocatore di palla), Chak Kan (mercante di cacao), Doña Lucía (ajq'ij, custode del calendario)
+  Testi: da maya.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 55 tappe.
+  Vita: pappagalli e ara, gabbiani, tacchini, cani senza pelo, giaguari, iguane, coati, lucciole e pipistrelli di notte, passanti in abiti dell'epoca.
+  Cielo: alba grigio-verde nel Petén, mattina bianca e umida a Palenque, luce filtrata a Tikal, sole alto sul fiume, dorato a Copán, bianco e duro a Chichén Itzá, rosato sul mare di Tulum, notte stellata sull'altopiano e alba finale.
+  Nota: i temi dolorosi (sacrifici e riti del sangue, conquista, roghi di libri a Maní, caduta delle città) sono trattati con tono sobrio e rispettoso; tradizioni e questioni discusse restano con "si dice" / "secondo gli studiosi", come nella scheda.
+  Nota tecnica: il mondo ha la sua luce "nf" (interna a maya.js) e usa la variabile globale AVCAM come gli altri mondi "lunghi"; usa solo PR._av (helper di Cagliari) e fig() di disegno.js; non modifica motore, elementi.js né altri mondi.
+  Nota nome: il titolo completo è "I Maya · Dalla milpa dell'alba alla notte dei giorni contati", ma sporgeva dalla pastiglia dell'intestazione; nella costante WNAME di mondi/maya.js è abbreviato in "I Maya · Dalla milpa alla notte". Puoi ripristinare il titolo completo, se preferisci.
