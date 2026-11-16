@@ -385,3 +385,20 @@ MONDO: Persiani · Dall'alba di Pasargade alle notti di Persepoli   (id: persian
   Nota: i temi dolorosi (guerre, deportazioni, morte in battaglia, incendio di Persepoli) sono trattati con tono sobrio e rispettoso; tradizioni e questioni discusse (Nowruz, Immortali, tomba di Ciro, ingresso a Babilonia, Cilindro, giardini pensili, Behistun, numeri di Erodoto, Imera, incendio del 330) restano con "si dice" / "secondo Erodoto" / "secondo gli studiosi", come nella scheda.
   Nota tecnica: il mondo ha la sua luce "nf" (interna a persiani.js) e usa la variabile globale AVCAM come gli altri mondi "lunghi"; riusa da elementi.js solo funzioni esistenti: PR._av (primitive), PR._ba (persone, animali, torcia), PR._ms (palma, cammello), PR._gr (trireme, oplita, tempio dorico, colonne, statua), PR._fe (nave), e fig() di disegno.js; non modifica motore, elementi.js né altri mondi.
   Nota nome: il titolo completo è "Persiani · Dall'alba di Pasargade alle notti di Persepoli", ma sporgerebbe dalla pastiglia dell'intestazione; nella costante WNAME di mondi/persiani.js è abbreviato in "Persiani · Da Pasargade a Persepoli". Puoi ripristinare il titolo completo, se preferisci.
+
+MONDO: Duemila · Dal Giubileo alla fiamma   (id: duemila)
+  File: mondi/duemila.js   — oggetti (nomi che iniziano per "dq") definiti dentro lo stesso file: elementi.js NON è stato modificato
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/duemila.js"></script>
+  Percorso (larghezza 29400): 8 zone, da sinistra a destra, dal 2000 al 2026 (il tempo si piega: dall'alba al freddo della notte olimpica):
+     1 Torino: Giubileo, 11 settembre, la Rete, l'euro, il conclave, le Olimpiadi del 2006, il Muro di Berlino, il bicerin (alba) · 2 L'Aquila: il sisma del 2009, le tende, il G8, la ricostruzione, la crisi, la Concordia, gli arrosticini (mattina)
+     3 Lampedusa: il mare, i pescatori, la tartaruga, il dammuso, il 2011, papa Francesco, il 3 ottobre 2013, la Porta d'Europa, Fuocoammare, la cena di pesce (mezzogiorno) · 4 Roma: i due Papi, la rinuncia, La grande bellezza, l'Expo, il Giubileo della Misericordia, l'Oscar, Amatrice, il pranzo (primo pomeriggio)
+     5 Genova: il porto, la Brexit, Notre-Dame, il 14 agosto 2018, il ponte nuovo, il ponte San Giorgio, il mugugno, la focaccia (pomeriggio) · 6 Bergamo: Città Alta, il lockdown, il 18 marzo, il Papa solo in piazza, i medici, il V-Day, i Måneskin, Wembley, Tokyo, l'Atalanta, la polenta (tardo pomeriggio)
+     7 Parigi: la Senna, l'Ucraina, ChatGPT, il cantiere olimpico, le Olimpiadi, la riapertura di Notre-Dame, Roma 2025, la colazione (tramonto) · 8 Cortina d'Ampezzo: il chalet, il 1956, la fiamma, la pista, le medaglie, Tina e Milo, il Mondiale, la cena in malga, varco finale (sera e notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Rita Levi-Montalcini (la scienziata), Nicola (il muratore), Salvatore (il pescatore), Ennio Morricone (il maestro),
+     Piero (il carpentiere), Chiara (l'infermiera), Hugo (il carpentiere di Notre-Dame), Ines (la maestra di sci)
+  Testi: da duemila.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 70 tappe (69 + varco finale).
+  Vita: gabbiani, rondini, pipistrelli di notte, piccioni, cani, gatti, pecore, caprioli, passanti di oggi.
+  Cielo: alba velata a Torino, giorno pieno, riverbero bianco a Lampedusa, grigio a Bergamo, oro del tramonto a Parigi, notte stellata con luna sulle Dolomiti.
+  Nota: i temi dolorosi (11 settembre, terremoto, naufragi, Amatrice, ponte Morandi, pandemia e convoglio di Bergamo, incendio di Notre-Dame, guerra in Ucraina) sono trattati con tono sobrio e rispettoso: scene in forma di quadro, fumo e luci, senza immagini cruente. Le scene di notte o di ricordo sono "vignette" con cornice arrotondata.
+  Nota tecnica: il mondo ha la sua luce "nf" (interna a duemila.js) e usa la variabile globale AVCAM come gli altri mondi "lunghi"; riusa da elementi.js solo funzioni esistenti (PR._av, PR._mv, PR._nv, PR._ot, PR._fe, PR._gr, PR._rn) e fig() di disegno.js; non modifica motore, elementi.js né altri mondi.
