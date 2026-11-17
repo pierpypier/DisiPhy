@@ -402,3 +402,23 @@ MONDO: Duemila · Dal Giubileo alla fiamma   (id: duemila)
   Cielo: alba velata a Torino, giorno pieno, riverbero bianco a Lampedusa, grigio a Bergamo, oro del tramonto a Parigi, notte stellata con luna sulle Dolomiti.
   Nota: i temi dolorosi (11 settembre, terremoto, naufragi, Amatrice, ponte Morandi, pandemia e convoglio di Bergamo, incendio di Notre-Dame, guerra in Ucraina) sono trattati con tono sobrio e rispettoso: scene in forma di quadro, fumo e luci, senza immagini cruente. Le scene di notte o di ricordo sono "vignette" con cornice arrotondata.
   Nota tecnica: il mondo ha la sua luce "nf" (interna a duemila.js) e usa la variabile globale AVCAM come gli altri mondi "lunghi"; riusa da elementi.js solo funzioni esistenti (PR._av, PR._mv, PR._nv, PR._ot, PR._fe, PR._gr, PR._rn) e fig() di disegno.js; non modifica motore, elementi.js né altri mondi.
+
+MONDO: Preistoria · Dal fuoco alle grotte dipinte   (id: preistoria)
+  File: mondi/preistoria.js   — oggetti (nomi che iniziano per "pv") definiti dentro lo stesso file: elementi.js NON è stato modificato
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/preistoria.js"></script>
+  Percorso (larghezza 22000): 8 zone, da sinistra a destra, un'intera giornata (e circa trecentomila anni di storia, da Jebel Irhoud alle case di ossa di mammut: il tempo si piega):
+     1 La steppa fredda dei Neanderthal: steppa all'alba, laboratorio della selce, caccia grossa, pelli e raschiatoi (alba) · 2 Il riparo sotto la roccia: focolare, cura e rimedi, sepolture, artigli d'aquila di Krapina (mattina)
+     3 La costa e le grotte dei segni: grotta sul mare, conchiglie e colori, segni sulla pietra, cerchio di Bruniquel (tarda mattina) · 4 Africa, la culla di Homo sapiens: Jebel Irhoud, Omo, laboratorio dell'ocra di Blombos, perline e segni incisi (mezzogiorno)
+     5 Il Levante, la terra di passaggio: ponte fra tre continenti, Misliya, Qafzeh, vicini e figli (primo pomeriggio) · 6 Il Giura Svevo: valle delle grotte, flauto d'osso, uomo-leone, piccola Venere, gli ultimi vicini (pomeriggio)
+     7 Le grotte dipinte: gola del Ponte d'Arco, Chauvet, mani a negativo, Lascaux, Altamira (tardo pomeriggio) · 8 Il campo dei cacciatori di mammut: case di ossa, argilla cotta, Sungir, aghi e perline, fuoco della sera,
+        varco finale nella grotta con la parete di mani rosse e la luce dorata (tramonto)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Selce (cacciatore e scheggiatore, Neanderthal), Cenere (custode del fuoco, Neanderthal), Marea (raccoglitrice di conchiglie, Neanderthal),
+     Ocra (macinatrice di colori, Homo sapiens), Passo (il viandante), Avorio (l'intagliatore), Carbone (il pittore), Brace (la narratrice)
+  Testi: da preistoria.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 36 tappe da "Testo:" (l'ultima è il varco finale: "Sotto la parete delle mani, la luce passa lo stesso.").
+  Vita: aquile di mare, gabbiani, grifoni, corvi, mandrie lontane di cavalli, bisonti, renne, gazzelle, stambecchi, mammut lanosi, passanti Neanderthal e Sapiens, foca sugli scogli. Nessun cane o animale domestico.
+  Cielo: sole che attraversa la giornata dall'alba rosata al tramonto rosa-arancio-viola (non cala mai la notte); neve sui monti, mare scintillante, polvere dorata nel Giura, sole basso e fumo dei fuochi nel campo dei mammut.
+  Nota: i Neanderthal sono disegnati come persone, tozze e robuste, vestite di pelli; i Sapiens come persone di aspetto moderno; nessuna scena cruenta. Sepolture, caccia e scomparsa dei Neanderthal sono trattate con tono sobrio e rispettoso;
+     le questioni discusse restano con "gli studiosi pensano" / "forse", come nella scheda. Nessun cane o altro animale domestico, nessun metallo, campo coltivato o ruota.
+  Nota tecnica: il mondo ha le sue funzioni di disegno (cielo, orizzonte, grotte, animali, persone, dipinti) interne a preistoria.js e riusa solo PR._av (primitive) e fig() di disegno.js; esporta PR._pv; non modifica motore, elementi.js né altri mondi.
+  Nota nome: nell'intestazione il titolo è abbreviato in "Preistoria · Dal fuoco alle grotte dipinte" (quello completo della scheda, "Dal fuoco dei Neanderthal alle grotte dei Sapiens", sporgerebbe dalla pastiglia); puoi ripristinarlo nella riga addWorld(...) di mondi/preistoria.js.
