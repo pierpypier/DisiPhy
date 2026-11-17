@@ -422,3 +422,27 @@ MONDO: Preistoria · Dal fuoco alle grotte dipinte   (id: preistoria)
      le questioni discusse restano con "gli studiosi pensano" / "forse", come nella scheda. Nessun cane o altro animale domestico, nessun metallo, campo coltivato o ruota.
   Nota tecnica: il mondo ha le sue funzioni di disegno (cielo, orizzonte, grotte, animali, persone, dipinti) interne a preistoria.js e riusa solo PR._av (primitive) e fig() di disegno.js; esporta PR._pv; non modifica motore, elementi.js né altri mondi.
   Nota nome: nell'intestazione il titolo è abbreviato in "Preistoria · Dal fuoco alle grotte dipinte" (quello completo della scheda, "Dal fuoco dei Neanderthal alle grotte dei Sapiens", sporgerebbe dalla pastiglia); puoi ripristinarlo nella riga addWorld(...) di mondi/preistoria.js.
+
+MONDO: Ominidi · Dai primi agli Australopitechi   (id: ominidi)
+  File: mondi/ominidi.js   — oggetti (nomi che iniziano per "om") definiti dentro lo stesso file: elementi.js NON è stato modificato
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/ominidi.js"></script>
+  Percorso (larghezza 21860): 8 zone, da sinistra a destra, un'intera giornata dall'alba al tramonto (e più di dieci milioni di anni di storia: il tempo si piega):
+     1 La foresta dei grandi primati: Danuvius, giganti del fiume, un mondo che cambia (alba umida, Europa, circa 12-11 milioni di anni fa) · 2 Il lago e il bordo del deserto: Toros-Menalla, Toumaï, Orrorin, il primo passo (prima mattina)
+     3 Il bosco di Aramis: Ardi, il piede che cammina e afferra, denti piccoli e cibo vario (mattina) · 4 La piana di cenere di Laetoli: la pista nella cenere, i primi australopitechi, chi camminava davvero (tarda mattina)
+     5 La valle di Hadar e Dikika: Lucy, la Prima Famiglia, Selam, il pranzo (mezzogiorno) · 6 La valle delle prime pietre: Lomekwi, tagli sulle ossa, cugini dalla faccia piatta (primo pomeriggio)
+     7 L'altopiano delle grotte: bambino di Taung, signora Ples, Piccolo Piede, Malapa e il pozzo (pomeriggio) · 8 La valle dei cugini robusti: Ledi-Geraru, Teste robuste, falciatori d'erba, i primi Homo,
+        varco finale: la pista di orme sulla cenere che si perde in una luce dorata abbagliante (tramonto, varco in fondo alla pista)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): Ramo (Danuvius, sul ramo sopra il fiume), Riva (Sahelanthropus), Fico (Ardipithecus),
+     Orma (Australopithecus afarensis, maschio), Acacia (afarensis, madre con la piccola), Sasso (battitore di pietre, con incudine animata), Brezza (Australopithecus africanus), Molare (Paranthropus boisei, che mastica erba)
+  Testi: da ominidi.txt (definitivi, usati senza riscriverli; solo l'apostrofo è reso tipografico); 35 tappe da "Testo:" (l'ultima è il varco finale: "Sulla cenere, la strada continua.").
+  Vita: deinoteri e altri grandi erbivori nella foresta, coccodrilli, ippopotami, giraffe, giraffidi, cavalli a tre dita, maiali selvatici, antilopi, gazzelle, rinoceronti, lepri, faraone, istrici, tartarughe,
+     colobi, pavoni, pappagalli, gufi, aquile, stormi di uccelli, felini dai denti a sciabola e iene solo come sagome lontane. Nessun cane o altro animale domestico, nessun essere umano moderno.
+  Cielo: sole che attraversa la giornata, nebbia grigio-verde dell'alba, azzurro tiepido sul lago, luce verde-dorata ad Aramis, nuvole grigie che si aprono su Laetoli con raggi di sole e il vulcano che fuma,
+     bianco abbagliante a Hadar, luce dorata e polverosa sul Turkana e sull'altopiano (con raggi nei pozzi), tramonto arancio, rosa e viola nella valle dei cugini robusti (non cala mai la notte).
+  Nota: gli ominidi sono disegnati come individui con pelo, volto sporgente e braccia lunghe, senza abiti, gioielli, fuoco o capanne (niente caricature); i temi dolorosi (Prima Famiglia, bambino di Taung, pozzo di Malapa)
+     sono trattati con tono sobrio: nessuna scena cruenta, i predatori si vedono solo da lontano. Le questioni ancora discusse restano con "gli studiosi pensano" / "forse", come nella scheda.
+  Nota tecnica: il mondo ha la sua luce (tinta che scorre dall'alba al tramonto) e le sue funzioni di disegno (piante, animali, ominidi, rocce, acqua) interne a ominidi.js; usa solo hr, each, cl, addWorld, TOPX e PR di nucleo/;
+     non modifica motore, elementi.js né altri mondi.
+  Nota nome: nell'intestazione il titolo è "Ominidi · Dai primi agli Australopitechi" (la scheda parla di "Preistoria · Dai primi ominidi agli Australopitechi", ma il mondo Preistoria · Dal fuoco alle grotte dipinte esiste già);
+     la frase di introduzione è quella della scheda e inizia con "Preistoria, dall'alba al tramonto". Puoi cambiare il titolo nella costante WNAME di mondi/ominidi.js.
