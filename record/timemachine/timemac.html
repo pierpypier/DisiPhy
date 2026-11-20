@@ -72,29 +72,28 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 <script src="mondi/luna.js"></script>     
 <script src="mondi/duemila.js"></script>          
 <script src="nucleo/motore.js"></script>
+
 <script>
-const testoDialogo = document.getElementById('tx');
-
-testoDialogo.style.cursor = 'pointer';
-testoDialogo.title = 'Tocca per ascoltare il dialogo';
-
-testoDialogo.addEventListener('click', function() {
-    const testo = this.innerText.trim();
-    if (!testo) return;
-
-    if (!('speechSynthesis' in window)) {
-        alert('La sintesi vocale non è supportata da questo browser.');
-        return;
-    }
-
-    speechSynthesis.cancel();
-
-    const voce = new SpeechSynthesisUtterance(testo);
-    voce.lang = 'it-IT';
-    voce.rate = 1;
-    voce.pitch = 1;
-
-    speechSynthesis.speak(voce);
+const testoDialogo=document.getElementById('tx');
+testoDialogo.style.cursor='pointer';
+testoDialogo.title='Tocca per ascoltare il dialogo';
+let voci=[];
+const caricaVoci=()=>{voci=speechSynthesis.getVoices().filter(v=>v.lang.toLowerCase().replace('_','-').startsWith('it'))};
+if('speechSynthesis' in window){caricaVoci();speechSynthesis.onvoiceschanged=caricaVoci}
+const punti=v=>{const n=(v.name+' '+v.voiceURI).toLowerCase();let p=0;
+ if(/neural|natural|premium|enhanced|wavenet|online/.test(n))p+=4;
+ if(/google/.test(n))p+=3;
+ if(!v.localService)p+=2;
+ if(v.lang.toLowerCase().replace('_','-')=='it-it')p+=1;return p};
+testoDialogo.addEventListener('click',function(){
+ const testo=this.innerText.trim();if(!testo)return;
+ if(!('speechSynthesis' in window)){alert('La sintesi vocale non è supportata da questo browser.');return}
+ speechSynthesis.cancel();
+ const voce=voci.slice().sort((a,b)=>punti(b)-punti(a))[0];
+ (testo.match(/[^.!?…]+[.!?…]*/g)||[testo]).forEach(fr=>{
+  const u=new SpeechSynthesisUtterance(fr.trim());u.lang='it-IT';u.rate=1;u.pitch=1;
+  if(voce)u.voice=voce;speechSynthesis.speak(u)});
 });
-</script>     
+</script>
+
 </body></html>
