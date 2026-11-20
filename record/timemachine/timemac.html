@@ -73,28 +73,94 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 <script src="mondi/duemila.js"></script>          
 <script src="nucleo/motore.js"></script>
 <script>
-const testoDialogo = document.getElementById('tx');
+(function () {
+  const testoDialogo = document.getElementById('tx');
+  const controlli = document.getElementById('op');
+  if (!testoDialogo) return;
 
-testoDialogo.style.cursor = 'pointer';
-testoDialogo.title = 'Tocca per ascoltare il dialogo';
+  testoDialogo.style.cursor = 'pointer';
+  testoDialogo.title = 'Tocca per ascoltare il dialogo';
 
-testoDialogo.addEventListener('click', function() {
-    const testo = this.innerText.trim();
-    if (!testo) return;
+  let vociDisponibili = [];
+  let voceSelezionata = null;
 
+  function punteggioVoce(v) {
+    let p = 0;
+    const nome = (v.name || '').toLowerCase();
+    const lang = (v.lang || '').toLowerCase();
+
+    if (lang === 'it-it') p += 30;
+    else if (lang.startsWith('it')) p += 15;
+
+    if (!v.localService) p += 10;
+    if (nome.includes('natural') || nome.includes('neural') || nome.includes('enhanced') || nome.includes('premium')) {
+      p += 15;
+    }
+    if (nome.includes('google')) p += 5;
+    return p;
+  }
+
+  function aggiornaVoci() {
+    if (!('speechSynthesis' in window)) return;
+    const tutte = window.speechSynthesis.getVoices() || [];
+    if (!tutte.length) return;
+
+    const italiane = tutte
+      .filter(v => (v.lang || '').toLowerCase().startsWith('it'))
+      .sort((a, b) => punteggioVoce(b) - punteggioVoce(a));
+
+    vociDisponibili = italiane.length ? italiane : tutte;
+    if (!voceSelezionata) {
+      voceSelezionata = vociDisponibili[0] || null;
+    }
+  }
+
+  function spezzaInFrasi(testo) {
+    const parti = testo.match(/[^.!?…]+[.!?…]*|[^.!?…]+$/g);
+    return parti ? parti.map(s => s.trim()).filter(Boolean) : [testo];
+  }
+
+  function leggiTesto(testo) {
     if (!('speechSynthesis' in window)) {
-        alert('La sintesi vocale non è supportata da questo browser.');
-        return;
+      alert('La sintesi vocale non è supportata da questo browser.');
+      return;
     }
 
-    speechSynthesis.cancel();
+    aggiornaVoci();
+    window.speechSynthesis.cancel();
 
-    const voce = new SpeechSynthesisUtterance(testo);
-    voce.lang = 'it-IT';
-    voce.rate = 1;
-    voce.pitch = 1;
+    const frasi = spezzaInFrasi(testo);
+    frasi.forEach((frase) => {
+      const u = new SpeechSynthesisUtterance(frase);
+      u.lang = 'it-IT';
+      u.rate = 1;
+      u.pitch = 1;
+      if (voceSelezionata) {
+        u.voice = voceSelezionata;
+      }
+      window.speechSynthesis.speak(u);
+    });
+  }
 
-    speechSynthesis.speak(voce);
-});
+  testoDialogo.addEventListener('click', function () {
+    const testo = this.innerText.trim();
+    if (!testo) return;
+    leggiTesto(testo);
+  });
+
+  if (controlli) {
+    controlli.addEventListener('click', function () {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    });
+  }
+
+  aggiornaVoci();
+  if ('speechSynthesis' in window && 'onvoiceschanged' in window.speechSynthesis) {
+    window.speechSynthesis.onvoiceschanged = aggiornaVoci;
+  }
+})();
 </script>     
 </body></html>
+     
