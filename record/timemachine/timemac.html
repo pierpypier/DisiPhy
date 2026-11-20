@@ -6,6 +6,8 @@ body{display:flex;align-items:center;justify-content:center}
 #stage{position:relative;width:480px;height:870px;flex:none;overflow:hidden;background:#05000f;box-shadow:0 0 60px rgba(122,44,255,.35)}
 canvas{position:absolute;left:0;top:0;width:480px;height:520px;display:block}
 #mu{position:absolute;right:10px;top:8px;width:34px;height:28px;z-index:15;border-radius:999px;border:1px solid rgba(255,255,255,.6);background:rgba(10,0,30,.6);color:#fff;font-size:14px;cursor:pointer}
+#vc{position:absolute;right:50px;top:8px;height:28px;padding:0 10px;z-index:15;border-radius:999px;border:1px solid rgba(110,231,255,.65);background:rgba(10,0,30,.72);color:#e8e0ff;font:700 11px "Trebuchet MS",sans-serif;cursor:pointer;white-space:nowrap}
+#vc:active{background:rgba(110,231,255,.35)}
 #tb{position:absolute;left:0;top:520px;width:480px;height:240px;padding:10px 14px;background:linear-gradient(180deg,#140a30,#0a0420);border-top:2px solid rgba(110,231,255,.55);box-shadow:0 -6px 24px rgba(122,44,255,.3);overflow:hidden}
 #who{font:800 italic 14px "Trebuchet MS",sans-serif;letter-spacing:.08em;color:#ffe27a;height:18px;text-transform:uppercase}
 #tx{font-size:14.5px;line-height:1.36;color:#ece8ff;margin:4px 0 8px;min-height:44px;max-height:128px;overflow:hidden}
@@ -30,6 +32,7 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 #go{font:inherit;font-weight:900;font-style:italic;letter-spacing:.12em;font-size:22px;color:#fff;cursor:pointer;padding:12px 40px;border-radius:999px;border:2px solid #fff;background:linear-gradient(135deg,#ff7ab0,#7a2cff);box-shadow:0 0 24px rgba(160,100,255,.7)}
 </style></head><body>
 <div id="stage"><canvas id="c" width="480" height="520"></canvas>
+<button id="vc" type="button" title="Cambia voce">🎙️ Voce</button>
 <button id="mu">🔊</button>
 <div id="tb"><div id="who"></div><div id="tx"></div><div id="op"></div></div>
 <div id="pc"><div class="bt" id="bl">◀</div><div id="ac"></div><div class="bt" id="br">▶</div></div>
@@ -76,13 +79,15 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 (function () {
   const testoDialogo = document.getElementById('tx');
   const controlli = document.getElementById('op');
+  const btnVoce = document.getElementById('vc');
   if (!testoDialogo) return;
 
   testoDialogo.style.cursor = 'pointer';
   testoDialogo.title = 'Tocca per ascoltare il dialogo';
 
   let vociDisponibili = [];
-  let voceSelezionata = null;
+  let indiceVoce = 0;
+  let toastTimer = null;
 
   function punteggioVoce(v) {
     let p = 0;
@@ -100,8 +105,39 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
     return p;
   }
 
+  function aggiornaEtichettaBottone() {
+    if (!btnVoce) return;
+    const v = vociDisponibili[indiceVoce];
+    if (!v) {
+      btnVoce.textContent = '🎙️ Voce';
+      btnVoce.title = 'Nessuna voce rilevata';
+      return;
+    }
+    const nomeBreve = (v.name || 'Voce').replace(/^Google\s+/i, '').slice(0, 14);
+    btnVoce.textContent = `🎙️ ${indiceVoce + 1}/${vociDisponibili.length}`;
+    btnVoce.title = `Voce: ${v.name} (${v.lang}) — Tocca per cambiare`;
+  }
+
+  function mostraNomeVoce(v) {
+    if (!v || !btnVoce) return;
+    const vecchioBadge = document.getElementById('vc-info');
+    if (vecchioBadge) vecchioBadge.remove();
+
+    const badge = document.createElement('div');
+    badge.id = 'vc-info';
+    badge.textContent = `${v.name} (${v.lang})`;
+    badge.style.cssText = 'position:absolute;right:10px;top:42px;z-index:16;max-width:260px;padding:4px 8px;border-radius:8px;background:rgba(15,5,40,.92);border:1px solid rgba(110,231,255,.7);color:#ffe27a;font:700 11px "Trebuchet MS",sans-serif;pointer-events:none;text-align:right';
+    document.getElementById('stage').appendChild(badge);
+
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      if (badge.parentNode) badge.remove();
+    }, 2200);
+  }
+
   function aggiornaVoci() {
     if (!('speechSynthesis' in window)) return;
+    const precedente = vociDisponibili[indiceVoce];
     const tutte = window.speechSynthesis.getVoices() || [];
     if (!tutte.length) return;
 
@@ -110,9 +146,14 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
       .sort((a, b) => punteggioVoce(b) - punteggioVoce(a));
 
     vociDisponibili = italiane.length ? italiane : tutte;
-    if (!voceSelezionata) {
-      voceSelezionata = vociDisponibili[0] || null;
+
+    if (precedente) {
+      const idxTrovato = vociDisponibili.findIndex(v => v.name === precedente.name && v.lang === precedente.lang);
+      indiceVoce = idxTrovato >= 0 ? idxTrovato : 0;
+    } else {
+      indiceVoce = 0;
     }
+    aggiornaEtichettaBottone();
   }
 
   function spezzaInFrasi(testo) {
@@ -129,16 +170,33 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
     aggiornaVoci();
     window.speechSynthesis.cancel();
 
+    const voceSelezionata = vociDisponibili[indiceVoce] || null;
     const frasi = spezzaInFrasi(testo);
     frasi.forEach((frase) => {
       const u = new SpeechSynthesisUtterance(frase);
-      u.lang = 'it-IT';
+      u.lang = voceSelezionata ? voceSelezionata.lang : 'it-IT';
       u.rate = 1;
       u.pitch = 1;
       if (voceSelezionata) {
         u.voice = voceSelezionata;
       }
       window.speechSynthesis.speak(u);
+    });
+  }
+
+  if (btnVoce) {
+    btnVoce.addEventListener('click', function () {
+      aggiornaVoci();
+      if (!vociDisponibili.length) return;
+      indiceVoce = (indiceVoce + 1) % vociDisponibili.length;
+      aggiornaEtichettaBottone();
+      const voceCorrente = vociDisponibili[indiceVoce];
+      mostraNomeVoce(voceCorrente);
+
+      const testo = testoDialogo.innerText.trim();
+      if (testo) {
+        leggiTesto(testo);
+      }
     });
   }
 
@@ -163,4 +221,3 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 })();
 </script>     
 </body></html>
-     
