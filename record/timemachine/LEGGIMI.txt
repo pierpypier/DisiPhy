@@ -521,3 +521,21 @@ MONDO: La scoperta dell'America · Da Genova ai Caraibi   (id: colombo)
   Nota: i temi dolorosi (schiavitù, malattie, fine dei Taíno, catene a Colombo, editto del 1492) sono trattati con tono sobrio e rispettoso; leggende e questioni discusse (gioielli di Isabella, due conti di bordo, tre giorni, sospiro del Moro, isola di Guanahani, resti di Colombo) restano con "si racconta" / "si dice".
   Nota tecnica: il mondo ha la sua luce "nf" (ora che cresce lungo il percorso), usa la variabile globale AVCAM come gli altri mondi "lunghi", e riusa solo qualche disegno di PR._my (canoa, palma, fuoco, fumo), PR._fe (cavallo, asino, cane, volo) e PR._rm (gatto) e fig() di disegno.js; non modifica motore né altri mondi.
   Nota nome: il titolo è "La scoperta dell'America · Da Genova ai Caraibi"; puoi cambiarlo nella costante WNAME di mondi/colombo.js.
+
+MONDO: Indipendenza americana · Da Londra a Yorktown, 1765-1783   (id: indipendenza)
+  File: mondi/indipendenza.js   — tutti gli oggetti (nomi che iniziano per "ix") sono definiti dentro il file stesso, come in maya.js; nucleo/elementi.js NON è stato modificato
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js (timemac.html ha già la riga), es.
+     <script src="mondi/indipendenza.js"></script>
+  Percorso (larghezza 20640): 8 zone, da sinistra a destra, una giornata che scorre dalla mattina alla notte (quasi vent'anni di storia: il tempo si piega):
+     1 Londra 1765-1774: nebbia sul Tamigi, Westminster, caffè, St James's, Stamp Act e tasse (mattina) · 2 Boston 1770-1775: porto, Old State House, massacro, Tea Party, Old North Church (tarda mattina)
+     3 Lexington, Concord e Bunker Hill 1775: il prato, il minuteman, il ponte, la ritirata, la collina (mezzogiorno) · 4 Filadelfia 1776: Independence Hall, la Dichiarazione, la campana (primo pomeriggio)
+     5 Delaware e Saratoga 1776-77: la locanda, il fiume ghiacciato, Trenton, gli assiani, Saratoga, la carabina (inverno, poi autunno) · 6 Valley Forge 1777-78: baracche nella neve, scalzi, von Steuben, quartier generale, le feste (pomeriggio grigio)
+     7 Parigi e il mondo 1776-83: Parigi, Passy, l'alleanza con la Francia, i mari, i volontari stranieri (tardo pomeriggio dorato) · 8 Yorktown e la pace 1781-83: Chesapeake, l'assedio, la resa, il trattato, fuochi d'artificio, varco finale: un cerchio di 13 stelle (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): storici: Giorgio III, Thomas Jefferson, George Washington, Benjamin Franklin, il marchese de La Fayette;
+     gente comune: Nat (contadino e minuteman), Eliza (locandiera di Filadelfia), Josiah (marinaio di Marblehead); ogni comune racconta al massimo 2-3 fatti storici, il resto è vita quotidiana, usanze e curiosità.
+  Testi: 40 tappe, ciascuna con una breve descrizione e i "tratti da cercare" ("Cerca: …"). Le tappe sono più dei personaggi: molte sono solo da osservare.
+  Vita: gabbiani, uccelli in volo, neve che cade a Valley Forge, cavalli, cani, passanti e soldati in uniformi diverse (giubbe rosse, continentali, francesi, assiani, milizie); nessun animale fuori contesto.
+  Cielo: mattina nebbiosa a Londra, luce chiara a Boston e a Filadelfia, inverno e poi autunno sul Delaware e a Saratoga, grigio con neve a Valley Forge, tramonto dorato a Parigi, notte stellata con luna e fuochi d'artificio a Yorktown.
+  Nota: i temi dolorosi (schiavitù, guerra, inverno di Valley Forge, popoli nativi, lealisti) sono trattati con tono sobrio e rispettoso; tradizioni e questioni discusse restano con "si dice" / "si racconta".
+  Nota tecnica: il mondo ha la sua luce "nf" (interna a indipendenza.js) e usa la variabile globale AVCAM come gli altri mondi "lunghi"; riusa solo PR._av (primitive) e PR._fr (cavallo, cane, cannone, capanna, alberi, fumo...) e fig() di disegno.js; non modifica motore, elementi.js né altri mondi.
+  Nota nome: il titolo della pastiglia è "Indipendenza americana · 1765-1783"; puoi cambiarlo nella costante WNAME di mondi/indipendenza.js.
