@@ -1,5 +1,23 @@
 DA INCOLLARE IN LEGGIMI.txt (il file originale non era tra gli allegati)
 ------------------------------------------------------------------------
+MONDO: Seconda guerra mondiale · Da Londra sotto le bombe alle luci della pace   (id: mondiale2)
+  File: mondi/mondiale2.js   — tutti gli oggetti (nomi che iniziano per "m2") sono definiti dentro lo stesso file, come in maya.js; nucleo/elementi.js NON è stato modificato
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js (timemac.html ha già la riga), es.
+     <script src="mondi/mondiale2.js"></script>
+  Percorso (larghezza 23520): 8 zone, da sinistra a destra, una giornata che scorre dalla mattina alla notte (sei anni di guerra in un solo giorno: il tempo si piega):
+     1 Londra 1940: palloni di sbarramento, Big Ben, rifugio Anderson, Spitfire, Cabinet War Rooms, St Paul nel fumo (mattina rosata e fumosa) · 2 Bletchley e l'Inghilterra: evacuati, villa, Baracca 8 e la Bomba, Enigma, Dig for Victory, Dunkerque (tarda mattina)
+     3 Europa occupata: Tour Eiffel, canali di Amsterdam, Alloggio Segreto, diario di Anne, stampa clandestina (mezzogiorno) · 4 Normandia 6 giugno 1944: Vallo Atlantico, paracadutisti, Pointe du Hoc, Omaha, Mulberry, cimitero di Colleville (primo pomeriggio coperto)
+     5 Italia 1943-45: Quattro giornate di Napoli, Montecassino, Ponte Vecchio, partigiani, 25 aprile (pomeriggio) · 6 Fronte orientale: Piazza Rossa, Leningrado, Stalingrado, T-34, Volga ghiacciato, Reichstag (pomeriggio grigio con neve)
+     7 America e Pacifico: Pearl Harbor, Casa Bianca e radio, fabbrica di aerei, Midway, Iwo Jima, Los Alamos (tardo pomeriggio dorato) · 8 Hiroshima e la pace: Cupola, gru di carta, Norimberga, ONU a San Francisco, festa della vittoria a Londra, varco finale: le finestre tornano illuminate (sera e notte con fuochi d'artificio)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto; domande in prima persona): storici: Winston Churchill, Alan Turing, Anne Frank, Dwight Eisenhower, Franklin Roosevelt;
+     gente comune: Doris (sarta e sorvegliante antiaerea, Londra), Rosa (staffetta partigiana), Ivan (operaio di Stalingrado), Hanako (maestra di Hiroshima); ogni comune racconta al massimo 2-3 fatti storici, il resto è vita quotidiana, usanze e curiosità.
+  Testi: 46 tappe, ciascuna con una breve descrizione e i "tratti da cercare" ("Cerca: …"). Le tappe sono più dei personaggi: molte sono solo da osservare.
+  Vita: aerei lontani a Londra e in Normandia, gabbiani, neve che cade sul fronte orientale, scintille e fuochi d'artificio nella notte della pace, cani, passanti e soldati in abiti dell'epoca.
+  Cielo: alba rosata e fumosa a Londra, luce chiara in campagna, giorno pallido in Europa, coperto in Normandia, caldo in Italia, grigio e nevoso in Russia, dorato nel Pacifico, sera viola e notte stellata con luna alla fine.
+  Nota: i temi dolorosi (bombardamenti, Shoah, battaglie, bomba atomica, internamento dei giapponesi-americani) sono trattati con tono sobrio e rispettoso; nessun simbolo nazista è disegnato (bandiere e manifesti dell'occupante sono solo suggeriti da cartelli come «Achtung»). Tradizioni e questioni discusse restano con "si racconta" / "si dice".
+  Nota tecnica: il mondo ha la sua luce "nf" (interna a mondiale2.js) e usa la variabile globale AVCAM come gli altri mondi "lunghi"; usa solo PR._av (primitive), PR._fe (volo, cane) e fig() di disegno.js; non modifica motore, elementi.js né altri mondi.
+  Nota nome: il titolo della pastiglia è "Seconda guerra mondiale · 1939-1945"; puoi cambiarlo nella costante WNAME di mondi/mondiale2.js.
+
 MONDO: Rivoluzione francese · 1789-1799   (id: francese)
   File: mondi/francese.js   — oggetti (nomi che iniziano per "fr") aggiunti in nucleo/elementi.js, nel blocco "elementi per la Rivoluzione francese" in fondo al file (esportati come PR._fr); nessun oggetto esistente è stato modificato
   Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
@@ -522,20 +540,20 @@ MONDO: La scoperta dell'America · Da Genova ai Caraibi   (id: colombo)
   Nota tecnica: il mondo ha la sua luce "nf" (ora che cresce lungo il percorso), usa la variabile globale AVCAM come gli altri mondi "lunghi", e riusa solo qualche disegno di PR._my (canoa, palma, fuoco, fumo), PR._fe (cavallo, asino, cane, volo) e PR._rm (gatto) e fig() di disegno.js; non modifica motore né altri mondi.
   Nota nome: il titolo è "La scoperta dell'America · Da Genova ai Caraibi"; puoi cambiarlo nella costante WNAME di mondi/colombo.js.
 
-MONDO: Prima guerra mondiale · 1914-1918   (id: mondiale1)
-  File: mondi/mondiale1.js   — tutti gli oggetti (nomi che iniziano per "pg") sono definiti dentro il file stesso, come in maya.js; nucleo/elementi.js NON è stato modificato
+MONDO: Indipendenza americana · Da Londra a Yorktown, 1765-1783   (id: indipendenza)
+  File: mondi/indipendenza.js   — tutti gli oggetti (nomi che iniziano per "ix") sono definiti dentro il file stesso, come in maya.js; nucleo/elementi.js NON è stato modificato
   Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js (timemac.html ha già la riga), es.
-     <script src="mondi/mondiale1.js"></script>
-  Percorso (larghezza 22560): 8 zone, da sinistra a destra, un'intera giornata; la luce scorre dall'alba alla notte e la storia dal 1914 al 1919 (il tempo si piega):
-     1 Sarajevo, 28 giugno 1914: la città nella valle, Baščaršija, Municipio neomoresco, Ponte Latino, un mese di ultimatum (alba) · 2 Agosto 1914, le stazioni d'Europa: la partenza tra i fiori, le alleanze, le uniformi, il Belgio invaso, Londra e i volontari (mattina)
-     3 Parigi e la Marna: Parigi a settembre, i taxi della Marna, il cannone da 75, le «petites Curies», la Torre Eiffel radio (tarda mattina) · 4 Fronte occidentale: la linea di trincee, il Natale 1914, il gas di Ypres, la vita in trincea, Verdun e la Via Sacra, la Somme e i primi carri armati (mezzogiorno)
-     5 Fronte italiano: il 24 maggio 1915, Isonzo e Carso, San Martino del Carso, guerra bianca sulle Alpi, Caporetto (con pioggia), il Piave e i ragazzi del '99 (primo pomeriggio) · 6 Fronte interno: fabbrica di munizioni, donne al lavoro, razionamento, Zeppelin e riflettori, la spagnola (pomeriggio)
-     7 Il mondo in guerra: Gallipoli, le truppe coloniali, il deserto d'Arabia e Aqaba, Gerusalemme, Pietrogrado 1917, l'America entra in guerra (tardo pomeriggio) · 8 La pace: Compiègne, le undici in punto, Parigi in festa, il conto dei lutti, Versailles 28 giugno 1919, il ricordo; varco finale tra le lanterne (sera e notte)
-  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): storici: Marie Curie, Giuseppe Ungaretti, T. E. Lawrence, Georges Clemenceau, Woodrow Wilson;
-     gente comune: Mehmed (caffettiere di Sarajevo), Lucien (poilu francese), Nane (alpino e conducente di muli), Annie (operaia di munizioni a Londra); ogni comune racconta al massimo 2-3 fatti storici, il resto è vita quotidiana, usanze e curiosità.
-  Testi: 44 tappe, ciascuna con una breve descrizione e i "tratti da cercare" ("Cerca: …"). Le tappe sono più dei personaggi: molte sono solo da osservare. Tono colloquiale; le tradizioni incerte restano con "si racconta" / "si dice".
-  Vita: piccioni, corvi, aerei biplani, Zeppelin, cavalli, muli, cammelli, cani, gatti, pioggia a Caporetto, riflettori, fuochi d'artificio nella notte di Parigi, passanti in divisa e abiti dell'epoca; nessun animale fuori contesto.
-  Cielo: alba rosata a Sarajevo, mattina chiara a Parigi, cielo grigio e coperto sulle trincee (con bagliori lontani), pioggia a Caporetto, pomeriggio grigio e fumoso nelle fabbriche, tardo pomeriggio arancione nel deserto, sera viola e notte stellata con luna a Parigi.
-  Nota: i temi dolorosi (attentato di Sarajevo, gas, battaglie, profughi, lutti, spagnola, feriti al volto) sono trattati con tono sobrio e rispettoso, senza scene cruente; le poesie di Ungaretti non sono citate, solo i titoli; date e fatti sono quelli storicamente accertati.
-  Nota tecnica: il mondo ha la sua luce "nf" (interna a mondiale1.js) e usa la variabile globale AVCAM come gli altri mondi "lunghi"; usa solo PR._av (helper di Cagliari) e fig() di disegno.js; non modifica motore, elementi.js né altri mondi. Provato in Chromium: percorso completo senza errori, 9 personaggi con 12 domande ciascuno.
-  Nota nome: il titolo della pastiglia è "Prima guerra mondiale · 1914-1918"; puoi cambiarlo nella costante WNAME di mondi/mondiale1.js.
+     <script src="mondi/indipendenza.js"></script>
+  Percorso (larghezza 20640): 8 zone, da sinistra a destra, una giornata che scorre dalla mattina alla notte (quasi vent'anni di storia: il tempo si piega):
+     1 Londra 1765-1774: nebbia sul Tamigi, Westminster, caffè, St James's, Stamp Act e tasse (mattina) · 2 Boston 1770-1775: porto, Old State House, massacro, Tea Party, Old North Church (tarda mattina)
+     3 Lexington, Concord e Bunker Hill 1775: il prato, il minuteman, il ponte, la ritirata, la collina (mezzogiorno) · 4 Filadelfia 1776: Independence Hall, la Dichiarazione, la campana (primo pomeriggio)
+     5 Delaware e Saratoga 1776-77: la locanda, il fiume ghiacciato, Trenton, gli assiani, Saratoga, la carabina (inverno, poi autunno) · 6 Valley Forge 1777-78: baracche nella neve, scalzi, von Steuben, quartier generale, le feste (pomeriggio grigio)
+     7 Parigi e il mondo 1776-83: Parigi, Passy, l'alleanza con la Francia, i mari, i volontari stranieri (tardo pomeriggio dorato) · 8 Yorktown e la pace 1781-83: Chesapeake, l'assedio, la resa, il trattato, fuochi d'artificio, varco finale: un cerchio di 13 stelle (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; l'ultima è il saluto): storici: Giorgio III, Thomas Jefferson, George Washington, Benjamin Franklin, il marchese de La Fayette;
+     gente comune: Nat (contadino e minuteman), Eliza (locandiera di Filadelfia), Josiah (marinaio di Marblehead); ogni comune racconta al massimo 2-3 fatti storici, il resto è vita quotidiana, usanze e curiosità.
+  Testi: 40 tappe, ciascuna con una breve descrizione e i "tratti da cercare" ("Cerca: …"). Le tappe sono più dei personaggi: molte sono solo da osservare.
+  Vita: gabbiani, uccelli in volo, neve che cade a Valley Forge, cavalli, cani, passanti e soldati in uniformi diverse (giubbe rosse, continentali, francesi, assiani, milizie); nessun animale fuori contesto.
+  Cielo: mattina nebbiosa a Londra, luce chiara a Boston e a Filadelfia, inverno e poi autunno sul Delaware e a Saratoga, grigio con neve a Valley Forge, tramonto dorato a Parigi, notte stellata con luna e fuochi d'artificio a Yorktown.
+  Nota: i temi dolorosi (schiavitù, guerra, inverno di Valley Forge, popoli nativi, lealisti) sono trattati con tono sobrio e rispettoso; tradizioni e questioni discusse restano con "si dice" / "si racconta".
+  Nota tecnica: il mondo ha la sua luce "nf" (interna a indipendenza.js) e usa la variabile globale AVCAM come gli altri mondi "lunghi"; riusa solo PR._av (primitive) e PR._fr (cavallo, cane, cannone, capanna, alberi, fumo...) e fig() di disegno.js; non modifica motore, elementi.js né altri mondi.
+  Nota nome: il titolo della pastiglia è "Indipendenza americana · 1765-1783"; puoi cambiarlo nella costante WNAME di mondi/indipendenza.js.
