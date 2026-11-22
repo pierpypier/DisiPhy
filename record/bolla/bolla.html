@@ -6,10 +6,26 @@ body{display:flex;align-items:center;justify-content:center}
 #stage{position:relative;width:480px;height:870px;flex:none;overflow:hidden;background:#05000f;box-shadow:0 0 60px rgba(122,44,255,.35)}
 canvas{position:absolute;left:0;top:0;width:480px;height:520px;display:block}
 #mu{position:absolute;right:10px;top:8px;width:34px;height:28px;z-index:15;border-radius:999px;border:1px solid rgba(255,255,255,.6);background:rgba(10,0,30,.6);color:#fff;font-size:14px;cursor:pointer}
-#tb{position:absolute;left:0;top:520px;width:480px;height:240px;padding:10px 14px;background:linear-gradient(180deg,#140a30,#0a0420);border-top:2px solid rgba(110,231,255,.55);box-shadow:0 -6px 24px rgba(122,44,255,.3);overflow:hidden}
-#who{font:800 italic 14px "Trebuchet MS",sans-serif;letter-spacing:.08em;color:#ffe27a;height:18px;text-transform:uppercase}
-#tx{font-size:14.5px;line-height:1.36;color:#ece8ff;margin:4px 0 8px;min-height:44px;max-height:128px;overflow:hidden}
-#op{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+#tb{position:absolute;left:0;top:520px;width:480px;height:240px;padding:8px 14px 10px;background:linear-gradient(180deg,#140a30,#0a0420);border-top:2px solid rgba(110,231,255,.55);box-shadow:0 -6px 24px rgba(122,44,255,.3);overflow:hidden;display:flex;flex-direction:column}
+#who{flex:none;font:800 italic 14px "Trebuchet MS",sans-serif;letter-spacing:.08em;color:#ffe27a;height:18px;text-transform:uppercase}
+
+/* area testo scorrevole + pulsanti ▲▼ */
+#tw{flex:1;min-height:0;display:flex;gap:8px;margin:4px 0 8px}
+#tx{flex:1;min-width:0;min-height:0;overflow-y:auto;touch-action:pan-y;overscroll-behavior:contain;scrollbar-width:none;font-size:16px;line-height:1.4;color:#ece8ff}
+#tx::-webkit-scrollbar{display:none}
+#tx.mb{-webkit-mask-image:linear-gradient(#000 calc(100% - 24px),transparent);mask-image:linear-gradient(#000 calc(100% - 24px),transparent)}
+#tx.mt{-webkit-mask-image:linear-gradient(transparent,#000 20px);mask-image:linear-gradient(transparent,#000 20px)}
+#tx.mt.mb{-webkit-mask-image:linear-gradient(transparent,#000 20px,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(transparent,#000 20px,#000 calc(100% - 24px),transparent)}
+#sc{flex:none;width:34px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+#sc.off{visibility:hidden}
+#sc button{flex:1;min-height:0;max-height:48px;padding:0;font-size:14px;color:#e8e0ff;cursor:pointer;background:rgba(30,10,70,.8);border:1px solid rgba(110,231,255,.6);border-radius:10px;-webkit-tap-highlight-color:transparent}
+#sc button:active{background:rgba(110,231,255,.35)}
+#sc button:disabled{opacity:.3;cursor:default}
+#sd.more{animation:pl 1.4s ease-in-out infinite}
+@keyframes pl{0%,100%{box-shadow:0 0 0 rgba(110,231,255,0)}50%{box-shadow:0 0 10px rgba(110,231,255,.8)}}
+
+#op{flex:none;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+#op.wait{visibility:hidden}
 .ch{font:700 13px "Trebuchet MS",sans-serif;color:#e8e0ff;text-align:left;background:rgba(30,10,70,.8);border:1px solid rgba(110,231,255,.6);border-radius:10px;padding:7px 9px;cursor:pointer;line-height:1.2}
 .ch:active{background:rgba(110,231,255,.35)}
 .ch:last-child:nth-child(odd){grid-column:span 2}
@@ -31,7 +47,9 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 </style></head><body>
 <div id="stage"><canvas id="c" width="480" height="520"></canvas>
 <button id="mu">🔊</button>
-<div id="tb"><div id="who"></div><div id="tx"></div><div id="op"></div></div>
+<div id="tb"><div id="who"></div>
+ <div id="tw"><div id="tx"></div><div id="sc" class="off"><button id="su">▲</button><button id="sd">▼</button></div></div>
+ <div id="op"></div></div>
 <div id="pc"><div class="bt" id="bl">◀</div><div id="ac"></div><div class="bt" id="br">▶</div></div>
 <div id="ov"><div><h1>WORLD TOUR<small>CITTÀ E STORIA</small></h1>
 <p id="sub">Cammina ◀ ▶, parla con chi incontri e... attraversa un varco verso un altro mondo.</p>
@@ -123,8 +141,9 @@ function leggiTesto(testo) {
     });
 }
 // Lettura dei dialoghi e delle descrizioni
+// (legge il testo completo del dialogo, anche se la scrittura è ancora in corso)
 testoDialogo.addEventListener('click', function() {
-    leggiTesto(this.innerText);
+    leggiTesto(dl && dl.text ? dl.text : this.innerText);
 });
 // Lettura delle domande e delle opzioni
 opzioniDialogo.addEventListener('click', function(e) {
@@ -140,6 +159,45 @@ opzioniDialogo.addEventListener('click', function(e) {
         leggiTesto(testo);
     }
 }, true);
-         </script>
-     
+</script>
+
+<script>
+/* ===== Scorrimento del testo: pulsanti ▲▼, dito, tastiera ===== */
+(function(){
+ const box=document.getElementById('tx'),sc=document.getElementById('sc'),
+       up=document.getElementById('su'),dn=document.getElementById('sd');
+ let prev='';
+ function stato(){
+  const max=box.scrollHeight-box.clientHeight,y=box.scrollTop,over=max>2;
+  sc.classList.toggle('off',!over);
+  up.disabled=!over||y<=1;
+  dn.disabled=!over||y>=max-1;
+  dn.classList.toggle('more',over&&y<max-1);
+  box.classList.toggle('mt',over&&y>1);
+  box.classList.toggle('mb',over&&y<max-1);
+ }
+ // nuovo testo (non è la continuazione di quello di prima) => torna in cima
+ new MutationObserver(()=>{const s=box.textContent;if(!s.startsWith(prev))box.scrollTop=0;prev=s;stato()})
+  .observe(box,{childList:true,characterData:true,subtree:true});
+ box.addEventListener('scroll',stato,{passive:true});
+ new ResizeObserver(stato).observe(box);
+
+ // tocco breve = una "pagina" (80%), tenuto premuto = scorrimento continuo
+ function lega(btn,d){
+  let down=false,cont=false,timer=0,raf=0,last=0;
+  const run=n=>{if(!cont)return;box.scrollTop+=d*320*Math.min(.05,(n-last)/1000);last=n;raf=requestAnimationFrame(run)};
+  const fine=tap=>{if(!down)return;down=false;clearTimeout(timer);cancelAnimationFrame(raf);
+   if(tap&&!cont)box.scrollBy({top:d*box.clientHeight*.8,behavior:'smooth'});cont=false};
+  btn.addEventListener('pointerdown',e=>{e.stopPropagation();down=true;cont=false;
+   timer=setTimeout(()=>{cont=true;last=performance.now();raf=requestAnimationFrame(run)},220)});
+  btn.addEventListener('pointerup',()=>fine(true));
+  ['pointerleave','pointercancel'].forEach(n=>btn.addEventListener(n,()=>fine(false)));
+ }
+ lega(up,-1);lega(dn,1);
+
+ addEventListener('keydown',e=>{if(e.key=='ArrowDown'||e.key=='ArrowUp'){e.preventDefault();
+  box.scrollBy({top:(e.key=='ArrowDown'?1:-1)*box.clientHeight*.8,behavior:'smooth'})}});
+})();
+</script>
+
 </body></html>
