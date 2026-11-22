@@ -29,7 +29,7 @@ function memKey(n,k){return n.id+':'+k}
 const HUBS={atena:'Chiedi ancora, viandante: la saggezza non si esaurisce.',ermes:'Altre domande? Ho tempo, finché Zeus non mi chiama.',pizia:'Il fumo ascolta ancora. Chiedi.',omero:'Dimmi, che altro vuoi sentire?',pan:'Shhh… ancora una domanda, sottovoce.',fenicottero:'Psss… altro? Ho ancora una zampa libera.',efisio:'Dimmi, bellu, altro da sapere?',maria:'Dimmi, piccolo: hai ancora fame di storie?',gelataio:'Altro gusto? Il freezer è pieno di ricordi.',giulia:'Ehi, ho un’altra idea per il castello!',launeddas:'Hai ancora orecchie per un’altra storia?',penny:'Dimmi, che altro vuoi sapere?',bernadette:'Ho ancora un minuto: dimmi.',leonard:'Certo, dimmi pure.',howard:'Avanti, altre domande per il maestro!',sheldon:'Domanda successiva, ma in ordine.',amy:'Interessante! Cos’altro vuoi indagare?',raj:'Ehm… sì, dimmi pure.',stuart:'Sì, certo, dimmi tutto.'};
 const hubOf=n=>HUBS[n.id]||HUBG[Math.random()*HUBG.length|0];
 const HUBG=['Dimmi pure, cosa vuoi sapere ancora?','Ti ascolto.','Prego, chiedi pure.','Altre domande?'];
-function startDl(npc,id,re){id=id||'a';const nd=npc.d[id];dl={npc,id,text:(((re&&id=='a')||!nd.t)&&npc.id!='por'&&npc.id!='nar')?hubOf(npc):nd.t,n:0,done:false,o:typeof nd.o=='function'?nd.o():(nd.o||[['Ok',null]]),lf:-1};who.textContent=npc.name;tx.textContent='';op.innerHTML='';
+function startDl(npc,id,re){id=id||'a';const nd=npc.d[id];dl={npc,id,text:(((re&&id=='a')||!nd.t)&&npc.id!='por'&&npc.id!='nar')?hubOf(npc):nd.t,n:0,done:false,o:typeof nd.o=='function'?nd.o():(nd.o||[['Ok',null]]),lf:-1};who.textContent=npc.name;tx.textContent='';showOpts();op.classList.add('wait');
  if(nd.m){const k=memKey(npc,nd.m);if(!mem.includes(k)){mem.push(k);try{localStorage.setItem('bolla_mem',JSON.stringify(mem))}catch(e){}toast('✦ Nuovo ricordo raccolto');tick(784,.09);setTimeout(()=>tick(1046,.08),140)}}}
 function endDl(){dl=null;uiKey=null;idleText=wd.name+' — cammina o parla con chi incontri.'}
 function showOpts(){op.innerHTML='';dl.o.forEach((o,i)=>{const b=document.createElement('button');b.className='ch';b.textContent=(i+1)+'  '+o[0];b.onclick=ev=>{ev.stopPropagation();choose(i)};op.appendChild(b)})}
@@ -40,7 +40,7 @@ function farewell(){if(!dl)return;const id=dl.npc.id,nm=dl.npc.name.replace(/^Ec
 function primary(){if(fd||!started)return;if(dl){farewell();return}const n=nearNpc(),p=nearPortal();if(n)startDl(n);else if(p)startDl(portalNpc());else narrate(lookText())}
 
 /* UI idle */
-function uiIdle(){const n=nearNpc(),p=nearPortal();const key=(n?n.id:'')+'|'+(p?1:0);if(key===uiKey)return;uiKey=key;who.textContent=wd.name;tx.textContent=idleText;op.innerHTML='';
+function uiIdle(){const n=nearNpc(),p=nearPortal();const key=(n?n.id:'')+'|'+(p?1:0);if(key===uiKey)return;uiKey=key;who.textContent=wd.name;tx.textContent=idleText;op.innerHTML='';op.classList.remove('wait');
  const add=(l,f)=>{const b=document.createElement('button');b.className='ch';b.textContent=l;b.onclick=ev=>{ev.stopPropagation();f()};op.appendChild(b)};
  add('👁 Osserva',()=>narrate(lookText()));if(n)add('💬 Parla con '+n.name,()=>startDl(n));if(p)add('🌀 Avvicinati al varco',()=>startDl(portalNpc()))}
 let acKey='';
@@ -64,7 +64,7 @@ function upd(dt){t+=dt;
  const mv=((K.arrowleft||K.a||hold.l)?-1:0)+((K.arrowright||K.d||hold.r)?1:0);
  walk=false;if(started&&!dl&&!fd&&mv){px=cl(px+mv*175*dt,40,wd.width-40);dir=mv;walk=true;ph+=dt*11}
  const tc=cl(px-W/2+dir*30,0,wd.width-W);cam+=(tc-cam)*Math.min(1,dt*6);
- if(dl&&!dl.done){const nn=Math.min(dl.text.length,dl.n+dt*58);const f=Math.floor(nn);dl.n=nn;if(f!=dl.lf){dl.lf=f;tx.textContent=dl.text.slice(0,f);if(f%4==0)tick(300+hr(f)*120,.015)}if(nn>=dl.text.length){dl.done=true;tx.textContent=dl.text;showOpts()}}
+ if(dl&&!dl.done){const nn=Math.min(dl.text.length,dl.n+dt*58);const f=Math.floor(nn);dl.n=nn;if(f!=dl.lf){dl.lf=f;tx.textContent=dl.text.slice(0,f);if(f%4==0)tick(300+hr(f)*120,.015)}if(nn>=dl.text.length){dl.done=true;tx.textContent=dl.text;op.classList.remove('wait')}}
  else if(!dl&&started)uiIdle();
  if(started){updAc();if(!dl&&!fd){rpT-=dt;if(rpT<=0){rpT=45+Math.random()*40;if(!rp){const side=Math.random()<.5?-1:1;let x=px+side*230;if(x<150||x>wd.width-250)x=px-side*230;rp={x:cl(x,150,wd.width-250),t:26};toast('🌀 Un varco si apre nelle vicinanze…');tick(392,.1);setTimeout(()=>tick(587,.1),180)}}}
   if(rp){rp.t-=dt;if(rp.t<=0)rp=null}
