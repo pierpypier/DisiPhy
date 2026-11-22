@@ -112,6 +112,7 @@ const punti = v => {
 // Funzione comune per leggere qualsiasi testo
 function leggiTesto(testo) {
     testo = testo.trim();
+
     if (!testo) return;
 
     if (!('speechSynthesis' in window)) {
@@ -142,16 +143,24 @@ testoDialogo.addEventListener('click', function() {
 });
 
 // Lettura delle domande e delle opzioni
-// Il listener in capture intercetta il testo prima che il motore
-// aggiorni i pulsanti dopo la scelta.
 opzioniDialogo.addEventListener('click', function(e) {
     const pulsante = e.target.closest('.ch');
 
     if (pulsante) {
-        leggiTesto(pulsante.innerText);
+        let testo = pulsante.innerText;
+
+        // Rimuove il numero iniziale della domanda
+        testo = testo.replace(/^\s*\d+[\s.)\-:]+/, '');
+
+        // Rimuove emoji e simboli pittografici
+        testo = testo.replace(/\p{Extended_Pictographic}/gu, '');
+
+        // Elimina spazi superflui
+        testo = testo.trim();
+
+        leggiTesto(testo);
     }
 }, true);
-</script>
-     
+</script>     
 
 </body></html>
