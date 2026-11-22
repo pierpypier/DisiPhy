@@ -76,27 +76,82 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 <script src="mondi/duemila.js"></script>          
 <script src="nucleo/motore.js"></script>
 
+
 <script>
-const testoDialogo=document.getElementById('tx');
-testoDialogo.style.cursor='pointer';
-testoDialogo.title='Tocca per ascoltare il dialogo';
-let voci=[];
-const caricaVoci=()=>{voci=speechSynthesis.getVoices().filter(v=>v.lang.toLowerCase().replace('_','-').startsWith('it'))};
-if('speechSynthesis' in window){caricaVoci();speechSynthesis.onvoiceschanged=caricaVoci}
-const punti=v=>{const n=(v.name+' '+v.voiceURI).toLowerCase();let p=0;
- if(/neural|natural|premium|enhanced|wavenet|online/.test(n))p+=4;
- if(/google/.test(n))p+=3;
- if(!v.localService)p+=2;
- if(v.lang.toLowerCase().replace('_','-')=='it-it')p+=1;return p};
-testoDialogo.addEventListener('click',function(){
- const testo=this.innerText.trim();if(!testo)return;
- if(!('speechSynthesis' in window)){alert('La sintesi vocale non è supportata da questo browser.');return}
- speechSynthesis.cancel();
- const voce=voci.slice().sort((a,b)=>punti(b)-punti(a))[0];
- (testo.match(/[^.!?…]+[.!?…]*/g)||[testo]).forEach(fr=>{
-  const u=new SpeechSynthesisUtterance(fr.trim());u.lang='it-IT';u.rate=1;u.pitch=1;
-  if(voce)u.voice=voce;speechSynthesis.speak(u)});
+const testoDialogo = document.getElementById('tx');
+const opzioniDialogo = document.getElementById('op');
+
+testoDialogo.style.cursor = 'pointer';
+testoDialogo.title = 'Tocca per ascoltare il dialogo';
+
+let voci = [];
+
+const caricaVoci = () => {
+    voci = speechSynthesis.getVoices().filter(v =>
+        v.lang.toLowerCase().replace('_', '-').startsWith('it')
+    );
+};
+
+if ('speechSynthesis' in window) {
+    caricaVoci();
+    speechSynthesis.onvoiceschanged = caricaVoci;
+}
+
+const punti = v => {
+    const n = (v.name + ' ' + v.voiceURI).toLowerCase();
+    let p = 0;
+
+    if (/neural|natural|premium|enhanced|wavenet|online/.test(n)) p += 4;
+    if (/google/.test(n)) p += 3;
+    if (!v.localService) p += 2;
+    if (v.lang.toLowerCase().replace('_', '-') == 'it-it') p += 1;
+
+    return p;
+};
+
+// Funzione comune per leggere qualsiasi testo
+function leggiTesto(testo) {
+    testo = testo.trim();
+    if (!testo) return;
+
+    if (!('speechSynthesis' in window)) {
+        alert('La sintesi vocale non è supportata da questo browser.');
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    const voce = voci.slice().sort((a, b) => punti(b) - punti(a))[0];
+
+    (testo.match(/[^.!?…]+[.!?…]*/g) || [testo]).forEach(fr => {
+        const u = new SpeechSynthesisUtterance(fr.trim());
+
+        u.lang = 'it-IT';
+        u.rate = 1;
+        u.pitch = 1;
+
+        if (voce) u.voice = voce;
+
+        speechSynthesis.speak(u);
+    });
+}
+
+// Lettura dei dialoghi e delle descrizioni
+testoDialogo.addEventListener('click', function() {
+    leggiTesto(this.innerText);
 });
+
+// Lettura delle domande e delle opzioni
+// Il listener in capture intercetta il testo prima che il motore
+// aggiorni i pulsanti dopo la scelta.
+opzioniDialogo.addEventListener('click', function(e) {
+    const pulsante = e.target.closest('.ch');
+
+    if (pulsante) {
+        leggiTesto(pulsante.innerText);
+    }
+}, true);
 </script>
+     
 
 </body></html>
