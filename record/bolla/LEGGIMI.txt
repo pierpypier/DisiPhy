@@ -383,7 +383,7 @@ MONDO: Tokyo · Da Tsukiji alla Tokyo Tower   (id: tokyo)
   Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
      <script src="mondi/tokyo.js"></script>
   Percorso (larghezza 26900): 9 zone, da sinistra a destra, un'intera giornata d'autunno:
-     1 Tsukiji e Ginza: mercato esterno, banco del tamagoyaki, Tsukiji Hongan-ji, torre dell'orologio di Ginza, Kabukiza (alba) · 2 Asakusa: Kaminarimon, Nakamise e Hōzōmon, Sensō-ji con incenso e omikuji, Asakusa Jinja (mattina)
+     1 Tsukiji e Ginza: mercato esterno, banco del tamagoyaki, Tsukiji Hongan-ji,  di Ginza, Kabukiza (alba) · 2 Asakusa: Kaminarimon, Nakamise e Hōzōmon, Sensō-ji con incenso e omikuji, Asakusa Jinja (mattina)
      3 Fiume Sumida e Ryōgoku: Skytree, Museo Hokusai, Kokugikan e il sumo (tarda mattina) · 4 Stazione di Tokyo e Palazzo Imperiale: stazione di mattoni, bento, fossato e mura, basamento del mastio (mezzogiorno)
      5 Akihabara e Ueno: Akihabara, Kanda Myōjin, parco di Ueno e zoo, stagno Shinobazu (primo pomeriggio) · 6 Shinjuku: stazione, palazzo del governo (Tochō), Omoide Yokochō, Golden Gai, Kabukichō e Godzilla (tardo pomeriggio)
      7 Harajuku e Meiji Jingū: torii e foresta, botti di sake e di vino, sala principale ed ema, Takeshita-dōri e Omotesandō (tramonto) · 8 Shibuya: Hachikō, lo Scramble, Shibuya Sky, i vicoli al neon (crepuscolo)
@@ -404,3 +404,24 @@ MONDO: Tokyo · Da Tsukiji alla Tokyo Tower   (id: tokyo)
   Nota varco: il portale è quello del motore (in fondo al mondo, a 26770); l'oggetto tkvarco gli fa da cornice (la Tokyo Tower accesa in primo piano, la porta rossa dello Zōjō-ji e una luce calda che si apre). Gli id degli NPC iniziano per "tk_" e le battute sono in TOPX.
   Nota scritte: i cartelli (TSUKIJI, GINZA, ASAKUSA, SUMIDA, RYŌGOKU, MARUNOUCHI, AKIHABARA, SHINJUKU, HARAJUKU, SHIBUYA, SHIBA, ecc.) sono in caratteri latini (romaji); i caratteri giapponesi sono resi solo come segni di pennello, nessun marchio reale.
 
+
+MONDO: Istanbul · Dal Ponte di Galata alla Stazione di Haydarpaşa   (id: istanbul)
+  File: mondi/istanbul.js   — TUTTI gli oggetti nuovi (nomi che iniziano per "ist") sono definiti dentro il file del mondo; nucleo/elementi.js NON è stato toccato.
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/istanbul.js"></script>
+  Percorso (larghezza 23000): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Ponte di Galata ed Eminönü: pescatori, barca del balık ekmek, Yeni Cami, Bazar delle Spezie (alba) · 2 Sultanahmet: Santa Sofia, Ippodromo (obelisco, colonna serpentina, fontana tedesca), Moschea Blu, Cisterna Basilica (mattina)
+     3 Topkapı e Gülhane: Porta Imperiale e Fontana di Ahmed III, Porta della Salutazione, Torre della Giustizia e Harem, Padiglione di Baghdad, parco di Gülhane (tarda mattina) · 4 Gran Bazar: ingresso, lanterne e nazar, tappeti, Colonna di Costantino (mezzogiorno)
+     5 Süleymaniye: moschea, tomba di Sinan, Vefa Bozacısı, Acquedotto di Valente (primo pomeriggio) · 6 Balat e Fener: case colorate, Chiesa di Ferro, Castello rosso di Fener, Patriarcato (pomeriggio)
+     7 Galata e İstiklal: Torre di Galata, Tünel, tram rosso nostalgico, Çiçek Pasajı, Piazza Taksim (tramonto) · 8 Dolmabahçe e Ortaköy: palazzo e orologio, moschea di Ortaköy con il Ponte sul Bosforo illuminato, kumpir (sera)
+     9 Üsküdar e Haydarpaşa: moschea Mihrimah, Torre della Fanciulla, vapur illuminato, stazione di Haydarpaşa, varco in fondo al molo (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta): Hüseyin (pescatore del Ponte di Galata), Giustiniano I (imperatore), Kemal (çaycı del Gran Bazar), Mimar Sinan (architetto),
+     Nazlı (signora dei gatti di Balat), Barış (manovratore del tram rosso), Ahmet (venditore di kumpir a Ortaköy), Ece (marinaia del vapur)
+  Testi: scritti per questo mondo, con i fatti controllati online; 39 tappe (compreso il varco finale) e il testo di introduzione. I personaggi di oggi raccontano al massimo 2-3 fatti storici; il resto è vita quotidiana, usi e parole locali (çay, simit, abi, canım, buyur, ecc.).
+  Vita: gabbiani e piccioni, canne dei pescatori con il galleggiante, fumo della barca-griglia, vapur e traghetti sul Bosforo, luci sul Ponte di Galata/Bosforo, orologio di Dolmabahçe con lancette in movimento, luna a falce e stelle, fari della Torre della Fanciulla.
+  Nota: i temi dolorosi (rivolta Nika, peste, conquista del 1453, morte di Atatürk, incendio di Haydarpaşa del 2010) sono trattati con tono sobrio e rispettoso; le leggende sono presentate con "si dice".
+  Nota tecnica: il mondo riusa la luce "nf" di Madrid (PR._md, stesse 9 zone e stessi confini) e gli oggetti md (cartelli, lampioni, panchine, gatti, platani, cipressi, cestini, varco in fondo); riusa anche PR._av e PR._rm. Non modifica motore né altri mondi.
+  Nota acqua: il Corno d'Oro e il Bosforo sono disegnati nel terreno (array WATER in mondi/istanbul.js: tre tratti d'acqua con il ponte di Galata, il ponte sul Bosforo e il molo di Üsküdar).
+  Nota nome: il titolo è quello completo della scheda; nell'intestazione sporge un po' dalla pastiglia. Se preferisci abbreviarlo ("Istanbul · Da Galata a Haydarpaşa"), cambia name nella riga addWorld di mondi/istanbul.js.
+  Nota bolla.html: per far comparire il mondo serve la riga <script src="mondi/istanbul.js"></script> prima di nucleo/motore.js (vedi l'elenco dei mondi in bolla.html).
+  Nota scritte: i cartelli (GALATA KÖPRÜSÜ, EMİNÖNÜ, SULTANAHMET MEYDANI, TOPKAPI SARAYI, KAPALIÇARŞI, SÜLEYMANİYE, BALAT, GALATA, DOLMABAHÇE, ÜSKÜDAR, ecc.) sono in turco, in caratteri latini.
