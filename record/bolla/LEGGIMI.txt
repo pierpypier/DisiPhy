@@ -1,5 +1,22 @@
 DA INCOLLARE IN LEGGIMI.txt (il file originale non era tra gli allegati)
 ------------------------------------------------------------------------
+MONDO: Dublino · Dall’alba nel Phoenix Park alla notte sul DART   (id: dublino)
+  File: mondi/dublino.js   — TUTTI gli oggetti sono definiti dentro il file (nomi che iniziano per "db"); nessun nuovo blocco in nucleo/elementi.js
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js (nella bolla.html la riga c'è già), es.
+     <script src="mondi/dublino.js"></script>
+  Percorso (larghezza 24400): 10 zone, da sinistra a destra, un'intera giornata, 38 tappe:
+     1 Phoenix Park: daini, Wellington Monument, Papal Cross, Áras an Uachtaráin (alba) · 2 Kilmainham Gaol, cortile delle esecuzioni, Guinness Storehouse, cancello di St James’s Gate (mattina)
+     3 Christ Church, cripta del gatto e del topo, Dublin Castle, giardino di Dubh Linn (tarda mattina) · 4 Temple Bar, Meeting House Square, Ha’penny Bridge, il Liffey (mezzogiorno)
+     5 Trinity College, Campanile, Old Library, Sfera con sfera (primo pomeriggio, con un po’ di pioggerella) · 6 Grafton Street, Molly Malone, Bewley’s, Fusiliers’ Arch, St Stephen’s Green (pomeriggio)
+     7 Porte georgiane, Merrion Square con la statua di Wilde, Leinster House (ora dorata, arcobaleno) · 8 The Spire, GPO, monumento a O’Connell (tramonto)
+     9 Custom House, Famine Memorial, Samuel Beckett Bridge, un pub con la musica (sera) · 10 Connolly Station, DART, varco in fondo al binario (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta; id che iniziano per "db_"): Pádraig (guardaparco), Arthur Guinness (storico), Mick (tassista),
+     Aoife (studentessa di Trinity), Cian (musicista di strada), Oscar Wilde (storico), Declan (barman), Orla (capotreno del DART)
+  Testi: 38 descrizioni verificate sul web (Wikipedia, phoenixpark.ie, Irish Times, tcd.ie, Atlas Obscura, siti ufficiali di Guinness, Kilmainham Gaol, Dublin Castle); i personaggi di oggi raccontano al massimo 2-3 fatti storici, il resto è vita quotidiana, usanze e modi di dire.
+  Nota: i temi dolorosi (esecuzioni del 1916, Grande Carestia, processo a Wilde) sono trattati con tono sobrio e rispettoso. Non sono disegnate bandiere né simboli politici.
+  Nota nome: il titolo è lungo; nell’intestazione del motore sporge un po’ dalla pastiglia (come per Madrid). Se preferisci, puoi abbreviarlo in addWorld({name:...}).
+  Nota tecnica: il mondo ha la propria luce "nf", cielo (alba → notte, pioggia, arcobaleno) e terreno; riusa da Madrid solo fin, bal, arco, mat, cupo, col, pers, gente (PR._md) e da Roma ln e gatto (PR._rm); non modifica motore né altri mondi.
+
 MONDO: Madrid · Dal Tempio di Debod alla Stazione di Atocha   (id: madrid)
   File: mondi/madrid.js   — oggetti in nucleo/elementi.js (blocco "elementi per Madrid", nomi che iniziano per "md")
   Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
