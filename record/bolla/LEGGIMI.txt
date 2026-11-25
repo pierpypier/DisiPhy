@@ -425,3 +425,22 @@ MONDO: Istanbul · Dal Ponte di Galata alla Stazione di Haydarpaşa   (id: istan
   Nota nome: il titolo è quello completo della scheda; nell'intestazione sporge un po' dalla pastiglia. Se preferisci abbreviarlo ("Istanbul · Da Galata a Haydarpaşa"), cambia name nella riga addWorld di mondi/istanbul.js.
   Nota bolla.html: per far comparire il mondo serve la riga <script src="mondi/istanbul.js"></script> prima di nucleo/motore.js (vedi l'elenco dei mondi in bolla.html).
   Nota scritte: i cartelli (GALATA KÖPRÜSÜ, EMİNÖNÜ, SULTANAHMET MEYDANI, TOPKAPI SARAYI, KAPALIÇARŞI, SÜLEYMANİYE, BALAT, GALATA, DOLMABAHÇE, ÜSKÜDAR, ecc.) sono in turco, in caratteri latini.
+
+
+MONDO: Praga · Dal Ponte Carlo alla Stazione Centrale   (id: praga)
+  File: mondi/praga.js   — TUTTI gli oggetti nuovi (nomi che iniziano per "pg") sono definiti dentro il file del mondo; nucleo/elementi.js NON è stato toccato.
+  Da caricare come gli altri mondi: dopo elementi.js e prima di motore.js, es.
+     <script src="mondi/praga.js"></script>
+  Percorso (larghezza 23000): 9 zone, da sinistra a destra, un'intera giornata:
+     1 Ponte Carlo: Torre del Ponte della Città Vecchia, statue barocche, San Giovanni Nepomuceno, pittori di strada, torri di Malá Strana (alba) · 2 Kampa e Malá Strana: salici, mulino della Čertovka, Muro di Lennon, via Nerudova con le insegne delle case (mattina)
+     3 Castello: Porta dei Giganti, guardie, Cattedrale di San Vito, finestre della Defenestrazione, Vicolo d'Oro (tarda mattina) · 4 Strahov e Petřín: monastero, Muro della Fame, Torre di Petřín, funicolare (mezzogiorno)
+     5 Città Vecchia: carrozza, Orologio Astronomico, chiesa di Týn, monumento a Jan Hus, 27 croci, trdelník, hospoda (primo pomeriggio) · 6 Josefov: Municipio ebraico, Sinagoga Vecchio-Nuova, Vecchio Cimitero Ebraico, monumento a Kafka (pomeriggio)
+     7 Torre delle Polveri, Obecní dům, Piazza Venceslao: statua di San Venceslao, Museo Nazionale, croce di Jan Palach, Lucerna con il cavallo capovolto (tramonto) · 8 Lungofiume: Casa Danzante, tram 17, Náplavka, Vyšehrad (sera)
+     9 Stazione Centrale: facciata liberty, sala Fanta, monumento a Nicholas Winton, tabellone, treno in sosta e varco in fondo al binario (notte)
+  Personaggi (12 domande e risposte ciascuno, più la prima battuta): Lenka (fotografa dell'alba), Carlo IV (re e imperatore), Zdeněk (manovratore della funicolare), Vlasta (cameriere della hospoda),
+     Franz Kafka (scrittore), Pavlína (studentessa dell'Università Carlo), Jarda (tranviere della linea 17), Marcela (capostazione)
+  Testi: scritti per questo mondo, con i fatti controllati online; 44 tappe (compreso il varco finale) e il testo di introduzione. I personaggi di oggi raccontano al massimo 2-3 fatti storici; il resto è vita quotidiana, usanze e curiosità.
+  Nota: i temi dolorosi (esecuzioni del 1621, Jan Palach, i bambini di Winton, il destino di Kafka) sono trattati con tono sobrio; le leggende sono presentate con "si dice"/"secondo la leggenda".
+  Nota tecnica: il mondo riusa la luce "nf" di Madrid (PR._md, stesse 9 zone e stessi confini) e alcuni oggetti md (cartelli, panchine, gatti, alberi, cestini, tavolini, carrello); riusa anche PR._av e PR._rm.
+  Nota bolla.html: per far comparire il mondo serve la riga <script src="mondi/praga.js"></script> prima di nucleo/motore.js (vedi l'elenco dei mondi in bolla.html).
+  Nota scritte: i cartelli (KARLŮV MOST, KAMPA, NERUDOVA, HRADČANY, STRAHOV, STARÉ MĚSTO, JOSEFOV, PAŘÍŽSKÁ, NÁMĚSTÍ REPUBLIKY, RAŠÍNOVO NÁBŘEŽÍ, HLAVNÍ NÁDRAŽÍ) sono in ceco.
