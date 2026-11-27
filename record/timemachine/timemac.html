@@ -44,9 +44,14 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 .lb{font:700 13px "Trebuchet MS",sans-serif;color:#dcd4ff;background:rgba(20,0,50,.7);border:1px solid rgba(110,231,255,.6);border-radius:999px;padding:6px 12px;cursor:pointer}
 .lb.on{background:linear-gradient(135deg,#00e5ff,#7a2cff);color:#fff;border-color:#fff}
 #go{font:inherit;font-weight:900;font-style:italic;letter-spacing:.12em;font-size:22px;color:#fff;cursor:pointer;padding:12px 40px;border-radius:999px;border:2px solid #fff;background:linear-gradient(135deg,#ff7ab0,#7a2cff);box-shadow:0 0 24px rgba(160,100,255,.7)}
+/* pulsantino del tour automatico */
+#tour{position:absolute;right:10px;top:42px;height:24px;padding:0 10px;z-index:15;border-radius:999px;border:1px solid rgba(255,255,255,.6);background:rgba(10,0,30,.6);color:#fff;font:800 italic 11px "Trebuchet MS",sans-serif;cursor:pointer}
+#tour.on{background:linear-gradient(135deg,#ff7ab0,#7a2cff);border-color:#fff}
+.ch.scelta{background:rgba(110,231,255,.45);border-color:#fff}
 </style></head><body>
 <div id="stage"><canvas id="c" width="480" height="520"></canvas>
 <button id="mu">🔊</button>
+<button id="tour" title="Tour automatico">▶ tour</button>
 <div id="tb"><div id="who"></div>
  <div id="tw"><div id="tx"></div><div id="sc" class="off"><button id="su">▲</button><button id="sd">▼</button></div></div>
  <div id="op"></div></div>
@@ -218,6 +223,183 @@ opzioniDialogo.addEventListener('click', function(e) {
 
  addEventListener('keydown',e=>{if(e.key=='ArrowDown'||e.key=='ArrowUp'){e.preventDefault();
   box.scrollBy({top:(e.key=='ArrowDown'?1:-1)*box.clientHeight*.8,behavior:'smooth'})}});
+})();
+</script>
+
+<script>
+/* ===== TOUR AUTOMATICO: cammina, osserva le tappe, parla con i personaggi, legge tutto ===== */
+(function(){
+ const DOMANDE=3;      // domande per ogni personaggio (metti 12 per farle tutte)
+ const PAUSA=1800;     // millisecondi in cui il personaggio osserva prima di parlare
+
+ const btn=document.getElementById('tour'),tb=document.getElementById('tb'),
+       voceOk='speechSynthesis' in window&&'SpeechSynthesisUtterance' in window;
+ let giro=0,attivo=false,frase=null,blocco=null;   // "frase" resta referenziata: evita che Chrome perda l'evento di fine
+ const STOP={};                                     // segnale di tour interrotto
+
+ const controlla=id=>{if(id!==giro)throw STOP};
+ const attendi=(ms,id)=>new Promise(r=>setTimeout(r,ms)).then(()=>controlla(id));
+ // aspetta che una condizione sia vera, controllando a ogni fotogramma
+ const finche=(cond,id)=>new Promise((ok,ko)=>{const f=()=>{if(id!==giro)return ko(STOP);if(cond())return ok();requestAnimationFrame(f)};f()});
+
+ const pulisci=s=>s.replace(/[\p{Extended_Pictographic}\uFE0F\u200D✦]/gu,'').replace(/\s+/g,' ').trim();
+ // divide in frasi brevi (le frasi troppo lunghe a volte bloccano la sintesi vocale)
+ function pezzi(testo){
+  const out=[];
+  (testo.match(/(?:[^.!?…]|\.(?=\d))+[.!?…]*["”»’)]*/g)||[testo]).forEach(fr=>{
+   let r=fr.trim();
+   while(r.length>180){
+    const z=r.slice(0,180);
+    let i=Math.max(z.lastIndexOf(', '),z.lastIndexOf('; '),z.lastIndexOf(': '));
+    if(i<60)i=z.lastIndexOf(' ');
+    if(i<1)i=179;
+    out.push(r.slice(0,i+1).trim());r=r.slice(i+1).trim();
+   }
+   if(/[\p{L}\p{N}]/u.test(r))out.push(r);
+  });
+  return out;
+ }
+ // legge un pezzo e si risolve solo quando la lettura è finita
+ function pronuncia(s,tono,id){
+  const lettura=1000+s.length*65;                   // durata indicativa se la voce non c'è
+  if(!voceOk)return attendi(lettura,id);
+  return new Promise(ok=>{
+   const u=frase=new SpeechSynthesisUtterance(s),inizio=Date.now();
+   const voce=voci.slice().sort((a,b)=>punti(b)-punti(a))[0];
+   u.lang='it-IT';u.rate=1;u.pitch=tono;if(voce)u.voice=voce;
+   let chiuso=false,muto=0,orologio=0;
+   const fine=errore=>{if(chiuso)return;chiuso=true;clearInterval(orologio);
+    // se la voce fallisce subito, lascia comunque il tempo di leggere a schermo
+    setTimeout(ok,errore?Math.max(0,lettura-(Date.now()-inizio)):120)};
+   u.onend=()=>fine(false);u.onerror=()=>fine(true);
+   // sicurezza: alcuni browser a volte non segnalano la fine della frase
+   orologio=setInterval(()=>{
+    if(id!==giro)return fine(false);
+    muto=speechSynthesis.speaking||speechSynthesis.pending?0:muto+1;
+    const durata=Date.now()-inizio;
+    if((muto>=4&&durata>2500)||durata>8000+s.length*160){speechSynthesis.cancel();fine(durata<lettura)}
+   },300);
+   speechSynthesis.speak(u);
+  }).then(()=>controlla(id));
+ }
+ // legge un testo intero; se "scorri" è vero fa scorrere il riquadro insieme alla voce
+ async function leggi(testo,id,tono,scorri){
+  const box=document.getElementById('tx'),lista=pezzi(pulisci(testo)),
+        tot=lista.reduce((a,s)=>a+s.length,0);
+  let fatti=0;
+  for(const s of lista){
+   if(scorri&&dl&&dl.done){
+    const max=box.scrollHeight-box.clientHeight;
+    if(max>2)box.scrollTo({top:Math.max(0,box.scrollHeight*fatti/tot-box.clientHeight*.35),behavior:'smooth'});
+   }
+   await pronuncia(s,tono,id);fatti+=s.length;
+  }
+  if(scorri)box.scrollTo({top:box.scrollHeight,behavior:'smooth'});
+ }
+
+ async function cammina(x,id){
+  await finche(()=>!fd&&!dl,id);
+  x=cl(x,40,wd.width-40);
+  const verso=x>px?1:-1;
+  if(Math.abs(x-px)>6){
+   hold.l=verso<0?1:0;hold.r=verso>0?1:0;
+   await finche(()=>(x-px)*verso<=4,id);
+   hold.l=hold.r=0;
+  }
+ }
+ // elenco delle soste (tappe da osservare + personaggi), in ordine da sinistra a destra
+ function soste(){
+  let da=0;
+  const a=wd.look.map(l=>{
+   const fino=Math.min(l[0],wd.width-80),x=cl((da+fino)/2,40,wd.width-40);da=fino;
+   return{x,testo:l[1]};
+  });
+  wd.npcs.forEach(n=>a.push({x:n.x,npc:n}));
+  return a.sort((p,q)=>p.x-q.x);
+ }
+ async function osserva(s,id){
+  await cammina(s.x,id);
+  dir=1;await attendi(PAUSA/2,id);
+  dir=-1;await attendi(PAUSA/2,id);     // si guarda intorno
+  dir=1;narrate(s.testo);
+  await leggi(s.testo,id,1,true);
+  await attendi(900,id);
+  endDl();
+ }
+ async function chiacchiera(n,id){
+  const lato=px<=n.x?-1:1;
+  await cammina(n.x+lato*48,id);
+  dir=-lato;await attendi(700,id);
+  startDl(n);
+  const visti=new Set(['a']);
+  let fatte=0;
+  while(dl&&dl.npc===n){
+   await leggi(dl.text,id,1,true);
+   await finche(()=>dl&&dl.done,id);
+   await attendi(600,id);
+   // prossima domanda: porta a una risposta nuova e non fa azioni speciali
+   const i=fatte<DOMANDE?dl.o.findIndex(o=>o[1]&&!o[2]&&n.d[o[1]]&&!visti.has(o[1])):-1;
+   if(i<0)break;
+   const scelta=dl.o[i],b=document.querySelectorAll('#op .ch')[i];
+   if(b)b.classList.add('scelta');
+   await leggi(scelta[0],id,1.2,false);   // la domanda ha un tono un po' diverso
+   visti.add(scelta[1]);fatte++;
+   choose(i);
+  }
+  await attendi(500,id);
+  farewell();
+ }
+
+ async function schermoAcceso(){
+  try{if(navigator.wakeLock&&!blocco){const w=await navigator.wakeLock.request('screen');
+   if(attivo&&!blocco){blocco=w;w.addEventListener('release',()=>{if(blocco===w)blocco=null})}else w.release()}}catch(e){}
+ }
+ function ferma(messaggio){
+  if(!attivo)return;
+  attivo=false;giro++;hold.l=hold.r=0;
+  btn.classList.remove('on');btn.textContent='▶ tour';
+  if(voceOk)speechSynthesis.cancel();
+  if(blocco){blocco.release();blocco=null}
+  if(messaggio)toast(messaggio);
+ }
+ async function parti(){
+  if(!started||fd)return;
+  attivo=true;const id=++giro,mondo=wi;
+  btn.classList.add('on');btn.textContent='■ stop';
+  aud();schermoAcceso();
+  if(dl)endDl();
+  hold.l=hold.r=0;
+  if(voceOk)speechSynthesis.cancel();
+  // parte da dove ti trovi; se sei già in fondo ricomincia dall'inizio
+  const tutte=soste();
+  let giroSoste=tutte.filter(s=>s.x>=px-150);
+  if(!giroSoste.length||px>wd.width-400)giroSoste=tutte;
+  try{
+   // la prima frase parte subito al tocco: su iPhone serve per sbloccare la voce
+   await leggi('Inizia il tour.',id,1,false);
+   for(const s of giroSoste){
+    if(wi!==mondo)throw STOP;
+    if(s.npc)await chiacchiera(s.npc,id);else await osserva(s,id);
+   }
+   await cammina(wd.width-190,id);
+   ferma('✦ Tour terminato');
+  }catch(e){
+   if(e!==STOP){console.error(e);ferma('Tour interrotto')}
+  }
+ }
+
+ btn.addEventListener('click',e=>{e.stopPropagation();btn.blur();attivo?ferma('Tour fermato'):parti()});
+
+ // se prendi tu i comandi, il tour si ferma e lascia tutto com'è
+ ['pc','op'].forEach(i=>document.getElementById(i).addEventListener('pointerdown',()=>ferma('Tour fermato'),true));
+ addEventListener('keydown',e=>{
+  if(attivo&&['arrowleft','arrowright','a','d','e',' ','enter','escape','1','2','3','4'].includes(e.key.toLowerCase()))ferma('Tour fermato');
+ },true);
+ // durante il tour un tocco sul testo non deve far ripartire la lettura
+ tb.addEventListener('click',e=>{if(attivo&&e.target.closest('#tx'))e.stopPropagation()},true);
+ // tornando sulla pagina, richiede di nuovo lo schermo acceso
+ document.addEventListener('visibilitychange',()=>{if(attivo&&!document.hidden)schermoAcceso()});
+ addEventListener('pagehide',()=>ferma());
 })();
 </script>
 
