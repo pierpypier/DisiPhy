@@ -48,6 +48,10 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 #tour{position:absolute;right:10px;top:42px;height:24px;padding:0 10px;z-index:15;border-radius:999px;border:1px solid rgba(255,255,255,.6);background:rgba(10,0,30,.6);color:#fff;font:800 italic 11px "Trebuchet MS",sans-serif;cursor:pointer}
 #tour.on{background:linear-gradient(135deg,#ff7ab0,#7a2cff);border-color:#fff}
 .ch.scelta{background:rgba(110,231,255,.45);border-color:#fff}
+/* pulsantino "altre domande" */
+#ns{position:absolute;left:320px;top:30px;width:49px;height:49px;display:none;flex-direction:column;align-items:center;justify-content:center;border-radius:50%;border:2px solid #ffe27a;background:rgba(20,0,50,.8);color:#ffe27a;font:800 11px "Trebuchet MS",sans-serif;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#ns b{font-size:20px}
+#ns:active{background:rgba(255,226,122,.35)}
 </style></head><body>
 <div id="stage"><canvas id="c" width="480" height="520"></canvas>
 <button id="mu">🔊</button>
@@ -55,7 +59,7 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 <div id="tb"><div id="who"></div>
  <div id="tw"><div id="tx"></div><div id="sc" class="off"><button id="su">▲</button><button id="sd">▼</button></div></div>
  <div id="op"></div></div>
-<div id="pc"><div class="bt" id="bl">◀</div><div id="ac"></div><div class="bt" id="br">▶</div></div>
+<div id="pc"><div class="bt" id="bl">◀</div><div id="ac"></div><div class="bt" id="br">▶</div><button id="ns" title="Altre domande" aria-label="Altre domande"><b>⇄</b><span></span></button></div>
 <div id="ov"><div><h1>TIME<br>MACHINE<small>ERE E CIVILTÀ</small></h1>
 <p id="sub">Cammina ◀ ▶, esplora, osserva, parla con chi incontri, scegli cosa dire. Attraversa un varco verso un altra epoca.</p>
 <div id="wl"></div><button id="go">ENTRA</button></div></div></div>
@@ -64,6 +68,29 @@ h1 small{display:block;font-size:.22em;letter-spacing:.3em;color:#6ee7ff;-webkit
 <script src="nucleo/disegno.js"></script>
 <script src="nucleo/elementi.js"></script>
 <script src="nucleo/mondi.js"></script>
+<script>
+/* Menu a domande con le serie sfogliabili (sostituisce topicsD di mondi.js; deve stare subito dopo) */
+topicsD=function(greet,T){
+ const n=T.length,serie=Math.ceil(n/4),fatte=new Set();let pag=0;
+ const gruppo=p=>[0,1,2,3].map(k=>p*4+k).filter(i=>i<n);
+ const finita=p=>gruppo(p).every(i=>fatte.has(i));
+ const scelte=()=>{
+  if(!n)return[];
+  if(fatte.size>=n){fatte.clear();pag=0}
+  while(finita(pag))pag=(pag+1)%serie;     // serie esaurita: passa da sola alla successiva
+  return gruppo(pag).filter(i=>!fatte.has(i)).map(i=>[T[i][0],'t'+i]);
+ };
+ const d={a:{t:greet,o:scelte}};
+ T.forEach((x,i)=>{d['t'+i]={t:x[1],m:i%3==2?'n'+i:undefined,o:()=>{fatte.add(i);return scelte()}}});
+ Object.defineProperty(d,'_serie',{value:{
+  totale:serie,
+  attuale:()=>pag+1,
+  avanti(){pag=(pag+1)%serie;if(finita(pag))gruppo(pag).forEach(i=>fatte.delete(i));return scelte()},
+  azzera(){fatte.clear();pag=0}
+ }});
+ return d;
+};
+</script>
 <script src="mondi/grecia.js"></script>
 <script src="mondi/dinosauri.js"></script>
 <script src="mondi/ominidi.js"></script> 
@@ -227,9 +254,32 @@ opzioniDialogo.addEventListener('click', function(e) {
 </script>
 
 <script>
+/* ===== PULSANTE "ALTRE DOMANDE" (solo fuori dal tour) ===== */
+(function(){
+ const b=document.getElementById('ns'),num=b.querySelector('span'),giro=document.getElementById('tour');
+ const attuale=()=>{const s=dl&&dl.npc.d._serie;return s&&s.totale>1&&!giro.classList.contains('on')?s:null};
+ function aggiorna(){
+  const s=attuale();
+  b.style.display=s?'flex':'none';
+  if(s)num.textContent=s.attuale()+'/'+s.totale;
+  requestAnimationFrame(aggiorna);
+ }
+ b.addEventListener('pointerdown',e=>e.stopPropagation());
+ b.addEventListener('click',e=>{
+  e.stopPropagation();b.blur();
+  const s=attuale();if(!s||fd)return;
+  dl.o=s.avanti();showOpts();
+  if(!dl.done)dl.n=dl.text.length;        // completa il testo, così le domande si vedono subito
+  tick(600,.05);
+ });
+ aggiorna();
+})();
+</script>
+
+<script>
 /* ===== TOUR AUTOMATICO: cammina, osserva le tappe, parla con i personaggi, legge tutto ===== */
 (function(){
- const DOMANDE=15;      // domande per ogni personaggio (metti 12 per farle tutte)
+ const DOMANDE=20;     // massimo di domande per ogni personaggio (99 = tutte; metti 3 per un tour breve)
  const PAUSA=1800;     // millisecondi in cui il personaggio osserva prima di parlare
 
  const btn=document.getElementById('tour'),tb=document.getElementById('tb'),
@@ -326,10 +376,19 @@ opzioniDialogo.addEventListener('click', function(e) {
   await attendi(900,id);
   endDl();
  }
+ // vero se passando da "nodo" si arriva ancora a una risposta non sentita (anche tornando al menu)
+ function portaANuovo(d,nodo,visti,passati=new Set()){
+  if(!d[nodo])return false;
+  if(!visti.has(nodo))return true;
+  if(passati.has(nodo)||!Array.isArray(d[nodo].o))return false;
+  passati.add(nodo);
+  return d[nodo].o.some(o=>o[1]&&!o[2]&&portaANuovo(d,o[1],visti,passati));
+ }
  async function chiacchiera(n,id){
   const lato=px<=n.x?-1:1;
   await cammina(n.x+lato*48,id);
   dir=-lato;await attendi(700,id);
+  if(n.d._serie)n.d._serie.azzera();    // il tour parte sempre dalla prima serie
   startDl(n);
   const visti=new Set(['a']);
   let fatte=0;
@@ -338,12 +397,17 @@ opzioniDialogo.addEventListener('click', function(e) {
    await finche(()=>dl&&dl.done,id);
    await attendi(600,id);
    // prossima domanda: porta a una risposta nuova e non fa azioni speciali
-   const i=fatte<DOMANDE?dl.o.findIndex(o=>o[1]&&!o[2]&&n.d[o[1]]&&!visti.has(o[1])):-1;
+   let i=-1;
+   if(fatte<DOMANDE){
+    i=dl.o.findIndex(o=>o[1]&&!o[2]&&n.d[o[1]]&&!visti.has(o[1]));
+    if(i<0)i=dl.o.findIndex(o=>o[1]&&!o[2]&&portaANuovo(n.d,o[1],visti));
+   }
    if(i<0)break;
    const scelta=dl.o[i],b=document.querySelectorAll('#op .ch')[i];
    if(b)b.classList.add('scelta');
    await leggi(scelta[0],id,1.2,false);   // la domanda ha un tono un po' diverso
-   visti.add(scelta[1]);fatte++;
+   if(!visti.has(scelta[1]))fatte++;
+   visti.add(scelta[1]);
    choose(i);
   }
   await attendi(500,id);
