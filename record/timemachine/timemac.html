@@ -78,7 +78,7 @@ topicsD=function(greet,T){
   if(!n)return[];
   if(fatte.size>=n){fatte.clear();pag=0}
   while(finita(pag))pag=(pag+1)%serie;     // serie esaurita: passa da sola alla successiva
-  return gruppo(pag).filter(i=>!fatte.has(i)).map(i=>[T[i][0],'t'+i]);
+  return gruppo(pag).filter(i=>!fatte.has(i)).map(i=>[senzaNome(T[i][0]),'t'+i]);
  };
  const d={a:{t:greet,o:scelte}};
  T.forEach((x,i)=>{d['t'+i]={t:x[1],m:i%3==2?'n'+i:undefined,o:()=>{fatte.add(i);return scelte()}}});
@@ -124,6 +124,33 @@ topicsD=function(greet,T){
 <script src="mondi/mondiale2.js"></script>   
 <script src="mondi/luna.js"></script>     
 <script src="mondi/duemila.js"></script>          
+<script>
+/* ===== Niente nome: toglie "Pierpaolo" da tutti i testi (deve stare dopo i mondi e prima di motore.js) ===== */
+function senzaNome(s){
+ const N='Pier[\\s-]?[Pp]aolo\\b';
+ if(typeof s!='string'||!new RegExp(N,'i').test(s))return s;
+ const r=(re,con)=>{s=s.replace(new RegExp(re.replace(/NOME/g,N),'gi'),con)};
+ r('\\b(sei|siete|sarai|sarete|devi essere|dovete essere|dovresti essere|dovreste essere)(\\s+(?:tu|voi|proprio))?\\s+NOME','$1$2 nuovo di qui'); // riconoscimento
+ r('\\b(car[oa]|mio|mia)\\s+NOME','$1 amico');
+ r('(^|[.!?…]\\s+|[“«"]\\s*)NOME\\s*[,!:]\\s*(\\p{L}|[^\\p{L}]|$)','$1$2');   // nome a inizio frase
+ s=s.replace(/(^|[.!?…]\s+)(\p{Ll})/gu,(m,a,b)=>a+b.toUpperCase());
+ r('\\s*,\\s*NOME(?=\\s*[,.!?;:…”»"]|\\s*$)','');                              // ", Pierpaolo"
+ r('\\b(ciao|salve|buongiorno|buonasera|buonanotte|benvenuto|bentornato|arrivederci|addio|grazie|bravo|coraggio|ehi)\\s+NOME','$1');
+ r('NOME','amico');                                                            // ultimo caso
+ return s;
+}
+{
+ WORLDS.forEach(w=>{
+  w.intro=senzaNome(w.intro);
+  (w.look||[]).forEach(l=>l[1]=senzaNome(l[1]));
+  (w.npcs||[]).forEach(n=>{n.name=senzaNome(n.name);Object.values(n.d||{}).forEach(x=>{
+   if(x.t)x.t=senzaNome(x.t);
+   if(Array.isArray(x.o))x.o.forEach(o=>o[0]=senzaNome(o[0]));
+  })});
+ });
+ Object.values(TOPX).forEach(T=>T.forEach(q=>{q[0]=senzaNome(q[0]);q[1]=senzaNome(q[1])}));
+}
+</script>
 <script src="nucleo/motore.js"></script>
 
 
